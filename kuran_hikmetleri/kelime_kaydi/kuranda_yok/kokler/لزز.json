@@ -770,24 +770,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شدّ الشيء إلى شيء بقوة والزامٍ أو الصاق (1). كلِزاز الباب المذكور.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شدّ الشيء إلى شيء بقوة والزامٍ أو الصاق (1). كلِزاز الباب المذكور."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لزّ الباب يلزّه إذا لحجه، وهذا لزاز الباب: لنجافه الذي يلزبّبه. ولزّ الشيء بالشيء: قرن به وألصق فالتزّ به، ولازّه: لاصقه. ورجل ملزّز الخلق: مدمجه. وافتح لزّ الحقّة ولزّ المجمر وهو الزّرفين. قال ابن مقبل:\nلم يعد أن شقّ النهيق لهاته ... ورأيت قارحه كلزّ المجمر"
+      },
+      {
+        "kaynak": "Mekâyîs: لَزَّ",
+        "metin": "(لَزَّ) اللَّامُ وَالزَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُلَازَمَةٍ وَمُلَاصَقَةٍ. يُقَالُ: لَزَّ بِهِ، إِذَا لَصِقَ بِهِ لَزًّا وَلَزَازًا. وَلَازَزْتُهُ: لَاصَقْتُهُ. وَرَجُلٌ لِزَازُ خَصْمٍ، إِذَا كَانَ يُلَازُّهُ وَلَا يَكُِعُّ عَنْهُ. وَالْمُلَزَّزُ: الْمُجْتَمِعُ الْخَلْقِ. وَاللَّزُّ: الطَّعْنُ. وَهُوَ مِنْ قِيَاسِ الْبَابِ. وَاللَّزَائِزُ: مَا اجْتَمَعَ مِنَ اللَّحْمِ فِي الزَّوْرِ مِمَّا يَلِي الْمِلَاطَ. قَالَ:\nذِي مِرْفَقٍ بَانَ عَنِ اللَّزَائِزِ\nوَمِنَ الْبَابِ كَزٌّ لَزٌّ، وَيَجُوزُ أَنْ يَكُونَ لَزٌّ إِتْبَاعًا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "لزّه إلى كذا: اضطره. ولززت بي يا فلان. وقال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لزّه إلى كذا: اضطره. ولززت بي يا فلان. وقال:",
         "prototipe_benzerlik": 0.433,
         "halka": "orta"
       },
       {
-        "cumle": "وهو ملز في خصوماته، وإنه لزاز خصم، ولزاز مالٍ: مصلح له. وجعلتك لزازاً لفلان لا تدعه يخالف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولا اتقى الغيور إذا رآني ... ومثلي لزّبا لحمس الرّبيس",
+        "prototipe_benzerlik": 0.342,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو ملز في خصوماته، وإنه لزاز خصم، ولزاز مالٍ: مصلح له. وجعلتك لزازاً لفلان لا تدعه يخالف.",
         "prototipe_benzerlik": 0.409,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.421,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.395,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

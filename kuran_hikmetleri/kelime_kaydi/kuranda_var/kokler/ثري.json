@@ -947,8 +947,8 @@
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "wealth.n.01",
-    "dayanak_tanim": "the state of being rich and affluent; having a plentiful supply of material goods and money",
+    "dayanak_synset": "luxury.n.03",
+    "dayanak_tanim": "wealth as evidenced by sumptuous living",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -962,49 +962,90 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شهر ثري، وشهر تري، وشهر مرعي أي تكون الأرض ندية أولاً، ثم ترى الخضرة، ثم يطول النبات حتى يصلح للراعية. وثرى المطر التراب يثريه، وهو مثري، ونريَ التراب فهو ثرٍ، وثريت التراب: نديته، وثريت السويق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شهر ثري، وشهر تري، وشهر مرعي أي تكون الأرض ندية أولاً، ثم ترى الخضرة، ثم يطول النبات حتى يصلح للراعية. وثرى المطر التراب يثريه، وهو مثري، ونريَ التراب فهو ثرٍ، وثريت التراب: نديته، وثريت السويق."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أثرى الرجل نحو أترب أي صار ذا ثرىً وذا تراب، والمراد كثرة المال. ورجل مثر",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أثرى الرجل نحو أترب أي صار ذا ثرىً وذا تراب، والمراد كثرة المال. ورجل مثر",
         "prototipe_benzerlik": 0.384,
         "halka": "orta"
       },
       {
-        "cumle": "وذو ثروة وثراء، ومنه ثرى القوم يثرون إذا كثر عددهم. وهم في ثروة وثراء. قال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وذو ثروة وثراء، ومنه ثرى القوم يثرون إذا كثر عددهم. وهم في ثروة وثراء. قال ابن مقبل:",
         "prototipe_benzerlik": 0.355,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وثروة من رجال لو رأيتهم ... لقلت إحدى حراج الحر من أقر",
+        "prototipe_benzerlik": 0.434,
         "halka": "orta"
       },
       {
-        "cumle": "و\" التقى الثريان \" مثل في سرعة تواد الرجلين؛ وأصله أن يسقط الغيث الجود فيلتقي نداه وندى الأرض العتيق تحتها. ولا توبس الثرى بيني وبينك أي لا تقاطعني. قال جرير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "و\" التقى الثريان \" مثل في سرعة تواد الرجلين؛ وأصله أن يسقط الغيث الجود فيلتقي نداه وندى الأرض العتيق تحتها. ولا توبس الثرى بيني وبينك أي لا تقاطعني. قال جرير:",
         "prototipe_benzerlik": 0.489,
         "halka": "orta"
       },
       {
-        "cumle": "وبدا ثرى الماء من الفرس إذا ندي بالعرق. قال طفيل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلا توبسوا بيني وبينكم الثرى ... فإن الذي بيني وبينكم مثري",
+        "prototipe_benzerlik": 0.385,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبدا ثرى الماء من الفرس إذا ندي بالعرق. قال طفيل:",
         "prototipe_benzerlik": 0.548,
         "halka": "yakın"
       },
       {
-        "cumle": "ويقال: إني أرى ثرى الغضب في وجهه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يذدن ذياد الخامسات وقد بدا ... ثرى الماء من أعطافها يتحلب",
+        "prototipe_benzerlik": 0.603,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويقال: إني أرى ثرى الغضب في وجهه. قال:",
         "prototipe_benzerlik": 0.217,
         "halka": "uzak"
       },
       {
-        "cumle": "وإن فلاناً لقريب الثرى، بعيد النبط: لمن يعطي بلسانه ولا يفي بما يقول. وبلغت ثرى فلان إذا أدركت ما تطلب منه. وثريت بك إذا فرحت به وسررت. قال كثير:",
-        "prototipe_benzerlik": 0.523,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإني لتراك الضغينة قد بدا ... ثراها من المولى فما استثيرها",
+        "prototipe_benzerlik": 0.51,
+        "halka": "orta"
       },
       {
-        "cumle": "وهو ابن بجدتها، وابن ثراها. وفلان ما يثريه شيء، وما يثرى فيه أي ما ينجع فيه لقساوته.",
-        "prototipe_benzerlik": 0.34,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن فلاناً لقريب الثرى، بعيد النبط: لمن يعطي بلسانه ولا يفي بما يقول. وبلغت ثرى فلان إذا أدركت ما تطلب منه. وثريت بك إذا فرحت به وسررت. قال كثير:",
+        "prototipe_benzerlik": 0.523,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإني لأثرى أن أراكم بغبطة ... وإني أبا بكر بكم لجميل",
+        "prototipe_benzerlik": 0.296,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو ابن بجدتها، وابن ثراها. وفلان ما يثريه شيء، وما يثرى فيه أي ما ينجع فيه لقساوته.",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.408,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.424,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "condition.n.01", "property.n.01", "radical.n.03"],
   "muhassas_tasnif": {

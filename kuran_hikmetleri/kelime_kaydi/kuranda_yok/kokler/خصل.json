@@ -982,19 +982,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أخذ من خصل الشعر، ومن خصل الشجر. وهي ما تدلى من أطرافه. وارتعدت فرائصه واضطربت خصائله جمع خصيلة، وهي كل لحمة فيها عصب. وتخاصل القوم: تراهنوا في النضال. وإذا وقع السهم بلزق القرطاس، سموا ذلك خصلة، فإذا غلب وتراهنوا حسبوا خصلتين بقرطة. وأحرز فلان خصله إذا غلب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخذ من خصل الشعر، ومن خصل الشجر. وهي ما تدلى من أطرافه. وارتعدت فرائصه واضطربت خصائله جمع خصيلة، وهي كل لحمة فيها عصب. وتخاصل القوم: تراهنوا في النضال. وإذا وقع السهم بلزق القرطاس، سموا ذلك خصلة، فإذا غلب وتراهنوا حسبوا خصلتين بقرطة. وأحرز فلان خصله إذا غلب."
+      },
+      {
+        "kaynak": "Mekâyîs: خَصَلَ",
+        "metin": "(خَصَلَ) الْخَاءُ وَالصَّادُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الْقَطْعِ وَالْقِطْعَةِ مِنَ الشَّيْءِ، ثُمَّ يُحْمَلُ عَلَيْهَا تَشْبِيهًا وَمَجَازًا. فَالْخَصْلُ الْقَطْعُ. وَسَيْفٌ مِخْصَلٌ: قَطَّاعٌ. وَالْخُصْلَةُ مِنَ الشَّعْرِ مَعْرُوفَةٌ. وَالْخَصِيلَةُ: كُلُّ لُحْمَةٍ فِيهَا عَصَبٌ. هَذَا هُوَ الْأَصْلُ.\nوَمِمَّا حُمِلَ عَلَيْهِ الْخُصَلُ أَطْرَافُ الشَّجَرِ الْمُتَدَلِّيَةُ. وَمِنْ هَذَا الْبَابِ الْخَصْلُ فِي الرِّهَانِ، وَذَلِكَ أَنْ تُحْرِزَهُ. وَالَّذِي يُحْرِزُهُ طَائِفَةٌ مِنَ الشَّيْءِ. ثُمَّ قِيلَ: فِي فُلَانٌ خَصْلَةٌ حَسَنَةٌ وَسَيِّئَةٌ. وَالْأَصْلُ مَا ذَكَرْنَاهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فيه خصلة حسنة وخصال وخصلات كرام.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فيه خصلة حسنة وخصال وخصلات كرام.",
         "prototipe_benzerlik": 0.285,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.285,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["attribute.n.02"],
   "muhassas_tasnif": {

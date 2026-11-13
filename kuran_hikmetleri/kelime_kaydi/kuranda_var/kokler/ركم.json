@@ -1125,8 +1125,8 @@
     "ince": "collection.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "collection.n.01",
-    "dayanak_tanim": "several things grouped together or considered as a whole",
+    "dayanak_synset": "pile.n.01",
+    "dayanak_tanim": "a collection of objects laid on top of each other",
     "synset_sayisi": 13
   },
   "ses_mana_tasnif": {
@@ -1145,19 +1145,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تجمع الشيء بعضِه فوق بعض طبقاتٍ عريضة مكونًا كومة متجمعة كالسحاب والرمل الموصوفين. ومنه \"ركم الشيءَ (نصر): جَمَعَه وألْقَى بعضَه على بعض. وارتكم الشيءُ وتراكم: اجتمع {وَإِنْ يَرَوْا كِسْفًا مِنَ (2/849) السَّمَاءِ سَاقِطًا يَقُولُوا سَحَابٌ مَرْكُومٌ} [الطور: ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "تراكم لحم الناقة إذا سمنت وناقة مركومة: سمينة. وتراكمت الأشغال وارتكمت. وهذا مرتكم الطريق: مستواه جادّته، وتقول: أخذ فلان لقم الطريق وثكمه، وسلك جادّته ومرتكمه.",
-        "prototipe_benzerlik": 0.536,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تجمع الشيء بعضِه فوق بعض طبقاتٍ عريضة مكونًا كومة متجمعة كالسحاب والرمل الموصوفين. ومنه \"ركم الشيءَ (نصر): جَمَعَه وألْقَى بعضَه على بعض. وارتكم الشيءُ وتراكم: اجتمع {وَإِنْ يَرَوْا كِسْفًا مِنَ (2/849) السَّمَاءِ سَاقِطًا يَقُولُوا سَحَابٌ مَرْكُومٌ} [الطور: 44]، {أَلَمْ تَرَ أَنَّ اللَّهَ يُزْجِي سَحَابًا ثُمَّ يُؤَلِّفُ بَيْنَهُ ثُمَّ يَجْعَلُهُ رُكَامًا}، {وَيَجْعَلَ الْخَبِيثَ بَعْضَهُ عَلَى بَعْضٍ فَيَرْكُمَهُ جَمِيعًا فَيَجْعَلَهُ فِي جَهَنَّمَ} [الأنفال: 37]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ركم المتاع فارتكم وتراكم. وسحاب ورمل مركوم وركام ومرتكم ومتراكم."
+      },
+      {
+        "kaynak": "Mekâyîs: رَكَمَ",
+        "metin": "(رَكَمَ) الرَّاءُ وَالْكَافُ وَالْمِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى [تَجَمُّعِ] الشَّيْءِ. تَقُولُ رَكَمْتُ الشَّيْءَ: أَلْقَيْتَ بَعْضَهُ عَلَى بَعْضٍ. وَسَحَابٌ مُرْتَكِمٌ وَرُكَامٌ. وَالرُّكَمَةُ: الطِّينُ الْمَجْمُوعُ. وَمُرْتَكَمُ الطَّرِيقِ: سَنَنُهُ; لِأَنَّ الْمَارَّةَ تَرْتَكِمُ فِيهِ."
       }
     ],
-    "ortalama_benzerlik": 0.536,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تراكم لحم الناقة إذا سمنت وناقة مركومة: سمينة. وتراكمت الأشغال وارتكمت. وهذا مرتكم الطريق: مستواه جادّته، وتقول: أخذ فلان لقم الطريق وثكمه، وسلك جادّته ومرتكمه.",
+        "prototipe_benzerlik": 0.529,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.529,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "accrue.v.01",

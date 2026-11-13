@@ -37,24 +37,54 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تهارشت الكلاب واهترشت، وهارش بعضها بعضاً، وهارشت بينها مهارشةً وهراشاً، وهما كلبا هراش. قال: كأن طبييها إذا ما درّا ... جروا ربيضٍ هورشا فهراً",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تهارشت الكلاب واهترشت، وهارش بعضها بعضاً، وهارشت بينها مهارشةً وهراشاً، وهما كلبا هراش. قال:\nكأن طبييها إذا ما درّا ... جروا ربيضٍ هورشا فهراً"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هرّش بين القوم وحرّش. وهرش الزمان يهرش إذا اشتدّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هرّش بين القوم وحرّش. وهرش الزمان يهرش إذا اشتدّ.",
         "prototipe_benzerlik": 0.296,
         "halka": "uzak"
       },
       {
-        "cumle": "أراد وثوبه في العنان ومرحه كأنما يهارشه. وفي مثل في التخيير \" خذا أنف هرشى أو قفاها \" وهي ثنيّة في طريق مكّة قريبة منها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال أميّة:",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا نخاف المحول إن هرش الده ... ر ولا ننتوي لأهل سواكا",
+        "prototipe_benzerlik": 0.041,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال في صفة الفرس:",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مهارشة العنان كأنّ فيها ... جرادة هبوة فيها اصفرار",
+        "prototipe_benzerlik": 0.39,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد وثوبه في العنان ومرحه كأنما يهارشه. وفي مثل في التخيير \" خذا أنف هرشى أو قفاها \" وهي ثنيّة في طريق مكّة قريبة منها.",
         "prototipe_benzerlik": 0.576,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.436,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.35,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

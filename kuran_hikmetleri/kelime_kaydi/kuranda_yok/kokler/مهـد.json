@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مهّد المهد والمهود والمهاد والمهد. ومضجع ممهود وممهّد، ومهّد الفراش فامتهد وتمهّد، وتمهّدت فراشاً واستمهدته. قال الراعي: تمهّدن ديباجاً وعالين عقمةً ... وأنزلن رقماً قد أجنّ الأكارعا أنزلته على قوائم الإبل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مهّد المهد والمهود والمهاد والمهد. ومضجع ممهود وممهّد، ومهّد الفراش فامتهد وتمهّد، وتمهّدت فراشاً واستمهدته. قال الراعي:\nتمهّدن ديباجاً وعالين عقمةً ... وأنزلن رقماً قد أجنّ الأكارعا\nأنزلته على قوائم الإبل."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مهّد الأمر: وطّأه وسوّاه. ومهّد العذر تمهيداً. ومهّد له منزلة سنيّة. وتمهّدت له عندي حالٌ لطيفة. وما امتهد فلان عندي مهد ذاك أي ما قدّم وسيلةً فيما يطلبه. وماء ممهّد: فاترٌ ليس ببارد ولا سخن.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مهّد الأمر: وطّأه وسوّاه. ومهّد العذر تمهيداً. ومهّد له منزلة سنيّة. وتمهّدت له عندي حالٌ لطيفة. وما امتهد فلان عندي مهد ذاك أي ما قدّم وسيلةً فيما يطلبه. وماء ممهّد: فاترٌ ليس ببارد ولا سخن.",
         "prototipe_benzerlik": 0.761,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.761,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1150,8 +1150,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "care.n.06",
-    "dayanak_tanim": "activity involved in maintaining something in good working order",
+    "dayanak_synset": "preservation.n.01",
+    "dayanak_tanim": "the activity of protecting something from loss or danger",
     "synset_sayisi": 21
   },
   "ses_mana_tasnif": {
@@ -1165,24 +1165,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان يصون عرضه صون الريط. وحسب مصون. وصنت الثوب من الدنس. والثوب في صوانه. والقوس في صوانها ومصوانها ومصانها وهو غلافها. قال: ترمح لما زال عنها الفوقان ... رمح شموس الخيل عند الإحصان فما تزال عندنا في مصوان ... ندهنها بالمخ يوماً والبان وأنشد أبو عمرو لأبي قلا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "فرس ذو صون وابتذال، وهو يصون جريه إذا ذخر منه ذخيرة لحاجته. قال لبيد يصف ثوراً:",
-        "prototipe_benzerlik": 0.14,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان يصون عرضه صون الريط. وحسب مصون. وصنت الثوب من الدنس. والثوب في صوانه. والقوس في صوانها ومصوانها ومصانها وهو غلافها. قال:\nترمح لما زال عنها الفوقان ... رمح شموس الخيل عند الإحصان\nفما تزال عندنا في مصوان ... ندهنها بالمخ يوماً والبان\nوأنشد أبو عمرو لأبي قلابة:\nردع الخلوق بجلدها فكأنه ... ريط عتاق في المصان مضرس\nموشيٌّ. وهذا ثوب صينة لا ثوب بذلة. وهو يتصون من المعايب."
       },
       {
-        "cumle": "وصان الفرس وهو صائن إذا اتقى المشي من حفاً به أو وجع بحافره. وكذبت صوانته: عفاقته.",
-        "prototipe_benzerlik": 0.158,
-        "halka": "uzak"
+        "kaynak": "Mekâyîs: صَوَنَ",
+        "metin": "(صَوَنَ) الصَّادُ وَالْوَاوُ وَالنُّونُ أَصْلٌ وَاحِدٌ، وَهُنَّ كَنٌّ وَحِفْظٌ. مِنْ ذَلِكَ صُنْتُ الشَّيْءَ أَصُونُهُ صَوْنًا وَصِيَانَةً. وَالصُِّوَانُ: صُِوَانُ الثَّوْبِ، وَهُوَ مَا يُصَانُ فِيهِ. فَأَمَّا قَوْلُهُمْ لِلْفَرَسِ الْقَائِمِ: صَائِنٌ. فَلَعَلَّهُ أَنْ يَكُونَ مِنَ الْإِبْدَالِ، كَأَنَّهُ أُرِيدَ بِهِ الصَّائِمُ، ثُمَّ أُبْدِلَتِ الْمِيمُ نُونًا. قَالَ النَّابِغَةُ:\nوَمَا حَاوَلْتُمَا بِقِيَادِ خَيْلٍ ... يَصُونُ الْوَرْدُ فِيهَا وَالْكُمَيْتُ\nوَمِمَّا شَذَّ عَنِ الْبَابِ: الصَّوَّانُ، وَهِيَ ضَرْبٌ مِنَ الْحِجَارَةِ، الْوَاحِدَةُ صَوَّانَةٌ.\n[بَابُ الصَّادِ وَالْيَاءِ وَمَا يَثْلُثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.149,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس ذو صون وابتذال، وهو يصون جريه إذا ذخر منه ذخيرة لحاجته. قال لبيد يصف ثوراً:",
+        "prototipe_benzerlik": 0.488,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فولّى عامداً لطيات فلج ... يراوح بين صون وابتذال وقال النابغة:",
+        "prototipe_benzerlik": 0.583,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأوردهن بطن الأتم شعثاً ... يصن المشي كالحدإ التؤام",
+        "prototipe_benzerlik": 0.42,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصان الفرس وهو صائن إذا اتقى المشي من حفاً به أو وجع بحافره. وكذبت صوانته: عفاقته.",
+        "prototipe_benzerlik": 0.53,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.505,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

@@ -1184,11 +1184,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "spatter.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "spatter.v.01",
-    "dayanak_tanim": "dash a liquid upon or against",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "machine_gun.n.01",
+    "dayanak_tanim": "a rapidly firing automatic gun (often mounted)",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1202,19 +1202,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رشّ عليه الماء. ورش البيت، ومكان مرشوش. ورشت السماء وأرشّت. وأصابنا رش من مطر. وترشش عليه الماء، وأصابه رشاش منه. ورش الحائك النسج بالمرشة. وأرشت الطعنة، وطعنة مرشة، ولها رشاش من الدم. وشواء وشراش: يقطر ودكه. وقد ترشرش. وأرشّ فرسه إرشاشاً: عرّقه بالركض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رشّ عليه الماء. ورش البيت، ومكان مرشوش. ورشت السماء وأرشّت. وأصابنا رش من مطر. وترشش عليه الماء، وأصابه رشاش منه. ورش الحائك النسج بالمرشة. وأرشت الطعنة، وطعنة مرشة، ولها رشاش من الدم. وشواء وشراش: يقطر ودكه. وقد ترشرش. وأرشّ فرسه إرشاشاً: عرّقه بالركض."
+      },
+      {
+        "kaynak": "Mekâyîs: رَشَّ",
+        "metin": "(رَشَّ) الرَّاءُ وَالشِّينُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَفْرِيقِ الشَّيْءِ ذِي النَّدَى. وَقَدْ يُسْتَعَارُ فِي غَيْرِ النَّدَى، فَتَقُولُ: رَشَشْتُ الْمَاءَ وَالدَّمْعَ وَالدَّمَ. وَطَعْنَةٌ مُرِشَّةٌ. وَرَشَاشُهَا: دَمُهَا. قَالَ:\nفَطَعَنْتُ فِي حَمَّائِهِ بِمُرِشَّةٍ ... تَنْفِي التُّرَابَ مِنَ الطَّرِيقِ الْمَهْيَعِ\nوَيُقَالُ شِوَاءٌ رَشْرَاشٌ: يَنْصَبُّ مَاؤُهُ. وَيُقَالُ رَشَّتِ السَّمَاءُ وَأَرَشَّتْ. وَيُقَالُ أَرَشَّ فُلَانٌ فَرَسَهُ إِرْشَاشًا، أَيْ عَرَّقَهُ بِالرَّكْضِ، وَهُوَ فِي شِعْرِ أَبِي دُوَادٍ.\nوَمِنَ الْبَابِ عَظْمٌ رَشْرَشٌ، أَيْ رَخْوٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "من لم يدخل في الشر أصابه من رشاشه. وتقول: قد ألحّ بنا العطاش، ومالنا منك إلا الرّشاش.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من لم يدخل في الشر أصابه من رشاشه. وتقول: قد ألحّ بنا العطاش، ومالنا منك إلا الرّشاش.",
         "prototipe_benzerlik": 0.656,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.656,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "scatter.v.03", "spatter.v.01", "splash.v.07"],
   "muhassas_tasnif": {

@@ -1272,8 +1272,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "care.n.01",
-    "dayanak_tanim": "the work of providing treatment for or attending to someone or something",
+    "dayanak_synset": "backing.n.01",
+    "dayanak_tanim": "the act of providing approval and support",
     "synset_sayisi": 32
   },
   "ses_mana_tasnif": {
@@ -1287,24 +1287,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رعاك الله وأحسن رعايتك. وهو راعيهم وهم رعيته ورعاياه. وليس المرعيّ كالراعي. ويقولون للمرأة: راعية البيت. واسترعى الله خليفته خليقته. ورعيت له عهده وحرمته. وما أرعاك للعهود. وأرعى عليه: أبقى. وهو حسن الرعوى والرعيا، كالبقوي والبقيا. وارعوى عن القبيح. ورعت الماش",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رعاك الله وأحسن رعايتك. وهو راعيهم وهم رعيته ورعاياه. وليس المرعيّ كالراعي. ويقولون للمرأة: راعية البيت. واسترعى الله خليفته خليقته. ورعيت له عهده وحرمته. وما أرعاك للعهود. وأرعى عليه: أبقى. وهو حسن الرعوى والرعيا، كالبقوي والبقيا. وارعوى عن القبيح. ورعت الماشية الكلأ وارتعت، ورعاها صاحبها. وهو راعي الإبل وهم رعاتها ورعاؤها ورعاؤها ورعيانها. ورجل ترعية وترعية: حسن الرعية للإبل. قال:\nيسوقها ترعي جاف فضل ... إن رتعت صلّى وإلا لم يصل\nوأخرجها إلى المرعى والرعي. وإبل راعية ورواع. والحمار يراعى الحمر: يرعى معها. وظلت الإبل تراعى. واسترعيت راعي سوء ورويعي سوء. وفي مثل \" من استرعى الذئب ظلم \" وأرعت الأرض: كثر مرعاها. وأرض مرعية. وأرعى الله البهائم: أنبت لها المراعي."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رعيت النجوم وراعيتها، وطالت عليّ رعية النجوم. قالت الخنساء:",
-        "prototipe_benzerlik": 0.083,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعيت النجوم وراعيتها، وطالت عليّ رعية النجوم. قالت الخنساء:",
+        "prototipe_benzerlik": 0.07,
         "halka": "uzak"
       },
       {
-        "cumle": "وراعيت الأمر: نظرت إلام يصير. وأنا أراعي فلاناً: أنظر ماذا يفعل. وأرعيته سمعي، وأرعني سمعك وراعني سمعك. وما في رأسه راعية: فملة لأنها ترعى في الرأس وهو مرعاها.",
-        "prototipe_benzerlik": 0.093,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرعى النجوم وما كلفت رعيتها ... وتارة أتغشى فضل أطماري",
+        "prototipe_benzerlik": 0.201,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وراعيت الأمر: نظرت إلام يصير. وأنا أراعي فلاناً: أنظر ماذا يفعل. وأرعيته سمعي، وأرعني سمعك وراعني سمعك. وما في رأسه راعية: فملة لأنها ترعى في الرأس وهو مرعاها.",
+        "prototipe_benzerlik": 0.082,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.088,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.118,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

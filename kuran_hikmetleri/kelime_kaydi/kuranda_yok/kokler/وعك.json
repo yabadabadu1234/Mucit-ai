@@ -824,11 +824,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
-    "orta": "noun.person",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "sick_person.n.01",
-    "dayanak_tanim": "a person suffering from an illness",
+    "ince": "indispose.v.03",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "indispose.v.03",
+    "dayanak_tanim": "cause to feel unwell",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -842,19 +842,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "إذا أخذت الكلاب الصيد فمرّغته قيل: وعكته وعكاً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "وعكته الحمّى: دكّته، ووعك فهو موعوك، وبه وعك الحمّى، ووعكة الحمّى. ويوم وعكٌ: شديد الحر. قال الأخطل:",
-        "prototipe_benzerlik": 0.042,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "إذا أخذت الكلاب الصيد فمرّغته قيل: وعكته وعكاً."
+      },
+      {
+        "kaynak": "Mekâyîs: وَعَكَ",
+        "metin": "(وَعَكَ) الْوَاوُ وَالْعَيْنُ وَالْكَافُ، يَدُلُّ عَلَى عَرْكِ شَيْءٍ وَتَذْلِيلِهِ. مِنْهُ وَعْكُ الْحُمَّى، كَأَنَّهَا تَعْرُكُ الْجِسْمَ عَرْكًا. وَتَقُولُ الْعَرَبُ: أَوْعَكَتِ الْكِلَابُ الصَّيْدَ، إِذَا مَرَّغَتْهُ فِي التُّرَابِ. وَالْوَعْكَةُ: مَعْرَكَةُ الْأَبْطَالِ. وَأَوْعَكَتِ الْإِبِلُ: ازْدَحَمَتْ، وَهُوَ ذَلِكَ الْقِيَاسُ."
       }
     ],
-    "ortalama_benzerlik": 0.042,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعكته الحمّى: دكّته، ووعك فهو موعوك، وبه وعك الحمّى، ووعكة الحمّى. ويوم وعكٌ: شديد الحر. قال الأخطل:",
+        "prototipe_benzerlik": 0.042,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعاها بصحراوين حتّى تقيّظت ... وأقبل شهراً وقدةٍ وعكان",
+        "prototipe_benzerlik": 0.512,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.277,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["indispose.v.03", "unfortunate.n.01"],
   "muhassas_tasnif": {

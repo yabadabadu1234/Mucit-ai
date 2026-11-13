@@ -731,19 +731,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ما فيه إلا وشلٌ وأوشال وهو ما يتحلّب من صخرة قليلاً قليلاً. قال لبيد يصف فرساً: وعلاه زبد المحض كما ... زلّ عن ظهر الصفا ماء الوشل وماء واشل، وقد وشل يشل. وحفر بئراً فأوشلها: وجد ماءها وشلاً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ما فيه إلا وشلٌ وأوشال وهو ما يتحلّب من صخرة قليلاً قليلاً. قال لبيد يصف فرساً:\nوعلاه زبد المحض كما ... زلّ عن ظهر الصفا ماء الوشل\nوماء واشل، وقد وشل يشل. وحفر بئراً فأوشلها: وجد ماءها وشلاً."
+      },
+      {
+        "kaynak": "Mekâyîs: وَشَلَ",
+        "metin": "(وَشَلَ) الْوَاوُ وَالشِّينُ وَاللَّامُ، يَدُلُّ عَلَى سَيَلَانِ مَاءٍ قَلِيلٍ. فَالْوَشَلُ: الْمَاءُ الْقَلِيلُ، وَجَمْعُهُ أَوْشَالٌ. وَجَبَلٌ وَاشِلٌ: يَقْطُرُ مِنْهُ الْمَاءُ. وَهُوَ وَاشِلُ الْحَظِّ: نَاقِصُهُ. وَالْوُشُولُ: قِلَّةُ الْغَنَاءِ وَالضَّعْفُ. وَنَاقَةٌ وَشُولٌ: يَسِيلُ ضَرْعُهَا، وَذَلِكَ مِنْ كَثْرَةِ اللَّبَنِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ما أصاب إلا وشلاً من الدنيا وأوشالاً منها: وإنه لواشل الحظّ: ناقصه، وفي مثل \" هل بالرمل أوشال \" يضرب للنّكد. وهو من أشال القوم وأوشابهم: لفيفهم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما أصاب إلا وشلاً من الدنيا وأوشالاً منها: وإنه لواشل الحظّ: ناقصه، وفي مثل \" هل بالرمل أوشال \" يضرب للنّكد. وهو من أشال القوم وأوشابهم: لفيفهم.",
         "prototipe_benzerlik": 0.619,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.619,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["content.n.05"],
   "muhassas_tasnif": {

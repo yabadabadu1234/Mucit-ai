@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "معر شعره وتمعّر: تمعّط، ورأس معرٌ وأمعر ومتمعّر. وتقول: به معر، وليس به شعر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "معر شعره وتمعّر: تمعّط، ورأس معرٌ وأمعر ومتمعّر. وتقول: به معر، وليس به شعر."
+      },
+      {
+        "kaynak": "Mekâyîs: مَعَرَ",
+        "metin": "(مَعَرَ) الْمِيمُ وَالْعَيْنُ وَالرَّاءُ أَصْلٌ يَدُلُّ عَلَى مَلَاسَةٍ وَحَصٍّ وَانْجِرَادٍ. فَالْأَمْعَرُ وَالْمَعِرُ: الْأَمْعَطُ الَّذِي لَا شَعَْرَ عَلَيْهِ. وَمِنْهُ أَمْعَرَ الرَّجُلُ: افْتَقَرَ، كَأَنَّهُ تَجَرَّدَ مِنْ مَالِهِ. [وَ] مَعَرَ الظُّفْرُ: نَصَلَ وَتَمَعَّرَ لَوْنُهُ عِنْدَ غَضَبِهِ، وَذَلِكَ أَنْ يَتَطَايَرَ الدَّمُ عَنْهُ وَتَعْلُوَهُ صُفْرَةٌ. قَالَ الْخَلِيلُ: وَهُوَ أَمْعَرُ الشَّعْرِ، وَبِهِ مُعْرَةٌ، وَهُوَ لَوْنٌ يَضْرِبُ إِلَى الْحُمْرَةِ وَالصُّفْرَةِ، وَهُوَ أَقْبَحُ الْأَلْوَانِ. وَأَمْعَرَتِ الْأَرْضُ: لَمْ يَكُنْ فِيهَا نَبَاتٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قاع معر وأمعر، وأرض معرة: بلا نبات. وأمعرنا: وقعنا فيها. ومعر الرجل من ماله وأمعر: افتقر. وفلان معر: بخيل نكد. وتقول: هو زعر معر، كأنه عيرٌ نعر. ومعر ظفره: نصل. وتمّر لونه: تغيّر. وتقول: كلمته فتحيّر وتغيّر، وتمعّر لونه وتمغّر؛ من المغرة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قاع معر وأمعر، وأرض معرة: بلا نبات. وأمعرنا: وقعنا فيها. ومعر الرجل من ماله وأمعر: افتقر. وفلان معر: بخيل نكد. وتقول: هو زعر معر، كأنه عيرٌ نعر. ومعر ظفره: نصل. وتمّر لونه: تغيّر. وتقول: كلمته فتحيّر وتغيّر، وتمعّر لونه وتمغّر؛ من المغرة.",
         "prototipe_benzerlik": 0.252,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.252,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

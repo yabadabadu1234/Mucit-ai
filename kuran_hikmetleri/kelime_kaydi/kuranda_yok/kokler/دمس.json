@@ -1298,19 +1298,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ليل دامس، ونهار شامس؛ وقد دمس الليل دموساً وأدمس، وأتيته دمس الظلام. ودمست الشيء في الأرض ودمّسته: دفنته. ووقع في الديماس وهو السجن أو القبر، بالفتح والكسر. ودمسه ورمسه: قبره. وكان بان المهلب في ديماس الحجاج.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ليل دامس، ونهار شامس؛ وقد دمس الليل دموساً وأدمس، وأتيته دمس الظلام. ودمست الشيء في الأرض ودمّسته: دفنته. ووقع في الديماس وهو السجن أو القبر، بالفتح والكسر. ودمسه ورمسه: قبره. وكان بان المهلب في ديماس الحجاج."
+      },
+      {
+        "kaynak": "Mekâyîs: دَمَسَ",
+        "metin": "(دَمَسَ) الدَّالُ وَالْمِيمُ وَالسِّينُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى خَفَاءِ الشَّيْءِ. وَمِنْ ذَلِكَ قَوْلُهُمْ: دَمَسْتُ الشَّيْءَ، إِذَا أَخْفَيْتَهُ. وَأَتَانَا بِأُمُورٍ دُمْسٍ مِثْلِ دُبْسٍ،\nوَهِيَ الْأُمُورُ الَّتِي لَا يُهْتَدَى لِوَجْهِهَا. وَيَقُولُونَ: دَمَسَ الظَّلَامُ: اشْتَدَّ. وَمِنْهُ الدِّيمَاسُ، يُقَالُ إِنَّهُ السَّرَبُ. وَهُوَ ذَلِكَ التَّمَاسُّ. وَفِي حَدِيثِ عِيسَى عَلَيْهِ السَّلَامُ: «كَأَنَّمَا خَرَجَ مِنْ دِيمَاسٍ» ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دمس الأمر ودمسه، وأمرهم مدمس: مستور. وأمور دمس: مظلمة. ولما وارى دمس دمساً اتخذ الليل جملاً أي سواد سوادا.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دمس الأمر ودمسه، وأمرهم مدمس: مستور. وأمور دمس: مظلمة. ولما وارى دمس دمساً اتخذ الليل جملاً أي سواد سوادا.",
         "prototipe_benzerlik": 0.739,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.739,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

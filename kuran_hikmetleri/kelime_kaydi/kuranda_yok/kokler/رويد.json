@@ -37,29 +37,60 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رويد بعض وعيدك. قال: رويد نصاهل بالعراق جيادنا ... كأنك بالضحّاك قد قام نادبه وامش رويداً. وأرود في مشيتك، وامش على رود. قال الهذلي: تكاد لا تثلم البطحاء خطوتها ... كأنها ثمل يمشي على رود وقال: ردّوا الجمال وقامت كل بهكنة ... تكاد من روداء المشي تنبهر وما في أ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رويد بعض وعيدك. قال:\nرويد نصاهل بالعراق جيادنا ... كأنك بالضحّاك قد قام نادبه\nوامش رويداً. وأرود في مشيتك، وامش على رود. قال الهذلي:\nتكاد لا تثلم البطحاء خطوتها ... كأنها ثمل يمشي على رود\nوقال:\nردّوا الجمال وقامت كل بهكنة ... تكاد من روداء المشي تنبهر\nوما في أمره هويداء ولا رويداء، وريح رادة: سهلة الهبوب. وأردت منه كذا. وما أردت إلى ما فعلت. وأراده على الأمر: حمله عليه. وراد روداناً: جاء وذهب. ومالي أراك ترود منذ اليوم. وراد النعم في المرعى رياداً: تردّد. وهي في مرادها. وبعثنا رائداً يرود لنا الكلأ ويرتاد. وتباشرت الرواد. وامرأة رادة، وقد رادت ترود: اختلفت إلى بيوت جاراتها. وكحلة بالمرود. وأدار الرحى بالرائد وهو يدها. قال:\nإذا قبضت تيمية رائد الرحى ... تنفس قنباها فطار طحينها\nأي فست. ودار المهر والبازي في المرود وهو حديدة مشدودة بالرسن إذا دار دار معه. قال عباس بن مرداس:\nعلى شخص الأبصار تسمع بينها ... إذا هي جالت في مراودها عزفا\nأي صهيلاً. والطير تستريد: تطلب الرزق تتردّد في طلبه. قال أبو قيس بن صرمة:\nوله الطير تستريد وتأوي ... في وكور من آمنات الجبال\nوأردته بكل ريدة جميلة فلم أقدر عليه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان رائد الوساد، وقد راد وساده إذا لم يستقر من مرض أو هم. قال:",
-        "prototipe_benzerlik": 0.294,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان رائد الوساد، وقد راد وساده إذا لم يستقر من مرض أو هم. قال:",
+        "prototipe_benzerlik": 0.279,
         "halka": "uzak"
       },
       {
-        "cumle": "وأنا رائد حاجة ومرتادها، وأنا من روّاد الحاجات. وهذا مراد الريح. وإن فلاناً لمستراد لمثله. قال النابغة:",
-        "prototipe_benzerlik": 0.254,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقول له لما رأت خمع زجله ... أهذا رئيس القوم راد وسادها",
+        "prototipe_benzerlik": 0.262,
         "halka": "uzak"
       },
       {
-        "cumle": "وتقول: هو مستراد، ما عليه مستراد. وأرادتنا حاجتنا إذا لبثتهم. وراوده عن نفسه: خادعه عنها وراوغه. والجدار يريد أن ينقض. وقال ابن مقبل يصف الفرس:",
-        "prototipe_benzerlik": 0.251,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنا رائد حاجة ومرتادها، وأنا من روّاد الحاجات. وهذا مراد الريح. وإن فلاناً لمستراد لمثله. قال النابغة:",
+        "prototipe_benzerlik": 0.241,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولكنني كنت امرأ لي جانب ... من الأرض فيه مستراد ومذهب",
+        "prototipe_benzerlik": 0.093,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول: هو مستراد، ما عليه مستراد. وأرادتنا حاجتنا إذا لبثتهم. وراوده عن نفسه: خادعه عنها وراوغه. والجدار يريد أن ينقض. وقال ابن مقبل يصف الفرس:",
+        "prototipe_benzerlik": 0.209,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من المائحات بأعراضها ... إذا الحالبان أرادا اغتسالا",
+        "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يريد العرق.",
+        "prototipe_benzerlik": 0.043,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.266,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.184,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

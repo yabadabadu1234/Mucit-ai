@@ -1373,8 +1373,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "wardrobe.n.01",
-    "dayanak_tanim": "a tall piece of furniture that provides storage space for clothes; has a door and rails or hooks for hanging clothes",
+    "dayanak_synset": "stock.n.02",
+    "dayanak_tanim": "the merchandise that a shop has on hand",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1393,19 +1393,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نفاذُ حادّ مؤلم بدن الحيّ (1): كذلك الشوكِ عندما",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نفاذُ حادّ مؤلم بدن الحيّ (1): كذلك الشوكِ عندما"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ما مسست حريرة ولا خزة ألين من كفه. ومسه مس الخزز وهو الذكر من الأرانب، وجمعه خزان وخزاز. قال:\nكما انقضت خوافي أم لوح ... ملوع أبصرت مشوي خزاز\nوخززته بسهم واختززته: أصبته وأنفذته، وطعنته فاخترزته. قال بعض السعديين:\nفاختزه بسليب مدريّ ... عاري الكعوب غير ذي شظي\nكأنما اختز بزاعبي\nوقال ابن أحمر:\nحتى اختززت فؤاده بالمطرد"
+      },
+      {
+        "kaynak": "Mekâyîs: خَزَّ",
+        "metin": "(خَزَّ) الْخَاءُ وَالزَّاءُ أَصْلَانِ: أَحَدُهُمَا أَنْ يُرَزَّ شَيْءٌ فِي آخَرَ، وَالْآخَرُ جِنْسٌ مِنَ الْحَيَوَانِ.\nفَالْأَوَّلُ الْخَزُّ خَزُّ الْحَائِطِ، وَهُوَ أَنْ يُشَوَّكَ. وَيُقَالُ خَزَّهُ بِسَهْمٍ، إِذَا رَمَاهُ بِهِ وَأَثْبَتَهُ فِيهِ. وَطَعَنَهُ بِالرُّمْحِ فَاخْتَزَّهُ. قَالَ ابْنُ أَحْمَرَ:\nحَتَّى اخْتَزَزْتُ فُؤَادَهُ بَالْمِطْرَدِ\nفَأَمَّا قَوْلُهُمْ بَعِيرٌ خُزَخِزٌ، أَيْ شَدِيدٌ، فَهُوَ مِنَ الْبَابِ ; لِأَنَّ أَعْضَاءَهُ كَأَنَّهَا خُزَّتْ خَزًّا، أَيْ أُثْبِتَتْ إِثْبَاتًا.\nوَالْأَصْلُ الثَّانِي: الْخُزَزُ: الذَّكَرُ مِنَ الْأَرَانِبِ، وَالْجَمْعُ خِزَّانٌ. قَالَ:\nوَبَنُو نُويْجِيَةَ اللَّذُونَ كَأَنَّهُمْ ... مُعْطٌ مُخَدَّمَةٌ مِنَ الْخِزَّانِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "خز الحائط بالشوك لئلا يتسلق إذا غرزه في أعلاه. وخززته ببصري واختززته إذا أخذته عينك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خز الحائط بالشوك لئلا يتسلق إذا غرزه في أعلاه. وخززته ببصري واختززته إذا أخذته عينك.",
         "prototipe_benzerlik": 0.227,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.227,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "assets.n.01", "prick.v.02", "status.n.01", "supply.n.01"],
   "muhassas_tasnif": {

@@ -1030,19 +1030,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الاضطمام على مائع كثير أو خَوَرٍ أو ما يناسب ذلك من ضعف وفساد (1): كالضرع الممتلئ باللبن، والعين بالدمع، والريش الفاسد",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الاضطمام على مائع كثير أو خَوَرٍ أو ما يناسب ذلك من ضعف وفساد (1): كالضرع الممتلئ باللبن، والعين بالدمع، والريش الفاسد"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خم اللحم وأخم: تغير، وفيه خموم. وخم البيت والبئر: كنس. وهو من خمان الناس: من خثارتهم من الخمامة."
+      },
+      {
+        "kaynak": "Mekâyîs: خَمَّ",
+        "metin": "(خَمَّ) الْخَاءُ وَالْمِيمُ أَصْلَانِ: أَحَدُهُمَا تَغَيُّرُ رَائِحَةٍ، وَالْآخَرُ تَنْقِيَةُ شَيْءٍ. فَالْأَوَّلُ: قَوْلُهُمْ خَمَّ اللَّحْمُ، إِذَا تَغَيَّرَتْ رَائِحَتُهُ. وَالثَّانِي: قَوْلُهُمْ خُمَّ الْبَيْتُ إِذَا كُنِسَ. وَخُمَامَةُ الْبِئْرِ: مَا يُخَمُّ مِنْ تُرَابِهَا إِذَا نُقِّيَتْ. وَبَيْتٌ مَخْمُومٌ: مَكْنُوسٌ. وَيُقَالُ هُوَ مَخْمُومُ الْقَلْبِ، إِذَا كَانَ نَقِيَّ الْقَلْبِ مِنْ كُلِّ غِشٍّ وَدَخَلٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فلان مخموم القلب: نقيّه من كل دغل. وفلان لا يخم أي لا يتغير عن كرمه وجودته. هوهذا السمن لا يخم. وهو يخم ثياب فلان اي يثنى عليه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان مخموم القلب: نقيّه من كل دغل. وفلان لا يخم أي لا يتغير عن كرمه وجودته. هوهذا السمن لا يخم. وهو يخم ثياب فلان اي يثنى عليه.",
         "prototipe_benzerlik": 0.411,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.411,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

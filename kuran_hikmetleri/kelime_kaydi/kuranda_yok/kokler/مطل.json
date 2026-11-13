@@ -910,19 +910,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مطل فلان حقي، وماطلني به مطلاً ومطالاً، ورجل مطّال ومطول. وتقول: هو مسوّف مطول، وله سوق يطول. ومطل حديدة البيضة: مدّها. قال العجاج: بمرهفات مطلت سبائكا ... تقضّ أمّ الهام والترائكا وله مطيلة ومطائل: حدائد ممطولة. م ط ومطوت بهم في السير. ومطا الرّشاء من البئر. ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مطل فلان حقي، وماطلني به مطلاً ومطالاً، ورجل مطّال ومطول. وتقول: هو مسوّف مطول، وله سوق يطول. ومطل حديدة البيضة: مدّها. قال العجاج:\nبمرهفات مطلت سبائكا ... تقضّ أمّ الهام والترائكا\nوله مطيلة ومطائل: حدائد ممطولة.\nم ط\nومطوت بهم في السير. ومطا الرّشاء من البئر. ورأيته قد مطي في الشمس. وركب المطية والمطيّ والمطايا، وامتطاها. وركب مطاها: ظهرها. وتمطّى في مشيته: تبختر، وهو يتثاءب ويتمطّى، وبه ثؤباء ومطواء. قال المسيب:\nبمحالة تقص الذباب بطرفها ... خلقت معاقمها على مطوائها\nأي لم تلقح فهي حائل وكأنها تمطّت فخلقت على ذلك."
+      },
+      {
+        "kaynak": "Mekâyîs: مَطَلَ",
+        "metin": "(مَطَلَ) الْمِيمُ وَالطَّاءُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَدِّ الشَّيْءِ وَإِطَالَتِهِ. وَمَطَلْتُ الْحَدِيدَةَ أَمْطُلُهَا مَطْلًا: مَدَدْتُهَا. وَالْمَطْلُ فِي الْحَاجَةِ وَالْمُمَاطَلَةُ فِي الْحَرْبِ مِنْهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تمطّى الليل إذا طال. قال بيهس:",
-        "prototipe_benzerlik": 0.137,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تمطّى الليل إذا طال. قال بيهس:",
+        "prototipe_benzerlik": 0.21,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كلّما قلت قد تقضّى تمطّى ... حالك اللون دامساً يحموماً",
+        "prototipe_benzerlik": 0.222,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.137,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.216,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["delay.v.02"],
   "muhassas_tasnif": {

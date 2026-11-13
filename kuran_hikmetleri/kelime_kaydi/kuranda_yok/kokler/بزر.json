@@ -820,19 +820,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بزر برمتك وألق فيها الأبزار والأبازير. وتقول: اللحم المبزر أشهى والنفس عليه أشره، وإلا فهو بجزر السباع أشبه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "مثل لا تخفي عليه أبازيرك أي زياداتك في القول ووشاياتك. وقد بزر فلان كلامه وتوبله، ومنه قيل للرجل المريب: البازور. قال:",
-        "prototipe_benzerlik": 0.551,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بزر برمتك وألق فيها الأبزار والأبازير. وتقول: اللحم المبزر أشهى والنفس عليه أشره، وإلا فهو بجزر السباع أشبه."
+      },
+      {
+        "kaynak": "Mekâyîs: بَزَرَ",
+        "metin": "(بَزَرَ) الْبَاءُ وَالزَّاءُ وَالرَّاءُ أَصْلَانِ: أَحَدُهُمَا شَيْءٌ مِنَ الْحُبُوبِ، وَالْأَصْلُ الثَّانِي مِنَ الْآلَاتِ الَّتِي تُسْتَعْمَلُ عِنْدَ دَقِّ الشَّيْءِ.\nفَأَمَّا الْأَوَّلُ فَمَعْرُوفٌ. قَالَ الدُّرَيدِيُّ: وَقَوْلُ الْعَامَّةِ بَزْرُ الْبَقْلِ خَطَأٌ، إِنَّمَا هُوَ بَذْرُ. وَفِي الْكِتَابِ الَّذِي لِلْخَلِيلِ: الْبَزْرُ كُلُّ حَبٍّ يُبْذَرُ، يُقَالُ: بَذَرْتُهُ وَبَزَرْتُ الْقِدْرَ بِأَبْزَارِهَا.\nوَالْأَصْلُ الثَّانِي: الْبَيْزَرَةُ خَشَبَةُ الْقَصَّارِ الَّتِي يَدُقُّ بِهَا، وَلِذَا قَالَ أَوْسٌ:\nبِأَيْدِيهِمْ بَيَازِيرُ\nوَيُقَالُ: بَزَرْتُهُ بِالْعَصَا: إِذَا ضَرَبْتَهُ بِهَا.\n[بَابُ الْبَاءِ وَالسِّينِ وَمَا يَثْلِثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.551,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مثل لا تخفي عليه أبازيرك أي زياداتك في القول ووشاياتك. وقد بزر فلان كلامه وتوبله، ومنه قيل للرجل المريب: البازور. قال:",
+        "prototipe_benzerlik": 0.551,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أما بنو يشكر لا در درهم ... ولا سقوا فهم قوم بوازير",
+        "prototipe_benzerlik": 0.193,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.372,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["class.n.03", "natural_object.n.01", "sow.v.01"],
   "muhassas_tasnif": {

@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أنف أكزم. ويد كزماء، وفي أصابعه كزمٌ: قصرٌ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أنف أكزم. ويد كزماء، وفي أصابعه كزمٌ: قصرٌ."
+      },
+      {
+        "kaynak": "Mekâyîs: كَزَمَ",
+        "metin": "(كَزَمَ) الْكَافُ وَالزَّاءُ وَالْمِيمُ أُصَيْلٌ يَدُلُّ عَلَى قِصَرٍ وَقَمَاءَةٍ. فَالْكَزَمُ: الْقِصَرُ فِي الْأَنْفِ، وَكَذَلِكَ فِي الْأَصَابِعِ. يُقَالُ أَنْفٌ أَكْزَمُ وَيَدٌ كَزْمَاءُ. وَالْكَزْمُ: الرَّجُلُ الْهَيَّبَانُ، وَسُمِّيَ لِانْقِبَاضِهِ عَنِ الْإِقْدَامِ، وَالْكَزُومُ:\nالَّتِي لَمْ يَبْقَ فِيهَا سِنٌّ مِنَ الْهَرَمِ. وَكُلُّ هَذَا قِيَاسُهُ وَاحِدٌ. وَذَكَرَ أَنَّ الْكَزْمَ كَالْكَدْمِ بِمُقَدَّمِ الْفَمِ. وَهَذَا مِنْ بَابِ الْإِبْدَالِ، وَاللَّهُ بِصِحِتِّهَا أَعْلَمُ.\n[بَابُ الْكَافِ وَالسِّينِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "في يده كزم إذا لم يبسطها بالمعروف. وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يتعوّذ من العيمة والأيمة والكرم والقزم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في يده كزم إذا لم يبسطها بالمعروف. وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يتعوّذ من العيمة والأيمة والكرم والقزم.",
         "prototipe_benzerlik": 0.326,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.326,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

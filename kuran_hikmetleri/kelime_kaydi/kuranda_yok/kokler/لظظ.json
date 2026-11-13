@@ -787,19 +787,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "حركة ممتدٍّ مع حدّة ولزوم للمكان (1): كرأس الحية بسُمّه وعدم انتقاله رغم حركته. ومنه \"لَظَّ بالمكان، وألظّ به وعليه: أقام به ألخ (لزوم، والإلحاح مؤذٍ كالحدة) والإلظاظ: لزوم الشيء والمثابرة عليه من جنس الإلحاح كما في الحديث الشريف \"ألِظُّوا في الدعاء بياذا الجل",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "حركة ممتدٍّ مع حدّة ولزوم للمكان (1): كرأس الحية بسُمّه وعدم انتقاله رغم حركته. ومنه \"لَظَّ بالمكان، وألظّ به وعليه: أقام به ألخ (لزوم، والإلحاح مؤذٍ كالحدة) والإلظاظ: لزوم الشيء والمثابرة عليه من جنس الإلحاح كما في الحديث الشريف \"ألِظُّوا في الدعاء بياذا الجلال والإكرام \"."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ألظّ المطر وألثّ. وألظّ بالمكان: أقام."
+      },
+      {
+        "kaynak": "Mekâyîs: لَظَّ",
+        "metin": "(لَظَّ) اللَّامُ وَالظَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُلَازَمَةٍ. يُقَالُ: أَلَظَّ الرَّجُلُ بِالشَّيْءِ، إِذَا لَازَمَهُ. وَفِي الْحَدِيثِ: «أَلِظُّوا بِيَاذَا الْجَلَالِ وَالْإِكْرَامِ» ، أَيِ الْزَمُوا هَذَا وَأَكْثِرُوا مِنْهُ فِي دُعَائِكُمْ. وَيُقَالُ: أَلَظَّ الْمَطَرُ: دَامَ. وَيَقُولُونَ: الْإِلْظَاظُ: الْإِشْفَاقُ عَلَى الشَّيْءِ; وَلَيْسَ بِبَعِيدِ الْقِيَاسِ مِنَ الْبَابِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "\" ألظوا بيا ذا الجلال والإكرام \": الزموه.",
-        "prototipe_benzerlik": 0.597,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" ألظوا بيا ذا الجلال والإكرام \": الزموه.",
+        "prototipe_benzerlik": 0.706,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.597,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.706,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

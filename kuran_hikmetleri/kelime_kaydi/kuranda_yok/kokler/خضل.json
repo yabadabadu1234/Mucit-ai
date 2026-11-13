@@ -1596,19 +1596,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خضل الشيء: ندي حتى ترشرش نداه، فهو خضل، واخضل فهو مخضل، وأخضله وخضّله: ندّاه. وأخضلتنا السماء. واخضلّت لحيته بالدموع. وسنان خضل: ند من الدم. قال أبو النجم: ومجرب خضل السنان إذا التقى ... رهج بخاطره الصدور ظماء وبأرضهم خضيلة وهي الروضة الغمقة. ونبات خضل: ناعم. ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "درة خضلة: صافية كأنها قطرة ماء. وخضلة الرجل: امرأته، كما يقال طلّته.",
-        "prototipe_benzerlik": 0.216,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خضل الشيء: ندي حتى ترشرش نداه، فهو خضل، واخضل فهو مخضل، وأخضله وخضّله: ندّاه. وأخضلتنا السماء. واخضلّت لحيته بالدموع. وسنان خضل: ند من الدم. قال أبو النجم:\nومجرب خضل السنان إذا التقى ... رهج بخاطره الصدور ظماء\nوبأرضهم خضيلة وهي الروضة الغمقة. ونبات خضل: ناعم. ويومنا يوم خضلة وهي النعيم. قال مرداس الدبيري:\nإذا قلت هذا اليوم يوم خضلة ... ولا شرز لاقيت الأمور البجاريا\nوطلعت الخضلة وهي قوس قزح."
+      },
+      {
+        "kaynak": "Mekâyîs: خَضِلَ",
+        "metin": "(خَضِلَ) الْخَاءُ وَالضَّادُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى نَعْمَةٍ وَنَدًى. يُقَالُ أَخْضَلَ الْمَطَرُ [الْأَرْضَ] فَهُوَ مُخْضِلٌ، وَالْأَرْضُ مُخْضَلَةٌ. وَاخْضَلَّ الشَّيْءُ: ابْتَلَّ. وَالْخَضِلُ: النَّبَاتُ النَّاعِمُ. وَيُقَالُ إِنَّ الْخَضِيلَةَ الرَّوْضَةُ. وَيُقَالُ لِامْرَأَةِ الرَّجُلِ خُضُلَّتُهُ، وَهُوَ مِنْ هَذَا وَذَلِكَ، كَمَا سُمِّيَتْ طَلَّةً، لِأَنَّهَا كَالطَّلِّ فِي عَيْنِهِ. وَكُلُّ نِعْمَةٍ خُضُلَّةٌ. قَالَ:\nإِذَا قُلْتُ إِنَّ الْيَوْمَ يَوْمُ خَضُلَّةٍ ... وَلَا شَرْزَ لَاقَيْتُ الْأُمُورَ الْبَجَارِيَا"
       }
     ],
-    "ortalama_benzerlik": 0.216,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "درة خضلة: صافية كأنها قطرة ماء. وخضلة الرجل: امرأته، كما يقال طلّته.",
+        "prototipe_benzerlik": 0.42,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.42,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["wet.v.01"],
   "muhassas_tasnif": {

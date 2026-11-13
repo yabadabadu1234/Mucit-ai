@@ -1084,19 +1084,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فخذ الرجل: كسرت فخذه فهو مفخوذ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فخذ الرجل: كسرت فخذه فهو مفخوذ."
+      },
+      {
+        "kaynak": "Mekâyîs: فَخَذَ",
+        "metin": "(فَخَذَ) الْفَاءُ وَالْخَاءُ وَالذَّالُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْفَخِذُ مِنَ الْإِنْسَانِ، مَعْرُوفَةٌ، وَاسْتُعِيرَ فَقِيلَ الْفَخِذُ بِسُكُونِ الْخَاءِ، دُونَ الْقَبِيلَةِ وَفَوْقَ الْبَطْنِ، وَالْجَمْعُ أَفْخَاذٌ.\n[بَابُ الْفَاءِ وَالدَّالِ وَمَا يَثْلِثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هذا فخذي بالتذكير أي أدنى عشيرتي. وفلان من فخذ من أفخاذ بني تميم، وفخّذ قبيلته: جعلهم فخذاً فخذاً. وفخذت بني فلان فلم أرَ عندهم خيراً أي أتيتهم فخذاً فخذاً فسألتهم في حمالة أو غيرها. ولما أنزل على رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قوله تعالى: \" وأنذر عشيرتك الأقربين \" بات يفخّذ عشيرته أي يدع",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هذا فخذي بالتذكير أي أدنى عشيرتي. وفلان من فخذ من أفخاذ بني تميم، وفخّذ قبيلته: جعلهم فخذاً فخذاً. وفخذت بني فلان فلم أرَ عندهم خيراً أي أتيتهم فخذاً فخذاً فسألتهم في حمالة أو غيرها. ولما أنزل على رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ قوله تعالى: \" وأنذر عشيرتك الأقربين \" بات يفخّذ عشيرته أي يدعوهم فخذاً فخذاً.",
         "prototipe_benzerlik": 0.392,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.392,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {

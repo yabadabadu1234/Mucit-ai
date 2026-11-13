@@ -788,19 +788,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو مزءود مذعور. وقد زئد فلان وأصابه زؤد. وتقول: شعار الزهد استشعار الزؤد.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "بات في ليلة مزءودة. قال:",
-        "prototipe_benzerlik": 0.508,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو مزءود مذعور. وقد زئد فلان وأصابه زؤد. وتقول: شعار الزهد استشعار الزؤد."
+      },
+      {
+        "kaynak": "Mekâyîs: زَأَدَ",
+        "metin": "(زَأَدَ) الزَّاءُ وَالْهَمْزَةُ وَالدَّالُ كَلِمَةٌ وَاحِدَةٌ، تَدُلُّ عَلَى الْفَزَعِ. يُقَالُ زُئِدُ الرَّجُلُ، إِذَا فَزِعَ، زُؤْدًا. قَالَ:\nحَمَلَتْ بِهِ فِي لَيْلَةٍ مَزْءُودَةٍ ... كَرْهًا وَعَقْدُ نِطَاقِهَا لَمْ يُحْلَلِ"
       }
     ],
-    "ortalama_benzerlik": 0.508,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بات في ليلة مزءودة. قال:",
+        "prototipe_benzerlik": 0.508,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حملت به في ليلة مزءودة ... كرهاً وعقد نطاقها لم يحلل",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.451,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

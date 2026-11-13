@@ -790,19 +790,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ارتطم في الوحل: وقع فيه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ارتطم في الوحل: وقع فيه."
+      },
+      {
+        "kaynak": "Mekâyîs: رَطَمَ",
+        "metin": "(رَطَمَ) الرَّاءُ وَالطَّاءُ وَالْمِيمُ كَلِمَةٌ تَدُلُّ عَلَى ارْتِبَاكٍ وَاحْتِبَاسٍ. يَقُولُونَ: ارْتَطَمَ عَلَى الرَّجُلِ أَمْرُهُ، إِذَا سُدَّتْ عَلَيْهِ مَذَاهِبُهُ. وَيَقُولُونَ: ارْتَطَمَ فِي الْوَحْلِ. وَمِنَ الْبَابِ تَسْمِيَتُهُمُ اللَّازِمَ لِلشَّيْءِ رَاطِمًا. وَالرَّطُومُ: الْأَحْمَقُ; وَسُمِّيَ بِذَلِكَ لِأَنَّهُ يَرْتَطِمُ فِي أُمُورِهِ. وَمِنَ الْبَابِ الرُّطَامُ، وَهُوَ احْتِبَاسُ نَجْوِ الْبَعِيرِ. وَيَقُولُونَ رَطَمَهَا، إِذَا نَكَحَهَا. وَقَدْ قُلْنَا إِنَّ هَذَا وَشِبْهَهُ مِمَّا لَا يَكُونُ مِنْ مَحْضِ اللُّغَةِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ارتطم فلان في أمر: لا يجد منه مخلصاً وارتطم عليه أمره: سدّت عليه مذاهبه. ووقع في مضيق ومرتطم. وفي حديث عليّ رضي الله تعالى عنه \" فقد ارتطم في الربا \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ارتطم فلان في أمر: لا يجد منه مخلصاً وارتطم عليه أمره: سدّت عليه مذاهبه. ووقع في مضيق ومرتطم. وفي حديث عليّ رضي الله تعالى عنه \" فقد ارتطم في الربا \".",
         "prototipe_benzerlik": 0.611,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.611,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

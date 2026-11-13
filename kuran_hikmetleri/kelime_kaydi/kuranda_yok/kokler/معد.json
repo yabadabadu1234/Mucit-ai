@@ -760,19 +760,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "\" تمعددوا \": تشّبهوا بمعدّ في خشونة المطعم والملبس وتصلّبوا. قال حسان: فحاضرنا يكفوننا ساكن القرى ... وأعرابنا يكفوننا من تمعددا ورجل ممعود: دوي المعدة، وقد معد.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "تمعدد الصبي: غلظ وصلب وذهبت عنه رطوبة الصبا.",
-        "prototipe_benzerlik": 0.672,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "\" تمعددوا \": تشّبهوا بمعدّ في خشونة المطعم والملبس وتصلّبوا. قال حسان:\nفحاضرنا يكفوننا ساكن القرى ... وأعرابنا يكفوننا من تمعددا\nورجل ممعود: دوي المعدة، وقد معد."
+      },
+      {
+        "kaynak": "Mekâyîs: مَعَدَ",
+        "metin": "(مَعَدَ) الْمِيمُ وَالْعَيْنُ وَالدَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى غِلَظٍ فِي الشَّيْءِ. قَالَ ابْنُ دُرَيْدٍ الْمَعْدُ: الْغِلَظُ. قَالَ: وَمِنْهُ الْمَعِدَةُ. وَتَمَعْدَدَ الصَّبِيُّ: غَلُظَ. وَيَكُونُ فِي هَذَا الْبَابِ الْمَعْدُ دَالًّا عَلَى جَذْبِ الشَّيْءِ وَانْجِذَابٍ. وَمَعَدْتُ الشَّيْءَ: جَذَبْتُهُ. قَالَ:\nهَلْ يُرْوِيَنْ ذَوْدَكَ نَزْعٌ مَعْدُ\nوَمِمَّا شَذَّ عَنِ الْبَابِ الْمَعْدُ، يَقُولُونَ: الْغَضُّ مِنَ التَّمْرِ."
       }
     ],
-    "ortalama_benzerlik": 0.672,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تمعدد الصبي: غلظ وصلب وذهبت عنه رطوبة الصبا.",
+        "prototipe_benzerlik": 0.672,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال:",
+        "prototipe_benzerlik": 0.591,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ربّيته حتى إذا تمعددا ... وآض نهداً كالحصان أجردا",
+        "prototipe_benzerlik": 0.476,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.58,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {

@@ -1642,49 +1642,100 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وضع على البعير خطامه، وعلى الإبل خطمها. وخطم البعير، وخطم الإبل. وضرب خطم البعير ومخطمه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وضع على البعير خطامه، وعلى الإبل خطمها. وخطم البعير، وخطم الإبل. وضرب خطم البعير ومخطمه."
+      },
+      {
+        "kaynak": "Mekâyîs: خَطَمَ",
+        "metin": "(خَطَمَ) الْخَاءُ وَالطَّاءُ وَالْمِيمُ يَدُلُّ عَلَى تَقَدُّمِ شَيْءٍ فِي نُتُوٍّ يَكُونُ فِيهِ. فَالْمَخَاطِمُ الْأُنُوفُ، وَاحِدُهَا مَخْطِمٌ. وَرَجُلٌ أَخْطَمُ: طَوِيلُ الْأَنْفِ. وَالْخِطَامُ لِلْبَعِيرِ سُمِّيَ بِذَلِكَ لِأَنَّهُ يَقَعُ عَلَى خَطْمِهِ. وَيُقَالُ إِنَّ الْخُطْمَةَ رَعْنُ الْجَبَلِ. فَهَذَا هُوَ الْبَابُ.\nوَقَدْ شَذَّتْ كَلِمَةٌ وَاحِدَةٌ، قَالُوا: بُسْرٌ مُخَطَّمٌ، إِذَا صَارَتْ فِيهِ خُطُوطٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ضرب الرجل على خطمه ومخطمه. وعفّروا مخاطمهم. وطير عقف المخاطم، وهي المناقير. وخطم قوسه بخطامها: وترها بوترها، وأخذ قوساً فخطمها بوتر. وخطم أنفه: ألزق به عاراً ظاهراً. قال أوس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضرب الرجل على خطمه ومخطمه. وعفّروا مخاطمهم. وطير عقف المخاطم، وهي المناقير. وخطم قوسه بخطامها: وترها بوترها، وأخذ قوساً فخطمها بوتر. وخطم أنفه: ألزق به عاراً ظاهراً. قال أوس:",
         "prototipe_benzerlik": 0.821,
         "halka": "yakın"
       },
       {
-        "cumle": "وخطمه باللوم وعذّره. قال الجعدي:",
-        "prototipe_benzerlik": 0.519,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يجود ويعطي المال من غير ضنة ... ويخطم أنف الأبلخ المتغشم",
+        "prototipe_benzerlik": 0.55,
         "halka": "yakın"
       },
       {
-        "cumle": "ومسك خطام: حديد الريح، كأنه يخطم الأنوف. وخطم أنف الرمل: استقبله جازعاً. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخطمه باللوم وعذّره. قال الجعدي:",
+        "prototipe_benzerlik": 0.519,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا أدلج السعدي أدلج سارقاً ... وأصبح مخطوماً بلوم معذرا",
+        "prototipe_benzerlik": 0.687,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومسك خطام: حديد الريح، كأنه يخطم الأنوف. وخطم أنف الرمل: استقبله جازعاً. قال ذو الرمة:",
         "prototipe_benzerlik": 0.625,
         "halka": "yakın"
       },
       {
-        "cumle": "وخطم بلحية إذا صارت في خديه، وخطمته لحيته. قال النمر بن تولب:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا حبا من أنف رمل منخر ... خطمته خطماً وهنّ عسر",
+        "prototipe_benzerlik": 0.593,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخطم بلحية إذا صارت في خديه، وخطمته لحيته. قال النمر بن تولب:",
         "prototipe_benzerlik": 0.798,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان خاطم أمر بني فلان: قائدهم ومدبر أمرهم. وأقبل خطم الليل وأنفه. قال مزاحم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألست بشيخ قد خطمت بلحية ... فتقصر عن جهل الغرانقة المرد",
+        "prototipe_benzerlik": 0.565,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان خاطم أمر بني فلان: قائدهم ومدبر أمرهم. وأقبل خطم الليل وأنفه. قال مزاحم:",
         "prototipe_benzerlik": 0.591,
         "halka": "yakın"
       },
       {
-        "cumle": "وخطا خطوة واحدة، وخطوة واسعة، وهو فسيح الخطا، وبعيد الخطا.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "على خطم جون قد بدا من ظلامه ... غطاء يكف الناظرات بهيم",
+        "prototipe_benzerlik": 0.387,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خ ط",
+        "prototipe_benzerlik": 0.424,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخطا خطوة واحدة، وخطوة واسعة، وهو فسيح الخطا، وبعيد الخطا.",
         "prototipe_benzerlik": 0.366,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: تخطاه المكروه، وتخطيت إليه بالمكروه. وبين القولين خطًى يسيرة، إذا كانا متقاربين. وقرب الله عليك الخطوة، فانصرف إلى أهلك، أي المسافة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: تخطاه المكروه، وتخطيت إليه بالمكروه. وبين القولين خطًى يسيرة، إذا كانا متقاربين. وقرب الله عليك الخطوة، فانصرف إلى أهلك، أي المسافة.",
         "prototipe_benzerlik": 0.462,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.598,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.568,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {

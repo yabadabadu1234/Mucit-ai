@@ -1575,11 +1575,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "grimace.v.01",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "smile.v.01",
-    "dayanak_tanim": "change one's facial expression by spreading the lips, often to signal pleasure",
+    "ince": "visual_communication.n.01",
+    "orta": "noun.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "smile.n.01",
+    "dayanak_tanim": "a facial expression characterized by turning up the corners of the mouth; usually shows pleasure or amusement",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1598,19 +1598,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو: كشر الشفتين عن الأسنان: كما وصف. ومن هذا استعمل وغلب في التبسم الذي \"هو أقل الضحك وأحسنه \"؛ لأنه يكون بفتح الشفتين قليلًا. ولأن حقيقته فتح الشفتين عن الأسنان قالوا \"ابتسم السحاب عن البرق: انْكلّ عنه \"وفي [تاج] \"تبسم الطلع: تفلقت أطرافه .. ومن المجاز ما بَس",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "تبسم البرق وتبسم الطلح: تفلقت أطرافه. ويقال: والله ما بسمت فيه أي ما ذقته.",
-        "prototipe_benzerlik": 0.532,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: كشر الشفتين عن الأسنان: كما وصف. ومن هذا استعمل وغلب في التبسم الذي \"هو أقل الضحك وأحسنه \"؛ لأنه يكون بفتح الشفتين قليلًا. ولأن حقيقته فتح الشفتين عن الأسنان قالوا \"ابتسم السحاب عن البرق: انْكلّ عنه \"وفي [تاج] \"تبسم الطلع: تفلقت أطرافه .. ومن المجاز ما بَسَمْتُ في الشيء أي ما ذقته \"اهـ."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو أغر بسام. وأول مراتب الضحك التبسم، ومتى جئته فهو متبسم. وكان ابتسامتها ومضة برق. وهن غر المباسم."
+      },
+      {
+        "kaynak": "Mekâyîs: بَسَمَ",
+        "metin": "(بَسَمَ) الْبَاءُ وَالسِّينُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ إِبْدَاءُ مُقَدَّمِ الْفَمِ لِمَسَرَّةٍ; وَهُوَ دُونَ الضَّحِكِ يُقَالُ: بَسَمَ يَبْسِمُ وَتَبَسَّمَ وَابْتَسَمَ."
       }
     ],
-    "ortalama_benzerlik": 0.532,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تبسم البرق وتبسم الطلح: تفلقت أطرافه. ويقال: والله ما بسمت فيه أي ما ذقته.",
+        "prototipe_benzerlik": 0.526,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.526,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["gesture.n.02", "smile.v.01"],
   "muhassas_tasnif": {

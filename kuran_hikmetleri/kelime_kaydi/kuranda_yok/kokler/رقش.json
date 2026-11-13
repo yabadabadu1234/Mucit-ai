@@ -933,29 +933,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رقشه وترقّشه ونقّشه. قال المرقش: والدار قفر والرسوم كما ... رقّش في ظهر الأديم قلم وحية رقشاء، وحيات رقش. وهو يترقش للناس: يتزين لهم. والمرأة تترقش وتتقين إذا تنمصت وتزينت. وهدرت رقشاء البعير: شقشقته. وانظر إليه كيف يرتقش: أي يظهر حسنه وزينته.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رقشه وترقّشه ونقّشه. قال المرقش:\nوالدار قفر والرسوم كما ... رقّش في ظهر الأديم قلم\nوحية رقشاء، وحيات رقش. وهو يترقش للناس: يتزين لهم. والمرأة تترقش وتتقين إذا تنمصت وتزينت. وهدرت رقشاء البعير: شقشقته. وانظر إليه كيف يرتقش: أي يظهر حسنه وزينته."
+      },
+      {
+        "kaynak": "Mekâyîs: رَقَشَ",
+        "metin": "(رَقَشَ) الرَّاءُ وَالْقَافُ وَالشِّينُ أَصْلٌ يَدُلُّ عَلَى خُطُوطٍ مُخْتَلِفَةٍ. فَالرَّقْشُ كَالنَّقْشِ. يُقَالُ: حَيَّةٌ رَقْشَاءُ: مُنَقَّطَةٌ. وَرَقَّشَ كَلَامَهُ: زَوَّرَهُ. وَالرَّقْشَاءُ: شِقْشِقَةُ الْبَعِيرِ. وَالرَّقْشَاءُ: دُوَيْبَّةٌ. وَقَالَ:\nالدَّارُ قَفْرٌ وَالرُّسُومُ كَمَا ... رَقَّشَ فِي ظَهْرِ الْأَدِيمِ قَلَمْ\nوَيُقَالُ لِلنَّمَّامِ إِذَا نَمَّ: رَقَّشَ. قَالَ:\nعَاذِلَُ، قَدْ أُولِعْتِ بِالتَّرْقِيشِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رقش فلان إذا نمّ لأن النمام يزين كلامه ويزخرفه. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رقش فلان إذا نمّ لأن النمام يزين كلامه ويزخرفه. قال رؤبة:",
         "prototipe_benzerlik": 0.693,
         "halka": "yakın"
       },
       {
-        "cumle": "عاذل قد أولعت بالترقيش",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عاذل قد أولعت بالترقيش",
         "prototipe_benzerlik": 0.078,
         "halka": "uzak"
       },
       {
-        "cumle": "كما قيل له: واش ونمام لأنه يشبه ويمنمه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كما قيل له: واش ونمام لأنه يشبه ويمنمه.",
         "prototipe_benzerlik": 0.1,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.29,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

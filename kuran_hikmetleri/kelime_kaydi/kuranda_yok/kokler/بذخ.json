@@ -758,19 +758,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جبل باذخ: عال، وجبال بواذخ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "عز باذخ، وشرف شامخ. وتبذخ فلان: تطاول، وهو بذاخ، وفيه بذخ. وجمل بذاخ الهدير. قال جرير في مرثية الفرزدق:",
-        "prototipe_benzerlik": 0.303,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جبل باذخ: عال، وجبال بواذخ."
+      },
+      {
+        "kaynak": "Mekâyîs: بَذَخَ",
+        "metin": "(بَذَخَ) الْبَاءُ وَالذَّالُ وَالْخَاءُ أَصْلٌ وَاحِدٌ، وَهُوَ الْعُلُوُّ وَالتَّعَظُّمُ. يُقَالُ: بَذَخَ: إِذَا تَعَظَّمَ، وَفُلَانٌ [فِي] بَاذِخٍ مِنَ الشَّرَفِ، أَيْ: عَالٍ.\n[بَابُ الْبَاءِ وَالرَّاءِ وَمَا مَعَهُمَا فِي الثُّلَاثِيِّ]"
       }
     ],
-    "ortalama_benzerlik": 0.303,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عز باذخ، وشرف شامخ. وتبذخ فلان: تطاول، وهو بذاخ، وفيه بذخ. وجمل بذاخ الهدير. قال جرير في مرثية الفرزدق:",
+        "prototipe_benzerlik": 0.303,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عماد تميم كلها ولسانها ... وناطقها البذاخ في كل منطق",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.343,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["condition.n.01"],
   "muhassas_tasnif": {

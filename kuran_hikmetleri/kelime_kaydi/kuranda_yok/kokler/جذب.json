@@ -1440,11 +1440,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "draw.v.10",
-    "orta": "verb.emotion",
-    "ust": "his ve nefis",
-    "dayanak_synset": "draw.v.10",
-    "dayanak_tanim": "elicit responses, such as objections, criticism, applause, etc.",
+    "ince": "phenomenon.n.01",
+    "orta": "noun.phenomenon",
+    "ust": "tabiat",
+    "dayanak_synset": "attraction.n.01",
+    "dayanak_tanim": "the force by which one object attracts another",
     "synset_sayisi": 20
   },
   "ses_mana_tasnif": {
@@ -1458,34 +1458,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جذب الحبل وغيره، واجتذبه إذا مده، وجاذبه الثوب وتجاذبوه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جذب الحبل وغيره، واجتذبه إذا مده، وجاذبه الثوب وتجاذبوه."
+      },
+      {
+        "kaynak": "Mekâyîs: جَذَبَ",
+        "metin": "(جَذَبَ) الْجِيمُ وَالذَّالُ وَالْبَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى بَتْرِ الشَّيْءِ. يُقَالُ جَذَبْتُ الشَّيْءَ أَجْذِبُهُ جَذْبًا. وَجَذَبْتُ الْمُهْرَ عَنْ أُمِّهِ إِذَا فَطَمْتَهُ، وَيُقَالُ نَاقَةٌ جَاذِبٌ، إِذَا قَلَّ لَبَنُهَا، وَالْجَمْعُ جَوَاذِبُ. وَهُوَ قِيَاسُ الْبَابِ ; لِأَنَّهُ إِذَا قَلَّ لَبَنُهَا فَكَأَنَّهَا جَذَبَتْهُ إِلَى نَفْسِهَا.\nوَقَدْ شَذَّ عَنْ هَذَا الْأَصْلِ الْجَذَبُ، وَهُوَ الْجُمَّارُ الْخَشِنُ، الْوَاحِدُ جَذَبَةٌ.\n[بَابُ الْجِيمِ وَالرَّاءِ وَمَا يُثَلِّثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جذب المهر عن أمه: فطمه. قال أبو النجم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جذب المهر عن أمه: فطمه. قال أبو النجم:",
         "prototipe_benzerlik": 0.145,
         "halka": "uzak"
       },
       {
-        "cumle": "ثم جذبناه فطاماً نفصله",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثم جذبناه فطاماً نفصله",
         "prototipe_benzerlik": 0.529,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وجذبت المرأة صبيها. وخطبت فلانة فجذبت خاطبها أي ردته، كأنخها جاذبته فجذبته أي غلبته فبان منها مغلوباً. وناقة فلان تجذب لبنها إذا حلبت أي تسرقه. وجذب فلان الحبل بيننا إذا قاطع. وجذبت الماء نفساً أو نفسين. وتجذب الراعي اللبن، وناقة جاذب: مدت وقت حملها إلى أحد عشر شهراً. وجذب الشهر: مضت عامته. وانجذبوا",
-        "prototipe_benzerlik": 0.153,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجذبت المرأة صبيها. وخطبت فلانة فجذبت خاطبها أي ردته، كأنخها جاذبته فجذبته أي غلبته فبان منها مغلوباً. وناقة فلان تجذب لبنها إذا حلبت أي تسرقه. وجذب فلان الحبل بيننا إذا قاطع. وجذبت الماء نفساً أو نفسين. وتجذب الراعي اللبن، وناقة جاذب: مدت وقت حملها إلى أحد عشر شهراً. وجذب الشهر: مضت عامته. وانجذبوا في السير، وانجذب بهم السير إذا ساروا مسيراً بعيداص. ومنه: وقعوا في وادي جذبات، وما أعطاه جذبة غزل أي شيئاً. وتجاذبوا أطراف",
+        "prototipe_benzerlik": 0.371,
+        "halka": "orta"
       },
       {
-        "cumle": "الكلام، وكانت بينهم مجاذبات ثم اتفقوا.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الكلام، وكانت بينهم مجاذبات ثم اتفقوا.",
         "prototipe_benzerlik": 0.145,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.243,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.297,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

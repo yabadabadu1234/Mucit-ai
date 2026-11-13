@@ -696,29 +696,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خذمه: قطعه بسرعة. وسيف مخذم وخذم. وخذمت الدلو والنمل خذماً وهو انقطاع العري والشوع. وعنز خذماء: مشقوقة الأذن عرضاً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خذمه: قطعه بسرعة. وسيف مخذم وخذم. وخذمت الدلو والنمل خذماً وهو انقطاع العري والشوع. وعنز خذماء: مشقوقة الأذن عرضاً."
+      },
+      {
+        "kaynak": "Mekâyîs: خَذَمَ",
+        "metin": "(خَذَمَ) الْخَاءُ وَالذَّالُ وَالْمِيمُ يَدُلُّ عَلَى الْقَطْعِ. يُقَالُ خَذَمْتُ الشَّيْءَ: قَطَعْتُهُ. [وَ] سَيْفٌ مِخْذَمٌ. وَالْخَذْمَاءُ: الْعَنْزُ تَنْشَقُّ أُذُنُهَا عَرْضًا مِنْ غَيْرِ بَيْنُونَةٍ. وَالْخَذَمُ: السُّرْعَةُ فِي السَّيْرِ ; وَهُوَ مِنَ الْبَابِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مر يخذم: يسرع في سيره. وفرس خذم. ورجل خذم بالعطاء: سمح سهل ببذله.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مر يخذم: يسرع في سيره. وفرس خذم. ورجل خذم بالعطاء: سمح سهل ببذله.",
         "prototipe_benzerlik": 0.478,
         "halka": "orta"
       },
       {
-        "cumle": "وأذن خذواء: مسترخية من أصلها على الخدين، وقد خذيت أذنه، وهو أخذى الأذن. وفرس أخذى. وتقول: في عينه قذى، وفي أذنه خذي، وحل به كذا فلم تقد له عينه، ولم تخذله أذنه. ويقال للحمار خذي لخدي أذنيه، ومنه استخذى له: إذا خضع.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خ ذ",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأذن خذواء: مسترخية من أصلها على الخدين، وقد خذيت أذنه، وهو أخذى الأذن. وفرس أخذى. وتقول: في عينه قذى، وفي أذنه خذي، وحل به كذا فلم تقد له عينه، ولم تخذله أذنه. ويقال للحمار خذي لخدي أذنيه، ومنه استخذى له: إذا خضع.",
         "prototipe_benzerlik": 0.724,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن المجاز: ينمة خذواء: لينة وهي بقلة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: ينمة خذواء: لينة وهي بقلة.",
         "prototipe_benzerlik": 0.6,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.601,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.566,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

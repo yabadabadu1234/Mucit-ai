@@ -52,24 +52,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ولولت النائحة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ولولت النائحة."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عود مولول. قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عود مولول. قال الطرماح:",
         "prototipe_benzerlik": 0.416,
         "halka": "orta"
       },
       {
-        "cumle": "المغنيّات، يريد أن اللهو يقصّر نهارهنّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يقصّر مغداهنّ كلّ مولول ... عليهن تستبكيه أيدي الكرائن",
+        "prototipe_benzerlik": 0.406,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "المغنيّات، يريد أن اللهو يقصّر نهارهنّ.",
         "prototipe_benzerlik": 0.232,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.324,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.351,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

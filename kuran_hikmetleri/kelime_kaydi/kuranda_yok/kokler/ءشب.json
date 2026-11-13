@@ -1170,8 +1170,8 @@
     "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
-    "dayanak_synset": "alloy_steel.n.01",
-    "dayanak_tanim": "steel who characteristics are determined by the addition of other elements in addition to carbon",
+    "dayanak_synset": "alloy.n.01",
+    "dayanak_tanim": "a mixture containing two or more metallic elements or metallic and nonmetallic elements usually fused together or dissolving into each other when molten",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1185,34 +1185,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "غيضة أشبة. والأشب شدة النفاف الشجر حتى لا مجاز فيه، ومنه الحديث: \" بيني وبينك أشب \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "غيضة أشبة. والأشب شدة النفاف الشجر حتى لا مجاز فيه، ومنه الحديث: \" بيني وبينك أشب \"."
+      },
+      {
+        "kaynak": "Mekâyîs: أَشَبَ",
+        "metin": "(أَشَبَ) الْهَمْزَةُ وَالشِّينُ وَالْبَاءُ يَدُلُّ عَلَى اخْتِلَاطٍ وَالْتِفَافٍ، يُقَالُ: عِيصٌ أَشِبٌ، أَيْ: مُلْتَفٌّ، وَجَاءَ فُلَانٌ فِي عَدَدٍ أَشِبٍ. وَتَأَشَّبَ الْقَوْمُ اخْتَلَطُوا. وَيُقَالُ: أَشَبْتُ فُلَانًا آشِبُهُ: إِذَا لُمْتُهُ، كَأَنَّكَ لَفَّقْتَ عَلَيْهِ قَبِيحًا فَلُمْتَهُ فِيهِ. قَالَ أَبُو ذُؤَيْبٍ:\nوَيَأْشِبُنِي فِيهَا الَّذِينَ يَلُونَهَا ... وَلَوْ عَلِمُوا لَمْ يَأْشِبُونِي بِطَائِلِ\nوَالْأُشَابَةُ الْأَخْلَاطُ مِنَ النَّاسِ فِي قَوْلِهِ:\nوَثِقْتُ لَهُ بِالنَّصْرِ إِذْ قِيلَ قَدْ غَزَتْ ... قَبَائِلُ مِنْ غَسَّانَ غَيْرُ أَشَائِبِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عدد أشب: مختلط. وفي مثل: \" عيصك منك وإن كان أشباً \". وتأشبوا واتشبوا: تجمعوا من هنا وهنا. وجمع مؤتشب ومؤتشب: غير صريح. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عدد أشب: مختلط. وفي مثل: \" عيصك منك وإن كان أشباً \". وتأشبوا واتشبوا: تجمعوا من هنا وهنا. وجمع مؤتشب ومؤتشب: غير صريح. قال:",
         "prototipe_benzerlik": 0.283,
         "halka": "uzak"
       },
       {
-        "cumle": "رجراجة لم تك مما يؤتشب",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجراجة لم تك مما يؤتشب",
         "prototipe_benzerlik": 0.147,
         "halka": "uzak"
       },
       {
-        "cumle": "وعنده أشابة من الناس وأشابة من المال: تخاليط من حرام وحلال، وهم أشابات وأشائب. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعنده أشابة من الناس وأشابة من المال: تخاليط من حرام وحلال، وهم أشابات وأشائب. قال النابغة:",
         "prototipe_benzerlik": 0.439,
         "halka": "orta"
       },
       {
-        "cumle": "وأشب الشر بينهم: اشتبك، وأشّبته بينهم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وثقت لهم بالنصر إذ قيل قد غزت ... قبائل من غسان غير أشائب",
+        "prototipe_benzerlik": 0.312,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأشب الشر بينهم: اشتبك، وأشّبته بينهم.",
         "prototipe_benzerlik": 0.627,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.374,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.362,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["engage.v.07", "substance.n.01", "thrust.v.01"],
   "muhassas_tasnif": {

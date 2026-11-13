@@ -696,29 +696,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو صنديد من الصناديد وهو السيد الضخم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو صنديد من الصناديد وهو السيد الضخم."
+      },
+      {
+        "kaynak": "Mekâyîs: صَنَدَ",
+        "metin": "(صَنَدَ) الصَّادُ وَالنُّونُ وَالدَّالُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى عِظَمِ قَدْرٍ وَعِظَمِ جِسْمٍ. مِنْ ذَلِكَ الصِّنْدِيدُ، وَهُوَ السَّيِّدُ الشَّرِيفُ، وَالْجَمْعُ: صَنَادِيدُ. وَيُقَالُ صَنَادِيدُ الْبَرَدِ: بَابَاتٌ مِنْهُ ضِخَامٌ. وَغَيْثٌ صِنْدِيدٌ: عَظِيمُ الْقَطْرِ. وَيُقَالُ لِلدَّوَاهِي الْكِبَارِ: صَنَادِيدُ. وَيُرْوَى عَنِ الْحَسَنِ فِي دُعَائِهِ: &quot; نَعُوذُ بِكَ مِنْ صَنَادِيدِ الْقَدَرِ &quot; أَيْ دَوَاهِيهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أصابهم برد صنديد، وحرّ صنديد، ومرت علينا صناديد من البرد، ويوم حامي الصناديد وهي ما اشتدّ منها، ورمت السماء بصناديد البرد: بكباره. وغيث صنديد: عظيم القطر، وغيوث صناديد. قال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أصابهم برد صنديد، وحرّ صنديد، ومرت علينا صناديد من البرد، ويوم حامي الصناديد وهي ما اشتدّ منها، ورمت السماء بصناديد البرد: بكباره. وغيث صنديد: عظيم القطر، وغيوث صناديد. قال ابن مقبل:",
         "prototipe_benzerlik": 0.402,
         "halka": "orta"
       },
       {
-        "cumle": "وريح صنديد. وقال أبو وجزة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عفته صناديد السماكين وانتحت ... عليه رياح الصيف غبراً مجاوله",
+        "prototipe_benzerlik": 0.186,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وريح صنديد. وقال أبو وجزة:",
         "prototipe_benzerlik": 0.421,
         "halka": "orta"
       },
       {
-        "cumle": "أراد معاظم السحاب وأعاليها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دعتنا لمسرى ليلة رجبية ... جلا برقها جون الصناديد مظلماً",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد معاظم السحاب وأعاليها.",
         "prototipe_benzerlik": 0.379,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.401,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.376,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1300,39 +1300,74 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تحرك الشيء حركة مختلفة لخفته ورخاوته أو لضعف امتساكه واشتداده بأصله. كتَحَرك (السنّ والرحْل والكتِف والرأس) حركة اهتزاز بقوة. والظليمُ إذا عَجِل في مِشْيئته ارتفع رأسه وانخفض [ل 106]. ومن إنغاض الرأس الموصوف قوله تعالى: {فَسَيُنْغِضُونَ إِلَيكَ رُءُوسَهُمْ وَي",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تحرك الشيء حركة مختلفة لخفته ورخاوته أو لضعف امتساكه واشتداده بأصله. كتَحَرك (السنّ والرحْل والكتِف والرأس) حركة اهتزاز بقوة. والظليمُ إذا عَجِل في مِشْيئته ارتفع رأسه وانخفض [ل 106]. ومن إنغاض الرأس الموصوف قوله تعالى: {فَسَيُنْغِضُونَ إِلَيكَ رُءُوسَهُمْ وَيَقُولُونَ مَتَى هُوَ} [الإسراء: 51] نغض الرءوس هنا التفات إليه - صلى الله عليه وسلم - كأنما استثباتا من التعجب والاستبعاد. والاستفهام للإنكار."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نغضت سنّه تنغض وتنغض نغضاناً وتنغّضت: رجفت. ونغض برأسه إلى صاحبه متعجباً: وأنغضته. ونغض الرحل. وإبل نغّاضة برحالها. وأصاب نغض كتفه وناغضها وهو غضروفها."
+      },
+      {
+        "kaynak": "Mekâyîs: نَغَضَ",
+        "metin": "(نَغَضَ) النُّونُ وَالْغَيْنُ وَالضَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى هَزٍّ وَتَحْرِيكٍ.\nمِنْ ذَلِكَ النَّغَضَانُ: تَحَرُّكُ الْأَسْنَانِ. وَالْإِنْغَاضُ: تَحْرِيكُ الْإِنْسَانِ [رَأْسَهُ] نَحْوَ صَاحِبِهِ كَالْمُتَعَجِّبِ مِنْهُ. قَالَ اللَّهُ سُبْحَانَهُ: {فَسَيُنْغِضُونَ إِلَيْكَ رُءُوسَهُمْ} [الإسراء: 51] . وَالنَّغِْضُ: الظَّلِيمُ ; لِاضْطِرَابِ رَأْسِهِ عِنْدَ مَشْيِهِ. قَالَ:\nوَالنَّغِْضُ مِثْلُ الْأَجْرَبِ الْمُدَجَّلِ\nوَالنَّاغِضُ وَالنُّغْضُ: غُرْضُوفُ الْكَتِفِ. سُمِّيَ لِاضْطِرَابِهِ، وَيَكُونُ لِلْأُذُنِ أَيْضًا. وَالنَّغُوضُ: النَّاقَةُ الْعَظِيمَةُ السَّنَامِ، وَإِذَا عَظُمَ اضْطَرَبَ. وَنَغَضَ الْغَيْمُ: سَارَ.\n[بَابُ النُّونِ وَالْفَاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "نغضوا إلى العدوّ: نهضوا إليه. قال الكميت:",
-        "prototipe_benzerlik": 0.474,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نغضوا إلى العدوّ: نهضوا إليه. قال الكميت:",
+        "prototipe_benzerlik": 0.558,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى إذا نغض العدوّ ... وتمّ خصلك من تخاصل",
+        "prototipe_benzerlik": 0.526,
         "halka": "orta"
       },
       {
-        "cumle": "ونغض الغيم: حيث تراه يتمخّض متحيراً لا يسير. قال:",
-        "prototipe_benzerlik": 0.499,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونغض الغيم: حيث تراه يتمخّض متحيراً لا يسير. قال:",
+        "prototipe_benzerlik": 0.54,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرّق عينيك عن التّغماض ... برق سرى في عارض نغاض",
+        "prototipe_benzerlik": 0.563,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن غ ن غ",
+        "prototipe_benzerlik": 0.576,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غمزت العاذرة نغانغ الصّبي، قال الفرزدق:",
+        "prototipe_benzerlik": 0.512,
         "halka": "orta"
       },
       {
-        "cumle": "غمزت العاذرة نغانغ الصّبي، قال الفرزدق:",
-        "prototipe_benzerlik": 0.474,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غمز الطبيب نغانغ المعذور",
+        "prototipe_benzerlik": 0.447,
         "halka": "orta"
       },
       {
-        "cumle": "غمز الطبيب نغانغ المعذور",
-        "prototipe_benzerlik": 0.429,
-        "halka": "orta"
-      },
-      {
-        "cumle": "وهي لحمات عند اللهاة.",
-        "prototipe_benzerlik": 0.253,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهي لحمات عند اللهاة.",
+        "prototipe_benzerlik": 0.224,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.426,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.493,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

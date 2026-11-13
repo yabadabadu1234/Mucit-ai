@@ -1098,7 +1098,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "fluid.n.02",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "seawater.n.01",
@@ -1121,26 +1121,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "حدّة بالغة تتغلغل في باطن الشيء أو جوفه (1) كحدّة",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "حدّة بالغة تتغلغل في باطن الشيء أو جوفه (1) كحدّة"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أمضّني الوجع والهمّ ومضني، وضربه فأمضّه ومضه، والكحل يمضّ عيني، ومضضت من المصيبة ومن كلامك مضيضاً بكسر العين."
+      },
+      {
+        "kaynak": "Mekâyîs: مَضَّ",
+        "metin": "(مَضَّ) الْمِيمُ وَالضَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ضَغْطِ الشَّيْءِ لِلشَّيْءِ.\nمِنْهُ مَضَّنِي الشَّيْءُ وَأَمَضَّنِي: بَلَغَ مِنِّي الْمَشَقَّةَ، كَأَنَّهُ قَدْ ضَغَطَكَ. وَالْمَضْمَضَةُ: تَحْرِيكُ الْمَاءِ فِي الْفَمِ وَضَغْطُهُ. وَالْكُحْلُ يُمِضُّ الْعَيْنَ، إِذَا كَانَتْ لَهُ حُرْقَةٌ. وَمَضِيضُهُ: حُرْقَتُهُ. وَيَقُولُونَ: مِضِّ، وَهِيَ حِكَايَةٌ لِشَيْءٍ يَفْعَلُهُ الْإِنْسَانُ بِشَفَتِهِ إِذَا أَطْمَعَ فِي الشَّيْءِ. يَقُولُونَ لِلرَّجُلِ إِذَا أَقَرَّ بِحَقٍّ عَلَيْهِ: مِضِّ. وَمَثَلٌ مِنْ أَمْثَالِهِمْ: &quot; إِنَّ فِي مِضِّ لَطَمَعًا &quot;، قَالُوا: وَذَلِكَ إِذَا سُئِلَ حَاجَةً فَكَسَرَ شَفَتَيْهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ما مضمضت عيني بالنّوم أرقاً وما تمضمضت. قال المروح السلميّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما مضمضت عيني بالنّوم أرقاً وما تمضمضت. قال المروح السلميّ:",
         "prototipe_benzerlik": 0.351,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لما اتكأن على النّمارق مضمضت ... بالنوم أعينهنّ غير غرار",
+        "prototipe_benzerlik": 0.503,
         "halka": "orta"
       },
       {
-        "cumle": "وتمضمض النوم في عينه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتمضمض النوم في عينه. قال:",
         "prototipe_benzerlik": 0.251,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يمسح بالكفّين وجهاً أبيضاً ... إذا الكرى في عينه تمضمضا",
+        "prototipe_benzerlik": 0.582,
+        "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.301,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.422,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["liquid.n.03", "past.a.01", "process.n.02"],
+  "kolekzifikasyon_kavramlari": ["past.a.01", "process.n.02", "substance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",

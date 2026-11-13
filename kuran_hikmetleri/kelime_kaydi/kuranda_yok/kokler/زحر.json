@@ -1094,19 +1094,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل مزحور: به زحير، وقد زحر وتزحر وهو إخراج النفس بأنين، وسمعت له زفيراً وزحيراً وزفرة وزحرة. ويقال للمرأة إذا ولدت: زحرت به وتزحرت عنه. وتقول: تزحر فلان حتى تسحر، ثم قرع سنّه وتحسر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل مزحور: به زحير، وقد زحر وتزحر وهو إخراج النفس بأنين، وسمعت له زفيراً وزحيراً وزفرة وزحرة. ويقال للمرأة إذا ولدت: زحرت به وتزحرت عنه. وتقول: تزحر فلان حتى تسحر، ثم قرع سنّه وتحسر."
+      },
+      {
+        "kaynak": "Mekâyîs: زَحَرَ",
+        "metin": "(زَحَرَ) الزَّاءُ وَالْحَاءُ وَالرَّاءُ تَنَفُّسٌ بِشِدَّةٍ لَيْسَ إِلَّا هَذَا. يُقَالُ زَحَرَ يَزْحَرُ زَحِيرًا، وَهُوَ صَوْتُ نَفَسِهِ إِذَا تَنَفَّسَ بِشِدَّةٍ. وَزَحَرَتِ الْمَرْأَةُ بِوَلَدِهَا عِنْدَ الْوِلَادَةِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يزاحر فلاناً: يعاديه ويحبنطىء له.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يزاحر فلاناً: يعاديه ويحبنطىء له.",
         "prototipe_benzerlik": 0.096,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.096,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

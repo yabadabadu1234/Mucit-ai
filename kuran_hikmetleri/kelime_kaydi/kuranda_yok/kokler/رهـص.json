@@ -37,29 +37,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أصلح أصل الجدار المنسحق برهص محكم، وإذا بنيت جداراً فأحكم رهصه وهو عرقه الأسفل. وفلان رهاص جيد. ورهصت الدابة: شدخ باطن حافرها حجر فأدواه، ودابة رهيص، وأصابه راهص، وبه رهصة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أصلح أصل الجدار المنسحق برهص محكم، وإذا بنيت جداراً فأحكم رهصه وهو عرقه الأسفل. وفلان رهاص جيد. ورهصت الدابة: شدخ باطن حافرها حجر فأدواه، ودابة رهيص، وأصابه راهص، وبه رهصة."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أرهص الشيء: أثبته وأسسه. وكان ذلك إرهاصاً للنبوّة. وأرهص الله فلاناً للخير: جعله معدناً له ومأتًى. وفضل فلان على فلان",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرهص الشيء: أثبته وأسسه. وكان ذلك إرهاصاً للنبوّة. وأرهص الله فلاناً للخير: جعله معدناً له ومأتًى. وفضل فلان على فلان",
         "prototipe_benzerlik": 0.459,
         "halka": "orta"
       },
       {
-        "cumle": "مراهص: مراتب. وكيف مرهصة فلان عند الملك؟. قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مراهص: مراتب. وكيف مرهصة فلان عند الملك؟. قال الأعشى:",
         "prototipe_benzerlik": 0.283,
         "halka": "uzak"
       },
       {
-        "cumle": "ورهصه: لامه وهو من الرهصة. وتقول: فلان ما ذكر عنده أحد إلا غمصه، وقدح في ساقه ورهصه. وفلان أسد رهيص: لا يبرح مكانه كأنما رهص.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رمى بك في أخراهم تركك العلى ... وفضل أقوام عليك مراهصاً",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورهصه: لامه وهو من الرهصة. وتقول: فلان ما ذكر عنده أحد إلا غمصه، وقدح في ساقه ورهصه. وفلان أسد رهيص: لا يبرح مكانه كأنما رهص.",
         "prototipe_benzerlik": 0.374,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.372,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.364,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

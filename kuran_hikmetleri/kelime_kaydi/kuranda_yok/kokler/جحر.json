@@ -754,24 +754,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جحرت الضباب، وانجحرت: دخلت في جحرتها. قال: ولا ترى الضب بها ينجحر وأجحرها المطر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جحرت الضباب، وانجحرت: دخلت في جحرتها. قال:\nولا ترى الضب بها ينجحر\nوأجحرها المطر."
+      },
+      {
+        "kaynak": "Mekâyîs: جَحَرَ",
+        "metin": "(جَحَرَ) الْجِيمُ وَالْحَاءُ وَالرَّاءُ أَصْلٌ يَدُلُّ عَلَى ضِيقِ الشَّيْءِ وَالشِّدَّةِ. فَالْجِحَرَةُ جَمْعُ جُحْرٍ. [وَأَجْحَرَ] فُلَانًا الْفَزَعُ وَالْخَوْفُ، إِذَا أَلْجَأَهُ. وَمَجَاحِرُ الْقَوْمِ مَكَامِنُهُمْ. وَجَحَرَتْ عَيْنُهُ إِذَا غَارَتْ. وَالْجَحْرَةُ: السَّنَةُ الشَّدِيدَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حصني جحرك. ومنه قول عائشة رضي الله عنها: \" إذا حاضت المرأة حرم الجحران \" أي اجتمع الاثنان في الحرمة بعد ما كانت الحرمة في أحدهما. ودخلوا في مجاحرهم أي في مكامنهم، وأجحرهم الفزع وأجحرت السنة الناس: أدخلتهم في المضايق، ولذلك سميت جحرة. يقال: أقحمتهم الجحرة. وقال الحطيئة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حصني جحرك. ومنه قول عائشة رضي الله عنها: \" إذا حاضت المرأة حرم الجحران \" أي اجتمع الاثنان في الحرمة بعد ما كانت الحرمة في أحدهما. ودخلوا في مجاحرهم أي في مكامنهم، وأجحرهم الفزع وأجحرت السنة الناس: أدخلتهم في المضايق، ولذلك سميت جحرة. يقال: أقحمتهم الجحرة. وقال الحطيئة:",
         "prototipe_benzerlik": 0.411,
         "halka": "orta"
       },
       {
-        "cumle": "وجحرت عينه: غارت. وجحر الربيع: احتبس.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجدتكم لم تجبروا عظم مغرم ... ولا تنحرون النيب في الجحرات",
+        "prototipe_benzerlik": 0.417,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجحرت عينه: غارت. وجحر الربيع: احتبس.",
         "prototipe_benzerlik": 0.628,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد أبو زيد:",
+        "prototipe_benzerlik": 0.375,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لنعم القوم في الأزمات قومي ... بنو كعب إذا جحر الربيع",
+        "prototipe_benzerlik": 0.338,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كهول معقل الطرداء فيهم ... وفتيان غطارفة فروع",
+        "prototipe_benzerlik": 0.377,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.52,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.424,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

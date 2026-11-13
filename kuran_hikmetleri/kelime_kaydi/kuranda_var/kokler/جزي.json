@@ -1355,29 +1355,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "الله يجزيك عني ويجازيك. قال لبيد: وإذا جوزيت قرضاً فاجزه ... إنما يجزي الفتى ليس الجمل وكما تجازي تجازي. وأحسن إليه فجزاء خيراً إذا دعا له بالمجازاة. وهذا رجل جازيك من رجل أي كافيك. وهذا لا يجزي عنك أي لا يقضي، ومنه جزية أهل الذمة لأنها تقضي عنهم. يقال: أدّوا ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الله يجزيك عني ويجازيك. قال لبيد:\nوإذا جوزيت قرضاً فاجزه ... إنما يجزي الفتى ليس الجمل\nوكما تجازي تجازي. وأحسن إليه فجزاء خيراً إذا دعا له بالمجازاة. وهذا رجل جازيك من رجل أي كافيك. وهذا لا يجزي عنك أي لا يقضي، ومنه جزية أهل الذمة لأنها تقضي عنهم. يقال: أدّوا جزيتهم وجزاهم. واشترى من دهقان أراضاً على أن يكفيه جزيتها أي خراجها."
+      },
+      {
+        "kaynak": "Mekâyîs: جَزَيَ",
+        "metin": "(جَزَيَ) الْجِيمُ وَالزَّاءُ وَالْيَاءُ: قِيَامُ الشَّيْءِ مَقَامَ غَيْرِهِ وَمُكَافَأَتُهُ إِيَّاهُ. يُقَالُ جَزَيْتُ فُلَانًا أَجْزِيهِ جَزَاءً، وَجَازَيْتُهُ مُجَازَاةً. وَهَذَا رَجُلٌ جَازِيكَ مِنْ رَجُلٍ،\nأَيْ حَسْبُكَ. وَمَعْنَاهُ أَنَّهُ يَنُوبُ مَنَابَ كُلِّ أَحَدٍ، كَمَا تَقُولُ كَافِيكَ وَنَاهِيكَ. أَيْ كَأَنَّهُ يَنْهَاكَ أَنْ يُطْلَبَ مَعَهُ غَيْرُهُ.\nوَتَقُولُ: جَزَى عَنِّي هَذَا الْأَمْرَ يَجْزِي، كَمَا تَقُولُ قَضَى يَقْضِي. وَتَجَازَيْتُ دَيْنِي عَلَى فُلَانٍ أَيْ تَقَاضَيْتُهُ. وَأَهْلُ الْمَدِينَةِ يُسَمُّونَ الْمُتَقَاضِيَ الْمُتَجَازِيَ. قَالَ اللَّهُ جَلَّ ثَنَاؤُهُ: {وَاتَّقُوا يَوْمًا لَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا} [البقرة: 48] ، أَيْ لَا تَقْضِي."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جزتك الجوازي أي أفعالك أي وجدت جزاء ما فعلت. قال:",
-        "prototipe_benzerlik": 0.344,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جزتك الجوازي أي أفعالك أي وجدت جزاء ما فعلت. قال:",
+        "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جزتك الجوازي عن صديقك نضرة ... وأدناك ربي في الرفيق المقرب",
+        "prototipe_benzerlik": 0.354,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أو ألطاف الله وأسباب رحمته. قال الحطيئة:",
+        "prototipe_benzerlik": 0.42,
         "halka": "orta"
       },
       {
-        "cumle": "أو ألطاف الله وأسباب رحمته. قال الحطيئة:",
-        "prototipe_benzerlik": 0.59,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من يفعل الخير لا يعدم جوازيه ... لا يذهب العرف بين الله والناس",
+        "prototipe_benzerlik": 0.257,
+        "halka": "uzak"
       },
       {
-        "cumle": "أو أراد جمع جازية بمعنى الجزاء.",
-        "prototipe_benzerlik": 0.106,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أو أراد جمع جازية بمعنى الجزاء.",
+        "prototipe_benzerlik": -0.038,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.347,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.231,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["compensate.v.06", "group_action.n.01", "transferred_property.n.01"],
   "muhassas_tasnif": {

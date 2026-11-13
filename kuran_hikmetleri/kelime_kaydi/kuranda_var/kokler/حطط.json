@@ -1710,11 +1710,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "worsen.v.01",
-    "orta": "verb.change",
+    "ince": "decrease.n.02",
+    "orta": "noun.process",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "worsen.v.01",
-    "dayanak_tanim": "grow worse",
+    "dayanak_synset": "deterioration.n.02",
+    "dayanak_tanim": "process of changing to an inferior state",
     "synset_sayisi": 20
   },
   "ses_mana_tasnif": {
@@ -1733,34 +1733,80 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انضغاطُ الجِزم بثِقَل إلى أسفل أو إلى الداخل فلا ينتبر (1): كالكعْب الحطيط -والمعتاد أن يكون منتبرًا، وكذلك الأَلية، والمرض",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انضغاطُ الجِزم بثِقَل إلى أسفل أو إلى الداخل فلا ينتبر (1): كالكعْب الحطيط -والمعتاد أن يكون منتبرًا، وكذلك الأَلية، والمرض"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حطوا الأحمال عن ظهور الدواب، يقال: حطوا عنها. وحط ل شيء حدره. وأخذوا في الحطوط أي في الحدور."
+      },
+      {
+        "kaynak": "Mekâyîs: حَطَّ",
+        "metin": "(حَطَّ) الْحَاءُ وَالطَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ إِنْزَالُ الشَّيْءِ مِنْ عُلُوٍّ. يُقَالُ حَطَطْتُ الشَّيْءَ أَحُطُّهُ حَطًّا. وَقَوْلُهُ تَعَالَى: {حِطَّةٌ} [البقرة: 58] ، قَالُوا: تَفْسِيرُهَا اللَّهُمَّ حُطَّ عَنَّا أَوْزَارَنَا.\nوَمِنْ هَذَا الْبَابِ قَوْلُهُمْ جَارِيَةٌ مَحْطُوطَةُ الْمَتْنَيْنِ، كَأَنَّمَا حُطَّ مَتْنَاهَا بِالْمِحَطِّ. قَالَ:\nبَيْضَاءُ مَحْطُوطَةٌ الْمَتْنَيْنِ بَهْكَنَةٌ ... رَيَّا الرَّوَادِفِ لَمْ تُمْغِلْ بِأَوْلَادِ\nوَمِنْ هَذَا الْبَابِ قَوْلُهُمْ رَجُلٌ حُطَائِطٌ، أَيْ صَغِيرٌ قَصِيرٌ، كَأَنَّهُ حُطَّ حَطًّا.\nوَمِنْ هَذَا الْبَابِ قَوْلُهُمْ لِلنَّجِيبَةِ السَّرِيعَةِ حَطُوطٌ ; كَأَنَّهَا لَا تَزَالُ تَحُطُّ رَحْلًا بِأَرْضٍ. وَمِمَّا شَذَّ عَنْ هَذَا الْقِيَاسِ الْحَطَاطُ: بَثْرَةٌ تَكُونُ بِالْوَجْهِ. قَالَ الْهُذَلِيُّ:\nوَوَجْهٍ قَدْ طَرَقْتُ أُمَيْمَ صَافٍ ... أَسِيلٍ غَيْرِ جَهْمٍ ذِي حَطَاطِ\nوَيُرْوَى:\nكَقَرْنِ الشَّمْسِ لَيْسَ بِذِي حَطَاطِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "حط الله أوزارهم، وحطّ الله وزرك. \" وقولوا حطة \" واستحطوا أوزاركم. وناقة حطوط: سريعة السير، وحطت في سيرها وانحطت. وحط في عرض فلان إذا اندفع في شتمه. وحط في هواه، وانحط فيه. ويقال: أكل من حلوائهم، فانحط في أهوائهم. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حط الله أوزارهم، وحطّ الله وزرك. \" وقولوا حطة \" واستحطوا أوزاركم. وناقة حطوط: سريعة السير، وحطت في سيرها وانحطت. وحط في عرض فلان إذا اندفع في شتمه. وحط في هواه، وانحط فيه. ويقال: أكل من حلوائهم، فانحط في أهوائهم. قال الكميت:",
         "prototipe_benzerlik": 0.046,
         "halka": "uzak"
       },
       {
-        "cumle": "وانحط السعر، وحط حطوطاً، والأسعار حاطة ومنحطة. وأتانا بطعام فحططنا فيه أي أكثرنا منه. وأحططنا فيه أي أقللنا منه. وجارية محطوطة المتنين، كأنما حطّا بالمحط، وهو ما يحط به الأديم أي يدلك ويصقل، يكون مع الأساكفة والمجلدين. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حطوطاً في مسرته ومولى ... إلى مرضاة خالقه سريعاً",
+        "prototipe_benzerlik": 0.289,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وانحط السعر، وحط حطوطاً، والأسعار حاطة ومنحطة. وأتانا بطعام فحططنا فيه أي أكثرنا منه. وأحططنا فيه أي أقللنا منه. وجارية محطوطة المتنين، كأنما حطّا بالمحط، وهو ما يحط به الأديم أي يدلك ويصقل، يكون مع الأساكفة والمجلدين. قال:",
         "prototipe_benzerlik": 0.416,
         "halka": "orta"
       },
       {
-        "cumle": "وسيف محطوط: مرهف. وكعب حطيط: أدرم. قال مليح الهذلي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تثير وتبدي عن عروق كأنها ... أعنة خراز تحط وتبشر",
+        "prototipe_benzerlik": 0.445,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال النابغة:",
+        "prototipe_benzerlik": 0.253,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "محطوطة المتنين غير مفاضة ... ريّا الروادف بضة المتجرد",
+        "prototipe_benzerlik": 0.393,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسيف محطوط: مرهف. وكعب حطيط: أدرم. قال مليح الهذلي:",
         "prototipe_benzerlik": 0.246,
         "halka": "uzak"
       },
       {
-        "cumle": "واشترى سلعة فاستحط من الثمن مائة. وطلب منه الحطيطة فأبى. وحط رحله: أقام.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكل حطيط الكعب درم حجوله ... ترى الحجل فيه غاماَ غير مقلق",
+        "prototipe_benzerlik": 0.386,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واشترى سلعة فاستحط من الثمن مائة. وطلب منه الحطيطة فأبى. وحط رحله: أقام.",
         "prototipe_benzerlik": 0.118,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.206,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.288,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

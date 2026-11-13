@@ -1211,19 +1211,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شغبت على القوم: هيجت عليهم الشر: وفلان طويل الشغب والشغب. قال: ولا بقتاتة سبهللة ... عاضهة في كلامها شغب وقال آخر: أغص أخا الشغب الألد بريقه ... فينطق بعدي والكلام غضيض وهو شغاب ومشغب. قال: وإني على ما نال مني بصرفه ... على الشاغبي التاركي الحق مشغب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شغبت على القوم: هيجت عليهم الشر: وفلان طويل الشغب والشغب. قال:\nولا بقتاتة سبهللة ... عاضهة في كلامها شغب\nوقال آخر:\nأغص أخا الشغب الألد بريقه ... فينطق بعدي والكلام غضيض\nوهو شغاب ومشغب. قال:\nوإني على ما نال مني بصرفه ... على الشاغبي التاركي الحق مشغب"
+      },
+      {
+        "kaynak": "Mekâyîs: شَغَبَ",
+        "metin": "(شَغَبَ) الشِّينُ وَالْغَيْنُ وَالْبَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَهْيِيجِ الشَّرِّ، لَا يَكُونُ فِي خَيْرٍ. قَالَ الْخَلِيلُ: الشَّغْبُ: تَهْيِيجُ الشَّرِّ، يُقَالُ لِلْأَتَانِ إِذَا وَحِمَتْ وَاسْتَعْصَتْ عَلَى الْجَأْبِ: إِنَّهَا لَذَاتُ شَغْبٍ وَضِغْنٍ. قَالَ أَبُو عُبَيْدٍ: يُقَالُ شَغَبْتُ عَلَى الْقَوْمِ وَشَغَبْتُهُمْ وَشَغَبْتُ بِهِمْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ناقة شغابة إذا لم تعتدل في المشي وتحيدت. وأتان ذات شغب وضضغن: مستعصية على الفحل. وطلبت منه كذا فتشاغب وامتنع إذا تعاصى.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ناقة شغابة إذا لم تعتدل في المشي وتحيدت. وأتان ذات شغب وضضغن: مستعصية على الفحل. وطلبت منه كذا فتشاغب وامتنع إذا تعاصى.",
         "prototipe_benzerlik": 0.081,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.081,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "disorder.n.03"],
   "muhassas_tasnif": {

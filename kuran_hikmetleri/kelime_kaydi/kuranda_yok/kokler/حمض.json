@@ -1717,19 +1717,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حمض الشيء وحمش. وحمضت الإبل وأحمضت: رعت الحمض وهو نبت فيه ملوحة تتفكه به وتشرب عليه. ويقولون: الخلة خبز الإبل، والحمض فاكهتها. وكأنه حماض الأترج وهو ما في جوفه، الواحدة حماضة. وأنا أستلذ حماضة الأترجة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حمض الشيء وحمش. وحمضت الإبل وأحمضت: رعت الحمض وهو نبت فيه ملوحة تتفكه به وتشرب عليه. ويقولون: الخلة خبز الإبل، والحمض فاكهتها. وكأنه حماض الأترج وهو ما في جوفه، الواحدة حماضة. وأنا أستلذ حماضة الأترجة."
+      },
+      {
+        "kaynak": "Mekâyîs: حَمَضَ",
+        "metin": "(حَمَضَ) الْحَاءُ وَالْمِيمُ وَالضَّادُ أَصْلٌ وَاحِدٌ صَحِيحٌ، وَهُوَ شَيْءٌ مِنَ الطُّعُومِ. يُقَالُ شَيْءٌ حَامِضٌ وَفِيهِ حُمُوضَةٌ. وَالْحَمْضُ مِنَ النَّبْتِ مَا كَانَتْ فِيهِ مُلُوحَةٌ. وَالْخُلَّةُ مَا سِوَى ذَلِكَ. وَالْعَرَبُ تَقُولُ: الْخُلَّةُ خُبْزُ الْإِبِلِ وَالْحَمْضُ فَاكِهَتُهَا. وَإِنَّمَا تَحَوَّلُ إِلَى الْحَمْضِ إِذَا مَلَّتِ الْخُلَّةُ. وَكُلُّ هَذَا مِنَ النَّبْتِ. وَلَيْسَ شَيْءٌ مِنَ الشَّجَرِ الْعِظَامِ بِحَمْضٍ وَلَا خُلَّةٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أحمض القوم: أفاضوا فيما يؤنسهم من الحديث: وكان ابن عباس رضي الله تعالى عنهما يقول لأصحابه: أحمضوا فيأخذون في الأشعار وأيام العرب. ويقال للتهدد: أنت مختل فتحمض.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أحمض القوم: أفاضوا فيما يؤنسهم من الحديث: وكان ابن عباس رضي الله تعالى عنهما يقول لأصحابه: أحمضوا فيأخذون في الأشعار وأيام العرب. ويقال للتهدد: أنت مختل فتحمض.",
         "prototipe_benzerlik": 0.162,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.162,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["acidic.a.01", "acidify.v.02", "develop.v.15", "development.n.08", "sour.v.01", "substance.n.01"],
   "muhassas_tasnif": {

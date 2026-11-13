@@ -794,19 +794,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أفعمت الإناء، وإناء مفعم: ملآن. وساعد فعم، وامرأة فعمة الساق. ويقول المحسود لحاسده: أفعمت بيمّ، وغضت بسمّ؛ أي ملئت من حسدي بمثل البحر ثم لا جعل لك مغيض إلا بسم منخرك أو بمثل سمّ الإبرة في الضيق والمعنى قلّة المبالاة بامتلائه من حسده وقلّة رغبته في نقصانه، وغضت",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أفعمت الإناء، وإناء مفعم: ملآن. وساعد فعم، وامرأة فعمة الساق. ويقول المحسود لحاسده: أفعمت بيمّ، وغضت بسمّ؛ أي ملئت من حسدي بمثل البحر ثم لا جعل لك مغيض إلا بسم منخرك أو بمثل سمّ الإبرة في الضيق والمعنى قلّة المبالاة بامتلائه من حسده وقلّة رغبته في نقصانه، وغضت مبنيّ للمفعول من غاضه إذا نقصه لقوله: أفعمت."
+      },
+      {
+        "kaynak": "Mekâyîs: فَعَمَ",
+        "metin": "(فَعَمَ) الْفَاءُ وَالْعَيْنُ وَالْمِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى اتِّسَاعٍ وَامْتِلَاءٍ. فَالْفَعْمُ: الْمَلْآنُ. فَعُمَ يَفْعُمُ فَعَامَةً وَفُعُومَةً. وَامْرَأَةٌ فَعْمَةُ السَّاقَيْنِ، إِذَا امْتَلَأَتْ سَاقُهَا لَحْمًا وَأَفْعَمْتُ الشَّيْءَ: مَلَأْتُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أفعمت البيت طيباً وأفعمته غضباً.",
-        "prototipe_benzerlik": 0.002,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أفعمت البيت طيباً وأفعمته غضباً.",
+        "prototipe_benzerlik": -0.011,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.002,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": -0.011,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

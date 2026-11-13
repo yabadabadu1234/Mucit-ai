@@ -37,39 +37,90 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فيه الهلاك والهلك والهلكة: ووقعوا في المهلكة والمهالك. وألقى بيده إلى التّهلُكة. وهلكوا مهلكاً واحداً. وفلان هالك في الهوالك. واهتلك فلان: ألقى نفسه في التّهلكة. وأهلك الشيء واستهلكه. وهوى في هلكٍ وهو مهوًى بين جبلين. قال ذو الرمة: ترى قرطها في واضح اللّيت مشر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فيه الهلاك والهلك والهلكة: ووقعوا في المهلكة والمهالك. وألقى بيده إلى التّهلُكة. وهلكوا مهلكاً واحداً. وفلان هالك في الهوالك. واهتلك فلان: ألقى نفسه في التّهلكة. وأهلك الشيء واستهلكه. وهوى في هلكٍ وهو مهوًى بين جبلين. قال ذو الرمة:\nترى قرطها في واضح اللّيت مشرفاً ... على هلكٍ في نفنفٍ يتطوّح"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مفازة تهلك فيها الأرواح. قال زهير:",
-        "prototipe_benzerlik": 0.78,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مفازة تهلك فيها الأرواح. قال زهير:",
+        "prototipe_benzerlik": 0.554,
         "halka": "yakın"
       },
       {
-        "cumle": "وهلك على الشيء وتهالك عليه إذا اشتدّ حرصه وشرهه. وأنا متهالك في مودّتك ومستهلك. قال القطاميّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخرقٍ تهلك الأرواح فيه ... بعيد الغور مشتبه المتان",
         "prototipe_benzerlik": 0.564,
         "halka": "yakın"
       },
       {
-        "cumle": "وتهالكت في هذا الأمر واستهلكت فيه إذا كنت مجداً فيه مستعجلاً. قال الحطيئة يصف طريقاً:",
-        "prototipe_benzerlik": 0.624,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهلك على الشيء وتهالك عليه إذا اشتدّ حرصه وشرهه. وأنا متهالك في مودّتك ومستهلك. قال القطاميّ:",
+        "prototipe_benzerlik": 0.342,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لمستهلك قد كاد من شدّة الهوى ... يموت ومن طول العدات الكواذب",
+        "prototipe_benzerlik": 0.221,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتهالكت في هذا الأمر واستهلكت فيه إذا كنت مجداً فيه مستعجلاً. قال الحطيئة يصف طريقاً:",
+        "prototipe_benzerlik": 0.37,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مستهلك الورد كالأسديّ قد جعلت ... أيدي المطيّ به عاديةً رغباً",
+        "prototipe_benzerlik": 0.315,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومرّ يهتلك في عدوه ويتهالك: يجدّ. قال الحارث ابن حرجة:",
+        "prototipe_benzerlik": 0.617,
         "halka": "yakın"
       },
       {
-        "cumle": "ومرّ يهتلك في عدوه ويتهالك: يجدّ. قال الحارث ابن حرجة:",
-        "prototipe_benzerlik": 0.768,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلما يئست نسأت القلوص ... تهالك في سبسبٍ أغبر",
+        "prototipe_benzerlik": 0.44,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتهالك على الفراش: تساقط عليه. وتهالكت في مشيتها: تفيّأت وتكسّرت، ومنه الهلوك: للفاجرة، والجمع الهلك. وقوم هلاّكٌ: صعاليك سيئو الحال. قال أبو طالب في مدح رسول الله صلى الله تعالى عليه وسلم:",
+        "prototipe_benzerlik": 0.92,
         "halka": "yakın"
       },
       {
-        "cumle": "وتهالك على الفراش: تساقط عليه. وتهالكت في مشيتها: تفيّأت وتكسّرت، ومنه الهلوك: للفاجرة، والجمع الهلك. وقوم هلاّكٌ: صعاليك سيئو الحال. قال أبو طالب في مدح رسول الله صلى الله تعالى عليه وسلم:",
-        "prototipe_benzerlik": 0.484,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يلوذ به الهلاّك من آل هاشم ... فهم عنده في نعمة وفواضل",
+        "prototipe_benzerlik": 0.626,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال جميل:",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبيت مع الهلاّك ضيفاً لأهلها ... وأهلي قريبٌ موسعون ذوو فضل",
+        "prototipe_benzerlik": 0.372,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.644,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.48,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

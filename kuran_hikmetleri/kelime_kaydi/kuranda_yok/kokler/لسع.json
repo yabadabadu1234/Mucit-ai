@@ -1112,19 +1112,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لسعته العقرب والزّنبور وهو الضرب بالذنب واللدغ بالفم، وألسعته: أرسلت عليه عقرباً تسلعه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لسعته العقرب والزّنبور وهو الضرب بالذنب واللدغ بالفم، وألسعته: أرسلت عليه عقرباً تسلعه."
+      },
+      {
+        "kaynak": "Mekâyîs: لَسَعَ",
+        "metin": "(لَسَعَ) اللَّامُ وَالسِّينُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لَسَعَتْهُ الْحَيَّةُ تَلْسَعُهُ لَسْعًا. وَيُسْتَعَارُ فَيُقَالُ: لَسَعَهُ بِلِسَانِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يلسع الناس: يؤذيهم بلسانه ويقرصهم. ورجل لسعةٌ. وأتتني منه اللواسع: النواقر من الكلم. وامرأة لسوع: فارك تلسع زوجها بسلاطتها. وأكل بين الناس وألسع: أغرى.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يلسع الناس: يؤذيهم بلسانه ويقرصهم. ورجل لسعةٌ. وأتتني منه اللواسع: النواقر من الكلم. وامرأة لسوع: فارك تلسع زوجها بسلاطتها. وأكل بين الناس وألسع: أغرى.",
         "prototipe_benzerlik": 0.45,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.45,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["annoy.v.01", "dig.v.01", "hurt.v.05", "prick.v.02"],
   "muhassas_tasnif": {

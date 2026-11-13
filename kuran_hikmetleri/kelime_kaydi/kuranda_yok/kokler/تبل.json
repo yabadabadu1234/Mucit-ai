@@ -805,24 +805,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لي عندهم تبل وهو الوغم في القلب. وبينهم تبول وذحول. قال المقدام التميمي: أبى الله أن الغدر منكم وأنكم ... بني مالك لا تدركون لكم تبلاً وتقول: لم يزل إضمار التبول، سبب إظهار الحبول، وهي الدواهي. وتبلني فلان: أصابني بالتبل. وتوبل قدره: ألقى فيها التوابل. قال لبي",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لي عندهم تبل وهو الوغم في القلب. وبينهم تبول وذحول. قال المقدام التميمي:\nأبى الله أن الغدر منكم وأنكم ... بني مالك لا تدركون لكم تبلاً\nوتقول: لم يزل إضمار التبول، سبب إظهار الحبول، وهي الدواهي. وتبلني فلان: أصابني بالتبل. وتوبل قدره: ألقى فيها التوابل.\nقال لبيد:\nفسافت قديماً عهده بأنيسه ... كما خالط الخل العتيق التوابلا\nوفي مثل \" أهون من تبالة على الحجاج و\" ما حللت بطن تبالة لتحرم الأضياف \"."
+      },
+      {
+        "kaynak": "Mekâyîs: تَبْلٌ",
+        "metin": "(تَبْلٌ) التَّاءُ وَالْبَاءُ وَاللَّامُ كَلِمَاتٌ مُتَقَارِبَةٌ لَفْظًا وَمَعْنًى، وَهِيَ خِلَافُ الصَّلَاحِ وَالسَّلَامَةِ، فَالتَّبْلُ الْعَدَاوَةُ، وَالتَّبْلُ غَلَبَةُ الْحُبِّ عَلَى الْقَلْبِ، يُقَالُ قَلْبٌ مَتْبُولٌ. وَيُقَالُ تَبَلَهُمُ الدَّهْرُ أَفْنَاهُمْ. وَقَالُوا فِي قَوْلِ الْأَعْشَى:\nأَأَنْ رَأَتْ رَجُلًا أَعْشَى أَضَرَّ بِهِ ... رَيْبُ الْمَنُونِ وَدَهْرٌ خَائِنٌ تَبِلُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تبلته فلانة إذا هيمته كأنما أصابته بتبل، وقلب متبول. قال كعب:",
-        "prototipe_benzerlik": 0.395,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تبلته فلانة إذا هيمته كأنما أصابته بتبل، وقلب متبول. قال كعب:",
+        "prototipe_benzerlik": 0.385,
         "halka": "orta"
       },
       {
-        "cumle": "وتبلهم الدهر وأتبلهم. ودهر خابل تابل. وقزح كلامه وتوبله.",
-        "prototipe_benzerlik": 0.685,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بانت سعاد فقلبي اليوم متبول ... متيم إثرها لم يفد مكبول",
+        "prototipe_benzerlik": 0.387,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتبلهم الدهر وأتبلهم. ودهر خابل تابل. وقزح كلامه وتوبله.",
+        "prototipe_benzerlik": 0.732,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.54,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.502,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["food.n.01", "season.v.01"],
   "muhassas_tasnif": {

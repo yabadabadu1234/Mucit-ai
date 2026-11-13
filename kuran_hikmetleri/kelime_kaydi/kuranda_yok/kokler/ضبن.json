@@ -740,19 +740,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "احتمله في ضبنه وهو ما بين الإبط والكشح، واضطبنه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "احتمله في ضبنه وهو ما بين الإبط والكشح، واضطبنه."
+      },
+      {
+        "kaynak": "Mekâyîs: ضَبَنَ",
+        "metin": "(ضَبَنَ) الضَّادُ وَالْبَاءُ وَالنُّونُ أَصْلٌ صَحِيحٌ، وَهُوَ عُضْوٌ مِنَ الْأَعْضَاءِ. فَالضَّبْنُ: مَا بَيْنَ الْإِبِطِ وَالْكَشْحِ. يُقَالُ: أَضْطَبَنْتُهُ: جَعَلْتُهُ فِي ضِبْنِي. وَالضَّبْنَةُ: أَهْلُ الرَّجُلِ، يَضْطَبِنُهَا. وَنَاسٌ يَقُولُونَ: الْمَضْبُونُ: الزَّمِنُ، وَهُوَ عِنْدِي مِنْ قَلْبِ الْمِيمِ. وَمَكَانٌ ضَبْنٌ: ضَيِّقٌ. وَهَذِهِ الْكَلِمَةُ مِنَ الْبَابِ الْأَوَّلِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خرج في ضبنته: في أهله وعياله لأنه يضطبنهم في كنفه. وهم في أضبان الجبل: في مضايقه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خرج في ضبنته: في أهله وعياله لأنه يضطبنهم في كنفه. وهم في أضبان الجبل: في مضايقه.",
         "prototipe_benzerlik": 0.436,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.436,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

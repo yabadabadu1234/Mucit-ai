@@ -710,24 +710,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ناغت المرأة ولدها: كلّمته بما يجدله. وسمعت نغمته ونغيته. قال أبو نخيلة: لما أتتني نغبة كالشهد ونغيت إليه ونغى إليّ إذا ألقيت إليه كلمةً وألقى إليك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ناغت المرأة ولدها: كلّمته بما يجدله. وسمعت نغمته ونغيته. قال أبو نخيلة:\nلما أتتني نغبة كالشهد\nونغيت إليه ونغى إليّ إذا ألقيت إليه كلمةً وألقى إليك."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هذا الجبل يناغى ذاك: يدانيه. ويقال للموج إذا ارتفع: كاد يناغي السحاب. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هذا الجبل يناغى ذاك: يدانيه. ويقال للموج إذا ارتفع: كاد يناغي السحاب. قال:",
         "prototipe_benzerlik": 0.522,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وناغى الماء الكواكب إذا رأيت بريقها في الماء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأنك بالمبارك بعد شهر ... يناغي موجه غرّ السحاب",
+        "prototipe_benzerlik": 0.345,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وناغى الماء الكواكب إذا رأيت بريقها في الماء.",
         "prototipe_benzerlik": 0.178,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.35,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.348,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "همدت النار تهمد هموداً، ورماد هامد: قد تلبّد وتغير.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "همدت النار تهمد هموداً، ورماد هامد: قد تلبّد وتغير."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أرض هامدة: مقشعرة قد يبس نباتها وتحطّم، ونبات وشجر هامد: يابس. وهمد القوم وخمدوا: ماتوا، كما همدت ثمود، وأهمدهم الله. وأتوا على بني فلان فأهمدوهم. وأهمد فلانٌ الأمر: أماته. وثمرة هامدة: اسودّت وتعفّنت. وهمد الثوب وهمد إذا بلي من طول الطّيّ فإذا مسسته تناثر، وثوب هامد، وثياب همّد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرض هامدة: مقشعرة قد يبس نباتها وتحطّم، ونبات وشجر هامد: يابس. وهمد القوم وخمدوا: ماتوا، كما همدت ثمود، وأهمدهم الله. وأتوا على بني فلان فأهمدوهم. وأهمد فلانٌ الأمر: أماته. وثمرة هامدة: اسودّت وتعفّنت. وهمد الثوب وهمد إذا بلي من طول الطّيّ فإذا مسسته تناثر، وثوب هامد، وثياب همّد.",
         "prototipe_benzerlik": 0.008,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.008,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

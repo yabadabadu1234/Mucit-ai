@@ -37,29 +37,66 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بهره: غلبه. وبهراً له: دعاء عليه بأن يغلب. قال ابن ميادة: فبهراً لقومي إذ يبيعون مهجتي ... بجارية بهراً لهم بعدها بهراً ويقولون: بهراً له ما أسخاه، كما يقولون: تعساً له جميماً. وسرينا حتى ابهار الليل إذا انتصف من بهرة الشيء وهو وسطه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بهره: غلبه. وبهراً له: دعاء عليه بأن يغلب. قال ابن ميادة:\nفبهراً لقومي إذ يبيعون مهجتي ... بجارية بهراً لهم بعدها بهراً\nويقولون: بهراً له ما أسخاه، كما يقولون: تعساً له جميماً. وسرينا حتى ابهار الليل إذا انتصف من بهرة الشيء وهو وسطه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قمر باهر وهو الذي بهر ضوءه ضوء الكواكب. وطاول الرجل صاحبه فبهره أي طاله. وبهره الحمل أو العدو فانبهر، وعلاه البهر فهو مبهور وبهير ومنبهر. وبهرت السيف فما حاك فيه أي أكرهته في الضرب. ومازال يراجعه الألم حتى قطع أبهره أي أهلكه، وهو عرق مستبطن الصلب إذا انقطع لم يبق صاحبه. قال بشر بن أبي حازم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قمر باهر وهو الذي بهر ضوءه ضوء الكواكب. وطاول الرجل صاحبه فبهره أي طاله. وبهره الحمل أو العدو فانبهر، وعلاه البهر فهو مبهور وبهير ومنبهر. وبهرت السيف فما حاك فيه أي أكرهته في الضرب. ومازال يراجعه الألم حتى قطع أبهره أي أهلكه، وهو عرق مستبطن الصلب إذا انقطع لم يبق صاحبه. قال بشر بن أبي حازم:",
         "prototipe_benzerlik": 0.823,
         "halka": "yakın"
       },
       {
-        "cumle": "درهم بهرج ومبهرج: رديء الفضة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "على كل ذي ميعة سابح ... يقطع ذو أبهريه الحزاما",
+        "prototipe_benzerlik": 0.388,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي بطنه.",
+        "prototipe_benzerlik": 0.277,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ب هـ ر ج",
+        "prototipe_benzerlik": 0.769,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "درهم بهرج ومبهرج: رديء الفضة.",
         "prototipe_benzerlik": 0.254,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: كلام بهرج، وعمل بهرج. وكذلك كل موصوف بالرداءة. ودم بهرج: هدر. وبهرج بهم الطريق إذا أخذ بهم في غير المحجة. وماء مبهرج: مهمل للواردة. قال ثعلبة ابن أوس الكلابي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: كلام بهرج، وعمل بهرج. وكذلك كل موصوف بالرداءة. ودم بهرج: هدر. وبهرج بهم الطريق إذا أخذ بهم في غير المحجة. وماء مبهرج: مهمل للواردة. قال ثعلبة ابن أوس الكلابي:",
         "prototipe_benzerlik": 0.776,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلو كنت ثوباً كنت سبعاً وأربعاً ... ولو كنت ماء كنت ماء له نخل",
+        "prototipe_benzerlik": 0.269,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مبهرجةً للواردين حياضه ... وليس له أهل فيمنعه الأهل",
+        "prototipe_benzerlik": 0.813,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.618,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.546,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

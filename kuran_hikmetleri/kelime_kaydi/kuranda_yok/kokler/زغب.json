@@ -760,29 +760,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "طار زغبه وهو ما لان وصغر من الشعر والريش أول ما ينبت، وزغب الفرخ: نبت زغبه، وفرغ أزغب وأزيغب، وفراخ زغب ورقبة زغباء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "طار زغبه وهو ما لان وصغر من الشعر والريش أول ما ينبت، وزغب الفرخ: نبت زغبه، وفرغ أزغب وأزيغب، وفراخ زغب ورقبة زغباء."
+      },
+      {
+        "kaynak": "Mekâyîs: زَغِبَ",
+        "metin": "(زَغِبَ) الزَّاءُ وَالْغَيْنُ وَالْبَاءُ أُصَيْلٌ صَحِيحٌ، وَهُوَ الزَّغَبُ، أَوَّلُ مَا يَنْبُتُ مِنَ الرِّيشِ. وَقَدْ يُزْغِبُ الْكَرْمُ، بَعْدَ جَرْيِ الْمَاءِ فِيهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ما أعطاني زغبة، وا أصبت منه زغابة أي أدنى شيء. وقثّلاء زغباء وقثاء زغب، و\" أهدي إلى رسول الله صلى الله تعالى عليه وسلم أجر زغب \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما أعطاني زغبة، وا أصبت منه زغابة أي أدنى شيء. وقثّلاء زغباء وقثاء زغب، و\" أهدي إلى رسول الله صلى الله تعالى عليه وسلم أجر زغب \".",
         "prototipe_benzerlik": 0.633,
         "halka": "yakın"
       },
       {
-        "cumle": "زغزغ به: سخر منه. وزغزغ كلامه: لم يلخص معناه. يقال: لا تزغزغ الكلام وبين الحق.",
-        "prototipe_benzerlik": 0.34,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ز غ ز غ",
+        "prototipe_benzerlik": 0.325,
+        "halka": "uzak"
       },
       {
-        "cumle": "ز غ قال: صب عليه الزغفة وهي الدرع الواسعة، ولبسوا الزغف. وتقول: لا تشهدوا الزحف، حتى تلبسوا الزغف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زغزغ به: سخر منه. وزغزغ كلامه: لم يلخص معناه. يقال: لا تزغزغ الكلام وبين الحق.",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ز غ قال: صب عليه الزغفة وهي الدرع الواسعة، ولبسوا الزغف. وتقول: لا تشهدوا الزحف، حتى تلبسوا الزغف.",
         "prototipe_benzerlik": 0.314,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.429,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.403,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

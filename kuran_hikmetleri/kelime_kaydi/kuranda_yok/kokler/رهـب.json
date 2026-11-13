@@ -37,24 +37,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رهبته وفي قلبي منه رهبة ورهب ورهبوت. وهو رجل مرهوب، عدوّه منه مرعوب. قالت ليلى: وقد كان مرهوب السنان وبيّن ال ... لسان ومجذام السري غير فاتر ويقال: الرهباء من الله والرغباء إلى الله والنعماء بيد الله. وأرهبته ورهبته واسترهبته: أزعجت نفسه بالإخافة. وتقول: يقشعر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رهبته وفي قلبي منه رهبة ورهب ورهبوت. وهو رجل مرهوب، عدوّه منه مرعوب. قالت ليلى:\nوقد كان مرهوب السنان وبيّن ال ... لسان ومجذام السري غير فاتر\nويقال: الرهباء من الله والرغباء إلى الله والنعماء بيد الله. وأرهبته ورهبته واسترهبته: أزعجت نفسه بالإخافة. وتقول: يقشعرّ الإهاب، إذا وقع منه الإرهاب. وترهب فلان: تعبد في صومعته، وهو راهب بين الرهبانية، وهؤلاء رهبان ورهبة ورهابين ورهابنة. قال رجل من الضباب:\nقد أدببر الليل وقضّى أربه ... وارتفعت في فلكيها الكوكبه\nكأنها مصباح دير الرهبة\nورماه فأصاب رهابته وهي عظيم في الصدر مطل على البطن كأنه طرف لسان الكلب."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أرهب الإبل عن الحوض: ذادها. وأرهب عنه الناس بأسه ونجدته. قال رجل من جرم:",
-        "prototipe_benzerlik": 0.727,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرهب الإبل عن الحوض: ذادها. وأرهب عنه الناس بأسه ونجدته. قال رجل من جرم:",
+        "prototipe_benzerlik": 0.726,
         "halka": "yakın"
       },
       {
-        "cumle": "أي ننفق عليها المال وهو من فصيح الكلام وإنما فصّحه ملح الاستعارة. ويقال: لم أرهب بك: لم أسترب بك.",
-        "prototipe_benzerlik": 0.422,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنا إذا الحرب نساقيها المال ... وجعلت تلقح ثم تحتال",
+        "prototipe_benzerlik": 0.251,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يرهب عنا الناس طعن إبغال ... شزر كأفواه المزاد الشلشال",
+        "prototipe_benzerlik": 0.385,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي ننفق عليها المال وهو من فصيح الكلام وإنما فصّحه ملح الاستعارة. ويقال: لم أرهب بك: لم أسترب بك.",
+        "prototipe_benzerlik": 0.407,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.575,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.442,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1101,19 +1101,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "الطير في وكناتها: في أعشاشها ومواقعها، والطائر على وكنه وموكه، ووكنته، ووكن على بيضه وكوناً، وهو واكن وحمائم وكون وواكنات. قال: تذكّرني سلمى وقد حال دونها ... حمام على بيضاتهنّ وكون",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الطير في وكناتها: في أعشاشها ومواقعها، والطائر على وكنه وموكه، ووكنته، ووكن على بيضه وكوناً، وهو واكن وحمائم وكون وواكنات. قال:\nتذكّرني سلمى وقد حال دونها ... حمام على بيضاتهنّ وكون"
+      },
+      {
+        "kaynak": "Mekâyîs: وَكَنَ",
+        "metin": "(وَكَنَ) الْوَاوُ وَالْكَافُ وَالنُّونُ. يَقُولُونَ لِعُشِّ الطَّائِرِ: وَكْنٌ، وَيُجْمَعُ وُكُنَاتٌ. وَفِي الْحَدِيثِ: «أَقِرُّوا الطَّيْرَ فِي وَكَنَاتِهَا» . وَيَقُولُونَ: تَوَكَّنَ،\nفِي مَعْنَى تَمَكَّنَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تمكّن فلا وتوكّن، ونساء واكنات: جالسات.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تمكّن فلا وتوكّن، ونساء واكنات: جالسات.",
         "prototipe_benzerlik": 0.236,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.236,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

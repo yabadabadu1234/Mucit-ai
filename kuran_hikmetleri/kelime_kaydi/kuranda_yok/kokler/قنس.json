@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان يضرب القوانس. قال: أضرب عنك الهموم طارقها ... ضربك بالسوط قونس الفرس وهو ما بين الأذنين. وقونس البيضة: ما قابله منها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان يضرب القوانس. قال:\nأضرب عنك الهموم طارقها ... ضربك بالسوط قونس الفرس\nوهو ما بين الأذنين. وقونس البيضة: ما قابله منها."
+      },
+      {
+        "kaynak": "Mekâyîs: قَنَسَ",
+        "metin": "(قَنَسَ) الْقَافُ وَالنُّونُ وَالسِّينُ أُصَيْلٌ صَحِيحٌ يَدُلُّ عَلَى ثَبَاتِ شَيْءٍ. مِنْ ذَلِكَ: الْقَِنْسُ: مَنْبِتُ كُلِّ شَيْءٍ وَأَصْلُهُ. قَالَ:\nفِي قِنْسِ مَجْدٍ فَاتَ كُلَّ قَِنْسِ\nقَالُوا: وَكُلُّ شَيْءٍ ثَبَتَ فِي شَيْءٍ فَذَلِكَ الشَّيْءُ قِنْسٌ لَهُ. قَالُوا: وَالْقَوْنَسُ فِي الْبَيْضَةِ: أَعْلَاهَا، وَقَوْنَسُ نَاصِيَةِ الْفَرَسِ: مَا فَوْقَهَا; وَهِيَ ثَابِتَةٌ. قَالَ:\nاطْرُدْ عَنْكَ الْهُمُومَ طَارِقَهَا ضَرْبَكَ بِالسَّيْفِ قَوْنَسَ الْفَرَسِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خذ قونس الطريق: قصده وجادته. وضربوا قونس الليل: سروا في أوله. وتقول: فلان واحد من جنسك، وشعبة من قنسك؛ من أصلك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خذ قونس الطريق: قصده وجادته. وضربوا قونس الليل: سروا في أوله. وتقول: فلان واحد من جنسك، وشعبة من قنسك؛ من أصلك.",
         "prototipe_benzerlik": 0.433,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.433,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -827,39 +827,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نشج الباكي نشيجاً وهو الغصص بالبكاء وتردّده في الصدر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نشج الباكي نشيجاً وهو الغصص بالبكاء وتردّده في الصدر."
+      },
+      {
+        "kaynak": "Mekâyîs: نَشَجَ",
+        "metin": "(نَشَجَ) النُّونُ وَالشِّينُ وَالْجِيمُ كَلِمَةٌ تَدُلُّ عَلَى حِكَايَةِ صَوْتٍ. وَنَشَجَ الْبَاكِي: غَصَّ بِالْبُكَاءِ فِي حَلْقِهِ مِنْ غَيْرِ انْتِحَابٍ. وَنَشَجَ الْحِمَارُ بِصَوْتِهِ نَشْجًا. وَيُقَالُ لِلطَّعْنَةِ إِذَا خَرَجَ مِنْهَا الدَّمُ فَسُمِعَ لَهُ حِسٌّ: قَدْ نَشَجَتْ. وَكَذَا الْقِدْرُ تَنْشِجُ عِنْدَ الْغَلَيَانِ. وَيُحْتَمَلُ أَنْ يَكُونَ الْأَنْشَاجُ مِنْ هَذَا، وَهِيَ مَجَارِي الْمَاءِ، الْوَاحِدُ نَشَجٌ، كَأَنَّهَا سُمِّيَتْ بِهَا لِقَسِيبِ الْمَاءِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سمعت نشيج الطعنة: عند خروج الدم، ونشيج القدر والزّقّ: عند الغليان، ونشيج الحمار: عند شحيجة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سمعت نشيج الطعنة: عند خروج الدم، ونشيج القدر والزّقّ: عند الغليان، ونشيج الحمار: عند شحيجة.",
         "prototipe_benzerlik": 0.456,
         "halka": "orta"
       },
       {
-        "cumle": "ن ش د سمعت صوت النّشّاد وهو الذي ينشد الضّوالّ. وأصاخ الناشد للمنشد: الطالب",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ش د سمعت صوت النّشّاد وهو الذي ينشد الضّوالّ. وأصاخ الناشد للمنشد: الطالب",
         "prototipe_benzerlik": 0.364,
         "halka": "orta"
       },
       {
-        "cumle": "للمعترف. وقال يصف ثوراً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للمعترف. وقال يصف ثوراً:",
         "prototipe_benzerlik": 0.305,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: نشدتك الله وناشدتك الله ونشدك الله أي سألتك به. وقال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يصيخ للنبأة أسماعه ... أصاخة الناشد للمنشد",
+        "prototipe_benzerlik": 0.152,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: نشدتك الله وناشدتك الله ونشدك الله أي سألتك به. وقال الأعشى:",
         "prototipe_benzerlik": 0.201,
         "halka": "uzak"
       },
       {
-        "cumle": "أي إذا تناشده العباد بمعنى تداعوه وطلبوا منه بحقّ الكتب المنزّلة أطلبهم وأجابهم. وتنشّدت الأخبار إذا كنت تريغ أن تعلمها من حيث لا يعلمها الناس. وأنشدني شعراً إنشاداً حسناً لأن المنشد يرفع بالمنشد صوته كما يفعل المعرف. واستنشدته إياه. وله أناشيد ملاح. وسمعت منهم نشيداً مليحاً وهو الشعر المتناشد بين ا",
-        "prototipe_benzerlik": 0.241,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ربّي كريم لا يكدر نعمة ... وإذا تنوشد بالمهارق أنشدا",
+        "prototipe_benzerlik": 0.176,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي إذا تناشده العباد بمعنى تداعوه وطلبوا منه بحقّ الكتب المنزّلة أطلبهم وأجابهم. وتنشّدت الأخبار إذا كنت تريغ أن تعلمها من حيث لا يعلمها الناس. وأنشدني شعراً إنشاداً حسناً لأن المنشد يرفع بالمنشد صوته كما يفعل المعرف. واستنشدته إياه. وله أناشيد ملاح. وسمعت منهم نشيداً مليحاً وهو الشعر المتناشد بين القوم ينشده بعضهم بعضاً.",
+        "prototipe_benzerlik": 0.262,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.313,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.274,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["wail.v.02"],
   "muhassas_tasnif": {

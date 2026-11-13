@@ -1986,11 +1986,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "canoe.n.01",
-    "dayanak_tanim": "small and light boat; pointed at both ends; propelled with a paddle",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "injection.n.03",
+    "dayanak_tanim": "the act of putting a liquid into the body by means of a syringe",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -2009,24 +2009,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نفاذ بخفة واندفاع إلى العمق (أو منه): كالمزراق (تأمل خفته بين الرماح وهو) ينفذ في المطعون به بقوة. وقالوا: \"انزرق السهم: نَفَذَ ومَرَق (من بدن المرمىّ به)، وكالزورق بين السُفُن. وكالذَرْق: شأنه الخروج ويخرج حذفا. ومنه: \"الزُرَّق - كسكر شَعَرات بيض تكون في يد ا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نفاذ بخفة واندفاع إلى العمق (أو منه): كالمزراق (تأمل خفته بين الرماح وهو) ينفذ في المطعون به بقوة. وقالوا: \"انزرق السهم: نَفَذَ ومَرَق (من بدن المرمىّ به)، وكالزورق بين السُفُن. وكالذَرْق: شأنه الخروج ويخرج حذفا. ومنه: \"الزُرَّق - كسكر شَعَرات بيض تكون في يد الفرس أو رجله (شعرات خفيفة تنفذ بين غيرها من الشعر)، وطائر بين البازي والباشق يُصَادُ به (ينفذ بخفة في الجو منقضًّا آخذًا المصيد)، والحديدُ النظرِ (يخترق ينظره) والزُرَيْقاء - بالتصغير: ثَريدةٌ تُدْسَم بلبن وزيت (ينفذ في أثنائها أو يسهّل ابتلاعها بلا مضغ). والزرْقاء: الخمر (أُخِذَ غليظها وثُفْلها وخُلّصَت منهما). ومن النفاذ بخفة: \"زَرَقَت الناقةُ الرحْل: أَخَّرته إلى وراء فانزرق. وجمل مزراق: يؤخِّر أداته وما حُمِل عليه \" (يُزْلقها يكاد يلقيها عن ظهره). ومن النفاذ من العمق صفاءُ المائع - كما في الخمر \"ماء أزرق: صاف وكذا نصل أزرق. والزُرْقة - بالضم: خضرة في سواد العين (وتكون صافية جدًّا). وعُظْم ما هو صاف في الطبيعة - كماء البحر والأفق والعين يبدو بذلك اللون القريب من الخضرة وهو الزرقة. ومن هذا التلازم دلت الزرقة على ذلك اللون. {يَوْمَ يُنْفَخُ فِي الصُّورِ وَنَحْشُرُ الْمُجْرِمِينَ يَوْمَئِذٍ زُرْقًا} فسِّرت [في قر 11/ 244] بتفسيرات (2/895) راجعة إلى زرقة لون العيون، وفي قَول بشخوص البصر من شدة الخوف. ولا يبعد أن يُمَيَّزوا يومئذ بزرقة الأبدان لا العيون خاصة، أو بخلُوّ الأبدان والعقول من كل مُسْكة كقوله تعالى: {يَوْمَ تَرَوْنَهَا تَذْهَلُ كُلُّ مُرْضِعَةٍ عَمَّا أَرْضَعَتْ} [الحج: 2] وهذا يزكيه السياق {يَتَخَافَتُونَ بَيْنَه"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في عينه زرق وزرقة، وزرقت عينه وازرقت وازراقت، وعين زرقاء وعيون زرق. وزرقة بالمرراق."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "سنان أررق وأسنة زرق. وماء أزرق، ونطفة زرقاء، وجمام زرق. قال يصف خمراً:",
-        "prototipe_benzerlik": 0.637,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سنان أررق وأسنة زرق. وماء أزرق، ونطفة زرقاء، وجمام زرق. قال يصف خمراً:",
+        "prototipe_benzerlik": 0.543,
         "halka": "yakın"
       },
       {
-        "cumle": "وثريدة زريقاء تشبه تفاريق الزيت فيها بالعيون الزرق. ولا يقاس الزرق بالأزرق وهو طائر بين البازي والشاهين، والأزرق: البازي. وزرقه ببصره: حدجه. وزرق الطائر والسبع بسلحه: رمى به. وخرجت عليهم الأزارقة: قوم من الخوارج.",
-        "prototipe_benzerlik": 0.677,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شيبت بزرقاء من قمراء تنسجها ... في رأس أعيط وهنا بعد إعتام",
+        "prototipe_benzerlik": 0.447,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال زهير:",
+        "prototipe_benzerlik": 0.496,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولما وردنا الماء زرقاً جمامه ... وضعن عصيّ الحاضر المتخيم",
+        "prototipe_benzerlik": 0.337,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وثريدة زريقاء تشبه تفاريق الزيت فيها بالعيون الزرق. ولا يقاس الزرق بالأزرق وهو طائر بين البازي والشاهين، والأزرق: البازي. وزرقه ببصره: حدجه. وزرق الطائر والسبع بسلحه: رمى به. وخرجت عليهم الأزارقة: قوم من الخوارج.",
+        "prototipe_benzerlik": 0.653,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.657,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.495,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01"],
   "muhassas_tasnif": {

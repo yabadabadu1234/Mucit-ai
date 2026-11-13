@@ -779,19 +779,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ربثة عن كذا وربّثه: ثبطه. وفيه ربيثة عن الخير. وأخذ الشيطان عليهم بالربائث أي بالحوائج المثبطات عن العبادة. وفلان يتثبط عن كذا ويتربث، ويتباطأ ويتلبث. ويقال: جريه كريث، وأمره ربيث؛ من قولهم: فلان كريث عن الأمر: ناكص عنه. واربثّت الغنم وانبثت: انتشرت. ولاتزال غ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ربثة عن كذا وربّثه: ثبطه. وفيه ربيثة عن الخير. وأخذ الشيطان عليهم بالربائث أي بالحوائج المثبطات عن العبادة. وفلان يتثبط عن كذا ويتربث، ويتباطأ ويتلبث. ويقال: جريه كريث، وأمره ربيث؛ من قولهم: فلان كريث عن الأمر: ناكص عنه. واربثّت الغنم وانبثت: انتشرت. ولاتزال غنمهم مبثة مربثة. واربث القوم في منازلهم ورأيهم: تفرّقوا."
+      },
+      {
+        "kaynak": "Mekâyîs: رَبَثَ",
+        "metin": "(رَبَثَ) الرَّاءُ وَالْبَاءُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، يَدُلُّ عَلَى اخْتِلَاطٍ وَاحْتِبَاسٍ. تَقُولُ رَبَّثْتُ فُلَانًا أُرَبِّثُهُ عَنِ الْأَمْرِ، إِذَا حَبَسْتَهُ عَنْهُ. وَالرَّبِيثَةُ: الْأَمْرُ يَحْبِسُكَ. وَفِي الْحَدِيثِ: «إِذَا كَانَ يَوْمُ الْجُمُعَةِ بَعَثَ إِبْلِيسُ جُنُودَهُ إِلَى النَّاسِ فَأَخَذُوا عَلَيْهِمْ بِالرَّبَائِثِ &quot;.» يُرِيدُ ذَكَّرُوهُمُ الْحَاجَاتِ الَّتِي تُرَبِّثُهُمْ. وَيُقَالُ ارْبَثَّ الْقَوْمُ، إِذَا اخْتَلَطُوا. قَالَ:\nرَمَيْنَاهُمُ حَتَّى إِذَا ارْبَثَّ جَمْعُهُمْ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "اربث أمرهم: انتشر ولم يلتئم. قال أبو ذؤيب:",
-        "prototipe_benzerlik": 0.272,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اربث أمرهم: انتشر ولم يلتئم. قال أبو ذؤيب:",
+        "prototipe_benzerlik": 0.219,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رميناهم حتى إذا اربث أمرهم ... وعاد الرصيع نهي ة للحمائل",
+        "prototipe_benzerlik": 0.057,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.272,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.138,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

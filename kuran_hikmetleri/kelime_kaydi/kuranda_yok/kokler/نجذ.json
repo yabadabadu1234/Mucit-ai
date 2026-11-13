@@ -1119,24 +1119,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أبدى ناجذه إذا بالغ في ضحكه أو غضبه، وعن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" أنه ضحك حتى بدت نواجذه \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أبدت الحرب ناجذيها. قال بشر:",
-        "prototipe_benzerlik": 0.334,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أبدى ناجذه إذا بالغ في ضحكه أو غضبه، وعن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" أنه ضحك حتى بدت نواجذه \"."
       },
       {
-        "cumle": "وعضّ على ناجذه إذا بلغ أشدّه استحكم. وعض في العلم وغيره بناجذه إذا أتقنه، ومنه: جّذته التجارب: أحكمته. قال:",
-        "prototipe_benzerlik": 0.594,
-        "halka": "yakın"
+        "kaynak": "Mekâyîs: نَجَذَ",
+        "metin": "(نَجَذَ) النُّونُ وَالْجِيمُ وَالذَّالُ كَلِمَةٌ وَاحِدَةٌ. النَّاجِذُ، وَهُوَ السِّنُّ بَيْنَ النَّابِ وَالْأَضْرَاسِ. ثُمَّ يُسْتَعَارُ فَيُقَالُ لِلرَّجُلِ: الْمُنَجَّذُ، وَهُوَ الْمُجَرَّبُ. وَبَدَتْ نَوَاجِذُهُ فِي ضَحِكِهِ. وَيَقُولُونَ: إِنَّ الْأَضْرَاسَ كُلَّهَا نَوَاجِذُ. وَهَذَا عِنْدَنَا هُوَ الصَّحِيحُ، لِقَوْلِ الشَّمَّاخِ:\nنَوَاجِذُهُنَّ كَالْحِدَأِ الْوَقِيعِ\nوَلِأَنَّهُمْ يَقُولُونَ: ضَحِكَ حَتَّى بَدَا نَاجِذُهُ، فَلَوْ كَانَ السِّنَّ الَّذِي بَيْنَ النَّابِ وَالْأَضْرَاسِ لَمْ يُقَلْ فِيهِ هَذَا، لِأَنَّ ذَاكَ بَادٍ مِنْ أَدْنَى ضَحِكٍ."
       }
     ],
-    "ortalama_benzerlik": 0.464,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبدت الحرب ناجذيها. قال بشر:",
+        "prototipe_benzerlik": 0.334,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما الحرب أبدت ناجذيها ... غداة الرّوع والتقت الجموع",
+        "prototipe_benzerlik": 0.326,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعضّ على ناجذه إذا بلغ أشدّه استحكم. وعض في العلم وغيره بناجذه إذا أتقنه، ومنه: جّذته التجارب: أحكمته. قال:",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخو خمسين مجتمع أشدّى ... ونجّذني مداورة الشؤون",
+        "prototipe_benzerlik": 0.124,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.344,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,29 +37,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شعر أصهب: بيّن الصهب والصهبة وهي حمرة في سواد. ويقال: مسك أصهب، وعنبر أشهب. وجمل أصهب وصهابي وناقة صهباء وصهابية وإبل صهب وصهابية. قال ذو الرمة: صهابية غلب الرقاب كأنما ... تناط بألحيها فراعلة غثر وقيل منسوبة إلى صهاب: فحل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شعر أصهب: بيّن الصهب والصهبة وهي حمرة في سواد. ويقال: مسك أصهب، وعنبر أشهب. وجمل أصهب وصهابي وناقة صهباء وصهابية وإبل صهب وصهابية. قال ذو الرمة:\nصهابية غلب الرقاب كأنما ... تناط بألحيها فراعلة غثر\nوقيل منسوبة إلى صهاب: فحل."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "يوم أصهب: شديد البرد. وموت صهابي، كقولهم: موت أحمر. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يوم أصهب: شديد البرد. وموت صهابي، كقولهم: موت أحمر. قال النابغة:",
         "prototipe_benzerlik": 0.262,
         "halka": "uzak"
       },
       {
-        "cumle": "\" وهو أصهب السبال \": للعدو. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فجئنا إلى الموت الصهابي بعدما ... تجرد عريان من الشر أحدب",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" وهو أصهب السبال \": للعدو. قال:",
         "prototipe_benzerlik": 0.267,
         "halka": "uzak"
       },
       {
-        "cumle": "وشربوا الصهباء. وأكلوا المصهب وهو اللحم المختلط بالشحم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فظلال السيوف شيّبن رأسي ... واعتناقي في الحرب صهب السبال",
+        "prototipe_benzerlik": 0.139,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشربوا الصهباء. وأكلوا المصهب وهو اللحم المختلط بالشحم.",
         "prototipe_benzerlik": -0.048,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.16,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.186,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

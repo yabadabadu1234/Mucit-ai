@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هاج به الدم والمرّةُ. وهاج الغبار، وهاجه وهيّجه. وهايجوه فلم يجد محيصاً. وهاجت له الدار الشوق فاهتاج. قال: هيه وإن هجناك يا ابن الأطول ... ضرباً بكفّي بطل لم ينكل وهيّجت الناقة فانبعثت، وناقة مهياج: نزوع إلا وطنها. وشهدت الهيج والهياج والهيجاء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هاج به الدم والمرّةُ. وهاج الغبار،\nوهاجه وهيّجه. وهايجوه فلم يجد محيصاً. وهاجت له الدار الشوق فاهتاج. قال:\nهيه وإن هجناك يا ابن الأطول ... ضرباً بكفّي بطل لم ينكل\nوهيّجت الناقة فانبعثت، وناقة مهياج: نزوع إلا وطنها. وشهدت الهيج والهياج والهيجاء."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هاج الشرّ بين القوم، وهيّجه فلان. وهاج الفحل هيجاً وهياجاً: هدر. وإذا استقلّ الرجل غضباً قيل: هاج هائجه. وهاج المخبّل بالزّبرقان فهجاه، وهاج الهجاء بينهما. وهاج البقل إذا أخذ في اليبس. وهاجت الأرض، وأرض هائجة. وكلّ ضررٍ عرض فقد هاج.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هاج الشرّ بين القوم، وهيّجه فلان. وهاج الفحل هيجاً وهياجاً: هدر. وإذا استقلّ الرجل غضباً قيل: هاج هائجه. وهاج المخبّل بالزّبرقان فهجاه، وهاج الهجاء بينهما. وهاج البقل إذا أخذ في اليبس. وهاجت الأرض، وأرض هائجة. وكلّ ضررٍ عرض فقد هاج.",
         "prototipe_benzerlik": 0.259,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.259,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

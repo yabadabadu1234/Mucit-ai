@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نتخت الشوكة من رجلي بالمنتاخ بالمنقاش. ونتخ البازي اللحم بمنسره. والغراب ينتخ الدّبرة عن ظهر البعير. ونتخ القلاع الضّرس: نزعه. وقال زهير يصف غزواً: تنبذ أفلاءها في كل منزلة ... تنتخ أعينها العقبان والرخم",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نتخت الشوكة من رجلي بالمنتاخ بالمنقاش. ونتخ البازي اللحم بمنسره. والغراب ينتخ الدّبرة عن ظهر البعير. ونتخ القلاع الضّرس: نزعه.\nوقال زهير يصف غزواً:\nتنبذ أفلاءها في كل منزلة ... تنتخ أعينها العقبان والرخم"
+      },
+      {
+        "kaynak": "Mekâyîs: نَتَخَ",
+        "metin": "(نَتَخَ) النُّونُ وَالتَّاءُ وَالْخَاءُ كَلِمَةٌ تَدُلُّ عَلَى اسْتِخْرَاجِ الشَّيْءِ مِنَ الشَّيْءِ. وَنَتَخَ الشَّوْكَةَ مِنَ الرِّجْلِ بِالْمِنْتَاخِ، أَيْ الْمِنْقَاشِ. وَنَتَخَ الْبَازِي اللَّحْمَ بِمِنْسَرِهِ، وَنَتَخَ ضِرْسَهُ: انْتَزَعَهُ. قَالَ زُهَيْرٌ:\nتَتْرُكُ أَفْلَاءَهَا فِي كُلِّ مَنْزِلَةٍ ... تَنْتَخُ أَعْيُنَهَا الْعِقْبَانُ وَالرَّخَمُ\nوَيَقُولُونَ: الْمُتَنَتِّخُ: الْمُتَفَلِّي. وَالْبِسَاطُ الْمَنْتُوخُ بِالذَّهَبِ: الْمَنْسُوجُ بِهِ. وَالنَّتْخُ: النَّسْجُ، عَنِ ابْنِ الْأَعْرَابِيِّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نتخ فلا من أصحابه: نزع منهم. ونتخته المنيّة من بين قومه",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نتخ فلا من أصحابه: نزع منهم. ونتخته المنيّة من بين قومه",
         "prototipe_benzerlik": 0.821,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.821,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

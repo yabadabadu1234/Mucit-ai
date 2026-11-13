@@ -1896,11 +1896,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "contrivance.n.03",
-    "dayanak_tanim": "an elaborate or deceitful scheme contrived to deceive or evade",
+    "ince": "fabricate.v.02",
+    "orta": "verb.creation",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "fabricate.v.02",
+    "dayanak_tanim": "make up something artificial or untrue",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1914,19 +1914,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ثوب ملفق وملفوق. وقد لفّقت بين ثوبين، ولفقت أحدهما بالآخر إذا لاءمت بينهما بالخياطة كشقّتي الملاءة، وهما لفقان ما داما متضامين فإذا فتقت الخياطة ذهب اسم اللفق، وملاءة ذات لفقين ولفاقين.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب ملفق وملفوق. وقد لفّقت بين ثوبين، ولفقت أحدهما بالآخر إذا لاءمت بينهما بالخياطة كشقّتي الملاءة، وهما لفقان ما داما متضامين فإذا فتقت الخياطة ذهب اسم اللفق، وملاءة ذات لفقين ولفاقين."
+      },
+      {
+        "kaynak": "Mekâyîs: لَفَقَ",
+        "metin": "(لَفَقَ) اللَّامُ وَالْفَاءُ وَالْقَافُ أُصَيْلٌ يَدُلُّ عَلَى مُلَاءَمَةِ الْأَمْرِ. يُقَالُ: لَفَقْتُ الثَّوْبَ بِالثَّوْبِ لَفْقًا. وَهَذَا لِفْقُ هَذَا، أَيْ يُوَائِمُهُ. وَتَلَافَقَ أَمْرُهُمْ: تَلَاءَمَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تلافق القوم: تلاءمت أحوالهم وهذا لفق فلان، وهما لفقان. وما هذا بطباق لذا ولفاق. وقد تلفّق ما بينهما. وحديث ملفّق، وقد لفّقت هذه الأحاديث.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تلافق القوم: تلاءمت أحوالهم وهذا لفق فلان، وهما لفقان. وما هذا بطباق لذا ولفاق. وقد تلفّق ما بينهما. وحديث ملفّق، وقد لفّقت هذه الأحاديث.",
         "prototipe_benzerlik": 0.554,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.554,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "content.n.05",

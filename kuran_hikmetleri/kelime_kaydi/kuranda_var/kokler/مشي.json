@@ -1179,8 +1179,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "walk.n.05",
-    "dayanak_tanim": "a path set aside for walking",
+    "dayanak_synset": "pathway.n.02",
+    "dayanak_tanim": "a trodden path",
     "synset_sayisi": 20
   },
   "ses_mana_tasnif": {
@@ -1194,19 +1194,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مشيت ومشّيت وتمشّيت، وماشيته، وتماشوا، وهي حسنة المشية والمشي، ورجل مشّاء إلى المساجد \" بشر المشّائين \". وقال النابغة: سهل الخليقة مشاء بأقدحه ... إلى أولات الذرى حمّال أثقال وجاء الحاج حتى المشاة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مشيت ومشّيت وتمشّيت، وماشيته، وتماشوا، وهي حسنة المشية والمشي، ورجل مشّاء إلى المساجد \" بشر المشّائين \". وقال النابغة:\nسهل الخليقة مشاء بأقدحه ... إلى أولات الذرى حمّال أثقال\nوجاء الحاج حتى المشاة."
+      },
+      {
+        "kaynak": "Mekâyîs: مَشَيَ",
+        "metin": "(مَشَيَ) الْمِيمُ وَالشِّينُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا يَدُلُّ عَلَى حَرَكَةِ الْإِنْسَانِ وَغَيْرِهِ، وَالْآخَرُ النَّمَاءُ وَالزِّيَادَةُ.\nوَالْأَوَّلُ مَشَى يَمْشِي مَشْيًا. وَشَرِبْتُ مَشُوًّا وَمَشِيًّا، وَهُوَ الدَّوَاءُ الَّذِي يُمْشِي.\nوَالْآخَرُ الْمَشَاءُ، وَهُوَ النِّتَاجُ الْكَثِيرُ، وَبِهِ سُمِّيَتِ الْمَاشِيَةُ. وَامْرَأَةٌ مَاشِيَةٌ: كَثُرَ وَلَدُهَا. وَأَمْشَى الرَّجُلُ: كَثُرَتْ مَاشِيَتُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مشى بطنه، وأمشاه الدّواء، واستمشيت بالدواء، وشربت مشواً، ومشيت مشياً كثيراً من الدواء، ومنه: مشت المرأة: كثرت أولادها مشاءً. وناقة ماشية: ولادة، ومنه: الماشية والمواشي على التفاؤل. وإن فلاناً لذو مشاءٍ. ومال ذو مشاء: ذو نماء. ومشى على فلانٍ ماله: تناتج. وأمشى القوم: كثرت مواشيهم. وتقول: أمشينا وما أ",
-        "prototipe_benzerlik": 0.832,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مشى بطنه، وأمشاه الدّواء، واستمشيت بالدواء، وشربت مشواً، ومشيت مشياً كثيراً من الدواء، ومنه: مشت المرأة: كثرت أولادها مشاءً. وناقة ماشية: ولادة، ومنه: الماشية والمواشي على التفاؤل. وإن فلاناً لذو مشاءٍ. ومال ذو مشاء: ذو نماء. ومشى على فلانٍ ماله: تناتج. وأمشى القوم: كثرت مواشيهم. وتقول: أمشينا وما أمشينا. وهو يمشي بينهم بالنمائم مشياً. ومشّى الأمر تمشيةً. وتمشّت فيه الحميا. قال زهير:",
+        "prototipe_benzerlik": 0.842,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يجرّون البرود وقد تمشّت ... حميا الكأس فيهم والغثاء",
+        "prototipe_benzerlik": 0.653,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.832,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.748,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

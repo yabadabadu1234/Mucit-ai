@@ -1694,8 +1694,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "weapon.n.01",
-    "dayanak_tanim": "any instrument or instrumentality used in fighting or hunting",
+    "dayanak_synset": "armament.n.01",
+    "dayanak_tanim": "weaponry used by military or naval force",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1714,19 +1714,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نفاذ بحدّة وامتداد: كالسيف يُنفَذ به في بدن العدو بامتداد. {وَلْيَأْخُذُوا حِذْرَهُمْ وَأَسْلِحَتَهُمْ} [النساء: 102]. وغزارة اللبن نفاذٌ بقوة وتوالٍ. ومنه: \"سَلَح (فتح): راث \" (نفاذ ما في الجوف من مادة حادة الوقع على الحس).",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نفاذ بحدّة وامتداد: كالسيف يُنفَذ به في بدن العدو بامتداد. {وَلْيَأْخُذُوا حِذْرَهُمْ وَأَسْلِحَتَهُمْ} [النساء: 102]. وغزارة اللبن نفاذٌ بقوة وتوالٍ. ومنه: \"سَلَح (فتح): راث \" (نفاذ ما في الجوف من مادة حادة الوقع على الحس)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخذ سلاحه، وخذوا أسلحتكم وتسلح فلان، وسلحته، وكل عدة للحرب فهو سلاح. وفي موضع كذا مسلحة ومسالح وهم قوم وكلوا بمرصد معهم السلاح، وفلان مسلحي. وهذه الحشيشة تسلح الإبل. و\" أسلح من حبارى \"."
+      },
+      {
+        "kaynak": "Mekâyîs: سَلَحَ",
+        "metin": "(سَلَحَ) السِّينُ وَاللَّامُ وَالْحَاءُ السِّلَاحُ، وَهُوَ مَا يُقَاتَلُ بِهِ، وَكَانَ أَبُو عُبَيْدَةَ يُفَرِّقُ بَيْنَ السِّلَاحِ وَالْجُنَّةِ، فَيَقُولُ: السِّلَاحُ مَا قُوتِلَ بِهِ، وَالْجُنَّةُ مَا اتُّقِيَ بِهِ، وَيَحْتَجُّ بِقَوْلِهِ:\nحَيْثُ تَرَى الْخَيْلَ بِالْأَبْطَالِ عَابِسَةً ... يَنْهَضْنَ بِالْهِنْدَوَانِيَّاتِ وَالْجُنَنِ\nفَجَعَلَ الْجُنَنَ غَيْرَ السُّيُوفِ. وَالْإِسْلِيحُ: شَجَرَةٌ تَغْزُرُ عَلَيْهَا الْإِبِلُ. وَقَالَتِ الْأَعْرَابِيَّةُ: &quot; الْإِسْلِيحُ، رُغْوَةٌ وَسَرِيحٌ، وَسَنَامٌ وَإِطْرِيحٌ &quot;."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أخذت إليّ الإبل سلاحها، وتسلحت بأسلحتها إذا سمنت في عينك وحسنت. وطلع ذو السلاح وهو السماك الرامح.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخذت إليّ الإبل سلاحها، وتسلحت بأسلحتها إذا سمنت في عينك وحسنت. وطلع ذو السلاح وهو السماك الرامح.",
         "prototipe_benzerlik": 0.542,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.542,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "arm.v.01", "arm.v.02", "armed.a.01", "artifact.n.01", "group_action.n.01"],
   "muhassas_tasnif": {

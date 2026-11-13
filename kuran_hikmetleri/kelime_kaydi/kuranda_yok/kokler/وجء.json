@@ -695,19 +695,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وجأه في عنقه وتوجّأه. وتكلّم فلان فتوجّأوه بالأيدي وتوطأوه بالأرجل. وكبشٌ موجوء: وجئت خُصيتاه حتى انفضختا وهو ضرب من الخصاء، وضحّى رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بكبشين موجوءين، ومنه قوله عليه الصلاة والسلام: \" الصوم وجاء \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "وجأ المرأة: نكحها. ووجأ التّمر فاتجأ إذا دقّه حتى تلزّج. وأطعمه الوجيئة وهي جراد يدقّ ويلتّ بسمن. وطلبت أعرابية إلى زوجها أن يرثي أباها مرثيةً حسنة. فقال:",
-        "prototipe_benzerlik": 0.593,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وجأه في عنقه وتوجّأه. وتكلّم فلان فتوجّأوه بالأيدي وتوطأوه بالأرجل. وكبشٌ موجوء: وجئت خُصيتاه حتى انفضختا وهو ضرب من الخصاء، وضحّى رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بكبشين موجوءين، ومنه قوله عليه الصلاة والسلام: \" الصوم وجاء \"."
       }
     ],
-    "ortalama_benzerlik": 0.593,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجأ المرأة: نكحها. ووجأ التّمر فاتجأ إذا دقّه حتى تلزّج. وأطعمه الوجيئة وهي جراد يدقّ ويلتّ بسمن. وطلبت أعرابية إلى زوجها أن يرثي أباها مرثيةً حسنة. فقال:",
+        "prototipe_benzerlik": 0.593,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لتبك الباكيات أبا خبيب ... لدهرٍ أو لنائبة تنوب",
+        "prototipe_benzerlik": 0.427,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقعب وجيئةٍ بلّت بماء ... يكون إدامها لبن حليب",
+        "prototipe_benzerlik": 0.296,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.439,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

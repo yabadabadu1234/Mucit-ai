@@ -930,11 +930,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "curl.v.04",
-    "orta": "verb.contact",
+    "ince": "roll.v.11",
+    "orta": "verb.motion",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "curl.v.04",
-    "dayanak_tanim": "twist or roll into coils or ringlets",
+    "dayanak_synset": "roll.v.11",
+    "dayanak_tanim": "move in a wavy pattern or with a rising and falling motion",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -953,29 +953,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "اندفاع المائع أو الرقيق مما يضُمه بسلاسة بسبب تجمعه وكثرته (1): كترجرج الكَفَل وهو اندفاع هنا وهنا من تراكم الشحم وهو رقيق",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "اندفاع المائع أو الرقيق مما يضُمه بسلاسة بسبب تجمعه وكثرته (1): كترجرج الكَفَل وهو اندفاع هنا وهنا من تراكم الشحم وهو رقيق"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مجّ الماء من فيه. وشيخ وبعير ماجّ. هرم لا يمسك ريقه. ومجمج خطّه: خلطه، وخطّ ممجمج. وما يحسن إلا المجمجة. ومجمج في خبره إذا لم يشف."
+      },
+      {
+        "kaynak": "Mekâyîs: مَجَّ",
+        "metin": "(مَجَّ) الْمِيمُ وَالْجِيمُ كَلِمَتَانِ إِحْدَاهُمَا تَخْلِيطٌ فِي شَيْءٍ، وَالثَّانِيَةُ رَمْيٌ لِلشَّيْءِ بِسُرْعَةٍ.\nفَالْأُولَى الْمَجْمَجَةُ: تَخْلِيطٌ فِيمَا يُكْتَبُ. وَمَجْمَجَ فِي أَخْبَارِهِ: لَمْ يَشْفِ وَلَمْ يُفْصِحْ.\nوَالْأُخْرَى مَجَّ الشَّرَابَ مِنْ فِيهِ: رَمَى بِهِ. وَالشَّرَابُ مُجَاجُ الْعِنَبِ. وَالْمَطَرُ مُجَاجُ الْمُزْنِ. وَالْعَسَلُ مُجَاجُ النَّحْلِ. وَهُوَ هَرِمٌ مَاجٌّ: يَمُجُّ رِيقَهُ وَلَا يَسْتَطِيعُ أَنْ يَحْبِسَهُ مِنْ كِبَرِهِ. وَمِنْ بَابِ السُّرْعَةِ أَمَجَّ فِي الْبِلَادِ إِمِّجَاجًا: ذَهَبَ. وَأَمَجَّ الرَّجُلُ: أَسْرَعَ فِي عَدْوِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "شرب مجاج العنب. ومزج الشراب بمجاج المزن وبمجاج النحل. وماء كأنه مجاج الدّبا. وأحمق ماجٌ. وهذا كلام تمجّه الأسماع، وقولٌ ممجوج. ومجّت الشمس ريقها. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شرب مجاج العنب. ومزج الشراب بمجاج المزن وبمجاج النحل. وماء كأنه مجاج الدّبا. وأحمق ماجٌ. وهذا كلام تمجّه الأسماع، وقولٌ ممجوج. ومجّت الشمس ريقها. قال النابغة:",
         "prototipe_benzerlik": 0.432,
         "halka": "orta"
       },
       {
-        "cumle": "والنبات يمجّ الندى. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يثرن الحصى حتى يباشرن برده ... إذا الشمس مجّت ريقها بالكلاكل",
+        "prototipe_benzerlik": 0.511,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والنبات يمجّ الندى. قال رؤبة:",
         "prototipe_benzerlik": 0.406,
         "halka": "orta"
       },
       {
-        "cumle": "مرعًى أنيق النبت مجّاج الغدق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مرعًى أنيق النبت مجّاج الغدق",
         "prototipe_benzerlik": 0.524,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.454,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.468,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["curl.v.04", "roll.v.11", "wrinkle.v.02"],
   "muhassas_tasnif": {

@@ -728,34 +728,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو يمشي في الوعث والوعوث: في دهاسٍ يشق فيه المشيُ، وقد أوعثوا، كقولك: أسهلوا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو يمشي في الوعث والوعوث: في دهاسٍ يشق فيه المشيُ، وقد أوعثوا، كقولك: أسهلوا."
+      },
+      {
+        "kaynak": "Mekâyîs: وَعَثَ",
+        "metin": "(وَعَثَ) الْوَاوُ وَالْعَيْنُ وَالثَّاءُ: كَلِمَةٌ تَدُلُّ عَلَى سُهُولَةٍ فِي الشَّيْءِ وَرَخَاوَةٍ. وَمَكَانٌ أَوْعَثُ. قَالَ الْخَلِيلُ: الْوَعْثُ مِنَ الرَّمْلِ: مَا غَابَتْ فِيهِ الْقَوَائِمُ. وَامْرَأَةٌ وَعْثَةٌ: كَثِيرَةُ اللَّحْمِ. وَوَعِثَ لِسَانُهُ: الْتَاثَ فَلَمْ يُبَيِّنْ، كَأَنَّهُ اسْتَرْخَى وَلَانَ.\nفَإِنْ قِيلَ: فَكَيْفَ قَالَ: «أَعُوذُ بِكَ مِنْ وَعْثَاءَ السَّفَرِ» ، وَقَدْ زَعَمْتُمْ أَنَّ ذَلِكَ دَالٌّ عَلَى السُّهُولَةِ؟ قِيلَ: الْمَعْنَى الَّذِي ذَهَبْنَا إِلَيْهِ صَحِيحٌ، وَإِنَّمَا الرَّمْلُ إِذَا غَابَتْ فِيهِ الْقَوَائِمُ فَإِنَّهُ يَدْعُو إِلَى الْمَشَقَّةِ، فَلِذَلِكَ قِيلَ: نَعُوذُ بِكَ مِنْ وَعْثَاءَ السَّفَرِ. وَالْمَعْنَيَانِ صَحِيحَانِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" أعوذ بالله من وعثاء السفر \": من شدّته. وركب فلان الوعثاء إذا أذنب. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" أعوذ بالله من وعثاء السفر \": من شدّته. وركب فلان الوعثاء إذا أذنب. قال الكميت:",
         "prototipe_benzerlik": 0.232,
         "halka": "uzak"
       },
       {
-        "cumle": "ويده وعثة: منكسرة. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأين ابنها منكم ومنّا وبعلها ... خزيمة والأرحام وعثاء حوبها",
+        "prototipe_benzerlik": 0.25,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويده وعثة: منكسرة. قال:",
         "prototipe_benzerlik": 0.547,
         "halka": "yakın"
       },
       {
-        "cumle": "ورجل وعث اللسان إذا عجز عن الكلام. قال ابن هرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألستم تغضبون إذا رأيتم ... يميني وعثةً وفمي رتاما",
+        "prototipe_benzerlik": 0.401,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل وعث اللسان إذا عجز عن الكلام. قال ابن هرمة:",
         "prototipe_benzerlik": 0.489,
         "halka": "orta"
       },
       {
-        "cumle": "وأوعث المتكلم. وامرأة وعثة الأرداف: عجزاء. قال ابن هرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومغوثٍ بعد الهدوّ أجبته ... ولسانه وعث اللهاة قطيع",
+        "prototipe_benzerlik": 0.516,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأوعث المتكلم. وامرأة وعثة الأرداف: عجزاء. قال ابن هرمة:",
         "prototipe_benzerlik": 0.416,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثم قامت حولها أترابها ... وعثة الأرداف غرثى الملتزم",
+        "prototipe_benzerlik": 0.357,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.421,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.401,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

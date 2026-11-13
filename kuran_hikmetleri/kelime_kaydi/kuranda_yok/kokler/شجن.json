@@ -1002,11 +1002,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "sadness.n.02",
-    "dayanak_tanim": "the state of being sad",
+    "ince": "grieve.v.01",
+    "orta": "verb.emotion",
+    "ust": "his ve nefis",
+    "dayanak_synset": "grieve.v.01",
+    "dayanak_tanim": "feel grief",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1020,19 +1020,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو أخو شجن وأشجان وشجون وهي الهموم والحاجات التي تهم. وأنشد ابن الأعرابي: من كان يرجو بقاء لا نفاد له ... فلا يكن عرض الدنيا له شجنا وأنشد أبو زيد: ذكرتك حيث استأمن الوحش والتقت ... رفاق من الآفاق شتّى شجونها و\" الحديث ذو شجون \": ذو شعب وبينهما شجنة رحم، والرح",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو أخو شجن وأشجان وشجون وهي الهموم والحاجات التي تهم. وأنشد ابن الأعرابي:\nمن كان يرجو بقاء لا نفاد له ... فلا يكن عرض الدنيا له شجنا\nوأنشد أبو زيد:\nذكرتك حيث استأمن الوحش والتقت ... رفاق من الآفاق شتّى شجونها\nو\" الحديث ذو شجون \": ذو شعب وبينهما شجنة رحم، والرحم شجنة من الله. والشجنة: الشعبة.\nش ج\nوشجاه الهم شجوا. وأمر شاج: محزن. وبكى فلان شجوه، وبكت الحمامة شجوّها. وتشاجت فلانة على زوجها: تحازنت عليه. وشجي بالعظم وغيره شجي. قال:\nفي حلقكم عظم وقد شجينا\nوتقول: عليك بالكظم، وإن شجيت بالعظم. ورجل شج. وفي مثل \" ويل للشجي من الخلي \" وروي مشدداً بمعنى المشجو، وعزي إلى الأصمعيّ وأنشد:\nويل الشجي من الخليّ فإنه ... نصب الفؤاد بحزنه مهموم\nوقال أبو داود:\nمن لعين بدمعها موليه ... ولنفس بما عناها شجية\nوأشجاه بكذا: أغصه به. قال:\nإني أتاني خبر فأشجان ... أن الغواة قتلوا ابن عفان\nخليفة الله بغير برهان"
+      },
+      {
+        "kaynak": "Mekâyîs: شَجَنَ",
+        "metin": "(شَجَنَ) الشِّينُ وَالْجِيمُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى اتِّصَالِ الشَّيْءِ وَالْتِفَافِهِ. مِنْ ذَلِكَ الشِّجْنَةُ، وَهِيَ الشَّجَرُ الْمُلْتَفُّ. وَيُقَالُ: بَيْنِي وَبَيْنَهُ شِجْنَةُ رَحِمٍ، يُرِيدُ اتِّصَالَهَا وَالْتِفَافَهَا. وَيُقَالُ لِلْحَاجَةِ: الشَّجَنُ، وَإِنَّمَا سُمِّيَتْ بِذَلِكَ لِالْتِبَاسِهَا وَتَعَلُّقِ الْقَلْبِ بِهَا ; وَالْجَمْعُ شُجُونٌ. قَالَ:\nوَالنَّفْسُ شَتَّى شُجُونُهَا\nوَالْأَشْجَانُ: جَمْعُ شَجَنٍ. قَالَ:\nلِي شَجَنَانِ شَجَنٌ بِنَجْدِ ... وَشَجَنٌ لِي بِبِلَادِ الْهِنْدِ\nوَالشَّوَاجِنُ: أَوْدِيَةٌ غَامِضَةٌ كَثِيرَةُ الشَّجَرِ. وَسُمِّيَتْ بِهِ لِتَشَاجُنِ الشَّجَرِ. قَالَ الطِّرِمَّاحُ:\nكَظَهْرِ اللَّأَى لَوْ تُبْتَغَى رَيَّةٌ بِهَا ... نَهَارًا لَعَيَّتْ فِي بُطُونِ الشَّوَاجِنِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "في حلقه شجاً ما ينتزع وهو ما يشجى به. قال سويد:",
-        "prototipe_benzerlik": 0.737,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في حلقه شجاً ما ينتزع وهو ما يشجى به. قال سويد:",
+        "prototipe_benzerlik": 0.8,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويراني كالشجا في حلقه ... عسراً مخرجه ما ينتزع",
+        "prototipe_benzerlik": 0.924,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.737,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.862,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["feeling.n.01", "grieve.v.01"],
   "muhassas_tasnif": {

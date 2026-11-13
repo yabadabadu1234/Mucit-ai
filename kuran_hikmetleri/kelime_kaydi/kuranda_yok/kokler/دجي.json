@@ -710,19 +710,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ليلة ذات دجًى وهي الظلم، وهو أحسن من شمس الضحى، وبدر الدجى، وليل داج. قال: والليل داج كنفاً جلبابه وقد دجا الليل وأدجى.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ليلة ذات دجًى وهي الظلم، وهو أحسن من شمس الضحى، وبدر الدجى، وليل داج. قال:\nوالليل داج كنفاً جلبابه\nوقد دجا الليل وأدجى."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ثوب داج: سابغ غطى جسده كلّه. ودجا عليه ثوبه: سبغ. ودجا عليه شعره. وقيل لأعرابي: بم تعرف حمل شاتك. قال: إذا استفاضت خاصرتها ودجت شعرتها أي وفت فسترتها. وما كان ذلك مذ دجا الإسلام. وكان ذلك وثوب الإسلام داج. ودجا عليهم الأمن والخصب. وإنه لفي عيش داج. وأدجيت البيت: سدلت ستره. وفلان يداجيك: يساترك العدا",
-        "prototipe_benzerlik": 0.043,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثوب داج: سابغ غطى جسده كلّه. ودجا عليه ثوبه: سبغ. ودجا عليه شعره. وقيل لأعرابي: بم تعرف حمل شاتك. قال: إذا استفاضت خاصرتها ودجت شعرتها أي وفت فسترتها. وما كان ذلك مذ دجا الإسلام. وكان ذلك وثوب الإسلام داج. ودجا عليهم الأمن والخصب. وإنه لفي عيش داج. وأدجيت البيت: سدلت ستره. وفلان يداجيك: يساترك العداوة.",
+        "prototipe_benzerlik": 0.045,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.043,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.045,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

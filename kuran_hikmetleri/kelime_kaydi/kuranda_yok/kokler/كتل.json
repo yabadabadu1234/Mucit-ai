@@ -1829,29 +1829,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "يقال: مكتل تمر بمكتل برّ وهو الزّبيل. وأطعمه كتلةً من تمر. وكتّل الأقط: جعله كتلة كتلة. ك ت م ت كتمته السّر كتماً وكتماناً، وكتّمه: بالع في كتمه، وسرّ وحديث مكتّم، واستكتمته أمري، وهو كتّام وكتّامة للأسرار، وكاتمته العداوة: ساترته، وفلان لا يكتتم أي لا يكتم أم",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "يقال: مكتل تمر بمكتل برّ وهو الزّبيل. وأطعمه كتلةً من تمر. وكتّل الأقط: جعله كتلة كتلة.\nك ت م ت كتمته السّر كتماً وكتماناً، وكتّمه: بالع في كتمه، وسرّ وحديث مكتّم، واستكتمته أمري، وهو كتّام وكتّامة للأسرار، وكاتمته العداوة: ساترته، وفلان لا يكتتم أي لا يكتم أمره وسرّه، وهو ظهرة وليس بكتمة."
+      },
+      {
+        "kaynak": "Mekâyîs: كَتَلَ",
+        "metin": "(كَتَلَ) الْكَافُ وَالتَّاءُ وَاللَّامُ أُصَيْلٌ يَدُلُّ عَلَى تَجَمُّعٍ. يُقَالُ: هَذِهِ كُتْلَةٌ مِنْ شَيْءٍ، أَيْ قِطْعَةٌ مُجْتَمِعَةٌ. قَالَ ابْنُ دُرَيْدٍ يُقَالُ أَلْقَى فُلَانٌ عَلَيَّ كَتَالَهُ، أَيْ ثِقَلَهُ. وَذُكِرَ فِي شِعْرِ [ابْنِ] الطَّثْرِيَّةِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ناقة كتومٌ: لا ترغوا إذا ركبت.",
-        "prototipe_benzerlik": 0.327,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ناقة كتومٌ: لا ترغوا إذا ركبت.",
+        "prototipe_benzerlik": 0.292,
         "halka": "uzak"
       },
       {
-        "cumle": "كتوم الهواجر ما تنبس",
-        "prototipe_benzerlik": 0.325,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال:",
+        "prototipe_benzerlik": 0.526,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كتوم الهواجر ما تنبس",
+        "prototipe_benzerlik": 0.273,
         "halka": "uzak"
       },
       {
-        "cumle": "وكتوم ومكتام: لا تشول بذنبها وهي لاقح. وقوس كتوم: لا ترنّ. وسحاب مكتتم: لا رعد فيه ولا برق. ومزادة كتوم: ذهب مرحها وهو سيلان مائها عند التّسريب.",
-        "prototipe_benzerlik": 0.423,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الشماخ:",
+        "prototipe_benzerlik": 0.58,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قد تبطّنت بهلواعة ... عبر أسفار كتوم البغام",
+        "prototipe_benzerlik": 0.352,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكتوم ومكتام: لا تشول بذنبها وهي لاقح. وقوس كتوم: لا ترنّ. وسحاب مكتتم: لا رعد فيه ولا برق. ومزادة كتوم: ذهب مرحها وهو سيلان مائها عند التّسريب.",
+        "prototipe_benzerlik": 0.366,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.359,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.398,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["accumulate.v.02", "agglomeration.n.01", "molar.a.03"],
   "muhassas_tasnif": {

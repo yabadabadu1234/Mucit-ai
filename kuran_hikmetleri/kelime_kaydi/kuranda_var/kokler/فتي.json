@@ -873,8 +873,8 @@
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "adolescent.n.01",
-    "dayanak_tanim": "a juvenile between the onset of puberty and maturity",
+    "dayanak_synset": "girl.n.01",
+    "dayanak_tanim": "a young woman",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -888,36 +888,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هذا فتي بيّن الفتوة وهي الحرية والكرم. قال عبد الرحمن بن حسان: إن الفتى لفتى المكارم والعلى ... ليس الفتى بمغملج الصبيان وقال آخر: يا عزّ هل لك في شيخ فتًى أبداً ... وقد يكون شبابٌ غير فتيان وتقول العرب: فتًى من صفته كيت وكيت من غير تمييز بين الشيخ والشاب، وهذ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هذا فتي بيّن الفتوة وهي الحرية والكرم. قال عبد الرحمن بن حسان:\nإن الفتى لفتى المكارم والعلى ... ليس الفتى بمغملج الصبيان\nوقال آخر:\nيا عزّ هل لك في شيخ فتًى أبداً ... وقد يكون شبابٌ غير فتيان\nوتقول العرب: فتًى من صفته كيت وكيت من غير تمييز بين الشيخ والشاب، وهذا فتًى بيّن الفتاء وهو طراءة السنّ. قال:\nإذا عاش الفتى مائتين عاماً ... فقد ذهب البشاشة والفتاء\nوهذا ثور فتي وهذه بقرة فتية: بيّنا الفتاء. وهما فتاي وفتاتي أي غلامي وجاريتي، وسئل أبو يوسف عمن قال: أنا فتى فلانٍ فقال: هو إقرار منه بالرق. \" وقال لفتيته \" و\" لفتيانه \". قال قتادة: لغلمانه. وفتّيت بنت فلان: منعت من الخروج وسترت وهي صغيرة وألحقت بالفتيات، وتفتت هي. وأبرد من شيخ يتفتّى أي يتشبّه بالفتيان. وتقول: هؤلاء فتوٌّ ما فيهم فتوة وهو جمع: فتًى. قال:\nوفتوّ هجّروا ثم أروا ... ليلهم حتى إذا انجاب حلواً\nوفلان من أهل الفتوى والفتيا. وتعالوا ففاتونا. وتفاتوا إليه: تحاكموا. قال الطّرمّاح:\nهلمّ إلى قضاة الغوث فاسأل ... برهطك والبيان لدى القضاة\nأنخ بفناء أشدق من عديّ ... ومن جرمٍ وهم أهل التّفاتي\nوقال عمر بن أبي ربيعة:\nفبتّ أفاتيها فلا هي ترعوي ... بجود ولا تبدي إباءً فتبخلا\nأي أسائلها."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" لا أفعل ذلك ماكر الفتيان \". قال:",
-        "prototipe_benzerlik": 0.313,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" لا أفعل ذلك ماكر الفتيان \". قال:",
+        "prototipe_benzerlik": 0.253,
         "halka": "uzak"
       },
       {
-        "cumle": "وهذا كقلوهم: الجديدان. وتقول: بارك الله في فتوتك وفتائك، وأدام مادام الفتيان بركة إفتائك. وأقمت عنده فتًى من نهار أي صدرا منه. قال:",
-        "prototipe_benzerlik": 0.298,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غدا فتياً دهرٍ وراحا عليهم ... نهار وليل يلحقان التواليا",
+        "prototipe_benzerlik": 0.335,
         "halka": "uzak"
       },
       {
-        "cumle": "وشرب فلان بالفتيِّ وهو قدح الشطّار سمّي",
-        "prototipe_benzerlik": 0.221,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذا كقلوهم: الجديدان. وتقول: بارك الله في فتوتك وفتائك، وأدام مادام الفتيان بركة إفتائك. وأقمت عنده فتًى من نهار أي صدرا منه. قال:",
+        "prototipe_benzerlik": 0.241,
         "halka": "uzak"
       },
       {
-        "cumle": "لصغره، ويجوز أن يقال في الغمر: هو من الصبيّ الغمر. وأفتى الرجل: شرب به. وتقول: فلان يظل مفتياً، ويبيت مفتياً.",
-        "prototipe_benzerlik": 0.23,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فما لبثوا إلا فتًى من نهارهم ... مماصعةً حتى أبارهم القتل",
+        "prototipe_benzerlik": 0.084,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشرب فلان بالفتيِّ وهو قدح الشطّار سمّي",
+        "prototipe_benzerlik": 0.189,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لصغره، ويجوز أن يقال في الغمر: هو من الصبيّ الغمر. وأفتى الرجل: شرب به. وتقول: فلان يظل مفتياً، ويبيت مفتياً.",
+        "prototipe_benzerlik": 0.16,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.266,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.21,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["adult.n.01", "age_group.n.01", "female.n.02", "juvenile.n.01"],
+  "kolekzifikasyon_kavramlari": ["adult.n.01", "age_group.n.01", "juvenile.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النساء",

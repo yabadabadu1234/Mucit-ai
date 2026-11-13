@@ -1670,19 +1670,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نقّح العود: شذّبه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نقّح العود: شذّبه."
+      },
+      {
+        "kaynak": "Mekâyîs: نَقَحَ",
+        "metin": "(نَقَحَ) النُّونُ وَالْقَافُ وَالْحَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَنْحِيَتِكَ شَيْئًا عَنْ شَيْءٍ. وَنَقَّحْتُ الْعَصَا: شَذَّبْتُ عَنْهَا أُبَنَهَا. وَمِنْهُ شِعْرٌ مُنَقَّحٌ، أَيْ مُفَتَّشٌ مُلْقًى عَنْهُ مَا لَا يَصْلُحُ فِيهِ. وَنَقَحْتُ الْعَظْمَ: اسْتَخْرَجْتُ مُخَّهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نقّح الكلام. وخير الشعر الحوليّ المنقّح. وتقول: ما قرض الشعر المنقّح، إلا بالذّهن الملقّح. ورجل منقّح: مجرّبٌ. ونقّحته السنون: نالت منه. وتنقّح شحم النّاقة: ذهب بعض الذّهاب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نقّح الكلام. وخير الشعر الحوليّ المنقّح. وتقول: ما قرض الشعر المنقّح، إلا بالذّهن الملقّح. ورجل منقّح: مجرّبٌ. ونقّحته السنون: نالت منه. وتنقّح شحم النّاقة: ذهب بعض الذّهاب.",
         "prototipe_benzerlik": 0.268,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.268,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "correct.v.01", "edit.v.01", "polish.v.02", "refine.v.04", "review.v.01"],
   "muhassas_tasnif": {

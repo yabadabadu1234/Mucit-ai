@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بلد مرتٌ بيّن المروتة: قيٌّ لا نبات بها، وبلاد مروت. قال: مرت يناصي خرقها مروت ومرت الشيء يمرته: ملسه، ومنه: قول أعرابيّ من بني مازن حين سئل عن سقيهم الخيل اللبن فقال: إنما تسقى اللبن لأنه يطوي الأباطل ويحكم المنة ويعقد الحيل ويصمّل العضل ويشدّ البصر ويدجي الش",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بلد مرتٌ بيّن المروتة: قيٌّ لا نبات بها، وبلاد مروت. قال:\nمرت يناصي خرقها مروت\nومرت الشيء يمرته: ملسه، ومنه: قول أعرابيّ من بني مازن حين سئل عن سقيهم الخيل اللبن فقال: إنما تسقى اللبن لأنه يطوي الأباطل ويحكم المنة ويعقد الحيل ويصمّل العضل ويشدّ البصر ويدجي الشّعر ويمرت الجراهية ويحسّن السّحناء ويطرد الدّوى، الحيل: شدة الظهر، ولا يحل: ولا قوة، والجراهية: ظاهر الجلد."
+      },
+      {
+        "kaynak": "Mekâyîs: مَرَتَ",
+        "metin": "(مَرَتَ) الْمِيمُ وَالرَّاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، هِيَ الْمَرْتُ: الْفَلَاةُ الْقَفْرُ. وَمَكَانٌ مَرْتٌ: بَيِّنُ الْمُرُوتَةِ، إِذَا لَمْ يَكُنْ فِيهِ خَيْرٌ. وَجَمْعُ مَرْتٍ أَمْرَاتٌ وَمُرُوتٌ. وَبَلَغَنَا أَنَّ اشْتِقَاقَ مَارُوتَ مِنْهُ. وَيُقَالُ الْمَرْتُ: أَرْضٌ لَا يَجِفُّ ثَرَاهَا وَلَا يَنْبُتُ مَرْعَاهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل مرت الحاجبين ومرت الحسد: لا شعر عليه، وغلام مرت العذار: لم يختطّ.",
-        "prototipe_benzerlik": 0.253,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل مرت الحاجبين ومرت الحسد: لا شعر عليه، وغلام مرت العذار: لم يختطّ.",
+        "prototipe_benzerlik": 0.243,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.253,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.243,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

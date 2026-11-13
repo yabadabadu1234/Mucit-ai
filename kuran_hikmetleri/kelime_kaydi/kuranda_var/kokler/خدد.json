@@ -1506,11 +1506,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "cushion.n.03",
-    "dayanak_tanim": "a soft bag filled with air or a mass of padding such as feathers or foam rubber etc.",
+    "ince": "part.n.03",
+    "orta": "noun.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "cheek.n.01",
+    "dayanak_tanim": "either side of the face below the eyes",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1529,39 +1529,80 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الشق المستطيل الغائر في الشيء: كالجدول (1) ... الخ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الشق المستطيل الغائر في الشيء: كالجدول (1) ... الخ."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دخل عليه فأظهر له المودة، وألقى له المخدة، وطرحوا لهم النمارق والمخاد. وبعير مخدود: موسوم في خده، وبه خداد. وخد في الأرض. وفيها خدود وأخاديد وخد وأخدود."
+      },
+      {
+        "kaynak": "Mekâyîs: خَدَّ",
+        "metin": "(خَدَّ) الْخَاءُ وَالدَّالُ أَصْلٌ وَاحِدٌ، وَهُوَ تَأَسُّلُ الشَّيْءِ وَامْتِدَادُهُ إِلَى السُّفْلِ. فَمِنْ ذَلِكَ الْخَدِّ خَدُّ الْإِنْسَانِ، وَبِهِ سُمِّيَتِ الْمِخَدَّةُ. وَالْخَدُّ: الشَّقُّ. وَالْأَخَادِيدُ: الشُّقُوقُ فِي الْأَرْضِ. وَالتَّخَدُّدُ: تَخَدُّدُ اللَّحْمِ مِنَ الْهُزَالِ. وَامْرَأَةٌ مُتَخَدِّدَةٌ: مَهْزُولَةٌ. وَالْخِدَادُ: مِيسَمٌ مِنَ الْمَيَاسِمِ، وَلَعَلَّهُ يَكُونُ فِي الْخَدِّ ; يُقَالُ مِنْهُ بَعِيرٌ مَخْدُودٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ضربة أخدود: وتخدد لحمه من الهزال. وخدده سوء الحال. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضربة أخدود: وتخدد لحمه من الهزال. وخدده سوء الحال. قال:",
         "prototipe_benzerlik": 0.161,
         "halka": "uzak"
       },
       {
-        "cumle": "وأصلح خدود الهوادج وهي صفائح الخشب في جوانب الدفتين عن يمين وشمال. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أحرى قلائدها وخدد لحمها ... أن لا يذقن مع الشكائم عوداً",
+        "prototipe_benzerlik": 0.24,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأصلح خدود الهوادج وهي صفائح الخشب في جوانب الدفتين عن يمين وشمال. قال الراعي:",
         "prototipe_benzerlik": 0.483,
         "halka": "orta"
       },
       {
-        "cumle": "ومضى خد من الناس وجبهة، وقتلنا خدّاً فخدا أي طبقة وطائفة وناحية من الناس. قال الجعدي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "له ذئب جوف كأن خدودها ... خدود جياد أشرفت فوق مريد",
+        "prototipe_benzerlik": 0.348,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومضى خد من الناس وجبهة، وقتلنا خدّاً فخدا أي طبقة وطائفة وناحية من الناس. قال الجعدي:",
         "prototipe_benzerlik": 0.26,
         "halka": "uzak"
       },
       {
-        "cumle": "وعارضه خد من القف: جانب منه. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهبنا لكم فيها المئين وغادرت ... مغارتنا خداً من الناس عبلاً",
+        "prototipe_benzerlik": 0.272,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعارضه خد من القف: جانب منه. قال الراعي:",
         "prototipe_benzerlik": 0.384,
         "halka": "orta"
       },
       {
-        "cumle": "وخاده عارضه. وتخاد الرجلان في الخصومة وغيرها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غدا ومن عالج خد يعارضه ... عن الشمال وعن شرقيه كند",
+        "prototipe_benzerlik": 0.211,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخاده عارضه. وتخاد الرجلان في الخصومة وغيرها.",
         "prototipe_benzerlik": 0.2,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.298,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.284,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "body_part.n.01", "furrow.v.03"],
   "muhassas_tasnif": {

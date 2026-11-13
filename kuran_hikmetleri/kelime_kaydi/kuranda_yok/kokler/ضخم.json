@@ -1947,11 +1947,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "heavy.a.02",
+    "ince": "greater.a.01",
     "orta": "adj.all",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "heavy.a.02",
-    "dayanak_tanim": "unusually great in degree or quantity or number",
+    "dayanak_synset": "greater.a.01",
+    "dayanak_tanim": "greater in size or importance or degree",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1965,19 +1965,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جسم ضخم، وقد ضخُم ضِخَماً وضخامة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جسم ضخم، وقد ضخُم ضِخَماً وضخامة."
+      },
+      {
+        "kaynak": "Mekâyîs: ضَخُمَ",
+        "metin": "(ضَخُمَ) الضَّادُ وَالْخَاءُ وَالْمِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى عِظَمٍ فِي الشَّيْءِ. يُقَالُ: هَذَا ضَخْمٌ وَضُخَامٌ. وَيُقَالُ: إِنَّ الْأُضْخُومَةَ شَيْءٌ تُعَظِّمُ بِهِ الْمَرْأَةُ عَجِيزَتَهَا.\n[بَابُ الضَّادِ وَالرَّاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سيد ضخم، وله شأن ضخم، وسودد ضخم. وماء ضخم: ثقيل. وتقول: بلد نباته وخم، وماؤه ضخم. وقيل لبعضهم: إن لك لخبراً، فقال: أجل خبر ضخم العلق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سيد ضخم، وله شأن ضخم، وسودد ضخم. وماء ضخم: ثقيل. وتقول: بلد نباته وخم، وماؤه ضخم. وقيل لبعضهم: إن لك لخبراً، فقال: أجل خبر ضخم العلق.",
         "prototipe_benzerlik": 0.502,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.502,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "cover.v.03",

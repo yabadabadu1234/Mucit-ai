@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "به غرث وهو غرثان، وهي غرثى، وهم غراث وغرثى. وغرّثته: جوّعته. قال أبو داود: وبتنا نغرّثه في اللجام ... نريد به قنصاً أو غواراً",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "به غرث وهو غرثان، وهي غرثى، وهم غراث وغرثى. وغرّثته: جوّعته. قال أبو داود:\nوبتنا نغرّثه في اللجام ... نريد به قنصاً أو غواراً"
+      },
+      {
+        "kaynak": "Mekâyîs: غَرَثَ",
+        "metin": "(غَرَثَ) الْغَيْنُ وَالرَّاءُ وَالثَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى الْجُوعِ. وَالْغَرَثُ: الْجُوعُ. وَرَجُلٌ غَرْثَانُ. وَيَسْتَعِيرُونَ هَذَا فَيَقُولُونَ: جَارِيَةٌ غَرْثَى الْوِشَاحِ، لِأَنَّهَا دَقِيقَةُ الْخَصْرِ لَا يُمْلَأُ وِشَاحُهَا، وَكَأَنَّ وِشَاحَهَا غَرْثَانُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "امرأة غرثى الوشاح. وإني لغرثان إلى لقائك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "امرأة غرثى الوشاح. وإني لغرثان إلى لقائك.",
         "prototipe_benzerlik": 0.419,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.419,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

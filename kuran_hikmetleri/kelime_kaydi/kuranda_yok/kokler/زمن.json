@@ -1089,8 +1089,8 @@
     "ince": "fundamental_quantity.n.01",
     "orta": "noun.time",
     "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "long_time.n.01",
-    "dayanak_tanim": "a prolonged period of time",
+    "dayanak_synset": "time_period.n.01",
+    "dayanak_tanim": "an amount of time",
     "synset_sayisi": 12
   },
   "ses_mana_tasnif": {
@@ -1104,34 +1104,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خلا زمن فزمن، وخرجنا ذات الزمين. وأنشد أبو زيد لمعقل بن ريحان: فكأن دمعك إذ عرفت محلّها ... ذات الزمين فضا جمان مرسل الفضا: المتبدد. وأزمن الشيء: مضى عليه الزمان فهو مزمن. وأزمن الله فلاناً فهو زمن وزمين، وهم زمنة وزمني، وقد زمن زمناً وزمانة. وتقول معي نكايات ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خلا زمن فزمن، وخرجنا ذات الزمين. وأنشد أبو زيد لمعقل بن ريحان:\nفكأن دمعك إذ عرفت محلّها ... ذات الزمين فضا جمان مرسل\nالفضا: المتبدد. وأزمن الشيء: مضى عليه الزمان فهو مزمن. وأزمن الله فلاناً فهو زمن وزمين، وهم زمنة وزمني، وقد زمن زمناً وزمانة. وتقول معي نكايات الزمن، وشكايات الزمن."
+      },
+      {
+        "kaynak": "Mekâyîs: زَمِنَ",
+        "metin": "(زَمِنَ) الزَّاءُ وَالْمِيمُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى وَقْتٍ مِنَ الْوَقْتِ. مِنْ ذَلِكَ الزَّمَانِ، وَهُوَ الْحِينُ، قَلِيلُهُ وَكَثِيرُهُ. يُقَالُ زَمَانٌ وَزَمَنُ، وَالْجَمْعُ أَزْمَانٌ وَأَزْمِنَةٌ. قَالَ الشَّاعِرُ فِي الزَّمَنِ:\nوَكُنْتُ امْرَأً زَمَنًا بِالْعِرَاقِ ... عَفِيفَ الْمُنَاخِ طَوِيلَ التَّغَنْ\nوَقَالَ فِي الْأَزْمَانِ:\nأَزْمَانَ لَيْلَى عَامَ لَيْلَى وَحَمِي\nوَيَقُولُونَ: &quot; لَقِيتُهُ ذَاتَ الزُّمَيْنِ &quot; يُرَادُ بِذَلِكَ تَرَاخِي الْمُدَّةِ. فَأَمَّا الزَّمَانَةُ الَّتِي تُصِيبُ الْإِنْسَانَ فَتُقْعِدُهُ، فَالْأَصْلُ فِيهَا الضَّادُ، وَهِيَ الضَّمَانَةُ. وَقَدْ كُتِبَتْ بِقِيَاسِهَا فِي الضَّادِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أزمن عني عطاؤك: أبطأ عليّ. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أزمن عني عطاؤك: أبطأ عليّ. قال الكميت:",
         "prototipe_benzerlik": 0.805,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان فاتر النشاط زمن الرغبة.",
-        "prototipe_benzerlik": 0.114,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للنسوة العاطلات والصبية ال ... مزمن عنهم ما كان يكتسب",
+        "prototipe_benzerlik": 0.248,
         "halka": "uzak"
       },
       {
-        "cumle": "زنجر فلان لفلان إذا قرع بظفر إبهامه ظفر سبّابته، يريد ولا أعطيك مثل هذا.",
-        "prototipe_benzerlik": 0.193,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان فاتر النشاط زمن الرغبة.",
+        "prototipe_benzerlik": 0.171,
         "halka": "uzak"
       },
       {
-        "cumle": "تقول: طلبت العدل من سنجر، فما فوف ولا زنجر.",
-        "prototipe_benzerlik": 0.256,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ز ن ج ر",
+        "prototipe_benzerlik": 0.458,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زنجر فلان لفلان إذا قرع بظفر إبهامه ظفر سبّابته، يريد ولا أعطيك مثل هذا.",
+        "prototipe_benzerlik": 0.202,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأرسلت إلى سلمى ... بأن النفس مشغوفهْ",
+        "prototipe_benzerlik": 0.268,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فما جادت لنا سلمى ... بزنجير ولا فوفهْ",
+        "prototipe_benzerlik": 0.477,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقول: طلبت العدل من سنجر، فما فوف ولا زنجر.",
+        "prototipe_benzerlik": 0.26,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.342,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.361,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "agree.v.01",

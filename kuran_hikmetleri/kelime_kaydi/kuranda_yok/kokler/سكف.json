@@ -820,7 +820,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "part.n.02",
+    "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
     "dayanak_synset": "header.n.02",
@@ -838,19 +838,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو إسكاف من الأساكفة وهو الخزاز، وقيل: كل صانع. قال: وشعبتا ميس براها إسكاف وما وطئت أسكفة بابه، وما تسكفت بابه، ووالله لا أتسكف له بيتاً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو إسكاف من الأساكفة وهو الخزاز، وقيل: كل صانع. قال:\nوشعبتا ميس براها إسكاف\nوما وطئت أسكفة بابه، وما تسكفت بابه، ووالله لا أتسكف له بيتاً."
+      },
+      {
+        "kaynak": "Mekâyîs: سَكَفَ",
+        "metin": "(سَكَفَ) السِّينُ وَالْكَافُ وَالْفَاءُ لَيْسَ أَصْلًا، وَفِيهِ كَلِمَتَانِ: أَحَدُهُمَا أُسْكُفَّةُ الْبَابِ: الْعَتَبَةُ الَّتِي يُوطَأُ عَلَيْهَا. وَأُسْكُفُّ الْعَيْنِ، مُشَبَّهٌ بِأُسْكُفَّةِ الْبَابِ. وَأَمَّا الْإِسْكَافُ فَيُقَالُ إِنَّ كُلَّ صَانِعٍ إِسْكَافٌ عِنْدَ الْعَرَبِ. وَيُنْشَدُ قَوْلُ الشَّمَّاخِ:\nوَشُعْبَتَا مَيْسٍ بَرَاهَا إِسْكَافْ\nقَالُوا: أَرَادَ الْقَوَّاسَ.\n[بَابُ السِّينِ وَاللَّامِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وقفت الدمعة على أسكفة عينه أي على جفنها الأسفل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقفت الدمعة على أسكفة عينه أي على جفنها الأسفل.",
         "prototipe_benzerlik": 0.3,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.3,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1204,10 +1204,10 @@
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
     "ince": "injure.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "bruise.v.01",
-    "dayanak_tanim": "injure the underlying soft tissue or bone of",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "traumatize.v.01",
+    "dayanak_tanim": "inflict a trauma upon",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1221,19 +1221,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "كدمه: عضّه بأدنى الفم، وحمارٌ مكدّم: معضّض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كدمه: عضّه بأدنى الفم، وحمارٌ مكدّم: معضّض."
+      },
+      {
+        "kaynak": "Mekâyîs: كَدَمَ",
+        "metin": "(كَدَمَ) الْكَافُ وَالدَّالُ وَالْمِيمُ أَصْلٌ صَحِيحٌ فِيهِ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ كَدَمَ، إِذَا عَضَّ بِأَدْنَى فِيهِ، كَمَا يَكْدِمُ الْحِمَارُ. وَيُقَالُ أَيْضًا إِنَّ الْكَدَمَةَ: الْحَرَكَةُ. قَالَ:\nلِمَا تَمَشَّيْتُ بُعَيْدَ الْعَتَمَهْ ... سَمِعْتُ مِنْ فَوْقِ الْبُيُوتِ كَدَمَهْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قولهم للدوابّ إذا لم تستمكن من الحشيش: إنها لتكدم الحشيش. وبقيت من المرعى كدامة: بقيّة، ويقال: \" كدمت غير مكدم \" أي طلبت غير مطلب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم للدوابّ إذا لم تستمكن من الحشيش: إنها لتكدم الحشيش. وبقيت من المرعى كدامة: بقيّة، ويقال: \" كدمت غير مكدم \" أي طلبت غير مطلب.",
         "prototipe_benzerlik": 0.623,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.623,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["bruise.v.01", "happening.n.01", "hurt.v.05", "traumatize.v.01"],
   "muhassas_tasnif": {

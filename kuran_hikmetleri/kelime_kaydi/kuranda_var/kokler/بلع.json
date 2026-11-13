@@ -1823,24 +1823,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو: جذب الشيء إلى الجوف بقوة: كما وُصِف: {وَقِيلَ يَاأَرْضُ ابْلَعِي مَاءَكِ} [هود: 44]. ومنه: البُلَعَة - كهمزة: ثُقْب البَكَرة (الذي يَبْلَع المِحْوَر). والمَبْلَعُ والبُلْعُم والبُلْعوم - بالضم فيهما: مَجْرَى الطعام وموضعُ الابتلاع من الحلق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: جذب الشيء إلى الجوف بقوة: كما وُصِف: {وَقِيلَ يَاأَرْضُ ابْلَعِي مَاءَكِ} [هود: 44]. ومنه: البُلَعَة - كهمزة: ثُقْب البَكَرة (الذي يَبْلَع المِحْوَر). والمَبْلَعُ والبُلْعُم والبُلْعوم - بالضم فيهما: مَجْرَى الطعام وموضعُ الابتلاع من الحلق."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وهو واسع المبلع والبلعوم، وأعوذ بالله من قلة المطاعم، وسعة البلاعم. وفلان مبلع هبلع للأكول. وبلع الشيب في رأسه: ظهر وارتفع."
+      },
+      {
+        "kaynak": "Mekâyîs: بَلَعَ",
+        "metin": "(بَلَعَ) الْبَاءُ وَاللَّامُ وَالْعَيْنُ أَصْلٌ وَاحِدٌ، وَهُوَ ازْدِرَادُ الشَّيْءِ. تَقُولُ: بَلَعْتُ الشَّيْءَ أَبْلَعُهُ. وَالْبَالُوعُ مِنْ هَذَا لِأَنَّهُ يَبْلَعُ الْمَاءَ. وَسَعْدُ بُلَعَ نَجْمٌ. وَالْبُلَعُ السَّمُّ فِي قَامَةِ الْبَكْرَةِ. وَالْقِيَاسُ وَاحِدٌ، لِأَنَّهُ يَبْلَعُ الْخَشَبَةَ الَّتِي تَسْلُكُهُ. فَأَمَّا قَوْلُهُمْ بَلَّعَ الشَّيْبُ فِي رَأْسِهِ فَقَرِيبُ الْقِيَاسِ مِنْ هَذَا ; لِأَنَّهُ إِذَا شَمِلَ رَأْسَهُ فَكَأَنَّهُ قَدْ بَلِعَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أبلغني ريقي: أي أهلني حتى أقول أو أفعل: وقلت لبعض شيوخي: أبلغني ريقي فقال: قد أبلعتك الرافدين. وقدر بلوع: كبيرة تبلع ما يلقى فيها. قال ابن هرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبلغني ريقي: أي أهلني حتى أقول أو أفعل: وقلت لبعض شيوخي: أبلغني ريقي فقال: قد أبلعتك الرافدين. وقدر بلوع: كبيرة تبلع ما يلقى فيها. قال ابن هرمة:",
         "prototipe_benzerlik": 0.553,
         "halka": "yakın"
       },
       {
-        "cumle": "أجرب غطى الجرب جلده وذهب فيه كل مذهب، من خشف في الأرض إذا ذهب فيها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقرب طاهينا بلوعاً كأنها ... لدى الكسر مطلي المغابن أخشف",
+        "prototipe_benzerlik": 0.242,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أجرب غطى الجرب جلده وذهب فيه كل مذهب، من خشف في الأرض إذا ذهب فيها.",
         "prototipe_benzerlik": 0.265,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.409,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.353,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["bodily_process.n.01", "overwhelm.v.01", "swallow.v.01", "swallow.v.04"],
   "muhassas_tasnif": {

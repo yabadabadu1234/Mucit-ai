@@ -747,11 +747,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "property.n.02",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "ancestry.n.02",
-    "dayanak_tanim": "inherited properties shared with others of your bloodline",
+    "ince": "person.n.01",
+    "orta": "noun.person",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "offspring.n.01",
+    "dayanak_tanim": "the immediate descendants of a person",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -765,34 +765,54 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ذرّي الطعام بالمذراة. وله مذر ومنق. وذرت الريح التراب \" تذروه الرياح \". وأذرت العين دمعها، وعيناه تذريان الدموع. وطعنته فأذريته عن فرسه. وأذراه الفرس عن ظهره: رمى به. وضربته فأذريت رأسه. وذرا فوه. وذرا حدّ نابه إذا انسحقت أسنانه وسقطت أعاليها. وبلغني عنه ذرو ن",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ذرّي الطعام بالمذراة. وله مذر ومنق. وذرت الريح التراب \" تذروه الرياح \". وأذرت العين دمعها، وعيناه تذريان الدموع. وطعنته فأذريته عن فرسه. وأذراه الفرس عن ظهره: رمى به. وضربته فأذريت رأسه. وذرا فوه. وذرا حدّ نابه إذا انسحقت أسنانه وسقطت أعاليها. وبلغني عنه ذرو نم قول: طرف منه. وأخذ في ذرو من الحديث إذا عرّض ولم يصرح. قال صخر بن حبناء:\nأتاني عن مغيرة ذرو قول ... وعن عيسى فقلت له كذاكا\nواتخذت الحائط ذراً لي: أويت إليه. وتذريت من برد الشمال بصخرة ونحوها. والشّول إذا أحست بالبرد تذرت بالعضاه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو في ذروة النسب. وعلا ذروة الشرف. وبلغ الذرى. وأقبلت ذرى الليل: أوائله. قال زهير:",
-        "prototipe_benzerlik": 0.315,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "وفلان يُذري فلاناً: يمدحه ويرفع شأنه. وذرّيته وسنيّته. وقد تذرى السام وتفرّعه: إذا شرف وعلا وارتفع أمره. قال حميد:",
-        "prototipe_benzerlik": 0.804,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو في ذروة النسب. وعلا ذروة الشرف. وبلغ الذرى. وأقبلت ذرى الليل: أوائله. قال زهير:",
+        "prototipe_benzerlik": 0.544,
         "halka": "yakın"
       },
       {
-        "cumle": "وطالت ذروة فلان. وتذرّيت بني فلان. وتنصّيتهم وتفرّعتهم إذا تزوّجت في أشرافهم وعليتهم.",
-        "prototipe_benzerlik": 0.093,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "على عجل مني غشاشا وقد دنا ... ذرى الليل واحمرّ النهار وأدبرا",
+        "prototipe_benzerlik": 0.502,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان يُذري فلاناً: يمدحه ويرفع شأنه. وذرّيته وسنيّته. وقد تذرى السام وتفرّعه: إذا شرف وعلا وارتفع أمره. قال حميد:",
+        "prototipe_benzerlik": 0.839,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنا سيف العشيرة فاعرفوني ... حميداً قد تذريت السناما",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطالت ذروة فلان. وتذرّيت بني فلان. وتنصّيتهم وتفرّعتهم إذا تزوّجت في أشرافهم وعليتهم.",
+        "prototipe_benzerlik": 0.266,
         "halka": "uzak"
       },
       {
-        "cumle": "وجاء ينفض مذرويه: يختال، وهما فرعا الأليتين. ووقوس هنافة المذروين وهما موقعا الوتر من أعلا وأسفل. وأنا في ذرى فلان وفي أذرائه. واستذريت به وتذريت. وإنه لكريم الذرى، منيع الذرى.",
-        "prototipe_benzerlik": 0.102,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجاء ينفض مذرويه: يختال، وهما فرعا الأليتين. ووقوس هنافة المذروين وهما موقعا الوتر من أعلا وأسفل. وأنا في ذرى فلان وفي أذرائه. واستذريت به وتذريت. وإنه لكريم الذرى، منيع الذرى.",
+        "prototipe_benzerlik": 0.303,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.329,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.491,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["atomic.a.01", "heredity.n.02", "kin.n.02", "parentage.n.02", "relative.n.01"],
   "muhassas_tasnif": {

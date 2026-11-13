@@ -906,19 +906,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رنح فلان وترنح إذا دير به وتمايل كالأسن والسكران، ورنحه الشراب. قال: وكأس شربت على لذة ... دهاق ترنح من ذاقها وقال: ضرب إذا ما رنح الطرف اسمدر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رنح فلان وترنح إذا دير به وتمايل كالأسن والسكران، ورنحه الشراب. قال:\nوكأس شربت على لذة ... دهاق ترنح من ذاقها\nوقال:\nضرب إذا ما رنح الطرف اسمدر"
+      },
+      {
+        "kaynak": "Mekâyîs: رَنَحَ",
+        "metin": "(رَنَحَ) الرَّاءُ وَالنُّونُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى تَمَايُلٍ. يُقَالُ تَرَنَّحَ، إِذَا\nتَمَايَلَ كَمَا يَتَرَنَّحُ السَّكْرَانُ. وَيُقَالُ رُنِّحَ فُلَانٌ، إِذَا اعْتَرَاهُ وَهْنٌ فِي عِظَامِهِ، فَهُوَ مُرَنَّحٌ. قَالَ الطِّرِمَّاحُ:\nوَنَاصِرُكَ الْأَدْنَى عَلَيْهِ ظَعِينَةٌ ... تَمِيدُ إِذَا اسْتَعْبَرْتَ مَيْدَ الْمُرَنَّحِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رنحت الريح الغصن فترنح. واستجمر بالمرنح وهو الألوة ترنح برائحتها الذكية. ولقد ترنح عليّ فلان إذا مال عليك بالتطاول والترقّع. قال أبو الغريب البصريّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رنحت الريح الغصن فترنح. واستجمر بالمرنح وهو الألوة ترنح برائحتها الذكية. ولقد ترنح عليّ فلان إذا مال عليك بالتطاول والترقّع. قال أبو الغريب البصريّ:",
         "prototipe_benzerlik": 0.11,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ترنح بالكلام عليّ جهلاً ... كأنك ماجد من آل بدر وهو يترجّح بين أمرين ويترنح.",
+        "prototipe_benzerlik": 0.24,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.11,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.175,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "bumble.v.03",

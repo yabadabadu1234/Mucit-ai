@@ -1213,11 +1213,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.event",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "outbreak.n.01",
-    "dayanak_tanim": "a sudden violent spontaneous occurrence (usually of some undesirable condition)",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "arrow.n.02",
+    "dayanak_tanim": "a projectile with a straight thin shaft and an arrowhead on one end and stabilizing vanes on the other; intended to be shot from a bow",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1231,29 +1231,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نشب العظم في الحلق والصيد في الحبالة ومخالب الجارح في الأخيذة، وتنشّب. وأنشب فيه مخالبه. ورماه بنشّابة، وتراموا بالنّشّاب والنشاشيب. ومعهم ناشبة: رماة بالنشّاب. وبرد منشّب نحو: مسهّم وشيه يشبه أفاويق السهام. قال: لكلّ حال قد لبست أثوباً ... رياطه واليمنة المنش",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نشب العظم في الحلق والصيد في الحبالة ومخالب الجارح في الأخيذة، وتنشّب. وأنشب فيه مخالبه. ورماه بنشّابة، وتراموا بالنّشّاب والنشاشيب. ومعهم ناشبة: رماة بالنشّاب. وبرد منشّب نحو: مسهّم وشيه يشبه أفاويق السهام. قال:\nلكلّ حال قد لبست أثوباً ... رياطه واليمنة المنشّبا\nوقال كثير:\nهضيم الحشا رود المطا بختريّة ... جميل عليها الأتحميّ المنشّب\nوله نشبٌ: مال أصيل. وتقول: لكم نسب، وما لكم نشب، ما أنتم إلا خشب."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نشب الشرّ والحرب بينهم نشوباً. وناشب عدوّه مناشبةً. وما نشبت أقول ذاك، نحو: ما علقت، بمعنى: ما زلت. وما نشب أن قال كذا، ولم ينشب أن قال، بمعنى: ما لبث. ونشب فلان منشب سوء إذا وقع موقعاً لا يتخلّص منه. وسمعت الأمير الشريف:",
-        "prototipe_benzerlik": 0.975,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نشب الشرّ والحرب بينهم نشوباً. وناشب عدوّه مناشبةً. وما نشبت أقول ذاك، نحو: ما علقت، بمعنى: ما زلت. وما نشب أن قال كذا، ولم ينشب أن قال، بمعنى: ما لبث. ونشب فلان منشب سوء إذا وقع موقعاً لا يتخلّص منه. وسمعت الأمير الشريف:",
+        "prototipe_benzerlik": 0.777,
         "halka": "yakın"
       },
       {
-        "cumle": "قد نشبت رجل حيضيٍّ منشب",
-        "prototipe_benzerlik": 0.081,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قد نشبت رجل حيضيٍّ منشب",
+        "prototipe_benzerlik": 0.38,
+        "halka": "orta"
       },
       {
-        "cumle": "ورجل نشبة إذا نشب في أمرٍ لم يكد ينحلّ عنه وإن كان غيّاً. وتنشّب في قلبي حبها. قال عمر بن أبي ربيعة:",
-        "prototipe_benzerlik": 0.452,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل نشبة إذا نشب في أمرٍ لم يكد ينحلّ عنه وإن كان غيّاً. وتنشّب في قلبي حبها. قال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.593,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأرى القلب قد تنشب فيه ... حبٌّ هند فما يطيق نزوعاً",
+        "prototipe_benzerlik": 0.341,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.503,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.523,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "engage.v.07", "happening.n.01", "thrust.v.01"],
   "muhassas_tasnif": {

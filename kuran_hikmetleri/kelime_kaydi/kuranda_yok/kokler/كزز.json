@@ -944,29 +944,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شدة انقباض الشيء وتداخُل بعضه في بعض على اكتناز؛ فيصلب جدًّا (1) كالجمل والذهب وسائر المذكورات ... ومنه رجُل كَزٌّ: بخيل - كما يقال مُمسك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شدة انقباض الشيء وتداخُل بعضه في بعض على اكتناز؛ فيصلب جدًّا (1) كالجمل والذهب وسائر المذكورات ... ومنه رجُل كَزٌّ: بخيل - كما يقال مُمسك."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كزّت يده كزازة، ويدٌ كزّةٌ: منقبضة يابسة. وخشبة كزّة: صلبة عوجاء. وذهب كزٌ: يابس. وقوس كزّة: شديدة. وقسيّ كزّات. قال الجاحظ: إذا نزع فيها لم تستغرق السّهم. قال:\nلا كزّة السهم ولا قلوع ... يدرج تحت عجسها اليربوع\nأي هي فارج. وأخذه الكزاز من البرد وهو تقبض ورعدة وقيل: داء يرعد صاحبه حتى يموت، وفي كتاب الأزهريّ هو بالتشديد، والتخفيف عاميّ عن ابن الأعرابيّ. وكزّ الرجل فهو مكزوز، وقد كزّه البرد والداء."
+      },
+      {
+        "kaynak": "Mekâyîs: كَزَّ",
+        "metin": "(كَزَّ) الْكَافُ وَالزَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قَبْضٍ وَتَقَبُّضٍ. مِنْ ذَلِكَ الْكَزَازَةُ: الِانْقِبَاضُ وَالْيُبْسُ. رَجُلٌ كَزٌّ، أَيْ بَخِيلٌ. وَيُقَالُ: كَزَزْتُ الشَّيْءَ، إِذَا ضَيَّقْتَهُ، فَهُوَ مَكْزُوزٌ. وَالْكُزَازُ: دَاءٌ يَأْخُذُهُ مِنْ شِدَّةِ الْبَرْدِ. وَأَحْسَبُهُ مِنْ تَقَبُّضِ الْأَطْرَافِ. وَبَكَرَةٌ كَزَّةٌ، أَيْ قَصِيرَةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "كزّت المرأة دملجها: ملأته بعضها. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كزّت المرأة دملجها: ملأته بعضها. قال:",
         "prototipe_benzerlik": 0.49,
         "halka": "orta"
       },
       {
-        "cumle": "وكزّت خطاه: تقاربت. ورجل كزّ وكزّ اليدين: شحيح قليل المؤاتاة. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يا رب بيضاء تكز الدملجا ... تزوّجت شيخاً طويلاً كوسجا",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكزّت خطاه: تقاربت. ورجل كزّ وكزّ اليدين: شحيح قليل المؤاتاة. قال:",
         "prototipe_benzerlik": 0.739,
         "halka": "yakın"
       },
       {
-        "cumle": "وقد كزّت نفسه واكتزت. وتقول: فلان لا يكتزّ، ولكن يهتزّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يمارس نفساً بين جنبيه كزّةً ... إذا همّ بالمعروف قالت له مهلاً",
+        "prototipe_benzerlik": 0.561,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقد كزّت نفسه واكتزت. وتقول: فلان لا يكتزّ، ولكن يهتزّ.",
         "prototipe_benzerlik": 0.306,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.512,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.516,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1452,8 +1452,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "jump.n.05",
-    "dayanak_tanim": "descent with a parachute",
+    "dayanak_synset": "jump.n.06",
+    "dayanak_tanim": "the act of jumping; propelling yourself off the ground",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1467,19 +1467,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو فقّاز نقّاز. ويا ابن القفّازة وهي الأمة لقلة استقرارها. وخيلٌ قوافز. والدعاميص تتقافز على الماء. وتقافز الصبيان. وهم يلعبون القفّيزى: ينصبون خشبات يقفزون عليها. ولبس الصائد القفازين وتقفّز.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو فقّاز نقّاز. ويا ابن القفّازة وهي الأمة لقلة استقرارها. وخيلٌ قوافز. والدعاميص تتقافز على الماء. وتقافز الصبيان. وهم يلعبون القفّيزى: ينصبون خشبات يقفزون عليها. ولبس الصائد القفازين وتقفّز."
+      },
+      {
+        "kaynak": "Mekâyîs: قَفَزَ",
+        "metin": "(قَفَزَ) الْقَافُ وَالْفَاءُ وَالزَّاءُ أَصْلَانِ يَدُلُّ [أَحَدُهُمَا] عَلَى شُبَهِ الْوَثْبِ، وَالْآخَرُ عَلَى شَيْءٍ يُلْبَسُ.\nفَالْأَوَّلُ الْقَفَزَانُ: مَصْدَرُ قَفَزَ. وَيُقَالُ لِلضَّفَادِعِ: الْقَوَافِزُ. وَالْآخَرُ الْقُفَّازُ: وَهُوَ ضَرْبٌ مِنَ الْحُلِيِّ تَتَّخِذُهُ الْمَرْأَةُ فِي يَدَيْهَا وَرِجْلَيْهَا. وَيَقُولُونَ عَلَى التَّشْبِيهِ بِهَذَا: فَرَسٌ مُقَفَّزٌ، إِذَا اسْتَدَارَ تَحْجِيلُهُ بِقَوَائِمِهِ وَلَمْ يُجَاوِزِ الْأَشَاعِرَ نَحْوَ الْمُنَعَّلِ. فَأَمَّا الْقَفِيزُ فَمُعَرَّبٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قفز الرجل: مات. وتقفّزت المرأة بالحنّاء: تخضّبت إلى رسغيها. وفرس مقفّز: لم يجاوز تحجيله أشاعره وهو المنعل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قفز الرجل: مات. وتقفّزت المرأة بالحنّاء: تخضّبت إلى رسغيها. وفرس مقفّز: لم يجاوز تحجيله أشاعره وهو المنعل.",
         "prototipe_benzerlik": 0.294,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.294,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "control.v.02", "happening.n.01", "jump.v.01", "leap_out.v.01", "rise.v.11"],
   "muhassas_tasnif": {

@@ -696,7 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أصاب الدابة سنق: بشم. قال الأعشى:\nويأمر لليحوم كل عشية ... بقت وتعليق فقد كاد يسنق\nوقد سنقت."
+      },
+      {
+        "kaynak": "Mekâyîs: سَنِقَ",
+        "metin": "(سَنِقَ) السِّينُ وَالنُّونُ وَالْقَافُ فِيهِ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ السَّنَقُ، وَهُوَ كَالْبَشَمِ. يُقَالُ شَرِبَ الْفَصِيلُ حَتَّى سَنِقَ. وَكَذَلِكَ الْفَرَسُ، مِنَ الْعَلَفِ. وَهُوَ كَالتُّخَمِ فِي النَّاسِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أسنقه النعيم.",
+        "prototipe_benzerlik": 0.508,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.508,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

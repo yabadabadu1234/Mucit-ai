@@ -1344,29 +1344,68 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تجوف دقيق ممتد يكتنفه نتوء (يتكرر بانتظام) (1) كأنبوب القصبة والرمح مُكْتَنَفٌ بعُقَد من الناحيتين. والسطر من الشجر يتخلله فراغ بين الشجرة والأخرى. وأنبوب القرن فراغ ممتدّ تحته عقدة. والشرف من الأرض مرتفع (من جنس العقدة)، ورقّة مكوناته أي كونها ترابًا لا صخْرً",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "شرب من أنبوب الكوز. وله أنبوب من نخل وغيره: سطرٌ. قال:",
-        "prototipe_benzerlik": 0.409,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تجوف دقيق ممتد يكتنفه نتوء (يتكرر بانتظام) (1) كأنبوب القصبة والرمح مُكْتَنَفٌ بعُقَد من الناحيتين. والسطر من الشجر يتخلله فراغ بين الشجرة والأخرى. وأنبوب القرن فراغ ممتدّ تحته عقدة. والشرف من الأرض مرتفع (من جنس العقدة)، ورقّة مكوناته أي كونها ترابًا لا صخْرًا- هي من جنس الفراغ. هذا, وقولهم \"نبّ التيس ونبنب: صاح عند الهياج \"هو من المعنى لأنه رَفْع صوت بسب إحساس بفراغ أي حاجة إلى السفاد. وقولهم \"نبنب عمله: طَوَّله وأحسنه \"هو من انتظام الاقتران بين النتوء والفراغ كما في الأنبوب."
       },
       {
-        "cumle": "طرف نادر أطريقها بارد. وذهب في كل أنبوب: في كل طريقة، وتقول: إني أرى الشر قصب وشعّب، ونبّب وكعّب. وقال الشماخ:",
-        "prototipe_benzerlik": 0.39,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رمح مطّرد الأنابيب. وكعب الشجر ونبّب. ونبّ التيس نبيباً، وقال عمر رضي الله عنه لوفد أهل الكوفة حين شكوا سعداً: يكلّمني بعضكم ولا تنبّوا عندي نبيب التيوس."
       },
       {
-        "cumle": "جعل بغامها مزماراً حتى جعل له أنابيب وهو من لطيف المجاز. نبّ فلان نبيباً: طلب النّكاح، وقد أنبّه طول العزبة، ونبّب الرجل: حمحم عند الجماع.",
-        "prototipe_benzerlik": 0.29,
-        "halka": "uzak"
+        "kaynak": "Mekâyîs: نَبَّ",
+        "metin": "(نَبَّ) النُّونُ وَالْبَاءُ كَلِمَتَانِ. نَبَّ التَّيْسُ نَبِيبًا: صَوَّتَ عِنْدَ السِّفَادِ. وَالْأُنْبُوبُ: مَا بَيْنَ كُلِّ عُقْدَتَيْنِ مِنْ رُمْحٍ وَغَيْرِهِ."
       }
     ],
-    "ortalama_benzerlik": 0.363,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شرب من أنبوب الكوز. وله أنبوب من نخل وغيره: سطرٌ. قال:",
+        "prototipe_benzerlik": 0.595,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أو من مشعشعة ورهاء نشوتها ... أو من أنابيب رمّان وتفاح",
+        "prototipe_benzerlik": 0.579,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال مالك بن خالد الخناعيّ:",
+        "prototipe_benzerlik": 0.297,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في رأس شاهقة أنبوبها خصر ... دون السماء له في الجو قرناس",
+        "prototipe_benzerlik": 0.573,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طرف نادر أطريقها بارد. وذهب في كل أنبوب: في كل طريقة، وتقول: إني أرى الشر قصب وشعّب، ونبّب وكعّب. وقال الشماخ:",
+        "prototipe_benzerlik": 0.69,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يردّ أنابيب البغام جرانها ... كما ارتدّ في قوس السّراء زفيرها",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جعل بغامها مزماراً حتى جعل له أنابيب وهو من لطيف المجاز. نبّ فلان نبيباً: طلب النّكاح، وقد أنبّه طول العزبة، ونبّب الرجل: حمحم عند الجماع.",
+        "prototipe_benzerlik": 0.521,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.535,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["happening.n.01", "organization.n.01"],
   "muhassas_tasnif": {

@@ -1748,8 +1748,8 @@
     "ince": "collection.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "collection.n.01",
-    "dayanak_tanim": "several things grouped together or considered as a whole",
+    "dayanak_synset": "agglomeration.n.01",
+    "dayanak_tanim": "a jumbled collection or mass",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1763,39 +1763,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "له كدس من الطعام وأكداس. وقال المتلمس: لم تدر بصرى بما آليت من قسم ... ولا دمشق إذا ديس الكداديس أراد الأكداس وهو اسم جمع، وكدس الطعام فتكدّس.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له كدس من الطعام وأكداس. وقال المتلمس:\nلم تدر بصرى بما آليت من قسم ... ولا دمشق إذا ديس الكداديس\nأراد الأكداس وهو اسم جمع، وكدس الطعام فتكدّس."
+      },
+      {
+        "kaynak": "Mekâyîs: كَدَسَ",
+        "metin": "(كَدَسَ) الْكَافُ وَالدَّالُ وَالسِّينُ ثَلَاثُ كَلِمَاتٍ لَا يُشْبِهُ بَعْضُهَا بَعْضًا. فَالْأُولَى: كُدْسُ الطَّعَامِ. وَالثَّانِيَةُ التَّكَدُّسُ، وَهُوَ مَشْيُ الْفَرَسِ كَأَنَّهُ مُثْقَلٌ. قَالَ:\nوَخَيْلٍ تَكَدَّسُ بِالدَّارِعِينَ ... كَمَشْيِ الْوُعُولِ عَلَى الظَّاهِرِهْ\nوَالثَّالِثَةُ: الْكَوَادِسُ: مَا تَطَّيَّرَ مِنْهُ، كَالْفَأْلِ وَالْعُطَاسِ وَنَحْوِهِ. قَالَ:\nوَلَمْ تَحْبِسْكَ عَنِّي الْكَوَادِسُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عنده من الدراهم والثياب كدسٌ مكدّس وأكداس مكدّسة. ومررت بأكداس من التراب. وتكردست الخيل وتكدّست: اجتمعت وركب بعضها بعضاً في سيرها. قالت الخنساء:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عنده من الدراهم والثياب كدسٌ مكدّس وأكداس مكدّسة. ومررت بأكداس من التراب. وتكردست الخيل وتكدّست: اجتمعت وركب بعضها بعضاً في سيرها. قالت الخنساء:",
         "prototipe_benzerlik": 0.424,
         "halka": "orta"
       },
       {
-        "cumle": "وجاءت الخيل كراديس: كردوساً بعد كردوس وهو الجمع العظيم. وكردس القائد الخيل. ورجل ضخم الكراديس وهي رءوس المنكبين والركبتني والوركين والقطع العظام من اللحم. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخيل تكدّس مشي الوعو ... ل نازلت بالسيف أبطالها",
+        "prototipe_benzerlik": 0.241,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجاءت الخيل كراديس: كردوساً بعد كردوس وهو الجمع العظيم. وكردس القائد الخيل. ورجل ضخم الكراديس وهي رءوس المنكبين والركبتني والوركين والقطع العظام من اللحم. قال:",
         "prototipe_benzerlik": 0.409,
         "halka": "orta"
       },
       {
-        "cumle": "ضخم الكراديس إذا اللحم ذبل",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضخم الكراديس إذا اللحم ذبل",
         "prototipe_benzerlik": 0.508,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وفيما كتب إليّ الأمير الشريف أدام الله مجده:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفيما كتب إليّ الأمير الشريف أدام الله مجده:",
         "prototipe_benzerlik": 0.464,
         "halka": "orta"
       },
       {
-        "cumle": "وحبسته الكوادس: الطّير من العطاس والسعال ونحوه لأنها تكدس عندهم أي تصرع بشرمها. قال أبو ذؤيب:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقيك شذا الردى منّا نفوس ... تكدّس دون مغضبة الوليّ",
+        "prototipe_benzerlik": 0.485,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحبسته الكوادس: الطّير من العطاس والسعال ونحوه لأنها تكدس عندهم أي تصرع بشرمها. قال أبو ذؤيب:",
         "prototipe_benzerlik": 0.505,
-        "halka": "yakın"
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلو أنني كنت السليم لعدتني ... سريعاً ولم تحسبك عنّي الكوادس",
+        "prototipe_benzerlik": 0.415,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.462,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.431,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["accrue.v.01", "accumulate.v.02", "act.n.02", "agglomeration.n.01", "collection.n.01", "obstruct.v.02"],
   "muhassas_tasnif": {

@@ -37,24 +37,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ما رأينا بإبلك ذهنا يقيها السنة أي طرقاً وشحماً يقويها. وما برجلي ذهن: قوة على المشي. قال: أنوء برجل بها ذهنها ... وأعيت بها أختها العاثره واستذهنت السنة القصب: ذهبت بذهنها وهو نقيها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ما رأينا بإبلك ذهنا يقيها السنة أي طرقاً وشحماً يقويها. وما برجلي ذهن: قوة على المشي. قال:\nأنوء برجل بها ذهنها ... وأعيت بها أختها العاثره\nواستذهنت السنة القصب: ذهبت بذهنها وهو نقيها."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو من أهل الذهن والأذهان. وهو القوة في العقل والمسكة. واجعل ذهنك إلى ما أقول، وألق ذهنك. وقد ذهن ذهناً. وهو ذهن فطن زكن. وما يذهن فلان شيئاً: ما يعقله. قال الطرماح يصف واعظاً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو من أهل الذهن والأذهان. وهو القوة في العقل والمسكة. واجعل ذهنك إلى ما أقول، وألق ذهنك. وقد ذهن ذهناً. وهو ذهن فطن زكن. وما يذهن فلان شيئاً: ما يعقله. قال الطرماح يصف واعظاً:",
         "prototipe_benzerlik": 0.611,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان يذاهن الناس ويفاطنهم: يباريهم بفطنته، وقد ذاهنني فذهنته وهو مذهون. وقد ذهن: ذهب بذهنه. تقول: لقد غبنت وذهنت. واستذهنك حب الدنيا: ذهب بذهنك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأدلّ في عظة على ما لم يكن ... أبداً ليذهنه ذوو الأبصار",
+        "prototipe_benzerlik": 0.599,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان يذاهن الناس ويفاطنهم: يباريهم بفطنته، وقد ذاهنني فذهنته وهو مذهون. وقد ذهن: ذهب بذهنه. تقول: لقد غبنت وذهنت. واستذهنك حب الدنيا: ذهب بذهنك.",
         "prototipe_benzerlik": 0.754,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.682,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.654,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

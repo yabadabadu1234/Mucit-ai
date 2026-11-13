@@ -1546,19 +1546,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "كفن الميّت وكفّن فهو مكفون ومكفّن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كفن الميّت وكفّن فهو مكفون ومكفّن."
+      },
+      {
+        "kaynak": "Mekâyîs: كَفَنَ",
+        "metin": "(كَفَنَ) الْكَافُ وَالْفَاءُ وَالنُّونُ أَصْلٌ، فِيهِ الْكَفَنُ، وَهُوَ مَعْرُوفٌ. وَالْكَفْنُ: غَزْلُ الصُّوفِ. يُقَالُ كَفَنَ يَكْفُنُ. قَالَ الرَّاعِي:\nوَيَكْفُنُ الدَّهْرَ إِلَّا رَيْثَ يَهْتَبِدُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "كفّنت الجمر بالرّماد. وكفّنت الخبزة في الملة. وقال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كفّنت الجمر بالرّماد. وكفّنت الخبزة في الملة. وقال الطرماح:",
         "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهاجرة يا سلم كفّنت هامتي ... لها وفمي بالأتحميّ المسيّح",
+        "prototipe_benzerlik": 0.17,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.282,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.226,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

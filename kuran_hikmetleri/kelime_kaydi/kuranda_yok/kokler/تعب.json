@@ -1961,11 +1961,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "tense.v.04",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "tense.v.04",
-    "dayanak_tanim": "cause to be tense and uneasy or nervous or anxious",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "effort.n.02",
+    "dayanak_tanim": "use of physical or mental energy; hard work",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1979,24 +1979,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "استخراج المعمى متعبة للخواطر. وهذا أمر لو حمل المصاعب، للقيت منه المتاعب. وأتعب القوم: تعبت دوابهم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أمر تعب. وأتعب العظم: أعنت. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.518,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "استخراج المعمى متعبة للخواطر. وهذا أمر لو حمل المصاعب، للقيت منه المتاعب. وأتعب القوم: تعبت دوابهم."
       },
       {
-        "cumle": "وعظم متعب. وسمع بعض الفصحاء يقول لغلامه: أتعب العتاد وهاته أي املأ القدح الكبير إلى أصباره. وبنو فلان يشربون الماء المتعب، وهو المعتصر من الثرى.",
+        "kaynak": "Mekâyîs: تَعِبَ",
+        "metin": "(تَعِبَ) التَّاءُ وَالْعَيْنُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ الْإِعْيَاءُ حَتَّى يُقَالَ: تَعِبَ تَعَبًا، وَهُوَ تَعِبٌ، وَلَا يُقَالُ مَتْعُوبٌ. وَأَتْعَبْتُهُ أَنَا إِتْعَابًا. فَأَمَّا قَوْلُهُمْ أُتْعِبَ الْعَظْمُ، إِذَا هِيضَ بَعْدَ الْجَبْرِ، فَلَيْسَ بِأَصْلٍ، إِنَّمَا هُوَ مَقْلُوبٌ مِنْ أُعْتِبَ. وَقَدْ ذُكِرَ فِي بَابِهِ. قَالَ:\nإِذَا مَا رَآهَا رَأْيَةً هِيضَ قَلْبُهُ ... بِهَا كَانْهِيَاضِ الْمُتْعَبِ الْمُتَهَشِّمِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أمر تعب. وأتعب العظم: أعنت. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.518,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما رآها رأية هيض قلبه ... بها كانهياض المتعب المتهشم",
+        "prototipe_benzerlik": 0.257,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعظم متعب. وسمع بعض الفصحاء يقول لغلامه: أتعب العتاد وهاته أي املأ القدح الكبير إلى أصباره. وبنو فلان يشربون الماء المتعب، وهو المعتصر من الثرى.",
         "prototipe_benzerlik": 0.542,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.53,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.439,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "sample.v.01", "tense.v.04", "tire.v.02", "try.v.01", "try_on.v.01"],
   "muhassas_tasnif": {

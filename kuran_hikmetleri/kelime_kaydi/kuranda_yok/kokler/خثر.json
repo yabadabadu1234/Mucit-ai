@@ -1626,19 +1626,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لبن وطلاء خاثر، وفيه خثورة، وقد خَثَرَ وخَثِرَ وخَثُرَ، وأخثره وخثره، وذهب صفوه وبقيت خثارته أي عكارته ووسخه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لبن وطلاء خاثر، وفيه خثورة، وقد خَثَرَ وخَثِرَ وخَثُرَ، وأخثره وخثره، وذهب صفوه وبقيت خثارته أي عكارته ووسخه."
+      },
+      {
+        "kaynak": "Mekâyîs: خَثِرَ",
+        "metin": "(خَثِرَ) الْخَاءُ وَالثَّاءُ وَالرَّاءُ أَصْلٌ يَدُلُّ عَلَى غِلَظٍ فِي الشَّيْءِ مَعَ اسْتِرْخَاءٍ. يُقَالُ خَثِرَ اللَّبَنُ، وَهُوَ خَاثِرٌ. وَحَكَى بَعْضُهُمْ: خَثِرَ فُلَانٌ فِي الْحَيِّ، إِذَا أَقَامَ فَلَمْ يَكَدْ يَبْرَحُ. وَلَيْسَ هَذَا بِشَيْءٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خثرت نفسه: غثت، وهو خاثر النفس إذا لم تكن طيبة. وفي الحديث. \" فاستيقظ وهو خاثر وأخبر صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بموت الحسين \" وأجدني خاثراً: متكسراً فاتراً، وإنه لخاثر العظام. وخثر فلان في الحيّ: أقام فلم يبرح. ورأيت خاثرة من الناس أي جماعة كثيفة. وسأل معاوية يزيد من كان يؤنسك البارحة قال: خاثر",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خثرت نفسه: غثت، وهو خاثر النفس إذا لم تكن طيبة. وفي الحديث. \" فاستيقظ وهو خاثر وأخبر صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بموت الحسين \" وأجدني خاثراً: متكسراً فاتراً، وإنه لخاثر العظام. وخثر فلان في الحيّ: أقام فلم يبرح. ورأيت خاثرة من الناس أي جماعة كثيفة. وسأل معاوية يزيد من كان يؤنسك البارحة قال: خاثر. قال: فأخثر له العطاء.",
         "prototipe_benzerlik": 0.053,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.053,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["clot.v.01", "curdling.n.01", "freeze.v.04", "taxonomic_group.n.01"],
   "muhassas_tasnif": {

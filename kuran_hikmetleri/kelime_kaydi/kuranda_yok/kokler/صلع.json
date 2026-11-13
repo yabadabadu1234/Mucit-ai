@@ -755,39 +755,76 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رأس أصلع وصليع. قال عمرو ابن معد يكرب: وسوق كتيبة دلفت لأخرى ... كأن زهاءها رأس صليع هامة صلعاء، وهام صلع. وصكه على صلعته.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رأس أصلع وصليع. قال عمرو ابن معد يكرب:\nوسوق كتيبة دلفت لأخرى ... كأن زهاءها رأس صليع هامة صلعاء، وهام صلع. وصكه على صلعته."
+      },
+      {
+        "kaynak": "Mekâyîs: صَلَعَ",
+        "metin": "(صَلَعَ) الصَّادُ وَاللَّامُ وَالْعَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَلَاسَةٍ. مِنْ ذَلِكَ الصَّلَعُ فِي الرَّأْسِ، وَأَصْلُهُ مَأْخُوذٌ مِنَ الصُّلَّاعِ، وَهُوَ الْعَرِيضُ مِنَ الصَّخْرِ الْأَمْلَسُ، الْوَاحِدُ صُلَّاعَةٌ. وَجَبَلٌ [صَلِيعٌ] : أَمْلَسُ لَا يُنْبِتُ شَيْئًا. قَالَ عَمْرُو بْنُ مَعْدِ يَكْرِبَ:\n[وَزَحْفُ كَتِيبَةٍ لِلِقَاءِ أُخْرَى ... كَأَنَّ زَهَاءَهَا رَأْسٌ صَلِيعُ]\nوَيُقَالُ لِلْعُرْفُطَةِ إِذَا سَقَطَتْ رُءُوسُ أَغْصَانِهَا: صَلْعَاءُ. وَتُسَمَّى الدَّاهِيَةُ صَلْعَاءَ، أَيْ بَارِزَةً ظَاهِرَةً لَا يَخْفَى أَمْرُهَا. وَالصَّلْعَةُ: مَوْضِعُ الصَّلَعِ مِنَ الرَّأْسِ. وَالصَّلْعَاءُ مِنَ الرِّمَالِ: مَا لَا يُنْبِتُ شَيْئًا مِنْ نَجْمٍ وَلَا شَجَرٍ. وَيُقَالُ لِجِنْسٍ مِنَ الْحَيَّاتِ: الْأُصَيْلِعُ، وَهُوَ مِثْلُ الَّذِي جَاءَ فِي الْحَدِيثِ: «يَجِيءُ كَنْزُ أَحَدِهِمْ يَوْمَ الْقِيَامَةِ\nشُجَاعًا أَقْرَعَ» . وَيُرِيدُ بِذَلِكَ الَّذِي انْمَارَ شَعَرَ رَأْسِهِ، لِكَثْرَةِ سِمَنِهِ. قَالَ الشَّاعِرُ:\nقَرَى السُّمَّ حَتَّى انْمَارَ فَرْوَةُ رَأْسِهِ ... عَنِ الْعَظْمِ صِلٌّ فَاتِكُ اللَّسْعِ مَارِدُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نزلوا بالصلعاء: بالصحراء الخالية. قال عمارة بن عقيل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نزلوا بالصلعاء: بالصحراء الخالية. قال عمارة بن عقيل:",
         "prototipe_benzerlik": 0.855,
         "halka": "yakın"
       },
       {
-        "cumle": "ورملة صلعاء: بلا شجر. وشجرة صلعاء. قال الشماخ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ترى الضيف بالصلعاء تغسق عينه ... من الجوع حتى تحسب الضيف أرمداً",
+        "prototipe_benzerlik": 0.381,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورملة صلعاء: بلا شجر. وشجرة صلعاء. قال الشماخ:",
         "prototipe_benzerlik": 0.438,
         "halka": "orta"
       },
       {
-        "cumle": "أكلت أغصانها. وجاؤا بسوأة صلعاء: مكشوفة وحلت بهم صلعاء صيلم. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن تمس في عرفط صلع جماجمه ... من الأسالق عاري الشوك مجرود",
+        "prototipe_benzerlik": 0.618,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أكلت أغصانها. وجاؤا بسوأة صلعاء: مكشوفة وحلت بهم صلعاء صيلم. قال:",
         "prototipe_benzerlik": 0.559,
         "halka": "yakın"
       },
       {
-        "cumle": "ويوم أصلع: شديد الحر. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلما أحلوني بصلعاء صليم ... بإحدى زبى ذي اللبدتين أبي الشبل",
+        "prototipe_benzerlik": 0.609,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويوم أصلع: شديد الحر. قال:",
         "prototipe_benzerlik": 0.869,
         "halka": "yakın"
       },
       {
-        "cumle": "وصلعت الشمس: بزغت. وصلع رأسه: حلقه.",
-        "prototipe_benzerlik": 0.509,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يا قردة خشيت على أظفارها ... حر الظهيرة تحت يوم أصلع",
+        "prototipe_benzerlik": 0.58,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصلعت الشمس: بزغت. وصلع رأسه: حلقه.",
+        "prototipe_benzerlik": 0.509,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.646,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.602,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

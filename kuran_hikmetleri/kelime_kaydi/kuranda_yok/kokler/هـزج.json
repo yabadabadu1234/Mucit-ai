@@ -37,19 +37,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هزج المغنّى في غنائه والقارئ في قراءته إذا طرّبا في تدارك الصوت وتقاربه. وله هزجٌ مطّربٌ وأهازيج، كقولك: أغانيّ. قال الشمّاخ: يكلّفها أن لا يخفّض جأشها ... أهازيج ذبّانٍ على غصن عرفج الأتان تسكن إلى أغانيّ الذبّان فتقف عندها فلا يدعها العير ويطردها. ومغنٍّ هزج",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "سحاب هزجٌ بالرعد. وسمعت هزج الرعد والعود، وقد هزج وتهزّج. وتهزّجت القوس: أرنّت. وعودٌ هزجٌ، وللقوس أهازيج. قال الكميت يصف القوس:",
-        "prototipe_benzerlik": 0.488,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هزج المغنّى في غنائه والقارئ في قراءته إذا طرّبا في تدارك الصوت وتقاربه. وله هزجٌ مطّربٌ وأهازيج، كقولك: أغانيّ. قال الشمّاخ:\nيكلّفها أن لا يخفّض جأشها ... أهازيج ذبّانٍ على غصن عرفج\nالأتان تسكن إلى أغانيّ الذبّان فتقف عندها فلا يدعها العير ويطردها. ومغنٍّ هزجٌ. قال عنترة:\nوخلا الذباب بها فليس ببارح ... هزجاً كفعل الشارب المترنّم\nوهزذج صوته تهزيجاً: داركه وقاربه فتهزّج."
       }
     ],
-    "ortalama_benzerlik": 0.488,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سحاب هزجٌ بالرعد. وسمعت هزج الرعد والعود، وقد هزج وتهزّج. وتهزّجت القوس: أرنّت. وعودٌ هزجٌ، وللقوس أهازيج. قال الكميت يصف القوس:",
+        "prototipe_benzerlik": 0.522,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لم يعب ربّها ولا الناس منها ... غير إنذارها عليها الحميرا",
+        "prototipe_benzerlik": 0.525,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بأهازيج من أغانيّها الج ... شّ وإتباعها الحنين الزفيرا",
+        "prototipe_benzerlik": 0.747,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.598,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1786,8 +1786,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "deletion.n.04",
-    "dayanak_tanim": "the act of deleting something written or printed",
+    "dayanak_synset": "expunction.n.01",
+    "dayanak_tanim": "deletion by an act of expunging or erasing",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1801,24 +1801,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لها قد كالشطبة وهي اسعفة الخضراء. وأعطني شطبة من السنام ومن الأديم وهي قطعة تقطع طولاً، وشطبته: قطعته طولاً. وسيف مشطب وذو شطب وهي طرائقه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لها قد كالشطبة وهي اسعفة الخضراء. وأعطني شطبة من السنام ومن الأديم وهي قطعة تقطع طولاً، وشطبته: قطعته طولاً. وسيف مشطب وذو شطب وهي طرائقه."
+      },
+      {
+        "kaynak": "Mekâyîs: شَطَبَ",
+        "metin": "(شَطَبَ) الشِّينُ وَالطَّاءُ وَالْبَاءُ أَصْلٌ مُطَّرِدٌ وَاحِدٌ، يَدُلُّ عَلَى امْتِدَادٍ فِي شَيْءٍ رَخُصَ، ثُمَّ يُقَالُ فِي غَيْرِ ذَلِكَ. فَالشَّطْبَةُ: سَعَفَةُ النَّخْلِ الْخَضْرَاءِ، وَالْجَمْعُ شَطْبٌ. وَفِي حَدِيثِ أُمِّ زَرْعٍ: &quot; كَمَسَلِّ شَطْبَةٍ &quot;. وَيُقَالُ لِلْجَارِيَةِ\nالْغَضَّةِ شَطْبَةٌ. وَفَرَسٌ أَيْضًا شَطْبَةٌ. وَعَلَى ذَلِكَ الَّذِي ذَكَرْنَاهُ مِنْ سَعَفِ النَّخْلِ يُحْمَلُ الشَّطْبَةُ مِنْ شُطْبِ السَّيْفِ ; وَالشَّطْبَةُ: طَرِيقَةٌ فِي مَتْنِهِ، وَالْجَمْعُ شُطُبٌ. وَيُقَالُ سَيْفٌ مُشَطَّبٌ. وَيُقَالُ إِنَّ الشُّطْبَةَ أَوِ الشِّطْبَةَ الْقِطْعَةُ مِنَ السَّنَامِ تُقْطَعُ طُولًا، يُقَالُ شَطَبَتِ السَّنَامُ. وَالشَّوَاطِبُ مِنَ النِّسَاءِ: اللَّوَاتِي يَقْدُدْنَ الْأَدِيمَ طَوِيلًا. وَالشَّوَاطِبُ: اللَّاتِي يُشَقِّقْنَ السَّعَفَ لِلْحُصْرِ، فِي قَوْلِهِ:\nنَشْطَ الشَّوَاطِبِ بَيْنَهُنَّ حَصِيرَا\nوَقَالَ آخَرُ:\nتَرَى قِصَدَ الْمُرَّانِ تُلْقَى كَأَنَّهَا ... تَذَرُّعُ خِرْصَانٍ بِأَيْدِي الشَّوَاطِبِ\nوَالْوَاحِدَةُ شَاطِبَةٌ. وَيُقَالُ لِلْفَرَسِ السَّمِينِ الَّذِي انْبَتَرَ مَتْنَاهُ وَتَبَايَنَتْ غُرُورُهُ: هُوَ مَشْطُوبُ الْمَتْنِ وَالْكَفَلِ، وَذَلِكَ أَنَّهُ يَكُونُ عَلَى ظُهُورِهِ كَالطَّرَائِقِ، فَكُلُّ طَرِيقَةٍ مِنْهَا كَأَنَّهَا شَطْبَةٌ. وَيُقَالُ أَرْضٌ مُشَطَّبَةٌ، إِذَا خَطَّ فِيهَا السَّيْلُ خَطًّا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جارية شطبة، وغلام شطب إذا كانا تارّين. وقال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جارية شطبة، وغلام شطب إذا كانا تارّين. وقال ذو الرمة:",
         "prototipe_benzerlik": 0.415,
         "halka": "orta"
       },
       {
-        "cumle": "وأرض مشطبة: قد خط فيها السيل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بطعن كتضريم الحريق اختلاسه ... وضرب بشطبات صوافي روانق",
+        "prototipe_benzerlik": 0.304,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأرض مشطبة: قد خط فيها السيل.",
         "prototipe_benzerlik": 0.512,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.463,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.41,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "cross_off.v.01", "stroke.v.01"],
   "muhassas_tasnif": {

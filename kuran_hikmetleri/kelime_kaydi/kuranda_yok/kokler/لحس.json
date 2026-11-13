@@ -1151,11 +1151,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "talk.v.02",
-    "orta": "verb.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "talk.v.02",
-    "dayanak_tanim": "express in speech",
+    "ince": "solve.v.01",
+    "orta": "verb.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "solve.v.01",
+    "dayanak_tanim": "find the solution to (a problem or question) or understand the meaning of",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1169,24 +1169,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لحس الشيء بلسانه. وفي مثل \" أسرع من لحس الكلب أنفه \" ولحس الدود الصوف والجراد الخضر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لحس الشيء بلسانه. وفي مثل \" أسرع من لحس الكلب أنفه \" ولحس الدود الصوف والجراد الخضر."
+      },
+      {
+        "kaynak": "Mekâyîs: لَحَسَ",
+        "metin": "(لَحَسَ) اللَّامُ وَالْحَاءُ وَالسِّينُ كَلِمَةٌ تَدُلُّ عَلَى أَخْذِ شَيْءٍ بِاللِّسَانِ. يُقَالُ: لَحِسَ الشَّيْءَ بِلِسَانِهِ لَحْسًا. وَيَقُولُونَ: أَلْحَسَتِ الْأَرْضُ: أَنْبَتَتْ. وَهَذَا إِنَّمَا يَكُونُ فِي أَوَّلِ النَّبَاتِ الَّذِي لَا يُمْكِنُ السَّائِمَةَ جَزُّهُ، فَكَأَنَّهَا تَلْحَسُهُ. وَيَقُولُونَ: رَجُلٌ مِلْحَسٌ: يَأْخُذُ كُلَّ مَا قَدَرَ عَلَيْهِ مِنْ حِرْصِهِ. وَفِي كَلَامِهِمْ: &quot; أَلَدُّ أَلْيَسُ مِلْحَسٌ &quot;. وَيَقُولُونَ: &quot; أَسْرَعُ مِنْ لَحْسِ الْكَلْبِ أَنْفَهُ &quot;. وَيَقُولُونَ: &quot; تَرَكْتُ فُلَانًا بِمَلَاحِسِ الْبَقَرِ أَوْلَادَهَا &quot;."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" تركته بملاحس البقر أولاده \" إذا تركه بفلاة. ورجل ملحس: حريص يأخذ كلّ ما قدر عليه. وفلان أليس، ألدّ ملحس. وألحست الأرض: أنبتت ما تلحسه الدوابّ. وفلان لحوسٌ: يتتبّع الحلاوات كالذباب، وتقول: فلان لحوس، يحوس في المائدة ويحوس، وأخذتهم لواحس: سنون شداد، وسنة لاحسة: تلحس كلّ شيء من النبات. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" تركته بملاحس البقر أولاده \" إذا تركه بفلاة. ورجل ملحس: حريص يأخذ كلّ ما قدر عليه. وفلان أليس، ألدّ ملحس. وألحست الأرض: أنبتت ما تلحسه الدوابّ. وفلان لحوسٌ: يتتبّع الحلاوات كالذباب، وتقول: فلان لحوس، يحوس في المائدة ويحوس، وأخذتهم لواحس: سنون شداد، وسنة لاحسة: تلحس كلّ شيء من النبات. قال الكميت:",
         "prototipe_benzerlik": 0.285,
         "halka": "uzak"
       },
       {
-        "cumle": "والتحست منه حقّي: أخذته. ورجل لاحوس: مشئوم يلحس قومه، كقولهم: قاشور.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنت ربيع الناس وابن ربيعهم ... إذا لقيت فيها السنون اللواحس",
+        "prototipe_benzerlik": 0.446,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والتحست منه حقّي: أخذته. ورجل لاحوس: مشئوم يلحس قومه، كقولهم: قاشور.",
         "prototipe_benzerlik": 0.63,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.457,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.453,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["solve.v.01", "talk.v.02"],
   "muhassas_tasnif": {

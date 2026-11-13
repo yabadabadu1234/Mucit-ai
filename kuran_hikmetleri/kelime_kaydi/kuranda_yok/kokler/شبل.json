@@ -736,19 +736,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لبوة مشبل: معها أشبالها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لبوة مشبل: معها أشبالها."
+      },
+      {
+        "kaynak": "Mekâyîs: شَبَلَ",
+        "metin": "(شَبَلَ) الشِّينُ وَالْبَاءُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى عَطْفٍ وَوُدٍّ. يُقَالُ لِكُلِّ عَاطِفٍ عَلَى شَيْءٍ وَادٍّ لَهُ: مُشْبِلٌ. وَمِنْهُ اشْتِقَاقُ الشِّبْلِ، وَهُوَ وَلَدُ الْأَسَدِ ; لِعَطْفِ أَبَوَيْهِ عَلَيْهِ. وَيُقَالُ لَبُؤَةٌ مُشْبِلٌ، إِذَا كَانَ مَعَهَا أَوْلَادُهَا. وَأَشْبَلَتِ الْمَرْأَةُ، إِذَا صَبَرَتْ عَلَى أَوْلَادِهَا فَلَمْ تَتَزَوَّجْ. وَقَالَ الْكُمَيْتُ:\nالْمُلَبْلِبُ وَالْمُشْبِلُ\nوَحُكِيَ عَنِ الْكِسَائِيِّ: شَبَلْتُ فِي بَنِي فُلَانٍ، إِذَا نَشَأْتَ فِيهِمْ. وَقَدْ شَبَلَ الْغُلَامُ أَحْسَنَ الشُّبُولِ، إِذَا أَدْرَكَ. وَهَذَا عَلَى السَّعَةِ وَالْمَجَازِ ; لِأَنَّهُ يُشْبَلُ عَلَيْهِ، أَيْ يُعْطَفُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أشبلت فلانة بعد بعلها: صبرت على أولادها لم تتزوج، ومنه أشبلت عليه إذا عطفت، وتقول: هي في إشبالها، كاللّبوة على أشبالها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشبلت فلانة بعد بعلها: صبرت على أولادها لم تتزوج، ومنه أشبلت عليه إذا عطفت، وتقول: هي في إشبالها، كاللّبوة على أشبالها.",
         "prototipe_benzerlik": 0.492,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.492,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {

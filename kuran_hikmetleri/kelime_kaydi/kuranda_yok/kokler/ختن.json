@@ -1149,19 +1149,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ختن الصبي واختتن، وصبي مختون ومختتن، واختتن إبراهيم عليه السلام بقدوم من بلاد الشام، وهو خاتن القوم وحرفته الختانة، وكنا في ختان فلان وفي عذاره، وقد بريء ختانه وهو موضع القطع، ومنه \" إذا التقى الختانان \". وهذا ختن فلان لصهره وهو المتزوج إليه بنته أو أخته، أو أ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ختن الصبي واختتن، وصبي مختون ومختتن، واختتن إبراهيم عليه السلام بقدوم من بلاد الشام، وهو خاتن القوم وحرفته الختانة، وكنا في ختان فلان وفي عذاره، وقد بريء ختانه وهو موضع القطع، ومنه \" إذا التقى الختانان \". وهذا ختن فلان لصهره وهو المتزوج إليه بنته أو أخته، أو أبوا الصهر ختناه، وأقرباؤه أختانه وقالوا: الأختان من قبل المرأة، والأحماء من قبل الزوج. وخاتنه: صاهره."
+      },
+      {
+        "kaynak": "Mekâyîs: خَتَنَ",
+        "metin": "(خَتَنَ) الْخَاءُ وَالتَّاءُ وَالنُّونُ كَلِمَتَانِ: إِحْدَاهُمَا خَتْنُ الْغُلَامِ الَّذِي يُعْذَرُ. وَالْخِتَانُ: مَوْضِعُ الْقَطْعِ مِنَ الذَّكَرِ.\nوَالْكَلِمَةُ الْأُخْرَى الْخَتَنُ، وَهُوَ الصِّهْرُ، وَهُوَ الَّذِي يَتَزَوَّجُ فِي الْقَوْمِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عام مختون: للمجدب، كما قيل: عام أغرزل وأقلف: للمخصب.",
-        "prototipe_benzerlik": 0.515,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عام مختون: للمجدب، كما قيل: عام أغرزل وأقلف: للمخصب.",
+        "prototipe_benzerlik": 0.641,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.515,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.641,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

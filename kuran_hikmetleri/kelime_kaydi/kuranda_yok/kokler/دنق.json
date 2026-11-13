@@ -727,44 +727,88 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "الحسن \" لا تدنقوا فيدنق عليكم \" وكان رحمه الله تعالى يقول: \" لعن الله الدانق وأول من أحدث الدانق \" وأراد الحجاج أي لا تضيقوا في النفقة. والمدنق: المستقصي. وتقول: المروءة في ذرى نيق، من أهل الدوانيق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الحسن \" لا تدنقوا فيدنق عليكم \" وكان رحمه الله تعالى يقول: \" لعن الله الدانق وأول من أحدث الدانق \" وأراد الحجاج أي لا تضيقوا في النفقة. والمدنق: المستقصي. وتقول: المروءة في ذرى نيق، من أهل الدوانيق."
+      },
+      {
+        "kaynak": "Mekâyîs: دَنَقَ",
+        "metin": "(دَنَقَ) الدَّالُ وَالنُّونُ وَالْقَافُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ. يُقَالُ دَنَقَ وَجْهُ الرَّجُلِ، إِذَا اصْفَرَّ مِنَ الْمَرَضِ. وَدَنَّقَتِ الشَّمْسُ، إِذَا دَانَتِ الْغُرُوبَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دنق فلان يدنق ويدنق دنوقاً إذا أسف لدقائق الأمور. ورجل دانق، وهو من أهل الدانق. ودنقت الشمس: قلّ ما بينها وبين الغروب. ودنق للموت: دنا منه. ودنقت عينه: غارت.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دنق فلان يدنق ويدنق دنوقاً إذا أسف لدقائق الأمور. ورجل دانق، وهو من أهل الدانق. ودنقت الشمس: قلّ ما بينها وبين الغروب. ودنق للموت: دنا منه. ودنقت عينه: غارت.",
         "prototipe_benzerlik": 0.396,
         "halka": "orta"
       },
       {
-        "cumle": "ودنا منه وإليه وله، ودنا دنوة، وأدناه. ودخلت على الأمير فحب بي وأدنى مجلسي. وأدنت المرأة ثوبها. ودنّته \" يدنين عليهن من جلابيبهن \"",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د ن",
+        "prototipe_benzerlik": 0.499,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ودنا منه وإليه وله، ودنا دنوة، وأدناه. ودخلت على الأمير فحب بي وأدنى مجلسي. وأدنت المرأة ثوبها. ودنّته \" يدنين عليهن من جلابيبهن \"",
         "prototipe_benzerlik": 0.279,
         "halka": "uzak"
       },
       {
-        "cumle": "واستدناه وداناه، وتدانوا، وبينهم تقارب وتدان، ودانيت بين الشيئين: قاربت بينهما، وهو يتدنّى: يدنو قليلاً قليلاً. وأدنت الفرس فهي مدن: دنا نتاجها. وهو ابن عمي دنياً ولحاً. وبعيد يدني خير من قريب يبتعد. وهم أدانيه، وعشيرته الأدنون. \" وإذا أكلتم فدنّوا \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.753,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأن ثوباً لما التقى الركب تد ... نيه عليها يشف عن قمر",
+        "prototipe_benzerlik": 0.202,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واستدناه وداناه، وتدانوا، وبينهم تقارب وتدان، ودانيت بين الشيئين: قاربت بينهما، وهو يتدنّى: يدنو قليلاً قليلاً. وأدنت الفرس فهي مدن: دنا نتاجها. وهو ابن عمي دنياً ولحاً. وبعيد يدني خير من قريب يبتعد. وهم أدانيه، وعشيرته الأدنون. \" وإذا أكلتم فدنّوا \".",
         "prototipe_benzerlik": 0.411,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: دانى له القيد ساقيه. قال ذو الرمة يصف جملاً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: دانى له القيد ساقيه. قال ذو الرمة يصف جملاً:",
         "prototipe_benzerlik": 0.714,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان في دنيا دانية ناعمة: يأخذ ما يريد من قرب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دانى له القيد في ديمومة قذف ... قينيه وانحسرت عنه الأناعيم",
+        "prototipe_benzerlik": 0.843,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان في دنيا دانية ناعمة: يأخذ ما يريد من قرب.",
         "prototipe_benzerlik": 0.237,
         "halka": "uzak"
       },
       {
-        "cumle": "دهديت الحجر فتدهدى. وكأنه دهديّة الجعل ودحروجته.",
-        "prototipe_benzerlik": 0.508,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د هـ د ي",
+        "prototipe_benzerlik": 0.586,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دهديت الحجر فتدهدى. وكأنه دهديّة الجعل ودحروجته.",
+        "prototipe_benzerlik": 0.508,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.424,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.493,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

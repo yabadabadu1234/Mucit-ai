@@ -1204,19 +1204,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عنده زبل من التمر وزنابيل. وزبلت الأرض: سمدتها أزبلها بالكسر. واجتمع له زبل كثير. والدنيا كالمزبلة، والذين اطمأنوا إلها كلاب المزابل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عنده زبل من التمر وزنابيل. وزبلت الأرض: سمدتها أزبلها بالكسر. واجتمع له زبل كثير. والدنيا كالمزبلة، والذين اطمأنوا إلها كلاب المزابل."
+      },
+      {
+        "kaynak": "Mekâyîs: زَبُلَ",
+        "metin": "(زَبُلَ) الزَّاءُ وَالْبَاءُ وَاللَّامُ كَلِمَةٌ وَاحِدَةٌ. يَقُولُونَ: مَا أَصَبْتُ مِنْ فُلَانٍ زُِبَالًا، قَالُوا: هُوَ الَّذِي تَحْمِلُهُ النَّمْلَةُ بِفِيهَا. وَلَيْسَ لَهَا اشْتِقَاقٌ. وَذَكَرَ نَاسٌ إِنْ كَانَ صَحِيحًا: مَا فِي الْإِنَاءِ زُبَالَةٌ، إِذَا لَمْ يَكُنْ فِيهِ شَيْءٌ. وَأَمَّا قَوْلُهُمْ زَبَلْتَ الزَّرْعَ، إِذَا سَمَّدْتَهُ بِالزِّبْلِ، فَإِنْ كَانَ صَحِيحًا فَهُوَ مِنَ الْبَابِ أَيْضًا، لِأَنَّ الزِّبْلَ مِنَ السَّاقِطِ الَّذِي لَا يُعْتَدُّ بِهِ.\n= وَحُكِيَ أَنَّ الزَّأْبَلَ: الرَّجُلُ الْقَصِيرُ. وَيُنْشِدُونَ:\nحَزَنْبَلُ الْخُصْيَيْنِ فَدْمٌ زَأْبَلُ\nوَهَذَا وَشِبْهُهُ مِمَّا لَا يُعَرَّجُ عَلَيْهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ما قطعت له قبالا، ولا رزأته زبالا أي أدنى شيء وأصله ما تحمله النملة بفيها. قال ابن أحمر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما قطعت له قبالا، ولا رزأته زبالا أي أدنى شيء وأصله ما تحمله النملة بفيها. قال ابن أحمر:",
         "prototipe_benzerlik": 0.098,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كريم النجار حمى ظهره ... فلم يرتزيء بركوب زبالا",
+        "prototipe_benzerlik": 0.185,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.098,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.141,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["substance.n.01"],
   "muhassas_tasnif": {

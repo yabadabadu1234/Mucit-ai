@@ -758,7 +758,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "plaster.n.01",
@@ -776,21 +776,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل أملط: أجرد لا شعر على جسده إلا شعر الرأس واللحية. وكان الأحنف أملط. وخذا يا بني ملاطه: بعضديه. وبنى الحائط باللبن والملاط وهو الطين بين الساقين. وملطه البناء وملّطه. وأملطت المرأة: أملصت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل أملط: أجرد لا شعر على جسده إلا شعر الرأس واللحية. وكان الأحنف أملط. وخذا يا بني ملاطه: بعضديه. وبنى الحائط باللبن والملاط وهو الطين بين الساقين. وملطه البناء وملّطه. وأملطت المرأة: أملصت."
+      },
+      {
+        "kaynak": "Mekâyîs: مَلَطَ",
+        "metin": "(مَلَطَ) الْمِيمُ وَاللَّامُ وَالطَّاءُ أُصَيْلٌ يَدُلُّ عَلَى تَسْوِيَةِ شَيْءٍ وَتَسْطِيحِهِ.\nوَمَلَّطْتُ الْحَائِطَ بِالْمِلَاطِ أُمَلِّطُهُ تَمْلِيطًا: طَيَّنْتُهُ وَسَوَّيْتُهُ وَالْمِلَاطَانِ: الْجَنْبَانِ، كَأَنَّهُمَا مُلِطَا مَلْطًا. وَابْنَا مِلَاطٍ: الْعَضُدَانِ. وَالْأَمْلَطُ: الَّذِي لَا شَعَْرَ عَلَيْهِ. وَيُقَاسُ عَلَى هَذَا فَيُقَالُ لِلرَّجُلِ الْقَلِيلِ الْخَيْرِ الْمُتَمَرِّدِ: مِلْطٌ. قَالَ أَبُو بَكْرٍ: وَكُلُّ شَيْءٍ مَلَّطْتَهُ فَهُوَ مِلَاطٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أن يقول الشاعر مصراعاً ويقول لآخر: أملط أي أجر المصراع الثاني. ومالطه، وبينهما ممالطة وهو من إملاط الحامل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أن يقول الشاعر مصراعاً ويقول لآخر: أملط أي أجر المصراع الثاني. ومالطه، وبينهما ممالطة وهو من إملاط الحامل.",
         "prototipe_benzerlik": 0.571,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.571,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
+  "kolekzifikasyon_kavramlari": ["substance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأضداد",

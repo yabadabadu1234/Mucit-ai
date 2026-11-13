@@ -1183,29 +1183,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ثوب رحيض: غسيل، ورحض ثوبه في المرحاض وهو ما يرحض فيه من طست أو إجّانة. ويقال للخشبة التي يضرب بها الغسال: مرحاض. وتوضأ بالمرحضة وهي الميضأة لأنه يرحض بها أعضاءه، وتقول جاء بالمحرضة، مع المرحضة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب رحيض: غسيل، ورحض ثوبه في المرحاض وهو ما يرحض فيه من طست أو إجّانة. ويقال للخشبة التي يضرب بها الغسال: مرحاض. وتوضأ بالمرحضة وهي الميضأة لأنه يرحض بها أعضاءه، وتقول جاء بالمحرضة، مع المرحضة."
+      },
+      {
+        "kaynak": "Mekâyîs: رَحَضَ",
+        "metin": "(رَحَضَ) الرَّاءُ وَالْحَاءُ وَالضَّادُ أَصْلٌ يَدُلُّ عَلَى غَسْلِ الشَّيْءِ. يُقَالُ رَحَضْتُ الثَّوْبَ، إِذَا غَسَلْتَهُ. قَالَ:\nمَهَامِهُ أَشْبَاهٌ كَأَنَّ سَرَابَهَا ... مُلَاءٌ بِأَيْدِي الْغَاسِلَاتِ رَحِيضُ\nوَيُقَالُ لِلْمُغْتَسَلِ الْمِرْحَاضُ. فَأَمَّا عَرَقُ الْحُمَّى فَإِنَّهُ يُسَمَّى الرُّحَضَاءَ; وَهُوَ ذَاكَ الْقِيَاسُ، كَأَنَّهَا رَحَضَتِ الْجِسْمَ، أَيْ غَسَلَتْهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "والكناية: هذه سوأة لا ترحضها عنك. ورحض المحموم: أخذته رحضاء الحمّى وهي عرقها كأنها ترحضه، ألا ترى إلى قوله:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والكناية: هذه سوأة لا ترحضها عنك. ورحض المحموم: أخذته رحضاء الحمّى وهي عرقها كأنها ترحضه، ألا ترى إلى قوله:",
         "prototipe_benzerlik": 0.793,
         "halka": "yakın"
       },
       {
-        "cumle": "إذا ما فارقتني غسّلتني",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما فارقتني غسّلتني",
         "prototipe_benzerlik": 0.18,
         "halka": "uzak"
       },
       {
-        "cumle": "وتقول: إذا سالت الرحضاء، زالت العرواء. وذهب إلى المرحاض وهي المخرج وفي الحديث \" وجدنا مراحيضهم قد استقبل بها القبلة \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول: إذا سالت الرحضاء، زالت العرواء. وذهب إلى المرحاض وهي المخرج وفي الحديث \" وجدنا مراحيضهم قد استقبل بها القبلة \".",
         "prototipe_benzerlik": 0.601,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.525,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

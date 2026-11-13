@@ -1255,11 +1255,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.event",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "failure.n.02",
-    "dayanak_tanim": "an event that does not accomplish its intended purpose",
+    "ince": "fail.v.02",
+    "orta": "verb.social",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "fail.v.02",
+    "dayanak_tanim": "be unsuccessful",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1278,19 +1278,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "خُلُوّ حَوْزة الشيء من (طَيّب) يُتَوَقَّع أو يُطْلبُ أن يشغَلها. كالأرض التي لم تُمْطَر (دون ما حولها) وكخُلُو جَوف الجائع وحَوْزة الفقير. ومنه \"القِدْحُ الأَخْيبُ هو السهمُ الخائب الذي لا نَصيبَ له بين قِداح الميسر. والخَيْبة: الحرمان والخسران. وخاب يخيب: حُر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "خُلُوّ حَوْزة الشيء من (طَيّب) يُتَوَقَّع أو يُطْلبُ أن يشغَلها. كالأرض التي لم تُمْطَر (دون ما حولها) وكخُلُو جَوف الجائع وحَوْزة الفقير. ومنه \"القِدْحُ الأَخْيبُ هو السهمُ الخائب الذي لا نَصيبَ له بين قِداح الميسر. والخَيْبة: الحرمان والخسران. وخاب يخيب: حُرِم ولم يَنَلْ ما طَلَب. {وَقَدْ خَابَ مَنِ افْتَرَى} [طه: 61]،، {وَقَدْ خَابَ مَنْ دَسَّاهَا}، {أَوْ يَكْبِتَهُمْ فَيَنْقَلِبُوا خَائِبِينَ} [آل عمران: 127] وكل ما في القرآن من التركيب فهو من الخيبة بهذا المعنى. (1/520)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خاب الرجل. وخيّبه الله، وخاب سعيه وأمله، \" والهيبة خيبة \" ومن هاب خاب، ومن جسر أسر."
+      },
+      {
+        "kaynak": "Mekâyîs: خَيَبَ",
+        "metin": "(خَيَبَ) الْخَاءُ وَالْيَاءُ وَالْبَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى عَدَمِ فَائِدَةٍ وَحِرْمَانٍ. وَالْأَصْلُ قَوْلُهُمْ لِلْقِدْحِ الَّذِي لَا يُورِي: هُوَ خَيَّابٌ. ثُمَّ قَالُوا: سَعَى فِي أَمْرٍ فَخَابَ، وَذَلِكَ إِذَا حُرِمَ فَلَمْ يُفِدْ خَيْرًا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "\" وقعوا في وادي تخيب \". وسعى فلان في خبّاب بن هيّاب. وقدح خيّاب: لا يورِي.",
-        "prototipe_benzerlik": 0.506,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" وقعوا في وادي تخيب \". وسعى فلان في خبّاب بن هيّاب. وقدح خيّاب: لا يورِي.",
+        "prototipe_benzerlik": 0.551,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.506,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.551,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["fail.v.02", "happening.n.01", "misrepresent.v.01"],
   "muhassas_tasnif": {

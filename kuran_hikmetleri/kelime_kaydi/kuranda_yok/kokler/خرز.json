@@ -1280,29 +1280,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عمله الخرازة. وكلام فلان كخرز الإماء أي متفاوت، درة وودعة. ووال بين الخرز. وطائر مخرز: على جناحيه نمنمة تشبه بالخرز.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عمله الخرازة. وكلام فلان كخرز الإماء أي متفاوت، درة وودعة. ووال بين الخرز. وطائر مخرز: على جناحيه نمنمة تشبه بالخرز."
+      },
+      {
+        "kaynak": "Mekâyîs: خَرَزَ",
+        "metin": "(خَرَزَ) الْخَاءُ وَالرَّاءُ وَالزَّاءُ يَدُلُّ عَلَى جَمْعِ الشَّيْءِ إِلَى الشَّيْءِ وَضَمِّهِ إِلَيْهِ. فَمِنْهُ خَرْزُ الْجِلْدِ. وَمِنْهُ الْخَرَزُ، وَهُوَ مَعْرُوفٌ، لِأَنَّهُ يُنْظَمُ وَيُنْضَدُ بَعْضُهُ إِلَى بَعْضٍ.\nوَفَقَارُ الظَّهْرِ خَرَزٌ لِانْتِظَامِهِ، وَخَرَزَاتُ الْمَلِكِ، كَانَ الْمَلِكُ مِنْهُمْ كُلَّمَا مَلَكَ عَامًا زِيدَتْ فِي تَاجِهِ خَرَزَةٌ ; لِيُعْلَمَ بِذَلِكَ عَدَدُ سِنِي مُلْكِهِ. قَالَ:\nرَعَى خَرَزَاتِ الْمُلْكِ عِشْرِينَ حِجَّةً ... وَعِشْرِينَ حَتَّى فَادَ وَالشَّيْبُ شَامِلُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أوتي خرزات الملك إذا ملك. قال لبيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أوتي خرزات الملك إذا ملك. قال لبيد:",
         "prototipe_benzerlik": 0.534,
         "halka": "yakın"
       },
       {
-        "cumle": "وضربه على خرز ظهره وهي فقاره: وفي مثل \"",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعى خرزات الملك ستين حجة ... وعشرين حتى فاد والشيب شامل",
+        "prototipe_benzerlik": 0.196,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لن تدركا خرزات أر ... بد فابكيا حتى تفودا",
+        "prototipe_benzerlik": 0.535,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وضربه على خرز ظهره وهي فقاره: وفي مثل \"",
         "prototipe_benzerlik": 0.41,
         "halka": "orta"
       },
       {
-        "cumle": "سيرين في خرزة \" لمن طلب حاجتين في حاجة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سيرين في خرزة \" لمن طلب حاجتين في حاجة.",
         "prototipe_benzerlik": 0.331,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.425,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.399,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "penetrate.v.01", "string.n.09"],
   "muhassas_tasnif": {

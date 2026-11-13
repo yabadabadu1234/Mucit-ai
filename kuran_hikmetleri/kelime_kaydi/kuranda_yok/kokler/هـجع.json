@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هجع هجوعاً وهو النوم بالليل وقلّته. وأتيته وهو هاجع وهم هجوع، ونساء هجّع وهواجع. ولقيته بعد هجعة من الليل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هجع هجوعاً وهو النوم بالليل وقلّته. وأتيته وهو هاجع وهم هجوع، ونساء هجّع وهواجع. ولقيته بعد هجعة من الليل."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هجع غرثه: سكن من ضرمه. وأهجعت جوعهم. ورجل هجعٌ: يستنيم إلى كلّ أحد. وهجعت إليه فخدعني.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هجع غرثه: سكن من ضرمه. وأهجعت جوعهم. ورجل هجعٌ: يستنيم إلى كلّ أحد. وهجعت إليه فخدعني.",
         "prototipe_benzerlik": 0.659,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.659,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

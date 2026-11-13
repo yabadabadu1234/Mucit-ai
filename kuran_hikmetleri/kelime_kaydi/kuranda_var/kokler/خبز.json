@@ -1676,19 +1676,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "بسط الشيء بإذهاب غلظه أي تكلتله وذلك مع التئام أطرافه أي عدم انتشارها. كما في ترهل البدن من ذهاب ما كان تحت الجلد من لحم وشحم، والمكان المنخفض المطمئن ذهب غلظه، والخُبَّازَى وَرَقُها مُنْبَسِطٌ مُسْتَدير. ومنه الخُبْز الذي يؤكل ذَهَبَ غِلَظُ كتلته ببَسْطه، وغل",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "خبطني برحله وخبزني، وتخبطني وتخبّزني. والخلة خبز الإبل والحمض فاكهتها.",
-        "prototipe_benzerlik": 0.418,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "بسط الشيء بإذهاب غلظه أي تكلتله وذلك مع التئام أطرافه أي عدم انتشارها. كما في ترهل البدن من ذهاب ما كان تحت الجلد من لحم وشحم، والمكان المنخفض المطمئن ذهب غلظه، والخُبَّازَى وَرَقُها مُنْبَسِطٌ مُسْتَدير. ومنه الخُبْز الذي يؤكل ذَهَبَ غِلَظُ كتلته ببَسْطه، وغلظُ طعمه بإنضاجه أي وَضْعه في مَلَّة أو تَنَّور حتى ينضج كأن الخَبْزَ يشمل الأمرين البسطَ والإنضاجَ بالنار، وإلا فالخَبزُ هو البسط، والإنضاج بالنار أو الحر لازم. \"والخُبْز بالضم الخَبيزُ المخبوز من أيّ حبّ كان {أَحْمِلُ فَوْقَ رَأْسِي خُبْزًا}. (1/525)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خبزت القوم وتمرتهم: أطعمتهم الخبز والتمر، وأطعمني خبزة وخبزة ملة أي طلمة."
+      },
+      {
+        "kaynak": "Mekâyîs: خَبَزَ",
+        "metin": "(خَبَزَ) الْخَاءُ وَالْبَاءُ وَالزَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى خَبْطِ الشَّيْءِ بِالْيَدِ. تَخَبَّزَتِ الْإِبِلُ السَّعْدَانَ، إِذَا خَبَطَتْهُ بِأَيْدِيهَا. وَمِنْ ذَلِكَ خَبَزَ الْخَبَّازُ الْخُبْزَ. قَالَ:\nلَا تَخْبِزَا خَبْزًا وَبُسَّا بَسًّا ... وَلَا تُطِيلَا بِمُنَاخٍ حَبْسًا\nوَيُقَالُ: الْخَبْزُ ضَرْبُ الْبَعِيرِ بِيَدَيْهِ الْأَرْضَ."
       }
     ],
-    "ortalama_benzerlik": 0.418,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خبطني برحله وخبزني، وتخبطني وتخبّزني. والخلة خبز الإبل والحمض فاكهتها.",
+        "prototipe_benzerlik": 0.605,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.605,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["fire.v.03", "food.n.02", "living_thing.n.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {

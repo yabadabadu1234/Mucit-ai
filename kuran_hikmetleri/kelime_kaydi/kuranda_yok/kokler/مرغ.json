@@ -1074,19 +1074,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مرّغ دابته فتمرّغ، وهذا مراغ الدواب ومراغتها ومتمرّغها، ولفلان مراغة: أتان لا تمنع من الفجولة، ومنه قول الفرزدق لجرير: يا ابن المراغة. ومرّغته تمريغاً إذا أشبعت رأسه وجسده دهناً، وتمرّغ بالدهن. وسال مرغه: لعابه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مرّغ دابته فتمرّغ، وهذا مراغ الدواب ومراغتها ومتمرّغها، ولفلان مراغة: أتان لا تمنع من الفجولة، ومنه قول الفرزدق لجرير: يا ابن المراغة. ومرّغته تمريغاً إذا أشبعت رأسه وجسده دهناً، وتمرّغ بالدهن. وسال مرغه: لعابه."
+      },
+      {
+        "kaynak": "Mekâyîs: مَرَغَ",
+        "metin": "(مَرَغَ) الْمِيمُ وَالرَّاءُ وَالْغَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى سَيَلَانِ شَيْءٍ أَوْ إِسَالَةِ شَيْءٍ. وَالْمَرْغُ: اللُّعَابُ. وَأَمْرَغَ الْإِنْسَانُ: سَالَ لُعَابُهُ. وَمَرَّغْتُ الشَّيْءَ: أَشْبَعْتُهُ دُهْنًا. وَالْإِمْرَاغُ فِي الْعَجِينِ: أَنْ يُكَثَّرَ مَاؤُهُ. وَيَقُولُونَ: أَمْرَغَ: أَكْثَرَ الْكَلَامَ فِي غَيْرِ صَوَابٍ، كَأَنَّهُ يُسِيلُهُ إِسَالَةً. وَيُقَالُ أَمْرَغَ عِرْضَهُ وَمَرَّغَهُ، كَأَنَّهُ لَطَخَهُ وَأَسَالَ عَلَيْهِ قَيْحًا.\nوَقَرِيبٌ مِنْ هَذَا الْقِيَاسِ مَرَّغْتُهُ فِي التُّرَابِ فَتَمَرَّغَ، أَيْ قَلَّبْتُهُ فَتَقَلَّبَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يتمرّغ في النعيم: يتقلّب فيه. وتمرّغ في الأمر: تردد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يتمرّغ في النعيم: يتقلّب فيه. وتمرّغ في الأمر: تردد.",
         "prototipe_benzerlik": 0.334,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.334,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

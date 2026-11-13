@@ -716,19 +716,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "إن ريحه تسور في الخياشيم. ورجل أخشم، وبه خشم وهو الذي لا يجد الروائح لسدة في خياشيمه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "إن ريحه تسور في الخياشيم. ورجل أخشم، وبه خشم وهو الذي لا يجد الروائح لسدة في خياشيمه."
+      },
+      {
+        "kaynak": "Mekâyîs: خَشَمَ",
+        "metin": "(خَشَمَ) الْخَاءُ وَالشِّينُ وَالْمِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى ارْتِفَاعٍ. فَالْخَيْشُومُ: الْأَنْفُ. وَالْخَشَمُ: دَاءٌ يَعْتَرِيهِ. وَالرَّجُلُ الْغَلِيظُ الْأَنْفِ خُشَامٌ. وَالْمُخَشَّمُ: الَّذِي ثَارَ الشَّرَابُ فِي خَيْشُومِهِ فَسَكِرَ. وَخَيَاشِيمُ الْجِبَالِ: أُنُوفُهَا.\nوَشَذَّتْ عَنِ الْبَابِ كَلِمَةٌ إِنْ كَانَتْ صَحِيحَةً. قَالُوا: خَشِمَ اللَّحْمُ تَغَيَّرَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أشرفت خياشيم الجبال وهي أنوفها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشرفت خياشيم الجبال وهي أنوفها.",
         "prototipe_benzerlik": 0.335,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.335,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

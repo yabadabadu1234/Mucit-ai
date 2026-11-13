@@ -780,24 +780,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "انتطحت الكباش.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "انتطحت الكباش."
+      },
+      {
+        "kaynak": "Mekâyîs: كَبَشَ",
+        "metin": "(كَبَشَ) الْكَافُ وَالْبَاءُ وَالشِّينُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْكَبْشُ، وَهُوَ مَعْرُوفٌ. وَكَبْشُ الْكَتِيبَةِ: عَظِيمُهَا وَرَئِيسُهَا. قَالَ:\nثُمَّ مَا هَابُوا وَلَكِنْ قَدَّمُوا ... كَبْشَ غَارَاتٍ إِذَا لَاقَى نَطَحْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو كبش كتيبة، وهم كباش الكتائب. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو كبش كتيبة، وهم كباش الكتائب. قال:",
         "prototipe_benzerlik": 0.374,
         "halka": "orta"
       },
       {
-        "cumle": "وبنى سوراً حصيناً ووثّقه بالكبوش.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإنا لمما نضرب الكبش ضربة ... على رأسه تلقي اللسان من الفم",
+        "prototipe_benzerlik": 0.413,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبنى سوراً حصيناً ووثّقه بالكبوش.",
         "prototipe_benzerlik": 0.542,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.458,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.443,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {

@@ -969,19 +969,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "استخلاص الشيء في قوة من بين ما لا يُرضَى حوزه إياه أو تمكنه منه- كالنقَذ المذكور. ومنه: \"أنقذه واستنفذه وتنَقَّذه أي نَجَّاه وخلَّصه \"كما في آية التركيب {وَإِنْ يَسْلُبْهُمُ الذُّبَابُ شَيئًا لَا يَسْتَنْقِذُوهُ مِنْهُ} [الحج: 73]. استنقذ هنا بمعنى أنقذ [بحر 6",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "استخلاص الشيء في قوة من بين ما لا يُرضَى حوزه إياه أو تمكنه منه- كالنقَذ المذكور. ومنه: \"أنقذه واستنفذه وتنَقَّذه أي نَجَّاه وخلَّصه \"كما في آية التركيب {وَإِنْ يَسْلُبْهُمُ الذُّبَابُ شَيئًا لَا يَسْتَنْقِذُوهُ مِنْهُ} [الحج: 73]. استنقذ هنا بمعنى أنقذ [بحر 6/ 345] أي للمبالغة كان المعنى: مهما حاولوا إنقاذه. وسائر ما في القرآن من التركيب هو بمعنى الإنقاذ المذكور."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أنقذه من البؤس واستنقذه وتنقّذه، وقد نقذ نقذاً إذا نجا. وتقول العرب: نقذاً له إذا دعوا له بالسلامة. وهو نقيذة بؤس، وهم نقائذ بؤس إذا استنقذوا منه. وهذا الفرس أو البعير أو غيرهما من النقائذ وهي ما أخذه العدوّ وتملّكه ثم رجعت فأخذته منه وتنقّذته من يده وهو نقيذٌ ونقيذةٌ ونقذٌ. قال عنترة:\nإذ لا أزال على رحالة سابح ... نقذ توارثه الكماة مكلّم"
+      },
+      {
+        "kaynak": "Mekâyîs: نَقَذَ",
+        "metin": "(نَقَذَ) النُّونُ وَالْقَافُ وَالذَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى اسْتِخْلَاصِ شَيْءٍ. وَأَنْقَذْتُهُ مِنْهُ: خَلَّصْتُهُ. وَفَرَسٌ نَقِيذٌ: أُخِذَ مِنْ قَوْمٍ آخَرِينَ، وَأَفْرَاسٌ نَقَائِذُ. وَكُلُّ مَا أَنْقَذْتَهُ فَهُوَ نَقَذٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أخذته منها واستخرجته، خرود السري: تستحيي أن تخرج ليلاً.",
-        "prototipe_benzerlik": 0.278,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول ابن مقبل:",
+        "prototipe_benzerlik": 0.598,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخود خرود السّري طفلة ... تنقّذت منها حديثاً حلالاً",
+        "prototipe_benzerlik": 0.692,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخذته منها واستخرجته، خرود السري: تستحيي أن تخرج ليلاً.",
+        "prototipe_benzerlik": 0.362,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.278,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.551,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

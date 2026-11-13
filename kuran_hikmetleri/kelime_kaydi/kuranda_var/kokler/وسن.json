@@ -1232,8 +1232,8 @@
     "ince": "fundamental_quantity.n.01",
     "orta": "noun.time",
     "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "year.n.03",
-    "dayanak_tanim": "the period of time that it takes for a planet (as, e.g., Earth or Mars) to make a complete revolution around the sun",
+    "dayanak_synset": "year.n.01",
+    "dayanak_tanim": "a period of time containing 365 (or 366) days",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1252,19 +1252,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مخالطة خَدَرِ النوم الإنسانَ أو الحيَّ: كذلك النعاس. والسِنة (الاسم من الوَسَن): النعاسُ - كعِدَة من وَعَد وفي [كامل المبرد/ الدالي 1/ 192] \"السِنَةُ: شِدة النعاس وليست بالنوم بعينه \" {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ}. ومن معنويّه: ما له هَمّ ولا وَسَن إلا ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مخالطة خَدَرِ النوم الإنسانَ أو الحيَّ: كذلك النعاس. والسِنة (الاسم من الوَسَن): النعاسُ - كعِدَة من وَعَد وفي [كامل المبرد/ الدالي 1/ 192] \"السِنَةُ: شِدة النعاس وليست بالنوم بعينه \" {لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ}. ومن معنويّه: ما له هَمّ ولا وَسَن إلا ذاك (شاغل قوي في قلبه)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخذه الوسن والسّنة، وهم في سكر سناتهم، وقد علته وسنةٌ. ورزق فلان ما لم يوسن به في نومه. ورجلٌ وسنان وامرأة وسنى. وفلانة ميسان الضحى، كقولك: نؤوم الضحى، وتوسّنها نحو تنوّمها إذا أتاها نائمة. قال:\nكأن فاها لمن توسّنها ... أو هكذا موهناً ولم تنم\nوقال حميد بن ثور:\nولقد نظرت إلى أغر مشهر ... بكرٍ توسن بالخميلة عوناً\nأراد بالأغر: السحاب، وبالعون: الأرضين التي مطرت قبله، جعله بكراً وإياهنّ عوناً."
+      },
+      {
+        "kaynak": "Mekâyîs: وَسَنَ",
+        "metin": "(وَسَنَ) الْوَاوُ وَالسِّينُ وَالنُّونُ: كَلِمَتَانِ مُتَقَارِبَتَانِ. الْوَسَنُ: النُّعَاسُ، وَكَذَا السِّنَةُ. وَرَجُلٌ وَسْنَانُ. وَتَوَسَّنَ الْفَحْلُ أُنْثَاهُ: أَتَاهَا نَائِمَةً.\nوَالْكَلِمَةُ الْأُخْرَى قَوْلُهُمْ: دَعْ هَذَا الْأَمْرَ فَلَا يَكُونَنَّ لَكَ وَسَنًا، أَيْ لَا تَطْلُبْهُ وَلَا يَكُونَنَّ مِنْ هَمِّكَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "هو في سنة: في غفلة. وهو غارز رأسه في سنةٍ. وما هو من همي ومن سنتي أي حاجتي. وقضت الإبل أوسانها من الماء. وتقول: الخيل قضت أرسانها، حتى قضت أوسانها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو في سنة: في غفلة. وهو غارز رأسه في سنةٍ. وما هو من همي ومن سنتي أي حاجتي. وقضت الإبل أوسانها من الماء. وتقول: الخيل قضت أرسانها، حتى قضت أوسانها.",
         "prototipe_benzerlik": 0.313,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.313,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["organization.n.01", "time_period.n.01"],
   "muhassas_tasnif": {

@@ -1489,19 +1489,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "المطر يفحص الحصى إذا قلبه ونحّى بعضه من بعض. والقطاة تفحص التراب إذا اتخذت فيه أفحوصاً. ولهم بيوت كأفاحيص القطا ومفاحصها. وما أملح فحصة هذا الصبيّ وهي نقرة ذقنه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "المطر يفحص الحصى إذا قلبه ونحّى بعضه من بعض. والقطاة تفحص التراب إذا اتخذت فيه أفحوصاً. ولهم بيوت كأفاحيص القطا ومفاحصها. وما أملح فحصة هذا الصبيّ وهي نقرة ذقنه."
+      },
+      {
+        "kaynak": "Mekâyîs: فَحَصَ",
+        "metin": "(فَحَصَ) الْفَاءُ وَالْحَاءُ وَالصَّادُ أَصْلٌ صَحِيحٌ، وَهُوَ كَالْبَحْثِ عَنِ الشَّيْءِ. يُقَالُ: فَحَصْتُ عَنِ الْأَمْرِ فَحْصًا. وَأُفْحُوصُ الْقَطَا: مَوْضِعُهَا فِي الْأَرْضِ، لِأَنَّهَا تَفْحَصُهُ. وَفِي الْحَدِيثِ: «فَحَصُوا عَنْ رُءُوسِهِمْ» ، كَأَنَّهُمْ تَرَكُوهَا مِثْلَ أَفَاحِيصِ الْقَطَا فَلَمْ يَحْلِقُوا عَنْهَا. وَفَحَصَ الْمَطَرُ التُّرَابَ، إِذَا قَلَبَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عليك بالفحص عن سرّ هذا الحديث. وفلان بحّاث عن الأسرار فحّاص عنها. واعلموا أن عند الله مسألةً فاحصةً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عليك بالفحص عن سرّ هذا الحديث. وفلان بحّاث عن الأسرار فحّاص عنها. واعلموا أن عند الله مسألةً فاحصةً.",
         "prototipe_benzerlik": 0.356,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.356,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

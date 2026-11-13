@@ -1770,7 +1770,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: سقوط الإنسان والبعير مرتطمًا بانكباب على وجهه: كتلك الهيأة. ثم عُبِّر به عن الهُوِيّ المعنويّ انكبابا أي علي حال بالغة السوء. كما في الآية."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تعس فلان بالفتح، والكسر غير فصيح، وتعساً له وتعسه الله وأتعسه. قال:\nغداة هزمنا جمعهم بمتالع ... فآبوا بإتعاس على شر طائر\nوتقول: أضرع الله خده، وأتعس جده. وهو منحوس متعوس. وهذا الأمر متعسة منحسة."
+      },
+      {
+        "kaynak": "Mekâyîs: تَعِسَ",
+        "metin": "(تَعِسَ) التَّاءُ وَالْعَيْنُ وَالسِّينُ كَلِمَةٌ وَاحِدَةٌ وَهُوَ الْكَبُّ، يُقَالُ تَعَسَهُ اللَّهُ وَأَتْعَسَهُ. قَالَ:\nغَدَاةً هَزَمْنَا جَمْعَهُمْ بِمُتَالِعٍ ... فَآبُوا بِإِتْعَاسٍ عَلَى شَرِّ طَائِرِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جد تاعس ناعس.",
+        "prototipe_benzerlik": 0.398,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.398,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["feeling.n.01", "happening.n.01", "unfortunate.n.01"],
   "muhassas_tasnif": {

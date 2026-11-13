@@ -773,29 +773,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عين دعجاء: بينة الدعج وهو شدّة السواد مع شدة البياض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عين دعجاء: بينة الدعج وهو شدّة السواد مع شدة البياض."
+      },
+      {
+        "kaynak": "Mekâyîs: دَعَجَ",
+        "metin": "(دَعَجَ) الدَّالُ وَالْعَيْنُ وَالْجِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى لَوْنٍ أَسْوَدَ. فَمِنْهُ الْأَدْعَجُ، وَهُوَ الْأَسْوَدُ. وَالدَّعَجُ فِي الْعَيْنِ: شِدَّةُ سَوَادِهَا فِي شِدَّةِ الْبَيَاضِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ليل أدعج. قال العجاج:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ليل أدعج. قال العجاج:",
         "prototipe_benzerlik": 0.437,
         "halka": "orta"
       },
       {
-        "cumle": "أراد سواد الليل وبياض الصبح. وبلغنا دعجاء الشهر ودهماءه وهما الثامنة والعشرون والتي بعدها. ويقال: ثور أدعج القرنين والرأس والقوائم: يراد شدة سوادها. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى بدت أعناق صبح أبلجا ... تسور في أعجاز ليل أدعجا",
+        "prototipe_benzerlik": 0.396,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد سواد الليل وبياض الصبح. وبلغنا دعجاء الشهر ودهماءه وهما الثامنة والعشرون والتي بعدها. ويقال: ثور أدعج القرنين والرأس والقوائم: يراد شدة سوادها. قال ذو الرمة:",
         "prototipe_benzerlik": 0.605,
         "halka": "yakın"
       },
       {
-        "cumle": "جعل الثور الوحشي أدعج. وليس في عينيه بياض.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جرى أدعج القرنين والعين واضح ال ... قرا أسفع الخدّين بالبين بارح",
+        "prototipe_benzerlik": 0.633,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جعل الثور الوحشي أدعج. وليس في عينيه بياض.",
         "prototipe_benzerlik": 0.34,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.461,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.482,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

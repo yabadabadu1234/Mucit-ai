@@ -1155,24 +1155,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عليّ بالسيف والنطع. ولجار الله العلامة رضي الله عنه: خيّم العزّ حيث لم ينم الضّر ... غام إلا بجفني المرتاع علم الملك ليس يخفق إلا ... حيث ذكر السيوف والأنطاع وكسا أبو كرب بيت الله الأنطاع.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عليّ بالسيف والنطع. ولجار الله العلامة رضي الله عنه:\nخيّم العزّ حيث لم ينم الضّر ... غام إلا بجفني المرتاع\nعلم الملك ليس يخفق إلا ... حيث ذكر السيوف والأنطاع\nوكسا أبو كرب بيت الله الأنطاع."
+      },
+      {
+        "kaynak": "Mekâyîs: نَطَعَ",
+        "metin": "(نَطَعَ) النُّونُ وَالطَّاءُ وَالْعَيْنُ أَصْلٌ يَدُلُّ عَلَى بَسْطٍ فِي شَيْءٍ وَمَلَاسَةٍ. مِنْهُ النِّطْعُ، وَيُقَالُ لَهُ النَّطْعُ، وَهُوَ مَبْسُوطٌ أَمْلَسُ. وَالنَِّطْعُ: مَا ظَهَرَ مِنْ غَارِ الْفَمِ الْأَعْلَى. وَهُوَ كَذَلِكَ. وَالتَّنَطُّعُ فِي الْكَلَامِ: التَّعَمُّقُ، وَهُوَ قِيَاسُهُ لِأَنَّهُ يُتَبَسَّطُ فِيهِ. وَيُسْتَعَارُ، فَيُقَالُ: تَنَطَّعَ الصَّانِعُ فِي صَنْعَتِهِ، أَظْهَرَ حِذْقَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دلك التمرة على نطع فيه وهو ظهر الغار الأعلى. وهذا من الحروف النّطّعية وهي الطا والدال والتاء، ومنه: تنطّع في كلامه إذا تفصّح فيه وتعمّق. ورمى بلسانه إلى نطع الفم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دلك التمرة على نطع فيه وهو ظهر الغار الأعلى. وهذا من الحروف النّطّعية وهي الطا والدال والتاء، ومنه: تنطّع في كلامه إذا تفصّح فيه وتعمّق. ورمى بلسانه إلى نطع الفم.",
         "prototipe_benzerlik": 0.429,
         "halka": "orta"
       },
       {
-        "cumle": "ومن مجاز المجاز: تنطّع الصانع: تحذّق في صناعته. قال أوس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن مجاز المجاز: تنطّع الصانع: تحذّق في صناعته. قال أوس:",
         "prototipe_benzerlik": 0.498,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحشو جفير من فروع غرائب ... تنطّع فيها صانع وتأملاً",
+        "prototipe_benzerlik": 0.428,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.463,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.451,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

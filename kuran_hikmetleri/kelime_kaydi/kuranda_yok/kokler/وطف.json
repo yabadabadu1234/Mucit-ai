@@ -697,34 +697,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في أشفاره وطفٌ: طول شعر واسترخاء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في أشفاره وطفٌ: طول شعر واسترخاء."
+      },
+      {
+        "kaynak": "Mekâyîs: وَطَفَ",
+        "metin": "(وَطَفَ) الْوَاوُ وَالطَّاءُ وَالْفَاءُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى طُولِ شَيْءٍ وَرَخَاوَتِهِ. مِنْ ذَلِكَ: الْوَطْفُ: طُولُ الْأَشْفَارِ وَتَهَدُّلُهَا. وَالْوَطْفُ: انْهِمَالُ الْمَطَرِ. وَالْأَوْطَفُ: الْبَعِيرُ الْقَصِيرُ شَعْرِ الْأُذُنَيْنِ وَالْعَيْنَيْنِ. وَإِنَّمَا يُرَادُ بِهَذَا أَنَّهُ لَا يَبْلُغُ بِهِ وَطَفُهُ أَنْ يَكُونَ أَزَبَّ، لِأَنَّ كُلَّ أَزَبَّ نَفُورٌ. فَهَذَا دُونَ الْأَزَبِّ، وَإِلَّا فَهُوَ تَامُّ الشَّعْرِ. وَيُسْتَعَارُ فَيُقَالُ: هُوَ فِي عَيْشٍ أَوْطَفَ، أَيْ وَاسِعٍ رَخِيٍّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سحابة وطفاء: لها هيدب، وسحاب وطف. وعيش أوطف: رخيّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سحابة وطفاء: لها هيدب، وسحاب وطف. وعيش أوطف: رخيّ.",
         "prototipe_benzerlik": 0.439,
         "halka": "orta"
       },
       {
-        "cumle": "وط ن كلّ يحب وطنه وأوطانه وموطنه ومواطنه، والإبل تحن إلى أوطانها. وأطن الأرض ووطذنها وتوطذنها واستوطنها. وأرسلت الخيل من الميطان: من حيث توطّن للسباق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وط ن كلّ يحب وطنه وأوطانه وموطنه ومواطنه، والإبل تحن إلى أوطانها. وأطن الأرض ووطذنها وتوطذنها واستوطنها. وأرسلت الخيل من الميطان: من حيث توطّن للسباق.",
         "prototipe_benzerlik": 0.318,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: هذه أوطان الغنم: لمرابضها. وثبت في موطن القتال ومواطنه وهي مشاهده. وإذا أتيت مكة فوقفت في تلك المواطن فادع لي ولإخواني أي في تلك المشاهد. ووطّنت نفسي على ذا فتوطّنت. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: هذه أوطان الغنم: لمرابضها. وثبت في موطن القتال ومواطنه وهي مشاهده. وإذا أتيت مكة فوقفت في تلك المواطن فادع لي ولإخواني أي في تلك المشاهد. ووطّنت نفسي على ذا فتوطّنت. قال:",
         "prototipe_benzerlik": 0.714,
         "halka": "yakın"
       },
       {
-        "cumle": "وواطنته على الأمر: وافقته.",
-        "prototipe_benzerlik": 0.33,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولا يخر فيمن لا يوطّن نفسه ... على نائبات الدهر حين تنوب",
+        "prototipe_benzerlik": 0.466,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وواطنته على الأمر: وافقته.",
+        "prototipe_benzerlik": 0.33,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.45,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.453,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -2388,11 +2388,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "repent.v.02",
-    "orta": "verb.emotion",
+    "ince": "state.n.02",
+    "orta": "noun.feeling",
     "ust": "his ve nefis",
-    "dayanak_synset": "repent.v.02",
-    "dayanak_tanim": "feel remorse for; feel sorry for; be contrite about",
+    "dayanak_synset": "sorrow.n.02",
+    "dayanak_tanim": "sadness associated with some wrong done or some disappointment",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -2411,19 +2411,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "جفافُ أثناءِ الشيء وذهابُ نحوِ البَلال منها: كالأرض التي لا تنبت - فقدت خيرها وخصوبتها، وكالذي لا يسمن، وكالشيخ الفاني. وتشعُّث اليد يكون من جفاف جلد باطنها فتخشُن وتتشقق. وجفاف الجوف والأثناء يؤخذ منه حرقة الغضب والغيظ والحزن وما أشبه ذلك، مما فسّر به الأسف ف",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "جفافُ أثناءِ الشيء وذهابُ نحوِ البَلال منها: كالأرض التي لا تنبت - فقدت خيرها وخصوبتها، وكالذي لا يسمن، وكالشيخ الفاني. وتشعُّث اليد يكون من جفاف جلد باطنها فتخشُن وتتشقق. وجفاف الجوف والأثناء يؤخذ منه حرقة الغضب والغيظ والحزن وما أشبه ذلك، مما فسّر به الأسف فكل ذلك من جفاف الباطن والأثناء، ويفسر الأسف في كل سياق بحسبه. \"أَسِفَ (تعب): حَزِنَ حُزنًا بالغًا لفوات شيء \". {وَلَمَّا رَجَعَ مُوسَى إِلَى قَوْمِهِ غَضْبَانَ أَسِفًا} [الأعراف: 150] شديد الغضب. حزينًا [قر (2/1021) 7/ 286]. {وَقَالَ يَاأَسَفَى عَلَى يُوسُفَ} [يوسف: 84] فهذا حزن بالغ لأنه لا يملك غيره، والغضب موقف القادر {فَلَمَّا آسَفُونَا انْتَقَمْنَا مِنْهُمْ} [الزخرف: 55] أغضبونا (أي أشد الغضب، فجف حظُّهم من الرحمة) - فأوقع الله بهم نقمته."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "\" يا أسفى على يوسف \" وآسفني ما قلت: أغضبني وأحزنني."
+      },
+      {
+        "kaynak": "Mekâyîs: أَسَفَ",
+        "metin": "(أَسَفَ) الْهَمْزَةُ وَالسِّينُ وَالْفَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الْفَوْتِ وَالتَّلَهُّفِ وَمَا أَشْبَهَ ذَلِكَ. يُقَالُ: أَسِفَ عَلَى الشَّيْءِ يَأْسَفُ أسَفًا مِثْلَ تَلَهَّفَ. وَالْأَسِفُ الْغَضْبَانُ، قَالَ اللَّهُ تَعَالَى: {وَلَمَّا رَجَعَ مُوسَى إِلَى قَوْمِهِ غَضْبَانَ أَسِفًا} [الأعراف: 150] ، وَقَالَ الْأَعْشَى:\nأَرَى رَجُلًا مِنْهُمْ أَسِيفًا كَأَنَّمَا ... يَضُمُّ إِلَى كَشْحَيْهِ كَفًّا مُخَضَّبًا\nفَيُقَالُ: هُوَ الْغَضْبَانُ. وَيُقَالُ: إِنَّ الْأَُسَافَةَ الْأَرْضُ الَّتِي لَا تُنْبِتُ شَيْئًا; وَهَذَا هُوَ الْقِيَاسُ، لِأَنَّ النَّبَاتَ قَدْ فَاتَهَا. وَكَذَلِكَ الْجَمَلُ الْأَسِيفُ، وَهُوَ الَّذِي لَا يَكَادُ يَسْمَنُ. وَأَمَّا التَّابِعُ وَتَسْمِيَتُهُمْ إِيَّاهُ أَسِيفًا فَلَيْسَ مِنَ الْبَابِ، لِأَنَّ الْهَمْزَةَ مُنْقَلِبَةٌ مِنْ عَيْنٍ، وَقَدْ ذُكِرَ فِي بَابِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أرض أسيفة: لا تموج بالنبات.",
-        "prototipe_benzerlik": 0.464,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرض أسيفة: لا تموج بالنبات.",
+        "prototipe_benzerlik": 0.424,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.464,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.424,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["explode.v.01", "feeling.n.01", "repent.v.02"],
   "muhassas_tasnif": {

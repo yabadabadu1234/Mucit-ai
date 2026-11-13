@@ -37,19 +37,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو يهرف بفلان نهاره كلّه وهو الإطناب في النثاء شبه الهذيان للإعجاب به. وجاءت رفقة يهرفون بصاحب لهم، ويقال: لا تهرف، قبل أن تعرف، و\" لا تهرف، بما لا تعر \". وهرّفت النخلة: عجّلت إتاءها تهريفاً. وهرفته الريح: استخفّته، ومنه قول أهل بغداد: الهرف جرف أي من جاء بالب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "هرول السراب. قال الطّرماح:",
-        "prototipe_benzerlik": 0.445,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو يهرف بفلان نهاره كلّه وهو الإطناب في النثاء شبه الهذيان للإعجاب به. وجاءت رفقة يهرفون بصاحب لهم، ويقال: لا تهرف، قبل أن تعرف، و\" لا تهرف، بما لا تعر \". وهرّفت النخلة: عجّلت إتاءها تهريفاً. وهرفته الريح: استخفّته، ومنه قول أهل بغداد: الهرف جرف أي من جاء بالبواكير جرف أموال الناس.\nهـ\nر\nول\nمشى هرولةً. والطائف يهرول."
       }
     ],
-    "ortalama_benzerlik": 0.445,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هرول السراب. قال الطّرماح:",
+        "prototipe_benzerlik": 0.418,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى إذا صغت الظلا ... ل بعيد هرولة العساقل",
+        "prototipe_benzerlik": 0.172,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.295,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

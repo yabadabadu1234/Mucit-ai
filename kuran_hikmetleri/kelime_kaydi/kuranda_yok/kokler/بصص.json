@@ -868,11 +868,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "bus.n.01",
-    "dayanak_tanim": "a vehicle carrying many passengers; used for public transport",
+    "ince": "definite_quantity.n.01",
+    "orta": "noun.quantity",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "inch.n.01",
+    "dayanak_tanim": "a unit of length equal to one twelfth of a foot",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -891,19 +891,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو انبعاث بريقٍ أو شيء. جديد من مصدره أو ما كان يحتويه بقوة (1): كالبريق، والتلألؤ، والزهور، وجوهرة العين.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو انبعاث بريقٍ أو شيء. جديد من مصدره أو ما كان يحتويه بقوة (1): كالبريق، والتلألؤ، والزهور، وجوهرة العين."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له بصيص أي بريق. ورماه بالبصاصة وهي العين. وتقول: طرقته في السنة الحصاصة وهي العين. وتقول: طرقته في السنة الحصاصه، فما رمقني بذنب البصاصة. وبصص الجرو وبصر: فتح عينيه."
+      },
+      {
+        "kaynak": "Mekâyîs: بَصَّ",
+        "metin": "(بَصَّ) الْبَاءُ وَالصَّادُ أَصْلٌ وَاحِدٌ وَهُوَ بَرِيقُ الشَّيْءِ وَلَمَعَانُهُ فِي حَرَكَتِهِ. يُقَالُ: بَصَّ: إِذَا لَمَعَ يَبِصُّ بَصِيصًا وَبَصًّا: إِذَا لَمَعَ. قَالَ:\nيَبِصُّ مِنْهَا لِيطُهَا الدُّلَامِصُ ... كَدُرَّةِ الْبَحْرِ زَهَاهَا الْغَائِصُ\nالدُّلَامِصُ: الْبَرَّاقُ. زَهَاهَا: رَفَعَهَا وَأَخْرَجَهَا. وَالْبَصَّاصَةُ: الْعَيْنُ. وَبَصْبَصَ الْكَلْبُ: إِذَا حَرَّكَ ذَنَبَهُ، وَكَذَلِكَ الْفَحْلُ. قَالَ:\nبَصْبَصْنَ إِذْ حُدِينَا\nوَقَالَ رُؤْبَةُ:\nبَصْبَصْنَ بِالْأَذْنَابِ مِنْ لُوحٍ وَبَقْ\nوَبَصْبَصَ جَرْوُ الْكَلْبِ: إِذَا لَمَعَ بِبَصَرِهِ قَبْلَ أَنْ تَتَفَتَّحَ عَيْنُهُ. وَخِمْسٌ بَصْبَاصٌ: بَعِيدٌ. وَقَالَ أَبُو دُوَادَ:\nوَلَقَدْ ذَعَرْتُ بَنَاتِ عَ ... مِّ الْمُرْشِقَاتِ لَهَا بَصابِصْ\nقَالُوا: أَرَادَ أَنْ يَقُولَ: ذَعَرْتُ الْبَقَرَ، فَلَمْ يَسْتَقِمْ لَهُ الشِّعْرُ فَقَالَ: بَنَاتُ عَمِّ الْمُرْشِقَاتِ، وَهِيَ الظِّبَاءُ. وَأَرَادَ بِالْبَصَابِصِ تَحْرِيكَهَا أَذْنَابَهَا. وَالْبَصِيصُ الرِّعْدَةُ مِنْ هَذَا الْقِيَاسِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "بصص النور إذا تفتح. وبصبص عندي بذنبه إذا تملق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بصص النور إذا تفتح. وبصبص عندي بذنبه إذا تملق.",
         "prototipe_benzerlik": 0.339,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.339,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "unit_of_measurement.n.01"],
   "muhassas_tasnif": {

@@ -1007,11 +1007,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "mimesis.n.01",
-    "dayanak_tanim": "the imitative representation of nature and human behavior in art and literature",
+    "ince": "imitate.v.01",
+    "orta": "verb.creation",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "imitate.v.01",
+    "dayanak_tanim": "reproduce someone's behavior or looks",
     "synset_sayisi": 14
   },
   "ses_mana_tasnif": {
@@ -1025,19 +1025,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حكى لي عنه كذا. وهو يحكي فلاناً ويحاكيه، وهو حكاء. وتقول العرب: هذه حكايتنا أي لغتنا. وامرأة حكيٌّ: حاكية لكلام الناس مهذار.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حكى لي عنه كذا. وهو يحكي فلاناً ويحاكيه، وهو حكاء. وتقول العرب: هذه حكايتنا أي لغتنا. وامرأة حكيٌّ: حاكية لكلام الناس مهذار."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وجهه يحكي الشمس ويحاكيها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجهه يحكي الشمس ويحاكيها.",
         "prototipe_benzerlik": 0.206,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.206,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

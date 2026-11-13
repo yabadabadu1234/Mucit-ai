@@ -750,19 +750,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جنيت كمأ واحداً وكمأين وثلاثة أكمؤ، وكمأة كثيرة، وهذا عكس تمرة وتمرٍ، وخرجوا يتكمّؤن: يجتنون الكمأة، وتكمأنا في أرض بني فلان. وأنشد الكسائي: فلا تحبسنّي بأرض العراق ... وخلّ سبيلي إلى البادية أراعي المخاض وأجني الكما ... وتلك لنا عيشة راضية",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جنيت كمأ واحداً وكمأين وثلاثة أكمؤ، وكمأة كثيرة، وهذا عكس تمرة وتمرٍ، وخرجوا يتكمّؤن: يجتنون الكمأة، وتكمأنا في أرض بني فلان.\nوأنشد الكسائي:\nفلا تحبسنّي بأرض العراق ... وخلّ سبيلي إلى البادية\nأراعي المخاض وأجني الكما ... وتلك لنا عيشة راضية"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "كمئت يده ورجله من البرد والعمل: تشققت فصارت كالكمأة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كمئت يده ورجله من البرد والعمل: تشققت فصارت كالكمأة.",
         "prototipe_benzerlik": 0.224,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.224,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,24 +37,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جبهة ذات بهجة. ورجل أجبه: عريض الجبهة. وجبهته: ضربت جبهته.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جبهة ذات بهجة. ورجل أجبه: عريض الجبهة. وجبهته: ضربت جبهته."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو جبهة قومه، كما يقال وجههم، وجاءني جبهة بني فلان: لسرواتهم، وجاءت جبهة الخيل: لخيارها. قال بعض بني فزارة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو جبهة قومه، كما يقال وجههم، وجاءني جبهة بني فلان: لسرواتهم، وجاءت جبهة الخيل: لخيارها. قال بعض بني فزارة:",
         "prototipe_benzerlik": 0.525,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وجبهه: لقيه بما يكره. ولقيت منه جبهة أي مذلة وأذًى. وجبهنا الماء: وردناه ولا آلة سقي، فلم يكن منا إلا النظر إلى وجه الماء، ومنه جبهنا الشتاء: جاءنا ولم نتهيأ له.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وليت جبهة خيلي شطر خيلهم ... وواجهونا بأسد قابلوا أسدا",
+        "prototipe_benzerlik": 0.504,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجبهه: لقيه بما يكره. ولقيت منه جبهة أي مذلة وأذًى. وجبهنا الماء: وردناه ولا آلة سقي، فلم يكن منا إلا النظر إلى وجه الماء، ومنه جبهنا الشتاء: جاءنا ولم نتهيأ له.",
         "prototipe_benzerlik": 0.497,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.511,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.509,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

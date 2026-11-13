@@ -2500,8 +2500,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "lenience.n.03",
-    "dayanak_tanim": "lightening a penalty or excusing from a chore by judges or parents or teachers",
+    "dayanak_synset": "tolerance.n.03",
+    "dayanak_tanim": "the act of tolerating something",
     "synset_sayisi": 30
   },
   "ses_mana_tasnif": {
@@ -2515,19 +2515,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو سمح بين السماح والسماحة من قوم سمحاء، وهي سمحة من نسوة سماح، ورجل مسماح من قوم مساميح. وسامحني بكذا، وتسامح في كذا وتسمح. \" وأسمحت قرونته \" إذا تبعته نفسه وأطاعته. وسمح البعير: ذل بعد الصعوبة. قال المتلمس: صبا من بعد سلوته فؤادي ... وسمح للقرينة بانقياد ويق",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو سمح بين السماح والسماحة من قوم سمحاء، وهي سمحة من نسوة سماح، ورجل مسماح من قوم مساميح. وسامحني بكذا، وتسامح في كذا وتسمح. \" وأسمحت قرونته \" إذا تبعته نفسه وأطاعته. وسمح البعير: ذل بعد الصعوبة. قال المتلمس:\nصبا من بعد سلوته فؤادي ... وسمح للقرينة بانقياد\nويقال: عليك بالحق فإن في الحق مسمحاً أي متسعاً ومندوحة عن الباطل. قال ابن مقبل:\nوإني لأستحي وفي الحق مسمح ... إذا جاء باغي الخير أن اتعذرا\nوبلغت الشجة السمحاق وهو الجلدة الرقيقة على العظم."
+      },
+      {
+        "kaynak": "Mekâyîs: سَمَحَ",
+        "metin": "(سَمَحَ) السِّينُ وَالْمِيمُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى سَلَاسَةٍ وَسُهُولَةٍ. يُقَالُ سَمَحَ لَهُ بِالشَّيْءِ. وَرَجُلٌ سَمْحٌ، أَيْ جَوَادٌ، وَقَوْمٌ سُمَحَاءُ وَمَسَامِيحُ. وَيُقَالُ سَمَّحَ فِي سَيْرِهِ، إِذَا أَسْرَعَ. قَالَ:\nسَمَّحَ وَاجْتَابَ فَلَاةً قِيًّا\nوَمِنَ الْبَابِ: الْمُسَامَحَةُ فِي الطِّعَانِ وَالضَّرْبِ، إِذَا كَانَ عَلَى مُسَاهَلَةٍ. وَيُقَالُ رُمْحٌ مُسَمَّحٌ: قَدْ ثُقِّفَ حَتَّى لَانَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عود سمح: بين السماحة مستو لا أبن فيه. وشجه السمحاق، وفي السماء سماحيق وهي القطع الرقاق من الغيم.",
-        "prototipe_benzerlik": 0.662,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عود سمح: بين السماحة مستو لا أبن فيه. وشجه السمحاق، وفي السماء سماحيق وهي القطع الرقاق من الغيم.",
+        "prototipe_benzerlik": 0.594,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.662,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.594,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "accept.v.05",

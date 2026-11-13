@@ -1912,8 +1912,8 @@
     "ince": "possession.n.02",
     "orta": "noun.possession",
     "ust": "insan ve toplum",
-    "dayanak_synset": "net_income.n.01",
-    "dayanak_tanim": "the excess of revenues over outlays in a given period of time (including depreciation and other non-cash expenses)",
+    "dayanak_synset": "gain.n.04",
+    "dayanak_tanim": "the amount by which the revenue of a business exceeds its cost of operating",
     "synset_sayisi": 38
   },
   "ses_mana_tasnif": {
@@ -1932,19 +1932,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "زيادةٌ تتولد عن الشيء من جِنسه -بجُهْدٍ ما -كما لولد الفُصْلان من أمهاتها وهي تَزيد عَدَدَ الإبل، وكالشَحْم يتكون من أثناء اللحم ويربو به البدن ويزيد، وكحَلْب الناقة في نصف النهار، وهي حَلْبة زائدة، لأن الحلْب يكون في أول النهار وآخره، فالتي في نصف النهار ثالث",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "زيادةٌ تتولد عن الشيء من جِنسه -بجُهْدٍ ما -كما لولد الفُصْلان من أمهاتها وهي تَزيد عَدَدَ الإبل، وكالشَحْم يتكون من أثناء اللحم ويربو به البدن ويزيد، وكحَلْب الناقة في نصف النهار، وهي حَلْبة زائدة، لأن الحلْب يكون في أول النهار وآخره، فالتي في نصف النهار ثالثة. وكل منها محصَّل بجُهد ما (الحمل والولادة، وزيادة الرَعْي، والحلب في نصف النهار إجهاد). ومن ذلك \"الرُبَّاح -كرمان: القرد الذكر، والجَدْي \" (لقوة الإلقاح فيُولِدان إناثَهما). ومن ذلك الأصل (الرِبْح -بالكسر وبالتحريك: اسم ما رَبِحْتَه في التجارة \" (زيادة على رأس المال متولدة منه بجهد). ومنه {رَبِحَتْ} في آية الرأس. (2/744)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ربح في تجارته. واشترى سلعة يطلب فيها الرّبح والرّبح والرّباح. وهو يتربح ويترقّح أي يطلب الأرباح ويتكسب. ورابحته على سلعته.\nوامرأة ربحلة: لحيمة عظيمة الخلق. ورجل ربحل وهو من الربح: الزيادة، واللام مزيدة. وأملح من رباحٍ بالتخفيف والتثقيل. وهو القرد. وأكل فلان زب رباح وهو ضرب من التمر."
+      },
+      {
+        "kaynak": "Mekâyîs: رَبَحَ",
+        "metin": "(رَبَحَ) الرَّاءُ وَالْبَاءُ وَالْحَاءُ أَصْلٌ وَاحِدٌ، يَدُلُّ عَلَى شَِفٍّ فِي مُبَايَعَةٍ. مِنْ ذَلِكَ رَبِحَ فُلَانٌ فِي بَيْعِهِ يَرْبَحُ، إِذَا اسْتَشَفَّ. وَتِجَارَةٌ رَابِحَةٌ: يُرْبَحُ فِيهَا. يُقَالُ رِبْحٌ وَرَبَحٌ، كَمَا يُقَالُ مِثْلٌ وَمَثَلٌ. فَأَمَّا قَوْلُ الْأَعْشَى:\nمِثْلَ مَا مُدَّ نِصَاحَاتُ الرَّبَحْ\nفَقَالَ قَوْمٌ النِّصَاحَاتُ الْخُيُوطُ، وَهِيَ الْأَرْوِيَةُ. وَالرَّبَحُ: الْخَيْلُ وَالْإِبِلُ تُجْلَبُ لِلْبَيْعِ وَالتَّرَبُّحِ. فَأَمَّا قَوْلُهُ:\nقَرَوْا أَضْيَافَهُمْ رَبَحًا بِبُحٍّ\nفَقَالَ ابْنُ دُرَيْدٍ: وَمِمَّا شَذَّ عَنِ الْبَابِ الرُّبَّاحُ، يُقَالُ إِنَّهُ الْقِرْدُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "تجارة رابحة. وقد ربحت تجارتك، وربحت دارك إذا بعتها بربح. والبر خير تجارة رباحاً، والباز أضوأ الناس مصباحاً.",
-        "prototipe_benzerlik": 0.227,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تجارة رابحة. وقد ربحت تجارتك، وربحت دارك إذا بعتها بربح. والبر خير تجارة رباحاً، والباز أضوأ الناس مصباحاً.",
+        "prototipe_benzerlik": 0.346,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.227,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.346,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "acquire.v.05",

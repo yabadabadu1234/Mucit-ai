@@ -1083,8 +1083,8 @@
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "senator.n.01",
-    "dayanak_tanim": "a member of a senate",
+    "dayanak_synset": "old_man.n.01",
+    "dayanak_tanim": "a man who is very old",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1103,19 +1103,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمو",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "ورث من شيخه الكرم ومن أشياخه: من آبائه.",
-        "prototipe_benzerlik": 0.559,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ). ومنه الشاخة: المعتدل (كأن المقصود: الضامر، والضمور درجة من جفاف البدن). وأمّا قولهم: \"شيّخ عليه - ض: عابه وفضحه \"، فمن الأصل، كأن المقصود: ضعّفه، أي رماه بالضعف، أو أظهر عَواره، فالعَوَر والعَوَار فراغ."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شاخ شيخوخة وشيخ تشييخاً، وهو شيخ، وهي شيخة: عجوز، وهم شيوخ وأشياخ ومشيخة ومشايخ ومشيوخاء وشيخان، وفي حديث رقيقة \" شيخان قريش \". وأنشد المفضل:\nفلا تصرمي الشيخان يا حمز إنهم ... هم يعصمون الناس في اليوم ذي الوغى\nوقال:\nبني لي به الشيخان من آل دارم ... بناء يرى عند المجرة عالياً"
+      },
+      {
+        "kaynak": "Mekâyîs: شَيَخَ",
+        "metin": "(شَيَخَ) الشِّينُ وَالْيَاءُ وَالْخَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّيْخُ. تَقُولُ: هُوَ شَيْخٌ، وَهُوَ مَعْرُوفٌ، بَيِّنُ الشَّيْخُوخَةِ وَالشَّيَخِ وَالتَّشْيِيخِ. وَقَدْ قَالُوا أَيْضًا كَلِمَةً، قَالُوا: شَيَّخْتُ عَلَيْهِ."
       }
     ],
-    "ortalama_benzerlik": 0.559,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورث من شيخه الكرم ومن أشياخه: من آبائه.",
+        "prototipe_benzerlik": 0.418,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.418,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["adult.n.01", "age.v.03", "leader.n.01", "sow.v.01", "time_period.n.01"],
   "muhassas_tasnif": {

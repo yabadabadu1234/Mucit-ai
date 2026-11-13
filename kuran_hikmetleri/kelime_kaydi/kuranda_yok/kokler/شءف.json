@@ -751,19 +751,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شئفت رجله وشئفت إذا خرجت عليها الشأفة وهي قرحة، وقيل: تشققت مثل سئفت بالسين.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "بينهم شأفة: عداوة. وقد شئفت له مثل شنفت له إذا شنفت له إذا شنئته. واستأصل الله تعالى شأفتهم: عداوتهم وأذاهم. قال الكميت:",
-        "prototipe_benzerlik": 0.622,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شئفت رجله وشئفت إذا خرجت عليها الشأفة وهي قرحة، وقيل: تشققت مثل سئفت بالسين."
+      },
+      {
+        "kaynak": "Mekâyîs: شَأَفَ",
+        "metin": "(شَأَفَ) الشِّينُ وَالْهَمْزَةُ وَالْفَاءُ كَلِمَةٌ تَدُلُّ عَلَى الْبِغْضَةِ. مِنْ ذَلِكَ الشَّآفَةُ وَهِيَ الْبِغْضَةُ ; يُقَالُ شَأَفْتُهُ شَأَفًا. قَالَ: وَمِنَ الْبَابِ الشَّأْفَةُ، وَهِيَ قَرْحَةٌ تَخْرُجُ بِالْأَسْنَانِ فَتُكْوَى وَتَذْهَبُ، يَقُولُونَ: اسْتَأْصَلَ اللَّهُ شَأْفَتَهُ، يُقَالُ شُئِفَتْ رِجْلُهُ، فَمَعْنَاهُ أَذْهَبَهُ اللَّهُ كَمَا أَذْهَبَ ذَاكَ. وَإِنَّمَا سُمِّيَتْ شَأْفَةً لِمَا ذَكَرْنَاهُ مِنَ الْكَرَاهَةِ وَالْبِغْضَةِ."
       }
     ],
-    "ortalama_benzerlik": 0.622,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بينهم شأفة: عداوة. وقد شئفت له مثل شنفت له إذا شنفت له إذا شنئته. واستأصل الله تعالى شأفتهم: عداوتهم وأذاهم. قال الكميت:",
+        "prototipe_benzerlik": 0.622,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولم نفتأ كذلك كل يوم ... لشأفة واغرٍ مستأصلينا",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.466,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

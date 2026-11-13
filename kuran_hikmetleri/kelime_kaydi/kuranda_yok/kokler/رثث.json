@@ -1340,19 +1340,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "بِلَى ما كان متماسكًا من حبل وثوب وغيرهما وما يلزم البِلَى من تهرؤ وسوء حال (1).",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أرتثّ فلان: حمل من المعركة مثخناً ضعيفاً، من قولهم هم رثة الناس لضعفائهم شبهوا برثّة المتاع. ومر بيني فلان فارتثهم. قال:",
-        "prototipe_benzerlik": 0.456,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "بِلَى ما كان متماسكًا من حبل وثوب وغيرهما وما يلزم البِلَى من تهرؤ وسوء حال (1)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب رث، وحبل رث، وقد رث وأرثّ وفيه رثاثة. ونقلوا رثّة البيت وهي اسقاطه. واشترى رثّةً فربح فيها."
+      },
+      {
+        "kaynak": "Mekâyîs: رَثَّ",
+        "metin": "(رَثَّ) الرَّاءُ وَالثَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى إِخْلَاقٍ وَسُقُوطٍ. فَالرَّثُّ: الْخَلَقُ الْبَالِي. يُقَالُ حَبْلٌ رَثٌّ، وَثَوْبٌ رَثٌّ، وَرَجُلٌ رَثُّ الْهَيْئَةِ. وَقَدْ رَثَّ يَرِثُّ رَثَاثَةً وَرُثُوثَةً. وَالرِّثَّةُ: أَسْقَاطُ الْبَيْتِ مَنِ الْخُلْقَانِ، وَالْجَمْعُ رِثَثٌ. وَأَمَّا قَوْلُهُمُ ارْتُثَّ فِي الْمَعْرَكَةِ، فَهُوَ مِنْ هَذَا، وَذَلِكَ أَنَّ الْجَرِيحَ يَسْقُطُ كَمَا تَسْقُطُ الرِّثَّةُ ثُمَّ يُحْمَلُ وَهُوَ رَثِيثٌ.\nوَمِنَ الْبَابِ [الرِّثَّةُ] ، وَهُمُ الضُّعَفَاءُ مِنَ النَّاسِ. وَيُقَالُ الرِّثَّةُ: الْمَرْأَةُ الْحَمْقَاءُ. فَإِنْ صَحَّ ذَلِكَ فَهُوَ مِنَ الْبَابِ."
       }
     ],
-    "ortalama_benzerlik": 0.456,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرتثّ فلان: حمل من المعركة مثخناً ضعيفاً، من قولهم هم رثة الناس لضعفائهم شبهوا برثّة المتاع. ومر بيني فلان فارتثهم. قال:",
+        "prototipe_benzerlik": 0.456,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يممت ذا شرف يرتث نائله ... من البرية جيل بعده جيل",
+        "prototipe_benzerlik": 0.329,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقالت الخنساء: أترونني تاركةً بني عمي كأنهم عوالي الرّماح ومرتثة شيخ بني جشم. ورجل رث الهيئة. وكلام غث رث: سخيف. وفي هذا الخبر رثاثة وركاكة إذا لم يصح.",
+        "prototipe_benzerlik": 0.254,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.347,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

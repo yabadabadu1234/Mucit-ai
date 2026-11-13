@@ -1419,11 +1419,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "fill.v.01",
+    "ince": "impregnate.v.02",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "fill.v.01",
-    "dayanak_tanim": "make full, also in a metaphorical sense",
+    "dayanak_synset": "impregnate.v.02",
+    "dayanak_tanim": "infuse or fill completely",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -1437,19 +1437,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل شبعان، وامرأة شبعى، وقوم شباع، وتقول: قوم إذا جاعوا كاعوا، وتراهم سباعاً إذا كانوا شباعاً، وقد شبع شبعاً، وأصاب شبعا لبطنه وهو القدر الذي يشبع منه، وتروّوا وتشبّعوا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل شبعان، وامرأة شبعى، وقوم شباع، وتقول: قوم إذا جاعوا كاعوا، وتراهم سباعاً إذا كانوا شباعاً، وقد شبع شبعاً، وأصاب شبعا لبطنه وهو القدر الذي يشبع منه، وتروّوا وتشبّعوا."
+      },
+      {
+        "kaynak": "Mekâyîs: شَبِعَ",
+        "metin": "(شَبِعَ) الشِّينُ وَالْبَاءُ وَالْعَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى امْتِلَاءٍ فِي أَكْلٍ وَغَيْرِهِ. مِنْ ذَلِكَ شَبِعَ الرَّجُلُ شِبَعًا وَشِبْعًا، وَرَجُلٌ شَبْعَانُ. ثُمَّ اشْتُقَّ مِنْ ذَلِكَ أَشْبَعْتُ الثَّوْبَ صِبْغًا. وَيُقَالُ: امْرَأَةٌ شَبْعَى الْخَلْخَالِ، أَيْ مُمْتَلِئَةٌ، وَذَلِكَ مِنْ كَثْرَةِ لَحْمِ سَاقِهَا. وَمِنْ ذَلِكَ قَوْلُهُ - صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ -: «الْمُتَشَبِّعُ بِمَا لَيْسَ عِنْدَهُ كَلَابِسِ ثَوْبَيْ زُورٍ» ، يُرِيدُ الْمُتَكَثِّرَ بِمَا لَيْسَ عِنْدَهُ، وَهَذَا مَثَلٌ، كَأَنَّهُ أَرَادَ: يُظْهِرُ شِبَعًا وَهُوَ جَائِعٌ، وَذَلِكَ كَمَا تَقُولُ الْعَرَبُ: &quot; تَجَشَّأَ لُقْمَانُ مِنْ غَيْرِ شِبَعٍ &quot;. وَمِنَ الْبَابِ قَوْلُهُمْ: [ثَوْبٌ] شَبِيعُ الْغَزْلِ، أَيْ كَثِيرُهُ.\nوَمِمَّا يَجْرِي مَجْرَى التَّشْبِيهِ مِنْ هَذَا الْبَابِ قَوْلُهُمْ: شَبِعْتُ مِنْ هَذَا الْأَمْرِ وَرَوِيتُ، وَذَلِكَ [إِذَا] كَرِهْتَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "شبعت من هذا الأمر ورويت إذا مللته وكرهته. وأشبع الثوب صبغاً، وثوب شبيع الغزل: كثيره. وأشبع الرجل كلامه. وساق في هذا المعنى فصلاً مشبعاً. وكل ما وفّرته فقد أشبعته. وتشبع بأكثر مما عنده. وامرأة شبعى الوشاح والخلخال والدرع إذا كانت سمينة. وهذا بلد قد شبعت غنمه أي خصيب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شبعت من هذا الأمر ورويت إذا مللته وكرهته. وأشبع الثوب صبغاً، وثوب شبيع الغزل: كثيره. وأشبع الرجل كلامه. وساق في هذا المعنى فصلاً مشبعاً. وكل ما وفّرته فقد أشبعته. وتشبع بأكثر مما عنده. وامرأة شبعى الوشاح والخلخال والدرع إذا كانت سمينة. وهذا بلد قد شبعت غنمه أي خصيب.",
         "prototipe_benzerlik": 0.685,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.685,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "appoint.v.02",

@@ -1148,19 +1148,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو أشدق: واشع الشدقين وهما نهيتا الفم من الجانبين. وتقول: غضبوا فانقلبت أحداقهم، وأزبدت أشداقهم. ورجل أشدق: واسع الشدق، وقوم شدق، وفيهم شدق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو أشدق: واشع الشدقين وهما نهيتا\nالفم من الجانبين. وتقول: غضبوا فانقلبت أحداقهم، وأزبدت أشداقهم. ورجل أشدق: واسع الشدق، وقوم شدق، وفيهم شدق."
+      },
+      {
+        "kaynak": "Mekâyîs: شَدَقَ",
+        "metin": "(شَدَقَ) الشِّينُ وَالدَّالُ وَالْقَافُ أَصْلٌ يَدُلُّ عَلَى انْفِرَاجٍ فِي شَيْءٍ. مِنْ ذَلِكَ الشِّدْقُ لِلْإِنْسَانِ وَغَيْرِهِ. وَالشَّدَقُ: سَعَةُ الشِّدْقِ. وَرَجُلٌ أَشْدَقُ، وَخَطِيبٌ أَشْدَقُ. وَالْأَصْلُ فِي ذَلِكَ شِدْقُ الْوَادِي: عَرْضُهُ. وَيُقَالُ: نَزَلْنَا شِدْقَ الْعِرَاقِ، أَيْ نَاحِيَتَهُ، وَهُوَ الشِّدْقُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خطيب أشدق: مفوه كليم. ومنه قيل لعمرو بن سعيد: الأشدق، وتشدق في كلامه: تشبه بالأشدق تفصحاً. ونزلوا بشدق الوادي. ونزلنا بشدق العراق: بناحيته. وأقبل سيل فأفعم أشداق الأودية.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خطيب أشدق: مفوه كليم. ومنه قيل لعمرو بن سعيد: الأشدق، وتشدق في كلامه: تشبه بالأشدق تفصحاً. ونزلوا بشدق الوادي. ونزلنا بشدق العراق: بناحيته. وأقبل سيل فأفعم أشداق الأودية.",
         "prototipe_benzerlik": 0.197,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.197,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

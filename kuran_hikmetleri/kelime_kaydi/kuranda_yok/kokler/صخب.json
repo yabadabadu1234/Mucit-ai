@@ -1643,29 +1643,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في البيت صخب وهو اختلاط الأصوات، وقد صخب فلان يصخب فهو صخب وصاخب. وتقول: ما هو صاحب، إنما هو صاخب. وهو صخاب في الأسواق. واصطخبوا وتصاخبوا. وسمعت اصطخاب الطير. وصاخبه مصاخبةً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في البيت صخب وهو اختلاط الأصوات، وقد صخب فلان يصخب فهو صخب وصاخب. وتقول: ما هو صاحب، إنما هو\nصاخب. وهو صخاب في الأسواق. واصطخبوا وتصاخبوا. وسمعت اصطخاب الطير. وصاخبه مصاخبةً."
+      },
+      {
+        "kaynak": "Mekâyîs: صَخَبَ",
+        "metin": "(صَخَبَ) الصَّادُ وَالْخَاءُ وَالْبَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى صَوْتٍ عَالٍ. مِنْ ذَلِكَ الصَّخَبُ: الصَّوْتُ وَالْجَلَبَةُ. وَقَالَ بَعْضُهُمْ: رَجُلٌ صَخْبَانُ: كَثِيرُ الصَّخْبِ. وَمَاءٌ صَخِبُ الْآذِيِّ، إِذَا كَانَ لَهُ صَوْتٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "واد صخب الآذيّ، واصطخبت أمواجه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واد صخب الآذيّ، واصطخبت أمواجه. قال:",
         "prototipe_benzerlik": 0.596,
         "halka": "yakın"
       },
       {
-        "cumle": "مفعوعم صخب الآذي منبعق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مفعوعم صخب الآذي منبعق",
         "prototipe_benzerlik": 0.535,
         "halka": "yakın"
       },
       {
-        "cumle": "وعين صخبة إذا اصطفقت عند الجيشان. وعود صخب الأوتار.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعين صخبة إذا اصطفقت عند الجيشان. وعود صخب الأوتار.",
         "prototipe_benzerlik": 0.371,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.501,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["happening.n.01"],
   "muhassas_tasnif": {

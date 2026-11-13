@@ -841,19 +841,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نعب الغراب ينعب وينعب نعيباً وهو مدّه عنقه في نعاقه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نعب الغراب ينعب وينعب نعيباً وهو مدّه عنقه في نعاقه."
+      },
+      {
+        "kaynak": "Mekâyîs: نَعَبَ",
+        "metin": "(نَعَبَ) النُّونُ وَالْعَيْنُ وَالْبَاءُ: أَصْلَانِ صَحِيحَانِ: أَحَدُهُمَا يَدُلُّ عَلَى صَوْتٍ، وَالْآخَرُ عَلَى حَرَكَةٍ مِنَ الْحَرَكَاتِ.\nفَالْأَوَّلُ نَعَبَ الْغُرَابُ: صَوَّتَ، نَعْبًا وَنَعِيبًا وَنَعَبَانًا. وَالْآخَرُ فَرَسٌ مِنْعَبٌ: جَوَادٌ. وَنَاقَةٌ نَعَّابَةٌ: سَرِيعَةٌ. وَيُقَالُ: النَّعْبُ: أَنْ تُحَرِّكَ رَأْسَهَا فِي مَشْيِهَا إِلَى قُدَّامِهَا. وَهِيَ نَاقَةٌ نَعُوبٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نعبت الإبل: مدّت أعناقها في سيرها. وناقة نعوب ونعّابة، وإبل نواعب، وتقول: ويلٌ للفتيان والكواعب، من السحم والصهب النواعب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نعبت الإبل: مدّت أعناقها في سيرها. وناقة نعوب ونعّابة، وإبل نواعب، وتقول: ويلٌ للفتيان والكواعب، من السحم والصهب النواعب.",
         "prototipe_benzerlik": 0.618,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.618,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["cry.v.02", "shout.v.02"],
   "muhassas_tasnif": {

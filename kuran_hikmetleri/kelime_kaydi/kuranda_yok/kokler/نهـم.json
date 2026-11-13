@@ -37,24 +37,54 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نهم الأسد نهيماً وهو فوق الزّئير. ونهمت الإبل: زجرتها. وله في هذا الأمر نهمة: شهوة، وقضى منه نهمته. قال أوس: فلما قضى منهنّ في الصّنع نهمةً ... فلم يبق إلا أن تسنّ وتصقلا وهو منهوم به: لا يشبع منه. وقد نهم به أشدّ النّهمة: أولع به.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نهم الأسد نهيماً وهو فوق الزّئير. ونهمت الإبل: زجرتها. وله في هذا الأمر نهمة: شهوة، وقضى منه نهمته. قال أوس:\nفلما قضى منهنّ في الصّنع نهمةً ... فلم يبق إلا أن تسنّ وتصقلا\nوهو منهوم به: لا يشبع منه. وقد نهم به أشدّ النّهمة: أولع به."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "للقدر نهيم. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للقدر نهيم. قال الراعي:",
         "prototipe_benzerlik": 0.699,
         "halka": "yakın"
       },
       {
-        "cumle": "نهنهته عن كذا فتنهنه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فبات شريكاً في ركود مدامة ... يميت المحال أزّها ونهيمها",
+        "prototipe_benzerlik": 0.399,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال جرير:",
+        "prototipe_benzerlik": 0.173,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والقدر تنهم بالمحال وترتمي ... بالزور همهمة الحصان الأدهم",
+        "prototipe_benzerlik": 0.824,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن هـ ن هـ",
+        "prototipe_benzerlik": 0.578,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نهنهته عن كذا فتنهنه.",
         "prototipe_benzerlik": 0.094,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.397,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.461,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -735,19 +735,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أتتهم طحمة السيل: دفاعه ومعظمه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أتتهم طحمة السيل: دفاعه ومعظمه."
+      },
+      {
+        "kaynak": "Mekâyîs: طَحَمَ",
+        "metin": "(طَحَمَ) الطَّاءُ وَالْحَاءُ وَالْمِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَجَمُّعٍ وَتَكَاثُفٍ. مِنْ ذَلِكَ الطُّحْمَةُ مِنَ النَّاسِ، وَهِيَ الْجَمَاعَةُ الْكَثِيفَةُ. وَطُحْمَةُ اللَّيْلِ وَطَحْمَتُهُ، وَطُحْمَةُ السَّيْلِ وَطَحْمَتُهُ: مُعْظَمُهُ. قَالَ الْخَلِيلُ: طَحْمَةُ الْفِتْنَةِ: جَوْلَةُ النَّاسِ عِنْدَهَا. وَيُقَالُ لِلرَّجُلِ الشَّدِيدِ الْعِرَاكِ: طُحَمَةٌ. وَالْبَابُ كُلُّهُ وَاحِدٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أشدّ من حطمة السيل، تحت طحمة الليل؛ وهي معظم سواده. وطرقتنا طحمة من الناس. ودفعوا إلى طحمة الفتنة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشدّ من حطمة السيل، تحت طحمة الليل؛ وهي معظم سواده. وطرقتنا طحمة من الناس. ودفعوا إلى طحمة الفتنة.",
         "prototipe_benzerlik": 0.479,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.479,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

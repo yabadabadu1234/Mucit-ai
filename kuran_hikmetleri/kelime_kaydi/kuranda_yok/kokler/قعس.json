@@ -1208,24 +1208,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل أقعس، وبه قعس وهو دخول الظهر وخروج الصدر، وتقاعس الرجل: أخرج صدره. وتقول: إذا رأيت أبكاراً لعساً، وعجائز قعساً، فقل لعاً وتعساً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل أقعس، وبه قعس وهو دخول الظهر وخروج الصدر، وتقاعس الرجل: أخرج صدره. وتقول: إذا رأيت أبكاراً لعساً، وعجائز قعساً، فقل لعاً وتعساً."
+      },
+      {
+        "kaynak": "Mekâyîs: قَعَسَ",
+        "metin": "(قَعَسَ) الْقَافُ وَالْعَيْنُ وَالسِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ثَبَاتٍ وَقُوَّةٍ، وَيَتَوَسَّعُونَ فِي ذَلِكَ عَلَى مَعْنَى الِاسْتِعَارَةِ، فَيُقَالُ لِلرَّجُلِ الْمَنِيعِ الْعَزِيزِ: أَقْعَسُ\nوَلِلْغَلِيظِ الْعُنُقِ قَوْعَسُ. [وَ] الْأَقْعَسَانِ: جَبَلَانِ طَوِيلَانِ. وَلَيْلٌ أَقْعَسُ، أَيْ طَوِيلٌ ثَابِتٌ، كَأَنَّهُ لَا يَكَادُ يَبْرَحُ. وَالْإِقْعَاسُ: الْغِنَى وَالْإِكْثَارُ. وَعِزَّةٌ قَعْسَاءُ: ثَابِتَةٌ لَا تَزُولُ أَبَدًا. [قَالَ] :\nوَعِزَّةٌ قَعْسَاءُ لَنْ تُنَاصَى\nوَالْعِزُّ الْأَقْعَسُ فِي الْمُذَكَّرِ.\nوَمِمَّا حُمِلَ عَلَى هَذَا: الْقَعَسُ: دُخُولُ الْعُنُقِ فِي الصَّدْرِ حَتَّى يَصِيرَ خِلَافَ الْحَدَبِ، لِأَنَّ صَدْرَهُ كَأَنَّهُ يَرْتَفِعُ. يُقَالُ: تَقَاعَسَ تَقَاعُسًا، وَاقْعَنْسَسَ اقْعِنْسَاسًا. قَالَ:\nبِئْسَ مُقَامُ الشَّيْخِ أَمْرِسْ أَمْرِسِ ... إِمَّا عَلَى قَعْوٍ وَإِمَّا اقْعَنْسِسِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عن أقعس، وعزة قعساء. وتقاعس عن الأمر. وليلٌ أقعس: كأنه لا يبرح طولاً، وقد تقاعس الليل، كقولك: برك الليل. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عن أقعس، وعزة قعساء. وتقاعس عن الأمر. وليلٌ أقعس: كأنه لا يبرح طولاً، وقد تقاعس الليل، كقولك: برك الليل. قال النابغة:",
         "prototipe_benzerlik": 0.6,
         "halka": "yakın"
       },
       {
-        "cumle": "كما يؤوب راعي الماشية إذا أمسى.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقاعس حتى قلت ليس بمنقض ... وليس الذي يرعى النجوم بآيب",
+        "prototipe_benzerlik": 0.419,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كما يؤوب راعي الماشية إذا أمسى.",
         "prototipe_benzerlik": 0.311,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.455,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.443,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

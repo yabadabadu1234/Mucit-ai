@@ -915,24 +915,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "فراغ في أثناء الشيء الصلب أو الغليظ: كتجوف قشر البيضة الصلب بعد ذهاب قُوبها (الفرخ الذي كان فيها وغلظه نسبيّ فهو كائن حيّ في قشرة رقيقة وإن كانت ذات صلابة ما)، وكذلك البئرُ في الصخرة نشأت بقلع كتلة شديدة منها، وكذلك تقيُّضُ الجِدار، وانقياضُ الركية بذهاب الشدة",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "ما أقايض بك أحداً. قال الشمّاخ:",
-        "prototipe_benzerlik": 0.286,
-        "halka": "uzak"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "فراغ في أثناء الشيء الصلب أو الغليظ: كتجوف قشر البيضة الصلب بعد ذهاب قُوبها (الفرخ الذي كان فيها وغلظه نسبيّ فهو كائن حيّ في قشرة رقيقة وإن كانت ذات صلابة ما)، وكذلك البئرُ في الصخرة نشأت بقلع كتلة شديدة منها، وكذلك تقيُّضُ الجِدار، وانقياضُ الركية بذهاب الشدة التي كانت سارية فيهما. ومن هذا \"قايضه: أعطاه سِلْعَةَ وأخذ عِوَضَها سلعة \"لأن كلًّا منهما يخرج سلعته من حوزته (يفرغها) إلى الآخر. ومن هذا \"هما قَيْضَان - بالفتح: مِثْلان وهذا قَيْضٌ لهذا: مساوٍ له \". وأما قوله تعالى: {وَمَنْ يَعْشُ عَنْ ذِكْرِ الرَّحْمَنِ نُقَيِّضْ لَهُ شَيْطَانًا} [الزخرف: 36]، {وَقَيَّضْنَا لَهُمْ قُرَنَاءَ (4/1800) فَزَيَّنُوا لَهُمْ ....} [فصلت: 25] فهي من الفراغ في الأثناء أي أتحنا للشيطان والقرناء فراغا أي مكانا بينهم. وحسبهم بها عقوبة لأن الشيطان والقرناء جوانب الشرّ كما قال تعالى: {أَلَمْ تَرَ أَنَّا أَرْسَلْنَا الشَّيَاطِينَ عَلَى الْكَافِرِينَ تَؤُزُّهُمْ أَزًّا} [مريم: 83]."
       },
       {
-        "cumle": "وعن معاوية: لو أعطيت ملء الدهناء رجالاً قياضاً بيزيد ما رضيتهم.",
-        "prototipe_benzerlik": 0.317,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قيّض الله له قرين سوء. وقايضته بكذا: عاوضته. وهما قيضان: مثلان يصلح كلّ واعحد منهما أن يكون عوضاً من الآخر. ومحّ البيض، خير من القيض. وقاض الطائر البيضة فانقاضت، وقاضها الفرخ فخرج، وبيضة مقيضة ومنقاضة."
       }
     ],
-    "ortalama_benzerlik": 0.301,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما أقايض بك أحداً. قال الشمّاخ:",
+        "prototipe_benzerlik": 0.56,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجالاً مضوا عنّي فلست مقايضاً ... بهم أبداً من سائر الناس معشراً",
+        "prototipe_benzerlik": 0.386,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعن معاوية: لو أعطيت ملء الدهناء رجالاً قياضاً بيزيد ما رضيتهم.",
+        "prototipe_benzerlik": 0.713,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.553,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["deal.v.06", "exchange.v.01", "trade.v.02", "trade.v.04"],
   "muhassas_tasnif": {

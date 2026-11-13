@@ -1869,11 +1869,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "discourtesy.n.03",
-    "dayanak_tanim": "a lack of politeness; a failure to show regard for others; wounding the feelings or others",
+    "ince": "quality.n.01",
+    "orta": "noun.attribute",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "asperity.n.01",
+    "dayanak_tanim": "something hard to endure",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1887,34 +1887,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خشن الشيء واخشوشن، وهو خشن وخشين. واخشوشنوا: كونوا خشنين في ملابسكم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خشن الشيء واخشوشن، وهو خشن وخشين. واخشوشنوا: كونوا خشنين في ملابسكم."
+      },
+      {
+        "kaynak": "Mekâyîs: خَشِنَ",
+        "metin": "(خَشِنَ) الْخَاءُ وَالشِّينُ وَالنُّونُ أَصْلٌ وَاحِدٌ، وَهُوَ خِلَافُ اللِّينِ. يُقَالُ شَيْءٌ خَشِنٌ. وَلَا يَكَادُونَ يَقُولُونَ فِي الْحَجَرِ إِلَّا الْأَخْشَنَ. قَالَ:\n[وَ] الْحَجَرُ الْأَخْشَنُ وَالثِّنَايَهْ\nوَاخْشَوْشَنَ الرَّجُلُ، إِذَا تَمَاتَنَ وَتَرَكَ التُّرْفَةَ. وَكَتِيبَةٌ خَشْنَاءُ، أَيْ كَثِيرَةُ السِّلَاحِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خشن على صاحبه، وتخشن عليه، وخاشنه مخاشنة، وتخاشن القوم، وفي أخلافه خشونة. ورجل أخشن: شكس. وخشن صدره وبصدره. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خشن على صاحبه، وتخشن عليه، وخاشنه مخاشنة، وتخاشن القوم، وفي أخلافه خشونة. ورجل أخشن: شكس. وخشن صدره وبصدره. قال:",
         "prototipe_benzerlik": 0.443,
         "halka": "orta"
       },
       {
-        "cumle": "وخشنت صدرا جيبه لك ناصح",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخشنت صدرا جيبه لك ناصح",
         "prototipe_benzerlik": 0.504,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وخشّن كلامه معه. واستخشن مسه فأعرض عنه. وفلان خشن في دينه إذا كان متشدّداً فيه. وسنة خشناء: قحطة. وأرض خشناء: فيها رمل وحجارة. يقال: أنبط بئره في خشناء من",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وخشّن كلامه معه. واستخشن مسه فأعرض عنه. وفلان خشن في دينه إذا كان متشدّداً فيه. وسنة خشناء: قحطة. وأرض خشناء: فيها رمل وحجارة. يقال: أنبط بئره في خشناء من",
         "prototipe_benzerlik": 0.324,
         "halka": "uzak"
       },
       {
-        "cumle": "الأرض. ولفلان سياسة خشناء. وكتيبة خشناء: كثيرة السلاح.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الأرض. ولفلان سياسة خشناء. وكتيبة خشناء: كثيرة السلاح.",
         "prototipe_benzerlik": 0.444,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.429,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "difficulty.n.04", "shrivel.v.01"],
   "muhassas_tasnif": {

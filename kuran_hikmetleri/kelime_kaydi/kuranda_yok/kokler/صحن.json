@@ -1091,34 +1091,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قعد في صحن الدار وهو ساحة وسطها ومستواه ومتسعه. وسرنا في صحن الفلاة وصحون الفلا. وما بصحن العراق مثله. وسقاهم في الصحن وهو عس عريض قصير الجدار كالجام. وأطعمهم الصحناة والحصناء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "جرى الدمع على صحني وجنتيه. وفرس واسع الصحن وهو جوف الحافر الذي يقال له: السكرجة.",
-        "prototipe_benzerlik": 0.51,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قعد في صحن الدار وهو ساحة وسطها ومستواه ومتسعه. وسرنا في صحن الفلاة وصحون الفلا. وما بصحن العراق مثله. وسقاهم في الصحن وهو عس عريض قصير الجدار كالجام. وأطعمهم الصحناة والحصناء."
       },
       {
-        "cumle": "وصحا من سكره صحواً وصحوا، وأصحيته أنا من سكره. قال:",
+        "kaynak": "Mekâyîs: صَحَنَ",
+        "metin": "(صَحَنَ) الصَّادُ وَالْحَاءُ وَالنُّونُ أُصَيْلٌ يَدُلُّ عَلَى اتِّسَاعٍ فِي شَيْءٍ. مِنْ ذَلِكَ الصَّحْنُ: وَسْطُ الدَّارِ. وَيَقُولُونَ: جَوْبَةٌ تَنْجَابُ فِي الْحَرَّةِ. وَبِذَلِكَ شُبِّهَ الْعُسُّ الْعَظِيمُ فَقِيلَ لَهُ: صَحْنٌ.\nوَمِمَّا شَذَّ عَنِ الْبَابِ قَوْلُهُمْ: صَحَنْتُ بَيْنَ الْقَوْمِ، إِذَا أَصْلَحْتَ بَيْنَهُمْ. وَرُبَّمَا قَالُوا: صَحَنْتُهُ شَيْئًا، إِذَا أَعْطَيْتَهُ. وَيَقُولُونَ: صَحَنَهُ صَحَنَاتٍ، أَيْ ضَرَبَهُ ضَرَبَاتٍ. وَنَاقَةٌ صَحُونٌ، أَيْ رَمُوحٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جرى الدمع على صحني وجنتيه. وفرس واسع الصحن وهو جوف الحافر الذي يقال له: السكرجة.",
+        "prototipe_benzerlik": 0.51,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ص ح",
+        "prototipe_benzerlik": 0.266,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصحا من سكره صحواً وصحوا، وأصحيته أنا من سكره. قال:",
         "prototipe_benzerlik": 0.272,
         "halka": "uzak"
       },
       {
-        "cumle": "وأصحت السماء، والسماء مصحية، وأصحى يومنا، ويومنا، ويوم مصح، وهذا يوم صحو: ووجهه كمصحاة اللجين وهي نحو الجام يشرب به.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجدتني ألوي بعيد القسر ... شغباً وأصحى نشوات الخمر",
+        "prototipe_benzerlik": 0.426,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأصحت السماء، والسماء مصحية، وأصحى يومنا، ويومنا، ويوم مصح، وهذا يوم صحو: ووجهه كمصحاة اللجين وهي نحو الجام يشرب به.",
         "prototipe_benzerlik": 0.454,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: صحا العاشق من عشقه إذا سلا وتقول: فيه مسلاة من كرب الهم، ومصحاة من سكر الغنم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: صحا العاشق من عشقه إذا سلا وتقول: فيه مسلاة من كرب الهم، ومصحاة من سكر الغنم.",
         "prototipe_benzerlik": 0.306,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.386,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.372,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "food.n.01"],
   "muhassas_tasnif": {

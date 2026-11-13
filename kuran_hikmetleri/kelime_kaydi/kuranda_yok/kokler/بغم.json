@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "للظبية والناقة بغام، وهو أرخم صوتها، وهي تبغم ولدها فهي باغمة وهو مبغوم، وظباء بواغم وتبغمت. ومررت بروضة يتباغم فيها الظباء. ومررته بغزلان يتباغمن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "للظبية والناقة بغام، وهو أرخم صوتها، وهي تبغم ولدها فهي باغمة وهو مبغوم، وظباء بواغم وتبغمت. ومررت بروضة يتباغم فيها الظباء. ومررته بغزلان يتباغمن."
+      },
+      {
+        "kaynak": "Mekâyîs: بَغَمَ",
+        "metin": "(بَغَمَ) الْبَاءُ وَالْغَيْنُ وَالْمِيمُ أَصْلٌ يَسِيرٌ، وَهُوَ صَوْتٌ وَشَبِيهٌ بِهِ لَا يَتَحَصَّلُ. فَالْبُغَامُ صَوْتُ النَّاقَةِ تُرَدِّدُهُ، وَصَوْتُ الظَّبْيَةِ بُغَامٌ أَيْضًا. وَظَبْيَةٌ بَغُومٌ. قَالَ الشَّاعِرُ فِي النَّاقَةِ:\nحَسِبْتَ بُغَامَ رَاحِلَتِي عَنَاقًا ... وَمَا هِيَ وَيْبَ غَيْرِكَ بِالْعَنَاقِ\nوَمِمَّا يُحْمَلْ عَلَيْهِ قَوْلُهُمْ بَغَمْتُ لِلرَّجُلِ بِالْحَدِيثِ: إِذَا لَمْ تُفَسِّرْهُ لَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "امرأة بغوم: رخيمة الصوت. وباغمها مباغمة وهو أن يغازلها بكلام رقيق. وكانت بيننا مباغمة ومفاغمة. وهي الملائمة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "امرأة بغوم: رخيمة الصوت. وباغمها مباغمة وهو أن يغازلها بكلام رقيق. وكانت بيننا مباغمة ومفاغمة. وهي الملائمة.",
         "prototipe_benzerlik": 0.761,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.761,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

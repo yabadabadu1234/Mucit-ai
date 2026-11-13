@@ -1549,10 +1549,10 @@
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
     "ince": "part.n.03",
-    "orta": "noun.body",
+    "orta": "noun.animal",
     "ust": "canlı ve beden",
-    "dayanak_synset": "tooth.n.01",
-    "dayanak_tanim": "hard bonelike structures in the jaws of vertebrates; used for biting and chewing or for attack and defense",
+    "dayanak_synset": "tooth.n.03",
+    "dayanak_tanim": "toothlike structure in invertebrates found in the mouth or alimentary canal or on a shell",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1566,19 +1566,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ضرسه وضرّسه: عضه عضاً شديداً. وضرس السبع فريسته إذا مضغ لحمها ولم يبتلعه. وضرس قدحه: أثر فيه بأضراسه، وقدح مضروس. وضرست أسنانه من الحموضة، وأضرستها، وبي ضرس. وناقة ضروس: تعض حالبها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ضرسه وضرّسه: عضه عضاً شديداً. وضرس السبع فريسته إذا مضغ لحمها ولم يبتلعه. وضرس قدحه: أثر فيه بأضراسه، وقدح مضروس. وضرست أسنانه من الحموضة، وأضرستها، وبي ضرس. وناقة ضروس: تعض حالبها."
+      },
+      {
+        "kaynak": "Mekâyîs: ضَرَسَ",
+        "metin": "(ضَرَسَ) الضَّادُ وَالرَّاءُ وَالسِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قُوَّةٍ وَخُشُونَةٍ، وَقَدْ يَشِذُّ عَنْهُ مَا يُخَالِفُهُ. فَالضِّرْسُ مِنَ الْأَسْنَانِ، سُمِّيَ بِذَلِكَ لِقُوَّتِهِ عَلَى سَائِرِ الْأَسْنَانِ. وَيُقَالُ: ضَرَسَهُ يَضْرِسُهُ، إِذَا تَنَاوَلَهُ بِضِرْسِهِ. وَقَالَ:\nإِذَا أَنْتَ عَادَيْتَ الرِّجَالَ فَلَا تَكُنْ ... لَهُمْ جَزَرًا وَاجْرَحْ بِنَابِكَ وَاضْرُسِ\nوَالضِّرْسُ: مَا خَشُنَ مِنَ الْآكَامِ. وَيُقَالُ: تَضَارَسَ الْبِنَاءُ، إِذَا لَمْ يَسْتَوِ. وَقَالَ بَعْضُهُمْ: ضَرَّسَتْ فُلَانًا الْخُطُوبُ. وَيُقَالُ: بِئْرٌ مَضْرُوسَةٌ: مُطَوِّيَةٌ بِحِجَارَةٍ. وَنَاقَةٌ ضَرُوسٌ: تَعَضُّ حَالِبَهَا. وَرَجُلٌ ضَرِسٌ: صَعْبُ الْخُلُقِ. وَيُقَالُ: أَضْرَسَهُ الْأَمْرُ، إِذَا أَقْلَقَهُ. وَالْمُضَرَّسُ: ضَرْبٌ مِنَ الرَّيْطِ، وَكَأَنَّهُ سُمِّيَ بِذَلِكَ لِأَنَّهُ فِيهِ صُوَرًا كَأَنَّهَا أَضْرَاسٌ. وَالضَّرَسُ: خَوْرٌ فِي الضِّرْسِ.\nوَمِمَّا شَذَّ عَنِ الْبَابِ وَقَدْ يُمْكِنُ أَنْ يَتَمَحَّلَ لَهُ قِيَاسٌ: الضِّرْسُ: الْمَطْرَةُ الْقَلِيلَةُ، وَالْجَمْعُ: ضُرُوسٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وقعت في الأرض ضروس من مطر، وأصابهم ضرس من الوسمي وضروس: للقليل المتفرق. وضرسهم الزمان وضرسهم: عضهم. ورجل مجرس مضرس: مجرب، وقد ضرسته الخطوب والحروب، كما تقول: منجذٌ: من الناجذ. وحرب ضروس: من الناقة الضروس كما يقال: زبون، وقد ضرس نابها. وبفلان ضرس وضرم وهو غضب الجوع، وإنه لضرس من الجوع. وفلان ضرس شرس:",
-        "prototipe_benzerlik": 0.969,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقعت في الأرض ضروس من مطر، وأصابهم ضرس من الوسمي وضروس: للقليل المتفرق. وضرسهم الزمان وضرسهم: عضهم. ورجل مجرس مضرس: مجرب، وقد ضرسته الخطوب والحروب، كما تقول: منجذٌ: من الناجذ. وحرب ضروس: من الناقة الضروس كما يقال: زبون، وقد ضرس نابها. وبفلان ضرس وضرم وهو غضب الجوع، وإنه لضرس من الجوع. وفلان ضرس شرس: صعب الخلق. واتق الناقة بجنّ ضراسها: بحدثان نتاجها وسوء خلقها على من يدنو منها لولوعها بولدها. وفي الياقوتة تضريس وهو تحزيز. وتضارس البناء إذا لم يستو ولم يتسق.",
+        "prototipe_benzerlik": 0.681,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.969,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.681,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01"],
   "muhassas_tasnif": {

@@ -1591,8 +1591,8 @@
     "ince": "substance.n.07",
     "orta": "noun.food",
     "ust": "canlı ve beden",
-    "dayanak_synset": "fodder.n.02",
-    "dayanak_tanim": "coarse food (especially for livestock) composed of entire plants or the leaves and stalks of a cereal crop",
+    "dayanak_synset": "feed.n.01",
+    "dayanak_tanim": "food for domestic livestock",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1606,24 +1606,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "علف الدابة والدجاجة والحمام وغيرها، واعتلفت. وهو يبيع العلوفة والعلوفات. وله العلوفة والعلائف.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "علف الدابة والدجاجة والحمام وغيرها، واعتلفت. وهو يبيع العلوفة والعلوفات. وله العلوفة والعلائف."
+      },
+      {
+        "kaynak": "Mekâyîs: عَلَفَ",
+        "metin": "(عَلَفَ) الْعَيْنُ وَاللَّامُ وَالْفَاءُ لَيْسَ بِأَصْلٍ كَثِيرٍ، إِنَّمَا هُوَ الْعَلَفُ. تَقُولُ: عَلَفْتُ الدَّابَّةَ. وَيُقَالُ لِلْغَنَمِ الَّتِي تُعْلَفُ: عَلُوفَةٌ. وَالْعُلَّفُ: ثَمَرُ الطَّلْحِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قولهم للأكول: معتلف، وقد اعتلف. قال الحماسيّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم للأكول: معتلف، وقد اعتلف. قال الحماسيّ:",
         "prototipe_benzerlik": 0.225,
         "halka": "uzak"
       },
       {
-        "cumle": "وهو علف السباع وجزر السباع.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا كنت في قوم عدّى لست منهم ... فكل ما علفت من خبيثٍ وطيّب",
+        "prototipe_benzerlik": 0.245,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو علف السباع وجزر السباع.",
         "prototipe_benzerlik": 0.337,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.281,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.269,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["feed.v.06", "food.n.01"],
   "muhassas_tasnif": {

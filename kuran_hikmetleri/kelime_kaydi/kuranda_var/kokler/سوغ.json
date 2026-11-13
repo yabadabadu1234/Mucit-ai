@@ -1296,11 +1296,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "permit.v.01",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "license.v.01",
-    "dayanak_tanim": "authorize officially",
+    "ince": "cognition.n.01",
+    "orta": "noun.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "justification.n.01",
+    "dayanak_tanim": "something (such as a fact or circumstance) that shows an action to be reasonable or necessary",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1319,19 +1319,38 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مرور في مجرى جوفيّ بيسر ورقّة لتخلل ورطوبة: كما في الاستعمالات المذكورة. قال تعالى: {يَتَجَرَّعُهُ وَلَا يَكَادُ يُسِيغُهُ} [إبراهيم: 17]. لا يكاد يبتلعه. ومنه: \"شراب سائغ وأَسْوَغُ: عذْب \" (لسهولة سوغه بسبب صفائه ولطف طعمه) {عَذْبٌ فُرَاتٌ سَائِغٌ شَرَابُهُ} ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "لا يسوغ لك أن تفعل كذا: لا يجوز. وسوغته ما أصاب: جوزته له. ولا أجد له مساغاً. قال المتلمس:",
-        "prototipe_benzerlik": 0.464,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مرور في مجرى جوفيّ بيسر ورقّة لتخلل ورطوبة: كما في الاستعمالات المذكورة. قال تعالى: {يَتَجَرَّعُهُ وَلَا يَكَادُ يُسِيغُهُ} [إبراهيم: 17]. لا يكاد يبتلعه. ومنه: \"شراب سائغ وأَسْوَغُ: عذْب \" (لسهولة سوغه بسبب صفائه ولطف طعمه) {عَذْبٌ فُرَاتٌ سَائِغٌ شَرَابُهُ} [فاطر: 12]. ومن المرور الجوفي السهل قولهم: \"سُغْ في الأرض ما وجدتَ مَساغًا، أي: ادخل فيها ما وجدتَ مَدْخلًا \". وأما \"سَوْغ الرجل وسَيْغه - بالفتح: الذي يُولَد على أثره لم يكن بينهما وَلد \"فمن الأصل: كأن الأول فتح المجرى للثاني، أو أنّ الثاني أمرّ الأول وأنساه. كما قيل: \"أَسْوَغَ الولد أخاه: وُلد معه \"."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ساغ له الطعام والشراب، وأساغه الله تعالةى، وماء سائغ وسيغ.\nقال عويف القوافي:\nفسوف أجزيك بشرب شربا ... لا سيغاً ولا هنياً عذبا\nوهذا سوغ هذا: لأخيه الذي يليه في الولادة."
+      },
+      {
+        "kaynak": "Mekâyîs: سَوُغَ",
+        "metin": "(سَوُغَ) السِّينُ وَالْوَاوُ وَالْغَيْنُ أَصْلٌ يَدُلُّ عَلَى سُهُولَةِ الشَّيْءِ وَاسْتِمْرَارِهِ فِي الْحَلْقِ خَاصَّةً، ثُمَّ يُحْمَلُ عَلَى ذَلِكَ. يُقَالُ سَاغَ الشَّرَابُ فِي الْحَلْقِ سَوْغًا. وَأَسَاغَ اللَّهُ جَلَّ جَلَالُهُ. وَمِنَ الْمُشْتَقِّ مِنْهُ قَوْلُهُمْ: أَصَابَ فُلَانٌ كَذَا فَسَوَّغْتُهُ إِيَّاهُ. وَأَمَّا قَوْلُهُمْ هَذَا سَوْغُ هَذَا، أَيْ مِثْلُهُ، فَيَجُوزُ أَنْ يَكُونَ مِنْ هَذَا، أَيْ أَنَّهُ يَجْرِي مَجْرَاهُ وَيَسْتَمِرُّ اسْتِمْرَارَهُ. وَيَجُوزُ أَنْ يَكُونَ السِّينُ مُبْدَلَةً مِنْ صَادٍ، كَأَنَّهُ صِيغَ صِيَاغَتَهُ. وَقَدْ ذُكِرَ فِي بَابِهِ."
       }
     ],
-    "ortalama_benzerlik": 0.464,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا يسوغ لك أن تفعل كذا: لا يجوز. وسوغته ما أصاب: جوزته له. ولا أجد له مساغاً. قال المتلمس:",
+        "prototipe_benzerlik": 0.527,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأطرق إطراق الشجاع ولو رأى ... مساغاً لنابيه الشجاع لصمما",
+        "prototipe_benzerlik": 0.658,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.592,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "authorize.v.01", "information.n.02"],
   "muhassas_tasnif": {

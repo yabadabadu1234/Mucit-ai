@@ -1216,19 +1216,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نوى القوم منزلاً بمكان كذا وانتووه. ونووا نيّة قذفاً، ونوًى غربةً. وأنا نويّك أي نويت المسافرة معك ومرافقتك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نوى القوم منزلاً بمكان كذا وانتووه. ونووا نيّة قذفاً، ونوًى غربةً. وأنا نويّك أي نويت المسافرة معك ومرافقتك."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نواك الله بالخير: قصدك به وأوصله إليك. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نواك الله بالخير: قصدك به وأوصله إليك. قال:",
         "prototipe_benzerlik": 0.315,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يا عمرو أحسن نواك الله بالرّشد ... واقرأ السّلام على الأنقاء بالثّمد",
+        "prototipe_benzerlik": 0.167,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.315,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.241,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "body_part.n.01",

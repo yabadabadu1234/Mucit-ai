@@ -1304,8 +1304,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "encoding.n.01",
-    "dayanak_tanim": "the activity of converting data or information into code",
+    "dayanak_synset": "cryptography.n.02",
+    "dayanak_tanim": "act of writing in code or cipher",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1319,24 +1319,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قعدوا على شفير النهر والبئر والقبر. وقرحت أشفار عينيه من البكاء وهي منابت الهدب الواحد شفر بالضم وقد يفتح. وسيف كليل الشفرة. وسيوف كليلة الشفار. وشحذ الجزار شفرته وشفاره.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قعدوا على شفير النهر والبئر والقبر. وقرحت أشفار عينيه من البكاء وهي منابت الهدب الواحد شفر بالضم وقد يفتح. وسيف كليل الشفرة. وسيوف كليلة الشفار. وشحذ الجزار شفرته وشفاره."
+      },
+      {
+        "kaynak": "Mekâyîs: شَفَرَ",
+        "metin": "(شَفَرَ) الشِّينُ وَالْفَاءُ وَالرَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى حَدِّ الشَّيْءِ وَحَرْفِهِ. مِنْ ذَلِكَ شَفْرَةُ السَّيْفِ: حَدُّهُ. وَشَفِيرُ الْبِئْرِ وَشَفِيرُ النَّهْرِ: الْحَدُّ.\nوَالشُّفْرُ: مَنْبِتُ الْهُدْبِ مِنَ الْعَيْنِ، وَالْجَمْعُ أَشْفَارٌ. وَشُفْرُ الْفَرْجِ: حُرُوفُ أَشَاعِرِهِ. وَمِشْفَرُ الْبَعِيرِ كَالْجَحْفَلَةِ مِنَ الْفَرَسِ. وَالشَّفْرَةُ مَعْرُوفَةٌ. هَذَا كُلُّهُ قِيَاسٌ وَاحِدٌ. وَأَمَّا قَوْلُهُمْ: مَا بِالدَّارِ شُفْرٌ، وَقَوْلُ مَنْ قَالَ: مَعْنَاهُ لَيْسَ بِهَا أَحَدٌ فَلَيْسَ الْأَمْرُ كَذَلِكَ، إِنَّمَا يُرَادُ بِالشُّفْرِ شُفْرَ الْعَيْنِ، وَالْمَعْنَى مَا بِهَا ذُو شُفْرٍ، كَمَا يُقَالُ مَا بِهَا عَيْنٌ تَطْرُفُ، يُرَادُ مَا بِهَا ذُو عَيْنٍ. وَالَّذِي حُكِيَ عَنْ أَبِي زَيْدٍ أَنَّ شَفْرَةَ الْقَوْمِ أَصْغَرُهُمْ، مِثْلُ الْخَادِمِ، فَهَذَا تَشْبِيهٌ، شُبِّهَ بِالشَّفْرَةِ الَّتِي تُسْتَعْمَلُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" ما بالدار شفر \". وما رأيت منهم شفرا أي أحداً وهو من شفر العين أي ذا شفر كقولهم: ما بها عين تطرف. قال توبة ابن مضرس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" ما بالدار شفر \". وما رأيت منهم شفرا أي أحداً وهو من شفر العين أي ذا شفر كقولهم: ما بها عين تطرف. قال توبة ابن مضرس:",
         "prototipe_benzerlik": 0.538,
         "halka": "yakın"
       },
       {
-        "cumle": "و\" ما تركت السنة شفرا ولا ظفراً \" أي شيئاً وقد فتحوا شفراً وقالوا طفرا بالفتح على الإتباع.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسائلة عن توبة بن مضرس ... وهان عليها ما أصاب به الدهر",
+        "prototipe_benzerlik": 0.923,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رأت إخوتي بعد التوافي تفرّقوا ... فلم يبق إلا واحداً مهم شفر",
+        "prototipe_benzerlik": 0.112,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "و\" ما تركت السنة شفرا ولا ظفراً \" أي شيئاً وقد فتحوا شفراً وقالوا طفرا بالفتح على الإتباع.",
         "prototipe_benzerlik": 0.167,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.353,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.435,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01", "code.v.02", "writing.n.04"],
   "muhassas_tasnif": {

@@ -37,44 +37,108 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "له هرّ وهرّةٌ: ذكر وأنثى. وكلب هرّار، وهرّ هريراً وهو دون النباح، وهرّت إليّ الكلاب، وهرّتني الكلاب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له هرّ وهرّةٌ: ذكر وأنثى. وكلب هرّار، وهرّ هريراً وهو دون النباح، وهرّت إليّ الكلاب، وهرّتني الكلاب."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قول حرام بن وابصة الفزاري:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول حرام بن وابصة الفزاري:",
         "prototipe_benzerlik": 0.286,
         "halka": "uzak"
       },
       {
-        "cumle": "يريد أنها ترضعها للؤمها فتشق عليها وتؤذيها. وهرّ في وجه السائل: تجهّمه. وفلان هرّه الناس إذا كرهوا ناحيته. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن الكناز اللحم من بكراتكم ... تهرّ عليها أمكم وتكالب",
+        "prototipe_benzerlik": 0.399,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يريد أنها ترضعها للؤمها فتشق عليها وتؤذيها. وهرّ في وجه السائل: تجهّمه. وفلان هرّه الناس إذا كرهوا ناحيته. قال:",
         "prototipe_benzerlik": 0.307,
         "halka": "uzak"
       },
       {
-        "cumle": "وهرّ الكأس إذا كرهها. وهرّ الحرب. وقال ابن",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرى الناس هرّوني وشهّر مدخلي ... وفي كلّ ممشًى أرصد النّاس عقربا",
+        "prototipe_benzerlik": 0.265,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهرّ الكأس إذا كرهها. وهرّ الحرب. وقال ابن",
         "prototipe_benzerlik": 0.275,
         "halka": "uzak"
       },
       {
-        "cumle": "وهرّ الشوك إذا يبس فاجتنبته الراعية كأنه يهرّ في وجهها، وقيل معناه: صار كأنه أظفار هرّ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الدمينة:",
+        "prototipe_benzerlik": 0.359,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نهاري نهار الناس حتى إذا دنا ... ليَ الليل هرّتني إليك المضاجع",
+        "prototipe_benzerlik": 0.41,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهرّ الشوك إذا يبس فاجتنبته الراعية كأنه يهرّ في وجهها، وقيل معناه: صار كأنه أظفار هرّ. قال:",
         "prototipe_benzerlik": 0.416,
         "halka": "orta"
       },
       {
-        "cumle": "وهذا يدلك على وجه المجاز دلالة مكشوفة. وهرّه الشتاء، وللشتاء هرير، كما يقال: كلب الشتاء والبرد. وطلع الهرّاران وهما قلب العقرب والنّسر الواقع لأن هرير الشتاء عند طلوعهما. و\" فلان لا يعرف هرّاً من برّ \" أي لا يميزّ فعل من يهرّ في وجهه من فعل من يبرّ به. ويقال: هلك من لا هرّار له أي لا سفيه له يهرّ عن",
-        "prototipe_benzerlik": 0.545,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعين الشّبرق الريّان حتى ... إذا ما هر وامتنع المذاقا",
+        "prototipe_benzerlik": 0.288,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد المبرّد:",
+        "prototipe_benzerlik": 0.388,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حلفت لهم والخيل تردي بنا معاً ... نفارقهم حتى يهرّوا العواليا",
+        "prototipe_benzerlik": 0.377,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عوالي زرقاً من رماح ردينةٍ ... هرير الكلاب يتّقين الأفاعيا",
+        "prototipe_benzerlik": 0.598,
         "halka": "yakın"
       },
       {
-        "cumle": "من سفيه دائم النّباح",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذا يدلك على وجه المجاز دلالة مكشوفة. وهرّه الشتاء، وللشتاء هرير، كما يقال: كلب الشتاء والبرد. وطلع الهرّاران وهما قلب العقرب والنّسر الواقع لأن هرير الشتاء عند طلوعهما. و\" فلان لا يعرف هرّاً من برّ \" أي لا يميزّ فعل من يهرّ في وجهه من فعل من يبرّ به. ويقال: هلك من لا هرّار له أي لا سفيه له يهرّ عنه عدوّه. كما قال:",
+        "prototipe_benzerlik": 0.302,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا بدّ للسؤدد من أرماح ... ومن عديد يتّقى بالراح",
+        "prototipe_benzerlik": 0.245,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من سفيه دائم النّباح",
         "prototipe_benzerlik": 0.356,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.364,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.351,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

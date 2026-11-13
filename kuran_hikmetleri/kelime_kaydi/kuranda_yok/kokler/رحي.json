@@ -750,29 +750,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "له رحيان وأرح وأرحاء وأرحية ورحيٌّ. وله رحى ماء وأرحاء ماء. وقد رحيت الرحا: أدرتها. ولنا مرح ماهر، وأمرته أن يرحى لنا رحى جيدة، وهو عامل الأرحاء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له رحيان وأرح وأرحاء وأرحية ورحيٌّ. وله رحى ماء وأرحاء ماء. وقد رحيت الرحا: أدرتها. ولنا مرح ماهر، وأمرته أن يرحى لنا رحى جيدة، وهو عامل الأرحاء."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رحت الحية وترحت: استدارت. ودارت ورحى الحرب. وفي الحديث \" أتيت علياً حين فرغ من مرحى الجمل \" وهو مدار رحى الحرب. قال الأخطل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رحت الحية وترحت: استدارت. ودارت ورحى الحرب. وفي الحديث \" أتيت علياً حين فرغ من مرحى الجمل \" وهو مدار رحى الحرب. قال الأخطل:",
         "prototipe_benzerlik": 0.478,
         "halka": "orta"
       },
       {
-        "cumle": "وطحنه بأرحائه وهي أضراسه. وأرى في السماء رحىً مرجحنّةً وهي السحابة المستديرة. وهو رحى قومه: لسيدهم الذي يعصبون به أمورهم. ونزلوا في رحى واسعة وهي أرض ناشزة على ما حولها مستديرة أكبر من الفلكة. وهؤلاء رحى من أرحاء العرب وهي قبائل لا تنتجع ولا تبرح مكانها. ورأيت رحى من الناس وثفالاً: قوماً كثيراً نازل",
-        "prototipe_benzerlik": 0.942,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ركود لم تكد عنا رحاها ... ولا مرحى حميّاها تزول",
+        "prototipe_benzerlik": 0.78,
         "halka": "yakın"
       },
       {
-        "cumle": "وهي ما حوله، ويقال لها: الإطار والحتار. وطبخوا لنا الرحى وهي الإسفاناخ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطحنه بأرحائه وهي أضراسه. وأرى في السماء رحىً مرجحنّةً وهي السحابة المستديرة. وهو رحى قومه: لسيدهم الذي يعصبون به أمورهم. ونزلوا في رحى واسعة وهي أرض ناشزة على ما حولها مستديرة أكبر من الفلكة. وهؤلاء رحى من أرحاء العرب وهي قبائل لا تنتجع ولا تبرح مكانها. ورأيت رحى من الناس وثفالاً: قوماً كثيراً نازلين. وما أحسن أرحاء أظفاره، ورحى ظفره",
+        "prototipe_benzerlik": 0.939,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهي ما حوله، ويقال لها: الإطار والحتار. وطبخوا لنا الرحى وهي الإسفاناخ.",
         "prototipe_benzerlik": 0.188,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.536,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.596,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

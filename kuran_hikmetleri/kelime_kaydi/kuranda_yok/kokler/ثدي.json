@@ -1287,8 +1287,8 @@
     "ince": "part.n.03",
     "orta": "noun.body",
     "ust": "canlı ve beden",
-    "dayanak_synset": "breast.n.02",
-    "dayanak_tanim": "either of two soft fleshy milk-secreting glandular organs on the chest of a woman",
+    "dayanak_synset": "mammary_gland.n.01",
+    "dayanak_tanim": "milk-secreting organ of female mammals",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1302,19 +1302,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "امرأة ثدياء: عظيمة الثديين، ونساء ثدي. وكأن هذه اليديه، يد ذي الثدية؛ وهو رأس الخوارج. واجعله في الثدية وهيوعاء يتعلقه الفارس قدر جمع الكف يجعل فيه الريش والعقب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "امرأة ثدياء: عظيمة الثديين، ونساء ثدي. وكأن هذه اليديه، يد ذي الثدية؛ وهو رأس الخوارج. واجعله في الثدية وهيوعاء يتعلقه الفارس قدر جمع الكف يجعل فيه الريش والعقب."
+      },
+      {
+        "kaynak": "Mekâyîs: ثَدْيٌ",
+        "metin": "(ثَدْيٌ) الثَّاءُ وَالدَّالُ وَالْيَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ ثَدْيُ الْمَرْأَةِ. وَالْجَمْعُ. أَثْدٍ. وَالثَّدْيَاءُ: الْكَبِيرَةُ الثَّدْيِ. ثُمَّ فُرِّقَ بَيْنَهُ وَبَيْنَ الَّذِي لِلرَّجُلِ، فَقِيلَ فِي الرَّجُلِ الثُّنْدُؤَةُ بِالضَّمِّ وَالْهَمْزَةِ، وَالثَّنْدُوَةُ بِالْفَتْحِ غَيْرُ مَهْمُوزٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قد ارتضع فلان ثديّ الكرم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قد ارتضع فلان ثديّ الكرم.",
         "prototipe_benzerlik": 0.481,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.481,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01", "living_thing.n.01", "mammalian.a.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {

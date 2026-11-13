@@ -880,29 +880,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رأب الشعاب الصدع. ورجل مرأب صنع: يحسن رأب الأشياء. وقوم مرائيب وهات رؤبة أرأب بها قدحي. قال ذو الرمة: تدهدي فطاحت رؤبة من صميمه ... فبدل أخرى بالغراء وبالشعب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رأب الشعاب الصدع. ورجل مرأب صنع: يحسن رأب الأشياء. وقوم مرائيب وهات رؤبة أرأب بها قدحي. قال ذو الرمة:\nتدهدي فطاحت رؤبة من صميمه ... فبدل أخرى بالغراء وبالشعب"
+      },
+      {
+        "kaynak": "Mekâyîs: رَأَبَ",
+        "metin": "(رَأَبَ) الرَّاءُ وَالْهَمْزَةُ وَالْبَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى ضَمٍّ وَجَمْعٍ. تَقُولُ: رَأَبْتُ الْأُمُورَ الْمُتَفَرِّقَةَ; إِذَا أَنْتَ جَمَعْتَهَا بِرِفْقِكَ، كَمَا يَرْأَبُ الشَّعَّابُ صَدْعَ الْجَفْنَةِ. وَتِلْكَ الْخَشَبَةُ الَّتِي يُشْعَبُ بِهَا رُؤْبَةٌ.\n[بَابُ الرَّاءِ وَالْبَاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يرأب أمور الناس، وهو رئاب أمور ومرآب أمور: مصلحها. وهو رءّاب بني فلان. وهو مرآب من مرائيب الثأي: قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يرأب أمور الناس، وهو رئاب أمور ومرآب أمور: مصلحها. وهو رءّاب بني فلان. وهو مرآب من مرائيب الثأي: قال الطرماح:",
         "prototipe_benzerlik": 0.838,
         "halka": "yakın"
       },
       {
-        "cumle": "وفي بني فلان ثلاثون رأباً أي سادات يرأبون أمورهم. وأنشد الأصمعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نصر للذليل في ندوة الحي ... مرائيب للثأي المنهاض",
+        "prototipe_benzerlik": 0.522,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي بني فلان ثلاثون رأباً أي سادات يرأبون أمورهم. وأنشد الأصمعي:",
         "prototipe_benzerlik": 0.629,
         "halka": "yakın"
       },
       {
-        "cumle": "وكفى بفلان رأباً لأمرك بمعنى رائباً وهو وصف بالمصدر. وتقول: هو أربة عقد الإخاء، ورؤبة صدع الصفاء؛ والأربة العقدة المحكمة من التأريب. ورأب الله بينهم: أصلح ذات بينهم. واللهم ارأب بينهم. وتقول: إن رأي أن يرأ بينهم الثأي فعل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثلاثون رأباً أو تزيد ثلاثة ... يقابلنا بالقرن ألف مقنع",
+        "prototipe_benzerlik": 0.374,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الكميت:",
+        "prototipe_benzerlik": 0.682,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي حسن كانت مصاديق لاسمه ... ورأب لصدعيها المهمّين مرأب",
+        "prototipe_benzerlik": 0.621,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكفى بفلان رأباً لأمرك بمعنى رائباً وهو وصف بالمصدر. وتقول: هو أربة عقد الإخاء، ورؤبة صدع الصفاء؛ والأربة العقدة المحكمة من التأريب. ورأب الله بينهم: أصلح ذات بينهم. واللهم ارأب بينهم. وتقول: إن رأي أن يرأ بينهم الثأي فعل.",
         "prototipe_benzerlik": 0.728,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.732,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.628,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

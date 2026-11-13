@@ -828,11 +828,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "biological_group.n.01",
+    "ince": "whole.n.02",
     "orta": "noun.plant",
     "ust": "canlı ve beden",
-    "dayanak_synset": "papaveraceae.n.01",
-    "dayanak_tanim": "herbs or shrubs having milky and often colored juices and capsular fruits",
+    "dayanak_synset": "poppy.n.01",
+    "dayanak_tanim": "annual or biennial or perennial herbs having showy flowers",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -846,19 +846,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في أنفه الخشاش، وفي أنوفهم الأخشة. وبعير مخشوش. وصدت من خشاش الطير، وخشاش الأرض وهي صغار الطير والدواب. ورجل خشاش: صغير الرأس. وضربه على خششاويه وهما العظمان وراء الأذنين. وهو مخش ليل: دخال في ظلمته. وانخش في القوم وفي الشجر. وسمعت خشخشة السلاح.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في أنفه الخشاش، وفي أنوفهم الأخشة. وبعير مخشوش. وصدت من خشاش الطير، وخشاش الأرض وهي صغار الطير والدواب. ورجل خشاش: صغير الرأس. وضربه على خششاويه وهما العظمان وراء الأذنين. وهو مخش ليل: دخال في ظلمته. وانخش في القوم وفي الشجر. وسمعت خشخشة السلاح."
+      },
+      {
+        "kaynak": "Mekâyîs: خَشَّ",
+        "metin": "(خَشَّ) الْخَاءُ وَالشِّينُ أَصْلٌ وَاحِدٌ، وَهُوَ الْوُلُوجُ وَالدُّخُولُ. يُقَالُ: خَشَّ الرَّجُلُ فِي الشَّرِّ: دَخَلَ. وَرَجُلٌ [مِخَشٌّ: مَاضٍ] جَرِيءٌ عَلَى اللَّيْلِ. وَالْخَشَّاءُ: مَوْضِعُ الدَّبْرِ ; لِأَنَّهُ يَنْخَشُّ فِيهِ. قَالَ ذُو الْإِصْبَعِ:\nإِمَّا تَرَى نَبْلَهُ فَخَشْرَمُ خَشَّ ... اءَ إِذَا مُسَّ دَبْرُهُ لَكَعَا\nوَمِنَ الْبَابِ الْخَشْخَاشُ: الْجَمَاعَةُ ; لِأَنَّهُمْ قَوْمٌ يَجْتَمِعُونَ وَيَتَدَاخَلُونَ. قَالَ الْكُمَيْتُ:\nوَهَيْضَلُهَا الْخَشْخَاشُ إِذْ نَزَلُوا\nوَالْخَشُّ: أَنْ تَجْعَلَ الْخِشَاشَ فِي أَنْفِ الْبَعِيرِ. يُقَالُ خَشَشْتُهُ فَهُوَ مَخْشُوشٌ، وَيَكُونُ مِنْ خَشَبٍ. وَخَشَاشُ الْأَرْضِ: دَوَابُّهَا. فَأَمَّا الرَّجُلُ الْخِشَاشُ الصَّغِيرُ الرَّأْسِ فَيُقَالُ بِالْفَتْحِ وَالْكَسْرِ. وَهُوَ الْقِيَاسُ، لِأَنَّهُ يَنْخَشُّ فِي الْأَمْرِ بِحَقِّهِ. قَالَ طَرَفَةُ:\nأَنَا الرَّجُلُ الضَّرِبُ الَّذِي تَعْرِفُونَنِي ... خِشَاشٌ كَرَأْسِ الْحَيَّةِ الْمُتَوَقِّدِ\nوَمِنَ الْبَابِ، وَهُوَ فِي الظَّاهِرِ يَبْعُدُ مِنَ الْقِيَاسِ، الْخُشَشَاوَانِ: عَظْمَانِ نَاتِيَانِ خَلْفَ الْأُذُنَيْنِ. وَيُقَالُ لِلْوَاحِدِ &quot; خُشَّاءُ &quot; أَيْضًا. وَلَمْ يَجِئْ فِي كَلَامِ الْعَرَبِ فُعْلَاءُ مَضْمُومَةُ الْفَاءِ سَاكِنَةَ الْعَيْنِ إِلَّا هَذِهِ وَ &quot; قُوبَاءُ &quot;، وَالْأَصْلُ فِيهَا التَّحْرِيكُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جعل الخشاش في أنفه، وقاده إلى الطاعة بعنفه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جعل الخشاش في أنفه، وقاده إلى الطاعة بعنفه.",
         "prototipe_benzerlik": 0.462,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.462,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["living_thing.n.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {

@@ -1261,39 +1261,82 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سيف مغمود ومغمد.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أغمد الحلس: جعله تحت الرحل ليقي به الظهر.",
-        "prototipe_benzerlik": 0.517,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سيف مغمود ومغمد."
       },
       {
-        "cumle": "وأغمد الراكب متاعه إذا ركبه. وغمّده كذا: غطاه به كأنه جعله غمداً له. وقال العجاج:",
+        "kaynak": "Mekâyîs: غَمَدَ",
+        "metin": "(غَمَدَ) الْغَيْنُ وَالْمِيمُ وَالدَّالُ أَصْلٌ وَاحِدٌ صَحِيحٌ، يَدُلُّ عَلَى تَغْطِيَةٍ وَسَتْرٍ. مِنْ ذَلِكَ الْغِمْدُ لِلسَّيْفِ: غِلَافُهُ. يُقَالُ: غَمَدْتُهُ أَغْمِدُهُ غَمْدًا. وَيُقَالُ: تَغَمَّدَهُ اللَّهُ بِرَحْمَتِهِ، كَأَنَّهُ يَغْمُرُهُ بِهَا. وَتَغَمَّدْتُ فُلَانًا: جَعَلْتَهُ تَحْتَكَ حَتَّى تُغَطِّيَهُ. وَالنِّسْبَةُ إِلَى غَامِدٍ غَامِدِيٌّ، وَهُوَ حَيٌّ مِنَ الْيَمَنِ، وَاشْتِقَاقُهُ مِمَّا ذَكَرْنَاهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أغمد الحلس: جعله تحت الرحل ليقي به الظهر.",
+        "prototipe_benzerlik": 0.517,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الأعشى:",
+        "prototipe_benzerlik": 0.506,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ووضع سقاء وأحقابه ... وحل حلوسٍ وأغمادها",
+        "prototipe_benzerlik": 0.511,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأغمد الراكب متاعه إذا ركبه. وغمّده كذا: غطاه به كأنه جعله غمداً له. وقال العجاج:",
         "prototipe_benzerlik": 0.481,
         "halka": "orta"
       },
       {
-        "cumle": "يغمّد الأعداء حوزاً مردسا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يغمّد الأعداء حوزاً مردسا",
         "prototipe_benzerlik": 0.504,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "أي يلقى عليهم كلكله كالأسد فيجعلهم تحت وتغمّده الله برحمته: ستره، ودخل عليه وبين يديه ثوب فتغمّده إذا جعله تحته ليغطّيه عن العيون. وقال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي يلقى عليهم كلكله كالأسد فيجعلهم تحت وتغمّده الله برحمته: ستره، ودخل عليه وبين يديه ثوب فتغمّده إذا جعله تحته ليغطّيه عن العيون. وقال ابن مقبل:",
         "prototipe_benzerlik": 0.452,
         "halka": "orta"
       },
       {
-        "cumle": "وتغمد المكيال: ملأه. وركيٌ غامدٌ: ماؤه مغطّى بالتراب، وعكسه: ركيٌّ مبدٍ، وهو من باب: عيشة راضية. واغتمد الليل: دخل فيه وجعله لنفسه غمداً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا كان جري العين جوداً وديمة ... تغمد جري العين في الوعث وإبله",
+        "prototipe_benzerlik": 0.472,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال أبو النجم:",
+        "prototipe_benzerlik": 0.36,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صديء القباء من الحديد كأنه ... جملٌ تغمّده عصيم هناء",
+        "prototipe_benzerlik": 0.358,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتغمد المكيال: ملأه. وركيٌ غامدٌ: ماؤه مغطّى بالتراب، وعكسه: ركيٌّ مبدٍ، وهو من باب: عيشة راضية. واغتمد الليل: دخل فيه وجعله لنفسه غمداً.",
         "prototipe_benzerlik": 0.508,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.492,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.467,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

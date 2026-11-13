@@ -1270,11 +1270,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "dictate.v.03",
+    "ince": "tyrannize.v.01",
     "orta": "verb.social",
     "ust": "insan ve toplum",
-    "dayanak_synset": "dictate.v.03",
-    "dayanak_tanim": "rule as a dictator",
+    "dayanak_synset": "tyrannize.v.01",
+    "dayanak_tanim": "rule a country as a tyrant",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1293,19 +1293,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ارتفاع الشيء باستغلاظٍ وتجاوزٍ حتى يَغْشَى ويُغَطِّى ما حوله (1): كأعلى الجبل المستَصْعِب ونحوه، وكماء البحر بما ذُكِرَ مِنْ وصفه وكالدم ببروز حُمرته من الجلد {إِنَّا لَمَّا طَغَى الْمَاءُ حَمَلْنَاكُمْ فِي الْجَارِيَةِ} (أي في طوفان نوح عليه السلام حملنا آباء",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ارتفاع الشيء باستغلاظٍ وتجاوزٍ حتى يَغْشَى ويُغَطِّى ما حوله (1): كأعلى الجبل المستَصْعِب ونحوه، وكماء البحر بما ذُكِرَ مِنْ وصفه وكالدم ببروز حُمرته من الجلد {إِنَّا لَمَّا طَغَى الْمَاءُ حَمَلْنَاكُمْ فِي الْجَارِيَةِ} (أي في طوفان نوح عليه السلام حملنا آباءكم)، \"وكل شيء جاوز حَدَّه (حتى غطى ما حوله) فقد طغى. ومنه \"طغى الرجل: طَغْيًا وطُغْيانا -بالضم، وطَغْوَى- بالفتح: جاوَزَ القَدْرَ وارتفع وغلا في الكفر أو العصيان {إِنَّ الْإِنْسَانَ لَيَطْغَى (6) أَنْ رَآهُ اسْتَغْنَى} [العلق: 6 - 7]، {كَذَّبَتْ ثَمُودُ بِطَغْوَاهَا} [الشمس: 11]، أي بطغيانه {فَأَمَّا ثَمُودُ فَأُهْلِكُوا بِالطَّاغِيَةِ} [الحاقة: 5]: أي الطُغْيان (أي بسببه) مصدر كالعاقبة والعافية. أو بصيحة العذاب (صَيْحة تَصُخّ وتُصِمّ تَغْشَاهم فتقتلهم. ولكل وجه. والطغيان بمعنى الجلبة والصياح وارد \"سمعت طَغْىَ القوم أي صَوتهم (أصوات كثيرة تغشى) ومثل \"طغت البقرة صاحت \". {مَا زَاغَ الْبَصَرُ وَمَا طَغَى} [النجم: 17]: ما جاوز ما أُمِرَ برؤيته/ ولا تجاوز المرئي إلى غيره [بحر: 8/ 158]. وكل ما في القرآن من التركيب فهو بمعنى التجاوز في غِلظ"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان طاغ باغ، وتمادى به الطغيان والطغوى. وهو طاغية: جبار عنيد. وأطغاه ماله."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "طغى البحر والسيل. وتطاغى الموج. وطغى به الدم.",
-        "prototipe_benzerlik": 0.433,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طغى البحر والسيل. وتطاغى الموج. وطغى به الدم.",
+        "prototipe_benzerlik": 0.394,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.433,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.394,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["dictate.v.03", "political_system.n.01", "tyrannize.v.01"],
   "muhassas_tasnif": {

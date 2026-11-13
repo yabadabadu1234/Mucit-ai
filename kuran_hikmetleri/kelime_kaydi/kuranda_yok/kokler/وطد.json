@@ -1280,19 +1280,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وطد المكان ووطّده إذا ضربه بالميطدة ليتصلّب لأساس بناء أو غيره.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وطد المكان ووطّده إذا ضربه بالميطدة ليتصلّب لأساس بناء أو غيره."
+      },
+      {
+        "kaynak": "Mekâyîs: وَطَدَ",
+        "metin": "(وَطَدَ) الْوَاوُ وَالطَّاءُ وَالدَّالُ: أَصْلٌ وَاحِدٌ، وَهُوَ أَنْ تُثَبِّتَ شَيْئًا بِوَطْثِكَ حَتَّى يَتَصَلَّبَ. وَوَطَدْتُهُ أَطِدُهُ إِلَى الْأَرْضِ، عَلَى مَعْنَى الِاسْتِعَارَةِ، إِذَا أَهَانَهُ. وَالْمِيطَدَةُ: خَشَبَةٌ يُوطَدُ بِهَا الْمَكَانُ حَتَّى يَصْلُبَ. وَيُقَالُ لِأَثَافِيِّ الْقِدْرِ: الْوَطَائِدُ. وَالطَّادِي فِي شِعْرِ الْقَطَامِيُّ، فِي قَوْلِهِ:\nتَقَضَّى [بَوَاقِي] دَيْنِهَا الطَّادِي\nالْوَاطِدُ، وَهُوَ مَقْلُوبٌ. وَعَادَتْهُ طَادِيَّةٌ: قَدِيمَةٌ.\n(وَطَرَ) : الْوَاوُ وَالطَّاءُ وَالرَّاءُ: كَلِمَةٌ وَاحِدَةٌ. الْوَطَرُ: الْحَاجَةُ وَالنَّهْمَةُ، لَا يُبْنَى مِنْهُ فِعْلٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وطّد الملك توطيداً. وعزّ موطّد وموطود وواطد: ثابت. ووطّدت منزلة فلان عند فلان، وتوطّدت له عنده منزلةٌ، ومنه: وطائد المسجد: لأساطينه، ووطائد القدر: لأثافيه. وفلان من وطائد الإسم. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطّد الملك توطيداً. وعزّ موطّد وموطود وواطد: ثابت. ووطّدت منزلة فلان عند فلان، وتوطّدت له عنده منزلةٌ، ومنه: وطائد المسجد: لأساطينه، ووطائد القدر: لأثافيه. وفلان من وطائد الإسم. قال:",
         "prototipe_benzerlik": 0.088,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأنت لدين الله فينا وطيدة ... وأنت عن الأحساب فينا المذبب",
+        "prototipe_benzerlik": 0.138,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي دعامة.",
+        "prototipe_benzerlik": 0.271,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.088,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.166,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02"],
   "muhassas_tasnif": {

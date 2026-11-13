@@ -1191,19 +1191,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أغامت السماء وتغيمت وغيّمت. وتقول: هو كالسماء غيّمت فديّمت. وفلان عيمان غيمان. قال مالك بن نويرة: لعمري إني وابن جارود كالذي ... أراق شعيب الماء والآل يبرق فلما بغاه خيّب الله سعيه ... فأمسى يغضّ الطرف غيمان يشهق وفي الحديث: أنه كان يتعوّذ من العيمة والغيمة وا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أغامت السماء وتغيمت وغيّمت. وتقول: هو كالسماء غيّمت فديّمت. وفلان عيمان غيمان. قال مالك بن نويرة:\nلعمري إني وابن جارود كالذي ... أراق شعيب الماء والآل يبرق\nفلما بغاه خيّب الله سعيه ... فأمسى يغضّ الطرف غيمان يشهق\nوفي الحديث: أنه كان يتعوّذ من العيمة والغيمة والأيمة. ويقولون: أفاق غيم الإبل إذا ذهب عطشها، ورجعت من الورد بغيمها إذا لم ترو."
+      },
+      {
+        "kaynak": "Mekâyîs: غَيَمَ",
+        "metin": "(غَيَمَ) الْغَيْنُ وَالْيَاءُ وَالْمِيمُ كَلِمَةٌ تَدُلُّ عَلَى سَتْرِ شَيْءٍ لِشَيْءٍ. مِنْ ذَلِكَ:\nالْغَيْمُ، وَهُوَ مَعْرُوفٌ. يُقَالُ: غَامَتِ السَّمَاءُ، وَتَغَيَّمَتْ، وَأَغَامَتْ.\nوَمِنَ الْبَابِ: الْغَيْمُ، وَهُوَ الْعَطَشُ وَحَرَارَةُ الْجَوْفِ، لِأَنَّهُ شَيْءٌ يَغْشَى الْقَلْبَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "غيّم علينا الليل إذا أظلم.",
-        "prototipe_benzerlik": 0.067,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غيّم علينا الليل إذا أظلم.",
+        "prototipe_benzerlik": 0.006,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.067,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.006,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["natural_phenomenon.n.01"],
   "muhassas_tasnif": {

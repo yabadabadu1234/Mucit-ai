@@ -1368,19 +1368,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "غضاضةٌ ولينٌ مع تخلخل أثناءٍ في الشيء المتجمع: كاللحم والبَطْن وكما يُطَرّى الطيب بالأخلاط {وَمِنْ كُلٍّ تَأْكُلُونَ لَحْمًا طَرِيًّا} [فاطر: 12 ومثله ما في النحل: 14] ومنه (أطْرَى العسَلَ: أخثره/ أعقده وأخثره [تاج] (لعل ذلك إذا كان جِدّ رقيق). وأطرى الرجلَ: ج",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "غضاضةٌ ولينٌ مع تخلخل أثناءٍ في الشيء المتجمع: كاللحم والبَطْن وكما يُطَرّى الطيب بالأخلاط {وَمِنْ كُلٍّ تَأْكُلُونَ لَحْمًا طَرِيًّا} [فاطر: 12 ومثله ما في النحل: 14] ومنه (أطْرَى العسَلَ: أخثره/ أعقده وأخثره [تاج] (لعل ذلك إذا كان جِدّ رقيق). وأطرى الرجلَ: جاوز الحدّ في مدحه، ومدحه بما ليس فيه (إضافة شيء لا حقيقة له - فارغ كالمتخلخل). والغضاضة لازمة للحدوث عادة (كالوليد والنبت أول حاله) فمن هذا"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "طرأ علينا فلان: جاء من بلد بعيد فجأة، وهو طاريء، وهو من الطرّاء، لا من التناء. ورجل طرآني. وحمام طرآني: لا يدري من أين جاء. وشيء طريء: بين الطراءة، وقد طرؤ طراءة وقيل طرو طراوة، وطرأه تطرئة وطرّاه تطرية، وثوب مطرّأ ومطرّى، وعود مطرّأ ومطرّي."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "طرأ عليّ همّ لا أطيقه، وطرأ عليّ شغل منعني من المسير، وطرأ عليّ ما لا أجد بداً من إمضائه، وفي الحديث \" طرأ عليّ حزبي من القرآن فأحببت أن لا أخرج حتى أقضيه \" وهذا كلام طرآني: منكر خارج من الأدب الجميل.",
-        "prototipe_benzerlik": 0.394,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طرأ عليّ همّ لا أطيقه، وطرأ عليّ شغل منعني من المسير، وطرأ عليّ ما لا أجد بداً من إمضائه، وفي الحديث \" طرأ عليّ حزبي من القرآن فأحببت أن لا أخرج حتى أقضيه \" وهذا كلام طرآني: منكر خارج من الأدب الجميل.",
+        "prototipe_benzerlik": 0.433,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.394,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.433,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["happening.n.01", "intervene.v.01"],
   "muhassas_tasnif": {

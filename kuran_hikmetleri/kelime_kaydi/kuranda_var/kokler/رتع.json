@@ -1362,19 +1362,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الإقامة على مرعى خَصْب كثير الكلأَ. {أَرْسِلْهُ مَعَنَا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "رتع القوم: أكلوا ما شاءوا في رغد، وقوم راتعون، ورتع فلان في مال فلان.",
-        "prototipe_benzerlik": 0.493,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الإقامة على مرعى خَصْب كثير الكلأَ. {أَرْسِلْهُ مَعَنَا"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رتعت الماشية رتعاً ورتوعاً، وإبل رتاع ورتع ورتوع وهو أن ترعى كيف شاءت في خصب وسعة، وأرتعها أهلها وهم مرتعون في مرتع واسع."
+      },
+      {
+        "kaynak": "Mekâyîs: رَتَعَ",
+        "metin": "(رَتَعَ) الرَّاءُ وَالتَّاءُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ; وَهِيَ تَدُلُّ عَلَى الِاتِّسَاعِ فِي الْمَأْكَلِ. تَقُولُ: رَتَعَ يَرْتَعُ، إِذَا أَكَلَ مَا شَاءَ، وَلَا يَكُونُ ذَلِكَ إِلَّا فِي الْخِصْبِ. وَالْمَرَاتِعُ: مَوَاضِعُ الرَّتْعَةِ، وَهَذِهِ الْمَنْزِلَةُ يَسْتَقِرُّ فِيهَا الْإِنْسَانُ.\n(رَتَبَ) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nوَمِنْ هَذَا الْبَابِ قَوْلُهُمْ: أَمْرٌ تُرْتَبٌ; كَأَنَّهُ تُفْعَلُ، مِنْ رَتَبَ إِذَا دَامَ. وَالرَّتَبُ: الشِّدَّةُ وَالنَّصَبُ. قَالَ ذُو الرُّمَّةِ:\nمَا فِي عَيْشِهِ رَتَبٌ\nوَالرَّتَبُ: مَا أَشْرَفَ مِنَ الْأَرْضِ كَالدَّرَجِ. تَقُولُ: رَتَبَةٌ وَرَتَبٌ، كَقَوْلِكَ دَرَجَةٌ وَدَرَجٌ. فَأَمَّا قَوْلُهُمْ فِي الرَّتَبِ، إِنَّهُ مَا بَيْنَ السَّبَّابَةِ وَالْوُسْطَى، فَمَسْمُوعٌ، إِلَّا أَنَّهُ وَمَا أَشْبَهَهُ لَيْسَ مِنْ مَحْضِ اللُّغَةِ.\n[بَابُ الرَّاءِ وَالثَّاءِ وَمَا يَثْلُثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.493,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رتع القوم: أكلوا ما شاءوا في رغد، وقوم راتعون، ورتع فلان في مال فلان.",
+        "prototipe_benzerlik": 0.493,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الفرزدق:",
+        "prototipe_benzerlik": 0.392,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "راحت بمسلمة البغال عشية ... فارعى فزارة لا هناك المرتع",
+        "prototipe_benzerlik": 0.135,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الحجاج للغضبان حين خرج من ديماسه سمنت. قال: أسمنني القيد والرتعة بفتحتين كالمنعة والأمنَة. وأرتعت الأرض: أشبعت الراعية. ورتع فلان في لحمي إذا اغتابك. قال سويد:",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويحييني إذا لاقيته ... وإذا يخلو له لحمي رتع",
+        "prototipe_benzerlik": 0.328,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.344,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["region.n.03"],
   "muhassas_tasnif": {

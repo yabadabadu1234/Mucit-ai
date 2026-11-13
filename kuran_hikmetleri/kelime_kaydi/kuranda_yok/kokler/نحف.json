@@ -1448,19 +1448,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل نحيف، وقد نحف نحافة، وأنحفه المرض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل نحيف، وقد نحف نحافة، وأنحفه المرض."
+      },
+      {
+        "kaynak": "Mekâyîs: نَحُفَ",
+        "metin": "(نَحُفَ) النُّونُ وَالْحَاءُ وَالْفَاءُ كَلِمَةٌ تَدُلُّ عَلَى دِقَّةٍ وَذُبُولٍ. نَحْوَ نَحُفَ الرَّجُلُ نَحَافَةً فَهُوَ نَحِيفٌ، إِذَا قَلَّ لَحْمُهُ وَهُزِلَ. وَهُمْ نِحَافٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان نحيف الدّين ونحيف الأمانة. وتقول: من كان حنيفاً، لم يكن نحيفاً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان نحيف الدّين ونحيف الأمانة. وتقول: من كان حنيفاً، لم يكن نحيفاً.",
         "prototipe_benzerlik": 0.379,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.379,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["reduce.v.20"],
   "muhassas_tasnif": {

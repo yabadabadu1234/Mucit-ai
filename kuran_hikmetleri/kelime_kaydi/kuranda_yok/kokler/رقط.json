@@ -766,19 +766,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو أرقط بيّن الرقطة والرقط وهو نقط صغار من سواد وبياض أو من حمرة وصفرة تكون في الشاء والدجاج والحيّات. وقد رقط رقطاً وارقطّ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو أرقط بيّن الرقطة والرقط وهو نقط صغار من سواد وبياض أو من حمرة وصفرة تكون في الشاء والدجاج والحيّات. وقد رقط رقطاً وارقطّ."
+      },
+      {
+        "kaynak": "Mekâyîs: رَقَطَ",
+        "metin": "(رَقَطَ) الرَّاءُ وَالْقَافُ وَالطَّاءُ يَدُلُّ عَلَى اخْتِلَاطِ لَوْنٍ بِلَوْنٍ. فَالرُّقْطَةُ: سَوَادٌ يَشُوبُهُ نُقَطُ بَيَاضٍ. يُقَالُ دَجَاجَةٌ رَقْطَاءُ. وَالْأَرْقَطُ: النَّمِرُ. وَيُقَالُ: ارْقَاطَّ الْعَرْفَجُ، إِذَا خَالَطَ سَوَادَهُ نُقَطٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رقّطت على ثوبي ونقّطته إذا رشّش عليك فصارت فيه نقط من الماء. وكان عبيد الله بن زياد أرقط شديد الرقطة فاحشها كانت في جسده لمع كالخيلان وأكبر منها. وبعير أرقط إذا أخذه عرّ كالقوباء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رقّطت على ثوبي ونقّطته إذا رشّش عليك فصارت فيه نقط من الماء. وكان عبيد الله بن زياد أرقط شديد الرقطة فاحشها كانت في جسده لمع كالخيلان وأكبر منها. وبعير أرقط إذا أخذه عرّ كالقوباء.",
         "prototipe_benzerlik": 0.468,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.468,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شخبت اللقاح وشخبت اللبن: حلبت، أشخب وأشخب، وانشخب اللبن انشخاباً. وفي مثل \" شخب في الإناء وشخب في الأرض \" لمن يصيب ويخطيء وهو ما يمتد من اللبن كالخيط عند الحلب وهو فعل بمعنى مفعول كالخبز والقوت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شخبت اللقاح وشخبت اللبن: حلبت، أشخب وأشخب، وانشخب اللبن انشخاباً. وفي مثل \" شخب في الإناء وشخب في الأرض \" لمن يصيب ويخطيء وهو ما يمتد من اللبن كالخيط عند الحلب وهو فعل بمعنى مفعول كالخبز والقوت."
+      },
+      {
+        "kaynak": "Mekâyîs: شَخَبَ",
+        "metin": "(شَخَبَ) الشِّينُ وَالْخَاءُ وَالْبَاءُ أُصَيْلٌ يَدُلُّ عَلَى امْتِدَادٍ فِي شَيْءٍ يَجْرِي وَيَسِيلُ. مِنْ ذَلِكَ الشَّخْبُ، وَهُوَ مَا امْتَدَّ مِنَ اللَّبَنِ حِينَ يُحْلَبُ. وَشَخَبَتْ أَوْدَاجُ الْقَتْلَى دَمًا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أوداجه تشخب دماً كأنها تحلبه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أوداجه تشخب دماً كأنها تحلبه.",
         "prototipe_benzerlik": 0.399,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.399,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

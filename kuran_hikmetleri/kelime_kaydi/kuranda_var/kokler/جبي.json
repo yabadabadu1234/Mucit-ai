@@ -970,24 +970,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جبي الخراج جباية: جمعه \" تجبى إليه ثمرات كل شيء \" وجبى الماء في الحوض. واسقوني من جبي حوضكم. ولفلان قدر كالخابية، وجفنة كالجابية؛ وجفان كالجوابي. وجبى تجبية، إذا ركع. وفلان لا يجبّي: لا يصلي.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جبي الخراج جباية: جمعه \" تجبى إليه ثمرات كل شيء \" وجبى الماء في الحوض. واسقوني من جبي حوضكم. ولفلان قدر كالخابية، وجفنة كالجابية؛ وجفان كالجوابي. وجبى تجبية، إذا ركع. وفلان لا يجبّي: لا يصلي."
+      },
+      {
+        "kaynak": "Mekâyîs: جَبَيَ",
+        "metin": "(جَبَيَ) الْجِيمُ وَالْبَاءُ وَمَا بَعْدَهُ مِنَ الْمُعْتَلِّ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى جَمْعِ الشَّيْءِ وَالتَّجَمُّعِ. يُقَالُ جَبَيْتُ الْمَالَ أَجْبِيهِ جِبَايَةً، وَجَبَيْتُ الْمَاءَ فِي الْحَوْضِ. وَالْحَوْضُ نَفْسُهُ جَابِيَةٌ. قَالَ الْأَعْشَى:\nتَرُوحُ عَلَى آلِ الْمُحَلَّقِ جَفْنَةٌ ... كَجَابِيَةِ الشَّيْخِ الْعِرَاقِيِّ تَفْهَقُ\nوَالْجَبَا، مَقْصُورٌ: مَا حَوْلَ الْبِئْرِ. وَالْجِبَا بِكَسْرِ الْجِيمِ: مَا جُمِعَ مِنَ الْمَاءِ\nفِي الْحَوْضِ أَوْ غَيْرِهِ. وَيُقَالُ لَهُ: جِبْوَةٌ وَجِبَاوَةٌ. قَالَ الْكِسَائِيُّ: جَبَيْتُ الْمَاءَ فِي الْحَوْضِ جِبًى. وَجَبَّى يُجَبِّي، إِذَا سَجَدَ ; وَهُوَ تَجَمُّعٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يجتبي جبي المجد أي يقوم بالمجد ويجمعه لنفسه. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يجتبي جبي المجد أي يقوم بالمجد ويجمعه لنفسه. قال ذو الرمة:",
         "prototipe_benzerlik": 0.689,
         "halka": "yakın"
       },
       {
-        "cumle": "واجتباه: اختاره، مستعار منه لأن من جمع شيئاً لنفسه فقد اختصه واصطفاه، وهو من جبوة الله وصفوته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما زلت تسمو بالمعالي وتجتبي ... جبى المجد مذ شدت عليك المآزر",
+        "prototipe_benzerlik": 0.613,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واجتباه: اختاره، مستعار منه لأن من جمع شيئاً لنفسه فقد اختصه واصطفاه، وهو من جبوة الله وصفوته.",
         "prototipe_benzerlik": 0.633,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.661,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.645,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["collect.v.02", "gather.v.01", "levy.v.01", "roll.v.12", "tour.v.01", "travel.v.04"],
   "muhassas_tasnif": {

@@ -1204,11 +1204,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "disproof.n.01",
-    "dayanak_tanim": "any evidence that helps to establish the falsity of something",
+    "ince": "disown.v.02",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "refute.v.01",
+    "dayanak_tanim": "overthrow by argument, evidence, or proof",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1227,19 +1227,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انزلاق الجسم بثقله كله لزَلَقِ مَقرّه وانحداره: كما يُدْحَض عن القِلاع (= الحجارة الضخمة) الزْلِقة لملاستها مع بللها وربما انحدار سطحها أيضًا. {فَسَاهَمَ فَكَانَ مِنَ الْمُدْحَضِينَ} [الصافات: 141]: الأنسب تفسيرها بالإدحاض المادي أي إزلاقه في البحر. وفي الكشاف",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انزلاق الجسم بثقله كله لزَلَقِ مَقرّه وانحداره: كما يُدْحَض عن القِلاع (= الحجارة الضخمة) الزْلِقة لملاستها مع بللها وربما انحدار سطحها أيضًا. {فَسَاهَمَ فَكَانَ مِنَ الْمُدْحَضِينَ} [الصافات: 141]: الأنسب تفسيرها بالإدحاض المادي أي إزلاقه في البحر. وفي الكشاف \"المُدْحَض: (2/634) المغلوب المقروع \" {وَجَادَلُوا بِالْبَاطِلِ لِيُدْحِضُوا بِهِ الْحَقَّ} [غافر: 5]: وكذا ما في [الكهف: 56] فهذا معنوى لا شك أي ليُزيلوه ويبطلوه. وفي قوله تعالى: {وَالَّذِينَ يُحَاجُّونَ فِي اللَّهِ مِنْ بَعْدِ مَا اسْتُجِيبَ لَهُ حُجَّتُهُمْ دَاحِضَةٌ عِنْدَ رَبِّهِمْ} [الشورى: 16]، معناه أنها زائلة لا تثبت أمام الحق فلا قيمة لها. وقولهم \"الدّحيض: اللّحيم \"هو من تراكم اللحْم على اللحيم حتى صار بدنه مستديرا زلقا، أو كأنما رُمِىَ اللحْم عليه رَمْيًا. كما قال في وصف ناقة: {مَقْذُوفَة بدَخِيسِ النَحْضِ}. فدخيس النحض هو اللحم المكتنز. والشاهد هنا أنه عبّر عن تراكم اللحم عن الناقة بأن الناقة مقذوفة به. وقذف الشيء بالشيء هو من باب إزلاقه عليه من حيث إن كلا من القذف والإزلاق إلقاء ودفع."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دحضت رجله: زلقت دحضاً ودحوضاً. وأدحض فلان قدمه. ومزلقة مدحاض. ووقعوا على المداحض والأدحاض. وهذه مدحضة القدم. ومكان دحض. قال:\nرديت ونجّى اليشكري حذاره ... وحادكما حاد البعير عن الدحض"
+      },
+      {
+        "kaynak": "Mekâyîs: دَحَضَ",
+        "metin": "(دَحَضَ) الدَّالُ وَالْحَاءُ وَالضَّادُ أَصْلٌ يَدُلُّ عَلَى زَوَالٍ وَزَلَقٍ. يُقَالُ دَحَضَتْ رِجْلُهُ: زَلِقَتْ. وَمِنْهُ دَحَضَتِ الشَّمْسُ: زَالَتْ. وَدَحَضَتْ حُجَّةُ فُلَانٍ، إِذَا لَمْ تَثْبُتْ. قَالَ اللَّهُ جَلَّ ثَنَاؤُهُ: {حُجَّتُهُمْ دَاحِضَةٌ عِنْدَ رَبِّهِمْ} [الشورى: 16] ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "دحضت حجته، وحجتهم داحضة. ودحضت الشمس عن بطن السماء: زالت.",
-        "prototipe_benzerlik": 0.398,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دحضت حجته، وحجتهم داحضة. ودحضت الشمس عن بطن السماء: زالت.",
+        "prototipe_benzerlik": 0.481,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.398,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.481,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["break.v.02", "break.v.04", "break.v.05", "information.n.02", "refute.v.01", "separate.v.08", "tell.v.02"],
   "muhassas_tasnif": {

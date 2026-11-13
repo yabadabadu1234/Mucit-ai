@@ -1092,11 +1092,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "bark.v.04",
+    "ince": "talk.v.02",
     "orta": "verb.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "bark.v.04",
-    "dayanak_tanim": "make barking sounds",
+    "dayanak_synset": "bark.v.01",
+    "dayanak_tanim": "speak in an unfriendly tone",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1110,19 +1110,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "به سعال شديد، ويقال لعروق الرئة: قصب السعال لأن مخرجه منها. قال منظور ابن فروة: أكوي دخيل دائك العضال ... كنا يصيب قصب السعال وتقول: قد أغصك السؤال، فأخذك السعال؛ وإنه ليسعل سعلة منكرة. قال يصف خطيباً: مليء ببهر والتفات وسعلة ... وسحة عثنون وفتل الأصابع وأسعله",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "به سعال شديد، ويقال لعروق الرئة: قصب السعال لأن مخرجه منها. قال منظور ابن فروة:\nأكوي دخيل دائك العضال ... كنا يصيب قصب السعال\nوتقول: قد أغصك السؤال، فأخذك السعال؛ وإنه ليسعل سعلة منكرة. قال يصف خطيباً:\nمليء ببهر والتفات وسعلة ... وسحة عثنون وفتل الأصابع\nوأسعله السويق."
+      },
+      {
+        "kaynak": "Mekâyîs: سَعَُلَ",
+        "metin": "(سَعَُلَ) السِّينُ وَالْعَيْنُ وَاللَّامُ أَصْلٌ يَدُلُّ عَلَى صَخَبٍ وَعُلُوِّ صَوْتٍ.\nيُقَالُ لِلْمَرْأَةِ الصَّخَّابَةِ قَدِ اسْتَسْعَلَتْ، وَذَلِكَ مُشَبَّهٌ بِالسِّعْلَاةِ. وَالسَّعَالَى: أَخْبَثُ الْغِيلَانِ. وَالسُّعَالُ، مُشْتَقٌّ مِنْ ذَلِكَ أَيْضًا ; لِأَنَّهُ شَيْءٌ عَالٍ. فَأَمَّا قَوْلُ الْهُذَلِيِّ فِي وَصْفِ الْحِمَارِ:\n. . . . . . . . . وَأَسْعَلَتْهُ الْأَمْرُعُ\nفَإِنَّهُ يُرِيدُ نَشَّطَتْهُ الْأَمْرُعُ حَتَّى صَارَ كَالسِّعْلَاةِ، فِي حَرَكَتِهِ وَنَشَاطِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أعوذ بالله من هؤلاء السعالي، يريد النساء الصخّايات، وقد استسعلت فلانة، كما تقول: استكلبت. وأسعله الخصب والترفه. وروي قول أبي ذؤيب: وازعلته الأمرع بالسين أي جعلته كالسعلاة وأجنته نزواً ونشاطاً. وإنه لذو سعال ساعل.",
-        "prototipe_benzerlik": 0.556,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أعوذ بالله من هؤلاء السعالي، يريد النساء الصخّايات، وقد استسعلت فلانة، كما تقول: استكلبت. وأسعله الخصب والترفه. وروي قول أبي ذؤيب: وازعلته الأمرع بالسين أي جعلته كالسعلاة وأجنته نزواً ونشاطاً. وإنه لذو سعال ساعل.",
+        "prototipe_benzerlik": 0.621,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.556,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.621,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["bark.v.01", "bark.v.04"],
   "muhassas_tasnif": {

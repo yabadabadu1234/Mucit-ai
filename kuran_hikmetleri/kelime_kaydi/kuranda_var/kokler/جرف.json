@@ -1861,19 +1861,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "قطعٌ وإزالةٌ من أصْل جِسْم الشيء الرخو كتجويخ السيل الوادي، وجرْف اللثة المسترسلة على الأسنان (تحت الشفة) والطين وكلٌّ منها رخو.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "قطعٌ وإزالةٌ من أصْل جِسْم الشيء الرخو كتجويخ السيل الوادي، وجرْف اللثة المسترسلة على الأسنان (تحت الشفة) والطين وكلٌّ منها رخو."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جرف الشيء واجترفه: ذهب به كله. وجرف الطين والزبل عن وجه الأرض: سحاه بالمجرفة. وتجرفته السيول، وسيل جراف."
+      },
+      {
+        "kaynak": "Mekâyîs: جَرَفَ",
+        "metin": "(جَرَفَ) الْجِيمُ وَالرَّاءُ وَالْفَاءُ أَصْلٌ وَاحِدٌ، هُوَ أَخْذُ الشَّيْءِ كُلِّهِ هَبْشًا. يُقَالُ: جَرَفْتُ الشَّيْءَ جَرْفًا، إِذَا ذَهَبْتَ بِهِ كُلِّهِ. وَسَيْفٌ جُرَافٌ يُذْهِبُ كُلَّ شَيْءٍ. وَالْجُرُْفُ الْمَكَانُ يَأْكُلُهُ السَّيْلُ. وَجَرَّفَ الدَّهْرُ مَالَهُ: اجْتَاحَهُ. وَمَالٌ مُجَرَّفٌ. وَرَجُلٌ جُرَافٌ نُكَحَةٌ، كَأَنَّهُ يُجْرِفُ ذَلِكَ جَرْفًا. وَمِنَ الْبَابِ: الْجُرْفَةُ: أَنْ تُقْطَعَ مِنْ فَخِذِ الْبَعِيرِ جِلْدَةٌ وَتُجْمَعَ عَلَى فَخِذِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فلان يبني على جرف هار، لا يدري ما ليل من نهار. وجرف الدهر ماله، وعام وطاعون جارف، وفيه شؤم جارف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يبني على جرف هار، لا يدري ما ليل من نهار. وجرف الدهر ماله، وعام وطاعون جارف، وفيه شؤم جارف.",
         "prototipe_benzerlik": 0.261,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.261,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "artifact.n.01",

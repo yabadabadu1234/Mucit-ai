@@ -1105,34 +1105,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حمامة ساجعة وسجوع، وحمام سجع وسواجع، وسجعت إذا ردّدت صوتها على وجه واحد، وكذلك سجعت الناقة في حنينها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حمامة ساجعة وسجوع، وحمام سجع وسواجع، وسجعت إذا ردّدت صوتها على وجه واحد، وكذلك سجعت الناقة في حنينها."
+      },
+      {
+        "kaynak": "Mekâyîs: سَجَعَ",
+        "metin": "(سَجَعَ) السِّينُ وَالْجِيمُ وَالْعَيْنُ أَصْلٌ يَدُلُّ عَلَى صَوْتٍ مُتَوَازِنٍ. مِنْ ذَلِكَ السَّجْعُ فِي الْكَلَامِ، وَهُوَ أَنْ يُؤْتَى بِهِ وَلَهُ فَوَاصِلُ كَقَوَافِي الشِّعْرِ، كَقَوْلِهِمْ: &quot; مَنْ قَلَّ ذَلَّ، وَمَنْ أَمَرَ فَلَّ &quot;، وَكَقَوْلِهِمْ: &quot; لَا مَاءَكِ أَبْقَيْتِ، وَلَا دَرَنَكِ أَنْقَيْتِ &quot;. وَيُقَالُ سَجَعَتِ الْحَمَامَةُ، إِذَا هَدَرَتْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل سجاع وسجاعة، وكلام مسجوع ومسجع، وسجعه صاحبه وسجعه وسجع فيه وهو أن يأتي بالقرينتين فصاعداً على نهج واحد. وفلان ساجع في سيره: مستقيم لا يميل عن القصد. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل سجاع وسجاعة، وكلام مسجوع ومسجع، وسجعه صاحبه وسجعه وسجع فيه وهو أن يأتي بالقرينتين فصاعداً على نهج واحد. وفلان ساجع في سيره: مستقيم لا يميل عن القصد. قال ذو الرمة:",
         "prototipe_benzerlik": 0.345,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما علوا أرضاً ترى وجه ركبها ... إذا ما علوها مكفاً غير ساجع",
+        "prototipe_benzerlik": 0.51,
         "halka": "orta"
       },
       {
-        "cumle": "س ج قال: بيت مسجف، وحجلة مسجفة: مسترة. قال الفرزدق:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "س ج قال: بيت مسجف، وحجلة مسجفة: مسترة. قال الفرزدق:",
         "prototipe_benzerlik": 0.413,
         "halka": "orta"
       },
       {
-        "cumle": "وأسجفت الستر: أرسلته.",
-        "prototipe_benzerlik": 0.343,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا القنبضات السود طوقن بالضحى ... رقدن عليهنّ الحجال المسجف",
+        "prototipe_benzerlik": 0.355,
+        "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: أرخى الليل سجوفه، وأسجف الليل وأسدف: أظلم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأسجفت الستر: أرسلته.",
+        "prototipe_benzerlik": 0.343,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: أرخى الليل سجوفه، وأسجف الليل وأسدف: أظلم.",
         "prototipe_benzerlik": 0.443,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.386,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.401,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

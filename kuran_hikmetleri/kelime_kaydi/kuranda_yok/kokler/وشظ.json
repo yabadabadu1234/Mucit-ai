@@ -697,24 +697,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شعب الإناء بوشيظةٍ: بشظيّة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شعب الإناء بوشيظةٍ: بشظيّة."
+      },
+      {
+        "kaynak": "Mekâyîs: وَشَظَ",
+        "metin": "(وَشَظَ) الْوَاوُ وَالشِّينُ وَالظَّاءُ: قِيَاسٌ وَاحِدٌ، وَهُوَ إِلْصَاقُ شَيْءٍ بِشَيْءٍ لَيْسَ مِنْهُ. وَالْوَشِيظُ: عُظَيْمٌ يَكُونُ زِيَادَةً فِي الْعَظْمِ الصَّمِيمِ، وَلِذَلِكَ يُقَالُ لِمَنِ انْتَمَى إِلَى قَوْمٍ لَيْسَ مِنْهُمْ: وَشِيظٌ. وَشَظْتُ الْفَأْسَ أَشِظُهَا: ضَيَّقْتُ خُرْتَهَا مِنْ عَيْرِ نِصَابِهَا. وَاللَّهُ أَعْلَمُ بِالصَّوَابِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان وشيظ في قومه ووشيظة، وهو من وشائظهم. قال جرير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان وشيظ في قومه ووشيظة، وهو من وشائظهم. قال جرير:",
         "prototipe_benzerlik": 0.545,
         "halka": "yakın"
       },
       {
-        "cumle": "ذكّر البطحاء على تأويل الأبطح أجعل كلاً مثل كل حيث يقول: كلّهنّ فعلت، وعن ناس من العرب: كلّتهنّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يخزي الوشيظ إذا قال الصميم لهم ... عدّوا الحصى ثم قيسوا بالمقاييس",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الأخطل:",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هم أهل بطحاوي قريشٍ كليهما ... هم صلبها ليس الوشائظ كالصلب",
+        "prototipe_benzerlik": 0.536,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ذكّر البطحاء على تأويل الأبطح أجعل كلاً مثل كل حيث يقول: كلّهنّ فعلت، وعن ناس من العرب: كلّتهنّ.",
         "prototipe_benzerlik": 0.468,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.506,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.48,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

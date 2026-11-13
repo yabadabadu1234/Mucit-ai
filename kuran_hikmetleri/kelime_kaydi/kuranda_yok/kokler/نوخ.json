@@ -748,11 +748,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "wail.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "wail.v.02",
-    "dayanak_tanim": "cry weakly or softly",
+    "ince": "bend.v.01",
+    "orta": "verb.motion",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "bend.v.01",
+    "dayanak_tanim": "form a curve",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -766,24 +766,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أنخت الإبل ونوّختها فاستناخت. وفي الحديث: \" وإن أنيخ على صخرة استناخ \" وتنوّخ الفحل الناقة إذا اعترضها اعتراضاً من غير أن توطّأ له وهو أكرم النِّتاج.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أنخت الإبل ونوّختها فاستناخت. وفي الحديث: \" وإن أنيخ على صخرة استناخ \" وتنوّخ الفحل الناقة إذا اعترضها اعتراضاً من غير أن توطّأ له وهو أكرم النِّتاج."
+      },
+      {
+        "kaynak": "Mekâyîs: نَوَخَ",
+        "metin": "(نَوَخَ) النُّونُ وَالْوَاوُ وَالْخَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ أَنَخْتُ الْجَمَلَ. فَأَمَّا فِعْلُ الْمُطَاوَعَةِ مِنْهُ فَقَالُوا: أَنَخْتُهُ فَبَرَكَ، وَقَالَ آخَرُونَ: اسْتَنَاخَ. وَجَاءَ فِي الْحَدِيثِ: &quot; وَإِنْ أُنِيخَ عَلَى صَخْرَةٍ اسْتَنَاخَ &quot;. وَقَالَ الْأَصْمَعِيُّ أَنَخْتُهُ فَتَنَوَّخَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أناخ به البلاء والذل. وهذا مناخ سوء: للمكان غير المرضيّ. وأناخ به الحاجة. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أناخ به البلاء والذل. وهذا مناخ سوء: للمكان غير المرضيّ. وأناخ به الحاجة. قال رؤبة:",
         "prototipe_benzerlik": 0.376,
         "halka": "orta"
       },
       {
-        "cumle": "ونوّخ الله الأرض طروقةً الماء.",
-        "prototipe_benzerlik": 0.35,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنك بعد الله إن لم تتّرك ... مفتاح حاجات أنخناهنّ بك",
+        "prototipe_benzerlik": 0.43,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونوّخ الله الأرض طروقةً الماء.",
+        "prototipe_benzerlik": 0.35,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.363,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.385,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["bend.v.01", "relative.n.01", "wail.v.02"],
   "muhassas_tasnif": {

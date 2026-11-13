@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مكان ثئد وليلة ثئدة وذات ثأد وهو الندى. ومنه قولهم: يا بن الثأداء وهي الأمة، كما يقال: يا بن الرطبة. وإذا استضعف رأى الرجل قيل إنه لابن ثأداء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مكان ثئد وليلة ثئدة وذات ثأد وهو الندى. ومنه قولهم: يا بن الثأداء وهي الأمة، كما يقال: يا بن الرطبة. وإذا استضعف رأى الرجل قيل إنه لابن ثأداء."
+      },
+      {
+        "kaynak": "Mekâyîs: ثَأَدَ",
+        "metin": "(ثَأَدَ) الثَّاءُ وَالْهَمْزَةُ وَالدَّالُ كَلِمَةٌ وَاحِدَةٌ يُشْتَقُّ مِنْهَا، وَهِيَ النَّدَى وَمَا أَشْبَهَهُ. فَالثَّأْدُ النَّدَى. وَالثَّئِدُ النَّدِيُّ اللَّيِّنُ. وَقَدْ ثَئِدَ الْمَكَانُ يَثْأَدُ. قَالَ:\nهَلْ سُوَيْدٌ غَيْرُ لَيْثٍ خَادِرٍ ... ثَئِدَتْ أَرْضٌ عَلَيْهِ فَانْتَجَعْ\nفَأَمَّا الثَّأْدَاءُ عَلَى فَعَلَاءَ وَفَعْلَاءَ فَهِيَ الْأَمَةُ، وَهِيَ قِيَاسُ الْبَابِ، وَمَعْنَاهُمَا\nوَاحِدٌ. وَقِيلَ لِعُمَرَ بْنِ الْخَطَّابِ رَضِيَ اللَّهُ عَنْهُ: &quot; مَا كُنْتَ فِيهَا بِابْنِ ثَأْدَاءَ &quot;. وَرُبَّمَا قَلَبُوهُ فَقَالُوا: دَأْثَاءُ. وَأَنْشَدُوا:\nوَمَا كُنَّا بَنِي ثَأْدَاءَ لَمَّا ... شَفَيْنَا بِالْأَسِنَّةِ كُلَّ وِتْرِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أقمت فلاناً على ثأد إذا أقلقه، لأن المكان الندي لا يقر عليه. ويقال لأثئدن مبركك، ولأدعن نومك توثاباُ. وفخذ ثئدة: ناعمة، عبر عن النعمة بالرطوبة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أقمت فلاناً على ثأد إذا أقلقه، لأن المكان الندي لا يقر عليه. ويقال لأثئدن مبركك، ولأدعن نومك توثاباُ. وفخذ ثئدة: ناعمة، عبر عن النعمة بالرطوبة.",
         "prototipe_benzerlik": 0.461,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.461,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

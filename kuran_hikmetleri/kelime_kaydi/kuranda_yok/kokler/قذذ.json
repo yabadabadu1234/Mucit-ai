@@ -761,59 +761,116 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الرمْي بدقاق بقوة (1). كالرمي بالحجارة، وكالريش",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الرمْي بدقاق بقوة (1). كالرمي بالحجارة، وكالريش"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قذّ الريش بالمقذّ: حذف أطرافه، ومنه: القذّة: الريشة المقذوذة؛ يقال: \" حذو القذة بالقذة \". والزق القذذ بالسهم، وسهم مقذوذ: مريشٌ، وقذّه السهام يقذّه: راشه، وسهم أقذ: لا قذذ عليه. وفي مثل \" ما تركت له أقذّ ولا مريشاً \" ورجل مقذذ الشعر: مقصص حوالي\nقصاصه كله. وبلد كثير القذّان وهي البراغيث، الواحد: قذذ. قال:\nأسهر ليلي قذذٌ أسك ... فبت ليلي كله أحك\nأحكّ حتى مرفقي منفكّ"
+      },
+      {
+        "kaynak": "Mekâyîs: قَذَّ",
+        "metin": "(قَذَّ) الْقَافُ وَالذَّالُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ، يَدُلُّ عَلَى قَطْعٍ وَتَسْوِيَةٍ طُولًا وَغَيْرَ طُولٍ. مِنْ ذَلِكَ الْقُذَذُ: رِيشُ السَّهْمِ، الْوَاحِدَةُ قُذَّةٌ. قَالُوا: وَالْقَذُّ:\nقَطْعُهَا. يُقَالُ: أُذُنٌ مَقْذُوذَةٌ، كَأَنَّهَا بُرِيَتْ بَرْيًا. قَالَ:\nمَقْذُوذَةُ الْآذَانِ صَدْقَاتُ الْحَدَقْ\nوَزَعَمَ بَعْضُهُمْ أَنَّ الْقُذَاذَاتِ: قِطَعُ الذَّهَبِ، وَالْجُذَاذَاتُ: قِطَعُ الْفِضَّةِ. وَأَمَّا السَّهْمُ الْأَقَذُّ فَهُوَ الَّذِي لَا قُذَذَ عَلَيْهِ. وَالْمَقَذُّ: مَا بَيْنَ الْأُذُنَيْنِ مِنْ خَلْفُ. وَسُمِّيَ لِأَنَّ شَعْرَهُ يُقَذُّ قَذًّا.\nوَمِمَّا شَذَّ عَنِ الْبَابِ قَوْلُهُمْ: إِنَّ الْقِذَّانَ: الْبَرَاغِيثُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فرس مؤلل القذتين إذا كان حديد الأذنين، كما قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس مؤلل القذتين إذا كان حديد الأذنين، كما قال:",
         "prototipe_benzerlik": 0.385,
         "halka": "orta"
       },
       {
-        "cumle": "كأن آذانها أطراف أقلام",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأن آذانها أطراف أقلام",
         "prototipe_benzerlik": 0.441,
         "halka": "orta"
       },
       {
-        "cumle": "وله أذنان مقذوذتان: خلقتا على مثال قذذ السهم. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وله أذنان مقذوذتان: خلقتا على مثال قذذ السهم. قال رؤبة:",
         "prototipe_benzerlik": 0.508,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "مقذوذة الآذان صدقات الحدق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مقذوذة الآذان صدقات الحدق",
         "prototipe_benzerlik": 0.386,
         "halka": "orta"
       },
       {
-        "cumle": "ومنه: رجل مقذّذ: مزيّن نظيف الثوب. وإنه للئيم المقذّين وهما ما خلف الأذنين. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومنه: رجل مقذّذ: مزيّن نظيف الثوب. وإنه للئيم المقذّين وهما ما خلف الأذنين. قال:",
         "prototipe_benzerlik": 0.46,
         "halka": "orta"
       },
       {
-        "cumle": "ينضح ريح المسك من مقذيه",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ينحط من ذفراه ثمل الفلفل ... على مقذّى خضلٍ مؤللٍ",
+        "prototipe_benzerlik": 0.421,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بت ألوّي موهناً ذراعيه ... حتى دخلت معه في برديه",
+        "prototipe_benzerlik": 0.295,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ينضح ريح المسك من مقذيه",
         "prototipe_benzerlik": 0.47,
         "halka": "orta"
       },
       {
-        "cumle": "أي ما انتفض منه. وقال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.32,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صاحب طلح وسيالٍ وسلم ... علىمقذيه أنافيض البرم",
+        "prototipe_benzerlik": 0.539,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي ما انتفض منه. وقال:",
         "prototipe_benzerlik": 0.293,
         "halka": "uzak"
       },
       {
-        "cumle": "ساقٍ إذا ماء مقذيّه سجم",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لو ما أبو الدهماء لم ترو النّعم ... منخرق المدرع ذو لحم زيم",
+        "prototipe_benzerlik": 0.309,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ساقٍ إذا ماء مقذيّه سجم",
         "prototipe_benzerlik": 0.369,
         "halka": "orta"
       },
       {
-        "cumle": "وقيل: المقذّ: مغرز الرأس في العنق، وحقيقة المقذّ: المقطع فإما أن يكون منتهى شعر الرأس عند القفا أو منتهى الرأس وهو المغرز.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقيل: المقذّ: مغرز الرأس في العنق، وحقيقة المقذّ: المقطع فإما أن يكون منتهى شعر الرأس عند القفا أو منتهى الرأس وهو المغرز.",
         "prototipe_benzerlik": 0.373,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.41,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.393,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

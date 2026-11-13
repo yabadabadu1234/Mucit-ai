@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هزم الجيش وانهزم. وجيش مهزوم وهزيم، وهزمته واستهزمته، وهو يستهم الجيوش. وهو هزّام فرّاس. ووقعت عليهم الهزيمة. وهزمت البئر: حفرتها. وهزمت في الأرض هزمةً. وهزمت في البطيخة والقربة إذا غمزتها بيدك فانهزمت إلى جوفها، وفي القربة هزمة وهزومٌ، وتهزّم السقاء: ثني بعضه",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هزم الجيش وانهزم. وجيش مهزوم وهزيم، وهزمته واستهزمته، وهو يستهم الجيوش. وهو هزّام فرّاس. ووقعت عليهم الهزيمة. وهزمت البئر: حفرتها. وهزمت في الأرض هزمةً. وهزمت في البطيخة والقربة إذا غمزتها بيدك فانهزمت إلى جوفها، وفي القربة هزمة وهزومٌ، وتهزّم السقاء: ثني بعضه على بعض وهو جاف فتكسّر وتصدّع. وتهزّم البناء: تهدّم. وشجّةٌ هازمة. وفي الحديث: \" إن زمزم هزمة جبريل \" وغيث هزيم: منبعق. وسمعت هزمة الرعد وهزيمه: صوته، وتهزّم الرعد. وللسنّور هزمة وهي صوت حلقه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فرس هزمٌ: له صهيل مثل هزمة الرعد. وهزمت على زيد: عطفت عليه. وهزم عني معروفك نوائب الدهر. ولقاؤك يهزم الأحزان.",
-        "prototipe_benzerlik": 0.728,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس هزمٌ: له صهيل مثل هزمة الرعد. وهزمت على زيد: عطفت عليه. وهزم عني معروفك نوائب الدهر. ولقاؤك يهزم الأحزان.",
+        "prototipe_benzerlik": 0.77,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.728,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.77,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

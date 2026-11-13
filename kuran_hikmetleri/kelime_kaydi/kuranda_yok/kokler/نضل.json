@@ -911,44 +911,100 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ناضلته فضلته. وخرجوا إلى النضال، وهم يتناضلون وينتضلون: وانتضلت من الكنانة سهماً: اخترته.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ناضلته فضلته. وخرجوا إلى النضال، وهم يتناضلون وينتضلون: وانتضلت من الكنانة سهماً: اخترته."
+      },
+      {
+        "kaynak": "Mekâyîs: نَضَلَ",
+        "metin": "(نَضَلَ) النُّونُ وَالضَّادُ وَاللَّامُ: أُصَيْلٌ يَدُلُّ عَلَى رَمْيٍ وَمُرَامَاةٍ.\nوَنَضَلَ فُلَانًا: رَامَاهُ بِالنِّضَالِ فَغَلَبَهُ فِي ذَلِكَ. وَهُوَ يُنَاضِلُ عَنْ فُلَانٍ: يَتَكَلَّمُ عَنْهُ بِعُذْرِهِ، كَأَنَّهُ يُرَامِي دُونَهُ. وَانْتَضَلْتُ سَهْمًا مِنَ الْكِنَانَةِ. وَيُقَالُ اسْتِعَارَةً: انْتَضَلْتُ رَجُلًا مِنَ الْقَوْمِ: اخْتَرْتُ مِنْهُمْ. وَانْتِضَالُ الْإِبِلِ: رَمْيُهَا بِأَيْدِيهَا فِي السَّيْرِ. وَانْتَضَلُوا وَتَنَاضَلُوا: رَمَوْا بِالسَّبْقِ. وَانْتَضَلْنَا بِالْكَلَامِ وَالْأَحَادِيثِ، اسْتِعَارَةٌ مِنْ نِضَالِ السَّهْمِ. قَالَ لَبِيدٌ:\nفَانْتَضَلْنَا وَابْنُ سَلْمَى قَاعِدٌ ... كَعَتِيقِ الطَّيْرِ يُغْضِي وَيُجَلُّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو يناضل عن قومه. وقعدوا ينتضلون: يفتخرون. وانتضلت منهم رجلاً: اخترته. والإبل تنتضل في سيرها: ترمى بأيديها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو يناضل عن قومه. وقعدوا ينتضلون: يفتخرون. وانتضلت منهم رجلاً: اخترته. والإبل تنتضل في سيرها: ترمى بأيديها.",
         "prototipe_benzerlik": 0.688,
         "halka": "yakın"
       },
       {
-        "cumle": "بذاهب سريع. وقال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الطرماح:",
+        "prototipe_benzerlik": 0.376,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تناضل رجلاها يديها من الحصى ... بمصعنفر يهوى خلال الفراسن",
+        "prototipe_benzerlik": 0.388,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بذاهب سريع. وقال ذو الرمة:",
         "prototipe_benzerlik": 0.395,
         "halka": "orta"
       },
       {
-        "cumle": "وركبت نضواً من الأنضاء. وقد أنضته الأسفار. ونضا الخضاب. وأعطيني نضاوة حنائك وهي سلاتته. ونضوت الثوب عنّى والجّل عن الفرس. ونضوت السيف من غمده وانتضيته. ورماه بالنّضيّ وهو السهم. قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا فرقد الموماة لاح انتضلته ... بمكحولة الأرجاء بيض المواكف",
+        "prototipe_benzerlik": 0.406,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ض",
+        "prototipe_benzerlik": 0.347,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وركبت نضواً من الأنضاء. وقد أنضته الأسفار. ونضا الخضاب. وأعطيني نضاوة حنائك وهي سلاتته. ونضوت الثوب عنّى والجّل عن الفرس. ونضوت السيف من غمده وانتضيته. ورماه بالنّضيّ وهو السهم. قال الأعشى:",
         "prototipe_benzerlik": 0.119,
         "halka": "uzak"
       },
       {
-        "cumle": "وطعنه بنضيّ الرّمح وهو صدره. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فمرّ نضيّ السهم تحت لبانه ... وجال على وحشيّه لم يعتمّ",
+        "prototipe_benzerlik": 0.475,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطعنه بنضيّ الرّمح وهو صدره. قال:",
         "prototipe_benzerlik": 0.433,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: الفرس ينضو الخيل إذا تقدّمها. قال زهير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فظلّ لثيران الصّريم غماغم ... إذا دعموها بالنّضيّ المعلّب",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: الفرس ينضو الخيل إذا تقدّمها. قال زهير:",
         "prototipe_benzerlik": 0.478,
         "halka": "orta"
       },
       {
-        "cumle": "وأنضبت الثوب: أبليته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورحنا به ينضو الجياد عشية ... مخضّبةً أرساغه وعوامله",
+        "prototipe_benzerlik": 0.375,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنضبت الثوب: أبليته.",
         "prototipe_benzerlik": 0.396,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.418,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.405,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

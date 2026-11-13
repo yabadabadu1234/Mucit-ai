@@ -1428,44 +1428,82 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تقول: رجل فاتك، وسيف باتك؛ وهو القاتل على غرّة. قال المخبل: وإذ فتك النعمان بالناس محرماً ... فملئ من عوف ين كعب سلاسله وتقول: أقدم فلان إقادامه متفتّك، واقتحم اقتحامه متهوك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تقول: رجل فاتك، وسيف باتك؛ وهو القاتل على غرّة. قال المخبل:\nوإذ فتك النعمان بالناس محرماً ... فملئ من عوف ين كعب سلاسله\nوتقول: أقدم فلان إقادامه متفتّك، واقتحم اقتحامه متهوك."
+      },
+      {
+        "kaynak": "Mekâyîs: فَتَكَ",
+        "metin": "(فَتَكَ) الْفَاءُ وَالتَّاءُ وَالْكَافُ كَلِمَةٌ تَدُلُّ عَلَى خِلَافِ النُّسُكِ وَالصَّلَاحِ. مِنْ ذَلِكَ الْفَتْكُ، وَهُوَ الْغَدْرُ، وَهُوَ الْفِتْكُ أَيْضًا. يُقَالُ: فَتَكَ بِهِ: اغْتَالَهُ. وَفِي الْحَدِيثِ: «الْإِيمَانُ قَيْدُ الْفَتْكِ &quot;.» وَقَالَ الشَّاعِرُ:\nلَا مَهْرَ أَغْلَى مِنْ عَلِيٍّ وَإِنْ غَلَا ... وَلَا فَتْكَ إِلَّا دُونَ فَتْكِ ابْنِ مُلْجِمِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حيّة فاتكة اللسع. أنشد أبو عبيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حيّة فاتكة اللسع. أنشد أبو عبيد:",
         "prototipe_benzerlik": 0.451,
         "halka": "orta"
       },
       {
-        "cumle": "وفلان فاتك القلب إذا كان جرياً ماضياً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قرى السم حتى انماز فروة رأسه ... من الصم صلٌّ فاتك اللسع مارده",
+        "prototipe_benzerlik": 0.317,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان فاتك القلب إذا كان جرياً ماضياً.",
         "prototipe_benzerlik": 0.545,
         "halka": "yakın"
       },
       {
-        "cumle": "وهذه إنسانة فاتكة: ماجنة، وقد فتكت. وفتك في الأمر فتكاً، وما أفتكه وهو اللجاج. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال:",
+        "prototipe_benzerlik": 0.65,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأمضى على هول إذا ما تهزهزت ... من الخوف أحشاء القلوب الفواتك",
+        "prototipe_benzerlik": 0.618,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذه إنسانة فاتكة: ماجنة، وقد فتكت. وفتك في الأمر فتكاً، وما أفتكه وهو اللجاج. قال:",
         "prototipe_benzerlik": 0.736,
         "halka": "yakın"
       },
       {
-        "cumle": "قد فتكت في كذب ولطّ",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قد فتكت في كذب ولطّ",
         "prototipe_benzerlik": 0.485,
         "halka": "orta"
       },
       {
-        "cumle": "وفتك في صناعته: مهر فيها، وفاتك صاحبه: ماهره. وفاتك التاجر البيع: اشتط في سومه. قال الحطيئة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفتك في صناعته: مهر فيها، وفاتك صاحبه: ماهره. وفاتك التاجر البيع: اشتط في سومه. قال الحطيئة:",
         "prototipe_benzerlik": 0.575,
         "halka": "yakın"
       },
       {
-        "cumle": "وفاتك الإبل الحمض إذا لم ترع معه عقبة من الخلة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأن سليطاً نشرت فيه بزّها ... بروداً ورقماً فاتك البيع تاجره",
+        "prototipe_benzerlik": 0.619,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفاتك الإبل الحمض إذا لم ترع معه عقبة من الخلة.",
         "prototipe_benzerlik": 0.574,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.561,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.557,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["kill.v.09"],
   "muhassas_tasnif": {

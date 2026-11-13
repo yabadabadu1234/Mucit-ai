@@ -803,19 +803,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حفرت أسناخ أسنانه، وسنخت: ائتكلت أصولها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حفرت أسناخ أسنانه، وسنخت: ائتكلت أصولها."
+      },
+      {
+        "kaynak": "Mekâyîs: سَنِخَ",
+        "metin": "(سَنِخَ) السِّينُ وَالنُّونُ وَالْخَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى أَصْلِ الشَّيْءِ. فَالسِّنْخُ: الْأَصْلُ. وَأَسْنَاخُ الثَّنَايَا: أُصُولُهَا. وَيُقَالُ سَنَخَ الرَّجُلُ فِي الْعِلْمِ سُنُوخًا أَيْ عَلِمَ أُصُولَهُ. فَأَمَّا قَوْلُهُمْ سَنِخَ الدُّهْنُ، إِذَا تَغَيَّرَ، فَلَيْسَ بِشَيْءٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سنخ الطعام، وطعام سنخ، وأصله من سنخ الأسنان.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سنخ الطعام، وطعام سنخ، وأصله من سنخ الأسنان.",
         "prototipe_benzerlik": 0.558,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.558,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

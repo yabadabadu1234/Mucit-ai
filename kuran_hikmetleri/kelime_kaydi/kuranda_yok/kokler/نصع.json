@@ -1678,24 +1678,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نصع لونه: خلص، وأبيض وأحمر ناصع. قال: من صفرة تعلو البياض وحمرة ... نصّاعة كشقائق النعمان وخرجوا إلى المناصع: المبارز، ونصعو إليها: برزوا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نصع لونه: خلص، وأبيض وأحمر\nناصع. قال:\nمن صفرة تعلو البياض وحمرة ... نصّاعة كشقائق النعمان\nوخرجوا إلى المناصع: المبارز، ونصعو إليها: برزوا."
+      },
+      {
+        "kaynak": "Mekâyîs: نَصَعَ",
+        "metin": "(نَصَعَ) النُّونُ وَالصَّادُ وَالْعَيْنُ أَصْلٌ يَدُلُّ عَلَى خُلُوصٍ وَلِينٍ فِي الشَّيْءِ. مِنْهُ النَّاصِعُ: الْحَسَنُ اللَّوْنِ الشَّدِيدُ الْبَيَاضِ. وَالنِّصْعُ: ضَرْبٌ مِنَ الثِّيَابِ شَدِيدُ الْبَيَاضِ. وَنَصَعَ الْحَقُّ: وَضَحَ.\nوَمِنْ بَابِ السُّهُولَةِ وَاللِّينِ، وَهُوَ الْقِيَاسُ الَّذِي ذَكَرْنَاهُ، أَنْصَعَتِ النَّاقَةُ لِلْفَحْلِ: أَقَرَّتْ لَهُ. وَيُقَالُ: قَبَّحَ اللَّهُ أُمًّا نَصَعَتْ [بِهِ] ، أَيْ وَلَدَتْهُ، حَكَاهُ ابْنُ السِّكِّيتِ. وَالْمَنَاصِعُ: الْمَجَالِسُ: سُمِّيَتْ بِهَا لِأَنَّهَا فِي أَسْهَلِ الْمَوَاضِعِ وَأَمْكَنِهَا.\nوَشَذَّ عَنْ هَذَا قَوْلُهُمْ: أَنْصَعَ: اقْشَعَرَّ. قَالَ:\nحَتَّى اقْشَعَرَّ جِلْدُهُ وَأَنْصَعَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نصع الحق، والحق ناصع. وله حسب ناصع. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نصع الحق، والحق ناصع. وله حسب ناصع. قال النابغة:",
         "prototipe_benzerlik": 0.794,
         "halka": "yakın"
       },
       {
-        "cumle": "ولم يأتك الحق الذي هو ناصع",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولم يأتك الحق الذي هو ناصع",
         "prototipe_benzerlik": 0.467,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.63,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

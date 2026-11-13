@@ -1583,29 +1583,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قلس: قاء ملء الفم قلساً. في الحديث \" القلس حدث \" والقلس محركاً: اسم ما يقلس. وقلست نفسه ولقست: غثت. وتقول: قلست فقلست اي غشت فقاءت. وقلسته فتقلّس من القلنسوة. وجرّوا السفينة بالقلس والسّفين بالقلوس. أنشد ابن الأعرابيّ: في شعشعان كعمود القلس أي كالدقل. وقلّس ال",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قلس: قاء ملء الفم قلساً. في الحديث \" القلس حدث \" والقلس محركاً: اسم ما يقلس. وقلست نفسه ولقست: غثت. وتقول: قلست فقلست اي غشت فقاءت. وقلسته فتقلّس من القلنسوة. وجرّوا السفينة بالقلس والسّفين بالقلوس. أنشد ابن الأعرابيّ:\nفي شعشعان كعمود القلس\nأي كالدقل. وقلّس المقلّسون وهم الذين يلعبون في الأعياد بين يدي الأمراء بالسيوف والحراب ويضربون الطّبول، وفي الحديث لما قدم عمر الشام: لقيه المقلّسون بالسيوف والريحان. قال الكميت:\nثم استمرّ يغنيه الذّياب كما ... غنى المقلّس بطريقاً بمزمار\nوقلّس الذّمّيّ: وضع يديه على صدره قبل التّكفير. وقلّس فلان: خضع لأمير أو كبير. قال:\nإذا ما رأونا قلّسوا من مهابة ... ويسعى علينا بالطعام جرير"
+      },
+      {
+        "kaynak": "Mekâyîs: قَلَسَ",
+        "metin": "(قَلَسَ) الْقَافُ وَاللَّامُ وَالسِّينُ كَلِمَتَانِ: أَحَدُهُمَا رَمْيُ السَّحَابَةِ النَّدَى مِنْ غَيْرِ مَطَرٍ، وَمِنْهُ قَلَسَ الْإِنْسَانُ، إِذَا قَاءَ، فَهُوَ قَالِسٌ. وَأَمَّا التَّقْلِيسُ فَيُقَالُ: هُوَ الضَّرْبُ بِبَعْضِ الْمَلَاهِي. وَهِيَ الْكَلِمَةُ الْأُخْرَى.\nوَقَالَ أَبُو بَكْرِ بْنُ دُرَيْدٍ: الْقَلْسُ مِنَ الْحِبَالِ، مَا أَدْرِي مَا صِحَّتُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قلست السحابة النذدى من غير مطر شديد. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.205,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قلست السحابة النذدى من غير مطر شديد. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.203,
         "halka": "uzak"
       },
       {
-        "cumle": "وقلست الكأس: قذفت الشراب لفرط امتلائها. قال:",
-        "prototipe_benzerlik": 0.123,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تبسّمن عن غرّ كأن رضابها ... ندى الرمل مجّته السحاب القوالس",
+        "prototipe_benzerlik": 0.867,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقلست الكأس: قذفت الشراب لفرط امتلائها. قال:",
+        "prototipe_benzerlik": 0.124,
         "halka": "uzak"
       },
       {
-        "cumle": "وقلست الطّعنة بالدم، وطعنة قالسة وقلاّسة.",
-        "prototipe_benzerlik": -0.041,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبا حسن ما زرتكم منذ سنبة ... من الدهر إلا والزّجاجة تقلس",
+        "prototipe_benzerlik": 0.408,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقلست الطّعنة بالدم، وطعنة قالسة وقلاّسة.",
+        "prototipe_benzerlik": -0.044,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.095,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.311,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

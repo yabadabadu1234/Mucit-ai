@@ -1859,19 +1859,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أخصب المكان وخصب: وقع فيه الخصب. ومكان مخصب وخصيب وخصب. وأخصب القوم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخصب المكان وخصب: وقع فيه الخصب. ومكان مخصب وخصيب وخصب. وأخصب القوم."
+      },
+      {
+        "kaynak": "Mekâyîs: خَصِبَ",
+        "metin": "(خَصِبَ) الْخَاءُ وَالصَّادُ وَالْبَاءُ أَصْلٌ وَاحِدٌ، وَهُوَ ضِدُّ الْجَدْبِ. مَكَانٌ مُخْصِبٌ: خَصِيبٌ. وَمِنَ الْبَابِ الْخِصَابُ: نَخْلُ الدَّقَلِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان خصيب الرجل: كثير خير المنزل، وعن الحسن \" كانوا في الرحال مخاصيب وفي الأثاث والثياب مقارب \". وفي الحديث \" إن الله ليحب البيت الخصيب \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان خصيب الرجل: كثير خير المنزل، وعن الحسن \" كانوا في الرحال مخاصيب وفي الأثاث والثياب مقارب \". وفي الحديث \" إن الله ليحب البيت الخصيب \".",
         "prototipe_benzerlik": 0.449,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.449,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "fatten.v.01",

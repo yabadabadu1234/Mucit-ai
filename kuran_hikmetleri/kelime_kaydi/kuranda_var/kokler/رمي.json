@@ -1675,44 +1675,84 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رماه عن القوس بالمرماة وبالمرامي رمية صائبة ورميات صوائب، وهو جيد الرمي والرماية. ورموت اليد يده. وهو من رماة الحدق. وهو رجل رماه. وتراموه وارتموه. وخرجوا يرتمون ويترامون في الغرض. وراماه مراماة ورماء، وفي ثل \" قبل الرماء تملأ الكنائن \" وخرجت أرتمي: أرمي القنص",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رماه عن القوس بالمرماة وبالمرامي رمية صائبة ورميات صوائب، وهو جيد الرمي والرماية. ورموت اليد يده. وهو من رماة الحدق. وهو رجل رماه. وتراموه وارتموه. وخرجوا يرتمون ويترامون في الغرض. وراماه مراماة ورماء، وفي ثل \" قبل الرماء تملأ الكنائن \" وخرجت أرتمي: أرمي القنص. وخرجت أرتمّى: أرمى في الأغراض. ورأيت المتاع مرمى به في كل موضع. ونفذ سهمه في الرمية والرمايا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رمي في عينه بالقذى، ورماه بعينه. ورماه بالفاحشة. ورمى بحبله على غاربه: تركه وخلاه. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.513,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وهو مرام عن قومه: مناضل. وطعنه فرمى به، وأرماه عن ظهر فرسه. ورمى بالعدل عن ظهر البعير وأرماه: ألقاه. وأكل التمر ورمى بالنوى. ورمت الأرمية بالأسمية أي السحب بالأمطار. والرمي: السحاب الخريفيّ العظيم القطر. قال أبو جندب الهذليّ:",
-        "prototipe_benzerlik": 0.813,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وهو مطر الصيف. وقال آخر:",
-        "prototipe_benzerlik": 0.277,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رمي في عينه بالقذى، ورماه بعينه. ورماه بالفاحشة. ورمى بحبله على غاربه: تركه وخلاه. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.27,
         "halka": "uzak"
       },
       {
-        "cumle": "وترامى الجرح والأمر إلى الفساد. ورمى الله لك: نصرك. ورميت على الخمسين وأرميت: زدت، وهو يرمي على صاحبه ويرمى. قال:",
-        "prototipe_benzerlik": 0.735,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أطاع الهوى حتى رمته بحبله ... على ظهره بعد العتاب عواذله",
+        "prototipe_benzerlik": 0.275,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو مرام عن قومه: مناضل. وطعنه فرمى به، وأرماه عن ظهر فرسه. ورمى بالعدل عن ظهر البعير وأرماه: ألقاه. وأكل التمر ورمى بالنوى. ورمت الأرمية بالأسمية أي السحب بالأمطار. والرمي: السحاب الخريفيّ العظيم القطر. قال أبو جندب الهذليّ:",
+        "prototipe_benzerlik": 0.77,
         "halka": "yakın"
       },
       {
-        "cumle": "وفي هذا رمية على ما قيل لي أي زيادة. وفيه رمي على ما سمعت أي فضل، وهو صاحب رمية أي يزيد في الحديث. وارتمى المال ورمى وأرمى:",
-        "prototipe_benzerlik": 0.594,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هنالك لو دعوت أتاك منهم ... فوارس مثل أرمية الحميم",
+        "prototipe_benzerlik": 0.25,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو مطر الصيف. وقال آخر:",
+        "prototipe_benzerlik": 0.296,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حنين اليماني هاجه بعد سلوة ... وميض رميّ آخر الليل يبرق",
+        "prototipe_benzerlik": 0.709,
         "halka": "yakın"
       },
       {
-        "cumle": "زاد وكثر. ورأيت ناساً يرمون الطائف: يقصدونه وهذا كلام بعيد المرامي. وله همة قصيّة المرمى، وما أبعد مرمى همته. وتقول: هذه الموامي، بعيدة المرامي. وكيف تصنع إن رميت بك على العراقين أي إن سلطتك عليهما ووليتك. وقال ذو الرمة:",
-        "prototipe_benzerlik": 0.791,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وترامى الجرح والأمر إلى الفساد. ورمى الله لك: نصرك. ورميت على الخمسين وأرميت: زدت، وهو يرمي على صاحبه ويرمى. قال:",
+        "prototipe_benzerlik": 0.581,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حنيك مليّ بالأمور إذا عرت ... طوى مائة عاماً وقد كاد أو رمى",
+        "prototipe_benzerlik": 0.203,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي هذا رمية على ما قيل لي أي زيادة. وفيه رمي على ما سمعت أي فضل، وهو صاحب رمية أي يزيد في الحديث. وارتمى المال ورمى وأرمى:",
+        "prototipe_benzerlik": 0.437,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زاد وكثر. ورأيت ناساً يرمون الطائف: يقصدونه وهذا كلام بعيد المرامي. وله همة قصيّة المرمى، وما أبعد مرمى همته. وتقول: هذه الموامي، بعيدة المرامي. وكيف تصنع إن رميت بك على العراقين أي إن سلطتك عليهما ووليتك. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.761,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "درفس رمى روض القذافين متنه ... بأعرف ينبو بالحنيين تامك",
+        "prototipe_benzerlik": 0.609,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.62,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.469,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

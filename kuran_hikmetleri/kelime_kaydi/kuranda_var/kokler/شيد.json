@@ -1212,24 +1212,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شَدُّ نحوِ البناء بما ينتشر عليه فيُمسكه شديدًا: نحو الجِصّ. {وَقَصْرٍ مَشِيدٍ} [الحج: 45]، {فِي بُرُوجٍ مُشَيَّدَةٍ}. أما ما قالوه من: شيدت البناء - ض: طوَّلته \"فهو من لازم الأصل؛ إذ لا يستطاع رفع البناء عاليًا إلا إذا كان شديد الأصل والأساس. (2/1116)",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شَدُّ نحوِ البناء بما ينتشر عليه فيُمسكه شديدًا: نحو الجِصّ. {وَقَصْرٍ مَشِيدٍ} [الحج: 45]، {فِي بُرُوجٍ مُشَيَّدَةٍ}. أما ما قالوه من: شيدت البناء - ض: طوَّلته \"فهو من لازم الأصل؛ إذ لا يستطاع رفع البناء عاليًا إلا إذا كان شديد الأصل والأساس. (2/1116)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شاد القصر وأشاده وشيده: رفعه، وقصر مشيد ومشيّد، وقيل: المشيد المعمول بالشيد وهو الجص، والمشيد بالمعنيين."
+      },
+      {
+        "kaynak": "Mekâyîs: شَيَدَ",
+        "metin": "(شَيَدَ) الشِّينُ وَالْيَاءُ وَالدَّالُ أَصْلٌ وَاحِدٌ يَدُلُ عَلَى رَفْعِ الشَّيْءِ. يُقَالُ شِدْتُ الْقَصْرَ أَشِيدُهُ شَيْدًا. وَهُوَ قَصْرٌ مَشِيدٌ، أَيْ مَعْمُولٌ بِالشِّيدِ. وَسُمِّيَ شِيدًا لِأَنَّ بِهِ يُرْفَعُ الْبِنَاءُ. يُقَالُ قَصْرٌ مَشِيدٌ أَيْ مُطَوَّلٌ. وَالْإِشَادَةُ: رَفْعُ الصَّوْتِ وَالتَّنْوِيهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أشاد بذكره: رفعه بالثناء عليه وأشاد عليه: أفشى عليه مكروهاً، ويقال: أشاد عليه قبيحاً وبقبيح. وفي الحديث \" من أشاد على مسلم عورة يشينه بها شانه الله تعالى بها يوم القيامة \"",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشاد بذكره: رفعه بالثناء عليه وأشاد عليه: أفشى عليه مكروهاً، ويقال: أشاد عليه قبيحاً وبقبيح. وفي الحديث \" من أشاد على مسلم عورة يشينه بها شانه الله تعالى بها يوم القيامة \"",
         "prototipe_benzerlik": 0.415,
         "halka": "orta"
       },
       {
-        "cumle": "وأشاد صوته وبصوته: رفعه. وأشاد بالضالة: عرفها.",
-        "prototipe_benzerlik": 0.328,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.472,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أتاني أنّ داهية نآداً ... أشاد بها على خطل هشام",
+        "prototipe_benzerlik": 0.309,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأشاد صوته وبصوته: رفعه. وأشاد بالضالة: عرفها.",
+        "prototipe_benzerlik": 0.328,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.372,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.381,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "arouse.v.01",

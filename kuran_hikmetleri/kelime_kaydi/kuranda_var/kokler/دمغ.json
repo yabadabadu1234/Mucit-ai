@@ -1430,8 +1430,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "mind.n.01",
-    "dayanak_tanim": "that which is responsible for one's thoughts and feelings; the seat of the faculty of reason",
+    "dayanak_synset": "brain.n.02",
+    "dayanak_tanim": "mental ability",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1450,24 +1450,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "التمكن والتحكم في الشيء من أعلى: كما أن دامغة الطلع يمكن أن تُفْسده، فلا تثمر النخلة لأن الطلع هو نَوْر النخلة (أول ما يُرىَ من عِذْق النخلة). والحديدة المذكورة تَشُدّ الرحل -من أعلى- بعضَه إلى بعض بإيثاقها الحِنْوين. وخشبة الدامغة تضبط العمودين، ويعلَّق عليها",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "دمغ الحق الباطل إذا علاه وقهره \" بل نقذف بالحق على الباطل فيدمغه \" ويقال: دمغهم بمطفئة الرضف إذا ذبح لهم ذبيحة سمينة. ودمغ الثريد بالدسم: لبقه.",
-        "prototipe_benzerlik": 0.412,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "التمكن والتحكم في الشيء من أعلى: كما أن دامغة الطلع يمكن أن تُفْسده، فلا تثمر النخلة لأن الطلع هو نَوْر النخلة (أول ما يُرىَ من عِذْق النخلة). والحديدة المذكورة تَشُدّ الرحل -من أعلى- بعضَه إلى بعض بإيثاقها الحِنْوين. وخشبة الدامغة تضبط العمودين، ويعلَّق عليها السقاء، ليرجّ فيمْكِنَ مخضُه. والدماغ: المخ، هو المتحكم في كل وظائف البدن الحسية والحركية (2/680) والذهنية بل والحيوية. ومن التمكن من الشيء من أعلى قيل: \"القهر والأخذ من فوق دَمْغٌ كما يَدْمَغ الحقُ الباطل، ودَمَغه: أخذه من فوق. وفي التنزيل {بَلْ نَقْذِفُ بِالْحَقِّ عَلَى الْبَاطِلِ فَيَدْمَغُهُ} [الأنبياء: 18]، أي يعلوه ويغلبه ويبطله \". ويتأتى أن يكون هذا من مجاز الدمغ إصابة الدماغ الذي في الرأس، قالوا: \"دَمَغَه (فتح): كسر الصاقورة (وهي باطنُ القِحْف المشرفُ على الدماغ) عن دماغه \". وإصابة الدماغ قاضية."
       },
       {
-        "cumle": "شحم كالدمقس وهو الحريرة البيضاء.",
-        "prototipe_benzerlik": 0.258,
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دمغ رأسه: ضربه حتى وصلت الضربة إلى دماغه. وشجة دامغة. ودمغته الشمس: آلمت دماغه."
+      },
+      {
+        "kaynak": "Mekâyîs: دَمَغَ",
+        "metin": "(دَمَغَ) الدَّالُ وَالْمِيمُ وَالْغَيْنُ كَلِمَةٌ وَاحِدَةٌ لَا تَتَفَرَّعُ وَلَا يُقَاسُ عَلَيْهَا. فَالدِّمَاغُ مَعْرُوفٌ. وَدَمَغْتُهُ: ضَرَبْتُهُ عَلَى رَأْسِهِ حَتَّى وَصَلْتُ إِلَى الدِّمَاغِ. وَهِيَ الدَّامِغَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دمغ الحق الباطل إذا علاه وقهره \" بل نقذف بالحق على الباطل فيدمغه \" ويقال: دمغهم بمطفئة الرضف إذا ذبح لهم ذبيحة سمينة. ودمغ الثريد بالدسم: لبقه.",
+        "prototipe_benzerlik": 0.561,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د م ق س",
+        "prototipe_benzerlik": 0.538,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شحم كالدمقس وهو الحريرة البيضاء.",
+        "prototipe_benzerlik": 0.284,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.335,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.461,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["ability.n.02", "affect.v.05", "mind.n.01", "stamp.v.03"],
   "muhassas_tasnif": {

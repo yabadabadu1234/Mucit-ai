@@ -749,19 +749,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قلنا تحت ظلال الدوح وهي الشجر العظام، الواحدة دوحة. وياقل: سمرة دوحة، ومظلة دوحة: عظيمة. وداحت الشجرة. وأراكة دائحة، وأراك دوائح، وانداح بطنه: انتفخ وتدلّى من سمن أو علة، وتدوّح مثله. وفلان يلبس الداح وهو الوشي والنقش. قال: يا لابس الوشي على شيبه ... ما أقبح ا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "فلان من دوحة الكرم.",
-        "prototipe_benzerlik": 0.328,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قلنا تحت ظلال الدوح وهي الشجر العظام، الواحدة دوحة. وياقل: سمرة دوحة، ومظلة دوحة: عظيمة. وداحت الشجرة. وأراكة دائحة، وأراك دوائح، وانداح بطنه: انتفخ وتدلّى من سمن أو علة، وتدوّح مثله. وفلان يلبس الداح وهو الوشي والنقش. قال:\nيا لابس الوشي على شيبه ... ما أقبح الداح على الشيخ\nوجاءنا وعليه داحة. وقال أبو حمزة الصوفيّ:\nلولا حبتي داحه ... لكان الموت لي راحه\nفقيل له وما داحة؟ قال: الدنيا."
+      },
+      {
+        "kaynak": "Mekâyîs: دَوَحَ",
+        "metin": "(دَوَحَ) الدَّالُ وَالْوَاوُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الدَّوْحَةُ: [الشَّجَرَةُ] الْعَظِيمَةُ، وَالْجَمْعُ الدَّوْحُ. قَالَ:\nيَكُبُّ عَلَى الْأَذْقَانِ دَوْحَ الْكَنَهْبَلِ"
       }
     ],
-    "ortalama_benzerlik": 0.328,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان من دوحة الكرم.",
+        "prototipe_benzerlik": 0.325,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.325,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

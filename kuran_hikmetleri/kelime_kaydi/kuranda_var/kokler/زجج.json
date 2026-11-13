@@ -1315,8 +1315,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "glassware.n.01",
-    "dayanak_tanim": "an article of tableware made of glass",
+    "dayanak_synset": "flask.n.01",
+    "dayanak_tanim": "bottle that has a narrow neck",
     "synset_sayisi": 22
   },
   "ses_mana_tasnif": {
@@ -1335,29 +1335,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "دفع الشيء ليتقدم داخلًا في شيء أو ليتداخل (1)",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "دفع الشيء ليتقدم داخلًا في شيء أو ليتداخل (1)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لا تقاس الصخور بالزجاج، ولا الخرصان بالزجاج. وزججت الرمح وأزججته: جعلت له زجاً. وقيل: أزججته: نزعت زجه. وقال أوس:\nأصم ردينياً كأن كعوبهنوى القسب عراصاً مزجاً منصلاً وزججته زجاً: طعنته بالزج، وزججته بالرمح: زرقته به. ورجل أزج وامرأة زجاء: بينة الزجج وهو دقة الحاجب واستقواسه. وحاجب أزج، وزججت حاجبها. قال:\nإذا ما الغانيات برزن يوماً ... وزججن الحواجب والعيونا"
+      },
+      {
+        "kaynak": "Mekâyîs: زَجَّ",
+        "metin": "(زَجَّ) الزَّاءُ وَالْجِيمُ أَصْلٌ يَدُلُّ عَلَى رِقَّةٍ فِي شَيْءٍ، مِنْ ذَلِكَ زُجُّ الرُّمْحِ وَالسَّهْمِ، وَجَمْعُهُ زِجَاجٌ بِكَسْرٍ الزَّاءِ. يُقَالُ زَجَّجْتُهُ: جَعَلْتُ لَهُ زُجًّا فَإِذَا نَزَعْتَ زُجَّهُ قُلْتَ: أَزْجَجْتُهُ. وَالزَّجَجُ: دِقَّةُ الْحَاجِبَيْنِ وَحُسْنُهُمَا. وَيُقَالُ إِنَّ الْأَزَجَّ مِنَ النَّعَامِ: الَّذِي فَوْقَ عَيْنِهِ رِيشٌ أَبْيَضُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "إتكأ على زجى مرفقيه واتكؤا على زجاج مرافقهم. قال ذو الرمة يصف حمراً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إتكأ على زجى مرفقيه واتكؤا على زجاج مرافقهم. قال ذو الرمة يصف حمراً:",
         "prototipe_benzerlik": 0.322,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن الوحوحة وهي صوت في الحلق وترديد نفس، يقال: وحوح من شدة البرد. وعضه الفحل لزجاجه: بأنيابه. وزج بالشيء: رمى به عن نفسه. ويقال للظليم إذا عدا: زج برجليه. ونزلنا بواد يزج النبات وبالنبات: يخرجه وينميه كأنه يرمى به عن نفسه رمياً. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقد أسهرت ذا أسهم بات جاذلا ... له فوق زجى مرفقيه وحاوح",
+        "prototipe_benzerlik": 0.345,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن الوحوحة وهي صوت في الحلق وترديد نفس، يقال: وحوح من شدة البرد. وعضه الفحل لزجاجه: بأنيابه. وزج بالشيء: رمى به عن نفسه. ويقال للظليم إذا عدا: زج برجليه. ونزلنا بواد يزج النبات وبالنبات: يخرجه وينميه كأنه يرمى به عن نفسه رمياً. قال:",
         "prototipe_benzerlik": 0.132,
         "halka": "uzak"
       },
       {
-        "cumle": "تردد. والأزج البعيد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في عازب أزج يزج نباته ... خال تمعج دونه الرواد",
+        "prototipe_benzerlik": 0.348,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تردد. والأزج البعيد.",
         "prototipe_benzerlik": 0.425,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.293,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.315,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",
@@ -1368,10 +1395,10 @@
     "compound.v.02",
     "compound.v.05",
     "copulate.v.01",
-    "domestic_partner.n.01",
     "gathering.n.01",
     "glass.n.01",
     "glaze.v.02",
+    "male.n.02",
     "marry.v.01",
     "mix.v.04",
     "mix.v.05",

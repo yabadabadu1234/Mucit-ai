@@ -1295,24 +1295,38 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "امتلاء الظرف أو المكان أي ازدحامه بلطيف يظهر وجوده (1): كالروضة والقرية والوادي والقِربة بما فيهن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "امتلاء الظرف أو المكان أي ازدحامه بلطيف يظهر وجوده (1): كالروضة والقرية والوادي والقِربة بما فيهن."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الظبي أغنّ: لأن في ترنينه غنّة وهي ترخيم في صوته من نحو الخياشيم بعون من نفس الأنف، والنون أشدّ الحروف غنّة."
+      },
+      {
+        "kaynak": "Mekâyîs: غَنَّ",
+        "metin": "(غَنَّ) الْغَيْنُ وَالنُّونُ أُصَيْلٌ صَحِيحٌ، وَهُوَ يَدُلُّ عَلَى صَوْتٍ كَأَنَّهُ غَيْرُ مَفْهُومٍ، إِمَّا لِاخْتِلَاطِهِ، وَإِمَّا لِعِلَّةٍ تُصَاحِبُهُ. مِنْ ذَلِكَ قَوْلُهُمْ: قَرْيَةٌ غَنَّاءُ، يُرَادُ بِذَلِكَ تَجَمُّعُ أَصْوَاتِهِمْ وَاخْتِلَاطُ جَلَبَتِهِمْ. وَوَادٍ أَغَنُّ: مُلْتَفُّ النَّبَاتِ، فَتَرَى الرِّيحَ تَجْرِي فِيهِ وَلَهَا غُنَّةٌ ; وَيَكُونُ ذَلِكَ مِنْ كَثْرَةِ ذُبَابِهِ. وَمِنْهُ الْغُنَّةُ فِي الرَّجُلِ الْأَغَنِّ، وَهُوَ خُرُوجُ كَلَامِهِ كَأَنَّهُ بِأَنْفِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "وادٍ أغنّ، وروضة غنّاء: لطنين الذّبّان أو لحفيف الريح في خلاله. وغشب مغنذ خجلٌ، وقد أغنّ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وادٍ أغنّ، وروضة غنّاء: لطنين الذّبّان أو لحفيف الريح في خلاله. وغشب مغنذ خجلٌ، وقد أغنّ. قال:",
         "prototipe_benzerlik": 0.175,
         "halka": "uzak"
       },
       {
-        "cumle": "وما قاع تغنّ به الخزامىبه الجثجاث يندى والعرار وقرية غنّاء: كثيرة الأهل. وتقول: عنّت لنا روضة غنّاء، للذبان فيها غناء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما قاع تغنّ به الخزامىبه الجثجاث يندى والعرار وقرية غنّاء: كثيرة الأهل. وتقول: عنّت لنا روضة غنّاء، للذبان فيها غناء.",
         "prototipe_benzerlik": 0.153,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.164,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

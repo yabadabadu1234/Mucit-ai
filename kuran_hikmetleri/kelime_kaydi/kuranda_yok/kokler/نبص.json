@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نبص الغلام بالطائر والكلب وهو أن يضمّ شفتيه ويدعوه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نبص الغلام بالطائر والكلب وهو أن يضمّ شفتيه ويدعوه."
+      },
+      {
+        "kaynak": "Mekâyîs: نَبَصَ",
+        "metin": "(نَبَصَ) النُّونُ وَالْبَاءُ وَالصَّادُ. يَقُولُونَ: نَبَصَ الْغُلَامُ بِالْكَلْبِ. وَنَبَصَ الطَّائِرُ: صَوَّتَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نبص بالكلمة: أخرجها متحذلقاً كأنه صلصلها وصفّاها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نبص بالكلمة: أخرجها متحذلقاً كأنه صلصلها وصفّاها.",
         "prototipe_benzerlik": 0.526,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.526,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

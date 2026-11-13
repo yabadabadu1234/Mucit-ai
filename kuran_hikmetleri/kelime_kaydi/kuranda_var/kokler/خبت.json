@@ -799,19 +799,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انخفاض باتساع واستقرار -مثل الخَبْت الموصوف (وقيد الاستقرار يؤخذ من الاتساع ومن الاستقرار المعتاد في المنخفَض). ومنه \"أخْبَت الرجل: اطمأنّ وتواضع وخَشَع -كمن نَزَلَ الخبْتَ ينخفض ويَقْصُر {وَلِيَعْلَمَ الَّذِينَ أُوتُوا الْعِلْمَ أَنَّهُ الْحَقُّ مِنْ رَبِّكَ ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انخفاض باتساع واستقرار -مثل الخَبْت الموصوف (وقيد الاستقرار يؤخذ من الاتساع ومن الاستقرار المعتاد في المنخفَض). ومنه \"أخْبَت الرجل: اطمأنّ وتواضع وخَشَع -كمن نَزَلَ الخبْتَ ينخفض ويَقْصُر {وَلِيَعْلَمَ الَّذِينَ أُوتُوا الْعِلْمَ أَنَّهُ الْحَقُّ مِنْ رَبِّكَ فَيُؤْمِنُوا بِهِ فَتُخْبِتَ لَهُ قُلُوبُهُمْ} [الحج: 54]: وكل ما في القرآن من التركيب فهو من الإخبات بهذا المعنى. (1/521)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نزلوا في خبت من الأرض وخبوت وهي البطون الواسعة المطمئنة، وأخبت القوم: صاروا في الخبت مثل أصحروا."
+      },
+      {
+        "kaynak": "Mekâyîs: خَبَتَ",
+        "metin": "(خَبَتَ) الْخَاءُ وَالْبَاءُ وَالتَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى خُشُوعٍ: يُقَالُ أَخْبَتَ يُخْبِتُ إِخْبَاتًا، إِذَا خَشَعَ. وَأَخْبَتَ لِلَّهِ تَعَالَى. قَالَ عَزَّ ذِكْرُهُ: وَبَشِّرِ الْمُخْبِتِينَ، وَأَصْلُهُ مِنَ الْخَبْتِ، وَهُوَ الْمَفَازَةُ لَا نَبَاتَ فِيهَا.\nوَمِنْ ذَلِكَ الْحَدِيثِ: «وَلَوْ بِخَبْتِ الْجَمِيشِ» &quot;. أَلَا تَرَاهُ سَمَّاهَا جَمِيشًا، كَأَنَّ النَّبَاتَ قَدْ جُمِشَ مِنْهَا، أَيْ حُلِقَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "\" أخبتوا إلى ربهم \": اطمأنوا إليه، وهو يصلي بخشوع وإخبات، وخضوع وإنصات؛ وقلبه مخبت.",
-        "prototipe_benzerlik": 0.4,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" أخبتوا إلى ربهم \": اطمأنوا إليه، وهو يصلي بخشوع وإخبات، وخضوع وإنصات؛ وقلبه مخبت.",
+        "prototipe_benzerlik": 0.481,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.4,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.481,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1050,11 +1050,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "answer.v.08",
+    "ince": "harmonize.v.01",
     "orta": "verb.stative",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "answer.v.08",
-    "dayanak_tanim": "match or correspond",
+    "dayanak_synset": "harmonize.v.01",
+    "dayanak_tanim": "go together",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1068,24 +1068,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دمع ساجم ومسجوم ومنسجم، ودموع سواجم، وعيون سواجم، وسجمت العين دمعها سجماً، وسجم الدمع سجوماً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دمع ساجم ومسجوم ومنسجم، ودموع سواجم، وعيون سواجم، وسجمت العين دمعها سجماً، وسجم الدمع سجوماً."
+      },
+      {
+        "kaynak": "Mekâyîs: سَجَمَ",
+        "metin": "(سَجَمَ) السِّينُ وَالْجِيمُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ صَبُّ الشَّيْءِ مِنَ الْمَاءِ\nوَالدَّمْعِ. يُقَالُ سَجَمَتِ الْعَيْنُ دَمْعَهَا. وَعَيْنٌ سَجُومٌ، وَدَمْعٌ مَسْجُومٌ. وَيُقَالُ أَرْضٌ مَسْجُومَةٌ: مَمْطُورَةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مطر وسحاب ساجم وسجام. قال جرير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مطر وسحاب ساجم وسجام. قال جرير:",
         "prototipe_benzerlik": 0.408,
         "halka": "orta"
       },
       {
-        "cumle": "وأرض مسجومة: ممطورة. وناقة سجوم ومسجام: درور، وقد سجمت. وسجم عن الأمر: أبطأ وانقبض. ورجل سجوم عن المكارم، ومنه بعير أسجم: لا يرغو.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضربت معارفها الرواسم بعدنا ... وسجال كل مجلجل سجام",
+        "prototipe_benzerlik": 0.413,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأرض مسجومة: ممطورة. وناقة سجوم ومسجام: درور، وقد سجمت. وسجم عن الأمر: أبطأ وانقبض. ورجل سجوم عن المكارم، ومنه بعير أسجم: لا يرغو.",
         "prototipe_benzerlik": 0.305,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.357,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.375,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "answer.v.08",

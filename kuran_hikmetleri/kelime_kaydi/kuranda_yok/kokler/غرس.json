@@ -1227,11 +1227,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "collection.n.01",
-    "orta": "noun.group",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "planting.n.02",
-    "dayanak_tanim": "a collection of plants (trees or shrubs or flowers) in a particular area",
+    "ince": "plant.v.01",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "plant.v.01",
+    "dayanak_tanim": "put or set (seeds, seedlings, or plants) into the ground",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1245,19 +1245,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هذا وقت الغراس وهو غرس الشجر: تقول في حائطه غراس كثيرة وهي الفسلان جمع: غرسٍ. وغرائس، كأنها عرائس؛ جمع غريسة وهي النخلة تغرس حديثاً كالوليدة: للصبية الحديثة العهد بالولاد.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هذا وقت الغراس وهو غرس الشجر: تقول في حائطه غراس كثيرة وهي الفسلان جمع: غرسٍ. وغرائس، كأنها عرائس؛ جمع غريسة وهي النخلة تغرس حديثاً كالوليدة: للصبية الحديثة العهد بالولاد."
+      },
+      {
+        "kaynak": "Mekâyîs: غَرَسَ",
+        "metin": "(غَرَسَ) الْغَيْنُ وَالرَّاءُ وَالسِّينُ أَصْلٌ صَحِيحٌ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ. يُقَالُ: غَرَسْتُ الشَّجَرَ غَرْسًا، وَهَذَا زَمَنُ الْغِرَاسِ. وَيُقَالُ إِنَّ الْغَرِيسَةَ: النَّخْلَةُ أَوَّلَ مَا تَنْبُتُ.\nوَمِمَّا شَذَّ عَنْ هَذَا الْغِرْسِ: جِلْدَةٌ رَقِيقَةٌ تَخْرُجُ عَلَى رَأْسِ الْوَلَدِ. قَالَ:\nكُلَّ جَنِينٍ مُشْعَرٍ فِي غِرْسِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أنا غرس يدك، ونحن غرس يدك على لفظ المصدر وإذا كسرت كان فعلاً بمعنى مفعول كالذبح والحمل، فقلت: ونحن أغراس يدك. وتقول: هذا مسقط رأسه، ومكان غراسه. ويمن فلان يوم غرسه، وبخت وهو في غرسه؛ وهو جليدة رقيقة تكون على رأس المولود.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنا غرس يدك، ونحن غرس يدك على لفظ المصدر وإذا كسرت كان فعلاً بمعنى مفعول كالذبح والحمل، فقلت: ونحن أغراس يدك. وتقول: هذا مسقط رأسه، ومكان غراسه. ويمن فلان يوم غرسه، وبخت وهو في غرسه؛ وهو جليدة رقيقة تكون على رأس المولود.",
         "prototipe_benzerlik": 0.578,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.578,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["group_action.n.01", "living_thing.n.01", "plant.v.01", "plant.v.05", "planting.n.02", "sleep_together.v.01"],
   "muhassas_tasnif": {

@@ -1539,11 +1539,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "phonograph_record.n.01",
-    "dayanak_tanim": "sound recording consisting of a disk with a continuous groove; used to reproduce music by rotating while a phonograph needle tracks in the groove",
+    "ince": "shape.n.02",
+    "orta": "noun.shape",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "disk.n.01",
+    "dayanak_tanim": "something with a round shape resembling a flat circular plate",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1557,39 +1557,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قرص جلده بظفريه، وقرصه قرصة مؤلمة وقرصات. وقرّصت المرأة العجين إذا قطعته لتبسطه. والقرصة والقرص: اسم ما تقرصه كما أن الخبزة والخبز اسم ما تخبزه. وقرّصته تقريصاً: قطعته قرصة قرصة",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قرص جلده بظفريه، وقرصه قرصة مؤلمة وقرصات. وقرّصت المرأة العجين إذا قطعته لتبسطه. والقرصة والقرص: اسم ما تقرصه كما أن الخبزة والخبز اسم ما تخبزه. وقرّصته تقريصاً: قطعته قرصة قرصة"
+      },
+      {
+        "kaynak": "Mekâyîs: قَرَصَ",
+        "metin": "(قَرَصَ) الْقَافُ وَالرَّاءُ وَالصَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قَبْضِ شَيْءٍ بِأَطْرَافِ الْأَصَابِعِ مَعَ نَبْرٍ يَكُونُ. مِنْ ذَلِكَ: قَرَصْتُهُ أَقْرُصُهُ قَرْصًا. وَالْقُرْصُ مَعْرُوفٌ، لِأَنَّهُ عَجِينٌ يُقْرَصُ قَرْصًا. وَقَرَّصَتِ الْمَرْأَةُ الْعَجِينَ: قَطَّعَتْهُ قُرْصَةً قُرْصَةً. وَلَبَنٌ قَارِصٌ: يَحْذِي اللِّسَانَ، كَأَنَّهُ يَقْرُصُهُ قَرْصًا. وَمِنَ الْبَابِ: الْقَوَارِصُ، وَهِيَ الشَّتَائِمُ، كَأَنَّ الْعِرْضَ يُقْرَصُ قَرْصًا إِذَا قِيلَ فِيهِ مَا لَا يَحْسُنُ. قَالَ:\nقَوَارِصُ تَأْتِينِي وَتَحْتَقِرُونَهَا ... وَقَدْ يُمْلَأُ الْقُطْرُ الْإِنَاءَ فَيُفْعِمُ\nقَالَ ابْنُ دُرَيْدٍ: &quot; حُلِيٌّ مُقَرَّصٌ، أَيْ مُرَصَّعٌ بِالْجَوَاهِرِ &quot;، وَكَأَنَّ ذَلِكَ يَكُونُ مُسْتَدِيرًا عَلَى صُورَةِ الْقُرْصِ.\nوَمِمَّا لَيْسَ مِنْ هَذَا الْبَابِ الْقُرَّاصُ: نَبَاتٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لاتزال تقرصني منك قارصة: كلمة مؤذية. وأتتني منك قوارص. قال الفرزدق:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لاتزال تقرصني منك قارصة: كلمة مؤذية. وأتتني منك قوارص. قال الفرزدق:",
         "prototipe_benzerlik": 0.438,
         "halka": "orta"
       },
       {
-        "cumle": "وكانت بينهما مقارصات. ورأيتهما يتقارظان، ثم",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قوارص تأتيني وتحتقرونها ... وقد يملأ القطر الإناء فيفعم",
+        "prototipe_benzerlik": 0.227,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكانت بينهما مقارصات. ورأيتهما يتقارظان، ثم",
         "prototipe_benzerlik": 0.38,
         "halka": "orta"
       },
       {
-        "cumle": "رأيتهما يتقارصان. ولبن ونبيذ قارص: يحذي اللسان، وفيه قروصة. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رأيتهما يتقارصان. ولبن ونبيذ قارص: يحذي اللسان، وفيه قروصة. قال:",
         "prototipe_benzerlik": 0.539,
         "halka": "yakın"
       },
       {
-        "cumle": "وهو داء يأخذ عن الماء الآجن. وفي الحديث \" اقرصيه \" ولجام قرّاص وقروص: يؤذي الدابة. وأنشد المازنيّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثم استقوا بشفارهم للهاتها ... كالزّيت فيه قروصة وسواد",
+        "prototipe_benzerlik": 0.35,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو داء يأخذ عن الماء الآجن. وفي الحديث \" اقرصيه \" ولجام قرّاص وقروص: يؤذي الدابة. وأنشد المازنيّ:",
         "prototipe_benzerlik": 0.372,
         "halka": "orta"
       },
       {
-        "cumle": "وقرصة البعوض. وتقول: قرصهم البعوض قرصات، رقصوا منها رقصات. وقرصه البرد، وبرد قارس: قارص. وقرّص الماء: برّده حتى صار يقرص ببرده. وغاب قرص الشمس.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولولا هذيل أن أسوء سراتها ... لألجمت بالقرّاص بشر بن عائذ",
+        "prototipe_benzerlik": 0.295,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقرصة البعوض. وتقول: قرصهم البعوض قرصات، رقصوا منها رقصات. وقرصه البرد، وبرد قارس: قارص. وقرّص الماء: برّده حتى صار يقرص ببرده. وغاب قرص الشمس.",
         "prototipe_benzerlik": 0.445,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.435,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.381,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "commandeer.v.01", "living_thing.n.01", "pinch.v.01", "prick.v.02", "round_shape.n.01"],
   "muhassas_tasnif": {

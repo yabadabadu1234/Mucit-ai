@@ -1339,8 +1339,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "spear.n.02",
-    "dayanak_tanim": "an implement with a shaft and barbed point used for catching fish",
+    "dayanak_synset": "pike.n.04",
+    "dayanak_tanim": "medieval weapon consisting of a spearhead attached to a long pole or pikestaff; superseded by the bayonet",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1359,44 +1359,122 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الطعن من بعيد كعمل الرمح من السلاح. (والأخريات مشبهات به): {تَنَالُهُ أَيْدِيكُمْ وَرِمَاحُكُمْ} هذا عن الصيد - إذا أصيب بالرمح سقط في اليد. ومنه قالوا: \"رمح الفرس والبغل والحمار وكل ذي حافر يرمَح رمحًا: ضرب برجله. ورمح الجندب: ضرب الحصى برجله \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الطعن من بعيد كعمل الرمح من السلاح. (والأخريات مشبهات به): {تَنَالُهُ أَيْدِيكُمْ وَرِمَاحُكُمْ} هذا عن الصيد - إذا أصيب بالرمح سقط في اليد. ومنه قالوا: \"رمح الفرس والبغل والحمار وكل ذي حافر يرمَح رمحًا: ضرب برجله. ورمح الجندب: ضرب الحصى برجله \"."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رمحته: طعنته بالرمح، ورجل رامح نابل، وهذا رمّاح: حاذق في الرماحة، ورامحه مرامحة، وترامحوا وتسايفوا، ولهم رماح وأرماح. ورمحته الدابة، ودابة رماحة: عضّاضة، ورموح: عضوض."
+      },
+      {
+        "kaynak": "Mekâyîs: رَمَحَ",
+        "metin": "(رَمَحَ) الرَّاءُ وَالْمِيمُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ، ثُمَّ يُصَرَّفُ مِنْهَا. فَالْكَلِمَةُ الرُّمْحُ، وَهُوَ مَعْرُوفٌ، وَالْجَمْعُ رِمَاحٌ وَأَرْمَاحٌ. وَالسِّمَاكُ الرَّامِحُ: نَجْمٌ، وَسُمِّيَ بِكَوْكَبٍ يَقْدُمُهُ كَأَنَّهُ رُمْحُهُ. فَأَمَّا قَوْلُهُمْ: رَمَحَتْهُ الدَّابَّةُ، فَمِنْ هَذَا أَيْضًا لِأَنَّ ضَرْبَهَا إِيَّاهُ بِرِجْلِهَا كَرُمْحِ الرَّامِحِ بِرُمْحِهِ. وَمِنْهُ رَمَحَ الْجُنْدُبُ، إِذَا ضَرَبَ الْحَصَى بِيَدِهِ. وَالرَّمَّاحُ: الَّذِي يَتَّخِذُ الرِّمَاحَ، وَحِرْفَتُهُ الرِّمَاحَةُ. وَالرَّامِحُ: الطَّاعِنُ بِالرُّمْحِ. وَالرَّامِحُ: الْحَامِلُ لَهُ. وَيُقَالُ لِلْبُهْمَى إِذَا امْتَنَعَتْ عَلَى الرَّاعِيَةِ: قَدْ أَخَذَتْ رِمَاحَهَا. كَمَا قَالَ:\nأَيَّامَ لَمْ تَأْخُذْ إِلَيَّ سِلَاحَهَا ... إِبِلِي لِجُلَّتِهَا وَلَا أَبْكَارِهَا"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "طلع السماك الرامح. وركض الجندب ورمح: ضرب الحصى برجله. وأخذت الإبل رماحها: منعت بحسنها أن تنحر. قال النمر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طلع السماك الرامح. وركض الجندب ورمح: ضرب الحصى برجله. وأخذت الإبل رماحها: منعت بحسنها أن تنحر. قال النمر:",
         "prototipe_benzerlik": 0.305,
         "halka": "uzak"
       },
       {
-        "cumle": "وإبل ذوات رماح، وناقة ذات رمح.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أيام لم تأخذ إليّ رماحها ... إبلي بجلتها ولا أبكارها",
+        "prototipe_benzerlik": 0.44,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإبل ذوات رماح، وناقة ذات رمح.",
         "prototipe_benzerlik": 0.501,
         "halka": "orta"
       },
       {
-        "cumle": "وأخذت البهمى رماحها: منعت بشوكها أن ترعى. وأصابته رماح الجن: الطاعون. قال زيد ابن جندب الإياديّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الفرزدق:",
+        "prototipe_benzerlik": 0.616,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فمكنت سيفي من ذوات رماحها ... غشاشاً ولم أحفل بكاء رعائياً",
+        "prototipe_benzerlik": 0.42,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأخذت البهمى رماحها: منعت بشوكها أن ترعى. وأصابته رماح الجن: الطاعون. قال زيد ابن جندب الإياديّ:",
         "prototipe_benzerlik": 0.661,
         "halka": "yakın"
       },
       {
-        "cumle": "الأنذال أصحاب الحمر دون الخيل. ورمح البرق: لمع لمعاً خفيفاً متقارباً. ورأيت مهاة ورامحاً أي ثوراً، سمّي لقرنيه. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولولا رماح الجن ما كان هزهم ... رماح الأعادي من فصيح وأعجم",
+        "prototipe_benzerlik": 0.659,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد الجاحظ:",
+        "prototipe_benzerlik": 0.557,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لعمرك ما خشيت على أبي ... رماح بني مقيدة الحمار",
+        "prototipe_benzerlik": 0.487,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولكني خشيت على أبي ... رماح الجن أو إياك حار",
+        "prototipe_benzerlik": 0.305,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الأنذال أصحاب الحمر دون الخيل. ورمح البرق: لمع لمعاً خفيفاً متقارباً. ورأيت مهاة ورامحاً أي ثوراً، سمّي لقرنيه. قال ذو الرمة:",
         "prototipe_benzerlik": 0.274,
         "halka": "uzak"
       },
       {
-        "cumle": "وكسروا بينهم رمحاً: وقع بينهم شر. ومنينا بيوم كظل الرمح: طويل وضيق. قال ابن الطثرية:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكائن ذعرنا من مهاة ورامح ... بلاد الورى ليست له ببلاد",
+        "prototipe_benzerlik": 0.508,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكسروا بينهم رمحاً: وقع بينهم شر. ومنينا بيوم كظل الرمح: طويل وضيق. قال ابن الطثرية:",
         "prototipe_benzerlik": 0.607,
         "halka": "yakın"
       },
       {
-        "cumle": "وهم على بني فلان رمج واحد: قال طفيل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويوم كظل الرمح قصر طوله ... دم الزق عنا واصطفاق المزاهر",
+        "prototipe_benzerlik": 0.561,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهم على بني فلان رمج واحد: قال طفيل:",
         "prototipe_benzerlik": 0.604,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وألفيتنا رمحاً على الناس واحداً ... فنظلم أو نأبى على من تظلّما",
+        "prototipe_benzerlik": 0.475,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.492,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.499,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

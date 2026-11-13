@@ -790,8 +790,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "statistic.n.01",
-    "dayanak_tanim": "a datum that can be represented numerically",
+    "dayanak_synset": "statistics.n.01",
+    "dayanak_tanim": "a branch of applied mathematics concerned with the collection and interpretation of quantitative data and the use of probability theory to estimate population parameters",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -805,29 +805,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هم أكثر من الحصي. ورمى بسبع حصيات. ووقعت الحصاة في مثانته. وحصي فهو محصي. وأرض محصاة: كثيرة الحصى. وحسناتك لا تحصى. وهذا أمر لا أحصيه: لا أطيقه ولا أضبطه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هم أكثر من الحصي. ورمى بسبع حصيات. ووقعت الحصاة في مثانته. وحصي فهو محصي. وأرض محصاة: كثيرة الحصى. وحسناتك لا تحصى. وهذا أمر لا أحصيه: لا أطيقه ولا أضبطه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لم أر أكثر منهم حصىً أي عدداً. قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لم أر أكثر منهم حصىً أي عدداً. قال الأعشى:",
         "prototipe_benzerlik": 0.393,
         "halka": "orta"
       },
       {
-        "cumle": "وفلان ذو حصاة: وقور. وما له حصاة ولا أصاة أي رزانة. قال طرفة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلست بالأكثر منهم حصّي ... وإنما العزة للكاثر",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان ذو حصاة: وقور. وما له حصاة ولا أصاة أي رزانة. قال طرفة:",
         "prototipe_benzerlik": 0.542,
         "halka": "yakın"
       },
       {
-        "cumle": "وعنده حصاة من المسك أي قطعة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن لسان المرء ما لم تكن له ... حصاة على عوراته لدليل",
+        "prototipe_benzerlik": 0.447,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعنده حصاة من المسك أي قطعة.",
         "prototipe_benzerlik": 0.479,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.471,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.491,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["content.n.05", "count.v.01", "expert.n.01", "information.n.02"],
   "muhassas_tasnif": {

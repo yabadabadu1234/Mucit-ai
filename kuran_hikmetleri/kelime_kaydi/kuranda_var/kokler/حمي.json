@@ -2142,8 +2142,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "care.n.05",
-    "dayanak_tanim": "attention and management implying responsibility for safety",
+    "dayanak_synset": "protection.n.01",
+    "dayanak_tanim": "the activity of protecting someone or something",
     "synset_sayisi": 25
   },
   "ses_mana_tasnif": {
@@ -2157,19 +2157,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حماه حماية، وحامى عليه، وهو يحمي أنفه وعرضه محمية ومحمية. قال الفرزدق: شاهد إذا ما كنت ذا محمية ... برجل مشل أبي مكية وقال أيضاً: بنو السيد الأشاثم للأعادي ... نموني للعلى وبنو ضرار وناجية الذي كانت تميم ... تقدمه لمحمية الذمار وفعل ذ محمية لعرضه. وهو حميُّ ال",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "حميته أن يفعل كذا إذا منعته، وحميَ عليه إذا غضب، ولا تكلمه في حميّا غضبه، وإنه لشديد الحميّا إذا كان عزيز النفس أبياً. قال الفرزدق:",
-        "prototipe_benzerlik": 0.446,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حماه حماية، وحامى عليه، وهو يحمي أنفه وعرضه محمية ومحمية. قال الفرزدق:\nشاهد إذا ما كنت ذا محمية ... برجل مشل أبي مكية\nوقال أيضاً:\nبنو السيد الأشاثم للأعادي ... نموني للعلى وبنو ضرار\nوناجية الذي كانت تميم ... تقدمه لمحمية الذمار\nوفعل ذ محمية لعرضه. وهو حميُّ الأنف، وله أنف حميٌّ. وحميت المكان: منعته أن يقرب، فإذا امتنع وعزّ، قلت أحميته أي صيرته حمًى: فلا يكون الإحماء إلا بعد الحماية، ولفلان حمًى لا يقرب. واحتمى الرجل من كذا: اتقاه. قال:\nيذب عن حريمه بنبله ... ورمحه وسيفه ويحتمى\nوقال حسان:\nحمت كل واد من تهامة واحتمت ... بصم القنا والمرهفات البواتر\nيقال: احتميت منه وتحاميته، وهو يتحامى كما يتحامى الأجرب، وحميت المريض الطعام حمية. قال:\nتقول ابنتي لما رأتني شاحباً ... كأنك يحميك الشراب طبيب\nواحتمى المريض فهو حميٌّ ومحتم. وحميت القدر. وحميَ النهار حمّى شديداً وحمياً. وحميَ بدن المحموم، وبه حميٌ. وكأنه حمي مرجل. وأتاني في حمي الظهيرة. وأحميت الميسم. وفيه\nحمية وأنفة، وقد حمي من الأمر، وفي بني فلان حمايا. وقرعته حميّا الكأس أي سورته. وفلان يرى في النصح حمة العقرب وهي فوعة السم وسورته."
       }
     ],
-    "ortalama_benzerlik": 0.446,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حميته أن يفعل كذا إذا منعته، وحميَ عليه إذا غضب، ولا تكلمه في حميّا غضبه، وإنه لشديد الحميّا إذا كان عزيز النفس أبياً. قال الفرزدق:",
+        "prototipe_benzerlik": 0.428,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شديد الحميا لا يخاتل قرنه ... ولكنه بالصحصحان ينازله",
+        "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.355,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

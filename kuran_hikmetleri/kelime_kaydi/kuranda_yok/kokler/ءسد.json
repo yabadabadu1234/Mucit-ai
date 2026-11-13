@@ -1223,8 +1223,8 @@
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
-    "dayanak_synset": "big_cat.n.01",
-    "dayanak_tanim": "any of several large cats typically able to roar and living in the wild",
+    "dayanak_synset": "lion.n.01",
+    "dayanak_tanim": "large gregarious predatory feline of Africa and India having a tawny coat with a shaggy mane in the male",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1238,29 +1238,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في أرض بني فلان مأسدة، وأكثر المآسد في بلاد اليمن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في أرض بني فلان مأسدة، وأكثر المآسد في بلاد اليمن."
+      },
+      {
+        "kaynak": "Mekâyîs: أَسَدَ",
+        "metin": "(أَسَدَ) الْهَمْزَةُ وَالسِّينُ وَالدَّالُ، يَدُلُّ عَلَى قُوَّةِ الشَّيْءِ، وَلِذَلِكَ سُمِّيَ الْأَسَدُ أَسَدًا لِقُوَّتِهِ، وَمِنْهُ اشْتِقَاقُ كُلِّ مَا أَشْبَهَهُ، يُقَالُ: اسْتَأْسَدَ النَّبْتُ قَوِيَ. قَالَ الْحُطَيْئَةُ:\nبِمُسْتَأْسِدِ الْقُرْيَانِ حُوٍّ تِلَاعُهُ ... فَنُوَّارُهُ مِيلٌ إِلَى الشَّمْسِ زَاهِرُهْ\nوَيُقَالُ: اسْتَأْسَدَ عَلَيْهِ اجْتَرَأَ. قَالَ ابْنُ الْأَعْرَابِيِّ: أَسَدْتُ الرَّجُلَ مِثْلُ سَبَعْتُهُ. وَأَسْدٌ بِسُكُونِ السِّينِ، الَّذِينَ يُقَالُ لَهُمُ الْأَزْدُ، وَلَعَلَّهُ مِنَ الْبَابِ.\nوَأَمَّا الْإِسَادَةُ فَلَيْسَتْ مِنَ الْبَابِ، لِأَنَّ الْهَمْزَةَ مُنْقَلِبَةٌ عَنْ وَاوٍ. وَ [كَذَا] الْأُسْدِيُّ فِي قَوْلِ الْحُطَيْئَةِ:\nمُسْتَهْلِكُ الْوَرْدِ كالْأُسْدِيِّ قَدْ جَعَلَتْ ... أَيْدِي الْمَطِيِّ بِهِ عَادِيَّةً رُغُبًا"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "استأسد عليه أي صار كالأسد في جرأته. واستأسد النبت: طال وجن وذهب كل مذهب. قال أبو النجم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "استأسد عليه أي صار كالأسد في جرأته. واستأسد النبت: طال وجن وذهب كل مذهب. قال أبو النجم:",
         "prototipe_benzerlik": 0.293,
         "halka": "uzak"
       },
       {
-        "cumle": "مستأسد ذبانه في غيطل",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مستأسد ذبانه في غيطل",
         "prototipe_benzerlik": 0.278,
         "halka": "uzak"
       },
       {
-        "cumle": "وآسد الكلب بالصيد: أغراه به. وآسد بين الكلاب: هارش بينها. وآسد بين القوم: أفسد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وآسد الكلب بالصيد: أغراه به. وآسد بين الكلاب: هارش بينها. وآسد بين القوم: أفسد.",
         "prototipe_benzerlik": 0.121,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.231,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["black.a.01", "living_thing.n.01"],
   "muhassas_tasnif": {

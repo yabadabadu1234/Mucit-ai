@@ -37,34 +37,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هذّه هذّاً: أسرع قطعه. وسكين هذوذ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هذّه هذّاً: أسرع قطعه. وسكين هذوذ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هذّ القرآن وهو يهذّه هذّاً إذا أسرع فيه وتابعه، ومنه: قول رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هذّ القرآن وهو يهذّه هذّاً إذا أسرع فيه وتابعه، ومنه: قول رؤبة:",
         "prototipe_benzerlik": 0.322,
         "halka": "uzak"
       },
       {
-        "cumle": "ضرباً هذاذيك وطعناً وخضاً",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضرباً هذاذيك وطعناً وخضاً",
         "prototipe_benzerlik": 0.719,
         "halka": "yakın"
       },
       {
-        "cumle": "وقول معبد بن سعنة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقول معبد بن سعنة:",
         "prototipe_benzerlik": 0.141,
         "halka": "uzak"
       },
       {
-        "cumle": "أراد سرعة الضرب والشرب ومتابعتهما.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فباكر مختوماً عليه سياعه ... هذاذيك حتى أنفذ الدّنّ أجمعا",
+        "prototipe_benzerlik": 0.236,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد سرعة الضرب والشرب ومتابعتهما.",
         "prototipe_benzerlik": 0.384,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.391,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.36,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

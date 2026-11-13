@@ -2317,8 +2317,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "persecution.n.01",
-    "dayanak_tanim": "the act of persecuting (especially on the basis of race or religion)",
+    "dayanak_synset": "aggression.n.03",
+    "dayanak_tanim": "violent action that is hostile and usually unprovoked",
     "synset_sayisi": 69
   },
   "ses_mana_tasnif": {
@@ -2337,39 +2337,122 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الاحتواء على ما يوجد مستقبلًا زائدًا عن الحال. كالأرض والجو المذكورين. ومنه \"وعده بالأمر قال له إنَّه يُجْريه له أو ينيله إياه \" [المنجد] والأصل في (وعد)، (أوعد) أنَّهما للخير والشر. والذي جاء في القرآن من (أوعد) هو في الشرّ. {وَعَدَكُمُ اللَّهُ مَغَانِمَ كَثِ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الاحتواء على ما يوجد مستقبلًا زائدًا عن الحال. كالأرض والجو المذكورين. ومنه \"وعده بالأمر قال له إنَّه يُجْريه له أو ينيله إياه \" [المنجد] والأصل في (وعد)، (أوعد) أنَّهما للخير والشر. والذي جاء في القرآن من (أوعد) هو في الشرّ. {وَعَدَكُمُ اللَّهُ مَغَانِمَ كَثِيرَةً تَأْخُذُونَهَا} {النَّارُ وَعَدَهَا اللَّهُ الَّذِينَ كَفَرُوا} [الحج: 72] {وَلَا تَقْعُدُوا بِكُلِّ صِرَاطٍ تُوعِدُونَ} [الأعراف: 86] و (المَوْعِد) مصدر، واسم زمان ومكان. والعِدَة: الوعد، والموعدة مصدر واسم للعدة. والميعاد: مكان العِدَة وزمانها [متن] {إِنَّ مَوْعِدَهُمُ الصُّبْحُ} [هود: 81] لكن في {بَلْ زَعَمْتُمْ أَلَّنْ نَجْعَلَ لَكُمْ مَوْعِدًا} [الكهف: 48] المراد موعدُ البعث والحشر والحساب [ينظر بحر 6/ 128] والمقصود: إنكار هذا كله، لا إنكار الموعد وحده {إِلَّا عَنْ مَوْعِدَةٍ وَعَدَهَا إِيَّاهُ} [التوبة: 114]، {إِنَّ اللَّهَ لَا يُخْلِفُ الْمِيعَادَ} [آل عمران: 9]. ولتوضيح أمر (أوعد) نقول أن الاستعمال غلّب الإيعاد -إذا اقترن بالباء أولم يُذْكَر المُوعَد به- في الشر. وللصيغة -الإفعال- مدخل في ذلك، فإنها -قاصرة- تعني الإصحاب: إصحاب ما هو زائد أو أكثر (3/1421) أو أشد من الحال. والباء تعبر عن إلصاق وإنزال غير معتاد به. {تُوعِدُونَ وَتَصُدُّونَ عَنْ سَبِيلِ اللَّهِ} [الأعراف: 86]. لكن في [بحر 1/ 353] أن \"أوعد \"في الشر والإيعاد والوعيد في الشر اهـ كذا. والوعيد في القرآن جاء كذلك {وَصَرَّفْنَا فِيهِ مِنَ الْوَعِيدِ لَعَلَّهُمْ يَتَّقُونَ} [طه: 113]. {وَإِذْ وَاعَدْنَا مُوسَى أَرْبَعِينَ لَيْلَةً} [البقرة: 51] في [بحر 1"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وعدته كذا. وأوعدته بالعقوبة وتوعدته. وقد أخلف وعده وعدته وموعده وموعدته وموعوده وميعاده، وهذا الوقت والمكان ميعادهم وموعدهم، وتواعدوا واتعدوا، ووعدته فاتعد: قبل الوعد نحو وعظته فاتعظ. واشتدّ الوعيد."
+      },
+      {
+        "kaynak": "Mekâyîs: وَعَدَ",
+        "metin": "(وَعَدَ) الْوَاوُ وَالْعَيْنُ وَالدَّالُ: كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى تَرْجِيَةٍ بِقَوْلٍ. يُقَالُ: وَعَدْتُهُ أَعِدُهُ وَعْدًا. وَيَكُونُ ذَلِكَ بِخَيْرٍ وَشَرٍّ. فَأَمَّا الْوَعِيدُ فَلَا يَكُونُ إِلَّا بِشَرٍّ. يَقُولُونَ: أَوْعَدْتُهُ بِكَذَا. قَالَ:\nأَوْعَدَنِي بِالسِّجْنِ وَالْأَدَاهِمِ\n. . . .\nوَالْمُوَاعَدَةُ مِنَ الْمِيعَادِ. وَالْعِدَةُ: الْوَعْدُ. وَجَمْعُهَا عِدَاتٌ: وَالْوَعْدُ لَا يُجْمَعُ. وَوَعِيدُ الْفَحْلِ: [هَدِيرُهُ] إِذَا هَمَّ أَنْ يَصُولَ. قَالَ:\nيُوعِدُ قَلْبَ الْأَعْزَلِ.\nوَأَرْضُ بَنِي فُلَانٍ وَاعِدَةٌ، إِذَا رُجِيَ خَيْرُهَا مِنَ الْمَطَرِ وَالْإِعْشَابِ. وَيَوْمٌ وَاعِدٌ: أَوَّلُهُ يَعِدُ بِحَرٍّ أَوْ بَرْدٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "وعدته شراً \" الشيطان يعدكم الفقر \" وأصبحت أرضهم واعدة إذا رُجيَ خيرها، وقد وعدت. ويوم وعام واعد. ورأيت شجرها ونباتها واعداً. وفرس واعد يعد الجري. قال في صفة النخل:",
-        "prototipe_benzerlik": 0.777,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعدته شراً \" الشيطان يعدكم الفقر \" وأصبحت أرضهم واعدة إذا رُجيَ خيرها، وقد وعدت. ويوم وعام واعد. ورأيت شجرها ونباتها واعداً. وفرس واعد يعد الجري. قال في صفة النخل:",
+        "prototipe_benzerlik": 0.774,
         "halka": "yakın"
       },
       {
-        "cumle": "أراد السجل بالنخل الموهوب. وقال سويد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كيف تراها واعداً صغارها ... تسوء شنّاء العدا كبارها",
+        "prototipe_benzerlik": 0.458,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد ابن دريد:",
+        "prototipe_benzerlik": 0.825,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "راحت ركائبهم وفي أكوارها ... ألفان من عم الأثيل الواعد",
         "prototipe_benzerlik": 0.328,
         "halka": "uzak"
       },
       {
-        "cumle": "وأوعد الفحل وعيداً شديداً إذا هدر وهم أن",
-        "prototipe_benzerlik": 0.502,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما إن رأيت ولا سمعت بأركبٍ ... حملت حدائق كالظّلام الرّاكد",
+        "prototipe_benzerlik": 0.185,
+        "halka": "uzak"
       },
       {
-        "cumle": "يصول. قال أبو النجم:",
-        "prototipe_benzerlik": 0.618,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد السجل بالنخل الموهوب. وقال سويد:",
+        "prototipe_benzerlik": 0.275,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعى غير مذعور بهنّ وراقه ... لعاع تهاداه الدّكادك واعد",
+        "prototipe_benzerlik": 0.801,
         "halka": "yakın"
       },
       {
-        "cumle": "يرعد أن يوعد قلب الأعزل",
-        "prototipe_benzerlik": 0.448,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال ابن ميّادة يصف مطراً:",
+        "prototipe_benzerlik": 0.536,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سبقت أوائله أواخر نوئه ... بمشرّع عذبٍ ونبتٍ واعد",
+        "prototipe_benzerlik": 0.562,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال خفاف:",
+        "prototipe_benzerlik": 0.376,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جدّ سبوحاً غير ذي سقطةٍ ... مستفراً ميعته واعد",
+        "prototipe_benzerlik": 0.347,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.462,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما استحمّت أرضه من سمائه ... جرى وهو مودوع وواعد مصدق",
+        "prototipe_benzerlik": 0.307,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأوعد الفحل وعيداً شديداً إذا هدر وهم أن",
+        "prototipe_benzerlik": 0.465,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يصول. قال أبو النجم:",
+        "prototipe_benzerlik": 0.608,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يرعد أن يوعد قلب الأعزل",
+        "prototipe_benzerlik": 0.459,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.534,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.486,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "ability.n.02",

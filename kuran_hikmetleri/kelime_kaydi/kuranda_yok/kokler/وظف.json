@@ -1383,8 +1383,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "employment.n.02",
-    "dayanak_tanim": "the occupation for which you are paid",
+    "dayanak_synset": "capacity.n.05",
+    "dayanak_tanim": "a specified function",
     "synset_sayisi": 24
   },
   "ses_mana_tasnif": {
@@ -1398,24 +1398,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "له وظيفة من رزق، ووظائف ووظف، وعليه كلّ يوم وظيفة من عمل، ووظّف عليه لاعمل: وهو موظّف عليه، ووظّف له الرزق: ووظّف لدابّته العلف. وضرب وظيف دابّته وأوظفة دوابّه وهو مقدّم الساق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له وظيفة من رزق، ووظائف ووظف، وعليه كلّ يوم وظيفة من عمل، ووظّف عليه لاعمل: وهو موظّف عليه، ووظّف له الرزق: ووظّف لدابّته العلف. وضرب وظيف دابّته وأوظفة دوابّه وهو مقدّم الساق."
+      },
+      {
+        "kaynak": "Mekâyîs: وَظَفَ",
+        "metin": "(وَظَفَ) الْوَاوُ وَالظَّاءُ وَالْفَاءُ: كَلِمَةٌ تَدُلُّ عَلَى تَقْدِيرِ شَيْءٍ. يُقَالُ: وَظَّفْتَ لَهُ، إِذَا قَدَّرْتَ لَهُ كُلَّ حِينٍ شَيْئًا مِنْ رِزْقٍ أَوْ طَعَامٍ. ثُمَّ اسْتُعِيرَ ذَلِكَ فِي عَظْمِ السَّاقِ، كَأَنَّهُ شَيْءٌ مُقَدَّرٌ، وَهُوَ مَا فَوْقَ الرُّسْغِ مِنْ قَائِمَةِ الدَّابَّةِ إِلَى السَّاقِ. وَيُقَالُ وَظَفْتُ الْبَعِيرَ، إِذَا قَصَرْتَ لَهُ الْقَيْدَ. وَيُقَالُ: مَرَّ يَظِفُهُمْ، أَيْ يُتْبِعُهُمْ كَأَنَّهُ يَجْعَلُ وَظِيفَهُ بِإِزَاءِ أَوْظِفَتِهِمْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "للدنيا وظائف أي نوب ودول. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للدنيا وظائف أي نوب ودول. قال:",
         "prototipe_benzerlik": 0.634,
         "halka": "yakın"
       },
       {
-        "cumle": "وجاءت الإبل على وظيفٍ واحد وخفّ واحد إذا جاءت قطاراً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبقت لنا وقعات الدهر مكرمةً ... ما هبت الريح والدنيا لها وظف",
+        "prototipe_benzerlik": 0.12,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجاءت الإبل على وظيفٍ واحد وخفّ واحد إذا جاءت قطاراً.",
         "prototipe_benzerlik": 0.526,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.58,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.427,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",
@@ -1426,6 +1442,7 @@
     "group_action.n.01",
     "hire.v.01",
     "organization.n.01",
+    "owner.n.02",
     "physiological.a.01",
     "recruit.v.02",
     "scientist.n.01",

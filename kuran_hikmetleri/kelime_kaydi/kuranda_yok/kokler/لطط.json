@@ -848,7 +848,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
+    "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "plaster.n.01",
@@ -871,31 +871,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "حَجْب الثغرة وسدُّها بإلصاق شيء فوقها (1): كلط الناقة بذنبها ولط الباب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "حَجْب الثغرة وسدُّها بإلصاق شيء فوقها (1): كلط الناقة بذنبها ولط الباب."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لطّ الشيء وألطه: ستره. وفلان لا يلطّ قدره: لا يسترها من الضّيفان. وعن بعض العرب: لطّ السّحاب أسفل الحمرّة. ولطّ الحجاب وألطّه وبالحجاب: أرخاه. قال عبّاد بن عمرو الباهليّ:\nوإذا أتاني سائل لم أعتلل ... لألط من دون السّوام حجابي\nوقال الأعشى:\nولقد ساءها البياض فلطّت ... بحجابٍ من دونها مسدوف\nولطّت الناقة بذنبها: جعلته بين فخذيها في عدوها. وهي تلطّ بعينها الكحل: تلزقه. ومشوا على الملطاط وهو حافة الوادي. وعرّض الخبز بالملطاط: بالمحور."
+      },
+      {
+        "kaynak": "Mekâyîs: لَطَّ",
+        "metin": "(لَطَّ) اللَّامُ وَالطَّاءُ أُصَيْلٌ صَحِيحٌ، يَدُلُّ عَلَى مُقَارَبَةٍ وَمُلَازَمَةٍ وَإِلْحَاحٍ مِنْ ذَلِكَ قَوْلُهُمْ: أَلَطَّ الرَّجُلُ، إِذَا اشْتَدَّ فِي الْأَمْرِ. وَيُقَالُ لَطَّ بِهِ: لَزِمَهُ. وَكُلُّ شَيْءٍ سُتِرَ بِشَيْءٍ فَقَدْ لُطَّ بِهِ. وَلَطَّتِ النَّاقَةُ بِذَنَبِهَا، إِذَا جَعَلَتْهُ بَيْنَ فَخِذَيْهَا فِي مَسِيرِهَا. وَاللَّطُّ: قِلَادَةٌ مِنْ حَنْظَلٍ، وَسُمِّيَتْ لَطًّا لِمُلَازَمَتِهَا النَّحْرَ. وَالْجَمْعُ لِطَاطٌ. وَاللِّطَاطُ: حَرَّفَ الْجَبَلَ. وَمِلْطَاطُ الْبَعِيرِ: حَرْفٌ فِي وَسَطِ رَأْسِهِ. وَالْمِلْطَاطُ: حَافَةُ الْوَادِي، وَسُمِّيَ كُلُّ ذَلِكَ لِأَنَّهُ مُلَازِمٌ لَا يُفَارِقُ. وَاللِّطْلِطُ: الْعَجُوزُ الْكَبِيرَةُ، لِأَنَّهَا مُلَازِمَةٌ لِمَكَانِهَا لَا تَكَادُ تَبْرَحُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "لطّ فلانٌ دون الحقّ بالباطل وألطّ. قال الربيع بن الحقيق:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لطّ فلانٌ دون الحقّ بالباطل وألطّ. قال الربيع بن الحقيق:",
         "prototipe_benzerlik": 0.402,
         "halka": "orta"
       },
       {
-        "cumle": "ولطّ سرّه: كتمه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا تجعل الباطل حقاً ولا ... تلطّ دون الحقّ بالباطل",
+        "prototipe_benzerlik": 0.492,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولطّ سرّه: كتمه. قال:",
         "prototipe_benzerlik": 0.419,
         "halka": "orta"
       },
       {
-        "cumle": "ولطّه بالعصا: ضربه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تعالى لا ألطّ ولا تلطّى ... ونبدي ما نكنّ ولا نغطّي",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولطّه بالعصا: ضربه.",
         "prototipe_benzerlik": 0.486,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.435,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.455,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["artifact.n.01"],
+  "kolekzifikasyon_kavramlari": ["substance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "النخل",

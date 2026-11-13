@@ -697,19 +697,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ليلةٌ ومدة، وذات ومدٍ وهو ندًى يجيء في صميم الحرّ من قبل البحر. وأنشدني بعض العرب: يا صاحبيّ حلّئاها لا ترد ... وخلّياها والسجال تبترد من حرّ أيام ومن ليل ومد",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ليلةٌ ومدة، وذات ومدٍ وهو ندًى يجيء في صميم الحرّ من قبل البحر. وأنشدني بعض العرب:\nيا صاحبيّ حلّئاها لا ترد ... وخلّياها والسجال تبترد\nمن حرّ أيام ومن ليل ومد"
+      },
+      {
+        "kaynak": "Mekâyîs: وَمَدَ",
+        "metin": "(وَمَدَ) الْوَاوُ وَالْمِيمُ وَالدَّالُ: كَلِمَتَانِ. وَالْوَمَدُ: شِدَّةُ الْحَرِّ. وَيُقَالُ: وَمِدَ: غَضِبَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ومد عليه، وهو عليه ومد: غضبان.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومد عليه، وهو عليه ومد: غضبان.",
         "prototipe_benzerlik": 0.093,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.093,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

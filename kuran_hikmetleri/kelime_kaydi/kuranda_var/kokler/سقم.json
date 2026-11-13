@@ -1192,19 +1192,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "جفاف جِرْم الشيء على غير المعتاد لوجود غليظ أو حادّ في باطنه: كثمر ذلك الشجر صُلْبًا كالحجر رغم خضرته. (قد تُعَدّ حلاوته الشديدة - بعد - حِدَّة) ومنه جفاف بدن السقيم؛ فطول المرض يكون من علة شديدة معضلة (أي لا تزول بسرعة) تسكُن الجسمَ وتجفّفه، أي تُذهب شحمه ولح",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "قلب سقيم، وكلام وفهم سقيم، وهو سقيم الصدر على أخيه: حاقد عليه.",
-        "prototipe_benzerlik": 0.274,
-        "halka": "uzak"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "جفاف جِرْم الشيء على غير المعتاد لوجود غليظ أو حادّ في باطنه: كثمر ذلك الشجر صُلْبًا كالحجر رغم خضرته. (قد تُعَدّ حلاوته الشديدة - بعد - حِدَّة) ومنه جفاف بدن السقيم؛ فطول المرض يكون من علة شديدة معضلة (أي لا تزول بسرعة) تسكُن الجسمَ وتجفّفه، أي تُذهب شحمه ولحمه. والعامة تعبّر أحيانًا عن النحيل أو النحيف البدن بأنه سقيم. {فَنَبَذْنَاهُ بِالْعَرَاءِ وَهُوَ سَقِيمٌ} [الصافات: 145]. فهذا سقم مادّي حقيقي، {فَقَالَ إِنِّي سَقِيمٌ} [الصافات: 89] وهذا سقم معنوي تقززا مما فيه قومه. [ينظر قر 15/ 92 - 93]. ومنه قول الراغب: مكان سقيم: إذا كان فيه خوف (سقيم هنا بمعنى مُسقِم، أي مقلق مُذهب للسكينة والراحة. وهذا جفاف وجفاء)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "به سقم وسقم وسقام وهو سقيم وسقم، ورجل وامرأة مسقام. وأسقمه الله وسقمه، وترادفت عليه الأسقام. وأرض مسقمة. ورجل سقيم مسقم: سقم هو وأهله."
+      },
+      {
+        "kaynak": "Mekâyîs: سَقَِمَ",
+        "metin": "(سَقَِمَ) السِّينُ وَالْقَافُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ الْمَرَضُ: يُقَالُ سُقْمٌ وَسَقَمٌ وَسَقَامٌ، ثَلَاثُ لُغَاتٍ."
       }
     ],
-    "ortalama_benzerlik": 0.274,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قلب سقيم، وكلام وفهم سقيم، وهو سقيم الصدر على أخيه: حاقد عليه.",
+        "prototipe_benzerlik": 0.377,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.377,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["condition.n.01", "sicken.v.02"],
   "muhassas_tasnif": {

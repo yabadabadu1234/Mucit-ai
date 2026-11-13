@@ -1287,11 +1287,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "touch.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "touch.v.01",
-    "dayanak_tanim": "make physical contact with, come in contact with",
+    "ince": "shape.n.02",
+    "orta": "noun.shape",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "tangent.n.01",
+    "dayanak_tanim": "a straight line or plane that touches a curve or curved surface at a point but does not intersect it at that point",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -1310,19 +1310,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "سَرَيان في أثناء أو مخالطة دقيقة ذات أثَر (1) كهذا الكلأ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "مسه الكبر والمرض، ومسه العذاب، ومسه بالسوط، ومس المرأة: جامعها، وماسها: أتاها. وبينهما رحم ماسة. ومسته مواس الخير. وإنه لحسن المس في ماله، ورأيت له مساً في ماله: أثراً حسناً، كما يقال: إصبعاً. وأمسسته شكوى إذا شكوت إليه. وبه مسٌّ، ورجل ممسوس: مجنون. وماء مسوس: مريء يمس الغلّة. قال:",
-        "prototipe_benzerlik": 0.215,
-        "halka": "uzak"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "سَرَيان في أثناء أو مخالطة دقيقة ذات أثَر (1) كهذا الكلأ"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مسّه مسّاً ومسيساً، وماسّه مماسّة ومساساً، وهما يتماسان، وأمسّه الشيء، ويقال: لا مِساس ولا مَساس. وتقول العرب للنّطفين المتهمين: \" لا مَساس، لا خير في الأوقاس \"."
+      },
+      {
+        "kaynak": "Mekâyîs: مَسَّ",
+        "metin": "(مَسَّ) الْمِيمُ وَالسِّينُ أَصْلٌ صَحِيحٌ وَاحِدٌ يَدُلُّ عَلَى جَسِّ الشَّيْءِ بِالْيَدِ. وَمَسِسْتُهُ أَمَسُّهُ. وَرُبَّمَا قَالُوا: مَسَسْتُ أَمُسُّ. وَالْمَمْسُوسُ: الَّذِي بِهِ مَسٌّ، كَأَنَّ الْجِنَّ مَسَّتْهُ. وَالْمَسُوسُ مِنَ الْمَاءِ: مَا نَالَتْهُ الْأَيْدِي. قَالَ:\nلَوْ كُنْتُ مَاءً كُنْتُ لَا ... عَذْبَ الْمَذَاقِ وَلَا مَسُوسًا."
       }
     ],
-    "ortalama_benzerlik": 0.215,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مسه الكبر والمرض، ومسه العذاب، ومسه بالسوط، ومس المرأة: جامعها، وماسها: أتاها. وبينهما رحم ماسة. ومسته مواس الخير. وإنه لحسن المس في ماله، ورأيت له مساً في ماله: أثراً حسناً، كما يقال: إصبعاً. وأمسسته شكوى إذا شكوت إليه. وبه مسٌّ، ورجل ممسوس: مجنون. وماء مسوس: مريء يمس الغلّة. قال:",
+        "prototipe_benzerlik": 0.215,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لو كنت ماءً كنت لا ... عذب المذاق ولا مسوسا",
+        "prototipe_benzerlik": 0.355,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ملحاً بعيد القعر قد ... فلّت حجارته الفؤوسا",
+        "prototipe_benzerlik": 0.563,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال ذو الرمّة يصف حمراً:",
+        "prototipe_benzerlik": 0.453,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تيمّمن عيناً من أثالٍ مريةً ... مسوساً يمجّ المنقضات احتفالها",
+        "prototipe_benzerlik": 0.458,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.409,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

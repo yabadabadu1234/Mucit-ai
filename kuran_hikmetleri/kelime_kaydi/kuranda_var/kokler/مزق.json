@@ -2116,11 +2116,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "tear.v.01",
-    "orta": "verb.contact",
+    "ince": "disrupt.v.02",
+    "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "tear.v.01",
-    "dayanak_tanim": "separate or cause to separate abruptly",
+    "dayanak_synset": "disrupt.v.02",
+    "dayanak_tanim": "throw into disorder",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -2139,19 +2139,62 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شقُّ الشيء (الرقيق الجرم) شقًّا واصلًا إلى عمقه. كالثوب وقطع السحاب. {يُنَبِّئُكُمْ إِذَا مُزِّقْتُمْ كُلَّ مُمَزَّقٍ} فُرِّقْتُم كل تَفْريق [قر 14/ 263] والمقصود تحلل أجسامهم كما قالوا: {أَإِذَا كُنَّا عِظَامًا وَرُفَاتًا أَإِنَّا لَمَبْعُوثُونَ خَلْقًا جَدِي",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "مزّق فروته \" ومزّقناهم كل ممزّقٍ \". وتمزّق جمعهم. ويكاد عنه إهابه يتمزّق: للمسرع. وفرس وناقة مزاق: يكاد يتمزّق عنها جلدها من سرعتها. قال حميد بن ثور:",
-        "prototipe_benzerlik": 0.6,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شقُّ الشيء (الرقيق الجرم) شقًّا واصلًا إلى عمقه. كالثوب وقطع السحاب. {يُنَبِّئُكُمْ إِذَا مُزِّقْتُمْ كُلَّ مُمَزَّقٍ} فُرِّقْتُم كل تَفْريق [قر 14/ 263] والمقصود تحلل أجسامهم كما قالوا: {أَإِذَا كُنَّا عِظَامًا وَرُفَاتًا أَإِنَّا لَمَبْعُوثُونَ خَلْقًا جَدِيدًا} [الإسراء: 49]، {قَال مَنْ يُحْيِ الْعِظَامَ وَهِيَ رَمِيمٌ} [يس: 78]. وفي قوم سبأ قال تعالى: {وَمَزَّقْنَاهُمْ كُلَّ مُمَزَّقٍ} [سبأ: 19]- تفرقوا (4/2068) وتمزقوا فلحقت الأنصار بيثرب، وغسَّان بالشام، والأَسْد بعُمان، وخُزَاعة بتهامة [قر 14/ 291]. ومن الأصل: \"ناقةٌ مِزَاقٌ- ككتاب: دَريعة خفيفة \" (تشق الهواء في سرعتها)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مزّق الثوب فتمزّق، وصار ثوبه مزقاً."
+      },
+      {
+        "kaynak": "Mekâyîs: مَزَقَ",
+        "metin": "(مَزَقَ) الْمِيمُ وَالزَّاءُ وَالْقَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَخَرُّقٍ فِي شَيْءٍ. وَمَزَقَهُ يَمْزِقُهُ، وَمَزَّقَهُ يُمَزِّقُهُ. وَالْمِزَقُ: قِطَاعُ الثَّوْبِ الْمَمْزُوقِ. وَنَاقَةٌ مِزَاقٌ: سَرِيعَةٌ جِدًّا يَكَادُ يَتَمَزَّقُ عَنْهَا جِلْدُهَا. وَمَزَقَ الطَّائِرُ بِذَرْقِهِ: رَمَى بِهِ. وَمَزَّقْتُ الْقَوْمَ: فَرَّقْتُهُمْ فَتَمَزَّقُوا."
       }
     ],
-    "ortalama_benzerlik": 0.6,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مزّق فروته \" ومزّقناهم كل ممزّقٍ \". وتمزّق جمعهم. ويكاد عنه إهابه يتمزّق: للمسرع. وفرس وناقة مزاق: يكاد يتمزّق عنها جلدها من سرعتها. قال حميد بن ثور:",
+        "prototipe_benzerlik": 0.704,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخذت قرينة ملتاحة ... قطوف العشيّ مزاق الضحى",
+        "prototipe_benzerlik": 0.504,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.466,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فجاءوا بشوشاة مزاق ترى بها ... ندوباً من الأنساع فذاً وتوأما",
+        "prototipe_benzerlik": 0.483,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.661,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أجنّة كلّ شازبة مزاقٍ ... براها القود واكتست اقورارا",
+        "prototipe_benzerlik": 0.382,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.533,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "burst.v.01",

@@ -1011,19 +1011,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ثوب موشيٌّ وموشّى، وهو يلبس الوشيَ. ورجل وشاءٌ، وقد وشاه يشيه وشياً وشيةً. وما أحسن شية هذا الفرس! وهي بياض في سواد أو سواد في بياض. \" لاشية فيها \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب موشيٌّ وموشّى، وهو يلبس الوشيَ. ورجل وشاءٌ، وقد وشاه يشيه وشياً وشيةً. وما أحسن شية هذا الفرس! وهي بياض في سواد أو سواد في بياض. \" لاشية فيها \"."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو واش من الوشاة: لأنه يشي كلامه بالزور ويزخرفه: وقد وشى به إلى السلطان وشاية، وهو كثير الوشايات. وما زال فلان يمشي ويشي. وثور موشيّ القوائم. ووشت الماشية: فشت وكثرت، وفيها مشاءٌ وفشاءٌ ووشاءٌ: لأنها تشي وتزين بكثرتها \" ولكم فيها جمالٌ \"، وأوشت الأرض: ظهر فيها وشيٌ من النبات. وأوشت النخلة: بدا أوّل ",
-        "prototipe_benzerlik": 0.374,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو واش من الوشاة: لأنه يشي كلامه بالزور ويزخرفه: وقد وشى به إلى السلطان وشاية، وهو كثير الوشايات. وما زال فلان يمشي ويشي. وثور موشيّ القوائم. ووشت الماشية: فشت وكثرت، وفيها مشاءٌ وفشاءٌ ووشاءٌ: لأنها تشي وتزين بكثرتها \" ولكم فيها جمالٌ \"، وأوشت الأرض: ظهر فيها وشيٌ من النبات. وأوشت النخلة: بدا أوّل رطبها.",
+        "prototipe_benzerlik": 0.372,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.374,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.372,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "denounce.v.04", "sing.v.02"],
   "muhassas_tasnif": {

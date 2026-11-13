@@ -1942,8 +1942,8 @@
     "ince": "property.n.02",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "flexibility.n.01",
-    "dayanak_tanim": "the property of being flexible; easily bent or shaped",
+    "dayanak_synset": "pliancy.n.01",
+    "dayanak_tanim": "the property of being pliant and flexible",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1962,19 +1962,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "احتشاء الشيء بلطيف رِخْو أو كالرخو يظهر أو يظهر أثره (1): كالنخل ليس مصمت الجوف كبقية الشجر، وله ثمر حلو معروف (ثم هل عدّ العربي التمر الذي يثمره النخل خارجًا من حشاه ولذا خلا جوفه فلم",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "احتشاء الشيء بلطيف رِخْو أو كالرخو يظهر أو يظهر أثره (1): كالنخل ليس مصمت الجوف كبقية الشجر، وله ثمر حلو معروف (ثم هل عدّ العربي التمر الذي يثمره النخل خارجًا من حشاه ولذا خلا جوفه فلم"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شيء لين، ولين، وليّنه وألانه واستلانه."
+      },
+      {
+        "kaynak": "Mekâyîs: لَيَنَ",
+        "metin": "(لَيَنَ) اللَّامُ وَالْيَاءُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ اللِّينُ: ضِدُّ الْخُشُونَةِ. وَيُقَالُ: هُوَ فِي لَيَانٍ مِنْ عَيْشٍ، أَيْ نِعْمَةٍ، وَفُلَانٌ مَلْيَنَةٌ، أَيْ لَيِّنُ الْجَانِبِ.\n[بَابُ اللَّامِ وَالْأَلِفِ وَمَا يَثْلُثُهُمَا]\nوَيَكُونُ الْأَلِفُ مُنْقَلِبَةً عَنْ يَاءٍ أَوْ وَاوٍ، وَيَكُونُ أَيْضًا هَمْزَةً."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "هو في ليان من العيش، ونزلوا بلين الأرض وليانها، ورجل ليّن الجانب، وقوم أليناء، وهو ذو ملينة، ولان لقومه، وألان لهم جناحه، \" فبما رحمةٍ من الله لنت لهم \". وهو ليّن الأعطاف، وطيء الأكناف. ولاين أصحابك ولا تخاشنهم. وتليّن له: تملّق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو في ليان من العيش، ونزلوا بلين الأرض وليانها، ورجل ليّن الجانب، وقوم أليناء، وهو ذو ملينة، ولان لقومه، وألان لهم جناحه، \" فبما رحمةٍ من الله لنت لهم \". وهو ليّن الأعطاف، وطيء الأكناف. ولاين أصحابك ولا تخاشنهم. وتليّن له: تملّق.",
         "prototipe_benzerlik": 0.441,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.441,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

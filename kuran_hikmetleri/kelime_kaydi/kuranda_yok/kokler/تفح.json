@@ -783,19 +783,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان تحفته تفاحة. وقد أتحفك، من أتفحك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان تحفته تفاحة. وقد أتحفك، من أتفحك."
+      },
+      {
+        "kaynak": "Mekâyîs: تَفَحَ",
+        "metin": "(تَفَحَ) التَّاءُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التُّفَّاحُ.\n[بَابُ التَّاءِ وَالْقَافِ وَمَا يُثَلِّثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ضربه على تفاحتيه وهما رأسا الفخذين في الوركين. ولطمن بالعناب التفاح أي بالبنان الحدود.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضربه على تفاحتيه وهما رأسا الفخذين في الوركين. ولطمن بالعناب التفاح أي بالبنان الحدود.",
         "prototipe_benzerlik": 0.766,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.766,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["natural_object.n.01"],
   "muhassas_tasnif": {

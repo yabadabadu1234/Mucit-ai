@@ -1917,11 +1917,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "social_group.n.01",
-    "orta": "noun.group",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "gathering.n.01",
-    "dayanak_tanim": "a group of persons together in one place",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "gather.n.02",
+    "dayanak_tanim": "the act of gathering something",
     "synset_sayisi": 22
   },
   "ses_mana_tasnif": {
@@ -1935,19 +1935,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حشد القوم حشوداً: اجتمعوا، وخفوا في التعاون، واحتشدوا، وتحشدوا، وتحاشدوا على الأمر: اجتمعوا عليه متعاونين. وحشدتهم أحشدهم وأحشدهم حشداً، وعنده حشد من الناس. ورجل محشود محفود: مجتمع عليه مخدوم. واحتشدت لفلان في كذا: أعددت له. واحتشد لنا في الضيافة إذا اجتهد وبذ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حشد القوم حشوداً: اجتمعوا، وخفوا في التعاون، واحتشدوا، وتحشدوا، وتحاشدوا على الأمر: اجتمعوا عليه متعاونين. وحشدتهم أحشدهم وأحشدهم حشداً، وعنده حشد من الناس. ورجل محشود محفود: مجتمع عليه مخدوم. واحتشدت لفلان في كذا: أعددت له. واحتشد لنا في الضيافة إذا اجتهد وبذل وسعه، واحتشد للضيافة: احتفل لها. وفلان حافد حاشد: مجتهد في خدمته وضيافته وسعيه. قال:\nوالحاشدون على قرى الأضياف\nوإذا كان للإبل من يقوم بحلها لا يفتر عنه، قالوا: لها حالب حاشد."
+      },
+      {
+        "kaynak": "Mekâyîs: حَشَدَ",
+        "metin": "(حَشَدَ) الْحَاءُ وَالشِّينُ وَالدَّالُ قَرِيبٌ الْمَعْنَى مِنَ الَّذِي قَبْلَهُ. يُقَالُ حَشَدَ الْقَوْمُ إِذَا اجْتَمَعُوا وَخَفُّوا فِي التَّعَاوُنِ. وَنَاقَةٌ حُشُودٌ: يُسْرِعُ اجْتِمَاعُ اللَّبَنِ فِي ضَرْعِهَا. وَالْحَشْدَ: الْمُحْتَشِدُونَ. وَهَذَا وَإِنْ كَانَ فِي مَعْنَى مَا قَبْلَهُ فَفِيهِ مَعْنًى آخَرُ، وَهُوَ التَّعَاوُنُ. وَيُقَالُ عِذْقٌ حَاشِدٌ وَحَاشِكٌ: مُجْتَمِعُ الْحَمْلِ كَثِيرُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بت في ليلة تحشد عليّ الهموم.",
-        "prototipe_benzerlik": 0.226,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بت في ليلة تحشد عليّ الهموم.",
+        "prototipe_benzerlik": 0.164,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.226,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.164,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

@@ -819,19 +819,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تحبسٌ بسبب امتساكٍ دقيق وتعوّق الانطلاق (1) كتحبُّس اللسان والكلام عند الأرتّ ونحوه. ومن معنى الامتساك قالوا \"الرتُّ -بالفتح: الرئيسُ من الرجال في الشرف والعطاء (التماسك يؤدي إلى التجمع وعظم الجرم، ومنه عِظَم القَدْر. ثم إن معاني السيادة والرئاسة تأتي مما يعبر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تحبسٌ بسبب امتساكٍ دقيق وتعوّق الانطلاق (1) كتحبُّس اللسان والكلام عند الأرتّ ونحوه. ومن معنى الامتساك قالوا \"الرتُّ -بالفتح: الرئيسُ من الرجال في الشرف والعطاء (التماسك يؤدي إلى التجمع وعظم الجرم، ومنه عِظَم القَدْر. ثم إن معاني السيادة والرئاسة تأتي مما يعبر عن الامتساك مثل (مَلِك، رَبّ، حاكم)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في لسانه رتة: عجلة وحكلة. ورجل أرت. وقوم رتّ. قال:\nهزئت زنيبة أن رأت بي رتة ... وفماً به قضم وجلداً أسودا\nوكأنهم الرتوت وهي ذكورة الخنازير وفحولها التي فيها شدّة وجرأة."
+      },
+      {
+        "kaynak": "Mekâyîs: رَتَّ",
+        "metin": "(رَتَّ) الرَّاءُ وَالتَّاءُ لَيْسَ أَصْلًا، لَكِنَّهُمْ يَقُولُونَ: الرُّتَّةُ: الْعَجَلَةُ فِي الْكَلَامِ. وَيُقَالُ هِيَ الْحُكْلَةُ فِيهِ. وَيَقُولُونَ: الرُّتُوتُ: الْخَنَازِيرُ. وَقَالَ ابْنُ الْأَعْرَابِيِّ: الرَّتُّ: الرَّئِيسُ; وَالْجَمْعُ رُتُوتٌ. وَكُلُّ هَذَا فَمِمَّا يَنْبَغِي أَنْ يُنْظَرَ فِيهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "هو رت من الرتوت، وهو من رتوت الناس: من عليّهم وسادتهم.",
-        "prototipe_benzerlik": 0.557,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو رت من الرتوت، وهو من رتوت الناس: من عليّهم وسادتهم.",
+        "prototipe_benzerlik": 0.566,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.557,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.566,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["twice.r.01"],
   "muhassas_tasnif": {

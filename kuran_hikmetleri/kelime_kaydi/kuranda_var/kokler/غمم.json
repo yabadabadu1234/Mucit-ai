@@ -2200,10 +2200,10 @@
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
     "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "sadness.n.02",
-    "dayanak_tanim": "the state of being sad",
+    "orta": "noun.feeling",
+    "ust": "his ve nefis",
+    "dayanak_synset": "grief.n.01",
+    "dayanak_tanim": "intense sorrow caused by loss of a loved one (especially by death)",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -2222,24 +2222,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "غشاء عُلوي يحجب ما يغشاه عما يتأتى منه (1): كما",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "غشاء عُلوي يحجب ما يغشاه عما يتأتى منه (1): كما"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تقول: مثلك يكشف الغمّاء، ويكفي الداهية الصماء؛ وهي الشديدة من الشدائد التي تغمّ، وإنه لفي غمّة من أمره إذا لم يهتد للمخرج منه. وغمّ عليهم الهلال، وهي ليلة الغمّى. قال:\nليلة غمّى طامس هلالها\nمن غم الشيء إذا غطّاه. وجبهة غماء، ورجل أغم. وما أقبح الغمم. وهم يحبون النزع ويكرهون الغمم. قال:\nفلا تنكحي إن فرّق الدهر بيننا ... أغمّ القفا والوجه ليس بأنزعا\nوتقول المرأة: إذا كان الفقر والنّزع، قلّ الجزع، وإذا اجتمع الفقر والغمم، تضاعفت الغمم. وتفتر عن مثل حبّ الغمام وهو البرد."
+      },
+      {
+        "kaynak": "Mekâyîs: غَمَّ",
+        "metin": "(غَمَّ) الْغَيْنُ وَالْمِيمُ أَصْلٌ وَاحِدٌ صَحِيحٌ يَدُلُّ عَلَى تَغْطِيَةٍ وَإِطْبَاقٍ. تَقُولُ: غَمَمْتُ الشَّيْءَ أَغُمُّهُ، أَيْ غَطَّيْتُهُ. وَالْغَمَمُ: أَنْ يُغَطِّيَ الشَّعْرُ الْقَفَا وَالْجَبْهَةَ فِي بِنَائِهِ. يُقَالُ: رَجُلٌ أَغَمُّ وَجَبْهَةٌ غَمَّاءُ. قَالَ:\nفَلَا تَنْكِحِي إِنْ فَرَّقَ الدَّهْرُ بَيْنَنَا ... أَغَمُّ الْقَفَا وَالْوَجْهُ لَيْسَ بِأَنْزَعَا\nوَمِنَ الْبَابِ: الْغَمَامُ: جَمْعُ غَمَامَةٍ. وَقِيَاسُهُ وَاضِحٌ. وَمِنْهُ الْغِمَامَةُ، وَهِيَ الْخِرْقَةُ تُشَدُّ عَلَى أَنْفِ النَّاقَةِ شَدًّا كَيْ لَا تَجِدَ الرِّيحَ. قَالَ قَوْمٌ: كُلُّ مَا سَدَّ الْأَنْفَ فَهُوَ غِمَامَةٌ. وَغُمَّ الْهِلَالُ، إِذَا لَمْ يُرَ. وَفِي الْحَدِيثِ: «فَإِنْ غُمَّ عَلَيْكُمْ فَاقْدُرُوا لَهُ» . أَيْ غُطِّيَ الْهِلَالُ. وَيُقَالُ: يَوْمٌ غَمٌّ وَلَيْلَةٌ غَمَّةٌ، إِذَا كَانَا مُظْلِمَيْنِ. وَغَمَّهُ الْأَمْرُ يَغَمُّهُ غَمَّا، وَهُوَ شَيْءٌ يَغْشَى الْقَلْبَ، مَعْرُوفٌ. وَأَمَّا الْغَمْغَمَةُ فَهِيَ أَصْوَاتُ الثِّيرَانِ عِنْدَ الذُّعْرِ، وَالْأَبْطَالِ عِنْدَ الْوَغَى. وَقَدْ قُلْنَا إِنَّ هَذِهِ الْحِكَايَاتِ لَا تَكَادُ يَكُونُ لَهَا قِيَاسٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "سحاب أغمّ: لا فرجة فيه. قال أبو وجزة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سحاب أغمّ: لا فرجة فيه. قال أبو وجزة:",
         "prototipe_benzerlik": 0.441,
         "halka": "orta"
       },
       {
-        "cumle": "ويقولون: أحمى فلان غمامة وادي كذا إذا جعلها حمًى لا يقرب: يريدون ما ينبته من العشب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أغم ربابه سرب كلاه ... هزيم رعده ترع الدّلاء",
+        "prototipe_benzerlik": 0.675,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويقولون: أحمى فلان غمامة وادي كذا إذا جعلها حمًى لا يقرب: يريدون ما ينبته من العشب.",
         "prototipe_benzerlik": 0.444,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.442,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.52,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["feeling.n.01", "humiliate.v.01"],
   "muhassas_tasnif": {

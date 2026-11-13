@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أبهم الباب أغلقه. أنشد سيبويه: الفارجي باب الأمير المبهم واللون البهيم: ما لا شية فيه أي لون كان إلا الشهبة. يقال ليل بهيم، وليال دهم بهم. وفلان بهمة من البهم: للشجاع الذي يستبهم على أقرانه مأتاه. وقيل: سمي بالبهمة التي هي الصخرة المصمتة المبهمة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أبهم الباب أغلقه. أنشد سيبويه:\nالفارجي باب الأمير المبهم\nواللون البهيم: ما لا شية فيه أي لون كان إلا الشهبة. يقال ليل بهيم، وليال دهم بهم. وفلان بهمة من البهم: للشجاع الذي يستبهم على أقرانه مأتاه. وقيل: سمي بالبهمة التي هي الصخرة المصمتة المبهمة."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أمر مبهم: لا مأتي له. وأبهم فلان عليّ الأمر وكلام مبهم: لا يعرف له وجه واستبهم عليه الأمر: استغلق. واستبهم على الرجل: أرتج عليه. وصوت بهيم: لا ترجيع فيه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أمر مبهم: لا مأتي له. وأبهم فلان عليّ الأمر وكلام مبهم: لا يعرف له وجه واستبهم عليه الأمر: استغلق. واستبهم على الرجل: أرتج عليه. وصوت بهيم: لا ترجيع فيه.",
         "prototipe_benzerlik": 0.181,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.181,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

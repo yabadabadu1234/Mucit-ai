@@ -699,24 +699,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ماح الماء يميحه وامتاحه. ورجل مائح، وقوم ماحةٌ. وفي مثل: \" إني لأعلم من المائح، باست الماتح \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "محته ميحاً: أعطيته. وامتاحه واستماحه: استعطاه. وامتاحه الحرّ والعمل: عرّقه. قال ابن فسوة:",
-        "prototipe_benzerlik": 0.35,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ماح الماء يميحه وامتاحه. ورجل مائح، وقوم ماحةٌ. وفي مثل: \" إني لأعلم من المائح، باست الماتح \"."
       },
       {
-        "cumle": "وماح فاه بالسّواك إذا استاك. ومحني عند السلطان: اشفع لي، واستمحته عند السلطان: استشفعته. وماح في مشيته: مال متبختراً، وتميح وتمايح، والسكران يتميح ويتمايح، ومرّ يتميح: يتبختر وينظر في ظلّه. ومايحت السلطان والنساء: ما يلتُ وخالطت ممايحةً. وبيني وبين فلان ممالحة وممايحة.",
+        "kaynak": "Mekâyîs: مَيَحَ",
+        "metin": "(مَيَحَ) الْمِيمُ وَالْيَاءُ وَالْحَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِعْطَاءٍ، وَأَصْلُهُ فِي الِاسْتِسْقَاءِ ; وَمَاحَ يَمِيحُ: انْحَدَرَ فِي الرَّكِيِّ فَمَلَأَ الدَّلْوَ، قَالَ:\nيَا أَيُّهَا الْمَائِحُ دَلْوِي دُونَكَا\nوَمِحْتُهُ مَيْحًا: أَعْطَيْتُهُ.\nوَقَوْلُهُمْ: تَمَايَحَ السَّكْرَانُ: تَمَايَلَ، وَالْعُودُ أَيْضًا وَكَذَا الْغُصْنُ لَيْسَ مِنَ الْبَابِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "محته ميحاً: أعطيته. وامتاحه واستماحه: استعطاه. وامتاحه الحرّ والعمل: عرّقه. قال ابن فسوة:",
+        "prototipe_benzerlik": 0.35,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا امتاح حرّ الشمس ذفراه أسهلت ... بأصفر منها قاطراً كلّ مقطر",
+        "prototipe_benzerlik": 0.341,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وماح فاه بالسّواك إذا استاك. ومحني عند السلطان: اشفع لي، واستمحته عند السلطان: استشفعته. وماح في مشيته: مال متبختراً، وتميح وتمايح، والسكران يتميح ويتمايح، ومرّ يتميح: يتبختر وينظر في ظلّه. ومايحت السلطان والنساء: ما يلتُ وخالطت ممايحةً. وبيني وبين فلان ممالحة وممايحة.",
         "prototipe_benzerlik": 0.281,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.316,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.324,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

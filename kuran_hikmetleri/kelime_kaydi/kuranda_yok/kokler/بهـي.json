@@ -37,44 +37,102 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شيء بهي إذا علا العين حسنه وروعته، وقد بهو الشيء وبهيَ. وقد ملأ عيني بهاؤه. وفلان يفتخر بكذا ويبتهي به، ولي به افتخار وابتهاء. قال أبو النجم: ليس المحاذر أن يعد قديمه ... والمبتهي بقديمه بسواء وتقول: باهيته فبهوته. وكيف تباهيه، ولا تضاهيه. وتباهوا به، وأنا أتب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شيء بهي إذا علا العين حسنه وروعته، وقد بهو الشيء وبهيَ. وقد ملأ عيني بهاؤه. وفلان\nيفتخر بكذا ويبتهي به، ولي به افتخار وابتهاء. قال أبو النجم:\nليس المحاذر أن يعد قديمه ... والمبتهي بقديمه بسواء\nوتقول: باهيته فبهوته. وكيف تباهيه، ولا تضاهيه. وتباهوا به، وأنا أتباهى به. وقعدوا في البهو وهو مقدم البيوت."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حلب اللبن فعلاه البهاء، يريد وبيص الرغوة. وفي قول امرىء القيس:",
-        "prototipe_benzerlik": 0.526,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حلب اللبن فعلاه البهاء، يريد وبيص الرغوة. وفي قول امرىء القيس:",
+        "prototipe_benzerlik": 0.517,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبهو هواء تحت صلب كأنه ... من الهضبة الخلقاء زحلوق ملعب",
+        "prototipe_benzerlik": 0.389,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد الجوف. وكل فجو يستعار لها البهو.",
+        "prototipe_benzerlik": 0.386,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ب",
+        "prototipe_benzerlik": 0.425,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ي",
+        "prototipe_benzerlik": 0.55,
         "halka": "yakın"
       },
       {
-        "cumle": "أراد الجوف. وكل فجو يستعار لها البهو.",
-        "prototipe_benzerlik": 0.419,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ت",
+        "prototipe_benzerlik": 0.462,
         "halka": "orta"
       },
       {
-        "cumle": "ماله بيت ليلة وبيته ليلة. وفلان لا يستبيت أي لا يملك البيتة. وتبيت الطعام: أكلته عند المضجع، وشر الطعام المتبيت. وبيته العدو، ومن عادته البيات. وبيت الأمر: دبره ليلاً \" إذ يبيتون ما لا يرضى من القول \" وهذا أمر قد بيت بليل. وخفت بيوت أمر. قال جرير",
-        "prototipe_benzerlik": 0.397,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ماله بيت ليلة وبيته ليلة. وفلان لا يستبيت أي لا يملك البيتة. وتبيت الطعام: أكلته عند المضجع، وشر الطعام المتبيت. وبيته العدو، ومن عادته البيات. وبيت الأمر: دبره ليلاً \" إذ يبيتون ما لا يرضى من القول \" وهذا أمر قد بيت بليل. وخفت بيوت أمر. قال جرير",
+        "prototipe_benzerlik": 0.375,
         "halka": "orta"
       },
       {
-        "cumle": "وبت عنده في مبيت صدق، وبيتوتة طيبة. وأباتك الله إباتة حسنة، وبيتك الله في عافية. وفلان من أهل البيوتات، وهو من بيت كريم. وقلت أبياتاً من الشعر وبيوتاً. ولي في هذا المعنى أبيات. وكم من أبا بيت ملاح للعرب.",
-        "prototipe_benzerlik": 0.664,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أعد لبيوت الهموم إذا سرت ... جمالية حرفاً وميساً مفرداً",
+        "prototipe_benzerlik": 0.478,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبت عنده في مبيت صدق، وبيتوتة طيبة. وأباتك الله إباتة حسنة، وبيتك الله في عافية. وفلان من أهل البيوتات، وهو من بيت كريم. وقلت أبياتاً من الشعر وبيوتاً. ولي في هذا المعنى أبيات. وكم من أبا بيت ملاح للعرب.",
+        "prototipe_benzerlik": 0.686,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن المجاز: قال بدوي لآخر: هل لك بيت أي امرأة. وقال:",
-        "prototipe_benzerlik": 0.384,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: قال بدوي لآخر: هل لك بيت أي امرأة. وقال:",
+        "prototipe_benzerlik": 0.369,
         "halka": "orta"
       },
       {
-        "cumle": "وبات فلان إذا تزوج. وبني فلان عليه بيتاً إذا أعرس. وتزوجت فلانة على بيت أي على فرش يكفي البيت.",
-        "prototipe_benzerlik": 0.24,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مالي إذا أنزعها صأيت ... أكبر غيرني أم بيت",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.565,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هنيئاً لأرباب البيوت بيوتهم ... سوى بعل جمل لا هنيئاً له جمل",
+        "prototipe_benzerlik": 0.783,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبات فلان إذا تزوج. وبني فلان عليه بيتاً إذا أعرس. وتزوجت فلانة على بيت أي على فرش يكفي البيت.",
+        "prototipe_benzerlik": 0.235,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.438,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.473,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

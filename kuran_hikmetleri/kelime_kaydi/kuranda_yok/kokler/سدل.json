@@ -1241,24 +1241,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سدل الثوب سدلاً: أرخاه، وسدلت سترها وشعرها، وستر وشعر مسدول، وقد انسدل فهو منسدل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سدل الثوب سدلاً: أرخاه، وسدلت سترها وشعرها، وستر وشعر مسدول، وقد انسدل فهو منسدل."
+      },
+      {
+        "kaynak": "Mekâyîs: سَدُِلَ",
+        "metin": "(سَدُِلَ) السِّينُ وَالدَّالُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى نُزُولِ الشَّيْءِ مِنْ عُلْوٍ إِلَى سُفْلٍ سَاتِرًا لَهُ. يُقَالُ مِنْهُ أَرْخَى اللَّيْلُ سُدُولَهُ، وَهِيَ سُتُرُهُ. وَالسَّدْلُ: إِرْخَاؤُكَ الثَّوْبَ فِي الْأَرْضِ. وَشَعْرٌ مُنْسَدِلٌ عَلَى الظَّهْرِ. وَالسُِّدْلُ: السِّتْرُ. وَالسِّدْلُ: السِّمْطُ مِنَ الْجَوَاهِرِ، وَالْجَمْعُ سُدُولٌ. وَالْقِيَاسُ فِي ذَلِكَ كُلِّهِ وَاحِدٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أرخى الليل سدوله. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرخى الليل سدوله. قال:",
         "prototipe_benzerlik": 0.299,
         "halka": "uzak"
       },
       {
-        "cumle": "وجئته وستر الليل مسدول.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بأطيب من ريّاك يا أم سالم ... تنفّح والظلماء مرخًى سدولها",
+        "prototipe_benzerlik": 0.282,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجئته وستر الليل مسدول.",
         "prototipe_benzerlik": 0.325,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.312,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.302,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["body_part.n.01", "interlock.v.03", "lock.v.01"],
   "muhassas_tasnif": {

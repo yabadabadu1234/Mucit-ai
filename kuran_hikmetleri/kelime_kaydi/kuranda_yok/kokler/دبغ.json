@@ -1184,19 +1184,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دبغ الأديم دبغاً ودباغاً ودباغة يدبغه ويدبغه، وأديم مدبوغ، وأدم مدبغة، والأديم في دباغه وفي دبغه وهو اسم ما يصلح به ويلين من قرظ ونحوه، وحرفته الدباغة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "كلام غير مدبوغ: لم يرو فيه. وجلد الخنزير لا يندبغ: في من لا يحيك فيه النصح. وهذا البلد مدبغة للرجال. وقال:",
-        "prototipe_benzerlik": 0.284,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دبغ الأديم دبغاً ودباغاً ودباغة يدبغه ويدبغه، وأديم مدبوغ، وأدم مدبغة، والأديم في دباغه وفي دبغه وهو اسم ما يصلح به ويلين من قرظ ونحوه، وحرفته الدباغة."
+      },
+      {
+        "kaynak": "Mekâyîs: دَبَغَ",
+        "metin": "(دَبَغَ) الدَّالُ وَالْبَاءُ وَالْغَيْنُ كَلِمَةٌ. دَبَغْتُ الْأَدِيمَ أَدْبَغُهُ وَأَدْبُغُهُ دَبْغًا."
       }
     ],
-    "ortalama_benzerlik": 0.284,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كلام غير مدبوغ: لم يرو فيه. وجلد الخنزير لا يندبغ: في من لا يحيك فيه النصح. وهذا البلد مدبغة للرجال. وقال:",
+        "prototipe_benzerlik": 0.284,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دع الشر وانزل بالنجاة تحرّزاً ... إذا أنت لم يصبغك في الشر صابغ",
+        "prototipe_benzerlik": 0.199,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولكن إذا ما الشر أرخى قناعه ... عليك فجوّد دبغ ما أنت دابغ",
+        "prototipe_benzerlik": 0.363,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.282,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1260,34 +1260,62 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لفحته النار: أخرقت بشرته، ولفحته السموم، وأصابه من الحر لفح، ومن البرد نفح. ورأيت معهم التّفاح واللّقّاح، وهو شيء أصفر أصغر من التفاح طيّب الريح.\nل\nف\nظ\nلفظ النوى. وكأنها لفظ العجم ولفيظه: ما لفظ منه. ولفظ اللقمة من فيه. ورمى باللفاظة وهي ما يلفظ."
+      },
+      {
+        "kaynak": "Mekâyîs: لَفَحَ",
+        "metin": "(لَفَحَ) اللَّامُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لَفَحَتْهُ النَّارُ بِحَرِّهَا، وَالسَّمُومُ إِذَا أَصَابَهُ حَرُّهَا فَتَغَيَّرَ وَجْهُهُ. [وَأَمَّا] قَوْلُهُمْ: لَفَحَهُ بِالسَّيْفِ لَفْحَةً: ضَرَبَهُ ضَرْبَةً خَفِيفَةً، فَإِنَّ الْأَصْلَ فِيهِ النُّونُ، هُوَ نَفَحَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "لفظ القول ولفظ به، \" ما يلفظ من قول \"، ويقال: ما يلفظ بشيء إلا حفظ عليه. ولفظ نفسه: مات، كما يقال: قاء نفسه. وفلان لافظ فائظ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لفظ القول ولفظ به، \" ما يلفظ من قول \"، ويقال: ما يلفظ بشيء إلا حفظ عليه. ولفظ نفسه: مات، كما يقال: قاء نفسه. وفلان لافظ فائظ. قال:",
         "prototipe_benzerlik": 0.543,
         "halka": "yakın"
       },
       {
-        "cumle": "أي تموت. ولفظت الرحم ماء الفحل. ولفظت",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقلت له إن تلفظ النفس كارهاً ... أدعك ولا أدفنك حين تنبل",
+        "prototipe_benzerlik": 0.451,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي تموت. ولفظت الرحم ماء الفحل. ولفظت",
         "prototipe_benzerlik": 0.541,
         "halka": "yakın"
       },
       {
-        "cumle": "الرحى بالدقيق. ولفظت الحيّة سمها. ولفظت إلينا البلاد أهلها. ولفظت آسادها الأجم. وقال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الرحى بالدقيق. ولفظت الحيّة سمها. ولفظت إلينا البلاد أهلها. ولفظت آسادها الأجم. وقال ذو الرمة:",
         "prototipe_benzerlik": 0.137,
         "halka": "uzak"
       },
       {
-        "cumle": "والبحر يلفظ بالشيء إلى الساحل. والدنيا لافظة بالناس إلى الآخرة، والأرض تلفظ الموتى. وجاء وقد لفظ لجامه وهو مجهود من العطش والإعياء. وما بق إلا فضاضة ولعاعة ولفاظة: بقيّة يسيرة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تروحن فاعصوصبن حتى وردنه ... ولم يلفظ الغرثى الخداريّة الوكر",
+        "prototipe_benzerlik": 0.482,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والبحر يلفظ بالشيء إلى الساحل. والدنيا لافظة بالناس إلى الآخرة، والأرض تلفظ الموتى. وجاء وقد لفظ لجامه وهو مجهود من العطش والإعياء. وما بق إلا فضاضة ولعاعة ولفاظة: بقيّة يسيرة.",
         "prototipe_benzerlik": 0.574,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.449,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.455,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["parch.v.01"],
   "muhassas_tasnif": {

@@ -1118,11 +1118,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "stretch.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "stretch.v.02",
-    "dayanak_tanim": "extend one's limbs or muscles, or the entire body",
+    "ince": "elongate.v.01",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "elongate.v.01",
+    "dayanak_tanim": "make long or longer by pulling and stretching",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1141,19 +1141,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تمدّد الشيء أو قبوله التمدد مرونةً مع تماسك أثنائه (1):",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "مطّ حاجبيه إذا تكبّر. قال:",
-        "prototipe_benzerlik": 0.509,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تمدّد الشيء أو قبوله التمدد مرونةً مع تماسك أثنائه (1):"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مطّ الحرف: مدّه. ومطّ بهم في السير ومطا بهم. ومارأيت الماء إلا في المطائط وهي حفر قوائم الدواب. قال:\nفلم يبق إلا نطفة في مطيطة ... من الأرض فاستصفينها بالجحافل\nوله دبسٌ يتطط: يتمدّد لخثورته."
+      },
+      {
+        "kaynak": "Mekâyîs: مَطَّ",
+        "metin": "(مَطَّ) الْمِيمُ وَالطَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَدِّ الشَّيْءِ. وَمَطَّهُ: مَدَّهُ. وَالْقِيَاسُ فِيهِ وَفِي الْمُطَيْطَاءِ وَاحِدٌ، وَهُوَ الْمَشْيُ بِتَبَخْتُرٍ، لِأَنَّهُ إِذَا فَعَلَ مَطَّ أَطْرَافَهُ. قَالَ اللَّهُ تَعَالَى: ثُمَّ ذَهَبَ إِلَى أَهْلِهِ يَتَمَطَّى، قَالُوا: أَصْلُهُ يَتَمَطَّطُ، فَجُعِلَتِ الطَّاءُ الثَّالِثَةُ يَاءً لِلتَّخْفِيفِ، وَمَطَّ حَاجِبَيْهِ: تَكَبَّرَ، وَهُوَ مِنْهُ. وَمِنْهُ الْمَطِيطَةُ: الْمَاءُ الْمُخْتَلِطُ بِالطِّينِ ; وَهَذَا يَكُونُ إِذَا مَدَّ الْمَاءَ مِيَاهُ سَيْلٍ كَدِرَةٍ."
       }
     ],
-    "ortalama_benzerlik": 0.509,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مطّ حاجبيه إذا تكبّر. قال:",
+        "prototipe_benzerlik": 0.509,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا اللئيم مطّ حاجبيه ... وذبّ عن حريم درهميه",
+        "prototipe_benzerlik": 0.473,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقم إلى السيف ومضربيه ... إن قعد الدهر فقم إليه",
+        "prototipe_benzerlik": 0.459,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.48,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["cover.v.03", "drag.v.01", "elongate.v.01", "stretch.v.02"],
   "muhassas_tasnif": {

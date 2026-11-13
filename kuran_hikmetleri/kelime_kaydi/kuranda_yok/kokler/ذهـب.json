@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ذهب من داره إلى المسجد ذهاباً ومذهباً. وذهب مذهباً بعيداً. وأذهبه: جعله ذاهباً. وذهب به: مرّ به مع نفسه. وكثر عنده الذهب وكثرت عند أهل الحجاز. ويقولون: أعطني ذهيبتي. وعندي ذهبة: قطعة من الذهب. ولفلان ذهبان وأذهاب كثيرة. ورجل ذهب: يرى الذهب فيدهش ويبرق بصره من ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ذهب من داره إلى المسجد ذهاباً ومذهباً. وذهب مذهباً بعيداً. وأذهبه: جعله ذاهباً. وذهب به: مرّ به مع نفسه. وكثر عنده الذهب وكثرت عند أهل الحجاز. ويقولون: أعطني ذهيبتي. وعندي ذهبة: قطعة من الذهب. ولفلان ذهبان وأذهاب كثيرة. ورجل ذهب: يرى الذهب فيدهش ويبرق بصره من عظمه في عينه. ولوح مذهب ومذهب. واطلب لي المذاهب وهي السيور المموهة بالذهب. وكميت مذهب: تعلو حمرته صفرة. ووقعت الذهاب في أرضنا جمع ذهبة وهي أمطار غزار."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "والكناية: ذهب فلان مذهباً حسناً. وذهب عليّ كذا: نسبته. وذهب الرجل في القوم والماء في اللبن: ضل. وفلان يذهب إلى قول أبي حنيفة أي يأخذ به. وذهبت به الخيلاء. وخرج إلى المذهب وهو المتوضأ عند أهل الحجاز. وتقول: مثل مذهبكم وقدره، مثل مذهبكم وقذره؛ وذهب في الأرض: كناية عن الإبداء. وأبعد فلان المذهب وأبعد ا",
-        "prototipe_benzerlik": 0.529,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والكناية: ذهب فلان مذهباً حسناً. وذهب عليّ كذا: نسبته. وذهب الرجل في القوم والماء في اللبن: ضل. وفلان يذهب إلى قول أبي حنيفة أي يأخذ به. وذهبت به الخيلاء. وخرج إلى المذهب وهو المتوضأ عند أهل الحجاز. وتقول: مثل مذهبكم وقدره، مثل مذهبكم وقذره؛ وذهب في الأرض: كناية عن الإبداء. وأبعد فلان المذهب وأبعد الأثر. تنحى للإبداء.",
+        "prototipe_benzerlik": 0.672,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.529,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.672,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

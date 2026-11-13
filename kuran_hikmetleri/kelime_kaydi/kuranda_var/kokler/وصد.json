@@ -1624,11 +1624,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "repulsion.n.03",
-    "dayanak_tanim": "the act of repulsing or repelling an attack; a successful defensive stand",
+    "ince": "complain.v.01",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "complain.v.01",
+    "dayanak_tanim": "express complaints, discontent, displeasure, or unhappiness",
     "synset_sayisi": 17
   },
   "ses_mana_tasnif": {
@@ -1647,19 +1647,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شَدُّ أشياءَ أو اشتددُها بعضِها إلى بعض (في القاع) مع جمع أو حبس. كما يَشُدّ الحائكُ الخيوط بعضَها إلى بعض فتصير ثوبًا، وكجدار الوصيدة أو إمساكها ما بداخلهاء. وكأُصُول الوصيد المتقاربة. ومنه \"أوصدَ الباب وآصده: أغلقه \" (جمع مصراعيه وشدّه على ذلك فحبس ما وراءه،",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شَدُّ أشياءَ أو اشتددُها بعضِها إلى بعض (في القاع) مع جمع أو حبس. كما يَشُدّ الحائكُ الخيوط بعضَها إلى بعض فتصير ثوبًا، وكجدار الوصيدة أو إمساكها ما بداخلهاء. وكأُصُول الوصيد المتقاربة. ومنه \"أوصدَ الباب وآصده: أغلقه \" (جمع مصراعيه وشدّه على ذلك فحبس ما وراءه، {إِنَّهَا عَلَيْهِمْ مُؤْصَدَةٌ} [الهمزة: 8، وكذا ما في البلد: 20] (قرئا بالهمز، وبلا همز) \"والوصيد: فِناء الدار والبيت \" (مساحة منيعة مقصورة على أصحاب الدار) {وَكَلْبُهُمْ بَاسِطٌ ذِرَاعَيْهِ بِالْوَصِيدِ} [الكهف: 18] ويجوز لغويًّا أن يطلق الوصيد على عتبة الباب لأنها تساعد مع الباب على قَصْر ما بداخل الحجرة، وهذا أعجب إلى ابن قتيبة [غريب القرآن ص 264]. (3/1204)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "\" باسط ذراعيه بالوصيد \": بالفناء وقيل: بالباب. قال مزرّد:\nحملت عليه الهم والليل جانح ... تمام ولم يفتح لحيذ وصيدها\nوأوصد الباب: أغلقه. وأوصد القدر: أطبقها. وأوصدوا واستوصدوا: اتخذوا وصيدة للغنم: حظيرةً، وغنمهم في الوصائد."
+      },
+      {
+        "kaynak": "Mekâyîs: وَصَدَ",
+        "metin": "(وَصَدَ) الْوَاوُ وَالصَّادُ وَالدَّالُ: أَصْلٌ يَدُلُّ عَلَى ضَمِّ شَيْءٍ إِلَى شَيْءٍ. وَأَوْصَدْتُ الْبَابَ: أَغْلَقْتُهُ. وَالْوَصِيدُ: النَّبْتُ الْمُتَقَارِبُ الْأُصُولِ. وَالْوَصِيدُ: الْفِنَاءُ لِاتِّصَالِهِ بِالرَّبْعِ. وَالْمُوصَدُ: الْمُطْبَقُ. وَقَالَ تَعَالَى: {إِنَّهَا عَلَيْهِمْ مُؤْصَدَةٌ} [الهمزة: 8] ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أوصدوا على فلانٍ: ضيّقوا عليه وأرهقوه، وهو موصدٌ عليه.",
-        "prototipe_benzerlik": 0.56,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أوصدوا على فلانٍ: ضيّقوا عليه وأرهقوه، وهو موصدٌ عليه.",
+        "prototipe_benzerlik": 0.554,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.56,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.554,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "advertise.v.02",

@@ -718,19 +718,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سمعت ضغاء الأرنب والثعلب، وضغا يضغو.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سمعت ضغاء الأرنب والثعلب، وضغا يضغو."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ضغا فلان ضغاء: تضوّر من ضرب أو أذى، وأضغيته. وتقول: أضغيته إضغاء، ثم أغضيت عنه إغضاءاً. وبات صبيانه يتغاضون من الجوع. وسمعت ضواغي الكلاب جمع: ضاغية بمغنى الضغاء وهو النباح.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضغا فلان ضغاء: تضوّر من ضرب أو أذى، وأضغيته. وتقول: أضغيته إضغاء، ثم أغضيت عنه إغضاءاً. وبات صبيانه يتغاضون من الجوع. وسمعت ضواغي الكلاب جمع: ضاغية بمغنى الضغاء وهو النباح.",
         "prototipe_benzerlik": 0.703,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.703,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

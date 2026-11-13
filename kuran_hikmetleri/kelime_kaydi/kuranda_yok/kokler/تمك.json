@@ -753,19 +753,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تمك السنام: ارتفع، وسنام تامك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تمك السنام: ارتفع، وسنام تامك."
+      },
+      {
+        "kaynak": "Mekâyîs: تَمَكَ",
+        "metin": "(تَمَكَ) التَّاءُ وَالْمِيمُ وَالْكَافُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ ارْتِفَاعُ الشَّيْءِ. يُقَالُ تَمَكَ السَّنَامُ إِذَا عَلَا ; وَهُوَ سَنَامٌ تَامِكٌ. وَذَكَرَ ابْنُ دُرَيْدٍ: أَتْمَكَهَا الْكَلَأُ إِذَا أَسْمَنَهَا. وَاللَّهُ أَعْلَمُ.\n[بَابُ التَّاءِ وَالنُّونِ وَمَا يُثَلِّثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بناء تامك. وتقول: شرفك تامك، وإقبالك سامك. وقد تمك فيه الحسن، وإنه لتامك الجمال. وأتمك الربيع سنامه. وقال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بناء تامك. وتقول: شرفك تامك، وإقبالك سامك. وقد تمك فيه الحسن، وإنه لتامك الجمال. وأتمك الربيع سنامه. وقال الكميت:",
         "prototipe_benzerlik": 0.669,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إلى الذي أتمك المعروف أسنمة ... معروفة كان فيها قبله جبب",
+        "prototipe_benzerlik": 0.532,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.669,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.601,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

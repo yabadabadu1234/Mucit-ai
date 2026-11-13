@@ -37,19 +37,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لجأوا إلى كهف وإلى كهوف وهي الغيران. وتكهّف الجبل: صارت فيه كهوف.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "فلان كهف قومه: ملجؤهم، وتقول: أولئك معاقلهم وكهوفهم، وإليه يأوي ملهوفهم. وناقة ذات أرداف وكهوف وهي ما تراكب في ترائبها وجنبيها من كراديس اللحم والشحم. قال:",
-        "prototipe_benzerlik": 0.077,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لجأوا إلى كهف وإلى كهوف وهي الغيران. وتكهّف الجبل: صارت فيه كهوف."
       }
     ],
-    "ortalama_benzerlik": 0.077,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان كهف قومه: ملجؤهم، وتقول: أولئك معاقلهم وكهوفهم، وإليه يأوي ملهوفهم. وناقة ذات أرداف وكهوف وهي ما تراكب في ترائبها وجنبيها من كراديس اللحم والشحم. قال:",
+        "prototipe_benzerlik": 0.077,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حسّر منه الخمس عن كهوف ... مثل أعالي الظعن الوقوف",
+        "prototipe_benzerlik": 0.386,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.231,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

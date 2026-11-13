@@ -710,24 +710,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أطعمهم النحض، وسقاهم المحض، وهو اللحم المكتنز، واشو لنا هذه النّحضة وهي القطعة منه. وامرأة نحيضة: لحيمة، ومنحوضة: مهزولة كأنما نحضت أي عرقت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أطعمهم النحض، وسقاهم المحض، وهو اللحم المكتنز، واشو لنا هذه النّحضة وهي القطعة منه. وامرأة نحيضة: لحيمة، ومنحوضة: مهزولة كأنما نحضت أي عرقت."
+      },
+      {
+        "kaynak": "Mekâyîs: نَحَضَ",
+        "metin": "(نَحَضَ) النُّونُ وَالْحَاءُ وَالضَّادُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ اللَّحْمُ. يُقَالُ لِلَّحْمِ نَحْضٌ. وَامْرَأَةٌ نَحِيضَةٌ: كَثِيرَةُ اللَّحْمِ، فَإِذَا ذَهَبَ لَحْمُهَا فَمَنْحُوضَةٌ، مِنْ قَوْلِهِمْ: نَحَضْتُ الْعَظْمَ: أَخَذْتُ مَا عَلَيْهِ مِنْ لَحْمٍ. وَيَقُولُونَ: نَحَضْتُ السِّنَانَ: رَقَّقْتُهُ، كَأَنَّكَ لَمَّا رَقَّقْتَهُ أَخَذْتَ عَنْهُ نَحْضَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سنان نحيض بمعنى منحوض، وقد نحضه إذا رقّقه. قال امرؤ القيس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سنان نحيض بمعنى منحوض، وقد نحضه إذا رقّقه. قال امرؤ القيس:",
         "prototipe_benzerlik": 0.581,
         "halka": "yakın"
       },
       {
-        "cumle": "ونحضت فلاناً: نهكته بالسؤال. وناحضته: ماحكته ولاحيته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يبارى شباة الرمح خدّ مذلّق ... كحد السنان الصّلّي النحيض",
+        "prototipe_benzerlik": 0.483,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونحضت فلاناً: نهكته بالسؤال. وناحضته: ماحكته ولاحيته.",
         "prototipe_benzerlik": 0.171,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.376,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.412,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

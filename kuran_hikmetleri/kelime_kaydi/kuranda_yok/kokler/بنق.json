@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قميص واسع البنائق وهي الدخاريص، وقيل اللبن. قال ذو الرمة: على كل كهل أزعكي ويافع ... من اللؤم سربال جديد البنائق وتقول إذا خطت البنيقة، فخطها بنيقه. وبنق الكتاب: ذره. وإذا فرغت من قراءة الكتاب فبنقه ولا تدعه غير مبنق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قميص واسع البنائق وهي الدخاريص، وقيل اللبن. قال ذو الرمة:\nعلى كل كهل أزعكي ويافع ... من اللؤم سربال جديد البنائق\nوتقول إذا خطت البنيقة، فخطها بنيقه. وبنق الكتاب: ذره. وإذا فرغت من قراءة الكتاب فبنقه ولا تدعه غير مبنق."
+      },
+      {
+        "kaynak": "Mekâyîs: بَنَقَ",
+        "metin": "(بَنَقَ) الْبَاءُ وَالنُّونُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ، وَأَرَاهَا مِنَ الْحَوَاشِي غَيْرَ وَاسِطَةٍ. وَهِيَ الْبَنِيقَةُ، وَهُوَ جُِرُِبَّانُ الْقَمِيصِ. وَيُقَالُ: الْبَنِيقَةُ كُلُّ رُقْعَةٍ فِي الثَّوْبِ كَاللَّبِنَةِ وَنَحْوِهَا. عَلَى أَنَّهَا قَدْ جَاءَتْ فِي الشِّعْرِ. قَالَ:\nيَضُمُّ إِلَيَّ اللَّيْلُ أَطْفَالَ حُبِّهَا ... كَمَا ضَمَّ أَزْرَارَ الْقَمِيصِ الْبَنَائِقُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جعبة مبنقة: زيد في أعلاها شبه بنيقة لتتسع. وطريق مبنق: واسع. ومفازة مبنوقة بأخرى: موصولة بها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جعبة مبنقة: زيد في أعلاها شبه بنيقة لتتسع. وطريق مبنق: واسع. ومفازة مبنوقة بأخرى: موصولة بها.",
         "prototipe_benzerlik": 0.508,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.508,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ضيّق البكرة باللهاز وهو النحاس. ولهز الفصيل ضرع أمّه برأسه عند الرضاع. ودفع في لهزمتيه وهما مجتمع اللحم بين الماضغ والأذن، وقيل: لحم الفكين.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ضيّق البكرة باللهاز وهو النحاس. ولهز الفصيل ضرع أمّه برأسه عند الرضاع. ودفع في لهزمتيه وهما مجتمع اللحم بين الماضغ والأذن، وقيل: لحم الفكين."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لهزه القتير: فشا فيه الشيب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لهزه القتير: فشا فيه الشيب.",
         "prototipe_benzerlik": 0.402,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.402,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

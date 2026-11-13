@@ -1587,19 +1587,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قصله قصلاً: قطعه قطعاً وحياً. وسيف قاصل وقصّال ومقصل. وزاجتز قصيلاً للدابة. وقصل فرسه يقصله: علفه القصيل. وهذه قصالة البرّ: لما يعزل إذا نقّي ثم يداس ثانية.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قصله قصلاً: قطعه قطعاً وحياً. وسيف قاصل وقصّال ومقصل. وزاجتز قصيلاً للدابة. وقصل فرسه يقصله: علفه القصيل. وهذه قصالة البرّ: لما يعزل إذا نقّي ثم يداس ثانية."
+      },
+      {
+        "kaynak": "Mekâyîs: قَصَلَ",
+        "metin": "(قَصَلَ) الْقَافُ وَالصَّادُ وَاللَّامُ أَصْلٌ صَحِيحٌ وَاحِدٌ يَدُلُّ عَلَى قَطْعِ الشَّيْءِ. فَالْقَصْلُ: الْقَطْعُ. يُقَالُ قَصَلَهُ، إِذَا قَطَعَهُ. وَالْقَصِيلُ مَعْرُوفٌ، وَسُمِّيَ بِذَلِكَ لِسُرْعَةِ اقْتِصَالِهِ، لِأَنَّهُ رَخْصٌ. وَسَيْفٌ مِقْصَلٌ: قَطَّاعٌ، وَكَذَلِكَ الْقَصَّالُ. وَلِسَانٌ مِقْصَلٌ عَلَى التَّشْبِيهِ. وَالْقِصْلُ: الرَّجْلُ الضَّعِيفُ، لِأَنَّهُ مُنْقَطِعٌ. فَأَمَّا الْقُصَالَةُ فَمَا يُعْزَلُ مِنَ الْبُرِّ لِيُدَاسَ ثَانِيَةً، فَإِنْ كَانَ صَحِيحًا فَقِيَاسُهُ قَرِيبٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لسان مقصل. وما فلان إلا قصالة وحثالة أي سفلة. وتقول: مالك أصالة، وما أنت إلا قصالة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لسان مقصل. وما فلان إلا قصالة وحثالة أي سفلة. وتقول: مالك أصالة، وما أنت إلا قصالة.",
         "prototipe_benzerlik": 0.648,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.648,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

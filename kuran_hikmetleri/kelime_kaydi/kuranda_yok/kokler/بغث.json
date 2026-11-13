@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "صفر أبغث، والبغث الغبرة، وهو من أباغث الطير. وشاة بغثاء وغثم بغث: فيها سواد وبياض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "صفر أبغث، والبغث الغبرة، وهو من أباغث الطير. وشاة بغثاء وغثم بغث: فيها سواد وبياض."
+      },
+      {
+        "kaynak": "Mekâyîs: بَغَثَ",
+        "metin": "(بَغَثَ) الْبَاءُ وَالْغَيْنُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، يَدُلُّ عَلَى ذُلِّ الشَّيْءِ وَضَعْفِهِ. مِنْ ذَلِكَ بَُِغَاثُ الطَّيْرِ، وَهِيَ الَّتِي لَا تَصِيدُ وَلَا تَمْتَنِعُ. ثُمَّ يُقَالُ لِأَخْلَاطِ النَّاسِ\nوَخُشَارَتِهِمُ الْبَغْثَاءُ. وَالْأَبْغَثُ: مَكَانٌ ذُو رَمْلٍ. وَهُوَ مِنْ ذَاكَ لِأَنَّهُ لَيِّنٌ غَيْرُ صُلْبٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "خرج فلان في البغثاء والغثراء وهم أخلاط الناس. وتقول: هم من بغثاء الخيل، وغثاء السيل. وفي مثل: \" إن البغاث بأرضنا تستنسر \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "خرج فلان في البغثاء والغثراء وهم أخلاط الناس. وتقول: هم من بغثاء الخيل، وغثاء السيل. وفي مثل: \" إن البغاث بأرضنا تستنسر \".",
         "prototipe_benzerlik": 0.44,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.44,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

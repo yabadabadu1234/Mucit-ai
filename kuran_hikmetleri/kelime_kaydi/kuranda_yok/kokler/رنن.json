@@ -1647,29 +1647,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "صوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "صوت حادّ أو مؤثر يصدر عن حيّ أو غيره (1) كتلك الأصوات المختلفة من مصادرها (رنين المرأة هو صراخها عند المصيبة) وفي سامعها."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سمعت له رنة ورنيناً: صبحة حزينة، وقد رنّ وأرنّ."
+      },
+      {
+        "kaynak": "Mekâyîs: رَنَّ",
+        "metin": "(رَنَّ) الرَّاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى صَوْتٍ. فَالْإِرْنَانُ: الصَّوْتُ وَالرَّنَّةُ وَالرَّنِينُ: صَيْحَةُ ذِي الْحُزْنِ. وَيُقَالُ أَرَنَّتِ الْقَوْسُ عِنْدَ إِنْبَاضِ الرَّامِي عَنْهَا. قَالَ:\nتُرِنُّ إِرْنَانًا إِذَا مَا أَنْضَبَا\nأَيْ أَنْبَضَ. وَالْمِرْنَانُ: الْقَوْسُ; لِأَنَّ لَهَا رَنِينًا. وَيُقَالُ إِنَّ الرَّنَنَ دُوَيْبَّةٌ تَكُونُ فِي الْمَاءِ تَصِيحُ أَيَّامَ الصَّيْفِ. قَالَ:\nوَلَا الْيَمَامُ وَلَمْ يَصْدَحْ لَهُ الرَّنَنُ\nفَهَذَا مُعْظَمُ الْبَابِ، وَهُوَ قِيَاسٌ مُطَّرِدٌ. وَحُكِيَتْ كَلِمَةٌ مَا أَدْرِي مَا هِيَ، وَهِيَ شَاذَّةٌ إِنْ صَحَّتْ، وَلَمْ أَسْمَعْهَا سَمَاعًا. قَالُوا: كَانَ يُقَالُ لِجُمَادَى الْأُولَى رُنَّى، بِوَزْنِ حُبْلَى. وَهَذَا مِمَّا لَا يَنْبَغِي أَنْ يُعَوَّلَ عَلَيْهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "أرنت القوس والسحابة، وقوس وسحابة مرنان. وعود ذو رنة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرنت القوس والسحابة، وقوس وسحابة مرنان. وعود ذو رنة.",
         "prototipe_benzerlik": 0.263,
         "halka": "uzak"
       },
       {
-        "cumle": "ورنا إليه ورنا له رنواً: أدام إليه النظر وظل رانياً إليه. وكأس رنوناة: دائمة. قال ابن أحمر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ر ن",
+        "prototipe_benzerlik": 0.23,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورنا إليه ورنا له رنواً: أدام إليه النظر وظل رانياً إليه. وكأس رنوناة: دائمة. قال ابن أحمر:",
         "prototipe_benzerlik": 0.209,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: حدّثني فرنوت إلى حديثه. ورنوت عنه: تغافلت. وأسأل الله أن يرنيكم إلى الطاعة أي يصيّركم تسكنون إليها لا إلى غيرها. وله شرف يراني الكواكب، سمعته من العرب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مدت عليه الملك أطنابه ... كأس رنوناة وطرف طمز",
+        "prototipe_benzerlik": 0.17,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: حدّثني فرنوت إلى حديثه. ورنوت عنه: تغافلت. وأسأل الله أن يرنيكم إلى الطاعة أي يصيّركم تسكنون إليها لا إلى غيرها. وله شرف يراني الكواكب، سمعته من العرب.",
         "prototipe_benzerlik": 0.164,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.212,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.207,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "affect.v.05",

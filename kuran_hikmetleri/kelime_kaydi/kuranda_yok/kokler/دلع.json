@@ -1604,19 +1604,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أدلع لسانه ودلعه، ولدع بنفسه واندلع: خرج واسترخى من كرب أو عطش، كما يدلع الكلب. وفي حديث بلعم \" إن الله لعنه فأدلع لسانه فسقطت أسلته على صدره \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أدلع لسانه ودلعه، ولدع بنفسه واندلع: خرج واسترخى من كرب أو عطش، كما يدلع الكلب. وفي حديث بلعم \" إن الله لعنه فأدلع لسانه فسقطت أسلته على صدره \"."
+      },
+      {
+        "kaynak": "Mekâyîs: دَلَعَ",
+        "metin": "(دَلَعَ) الدَّالُ وَاللَّامُ وَالْعَيْنُ أُصَيْلٌ يَدُلُّ عَلَى خُرُوجٍ. تَقُولُ: دَلَعَ لِسَانُهُ: خَرَجَ. وَدَلَعَهُ هُوَ، إِذَا أَخْرَجَهُ. وَالدَّلِيعُ: الطَّرِيقُ السَّهْلُ. وَيُقَالُ انْدَلَعَ بَطْنُهُ، إِذَا أَخْرَجَ أَمَامَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "اندلع السيف من غمده واندلق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اندلع السيف من غمده واندلق.",
         "prototipe_benzerlik": 0.483,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.483,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["happening.n.01", "pamper.v.01"],
   "muhassas_tasnif": {

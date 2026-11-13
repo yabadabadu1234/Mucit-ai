@@ -37,29 +37,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بناء مهدوم ومهدّم، وقد انهدم وتهدّم. وانقضّ هدم من الحائط وهو ما انهدم منه. قال يهجو امرأة: تمضي إذا زجرت عن سوءة قدماً ... كأنها هدمٌ في الجفر منقاض",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بناء مهدوم ومهدّم، وقد انهدم وتهدّم. وانقضّ هدم من الحائط وهو ما انهدم منه. قال يهجو امرأة:\nتمضي إذا زجرت عن سوءة قدماً ... كأنها هدمٌ في الجفر منقاض"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عجوز متهدمة: فانية. وتهدّم الثوب: بلي، وعليه هدمٌ وأهدام: أخلاق. ودمه هدمٌ: هدرٌ. وجاءت هدمةٌ من مطر: دفعة منه. وتهدّمت الناقة من شدّة الضّبعة. وهو يتهدّم بالمعروف. قال ابن هرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عجوز متهدمة: فانية. وتهدّم الثوب: بلي، وعليه هدمٌ وأهدام: أخلاق. ودمه هدمٌ: هدرٌ. وجاءت هدمةٌ من مطر: دفعة منه. وتهدّمت الناقة من شدّة الضّبعة. وهو يتهدّم بالمعروف. قال ابن هرمة:",
         "prototipe_benzerlik": 0.281,
         "halka": "uzak"
       },
       {
-        "cumle": "وتهدّم عليه غضباً. وهو يتهدّم عليّ بالكلام",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ماذا بمنبج إن تنشر مقابرها ... من التهدّم بالمعروف والكرم",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتهدّم عليه غضباً. وهو يتهدّم عليّ بالكلام",
         "prototipe_benzerlik": 0.28,
         "halka": "uzak"
       },
       {
-        "cumle": "ويتهوّر ويقال: \" إنّ جُرفك إلى الهدم \" و\" إن حبلك إلى أنشوطة \" إذا وصف بقلّة النّصرة. وهدم الرجل في البحر: دير به، وأخذه الهدام.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويتهوّر ويقال: \" إنّ جُرفك إلى الهدم \" و\" إن حبلك إلى أنشوطة \" إذا وصف بقلّة النّصرة. وهدم الرجل في البحر: دير به، وأخذه الهدام.",
         "prototipe_benzerlik": 0.56,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.374,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.381,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

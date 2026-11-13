@@ -740,19 +740,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فقئت عين عديّ بن حاتم يوم الجمل وكانت به بثرة فانفقأت. وأكل حتى كاد بطنه يتفقؤ. وفقّؤا السابياء عن الولد تفقئةً فتفقّأت. وفلان لا يردّ الراوية ولا ينضج الكراع ولا يفقِّيء البيض، يقال: للعاجز.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فقئت عين عديّ بن حاتم يوم الجمل وكانت به بثرة فانفقأت. وأكل حتى كاد بطنه يتفقؤ. وفقّؤا السابياء عن الولد تفقئةً فتفقّأت. وفلان لا يردّ الراوية ولا ينضج الكراع ولا يفقِّيء البيض، يقال: للعاجز."
+      },
+      {
+        "kaynak": "Mekâyîs: فَقَأَ",
+        "metin": "(فَقَأَ) الْفَاءُ وَالْقَافُ وَالْهَمْزَةُ يَدُلُّ عَلَى فَتْحِ الشَّيْءِ، وَتَفَتُّحِهِ. يُقَالُ: تَفَقَّأَتِ السَّحَابَةُ عَنْ مَائِهَا، إِذَا أَرْسَلَتْهُ، كَأَنَّهَا تَفَتَّحَتْ عَنْهُ.\nوَمِنْ ذَلِكَ: الْفَقْءُ، وَهِيَ السَّابِيَاءُ الَّذِي يَنْفَرِجُ عَنْ رَأْسِ الْمَوْلُودِ. وَمِنْهُ فَقَأْتُ عَيْنَهُ أَفْقَؤُهَا. فَأَمَّا الْفُقَى مُلَيَّنٌ فَجَمْعُ فُوقٍ، وَهُوَ مَقْلُوبٌ وَلَيْسَ مِنْ هَذَا الْبَابِ. قَالَ:\nوَنَبْلِي وَفُقَاهَا كَ ... عَرَاقِيبِ قَطًا طُحْلِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فقأ الله عنك عين الكمال. وتفقّأت السحابة: تبعّجت عن مائها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقأ الله عنك عين الكمال. وتفقّأت السحابة: تبعّجت عن مائها.",
         "prototipe_benzerlik": 0.457,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.457,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

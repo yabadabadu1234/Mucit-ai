@@ -783,29 +783,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "يخضمون ونقضم، أي يأكلون بأقصى الأضراس، ونحن بمقدّمها. وبحر خضم: كثير الماء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "يخضمون ونقضم، أي يأكلون بأقصى الأضراس، ونحن بمقدّمها. وبحر خضم: كثير الماء."
+      },
+      {
+        "kaynak": "Mekâyîs: خَضَمَ",
+        "metin": "(خَضَمَ) الْخَاءُ وَالضَّادُ وَالْمِيمُ أَصْلَانِ: جِنْسٌ مِنَ الْأَكْلِ، وَالْآخَرُ يَدُلُّ عَلَى كَثْرَةِ وَامْتِلَاءِ.\nفَالْأَوَّلُ الْخَضْمُ، وَهُوَ الْمَضْغُ بِأَقْصَى الْأَضْرَاسِ. وَفِي الْحَدِيثِ: &quot; تَخْضِمُونَ وَنَقْضَمُ، وَالْمَوْعِدُ اللَّهُ &quot;.\nوَالْأَصْلُ الْآخَرُ: الْخِضَمُّ: الرَّجُلُ الْكَثِيرُ الْعَطِيَّةِ. وَالْخِضَمُّ: الْجَمْعُ الْكَثِيرُ. قَالَ:\nفَاجْتَمَعَ الْخِضَمُّ وَالْخِضَمُّ\nوَأَمَّا الْمِسَنُّ فَيُقَالُ لَهُ الْخِضَمُّ تَشْبِيهًا، وَإِنَّمَا ذَاكَ مِنْ قِيَاسِ الْبَابِ ; لِأَنَّهُ يُسْقَى مَاءً كَثِيرًا. وَحُجَّتُهُ قَوْلُ أَبِي وَجْزَةَ:\nعَلَى خِضَمٍّ يُسَقَّى الْمَاءَ عَجَّاجِ\nوَمِنَ الْبَابِ الْخُضُمَّةُ، وَهِيَ عَظْمَةُ الذِّرَاعِ، وَهُوَ مُسْتَغْلَظُهَا. وَيُقَالُ إِنَّ مُعْظَمَ كُلِّ شَيْءٍ خُضُمَّةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل خضم: جواد، ورجال خضمون. وفرس خضم: ذو أجاري. وسيف خضم: كثير الماء. ومسن خضم: ذو جوهر وماء. قال أبو وجزة يصف نصلاً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل خضم: جواد، ورجال خضمون. وفرس خضم: ذو أجاري. وسيف خضم: كثير الماء. ومسن خضم: ذو جوهر وماء. قال أبو وجزة يصف نصلاً:",
         "prototipe_benzerlik": 0.298,
         "halka": "uzak"
       },
       {
-        "cumle": "واختضموا الطريق: قطعوه. واختضم السيف العظام: مر فيها وقطعها. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حري موقعة ماج البنان بها ... على خضم يسقى الماء عجاج",
+        "prototipe_benzerlik": 0.606,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واختضموا الطريق: قطعوه. واختضم السيف العظام: مر فيها وقطعها. قال:",
         "prototipe_benzerlik": 0.267,
         "halka": "uzak"
       },
       {
-        "cumle": "فيما يشتمل عليه من كم الدرع، وهو السيف المنسوب إلى قساس: جبل فيه معدن حديد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن القساسيّ الذي يعصى به ... يختضم الدارع في أثوابه",
+        "prototipe_benzerlik": 0.349,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فيما يشتمل عليه من كم الدرع، وهو السيف المنسوب إلى قساس: جبل فيه معدن حديد.",
         "prototipe_benzerlik": 0.089,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.218,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.322,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

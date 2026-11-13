@@ -771,19 +771,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تقول: هو فلذة من كبدي، وفلذت له من مالي: قطعت. وافتلذت منه حقّي: اقتطعته وانتزعته. قال: إذا المال لم يوجب عليك عطاءه ... صنيعة قربي أو حبيب توامقه منعت وبعض المنع حرم وقوة ... ولم يفتلذك المال إلا حقائقه أي لم يفتلذ منك. وتقول: الضرب بالفواليذ، غير الضرب بالفو",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تقول: هو فلذة من كبدي، وفلذت له من مالي: قطعت. وافتلذت منه حقّي: اقتطعته وانتزعته. قال:\nإذا المال لم يوجب عليك عطاءه ... صنيعة قربي أو حبيب توامقه\nمنعت وبعض المنع حرم وقوة ... ولم يفتلذك المال إلا حقائقه\nأي لم يفتلذ منك. وتقول: الضرب بالفواليذ، غير الضرب بالفواليذ، جمع: فولاذ وفالوذ."
+      },
+      {
+        "kaynak": "Mekâyîs: فَلَذَ",
+        "metin": "(فَلَذَ) الْفَاءُ وَاللَّامُ وَالذَّالُ أُصَيْلٌ يَدُلُّ عَلَى قَطْعِ شَيْءٍ مِنْ شَيْءٍ. مِنْ ذَلِكَ الْفِلْذَةُ: الْقِطْعَةُ مِنَ الْكَبِدِ، وَالْجَمْعُ فِلْذٌ. قَالَ:\nتَكْفِيهِ حُزَّةُ فِلْذٍ إِنْ أَلَمَّ بِهَا ... مِنَ الشِّوَاءِ وَيُرْوَى شُرْبَهُ الْغُمَرُ\nفَالْقِطْعَةُ مِنَ الْمَالِ فِلْذَةٌ أَيْضًا. يُقَالُ فَلَذْتُ لَهُ مِنْ مَالِي، أَيْ قَطَعْتُ لَهُ فِلْذَةً مِنْهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إن من أشراط الساعة أن ترمي الأرض بأفلاذ كبدها.",
-        "prototipe_benzerlik": 0.06,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن من أشراط الساعة أن ترمي الأرض بأفلاذ كبدها.",
+        "prototipe_benzerlik": 0.071,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.06,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.071,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -696,24 +696,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دلح البعير دلوحاً وهو تثاقله في مشيه، وبعير دالح، ومرّ يدلح بحمله. واشتريا لحماً فتدالحاه، على عود تحاملاه؛ وتدالح الرجلان العكم: أدخلا عوداً في عرى الجوالق، وأخذا بطرفي العود.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دلح البعير دلوحاً وهو تثاقله في مشيه، وبعير دالح، ومرّ يدلح بحمله. واشتريا لحماً فتدالحاه، على عود تحاملاه؛ وتدالح الرجلان العكم: أدخلا عوداً في عرى الجوالق، وأخذا بطرفي العود."
+      },
+      {
+        "kaynak": "Mekâyîs: دَلَحَ",
+        "metin": "(دَلَحَ) الدَّالُ وَاللَّامُ وَالْحَاءُ أُصَيْلٌ يَدُلُّ عَلَى مَشْيٍ وَثِقَلِ الْمَحْمُولِ. يَقُولُ الْعَرَبُ: دَلَحَ الْبَعِيرُ بِحِمْلِهِ، إِذَا مَشَى بِهِ بِثِقَلٍ. وَسَحَابَةٌ دَلُوحٌ: كَأَنَّهَا تَجْرِي بِمَائِهَا، وَمِنْ ذَلِكَ حَدِيثُ سَلْمَانَ: &quot; أَنَّهُ اشْتَرَى هُوَ وَأَبُو الدَّرْدَاءِ لَحْمًا، فَتَدَالَحَاهُ بَيْنَهُمَا عَلَى عُودٍ &quot;، أَيْ حَمَلَاهُ وَنَهَضَا بِهِ. وَيُقَالُ سَحَابَةٌ دَلُوحٌ، وَسَحَائِبُ دُلَّحٌ. قَالَ:\nبَيْنَمَا نَحْنُ مُرْتِعُونَ بِفَلْجٍ ... قَالَتِ الدُّلَّحُ الرِّوَاءُ إِنِيهِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سحابة دلوح، وسحائب دلح ودوالح. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سحابة دلوح، وسحائب دلح ودوالح. قال:",
         "prototipe_benzerlik": 0.424,
         "halka": "orta"
       },
       {
-        "cumle": "والسحابة تدلح من كثرة مائها. كأنها تنخزل انخزالاً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بينما نحن مرتعون بفلج ... قالت الدلح الرواء إنيه",
+        "prototipe_benzerlik": 0.505,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والسحابة تدلح من كثرة مائها. كأنها تنخزل انخزالاً.",
         "prototipe_benzerlik": 0.197,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.311,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.376,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

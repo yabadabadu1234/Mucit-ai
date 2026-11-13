@@ -1768,39 +1768,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ليث زائر وله زئير وزأر. قال النابغة: نبئت أن أبا قابوس أوعدني ... ولا قرار على زأر من الأسد وتقول: له زفير كأنه زئير. وزأر الأسد يزأر ويزئر، والأسد في زأرته: في أجمته. ويقال: له مرزبان الزأرة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ليث زائر وله زئير وزأر. قال النابغة:\nنبئت أن أبا قابوس أوعدني ... ولا قرار على زأر من الأسد\nوتقول: له زفير كأنه زئير. وزأر الأسد يزأر ويزئر، والأسد في زأرته: في أجمته. ويقال: له مرزبان الزأرة."
+      },
+      {
+        "kaynak": "Mekâyîs: زَأَرَ",
+        "metin": "(زَأَرَ) الزَّاءُ وَالْهَمْزَةُ وَالرَّاءُ أَصْلٌ وَاحِدٌ. زَأَرَ الْأَسَدُ زَأْرًا وَزَئِيرًا.\nقَالَ النَّابِغَةُ:\nنُبِّئْتُ أَنَّ أَبَا قَابُوسَ أَوْعَدَنِي ... وَلَا قَرَارَ عَلَى زَأْرٍ مِنَ الْأَسَدِ\nوَمِنْهُ قَوْلُهُ:\nحَلَّتْ بِأَرْضِ الزَّائِرِينَ فَأَصْبَحَتْ ... عَسِرًا عَلَيَّ طِلَابُكِ ابْنَةَ مَخْرَمِ\nوَمِنَ الْبَابِ الزَّأْرَةُ: الْأَجَمَةُ، وَهُوَ كَالِاسْتِعَارَةِ ; لِأَنَّ الْأُسْدَ تَأْوِي إِلَيْهَا فَتَزْأَرُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سمع زئير الحرب فطار إليها. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سمع زئير الحرب فطار إليها. قال:",
         "prototipe_benzerlik": 0.297,
         "halka": "uzak"
       },
       {
-        "cumle": "والفحل يزأر في هديره إذا ردده في جوفه ثم مده. ولفلان زأرة عامرة. وهو في زأرته وهي البستان. وأنشد اصمعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلا من بغاة الخير في عينه فدى ... ولا من زئير الحرب في أذنه وقر",
+        "prototipe_benzerlik": 0.259,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والفحل يزأر في هديره إذا ردده في جوفه ثم مده. ولفلان زأرة عامرة. وهو في زأرته وهي البستان. وأنشد اصمعي:",
         "prototipe_benzerlik": 0.116,
         "halka": "uzak"
       },
       {
-        "cumle": "زأرة جبار من النخل بسق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زأرة جبار من النخل بسق",
         "prototipe_benzerlik": 0.108,
         "halka": "uzak"
       },
       {
-        "cumle": "وتركته في زأرة من الإبل وزأرة من الغنم: في جماعة كثيفة منها كالأحمة كما قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتركته في زأرة من الإبل وزأرة من الغنم: في جماعة كثيفة منها كالأحمة كما قال:",
         "prototipe_benzerlik": 0.361,
-        "halka": "orta"
+        "halka": "uzak"
       },
       {
-        "cumle": "عاين حياً كالحراج نعمه",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عاين حياً كالحراج نعمه",
         "prototipe_benzerlik": 0.214,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.219,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.226,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["roar.v.01"],
   "muhassas_tasnif": {

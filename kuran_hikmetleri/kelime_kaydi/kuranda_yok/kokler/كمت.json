@@ -1597,24 +1597,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فرس كميت: بيّن الكمتة من خيل كمت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فرس كميت: بيّن الكمتة من خيل كمت."
+      },
+      {
+        "kaynak": "Mekâyîs: كَمَتَ",
+        "metin": "(كَمَتَ) الْكَافُ وَالْمِيمُ وَالتَّاءُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى لَوْنٍ مِنَ الْأَلْوَانِ مِنْ ذَلِكَ الْكُمْتَةِ، وَهِيَ لَوْنٌ لَيْسَ بِأَشْقَرَ وَلَا أَدْهَمَ. يُقَالُ: فَرَسٌ كُمَيْتٌ. وَلَمْ يَجِئْ إِلَّا كَذَا عَلَى صُورَةِ الْمُصَغَّرِ. وَالْكُمَيْتُ: الْخَمْرُ فِيهَا سَوَادٌ وَحُمْرَةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سقاه كميتاً: خمرة في لونها كمتة، وتقول: اصطبح من الكميت، حتى اصبح كالميت، وتمرة كميتٌ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سقاه كميتاً: خمرة في لونها كمتة، وتقول: اصطبح من الكميت، حتى اصبح كالميت، وتمرة كميتٌ. قال:",
         "prototipe_benzerlik": 0.437,
         "halka": "orta"
       },
       {
-        "cumle": "وكنت إذا ما قرّب الزاد مولعاًبكلّ كميت جلدة لم توسّف صلبة لم تقشر لصلابتها. وكمّت ثوبك: اصبغه بلون التمر وهو حمرة في سواد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكنت إذا ما قرّب الزاد مولعاًبكلّ كميت جلدة لم توسّف صلبة لم تقشر لصلابتها. وكمّت ثوبك: اصبغه بلون التمر وهو حمرة في سواد.",
         "prototipe_benzerlik": 0.361,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.399,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

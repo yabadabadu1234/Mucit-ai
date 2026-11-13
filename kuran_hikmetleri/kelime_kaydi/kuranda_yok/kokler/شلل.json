@@ -1199,11 +1199,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "social_group.n.01",
-    "orta": "noun.group",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "clique.n.01",
-    "dayanak_tanim": "an exclusive circle of people with a common purpose",
+    "ince": "injure.v.01",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "cripple.v.02",
+    "dayanak_tanim": "deprive of the use of a limb, especially a leg",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1217,44 +1217,76 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جاء يشل النعم، وهو شلال النعم. وذهبوا شلالاً: متفرقين. قال ذو الرمة: أما والذي حجت قريش قطينه ... شلالاً ومولى كل باقٍ وهالك وشلت يده شللاً، ولا تشلل يداك. قال الحطيئة: لقد قاتلت أمس قتال صدق ... فلا تشلل يداك أبا الرباب ويقال: لا تشلل ولا تكلل. وألقى على الفر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "الصبح يشل الظلام. وقال:",
-        "prototipe_benzerlik": 0.144,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جاء يشل النعم، وهو شلال النعم. وذهبوا شلالاً: متفرقين. قال ذو الرمة:\nأما والذي حجت قريش قطينه ... شلالاً ومولى كل باقٍ وهالك\nوشلت يده شللاً، ولا تشلل يداك. قال الحطيئة:\nلقد قاتلت أمس قتال صدق ... فلا تشلل يداك أبا الرباب\nويقال: لا تشلل ولا تكلل. وألقى على الفرس شليله: جله. ولبس الشليل تحت الدرع وهو ثوب يلبس تحتها. قال دريد:\nتقول هلال خارج من سحابة ... إذا جاء يعدو في شليل وقونس\nوقال أوس:\nوجئنا بها شهباء ذات أشلة ... لها عارض فيه الأسنة تلمع\nوشلشل الماء: قطره بتتابع."
       },
       {
-        "cumle": "وعين شلاء: ذهب بصرها، وقد أشله الله تعالى. وفي ثوبك شلل: أثر سواد أو غيره لا يذهب.",
-        "prototipe_benzerlik": 0.266,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "وإئتني بشلو من أشلائها. وأشليت الكلب للصيد والشاة للحلب: دعوت. قال:",
-        "prototipe_benzerlik": 0.163,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "أشليت عنزي ومسحت قعبي",
-        "prototipe_benzerlik": 0.119,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "وقام إلى فرسه بأشلاء اللجام. ورأيته معرقاً كأشلاء اللجام وهي سيوره. قال امرؤ القيس:",
-        "prototipe_benzerlik": 0.1,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "ومن المجاز: بقيت أشلاء من تميم: بقايا. وأدركه فاشتلاه واستشلاه: استنقذه.",
-        "prototipe_benzerlik": 0.151,
-        "halka": "uzak"
+        "kaynak": "Mekâyîs: شَلَّ",
+        "metin": "(شَلَّ) الشِّينُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَبَاعُدٍ، ثُمَّ يَكُونُ ذَلِكَ فِي الْمَسَافَةِ، وَفِي نَسْجِ الثَّوْبِ وَخِيَاطَتِهِ وَمَا قَارَبَ ذَلِكَ. فَالشَّلُّ: الطَّرْدُ، يُقَالُ شَلَّهُمْ شَلًّا، إِذَا طَرَدَهُمْ. وَيُقَالُ أَصْبَحَ الْقَوْمُ شِلَالًا، أَيْ مُتَفَرِّقِينَ.\nقَالَ الشَّاعِرُ:\nأَمَا وَالَّذِي حَجَّتْ قُرَيْشٌ قَطِينَةً ... شِلَالًا وَمَوْلَى كُلِّ بَاقٍ وَهَالَكِ\nوَالشَّلَلُ: الَّذِي قَدْ شُلَّ، أَيْ طُرِدَ. وَمِنْهُ قَوْلُهُ:\nلَا يَهُمُّونَ بِإِدْعَاقِ الشَّلَلْ\nوَيُقَالُ شَلَّلْتُ الثَّوْبَ أَشُلُّهُ، إِذَا خِطْتَهُ خِيَاطَةً خَفِيفَةً مُتَبَاعِدَةً.\nوَمِنَ الْبَابِ الشَّلَلُ: فَسَادُ الْيَدِ، يُقَالُ: لَا تُشْلِلْ وَلَا تَكْلِلْ، وَرَجُلٌ أَشَلُّ وَقَدْ شَلَّ يَشَلُّ. وَالشَّلَلُ: لَطْخٌ يُصِيبُ الثَّوْبَ فَيَبْقَى فِيهِ أَثَرٌ. وَالشَّلْشَلَةُ: قَطَرَانُ الْمَاءِ مُتَقَطِّعًا. وَالشُّلَّةُ: النَّوَى نَوَى الْفِرَاقِ. وَهُوَ مِنَ الْبَابِ، وَذَلِكَ حَيْثُ يَنْتَوِي الْقَوْمُ. قَالَ أَبُو ذُؤَيْبٍ:\nوَقُلْتُ تَجَنَّبَنْ سُخْطَ ابْنِ عَمٍّ ... وَمَطْلَبَ شُلَّةٍ وَهِيَ الطَّرُوحُ\nفَأَمَّا الشَّلِيلُ فَقَالَ قَوْمٌ: هُوَ الْحِلْسُ، وَهُوَ لَا يَكُونُ مُحَقَّقَ النَّسْجِ. وَأَمَّا الْجُنَنُ فَفِيهَا الشَّلِيلُ، فَقَالَ قَوْمٌ: هُوَ ثَوْبٌ يُلْبَسُ تَحْتَ الدِّرْعِ وَلَا يَكُونُ ضَعِيفًا، وَقَالَ آخَرُونَ: هِيَ الدِّرْعُ الْقَصِيرَةُ، وَتُجْمَعُ أَشِلَّةٌ. قَالَ أَوْسٌ:\nوَجَاءُوا بِهَا شَهْبَاءَ ذَاتَ أَشِلَّةٍ ... لَهَا عَارِضٌ فِيهِ الْمَنِيَّةُ تَلْمَعُ\nوَأَيُّ ذَلِكَ كَانَ فَإِنَّمَا هُوَ تَشْبِيهٌ وَاسْتِعَارَةٌ."
       }
     ],
-    "ortalama_benzerlik": 0.157,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الصبح يشل الظلام. وقال:",
+        "prototipe_benzerlik": 0.369,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والليل منهزم الظلام يشله ... ضوء كنكاصية الحصان الأشقر",
+        "prototipe_benzerlik": 0.137,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعين شلاء: ذهب بصرها، وقد أشله الله تعالى. وفي ثوبك شلل: أثر سواد أو غيره لا يذهب.",
+        "prototipe_benzerlik": 0.526,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ش ل",
+        "prototipe_benzerlik": 0.493,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإئتني بشلو من أشلائها. وأشليت الكلب للصيد والشاة للحلب: دعوت. قال:",
+        "prototipe_benzerlik": 0.406,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشليت عنزي ومسحت قعبي",
+        "prototipe_benzerlik": 0.223,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقام إلى فرسه بأشلاء اللجام. ورأيته معرقاً كأشلاء اللجام وهي سيوره. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقمنا بأشلاء اللجام ولم نقد ... إلى غصن بانٍ ناضر لم يحرق",
+        "prototipe_benzerlik": 0.33,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: بقيت أشلاء من تميم: بقايا. وأدركه فاشتلاه واستشلاه: استنقذه.",
+        "prototipe_benzerlik": 0.423,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.372,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["arouse.v.01", "maim.v.01", "promote.v.02", "raise.v.02", "raise.v.07", "set.n.05", "shrivel.v.01"],
   "muhassas_tasnif": {

@@ -1678,11 +1678,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "written_communication.n.01",
-    "orta": "noun.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "law.n.02",
-    "dayanak_tanim": "legal document setting forth rules governing a particular kind of activity",
+    "ince": "whole.n.02",
+    "orta": "noun.artifact",
+    "ust": "cisim ve eşya",
+    "dayanak_synset": "flask.n.01",
+    "dayanak_tanim": "bottle that has a narrow neck",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1701,39 +1701,86 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الاحتباس في حَوزةٍ أو باطن بعمق وامتداد (1) كالعبد القِنّ دائم الارتباط وقويّه في حوزة مالكه، والقوة من قوى الحبل تمتد في باطنه إذ يلتوي عليها، والبصير بالماء تحت الأرض عنده قوة تنفذ إلى الباطن فترى ما احتبس فيه من ماء دائم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الاحتباس في حَوزةٍ أو باطن بعمق وامتداد (1) كالعبد القِنّ دائم الارتباط وقويّه في حوزة مالكه، والقوة من قوى الحبل تمتد في باطنه إذ يلتوي عليها، والبصير بالماء تحت الأرض عنده قوة تنفذ إلى الباطن فترى ما احتبس فيه من ماء دائم."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الأنوق تبيض في قنّة الجبل وفي قنن الجبال. وعبد قنٌّ: ملك هو وأبواه، وقيل: هو من القنية وهو عكس التقضّي، وأمةٌ قنٌّ وكذلك الجميع، وقيلك عبيد أقنّةٌ. قال جرير\nإن سليطاً في الخسار إنّه ... أولاد قومٍ خلقوا أقنّه\nواقتنّ فلان: اتخذ قناً. وشمّر قنان ثوبك: كمه. وعن ابن دريد: ردنه نجدية. وعندي قنينة: وعاء يتخذ من خيزران أو قضبان قد فصل داخله بحواجز بين مواضع الآنية على صنعة القشوة. ورجل\nقناقن: يعرف مقدار الماء في باطن الأرض فيحفر عنه. قال الطّرماح:\nيخافتن بعض المضغ من خشية الردى ... وينصتن إنصات الرجال القناقن\nوصف بقراً راعياً."
+      },
+      {
+        "kaynak": "Mekâyîs: قَنَّ",
+        "metin": "(قَنَّ) الْقَافُ وَالنُّونُ بَابٌ لَمْ يُوضَعْ عَلَى قِيَاسٍ، وَكَلِمَاتُهُ مُتَبَايِنَةٌ. فَمِنْ كَلِمَاتِهِ الْقِنُّ، وَهُوَ الْعَبْدُ الَّذِي مُلِكَ هُوَ وَأَبُوهُ. وَالْقُنَّةُ: أَعْلَى الْجَبَلِ. وَالْقُنَانُ: رِيحُ الْإِبِطِ أَشَدَّ مَا يَكُونُ. وَالْقُنَاقِنُ: الدَّلِيلُ الْهَادِي، الْبَصِيرُ بِالْمَاءِ تَحْتَ الْأَرْضِ، وَالْجَمْعُ قَنَاقِنُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "إنه لقن مال: قائم به مصلح له كأنه عبد مال. وإنه لقناقن إذا كان لا يخفى عليه شيء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنه لقن مال: قائم به مصلح له كأنه عبد مال. وإنه لقناقن إذا كان لا يخفى عليه شيء.",
         "prototipe_benzerlik": 0.366,
         "halka": "orta"
       },
       {
-        "cumle": "وقنا المال يقنوه قنياناً وقنواناً، واقتناه: اتخذه لنفسه لا للبيع، وهذا مال قنيةٍ وقنوةٍ وقنيانٍ وقنوانٍ. أنشد النضر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ق ن",
+        "prototipe_benzerlik": 0.257,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقنا المال يقنوه قنياناً وقنواناً، واقتناه: اتخذه لنفسه لا للبيع، وهذا مال قنيةٍ وقنوةٍ وقنيانٍ وقنوانٍ. أنشد النضر:",
         "prototipe_benzerlik": 0.23,
         "halka": "uzak"
       },
       {
-        "cumle": "وأجلع الودّ كمال قنوه",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن تدن مني للوصال دنوه ... أدنُ إليك للوفاء رتوه",
+        "prototipe_benzerlik": 0.186,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأجلع الودّ كمال قنوه",
         "prototipe_benzerlik": 0.37,
         "halka": "orta"
       },
       {
-        "cumle": "وهذه قنيته وقناه. وأغناه الله وأقناه: أولاه الغنى والقنى، وتقول: فلان يجتني الغنى والقنى، من أطراف السيوف والنقا. وقنيت حيائي: لزمته، واقنى حياءك. وقوني بياضها بصفرة: خلط. وفي أنفه قناً: احديداب بين القصبة والمارن ويستحسن ذلك. ورجل أقنى، وامرأة قنواء. وفرس أقنى. وبازٍ أقنى. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقالت الخنساء:",
+        "prototipe_benzerlik": 0.144,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لو كان للدهر مالٌ كان متلده ... لكان للدهر صخر مال قنيان",
+        "prototipe_benzerlik": 0.311,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذه قنيته وقناه. وأغناه الله وأقناه: أولاه الغنى والقنى، وتقول: فلان يجتني الغنى والقنى، من أطراف السيوف والنقا. وقنيت حيائي: لزمته، واقنى حياءك. وقوني بياضها بصفرة: خلط. وفي أنفه قناً: احديداب بين القصبة والمارن ويستحسن ذلك. ورجل أقنى، وامرأة قنواء. وفرس أقنى. وبازٍ أقنى. قال ذو الرمة:",
         "prototipe_benzerlik": 0.108,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: حفر النقاء قناة وقنياً، وقنّيت قناةً: عملتها. وهو تام القناة أي القامة. وفلان يبتني المعالي، ويقتني المساعي.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نظرت كما جلّى على رأس رهوة ... من الطير أقنى ينفض الطلّ أزرق ومعه قنوٌ من الرطب وقنوان.",
+        "prototipe_benzerlik": 0.204,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: حفر النقاء قناة وقنياً، وقنّيت قناةً: عملتها. وهو تام القناة أي القامة. وفلان يبتني المعالي، ويقتني المساعي.",
         "prototipe_benzerlik": 0.352,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.285,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.253,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "artifact.n.01",

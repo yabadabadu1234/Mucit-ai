@@ -1325,11 +1325,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "demoralization.n.01",
-    "dayanak_tanim": "destroying the moral basis for a doctrine or policy",
+    "ince": "deter.v.01",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "deter.v.01",
+    "dayanak_tanim": "try to prevent; show opposition to",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1348,24 +1348,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو: ثِقَل الشيء - في مكانه بحيث لا يكاد يفارقه: كالمرأة والمريض المذكورين. وورم الشفة غلظ يلزمه الثقل. ومنه قالوا: ثَبَطْتُ الرجلَ - مخففة: حَبَسْته. وثبّطه عن الشيء - مخففة ومضعفة: رَيَّثَه وثبّته. ومنه ما في آية التركيب. (1/232)",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: ثِقَل الشيء - في مكانه بحيث لا يكاد يفارقه: كالمرأة والمريض المذكورين. وورم الشفة غلظ يلزمه الثقل. ومنه قالوا: ثَبَطْتُ الرجلَ - مخففة: حَبَسْته. وثبّطه عن الشيء - مخففة ومضعفة: رَيَّثَه وثبّته. ومنه ما في آية التركيب. (1/232)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثبطه عن الأمر: ريثه فتثبط، وما ثبطك عن ذلك؟ وغلام ثبط وجارية ثبطة: فيهما كسل وثقل. قال:\nوفوق متنيه غلام ثقف ... لا ثبط القبض ولا ألف\nوفرس ثبط: ثقيل النزو على الحجر.\nث ب\nونفروا إلى العدو ثبات وثبين أي جماعات متفرقة. وعنده أثبية من الخيل وأثابي. قال حميد الأرقط:\nقد أغتدي والصبح محمر الطرر ... بسحق الميعة ميال العذر\nكأنه يوم الرهان المحتضر ... دون أثابي من الخيل زمر\nضار غدا ينفض صئبان المطر"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "قولهم ما يعدله عندي مال مثبّى، ولا ولد عربي؛ أي مجموع مجعول ثبات. وثبى الله لك النعم: ساقها إليك ثبات. قال الحارث ابن ثعلبة الأزدي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم ما يعدله عندي مال مثبّى، ولا ولد عربي؛ أي مجموع مجعول ثبات. وثبى الله لك النعم: ساقها إليك ثبات. قال الحارث ابن ثعلبة الأزدي:",
         "prototipe_benzerlik": 0.639,
         "halka": "yakın"
       },
       {
-        "cumle": "وثبى على الرجل: أثنى عليه ثناء كثيراً كأنما أورد عليه ثبات منه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أثني على الله إما كنت في بلد ... حسن الثناء بما ثبى لي النعما",
+        "prototipe_benzerlik": 0.623,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وثبى على الرجل: أثنى عليه ثناء كثيراً كأنما أورد عليه ثبات منه.",
         "prototipe_benzerlik": 0.44,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.54,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.568,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "cool.v.01", "corrupt.v.01", "deter.v.01", "inhibited.a.01", "inhibitor.n.01"],
   "muhassas_tasnif": {

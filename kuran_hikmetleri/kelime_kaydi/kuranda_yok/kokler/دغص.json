@@ -696,24 +696,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سمن حتى كأنه داغصة، وهي العظم الذي يموج في الركبة. د غ د غ دغدغ الصبي دغدغة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سمن حتى كأنه داغصة، وهي العظم الذي يموج في الركبة.\nد غ د غ\nدغدغ الصبي دغدغة."
+      },
+      {
+        "kaynak": "Mekâyîs: دَغَصَ",
+        "metin": "(دَغَصَ) الدَّالُ وَالْغَيْنُ وَالصَّادُ، كَلِمَةٌ تُقَالُ لِلَّحْمَةِ الَّتِي تَمُوجُ فَوْقَ رُكْبَةِ الْبَعِيرِ: الدَّاغِصَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دغدغه بكلمةٍ: طعن بها في عرضه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دغدغه بكلمةٍ: طعن بها في عرضه.",
         "prototipe_benzerlik": 0.388,
         "halka": "orta"
       },
       {
-        "cumle": "تقول: رب صغير في فطنة دغفل، وكبير في غفلة دغفل؛ الأول: النسابة البكريّ، والثاني ولد الفيل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د غ ف ل",
+        "prototipe_benzerlik": 0.454,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقول: رب صغير في فطنة دغفل، وكبير في غفلة دغفل؛ الأول: النسابة البكريّ، والثاني ولد الفيل.",
         "prototipe_benzerlik": 0.377,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.382,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.406,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

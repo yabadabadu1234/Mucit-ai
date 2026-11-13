@@ -1202,29 +1202,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بثوبه قذر وقذع بمعنى، وقذّر ثوبه وقذّعه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بثوبه قذر وقذع بمعنى، وقذّر ثوبه وقذّعه."
+      },
+      {
+        "kaynak": "Mekâyîs: قَذَعَ",
+        "metin": "(قَذَعَ) الْقَافُ وَالذَّالُ وَالْعَيْنُ كَلِمَةٌ تَدُلُّ عَلَى الْفُحْشِ. مِنْ ذَلِكَ الْقَذَعُ: الْخَنَا وَالرَّفَثُ. وَقَدْ أَقْذَعَ فُلَانٌ: أَتَى بِالْقَذَعِ. وَفِي الْحَدِيثِ: &quot; «مَنْ قَالَ فِي الْإِسْلَامِ شِعْرًا مُقْذِعًا فَلِسَانُهُ هَدَرٌ» &quot;. وَقَذَعْتُ فُلَانًا وَأَقْذَعْتُهُ: رَمَيْتُهُ بِالْفُحْشِ. وَقَدْ أَقْذَعْتُ: أَتَيْتُ بِفُحْشٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إياك والقذع وهو الخنا والرفث، وكلام قذع، وأقذع في كلامه: أفحش. وفي الحديث: \" من قال في الإسلام شعراً مقذعاً فلسانه هدرٌ \". وقال بشر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إياك والقذع وهو الخنا والرفث، وكلام قذع، وأقذع في كلامه: أفحش. وفي الحديث: \" من قال في الإسلام شعراً مقذعاً فلسانه هدرٌ \". وقال بشر:",
         "prototipe_benzerlik": 0.299,
         "halka": "uzak"
       },
       {
-        "cumle": "ورماه بالمقذعات والمقذعات، وقذعني فلان بلسانه وأقذعني: شتمني وأسمعني المكروه. وتقول: قذعه بلسانه، فقذعه بسنانه؛ وقاذعه: شاتمه وفاحشه، وبينهما مقاذفة ومقاذعة. وقال طرفة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما شئت جاءك مقذعات ... ولم تعمل بهنّ إليك ساقي",
+        "prototipe_benzerlik": 0.295,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورماه بالمقذعات والمقذعات، وقذعني فلان بلسانه وأقذعني: شتمني وأسمعني المكروه. وتقول: قذعه بلسانه، فقذعه بسنانه؛ وقاذعه: شاتمه وفاحشه، وبينهما مقاذفة ومقاذعة. وقال طرفة:",
         "prototipe_benzerlik": 0.651,
         "halka": "yakın"
       },
       {
-        "cumle": "وهو مصدر قذعه قذعاً، وسمعت منه قذيعةً: شتيمة. قال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن يقذفوا بالقذع عرضك أسقهم ... بكأس حياض الموت قبل التهدّد",
+        "prototipe_benzerlik": 0.388,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو مصدر قذعه قذعاً، وسمعت منه قذيعةً: شتيمة. قال ابن مقبل:",
         "prototipe_benzerlik": 0.701,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولا يأمن الأعداء منّي قذيعةً ... ولا أشتم الحيّ الذي أنا شاعره",
+        "prototipe_benzerlik": 0.338,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورويَ: قذيفةً.",
+        "prototipe_benzerlik": 0.456,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.55,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.447,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["knock.v.06"],
   "muhassas_tasnif": {

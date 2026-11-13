@@ -1318,11 +1318,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "break_up.v.16",
-    "orta": "verb.change",
+    "ince": "event.n.01",
+    "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "mill.v.02",
-    "dayanak_tanim": "grind with a mill",
+    "dayanak_synset": "grind.n.04",
+    "dayanak_tanim": "the act of grinding to a powder or dust",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1336,34 +1336,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو طحان جيد الطحن نقي الطحن وهو الطحين، وهو كحماز الطاحونة، وهي الطحانة. وأكلت طواحنك ولا أكلت. وأطرق إطراق الطحن وهو ليث عفرين دويبة مثل الفستقة يقول له الصبيان: اطحن لنا جرابنا فيطحن بنفسه الأرض حتى يغيب فيها. قال جندل: إذا رآني حالياً أو في عين ... يعرفني أ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "طحنتهم المنون. وكتيبة طحون.",
-        "prototipe_benzerlik": 0.434,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو طحان جيد الطحن نقي الطحن وهو الطحين، وهو كحماز الطاحونة، وهي الطحانة. وأكلت طواحنك ولا أكلت. وأطرق إطراق الطحن وهو ليث عفرين دويبة مثل الفستقة يقول له الصبيان: اطحن لنا جرابنا فيطحن بنفسه الأرض حتى يغيب فيها. قال جندل:\nإذا رآني حالياً أو في عين ... يعرفني أطرق إطراق الطحن\nالعين: أهل الدار. وتقول: قعد على الإحن، وأطرق كالطحن."
       },
       {
-        "cumle": "وطحا الله الأرض طحواً. وطحا بك الهوى. وطحا بك همك: ذهب بك. قال:",
-        "prototipe_benzerlik": 0.633,
+        "kaynak": "Mekâyîs: طَحَنَ",
+        "metin": "(طَحَنَ) الطَّاءُ وَالْحَاءُ وَالنُّونُ أَصْلٌ صَحِيحٌ، وَهُوَ فَتُ الشَّيْءِ وَرَفْتُهُ بِمَا يَدُورُ عَلَيْهِ مِنْ فَوْقِهِ. يُقَالُ: طَحَنَتِ الرَّحَى طَحْنًا. وَالطِّحْنُ: الدَّقِيقُ. وَيَقُولُونَ: &quot; أَسْمَعُ جَعْجَعَةً وَلَا أَرَى طِحْنًا &quot;. وَالْجَعْجَعَةُ: صَوْتُ الرَّحَى. وَمِنَ الْبَابِ: كَتِيبَةٌ طَحُونٌ: تَطْحَنُ مَا لَقِيَتْ. وَيُقَالُ لِلْأَضْرَاسِ: الطَّوَاحِنُ.\nوَمِنَ الْبَابِ الطُّحَنُ: دُوَيْبَةٌ تُغَيِّبُ نَفْسَهَا فِي تُرَابٍ قَدْ سَوَّتْهُ وَأَدَارَتْهُ. وَطَحَنَتِ الْأَفْعَى، إِذَا تَلَوَّتْ مُسْتَدِيرَةً."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طحنتهم المنون. وكتيبة طحون.",
+        "prototipe_benzerlik": 0.331,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ط ح",
+        "prototipe_benzerlik": 0.597,
         "halka": "yakın"
       },
       {
-        "cumle": "طحا بك قلب في الحسان طروب",
-        "prototipe_benzerlik": 0.442,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطحا الله الأرض طحواً. وطحا بك الهوى. وطحا بك همك: ذهب بك. قال:",
+        "prototipe_benzerlik": 0.72,
+        "halka": "yakın"
       },
       {
-        "cumle": "وضربته ضربة طحا منها أي امتد. وضربته فطحوته: مددته على الأرض. وطحا بالكرة: رمى بها. وطحا الجارح بالأرنب: ذهب بها. وطحا بفلان شحمه إذا سمن. ومظلة طاحية: عظيمة منبسطة.",
-        "prototipe_benzerlik": 0.232,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طحا بك قلب في الحسان طروب",
+        "prototipe_benzerlik": 0.637,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وضربته ضربة طحا منها أي امتد. وضربته فطحوته: مددته على الأرض. وطحا بالكرة: رمى بها. وطحا الجارح بالأرنب: ذهب بها. وطحا بفلان شحمه إذا سمن. ومظلة طاحية: عظيمة منبسطة.",
+        "prototipe_benzerlik": 0.555,
+        "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.435,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.568,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01", "grate.v.04", "grind.v.05", "oppress.v.01"],
   "muhassas_tasnif": {

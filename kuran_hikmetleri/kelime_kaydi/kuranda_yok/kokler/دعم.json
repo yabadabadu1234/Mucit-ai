@@ -1685,8 +1685,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "support.n.04",
-    "dayanak_tanim": "a military operation (often involving new supplies of men and materiel) to strengthen a military force or aid in the performance of its mission",
+    "dayanak_synset": "support.n.01",
+    "dayanak_tanim": "the activity of providing for or maintaining by supplying with money or necessities",
     "synset_sayisi": 42
   },
   "ses_mana_tasnif": {
@@ -1700,74 +1700,148 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مال حائطه فدعمه بدعامة ودعائم ودعمة ودعم، وبيت مدعوم ومعمود، فالمدعوم الذي يميل فيريد أن يقع فتسند إليه ما يستمسك به، والمعمود الذي يتحامل ثقله كالسقف فتمسكه بالأساطين، وادّعم الحائط على الدعامة: اتكأ عليها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مال حائطه فدعمه بدعامة ودعائم ودعمة ودعم، وبيت مدعوم ومعمود، فالمدعوم الذي يميل فيريد أن يقع فتسند إليه ما يستمسك به، والمعمود الذي يتحامل ثقله كالسقف فتمسكه بالأساطين، وادّعم الحائط على الدعامة: اتكأ عليها."
+      },
+      {
+        "kaynak": "Mekâyîs: دَعَمَ",
+        "metin": "(دَعَمَ) الدَّالُ وَالْعَيْنُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ شَيْءٌ يَكُونُ قِيَامًا لِشَيْءٍ وَمِسَاكًا. تَقُولُ: دَعَمْتُ الشَّيْءَ أَدْعِمُهُ دَعْمًا، وَهُوَ مَدْعُومٌ. وَالدِّعَامَتَانِ: خَشَبَتَا الْبَكَرَةِ. وَدِعَامَةُ الْقَوْمِ: سَيِّدُهُمْ. وَيُقَالُ لَا دَعْمَ بِفُلَانٍ، أَيْ لَا قُوَّةَ لَهُ وَلَا سِمَنَ. قَالَ الرَّاجِزُ:\nلَا دَعْمَ بِي لَكِنْ بِلَيْلَى الدَّعْمُ ... جَارِيَةٌ فِي وَرِكَيْهَا شَحْمُ\nوَدُعْمِيٌّ: اسْمٌ مُشْتَقٌّ مِنْ هَذَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو دعامة قومه: لسيدهم وسندهم قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو دعامة قومه: لسيدهم وسندهم قال الأعشى:",
         "prototipe_benzerlik": 0.437,
         "halka": "orta"
       },
       {
-        "cumle": "كلا أبوينا كان فرعا دعامة",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كلا أبوينا كان فرعا دعامة",
         "prototipe_benzerlik": 0.166,
         "halka": "uzak"
       },
       {
-        "cumle": "وهم دعائم قومهم. وأقام فلان دعائم الإسلام. ودعمت فلاناً: أعنته وقويته. وهذا من دعائم",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهم دعائم قومهم. وأقام فلان دعائم الإسلام. ودعمت فلاناً: أعنته وقويته. وهذا من دعائم",
         "prototipe_benzerlik": 0.49,
         "halka": "orta"
       },
       {
-        "cumle": "الأمور: مما يتماسك به الأمور. وأنا أدعم عليك في أموري. وفلان ذو دعم، ولا دعم بي أي لا قوة ولا تماسك. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الأمور: مما يتماسك به الأمور. وأنا أدعم عليك في أموري. وفلان ذو دعم، ولا دعم بي أي لا قوة ولا تماسك. قال:",
         "prototipe_benzerlik": 0.523,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "ودعوت فلاناً وبفلان: ناديته وصحت به. وما بالدار داع ولا مجيب. والنادبة تدعو الميت: ندبه. تقول: وازيداه. ودعاه إلى الوليمة، ودعاه إلى القتال. ودعا الله له وعليه، ودعا الله بالعافية والمغفرة. والنبي داعي الله. وهم دعاة الحق، ودعاة الباطل والضلالة. وتداعوا للرحيل. وما بالدار دعويٌ أي أحد يدعو. وأجيبوا ",
-        "prototipe_benzerlik": 0.224,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا دعم بي لكن بليلي دعم ... جارية في وركيها شحم",
+        "prototipe_benzerlik": 0.33,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: دعاه الله بما يكره: أنزله به. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د ع",
+        "prototipe_benzerlik": 0.263,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ودعوت فلاناً وبفلان: ناديته وصحت به. وما بالدار داع ولا مجيب. والنادبة تدعو الميت: ندبه. تقول: وازيداه. ودعاه إلى الوليمة، ودعاه إلى القتال. ودعا الله له وعليه، ودعا الله بالعافية والمغفرة. والنبي داعي الله. وهم دعاة الحق، ودعاة الباطل والضلالة. وتداعوا للرحيل. وما بالدار دعويٌ أي أحد يدعو. وأجيبوا داعية الخيل وهي صريخهم. وتداعوا في الحرب: اعتزوا. وبينهم دعوى، وادّعى فلان دعوى باطلة. وشهدنا دعوة فلان. وهو دعيٌّ بين الدعوة.",
+        "prototipe_benzerlik": 0.292,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: دعاه الله بما يكره: أنزله به. قال:",
         "prototipe_benzerlik": 0.404,
         "halka": "orta"
       },
       {
-        "cumle": "ودعوته زيداً: سمّيته. وما تدعون هذا الشيء بينكم؟. ودع داعيَ اللبن وداعية اللبن: ما يترك في الضرع ليدعو ما بعده. والداعية تدعو المادّة. وأصابتهم دواعي الدهر: صروفه. وأنا أداعيك: أحاجيك. وبينهم أدعيةً يتداعون بها. ودعا بالكتاب: استحضره \" يدعون فيها بفاكهة \" وما دعاك إلى أن فعلت كذا. ودعا أنفه الطّيب إ",
-        "prototipe_benzerlik": 0.274,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دعاك الله من رجل بأفعى ... إذا نام العيون سرت عليكا",
+        "prototipe_benzerlik": 0.263,
         "halka": "uzak"
       },
       {
-        "cumle": "وتداعت عليهم القبائل من كل جانب: اجتمعت عليه وتألبت بالعداوة. وفلان يدعي بكرم فعاله: يخبر عن نفسه بذلك. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ودعوته زيداً: سمّيته. وما تدعون هذا الشيء بينكم؟. ودع داعيَ اللبن وداعية اللبن: ما يترك في الضرع ليدعو ما بعده. والداعية تدعو المادّة. وأصابتهم دواعي الدهر: صروفه. وأنا أداعيك: أحاجيك. وبينهم أدعيةً يتداعون بها. ودعا بالكتاب: استحضره \" يدعون فيها بفاكهة \" وما دعاك إلى أن فعلت كذا. ودعا أنفه الطّيب إذا وجد رائحته فطلبه. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.251,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أمسى بوهبين مجتازالأ لمرتعه ... من ذي الفوارس تدعو أنفه الربب",
+        "prototipe_benzerlik": 0.387,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتداعت عليهم القبائل من كل جانب: اجتمعت عليه وتألبت بالعداوة. وفلان يدعي بكرم فعاله: يخبر عن نفسه بذلك. قال:",
         "prototipe_benzerlik": 0.314,
         "halka": "uzak"
       },
       {
-        "cumle": "أي بهاديها وما أشرف منها إذا رؤيت عرفت بذلك فكأنها تخبر عن نفسها به. وما يدعو فلان باسم فلان أي ما يذكره باسمه من بغضه له ولكن يلقبه بلقب. قال أوس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلم يبق إلا كلّ خوصاء تدعى ... بذي شرفات كالفنيق المخاطر",
+        "prototipe_benzerlik": 0.326,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي بهاديها وما أشرف منها إذا رؤيت عرفت بذلك فكأنها تخبر عن نفسها به. وما يدعو فلان باسم فلان أي ما يذكره باسمه من بغضه له ولكن يلقبه بلقب. قال أوس:",
         "prototipe_benzerlik": 0.252,
         "halka": "uzak"
       },
       {
-        "cumle": "وإنه لذو مساعٍ ومداع وهي المناقب في الحرب خاصة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لعمرك ما تدعو ربيعة باسمنا ... جميعاً ولم تنبيء بإحساننا مضر",
+        "prototipe_benzerlik": 0.262,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإنه لذو مساعٍ ومداع وهي المناقب في الحرب خاصة.",
         "prototipe_benzerlik": 0.247,
         "halka": "uzak"
       },
       {
-        "cumle": "وتداعت عليهم الحيطان، وتداعينا عليهم الحيطان من جوانبها: هدمناها عليهم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال أبو وجزة:",
+        "prototipe_benzerlik": 0.347,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهم الحواريون قد قسمت لهم ... إن المداعي والمساعي تقسم",
+        "prototipe_benzerlik": 0.362,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتداعت عليهم الحيطان، وتداعينا عليهم الحيطان من جوانبها: هدمناها عليهم.",
         "prototipe_benzerlik": 0.328,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن مجاز المجاز: تداعت إبل بني فلان: هزلت أو هلكت. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.389,
         "halka": "orta"
       },
       {
-        "cumle": "ومن مجاز المجاز: تداعت إبل بني فلان: هزلت أو هلكت. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.389,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تباعد مني أن رأيت حمولتي ... تداعت وأن أحيا عليك قطيع",
+        "prototipe_benzerlik": 0.2,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.338,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.326,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

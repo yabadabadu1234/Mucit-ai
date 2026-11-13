@@ -1543,24 +1543,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "رخاوة الشيء الكثيف (الثخين) وطراءتُه (من حداثته وقلة نضجه) (1): كما هو واضح في الاستعمالات المذكورة. والنبات الذي ليس",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "رخاوة الشيء الكثيف (الثخين) وطراءتُه (من حداثته وقلة نضجه) (1): كما هو واضح في الاستعمالات المذكورة. والنبات الذي ليس"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "\" اغضض من صوتك \": اخفض منه. وغضّ طرفك، وطرفٌ غضيضٌ. وغضّ من لجام فرسك أي صوبه وطأمنه لتنقص من غربه. واغضض لي ساعةً أي احبس عليّ مطيّتك وقف عليّ. قال الجعديّ:\nخليليّ غضّا ساعةً وتهجرا\nأي احبسا عليّ ركابكما ساعة ثم ارتحلا مهتجرين\nوفلان غضيض: ذليل بيّن الغضاضة، وعليك في هذا غضاضة فلا تفعل، ولحقته من كذا غضاضة أي نقص وعيب. قال:\nوأحمق عريض عليه غضاضة ... تمرّس بي من حينه وأنا الرقم\nوإذا شربت الإبل بعد عطش فلم ترو حقّ الريّ قيل: صدرت وبها غضاضة."
+      },
+      {
+        "kaynak": "Mekâyîs: غَضَّ",
+        "metin": "(غَضَّ) الْغَيْنُ وَالضَّادُ أَصْلَانِ صَحِيحَانِ، يَدُلُّ أَحَدُهُمَا عَلَى كَفٍّ وَنَقْصٍ، وَالْآخِرُ عَلَى طَرَاوَةٍ.\nفَالْأَوَّلُ الْغَضُّ: غَضُّ الْبَصَرِ. وَكُلُّ شَيْءٍ كَفَفْتَهُ فَقَدْ غَضَضْتَهُ. وَمِنْهُ قَوْلُهُمْ: تَلْحَقُهُ فِي ذَلِكَ غَضَاضَةٌ، أَيْ أَمْرٌ يَغُضُّ لَهُ بَصَرَهُ. وَالْغَضْغَضَةُ: النُّقْصَانُ. وَفِي الْحَدِيثِ: «لَقَدْ مَرَّ مِنَ الدُّنْيَا بِبِطْنَتِهِ لَمْ يُغَضْغَضْ» . وَيَقُولُونَ: هُوَ بَحْرٌ لَا يُغَضْغَضُ. وَغَضْغَضْتُ السِّقَاءَ: نَقَصْتُهُ. وَكَذَلِكَ الْحَقُّ.\nوَالْأَصْلُ الْآخَرُ: الْغَضُّ: الطَّرِيُّ مِنْ كُلِّ شَيْءٍ. وَيُقَالُ لِلطَّلْعِ حِينَ يَطْلُعُ: غَضِيضٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "شباب غضٌّ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شباب غضٌّ. قال:",
         "prototipe_benzerlik": 0.362,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جارية شبّت شباباً غضاً ... لا تحسن التقبيل إلا غضاً",
+        "prototipe_benzerlik": 0.398,
         "halka": "orta"
       },
       {
-        "cumle": "وامرأة غضّة: بضّة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وامرأة غضّة: بضّة.",
         "prototipe_benzerlik": 0.301,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.331,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.354,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

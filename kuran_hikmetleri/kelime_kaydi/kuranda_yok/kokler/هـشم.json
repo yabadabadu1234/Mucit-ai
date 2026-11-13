@@ -37,19 +37,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شجّة هاشمة. وهشم الرأس وكلّ شيء أجوف. وهشم أنفه: كسر قصبته. وهشم الثريد. ورعت الماشية الهشيم: النبات اليابس المتكسّر. ورأيت هشيمةً: شجرة يابسة. قال: وإني لأستسقي لأصل هشيمة ... بأرض بني وقدان من سبل القطر كان يلتقي عندها وحبيبته، وتهشّمت أغصانها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "رجل هشيمٌ: ضعيف. وما هو إلا هشيمة كرم إذا لم يمنع شيئاً. وتهشّم عليّ: تعطّف، وتهشّمته: استعطفته وترضيّته. قال الحادرة بن أوس:",
-        "prototipe_benzerlik": 0.486,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شجّة هاشمة. وهشم الرأس وكلّ شيء أجوف. وهشم أنفه: كسر قصبته. وهشم الثريد. ورعت الماشية الهشيم: النبات اليابس المتكسّر. ورأيت هشيمةً: شجرة يابسة. قال:\nوإني لأستسقي لأصل هشيمة ... بأرض بني وقدان من سبل القطر\nكان يلتقي عندها وحبيبته، وتهشّمت أغصانها."
       }
     ],
-    "ortalama_benzerlik": 0.486,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل هشيمٌ: ضعيف. وما هو إلا هشيمة كرم إذا لم يمنع شيئاً. وتهشّم عليّ: تعطّف، وتهشّمته: استعطفته وترضيّته. قال الحادرة بن أوس:",
+        "prototipe_benzerlik": 0.486,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سمح الحلائق مكراماً ضريبته ... إذا تهشّمته للنائل اختالا",
+        "prototipe_benzerlik": 0.183,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.335,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

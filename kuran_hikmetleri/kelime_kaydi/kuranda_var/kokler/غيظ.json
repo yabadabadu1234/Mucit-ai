@@ -1160,8 +1160,8 @@
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
-    "dayanak_synset": "fury.n.01",
-    "dayanak_tanim": "a feeling of intense anger",
+    "dayanak_synset": "anger.n.01",
+    "dayanak_tanim": "a strong emotion; a feeling that is oriented toward some real or supposed grievance",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1180,19 +1180,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "حَمْى وحِدّة شديدة تمتد في جَوْفٍ أي تعمه: كحَمْى الهاجرة وحَرِّها. والجوُّ كالجوف. وقد جاء في الحديث \"إن شدة الحر من فيح جهنم \"- فالحرّ من النار، كما فسر الغيظ في قوله تعالى: {تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ} [الملك: 8] بشدة الحر. ومن هذا: \"الغيظ: أشد الغضب ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "حَمْى وحِدّة شديدة تمتد في جَوْفٍ أي تعمه: كحَمْى الهاجرة وحَرِّها. والجوُّ كالجوف. وقد جاء في الحديث \"إن شدة الحر من فيح جهنم \"- فالحرّ من النار، كما فسر الغيظ في قوله تعالى: {تَكَادُ تَمَيَّزُ مِنَ الْغَيْظِ} [الملك: 8] بشدة الحر. ومن هذا: \"الغيظ: أشد الغضب أو سَوْرته \" [ق]. إذ هو حرارة شديدة في النفس أو القلب، ولذا شُبّه في الحديث الشريف بتجرع الشخص مائعًا إلى جوفه: \"ما من جُرعة يتجرعها العبد خير له وأعظم أجرًا من جُرعة غيظ في اللَّه \" [قر 4/ 208]، {وَالْكَاظِمِينَ الْغَيْظَ} [آل عمران: 134]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان يغيظني ويغايظني، واغتاظ على صاحبه وتغيّظ، وهو مغيظٌ محنق. قال:\nمتى ترد الشفاء لكلّ غيظ ... تكن مما يغيظك في ازدياد"
+      },
+      {
+        "kaynak": "Mekâyîs: غَيَظَ",
+        "metin": "(غَيَظَ) الْغَيْنُ وَالْيَاءُ وَالظَّاءُ أُصَيْلٌ فِيهِ كَلِمَةٌ وَاحِدَةٌ، يَدُلُّ عَلَى كَرْبٍ يَلْحَقُ الْإِنْسَانَ مِنْ غَيْرِهِ. يُقَالُ: غَاظَنِي يَغِيظُنِي. وَقَدْ غِظْتَنِي يَا هَذَا. وَرَجُلٌ غَائِظٌ وَغَيَّاظٌ. قَالَ:\nسُمِّيتَ غَيَّاظًا وَلَسْتَ بِغَائِظٍ ... عَدُوًّا وَلَكِنَّ الصَّدِيقَ تَغِيظُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "البرمة حليمة مغتاظة. وتغيّظت الهاجرة. وفلان يغايظ صاحبه في العمل أي يباريه ويغالبه.",
-        "prototipe_benzerlik": 0.331,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "البرمة حليمة مغتاظة. وتغيّظت الهاجرة. وفلان يغايظ صاحبه في العمل أي يباريه ويغالبه.",
+        "prototipe_benzerlik": 0.387,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.331,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.387,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "anger.v.01",

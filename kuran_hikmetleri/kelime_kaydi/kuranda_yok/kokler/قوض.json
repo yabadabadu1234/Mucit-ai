@@ -1368,19 +1368,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قوّض الخيمة، وقوّض البناء: نقضه من غير هدم، وتقوّض البيت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قوّض الخيمة، وقوّض البناء: نقضه من غير هدم، وتقوّض البيت."
+      },
+      {
+        "kaynak": "Mekâyîs: قَوَضَ",
+        "metin": "(قَوَضَ) الْقَافُ وَالْوَاوُ وَالضَّادُ كَلِمَةٌ تَدُلُّ عَلَى نَقْضِ بِنَاءٍ. يُقَالُ: قَوَّضْتُ الْبِنَاءَ: نَقَضْتُهُ مِنْ غَيْرِ هَدْمٍ. وَتَقَوَّضَتِ الصُّفُوفُ: انْتَقَضَتْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تقوّض المجلس، وتقوّضت الحلق والصفوف وقوّضوها. وبنى فلان ثم قوّض إذا أحسن ثم أساء. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقوّض المجلس، وتقوّضت الحلق والصفوف وقوّضوها. وبنى فلان ثم قوّض إذا أحسن ثم أساء. قال:",
         "prototipe_benzerlik": 0.357,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فتبّاً لمن لم يبن خيراً لنفسه ... وتباً لأقوام بنوا ثم قوّضوا",
+        "prototipe_benzerlik": 0.377,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.357,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.367,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["crumble.v.01", "decay.v.02"],
   "muhassas_tasnif": {

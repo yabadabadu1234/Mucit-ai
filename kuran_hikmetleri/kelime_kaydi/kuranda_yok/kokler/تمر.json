@@ -951,29 +951,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أعط أخاك تمره، فإن أبى فجمره. وعليك بالتمران والسمنان. وأتمرت النخلة. وتمرني فلان: أطعمني التمر. وعن أبي الجراح: ما نعجز عن ضيف في بدونا إن ذبحنا له وإلا تمرناه ولبناه. وقال: إذا نحن لم نقر المضاف ذبيحة ... تمرناه تمراً أو لبناه راغياً أي لبناً له رغوة. وفلان ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أعط أخاك تمره، فإن أبى فجمره. وعليك بالتمران والسمنان. وأتمرت النخلة. وتمرني فلان: أطعمني التمر. وعن أبي الجراح: ما نعجز عن ضيف في بدونا إن ذبحنا له وإلا تمرناه\nولبناه. وقال:\nإذا نحن لم نقر المضاف ذبيحة ... تمرناه تمراً أو لبناه راغياً\nأي لبناً له رغوة. وفلان تامر، مثمر، تمار، تمري: أي ذو تمر، مكثر منه، بياع تمر، محب له."
+      },
+      {
+        "kaynak": "Mekâyîs: تَمْرٌ",
+        "metin": "(تَمْرٌ) التَّاءُ وَالْمِيمُ وَالرَّاءُ كَلِمَةٌ وَاحِدَةٌ، ثُمَّ يُشْتَقُّ مِنْهَا، وَهِيَ التَّمْرُ الْمَأْكُولُ. وَيُقَالُ لِلَّذِي عِنْدَهُ التَّمْرُ تَامِرٌ، وَلِلَّذِي يُطْعِمُهُ أَيْضًا تَامِرٌ، يُقَالُ تَمَرْتُهُمُ أُتْمِرُهُمْ، إِذَا أَطْعَمْتَهُمْ. قَالَ:\nوَغَرَرْتَنِي وَزَعَمْتَ أَ ... نَّكَ لَابِنٌ بِالصَّيْفِ تَامِرُ\nوَالْمُتَمِّرُ لِلَّذِي يُيَبِّسُهُ. وَيُقَالُ تُمِّرَ اللَّحْمُ إِذَا جُفِّفَ. وَهُوَ مُشْتَقٌّ مِنَ التَّمْرِ. قَالَ:\nلَهَا أَشَارِيرُ مِنْ لَحْمٍ تُتَمِّرُهُ\nوَالْمُتْمِرُ الْكَثِيرُ التَّمْرِ ; يُقَالُ أَتْمَرَ كَمَا يُقَالُ أَلْبَنَ إِذَا كَثُرَ لَبَنُهُ، وَأَلْبَأَ إِذَا كَثُرَ لِبَؤُهُ. وَالتَّمَّارُ: الَّذِي يَبِيعُ التَّمْرَ. وَالتَّمْرِيُّ الَّذِي يُحِبُّهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تمر اللحم: قدده ولحم متمر وقد تتمر. وقال الأبيرد بن المعذر:",
-        "prototipe_benzerlik": 0.694,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تمر اللحم: قدده ولحم متمر وقد تتمر. وقال الأبيرد بن المعذر:",
+        "prototipe_benzerlik": 0.686,
         "halka": "yakın"
       },
       {
-        "cumle": "ونفسه تمرة بكذا أي طيبة. ودعني إن نفسي ليست بتمرة. ووجد عنده تمرة الغراب أي ما أرضاه. وبارك الله فيه وملح وأتمر. قال:",
-        "prototipe_benzerlik": 0.321,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لعبد العصا ما كان أهلاً لذلكم ... تقدد لحمي عندكم وتتمرا",
+        "prototipe_benzerlik": 0.798,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونفسه تمرة بكذا أي طيبة. ودعني إن نفسي ليست بتمرة. ووجد عنده تمرة الغراب أي ما أرضاه. وبارك الله فيه وملح وأتمر. قال:",
+        "prototipe_benzerlik": 0.298,
         "halka": "uzak"
       },
       {
-        "cumle": "أي لم يبارك فيها.",
-        "prototipe_benzerlik": 0.152,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلعمر نعمتي التي لم تجزها ... ولعمر طعنتك التي لم تتمر",
+        "prototipe_benzerlik": 0.702,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي لم يبارك فيها.",
+        "prototipe_benzerlik": 0.148,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.389,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.527,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "natural_object.n.01"],
   "muhassas_tasnif": {

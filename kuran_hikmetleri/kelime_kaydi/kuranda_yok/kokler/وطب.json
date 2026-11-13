@@ -697,19 +697,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عنده وطابٌ من لبن وأوطاب، ومنه: الوطباء: العظيمة الثديين.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "رجل وطبٌ: جافٍ. قال:",
-        "prototipe_benzerlik": 0.319,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عنده وطابٌ من لبن وأوطاب، ومنه: الوطباء: العظيمة الثديين."
+      },
+      {
+        "kaynak": "Mekâyîs: وَطَبَ",
+        "metin": "(وَطَبَ) الْوَاوُ وَالطَّاءُ وَالْبَاءُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ وَطْبُ اللَّبَنِ: سِقَاؤُهُ. وَيُشَبَّهُ بِهِ الْمَرْأَةُ الْعَظِيمَةُ الثَّدْيِ، فَيُقَالُ وَطْبَاءُ. وَالْوَطْبُ: الرَّجُلُ الْجَافِي، وَهَذَا أَيْضًا مِنَ التَّشْبِيهِ."
       }
     ],
-    "ortalama_benzerlik": 0.319,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل وطبٌ: جافٍ. قال:",
+        "prototipe_benzerlik": 0.319,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أفي أن سرى كلبٌ فبيّت علبةً ... وجبجبةً للوطب سلمى تطلّق",
+        "prototipe_benzerlik": 0.4,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.36,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

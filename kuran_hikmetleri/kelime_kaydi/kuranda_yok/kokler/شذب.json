@@ -1101,11 +1101,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cut.v.01",
-    "orta": "verb.contact",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "cut.v.01",
-    "dayanak_tanim": "separate with or as if with an instrument",
+    "ince": "ignore.v.01",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "ignore.v.01",
+    "dayanak_tanim": "refuse to acknowledge",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1119,24 +1119,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شذب الشجرة. ونخل مشذب، وطار عن النخل شذبه وهو ما قطع عنه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "فرس مشذب: طويل استعير من الجذع المشذب. قال يصف فرساً:",
-        "prototipe_benzerlik": 0.514,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شذب الشجرة. ونخل مشذب، وطار عن النخل شذبه وهو ما قطع عنه."
       },
       {
-        "cumle": "يعني دم الصيد. وفي الأرض شذب من كلأ: بقية منه. وبقي عنده شذب من مال. وما بقي له إلا شذب من العسكر. وتشذب القوم: تفرقوا.",
+        "kaynak": "Mekâyîs: شَذَبَ",
+        "metin": "(شَذَبَ) الشِّينُ وَالذَّالُ وَالْبَاءُ أَصْلٌ يَدُلُّ عَلَى تَجْرِيدِ شَيْءٍ مِنْ قِشْرِهِ، ثُمَّ يُحْمَلُ عَلَيْهِ. فَالشَّذْبُ: قَشْرُ اللَّحْمِ. وَكُلُّ شَيْءٍ نَحَّيْتَهُ عَنْ شَيْءٍ فَقَدْ شَذَبْتَهُ. وَمِنَ الْبَابِ: التَّشْذِيبُ: التَّقْطِيعُ. فَأَمَّا الشَّوْذَبُ فَمِنْ هَذَا الْبَابِ أَيْضًا، وَهُوَ الطَّوِيلُ مِنْ كُلِّ شَيْءٍ، كَأَنَّهُ فِي طُولِهِ مُشَذَّبٌ، أَيْ مُجَرَّدٌ ; وَإِذَا جُرِّدَ الشَّيْءُ مِنْ قِشْرِهِ كَانَ أَظْهَرَ لِطُولِهِ. وَفَرَسٌ مُشَذَّبٌ: طَوِيلٌ، بِمَنْزِلَةِ الْجِذْعِ الْمُشَذَّبِ.\n[بَابُ الشِّينِ وَالرَّاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس مشذب: طويل استعير من الجذع المشذب. قال يصف فرساً:",
+        "prototipe_benzerlik": 0.514,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بمشذب كالجذع صا ... ك على حواجبه خضابه",
+        "prototipe_benzerlik": 0.517,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يعني دم الصيد. وفي الأرض شذب من كلأ: بقية منه. وبقي عنده شذب من مال. وما بقي له إلا شذب من العسكر. وتشذب القوم: تفرقوا.",
         "prototipe_benzerlik": 0.497,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.506,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.51,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["abridge.v.01", "cut.v.01", "ignore.v.01", "lean.v.01", "polish.v.02", "reduce.v.01"],
   "muhassas_tasnif": {

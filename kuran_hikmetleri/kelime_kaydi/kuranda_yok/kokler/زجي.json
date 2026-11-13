@@ -710,34 +710,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "الراعي يزجي الماشية ويزجيها: يدفعها ويسوقها سوقاً رفيقاً. والبقرة تزجي ولدها وتزجيه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الراعي يزجي الماشية ويزجيها: يدفعها ويسوقها سوقاً رفيقاً. والبقرة تزجي ولدها وتزجيه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "الريح تزجي السحاب. وكيف تزجي الأيام؟ وهو يزجي أيامه بشيء يسير. وزجي فلان حاجتي: سهل تحصيلها. وهو يتزجى ببلاغ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الريح تزجي السحاب. وكيف تزجي الأيام؟ وهو يزجي أيامه بشيء يسير. وزجي فلان حاجتي: سهل تحصيلها. وهو يتزجى ببلاغ. قال:",
         "prototipe_benzerlik": 0.335,
-        "halka": "orta"
+        "halka": "uzak"
       },
       {
-        "cumle": "تزج من دنياك بالبلاغ",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تزج من دنياك بالبلاغ",
         "prototipe_benzerlik": 0.317,
         "halka": "uzak"
       },
       {
-        "cumle": "وبضاعة مزجاة: خسيسة يدفعها كل معروض عليه فلا تنفق. وزجا الخراج زجاء: تيسرت جبايته وانسياقه إلى أهله، وخراج زاج.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبضاعة مزجاة: خسيسة يدفعها كل معروض عليه فلا تنفق. وزجا الخراج زجاء: تيسرت جبايته وانسياقه إلى أهله، وخراج زاج.",
         "prototipe_benzerlik": 0.143,
         "halka": "uzak"
       },
       {
-        "cumle": "تزحزح له عن مجلسه. ومالي عنك متزحزح \" فمن زحزح عن النار \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ز ح ز ح",
+        "prototipe_benzerlik": 0.33,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تزحزح له عن مجلسه. ومالي عنك متزحزح \" فمن زحزح عن النار \".",
         "prototipe_benzerlik": 0.178,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.243,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.261,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

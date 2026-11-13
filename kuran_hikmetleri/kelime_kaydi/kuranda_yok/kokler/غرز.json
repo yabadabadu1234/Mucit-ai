@@ -1512,11 +1512,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "drive.n.09",
-    "dayanak_tanim": "a physiological state corresponding to a strong need or desire",
+    "ince": "jab.v.01",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "jab.v.01",
+    "dayanak_tanim": "poke or thrust abruptly",
     "synset_sayisi": 17
   },
   "ses_mana_tasnif": {
@@ -1530,24 +1530,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "يقال للرجل: غرّز ناقتك فيتركها عن الحلب حتى تغرز، وقد غرزت غرازاً وهي غارز وهو من الغرز. وفلان غارز رأسّه في سنة. وما طلع السماك إلا غارزاً ذنبه في برد وهو الأعزل يطلع لخمس خلت من تشرين الأول.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "يقال للرجل: غرّز ناقتك فيتركها عن الحلب حتى تغرز، وقد غرزت غرازاً وهي غارز وهو من الغرز. وفلان غارز رأسّه في سنة. وما طلع السماك إلا غارزاً ذنبه في برد وهو الأعزل يطلع لخمس خلت من تشرين الأول."
+      },
+      {
+        "kaynak": "Mekâyîs: غَرَزَ",
+        "metin": "(غَرَزَ) الْغَيْنُ وَالرَّاءُ وَالزَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى رَزِّ الشَّيْءِ فِي الشَّيْءِ. مِنْ ذَلِكَ غَرَزْتُ الشَّيْءَ أَغْرِزُهُ غَرْزًا. وَغَرَزْتُ رِجْلَهُ فِي الْغَرْزِ. وَغَرَزَتِ الْجَرَادَةُ بِذَنَبِهَا فِي الْأَرْضِ، مِثْلُ رَزَّتْ. وَالطَّبِيعَةُ غَرِيزَةٌ، كَأَنَّهَا شَيْءٌ غُرِزَ فِي الْإِنْسَانِ. فَأَمَّا قَوْلُهُمْ: اغْتَرَزْتُ الشَّيْءَ، وَاغْتَرَزْتُ السَّيْرَ اغْتِرَازًا، إِذَا دَنَا سَيْرُكَ فَمَعْنَاهُ تَقْرِيبُ السَّيْرِ، أَيْ كَأَنِّي الْآنَ وَضَعْتُ رِجْلِي فِي غَرْزِ الرَّحْلِ. وَأَمَّا قَوْلُهُمْ: غَرَزَتِ النَّاقَةُ، إِذَا قَلَّ لَبَنُهَا فَمَعْنَاهُ مِنْ هَذَا أَيْضًا، كَأَنَّ لَبَنَهَا غُرِزَ فِي جِسْمِهَا فَلَمْ يَخْرُجْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "اطلب الخير في مغارسه ومغارزه، وابغ الكرم في معادنه ومراكزه. واغترز الرجل، وغرز رجله في الركاب إذا ركب. قال بشر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اطلب الخير في مغارسه ومغارزه، وابغ الكرم في معادنه ومراكزه. واغترز الرجل، وغرز رجله في الركاب إذا ركب. قال بشر:",
         "prototipe_benzerlik": 0.88,
         "halka": "yakın"
       },
       {
-        "cumle": "ثم اغترزت على عنس عذافرةسيٌّ عليها خبار الأرض والجدد واغترزت السير إذا دنا مسيرك. واشدد يديك بغرزة أي استمسك به ولا تخلّه. وعيون غوارز: جوامد. قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثم اغترزت على عنس عذافرةسيٌّ عليها خبار الأرض والجدد واغترزت السير إذا دنا مسيرك. واشدد يديك بغرزة أي استمسك به ولا تخلّه. وعيون غوارز: جوامد. قال الطرماح:",
         "prototipe_benzerlik": 0.618,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يراقب أبصار الغيارين بأعين ... غوارز ما تجري لهنّ دموع",
+        "prototipe_benzerlik": 0.37,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.749,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.623,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "advertise.v.02",

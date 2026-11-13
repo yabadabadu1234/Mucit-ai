@@ -697,19 +697,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ثوب ذو بذم إذا كان كثير الغزل صفيقاً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب ذو بذم إذا كان كثير الغزل صفيقاً."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان ماله بذم إذا لم يكن له رأي وحزم. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان ماله بذم إذا لم يكن له رأي وحزم. قال:",
         "prototipe_benzerlik": 0.172,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كريم عروق النبعتين مظفر ... ويغضب مما منه ذو البذم يغضب",
+        "prototipe_benzerlik": 0.17,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.172,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.171,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

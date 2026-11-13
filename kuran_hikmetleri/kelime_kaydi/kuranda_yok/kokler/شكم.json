@@ -1526,44 +1526,100 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عض الفرس على الشكيمة والشكيم، وعضت الخيل على الشكائم والشكيم. قال: يلح على كرائمنا بقتل ... كإلحاح الجواد على الشكيم أراد بكرائمهم نفوسهم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عض الفرس على الشكيمة والشكيم، وعضت الخيل على الشكائم والشكيم. قال:\nيلح على كرائمنا بقتل ... كإلحاح الجواد على الشكيم\nأراد بكرائمهم نفوسهم."
+      },
+      {
+        "kaynak": "Mekâyîs: شَكَمَ",
+        "metin": "(شَكَمَ) الشِّينُ وَالْكَافُ وَالْمِيمُ أَصْلَانِ صَحِيحَانِ: أَحَدُهُمَا يَدُلُّ عَلَى عَطَاءٍ، وَالْآخَرُ يَدُلُّ عَلَى شِدَّةٍ فِي شَيْءٍ وَقُوَّةٍ.\nفَالْأَوَّلُ: الشَّكْمُ وَهُوَ الْعَطَاءُ وَالثَّوَابُ. يُقَالُ شَكَمَنِي شَكْمًا، وَالِاسْمُ الشُّكْمُ. وَجَاءَ فِي الْحَدِيثِ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ [ «احْتَجَمَ ثُمَّ قَالَ: اشْكُمُوهُ» ] ، أَيْ أَعْطَوهُ أَجْرَهُ. وَقَالَ الشَّاعِرُ:\nأَمْ هَلْ كَبِيرٌ بَكَى لَمْ يَقْضِ عَبْرَتَهُ ... إِثْرَ الْأَحِبَّةِ يَوْمَ الْبَيْنِ مَشْكُومُ\nوَقَالَ آخَرُ:\nأَبْلِغْ قَتَادَةَ غَيْرَ سَائِلِهِ ... مِنْهُ الْعَطَاءَ وَعَاجِلَ الشُّكْمِ\nوَالْأَصْلُ الْآخَرُ: الشَّكِيمَةُ: أَيْ شِدَّةُ النَّفْسِ. وَالشَّكِيمَةُ شَكِيمَةُ اللِّجَامِ، وَهِيَ الْحَدِيدَةُ الْمُعْتَرِضَةُ الَّتِي فِيهَا الْفَأْسُ، وَالْجَمْعُ شَكَائِمُ. وَحَكَى نَاسٌ: شَكَمَهُ، أَيْ عَضَّهُ. وَالشَّكِيمُ: الْعَضُّ فِي قَوْلِ جَرِيرٍ:\nأَصَابَ ابْنَ حَمْرَاءِ الْعِجَانِ شَكِيمُهَا\nوَشَكِيمُ الْقِدْرِ: عُرَاهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إن فلاناً لشديد الشكيمة إذا كان ذا حدّ وعارضة. وصقر ذو شكيمة. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن فلاناً لشديد الشكيمة إذا كان ذا حدّ وعارضة. وصقر ذو شكيمة. قال الراعي:",
         "prototipe_benzerlik": 0.606,
         "halka": "yakın"
       },
       {
-        "cumle": "أي على ما كان عليه سيار من حده وشدته وعزيمته. وقال جرير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضوارب بالأذقان من ذي شكيمة ... إذا ما هوى كالنيزك المتوقد",
+        "prototipe_benzerlik": 0.516,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.561,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنا ابن سيّار على شكيمه ... إن الشراك قد من أديمه",
+        "prototipe_benzerlik": 0.324,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي على ما كان عليه سيار من حده وشدته وعزيمته. وقال جرير:",
         "prototipe_benzerlik": 0.627,
         "halka": "yakın"
       },
       {
-        "cumle": "حدّها وشدتها. وارفع القدر بشكيمها وهي عراها. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأبقوا عليكم واتقوا ناب حية ... أصاب ابن حمراء العجان شكيمها",
+        "prototipe_benzerlik": 0.284,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حدّها وشدتها. وارفع القدر بشكيمها وهي عراها. قال الراعي:",
         "prototipe_benzerlik": 0.401,
         "halka": "orta"
       },
       {
-        "cumle": "وهذا من إيماضهم في الاستعارة إلى أصلها حيث جعل المزاولين للقدر ملجمين ووصف الشكيم بالصليل كما يصل شكيم الدابة عند إلجامها. وفي الحديث \" اشكموه \" أي أعطوه حتى تلجموه،",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكانت جديراً أن يقسم لحمها ... إذا صلّ بين الملجمين شكيمها",
+        "prototipe_benzerlik": 0.523,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذا من إيماضهم في الاستعارة إلى أصلها حيث جعل المزاولين للقدر ملجمين ووصف الشكيم بالصليل كما يصل شكيم الدابة عند إلجامها. وفي الحديث \" اشكموه \" أي أعطوه حتى تلجموه،",
         "prototipe_benzerlik": 0.49,
         "halka": "orta"
       },
       {
-        "cumle": "كما قال: اقطعوا لسانه، والشكم: العطاء على سبيل المكافأة. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كما قال: اقطعوا لسانه، والشكم: العطاء على سبيل المكافأة. قال:",
         "prototipe_benzerlik": 0.647,
         "halka": "yakın"
       },
       {
-        "cumle": "وما خير معروف إذا كان للشكم",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما خير معروف إذا كان للشكم",
         "prototipe_benzerlik": 0.305,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال كثير:",
+        "prototipe_benzerlik": 0.53,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أويت لوامق لم تشكميه ... بوافدة تلذع بالزناد",
+        "prototipe_benzerlik": 0.395,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.513,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.478,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

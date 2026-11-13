@@ -1254,11 +1254,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cognition.n.01",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "plant.n.04",
-    "dayanak_tanim": "something planted secretly for discovery by another",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "ambush.n.01",
+    "dayanak_tanim": "the act of concealing yourself and lying in wait to attack by surprise",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1277,19 +1277,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نفاذ النفَس بقوة من الجوف عن غلظ أي امتلاء (1) [يلحظ أن خروج النفَس بقوة يوحي بأن الامتلاء إنما هو بالهواء]: كنفخ ذاك النائم مع شِبَعه (أو سقوط أقصى الحنك عائقًا في طريق الهواء). ومنه \"فَخْفَخَ الرجل: فَخَر بالباطل \" (قال قولًا كبيرًا خاليًا من القيمة لا شيء و",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نفاذ النفَس بقوة من الجوف عن غلظ أي امتلاء (1) [يلحظ أن خروج النفَس بقوة يوحي بأن الامتلاء إنما هو بالهواء]: كنفخ ذاك النائم مع شِبَعه (أو سقوط أقصى الحنك عائقًا في طريق الهواء). ومنه \"فَخْفَخَ الرجل: فَخَر بالباطل \" (قال قولًا كبيرًا خاليًا من القيمة لا شيء وراءه إلا الهواء)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نام حتى سمعت فخيخه أي غطيطه، وهو ينام الفخّة أي نومة الغداة، ويقيل: نومة التعب."
+      },
+      {
+        "kaynak": "Mekâyîs: فَخَّ",
+        "metin": "(فَخَّ) الْفَاءُ وَالْخَاءُ كَلِمَاتٌ لَا تَنْقَاسُ. مِنْ [ذَلِكَ] الْفَخِيخُ كَالْغَطِيطِ فِي النَّوْمِ. وَالْفَخَّةُ: اسْتِرْخَاءٌ فِي الرِجْلَيْنِ. وَيُقَالُ الْفَخَّةُ: الْمَرْأَةُ الضَّخْمَةُ. وَالْفَخُّ لِلصَّيْدِ مَعْرُوفٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "وثب فلان من فخّ إبليس إذا تاب.",
-        "prototipe_benzerlik": 0.389,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وثب فلان من فخّ إبليس إذا تاب.",
+        "prototipe_benzerlik": 0.363,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.389,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.363,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "content.n.05"],
   "muhassas_tasnif": {

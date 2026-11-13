@@ -1190,19 +1190,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سحج جلده عود أو غيره: قشره. وحمار مسحج: معضض، وعليه المساحج والمكادم: آثار العض.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سحج جلده عود أو غيره: قشره. وحمار مسحج: معضض، وعليه المساحج والمكادم: آثار العض."
+      },
+      {
+        "kaynak": "Mekâyîs: سَحَجَ",
+        "metin": "(سَحَجَ) السِّينُ وَالْحَاءُ وَالْجِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قَشْرِ الشَّيْءِ. يُقَالُ انْسَحَجَ الْقِشْرُ عَنِ الشَّيْءِ. وَحِمَارٌ مُسَحَّجٌ، أَيْ مُكَدَّمٌ، كَأَنَّهُ يُكَدَّمُ حَتَّى يُسْحَجَ جِلْدُهُ. وَيُقَالُ بَعِيرٌ سَحَّاجٌ، إِذَا كَانَ يَسْحَجُ الْأَرْضَ بِخُفِّهِ، كَأَنَّهُ يُرِيدُ قَشْرِ وَجْهِهَا بِخُفِّهِ، وَإِذَا فَعَلَ ذَلِكَ لَمْ يَلْبَثْ أَنْ يَحْفَى. وَنَاقَةٌ مِسْحَاجٌ، إِذَا كَانَتْ تَفْعَلُ ذَلِكَ.\n[بَابُ السِّينِ وَالْخَاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سحجت الرياح الأرض، ورياح سواهج سواحج.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سحجت الرياح الأرض، ورياح سواهج سواحج.",
         "prototipe_benzerlik": 0.232,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.232,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["shave.v.03", "substance.n.01"],
   "muhassas_tasnif": {

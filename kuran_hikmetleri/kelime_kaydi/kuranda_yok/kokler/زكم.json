@@ -749,19 +749,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "به زكام وزكمة وقد زكم فهو مزكوم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "به زكام وزكمة وقد زكم فهو مزكوم."
+      },
+      {
+        "kaynak": "Mekâyîs: زَكَمَ",
+        "metin": "(زَكَمَ) الزَّاءُ وَالْكَافُ وَالْمِيمُ لَيْسَ فِيهِ إِلَّا الزُّكْمَةُ وَالزُّكَامُ، وَيَسْتَعِيرُونَ ذَلِكَ فَيَقُولُونَ: فُلَانٌ زُكْمَةُ أَبَوَيْهِ، وَهُوَ آخِرُ أَوْلَادِهِمَا.\n(زَكَنَ) : الزَّاءُ وَالْكَافُ وَالنُّونُ أَصْلٌ يُخْتَلَفُ فِي مَعْنَاهُ. يَقُولُونَ هُوَ الظَّنُّ، وَيَقُولُونَ هُوَ الْيَقِينُ. وَأَهْلُ التَّحْقِيقِ مِنَ اللُّغَوِيِّينَ يَقُولُونَ: زَكِنْتُ مِنْكَ كَذَا، أَيْ عَلِمْتُهُ. قَالَ:\nوَلَنْ يُرَاجِعَ قَلْبِي حُبَّهُمْ أَبَدًا ... زَكِنْتُ مِنْهُمْ عَلَى مِثْلِ الَّذِي زَكِنُوا\nقَالُوا: وَلَا يُقَالُ أَزْكَنْتُ، عَلَى أَنَّ الْخَلِيلَ قَدْ ذَكَرَ الْإِزْكَانَ. وَيُقَالُ: إِنَّ الزَّكَنَ الظَّنُّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "زكم بالنطفة: حذف بها كمخطة المزكوم. ولفلان زكمة سوء أي ولد غير صالح. وهو ألأم زكمة في الأرض أي أحقر نطفة. ولعن الله أماً زكمت به. ويقال للعجزة: هو زكمة ولد أبويه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زكم بالنطفة: حذف بها كمخطة المزكوم. ولفلان زكمة سوء أي ولد غير صالح. وهو ألأم زكمة في الأرض أي أحقر نطفة. ولعن الله أماً زكمت به. ويقال للعجزة: هو زكمة ولد أبويه.",
         "prototipe_benzerlik": 0.391,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.391,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -967,8 +967,8 @@
     "ince": "property.n.02",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "malleability.n.01",
-    "dayanak_tanim": "the property of being physically malleable; the property of something that can be worked or hammered or shaped without breaking",
+    "dayanak_synset": "flexibility.n.01",
+    "dayanak_tanim": "the property of being flexible; easily bent or shaped",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -987,19 +987,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مرونة الجسم من لُطْف أو رِقّة تمتدّ في باطنه: كالقناة الليِّنة، وكالجسم- الممتلئ بالرطوبة .. ومنه \"رَكِبَ البعيرَ ثم بعثه فتلدَّنَ عليه: تمكَّثَ وتلكَأ (من الرخاوة وعدم الحِدّة). ومن ذلك \"لَدُنْ \"بمعنى \"عِند \"-لكنها عندية صدور وامتداد من رقة الباطن- لا عندية م",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "لدنت أخلاقه وهو لدن الخليقة: لين العريكة. وتلدّنت في حاجتي: تمكّنت وتلدّنت بالمكان: أقمت. وأرض سباريت: ما بها متلدّن. وتلدّنت عليّ راحلتي إذا لم تمش \" وهب لي من لدنك ولياً \".",
-        "prototipe_benzerlik": 0.419,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مرونة الجسم من لُطْف أو رِقّة تمتدّ في باطنه: كالقناة الليِّنة، وكالجسم- الممتلئ بالرطوبة .. ومنه \"رَكِبَ البعيرَ ثم بعثه فتلدَّنَ عليه: تمكَّثَ وتلكَأ (من الرخاوة وعدم الحِدّة). ومن ذلك \"لَدُنْ \"بمعنى \"عِند \"-لكنها عندية صدور وامتداد من رقة الباطن- لا عندية مكان وتحيز فيه مثل لدى {وَإِنَّكَ لَتُلَقَّى الْقُرْآنَ مِنْ لَدُنْ حَكِيمٍ عَلِيمٍ (6)} [النمل: 6]، أي صادرا منه سبحانه وتعالى. وليس في القرآن من التركيب إلا لفظ (لَدُنْ) وهو في كل مواضعه -عدا موضع واحد- مضاف إلى اسم المولى عزَّ وجلَّ أو الضمير العائد إليه سبحانه، أي من خزائن رحمته سبحانه، والموضع المستثنى مضاف لضمير سيدنا موسى عليه وعلى نبينا أفضل الصلاة واللام. {قَدْ بَلَغْتَ مِنْ لَدُنِّي عُذْرًا} [الكهف: 76]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لدن العود والرمح لدانة ولدونة، ورمح لدن، ورماح لدنٌ ولدانٌ، وقناة لدنةٌ الكعوب. وسرنا لدن غدوة: من طلوع الشمس إلى غروبها. وقال:\nلدن غدوة حتى ألاذ بخفّها ... بقية منقوص من الظلّ قالص"
+      },
+      {
+        "kaynak": "Mekâyîs: لَدَنَ",
+        "metin": "(لَدَنَ) اللَّامُ وَالدَّالُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ لِلَّيِّنِ مِنَ الْقُضْبَانِ لَدْنٌ. وَلَدُنْ بِمَعْنَى لَدَى، أَيْ عِنْدَ.\n[بَابُ اللَّامِ وَالذَّالِ وَمَا يَثْلُثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.419,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لدنت أخلاقه وهو لدن الخليقة: لين العريكة. وتلدّنت في حاجتي: تمكّنت وتلدّنت بالمكان: أقمت. وأرض سباريت: ما بها متلدّن. وتلدّنت عليّ راحلتي إذا لم تمش \" وهب لي من لدنك ولياً \".",
+        "prototipe_benzerlik": 0.328,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.328,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["physical_property.n.01", "plastic.n.01"],
   "muhassas_tasnif": {

@@ -1149,11 +1149,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "sharpshoot.v.01",
-    "orta": "verb.competition",
+    "ince": "person.n.01",
+    "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "sharpshoot.v.01",
-    "dayanak_tanim": "aim and shoot with great precision",
+    "dayanak_synset": "marksman.n.01",
+    "dayanak_tanim": "someone skilled in shooting",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1167,19 +1167,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو قانص من القنّاص، وقنص الوحش واقتنصه وتقنّصه، وجاء يقنص وقنيص كثير، و\" جاء القنيص بالقنيص \" أي الصائد بالمصيد، ونحوه: القدير في القادر، وتقول: يؤكل الطير وما لقانصه، إلاّ فضلات قوانصه؛ جمع: قانصةٍ وهي هنة كأنها حجيرٌ في بطن الطائر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو قانص من القنّاص، وقنص الوحش واقتنصه وتقنّصه، وجاء يقنص وقنيص كثير، و\" جاء القنيص بالقنيص \" أي الصائد بالمصيد، ونحوه: القدير في القادر، وتقول: يؤكل الطير وما لقانصه، إلاّ فضلات قوانصه؛ جمع: قانصةٍ وهي هنة كأنها حجيرٌ في بطن الطائر."
+      },
+      {
+        "kaynak": "Mekâyîs: قَنَصَ",
+        "metin": "(قَنَصَ) الْقَافُ وَالنُّونُ وَالصَّادُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى الصَّيْدِ قَطْ. فَالْقَانِصُ: الصَّائِدُ. وَالْقَنَصُ: الصَّيْدُ. وَالْقَنْصُ: فِعْلُ الْقَانِصِ. قَالَ ابْنُ دُرَيْدٍ: الْقَنِيصُ: الصَّائِدُ. وَبَنُو قَنَصِ بْنِ مَعَدٍّ: قَوْمٌ دَرَجُوا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو يقتنص الفرسان ويصطادهم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو يقتنص الفرسان ويصطادهم.",
         "prototipe_benzerlik": 0.52,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.52,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "expert.n.01", "sharpshoot.v.01"],
   "muhassas_tasnif": {

@@ -802,7 +802,7 @@
   },
   "mana_tasnif": {
     "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
-    "ince": "substance.n.07",
+    "ince": "agent.n.03",
     "orta": "noun.food",
     "ust": "canlı ve beden",
     "dayanak_synset": "wine.n.01",
@@ -825,24 +825,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (2",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]، فهذه هي خمر الجنة."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سقاه الرحيق وهو الخالص من الخمر. وتقول: يا شارب الرحيق، أبشر بعذاب الحريق."
+      },
+      {
+        "kaynak": "Mekâyîs: رَحَقَ",
+        "metin": "(رَحَقَ) الرَّاءُ وَالْحَاءُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ. وَهِيَ الرَّحِيقُ: اسْمٌ مِنْ أَسْمَاءِ الْخَمْرِ، وَيُقَالُ هِيَ أَفْضَلُهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "مسك رحيق: لا غش فيه. قال يصف شعراً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مسك رحيق: لا غش فيه. قال يصف شعراً:",
         "prototipe_benzerlik": 0.548,
         "halka": "yakın"
       },
       {
-        "cumle": "وما نقص. وحسب رحيق: لا شوب فيه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يسقى الدهان والرحيق والكتم ... حتى استوت نبتته وما ظلم",
+        "prototipe_benzerlik": 0.768,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما نقص. وحسب رحيق: لا شوب فيه.",
         "prototipe_benzerlik": 0.422,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.485,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.579,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

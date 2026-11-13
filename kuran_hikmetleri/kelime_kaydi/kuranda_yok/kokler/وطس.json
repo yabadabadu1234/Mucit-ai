@@ -697,19 +697,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وطست الركاب اليرمع: كسرته، ووطست الأرض: هزمت فيها. وحفر وطيساً: حفرة يختبز فيها ويشتوي.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وطست الركاب اليرمع: كسرته، ووطست الأرض: هزمت فيها. وحفر وطيساً: حفرة يختبز فيها ويشتوي."
+      },
+      {
+        "kaynak": "Mekâyîs: وَطَسَ",
+        "metin": "(وَطَسَ) الْوَاوُ وَالطَّاءُ وَالسِّينُ: كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى وَطْءِ شَيْءٍ حَتَّى يَنْهَزِمَ. وَيُقَالُ: وَطَسْتُ الْأَرْضَ بِرِجْلِي أَطِسُهَا وَطْسًا، أَيْ هَزَمْتُ فِيهَا هَزْمَةً. وَالْوَطِيسُ: التَّنُّورُ، مِنْهُ لِأَنَّهُ كَالْهَزْمِ فِي الْأَرْضِ. وَيُعَبَّرُ [بِهِ] عَنِ الْأَمْرِ الشَّدِيدِ.\n( [وَطَشَ) الْوَاوُ وَالطَّاءُ وَالشِّينُ] : كَلِمَتَانِ إِنْ صَحَّتَا. يَقُولُونَ: ضَرَبُوهُ فَمَا وَطَشَ إِلَيْهِمْ، أَيْ لَمْ يَدْفَعْ عَنْ نَفْسِهِ.\nوَالْأُخْرَى: وَطِّشْ لِي شَيْئًا أَذْكُرُهُ، مَعْنَاهُ افْتَحْ.\n[بَابُ الْوَاوِ وَالظَّاءِ وَمَا يَثْلِثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حمي الوطيس إذا اشتدت الحرب. وتواطست الأمواج: تلاطمت.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حمي الوطيس إذا اشتدت الحرب. وتواطست الأمواج: تلاطمت.",
         "prototipe_benzerlik": 0.342,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.342,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

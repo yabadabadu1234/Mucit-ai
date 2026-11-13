@@ -1174,39 +1174,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تحته وسادة من حرّ الوسائد، وأما الوساد فكل ما يتوسد به وإن كان من تراب، ووسّدته كذا فتوسده.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تحته وسادة من حرّ الوسائد، وأما الوساد فكل ما يتوسد به وإن كان من تراب، ووسّدته كذا فتوسده."
+      },
+      {
+        "kaynak": "Mekâyîs: وَسَدَ",
+        "metin": "(وَسَدَ) الْوَاوُ وَالسِّينُ وَالدَّالُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْوِسَادَةُ مَعْرُوفَةٌ، وَجَمْعُهَا وَسَائِدُ. وَتَوَسَّدْتُ يَدِيَ. وَالْوِسَادُ: مَا يَتَوَسَّدُهُ الرَّجُلُ عِنْدَ مَنَامِهِ، وَالْجَمْعُ وُسُدٌ. وَاللَّهُ أَعْلَمُ.\n[بَابُ الْوَاوِ وَالشِّينِ وَمَا يَثْلِثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو عريض الوساد: للأبله. وهو يتوسد الهمّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو عريض الوساد: للأبله. وهو يتوسد الهمّ.",
         "prototipe_benzerlik": 0.578,
         "halka": "yakın"
       },
       {
-        "cumle": "وسوس الرجل بلفظ ما سمى فاعله فهو موسوس بالكسر. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وس",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وس",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسوس الرجل بلفظ ما سمى فاعله فهو موسوس بالكسر. قال:",
         "prototipe_benzerlik": 0.456,
         "halka": "orta"
       },
       {
-        "cumle": "وسوس يدعو مخلصاً رب الفلق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسوس يدعو مخلصاً رب الفلق",
         "prototipe_benzerlik": 0.455,
         "halka": "orta"
       },
       {
-        "cumle": "وهو فعل غير متعدّ نحو ولول ووعوع. ووسوس إليه الشيطان.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو فعل غير متعدّ نحو ولول ووعوع. ووسوس إليه الشيطان.",
         "prototipe_benzerlik": 0.391,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: وسوس الحليّ والقصب، وسمعت وسواسه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: وسوس الحليّ والقصب، وسمعت وسواسه.",
         "prototipe_benzerlik": 0.505,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.477,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.465,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "cushion.v.01"],
   "muhassas_tasnif": {

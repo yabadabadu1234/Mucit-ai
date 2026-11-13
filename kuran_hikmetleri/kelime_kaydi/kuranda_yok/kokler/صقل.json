@@ -2061,11 +2061,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "polish.v.03",
+    "ince": "polish.v.02",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "polish.v.03",
-    "dayanak_tanim": "bring to a highly developed, finished, or refined state",
+    "dayanak_synset": "polish.v.02",
+    "dayanak_tanim": "improve or perfect by pruning or polishing",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -2079,39 +2079,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو صقل من الصياقل والصياقلة، وصقل السيف والمرآة والثوب والورق بالمصقلة صقلاً وصقالاً. وشيء صقيل. وفرس لاحق الصقلين، وصقل: طويل الصقلين. ويقولون: قلما طالت صقلة الفرس إلا قصر جنباه، وقد صقل صقلاً. وفي الحديث \" لم تعبه ثجلة، ولم تزر به صقله \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو صقل من الصياقل والصياقلة، وصقل السيف والمرآة والثوب والورق بالمصقلة صقلاً وصقالاً. وشيء صقيل. وفرس لاحق الصقلين، وصقل: طويل الصقلين. ويقولون: قلما طالت صقلة الفرس إلا قصر جنباه، وقد صقل صقلاً. وفي الحديث \" لم تعبه ثجلة، ولم تزر به صقله \"."
+      },
+      {
+        "kaynak": "Mekâyîs: صَقَلَ",
+        "metin": "(صَقَلَ) الصَّادُ وَالْقَافُ وَاللَّامُ أُصَيْلٌ يَدُلُّ عَلَى تَمْلِيسِ شَيْءٍ، ثُمَّ يُقَاسُ عَلَى ذَلِكَ. يُقَالُ: صَقَلْتُ السَّيْفَ أَصْقُلُهُ، وَصَائِغُ ذَلِكَ: الصَّيْقَلُ. وَالصَّقِيلُ: السَّيْفُ. وَيُقَالُ: الْفَرَسُ فِي صِقَالِهِ، أَيْ صِوَانِهِ، وَذَلِكَ إِذَا أُحْسِنَ الْقِيَامُ عَلَيْهِ، كَأَنَّهُ يُصْقَلُ صَقْلًا وَيُصْنَعُ.\nوَمِنَ الْبَابِ الصُّقْلُ مِنَ الْإِنْسَانِ وَالْفَرَسِ، وَهُوَ الْجَنْبُ، وَالْجَنْبُ أَشَدُّ الْأَعْضَاءِ مَلَاسَةً، فَلِذَلِكَ سُمِّيَ صَقْلًا، كَأَنَّهُ قَدْ صُقِلَ. وَيُقَالُ مِنْهُ: فَرَسٌ صَقِلٌ، أَيْ طَوِيلُ الصُّقْلَيْنِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "الفرس في صقاله: في صوانه وصنعته. قال أبو النجم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الفرس في صقاله: في صوانه وصنعته. قال أبو النجم:",
         "prototipe_benzerlik": 0.405,
         "halka": "orta"
       },
       {
-        "cumle": "حتى إذا أثنى جعلنا نصقله",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى إذا أثنى جعلنا نصقله",
         "prototipe_benzerlik": 0.131,
         "halka": "uzak"
       },
       {
-        "cumle": "وتقول العرب: هل لك في مصقول الكساء؟: في لبن مدو ذي دوابة وهي جليدة تعلو الحليب. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول العرب: هل لك في مصقول الكساء؟: في لبن مدو ذي دوابة وهي جليدة تعلو الحليب. قال:",
         "prototipe_benzerlik": 0.523,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "عن كل مصقول الكساء قد صفا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فبات له دون الصبا وهي قرة ... لحاف ومصقول الكساء رقيق",
+        "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.232,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فهو إذا ما اهتاف أو تهيفاً ... ينفي الدوايات إذا ترشفا",
+        "prototipe_benzerlik": 0.114,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عن كل مصقول الكساء قد صفا",
         "prototipe_benzerlik": 0.156,
         "halka": "uzak"
       },
       {
-        "cumle": "وصقله بالعصا: ضربه وأدّبه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصقله بالعصا: ضربه وأدّبه.",
         "prototipe_benzerlik": 0.093,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.262,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.227,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "burn.v.05",

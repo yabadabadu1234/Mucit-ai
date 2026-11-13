@@ -729,49 +729,94 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فيه زعر: قلة شعر وريش وتفرّق حتى يبدو الجلد. قال ذو الرمة: كأنها خاضب زعر قوادمه ... أجنى له باللوى آءٌ وتنوم وهو أزعر وهي زعراء، وقد زعر وازعار.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فيه زعر: قلة شعر وريش وتفرّق حتى يبدو الجلد. قال ذو الرمة:\nكأنها خاضب زعر قوادمه ... أجنى له باللوى آءٌ وتنوم\nوهو أزعر وهي زعراء، وقد زعر وازعار."
+      },
+      {
+        "kaynak": "Mekâyîs: زَعِرَ",
+        "metin": "(زَعِرَ) الزَّاءُ وَالْعَيْنُ وَالرَّاءُ أُصَيْلٌ يَدُلُّ عَلَى سُوءِ خُلُقٍ وَقِلَّةِ خَيْرٍ. فَالزَّعَارَةُ: شَرَاسَةُ الْخُلُقِ. وَهُوَ عَلَى وَزْنِ فَعَالَةٍ. وَمِنَ الْبَابِ الْأَزْعَرُ: الْمَكَانُ الْقَلِيلُ النَّبَاتِ. وَيُقَالُ إِنَّ الزَّعَارَةَ لَا يُبْنَى مِنْهَا تَصْرِيفُ فِعْلٍ. وَمِنَ الْبَابِ الْأَزْعَرُ: الْقَلِيلُ الشَّعْرِ. وَالْمَرْأَةُ زَعْرَاءُ ; وَقَدْ زَعِرَ يَزْعَرُ. وَاللَّهُ أَعْلَمُ.\n[بَابُ الزَّاءِ وَالْغَيْنِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مكان أزعر: قليل النبات كقولهم: أكمة صلعاء. وزعر الرجل زعراً إذا ساء خلقه وقل خيره، وخلق زعر معر، وفيه زعر وزعارة بالتخفيف والتشديد. وتقول: فلان تدعيه الدعارة، وتشهد له الزعارة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مكان أزعر: قليل النبات كقولهم: أكمة صلعاء. وزعر الرجل زعراً إذا ساء خلقه وقل خيره، وخلق زعر معر، وفيه زعر وزعارة بالتخفيف والتشديد. وتقول: فلان تدعيه الدعارة، وتشهد له الزعارة.",
         "prototipe_benzerlik": 0.255,
         "halka": "uzak"
       },
       {
-        "cumle": "زعزعت الريح الشجر وهو التحريك بشدة، وأزعزع الشيء وتزعزع قالت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ز ع ز ع",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "زعزعت الريح الشجر وهو التحريك بشدة، وأزعزع الشيء وتزعزع قالت:",
         "prototipe_benzerlik": 0.213,
         "halka": "uzak"
       },
       {
-        "cumle": "وريح زعزع وزعزاع ورياح زعازع.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فوالله لولا الله لا شيء غيره ... لزعزع من هذا السرير وجوانبه",
+        "prototipe_benzerlik": 0.184,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وريح زعزع وزعزاع ورياح زعازع.",
         "prototipe_benzerlik": 0.106,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: جريٌ زعزع: شديد. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: جريٌ زعزع: شديد. قال:",
         "prototipe_benzerlik": 0.32,
         "halka": "uzak"
       },
       {
-        "cumle": "ونزلت به زعازع الدهر: شدائده. قال سلمان ابن محيي البولان:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبه إلى أخرى الصحاب تلفت ... وبه إلى المكروب حريّ زعزع",
+        "prototipe_benzerlik": 0.917,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونزلت به زعازع الدهر: شدائده. قال سلمان ابن محيي البولان:",
         "prototipe_benzerlik": 0.93,
         "halka": "yakın"
       },
       {
-        "cumle": "وزعزعت الإبل في السير فتزعزعت: حثثتها. قال الأخطل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنا لتحل الفضاء بيوتنا ... إذا زعزعت مولى الذليل الزعازع",
+        "prototipe_benzerlik": 0.113,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وزعزعت الإبل في السير فتزعزعت: حثثتها. قال الأخطل:",
         "prototipe_benzerlik": 0.513,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما خفت منها البين حتى تزعزعت ... هماليجها وآروز عني دليلها",
+        "prototipe_benzerlik": 0.951,
         "halka": "yakın"
       },
       {
-        "cumle": "ر ع فب زعفر الثوب: صبغه الزعفران. وثوب مزعفر. وتقول: لا يستوي الأعفر بالصريمه. والمزعفر ذو الصريمة. والأسد ذو الجدّ والعزيمة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ر ع فب زعفر الثوب: صبغه الزعفران. وثوب مزعفر. وتقول: لا يستوي الأعفر بالصريمه. والمزعفر ذو الصريمة. والأسد ذو الجدّ والعزيمة.",
         "prototipe_benzerlik": 0.787,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.446,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.477,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

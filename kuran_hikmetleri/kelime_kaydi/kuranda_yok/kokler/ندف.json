@@ -738,24 +738,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قطن مندوف ونديف ومندّف.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قطن مندوف ونديف ومندّف."
+      },
+      {
+        "kaynak": "Mekâyîs: نَدَفَ",
+        "metin": "(نَدَفَ) النُّونُ وَالدَّالُ وَالْفَاءُ كَلِمَةٌ صَحِيحَةٌ، وَهِيَ شِبْهُ النَّفْشِ لِلشَّيْءِ بِآلَةٍ. وَنَدَفْتُ الْقُطْنَ بِالْمِنْدَفِ. وَيُحْمَلُ عَلَيْهَا فَيُقَالُ: نَدَفَتِ الدَّابَّةُ فِي سَيْرِهَا نَدْفًا، وَهُوَ سُرْعَةُ رَجْعِ يَدَيْهَا. وَالنَّدْفُ فِي الْحَلْبِ: أَنْ تَفْطُرَ الضَّرَّةَ بِإِصْبَعِكَ: وَنَدَفَتِ السَّمَاءُ بِمَطَرٍ مِثْلُ نَطَفَتْ. وَالنُّدْفَةُ: الْقَلِيلُ مِنَ اللَّبَنِ، كَأَنَّهُ قُطْنَةٌ قَدْ نُدِفَتْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "الدابة تندف في سيرها: تسرع رجع يديها. وندفت السماء علينا بمطر أو ثلج. وندف العوّاد بمزهره، وفلان ندّاف: عوّاد. قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الدابة تندف في سيرها: تسرع رجع يديها. وندفت السماء علينا بمطر أو ثلج. وندف العوّاد بمزهره، وفلان ندّاف: عوّاد. قال الأعشى:",
         "prototipe_benzerlik": 0.442,
         "halka": "orta"
       },
       {
-        "cumle": "ورجل نداف: كثير الأكل. ورأيته يندف الطعام ندفاً. وسقاني ندفة من لبن: شيئاً منه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جالس حوله النّدامى فما ين ... فك يؤتى بمزهر مندوف",
+        "prototipe_benzerlik": 0.503,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل نداف: كثير الأكل. ورأيته يندف الطعام ندفاً. وسقاني ندفة من لبن: شيئاً منه.",
         "prototipe_benzerlik": 0.327,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.384,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.424,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["victimize.v.01"],
   "muhassas_tasnif": {

@@ -2184,8 +2184,8 @@
     "ince": "inform.v.01",
     "orta": "verb.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "clarify.v.01",
-    "dayanak_tanim": "make clear and (more) comprehensible",
+    "dayanak_synset": "set_forth.v.01",
+    "dayanak_tanim": "state",
     "synset_sayisi": 17
   },
   "ses_mana_tasnif": {
@@ -2204,24 +2204,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "شق ما هو كتلة متجمعة ثخينة أو تشقيقه حتى تصير كل قطعة منه رقيقة تكاد تَشٍفّ، نحو البَضْعة من اللحم الموصوفة. ويلزم ذلك الامتداد مع العِرَض كما في قولهم \"شَرَح جاريته: سلقها على قفاها ثم غَشِيها \". ومن ذلك \"شرح فلان أمره أي أوضحه. شرح الشيء: فتحه وبينه. شَرَحْت",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "شق ما هو كتلة متجمعة ثخينة أو تشقيقه حتى تصير كل قطعة منه رقيقة تكاد تَشٍفّ، نحو البَضْعة من اللحم الموصوفة. ويلزم ذلك الامتداد مع العِرَض كما في قولهم \"شَرَح جاريته: سلقها على قفاها ثم غَشِيها \". ومن ذلك \"شرح فلان أمره أي أوضحه. شرح الشيء: فتحه وبينه. شَرَحْت الغامض إذا فسرته. والشرح: الفتح، والشرح البيان، والشرح الفَهم \" (المقصود الإفهام). فالأمر قبل الشرح يكون مجتمعًا متداخلًا ملتبسًا بعضه ببعض كالكلتلة المتجمعة التي لا يُدْرَى باطها، وبالشرح يَتبين ويُفهَم. ومن ذلك \"شرح اللَّه صَدره لقبول الخير فانشرح: وسعه لقبول الحق فاتسع \". (2/1126) والذي جاء في القرآن من التركيب هو شرح الصدر {فَمَنْ يُرِدِ اللَّهُ أَنْ يَهْدِيَهُ يَشْرَحْ صَدْرَهُ لِلْإِسْلَامِ} [الأنعام: 125] وكذلك ما في [طه: 25، الزمر: 22، الشرح: 21] {وَلَكِنْ مَنْ شَرَحَ بِالْكُفْرِ صَدْرًا فَعَلَيْهِمْ غَضَبٌ مِنَ اللَّهِ} [النحل: 106]. فهذا من القبول بِرضًا وارتياح."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شرح الله تعالى صدره للإسلام، وانشرح صدره. وشرح اللحم وشرحه، وأخذ شريحة من اللحم وشرائح."
+      },
+      {
+        "kaynak": "Mekâyîs: شَرَحَ",
+        "metin": "(شَرَحَ) الشِّينُ وَالرَّاءُ وَالْحَاءُ أُصَيْلٌ يَدُلُّ عَلَى الْفَتْحِ وَالْبَيَانِ. مِنْ ذَلِكَ شَرَحْتُ الْكَلَامَ وَغَيْرَهُ شَرْحًا، إِذَا بَيَّنْتَهُ. وَاشْتِقَاقُهُ مِنْ تَشْرِيحِ اللَّحْمِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "شرح أمره: أظهره. وشرح المسئلة. بيّن جوابها. وشرح المرأة: أتاها مستلقية، ومنه: غطت مشرحها أي فرجها. قال دريد بن الصمة:",
-        "prototipe_benzerlik": 0.629,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شرح أمره: أظهره. وشرح المسئلة. بيّن جوابها. وشرح المرأة: أتاها مستلقية، ومنه: غطت مشرحها أي فرجها. قال دريد بن الصمة:",
+        "prototipe_benzerlik": 0.688,
         "halka": "yakın"
       },
       {
-        "cumle": "يعني أنك تتبرأ من دمه وأنت متدنس به. وفلان يشرح إلى الدنيا. ومالي أراك تشرح إلى كل دنيّة وهو إظهار الرغبة إليها.",
-        "prototipe_benzerlik": 0.568,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فإنك واعتذارك من سويد ... كحائضة ومشرحها يسيل",
+        "prototipe_benzerlik": 0.75,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يعني أنك تتبرأ من دمه وأنت متدنس به. وفلان يشرح إلى الدنيا. ومالي أراك تشرح إلى كل دنيّة وهو إظهار الرغبة إليها.",
+        "prototipe_benzerlik": 0.648,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.598,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.695,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "account_for.v.01",

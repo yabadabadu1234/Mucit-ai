@@ -1172,8 +1172,8 @@
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "pass.n.08",
-    "dayanak_tanim": "a bad or difficult situation or state of affairs",
+    "dayanak_synset": "crisis.n.01",
+    "dayanak_tanim": "an unstable situation of extreme danger or difficulty",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1187,24 +1187,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أزم الفرس على فأس اللجام: عض عليه وأمسكه، وفرس أزوم، وأخذ مالي فأزم عليه، ومنه قيل للحمية الأزم. وتقول العرب: أصل كل داء البردة، وأصل كل دواء الأزم. ويقال للمحتمي الآزم. ورجل أزوم: قليل الرزء من الطعام.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أزم الفرس على فأس اللجام: عض عليه وأمسكه، وفرس أزوم، وأخذ مالي فأزم عليه، ومنه قيل للحمية الأزم. وتقول العرب: أصل كل داء البردة، وأصل كل دواء الأزم. ويقال للمحتمي الآزم. ورجل أزوم: قليل الرزء من الطعام."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أزم الدهر علينا، وأزمتنا أزمة، وسنة آزمة وأزوم، وسنون أوازم، وأصابتهم أزمة، وتتابعت عليهم الأزمات. وأزم بالضيعة وعليها إذا حافظ. وقال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أزم الدهر علينا، وأزمتنا أزمة، وسنة آزمة وأزوم، وسنون أوازم، وأصابتهم أزمة، وتتابعت عليهم الأزمات. وأزم بالضيعة وعليها إذا حافظ. وقال:",
         "prototipe_benzerlik": 0.789,
         "halka": "yakın"
       },
       {
-        "cumle": "أي إذا عضت كريهة عضوض. والتقينا في مأزم الطريق أي في مضيقه. قال ساعدة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جذام سيوف الله في كل موطن ... إذا أزمت يوم اللقاء أزام",
+        "prototipe_benzerlik": 0.336,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن قصرت يوماً أكف قبيلة ... على المجد نالته أكف جذام",
+        "prototipe_benzerlik": 0.232,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي إذا عضت كريهة عضوض. والتقينا في مأزم الطريق أي في مضيقه. قال ساعدة:",
         "prototipe_benzerlik": 0.233,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومقامهن إذا حبسن بمأزم ... ضيق ألف وصدهن الأخشب",
+        "prototipe_benzerlik": 0.047,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.511,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.327,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "condition.n.01", "happening.n.01", "worsen.v.02"],
   "muhassas_tasnif": {

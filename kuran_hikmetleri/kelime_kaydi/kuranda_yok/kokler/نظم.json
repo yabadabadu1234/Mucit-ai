@@ -2728,8 +2728,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "regulation.n.06",
-    "dayanak_tanim": "the act of controlling or directing according to rule",
+    "dayanak_synset": "constitution.n.02",
+    "dayanak_tanim": "the act of forming or establishing something",
     "synset_sayisi": 65
   },
   "ses_mana_tasnif": {
@@ -2743,24 +2743,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نظمت الدر ونظّمته، ودر منظوم ومنظّم، وقد انتظم وتنظّم وتناظم، وله نظم منه ونظام ونظمٌ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نظمت الدر ونظّمته، ودر منظوم ومنظّم، وقد انتظم وتنظّم وتناظم، وله نظم منه ونظام ونظمٌ."
+      },
+      {
+        "kaynak": "Mekâyîs: نَظَمَ",
+        "metin": "(نَظَمَ) النُّونُ وَالظَّاءُ وَالْمِيمُ: أَصْلٌ يَدُلُّ عَلَى تَأْلِيفِ شَيْءٍ وَتَأْلِيفِهِ، وَنَظَمْتُ الْخَرَزَ نَظْمًا، وَنَظَمْتُ الشِّعْرَ وَغَيْرَهُ. وَالنِّظَامُ: الْخَيْطُ يَجْمَعُ الْخَرَزَ. وَالنِّظَامَانِ مِنَ الضَّبِّ: كُشْيَتَانِ مِنْ جَنْبَيْهِ، مَنْظُومَانِ مِنْ أَصْلِ الذَّنَبِ إِلَى الْأُذُنِ.\nوَأَنْظَمَتِ الدَّجَاجَةُ: صَارَ فِي جَوْفِهَا بَيْضٌ. وَيُقَالُ لِكَوَاكِبِ الْجَوْزَاءِ: نَظْمٌ. وَجَاءَنَا نَظْمٌ مِنْ جَرَادٍ: أَيْ كَثِيرٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نظم الكلام. وهذا نظم حسن، وانتظم كلامه وأمره. وليس لأمره نظام إذا لم تستقم طريقته، وتقول: هذه أمور عظام، لو كان لها نظام، ورمى صيداً افنتظمه بسهم. وطعنه فانتظم ساقيه أو جنبيه. قال الأفوه:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نظم الكلام. وهذا نظم حسن، وانتظم كلامه وأمره. وليس لأمره نظام إذا لم تستقم طريقته، وتقول: هذه أمور عظام، لو كان لها نظام، ورمى صيداً افنتظمه بسهم. وطعنه فانتظم ساقيه أو جنبيه. قال الأفوه:",
         "prototipe_benzerlik": 0.476,
         "halka": "orta"
       },
       {
-        "cumle": "وهذان البيتان ينتظمهما معنًى واحدٌ. وجاءنا نظم من جراد ونظام منه: صف. ونظمت الضبّة والسمكة ونظّمت فهي ناظم ومنظّم: امتلأت من البيض: ونظمت النخلة: قبلت اللقاح، خردلت إذا لم تقبل. وفي بطنها إنظامان وهما الكشيتان وأناظيم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تخلى الجماجم والأكفّ سيوفنا ... ورماحنا بالطعن تنتظم الكلى",
+        "prototipe_benzerlik": 0.245,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهذان البيتان ينتظمهما معنًى واحدٌ. وجاءنا نظم من جراد ونظام منه: صف. ونظمت الضبّة والسمكة ونظّمت فهي ناظم ومنظّم: امتلأت من البيض: ونظمت النخلة: قبلت اللقاح، خردلت إذا لم تقبل. وفي بطنها إنظامان وهما الكشيتان وأناظيم:",
         "prototipe_benzerlik": 0.597,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.536,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.439,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "ability.n.02",

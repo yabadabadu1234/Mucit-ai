@@ -1696,34 +1696,62 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "القاع السفلي الذي ينتهي به عمق شيء مجوف - كقعر البئر والنهر والإناء. ونُظِر إلى عُمْق الجَوْبة المذكورة. ومنه \"قَعَرَ البئر (فتح): عَمَّقَها (جعل لها قعرًا: تزويد). ومنه كذلك قَعَر البئر: انْتَهى إلى قَعْرها، والإناءَ: شَرِبَ جميعَ ما فيه حتى انتهى إلى قَعْره.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "القاع السفلي الذي ينتهي به عمق شيء مجوف - كقعر البئر والنهر والإناء. ونُظِر إلى عُمْق الجَوْبة المذكورة. ومنه \"قَعَرَ البئر (فتح): عَمَّقَها (جعل لها قعرًا: تزويد). ومنه كذلك قَعَر البئر: انْتَهى إلى قَعْرها، والإناءَ: شَرِبَ جميعَ ما فيه حتى انتهى إلى قَعْره. وقَعَر النخلة فانقعرت: قَلَعَها من أصلها حتى تسقط \" {كَأَنَّهُمْ أَعْجَازُ نَخْلٍ مُنْقَعِرٍ} (كل ذلك إصابة)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بئر قعيرة وقد قعرت، وقعرتها: نزلت فيها حتى انتهيت إلى قعرها، وأقعرها حافرها وقعّرها: عمّقها."
+      },
+      {
+        "kaynak": "Mekâyîs: قَعَرَ",
+        "metin": "(قَعَرَ) الْقَافُ وَالْعَيْنُ وَالرَّاءُ أَصْلٌ صَحِيحٌ وَاحِدٌ، يَدُلُّ عَلَى هَزْمٍ فِي الشَّيْءِ ذَاهِبٍ سُفْلًا. يُقَالُ: هَذَا قَعْرُ الْبِئْرِ، وَقَعْرُ الْإِنَاءِ، وَهَذِهِ قَصْعَةٌ قَعِيرَةٌ. وَقَعَّرَ الرَّجُلُ فِي كَلَامِهِ: شَدَّقَ. وَامْرَأَةٌ قَعِرَةٌ: نَعْتُ سَوْءٍ فِي الْجِمَاعِ. وَانْقَعَرَتِ الشَّجَرَةُ مِنْ أَرُومَتِهَا: انْقَلَعَتْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "قصعة قعيرة. وقعرت الشجرة: قلعتها من قعرها أي من أصلها فانقعرت \" أعجاز نخل منقعر \" وقعرت الإناء: شربت ما فيه",
-        "prototipe_benzerlik": 0.593,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قصعة قعيرة. وقعرت الشجرة: قلعتها من قعرها أي من أصلها فانقعرت \" أعجاز نخل منقعر \" وقعرت الإناء: شربت ما فيه",
+        "prototipe_benzerlik": 0.566,
         "halka": "yakın"
       },
       {
-        "cumle": "حتى انتهيت إلى قعره. قال عبيد الله بن أيوب العنبريّ:",
-        "prototipe_benzerlik": 0.503,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "لا ريش عليه من نضاه إذا سلبه. وعن بعض العرب: لا أدخل عليه قعيرة بيتٍ وقعرة بيت. وفلان بعيد القعر. وليس لكلامه قعر. ورجل مقعر: يتكلم بقعر حلقه. وفلان مقعّرٌ: يبلغ قعور الأمور. قال الكميت:",
-        "prototipe_benzerlik": 0.387,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى انتهيت إلى قعره. قال عبيد الله بن أيوب العنبريّ:",
+        "prototipe_benzerlik": 0.502,
         "halka": "orta"
       },
       {
-        "cumle": "وإناء قعران إذا كان الشيء في قعره، كما تقول: قربان إذا كان قريباً من الملء.",
-        "prototipe_benzerlik": 0.686,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأصبحت مثل القدح في قعر جعبة ... نضيّاً لقًى قد طال فيها قلاقله",
+        "prototipe_benzerlik": 0.654,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا ريش عليه من نضاه إذا سلبه. وعن بعض العرب: لا أدخل عليه قعيرة بيتٍ وقعرة بيت. وفلان بعيد القعر. وليس لكلامه قعر. ورجل مقعر: يتكلم بقعر حلقه. وفلان مقعّرٌ: يبلغ قعور الأمور. قال الكميت:",
+        "prototipe_benzerlik": 0.292,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "البالغون قعور الأمر ترويةً ... والباسطون أكفاً غير أصفار",
+        "prototipe_benzerlik": 0.378,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإناء قعران إذا كان الشيء في قعره، كما تقول: قربان إذا كان قريباً من الملء.",
+        "prototipe_benzerlik": 0.649,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.542,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.507,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["serve.v.06", "solid.n.03"],
   "muhassas_tasnif": {

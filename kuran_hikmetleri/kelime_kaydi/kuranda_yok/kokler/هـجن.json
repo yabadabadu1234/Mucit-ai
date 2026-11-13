@@ -37,24 +37,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جمل وناقة هجان وإبل هجان: بيض كرام. ورجل وفرس هجين إذا لم تكن الأم عربية. والأصل في الهجنة: بياض الروم الصّقالبة. وقوم مهجنة بوزن مشيخة هجناء ومهاجين ومهاجنة. وأنشد أبو زيد: مهاجنة إذا نسبوا عبيد ... عضاريط مغالثة الزناد وناقة مهجّنة: منسوبة إلى الهجان. قال كع",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جمل وناقة هجان وإبل هجان: بيض كرام. ورجل وفرس هجين إذا لم تكن الأم عربية. والأصل في الهجنة: بياض الروم الصّقالبة. وقوم مهجنة بوزن مشيخة هجناء ومهاجين ومهاجنة. وأنشد أبو زيد:\nمهاجنة إذا نسبوا عبيد ... عضاريط مغالثة الزناد\nوناقة مهجّنة: منسوبة إلى الهجان. قال كعب:\nحرف أخوها أبوها من مهجّنة ... وخالها عمها قوداء شمليل"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل وامرأة هجانٌ. وأرض هجانٌ: كريمة التّربة. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.258,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل وامرأة هجانٌ. وأرض هجانٌ: كريمة التّربة. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.234,
         "halka": "uzak"
       },
       {
-        "cumle": "وفي زناده هجنة إذ كان أحد الزندين وارياً والآخر صلودا.",
-        "prototipe_benzerlik": 0.185,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بأرض هجان التّرب وسمية الثّرى ... غداة نأت عنها الملوحة والبحر",
+        "prototipe_benzerlik": 0.646,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال: \" هذا جناي وهجانه فيه \" وأنا أستهجن فعلك، وهذا مما يستهجن. وفيه. هجنة. وهجّنته تهجيناً. ولبنٌ هجين: ليس بصريح ولا لباءٍ، قال:",
+        "prototipe_benzerlik": 0.267,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تريع إنّي الفواق إلى ابن سبع ... غضيض الطّرف أثقله الهجين",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي زناده هجنة إذ كان أحد الزندين وارياً والآخر صلودا.",
+        "prototipe_benzerlik": 0.17,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.221,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.325,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

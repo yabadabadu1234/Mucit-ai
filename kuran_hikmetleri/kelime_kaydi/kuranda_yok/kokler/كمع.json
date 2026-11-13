@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو كمعها وكميعها: ضجيعها، وكامعها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو كمعها وكميعها: ضجيعها، وكامعها."
+      },
+      {
+        "kaynak": "Mekâyîs: كَمَعَ",
+        "metin": "(كَمَعَ) الْكَافُ وَالْمِيمُ وَالْعَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى اطْمِئْنَانٍ وَسُكُونٍ. زَعَمُوا أَنَّ الْكِمْعَ: الْبَيْتُ; يُقَالُ هُوَ فِي كِمْعِهِ أَيْ بَيْتِهِ. وَسُمِّيَ كَمْعًا لِأَنَّهُ يُسْكَنُ. وَمِنَ الْبَابِ الْكَمِيعُ، وَهُوَ الضَّجِيعُ، يُقَالُ كَامَعَهَا، إِذَا ضَاجَعَهَا. وَالْمُكَامَعَةُ الَّتِي فِي الْحَدِيثِ، وَقَدْ نُهِيَ عَنْهَا: أَنْ يُضَاجِعَ الرَّجُلُ الرَّجُلَ لَا سِتْرَ بَيْنَهُمَا.\nوَقَالَ فِي الْكَمِيعِ:\nوَهَبَّتِ الشَّمْأَلُ الْبَلِيلُ ... وَإِذْ بَاتَ كَمِيعُ الْفَتَاةِ مُلْتَفِعَا\nوَالْكِمْعُ: الْمُطْمَئِنُّ مِنَ الْأَرْضِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بات السيف كميعي.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بات السيف كميعي.",
         "prototipe_benzerlik": 0.322,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.322,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

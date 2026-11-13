@@ -897,89 +897,342 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل وانٍ: بيّن الونيّ والونا. يقال: دع الونا، وخلّ الهوينا. وقد ونى في الأمر: ضعف وفتر \" ولا تنيا في ذكري \" وفلان لا يني ولايونّى ولا يتوانى: لا يقصّر. وعمل فونى إذا تعب، وأونيته: أتعبته. وناقة وانية. قال: ووانية زجرت على حفاها ... قريح الدّفّتين على البطان ول",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل وانٍ: بيّن الونيّ والونا. يقال: دع الونا، وخلّ الهوينا. وقد ونى في الأمر: ضعف وفتر \" ولا تنيا في ذكري \" وفلان لا يني ولايونّى ولا يتوانى: لا يقصّر. وعمل فونى إذا تعب، وأونيته: أتعبته. وناقة وانية. قال:\nووانية زجرت على حفاها ... قريح الدّفّتين على البطان\nولا يني يفعل: لا يزال. وامرأة وناة: فها فتور."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وهب الشيء هبةً وموهباً فاتهبه منه. وفي الحديث: \" آليت أن لا أتّهب إلا من قرشيٍّ أو ثقفيٍّ \" ووهب الله تعالى لك العافية. واللهمّ هب لي ذنوبي. والله أستوهب ذنوبي. واستوهبت فلاناً كذا. وتواهبوا فيما بينهم. وفيهم التهادي والتواهب. وواهبني فوهبته: كنت أوهبمنه. وهذه هبة فلان وموهبته هباته ومواهبه. والله ا",
-        "prototipe_benzerlik": 0.969,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "بمعنى اجعلها من وهبني الله فداءك أي جعلني الله فداك. وسمعت خادماً من اليمامة يقل وقد وكف السقف: يا سيدي هل أهب عليه التراب بمعنى هل أجعله عليه وهو من الهبة لأن معنى وهب له الشيء: جعله له. ويقال للخيل: هبي أي أقبلي.",
-        "prototipe_benzerlik": 0.462,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول ابن مقبل:",
+        "prototipe_benzerlik": 0.471,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: كثرت المواهب في الأرض أي ماء السماء والقلات التي يجتمع فيها، الوادة: موهبة بالفتح فرقوا بين هذه الهبة وبين سائر الهبات ففتحوا فيها وكسروا في غيرها. قال:",
-        "prototipe_benzerlik": 0.424,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مرته الصّبا بالغور غور تهامة ... فما ونت عنه بشعفين أمطرا",
+        "prototipe_benzerlik": 0.242,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ب",
+        "prototipe_benzerlik": 0.374,
         "halka": "orta"
       },
       {
-        "cumle": "وأوهب له الطعام إذا كثر واتسع حتى وهب منه. وواد موهب الحطب: كثيره واسعه. قال يصف رجلاً منعّماً مرفّهاً:",
-        "prototipe_benzerlik": 0.29,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "القمقمين. وأوهبت لأمر كذا إذا اتسعت له وقدرت عليه، وأصبحت موهباً لذلك.",
-        "prototipe_benzerlik": -0.007,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "للنار وهجٌ شديد وتوهّج، وقد وهجت تهج وهجاً ووهجاناً ووهجت توهج وهجاً، وسراج وهّاج.",
-        "prototipe_benzerlik": -0.014,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "ومن المجاز: توهّج الجوهر: تلألأ. وتوهّجت الرائحة. وقال في صفة الروضة:",
-        "prototipe_benzerlik": 0.522,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهب الشيء هبةً وموهباً فاتهبه منه. وفي الحديث: \" آليت أن لا أتّهب إلا من قرشيٍّ أو ثقفيٍّ \" ووهب الله تعالى لك العافية. واللهمّ هب لي ذنوبي. والله أستوهب ذنوبي. واستوهبت فلاناً كذا. وتواهبوا فيما بينهم. وفيهم التهادي والتواهب. وواهبني فوهبته: كنت أوهبمنه. وهذه هبة فلان وموهبته هباته ومواهبه. والله الوهاب: الكثير المواهب. ويقال للمولود له: شكرت الواهب وبورك لك في الموهوب. وفلان يهب ما لا يهبه أحد. ومن لأشياء ما ليس يوهب. وهبه رجلاً قد أخطأ، وهبه قد مات. وقال:",
+        "prototipe_benzerlik": 0.701,
         "halka": "yakın"
       },
       {
-        "cumle": "نوارها متباهج يتوهج",
-        "prototipe_benzerlik": 0.07,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "وإن يومنا لوهج: شديد الحر، وقد توهج يومنا، وتوهّج حرّه.",
-        "prototipe_benzerlik": 0.182,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "عمّ النجاد والوهاد وكلّ نجد ووهد، وبتنا في وهدة، وتوهّد: تسفّل. قال يصف سبعاص:",
-        "prototipe_benzerlik": 0.757,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فهبها أمةً هلكت وأودت ... يزيد إمامها وأبو يزيدا",
+        "prototipe_benzerlik": 0.951,
         "halka": "yakın"
       },
       {
-        "cumle": "وهزه: دفعه وذهب، يهزه وهزاً.",
-        "prototipe_benzerlik": 0.209,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بمعنى اجعلها من وهبني الله فداءك أي جعلني الله فداك. وسمعت خادماً من اليمامة يقل وقد وكف السقف: يا سيدي هل أهب عليه التراب بمعنى هل أجعله عليه وهو من الهبة لأن معنى وهب له الشيء: جعله له. ويقال للخيل: هبي أي أقبلي.",
+        "prototipe_benzerlik": 0.409,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: كثرت المواهب في الأرض أي ماء السماء والقلات التي يجتمع فيها، الوادة: موهبة بالفتح فرقوا بين هذه الهبة وبين سائر الهبات ففتحوا فيها وكسروا في غيرها. قال:",
+        "prototipe_benzerlik": 0.373,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولفوك أشهى لو يحل لنا ... من ماء موهبة على شهد",
+        "prototipe_benzerlik": 0.427,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من نطفة في شنّة خلق ... من ماء موهبة على صمد",
+        "prototipe_benzerlik": 0.713,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال أبو صخر الهذليّ:",
+        "prototipe_benzerlik": 0.316,
         "halka": "uzak"
       },
       {
-        "cumle": "صادوه بالوهق وبالأوهاق. وأوهق الدابّة: طرح ف عنقه الوهق. ووهقه عن كذا: حبسه. وتواهقت الركاب: مدت أعناقها في السير وتبارت فيه، وهذه الناقة تواهق الأخرى.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شيبت بموهبة في رأس مرقبة ... جرداء مهيبة في حالق شمم",
+        "prototipe_benzerlik": 0.172,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأوهب له الطعام إذا كثر واتسع حتى وهب منه. وواد موهب الحطب: كثيره واسعه. قال يصف رجلاً منعّماً مرفّهاً:",
+        "prototipe_benzerlik": 0.233,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سمين الصّلا رخو الخواصر أوهبت ... له عجوة مسمونة وخمير",
+        "prototipe_benzerlik": 0.839,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال آخر:",
+        "prototipe_benzerlik": 0.218,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جيش المحمّين حشّ النار تحتهما ... غرثان أمسى بواد موهب الحطب",
+        "prototipe_benzerlik": 0.239,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "القمقمين. وأوهبت لأمر كذا إذا اتسعت له وقدرت عليه، وأصبحت موهباً لذلك.",
+        "prototipe_benzerlik": -0.036,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ج",
+        "prototipe_benzerlik": 0.357,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للنار وهجٌ شديد وتوهّج، وقد وهجت تهج وهجاً ووهجاناً ووهجت توهج وهجاً، وسراج وهّاج.",
+        "prototipe_benzerlik": -0.039,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: توهّج الجوهر: تلألأ. وتوهّجت الرائحة. وقال في صفة الروضة:",
+        "prototipe_benzerlik": 0.479,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نوارها متباهج يتوهج",
+        "prototipe_benzerlik": 0.048,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإن يومنا لوهج: شديد الحر، وقد توهج يومنا، وتوهّج حرّه.",
+        "prototipe_benzerlik": 0.148,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ د",
+        "prototipe_benzerlik": 0.344,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عمّ النجاد والوهاد وكلّ نجد ووهد، وبتنا في وهدة، وتوهّد: تسفّل. قال يصف سبعاص:",
+        "prototipe_benzerlik": 0.723,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "متضابئاً طوراً لدى استشرافه ... فإذا توهّد في مجال أرتبي",
+        "prototipe_benzerlik": 0.206,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أعلو فوق ابية.",
+        "prototipe_benzerlik": 0.155,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ز",
+        "prototipe_benzerlik": 0.378,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهزه: دفعه وذهب، يهزه وهزاً.",
+        "prototipe_benzerlik": 0.161,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ق",
+        "prototipe_benzerlik": 0.417,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صادوه بالوهق وبالأوهاق. وأوهق الدابّة: طرح ف عنقه الوهق. ووهقه عن كذا: حبسه. وتواهقت الركاب: مدت أعناقها في السير وتبارت فيه، وهذه الناقة تواهق الأخرى.",
+        "prototipe_benzerlik": 0.22,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال:",
+        "prototipe_benzerlik": 0.271,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتواهقت أخفافها طبقاً ... والظل لم يفضل ولم يكرى",
+        "prototipe_benzerlik": 0.085,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: تواهقوا في الفعال: تباروا فيه وتكايلوا. وفلان يواهق فلاناً. قال الحطيئة:",
+        "prototipe_benzerlik": 0.544,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أسلموها في دمشق كما ... أسلمت وحشيّة وهقاً",
         "prototipe_benzerlik": 0.274,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: تواهقوا في الفعال: تباروا فيه وتكايلوا. وفلان يواهق فلاناً. قال الحطيئة:",
-        "prototipe_benzerlik": 0.584,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهقها: ولدها لأنه يحبسها، ورويَ لهقاً وهو ولدها الأبيض.",
+        "prototipe_benzerlik": 0.141,
+        "halka": "uzak"
       },
       {
-        "cumle": "وهقها: ولدها لأنه يحبسها، ورويَ لهقاً وهو ولدها الأبيض.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ل",
+        "prototipe_benzerlik": 0.365,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل وجلٌ وهلٌ: فزعٌ، وقد وهلت وهلاً شديداً، وأصابهم أهوال وأوهال، وجاء وهو مستوهل: فزع، واستوهل فلان. قال طفيل:",
         "prototipe_benzerlik": 0.168,
         "halka": "uzak"
       },
       {
-        "cumle": "رجل وجلٌ وهلٌ: فزعٌ، وقد وهلت وهلاً شديداً، وأصابهم أهوال وأوهال، وجاء وهو مستوهل: فزع، واستوهل فلان. قال طفيل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقلنا لها لما رأينا الذي بها ... من الشرّ لا تستوهلي وتأمّلي",
+        "prototipe_benzerlik": 0.185,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويقال: وهلت منه: فزعت منه. ووهلت إليه. فزعت إليه. ووهل في الحساب والمسألة، ووهل عنه إذا غلط فيه وسها عنه. ووهمت إلى كذا ووهلت إليه بالفتح، وأنا أهم إليه وأهل إذا ذهب وهمك إليه، ووهلك أي ظنك. و\" لقيته أول وهلة \".",
+        "prototipe_benzerlik": 0.853,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ م",
+        "prototipe_benzerlik": 0.431,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في قلبه وهمٌ. وفي الحديث: \" لا تدركه الأوهام \" ووهمت الشيء أهمه وهماً وتوهّمته: وقع في خلدي، وشيء موهوم ومتوهّم. قال أبو زبيد:",
+        "prototipe_benzerlik": 0.176,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واستحدث القوم أمراً غير ما وهموا ... وطار أنصارهم شتّى وما جمعوا",
+        "prototipe_benzerlik": 0.066,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ظنوا أنهم يغلبونني فاستحدثوا الفزع والجبن، ووهمت به سوءاً وتوهّمته به. قال عديّ:",
+        "prototipe_benzerlik": 0.056,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فإن أخطأت أو أوهمت أمراً ... فقد يهم المصافي بالحبيب",
+        "prototipe_benzerlik": 0.316,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأوهمنيه غيري ووهّمنيه. واتّهم بكذا، وفلان متهم: يتّهم الناس، وهو صاحب تهمةٍ وتهمٍ. ووهم في الحساب بالكسر يوهم وهماً: غلت، وأوهم فيه إيهاماً، وأوهم من الحساب مائة. وأوهم من صلاته ركعةً: أسقط.",
+        "prototipe_benzerlik": 0.964,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ن",
+        "prototipe_benzerlik": 0.249,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فيه وهن ووهن، وقد وهن يهن ووهن يوهن. قال أبو زيد سمعت من الأعراب من يقرأ \" فما وهنوا \" وتوهّن، وأوهته ووهّنته. قال الجعدي:",
+        "prototipe_benzerlik": 0.518,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "توهّن فيه المضرحيّة بعد ما ... روين نجيعاً من دم الجوف أحمرا",
+        "prototipe_benzerlik": 0.751,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي تضعف عن النهوض لامتلاء أجوافها. وإنه لشديد الواهنتين وهما قصيرياه. وأتيته وهناً وموهناً: بعد ساعة من الليل. وأوهن القوم: سروا فيه.",
+        "prototipe_benzerlik": 0.055,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهـ ي",
+        "prototipe_benzerlik": 0.346,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهى الحائط. وفي الثوب والأديم وهيٌ، وفي مثل \" خلّ سبيل من وهى سقاؤه \" وحبل واه، وأوهيته. قال:",
+        "prototipe_benzerlik": 0.274,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كناطح صخرةً يوماً ليفلقها ... فلم يضرها وأوهى قرنه الوعل",
+        "prototipe_benzerlik": 0.121,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ووهن العظم ووهى \" إنّي وهن العظم منّي \" وقال الشماخ:",
         "prototipe_benzerlik": 0.238,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبات فؤادي مستخفّاً كأنه ... جناح وهي عظماه فهو خفوق",
+        "prototipe_benzerlik": 0.162,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز قولهم للسحاب: واهي العزالي، وقد وهت عزاليه إذا انبعق بالمطر.",
+        "prototipe_benzerlik": 0.179,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.342,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.334,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["delay.v.02"],
   "muhassas_tasnif": {

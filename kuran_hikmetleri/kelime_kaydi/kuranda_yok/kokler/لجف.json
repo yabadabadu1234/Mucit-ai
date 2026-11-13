@@ -696,29 +696,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لجفت البئر حفرت في جوانبها، وفي البئر لجفٌ وهو ما حفر في جانب منها أو أكله الاء حتى صار كالكهف، وبئر ذات لجفٍ وألجافٍ، وقد تلجّف البئر، ولجّفها مخض الدلاء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لجفت البئر حفرت في جوانبها، وفي البئر لجفٌ وهو ما حفر في جانب منها أو أكله الاء حتى صار كالكهف، وبئر ذات لجفٍ وألجافٍ، وقد تلجّف البئر، ولجّفها مخض الدلاء."
+      },
+      {
+        "kaynak": "Mekâyîs: لَجَفَ",
+        "metin": "(لَجَفَ) اللَّامُ وَالْجِيمُ وَالْفَاءُ كَلِمَةٌ تَدُلُّ عَلَى هَزْمٍ فِي الشَّيْءِ. يُقَالُ: تَلَجَّفَتِ الْبِئْرُ، إِذَا انْخَسَفَ أَسْفَلُهَا. قَالَ: وَاللَّجَفُ: سُرَّةُ الْوَادِي، وَتُشَبَّهُ الشَّجَّةُ الْمُنْفَهِقَةُ بِذَلِكَ. قَالَ:\nيَحُجُّ مَأْمُومَةً فِي قَعْرِهَا [لَجَفٌ] ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لجّف القوم مكيالهم: وسّعوا أسفله. ولجّف الوحشيّ كناسه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لجّف القوم مكيالهم: وسّعوا أسفله. ولجّف الوحشيّ كناسه.",
         "prototipe_benzerlik": 0.377,
         "halka": "orta"
       },
       {
-        "cumle": "إذا انتحى معتقماً أو لجفاً",
-        "prototipe_benzerlik": 0.333,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال العجاج:",
+        "prototipe_benzerlik": 0.286,
+        "halka": "uzak"
       },
       {
-        "cumle": "أي حافراً سفلاً أو حفر في جانب، ونظير الاعتقام والتلجيف: الضّرح واللّحد في القبر.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا انتحى معتقماً أو لجفاً",
+        "prototipe_benzerlik": 0.333,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي حافراً سفلاً أو حفر في جانب، ونظير الاعتقام والتلجيف: الضّرح واللّحد في القبر.",
         "prototipe_benzerlik": 0.353,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.354,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.337,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

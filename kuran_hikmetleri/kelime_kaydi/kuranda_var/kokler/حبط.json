@@ -1481,11 +1481,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "prevent.v.01",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "prevent.v.01",
-    "dayanak_tanim": "keep from happening or arising; make impossible",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "nullification.n.02",
+    "dayanak_tanim": "the act of nullifying; making null and void; counteracting or overriding the effect or force of something",
     "synset_sayisi": 13
   },
   "ses_mana_tasnif": {
@@ -1504,19 +1504,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "فساد ما تجمع في الجوف بكثافة لعدم تصرفه: كضغط الطعام في الجوف من تجمعه بكثافة وعَدَم تصرفه في البدن أي عَدَم قبول البدن له فيفسُد وتهلِك الماشية، وكالدم يتجمع في الجُرْح ولا يقبله الجسم أي لا يمتصه فيفسد ويتقيح فيُبَطّ ليَذْهب. ومن هذا \"حَبِط عمل الرجل -كتعب و",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "حبط عمله حبوطاً وحبطاً بالسكون، وأحبط الله عمله. وتقول: إن عمل عملاً صالحاً أتبعه ما يحبطه، وإن أصعد كلماً طيباً أرسل خلفه ما يهبطه؛ استعير من حبط بطون الماشية إذا أكلت الخضر فاستوبلته وهلكت به. ومنه حبط دم القتيل: هدر وبطل.",
-        "prototipe_benzerlik": 0.438,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "فساد ما تجمع في الجوف بكثافة لعدم تصرفه: كضغط الطعام في الجوف من تجمعه بكثافة وعَدَم تصرفه في البدن أي عَدَم قبول البدن له فيفسُد وتهلِك الماشية، وكالدم يتجمع في الجُرْح ولا يقبله الجسم أي لا يمتصه فيفسد ويتقيح فيُبَطّ ليَذْهب. ومن هذا \"حَبِط عمل الرجل -كتعب وضرب: عَمِل عملًا (صالحًا) ثم أفسده بسوء النية أو غير ذلك فلا يقبله الله تعالى. وأحبطه الله تعالى: {وَمَنْ يَكْفُرْ بِالْإِيمَانِ فَقَدْ حَبِطَ عَمَلُهُ} [المائدة: 5]، ونعوذ بالله تعالى من حبوط العمل. وكل ما في القرآن من التركيب فهو من حبوط العمل هذا."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حبط بطنه: انتفخ حبطاً بالتحريك. وفرس حبط القصيري: مجفر. وحبط جلده من السياط."
+      },
+      {
+        "kaynak": "Mekâyîs: حَبِطَ",
+        "metin": "(حَبِطَ) الْحَاءُ وَالْبَاءُ وَالطَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى بُطْلَانٍ أَوْ أَلَمٍ. يُقَالُ: أَحْبَطَ اللَّهُ عَمَلَ الْكَافِرِ، أَيْ أَبْطَلَهُ.\nوَأَمَّا الْأَلَمُ فَالْحَبَطُ: أَنْ تَأْكُلَ الدَّابَّةُ حَتَّى يُنْفَخَ لِذَلِكَ بَطْنُهَا. قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ: «إِنَّ مِمَّا يُنْبِتُ الرَّبِيعُ مَا يَقْتُلُ حَبَطًا أَوْ يُلِمُّ» .\nوَسُمِّيَ الْحَارِثُ الْحَبِطَ لِأَنَّهُ كَانَ فِي سَفَرٍ ; فَأَصَابَهُ مِثْلُ هَذَا. وَهُمْ هَؤُلَاءِ الَّذِينَ يُسَمَّوْنَ الْحَبِطَاتِ مِنْ تَمِيمٍ.\nوَمِمَّا يَقْرُبُ مِنْ هَذَا الْبَابِ حَبِطَ الْجِلْدُ، إِذَا كَانَتْ بِهِ جِرَاحٌ فَبَرَأَتْ وَبَقِيَتْ بِهَا آثَارٌ."
       }
     ],
-    "ortalama_benzerlik": 0.438,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حبط عمله حبوطاً وحبطاً بالسكون، وأحبط الله عمله. وتقول: إن عمل عملاً صالحاً أتبعه ما يحبطه، وإن أصعد كلماً طيباً أرسل خلفه ما يهبطه؛ استعير من حبط بطون الماشية إذا أكلت الخضر فاستوبلته وهلكت به. ومنه حبط دم القتيل: هدر وبطل.",
+        "prototipe_benzerlik": 0.808,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.808,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

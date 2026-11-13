@@ -1536,8 +1536,8 @@
     "ince": "event.n.01",
     "orta": "noun.event",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "shock.n.06",
-    "dayanak_tanim": "an unpleasant or disappointing surprise",
+    "dayanak_synset": "collision.n.01",
+    "dayanak_tanim": "(physics) a brief event in which two or more bodies come together",
     "synset_sayisi": 30
   },
   "ses_mana_tasnif": {
@@ -1551,19 +1551,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "صدمه الحمار. وصدمته الغرارة وصادمته. والفارسان يتصادمان. وتصادم الفحلان والجيشان واصطدما. وضربه على صدمته وهما العظمان بينهما الجبهة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "صدمه الحمار. وصدمته الغرارة وصادمته. والفارسان يتصادمان. وتصادم الفحلان والجيشان واصطدما. وضربه على صدمته وهما العظمان بينهما الجبهة."
+      },
+      {
+        "kaynak": "Mekâyîs: صَدَمَ",
+        "metin": "(صَدَمَ) الصَّادُ وَالدَّالُ وَالْمِيمُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الصَّدْمُ، وَهُوَ ضَرْبُ الشَّيْءِ الصُّلْبِ بِمِثْلِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "صدمت الشرّ بالشرّ. وصدمهم أمر شديد. \" والصبر عند الصدمة الأولى \". وأتيت على الأمرين صدمةً واحدة، كما تقول: ضربة، وأعطاه رزق شهرين صدمة. وقال عبد الملك للحجاج: إني استعملتك على العراقين صدمة فاخرج إليهما كميش الإزار. وصدمته حميّا الكأس. ورجل مصدم: مجرب:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صدمت الشرّ بالشرّ. وصدمهم أمر شديد. \" والصبر عند الصدمة الأولى \". وأتيت على الأمرين صدمةً واحدة، كما تقول: ضربة، وأعطاه رزق شهرين صدمة. وقال عبد الملك للحجاج: إني استعملتك على العراقين صدمة فاخرج إليهما كميش الإزار. وصدمته حميّا الكأس. ورجل مصدم: مجرب:",
         "prototipe_benzerlik": 0.339,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.339,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

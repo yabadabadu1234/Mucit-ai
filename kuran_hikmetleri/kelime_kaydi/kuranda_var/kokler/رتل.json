@@ -1747,8 +1747,8 @@
     "ince": "arrangement.n.02",
     "orta": "noun.group",
     "ust": "insan ve toplum",
-    "dayanak_synset": "file.n.02",
-    "dayanak_tanim": "a line of persons or things ranged one behind the other",
+    "dayanak_synset": "line.n.01",
+    "dayanak_tanim": "a formation of people or things one beside another",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1767,19 +1767,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انتظامُ أفراد النابت من شيء في تواليها (مع مسافات بينها) متساوية كالأسنان المفَلَّجَة. ومنه الرُتَيْلى مصغرة وتمد: ضرب من العناكب، (لعله لحظ في تسميتها انتساق خيوط بيتها الذي تنسجه وهو جدّ واضح فيه). ومن ذلك \"رَتَّل لكلام -ض: أَحْسَنَ تأليفَه وأبانَه وتمهل فيه",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "رتل القرآن ترتيلاً إذا ترسل في تلاوته وأحسن تأليف حروفه. وهو يترسل في كلامه ويترتل.",
-        "prototipe_benzerlik": 0.447,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انتظامُ أفراد النابت من شيء في تواليها (مع مسافات بينها) متساوية كالأسنان المفَلَّجَة. ومنه الرُتَيْلى مصغرة وتمد: ضرب من العناكب، (لعله لحظ في تسميتها انتساق خيوط بيتها الذي تنسجه وهو جدّ واضح فيه). ومن ذلك \"رَتَّل لكلام -ض: أَحْسَنَ تأليفَه وأبانَه وتمهل فيه \"بأن يُبين جميع الحروف ويوفيها حقها من الإشباع بلا عجلة فتتميز أصوات كل كلمة، وتتميز كل كلمة عن الأخرى. وقد وصفت السيدة أم سلمة قراءة رسول الله - صلى الله عليه وسلم - \"فإذا هي تَنْعَت قراءة مفسَّرَةَ حَرْفًا حَرْفًا \" (النسائي وأبو داود والترمذي) [الوجيز في فضائل الكتاب العزيز للقرطبي 67] (حرفًا حرفًا أي كلمة كلمة). ومن صور هذا ما روى عن السيدة عائشة رضي الله عنها في وصف هيئة كلام رسول الله - صلى الله عليه وسلم - أنه \"كان يُحَدِّثُ حديثًا لو عدّه العادّ لأحصاه \" [الجامع الصغير] فهذا في وصف حديثه المعتاد. ومنه نستطيع أن نقدّر كيفية ترتيله القرآن {وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا} [المزمل 4]. فكان - صلى الله عليه وسلم - إذا قرأ {بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ} يمد \" {بِسْمِ اللَّهِ} ويمد بالرحمن ويمد بالرحيم .. وكان يقطع قراءته يقول {الْحَمْدُ لِلَّهِ رَبِّ الْعَالمِينَ}، ثم يَقِف {الرَّحْمَنِ الرَّحِيمِ} ثم يقف .. اه كما روى البخاري والترمذي [انظر قر 1/ 1] (والمدّ في لفظ الجلالة مقصود به المد (2/752) الطبيعي، لأن من العرب من كان يقصره، وله شاهد في [ل أله]. والمد في {الرَّحْمَنِ} طبيعي، أما في {الرَّحِيمِ} فيزيد عند الوقف. أما قوله تعالى: {وَقَالَ الَّذِينَ كَفَرُوا لَوْلَا نُزِّلَ عَلَيْهِ الْقُرْآنُ جُمْلَةً وَاحِدَ"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثغر مرتل ورتل ورتل: مفلج مستوى النبتة حسن التنضيد."
       }
     ],
-    "ortalama_benzerlik": 0.447,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رتل القرآن ترتيلاً إذا ترسل في تلاوته وأحسن تأليف حروفه. وهو يترسل في كلامه ويترتل.",
+        "prototipe_benzerlik": 0.697,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.697,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["formation.n.01"],
   "muhassas_tasnif": {

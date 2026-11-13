@@ -1798,24 +1798,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فراش وثير: وطيء، وقد وثر وثارة، وما أوثر فراشك! واستوثر الفراش. ووثر مركبك: وطّئه، ومنه: ميثرة السّرج. وجمعها مواثر ومياثر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فراش وثير: وطيء، وقد وثر وثارة، وما أوثر فراشك! واستوثر الفراش. ووثر مركبك: وطّئه، ومنه: ميثرة السّرج. وجمعها مواثر ومياثر."
+      },
+      {
+        "kaynak": "Mekâyîs: وَثَرَ",
+        "metin": "(وَثَرَ) الْوَاوُ وَالثَّاءُ وَالرَّاءُ: كَلِمَةٌ تَدُلُّ عَلَى وَطَاءَةٍ فِي شَيْءٍ. وَفِرَاشٌ وَثْرٌ وَوَثِيرٌ: وَطِيٌّ. وَالْمَيَاثِرُ: ثِيَابٌ حُمْرٌ تَكُونُ فِي مَرَاكِبِ الْأَعَاجِمِ. وَقَوْلُهُمْ: وَثَرَ الْجَمَلُ النَّاقَةَ: ضَرَبَهَا، كَأَنَّهَا لَهُ فِرَاشٌ وَثِيرٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إنّها لوثيرة، ووثيرة العجز، وقد وثرت وثارةً إذا سمنت. قال القطامي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنّها لوثيرة، ووثيرة العجز، وقد وثرت وثارةً إذا سمنت. قال القطامي:",
         "prototipe_benzerlik": 0.435,
         "halka": "orta"
       },
       {
-        "cumle": "وإذا تزوجت امرأةً فاستوثرها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكأنما اشتمل الضّجيع بريطةٍ ... لا بل تزيد وثارةً ولياناً",
+        "prototipe_benzerlik": 0.262,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإذا تزوجت امرأةً فاستوثرها.",
         "prototipe_benzerlik": 0.212,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.324,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.303,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "affect.v.01",

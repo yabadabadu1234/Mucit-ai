@@ -1722,11 +1722,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "act.v.08",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "act.v.08",
-    "dayanak_tanim": "be engaged in an activity, often for no particular purpose other than pleasure",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "practice.n.04",
+    "dayanak_tanim": "the exercise of a profession",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -1740,34 +1740,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مارس قرنه: عالجه. ومارس الأمور والأعمال، وما زال يزاولها ويمارسها. وفلان ذو مراسٍ ومرسٌ: ذو جلد وقوة ومارسة للأمور. وتمارسوا في الحرب: تضاربوا. ومرس الدواء في الماء يمرسه. وتمرٌ مريسٌ: مرس في الماء أو اللبن. وداهية مرمريس: شديدة. والبقر تمرّس بالشجر إذا أمّرت ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "فلان يتمرّس بي أي يتعرّض لي بالشرّ. قال:",
-        "prototipe_benzerlik": 0.233,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مارس قرنه: عالجه. ومارس الأمور والأعمال، وما زال يزاولها ويمارسها. وفلان ذو مراسٍ ومرسٌ: ذو جلد وقوة ومارسة للأمور. وتمارسوا في الحرب: تضاربوا. ومرس الدواء في الماء يمرسه. وتمرٌ مريسٌ: مرس في الماء أو اللبن. وداهية مرمريس: شديدة. والبقر تمرّس بالشجر إذا أمّرت قرونها عليها تحدّدها. وتمرّس البعير بالجذع: تحكّك به. وشدّه بالمرس وهو الحبل، وهو يقضب الأمراس من مرحه."
       },
       {
-        "cumle": "والبعير يتمرّس بالشجرة: يأكلها وقتاً بعد وقت. وفلان قد تمرّس بالنوائب وبالخصومات إذا مارسها، ويقال: إليك عني فما بي متمرّس، وما بفلان متمرّس: للشجاع الذي لا ينال منه العدوّ، وللشحيح الذي لا ينال منه المحتاج. وفي الحديث: \" من اقتراب الساعة أن يتمرّس الرجل بدينه كما يتمرّس البعير بالشجرة \" وتمرّس بالط",
-        "prototipe_benzerlik": 0.94,
+        "kaynak": "Mekâyîs: مَرَسَ",
+        "metin": "(مَرَسَ) الْمِيمُ وَالرَّاءُ وَالسِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُضَامَّةِ شَيْءٍ لِشَيْءٍ بِشِدَّةٍ وَقُوَّةٍ.\nمِنْهُ الْمَرَسُ: الْحَبْلُ، سُمِّيَ لِتَمَرُّسِ قُوَاهُ بَعْضِهَا بِبَعْضٍ، وَالْجَمْعُ أَمَرَاسٌ وَمَرِسَ الْحَبْلُ يَمْرَسُ مَرَسًا: وَقَعَ بَيْنَ الْخُطَّافِ وَالْبَكْرَةِ، فَأَنْتَ تُعَالِجُهُ أَنْ تُخْرِجَهُ. وَرَجُلٌ مَرِسٌ: ذُو جَلَدٍ. وَفَحْلٌ مَرَّاسٌ: ذُو مِرَاسٍ شَدِيدٍ. يُقَالُ: امْتَرَسَتِ الْأَلْسُنُ\nفِي الْخُصُومَاتِ: أَخَذَ بَعْضُهَا بَعْضًا. وَمِنْهُ الِامْتِرَاسُ: اللُّزُوقُ بِالشَّيْءِ وَمُلَازَمَتُهُ. قَالَ:\nفَنَكِرْنَهُ فَنَفَرْنَ وَامْتَرَسَتْ بِهِ ... هَوْجَاءُ هَادِيَةٌ وَهَادٍ جُرْشُعُ\nوَمِنْهُ تَمَرَّسَ فُلَانٌ بِالشَّيْءِ: احْتَكَّ بِهِ. وَالْمَرْمَرِيسُ: الدَّاهِيَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يتمرّس بي أي يتعرّض لي بالشرّ. قال:",
+        "prototipe_benzerlik": 0.46,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأحمق عريض عليه غضاضة ... تمرّس بي من حينه وأنا الرّقم",
+        "prototipe_benzerlik": 0.622,
         "halka": "yakın"
       },
       {
-        "cumle": "بالطيب فالريح بهم تنفّس",
-        "prototipe_benzerlik": 0.186,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والبعير يتمرّس بالشجرة: يأكلها وقتاً بعد وقت. وفلان قد تمرّس بالنوائب وبالخصومات إذا مارسها، ويقال: إليك عني فما بي متمرّس، وما بفلان متمرّس: للشجاع الذي لا ينال منه العدوّ، وللشحيح الذي لا ينال منه المحتاج. وفي الحديث: \" من اقتراب الساعة أن يتمرّس الرجل بدينه كما يتمرّس البعير بالشجرة \" وتمرّس بالطّيب: تلطّخ به. قال:",
+        "prototipe_benzerlik": 0.771,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأنما مثواتهن معرس ... أو ريح عطارين قد تمرّسوا",
+        "prototipe_benzerlik": 0.329,
         "halka": "uzak"
       },
       {
-        "cumle": "وبيننا ليلة مرّاسة: لا وتيرة فيها بعيدة دائبة السير. وامترست الألسن في الخصومات: أخذ بعضها بعضاً.",
-        "prototipe_benzerlik": 0.087,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بالطيب فالريح بهم تنفّس",
+        "prototipe_benzerlik": 0.329,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبيننا ليلة مرّاسة: لا وتيرة فيها بعيدة دائبة السير. وامترست الألسن في الخصومات: أخذ بعضها بعضاً.",
+        "prototipe_benzerlik": 0.351,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.361,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.477,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

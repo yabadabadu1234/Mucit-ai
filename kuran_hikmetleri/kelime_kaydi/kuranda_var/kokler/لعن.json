@@ -1613,11 +1613,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "die.v.11",
-    "orta": "verb.change",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "die.v.11",
-    "dayanak_tanim": "suffer spiritual death; be damned (in the religious sense)",
+    "ince": "comment.v.01",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "curse.v.02",
+    "dayanak_tanim": "heap obscenities upon",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1636,24 +1636,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نَفْي أو طَرد وإبعاد من الحيّز بتخويف وذَعر -لعدم قبول القرب.- كالرجل اللَعين (فعيل بمعنى مفعول)، والجيال المذكور يَنفِي ويُبعِد (بمعنى فاعل). ومن معنويِّه \"اللَعْنُ: الطَرد والإبعاد من رحمهَ الله وجنته، ومن الخير غَضَبًا وعدم قبول {لُعِنَ الَّذِينَ كَفَرُوا م",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نَفْي أو طَرد وإبعاد من الحيّز بتخويف وذَعر -لعدم قبول القرب.- كالرجل اللَعين (فعيل بمعنى مفعول)، والجيال المذكور يَنفِي ويُبعِد (بمعنى فاعل). ومن معنويِّه \"اللَعْنُ: الطَرد والإبعاد من رحمهَ الله وجنته، ومن الخير غَضَبًا وعدم قبول {لُعِنَ الَّذِينَ كَفَرُوا مِنْ بَنِي إِسْرَائِيلَ عَلَى لِسَانِ دَاوُودَ وَعِيسَى ابْنِ مَرْيَمَ} [المائدة: 78]. {وَالشَّجَرَةَ الْمَلْعُونَةَ فِي الْقُرْآنِ} [الإسراء: 60] في [بحر 6/ 53] الظاهر أنه أريد بالشجرة حقيقتها: الكشوث أو الزقوم .. وهناك أقوال أخرى. وليس في القرآن من التركيب إلا فعل (اللعن) وما هو منه- بمعنى الطرد والإبعاد من رحمة الله."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لعنه أهله: طردوه وأبعدوه، وهو لعين طريد. وقد لعن الله إبليس: طرده من الجنة وأبعده من جوار الملائكة، ولعنت الكلب والذئب: طردتهما، ويقال للذئب: اللعين. ولعنه وهو ملعن: مكثّر لعنه. وتلاعن القوم وتلعّنوا والتعنوا. والتعن فلانٌ. لعن نفسه. ورجل لعنة ولعنةٌ كضحكة وضحكة. ولا تكن لعّاناً: طعّاناً ولاعن امرأته، ولاعن القاضي بينهما. ووقع بينهما اللّعان، وتلاعنا والتعنا."
+      },
+      {
+        "kaynak": "Mekâyîs: لَعَنَ",
+        "metin": "(لَعَنَ) اللَّامُ وَالْعَيْنُ وَالنُّونُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِبْعَادٍ وَإِطْرَادٍ. وَلَعَنَ اللَّهُ الشَّيْطَانَ: أَبْعَدَهُ عَنِ الْخَيْرِ وَالْجَنَّةِ. وَيُقَالُ لِلذِّئْبِ لَعِينٌ، وَالرَّجُلُ الطَّرِيدُ\nلَعِينٌ. وَرَجُلٌ لُعْنَةٌ بِالسُّكُونِ: يَلْعَنُهُ النَّاسُ، [وَلُعَنَةٌ] : كَثِيرُ اللَّعْنِ. وَاللِّعَانُ: الْمُلَاعَنَةُ. وَقَالَ فِي الطَّرِيدِ:\nذَعَرْتُ بِهِ الْقَطَا وَنَفَيْتُ عَنْهُ ... مَقَامَ الذِّئْبِ كَالرَّجُلِ اللَّعِينِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "\" أبيت اللعن \" وهي تهحيّة الملوك في الجاهليّة أي لا فعلت ما تستوجب به العن. وفلان ملعّن القدر. قال زهير:",
-        "prototipe_benzerlik": 0.743,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" أبيت اللعن \" وهي تهحيّة الملوك في الجاهليّة أي لا فعلت ما تستوجب به العن. وفلان ملعّن القدر. قال زهير:",
+        "prototipe_benzerlik": 0.749,
         "halka": "yakın"
       },
       {
-        "cumle": "ونصب اللعين في مزرعته وهو الفزّاعة. والشجرة الملعونة: كلّ من ذاقها لعنها وكرهها.",
-        "prototipe_benzerlik": 0.329,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومرهّق النيران يحمد في ال ... لأواء غير ملعّن القدر",
+        "prototipe_benzerlik": 0.744,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصب اللعين في مزرعته وهو الفزّاعة. والشجرة الملعونة: كلّ من ذاقها لعنها وكرهها.",
+        "prototipe_benzerlik": 0.409,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.536,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.634,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["curse.v.01", "curse.v.03", "die.v.11", "knock.v.06"],
   "muhassas_tasnif": {

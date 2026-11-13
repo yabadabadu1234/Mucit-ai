@@ -1116,29 +1116,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تلك المكارم لا قعبان من لبن وفي مثل \" أتاك ريّان بقعب من لبن \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تلك المكارم لا قعبان من لبن\nوفي مثل \" أتاك ريّان بقعب من لبن \"."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حافرٌ مقعّب: مدوّر كالقعب كما قال امرؤ القيس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حافرٌ مقعّب: مدوّر كالقعب كما قال امرؤ القيس:",
         "prototipe_benzerlik": 0.531,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وحجر مقعّب: فيه نقرة كأنه قعب، وسرّةٌ مقعّبة. وقال الأغلب:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لها حافر مثل قعب الولي ... د ركّب فيه وظيف عجر",
+        "prototipe_benzerlik": 0.488,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحجر مقعّب: فيه نقرة كأنه قعب، وسرّةٌ مقعّبة. وقال الأغلب:",
         "prototipe_benzerlik": 0.546,
         "halka": "yakın"
       },
       {
-        "cumle": "وإياك والتقعيب في الكلام. فلان مقعّبٌ: للمتشدّق الذي يتكلم بأقصى حلقه ويفتح فاه كأنه قعب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جارية من قيس بن ثعلبة ... قبّاء ذات سرّة مقعّبه",
+        "prototipe_benzerlik": 0.45,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإياك والتقعيب في الكلام. فلان مقعّبٌ: للمتشدّق الذي يتكلم بأقصى حلقه ويفتح فاه كأنه قعب.",
         "prototipe_benzerlik": 0.52,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.532,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.507,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

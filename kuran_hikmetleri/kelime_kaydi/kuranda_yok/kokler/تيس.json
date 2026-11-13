@@ -705,19 +705,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "عنز تيساء إذا كان قرناها طويلين كقرني التيس.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عنز تيساء إذا كان قرناها طويلين كقرني التيس."
+      },
+      {
+        "kaynak": "Mekâyîs: تَيْسٌ",
+        "metin": "(تَيْسٌ) التَّاءُ وَالْيَاءُ وَالسِّينُ كَلِمَةٌ وَاحِدَةٌ: التَّيْسُ مَعْرُوفٌ مِنَ الظِّبَاءِ وَالْمَعْزِ وَالْوُعُولِ. وَمِنْ أَمْثَالِهِمْ: &quot; عَنْزٌ اسْتَتْيَسَتْ &quot; إِذَا صَارَتْ كَالتَّيْسِ فِي جُرْأَتِهَا وَحَرَكَتِهَا. يُضْرَبُ مَثَلًا لِلذَّلِيلِ يَتَعَزَّزُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تتايس الماء: تناطحت أمواجه. وتايس قرنه: مارسه. وبينهم متايسة وتياس. وتيّس البعير وخيسه: ذلَّله. \" وتيسي جعار \" أي كوني كالتيس في حمقه يا ضبع، مثل في الأحمق. \" وعنز استتيست \" مثل في ذليل عز. ويقال للنكاح: هو من متيوساء بني حمان.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تتايس الماء: تناطحت أمواجه. وتايس قرنه: مارسه. وبينهم متايسة وتياس. وتيّس البعير وخيسه: ذلَّله. \" وتيسي جعار \" أي كوني كالتيس في حمقه يا ضبع، مثل في الأحمق. \" وعنز استتيست \" مثل في ذليل عز. ويقال للنكاح: هو من متيوساء بني حمان.",
         "prototipe_benzerlik": 0.093,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.093,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {

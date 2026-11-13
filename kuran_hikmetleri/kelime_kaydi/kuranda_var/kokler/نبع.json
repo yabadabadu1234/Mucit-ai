@@ -1236,24 +1236,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انبثاق رقيق الجرم أو خَالِصه من باطن متجمعًا بلا جهد: كالماء من الأرض {حَتَّى تَفْجُرَ لَنَا مِنَ الْأَرْضِ يَنْبُوعًا} [الإسراء: 90]، (4/2152) وكشجر النزاع وهو من أكرم الأشجار خشبًا \"وكلُّ القِسِي إذا ضُمَّت إلى قَوْس النَبْع كَرَمَتْها قَوْسُ النبع (أي فاقته",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انبثاق رقيق الجرم أو خَالِصه من باطن متجمعًا بلا جهد: كالماء من الأرض {حَتَّى تَفْجُرَ لَنَا مِنَ الْأَرْضِ يَنْبُوعًا} [الإسراء: 90]، (4/2152) وكشجر النزاع وهو من أكرم الأشجار خشبًا \"وكلُّ القِسِي إذا ضُمَّت إلى قَوْس النَبْع كَرَمَتْها قَوْسُ النبع (أي فاقتها في الكرم) لأنها أَجْمَع القِسِي للأَرْز -أي الشدة واللّين، ولا يكون العودُ كريمًا حتى يكون كذلك [ل 223]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "له قوس من نبعٍ. وللماء منبع غزير ومنابع، وقد نبع ينبع وينبع، ومنه: نقل اسم ينبع لكثرة ينابيعها، سمعت الشريف سلمة بن عيّاشٍ الينبعيّ: كانت له مائة وسبعون عيناً فوّارةً. وكأن عينه ينبوع."
+      },
+      {
+        "kaynak": "Mekâyîs: نَبَعَ",
+        "metin": "(نَبَعَ) النُّونُ وَالْبَاءُ وَالْعَيْنُ كَلِمَتَانِ: إِحْدَاهُمَا نُبُوعُ الْمَاءِ، وَالْمَوْضِعُ الَّذِي يَنْبُعُ مِنْهُ يَنْبُوعٌ. وَالنَّوَابِعُ مِنَ الْبَعِيرِ: الْمَوَاضِعُ الَّتِي يَسِيلُ مِنْهَا عَرَقُهُ. وَمَنَابِعُ الْمَاءِ: مَخَارِجُهُ مِنَ الْأَرْضِ.\nوَالْأُخْرَى النَّبْعُ: شَجَرٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فلانٌ صليب النّبع، وما رأيت أصلب نبعةً منه. وله نبعةٌ تنبيء الأضراس. وهو من نبعة كريمة. وقرعوا النّبع بالنّبع إذا تلاقوا.",
-        "prototipe_benzerlik": 0.21,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلانٌ صليب النّبع، وما رأيت أصلب نبعةً منه. وله نبعةٌ تنبيء الأضراس. وهو من نبعة كريمة. وقرعوا النّبع بالنّبع إذا تلاقوا.",
+        "prototipe_benzerlik": 0.342,
         "halka": "uzak"
       },
       {
-        "cumle": "ونبع من فلان أمرٌ: ظهر. ونبع العرق: رشح. ونضحت نوابع البعير. مسايل عرقه. وفجّر الله ينابيع الحكمة على لسانه.",
-        "prototipe_benzerlik": 0.79,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال:",
+        "prototipe_benzerlik": 0.429,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلما قرعنا النّبع بالنّبع بعضه ... ببعضٍ أبت عيدانه أن تكسّرا",
+        "prototipe_benzerlik": 0.456,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونبع من فلان أمرٌ: ظهر. ونبع العرق: رشح. ونضحت نوابع البعير. مسايل عرقه. وفجّر الله ينابيع الحكمة على لسانه.",
+        "prototipe_benzerlik": 0.708,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.5,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.484,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "point.n.02", "rise.v.01", "rise.v.04", "rise.v.16", "spring.n.03"],
   "muhassas_tasnif": {

@@ -957,29 +957,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "واريته فتوارى. ووري الزند يرى ووريَ يرى، نحو: وليَ يلي. وأوريته. وهل عندك ريّةٌ؟: شيء تورَى به النار من بعرة أو قطنة. ووراه الداء. وبعير موريٌّ. قال: وراهنّ ربّي مثل ما قد ورينني ... وأحمى على أكبادهنّ المكاويا قال النضر: الوريُ شرقق يقع في قصب الرئتين فيقتل. ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "واريته فتوارى. ووري الزند يرى ووريَ يرى، نحو: وليَ يلي. وأوريته. وهل عندك ريّةٌ؟: شيء تورَى به النار من بعرة أو قطنة. ووراه الداء. وبعير موريٌّ. قال:\nوراهنّ ربّي مثل ما قد ورينني ... وأحمى على أكبادهنّ المكاويا\nقال النضر: الوريُ شرقق يقع في قصب الرئتين فيقتل. وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ إذا أراد سفراً ورّى بغيره. وما أدري أيّ الورى هو؟. ويقال: \"\nوراءك أوسع لك \". وقيل للمخبّل: قاوم الزبرقان فقال: إنه أندى مني صوتاً وأكثر مني ريقاً وإني لا أقوم له في المواجهة ولكن دعوني أهاديه الشعر من وراء وراء."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" ورت بك زنادي \" ووريت. قال:",
-        "prototipe_benzerlik": 0.693,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" ورت بك زنادي \" ووريت. قال:",
+        "prototipe_benzerlik": 0.765,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان كثير الرماد، وارى الزناد. واستوريت فلاناً رأياً: سألته أن يورِيه لي، كما يقال: استضيء برأيه. وسمعتهم يقولون: أورنيه. بمعنى أرنيه وهو من الورى أي أبرزه لي. وورى النّقيُ ورياً: خرج منه ودك كثير. وسنامٌ وارٍ. قال الأخطل:",
-        "prototipe_benzerlik": 0.645,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورت بعمرو بن عليّ ناري ... ساعة تبدو أسؤق العذارى",
+        "prototipe_benzerlik": 0.572,
         "halka": "yakın"
       },
       {
-        "cumle": "الناقة التي لقحت أوّل الربيع، والواري وصفٌ للسّديف منصوبٌ أو مجرور على الجوار أو وصفٌ للمربع على معنى النسب أي ذات ورى.",
-        "prototipe_benzerlik": 0.196,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان كثير الرماد، وارى الزناد. واستوريت فلاناً رأياً: سألته أن يورِيه لي، كما يقال: استضيء برأيه. وسمعتهم يقولون: أورنيه. بمعنى أرنيه وهو من الورى أي أبرزه لي. وورى النّقيُ ورياً: خرج منه ودك كثير. وسنامٌ وارٍ. قال الأخطل:",
+        "prototipe_benzerlik": 0.772,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والمطعمين إذا هبت شآمية ... تزجي الجهام سديف المربع الواري",
+        "prototipe_benzerlik": 0.261,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الناقة التي لقحت أوّل الربيع، والواري وصفٌ للسّديف منصوبٌ أو مجرور على الجوار أو وصفٌ للمربع على معنى النسب أي ذات ورى.",
+        "prototipe_benzerlik": 0.147,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.511,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.503,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["disappear.v.01", "disguise.v.01", "hide.v.01"],
   "muhassas_tasnif": {

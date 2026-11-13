@@ -760,11 +760,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.communication",
+    "ince": "complain.v.01",
+    "orta": "verb.communication",
     "ust": "söz ve haber",
-    "dayanak_synset": "grumble.n.02",
-    "dayanak_tanim": "a complaint uttered in a low and indistinct tone",
+    "dayanak_synset": "complain.v.01",
+    "dayanak_tanim": "express complaints, discontent, displeasure, or unhappiness",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -778,19 +778,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ذمره على الأمر: حضّه مع لوم ليجدّ فيه. يقال: القائد يذمر أصحابه في الحرب: يسمعهم المكروه ليشحذهم، ورأيتهم يتذامرون في الحرب. وأقبل يتذمر: يلوم نفسه على التفريط في فعله وهو ينشطها لئلا تفرط ثانية، وفلان يتذمم ويتذمر، ويرفع أذياله ويتشمر. وهو ذمر من الأذمار: شجا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "بلغ الأمر المذمر. كقولهم: بلغ المخنق. قال الجعديّ:",
-        "prototipe_benzerlik": 0.158,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ذمره على الأمر: حضّه مع لوم ليجدّ فيه. يقال: القائد يذمر أصحابه في الحرب: يسمعهم المكروه ليشحذهم، ورأيتهم يتذامرون في الحرب. وأقبل يتذمر: يلوم نفسه على التفريط في فعله وهو ينشطها لئلا تفرط ثانية، وفلان يتذمم ويتذمر، ويرفع أذياله ويتشمر. وهو ذمر من الأذمار: شجاع. وذمر الراعي السليل: مسّ فهقته وهي مغرز الرأس في العنق. وتسمى المذمر ليعلم أذكر هو أم أنثى. قال أحيحة:\nوما تدري إذا ذمرت سقباً ... لغيرك أم يكون لك الفصيل\nوالمذمر للإبل كالقابلة للناس. وهو حامي الذمار إذا حمي ما لو لم يحمه ليم وعنف من حماه وحريمه كقولهم: حامي الحقيقة."
+      },
+      {
+        "kaynak": "Mekâyîs: ذَمَرَ",
+        "metin": "(ذَمَرَ) الذَّالُ وَالْمِيمُ وَالرَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى شِدَّةٍ فِي خَلْقٍ\nوَخُلُقٍ، مِنْ غَضَبٍ وَمَا أَشْبَهَهُ. فَالذِّمْرُ: الرَّجُلُ الشُّجَاعُ. وَكَذَلِكَ الذَّمْرُ الْحَضُّ. وَإِذَا قِيلَ فُلَانٌ يَتَذَمَّرُ، فَكَأَنَّهُ يَلُومُ نَفْسَهُ وَيَتَغَضَّبُ. وَالذِّمَارُ: كُلُّ شَيْءٍ لَزِمَكَ حِفْظُهُ وَالْغَضَبُ لَهُ.\nوَأَمَّا الَّذِي قُلْنَاهُ فِي شِدَّةِ الْخَلْقِ فَالْمُذَمَّرُ، هُوَ الْكَاهِلُ وَالْعُنُقُ وَمَا حَوْلَهُ إِلَى الذِّفْرَى، وَهُوَ أَصْلُ الْعُنُقِ. يَقُولُونَ: ذَمَّرْتُ السَّلِيلَ، إِذَا مَسَِسْتَ قَفَاهُ لِتَنْظُرَ أَذَكَرٌ أَمْ أُنْثَى. قَالَ أُحَيْحَةُ:\nوَمَا تَدْرِي إِذَا ذَمَّرْتَ سَقْبًا ... لِغَيْرِكَ أَوْ [يَكُونُ] لَكَ الْفَصِيلُ\nوَيَقُولُونَ: إِذَا اشْتَدَّ الْأَمْرُ: بَلَغَ الْمُذَمَّرَ. وَيَقُولُونَ رَجُلٌ ذَمِيرٌ وَذَمِرٌ: مُنْكَرٌ. وَتَذَامَرَ الْقَوْمُ، إِذَا حَثَّ بَعْضُهُمْ بَعْضًا. وَمِنَ الْبَابِ: ذَمَرَ الْأَسَدُ: إِذَا زَأَرَ، يَذْمَُرُ ذَمِرَةً."
       }
     ],
-    "ortalama_benzerlik": 0.158,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بلغ الأمر المذمر. كقولهم: بلغ المخنق. قال الجعديّ:",
+        "prototipe_benzerlik": 0.382,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحيّ أبي بكر ولا حيّ مثلهم ... إذا بلغ الأمر العماس المذمرا",
+        "prototipe_benzerlik": 0.729,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.555,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "complain.v.01", "murmur.v.01", "statement.n.01", "wail.v.02"],
   "muhassas_tasnif": {

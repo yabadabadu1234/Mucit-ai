@@ -1923,8 +1923,8 @@
     "ince": "state.n.02",
     "orta": "noun.feeling",
     "ust": "his ve nefis",
-    "dayanak_synset": "fury.n.01",
-    "dayanak_tanim": "a feeling of intense anger",
+    "dayanak_synset": "anger.n.01",
+    "dayanak_tanim": "a strong emotion; a feeling that is oriented toward some real or supposed grievance",
     "synset_sayisi": 26
   },
   "ses_mana_tasnif": {
@@ -1943,19 +1943,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انضمام الشيء على غليظ أو حادٍّ في باطنه يظهر جِرمه أو أَثره: كحَبّ الجُدَرِي والجدري حُمَّى، وكالبَخْصَة في العين، والصَخْرَة الموصوفة في جسم الجَبَل، والجلود المذكورة غليظة السمك أو مغلّظتُه. وكالبَصَر الرمِد الوارم، والحية بسُمّها المختزن. ومنه: الغَضَب: ضدّ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انضمام الشيء على غليظ أو حادٍّ في باطنه يظهر جِرمه أو أَثره: كحَبّ الجُدَرِي والجدري حُمَّى، وكالبَخْصَة في العين، والصَخْرَة الموصوفة في جسم الجَبَل، والجلود المذكورة غليظة السمك أو مغلّظتُه. وكالبَصَر الرمِد الوارم، والحية بسُمّها المختزن. ومنه: الغَضَب: ضدُّ الرضا وهو امتلاء النفس بالحدة والجفاء لأمر ما: {وَإِذَا مَا غَضِبُوا هُمْ يَغْفِرُونَ} [الشورى: 37]، وكل ما في القرآن من التركيب فهو من الغضب بهذا المعنى: {إِذْ ذَهَبَ مُغَاضِبًا} [الأنبياء: 87] (أي مغاضبًا قومه لعدم قبولهم دعوته إياهم إلى اللَّه)، {غَيْرِ (3/1588) الْمَغْضُوبِ عَلَيْهِمْ} [الفاتحة: 7] (وردت أحاديث صحيحة أن المراد اليهود [ينظر طب 1/ 185 - 188] وهذا لا ينافي العموم). ومن مادي الأصل أيضًا قالوا: \"الغَضْب -بالفتح: الأسد، والثور \" (وهما من الامتلاء بالحدة والغلظ). ثم من الأصل قالوا: \"الغَضْب -بالفتح: الشديد الحمرة أو الأحمر الغليظ \". [ق] (فالحمرة أشد الألوان وَقْعا، وتركيب (حمر) فيه معنى الشدة (ينظر)، كما أن صلة الحمرة بالورم والغضب ونحو الجدري واضحة)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قالوا: غضبت لفلان إذا كان حياً،\nوغضبت به إذا كان ميتاً. وأنشدوا لدريد ابن الصمة:\nفإن تعقب الأيام والدهر تعلموا ... بني قاربٍ أنّا غضاب بمعبد\nوللشماخ:\nوقد أتاني بأن قد كنت تغضب لي ... ووقعة منك حق غير إبراق\nفسرني ذاك حتى كدت من فرح ... أساور الطود أو أرمي بأرواق\nوتقول: فلان من المغضوب عليهم أي من اليهود."
+      },
+      {
+        "kaynak": "Mekâyîs: غَضَبَ",
+        "metin": "(غَضَبَ) الْغَيْنُ وَالضَّادُ وَالْبَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى شِدَّةٍ وَقُوَّةٍ. يُقَالُ: إِنَّ الْغَضْبَةَ: الصَّخْرَةُ الصُّلْبَةُ. قَالُوا: وَمِنْهُ اشْتُقَّ الْغَضَبُ، لِأَنَّهُ اشْتِدَادُ السُّخْطِ. يُقَالُ: غَضِبَ يَغْضَبُ غَضَبًا، وَهُوَ غَضْبَانُ وَغَضُوبٌ. وَيُقَالُ: غَضِبْتُ لِفُلَانٍ، إِذَا كَانَ حَيًّا ; وَغَضِبْتُ بِهِ، إِذَا كَانَ مَيِّتًا. قَالَ دُرَيْدٌ:\nأَنَّا غِضَابٌ بِمَعْبَدِ\nوَيُقَالُ: إِنَّ الْغَضُوبَ: الْحَيَّةُ الْعَظِيمَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "غضبت له قوائم عوج",
-        "prototipe_benzerlik": 0.114,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول أبي النجم:",
+        "prototipe_benzerlik": 0.332,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يغضب أحياناً على اللجام ... كغضب النار على الضرام",
+        "prototipe_benzerlik": 0.437,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقوله:",
+        "prototipe_benzerlik": 0.622,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غضبت له قوائم عوج",
+        "prototipe_benzerlik": 0.259,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.114,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.413,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "anger.v.01",

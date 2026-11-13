@@ -735,34 +735,76 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ضع القتب على الحمولة، وضع القتب على السانية، فالقتب: واحد الأقتاب وهي الأكف التي توضع على تقالة الأحمال، والقتب بالكسر: واحد الأقتاب وهي أكفٌ صغار توضع على السواني. قال لبيد: حتى تحيرت الدبار كأنها ... زلف والقى قتبها المحزوم وأقتبت البعير إذا شدّدت عليه القتب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ضع القتب على الحمولة، وضع القتب على السانية، فالقتب: واحد الأقتاب وهي الأكف التي توضع على تقالة الأحمال، والقتب بالكسر: واحد الأقتاب وهي أكفٌ صغار توضع على السواني. قال لبيد:\nحتى تحيرت الدبار كأنها ... زلف والقى قتبها المحزوم\nوأقتبت البعير إذا شدّدت عليه القتب، أو القتب لغة تميم، وقيس على قتبت: ولفلان قتوبة: إبل تقتب. وفلان مبعوج يجرّ أقتابه: أمعاءه جمع قتب بالكسر."
+      },
+      {
+        "kaynak": "Mekâyîs: قَتَبَ",
+        "metin": "(قَتَبَ) الْقَافُ وَالتَّاءُ وَالْبَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى آلَةٍ مِنْ آلَاتِ الرِّحَالِ أَوْ غَيْرِهَا. فَالْقَتَبُ لِلْجَمَلِ مَعْرُوفٌ. وَيُقَالُ لِلْإِبِلِ تُوضَعُ عَلَيْهَا أَحْمَالُهَا: قَتُوبَةٌ. قَالَ ابْنُ دُرَيْدٍ: [الْقَتَبُ] : قَتَبَ الْبَعِيرُ، إِذَا كَانَ مِمَّا يُحْمَلُ عَلَيْهِ، فَإِنْ كَانَ مِنْ آلَةِ السَّانِيَةِ فَهُوَ قِتْبٌ بِكَسْرِ الْقَافِ. وَأَمَّا الْأَقْتَابُ فَهِيَ الْأَمْعَاءُ، وَاحِدُهَا قَتْبٌ، وَتَصْغِيرُهَا قُتَيْبَةٌ، وَذَلِكَ عَلَى مَعْنَى التَّشْبِيهِ بِأَقْتَابِ الرِّحَالِ.\n[بَابُ الْقَافِ وَالثَّاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قولهم للملح: هو قتب يعض بالغارب، وقتب ملحاح. قال النابغة الذبيانيّ:",
-        "prototipe_benzerlik": 0.622,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم للملح: هو قتب يعض بالغارب، وقتب ملحاح. قال النابغة الذبيانيّ:",
+        "prototipe_benzerlik": 0.669,
         "halka": "yakın"
       },
       {
-        "cumle": "وأقتبت زيداً يميناً، وأقتبته في اليمين إذا غلظت عليه وألححت كأنما وضعت عليه قتباً. وأقتبه الدّين: فدحه. قال:",
-        "prototipe_benzerlik": 0.306,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فاستبق ودّك للصديق ولا تكن ... قتباً يعضّ بغارب ملحاحاً",
+        "prototipe_benzerlik": 0.536,
+        "halka": "yakın"
       },
       {
-        "cumle": "وتقول: كأني لهم قتوبه، وكأن مؤنهم عليّ مكتوبه. وفي كاهل الفرس تقتيب: جنّأٌ. قال:",
-        "prototipe_benzerlik": 0.331,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال البعيث:",
+        "prototipe_benzerlik": 0.405,
         "halka": "orta"
       },
       {
-        "cumle": "ورجل مقتب الكاهل.",
-        "prototipe_benzerlik": 0.256,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألد إذا لاقيت قوماً بخطة ... ألح على أكتافهم قتب عقر",
+        "prototipe_benzerlik": 0.453,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأقتبت زيداً يميناً، وأقتبته في اليمين إذا غلظت عليه وألححت كأنما وضعت عليه قتباً. وأقتبه الدّين: فدحه. قال:",
+        "prototipe_benzerlik": 0.435,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إليك أشكو ثقل دينٍ أقتبا ... ظهري بأقتابٍ تركن جلبا",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول: كأني لهم قتوبه، وكأن مؤنهم عليّ مكتوبه. وفي كاهل الفرس تقتيب: جنّأٌ. قال:",
+        "prototipe_benzerlik": 0.379,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكاهل أفرغ فيه مع الإ ... فراغ إشراف وتقتيب",
+        "prototipe_benzerlik": 0.845,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل مقتب الكاهل.",
+        "prototipe_benzerlik": 0.4,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.379,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.508,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

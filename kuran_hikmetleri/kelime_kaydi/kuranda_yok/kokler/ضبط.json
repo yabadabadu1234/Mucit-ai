@@ -1911,8 +1911,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "control.n.05",
-    "dayanak_tanim": "the activity of managing or exerting control over something",
+    "dayanak_synset": "alignment.n.04",
+    "dayanak_tanim": "the act of adjusting or aligning the parts of a device in relation to each other",
     "synset_sayisi": 23
   },
   "ses_mana_tasnif": {
@@ -1926,19 +1926,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ضبط الشيء: لزمه لزوماً شديداً \" وهو أضبط من الأعمى \" \" وأضبط من نملة \" وأخذه فتأبطه، ثم تضبطه. وتضبط الذراع الشاقول حتى يمد الحبل. وكان عمر رضي الله تعالى عه: أضبط وهو الأعسر اليسر. قال الكميت: هو الأضبط الهواس فينا شجاعة ... وفيمن يعاديه الهجف المثقل وقال معن",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "هو ضابط للأمور. وفلان لا يضبط عمله: لا يقوم بما فوض إليه، ولا يضبط قراءته: لا يحسنها. وبلد مضبوط مطراً: معموم بالمطر.",
-        "prototipe_benzerlik": 0.517,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ضبط الشيء: لزمه لزوماً شديداً \" وهو أضبط من الأعمى \" \" وأضبط من نملة \" وأخذه فتأبطه، ثم تضبطه. وتضبط الذراع الشاقول حتى يمد الحبل. وكان عمر رضي الله تعالى عه: أضبط وهو الأعسر اليسر. قال الكميت:\nهو الأضبط الهواس فينا شجاعة ... وفيمن يعاديه الهجف المثقل\nوقال معن بن أوس:\nعذافرة ضبطاء تخدي كأنها ... فنيق غداً يحمي السوام السوارحا"
+      },
+      {
+        "kaynak": "Mekâyîs: ضَبَطَ",
+        "metin": "(ضَبَطَ) الضَّادُ وَالْبَاءُ وَالطَّاءُ أَصْلٌ صَحِيحٌ. ضَبَطَ الشَّيْءَ ضَبْطًا. وَالْأَضْبَطُ: الَّذِي يَعْمَلُ بِيَدَيْهِ جَمِيعًا. وَيُقَالُ: نَاقَةٌ ضَبْطَاءُ. قَالَ:\nعُذَافِرَةٌ ضَبْطَاءُ تَخْدِي كَأَنَّهَا ... فَنِيقٌ غَدَا يَحْوِي السَّوَامَ السَّوَارِحَا\nوَفِي الْحَدِيثِ: «أَنَّهُ سُئِلَ عَنِ الْأَضْبَطِ» ."
       }
     ],
-    "ortalama_benzerlik": 0.517,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو ضابط للأمور. وفلان لا يضبط عمله: لا يقوم بما فوض إليه، ولا يضبط قراءته: لا يحسنها. وبلد مضبوط مطراً: معموم بالمطر.",
+        "prototipe_benzerlik": 0.527,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.527,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

@@ -727,29 +727,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ناقة بكىء: قليلة اللبن، وقد بكؤت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ناقة بكىء: قليلة اللبن، وقد بكؤت."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بكؤت العين: قل ماؤها وركي بكي، وبكؤت عيني وعيون بكاء: قل دمعها، وألسنة بكاء: قل كلامها، وأيد بكاء: قل عطاؤها. تقول: عيونهم بكاء، ما بهم بكاء. وقد أبكأ فلان: صار ذا بكء وقلة خير. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بكؤت العين: قل ماؤها وركي بكي، وبكؤت عيني وعيون بكاء: قل دمعها، وألسنة بكاء: قل كلامها، وأيد بكاء: قل عطاؤها. تقول: عيونهم بكاء، ما بهم بكاء. وقد أبكأ فلان: صار ذا بكء وقلة خير. قال رؤبة:",
         "prototipe_benzerlik": 0.407,
         "halka": "orta"
       },
       {
-        "cumle": "يرجوك إذ أبكأ كل رافد",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هل لك في ذي شيبة مجاهد ... على عيال في زمان جاحد",
+        "prototipe_benzerlik": 0.319,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يرجوك إذ أبكأ كل رافد",
         "prototipe_benzerlik": 0.485,
         "halka": "orta"
       },
       {
-        "cumle": "ونحن معاشر الأنبياء فينا بكء أي قلة كلام.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونحن معاشر الأنبياء فينا بكء أي قلة كلام.",
         "prototipe_benzerlik": 0.26,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.384,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.368,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,49 +37,90 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قبض الرهن والرهون والرهان والرهن، واسترهنني فرهنته ضيعتي، ورهنتها عنده، ورهنتها إياه فارتهنها مني، وراهنته على كذا رهاناً ومراهنة، وتراهنا عليه إذا تواضعا الرهون، وسبق يوم الرهان.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قبض الرهن والرهون والرهان والرهن، واسترهنني فرهنته ضيعتي، ورهنتها عنده، ورهنتها إياه فارتهنها مني، وراهنته على كذا رهاناً ومراهنة، وتراهنا عليه إذا تواضعا الرهون، وسبق يوم الرهان."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جاءا فرسي رهان: متساويين. وإني لك رهن بكذا ورهينة به أي أنا ضامن له. وأنشد أبو زيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جاءا فرسي رهان: متساويين. وإني لك رهن بكذا ورهينة به أي أنا ضامن له. وأنشد أبو زيد:",
         "prototipe_benzerlik": 0.668,
         "halka": "yakın"
       },
       {
-        "cumle": "رهن لها بالرّيّ غير الكاذب",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إني ودلويّ لها وصاحبي ... وحوضها الأفيح ذا النضائب",
+        "prototipe_benzerlik": 0.603,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رهن لها بالرّيّ غير الكاذب",
         "prototipe_benzerlik": 0.41,
         "halka": "orta"
       },
       {
-        "cumle": "إن كفّي لك رهن بالرضا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.544,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن كفّي لك رهن بالرضا",
         "prototipe_benzerlik": 0.574,
         "halka": "yakın"
       },
       {
-        "cumle": "ورجله رهينة أي مقيّدة. قال السمهريّ بن أسد العكليّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجله رهينة أي مقيّدة. قال السمهريّ بن أسد العكليّ:",
         "prototipe_benzerlik": 0.582,
         "halka": "yakın"
       },
       {
-        "cumle": "وفلان رهن بكذا ورهين ورهينة، ومرتهن به: مأخوذ به \" كل امريء بما كسب رهين \" \" كل نفس بما كسبت رهينة \" والإنسان رهن عمله. والخلق رهائن الموت. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لقد طرقت ليلي ورجلي رهينة ... فما راعني في السجن إلا سلامها",
+        "prototipe_benzerlik": 0.393,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان رهن بكذا ورهين ورهينة، ومرتهن به: مأخوذ به \" كل امريء بما كسب رهين \" \" كل نفس بما كسبت رهينة \" والإنسان رهن عمله. والخلق رهائن الموت. قال:",
         "prototipe_benzerlik": 0.585,
         "halka": "yakın"
       },
       {
-        "cumle": "ورهن يده المنية إذا استمات. قال الأخطل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أبعد الذي بالنعف نعف كويكب ... رهينة رمس ذي تراب وجندل",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورهن يده المنية إذا استمات. قال الأخطل:",
         "prototipe_benzerlik": 0.609,
         "halka": "yakın"
       },
       {
-        "cumle": "ونعمة الله راهنة: دائمة. وهذا الشيء راهن لك: معدّ. وطعام راهن، وكأس راهنة: دائمة لا تنقطع، وأرهن لضيفه الطعام والشراب: أجامهما. ورهن بالمكان: ثبت وأقام. وأرهن الميت القبر ضمنه إياه وألزمه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولقد رهنت يدي المنية معلما ... وحملت حين تواكل الحمال",
+        "prototipe_benzerlik": 0.539,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونعمة الله راهنة: دائمة. وهذا الشيء راهن لك: معدّ. وطعام راهن، وكأس راهنة: دائمة لا تنقطع، وأرهن لضيفه الطعام والشراب: أجامهما. ورهن بالمكان: ثبت وأقام. وأرهن الميت القبر ضمنه إياه وألزمه.",
         "prototipe_benzerlik": 0.606,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.576,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.544,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1526,8 +1526,8 @@
     "ince": "state.n.02",
     "orta": "noun.state",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "growth.n.06",
-    "dayanak_tanim": "(pathology) an abnormal proliferation of tissue (as in a tumor)",
+    "dayanak_synset": "tumor.n.01",
+    "dayanak_tanim": "an abnormal new mass of tissue that serves no purpose",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1541,19 +1541,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ورم جلده، وفيه ورم وأورام، وتورّم وجهه، وأصبح مورّماً.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ورم جلده، وفيه ورم وأورام، وتورّم وجهه، وأصبح مورّماً."
+      },
+      {
+        "kaynak": "Mekâyîs: وَرَمَ",
+        "metin": "(وَرَمَ) الْوَاوُ وَالرَّاءُ وَالْمِيمُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْوَرَمُ، أَنْ يَنْفِرَ اللَّحْمُ. يُقَالُ وَرِمَ يَرِمُ. وَعَلَى مَعْنَى الِاسْتِعَارَةِ: وَرِمَ أَنْفُهُ: غَضِبَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ورم أنفه إذا غضب. وفي حديث أبي بكر رضي الله عنه: \" فكلكم ورِم أنفه أن يكون له الأمر من دونه \". وشجر وارم: كثير مجتمع. قال الجعديّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورم أنفه إذا غضب. وفي حديث أبي بكر رضي الله عنه: \" فكلكم ورِم أنفه أن يكون له الأمر من دونه \". وشجر وارم: كثير مجتمع. قال الجعديّ:",
         "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فتسامى زمخريّ وارم ... مالت الأعراف منه واكتهل",
+        "prototipe_benzerlik": 0.186,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا يمسك ماءه.",
+        "prototipe_benzerlik": -0.058,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.163,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.097,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "bump.v.01", "condition.n.01", "decay.v.02", "solid.n.03"],
   "muhassas_tasnif": {

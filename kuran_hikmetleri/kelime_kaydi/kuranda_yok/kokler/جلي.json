@@ -800,24 +800,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جليت فلانة على زوجها أحسن جلوة، فاجتلاها وتجلاّها، وأعطى العروس جلوتها وجلوتها وهي ما يعطيها عند الزفاف. ويقال: ما جلوتك؟ فتقول: وصيف. ونظرت إلى مجاليها. وجلا الصقل السيف والمرآة جلاء. ومرآة مجلوة. وسيفي عند الجلاء. وهذا دواء يجلو البصر. وجلا لي الشيء وانجلى و",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "هو ابن جلا: للرجل المشهور أي ابن رجل قد وضح أمره وشهر. وما جلاؤك؟ أي ما اسمك. وما أقمت عنده إلا جلاء يوم واحد أي",
-        "prototipe_benzerlik": 0.154,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "بياضه. وانجلت عنه الهموم. وقد أجلوا الهموم بكذا. وجلا الله عنك المرض. وهذا أمر جلي غير خفيّ. وأخبرني عن جلية الأمر وهي ما ظهر من حقيقته.",
-        "prototipe_benzerlik": 0.062,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جليت فلانة على زوجها أحسن جلوة، فاجتلاها وتجلاّها، وأعطى العروس جلوتها وجلوتها وهي ما يعطيها عند الزفاف. ويقال: ما جلوتك؟ فتقول: وصيف. ونظرت إلى مجاليها. وجلا الصقل السيف والمرآة جلاء. ومرآة مجلوة. وسيفي عند الجلاء. وهذا دواء يجلو البصر. وجلا لي الشيء وانجلى وتجلّى، وجلاّه لي فلان. وجلوا عن بلادهم جلاءً. ووقع عليهم الجلاء. وأجليناهم عنها وجلوناهم. ويقال للقوم إذا كانوا مقبلين على شيء محدقين به ثم انكشفوا عنه: قد أفرجوا عنه وأجلوا عنه. يقال: أجلوا عن قتيل. ورجل أجلى الجبين، وبه جلاً."
       }
     ],
-    "ortalama_benzerlik": 0.108,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو ابن جلا: للرجل المشهور أي ابن رجل قد وضح أمره وشهر. وما جلاؤك؟ أي ما اسمك. وما أقمت عنده إلا جلاء يوم واحد أي",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بياضه. وانجلت عنه الهموم. وقد أجلوا الهموم بكذا. وجلا الله عنك المرض. وهذا أمر جلي غير خفيّ. وأخبرني عن جلية الأمر وهي ما ظهر من حقيقته.",
+        "prototipe_benzerlik": 0.401,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.402,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["clearness.n.02", "noticed.a.01", "polish.v.01"],
   "muhassas_tasnif": {

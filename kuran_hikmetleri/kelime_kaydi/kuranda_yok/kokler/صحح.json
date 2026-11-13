@@ -2865,11 +2865,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "quality.n.01",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "authenticity.n.01",
-    "dayanak_tanim": "undisputed credibility",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "correction.n.01",
+    "dayanak_tanim": "the act of offering an improvement to replace a mistake; setting right",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -2888,34 +2888,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "كون الشيء متماسكًا على ما ينبغي من حاله عِرَضًا وجفافًا دون تشقُّقٍ أو نحوه (1): كالأرض والطريق المذكورين يتميزان بالتماسك",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "كون الشيء متماسكًا على ما ينبغي من حاله عِرَضًا وجفافًا دون تشقُّقٍ أو نحوه (1): كالأرض والطريق المذكورين يتميزان بالتماسك"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "صحّ من علته، ورجل صحيح وصحاح، وقوم صحاح وأصحاء وأصحّة. \" والسفر مصحة \". وهو صحيح مصح: صحيح أهله وماله، وقد أصح القوم وهم مصحون. وفي الحديث \" لا يوردنّ ذو عاهة على مصح \" وأصحّه الله تعالى وصحّحه، وأصح الله تعالى بدنك وصحّح جسمك. وسرنا في صحصح من الأرض وصحصحان وفي صحاصح."
+      },
+      {
+        "kaynak": "Mekâyîs: صَحَّ",
+        "metin": "(صَحَّ) الصَّادُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى الْبَرَاءَةِ مِنَ الْمَرَضِ وَالْعَيْبِ، وَعَلَى الِاسْتِوَاءِ. مِنْ ذَلِكَ الصِّحَّةُ: ذَهَابُ السُّقْمِ، وَالْبَرَاءَةُ مِنْ كُلِّ عَيْبٍ. وَالصَّحِيحُ وَالصِّحَاحُ بِمَعْنًى. وَالْمُصِحُّ: الَّذِي أَهْلُهُ وَإِبِلُهُ صِحَاحٌ وَأَصِحَّاءُ. قَالَ رَسُولُ اللَّهِ - صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ -: «لَا يُورِدَنَّ ذُو عَاهَةٍ عَلَى مُصِحٍّ» ، أَيِ الَّذِي إِبِلُهُ صِحَاحٌ. وَالصَّحْصَحُ وَالصَّحْصَحَانُ وَالصَّحْصَاحُ: الْمَكَانُ الْمُسْتَوِي."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "صحّ عند القاضي حقه وصحت شهادته. وصح لي على فلان كذا. وصح قوله، وأنا أستصح ما يقول. وتقول: مذهب أهل العدل هو المذهب الصحيح، وهو الحق الصريح. وسائر المذاهب ترهات صحاصح، لا سدائد ولا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صحّ عند القاضي حقه وصحت شهادته. وصح لي على فلان كذا. وصح قوله، وأنا أستصح ما يقول. وتقول: مذهب أهل العدل هو المذهب الصحيح، وهو الحق الصريح. وسائر المذاهب ترهات صحاصح، لا سدائد ولا",
         "prototipe_benzerlik": 0.271,
         "halka": "uzak"
       },
       {
-        "cumle": "صحائح. قال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صحائح. قال ابن مقبل:",
         "prototipe_benzerlik": 0.294,
         "halka": "uzak"
       },
       {
-        "cumle": "وهي الأباطيل التي لا أصل لها، ومثله: \" جاء بالترهات البسابس \"، وفلان مصحصح: يأتي بالأباطيل. قال مليح الهذلي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما ذكره دهماء بعد مزارها ... بنجران إلا الترهات الصحاصح",
+        "prototipe_benzerlik": 0.111,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهي الأباطيل التي لا أصل لها، ومثله: \" جاء بالترهات البسابس \"، وفلان مصحصح: يأتي بالأباطيل. قال مليح الهذلي:",
         "prototipe_benzerlik": 0.461,
         "halka": "orta"
       },
       {
-        "cumle": "ويلحاك في ليلى العريف المصحصح",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويلحاك في ليلى العريف المصحصح",
         "prototipe_benzerlik": 0.231,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.314,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.274,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "accompany.v.02",

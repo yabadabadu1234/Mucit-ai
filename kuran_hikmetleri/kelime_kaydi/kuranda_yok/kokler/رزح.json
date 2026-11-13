@@ -708,19 +708,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بعير رازح: ألقى نفسه من الإعياء وقيل هو الشديد الهزال وبه حراك، وإبل رزح وروازح ورزحى ورزاحي ومرازيح، وقد رزحت رزوحاً، وبعير مطلح مرزح، وقد رزّحته الأسفار.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بعير رازح: ألقى نفسه من الإعياء وقيل هو الشديد الهزال وبه حراك، وإبل رزح وروازح ورزحى ورزاحي ومرازيح، وقد رزحت رزوحاً، وبعير مطلح مرزح، وقد رزّحته الأسفار."
+      },
+      {
+        "kaynak": "Mekâyîs: رَزَحَ",
+        "metin": "(رَزَحَ) الرَّاءُ وَالزَّاءُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى ضَعْفٍ وَفُتُورٍ. فَيَقُولُونَ رَزَحَ، إِذَا أَعْيَا; وَهِيَ إِبِلٌ مَرَازِيحُ، وَرَزْحَى، وَرَزَاحَى. وَيَقُولُونَ إِنَّ أَصْلَهُ الْمِرْزَحُ، وَهُوَ مَا تَوَاضَعَ مِنَ الْأَرْضِ وَاطْمَأَنَّ.\nوَذُكِرَ فِي الْبَابِ كَلَامٌ آخَرُ لَيْسَ مِنَ الْقِيَاسِ الْمَذْكُورِ، قَالَ الشَّيْبَانِيُّ:\nالْمِرْزِيحُ: الصَّوْتُ. قَالَ:\nذَرْ ذَا وَلَكِنْ تَبَصَّرْ هَلْ تَرَى ظُعُنًا ... تُحْدَى، لِسَاقَتِهَا بِالدَّوِّ مِرْزِيحُ\n[بَابُ الرَّاءِ وَالسِّينِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رزحت حاله، وله حال رازحة، وترازحت أحواله، وتقول: من كانت أمواله متنازحة، كانت أحواله مترازحة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رزحت حاله، وله حال رازحة، وترازحت أحواله، وتقول: من كانت أمواله متنازحة، كانت أحواله مترازحة.",
         "prototipe_benzerlik": 0.452,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.452,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

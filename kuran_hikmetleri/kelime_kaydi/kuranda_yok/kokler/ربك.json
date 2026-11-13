@@ -1445,19 +1445,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ربك الثريد ولبكه: خلطه وأصلحه فارتبك. وصنعوا له الربيكة وهي طعام يعمل من تمر وأقط وسمن إلا أنه رخو ليس كالحيس. ومنهال المثل: \" غرثان فاربكوا له \" أي اعملوا له الربيكة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ربك الثريد ولبكه: خلطه وأصلحه فارتبك. وصنعوا له الربيكة وهي طعام يعمل من تمر وأقط وسمن إلا أنه رخو ليس كالحيس. ومنهال المثل: \" غرثان فاربكوا له \" أي اعملوا له الربيكة."
+      },
+      {
+        "kaynak": "Mekâyîs: رَبَكَ",
+        "metin": "(رَبَكَ) الرَّاءُ وَالْبَاءُ وَالْكَافُ كَلِمَةٌ تَدُلُّ عَلَى خَلْطٍ وَاخْتِلَاطٍ. فَالرَّبْكُ: إِصْلَاحُ الثَّرِيدِ وَخَلْطُهُ. وَيُقَالُ لَهُ حِينَ يُفْعَلُ بِهِ ذَلِكَ الرَّبِيكَةُ. وَيُقَالُ ارْتَبَكَ فِي الْأَمْرِ، إِذَا لَمْ يَكَدْ يَتَخَلَّصُ مِنْهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ارتبك في الوحل: نشب فيه. وارتبك في الأمر، وارتبك في كلامه: تتعتع فيه. والصيد يرتبك في الحبالة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ارتبك في الوحل: نشب فيه. وارتبك في الأمر، وارتبك في كلامه: تتعتع فيه. والصيد يرتبك في الحبالة.",
         "prototipe_benzerlik": 0.479,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.479,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

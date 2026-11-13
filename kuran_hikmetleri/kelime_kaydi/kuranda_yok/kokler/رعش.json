@@ -1013,11 +1013,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.feeling",
-    "ust": "his ve nefis",
-    "dayanak_synset": "frisson.n.01",
-    "dayanak_tanim": "an almost pleasurable sensation of fright",
+    "ince": "tremble.v.01",
+    "orta": "verb.motion",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "tremble.v.01",
+    "dayanak_tanim": "move or jerk quickly and involuntarily up and down or sideways",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1031,19 +1031,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شيخ رعش ومرعش وقد رعش رعشاً، وأرعشه الكبر ورعشه، وأرعشت يداه. وتقول: ارتعدت مفاصله، وارتعشت أنامله؛ وفلان يرتعش رأسه من الكبر ويرجف، وبه رعشة ورعاش.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شيخ رعش ومرعش وقد رعش رعشاً، وأرعشه الكبر ورعشه، وأرعشت يداه. وتقول: ارتعدت مفاصله، وارتعشت أنامله؛ وفلان\nيرتعش رأسه من الكبر ويرجف، وبه رعشة ورعاش."
+      },
+      {
+        "kaynak": "Mekâyîs: رَعَشَ",
+        "metin": "(رَعَشَ) الرَّاءُ وَالْعَيْنُ وَالشِّينُ فِي مَعْنَى الْبَابِ قَبْلَهُ مِنَ الِاضْطِرَابِ وَالِارْتِعَادِ. وَرَجُلٌ جَبَانٌ رَعِشٌ. وَجَمَلٌ رَعْشَنٌ، وَذَلِكَ اهْتِزَازُهُ فِي سَيْرِهِ وَالنُّونُ زَائِدَةٌ. وَالرَّعْشَاءُ مِنَ النَّعَامِ: السَّرِيعَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان رعش اليدين: جبان. وإنه لرعش إلى القتال وإلى المعروف: سريع إليه. وبه رعشة إلى لقاء العدوّ. وأرعشته الحرب: أعجلته. ودابة رعشاء: متنفضة من شهامتها ونشاطها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان رعش اليدين: جبان. وإنه لرعش إلى القتال وإلى المعروف: سريع إليه. وبه رعشة إلى لقاء العدوّ. وأرعشته الحرب: أعجلته. ودابة رعشاء: متنفضة من شهامتها ونشاطها.",
         "prototipe_benzerlik": 0.331,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.331,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "feeling.n.01",

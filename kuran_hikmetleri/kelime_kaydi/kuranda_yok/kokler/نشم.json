@@ -756,34 +756,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نشّم اللحم: أخذ يروح. قال علقمة: وقد أصاحب فتياناً طعامهم ... خضر المزاد ولحم فيه تنشيم أي يطعمون الماء المطحلب أو الفظوظ واللحم المروح، غلّب فقال: طعامهم. ومعه زوراء من نشمٍ وهو شجر تعمل منه القسيّ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "نشّموا في الشرّ. \" ودقّوا بينهم عطر منشم \". وتقول: نشّموا وأنبضوا النّشم، ليدقّوا بينهم عطر منشم.",
-        "prototipe_benzerlik": 0.356,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نشّم اللحم: أخذ يروح. قال علقمة:\nوقد أصاحب فتياناً طعامهم ... خضر المزاد ولحم فيه تنشيم\nأي يطعمون الماء المطحلب أو الفظوظ واللحم المروح، غلّب فقال: طعامهم. ومعه زوراء من نشمٍ وهو شجر تعمل منه القسيّ."
       },
       {
-        "cumle": "ورجل نشوان بيّن النشوة، وامرأة نشوى، وقوم نشاوى، وقد انتشوا، ووجدت منه نشوة المسك بالكسر ونشا المسك. قال:",
+        "kaynak": "Mekâyîs: نَشَمَ",
+        "metin": "(نَشَمَ) النُّونُ وَالشِّينُ وَالْمِيمُ يَدُلُّ عَلَى نُشُوبِ شَيْءٍ. وَنَشَّمُوا فِي الْأَمْرِ: أَخَذُوا فِيهِ. وَيُقَالُ لَا يَكُونُ ذَلِكَ إِلَّا فِي الشَّرِّ. وَفِي الْحَدِيثِ: «لَمَّا نَشَّمَ النَّاسُ فِي أَمْرِ عُثْمَانَ &quot;،» أَيْ أَخَذُوا فِيهِ وَنَالُوا مِنْهُ. وَنَشَّمَ اللَّحْمُ تَنْشِيمًا، أَيِ ابْتَدَأَتْ فِيهِ رَائِحَةٌ.\nوَشَذَّ عَنْهُ النَّشَمُ: شَجَرٌ يُتَّخَذُ مِنْهُ الْقِسِيُّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نشّموا في الشرّ. \" ودقّوا بينهم عطر منشم \". وتقول: نشّموا وأنبضوا النّشم، ليدقّوا بينهم عطر منشم.",
+        "prototipe_benzerlik": 0.356,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ش",
+        "prototipe_benzerlik": 0.6,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل نشوان بيّن النشوة، وامرأة نشوى، وقوم نشاوى، وقد انتشوا، ووجدت منه نشوة المسك بالكسر ونشا المسك. قال:",
         "prototipe_benzerlik": 0.584,
         "halka": "yakın"
       },
       {
-        "cumle": "ونشيت منه ريحاً طيّبة واستنشيت. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وينشى نشا المسك في فأرة ... وريح الخزامى على الأجرع",
+        "prototipe_benzerlik": 0.219,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونشيت منه ريحاً طيّبة واستنشيت. قال:",
         "prototipe_benzerlik": 0.506,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونشيت ريح الموت من تلقائهم ... ةوخشيت وقع مهندٍ قرضاب",
+        "prototipe_benzerlik": 0.615,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن المجاز: من أين نشيت هذا الخبر؟ وهو نشيان للأخبار ونشوان، وإنه لذو نشوة للأخبار بالكسر.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: من أين نشيت هذا الخبر؟ وهو نشيان للأخبار ونشوان، وإنه لذو نشوة للأخبار بالكسر.",
         "prototipe_benzerlik": 0.288,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.434,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.452,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

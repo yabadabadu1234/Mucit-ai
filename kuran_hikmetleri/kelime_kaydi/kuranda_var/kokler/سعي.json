@@ -1058,8 +1058,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "attempt.n.01",
-    "dayanak_tanim": "earnest and conscientious activity intended to do or accomplish something",
+    "dayanak_synset": "course.n.04",
+    "dayanak_tanim": "a mode of action",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1073,29 +1073,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سعى إلى المسجد. وهو يسعى إلى الغاية، وتساعوا إليها. وساعيته: سعيت معه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سعى إلى المسجد. وهو يسعى إلى الغاية، وتساعوا إليها. وساعيته: سعيت معه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو يسعى على عياله: يكسب لهم ويقوم بمصالحهم. قال قيس بن الأسلت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو يسعى على عياله: يكسب لهم ويقوم بمصالحهم. قال قيس بن الأسلت:",
         "prototipe_benzerlik": 0.6,
         "halka": "yakın"
       },
       {
-        "cumle": "وهو من أهل المساعي وهي المكارم، وهل مسعاة",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أسعى على جل بني مالك ... كل امريء في شأنه ساع",
+        "prototipe_benzerlik": 0.408,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو من أهل المساعي وهي المكارم، وهل مسعاة",
         "prototipe_benzerlik": 0.461,
         "halka": "orta"
       },
       {
-        "cumle": "جميلة. وسعى العيد في قيمته سعاية، واستسعاه سيده. وسعى به إلى السلطان: وشى به سعاية. وهو ساع من السعاة. وسعى على قومه سعاية. وبعث على السعاية وهي العمل على الصدقات. وأسعاه السلطان عليهم وعلى صدقاتهم. وأمة فلان مساعية: زانية، وكان الإماء يساعين في الجاهلية، وفلان يساعي اماء: يزانيهن.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جميلة. وسعى العيد في قيمته سعاية، واستسعاه سيده. وسعى به إلى السلطان: وشى به سعاية. وهو ساع من السعاة. وسعى على قومه سعاية. وبعث على السعاية وهي العمل على الصدقات. وأسعاه السلطان عليهم وعلى صدقاتهم. وأمة فلان مساعية: زانية، وكان الإماء يساعين في الجاهلية، وفلان يساعي اماء: يزانيهن.",
         "prototipe_benzerlik": 0.258,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.44,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.432,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "horary.a.01", "ordering.n.01", "pursue.v.02", "tell.v.02", "try.v.01", "worker.n.01"],
   "muhassas_tasnif": {

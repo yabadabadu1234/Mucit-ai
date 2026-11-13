@@ -689,24 +689,54 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حذم الشيء: أسرع قطعه. وحذم في مشيته وقراءته: أسرع، ومر يحذم. وقال عمر رضي الله عنه لمؤذن بيت المقدس: \" إذا أذنت فترسل وإذا أقمت فاحذم \". ح ذ وجلست حذاءه وبحذائه، وحاذيته وحذوته: صرت بحذائه. وداري حذاء داره، وحذوها، وحذتها. وحذا لي النعال نعلاً: قطعها على مثال،",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حذم الشيء: أسرع قطعه. وحذم في مشيته وقراءته: أسرع، ومر يحذم. وقال عمر رضي الله عنه لمؤذن بيت المقدس: \" إذا أذنت فترسل وإذا أقمت فاحذم \".\nح ذ\nوجلست حذاءه وبحذائه، وحاذيته وحذوته: صرت بحذائه. وداري حذاء داره، وحذوها، وحذتها. وحذا لي النعال نعلاً: قطعها على مثال، وحذوت النعل بالنعل: قطعتها مماثلة لها. واشتريت من الحذاء حذاء حسناً. وأحذاني فلان وحذاني: حملني على حذاء. وحذا لي حذوة وحذية من لجم، أي حزة. وبنو فلان يتحاذون الماء: يتصافنونه ويقتسمونه على السوية."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أحذيته حذياً، وحذية، وحذية، أي أعطيته عطية، وهل أخذت حذياك؟ أي جائزتك. وفي مثل \" بين الحذيا والخلسة \". وأحذيته طعنة إذا طعنته. قال ابن مقبل:",
-        "prototipe_benzerlik": 0.141,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أحذيته حذياً، وحذية، وحذية، أي أعطيته عطية، وهل أخذت حذياك؟ أي جائزتك. وفي مثل \" بين الحذيا والخلسة \". وأحذيته طعنة إذا طعنته. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.436,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقد كنت أحذي الناب بالسيف ضربة ... فأبقي ثلاثاً والوظيف المكعبرا",
+        "prototipe_benzerlik": 0.374,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي المقطوع.",
+        "prototipe_benzerlik": 0.435,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال أيضاً:",
+        "prototipe_benzerlik": 0.339,
         "halka": "uzak"
       },
       {
-        "cumle": "الخصيف رماد فيه سواد وبياض. وهذا لبن قارص يحذي اللسان: يفعل به شبه القطع من الإحراق.",
-        "prototipe_benzerlik": 0.067,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأن خصيف الجمر في عرصاتها ... مزاحف قينات تحاذين إثمدا",
+        "prototipe_benzerlik": 0.389,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الخصيف رماد فيه سواد وبياض. وهذا لبن قارص يحذي اللسان: يفعل به شبه القطع من الإحراق.",
+        "prototipe_benzerlik": 0.32,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.104,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.382,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

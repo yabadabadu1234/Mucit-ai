@@ -1048,24 +1048,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مذق اللبن بالماء يمذقه، ومذق الشراب: مزجه فأكثر ماءه، ولبن مذيق. وسقاني مذقاً ومذقة. قال أعرابي: إذا ما أصبنا كل يوم مذيقة ... وخمس تميرات صغار خوانز فنحن ملوك الأرض خصباً ونعمةً ... ونحن أسود الغيل عند الهزاهز",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مذق اللبن بالماء يمذقه، ومذق الشراب: مزجه فأكثر ماءه، ولبن مذيق. وسقاني مذقاً ومذقة. قال أعرابي:\nإذا ما أصبنا كل يوم مذيقة ... وخمس تميرات صغار خوانز\nفنحن ملوك الأرض خصباً ونعمةً ... ونحن أسود الغيل عند الهزاهز"
+      },
+      {
+        "kaynak": "Mekâyîs: مَذَقَ",
+        "metin": "(مَذَقَ) الْمِيمُ وَالذَّالُ وَالْقَافُ أَصْلٌ يَدُلُّ عَلَى خَلْطِ شَيْءٍ لَا عَلَى جِهَةِ النَّصَاحَةِ.\nمِنْ ذَلِكَ مَذَقَ اللَّبَنَ بِالْمَاءِ، وَإِنَّمَا يُرَادُ بِذَلِكَ تَكْثِيرُهُ. وَاشْتُقَّ مِنْهُ الْمَذَّاقُ: الَّذِي يَمْذُقُ الْوُدَّ بِمَلَلٍ يَكُونُ فِيهِ. وَالْمَذْقُ: اللَّبَنُ الْمَمْزُوجُ أَيْضًا، وَكَذَا الْمَذِيقُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يمذق الودّ، وودّه ممذوق، وهو ممذوق الود، وماذقه في الوداد مذاقاً، وهو مماذق في ودّه ومذّاق. وفلان مذّاق: كذاب. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يمذق الودّ، وودّه ممذوق، وهو ممذوق الود، وماذقه في الوداد مذاقاً، وهو مماذق في ودّه ومذّاق. وفلان مذّاق: كذاب. قال:",
         "prototipe_benzerlik": 0.712,
         "halka": "yakın"
       },
       {
-        "cumle": "ما معجّل معروفك بالقليل، أوجز العطيّة: عجّلها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما وجز معروفك بالرماق ... ولا مؤاخاتك بالمذاق",
+        "prototipe_benzerlik": 0.477,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما معجّل معروفك بالقليل، أوجز العطيّة: عجّلها.",
         "prototipe_benzerlik": 0.271,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.491,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.486,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

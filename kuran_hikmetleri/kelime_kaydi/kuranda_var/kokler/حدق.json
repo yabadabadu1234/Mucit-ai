@@ -1687,11 +1687,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "gaze.v.01",
+    "ince": "peer.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "gaze.v.01",
-    "dayanak_tanim": "look at with fixed eyes",
+    "dayanak_synset": "peer.v.01",
+    "dayanak_tanim": "look searchingly",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1710,19 +1710,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الإحاطة بشيء في الوسط أو العمق: كسواد العين يحيط بإنسانها في وسطه وجوفه، وكالحاجز بالحديقة وسطه {وَحَدَائِقَ غُلْبًا} [عبس: 30] ومثلها ما في [النمل: 60] ومنه \"حَدَق بالشيء وأحدق به: استدار وأحاط به \". ومن حدقة العين: \"حَدَقُوه بأبصارهم: رَمَوْهُ بها. والتحديق ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الإحاطة بشيء في الوسط أو العمق: كسواد العين يحيط بإنسانها في وسطه وجوفه، وكالحاجز بالحديقة وسطه {وَحَدَائِقَ غُلْبًا} [عبس: 30] ومثلها ما في [النمل: 60] ومنه \"حَدَق بالشيء وأحدق به: استدار وأحاط به \". ومن حدقة العين: \"حَدَقُوه بأبصارهم: رَمَوْهُ بها. والتحديق شدة النظر بالحَدَقَة \" (من باب الإصابة بالشيء)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هم في مثل حدقة البعير أي في خصب وماء كثير، وهي موصوفة بكثرة الماء. وهم رماة الحدق: للمهرة في النضال. وتقول: الرامي إذا حذق، لم يخطيء الحدق. وتكلمت على حدق القوم أي وهم ينظرون إليّ.\nقال أبو النجم:\nوكلمة حزم تغص الخطيب ... على حدق القوم أمضيتها\nوحدق إليّ ونظر إليّ بتحذيق، وحدقه بعينه: نظر إليه فهو حاذق. ورأيت المريض يحدق يمنة ويسرة. ورأيت الذبيحة حادقة. وقد أحدقوا به إذا أحاطوا."
+      },
+      {
+        "kaynak": "Mekâyîs: حَدَقَ",
+        "metin": "(حَدَقَ) الْحَاءُ وَالدَّالُ وَالْقَافُ أَصْلٌ وَاحِدٌ، [وَهُوَ الشَّيْءُ] يُحِيطُ بِشَيْءٍ. يُقَالُ حَدَقَ الْقَوْمُ بِالرَّجُلِ وَأَحْدَقُوا بِهِ. قَالَ:\nالْمُطْعِمُونَ بَنُو حَرْبٍ وَقَدْ حَدَقَتْ ... بِيَ الْمَنِيَّةُ وَاسْتَبْطَأْتُ أَنْصَارِي\nوَحَدَقَةُ الْعَيْنِ مِنْ هَذَا، وَهِيَ السَّوَادُ، لِأَنَّهَا تُحِيطُ بِالصَّبِيِّ ; وَالْجَمْعُ حِدَاقٌ. قَالَ:\nفَالْعَيْنُ بَعْدَهُمُ كَأَنَّ حِدَاقَهَا ... سُمِلَتْ بِشَوْكٍ فَهْيَ عَوَرٌ تَدْمَعُ\nوَالتَّحْدِيقُ: شِدَّةُ النَّظَرِ. وَالْحَدِيقَةُ: الْأَرْضُ ذَاتُ الشَّجَرِ. وَالْحِنْدِيقَةُ: الْحَدَقَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ورد عليّ كتابك، فتنزهت في أنق رياضه، وبهجة حدائقه. وفلان قد أحدقت به المنية.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورد عليّ كتابك، فتنزهت في أنق رياضه، وبهجة حدائقه. وفلان قد أحدقت به المنية.",
         "prototipe_benzerlik": 0.224,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.224,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["gaze.v.01", "look.v.01", "look.v.02", "peer.v.01"],
   "muhassas_tasnif": {

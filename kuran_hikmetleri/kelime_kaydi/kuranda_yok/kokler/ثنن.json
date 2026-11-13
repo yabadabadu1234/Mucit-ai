@@ -1497,19 +1497,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو: تبطُّنُ دقاق متجمعة طَيّ شيء (1): كالشَعَر في باطن",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: تبطُّنُ دقاق متجمعة طَيّ شيء (1): كالشَعَر في باطن"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فرس وافى الثنة وهي الشعر المشرف على مؤخر رسغ الدابة، ويحمد وفوره. قال امرؤ القيس:\nلها ثنن كخوافي العقا ... ب سود يفين إذا تزبئر\nمن وفى شعره، ويكره أن يكون أمرط.\nوفي مثل: \" بلغت الدماء الثنن \" وطعنه في ثنته وهي ما بين السرة والعانة، وهي مراق البطن."
+      },
+      {
+        "kaynak": "Mekâyîs: ثِنَّ",
+        "metin": "(ثِنَّ) الثَّاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ، وَهُوَ نَبَاتٌ مِنْ شَعْرٍ أَوْ غَيْرِهِ. فَأَمَّا الشَّعْرُ فَالثُّنَّةُ الشَّعْرُ الْمُشْرِفُ عَلَى رُسْغِ الدَّابَّةِ مِنْ خَلْفٍ. وَالثِّنُّ مِنْ غَيْرِ الشَّعْرِ: حُطَامُ الْيَبِيسِ. وَأَنْشَدَ:\nفَظَلْنَ يَخْبِطْنَ هَشِيمَ الثِّنِّ ... بَعْدَ عَمِيمِ الرَّوْضَةِ الْمُغِنِّ\nفَأَمَّا الثُّنَّةُ فَمَا دُونَ السُّرَّةِ مِنْ أَسْفَلِ الْبَطْنِ مِنَ الدَّابَّةِ، وَلَعَلَّهُ بِشُعَيْرَاتٍ يَكُونُ ثَمَّ.\n(ثَأْ) الثَّاءُ وَالْهَمْزَةُ، كَلِمَتَانِ لَيْسَتَا أَصْلًا، يُقَالُ: ثَأْثَأْتُ بِالْإِبِلِ صِحْتُ بِهَا، وَلَقِيتُ فُلَانًا فَثَأْثَأْتُ مِنْهُ، أَيْ هِبْتُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "كنا في ثنة من الكلإ وغنة، مستعارة من ثنة الفرس، والغنة من الروضة الغناء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كنا في ثنة من الكلإ وغنة، مستعارة من ثنة الفرس، والغنة من الروضة الغناء.",
         "prototipe_benzerlik": 0.393,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.393,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

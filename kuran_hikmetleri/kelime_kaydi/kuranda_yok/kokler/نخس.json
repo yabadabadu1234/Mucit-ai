@@ -1200,24 +1200,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نخس الدابة، ومنه: الخاس. ونخسوا بفلان: نخسوا دابته وطردوه. قال: الناخسين بمروان بذي خشبٍ ... والمقحمين على عثمان في الدار أي نخسوا به من خلفه حتى سيّروه في البلاد. ونخس البكرة: جعل لها نخاساً وهو ما يلقمه ثقبها إذا اتسع. وبكرة نخيس.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نخس الدابة، ومنه: الخاس. ونخسوا بفلان: نخسوا دابته وطردوه. قال:\nالناخسين بمروان بذي خشبٍ ... والمقحمين على عثمان في الدار\nأي نخسوا به من خلفه حتى سيّروه في البلاد. ونخس البكرة: جعل لها نخاساً وهو ما يلقمه ثقبها إذا اتسع. وبكرة نخيس."
+      },
+      {
+        "kaynak": "Mekâyîs: نَخَسَ",
+        "metin": "(نَخَسَ) النُّونُ وَالْخَاءُ وَالسِّينُ كَلِمَةٌ تَدُلُّ عَلَى بَزْلِ شَيْءٍ بِشَيْءٍ حَادٍّ. وَنَخَسَهُ بِعُودٍ أَوْ حَدِيدَةٍ نَخْسًا. وَمِنْهُ النَّخَّاسُ. وَالنَّاخِسُ: جَرَبٌ يَكُونُ عِنْدَ ذَنَبِ الْبَعِيرِ أَوْ صَدْرِهِ، كَأَنَّهُ نُخِسَ بِهِ وَبَعِيرٌ مَنْخُوسٌ. وَمِمَّا شَذَّ عَنْهُ النَّخِيسَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رأيت غدراً تناخس كقولهم: الأمواج تناطح. وهو ابن نخسة أي ابن زنية. قال الشماخ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رأيت غدراً تناخس كقولهم: الأمواج تناطح. وهو ابن نخسة أي ابن زنية. قال الشماخ:",
         "prototipe_benzerlik": 0.164,
         "halka": "uzak"
       },
       {
-        "cumle": "غير معلوم \" ووجدك ضالاً \" وانخس به أي أبعده. وتكلّم فنخّسوا به. ووعلٌ ناخس: طويل القرنين لأنهما ينخسان ذنبه. قال ابن هرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنا الجحاشيّ شماخ وليس أبي ... بنخسة لدعيّ غير موجود",
+        "prototipe_benzerlik": 0.35,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غير معلوم \" ووجدك ضالاً \" وانخس به أي أبعده. وتكلّم فنخّسوا به. ووعلٌ ناخس: طويل القرنين لأنهما ينخسان ذنبه. قال ابن هرمة:",
         "prototipe_benzerlik": 0.258,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأن فقاره اشتبكت عليه ... قرون الناخسات من الوعول",
+        "prototipe_benzerlik": 0.951,
+        "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.211,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.431,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["jab.v.01", "prick.v.02"],
   "muhassas_tasnif": {

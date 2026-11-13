@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شعر جثل: كثير لين، وقد جثل جثولة وجثالة قال الأعشى: وأثيث جثل النبات تروي ... هـ لعوب غريرة مفناق ولحية جثلة، وللفرس ناصية جثلة، ولمة جثلة. قال الكميت: إذ لمتي جثلة أكفئها ... يضحك منها الغواني العجب واجثأل الطائر: نفش ريشه من البرد. قال: جاء الشتاء واجثأل الق",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شعر جثل: كثير لين، وقد جثل جثولة وجثالة قال الأعشى:\nوأثيث جثل النبات تروي ... هـ لعوب غريرة مفناق\nولحية جثلة، وللفرس ناصية جثلة، ولمة جثلة. قال الكميت:\nإذ لمتي جثلة أكفئها ... يضحك منها الغواني العجب\nواجثأل الطائر: نفش ريشه من البرد. قال:\nجاء الشتاء واجثأل القبر ... وطلعت شمس عليها مغفر\nوجعلت عين الحرور تسكر"
+      },
+      {
+        "kaynak": "Mekâyîs: جَثَلَ",
+        "metin": "(جَثَلَ) الْجِيمُ وَالثَّاءُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى لِينِ الشَّيْءِ. يُقَالُ شَعْرٌ جَثْلٌ: كَثِيرٌ لَيِّنٌ. وَاجْثَأَلَّ النَّبْتُ: طَالَ. وَاجْثَأَلَّ الطَّائِرُ: نَفَشَ رِيشَهُ. وَمِمَّا شَذَّ عَنِ الْأَصْلِ: &quot; ثَكِلَتْهُ الْجَثَلُ &quot; وَهِيَ أُمُّهُ. وَيُقَالُ الْجَثْلَةُ: النَّمْلَةُ السَّوْدَاءُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نبات جثل، وشجرة جثلة الأفنان. واجثأل النبات: طال والتف.",
-        "prototipe_benzerlik": 0.146,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نبات جثل، وشجرة جثلة الأفنان. واجثأل النبات: طال والتف.",
+        "prototipe_benzerlik": 0.074,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.146,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.074,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

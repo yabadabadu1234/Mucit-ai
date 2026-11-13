@@ -1322,24 +1322,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سقاكم الله تعالى الغيث والدر وأسقاكم \" نسقيكم مما في بطونه \" وقيل: سقاه لشفته، وأسقاه لدابته. وسقيته قلت له: سقاك الله تعالى. وله سقي من النهر، وشرب من السقاية، وله سقاية، ومسقاة: يشرب بها وهي المشربة. وسقى أرضه، واسق أرضك فقد حان مسقاها: وقت سقيها. وساقاه في ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سقاكم الله تعالى الغيث والدر وأسقاكم \" نسقيكم مما في بطونه \" وقيل: سقاه لشفته، وأسقاه لدابته. وسقيته قلت له: سقاك الله تعالى. وله سقي من النهر، وشرب من السقاية، وله سقاية، ومسقاة: يشرب بها وهي المشربة. وسقى أرضه، واسق أرضك فقد حان مسقاها: وقت سقيها. وساقاه في أرضه، وكره أبو حنيفة المساقاة. وملأ السقاء والأسقية. وساق كالسقية وهي البردية، وسوق كالسقي."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سقى ثوبه منا من العصفر، وسقاه تسقية: كرر غمسه في الصبغ، وسقي قلبه بالعداوة. وسقى المسن الماء: أكثر سقيه: وتسقى الماء والصبغ: تشربه. وتساقوا كأس الموت، وساقيته إياها، وإنه لمسقي الدم حمرة كقولك: مشرب الدم حمرة. وساقيت الحرب مالي: أنفقته فيها. قال وقد ورد سابقاً:",
-        "prototipe_benzerlik": 0.943,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سقى ثوبه منا من العصفر، وسقاه تسقية: كرر غمسه في الصبغ، وسقي قلبه بالعداوة. وسقى المسن الماء: أكثر سقيه: وتسقى الماء والصبغ: تشربه. وتساقوا كأس الموت، وساقيته إياها، وإنه لمسقي الدم حمرة كقولك: مشرب الدم حمرة. وساقيت الحرب مالي: أنفقته فيها. قال وقد ورد سابقاً:",
+        "prototipe_benzerlik": 0.871,
         "halka": "yakın"
       },
       {
-        "cumle": "وسقى العرق: سال، وبه عرق يسقى، لا يرقئه من يرقى؛ وسقى بطنه واستسقى، وبه سقي وهو أن يقع الماء الأصفر في بطنه، وأسقاه الله تعالى، وتقول: أسقاك الله تعالى ولا أسقاك. وتقول: من لقي جالينوس استجهل الرواقي، ومن ورد البحر استقل السواقي.",
-        "prototipe_benzerlik": 0.98,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنا إذا الحرب نساقيها المال ... وجعلت تلقح ثم تحتال",
+        "prototipe_benzerlik": 0.277,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يرهب عنا الناس طعن إيغال ... شزر كأفواه المزاد الشلشال",
+        "prototipe_benzerlik": 0.432,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسقى العرق: سال، وبه عرق يسقى، لا يرقئه من يرقى؛ وسقى بطنه واستسقى، وبه سقي وهو أن يقع الماء الأصفر في بطنه، وأسقاه الله تعالى، وتقول: أسقاك الله تعالى ولا أسقاك. وتقول: من لقي جالينوس استجهل الرواقي، ومن ورد البحر استقل السواقي.",
+        "prototipe_benzerlik": 0.872,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.962,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.613,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "body_part.n.01", "drive.v.02", "drive.v.03", "natural_object.n.01", "steer.v.01"],
   "muhassas_tasnif": {

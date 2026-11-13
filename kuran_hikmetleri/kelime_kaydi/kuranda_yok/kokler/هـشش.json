@@ -37,39 +37,60 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شيء هشٌّ: رخو ليّن، وفيه هشاشة. وهششت الورق على الغنم: خبطته خبطاً برفق. وروَى جابر عن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" لا يخبط ولا يعضد حمى رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ ولكن يهشّ هشّاً رفيقاً \" \" وأهشّ بها على غنمي \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شيء هشٌّ: رخو ليّن، وفيه هشاشة. وهششت الورق على الغنم: خبطته خبطاً برفق. وروَى جابر عن النبيّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" لا يخبط ولا يعضد حمى رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ ولكن يهشّ هشّاً رفيقاً \" \" وأهشّ بها على غنمي \"."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فرس هشٌّ: غير صلود. قال أبو النجم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس هشٌّ: غير صلود. قال أبو النجم:",
         "prototipe_benzerlik": 0.619,
         "halka": "yakın"
       },
       {
-        "cumle": "يفيض من هشّ رقيق منخّله",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يفيض من هشّ رقيق منخّله",
         "prototipe_benzerlik": 0.495,
         "halka": "orta"
       },
       {
-        "cumle": "وناقة هشوش: ثرور. ورجل هشّ، وهو يهشّ إلى إخوانه، وإنه لذو هشاشٍ إلى الخير. واستهشّه كذا. وفلان ما يستهشه النعميم. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وناقة هشوش: ثرور. ورجل هشّ، وهو يهشّ إلى إخوانه، وإنه لذو هشاشٍ إلى الخير. واستهشّه كذا. وفلان ما يستهشه النعميم. قال:",
         "prototipe_benzerlik": 0.911,
         "halka": "yakın"
       },
       {
-        "cumle": "يعني إقامته في قبره. وقال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مقيماً كأني لم يكن يستهشّني ... رواح الفتى ذي الهمة المتقلّب",
+        "prototipe_benzerlik": 0.341,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يعني إقامته في قبره. وقال ذو الرمة:",
         "prototipe_benzerlik": 0.622,
         "halka": "yakın"
       },
       {
-        "cumle": "ودخلت عليه فاهترّ لي واهتشّ بي. وإنه لهشّ المكسر: سهل الجانب إذا سئل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسايرت ركبان الصّبا واستهشّني ... مسرّات أضغان القلوب الطوامح",
+        "prototipe_benzerlik": 0.515,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ودخلت عليه فاهترّ لي واهتشّ بي. وإنه لهشّ المكسر: سهل الجانب إذا سئل.",
         "prototipe_benzerlik": 0.309,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.591,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.545,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

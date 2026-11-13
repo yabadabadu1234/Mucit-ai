@@ -1738,11 +1738,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "freshen.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "freshen.v.02",
-    "dayanak_tanim": "become or make oneself fresh again",
+    "ince": "grow.v.02",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "boom.v.05",
+    "dayanak_tanim": "grow vigorously",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1756,29 +1756,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حُمِل على النّعش. وميت منعوش، وقد نعشوه. وانتعش العاثر من عثرته.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حُمِل على النّعش. وميت منعوش، وقد نعشوه. وانتعش العاثر من عثرته."
+      },
+      {
+        "kaynak": "Mekâyîs: نَعَشَ",
+        "metin": "(نَعَشَ) النُّونُ وَالْعَيْنُ وَالشِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى رَفْعٍ وَارْتِفَاعٍ. قَالَ الْخَلِيلُ: النَّعْشُ: سَرِيرُ الْمَيِّتِ، كَذَا تَعْرِفُهُ الْعَرَبُ. وَمَيِّتٌ مَنْعُوشٌ: مَحْمُولٌ عَلَى النَّعْشِ. وَانْتَعَشَ الطَّائِرُ: نَهَضَ عَنْ عَثْرَتِهِ. يُقَالُ: نَعَشَهُ اللَّهُ وَأَنْعَشَهُ. قَالَ ابْنُ السِّكِّيتِ: لَا يُقَالُ أَنْعَشَهُ. وَبَنَاتُ نَعْشٍ: كَوَاكِبُ. وَهَذَا تَشْبِيهٌ. قَالَ: أَبُو بَكْرٍ: النَّعْشُ شِبْهُ مِحَفَّةٍ يُحْمَلُ عَلَيْهِ الْمَلِكُ إِذَا مَرِضَ، لَيْسَ بِنَعْشِ الْمَيِّتِ. وَأَنْشَدَ:\nأَلَمْ تَرَ خَيْرَ النَّاسِ أَصْبَحَ نَعْشُهُ ... عَلَى فِتْيَةٍ قَدْ جَاوَزَ الْحَيَّ سَائِرَا\nثُمَّ يَقُولُ:\nوَنَحْنُ لَدَيْهِ نَسْأَلُ اللَّهَ خُلْدَهُ\nفَهَذَا يَدُلُّ عَلَى أَنَّهُ لَيْسَ بِمَيِّتٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نشعته وانتعش إذا تداركته من ورطةٍ. وانتعش نعشك الله. ونعشني نعشة كريم والربيع ينعش النّاس. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نشعته وانتعش إذا تداركته من ورطةٍ. وانتعش نعشك الله. ونعشني نعشة كريم والربيع ينعش النّاس. قال النابغة:",
         "prototipe_benzerlik": 0.652,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن مجاز المجاز: قول لبيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإنّك غيث ينعش الناس سيبه ... وسيف أعيرته المنية قاطع",
+        "prototipe_benzerlik": 0.552,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن مجاز المجاز: قول لبيد:",
         "prototipe_benzerlik": 0.414,
         "halka": "orta"
       },
       {
-        "cumle": "وهو أخفى من نعيش، في بنات نعش؛ هو السهى أوسط البنات.",
-        "prototipe_benzerlik": 0.36,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومنّي على السيباق فضل ونعمة ... كما نعش الدكداك صوب البوارق",
+        "prototipe_benzerlik": 0.44,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو أخفى من نعيش، في بنات نعش؛ هو السهى أوسط البنات.",
+        "prototipe_benzerlik": 0.36,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.476,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.484,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

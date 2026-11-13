@@ -945,11 +945,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "textual.a.01",
-    "orta": "adj.pert",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "textual.a.01",
-    "dayanak_tanim": "of or relating to or based on a text",
+    "ince": "promise.v.01",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "stipulate.v.01",
+    "dayanak_tanim": "specify as a condition or requirement in a contract or agreement; make an express demand or provision in an agreement",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -968,29 +968,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "إبراز المستكن إلى أعلى أو إلى الظاهر باستقصاء (1)",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "إبراز المستكن إلى أعلى أو إلى الظاهر باستقصاء (1)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الماشطة تنصّ العروس فتقعدها على المنصّة، وهي تلتص عليها أي ترفعها. وانتص السنام: ارتفع وانتصب. قال مسكين الدرامي:\nحتى علاها تامك ... شبّهته وانتصّ فندا"
+      },
+      {
+        "kaynak": "Mekâyîs: نَصَّ",
+        "metin": "(نَصَّ) النُّونُ وَالصَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى رَفْعٍ وَارْتِفَاعٍ وَانْتِهَاءٍ فِي الشَّيْءِ. مِنْهُ قَوْلُهُمْ نَصَّ الْحَدِيثَ إِلَى فُلَانٍ: رَفَعَهُ إِلَيْهِ. وَالنَّصُّ فِي السَّيْرِ أَرْفَعُهُ. يُقَالُ: نَصْنَصْتُ نَاقَتِي. وَسَيْرٌ نَصٌّ وَنَصِيصٌ. وَمِنَصَّةُ الْعَرُوسِ مِنْهُ أَيْضًا. وَبَاتَ فُلَانٌ مُنْتَصًّا عَلَى بَعِيرِهِ، أَيْ مُنْتَصِبًا.\nوَنَصُّ كُلِّ شَيْءٍ: مُنْتَهَاهُ. وَفِي حَدِيثِ عَلِيٍّ عَلَيْهِ السَّلَامُ: &quot; «إِذَا بَلَغَ النِّسَاءُ نَصَّ الْحِقَاقِ» &quot;، أَيْ إِذَا بَلَغْنَ غَايَةَ الصِّغَرِ وَصِرْنَ فِي حَدِّ الْبُلُوغِ. وَالْحِقَاقُ: مَصْدَرُ الْمُحَاقَّةِ، وَهِيَ أَنْ يَقُولَ بَعْضُ\nالْأَوْلِيَاءِ: أَنَا أَحَقُّ بِهَا، وَبَعْضُهُمْ: أَنَا أَحَقُّ. وَنَصَصْتُ الرَّجُلَ: اسْتَقْصَيْتَ مَسْأَلَتَهُ عَنِ الشَّيْءِ حَتَّى تَسْتَخْرِجَ مَا عِنْدَهُ. وَهُوَ الْقِيَاسُ، لِأَنَّكَ تَبْتَغِي بُلُوغَ النِّهَايَةِ. وَمِنْ هَذِهِ الْكَلِمَةِ [النَّصْنَصَةُ] : إِثْبَاتُ الْبَعِيرِ رُكْبَتَيْهِ فِي الْأَرْضِ إِذَا هَمَّ بِالنُّهُوضِ. وَالنَّصْنَصَةُ: التَّحْرِيكُ. وَالنُّصَّةُ. الْقُصَّةُ مِنْ شَعْرِ الرَّأْسِ، وَهِيَ عَلَى مَوْضِعٍ رَفِيعٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "نصّ الحديث إلى صاحبه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نصّ الحديث إلى صاحبه. قال:",
         "prototipe_benzerlik": 0.258,
         "halka": "uzak"
       },
       {
-        "cumle": "ونصّ فلان سيّدا: نصب. قال حاجز بن الجعيد الأزدي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصّ الحديث إلى أهله ... فإن الوثيقة في نصّه",
+        "prototipe_benzerlik": 0.174,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصّ فلان سيّدا: نصب. قال حاجز بن الجعيد الأزدي:",
         "prototipe_benzerlik": 0.399,
         "halka": "orta"
       },
       {
-        "cumle": "ونصصت الرّجل إذا أحفيته في المسألة ورفعته إلى حدّ ما عنده من العلم حتى استخرجته. وبلغ الشيء نصّه أي منتهاه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أأن قد نصصت بعد ما شبت سيّدا ... تقول وتهدي من كلامك ما تهدي",
+        "prototipe_benzerlik": 0.361,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصصت الرّجل إذا أحفيته في المسألة ورفعته إلى حدّ ما عنده من العلم حتى استخرجته. وبلغ الشيء نصّه أي منتهاه.",
         "prototipe_benzerlik": 0.246,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.301,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.288,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "contract.v.01", "textual.a.01", "writing.n.02"],
   "muhassas_tasnif": {

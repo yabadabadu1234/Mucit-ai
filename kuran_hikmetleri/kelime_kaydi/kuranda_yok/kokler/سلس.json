@@ -1063,19 +1063,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مسمار سلس: قلق. وفرس سلس القياد، وفيه سلس.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مسمار سلس: قلق. وفرس سلس القياد، وفيه سلس."
+      },
+      {
+        "kaynak": "Mekâyîs: سَلِسَ",
+        "metin": "(سَلِسَ) السِّينُ وَاللَّامُ وَالسِّينُ يَدُلُّ عَلَى سُهُولَةٍ فِي الشَّيْءِ. يُقَالُ هُوَ سَهْلٌ سَلِسٌ. وَالسَّلْسُ: جِنْسٌ مِنَ الْخَرَزِ، وَلَعَلَّهُ سُمِّيَ بِذَلِكَ لِسَلَاسَتِهِ فِي نَظْمِهِ. قَالَ:\nوَقَلَائِدٌ مِنْ حُبْلَةٍ وَسُلُوسِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "في كلامه سلاسة. وقد سلس لي بحقي. وإن فلاناً لسلس القياد ومسلاس القياد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في كلامه سلاسة. وقد سلس لي بحقي. وإن فلاناً لسلس القياد ومسلاس القياد.",
         "prototipe_benzerlik": 0.503,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.503,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

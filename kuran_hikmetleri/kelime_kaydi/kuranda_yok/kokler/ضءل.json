@@ -1849,19 +1849,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل ضئيل وامرأة ضئيلة، وقد ضؤل ضؤلة وتضاءل، وتقول: فلان ضئيل بئيل: دقيق صغير. وقال النابغة: فبتّ كأني ساورتني ضئيلة ... من الرقش في أنيابها السم ناقع دقيقة من الحيّات كالأفعى. وجاء يضائل شخصه، يصغره لئلا يستبين. قال زهير: فبينا نبغّي الوحش جاء غلامنا ... يدب و",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل ضئيل وامرأة ضئيلة، وقد ضؤل ضؤلة وتضاءل، وتقول: فلان ضئيل بئيل: دقيق صغير. وقال النابغة:\nفبتّ كأني ساورتني ضئيلة ... من الرقش في أنيابها السم ناقع\nدقيقة من الحيّات كالأفعى. وجاء يضائل شخصه، يصغره لئلا يستبين. قال زهير:\nفبينا نبغّي الوحش جاء غلامنا ... يدب ويخفى شخصه ويضائله"
+      },
+      {
+        "kaynak": "Mekâyîs: ضَأَلَ",
+        "metin": "(ضَأَلَ) الضَّادُ وَالْهَمْزَةُ وَاللَّامُ أُصَيْلٌ يَدُلُّ عَلَى ضَعْفٍ وَدِقَّةٍ فِي جِسْمٍ. مِنْ ذَلِكَ الضَّئِيلُ، وَهُوَ الضَّعِيفُ. وَالْفِعْلُ مِنْهُ: ضَؤُلَ يَضْؤُلُ. وَرَجُلٌ ضُؤَلَةٌ: ضَعِيفٌ. وَالضَّئِيلَةُ: الْحَيَّةُ الدَّقِيقَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ضؤل رأيه، وهو ضئيل الرأي. وما عليك في ذلك ضؤولة أي ضعف ومذلة. وهو يتضاءل عن ذلك: يتقاصر عنه. وعن بعضهم: القياس يتضاءل عند السماع.",
-        "prototipe_benzerlik": 0.302,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضؤل رأيه، وهو ضئيل الرأي. وما عليك في ذلك ضؤولة أي ضعف ومذلة. وهو يتضاءل عن ذلك: يتقاصر عنه. وعن بعضهم: القياس يتضاءل عند السماع.",
+        "prototipe_benzerlik": 0.292,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.302,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.292,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "decline.v.04", "evanesce.v.01"],
   "muhassas_tasnif": {

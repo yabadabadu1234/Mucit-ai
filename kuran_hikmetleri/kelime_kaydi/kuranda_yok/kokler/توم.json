@@ -827,19 +827,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "صبي ذو تومتين ومتوم: مقرط بدرتين. وقيل: التومة حبة من فضة شبه الدرة. وقيل: القرط. قال المسيب بن علس: عانية صرف معتقة ... يسعى بها ذو تومة لبق وقال أبو النجم: يا دجل قد كنت زماناً محرما ... ما كنت تعطين الفقير درهما وتغرقين الشيخ والمتوما ... وتمنعين السنبل الم",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "صبي ذو تومتين ومتوم: مقرط بدرتين. وقيل: التومة حبة من فضة شبه الدرة. وقيل: القرط. قال المسيب بن علس:\nعانية صرف معتقة ... يسعى بها ذو تومة لبق\nوقال أبو النجم:\nيا دجل قد كنت زماناً محرما ... ما كنت تعطين الفقير درهما\nوتغرقين الشيخ والمتوما ... وتمنعين السنبل المحزما\nكان خالد القسريّ قد سدّها فزرع في أرضها. ويقال للصدفة أم تومة، علم لها، ولذلك لم تصرف كابن داية."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "يتشقق، أراد البيض فسماه توماً على الاستعارة.",
-        "prototipe_benzerlik": -0.058,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول ذي الرمة:",
+        "prototipe_benzerlik": 0.606,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحتى أتى يوم يكاد من اللظى ... به التوم في أفحوصه يتصيح",
+        "prototipe_benzerlik": 0.242,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يتشقق، أراد البيض فسماه توماً على الاستعارة.",
+        "prototipe_benzerlik": 0.103,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": -0.058,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.317,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

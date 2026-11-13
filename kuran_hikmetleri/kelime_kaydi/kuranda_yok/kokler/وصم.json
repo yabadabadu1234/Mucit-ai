@@ -1529,24 +1529,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في العود والعظم وصمٌ: صدع، وفيه وصوم كثيرة. ووصم الرمح فهو موصوم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في العود والعظم وصمٌ: صدع، وفيه وصوم كثيرة. ووصم الرمح فهو موصوم."
+      },
+      {
+        "kaynak": "Mekâyîs: وَصَمَ",
+        "metin": "(وَصَمَ) الْوَاوُ وَالصَّادُ وَالْمِيمُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى كَسْرٍ وَضَعْفٍ. وَوَجَدَ تَوْصِيمًا فِي جَسَدِهِ، أَيْ تَكْسِيرًا وَفَتْرَةً وَكَسَلًا. قَالَ:\nوَإِذَا رُمْتَ رَحِيلًا فَارْتَحِلْ ... وَاعْصِ مَا يَأْمُرُ تَوْصِيمُ الْكَسَلْ\nوَالْوَصْمُ: الصَّدْعُ غَيْرُ بَائِنٍ. يُقَالُ: أَصَابَ الْقَنَاةَ وَصْمٌ.\nوَيُحْمَلُ عَلَى هَذَا فَيُقَالُ لِلْعَارِ وَالْعَيْبِ: وَصْمٌ. قَالَ:\nفَإِنْ تَكُ جَرْمٌ ذَاتَ وَصْمٍ فَإِنَّنَا ... دَلَفْنَا إِلَى جَرْمٍ بِأَلْأَمَ مِنْ جَرْمِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إن في حسبك لوصماً: عيباً. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن في حسبك لوصماً: عيباً. قال:",
         "prototipe_benzerlik": 0.524,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فإن تك جرمٌ ذات وصم فإننا ... دلفنا إلى جرم بالأم من جرم",
+        "prototipe_benzerlik": 0.661,
         "halka": "yakın"
       },
       {
-        "cumle": "ووصّمته الحمّى: فترته وكسّرته. وأجد في جسدي توصيماً. وفيه توصيم الكسل قال لبيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ووصّمته الحمّى: فترته وكسّرته. وأجد في جسدي توصيماً. وفيه توصيم الكسل قال لبيد:",
         "prototipe_benzerlik": 0.311,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإذا رمت رحيلاً فارتحل ... واعص ما يأمر توصيم الكسل",
+        "prototipe_benzerlik": 0.547,
+        "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.417,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.511,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "deaf.n.01", "symbol.n.01"],
   "muhassas_tasnif": {

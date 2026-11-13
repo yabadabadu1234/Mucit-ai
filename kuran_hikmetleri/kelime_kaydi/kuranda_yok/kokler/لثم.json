@@ -1612,24 +1612,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حطّ لثامه ولفامه: ما على فمه وأنفه من النقاب، ولثم فاه ولثّمه. وناس من المغاربة يقال لهم: الملثّمة. والتثم الرجل وتلثّم، وهو حسن اللثمة كالنقبة. ولثم فاها بالكسر يلثمه إذا وضع فاه على فيها موضع اللثام، ولاثمها، وتلاثما.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "إبريق ملثوم وملثّم، وقد لثمه ولثمه إذا شدّ اللثام أي الفدام على بعض رأسه وترك بعضه للنفس. وقال الطرمّاح:",
-        "prototipe_benzerlik": 0.333,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حطّ لثامه ولفامه: ما على فمه وأنفه من النقاب، ولثم فاه ولثّمه. وناس من المغاربة يقال لهم: الملثّمة. والتثم الرجل وتلثّم، وهو حسن اللثمة كالنقبة. ولثم فاها بالكسر يلثمه إذا\nوضع فاه على فيها موضع اللثام، ولاثمها، وتلاثما."
       },
       {
-        "cumle": "أراد لون فمه وهي دغمته. ولثم الخف الحجارة ولثمته، وخفّ ملثوم وملثم، ولثمه: صكّه كما يصطك فما اللاثمين.",
+        "kaynak": "Mekâyîs: لَثَمَ",
+        "metin": "(لَثَمَ) اللَّامُ وَالثَّاءُ وَالْمِيمُ أُصَيْلٌ يَدُلُّ عَلَى مُصَاكَّةِ شَيْءٍ لِشَيْءٍ أَوْ مُضَامَّتِهِ لَهُ. مِنْ ذَلِكَ: لَثَمَ الْبَعِيرُ الْحِجَارَةَ بِخُفِّهِ، إِذَا صَكَّهَا. وَخُفٌّ مِلْثَمٌ: يَصُكُّ الْحِجَارَةَ. وَمِنَ الْمُضَامَّةِ اللِّثَامُ: مَا تُغَطَّى بِهِ الشَّفَةُ مِنْ ثَوْبٍ. وَفُلَانٌ حَسَنُ اللِّثْمَةِ، أَيِ الِالْتِثَامِ. وَخُفٌّ مَلْثُومٌ مِثْلُ مَرْثُومٍ، إِذَا دَمِيَ. وَمِنَ الْبَابِ لَثِمَ الرَّجُلُ الْمَرْأَةَ، إِذَا قَبَّلَهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إبريق ملثوم وملثّم، وقد لثمه ولثمه إذا شدّ اللثام أي الفدام على بعض رأسه وترك بعضه للنفس. وقال الطرمّاح:",
+        "prototipe_benzerlik": 0.333,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يفجأ الذئب بها قائماً ... أبرق النحر أحمّ اللّثام",
+        "prototipe_benzerlik": 0.133,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد لون فمه وهي دغمته. ولثم الخف الحجارة ولثمته، وخفّ ملثوم وملثم، ولثمه: صكّه كما يصطك فما اللاثمين.",
         "prototipe_benzerlik": 0.189,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.261,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.219,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02"],
   "muhassas_tasnif": {

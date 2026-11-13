@@ -1479,8 +1479,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "window.n.01",
-    "dayanak_tanim": "a framework of wood or metal that contains a glass windowpane and is built into a wall or roof to admit light or air",
+    "dayanak_synset": "net.n.06",
+    "dayanak_tanim": "an open fabric of string or rope or wire woven together at regular intervals",
     "synset_sayisi": 17
   },
   "ses_mana_tasnif": {
@@ -1494,19 +1494,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "اشتبكت الرياح، واشتبكت النجوم. وشبك أصابعه تشبيكاً. وشبك الأشياء فتشبكت، وشابك بينها فتشابكت. وشيء مشبك. ورأيته ينظر من الشباك. ونصبوا الشبكة والشبك والشباك، ورأيت على الماء الشباك وهم الصيادون بالشبك. قال الراعي: أو رعلة من قطا فيحان حلأها ... من ماء يثربة ال",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "اشتبكت الأرحام، وبينهم أرحام مشتبكة ومتشابكة، وتقول: بينهما شبهة سبب، لا شبكة نسب؛ ولحمة شابكة. واشتبك الظلام. وهجمنا على شبكة وشباك وهي آبار متقاربة.",
-        "prototipe_benzerlik": 0.538,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "اشتبكت الرياح، واشتبكت النجوم. وشبك أصابعه تشبيكاً. وشبك الأشياء فتشبكت، وشابك بينها فتشابكت. وشيء مشبك. ورأيته ينظر من الشباك. ونصبوا الشبكة والشبك والشباك، ورأيت على الماء الشباك وهم الصيادون بالشبك. قال الراعي:\nأو رعلة من قطا فيحان حلأها ... من ماء يثربة الشباك والرصد"
+      },
+      {
+        "kaynak": "Mekâyîs: شَبَكَ",
+        "metin": "(شَبَكَ) الشِّينُ وَالْبَاءُ وَالْكَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَدَاخُلِ الشَّيْءِ. يُقَالُ شَبَّكَ أَصَابِعَهُ تَشْبِيكًا. وَيُقَالُ: بَيْنَ الْقَوْمِ شُبْكَةُ نَسَبٍ، أَيْ مُدَاخَلَةٌ. وَمِنْ ذَلِكَ الشَّبَكَةُ."
       }
     ],
-    "ortalama_benzerlik": 0.538,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اشتبكت الأرحام، وبينهم أرحام مشتبكة ومتشابكة، وتقول: بينهما شبهة سبب، لا شبكة نسب؛ ولحمة شابكة. واشتبك الظلام. وهجمنا على شبكة وشباك وهي آبار متقاربة.",
+        "prototipe_benzerlik": 0.563,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال جرير:",
+        "prototipe_benzerlik": 0.55,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سقى ربي شباك بني كليب ... إذا ما الماء أسكن في البلاد",
+        "prototipe_benzerlik": 0.464,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.526,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "artifact.n.01",

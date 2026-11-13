@@ -867,8 +867,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "iron.n.03",
-    "dayanak_tanim": "implement used to brand live stock",
+    "dayanak_synset": "opening.n.10",
+    "dayanak_tanim": "a vacant or unobstructed space that is man-made",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -882,19 +882,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نظرت من الكوة، ونظن من الكوى والكواء، وكوّيت في داري كوًى. وكواء بالمكواة والمكاوي.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نظرت من الكوة، ونظن من الكوى والكواء، وكوّيت في داري كوًى. وكواء بالمكواة والمكاوي."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "كوته العقرب: لدغته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كوته العقرب: لدغته.",
         "prototipe_benzerlik": 0.485,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.485,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "burn.v.05", "cauterize.v.01", "compress.v.02", "press.v.01", "talk_of.v.01"],
   "muhassas_tasnif": {

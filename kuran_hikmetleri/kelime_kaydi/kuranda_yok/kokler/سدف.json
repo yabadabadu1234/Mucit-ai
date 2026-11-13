@@ -729,19 +729,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أسدفت المرأة: أرخت قناعها. والجفان مكللة بالسديف وهو قطع السنام. وكلتمتني من وراء سدافتها أي ستارتها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أسدفت المرأة: أرخت قناعها. والجفان مكللة بالسديف وهو قطع السنام. وكلتمتني من وراء سدافتها أي ستارتها."
+      },
+      {
+        "kaynak": "Mekâyîs: سَدِفَ",
+        "metin": "(سَدِفَ) السِّينُ وَالدَّالُ وَالْفَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِرْسَالِ شَيْءٍ عَلَى شَيْءٍ غِطَاءً لَهُ. يُقَالُ أَسْدَفْتُ الْقِنَاعَ: أَرْسَلْتُهُ. وَالسُّدْفَةُ: اخْتِلَاطُ الظَّلَامِ. وَالسَّدِيفُ: شَحْمُ السَّنَامِ، كَأَنَّهُ مُغَطٍّ لِمَا تَحْتَهُ ; وَجَمْعُ السُّدْفَةِ سُدَفٌ. قَالَ:\nنَحْنُ بِغَرْسِ الْوَدِيِّ أَعْلَمُنَا ... مِنَّا بِرَكْضِ الْجِيَادِ فِي السُّدَفِ\nوَحَكَى نَاسٌ: أَسْدَفَ الْفَجْرُ: أَضَاءَ، فِي لُغَةِ هَوَازِنَ، دُونَ الْعَرَبِ. وَهَذَا لَيْسَ بِشَيْءٍ، وَهُوَ مُخَالِفٌ الْقِيَاسَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أسدف الليل: أظلم. وجاء فلان في السدف والسدفة، ومنه رأيت سدفه أي شخصه من بعيد كما تقول: رأيت سواده. وقال ابن دريد هو بالشين.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أسدف الليل: أظلم. وجاء فلان في السدف والسدفة، ومنه رأيت سدفه أي شخصه من بعيد كما تقول: رأيت سواده. وقال ابن دريد هو بالشين.",
         "prototipe_benzerlik": 0.498,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.498,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1208,29 +1208,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "غدا إلى الرمس، كأن لم يغن بالأمس؛ وهو القبر وما يحثى على الميت من التراب وأصله الدفن وحثى التراب عليه، يقال: رمسه بالتراب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "غدا إلى الرمس، كأن لم يغن بالأمس؛ وهو القبر وما يحثى على الميت من التراب وأصله الدفن وحثى التراب عليه، يقال: رمسه بالتراب."
+      },
+      {
+        "kaynak": "Mekâyîs: رَمَسَ",
+        "metin": "(رَمَسَ) الرَّاءُ وَالْمِيمُ وَالسِّينُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَغْطِيَةٍ وَسَتْرٍ. فَالرَّمْسُ: التُّرَابُ.\nوَالرِّيَاحُ الرَّوَامِسُ: الَّتِي تُثِيرُ التُّرَابَ فَتَدْفِنُ الْآثَارَ. وَيُقَالُ رَمَسْتُ عَلَى فُلَانٍ الْخَبَرَ; إِذَا كَتَمْتَهُ إِيَّاهُ. وَرَمَسْتُ الرَّجُلَ وَأَرْمَسْتُهُ: دَفَنْتُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "الريح ترمس الآثار بما تثيره، وعفتها الرامسات والروامس، ورمست علي الأمر: كتمته، ورمس الخبر. قال لقيط بن زرارة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الريح ترمس الآثار بما تثيره، وعفتها الرامسات والروامس، ورمست علي الأمر: كتمته، ورمس الخبر. قال لقيط بن زرارة:",
         "prototipe_benzerlik": 0.454,
         "halka": "orta"
       },
       {
-        "cumle": "ورمست حبك في قلبي. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يا ليت شعري اليوم دختنوس ... إذا أتاها الخبر المرموس",
+        "prototipe_benzerlik": 0.406,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أتحلق القرون أم تميس ... لا بل تميس إنها عروس",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورمست حبك في قلبي. قال:",
         "prototipe_benzerlik": 0.303,
         "halka": "uzak"
       },
       {
-        "cumle": "اشتد واستحكم من تبلغ به المرض. ويقال: ألحم الحرب والشر واللام صله.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ألحم الواشون للشرّ بيننا ... تبلغ رمس الحب غير المكذب",
+        "prototipe_benzerlik": 0.403,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اشتد واستحكم من تبلغ به المرض. ويقال: ألحم الحرب والشر واللام صله.",
         "prototipe_benzerlik": 0.476,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.411,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.397,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

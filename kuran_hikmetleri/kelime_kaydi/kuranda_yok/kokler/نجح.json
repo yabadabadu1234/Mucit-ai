@@ -1426,8 +1426,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "hit.n.03",
-    "dayanak_tanim": "a conspicuous success",
+    "dayanak_synset": "success.n.02",
+    "dayanak_tanim": "an attainment that is successful",
     "synset_sayisi": 34
   },
   "ses_mana_tasnif": {
@@ -1441,19 +1441,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجع بنجحٍ ونجاحٍ. وتقول: من لي برسول يطير بجناح، ويرجع بنجاح. ونجحت طلبته: فاز بها، وطلبتك ناجحة. وسمعتهم يقولون لمن طلب إليهم: نجح أي تمّ مطلوبك وحصل. واستنجحني حاجته. وبالله أستفتح، وإياه أستنجح. قال القطامي يصف ناقته: إ، ترجعي من أبي عثمان منجحة ... فقد يهو",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "تناجحت أحلامه: تتابعت عليه رؤبيّات صدق. وسير نجيح: وشيك. ونهض في هذا الأمر نهضاً نجيحاً: سريعاً. وفي ملٍ \" إذا رمت الباطل أنجح بك \" أي غلبك وظفر بك.",
-        "prototipe_benzerlik": 0.497,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجع بنجحٍ ونجاحٍ. وتقول: من لي برسول يطير بجناح، ويرجع بنجاح. ونجحت طلبته: فاز بها، وطلبتك ناجحة. وسمعتهم يقولون لمن طلب إليهم: نجح أي تمّ مطلوبك وحصل. واستنجحني حاجته. وبالله أستفتح، وإياه أستنجح. قال القطامي يصف ناقته:\nإ، ترجعي من أبي عثمان منجحة ... فقد يهون مع المستنجح العمل\nوأنجح الله طلبتك فنجحت. وأنجحت يا فلان: صرت ذا نجح، ورجل منجح: ذو نجح. قال:\nليبلغ عذراً أو يصيب رغيبةً ... ومبلغ نفسٍ عذرها مثل منجح\nورأى نجيح، وسعى نجيح."
+      },
+      {
+        "kaynak": "Mekâyîs: نَجَحَ",
+        "metin": "(نَجَحَ) النُّونُ وَالْجِيمُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى ظَفَرٍ وَصِدْقٍ وَخَيْرٍ. مِنْهُ النَّجَاحُ فِي الْحَوَائِجِ: الظَّفَرُ بِهَا. وَسَيْرٌ نَجِيحٌ: وَشِيكٌ. وَرَأْيٌ نَجِيحٌ: صَوَابٌ. وَتَنَاجَحَتْ أَحْلَامُهُمْ: تَتَابَعَتْ بِصِدْقٍ. وَأَنْجَحَ اللَّهُ طَلِبَتَكَ: أَسْعَفَكَ بِإِدْرَاكِهَا."
       }
     ],
-    "ortalama_benzerlik": 0.497,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تناجحت أحلامه: تتابعت عليه رؤبيّات صدق. وسير نجيح: وشيك. ونهض في هذا الأمر نهضاً نجيحاً: سريعاً. وفي ملٍ \" إذا رمت الباطل أنجح بك \" أي غلبك وظفر بك.",
+        "prototipe_benzerlik": 0.643,
+        "halka": "yakın"
+      }
+    ],
+    "ortalama_benzerlik": 0.643,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "achieve.v.01",

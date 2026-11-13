@@ -1433,11 +1433,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "repent.v.02",
-    "orta": "verb.emotion",
+    "ince": "state.n.02",
+    "orta": "noun.feeling",
     "ust": "his ve nefis",
-    "dayanak_synset": "repent.v.02",
-    "dayanak_tanim": "feel remorse for; feel sorry for; be contrite about",
+    "dayanak_synset": "repentance.n.01",
+    "dayanak_tanim": "remorse for your past conduct",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1456,19 +1456,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "هو: ذهاب غلظ الشيء وشدته من ضغط حادٍّ عليه (1):",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "تب الرجل إذا شاخ، وكنت شاباً، فصرت تاباً، شبه فقد الشباب بالتباب. وأشابة أنت أم تابة واستتب الطريق: ذل وانقاد، كما يقال: طريق معبد. واستتب له الأمر. ويجوز أن يقال للاستقامة والتمام: الاستتباب أي طلب التباب، لأن التباب يتبع التمام. قال:",
-        "prototipe_benzerlik": 0.298,
-        "halka": "uzak"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "هو: ذهاب غلظ الشيء وشدته من ضغط حادٍّ عليه (1):"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أوسعه سباً، وأسمعه تباً. وتبب القوم: دعا عليهم بالتب \" وما زادوهم غير تتبيب \"."
+      },
+      {
+        "kaynak": "Mekâyîs: تَبَّ",
+        "metin": "(تَبَّ) التَّاءُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التِّبَابُ، وَهُوَ الْخُسْرَانُ. وَتَبًّا لِلْكَافِرِ، أَيْ هَلَاكًا لَهُ. وَقَالَ اللَّهُ تَعَالَى: {وَمَا زَادُوهُمْ غَيْرَ تَتْبِيبٍ} [هود: 101] ، أَيْ تَخْسِيرٍ. وَقَدْ جَاءَتْ فِي مُقَابَلَتِهِمَا كَلِمَةٌ، يَقُولُونَ اسْتَتَبَّ الْأَمْرُ إِذَا تَهَيَّأَ. فَإِنْ كَانَتْ صَحِيحَةً فَلِلْبَابِ إِذًا وَجْهَانِ: الْخُسْرَانُ، وَالِاسْتِقَامَةُ.\n[بَابُ التَّاءِ وَالْجِيمِ وَمَا يُثَلِّثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.298,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تب الرجل إذا شاخ، وكنت شاباً، فصرت تاباً، شبه فقد الشباب بالتباب. وأشابة أنت أم تابة واستتب الطريق: ذل وانقاد، كما يقال: طريق معبد. واستتب له الأمر. ويجوز أن يقال للاستقامة والتمام: الاستتباب أي طلب التباب، لأن التباب يتبع التمام. قال:",
+        "prototipe_benzerlik": 0.298,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أودى السرى بقتاله ومراسه ... شهراً موارد مستتب معمل",
+        "prototipe_benzerlik": 0.431,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يريد الطريق.",
+        "prototipe_benzerlik": 0.372,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.367,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "feeling.n.01", "repent.v.02"],
   "muhassas_tasnif": {

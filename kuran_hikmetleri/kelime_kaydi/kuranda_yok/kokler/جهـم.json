@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وجه جهم: غليظ كثير اللحم ضيق الخلقة. قال المخبل السعدي: وتريك وجهاً كالصحيفة لا ... ظمآن مختلج ولا جهم وهو الباسر الكريه، وقد جهم جهومة وجهامة، ورجل جهم الوجه، ويوصف به الأسد. وتجهمت الرجل وجهمته إذا استقلته بوجه مكفهر، وقيل هو أن تغلظ له في القول. يقال: تجهمن",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "الدهر يتجهم الكرام. وتجهمني أملي إذا لم يصبه.",
-        "prototipe_benzerlik": 0.389,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وجه جهم: غليظ كثير اللحم ضيق الخلقة. قال المخبل السعدي:\nوتريك وجهاً كالصحيفة لا ... ظمآن مختلج ولا جهم\nوهو الباسر الكريه، وقد جهم جهومة وجهامة، ورجل جهم الوجه، ويوصف به الأسد. وتجهمت الرجل وجهمته إذا استقلته بوجه مكفهر، وقيل هو أن تغلظ له في القول. يقال: تجهمني بما أكره وجهمني به. قال:\nفلا تجهميني أم عمرو فإننا ... بنا داء ظبي لم تخنه عوامله\nوخرج في جهمة الليل وهي قريب من السحر. قال الجعدي:\nوقهوة صهباء باكرتها ... مجهمة والديك لم ينعب\nواجتهموا: ساروا في الجهمة. وتقول: فلان غراره كهام، ومدراره جهام."
       }
     ],
-    "ortalama_benzerlik": 0.389,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الدهر يتجهم الكرام. وتجهمني أملي إذا لم يصبه.",
+        "prototipe_benzerlik": 0.313,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.313,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

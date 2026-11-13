@@ -1275,19 +1275,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "زرد اللقمة وازدردها وتزردها. وهذا دواء صعب المزدرد. وتقول: قد تبين فيه الدرد، فأطعمه ما يزدرد؛ وزرّدته اللقمة. قال مزرد: فقلت تزردها عبيد فإنني ... لدرد الموالي في السنين مزرد وزرد حلقه: عصره. وهو زراد: خناق، ومنه قيل للهن الضيق: الزردان كأنه يخنق. وزرد الدرع:",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "زرد اللقمة وازدردها وتزردها. وهذا دواء صعب المزدرد. وتقول: قد تبين فيه الدرد، فأطعمه ما يزدرد؛ وزرّدته اللقمة. قال مزرد:\nفقلت تزردها عبيد فإنني ... لدرد الموالي في السنين مزرد\nوزرد حلقه: عصره. وهو زراد: خناق، ومنه قيل للهن الضيق: الزردان كأنه يخنق. وزرد الدرع: سردها لأنها حلق فيه ضيق.\nوهو زراد جيد الزرادة. ولبسوا الزرد والزرد تسمية بالمصدر وفعل بمعنى مفعول."
+      },
+      {
+        "kaynak": "Mekâyîs: زَرَدَ",
+        "metin": "(زَرَدَ) الزَّاءُ وَالرَّاءُ وَالدَّالُ حَرْفٌ وَاحِدٌ، وَهُوَ يَدُلُّ عَلَى الِابْتِلَاعِ، وَالزَّاءُ فِيهِ مُبْدَلَةٌ مِنْ سِينٍ. يُقَالُ ازْدَرَدَ اللُّقْمَةَ يَزْدَرِدُهَا. وَمُمْكِنٌ أَنْ يَكُونَ الزَّرَدُ مِنْ هَذَا، عَلَى أَنَّ أَصْلَهُ السِّينُ، وَمَعْنَى الزَّرَّادِ السَّرَّادُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أخذ بمزدرد إذا ضيق عليه كما يقال: أخذ بمخنقه. وزرد فلان عينه على صاحبه إذا غضب عليه وتجهمه ومعناه ضيقها عليه لا يفتحها حتى يملأها منه. وظن فلا أني زردة له أي أكلة. وتقول للحالف: تزردها حصاء، وتزبدها حذاء.",
-        "prototipe_benzerlik": 0.36,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخذ بمزدرد إذا ضيق عليه كما يقال: أخذ بمخنقه. وزرد فلان عينه على صاحبه إذا غضب عليه وتجهمه ومعناه ضيقها عليه لا يفتحها حتى يملأها منه. وظن فلا أني زردة له أي أكلة. وتقول للحالف: تزردها حصاء، وتزبدها حذاء.",
+        "prototipe_benzerlik": 0.414,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.36,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.414,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "bodily_process.n.01"],
   "muhassas_tasnif": {

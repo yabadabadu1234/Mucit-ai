@@ -799,19 +799,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نزكه: طعنه بالنيزك ينزكه بالضم. وفي الحديث: \" إن عيسى عليه السلام يقتل الدجال بالنيزك \" ورأيت في أيديهم النيازك. قال ذو الرمّة: يا من لقلب لا يزال كأنه ... من الوجد شكّته صدور النيازك وللضبّ نزكان. قال: سبحل له نزكان كانا فضيلةً ... على كلّ حافٍ في البلاد وناع",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نزكه: طعنه بالنيزك ينزكه بالضم. وفي الحديث: \" إن عيسى عليه السلام يقتل الدجال بالنيزك \" ورأيت في أيديهم النيازك. قال ذو الرمّة:\nيا من لقلب لا يزال كأنه ... من الوجد شكّته صدور النيازك\nوللضبّ نزكان. قال:\nسبحل له نزكان كانا فضيلةً ... على كلّ حافٍ في البلاد وناعل"
+      },
+      {
+        "kaynak": "Mekâyîs: نَزَكَ",
+        "metin": "(نَزَكَ) النُّونُ وَالزَّاءُ وَالْكَافُ أُصَيْلٌ يَدُلُّ عَلَى طَعْنٍ أَوْ شَبِيهٍ بِهِ. مِنْهُ النَّزْكُ: الطَّعْنُ بِالنَّيْزَكِ، وَهُوَ الرُّمْحُ الْقَصِيرُ. وَالنَّزْكُ: سُوءُ الْفِعْلِ وَالْقَوْلِ فِي الْإِنْسَانِ، وَالطَّعْنُ عَلَيْهِ. وَفِي الْحَدِيثِ: «إِنَّ شَهْرًا نَزَكُوهُ» أَيْ طَعَنُوا عَلَيْهِ، يُرَادُ شَهْرُ بْنُ حَوْشَبٍ. وَمِمَّا يُشَبَّهُ بِهَذَا قَوْلُهُمْ لِذِكْرِ الضَّبِّ: نِزْكٌ. قَالَ:\nسِبَحْلٌ لَهُ نِزْكَانِ كَانَا فَضِيلَةً ... عَلَى كُلِّ حَافٍ فِي الْبِلَادِ وَنَاعِلِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نزكه: عابه بغير ما رأى منه. وشهرٌ قد نزكوه. وفلانة نزيكة: معيبة، ورجل نزّاك: عيّاب. وفي ذكر الأبدال: ليسوا بنزّاكين، ولا معجبين ولا متماوتين.",
-        "prototipe_benzerlik": 0.611,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نزكه: عابه بغير ما رأى منه. وشهرٌ قد نزكوه. وفلانة نزيكة: معيبة، ورجل نزّاك: عيّاب. وفي ذكر الأبدال: ليسوا بنزّاكين، ولا معجبين ولا متماوتين.",
+        "prototipe_benzerlik": 0.606,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.611,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.606,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["natural_object.n.01"],
   "muhassas_tasnif": {

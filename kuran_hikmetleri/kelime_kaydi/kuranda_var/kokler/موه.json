@@ -1238,11 +1238,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "disguise.n.03",
-    "dayanak_tanim": "the act of concealing the identity of something by modifying its appearance",
+    "ince": "part.n.01",
+    "orta": "noun.substance",
+    "ust": "tabiat",
+    "dayanak_synset": "water.n.03",
+    "dayanak_tanim": "once thought to be one of four elements composing the universe (Empedocles)",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1261,44 +1261,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "رقة جرم الشيء وصفاؤه مع سيولته. كالماء {وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيءٍ حَيٍّ} [الأنبياء: 30] وليس في القرآن من التركيب إلا (الماء) ومنه \"الماوية: المرآة: صفة غالبة (منسوبة إلى الماء لصفائها. وقد كانوا يتراءَوْن في المياه قبل المَرائي). ومَوَّه الشيءَ- ض",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "سرج مموّه: مطليّ بالذهب أو الفضة. وحديث مموه: مزخرف. وما أحسن",
-        "prototipe_benzerlik": 0.307,
-        "halka": "uzak"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "رقة جرم الشيء وصفاؤه مع سيولته. كالماء {وَجَعَلْنَا مِنَ الْمَاءِ كُلَّ شَيءٍ حَيٍّ} [الأنبياء: 30] وليس في القرآن من التركيب إلا (الماء) ومنه \"الماوية: المرآة: صفة غالبة (منسوبة إلى الماء لصفائها. وقد كانوا يتراءَوْن في المياه قبل المَرائي). ومَوَّه الشيءَ- ض: طلاه (بماء) الذهب والفضة \". ومن هذا قالوا \"مَوَّه باطلَه- ض: زَيَّنَه وأرَاهُ في صورة الحق. والمُوهةُ- بالضم: تَرَقْرُقُ الماء في وَجْه الشابَّة. ومُوهَة الشباب كذلك: حُسْنُه وصَفَاؤه \". وليس في التركيب إلا الماء ومشتقاته. وفي [ل] \"الماوية: البقرة لبياضها \"وهو غريب حتى لو كان المراد البقرة الوحشية. ولم أجده في مصادر اللسان. وفي المقاييس 5/ 286 \"الماوية حجر البلور \"فأخشى أن تكون كلمة (البقرة) محرفة عن (البلورة)."
       },
       {
-        "cumle": "موهة وجهه!: ماءه ورونقه. ورجل ماه القلب: كثير ماء القلب أحمق. قال:",
-        "prototipe_benzerlik": 0.648,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عندي مويه ومويهة ومياه وأمواه، وماهت الرّكيّة: كثر ماؤها، وحفروا حتى أماهوا: بلغوا الماء، وأماهوا ركيّتهم: أنبطوا ماءها، وأماه دوابّه: سقاها، وأمهني: اسقني، وأميهوا حوضكم: اجمعوا فيه الماء، وركيّة ماهةٌ وميّهةٌ. وبلد ماهٌ وميّه. وسمعت بالبادية كوفيّاً يقول لأعرابيّ: كيف ماوان؟ قال: ميّهة، قال أميه مما كانت؟ قال: نعم أموه مما كانت. وأماهت الأرض: ظهر بزّها. وموّهوا قدوركم. وقال ذو الرمّة:\nتميميّة نجدية دار أهلها ... إذا موّه الصّمّان من سبل القطر\nوأمهت السكين وأمهيته: سقيته: وماهت السفينة: دخل فيها الماء."
       },
       {
-        "cumle": "إنك يا جهضم ماه القلب",
-        "prototipe_benzerlik": 0.283,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "أي صافي الظّبة كالماء.",
-        "prototipe_benzerlik": 0.589,
-        "halka": "yakın"
+        "kaynak": "Mekâyîs: مَوَهَ",
+        "metin": "(مَوَهَ) الْمِيمُ وَالْوَاوُ وَالْهَاءُ أَصْلٌ صَحِيحٌ وَاحِدٌ، وَمِنْهُ يَتَفَرَّعُ كَلِمُهُ، وَهِيَ الْمَوَهُ: أَصْلُ بِنَاءِ الْمَاءِ، وَتَصْغِيرُهُ مُوَيْهٌ ; قَالُوا: وَهَذَا دَلِيلٌ عَلَى أَنَّ الْهَمْزَةَ فِي الْمَاءِ بَدَلٌ مِنْ هَاءٍ. وَيُقَالُ: مَوَّهْتُ الشَّيْءَ، كَأَنَّكَ سَقَيْتَهُ الْمَاءَ، وَمَوَّهْتُ الشَّيْءَ: طَلَيْتُهُ بِفِضَّةٍ أَوْ ذَهَبٍ، كَأَنَّهُمْ يَجْعَلُونَ ذَلِكَ بِمَنْزِلَةِ مَا يُسْقَاهُ ; وَقَالُوا: مَا أَحْسَنَ مُوهَةَ وَجْهِهِ، أَيْ تَرَقْرُقَ مَاءِ الشَّبَابِ فِيهِ.\nوَمِنَ الْبَابِ الْمَاوِيَّةُ: حَجَرُ الْبِلَّوْرِ، وَكَذَلِكَ الْمَاوِيَّةُ: [الْمِرْآةُ] . قَالَ طَرَفَةُ: 206\nوَعَيْنَانِ كَالْمَاوِيَّتَيْنِ اسْتَكَنَّتَا بِكَهْفَيْ ... حَجَاجَيْ صَخْرَةٍ قَلْتِ مَوْرِدِ\nيُقَالُ مَاهَتِ السَّفِينَةُ تَمُوهُ وَتَمَاهُ: دَخَلَ فِيهَا الْمَاءُ، وَأَمَاهَتِ الْأَرْضُ: ظَهَرَ فِيهَا نَزٌّ، وَأَمَاهَ الْفَحْلُ: أَلْقَى مَاءَهُ فِي رَحِمِ الْأُنْثَى ; وَرَجُلٌ مَاهُ الْقَلْبِ، أَيْ كَثِيرُ مَاءِ الْقَلْبِ، قَالَ الرَّاجِزُ:\nإِنَّكَ يَا جَهْضَمُ مَاهُ الْقَلْبِ\nقَالُوا: وَيَكُونُ صَاحِبُ ذَلِكَ بَلِيدًا، أُخْرِجَ مَاهٌ مُخْرَجَ مَالٍ. وَأَمَهْتُ السِّكِّينَ وَأَمْهَيْتُهُ: سَقَيْتُهُ، وَيُقَالُ فِي النِّسْبَةِ إِلَى مَاهٍ مَاهِيٌّ وَمَائِيٌّ، وَإِلَى مَاءٍ مَائِيٌّ وَمَاوِيٌّ."
       }
     ],
-    "ortalama_benzerlik": 0.457,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سرج مموّه: مطليّ بالذهب أو الفضة. وحديث مموه: مزخرف. وما أحسن",
+        "prototipe_benzerlik": 0.269,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "موهة وجهه!: ماءه ورونقه. ورجل ماه القلب: كثير ماء القلب أحمق. قال:",
+        "prototipe_benzerlik": 0.548,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنك يا جهضم ماه القلب",
+        "prototipe_benzerlik": 0.288,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال عبيد بن أيوب بن ضرار العنبريّ:",
+        "prototipe_benzerlik": 0.571,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولو لم يقنّع عند أبيات خاله ... لعضّ به ماه الذباب حديد",
+        "prototipe_benzerlik": 0.838,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي صافي الظّبة كالماء.",
+        "prototipe_benzerlik": 0.401,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.486,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "aqueous.a.01",
-    "artifact.n.01",
-    "body_of_water.n.01",
-    "food.n.01",
-    "liquid.n.03",
-    "substance.n.01"
-  ],
+  "kolekzifikasyon_kavramlari": ["act.n.02", "aqueous.a.01", "artifact.n.01", "body_of_water.n.01", "nutrient.n.02", "substance.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الدهور والأزمنة والأهوية والرياح",

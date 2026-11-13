@@ -777,24 +777,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أسعطته الدواء وسعطته فاستعطه، وعليك بالسعوط، واستسعطني فأسعطته واجعل الدواء في المسعط فأسعطه. وروت قرونها بالسليط والسعيط: بدهن الزيت والخردل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أسعطته الدواء وسعطته فاستعطه، وعليك بالسعوط، واستسعطني فأسعطته واجعل الدواء في المسعط فأسعطه. وروت قرونها بالسليط والسعيط: بدهن الزيت والخردل."
+      },
+      {
+        "kaynak": "Mekâyîs: سَعَطَ",
+        "metin": "(سَعَطَ) السِّينُ وَالْعَيْنُ وَالطَّاءُ أَصْلٌ، وَهُوَ أَنْ يُوجَرَ الْإِنْسَانُ الدَّوَاءَ، ثُمَّ يَحْمِلُ عَلَيْهِ. فَمِنْ ذَلِكَ أَسْعَطْتُهُ الدَّوَاءَ فَاسْتَعَطَهُ. وَالْمُسْعُطُ: الَّذِي يُجْعَلُ فِيهِ السَّعُوطُ. وَالسَّعُوطُ هُوَ الدَّوَاءُ، وَأَصْلَ بِنَائِهِ سَعَطَ. وَمِمَّا يُحْمَلُ عَلَيْهِ قَوْلُهُمْ طَعَنْتُهُ فَأَسْعَطْتُهُ الرُّمْحَ، وَاللَّهُ أَعْلَمُ.\n[بَابُ السِّينِ وَالْغَيْنِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أسعطته الرمح كقولك: أوجرته. وكقول المتنبي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أسعطته الرمح كقولك: أوجرته. وكقول المتنبي:",
         "prototipe_benzerlik": 0.7,
         "halka": "yakın"
       },
       {
-        "cumle": "وأسعطته كلكمة فما فهمها إذا بالغت في تفهيمه وأكثرت عليه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا وصفوا له داء بثغر ... سقاه أسنة الأسل النهال",
+        "prototipe_benzerlik": 0.494,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأسعطته كلكمة فما فهمها إذا بالغت في تفهيمه وأكثرت عليه.",
         "prototipe_benzerlik": 0.534,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.617,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.576,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

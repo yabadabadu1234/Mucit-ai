@@ -1550,8 +1550,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "incorporation.n.01",
-    "dayanak_tanim": "consolidating two or more things; union in (or into) one body",
+    "dayanak_synset": "merging.n.01",
+    "dayanak_tanim": "the act of joining together as one",
     "synset_sayisi": 15
   },
   "ses_mana_tasnif": {
@@ -1565,24 +1565,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دمج الوحشي في الكناس واندمج: دخل. قال الراعي: غداة تراءت لابن ستين حجة ... سقية غيل في الحجال دموج ودمج الشيء دموجاً واندمج اندماجاً إذا استحكم والتأم. قال يصف فرساً طويلاً: شرجب سلهب كأن رماحاً ... حلمته وفي السراة دموج يقال: اندمج الثعلب في الجبة والسيلان في",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دمج الوحشي في الكناس واندمج: دخل. قال الراعي:\nغداة تراءت لابن ستين حجة ... سقية غيل في الحجال دموج\nودمج الشيء دموجاً واندمج اندماجاً إذا استحكم والتأم. قال يصف فرساً طويلاً:\nشرجب سلهب كأن رماحاً ... حلمته وفي السراة دموج\nيقال: اندمج الثعلب في الجبة والسيلان في النصاب. وأدمجت الماشطة ضفائر المرأة: أدرجتها وملستها. وله أعضاء مدمجة. وأدرج هذا الطومار وأدمجه أي شدّ أدراجه."
+      },
+      {
+        "kaynak": "Mekâyîs: دَمَجَ",
+        "metin": "(دَمَجَ) الدَّالُ وَالْمِيمُ وَالْجِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الِانْطِوَاءِ وَالسَّتْرِ. يُقَالُ أَدْمَجْتُ الْحَبْلَ، إِذَا أَدْرَجْتَهُ وَأَحْكَمْتَ فَتْلَهُ. وَقَالَ الْأَصْمَعِيُّ فِي قَوْلِ أَوْسٍ:\nبَكَيْتُمْ عَلَى الصُّلْحِ الدُِّمَاجِ وَمِنْكُمُ ... بِذِي الرِّمْثِ مِنْ وَادِي هُبَالَةَ مِقْنَبُ\nقَالَ: هُوَ مِنْ دَامَجَهُ دِمَاجًا، إِذَا وَافَقَهُ عَلَى الصُّلْحِ. يُقَالُ تَدَامَجُوا. وَيُقَالُ فُلَانٌ عَلَى دَمَجِ فُلَانٍ، أَيْ عَلَى طَرِيقَتِهِ. وَكُلُّ هَذَا الَّذِي قَالَهُ فَلَيْسَ يَبْعُدُ عَمَّا ذَكَرْنَاهُ مِنَ الْخَفَاءِ وَالسَّتْرِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دمج أمرهم: صلح والتأم. وصلح دِماج ودُماج: محكم. وقال ذو الرمة:",
-        "prototipe_benzerlik": 0.54,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دمج أمرهم: صلح والتأم. وصلح دِماج ودُماج: محكم. وقال ذو الرمة:",
+        "prototipe_benzerlik": 0.374,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإذا نحن أسباب المودة بيننا ... دماج قواها لم يخنها وصولها",
+        "prototipe_benzerlik": 0.225,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي مدمجة. ودامجتك على هذا الأمر: وافقتك عليه. وتدامجوا عليه: توافقوا. وتدامج القوم عليّ: تألبوا. ووجد البرد فتدمج في ثيابه: تلفف. وليل دامج دامس: ملتفّ الظلام، قد دمج بعضه في بعض. وأدمج كلامه: أتى به متراصف النظم. واندمج الفرس: انطوى بطنه وضمر. قال النابغة يصف إبل الحاجّ:",
+        "prototipe_benzerlik": 0.761,
         "halka": "yakın"
       },
       {
-        "cumle": "أي مدمجة. ودامجتك على هذا الأمر: وافقتك عليه. وتدامجوا عليه: توافقوا. وتدامج القوم عليّ: تألبوا. ووجد البرد فتدمج في ثيابه: تلفف. وليل دامج دامس: ملتفّ الظلام، قد دمج بعضه في بعض. وأدمج كلامه: أتى به متراصف النظم. واندمج الفرس: انطوى بطنه وضمر. قال النابغة يصف إبل الحاجّ:",
-        "prototipe_benzerlik": 0.722,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قود براها قياد الشعث فاندمجت ... تنكي دوابرها محذوة خدما",
+        "prototipe_benzerlik": 0.421,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.631,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.445,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

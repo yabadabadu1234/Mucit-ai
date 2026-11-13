@@ -1741,8 +1741,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "sight.n.01",
-    "dayanak_tanim": "an instance of visual perception",
+    "dayanak_synset": "idea.n.03",
+    "dayanak_tanim": "a personal view",
     "synset_sayisi": 32
   },
   "ses_mana_tasnif": {
@@ -1756,49 +1756,102 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رأيته بعيني رؤية، ورأيته في المنام رؤيا، ورأيته رأي العين. وأرأيته غيري إراءة. ورأيت الهلال. وتراءينا الهلال. وتراءى الجمعان. وتراءت لنا فلانة: تصدّت لنا لنراها. وهو يتراءى في المرآة وفي السيف: ينظر فيهما. وفي الحديث \" لا يتراءى أحدكم في الماء وهو يرائي الناس ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رأيته بعيني رؤية، ورأيته في المنام رؤيا، ورأيته رأي العين. وأرأيته غيري إراءة. ورأيت الهلال. وتراءينا الهلال. وتراءى الجمعان. وتراءت لنا فلانة: تصدّت لنا لنراها. وهو يتراءى في المرآة وفي السيف: ينظر فيهما. وفي الحديث \" لا يتراءى أحدكم في الماء وهو يرائي الناس \" مراآة ورياء، وفعل الخير رئاء الناس. وهو حسن المرأى والمرآة. ونظر في المرآة. وله مراءٍ مجلوةٌ: ورأى رؤيا حسنة، ورؤى حساناً. ورأت المرأة ترئيةً بوزن تربعة، وتريّةً وهي ما تراه من صفرة أو بياض. ورأيت الرجل ترئيةً: أمسكت له المرآة لينظر فيها. واسترأيت بالمرآة. وله رواء حسن. وهذه امرأة لها رواء، والواو تخفيف للهمزة. وعلى وجهه رأوة الحمق وهي ما يرى عليه من آيته البينة التي لا تخفى على الناظر كأنها تتكلم به وتنادي عليه، وهذا نحو جبيت الخراج جباوة. وأرأت الشاة: تربد ضرعها فعلم أنها أقربت وهي مرء. وأرى القرن وأبدى وهو أول ما يتبين. وأرت الأرض وأبدت: أول ما يلوح شيء من النبات. وجاء حين أجنّ رؤيٌ رؤياً أي شخص شخصاً، وهو فعل بمعنى مفعول كخبز. ورأيته أصبت رئته. ورأرأت بعينها: دارت بالحدقتين للمغازلة والمهازلة. قال:\nولما رأتني رأرأت ثم أقبلت ... تهازلني والهزل داعية العهر\nورجل وامرأة رأراء العين. قال الأصمعي: الذي تدور حدقته كأنها في فلكة. ولهم أثاث ورئيٌ وهو ما رُؤا عليه من حسن زي وحال متزينة."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يرى لفلان إذا اعتقد فيه. وأراه وجه الصواب. وأرني برأيك. قال نهار بن توسعة:",
-        "prototipe_benzerlik": 0.665,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وما أضل رأيهم وآراءهم. وارتأى في الأمر. وارتأيت رأيا في كذا أرتئيه. والرأي ما ارتآه فلان. قال:",
-        "prototipe_benzerlik": 0.637,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وفلان يتراءى برأي فلان أي يميل إلى رأيه ويأخذ به. واسترأيته واستريته: طلبت رأيه ومع فلان رئيٌّ ورئي: جني يريه كهانة وطباً ويلقي على لسانه شعراً. وفلان رئي قومه ورأيهم: لصاحب رأيهم ووجههم. وما أراه يفعل كذا: ما أظنه. وتراءى له الأمر. ويتراءى لي أن الأمر كيت وكيت. وداراهما تتناظران وتتراءيان. وداري تر",
-        "prototipe_benzerlik": 0.498,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يرى لفلان إذا اعتقد فيه. وأراه وجه الصواب. وأرني برأيك. قال نهار بن توسعة:",
+        "prototipe_benzerlik": 0.515,
         "halka": "orta"
       },
       {
-        "cumle": "مما رأت دار فلان. قال ابن مقبل:",
-        "prototipe_benzerlik": 0.586,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلمن أقول إذا تلمّ ملمة ... أرني برأيك أو إلى من أفزع",
+        "prototipe_benzerlik": 0.512,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما أضل رأيهم وآراءهم. وارتأى في الأمر. وارتأيت رأيا في كذا أرتئيه. والرأي ما ارتآه فلان. قال:",
+        "prototipe_benzerlik": 0.817,
         "halka": "yakın"
       },
       {
-        "cumle": "ودورهم رئاء: مترائية. وحي رئاء ونظر: متجاورون. وهو يرأى هذا الأمر: يخيل إليه. قال الأعشى:",
-        "prototipe_benzerlik": 0.631,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألا أيها المرتئي في الأمور ... سيجلو العمى عنك تبيانها",
+        "prototipe_benzerlik": 0.55,
         "halka": "yakın"
       },
       {
-        "cumle": "وتقول العرب: أرى الله بفلان: نكل به، ومعناه أرى عدوّه فيه ما يشمت به. قال الأعشى:",
-        "prototipe_benzerlik": 0.538,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان يتراءى برأي فلان أي يميل إلى رأيه ويأخذ به. واسترأيته واستريته: طلبت رأيه ومع فلان رئيٌّ ورئي: جني يريه كهانة وطباً ويلقي على لسانه شعراً. وفلان رئي قومه ورأيهم: لصاحب رأيهم ووجههم. وما أراه يفعل كذا: ما أظنه. وتراءى له الأمر. ويتراءى لي أن الأمر كيت وكيت. وداراهما تتناظران وتتراءيان. وداري ترى داره. والجبل ينظر إليك والحائط يراك. وداري",
+        "prototipe_benzerlik": 0.743,
         "halka": "yakın"
       },
       {
-        "cumle": "وارتفعت رئتاي إلى حلقي من هيبة فلان.",
-        "prototipe_benzerlik": 0.263,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مما رأت دار فلان. قال ابن مقبل:",
+        "prototipe_benzerlik": 0.648,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للمازنية مصطاف ومرتبع ... مما رأت أود فالمقراة فالجرع",
+        "prototipe_benzerlik": 0.792,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال آخر:",
+        "prototipe_benzerlik": 0.514,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أيا برقتي أعشاش لازال مدجن ... يجود كما والنخل مما يراكما",
+        "prototipe_benzerlik": 0.418,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ودورهم رئاء: مترائية. وحي رئاء ونظر: متجاورون. وهو يرأى هذا الأمر: يخيل إليه. قال الأعشى:",
+        "prototipe_benzerlik": 0.595,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كلانا يرأى أنه غير ظالم ... فأعزبت حلمي اليوم أو هو أعزبا",
+        "prototipe_benzerlik": 0.452,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول العرب: أرى الله بفلان: نكل به، ومعناه أرى عدوّه فيه ما يشمت به. قال الأعشى:",
+        "prototipe_benzerlik": 0.583,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعلمت أن الله عم ... داً خسّها وأرى بها",
+        "prototipe_benzerlik": 0.484,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وارتفعت رئتاي إلى حلقي من هيبة فلان.",
+        "prototipe_benzerlik": 0.317,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.545,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.567,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "ability.n.02",

@@ -778,29 +778,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وشجت العروق والأغصان تشج وشيجاً، ومنه: الوشيج: عروق القصب. قال زهير: وهل ينبت الخطيّ إلا وشيجه ... ويغرس إلا في منابتها النخل",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وشجت العروق والأغصان تشج وشيجاً، ومنه: الوشيج: عروق القصب. قال زهير:\nوهل ينبت الخطيّ إلا وشيجه ... ويغرس إلا في منابتها النخل"
+      },
+      {
+        "kaynak": "Mekâyîs: وَشَجَ",
+        "metin": "(وَشَجَ) الْوَاوُ وَالشِّينُ وَالْجِيمُ: كَلِمَةٌ تَدُلُّ عَلَى اشْتِبَاكٍ وَتَدَاخُلٍ. يُقَالُ: وَشَجَتِ الْأَغْصَانُ. اشْتَبَكَتْ. وَكُلُّ شَيْءٍ اشْتَبَكَ فَهُوَ وَاشِجٌ. وَالْوَشِيجُ مِنَ الْقَنَا ; مَا نَبَتَ مِنَ الْأَرْضِ مُعْتَرِضًا، وَلَعَلَّ ذَلِكَ يَشْتَبِكُ بَعْضُهُ بِبَعْضٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بينهم واشجة رحم، ووشائج النسب. ووشج ما بينهم وتوشّج. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بينهم واشجة رحم، ووشائج النسب. ووشج ما بينهم وتوشّج. قال:",
         "prototipe_benzerlik": 0.877,
         "halka": "yakın"
       },
       {
-        "cumle": "وتطاعنوا بالوشيج: بالرّماح. قال أوس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والقرابات بيننا واشجات ... محكمات القوى بعقدٍ شديد",
+        "prototipe_benzerlik": 0.312,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال يصف نساءً:",
+        "prototipe_benzerlik": 0.171,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مصاصٌ لبابٌ لم تشب فيه أشبةٌ ... وما وشجت فيه عروق الزعانف",
+        "prototipe_benzerlik": 0.887,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتطاعنوا بالوشيج: بالرّماح. قال أوس:",
         "prototipe_benzerlik": 0.473,
         "halka": "orta"
       },
       {
-        "cumle": "وقد وشجت في قلبي هموم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نبيح حمى ذي العزّ حين نريده ... ونحمي حمانا بالوشيج المقوّم",
+        "prototipe_benzerlik": 0.394,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقد وشجت في قلبي هموم.",
         "prototipe_benzerlik": 0.071,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.474,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.455,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

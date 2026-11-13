@@ -1273,11 +1273,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "cry.v.02",
-    "orta": "verb.body",
-    "ust": "canlı ve beden",
-    "dayanak_synset": "cry.v.02",
-    "dayanak_tanim": "shed tears because of sadness, rage, or pain",
+    "ince": "shed.v.01",
+    "orta": "verb.contact",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "shed.v.01",
+    "dayanak_tanim": "get rid of",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1291,19 +1291,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دمع ذارف ومذروف وذريف. ودموع وعيون ذوارف. وقد ذرف دمعه ذروفاً، وذرفت عينه الدمع ذرفاً. وسالت مذارف عينه أي مدامعها. وسمعت من يقول: رأيت دمعه يتذارف: وذرفت على الستين زدت عليها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دمع ذارف ومذروف وذريف. ودموع وعيون ذوارف. وقد ذرف دمعه ذروفاً، وذرفت عينه الدمع ذرفاً. وسالت مذارف عينه أي مدامعها. وسمعت من يقول: رأيت دمعه يتذارف: وذرفت على الستين زدت عليها."
+      },
+      {
+        "kaynak": "Mekâyîs: ذَرَفَ",
+        "metin": "(ذَرَفَ) الذَّالُ وَالرَّاءُ وَالْفَاءُ ثَلَاثُ كَلِمَاتٍ، لَا يَنْقَاسُ. فَالْأُولَى ذَرَفَتِ الْعَيْنُ دَمْعَهَا. وَذَرَفَ الدَّمْعُ يَذْرِفُ ذَرْفًا. وَمَذَارِفُ الْعَيْنِ: مَدَامِعُهَا. وَالثَّانِيَةُ ذَرَفَ يَذْرِفُ ذَرَفَانًا، وَذَلِكَ إِذَا مَشَى مَشْيًا ضَعِيفًا. وَالثَّالِثَةُ ذَرَّفَ عَلَى الْمِائَةِ، أَيْ زَادَ عَلَيْهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مطر وسحاب ذارف. ورأيت في يده قدحاً يتذارف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مطر وسحاب ذارف. ورأيت في يده قدحاً يتذارف.",
         "prototipe_benzerlik": 0.587,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.587,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["cry.v.02", "shed.v.01", "shed.v.04"],
   "muhassas_tasnif": {

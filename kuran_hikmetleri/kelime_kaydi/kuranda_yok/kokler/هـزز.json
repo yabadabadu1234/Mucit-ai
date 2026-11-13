@@ -37,34 +37,66 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هزّ السّيف والقناة وغيرهما \" وهزّي إليك بجذع النّخلة \" وهزّت الريح الأغصان. وسيفٌ هزهاز. قال: فوردت مثل اليماني الهزهاز ... تدفع عن أعناقها بالأعجاز أي ماءً كالسيف. وهزهز الثور قرنه فتهزهز. وفي الحديث: \" ما تهزهزت رءوسكما \" وفلان يشهد الهزاهز وهي الحروب والشدا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هزّ السّيف والقناة وغيرهما \" وهزّي إليك بجذع النّخلة \" وهزّت الريح الأغصان. وسيفٌ هزهاز. قال:\nفوردت مثل اليماني الهزهاز ... تدفع عن أعناقها بالأعجاز\nأي ماءً كالسيف. وهزهز الثور قرنه فتهزهز. وفي الحديث: \" ما تهزهزت رءوسكما \" وفلان يشهد الهزاهز وهي الحروب والشدائد التي تهزهز."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو يهتز للمعروف. وهززته وهززت منه. وقد هزّ عطفيه لكذا، وهزّ منكبيه. وهزّ الحادي الإبل بحدائه فاهتزّت، ولها هزيز عند الحداء: نشاط في السير وحركة. وللريح هزيز. قال امرؤ القيس:",
-        "prototipe_benzerlik": 0.716,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو يهتز للمعروف. وهززته وهززت منه. وقد هزّ عطفيه لكذا، وهزّ منكبيه. وهزّ الحادي الإبل بحدائه فاهتزّت، ولها هزيز عند الحداء: نشاط في السير وحركة. وللريح هزيز. قال امرؤ القيس:",
+        "prototipe_benzerlik": 0.714,
         "halka": "yakın"
       },
       {
-        "cumle": "وهو حفيفها وسرعة هبوبها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما جرى شأوين وابتل عطفه ... تقول هزيز الريح مرّت بأثأب",
+        "prototipe_benzerlik": 0.39,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو حفيفها وسرعة هبوبها.",
         "prototipe_benzerlik": 0.202,
         "halka": "uzak"
       },
       {
-        "cumle": "واهتزّ الماء في جريانه والكوكب في انقضاضه. ويقال: قد هزّ الكوكب إذا انقضّ. قال:",
-        "prototipe_benzerlik": 0.396,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الطرمّاح:",
+        "prototipe_benzerlik": 0.518,
         "halka": "orta"
       },
       {
-        "cumle": "واهتزّ النبات إذا طال. وهزّته الرياح والأمطار. واهتزت الأرض إذا أنبتت. وامرأة هزّةٌ: نشيطة للشرّ مرتاحة له، ونساءٌ هزّاتٌ.",
-        "prototipe_benzerlik": 0.247,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يظلّ هزيز الريح بين مسامعي ... بها كالتجاج المأتم المتنوّح",
+        "prototipe_benzerlik": 0.341,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واهتزّ الماء في جريانه والكوكب في انقضاضه. ويقال: قد هزّ الكوكب إذا انقضّ. قال:",
+        "prototipe_benzerlik": 0.38,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأنّ من يأخذ وهو مذنب ... يخرّ من حيث يهزّ الكوكب",
+        "prototipe_benzerlik": 0.376,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واهتزّ النبات إذا طال. وهزّته الرياح والأمطار. واهتزت الأرض إذا أنبتت. وامرأة هزّةٌ: نشيطة للشرّ مرتاحة له، ونساءٌ هزّاتٌ.",
+        "prototipe_benzerlik": 0.251,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.39,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.397,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

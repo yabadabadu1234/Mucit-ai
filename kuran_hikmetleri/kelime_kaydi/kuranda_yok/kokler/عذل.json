@@ -983,29 +983,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجل عذلة خذلة وعذالة خذالة. قال تأبط شراً: يا من لعذالة خذالة أشبٍ ... حرق باللوم جلدي أيّ تحراق وعذلته فاعتذل أي عذل نفسه وأعتب ورمى فأخطأ ثم اعتذل أي عذل نفسه على الخطأ فرمى ثانية فأصاب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل عذلة خذلة وعذالة خذالة. قال تأبط شراً:\nيا من لعذالة خذالة أشبٍ ... حرق باللوم جلدي أيّ تحراق\nوعذلته فاعتذل أي عذل نفسه وأعتب ورمى فأخطأ ثم اعتذل أي عذل نفسه على الخطأ فرمى ثانية فأصاب."
+      },
+      {
+        "kaynak": "Mekâyîs: عَذَلَ",
+        "metin": "(عَذَلَ) الْعَيْنُ وَالذَّالُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى حَرٍّ وَشِدَّةٍ فِيهِ، ثُمَّ يُقَاسُ عَلَيْهِ مَا يُقَارِبُهُ. وَمِنْ ذَلِكَ اعْتَذَلَ الْحَرُّ: اشْتَدَّ. قَالَ أَبُو عُبَيْدٍ: أَيَّامٌ مُعْتَذِلَاتٌ: شَدِيدَاتُ الْحَرَارَةِ.\nوَمِمَّا قِيسَ عَلَى هَذَا قَوْلُهُمْ: عَذَلَ فُلَانٌ فُلَانًا عَذْلًا، وَالْعَذَلُ الِاسْمُ. وَرَجُلٌ عَذَّالٌ وَامْرَأَةٌ عَذَّالَةٌ، إِذَا كَثُرَ ذَلِكَ مِنْهُمَا. وَالْعُذَّالُ الرِّجَالُ، وَالْعُذَّلُ النِّسَاءُ. وَسُمِّيَ هَذَا عَذْلًا لِمَا فِيهِ مِنْ شِدَّةٍ وَمَسِّ لَذْعٍ. قَالَ:\nغَدَتْ عَذَّالَتَايَ فَقُلْتُ مَهْلًا ... أَفِي وَجْدٍ بِسَلْمَى تَعْذُلَانِي"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "كأنه فرط فتدارك تفريطه بالإفراط لائماً نفسه على",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول الراعي:",
+        "prototipe_benzerlik": 0.591,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثم انصرفت وظلّ الحلم يعذلني ... قد طال ما قادني جهلي وعناني",
+        "prototipe_benzerlik": 0.315,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأنه فرط فتدارك تفريطه بالإفراط لائماً نفسه على",
         "prototipe_benzerlik": 0.377,
         "halka": "orta"
       },
       {
-        "cumle": "ما فرط منه. وقد اعتذل يومنا إذا اشتد حرّه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما فرط منه. وقد اعتذل يومنا إذا اشتد حرّه. قال:",
         "prototipe_benzerlik": 0.694,
         "halka": "yakın"
       },
       {
-        "cumle": "ومعتذلات سهيل ومتعذلاته: أيام مشتعلة عند طلوعه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كدريّ بيد فلاة ظل يسفعه ... يوم أراح من الجوزاء واعتذلا",
+        "prototipe_benzerlik": 0.291,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومعتذلات سهيل ومتعذلاته: أيام مشتعلة عند طلوعه.",
         "prototipe_benzerlik": 0.604,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.559,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.479,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

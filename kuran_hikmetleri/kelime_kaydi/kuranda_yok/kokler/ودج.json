@@ -1495,29 +1495,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "قطع الودجين وهما الوريدان. وودج الذبيحة يدجها، ودج ذبيحتك.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "حزّ على الفائت الودج إذا اشتدّ تلهفه عليه. قال عبد الله بن الزبير بفتح الزاي الأسديّ الشاعر:",
-        "prototipe_benzerlik": 0.332,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قطع الودجين وهما الوريدان. وودج الذبيحة يدجها، ودج ذبيحتك."
       },
       {
-        "cumle": "وكان فلان ودجي إلى كذا أي سببي إليه ووصلتي. ويقال للمتواصلين: هما ودجان: شبّها بالعرقين في تصاحبهما. وقال زيد الخيل:",
+        "kaynak": "Mekâyîs: وَدَجَ",
+        "metin": "(وَدَجَ) الْوَاوُ وَالدَّالُ وَالْجِيمُ: كَلِمَةٌ وَاحِدَةٌ: الْوَدَجَانِ: عِرْقَانِ فِي الْأَخْدَعَيْنِ. ثُمَّ يُشَبَّهُ بِذَلِكَ، فَيُقَالُ لِلْأَخَوَيْنِ: وَدَجَانِ. قَالَ:\nفَقُبِّحْتُمَا مِنْ وَافِدَيْنِ اصْطُفِيتُمَا ... وَمِنْ وَدَجَيْ حَرْبٍ تَلَقَّحُ حَائِلِ\nوَوَدَجْتُ بَيْنَ الْقَوْمِ: أَصْلَحْتُ بَيْنَهُمْ، مَأْخُوذٌ مِنَ الْوَدَجَيْنِ، أَيِ اتَّفَقُوا كَاتِّفَاقِ الْوَدَجَيْنِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حزّ على الفائت الودج إذا اشتدّ تلهفه عليه. قال عبد الله بن الزبير بفتح الزاي الأسديّ الشاعر:",
+        "prototipe_benzerlik": 0.332,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا أحسب الشرذ جاراً لا يفارقني ... ولا أحُزّ على ما فاتني الودجا",
+        "prototipe_benzerlik": 0.295,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكان فلان ودجي إلى كذا أي سببي إليه ووصلتي. ويقال للمتواصلين: هما ودجان: شبّها بالعرقين في تصاحبهما. وقال زيد الخيل:",
         "prototipe_benzerlik": 0.371,
         "halka": "orta"
       },
       {
-        "cumle": "أي من أخوي حربٍ أو تحيا بكما الحرب كما يحيا الحيوان بودجيه. وودجت بين القوم: أصلحت وقطعت الشرّ وأمتّه. ووادجه موادجة: سالمه. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فقبّحتما من وافدين اصطفيتما ... ومن ودجي حرب تلقّح حائل",
+        "prototipe_benzerlik": 0.338,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي من أخوي حربٍ أو تحيا بكما الحرب كما يحيا الحيوان بودجيه. وودجت بين القوم: أصلحت وقطعت الشرّ وأمتّه. ووادجه موادجة: سالمه. قال الكميت:",
         "prototipe_benzerlik": 0.248,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الصّادعون صفا من لا يوادجهم ... والمرأبون بإذن الله ما شعبوا",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.317,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.329,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

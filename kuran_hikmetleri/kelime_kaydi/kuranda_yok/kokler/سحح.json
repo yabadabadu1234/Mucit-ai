@@ -1024,8 +1024,8 @@
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
-    "dayanak_synset": "plaza.n.01",
-    "dayanak_tanim": "a public square with room for pedestrians",
+    "dayanak_synset": "playing_field.n.02",
+    "dayanak_tanim": "a piece of land prepared for playing a game",
     "synset_sayisi": 16
   },
   "ses_mana_tasnif": {
@@ -1044,19 +1044,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "سيلان متتابع بغزارة أو اتساع من عُرْض شيء أي بنفاذٍ من أثنائه (1): كالودك من اللحم، وكالدمع والمطر والماء الكثير الانصباب. ومنه:",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "سيلان متتابع بغزارة أو اتساع من عُرْض شيء أي بنفاذٍ من أثنائه (1): كالودك من اللحم، وكالدمع والمطر والماء الكثير الانصباب. ومنه:"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سحّ الماء، وسحه غيره، يقال: سحابة سحوح، وسحت السماء مطرها، وسح المطر والدمع."
+      },
+      {
+        "kaynak": "Mekâyîs: سَحَّ",
+        "metin": "(سَحَّ) السِّينُ وَالْحَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الصَّبِّ، يُقَالُ سَحَحْتُ [الْمَاءَ] أَسُحُّ سَحًّا. وَسَحَابَةٌ سَحُوحٌ، أَيْ صَبَّابَةٌ. وَشَاةٌ سَاحٌّ، أَيْ سَمِينَةٌ، كَأَنَّهَا تَسُحُّ الْوَدَكَ سَحًّا. وَفَرَسٌ مِسَحٌّ، أَيْ سَرِيعَةٌ يُشْبِهُ عَدْوُهَا انْصِبَابَ الْمَطَرِ. وَيُقَالُ سَحْسَحَ الشَّيْءُ، إِذَا سَالَ. وَيُقَالُ إِنَّ السَّحْسَحَةَ هِيَ السَّاحَةُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "استنشدته قصيدة فسحها عليّ سحاً. وفرس مسح: عداء. وشاة ساح: تسح الودك لسمنها، وسحت سحوحاً. وتمر فذ وسح: متفرق. و\" يمين الله سحّاء لا يغيضها شيء الليل والنهار \". وغارة سحاء: شعواء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "استنشدته قصيدة فسحها عليّ سحاً. وفرس مسح: عداء. وشاة ساح: تسح الودك لسمنها، وسحت سحوحاً. وتمر فذ وسح: متفرق. و\" يمين الله سحّاء لا يغيضها شيء الليل والنهار \". وغارة سحاء: شعواء.",
         "prototipe_benzerlik": 0.149,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.149,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

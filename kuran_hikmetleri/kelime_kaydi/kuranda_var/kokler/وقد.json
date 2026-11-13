@@ -1954,29 +1954,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مادة حياة النار أي اشْتعالها. فالوَقُود هو مادة ذلك {النَّارِ ذَاتِ الْوَقُودِ} [البروج: 5]، {وَقُودُهَا النَّاسُ وَالْحِجَارَةُ} [البقرة: 24]، واسْتَوْقَدْتُ النارَ: أَوْقَدْتُها. واسْتَوْقَدَتْ هي {كَمَثَلِ الَّذِي اسْتَوْقَدَ نَارًا} [البقرة: 17]. (اجتهد في",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مادة حياة النار أي اشْتعالها. فالوَقُود هو مادة ذلك {النَّارِ ذَاتِ الْوَقُودِ} [البروج: 5]، {وَقُودُهَا النَّاسُ وَالْحِجَارَةُ} [البقرة: 24]، واسْتَوْقَدْتُ النارَ: أَوْقَدْتُها. واسْتَوْقَدَتْ هي {كَمَثَلِ الَّذِي اسْتَوْقَدَ نَارًا} [البقرة: 17]. (اجتهد في إيقادها) {الزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّيٌّ يُوقَدُ مِنْ شَجَرَةٍ مُبَارَكَةٍ زَيْتُونَةٍ} [النور: 35]. \"ووَقْدَةُ الحَرّ: أَشَدّه \". ومن مجازه: {كُلَّمَا أَوْقَدُوا نَارًا لِلْحَرْبِ أَطْفَأَهَا اللَّهُ} [المائدة: 64] , \"قَلْبٌ وَقّاد - كشداد، ومُتَوَقِّد: مَاض سريع، وتوقد الشيءُ تلألأ \"أخذًا من لمعان النار. وكل ما في القرآن من التركيب هو بمعنى إشعال النار."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وقدت النار وقوداً ووقداً، واتقدت وتوقّدت، وأوقدتها ووقّدتها واستوقدتها، ورفعتها بالوقود، وهذا موقد النار وموقدها ومستوقدها، وما أعظم هذا الوقد! وهو النار. وزند ميقاد: سريع الوري. ووقفنا قريباً من الميقدة وهي بالمشعر الحرام على قزحٍ كان أهل الجاهلية يوقدون عليها النار."
+      },
+      {
+        "kaynak": "Mekâyîs: وَقَدَ",
+        "metin": "(وَقَدَ) الْوَاوُ وَالْقَافُ وَالدَّالُ: كَلِمَةٌ تَدُلُّ عَلَى اشْتِعَالِ نَارٍ. وَقَدَتِ النَّارُ تَقِدُ وَاتَّقَدَتْ وَتَوَقَّدَتْ، وَأَوْقَدْتُهَا أَنَا. وَالْوَقُودُ: الْحَطَبُ. وَالْوُقُودُ: فِعْلُ النَّارِ إِذَا وَقَدَتْ. وَالْوَقَدُ: نَفْسُ النَّارِ. وَوَقْدَةُ الصَّيْفِ: أَشَدُّهُ حَرًّا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "طبختهم وقدة الصيف. ووقد الحصى. قال الشمّاخ:",
-        "prototipe_benzerlik": 0.252,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طبختهم وقدة الصيف. ووقد الحصى. قال الشمّاخ:",
+        "prototipe_benzerlik": 0.216,
         "halka": "uzak"
       },
       {
-        "cumle": "وقلب وقّاد. ويقال للأعمى: هو غائر الواقدين، ورُويَ:",
-        "prototipe_benzerlik": 0.448,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعين الندى حتى إذا وقد الحصى ... ولم يبق من نوء السماك بروق",
+        "prototipe_benzerlik": 0.272,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقلب وقّاد. ويقال للأعمى: هو غائر الواقدين، ورُويَ:",
+        "prototipe_benzerlik": 0.518,
         "halka": "orta"
       },
       {
-        "cumle": "رأت رجلاً غائر الواقدين",
-        "prototipe_benzerlik": 0.196,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رأت رجلاً غائر الواقدين",
+        "prototipe_benzerlik": 0.237,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.299,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.311,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["disapproval.n.02", "erupt.v.03", "fuel.n.01", "knock.v.06", "standard.n.01"],
   "muhassas_tasnif": {

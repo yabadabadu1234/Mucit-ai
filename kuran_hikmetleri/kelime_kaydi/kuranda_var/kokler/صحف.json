@@ -1829,11 +1829,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "press.n.02",
-    "dayanak_tanim": "the print media responsible for gathering and publishing news in the form of newspapers or magazines",
+    "ince": "person.n.01",
+    "orta": "noun.person",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "journalist.n.01",
+    "dayanak_tanim": "a writer for newspapers and magazines",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1852,19 +1852,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انبساط جرم الشيء وتسطحه مكشوفًا. كبشرة جلد الوجه، وكالقصعة الموصوفة، وكوجه الأرض. ومنه الصحيفة للكتابة (وقد كانت صحف الكتابة قديمًا ألواحًا طينية وعظامًا ذات وجه عريض وأحجارًا كذلك ثم رُقَعًا جلديّة، ثم اتُّخِذَ الورق) {إِنَّ هَذَا لَفِي الصُّحُفِ الْأُولَى} [",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "صن صحيفة وجهك وهي بشرته.",
-        "prototipe_benzerlik": 0.569,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انبساط جرم الشيء وتسطحه مكشوفًا. كبشرة جلد الوجه، وكالقصعة الموصوفة، وكوجه الأرض. ومنه الصحيفة للكتابة (وقد كانت صحف الكتابة قديمًا ألواحًا طينية وعظامًا ذات وجه عريض وأحجارًا كذلك ثم رُقَعًا جلديّة، ثم اتُّخِذَ الورق) {إِنَّ هَذَا لَفِي الصُّحُفِ الْأُولَى} [الأعلى: 18] وليس في القرآن إلا (صحاف) في آية الرأس وهي الأوعية المسلطحة، و (صُحُف) الكتابة في سائر ما ورد من التركيب. (والمصحف، هذا اللفظ يتأتى صوغه من أصحف الشيء جعله ذا صحف (إصحاب) وحكى العلامة الخولي القول بتعريبه ولم يعلق. وهي دعوى غريبة جدًّا، فما كان الصحابة العرب ليعجِزوا عن اسم عربي لكتاب اللَّه الذي نزل بلغتهم."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "معه صحيفة وصحف وصحائف وهي قطعة من جلد أو قرطاس يكتب فيه، وهو صحفي وصحاف. وهو لحانة مصحف. وصحف الكلمة. ووجهه كورقة المصحف.\nقال الراعي:\nتقلّب خدّين كالمصحفي ... ن خطهما واضح أ. هر\nوتقول: صحائف الكتب، خير من صحاف الذهب. والصحفة: القصعة المسلنطحة."
+      },
+      {
+        "kaynak": "Mekâyîs: صَحَفَ",
+        "metin": "(صَحَفَ) الصَّادُ وَالْحَاءُ وَالْفَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى انْبِسَاطٍ فِي شَيْءٍ وَسَعَةٍ. يُقَالُ: إِنَّ الصَّحِيفَ: وَجْهُ الْأَرْضِ. وَالصَّحِيفَةُ: بَشَرَةُ وَجْهِ الرَّجُلِ. قَالَ الْبُعَيْثُ:\nوَكُلُّ كُلَيْبِيٍّ صَحِيفَةُ وَجْهِهِ ... أَذَلُّ لِأَقْدَامِ الرِّجَالِ مِنَ النَّعْلِ\nوَمِنَ الْبَابِ: الصَّحِيفَةُ، وَهِيَ الَّتِي يُكْتَبُ فِيهَا، وَالْجَمْعُ: صَحَائِفُ، وَالصُّحُفُ أَيْضًا، كَأَنَّهُ جَمْعُ صَحِيفٍ. قَالَ:\nلَمَّا رَأَوْا غُدْوَةً جَبَاهَهُمْ ... حَنَّتْ إِلَيْنَا الْأَرْحَامُ وَالصُّحُفُ\nوَالصَّحْفَةُ: الْقَصْعَةُ الْمُسْلَنْطِحَةُ. وَقَالَ الشَّيْبَانِيُّ: الصِّحَافُ مَنَاقِعُ صِغَارٌ تُتَّخَذُ لِلْمَاءِ، الْجَمْعُ: صُحُفٌ."
       }
     ],
-    "ortalama_benzerlik": 0.569,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صن صحيفة وجهك وهي بشرته.",
+        "prototipe_benzerlik": 0.41,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.41,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01", "communicator.n.01", "writing.n.02"],
   "muhassas_tasnif": {

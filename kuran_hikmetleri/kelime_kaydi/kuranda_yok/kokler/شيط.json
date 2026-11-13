@@ -1258,34 +1258,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شيط اللحم في الشيّ إذا دخنه وأحرق بعضه ولم ينضجه، وشاط لحم الشاوي وتشيط.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شيط اللحم في الشيّ إذا دخنه وأحرق بعضه ولم ينضجه، وشاط لحم الشاوي وتشيط."
+      },
+      {
+        "kaynak": "Mekâyîs: شَيَطَ",
+        "metin": "(شَيَطَ) الشِّينُ وَالْيَاءُ وَالطَّاءُ أَصْلٌ يَدُلُّ عَلَى ذَهَابِ الشَّيْءِ، إِمَّا احْتِرَاقًا وَإِمَّا غَيْرَ ذَلِكَ. فَالشَّيْطُ مِنْ شَاطَ الشَّيْءُ، إِذَا احْتَرَقَ. يُقَالُ شَيَّطْتُ اللَّحْمَ. وَيَقُولُونَ: شَيَّطَهُ، إِذَا دَخَّنَهُ وَلَمْ يُنْضِجْهُ. وَالْأَوَّلُ أَصَحُّ وَأَقْيَسُ.\nوَمِنَ الْمُشْتَقِّ مِنْ هَذَا: اسْتَشَاطَ الرَّجُلُ، إِذَا احْتَدَّ غَضَبًا. وَيَقُولُونَ: نَاقَةٌ مِشْيَاطٌ، وَهِيَ الَّتِي يَطِيرُ فِيهَا السِّمَنُ.\nوَمِنَ الْبَابِ الشَّيْطَانُ، يُقَارِبُ الْيَاءُ فِيهِ الْوَاوَ، يُقَالُ شَاطَ يَشِيطُ، إِذَا بَطَلَ. وَأَشَاطَ السُّلْطَانُ دَمَ فُلَانٍ، إِذَا أَبْطَلَهُ. وَقَدْ مَضَى الْكَلَامُ فِي اشْتِقَاقِ اسْمِ الشَّيْطَانِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "شاط دمه إذا بطل. قال الأعشى:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شاط دمه إذا بطل. قال الأعشى:",
         "prototipe_benzerlik": 0.305,
         "halka": "uzak"
       },
       {
-        "cumle": "وقد يشيط على أرماحنا البطل",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقد يشيط على أرماحنا البطل",
         "prototipe_benzerlik": 0.24,
         "halka": "uzak"
       },
       {
-        "cumle": "وأشاط السلطان دمه: أهدره. وأشاطوا لحم الجزور. إذا بضعوه وقسموه، وشاط لحم الجزور: ذهب مقسماً لم يبق منه شيء، ويقال: أشيط فلان كما يشاط لحم الجزور. وشيط الصقيع النبت. وشيط الدواء الجرح: أحرقه. وتشيط فلان من الهبة: نحل من كثرة الجماع وهلك. واستشاط غضباً. واستشاط في الحرب: استقتل. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأشاط السلطان دمه: أهدره. وأشاطوا لحم الجزور. إذا بضعوه وقسموه، وشاط لحم الجزور: ذهب مقسماً لم يبق منه شيء، ويقال: أشيط فلان كما يشاط لحم الجزور. وشيط الصقيع النبت. وشيط الدواء الجرح: أحرقه. وتشيط فلان من الهبة: نحل من كثرة الجماع وهلك. واستشاط غضباً. واستشاط في الحرب: استقتل. قال:",
         "prototipe_benzerlik": -0.005,
         "halka": "uzak"
       },
       {
-        "cumle": "وناقة مشياط: يطير فيها السمن أي يسرع سمنها وهو من إسراع المشيط وعجلته، لا يصبر بالشواء حتى يسكن لسان النار.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشاط دماء المستشيطين كلهم ... وغل رءوس القوم فيها وسلسلوا",
+        "prototipe_benzerlik": 0.207,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وناقة مشياط: يطير فيها السمن أي يسرع سمنها وهو من إسراع المشيط وعجلته، لا يصبر بالشواء حتى يسكن لسان النار.",
         "prototipe_benzerlik": 0.496,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.259,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.248,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["content.n.05", "madly.r.03", "seethe.v.02", "spirited.a.01"],
   "muhassas_tasnif": {

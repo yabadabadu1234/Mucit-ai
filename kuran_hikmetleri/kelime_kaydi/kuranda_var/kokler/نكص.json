@@ -1703,11 +1703,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "remove.v.01",
+    "ince": "revert.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "remove.v.01",
-    "dayanak_tanim": "remove something concrete, as by lifting, pushing, or taking off, or remove something abstract",
+    "dayanak_synset": "revert.v.01",
+    "dayanak_tanim": "go back to a previous state",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1726,19 +1726,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "الرجوع القهقري بقوة إلى الخلف. ومنه \"نكص عن الأمر: أحجم، ونكص على عقبيه: رجع عما كان عليه \". ومعنى النكوص في الآية أن آيات الله كانت تَنْفُذُ إلى قلوبهم ويعرفون الحق فيهُمُّون بالقبول، ثم يغلبهم شيطانهم وهواهم فينكصون ... {فَلَمَّا تَرَاءَتِ الْفِئَتَانِ نَكَص",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "الرجوع القهقري بقوة إلى الخلف. ومنه \"نكص عن الأمر: أحجم، ونكص على عقبيه: رجع عما كان عليه \". ومعنى النكوص في الآية أن آيات الله كانت تَنْفُذُ إلى قلوبهم ويعرفون الحق فيهُمُّون بالقبول، ثم يغلبهم شيطانهم وهواهم فينكصون ... {فَلَمَّا تَرَاءَتِ الْفِئَتَانِ نَكَصَ عَلَى عَقِبَيهِ} [الأنفال: 48]. قال [في قر 8/ 27] وليس النكوص هنا قهقري بل هو فِرَار اهـ. أقول والآية دليل على زَيْف قَيْد الخيرية في ما يرجع عنه، وقد نُسِب في المقاييس إلى ابن دريد إذ أي خير في تحريض الشيطان الكفار على قتال المصطفى - صلى الله عليه وسلم -؟"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نكص على عقبيه نكوصاً."
+      },
+      {
+        "kaynak": "Mekâyîs: نَكَصَ",
+        "metin": "(نَكَصَ) النُّونُ وَالْكَافُ وَالصَّادُ كَلِمَةٌ. يُقَالُ: نَكَصَ عَلَى عَقِبَيْهِ، إِذَا أَحْجَمَ عَنِ الشَّيْءِ خَوْفًا وَجُبْنًا. قَالَ ابْنُ دُرَيْدٍ: نَكَصَ عَلَى عَقِبَيْهِ: رَجَعَ عَمَّا كَانَ عَلَيْهِ مِنْ خَيْرٍ ; لَا يُقَالُ ذَلِكَ إِلَّا فِي الرُّجُوعِ عَنِ الْخَيْرِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فلان حظّه ناقص، وجدّه ناكص.",
-        "prototipe_benzerlik": 0.306,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان حظّه ناقص، وجدّه ناكص.",
+        "prototipe_benzerlik": 0.278,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.306,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.278,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["remove.v.01", "revert.v.01", "withdraw.v.01"],
   "muhassas_tasnif": {

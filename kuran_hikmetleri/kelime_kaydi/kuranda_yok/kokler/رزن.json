@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دينار وزين: رزين، ودنانير رزان. ورزن الشيء بيده: ثقله.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دينار وزين: رزين، ودنانير رزان. ورزن الشيء بيده: ثقله."
+      },
+      {
+        "kaynak": "Mekâyîs: رَزَنَ",
+        "metin": "(رَزَنَ) الرَّاءُ وَالزَّاءُ وَالنُّونُ أَصْلٌ يَدُلُّ عَلَى تَجَمُّعٍ وَثَبَاتٍ. يَقُولُونَ رَزُنَ الشَّيْءُ: ثَقُلَ. وَرَجُلٌ رَزِينٌ وَامْرَأَةٌ رَزَانٌ. وَالرِّزْنُ: نُقْرَةٌ فِي صَخْرَةٍ يَجْتَمِعُ فِيهَا الْمَاءُ. قَالَ:\nأَحْقَبَ مِيفَاءٍ عَلَى الرُّزُونِ\nوَيُقَالُ الرَِّزْنُ: الْأَكَمَةُ، وَالْجَمْعُ رُزُونٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رزن فلان في مجلسه وهو رزين: حليم وقور، وفيه رزانة وزكانة. وهو رزين الرأي: وزينه. وامرأة رزان، ولا يقال: رزينة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رزن فلان في مجلسه وهو رزين: حليم وقور، وفيه رزانة وزكانة. وهو رزين الرأي: وزينه. وامرأة رزان، ولا يقال: رزينة.",
         "prototipe_benzerlik": 0.578,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.578,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

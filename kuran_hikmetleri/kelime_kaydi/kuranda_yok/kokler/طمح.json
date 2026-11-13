@@ -1179,19 +1179,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "طمحت ببصري إليه، ونساء طوامح إلى الرجال. وطمح المتكبر بعينه: شخص بها. وفرس طامح الطرف. وطمح الفرس طموحاً وطماحاً: ركب رأسه في عدوه رافعاً بصره، وهو طماح وطموح، وفيه طماحٌ وجماح.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "طمحت ببصري إليه، ونساء طوامح إلى الرجال. وطمح المتكبر بعينه: شخص بها.\nوفرس طامح الطرف. وطمح الفرس طموحاً وطماحاً: ركب رأسه في عدوه رافعاً بصره، وهو طماح وطموح، وفيه طماحٌ وجماح."
+      },
+      {
+        "kaynak": "Mekâyîs: طَمَحَ",
+        "metin": "(طَمَحَ) الطَّاءُ وَالْمِيمُ وَالْحَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى عُلُوٍّ فِي شَيْءٍ. يُقَالُ: طَمَحَ بِبَصَرِهِ إِلَى الشَّيْءِ: عَلَا. وَكُلُّ مُرْتَفِعٍ طَامِحٌ. وَطَمَحَ بِبَوْلِهِ. إِذَا رَمَاهُ فِي الْهَوَاءِ. قَالَ:\nطَوِيلٍ طَامِحِ الطَّرَفِ ... إِلَى مَفْزَعَةِ الْكَلْبِ\nوَمِنَ الْبَابِ طَمَحَاتُ الدَّهْرِ: شَدَائِدُهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أصابته طمحات الدهر: شدائده وطمحت المرأة على زوجها: جمحت. وبحر طموح الموج. وطمحت بالشيء في الهواء: رميت به.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أصابته طمحات الدهر: شدائده وطمحت المرأة على زوجها: جمحت. وبحر طموح الموج. وطمحت بالشيء في الهواء: رميت به.",
         "prototipe_benzerlik": 0.041,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.041,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["construct.v.01", "draw_a_bead_on.v.02", "drive.n.05", "feeling.n.01"],
   "muhassas_tasnif": {

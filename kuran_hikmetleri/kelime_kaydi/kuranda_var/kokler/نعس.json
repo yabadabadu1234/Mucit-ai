@@ -1765,11 +1765,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.cognition",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "sleeping.n.01",
-    "dayanak_tanim": "the state of being asleep",
+    "ince": "fall_asleep.v.01",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "fall_asleep.v.01",
+    "dayanak_tanim": "change from a waking to a sleeping state",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -1788,19 +1788,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ثقل أو فتور في الجسم للينة وامتلائه بالرخاوة. كما في الجسم والناقة والكَسالى. ومنه \"النعاس- كغراب: ثَقلَةُ النوم السِنَة من غير نوم \"-كما في آية التركيب وكذا ما في [آل عمران: 154]. ومنه \"نَعَتْ السوق: كَسَدت \" (ذهبت حدة الحركة والتبايع منها).",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ثقل أو فتور في الجسم للينة وامتلائه بالرخاوة. كما في الجسم والناقة والكَسالى. ومنه \"النعاس- كغراب: ثَقلَةُ النوم السِنَة من غير نوم \"-كما في آية التركيب وكذا ما في [آل عمران: 154]. ومنه \"نَعَتْ السوق: كَسَدت \" (ذهبت حدة الحركة والتبايع منها)."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نعس ينعس نعاساً، وركبته نعسة شديدة، وتناعس الرجل. وناقة نعوس: سمحة الدّرّ إذا درّت نعست."
+      },
+      {
+        "kaynak": "Mekâyîs: نَعَسَ",
+        "metin": "(نَعَسَ) النُّونُ وَالْعَيْنُ وَالسِّينُ أُصَيْلٌ يَدُلُّ عَلَى وَسَنٍ. وَنَعَسَ يَنْعَُسُ نُعَاسًا. وَنَاقَةٌ نَعُوسٌ، تُوصَفُ بِالسَّمَاحَةِ بِالدَّرِّ، لِأَنَّهَا إِذَا دَرَّتْ نَعَسَتْ. قَالَ:\nنَعُوسٌ إِذَا دَرَّتْ جَرُوزٌ إِذَا شَتَتْ ... بُوَيْزِلُ عَامٍ أَوْ سَدِيسٌ كَبَازِلِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "تناعس البرق إذا فتر. وجدّه ناعس تاعس.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تناعس البرق إذا فتر. وجدّه ناعس تاعس.",
         "prototipe_benzerlik": 0.433,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.433,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["condition.n.01", "fall_asleep.v.01"],
   "muhassas_tasnif": {

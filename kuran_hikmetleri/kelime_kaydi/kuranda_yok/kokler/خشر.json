@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ما بقي على المائدة إلا خشارة وهي ما لا خير فيه. وهذه خشارة الشعير وهي ما لا لب فيه، وخشارة التمر وهي رديئه والشيص منه. قال الحطيئة: وباع بنيه بعضهم بخشارة ... وبعت لذبيان العلاء بمالكا أي اشتريت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ما بقي على المائدة إلا خشارة وهي ما لا خير فيه. وهذه خشارة الشعير وهي ما لا لب فيه، وخشارة التمر وهي رديئه والشيص منه.\nقال الحطيئة:\nوباع بنيه بعضهم بخشارة ... وبعت لذبيان العلاء بمالكا\nأي اشتريت."
+      },
+      {
+        "kaynak": "Mekâyîs: خَشَرَ",
+        "metin": "(خَشَرَ) الْخَاءُ وَالشِّينُ وَالرَّاءُ يَدُلُّ عَلَى رَدَاءَةٍ وَدُونٍ. فَالْخُشَارَةُ: مَا بَقِيَ [عَلَى] الْمَائِدَةِ، مِمَّا لَا خَيْرَ فِيهِ. يُقَالُ خَشَرْتُ أَخْشِرُ خَشْرًا، إِذَا بَقَّيْتَ الرَّدِيَّ. وَيُقَالُ الْخُشَارَةُ مِنَ الشَّعِيرِ: مَا لَا لُبَ لَهُ، فَهُوَ كَالنُّخَالَةِ. وَإِنَّ فُلَانًا لَمِنْ خُشَارَةِ النَّاسِ، أَيْ رُذَالِهِمْ.\n[بَابُ الْخَاءِ وَالصَّادِ وَمَا يَثْلِثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو من الخشارة أي من الدون. وفي الحديث \" ذهب الخيار وبقيت خشارة كخشارة الشعير \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو من الخشارة أي من الدون. وفي الحديث \" ذهب الخيار وبقيت خشارة كخشارة الشعير \".",
         "prototipe_benzerlik": 0.713,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.713,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

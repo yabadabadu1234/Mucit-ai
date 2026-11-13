@@ -1129,24 +1129,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وجه كأنه الدينار الهرقليّ. قال: كأن دنانيراً على قسماتهم ... وإن كان قد شفّ الوجوه لقاء وذهب مدنر: مضروب.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وجه كأنه الدينار الهرقليّ. قال:\nكأن دنانيراً على قسماتهم ... وإن كان قد شفّ الوجوه لقاء\nوذهب مدنر: مضروب."
+      },
+      {
+        "kaynak": "Mekâyîs: دَنَرَ",
+        "metin": "(دَنَرَ) الدَّالُ وَالنُّونُ وَالرَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الدِّينَارُ. وَيَقُولُونَ: دَنَّرَ وَجْهُ فُلَانٍ، إِذَا تَلَأْلَأَ وَأَشْرَقَ. وَاللَّهُ أَعْلَمُ.\n[بَابُ الدَّالِ وَالْهَاءِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ثوب مدنر: وشيه كالدينار، نحو مسهم ومرحل. قال ابن المفرغ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثوب مدنر: وشيه كالدينار، نحو مسهم ومرحل. قال ابن المفرغ:",
         "prototipe_benzerlik": 0.555,
         "halka": "yakın"
       },
       {
-        "cumle": "وبرذون مدنر اللون: أشهب مفلس بسواد. وكلمته فدنر وجهه إذا أشرق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبرود مدنرات وقز ... وملاء من أعتق الكتان",
+        "prototipe_benzerlik": 0.416,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبرذون مدنر اللون: أشهب مفلس بسواد. وكلمته فدنر وجهه إذا أشرق.",
         "prototipe_benzerlik": 0.602,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.578,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.524,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

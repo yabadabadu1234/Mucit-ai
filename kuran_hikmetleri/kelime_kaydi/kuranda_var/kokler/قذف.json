@@ -2225,8 +2225,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "launcher.n.01",
-    "dayanak_tanim": "armament in the form of a device capable of launching a rocket",
+    "dayanak_synset": "projectile.n.01",
+    "dayanak_tanim": "a weapon that is forcibly thrown or projected at a targets but is not self-propelled",
     "synset_sayisi": 22
   },
   "ses_mana_tasnif": {
@@ -2245,44 +2245,104 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "دَفْع بغلظ إلى مسافة بعيدة - كالسفينة في الماء بجريها",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "دَفْع بغلظ إلى مسافة بعيدة - كالسفينة في الماء بجريها"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "قذف الحجر بالقذّافة، وقذف به، وتقاذفوا بالحجارة، وجعل الله الشهاب قذيفة الشيطان."
+      },
+      {
+        "kaynak": "Mekâyîs: قَذَفَ",
+        "metin": "(قَذَفَ) الْقَافُ وَالذَّالُ وَالْفَاءُ أَصْلٌ يَدُلُّ عَلَى الرَّمْيِ وَالطَّرْحِ. يُقَالُ: قَذَفَ الشَّيْءَ يَقْذِفُهُ قَذْفًا، إِذَا رَمَى بِهِ. وَبَلْدَةٌ قَذُوفٌ، أَيْ طَرُوحٌ لِبُعْدِهَا تَتَرَامَى بِالسَّفْرِ. وَمَنْزِلٌ قَذَفٌ وَقَذِيفٌ، أَيْ بَعِيدٌ. وَنَاقَةٌ مَقْذُوفَةٌ بِاللَّحْمِ، كَأَنَّهَا رُمِيَتْ بِهِ.\nوَالْقِذَافُ: سُرْعَةُ السَّيْرِ. وَفَرَسٌ [مُتَقَاذِفٌ] سَرِيعُ الْعَدْوِ، كَأَنَّهُ يَتَرَامَى فِي عَدْوِهِ.\nوَمِنَ الْبَابِ أَقْذَافُ الْجَبَلِ: نَوَاحِيهِ، الْوَاحِدُ قَذَفٌ. وَالْقَذِيفَةُ: الشَّيْءُ يُرْمَى بِهِ. قَالَ:\nقَذِيفَةُ شَيْطَانٍ رَجِيمٍ رَمَى بِهَا ... فَصَارَتْ ضَوَاةً فِي لِهَازِمِ ضِرْزِمِ\nالضَّوَاةُ: السِّلْعَةُ. وَالضِّرْزِمُ. النَّاقَةُ الْمُسِنَّةُ. وَقَذَفَ: قَاءَ، كَأَنَّهُ رَمَى بِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "البحر يقذف الجواهر، وهو قذّاف باللؤلؤ. وقذف المحصنة. وأقيم عليه حدّ القذف، وقذف المرّة. وقذفت بنا المفازة المقاذف، وفلان يقذف بنفسه المقاذف. قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "البحر يقذف الجواهر، وهو قذّاف باللؤلؤ. وقذف المحصنة. وأقيم عليه حدّ القذف، وقذف المرّة. وقذفت بنا المفازة المقاذف، وفلان يقذف بنفسه المقاذف. قال الطرماح:",
         "prototipe_benzerlik": 0.492,
         "halka": "orta"
       },
       {
-        "cumle": "وتقاذفت بهم الموامي، والركاب تتقاذف بهم. والبعير يتقاذف في سيره: يترامى فيه. قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وإني لمقتاد جوادي فقاذف ... به وبنفسي العام إحدى المقاذف",
+        "prototipe_benzerlik": 0.292,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقاذفت بهم الموامي، والركاب تتقاذف بهم. والبعير يتقاذف في سيره: يترامى فيه. قال الطرماح:",
         "prototipe_benzerlik": 0.335,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "متقاذف سبط المحال إذا عدا ... تبري له أجد الفقارة جلعد",
+        "prototipe_benzerlik": 0.415,
         "halka": "orta"
       },
       {
-        "cumle": "تجذبه حتى ينقطع. ومفازة قذوف وقذف وقُذفٌ وقِذافٌ، ومنزلٌ قَذفٌ. وشطّت بهم نيّة قذفٌ: بعيدة. وسير قذاف. وناقة قذاف: يراد السرعة. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الراعي:",
+        "prototipe_benzerlik": 0.303,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تغتال كلّ تنوفة عرضت لها ... بتقاذفٍ يدع الجديل موصلاً",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تجذبه حتى ينقطع. ومفازة قذوف وقذف وقُذفٌ وقِذافٌ، ومنزلٌ قَذفٌ. وشطّت بهم نيّة قذفٌ: بعيدة. وسير قذاف. وناقة قذاف: يراد السرعة. قال الكميت:",
         "prototipe_benzerlik": 0.473,
         "halka": "orta"
       },
       {
-        "cumle": "وفرس متقاذف. وقربٌ قذّافٌ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تغول الحبال جماليّةٌ ... قذافٌ وإن طالت الأحبل",
+        "prototipe_benzerlik": 0.371,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفرس متقاذف. وقربٌ قذّافٌ. قال:",
         "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تصبح بعد القرب القذّاف ... وبعد شدّ الأنسع اللطاف",
+        "prototipe_benzerlik": 0.397,
         "halka": "orta"
       },
       {
-        "cumle": "وبلغ قذفة الجبل وقُذَفَه وقُذُفاتِه وقَذَفَه وقُذُفَه وأقذافَه: أعاليه ونواحيه البعيدة. قال الجعديَ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبلغ قذفة الجبل وقُذَفَه وقُذُفاتِه وقَذَفَه وقُذُفَه وأقذافَه: أعاليه ونواحيه البعيدة. قال الجعديَ:",
         "prototipe_benzerlik": 0.355,
-        "halka": "orta"
+        "halka": "uzak"
       },
       {
-        "cumle": "وللمسجد قذفٌ: شرف، الواحدة: قذفة. وناقة مقذوفة باللحم ومقذّفةٌ: مكتنزة اللحم كأنما قذفت به قذفاً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طليعة قوم أو خميس عرمرم ... كسيل التيّ ضمّه القذفان",
+        "prototipe_benzerlik": 0.215,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وللمسجد قذفٌ: شرف، الواحدة: قذفة. وناقة مقذوفة باللحم ومقذّفةٌ: مكتنزة اللحم كأنما قذفت به قذفاً.",
         "prototipe_benzerlik": 0.273,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.378,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.351,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

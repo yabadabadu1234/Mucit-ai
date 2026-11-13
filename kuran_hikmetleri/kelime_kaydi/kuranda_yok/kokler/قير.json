@@ -1019,19 +1019,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "اشتريت القير والقار من القيّار. وقيّر السفينة، وسفين مقيّرٌ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "اشتريت القير والقار من القيّار. وقيّر السفينة، وسفين مقيّرٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "مر القيروان وهو معظم القافلة والعسكر. وفي الحديث: \" ترتمي بنا المهاري بأكسائنا القيروانات \".",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مر القيروان وهو معظم القافلة والعسكر. وفي الحديث: \" ترتمي بنا المهاري بأكسائنا القيروانات \".",
         "prototipe_benzerlik": 0.276,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.276,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

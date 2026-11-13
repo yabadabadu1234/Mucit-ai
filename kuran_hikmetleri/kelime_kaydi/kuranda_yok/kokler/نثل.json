@@ -731,29 +731,76 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نثل كنانته: نثرها. ونثلوا ركيّتهم: حفروها وأخرجوا نثيلتها: نبيثتها. ونثلوا حفرة فلان: حفروا قبره. ونثل الحافر: راث. قال يهجو فرسه بكثرة روثه فعبّر عن روثه بعبارتين بمثلٍّ ومنثلٍ: مثلٌّ على آريّه الرّوث منثل الثّلّ والنّثل وزاحد. وتقول: جملك يسل من ثيله، وحمارك",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نثل كنانته: نثرها. ونثلوا ركيّتهم: حفروها وأخرجوا نثيلتها: نبيثتها. ونثلوا حفرة فلان: حفروا قبره. ونثل الحافر: راث. قال يهجو فرسه بكثرة روثه فعبّر عن روثه بعبارتين بمثلٍّ ومنثلٍ:\nمثلٌّ على آريّه الرّوث منثل\nالثّلّ والنّثل وزاحد. وتقول: جملك يسل من ثيله، وحمارك يثل من نثيله."
+      },
+      {
+        "kaynak": "Mekâyîs: نَثَلَ",
+        "metin": "(نَثَلَ) النُّونُ وَالثَّاءُ وَاللَّامُ أَصْلٌ يَدُلُّ عَلَى اسْتِخْرَاجِ شَيْءٍ مِنْ شَيْءٍ أَوْ خُرُوجِهِ مِنْهُ. مِنْهُ نَثَلْتُ كِنَانَتِي: أَخْرَجْتُ مَا فِيهَا مِنْ نَبْلٍ نَثْلًا. وَنَثَلْتُ الْبِئْرَ: اسْتَخْرَجْتُ تُرَابَهَا. وَالنَّثِيلُ: الرَّوْثُ. وَالنَّثِيلَةُ: تُرَابُ الْبِئْرِ، وَالْقِيَاسُ وَاحِدٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نثل عليه درعه مثل نثرها إذا صبها، ونثلها عنه: نزعها كما يقال: خلع عليه الثوب وخلعه عنه، ومنه: النثلة. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نثل عليه درعه مثل نثرها إذا صبها، ونثلها عنه: نزعها كما يقال: خلع عليه الثوب وخلعه عنه، ومنه: النثلة. قال النابغة:",
         "prototipe_benzerlik": 0.692,
         "halka": "yakın"
       },
       {
-        "cumle": "ونثوت الحديث نثواً: ذكرته ونشرته، وهو حسن النّثا وقبيح النثا، وهو ينثو عليّ ما فعلت: يشيعه، وإنهم ليتناثون الحديث بينهم. وهم يتناثون أيامهم الماضية. قال يزيد ابن الطثريّة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكل صموت نثلة تبعية ... ونسج سليم كل قضاء ذائل",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال كثير:",
+        "prototipe_benzerlik": 0.301,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يغادي بفأر المسك طوراً وتارةً ... ترى الدّرع مرفضاً عليه نثيلها",
+        "prototipe_benzerlik": 0.139,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي منثولها.",
+        "prototipe_benzerlik": 0.265,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ث",
+        "prototipe_benzerlik": 0.702,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونثوت الحديث نثواً: ذكرته ونشرته، وهو حسن النّثا وقبيح النثا، وهو ينثو عليّ ما فعلت: يشيعه، وإنهم ليتناثون الحديث بينهم. وهم يتناثون أيامهم الماضية. قال يزيد ابن الطثريّة:",
         "prototipe_benzerlik": 0.221,
         "halka": "uzak"
       },
       {
-        "cumle": "وناثيته كذا مناثاة، وتقول: كم ناجيته وناغيته، وجاثيته وناثيته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولما تناثينا سقاط حديثنا ... غشاشاً ولان الطّرف منها فأطمعا",
+        "prototipe_benzerlik": 0.208,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وناثيته كذا مناثاة، وتقول: كم ناجيته وناغيته، وجاثيته وناثيته.",
         "prototipe_benzerlik": 0.202,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.372,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.346,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

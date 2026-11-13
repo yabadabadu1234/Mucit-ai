@@ -752,19 +752,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سويق مقنود ومقنّد. قال: يا حبّذا الكعك بلحم مثرود ... وخشكنان مع سويق مقنود وقال ابن مقبل: أشاقك ركب ذو بنات ونسوة ... بكرمان يسقين السويق المقنّدا وشرب القنديد وهو شراب يتخذه أهل الحيرة من القند.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سويق مقنود ومقنّد. قال:\nيا حبّذا الكعك بلحم مثرود ... وخشكنان مع سويق مقنود\nوقال ابن مقبل:\nأشاقك ركب ذو بنات ونسوة ... بكرمان يسقين السويق المقنّدا\nوشرب القنديد وهو شراب يتخذه أهل الحيرة من القند."
+      },
+      {
+        "kaynak": "Mekâyîs: قَنَدَ",
+        "metin": "(قَنَدَ) الْقَافُ وَالنُّونُ وَالدَّالُ كَلِمَتَانِ زَعَمُوا أَنَّهُمَا صَحِيحَتَانِ. قَالُوا: الْقَنْدُ عَرَبِيٌّ. يَقُولُونَ: سَوِيقٌ مَقْنُودٌ وَمُقَنَّدٌ. وَالْكَلِمَةُ الْأُخْرَى الْقِنْدَأْوَةُ، قَالُوا: هُوَ السَّيِّئُ الْخُلُقِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل مقنود الكلام، وتقول بين فكّيه حسام مهند، يقطر منه كلام مقند.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل مقنود الكلام، وتقول بين فكّيه حسام مهند، يقطر منه كلام مقند.",
         "prototipe_benzerlik": 0.516,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.516,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

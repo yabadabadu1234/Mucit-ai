@@ -1007,8 +1007,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "palace.n.04",
-    "dayanak_tanim": "official residence of an exalted person (as a sovereign)",
+    "dayanak_synset": "slab.n.01",
+    "dayanak_tanim": "block consisting of a thick piece of something",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {
@@ -1022,19 +1022,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أحلت عليه بسوطي فلزق ببلاط الأرض وهو ما صلب من متنهاومستواها. ومنه بلط داره إذا فرشها بصخر أو آجر، وما أحسن بلاط صحنك! ورأيت داره مصهرجة مبلطة. وأرض الكعبة مبلطة بالرخام. وقال كثير: وكنتم تزينون البلاط ففارقت ... عشية بنتم زينها وجمالها ونزلوا فتبالطوا أي تجال",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أحلت عليه بسوطي فلزق ببلاط الأرض وهو ما صلب من متنهاومستواها. ومنه بلط داره إذا فرشها بصخر أو آجر، وما أحسن بلاط صحنك! ورأيت داره مصهرجة مبلطة. وأرض الكعبة مبلطة بالرخام. وقال كثير:\nوكنتم تزينون البلاط ففارقت ... عشية بنتم زينها وجمالها\nونزلوا فتبالطوا أي تجالدوا، ولا تكون المبالطة إلا على الأرض. ويقال: ما خالطه، حتى بالطه. وإذا هفا صبيك فبلط له، والتبليط أن يضرب فرع أذنه بطرف سبابته، يقال: بلط له وبلط أذنه."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "إنها لحسنة البلاط إذا جردت، وهو متجردها. واعترضهم اللصوص فأبلطوهم إذا تركوهم على ظهر الغبيراء لم يبقوا لهم شيئاً. ومشيت حتى انقطع بلوطي.",
-        "prototipe_benzerlik": 0.04,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إنها لحسنة البلاط إذا جردت، وهو متجردها. واعترضهم اللصوص فأبلطوهم إذا تركوهم على ظهر الغبيراء لم يبقوا لهم شيئاً. ومشيت حتى انقطع بلوطي.",
+        "prototipe_benzerlik": 0.175,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.04,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.175,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "living_thing.n.01", "organization.n.01", "taxonomic_group.n.01"],
   "muhassas_tasnif": {

@@ -696,34 +696,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هم أجور من الترك والديلم، وجوارهم من الإد الصنيلم؛ ورجل أدلم: أسود طويل، ورجال دلم. والدلمة: لون الفيل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هم أجور من الترك والديلم، وجوارهم من الإد الصنيلم؛ ورجل أدلم: أسود طويل، ورجال دلم. والدلمة: لون الفيل."
+      },
+      {
+        "kaynak": "Mekâyîs: دَلَمَ",
+        "metin": "(دَلَمَ) الدَّالُ وَاللَّامُ أَصْلٌ يَدُلُّ عَلَى طُولٍ وَتَهَدُّلٍ فِي سَوَادٍ. فَالْأَدْلَمُ مِنَ الرِّجَالِ: الطَّوِيلُ الْأَسْوَدُ ; وَكَذَلِكَ هُوَ مِنَ الْجِمَالِ وَالْجِبَالِ. وَزَعَمَ نَاسٌ أَنَّ الدَّيْلَمَ: سَوَادُ اللَّيْلِ وَظُلْمَتُهُ. فَأَمَّا قَوْلُ عَنْتَرَةَ:\nزَوْرَاءَ تَنْفِرُ عَنْ حِيَاضِ الدَّيْلَمِ\nفَيُقَالُ إِنَّهُمُ الْأَعْدَاءُ. فَإِنْ كَانَ كَذَا فَالْأَعْدَاءُ يُوصَفُونَ بِهَذَا. قَالَ الْأَعْشَى:\nهُمُ الْأَعْدَاءُ فَالْأَكْبَادُ سُودُ\nوَقَالَ قَوْمٌ: الدَّيْلَمُ مَكَانٌ أَوْ قَبِيلٌ. وَيُقَالُ: جَاءَ بِالدَّيْلَمِ، أَيْ بِالدَّاهِيَةِ. وَهَذَا تَشْبِيهٌ. وَالدَّلَمُ: الْهَدَلُ فِي الشَّفَةِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان من الديلم، وهو ديلميّ من الديالمة أي عدوّ من الأعداء، لشهرة هذا الجيل بالشرارة والعداوة. قال رؤبة يصف جيشاً:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان من الديلم، وهو ديلميّ من الديالمة أي عدوّ من الأعداء، لشهرة هذا الجيل بالشرارة والعداوة. قال رؤبة يصف جيشاً:",
         "prototipe_benzerlik": 0.208,
         "halka": "uzak"
       },
       {
-        "cumle": "وبه فسر قول عنترة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في ذي قدامى مرجحنّ ديلمه ... إذا تدانى لم تفرّج أجمه",
+        "prototipe_benzerlik": 0.294,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبه فسر قول عنترة:",
         "prototipe_benzerlik": 0.175,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن ثم قالوا للنمل والقردان: الديلم. لأنها أعداء الإبل. ويقال: ليل أدلم. وقال عنترة:",
-        "prototipe_benzerlik": 0.347,
-        "halka": "orta"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شربت بماء الدحرضين فأصبحت ... زوراء تنفر عن حياض الديلم",
+        "prototipe_benzerlik": 0.14,
+        "halka": "uzak"
       },
       {
-        "cumle": "فهذا تشبيه وذاك استعارة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن ثم قالوا للنمل والقردان: الديلم. لأنها أعداء الإبل. ويقال: ليل أدلم. وقال عنترة:",
+        "prototipe_benzerlik": 0.347,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولقد هممت بغارة في ليلة ... سوداء حالكة كلون الأدلم",
+        "prototipe_benzerlik": 0.274,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فهذا تشبيه وذاك استعارة.",
         "prototipe_benzerlik": 0.306,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.259,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.249,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

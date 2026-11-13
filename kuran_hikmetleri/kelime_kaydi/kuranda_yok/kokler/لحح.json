@@ -1884,19 +1884,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "التحام أو نحوه من الضِيق- على غِلَظ (1): كالتصاق",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "التحام أو نحوه من الضِيق- على غِلَظ (1): كالتصاق"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ألحّ عليه في السؤال. وألحّ على غريمه. ومكان لاح: ضيق أشب. وهو ابن عمّي لحاً. وقد لحت القرابة بيني وبينه: دنت. وأنشد الأصمعي:\nهلال ومبذول وعمرو بن عامر ... بنو عمّنا لحاً ويجمعنا الأب\nوبعنه لحح وهو التصاق الجفنين من رمد."
+      },
+      {
+        "kaynak": "Mekâyîs: لَحَّ",
+        "metin": "(لَحَّ) اللَّامُ وَالْحَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُلَازَمَةٍ وَمُلَازَّةٍ. يُقَالُ: أَلَحَّ عَلَى الشَّيْءِ إِلْحَاحًا، إِذَا أَقْبَلَ عَلَيْهِ وَلَمْ يَفْتُرْ. وَيُقَالُ: لَحِحَتْ عَيْنُهُ، إِذَا الْتَصَقَتْ. وَمِنْهُ قَوْلُهُمْ: هُوَ ابْنُ عَمِّهِ لَحًّا، أَيْ لَاصِقَ النَّسَبِ. وَالْمِلْحَاحُ: الْقَتَبُ يَعَضُّ عَلَى غَارِبِ الْبَعِيرِ. وَيُقَالُ أَلَحَّ السَّحَابُ، إِذَا دَامَ مَطَرُهُ. وَقَالَ فِي الْقَتَبِ:\nأَلَحَّ عَلَى أَكْتَافِهِمْ قَتَبٌ عُقَرْ\nوَيُقَالُ: تَلَحْلَحَ الْقَوْمُ، إِذَا أَقَامُوا مَكَانَهُمْ لَمْ يَبْرَحُوا. قَالَ:\nأَقَامُوا عَلَى أَثْقَالِهِمْ وَتَلَحْلَحُوا\nوَيُقَالُ: مَكَانٌ لَاحٌّ: ضَيِّقٌ. وَرَحًى مِلْحَاحٌ عَلَى مَا تَطْحَنُهُ. وَيُقَالُ: أَلَحَّ الْجَمَلُ، كَمَا يُقَالُ خَلَأَتِ النَّاقَةُ، وَحَرَنَ الْفَرَسُ، وَذَلِكَ إِذَا لَمْ يَكَدْ يَنْبَعِثُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ألح القنب على ظهر الدابة، وقنب ملحاح. ورحى ملحاح: تلح على ما يطحن بها. وألح السحاب: دام مطره. وخلأت الناقة وألح الجمل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألح القنب على ظهر الدابة، وقنب ملحاح. ورحى ملحاح: تلح على ما يطحن بها. وألح السحاب: دام مطره. وخلأت الناقة وألح الجمل.",
         "prototipe_benzerlik": 0.519,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.519,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["compress.v.02", "insist.v.01", "press.v.01", "recommend.v.01", "talk_of.v.01"],
   "muhassas_tasnif": {

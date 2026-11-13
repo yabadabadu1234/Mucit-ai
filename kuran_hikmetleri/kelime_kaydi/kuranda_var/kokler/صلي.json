@@ -1943,19 +1943,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خرجوا إلى المصلى. واجتمعت اليهود لعنت في صلاتهم وصلواتهم. وهي كنائسهم \" وبيع وصلوات \" وأحدقوا بالصلاء والصلى: بالنار. وأحسن من الصلاء في الشتاء. وصليت النقاة: قومتها بالنار. وصلي النار وصلي بها \" يصلى النار الكبرى \" وتصلاها وتصلى بها. وأصلاه وصلاه. وشاة مصلية:",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خرجوا إلى المصلى. واجتمعت اليهود لعنت في صلاتهم وصلواتهم. وهي كنائسهم \" وبيع وصلوات \" وأحدقوا بالصلاء والصلى: بالنار. وأحسن من الصلاء في الشتاء. وصليت النقاة: قومتها بالنار. وصلي النار وصلي بها \" يصلى النار الكبرى \" وتصلاها وتصلى بها. وأصلاه وصلاه. وشاة مصلية: مشوية. وقد صليتها. وأطيب مضغة صيحانية مصلية مشمسة. ونظرت إلى مصطلاه وهو وجهه وأطرافه. قال أبو زبيد:\nبادياً ناجذاه قد برد المو ... ت على مصطلاه أيّ برود\nوفي الحديث: \" إن للشيطان فخوخاً ومصالي \" وهي الشرك. ونصب الصائد مصلاته. وصلى للصيد يصلي صلباً. وضرب الفرس صلويه: بذنبه ما عن يمينه وشماله، وكلّ أنثى إذا ولدت: انفرج صلواها. ومنه: مصلّى السابق. وسحق الطيب على الصلاية والصلاءة."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "سبق رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وصى أبو بكر رضي الله تعالى عنه. وجئت في أكسائهم وأصلائهم. وصليت بفلان وبأمر كذا: منيت به. وصليت لفلان إذا سويت عليه منصوبة لتوقعه.",
-        "prototipe_benzerlik": 0.297,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سبق رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وصى أبو بكر رضي الله تعالى عنه. وجئت في أكسائهم وأصلائهم. وصليت بفلان وبأمر كذا: منيت به. وصليت لفلان إذا سويت عليه منصوبة لتوقعه.",
+        "prototipe_benzerlik": 0.305,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.297,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.305,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01", "pray.v.01"],
   "muhassas_tasnif": {

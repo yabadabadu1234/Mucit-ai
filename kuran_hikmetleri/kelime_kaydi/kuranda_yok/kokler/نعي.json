@@ -865,19 +865,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نُعيَ إلينا فلان نعياً ونَعيّاً ونعياناً. يقال: يا نُعيان العرب. ويجوز أن يكون جمع ناعٍ كبغيان في باغ. وجاء نعيّ فلان، وقام النعي بموته، وهو الناعي. قال: قام النعيّ فأسمعا ... ونعى الكريم الأروعا وعن الفرّاء: النعيّ: رفع الصوت بذكر الموت، وعن الأصمعيّ: كانت ال",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نُعيَ إلينا فلان نعياً ونَعيّاً ونعياناً. يقال: يا نُعيان العرب. ويجوز أن يكون جمع ناعٍ كبغيان في باغ. وجاء نعيّ فلان، وقام النعي بموته، وهو الناعي. قال:\nقام النعيّ فأسمعا ... ونعى الكريم الأروعا\nوعن الفرّاء: النعيّ: رفع الصوت بذكر الموت، وعن الأصمعيّ: كانت العرب إذا مات من له قدرٌ ركب راكب وجعل يسير في الناس يقول: نعاء\nفلاناً، ويقال: يا نَعاءَ العرب أي انعهم."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نعى عليه هفواته إذا شهّره بها. ويقال: ذهبت تميم فلا تسمى ولا تنهى ولا تُنعى، أي لا تبلغ نهايتها كثرةً ولا يُرفع ذكرها. وإذا كان القوم مجتمعين فأخبروا بمفزع فتفرّقوا نافرين قيل: استنعوا أي انتشروا كما ينتشر النّعيّ.",
-        "prototipe_benzerlik": 0.803,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نعى عليه هفواته إذا شهّره بها. ويقال: ذهبت تميم فلا تسمى ولا تنهى ولا تُنعى، أي لا تبلغ نهايتها كثرةً ولا يُرفع ذكرها. وإذا كان القوم مجتمعين فأخبروا بمفزع فتفرّقوا نافرين قيل: استنعوا أي انتشروا كما ينتشر النّعيّ.",
+        "prototipe_benzerlik": 0.797,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.803,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.797,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["quality.n.01"],
   "muhassas_tasnif": {

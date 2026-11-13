@@ -2368,8 +2368,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "foundation.n.03",
-    "dayanak_tanim": "lowest support of a structure",
+    "dayanak_synset": "institution.n.02",
+    "dayanak_tanim": "an establishment consisting of a building or complex of buildings where an organization for the promotion of some cause is situated",
     "synset_sayisi": 33
   },
   "ses_mana_tasnif": {
@@ -2388,19 +2388,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "قَوِيُّ (صلب أو حادّ الأثر) في عمق يُنْصَبُ أو يتكونُ عليه ما بعده: كأساس البناء يكون قويًّا عميقًا في الأرض ويقوم عليه البناء. (ومنه آية التركيب) وقلب الإنسان في الجوف وهو أول متكون في الرحم [ق - وقد ثبت هذا بالدراسات الحديثة (نشر ذلك في مجلة تايم ص 33 عدد 23",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "قَوِيُّ (صلب أو حادّ الأثر) في عمق يُنْصَبُ أو يتكونُ عليه ما بعده: كأساس البناء يكون قويًّا عميقًا في الأرض ويقوم عليه البناء. (ومنه آية التركيب) وقلب الإنسان في الجوف وهو أول متكون في الرحم [ق - وقد ثبت هذا بالدراسات الحديثة (نشر ذلك في مجلة تايم ص 33 عدد 23 يونية 1974]. وبقية الرماد تَتَرَبَّى بين الأثافي وتساعد في اتقاد النار مرة ثانية. ومنه: \"الأسيس: أصل كل شيء، والعِوَض (يحفظ قيمة الشيء فيحفظ أصله). ومن الحدة في الأثناء: \"الأَسّ - بالفتح: سَلْح النحل، وبالتثليث: الإفساد بين الناس (غَلّ مشاعر حادّة بينهم). والإغضاب \" (إدخال مثل تلك المشاعر في النفْس). (2/933)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بنى بيته على أساسه الأول، وقلعه من أسه."
+      },
+      {
+        "kaynak": "Mekâyîs: أَسَّ",
+        "metin": "(أَسَّ) الْهَمْزَةُ وَالسِّينُ يَدُلُّ عَلَى الْأَصْلِ وَالشَّيْءِ الْوَطِيدِ الثَّابِتِ، فَالْأُسُّ أَصْلُ الْبِنَاءِ، وَجَمْعُهُ آسَاسٌ، وَيُقَالُ لِلْوَاحِدِ: أَسَاسٌ، بِقَصْرِ الْأَلِفِ، وَالْجَمْعُ أُسُسٌ. قَالُوا: الْأُسُّ أَصْلُ الرَّجُلِ، وَالْأُسُّ وَجْهُ الدَّهْرِ، وَيَقُولُونَ: كَانَ ذَلِكَ عَلَى أُسِّ الدَّهْرِ. قَالَ الْكَذَّابُ الْحِرْمَازِيُّ:\nوَأُسُّ مَجْدٍ ثَابِتٌ وَطِيدُ ... نَالَ السَّمَاءَ فَرْعُهُ الْمَدِيدُ\nفَأَمَّا الْآسُ فَلَيْسَ هَذَا بَابَهُ، وَقَدْ ذُكِرَ فِي مَوْضِعِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "مازال فلان مجنوناً على آست الدهر، وأس الدهر أي على وجهه، وفلان أساس أمره الكذب. ومن لم يؤسس ملكه بالعدل فقد هدمه.",
-        "prototipe_benzerlik": 0.169,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مازال فلان مجنوناً على آست الدهر، وأس الدهر أي على وجهه، وفلان أساس أمره الكذب. ومن لم يؤسس ملكه بالعدل فقد هدمه.",
+        "prototipe_benzerlik": 0.306,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.169,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.306,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

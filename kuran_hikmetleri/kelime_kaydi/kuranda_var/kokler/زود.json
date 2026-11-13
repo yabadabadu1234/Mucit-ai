@@ -1651,8 +1651,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "accommodation.n.05",
-    "dayanak_tanim": "the act of providing something (lodging or seat or food) to meet a need",
+    "dayanak_synset": "provision.n.02",
+    "dayanak_tanim": "the activity of supplying or providing something",
     "synset_sayisi": 38
   },
   "ses_mana_tasnif": {
@@ -1671,19 +1671,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ما يعد من الطعام والماء لحال البعد عنهما أمدًا طويلًا (1) كالزاد وكالمزادة للماء. \"ومنه قيل لما كَسَبْتَه وانقلَبْتَ به من عمل خير أو شر زَادٌ. كما قالوا \"احتقب خيرًا أو شرًّا واستحقبه: أي ادخره \" [ل: حقب] قال تعالى: {وَتَزَوَّدُوا فَإِنَّ خَيْرَ الزَّادِ التّ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ما يعد من الطعام والماء لحال البعد عنهما أمدًا طويلًا (1) كالزاد وكالمزادة للماء. \"ومنه قيل لما كَسَبْتَه وانقلَبْتَ به من عمل خير أو شر زَادٌ. كما قالوا \"احتقب خيرًا أو شرًّا واستحقبه: أي ادخره \" [ل: حقب] قال تعالى: {وَتَزَوَّدُوا فَإِنَّ خَيْرَ الزَّادِ التَّقْوَى}."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هم ملاء المزاود، وما في مزودي كف سويق. وتزود منا فلان."
+      },
+      {
+        "kaynak": "Mekâyîs: زَوَدَ",
+        "metin": "(زَوَدَ) الزَّاءُ وَالْوَاوُ وَالدَّالُ أَصْلٌ يَدُلُّ عَلَى انْتِقَالٍ بِخَيْرٍ، مِنْ عَمَلٍ أَوْ كَسْبٍ. هَذَا تَحْدِيدٌ حَدَّهُ الْخَلِيلُ. قَالَ كُلُّ مَنِ انْتَقَلَ مَعَهُ بِخَيْرٍ مِنْ عَمَلٍ أَوْ كَسْبٍ فَقَدْ تَزَوَّدَ. قَالَ غَيْرُهُ: الزَّوْدُ: تَأْسِيسُ الزَّادِ، وَهُوَ الطَّعَامُ يُتَّخَذُ لِلسَّفَرِ. وَالْمِزْوَدُ: الْوِعَاءُ يُجْعَلُ لِلزَّادِ. وَتَلَقَّبَ الْعَجَمُ بِرِقَابِ الْمَزَاوِدِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "التقوى خير زاد، وتزودوا من الدنيا للآخرة. وهو زاد الركب، وهم أزواد الركب. وزودته كتاباً إلى فلان، وتزود من الأمير كتاباً إلى عامله. وتزود مني طعنة بين أذنيه، وسمة فاضحة بين عينيه. وتقول: هيهات إن زبيده، لا تشبه بزويده؛ وهي امرأ من المهالبة.",
-        "prototipe_benzerlik": 0.808,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "التقوى خير زاد، وتزودوا من الدنيا للآخرة. وهو زاد الركب، وهم أزواد الركب. وزودته كتاباً إلى فلان، وتزود من الأمير كتاباً إلى عامله. وتزود مني طعنة بين أذنيه، وسمة فاضحة بين عينيه. وتقول: هيهات إن زبيده، لا تشبه بزويده؛ وهي امرأ من المهالبة.",
+        "prototipe_benzerlik": 0.896,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.808,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.896,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

@@ -2556,8 +2556,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "baby.n.07",
-    "dayanak_tanim": "a project of personal concern to someone",
+    "dayanak_synset": "occupation.n.01",
+    "dayanak_tanim": "the principal activity in your life that you do to earn money",
     "synset_sayisi": 58
   },
   "ses_mana_tasnif": {
@@ -2576,19 +2576,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مَلْء فَراغ الحيّز بشيء (بحيث لا يبقى فيه متسع لمثله): كالكُدْس يشغل اتساع الجَرين، والساكن يشغَل الدار. ومن شَغْل سَعة المكان أُخِذَ شَغْل الزمان المتاح للعمل، ثم شَغْل فُرَص العمل، وشَغْل الذهن به. {شَغَلَتْنَا أَمْوَالُنَا وَأَهْلُونَا فَاسْتَغْفِرْ لَنَا} ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مَلْء فَراغ الحيّز بشيء (بحيث لا يبقى فيه متسع لمثله): كالكُدْس يشغل اتساع الجَرين، والساكن يشغَل الدار. ومن شَغْل سَعة المكان أُخِذَ شَغْل الزمان المتاح للعمل، ثم شَغْل فُرَص العمل، وشَغْل الذهن به. {شَغَلَتْنَا أَمْوَالُنَا وَأَهْلُونَا فَاسْتَغْفِرْ لَنَا} [الفتح: 11] {إِنَّ أَصْحَابَ الْجَنَّةِ الْيَوْمَ فِي شُغُلٍ فَاكِهُونَ} [يس: 55] انصبّ معظم تفسير الشغل هنا على التمتع بالنساء ربما تأثرًا بالآية التالية. والأمر أوسع من ذلك -كما في الآيات التالية أيضًا، وحَسَب درجاتهم عند اللَّه أيضًا."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أنا في شغل شاغل. وشغلتني عنك الشواغل، وشغلت عنك، واشتغلت بكذا، وتشاغلت به، ولي أشغال وشغول ومشاغل، وفلان فارغ مشغول: متعلق بما لا ينتفع به. وهو \" أشغل من ذات النحبين \"."
+      },
+      {
+        "kaynak": "Mekâyîs: شَغَلَ",
+        "metin": "(شَغَلَ) الشِّينُ وَالْغَيْنُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى خِلَافِ الْفَرَاغِ. تَقُولُ: شَغَلْتُ فُلَانًا فَأَنَا شَاغِلُهُ، وَهُوَ مَشْغُولٌ. وَشُغِلْتُ عَنْكَ بِكَذَا، عَلَى لَفْظِ مَا لَمْ يُسَمَّ فَاعِلُهُ. قَالُوا: وَلَا يُقَالُ أُشْغِلْتُ. وَيُقَالُ شُغْلٌ شَاغِلٌ. وَجَمْعُ الشُّغْلِ أَشْغَالٌ. وَقَدْ جَاءَ عَنْهُمْ: اشْتُغِلَ فُلَانٌ بِالشَّيْءِ، وَهُوَ مُشْتَغِلٌ. وَأَنْشَدَ:\nحَيَّتْكَ ثُمَّتَ قَالَتْ إِنَّ نَفْرَتَنَا ... الْيَوْمَ كُلَّهُمْ يَا عُرْوَ مُشْتَغَلُ\nوَحَكَى نَاسٌ: أَشْغَلَنَى بِالْأَلْفِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "دار مشغولة: فيها سكان. وجارية مشغولة: لها بعل. ومال مشغول: معلق بتجارة.",
-        "prototipe_benzerlik": 0.648,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دار مشغولة: فيها سكان. وجارية مشغولة: لها بعل. ومال مشغول: معلق بتجارة.",
+        "prototipe_benzerlik": 0.595,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.648,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.595,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "absorb.v.09",

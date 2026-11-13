@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "الشمس تغرب في ثأطة أي في حمأة. وفي مثل \" ثأطة مدت بماء \" لفاسد يقرن بمثله، لأن الحمأة إذا صب عليها ماء زادت فسادا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "الشمس تغرب في ثأطة أي في حمأة. وفي مثل \" ثأطة مدت بماء \" لفاسد يقرن بمثله، لأن الحمأة إذا صب عليها ماء زادت فسادا."
+      },
+      {
+        "kaynak": "Mekâyîs: ثَأَطَ",
+        "metin": "(ثَأَطَ) الثَّاءُ وَالْهَمْزَةُ وَالطَّاءُ كَلِمَةٌ وَاحِدَةٌ لَيْسَتْ أَصْلًا. فَالثَّأْطَةُ الْحَمْأَةُ وَالْجَمْعُ ثَأْطٌ. وَيُنْشِدُونَ:\nفِي عَيْنِ ذِي خُلُبٍ وَثَأْطٍ حَرْمَدِ\nوَإِنَّمَا قُلْنَا لَيْسَتْ أَصْلًا لِأَنَّهُمْ يَقُولُونَهَا بِالدَّالِ، فَكَأَنَّهَا مِنْ بَابِ الْإِبْدَالِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ثئط اللحم: فسد، مستعار من فساد الثأطة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ثئط اللحم: فسد، مستعار من فساد الثأطة.",
         "prototipe_benzerlik": 0.291,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.291,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

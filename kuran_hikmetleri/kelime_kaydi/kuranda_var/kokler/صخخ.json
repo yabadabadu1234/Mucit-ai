@@ -952,19 +952,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "دخول الشيء الحادّ في جِرْم الشيء الملتحم الرخو بشدة وحدة (1) كدخول المنقار في دَبَرة البعير. ومنه \"الصَخّ، والصَخيخ: كلُّ صوْتٍ من وَقْع صَخرة على صخرة أو حديد على حديد ونحو ذلك \"لنفاذه في الأذن بحدة بالغة يكاد يخرقها. والصاخّة: الصيحة التي تكون فيها القيامة ت",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "دخول الشيء الحادّ في جِرْم الشيء الملتحم الرخو بشدة وحدة (1) كدخول المنقار في دَبَرة البعير. ومنه \"الصَخّ، والصَخيخ: كلُّ صوْتٍ من وَقْع صَخرة على صخرة أو حديد على حديد ونحو ذلك \"لنفاذه في الأذن بحدة بالغة يكاد يخرقها. والصاخّة: الصيحة التي تكون فيها القيامة تصخ الأسماع من شدة وقعها بها {فَإِذَا جَاءَتِ الصَّاخَّةُ}."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "صخه يصخه: ضرب أذنه فأصمها، وصاح بهم صيحة تصخ الآذان. و\" إذا جاءت الصاخة \": الداهية الشديدة. وسمعت للحجر صخة، وقد صخ صخيخاً وهو صوته إذا قرع. وصخ لحديثه إذا أصاخ له."
+      },
+      {
+        "kaynak": "Mekâyîs: صَخَّ",
+        "metin": "(صَخَّ) الصَّادُ وَالْخَاءُ أَصْلٌ يَدُلُّ عَلَى صَوْتٍ مِنَ الْأَصْوَاتِ. مِنْ ذَلِكَ الصَّاخَّةُ يُقَالُ إِنَّهَا الصَّيْحَةُ تُصِمُّ الْآذَانَ. وَيُقَالُ: ضَرَبْتُ الصَّخْرَةَ بِحَجَرٍ فَسَمِعْتُ لَهَا\nصَخًّا. وَيُقَالُ: صَخَّ الْغُرَابُ بِمِنْقَارِهِ فِي دَبَرَةِ الْبَعِيرِ، إِذَا طَعَنَ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "صخّني فلان بعظمة: رماني بها وبهتني.",
-        "prototipe_benzerlik": 0.288,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صخّني فلان بعظمة: رماني بها وبهتني.",
+        "prototipe_benzerlik": 0.269,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.288,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.269,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

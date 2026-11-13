@@ -1557,8 +1557,8 @@
     "ince": "whole.n.02",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "sword.n.01",
-    "dayanak_tanim": "a cutting or thrusting weapon that has a long metal blade and a hilt with a hand guard",
+    "dayanak_synset": "blade.n.09",
+    "dayanak_tanim": "the flat part of a tool or weapon that (usually) has a cutting edge",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1572,49 +1572,100 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نصلت أظلاف الوحش من الرمضاء، ونصل الحافر. ونصل الخضاب نصولاً. ونصلت يد الفأس. ونصل الدّرّ من السلك. قال بشر: فأصبح ناصلاً منها ضحيّاً ... نصول الدّر أسلمته النّظام الوحشيّ من الصريمة. ونصل علينا فلان من الشّعب ونحوه. ونصلت الخيل من الغبار. قال امرؤ القيس: تراه",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نصلت أظلاف الوحش من الرمضاء، ونصل الحافر. ونصل الخضاب نصولاً. ونصلت يد الفأس. ونصل الدّرّ من السلك. قال بشر:\nفأصبح ناصلاً منها ضحيّاً ... نصول الدّر أسلمته النّظام\nالوحشيّ من الصريمة. ونصل علينا فلان من الشّعب ونحوه. ونصلت الخيل من الغبار. قال امرؤ القيس:\nتراهنّ من تحت الغبار نواصلاًويخرجن من جعد الثرى متنصّب أي من غبار نار من مكان صلب لشدّة حضرها. واستنصلت الريح السّفا: استأصلته واستخرجته، ومنه: نصل السيف والرمح والسهم والمغزل. وأنصلت السهم: نزعت نصله. ونصلته: ركّبت\nنصله ونصّلته تنصيلاً. ويقال لرجبٍ: منصّل الإلّ. وضرب نصيله وهو المفصل بين الرأس والعنق من تحت اللّحيين."
+      },
+      {
+        "kaynak": "Mekâyîs: نَصَلَ",
+        "metin": "(نَصَلَ) النُّونُ وَالصَّادُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى بُرُوزِ الشَّيْءِ مِنْ كِنٍّ وَسِتْرٍ أَوْ مَرْكَبٍ.\nوَنَصَلَ الْحَافِرُ: خَرَجَ مِنْ مَوْضِعِهِ. وَنَصَلَ الْخِضَابُ. وَمِنْهُ تَنَصَّلَ مِنْ ذَنْبِهِ: تَبَرَّأَ، كَأَنَّهُ خَرَجَ مِنْهُ. وَالنَّصْلُ: نَصْلُ السَّيْفِ وَالسَّهْمِ، سُمِّيَ بِهِ لِبُرُوزِهِ\nوَصَفَائِهِ وَجَلَائِهِ. يُقَالُ فِي تَصْرِيفِ هَذِهِ الْكَلِمَةِ: أَنْصَلْتُ الرُّمْحَ: نَزَعْتُ نَصْلَهُ. وَنَصَلْتُهُ: جَعَلْتُ لَهُ نَصْلًا. وَالْمُنْصَُلُ: السَّيْفُ. قَالَ فِي أَنْصَلْتُ:\nتَدَارَكَهُ فِي مُنْصِلِ الْأَلِّ بَعْدَمَا ... مَضَى غَيْرَ دَأْدَاءٍ وَقَدْ كَادَ يَعْطَبُ\nأَرَادَ: رَجَبٌ، كَانَ يُسَمَّى مُنْصِلَ الْأَسِنَّةِ، لِأَنَّهُمْ كَانُوا لَا يُحَارِبُونَ فِيهِ. وَقَالَ فِي الْمُنْصَُلِ:\nإِنِّي امْرُؤٌ مِنْ خَيْرِ عَبْسٍ مَنْصِبًا ... شَطْرِي وَأَحْمِي سَائِرِي بِالْمُنْصَُلِ\nوَمِمَّا حُمِلَ عَلَى التَّشْبِيهِ: النَّصِيلُ: مَا بَيْنَ الْعُنُقِ وَالرَّأْسِ مِنْ بَاطِنٍ تَحْتَ اللَّحْيَيْنِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أخرجت البهمى نصالها. قال ذو الرمّة:",
-        "prototipe_benzerlik": 0.444,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أخرجت البهمى نصالها. قال ذو الرمّة:",
+        "prototipe_benzerlik": 0.483,
         "halka": "orta"
       },
       {
-        "cumle": "وأنصلت البهمى. ونصلت الناقة ونضت: تقدّمت الإبل. ونصل بحقّي صاغراً: أخرجه. وتنصّل من ذنبه. وعن النبي صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" من لم يقبل من متنصّل صادقاً أو كاذباً لم يرد عليّ الحوض \".",
-        "prototipe_benzerlik": 0.786,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رعى بارض البهمى جميماً وبسرةً ... وصمعاء حتى آنفتها نصالها",
+        "prototipe_benzerlik": 0.338,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنصلت البهمى. ونصلت الناقة ونضت: تقدّمت الإبل. ونصل بحقّي صاغراً: أخرجه. وتنصّل من ذنبه. وعن النبي صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: \" من لم يقبل من متنصّل صادقاً أو كاذباً لم يرد عليّ الحوض \".",
+        "prototipe_benzerlik": 0.807,
         "halka": "yakın"
       },
       {
-        "cumle": "ونصوته: قبضت على ناصيته، وناصيته، وتناصينا: تآخذنا بنواصينا في الخصومة. قال أبو النجم:",
-        "prototipe_benzerlik": 0.186,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ص",
+        "prototipe_benzerlik": 0.666,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصوته: قبضت على ناصيته، وناصيته، وتناصينا: تآخذنا بنواصينا في الخصومة. قال أبو النجم:",
+        "prototipe_benzerlik": 0.227,
         "halka": "uzak"
       },
       {
-        "cumle": "بمناصاة. ونصت الماشطة المرأة: سرّحت ناصيتها، وتنصّت بنفسها.",
-        "prototipe_benzerlik": 0.153,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن يمس رأسي أشمط العناصي ... كأنما فرّقه مناصي",
+        "prototipe_benzerlik": 0.179,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: هو ناصية قومه، وهو من ناصية الناس ونواصيهم. قال:",
-        "prototipe_benzerlik": 0.266,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال أيضاً:",
+        "prototipe_benzerlik": 0.22,
         "halka": "uzak"
       },
       {
-        "cumle": "وأذلّ فلان ناصية فلانٍ أي عزّه وشرفه.",
-        "prototipe_benzerlik": 0.19,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "منا التّكرم والحلوم وإن يهج ... فزع فليس قتالنا بنصاء",
+        "prototipe_benzerlik": 0.925,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بمناصاة. ونصت الماشطة المرأة: سرّحت ناصيتها، وتنصّت بنفسها.",
+        "prototipe_benzerlik": 0.178,
         "halka": "uzak"
       },
       {
-        "cumle": "وتنصيت بني فلانٍ وتذرّيتهم وتفرّعتهم: تزوّجت سيدة نسائهم، ومنه: هو نصيّة قومه. وانتصيت الشيء: اخترته، وهذه نصيّتي.",
-        "prototipe_benzerlik": 0.136,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: هو ناصية قومه، وهو من ناصية الناس ونواصيهم. قال:",
+        "prototipe_benzerlik": 0.308,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وموقف قد كفيت الغائبين به ... في محفلٍ من نواصي الناس مشهود",
+        "prototipe_benzerlik": 0.175,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأذلّ فلان ناصية فلانٍ أي عزّه وشرفه.",
+        "prototipe_benzerlik": 0.221,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتنصيت بني فلانٍ وتذرّيتهم وتفرّعتهم: تزوّجت سيدة نسائهم، ومنه: هو نصيّة قومه. وانتصيت الشيء: اخترته، وهذه نصيّتي.",
+        "prototipe_benzerlik": 0.159,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.309,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.376,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "artifact.n.01"],
   "muhassas_tasnif": {

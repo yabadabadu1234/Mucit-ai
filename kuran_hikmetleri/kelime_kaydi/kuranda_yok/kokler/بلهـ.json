@@ -37,64 +37,120 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خير أولادنا الأبله العقول، وخير النساء البلهاء الخجول. قال: ولقد لهوت بطفلة مبالة ... بلهاء تطلعني على أسرارها وتباله فلان. قال عمر بن أبي ربيعة: تبالهن بالعرفان لما عرفنني ... وقلن امرؤ باغ أكل وأوضعا وتقول: هذا ما أظهره لك بله ما أضمره أي دع ما أضمره فهو خير",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "هو في شباب أبله وعيش أبله، يراد غفل صاحبهما عن الطوارق. قال رؤبة:",
-        "prototipe_benzerlik": 0.452,
-        "halka": "orta"
-      },
-      {
-        "cumle": "بعد غداني الشباب الأبله",
-        "prototipe_benzerlik": 0.291,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "ومنه: هو في بلهنية من عيشه. تقول: لازلت ملقى بتهنيه، مبقى في بلهنيه. وجمل أبله وناقة بلهاء: لا تنحاش من ثقل كأنها حمقاء. وفلان يتبله في المفازة أي يتعسف من غير هداية ولا مسئلة.",
-        "prototipe_benzerlik": 0.634,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وبلوته فكان خير مبلو وتقول: اللهم لا تبلنا إلا بالذي هو أحسن. وقد بلي بكذا وابتلي به. وبلي فلان: أصابته بلية. قال:",
-        "prototipe_benzerlik": 0.561,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وأصابته بلوى. ونزلت بلاء على الكفار.",
-        "prototipe_benzerlik": 0.206,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "وفي الحديث: \" أعوذ بالله من جهد البلاء، إلا بلاء فيه علاء \" أي علو منزلة عند الله. وهما يتباريان ويتباليان أي يتخابران. ومنه قولهم: لا أباليه: أي لا أخابره لقلة اكتراثي له، وهو أفصح من لا أبالي به. قال زهير:",
-        "prototipe_benzerlik": 0.926,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "وقيل: هو قلب لا أباوله من البال أي لا أخطره ببالي ولا ألقي إليه بالاً. ولذلك قالوا: لا أباليه بالة، وقيل: أصلها بالية. وناقة بلو سفر: قد بلاها السفر أو أبلاها. وقولهم: أبليته عذراً إذا بينته له بياناً لا لوم عليك بعده، حقيقته جعلته بالياً لعذري أي خابراً له عالماً بكنهه. وكذلك أبليته يميناً. قال جري",
-        "prototipe_benzerlik": 0.914,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "ومنه أبلى في الحرب بلاء حسناً إذا أظهر بأسه حتى بلاه الناس وخبروه. وكان له يوم كذا بلاء وأبلى الله العبد بلاء حسناً أو سيئاً. والله يبلي ويولي، كما تقول: عرفك الله بركاته. وابتليت الأمر: تعرفته. قال:",
-        "prototipe_benzerlik": 0.883,
-        "halka": "yakın"
-      },
-      {
-        "cumle": "يريد أنه محبوس.",
-        "prototipe_benzerlik": 0.297,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "ومن المجاز: بلوت الشيء: شممته.",
-        "prototipe_benzerlik": 0.375,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خير أولادنا الأبله العقول، وخير النساء البلهاء الخجول. قال:\nولقد لهوت بطفلة مبالة ... بلهاء تطلعني على أسرارها\nوتباله فلان. قال عمر بن أبي ربيعة:\nتبالهن بالعرفان لما عرفنني ... وقلن امرؤ باغ أكل وأوضعا\nوتقول: هذا ما أظهره لك بله ما أضمره أي دع ما أضمره فهو خير مما أظهره."
       }
     ],
-    "ortalama_benzerlik": 0.554,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو في شباب أبله وعيش أبله، يراد غفل صاحبهما عن الطوارق. قال رؤبة:",
+        "prototipe_benzerlik": 0.439,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بعد غداني الشباب الأبله",
+        "prototipe_benzerlik": 0.271,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومنه: هو في بلهنية من عيشه. تقول: لازلت ملقى بتهنيه، مبقى في بلهنيه. وجمل أبله وناقة بلهاء: لا تنحاش من ثقل كأنها حمقاء. وفلان يتبله في المفازة أي يتعسف من غير هداية ولا مسئلة.",
+        "prototipe_benzerlik": 0.622,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ب ل",
+        "prototipe_benzerlik": 0.443,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبلوته فكان خير مبلو وتقول: اللهم لا تبلنا إلا بالذي هو أحسن. وقد بلي بكذا وابتلي به. وبلي فلان: أصابته بلية. قال:",
+        "prototipe_benzerlik": 0.56,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بليت وفقدان الحبيب بلية ... وكم من كريم يبتلى ثم يصبر",
+        "prototipe_benzerlik": 0.642,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأصابته بلوى. ونزلت بلاء على الكفار.",
+        "prototipe_benzerlik": 0.198,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي الحديث: \" أعوذ بالله من جهد البلاء، إلا بلاء فيه علاء \" أي علو منزلة عند الله. وهما يتباريان ويتباليان أي يتخابران. ومنه قولهم: لا أباليه: أي لا أخابره لقلة اكتراثي له، وهو أفصح من لا أبالي به. قال زهير:",
+        "prototipe_benzerlik": 0.928,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لقد باليت مظعن أم أوفى ... ولكن أم أوفى لا تبالي",
+        "prototipe_benzerlik": 0.345,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقيل: هو قلب لا أباوله من البال أي لا أخطره ببالي ولا ألقي إليه بالاً. ولذلك قالوا: لا أباليه بالة، وقيل: أصلها بالية. وناقة بلو سفر: قد بلاها السفر أو أبلاها. وقولهم: أبليته عذراً إذا بينته له بياناً لا لوم عليك بعده، حقيقته جعلته بالياً لعذري أي خابراً له عالماً بكنهه. وكذلك أبليته يميناً. قال جرير:",
+        "prototipe_benzerlik": 0.917,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فأبلى أمير المؤمنين أمانة ... وأبلاه صدقاً في الأمور الشدائد",
+        "prototipe_benzerlik": 0.897,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومنه أبلى في الحرب بلاء حسناً إذا أظهر بأسه حتى بلاه الناس وخبروه. وكان له يوم كذا بلاء وأبلى الله العبد بلاء حسناً أو سيئاً. والله يبلي ويولي، كما تقول: عرفك الله بركاته. وابتليت الأمر: تعرفته. قال:",
+        "prototipe_benzerlik": 0.884,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تسائل أماء الرفاق وتبتلي ... ومن دون ما يهوين باب وحاجب",
+        "prototipe_benzerlik": 0.552,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يريد أنه محبوس.",
+        "prototipe_benzerlik": 0.283,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: بلوت الشيء: شممته.",
+        "prototipe_benzerlik": 0.359,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال يصف الماء الآجن القديم:",
+        "prototipe_benzerlik": 0.325,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بأصفر ورد آل حتى كأنما ... يسوف به البالي عصارة خردل",
+        "prototipe_benzerlik": 0.249,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.524,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

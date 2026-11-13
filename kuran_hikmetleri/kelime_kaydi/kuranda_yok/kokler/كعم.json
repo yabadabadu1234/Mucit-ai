@@ -696,24 +696,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بعير مكعوم، وقد كعمته بالكعام والكعامة وهي ما يمنعه من الأكل والعضّ من حبلٍ يشد به أو غيره.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بعير مكعوم، وقد كعمته بالكعام والكعامة وهي ما يمنعه من الأكل والعضّ من حبلٍ يشد به أو غيره."
+      },
+      {
+        "kaynak": "Mekâyîs: كَعَمَ",
+        "metin": "(كَعَمَ) الْكَافُ وَالْعَيْنُ وَالْمِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى سَدِّ شَيْءٍ بِشَيْءٍ وَإِمْسَاكٍ. فَالْكِعَامُ: شَيْءٌ يُجْعَلُ فِي فَمِ الْبَعِيرِ فَلَا يَرْغُو. وَيُقَالُ: كَعَمَهُ فَهُوَ مَكْعُومٌ. وَتَقُولُ: كَعَمَهُ الْخَوْفُ فَلَا يَنْطِقُ. قَالَ ذُو الرُّمَّةِ:\nيَهْمَاءَ خَابِطُهَا بِالْخَوْفِ مَكْعُومُ\nوَمِنَ الْبَابِ: كَعَمَ الرَّجُلُ الْمَرْأَةَ، إِذَا قَبَّلَهَا مُلْتَقِمًا فَاهَا، كَأَنَّهُ سَدَّ فَاهَا بِفِيهِ. وَالْكِعْمُ: وِعَاءٌ مِنَ الْأَوْعِيَةِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "كعمه الخوف فلا ينبس بكلمة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كعمه الخوف فلا ينبس بكلمة.",
         "prototipe_benzerlik": 0.202,
         "halka": "uzak"
       },
       {
-        "cumle": "وكعم المرأة: قبلها ملتقماً فاهاً، ويقال كامعها فكاعمها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال ذو الرمة:",
+        "prototipe_benzerlik": 0.243,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بين الرجا والرجا من جيب واصيةٍ ... يهماء خابطها بالخوف مكعوم",
+        "prototipe_benzerlik": 0.507,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكعم المرأة: قبلها ملتقماً فاهاً، ويقال كامعها فكاعمها.",
         "prototipe_benzerlik": 0.251,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.226,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.301,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

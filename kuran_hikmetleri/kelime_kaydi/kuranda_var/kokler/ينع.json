@@ -1168,24 +1168,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "صلاح الثمر (والمأكول) للتناول برخاوته أو رقته مع لون من باب الحمرة. كالزيتون اليانع المحمرّ والرأس التي نَضِجت بالطريقة",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "صلاح الثمر (والمأكول) للتناول برخاوته أو رقته مع لون من باب الحمرة. كالزيتون اليانع المحمرّ والرأس التي نَضِجت بالطريقة"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثمرة يانعة ومونعة: نضيجة، وقد ينعت وأينعت، وهذا أوان ينعه وينعه، ورمان ينيع. قال عمرو بن معد يكرب:\nكأن على عوارضهنّ راحا ... يفضّ عليه رمان ينيع"
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "دم يانع: شديد الحمرة. قال سويد بن كراع:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دم يانع: شديد الحمرة. قال سويد بن كراع:",
         "prototipe_benzerlik": 0.317,
         "halka": "uzak"
       },
       {
-        "cumle": "وينع الشيء: قنأ لونه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأبلج مختال صبغنا ثيابه ... بأحمر مثل الأرجوانيّ يانع",
+        "prototipe_benzerlik": 0.448,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وينع الشيء: قنأ لونه.",
         "prototipe_benzerlik": 0.296,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.307,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.354,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

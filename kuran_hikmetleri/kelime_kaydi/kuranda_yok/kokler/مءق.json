@@ -1100,24 +1100,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "كان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يكتحل من قبل مؤقه مرة ومن قبل مأقه مرة أي من قبل مقدم عينه ومؤخرها، وذرفت آماقه ومآقيه. قال: وجاءت جيأل وأبو بنيها ... أحم المأقيين به خماع وقال جران العود يصف خيلاً: حم المآقي على تهيج أعينها ... إذا سمون وفي الآذ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أرض بعيدة الآماق: بعيدة النواحي. قال:",
-        "prototipe_benzerlik": 0.481,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يكتحل من قبل مؤقه مرة ومن قبل مأقه مرة أي من قبل مقدم عينه ومؤخرها، وذرفت آماقه ومآقيه. قال:\nوجاءت جيأل وأبو بنيها ... أحم المأقيين به خماع\nوقال جران العود يصف خيلاً:\nحم المآقي على تهيج أعينها ... إذا سمون وفي الآذان تأليل\nوصبي مئق: سريع البكاء شديده كأنه يقلعه من جوفه قلعاً. وأصابته مأقة. وبات صبيها على مأقةٍ، وقد مئق مأقاً. وقال رؤبة يصف فرساً:\nفكأنما عولتها من التّأق ... عولة ثكلى ولولت بعد المأق"
       },
       {
-        "cumle": "تقضي إلى نازحة الآماق.",
-        "prototipe_benzerlik": 0.298,
-        "halka": "uzak"
+        "kaynak": "Mekâyîs: مَأَقَ",
+        "metin": "(مَأَقَ) الْمِيمُ وَالْهَمْزَةُ وَالْقَافُ أَصْلٌ يَدُلُّ عَلَى صِفَةٍ تَعْتَرِي بَعْدَ الْبُكَاءِ، [وَ] عَلَى أَنَفَةٍ.\nفَالْأَوَّلُ الْمَأْقُ: مَا يَعْتَرِي الْإِنْسَانَ بَعْدَ الْبُكَاءِ. تَقُولُ: مَئِقَ يَمْأَقُ، فَهُوَ مَئِقٌ. وَيُقَالُ إِنَّ الْمَأْقَةَ: شِدَّةُ الْبُكَاءِ.\nوَالْآخَرُ قَوْلُهُمْ: أَمْأَقَ: إِذَا دَخَلَ فِي الْمَأْقِةِ، وَهِيَ الْأَنَفَةُ. وَفِي الْحَدِيثِ: &quot; «مَا لَمْ تُضْمِرُوا الْإِمَاقَ» &quot;، أَيْ لَمْ تُضْمِرُوا أَنَفَةً مِمَّا يَلْزَمُكُمْ مِنْ صَدَقَةٍ."
       }
     ],
-    "ortalama_benzerlik": 0.39,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أرض بعيدة الآماق: بعيدة النواحي. قال:",
+        "prototipe_benzerlik": 0.548,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تقضي إلى نازحة الآماق.",
+        "prototipe_benzerlik": 0.434,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.491,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

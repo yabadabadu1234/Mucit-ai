@@ -1723,7 +1723,7 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "part.n.01",
+    "ince": "unit.n.05",
     "orta": "noun.substance",
     "ust": "tabiat",
     "dayanak_synset": "fat.n.01",
@@ -1746,26 +1746,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "مادة السِمَن التي تتجمع في البدن مع اللحم، وهو الشحم المعروف {وَمِنَ الْبَقَرِ وَالْغَنَمِ حَرَّمْنَا عَلَيْهِمْ شُحُومَهُمَا} وتشبيهًا به في البياض ولين الجِرم سُمِّيَتْ جُمّارة النخلة شَحْمة، والكَمْأة: شَحْمة الأرض. والشحم حادّ؛ لأنه مادة حرارة البدن، والعر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "مادة السِمَن التي تتجمع في البدن مع اللحم، وهو الشحم المعروف {وَمِنَ الْبَقَرِ وَالْغَنَمِ حَرَّمْنَا عَلَيْهِمْ شُحُومَهُمَا} وتشبيهًا به في البياض ولين الجِرم سُمِّيَتْ جُمّارة النخلة شَحْمة، والكَمْأة: شَحْمة الأرض. والشحم حادّ؛ لأنه مادة حرارة البدن، والعرب كانوا يعرفون هذا [ينظر ل (2/1110) طرق] فتجريد المعنى الأصلي لهذا التركيب هو احتواء البدن أو الشيء على مادة (حادّة) يلتئم ظاهره عليها، ومن هنا يتأتى هذا الاستعمال الذي ورد \"الشَحَمَ - محركة: البطر \"لأن البطر حدّة في نفس البطِر؛ إذ هو حَقْر قيمة النعمة أو سوء استعمالها."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو لحيم شحيم، شحم، شاحم،\nمشحم، شحام: سمين، محبّ للشحم، مطعم له، مستكثر منه، بيّاع له."
+      },
+      {
+        "kaynak": "Mekâyîs: شَحَمَ",
+        "metin": "(شَحَمَ) الشِّينُ وَالْحَاءُ وَالْمِيمُ أَصْلٌ يَدُلُّ عَلَى جِنْسٍ مِنَ اللَّحْمِ. مِنْ ذَلِكَ الشَّحْمُ، وَهُوَ مَعْرُوفٌ. وَشَحْمَةُ الْأُذُنِ: مُعَلَّقُ الْقُرْطِ. وَرَجُلٌ مُشْحِمٌ، كَثِيرُ الشَّحْمِ، وَإِنْ كَانَ يُحِبُّهُ قِيلَ: شَحِمٌ، وَإِنْ كَانَ يُطْعِمُهُ أَصْحَابَهُ قِيلَ: شَاحِمٌ، فَإِنْ كَانَ يَبِيعُهُ قِيلَ: شَحَّامٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "علقت القرط في شحمة أذنها استعيرت لتلك اللحمة للينها. وكأن بنانها شحمة الأرض وهي دود لطيف. وهم بشحم الكلى أي في نعمة وخصب. قال الأعشى:",
-        "prototipe_benzerlik": 0.384,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "علقت القرط في شحمة أذنها استعيرت لتلك اللحمة للينها. وكأن بنانها شحمة الأرض وهي دود لطيف. وهم بشحم الكلى أي في نعمة وخصب. قال الأعشى:",
+        "prototipe_benzerlik": 0.49,
         "halka": "orta"
       },
       {
-        "cumle": "الضمير للحرب. وعن ابن الأعرابي: لقيت الأصمعي بشحم كلاه أي بجن نشاطه. وفلان يلوك الجود شحمة ماله. وقال أبو نواس:",
-        "prototipe_benzerlik": 0.523,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكانوا بشحم الكلى قبلها ... فقد جرّبوها لمرتادها",
+        "prototipe_benzerlik": 0.179,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الضمير للحرب. وعن ابن الأعرابي: لقيت الأصمعي بشحم كلاه أي بجن نشاطه. وفلان يلوك الجود شحمة ماله. وقال أبو نواس:",
+        "prototipe_benzerlik": 0.564,
         "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فتىً لا تلوك الخمر شحمة ماله ... ولكن أياد عود وبوادي",
+        "prototipe_benzerlik": 0.42,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.454,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.413,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["handle.v.04", "lubricant.n.01", "lubricate.v.03", "substance.n.01"],
+  "kolekzifikasyon_kavramlari": ["handle.v.04", "lubricant.n.01", "lubricate.v.03", "molecule.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطعام",

@@ -1289,11 +1289,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "state.n.02",
-    "orta": "noun.state",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "imperfection.n.01",
-    "dayanak_tanim": "the state or an instance of being imperfect",
+    "ince": "decrease.n.02",
+    "orta": "noun.process",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "decline.n.01",
+    "dayanak_tanim": "change toward something smaller or lower",
     "synset_sayisi": 28
   },
   "ses_mana_tasnif": {
@@ -1307,24 +1307,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "وقصت عنقه: دقت، وهو موقوص العنق، وبه وقص وهو قصر العنق. وهو وهي أوقص ووقصاء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "وقصت عنقه: دقت، وهو موقوص العنق، وبه وقص وهو قصر العنق. وهو وهي أوقص ووقصاء."
+      },
+      {
+        "kaynak": "Mekâyîs: وَقَصَ",
+        "metin": "(وَقَصَ) الْوَاوُ وَالْقَافُ وَالصَّادُ: كَلِمَةٌ تَدُلُّ عَلَى كَسْرِ شَيْءٍ. مِنْهُ الْوَقْصُ: دَقُّ الْعُنُقِ، وُقِصَتْ عُنُقُهُ فَهِيَ مَوْقُوصَةٌ. أَمَّا قَوْلُ الْهُذَلِيِّ:\nفَبَعَثْتُهَا تَقِصُ الْمَقَاصِرَ بَعْدَ مَا ... كَرَبَتْ حَيَاةُ النَّارِ لِلْمُتَنَوِّرِ\nفَمِنْ وَقْصِ الدَّابَّةِ إِذَا سَارَ فِي رُءُوسِ الْآكَامِ فَيَقِصُهَا. وَمِنْهُ التَّوَقُّصُ فِي الْمَشْيِ: شِدَّةُ الْوَطْءِ، كَأَنَّهُ يَقِصُ مَا تَحْتَهُ. وَالْوَقَصُ: دِقَاقُ الْعِيدَانِ. يُقَالُ وَقِّصْ لِنَارِكَ، وَهِيَ كِسَرُ الْعِيدَانِ. وَيُقَالُ لِمَا بَيْنَ الْفَرِيضَتَيْنِ: وَقَصٌ ; وَهُوَ الْقِيَاسُ، لِأَنَّهَا لَيْسَتْ بِفَرِيضَةٍ تَامَّةٍ، فَكَأَنَّهَا مَكْسُورَةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "وقصت الدّواب الإكام. كسرت رءوسها. قال ابن مقبل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقصت الدّواب الإكام. كسرت رءوسها. قال ابن مقبل:",
         "prototipe_benzerlik": 0.556,
         "halka": "yakın"
       },
       {
-        "cumle": "والدابة تذب بذنبها فتقص عنها الذباب. وتوقّصت الرّكاب توقصاً وهو نزوها مع القرمطة كأنها تكسر الخطو، ومنه: خذ أوقص الطّريقين: أخصرهما. ووقّص على نارك من دقّ الحطب: ألق عليها الوقص وهو الدقاق التي تشبّع بها. ولا شيء في الأوقاص وهي الأشناق.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فبعثتها تقص المقاصر بعد ما ... كربت حياة النار للمتنّور",
+        "prototipe_benzerlik": 0.318,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والدابة تذب بذنبها فتقص عنها الذباب. وتوقّصت الرّكاب توقصاً وهو نزوها مع القرمطة كأنها تكسر الخطو، ومنه: خذ أوقص الطّريقين: أخصرهما. ووقّص على نارك من دقّ الحطب: ألق عليها الوقص وهو الدقاق التي تشبّع بها. ولا شيء في الأوقاص وهي الأشناق.",
         "prototipe_benzerlik": 0.129,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.343,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.335,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "abate.v.02",

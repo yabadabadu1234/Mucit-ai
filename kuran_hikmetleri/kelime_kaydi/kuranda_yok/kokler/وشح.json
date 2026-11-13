@@ -881,29 +881,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "امرأة جائلة الوشاح والوشاحين، ولها وشح وأوشحة، وتوشّحت واتشحت، ووشّحتها.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "امرأة جائلة الوشاح والوشاحين، ولها وشح وأوشحة، وتوشّحت واتشحت، ووشّحتها."
+      },
+      {
+        "kaynak": "Mekâyîs: وَشَحَ",
+        "metin": "(وَشَحَ) الْوَاوُ وَالشِّينُ وَالْحَاءُ: كَلِمَةٌ وَاحِدَةٌ الْوِشَاحُ. وَتَوَشَّحَ بِثَوْبِهِ، كَأَنَّهُ جَعَلَهُ وِشَاحَهُ، وَكَذَا اتَّشَحَ بِهِ. وَشَاةٌ مُوَشَّحَةٌ: بِجَنْبَيْهَا خَطَّانِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "توشّح بثوبه وبنجاده: وخرج متوشّحاً بسيفه ومتّشحاً به، وظبية موشّحة: في جنبيها طرّتان مسكّيتان. قال أبو ذؤيب:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "توشّح بثوبه وبنجاده: وخرج متوشّحاً بسيفه ومتّشحاً به، وظبية موشّحة: في جنبيها طرّتان مسكّيتان. قال أبو ذؤيب:",
         "prototipe_benzerlik": 0.226,
         "halka": "uzak"
       },
       {
-        "cumle": "ونبّه ذا العفاء الموشّج",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "موشّحةٌ بالطرّتين دنا لها ... جنى أيكة يضفو عليها قصارها",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال الطرمّاح:",
+        "prototipe_benzerlik": 0.263,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونبّه ذا العفاء الموشّج",
         "prototipe_benzerlik": 0.394,
         "halka": "orta"
       },
       {
-        "cumle": "وتوشّحت الجبل: سلكته. وتوشّح المرأة: جامعها. وقال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتوشّحت الجبل: سلكته. وتوشّح المرأة: جامعها. وقال:",
         "prototipe_benzerlik": 0.237,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جعلت يديّ وشاحاً له ... وبعض الفوارس لا يعتنق",
+        "prototipe_benzerlik": 0.176,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي عانقته.",
+        "prototipe_benzerlik": 0.313,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.286,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.315,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

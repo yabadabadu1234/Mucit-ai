@@ -37,24 +37,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بهظه الحمل: أثقله.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بهظه الحمل: أثقله."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بهظني هذا الأمر، وهذا أمر باهظ. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بهظني هذا الأمر، وهذا أمر باهظ. قال:",
         "prototipe_benzerlik": 0.252,
         "halka": "uzak"
       },
       {
-        "cumle": "أي لا نشرب. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تألى علينا لا تجوز وقد دنا ... من الماء ورد يبهظ الماء باكر",
+        "prototipe_benzerlik": 0.329,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي لا نشرب. قال:",
         "prototipe_benzerlik": 0.229,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كلي هدب الأرطى فقد منع الغضا ... وجوزي بأملاح فقد منع العذب",
+        "prototipe_benzerlik": 0.251,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأجازه: سقاه.",
+        "prototipe_benzerlik": 0.46,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.241,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.304,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

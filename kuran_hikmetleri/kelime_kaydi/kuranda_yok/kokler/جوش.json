@@ -779,19 +779,30 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ضرب جوشه وجوشنه أي صدره. وخرجوا عليهم الجواشن وهي الدروع جمع جوشن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "مضى جوش من الليل وجوشن منه أي صدر. قال الطرماح:",
-        "prototipe_benzerlik": 0.619,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ضرب جوشه وجوشنه أي صدره. وخرجوا عليهم الجواشن وهي الدروع جمع جوشن."
       }
     ],
-    "ortalama_benzerlik": 0.619,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مضى جوش من الليل وجوشن منه أي صدر. قال الطرماح:",
+        "prototipe_benzerlik": 0.619,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصلوا العشيّ إلى الجوا ... شن والغدو إلى الأصائل",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.529,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "زهقت نفسه زهوقاً، وأزهقها الله.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "زهقت نفسه زهوقاً، وأزهقها الله."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "\" وزهق الباطل \" فإذا هو زاهق وسهم زاهق: جاوز الهدف ووقع خلفه. وفي الحديث \" إن حابياً خير من زاهق \" وهو الذي يحبو حتى يصيب أي الضعيف الذي يصيب الحق خير من القوي الذي يخطئه. ومنه زهق الفرس الخيل: تقدمها، وجاء فرسك زاهقاً، وفرس ذات أزاهيق: ذات أعاجيب في الجري والسبق جمع أزهوقة. وهذا الجمل مزهقة لأرواح ",
-        "prototipe_benzerlik": 0.452,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" وزهق الباطل \" فإذا هو زاهق وسهم زاهق: جاوز الهدف ووقع خلفه. وفي الحديث \" إن حابياً خير من زاهق \" وهو الذي يحبو حتى يصيب أي الضعيف الذي يصيب الحق خير من القوي الذي يخطئه. ومنه زهق الفرس الخيل: تقدمها، وجاء فرسك زاهقاً، وفرس ذات أزاهيق: ذات أعاجيب في الجري والسبق جمع أزهوقة. وهذا الجمل مزهقة لأرواح المطيّ: يجهدن أنفسهن ولا يلحقنه. وخليج زاهق: سريع الجرية. وبئر زهوق: بعيدة القعر.",
+        "prototipe_benzerlik": 0.369,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.452,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.369,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

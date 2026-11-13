@@ -696,34 +696,70 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان زامخ: شامخ بأنفه، وأنوف زمخ: شمخ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان زامخ: شامخ بأنفه، وأنوف زمخ: شمخ."
+      },
+      {
+        "kaynak": "Mekâyîs: زَمَخَ",
+        "metin": "(زَمَخَ) الزَّاءُ وَالْمِيمُ وَالْخَاءُ لَيْسَ بِأَصْلٍ. قَالَ الْخَلِيلُ: الزَّامِخُ الشَّامِخُ بِأَنْفِهِ. وَالْأُنُوفُ الزُّمَّخُ: الطِّوَالُ. وَهَذَا إِنْ كَانَ صَحِيحًا فَالْأَصْلُ فِيهِ الشِّينُ &quot; شَمَخَ &quot;."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جبال لها أنوف زمخ. ونية زموخ: بعيدة، وسار عقبة زموخاً.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جبال لها أنوف زمخ. ونية زموخ: بعيدة، وسار عقبة زموخاً.",
         "prototipe_benzerlik": 0.503,
         "halka": "orta"
       },
       {
-        "cumle": "اليبس جمع الأبهر",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال رجل من هذيل في بعير شرد له:",
+        "prototipe_benzerlik": 0.587,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لك الله عندي صحبة وكرامة ... وقيد وثيق في الضريع الأباهر",
+        "prototipe_benzerlik": 0.431,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اليبس جمع الأبهر",
         "prototipe_benzerlik": 0.688,
         "halka": "yakın"
       },
       {
-        "cumle": "صياح. وكيل زامخ: وافر. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحمل ثقيل بعد ذاك وعقبة ... زموخ وحاد في الرقاق قراقر",
+        "prototipe_benzerlik": 0.549,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صياح. وكيل زامخ: وافر. قال:",
         "prototipe_benzerlik": 0.75,
         "halka": "yakın"
       },
       {
-        "cumle": "أي كال لها السير.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى إذا ما ملت المناوخا ... كال لها بالوزن كيلا زامخا",
+        "prototipe_benzerlik": 0.622,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي كال لها السير.",
         "prototipe_benzerlik": 0.307,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.562,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.554,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

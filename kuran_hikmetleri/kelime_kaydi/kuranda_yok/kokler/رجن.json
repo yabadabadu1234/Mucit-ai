@@ -762,39 +762,94 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رجن بالمكان رجوناً ودجن دجوناً: أقام فلم يبرح. ورجنت الدابة فرجنت وهو أن تحبسها وتسيء علفها فتهزل. وتقول: نفسي بهذا البلد مسجونه، ودابتي مرجونة. وارتجن الزبد إذا تفرّق في الممخض وفسد أو طبخ فلم يصف ولم يتخلّص السمن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجن بالمكان رجوناً ودجن دجوناً: أقام فلم يبرح. ورجنت الدابة فرجنت وهو أن تحبسها وتسيء علفها فتهزل. وتقول: نفسي بهذا البلد مسجونه، ودابتي مرجونة. وارتجن الزبد إذا تفرّق في الممخض وفسد أو طبخ فلم يصف ولم يتخلّص السمن."
+      },
+      {
+        "kaynak": "Mekâyîs: رَجَنَ",
+        "metin": "(رَجَنَ) الرَّاءُ وَالْجِيمُ وَالنُّونُ أَصْلَانِ: أَحَدُهُمَا الْمُقَامُ، وَالْآخَرُ الِاخْتِلَاطُ.\nفَالْأَوَّلُ قَوْلُهُمْ: رَجَنَ بِالْمَكَانِ رُجُونًا: أَقَامَ. وَالرَّاجِنُ: الْآلِفُ مِنَ الطَّيْرِ وَغَيْرِهِ.\nوَالثَّانِي قَوْلُهُمُ ارْتَجَنَ أَمْرُهُمْ: اخْتَلَطَ. وَهُوَ مِنْ قَوْلِهِمُ ارْتَجَنَتِ الزُّبْدَةُ، إِذَا فَسَدَتْ فِي الْمَخْضِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "شاة داجن راجن. وطير راجن: آلف. وقد رجن الطائر. وارتجن عليهم أمرهم: اختلط وفسد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شاة داجن راجن. وطير راجن: آلف. وقد رجن الطائر. وارتجن عليهم أمرهم: اختلط وفسد.",
         "prototipe_benzerlik": 0.124,
         "halka": "uzak"
       },
       {
-        "cumle": "وأرجو من الله المغفرة. ورجوت في ولدي الرشد. وأتيته رجاء أن يحسن إليّ. ورجوت زيداً وارتجيته ورجّيته وترجّيته، ورجّيتني حتى ترجّيت كقولك منّيتتي حتى تمنّيت. وأرجت الحامل فهي مرجية: أدنت فرجيَ ولادها. وقطيفة أرجوان: شديدة الحمرة. قال الجعديّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ر ج",
+        "prototipe_benzerlik": 0.391,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأرجو من الله المغفرة. ورجوت في ولدي الرشد. وأتيته رجاء أن يحسن إليّ. ورجوت زيداً وارتجيته ورجّيته وترجّيته، ورجّيتني حتى ترجّيت كقولك منّيتتي حتى تمنّيت. وأرجت الحامل فهي مرجية: أدنت فرجيَ ولادها. وقطيفة أرجوان: شديدة الحمرة. قال الجعديّ:",
         "prototipe_benzerlik": 0.96,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن المجاز: استعمال الرجاء في معنى الخوف والاكتراث. يقال: لقيت هولاً ما رجوته وما ارتجيته. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ويوم كحاشية الأرجوا ... ن من وقع أزرق كالكوبك",
+        "prototipe_benzerlik": 0.359,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حدته قناة ردينية ... مثقفة صدقة الأكعب",
+        "prototipe_benzerlik": 0.267,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: استعمال الرجاء في معنى الخوف والاكتراث. يقال: لقيت هولاً ما رجوته وما ارتجيته. قال:",
         "prototipe_benzerlik": 0.903,
         "halka": "yakın"
       },
       {
-        "cumle": "وفي مثل \" لا يرمى به الرّجوان \" لمن لا يخدع فيزال ن وجه إلى وجه وأصله الدلو يرمى بها رجوا البئر. قال زهير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تعسفتها وحدي ولم أرج هولها ... بحرف كقوس البان باقٍ هبابها",
+        "prototipe_benzerlik": 0.264,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.356,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا ترتجي حين تلاقي الذائدا ... أسبعةً لاقت معاً أم واحداً",
+        "prototipe_benzerlik": 0.168,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفي مثل \" لا يرمى به الرّجوان \" لمن لا يخدع فيزال ن وجه إلى وجه وأصله الدلو يرمى بها رجوا البئر. قال زهير:",
         "prototipe_benzerlik": 0.435,
         "halka": "orta"
       },
       {
-        "cumle": "مما يميل به النعاس يريد صاحبه. وفلا وردنا منه أرجاء واد رحب. وتقول فناؤه فسيح الأرجاء، مقصد لأهل الرجاء.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مطوت به في الأرض حتى كأنه ... أخو سبب يرمى به الرجوان",
+        "prototipe_benzerlik": 0.225,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مما يميل به النعاس يريد صاحبه. وفلا وردنا منه أرجاء واد رحب. وتقول فناؤه فسيح الأرجاء، مقصد لأهل الرجاء.",
         "prototipe_benzerlik": 0.236,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.532,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.391,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

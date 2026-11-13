@@ -922,11 +922,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.event",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "birth.n.02",
-    "dayanak_tanim": "the event of being born",
+    "ince": "part.n.01",
+    "orta": "noun.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "formative.n.01",
+    "dayanak_tanim": "minimal language unit that has a syntactic (or morphological) function",
     "synset_sayisi": 2
   },
   "ses_mana_tasnif": {
@@ -940,19 +940,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "غصن أملود: ناعم. وغصون أماليد. ورجل أملد: لا يلتحي.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "غصن أملود: ناعم. وغصون أماليد. ورجل أملد: لا يلتحي."
+      },
+      {
+        "kaynak": "Mekâyîs: مَلَدَ",
+        "metin": "(مَلَدَ) الْمِيمُ وَاللَّامُ وَالدَّالُ كَلِمَةٌ تَدُلُّ عَلَى نَعْمَةٍ وَلِينٍ وَمَلَاسَةٍ. وَشَابٌّ أَمْلَدُ: نَاعِمٌ. وَالْمَلَدُ الْمَصْدَرُ. وَامْرَأَةٌ مَلْدَاءُ: مُعْتَدِلَةُ الْخَلْقِ حَسَنَةٌ. وَغُصْنٌ أُمْلُودٌ: نَاعِمٌ. وَمَلَّدْتُ الْأَدِيمَ: مَرَّنْتُهُ. وَالْإِمْلِيدُ مِنَ الصَّحَارِي كَإِمْلِيسٍ: الصَّحْصَحُ. [وَ] مِنْهُ الْمَلَدَانُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "شاب أملود، وشبانأماليد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شاب أملود، وشبانأماليد.",
         "prototipe_benzerlik": 0.594,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.594,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["happening.n.01", "language_unit.n.01"],
   "muhassas_tasnif": {

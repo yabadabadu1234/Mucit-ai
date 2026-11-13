@@ -972,8 +972,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "play.n.14",
-    "dayanak_tanim": "gay or light-hearted recreational activity for diversion or amusement",
+    "dayanak_synset": "fun.n.01",
+    "dayanak_tanim": "activities that are enjoyable or amusing",
     "synset_sayisi": 21
   },
   "ses_mana_tasnif": {
@@ -992,19 +992,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "انبساط جرم الشيء أي اتساعه أو عِرَضه مع رقة سمك (1) كالأشياء المذكورة، ومن معنويه: \"عش رحراح: واسع \".",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "انبساط جرم الشيء أي اتساعه أو عِرَضه مع رقة سمك (1) كالأشياء المذكورة، ومن معنويه: \"عش رحراح: واسع \"."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فرس أرحّ وفي حافره رحح وهو انبساط ويوصف به الوعل والرجل العريض القدم، وقدم رحاء: انتشر أخمصها وانبطح عرشها وهو حمارتها. وقدح رحرح ورحراح: واسع. قال الأغلب:\nيغدو بدلو ورشاء مصلح ... إلى إزاء كالمجن الرحرح\nوترحرحت الفرس: فحجت للبول."
+      },
+      {
+        "kaynak": "Mekâyîs: رَحَّ",
+        "metin": "(رَحَّ) الرَّاءُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى السَّعَةِ وَالِانْبِسَاطِ. فَالرَّحَحُ: انْبِسَاطُ الْحَافِرِ وَصَدْرِ الْقَدَمِ. وَيُقَالُ لِلْوَعْلِ الْمُنْبَسِطِ الْأَظْلَافِ أَرَحُّ. قَالَ:\nوَلَوْ أَنَّ عِزَّ النَّاسِ فِي رَأْسِ صَخْرَةٍ ... مُلَمْلَمَةٍ تُعْيِي الْأَرَحَّ الْمُخَدَّمَا\nوَيُقَالُ تَرَحْرَحَتِ الْفَرَسُ: فَحَّجَتْ قَوَائِمَهَا لِتَبُولَ. وَيُقَالُ هُمْ فِي عَيْشٍ رَحْرَاحٍ، أَيْ وَاسِعٍ. وَرَحْرَحَانُ: مَكَانٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "عيش رحرح ورحراح.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عيش رحرح ورحراح.",
         "prototipe_benzerlik": 0.3,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.3,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

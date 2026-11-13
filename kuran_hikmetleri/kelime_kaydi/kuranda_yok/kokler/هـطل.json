@@ -37,24 +37,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هطل السحاب والمطر هطلاناً وتهطّل، وعارض هطلٌ وهاطل، وسحائب هطّل. وأوقعت بهم الهياطلة وهم جنس من الترك والسّند. قال: حملتهم فيها مع الهياطله ... أثقل بهم من تسعة في قافله",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هطل السحاب والمطر هطلاناً وتهطّل، وعارض هطلٌ وهاطل، وسحائب هطّل. وأوقعت بهم الهياطلة وهم جنس من الترك والسّند. قال:\nحملتهم فيها مع الهياطله ... أثقل بهم من تسعة في قافله"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دمع هاطل. وأقبل الناس يهطلون، وأقبلوا هطلى. وتهاطلوا عليّ: تتابعوا، وكذلك الإبل والوحش وغيرها، تقول: أقبلت هطلى. قال الراعي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دمع هاطل. وأقبل الناس يهطلون، وأقبلوا هطلى. وتهاطلوا عليّ: تتابعوا، وكذلك الإبل والوحش وغيرها، تقول: أقبلت هطلى. قال الراعي:",
         "prototipe_benzerlik": 0.495,
         "halka": "orta"
       },
       {
-        "cumle": "أي لما وقع الخصب تتابع إليها الغرماء والسؤّال.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلما مضت عنها السنون هوت لها ... مقانب هطلى من غريم وسائل",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أي لما وقع الخصب تتابع إليها الغرماء والسؤّال.",
         "prototipe_benzerlik": 0.352,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.424,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.386,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

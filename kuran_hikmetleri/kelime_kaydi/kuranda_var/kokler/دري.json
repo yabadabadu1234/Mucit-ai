@@ -1010,8 +1010,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "awareness.n.01",
-    "dayanak_tanim": "having knowledge of",
+    "dayanak_synset": "knowing.n.01",
+    "dayanak_tanim": "a clear and certain mental apprehension",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1025,44 +1025,84 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دريت الشيء دراية ودرية. وما أدراك بكذا وما يدريك، ودريته وادّريته: ختلته، وداريته: خاتلته، وعليك بالمداراة وهي الملاطفة، كأنك تخاتله. وادّريت غفلته: بمعنى تحينتها. قال: أما تراني أذّري وأدّري ... غرات جمل وتدرّى غرري وهو يعقص شعره بالمدري وهو السرخارة. قال امر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دريت الشيء دراية ودرية. وما أدراك بكذا وما يدريك، ودريته وادّريته: ختلته، وداريته: خاتلته، وعليك بالمداراة وهي الملاطفة، كأنك تخاتله. وادّريت غفلته: بمعنى تحينتها. قال:\nأما تراني أذّري وأدّري ... غرات جمل وتدرّى غرري\nوهو يعقص شعره بالمدري وهو السرخارة. قال امرؤ القيس:\nتضل المداري في مثنى ومرسل"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نطحه الثور بالمدري وهو القرن شبه بمدري الشعر في حدة طرفه. ويقال: نطحه بالمدراة وبالمدرية وهي التي حددت حتى صارت كالمدري.",
-        "prototipe_benzerlik": 0.185,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نطحه الثور بالمدري وهو القرن شبه بمدري الشعر في حدة طرفه. ويقال: نطحه بالمدراة وبالمدرية وهي التي حددت حتى صارت كالمدري.",
+        "prototipe_benzerlik": 0.162,
         "halka": "uzak"
       },
       {
-        "cumle": "أعجبه قوله فزحف له عن دسته، وفلان حسن الدست: أي شطرنجي حاذق.",
-        "prototipe_benzerlik": 0.272,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د س",
+        "prototipe_benzerlik": 0.411,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ت",
+        "prototipe_benzerlik": 0.398,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أعجبه قوله فزحف له عن دسته، وفلان حسن الدست: أي شطرنجي حاذق.",
+        "prototipe_benzerlik": 0.253,
         "halka": "uzak"
       },
       {
-        "cumle": "دسره ودفره: دفعه. وفي الحديث \" ليس في العنبر زكاة إنما هو شيء دسره البحر \" وركبوا في ذات الألواح والدسر: جمع دسار وهو المسمار. وقيل خيط من الليف",
-        "prototipe_benzerlik": 0.674,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د س",
+        "prototipe_benzerlik": 0.411,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ر",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دسره ودفره: دفعه. وفي الحديث \" ليس في العنبر زكاة إنما هو شيء دسره البحر \" وركبوا في ذات الألواح والدسر: جمع دسار وهو المسمار. وقيل خيط من الليف",
+        "prototipe_benzerlik": 0.649,
         "halka": "yakın"
       },
       {
-        "cumle": "تشدّ به الألواح ودسره بالرمح: طعنه بشدّة، ورجل مدسر.",
-        "prototipe_benzerlik": -0.002,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تشدّ به الألواح ودسره بالرمح: طعنه بشدّة، ورجل مدسر.",
+        "prototipe_benzerlik": -0.021,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: دسر المرأة: بضعها.",
-        "prototipe_benzerlik": 0.112,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: دسر المرأة: بضعها.",
+        "prototipe_benzerlik": 0.1,
         "halka": "uzak"
       },
       {
-        "cumle": "دسّ الشيء في التراب، وكل شيء أخفيته تحت شيء فقد دسسته، ومنه سميت الدسّاسة وهي دويبة شبه العظاية بصّاصة لا ترى شمساً إنما هي مندسّة تحت التراب أبداً. وهذا دسيس قومه: لمن يبعثونه سراً ليأتيهم بالأخبار. ودسّى نفسه: نقيض زكّاها، أصله دسس، كتقضّى البازي.",
-        "prototipe_benzerlik": 0.111,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "د س",
+        "prototipe_benzerlik": 0.411,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دسّ الشيء في التراب، وكل شيء أخفيته تحت شيء فقد دسسته، ومنه سميت الدسّاسة وهي دويبة شبه العظاية بصّاصة لا ترى شمساً إنما هي مندسّة تحت التراب أبداً. وهذا دسيس قومه: لمن يبعثونه سراً ليأتيهم بالأخبار. ودسّى نفسه: نقيض زكّاها، أصله دسس، كتقضّى البازي.",
+        "prototipe_benzerlik": 0.085,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.225,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.287,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["ability.n.02", "artifact.n.01", "organization.n.01", "process.n.02"],
   "muhassas_tasnif": {

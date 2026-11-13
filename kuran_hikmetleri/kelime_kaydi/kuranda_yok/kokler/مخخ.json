@@ -768,24 +768,38 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ما يَحتَشِى به الجِرْم الملتئم الظاهر (أو الصُلْب) من ثخين رِخْو (1): كالمُخّ في العظم، والدَقيق في الحبّ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "أكلت مخّ العين: شحمتها. وهؤلاء مخّ القوم ومخّة القوم: لخيارهم. ولا أرى لأمرك مخاً: خيراً. وأمر ممخّ: فيه فضل وخير. وهذا لسان ممخ: حسن الشفاعة، وله لسان ممخ: ذلق قوي على الكلام. وفي مثل \" أهون ما أعملت لسان ممخ \". \" بين الممخة والعجفاء \":",
-        "prototipe_benzerlik": 0.51,
-        "halka": "yakın"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ما يَحتَشِى به الجِرْم الملتئم الظاهر (أو الصُلْب) من ثخين رِخْو (1): كالمُخّ في العظم، والدَقيق في الحبّ."
       },
       {
-        "cumle": "للوسط، \" شر ما أجاءك إلى مخة عرقوب \": في الحاجة إلى اللئيم.",
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "عظم ممخ، وقد أمخّت عظامه، وأمخّت الشاة، وتمخّخت العظام: أخرجت مخّها."
+      },
+      {
+        "kaynak": "Mekâyîs: مَخَّ",
+        "metin": "(مَخَّ) الْمِيمُ وَالْخَاءُ كَلِمَةٌ تَدُلُّ عَلَى خَالِصِ كُلِّ شَيْءٍ. مِنْهُ مُخُّ الْعَظْمِ، مَعْرُوفٌ. وَأَمَخَّتِ الشَّاةُ: كَثُرَ مُخُّهَا. وَرُبَّمَا سَمَّوُا الدِّمَاغَ مُخَّا. قَالَ:\nوَلَا يَأْكُلُ الْكَلْبُ السَّرُوقُ نِعَالَنَا ... وَلَا يُنْتَقَى الْمُخُّ الَّذِي فِي الْجَمَاجِمِ\nوَخَالِصُ كُلِّ شَيْءٍ مُخُّهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أكلت مخّ العين: شحمتها. وهؤلاء مخّ القوم ومخّة القوم: لخيارهم. ولا أرى لأمرك مخاً: خيراً. وأمر ممخّ: فيه فضل وخير. وهذا لسان ممخ: حسن الشفاعة، وله لسان ممخ: ذلق قوي على الكلام. وفي مثل \" أهون ما أعملت لسان ممخ \". \" بين الممخة والعجفاء \":",
+        "prototipe_benzerlik": 0.51,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "للوسط، \" شر ما أجاءك إلى مخة عرقوب \": في الحاجة إلى اللئيم.",
         "prototipe_benzerlik": 0.518,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.514,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

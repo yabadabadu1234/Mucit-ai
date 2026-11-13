@@ -1200,19 +1200,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "دلف الشيخ والمقيد دليفاً ودلوفاً، وهو فوق الدبيب، وشيخ دالف، وعجائز دوالف. قال طرفة: لا كبير دالف من هرم ... أرهب الناس ولا كلّ الظفر وجاء يدلف بحمله لثقله.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "دلف الشيخ والمقيد دليفاً ودلوفاً، وهو فوق الدبيب، وشيخ دالف، وعجائز دوالف. قال طرفة:\nلا كبير دالف من هرم ... أرهب الناس ولا كلّ الظفر\nوجاء يدلف بحمله لثقله."
+      },
+      {
+        "kaynak": "Mekâyîs: دَلَفَ",
+        "metin": "(دَلَفَ) الدَّالُ وَاللَّامُ وَالْفَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَقَدُّمٍ فِي رِفْقٍ فَالدَّلِيفُ: الْمَشْيُ الرُّوَيْدُ. يُقَالُ دَلَفَ دَلِيفًا; وَهُوَ فَوْقَ الدَّبِيبِ. وَدَلَفَتِ الْكَتِيبَةُ فِي الْحَرْبِ. قَالَ أَبُو عُبَيْدٍ: الدَّلْفُ: التَّقَدُّمُ; دَلَفْنَاهُمْ، أَيْ تَقَدَّمْنَاهُمْ. وَالدَّالِفُ: السَّهْمُ الَّذِي يَقَعُ دُونَ الْغَرَضِ، ثُمَّ يَنْبُو عَنْ مَوْضِعِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جمل دلوف: سمين يدلف من سمنه. ونخلة دلوف: كثيرة الحمل كمن يدلف بحمله. وسهم دالف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جمل دلوف: سمين يدلف من سمنه. ونخلة دلوف: كثيرة الحمل كمن يدلف بحمله. وسهم دالف.",
         "prototipe_benzerlik": 0.377,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.377,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["leak.v.04", "natural_object.n.01", "trickle.v.01"],
   "muhassas_tasnif": {

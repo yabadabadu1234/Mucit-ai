@@ -789,19 +789,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "امرأة عظيمة المآكم. والمأكمتان اللحمتان الوثيرتان من العجز من الأكمة وهي التل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "امرأة عظيمة المآكم. والمأكمتان اللحمتان الوثيرتان من العجز من الأكمة وهي التل."
+      },
+      {
+        "kaynak": "Mekâyîs: أَكَمَ",
+        "metin": "(أَكَمَ) الْهَمْزَةُ وَالْكَافُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهِيَ تَجَمُّعُ الشَّيْءِ وَارْتِفَاعُهُ قَلِيلًا. قَالَ الْخَلِيلُ: الْأَكَمَةُ تَلٌّ مِنَ الْقُفِّ، وَالْجَمْعُ آكَامٌ وَأَكَمٌ. وَاسْتَأْكَمَ الْمَكَانُ، أَيْ: صَارَ كَالْأَكَمَةِ. وَتُجْمَعُ عَلَى الْآكَامِ أَيْضًا، قَالَ أَبُو خِرَاشٍ:\nوَلَا أَمْغَرُ السَّاقَيْنِ ظَلَّ كَأَنَّهُ ... عَلَى مُحْزَئِلَّاتِ الْإِكَامِ نَصِيلُ\nيَعْنِي صَقْرًا. احْزَأَلَّ: انْتَصَبَ. نَصِيلٌ: حَجَرٌ قَدْرَ ذِرَاعٍ. وَمِنْ هَذَا الْقِيَاسِ الْمَأْكَمَتَانِ: لُحْمَتَانِ وَصَلَتَا بَيْنَ الْعَجُزِ وَالْمَتْنَيْنِ، قَالَ:\nإِذَا ضَرَبَتْهَا الرِّيحُ فِي الْمِرْطِ أَشْرَفَتْ ... مَآكِمُهَا وَالزُّلُّ فِي الرِّيحِ تُفْضَحُ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لا تبل على أكمه، ولا تفش سرك إلى أمه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لا تبل على أكمه، ولا تفش سرك إلى أمه.",
         "prototipe_benzerlik": 0.07,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.07,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01"],
   "muhassas_tasnif": {

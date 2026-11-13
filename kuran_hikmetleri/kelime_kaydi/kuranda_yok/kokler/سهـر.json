@@ -37,24 +37,42 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان يحب السهر والسمر، وقد سهرت البارحة، وأسهرني كذا. ودخل القمر في الساهور إذا كسف، وخرج من الساهور إذا انجلى. قال: كأنها بهثة ترعى بأقرية ... أو شقة خرجت من جوف ساهور",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان يحب السهر والسمر، وقد سهرت البارحة، وأسهرني كذا. ودخل القمر في الساهور إذا كسف، وخرج من الساهور إذا انجلى. قال:\nكأنها بهثة ترعى بأقرية ... أو شقة خرجت من جوف ساهور"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قطعوا ساهرة: أرضاً بسيطة عريضة يسهر سالكها. وأرض ساهرة: سريعة للنبات كأنها سهرت بالنبات. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قطعوا ساهرة: أرضاً بسيطة عريضة يسهر سالكها. وأرض ساهرة: سريعة للنبات كأنها سهرت بالنبات. قال:",
         "prototipe_benzerlik": 0.601,
         "halka": "yakın"
       },
       {
-        "cumle": "وبرق ساهر، وقد سهر البرق إذا بات يلمع. وعين ساهرة: تجري لا تفتر. و\" خير المال عين ساهرة لعين نائمة \" وهي عين صاحبها لنأه فارغ البال لا يهتم بها. وليل فلان ساهر. قال النابغة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يرتدن ساهرة كأن غميمها ... وجميمها أسداف ليل مظلم",
+        "prototipe_benzerlik": 0.469,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبرق ساهر، وقد سهر البرق إذا بات يلمع. وعين ساهرة: تجري لا تفتر. و\" خير المال عين ساهرة لعين نائمة \" وهي عين صاحبها لنأه فارغ البال لا يهتم بها. وليل فلان ساهر. قال النابغة:",
         "prototipe_benzerlik": 0.212,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كتمتك ليلاً بالجمومين ساهراً ... وهمين همّاً مستكناً وظاهراً",
+        "prototipe_benzerlik": 0.428,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.407,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.427,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

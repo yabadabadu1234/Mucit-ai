@@ -819,19 +819,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "امتلاء البطن ونحوها امتلاء شديدًا بغليظ نَفَذَ إليها (1) كالكِظّة المذكورة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "امتلاء البطن ونحوها امتلاء شديدًا بغليظ نَفَذَ إليها (1) كالكِظّة المذكورة."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "علته البطنة وأخذته الكظة، وكظّه الطعام، وطعام مكظّةٌ، واكتظّ بطنه. ورأيت على باب داره كظيظاً. زحاماً. وفي ذكر باب الجنة: يأتي عليه زمان وله كظيظ. واكتظّ القوم في المسجد: ازدحموا."
+      },
+      {
+        "kaynak": "Mekâyîs: كَظَّ",
+        "metin": "(كَظَّ) الْكَافُ وَالظَّاءُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى تَمَرُّسٍ وَشِدَّةٍ وَامْتِلَاءٍ. مِنْ ذَلِكَ الْمُكَاظَّةُ فِي الْحَرْبِ: الْمُمَارَسَةُ الشَّدِيدَةُ. وَكَظَنَّى هَذَا الْأَمْرُ.\nوَمِنَ الْبَابِ الْكَظْكَظَةُ امْتِلَاءُ السِّقَاءِ. وَمِنْهُ الْكِظَّةُ الَّتِي تَعْتَرِي عَنِ الطَّعَامِ. وَيُقَالُ: اكْتَظَّ الْوَادِي بِالْمَاءِ، إِذَا امْتَلَأَ بِسَيْلِهِ. وَتَكَاظَّ الْقَوْمُ كِظَاظًا: تَجَاوَزُوا الْقَدْرَ فِي التَّمَرُّسِ وَالتَّعَادِي. قَالَ:\nإِذْ سَئِمَتْ رَبِيعَةُ الْكِظَاظَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "كظّني الأمر: غمّني وملأني غيظاً. واكتظّ الوادي بثجيجه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كظّني الأمر: غمّني وملأني غيظاً. واكتظّ الوادي بثجيجه.",
         "prototipe_benzerlik": 0.358,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.358,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["cram.v.04", "crowd.v.03", "teem.v.01"],
   "muhassas_tasnif": {

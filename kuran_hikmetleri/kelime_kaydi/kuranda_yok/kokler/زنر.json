@@ -1571,19 +1571,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شدّ الزنار أو الزنارة على وسطه. وتزنر النصراني. وتقول رمى الله تعالى بالزنانير، أصحاب الزنانير؛ أي بالحصى.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شدّ الزنار أو الزنارة على وسطه. وتزنر النصراني. وتقول رمى الله تعالى بالزنانير، أصحاب الزنانير؛ أي بالحصى."
+      },
+      {
+        "kaynak": "Mekâyîs: زَنَرَ",
+        "metin": "(زَنَرَ) الزَّاءُ وَالنُّونُ وَالرَّاءُ لَيْسَ بِأَصْلٍ ; لِأَنَّ النُّونَ لَا يَكُونُ بَعْدَهَا رَاءٌ. عَلَى أَنَّ فِي الْبَابِ كَلِمَةً. يَقُولُونَ: إِنَّ الزَّنَانِيرَ الْحَصَى الصِّغَارُ إِذَا هَبَّتْ عَلَيْهَا الرِّيحُ سَمِعْتَ لَهَا صَوْتًا. [وَالزَّنَانِيرُ: أَرْضٌ بِقُرْبِ جُرَشَ] . وَقَالَ ابْنُ مُقْبِلٍ:\nزَنَانِيرُ أَرْوَاحَ الْمَصِيفِ لَهَا"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تزنر الشيء: دق حتى صار كالزنار. وزنر إليّ بعينه. وزنرت عينه إذا دقق النظر.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تزنر الشيء: دق حتى صار كالزنار. وزنر إليّ بعينه. وزنرت عينه إذا دقق النظر.",
         "prototipe_benzerlik": 0.38,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.38,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -1420,8 +1420,8 @@
     "ince": "agent.n.03",
     "orta": "noun.artifact",
     "ust": "cisim ve eşya",
-    "dayanak_synset": "remedy.n.02",
-    "dayanak_tanim": "a medicine or therapy that cures disease or relieve pain",
+    "dayanak_synset": "medicine.n.02",
+    "dayanak_tanim": "(medicine) something that treats or prevents or alleviates the symptoms of disease",
     "synset_sayisi": 19
   },
   "ses_mana_tasnif": {
@@ -1435,24 +1435,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "خرجوا من الدوّ والدويّة والداوية وهي المفازة. وما بالدار دوي: أحد. قال: دوية ليس بها دوي ... للجن في حافاتها دوي للنحل والفحل الهادر والريح والموج وغيرها دوي. وقد دوى تدوية. ودوّى الطائر: دار في الجو ولم يحرك جناحيه. وداء دوي: شديد. وقد دويَ الرجل دوى فهو دوٍ،",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "خرجوا من الدوّ والدويّة والداوية وهي المفازة. وما بالدار دوي: أحد. قال:\nدوية ليس بها دوي ... للجن في حافاتها دوي\nللنحل والفحل الهادر والريح والموج وغيرها دوي. وقد دوى تدوية. ودوّى الطائر: دار في الجو ولم يحرك جناحيه. وداء دوي: شديد. وقد دويَ الرجل دوى فهو دوٍ، وامرأة دوية. وداويته بالدواء والأدوية. واستمد من الدواة، وجمعها الدوي والدويّ. وتقول: إن في بعض الدوي، كل داء دوي؛ وما على لبنك دواية وهي جلدة تعلوه وتعلو المرق والماء الراكد. ودوي اللبن مثل رغى. وادويت إذا أكلتها."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "داويت الفرس: سقيته اللبن وصنعته. قال:",
-        "prototipe_benzerlik": 0.348,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "داويت الفرس: سقيته اللبن وصنعته. قال:",
+        "prototipe_benzerlik": 0.444,
         "halka": "orta"
       },
       {
-        "cumle": "ورجل دوي: أحمق، سمي بمصدر دويَ وحق له.",
-        "prototipe_benzerlik": 0.391,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وداويتها حتى شبتت حبشية ... كأن عليها سندساً وسدوساً",
+        "prototipe_benzerlik": 0.428,
         "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل دوي: أحمق، سمي بمصدر دويَ وحق له.",
+        "prototipe_benzerlik": 0.316,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.37,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.396,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

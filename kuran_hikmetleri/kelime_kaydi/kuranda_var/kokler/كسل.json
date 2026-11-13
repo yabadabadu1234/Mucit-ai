@@ -1358,49 +1358,110 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ارتخاءُ الممتد الدقيق الذي شأنه أن يكون شديد التوتر كالكِسْل المذكور. ومنه \"الكَسَلُ - محركة: التثاقل عن الشيء والفتور فيه \" (رخاوة) {وَإِذَا قَامُوا إِلَى الصَّلَاةِ قَامُوا كُسَالَى} [وكذا ما في التوبة: 54]- ومنه \"أَكْسَلَ - جامع ثم لحقه فتورٌ قبل أن يُنزل \"",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ارتخاءُ الممتد الدقيق الذي شأنه أن يكون شديد التوتر كالكِسْل المذكور. ومنه \"الكَسَلُ - محركة: التثاقل عن الشيء والفتور فيه \" (رخاوة) {وَإِذَا قَامُوا إِلَى الصَّلَاةِ قَامُوا كُسَالَى} [وكذا ما في التوبة: 54]- ومنه \"أَكْسَلَ - جامع ثم لحقه فتورٌ قبل أن يُنزل \". (4/1895)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كسل وتكاسل، وهو كسلان وكسل، وامرأة كسلى وهي مكسال وكسول: رزان. وكسله الشبع، والشبع مكسلة. وفلان لا يستكسل المكاسل أي لا يعتلّ بوجوه الكسل. وأكسل المجامع: خالط ولم ينزل."
+      },
+      {
+        "kaynak": "Mekâyîs: كَسَلَ",
+        "metin": "(كَسَلَ) الْكَافُ وَالسِّينُ وَاللَّامُ أَصْلٌ صَحِيحٌ، وَهُوَ التَّثَاقُلُ عَنِ الشَّيْءِ وَالْقُعُودُ عَنْ إِتْمَامِهِ أَوْ عَنْهُ. مِنْ ذَلِكَ الْكَسَلُ. وَالْإِكْسَالُ: أَنْ يُخَالِطَ الرَّجُلُ أَهْلَهُ وَلَا يُنْزِلَ. وَيُقَالُ ذَلِكَ فِي فَحْلِ الْإِبِلِ أَيْضًا. وَامْرَأَةٌ مِكْسَالٌ: لَا تَكَادُ تَبْرَحُ بَيْتَهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "كسل الفحل عن الضراب: فتر عنه.",
-        "prototipe_benzerlik": 0.692,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كسل الفحل عن الضراب: فتر عنه.",
+        "prototipe_benzerlik": 0.689,
         "halka": "yakın"
       },
       {
-        "cumle": "وله كسوة حسنة وكسًى فاخرة، وكساه ثوباً فاكتساه، واستكسيته. قال أبو الأسود:",
-        "prototipe_benzerlik": 0.599,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ك س",
+        "prototipe_benzerlik": 0.607,
         "halka": "yakın"
       },
       {
-        "cumle": "وكسيَ الرجل فهو كاسٍ، نحو: حليَ فهو حالٍ.",
-        "prototipe_benzerlik": 0.472,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وله كسوة حسنة وكسًى فاخرة، وكساه ثوباً فاكتساه، واستكسيته. قال أبو الأسود:",
+        "prototipe_benzerlik": 0.611,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كساني ولم أستكسه فحمدته ... أخ لي يعطيني الجزيل وناصر",
+        "prototipe_benzerlik": 0.385,
         "halka": "orta"
       },
       {
-        "cumle": "واقعد فإنك أنت الطاعم الكاسي",
-        "prototipe_benzerlik": 0.338,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكسيَ الرجل فهو كاسٍ، نحو: حليَ فهو حالٍ.",
+        "prototipe_benzerlik": 0.486,
         "halka": "orta"
       },
       {
-        "cumle": "ومن المجاز: اكتست الأرض بالنبات: تغطّت به. وقال:",
-        "prototipe_benzerlik": 0.579,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الخطيئة:",
+        "prototipe_benzerlik": 0.585,
         "halka": "yakın"
       },
       {
-        "cumle": "أراد اللّبن تعلوه الدّواية، ونحوه:",
-        "prototipe_benzerlik": 0.52,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واقعد فإنك أنت الطاعم الكاسي",
+        "prototipe_benzerlik": 0.343,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد القرّاء:",
+        "prototipe_benzerlik": 0.638,
         "halka": "yakın"
       },
       {
-        "cumle": "وقلّم كسوة آدم أي الأظفار.",
-        "prototipe_benzerlik": 0.249,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أتفرح أن كان ابن عمّك كاسياً ... وليس عليه من كساك كساء",
+        "prototipe_benzerlik": 0.158,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: اكتست الأرض بالنبات: تغطّت به. وقال:",
+        "prototipe_benzerlik": 0.598,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فبات له دون الصّبا وهي قرّة ... لحاف ومصقول الكساء رقيق",
+        "prototipe_benzerlik": 0.577,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد اللّبن تعلوه الدّواية، ونحوه:",
+        "prototipe_benzerlik": 0.55,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ينفي الدّوايات إذا ترشّفا ... عن كلّ مصقول الكساء قد صفا",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقلّم كسوة آدم أي الأظفار.",
+        "prototipe_benzerlik": 0.303,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.493,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.501,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["act.n.02", "idle.v.02"],
   "muhassas_tasnif": {

@@ -1621,44 +1621,76 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "شمر أذياله. وتشمر للعمل. ونزف ماء البئر وانشمر: ذهب. ولثة منشمرة: لازقة بأسناخ الأسنان. وأجاءه الخوف إلى شر شمر أي خاف شراً فرده الخوف إلى شر منه. قال طلق بن حنظلة: والهقل قد أيقن بالشر الشمر ... يفري بهن في الخبار والصحر يدف بين الطيران والحضر",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شمر أذياله. وتشمر للعمل. ونزف ماء البئر وانشمر: ذهب. ولثة منشمرة: لازقة بأسناخ الأسنان. وأجاءه الخوف إلى شر شمر أي خاف شراً فرده الخوف إلى شر منه. قال طلق بن حنظلة:\nوالهقل قد أيقن بالشر الشمر ... يفري بهن في الخبار والصحر\nيدف بين الطيران والحضر"
+      },
+      {
+        "kaynak": "Mekâyîs: شَمَرَ",
+        "metin": "(شَمَرَ) الشِّينُ وَالْمِيمُ وَالرَّاءُ أَصْلَانِ مُتَضَادَّانِ، يَدُلُّ أَحَدُهُمَا عَلَى تَقَلُّصٍ وَارْتِفَاعٍ، وَيَدُلُّ الْآخَرُ عَلَى سَحْبٍ وَإِرْسَالٍ.\nفَالْأَوَّلُ قَوْلُهُمْ: شَمَّرَ لِلْأَمْرِ أَذْيَالَهُ. وَرَجُلٌ شَمَّرِيٌّ: خَفِيفٌ فِي أَمْرِهِ جَادٌّ قَدْ تَشَمَّرَ لَهُ. وَيُقَالُ شَاةٌ شَامِرٌ: انْضَمَّ ضَرْعُهَا إِلَى بَطْنِهَا. وَنَاقَةٌ شِمِّيرٌ: مُشَمِّرَةٌ سَرِيعَةٌ، فِي شِعْرِ حُمَيْدٍ.\nوَالْأَصْلُ الْآخَرُ: يُقَالُ شَمَرَ يَشْمُرُ، إِذَا مَشَى بِخُيَلَاءَ. وَمَرَّ يَشْمُرُ. وَيُقَالُ مِنْهُ: شَمَّرَ الرَّجُلُ السَّهْمَ، إِذَا أَرْسَلَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "شمر للأمر، وشمر له أذياله، ومنه:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "شمر للأمر، وشمر له أذياله، ومنه:",
         "prototipe_benzerlik": 0.657,
         "halka": "yakın"
       },
       {
-        "cumle": "رجل شمري. وشمر هذا الشيء: أرسله. وشمرت السهم: أرسلته. قال الشماخ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل شمري. وشمر هذا الشيء: أرسله. وشمرت السهم: أرسلته. قال الشماخ:",
         "prototipe_benzerlik": 0.518,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "كما سطع المريخ شمّره الغالي",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كما سطع المريخ شمّره الغالي",
         "prototipe_benzerlik": 0.191,
         "halka": "uzak"
       },
       {
-        "cumle": "وشمر الملاح السفينة. ونجاء مشمر: جاد. قال النمر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشمر الملاح السفينة. ونجاء مشمر: جاد. قال النمر:",
         "prototipe_benzerlik": 0.706,
         "halka": "yakın"
       },
       {
-        "cumle": "الأرزاق، مشمرين: جادين. وشمرت الحرب، وشمرت عن ساقها. قال بشر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال أخو جرم ألا لا هوادة ... ولا وزر إلا النجاء المشمر وقال النابغة:",
+        "prototipe_benzerlik": 0.657,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مشمرين على خوص مزممة ... ترجو الإله وترجو البر والطعما",
+        "prototipe_benzerlik": 0.739,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الأرزاق، مشمرين: جادين. وشمرت الحرب، وشمرت عن ساقها. قال بشر:",
         "prototipe_benzerlik": 0.636,
         "halka": "yakın"
       },
       {
-        "cumle": "وشمر النخل: صرمه. وشمر الصقر: أرسله.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما شمرت حرب عوان ... يخاف الناس عرتها كفاها",
+        "prototipe_benzerlik": 0.435,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشمر النخل: صرمه. وشمر الصقر: أرسله.",
         "prototipe_benzerlik": 0.61,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.553,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.572,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

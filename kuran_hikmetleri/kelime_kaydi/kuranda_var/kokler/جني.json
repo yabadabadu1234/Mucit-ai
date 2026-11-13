@@ -1534,8 +1534,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "crime.n.01",
-    "dayanak_tanim": "(criminal law) an act punishable by law; usually considered an evil act",
+    "dayanak_synset": "felony.n.01",
+    "dayanak_tanim": "a serious crime (such as murder or arson)",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1549,19 +1549,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هات جناة من جناك، وهذه شجرة طيبة الجناة. وثمر جني: جني آنفاً. وأجنى الشجر: حان أن يجنى ثمره. وأجنيته الثمر: مكنته من اجتنائه. وأجنت الأرض وأخلت: صار فيها الجنى والخلى. وأجنى الله الماشية: أنبت لها الجنى. وجنى على أهله: جر عليهم. وتجنى على أخيه ما لم يجن.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هات جناة من جناك، وهذه شجرة طيبة الجناة. وثمر جني: جني آنفاً. وأجنى الشجر: حان أن يجنى ثمره. وأجنيته الثمر: مكنته من اجتنائه. وأجنت الأرض وأخلت: صار فيها الجنى والخلى. وأجنى الله الماشية: أنبت لها الجنى. وجنى على أهله: جر عليهم. وتجنى على أخيه ما لم يجن."
+      },
+      {
+        "kaynak": "Mekâyîs: جَنَيَ",
+        "metin": "(جَنَيَ) الْجِيمُ وَالنُّونُ وَالْيَاءُ أَصْلٌ وَاحِدٌ، وَهُوَ أَخْذُ الثَّمَرَةِ مِنْ شَجَرِهَا، ثُمَّ يُحْمَلُ عَلَى ذَلِكَ، تَقُولُ جَنَيْتُ الثَّمَرَةَ أَجْنِيهَا، وَاجْتَنَيْتُهَا. وَثَمَرٌ جَنِيٌّ، أَيْ أُخِذَ لِوَقْتِهِ.\nوَمِنَ الْمَحْمُولِ عَلَيْهِ: جَنَيْتُ الْجِنَايَةَ أَجْنِيهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "اجتنى العسل. وتقول العرب: جنيت الجراد وصدت ماء المطر، وقد وقع لي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "اجتنى العسل. وتقول العرب: جنيت الجراد وصدت ماء المطر، وقد وقع لي:",
         "prototipe_benzerlik": 0.473,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قطف الحلم من شماريخ رضوي ... وجنى اللين من قنا الخيزران",
+        "prototipe_benzerlik": 0.509,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.473,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.491,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

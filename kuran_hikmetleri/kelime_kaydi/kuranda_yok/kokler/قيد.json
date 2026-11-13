@@ -1199,8 +1199,8 @@
     "ince": "record.v.01",
     "orta": "verb.social",
     "ust": "insan ve toplum",
-    "dayanak_synset": "register.v.01",
-    "dayanak_tanim": "record in writing; enter into a book of names or events or transactions",
+    "dayanak_synset": "enroll.v.01",
+    "dayanak_tanim": "register formally as a participant or member",
     "synset_sayisi": 31
   },
   "ses_mana_tasnif": {
@@ -1214,19 +1214,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ظوهرت عليه القيود والأقياد. وقيّده فتقيّد. ومنزل جديب المقيّد. وفرس عبل المقيد، طويل المقلد. ووسم إبله قيد الفرس. قال: كوم على أعناقها قيد الفرس ... تنجو إذا الليل تدانى والتبس",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ظوهرت عليه القيود والأقياد. وقيّده فتقيّد. ومنزل جديب المقيّد. وفرس عبل المقيد، طويل المقلد. ووسم إبله قيد الفرس. قال:\nكوم على أعناقها قيد الفرس ...\nتنجو إذا الليل تدانى والتبس"
+      },
+      {
+        "kaynak": "Mekâyîs: قَيَدَ",
+        "metin": "(قَيَدَ) الْقَافُ وَالْيَاءُ وَالدَّالُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْقَيْدُ، وَهُوَ مَعْرُوفٌ، ثُمَّ يُسْتَعَارُ فِي كُلِّ شَيْءٍ يُحْبَسُ. يُقَالُ: قَيَّدْتُهُ أُقَيِّدُهُ تَقْيِيدًا. وَيُقَالُ: فَرَسٌ قَيْدُ الْأَوَابِدِ، أَيْ فَكَأَنَّ الْوَحْشَ مِنْ سُرْعَةِ إِدْرَاكِهِ لَهَا مُقَيَّدَةٌ. قَالَ:\nوَقَدْ أَغْتَدِي وَالطَّيْرُ فِي وُكْنَاتِهَا ... بِمُنْجَرِدٍ قَيْدِ الْأَوَابِدِ هَيْكَلِ\nوَالْمُقَيَّدُ: مَوْضِعُ الْقَيْدِ مِنَ الْفَرَسِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فرس قيد الأوابد. وفي الحديث \" أأقيّد جملي \" بمعنى أأؤخذ زوجي. ومقيّدها خدل: مخلخلها. وقيّد الكتاب، وكتاب مقيّد: مشكول. وما على هذا الحرف قيد: شكلةٌ. وناقة مقيدة: كالّة لا تنبعث. وقيّدها الكلال. وقيّده بالإحسان. وتقول: إن قيود الأياد، أوثق الأقياد.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فرس قيد الأوابد. وفي الحديث \" أأقيّد جملي \" بمعنى أأؤخذ زوجي. ومقيّدها خدل: مخلخلها. وقيّد الكتاب، وكتاب مقيّد: مشكول. وما على هذا الحرف قيد: شكلةٌ. وناقة مقيدة: كالّة لا تنبعث. وقيّدها الكلال. وقيّده بالإحسان. وتقول: إن قيود الأياد، أوثق الأقياد.",
         "prototipe_benzerlik": 0.925,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.925,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

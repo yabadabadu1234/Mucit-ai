@@ -697,34 +697,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أوضمت اللحم وأوضمت له: جعلت له وضماً وهو كلّ ما وُقيَ به من الأرض من خشبة أو خصفة أو يغرهما. ووضمته أضمه وضماً: إذا وضعته على الوضم ورويَ على العكس. وأطعموا الوضيمة: طعام المأتم.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أوضمت اللحم وأوضمت له: جعلت له وضماً وهو كلّ ما وُقيَ به من الأرض من خشبة أو خصفة أو يغرهما. ووضمته أضمه وضماً: إذا وضعته على الوضم ورويَ على العكس. وأطعموا الوضيمة: طعام المأتم."
+      },
+      {
+        "kaynak": "Mekâyîs: وَضَمَ",
+        "metin": "(وَضَمَ) الْوَاوُ وَالضَّادُ وَالْمِيمُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْوَضَمُ: كُلُّ شَيْءٍ يُوضَعُ عَلَيْهِ اللَّحْمُ مِنْ خَشَبٍ وَحَجَرٍ. وَضَمْتُ اللَّحْمَ: اتَّخَذْتُ لَهُ وَضَمًا. وَأَوْضَمْتُهُ: جَعَلْتُهُ عَلَى الْوَضَمِ. وَيُقَالُ: اسْتَوْضَمْتُ الرَّجُلَ، أَيِ اسْتَضَمْتُهُ وَجَعَلْتُهُ تَحْتِي كَالْوَضَمِ. وَتَوَضَّمَ الرَّجُلُ الْمَرْأَةَ: وَقَعَ عَلَيْهَا. وَالْوَضِيمَةُ: الْقَوْمُ يَقِلُّ عَدَدُهُمْ، يَنْزِلُونَ عَلَى الْقَوْمِ فَيُحْسِنُونَ إِلَيْهِمْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو لحم على وضم: للذليل.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو لحم على وضم: للذليل.",
         "prototipe_benzerlik": 0.763,
         "halka": "yakın"
       },
       {
-        "cumle": "واستضمت فلاناص واستوضمته: ظلمته وجعلته كالوضم في الذل. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واستضمت فلاناص واستوضمته: ظلمته وجعلته كالوضم في الذل. قال:",
         "prototipe_benzerlik": 0.436,
         "halka": "orta"
       },
       {
-        "cumle": "يستوضم الجبّاءة الجخبا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إن لا يكن جسم فإنّ قلباً ... أصمع للضيم أبياً شغباً",
+        "prototipe_benzerlik": 0.432,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يستوضم الجبّاءة الجخبا",
         "prototipe_benzerlik": 0.408,
         "halka": "orta"
       },
       {
-        "cumle": "الجبّأ والجبّاء والجبّاءة: الضعيف، والجخب مثله، وتوضّم المرأة: وقع عليها.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الجبّأ والجبّاء والجبّاءة: الضعيف، والجخب مثله، وتوضّم المرأة: وقع عليها.",
         "prototipe_benzerlik": 0.422,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.507,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.492,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

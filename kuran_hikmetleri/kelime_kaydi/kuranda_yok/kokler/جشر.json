@@ -696,19 +696,34 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "جشروا دوابهم، وجشروها: رعوها قريباً من البيوت. ومنه حديث ابن مسعود \" لا يغرنكم جشركم من صلاتكم فإنّما هي من كوفتكم \" ونعم جشر، وهو جشار أنعامنا. وأصبح بنو فلان جشراً إذا باتوا مع النعم لا يروحون إلى بيوتهم. وجشر المال عن أهله: خرج إلى الرعي.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "جشر الرجل عن أهله إذا سافر. وجشر الصبح: خرج، ولاح أبلق جاشر. واصطبحوا الجاشرية وهي الشربة مع جشور الصبح نسيت إلى الصبح الجاشر. قال:",
-        "prototipe_benzerlik": 0.612,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "جشروا دوابهم، وجشروها: رعوها قريباً من البيوت. ومنه حديث ابن مسعود \" لا يغرنكم جشركم من صلاتكم فإنّما هي من كوفتكم \" ونعم جشر، وهو جشار أنعامنا. وأصبح بنو فلان جشراً إذا باتوا مع النعم لا يروحون إلى بيوتهم. وجشر المال عن أهله: خرج إلى الرعي."
+      },
+      {
+        "kaynak": "Mekâyîs: جَشَرَ",
+        "metin": "(جَشَرَ) الْجِيمُ وَالشِّينُ وَالرَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى انْتِشَارِ الشَّيْءِ وَبُرُوزِهِ. يُقَالُ جَشَرَ الصُّبْحُ، إِذَا أَنَارَ. وَمِنْهُ قَوْلُهُمْ: اصْطَبَحْنَا الْجَاشِرِيَّةَ، وَهَذَا اصْطِبَاحٌ يَكُونُ مَعَ الصُّبْحِ. وَأَصْبَحَ بَنُو فُلَانٍ جَشَرًا، إِذَا بَرَزُوا [وَ] الْحَيَّ ثُمَّ\nأَقَامُوا وَلَمْ يَرْجِعُوا إِلَى بُيُوتِهِمْ، وَكَذَلِكَ الْمَالُ الْجَشَرُ، الَّذِي يَرْعَى أَمَامَ الْبُيُوتِ. وَالْجَشَّارُ: الَّذِي يَأْخُذُ الْمَالَ إِلَى الْجَشْرِ.\n[بَابُ الْجِيمِ وَالْعَيْنِ وَمَا يُثَلِّثُهُمَا]"
       }
     ],
-    "ortalama_benzerlik": 0.612,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جشر الرجل عن أهله إذا سافر. وجشر الصبح: خرج، ولاح أبلق جاشر. واصطبحوا الجاشرية وهي الشربة مع جشور الصبح نسيت إلى الصبح الجاشر. قال:",
+        "prototipe_benzerlik": 0.612,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا ما شربنا الجاشرية لم نبل ... أميراً وإن كان الأمير من الأزد",
+        "prototipe_benzerlik": 0.496,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.554,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

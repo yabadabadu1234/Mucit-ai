@@ -785,19 +785,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لاك اللقمة لوكها. ولاك الفرس اللجام.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لاك اللقمة لوكها. ولاك الفرس اللجام."
+      },
+      {
+        "kaynak": "Mekâyîs: لَوَكَ",
+        "metin": "(لَوَكَ) اللَّامُ وَالْوَاوُ وَالْكَافُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لُكْتُ اللُّقْمَةَ أَلُوكُهَا لَوْكًا. وَفُلَانٌ يَلُوكُ أَعْرَاضَ النَّاسِ، إِذَا كَانَ يَغْتَابُهُمْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هو يلوك أعراض الناس.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هو يلوك أعراض الناس.",
         "prototipe_benzerlik": 0.134,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.134,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["grate.v.04"],
   "muhassas_tasnif": {

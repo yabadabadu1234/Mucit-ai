@@ -37,24 +37,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هزل معه وهازله. قال: ذو الجدّ إن جدّ الرجال به ... ومهازل إن كان في هزل وقال القطاميّ: يهازل ربّات البراقع بالضحى ... ويخرج من باب ويدخل باباً وأزلٌ أنت أم جادّ؟ وهو يهزل في كلامه. وشاة هزيلٌ وشاءٌ هزلى. وجمل مهزول وإبل مهازيل، وبه هزالٌ وهزيلة، وفشت الهزيلة ف",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هزل معه وهازله. قال:\nذو الجدّ إن جدّ الرجال به ... ومهازل إن كان في هزل\nوقال القطاميّ:\nيهازل ربّات البراقع بالضحى ... ويخرج من باب ويدخل باباً\nوأزلٌ أنت أم جادّ؟ وهو يهزل في كلامه. وشاة هزيلٌ وشاءٌ هزلى. وجمل مهزول وإبل مهازيل، وبه هزالٌ وهزيلة، وفشت الهزيلة في الإبل. قال:\nحتى إذا نوّر الجرجار وارتفعت ... عنها هزيلتها والفحل قد ضربا\nوهزلها صاحبها وهزّلها. وأهزل القوم: هزلت دوابّهم."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "انسابت الهزلى وهي الحيّات، صفة غالبة كالأعلم في البعير والأقرح في الذباب. قال جثّامة الكلبيّ:",
-        "prototipe_benzerlik": 0.338,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "انسابت الهزلى وهي الحيّات، صفة غالبة كالأعلم في البعير والأقرح في الذباب. قال جثّامة الكلبيّ:",
+        "prototipe_benzerlik": 0.256,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كأنّ مزاحف الهزلى صباحاً ... خدود رصائع جدلت تؤاما",
+        "prototipe_benzerlik": 0.39,
         "halka": "orta"
       },
       {
-        "cumle": "وهزلت حال فلان. وتقول: له فضل جزيل، وحال هزيل. وهزله السفر والجدب والمرض.",
-        "prototipe_benzerlik": 0.517,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهزلت حال فلان. وتقول: له فضل جزيل، وحال هزيل. وهزله السفر والجدب والمرض.",
+        "prototipe_benzerlik": 0.464,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.428,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.37,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

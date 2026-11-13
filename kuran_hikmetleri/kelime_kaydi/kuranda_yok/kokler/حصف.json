@@ -1293,34 +1293,58 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في وجهها كلف، وفي جلدها حصف؛ وهو بثر صغار. وقد حصف جلده فهو حصف، وأحصفه الحر. وأحصف حبله فاستحصف، وحبل محصف ومستحصف، وقد أحصف الحائك نسجه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في وجهها كلف، وفي جلدها حصف؛ وهو بثر صغار. وقد حصف جلده فهو حصف، وأحصفه الحر. وأحصف حبله فاستحصف، وحبل محصف ومستحصف، وقد أحصف الحائك نسجه."
+      },
+      {
+        "kaynak": "Mekâyîs: حَصَفَ",
+        "metin": "(حَصَفَ) الْحَاءُ وَالصَّادُ وَالْفَاءُ أَصْلٌ وَاحِدٌ، وَهُوَ تَشَدُّدٌ يَكُونُ فِي الشَّيْءِ وَصَلَابَةٌ وَقُوَّةٌ. فَيُقَالُ لِرَكَانَةِ الْعَقْلِ حَصَافَةٌ، وَلِلْعَدْوِ الشَّدِيدِ إِحْصَافٌ. يُقَالُ فَرَسٌ مِحْصَفٌ وَنَاقَةٌ مِحْصَافٌ. وَيُقَالُ كَتِيبَةٌ مَحْصُوفَةٌ، إِذَا تَجَمَّعَ أَصْحَابُهَا وَقَلَّ الْخَلَلُ فِيهِمْ. قَالَ الْأَعْشَى:\nتَأْوِي طَوَائِفُهَا إِلَى مَحْصُوفَةٍ ... مَكْرُوهَةٍ يَخْشَى الْكُمَاةُ نِزَالَهَا\nوَيُقَالُ &quot; مَخْصُوفَةٍ &quot;، وَهَذَا لَهُ قِيَاسٌ آخَرُ وَقَدْ ذُكِرَ فِي بَابِهِ. وَيُقَالُ اسْتَحْصَفَ عَلَى بَنِي فُلَانٍ الزَّمَانُ، إِذَا اشْتَدَّ. وَفَرْجٌ مُسْتَحْصِفٌ. وَقَالَ:\nوَإِذَا طَعَنْتَ طَعَنْتَ فِي مُسْتَحْصِفٍ ... رَابِي الْمَجَسَّةِ بِالْعَبِيرِ مُقَرْمَدِ\nوَالْحَصَفُ: بَثْرٌ صِغَارٌ يَسْتَحْصِفُ لَهَا الْجِلْدُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فيه حصافة وهي ثخانة العقل والرأي، ورجل حصيف، وقد حصف رأيه واستحصف، ورأى وأمر محصف ومستحصف.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فيه حصافة وهي ثخانة العقل والرأي، ورجل حصيف، وقد حصف رأيه واستحصف، ورأى وأمر محصف ومستحصف.",
         "prototipe_benzerlik": 0.298,
         "halka": "uzak"
       },
       {
-        "cumle": "بات يصادي أمر حزم محصفاً",
-        "prototipe_benzerlik": 0.482,
-        "halka": "orta"
-      },
-      {
-        "cumle": "بمستحصف باقٍ من الرأي مبرم",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال العجاج:",
         "prototipe_benzerlik": 0.235,
         "halka": "uzak"
       },
       {
-        "cumle": "واستحصف عليه الزمان: اشتد. وفرج مستحصف: ضيق. وأحصف الفرس: اشتد عدوه، وفرس محصف محصب. وبينهما حبل محصف أي إخاء ثابت.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بات يصادي أمر حزم محصفاً",
+        "prototipe_benzerlik": 0.482,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.181,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بمستحصف باقٍ من الرأي مبرم",
+        "prototipe_benzerlik": 0.235,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واستحصف عليه الزمان: اشتد. وفرج مستحصف: ضيق. وأحصف الفرس: اشتد عدوه، وفرس محصف محصب. وبينهما حبل محصف أي إخاء ثابت.",
         "prototipe_benzerlik": 0.472,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.372,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.317,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["process.n.02"],
   "muhassas_tasnif": {

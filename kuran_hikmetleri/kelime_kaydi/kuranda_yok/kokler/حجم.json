@@ -1348,8 +1348,8 @@
     "ince": "property.n.02",
     "orta": "noun.attribute",
     "ust": "hâl ve vasıf",
-    "dayanak_synset": "magnitude.n.01",
-    "dayanak_tanim": "the property of relative size or extent (whether large or small)",
+    "dayanak_synset": "extent.n.02",
+    "dayanak_tanim": "the distance or area or volume over which something extends",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1363,19 +1363,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أحجم عن القتال وغيره إذا نكص عنه، وأردته على كذا فأحجم عنه، وفيه إحجام. وحسبته مقدماً فوجدته محجماً. وحجم البعير: شد فمه بالحجامة. واحتجم، وحجمه الحجام، وأعضه المحاجم. وكتاب ضخم الحجم. وقد حجم الثدي وأحجم: تفلك ونهد. قال الأعشى: قد حجم الثدي على نحرها ... في م",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أحجم عن القتال وغيره إذا نكص عنه، وأردته على كذا فأحجم عنه، وفيه إحجام. وحسبته مقدماً فوجدته محجماً. وحجم البعير: شد فمه بالحجامة. واحتجم، وحجمه الحجام، وأعضه المحاجم. وكتاب ضخم الحجم. وقد حجم الثدي وأحجم: تفلك ونهد. قال الأعشى:\nقد حجم الثدي على نحرها ... في مشرق ذي بهجة نائر\nوثدي حاجم: منير، ومعنى أحجم صار ذا حجم، وقيل: أمكن أن يحجمه الرضيع. ولبعضهم:\nرمانتا نحرها لم يبد حجمهما ... بلى بدا لهما حجم كلابادي"
+      },
+      {
+        "kaynak": "Mekâyîs: حَجَمَ",
+        "metin": "(حَجَمَ) الْحَاءُ وَالْجِيمُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ ضَرْبٌ مِنَ الْمَنْعِ وَالصَّدْفِ. يُقَالُ أَحْجَمْتُ عَنِ الشَّيْءِ، إِذَا نَكَصْتَ عَنْهُ. وَحُجِمَ الْبَعِيرُ، إِذَا شُدَّ فَمُهُ بِأَدَمٍ وَلِيفٍ.\nوَمِمَّا شَذَّ عَنِ الْبَابِ الْحَوْجَمَةُ: الْوَرْدَةُ الْحَمْرَاءُ، وَالْجَمْعُ حَوْجَمٌ. وَالْحَجْمُ: فِعْلُ الْحَاجِمِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حجم طرفه عنه: صرفه. وحجمته الحية: نهشته. وحجمت الفحول البعير: عضته. وما حجم الصبي ثدي أمه.",
-        "prototipe_benzerlik": 0.728,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حجم طرفه عنه: صرفه. وحجمته الحية: نهشته. وحجمت الفحول البعير: عضته. وما حجم الصبي ثدي أمه.",
+        "prototipe_benzerlik": 0.692,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.728,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.692,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["abstain.v.02", "magnitude.n.01", "refrain.v.01", "volume.n.01", "volumetric.a.01", "volumetrically.r.01"],
   "muhassas_tasnif": {

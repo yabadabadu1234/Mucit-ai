@@ -1836,19 +1836,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو يلحظني ويلاحظني. وفتنته لحظاتها وألحاظها. وقال زهير: فوقعت بين قتود عنس ضامر ... لحّاظة طفل العشيّ سناد هي باقية النشاط بالعشيّ فهي تطمح بعينها. ورجل لحّاظ. قال عبد قيس بن بجرة: يسوقون لحّاظاً إذا ما رأيته ... بسلع ذكرت الهجرس المتربّبا وتلاحظوا. وفعل ذلك ف",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو يلحظني ويلاحظني. وفتنته لحظاتها وألحاظها. وقال زهير:\nفوقعت بين قتود عنس ضامر ... لحّاظة طفل العشيّ سناد\nهي باقية النشاط بالعشيّ فهي تطمح بعينها. ورجل لحّاظ. قال عبد قيس بن بجرة:\nيسوقون لحّاظاً إذا ما رأيته ... بسلع ذكرت الهجرس المتربّبا\nوتلاحظوا. وفعل ذلك في لحظةٍ. ونظر إليّ بلحاظ عينه وهو مؤخرها."
+      },
+      {
+        "kaynak": "Mekâyîs: لَحَظَ",
+        "metin": "(لَحَظَ) اللَّامُ وَالْحَاءُ وَالظَّاءُ كَلِمَتَانِ مُتَبَايِنَتَانِ.\nفَاللَّحْظُ: لَحْظُ الْعَيْنِ، وَلِحَاظُهَا: مُؤَخِّرُهَا عِنْدَ الصُّدْغِ.\nوَالْكَلِمَةُ الْأُخْرَى اللِّحَاظُ: مَا يَنْسَحِي مَعَ الرِّيشِ إِذَا سُحِيَ مَعَ الْجَنَاحِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أحوالهم متشاكلة متلاحظة، وتقول: أنا عنده محفوظ محظوظ، بعين العناية ملحوظ.",
-        "prototipe_benzerlik": 0.082,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أحوالهم متشاكلة متلاحظة، وتقول: أنا عنده محفوظ محظوظ، بعين العناية ملحوظ.",
+        "prototipe_benzerlik": 0.065,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.082,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.065,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

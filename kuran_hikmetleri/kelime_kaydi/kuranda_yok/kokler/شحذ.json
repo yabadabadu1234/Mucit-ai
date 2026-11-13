@@ -1609,11 +1609,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "communicate.v.01",
-    "orta": "verb.possession",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "beg.v.03",
-    "dayanak_tanim": "ask to obtain free",
+    "ince": "perfect.v.01",
+    "orta": "verb.change",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "perfect.v.01",
+    "dayanak_tanim": "make perfect or complete",
     "synset_sayisi": 4
   },
   "ses_mana_tasnif": {
@@ -1627,19 +1627,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سكين شحيذ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سكين شحيذ."
+      },
+      {
+        "kaynak": "Mekâyîs: شَحَذَ",
+        "metin": "(شَحَذَ) الشِّينُ وَالْحَاءُ وَالذَّالُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى خِفَّةٍ وَحِدَّةٍ. مِنْ ذَلِكَ شَحَذْتُ الْحَدِيدَ، إِذَا حَدَّدْتَهُ. وَيُقَالُ: إِنَّ الْمَشَاحِيذَ رُءُوسُ الْجِبَالِ، وَإِنَّمَا سُمِّيَتْ بِذَلِكَ لِلْحِدَّةِ الَّتِي ذَكَرْنَاهَا. وَمِنَ الْخِفَّةِ قَوْلُهُمْ لِلْجَائِعِ: شَحْذَانُ. وَيُقَالُ: إِنَّ الشَّحْذَانَ الْخَفِيفُ فِي سَعْيِهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان يشحذ الناس: يسألهم ملحاً عليهم. وهو شحاذ. ورأيته يتشحذ. وشحذته ببصري: حدجته. ووابل شحاذ: ملح. واشحذ له غرب ذهنك. وهذا الكلام مشحذة للفهم.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يشحذ الناس: يسألهم ملحاً عليهم. وهو شحاذ. ورأيته يتشحذ. وشحذته ببصري: حدجته. ووابل شحاذ: ملح. واشحذ له غرب ذهنك. وهذا الكلام مشحذة للفهم.",
         "prototipe_benzerlik": 0.072,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.072,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["grate.v.04", "grind.v.05", "perfect.v.01", "request.v.01"],
   "muhassas_tasnif": {

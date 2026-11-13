@@ -1959,29 +1959,62 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ذهاب غليظ الشيء من أثنائه فيرق -مع تماسكه أو بقاء أصله. كفراغ سوق انخل من الخشب الذي يَخْشُوها- في حين أن سوق سائر الشجر مصمتة إلا ما ندر كالخِرْوع، وكخروج غليظ الدقيق بالنَخْل، وكخروج البَرَد من السحاب. ولم يرد في القرآن من التركيب إلا \"النخل: شجر التمر \"المع",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "نخل له النصيحة. وبذل له نخيلة قلبه. وفي الحديث: \" لا يقبل الله إلا نخائل القلوب \". قال عمارة:",
-        "prototipe_benzerlik": 0.367,
-        "halka": "orta"
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ذهاب غليظ الشيء من أثنائه فيرق -مع تماسكه أو بقاء أصله. كفراغ سوق انخل من الخشب الذي يَخْشُوها- في حين أن سوق سائر الشجر مصمتة إلا ما ندر كالخِرْوع، وكخروج غليظ الدقيق بالنَخْل، وكخروج البَرَد من السحاب. ولم يرد في القرآن من التركيب إلا \"النخل: شجر التمر \"المعروف."
       },
       {
-        "cumle": "ونصيحة ناخلة. وانتخل الشيء وتنخّله: اختاره، وهو نخيلتي من إخواني ونخيلة نفسي أي خيرتي. ونخلت السماء الثلج.",
-        "prototipe_benzerlik": 0.368,
-        "halka": "orta"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نخل الدقيق بالمنخل وبالمناخل."
       },
       {
-        "cumle": "وبه نخوة، ونخي فلان، وهو منخو: مزهو. وانتخى من كذا: استنكف منه، والعرب تنتخي من الدنايا. وقال ذو الرمّة:",
-        "prototipe_benzerlik": 0.766,
-        "halka": "yakın"
+        "kaynak": "Mekâyîs: نَخَلَ",
+        "metin": "(نَخَلَ) النُّونُ وَالْخَاءُ وَاللَّامُ: كَلِمَةٌ تَدُلُّ عَلَى انْتِقَاءِ الشَّيْءِ وَاخْتِيَارِهِ. وَانْتَخَلْتُهُ: اسْتَقْصَيْتُ حَتَّى أَخَذْتُ أَفْضَلَهُ. وَعِنْدَنَا أَنَّ النَّخْلَ سُمِّيَ بِهِ لِأَنَّهُ أَشْرَفُ كُلِّ شَجَرٍ ذِي سَاقٍ، الْوَاحِدَةُ نَخْلَةٌ. وَالنَّخْلُ: نَخْلُكَ الدَّقِيقَ بِالْمُنْخُلِ، وَمَا سَقَطَ مِنْهُ فَهُوَ نُخَالَةٌ. وَالنَّخْلُ: ضَرْبٌ مِنَ الْحَلْيِ عَلَى صُورَةِ النَّخْلِ. قَالَ:\nقَدِ اكْتَسَتْ مِنْ أَرْنَبٍ وَنَخْلٍ."
       }
     ],
-    "ortalama_benzerlik": 0.5,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نخل له النصيحة. وبذل له نخيلة قلبه. وفي الحديث: \" لا يقبل الله إلا نخائل القلوب \". قال عمارة:",
+        "prototipe_benzerlik": 0.36,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تبحّثتم سخطي فغيّر بحثكم ... نخيلة نفس كان نصحاً ضميرها",
+        "prototipe_benzerlik": 0.191,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونصيحة ناخلة. وانتخل الشيء وتنخّله: اختاره، وهو نخيلتي من إخواني ونخيلة نفسي أي خيرتي. ونخلت السماء الثلج.",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن خ",
+        "prototipe_benzerlik": 0.498,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وبه نخوة، ونخي فلان، وهو منخو: مزهو. وانتخى من كذا: استنكف منه، والعرب تنتخي من الدنايا. وقال ذو الرمّة:",
+        "prototipe_benzerlik": 0.851,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فربّ امريء ذي نخوة قد رميته ... بقاصمةٍ توهي عظام الحواجب",
+        "prototipe_benzerlik": 0.252,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.415,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["living_thing.n.01"],
   "muhassas_tasnif": {

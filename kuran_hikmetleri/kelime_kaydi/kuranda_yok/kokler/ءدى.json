@@ -469,7 +469,36 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخذ للحرب أداته، حتى قهر عداته. وفلان مؤد على هذا الأمر أي قوي عليه، من قولهم: شاك مؤد للكامل الأداة. وهو آدى للأمانة منك."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قول الراعي:",
+        "prototipe_benzerlik": 0.49,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "غدت برعال من قطا في حلوقه ... أداوي لطاف الطي موثقة العقد",
+        "prototipe_benzerlik": 0.407,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراد الحواصل.",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      }
+    ],
+    "ortalama_benzerlik": 0.46,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

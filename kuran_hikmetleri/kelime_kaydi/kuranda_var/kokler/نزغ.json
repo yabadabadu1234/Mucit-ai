@@ -971,19 +971,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "نَخْس حِسّي (في البدن) أو معنوي للتحريك والإثارة. ومنه \"نَزَغَ بينهم: أَغْرَى وأَفسدَ وحملَ بعضَهم على بعض \" (أثار كلا على الآخر)، {إِنَّ الشَّيطَانَ يَنْزَغُ بَينَهُمْ} [الإسراه: 53]، فهذا نزغ تحريض وتحريش للإيقاع بين غير المتعادين، ولزيادة الفساد بين المتعاد",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "نَخْس حِسّي (في البدن) أو معنوي للتحريك والإثارة. ومنه \"نَزَغَ بينهم: أَغْرَى وأَفسدَ وحملَ بعضَهم على بعض \" (أثار كلا على الآخر)، {إِنَّ الشَّيطَانَ يَنْزَغُ بَينَهُمْ} [الإسراه: 53]، فهذا نزغ تحريض وتحريش للإيقاع بين غير المتعادين، ولزيادة الفساد بين المتعادين. {وَإِمَّا يَنْزَغَنَّكَ مِنَ الشَّيطَانِ نَزْغٌ فَاسْتَعِذْ بِاللَّهِ} [الأعراف: 200]، (وهذه وسوسة لتزينن المعاصي، وتفَسّر بكل وساوس الشيطان). وليس في القرآن من التركيب إلا (نزغ الشيطان) هذا."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نزغه مثل نسغه إذا طعنه ونخسه."
+      },
+      {
+        "kaynak": "Mekâyîs: نَزَغَ",
+        "metin": "(نَزَغَ) النُّونُ وَالزَّاءُ وَالْغَيْنُ كَلِمَةٌ تَدُلُّ عَلَى إِفْسَادٍ بَيْنَ اثْنَيْنِ. وَنَزَغَ بَيْنَ الْقَوْمِ: أَفْسَدَ ذَاتَ بَيْنِهِمْ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "نزغه الشيطان: كأنه ينخسه ليحثه على المعاصي، ونزغ بين الناس: أفسد بينهم بالحثّ على الشرّ.",
-        "prototipe_benzerlik": 0.612,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نزغه الشيطان: كأنه ينخسه ليحثه على المعاصي، ونزغ بين الناس: أفسد بينهم بالحثّ على الشرّ.",
+        "prototipe_benzerlik": 0.814,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.612,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.814,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

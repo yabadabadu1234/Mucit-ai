@@ -1267,19 +1267,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لحم رخص، وبنان رخص: لين ناعم. وجارة رخصة: بينة الرخاصة. وسعر رخيص. ولك في هذا رخصة. \" والله يحب أن يؤخذ برخصه كما يحب أن يؤخذ بعزائمه \". وترخص في الأمر: أخذ فيه بالرخصة. ورخص له فيه. وترخص في حقه: أخذ كل ما طف له ولم يستقص.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لحم رخص، وبنان رخص: لين ناعم. وجارة رخصة: بينة الرخاصة. وسعر رخيص. ولك في هذا رخصة. \" والله يحب أن يؤخذ برخصه كما يحب أن يؤخذ بعزائمه \". وترخص في الأمر: أخذ فيه بالرخصة. ورخص له فيه. وترخص في حقه: أخذ كل ما طف له ولم يستقص."
+      },
+      {
+        "kaynak": "Mekâyîs: رَخَصَ",
+        "metin": "(رَخَصَ) الرَّاءُ وَالْخَاءُ وَالصَّادُ أَصْلٌ يَدُلُّ عَلَى لِينٍ وَخِلَافِ شِدَّةٍ. مِنْ ذَلِكَ اللَّحْمُ الرَّخْصُ، هُوَ النَّاعِمُ. وَمِنْ ذَلِكَ الرُّخْصُ: خِلَافُ الْغَلَاءِ. وَالرُّخْصَةُ فِي الْأَمْرِ: خِلَافُ التَّشْدِيدِ. وَفِي الْحَدِيثِ: &quot; «إِنَّ اللَّهَ جَلَّ ثَنَاؤُهُ يُحِبُّ أَنْ يُؤْخَذَ بِرُخَصِهِ كَمَا يُحِبُّ أَنْ تُؤْتَى عَزَائِمُهُ» &quot;."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نزل به الموت الرخيص وهو الوجي الذريع. وهذه رخصتي من الماء أي شربي وقلدي.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نزل به الموت الرخيص وهو الوجي الذريع. وهذه رخصتي من الماء أي شربي وقلدي.",
         "prototipe_benzerlik": 0.198,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.198,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["approval.n.04", "authorize.v.01", "degrade.v.03", "group_action.n.01", "permit.v.01"],
   "muhassas_tasnif": {

@@ -1620,11 +1620,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "lie.v.01",
-    "orta": "verb.stative",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "lie.v.01",
-    "dayanak_tanim": "be located or situated somewhere; occupy a certain position",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "ambush.n.01",
+    "dayanak_tanim": "the act of concealing yourself and lying in wait to attack by surprise",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1638,19 +1638,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "استخرجه من مكمنه ومكامنه، واختفى في مكمن حريز، وسر كامن ومكتمن، وتقول: حبك في الفراد كمين، وأنت بذاك قمين، وقد كمن الشيء واكتمن. وناقة كمون: كتوم للّقاح إذا لقحت ولم تبشّر به أي لم تشل بذنبها، وقد كمنت لقاحها تكمنه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "استخرجه من مكمنه ومكامنه، واختفى في مكمن حريز، وسر كامن ومكتمن، وتقول: حبك في الفراد كمين، وأنت بذاك قمين، وقد كمن الشيء واكتمن. وناقة كمون: كتوم للّقاح إذا لقحت ولم تبشّر به أي لم تشل بذنبها، وقد كمنت لقاحها تكمنه."
+      },
+      {
+        "kaynak": "Mekâyîs: كَمَنَ",
+        "metin": "(كَمَنَ) الْكَافُ وَالْمِيمُ وَالنُّونُ أُصَيْلٌ يَدُلُّ عَلَى اسْتِخْفَاءٍ. يُقَالُ: كَمَنَ الشَّيْءُ كُمُونًا. وَاشْتِقَاقُ الْكَمِينِ فِي الْحَرْبِ مِنْ هَذَا. وَزَعَمَ نَاسٌ أَنَّ النَّاقَةَ الْكَمُونَ: الْكَتُومُ اللِّقَاحِ، وَهِيَ إِذَا لَقِحَتْ لَمْ تَشُلْ بِذَنَبِهَا. وَحُزْنٌ مُكْتَمِنٌ فِي الْقَلْبِ كَأَنَّهُ مُسْتَخْفٍ. وَالْكُمْنَةُ: دَاءٌ فِي الْعَيْنِ مِنْ بَقِيَّةِ رَمَدٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "هذا أمر فيه كمين أي دغلٌ لا يفطن له.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هذا أمر فيه كمين أي دغلٌ لا يفطن له.",
         "prototipe_benzerlik": 0.412,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.412,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

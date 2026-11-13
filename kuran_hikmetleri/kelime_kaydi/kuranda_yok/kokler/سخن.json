@@ -1716,11 +1716,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "heater.n.01",
-    "dayanak_tanim": "device that heats water or supplies warmth to a room",
+    "ince": "hot.a.01",
+    "orta": "adj.all",
+    "ust": "hâl ve vasıf",
+    "dayanak_synset": "hot.a.01",
+    "dayanak_tanim": "used of physical heat; having a high or higher than desirable temperature or giving off heat or feeling or causing a sensation of heat or burning",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1734,34 +1734,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ماء سخن وسخين، وسخنته وأسخنته في المسخنة، وسخن الماء سخونة، ويوم سخن وسخنان، وليلة سخن وسخنانة، وقد سخن يومنا وسخنت ليلتنا. وقروناً بالسخينة وهي حساء عملته قريش في قحط فنبزوا به. قال كعب بن مالك: زعمت سخينة أن ستغلب ربها ... وليغلبن مغالب الغلاب ولبسوا التساخي",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
-    "yayilim": [
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
       {
-        "cumle": "سخنت الدابة في سيرها إذا انبسطت فيه. قال لبيد:",
-        "prototipe_benzerlik": 0.29,
-        "halka": "uzak"
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ماء سخن وسخين، وسخنته وأسخنته في المسخنة، وسخن الماء سخونة، ويوم سخن وسخنان، وليلة سخن وسخنانة، وقد سخن يومنا وسخنت ليلتنا. وقروناً بالسخينة وهي حساء عملته قريش في قحط فنبزوا به. قال كعب بن مالك:\nزعمت سخينة أن ستغلب ربها ... وليغلبن مغالب الغلاب\nولبسوا التساخين وهي الخفاف."
       },
       {
-        "cumle": "وسخنت عينه بالكسر، وهذا سخنة لعينه، وعين سخينة، وأسخن الله تعالى عينك. وعليك بالأمر في سخنته أي في أوله قبل أن يبرد. وسخنه بالضرب إذا ضربه ضرباً موجعاً. وقد سخن ضربه سخونة، وما أسخن ضربك.",
-        "prototipe_benzerlik": 0.342,
-        "halka": "orta"
-      },
-      {
-        "cumle": "ورجل سخيّ وقوم أسخياء، وفيه سخاء، وقد سخا وسخو، وهو يتسخى على أصحابه ويتندى. وأسخيت الجمر تحت القدر وسخيته وسخوته إذا فرجته لتجعل فيه مذهباً للنار.",
-        "prototipe_benzerlik": 0.238,
-        "halka": "uzak"
-      },
-      {
-        "cumle": "ومن المجاز: سخيت نفسي وبنفسي عن هذا الأمر إذا تركته ولم تنازعك إليه نفسك. قال الخليل بن أحمد:",
-        "prototipe_benzerlik": 0.336,
-        "halka": "orta"
+        "kaynak": "Mekâyîs: سَخُنَ",
+        "metin": "(سَخُنَ) السِّينُ وَالْخَاءُ وَالنُّونُ أَصْلٌ صَحِيحٌ مُطَّرِدٌ مُنْقَاسٌ، يَدُلُّ عَلَى حَرَارَةٍ فِي الشَّيْءِ. مِنْ ذَلِكَ سَخَّنْتُ الْمَاءَ. وَمَاءٌ سُخْنٌ وَسَخِينٌ. وَتَقُولُ: يَوْمٌ سُخْنٌ وَسَاخِنٌ وَسَُخْنَانٌ، وَلَيْلَةٌ سُخْنَةٌ وَسَُخْنَانَةٌ. وَقَدْ سَخُنَ يَوْمُنَا. وَسَخِنَتْ عَيْنُهُ بِالْكَسْرِ تَسْخَنُ. وَأَسْخَنَ اللَّهُ عَيْنَهُ. وَيَقُولُونَ إِنَّ دَمْعَةَ الْغَمِّ تَكُونُ حَارَّةً. وَاحْتُجَّ بِقَوْلِهِمْ: أَقَرَّ اللَّهُ عَيْنَهُ. وَهَذَا كَلَامٌ لَا بَأْسَ بِهِ. وَالْمِسْخَنَةُ: قُدَيْرَةٌ كَأَنَّهَا تَوْرٌ. وَالسَّخِينَةُ: حَسَاءٌ يُتَّخَذُ مِنْ دَقِيقٍ. وَقَالَ: قُرَيْشٌ يُعَيَّرُونَ بِأَكْلِ السَّخِينَةِ، وَيُسَمَّوْنَ بِذَلِكَ، وَهُوَ قَوْلُهُمْ:\nيَا شَدَّةً مَا شَدَدْنَا غَيْرَ كَاذِبَةٍ ... عَلَى سَخِينَةٍ لَوْلَا اللَّيْلُ وَالْحَرَمُ\nوَالتَّسَاخِينُ: الْخِفَافُ. وَمُمْكِنٌ أَنْ تَكُونَ سُمِّيَتْ بِذَلِكَ لِأَنَّهَا تُسَخِّنُ عَلَى لُبْسِهَا الْقَدَمَ. وَلَيْسَ بِبَعِيدٍ."
       }
     ],
-    "ortalama_benzerlik": 0.302,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
+    "yayilim": [
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سخنت الدابة في سيرها إذا انبسطت فيه. قال لبيد:",
+        "prototipe_benzerlik": 0.311,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رفعتها طرد النعام وفوقه ... حتى إذا سخنت وخف عظامها",
+        "prototipe_benzerlik": 0.254,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وسخنت عينه بالكسر، وهذا سخنة لعينه، وعين سخينة، وأسخن الله تعالى عينك. وعليك بالأمر في سخنته أي في أوله قبل أن يبرد. وسخنه بالضرب إذا ضربه ضرباً موجعاً. وقد سخن ضربه سخونة، وما أسخن ضربك.",
+        "prototipe_benzerlik": 0.387,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "س خ",
+        "prototipe_benzerlik": 0.61,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورجل سخيّ وقوم أسخياء، وفيه سخاء، وقد سخا وسخو، وهو يتسخى على أصحابه ويتندى. وأسخيت الجمر تحت القدر وسخيته وسخوته إذا فرجته لتجعل فيه مذهباً للنار.",
+        "prototipe_benzerlik": 0.276,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: سخيت نفسي وبنفسي عن هذا الأمر إذا تركته ولم تنازعك إليه نفسك. قال الخليل بن أحمد:",
+        "prototipe_benzerlik": 0.351,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "سخى بنفسي أني لا أرى أحداً ... يموت هزلاً ولا يبقى على حال",
+        "prototipe_benzerlik": 0.149,
+        "halka": "uzak"
+      }
+    ],
+    "ortalama_benzerlik": 0.334,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "heat.v.01", "hot.a.01", "hot.a.03", "temperature_change.n.01", "warm.v.01", "warm.v.02"],
   "muhassas_tasnif": {

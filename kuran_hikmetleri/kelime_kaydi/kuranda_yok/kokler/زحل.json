@@ -1561,19 +1561,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "مالي عنه مزحل: مبعد، وقد زحلت عنه. ودخل عليه فزحل له عن مكانه. وعقبة زحول: بعيدة. ورجل زحل وزحلة: متنح عن الشيء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "مالي عنه مزحل: مبعد، وقد زحلت عنه. ودخل عليه فزحل له عن مكانه. وعقبة زحول: بعيدة. ورجل زحل وزحلة: متنح عن الشيء."
+      },
+      {
+        "kaynak": "Mekâyîs: زَحَلَ",
+        "metin": "(زَحَلَ) الزَّاءُ وَالْحَاءُ وَاللَّامُ أَصْلٌ يَدُلُّ عَلَى التَّنَحِّي. يُقَالُ زَحَلَ عَنْ مَكَانِهِ، إِذَا تَنَحَّى. وَزَحَلَتِ النَّاقَةُ فِي سَيْرِهَا. وَالْمَزْحَلُ: الْمَوْضِعُ الَّذِي تَزْحَلُ إِلَيْهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أزحلت إليه الأمر: ألجأته إليه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أزحلت إليه الأمر: ألجأته إليه.",
         "prototipe_benzerlik": 0.143,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.143,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["content.n.05"],
   "muhassas_tasnif": {

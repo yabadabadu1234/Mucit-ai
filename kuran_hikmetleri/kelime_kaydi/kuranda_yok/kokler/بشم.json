@@ -788,19 +788,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بشم الفصيل من اللبن والرجل من الطعام إذا اتخم. وفي كلام الحسن: وأنت تتجشأ من الشبع بشماً. واستاكت بفرع بشامة، وتقول ما أهل الشام إلا كشجر البشامك دهنه من أطيب الأفواه، وعوده مطيبة الأفواه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بشم الفصيل من اللبن والرجل من الطعام إذا اتخم. وفي كلام الحسن: وأنت تتجشأ من الشبع بشماً. واستاكت بفرع بشامة، وتقول ما أهل الشام إلا كشجر البشامك دهنه من أطيب الأفواه، وعوده مطيبة الأفواه."
+      },
+      {
+        "kaynak": "Mekâyîs: بَشَمَ",
+        "metin": "(بَشَمَ) الْبَاءُ وَالشِّينُ وَالْمِيمُ أَصْلٌ وَاحِدٌ، وَهُوَ جِنْسٌ مِنَ السَّآمَةِ لِمَأْكُولٍ مَا، ثُمَّ يُحْمَلُ عَلَيْهِ غَيْرُهُ. يُقَالُ: بَشِمْتُ مِنَ الطَّعَامِ، كَأَنَّكَ سَئِمْتَهُ. قَالَ الْخَلِيلُ: الْبَشَمُ يُخَصُّ بِهِ الدَّسَمُ. قَالَ: وَيُقَالُ فِي الْفَصِيلِ: بَشِمَ مِنْ كَثْرَةِ شُرْبِ اللَّبَنِ.\nوَمِمَّا شَذَّ عَنِ الْأَصْلِ الْبَشَامُ، وَهُوَ شَجَرٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "بشم من كذا إذا سئم منه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بشم من كذا إذا سئم منه.",
         "prototipe_benzerlik": 0.434,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.434,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

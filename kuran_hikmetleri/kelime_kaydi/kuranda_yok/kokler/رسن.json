@@ -1257,49 +1257,112 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رسنت الدابة: شددتها بالرسن. وتقول: ضع الخطام على مرسنه ومخطمه وهو أنفه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رسنت الدابة: شددتها بالرسن. وتقول: ضع الخطام على مرسنه ومخطمه وهو أنفه."
+      },
+      {
+        "kaynak": "Mekâyîs: رَسَنَ",
+        "metin": "(رَسَنَ) الرَّاءُ وَالسِّينُ وَالنُّونُ أَصْلٌ وَاحِدٌ اشْتَرَكَ فِيهِ الْعَرَبُ وَالْعَجَمُ، وَهُوَ الرَّسَنُ، وَالْجَمْعُ أَرْسَانٌ. وَالْمَرْسِنُ: الَّذِي يَقَعُ عَلَيْهِ الرَّسَنُ مِنْ أَنْفِ النَّاقَةِ، ثُمَّ كَثُرَ حَتَّى قِيلَ مَرْسِنُ الْإِنْسَانِ. وَرَسَنْتُ الرَّجُلَ وَأَرْسَنْتُهُ: شَدَدْتُهُ بِالرَّسَنِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ما أحسن مرسنها!. قال العجاج:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما أحسن مرسنها!. قال العجاج:",
         "prototipe_benzerlik": 0.52,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "وفاحماً ومرسناً مسرّجاً",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفاحماً ومرسناً مسرّجاً",
         "prototipe_benzerlik": 0.516,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال:",
+        "prototipe_benzerlik": 0.544,
         "halka": "yakın"
       },
       {
-        "cumle": "النمل. وتقول: أرغم الله مراسنهم، ومحا محاسنهم. وأرسن المهر إذا انقاد وأذعن وأعطى برأسه. وأرسن فلان بعد الطماح. قال رؤبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وترى الذنين على مراسنهم ... يوم الهياج كمازن الجثل",
+        "prototipe_benzerlik": 0.499,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "النمل. وتقول: أرغم الله مراسنهم، ومحا محاسنهم. وأرسن المهر إذا انقاد وأذعن وأعطى برأسه. وأرسن فلان بعد الطماح. قال رؤبة:",
         "prototipe_benzerlik": 0.697,
         "halka": "yakın"
       },
       {
-        "cumle": "وجبل راس، وجبال راسبات ورواس. وأرساها الله تعالى. ورسا وترسّى: ثبت. ورست السفينة: انتهت إلى قرار فبقيت لا تسير، وأرسوها بالمرساة وهي الأنجر. ورست قدماه في الحرب. \" وقدور راسيات \" لا يستطاع تحويلها لثقلها فهي في مكانها.",
-        "prototipe_benzerlik": 0.522,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن تعلمه القياد أذعنا ... بالمد والتقحيم حتى يرسنا",
+        "prototipe_benzerlik": 0.626,
         "halka": "yakın"
       },
       {
-        "cumle": "ومن المجاز: ما أرسى ثبير ما أقام، وأصله من إرساء السفينة. وألقوا مراسيها. قال زهير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال ابن مقبل:",
+        "prototipe_benzerlik": 0.481,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أراك تجرى إلينا غير ذي رسن ... وقد تكون إذا نجريك تعنينا",
+        "prototipe_benzerlik": 0.447,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ر س",
+        "prototipe_benzerlik": 0.31,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجبل راس، وجبال راسبات ورواس. وأرساها الله تعالى. ورسا وترسّى: ثبت. ورست السفينة: انتهت إلى قرار فبقيت لا تسير، وأرسوها بالمرساة وهي الأنجر. ورست قدماه في الحرب. \" وقدور راسيات \" لا يستطاع تحويلها لثقلها فهي في مكانها.",
+        "prototipe_benzerlik": 0.522,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: ما أرسى ثبير ما أقام، وأصله من إرساء السفينة. وألقوا مراسيها. قال زهير:",
         "prototipe_benzerlik": 0.637,
         "halka": "yakın"
       },
       {
-        "cumle": "إذا قلت أكدى الودق ألقى المراسيا",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأين الذين يحضرون جفانه ... إذا قدمت ألقوا لهنّ المراسيا",
+        "prototipe_benzerlik": 0.543,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال آخر:",
+        "prototipe_benzerlik": 0.589,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا قلت أكدى الودق ألقى المراسيا",
         "prototipe_benzerlik": 0.647,
         "halka": "yakın"
       },
       {
-        "cumle": "ورسا الفحل بالشول إذا تفرقت فصاح بها فاستقرّت.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ورسا الفحل بالشول إذا تفرقت فصاح بها فاستقرّت.",
         "prototipe_benzerlik": 0.356,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.557,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.529,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

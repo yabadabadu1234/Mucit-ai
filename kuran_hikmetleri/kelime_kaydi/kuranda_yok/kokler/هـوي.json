@@ -37,19 +37,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هويه يهواه، وهوَ هوٍ، وهي هويةٌ. قال: أراك إذا لم أهو أمراً هويته ... ولست لما أهوى من الأمر بالهوي وهو من أهل الأهواء \" ولا تتّبع الهوى \" ومن هويَ هوَى. وهوى من الجبل. وهوت الدلو في البئر هوياص بالفتح. وهوى إلى الجبل، وهوى الجبل: صعده هوياً. قال: يهوي مخارمها",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هويه يهواه، وهوَ هوٍ، وهي هويةٌ. قال:\nأراك إذا لم أهو أمراً هويته ... ولست لما أهوى من الأمر بالهوي\nوهو من أهل الأهواء \" ولا تتّبع الهوى \" ومن هويَ هوَى. وهوى من الجبل. وهوت الدلو في البئر هوياص بالفتح. وهوى إلى الجبل، وهوى الجبل: صعده هوياً. قال:\nيهوي مخارمها هويّ الأجدل\nوقال الشماخ:\nعلى طريق كظهر الأيم مطّردٍ ... يهوي إلى قنّة في منهل عالي\nوالناقة تهوي براكبها: تسرع به. وطاح في المهواة والهاوية وهي ما بين الجبلين. وتهاووا فيها: تساقطوا. وأهوى بيده إلى الشيء ليأخه. وهذه هوّةٌ عميقة وهوًى. وهوى الرجل: مات، وهوت أمّه، و\" أمُّهُ هاويةٌ \" وجلست عنده هويّاً: مليّاً. ومضى هويٌّ من الليل. و\" استهوته الشياطين \"."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "قولهم للجبان: إنه لهواء: خالي القلب عن الجرأة. \" وأفئدتهم هواء \" والأصل الجوّ.",
-        "prototipe_benzerlik": 0.534,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم للجبان: إنه لهواء: خالي القلب عن الجرأة. \" وأفئدتهم هواء \" والأصل الجوّ.",
+        "prototipe_benzerlik": 0.569,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.534,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.569,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

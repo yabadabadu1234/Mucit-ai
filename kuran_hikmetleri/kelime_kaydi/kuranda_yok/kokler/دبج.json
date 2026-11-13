@@ -1284,19 +1284,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "فلان يلبس الديباج، ويركب الهملاج.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "فلان يلبس الديباج، ويركب الهملاج."
+      },
+      {
+        "kaynak": "Mekâyîs: دَبَجَ",
+        "metin": "(دَبَجَ) الدَّالُ وَالْبَاءُ وَالْجِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى شَيْءٍ ذِي صَفْحَةٍ حَسَنَةٍ. الدِّيبَاجُ مَعْرُوفٌ. وَالدِّيبَاجَتَانِ: الْخَدَّانِ. وَقَالَ ابْنُ مُقْبِلٍ:\nيَجْرِي بِدِيبَاجَتَيْهِ الرَّشْحُ مُرْتَدِعٌ\nوَيُقَالُ هُمَا اللِّيتَانِ. وَأَمَّا قَوْلُهُمْ: &quot; مَا بِالدَّارِ دِبِّيجٌ &quot; فَيُقَالُ هُوَ بِالْحَاءِ، وَقَدْ ذُكِرَ فِي بَابِهِ، وَإِنْ كَانَ بِالْجِيمِ كَمَا قِيلَ فَلَيْسَ مِنْ هَذَا، وَلَعَلَّهُ أَنْ يَكُونَ مِنْ دِبِّيٍّ، مِنَ الدَّبِيبِ، ثُمَّ حُوِّلَتْ يَاءُ النِّسْبَةِ جِيمًا عَلَى لُغَةِ مَنْ يَفْعَلُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "دبج المطر الأرض يدبجها بالضم دبجاً. ودبجها: زينها بالرياض، وأصبحت الأرض مدبجة. وما في الدار دبيج، فعيل من دبج، كسكيت من سكت، أي إنسان، لأن الإنس يزيّنون الديار. وفلان يصون ديباجتيه، ويبذل ديباجتيه وهما خداه. ولهذه القصيدة ديباجة حسنة إذا كانت محبرة. والحواميم ديباج القرآن. وما أحسن ديباجات البحتريّ!",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "دبج المطر الأرض يدبجها بالضم دبجاً. ودبجها: زينها بالرياض، وأصبحت الأرض مدبجة. وما في الدار دبيج، فعيل من دبج، كسكيت من سكت، أي إنسان، لأن الإنس يزيّنون الديار. وفلان يصون ديباجتيه، ويبذل ديباجتيه وهما خداه. ولهذه القصيدة ديباجة حسنة إذا كانت محبرة. والحواميم ديباج القرآن. وما أحسن ديباجات البحتريّ!",
         "prototipe_benzerlik": 0.174,
         "halka": "uzak"
       }
     ],
     "ortalama_benzerlik": 0.174,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["write.v.01"],
   "muhassas_tasnif": {

@@ -1735,11 +1735,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "dance.v.03",
-    "orta": "verb.motion",
+    "ince": "event.n.01",
+    "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "dance.v.03",
-    "dayanak_tanim": "skip, leap, or move up and down or sideways",
+    "dayanak_synset": "dancing.n.01",
+    "dayanak_tanim": "taking a series of rhythmical steps (and movements) in time to music",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1753,34 +1753,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رقص المخنث والصوفي رقصاً، وهذه مرقصة الصوفية. وأرقصت المرأة ولدها ورقّصته، وقالت في ترقيصه كذا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رقص المخنث والصوفي رقصاً، وهذه\nمرقصة الصوفية. وأرقصت المرأة ولدها ورقّصته، وقالت في ترقيصه كذا."
+      },
+      {
+        "kaynak": "Mekâyîs: رَقَصَ",
+        "metin": "(رَقَصَ) الرَّاءُ وَالْقَافُ وَالصَّادُ أَصْلٌ يَدُلُّ عَلَى النَّقَزَانِ. يُقَالُ رَقَصَ يَرْقُصُ رَقْصًا. وَيُقَالُ أَرْقَصَ الْبَعِيرَ: حَمَلَهُ عَلَى الْخَبَبِ. قَالَ جَرِيرٌ:\nبِزَرُودَ أَرْقَصَتِ الْبَعِيرَ\nوَيُقَالُ رَقَصَ السَّرَابُ فِي لَمَعَانِهِ; وَرَقَصَ الشَّرَابُ: جَاشَ. وَالرَّقَّاصَةُ: لُعْبَةٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رقص البعير رقصاً ورقصاناً: خب، وأرقصه صاحبه، وأرقصوا في سيرهم. وترقصوا: ارتفعوا وانخفضوا. وقرأ ابن الزبير \" ولأرقصوا خلالكم \" وأتيته حين رقص السراب: اضطرب. قال لبيد:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رقص البعير رقصاً ورقصاناً: خب، وأرقصه صاحبه، وأرقصوا في سيرهم. وترقصوا: ارتفعوا وانخفضوا. وقرأ ابن الزبير \" ولأرقصوا خلالكم \" وأتيته حين رقص السراب: اضطرب. قال لبيد:",
         "prototipe_benzerlik": 0.387,
         "halka": "orta"
       },
       {
-        "cumle": "والنبيذ إذا جاش رقص. قال حسان:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حتى إذا رقص اللوامع بالضحى ... واجتاب أردية السراب إكامها",
+        "prototipe_benzerlik": 0.543,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والنبيذ إذا جاش رقص. قال حسان:",
         "prototipe_benzerlik": 0.642,
         "halka": "yakın"
       },
       {
-        "cumle": "والحمار يرقص إذا لاعب أتنه. وفلاة مرقصة: تحمل سالكيها على الإسراع. وفلان يرقص في كلامه: يسرع. وله رقص في القول: عجلة. ولقد سمعت رقص الناس علينا أي سوء كلامهم. قال أبو وجرة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بزجاجة رقصت بما في قعرها ... رقص القلوص براكب مستعجل",
+        "prototipe_benzerlik": 0.689,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والحمار يرقص إذا لاعب أتنه. وفلاة مرقصة: تحمل سالكيها على الإسراع. وفلان يرقص في كلامه: يسرع. وله رقص في القول: عجلة. ولقد سمعت رقص الناس علينا أي سوء كلامهم. قال أبو وجرة:",
         "prototipe_benzerlik": 0.677,
         "halka": "yakın"
       },
       {
-        "cumle": "وهو يرقص فؤاده بين جناحيه من الفزع. ورقص الطعام وارتقص: غلا سعره وقد غلط راويه بالقاف. وقيل: قد صحّ بالفاء من الرفصة وهي النوبة.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فما أردنا بها من خلة بدلاً ... ولا بها رقص الواشين يستمع",
+        "prototipe_benzerlik": 0.484,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو يرقص فؤاده بين جناحيه من الفزع. ورقص الطعام وارتقص: غلا سعره وقد غلط راويه بالقاف. وقيل: قد صحّ بالفاء من الرفصة وهي النوبة.",
         "prototipe_benzerlik": 0.188,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.473,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.516,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

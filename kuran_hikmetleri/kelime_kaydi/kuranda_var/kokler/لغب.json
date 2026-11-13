@@ -897,29 +897,56 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تجمع علي ضعف -رقةٍ أو فساد- في الأثناء: كضعف المُعْيى بذَهاب قوته، ورقة الرياح، وفساد السهم، ورقة اللحم بين الأسنان. واللُغوبُ في آية التركيب: الإعياء. وكذا هو في {وَلَا يَمَسُّنَا فِيهَا لُغُوبٌ} [فاطر: 35].",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تجمع علي ضعف -رقةٍ أو فساد- في الأثناء: كضعف المُعْيى بذَهاب قوته، ورقة الرياح، وفساد السهم، ورقة اللحم بين الأسنان. واللُغوبُ في آية التركيب: الإعياء. وكذا هو في {وَلَا يَمَسُّنَا فِيهَا لُغُوبٌ} [فاطر: 35]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تعب حتى لغب يلغب. ومسّه لغوبٌ. وأتانا ساغباً لاغباً. وتقول: تلعّبت بهم القفار، وتلغّبتهم الأسفار."
+      },
+      {
+        "kaynak": "Mekâyîs: لَغَبَ",
+        "metin": "(لَغَبَ) اللَّامُ وَالْغَيْنُ وَالْبَاءُ أَصْلٌ صَحِيحٌ وَاحِدٌ، يَدُلُّ عَلَى ضَعْفٍ وَتَعَبٍ. تَقُولُ: رَجُلٌ لَغْبٌ بَيِّنُ اللَّغَابَةِ وَاللُّغُوبَةِ. وَقَالَ الْأَصْمَعِيُّ: قَالَ أَبُو عَمْرٍو: سَمِعْتُ أَعْرَابِيَّا يَقُولُ: &quot; فُلَانٌ لَغُوبٌ جَاءَتْهُ كِتَابِي فَاحْتَقَرَهَا &quot;، فَقُلْتُ: أَتَقُولُ جَاءَتْهُ كِتَابِي؟ فَقَالَ: أَلَيْسَ صَحِيفَةً. قُلْتُ: مَا اللَّغُوبُ؟ قَالَ: الْأَحْمَقُ. وَقَالَ: تَأَبَّطَ شَرًّا فِي اللَّغْبِ:\nمَا وَلَدَتْ أُمِّي مِنَ الْقَوْمِ عَاجِزًا ... وَلَا كَانَ رِيشِي مِنْ ذُنَابَى وَلَا لَغْبِ\nقَالَ أَبُو بَكْرٍ: وَسَهْمٌ لَغْبٌ، إِذَا كَانَ قُذَذُهُ بُطْنَانًا، وَهُوَ رَدِيٌّ. قَالَ شَاعِرٌ يَصِفُ رَجُلًا طَلَبَ أَمْرًا فَلَمْ يَنَلْهُ:\nفَنَجَا وَرَاشُوهُ بِذِي لَغْبِ\nوَاللُّغُوبُ: التَّعَبُ وَالْإِعْيَاءُ وَالْمَشَقَّةُ. وَأَتَى سَاغِبًا لَاغِبًا، أَيْ جَائِعًا تَعِبًا. قَالَ اللَّهُ تَعَالَى: {وَمَا مَسَّنَا مِنْ لُغُوبٍ} [ق: 38] ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "رياحٌ لواغب، كما قيل: مرضى. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رياحٌ لواغب، كما قيل: مرضى. قال ذو الرمة:",
         "prototipe_benzerlik": 0.482,
         "halka": "orta"
       },
       {
-        "cumle": "واكفف عنا لغبك أي فاسد كلامك وقبيحه. قال الزبرقان:",
-        "prototipe_benzerlik": 0.515,
-        "halka": "yakın"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بريح الخزامى حرّكتها بسحرة ... من الليل أنفاس الرياح اللواغب",
+        "prototipe_benzerlik": 0.348,
+        "halka": "uzak"
       },
       {
-        "cumle": "من الريش اللّغب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واكفف عنا لغبك أي فاسد كلامك وقبيحه. قال الزبرقان:",
+        "prototipe_benzerlik": 0.515,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألم أك باذلاً ودّي ونصري ... وأصرف عنكم ذربي ولغبي",
+        "prototipe_benzerlik": 0.412,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "من الريش اللّغب.",
         "prototipe_benzerlik": 0.611,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.536,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.474,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -764,24 +764,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ناحت على الميّت نوحاً ونياحةً، وهي نواحة بني فلان، ونساء نوائح ونوْحٌ وأنواحٌ، واجتمعن في المناحة والمناحات والمناوح. والطّير تنوح وتتناوح.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ناحت على الميّت نوحاً ونياحةً، وهي نواحة بني فلان، ونساء نوائح ونوْحٌ وأنواحٌ، واجتمعن في المناحة والمناحات والمناوح. والطّير تنوح وتتناوح."
+      },
+      {
+        "kaynak": "Mekâyîs: نَوَحَ",
+        "metin": "(نَوَحَ) النُّونُ وَالْوَاوُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى مُقَابَلَةِ الشَّيْءِ لِلشَّيْءِ. مِنْهُ تَنَاوَحَ الْجَبَلَانِ، إِذَا تَقَابَلَا، وَتَنَاوَحَتِ الرِّيحَانِ: تَقَابَلَتَا فِي الْمَهَبِّ. وَهَذِهِ الرِّيحُ نَيِّحَةٌ لِتِلْكَ، أَيْ مُقَابِلَتُهَا. وَمِنْهُ النَّوْحُ وَالْمَنَاحَةُ، لِتَقَابُلِ النِّسَاءِ عِنْدَ الْبُكَاءِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تناوح الجبلان: تقابلا. والرّيحان يتناوحان. وهذه نيّحة تلك: مقابلتها. وقال كثيّر:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تناوح الجبلان: تقابلا. والرّيحان يتناوحان. وهذه نيّحة تلك: مقابلتها. وقال كثيّر:",
         "prototipe_benzerlik": 0.45,
         "halka": "orta"
       },
       {
-        "cumle": "الصّور: جماعة الشّجر.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أألحيُّ أم صيران دومٍ تناوحت ... بتريم قصراً واستحثّ شمالها",
+        "prototipe_benzerlik": 0.25,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الصّور: جماعة الشّجر.",
         "prototipe_benzerlik": 0.35,
-        "halka": "orta"
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.4,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.35,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["wail.v.02"],
   "muhassas_tasnif": {

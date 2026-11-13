@@ -699,29 +699,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حاك الثوب يحيكه ويحوكه.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حاك الثوب يحيكه ويحوكه."
+      },
+      {
+        "kaynak": "Mekâyîs: حَيَكَ",
+        "metin": "(حَيَكَ) الْحَاءُ وَالْيَاءُ وَالْكَافُ أَصْلٌ وَاحِدٌ، وَهُوَ جِنْسٌ مِنَ الْمَشْيِ، يُقَالُ حَاكٍ هُوَ يَحِيكَ فِي مَشْيِهِ حَيَكَانًا، إِذَا حَرَّكَ مَنْكِبَيْهِ وَجَسَدَهُ. وَمِنْهُ الْحَيْكُ، وَهُوَ أَخْذُ الْقَوْلِ فِي الْقَلْبِ. يُقَالُ مَا يَحِيكُ كَلَامُكَ فِي فُلَانٍ. وَإِنَّمَا قُلْتُ إِنَّهُ مِنْهُ، لِأَنَّ الْمَشْيَ أَخْذٌ فِي الطَّرِيقِ الَّذِي يُمْشَى فِيهِ.\nوَمِنْ هَذَا الْبَابِ: ضَرَبَهُ فَمَا أَحَاكَ فِيهِ السَّيْفُ، إِذَا لَمْ يَأْخُذْ فِيهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حاك في مشيته إذا حرك منكبيه، مشية الأفحج، وهو عيب فيه ومدح في المرأة، لدلالته على اللفف. يقال: امرأة حياكة. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حاك في مشيته إذا حرك منكبيه، مشية الأفحج، وهو عيب فيه ومدح في المرأة، لدلالته على اللفف. يقال: امرأة حياكة. قال:",
         "prototipe_benzerlik": 0.3,
         "halka": "uzak"
       },
       {
-        "cumle": "حيّاكة تمشي بعلطتين",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حيّاكة تمشي بعلطتين",
         "prototipe_benzerlik": 0.35,
-        "halka": "orta"
+        "halka": "uzak"
       },
       {
-        "cumle": "وضربه بالسيف فما حاك فيه وما أحاك إذا لم يعمل فيه، وكلمه فما حاك فيه كلامه، وفلان لا يحيك فيه النصح ولا يحيك، وما حاك في صدري منه شيء وما حك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وضربه بالسيف فما حاك فيه وما أحاك إذا لم يعمل فيه، وكلمه فما حاك فيه كلامه، وفلان لا يحيك فيه النصح ولا يحيك، وما حاك في صدري منه شيء وما حك.",
         "prototipe_benzerlik": 0.409,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.353,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

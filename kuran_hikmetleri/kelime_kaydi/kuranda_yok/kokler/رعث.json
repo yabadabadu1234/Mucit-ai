@@ -696,24 +696,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "في أذنيه رعثان: قرطان، ولها رعث ورعاث، وما تذبذب من قرط أو قلادة فهو رعثة ورعثة. وصبيّ مرعث مقرّط. قال رؤبة: رقراقة كالرشأ المرعّث",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "في أذنيه رعثان: قرطان، ولها رعث ورعاث، وما تذبذب من قرط أو قلادة فهو رعثة ورعثة. وصبيّ مرعث مقرّط. قال رؤبة:\nرقراقة كالرشأ المرعّث"
+      },
+      {
+        "kaynak": "Mekâyîs: رَعَثَ",
+        "metin": "(رَعَثَ) الرَّاءُ وَالْعَيْنُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ تَزَيُّنُ شَيْءٍ بِشَيْءٍ. فَالرَّعَثُ: الْعِهْنُ مِنَ الصُّوفِ، وَهُوَ يُزَيَّنُ بِهِ. وَالرِّعَاثُ: الْقِرَطَةُ، وَاحِدَتُهَا رَعْثَةٌ. وَفِي كِتَابِ الْخَلِيلِ: الرِّعَاثُ: ضَرْبٌ مِنَ الْخَرَزِ وَالْحَلْيِ. قَالَ:\nوَمَا حُلِّيَتْ إِلَّا الرِّعَاثَ الْمُعَقَّدَا\nوَمِمَّا شُبِّهَ بِهَذَا وَحُمِلَ عَلَيْهِ: رَعْثَةُ الدِّيكِ، وَهِيَ عُثْنُونُهُ، كَأَنَّهَا شُبِّهَتْ بِرَعَثِ الْعِهْنِ. قَالَ:\nمِنْ صَوْتِ ذِي رَُعَُثَاثٍ سَاكِنِ الدَّارِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "صاح ذو الرعثات أي الديك، ورعثتاه النائستان تحت منقاره. قال الأخطل:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صاح ذو الرعثات أي الديك، ورعثتاه النائستان تحت منقاره. قال الأخطل:",
         "prototipe_benzerlik": 0.691,
         "halka": "yakın"
       },
       {
-        "cumle": "وزين الهوادج بالرعث وهي الذباب من العهن. وتفتح رعث الرمان وهو زهره الذي يسمى الجلنار. وشاة رعثاء: لها تحت أذنيها زنمتان.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ماذا يؤرّقني قدما ويسهرني ... من صوت ذي رعثات ساكن الدار",
+        "prototipe_benzerlik": 0.722,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وزين الهوادج بالرعث وهي الذباب من العهن. وتفتح رعث الرمان وهو زهره الذي يسمى الجلنار. وشاة رعثاء: لها تحت أذنيها زنمتان.",
         "prototipe_benzerlik": 0.661,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.676,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.691,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

@@ -2262,8 +2262,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "taste.n.03",
-    "dayanak_tanim": "delicate discrimination (especially of aesthetic values)",
+    "dayanak_synset": "property.n.04",
+    "dayanak_tanim": "a construct whereby objects or individuals can be distinguished",
     "synset_sayisi": 45
   },
   "ses_mana_tasnif": {
@@ -2282,19 +2282,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "افتراقُ ما هو متجمعٌ أو تباعدُ بعضه عنه. كتنحي العصابة من الناس عن سائرهم، وكانقسام الشيء \" {مَا كَانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلَى مَا أَنْتُمْ عَلَيهِ حَتَّى يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ} [آل عمران: 179، وكذا ما في الانفال: 37] [انظر قر 4/ 289",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "افتراقُ ما هو متجمعٌ أو تباعدُ بعضه عنه. كتنحي العصابة من الناس عن سائرهم، وكانقسام الشيء \" {مَا كَانَ اللَّهُ لِيَذَرَ الْمُؤْمِنِينَ عَلَى مَا أَنْتُمْ عَلَيهِ حَتَّى يَمِيزَ الْخَبِيثَ مِنَ الطَّيِّبِ} [آل عمران: 179، وكذا ما في الانفال: 37] [انظر قر 4/ 289] {تَكَادُ تَمَيَّزُ مِنَ الْغَيظِ} [الملك: 8] يعني تتقطع وينفصل بعضها من بعض [قر 18/ 213]. ومن ذلك استعمل في مفارقة المكان \"ماز الرجل: انتقل من مكان إلى مكان \" {وَامْتَازُوا الْيَوْمَ أَيُّهَا الْمُجْرِمُونَ} [يس: 59] أي انفرِدوا عن المؤمنين، لأن المحشر جمع البرَّ والفاجر، فأُمِرَ المجرمون بأن يكونوا على حِدَةٍ من المؤمنين. وذلك توطئة لتوجيه التوبيخ والتقريع إليهم كفي في الآية التالية. [ينظر بحر 7/ 327]. وهذا قبل المصير إلى جهنم ما داموا (مجرمين). (4/2067)"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل مميّز وميّاز. ومازه منه، وميّزوه، وانماز وامتاز واستماز وتميّز. قال الأخطل:\nفإن لم تغيّرها قريش بملكها ... يكن عن قريش مستماز ومزحل\nومايزت بين الشيئين. وتمايز القوم: تفرّقوا."
+      },
+      {
+        "kaynak": "Mekâyîs: مَيَزَ",
+        "metin": "(مَيَزَ) الْمِيمُ وَالْيَاءُ وَالزَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَزَبُّلِ شَيْءٍ مِنْ شَيْءٍ وَتَزْيِيلِهِ. وَمَيَّزْتُهُ تَمْيِيزًا وَمِزْتُهُ مَيْزًا. وَامْتَازُوا: تَمَيَّزَ بَعْضُهُمْ مِنْ بَعْضٍ. وَيَكَادُ يَتَمَيَّزُ غَيْظًا، أَيْ يَتَقَطَّعُ. وَانْمَازَ الشَّيْءُ: انْفَصَلَ عَنِ الشَّيْءِ. قَالَ يَصِفُ حَيَّةً:\nقَرَى السُّمَّ حَتَّى انْمَازَ فَرْوَةُ رَأْسِهِ ... عَنِ الْعَظْمِ صِلٌّ فَاتِكُ اللَّسْعِ مَارِدُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "\" تكاد تميّز من الغيظ \".",
-        "prototipe_benzerlik": 0.328,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "\" تكاد تميّز من الغيظ \".",
+        "prototipe_benzerlik": 0.418,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.328,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.418,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "advocate.n.01",

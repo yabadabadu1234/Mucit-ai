@@ -1317,34 +1317,64 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ثوب منسوج بالذّهب. ووضع رمحه على منسج الفرس وهو منتهى المعرفة.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ثوب منسوج بالذّهب. ووضع رمحه على منسج الفرس وهو منتهى المعرفة."
+      },
+      {
+        "kaynak": "Mekâyîs: نَسَجَ",
+        "metin": "(نَسَجَ) النُّونُ وَالسِّينُ وَالْجِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى وَصْلِ شَيْءٍ بِشَيْءٍ فِي أَدْنَى عَرْضٍ. وَنَسَجَ الثَّوْبَ يَنْسُِجُهُ. وَضَرَبَتِ الرِّيحُ الْمَاءَ فَانْتَسَجَتْ لَهُ الطَّرَائِقَ. وَالشَّاعِرُ يَنْسُِجُ الشِّعْرَ. وَقَالَ قَوْمٌ: بَلْ قِيَاسُ الْبَابِ الِاضْطِرَابُ دُونَ مَا ذَكَرْنَاهُ. وَالنَّاقَةُ النَّسُوجُ: [الَّتِي] يَضْطَرِبُ حِمْلُهَا عَلَيْهَا. وَكَذَلِكَ اشْتُقَّ مَِنْسِجُ الْفَرَسِ، لِأَنَّهُ يَتَحَرَّكُ أَبَدًا. وَالْمَِنْسِجُ: كَاثِبَةُ الْفَرَسِ.\nوَمِنَ الْبَابِ: هُوَ نَسِيجُ وَحْدِهِ، لِانْفِرَادِهِ بِخِصَالِهِ. قَالَ ابْنُ قُتَيْبَةَ: وَذَلِكَ أَنَّ الثَّوْبَ الرَّفِيعَ النَّفِيسَ لَا يُنْسَجُ عَلَى مِنْوَالِهِ غَيْرُهُ، وَإِذَا لَمْ يَكُنْ رَفِيعًا عُمِلَ عَلَى مِنْوَالِهِ سَدَى عِدَّةِ أَثْوَابٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "الريح تنسج رسم الدار والتراب والرمل والماء إذا ضربته فانتسجت له طرائق كالحبك. والرّيحان تنتسجان الرسم. قال الطرماح:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "الريح تنسج رسم الدار والتراب والرمل والماء إذا ضربته فانتسجت له طرائق كالحبك. والرّيحان تنتسجان الرسم. قال الطرماح:",
         "prototipe_benzerlik": 0.434,
         "halka": "orta"
       },
       {
-        "cumle": "وانتسجت العنكبوت نسجها. قال ذو الرمة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تعاوره ريحان تنتسجانه ... كما اختلفت كفّا مفيضٍ بأقدح",
+        "prototipe_benzerlik": 0.574,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وانتسجت العنكبوت نسجها. قال ذو الرمة:",
         "prototipe_benzerlik": 0.426,
         "halka": "orta"
       },
       {
-        "cumle": "والشّاعر ينسج الشعر: يحوكه. والكذّاب ينسج الزور. وناقة وسوجٌ نسوج، وهي",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وجاءت بنسجٍ من صناعٍ ضعيفةٍ ... تنوس كأخلاق الشفوف ذعالبه",
+        "prototipe_benzerlik": 0.461,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "هي انتسجته وحدها أو تعاونت ... على نسجه بين المثاب عناكبه",
+        "prototipe_benzerlik": 0.433,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والشّاعر ينسج الشعر: يحوكه. والكذّاب ينسج الزور. وناقة وسوجٌ نسوج، وهي",
         "prototipe_benzerlik": 0.5,
         "halka": "orta"
       },
       {
-        "cumle": "تنسج في سيرها إذا أسرعت نقل قوائمها. وهو نسيج وحده.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تنسج في سيرها إذا أسرعت نقل قوائمها. وهو نسيج وحده.",
         "prototipe_benzerlik": 0.425,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.446,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.465,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["artifact.n.01", "body_part.n.01", "substance.n.01", "textile.a.01", "weave.v.04"],
   "muhassas_tasnif": {

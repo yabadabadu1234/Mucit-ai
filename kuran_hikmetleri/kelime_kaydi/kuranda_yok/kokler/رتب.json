@@ -2628,8 +2628,8 @@
     "ince": "cognition.n.01",
     "orta": "noun.cognition",
     "ust": "zihin ve ilim",
-    "dayanak_synset": "classification.n.03",
-    "dayanak_tanim": "the basic cognitive process of arranging into classes or categories",
+    "dayanak_synset": "category.n.02",
+    "dayanak_tanim": "a general concept that marks divisions or coordinations in a conceptual scheme",
     "synset_sayisi": 51
   },
   "ses_mana_tasnif": {
@@ -2643,19 +2643,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "رتب الشيء: ثبت ودام. وله عز راتب وترتب. قال الكميت: وعمّى عمرو بن الخثارم قوله ... بني من يفاع المجد ما هو ترتب كان عمه نسابة فيقول: قوله يرفعني. والصبي يترب الكعب: يقيمه. وقد رتب الكعب رتوباً. وتقول: رتب فلان رتوب الكعب، في المقام الصعب. ورتب في الصلاة: انتصب",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رتب الشيء: ثبت ودام. وله عز راتب وترتب. قال الكميت:\nوعمّى عمرو بن الخثارم قوله ... بني من يفاع المجد ما هو ترتب\nكان عمه نسابة فيقول: قوله يرفعني. والصبي يترب الكعب: يقيمه. وقد رتب الكعب رتوباً.\nوتقول: رتب فلان رتوب الكعب، في المقام الصعب. ورتب في الصلاة: انتصب قائماً. ورتب في الأمر حتى كفاه. ورقي في رُتب الدرج ومراتبها. ورتّب الأشياء ورتّب الطلائع في المراتب والمراقب وهي مواضع الرقباء في الجبال. قال الشماخ:\nومرتبة لا يستقال بها الردى ... تلافى بها حلمي عن الجهل حاجز\nوما في عيشه رتب: شدة. وما في أمره رتب ولا عتب إذا كان سهلاً مستقيماً."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "لفلان مرتبة عند السلطان ومنزلة. وهو من أهل المراتب، وهو في أعلى الرتب.",
-        "prototipe_benzerlik": 0.194,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "لفلان مرتبة عند السلطان ومنزلة. وهو من أهل المراتب، وهو في أعلى الرتب.",
+        "prototipe_benzerlik": 0.358,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.194,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.358,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

@@ -1187,19 +1187,24 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "كافحه: لاقاه مواجهة عن مفاجأة، ولقيته كفاحاً، وكافحوهم في الحرب: ضاربوهم تلقاء الوجوه، وتكافحوا، وتكافحت الكباش، وكافح بعضها بعضاً. قال الأغلب: كبش لقرنيها كسور ناطح ... غادرها عضباء لا تكافح وكفحها وكافحها: قبّلها غفلة وجاها. وفي حديث أبي هريرة: أكفحها وأنا ص",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كافحه: لاقاه مواجهة عن مفاجأة، ولقيته كفاحاً، وكافحوهم في الحرب: ضاربوهم تلقاء الوجوه، وتكافحوا، وتكافحت الكباش، وكافح بعضها بعضاً. قال الأغلب:\nكبش لقرنيها كسور ناطح ... غادرها عضباء لا تكافح\nوكفحها وكافحها: قبّلها غفلة وجاها. وفي حديث أبي هريرة: أكفحها وأنا صائم، وهو كفيحها: ضجيعها. قال عمير بن طارق اليربوعيّ:\nمناك الإله إن كرهت جماعنا ... بمثل أبي قرط إذا الليل أظلما\nيسوق الفراع لا تحسّين غيره ... كفيحاً ولا جاراً كريماً ولا ابنما\nجمع: فرعٍ وكان يتصدّق به على أخسّ الناس فكانوا يتعايرون به. وكفحت الدّابة. وأكفحتها: تلقيت فاهاً باللحام."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "تكافحت الأمواج، وبحر متكافح الأمواج. وكافحته السموم. وكافح الأمر: باشره بنفسه. وكافحه بما ساءه. وأصابه من السموم كفح، ومن الحرور لفح.",
-        "prototipe_benzerlik": 0.922,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تكافحت الأمواج، وبحر متكافح الأمواج. وكافحته السموم. وكافح الأمر: باشره بنفسه. وكافحه بما ساءه. وأصابه من السموم كفح، ومن الحرور لفح.",
+        "prototipe_benzerlik": 0.889,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.922,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.889,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

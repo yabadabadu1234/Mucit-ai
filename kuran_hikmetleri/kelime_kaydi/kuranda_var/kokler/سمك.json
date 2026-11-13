@@ -1444,11 +1444,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "solid.n.01",
-    "orta": "noun.food",
+    "ince": "whole.n.02",
+    "orta": "noun.animal",
     "ust": "canlı ve beden",
-    "dayanak_synset": "fish.n.02",
-    "dayanak_tanim": "the flesh of fish used as food",
+    "dayanak_synset": "fish.n.01",
+    "dayanak_tanim": "any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills",
     "synset_sayisi": 6
   },
   "ses_mana_tasnif": {
@@ -1467,24 +1467,50 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "ارتفاع الشيء إلى أعلى ممتسَكًا هناك بدعم لطيف: كسقف البيت مرفوعًا بلطف على فراغ، أو لأن عود خشب في وسط الفراغ يقيمه، وكذلك السنام مرتفع بما تحته وفيه من شحم، والسَمَك يعوم في الماء (يرتفع) أي لا يرسب ثقلًا كالحجارة. {رَفَعَ سَمْكَهَا}: أعْلَى سقفَها في الهواء.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "ارتفاع الشيء إلى أعلى ممتسَكًا هناك بدعم لطيف: كسقف البيت مرفوعًا بلطف على فراغ، أو لأن عود خشب في وسط الفراغ يقيمه، وكذلك السنام مرتفع بما تحته وفيه من شحم، والسَمَك يعوم في الماء (يرتفع) أي لا يرسب ثقلًا كالحجارة. {رَفَعَ سَمْكَهَا}: أعْلَى سقفَها في الهواء. يقال: سَمَكت الشيء: رفعته في الهواء، وسَمَك الشيءُ: ارتفع. قال الفراء: كل شيء حمل شيئًا من البناء وغيره فهو سَمْك - بالفتح. والمسموكات: السماوات [قر 19/ 203]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سمك الله السماء و\" رفع سمكها \". وهو رب المسموكات السبع. واطب لي سماكاً أسمك به الحائط والسقف. وسنام سامك تامك: مرتفع."
+      },
+      {
+        "kaynak": "Mekâyîs: سَمُكَ",
+        "metin": "(سَمُكَ) السِّينُ وَالْمِيمُ وَالْكَافُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الْعُلُوِّ. يُقَالُ سَمَكَ، إِذَا ارْتَفَعَ. وَالْمَسْمُوكَاتُ: السَّمَاوَاتُ. وَيُقَالُ سَمَكَ فِي الدَّرَجِ. وَاسْمُكْ، أَيِ اعْلُ. وَسَنَامٌ سَامَكٌ، أَيْ عَالٍ. وَالْمِسْمَاكُ: مَا سَمَكْتَ بِهِ الْبَيْتَ. قَالَ ذُو الرُّمَّةِ:\nكَأَنَّ رِجْلَيْهِ مِسْمَاكَانِ مِنْ عَشَرٍ ... سَقْبَانِ لَمْ يَتَقَشَّرْ عَنْهُمَا النَّجَبُ\nوَالسِّمَاكُ نَجْمٌ. وَمِمَّا شَذَّ عَنِ الْبَابِ وَبَايَنَ الْأَصْلَ: السَّمَكُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "بعير طويل السمك، وإبل طوال السمك. قال ذو الرمة:",
-        "prototipe_benzerlik": 0.349,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بعير طويل السمك، وإبل طوال السمك. قال ذو الرمة:",
+        "prototipe_benzerlik": 0.476,
         "halka": "orta"
       },
       {
-        "cumle": "وفرس مسموك الجوانح: وثيقها. قال مكحول ابن عبد الله:",
-        "prototipe_benzerlik": 0.182,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نجائب من نتاج بني غرير ... طوال السمك مفرعة نبالا",
+        "prototipe_benzerlik": 0.414,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفرس مسموك الجوانح: وثيقها. قال مكحول ابن عبد الله:",
+        "prototipe_benzerlik": 0.358,
         "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ذريني وعدي من عيالك شطبة ... عنوداً ومسموك الجوانح أقودا",
+        "prototipe_benzerlik": 0.435,
+        "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.266,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.421,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["consistency.n.01", "division.n.07", "food.n.02", "living_thing.n.01", "natural_object.n.01", "piscine.a.01"],
   "muhassas_tasnif": {

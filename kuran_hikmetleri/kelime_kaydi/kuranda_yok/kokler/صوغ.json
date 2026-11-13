@@ -811,34 +811,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "هو يحسن الصوغ والصياغة، ولفلانة صوغ من الذهب والفضة. قال ابن مقبل: تباهي بصوغ من كروم وفضة ... معطفة يكسونها قصباً خدلاً",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "هو يحسن الصوغ والصياغة، ولفلانة صوغ من الذهب والفضة. قال ابن مقبل:\nتباهي بصوغ من كروم وفضة ... معطفة يكسونها قصباً خدلاً"
+      },
+      {
+        "kaynak": "Mekâyîs: صَوَغَ",
+        "metin": "(صَوَغَ) الصَّادُ وَالْوَاوُ وَالْغَيْنُ أَصْلٌ صَحِيحٌ، وَهُوَ تَهْيِئَةٌ عَلَى شَيْءٍ عَلَى مِثَالٍ مُسْتَقِيمٍ. مِنْ ذَلِكَ قَوْلُهُمْ: صَاغَ الْحَلْيَ يَصُوغُهُ صَوْغًا. وَهَمَا صَوْغَانِ، إِذَا كَانَ\nكُلُّ وَاحِدٍ مِنْهُمَا عَلَى هَيْئَةِ الْآخَرِ. وَيُقَالُ لِلْكَذَّابِ: صَاغَ الْكَذِبَ صَوْغًا، إِذَا اخْتَلَقَهُ. وَعَلَى هَذَا تَفْسِيرِ الْحَدِيثِ: &quot; «كِذْبَةٌ كَذَبَتْهَا الصَّوَّاغُونَ» &quot;، أَرَادَ الَّذِينَ يَصُوغُونَ الْأَحَادِيثَ وَيَخْتَلِقُونَهَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "فلان حسن الصيغة وهي الخلقة، وصاغه الله تعالى صيغة حسنة. وفلان من صيغة كريمة: من أصل كريم: وصاغ فلان الكلام:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان حسن الصيغة وهي الخلقة، وصاغه الله تعالى صيغة حسنة. وفلان من صيغة كريمة: من أصل كريم: وصاغ فلان الكلام:",
         "prototipe_benzerlik": 0.309,
         "halka": "uzak"
       },
       {
-        "cumle": "حبره، وهو من صاغه الكلام. وصاغ كذباً وزوراً، وهو يصوغ الأحاديث: يخلقها. وقيل لأبي هريرة رضي الله تعالى عنه: خرج الدجال، فقال: كذبة كذبها الصواغوان. وعنده صيغة من السهام. ورميتهم بستين سهماً صيغة أي من صنعة رجل واحد. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حبره، وهو من صاغه الكلام. وصاغ كذباً وزوراً، وهو يصوغ الأحاديث: يخلقها. وقيل لأبي هريرة رضي الله تعالى عنه: خرج الدجال، فقال: كذبة كذبها الصواغوان. وعنده صيغة من السهام. ورميتهم بستين سهماً صيغة أي من صنعة رجل واحد. قال:",
         "prototipe_benzerlik": 0.265,
         "halka": "uzak"
       },
       {
-        "cumle": "وصيغة قد راشها وركباً",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وصيغة قد راشها وركباً",
         "prototipe_benzerlik": 0.252,
         "halka": "uzak"
       },
       {
-        "cumle": "وهما صوغان: سيان. وهو صوغه وهي صوغه وصوغته: مثله في الميلاد. وهذا صوغ هذا إذا كان على قدره.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهما صوغان: سيان. وهو صوغه وهي صوغه وصوغته: مثله في الميلاد. وهذا صوغ هذا إذا كان على قدره.",
         "prototipe_benzerlik": 0.529,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.339,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "artifact.n.01",

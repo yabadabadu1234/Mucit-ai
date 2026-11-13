@@ -1920,11 +1920,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "trait.n.01",
-    "orta": "noun.attribute",
-    "ust": "hâl ve vasıf",
-    "dayanak_synset": "uncommunicativeness.n.01",
-    "dayanak_tanim": "the trait of being uncommunicative",
+    "ince": "close_up.v.04",
+    "orta": "verb.communication",
+    "ust": "söz ve haber",
+    "dayanak_synset": "close_up.v.04",
+    "dayanak_tanim": "refuse to talk or stop talking; fall silent",
     "synset_sayisi": 8
   },
   "ses_mana_tasnif": {
@@ -1943,24 +1943,44 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "توقُّف ما يجري في الأثناء أو منها سكونًا أو انقطاعًا: كسكوت الحر وركود الريح (كما قالوا سَكَرت الريح: سَكَنت بعد الهبوب، من السَكْر، (كما يقال: الجو مكتوم، وكانقطاع النفس والكلام). ومنه قوله تعالى: {وَلَمَّا سَكَتَ عَنْ مُوسَى الْغَضَبُ}، أي احتبس وتوقف هبوبه ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "توقُّف ما يجري في الأثناء أو منها سكونًا أو انقطاعًا: كسكوت الحر وركود الريح (كما قالوا سَكَرت الريح: سَكَنت بعد الهبوب، من السَكْر، (كما يقال: الجو مكتوم، وكانقطاع النفس والكلام). ومنه قوله تعالى: {وَلَمَّا سَكَتَ عَنْ مُوسَى الْغَضَبُ}، أي احتبس وتوقف هبوبه عليه. وفسَّرها [قر 7/ 292] بسَكَن. وعَرَضَ تأويلًا بأن في الكلام قلبًا وأن الأصل سكت موسى عن الغضب أي توقف وهدأ. والعبارة القرآنية أبلغ بما لا حدّ له."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "رجل سكوت وساكوت وسكيت، وبه سكات إذا كان طويل السكوت من علة. وتكلم فلان ثم سكت فإذا أفحم قيل: أسكت. وللحبلى صرخة ثم سكتة. وأسكت الناطق وسكته. وأسكت الصبي بسكتة وهي ما يسكت به. ورمى خصمه بسكاتة: بما أسكته عنه. وهذه هاء السكت."
+      },
+      {
+        "kaynak": "Mekâyîs: سَكَتَ",
+        "metin": "(سَكَتَ) السِّينُ وَالْكَافُ وَالتَّاءُ يَدُلُّ عَلَى خِلَافِ الْكَلَامِ. تَقُولُ: سَكَتَ يَسْكُتُ سُكُوتًا، وَرَجُلٌ سِكِّيتٌ. وَرَمَاهُ بِسُكَاتَةٍ، أَيْ بِمَا أَسْكَتَهُ. وَسَكَتَ الْغَضَبُ، بِمَعْنَى سَكَنَ. وَالسُّكْتَةُ: مَا أَسْكَتَّ بِهِ الصَّبِيَّ. فَأَمَّا السُّكَيْتُ فَإِنَّهُ مِنَ الْخَيْلِ الْعَاشِرُ عِنْدَ جَرْيِهَا فِي السِّبَاقِ. وَيُمْكِنُ أَنْ يَكُونَ سُمِّي سُكَيْتًا لِأَنَّ صَاحِبَهُ يَسْكُتُ عَنِ الِافْتِخَارِ، كَمَا يُقَالُ أَجَرَّهُ كَذَا، إِذَا مَنَعَهُ مِنَ الِافْتِخَارِ، وَكَأَنَّهُ جَرَّ لِسَانَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ضربته حتى أسكت حركته. وسكت عنه الغضب والحزن وكل ماله أثر ناطق. وحية سكات: لا يشعر به الملسوع حتى يلسعه. قال:",
-        "prototipe_benzerlik": 0.376,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضربته حتى أسكت حركته. وسكت عنه الغضب والحزن وكل ماله أثر ناطق. وحية سكات: لا يشعر به الملسوع حتى يلسعه. قال:",
+        "prototipe_benzerlik": 0.539,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وما تزدري من حية جبلية ... سكات إذا ما عض ليس بأدردا",
+        "prototipe_benzerlik": 0.516,
         "halka": "orta"
       },
       {
-        "cumle": "وفلان سكيت الحلبة: للمتخلف في صناعته.",
-        "prototipe_benzerlik": 0.209,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفلان سكيت الحلبة: للمتخلف في صناعته.",
+        "prototipe_benzerlik": 0.16,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.293,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.405,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "abridge.v.01",

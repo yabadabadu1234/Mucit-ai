@@ -710,24 +710,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "حلج القطن على المحلجة بالمحلاج.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "حلج القطن على المحلجة بالمحلاج."
+      },
+      {
+        "kaynak": "Mekâyîs: حَلَجَ",
+        "metin": "(حَلَجَ) الْحَاءُ وَاللَّامُ وَالْجِيمُ لَيْسَ عِنْدِي أَصْلًا. يُقَالُ حَلَجَ الْقُطْنَ. وَحَلَجَ الْخُبْزَةَ: دَوَّرَهَا. وَحَلَجَ الْقَوْمُ يَحْلِجُونَ لَيْلَتَهُمْ، إِذَا سَارُوهَا. وَكُلُّ هَذَا مِمَّا يُنْظَرُ فِيهِ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "حلج الخبزة بالمحلاج: دورها بالمرقاق. وبات القوم يحلجون ليلتهم أي يسيرونها. وبيننا وبينهم حلجة صالحة. وحلج الغيم: مطر. وحلجه بالعصى: ضربه. وحلج التلبينة أو الهريسة: سوطها. وما تحلج في صدري منه شيء وما تخلج، أي ما شككت فيه. وكأنما ينفخ في الحملاج وهو المنفاخ، كأنه يحلج النار. وتقول: لا يستوي صاحب الحم",
-        "prototipe_benzerlik": 0.116,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حلج الخبزة بالمحلاج: دورها بالمرقاق. وبات القوم يحلجون ليلتهم أي يسيرونها. وبيننا وبينهم حلجة صالحة. وحلج الغيم: مطر. وحلجه بالعصى: ضربه. وحلج التلبينة أو الهريسة: سوطها. وما تحلج في صدري منه شيء وما تخلج، أي ما شككت فيه. وكأنما ينفخ في الحملاج وهو المنفاخ، كأنه يحلج النار. وتقول: لا يستوي صاحب الحملاج، وصاحب المحلاج، ويستعار لقرن الثور.",
+        "prototipe_benzerlik": 0.008,
         "halka": "uzak"
       },
       {
-        "cumle": "وحملج الحبل: فتله.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قال الأعشى:",
+        "prototipe_benzerlik": 0.163,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ينفض المرد والكباث بحملا ... ج لطيف في جانبيه انفراق",
+        "prototipe_benzerlik": 0.266,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وحملج الحبل: فتله.",
         "prototipe_benzerlik": 0.394,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.255,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.208,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

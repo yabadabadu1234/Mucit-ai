@@ -1098,29 +1098,68 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "فَتْح أو شَقٌّ في جِرْم غير صُلب (1): كشج الرأس والبحر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "فَتْح أو شَقٌّ في جِرْم غير صُلب (1): كشج الرأس والبحر."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شجّه في رأسه أو وجهه شجة منكرة. والشجاج عشر. وبينهم شجاج أي مشاجة قد شج بعضهم بعضاً. ورجل أشج بين الشجج: به شجة."
+      },
+      {
+        "kaynak": "Mekâyîs: شَجَّ",
+        "metin": "(شَجَّ) الشِّينُ وَالْجِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى صَدْعِ الشَّيْءِ. يُقَالُ شَجَجْتُ رَأْسَهُ أَشُجُّهُ شَجًّا. وَكَانَ بَيْنَ الْقَوْمِ شِجَاجٌ وَمُشَاجَّةٌ، إِذَا شَجَّ بَعْضُهُمْ بَعْضًا. وَالشَّجَجُ: أَثَرُ الشَّجَّةِ فِي الْجَبِينِ ; وَالنَّعْتُ مِنْهُ أَشَجُّ. وَشَجَجْتُ الْمَفَازَةَ شَجًّا، إِذَا صَدَعْتَهَا بِالسَّيْرِ. وَشَجَجْتُ الشَّرَابَ بِالْمِزَاجِ. وَشَجَّتِ السَّفِينَةُ الْبَحْرَ. وَالشَّجِيجُ: الْمَشْجُوجُ. وَالْوَتِدُ شَجِيجٌ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "ما بالدار إلا نؤيٌ وشجيج القذال ومشجج وهو الوتد. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ما بالدار إلا نؤيٌ وشجيج القذال ومشجج وهو الوتد. قال:",
         "prototipe_benzerlik": 0.332,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أقوين إلا شجيجاً لا انتصار به ... بان الذين أصابوه ولم يبن",
+        "prototipe_benzerlik": 0.36,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشد سيبويه:",
+        "prototipe_benzerlik": 0.408,
         "halka": "orta"
       },
       {
-        "cumle": "وشج المفازة: قطعها. قال زهير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومشجج أما سواء قذاله ... فبدا وغيب ساره المعزاء",
+        "prototipe_benzerlik": 0.375,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشج المفازة: قطعها. قال زهير:",
         "prototipe_benzerlik": 0.382,
         "halka": "orta"
       },
       {
-        "cumle": "وشجت السفينة البحر. وشج الشراب بالمزاج. وفلان يشج مرة ويأسو مرة إذا أخطأ وأصاب.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "يشج بها الأماعز وهي تهوي ... هويّ الدلو أسلمها الرشاء",
+        "prototipe_benzerlik": 0.329,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشجت السفينة البحر. وشج الشراب بالمزاج. وفلان يشج مرة ويأسو مرة إذا أخطأ وأصاب.",
         "prototipe_benzerlik": 0.455,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.39,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.377,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

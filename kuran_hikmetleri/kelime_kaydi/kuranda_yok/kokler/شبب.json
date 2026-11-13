@@ -1860,8 +1860,8 @@
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "girl.n.01",
-    "dayanak_tanim": "a young woman",
+    "dayanak_synset": "boy.n.02",
+    "dayanak_tanim": "a friendly informal reference to a grown man",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -1880,66 +1880,136 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "تجمُّع قوة الشيء وحدّتِه (1). كتمام بدن الشابِّ والشبَبِ وقوتهما، وكاشتعال النار بعد بدئها، فذلك غاية حدّتها وقوتها. والشَبّ (الحجرَ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "تجمُّع قوة الشيء وحدّتِه (1). كتمام بدن الشابِّ والشبَبِ وقوتهما، وكاشتعال النار بعد بدئها، فذلك غاية حدّتها وقوتها. والشَبّ (الحجرَ"
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "شببت النار: رفعتها. وشبّ الصبي شباباً، وقوم شبّان وشباب وشببة، وسقى الله تعالى عصر الشبيبة وعصور الشبائب، وتقول: كان عصر شبابي، أحلى من العسل الشبابي؛ منسوب إلى بني شبابة من أهل الطائف. وأشبه الله تعالى. وشب الفرس شباباً وشبيباً. وتقول: المرء في شبابه، كالمهر في شبابه."
+      },
+      {
+        "kaynak": "Mekâyîs: شَبَّ",
+        "metin": "(شَبَّ) الشِّينُ وَالْبَاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى نَمَاءِ الشَّيْءِ، وَقُوَّتِهِ فِي حَرَارَةٍ تَعْتَرِيهِ. مِنْ ذَلِكَ شَبَبْتُ النَّارَ أَشُبُّهَا شَبًّا وَشُبُوبًا. وَهُوَ مَصْدَرُ شُبَّتْ. وَكَذَلِكَ شَبَبْتُ الْحَرْبَ، إِذَا أَوْقَدْتَهَا. فَالْأَصْلُ هَذَا. ثُمَّ اشْتُقَّ مِنْهُ الشَّبَابُ، الَّذِي هُوَ خِلَافُ الشَّيْبِ. يُقَالُ: شَبَّ الْغُلَامُ شَبِيبًا وَشَبَابًا، وَأَشَبَّ اللَّهُ قَرْنَهُ وَالشَّبَابُ أَيْضًا: جَمْعُ شَابٍّ، وَذَلِكَ هُوَ النَّمَاءُ وَالزِّيَادَةُ بِقُوَّةِ جِسْمِهِ وَحَرَارَتِهِ. ثُمَّ يُقَالُ فَرْقًا: شَبَّ الْفَرَسُ شِبَابًا، بِكَسْرِ الشِّينِ، وَذَلِكَ إِذَا نَشِطَ وَرَفَعَ يَدَيْهِ جَمِيعًا. وَيَقُولُونَ: بَرِئْتُ إِلَيْكَ مِنْ شِبَابِهِ وَعِضَاضِهِ. وَالشَّبِيبَةُ: الشَّبَابُ. وَمِنَ الْبَابِ: الشَّبَبُ: الْفَتِيُّ مِنْ بَقَرِ الْوَحْشِ. قَالَ ذُو الرُّمَّةِ:\nنَاشِطٌ شَبَبٌ\nوَمِنْ هَذَا الْقِيَاسِ: أُشِبَّ لَهُ الشَّيْءُ، إِذَا قُدِّرَ وَأُتِيحَ ; وَكَأَنَّهُ رُفِعَ وَأُسْمِيَ لَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "والكناية: شبت الحرب بينهم. وسمعت من يحي النار وهو يقول:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "والكناية: شبت الحرب بينهم. وسمعت من يحي النار وهو يقول:",
         "prototipe_benzerlik": 0.492,
         "halka": "orta"
       },
       {
-        "cumle": "وهو كقولهم: أوقد بالنميمة ناراً. قال عمر بن أبي ربيعة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "تشبّبي تشبّب النميمة ... تسعى بها زهراً إلى تميمه",
+        "prototipe_benzerlik": 0.36,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وهو كقولهم: أوقد بالنميمة ناراً. قال عمر بن أبي ربيعة:",
         "prototipe_benzerlik": 0.458,
         "halka": "orta"
       },
       {
-        "cumle": "وشبّ الخمار وجهها، وهو شبوب لوجهها. والجوهر يشب بعضه بعضاً. و\" لبس رسول الله صلى الله تعالى عليه وسلم مدرعة سوداء فقالت عائشة رضي الله تعالى عنها: ما أحسنها عليك يشب سوادها بياضك وبياضك سوادها \" أي يرفعه ويزيده. ورجل مشبوب: حسن الوجه. قال العجاج:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ليس كالعهد إذ علمت ولكن ... أوقد الناس بالنميمة ناراً",
+        "prototipe_benzerlik": 0.486,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشبّ الخمار وجهها، وهو شبوب لوجهها. والجوهر يشب بعضه بعضاً. و\" لبس رسول الله صلى الله تعالى عليه وسلم مدرعة سوداء فقالت عائشة رضي الله تعالى عنها: ما أحسنها عليك يشب سوادها بياضك وبياضك سوادها \" أي يرفعه ويزيده. ورجل مشبوب: حسن الوجه. قال العجاج:",
         "prototipe_benzerlik": 0.119,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن قريش كل مشبوب أغر",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن قريش كل مشبوب أغر",
         "prototipe_benzerlik": 0.435,
         "halka": "orta"
       },
       {
-        "cumle": "وطلعت المشبوبتان أي الزهرتان وهما الزهرة والمشتري لحسنهما وإشراقهما. وقال الشاخ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وطلعت المشبوبتان أي الزهرتان وهما الزهرة والمشتري لحسنهما وإشراقهما. وقال الشاخ:",
         "prototipe_benzerlik": 0.466,
         "halka": "orta"
       },
       {
-        "cumle": "وشب له كذا وأشب: رفع وأتيح. قال: يصف امرأة مذءوبة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وعنس كألواح الإران نسأتها ... إذا قيل للمشبوبتين هما هما",
+        "prototipe_benzerlik": 0.402,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وشب له كذا وأشب: رفع وأتيح. قال: يصف امرأة مذءوبة:",
         "prototipe_benzerlik": 0.282,
         "halka": "uzak"
       },
       {
-        "cumle": "ولقيته في شباب النهار، وقدم في شباب الشهر. وقال مليح الهذليّ يصف ظعائن:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أشب لها القلوب من بطن قرقري ... وقد يجلب الشيء البعيد الجوالب",
+        "prototipe_benzerlik": 0.364,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ولقيته في شباب النهار، وقدم في شباب الشهر. وقال مليح الهذليّ يصف ظعائن:",
         "prototipe_benzerlik": 0.228,
         "halka": "uzak"
       },
       {
-        "cumle": "وقصيدة حسنة الشباب وهو التشبيب. قال كثير:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "مكثن على حاجاتهن وقد مضى ... شباب الضحى والعيس ما تتبرح",
+        "prototipe_benzerlik": 0.446,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقصيدة حسنة الشباب وهو التشبيب. قال كثير:",
         "prototipe_benzerlik": 0.428,
         "halka": "orta"
       },
       {
-        "cumle": "وكان جرير أرق الناس شباباً. وكان أبو الحسن الأخفش يقول: الشباب قطيعة لجرير دون الشعراء، وشبب قصيدته بفلانة. قال عمر بن أبي ربيعة:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "إذا شبّبت في غير ابن ليلى ... عروض قصيدة بغض الشباب",
         "prototipe_benzerlik": 0.299,
         "halka": "uzak"
       },
       {
-        "cumle": "وأشب الله تعالى قرنك. وأشب فلان بنين إذا شب بنوه. وهو مشبوب الأظافر: محدّدها كأنها تلتهب لحدتها. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وكان جرير أرق الناس شباباً. وكان أبو الحسن الأخفش يقول: الشباب قطيعة لجرير دون الشعراء، وشبب قصيدته بفلانة. قال عمر بن أبي ربيعة:",
+        "prototipe_benzerlik": 0.299,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فبتلك أهذي ما حييت صبابة ... وبها الحياة أشبب الأشعارا",
+        "prototipe_benzerlik": 0.374,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأشب الله تعالى قرنك. وأشب فلان بنين إذا شب بنوه. وهو مشبوب الأظافر: محدّدها كأنها تلتهب لحدتها. قال:",
         "prototipe_benzerlik": 0.526,
-        "halka": "yakın"
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "صعب البديهة مشبوب أظافره ... مواثب أهرت الشدقين حساس",
+        "prototipe_benzerlik": 0.34,
+        "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.374,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.378,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
-  "kolekzifikasyon_kavramlari": ["adult.n.01", "age_group.n.01", "complain.v.01", "female.n.02", "time_period.n.01", "young.a.01"],
+  "kolekzifikasyon_kavramlari": ["adult.n.01", "age_group.n.01", "complain.v.01", "juvenile.n.01", "time_period.n.01", "young.a.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "خلق الإنسان",

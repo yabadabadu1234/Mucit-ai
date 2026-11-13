@@ -1694,24 +1694,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "ذئب أطلس: أغبر، وذئاب طلس، وذئبة طلساء. وطلست الكتاب طلساً، وطلسته تطليساً وهو أن تمحوه لتفسد خطه، فإذا أعمت محوه وصيرته من الفضول التي يستغنى عنها وصيرته طرساً: فقد طرسته. ومحا اللوح بالطلاسة وهي الخرقة. وجاء البرد والطيالسة. وخرج القاضي متقلسا متطلسا.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "ذئب أطلس: أغبر، وذئاب طلس، وذئبة طلساء. وطلست الكتاب طلساً، وطلسته تطليساً وهو أن تمحوه لتفسد خطه، فإذا أعمت محوه وصيرته من الفضول التي يستغنى عنها وصيرته طرساً: فقد طرسته. ومحا اللوح بالطلاسة وهي الخرقة. وجاء البرد والطيالسة. وخرج القاضي متقلسا متطلسا."
+      },
+      {
+        "kaynak": "Mekâyîs: طَلَسَ",
+        "metin": "(طَلَسَ) الطَّاءُ وَاللَّامُ وَالسِّينُ أَصْلٌ صَحِيحٌ، كَأَنَّهُ يَدُلُّ عَلَى مَلَاسَةٍ. يُقَالُ لِفَخِذِ الْبَعِيرِ إِذَا تَسَاقَطَ عَنْهُ شَعَرُهُ: طِلْسٌ. وَمِنْهُ طَلَسْتُ الْكِتَابَ، إِذَا\nمَحَوْتَهُ، كَأَنَّكَ قَدْ مَلَّسْتَهُ. فَأَمَّا الذِّئْبُ الْأَطْلَسُ فَيَقُولُونَ: الْأَغْبَرُ، وَالْقِيَاسُ يَدُلُّ عَلَى أَنَّهُ الَّذِي قَدْ تَمَعَّطَ شَعَرُهُ، فَإِنْ كَانَ مَا يَقُولُونَهُ صَحِيحًا فَكَأَنَّهُ مِنْ غُبْرَتِهِ قَدْ أُلْبِسُ طَيْلَسَانًا. وَالطَّيْلَسَانُ بِفَتْحِ اللَّامِ صَحِيحٌ، وَفِيهِ يَقُولُ الشَّاعِرُ:\nوَلَيْلٍ فِيهِ يُحْسَبُ كُلُّ نَجْمٍ ... بَدَا لَكَ مِنْ خَصَاصَةِ طَيْلَسَانِ"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "طلس بصره وطمسه: ذهب به. وشققت طيالس الظلام. قال أبو النجم:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طلس بصره وطمسه: ذهب به. وشققت طيالس الظلام. قال أبو النجم:",
         "prototipe_benzerlik": 0.458,
         "halka": "orta"
       },
       {
-        "cumle": "وتقول العرب: يا ابن الطيلسان: يريدون يا عجميّ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "كم في لجيم من أغر كأنه ... صبح يشق طيالس الظلماء",
+        "prototipe_benzerlik": 0.449,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول العرب: يا ابن الطيلسان: يريدون يا عجميّ.",
         "prototipe_benzerlik": 0.402,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.43,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.436,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["content.n.05"],
   "muhassas_tasnif": {

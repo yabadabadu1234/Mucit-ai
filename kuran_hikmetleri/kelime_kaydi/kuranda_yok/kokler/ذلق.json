@@ -805,24 +805,46 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "كأنه ذلق سنان، وذولق سنان وهو طرفه. وذلقته حدّدته. وسنان مذلق.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كأنه ذلق سنان، وذولق سنان وهو طرفه. وذلقته حدّدته. وسنان مذلق."
+      },
+      {
+        "kaynak": "Mekâyîs: ذَلَقَ",
+        "metin": "(ذَلَقَ) الذَّالُ وَاللَّامُ وَالْقَافُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى حِدَّةٍ. فَالذَّلْقُ: طَرَفُ اللِّسَانِ. وَالذَّلَاقَةُ: حِدَّةُ اللِّسَانِ، وَكُلُّ مُحَدَّدٍ مُذَلَّقٌ. وَقَرْنُ الثَّوْرِ مُذَلَّقٌ. وَيُشْتَقُّ مِنْ ذَلِكَ أَذلَقْتُ الضَّبَّ، إِذَا صَبَبْتَ الْمَاءَ فِي جُحْرِهِ لِيَخْرُجَ. وَالْإِذْلَاقُ: سُرْعَةُ الرَّمْيِ.\n[بَابُ الذَّالِ وَالْمِيمِ وَمَا يَثْلُثُهُمَا]"
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "في لسانه ذلاقة وذلق. وقد ذلق لسانه، وهو ذليق اللسان، وتكلم بلسان طلق ذلق وطلق ذلق وطلق ذلق. وحروف ذلق، وذولقية: خارجة من دلق اللسان. وعدوّ ذليق: شديد. قال الهذلي:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في لسانه ذلاقة وذلق. وقد ذلق لسانه، وهو ذليق اللسان، وتكلم بلسان طلق ذلق وطلق ذلق وطلق ذلق. وحروف ذلق، وذولقية: خارجة من دلق اللسان. وعدوّ ذليق: شديد. قال الهذلي:",
         "prototipe_benzerlik": 0.59,
         "halka": "yakın"
       },
       {
-        "cumle": "طويل. وذلقت الفرس: ضمرته حتى ألقى فضول لحمه. قال عديّ:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أوائل بالشدّ الذليق وحشّني ... لدى المتن مشبوح الذراعين خلجم",
+        "prototipe_benzerlik": 0.469,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "طويل. وذلقت الفرس: ضمرته حتى ألقى فضول لحمه. قال عديّ:",
         "prototipe_benzerlik": 0.514,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فذلّقته حتى ترفع لحمه ... أداويه مكنوناً وأركب وادعاً",
+        "prototipe_benzerlik": 0.568,
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.552,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.535,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

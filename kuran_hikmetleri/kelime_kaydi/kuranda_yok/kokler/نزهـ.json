@@ -37,34 +37,48 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سقيت إبلي ثم نزّهتها عن الماء: باعدتها. ويقال: تنزّهوا بحرمكم عن القوم: أبعدوها. ومكان نزه ونزيه: بعيد من الغمق ونحوه، وقد نزه نزاهة. وفي الحديث: \" إن الأردنّ أرض غمقة وإن الجابية أرض نزهة \" وأرض ذات نزهةٍ. وخرجوا يتنزّهون: يطلبون الأماكن النزهة، وهم في نزهة و",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سقيت إبلي ثم نزّهتها عن الماء: باعدتها. ويقال: تنزّهوا بحرمكم عن القوم: أبعدوها. ومكان نزه ونزيه: بعيد من الغمق ونحوه، وقد نزه نزاهة. وفي الحديث: \" إن الأردنّ أرض غمقة وإن الجابية أرض نزهة \" وأرض ذات نزهةٍ. وخرجوا يتنزّهون: يطلبون الأماكن النزهة، وهم في نزهة ونزهٍ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "رجل نزهٌ ونزيه عن الريب. ونزّه الله تنزيهاً. وهو يتنزه عن المطامع.",
-        "prototipe_benzerlik": 0.239,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "رجل نزهٌ ونزيه عن الريب. ونزّه الله تنزيهاً. وهو يتنزه عن المطامع.",
+        "prototipe_benzerlik": 0.257,
         "halka": "uzak"
       },
       {
-        "cumle": "وفحل نزّاء، وفيه نزاء، ونزا على طروقته. ونزا الفارس على فرسه.",
-        "prototipe_benzerlik": 0.09,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ن ز",
+        "prototipe_benzerlik": 0.48,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وفحل نزّاء، وفيه نزاء، ونزا على طروقته. ونزا الفارس على فرسه.",
+        "prototipe_benzerlik": 0.112,
         "halka": "uzak"
       },
       {
-        "cumle": "ومن المجاز: قلبه ينزو إلى كذا: ينازع إليه. وهو يتنزّى إلى الشرّ: يتسرّع إليه. ونزا الطعام: غلا. وعن النضر قال أبو طيبة رجل من بلعدوية:",
-        "prototipe_benzerlik": 0.95,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ومن المجاز: قلبه ينزو إلى كذا: ينازع إليه. وهو يتنزّى إلى الشرّ: يتسرّع إليه. ونزا الطعام: غلا. وعن النضر قال أبو طيبة رجل من بلعدوية:",
+        "prototipe_benzerlik": 0.943,
         "halka": "yakın"
       },
       {
-        "cumle": "قد نزا البرّ في القنبع وهو وعاء الحبّ إذا جرى فيه. وأكمة نازية: مرتفعة عما حولها كأنّها نزت عن وجه الأرض. وقصعة نازية: قريبة القعر.",
-        "prototipe_benzerlik": 0.267,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قد نزا البرّ في القنبع وهو وعاء الحبّ إذا جرى فيه. وأكمة نازية: مرتفعة عما حولها كأنّها نزت عن وجه الأرض. وقصعة نازية: قريبة القعر.",
+        "prototipe_benzerlik": 0.286,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.386,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.416,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

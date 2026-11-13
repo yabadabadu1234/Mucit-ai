@@ -1539,11 +1539,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "smell.v.01",
-    "orta": "verb.perception",
-    "ust": "zihin ve ilim",
-    "dayanak_synset": "smell.v.01",
-    "dayanak_tanim": "inhale the odor of; perceive by the olfactory sense",
+    "ince": "breathe.v.01",
+    "orta": "verb.body",
+    "ust": "canlı ve beden",
+    "dayanak_synset": "breathe.v.01",
+    "dayanak_tanim": "draw air into, and expel out of, the lungs",
     "synset_sayisi": 10
   },
   "ses_mana_tasnif": {
@@ -1557,34 +1557,52 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "نشق الظبي في الحبالة: نشب فيها، وأنشقه الصائد، وأنشقته الحبالة. قال: مناتين أبرام كأنّ أكفّهم ... أكف ضباب أنشقت في الحبائل",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "نشق الظبي في الحبالة: نشب فيها، وأنشقه الصائد، وأنشقته الحبالة. قال:\nمناتين أبرام كأنّ أكفّهم ... أكف ضباب أنشقت في الحبائل"
+      },
+      {
+        "kaynak": "Mekâyîs: نَشِقَ",
+        "metin": "(نَشِقَ) النُّونُ وَالشِّينُ وَالْقَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى نُشُوبِ شَيْءٍ. وَنَشِقَ الظَّبْيُ فِي الْحِبَالَةِ: عَلِقَ فِيهَا وَالنَّشِقَةُ: حَبْلٌ يُجْعَلُ فِي أَعْنَاقِ الْبَهْمِ، وَيُقَالُ هِيَ النُّشْقَةُ. وَرَجُلٌ نَشِقٌ، إِذَا وَقَعَ فِي أَمْرٍ لَا يَكَادُ يَخْلُصُ مِنْهُ.\nوَمِنَ الْبَابِ: أَنْشَقْتُ الصَّبِيَّ الدَّوَاءَ: صَبَبْتُهُ فِي أَنْفِهِ. وَالنَّشُوقُ: اسْمٌ لِكُلِّ دَوَاءٍ يُنْشَقُ. وَمِنْهُ اسْتَنْشَقْتُ الرِّيحَ: تَشَمَّمْتُهَا. وَهَذِهِ رِيحٌ مَكْرُوهَةُ النَّشَقِ، أَيْ الشَّمِّ. وَالْمُتَوَضِّئُ يَسْتَنْشِقُ الْمَاءَ، عِنْدَ اسْتِنْثَارِهِ. ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "نشق فلان في حبالة فلان إذا وقع منه فيما لا يتخلّص منه. وعن أبي زيد: نشق فلان إذا عطب. ونشق الريح نشقاً ونشقاً. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "نشق فلان في حبالة فلان إذا وقع منه فيما لا يتخلّص منه. وعن أبي زيد: نشق فلان إذا عطب. ونشق الريح نشقاً ونشقاً. قال:",
         "prototipe_benzerlik": 0.732,
         "halka": "yakın"
       },
       {
-        "cumle": "حراً من الخردل مكروه النشق",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "حراً من الخردل مكروه النشق",
         "prototipe_benzerlik": 0.52,
-        "halka": "yakın"
+        "halka": "orta"
       },
       {
-        "cumle": "واستنشقتها وتنشّقتها. قال المتلمّس:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "واستنشقتها وتنشّقتها. قال المتلمّس:",
         "prototipe_benzerlik": 0.569,
         "halka": "yakın"
       },
       {
-        "cumle": "وأنشقه اعلدواء وهو النشوق، وأنشقته الخردل والمسك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلو أن محموماً بخيبر مدنفاً ... تنشّق ريّاها لأقلع صالبه",
+        "prototipe_benzerlik": 0.783,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وأنشقه اعلدواء وهو النشوق، وأنشقته الخردل والمسك.",
         "prototipe_benzerlik": 0.419,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.56,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.605,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",

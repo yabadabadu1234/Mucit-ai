@@ -37,29 +37,66 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "أخذتهم قهرةً: من غير رضاهم. وفلان قهرة للناس: يقهره كلّ أحد. وتقول: نهراً وقهراً، حتى رجعا القهقري. وفي الحديث: \" فتضعضعت الخيل وتقهقرت البغال \" وقهقه الرجل وقهقر.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "أخذتهم قهرةً: من غير رضاهم. وفلان قهرة للناس: يقهره كلّ أحد. وتقول: نهراً وقهراً، حتى رجعا القهقري. وفي الحديث: \" فتضعضعت الخيل وتقهقرت البغال \" وقهقه الرجل وقهقر."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "جبال قواهر: شوامخ. قال الكميت:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "جبال قواهر: شوامخ. قال الكميت:",
         "prototipe_benzerlik": 0.282,
         "halka": "uzak"
       },
       {
-        "cumle": "وامرأة قهرة: شريرة، ونساء قهرات. وقهر اللحم، ولحم مقهور: أول ما تأخذه النار فيسيل مأوه، وتقول: أطعمنا خبزة بلحم مقهور، وشحم مصهور. وقال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنت المقابل من أمي ... ة في بواذخها القواهر",
+        "prototipe_benzerlik": 0.438,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وقال كعب بن زهير:",
+        "prototipe_benzerlik": 0.483,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ونار قبيل الليل بادرت قدحها ... حيا النار قد أوقدتها للمسافر",
+        "prototipe_benzerlik": 0.343,
+        "halka": "uzak"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلوح فيها زاده فربأته ... على مرقب يعلو الأحزة قاهر",
+        "prototipe_benzerlik": 0.545,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وامرأة قهرة: شريرة، ونساء قهرات. وقهر اللحم، ولحم مقهور: أول ما تأخذه النار فيسيل مأوه، وتقول: أطعمنا خبزة بلحم مقهور، وشحم مصهور. وقال:",
         "prototipe_benzerlik": 0.581,
         "halka": "yakın"
       },
       {
-        "cumle": "ضبحته النار: غيّرته.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلما أن تلهوجنا شواءً ... به اللهبان مقهوراً ضبيحاً",
+        "prototipe_benzerlik": 0.594,
+        "halka": "yakın"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ضبحته النار: غيّرته.",
         "prototipe_benzerlik": 0.459,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.441,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.465,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

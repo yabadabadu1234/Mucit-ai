@@ -794,19 +794,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "تفاوح مسك الغانيات ورنده وتقول: نزلنا في بستان تناوحت أطياره، وتفاوحت أنواره. ف ود حل الشّيب بفوديه وهما جانبا الرأس.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "تفاوح مسك الغانيات ورنده\nوتقول: نزلنا في بستان تناوحت أطياره، وتفاوحت أنواره.\nف\nود\nحل الشّيب بفوديه وهما جانبا الرأس."
+      },
+      {
+        "kaynak": "Mekâyîs: فَوَحَ",
+        "metin": "(فَوَحَ) الْفَاءُ وَالْوَاوُ وَالْحَاءُ كَلِمَةٌ تَدُلُّ عَلَى ثَوْرٍ وَغَلَيَانٍ. يُقَالُ: فَاحَتِ الرِّيحُ تَفُوحُ فَوْحًا. وَحَكَى نَاسٌ: فَاحَتِ الْقِدْرُ: غَلَتْ. وَأَفَحْتُهَا أَنَا."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "ارفع فود الخباء أي جانبه. وألقت العقاب فوديها على الهيثم أي جناحيها. ونزلوا بين فودي الوادي. واستلمت فود البيت أي ركنه. وما هذه العلاوة بني الفودين أي العكمين. وجعلت الكتاب فودين إذا طويت أعلاه وأسفله حتى صار نصفين. وتقول: وفد الشيب على فودك، فاستحي من وفدك.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ارفع فود الخباء أي جانبه. وألقت العقاب فوديها على الهيثم أي جناحيها. ونزلوا بين فودي الوادي. واستلمت فود البيت أي ركنه. وما هذه العلاوة بني الفودين أي العكمين. وجعلت الكتاب فودين إذا طويت أعلاه وأسفله حتى صار نصفين. وتقول: وفد الشيب على فودك، فاستحي من وفدك.",
         "prototipe_benzerlik": 0.489,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.489,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": ["smell.v.02"],
   "muhassas_tasnif": {

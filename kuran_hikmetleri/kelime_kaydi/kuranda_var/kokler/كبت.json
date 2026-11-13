@@ -1471,19 +1471,32 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Cebel mihverî mana",
-    "prototip": "قلبٌ أو صدٌّ تام - بصدْم ورَغْم - عن الوجهة الطبيعية أو المرادة كما في الكبت الحسيّ - وهو صدْم الوجه والأنف بالرغام، وكذلك الكبت المعنويّ المذكورين {أَوْ يَكْبِتَهُمْ} أي يخزيهم/ يهزمهم [ينظر بحر 3/ 48، 55] {إِنَّ الَّذِينَ يُحَادُّونَ اللَّهَ وَرَسُولَهُ كُبِ",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Cebel mihverî mana",
+        "metin": "قلبٌ أو صدٌّ تام - بصدْم ورَغْم - عن الوجهة الطبيعية أو المرادة كما في الكبت الحسيّ - وهو صدْم الوجه والأنف بالرغام، وكذلك الكبت المعنويّ المذكورين {أَوْ يَكْبِتَهُمْ} أي يخزيهم/ يهزمهم [ينظر بحر 3/ 48، 55] {إِنَّ الَّذِينَ يُحَادُّونَ اللَّهَ وَرَسُولَهُ كُبِتُوا كَمَا كُبِتَ الَّذِينَ مِنْ قَبْلِهِمْ} [المجادلة: 5] أُخْزُوا/ رُدُّوا مخذولين [نفسه 8/ 233]."
+      },
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "كبت الله عدوّك: كبّه وأهلكه، وتوقل: لازال خصمك مبكوتاً، وعدوّك مكبوتاً."
+      },
+      {
+        "kaynak": "Mekâyîs: كَبَتَ",
+        "metin": "(كَبَتَ) الْكَافُ وَالْبَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ مِنَ الْإِذْلَالِ وَالصَّرْفِ عَنِ الشَّيْءِ. يُقَالُ: كَبَتَ اللَّهُ الْعَدُوَّ يَكْبِتُهُ، إِذَا صَرَفَهُ وَأَذَلَّهُ. قَالَ اللَّهُ تَعَالَى: {إِنَّ الَّذِينَ يُحَادُّونَ اللَّهَ وَرَسُولَهُ كُبِتُوا كَمَا كُبِتَ الَّذِينَ مِنْ قَبْلِهِمْ} [المجادلة: 5] ."
+      }
+    ],
+    "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
-        "cumle": "فلان يكبت غيظه في جوفه: لا يخرجه. وتقول: من كبت غيظه في جوفه، كبت الله عدوّه من خوفه.",
-        "prototipe_benzerlik": 0.236,
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "فلان يكبت غيظه في جوفه: لا يخرجه. وتقول: من كبت غيظه في جوفه، كبت الله عدوّه من خوفه.",
+        "prototipe_benzerlik": 0.221,
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.236,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.221,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "agree.v.01",

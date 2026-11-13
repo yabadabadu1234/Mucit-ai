@@ -696,24 +696,40 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "سحط الشاة سحطاً وهو ذبح وحيّ.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "سحط الشاة سحطاً وهو ذبح وحيّ."
+      },
+      {
+        "kaynak": "Mekâyîs: سَحَطَ",
+        "metin": "(سَحَطَ) السِّينُ وَالْحَاءُ وَالطَّاءُ كَلِمَةٌ. يَقُولُونَ: السَّحْطُ: الذَّبْحُ الْوَحِيُّ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أنا كالشجي في مسحطه أي في حلقه. قال:",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أنا كالشجي في مسحطه أي في حلقه. قال:",
         "prototipe_benzerlik": 0.281,
         "halka": "uzak"
       },
       {
-        "cumle": "وتقول: غم لا أبالك ساحط، ان تبيت والمولى عليك ساخط.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وساخط من غير شيء مسخطه ... كنت له مثل الشجي في مسحطه",
+        "prototipe_benzerlik": 0.384,
+        "halka": "orta"
+      },
+      {
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "وتقول: غم لا أبالك ساحط، ان تبيت والمولى عليك ساخط.",
         "prototipe_benzerlik": 0.48,
         "halka": "orta"
       }
     ],
-    "ortalama_benzerlik": 0.381,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "ortalama_benzerlik": 0.382,
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

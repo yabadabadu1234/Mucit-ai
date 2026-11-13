@@ -1069,19 +1069,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "لبن محض: خالص بلا رغوة، ومحضت القوم وأمحضتهم: سقيتهم محضاً، وامتحضوا: شربوا المحص. ورجل محض. قال: امتحضا وسقّياني الضّيحا ... فقد كفيت صاحبيّ الميحا",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "لبن محض: خالص بلا رغوة، ومحضت القوم وأمحضتهم: سقيتهم محضاً، وامتحضوا: شربوا المحص. ورجل محض.\nقال:\nامتحضا وسقّياني الضّيحا ... فقد كفيت صاحبيّ الميحا"
+      },
+      {
+        "kaynak": "Mekâyîs: مَحَضَ",
+        "metin": "(مَحَضَ) الْمِيمُ وَالْحَاءُ وَالضَّادُ كَلِمَةٌ تَدُلُّ عَلَى خُلُوصِ الشَّيْءِ. مِنْهُ اللَّبَنُ الْمَحْضُ: الْخَالِصُ ; وَعَرَبِيٌّ مَحْضٌ. وَالْمَحْضُ يُشْتَقُّ مِنْهُ مَحَضْتُهُمْ: سَقَيْتُهُمْ\nذَلِكَ. وَامْتَحَضْتُ أَنَا: شَرِبْتُ الْمَحْضَ. وَأَمْحَضْتُكَ الْحَدِيثَ: صَدَقْتُكَهُ. وَكَذَا النَّصِيحَةُ [وَ] الْوُدُّ. قَالَ:\nقُلْ لِلْغَوَانِي أَمَا فِيكُنَّ فَاتِكَةٌ ... تَعْلُو اللَّئِيمَ بِضَرْبٍ فِيهِ إِمْحَاضُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "عربيّ محض، وسيد محضٌ. وفضّة محضةٌ. وأحبّك حباً محضاً، ومحضتك الود والنصح وأمحضتكه. ورجل ممحوض الضريبة. وقال ابن دريد: أمحضتك في الودّ لا غير.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "عربيّ محض، وسيد محضٌ. وفضّة محضةٌ. وأحبّك حباً محضاً، ومحضتك الود والنصح وأمحضتكه. ورجل ممحوض الضريبة. وقال ابن دريد: أمحضتك في الودّ لا غير.",
         "prototipe_benzerlik": 0.918,
         "halka": "yakın"
       }
     ],
     "ortalama_benzerlik": 0.918,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

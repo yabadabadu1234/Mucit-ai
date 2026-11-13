@@ -696,19 +696,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "طعنوهم في الثغر والثجر. والثجرة وسط النحر. وتقول أخذ سلافة العصير، وترك حثالة الثجير؛ وهو الثفل.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "طعنوهم في الثغر والثجر. والثجرة وسط النحر. وتقول أخذ سلافة العصير، وترك حثالة الثجير؛ وهو الثفل."
+      },
+      {
+        "kaynak": "Mekâyîs: ثَجَرَ",
+        "metin": "(ثَجَرَ) الثَّاءُ وَالْجِيمُ وَالرَّاءُ أَصْلٌ وَاحِدٌ، يَدُلُّ عَلَى مُتَّسَعِ الشَّيْءِ وَعَرْضِهِ. فَثَجْرَةُ الْوَادِي: وَسَطُهُ وَمَا اتَّسَعَ مِنْهُ. وَيُقَالُ وَرَقٌ ثَجْرٌ أَيْ عَرِيضٌ. وَكُلُّ شَيْءٍ عَرَّضْتَهُ فَقَدْ ثَجَّرْتَهُ. وَثُجْرَةُ النَّحْرِ وَسَطُهُ وَمَا حَوْلَ الثَّغْرِ مِنْهُ. وَالثُّجَرُ سِهَامٌ غِلَاظٌ. وَيُقَالُ: فِي لَحْمِهِ تَثْجِيرٌ، أَيْ رَخَاوَةُ. فَأَمَّا قَوْلُهُمُ انْثَجَرَ الْمَاءُ إِذَا فَاضَ وَانْثَجَرَ الدَّمُ مِنَ الطَّعْنَةِ، فَلَيْسَ مِنَ الْبَابِ ; لِأَنَّ الثَّاءَ فِيهِ مُبْدَلَةٌ مِنْ فَاءٍ. وَكَذَلِكَ الثَّجِيرُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "أقاموا في ثجرة الوادي أي في وسطه.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "أقاموا في ثجرة الوادي أي في وسطه.",
         "prototipe_benzerlik": 0.522,
-        "halka": "yakın"
+        "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.522,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [],
   "muhassas_tasnif": {

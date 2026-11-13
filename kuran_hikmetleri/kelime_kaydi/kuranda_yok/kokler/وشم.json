@@ -1762,19 +1762,28 @@
     "mecaz_var": true
   },
   "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü)",
-    "prototip_kaynagi": "Zemahşerî hakîkat kolu",
-    "prototip": "بيدها وشم ووشومٌ ووشام، وقد وشمتها الواشمة، واستوشمت واتشمت.",
-    "yayilim_kaynagi": "Zemahşerî mecaz kolu",
+    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
+    "prototipler": [
+      {
+        "kaynak": "Zemahşerî hakîkat kolu",
+        "metin": "بيدها وشم ووشومٌ ووشام، وقد وشمتها الواشمة، واستوشمت واتشمت."
+      },
+      {
+        "kaynak": "Mekâyîs: وَشَمَ",
+        "metin": "(وَشَمَ) الْوَاوُ وَالشِّينُ وَالْمِيمُ: كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى تَأْثِيرٍ فِي شَيْءٍ تَزْيِينًا لَهُ. مِنْهُ وَشْمُ الْيَدِ، إِذَا نُقِشَتْ وَغُرِزَتْ. وَأَوْشَمَتِ الْأَرْضُ: ظَهَرَ نَبَاتُهَا. وَأَوْشَمَ الْبَرْقُ: لَمَعَ لَمْعًا خَفِيفًا. وَيَتَّسِعُونَ فِي هَذَا فَيَقُولُونَ: مَا أَصَابَتْنَا الْعَامَ وَشْمَةٌ، أَيْ قَطْرَةٌ مِنْ مَطَرٍ، وَذَلِكَ لِأَنَّ بِالْقَطْرِ تُوشَمُ الْأَرْضُ. وَرُبَّمَا قَالُوا: كَانَتْ بَيْنِي وَبَيْنَهُ وَشِيمَةٌ، أَيْ كَلَامٌ. وَلَا يَكُونُ ذَلِكَ إِلَّا فِي كَلَامِ عَدَاوَةٍ. وَهَذَا تَمْثِيلٌ. وَأَوْشَمَ: نَظَرَ إِلَى الشَّيْءِ، كَأَنَّهُ نَظَرَ وَتَأَمَّلَ وَشْمَهُ."
+      }
+    ],
+    "karsilastirma_prototipi": "Zemahşerî hakîkat kolu",
     "yayilim": [
       {
-        "cumle": "في الأرض وشمٌ من النبات ووشوم، وأوشمت الأرض: ظهر نباتها كالوشم. وأوشمت الإبل: أصابت وشماً من المرعى. وأوشم البرق: لمع لمعاً خفياً. وما أصابتنا العام وشمةٌ: قطره مطرٍ. وما عصيتك وشمةً: أدنى معصيةٍ.",
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "في الأرض وشمٌ من النبات ووشوم، وأوشمت الأرض: ظهر نباتها كالوشم. وأوشمت الإبل: أصابت وشماً من المرعى. وأوشم البرق: لمع لمعاً خفياً. وما أصابتنا العام وشمةٌ: قطره مطرٍ. وما عصيتك وشمةً: أدنى معصيةٍ.",
         "prototipe_benzerlik": 0.486,
         "halka": "orta"
       }
     ],
     "ortalama_benzerlik": 0.486,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
+    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
   },
   "kolekzifikasyon_kavramlari": [
     "act.n.02",
