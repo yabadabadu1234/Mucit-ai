@@ -13,6 +13,7 @@ import cebel as CB
 import jeffery as JF
 import etymarab as EA
 import asas as AS
+import kuran_korpusu as KQ
 import prototip as PT
 import turkce as T
 import mekayis as MK
@@ -128,7 +129,20 @@ def uret():
     cb = CB.yukle()
     kk = kaikki_yukle(sys.argv[1] if len(sys.argv) > 1 else '')
     kk_kokleri = {kaikki_kok(e) for e in kk if e.get('k')}
-    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri | set(EA.yukle()) | set(CB.yukle()) | set(AS.yukle()))
+    kq = KQ.yukle()
+    lem_kok = {}
+    for x in kel:
+        if x['kok'] and x.get('lem'):
+            lem_kok.setdefault(JF.sade(x['lem']), I.normala(x['kok']))
+    kq_hedef = {}
+    for k_, v_ in kq.items():
+        if k_ in kuran_kokleri:
+            kq_hedef[k_] = k_
+        else:
+            h_ = next((lem_kok[JF.sade(l_)] for l_ in v_['lemmalar'] if JF.sade(l_) in lem_kok), None)
+            kq_hedef[k_] = h_ or k_
+    kq_yeni = {h_ for h_ in kq_hedef.values() if h_ not in kuran_kokleri}
+    kokler_ad = sorted(kuran_kokleri | set(mk) | kk_kokleri | set(EA.yukle()) | set(CB.yukle()) | set(AS.yukle()) | kq_yeni)
     kk_atama = [kaikki_kok(e) for e in kk]
     kk_yol = ['kök' if a else '' for a in kk_atama]
     lemma_kok = {}
@@ -201,6 +215,12 @@ def uret():
             if k.get(ek):
                 e[ek] = k[ek]
         kelimeler.append(e)
+    kq_ks = collections.defaultdict(collections.Counter)
+    for (l_, pos_), n_ in KQ.koksuz_lemmalar().items():
+        kq_ks[JF.sade(l_)][pos_] += n_
+    for e in kelimeler:
+        if not e['kok'] and e['lemma'] and JF.sade(e['lemma']) in kq_ks:
+            e['korpus_turu'] = kq_ks[JF.sade(e['lemma'])].most_common(1)[0][0]
     jf = JF.yukle()
     jf_kullanildi = set()
     for e in kelimeler:
@@ -229,7 +249,12 @@ def uret():
             kk_koksuz.append(e)
             kd_ekle(e['u'], 'kaikki_vikisozluk', e)
     ea = EA.yukle()
+    kq_kok = {}
+    for k_, v_ in kq.items():
+        kq_kok.setdefault(kq_hedef[k_], []).append(v_)
     for k, r in kokler.items():
+        if k in kq_kok:
+            r.setdefault('sozlukler', {})['kuran_korpusu'] = kq_kok[k][0] if len(kq_kok[k]) == 1 else kq_kok[k]
         if k in ea:
             r.setdefault('sozlukler', {})['etymarab'] = ea[k]
         if k in kk_kok:
@@ -314,7 +339,7 @@ def uret():
             'osmanlica_madde': sum(len(v['maddeler']) for r in kokler.values() for v in r.get('sozlukler', {}).get('osmanlica_lugatler', {}).values()),
             'mekayisli_kok': sum(1 for r in kokler.values() if 'mekayis' in r.get('sozlukler', {})),
             'kuranda_yok_kok': sum(1 for r in kokler.values() if not r.get('kuranda_var', True)),
-            'jeffery_girdi': len(jf), 'jeffery_eslesmeyen': len(jf_eslesmeyen), 'etymarab_kok': len(ea), 'cebel_mihverili_kok': sum(1 for r in kokler.values() if 'cebel_mihveri' in r.get('sozlukler', {})),
+            'korpus_kok': len(kq), 'korpus_gecis': sum(v_['gecis'] for v_ in kq.values()), 'korpus_yeni_kok': len(kq_yeni), 'jeffery_girdi': len(jf), 'jeffery_eslesmeyen': len(jf_eslesmeyen), 'etymarab_kok': len(ea), 'cebel_mihverili_kok': sum(1 for r in kokler.values() if 'cebel_mihveri' in r.get('sozlukler', {})),
             'kok_anlamli_kok': sum(1 for r in kokler.values() if 'kok_anlamlari' in r.get('sozlukler', {})),
             'kaikki_girdi': len(kk), 'kaikki_koke_yerlesen': sum(len(v) for v in kk_kok.values()), 'kaikki_koksuz': len(kk_koksuz),
             'kaikki_yeni_kok': len(kk_kokleri - kuran_kokleri - set(mk)),

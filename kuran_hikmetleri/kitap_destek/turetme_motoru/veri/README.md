@@ -26,3 +26,6 @@ Kaynak: Brill yeniden basımı (Texts and Studies on the Qur'ān 3), almuslih.or
 
 ## EtymArab (Oslo Üniversitesi)
 Kaynak: Bibliotheca Polyglotta, Etymological Dictionary of Arabic (polyglotta.uio.no, vid=1268). Çalışma sürüyor; birçok madde yer tutucudur. Çekim betiği `etymarab_cek.py`, ham kopya `kaynak/lugat/ham/etymarab_polyglotta.jsonl.xz`.
+
+## Quranic Arabic Corpus 0.4 (morfoloji)
+Kaynak: Kais Dukes, Leeds Üniversitesi, GNU GPL; http://corpus.quran.com (Tanzil metni üzerine). Değiştirilmeden tek ham nüsha: `kaynak/lugat/ham/quranic_arabic_corpus_morphology_0.4.txt.xz`. Kök dosyalarında `sozlukler.kuran_korpusu` buradan türer.
