@@ -805,6 +805,64 @@
       "fasil_ozeti": ""
     },
     "eyupipler_kok_anlami": "yardım",
+    "kuran_korpusu": [
+      {
+        "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+        "gecis": 11,
+        "ilk_yer": "1:5:4:1",
+        "tur": {
+          "V": 8,
+          "N": 3
+        },
+        "bab": {
+          "X": 6,
+          "VI": 2,
+          "IV": 2
+        },
+        "zaman_kip": {
+          "IMPV": 5,
+          "IMPF": 2,
+          "PERF": 1
+        },
+        "fiil_ismi_ozellikleri": {
+          "PASS": 2,
+          "PCPL": 2
+        },
+        "lemmalar": {
+          "ٱسْتَعِينُ": 4,
+          "تَعَاوَنُ": 2,
+          "مُسْتَعَان": 2,
+          "أَعَانَ": 2,
+          "عَوَان": 1
+        },
+        "bicimler": {
+          "ٱسْتَعِينُ": 3,
+          "تَعَاوَنُ": 2,
+          "مُسْتَعَانُ": 2,
+          "نَسْتَعِينُ": 1,
+          "عَوَانٌۖ": 1,
+          "أَعِينُ": 1,
+          "أَعَانَ": 1
+        }
+      },
+      {
+        "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+        "gecis": 1,
+        "ilk_yer": "107:7:2:2",
+        "tur": {
+          "N": 1
+        },
+        "bab": {},
+        "zaman_kip": {},
+        "fiil_ismi_ozellikleri": {},
+        "lemmalar": {
+          "مَاعُون": 1
+        },
+        "bicimler": {
+          "مَاعُونَ": 1
+        }
+      }
+    ],
     "etymarab": {
       "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
       "latin": "ʕWN",
@@ -1654,8 +1712,8 @@
     "ince": "event.n.01",
     "orta": "noun.act",
     "ust": "fiil ve hadise",
-    "dayanak_synset": "grant.n.02",
-    "dayanak_tanim": "the act of providing a subsidy",
+    "dayanak_synset": "aid.n.02",
+    "dayanak_tanim": "the activity of contributing to the fulfillment of a need or furtherance of an effort or purpose",
     "synset_sayisi": 20
   },
   "ses_mana_tasnif": {
@@ -1683,6 +1741,7 @@
     "assist.v.02",
     "collaborate.v.01",
     "cooperative.a.02",
+    "group_action.n.01",
     "help.v.01",
     "put_up.v.08",
     "serve.v.05",

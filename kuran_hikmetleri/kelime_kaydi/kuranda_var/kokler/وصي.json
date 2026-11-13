@@ -762,6 +762,55 @@
         "maddeler": []
       }
     },
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 32,
+      "ilk_yer": "2:132:1:2",
+      "tur": {
+        "V": 22,
+        "N": 10
+      },
+      "bab": {
+        "II": 12,
+        "IV": 6,
+        "VI": 5
+      },
+      "zaman_kip": {
+        "PERF": 17,
+        "IMPF": 5
+      },
+      "fiil_ismi_ozellikleri": {
+        "ACT": 1,
+        "PCPL": 1,
+        "PASS": 1,
+        "VN": 1
+      },
+      "lemmalar": {
+        "وَصَّىٰ": 11,
+        "وَصِيَّة": 8,
+        "أَوْصَٰ": 5,
+        "تَوَاصَ": 5,
+        "مُّوص": 1,
+        "يُوصِي": 1,
+        "تَوْصِيَة": 1
+      },
+      "bicimler": {
+        "وَصَّىٰ": 6,
+        "وَصَّيْ": 5,
+        "تَوَاصَ": 5,
+        "وَصِيَّةٍ": 4,
+        "وَصِيَّةً": 2,
+        "يُوصِي": 2,
+        "وَصِيَّةُ": 1,
+        "مُّوصٍ": 1,
+        "يُوصِى": 1,
+        "تُوصُ": 1,
+        "يُوصَىٰ": 1,
+        "وَصِيَّةِ": 1,
+        "أَوْصَٰ": 1,
+        "تَوْصِيَةً": 1
+      }
+    },
     "kaikki_vikisozluk": [
       {
         "w": "وصية",
@@ -1076,8 +1125,8 @@
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
-    "dayanak_synset": "regent.n.01",
-    "dayanak_tanim": "members of a governing board",
+    "dayanak_synset": "keeper.n.01",
+    "dayanak_tanim": "someone in charge of other people",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1108,6 +1157,7 @@
   "kolekzifikasyon_kavramlari": [
     "act.n.02",
     "bequeath.v.01",
+    "group_action.n.01",
     "indicate.v.05",
     "peer.n.01",
     "preserver.n.03",

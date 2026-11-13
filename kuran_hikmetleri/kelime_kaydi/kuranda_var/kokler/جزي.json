@@ -775,6 +775,64 @@
         "metin": "(جَزَيَ) الْجِيمُ وَالزَّاءُ وَالْيَاءُ: قِيَامُ الشَّيْءِ مَقَامَ غَيْرِهِ وَمُكَافَأَتُهُ إِيَّاهُ. يُقَالُ جَزَيْتُ فُلَانًا أَجْزِيهِ جَزَاءً، وَجَازَيْتُهُ مُجَازَاةً. وَهَذَا رَجُلٌ جَازِيكَ مِنْ رَجُلٍ،\nأَيْ حَسْبُكَ. وَمَعْنَاهُ أَنَّهُ يَنُوبُ مَنَابَ كُلِّ أَحَدٍ، كَمَا تَقُولُ كَافِيكَ وَنَاهِيكَ. أَيْ كَأَنَّهُ يَنْهَاكَ أَنْ يُطْلَبَ مَعَهُ غَيْرُهُ.\nوَتَقُولُ: جَزَى عَنِّي هَذَا الْأَمْرَ يَجْزِي، كَمَا تَقُولُ قَضَى يَقْضِي. وَتَجَازَيْتُ دَيْنِي عَلَى فُلَانٍ أَيْ تَقَاضَيْتُهُ. وَأَهْلُ الْمَدِينَةِ يُسَمُّونَ الْمُتَقَاضِيَ الْمُتَجَازِيَ. قَالَ اللَّهُ جَلَّ ثَنَاؤُهُ: {وَاتَّقُوا يَوْمًا لَا تَجْزِي نَفْسٌ عَنْ نَفْسٍ شَيْئًا} [البقرة: 48] ، أَيْ لَا تَقْضِي."
       }
     ],
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 118,
+      "ilk_yer": "2:48:4:1",
+      "tur": {
+        "V": 74,
+        "N": 44
+      },
+      "bab": {
+        "III": 1
+      },
+      "zaman_kip": {
+        "IMPF": 70,
+        "PERF": 4
+      },
+      "fiil_ismi_ozellikleri": {
+        "PASS": 23,
+        "ACT": 1,
+        "PCPL": 1
+      },
+      "lemmalar": {
+        "جَزَىٰ": 73,
+        "جَزَآء": 42,
+        "جِزْيَة": 1,
+        "جَاز": 1,
+        "نُجَٰزِىٓ": 1
+      },
+      "bicimler": {
+        "نَجْزِى": 21,
+        "جَزَآءُ": 11,
+        "تُجْزَ": 9,
+        "يَجْزِىَ": 8,
+        "جَزَآءً": 8,
+        "جَزَآؤُ": 7,
+        "جَزَآءًۖ": 7,
+        "يُجْزَ": 6,
+        "يَجْزِى": 4,
+        "جَزَٰٓؤُاۣ": 4,
+        "يَجْزِيَ": 4,
+        "نَجْزِيَ": 4,
+        "جَزَيْ": 3,
+        "جَزَٰٓؤُ": 3,
+        "تُجْزَىٰ": 3,
+        "تَجْزِى": 2,
+        "يَجْزِي": 2,
+        "يُجْزَىٰٓ": 2,
+        "جَزَآءٌ": 1,
+        "جِزْيَةَ": 1,
+        "نَجْزِي": 1,
+        "يُجْزَى": 1,
+        "جَازٍ": 1,
+        "نُجَٰزِىٓ": 1,
+        "يُجْزَىٰ": 1,
+        "جَزَآءَ": 1,
+        "جَزَىٰ": 1,
+        "تُجْزَىٰٓ": 1
+      }
+    },
     "etymarab": {
       "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
       "latin": "ǦZY",
@@ -1279,11 +1337,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "compensate.v.06",
-    "orta": "verb.possession",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "compensate.v.06",
-    "dayanak_tanim": "make payment to; compensate",
+    "ince": "event.n.01",
+    "orta": "noun.act",
+    "ust": "fiil ve hadise",
+    "dayanak_synset": "punishment.n.01",
+    "dayanak_tanim": "the act of punishing",
     "synset_sayisi": 3
   },
   "ses_mana_tasnif": {
@@ -1321,7 +1379,7 @@
     "ortalama_benzerlik": 0.347,
     "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
   },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "compensate.v.06", "transferred_property.n.01"],
+  "kolekzifikasyon_kavramlari": ["compensate.v.06", "group_action.n.01", "transferred_property.n.01"],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",

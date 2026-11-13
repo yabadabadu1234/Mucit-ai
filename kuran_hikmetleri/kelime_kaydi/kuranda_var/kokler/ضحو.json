@@ -754,6 +754,31 @@
         ]
       }
     },
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 7,
+      "ilk_yer": "7:98:7:1",
+      "tur": {
+        "N": 4,
+        "T": 2,
+        "V": 1
+      },
+      "bab": {},
+      "zaman_kip": {
+        "IMPF": 1
+      },
+      "fiil_ismi_ozellikleri": {},
+      "lemmalar": {
+        "ضُحًى": 6,
+        "تَضْحَىٰ": 1
+      },
+      "bicimler": {
+        "ضُحَىٰ": 3,
+        "ضُحًى": 2,
+        "تَضْحَىٰ": 1,
+        "ضُّحَىٰ": 1
+      }
+    },
     "etymarab": {
       "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
       "latin": "ḌḤW",
@@ -1144,11 +1169,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "wrong.v.01",
-    "orta": "verb.social",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "victimize.v.01",
-    "dayanak_tanim": "make a victim of",
+    "ince": "location.n.01",
+    "orta": "noun.location",
+    "ust": "ölçü, mekân ve zaman",
+    "dayanak_synset": "suburb.n.01",
+    "dayanak_tanim": "a residential district located on the outskirts of a city",
     "synset_sayisi": 5
   },
   "ses_mana_tasnif": {

@@ -822,6 +822,35 @@
         "maddeler": []
       }
     },
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 8,
+      "ilk_yer": "11:81:9:2",
+      "tur": {
+        "V": 7,
+        "N": 1
+      },
+      "bab": {
+        "IV": 6
+      },
+      "zaman_kip": {
+        "IMPV": 5,
+        "PERF": 1,
+        "IMPF": 1
+      },
+      "fiil_ismi_ozellikleri": {},
+      "lemmalar": {
+        "أَسْرَىٰ": 6,
+        "سَرِيّ": 1,
+        "يَسْرِ": 1
+      },
+      "bicimler": {
+        "أَسْرِ": 5,
+        "أَسْرَىٰ": 1,
+        "سَرِيًّا": 1,
+        "يَسْرِ": 1
+      }
+    },
     "etymarab": {
       "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
       "latin": "SRY",
@@ -1101,7 +1130,14 @@
   "prototip_yayilim_tasnif": {
     "durum": "prototip veya mecaz kolu yok"
   },
-  "kolekzifikasyon_kavramlari": ["action.n.02", "foot.v.02", "inhabitant.n.01", "march.v.01", "organization.n.01", "uncommunicativeness.n.01"],
+  "kolekzifikasyon_kavramlari": [
+    "action.n.02",
+    "foot.v.02",
+    "march.v.01",
+    "organization.n.01",
+    "person_of_color.n.01",
+    "uncommunicativeness.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الطير",

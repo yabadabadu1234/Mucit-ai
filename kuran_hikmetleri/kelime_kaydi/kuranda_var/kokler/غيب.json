@@ -790,6 +790,43 @@
       "fasil_ozeti": "° معنى الفصل المعجمي (غب) : هو الغئور والغياب أو الاستتار. كما يتمثل في الغُبّ: الغامض من الأرض -في (غبب)، وفي الغابة الأَجَمةِ ذات الشجر المتكاثف الذي يُخفِي ما تحته -في (غيب)، وفي الغَبَرة: الرَهَج الثائر وهو يُخْفِي ما يغشاه - في (غبر)، وفي الإبط وباطنه وكذا باطن الرفغ -في (غبن)."
     },
     "eyupipler_kok_anlami": "gizli, kayıp",
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 60,
+      "ilk_yer": "2:3:3:3",
+      "tur": {
+        "N": 59,
+        "V": 1
+      },
+      "bab": {
+        "VIII": 1
+      },
+      "zaman_kip": {
+        "IMPF": 1
+      },
+      "fiil_ismi_ozellikleri": {
+        "ACT": 4,
+        "PCPL": 4
+      },
+      "lemmalar": {
+        "غَيْب": 49,
+        "غُيُوب": 4,
+        "غَآئِبِين": 3,
+        "غَيَٰبَت": 2,
+        "غَآئِبَة": 1,
+        "يَغْتَب": 1
+      },
+      "bicimler": {
+        "غَيْبِ": 35,
+        "غَيْبَ": 8,
+        "غَيْبُ": 6,
+        "غُيُوبِ": 4,
+        "غَآئِبِينَ": 3,
+        "غَيَٰبَتِ": 2,
+        "غَآئِبَةٍ": 1,
+        "يَغْتَب": 1
+      }
+    },
     "etymarab": {
       "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
       "latin": "ĠYB",
@@ -1701,11 +1738,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "absence.n.02",
-    "dayanak_tanim": "failure to be present",
+    "ince": "state.n.02",
+    "orta": "noun.cognition",
+    "ust": "zihin ve ilim",
+    "dayanak_synset": "unconsciousness.n.01",
+    "dayanak_tanim": "a state lacking normal awareness of the self or environment",
     "synset_sayisi": 9
   },
   "ses_mana_tasnif": {
@@ -1738,7 +1775,15 @@
     "ortalama_benzerlik": 0.276,
     "halka_esikleri": "veriden: üçte bir dilimler 0.328 / 0.503"
   },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "condition.n.01", "disappear.v.01", "happening.n.01", "jungle.n.01", "vegetation.n.01"],
+  "kolekzifikasyon_kavramlari": [
+    "act.n.02",
+    "condition.n.01",
+    "disappear.v.01",
+    "group_action.n.01",
+    "happening.n.01",
+    "jungle.n.01",
+    "vegetation.n.01"
+  ],
   "muhassas_tasnif": {
     "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
     "kitap": "الأنواء",

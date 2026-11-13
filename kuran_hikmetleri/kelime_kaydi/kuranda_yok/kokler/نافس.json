@@ -476,11 +476,11 @@
   },
   "mana_tasnif": {
     "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "event.n.01",
-    "orta": "noun.act",
-    "ust": "fiil ve hadise",
-    "dayanak_synset": "competition.n.03",
-    "dayanak_tanim": "the act of competing as for profit or a prize",
+    "ince": "compete.v.01",
+    "orta": "verb.competition",
+    "ust": "insan ve toplum",
+    "dayanak_synset": "compete.v.01",
+    "dayanak_tanim": "compete for something; engage in a contest; measure oneself against others",
     "synset_sayisi": 7
   },
   "ses_mana_tasnif": {
@@ -492,7 +492,15 @@
   "prototip_yayilim_tasnif": {
     "durum": "prototip veya mecaz kolu yok"
   },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "act.v.05", "compete.v.01", "converse.v.01", "play.v.01", "play.v.16", "social_event.n.01"],
+  "kolekzifikasyon_kavramlari": [
+    "act.v.05",
+    "compete.v.01",
+    "converse.v.01",
+    "group_action.n.01",
+    "play.v.01",
+    "play.v.16",
+    "social_event.n.01"
+  ],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
