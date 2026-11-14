@@ -170,3 +170,26 @@ def kolekzifikasyon(kok_kavram, en_az_kok=3, en_cok_kavram=300):
         if len(v) >= en_az_kok and a.split('.')[0] != b.split('.')[0]:
             sonuc.append((a, b, len(v), round(len(v) / math.sqrt(f[a] * f[b]), 3), v[:12]))
     return sorted(sonuc, key=lambda x: (-x[3], -x[2]))
+
+
+def synset_adlari(r, kok_syn, lem_syn):
+    k = r['kok']
+    oy = set(kok_syn.get(k, ()))
+    for e in r.get('kelimeler', []):
+        oy |= lem_syn.get(K.sade(e['lemma']), set())
+    for x in r.get('sozlukler', {}).get('kaikki_vikisozluk') or []:
+        oy |= lem_syn.get(x['u'], set())
+    ad = set()
+    for o in oy:
+        s = synset(o)
+        if s is not None:
+            ad.add(s.name())
+    if not ad:
+        for kel, poz, w in ingilizce_adaylar(r):
+            t = kel.replace(' ', '_')
+            ss = W.synsets(t, pos=poz) if poz else W.synsets(t)
+            if not ss and kel.split():
+                ss = W.synsets(kel.split()[-1], pos=poz) if poz else W.synsets(kel.split()[-1])
+            if ss:
+                ad.add(ss[0].name())
+    return sorted(ad)
