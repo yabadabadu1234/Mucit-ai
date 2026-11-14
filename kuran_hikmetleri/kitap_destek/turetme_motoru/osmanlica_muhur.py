@@ -312,10 +312,10 @@ def topla(dosyalar):
 
 
 SISTEM_C = ("Sen bir Arapça kök sözlük dosyasını Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden ve aynı anda tashih eden mütercimsin. "
-            "Sana bir kök dosyasının TÜM çevrilecek metinleri verilir: önce dosyanın kimliği (kök, kökün mânâsı, fiil sapı, kök kelimeleri), sonra öğeler. Dosyayı bütün olarak gözeterek tutarlı çevir: aynı kök mânâsı için hep aynı Osmanlıca kelime. "
+            "Sana bir kök dosyasının TÜM çevrilecek metinleri verilir: önce dosyanın kimliği (kök, kökün mânâsı, fiil sapı), sonra öğeler. Dosyayı bütün olarak gözeterek tutarlı çevir: aynı kök mânâsı için hep aynı Osmanlıca kelime. "
             "İki tür öğe vardır. (1) {\"t\":\"karsilik\",...}: kelimenin makine üretimi TÜRKÇE karşılığı. Çıktı yine bir TÜRKÇE İFADE olmalı: aynı cümle yapısı, aynı mânâ, aynı dilbilgisi vazifesi (fâil/mef'ûl/masdar); yalnız tek tek sade Türkçe kelimeleri yerleşik Osmanlı karşılığıyla değiştir. "
             "ASLA tek başına bir Arapça kelime, Arapça okunuş veya kelimenin Arapçası döndürme (ör. 'yaratma' için 'halk' DEĞİL 'halk eyleme'; 'yaratan' için 'muhallik' DEĞİL 'halk eden'; 'bir kere yaratma' için 'tehlîke' DEĞİL 'bir kerre halk eyleme'). "
-            "Örnekler: 'yarattı'→'halk eyledi'; 'yaratılmış (dişi)'→'halk olunmuş (müennes)'; 'ayağa kalkan'→'ayağa kalkan, kıyâm eden'; 'terbiye edilme'→'terbiye olunma'. "
+            "Örnekler: 'geldi, verdi'→'geldi, verdi' veya 'vürûd eyledi, i'tâ eyledi'; 'gelme'→'gelme, vürûd'; 'getirme'→'getirme, îsâl'; 'getiren'→'getiren, îsâl eden'; 'nun harfi'→'nûn harfi'; 'yarattı'→'halk eyledi'; 'yaratılmış (dişi)'→'halk olunmuş (müennes)'; 'ayağa kalkan'→'ayağa kalkan, kıyâm eden'; 'terbiye edilme'→'terbiye olunma'. "
             "açıkça bozuk, mânâsız veya var olmayan Türkçe kelime (ör. 'ayağa kalklaşan', isim kökten 'yeryüzü olunmuş') varsa kökün mânâsına ve Arapça kelimeye bakıp yalnız o kısmı düzelt; '(dişi)'→'(müennes)', '(yeri/zamanı)'→'(mekânı/zamanı)'. "
             "(2) {\"t\":\"metin\",\"m\":...}: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, kaynakta bariz kırık veya yanlış olan kelime ve cümleyi düzelt, yeni bilgi ve izah ekleme. "
             "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri aynen koru, kod ve kimlikleri, bâb numaralarını, özel adları, satır sonlarını (\\n), Markdown işaretlerini. "
@@ -351,11 +351,11 @@ def cevir_dosya(anahtar, model, f, dosya_h):
     metin_topla_d(d, A, Bk)
     kok = d.get('kok', '')
     kimlik = {'kok': kok, 'kok_anlami': (d.get('sozlukler', {}).get('kok_anlamlari') or {}).get('turkce', ''), 'fiil_sapi': (d.get('turkce_fiil') or {}).get('sap', ''),
-              'kok_kelimeleri': [(x.get('kelime', ''), (x.get('turkce') or {}).get('yuzey', '')) for x in d.get('kelimeler', [])[:12]]}
+              }
     birim = []
     for m, c in Bk.get(kok, {}).items():
         if 'B|' + kok + '|' + m not in hafiza:
-            birim.append(('B|' + kok + '|' + m, m, {'t': 'karsilik', 'arapca': c.get('arapca', ''), 'kalip': c.get('kalip', c.get('tur', '')), 'turkce': None}))
+            birim.append(('B|' + kok + '|' + m, m, {'t': 'karsilik', 'kalip': c.get('kalip', c.get('tur', '')), 'turkce': None}))
     for m in A:
         if m not in hafiza:
             birim.append((m, m, {'t': 'metin', 'm': None}))
