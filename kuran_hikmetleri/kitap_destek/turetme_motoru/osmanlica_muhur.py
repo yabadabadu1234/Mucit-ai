@@ -284,6 +284,33 @@ def cevir_b(anahtar, model, Bk, paralel):
     dosya.close()
 
 
+def guven_topla(c, d):
+    """Satır başına güven ve durum etiketlerini dosya başına tek yerde toplar (padişah emri); satırlardaki etiket boşaltılır."""
+    say = collections.OrderedDict()
+    for kal, rows in d.get('mustaklar', {}).items():
+        for row in rows:
+            if len(row) > 4 and row[4]:
+                say.setdefault('müştak', collections.Counter())[row[4]] += 1
+    for x in d.get('kelimeler', []):
+        ld = (x.get('turkce') or {}).get('lemma_durum')
+        if ld:
+            say.setdefault('kelime', collections.Counter())[ld] += 1
+    fg = (d.get('turkce_fiil') or {}).get('guven')
+    if fg:
+        say['fiil sapı'] = collections.Counter({fg: 1})
+    for kal, rows in c.get('mustaklar', {}).items():
+        for row in rows:
+            if len(row) > 4:
+                row[4] = ''
+    for x in c.get('kelimeler', []):
+        if isinstance(x.get('turkce'), dict) and 'lemma_durum' in x['turkce']:
+            x['turkce']['lemma_durum'] = ''
+    if isinstance(c.get('turkce_fiil'), dict) and 'guven' in c['turkce_fiil']:
+        c['turkce_fiil']['guven'] = ''
+    c['guven_etiketi'] = {k: dict(v) for k, v in say.items()}
+    return c
+
+
 def yaz(f, kume):
     d = json.load(open(f, encoding='utf-8'))
     d.pop('osmanlica', None)
@@ -297,7 +324,7 @@ def yaz(f, kume):
     hedef = os.path.join(CIKTI, kume, 'kokler', os.path.basename(f))
     os.makedirs(os.path.dirname(hedef), exist_ok=True)
     tmp = hedef + '.yeni'
-    json.dump(donustur(d), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(guven_topla(donustur(d), d), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     os.replace(tmp, hedef)
     return True
 
