@@ -82,7 +82,7 @@ def gez(d, cb):
     cikti = {}
     for k, v in d.items():
         if k == 'mustaklar':
-            cikti[k] = {kal: [[(B(x, {'tur': 'müştak', 'kalip': kal, 'arapca': row[1] if len(row) > 1 else ''}) if i == 3 else (r(x, ['mustaklar']) if isinstance(x, str) else x)) for i, x in enumerate(row)] for row in rows] for kal, rows in v.items()}
+            cikti[k] = {kal: [[(B(x, {'tur': 'müştak', 'kalip': kal, 'arapca': row[1] if len(row) > 1 else ''}) if i == 3 else (r(x, ['mustaklar']) if isinstance(x, str) and i not in (2, 4) else x)) for i, x in enumerate(row)] for row in rows] for kal, rows in v.items()}
         elif k == 'kelimeler':
             ks = []
             for x in v:
@@ -313,7 +313,9 @@ def topla(dosyalar):
 
 SISTEM_C = ("Sen bir Arapça kök sözlük dosyasını Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden ve aynı anda tashih eden mütercimsin. "
             "Sana bir kök dosyasının TÜM çevrilecek metinleri verilir: önce dosyanın kimliği (kök, kökün mânâsı, fiil sapı, kök kelimeleri), sonra öğeler. Dosyayı bütün olarak gözeterek tutarlı çevir: aynı kök mânâsı için hep aynı Osmanlıca kelime. "
-            "İki tür öğe vardır. (1) {\"t\":\"karsilik\",...}: makine üretimi Türkçe karşılık. Aynı mânâ ve aynı dilbilgisi vazifesiyle (fâil/mef'ûl/masdar) Osmanlıcaya çevir; satırı Arapça kelimenin kendisiyle DEĞİŞTİRME; "
+            "İki tür öğe vardır. (1) {\"t\":\"karsilik\",...}: kelimenin makine üretimi TÜRKÇE karşılığı. Çıktı yine bir TÜRKÇE İFADE olmalı: aynı cümle yapısı, aynı mânâ, aynı dilbilgisi vazifesi (fâil/mef'ûl/masdar); yalnız tek tek sade Türkçe kelimeleri yerleşik Osmanlı karşılığıyla değiştir. "
+            "ASLA tek başına bir Arapça kelime, Arapça okunuş veya kelimenin Arapçası döndürme (ör. 'yaratma' için 'halk' DEĞİL 'halk eyleme'; 'yaratan' için 'muhallik' DEĞİL 'halk eden'; 'bir kere yaratma' için 'tehlîke' DEĞİL 'bir kerre halk eyleme'). "
+            "Örnekler: 'yarattı'→'halk eyledi'; 'yaratılmış (dişi)'→'halk olunmuş (müennes)'; 'ayağa kalkan'→'ayağa kalkan, kıyâm eden'; 'terbiye edilme'→'terbiye olunma'. "
             "açıkça bozuk, mânâsız veya var olmayan Türkçe kelime (ör. 'ayağa kalklaşan', isim kökten 'yeryüzü olunmuş') varsa kökün mânâsına ve Arapça kelimeye bakıp yalnız o kısmı düzelt; '(dişi)'→'(müennes)', '(yeri/zamanı)'→'(mekânı/zamanı)'. "
             "(2) {\"t\":\"metin\",\"m\":...}: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, kaynakta bariz kırık veya yanlış olan kelime ve cümleyi düzelt, yeni bilgi ve izah ekleme. "
             "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri aynen koru, kod ve kimlikleri, bâb numaralarını, özel adları, satır sonlarını (\\n), Markdown işaretlerini. "
