@@ -113,11 +113,18 @@ def metin_topla_d(d, A, Bk):
     gez(d, cb)
 
 
+TOK = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû]+(?:['’][A-Za-zçğıöşüâîû]+)*")
+
+
+def tokenler(m):
+    return TOK.findall(m)
+
+
 def donustur(d):
     def cb(tur, m, ctx):
         if tur == 'A':
             return hafiza.get(m, m)
-        return hafiza.get('B|' + ctx['kok'] + '|' + m, m)
+        return TOK.sub(lambda t: hafiza.get('W|' + ctx['kok'] + '|' + t.group(0), t.group(0)), m)
     return gez(d, cb)
 
 
@@ -316,7 +323,7 @@ def yaz(f, kume):
     d.pop('osmanlica', None)
     A, Bk = set(), {}
     metin_topla_d(d, A, Bk)
-    eksik = [m for m in A if m not in hafiza] + ['B|' + k + '|' + m for k, x in Bk.items() for m in x if 'B|' + k + '|' + m not in hafiza]
+    eksik = [m for m in A if m not in hafiza] + ['W|' + k + '|' + t for k, x in Bk.items() for m in x for t in tokenler(m) if 'W|' + k + '|' + t not in hafiza]
     if eksik:
         with open(os.path.join(CIKTI, '_cevrilemeyen.jsonl'), 'a', encoding='utf-8') as h:
             for m in eksik:
@@ -338,14 +345,13 @@ def topla(dosyalar):
     return A, Bk
 
 
-SISTEM_C = ("Sen bir Arapça kök sözlük dosyasını Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden ve aynı anda tashih eden mütercimsin. "
-            "Sana bir kök dosyasının TÜM çevrilecek metinleri verilir: önce dosyanın kimliği (kök, kökün mânâsı, fiil sapı), sonra öğeler. Dosyayı bütün olarak gözeterek tutarlı çevir: aynı kök mânâsı için hep aynı Osmanlıca kelime. "
-            "İki tür öğe vardır. (1) {\"t\":\"karsilik\",...}: kelimenin makine üretimi TÜRKÇE karşılığı. Çıktı yine bir TÜRKÇE İFADE olmalı: aynı cümle yapısı, aynı mânâ, aynı dilbilgisi vazifesi (fâil/mef'ûl/masdar); yalnız tek tek sade Türkçe kelimeleri yerleşik Osmanlı karşılığıyla değiştir. "
-            "ASLA tek başına bir Arapça kelime, Arapça okunuş veya kelimenin Arapçası döndürme (ör. 'yaratma' için 'halk' DEĞİL 'halk eyleme'; 'yaratan' için 'muhallik' DEĞİL 'halk eden'; 'bir kere yaratma' için 'tehlîke' DEĞİL 'bir kerre halk eyleme'). "
-            "Örnekler: 'geldi, verdi'→'geldi, verdi' veya 'vürûd eyledi, i'tâ eyledi'; 'gelme'→'gelme, vürûd'; 'getirme'→'getirme, îsâl'; 'getiren'→'getiren, îsâl eden'; 'nun harfi'→'nûn harfi'; 'yarattı'→'halk eyledi'; 'yaratılmış (dişi)'→'halk olunmuş (müennes)'; 'ayağa kalkan'→'ayağa kalkan, kıyâm eden'; 'terbiye edilme'→'terbiye olunma'. "
-            "açıkça bozuk, mânâsız veya var olmayan Türkçe kelime (ör. 'ayağa kalklaşan', isim kökten 'yeryüzü olunmuş') varsa kökün mânâsına ve Arapça kelimeye bakıp yalnız o kısmı düzelt; '(dişi)'→'(müennes)', '(yeri/zamanı)'→'(mekânı/zamanı)'. "
-            "(2) {\"t\":\"metin\",\"m\":...}: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, kaynakta bariz kırık veya yanlış olan kelime ve cümleyi düzelt, yeni bilgi ve izah ekleme. "
-            "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri aynen koru, kod ve kimlikleri, bâb numaralarını, özel adları, satır sonlarını (\\n), Markdown işaretlerini. "
+SISTEM_C = ("Sen Türkçe kelimeleri Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) çeviren mütercimsin. Sana bir Arapça kök dosyasının kimliği (kök, kökün mânâsı, fiil sapı) ve çevrilecek öğeler verilir; "
+            "dosyayı bütün olarak gözeterek TUTARLI çevir (aynı Türkçe kelime için hep aynı karşılık). İki tür öğe vardır. "
+            "(1) {\"t\":\"karsilik\",\"kelime\":...}: TEK bir Türkçe kelime (eki ve çekimiyle). Aynı ek, zaman, şahıs ve dilbilgisi vazifesiyle Osmanlıca karşılığını yaz; gerekirse iki kelimelik ifade olabilir: "
+            "'getiren'→'îsâl eden'; 'getirilmiş'→'îsâl olunmuş'; 'getirme'→'îsâl'; 'yaratan'→'halk eden'; 'yarattı'→'halk eyledi'; 'yaratılmış'→'halk olunmuş'; 'dişi'→'müennes'; 'yeri'→'mekânı'; 'kere'→'kerre'; 'iki'→'iki'; 'nun'→'nûn'. "
+            "Karşılık yine TÜRKÇE bir ifade olmalı; kelimenin kendi Arapçasını, Arapça okunuşunu veya Arapça bir türev kalıbını (mûsıl, mûsel, tehlîke gibi) ASLA yazma. Karşılığı olmayan kelimeyi aynen döndür (ör. 've', 'bir', özel ad). "
+            "(2) {\"t\":\"metin\",\"m\":...}: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, kaynakta bariz kırık veya yanlış kelime ve cümleyi düzelt, yeni bilgi ve izah ekleme. "
+            "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri aynen koru, kod ve kimlikleri, bâb numaralarını, özel adları, satır sonlarını (\\n), Markdown işaretlerini. Okunuş yazarken ḥ, ʿ gibi bilimsel işaretler kullanma (hâdise, fiil yaz). "
             "Çıktı: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
 
 
@@ -380,9 +386,9 @@ def cevir_dosya(anahtar, model, f, dosya_h):
     kimlik = {'kok': kok, 'kok_anlami': (d.get('sozlukler', {}).get('kok_anlamlari') or {}).get('turkce', ''), 'fiil_sapi': (d.get('turkce_fiil') or {}).get('sap', ''),
               }
     birim = []
-    for m, c in Bk.get(kok, {}).items():
-        if 'B|' + kok + '|' + m not in hafiza:
-            birim.append(('B|' + kok + '|' + m, m, {'t': 'karsilik', 'kalip': c.get('kalip', c.get('tur', '')), 'turkce': None}))
+    for t in sorted({t for m in Bk.get(kok, {}) for t in tokenler(m)}):
+        if 'W|' + kok + '|' + t not in hafiza:
+            birim.append(('W|' + kok + '|' + t, t, {'t': 'karsilik', 'kelime': None}))
     for m in A:
         if m not in hafiza:
             birim.append((m, m, {'t': 'metin', 'm': None}))
@@ -402,13 +408,15 @@ def cevir_dosya(anahtar, model, f, dosya_h):
         for b, k in zip(pc, kor):
             o = dict(b[2])
             if o['t'] == 'karsilik':
-                o['turkce'] = k[0]
+                o['kelime'] = k[0]
             else:
                 o['m'] = k[0]
             ogeler.append(o)
         o = None
         for _ in range(2):
             o = sor_c(anahtar, model, kimlik, ogeler)
+            if o:
+                o = [re.sub(r'[\u0300-\u036f]', '', x) if False else x for x in o]
             if o:
                 break
         if not o:
@@ -439,7 +447,7 @@ if __name__ == '__main__':
             for _ in range(3):
                 cevir_dosya(anahtar, model, f, dosya_h)
                 A, Bk = topla([f])
-                if all(m in hafiza for m in A) and all('B|' + k + '|' + m in hafiza for k, x in Bk.items() for m in x):
+                if all(m in hafiza for m in A) and all('W|' + k + '|' + t in hafiza for k, x in Bk.items() for m in x for t in tokenler(m)):
                     break
             yaz(f, kume)
             return f
