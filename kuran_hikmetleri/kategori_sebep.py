@@ -80,9 +80,28 @@ def sebep_bul(kumeler):
     return None, secilen
 
 
+CEVIRI_YOL = os.path.join(KOK, 'kitap_destek', 'turetme_motoru', 'veri', 'wordnet_tanim_tr.json')
+
+
+def ceviri_yukle():
+    return json.load(open(CEVIRI_YOL, encoding='utf-8')) if os.path.exists(CEVIRI_YOL) else {}
+
+
 class Etiket:
+    istenen = set()
+
     def __init__(self):
-        self.en2tr = yukle_en2tr()
+        self.ceviri = ceviri_yukle()
+
+    def tanim(self, ad):
+        en = W.synset(ad).definition()
+        tr = self.ceviri.get(ad)
+        if not tr:
+            Etiket.istenen.add(ad)
+        return tr, en
+
+    def lem(self, ad):
+        return W.synset(ad).lemmas()[0].name().replace('_', ' ')
 
     def tr(self, ad):
         s = W.synset(ad)
@@ -90,7 +109,8 @@ class Etiket:
         return ad_ if s.lexname() == 'noun.Tops' else ad_ + ' (' + LEX_TR.get(s.lexname(), s.lexname()) + ')'
 
     def tam(self, ad):
-        return '«' + self.tr(ad) + '»: ' + W.synset(ad).definition()
+        tr, en = self.tanim(ad)
+        return '«' + self.tr(ad) + '»: ' + (tr + ' (İngilizce: ' + en + ')' if tr else en)
 
 
 def cebel_ozetleri():
@@ -128,7 +148,7 @@ def sebepleri_yaz(kat, dugumler, anahtar):
         c = kat[k]
         u = anahtar[c['u']]
         ad = c['ad']
-        s, t = None, 1
+        s, t, b = None, 1, ad
         if u == 'ses':
             if c['d'] == 0:
                 s = 'kökün ilk harfi ' + BOLGE_HARF.get(ad, ad) + ' bölgesinden çıkar'
@@ -143,9 +163,11 @@ def sebepleri_yaz(kat, dugumler, anahtar):
                 s = 'kökün kelimeleri WordNet\'te «' + ad + '» başlığı altındaki kavramlara bağlanır'
             elif c['d'] == 1:
                 s = 'kökün kelimeleri WordNet\'te «' + LEX_TR.get(ad, ad) + '» (' + ad + ') türü kavramlara bağlanır'
+                b = LEX_TR.get(ad, ad)
             else:
                 try:
                     s = et.tam(ad)
+                    b = et.tr(ad)
                 except Exception:
                     s = ad
         elif u == 'gomme':
@@ -170,15 +192,15 @@ def sebepleri_yaz(kat, dugumler, anahtar):
             ek = (' (' + str(bilinmeyen) + ' kökün WordNet karşılığı yok)') if bilinmeyen else ''
             if not birimler:
                 s, t = 'sebep belirlenemedi: üyelerin WordNet karşılığı yok', 0
-                sonuc[k] = {'s': s, 't': 0, 'tek_g': None, 'coklu': []}
+                sonuc[k] = {'s': s, 't': 0, 'tek_g': None, 'coklu': [], 'b': 'sebebi belirsiz küme'}
                 continue
             if g:
                 s = 'ortak sebep: ' + et.tam(g) + ek
-                sonuc[k] = {'s': s, 't': 1, 'tek_g': g, 'coklu': []}
+                sonuc[k] = {'s': s, 't': 1, 'tek_g': g, 'coklu': [], 'b': et.tr(g)}
                 continue
             t = 0
             s = 'çok sebepli, içinde daha fazla küme var: ' + '; '.join('«' + et.tr(x) + '» (' + str(n) + ' birim)' for x, n in liste)
-            sonuc[k] = {'s': s, 't': 0, 'tek_g': None, 'coklu': liste}
+            sonuc[k] = {'s': s, 't': 0, 'tek_g': None, 'coklu': liste, 'b': ('çok sebepli: «' + et.lem(liste[0][0]) + '»' + (' ve ' + str(len(liste) - 1) + ' sebep daha' if len(liste) > 1 else '')) if liste else 'çok sebepli küme', 'alt': [[n, et.tam(x)] for x, n in liste]}
             continue
         elif u == 'muhassas':
             s = 'el-Muhassas\'ın «' + ad + '» ' + ('kitabında' if c['d'] == 0 else 'bâbında') + ' bu kökün biçimleri, kitabın boyuna göre en çok burada geçer'
@@ -201,5 +223,44 @@ def sebepleri_yaz(kat, dugumler, anahtar):
             s = 'kök Kur\'ân\'da geçiyor' if 'var' in ad else 'kök Kur\'ân\'da geçmiyor; başka lügatlerden alındı'
         elif u == 'etymarab':
             s = 'EtymArab\'da bu kökün maddesi ' + ('dolu' if ad == 'dolu' else 'yalnız yer tutucu')
-        sonuc[k] = {'s': s, 't': t, 'tek_g': None, 'coklu': []}
+        sonuc[k] = {'s': s, 't': t, 'tek_g': None, 'coklu': [], 'b': b}
     return sonuc
+
+
+def ceviri_uret():
+    import sys
+    sys.path.insert(0, KOK)
+    import kategori_yerlesim as KY
+    from transformers import MarianMTModel, MarianTokenizer
+    dugumler = KY.yukle()
+    kat, _ = KY.kategoriler(dugumler)
+    sebepleri_yaz(kat, dugumler, [a for a, _ in KY.USULLER])
+    et = Etiket()
+    for d in dugumler:
+        for ad in d['syn'][:3]:
+            et.tanim(ad)
+    gerek = sorted(Etiket.istenen, key=lambda a: len(W.synset(a).definition()))
+    print('çevrilecek tanım', len(gerek), flush=True)
+    ad_ = 'Helsinki-NLP/opus-mt-tc-big-en-tr'
+    tok = MarianTokenizer.from_pretrained(ad_)
+    m = MarianMTModel.from_pretrained(ad_)
+    sonuc = dict(et.ceviri)
+    for i in range(0, len(gerek), 24):
+        grup = gerek[i:i + 24]
+        b = tok([W.synset(a).definition() for a in grup], return_tensors='pt', padding=True, truncation=True, max_length=256)
+        o = m.generate(**b, max_new_tokens=160, num_beams=4)
+        for a, t in zip(grup, tok.batch_decode(o, skip_special_tokens=True)):
+            sonuc[a] = t
+        if (i // 24) % 20 == 0:
+            tmp = CEVIRI_YOL + '.yeni'
+            json.dump(sonuc, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False)
+            os.replace(tmp, CEVIRI_YOL)
+            print(i, len(gerek), flush=True)
+    tmp = CEVIRI_YOL + '.yeni'
+    json.dump(sonuc, open(tmp, 'w', encoding='utf-8'), ensure_ascii=False)
+    os.replace(tmp, CEVIRI_YOL)
+    print('bitti', len(sonuc), flush=True)
+
+
+if __name__ == '__main__':
+    ceviri_uret()

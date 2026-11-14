@@ -97,6 +97,30 @@ def yukle():
     return dugumler
 
 
+def ek_bilgi(dugumler):
+    from nltk.corpus import wordnet as W
+    ceviri = SB.ceviri_yukle()
+    ek = {}
+    for dosya in glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json')):
+        d = json.load(open(dosya, encoding='utf-8'))
+        kw = []
+        for k in d.get('kelimeler', []):
+            tr = (k.get('turkce') or {}).get('yuzey', '')
+            kw.append([k.get('kelime', ''), tr, k.get('adet', 0)])
+        ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
+        ek[d['kok']] = (kw, ka.get('turkce', ''))
+    sonuc = []
+    for dg in dugumler:
+        kw, mana = ek.get(dg['kok'], ([], dg['mana']))
+        e = []
+        for ad in dg['syn'][:3]:
+            sn = W.synset(ad)
+            tr = ceviri.get(ad)
+            e.append([sn.lemmas()[0].name().replace('_', ' '), tr or sn.definition(), 1 if tr else 0])
+        sonuc.append({'kw': kw, 'mana': mana, 'e': e, 'l': sorted({l.name().replace('_', ' ') for ad in dg['syn'] for l in W.synset(ad).lemmas()})[:12]})
+    return sonuc
+
+
 def kategoriler(dugumler):
     kimlik = {}
     kat = []
@@ -477,6 +501,7 @@ def yaz():
     u_derin = {}
     for c in kat:
         u_derin[c['u']] = max(u_derin.get(c['u'], 0), c['d'] + 1)
+    ek = ek_bilgi(dugumler)
     dgs = []
     leaf = {}
     for k, c in enumerate(kat):
@@ -488,11 +513,11 @@ def yaz():
             ui = [a for a, _ in USULLER].index(u)
             for d in range(len(yol)):
                 s.append(kimlik[(ui, tuple(yol[:d + 1]))])
-        dgs.append({'k': dg['kok'], 'x': int(izgara[i][0]), 'y': int(izgara[i][1]), 's': s, 'm': dg['mana'][:140], 'w': dg['kelime'], 'g': dg['gecis'], 'q': 1 if dg['kuran'] else 0})
+        dgs.append({'k': dg['kok'], 'x': int(izgara[i][0]), 'y': int(izgara[i][1]), 's': s, 'm': ek[i]['mana'], 'kw': ek[i]['kw'], 'e': ek[i]['e'], 'l': ek[i]['l'], 'w': dg['kelime'], 'g': dg['gecis'], 'q': 1 if dg['kuran'] else 0})
     veri = {
         'usuller': [{'ad': ad, 'renk': usul_renk[i], 'derin': u_derin.get(i, 0)} for i, (a, ad) in enumerate(USULLER)],
         'mertebe': mertebe,
-        'siniflar': [{'u': c['u'], 'm': c['d'] + 1, 'ad': c['ad'], 'x': round(dai[k][0], 1), 'y': round(dai[k][1], 1), 'r': round(dai[k][2], 1), 'n': len(c['uye']), 'a': c['ata'], 'c': c['renk'], 's': sebep[k]['s'], 't': sebep[k]['t']} for k, c in enumerate(kat)],
+        'siniflar': [{'u': c['u'], 'm': c['d'] + 1, 'ad': c['ad'], 'x': round(dai[k][0], 1), 'y': round(dai[k][1], 1), 'r': round(dai[k][2], 1), 'n': len(c['uye']), 'a': c['ata'], 'c': c['renk'], 'b': sebep[k]['b'], 's': sebep[k]['s'], 't': sebep[k]['t'], 'al': sebep[k].get('alt', [])} for k, c in enumerate(kat)],
         'dugumler': dgs,
         'bolge': {'siniflar': [[round(m[0], 1), round(m[1], 1), round(m[2], 1)] for m in b_mutlak], 'kopya': [[a, u, round(x), round(y)] for a, u, x, y in b_kopya], 'usul_daireleri': [[round(x, 1), round(y, 1), round(r, 1), u] for x, y, r, u in b_bolge]},
         'olcut': {'sebep_ozeti': sebep_ozeti, 'dugum': n, 'kategori': len(kat), 'uyelik': toplam, 'daire_disinda_kalan_uyelik': ihlal, 'hudutta_duran_uyelik_orani': round(kenarda / toplam, 3),
@@ -524,6 +549,12 @@ SAYFA = r"""<!doctype html>
 #bilgi{margin-top:8px;padding:8px;border:1px solid var(--line);border-radius:6px;min-height:60px}
 #bilgi b.k{font-size:20px;direction:rtl;display:inline-block}
 .not{color:var(--mut);font-size:12px}
+#ipucu{position:absolute;display:none;max-width:380px;padding:7px 9px;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:6px;font-size:12px;line-height:1.45;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:5}
+#sonuc{max-height:190px;overflow:auto;margin-top:4px}#sonuc div{padding:3px 4px;border-bottom:1px solid var(--line);cursor:pointer;font-size:12px}#sonuc div:hover{background:var(--bg)}#sonuc b{font-size:15px;direction:rtl;display:inline-block;margin-left:6px}
+details summary{cursor:pointer;font-size:13px;color:var(--fg)}details ul li{margin:3px 0}
+.kk{padding:2px 4px;margin:1px;border:1px solid var(--line);border-radius:4px;cursor:pointer;display:inline-block;font-size:12px}.kk:hover{background:var(--bg)}.kk b{font-size:14px;direction:rtl;display:inline-block}
+.bag{cursor:pointer;text-decoration:underline}.bas{font-size:13px;font-weight:bold}.kutu{margin:5px 0;padding:5px 7px;border-left:3px solid var(--line);font-size:12px;line-height:1.45;color:var(--fg)}.liste{max-height:240px;overflow:auto;margin-top:4px}
+#bilgi,#kart{color:var(--fg)}
 select,input[type=range]{width:100%;font:inherit;background:var(--bg);color:var(--fg)}
 select{padding:4px;border:1px solid var(--line);border-radius:4px}
 .yol{margin:6px 0}.sebep{font-size:11px;color:var(--mut);margin:1px 0 0 14px;line-height:1.35}.yol i{font-style:normal;color:var(--mut)}
@@ -533,21 +564,29 @@ select{padding:4px;border:1px solid var(--line);border-radius:4px}
 <div id="yan">
 <p><a href="kuran_hikmetleri_kitap.html">&larr; Kitap</a> · <a href="kuran_hikmetleri_lugat.html">Lugat</a></p>
 <h1>Kategori Yerleşimi</h1>
-<div class="not" id="ozet"></div>
+<details id="nedir" open><summary>Bu sayfa nedir, nasıl okunur?</summary>
+<div class="not" style="margin-top:4px">Kur'ân'ın ve Arapça lügatlerin <b id="ozetK"></b> kökü, on ayrı usulle (sesine, anlamına, konusuna, kitapta geçişine göre…) sınıflandı. Her sınıf bir <b>daire</b>, her kök bir <b>nokta</b>. Bir kök, ait olduğu bütün dairelerin içindedir; böylece <b>hangi kökler hangi bakımdan akraba</b> bir bakışta görülür.<ul style="margin:4px 0 4px 16px;padding:0">
+<li><b>Bir köke bak:</b> aşağıdaki kutuya Arapça kökü, Türkçe ya da İngilizce bir anlamı yaz (örn. <i>دكك</i>, <i>ezmek</i>, <i>crush</i>).</li>
+<li><b>Bir daireyi öğren:</b> daireye gel (bilgisayar) ya da dokun; <i>neden</i> bu köklerin bir arada olduğu yazılı çıkar.</li>
+<li><b>Renk</b> usulü gösterir; daire koyulaştıkça mertebe (üst başlık) yükselir. <b>⚠</b> = bu dairedeki kökler tek sebeple toplanmıyor, içinde daha fazla küme var.</li>
+<li>Çift dokunuş yakınlaştırır; iki parmak/tekerlek büyütür; sürükleyerek gez. Mertebe çubuğu daireleri en ayrıntılıdan en genele doğru gösterir.</li>
+<li>Anlam açıklamalarının Türkçesi makine çevirisidir, İngilizce aslı yanında yazılıdır.</li></ul></div></details>
+<h2>KÖK ARA</h2><input id="ara" placeholder="Arapça kök, Türkçe veya İngilizce anlam" autocomplete="off"><div id="sonuc"></div>
+<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Bir noktaya dokun ya da yukarıdan ara.</div>
+<h2>SEÇİLEN KATEGORİ</h2><div id="kart" class="not">Bir daireye dokun: bu köklerin neden bir arada olduğu burada tam yazılır.</div>
 <h2>GÖRÜNÜM</h2><select id="mod"><option value="bolge">Usul bölgeleri: ayrık, iç içe daireler</option><option value="duzlem">Tek düzlem: kökler dairelerin kesişiminde</option></select>
-<h2>KÖK ARA</h2><input id="ara" placeholder="örn. دكك" autocomplete="off">
 <h2>MERTEBE (en alttan yukarı)</h2>
 <input type="range" id="mert" min="1" max="4" value="4"><div class="not" id="mertYazi"></div>
 <label><input type="checkbox" id="alt"> alt mertebeleri de göster</label>
 <h2>DÜĞÜM RENGİ</h2><select id="renkUsul"></select>
 <h2>USULLER (daire rengi = usul tonu; koyu = üst mertebe)</h2><div id="usuller"></div>
-<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Çift tık: imlecin olduğu yere 2 kat yakınlaşır (yer sabit kalır). Shift+tık: tıklanan daireye yakınlaşır. Düğümün üstüne gel veya tıkla: ait olduğu daireler çizilir. Tekerlek, +/− ve 0 tuşları da çalışır.</div>
 <h2>KURALLAR</h2>
 <div class="not">Düğümler yalnız dik eksenlerde izgara noktasına oturur; iki düğüm arası en az <span id="adim"></span> birim; bir hücrede bir düğüm. Her kategorinin dairesi üyelerini ve alt kategori dairelerini kuşatır (<span id="ihlal"></span> ihlâl).</div>
 <div class="not" id="olcut" style="margin-top:6px"></div>
 <div class="not" id="sebepOzet" style="margin-top:6px"></div>
+<div class="not" id="ozet" style="margin-top:6px"></div>
 </div>
-<div id="sahne"><canvas id="c"></canvas><div id="zum"><button id="zp" title="Yakınlaştır (+)">+</button><button id="zm" title="Uzaklaştır (-)">&minus;</button><button id="zf" title="Sığdır (0)">Sığdır</button></div></div>
+<div id="sahne"><canvas id="c"></canvas><div id="ipucu"></div><div id="zum"><button id="zp" title="Yakınlaştır (+)">+</button><button id="zm" title="Uzaklaştır (-)">&minus;</button><button id="zf" title="Sığdır (0)">Sığdır</button></div></div>
 </div>
 <script>
 const V=/*VERI*/;
@@ -561,7 +600,10 @@ const cell=new Map();V.dugumler.forEach((d,i)=>cell.set(d.x+','+d.y,i));
 const KOP=V.bolge.kopya;const kopHuc=new Map();KOP.forEach((k,i)=>kopHuc.set(k[2]+','+k[3],i));
 const nodKop=new Map();KOP.forEach((k,i)=>{if(!nodKop.has(k[0]))nodKop.set(k[0],[]);nodKop.get(k[0]).push(i)});
 const leaf=V.dugumler.map(n=>{const g=new Map();n.s.forEach(k=>{const c=V.siniflar[k];if(!g.has(c.u)||V.siniflar[g.get(c.u)].m<c.m)g.set(c.u,k)});return g});
-document.getElementById('adim').textContent=adim;
+document.getElementById('adim').textContent=adim;document.getElementById('ozetK').textContent=V.olcut.dugum;
+const esc=t=>String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const cocuk=V.siniflar.map(()=>[]);V.siniflar.forEach((c,k)=>{if(c.a>=0)cocuk[c.a].push(k)});const uyeler=V.siniflar.map(()=>[]);V.dugumler.forEach((n,i)=>n.s.forEach(k=>uyeler[k].push(i)));let seck=-1;
+const tr=t=>(t||'').toLocaleLowerCase('tr');
 document.getElementById('ihlal').textContent=V.olcut.daire_disinda_kalan_uyelik;
 document.getElementById('ozet').textContent=V.olcut.dugum+' kök · '+V.olcut.kategori+' kategori · '+V.olcut.uyelik+' üyelik · '+V.mertebe+' mertebe';
 document.getElementById('sebepOzet').innerHTML='<b>Sebep durumu</b> (⚠ = birden çok sebep, içinde daha fazla küme var):<br>'+Object.entries(V.olcut.sebep_ozeti).map(([u,o])=>u+': '+o.tek_sebepli+' tek'+(o.cok_sebepli?', <b>'+o.cok_sebepli+' çok sebepli</b>':'')).join('<br>');
@@ -588,7 +630,8 @@ let bekle=false;function ciz(){if(bekle)return;bekle=true;requestAnimationFrame(
 function ciz_(){
 cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,H);cx.fillStyle=renk('--bg');cx.fillRect(0,0,W,H);
 if(mod==='bolge'){V.bolge.usul_daireleri.forEach(u=>{if(!goster.has(u[3]))return;const x=sx(u[0]),y=sy(u[1]),r=u[2]*S;if(!dairesel(x,y,r)&&!(r>Math.hypot(W,H)))return;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.fillStyle=V.usuller[u[3]].renk+'12';cx.fill();cx.strokeStyle=V.usuller[u[3]].renk;cx.lineWidth=2;cx.stroke();cx.fillStyle=V.usuller[u[3]].renk;cx.font='bold 13px sans-serif';cx.fillText(V.usuller[u[3]].ad,x-r*0.8,y-r-6)})}
-V.siniflar.forEach((c,k)=>{if(!gorunur(c))return;const g=cd(c,k);const x=sx(g[0]),y=sy(g[1]),r=g[2]*S;if(r<(mod==='bolge'?3:5)||!dairesel(x,y,r))return;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.strokeStyle=c.c;cx.globalAlpha=.85;cx.lineWidth=c.m===mert?1.4:1;cx.stroke();cx.globalAlpha=1;if(r>46){cx.fillStyle=c.c;cx.textAlign='center';cx.font='bold 11px sans-serif';cx.fillText((c.t?'':'⚠ ')+c.ad+' ('+c.n+')',x,y-r-16);cx.font='10px sans-serif';let t=c.s,w=Math.max(r*2,160);while(t.length>4&&cx.measureText(t).width>w)t=t.slice(0,-4)+'…';cx.fillText(t,x,y-r-4);cx.textAlign='start'}});
+V.siniflar.forEach((c,k)=>{if(!gorunur(c))return;const g=cd(c,k);const x=sx(g[0]),y=sy(g[1]),r=g[2]*S;if(r<(mod==='bolge'?3:5)||!dairesel(x,y,r))return;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.strokeStyle=c.c;cx.globalAlpha=.85;cx.lineWidth=c.m===mert?1.4:1;cx.stroke();cx.globalAlpha=1;if(r>46){cx.fillStyle=c.c;cx.textAlign='center';cx.font='bold 11px sans-serif';let t=(c.t?'':'⚠ ')+c.b+' ('+c.n+')',w=Math.max(r*2.2,180);while(t.length>6&&cx.measureText(t).width>w)t=t.slice(0,-2);if(t.length<((c.t?'':'⚠ ')+c.b+' ('+c.n+')').length)t+='…';cx.fillText(t,x,y-r-5);cx.textAlign='start'}});
+if(seck>=0){const c=V.siniflar[seck],g=cd(c,seck);cx.beginPath();cx.arc(sx(g[0]),sy(g[1]),g[2]*S,0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2.5;cx.setLineDash([7,4]);cx.stroke();cx.setLineDash([])}
 const px=Math.min(16,Math.max(1.4,adim*S*0.55));
 if(mod==='duzlem'){V.dugumler.forEach((n,i)=>{const x=sx(n.x),y=sy(n.y);if(x<-px||y<-px||x>W+px||y>H+px)return;cx.fillStyle=leafRenk(i,renkU);cx.fillRect(x-px/2,y-px/2,px,px)});
 if(S*adim>16){cx.font=Math.max(7,Math.min(15,S*adim*0.32))+'px Georgia';cx.textAlign='center';cx.fillStyle=renk('--fg');V.dugumler.forEach(n=>{const x=sx(n.x),y=sy(n.y);if(x<0||y<0||x>W||y>H)return;cx.fillText(n.k,x,y-px/2-2)});cx.textAlign='start'}}
@@ -601,9 +644,37 @@ n.s.forEach(k=>{const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*
 cx.beginPath();cx.arc(sx(n.x),sy(n.y),Math.max(6,px),0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2;cx.stroke()}
 else{const ks=(nodKop.get(a)||[]).map(i=>KOP[i]);n.s.forEach(k=>{const g=V.bolge.siniflar[k],c=V.siniflar[k];cx.beginPath();cx.arc(sx(g[0]),sy(g[1]),g[2]*S,0,6.2832);cx.strokeStyle=c.c;cx.lineWidth=2;cx.stroke()});
 const p0=ks[0];ks.forEach(k=>{cx.beginPath();cx.arc(sx(k[2]),sy(k[3]),Math.max(6,px),0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2;cx.stroke();if(p0&&k!==p0){cx.beginPath();cx.moveTo(sx(p0[2]),sy(p0[3]));cx.lineTo(sx(k[2]),sy(k[3]));cx.strokeStyle='rgba(120,120,120,.35)';cx.lineWidth=1;cx.stroke()}})}}}
-function bilgi(i){const el=document.getElementById('bilgi');if(i<0){el.innerHTML='<span class="not">Bir düğümün üstüne gel veya tıkla.</span>';return}
+function bag(k,t){return '<span class="bag" data-k="'+k+'" style="color:'+V.siniflar[k].c+'">'+esc(t)+'</span>'}
+function bilgi(i){const el=document.getElementById('bilgi');if(i<0){el.innerHTML='<span class="not">Bir noktaya dokun ya da yukarıdan ara.</span>';return}
 const n=V.dugumler[i];const by={};n.s.forEach(k=>{const c=V.siniflar[k];(by[c.u]=by[c.u]||[]).push(c)});
-el.innerHTML='<b class="k">'+n.k+'</b> <span class="not">'+(n.q?'Kur\'ân\'da var':'Kur\'ân\'da yok')+' · '+n.w+' kelime · '+n.g+' geçiş</span><div>'+(n.m||'')+'</div><div style="margin-top:6px">'+Object.keys(by).map(u=>'<div class="yol"><span class="sw" style="background:'+V.usuller[u].renk+'"></span> '+by[u].sort((a,b)=>a.m-b.m).map(c=>'<span style="color:'+c.c+'"><b>'+(c.t?'':'⚠ ')+c.ad+'</b></span>').join(' <i>›</i> ')+'<div class="sebep">'+by[u].sort((a,b)=>a.m-b.m).map(c=>'<div><span style="color:'+c.c+'">●</span> '+c.s+'</div>').join('')+'</div></div>').join('')+'</div><div class="not" style="margin-top:6px">'+n.s.length+' kategorinin içinde.</div>'}
+const kw=n.kw.slice().sort((a,b)=>b[2]-a[2]);
+el.innerHTML='<b class="k" style="font-size:22px">'+n.k+'</b> <span class="not">'+(n.q?'Kur\'ân\'da var':'Kur\'ân\'da yok')+' · '+n.w+' kelime · '+n.g+' geçiş</span>'
++(n.m?'<div class="kutu"><b>Anlamı:</b> '+esc(n.m)+'</div>':'<div class="kutu not">Bu kök için Türkçe anlam kaydı yok.</div>')
++(n.e.length?'<div class="kutu"><b>İngilizce karşılığı (WordNet):</b>'+n.e.map(x=>'<div>• <i>'+esc(x[0])+'</i>: '+esc(x[1])+(x[2]?' <span class="not">(otomatik çeviri)</span>':'')+'</div>').join('')+'</div>':'')
++(kw.length?'<div class="kutu"><b>Kur\'ân\'daki kelimeleri:</b><div class="liste">'+kw.map(x=>'<div><span style="direction:rtl;display:inline-block;font-size:15px">'+esc(x[0])+'</span> — '+esc(x[1]||'?')+' <span class="not">('+x[2]+' yer)</span></div>').join('')+'</div></div>':'')
++'<div style="margin-top:6px"><b>Ait olduğu kategoriler</b> <span class="not">('+n.s.length+'; adına dokun, sebebini oku)</span></div>'
++Object.keys(by).map(u=>'<div class="yol"><span class="sw" style="background:'+V.usuller[u].renk+'"></span> <span class="not">'+esc(V.usuller[u].ad)+'</span><br>'+by[u].sort((a,b)=>a.m-b.m).map(c=>bag(V.siniflar.indexOf(c),(c.t?'':'⚠ ')+c.b)).join(' <i>›</i> ')+'</div>').join('')}
+function kart(k,git_){seck=k;const c=V.siniflar[k],el=document.getElementById('kart');
+const zincir=[];for(let a=k;a>=0;a=V.siniflar[a].a)zincir.unshift(a);
+const alt=cocuk[k].slice().sort((a,b)=>V.siniflar[b].n-V.siniflar[a].n);
+const uy=uyeler[k].slice().sort((a,b)=>V.dugumler[b].g-V.dugumler[a].g);
+const ust=c.a>=0?V.siniflar[c.a]:null;
+el.innerHTML='<div class="bas"><span class="sw" style="background:'+c.c+'"></span> '+esc((c.t?'':'⚠ ')+c.b)+'</div>'
++'<div class="not">'+esc(V.usuller[c.u].ad)+' · mertebe '+c.m+' · <b>'+c.n+'</b> kök</div>'
++'<div class="not" style="margin:3px 0">'+zincir.map(a=>bag(a,V.siniflar[a].b)).join(' <i>›</i> ')+'</div>'
++'<div class="kutu" style="border-color:'+c.c+'"><b>Bu kökler neden bir arada?</b><br>'+esc(c.s)+'</div>'
++(c.al&&c.al.length?'<div class="kutu"><b>İçindeki sebepler:</b>'+c.al.map(x=>'<div>• <b>'+x[0]+' birim:</b> '+esc(x[1])+'</div>').join('')+'</div>':'')
++(ust?'<div class="kutu not"><b>Üst kategori</b> '+bag(c.a,ust.b)+' ('+ust.n+' kök): '+esc(ust.s)+'</div>':'')
++(alt.length?'<div style="margin-top:4px"><b>Alt kategoriler</b> <span class="not">('+alt.length+')</span></div><div class="liste">'+alt.slice(0,80).map(a=>'<div>• '+bag(a,(V.siniflar[a].t?'':'⚠ ')+V.siniflar[a].b)+' <span class="not">('+V.siniflar[a].n+')</span></div>').join('')+(alt.length>80?'<div class="not">… ve '+(alt.length-80)+' tane daha</div>':'')+'</div>':'')
++'<div style="margin-top:4px"><b>Kökler</b> <span class="not">(en çok geçenden; dokun)</span></div><div class="liste">'+uy.slice(0,150).map(i=>'<span class="kk" data-i="'+i+'" title="'+esc(V.dugumler[i].m)+'"><b>'+V.dugumler[i].k+'</b> <span class="not">'+esc((V.dugumler[i].m||'').split(/[:;,.]/).slice(0,2).join(',').slice(0,28))+'</span></span>').join('')+(uy.length>150?'<div class="not">… ve '+(uy.length-150)+' kök daha (daireyi yakınlaştırınca noktalar görünür)</div>':'')+'</div>'
++'<div style="margin-top:6px"><button id="kgit" style="font:inherit;padding:4px 8px;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:5px;cursor:pointer">Bu daireye yakınlaş</button></div>';
+document.getElementById('kgit').onclick=()=>daireGit(k);ciz()}
+function daireGit(k){const g=cd(V.siniflar[k],k);const ns=Math.min(120,Math.min(W,H)/2/(g[2]*1.15));git(ns,W/2-ns*g[0],H/2-ns*g[1])}
+function kokaGit(i){sec=i;const h=mod==='duzlem'?[V.dugumler[i].x,V.dugumler[i].y]:[KOP[nodKop.get(i)[0]][2],KOP[nodKop.get(i)[0]][3]];const ns=Math.max(S,14);git(ns,W/2-ns*h[0],H/2-ns*h[1]);bilgi(i);try{history.replaceState(null,'','#'+encodeURIComponent(V.dugumler[i].k))}catch(e){}}
+function katAt(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;let best=-1,br=1e18;V.siniflar.forEach((c,k)=>{if(!gorunur(c))return;const g=cd(c,k);if(Math.hypot(wx-g[0],wy-g[1])<=g[2]&&g[2]<br){br=g[2];best=k}});return best}
+document.getElementById('yan').addEventListener('click',e=>{const t=e.target.closest('[data-k],[data-i]');if(!t)return;if(t.dataset.k!==undefined){const k=+t.dataset.k;kart(k);if(!window.matchMedia('(max-width:700px)').matches||true)daireGit(k)}else kokaGit(+t.dataset.i)});
+const ip=document.getElementById('ipucu');
+function ipucuGoster(k,mx,my){if(k<0){ip.style.display='none';return}const c=V.siniflar[k];ip.innerHTML='<b style="color:'+c.c+'">'+esc((c.t?'':'⚠ ')+c.b)+'</b> <span class="not">· '+esc(V.usuller[c.u].ad)+' · '+c.n+' kök</span><br>'+esc(c.s)+(c.al&&c.al.length?'<br>'+c.al.map(x=>'• '+x[0]+': '+esc(x[1])).join('<br>'):'')+'<br><span class="not">Tam bilgi için dokun/tıkla.</span>';ip.style.display='block';const w=ip.offsetWidth,h=ip.offsetHeight;ip.style.left=Math.max(4,Math.min(W-w-4,mx+14))+'px';ip.style.top=Math.max(4,Math.min(H-h-4,my+14))+'px'}
 function ata(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;const gx=Math.round(wx/adim)*adim,gy=Math.round(wy/adim)*adim;if(mod==='duzlem'){const i=cell.get(gx+','+gy);return i===undefined?-1:i}const ci=kopHuc.get(gx+','+gy);return ci===undefined?-1:KOP[ci][0]}
 const ex=e=>e.clientX-cv.getBoundingClientRect().left,ey=e=>e.clientY-cv.getBoundingClientRect().top;
 let sur=false,lx=0,ly=0,hareket=0;
@@ -613,21 +684,31 @@ function yakin(f,ox,oy,yumusak){cancelAnimationFrame(anim);const ns=Math.min(120
 let tikZ=0;const ptr=new Map();let pdist=0,pm=[0,0];
 function pdis(){const v=[...ptr.values()];return Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}
 function pmer(){const v=[...ptr.values()];return [(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2]}
-cv.addEventListener('pointerdown',e=>{cancelAnimationFrame(anim);ptr.set(e.pointerId,[ex(e),ey(e)]);if(ptr.size===2){pdist=pdis();pm=pmer();hareket=100}sur=true;lx=ex(e);ly=ey(e);hareket=0;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
+cv.addEventListener('pointerdown',e=>{ip.style.display='none';cancelAnimationFrame(anim);ptr.set(e.pointerId,[ex(e),ey(e)]);if(ptr.size===2){pdist=pdis();pm=pmer();hareket=100}sur=true;lx=ex(e);ly=ey(e);hareket=0;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
 cv.addEventListener('pointermove',e=>{if(ptr.has(e.pointerId))ptr.set(e.pointerId,[ex(e),ey(e)]);
 if(ptr.size===2){const d=pdis(),m=pmer();TX+=m[0]-pm[0];TY+=m[1]-pm[1];if(pdist>0)yakin(d/pdist,m[0],m[1]);pdist=d;pm=m;hareket=100;return}
-if(sur){const ddx=ex(e)-lx,ddy=ey(e)-ly;hareket+=Math.abs(ddx)+Math.abs(ddy);lx=ex(e);ly=ey(e);if(hareket>=4){TX+=ddx;TY+=ddy;ciz()}}else{const i=ata(ex(e),ey(e));if(i!==hov){hov=i;bilgi(hov>=0?hov:sec);ciz()}}});
+if(sur){const ddx=ex(e)-lx,ddy=ey(e)-ly;hareket+=Math.abs(ddx)+Math.abs(ddy);lx=ex(e);ly=ey(e);if(hareket>=4){TX+=ddx;TY+=ddy;ciz()}}else if(e.pointerType==='mouse'){const i=ata(ex(e),ey(e));if(i!==hov){hov=i;bilgi(hov>=0?hov:sec);ciz()}ipucuGoster(i>=0?-1:katAt(ex(e),ey(e)),ex(e),ey(e))}});
+cv.addEventListener('pointerleave',()=>{ip.style.display='none'});
 function birak(e){ptr.delete(e.pointerId);if(ptr.size<2)pdist=0;if(ptr.size===1){const v=[...ptr.values()][0];lx=v[0];ly=v[1];hareket=100}if(ptr.size===0){sur=false;cv.style.cursor='grab'}}
 function daireyeGit(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;const yar=Math.min(W,H)/2/S*0.9;let best=-1,br=-1,small=-1,sr=1e18;V.siniflar.forEach((c,k)=>{if(!goster.has(c.u))return;const g=cd(c,k);if(Math.hypot(wx-g[0],wy-g[1])<=g[2]){if(g[2]<yar*0.95&&g[2]>br){br=g[2];best=k}if(g[2]<sr){sr=g[2];small=k}}});const k=best>=0?best:small;if(k<0)return;const g=cd(V.siniflar[k],k);const ns=Math.min(120,Math.min(W,H)/2/(g[2]*1.15));git(ns,W/2-ns*g[0],H/2-ns*g[1])}
-cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h<4){const i=ata(ex(e),ey(e));sec=i;bilgi(i);ciz();if(i<0&&e.shiftKey)daireyeGit(ex(e),ey(e))}});
+cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h<4){const i=ata(ex(e),ey(e));if(i>=0){sec=i;bilgi(i);ciz();try{history.replaceState(null,'','#'+encodeURIComponent(V.dugumler[i].k))}catch(_){}}else if(e.shiftKey){daireyeGit(ex(e),ey(e))}else{const k=katAt(ex(e),ey(e));if(k>=0)kart(k);else{ciz()}}ip.style.display='none'}});
 cv.addEventListener('pointercancel',birak);
 cv.addEventListener('wheel',e=>{e.preventDefault();clearTimeout(tikZ);const dy=e.deltaY*(e.deltaMode===1?16:(e.deltaMode===2?400:1));yakin(Math.exp(-dy*(e.ctrlKey?0.012:0.004)),ex(e),ey(e))},{passive:false});
 cv.addEventListener('dblclick',e=>{e.preventDefault();clearTimeout(tikZ);yakin(2,ex(e),ey(e),true)});
 let g0=1;document.addEventListener('gesturestart',e=>{e.preventDefault();g0=S;cancelAnimationFrame(anim)});document.addEventListener('gesturechange',e=>{e.preventDefault();const r=cv.getBoundingClientRect();yakin(g0*e.scale/S,e.clientX-r.left,e.clientY-r.top)});document.addEventListener('gestureend',e=>e.preventDefault());
 document.getElementById('zp').onclick=()=>yakin(1.6,W/2,H/2,true);document.getElementById('zm').onclick=()=>yakin(1/1.6,W/2,H/2,true);document.getElementById('zf').onclick=()=>{let a=1e9,b=-1e9,c=1e9,d=-1e9;if(mod==='duzlem'){V.dugumler.forEach(n=>{a=Math.min(a,n.x);b=Math.max(b,n.x);c=Math.min(c,n.y);d=Math.max(d,n.y)})}else{V.bolge.usul_daireleri.forEach(u=>{a=Math.min(a,u[0]-u[2]);b=Math.max(b,u[0]+u[2]);c=Math.min(c,u[1]-u[2]);d=Math.max(d,u[1]+u[2])})}const ns=Math.min(W/(b-a+6),H/(d-c+6));git(ns,W/2-ns*(a+b)/2,H/2-ns*(c+d)/2)};
 window.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;if(e.key==='+'||e.key==='=')yakin(1.4,W/2,H/2,true);else if(e.key==='-')yakin(1/1.4,W/2,H/2,true);else if(e.key==='0'){fit();ciz()}});
-document.getElementById('ara').addEventListener('input',e=>{const q=e.target.value.trim();if(!q)return;const i=V.dugumler.findIndex(n=>n.k===q);if(i<0)return;sec=i;S=14;const hedef=mod==='duzlem'?[V.dugumler[i].x,V.dugumler[i].y]:[KOP[nodKop.get(i)[0]][2],KOP[nodKop.get(i)[0]][3]];TX=W/2-S*hedef[0];TY=H/2-S*hedef[1];bilgi(i);ciz()});
+const sn=document.getElementById('sonuc');
+function ara(q){q=q.trim();if(!q){sn.innerHTML='';return[]}const ql=tr(q);const arapca=/[\u0600-\u06FF]/.test(q);const sk=[];
+V.dugumler.forEach((n,i)=>{let p=0,ne='';if(arapca){if(n.k===q)p=100;else if(n.k.includes(q))p=60;else if(n.kw.some(x=>x[0].includes(q))){p=40;ne='kelime'}}else{const m=tr(n.m);
+if(n.l.some(l=>tr(l)===ql)){p=90;ne=n.l.find(l=>tr(l)===ql)}else if(m.split(/[^a-zçğıöşü]+/).includes(ql)){p=80;ne=n.m}else if(n.l.some(l=>tr(l).includes(ql))){p=50;ne=n.l.find(l=>tr(l).includes(ql))}else if(m.includes(ql)){p=45;ne=n.m}else if(n.kw.some(x=>tr(x[1]).includes(ql))){p=30;const x=n.kw.find(x=>tr(x[1]).includes(ql));ne=x[0]+' — '+x[1]}else if(n.e.some(x=>tr(x[1]).includes(ql))){p=20;ne=n.e.find(x=>tr(x[1]).includes(ql))[1]}}
+if(p)sk.push([p,i,ne])});sk.sort((a,b)=>b[0]-a[0]||V.dugumler[b[1]].g-V.dugumler[a[1]].g);
+sn.innerHTML=sk.length?sk.slice(0,40).map(x=>'<div data-i="'+x[1]+'"><b>'+V.dugumler[x[1]].k+'</b>'+esc((x[2]||V.dugumler[x[1]].m||'').slice(0,60))+'</div>').join('')+(sk.length>40?'<div class="not">… ve '+(sk.length-40)+' sonuç daha; aramayı daralt</div>':''):'<div class="not">Sonuç yok.</div>';return sk}
+const aramaK=document.getElementById('ara');aramaK.addEventListener('input',e=>ara(e.target.value));
+aramaK.addEventListener('keydown',e=>{if(e.key==='Enter'){const sk=ara(aramaK.value);if(sk.length)kokaGit(sk[0][1])}});
 window.addEventListener('resize',resize);new ResizeObserver(()=>resize()).observe(cv.parentElement);resize();
+try{const h=decodeURIComponent((location.hash||'').slice(1));if(h){const i=V.dugumler.findIndex(n=>n.k===h);if(i>=0)setTimeout(()=>kokaGit(i),50)}}catch(e){}
+try{if(localStorage.getItem('kyGordu')||window.matchMedia('(max-width:700px)').matches)document.getElementById('nedir').open=false;localStorage.setItem('kyGordu','1')}catch(e){}
 </script></body></html>
 """
 
