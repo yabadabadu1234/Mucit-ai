@@ -925,6 +925,7 @@ def build_unified_html(config, surahs_data):
         '<button type="button" class="menu-sekme" onclick="surelerAc()">Sureler</button>'
         '<a class="menu-sekme" href="kuran_hikmetleri_lugat.html">Lugat</a>'
         '<a class="menu-sekme" href="kuran_hikmetleri_elif_cuzu.html">Elif Cüzü</a>'
+        '<a class="menu-sekme" href="kategori_yerlesim.html">Kategori Yerleşimi</a>'
         '</div>'
         '<nav class="kenar" id="kenar"><div class="kenar-ust"><span>Sureler</span>'
         '<button type="button" class="kenar-kapat" onclick="surelerKapat()" title="Kapat">&#10005;</button></div>'
