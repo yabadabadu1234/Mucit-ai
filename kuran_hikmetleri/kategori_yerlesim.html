@@ -5,12 +5,12 @@
 :root{--bg:#fbf8f1;--fg:#222;--panel:#fffdf8;--line:#d8d0bd;--mut:#6b6558}
 @media (prefers-color-scheme:dark){:root{--bg:#1a1814;--fg:#ece6d6;--panel:#23201a;--line:#3a352b;--mut:#a79f8b}}
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:Georgia,serif}
-#app{display:grid;grid-template-columns:310px 1fr;height:100%}
-#yan{overflow:auto;padding:12px 14px;background:var(--panel);border-right:1px solid var(--line);font-size:13px;line-height:1.5}
+#app{display:grid;grid-template-columns:310px 1fr;grid-template-rows:minmax(0,1fr);height:100%}
+#yan{min-height:0;overflow:auto;padding:12px 14px;background:var(--panel);border-right:1px solid var(--line);font-size:13px;line-height:1.5}
 #yan h1{font-size:17px;margin:0 0 6px}#yan h2{font-size:12px;margin:14px 0 4px;color:var(--mut);font-weight:normal;letter-spacing:.04em}
 #yan label{display:flex;align-items:center;gap:6px;margin:2px 0;cursor:pointer}
 .sw{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
-#sahne{position:relative;min-width:0;overflow:hidden;user-select:none;-webkit-user-select:none}canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:none}
+#sahne{position:relative;min-width:0;min-height:0;overflow:hidden;user-select:none;-webkit-user-select:none}canvas{position:absolute;left:0;top:0;display:block;width:100%;height:100%;cursor:grab;touch-action:none}
 #zum{position:absolute;right:12px;bottom:12px;display:flex;flex-direction:column;gap:6px}#zum button{font:inherit;font-size:16px;min-width:44px;height:40px;border:1px solid var(--line);background:var(--panel);color:var(--fg);border-radius:6px;cursor:pointer}
 #ara{width:100%;padding:5px 7px;font:inherit;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:4px;direction:rtl}
 #bilgi{margin-top:8px;padding:8px;border:1px solid var(--line);border-radius:6px;min-height:60px}
@@ -33,7 +33,7 @@ select{padding:4px;border:1px solid var(--line);border-radius:4px}
 <label><input type="checkbox" id="alt"> alt mertebeleri de göster</label>
 <h2>DÜĞÜM RENGİ</h2><select id="renkUsul"></select>
 <h2>USULLER (daire rengi = usul tonu; koyu = üst mertebe)</h2><div id="usuller"></div>
-<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Boş bir yere veya daireye tıkla: o daireye yakınlaşılır (tekrar tıkla: bir alt daireye). Düğümün üstüne gel veya tıkla: ait olduğu daireler çizilir. Tekerlek, çift tık, +/− ve 0 tuşları da çalışır.</div>
+<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Çift tık: imlecin olduğu yere 2 kat yakınlaşır (yer sabit kalır). Shift+tık: tıklanan daireye yakınlaşır. Düğümün üstüne gel veya tıkla: ait olduğu daireler çizilir. Tekerlek, +/− ve 0 tuşları da çalışır.</div>
 <h2>KURALLAR</h2>
 <div class="not">Düğümler yalnız dik eksenlerde izgara noktasına oturur; iki düğüm arası en az <span id="adim"></span> birim; bir hücrede bir düğüm. Her kategorinin dairesi üyelerini ve alt kategori dairelerini kuşatır (<span id="ihlal"></span> ihlâl).</div>
 <div class="not" id="olcut" style="margin-top:6px"></div>
@@ -100,21 +100,22 @@ let sur=false,lx=0,ly=0,hareket=0;
 let anim=0;function git(ns,ntx,nty){cancelAnimationFrame(anim);const s0=S,c0x=(W/2-TX)/S,c0y=(H/2-TY)/S,c1x=(W/2-ntx)/ns,c1y=(H/2-nty)/ns,t0=performance.now(),ls=Math.log(ns/s0);
 function adimla(t){let k=Math.min(1,(t-t0)/240);k=k*k*(3-2*k);S=s0*Math.exp(ls*k);const wx=c0x+(c1x-c0x)*k,wy=c0y+(c1y-c0y)*k;TX=W/2-S*wx;TY=H/2-S*wy;ciz();if(t-t0<240)anim=requestAnimationFrame(adimla)}anim=requestAnimationFrame(adimla)}
 function yakin(f,ox,oy,yumusak){cancelAnimationFrame(anim);const ns=Math.min(120,Math.max(0.03,S*f));const ntx=ox-(ox-TX)*ns/S,nty=oy-(oy-TY)*ns/S;if(yumusak){git(ns,ntx,nty)}else{TX=ntx;TY=nty;S=ns;ciz()}}
-const ptr=new Map();let pdist=0;
+let tikZ=0;const ptr=new Map();let pdist=0;
 function pdis(){const v=[...ptr.values()];return Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}
 function pmer(){const v=[...ptr.values()];return [(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2]}
 cv.addEventListener('pointerdown',e=>{ptr.set(e.pointerId,[ex(e),ey(e)]);if(ptr.size===2)pdist=pdis();sur=true;lx=ex(e);ly=ey(e);hareket=0;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
 cv.addEventListener('pointermove',e=>{if(ptr.has(e.pointerId))ptr.set(e.pointerId,[ex(e),ey(e)]);
 if(ptr.size===2){const d=pdis(),m=pmer();if(pdist>0)yakin(d/pdist,m[0],m[1]);pdist=d;hareket+=10;return}
-if(sur){TX+=ex(e)-lx;TY+=ey(e)-ly;hareket+=Math.abs(ex(e)-lx)+Math.abs(ey(e)-ly);lx=ex(e);ly=ey(e);ciz()}else{const i=ata(ex(e),ey(e));if(i!==hov){hov=i;bilgi(hov>=0?hov:sec);ciz()}}});
+if(sur){const ddx=ex(e)-lx,ddy=ey(e)-ly;hareket+=Math.abs(ddx)+Math.abs(ddy);lx=ex(e);ly=ey(e);if(hareket>=4){TX+=ddx;TY+=ddy;ciz()}}else{const i=ata(ex(e),ey(e));if(i!==hov){hov=i;bilgi(hov>=0?hov:sec);ciz()}}});
 function birak(e){ptr.delete(e.pointerId);if(ptr.size<2)pdist=0;if(ptr.size===0){sur=false;cv.style.cursor='grab'}}
 function daireyeGit(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;const yar=Math.min(W,H)/2/S*0.9;let best=-1,br=-1,small=-1,sr=1e18;V.siniflar.forEach((c,k)=>{if(!goster.has(c.u))return;const g=cd(c,k);if(Math.hypot(wx-g[0],wy-g[1])<=g[2]){if(g[2]<yar*0.95&&g[2]>br){br=g[2];best=k}if(g[2]<sr){sr=g[2];small=k}}});const k=best>=0?best:small;if(k<0)return;const g=cd(V.siniflar[k],k);const ns=Math.min(120,Math.min(W,H)/2/(g[2]*1.15));git(ns,W/2-ns*g[0],H/2-ns*g[1])}
-cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h<4){const i=ata(ex(e),ey(e));sec=i;bilgi(i);ciz();if(i<0)daireyeGit(ex(e),ey(e))}});
+cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h<4){const i=ata(ex(e),ey(e));sec=i;bilgi(i);ciz();if(i<0&&e.shiftKey)daireyeGit(ex(e),ey(e))}});
 cv.addEventListener('pointercancel',birak);
-cv.addEventListener('wheel',e=>{e.preventDefault();const dy=e.deltaY*(e.deltaMode===1?16:(e.deltaMode===2?400:1));yakin(Math.exp(-dy*(e.ctrlKey?0.012:0.004)),ex(e),ey(e))},{passive:false});
-cv.addEventListener('dblclick',e=>{e.preventDefault();yakin(2,ex(e),ey(e),true)});
+cv.addEventListener('wheel',e=>{e.preventDefault();clearTimeout(tikZ);const dy=e.deltaY*(e.deltaMode===1?16:(e.deltaMode===2?400:1));yakin(Math.exp(-dy*(e.ctrlKey?0.012:0.004)),ex(e),ey(e))},{passive:false});
+cv.addEventListener('dblclick',e=>{e.preventDefault();clearTimeout(tikZ);yakin(2,ex(e),ey(e),true)});
+['gesturestart','gesturechange','gestureend'].forEach(t=>document.addEventListener(t,e=>e.preventDefault()));
 document.getElementById('zp').onclick=()=>yakin(1.6,W/2,H/2,true);document.getElementById('zm').onclick=()=>yakin(1/1.6,W/2,H/2,true);document.getElementById('zf').onclick=()=>{let a=1e9,b=-1e9,c=1e9,d=-1e9;if(mod==='duzlem'){V.dugumler.forEach(n=>{a=Math.min(a,n.x);b=Math.max(b,n.x);c=Math.min(c,n.y);d=Math.max(d,n.y)})}else{V.bolge.usul_daireleri.forEach(u=>{a=Math.min(a,u[0]-u[2]);b=Math.max(b,u[0]+u[2]);c=Math.min(c,u[1]-u[2]);d=Math.max(d,u[1]+u[2])})}const ns=Math.min(W/(b-a+6),H/(d-c+6));git(ns,W/2-ns*(a+b)/2,H/2-ns*(c+d)/2)};
 window.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;if(e.key==='+'||e.key==='=')yakin(1.4,W/2,H/2,true);else if(e.key==='-')yakin(1/1.4,W/2,H/2,true);else if(e.key==='0'){fit();ciz()}});
 document.getElementById('ara').addEventListener('input',e=>{const q=e.target.value.trim();if(!q)return;const i=V.dugumler.findIndex(n=>n.k===q);if(i<0)return;sec=i;S=14;const hedef=mod==='duzlem'?[V.dugumler[i].x,V.dugumler[i].y]:[KOP[nodKop.get(i)[0]][2],KOP[nodKop.get(i)[0]][3]];TX=W/2-S*hedef[0];TY=H/2-S*hedef[1];bilgi(i);ciz()});
-window.addEventListener('resize',resize);resize();
+window.addEventListener('resize',resize);new ResizeObserver(()=>resize()).observe(cv.parentElement);resize();
 </script></body></html>
