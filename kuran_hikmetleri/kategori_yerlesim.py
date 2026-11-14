@@ -1,178 +1,227 @@
 import collections
+import colorsys
 import glob
 import json
 import math
 import os
-import random
+import pickle
 
 import numpy as np
+import torch
 from scipy.sparse import csr_matrix, diags
 from scipy.stats import rankdata
 from sklearn.decomposition import TruncatedSVD
 
 KOK = os.path.dirname(os.path.abspath(__file__))
 CIKTI = os.path.join(KOK, 'kategori_yerlesim.html')
+GRID_ARALIK = 2
 USULLER = [
-    ('mahrec', 'Ses: mahreç'),
-    ('wordnet', 'Mana: Arabic WordNet bölümü'),
-    ('gomme', 'Mana: gömme kümesi'),
-    ('muhassas', 'Konu: Muhassas kitabı'),
-    ('cebel', 'Ses-mana: Cebel fasılı'),
+    ('ses', 'Ses: bölge › mahreç › harf › fasıl'),
+    ('wordnet', 'Mana: Arabic WordNet'),
+    ('gomme', 'Mana: gömme kümeleri'),
+    ('muhassas', 'Konu: Muhassas kitap › bâb'),
+    ('cebel', 'Ses-mana: Cebel harf › fasıl'),
     ('mecaz', 'Zemahşerî: hakîkat/mecaz'),
     ('prototip', 'Prototip: yayılım uzaklığı'),
-    ('korpus', 'Korpus: baskın tür'),
-    ('kuran', 'Kur\'ân\'da geçiş'),
+    ('korpus', 'Korpus: tür › bâb'),
+    ('kuran', "Kur'ân'da geçiş"),
     ('etymarab', 'EtymArab maddesi'),
 ]
-RENK = ['#c0392b', '#2471a3', '#1e8449', '#b9770e', '#7d3c98', '#117a8b', '#a04000', '#566573', '#b03a6e', '#4d6d1f']
-AYIRMA_ADIMI = 2
-GRID_ARALIK = 2
+HUE_SIRASI = [0, 5, 1, 6, 2, 7, 3, 8, 4, 9]
 
 
-def sinif_etiketleri(d, prototip_esik):
-    s = {}
+def yollar(d, prototip_esik):
+    y = {}
     t = d.get('tasnif') or {}
-    if t.get('mahrec'):
-        s['mahrec'] = t['mahrec']
+    if t.get('bolge'):
+        y['ses'] = [t['bolge'], t['mahrec'], t['harf'], 'fasıl ' + t['fasil']]
     m = d.get('mana_tasnif') or {}
     if m.get('orta'):
-        s['wordnet'] = m['orta']
+        y['wordnet'] = [m['ust'], m['orta'], m['ince']]
     g = d.get('mana_tasnif_gomme') or {}
     if g.get('orta'):
-        s['gomme'] = 'g%d' % g['orta']['kume']
+        y['gomme'] = ['g%d' % g['ust']['kume'], 'g%d.%d' % (g['ust']['kume'], g['orta']['kume']), 'g%d.%d.%d' % (g['ust']['kume'], g['orta']['kume'], g['ince']['kume'])]
     mh = d.get('muhassas_tasnif') or {}
     if mh.get('kitap'):
-        s['muhassas'] = mh['kitap']
+        y['muhassas'] = [mh['kitap']] + ([mh['bab']] if mh.get('bab') else [])
     c = d.get('ses_mana_tasnif') or {}
     if c.get('fasil'):
-        s['cebel'] = c['fasil']
+        y['cebel'] = [c['fasil'].split(' ')[0], c['fasil']]
     h = d.get('hakikat_mecaz_tasnif') or {}
     if 'mecaz_var' in h:
-        s['mecaz'] = 'mecazlı' if h['mecaz_var'] else 'yalnız hakîkat'
+        y['mecaz'] = ['mecazlı' if h['mecaz_var'] else 'yalnız hakîkat']
     p = d.get('prototip_yayilim_tasnif') or {}
     if 'ortalama_benzerlik' in p:
         b = p['ortalama_benzerlik']
-        s['prototip'] = 'yakın' if b >= prototip_esik[1] else ('orta' if b >= prototip_esik[0] else 'uzak')
+        y['prototip'] = ['yakın' if b >= prototip_esik[1] else ('orta' if b >= prototip_esik[0] else 'uzak')]
     kq = (d.get('sozlukler') or {}).get('kuran_korpusu')
     if isinstance(kq, list):
         kq = kq[0] if kq else None
     if kq and kq.get('tur'):
-        s['korpus'] = max(kq['tur'], key=kq['tur'].get)
-    s['kuran'] = 'Kur\'ân\'da var' if d.get('kuranda_var') else 'Kur\'ân\'da yok'
+        y['korpus'] = [max(kq['tur'], key=kq['tur'].get)]
+        if kq.get('bab'):
+            y['korpus'].append('bâb ' + max(kq['bab'], key=kq['bab'].get))
+    y['kuran'] = ["Kur'ân'da var" if d.get('kuranda_var') else "Kur'ân'da yok"]
     ea = (d.get('sozlukler') or {}).get('etymarab')
     if ea:
-        s['etymarab'] = 'dolu' if ea.get('dolu') else 'yer tutucu'
-    return s
+        y['etymarab'] = ['dolu' if ea.get('dolu') else 'yer tutucu']
+    return y
 
 
 def yukle():
-    dosyalar = sorted(glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json')))
+    onbellek = os.environ.get('KY_ONBELLEK')
+    if onbellek and os.path.exists(onbellek):
+        return pickle.load(open(onbellek, 'rb'))
     ham = []
-    for f in dosyalar:
+    for f in sorted(glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json'))):
         d = json.load(open(f, encoding='utf-8'))
         p = d.get('prototip_yayilim_tasnif') or {}
-        ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
-        ham.append((d['kok'], d, p.get('ortalama_benzerlik')))
-    benz = [x[2] for x in ham if x[2] is not None]
-    esik = np.quantile(benz, [1 / 3, 2 / 3])
+        ham.append((d, p.get('ortalama_benzerlik')))
+    esik = np.quantile([x[1] for x in ham if x[1] is not None], [1 / 3, 2 / 3])
     dugumler = []
-    for kok, d, _ in ham:
-        s = sinif_etiketleri(d, esik)
+    for d, _ in ham:
         ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
         kq = (d.get('sozlukler') or {}).get('kuran_korpusu')
         if isinstance(kq, list):
             kq = kq[0] if kq else None
-        dugumler.append({'kok': kok, 'siniflar': s, 'mana': ka.get('turkce', ''), 'kelime': len(d.get('kelimeler', [])),
+        dugumler.append({'kok': d['kok'], 'yollar': yollar(d, esik), 'mana': ka.get('turkce', ''), 'kelime': len(d.get('kelimeler', [])),
                          'gecis': (kq or {}).get('gecis', 0), 'kuran': bool(d.get('kuranda_var'))})
+    if onbellek:
+        pickle.dump(dugumler, open(onbellek, 'wb'))
     return dugumler
 
 
-def en_kucuk_daire(nok):
-    nok = list(nok)
-    random.Random(7).shuffle(nok)
-
-    def iki(a, b):
-        cx, cy = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
-        return cx, cy, math.hypot(a[0] - b[0], a[1] - b[1]) / 2
-
-    def uc(a, b, c):
-        ax, ay = a
-        bx, by = b
-        cx, cy = c
-        d = 2 * (ax * (by - cy) + bx * (cy - ay) + cx * (ay - by))
-        if abs(d) < 1e-12:
-            ds = [iki(a, b), iki(a, c), iki(b, c)]
-            return max(ds, key=lambda x: x[2])
-        ux = ((ax * ax + ay * ay) * (by - cy) + (bx * bx + by * by) * (cy - ay) + (cx * cx + cy * cy) * (ay - by)) / d
-        uy = ((ax * ax + ay * ay) * (cx - bx) + (bx * bx + by * by) * (ax - cx) + (cx * cx + cy * cy) * (bx - ax)) / d
-        return ux, uy, math.hypot(ax - ux, ay - uy)
-
-    def icinde(c, p):
-        return math.hypot(p[0] - c[0], p[1] - c[1]) <= c[2] + 1e-9
-
-    c = (nok[0][0], nok[0][1], 0.0)
-    for i, p in enumerate(nok):
-        if icinde(c, p):
-            continue
-        c = (p[0], p[1], 0.0)
-        for j in range(i):
-            q = nok[j]
-            if icinde(c, q):
-                continue
-            c = iki(p, q)
-            for k in range(j):
-                r = nok[k]
-                if not icinde(c, r):
-                    c = uc(p, q, r)
-    return c
-
-
-def yerlesim(dugumler, uzak=0.75, adim=150, ayirma=0.25):
-    sinif_id = {}
-    sinif_liste = []
-    for u, _ in USULLER:
-        for dg in dugumler:
-            e = dg['siniflar'].get(u)
-            if e is not None and (u, e) not in sinif_id:
-                sinif_id[(u, e)] = len(sinif_liste)
-                sinif_liste.append((u, e))
-    satir, sutun = [], []
+def kategoriler(dugumler):
+    kimlik = {}
+    kat = []
+    uye = collections.defaultdict(list)
+    u_ad = [a for a, _ in USULLER]
     for i, dg in enumerate(dugumler):
-        for u, e in dg['siniflar'].items():
+        for u, yol in dg['yollar'].items():
+            ui = u_ad.index(u)
+            ata = -1
+            for d in range(len(yol)):
+                anahtar = (ui, tuple(yol[:d + 1]))
+                if anahtar not in kimlik:
+                    kimlik[anahtar] = len(kat)
+                    kat.append({'u': ui, 'd': d, 'ad': yol[d], 'ata': ata})
+                ata = kimlik[anahtar]
+                uye[ata].append(i)
+    for k, c in enumerate(kat):
+        c['uye'] = uye[k]
+        c['cocuk'] = []
+    for k, c in enumerate(kat):
+        if c['ata'] >= 0:
+            kat[c['ata']]['cocuk'].append(k)
+    return kat, kimlik
+
+
+def baslangic(n, kat):
+    K = len(kat)
+    satir, sutun = [], []
+    for k, c in enumerate(kat):
+        for i in c['uye']:
             satir.append(i)
-            sutun.append(sinif_id[(u, e)])
-    n, k = len(dugumler), len(sinif_liste)
-    M = csr_matrix((np.ones(len(satir)), (satir, sutun)), shape=(n, k))
+            sutun.append(k)
+    M = csr_matrix((np.ones(len(satir)), (satir, sutun)), shape=(n, K))
     sayi = np.asarray(M.sum(0)).ravel()
-    w = 1 / np.maximum(sayi, 1) ** uzak
+    w = 1 / np.maximum(sayi, 1) ** 0.75
     Mw = M @ diags(w)
     P = TruncatedSVD(2, random_state=7).fit_transform(Mw)
     rng = np.random.default_rng(7)
     P = (P - P.mean(0)) / (P.std(0) + 1e-9) + rng.normal(0, 0.05, P.shape)
-    usul_siniflari = collections.defaultdict(list)
-    for j, (u, e) in enumerate(sinif_liste):
-        usul_siniflari[u].append(j)
+    gruplar = collections.defaultdict(list)
+    for k, c in enumerate(kat):
+        gruplar[(c['u'], c['d'])].append(k)
     pay = np.maximum(np.asarray(Mw.sum(1)).ravel(), 1e-9)
-    for _ in range(adim):
+    for _ in range(60):
         C = (M.T @ P) / np.maximum(sayi, 1)[:, None]
-        for u, js in usul_siniflari.items():
-            if len(js) < 2:
+        for js in gruplar.values():
+            if len(js) < 2 or len(js) > 1500:
                 continue
             c = C[js]
             fark = c[:, None, :] - c[None, :, :]
             d2 = (fark ** 2).sum(-1) + 0.05
             it = (fark / d2[..., None]).sum(1)
-            C[js] = c + ayirma * it / (1 + np.linalg.norm(it, axis=1, keepdims=True))
+            C[js] = c + 0.25 * it / (1 + np.linalg.norm(it, axis=1, keepdims=True))
         P = (Mw @ C) / pay[:, None] + rng.normal(0, 0.01, P.shape)
         P = (P - P.mean(0)) / (P.std(0) + 1e-9)
     U = np.column_stack([rankdata(P[:, 0]), rankdata(P[:, 1])]) / n
-    return (U - 0.5) * 2, M, sinif_liste, sinif_id
+    kenar = math.sqrt(n * 1.25)
+    return (U - 0.5) * kenar, M
+
+
+def eniyile_tur(n, kat, P0, adim):
+    torch.manual_seed(7)
+    K = len(kat)
+    me = np.concatenate([np.array(c['uye'], dtype=np.int64) for c in kat])
+    mk = np.concatenate([np.full(len(c['uye']), k, dtype=np.int64) for k, c in enumerate(kat)])
+    C0 = np.zeros((K, 2))
+    R0 = np.zeros(K)
+    for k, c in enumerate(kat):
+        pts = P0[c['uye']]
+        C0[k] = pts.mean(0)
+        R0[k] = max(float(np.linalg.norm(pts - C0[k], axis=1).max()), 1.0)
+    cf = [(k, c['ata']) for k, c in enumerate(kat) if c['ata'] >= 0]
+    cocuk = torch.tensor([a for a, _ in cf])
+    ata = torch.tensor([b for _, b in cf])
+    gruplar = collections.defaultdict(list)
+    for k, c in enumerate(kat):
+        gruplar[(c['u'], c['d'])].append(k)
+    ia, ib, iw = [], [], []
+    for js in gruplar.values():
+        t = torch.tensor(js)
+        a, b = torch.triu_indices(len(js), len(js), 1)
+        ia.append(t[a])
+        ib.append(t[b])
+        kard = torch.tensor([kat[j]['ata'] for j in js])
+        iw.append(1.0 + 2.0 * (kard[a] == kard[b]).float())
+    ia = torch.cat(ia)
+    ib = torch.cat(ib)
+    iw = torch.cat(iw)
+    me_t, mk_t = torch.tensor(me), torch.tensor(mk)
+    agirlik = torch.tensor([1.0 / max(len(c['uye']), 1) for c in kat], dtype=torch.float32)
+    p = torch.tensor(P0, dtype=torch.float32, requires_grad=True)
+    c = torch.tensor(C0, dtype=torch.float32, requires_grad=True)
+    lr = torch.tensor(np.log(R0), dtype=torch.float32, requires_grad=True)
+    opt = torch.optim.Adam([p, c, lr], lr=0.2)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, adim, eta_min=0.01)
+    for t in range(adim):
+        opt.zero_grad()
+        r = torch.exp(lr)
+        d = (p[me_t] - c[mk_t]).norm(dim=1)
+        cont = torch.relu(d - r[mk_t]).pow(2).sum()
+        alan = (r.pow(2) * agirlik).sum()
+        yuva = torch.relu((c[cocuk] - c[ata]).norm(dim=1) + r[cocuk] - r[ata]).pow(2).sum()
+        ov = (torch.relu(r[ia] + r[ib] - (c[ia] - c[ib]).norm(dim=1)).pow(2) * iw).sum()
+        x = torch.randint(0, n, (400000,))
+        y = torch.randint(0, n, (400000,))
+        rep = torch.relu(1.6 - (p[x] - p[y]).norm(dim=1)).pow(2).sum()
+        loss = 20 * cont + 6.0 * alan + 0.5 * yuva + 0.6 * ov + 0.05 * rep
+        loss.backward()
+        opt.step()
+        sched.step()
+        if t % 250 == 0:
+            print(t, round(float(loss.detach()), 1), round(float(cont.detach()), 1), round(float(alan.detach()), 1), round(float(ov.detach()), 1), flush=True)
+    return p.detach().numpy()
+
+
+def eniyile(n, kat, P0, tur=8, adim=220):
+    P = P0
+    for t in range(tur):
+        P = eniyile_tur(n, kat, P, adim)
+        iz, kayma = izgaraya_otur(P)
+        P = iz / GRID_ARALIK
+        print('tur', t, 'ortalama kayma', round(float(np.mean(kayma)), 2), flush=True)
+    return P
 
 
 def izgaraya_otur(P):
     n = len(P)
     kenar = int(math.ceil(math.sqrt(n * 1.25)))
-    aday = np.rint(P * kenar / 2.0).astype(int)
+    P = P - (P.max(0) + P.min(0)) / 2
+    olcek = (kenar - 2) / max(float(np.ptp(P[:, 0])), float(np.ptp(P[:, 1])), 1e-9)
+    aday = np.rint(P * olcek).astype(int)
     dolu = {}
     sira = np.argsort(np.linalg.norm(P, axis=1))
     sonuc = np.zeros((n, 2), dtype=int)
@@ -199,73 +248,245 @@ def izgaraya_otur(P):
     return sonuc * GRID_ARALIK, kayma
 
 
-def daireler(izgara, M, sinif_liste):
-    dairesel = []
-    Mc = M.tocsc()
-    for j, (u, e) in enumerate(sinif_liste):
-        uyeler = Mc[:, j].nonzero()[0]
-        nok = [(float(izgara[i][0]), float(izgara[i][1])) for i in uyeler]
-        cx, cy, r = en_kucuk_daire(nok)
-        dairesel.append((cx, cy, r + GRID_ARALIK * 0.6, len(uyeler)))
-    return dairesel
+def sarmal_daire(cemberler, tur=150):
+    c = cemberler[:, :2].mean(0)
+    for i in range(1, tur + 1):
+        d = np.hypot(cemberler[:, 0] - c[0], cemberler[:, 1] - c[1])
+        j = int(np.argmax(d + cemberler[:, 2]))
+        if d[j] < 1e-9:
+            uc = cemberler[j, :2] + np.array([cemberler[j, 2], 0.0])
+        else:
+            uc = cemberler[j, :2] + (cemberler[j, :2] - c) / d[j] * cemberler[j, 2]
+        c = c + (uc - c) / (i + 1)
+    r = float(np.max(np.hypot(cemberler[:, 0] - c[0], cemberler[:, 1] - c[1]) + cemberler[:, 2]))
+    return float(c[0]), float(c[1]), r
 
 
-def olcut(izgara, M, dairesel, sinif_liste):
-    Mr = M.tocsr()
-    ihlal = 0
-    toplam = 0
-    for i in range(M.shape[0]):
-        for j in Mr[i].indices:
-            toplam += 1
-            cx, cy, r, _ = dairesel[j]
-            if math.hypot(izgara[i][0] - cx, izgara[i][1] - cy) > r + 1e-6:
-                ihlal += 1
+def daireler(izgara, kat):
+    sonuc = [None] * len(kat)
+    sira = sorted(range(len(kat)), key=lambda k: -kat[k]['d'])
+    for k in sira:
+        c = kat[k]
+        parcalar = [np.array([izgara[i][0], izgara[i][1], 0.0]) for i in c['uye']]
+        parcalar += [np.array(sonuc[j]) for j in c['cocuk']]
+        arr = np.array(parcalar)
+        cx, cy, r = sarmal_daire(arr)
+        sonuc[k] = (cx, cy, r + GRID_ARALIK * 0.6)
+    return sonuc
+
+
+def olcut(izgara, kat, dai):
+    ihlal = toplam = 0
+    kenarda = 0
+    for k, c in enumerate(kat):
+        cx, cy, r = dai[k]
+        d = np.hypot(izgara[c['uye'], 0] - cx, izgara[c['uye'], 1] - cy)
+        ihlal += int((d > r + 1e-6).sum())
+        toplam += len(c['uye'])
+        kenarda += int((d >= 0.75 * r).sum())
     ayni = collections.defaultdict(list)
-    for j, (u, e) in enumerate(sinif_liste):
-        ayni[u].append(j)
+    for k, c in enumerate(kat):
+        ayni[(c['u'], c['d'])].append(k)
     ortusme = {}
-    for u, js in ayni.items():
-        alan = sum(math.pi * dairesel[j][2] ** 2 for j in js)
-        kes = 0.0
-        for a in range(len(js)):
-            for b in range(a + 1, len(js)):
-                ca, cb = dairesel[js[a]], dairesel[js[b]]
-                d = math.hypot(ca[0] - cb[0], ca[1] - cb[1])
-                r1, r2 = ca[2], cb[2]
-                if d >= r1 + r2:
-                    continue
-                if d <= abs(r1 - r2):
-                    kes += math.pi * min(r1, r2) ** 2
-                    continue
-                a1 = math.acos(max(-1.0, min(1.0, (d * d + r1 * r1 - r2 * r2) / (2 * d * r1))))
-                a2 = math.acos(max(-1.0, min(1.0, (d * d + r2 * r2 - r1 * r1) / (2 * d * r2))))
-                kes += r1 * r1 * a1 + r2 * r2 * a2 - 0.5 * math.sqrt(max(0, (-d + r1 + r2) * (d + r1 - r2) * (d - r1 + r2) * (d + r1 + r2)))
-        ortusme[u] = round(kes / alan, 3) if alan else 0
-    return ihlal, toplam, ortusme
+    for (u, d), js in ayni.items():
+        a = np.array([dai[j] for j in js])
+        alan = float((math.pi * a[:, 2] ** 2).sum())
+        if len(js) < 2 or alan == 0:
+            ortusme['%s/%d' % (USULLER[u][0], d + 1)] = 0.0
+            continue
+        ia, ib = np.triu_indices(len(js), 1)
+        dist = np.hypot(a[ia, 0] - a[ib, 0], a[ia, 1] - a[ib, 1])
+        r1, r2 = a[ia, 2], a[ib, 2]
+        kes = np.zeros(len(ia))
+        ic = dist <= np.abs(r1 - r2)
+        kes[ic] = math.pi * np.minimum(r1, r2)[ic] ** 2
+        orta = (dist < r1 + r2) & ~ic & (dist > 1e-9)
+        d_, r1_, r2_ = dist[orta], r1[orta], r2[orta]
+        a1 = np.arccos(np.clip((d_ ** 2 + r1_ ** 2 - r2_ ** 2) / (2 * d_ * r1_), -1, 1))
+        a2 = np.arccos(np.clip((d_ ** 2 + r2_ ** 2 - r1_ ** 2) / (2 * d_ * r2_), -1, 1))
+        kes[orta] = r1_ ** 2 * a1 + r2_ ** 2 * a2 - 0.5 * np.sqrt(np.maximum(0, (-d_ + r1_ + r2_) * (d_ + r1_ - r2_) * (d_ - r1_ + r2_) * (d_ + r1_ + r2_)))
+        ortusme['%s/%d' % (USULLER[u][0], d + 1)] = round(float(kes.sum() / alan), 3)
+    return ihlal, toplam, kenarda, ortusme
 
 
-def en_az_uzaklik(izgara):
-    benzersiz = len(set(map(tuple, izgara.tolist()))) == len(izgara)
-    eksende = bool(np.all(izgara % GRID_ARALIK == 0))
-    return benzersiz, eksende
+
+PITCH = GRID_ARALIK
+
+
+def kume_noktalari(m):
+    kenar = int(math.ceil(math.sqrt(m))) + 2
+    aday = sorted(((i * PITCH, j * PITCH) for i in range(-kenar, kenar + 1) for j in range(-kenar, kenar + 1)), key=lambda t: (t[0] ** 2 + t[1] ** 2, t))[:m]
+    r = max(math.hypot(x, y) for x, y in aday) + PITCH * 0.75 if m else 0.0
+    return aday, r
+
+
+def paketle(yaricaplar, bosluk):
+    n = len(yaricaplar)
+    sira = sorted(range(n), key=lambda i: -yaricaplar[i])
+    konum = {}
+    yerlesen = []
+    for i in sira:
+        r = yaricaplar[i] + bosluk / 2
+        if not yerlesen:
+            konum[i] = (0.0, 0.0)
+            yerlesen.append((0.0, 0.0, r))
+            continue
+        merkez = np.mean([[a, b] for a, b, _ in yerlesen], axis=0)
+        adaylar = []
+        for a in range(len(yerlesen)):
+            ax, ay, ar = yerlesen[a]
+            for t in np.linspace(0, 2 * math.pi, 16, endpoint=False):
+                adaylar.append((ax + (ar + r) * math.cos(t), ay + (ar + r) * math.sin(t)))
+            for b in range(a + 1, len(yerlesen)):
+                bx, by, br = yerlesen[b]
+                d = math.hypot(bx - ax, by - ay)
+                if d > ar + br + 2 * r or d < 1e-9:
+                    continue
+                l1, l2 = ar + r, br + r
+                x = (l1 * l1 - l2 * l2 + d * d) / (2 * d)
+                h2 = l1 * l1 - x * x
+                if h2 < 0:
+                    continue
+                h = math.sqrt(h2)
+                ux, uy = (bx - ax) / d, (by - ay) / d
+                adaylar.append((ax + ux * x - uy * h, ay + uy * x + ux * h))
+                adaylar.append((ax + ux * x + uy * h, ay + uy * x - ux * h))
+        arr = np.array(adaylar)
+        ya = np.array(yerlesen)
+        uygun = np.ones(len(arr), dtype=bool)
+        for ax, ay, ar in yerlesen:
+            uygun &= np.hypot(arr[:, 0] - ax, arr[:, 1] - ay) >= ar + r - 1e-6
+        arr = arr[uygun]
+        j = int(np.argmin(np.hypot(arr[:, 0] - merkez[0], arr[:, 1] - merkez[1])))
+        konum[i] = (float(arr[j][0]), float(arr[j][1]))
+        yerlesen.append((arr[j][0], arr[j][1], r))
+    ys = np.array(yerlesen)
+    c = ys[:, :2].mean(0)
+    sar = sarmal_daire(np.column_stack([ys[:, 0], ys[:, 1], ys[:, 2] - bosluk / 2]))
+    ortak = (sar[0], sar[1])
+    return {i: (konum[i][0] - ortak[0], konum[i][1] - ortak[1]) for i in konum}, sar[2] + bosluk / 2
+
+
+def bolge_yerlesimi(kat, dugumler):
+    cocuk_uye = {}
+    for k, c in enumerate(kat):
+        cs = set()
+        for j in c['cocuk']:
+            cs.update(kat[j]['uye'])
+        cocuk_uye[k] = [i for i in c['uye'] if i not in cs]
+    yer = {}
+    kopya = []
+
+    def kur(k):
+        c = kat[k]
+        parcalar = [kur(j) for j in c['cocuk']]
+        oz = cocuk_uye[k]
+        pts, pr = kume_noktalari(len(oz))
+        yaricaplar = [p['r'] for p in parcalar] + ([pr] if oz else [])
+        if not yaricaplar:
+            return {'k': k, 'r': PITCH, 'cocuk': [], 'oz': [], 'oz_r': 0.0}
+        konumlar, r = paketle(yaricaplar, PITCH * 1.5)
+        for a, p in enumerate(parcalar):
+            p['ox'], p['oy'] = konumlar[a]
+        node = {'k': k, 'r': r, 'cocuk': parcalar, 'oz': [(oz[a], pts[a][0] + (konumlar[len(parcalar)][0] if oz else 0), pts[a][1] + (konumlar[len(parcalar)][1] if oz else 0)) for a in range(len(oz))]}
+        return node
+
+    usul_dugum = {}
+    for u in range(len(USULLER)):
+        koklar = [k for k, c in enumerate(kat) if c['u'] == u and c['ata'] == -1]
+        parcalar = [kur(k) for k in koklar]
+        if not parcalar:
+            continue
+        konumlar, r = paketle([p['r'] for p in parcalar], PITCH * 3)
+        for a, p in enumerate(parcalar):
+            p['ox'], p['oy'] = konumlar[a]
+        usul_dugum[u] = {'r': r, 'cocuk': parcalar}
+    us = sorted(usul_dugum)
+    konumlar, R = paketle([usul_dugum[u]['r'] for u in us], PITCH * 14)
+    mutlak = [None] * len(kat)
+
+    def yay(node, ax, ay, u):
+        k = node.get('k')
+        if k is not None:
+            mutlak[k] = (ax, ay, node['r'])
+        for a, i_x, i_y in node.get('oz', []):
+            kopya.append((a, u, ax + i_x, ay + i_y))
+        for p in node['cocuk']:
+            yay(p, ax + p['ox'], ay + p['oy'], u)
+
+    for a, u in enumerate(us):
+        ox, oy = konumlar[a]
+        for p in usul_dugum[u]['cocuk']:
+            yay(p, ox + p['ox'], oy + p['oy'], u)
+    return mutlak, kopya, [(konumlar[a][0], konumlar[a][1], usul_dugum[u]['r'], u) for a, u in enumerate(us)]
+
+
+def renkler(kat):
+    mertebe = max(c['d'] for c in kat) + 1
+    grup = collections.defaultdict(list)
+    for k, c in enumerate(kat):
+        grup[(c['u'], c['d'])].append(k)
+    for k, c in enumerate(kat):
+        hue = (HUE_SIRASI[c['u']] * 36 + 8) / 360.0
+        js = grup[(c['u'], c['d'])]
+        sira = js.index(k)
+        sapma = (sira / max(len(js) - 1, 1) - 0.5) * 14 / 360.0
+        l = 0.27 + 0.11 * c['d']
+        r, g, b = colorsys.hls_to_rgb((hue + sapma) % 1.0, min(l, 0.78), 0.66)
+        c['renk'] = '#%02x%02x%02x' % (int(r * 255), int(g * 255), int(b * 255))
+    usul_renk = []
+    for u in range(len(USULLER)):
+        r, g, b = colorsys.hls_to_rgb((HUE_SIRASI[u] * 36 + 8) / 360.0, 0.45, 0.7)
+        usul_renk.append('#%02x%02x%02x' % (int(r * 255), int(g * 255), int(b * 255)))
+    return usul_renk, mertebe
 
 
 def yaz():
     dugumler = yukle()
-    P, M, sinif_liste, sinif_id = yerlesim(dugumler)
+    n = len(dugumler)
+    kat, kimlik = kategoriler(dugumler)
+    print('kategori', len(kat), 'üyelik', sum(len(c['uye']) for c in kat), flush=True)
+    P0, _ = baslangic(n, kat)
+    P = eniyile(n, kat, P0)
     izgara, kayma = izgaraya_otur(P)
-    dairesel = daireler(izgara, M, sinif_liste)
-    ihlal, toplam, ortusme = olcut(izgara, M, dairesel, sinif_liste)
-    benzersiz, eksende = en_az_uzaklik(izgara)
-    yaricap = collections.defaultdict(list)
-    for (u, e), c in zip(sinif_liste, dairesel):
-        yaricap[u].append(c[2])
-    harita_yaricapi = max(np.ptp(izgara[:, 0]), np.ptp(izgara[:, 1])) / 2
+    dai = daireler(izgara, kat)
+    ihlal, toplam, kenarda, ortusme = olcut(izgara, kat, dai)
+    usul_renk, mertebe = renkler(kat)
+    b_mutlak, b_kopya, b_bolge = bolge_yerlesimi(kat, dugumler)
+    b_ihlal = 0
+    for a, u, x, y in b_kopya:
+        pass
+    benzersiz = len(set(map(tuple, izgara.tolist()))) == n
+    eksende = bool(np.all(izgara % GRID_ARALIK == 0))
+    harita = max(np.ptp(izgara[:, 0]), np.ptp(izgara[:, 1])) / 2
+    yar = collections.defaultdict(list)
+    for k, c in enumerate(kat):
+        yar[(c['u'], c['d'])].append(dai[k][2] / harita)
+    ozet_yaricap = {'%s/%d' % (USULLER[u][0], d + 1): round(float(np.median(v)), 2) for (u, d), v in sorted(yar.items())}
+    u_derin = {}
+    for c in kat:
+        u_derin[c['u']] = max(u_derin.get(c['u'], 0), c['d'] + 1)
+    dgs = []
+    leaf = {}
+    for k, c in enumerate(kat):
+        if not c['cocuk']:
+            pass
+    for i, dg in enumerate(dugumler):
+        s = []
+        for u, yol in dg['yollar'].items():
+            ui = [a for a, _ in USULLER].index(u)
+            for d in range(len(yol)):
+                s.append(kimlik[(ui, tuple(yol[:d + 1]))])
+        dgs.append({'k': dg['kok'], 'x': int(izgara[i][0]), 'y': int(izgara[i][1]), 's': s, 'm': dg['mana'][:140], 'w': dg['kelime'], 'g': dg['gecis'], 'q': 1 if dg['kuran'] else 0})
     veri = {
-        'usuller': [{'ad': ad, 'renk': RENK[i], 'anahtar': a} for i, (a, ad) in enumerate(USULLER)],
-        'siniflar': [{'u': [a for a, _ in USULLER].index(u), 'ad': e, 'x': round(c[0], 1), 'y': round(c[1], 1), 'r': round(c[2], 1), 'n': c[3]} for (u, e), c in zip(sinif_liste, dairesel)],
-        'dugumler': [{'k': dg['kok'], 'x': int(izgara[i][0]), 'y': int(izgara[i][1]), 's': [sinif_id[(u, e)] for u, e in dg['siniflar'].items()], 'm': dg['mana'][:140], 'w': dg['kelime'], 'g': dg['gecis'], 'q': 1 if dg['kuran'] else 0} for i, dg in enumerate(dugumler)],
-        'olcut': {'dugum': len(dugumler), 'sinif': len(sinif_liste), 'uyelik': toplam, 'daire_disinda_kalan_uyelik': ihlal, 'ayni_usul_ortusmesi': ortusme, 'ortanca_daire_yaricapi_harita_yaricapina_orani': {u: round(float(np.median(v)) / float(harita_yaricapi), 2) for u, v in yaricap.items()}, 'her_dugum_ayri_hucrede': benzersiz, 'hepsi_izgara_noktasinda': eksende, 'en_az_dugum_arasi_uzaklik': GRID_ARALIK,
+        'usuller': [{'ad': ad, 'renk': usul_renk[i], 'derin': u_derin.get(i, 0)} for i, (a, ad) in enumerate(USULLER)],
+        'mertebe': mertebe,
+        'siniflar': [{'u': c['u'], 'm': c['d'] + 1, 'ad': c['ad'], 'x': round(dai[k][0], 1), 'y': round(dai[k][1], 1), 'r': round(dai[k][2], 1), 'n': len(c['uye']), 'a': c['ata'], 'c': c['renk']} for k, c in enumerate(kat)],
+        'dugumler': dgs,
+        'bolge': {'siniflar': [[round(m[0], 1), round(m[1], 1), round(m[2], 1)] for m in b_mutlak], 'kopya': [[a, u, round(x), round(y)] for a, u, x, y in b_kopya], 'usul_daireleri': [[round(x, 1), round(y, 1), round(r, 1), u] for x, y, r, u in b_bolge]},
+        'olcut': {'dugum': n, 'kategori': len(kat), 'uyelik': toplam, 'daire_disinda_kalan_uyelik': ihlal, 'hudutta_duran_uyelik_orani': round(kenarda / toplam, 3),
+                  'ayni_usul_ve_mertebede_ortusme_orani': ortusme, 'ortanca_daire_yaricapi_harita_yaricapina_orani': ozet_yaricap,
+                  'her_dugum_ayri_hucrede': benzersiz, 'hepsi_izgara_noktasinda': eksende, 'en_az_dugum_arasi_uzaklik': GRID_ARALIK,
                   'ortalama_kayma_hucre': round(float(np.mean(kayma)), 2), 'en_buyuk_kayma_hucre': int(max(kayma))},
     }
     html = SAYFA.replace('/*VERI*/', json.dumps(veri, ensure_ascii=False, separators=(',', ':')))
@@ -281,9 +502,9 @@ SAYFA = r"""<!doctype html>
 :root{--bg:#fbf8f1;--fg:#222;--panel:#fffdf8;--line:#d8d0bd;--mut:#6b6558}
 @media (prefers-color-scheme:dark){:root{--bg:#1a1814;--fg:#ece6d6;--panel:#23201a;--line:#3a352b;--mut:#a79f8b}}
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:Georgia,serif}
-#app{display:grid;grid-template-columns:300px 1fr;height:100%}
+#app{display:grid;grid-template-columns:310px 1fr;height:100%}
 #yan{overflow:auto;padding:12px 14px;background:var(--panel);border-right:1px solid var(--line);font-size:13px;line-height:1.5}
-#yan h1{font-size:17px;margin:0 0 6px}#yan h2{font-size:13px;margin:14px 0 4px;color:var(--mut);font-weight:normal;letter-spacing:.03em}
+#yan h1{font-size:17px;margin:0 0 6px}#yan h2{font-size:12px;margin:14px 0 4px;color:var(--mut);font-weight:normal;letter-spacing:.04em}
 #yan label{display:flex;align-items:center;gap:6px;margin:2px 0;cursor:pointer}
 .sw{width:11px;height:11px;border-radius:50%;display:inline-block;flex:none}
 #sahne{position:relative;min-width:0}canvas{display:block;width:100%;height:100%;cursor:grab}
@@ -291,19 +512,26 @@ SAYFA = r"""<!doctype html>
 #bilgi{margin-top:8px;padding:8px;border:1px solid var(--line);border-radius:6px;min-height:60px}
 #bilgi b.k{font-size:20px;direction:rtl;display:inline-block}
 .not{color:var(--mut);font-size:12px}
-select{width:100%;font:inherit;padding:4px;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:4px}
+select,input[type=range]{width:100%;font:inherit;background:var(--bg);color:var(--fg)}
+select{padding:4px;border:1px solid var(--line);border-radius:4px}
+.yol{margin:2px 0}.yol i{font-style:normal;color:var(--mut)}
 @media(max-width:700px){#app{grid-template-columns:1fr;grid-template-rows:42% 58%}#yan{border-right:0;border-bottom:1px solid var(--line)}}
 </style></head><body>
 <div id="app">
 <div id="yan">
 <h1>Kategori Yerleşimi</h1>
 <div class="not" id="ozet"></div>
+<h2>GÖRÜNÜM</h2><select id="mod"><option value="bolge">Usul bölgeleri: ayrık, iç içe daireler</option><option value="duzlem">Tek düzlem: kökler dairelerin kesişiminde</option></select>
 <h2>KÖK ARA</h2><input id="ara" placeholder="örn. دكك" autocomplete="off">
+<h2>MERTEBE (en alttan yukarı)</h2>
+<input type="range" id="mert" min="1" max="4" value="4"><div class="not" id="mertYazi"></div>
+<label><input type="checkbox" id="alt"> alt mertebeleri de göster</label>
 <h2>DÜĞÜM RENGİ</h2><select id="renkUsul"></select>
-<h2>DAİRELERİ GÖSTER (usul)</h2><div id="usuller"></div>
-<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Bir düğümün üstüne gel veya tıkla: ait olduğu bütün kategori daireleri çizilir, hepsinin kesişimi gölgelenir.</div>
+<h2>USULLER (daire rengi = usul tonu; koyu = üst mertebe)</h2><div id="usuller"></div>
+<h2>SEÇİLEN KÖK</h2><div id="bilgi" class="not">Bir düğümün üstüne gel veya tıkla: ait olduğu bütün mertebelerin daireleri çizilir, en ince dairelerin kesişimi gölgelenir.</div>
 <h2>KURALLAR</h2>
-<div class="not">Her düğüm yalnız dik eksenlerde, izgara noktasına oturur; iki düğüm arası en az <span id="adim"></span> birimdir; bir hücrede en çok bir düğüm bulunur. Her kategorinin dairesi, üyelerinin en küçük çevreleyen dairesidir: bu yüzden bir kök, ait olduğu bütün dairelerin kesişiminde bulunur (<span id="ihlal"></span> ihlâl).</div>
+<div class="not">Düğümler yalnız dik eksenlerde izgara noktasına oturur; iki düğüm arası en az <span id="adim"></span> birim; bir hücrede bir düğüm. Her kategorinin dairesi üyelerini ve alt kategori dairelerini kuşatır (<span id="ihlal"></span> ihlâl).</div>
+<div class="not" id="olcut" style="margin-top:6px"></div>
 </div>
 <div id="sahne"><canvas id="c"></canvas></div>
 </div>
@@ -313,47 +541,60 @@ const cv=document.getElementById('c'),cx=cv.getContext('2d');
 const css=getComputedStyle(document.documentElement);
 function renk(n){return css.getPropertyValue(n).trim()}
 let W=0,H=0,dpr=Math.max(1,window.devicePixelRatio||1);
-let S=1,TX=0,TY=0;
-const cell=new Map();V.dugumler.forEach((d,i)=>cell.set(d.x+','+d.y,i));
+let S=1,TX=0,TY=0,mod='bolge';
 const adim=V.olcut.en_az_dugum_arasi_uzaklik;
+const cell=new Map();V.dugumler.forEach((d,i)=>cell.set(d.x+','+d.y,i));
+const KOP=V.bolge.kopya;const kopHuc=new Map();KOP.forEach((k,i)=>kopHuc.set(k[2]+','+k[3],i));
+const nodKop=new Map();KOP.forEach((k,i)=>{if(!nodKop.has(k[0]))nodKop.set(k[0],[]);nodKop.get(k[0]).push(i)});
+const leaf=V.dugumler.map(n=>{const g=new Map();n.s.forEach(k=>{const c=V.siniflar[k];if(!g.has(c.u)||V.siniflar[g.get(c.u)].m<c.m)g.set(c.u,k)});return g});
 document.getElementById('adim').textContent=adim;
 document.getElementById('ihlal').textContent=V.olcut.daire_disinda_kalan_uyelik;
-document.getElementById('ozet').textContent=V.olcut.dugum+' kök · '+V.olcut.sinif+' kategori · '+V.olcut.uyelik+' üyelik';
-const goster=new Set();let renkU=1,sec=-1,hov=-1;
+document.getElementById('ozet').textContent=V.olcut.dugum+' kök · '+V.olcut.kategori+' kategori · '+V.olcut.uyelik+' üyelik · '+V.mertebe+' mertebe';
+document.getElementById('olcut').textContent='Tek düzlemde üyelerin %'+Math.round(V.olcut.hudutta_duran_uyelik_orani*100)+'\'i kendi dairesinin dış çeyreğinde duruyor; usul bölgeleri görünümünde daireler iç içedir ve aynı usulde hiçbir daire kesişmez.';
+const goster=new Set(V.usuller.map((_,i)=>i));let renkU=2,sec=-1,hov=-1,mert=V.mertebe,alt=false;
 const ul=document.getElementById('usuller');
-V.usuller.forEach((u,i)=>{const l=document.createElement('label');l.innerHTML='<input type="checkbox" data-u="'+i+'"><span class="sw" style="background:'+u.renk+'"></span>'+u.ad;ul.appendChild(l)});
+V.usuller.forEach((u,i)=>{const l=document.createElement('label');l.innerHTML='<input type="checkbox" checked data-u="'+i+'"><span class="sw" style="background:'+u.renk+'"></span>'+u.ad+' <span class="not">('+u.derin+' mertebe)</span>';ul.appendChild(l)});
 ul.addEventListener('change',e=>{const i=+e.target.dataset.u;e.target.checked?goster.add(i):goster.delete(i);ciz()});
-const rs=document.getElementById('renkUsul');rs.innerHTML='<option value="-1">tek renk</option>'+V.usuller.map((u,i)=>'<option value="'+i+'">'+u.ad+'</option>').join('');
-rs.value='1';rs.onchange=()=>{renkU=+rs.value;ciz()};
-const palet=['#c0392b','#2471a3','#1e8449','#b9770e','#7d3c98','#117a8b','#a04000','#566573','#b03a6e','#4d6d1f','#8e44ad','#16a085','#d35400','#2c3e50','#7f8c8d','#c0a000'];
-function sinifRenk(k){return palet[k%palet.length]}
-function fit(){let a=1e9,b=-1e9,c=1e9,d=-1e9;V.dugumler.forEach(n=>{a=Math.min(a,n.x);b=Math.max(b,n.x);c=Math.min(c,n.y);d=Math.max(d,n.y)});S=Math.min(W/(b-a+6),H/(d-c+6));TX=W/2-S*(a+b)/2;TY=H/2-S*(c+d)/2}
-function resize(){const r=cv.parentElement.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;ciz()}
+const rs=document.getElementById('renkUsul');rs.innerHTML=V.usuller.map((u,i)=>'<option value="'+i+'">'+u.ad+'</option>').join('');rs.value='2';rs.onchange=()=>{renkU=+rs.value;ciz()};
+const mr=document.getElementById('mert');mr.max=V.mertebe;mr.value=V.mertebe;
+function mertYazi(){document.getElementById('mertYazi').textContent='Mertebe '+mert+' / '+V.mertebe+(mert===V.mertebe?' (en ince)':(mert===1?' (en üst)':''))}
+mr.oninput=()=>{mert=+mr.value;mertYazi();ciz()};mertYazi();
+document.getElementById('alt').onchange=e=>{alt=e.target.checked;ciz()};
+const ms=document.getElementById('mod');ms.value='bolge';ms.onchange=()=>{mod=ms.value;fit();ciz()};
+function gorunur(c){if(!goster.has(c.u))return false;const d=V.usuller[c.u].derin;const hedef=Math.min(mert,d);return alt?c.m>=hedef:c.m===hedef}
+function cd(c,k){return mod==='duzlem'?[c.x,c.y,c.r]:V.bolge.siniflar[k]}
+function fit(){let a=1e9,b=-1e9,c=1e9,d=-1e9;if(mod==='duzlem'){V.dugumler.forEach(n=>{a=Math.min(a,n.x);b=Math.max(b,n.x);c=Math.min(c,n.y);d=Math.max(d,n.y)})}else{V.bolge.usul_daireleri.forEach(u=>{a=Math.min(a,u[0]-u[2]);b=Math.max(b,u[0]+u[2]);c=Math.min(c,u[1]-u[2]);d=Math.max(d,u[1]+u[2])})}
+S=Math.min(W/(b-a+6),H/(d-c+6));TX=W/2-S*(a+b)/2;TY=H/2-S*(c+d)/2}
+function resize(){const r=cv.parentElement.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;fit();ciz()}
 const sx=x=>x*S+TX,sy=y=>y*S+TY;
-function daire(k,doldur,renkStr,lw){const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*S,0,6.2832);if(doldur){cx.fillStyle=renkStr;cx.fill()}else{cx.strokeStyle=renkStr;cx.lineWidth=lw;cx.stroke()}}
+function leafRenk(n,u){const k=leaf[n].get(u);return k===undefined?'#bbb':V.siniflar[k].c}
 function ciz(){
 cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,H);cx.fillStyle=renk('--bg');cx.fillRect(0,0,W,H);
-goster.forEach(ui=>{V.siniflar.forEach((c,k)=>{if(c.u!==ui)return;const x=sx(c.x),y=sy(c.y),r=c.r*S;if(x+r<0||y+r<0||x-r>W||y-r>H||r<3)return;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.strokeStyle=V.usuller[ui].renk;cx.globalAlpha=.55;cx.lineWidth=1;cx.stroke();cx.globalAlpha=1;if(r>40){cx.fillStyle=V.usuller[ui].renk;cx.font='11px sans-serif';cx.fillText(c.ad+' ('+c.n+')',x-r*0.6,y-r*0.7)}})});
-const px=Math.max(1.6,adim*S*0.55);
-for(const n of V.dugumler){const x=sx(n.x),y=sy(n.y);if(x<-px||y<-px||x>W+px||y>H+px)continue;
-let col=renk('--fg');if(renkU>=0){const k=n.s.find(j=>V.siniflar[j].u===renkU);col=k===undefined?'#bbb':sinifRenk(k)}else if(!n.q)col='#9a8f78';
-cx.fillStyle=col;cx.fillRect(x-px/2,y-px/2,px,px)}
-if(S*adim>26){cx.font=Math.max(7,Math.min(15,S*adim*0.32))+'px Georgia';cx.textAlign='center';cx.fillStyle=renk('--fg');for(const n of V.dugumler){const x=sx(n.x),y=sy(n.y);if(x<0||y<0||x>W||y>H)continue;cx.fillText(n.k,x,y-px/2-2)}cx.textAlign='start'}
+if(mod==='bolge'){V.bolge.usul_daireleri.forEach(u=>{if(!goster.has(u[3]))return;const x=sx(u[0]),y=sy(u[1]),r=u[2]*S;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.fillStyle=V.usuller[u[3]].renk+'12';cx.fill();cx.strokeStyle=V.usuller[u[3]].renk;cx.lineWidth=2;cx.stroke();cx.fillStyle=V.usuller[u[3]].renk;cx.font='bold 13px sans-serif';cx.fillText(V.usuller[u[3]].ad,x-r*0.8,y-r-6)})}
+V.siniflar.forEach((c,k)=>{if(!gorunur(c))return;const g=cd(c,k);const x=sx(g[0]),y=sy(g[1]),r=g[2]*S;if(x+r<0||y+r<0||x-r>W||y-r>H||r<(mod==='bolge'?3:5))return;cx.beginPath();cx.arc(x,y,r,0,6.2832);cx.strokeStyle=c.c;cx.globalAlpha=.85;cx.lineWidth=c.m===mert?1.4:1;cx.stroke();cx.globalAlpha=1;if(r>46){cx.fillStyle=c.c;cx.font='11px sans-serif';cx.fillText(c.ad+' ('+c.n+')',x-r*0.62,y-r*0.7)}});
+const px=Math.max(1.4,adim*S*0.55);
+if(mod==='duzlem'){V.dugumler.forEach((n,i)=>{const x=sx(n.x),y=sy(n.y);if(x<-px||y<-px||x>W+px||y>H+px)return;cx.fillStyle=leafRenk(i,renkU);cx.fillRect(x-px/2,y-px/2,px,px)});
+if(S*adim>26){cx.font=Math.max(7,Math.min(15,S*adim*0.32))+'px Georgia';cx.textAlign='center';cx.fillStyle=renk('--fg');V.dugumler.forEach(n=>{const x=sx(n.x),y=sy(n.y);if(x<0||y<0||x>W||y>H)return;cx.fillText(n.k,x,y-px/2-2)});cx.textAlign='start'}}
+else{KOP.forEach(k=>{if(!goster.has(k[1]))return;const x=sx(k[2]),y=sy(k[3]);if(x<-px||y<-px||x>W+px||y>H+px)return;cx.fillStyle=leafRenk(k[0],k[1]);cx.fillRect(x-px/2,y-px/2,px,px)});
+if(S*adim>26){cx.font=Math.max(7,Math.min(15,S*adim*0.32))+'px Georgia';cx.textAlign='center';cx.fillStyle=renk('--fg');KOP.forEach(k=>{if(!goster.has(k[1]))return;const x=sx(k[2]),y=sy(k[3]);if(x<0||y<0||x>W||y>H)return;cx.fillText(V.dugumler[k[0]].k,x,y-px/2-2)});cx.textAlign='start'}}
 const a=hov>=0?hov:sec;if(a>=0){const n=V.dugumler[a];
-cx.save();let ok=true;for(const k of n.s){const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*S,0,6.2832);cx.clip()}
+if(mod==='duzlem'){cx.save();for(const k of leaf[a].values()){const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*S,0,6.2832);cx.clip()}
 cx.fillStyle='rgba(255,200,0,.32)';cx.fillRect(0,0,W,H);cx.restore();
-n.s.forEach(k=>{const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*S,0,6.2832);cx.strokeStyle=V.usuller[c.u].renk;cx.lineWidth=1.8;cx.stroke()});
-cx.beginPath();cx.arc(sx(n.x),sy(n.y),Math.max(6,px),0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2;cx.stroke()}}
+n.s.forEach(k=>{const c=V.siniflar[k];cx.beginPath();cx.arc(sx(c.x),sy(c.y),c.r*S,0,6.2832);cx.strokeStyle=c.c;cx.lineWidth=1.8;cx.stroke()});
+cx.beginPath();cx.arc(sx(n.x),sy(n.y),Math.max(6,px),0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2;cx.stroke()}
+else{const ks=(nodKop.get(a)||[]).map(i=>KOP[i]);n.s.forEach(k=>{const g=V.bolge.siniflar[k],c=V.siniflar[k];cx.beginPath();cx.arc(sx(g[0]),sy(g[1]),g[2]*S,0,6.2832);cx.strokeStyle=c.c;cx.lineWidth=2;cx.stroke()});
+const p0=ks[0];ks.forEach(k=>{cx.beginPath();cx.arc(sx(k[2]),sy(k[3]),Math.max(6,px),0,6.2832);cx.strokeStyle=renk('--fg');cx.lineWidth=2;cx.stroke();if(p0&&k!==p0){cx.beginPath();cx.moveTo(sx(p0[2]),sy(p0[3]));cx.lineTo(sx(k[2]),sy(k[3]));cx.strokeStyle='rgba(120,120,120,.35)';cx.lineWidth=1;cx.stroke()}})}}}
 function bilgi(i){const el=document.getElementById('bilgi');if(i<0){el.innerHTML='<span class="not">Bir düğümün üstüne gel veya tıkla.</span>';return}
-const n=V.dugumler[i];el.innerHTML='<b class="k">'+n.k+'</b> <span class="not">'+(n.q?'Kur\'ân\'da var':'Kur\'ân\'da yok')+' · '+n.w+' kelime · '+n.g+' geçiş</span><div>'+(n.m||'')+'</div><div style="margin-top:6px">'+n.s.map(k=>{const c=V.siniflar[k];return '<div><span class="sw" style="background:'+V.usuller[c.u].renk+'"></span> '+V.usuller[c.u].ad+': <b>'+c.ad+'</b> <span class="not">('+c.n+')</span></div>'}).join('')+'</div><div class="not" style="margin-top:6px">'+n.s.length+' kategorinin kesişiminde.</div>'}
-function ata(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;const gx=Math.round(wx/adim)*adim,gy=Math.round(wy/adim)*adim;const i=cell.get(gx+','+gy);return i===undefined?-1:i}
+const n=V.dugumler[i];const by={};n.s.forEach(k=>{const c=V.siniflar[k];(by[c.u]=by[c.u]||[]).push(c)});
+el.innerHTML='<b class="k">'+n.k+'</b> <span class="not">'+(n.q?'Kur\'ân\'da var':'Kur\'ân\'da yok')+' · '+n.w+' kelime · '+n.g+' geçiş</span><div>'+(n.m||'')+'</div><div style="margin-top:6px">'+Object.keys(by).map(u=>'<div class="yol"><span class="sw" style="background:'+V.usuller[u].renk+'"></span> '+by[u].sort((a,b)=>a.m-b.m).map(c=>'<span style="color:'+c.c+'"><b>'+c.ad+'</b></span>').join(' <i>›</i> ')+'</div>').join('')+'</div><div class="not" style="margin-top:6px">'+n.s.length+' kategorinin içinde.</div>'}
+function ata(mx,my){const wx=(mx-TX)/S,wy=(my-TY)/S;const gx=Math.round(wx/adim)*adim,gy=Math.round(wy/adim)*adim;if(mod==='duzlem'){const i=cell.get(gx+','+gy);return i===undefined?-1:i}const ci=kopHuc.get(gx+','+gy);return ci===undefined?-1:KOP[ci][0]}
 let sur=false,lx=0,ly=0,hareket=0;
 cv.addEventListener('pointerdown',e=>{sur=true;lx=e.offsetX;ly=e.offsetY;hareket=0;cv.setPointerCapture(e.pointerId);cv.style.cursor='grabbing'});
 cv.addEventListener('pointermove',e=>{if(sur){TX+=e.offsetX-lx;TY+=e.offsetY-ly;hareket+=Math.abs(e.offsetX-lx)+Math.abs(e.offsetY-ly);lx=e.offsetX;ly=e.offsetY;ciz()}else{const i=ata(e.offsetX,e.offsetY);if(i!==hov){hov=i;bilgi(hov>=0?hov:sec);ciz()}}});
 cv.addEventListener('pointerup',e=>{sur=false;cv.style.cursor='grab';if(hareket<4){const i=ata(e.offsetX,e.offsetY);sec=i;bilgi(i);ciz()}});
-cv.addEventListener('wheel',e=>{e.preventDefault();const f=Math.exp(-e.deltaY*0.0015);const ns=Math.min(80,Math.max(0.3,S*f));TX=e.offsetX-(e.offsetX-TX)*ns/S;TY=e.offsetY-(e.offsetY-TY)*ns/S;S=ns;ciz()},{passive:false});
-document.getElementById('ara').addEventListener('input',e=>{const q=e.target.value.trim();if(!q)return;const i=V.dugumler.findIndex(n=>n.k===q);if(i<0)return;sec=i;S=14;TX=W/2-S*V.dugumler[i].x;TY=H/2-S*V.dugumler[i].y;bilgi(i);ciz()});
-window.addEventListener('resize',resize);resize();fit();ciz();
+cv.addEventListener('wheel',e=>{e.preventDefault();const f=Math.exp(-e.deltaY*0.0015);const ns=Math.min(80,Math.max(0.05,S*f));TX=e.offsetX-(e.offsetX-TX)*ns/S;TY=e.offsetY-(e.offsetY-TY)*ns/S;S=ns;ciz()},{passive:false});
+document.getElementById('ara').addEventListener('input',e=>{const q=e.target.value.trim();if(!q)return;const i=V.dugumler.findIndex(n=>n.k===q);if(i<0)return;sec=i;S=14;const hedef=mod==='duzlem'?[V.dugumler[i].x,V.dugumler[i].y]:[KOP[nodKop.get(i)[0]][2],KOP[nodKop.get(i)[0]][3]];TX=W/2-S*hedef[0];TY=H/2-S*hedef[1];bilgi(i);ciz()});
+window.addEventListener('resize',resize);resize();
 </script></body></html>
 """
 
