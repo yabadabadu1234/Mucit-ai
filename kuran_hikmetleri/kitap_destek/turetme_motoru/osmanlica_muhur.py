@@ -150,7 +150,7 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
           "(ör. 'sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden'). "
           "(b) mustak_formu: kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, vezin: fa'l/fi'l/fu'l/fa'al…, '(dişi)' gibi, ve varsa ingilizce_tanik). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz: masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme', iki/çoğul ve dişil ekleri için 'iki halk eden', 'halk edenler', '(müennes)'. "
           "AYNI KALIP ADI altındaki satırlar FARKLI vezinlerdir (ör. fa'l, fi'l, fu'l, fa'al…); HİÇBİRİNİN tercümesi diğeriyle AYNI OLAMAZ: vezinin kendine has inceliği (hâl, mübalağa, tekrar, mef'ûl mânâlı masdar, isim-i hey'et, hacim, âlet, mekân gibi) ayrı bir etiket olarak değil, tercümenin içine tabiî şekilde yedirilsin. "
-          "Bir biçim birden çok mânâya geliyorsa (hem geniş hem şimdiki zaman, hem masdar hem mef'ûl, hem fâil hem sıfat gibi) BÜTÜN mânâları ' / ' ile ayırıp yaz; kaç mânâsı varsa hepsini ver. "
+          "Bir biçim birden çok mânâya geliyorsa (hem geniş hem şimdiki zaman, hem masdar hem mef'ûl, hem fâil hem sıfat gibi) BÜTÜN mânâları ' / ' (eğik çizgi) ile ayırıp yaz; kaç mânâsı varsa hepsini ver. Ayrı mânâları ASLA virgülle ayırma, virgül yalnız tek bir mânâ ifadesinin içinde kullanılabilir; her mânâ kısa bir ifade olsun (ör. 'huy, ahlâk / eskiyip yıpranma / uygunluk'). "
           "Aynı çoklu-mânâ kuralı kelime_formu için de geçerlidir. (c) fiil_sapi: kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami: 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz. "
           "(e) metin: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, bariz kırık yeri düzelt, yeni bilgi ekleme. "
           "Cevaplar TÜRKÇE ifade olsun; Arapça okunuş, bilimsel işaret (ḥ ʿ) ve uydurma Arapça kalıp (mûsıl gibi) YAZMA. ⟦0⟧ gibi işaretleri, kod ve kimlikleri, özel adları, satır sonlarını aynen koru. "
@@ -268,14 +268,15 @@ def ayirt(anahtar, model, f, dosya_h):
         sayac['ayni_tercume_' + str(tur)] = len(tekrar)
         if not tekrar:
             break
-        for i in range(0, len(tekrar), 60):
-            pc = tekrar[i:i + 60]
+        for i in range(0, len(tekrar), 25):
+            pc = tekrar[i:i + 25]
             ogeler = []
             for k, c, yasak in pc:
                 kl = (d.get('kaliplar') or {}).get(str(c['idx'])) or ['', '', '', '']
                 ogeler.append({'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[1], 'vezin_kaynagi': kl[2], 'ingilizce_tanik': c['tanik'],
-                               'UYARI': 'Bu kalıp adı altında başka satırlarla AYNI tercüme çıktı; vezinin inceliğini yedirerek FARKLI bir tercüme ver. Şu tercümeler yasak: ' + ' | '.join(yasak)})
+                               'UYARI': 'Bu kalıp adı altında başka satırlarla AYNI tercüme çıktı; vezinin inceliğini yedirerek FARKLI bir tercüme ver. Şu tercümeler yasak: ' + ' | '.join(yasak[:6])})
             o = sor(anahtar, model, kimlik, ogeler)
+            print('ayirt', tur, i, len(tekrar), 'tamam' if o else 'BAŞARISIZ', flush=True)
             if o:
                 with kilit:
                     for (k, c, _), y in zip(pc, o):
