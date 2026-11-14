@@ -183,9 +183,10 @@ def akis_oku(anahtar, govde):
 
 
 def sor(anahtar, model, kimlik, ogeler):
-    yuk = {'dosya': kimlik, 'ogeler': ogeler}
-    govde = json.dumps({'model': model, 'max_tokens': 100000, 'reasoning_effort': 'high', 'stream': True, 'stream_options': {'include_usage': True},
-                        'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
+    govde = json.dumps({'model': model, 'max_tokens': 100000, 'reasoning_effort': 'medium', 'stream': True, 'stream_options': {'include_usage': True},
+                        'messages': [{'role': 'system', 'content': SISTEM},
+                                     {'role': 'user', 'content': 'DOSYANIN BÜTÜN ARAPÇA VE İNGİLİZCE İÇERİĞİ (kaynak; tercüme edilecek değil, mânâyı çıkarmak içindir):\n' + json.dumps(kimlik, ensure_ascii=False)},
+                                     {'role': 'user', 'content': 'ÇEVRİLECEK ÖĞELER:\n' + json.dumps(ogeler, ensure_ascii=False)}]}).encode()
     for deneme in range(8):
         try:
             t, jeton = akis_oku(anahtar, govde)
@@ -207,15 +208,17 @@ def sor(anahtar, model, kimlik, ogeler):
     return None
 
 
+DOSSIER_HARIC = {'kok_anlamlari', 'etimoloji', 'eyupipler_kok_anlami'}
+
+
 def kimlik_kur(d):
-    s = d.get('sozlukler') or {}
-    ing = []
-    for e in s.get('kaikki_vikisozluk') or []:
-        for g in e.get('g') or []:
-            if g not in ing:
-                ing.append(g)
-    ar = (d.get('ses_mana_tasnif') or {}).get('mihveri', '')
-    return {'kok': d.get('kok', ''), 'ingilizce_tanimlar': ing[:40], 'wordnet_dayanagi': (d.get('mana_tasnif') or {}).get('dayanak_tanim', ''), 'arapca_lugat': ar[:500]}
+    """Dosyadaki BÜTÜN Arapça ve İngilizce içerik (sözlükler, Cebel, Zemahşerî, prototip, WordNet dayanağı). Yalnız bizim ürettiğimiz Türkçe karşılıklar ve Türkçe metinler hariçtir."""
+    s = {k: v for k, v in (d.get('sozlukler') or {}).items() if k not in DOSSIER_HARIC}
+    o = {'kok': d.get('kok', ''), 'sozlukler': s}
+    for k in ('ses_mana_tasnif', 'hakikat_mecaz_tasnif', 'prototip_yayilim_tasnif'):
+        o[k] = d.get(k)
+    o['wordnet_dayanak_tanimi'] = (d.get('mana_tasnif') or {}).get('dayanak_tanim', '')
+    return o
 
 
 def cevir_dosya(anahtar, model, f, dosya_h):
@@ -291,8 +294,10 @@ def cevir_dosya(anahtar, model, f, dosya_h):
                 dosya_h.write(json.dumps([b[0], y], ensure_ascii=False) + '\n')
             dosya_h.flush()
 
-    with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
-        list(ex.map(is_, parcalar))
+    if parcalar:
+        is_(parcalar[0])
+        with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
+            list(ex.map(is_, parcalar[1:]))
 
 
 def tamam_mi(d):
