@@ -1,144 +1,124 @@
 {
- "kok": "هات",
- "sinif": "reddedildi",
- "turkce_fiil": {
-  "sap": "gel ol",
-  "kaynak": "ad",
-  "guven": "kontrol"
- },
- "mustaklar": {},
- "reddedilen": [
-  [
-   "kök",
-   "هات",
-   "kök harfi elif veya elif-i maksûre"
-  ]
- ],
- "sozlukler": {
-  "kok_anlamlari": {
-   "kok": "هات",
-   "turkce": "Hât: gel, getir"
+  "kok": "هات",
+  "sinif": "reddedildi",
+  "turkce_fiil": {
+    "sap": "gel ol",
+    "kaynak": "ad",
+    "guven": "kontrol"
   },
-  "osmanlica_lugatler": {
-   "هاتُ": {
-    "sorgular": [
-     "hatu"
-    ],
-    "maddeler": [
-     {
-      "eser": "Kamus",
-      "madde": "hatu",
-      "arapca": [],
-      "mana": "اَلْخَتِعُ [el-hati] (كَتِفٌ [ketif] vezninde) ve اَلْخَتُوعُ [el-hatû] (صَبُورٌ [sabûr] vezninde) ve اَلْخَوْتَعُ [el-havta] (جَوْهَرٌ [cevher] vezninde) Bunlar da uz ve üstâd kılavuza denir. Ve خَوْتَعٌ [havta] Bir nev gökçül sineğe denir ki otluklar içre olur. Ve tavşan yavrusuna denir. Ve hırs ve tama manâsınadır.",
-      "id": 663225,
-      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-     }
-    ]
-   }
-  },
-  "kuran_korpusu": {
-   "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-   "gecis": 4,
-   "ilk_yer": "2:111:14:1",
-   "tur": {
-    "V": 4
-   },
-   "bab": {},
-   "zaman_kip": {
-    "IMPV": 4
-   },
-   "fiil_ismi_ozellikleri": {},
-   "lemmalar": {
-    "هَاتُ": 4
-   },
-   "bicimler": {
-    "هَاتُ": 4
-   }
-  }
- },
- "kuran_gecisleri": 4,
- "kuranda_var": true,
- "sema": {
-  "sema": "graf-ic-graf",
-  "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-  "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-  "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-  "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-  "satir_alanlari": [
-   "kalip",
-   "arapca",
-   "latin",
-   "turkce",
-   "guven",
-   "tanik"
-  ]
- },
- "tasnif": {
-  "fasil": "هت",
-  "harf": "ه",
-  "mahrec": "halkiyye",
-  "bolge": "halk"
- },
- "mana_tasnif": {
-  "durum": "Arabic WordNet v2 kaydı yok"
- },
- "ses_mana_tasnif": {
-  "durum": "Cebel mu'cemlerinde kök yok"
- },
- "hakikat_mecaz_tasnif": {
-  "durum": "Esâsü'l-Belâğa'da madde yok"
- },
- "prototip_yayilim_tasnif": {
-  "durum": "prototip veya mecaz kolu yok"
- },
- "kolekzifikasyon_kavramlari": [],
- "muhassas_tasnif": {
-  "durum": "el-Muhassas metninde yeterince geçmiyor"
- },
- "mana_tasnif_gomme": {
-  "ust": {
-   "kume": 8,
-   "merkez_kok": "سير",
-   "merkez_mana": "Seyr: gitmek, yürümek; sîre: hayat hikâyesi",
-   "boy": 262
-  },
-  "orta": {
-   "kume": 36,
-   "merkez_kok": "عجو",
-   "merkez_mana": "beikost",
-   "boy": 88
-  },
-  "ince": {
-   "kume": 240,
-   "merkez_kok": "عجو",
-   "merkez_mana": "beikost",
-   "boy": 15
-  }
- },
- "kaliplar": {},
- "kelimeler": [
-  {
-   "kelime": "هَاتُوا۟",
-   "kok": "هات",
-   "lemma": "هاتُ",
-   "tur": "İsim",
-   "bab": "fe'ale",
-   "zaman": "Emir",
-   "ilk_gecis": "2:111",
-   "adet": 4,
-   "turkce": {
-    "yuzey": "getir",
-    "lemma": "getir",
-    "lemma_durum": "model-üretimi, doğrulanmadı",
-    "eyupipler": ""
-   }
-  }
- ],
- "osmanlica": {
-  "anlam": "Hât: gel, celb eyle",
-  "kelimeler": [
-   "celb eyle"
+  "mustaklar": {},
+  "reddedilen": [
+    ["kök", "هات", "kök harfi elif veya elif-i maksûre"]
   ],
-  "yontem": "EVREN qwen3.8-flash-next ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı"
- }
+  "sozlukler": {
+    "kok_anlamlari": {
+      "kok": "هات",
+      "turkce": "Hât: gel, getir"
+    },
+    "osmanlica_lugatler": {
+      "هاتُ": {
+        "sorgular": ["hatu"],
+        "maddeler": [
+          {
+            "eser": "Kamus",
+            "madde": "hatu",
+            "arapca": [],
+            "mana": "اَلْخَتِعُ [el-hati] (كَتِفٌ [ketif] vezninde) ve اَلْخَتُوعُ [el-hatû] (صَبُورٌ [sabûr] vezninde) ve اَلْخَوْتَعُ [el-havta] (جَوْهَرٌ [cevher] vezninde) Bunlar da uz ve üstâd kılavuza denir. Ve خَوْتَعٌ [havta] Bir nev gökçül sineğe denir ki otluklar içre olur. Ve tavşan yavrusuna denir. Ve hırs ve tama manâsınadır.",
+            "id": 663225,
+            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+          }
+        ]
+      }
+    },
+    "kuran_korpusu": {
+      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+      "gecis": 4,
+      "ilk_yer": "2:111:14:1",
+      "tur": {
+        "V": 4
+      },
+      "bab": {},
+      "zaman_kip": {
+        "IMPV": 4
+      },
+      "fiil_ismi_ozellikleri": {},
+      "lemmalar": {
+        "هَاتُ": 4
+      },
+      "bicimler": {
+        "هَاتُ": 4
+      }
+    }
+  },
+  "kuran_gecisleri": 4,
+  "kuranda_var": true,
+  "sema": {
+    "sema": "graf-ic-graf",
+    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+  },
+  "tasnif": {
+    "fasil": "هت",
+    "harf": "ه",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "mana_tasnif": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "ses_mana_tasnif": {
+    "durum": "Cebel mu'cemlerinde kök yok"
+  },
+  "hakikat_mecaz_tasnif": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "prototip_yayilim_tasnif": {
+    "durum": "prototip veya mecaz kolu yok"
+  },
+  "kolekzifikasyon_kavramlari": [],
+  "muhassas_tasnif": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  },
+  "mana_tasnif_gomme": {
+    "ust": {
+      "kume": 8,
+      "merkez_kok": "سير",
+      "merkez_mana": "Seyr: gitmek, yürümek; sîre: hayat hikâyesi",
+      "boy": 262
+    },
+    "orta": {
+      "kume": 36,
+      "merkez_kok": "عجو",
+      "merkez_mana": "beikost",
+      "boy": 88
+    },
+    "ince": {
+      "kume": 240,
+      "merkez_kok": "عجو",
+      "merkez_mana": "beikost",
+      "boy": 15
+    }
+  },
+  "kaliplar": {},
+  "kelimeler": [
+    {
+      "kelime": "هَاتُوا۟",
+      "kok": "هات",
+      "lemma": "هاتُ",
+      "tur": "İsim",
+      "bab": "fe'ale",
+      "zaman": "Emir",
+      "ilk_gecis": "2:111",
+      "adet": 4,
+      "turkce": {
+        "yuzey": "getir",
+        "lemma": "getir",
+        "lemma_durum": "model-üretimi, doğrulanmadı",
+        "eyupipler": ""
+      }
+    }
+  ]
 }
