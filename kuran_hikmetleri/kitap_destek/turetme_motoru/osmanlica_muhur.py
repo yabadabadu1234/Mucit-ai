@@ -164,7 +164,7 @@ def sor(anahtar, model, kimlik, ogeler):
     for deneme in range(6):
         try:
             r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json'})
-            d = json.load(urllib.request.urlopen(r, timeout=240))
+            d = json.load(urllib.request.urlopen(r, timeout=120))
             t = d['choices'][0]['message']['content'].strip()
             o = json.loads(t[t.index('['):t.rindex(']') + 1])
             if isinstance(o, list) and len(o) == len(ogeler) and all(isinstance(x, str) for x in o):
@@ -172,7 +172,8 @@ def sor(anahtar, model, kimlik, ogeler):
                     sayac['jeton'] += d.get('usage', {}).get('total_tokens', 0)
                     sayac['istek'] += 1
                 return o
-        except Exception:
+        except Exception as e:
+            print('deneme', deneme, str(e)[:100], flush=True)
             time.sleep(2 + 3 * deneme)
     with kilit:
         sayac['hata'] += 1
@@ -217,7 +218,7 @@ def cevir_dosya(anahtar, model, f, dosya_h):
     birim.sort(key=lambda b: (sira[b[2]['t']], len(b[1])))
     parcalar, cur, n = [], [], 0
     for b in birim:
-        if cur and (n + len(b[1]) > 20000 or len(cur) >= 120):
+        if cur and (n + len(b[1]) > 8000 or len(cur) >= 40):
             parcalar.append(cur)
             cur, n = [], 0
         cur.append(b)
@@ -231,6 +232,7 @@ def cevir_dosya(anahtar, model, f, dosya_h):
             o = sor(anahtar, model, kimlik, [b[2] for b in pc])
             if o:
                 break
+        print('parça', len(pc), 'tamam' if o else 'BAŞARISIZ', sayac, flush=True)
         if not o:
             continue
         with kilit:
