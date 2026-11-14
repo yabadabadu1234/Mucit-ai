@@ -159,7 +159,7 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
 
 def sor(anahtar, model, kimlik, ogeler):
     yuk = {'dosya': kimlik, 'ogeler': ogeler}
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 16384, 'temperature': 0.2,
+    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 6000, 'temperature': 0.2,
                         'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
     for deneme in range(6):
         try:
