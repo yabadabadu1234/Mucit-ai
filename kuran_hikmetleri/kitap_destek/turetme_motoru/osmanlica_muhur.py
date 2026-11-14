@@ -42,6 +42,7 @@ def ac(s, parca):
     return re.sub(r'⟦(\d+)⟧', lambda m: parca[int(m.group(1))], s)
 
 
+PARALEL_PARCA = 8
 kilit = threading.Lock()
 hafiza = {}
 sayac = {'jeton': 0, 'istek': 0, 'hata': 0}
@@ -157,24 +158,52 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
           "Çıktı: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
 
 
+def akis_oku(anahtar, govde):
+    """SSE akışıyla yanıtı toplar: bağlantı sürekli veri taşıdığı için aradaki vekil ve geçit boşta kesmez; 
+    okuma zaman aşımı toplam süreye değil, iki veri arasındaki boşluğa uygulanır."""
+    r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json', 'Accept': 'text/event-stream'})
+    resp = urllib.request.urlopen(r, timeout=45)
+    parca, jeton = [], 0
+    for ham in resp:
+        satir = ham.decode('utf-8', 'replace').strip()
+        if not satir.startswith('data:'):
+            continue
+        veri = satir[5:].strip()
+        if veri == '[DONE]':
+            break
+        try:
+            o = json.loads(veri)
+        except Exception:
+            continue
+        if o.get('usage'):
+            jeton = o['usage'].get('total_tokens', jeton)
+        for ch in o.get('choices') or []:
+            t = (ch.get('delta') or {}).get('content')
+            if t:
+                parca.append(t)
+    return ''.join(parca).strip(), jeton
+
+
 def sor(anahtar, model, kimlik, ogeler):
     yuk = {'dosya': kimlik, 'ogeler': ogeler}
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 6000, 'temperature': 0.2,
+    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 6000, 'temperature': 0.2, 'stream': True, 'stream_options': {'include_usage': True},
                         'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
-    for deneme in range(6):
+    for deneme in range(8):
         try:
-            r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json'})
-            d = json.load(urllib.request.urlopen(r, timeout=120))
-            t = d['choices'][0]['message']['content'].strip()
+            t, jeton = akis_oku(anahtar, govde)
             o = json.loads(t[t.index('['):t.rindex(']') + 1])
             if isinstance(o, list) and len(o) == len(ogeler) and all(isinstance(x, str) for x in o):
                 with kilit:
-                    sayac['jeton'] += d.get('usage', {}).get('total_tokens', 0)
+                    sayac['jeton'] += jeton
                     sayac['istek'] += 1
                 return o
+            with kilit:
+                sayac['bicim_hatasi'] = sayac.get('bicim_hatasi', 0) + 1
         except Exception as e:
-            print('deneme', deneme, str(e)[:100], flush=True)
-            time.sleep(2 + 3 * deneme)
+            with kilit:
+                k = type(e).__name__
+                sayac['hata_' + k] = sayac.get('hata_' + k, 0) + 1
+            time.sleep(1 + 2 * deneme)
     with kilit:
         sayac['hata'] += 1
     return None
@@ -225,8 +254,7 @@ def cevir_dosya(anahtar, model, f, dosya_h):
         n += len(b[1])
     if cur:
         parcalar.append(cur)
-    ayirt_notu = {}
-    for pc in parcalar:
+    def is_(pc):
         o = None
         for _ in range(2):
             o = sor(anahtar, model, kimlik, [b[2] for b in pc])
@@ -234,7 +262,7 @@ def cevir_dosya(anahtar, model, f, dosya_h):
                 break
         print('parça', len(pc), 'tamam' if o else 'BAŞARISIZ', sayac, flush=True)
         if not o:
-            continue
+            return
         with kilit:
             for b, y in zip(pc, o):
                 if b[2]['t'] == 'metin':
@@ -246,6 +274,9 @@ def cevir_dosya(anahtar, model, f, dosya_h):
                 hafiza[b[0]] = y
                 dosya_h.write(json.dumps([b[0], y], ensure_ascii=False) + '\n')
             dosya_h.flush()
+
+    with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
+        list(ex.map(is_, parcalar))
 
 
 def ayirt(anahtar, model, f, dosya_h):
@@ -268,7 +299,7 @@ def ayirt(anahtar, model, f, dosya_h):
         sayac['ayni_tercume_' + str(tur)] = len(tekrar)
         if not tekrar:
             break
-        for i in range(0, len(tekrar), 25):
+        def ayirt_parca(i):
             pc = tekrar[i:i + 25]
             ogeler = []
             for k, c, yasak in pc:
@@ -283,6 +314,9 @@ def ayirt(anahtar, model, f, dosya_h):
                         hafiza[k] = y
                         dosya_h.write(json.dumps([k, y], ensure_ascii=False) + '\n')
                     dosya_h.flush()
+
+        with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
+            list(ex.map(ayirt_parca, range(0, len(tekrar), 25)))
 
 
 def tamam_mi(d):
