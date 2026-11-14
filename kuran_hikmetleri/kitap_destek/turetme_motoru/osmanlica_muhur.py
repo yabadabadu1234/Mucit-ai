@@ -62,20 +62,14 @@ def cevrilir(yol, s):
 
 
 def gez(d, cb):
-    """Kök dosyasını dolaşır; her çevrilecek metin için cb(tur, metin, bağlam) çağrılır, dönüşü yerine konur.
-    tur 'A': bağlamsız metin; tur 'B': kök bağlamında Türkçe karşılık (düzeltilerek çevrilir)."""
+    """cb(tur, metin, bağlam): 'A' bağlamsız metin; 'M' müştak satırı; 'K' kelime biçimi; 'S' fiil sapı; 'KA' kök anlamı.
+    M, K, S, KA için metindeki makine üretimi Türkçe karşılık modele VERİLMEZ; çeviri Arapça ve İngilizce kaynaktan yapılır."""
     kok = d.get('kok', '')
     ka = (d.get('sozlukler') or {}).get('kok_anlamlari') or {}
-    k0 = {'kok': kok, 'kok_anlami': ka.get('turkce', ''), 'fiil_sapi': (d.get('turkce_fiil') or {}).get('sap', '')}
+    k0 = {'kok': kok}
 
-    def B(m, ek):
-        return cb('B', m, dict(k0, **ek)) if isinstance(m, str) and m.strip() else m
-
-    def K(m, x, tip):
-        if not (isinstance(m, str) and m.strip()):
-            return m
-        ar = x.get('kelime', '') if tip == 'yuzey' else x.get('lemma', '')
-        return cb('K', m, dict(k0, tip=tip, arapca=ar, sozluk_turu=x.get('tur', ''), bab=x.get('bab', ''), zaman=x.get('zaman', '')))
+    def X(tur, m, **ek):
+        return cb(tur, m, dict(k0, **ek)) if isinstance(m, str) and m.strip() else m
 
     def r(o, yol):
         if isinstance(o, dict):
@@ -88,58 +82,53 @@ def gez(d, cb):
     cikti = {}
     for k, v in d.items():
         if k == 'mustaklar':
-            cikti[k] = {kal: [[(B(x, {'tur': 'müştak', 'kalip': kal, 'arapca': row[1] if len(row) > 1 else ''}) if i == 3 else (r(x, ['mustaklar']) if isinstance(x, str) and i not in (2, 4) else x)) for i, x in enumerate(row)] for row in rows] for kal, rows in v.items()}
+            cikti[k] = {kal: [[(X('M', x, kalip=kal, arapca=row[1] if len(row) > 1 else '') if i == 3 else (r(x, ['mustaklar']) if isinstance(x, str) and i not in (2, 4) else x)) for i, x in enumerate(row)] for row in rows] for kal, rows in v.items()}
         elif k == 'kelimeler':
             ks = []
             for x in v:
                 y = {}
                 for kk, vv in x.items():
                     if kk == 'turkce' and isinstance(vv, dict):
-                        y[kk] = {a: (K(b, x, a) if a in ('yuzey', 'lemma') else r(b, ['kelimeler', 'turkce', a])) for a, b in vv.items()}
+                        y[kk] = {a: (X('K', b, tip=a, arapca=x.get('kelime', '') if a == 'yuzey' else x.get('lemma', ''), sozluk_turu=x.get('tur', ''), bab=x.get('bab', ''), zaman=x.get('zaman', '')) if a in ('yuzey', 'lemma') else r(b, ['kelimeler', 'turkce', a])) for a, b in vv.items()}
                     else:
                         y[kk] = r(vv, ['kelimeler', kk])
                 ks.append(y)
             cikti[k] = ks
         elif k == 'turkce_fiil' and isinstance(v, dict):
-            cikti[k] = {a: (B(b, {'tur': 'fiil sapı'}) if a == 'sap' else r(b, [k, a])) for a, b in v.items()}
+            cikti[k] = {a: (X('S', b) if a == 'sap' else r(b, [k, a])) for a, b in v.items()}
         elif k == 'sozlukler' and isinstance(v, dict):
-            cikti[k] = {a: ({c: (B(e, {'tur': 'kök anlamı'}) if c == 'turkce' else r(e, [k, a, c])) for c, e in b.items()} if a == 'kok_anlamlari' and isinstance(b, dict) else r(b, [k, a])) for a, b in v.items()}
+            cikti[k] = {a: ({c: (X('KA', e, adlar=[t.strip() for t in re.findall(r'(?:^|;\s*)([^:;]{1,30}):', e)]) if c == 'turkce' else r(e, [k, a, c])) for c, e in b.items()} if a == 'kok_anlamlari' and isinstance(b, dict) else r(b, [k, a])) for a, b in v.items()}
         else:
             cikti[k] = r(v, [k])
     return cikti
 
 
-def kkey(m, ctx):
-    return 'K|' + ctx['kok'] + '|' + ctx['arapca'] + '|' + ctx['tip'] + '|' + m
+def anahtar_(tur, m, ctx):
+    if tur == 'A':
+        return m
+    if tur == 'M':
+        return 'M|' + ctx['kok'] + '|' + ctx['arapca'] + '|' + ctx['kalip']
+    if tur == 'K':
+        return 'K|' + ctx['kok'] + '|' + ctx['arapca'] + '|' + ctx['tip'] + '|' + ctx['sozluk_turu'] + '|' + ctx['bab'] + '|' + ctx['zaman']
+    return tur + '|' + ctx['kok']
 
 
-def metin_topla_d(d, A, Bk, Kd=None):
+def toplama(d):
+    A, U = set(), {}
+
     def cb(tur, m, ctx):
         if tur == 'A':
             A.add(m)
-        elif tur == 'K':
-            if Kd is not None:
-                Kd.setdefault(ctx['kok'], {})[kkey(m, ctx)] = (m, ctx)
         else:
-            Bk.setdefault(ctx['kok'], {}).setdefault(m, ctx)
+            U.setdefault(anahtar_(tur, m, ctx), (tur, ctx))
         return m
     gez(d, cb)
-
-
-TOK = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû]+(?:['’][A-Za-zçğıöşüâîû]+)*")
-
-
-def tokenler(m):
-    return TOK.findall(m)
+    return A, U
 
 
 def donustur(d):
     def cb(tur, m, ctx):
-        if tur == 'A':
-            return hafiza.get(m, m)
-        if tur == 'K':
-            return hafiza.get(kkey(m, ctx), m)
-        return TOK.sub(lambda t: hafiza.get('W|' + ctx['kok'] + '|' + t.group(0), t.group(0)), m)
+        return hafiza.get(m if tur == 'A' else anahtar_(tur, m, ctx), m)
     return gez(d, cb)
 
 
@@ -154,160 +143,129 @@ def hafiza_yukle():
                 pass
 
 
-def sor(anahtar, model, grup):
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 8192, 'temperature': 0.2,
-                        'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(grup, ensure_ascii=False)}]}).encode()
+SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden mütercimsin. "
+          "Sana bir kök dosyasının kimliği (kök; İngilizce sözlük tanımları; Arapça lügat metni) ve çevrilecek öğeler verilir. Dosyayı bütün olarak gözeterek TUTARLI çevir. Öğelerde makine üretimi Türkçe karşılık YOKTUR; mânâyı Arapça kelimeden ve İngilizce/Arapça sözlük tanımlarından sen çıkar. "
+          "Öğe türleri: "
+          "(a) kelime_formu: Kur'ân'daki bir Arapça kelime biçimi (arapca, tür, bâb, zaman). O BİÇİMİN mânâsını (zaman, şahıs, çoğul, bitişik zamir, 've' gibi ön ekler dâhil) Osmanlı Türkçesiyle kısa bir ifadeyle yaz; farklı biçimler farklı olmalı "
+          "(ör. 'sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden'). "
+          "(b) mustak_formu: kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, '(dişi)' gibi). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz: masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme', iki/çoğul ve dişil ekleri için 'iki halk eden', 'halk edenler', '(müennes)'. "
+          "(c) fiil_sapi: kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami: 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz. "
+          "(e) metin: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, bariz kırık yeri düzelt, yeni bilgi ekleme. "
+          "Cevaplar TÜRKÇE ifade olsun; Arapça okunuş, bilimsel işaret (ḥ ʿ) ve uydurma Arapça kalıp (mûsıl gibi) YAZMA. ⟦0⟧ gibi işaretleri, kod ve kimlikleri, özel adları, satır sonlarını aynen koru. "
+          "Çıktı: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
+
+
+def sor(anahtar, model, kimlik, ogeler):
+    yuk = {'dosya': kimlik, 'ogeler': ogeler}
+    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 16384, 'temperature': 0.2,
+                        'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
     for deneme in range(6):
         try:
             r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json'})
-            d = json.load(urllib.request.urlopen(r, timeout=90))
+            d = json.load(urllib.request.urlopen(r, timeout=240))
             t = d['choices'][0]['message']['content'].strip()
             o = json.loads(t[t.index('['):t.rindex(']') + 1])
-            if isinstance(o, list) and len(o) == len(grup) and all(isinstance(x, str) for x in o):
+            if isinstance(o, list) and len(o) == len(ogeler) and all(isinstance(x, str) for x in o):
                 with kilit:
                     sayac['jeton'] += d.get('usage', {}).get('total_tokens', 0)
                     sayac['istek'] += 1
                 return o
-        except Exception as e:
-            if 'daily' in str(e).lower() or '429' in str(e):
-                time.sleep(20)
+        except Exception:
             time.sleep(2 + 3 * deneme)
     with kilit:
         sayac['hata'] += 1
     return None
 
 
-def grupla(metinler, sinir=6000):
-    gr, cur, n = [], [], 0
-    for m in sorted(metinler, key=len):
-        if cur and (n + len(m) > sinir or len(cur) >= 60):
-            gr.append(cur)
+def kimlik_kur(d):
+    s = d.get('sozlukler') or {}
+    ing = []
+    for e in s.get('kaikki_vikisozluk') or []:
+        for g in e.get('g') or []:
+            if g not in ing:
+                ing.append(g)
+    ar = (d.get('ses_mana_tasnif') or {}).get('mihveri', '')
+    return {'kok': d.get('kok', ''), 'ingilizce_tanimlar': ing[:40], 'wordnet_dayanagi': (d.get('mana_tasnif') or {}).get('dayanak_tanim', ''), 'arapca_lugat': ar[:500]}
+
+
+def cevir_dosya(anahtar, model, f, dosya_h):
+    d = json.load(open(f, encoding='utf-8'))
+    d.pop('osmanlica', None)
+    A, U = toplama(d)
+    kimlik = kimlik_kur(d)
+    birim = []
+    for k, (tur, c) in U.items():
+        if k in hafiza:
+            continue
+        if tur == 'K':
+            o = {'t': 'kelime_formu', 'arapca': c['arapca'], 'tur': c['sozluk_turu'], 'bab': c['bab'], 'zaman': c['zaman'], 'lemma_mi': c['tip'] == 'lemma'}
+        elif tur == 'M':
+            o = {'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip']}
+        elif tur == 'S':
+            o = {'t': 'fiil_sapi', 'kok': c['kok']}
+        else:
+            o = {'t': 'kok_anlami', 'adlar': c['adlar']}
+        birim.append((k, json.dumps(o, ensure_ascii=False), o))
+    for m in A:
+        if m not in hafiza:
+            kor = koru(m)
+            birim.append((m, m, {'t': 'metin', 'm': kor[0]}))
+    sira = {'fiil_sapi': 0, 'kok_anlami': 0, 'kelime_formu': 1, 'mustak_formu': 2, 'metin': 3}
+    birim.sort(key=lambda b: (sira[b[2]['t']], len(b[1])))
+    parcalar, cur, n = [], [], 0
+    for b in birim:
+        if cur and (n + len(b[1]) > 20000 or len(cur) >= 120):
+            parcalar.append(cur)
             cur, n = [], 0
-        cur.append(m)
-        n += len(m)
+        cur.append(b)
+        n += len(b[1])
     if cur:
-        gr.append(cur)
-    return gr
-
-
-def cevir_metinler(anahtar, model, metinler, paralel):
-    gerek = [m for m in metinler if m not in hafiza]
-    korunmus = {m: koru(m) for m in gerek}
-    gr = grupla([korunmus[m][0] for m in gerek])
-    ters = collections.defaultdict(list)
-    for m in gerek:
-        ters[korunmus[m][0]].append(m)
-    dosya = open(HAFIZA, 'a', encoding='utf-8')
-
-    def is_(g):
-        o = sor(anahtar, model, g)
-        if o is None and len(g) > 1:
-            o = []
-            for m in g:
-                x = sor(anahtar, model, [m])
-                o.append(x[0] if x else None)
-            return g, o
-        return g, o
-
-    bitti = 0
-    with concurrent.futures.ThreadPoolExecutor(paralel) as ex:
-        for g, o in ex.map(is_, gr):
+        parcalar.append(cur)
+    for pc in parcalar:
+        o = None
+        for _ in range(2):
+            o = sor(anahtar, model, kimlik, [b[2] for b in pc])
             if o:
-                with kilit:
-                    for a, b in zip(g, o):
-                        if b is None:
-                            continue
-                        for m in ters[a]:
-                            pc = korunmus[m][1]
-                            if sorted(re.findall(r'⟦\d+⟧', b)) != sorted(re.findall(r'⟦\d+⟧', a)):
-                                sayac['koruma_hatasi'] = sayac.get('koruma_hatasi', 0) + 1
-                                continue
-                            c = ac(b, pc)
-                            hafiza[m] = c
-                            dosya.write(json.dumps([m, c], ensure_ascii=False) + '\n')
-                    dosya.flush()
-            bitti += 1
-            if bitti % 20 == 0:
-                print('grup', bitti, len(gr), 'hafıza', len(hafiza), sayac, flush=True)
-    dosya.close()
-
-
-def kok_dosyalari(kume):
-    fs = glob.glob(os.path.join(GIRDI, kume, 'kokler', '*.json'))
-
-    def gecis(f):
-        try:
-            return -json.load(open(f, encoding='utf-8')).get('kuran_gecisleri', 0)
-        except Exception:
-            return 0
-    return sorted(fs, key=lambda f: (gecis(f), f))
-
-
-SISTEM_B = ("Sen Arapça kök sözlüğünün Türkçe karşılıklarını Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden mütercimsin. "
-            "Girdi bir köke bağlı satırlardır: kök, kökün mânâsı, fiil sapı ve her satır için Arapça kelime, kalıp adı ve makine üretimi Türkçe karşılık. "
-            "GÖREV: her 'turkce' satırını AYNI MÂNÂ ve AYNI DİLBİLGİSİ VAZİFESİYLE Osmanlıcaya çevir. Satır bir fâil ise fâil, mef'ûl ise mef'ûl, masdar ise masdar mânâsı verir: "
-            "'ayağa kalktıran' → 'ayağa kaldıran' (kıyâm ettiren); 'terbiye edilme' → 'terbiye olunma'. Satırı Arapça kelimenin kendisiyle DEĞİŞTİRME (ör. 'ayağa kalktıran' için 'Müstakîm' yazma); "
-            "yalnız sade Türkçe kelimeleri yerleşik Osmanlı karşılığıyla değiştir, cümle kuruluşunu koru. "
-            "TASHİH: Türkçe satır makine üretimidir; açıkça bozuk, mânâsız veya var olmayan Türkçe kelime ihtiva ediyorsa (ör. 'ayağa kalklaşan', 'terbiye etleşme', isim kökten 'yeryüzü olunmuş') "
-            "kökün mânâsına ve Arapça kelimeye bakarak yalnız o kısmı düzelt; bozuk olmayanı değiştirme. Aynı kökün bütün satırlarında kök mânâsı için hep aynı Osmanlıca kelimeyi kullan (tutarlılık). "
-            "'(dişi)' → '(müennes)', '(yeri/zamanı)' → '(mekânı/zamanı)' gibi ek parantezleri tercüme et ve koru. Yeni bilgi, izah veya not ekleme. ⟦0⟧ gibi işaretleri aynen koru. "
-            "Girdi: {\"kok\":..., \"kok_anlami\":..., \"fiil_sapi\":..., \"satirlar\":[{\"arapca\":..., \"kalip\":..., \"turkce\":...}]}. Çıktı: satırlarla AYNI uzunlukta ve sırada yalnız bir JSON dizisi (her öğe Osmanlıca metin). JSON dışında hiçbir şey yazma.")
-
-
-def sor_b(anahtar, model, kok, ctx0, satirlar):
-    yuk = {'kok': kok, 'kok_anlami': ctx0['kok_anlami'], 'fiil_sapi': ctx0['fiil_sapi'], 'satirlar': satirlar}
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 8192, 'temperature': 0.2,
-                        'messages': [{'role': 'system', 'content': SISTEM_B}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
-    for deneme in range(6):
-        try:
-            r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json'})
-            d = json.load(urllib.request.urlopen(r, timeout=90))
-            t = d['choices'][0]['message']['content'].strip()
-            o = json.loads(t[t.index('['):t.rindex(']') + 1])
-            if isinstance(o, list) and len(o) == len(satirlar) and all(isinstance(x, str) for x in o):
-                with kilit:
-                    sayac['jeton'] += d.get('usage', {}).get('total_tokens', 0)
-                    sayac['istek'] += 1
-                return o
-        except Exception:
-            time.sleep(2 + 3 * deneme)
-    with kilit:
-        sayac['hata'] += 1
-    return None
-
-
-def cevir_b(anahtar, model, Bk, paralel):
-    isler = []
-    for kok, d in Bk.items():
-        gerek = [(m, c) for m, c in d.items() if 'B|' + kok + '|' + m not in hafiza]
-        for i in range(0, len(gerek), 60):
-            isler.append((kok, gerek[i:i + 60]))
-    dosya = open(HAFIZA, 'a', encoding='utf-8')
-
-    def is_(j):
-        kok, parca = j
-        kor = [koru(m) for m, _ in parca]
-        satir = [{'arapca': c.get('arapca', ''), 'kalip': c.get('kalip', c.get('tur', '')), 'turkce': k[0]} for (m, c), k in zip(parca, kor)]
-        return j, kor, sor_b(anahtar, model, kok, parca[0][1], satir)
-
-    with concurrent.futures.ThreadPoolExecutor(paralel) as ex:
-        for (kok, parca), kor, o in ex.map(is_, isler):
-            if not o:
-                continue
-            with kilit:
-                for (m, _), k, b in zip(parca, kor, o):
-                    if sorted(re.findall(r'⟦\d+⟧', b)) != sorted(re.findall(r'⟦\d+⟧', k[0])):
+                break
+        if not o:
+            continue
+        with kilit:
+            for b, y in zip(pc, o):
+                if b[2]['t'] == 'metin':
+                    k = koru(b[0])
+                    if sorted(re.findall(r'⟦\d+⟧', y)) != sorted(re.findall(r'⟦\d+⟧', k[0])):
                         sayac['koruma_hatasi'] = sayac.get('koruma_hatasi', 0) + 1
                         continue
-                    c = ac(b, k[1])
-                    hafiza['B|' + kok + '|' + m] = c
-                    dosya.write(json.dumps(['B|' + kok + '|' + m, c], ensure_ascii=False) + '\n')
-                dosya.flush()
-    dosya.close()
+                    y = ac(y, k[1])
+                hafiza[b[0]] = y
+                dosya_h.write(json.dumps([b[0], y], ensure_ascii=False) + '\n')
+            dosya_h.flush()
+
+
+def tamam_mi(d):
+    A, U = toplama(d)
+    return all(m in hafiza for m in A) and all(k in hafiza for k in U)
+
+
+def yaz(f, kume):
+    d = json.load(open(f, encoding='utf-8'))
+    d.pop('osmanlica', None)
+    A, U = toplama(d)
+    eksik = [m for m in A if m not in hafiza] + [k for k in U if k not in hafiza]
+    if eksik:
+        with open(os.path.join(CIKTI, '_cevrilemeyen.jsonl'), 'a', encoding='utf-8') as h:
+            for m in eksik:
+                h.write(json.dumps([os.path.basename(f), m], ensure_ascii=False) + '\n')
+    hedef = os.path.join(CIKTI, kume, 'kokler', os.path.basename(f))
+    os.makedirs(os.path.dirname(hedef), exist_ok=True)
+    tmp = hedef + '.yeni'
+    json.dump(guven_topla(donustur(d), d), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    os.replace(tmp, hedef)
+    return True
 
 
 def guven_topla(c, d):
-    """Satır başına güven ve durum etiketlerini dosya başına tek yerde toplar (padişah emri); satırlardaki etiket boşaltılır."""
+    """Satır başına güven ve durum etiketleri dosya başına tek bölümde toplanır (padişah emri)."""
     say = collections.OrderedDict()
     for kal, rows in d.get('mustaklar', {}).items():
         for row in rows:
@@ -333,151 +291,27 @@ def guven_topla(c, d):
     return c
 
 
-def yaz(f, kume):
-    d = json.load(open(f, encoding='utf-8'))
-    d.pop('osmanlica', None)
-    A, Bk, Kd = set(), {}, {}
-    metin_topla_d(d, A, Bk, Kd)
-    eksik = [kk for x in Kd.values() for kk in x if kk not in hafiza] + [m for m in A if m not in hafiza] + ['W|' + k + '|' + t for k, x in Bk.items() for m in x for t in tokenler(m) if 'W|' + k + '|' + t not in hafiza]
-    if eksik:
-        with open(os.path.join(CIKTI, '_cevrilemeyen.jsonl'), 'a', encoding='utf-8') as h:
-            for m in eksik:
-                h.write(json.dumps([os.path.basename(f), m], ensure_ascii=False) + '\n')
-    hedef = os.path.join(CIKTI, kume, 'kokler', os.path.basename(f))
-    os.makedirs(os.path.dirname(hedef), exist_ok=True)
-    tmp = hedef + '.yeni'
-    json.dump(guven_topla(donustur(d), d), open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    os.replace(tmp, hedef)
-    return True
+def kok_dosyalari(kume):
+    fs = glob.glob(os.path.join(GIRDI, kume, 'kokler', '*.json'))
 
-
-def topla(dosyalar):
-    A, Bk, Kd = set(), {}, {}
-    for f in dosyalar:
-        d = json.load(open(f, encoding='utf-8'))
-        d.pop('osmanlica', None)
-        metin_topla_d(d, A, Bk, Kd)
-    return A, Bk, Kd
-
-
-SISTEM_C = ("Sen Türkçe kelimeleri Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) çeviren mütercimsin. Sana bir Arapça kök dosyasının kimliği (kök, kökün mânâsı, fiil sapı) ve çevrilecek öğeler verilir; "
-            "dosyayı bütün olarak gözeterek TUTARLI çevir (aynı Türkçe kelime için hep aynı karşılık). İki tür öğe vardır. "
-            "(1) {\"t\":\"karsilik\",\"kelime\":...}: TEK bir Türkçe kelime (eki ve çekimiyle). Aynı ek, zaman, şahıs ve dilbilgisi vazifesiyle Osmanlıca karşılığını yaz; gerekirse iki kelimelik ifade olabilir: "
-            "'getiren'→'îsâl eden'; 'getirilmiş'→'îsâl olunmuş'; 'getirme'→'îsâl'; 'yaratan'→'halk eden'; 'yarattı'→'halk eyledi'; 'yaratılmış'→'halk olunmuş'; 'dişi'→'müennes'; 'yeri'→'mekânı'; 'kere'→'kerre'; 'iki'→'iki'; 'nun'→'nûn'. "
-            "Karşılık yine TÜRKÇE bir ifade olmalı; kelimenin kendi Arapçasını, Arapça okunuşunu veya Arapça bir türev kalıbını (mûsıl, mûsel, tehlîke gibi) ASLA yazma. Karşılığı olmayan kelimeyi aynen döndür (ör. 've', 'bir', özel ad). "
-            "(2) {\"t\":\"kelime_formu\",\"arapca\":...,\"turkce\":...}: Kur'ân'daki BİR Arapça kelime biçimi ve ona verilmiş makine üretimi Türkçe karşılık. Aynı kökün FARKLI biçimlerine (geçmiş/şimdiki zaman, şahıs, çoğul, bitişik zamir, edat ve 've' gibi ön ekler, isim/sıfat/masdar) AYNI karşılık verilmiş olabilir; bu bir kusurdur. "
-            "Arapça kelimeye (zaman, şahıs, ekler, türü) bakarak O BİÇİMİN gerçek mânâsını Osmanlı Türkçesiyle yaz: farklı biçimler farklı çıkmalıdır (ör. 'yarattı'→'halk eyledi', 'yaratır'→'halk eder', 'sizi yarattı'→'sizi halk eyledi', 've yaratır'→'ve halk eder', 'yaratıcı'→'hâlık, halk eden'). Karşılık TÜRKÇE bir ifade olsun, Arapça okunuş yazma. "
-            "(3) {\"t\":\"metin\",\"m\":...}: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, kaynakta bariz kırık veya yanlış kelime ve cümleyi düzelt, yeni bilgi ve izah ekleme. "
-            "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri aynen koru, kod ve kimlikleri, bâb numaralarını, özel adları, satır sonlarını (\\n), Markdown işaretlerini. Okunuş yazarken ḥ, ʿ gibi bilimsel işaretler kullanma (hâdise, fiil yaz). "
-            "Çıktı: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
-
-
-def sor_c(anahtar, model, kimlik, ogeler):
-    yuk = {'dosya': kimlik, 'ogeler': ogeler}
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 16384, 'temperature': 0.2,
-                        'messages': [{'role': 'system', 'content': SISTEM_C}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
-    for deneme in range(6):
+    def gecis(f):
         try:
-            r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json'})
-            d = json.load(urllib.request.urlopen(r, timeout=240))
-            t = d['choices'][0]['message']['content'].strip()
-            o = json.loads(t[t.index('['):t.rindex(']') + 1])
-            if isinstance(o, list) and len(o) == len(ogeler) and all(isinstance(x, str) for x in o):
-                with kilit:
-                    sayac['jeton'] += d.get('usage', {}).get('total_tokens', 0)
-                    sayac['istek'] += 1
-                return o
+            return -json.load(open(f, encoding='utf-8')).get('kuran_gecisleri', 0)
         except Exception:
-            time.sleep(2 + 3 * deneme)
-    with kilit:
-        sayac['hata'] += 1
-    return None
-
-
-def cevir_dosya(anahtar, model, f, dosya_h):
-    d = json.load(open(f, encoding='utf-8'))
-    d.pop('osmanlica', None)
-    A, Bk, Kd = set(), {}, {}
-    metin_topla_d(d, A, Bk, Kd)
-    kok = d.get('kok', '')
-    kimlik = {'kok': kok, 'kok_anlami': (d.get('sozlukler', {}).get('kok_anlamlari') or {}).get('turkce', ''), 'fiil_sapi': (d.get('turkce_fiil') or {}).get('sap', ''),
-              }
-    birim = []
-    for t in sorted({t for m in Bk.get(kok, {}) for t in tokenler(m)}):
-        if 'W|' + kok + '|' + t not in hafiza:
-            birim.append(('W|' + kok + '|' + t, t, {'t': 'karsilik', 'kelime': None}))
-    for kk, (m, c) in Kd.get(kok, {}).items():
-        if kk not in hafiza:
-            birim.append((kk, m, {'t': 'kelime_formu', 'arapca': c['arapca'], 'sozluk_turu': c['sozluk_turu'], 'bab': c['bab'], 'zaman': c['zaman'], 'turkce': None}))
-    for m in A:
-        if m not in hafiza:
-            birim.append((m, m, {'t': 'metin', 'm': None}))
-    birim.sort(key=lambda b: ({'karsilik': 0, 'kelime_formu': 1, 'metin': 2}[b[2]['t']], len(b[1])))
-    parcalar, cur, n = [], [], 0
-    for b in birim:
-        if cur and (n + len(b[1]) > 20000 or len(cur) >= 120):
-            parcalar.append(cur)
-            cur, n = [], 0
-        cur.append(b)
-        n += len(b[1])
-    if cur:
-        parcalar.append(cur)
-    for pc in parcalar:
-        kor = [koru(b[1]) for b in pc]
-        ogeler = []
-        for b, k in zip(pc, kor):
-            o = dict(b[2])
-            if o['t'] == 'kelime_formu':
-                o['turkce'] = k[0]
-            elif o['t'] == 'karsilik':
-                o['kelime'] = k[0]
-            else:
-                o['m'] = k[0]
-            ogeler.append(o)
-        o = None
-        for _ in range(2):
-            o = sor_c(anahtar, model, kimlik, ogeler)
-            if o:
-                o = [re.sub(r'[\u0300-\u036f]', '', x) if False else x for x in o]
-            if o:
-                break
-        if not o:
-            continue
-        with kilit:
-            for b, k, y in zip(pc, kor, o):
-                if sorted(re.findall(r'⟦\d+⟧', y)) != sorted(re.findall(r'⟦\d+⟧', k[0])):
-                    sayac['koruma_hatasi'] = sayac.get('koruma_hatasi', 0) + 1
-                    continue
-                c = ac(y, k[1])
-                hafiza[b[0]] = c
-                dosya_h.write(json.dumps([b[0], c], ensure_ascii=False) + '\n')
-            dosya_h.flush()
+            return 0
+    return sorted(fs, key=lambda f: (gecis(f), f))
 
 
 if __name__ == '__main__':
     kume, komut = sys.argv[1], sys.argv[2]
     hafiza_yukle()
-    dosyalar = kok_dosyalari(kume)
-    if komut == 'say':
-        A, Bk, Kd = topla(dosyalar)
-        print(kume, len(dosyalar), 'A', len(A), sum(len(x) for x in A), 'B', sum(len(x) for x in Bk.values()), 'K', sum(len(x) for x in Kd.values()))
-    else:
-        anahtar, model, paralel = os.environ['EVREN_API_KEY'], sys.argv[3], int(sys.argv[4])
-        dosya_h = open(HAFIZA, 'a', encoding='utf-8')
-
-        def is_(f):
-            for _ in range(3):
-                cevir_dosya(anahtar, model, f, dosya_h)
-                A, Bk, Kd = topla([f])
-                if all(kk in hafiza for x in Kd.values() for kk in x) and all(m in hafiza for m in A) and all('W|' + k + '|' + t in hafiza for k, x in Bk.items() for m in x for t in tokenler(m)):
-                    break
-            yaz(f, kume)
-            return f
-
-        bitti = 0
-        with concurrent.futures.ThreadPoolExecutor(paralel) as ex:
-            for f in ex.map(is_, dosyalar):
-                bitti += 1
-                if bitti % 5 == 0:
-                    print('DOSYA', bitti, len(dosyalar), sayac, flush=True)
-        print('bitti', sayac, flush=True)
+    anahtar, model = os.environ['EVREN_API_KEY'], sys.argv[3]
+    dosya_h = open(HAFIZA, 'a', encoding='utf-8')
+    if komut == 'tek':
+        f = os.path.join(GIRDI, kume, 'kokler', sys.argv[4] + '.json')
+        for _ in range(3):
+            cevir_dosya(anahtar, model, f, dosya_h)
+            if tamam_mi(json.load(open(f, encoding='utf-8'))):
+                break
+        yaz(f, kume)
+        print('tamam', f, sayac, flush=True)
