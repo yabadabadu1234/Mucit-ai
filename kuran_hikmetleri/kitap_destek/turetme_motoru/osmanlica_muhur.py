@@ -19,12 +19,6 @@ LATIN_KELIME = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû][A-Za-z�
 TRANSLIT = re.compile(r'[ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñ]')
 ATLA_ANAHTAR = {'r', 'u', 'w', 'k', 'yol', 'kok', 'kelime', 'lemma', 'merkez_kok', 'ilk_gecis', 'dayanak_synset', 'ince', 'orta', 'zaman'}
 
-SISTEM = ("Sen Türkçe ve İngilizce metinleri Osmanlı Türkçesine (Latin harfli) tercüme eden mütercimsin. Üslûp: Ömer Seyfettin ve Mehmed Âkif nesri; sade, canlı, yerleşik Arapça-Fârisî asıllı kelimelerle. "
-          "Tercüme birebirdir: mânâ eksilmez, artmaz, izah ve misal eklenmez, sıra ve noktalama aynı kalır; hiçbir şey uydurma. Ne varsa tercüme et. "
-          "DEĞİŞTİRME: ⟦0⟧ gibi işaretleri (yerlerini ve sayılarını aynen koru, tercüme edilen cümlenin içinde uygun yere yerleştir), Arap harfli her metin, Latin harfli Arapça okunuş (naḍada, yanḍidu gibi), IPA (/ju.biː.nu/), kök harfleri, sayılar, kod ve kimlikler (noun.act, g3.1), bâb numaraları, "
-          "köşeli/yuvarlak parantez ve işaretler, satır sonları (\\n), Markdown işaretleri (#, **), özel adlar, kitap adları, sayfa ve âyet numaraları. "
-          "Girdi bir JSON dizisidir; çıktı AYNI uzunlukta ve sırada yalnız bir JSON dizisi olsun. Tercüme edilecek bir şey yoksa öğeyi aynen döndür. JSON dışında hiçbir şey yazma.")
-
 KORU = re.compile(r"(?:[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d](?:[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d\u0640 ]*[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF\u200c\u200d])?)"
                   r"|/[^/\n]{1,80}/|[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-]*[ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñḍṣṭẓḥ][A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñ]*")
 
@@ -145,17 +139,21 @@ def hafiza_yukle():
 
 
 SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri, yerleşik Arapça-Fârisî asıllı kelimelerle) tercüme eden mütercimsin. "
-          "Sana bir kök dosyasının kimliği (kök; İngilizce sözlük tanımları; Arapça lügat metni) ve çevrilecek öğeler verilir. Dosyayı bütün olarak gözeterek TUTARLI çevir. Öğelerde makine üretimi Türkçe karşılık YOKTUR; mânâyı Arapça kelimeden ve İngilizce/Arapça sözlük tanımlarından sen çıkar. "
-          "Öğe türleri: "
-          "(a) kelime_formu: Kur'ân'daki bir Arapça kelime biçimi (arapca, tür, bâb, zaman). O BİÇİMİN mânâsını (zaman, şahıs, çoğul, bitişik zamir, 've' gibi ön ekler dâhil) Osmanlı Türkçesiyle kısa bir ifadeyle yaz; farklı biçimler farklı olmalı "
-          "(ör. 'sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden'). "
-          "(b) mustak_formu: kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, vezin: fa'l/fi'l/fu'l/fa'al…, '(dişi)' gibi, ve varsa ingilizce_tanik). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz: masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme', iki/çoğul ve dişil ekleri için 'iki halk eden', 'halk edenler', '(müennes)'. "
-          "AYNI KALIP ADI altındaki satırlar FARKLI vezinlerdir (ör. fa'l, fi'l, fu'l, fa'al…); HİÇBİRİNİN tercümesi diğeriyle AYNI OLAMAZ: vezinin kendine has inceliği (hâl, mübalağa, tekrar, mef'ûl mânâlı masdar, isim-i hey'et, hacim, âlet, mekân gibi) ayrı bir etiket olarak değil, tercümenin içine tabiî şekilde yedirilsin. "
-          "Bir biçim birden çok mânâya geliyorsa (hem geniş hem şimdiki zaman, hem masdar hem mef'ûl, hem fâil hem sıfat gibi) BÜTÜN mânâları ' / ' (eğik çizgi) ile ayırıp yaz; kaç mânâsı varsa hepsini ver. Ayrı mânâları ASLA virgülle ayırma, virgül yalnız tek bir mânâ ifadesinin içinde kullanılabilir; her mânâ kısa bir ifade olsun (ör. 'huy, ahlâk / eskiyip yıpranma / uygunluk'). "
-          "Aynı çoklu-mânâ kuralı kelime_formu için de geçerlidir. (c) fiil_sapi: kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami: 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz. "
-          "(e) metin: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, bariz kırık yeri düzelt, yeni bilgi ekleme. "
-          "Cevaplar TÜRKÇE ifade olsun; Arapça okunuş, bilimsel işaret (ḥ ʿ) ve uydurma Arapça kalıp (mûsıl gibi) YAZMA. ⟦0⟧ gibi işaretleri, kod ve kimlikleri, özel adları, satır sonlarını aynen koru. "
-          "Çıktı: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
+          "Sana bir kök dosyasının kimliği (kök; İngilizce sözlük tanımları; Arapça lügat metni) ve çevrilecek öğeler verilir. Öğelerde makine üretimi Türkçe karşılık YOKTUR; mânâyı Arapça kelimeden ve İngilizce/Arapça sözlük tanımlarından SEN çıkarırsın. "
+          "Cevap vermeden önce iyice düşün ve çıktını gözden geçir; aşağıdaki kuralların her birine uyduğunu kontrol et.\n"
+          "ÖĞE TÜRLERİ\n"
+          "(a) kelime_formu: Kur'ân'daki bir Arapça kelime biçimi (arapca, tür, bâb, zaman; lemma_mi doğruysa kelimenin sözlük/ana biçimidir). O BİÇİMİN mânâsını (zaman, şahıs, çoğul, bitişik zamir, 've' gibi ön ekler dâhil) kısa bir Osmanlıca ifadeyle yaz; farklı biçimler farklı çıkmalıdır ('sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden').\n"
+          "(b) mustak_formu: kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, vezin: fa'l/fi'l/fu'l/fa'al…, '(dişi)' gibi ek ve varsa ingilizce_tanik). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz (masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme'; 'iki halk eden', 'halk edenler', '(müennes)').\n"
+          "(c) fiil_sapi: kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami: 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz.\n"
+          "(e) metin: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, bariz kırık yeri düzelt, yeni bilgi ekleme.\n"
+          "KURALLAR\n"
+          "1. AYIRT ET: Bir istekte aynı kalıp adı altındaki müştak satırları FARKLI vezinlerdir (fa'l, fi'l, fu'l, fa'al, fu'ūl, fi'āl…). Hiçbir satırın tercümesi aynı kalıp adındaki başka bir satırınkiyle aynı olamaz. Her vezinin kendine has inceliği (hâl, mübalağa, tekrar, mef'ûl mânâlı masdar, isim-i hey'et, hacim, âlet, mekân, tasğîr, çokluk…) "
+          "ayrı bir etiket olarak değil, tercümenin İÇİNE tabiî şekilde yedirilsin. Aynı sonuca varıyorsan o vezin için ingilizce_tanik'e, kökün diğer sözlük tanımlarına ve vezinin sarf mânâsına yeniden bak; çıktıyı vermeden ÖNCE aynı kalıptaki satırları karşılaştırıp tekrar edenleri farklılaştır.\n"
+          "2. ÇOK MÂNÂ: Bir biçim GERÇEKTEN birden çok farklı mânâya geliyorsa (hem geniş hem şimdiki zaman, hem masdar hem mef'ûl, hem fâil hem sıfat, kökün farklı mânâları) bütün mânâları ' / ' (eğik çizgi) ile ayırıp yaz. Eş anlamlı iki kelimeyi ' / ' ile AYIRMA ('yaratma / halk eyleme' yanlış; 'halk eyleme' doğru). "
+          "Mânâları virgülle ayırma; virgül yalnız tek bir mânâ ifadesinin içinde kullanılabilir. Her mânâ, O SATIRIN Arapça biçiminden, vezninden ve tanığından çıkmalıdır; komşu satırların mânâsını doldurma amacıyla taşıma.\n"
+          "3. Cevaplar TÜRKÇE ifade olsun; Arapça okunuş, bilimsel işaret (ḥ ʿ) ve uydurma Arapça kalıp (mûsıl gibi) YAZMA. Kelimenin Arapçasını tek başına cevap olarak verme.\n"
+          "4. ⟦0⟧ gibi işaretleri, kod ve kimlikleri, özel adları, satır sonlarını aynen koru.\n"
+          "ÇIKTI: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
 
 
 def akis_oku(anahtar, govde):
@@ -186,7 +184,7 @@ def akis_oku(anahtar, govde):
 
 def sor(anahtar, model, kimlik, ogeler):
     yuk = {'dosya': kimlik, 'ogeler': ogeler}
-    govde = json.dumps({'model': model, 'thinking': False, 'max_tokens': 6000, 'temperature': 0.2, 'stream': True, 'stream_options': {'include_usage': True},
+    govde = json.dumps({'model': model, 'max_tokens': 100000, 'reasoning_effort': 'high', 'stream': True, 'stream_options': {'include_usage': True},
                         'messages': [{'role': 'system', 'content': SISTEM}, {'role': 'user', 'content': json.dumps(yuk, ensure_ascii=False)}]}).encode()
     for deneme in range(8):
         try:
@@ -233,7 +231,7 @@ def cevir_dosya(anahtar, model, f, dosya_h):
             o = {'t': 'kelime_formu', 'arapca': c['arapca'], 'tur': c['sozluk_turu'], 'bab': c['bab'], 'zaman': c['zaman'], 'lemma_mi': c['tip'] == 'lemma'}
         elif tur == 'M':
             kl = (d.get('kaliplar') or {}).get(str(c['idx'])) or ['', '', '', '']
-            o = {'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[1], 'vezin_kaynagi': kl[2], 'ingilizce_tanik': c['tanik']}
+            o = {'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[1], 'vezin_kaynagi': kl[2], 'ingilizce_tanik': c['tanik'], 'idx': c['idx']}
         elif tur == 'S':
             o = {'t': 'fiil_sapi', 'kok': c['kok']}
         else:
@@ -244,16 +242,34 @@ def cevir_dosya(anahtar, model, f, dosya_h):
             kor = koru(m)
             birim.append((m, m, {'t': 'metin', 'm': kor[0]}))
     sira = {'fiil_sapi': 0, 'kok_anlami': 0, 'kelime_formu': 1, 'mustak_formu': 2, 'metin': 3}
-    birim.sort(key=lambda b: (sira[b[2]['t']], len(b[1])))
+    birim.sort(key=lambda b: (sira[b[2]['t']], b[2].get('kalip', ''), b[2].get('idx', 0), len(b[1])))
     parcalar, cur, n = [], [], 0
+    gruplar = collections.OrderedDict()
     for b in birim:
-        if cur and (n + len(b[1]) > 8000 or len(cur) >= 40):
-            parcalar.append(cur)
-            cur, n = [], 0
-        cur.append(b)
-        n += len(b[1])
+        gruplar.setdefault((b[2]['t'], b[2].get('kalip', '') if b[2]['t'] == 'mustak_formu' else b[2]['t']), []).append(b)
+    for (tur, kal), li in gruplar.items():
+        if tur == 'mustak_formu':
+            # aynı kalıp adı altındaki bütün vezinler AYNI istekte: modelin birbirinden ayırt etmesi için
+            if cur and n + len(li) > 60:
+                parcalar.append(cur)
+                cur, n = [], 0
+            for i in range(0, len(li), 70):
+                parca = li[i:i + 70]
+                if cur and len(cur) + len(parca) > 70:
+                    parcalar.append(cur)
+                    cur = []
+                cur += parca
+                n = len(cur)
+        else:
+            for b in li:
+                if cur and (n + len(b[1]) > 8000 or len(cur) >= 40):
+                    parcalar.append(cur)
+                    cur, n = [], 0
+                cur.append(b)
+                n += len(b[1])
     if cur:
         parcalar.append(cur)
+
     def is_(pc):
         o = None
         for _ in range(2):
@@ -277,46 +293,6 @@ def cevir_dosya(anahtar, model, f, dosya_h):
 
     with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
         list(ex.map(is_, parcalar))
-
-
-def ayirt(anahtar, model, f, dosya_h):
-    """Aynı kalıp adı altında aynı tercümeyi alan satırları bulur; farklı vezin farklı tercüme almalıdır, tekrar sorar."""
-    d = json.load(open(f, encoding='utf-8'))
-    d.pop('osmanlica', None)
-    _, U = toplama(d)
-    kimlik = kimlik_kur(d)
-    for tur in range(4):
-        grup = collections.defaultdict(list)
-        for k, (t, c) in U.items():
-            if t == 'M' and k in hafiza:
-                grup[c['kalip']].append((k, c))
-        tekrar = []
-        for kal, li in grup.items():
-            say = collections.Counter(hafiza[k] for k, _ in li)
-            for k, c in li:
-                if say[hafiza[k]] > 1:
-                    tekrar.append((k, c, [x for x in say if say[x] > 1]))
-        sayac['ayni_tercume_' + str(tur)] = len(tekrar)
-        if not tekrar:
-            break
-        def ayirt_parca(i):
-            pc = tekrar[i:i + 25]
-            ogeler = []
-            for k, c, yasak in pc:
-                kl = (d.get('kaliplar') or {}).get(str(c['idx'])) or ['', '', '', '']
-                ogeler.append({'t': 'mustak_formu', 'arapca': c['arapca'], 'kalip': c['kalip'], 'vezin': kl[1], 'vezin_kaynagi': kl[2], 'ingilizce_tanik': c['tanik'],
-                               'UYARI': 'Bu kalıp adı altında başka satırlarla AYNI tercüme çıktı; vezinin inceliğini yedirerek FARKLI bir tercüme ver. Şu tercümeler yasak: ' + ' | '.join(yasak[:6])})
-            o = sor(anahtar, model, kimlik, ogeler)
-            print('ayirt', tur, i, len(tekrar), 'tamam' if o else 'BAŞARISIZ', flush=True)
-            if o:
-                with kilit:
-                    for (k, c, _), y in zip(pc, o):
-                        hafiza[k] = y
-                        dosya_h.write(json.dumps([k, y], ensure_ascii=False) + '\n')
-                    dosya_h.flush()
-
-        with concurrent.futures.ThreadPoolExecutor(PARALEL_PARCA) as ex:
-            list(ex.map(ayirt_parca, range(0, len(tekrar), 25)))
 
 
 def tamam_mi(d):
@@ -390,6 +366,5 @@ if __name__ == '__main__':
             cevir_dosya(anahtar, model, f, dosya_h)
             if tamam_mi(json.load(open(f, encoding='utf-8'))):
                 break
-        ayirt(anahtar, model, f, dosya_h)
         yaz(f, kume)
         print('tamam', f, sayac, flush=True)
