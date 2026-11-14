@@ -1,858 +1,1173 @@
 {
-  "kok": "زخرف",
-  "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "süsle",
-    "kaynak": "fiil",
-    "guven": "kural"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زخرف", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "زخرف",
-      "turkce": "Zuhrf: süslemek; zuhruf: süs"
-    },
-    "osmanlica_lugatler": {
-      "زُخْرُف": {
-        "sorgular": ["zuhruf"],
-        "maddeler": [
-          {
-            "eser": "Kubbe Altı",
-            "madde": "ZUHRUF",
-            "arapca": ["زخرف"],
-            "mana": "( ﺯﺧﺮﻒ ) i. (Ar. zuḫruf ) Yalancı süs, aldatıcı, parlak süs.",
-            "id": 309812,
-            "eslesme": "arapça yazılış kökle uyuştu · başlık tam"
-          },
-          {
-            "eser": "Kamus",
-            "madde": "zuhruf",
-            "arapca": [],
-            "mana": "اَلزُّخْرُفُ [ez-zuhruf] (hâ-yı muceme ile قُنْفُذٌ [kunfuz] vezninde) Altına denir, ذَهَبٌ [zeheb] manâsına. Yaldızlı nesneye مُزَخْرَفٌ [muzahref] ıtlâkı bundandır. Şârih der ki Râgibin beyânına göre زُخْرَفٌ [zuhruf] zînet-i müzevveka manâsına mevzûdur, altına ıtlâkı bu cihetledir. Ve minhu kâle taâlâ: ﴿أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ﴾ أَيْ ذَهَبٍ مُزَوَّقٍ Ve زُخْرُفٌ [zuhruf] Bir nesnenin kemâl-i hüsn ü revnak u zînetine denir; yukâlu: بِهِ زُخْرُفٌ أَيْ كَمَالُ حُسْنٍ Ve زُخْرُفُ الْقَوْلِ [zuhruful-kavl] Kelâmı kezib ve temvîhâtla yaldızlamaktan hâsıl olan hüsn ve revnak ve zînet ve letâfete denir; yukâlu: غَرَّهُ بِزُخْرُفِ الْقَوْلِ وَهُوَ حُسْنُهُ بِتَرْقِيشِ الْكَذِبِ Ve زُخْرُفُ الْأَرْضِ [zuhruful-ard] Yerin bâis-i revnak u letâfeti olan rengârenk nebâtâtına ıtlâk olunur; yukâlu: أَخْرَجَتِ الْأَرْضُ زُخْرُفَهَا وَزَخَارِفَهَا أَيْ أَلْوَانَ نَبَاتِهَا",
-            "id": 1182661,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "zuhruf",
-            "arapca": [],
-            "mana": "اَلزُّخْرُفُ [ez-zuhruf] (zânın ve rânın zammı ve mâ-beynde hâ-i mucemenin sükûnuyla) Altın, zeheb manâsına, pes altın yaldızlı nesneye teşbîhen her kalb ve müzevver olan nesneye مُزَخْرَفٌ [muzahref] dediler.",
-            "id": 1182668,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus-u Türki",
-            "madde": "zuhruf",
-            "arapca": [],
-            "mana": "زخرف Kamus turkide زخرف maddesi. Sayfa:683",
-            "id": 1182665,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          }
-        ]
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الزاي والخاء",
-      "baslik": "زخرف",
-      "mihveri": "مستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر (2/884) وأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].",
-      "sesler": "",
-      "tam_metin": "{أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ أَوْ تَرْقَى فِي السَّمَاءِ} [الإسراء: 93]\n\"زخارف الماء: طرائقه (الخطوط الدقاق المتوالية في أعلاه إذا كان ساكنًا وهبّت عليه الريح). والزخارف ما زُيّن من السفن. وفي [العين]: ما يُزَخْرَفُ به السفن \" [تاج].\n° المعنى المحوري\nمستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر\n(2/884)\nوأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].\n° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 4,
-      "ilk_yer": "6:112:13:1",
-      "tur": {
-        "N": 4
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "زُخْرُف": 4
-      },
-      "bicimler": {
-        "زُخْرُفَ": 2,
-        "زُخْرُفٍ": 1,
-        "زُخْرُفًا": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ZḪRF",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ZḪRF زخرف BP – • HDAL • © SG | 24Mar2023 √ZḪRF “root” ▪ ZḪRF_1 ‘...’ ↗ ... ▪ ZḪRF_2 ‘...’ ↗ ... ▪ ZḪRF_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘gold, ornamentation, decoration, flowery talk, land covered with flowers’ ▪ It has been suggested that the entire root is a borrowing from Syr – Bah2008. ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "مزخرف",
-        "u": "مزخرف",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "مُزَخْرَف • (muzaḵraf) (feminine مُزَخْرَفَة (muzaḵrafa), masculine plural مُزَخْرَفُون (muzaḵrafūn), feminine plural مُزَخْرَفَات (muzaḵrafāt))",
-        "t": "Derived from the passive participle of زَخْرَفَ (zaḵrafa, “to embellish, to decorate, to adorn”).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-passive participle", "Derived from the passive participle"]
-        ],
-        "g": ["adorned, ornamented, decorated, embellished", "fancy"],
-        "r": ["muzaḵraf"],
-        "el": [
-          ["زَخْرَفَ", "زخرف#Arabic"],
-          ["embellish", "embellish"],
-          ["decorate", "decorate"],
-          ["adorn", "adorn"]
-        ],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرف",
-        "u": "تزخرف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "تَزَخْرَفَ • (tazaḵrafa) IIq (non-past يَتَزَخْرَفُ (yatazaḵrafu), verbal noun تَزَخْرُف (tazaḵruf))",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": [
-          "to adorn, ornament, decorate or embellish oneself",
-          "to be adorned, be ornamented, be decorated, be embellished"
-        ],
-        "r": ["tazaḵrafa"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرف",
-        "u": "تزخرف",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "تَزَخْرُف • (tazaḵruf) m",
-        "g": ["verbal noun of تَزَخْرَفَ (tazaḵrafa) (form IIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَزَخْرَفَ"],
-        "r": ["tazaḵruf"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تزخرف",
-        "u": "تزخرف",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تزخرف (form Iq)\n# تُزَخْرِفُ (tuzaḵrifu) /tu.zax.ri.fu/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَخْرَفُ (tuzaḵrafu) /tu.zax.ra.fu/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifu", "zaḵrafa", "tuzaḵrafu"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفة",
-        "u": "زخرفة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "زَخْرَفَة • (zaḵrafa) f (plural زَخْرَفَات (zaḵrafāt) or زَخَارِف (zaḵārif))",
-        "t": "Verbal noun of زَخْرَفَ (zaḵrafa, “to adorn, decorate, embellish”).",
-        "g": [
-          "verbal noun of زَخْرَفَ (zaḵrafa, “to adorn, decorate, embellish”) (form Iq)",
-          "adornment",
-          "decoration",
-          "ornamentation",
-          "embellishment",
-          "false gold, false ornaments or jewelry",
-          "tinsel",
-          "gilding, gloss",
-          "ornateness of speech, tinsel of speech"
-        ],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["زَخْرَفَ"],
-        "r": ["zaḵrafa"],
-        "ipa": ["/zax.ra.fa/"],
-        "el": [
-          ["زَخْرَفَ", "زخرف#Arabic"],
-          ["adorn", "adorn"],
-          ["decorate", "decorate"],
-          ["embellish", "embellish"]
-        ],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زخرف",
-        "u": "زخرف",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "زَخْرَفَ • (zaḵrafa) Iq (non-past يُزَخْرِفُ (yuzaḵrifu), verbal noun زَخْرَفَة (zaḵrafa))",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["to adorn, ornament, decorate, embellish"],
-        "r": ["zaḵrafa"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخارف",
-        "u": "زخارف",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "زَخَارِف • (zaḵārif) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of زُخْرُف (zuḵruf)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["زُخْرُف"],
-        "r": ["zaḵārif"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مزخرفة",
-        "u": "مزخرفة",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "مُزَخْرَفَة • (muzaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["feminine singular of مُزَخْرَف (muzaḵraf)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["مُزَخْرَف"],
-        "r": ["muzaḵrafa"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "يزخرف",
-        "u": "يزخرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرف (form Iq)\n# يُزَخْرِفُ (yuzaḵrifu) /ju.zax.ri.fu/: third-person masculine singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُ (yuzaḵrafu) /ju.zax.ra.fu/: third-person masculine singular non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرِفَ (yuzaḵrifa) /ju.zax.ri.fa/: third-person masculine singular non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifu", "zaḵrafa", "yuzaḵrafu"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "مزخرفون",
-        "u": "مزخرفون",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "مُزَخْرَفُون • (muzaḵrafūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of مُزَخْرَف (muzaḵraf)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["مُزَخْرَف"],
-        "r": ["muzaḵrafūn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زخرفت",
-        "u": "زخرفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفت (form Iq)\n# زَخْرَفْتُ (zaḵraftu) /zax.raf.tu/: first-person singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفْتَ (zaḵrafta) /zax.raf.ta/: second-person masculine singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفْتِ (zaḵrafti) /zax.raf.ti/: second-person feminine singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفَتْ (zaḵrafat) /zax.ra.fat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵraftu", "zaḵrafa", "zaḵrafta"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفي",
-        "u": "تزخرفي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزخرفي (form Iq)\n# تُزَخْرِفِي (tuzaḵrifī) /tu.zax.ri.fiː/: second-person feminine singular non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفِي (tuzaḵrafī) /tu.zax.ra.fiː/: second-person feminine singular non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifī", "zaḵrafa", "tuzaḵrafī"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفين",
-        "u": "تزخرفين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزخرفين (form Iq)\n# تُزَخْرِفِينَ (tuzaḵrifīna) /tu.zax.ri.fiː.na/: second-person feminine singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفِينَ (tuzaḵrafīna) /tu.zax.ra.fiː.na/: second-person feminine singular non-past passive indicative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifīna", "zaḵrafa", "tuzaḵrafīna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفي",
-        "u": "زخرفي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَخْرِفِي • (zaḵrifī) (form Iq) /zax.ri.fiː/\n# second-person feminine singular imperative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrifī", "zaḵrafa"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "أزخرف",
-        "u": "أزخرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزخرف (form Iq)\n# أُزَخْرِفُ (ʔuzaḵrifu) /ʔu.zax.ri.fu/: first-person singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# أُزَخْرَفُ (ʔuzaḵrafu) /ʔu.zax.ra.fu/: first-person singular non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# أُزَخْرِفَ (ʔuzaḵrifa) /ʔu.zax.ri.fa/: first-person singular non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# أُزَخْرَفَ (ʔuzaḵrafa) /ʔu.zax.ra.fa/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuzaḵrifu", "zaḵrafa", "ʔuzaḵrafu"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفنا",
-        "u": "زخرفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفنا (form Iq)\n# زَخْرَفْنَا (zaḵrafnā) /zax.raf.naː/: first-person plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْنَا (zuḵrifnā) /zux.rif.naː/: first-person plural past passive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrafnā", "zaḵrafa", "zuḵrifnā"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "نزخرف",
-        "u": "نزخرف",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزخرف (form Iq)\n# نُزَخْرِفُ (nuzaḵrifu) /nu.zax.ri.fu/: first-person plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# نُزَخْرَفُ (nuzaḵrafu) /nu.zax.ra.fu/: first-person plural non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# نُزَخْرِفَ (nuzaḵrifa) /nu.zax.ri.fa/: first-person plural non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# نُزَخْرَفَ (nuzaḵrafa) /nu.zax.ra.fa/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuzaḵrifu", "zaḵrafa", "nuzaḵrafu"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفتم",
-        "u": "زخرفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفتم (form Iq)\n# زَخْرَفْتُمْ (zaḵraftum) /zax.raf.tum/: second-person masculine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُمْ (zuḵriftum) /zux.rif.tum/: second-person masculine plural past passive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵraftum", "zaḵrafa", "zuḵriftum"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفون",
-        "u": "تزخرفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزخرفون (form Iq)\n# تُزَخْرِفُونَ (tuzaḵrifūna) /tu.zax.ri.fuː.na/: second-person masculine plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفُونَ (tuzaḵrafūna) /tu.zax.ra.fuː.na/: second-person masculine plural non-past passive indicative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifūna", "zaḵrafa", "tuzaḵrafūna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفوا",
-        "u": "تزخرفوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزخرفوا (form Iq)\n# تُزَخْرِفُوا (tuzaḵrifū) /tu.zax.ri.fuː/: second-person masculine plural non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفُوا (tuzaḵrafū) /tu.zax.ra.fuː/: second-person masculine plural non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifū", "zaḵrafa", "tuzaḵrafū"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفوا",
-        "u": "زخرفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفوا (form Iq)\n# زَخْرَفُوا (zaḵrafū) /zax.ra.fuː/: third-person masculine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفُوا (zuḵrifū) /zux.ri.fuː/: third-person masculine plural past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفُوا (zaḵrifū) /zax.ri.fuː/: second-person masculine plural imperative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrafū", "zaḵrafa", "zuḵrifū"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يزخرفون",
-        "u": "يزخرفون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرفون (form Iq)\n# يُزَخْرِفُونَ (yuzaḵrifūna) /ju.zax.ri.fuː.na/: third-person masculine plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُونَ (yuzaḵrafūna) /ju.zax.ra.fuː.na/: third-person masculine plural non-past passive indicative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifūna", "zaḵrafa", "yuzaḵrafūna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يزخرفوا",
-        "u": "يزخرفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرفوا (form Iq)\n# يُزَخْرِفُوا (yuzaḵrifū) /ju.zax.ri.fuː/: third-person masculine plural non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُوا (yuzaḵrafū) /ju.zax.ra.fuː/: third-person masculine plural non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifū", "zaḵrafa", "yuzaḵrafū"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفن",
-        "u": "تزخرفن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزخرفن (form Iq)\n# تُزَخْرِفْنَ (tuzaḵrifna) /tu.zax.rif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفْنَ (tuzaḵrafna) /tu.zax.raf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifna", "zaḵrafa", "tuzaḵrafna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفتن",
-        "u": "زخرفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفتن (form Iq)\n# زَخْرَفْتُنَّ (zaḵraftunna) /zax.raf.tun.na/: second-person feminine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُنَّ (zuḵriftunna) /zux.rif.tun.na/: second-person feminine plural past passive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵraftunna", "zaḵrafa", "zuḵriftunna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفن",
-        "u": "زخرفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفن (form Iq)\n# زَخْرَفْنَ (zaḵrafna) /zax.raf.na/: third-person feminine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْنَ (zuḵrifna) /zux.rif.na/: third-person feminine plural past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفْنَ (zaḵrifna) /zax.rif.na/: second-person feminine plural imperative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrafna", "zaḵrafa", "zuḵrifna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يزخرفن",
-        "u": "يزخرفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرفن (form Iq)\n# يُزَخْرِفْنَ (yuzaḵrifna) /ju.zax.rif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفْنَ (yuzaḵrafna) /ju.zax.raf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifna", "zaḵrafa", "yuzaḵrafna"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفا",
-        "u": "تزخرفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزخرفا (form Iq)\n# تُزَخْرِفَا (tuzaḵrifā) /tu.zax.ri.faː/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَخْرَفَا (tuzaḵrafā) /tu.zax.ra.faː/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifā", "zaḵrafa", "tuzaḵrafā"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفا",
-        "u": "زخرفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفا (form Iq)\n# زَخْرَفَا (zaḵrafā) /zax.ra.faː/: third-person masculine dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفَا (zuḵrifā) /zux.ri.faː/: third-person masculine dual past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفَا (zaḵrifā) /zax.ri.faː/: second-person dual imperative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrafā", "zaḵrafa", "zuḵrifā"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفتا",
-        "u": "زخرفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفتا (form Iq)\n# زَخْرَفَتَا (zaḵrafatā) /zax.ra.fa.taː/: third-person feminine dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفَتَا (zuḵrifatā) /zux.ri.fa.taː/: third-person feminine dual past passive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵrafatā", "zaḵrafa", "zuḵrifatā"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يزخرفا",
-        "u": "يزخرفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرفا (form Iq)\n# يُزَخْرِفَا (yuzaḵrifā) /ju.zax.ri.faː/: third-person masculine dual non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَا (yuzaḵrafā) /ju.zax.ra.faː/: third-person masculine dual non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifā", "zaḵrafa", "yuzaḵrafā"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "تزخرفان",
-        "u": "تزخرفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزخرفان (form Iq)\n# تُزَخْرِفَانِ (tuzaḵrifāni) /tu.zax.ri.faː.ni/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَخْرَفَانِ (tuzaḵrafāni) /tu.zax.ra.faː.ni/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzaḵrifāni", "zaḵrafa", "tuzaḵrafāni"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "يزخرفان",
-        "u": "يزخرفان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزخرفان (form Iq)\n# يُزَخْرِفَانِ (yuzaḵrifāni) /ju.zax.ri.faː.ni/: third-person masculine dual non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَانِ (yuzaḵrafāni) /ju.zax.ra.faː.ni/: third-person masculine dual non-past passive indicative of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzaḵrifāni", "zaḵrafa", "yuzaḵrafāni"],
-        "k": "زخرف",
-        "yol": "kök"
-      },
-      {
-        "w": "زخرفتما",
-        "u": "زخرفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زخرفتما (form Iq)\n# زَخْرَفْتُمَا (zaḵraftumā) /zax.raf.tu.maː/: second-person dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُمَا (zuḵriftumā) /zux.rif.tu.maː/: second-person dual past passive of زَخْرَفَ (zaḵrafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zaḵraftumā", "zaḵrafa", "zuḵriftumā"],
-        "k": "زخرف",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "زخرف": "süs",
-      "زخرفها": "süs",
-      "وزخرفا": "süs"
-    },
-    "arabic_ontology": [
-      {
-        "id": "45869",
-        "arapca": [
-          "نَمَّقَ",
-          "أَرْذَلَ",
-          "زَخْرَفَ",
-          "زَوَّرَ",
-          "زَوَّرَ على",
-          "زَيَّفَ",
-          "جَرَّمَ",
-          "جَنَّحَ",
-          "تَصَنَّعَ",
-          "تَصَنَّعَ في",
-          "غَبَنَ",
-          "غَبَنَ في",
-          "غَرَّرَ",
-          "غَرَّرَ بِ",
-          "غَشَّ",
-          "غَشَّ في",
-          "غَلَّ3",
-          "أَغْوى",
-          "خَدَعَ",
-          "خَادَعَ",
-          "أَخْلَفَ",
-          "أَخْلَفَ على",
-          "أَخْلَفَ ل",
-          "دَبَّجَ",
-          "دَجَّلَ",
-          "دَجَّلَ على",
-          "دَالَسَ",
-          "دَلَّسَ",
-          "دَلَّسَ على",
-          "دَلَّسَ في",
-          "دَاهَنَ",
-          "دَهَى",
-          "نَبَذَ",
-          "نَكَثَ",
-          "رَقَبَ",
-          "رَقَّشَ",
-          "رَاوَغَ",
-          "أَثَّمَ",
-          "وَشَّى",
-          "تَحَامَلَ",
-          "تَحَامَلَ عَلى",
-          "وَارَبَ",
-          "خَالَفَ",
-          "خَالَفَ عن",
-          "نَصَبَ",
-          "نَصَبَ على",
-          "رَمَى",
-          "رَمَى إلى",
-          "رَمَى ب",
-          "تَصَوَّرَ",
-          "تَصَوَّرَ ل",
-          "نَقَضَ",
-          "حَسِبَ",
-          "أَغْرى",
-          "كَذَبَ",
-          "كَذَبَ على",
-          "مَوَّهَ",
-          "لَفَّقَ",
-          "غَدَرَ",
-          "غَدَرَ ب"
-        ],
-        "ingilizce": [],
-        "tanim": "غشَّى، صَوَّر أمرًا على غير حَقيقته",
-        "misal": "_ البائع الزبون",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46208",
-        "arapca": [
-          "نَمَّقَ",
-          "زَبْرَجَ",
-          "زَخْرَفَ",
-          "زَرْكَشَ",
-          "زَوَّقَ",
-          "زَانَ",
-          "جَمَّلَ",
-          "جَوَّدَ",
-          "وَشَّى",
-          "حَلَّى",
-          "زَيَّنَ",
-          "زَيَّنَ ل",
-          "حسَّنَ"
-        ],
-        "ingilizce": [],
-        "tanim": "جعله يبدو أفضل للناظر مما هو عليه بإضافة شيء ما",
-        "misal": "_ الفنان صالة الأفراح بإضافة مجموعة من الازهار الطبيعية ذات الألوان الزاهية",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46732",
-        "arapca": [
-          "نَمْنَمَ",
-          "نَمَّقَ",
-          "أَطَابَ",
-          "زَبْرَجَ",
-          "زَخْرَفَ",
-          "زَرْكَشَ",
-          "زَوَّقَ",
-          "زَانَ",
-          "جَمَّلَ",
-          "جَوَّدَ",
-          "أَصْلَحَ",
-          "أَصْلَحَ في",
-          "أَصْلَحَ من",
-          "دَبَّجَ",
-          "بَهْرَجَ",
-          "نَقَشَ",
-          "رَقَّشَ",
-          "وَشَّى",
-          "حَلَّى",
-          "صَنَّعَ",
-          "طَيَّبَ",
-          "زَيَّنَ",
-          "زَيَّنَ ل",
-          "سَهَّلَ",
-          "سَوَّى",
-          "حسَّنَ"
-        ],
-        "ingilizce": [],
-        "tanim": "جَعَلَهُ حَسَنتاً جميلاً",
-        "misal": "_ محمدٌ بيتَه بألوانٍ زاهية",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "48601",
-        "arapca": ["تَبَرُّجٌ", "زَخْرَفَةٌ", "زُخْرُفٌ", "زِينَةٌ"],
-        "ingilizce": [],
-        "tanim": "شيء يتزين به",
-        "misal": "على الفتيات الصغار أن يقللن من _",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "51016",
-        "arapca": ["نَمَّقَ", "زَخْرَفَ", "طَرَّزَ", "دَبَّجَ", "نَقَّشَ", "رَقَّشَ", "وَشَّى"],
-        "ingilizce": [],
-        "tanim": "عملية إضافة لمكملات لتزيين الشيء وزيادة جماله و روعته",
-        "misal": "_ الرجل جرة الفخار حتى أصبحت تحفة جميلة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 4,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زخ",
-    "harf": "ز",
-    "mahrec": "esaliyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "whole.n.02",
-    "orta": "noun.artifact",
-    "ust": "cisim ve eşya",
-    "dayanak_synset": "adornment.n.01",
-    "dayanak_tanim": "a decoration of color or interest that is added to relieve plainness",
-    "synset_sayisi": 16
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الزاي والخاء",
-    "mihveri": "مستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر (2/884) وأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف).",
-    "tam_metin": "{أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ أَوْ تَرْقَى فِي السَّمَاءِ} [الإسراء: 93]\n\"زخارف الماء: طرائقه (الخطوط الدقاق المتوالية في أعلاه إذا كان ساكنًا وهبّت عليه الريح). والزخارف ما زُيّن من السفن. وفي [العين]: ما يُزَخْرَفُ به السفن \" [تاج].\n° المعنى المحوري\nمستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر\n(2/884)\nوأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].\n° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "act.n.02",
-    "act.v.02",
-    "artifact.n.01",
-    "balance.v.01",
-    "cause.v.01",
-    "decorate.v.01",
-    "do.v.03",
-    "fancify.v.01",
-    "make.v.01",
-    "perform.v.01",
-    "reduce.v.01",
-    "suffice.v.01"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 7,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 986
-    },
-    "orta": {
-      "kume": 31,
-      "merkez_kok": "لفف",
-      "merkez_mana": "Lef: sarmak, dolamak",
-      "boy": 260
-    },
-    "ince": {
-      "kume": 189,
-      "merkez_kok": "جيد",
-      "merkez_mana": "Cid: boyun; cevâd: iyi cins at",
-      "boy": 24
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "زُخْرُفَ",
-      "kok": "زخرف",
-      "lemma": "زُخْرُف",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "6:112",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "süs",
-        "lemma": "süs",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      },
-      "jeffery": {
-        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
-        "translit": "Zukhruf",
-        "ayet_atiflari": "vi, 112; x, 24; xvii, 93; xliii, 35",
-        "ilk_baslik_dilleri": ["Aramaic"],
-        "metin": "vi, 112; x, 24; xvii, 93; xliii, 35. Anything highly embellished. As used in the Qurān it means ornamentation, though Ibn Sīda says that its primitive meaning was gold, and then any gilded decoration, and then decoration in general. There appears to be no occurrence of the word earlier than the Qurān, though it may well have been an early word. It seems to be a deformation from the Syr. )\"] = Aramaic ,1 meaning a bright scarlet colour much used for adornment. It is used for the scarlet curtains of the Tabernacle in Ex. xxvi, 1, and for the χλαμὺς κοκκίνη of Matt. xxvii, 28. The interchange of and is not a great difficulty, cf. Praetorius, Beit. Ass, i, 43, and Barth in ZDMG, xli, 634. @ 9B",
-        "arapca": "زخرف"
-      }
-    },
-    {
-      "kelime": "زُخْرُفَهَا",
-      "kok": "زخرف",
-      "lemma": "زُخْرُف",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "10:24",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "süs",
-        "lemma": "süs",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "زُخْرُفٍ",
-      "kok": "زخرف",
-      "lemma": "زُخْرُف",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "17:93",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "süs",
-        "lemma": "süs",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَزُخْرُفًا",
-      "kok": "زخرف",
-      "lemma": "زُخْرُف",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "43:35",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "süs",
-        "lemma": "süs",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
+ "kok": "زخرف",
+ "sinif": "reddedildi",
+ "turkce_fiil": {
+  "sap": "süsle",
+  "kaynak": "fiil",
+  "guven": "kural"
+ },
+ "mustaklar": {},
+ "reddedilen": [
+  [
+   "kök",
+   "زخرف",
+   "üç harfli değil"
   ]
+ ],
+ "sozlukler": {
+  "kok_anlamlari": {
+   "kok": "زخرف",
+   "turkce": "Zuhrf: süslemek; zuhruf: süs"
+  },
+  "osmanlica_lugatler": {
+   "زُخْرُف": {
+    "sorgular": [
+     "zuhruf"
+    ],
+    "maddeler": [
+     {
+      "eser": "Kubbe Altı",
+      "madde": "ZUHRUF",
+      "arapca": [
+       "زخرف"
+      ],
+      "mana": "( ﺯﺧﺮﻒ ) i. (Ar. zuḫruf ) Yalancı süs, aldatıcı, parlak süs.",
+      "id": 309812,
+      "eslesme": "arapça yazılış kökle uyuştu · başlık tam"
+     },
+     {
+      "eser": "Kamus",
+      "madde": "zuhruf",
+      "arapca": [],
+      "mana": "اَلزُّخْرُفُ [ez-zuhruf] (hâ-yı muceme ile قُنْفُذٌ [kunfuz] vezninde) Altına denir, ذَهَبٌ [zeheb] manâsına. Yaldızlı nesneye مُزَخْرَفٌ [muzahref] ıtlâkı bundandır. Şârih der ki Râgibin beyânına göre زُخْرَفٌ [zuhruf] zînet-i müzevveka manâsına mevzûdur, altına ıtlâkı bu cihetledir. Ve minhu kâle taâlâ: ﴿أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ﴾ أَيْ ذَهَبٍ مُزَوَّقٍ Ve زُخْرُفٌ [zuhruf] Bir nesnenin kemâl-i hüsn ü revnak u zînetine denir; yukâlu: بِهِ زُخْرُفٌ أَيْ كَمَالُ حُسْنٍ Ve زُخْرُفُ الْقَوْلِ [zuhruful-kavl] Kelâmı kezib ve temvîhâtla yaldızlamaktan hâsıl olan hüsn ve revnak ve zînet ve letâfete denir; yukâlu: غَرَّهُ بِزُخْرُفِ الْقَوْلِ وَهُوَ حُسْنُهُ بِتَرْقِيشِ الْكَذِبِ Ve زُخْرُفُ الْأَرْضِ [zuhruful-ard] Yerin bâis-i revnak u letâfeti olan rengârenk nebâtâtına ıtlâk olunur; yukâlu: أَخْرَجَتِ الْأَرْضُ زُخْرُفَهَا وَزَخَارِفَهَا أَيْ أَلْوَانَ نَبَاتِهَا",
+      "id": 1182661,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Vankulu",
+      "madde": "zuhruf",
+      "arapca": [],
+      "mana": "اَلزُّخْرُفُ [ez-zuhruf] (zânın ve rânın zammı ve mâ-beynde hâ-i mucemenin sükûnuyla) Altın, zeheb manâsına, pes altın yaldızlı nesneye teşbîhen her kalb ve müzevver olan nesneye مُزَخْرَفٌ [muzahref] dediler.",
+      "id": 1182668,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Kamus-u Türki",
+      "madde": "zuhruf",
+      "arapca": [],
+      "mana": "زخرف Kamus turkide زخرف maddesi. Sayfa:683",
+      "id": 1182665,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     }
+    ]
+   }
+  },
+  "cebel_mihveri": {
+   "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+   "fasil": "الزاي والخاء",
+   "baslik": "زخرف",
+   "mihveri": "مستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر (2/884) وأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].",
+   "sesler": "",
+   "tam_metin": "{أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ أَوْ تَرْقَى فِي السَّمَاءِ} [الإسراء: 93]\n\"زخارف الماء: طرائقه (الخطوط الدقاق المتوالية في أعلاه إذا كان ساكنًا وهبّت عليه الريح). والزخارف ما زُيّن من السفن. وفي [العين]: ما يُزَخْرَفُ به السفن \" [تاج].\n° المعنى المحوري\nمستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر\n(2/884)\nوأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].\n° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف).",
+   "fasil_ozeti": "° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف)."
+  },
+  "kuran_korpusu": {
+   "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+   "gecis": 4,
+   "ilk_yer": "6:112:13:1",
+   "tur": {
+    "N": 4
+   },
+   "bab": {},
+   "zaman_kip": {},
+   "fiil_ismi_ozellikleri": {},
+   "lemmalar": {
+    "زُخْرُف": 4
+   },
+   "bicimler": {
+    "زُخْرُفَ": 2,
+    "زُخْرُفٍ": 1,
+    "زُخْرُفًا": 1
+   }
+  },
+  "etymarab": {
+   "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
+   "latin": "ZḪRF",
+   "dolu": true,
+   "kok_maddesi": "Back to library EtymArab ZḪRF زخرف BP – • HDAL • © SG | 24Mar2023 √ZḪRF “root” ▪ ZḪRF_1 ‘...’ ↗ ... ▪ ZḪRF_2 ‘...’ ↗ ... ▪ ZḪRF_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘gold, ornamentation, decoration, flowery talk, land covered with flowers’ ▪ It has been suggested that the entire root is a borrowing from Syr – Bah2008. ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+   "kelime_maddeleri": []
+  },
+  "kaikki_vikisozluk": [
+   {
+    "w": "مزخرف",
+    "u": "مزخرف",
+    "p": "adj",
+    "h": "ar-adj+",
+    "e": "مُزَخْرَف • (muzaḵraf) (feminine مُزَخْرَفَة (muzaḵrafa), masculine plural مُزَخْرَفُون (muzaḵrafūn), feminine plural مُزَخْرَفَات (muzaḵrafāt))",
+    "t": "Derived from the passive participle of زَخْرَفَ (zaḵrafa, “to embellish, to decorate, to adorn”).",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-passive participle",
+      "Derived from the passive participle"
+     ]
+    ],
+    "g": [
+     "adorned, ornamented, decorated, embellished",
+     "fancy"
+    ],
+    "r": [
+     "muzaḵraf"
+    ],
+    "el": [
+     [
+      "زَخْرَفَ",
+      "زخرف#Arabic"
+     ],
+     [
+      "embellish",
+      "embellish"
+     ],
+     [
+      "decorate",
+      "decorate"
+     ],
+     [
+      "adorn",
+      "adorn"
+     ]
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرف",
+    "u": "تزخرف",
+    "p": "verb",
+    "n": "1",
+    "h": "ar-verb",
+    "e": "تَزَخْرَفَ • (tazaḵrafa) IIq (non-past يَتَزَخْرَفُ (yatazaḵrafu), verbal noun تَزَخْرُف (tazaḵruf))",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ]
+    ],
+    "g": [
+     "to adorn, ornament, decorate or embellish oneself",
+     "to be adorned, be ornamented, be decorated, be embellished"
+    ],
+    "r": [
+     "tazaḵrafa"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرف",
+    "u": "تزخرف",
+    "p": "noun",
+    "n": "2",
+    "h": "ar-noun",
+    "e": "تَزَخْرُف • (tazaḵruf) m",
+    "g": [
+     "verbal noun of تَزَخْرَفَ (tazaḵrafa) (form IIq)"
+    ],
+    "tag": [
+     "form-of",
+     "noun-from-verb"
+    ],
+    "fo": [
+     "تَزَخْرَفَ"
+    ],
+    "r": [
+     "tazaḵruf"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "تزخرف",
+    "u": "تزخرف",
+    "p": "verb",
+    "n": "3",
+    "h": "ar-verb form",
+    "e": "تزخرف (form Iq)\n# تُزَخْرِفُ (tuzaḵrifu) /tu.zax.ri.fu/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَخْرَفُ (tuzaḵrafu) /tu.zax.ra.fu/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifu",
+     "zaḵrafa",
+     "tuzaḵrafu"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفة",
+    "u": "زخرفة",
+    "p": "noun",
+    "h": "ar-noun",
+    "e": "زَخْرَفَة • (zaḵrafa) f (plural زَخْرَفَات (zaḵrafāt) or زَخَارِف (zaḵārif))",
+    "t": "Verbal noun of زَخْرَفَ (zaḵrafa, “to adorn, decorate, embellish”).",
+    "g": [
+     "verbal noun of زَخْرَفَ (zaḵrafa, “to adorn, decorate, embellish”) (form Iq)",
+     "adornment",
+     "decoration",
+     "ornamentation",
+     "embellishment",
+     "false gold, false ornaments or jewelry",
+     "tinsel",
+     "gilding, gloss",
+     "ornateness of speech, tinsel of speech"
+    ],
+    "tag": [
+     "form-of",
+     "noun-from-verb"
+    ],
+    "fo": [
+     "زَخْرَفَ"
+    ],
+    "r": [
+     "zaḵrafa"
+    ],
+    "ipa": [
+     "/zax.ra.fa/"
+    ],
+    "el": [
+     [
+      "زَخْرَفَ",
+      "زخرف#Arabic"
+     ],
+     [
+      "adorn",
+      "adorn"
+     ],
+     [
+      "decorate",
+      "decorate"
+     ],
+     [
+      "embellish",
+      "embellish"
+     ]
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "زخرف",
+    "u": "زخرف",
+    "p": "verb",
+    "n": "1",
+    "h": "ar-verb",
+    "e": "زَخْرَفَ • (zaḵrafa) Iq (non-past يُزَخْرِفُ (yuzaḵrifu), verbal noun زَخْرَفَة (zaḵrafa))",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ]
+    ],
+    "g": [
+     "to adorn, ornament, decorate, embellish"
+    ],
+    "r": [
+     "zaḵrafa"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخارف",
+    "u": "زخارف",
+    "p": "noun",
+    "h": "ar-head",
+    "e": "زَخَارِف • (zaḵārif) m pl",
+    "t": "See the etymology of the corresponding lemma form.",
+    "g": [
+     "plural of زُخْرُف (zuḵruf)"
+    ],
+    "tag": [
+     "form-of",
+     "plural"
+    ],
+    "fo": [
+     "زُخْرُف"
+    ],
+    "r": [
+     "zaḵārif"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "مزخرفة",
+    "u": "مزخرفة",
+    "p": "adj",
+    "h": "ar-head",
+    "e": "مُزَخْرَفَة • (muzaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "g": [
+     "feminine singular of مُزَخْرَف (muzaḵraf)"
+    ],
+    "tag": [
+     "feminine",
+     "form-of",
+     "singular"
+    ],
+    "fo": [
+     "مُزَخْرَف"
+    ],
+    "r": [
+     "muzaḵrafa"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "يزخرف",
+    "u": "يزخرف",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرف (form Iq)\n# يُزَخْرِفُ (yuzaḵrifu) /ju.zax.ri.fu/: third-person masculine singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُ (yuzaḵrafu) /ju.zax.ra.fu/: third-person masculine singular non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرِفَ (yuzaḵrifa) /ju.zax.ri.fa/: third-person masculine singular non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَ (yu",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifu",
+     "zaḵrafa",
+     "yuzaḵrafu"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "مزخرفون",
+    "u": "مزخرفون",
+    "p": "adj",
+    "h": "ar-head",
+    "e": "مُزَخْرَفُون • (muzaḵrafūn)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "g": [
+     "masculine plural of مُزَخْرَف (muzaḵraf)"
+    ],
+    "tag": [
+     "form-of",
+     "masculine",
+     "plural"
+    ],
+    "fo": [
+     "مُزَخْرَف"
+    ],
+    "r": [
+     "muzaḵrafūn"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "زخرفت",
+    "u": "زخرفت",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفت (form Iq)\n# زَخْرَفْتُ (zaḵraftu) /zax.raf.tu/: first-person singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفْتَ (zaḵrafta) /zax.raf.ta/: second-person masculine singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفْتِ (zaḵrafti) /zax.raf.ti/: second-person feminine singular past active of زَخْرَفَ (zaḵrafa)\n# زَخْرَفَتْ (zaḵrafat) /zax.ra.fat/: third-person feminine singular past active ",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵraftu",
+     "zaḵrafa",
+     "zaḵrafta"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفي",
+    "u": "تزخرفي",
+    "p": "verb",
+    "n": "1",
+    "h": "ar-verb form",
+    "e": "تزخرفي (form Iq)\n# تُزَخْرِفِي (tuzaḵrifī) /tu.zax.ri.fiː/: second-person feminine singular non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفِي (tuzaḵrafī) /tu.zax.ra.fiː/: second-person feminine singular non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifī",
+     "zaḵrafa",
+     "tuzaḵrafī"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفين",
+    "u": "تزخرفين",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تزخرفين (form Iq)\n# تُزَخْرِفِينَ (tuzaḵrifīna) /tu.zax.ri.fiː.na/: second-person feminine singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفِينَ (tuzaḵrafīna) /tu.zax.ra.fiː.na/: second-person feminine singular non-past passive indicative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifīna",
+     "zaḵrafa",
+     "tuzaḵrafīna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفي",
+    "u": "زخرفي",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زَخْرِفِي • (zaḵrifī) (form Iq) /zax.ri.fiː/\n# second-person feminine singular imperative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrifī",
+     "zaḵrafa"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "أزخرف",
+    "u": "أزخرف",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "أزخرف (form Iq)\n# أُزَخْرِفُ (ʔuzaḵrifu) /ʔu.zax.ri.fu/: first-person singular non-past active indicative of زَخْرَفَ (zaḵrafa)\n# أُزَخْرَفُ (ʔuzaḵrafu) /ʔu.zax.ra.fu/: first-person singular non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# أُزَخْرِفَ (ʔuzaḵrifa) /ʔu.zax.ri.fa/: first-person singular non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# أُزَخْرَفَ (ʔuzaḵrafa) /ʔu.zax.ra.fa/: first",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "ʔuzaḵrifu",
+     "zaḵrafa",
+     "ʔuzaḵrafu"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفنا",
+    "u": "زخرفنا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفنا (form Iq)\n# زَخْرَفْنَا (zaḵrafnā) /zax.raf.naː/: first-person plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْنَا (zuḵrifnā) /zux.rif.naː/: first-person plural past passive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrafnā",
+     "zaḵrafa",
+     "zuḵrifnā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "نزخرف",
+    "u": "نزخرف",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "نزخرف (form Iq)\n# نُزَخْرِفُ (nuzaḵrifu) /nu.zax.ri.fu/: first-person plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# نُزَخْرَفُ (nuzaḵrafu) /nu.zax.ra.fu/: first-person plural non-past passive indicative of زَخْرَفَ (zaḵrafa)\n# نُزَخْرِفَ (nuzaḵrifa) /nu.zax.ri.fa/: first-person plural non-past active subjunctive of زَخْرَفَ (zaḵrafa)\n# نُزَخْرَفَ (nuzaḵrafa) /nu.zax.ra.fa/: first-perso",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "nuzaḵrifu",
+     "zaḵrafa",
+     "nuzaḵrafu"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفتم",
+    "u": "زخرفتم",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفتم (form Iq)\n# زَخْرَفْتُمْ (zaḵraftum) /zax.raf.tum/: second-person masculine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُمْ (zuḵriftum) /zux.rif.tum/: second-person masculine plural past passive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵraftum",
+     "zaḵrafa",
+     "zuḵriftum"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفون",
+    "u": "تزخرفون",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تزخرفون (form Iq)\n# تُزَخْرِفُونَ (tuzaḵrifūna) /tu.zax.ri.fuː.na/: second-person masculine plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفُونَ (tuzaḵrafūna) /tu.zax.ra.fuː.na/: second-person masculine plural non-past passive indicative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifūna",
+     "zaḵrafa",
+     "tuzaḵrafūna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفوا",
+    "u": "تزخرفوا",
+    "p": "verb",
+    "n": "2",
+    "h": "ar-verb form",
+    "e": "تزخرفوا (form Iq)\n# تُزَخْرِفُوا (tuzaḵrifū) /tu.zax.ri.fuː/: second-person masculine plural non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفُوا (tuzaḵrafū) /tu.zax.ra.fuː/: second-person masculine plural non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifū",
+     "zaḵrafa",
+     "tuzaḵrafū"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفوا",
+    "u": "زخرفوا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفوا (form Iq)\n# زَخْرَفُوا (zaḵrafū) /zax.ra.fuː/: third-person masculine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفُوا (zuḵrifū) /zux.ri.fuː/: third-person masculine plural past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفُوا (zaḵrifū) /zax.ri.fuː/: second-person masculine plural imperative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrafū",
+     "zaḵrafa",
+     "zuḵrifū"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "يزخرفون",
+    "u": "يزخرفون",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرفون (form Iq)\n# يُزَخْرِفُونَ (yuzaḵrifūna) /ju.zax.ri.fuː.na/: third-person masculine plural non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُونَ (yuzaḵrafūna) /ju.zax.ra.fuː.na/: third-person masculine plural non-past passive indicative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifūna",
+     "zaḵrafa",
+     "yuzaḵrafūna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "يزخرفوا",
+    "u": "يزخرفوا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرفوا (form Iq)\n# يُزَخْرِفُوا (yuzaḵrifū) /ju.zax.ri.fuː/: third-person masculine plural non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفُوا (yuzaḵrafū) /ju.zax.ra.fuː/: third-person masculine plural non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifū",
+     "zaḵrafa",
+     "yuzaḵrafū"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفن",
+    "u": "تزخرفن",
+    "p": "verb",
+    "n": "1",
+    "h": "ar-verb form",
+    "e": "تزخرفن (form Iq)\n# تُزَخْرِفْنَ (tuzaḵrifna) /tu.zax.rif.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# تُزَخْرَفْنَ (tuzaḵrafna) /tu.zax.raf.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifna",
+     "zaḵrafa",
+     "tuzaḵrafna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفتن",
+    "u": "زخرفتن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفتن (form Iq)\n# زَخْرَفْتُنَّ (zaḵraftunna) /zax.raf.tun.na/: second-person feminine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُنَّ (zuḵriftunna) /zux.rif.tun.na/: second-person feminine plural past passive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵraftunna",
+     "zaḵrafa",
+     "zuḵriftunna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفن",
+    "u": "زخرفن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفن (form Iq)\n# زَخْرَفْنَ (zaḵrafna) /zax.raf.na/: third-person feminine plural past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْنَ (zuḵrifna) /zux.rif.na/: third-person feminine plural past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفْنَ (zaḵrifna) /zax.rif.na/: second-person feminine plural imperative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrafna",
+     "zaḵrafa",
+     "zuḵrifna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "يزخرفن",
+    "u": "يزخرفن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرفن (form Iq)\n# يُزَخْرِفْنَ (yuzaḵrifna) /ju.zax.rif.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفْنَ (yuzaḵrafna) /ju.zax.raf.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifna",
+     "zaḵrafa",
+     "yuzaḵrafna"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفا",
+    "u": "تزخرفا",
+    "p": "verb",
+    "n": "2",
+    "h": "ar-verb form",
+    "e": "تزخرفا (form Iq)\n# تُزَخْرِفَا (tuzaḵrifā) /tu.zax.ri.faː/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَخْرَفَا (tuzaḵrafā) /tu.zax.ra.faː/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifā",
+     "zaḵrafa",
+     "tuzaḵrafā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفا",
+    "u": "زخرفا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفا (form Iq)\n# زَخْرَفَا (zaḵrafā) /zax.ra.faː/: third-person masculine dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفَا (zuḵrifā) /zux.ri.faː/: third-person masculine dual past passive of زَخْرَفَ (zaḵrafa)\n# زَخْرِفَا (zaḵrifā) /zax.ri.faː/: second-person dual imperative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrafā",
+     "zaḵrafa",
+     "zuḵrifā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفتا",
+    "u": "زخرفتا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفتا (form Iq)\n# زَخْرَفَتَا (zaḵrafatā) /zax.ra.fa.taː/: third-person feminine dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفَتَا (zuḵrifatā) /zux.ri.fa.taː/: third-person feminine dual past passive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵrafatā",
+     "zaḵrafa",
+     "zuḵrifatā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "يزخرفا",
+    "u": "يزخرفا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرفا (form Iq)\n# يُزَخْرِفَا (yuzaḵrifā) /ju.zax.ri.faː/: third-person masculine dual non-past active subjunctive/jussive of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَا (yuzaḵrafā) /ju.zax.ra.faː/: third-person masculine dual non-past passive subjunctive/jussive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifā",
+     "zaḵrafa",
+     "yuzaḵrafā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "تزخرفان",
+    "u": "تزخرفان",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تزخرفان (form Iq)\n# تُزَخْرِفَانِ (tuzaḵrifāni) /tu.zax.ri.faː.ni/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَخْرَفَانِ (tuzaḵrafāni) /tu.zax.ra.faː.ni/: inflection of زَخْرَفَ (zaḵrafa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tuzaḵrifāni",
+     "zaḵrafa",
+     "tuzaḵrafāni"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "يزخرفان",
+    "u": "يزخرفان",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يزخرفان (form Iq)\n# يُزَخْرِفَانِ (yuzaḵrifāni) /ju.zax.ri.faː.ni/: third-person masculine dual non-past active indicative of زَخْرَفَ (zaḵrafa)\n# يُزَخْرَفَانِ (yuzaḵrafāni) /ju.zax.ra.faː.ni/: third-person masculine dual non-past passive indicative of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yuzaḵrifāni",
+     "zaḵrafa",
+     "yuzaḵrafāni"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   },
+   {
+    "w": "زخرفتما",
+    "u": "زخرفتما",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "زخرفتما (form Iq)\n# زَخْرَفْتُمَا (zaḵraftumā) /zax.raf.tu.maː/: second-person dual past active of زَخْرَفَ (zaḵrafa)\n# زُخْرِفْتُمَا (zuḵriftumā) /zux.rif.tu.maː/: second-person dual past passive of زَخْرَفَ (zaḵrafa)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "zaḵraftumā",
+     "zaḵrafa",
+     "zuḵriftumā"
+    ],
+    "k": "زخرف",
+    "yol": "kök"
+   }
+  ],
+  "renk_sozluk": {
+   "زخرف": "süs",
+   "زخرفها": "süs",
+   "وزخرفا": "süs"
+  },
+  "arabic_ontology": [
+   {
+    "id": "45869",
+    "arapca": [
+     "نَمَّقَ",
+     "أَرْذَلَ",
+     "زَخْرَفَ",
+     "زَوَّرَ",
+     "زَوَّرَ على",
+     "زَيَّفَ",
+     "جَرَّمَ",
+     "جَنَّحَ",
+     "تَصَنَّعَ",
+     "تَصَنَّعَ في",
+     "غَبَنَ",
+     "غَبَنَ في",
+     "غَرَّرَ",
+     "غَرَّرَ بِ",
+     "غَشَّ",
+     "غَشَّ في",
+     "غَلَّ3",
+     "أَغْوى",
+     "خَدَعَ",
+     "خَادَعَ",
+     "أَخْلَفَ",
+     "أَخْلَفَ على",
+     "أَخْلَفَ ل",
+     "دَبَّجَ",
+     "دَجَّلَ",
+     "دَجَّلَ على",
+     "دَالَسَ",
+     "دَلَّسَ",
+     "دَلَّسَ على",
+     "دَلَّسَ في",
+     "دَاهَنَ",
+     "دَهَى",
+     "نَبَذَ",
+     "نَكَثَ",
+     "رَقَبَ",
+     "رَقَّشَ",
+     "رَاوَغَ",
+     "أَثَّمَ",
+     "وَشَّى",
+     "تَحَامَلَ",
+     "تَحَامَلَ عَلى",
+     "وَارَبَ",
+     "خَالَفَ",
+     "خَالَفَ عن",
+     "نَصَبَ",
+     "نَصَبَ على",
+     "رَمَى",
+     "رَمَى إلى",
+     "رَمَى ب",
+     "تَصَوَّرَ",
+     "تَصَوَّرَ ل",
+     "نَقَضَ",
+     "حَسِبَ",
+     "أَغْرى",
+     "كَذَبَ",
+     "كَذَبَ على",
+     "مَوَّهَ",
+     "لَفَّقَ",
+     "غَدَرَ",
+     "غَدَرَ ب"
+    ],
+    "ingilizce": [],
+    "tanim": "غشَّى، صَوَّر أمرًا على غير حَقيقته",
+    "misal": "_ البائع الزبون",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "46208",
+    "arapca": [
+     "نَمَّقَ",
+     "زَبْرَجَ",
+     "زَخْرَفَ",
+     "زَرْكَشَ",
+     "زَوَّقَ",
+     "زَانَ",
+     "جَمَّلَ",
+     "جَوَّدَ",
+     "وَشَّى",
+     "حَلَّى",
+     "زَيَّنَ",
+     "زَيَّنَ ل",
+     "حسَّنَ"
+    ],
+    "ingilizce": [],
+    "tanim": "جعله يبدو أفضل للناظر مما هو عليه بإضافة شيء ما",
+    "misal": "_ الفنان صالة الأفراح بإضافة مجموعة من الازهار الطبيعية ذات الألوان الزاهية",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "46732",
+    "arapca": [
+     "نَمْنَمَ",
+     "نَمَّقَ",
+     "أَطَابَ",
+     "زَبْرَجَ",
+     "زَخْرَفَ",
+     "زَرْكَشَ",
+     "زَوَّقَ",
+     "زَانَ",
+     "جَمَّلَ",
+     "جَوَّدَ",
+     "أَصْلَحَ",
+     "أَصْلَحَ في",
+     "أَصْلَحَ من",
+     "دَبَّجَ",
+     "بَهْرَجَ",
+     "نَقَشَ",
+     "رَقَّشَ",
+     "وَشَّى",
+     "حَلَّى",
+     "صَنَّعَ",
+     "طَيَّبَ",
+     "زَيَّنَ",
+     "زَيَّنَ ل",
+     "سَهَّلَ",
+     "سَوَّى",
+     "حسَّنَ"
+    ],
+    "ingilizce": [],
+    "tanim": "جَعَلَهُ حَسَنتاً جميلاً",
+    "misal": "_ محمدٌ بيتَه بألوانٍ زاهية",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "48601",
+    "arapca": [
+     "تَبَرُّجٌ",
+     "زَخْرَفَةٌ",
+     "زُخْرُفٌ",
+     "زِينَةٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "شيء يتزين به",
+    "misal": "على الفتيات الصغار أن يقللن من _",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "51016",
+    "arapca": [
+     "نَمَّقَ",
+     "زَخْرَفَ",
+     "طَرَّزَ",
+     "دَبَّجَ",
+     "نَقَّشَ",
+     "رَقَّشَ",
+     "وَشَّى"
+    ],
+    "ingilizce": [],
+    "tanim": "عملية إضافة لمكملات لتزيين الشيء وزيادة جماله و روعته",
+    "misal": "_ الرجل جرة الفخار حتى أصبحت تحفة جميلة",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   }
+  ]
+ },
+ "kuran_gecisleri": 4,
+ "kuranda_var": true,
+ "sema": {
+  "sema": "graf-ic-graf",
+  "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+  "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+  "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+  "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+  "satir_alanlari": [
+   "kalip",
+   "arapca",
+   "latin",
+   "turkce",
+   "guven",
+   "tanik"
+  ]
+ },
+ "tasnif": {
+  "fasil": "زخ",
+  "harf": "ز",
+  "mahrec": "esaliyye",
+  "bolge": "dil"
+ },
+ "mana_tasnif": {
+  "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "ince": "whole.n.02",
+  "orta": "noun.artifact",
+  "ust": "cisim ve eşya",
+  "dayanak_synset": "adornment.n.01",
+  "dayanak_tanim": "a decoration of color or interest that is added to relieve plainness",
+  "synset_sayisi": 16
+ },
+ "ses_mana_tasnif": {
+  "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "fasil": "الزاي والخاء",
+  "mihveri": "مستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر (2/884) وأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].",
+  "sesler": "",
+  "fasil_ozeti": "° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف).",
+  "tam_metin": "{أَوْ يَكُونَ لَكَ بَيْتٌ مِنْ زُخْرُفٍ أَوْ تَرْقَى فِي السَّمَاءِ} [الإسراء: 93]\n\"زخارف الماء: طرائقه (الخطوط الدقاق المتوالية في أعلاه إذا كان ساكنًا وهبّت عليه الريح). والزخارف ما زُيّن من السفن. وفي [العين]: ما يُزَخْرَفُ به السفن \" [تاج].\n° المعنى المحوري\nمستطرف من دقاق كثيرة تعرو ظاهر الشيء نافذة منه تُسْتَمْلح لدقتها وانتظامها أو لغير ذلك - كطرائق الماء المذكورة. ومن ذلك الزخرف: الذهب، إما لأنه يُعَلَّق على ظاهر البدن للزينة، أو لأنه قد يوجد نثارًا لامعة على سطح الأرض بعدما يَقْشِرها ماءُ السيل بمروره قوقها. والوجه الأول هو المفهوم من كلامهم [في ل]. وجعل ابن سيده أصل التركيب الذهب \"ثم سُمِّيَّ كلُّ زينة زُخْرُفًا، ثم شُبِّهَ كلُّ مموه مُزَوَّرٍ به \". \"وفي الحديث أنه - صلى الله عليه وسلم - لم يدخل الكعبة حتى أمر بالزخرف فنُحِّىَ. قالوا: هي نُقوش وتصاوير (كانت) تُزَيَّن بها الكعبةُ فكانت بالذهب، فأمَر بها فحُتّتْ. ومنه قوله تعالى: {وَلِبُيُوتِهِمْ أَبْوَابًا وَسُرُرًا عَلَيْهَا يَتَّكِئُونَ (34) وَزُخْرُفًا} [الزخرف: 34, 35] (ل). بينما في [قر 10/ 331] {بَيْتٌ مِنْ زُخْرُفٍ} أي من ذهب وأصله الزينة، والمُزَخْرَفُ: المُزَيَّن. اهـ. وهذا أقرب إلى الأصل الذي قررناه. وإنما غلب على الذهب لأنه أَشْيعُ جواهر التَزَين والتمويه وأنفَسُها حيث يُطْلَى به ظاهر الشيء. {حَتَّى إِذَا أَخَذَتِ الْأَرْضُ زُخْرُفَهَا} [يونس: 24]: أي زينَتها من الأنوار والزَهَر من بين أحمر\n(2/884)\nوأصفر وأبيض [ل]. \"وزُخْرُف القول: المموَّه المزين الظاهر ينخدع ويغتر بظاهره مَن لا يتدبر \" {يُوحِي بَعْضُهُمْ إِلَى بَعْضٍ زُخْرُفَ الْقَوْلِ غُرُورًا} [الأنعام: 112].\n° معنى الفصل المعجمي (زخ): اندفاع الشيء بقوة من أثناء أو فيها - كما يتمثل في الزُخَّة أولاد الغنم، \"وزَخَّه: دفعه في وهدة - في (زخخ)، وكما في جَيَشان القِدْر غليان ما فيها وارتفاعه ليفور، وكذلك زُخُورُ البحر: طُمُوّه - في (زخر)، وكماء الوادي الكثير الذي تنشأ عن كثرته زخارفهُ - في (زخرف)."
+ },
+ "hakikat_mecaz_tasnif": {
+  "durum": "Esâsü'l-Belâğa'da madde yok"
+ },
+ "prototip_yayilim_tasnif": {
+  "durum": "prototip veya mecaz kolu yok"
+ },
+ "kolekzifikasyon_kavramlari": [
+  "act.n.02",
+  "act.v.02",
+  "artifact.n.01",
+  "balance.v.01",
+  "cause.v.01",
+  "decorate.v.01",
+  "do.v.03",
+  "fancify.v.01",
+  "make.v.01",
+  "perform.v.01",
+  "reduce.v.01",
+  "suffice.v.01"
+ ],
+ "muhassas_tasnif": {
+  "durum": "el-Muhassas metninde yeterince geçmiyor"
+ },
+ "mana_tasnif_gomme": {
+  "ust": {
+   "kume": 7,
+   "merkez_kok": "حدق",
+   "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
+   "boy": 986
+  },
+  "orta": {
+   "kume": 31,
+   "merkez_kok": "لفف",
+   "merkez_mana": "Lef: sarmak, dolamak",
+   "boy": 260
+  },
+  "ince": {
+   "kume": 189,
+   "merkez_kok": "جيد",
+   "merkez_mana": "Cid: boyun; cevâd: iyi cins at",
+   "boy": 24
+  }
+ },
+ "kaliplar": {},
+ "kelimeler": [
+  {
+   "kelime": "زُخْرُفَ",
+   "kok": "زخرف",
+   "lemma": "زُخْرُف",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "6:112",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "süs",
+    "lemma": "süs",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   },
+   "jeffery": {
+    "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+    "translit": "Zukhruf",
+    "ayet_atiflari": "vi, 112; x, 24; xvii, 93; xliii, 35",
+    "ilk_baslik_dilleri": [
+     "Aramaic"
+    ],
+    "metin": "vi, 112; x, 24; xvii, 93; xliii, 35. Anything highly embellished. As used in the Qurān it means ornamentation, though Ibn Sīda says that its primitive meaning was gold, and then any gilded decoration, and then decoration in general. There appears to be no occurrence of the word earlier than the Qurān, though it may well have been an early word. It seems to be a deformation from the Syr. )\"] = Aramaic ,1 meaning a bright scarlet colour much used for adornment. It is used for the scarlet curtains of the Tabernacle in Ex. xxvi, 1, and for the χλαμὺς κοκκίνη of Matt. xxvii, 28. The interchange of and is not a great difficulty, cf. Praetorius, Beit. Ass, i, 43, and Barth in ZDMG, xli, 634. @ 9B",
+    "arapca": "زخرف"
+   }
+  },
+  {
+   "kelime": "زُخْرُفَهَا",
+   "kok": "زخرف",
+   "lemma": "زُخْرُف",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "10:24",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "süs",
+    "lemma": "süs",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  },
+  {
+   "kelime": "زُخْرُفٍ",
+   "kok": "زخرف",
+   "lemma": "زُخْرُف",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "17:93",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "süs",
+    "lemma": "süs",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  },
+  {
+   "kelime": "وَزُخْرُفًا",
+   "kok": "زخرف",
+   "lemma": "زُخْرُف",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "43:35",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "süs",
+    "lemma": "süs",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  }
+ ],
+ "osmanlica": {
+  "anlam": "Zuhrf: tezyîn etmek; zuhruf: zînet",
+  "kelimeler": [
+   "zînet",
+   "zînet",
+   "zînet",
+   "zînet"
+  ],
+  "yontem": "EVREN qwen3.8-flash-next ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı"
+ }
 }

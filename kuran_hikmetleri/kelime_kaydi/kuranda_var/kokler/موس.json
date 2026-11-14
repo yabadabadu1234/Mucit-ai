@@ -1,1652 +1,7565 @@
 {
-  "kok": "موس",
-  "sinif": "ecvef",
-  "turkce_fiil": null,
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "مَوْس", "maws", "", "veri yok", ""],
-      [888, "مِيس", "mīs", "", "veri yok", ""],
-      [889, "مُوس", "mūs", "", "veri yok", ""],
-      [517, "مَاس", "mās", "", "veri yok", ""],
-      [518, "مِيَس", "miyas", "", "veri yok", ""],
-      [5, "مُوُس", "muwus", "", "veri yok", ""],
-      [6, "مُوُوس", "muwūs", "", "veri yok", ""],
-      [521, "مِيَاس", "miyās", "", "veri yok", ""],
-      [8, "مُوَاس", "muwās", "", "veri yok", ""],
-      [9, "مَوَاس", "mawās", "", "veri yok", ""],
-      [10, "مَوَاسَة", "mawāsa", "", "veri yok", ""],
-      [11, "مُوُوسَة", "muwūsa", "", "veri yok", ""],
-      [526, "مِيَاسَة", "miyāsa", "", "veri yok", ""],
-      [13, "مَوِيس", "mawīs", "", "veri yok", ""],
-      [14, "مَوُوس", "mawūs", "", "veri yok", ""],
-      [15, "مَوَسَان", "mawasān", "", "veri yok", ""],
-      [16, "مُوْسَان", "muwsān", "", "veri yok", ""],
-      [17, "مِوْسَان", "miwsān", "", "veri yok", ""],
-      [18, "مَوْسَى", "mawsā", "", "veri yok", ""],
-      [19, "مُوْسَى", "muwsā", "", "veri yok", ""],
-      [20, "مِوْسَى", "miwsā", "", "veri yok", ""],
-      [21, "مَوَسَة", "mawasa", "", "veri yok", ""],
-      [22, "مِوَسَة", "miwasa", "", "veri yok", ""],
-      [23, "مَوْسُوسَة", "mawsūsa", "", "veri yok", ""],
-      [24, "تُمْوُوس", "tumwūs", "", "veri yok", ""],
-      [25, "تَمْوِسَة", "tamwisa", "", "veri yok", ""],
-      [26, "تَمْوَسَة", "tamwasa", "", "veri yok", ""],
-      [27, "مَمْوُسَة", "mamwusa", "", "veri yok", ""],
-      [533, "مَمِيسَة", "mamīsa", "", "veri yok", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَمْوِيس", "tamwīs", "", "veri yok", ""],
-      [30, "تَمْوِسَة", "tamwisa", "", "veri yok", ""],
-      [31, "مِوِّاس", "miwwās", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَمْوِيسَة", "tamwīsa", "", "veri yok", ""],
-      [33, "مِوِّاسَة", "miwwāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُمَوِّس", "mumawwis", "", "veri yok", ""],
-      [35, "مُمَوِّسَة", "mumawwisa", "", "veri yok", ""],
-      [36, "مُمَوِّسَان", "mumawwisān", "", "veri yok", ""],
-      [37, "مُمَوِّسَتَان", "mumawwisatān", "", "veri yok", ""],
-      [38, "مُمَوِّسُون", "mumawwisūn", "", "veri yok", ""],
-      [39, "مُمَوِّسِين", "mumawwisīn", "", "veri yok", ""],
-      [40, "مُمَوِّسَات", "mumawwisāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُمَوَّس", "mumawwas", "", "veri yok", ""],
-      [42, "مُمَوَّسَة", "mumawwasa", "", "veri yok", ""],
-      [43, "مُمَوَّسَان", "mumawwasān", "", "veri yok", ""],
-      [44, "مُمَوَّسَتَان", "mumawwasatān", "", "veri yok", ""],
-      [45, "مُمَوَّسُون", "mumawwasūn", "", "veri yok", ""],
-      [46, "مُمَوَّسِين", "mumawwasīn", "", "veri yok", ""],
-      [47, "مُمَوَّسَات", "mumawwasāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُمَوَّس", "mumawwas", "", "veri yok", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُمَاوَسَة", "mumāwasa", "", "veri yok", ""],
-      [552, "مِيَاس", "miyās", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [553, "مِيَاسَة", "miyāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُمَاوِس", "mumāwis", "", "veri yok", ""],
-      [53, "مُمَاوِسَة", "mumāwisa", "", "veri yok", ""],
-      [54, "مُمَاوِسَان", "mumāwisān", "", "veri yok", ""],
-      [55, "مُمَاوِسَتَان", "mumāwisatān", "", "veri yok", ""],
-      [56, "مُمَاوِسُون", "mumāwisūn", "", "veri yok", ""],
-      [57, "مُمَاوِسِين", "mumāwisīn", "", "veri yok", ""],
-      [58, "مُمَاوِسَات", "mumāwisāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُمَاوَس", "mumāwas", "", "veri yok", ""],
-      [60, "مُمَاوَسَة", "mumāwasa", "", "veri yok", ""],
-      [61, "مُمَاوَسَان", "mumāwasān", "", "veri yok", ""],
-      [62, "مُمَاوَسَتَان", "mumāwasatān", "", "veri yok", ""],
-      [63, "مُمَاوَسُون", "mumāwasūn", "", "veri yok", ""],
-      [64, "مُمَاوَسِين", "mumāwasīn", "", "veri yok", ""],
-      [65, "مُمَاوَسَات", "mumāwasāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُمَاوَس", "mumāwas", "", "veri yok", ""]
-    ],
-    "masdar · bâb IV": [
-      [567, "إِمَاسَة", "ʾimāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [569, "مُمِيس", "mumīs", "", "veri yok", ""],
-      [570, "مُمِيسَة", "mumīsa", "", "veri yok", ""],
-      [571, "مُمِيسَان", "mumīsān", "", "veri yok", ""],
-      [572, "مُمِيسَتَان", "mumīsatān", "", "veri yok", ""],
-      [573, "مُمِيسُون", "mumīsūn", "", "veri yok", ""],
-      [574, "مُمِيسِين", "mumīsīn", "", "veri yok", ""],
-      [575, "مُمِيسَات", "mumīsāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [576, "مُمَاس", "mumās", "", "veri yok", ""],
-      [890, "مُمَاسَة", "mumāsa", "", "veri yok", ""],
-      [577, "مُمَاسَان", "mumāsān", "", "veri yok", ""],
-      [891, "مُمَاسَتَان", "mumāsatān", "", "veri yok", ""],
-      [578, "مُمَاسُون", "mumāsūn", "", "veri yok", ""],
-      [579, "مُمَاسِين", "mumāsīn", "", "veri yok", ""],
-      [580, "مُمَاسَات", "mumāsāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُمَاس", "mumās", "", "veri yok", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَمَوُّس", "tamawwus", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَمَوُّسَة", "tamawwusa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَمَوِّس", "mutamawwis", "", "veri yok", ""],
-      [87, "مُتَمَوِّسَة", "mutamawwisa", "", "veri yok", ""],
-      [88, "مُتَمَوِّسَان", "mutamawwisān", "", "veri yok", ""],
-      [89, "مُتَمَوِّسَتَان", "mutamawwisatān", "", "veri yok", ""],
-      [90, "مُتَمَوِّسُون", "mutamawwisūn", "", "veri yok", ""],
-      [91, "مُتَمَوِّسِين", "mutamawwisīn", "", "veri yok", ""],
-      [92, "مُتَمَوِّسَات", "mutamawwisāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَمَوَّس", "mutamawwas", "", "veri yok", ""],
-      [94, "مُتَمَوَّسَة", "mutamawwasa", "", "veri yok", ""],
-      [95, "مُتَمَوَّسَان", "mutamawwasān", "", "veri yok", ""],
-      [96, "مُتَمَوَّسَتَان", "mutamawwasatān", "", "veri yok", ""],
-      [97, "مُتَمَوَّسُون", "mutamawwasūn", "", "veri yok", ""],
-      [98, "مُتَمَوَّسِين", "mutamawwasīn", "", "veri yok", ""],
-      [99, "مُتَمَوَّسَات", "mutamawwasāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَمَوَّس", "mutamawwas", "", "veri yok", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَمَاوُس", "tamāwus", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَمَاوُسَة", "tamāwusa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَمَاوِس", "mutamāwis", "", "veri yok", ""],
-      [104, "مُتَمَاوِسَة", "mutamāwisa", "", "veri yok", ""],
-      [105, "مُتَمَاوِسَان", "mutamāwisān", "", "veri yok", ""],
-      [106, "مُتَمَاوِسَتَان", "mutamāwisatān", "", "veri yok", ""],
-      [107, "مُتَمَاوِسُون", "mutamāwisūn", "", "veri yok", ""],
-      [108, "مُتَمَاوِسِين", "mutamāwisīn", "", "veri yok", ""],
-      [109, "مُتَمَاوِسَات", "mutamāwisāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَمَاوَس", "mutamāwas", "", "veri yok", ""],
-      [111, "مُتَمَاوَسَة", "mutamāwasa", "", "veri yok", ""],
-      [112, "مُتَمَاوَسَان", "mutamāwasān", "", "veri yok", ""],
-      [113, "مُتَمَاوَسَتَان", "mutamāwasatān", "", "veri yok", ""],
-      [114, "مُتَمَاوَسُون", "mutamāwasūn", "", "veri yok", ""],
-      [115, "مُتَمَاوَسِين", "mutamāwasīn", "", "veri yok", ""],
-      [116, "مُتَمَاوَسَات", "mutamāwasāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَمَاوَس", "mutamāwas", "", "veri yok", ""]
-    ],
-    "masdar · bâb VII": [
-      [610, "اِنْمِيَاس", "inmiyās", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [611, "اِنْمِيَاسَة", "inmiyāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [612, "مُنْمَاس", "munmās", "", "veri yok", ""],
-      [613, "مُنْمَاسَة", "munmāsa", "", "veri yok", ""],
-      [614, "مُنْمَاسَان", "munmāsān", "", "veri yok", ""],
-      [615, "مُنْمَاسَتَان", "munmāsatān", "", "veri yok", ""],
-      [616, "مُنْمَاسُون", "munmāsūn", "", "veri yok", ""],
-      [617, "مُنْمَاسِين", "munmāsīn", "", "veri yok", ""],
-      [618, "مُنْمَاسَات", "munmāsāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْمَاس", "munmās", "", "veri yok", ""],
-      [892, "مُنْمَاسَة", "munmāsa", "", "veri yok", ""],
-      [620, "مُنْمَاسَان", "munmāsān", "", "veri yok", ""],
-      [893, "مُنْمَاسَتَان", "munmāsatān", "", "veri yok", ""],
-      [621, "مُنْمَاسُون", "munmāsūn", "", "veri yok", ""],
-      [622, "مُنْمَاسِين", "munmāsīn", "", "veri yok", ""],
-      [623, "مُنْمَاسَات", "munmāsāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْمَاس", "munmās", "", "veri yok", ""]
-    ],
-    "masdar · bâb VIII": [
-      [625, "اِمْتِيَاس", "imtiyās", "", "veri yok", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [627, "اِمْتِيَاسَة", "imtiyāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [628, "مُمْتَاس", "mumtās", "", "veri yok", ""],
-      [629, "مُمْتَاسَة", "mumtāsa", "", "veri yok", ""],
-      [630, "مُمْتَاسَان", "mumtāsān", "", "veri yok", ""],
-      [631, "مُمْتَاسَتَان", "mumtāsatān", "", "veri yok", ""],
-      [632, "مُمْتَاسُون", "mumtāsūn", "", "veri yok", ""],
-      [633, "مُمْتَاسِين", "mumtāsīn", "", "veri yok", ""],
-      [634, "مُمْتَاسَات", "mumtāsāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُمْتَاس", "mumtās", "", "veri yok", ""],
-      [894, "مُمْتَاسَة", "mumtāsa", "", "veri yok", ""],
-      [636, "مُمْتَاسَان", "mumtāsān", "", "veri yok", ""],
-      [895, "مُمْتَاسَتَان", "mumtāsatān", "", "veri yok", ""],
-      [637, "مُمْتَاسُون", "mumtāsūn", "", "veri yok", ""],
-      [638, "مُمْتَاسِين", "mumtāsīn", "", "veri yok", ""],
-      [639, "مُمْتَاسَات", "mumtāsāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُمْتَاس", "mumtās", "", "veri yok", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِمْوِسَاس", "imwisās", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُمْوَسّ", "mumwass", "", "veri yok", ""],
-      [170, "مُمْوَسَّة", "mumwassa", "", "veri yok", ""],
-      [171, "مُمْوَسَّان", "mumwassān", "", "veri yok", ""],
-      [172, "مُمْوَسَّتَان", "mumwassatān", "", "veri yok", ""],
-      [173, "مُمْوَسُّون", "mumwassūn", "", "veri yok", ""],
-      [174, "مُمْوَسِّين", "mumwassīn", "", "veri yok", ""],
-      [175, "مُمْوَسَّات", "mumwassāt", "", "veri yok", ""]
-    ],
-    "masdar · bâb X": [
-      [662, "اِسْتِمَاسَة", "istimāsa", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [664, "مُسْتَمِيس", "mustamīs", "", "veri yok", ""],
-      [665, "مُسْتَمِيسَة", "mustamīsa", "", "veri yok", ""],
-      [666, "مُسْتَمِيسَان", "mustamīsān", "", "veri yok", ""],
-      [667, "مُسْتَمِيسَتَان", "mustamīsatān", "", "veri yok", ""],
-      [668, "مُسْتَمِيسُون", "mustamīsūn", "", "veri yok", ""],
-      [669, "مُسْتَمِيسِين", "mustamīsīn", "", "veri yok", ""],
-      [670, "مُسْتَمِيسَات", "mustamīsāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَمَاس", "mustamās", "", "veri yok", ""],
-      [898, "مُسْتَمَاسَة", "mustamāsa", "", "veri yok", ""],
-      [672, "مُسْتَمَاسَان", "mustamāsān", "", "veri yok", ""],
-      [899, "مُسْتَمَاسَتَان", "mustamāsatān", "", "veri yok", ""],
-      [673, "مُسْتَمَاسُون", "mustamāsūn", "", "veri yok", ""],
-      [674, "مُسْتَمَاسِين", "mustamāsīn", "", "veri yok", ""],
-      [675, "مُسْتَمَاسَات", "mustamāsāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَمَاس", "mustamās", "", "veri yok", ""]
-    ],
-    "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [900, "اِسْتِمْوَاس", "istimwās", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [901, "مُسْتَمْوِس", "mustamwis", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [902, "مُسْتَمْوَس", "mustamwas", "", "veri yok", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِمْوِيسَاس", "imwīsās", "", "veri yok", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُمْوَاسّ", "mumwāss", "", "veri yok", ""],
-      [195, "مُمْوَاسَّة", "mumwāssa", "", "veri yok", ""],
-      [196, "مُمْوَاسَّان", "mumwāssān", "", "veri yok", ""],
-      [197, "مُمْوَاسَّتَان", "mumwāssatān", "", "veri yok", ""],
-      [198, "مُمْوَاسُّون", "mumwāssūn", "", "veri yok", ""],
-      [199, "مُمْوَاسِّين", "mumwāssīn", "", "veri yok", ""],
-      [200, "مُمْوَاسَّات", "mumwāssāt", "", "veri yok", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِمْوِوْوَاس", "imwiwwās", "", "veri yok", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِمْوِوَّاس", "imwiwwās", "", "veri yok", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [687, "مَائِس", "māʾis", "", "veri yok", ""],
-      [688, "مَائِسَة", "māʾisa", "", "veri yok", ""],
-      [689, "مَائِسَان", "māʾisān", "", "veri yok", ""],
-      [690, "مَائِسَتَان", "māʾisatān", "", "veri yok", ""],
-      [691, "مَائِسُون", "māʾisūn", "", "veri yok", ""],
-      [692, "مَائِسِين", "māʾisīn", "", "veri yok", ""],
-      [693, "مَائِسَات", "māʾisāt", "", "veri yok", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [694, "مَمُوس", "mamūs", "", "veri yok", ""],
-      [695, "مَمُوسَة", "mamūsa", "", "veri yok", ""],
-      [696, "مَمُوسَان", "mamūsān", "", "veri yok", ""],
-      [697, "مَمُوسَتَان", "mamūsatān", "", "veri yok", ""],
-      [698, "مَمُوسُون", "mamūsūn", "", "veri yok", ""],
-      [699, "مَمُوسِين", "mamūsīn", "", "veri yok", ""],
-      [700, "مَمُوسَات", "mamūsāt", "", "veri yok", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [701, "مَمَاس", "mamās", "", "veri yok", ""],
-      [702, "مَمَاسَان", "mamāsān", "", "veri yok", ""],
-      [703, "مَمِيس", "mamīs", "", "veri yok", ""],
-      [704, "مَمِيسَان", "mamīsān", "", "veri yok", ""],
-      [705, "مَمَاسَة", "mamāsa", "", "veri yok", ""],
-      [706, "مَمَاسَتَان", "mamāsatān", "", "veri yok", ""],
-      [707, "مَمِيسَة", "mamīsa", "", "veri yok", ""],
-      [708, "مَمِيسَتَان", "mamīsatān", "", "veri yok", ""],
-      [247, "مَمْوُسَة", "mamwusa", "", "veri yok", ""],
-      [248, "مَمْوُسَتَان", "mamwusatān", "", "veri yok", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِمْوَس", "mimwas", "", "veri yok", ""],
-      [236, "مِمْوَسَان", "mimwasān", "", "veri yok", ""],
-      [237, "مِمْوَاس", "mimwās", "", "veri yok", ""],
-      [238, "مِمْوَاسَان", "mimwāsān", "", "veri yok", ""],
-      [239, "مِمْوَسَة", "mimwasa", "", "veri yok", ""],
-      [240, "مِمْوَسَتَان", "mimwasatān", "", "veri yok", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَمْوَس", "ʾamwas", "", "veri yok", ""],
-      [242, "أَمْوَسَان", "ʾamwasān", "", "veri yok", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "مُوْسَى", "muwsā", "", "veri yok", ""],
-      [244, "مُوْسَيَان", "muwsayān", "", "veri yok", ""],
-      [245, "مَوْسَاء", "mawsāʾ", "", "veri yok", ""],
-      [246, "مَوْسَاآن", "mawsāʾān", "", "veri yok", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "مُوَيْس", "muways", "", "veri yok", ""],
-      [250, "مُوَيْسَان", "muwaysān", "", "veri yok", ""],
-      [251, "مُوَيْسَة", "muwaysa", "", "veri yok", ""],
-      [252, "مُوَيْسَتَان", "muwaysatān", "", "veri yok", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [723, "مَمَاس", "mamās", "", "veri yok", ""],
-      [724, "مَمَاسَان", "mamāsān", "", "veri yok", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "مَوْسَة", "mawsa", "", "veri yok", ""],
-      [256, "مَوْسَتَان", "mawsatān", "", "veri yok", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [903, "مِيسَة", "mīsa", "", "veri yok", ""],
-      [904, "مِيسَتَان", "mīsatān", "", "veri yok", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "مَوِيس", "mawīs", "", "veri yok", ""],
-      [260, "مَوِيسَة", "mawīsa", "", "veri yok", ""],
-      [261, "مَوِيسَان", "mawīsān", "", "veri yok", ""],
-      [262, "مَوِيسَتَان", "mawīsatān", "", "veri yok", ""],
-      [263, "مَوِيسُون", "mawīsūn", "", "veri yok", ""],
-      [264, "مَوِيسِين", "mawīsīn", "", "veri yok", ""],
-      [265, "مَوِيسَات", "mawīsāt", "", "veri yok", ""],
-      [266, "مَوُوس", "mawūs", "", "veri yok", ""],
-      [267, "مَوُوسَة", "mawūsa", "", "veri yok", ""],
-      [268, "مَوُوسَان", "mawūsān", "", "veri yok", ""],
-      [269, "مَوُوسَتَان", "mawūsatān", "", "veri yok", ""],
-      [270, "مَوُوسُون", "mawūsūn", "", "veri yok", ""],
-      [271, "مَوُوسِين", "mawūsīn", "", "veri yok", ""],
-      [272, "مَوُوسَات", "mawūsāt", "", "veri yok", ""],
-      [273, "مَوِس", "mawis", "", "veri yok", ""],
-      [274, "مَوِسَة", "mawisa", "", "veri yok", ""],
-      [275, "مَوِسَان", "mawisān", "", "veri yok", ""],
-      [276, "مَوِسَتَان", "mawisatān", "", "veri yok", ""],
-      [277, "مَوِسُون", "mawisūn", "", "veri yok", ""],
-      [278, "مَوِسِين", "mawisīn", "", "veri yok", ""],
-      [279, "مَوِسَات", "mawisāt", "", "veri yok", ""],
-      [280, "مَوُس", "mawus", "", "veri yok", ""],
-      [281, "مَوُسَة", "mawusa", "", "veri yok", ""],
-      [282, "مَوُسَان", "mawusān", "", "veri yok", ""],
-      [283, "مَوُسَتَان", "mawusatān", "", "veri yok", ""],
-      [284, "مَوُسُون", "mawusūn", "", "veri yok", ""],
-      [285, "مَوُسِين", "mawusīn", "", "veri yok", ""],
-      [286, "مَوُسَات", "mawusāt", "", "veri yok", ""],
-      [753, "مَاس", "mās", "", "veri yok", ""],
-      [905, "مَاسَة", "māsa", "", "veri yok", ""],
-      [754, "مَاسَان", "māsān", "", "veri yok", ""],
-      [906, "مَاسَتَان", "māsatān", "", "veri yok", ""],
-      [884, "مَاسُون", "māsūn", "", "veri yok", ""],
-      [885, "مَاسِين", "māsīn", "", "veri yok", ""],
-      [755, "مَاسَات", "māsāt", "", "veri yok", ""],
-      [294, "مَوْس", "maws", "", "veri yok", ""],
-      [295, "مَوْسَة", "mawsa", "", "veri yok", ""],
-      [296, "مَوْسَان", "mawsān", "", "veri yok", ""],
-      [297, "مَوْسَتَان", "mawsatān", "", "veri yok", ""],
-      [298, "مَوْسُون", "mawsūn", "", "veri yok", ""],
-      [299, "مَوْسِين", "mawsīn", "", "veri yok", ""],
-      [300, "مَوْسَات", "mawsāt", "", "veri yok", ""],
-      [301, "مُوُس", "muwus", "", "veri yok", ""],
-      [302, "مُوُسَة", "muwusa", "", "veri yok", ""],
-      [303, "مُوُسَان", "muwusān", "", "veri yok", ""],
-      [304, "مُوُسَتَان", "muwusatān", "", "veri yok", ""],
-      [305, "مُوُسُون", "muwusūn", "", "veri yok", ""],
-      [306, "مُوُسِين", "muwusīn", "", "veri yok", ""],
-      [307, "مُوُسَات", "muwusāt", "", "veri yok", ""],
-      [308, "مَوْسَان", "mawsān", "", "veri yok", ""],
-      [309, "مَوْسَانَة", "mawsāna", "", "veri yok", ""],
-      [310, "مَوْسَانَان", "mawsānān", "", "veri yok", ""],
-      [311, "مَوْسَانَتَان", "mawsānatān", "", "veri yok", ""],
-      [312, "مَوْسَانُون", "mawsānūn", "", "veri yok", ""],
-      [313, "مَوْسَانِين", "mawsānīn", "", "veri yok", ""],
-      [314, "مَوْسَانَات", "mawsānāt", "", "veri yok", ""],
-      [315, "مُوَاس", "muwās", "", "veri yok", ""],
-      [316, "مُوَاسَة", "muwāsa", "", "veri yok", ""],
-      [317, "مُوَاسَان", "muwāsān", "", "veri yok", ""],
-      [318, "مُوَاسَتَان", "muwāsatān", "", "veri yok", ""],
-      [319, "مُوَاسُون", "muwāsūn", "", "veri yok", ""],
-      [320, "مُوَاسِين", "muwāsīn", "", "veri yok", ""],
-      [321, "مُوَاسَات", "muwāsāt", "", "veri yok", ""],
-      [322, "مَوَاس", "mawās", "", "veri yok", ""],
-      [323, "مَوَاسَة", "mawāsa", "", "veri yok", ""],
-      [324, "مَوَاسَان", "mawāsān", "", "veri yok", ""],
-      [325, "مَوَاسَتَان", "mawāsatān", "", "veri yok", ""],
-      [326, "مَوَاسُون", "mawāsūn", "", "veri yok", ""],
-      [327, "مَوَاسِين", "mawāsīn", "", "veri yok", ""],
-      [328, "مَوَاسَات", "mawāsāt", "", "veri yok", ""],
-      [907, "مَيِّس", "mayyis", "", "veri yok", ""],
-      [908, "مَيِّسَة", "mayyisa", "", "veri yok", ""],
-      [909, "مَيِّسَان", "mayyisān", "", "veri yok", ""],
-      [910, "مَيِّسَتَان", "mayyisatān", "", "veri yok", ""],
-      [911, "مَيِّسُون", "mayyisūn", "", "veri yok", ""],
-      [912, "مَيِّسِين", "mayyisīn", "", "veri yok", ""],
-      [913, "مَيِّسَات", "mayyisāt", "", "veri yok", ""]
-    ],
-    "mübalağa": [
-      [329, "مَوَّاس", "mawwās", "", "veri yok", ""],
-      [330, "مَوَّاسَة", "mawwāsa", "", "veri yok", ""],
-      [331, "مَوَّاسَان", "mawwāsān", "", "veri yok", ""],
-      [332, "مَوَّاسَتَان", "mawwāsatān", "", "veri yok", ""],
-      [333, "مَوَّاسُون", "mawwāsūn", "", "veri yok", ""],
-      [334, "مَوَّاسِين", "mawwāsīn", "", "veri yok", ""],
-      [335, "مَوَّاسَات", "mawwāsāt", "", "veri yok", ""],
-      [336, "مَوَّاسَة", "mawwāsa", "", "veri yok", ""],
-      [337, "مَوَّاسَتَان", "mawwāsatān", "", "veri yok", ""],
-      [338, "مَوَّاسَات", "mawwāsāt", "", "veri yok", ""],
-      [339, "مَوُوس", "mawūs", "", "veri yok", ""],
-      [340, "مَوُوسَة", "mawūsa", "", "veri yok", ""],
-      [341, "مَوُوسَان", "mawūsān", "", "veri yok", ""],
-      [342, "مَوُوسَتَان", "mawūsatān", "", "veri yok", ""],
-      [343, "مَوُوسُون", "mawūsūn", "", "veri yok", ""],
-      [344, "مَوُوسِين", "mawūsīn", "", "veri yok", ""],
-      [345, "مَوُوسَات", "mawūsāt", "", "veri yok", ""],
-      [346, "مَوُّوس", "mawwūs", "", "veri yok", ""],
-      [347, "مَوُّوسَة", "mawwūsa", "", "veri yok", ""],
-      [348, "مَوُّوسَان", "mawwūsān", "", "veri yok", ""],
-      [349, "مَوُّوسَتَان", "mawwūsatān", "", "veri yok", ""],
-      [350, "مَوُّوسُون", "mawwūsūn", "", "veri yok", ""],
-      [351, "مَوُّوسِين", "mawwūsīn", "", "veri yok", ""],
-      [352, "مَوُّوسَات", "mawwūsāt", "", "veri yok", ""],
-      [353, "مِوِّيس", "miwwīs", "", "veri yok", ""],
-      [354, "مِوِّيسَة", "miwwīsa", "", "veri yok", ""],
-      [355, "مِوِّيسَان", "miwwīsān", "", "veri yok", ""],
-      [356, "مِوِّيسَتَان", "miwwīsatān", "", "veri yok", ""],
-      [357, "مِوِّيسُون", "miwwīsūn", "", "veri yok", ""],
-      [358, "مِوِّيسِين", "miwwīsīn", "", "veri yok", ""],
-      [359, "مِوِّيسَات", "miwwīsāt", "", "veri yok", ""],
-      [360, "مُوَّاس", "muwwās", "", "veri yok", ""],
-      [361, "مُوَّاسَة", "muwwāsa", "", "veri yok", ""],
-      [362, "مُوَّاسَان", "muwwāsān", "", "veri yok", ""],
-      [363, "مُوَّاسَتَان", "muwwāsatān", "", "veri yok", ""],
-      [364, "مُوَّاسُون", "muwwāsūn", "", "veri yok", ""],
-      [365, "مُوَّاسِين", "muwwāsīn", "", "veri yok", ""],
-      [366, "مُوَّاسَات", "muwwāsāt", "", "veri yok", ""],
-      [367, "مِمْوَاس", "mimwās", "", "veri yok", ""],
-      [368, "مِمْوَاسَة", "mimwāsa", "", "veri yok", ""],
-      [369, "مِمْوَاسَان", "mimwāsān", "", "veri yok", ""],
-      [370, "مِمْوَاسَتَان", "mimwāsatān", "", "veri yok", ""],
-      [371, "مِمْوَاسُون", "mimwāsūn", "", "veri yok", ""],
-      [372, "مِمْوَاسِين", "mimwāsīn", "", "veri yok", ""],
-      [373, "مِمْوَاسَات", "mimwāsāt", "", "veri yok", ""],
-      [374, "مِمْوِيس", "mimwīs", "", "veri yok", ""],
-      [375, "مِمْوِيسَة", "mimwīsa", "", "veri yok", ""],
-      [376, "مِمْوِيسَان", "mimwīsān", "", "veri yok", ""],
-      [377, "مِمْوِيسَتَان", "mimwīsatān", "", "veri yok", ""],
-      [378, "مِمْوِيسُون", "mimwīsūn", "", "veri yok", ""],
-      [379, "مِمْوِيسِين", "mimwīsīn", "", "veri yok", ""],
-      [380, "مِمْوِيسَات", "mimwīsāt", "", "veri yok", ""],
-      [381, "مَوِيس", "mawīs", "", "veri yok", ""],
-      [382, "مَوِيسَة", "mawīsa", "", "veri yok", ""],
-      [383, "مَوِيسَان", "mawīsān", "", "veri yok", ""],
-      [384, "مَوِيسَتَان", "mawīsatān", "", "veri yok", ""],
-      [385, "مَوِيسُون", "mawīsūn", "", "veri yok", ""],
-      [386, "مَوِيسِين", "mawīsīn", "", "veri yok", ""],
-      [387, "مَوِيسَات", "mawīsāt", "", "veri yok", ""],
-      [388, "مَوَّس", "mawwas", "", "veri yok", ""],
-      [389, "مَوَّسَة", "mawwasa", "", "veri yok", ""],
-      [390, "مَوَّسَان", "mawwasān", "", "veri yok", ""],
-      [391, "مَوَّسَتَان", "mawwasatān", "", "veri yok", ""],
-      [392, "مَوَّسُون", "mawwasūn", "", "veri yok", ""],
-      [393, "مَوَّسِين", "mawwasīn", "", "veri yok", ""],
-      [394, "مَوَّسَات", "mawwasāt", "", "veri yok", ""]
-    ],
-    "mensûb": [
-      [395, "مَوْسِيّ", "mawsiyy", "", "veri yok", ""],
-      [886, "مَاسِيّ", "māsiyy", "", "veri yok", ""],
-      [914, "مِيسِيّ", "mīsiyy", "", "veri yok", ""],
-      [916, "مُوسِيّ", "mūsiyy", "", "veri yok", ""],
-      [815, "مِيَاسِيّ", "miyāsiyy", "", "veri yok", ""],
-      [817, "مَائِسِيّ", "māʾisiyy", "", "veri yok", ""],
-      [819, "مَمُوسِيّ", "mamūsiyy", "", "veri yok", ""],
-      [409, "مَوِيسِيّ", "mawīsiyy", "", "veri yok", ""],
-      [823, "مَمَاسِيّ", "mamāsiyy", "", "veri yok", ""],
-      [413, "تَمْوِيسِيّ", "tamwīsiyy", "", "veri yok", ""],
-      [415, "تَمَاوُسِيّ", "tamāwusiyy", "", "veri yok", ""],
-      [829, "إِمَاسِيّ", "ʾimāsiyy", "", "veri yok", ""],
-      [831, "اِمْتِيَاسِيّ", "imtiyāsiyy", "", "veri yok", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "مَوْسِيَّة", "mawsiyya", "", "veri yok", ""],
-      [887, "مَاسِيَّة", "māsiyya", "", "veri yok", ""],
-      [915, "مِيسِيَّة", "mīsiyya", "", "veri yok", ""],
-      [917, "مُوسِيَّة", "mūsiyya", "", "veri yok", ""],
-      [816, "مِيَاسِيَّة", "miyāsiyya", "", "veri yok", ""],
-      [818, "مَائِسِيَّة", "māʾisiyya", "", "veri yok", ""],
-      [820, "مَمُوسِيَّة", "mamūsiyya", "", "veri yok", ""],
-      [410, "مَوِيسِيَّة", "mawīsiyya", "", "veri yok", ""],
-      [824, "مَمَاسِيَّة", "mamāsiyya", "", "veri yok", ""],
-      [414, "تَمْوِيسِيَّة", "tamwīsiyya", "", "veri yok", ""],
-      [416, "تَمَاوُسِيَّة", "tamāwusiyya", "", "veri yok", ""],
-      [830, "إِمَاسِيَّة", "ʾimāsiyya", "", "veri yok", ""],
-      [832, "اِمْتِيَاسِيَّة", "imtiyāsiyya", "", "veri yok", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "مَوَاس", "mawās", "", "veri yok", ""],
-      [422, "مُوُوس", "muwūs", "", "veri yok", ""],
-      [835, "مِيَاس", "miyās", "", "veri yok", ""],
-      [918, "مُوس", "mūs", "", "veri yok", ""],
-      [425, "مَوَاسَة", "mawāsa", "", "veri yok", ""],
-      [837, "مِيَاسَة", "miyāsa", "", "veri yok", ""],
-      [427, "مُوُوسَة", "muwūsa", "", "veri yok", ""],
-      [428, "مَوْس", "maws", "", "veri yok", ""],
-      [919, "مِيس", "mīs", "", "veri yok", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "مَاوُوس", "māwūs", "", "veri yok", ""],
-      [432, "مَوَسَة", "mawasa", "", "veri yok", ""],
-      [433, "مُوَسَة", "muwasa", "", "veri yok", ""],
-      [434, "أُمْوُوسَة", "ʾumwūsa", "", "veri yok", ""],
-      [435, "مَوْوَس", "mawwas", "", "veri yok", ""],
-      [437, "مَيْوَس", "maywas", "", "veri yok", ""],
-      [439, "مَوْس", "maws", "", "veri yok", ""],
-      [840, "مَاس", "mās", "", "veri yok", ""],
-      [921, "مِيس", "mīs", "", "veri yok", ""],
-      [923, "مُوس", "mūs", "", "veri yok", ""],
-      [447, "مَوِيس", "mawīs", "", "veri yok", ""],
-      [843, "مِيَس", "miyas", "", "veri yok", ""],
-      [451, "مُوُس", "muwus", "", "veri yok", ""],
-      [453, "مَوَاس", "mawās", "", "veri yok", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "مَاوُوسَة", "māwūsa", "", "veri yok", ""],
-      [436, "مَوْوَسَة", "mawwasa", "", "veri yok", ""],
-      [438, "مَيْوَسَة", "maywasa", "", "veri yok", ""],
-      [440, "مَوْسَة", "mawsa", "", "veri yok", ""],
-      [920, "مَاسَة", "māsa", "", "veri yok", ""],
-      [922, "مِيسَة", "mīsa", "", "veri yok", ""],
-      [924, "مُوسَة", "mūsa", "", "veri yok", ""],
-      [448, "مَوِيسَة", "mawīsa", "", "veri yok", ""],
-      [925, "مِيَسَة", "miyasa", "", "veri yok", ""],
-      [452, "مُوُسَة", "muwusa", "", "veri yok", ""],
-      [454, "مَوَاسَة", "mawāsa", "", "veri yok", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَمْوَاس", "ʾamwās", "", "veri yok", ""],
-      [456, "أَمْوِسَة", "ʾamwisa", "", "veri yok", ""],
-      [457, "أَمَاوِس", "ʾamāwis", "", "veri yok", ""],
-      [458, "أَمَاوِيس", "ʾamāwīs", "", "veri yok", ""],
-      [459, "مُوُوس", "muwūs", "", "veri yok", ""],
-      [460, "مُوُس", "muwus", "", "veri yok", ""],
-      [854, "مِيَاس", "miyās", "", "veri yok", ""],
-      [855, "مِيَس", "miyas", "", "veri yok", ""],
-      [463, "مِوَسَة", "miwasa", "", "veri yok", ""],
-      [464, "مُوَس", "muwas", "", "veri yok", ""],
-      [465, "مُوَساء", "muwasāʾ", "", "veri yok", ""],
-      [466, "مَوَسَة", "mawasa", "", "veri yok", ""],
-      [467, "مُوَّاس", "muwwās", "", "veri yok", ""],
-      [468, "مَوَاس", "mawās", "", "veri yok", ""],
-      [861, "مَاس", "mās", "", "veri yok", ""],
-      [470, "مَمَاوِس", "mamāwis", "", "veri yok", ""],
-      [471, "مَمَاوِيس", "mamāwīs", "", "veri yok", ""],
-      [472, "مَوَاوِس", "mawāwis", "", "veri yok", ""],
-      [473, "أَمْوُس", "ʾamwus", "", "veri yok", ""],
-      [474, "مُوَّس", "muwwas", "", "veri yok", ""],
-      [475, "مَوَائِس", "mawāʾis", "", "veri yok", ""],
-      [476, "مُوَيْس", "muways", "", "veri yok", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَمْوَاسَات", "ʾamwāsāt", "", "veri yok", ""],
-      [478, "أَمْوِسَات", "ʾamwisāt", "", "veri yok", ""],
-      [479, "أَمَاوِسَات", "ʾamāwisāt", "", "veri yok", ""],
-      [480, "أَمَاوِيسَات", "ʾamāwīsāt", "", "veri yok", ""],
-      [481, "مُوُوسَات", "muwūsāt", "", "veri yok", ""],
-      [482, "مُوُسَات", "muwusāt", "", "veri yok", ""],
-      [872, "مِيَاسَات", "miyāsāt", "", "veri yok", ""],
-      [873, "مِيَسَات", "miyasāt", "", "veri yok", ""],
-      [485, "مِوَسَات", "miwasāt", "", "veri yok", ""],
-      [486, "مُوَسَات", "muwasāt", "", "veri yok", ""],
-      [487, "مُوَساآت", "muwasāʾāt", "", "veri yok", ""],
-      [488, "مَوَسَات", "mawasāt", "", "veri yok", ""],
-      [489, "مُوَّاسَات", "muwwāsāt", "", "veri yok", ""],
-      [490, "مَوَاسَات", "mawāsāt", "", "veri yok", ""],
-      [879, "مَاسَات", "māsāt", "", "veri yok", ""],
-      [492, "مَمَاوِسَات", "mamāwisāt", "", "veri yok", ""],
-      [493, "مَمَاوِيسَات", "mamāwīsāt", "", "veri yok", ""],
-      [494, "مَوَاوِسَات", "mawāwisāt", "", "veri yok", ""],
-      [495, "أَمْوُسَات", "ʾamwusāt", "", "veri yok", ""],
-      [496, "مُوَّسَات", "muwwasāt", "", "veri yok", ""],
-      [497, "مَوَائِسَات", "mawāʾisāt", "", "veri yok", ""],
-      [498, "مُوَيْسَات", "muwaysāt", "", "veri yok", ""]
-    ]
-  },
-  "reddedilen": [
-    ["ism-i merre · bâb IV", "if'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    ["ism-i merre · bâb X", "istif'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
+ "kok": "موس",
+ "sinif": "ecvef",
+ "turkce_fiil": null,
+ "mustaklar": {
+  "masdar · sülâsî mücerred": [
+   [
+    0,
+    "مَوْس",
+    "maws",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    888,
+    "مِيس",
+    "mīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    889,
+    "مُوس",
+    "mūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    517,
+    "مَاس",
+    "mās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    518,
+    "مِيَس",
+    "miyas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    5,
+    "مُوُس",
+    "muwus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    6,
+    "مُوُوس",
+    "muwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    521,
+    "مِيَاس",
+    "miyās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    8,
+    "مُوَاس",
+    "muwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    9,
+    "مَوَاس",
+    "mawās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    10,
+    "مَوَاسَة",
+    "mawāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    11,
+    "مُوُوسَة",
+    "muwūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    526,
+    "مِيَاسَة",
+    "miyāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    13,
+    "مَوِيس",
+    "mawīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    14,
+    "مَوُوس",
+    "mawūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    15,
+    "مَوَسَان",
+    "mawasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    16,
+    "مُوْسَان",
+    "muwsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    17,
+    "مِوْسَان",
+    "miwsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    18,
+    "مَوْسَى",
+    "mawsā",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    19,
+    "مُوْسَى",
+    "muwsā",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    20,
+    "مِوْسَى",
+    "miwsā",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    21,
+    "مَوَسَة",
+    "mawasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    22,
+    "مِوَسَة",
+    "miwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    23,
+    "مَوْسُوسَة",
+    "mawsūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    24,
+    "تُمْوُوس",
+    "tumwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    25,
+    "تَمْوِسَة",
+    "tamwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    26,
+    "تَمْوَسَة",
+    "tamwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    27,
+    "مَمْوُسَة",
+    "mamwusa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    533,
+    "مَمِيسَة",
+    "mamīsa",
+    "",
+    "veri yok",
+    ""
+   ]
   ],
-  "sozlukler": {
-    "mekayis": [
-      {
-        "baslik": "مَوَسَ",
-        "metin": "(مَوَسَ) الْمِيمُ وَالْوَاوُ وَالسِّينُ: يَقُولُونَ: الْمَوْسُ: حَلْقُ الرَّأْسِ. [وَيُقَالُ فِي النِّسْبَةِ إِلَى مُوسَى مُوسَوِيٌّ، وَقَالَ الْكِسَائِيُّ: يُنْسَبُ إِلَى مُوسَى وَعِيسَى وَمَا أَشْبَهَهُمَا مِمَّا فِيهِ الْيَاءُ زَائِدَةٌ مَوْسِيٌّ وَعِيسِيٌّ] وَذَلِكَ أَنَّ الْيَاءَ فِيهِ زَائِدَةٌ، كَذَا قَالَ الْكِسَائِيُّ."
-      }
-    ],
-    "kaikki_vikisozluk": [
-      {
-        "w": "موسى",
-        "u": "موسى",
-        "p": "name",
-        "n": "1",
-        "h": "ar-proper noun",
-        "e": "مُوسَى • (mūsā) m",
-        "t": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē).",
-        "g": ["Moses", "a male given name, Musa"],
-        "r": ["mūsā"],
-        "ipa": ["/muː.saː/"],
-        "ds": [
-          ["az", "Musa", ""],
-          ["ba", "Муса", "Mosa"],
-          ["bn", "মূসা", "musa"],
-          ["ca", "Mussa", ""],
-          ["en", "Musa", ""],
-          ["fr", "Moussa", ""],
-          ["kk", "Мұса", "Musa"],
-          ["ms", "Musa", ""],
-          ["roa-opt", "Muça", ""],
-          ["osp", "Muça", ""],
-          ["ota", "موسی", "mûsâ"],
-          ["fa", "موسی", "musâ"],
-          ["pa", "مُوسیٰ", "mūsá"],
-          ["sd", "موسيٰ", ""],
-          ["sw", "Musa", ""],
-          ["tt", "Муса", "Musa"],
-          ["tg", "Мусо", "Muso"],
-          ["ur", "موسیٰ", "mūsā"],
-          ["uz", "Muso", ""]
-        ],
-        "el": [
-          ["ܡܘܼܫܹܐ", "ܡܘܫܐ#Classical_Syriac"]
-        ],
-        "k": "موس",
-        "yol": "kök"
-      },
-      {
-        "w": "موسى",
-        "u": "موسى",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "مُوسَى or مُوسًى • (mūsā or mūsan) f or m (construct state مُوسَى (mūsā), dual مُوسَيَانِ (mūsayāni), plural مَوَاسٍ (mawāsin, construct state مَوَاسِي (mawāsī)) or مُوسَيَات (mūsayāt))",
-        "t": "From the root م و س (m w s), meaning \"to razor\", \"to cut\", \"to slice or trim\"; ultimately from Proto-Afroasiatic *mVs- (“knife, spear; iron”).",
-        "s": [
-          ["ar-root", "م و س (m w s)"],
-          ["inh", "Proto-Afroasiatic *mVs- (“knife, spear; iron”)"]
-        ],
-        "g": ["razor, blade", "knife, pocketknife"],
-        "r": ["mūsā", "mūsan", "mūsayāni"],
-        "ipa": ["/muː.saː/", "/muː.san/"],
-        "ds": [
-          ["arq", "موس", "mūs"],
-          ["arz", "موس", "mūs"],
-          ["mey", "موس", "mūs"],
-          ["ayl", "موس", "mūs"],
-          ["mt", "mus", ""],
-          ["ary", "موس", "mūs"],
-          ["aeb", "موس", "mūs"],
-          ["gkm", "ἄμουσα", "ámousa"]
-        ],
-        "el": [
-          ["م و س", "Appendix:Arabic roots/م و س"],
-          ["*mVs-", "Reconstruction:Proto-Afroasiatic/mVs-"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "ميسان",
-        "u": "ميسان",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "مَيْسَان • (maysān) f",
-        "g": ["Maysan (a governorate in southeastern Iraq)"],
-        "tag": ["error-lua-exec"],
-        "r": ["maysān"],
-        "ipa": ["/maj.saːn/"],
-        "yol": "müştak"
-      }
-    ],
-    "arabic_ontology": [
-      {
-        "id": "46662",
-        "arapca": [
-          "مِبَطٌّ",
-          "مِقْطَعٌ",
-          "مِبْضَعٌ",
-          "سِكِّينٌ",
-          "سِكِّينَةٌ",
-          "سَكِينَةٌ",
-          "سِيْخٌ2",
-          "مِقَصٌّ",
-          "مِقْرَاضٌ",
-          "مُوسَى1",
-          "مُوسَىً",
-          "حَدٌّ1",
-          "مُدْيَةٌ",
-          "شَفْرَةٌ",
-          "مِشْرَطٌ",
-          "خَنْجَرٌ",
-          "خِنْجَرٌ",
-          "مِفْصَدٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "مصنوع من الحديد أو ما شابه ذات نصل حاد تستخدم للذبح أو القطع",
-        "misal": "يُقطَع اللحم بِال_",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47192",
-        "arapca": [
-          "تَرَاوُحٌ",
-          "رَجْرَجَةٌ",
-          "تَمَايُلٌ",
-          "اِهْتِزَازٌ",
-          "ذَبْذَبَةٌ",
-          "تَذَبْذُبٌ",
-          "تَذَبْذَبَ",
-          "تَرَاوَحَ",
-          "تَرَنُّحٌ",
-          "اِرْتِجَافٌ",
-          "نَوَسَانٌ",
-          "خَطْرَةٌ",
-          "خَطَرَانٌ",
-          "تَمَوَّجَ",
-          "اِرْتِجاجٌ",
-          "تَرَجُّحٌ",
-          "مَيَسَانٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "عملية يتحرك فيها الشيء في مكانه حركة موضعية ذهابا وايابا",
-        "misal": "شعرنا ب_ الارض من تحتنا فعرفنا بعدها أنها كانت هزة أرضية خفيفة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "51663",
-        "arapca": ["ذِئْبٌ", "سَيِّدٌ", "سِرْحَانٌ", "مَيَّاسٌ"],
-        "ingilizce": [],
-        "tanim": "ثديي من رتبة اللواحم من الفصيلة الكلبيّة ، حيوان مفترس لونه رماديّ يميل إلى الصُّفرة يعيش في غابات أوروبا وآسيا وأفريقيا يُعرف عنه الخُبث والدَّهاء ويعيش على الصيد",
-        "misal": "سمع غالب عواء ال_ فخاف على غنمه",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 0,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مس",
-    "harf": "م",
-    "mahrec": "şefeviyye",
-    "bolge": "dudak ve cevf"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "person.n.01",
-    "orta": "noun.person",
-    "ust": "insan ve toplum",
-    "dayanak_synset": "moses.n.02",
-    "dayanak_tanim": "United States painter of colorful and primitive rural scenes (1860-1961)",
-    "synset_sayisi": 1
-  },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["creator.n.02"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "المقصور والممدود",
-    "bab": "ما يمد فيكون له معنى وإذا مد وقصر كان له معنى آخر",
-    "kok_gecis": 21.2,
-    "kitapta_gecis": 8.8,
-    "zenginlesme": 2.8
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 9,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 622
-    },
-    "orta": {
-      "kume": 42,
-      "merkez_kok": "دثر",
-      "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
-      "boy": 109
-    },
-    "ince": {
-      "kume": 276,
-      "merkez_kok": "خرز",
-      "merkez_mana": "awl",
-      "boy": 36
-    }
-  },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "884": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "885": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "886": ["mensûb", "fa'al + iyy", "kıyâsî · ilal", ""],
-    "887": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî · ilal", ""],
-    "888": ["masdar · sülâsî mücerred", "fi'l", "semâî aday · ilal", ""],
-    "889": ["masdar · sülâsî mücerred", "fu'l", "semâî aday · ilal", ""],
-    "890": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî · ilal", "IV"],
-    "891": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "892": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "893": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "894": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî · ilal", "VIII"],
-    "895": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "898": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî · ilal", "X"],
-    "899": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî · ilal", "X"],
-    "900": ["masdar · bâb X (vâvı muhafaza: semâî istisnâ)", "istif'āl", "semâî aday", "X"],
-    "901": ["ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'il", "semâî aday", "X"],
-    "902": ["ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'al", "semâî aday", "X"],
-    "903": ["ism-i hey'et · sülâsî", "fi'le", "aday · ilal", ""],
-    "904": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday · ilal", ""],
-    "905": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday · ilal", ""],
-    "906": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday · ilal", ""],
-    "907": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib)", "ecvef kıyâsı", ""],
-    "908": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes", "ecvef kıyâsı", ""],
-    "909": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye", "ecvef kıyâsı", ""],
-    "910": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye", "ecvef kıyâsı", ""],
-    "911": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "912": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "913": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "914": ["mensûb", "fi'l + iyy", "kıyâsî · ilal", ""],
-    "915": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî · ilal", ""],
-    "916": ["mensûb", "fu'l + iyy", "kıyâsî · ilal", ""],
-    "917": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî · ilal", ""],
-    "918": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday · ilal", ""],
-    "919": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday · ilal", ""],
-    "920": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday · ilal", ""],
-    "921": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday · ilal", ""],
-    "922": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "923": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday · ilal", ""],
-    "924": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "925": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday · ilal", ""]
-  },
-  "kelimeler": [
-    {
-      "kelime": "مُوسَىٰٓ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:51",
-      "adet": 25,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "مُوسَى",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:53",
-      "adet": 13,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "مُوسَىٰ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:54",
-      "adet": 57,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "يَٰمُوسَىٰ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:55",
-      "adet": 11,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "مُّوسَىٰ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:92",
-      "adet": 7,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "يَٰمُوسَىٰٓ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "5:22",
-      "adet": 11,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "وَمُوسَىٰ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "6:84",
-      "adet": 5,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "بِمُوسَىٰ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "7:131",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "يَٰمُوسَى",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "7:134",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "مُّوسَى",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "7:154",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "مُّوسَىٰٓ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "10:80",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    },
-    {
-      "kelime": "لِمُوسَىٰٓ",
-      "kok": "موس",
-      "lemma": "مُوسَى",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "10:83",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "Musa",
-        "lemma": "Musa",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": "Musa"
-      },
-      "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
-      "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
-    }
+  "masdar · bâb II": [
+   [
+    29,
+    "تَمْوِيس",
+    "tamwīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    30,
+    "تَمْوِسَة",
+    "tamwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    31,
+    "مِوِّاس",
+    "miwwās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb II": [
+   [
+    32,
+    "تَمْوِيسَة",
+    "tamwīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    33,
+    "مِوِّاسَة",
+    "miwwāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb II": [
+   [
+    34,
+    "مُمَوِّس",
+    "mumawwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    35,
+    "مُمَوِّسَة",
+    "mumawwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    36,
+    "مُمَوِّسَان",
+    "mumawwisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    37,
+    "مُمَوِّسَتَان",
+    "mumawwisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    38,
+    "مُمَوِّسُون",
+    "mumawwisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    39,
+    "مُمَوِّسِين",
+    "mumawwisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    40,
+    "مُمَوِّسَات",
+    "mumawwisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb II": [
+   [
+    41,
+    "مُمَوَّس",
+    "mumawwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    42,
+    "مُمَوَّسَة",
+    "mumawwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    43,
+    "مُمَوَّسَان",
+    "mumawwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    44,
+    "مُمَوَّسَتَان",
+    "mumawwasatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    45,
+    "مُمَوَّسُون",
+    "mumawwasūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    46,
+    "مُمَوَّسِين",
+    "mumawwasīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    47,
+    "مُمَوَّسَات",
+    "mumawwasāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb II": [
+   [
+    48,
+    "مُمَوَّس",
+    "mumawwas",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb III": [
+   [
+    49,
+    "مُمَاوَسَة",
+    "mumāwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    552,
+    "مِيَاس",
+    "miyās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb III": [
+   [
+    553,
+    "مِيَاسَة",
+    "miyāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb III": [
+   [
+    52,
+    "مُمَاوِس",
+    "mumāwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    53,
+    "مُمَاوِسَة",
+    "mumāwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    54,
+    "مُمَاوِسَان",
+    "mumāwisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    55,
+    "مُمَاوِسَتَان",
+    "mumāwisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    56,
+    "مُمَاوِسُون",
+    "mumāwisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    57,
+    "مُمَاوِسِين",
+    "mumāwisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    58,
+    "مُمَاوِسَات",
+    "mumāwisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb III": [
+   [
+    59,
+    "مُمَاوَس",
+    "mumāwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    60,
+    "مُمَاوَسَة",
+    "mumāwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    61,
+    "مُمَاوَسَان",
+    "mumāwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    62,
+    "مُمَاوَسَتَان",
+    "mumāwasatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    63,
+    "مُمَاوَسُون",
+    "mumāwasūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    64,
+    "مُمَاوَسِين",
+    "mumāwasīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    65,
+    "مُمَاوَسَات",
+    "mumāwasāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb III": [
+   [
+    66,
+    "مُمَاوَس",
+    "mumāwas",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb IV": [
+   [
+    567,
+    "إِمَاسَة",
+    "ʾimāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb IV": [
+   [
+    569,
+    "مُمِيس",
+    "mumīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    570,
+    "مُمِيسَة",
+    "mumīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    571,
+    "مُمِيسَان",
+    "mumīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    572,
+    "مُمِيسَتَان",
+    "mumīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    573,
+    "مُمِيسُون",
+    "mumīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    574,
+    "مُمِيسِين",
+    "mumīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    575,
+    "مُمِيسَات",
+    "mumīsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb IV": [
+   [
+    576,
+    "مُمَاس",
+    "mumās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    890,
+    "مُمَاسَة",
+    "mumāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    577,
+    "مُمَاسَان",
+    "mumāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    891,
+    "مُمَاسَتَان",
+    "mumāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    578,
+    "مُمَاسُون",
+    "mumāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    579,
+    "مُمَاسِين",
+    "mumāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    580,
+    "مُمَاسَات",
+    "mumāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb IV": [
+   [
+    581,
+    "مُمَاس",
+    "mumās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb V": [
+   [
+    84,
+    "تَمَوُّس",
+    "tamawwus",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb V": [
+   [
+    85,
+    "تَمَوُّسَة",
+    "tamawwusa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb V": [
+   [
+    86,
+    "مُتَمَوِّس",
+    "mutamawwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    87,
+    "مُتَمَوِّسَة",
+    "mutamawwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    88,
+    "مُتَمَوِّسَان",
+    "mutamawwisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    89,
+    "مُتَمَوِّسَتَان",
+    "mutamawwisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    90,
+    "مُتَمَوِّسُون",
+    "mutamawwisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    91,
+    "مُتَمَوِّسِين",
+    "mutamawwisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    92,
+    "مُتَمَوِّسَات",
+    "mutamawwisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb V": [
+   [
+    93,
+    "مُتَمَوَّس",
+    "mutamawwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    94,
+    "مُتَمَوَّسَة",
+    "mutamawwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    95,
+    "مُتَمَوَّسَان",
+    "mutamawwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    96,
+    "مُتَمَوَّسَتَان",
+    "mutamawwasatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    97,
+    "مُتَمَوَّسُون",
+    "mutamawwasūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    98,
+    "مُتَمَوَّسِين",
+    "mutamawwasīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    99,
+    "مُتَمَوَّسَات",
+    "mutamawwasāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb V": [
+   [
+    100,
+    "مُتَمَوَّس",
+    "mutamawwas",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb VI": [
+   [
+    101,
+    "تَمَاوُس",
+    "tamāwus",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb VI": [
+   [
+    102,
+    "تَمَاوُسَة",
+    "tamāwusa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb VI": [
+   [
+    103,
+    "مُتَمَاوِس",
+    "mutamāwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    104,
+    "مُتَمَاوِسَة",
+    "mutamāwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    105,
+    "مُتَمَاوِسَان",
+    "mutamāwisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    106,
+    "مُتَمَاوِسَتَان",
+    "mutamāwisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    107,
+    "مُتَمَاوِسُون",
+    "mutamāwisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    108,
+    "مُتَمَاوِسِين",
+    "mutamāwisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    109,
+    "مُتَمَاوِسَات",
+    "mutamāwisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb VI": [
+   [
+    110,
+    "مُتَمَاوَس",
+    "mutamāwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    111,
+    "مُتَمَاوَسَة",
+    "mutamāwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    112,
+    "مُتَمَاوَسَان",
+    "mutamāwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    113,
+    "مُتَمَاوَسَتَان",
+    "mutamāwasatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    114,
+    "مُتَمَاوَسُون",
+    "mutamāwasūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    115,
+    "مُتَمَاوَسِين",
+    "mutamāwasīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    116,
+    "مُتَمَاوَسَات",
+    "mutamāwasāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb VI": [
+   [
+    117,
+    "مُتَمَاوَس",
+    "mutamāwas",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb VII": [
+   [
+    610,
+    "اِنْمِيَاس",
+    "inmiyās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb VII": [
+   [
+    611,
+    "اِنْمِيَاسَة",
+    "inmiyāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb VII": [
+   [
+    612,
+    "مُنْمَاس",
+    "munmās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    613,
+    "مُنْمَاسَة",
+    "munmāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    614,
+    "مُنْمَاسَان",
+    "munmāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    615,
+    "مُنْمَاسَتَان",
+    "munmāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    616,
+    "مُنْمَاسُون",
+    "munmāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    617,
+    "مُنْمَاسِين",
+    "munmāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    618,
+    "مُنْمَاسَات",
+    "munmāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb VII": [
+   [
+    619,
+    "مُنْمَاس",
+    "munmās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    892,
+    "مُنْمَاسَة",
+    "munmāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    620,
+    "مُنْمَاسَان",
+    "munmāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    893,
+    "مُنْمَاسَتَان",
+    "munmāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    621,
+    "مُنْمَاسُون",
+    "munmāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    622,
+    "مُنْمَاسِين",
+    "munmāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    623,
+    "مُنْمَاسَات",
+    "munmāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb VII": [
+   [
+    624,
+    "مُنْمَاس",
+    "munmās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb VIII": [
+   [
+    625,
+    "اِمْتِيَاس",
+    "imtiyās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · bâb VIII": [
+   [
+    627,
+    "اِمْتِيَاسَة",
+    "imtiyāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb VIII": [
+   [
+    628,
+    "مُمْتَاس",
+    "mumtās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    629,
+    "مُمْتَاسَة",
+    "mumtāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    630,
+    "مُمْتَاسَان",
+    "mumtāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    631,
+    "مُمْتَاسَتَان",
+    "mumtāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    632,
+    "مُمْتَاسُون",
+    "mumtāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    633,
+    "مُمْتَاسِين",
+    "mumtāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    634,
+    "مُمْتَاسَات",
+    "mumtāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb VIII": [
+   [
+    635,
+    "مُمْتَاس",
+    "mumtās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    894,
+    "مُمْتَاسَة",
+    "mumtāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    636,
+    "مُمْتَاسَان",
+    "mumtāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    895,
+    "مُمْتَاسَتَان",
+    "mumtāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    637,
+    "مُمْتَاسُون",
+    "mumtāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    638,
+    "مُمْتَاسِين",
+    "mumtāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    639,
+    "مُمْتَاسَات",
+    "mumtāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+   [
+    640,
+    "مُمْتَاس",
+    "mumtās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb IX (illet harfi izhar)": [
+   [
+    168,
+    "اِمْوِسَاس",
+    "imwisās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb IX (illet harfi izhar)": [
+   [
+    169,
+    "مُمْوَسّ",
+    "mumwass",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    170,
+    "مُمْوَسَّة",
+    "mumwassa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    171,
+    "مُمْوَسَّان",
+    "mumwassān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    172,
+    "مُمْوَسَّتَان",
+    "mumwassatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    173,
+    "مُمْوَسُّون",
+    "mumwassūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    174,
+    "مُمْوَسِّين",
+    "mumwassīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    175,
+    "مُمْوَسَّات",
+    "mumwassāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb X": [
+   [
+    662,
+    "اِسْتِمَاسَة",
+    "istimāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb X": [
+   [
+    664,
+    "مُسْتَمِيس",
+    "mustamīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    665,
+    "مُسْتَمِيسَة",
+    "mustamīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    666,
+    "مُسْتَمِيسَان",
+    "mustamīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    667,
+    "مُسْتَمِيسَتَان",
+    "mustamīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    668,
+    "مُسْتَمِيسُون",
+    "mustamīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    669,
+    "مُسْتَمِيسِين",
+    "mustamīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    670,
+    "مُسْتَمِيسَات",
+    "mustamīsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb X": [
+   [
+    671,
+    "مُسْتَمَاس",
+    "mustamās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    898,
+    "مُسْتَمَاسَة",
+    "mustamāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    672,
+    "مُسْتَمَاسَان",
+    "mustamāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    899,
+    "مُسْتَمَاسَتَان",
+    "mustamāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    673,
+    "مُسْتَمَاسُون",
+    "mustamāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    674,
+    "مُسْتَمَاسِين",
+    "mustamāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    675,
+    "مُسْتَمَاسَات",
+    "mustamāsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman/masdar-ı mîmî · bâb X": [
+   [
+    676,
+    "مُسْتَمَاس",
+    "mustamās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
+   [
+    900,
+    "اِسْتِمْوَاس",
+    "istimwās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
+   [
+    901,
+    "مُسْتَمْوِس",
+    "mustamwis",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
+   [
+    902,
+    "مُسْتَمْوَس",
+    "mustamwas",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb XI (illet harfi izhar)": [
+   [
+    193,
+    "اِمْوِيسَاس",
+    "imwīsās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · bâb XI (illet harfi izhar)": [
+   [
+    194,
+    "مُمْوَاسّ",
+    "mumwāss",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    195,
+    "مُمْوَاسَّة",
+    "mumwāssa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    196,
+    "مُمْوَاسَّان",
+    "mumwāssān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    197,
+    "مُمْوَاسَّتَان",
+    "mumwāssatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    198,
+    "مُمْوَاسُّون",
+    "mumwāssūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    199,
+    "مُمْوَاسِّين",
+    "mumwāssīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    200,
+    "مُمْوَاسَّات",
+    "mumwāssāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb XII (illet harfi izhar)": [
+   [
+    201,
+    "اِمْوِوْوَاس",
+    "imwiwwās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar · bâb XIII (illet harfi izhar)": [
+   [
+    202,
+    "اِمْوِوَّاس",
+    "imwiwwās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i fâil · sülâsî": [
+   [
+    687,
+    "مَائِس",
+    "māʾis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    688,
+    "مَائِسَة",
+    "māʾisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    689,
+    "مَائِسَان",
+    "māʾisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    690,
+    "مَائِسَتَان",
+    "māʾisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    691,
+    "مَائِسُون",
+    "māʾisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    692,
+    "مَائِسِين",
+    "māʾisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    693,
+    "مَائِسَات",
+    "māʾisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i mef‘ûl · sülâsî": [
+   [
+    694,
+    "مَمُوس",
+    "mamūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    695,
+    "مَمُوسَة",
+    "mamūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    696,
+    "مَمُوسَان",
+    "mamūsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    697,
+    "مَمُوسَتَان",
+    "mamūsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    698,
+    "مَمُوسُون",
+    "mamūsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    699,
+    "مَمُوسِين",
+    "mamūsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    700,
+    "مَمُوسَات",
+    "mamūsāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mekân/zaman · sülâsî": [
+   [
+    701,
+    "مَمَاس",
+    "mamās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    702,
+    "مَمَاسَان",
+    "mamāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    703,
+    "مَمِيس",
+    "mamīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    704,
+    "مَمِيسَان",
+    "mamīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    705,
+    "مَمَاسَة",
+    "mamāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    706,
+    "مَمَاسَتَان",
+    "mamāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    707,
+    "مَمِيسَة",
+    "mamīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    708,
+    "مَمِيسَتَان",
+    "mamīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    247,
+    "مَمْوُسَة",
+    "mamwusa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    248,
+    "مَمْوُسَتَان",
+    "mamwusatān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "âlet · sülâsî": [
+   [
+    235,
+    "مِمْوَس",
+    "mimwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    236,
+    "مِمْوَسَان",
+    "mimwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    237,
+    "مِمْوَاس",
+    "mimwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    238,
+    "مِمْوَاسَان",
+    "mimwāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    239,
+    "مِمْوَسَة",
+    "mimwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    240,
+    "مِمْوَسَتَان",
+    "mimwasatān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "tafdîl · sülâsî": [
+   [
+    241,
+    "أَمْوَس",
+    "ʾamwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    242,
+    "أَمْوَسَان",
+    "ʾamwasān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "tafdîl (müennes) · sülâsî": [
+   [
+    243,
+    "مُوْسَى",
+    "muwsā",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    244,
+    "مُوْسَيَان",
+    "muwsayān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    245,
+    "مَوْسَاء",
+    "mawsāʾ",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    246,
+    "مَوْسَاآن",
+    "mawsāʾān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "tasğîr · sülâsî": [
+   [
+    249,
+    "مُوَيْس",
+    "muways",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    250,
+    "مُوَيْسَان",
+    "muwaysān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    251,
+    "مُوَيْسَة",
+    "muwaysa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    252,
+    "مُوَيْسَتَان",
+    "muwaysatān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar-ı mîmî · sülâsî": [
+   [
+    723,
+    "مَمَاس",
+    "mamās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    724,
+    "مَمَاسَان",
+    "mamāsān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i merre · sülâsî": [
+   [
+    255,
+    "مَوْسَة",
+    "mawsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    256,
+    "مَوْسَتَان",
+    "mawsatān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i hey'et · sülâsî": [
+   [
+    903,
+    "مِيسَة",
+    "mīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    904,
+    "مِيسَتَان",
+    "mīsatān",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "sıfat-ı müşebbehe": [
+   [
+    259,
+    "مَوِيس",
+    "mawīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    260,
+    "مَوِيسَة",
+    "mawīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    261,
+    "مَوِيسَان",
+    "mawīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    262,
+    "مَوِيسَتَان",
+    "mawīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    263,
+    "مَوِيسُون",
+    "mawīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    264,
+    "مَوِيسِين",
+    "mawīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    265,
+    "مَوِيسَات",
+    "mawīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    266,
+    "مَوُوس",
+    "mawūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    267,
+    "مَوُوسَة",
+    "mawūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    268,
+    "مَوُوسَان",
+    "mawūsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    269,
+    "مَوُوسَتَان",
+    "mawūsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    270,
+    "مَوُوسُون",
+    "mawūsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    271,
+    "مَوُوسِين",
+    "mawūsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    272,
+    "مَوُوسَات",
+    "mawūsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    273,
+    "مَوِس",
+    "mawis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    274,
+    "مَوِسَة",
+    "mawisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    275,
+    "مَوِسَان",
+    "mawisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    276,
+    "مَوِسَتَان",
+    "mawisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    277,
+    "مَوِسُون",
+    "mawisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    278,
+    "مَوِسِين",
+    "mawisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    279,
+    "مَوِسَات",
+    "mawisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    280,
+    "مَوُس",
+    "mawus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    281,
+    "مَوُسَة",
+    "mawusa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    282,
+    "مَوُسَان",
+    "mawusān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    283,
+    "مَوُسَتَان",
+    "mawusatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    284,
+    "مَوُسُون",
+    "mawusūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    285,
+    "مَوُسِين",
+    "mawusīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    286,
+    "مَوُسَات",
+    "mawusāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    753,
+    "مَاس",
+    "mās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    905,
+    "مَاسَة",
+    "māsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    754,
+    "مَاسَان",
+    "māsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    906,
+    "مَاسَتَان",
+    "māsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    884,
+    "مَاسُون",
+    "māsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    885,
+    "مَاسِين",
+    "māsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    755,
+    "مَاسَات",
+    "māsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    294,
+    "مَوْس",
+    "maws",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    295,
+    "مَوْسَة",
+    "mawsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    296,
+    "مَوْسَان",
+    "mawsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    297,
+    "مَوْسَتَان",
+    "mawsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    298,
+    "مَوْسُون",
+    "mawsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    299,
+    "مَوْسِين",
+    "mawsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    300,
+    "مَوْسَات",
+    "mawsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    301,
+    "مُوُس",
+    "muwus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    302,
+    "مُوُسَة",
+    "muwusa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    303,
+    "مُوُسَان",
+    "muwusān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    304,
+    "مُوُسَتَان",
+    "muwusatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    305,
+    "مُوُسُون",
+    "muwusūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    306,
+    "مُوُسِين",
+    "muwusīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    307,
+    "مُوُسَات",
+    "muwusāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    308,
+    "مَوْسَان",
+    "mawsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    309,
+    "مَوْسَانَة",
+    "mawsāna",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    310,
+    "مَوْسَانَان",
+    "mawsānān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    311,
+    "مَوْسَانَتَان",
+    "mawsānatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    312,
+    "مَوْسَانُون",
+    "mawsānūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    313,
+    "مَوْسَانِين",
+    "mawsānīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    314,
+    "مَوْسَانَات",
+    "mawsānāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    315,
+    "مُوَاس",
+    "muwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    316,
+    "مُوَاسَة",
+    "muwāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    317,
+    "مُوَاسَان",
+    "muwāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    318,
+    "مُوَاسَتَان",
+    "muwāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    319,
+    "مُوَاسُون",
+    "muwāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    320,
+    "مُوَاسِين",
+    "muwāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    321,
+    "مُوَاسَات",
+    "muwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    322,
+    "مَوَاس",
+    "mawās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    323,
+    "مَوَاسَة",
+    "mawāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    324,
+    "مَوَاسَان",
+    "mawāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    325,
+    "مَوَاسَتَان",
+    "mawāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    326,
+    "مَوَاسُون",
+    "mawāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    327,
+    "مَوَاسِين",
+    "mawāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    328,
+    "مَوَاسَات",
+    "mawāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    907,
+    "مَيِّس",
+    "mayyis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    908,
+    "مَيِّسَة",
+    "mayyisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    909,
+    "مَيِّسَان",
+    "mayyisān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    910,
+    "مَيِّسَتَان",
+    "mayyisatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    911,
+    "مَيِّسُون",
+    "mayyisūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    912,
+    "مَيِّسِين",
+    "mayyisīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    913,
+    "مَيِّسَات",
+    "mayyisāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mübalağa": [
+   [
+    329,
+    "مَوَّاس",
+    "mawwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    330,
+    "مَوَّاسَة",
+    "mawwāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    331,
+    "مَوَّاسَان",
+    "mawwāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    332,
+    "مَوَّاسَتَان",
+    "mawwāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    333,
+    "مَوَّاسُون",
+    "mawwāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    334,
+    "مَوَّاسِين",
+    "mawwāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    335,
+    "مَوَّاسَات",
+    "mawwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    336,
+    "مَوَّاسَة",
+    "mawwāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    337,
+    "مَوَّاسَتَان",
+    "mawwāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    338,
+    "مَوَّاسَات",
+    "mawwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    339,
+    "مَوُوس",
+    "mawūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    340,
+    "مَوُوسَة",
+    "mawūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    341,
+    "مَوُوسَان",
+    "mawūsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    342,
+    "مَوُوسَتَان",
+    "mawūsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    343,
+    "مَوُوسُون",
+    "mawūsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    344,
+    "مَوُوسِين",
+    "mawūsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    345,
+    "مَوُوسَات",
+    "mawūsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    346,
+    "مَوُّوس",
+    "mawwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    347,
+    "مَوُّوسَة",
+    "mawwūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    348,
+    "مَوُّوسَان",
+    "mawwūsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    349,
+    "مَوُّوسَتَان",
+    "mawwūsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    350,
+    "مَوُّوسُون",
+    "mawwūsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    351,
+    "مَوُّوسِين",
+    "mawwūsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    352,
+    "مَوُّوسَات",
+    "mawwūsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    353,
+    "مِوِّيس",
+    "miwwīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    354,
+    "مِوِّيسَة",
+    "miwwīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    355,
+    "مِوِّيسَان",
+    "miwwīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    356,
+    "مِوِّيسَتَان",
+    "miwwīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    357,
+    "مِوِّيسُون",
+    "miwwīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    358,
+    "مِوِّيسِين",
+    "miwwīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    359,
+    "مِوِّيسَات",
+    "miwwīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    360,
+    "مُوَّاس",
+    "muwwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    361,
+    "مُوَّاسَة",
+    "muwwāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    362,
+    "مُوَّاسَان",
+    "muwwāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    363,
+    "مُوَّاسَتَان",
+    "muwwāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    364,
+    "مُوَّاسُون",
+    "muwwāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    365,
+    "مُوَّاسِين",
+    "muwwāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    366,
+    "مُوَّاسَات",
+    "muwwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    367,
+    "مِمْوَاس",
+    "mimwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    368,
+    "مِمْوَاسَة",
+    "mimwāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    369,
+    "مِمْوَاسَان",
+    "mimwāsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    370,
+    "مِمْوَاسَتَان",
+    "mimwāsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    371,
+    "مِمْوَاسُون",
+    "mimwāsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    372,
+    "مِمْوَاسِين",
+    "mimwāsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    373,
+    "مِمْوَاسَات",
+    "mimwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    374,
+    "مِمْوِيس",
+    "mimwīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    375,
+    "مِمْوِيسَة",
+    "mimwīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    376,
+    "مِمْوِيسَان",
+    "mimwīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    377,
+    "مِمْوِيسَتَان",
+    "mimwīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    378,
+    "مِمْوِيسُون",
+    "mimwīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    379,
+    "مِمْوِيسِين",
+    "mimwīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    380,
+    "مِمْوِيسَات",
+    "mimwīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    381,
+    "مَوِيس",
+    "mawīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    382,
+    "مَوِيسَة",
+    "mawīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    383,
+    "مَوِيسَان",
+    "mawīsān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    384,
+    "مَوِيسَتَان",
+    "mawīsatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    385,
+    "مَوِيسُون",
+    "mawīsūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    386,
+    "مَوِيسِين",
+    "mawīsīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    387,
+    "مَوِيسَات",
+    "mawīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    388,
+    "مَوَّس",
+    "mawwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    389,
+    "مَوَّسَة",
+    "mawwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    390,
+    "مَوَّسَان",
+    "mawwasān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    391,
+    "مَوَّسَتَان",
+    "mawwasatān",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    392,
+    "مَوَّسُون",
+    "mawwasūn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    393,
+    "مَوَّسِين",
+    "mawwasīn",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    394,
+    "مَوَّسَات",
+    "mawwasāt",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "mensûb": [
+   [
+    395,
+    "مَوْسِيّ",
+    "mawsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    886,
+    "مَاسِيّ",
+    "māsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    914,
+    "مِيسِيّ",
+    "mīsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    916,
+    "مُوسِيّ",
+    "mūsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    815,
+    "مِيَاسِيّ",
+    "miyāsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    817,
+    "مَائِسِيّ",
+    "māʾisiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    819,
+    "مَمُوسِيّ",
+    "mamūsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    409,
+    "مَوِيسِيّ",
+    "mawīsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    823,
+    "مَمَاسِيّ",
+    "mamāsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    413,
+    "تَمْوِيسِيّ",
+    "tamwīsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    415,
+    "تَمَاوُسِيّ",
+    "tamāwusiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    829,
+    "إِمَاسِيّ",
+    "ʾimāsiyy",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    831,
+    "اِمْتِيَاسِيّ",
+    "imtiyāsiyy",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "masdar-ı sınâî": [
+   [
+    396,
+    "مَوْسِيَّة",
+    "mawsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    887,
+    "مَاسِيَّة",
+    "māsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    915,
+    "مِيسِيَّة",
+    "mīsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    917,
+    "مُوسِيَّة",
+    "mūsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    816,
+    "مِيَاسِيَّة",
+    "miyāsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    818,
+    "مَائِسِيَّة",
+    "māʾisiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    820,
+    "مَمُوسِيَّة",
+    "mamūsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    410,
+    "مَوِيسِيَّة",
+    "mawīsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    824,
+    "مَمَاسِيَّة",
+    "mamāsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    414,
+    "تَمْوِيسِيَّة",
+    "tamwīsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    416,
+    "تَمَاوُسِيَّة",
+    "tamāwusiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    830,
+    "إِمَاسِيَّة",
+    "ʾimāsiyya",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    832,
+    "اِمْتِيَاسِيَّة",
+    "imtiyāsiyya",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+   [
+    421,
+    "مَوَاس",
+    "mawās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    422,
+    "مُوُوس",
+    "muwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    835,
+    "مِيَاس",
+    "miyās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    918,
+    "مُوس",
+    "mūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    425,
+    "مَوَاسَة",
+    "mawāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    837,
+    "مِيَاسَة",
+    "miyāsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    427,
+    "مُوُوسَة",
+    "muwūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    428,
+    "مَوْس",
+    "maws",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    919,
+    "مِيس",
+    "mīs",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i cins · ifrâdî (aday)": [
+   [
+    430,
+    "مَاوُوس",
+    "māwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    432,
+    "مَوَسَة",
+    "mawasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    433,
+    "مُوَسَة",
+    "muwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    434,
+    "أُمْوُوسَة",
+    "ʾumwūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    435,
+    "مَوْوَس",
+    "mawwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    437,
+    "مَيْوَس",
+    "maywas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    439,
+    "مَوْس",
+    "maws",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    840,
+    "مَاس",
+    "mās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    921,
+    "مِيس",
+    "mīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    923,
+    "مُوس",
+    "mūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    447,
+    "مَوِيس",
+    "mawīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    843,
+    "مِيَس",
+    "miyas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    451,
+    "مُوُس",
+    "muwus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    453,
+    "مَوَاس",
+    "mawās",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "ism-i cins · cem‘î ve tekili (+tâ)": [
+   [
+    431,
+    "مَاوُوسَة",
+    "māwūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    436,
+    "مَوْوَسَة",
+    "mawwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    438,
+    "مَيْوَسَة",
+    "maywasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    440,
+    "مَوْسَة",
+    "mawsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    920,
+    "مَاسَة",
+    "māsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    922,
+    "مِيسَة",
+    "mīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    924,
+    "مُوسَة",
+    "mūsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    448,
+    "مَوِيسَة",
+    "mawīsa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    925,
+    "مِيَسَة",
+    "miyasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    452,
+    "مُوُسَة",
+    "muwusa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    454,
+    "مَوَاسَة",
+    "mawāsa",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "cem‘-i mükesser (aday)": [
+   [
+    455,
+    "أَمْوَاس",
+    "ʾamwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    456,
+    "أَمْوِسَة",
+    "ʾamwisa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    457,
+    "أَمَاوِس",
+    "ʾamāwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    458,
+    "أَمَاوِيس",
+    "ʾamāwīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    459,
+    "مُوُوس",
+    "muwūs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    460,
+    "مُوُس",
+    "muwus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    854,
+    "مِيَاس",
+    "miyās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    855,
+    "مِيَس",
+    "miyas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    463,
+    "مِوَسَة",
+    "miwasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    464,
+    "مُوَس",
+    "muwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    465,
+    "مُوَساء",
+    "muwasāʾ",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    466,
+    "مَوَسَة",
+    "mawasa",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    467,
+    "مُوَّاس",
+    "muwwās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    468,
+    "مَوَاس",
+    "mawās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    861,
+    "مَاس",
+    "mās",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    470,
+    "مَمَاوِس",
+    "mamāwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    471,
+    "مَمَاوِيس",
+    "mamāwīs",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    472,
+    "مَوَاوِس",
+    "mawāwis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    473,
+    "أَمْوُس",
+    "ʾamwus",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    474,
+    "مُوَّس",
+    "muwwas",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    475,
+    "مَوَائِس",
+    "mawāʾis",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    476,
+    "مُوَيْس",
+    "muways",
+    "",
+    "veri yok",
+    ""
+   ]
+  ],
+  "cem‘u’l-cem‘ (aday)": [
+   [
+    477,
+    "أَمْوَاسَات",
+    "ʾamwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    478,
+    "أَمْوِسَات",
+    "ʾamwisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    479,
+    "أَمَاوِسَات",
+    "ʾamāwisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    480,
+    "أَمَاوِيسَات",
+    "ʾamāwīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    481,
+    "مُوُوسَات",
+    "muwūsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    482,
+    "مُوُسَات",
+    "muwusāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    872,
+    "مِيَاسَات",
+    "miyāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    873,
+    "مِيَسَات",
+    "miyasāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    485,
+    "مِوَسَات",
+    "miwasāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    486,
+    "مُوَسَات",
+    "muwasāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    487,
+    "مُوَساآت",
+    "muwasāʾāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    488,
+    "مَوَسَات",
+    "mawasāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    489,
+    "مُوَّاسَات",
+    "muwwāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    490,
+    "مَوَاسَات",
+    "mawāsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    879,
+    "مَاسَات",
+    "māsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    492,
+    "مَمَاوِسَات",
+    "mamāwisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    493,
+    "مَمَاوِيسَات",
+    "mamāwīsāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    494,
+    "مَوَاوِسَات",
+    "mawāwisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    495,
+    "أَمْوُسَات",
+    "ʾamwusāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    496,
+    "مُوَّسَات",
+    "muwwasāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    497,
+    "مَوَائِسَات",
+    "mawāʾisāt",
+    "",
+    "veri yok",
+    ""
+   ],
+   [
+    498,
+    "مُوَيْسَات",
+    "muwaysāt",
+    "",
+    "veri yok",
+    ""
+   ]
   ]
+ },
+ "reddedilen": [
+  [
+   "ism-i merre · bâb IV",
+   "if'āl + tâ",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "ism-i mef‘ûl · bâb IX",
+   "if'ilâl (renk/ayıp, lâzım)",
+   "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
+  ],
+  [
+   "ism-i merre · bâb X",
+   "istif'āl + tâ",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "ism-i mef‘ûl · bâb XI",
+   "if'îlâl (lâzım)",
+   "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
+  ],
+  [
+   "ism-i mef‘ûl · bâb XII",
+   "if'iv'âl (lâzım)",
+   "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
+  ],
+  [
+   "ism-i mef‘ûl · bâb XIII",
+   "if'ivvâl (lâzım)",
+   "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
+  ],
+  [
+   "rubâ‘î",
+   "dört harfli bâblar",
+   "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"
+  ],
+  [
+   "mübalağa",
+   "fa''āle + müennes",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "mübalağa",
+   "fa''āle + cem‘-i sâlim müzekker (-ûn)",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "mübalağa",
+   "fa''āle + cem‘-i sâlim müzekker (-în)",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fa'ala + tâ (tekili)",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fu'ala + tâ (tekili)",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ],
+  [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "uf'ûla + tâ (tekili)",
+   "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
+  ]
+ ],
+ "sozlukler": {
+  "mekayis": [
+   {
+    "baslik": "مَوَسَ",
+    "metin": "(مَوَسَ) الْمِيمُ وَالْوَاوُ وَالسِّينُ: يَقُولُونَ: الْمَوْسُ: حَلْقُ الرَّأْسِ. [وَيُقَالُ فِي النِّسْبَةِ إِلَى مُوسَى مُوسَوِيٌّ، وَقَالَ الْكِسَائِيُّ: يُنْسَبُ إِلَى مُوسَى وَعِيسَى وَمَا أَشْبَهَهُمَا مِمَّا فِيهِ الْيَاءُ زَائِدَةٌ مَوْسِيٌّ وَعِيسِيٌّ] وَذَلِكَ أَنَّ الْيَاءَ فِيهِ زَائِدَةٌ، كَذَا قَالَ الْكِسَائِيُّ."
+   }
+  ],
+  "kaikki_vikisozluk": [
+   {
+    "w": "موسى",
+    "u": "موسى",
+    "p": "name",
+    "n": "1",
+    "h": "ar-proper noun",
+    "e": "مُوسَى • (mūsā) m",
+    "t": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē).",
+    "g": [
+     "Moses",
+     "a male given name, Musa"
+    ],
+    "r": [
+     "mūsā"
+    ],
+    "ipa": [
+     "/muː.saː/"
+    ],
+    "ds": [
+     [
+      "az",
+      "Musa",
+      ""
+     ],
+     [
+      "ba",
+      "Муса",
+      "Mosa"
+     ],
+     [
+      "bn",
+      "মূসা",
+      "musa"
+     ],
+     [
+      "ca",
+      "Mussa",
+      ""
+     ],
+     [
+      "en",
+      "Musa",
+      ""
+     ],
+     [
+      "fr",
+      "Moussa",
+      ""
+     ],
+     [
+      "kk",
+      "Мұса",
+      "Musa"
+     ],
+     [
+      "ms",
+      "Musa",
+      ""
+     ],
+     [
+      "roa-opt",
+      "Muça",
+      ""
+     ],
+     [
+      "osp",
+      "Muça",
+      ""
+     ],
+     [
+      "ota",
+      "موسی",
+      "mûsâ"
+     ],
+     [
+      "fa",
+      "موسی",
+      "musâ"
+     ],
+     [
+      "pa",
+      "مُوسیٰ",
+      "mūsá"
+     ],
+     [
+      "sd",
+      "موسيٰ",
+      ""
+     ],
+     [
+      "sw",
+      "Musa",
+      ""
+     ],
+     [
+      "tt",
+      "Муса",
+      "Musa"
+     ],
+     [
+      "tg",
+      "Мусо",
+      "Muso"
+     ],
+     [
+      "ur",
+      "موسیٰ",
+      "mūsā"
+     ],
+     [
+      "uz",
+      "Muso",
+      ""
+     ]
+    ],
+    "el": [
+     [
+      "ܡܘܼܫܹܐ",
+      "ܡܘܫܐ#Classical_Syriac"
+     ]
+    ],
+    "k": "موس",
+    "yol": "kök"
+   },
+   {
+    "w": "موسى",
+    "u": "موسى",
+    "p": "noun",
+    "n": "2",
+    "h": "ar-noun",
+    "e": "مُوسَى or مُوسًى • (mūsā or mūsan) f or m (construct state مُوسَى (mūsā), dual مُوسَيَانِ (mūsayāni), plural مَوَاسٍ (mawāsin, construct state مَوَاسِي (mawāsī)) or مُوسَيَات (mūsayāt))",
+    "t": "From the root م و س (m w s), meaning \"to razor\", \"to cut\", \"to slice or trim\"; ultimately from Proto-Afroasiatic *mVs- (“knife, spear; iron”).",
+    "s": [
+     [
+      "ar-root",
+      "م و س (m w s)"
+     ],
+     [
+      "inh",
+      "Proto-Afroasiatic *mVs- (“knife, spear; iron”)"
+     ]
+    ],
+    "g": [
+     "razor, blade",
+     "knife, pocketknife"
+    ],
+    "r": [
+     "mūsā",
+     "mūsan",
+     "mūsayāni"
+    ],
+    "ipa": [
+     "/muː.saː/",
+     "/muː.san/"
+    ],
+    "ds": [
+     [
+      "arq",
+      "موس",
+      "mūs"
+     ],
+     [
+      "arz",
+      "موس",
+      "mūs"
+     ],
+     [
+      "mey",
+      "موس",
+      "mūs"
+     ],
+     [
+      "ayl",
+      "موس",
+      "mūs"
+     ],
+     [
+      "mt",
+      "mus",
+      ""
+     ],
+     [
+      "ary",
+      "موس",
+      "mūs"
+     ],
+     [
+      "aeb",
+      "موس",
+      "mūs"
+     ],
+     [
+      "gkm",
+      "ἄμουσα",
+      "ámousa"
+     ]
+    ],
+    "el": [
+     [
+      "م و س",
+      "Appendix:Arabic roots/م و س"
+     ],
+     [
+      "*mVs-",
+      "Reconstruction:Proto-Afroasiatic/mVs-"
+     ]
+    ],
+    "yol": "müştak"
+   },
+   {
+    "w": "ميسان",
+    "u": "ميسان",
+    "p": "name",
+    "h": "ar-proper noun",
+    "e": "مَيْسَان • (maysān) f",
+    "g": [
+     "Maysan (a governorate in southeastern Iraq)"
+    ],
+    "tag": [
+     "error-lua-exec"
+    ],
+    "r": [
+     "maysān"
+    ],
+    "ipa": [
+     "/maj.saːn/"
+    ],
+    "yol": "müştak"
+   }
+  ],
+  "arabic_ontology": [
+   {
+    "id": "46662",
+    "arapca": [
+     "مِبَطٌّ",
+     "مِقْطَعٌ",
+     "مِبْضَعٌ",
+     "سِكِّينٌ",
+     "سِكِّينَةٌ",
+     "سَكِينَةٌ",
+     "سِيْخٌ2",
+     "مِقَصٌّ",
+     "مِقْرَاضٌ",
+     "مُوسَى1",
+     "مُوسَىً",
+     "حَدٌّ1",
+     "مُدْيَةٌ",
+     "شَفْرَةٌ",
+     "مِشْرَطٌ",
+     "خَنْجَرٌ",
+     "خِنْجَرٌ",
+     "مِفْصَدٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "مصنوع من الحديد أو ما شابه ذات نصل حاد تستخدم للذبح أو القطع",
+    "misal": "يُقطَع اللحم بِال_",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "47192",
+    "arapca": [
+     "تَرَاوُحٌ",
+     "رَجْرَجَةٌ",
+     "تَمَايُلٌ",
+     "اِهْتِزَازٌ",
+     "ذَبْذَبَةٌ",
+     "تَذَبْذُبٌ",
+     "تَذَبْذَبَ",
+     "تَرَاوَحَ",
+     "تَرَنُّحٌ",
+     "اِرْتِجَافٌ",
+     "نَوَسَانٌ",
+     "خَطْرَةٌ",
+     "خَطَرَانٌ",
+     "تَمَوَّجَ",
+     "اِرْتِجاجٌ",
+     "تَرَجُّحٌ",
+     "مَيَسَانٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "عملية يتحرك فيها الشيء في مكانه حركة موضعية ذهابا وايابا",
+    "misal": "شعرنا ب_ الارض من تحتنا فعرفنا بعدها أنها كانت هزة أرضية خفيفة",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "51663",
+    "arapca": [
+     "ذِئْبٌ",
+     "سَيِّدٌ",
+     "سِرْحَانٌ",
+     "مَيَّاسٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "ثديي من رتبة اللواحم من الفصيلة الكلبيّة ، حيوان مفترس لونه رماديّ يميل إلى الصُّفرة يعيش في غابات أوروبا وآسيا وأفريقيا يُعرف عنه الخُبث والدَّهاء ويعيش على الصيد",
+    "misal": "سمع غالب عواء ال_ فخاف على غنمه",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   }
+  ]
+ },
+ "kuran_gecisleri": 0,
+ "kuranda_var": true,
+ "sema": {
+  "sema": "graf-ic-graf",
+  "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+  "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+  "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+  "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+  "satir_alanlari": [
+   "kalip",
+   "arapca",
+   "latin",
+   "turkce",
+   "guven",
+   "tanik"
+  ]
+ },
+ "tasnif": {
+  "fasil": "مس",
+  "harf": "م",
+  "mahrec": "şefeviyye",
+  "bolge": "dudak ve cevf"
+ },
+ "mana_tasnif": {
+  "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "ince": "person.n.01",
+  "orta": "noun.person",
+  "ust": "insan ve toplum",
+  "dayanak_synset": "moses.n.02",
+  "dayanak_tanim": "United States painter of colorful and primitive rural scenes (1860-1961)",
+  "synset_sayisi": 1
+ },
+ "ses_mana_tasnif": {
+  "durum": "Cebel mu'cemlerinde kök yok"
+ },
+ "hakikat_mecaz_tasnif": {
+  "durum": "Esâsü'l-Belâğa'da madde yok"
+ },
+ "prototip_yayilim_tasnif": {
+  "durum": "prototip veya mecaz kolu yok"
+ },
+ "kolekzifikasyon_kavramlari": [
+  "creator.n.02"
+ ],
+ "muhassas_tasnif": {
+  "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
+  "kitap": "المقصور والممدود",
+  "bab": "ما يمد فيكون له معنى وإذا مد وقصر كان له معنى آخر",
+  "kok_gecis": 21.2,
+  "kitapta_gecis": 8.8,
+  "zenginlesme": 2.8
+ },
+ "mana_tasnif_gomme": {
+  "ust": {
+   "kume": 9,
+   "merkez_kok": "سفك",
+   "merkez_mana": "Safk: dökmek, akıtmak (kan)",
+   "boy": 622
+  },
+  "orta": {
+   "kume": 42,
+   "merkez_kok": "دثر",
+   "merkez_mana": "Tedsîr: örtmek, bürümek; desr: örtü",
+   "boy": 109
+  },
+  "ince": {
+   "kume": 276,
+   "merkez_kok": "خرز",
+   "merkez_mana": "awl",
+   "boy": 36
+  }
+ },
+ "kaliplar": {
+  "0": [
+   "masdar · sülâsî mücerred",
+   "fa'l",
+   "semâî aday",
+   ""
+  ],
+  "5": [
+   "masdar · sülâsî mücerred",
+   "fu'ul",
+   "semâî aday",
+   ""
+  ],
+  "6": [
+   "masdar · sülâsî mücerred",
+   "fu'ūl",
+   "semâî aday",
+   ""
+  ],
+  "8": [
+   "masdar · sülâsî mücerred",
+   "fu'āl",
+   "semâî aday",
+   ""
+  ],
+  "9": [
+   "masdar · sülâsî mücerred",
+   "fa'āl",
+   "semâî aday",
+   ""
+  ],
+  "10": [
+   "masdar · sülâsî mücerred",
+   "fa'āle",
+   "semâî aday",
+   ""
+  ],
+  "11": [
+   "masdar · sülâsî mücerred",
+   "fu'ūle",
+   "semâî aday",
+   ""
+  ],
+  "13": [
+   "masdar · sülâsî mücerred",
+   "fa'īl",
+   "semâî aday",
+   ""
+  ],
+  "14": [
+   "masdar · sülâsî mücerred",
+   "fa'ūl",
+   "semâî aday",
+   ""
+  ],
+  "15": [
+   "masdar · sülâsî mücerred",
+   "fa'alān",
+   "semâî aday",
+   ""
+  ],
+  "16": [
+   "masdar · sülâsî mücerred",
+   "fu'lān",
+   "semâî aday",
+   ""
+  ],
+  "17": [
+   "masdar · sülâsî mücerred",
+   "fi'lān",
+   "semâî aday",
+   ""
+  ],
+  "18": [
+   "masdar · sülâsî mücerred",
+   "fa'lā",
+   "semâî aday",
+   ""
+  ],
+  "19": [
+   "masdar · sülâsî mücerred",
+   "fu'lā",
+   "semâî aday",
+   ""
+  ],
+  "20": [
+   "masdar · sülâsî mücerred",
+   "fi'lā",
+   "semâî aday",
+   ""
+  ],
+  "21": [
+   "masdar · sülâsî mücerred",
+   "fa'ale",
+   "semâî aday",
+   ""
+  ],
+  "22": [
+   "masdar · sülâsî mücerred",
+   "fi'ale",
+   "semâî aday",
+   ""
+  ],
+  "23": [
+   "masdar · sülâsî mücerred",
+   "fa'lūla",
+   "semâî aday",
+   ""
+  ],
+  "24": [
+   "masdar · sülâsî mücerred",
+   "tuf'ūl",
+   "semâî aday",
+   ""
+  ],
+  "25": [
+   "masdar · sülâsî mücerred",
+   "taf'ila",
+   "semâî aday",
+   ""
+  ],
+  "26": [
+   "masdar · sülâsî mücerred",
+   "taf'ala",
+   "semâî aday",
+   ""
+  ],
+  "27": [
+   "masdar · sülâsî mücerred",
+   "maf'ula",
+   "semâî aday",
+   ""
+  ],
+  "29": [
+   "masdar · bâb II",
+   "taf'īl",
+   "kıyâsî",
+   "II"
+  ],
+  "30": [
+   "masdar · bâb II",
+   "taf'ila",
+   "kıyâsî",
+   "II"
+  ],
+  "31": [
+   "masdar · bâb II",
+   "fi''āl",
+   "kıyâsî",
+   "II"
+  ],
+  "32": [
+   "ism-i merre · bâb II",
+   "taf'īl + tâ",
+   "aday",
+   "II"
+  ],
+  "33": [
+   "ism-i merre · bâb II",
+   "fi''āl + tâ",
+   "aday",
+   "II"
+  ],
+  "34": [
+   "ism-i fâil · bâb II",
+   "mufa''il",
+   "kıyâsî",
+   "II"
+  ],
+  "35": [
+   "ism-i fâil · bâb II",
+   "mufa''il + müennes",
+   "kıyâsî",
+   "II"
+  ],
+  "36": [
+   "ism-i fâil · bâb II",
+   "mufa''il + tesniye",
+   "kıyâsî",
+   "II"
+  ],
+  "37": [
+   "ism-i fâil · bâb II",
+   "mufa''il + müennes tesniye",
+   "kıyâsî",
+   "II"
+  ],
+  "38": [
+   "ism-i fâil · bâb II",
+   "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "II"
+  ],
+  "39": [
+   "ism-i fâil · bâb II",
+   "mufa''il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "II"
+  ],
+  "40": [
+   "ism-i fâil · bâb II",
+   "mufa''il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "II"
+  ],
+  "41": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al",
+   "kıyâsî",
+   "II"
+  ],
+  "42": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + müennes",
+   "kıyâsî",
+   "II"
+  ],
+  "43": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + tesniye",
+   "kıyâsî",
+   "II"
+  ],
+  "44": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + müennes tesniye",
+   "kıyâsî",
+   "II"
+  ],
+  "45": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "II"
+  ],
+  "46": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "II"
+  ],
+  "47": [
+   "ism-i mef‘ûl · bâb II",
+   "mufa''al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "II"
+  ],
+  "48": [
+   "mekân/zaman/masdar-ı mîmî · bâb II",
+   "mufa''al",
+   "kıyâsî",
+   "II"
+  ],
+  "49": [
+   "masdar · bâb III",
+   "mufā'ale",
+   "kıyâsî",
+   "III"
+  ],
+  "52": [
+   "ism-i fâil · bâb III",
+   "mufā'il",
+   "kıyâsî",
+   "III"
+  ],
+  "53": [
+   "ism-i fâil · bâb III",
+   "mufā'il + müennes",
+   "kıyâsî",
+   "III"
+  ],
+  "54": [
+   "ism-i fâil · bâb III",
+   "mufā'il + tesniye",
+   "kıyâsî",
+   "III"
+  ],
+  "55": [
+   "ism-i fâil · bâb III",
+   "mufā'il + müennes tesniye",
+   "kıyâsî",
+   "III"
+  ],
+  "56": [
+   "ism-i fâil · bâb III",
+   "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "III"
+  ],
+  "57": [
+   "ism-i fâil · bâb III",
+   "mufā'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "III"
+  ],
+  "58": [
+   "ism-i fâil · bâb III",
+   "mufā'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "III"
+  ],
+  "59": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al",
+   "kıyâsî",
+   "III"
+  ],
+  "60": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + müennes",
+   "kıyâsî",
+   "III"
+  ],
+  "61": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + tesniye",
+   "kıyâsî",
+   "III"
+  ],
+  "62": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + müennes tesniye",
+   "kıyâsî",
+   "III"
+  ],
+  "63": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "III"
+  ],
+  "64": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "III"
+  ],
+  "65": [
+   "ism-i mef‘ûl · bâb III",
+   "mufā'al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "III"
+  ],
+  "66": [
+   "mekân/zaman/masdar-ı mîmî · bâb III",
+   "mufā'al",
+   "kıyâsî",
+   "III"
+  ],
+  "84": [
+   "masdar · bâb V",
+   "tafa''ul",
+   "kıyâsî",
+   "V"
+  ],
+  "85": [
+   "ism-i merre · bâb V",
+   "tafa''ul + tâ",
+   "aday",
+   "V"
+  ],
+  "86": [
+   "ism-i fâil · bâb V",
+   "mutafa''il",
+   "kıyâsî",
+   "V"
+  ],
+  "87": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + müennes",
+   "kıyâsî",
+   "V"
+  ],
+  "88": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + tesniye",
+   "kıyâsî",
+   "V"
+  ],
+  "89": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + müennes tesniye",
+   "kıyâsî",
+   "V"
+  ],
+  "90": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "V"
+  ],
+  "91": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "V"
+  ],
+  "92": [
+   "ism-i fâil · bâb V",
+   "mutafa''il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "V"
+  ],
+  "93": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al",
+   "kıyâsî",
+   "V"
+  ],
+  "94": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + müennes",
+   "kıyâsî",
+   "V"
+  ],
+  "95": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + tesniye",
+   "kıyâsî",
+   "V"
+  ],
+  "96": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + müennes tesniye",
+   "kıyâsî",
+   "V"
+  ],
+  "97": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "V"
+  ],
+  "98": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "V"
+  ],
+  "99": [
+   "ism-i mef‘ûl · bâb V",
+   "mutafa''al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "V"
+  ],
+  "100": [
+   "mekân/zaman/masdar-ı mîmî · bâb V",
+   "mutafa''al",
+   "kıyâsî",
+   "V"
+  ],
+  "101": [
+   "masdar · bâb VI",
+   "tafā'ul",
+   "kıyâsî",
+   "VI"
+  ],
+  "102": [
+   "ism-i merre · bâb VI",
+   "tafā'ul + tâ",
+   "aday",
+   "VI"
+  ],
+  "103": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il",
+   "kıyâsî",
+   "VI"
+  ],
+  "104": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + müennes",
+   "kıyâsî",
+   "VI"
+  ],
+  "105": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + tesniye",
+   "kıyâsî",
+   "VI"
+  ],
+  "106": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + müennes tesniye",
+   "kıyâsî",
+   "VI"
+  ],
+  "107": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "VI"
+  ],
+  "108": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "VI"
+  ],
+  "109": [
+   "ism-i fâil · bâb VI",
+   "mutafā'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "VI"
+  ],
+  "110": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al",
+   "kıyâsî",
+   "VI"
+  ],
+  "111": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + müennes",
+   "kıyâsî",
+   "VI"
+  ],
+  "112": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + tesniye",
+   "kıyâsî",
+   "VI"
+  ],
+  "113": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + müennes tesniye",
+   "kıyâsî",
+   "VI"
+  ],
+  "114": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "VI"
+  ],
+  "115": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "VI"
+  ],
+  "116": [
+   "ism-i mef‘ûl · bâb VI",
+   "mutafā'al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "VI"
+  ],
+  "117": [
+   "mekân/zaman/masdar-ı mîmî · bâb VI",
+   "mutafā'al",
+   "kıyâsî",
+   "VI"
+  ],
+  "168": [
+   "masdar · bâb IX (illet harfi izhar)",
+   "if'ilāl",
+   "semâî aday",
+   "IX"
+  ],
+  "169": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all",
+   "kıyâsî",
+   "IX"
+  ],
+  "170": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + müennes",
+   "kıyâsî",
+   "IX"
+  ],
+  "171": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + tesniye",
+   "kıyâsî",
+   "IX"
+  ],
+  "172": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + müennes tesniye",
+   "kıyâsî",
+   "IX"
+  ],
+  "173": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "IX"
+  ],
+  "174": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "IX"
+  ],
+  "175": [
+   "ism-i fâil · bâb IX (illet harfi izhar)",
+   "muf'all + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "IX"
+  ],
+  "193": [
+   "masdar · bâb XI (illet harfi izhar)",
+   "if'īlāl",
+   "semâî aday",
+   "XI"
+  ],
+  "194": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll",
+   "kıyâsî",
+   "XI"
+  ],
+  "195": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + müennes",
+   "kıyâsî",
+   "XI"
+  ],
+  "196": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + tesniye",
+   "kıyâsî",
+   "XI"
+  ],
+  "197": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + müennes tesniye",
+   "kıyâsî",
+   "XI"
+  ],
+  "198": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî",
+   "XI"
+  ],
+  "199": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî",
+   "XI"
+  ],
+  "200": [
+   "ism-i fâil · bâb XI (illet harfi izhar)",
+   "muf'āll + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî",
+   "XI"
+  ],
+  "201": [
+   "masdar · bâb XII (illet harfi izhar)",
+   "if'iv'āl",
+   "semâî aday",
+   "XII"
+  ],
+  "202": [
+   "masdar · bâb XIII (illet harfi izhar)",
+   "if'ivvāl",
+   "semâî aday",
+   "XIII"
+  ],
+  "235": [
+   "âlet · sülâsî",
+   "mif'al",
+   "kıyâsî",
+   ""
+  ],
+  "236": [
+   "âlet · sülâsî",
+   "mif'al + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "237": [
+   "âlet · sülâsî",
+   "mif'âl",
+   "kıyâsî",
+   ""
+  ],
+  "238": [
+   "âlet · sülâsî",
+   "mif'âl + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "239": [
+   "âlet · sülâsî",
+   "mif'ale",
+   "kıyâsî",
+   ""
+  ],
+  "240": [
+   "âlet · sülâsî",
+   "mif'ale + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "241": [
+   "tafdîl · sülâsî",
+   "af'al",
+   "kıyâsî",
+   ""
+  ],
+  "242": [
+   "tafdîl · sülâsî",
+   "af'al + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "243": [
+   "tafdîl (müennes) · sülâsî",
+   "fu'lâ",
+   "kıyâsî",
+   ""
+  ],
+  "244": [
+   "tafdîl (müennes) · sülâsî",
+   "fu'lâ + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "245": [
+   "tafdîl (müennes) · sülâsî",
+   "fa'lâ'",
+   "kıyâsî",
+   ""
+  ],
+  "246": [
+   "tafdîl (müennes) · sülâsî",
+   "fa'lâ' + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "247": [
+   "mekân/zaman · sülâsî",
+   "maf'ula",
+   "kıyâsî",
+   ""
+  ],
+  "248": [
+   "mekân/zaman · sülâsî",
+   "maf'ula + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "249": [
+   "tasğîr · sülâsî",
+   "fu'ayl",
+   "kıyâsî",
+   ""
+  ],
+  "250": [
+   "tasğîr · sülâsî",
+   "fu'ayl + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "251": [
+   "tasğîr · sülâsî",
+   "fu'ayle",
+   "kıyâsî",
+   ""
+  ],
+  "252": [
+   "tasğîr · sülâsî",
+   "fu'ayle + tesniye",
+   "kıyâsî",
+   ""
+  ],
+  "255": [
+   "ism-i merre · sülâsî",
+   "fa'le",
+   "aday",
+   ""
+  ],
+  "256": [
+   "ism-i merre · sülâsî",
+   "fa'le + tesniye",
+   "aday",
+   ""
+  ],
+  "259": [
+   "sıfat-ı müşebbehe",
+   "fa'īl",
+   "semâî aday",
+   ""
+  ],
+  "260": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "261": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "262": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "263": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "264": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "265": [
+   "sıfat-ı müşebbehe",
+   "fa'īl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "266": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl",
+   "semâî aday",
+   ""
+  ],
+  "267": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "268": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "269": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "270": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "271": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "272": [
+   "sıfat-ı müşebbehe",
+   "fa'ūl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "273": [
+   "sıfat-ı müşebbehe",
+   "fa'il",
+   "semâî aday",
+   ""
+  ],
+  "274": [
+   "sıfat-ı müşebbehe",
+   "fa'il + müennes",
+   "semâî aday",
+   ""
+  ],
+  "275": [
+   "sıfat-ı müşebbehe",
+   "fa'il + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "276": [
+   "sıfat-ı müşebbehe",
+   "fa'il + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "277": [
+   "sıfat-ı müşebbehe",
+   "fa'il + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "278": [
+   "sıfat-ı müşebbehe",
+   "fa'il + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "279": [
+   "sıfat-ı müşebbehe",
+   "fa'il + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "280": [
+   "sıfat-ı müşebbehe",
+   "fa'ul",
+   "semâî aday",
+   ""
+  ],
+  "281": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + müennes",
+   "semâî aday",
+   ""
+  ],
+  "282": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "283": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "284": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "285": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "286": [
+   "sıfat-ı müşebbehe",
+   "fa'ul + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "294": [
+   "sıfat-ı müşebbehe",
+   "fa'l",
+   "semâî aday",
+   ""
+  ],
+  "295": [
+   "sıfat-ı müşebbehe",
+   "fa'l + müennes",
+   "semâî aday",
+   ""
+  ],
+  "296": [
+   "sıfat-ı müşebbehe",
+   "fa'l + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "297": [
+   "sıfat-ı müşebbehe",
+   "fa'l + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "298": [
+   "sıfat-ı müşebbehe",
+   "fa'l + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "299": [
+   "sıfat-ı müşebbehe",
+   "fa'l + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "300": [
+   "sıfat-ı müşebbehe",
+   "fa'l + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "301": [
+   "sıfat-ı müşebbehe",
+   "fu'ul",
+   "semâî aday",
+   ""
+  ],
+  "302": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + müennes",
+   "semâî aday",
+   ""
+  ],
+  "303": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "304": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "305": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "306": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "307": [
+   "sıfat-ı müşebbehe",
+   "fu'ul + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "308": [
+   "sıfat-ı müşebbehe",
+   "fa'lān",
+   "semâî aday",
+   ""
+  ],
+  "309": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + müennes",
+   "semâî aday",
+   ""
+  ],
+  "310": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "311": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "312": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "313": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "314": [
+   "sıfat-ı müşebbehe",
+   "fa'lān + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "315": [
+   "sıfat-ı müşebbehe",
+   "fu'āl",
+   "semâî aday",
+   ""
+  ],
+  "316": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "317": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "318": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "319": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "320": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "321": [
+   "sıfat-ı müşebbehe",
+   "fu'āl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "322": [
+   "sıfat-ı müşebbehe",
+   "fa'āl",
+   "semâî aday",
+   ""
+  ],
+  "323": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "324": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "325": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "326": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "327": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "328": [
+   "sıfat-ı müşebbehe",
+   "fa'āl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "329": [
+   "mübalağa",
+   "fa''āl",
+   "semâî aday",
+   ""
+  ],
+  "330": [
+   "mübalağa",
+   "fa''āl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "331": [
+   "mübalağa",
+   "fa''āl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "332": [
+   "mübalağa",
+   "fa''āl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "333": [
+   "mübalağa",
+   "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "334": [
+   "mübalağa",
+   "fa''āl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "335": [
+   "mübalağa",
+   "fa''āl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "336": [
+   "mübalağa",
+   "fa''āle",
+   "semâî aday",
+   ""
+  ],
+  "337": [
+   "mübalağa",
+   "fa''āle + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "338": [
+   "mübalağa",
+   "fa''āle + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "339": [
+   "mübalağa",
+   "fa'ūl",
+   "semâî aday",
+   ""
+  ],
+  "340": [
+   "mübalağa",
+   "fa'ūl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "341": [
+   "mübalağa",
+   "fa'ūl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "342": [
+   "mübalağa",
+   "fa'ūl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "343": [
+   "mübalağa",
+   "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "344": [
+   "mübalağa",
+   "fa'ūl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "345": [
+   "mübalağa",
+   "fa'ūl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "346": [
+   "mübalağa",
+   "fa''ūl",
+   "semâî aday",
+   ""
+  ],
+  "347": [
+   "mübalağa",
+   "fa''ūl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "348": [
+   "mübalağa",
+   "fa''ūl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "349": [
+   "mübalağa",
+   "fa''ūl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "350": [
+   "mübalağa",
+   "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "351": [
+   "mübalağa",
+   "fa''ūl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "352": [
+   "mübalağa",
+   "fa''ūl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "353": [
+   "mübalağa",
+   "fi''īl",
+   "semâî aday",
+   ""
+  ],
+  "354": [
+   "mübalağa",
+   "fi''īl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "355": [
+   "mübalağa",
+   "fi''īl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "356": [
+   "mübalağa",
+   "fi''īl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "357": [
+   "mübalağa",
+   "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "358": [
+   "mübalağa",
+   "fi''īl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "359": [
+   "mübalağa",
+   "fi''īl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "360": [
+   "mübalağa",
+   "fu''āl",
+   "semâî aday",
+   ""
+  ],
+  "361": [
+   "mübalağa",
+   "fu''āl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "362": [
+   "mübalağa",
+   "fu''āl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "363": [
+   "mübalağa",
+   "fu''āl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "364": [
+   "mübalağa",
+   "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "365": [
+   "mübalağa",
+   "fu''āl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "366": [
+   "mübalağa",
+   "fu''āl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "367": [
+   "mübalağa",
+   "mif'āl",
+   "semâî aday",
+   ""
+  ],
+  "368": [
+   "mübalağa",
+   "mif'āl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "369": [
+   "mübalağa",
+   "mif'āl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "370": [
+   "mübalağa",
+   "mif'āl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "371": [
+   "mübalağa",
+   "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "372": [
+   "mübalağa",
+   "mif'āl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "373": [
+   "mübalağa",
+   "mif'āl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "374": [
+   "mübalağa",
+   "mif'īl",
+   "semâî aday",
+   ""
+  ],
+  "375": [
+   "mübalağa",
+   "mif'īl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "376": [
+   "mübalağa",
+   "mif'īl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "377": [
+   "mübalağa",
+   "mif'īl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "378": [
+   "mübalağa",
+   "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "379": [
+   "mübalağa",
+   "mif'īl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "380": [
+   "mübalağa",
+   "mif'īl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "381": [
+   "mübalağa",
+   "fa'īl",
+   "semâî aday",
+   ""
+  ],
+  "382": [
+   "mübalağa",
+   "fa'īl + müennes",
+   "semâî aday",
+   ""
+  ],
+  "383": [
+   "mübalağa",
+   "fa'īl + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "384": [
+   "mübalağa",
+   "fa'īl + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "385": [
+   "mübalağa",
+   "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "386": [
+   "mübalağa",
+   "fa'īl + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "387": [
+   "mübalağa",
+   "fa'īl + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "388": [
+   "mübalağa",
+   "fa''al",
+   "semâî aday",
+   ""
+  ],
+  "389": [
+   "mübalağa",
+   "fa''al + müennes",
+   "semâî aday",
+   ""
+  ],
+  "390": [
+   "mübalağa",
+   "fa''al + tesniye",
+   "semâî aday",
+   ""
+  ],
+  "391": [
+   "mübalağa",
+   "fa''al + müennes tesniye",
+   "semâî aday",
+   ""
+  ],
+  "392": [
+   "mübalağa",
+   "fa''al + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday",
+   ""
+  ],
+  "393": [
+   "mübalağa",
+   "fa''al + cem‘-i sâlim müzekker (-în)",
+   "semâî aday",
+   ""
+  ],
+  "394": [
+   "mübalağa",
+   "fa''al + cem‘-i sâlim müennes (-ât)",
+   "semâî aday",
+   ""
+  ],
+  "395": [
+   "mensûb",
+   "fa'l + iyy",
+   "kıyâsî",
+   ""
+  ],
+  "396": [
+   "masdar-ı sınâî",
+   "fa'l + iyye",
+   "kıyâsî",
+   ""
+  ],
+  "409": [
+   "mensûb",
+   "fa'īl + iyy",
+   "kıyâsî",
+   ""
+  ],
+  "410": [
+   "masdar-ı sınâî",
+   "fa'īl + iyye",
+   "kıyâsî",
+   ""
+  ],
+  "413": [
+   "mensûb",
+   "taf'īl + iyy",
+   "kıyâsî",
+   ""
+  ],
+  "414": [
+   "masdar-ı sınâî",
+   "taf'īl + iyye",
+   "kıyâsî",
+   ""
+  ],
+  "415": [
+   "mensûb",
+   "tafā'ul + iyy",
+   "kıyâsî",
+   ""
+  ],
+  "416": [
+   "masdar-ı sınâî",
+   "tafā'ul + iyye",
+   "kıyâsî",
+   ""
+  ],
+  "421": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fa'âl (kelâm, selâm)",
+   "semâî aday",
+   ""
+  ],
+  "422": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fu'ûl (vudû')",
+   "semâî aday",
+   ""
+  ],
+  "425": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fa'âle (belâğa)",
+   "semâî aday",
+   ""
+  ],
+  "427": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fu'ûle",
+   "semâî aday",
+   ""
+  ],
+  "428": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fa'l",
+   "semâî aday",
+   ""
+  ],
+  "430": [
+   "ism-i cins · ifrâdî (aday)",
+   "fâ'ûl",
+   "semâî aday",
+   ""
+  ],
+  "431": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fâ'ûl + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "432": [
+   "ism-i cins · ifrâdî (aday)",
+   "fa'ala",
+   "semâî aday",
+   ""
+  ],
+  "433": [
+   "ism-i cins · ifrâdî (aday)",
+   "fu'ala",
+   "semâî aday",
+   ""
+  ],
+  "434": [
+   "ism-i cins · ifrâdî (aday)",
+   "uf'ûla",
+   "semâî aday",
+   ""
+  ],
+  "435": [
+   "ism-i cins · ifrâdî (aday)",
+   "faw'al",
+   "semâî aday",
+   ""
+  ],
+  "436": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "faw'al + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "437": [
+   "ism-i cins · ifrâdî (aday)",
+   "fay'al",
+   "semâî aday",
+   ""
+  ],
+  "438": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fay'al + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "439": [
+   "ism-i cins · ifrâdî (aday)",
+   "fa'l",
+   "semâî aday",
+   ""
+  ],
+  "440": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fa'l + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "447": [
+   "ism-i cins · ifrâdî (aday)",
+   "fa'îl",
+   "semâî aday",
+   ""
+  ],
+  "448": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fa'îl + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "451": [
+   "ism-i cins · ifrâdî (aday)",
+   "fu'ul",
+   "semâî aday",
+   ""
+  ],
+  "452": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fu'ul + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "453": [
+   "ism-i cins · ifrâdî (aday)",
+   "fa'âl",
+   "semâî aday",
+   ""
+  ],
+  "454": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fa'âl + tâ (tekili)",
+   "semâî aday",
+   ""
+  ],
+  "455": [
+   "cem‘-i mükesser (aday)",
+   "ef'āl",
+   "semâî aday",
+   ""
+  ],
+  "456": [
+   "cem‘-i mükesser (aday)",
+   "ef'ile",
+   "semâî aday",
+   ""
+  ],
+  "457": [
+   "cem‘-i mükesser (aday)",
+   "efâ'il",
+   "semâî aday",
+   ""
+  ],
+  "458": [
+   "cem‘-i mükesser (aday)",
+   "efâ'îl",
+   "semâî aday",
+   ""
+  ],
+  "459": [
+   "cem‘-i mükesser (aday)",
+   "fu'ūl",
+   "semâî aday",
+   ""
+  ],
+  "460": [
+   "cem‘-i mükesser (aday)",
+   "fu'ul",
+   "semâî aday",
+   ""
+  ],
+  "463": [
+   "cem‘-i mükesser (aday)",
+   "fi'ale",
+   "semâî aday",
+   ""
+  ],
+  "464": [
+   "cem‘-i mükesser (aday)",
+   "fu'al",
+   "semâî aday",
+   ""
+  ],
+  "465": [
+   "cem‘-i mükesser (aday)",
+   "fu'alā'",
+   "semâî aday",
+   ""
+  ],
+  "466": [
+   "cem‘-i mükesser (aday)",
+   "fa'ale",
+   "semâî aday",
+   ""
+  ],
+  "467": [
+   "cem‘-i mükesser (aday)",
+   "fu''āl",
+   "semâî aday",
+   ""
+  ],
+  "468": [
+   "cem‘-i mükesser (aday)",
+   "fa'āl",
+   "semâî aday",
+   ""
+  ],
+  "470": [
+   "cem‘-i mükesser (aday)",
+   "mefâ'il",
+   "semâî aday",
+   ""
+  ],
+  "471": [
+   "cem‘-i mükesser (aday)",
+   "mefâ'îl",
+   "semâî aday",
+   ""
+  ],
+  "472": [
+   "cem‘-i mükesser (aday)",
+   "fevâ'il",
+   "semâî aday",
+   ""
+  ],
+  "473": [
+   "cem‘-i mükesser (aday)",
+   "af'ul",
+   "semâî aday",
+   ""
+  ],
+  "474": [
+   "cem‘-i mükesser (aday)",
+   "fu''al",
+   "semâî aday",
+   ""
+  ],
+  "475": [
+   "cem‘-i mükesser (aday)",
+   "fe'âil",
+   "semâî aday",
+   ""
+  ],
+  "476": [
+   "cem‘-i mükesser (aday)",
+   "fu'ayl(cem')",
+   "semâî aday",
+   ""
+  ],
+  "477": [
+   "cem‘u’l-cem‘ (aday)",
+   "ef'āl + ât",
+   "semâî aday",
+   ""
+  ],
+  "478": [
+   "cem‘u’l-cem‘ (aday)",
+   "ef'ile + ât",
+   "semâî aday",
+   ""
+  ],
+  "479": [
+   "cem‘u’l-cem‘ (aday)",
+   "efâ'il + ât",
+   "semâî aday",
+   ""
+  ],
+  "480": [
+   "cem‘u’l-cem‘ (aday)",
+   "efâ'îl + ât",
+   "semâî aday",
+   ""
+  ],
+  "481": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu'ūl + ât",
+   "semâî aday",
+   ""
+  ],
+  "482": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu'ul + ât",
+   "semâî aday",
+   ""
+  ],
+  "485": [
+   "cem‘u’l-cem‘ (aday)",
+   "fi'ale + ât",
+   "semâî aday",
+   ""
+  ],
+  "486": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu'al + ât",
+   "semâî aday",
+   ""
+  ],
+  "487": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu'alā' + ât",
+   "semâî aday",
+   ""
+  ],
+  "488": [
+   "cem‘u’l-cem‘ (aday)",
+   "fa'ale + ât",
+   "semâî aday",
+   ""
+  ],
+  "489": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu''āl + ât",
+   "semâî aday",
+   ""
+  ],
+  "490": [
+   "cem‘u’l-cem‘ (aday)",
+   "fa'āl + ât",
+   "semâî aday",
+   ""
+  ],
+  "492": [
+   "cem‘u’l-cem‘ (aday)",
+   "mefâ'il + ât",
+   "semâî aday",
+   ""
+  ],
+  "493": [
+   "cem‘u’l-cem‘ (aday)",
+   "mefâ'îl + ât",
+   "semâî aday",
+   ""
+  ],
+  "494": [
+   "cem‘u’l-cem‘ (aday)",
+   "fevâ'il + ât",
+   "semâî aday",
+   ""
+  ],
+  "495": [
+   "cem‘u’l-cem‘ (aday)",
+   "af'ul + ât",
+   "semâî aday",
+   ""
+  ],
+  "496": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu''al + ât",
+   "semâî aday",
+   ""
+  ],
+  "497": [
+   "cem‘u’l-cem‘ (aday)",
+   "fe'âil + ât",
+   "semâî aday",
+   ""
+  ],
+  "498": [
+   "cem‘u’l-cem‘ (aday)",
+   "fu'ayl(cem') + ât",
+   "semâî aday",
+   ""
+  ],
+  "517": [
+   "masdar · sülâsî mücerred",
+   "fa'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "518": [
+   "masdar · sülâsî mücerred",
+   "fi'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "521": [
+   "masdar · sülâsî mücerred",
+   "fi'āl",
+   "semâî aday · ilal",
+   ""
+  ],
+  "526": [
+   "masdar · sülâsî mücerred",
+   "fi'āle",
+   "semâî aday · ilal",
+   ""
+  ],
+  "533": [
+   "masdar · sülâsî mücerred",
+   "maf'ila",
+   "semâî aday · ilal",
+   ""
+  ],
+  "552": [
+   "masdar · bâb III",
+   "fi'āl",
+   "kıyâsî · ilal",
+   "III"
+  ],
+  "553": [
+   "ism-i merre · bâb III",
+   "fi'āl + tâ",
+   "aday · ilal",
+   "III"
+  ],
+  "567": [
+   "masdar · bâb IV",
+   "if'āl",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "569": [
+   "ism-i fâil · bâb IV",
+   "muf'il",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "570": [
+   "ism-i fâil · bâb IV",
+   "muf'il + müennes",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "571": [
+   "ism-i fâil · bâb IV",
+   "muf'il + tesniye",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "572": [
+   "ism-i fâil · bâb IV",
+   "muf'il + müennes tesniye",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "573": [
+   "ism-i fâil · bâb IV",
+   "muf'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "574": [
+   "ism-i fâil · bâb IV",
+   "muf'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "575": [
+   "ism-i fâil · bâb IV",
+   "muf'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "576": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "577": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + tesniye",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "578": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "579": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "580": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "581": [
+   "mekân/zaman/masdar-ı mîmî · bâb IV",
+   "muf'al",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "610": [
+   "masdar · bâb VII",
+   "infi'āl",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "611": [
+   "ism-i merre · bâb VII",
+   "infi'āl + tâ",
+   "aday · ilal",
+   "VII"
+  ],
+  "612": [
+   "ism-i fâil · bâb VII",
+   "munfa'il",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "613": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + müennes",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "614": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + tesniye",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "615": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + müennes tesniye",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "616": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "617": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "618": [
+   "ism-i fâil · bâb VII",
+   "munfa'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "VII"
+  ],
+  "619": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "620": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + tesniye",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "621": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "622": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + cem‘-i sâlim müzekker (-în)",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "623": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + cem‘-i sâlim müennes (-ât)",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "624": [
+   "mekân/zaman/masdar-ı mîmî · bâb VII",
+   "munfa'al",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "625": [
+   "masdar · bâb VIII",
+   "ifti'āl",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "627": [
+   "ism-i merre · bâb VIII",
+   "ifti'āl + tâ",
+   "aday · ilal",
+   "VIII"
+  ],
+  "628": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "629": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + müennes",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "630": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + tesniye",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "631": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + müennes tesniye",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "632": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "633": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "634": [
+   "ism-i fâil · bâb VIII",
+   "muftaʿil + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "635": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "636": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + tesniye",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "637": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "638": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "639": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "640": [
+   "mekân/zaman/masdar-ı mîmî · bâb VIII",
+   "muftaʿal",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "662": [
+   "masdar · bâb X",
+   "istif'āl",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "664": [
+   "ism-i fâil · bâb X",
+   "mustaf'il",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "665": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + müennes",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "666": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + tesniye",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "667": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + müennes tesniye",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "668": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "669": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "670": [
+   "ism-i fâil · bâb X",
+   "mustaf'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "671": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "672": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + tesniye",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "673": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "674": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "675": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "676": [
+   "mekân/zaman/masdar-ı mîmî · bâb X",
+   "mustaf'al",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "687": [
+   "ism-i fâil · sülâsî",
+   "fâ'il",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "688": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + müennes",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "689": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "690": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + müennes tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "691": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "692": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "693": [
+   "ism-i fâil · sülâsî",
+   "fâ'il + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "694": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "695": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + müennes",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "696": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "697": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + müennes tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "698": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "699": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + cem‘-i sâlim müzekker (-în)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "700": [
+   "ism-i mef‘ûl · sülâsî",
+   "maf'ûl + cem‘-i sâlim müennes (-ât)",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "701": [
+   "mekân/zaman · sülâsî",
+   "maf'al",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "702": [
+   "mekân/zaman · sülâsî",
+   "maf'al + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "703": [
+   "mekân/zaman · sülâsî",
+   "maf'il",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "704": [
+   "mekân/zaman · sülâsî",
+   "maf'il + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "705": [
+   "mekân/zaman · sülâsî",
+   "maf'ale",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "706": [
+   "mekân/zaman · sülâsî",
+   "maf'ale + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "707": [
+   "mekân/zaman · sülâsî",
+   "maf'ile",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "708": [
+   "mekân/zaman · sülâsî",
+   "maf'ile + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "723": [
+   "masdar-ı mîmî · sülâsî",
+   "maf'al",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "724": [
+   "masdar-ı mîmî · sülâsî",
+   "maf'al + tesniye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "753": [
+   "sıfat-ı müşebbehe",
+   "fa'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "754": [
+   "sıfat-ı müşebbehe",
+   "fa'al + tesniye",
+   "semâî aday · ilal",
+   ""
+  ],
+  "755": [
+   "sıfat-ı müşebbehe",
+   "fa'al + cem‘-i sâlim müennes (-ât)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "815": [
+   "mensûb",
+   "fi'āl + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "816": [
+   "masdar-ı sınâî",
+   "fi'āl + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "817": [
+   "mensûb",
+   "fâ'il + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "818": [
+   "masdar-ı sınâî",
+   "fâ'il + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "819": [
+   "mensûb",
+   "maf'ûl + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "820": [
+   "masdar-ı sınâî",
+   "maf'ûl + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "823": [
+   "mensûb",
+   "maf'al + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "824": [
+   "masdar-ı sınâî",
+   "maf'al + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "829": [
+   "mensûb",
+   "if'āl + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "830": [
+   "masdar-ı sınâî",
+   "if'āl + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "831": [
+   "mensûb",
+   "ifti'āl + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "832": [
+   "masdar-ı sınâî",
+   "ifti'āl + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "835": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fi'âl",
+   "semâî aday · ilal",
+   ""
+  ],
+  "837": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fi'âle",
+   "semâî aday · ilal",
+   ""
+  ],
+  "840": [
+   "ism-i cins · ifrâdî (aday)",
+   "fa'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "843": [
+   "ism-i cins · ifrâdî (aday)",
+   "fi'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "854": [
+   "cem‘-i mükesser (aday)",
+   "fi'āl",
+   "semâî aday · ilal",
+   ""
+  ],
+  "855": [
+   "cem‘-i mükesser (aday)",
+   "fi'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "861": [
+   "cem‘-i mükesser (aday)",
+   "fa'al",
+   "semâî aday · ilal",
+   ""
+  ],
+  "872": [
+   "cem‘u’l-cem‘ (aday)",
+   "fi'āl + ât",
+   "semâî aday · ilal",
+   ""
+  ],
+  "873": [
+   "cem‘u’l-cem‘ (aday)",
+   "fi'al + ât",
+   "semâî aday · ilal",
+   ""
+  ],
+  "879": [
+   "cem‘u’l-cem‘ (aday)",
+   "fa'al + ât",
+   "semâî aday · ilal",
+   ""
+  ],
+  "884": [
+   "sıfat-ı müşebbehe",
+   "fa'al + cem‘-i sâlim müzekker (-ûn)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "885": [
+   "sıfat-ı müşebbehe",
+   "fa'al + cem‘-i sâlim müzekker (-în)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "886": [
+   "mensûb",
+   "fa'al + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "887": [
+   "masdar-ı sınâî",
+   "fa'al + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "888": [
+   "masdar · sülâsî mücerred",
+   "fi'l",
+   "semâî aday · ilal",
+   ""
+  ],
+  "889": [
+   "masdar · sülâsî mücerred",
+   "fu'l",
+   "semâî aday · ilal",
+   ""
+  ],
+  "890": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + müennes",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "891": [
+   "ism-i mef‘ûl · bâb IV",
+   "muf'al + müennes tesniye",
+   "kıyâsî · ilal",
+   "IV"
+  ],
+  "892": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + müennes",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "893": [
+   "ism-i mef‘ûl · bâb VII",
+   "munfa'al + müennes tesniye",
+   "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+   "VII"
+  ],
+  "894": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + müennes",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "895": [
+   "ism-i mef‘ûl · bâb VIII",
+   "muftaʿal + müennes tesniye",
+   "kıyâsî · ilal",
+   "VIII"
+  ],
+  "898": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + müennes",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "899": [
+   "ism-i mef‘ûl · bâb X",
+   "mustaf'al + müennes tesniye",
+   "kıyâsî · ilal",
+   "X"
+  ],
+  "900": [
+   "masdar · bâb X (vâvı muhafaza: semâî istisnâ)",
+   "istif'āl",
+   "semâî aday",
+   "X"
+  ],
+  "901": [
+   "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)",
+   "mustaf'il",
+   "semâî aday",
+   "X"
+  ],
+  "902": [
+   "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)",
+   "mustaf'al",
+   "semâî aday",
+   "X"
+  ],
+  "903": [
+   "ism-i hey'et · sülâsî",
+   "fi'le",
+   "aday · ilal",
+   ""
+  ],
+  "904": [
+   "ism-i hey'et · sülâsî",
+   "fi'le + tesniye",
+   "aday · ilal",
+   ""
+  ],
+  "905": [
+   "sıfat-ı müşebbehe",
+   "fa'al + müennes",
+   "semâî aday · ilal",
+   ""
+  ],
+  "906": [
+   "sıfat-ı müşebbehe",
+   "fa'al + müennes tesniye",
+   "semâî aday · ilal",
+   ""
+  ],
+  "907": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib)",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "908": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "909": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "910": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "911": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "912": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "913": [
+   "sıfat-ı müşebbehe",
+   "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
+   "ecvef kıyâsı",
+   ""
+  ],
+  "914": [
+   "mensûb",
+   "fi'l + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "915": [
+   "masdar-ı sınâî",
+   "fi'l + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "916": [
+   "mensûb",
+   "fu'l + iyy",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "917": [
+   "masdar-ı sınâî",
+   "fu'l + iyye",
+   "kıyâsî · ilal",
+   ""
+  ],
+  "918": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fu'l (şükr)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "919": [
+   "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
+   "fi'l",
+   "semâî aday · ilal",
+   ""
+  ],
+  "920": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fa'al + tâ (tekili)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "921": [
+   "ism-i cins · ifrâdî (aday)",
+   "fi'l",
+   "semâî aday · ilal",
+   ""
+  ],
+  "922": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fi'l + tâ (tekili)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "923": [
+   "ism-i cins · ifrâdî (aday)",
+   "fu'l",
+   "semâî aday · ilal",
+   ""
+  ],
+  "924": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fu'l + tâ (tekili)",
+   "semâî aday · ilal",
+   ""
+  ],
+  "925": [
+   "ism-i cins · cem‘î ve tekili (+tâ)",
+   "fi'al + tâ (tekili)",
+   "semâî aday · ilal",
+   ""
+  ]
+ },
+ "kelimeler": [
+  {
+   "kelime": "مُوسَىٰٓ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:51",
+   "adet": 25,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "مُوسَى",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:53",
+   "adet": 13,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "مُوسَىٰ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:54",
+   "adet": 57,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "يَٰمُوسَىٰ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:55",
+   "adet": 11,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "مُّوسَىٰ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:92",
+   "adet": 7,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "يَٰمُوسَىٰٓ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "5:22",
+   "adet": 11,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "وَمُوسَىٰ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "6:84",
+   "adet": 5,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "بِمُوسَىٰ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "7:131",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "يَٰمُوسَى",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "7:134",
+   "adet": 2,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "مُّوسَى",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "7:154",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "مُّوسَىٰٓ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "10:80",
+   "adet": 2,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  },
+  {
+   "kelime": "لِمُوسَىٰٓ",
+   "kok": "موس",
+   "lemma": "مُوسَى",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "10:83",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "Musa",
+    "lemma": "Musa",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": "Musa"
+   },
+   "kok_durumu": "kök (Vikisözlük kök kutusu veya menşe yazısı)",
+   "asil": "Borrowed from Classical Syriac ܡܘܼܫܹܐ (mūšē)."
+  }
+ ],
+ "osmanlica": {
+  "anlam": "",
+  "kelimeler": [
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ",
+   "Mûsâ"
+  ],
+  "yontem": "EVREN qwen3.8-flash-next ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı"
+ }
 }

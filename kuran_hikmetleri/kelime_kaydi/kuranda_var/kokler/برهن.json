@@ -1,831 +1,1257 @@
 {
-  "kok": "برهن",
-  "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "kanıtla",
-    "kaynak": "elle",
-    "guven": "orta"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "برهن", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "برهن",
-      "turkce": "Burhan: kanıt; bürhân: delil",
-      "fiil": "kanıtla"
-    },
-    "osmanlica_lugatler": {
-      "بُرْهان": {
-        "sorgular": ["burhan"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "Burhan",
-            "arapca": [],
-            "mana": "اَلْبُرْهَانُ [el-burhân] (bânın zammıyla) Delîl ve huccet manâsınadır; yukâlu: جَاءَ بِالْبُرْهَانِ أَيِ الْحُجَّةِ Şârih der ki بُرْهَانٌ [burhân] indel-baz zamân ve müddet manâsına olan بُرْهَةٌ [burhet]ten mehûzdur, sebât ve istimrârı mutazammın olmadığı için, pes nûnu zâidedir. Ve indel-baz “ب،ر،ه” mâddesindendir ki sıhhat badel-illet ve kat manâlarınadır. Ve indez-Zemahşerî بَرَهْرَهَةٌ [berehrehet] mâddesindendir ki mere-yi beyzâya denir, vuzûh ve inkişâfı mutazammın olduğu için, niteki سُلْطَانٌ [sultân] zînet manâsına olan سَلِيطٌ [selît] lafzından mehûzdur, inâre ve izâet münâsebetiyle. İntehâ. Ve بُرْهَانُ [Burhân] Esâmîdendir: Burhân b. Suleymân es-Semerkandî muhaddistir. Ve بُرْهَانُ [Burhân] Nühâttan Amr b. Mesûdun ceddi ismidir.",
-            "id": 63309,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "burhan",
-            "arapca": [],
-            "mana": "اَلْبُرْهَانُ [el-burhân] (bânın zammı ve rânın sükûnuyla) Huccet; yukâlu: بَرْهَنَ عَلَيْهِ إِذَا أَقَامَ الْحُجَّةَ",
-            "id": 413396,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus-u Türki",
-            "madde": "Burhan",
-            "arapca": [],
-            "mana": "برهان Kamus turkide برهان maddesi. Sayfa:290",
-            "id": 63305,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Lugat-ı Remzi",
-            "madde": "Burhân",
-            "arapca": [],
-            "mana": "برهان Lugat-i Remzi برهان maddesi. Sayfa:174",
-            "id": 63332,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kubbe Altı",
-            "madde": "BURHAN – BÜRHAN",
-            "arapca": ["برهان"],
-            "mana": "( ﺑﺮﻫﺎﻥ ) i. (Ar. burhān ) 1. Kanıt, delil, hüccet, beyyine: Şol câhil ü nâdânı gör örter Hakk’ı inkâr eder / Kâmil olan kâmillerin her bir sözün burhan görür (Niyâzî-i Mısrî). Pâdişah dâvetine icâbet etmemelerinin bir küfür olduğunu âyetlerden, hadislerden burhanlar getirerek tekrarladı (Ömer Seyfeddin). 2. mantık. Bir hükmün, bir önermenin delil olarak kendisine dayandırıldığı, önceden doğru diye kabul edilmiş olan hüküm. ѻ Burhan göstermek: Rifâî tarîkatında âyin esnâsında vücûduna kılıç, şiş saplamak, ateşe girmek gibi olağan üstü şeyler yapmak. Burhân-ı innî: İçerdiği bilgi akıl yürütmelerde kullanılan ve sonuca kendisine dayanılarak varılan önerme. Fr. Argumentation conditionelle : “Bu toktur, sonra yiyecektir cümlesinde bu toktur önermesi bir burhân-ı innîdir.” Eserin hâriçte varlığı onu var edenin varlığına delâlet eder. Buna burhân-ı innî derler (Ali N. Tarlan). Burhân-ı limmî: Akıl yürütmelerde sonucun kendisine bağlı bulunduğu, kendisiyle delillendirildiği önerme: Müessirden esere istidlâl edilirse buna da burhân-ı limmî derler (Ali N. Tarlan).",
-            "id": 56561,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          }
-        ]
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الباء والراء",
-      "baslik": "بره - برهن",
-      "mihveri": "هو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة. ومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \". أقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".",
-      "sesler": "",
-      "tam_metin": "{قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111]\n[ترجم في التهذيب للبرهان في بره. وكذلك فعل ل، ق ووضعوا برهن أيضًا في باب خاص].\n\"البَرَهْرَهَة: الجارية البيضاء. وبَرَهُها: تَرَارتها وبضاضتها، كأن الماء يجري\n(1/112)\nفيها من النَعْمة \" (وعبارة ق في البَرَهْرَهة: \"الشابّةُ الناعمة أو التي تُرْعَدُ رُطُوبَةً ونُعُومةً \").\n° المعنى المحوري\nهو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة.\nومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \".\nأقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".\n° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،\n(1/113)\nوالكشف والإزالة عمقًا - في (بأر)، ونعومة الوبر مع انبساطه على البدن - في (وبر)، وفي نصوع الظاهر لعدم تغطيه - في (برج)، وفي الزوال عن المكان - في (برح)، وفي التماسك كتلة عريضة مستوية - في (برد)، وفي بروز الشيء من بين ما يكتنفه - في (برز) (والاتصال في برزخ يمثل ذلك لكن عبرت الخاء عن كونه باطنيًّا)، وفي اللمعان المَرَضّي - في (برص)، وفي اللمعان الحادّ النافذ من العمق - في (برق)، وفي سعة صدر البعير والاستقرار - في (برك)، وفي امتداد الحبل مع شدة لأمه - في (برم)، وفي بضاضة البدن وبريقه - في (بره).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،"
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 8,
-      "ilk_yer": "2:111:15:1",
-      "tur": {
-        "N": 8
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "بُرْهَٰن": 8
-      },
-      "bicimler": {
-        "بُرْهَٰنَ": 6,
-        "بُرْهَٰنٌ": 1,
-        "بُرْهَٰنَانِ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "BRHN",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab BRHN برهن BP – • HDAL • © SG | 3Mar2023 √BRHN “root” ▪ BRHN_1 ‘evident proof’ ↗ burhān ▪ BRHN_2 ‘...’ ↗ ... ▪ BRHN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘(the quadruple structure of this root together with the limited derivatives it has in Arabic give support to its being a very early ing, possibly from Pers. Some philologists, however, consider it a derivation from root brh ‘to cut’ or ‘whiteness’)’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "برهان",
-        "u": "برهان",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "بُرْهَان • (burhān) m (plural بَرَاهِين (barāhīn))",
-        "t": "* From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".\n* From Ge'ez ብርሃን (bərhan, “light, brightness”), from በርሀ (bärhä, “to be bright, to be clear”).\n* From Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-root", "ب ر ه ن (b r h n)"],
-          ["ar-root", "ب ر ه (b r h)"],
-          ["ar-root", "ب ر ء (b r ʔ)"],
-          ["bor", "Ge'ez ብርሃን (bərhan, “light, brightness”)"],
-          ["bor", "Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”)"]
-        ],
-        "g": ["proof, evidence", "a demonstration"],
-        "r": ["burhān"],
-        "ipa": ["/bur.haːn/"],
-        "el": [
-          ["ب ر ه ن", "Appendix:Arabic roots/ب ر ه ن"],
-          ["ب ر ه", "Appendix:Arabic roots/ب ر ه"],
-          ["ب ر ء", "Appendix:Arabic roots/ب ر ء"],
-          ["ብርሃን", "ብርሃን#Ge'ez"],
-          ["በርሀ", "በርሀ#Ge'ez"],
-          ["𐩨𐩧𐩠𐩬", "𐩨𐩧𐩠𐩬#Old_South_Arabian"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهان",
-        "u": "برهان",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "بُرْهَان • (burhān) m",
-        "t": "* From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".\n* From Ge'ez ብርሃን (bərhan, “light, brightness”), from በርሀ (bärhä, “to be bright, to be clear”).\n* From Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-root", "ب ر ه ن (b r h n)"],
-          ["ar-root", "ب ر ه (b r h)"],
-          ["ar-root", "ب ر ء (b r ʔ)"],
-          ["bor", "Ge'ez ብርሃን (bərhan, “light, brightness”)"],
-          ["bor", "Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”)"]
-        ],
-        "g": ["a male given name, Burhan", "an epithet of the Islamic prophet Muhammad"],
-        "r": ["burhān"],
-        "ipa": ["/bur.haːn/"],
-        "rl": ["بَرْهَنَ", "بَرِئَ"],
-        "el": [
-          ["ب ر ه ن", "Appendix:Arabic roots/ب ر ه ن"],
-          ["ب ر ه", "Appendix:Arabic roots/ب ر ه"],
-          ["ب ر ء", "Appendix:Arabic roots/ب ر ء"],
-          ["ብርሃን", "ብርሃን#Ge'ez"],
-          ["በርሀ", "በርሀ#Ge'ez"],
-          ["𐩨𐩧𐩠𐩬", "𐩨𐩧𐩠𐩬#Old_South_Arabian"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "براهين",
-        "u": "براهين",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "بَرَاهِين • (barāhīn) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of بُرْهَان (burhān)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["بُرْهَان"],
-        "r": ["barāhīn"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "برهن",
-        "u": "برهن",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "بَرْهَنَ • (barhana) Iq (non-past يُبَرْهِنُ (yubarhinu), verbal noun بَرْهَنَة (barhana))",
-        "t": "From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-root", "ب ر ه ن (b r h n)"],
-          ["ar-root", "ب ر ه (b r h)"],
-          ["ar-root", "ب ر ء (b r ʔ)"]
-        ],
-        "g": ["to prove, to establish evidence, to substantiate", "to demonstrate, to show"],
-        "r": ["barhana"],
-        "rl": ["بُرْهَان"],
-        "el": [
-          ["ب ر ه ن", "Appendix:Arabic roots/ب ر ه ن"],
-          ["ب ر ه", "Appendix:Arabic roots/ب ر ه"],
-          ["ب ر ء", "Appendix:Arabic roots/ب ر ء"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "مبرهنة",
-        "u": "مبرهنة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "مُبَرْهَنَة • (mubarhana) f (plural مُبَرْهَنَات (mubarhanāt))",
-        "t": "From the root ب ر ه ن (b r h n)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-root", "ب ر ه ن (b r h n)"]
-        ],
-        "g": ["theorem"],
-        "r": ["mubarhana"],
-        "ipa": ["/mu.bar.ha.na/"],
-        "el": [
-          ["ب ر ه ن", "Appendix:Arabic roots/ب ر ه ن"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "مبرهنة",
-        "u": "مبرهنة",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "مُبَرْهَنَة • (mubarhana)",
-        "t": "From the root ب ر ه ن (b r h n)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-root", "ب ر ه ن (b r h n)"]
-        ],
-        "g": ["feminine singular of مُبَرْهَن (mubarhan)"],
-        "tag": ["feminine", "form-of", "singular"],
-        "fo": ["مُبَرْهَن"],
-        "r": ["mubarhana"],
-        "ipa": ["/mu.bar.ha.na/"],
-        "el": [
-          ["ب ر ه ن", "Appendix:Arabic roots/ب ر ه ن"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "مبرهنات",
-        "u": "مبرهنات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "مُبَرْهَنَات • (mubarhanāt) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of مُبَرْهَنَة (mubarhana, “theorem”)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["مُبَرْهَنَة"],
-        "r": ["mubarhanāt"],
-        "ipa": ["/mu.bar.ha.naːt/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "برهنة",
-        "u": "برهنة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "بَرْهَنَة • (barhana) f",
-        "t": "Verbal noun of بَرْهَنَ (barhana, “to prove, to demonstrate”)",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "g": ["proving, demonstration, attestation"],
-        "r": ["barhana"],
-        "ipa": ["/bar.ha.na/"],
-        "el": [
-          ["بَرْهَنَ", "برهن#Arabic"]
-        ],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "مبرهن",
-        "u": "مبرهن",
-        "p": "noun",
-        "n": "1.1",
-        "h": "ar-noun",
-        "e": "مُبَرْهِن • (mubarhin) m",
-        "g": ["active participle of بَرْهَنَ (barhana, “to prove, to demonstration, to establish evidence”)"],
-        "tag": ["active", "form-of", "participle"],
-        "fo": ["بَرْهَنَ"],
-        "r": ["mubarhin"],
-        "ipa": ["/mu.bar.hin/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "مبرهن",
-        "u": "مبرهن",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "مُبَرْهَن • (mubarhan) m",
-        "g": ["passive participle of بَرْهَنَ (barhana, “to prove, to demonstration, to establish evidence”)"],
-        "tag": ["form-of", "participle", "passive"],
-        "fo": ["بَرْهَنَ"],
-        "r": ["mubarhan"],
-        "ipa": ["/mu.bar.han/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "برهنت",
-        "u": "برهنت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنت (form Iq)\n# بَرْهَنْتُ (barhantu) /bar.han.tu/: first-person singular past active of بَرْهَنَ (barhana)\n# بَرْهَنْتَ (barhanta) /bar.han.ta/: second-person masculine singular past active of بَرْهَنَ (barhana)\n# بَرْهَنْتِ (barhanti) /bar.han.ti/: second-person feminine singular past active of بَرْهَنَ (barhana)\n# بَرْهَنَتْ (barhanat) /bar.ha.nat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhantu", "barhana", "barhanta"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنتم",
-        "u": "برهنتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنتم (form Iq)\n# بَرْهَنْتُمْ (barhantum) /bar.han.tum/: second-person masculine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُمْ (burhintum) /bur.hin.tum/: second-person masculine plural past passive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhantum", "barhana", "burhintum"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنتا",
-        "u": "برهنتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنتا (form Iq)\n# بَرْهَنَتَا (barhanatā) /bar.ha.na.taː/: third-person feminine dual past active of بَرْهَنَ (barhana)\n# بُرْهِنَتَا (burhinatā) /bur.hi.na.taː/: third-person feminine dual past passive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhanatā", "barhana", "burhinatā"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنتما",
-        "u": "برهنتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنتما (form Iq)\n# بَرْهَنْتُمَا (barhantumā) /bar.han.tu.maː/: second-person dual past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُمَا (burhintumā) /bur.hin.tu.maː/: second-person dual past passive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhantumā", "barhana", "burhintumā"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "أبرهن",
-        "u": "أبرهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أبرهن (form Iq)\n# أُبَرْهِنُ (ʔubarhinu) /ʔu.bar.hi.nu/: first-person singular non-past active indicative of بَرْهَنَ (barhana)\n# أُبَرْهَنُ (ʔubarhanu) /ʔu.bar.ha.nu/: first-person singular non-past passive indicative of بَرْهَنَ (barhana)\n# أُبَرْهِنَ (ʔubarhina) /ʔu.bar.hi.na/: first-person singular non-past active subjunctive of بَرْهَنَ (barhana)\n# أُبَرْهَنَ (ʔubarhana) /ʔu.bar.ha.na/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔubarhinu", "barhana", "ʔubarhanu"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنتن",
-        "u": "برهنتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنتن (form Iq)\n# بَرْهَنْتُنَّ (barhantunna) /bar.han.tun.na/: second-person feminine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُنَّ (burhintunna) /bur.hin.tun.na/: second-person feminine plural past passive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhantunna", "barhana", "burhintunna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنا",
-        "u": "برهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنا (form Iq)\n# بَرْهَنَا (barhanā) /bar.ha.naː/: third-person masculine dual past active of بَرْهَنَ (barhana)\n# بَرْهَنَّا (barhannā) /bar.han.naː/: first-person plural past active of بَرْهَنَ (barhana)\n# بُرْهِنَا (burhinā) /bur.hi.naː/: third-person masculine dual past passive of بَرْهَنَ (barhana)\n# بُرْهِنَّا (burhinnā) /bur.hin.naː/: first-person plural past passive of بَرْهَنَ (barhana)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhanā", "barhana", "barhannā"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهنوا",
-        "u": "برهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "برهنوا (form Iq)\n# بَرْهَنُوا (barhanū) /bar.ha.nuː/: third-person masculine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنُوا (burhinū) /bur.hi.nuː/: third-person masculine plural past passive of بَرْهَنَ (barhana)\n# بَرْهِنُوا (barhinū) /bar.hi.nuː/: second-person masculine plural imperative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhanū", "barhana", "burhinū"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهن",
-        "u": "تبرهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهن (form Iq)\n# تُبَرْهِنُ (tubarhinu) /tu.bar.hi.nu/: inflection of بَرْهَنَ (barhana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَرْهِنَّ (tubarhinna) /tu.bar.hin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنُ (tubarhanu) /tu.bar.ha.nu/: i",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinu", "barhana", "tubarhinna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يبرهن",
-        "u": "يبرهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبرهن (form Iq)\n# يُبَرْهِنُ (yubarhinu) /ju.bar.hi.nu/: third-person masculine singular non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهِنَّ (yubarhinna) /ju.bar.hin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنُ (yubarhanu) /ju.bar.ha.nu/: third-person masculine singular non-past passive indicative of بَرْهَنَ (barhan",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarhinu", "barhana", "yubarhinna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهنين",
-        "u": "تبرهنين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهنين (form Iq)\n# تُبَرْهِنِينَ (tubarhinīna) /tu.bar.hi.niː.na/: second-person feminine singular non-past active indicative of بَرْهَنَ (barhana)\n# تُبَرْهَنِينَ (tubarhanīna) /tu.bar.ha.niː.na/: second-person feminine singular non-past passive indicative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinīna", "barhana", "tubarhanīna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهنان",
-        "u": "تبرهنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهنان (form Iq)\n# تُبَرْهِنَانِ (tubarhināni) /tu.bar.hi.naː.ni/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَرْهَنَانِ (tubarhanāni) /tu.bar.ha.naː.ni/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhināni", "barhana", "tubarhanāni"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "نبرهن",
-        "u": "نبرهن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نبرهن (form Iq)\n# نُبَرْهِنُ (nubarhinu) /nu.bar.hi.nu/: first-person plural non-past active indicative of بَرْهَنَ (barhana)\n# نُبَرْهَنُ (nubarhanu) /nu.bar.ha.nu/: first-person plural non-past passive indicative of بَرْهَنَ (barhana)\n# نُبَرْهِنَ (nubarhina) /nu.bar.hi.na/: first-person plural non-past active subjunctive of بَرْهَنَ (barhana)\n# نُبَرْهَنَ (nubarhana) /nu.bar.ha.na/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nubarhinu", "barhana", "nubarhanu"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهنون",
-        "u": "تبرهنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهنون (form Iq)\n# تُبَرْهِنُونَ (tubarhinūna) /tu.bar.hi.nuː.na/: second-person masculine plural non-past active indicative of بَرْهَنَ (barhana)\n# تُبَرْهَنُونَ (tubarhanūna) /tu.bar.ha.nuː.na/: second-person masculine plural non-past passive indicative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinūna", "barhana", "tubarhanūna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يبرهنان",
-        "u": "يبرهنان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبرهنان (form Iq)\n# يُبَرْهِنَانِ (yubarhināni) /ju.bar.hi.naː.ni/: third-person masculine dual non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهَنَانِ (yubarhanāni) /ju.bar.ha.naː.ni/: third-person masculine dual non-past passive indicative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarhināni", "barhana", "yubarhanāni"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يبرهنون",
-        "u": "يبرهنون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبرهنون (form Iq)\n# يُبَرْهِنُونَ (yubarhinūna) /ju.bar.hi.nuː.na/: third-person masculine plural non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهَنُونَ (yubarhanūna) /ju.bar.ha.nuː.na/: third-person masculine plural non-past passive indicative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarhinūna", "barhana", "yubarhanūna"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يبرهنا",
-        "u": "يبرهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبرهنا (form Iq)\n# يُبَرْهِنَا (yubarhinā) /ju.bar.hi.naː/: third-person masculine dual non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنَا (yubarhanā) /ju.bar.ha.naː/: third-person masculine dual non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarhinā", "barhana", "yubarhanā"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهني",
-        "u": "تبرهني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهني (form Iq)\n# تُبَرْهِنِي (tubarhinī) /tu.bar.hi.niː/: second-person feminine singular non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنِي (tubarhanī) /tu.bar.ha.niː/: second-person feminine singular non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinī", "barhana", "tubarhanī"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "يبرهنوا",
-        "u": "يبرهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يبرهنوا (form Iq)\n# يُبَرْهِنُوا (yubarhinū) /ju.bar.hi.nuː/: third-person masculine plural non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنُوا (yubarhanū) /ju.bar.ha.nuː/: third-person masculine plural non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yubarhinū", "barhana", "yubarhanū"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهنوا",
-        "u": "تبرهنوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهنوا (form Iq)\n# تُبَرْهِنُوا (tubarhinū) /tu.bar.hi.nuː/: second-person masculine plural non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنُوا (tubarhanū) /tu.bar.ha.nuː/: second-person masculine plural non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinū", "barhana", "tubarhanū"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "تبرهنا",
-        "u": "تبرهنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تبرهنا (form Iq)\n# تُبَرْهِنَا (tubarhinā) /tu.bar.hi.naː/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَرْهَنَا (tubarhanā) /tu.bar.ha.naː/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tubarhinā", "barhana", "tubarhanā"],
-        "k": "برهن",
-        "yol": "kök"
-      },
-      {
-        "w": "برهني",
-        "u": "برهني",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "بَرْهِنِي • (barhinī) (form Iq) /bar.hi.niː/\n# second-person feminine singular imperative of بَرْهَنَ (barhana)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["barhinī", "barhana"],
-        "k": "برهن",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "برهنكم": "delil, kanıt",
-      "برهن": "delil, kanıt",
-      "برهنان": "delil, kanıt"
-    },
-    "arabic_ontology": [
-      {
-        "id": "41269",
-        "arapca": ["بُرْهَانٌ"],
-        "ingilizce": [],
-        "tanim": "هو القياس المؤلّف من اليقينيّات سواء كانت ابتداء وهي الضروريّات أو بواسطة وهي النظريّات والحدّ الأوسط فيه لا بدّ أن يكون علّة لنسبة الأكبر الى الأصغر فإن كان مع ذلك علّة لوجود تلك النسبة في الخارج أيضاً فهو برهان لِمِيّ كقولنا هذا متعفّن الاخلاط وكلّ متعفّن محموم فهذا محموم فتعفّن الاخلاط كما أنّه علّة لثبوت الحمّى في الذهن كذلك علّة لثبوت الحمّى في الخارج وإن لم يكن كذلك بل لا يكون علّة للنسبة إلاّ في الذهن فهو برهان إنّي كقولنا هذا محموم وكل محموم متعفّن الاخلاط فهذا متعفّن الاخلاط فالحمّى وإن كانت علّة لثبوت تعفّن الاخلاط في الذهن إلاّ أنّها ليست علّة له في الخارج بل الأمر بالعكس",
-        "misal": "",
-        "veri_kaynagi": "38",
-        "ust": [
-          ["alt_tur_of", "293284", "proposition"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46129",
-        "arapca": [
-          "شَاهِدٌ2",
-          "بُرْهَانٌ",
-          "سَنَدٌ1",
-          "قَرِينَةٌ",
-          "آيَةٌ",
-          "حُجَّةٌ",
-          "دَلِيلٌ",
-          "دَلالَةٌ",
-          "إِثْبَاتٌ",
-          "بَيِّنَةٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "وصف لما يثبت صحة أمر ما ويؤكدّه ويبيِّن الدليل عليه",
-        "misal": "من يقدِّم شكوى عليه إحضار _ على صحّة ما يقول",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46220",
-        "arapca": [
-          "أَقَرَّ1",
-          "أَقَرَّ1 ب",
-          "أَقَرَّ1 ل",
-          "بَيَّنَ",
-          "عَرَضَ",
-          "عَرَضَ ل",
-          "ظَهَرَ1",
-          "ظَهَرَ1 على",
-          "ظَهَرَ1 عن",
-          "أَظْهَرَ",
-          "بَدَا1",
-          "بَدَا ل",
-          "قَدَّمَ",
-          "قَدَّمَ ل",
-          "أَبْدَى",
-          "أَبْدَى ب",
-          "بَرْهَنَ",
-          "بَرْهَنَ على"
-        ],
-        "ingilizce": [],
-        "tanim": "فعل توضيح شيء والإفصاح عنه",
-        "misal": "_ الوزير بسعادته عندما قام بوضع حجر الأساس لبناء مستشفى لعلاج سرطان الأطفال",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47599",
-        "arapca": ["بُرْهَانٌ", "مُسَوِّغٌ", "حُجَّةٌ", "مُبَرِّرٌ", "مَصْدَرٌ", "سَبَبٌ", "عِلَّةٌ", "بَيِّنَةٌ"],
-        "ingilizce": [],
-        "tanim": "وهو ما يترتب عليه مسبب عقلا أو واقعا،  وهو ما يكون مسوغاً لوقوع نتيجة ما",
-        "misal": "كانت إعاقته _اً كافياً لعدم قيامه بتلك المهمة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47774",
-        "arapca": ["أَكَّدَ", "أَكَّدَ على", "أَظْهَرَ", "حَقَّقَ", "حَقَّقَ في", "أثْبَتَ", "بَرْهَنَ", "بَرْهَنَ على"],
-        "ingilizce": [],
-        "tanim": "واقعة التأكيد على شيء وتأييده",
-        "misal": "_ المحامي براءة موكله بأقوال الشهود",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47903",
-        "arapca": ["شَاهِدٌ2", "بُرْهَانٌ", "قَرِينَةٌ", "آيَةٌ", "حُجَّةٌ", "دَلِيلٌ", "إِثْبَاتٌ", "شَهَادَةٌ", "بَيِّنَةٌ"],
-        "ingilizce": [],
-        "tanim": "الحُجَّة البيِّنة الفاصلة على صِدق ما يقول",
-        "misal": "قدَّم للقاضي _اً يثبتُ صحَّة ما قال",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "52611",
-        "arapca": ["بُرْهَانٌ"],
-        "ingilizce": [],
-        "tanim": "حجة قاطعة مدعمة بإثباتات ودلائل واضحة على صحة أو خطأ فرضية ما",
-        "misal": "تفتقر النّتيجة إلى _ واضح",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 8,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "بر",
-    "harf": "ب",
-    "mahrec": "şefeviyye",
-    "bolge": "dudak ve cevf"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
-    "ince": "indication.n.01",
-    "orta": "noun.communication",
-    "ust": "söz ve haber",
-    "dayanak_synset": "proof.n.02",
-    "dayanak_tanim": "a formal series of statements showing that if one thing is true something else necessarily follows from it",
-    "synset_sayisi": 18
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الباء والراء",
-    "mihveri": "هو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة. ومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \". أقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،",
-    "tam_metin": "{قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111]\n[ترجم في التهذيب للبرهان في بره. وكذلك فعل ل، ق ووضعوا برهن أيضًا في باب خاص].\n\"البَرَهْرَهَة: الجارية البيضاء. وبَرَهُها: تَرَارتها وبضاضتها، كأن الماء يجري\n(1/112)\nفيها من النَعْمة \" (وعبارة ق في البَرَهْرَهة: \"الشابّةُ الناعمة أو التي تُرْعَدُ رُطُوبَةً ونُعُومةً \").\n° المعنى المحوري\nهو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة.\nومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \".\nأقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".\n° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،\n(1/113)\nوالكشف والإزالة عمقًا - في (بأر)، ونعومة الوبر مع انبساطه على البدن - في (وبر)، وفي نصوع الظاهر لعدم تغطيه - في (برج)، وفي الزوال عن المكان - في (برح)، وفي التماسك كتلة عريضة مستوية - في (برد)، وفي بروز الشيء من بين ما يكتنفه - في (برز) (والاتصال في برزخ يمثل ذلك لكن عبرت الخاء عن كونه باطنيًّا)، وفي اللمعان المَرَضّي - في (برص)، وفي اللمعان الحادّ النافذ من العمق - في (برق)، وفي سعة صدر البعير والاستقرار - في (برك)، وفي امتداد الحبل مع شدة لأمه - في (برم)، وفي بضاضة البدن وبريقه - في (بره)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [
-    "establish.v.02",
-    "evidence.n.02",
-    "information.n.02",
-    "lay_down.v.01",
-    "proof.n.03",
-    "prove.v.01",
-    "prove.v.02",
-    "reason.v.01",
-    "reason.v.03",
-    "show.v.01",
-    "show.v.04",
-    "sleep_together.v.01",
-    "tell.v.02",
-    "testify.v.02",
-    "uncover.v.01"
-  ],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 4,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 914
-    },
-    "orta": {
-      "kume": 9,
-      "merkez_kok": "درك",
-      "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
-      "boy": 283
-    },
-    "ince": {
-      "kume": 51,
-      "merkez_kok": "بحث",
-      "merkez_mana": "Bahs: araştırmak, incelemek",
-      "boy": 20
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "بُرْهَٰنَكُمْ",
-      "kok": "برهن",
-      "lemma": "بُرْهان",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "2:111",
-      "adet": 4,
-      "turkce": {
-        "yuzey": "delil, kanıt",
-        "lemma": "delil, kanıt",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      },
-      "jeffery": {
-        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
-        "translit": "Burhān",
-        "ayet_atiflari": "ii, 111; iv, 175; xii, 24; xxi, 24; xxiii, 116; xxvii, 64; xxviii, 32, 75",
-        "ilk_baslik_dilleri": [],
-        "metin": "ii, 111; iv, 175; xii, 24; xxi, 24; xxiii, 116; xxvii, 64; xxviii, 32, 75. An evident proof. In all the passages save xii, 24, and xxviii, 32, it is used in the sense of a proof or demonstration of the truth of one’s religious position. In these two cases, one from the story of Joseph and the other from that of Moses, the word refers to an evident miraculous sign from 1 2 Levy, Wörterbuch, iv, 125; Telegdi, in JA, ccxxvi (1935), p. 252. See Horn, Grundriss, 182; Nyberg, Glossar, 73. 78 foreign vocabulary of the qurn God for the demonstration of His presence and power to him who beheld it. It is thus clearly used in the Qurān as a technical religious term.1 It is generally taken as a form $: from I, Form IV of which is said to mean to prove, but the straits to which the philologers are put to explain the word (cf. Rāghib, Mufradāt, 44; LA, xvii, 369), show us that we are dealing with a foreign word. Sprenger, Leben, i, 108 had noted this,2 but he makes no attempt to discover its origin. Addai Sher, 21, suggested that it is from the Pers. <*@@ Ã meaning clearly manifest, or well known (cf. Vullers, Lex., i, 352), but this is somewhat remote. The origin clearly, is as Nöldeke has shown (Neue Beiträge, 58),3 in the Eth.  , a common Abyssinian word,4 being found also in Amharic, Tigré, and Tigriña, meaning light, illumination, from a root 6 cognate with Heb. ; Ar. a. It seems to have this original sense in iv, 175; xii, 24, and the sense of proof or demonstration is easily derived from this.",
-        "arapca": "برهان"
-      }
-    },
-    {
-      "kelime": "بُرْهَٰنٌ",
-      "kok": "برهن",
-      "lemma": "بُرْهان",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "4:174",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "delil, kanıt",
-        "lemma": "delil, kanıt",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "بُرْهَٰنَ",
-      "kok": "برهن",
-      "lemma": "بُرْهان",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "12:24",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "delil, kanıt",
-        "lemma": "delil, kanıt",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "بُرْهَٰنَانِ",
-      "kok": "برهن",
-      "lemma": "بُرْهان",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "28:32",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "delil, kanıt",
-        "lemma": "delil, kanıt",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
+ "kok": "برهن",
+ "sinif": "reddedildi",
+ "turkce_fiil": {
+  "sap": "kanıtla",
+  "kaynak": "elle",
+  "guven": "orta"
+ },
+ "mustaklar": {},
+ "reddedilen": [
+  [
+   "kök",
+   "برهن",
+   "üç harfli değil"
   ]
+ ],
+ "sozlukler": {
+  "kok_anlamlari": {
+   "kok": "برهن",
+   "turkce": "Burhan: kanıt; bürhân: delil",
+   "fiil": "kanıtla"
+  },
+  "osmanlica_lugatler": {
+   "بُرْهان": {
+    "sorgular": [
+     "burhan"
+    ],
+    "maddeler": [
+     {
+      "eser": "Kamus",
+      "madde": "Burhan",
+      "arapca": [],
+      "mana": "اَلْبُرْهَانُ [el-burhân] (bânın zammıyla) Delîl ve huccet manâsınadır; yukâlu: جَاءَ بِالْبُرْهَانِ أَيِ الْحُجَّةِ Şârih der ki بُرْهَانٌ [burhân] indel-baz zamân ve müddet manâsına olan بُرْهَةٌ [burhet]ten mehûzdur, sebât ve istimrârı mutazammın olmadığı için, pes nûnu zâidedir. Ve indel-baz “ب،ر،ه” mâddesindendir ki sıhhat badel-illet ve kat manâlarınadır. Ve indez-Zemahşerî بَرَهْرَهَةٌ [berehrehet] mâddesindendir ki mere-yi beyzâya denir, vuzûh ve inkişâfı mutazammın olduğu için, niteki سُلْطَانٌ [sultân] zînet manâsına olan سَلِيطٌ [selît] lafzından mehûzdur, inâre ve izâet münâsebetiyle. İntehâ. Ve بُرْهَانُ [Burhân] Esâmîdendir: Burhân b. Suleymân es-Semerkandî muhaddistir. Ve بُرْهَانُ [Burhân] Nühâttan Amr b. Mesûdun ceddi ismidir.",
+      "id": 63309,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Vankulu",
+      "madde": "burhan",
+      "arapca": [],
+      "mana": "اَلْبُرْهَانُ [el-burhân] (bânın zammı ve rânın sükûnuyla) Huccet; yukâlu: بَرْهَنَ عَلَيْهِ إِذَا أَقَامَ الْحُجَّةَ",
+      "id": 413396,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Kamus-u Türki",
+      "madde": "Burhan",
+      "arapca": [],
+      "mana": "برهان Kamus turkide برهان maddesi. Sayfa:290",
+      "id": 63305,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Lugat-ı Remzi",
+      "madde": "Burhân",
+      "arapca": [],
+      "mana": "برهان Lugat-i Remzi برهان maddesi. Sayfa:174",
+      "id": 63332,
+      "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
+     },
+     {
+      "eser": "Kubbe Altı",
+      "madde": "BURHAN – BÜRHAN",
+      "arapca": [
+       "برهان"
+      ],
+      "mana": "( ﺑﺮﻫﺎﻥ ) i. (Ar. burhān ) 1. Kanıt, delil, hüccet, beyyine: Şol câhil ü nâdânı gör örter Hakk’ı inkâr eder / Kâmil olan kâmillerin her bir sözün burhan görür (Niyâzî-i Mısrî). Pâdişah dâvetine icâbet etmemelerinin bir küfür olduğunu âyetlerden, hadislerden burhanlar getirerek tekrarladı (Ömer Seyfeddin). 2. mantık. Bir hükmün, bir önermenin delil olarak kendisine dayandırıldığı, önceden doğru diye kabul edilmiş olan hüküm. ѻ Burhan göstermek: Rifâî tarîkatında âyin esnâsında vücûduna kılıç, şiş saplamak, ateşe girmek gibi olağan üstü şeyler yapmak. Burhân-ı innî: İçerdiği bilgi akıl yürütmelerde kullanılan ve sonuca kendisine dayanılarak varılan önerme. Fr. Argumentation conditionelle : “Bu toktur, sonra yiyecektir cümlesinde bu toktur önermesi bir burhân-ı innîdir.” Eserin hâriçte varlığı onu var edenin varlığına delâlet eder. Buna burhân-ı innî derler (Ali N. Tarlan). Burhân-ı limmî: Akıl yürütmelerde sonucun kendisine bağlı bulunduğu, kendisiyle delillendirildiği önerme: Müessirden esere istidlâl edilirse buna da burhân-ı limmî derler (Ali N. Tarlan).",
+      "id": 56561,
+      "eslesme": "arapça yazılış kökle uyuştu"
+     }
+    ]
+   }
+  },
+  "cebel_mihveri": {
+   "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+   "fasil": "الباء والراء",
+   "baslik": "بره - برهن",
+   "mihveri": "هو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة. ومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \". أقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".",
+   "sesler": "",
+   "tam_metin": "{قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111]\n[ترجم في التهذيب للبرهان في بره. وكذلك فعل ل، ق ووضعوا برهن أيضًا في باب خاص].\n\"البَرَهْرَهَة: الجارية البيضاء. وبَرَهُها: تَرَارتها وبضاضتها، كأن الماء يجري\n(1/112)\nفيها من النَعْمة \" (وعبارة ق في البَرَهْرَهة: \"الشابّةُ الناعمة أو التي تُرْعَدُ رُطُوبَةً ونُعُومةً \").\n° المعنى المحوري\nهو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة.\nومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \".\nأقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".\n° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،\n(1/113)\nوالكشف والإزالة عمقًا - في (بأر)، ونعومة الوبر مع انبساطه على البدن - في (وبر)، وفي نصوع الظاهر لعدم تغطيه - في (برج)، وفي الزوال عن المكان - في (برح)، وفي التماسك كتلة عريضة مستوية - في (برد)، وفي بروز الشيء من بين ما يكتنفه - في (برز) (والاتصال في برزخ يمثل ذلك لكن عبرت الخاء عن كونه باطنيًّا)، وفي اللمعان المَرَضّي - في (برص)، وفي اللمعان الحادّ النافذ من العمق - في (برق)، وفي سعة صدر البعير والاستقرار - في (برك)، وفي امتداد الحبل مع شدة لأمه - في (برم)، وفي بضاضة البدن وبريقه - في (بره).",
+   "fasil_ozeti": "° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،"
+  },
+  "kuran_korpusu": {
+   "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
+   "gecis": 8,
+   "ilk_yer": "2:111:15:1",
+   "tur": {
+    "N": 8
+   },
+   "bab": {},
+   "zaman_kip": {},
+   "fiil_ismi_ozellikleri": {},
+   "lemmalar": {
+    "بُرْهَٰن": 8
+   },
+   "bicimler": {
+    "بُرْهَٰنَ": 6,
+    "بُرْهَٰنٌ": 1,
+    "بُرْهَٰنَانِ": 1
+   }
+  },
+  "etymarab": {
+   "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
+   "latin": "BRHN",
+   "dolu": true,
+   "kok_maddesi": "Back to library EtymArab BRHN برهن BP – • HDAL • © SG | 3Mar2023 √BRHN “root” ▪ BRHN_1 ‘evident proof’ ↗ burhān ▪ BRHN_2 ‘...’ ↗ ... ▪ BRHN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘(the quadruple structure of this root together with the limited derivatives it has in Arabic give support to its being a very early ing, possibly from Pers. Some philologists, however, consider it a derivation from root brh ‘to cut’ or ‘whiteness’)’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+   "kelime_maddeleri": []
+  },
+  "kaikki_vikisozluk": [
+   {
+    "w": "برهان",
+    "u": "برهان",
+    "p": "noun",
+    "h": "ar-noun",
+    "e": "بُرْهَان • (burhān) m (plural بَرَاهِين (barāhīn))",
+    "t": "* From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".\n* From Ge'ez ብርሃን (bərhan, “light, brightness”), from በርሀ (bärhä, “to be bright, to be clear”).\n* From Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”).",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-root",
+      "ب ر ه ن (b r h n)"
+     ],
+     [
+      "ar-root",
+      "ب ر ه (b r h)"
+     ],
+     [
+      "ar-root",
+      "ب ر ء (b r ʔ)"
+     ],
+     [
+      "bor",
+      "Ge'ez ብርሃን (bərhan, “light, brightness”)"
+     ],
+     [
+      "bor",
+      "Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”)"
+     ]
+    ],
+    "g": [
+     "proof, evidence",
+     "a demonstration"
+    ],
+    "r": [
+     "burhān"
+    ],
+    "ipa": [
+     "/bur.haːn/"
+    ],
+    "el": [
+     [
+      "ب ر ه ن",
+      "Appendix:Arabic roots/ب ر ه ن"
+     ],
+     [
+      "ب ر ه",
+      "Appendix:Arabic roots/ب ر ه"
+     ],
+     [
+      "ب ر ء",
+      "Appendix:Arabic roots/ب ر ء"
+     ],
+     [
+      "ብርሃን",
+      "ብርሃን#Ge'ez"
+     ],
+     [
+      "በርሀ",
+      "በርሀ#Ge'ez"
+     ],
+     [
+      "𐩨𐩧𐩠𐩬",
+      "𐩨𐩧𐩠𐩬#Old_South_Arabian"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهان",
+    "u": "برهان",
+    "p": "name",
+    "h": "ar-proper noun",
+    "e": "بُرْهَان • (burhān) m",
+    "t": "* From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".\n* From Ge'ez ብርሃን (bərhan, “light, brightness”), from በርሀ (bärhä, “to be bright, to be clear”).\n* From Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”).",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-root",
+      "ب ر ه ن (b r h n)"
+     ],
+     [
+      "ar-root",
+      "ب ر ه (b r h)"
+     ],
+     [
+      "ar-root",
+      "ب ر ء (b r ʔ)"
+     ],
+     [
+      "bor",
+      "Ge'ez ብርሃን (bərhan, “light, brightness”)"
+     ],
+     [
+      "bor",
+      "Old South Arabian 𐩨𐩧𐩠𐩬 (brhn, “testimony”)"
+     ]
+    ],
+    "g": [
+     "a male given name, Burhan",
+     "an epithet of the Islamic prophet Muhammad"
+    ],
+    "r": [
+     "burhān"
+    ],
+    "ipa": [
+     "/bur.haːn/"
+    ],
+    "rl": [
+     "بَرْهَنَ",
+     "بَرِئَ"
+    ],
+    "el": [
+     [
+      "ب ر ه ن",
+      "Appendix:Arabic roots/ب ر ه ن"
+     ],
+     [
+      "ب ر ه",
+      "Appendix:Arabic roots/ب ر ه"
+     ],
+     [
+      "ب ر ء",
+      "Appendix:Arabic roots/ب ر ء"
+     ],
+     [
+      "ብርሃን",
+      "ብርሃን#Ge'ez"
+     ],
+     [
+      "በርሀ",
+      "በርሀ#Ge'ez"
+     ],
+     [
+      "𐩨𐩧𐩠𐩬",
+      "𐩨𐩧𐩠𐩬#Old_South_Arabian"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "براهين",
+    "u": "براهين",
+    "p": "noun",
+    "h": "ar-head",
+    "e": "بَرَاهِين • (barāhīn) m pl",
+    "t": "See the etymology of the corresponding lemma form.",
+    "g": [
+     "plural of بُرْهَان (burhān)"
+    ],
+    "tag": [
+     "form-of",
+     "plural"
+    ],
+    "fo": [
+     "بُرْهَان"
+    ],
+    "r": [
+     "barāhīn"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "برهن",
+    "u": "برهن",
+    "p": "verb",
+    "h": "ar-verb",
+    "e": "بَرْهَنَ • (barhana) Iq (non-past يُبَرْهِنُ (yubarhinu), verbal noun بَرْهَنَة (barhana))",
+    "t": "From the root ب ر ه ن (b r h n), interrelated or derived from the roots ب ر ه (b r h) meaning \"to make white\", \"to clear up\", \"to restore to a state of youth or innocence\" and ب ر ء (b r ʔ) meaning \"to be free from wrong\", \"to be absolved from wrongdoing\", \"to be without blame\", \"to be innocent\".",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-root",
+      "ب ر ه ن (b r h n)"
+     ],
+     [
+      "ar-root",
+      "ب ر ه (b r h)"
+     ],
+     [
+      "ar-root",
+      "ب ر ء (b r ʔ)"
+     ]
+    ],
+    "g": [
+     "to prove, to establish evidence, to substantiate",
+     "to demonstrate, to show"
+    ],
+    "r": [
+     "barhana"
+    ],
+    "rl": [
+     "بُرْهَان"
+    ],
+    "el": [
+     [
+      "ب ر ه ن",
+      "Appendix:Arabic roots/ب ر ه ن"
+     ],
+     [
+      "ب ر ه",
+      "Appendix:Arabic roots/ب ر ه"
+     ],
+     [
+      "ب ر ء",
+      "Appendix:Arabic roots/ب ر ء"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "مبرهنة",
+    "u": "مبرهنة",
+    "p": "noun",
+    "h": "ar-noun",
+    "e": "مُبَرْهَنَة • (mubarhana) f (plural مُبَرْهَنَات (mubarhanāt))",
+    "t": "From the root ب ر ه ن (b r h n)",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-root",
+      "ب ر ه ن (b r h n)"
+     ]
+    ],
+    "g": [
+     "theorem"
+    ],
+    "r": [
+     "mubarhana"
+    ],
+    "ipa": [
+     "/mu.bar.ha.na/"
+    ],
+    "el": [
+     [
+      "ب ر ه ن",
+      "Appendix:Arabic roots/ب ر ه ن"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "مبرهنة",
+    "u": "مبرهنة",
+    "p": "adj",
+    "h": "ar-head",
+    "e": "مُبَرْهَنَة • (mubarhana)",
+    "t": "From the root ب ر ه ن (b r h n)",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-root",
+      "ب ر ه ن (b r h n)"
+     ]
+    ],
+    "g": [
+     "feminine singular of مُبَرْهَن (mubarhan)"
+    ],
+    "tag": [
+     "feminine",
+     "form-of",
+     "singular"
+    ],
+    "fo": [
+     "مُبَرْهَن"
+    ],
+    "r": [
+     "mubarhana"
+    ],
+    "ipa": [
+     "/mu.bar.ha.na/"
+    ],
+    "el": [
+     [
+      "ب ر ه ن",
+      "Appendix:Arabic roots/ب ر ه ن"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "مبرهنات",
+    "u": "مبرهنات",
+    "p": "noun",
+    "h": "ar-head",
+    "e": "مُبَرْهَنَات • (mubarhanāt) f pl",
+    "t": "See the etymology of the corresponding lemma form.",
+    "g": [
+     "plural of مُبَرْهَنَة (mubarhana, “theorem”)"
+    ],
+    "tag": [
+     "form-of",
+     "plural"
+    ],
+    "fo": [
+     "مُبَرْهَنَة"
+    ],
+    "r": [
+     "mubarhanāt"
+    ],
+    "ipa": [
+     "/mu.bar.ha.naːt/"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "برهنة",
+    "u": "برهنة",
+    "p": "noun",
+    "h": "ar-noun",
+    "e": "بَرْهَنَة • (barhana) f",
+    "t": "Verbal noun of بَرْهَنَ (barhana, “to prove, to demonstrate”)",
+    "s": [
+     [
+      "ar-rootbox",
+      ""
+     ],
+     [
+      "ar-verbal noun",
+      "Verbal noun"
+     ]
+    ],
+    "g": [
+     "proving, demonstration, attestation"
+    ],
+    "r": [
+     "barhana"
+    ],
+    "ipa": [
+     "/bar.ha.na/"
+    ],
+    "el": [
+     [
+      "بَرْهَنَ",
+      "برهن#Arabic"
+     ]
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "مبرهن",
+    "u": "مبرهن",
+    "p": "noun",
+    "n": "1.1",
+    "h": "ar-noun",
+    "e": "مُبَرْهِن • (mubarhin) m",
+    "g": [
+     "active participle of بَرْهَنَ (barhana, “to prove, to demonstration, to establish evidence”)"
+    ],
+    "tag": [
+     "active",
+     "form-of",
+     "participle"
+    ],
+    "fo": [
+     "بَرْهَنَ"
+    ],
+    "r": [
+     "mubarhin"
+    ],
+    "ipa": [
+     "/mu.bar.hin/"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "مبرهن",
+    "u": "مبرهن",
+    "p": "noun",
+    "n": "1.2",
+    "h": "ar-noun",
+    "e": "مُبَرْهَن • (mubarhan) m",
+    "g": [
+     "passive participle of بَرْهَنَ (barhana, “to prove, to demonstration, to establish evidence”)"
+    ],
+    "tag": [
+     "form-of",
+     "participle",
+     "passive"
+    ],
+    "fo": [
+     "بَرْهَنَ"
+    ],
+    "r": [
+     "mubarhan"
+    ],
+    "ipa": [
+     "/mu.bar.han/"
+    ],
+    "yol": "asıl madde"
+   },
+   {
+    "w": "برهنت",
+    "u": "برهنت",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنت (form Iq)\n# بَرْهَنْتُ (barhantu) /bar.han.tu/: first-person singular past active of بَرْهَنَ (barhana)\n# بَرْهَنْتَ (barhanta) /bar.han.ta/: second-person masculine singular past active of بَرْهَنَ (barhana)\n# بَرْهَنْتِ (barhanti) /bar.han.ti/: second-person feminine singular past active of بَرْهَنَ (barhana)\n# بَرْهَنَتْ (barhanat) /bar.ha.nat/: third-person feminine singular past active ",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhantu",
+     "barhana",
+     "barhanta"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنتم",
+    "u": "برهنتم",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنتم (form Iq)\n# بَرْهَنْتُمْ (barhantum) /bar.han.tum/: second-person masculine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُمْ (burhintum) /bur.hin.tum/: second-person masculine plural past passive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhantum",
+     "barhana",
+     "burhintum"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنتا",
+    "u": "برهنتا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنتا (form Iq)\n# بَرْهَنَتَا (barhanatā) /bar.ha.na.taː/: third-person feminine dual past active of بَرْهَنَ (barhana)\n# بُرْهِنَتَا (burhinatā) /bur.hi.na.taː/: third-person feminine dual past passive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhanatā",
+     "barhana",
+     "burhinatā"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنتما",
+    "u": "برهنتما",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنتما (form Iq)\n# بَرْهَنْتُمَا (barhantumā) /bar.han.tu.maː/: second-person dual past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُمَا (burhintumā) /bur.hin.tu.maː/: second-person dual past passive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhantumā",
+     "barhana",
+     "burhintumā"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "أبرهن",
+    "u": "أبرهن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "أبرهن (form Iq)\n# أُبَرْهِنُ (ʔubarhinu) /ʔu.bar.hi.nu/: first-person singular non-past active indicative of بَرْهَنَ (barhana)\n# أُبَرْهَنُ (ʔubarhanu) /ʔu.bar.ha.nu/: first-person singular non-past passive indicative of بَرْهَنَ (barhana)\n# أُبَرْهِنَ (ʔubarhina) /ʔu.bar.hi.na/: first-person singular non-past active subjunctive of بَرْهَنَ (barhana)\n# أُبَرْهَنَ (ʔubarhana) /ʔu.bar.ha.na/: first",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "ʔubarhinu",
+     "barhana",
+     "ʔubarhanu"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنتن",
+    "u": "برهنتن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنتن (form Iq)\n# بَرْهَنْتُنَّ (barhantunna) /bar.han.tun.na/: second-person feminine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنْتُنَّ (burhintunna) /bur.hin.tun.na/: second-person feminine plural past passive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhantunna",
+     "barhana",
+     "burhintunna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنا",
+    "u": "برهنا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنا (form Iq)\n# بَرْهَنَا (barhanā) /bar.ha.naː/: third-person masculine dual past active of بَرْهَنَ (barhana)\n# بَرْهَنَّا (barhannā) /bar.han.naː/: first-person plural past active of بَرْهَنَ (barhana)\n# بُرْهِنَا (burhinā) /bur.hi.naː/: third-person masculine dual past passive of بَرْهَنَ (barhana)\n# بُرْهِنَّا (burhinnā) /bur.hin.naː/: first-person plural past passive of بَرْهَنَ (barhana)\n",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhanā",
+     "barhana",
+     "barhannā"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهنوا",
+    "u": "برهنوا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "برهنوا (form Iq)\n# بَرْهَنُوا (barhanū) /bar.ha.nuː/: third-person masculine plural past active of بَرْهَنَ (barhana)\n# بُرْهِنُوا (burhinū) /bur.hi.nuː/: third-person masculine plural past passive of بَرْهَنَ (barhana)\n# بَرْهِنُوا (barhinū) /bar.hi.nuː/: second-person masculine plural imperative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhanū",
+     "barhana",
+     "burhinū"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهن",
+    "u": "تبرهن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهن (form Iq)\n# تُبَرْهِنُ (tubarhinu) /tu.bar.hi.nu/: inflection of بَرْهَنَ (barhana):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُبَرْهِنَّ (tubarhinna) /tu.bar.hin.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنُ (tubarhanu) /tu.bar.ha.nu/: i",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinu",
+     "barhana",
+     "tubarhinna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "يبرهن",
+    "u": "يبرهن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يبرهن (form Iq)\n# يُبَرْهِنُ (yubarhinu) /ju.bar.hi.nu/: third-person masculine singular non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهِنَّ (yubarhinna) /ju.bar.hin.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنُ (yubarhanu) /ju.bar.ha.nu/: third-person masculine singular non-past passive indicative of بَرْهَنَ (barhan",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yubarhinu",
+     "barhana",
+     "yubarhinna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهنين",
+    "u": "تبرهنين",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهنين (form Iq)\n# تُبَرْهِنِينَ (tubarhinīna) /tu.bar.hi.niː.na/: second-person feminine singular non-past active indicative of بَرْهَنَ (barhana)\n# تُبَرْهَنِينَ (tubarhanīna) /tu.bar.ha.niː.na/: second-person feminine singular non-past passive indicative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinīna",
+     "barhana",
+     "tubarhanīna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهنان",
+    "u": "تبرهنان",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهنان (form Iq)\n# تُبَرْهِنَانِ (tubarhināni) /tu.bar.hi.naː.ni/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُبَرْهَنَانِ (tubarhanāni) /tu.bar.ha.naː.ni/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhināni",
+     "barhana",
+     "tubarhanāni"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "نبرهن",
+    "u": "نبرهن",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "نبرهن (form Iq)\n# نُبَرْهِنُ (nubarhinu) /nu.bar.hi.nu/: first-person plural non-past active indicative of بَرْهَنَ (barhana)\n# نُبَرْهَنُ (nubarhanu) /nu.bar.ha.nu/: first-person plural non-past passive indicative of بَرْهَنَ (barhana)\n# نُبَرْهِنَ (nubarhina) /nu.bar.hi.na/: first-person plural non-past active subjunctive of بَرْهَنَ (barhana)\n# نُبَرْهَنَ (nubarhana) /nu.bar.ha.na/: first-perso",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "nubarhinu",
+     "barhana",
+     "nubarhanu"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهنون",
+    "u": "تبرهنون",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهنون (form Iq)\n# تُبَرْهِنُونَ (tubarhinūna) /tu.bar.hi.nuː.na/: second-person masculine plural non-past active indicative of بَرْهَنَ (barhana)\n# تُبَرْهَنُونَ (tubarhanūna) /tu.bar.ha.nuː.na/: second-person masculine plural non-past passive indicative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinūna",
+     "barhana",
+     "tubarhanūna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "يبرهنان",
+    "u": "يبرهنان",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يبرهنان (form Iq)\n# يُبَرْهِنَانِ (yubarhināni) /ju.bar.hi.naː.ni/: third-person masculine dual non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهَنَانِ (yubarhanāni) /ju.bar.ha.naː.ni/: third-person masculine dual non-past passive indicative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yubarhināni",
+     "barhana",
+     "yubarhanāni"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "يبرهنون",
+    "u": "يبرهنون",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يبرهنون (form Iq)\n# يُبَرْهِنُونَ (yubarhinūna) /ju.bar.hi.nuː.na/: third-person masculine plural non-past active indicative of بَرْهَنَ (barhana)\n# يُبَرْهَنُونَ (yubarhanūna) /ju.bar.ha.nuː.na/: third-person masculine plural non-past passive indicative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yubarhinūna",
+     "barhana",
+     "yubarhanūna"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "يبرهنا",
+    "u": "يبرهنا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يبرهنا (form Iq)\n# يُبَرْهِنَا (yubarhinā) /ju.bar.hi.naː/: third-person masculine dual non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنَا (yubarhanā) /ju.bar.ha.naː/: third-person masculine dual non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yubarhinā",
+     "barhana",
+     "yubarhanā"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهني",
+    "u": "تبرهني",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهني (form Iq)\n# تُبَرْهِنِي (tubarhinī) /tu.bar.hi.niː/: second-person feminine singular non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنِي (tubarhanī) /tu.bar.ha.niː/: second-person feminine singular non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinī",
+     "barhana",
+     "tubarhanī"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "يبرهنوا",
+    "u": "يبرهنوا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "يبرهنوا (form Iq)\n# يُبَرْهِنُوا (yubarhinū) /ju.bar.hi.nuː/: third-person masculine plural non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# يُبَرْهَنُوا (yubarhanū) /ju.bar.ha.nuː/: third-person masculine plural non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "yubarhinū",
+     "barhana",
+     "yubarhanū"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهنوا",
+    "u": "تبرهنوا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهنوا (form Iq)\n# تُبَرْهِنُوا (tubarhinū) /tu.bar.hi.nuː/: second-person masculine plural non-past active subjunctive/jussive of بَرْهَنَ (barhana)\n# تُبَرْهَنُوا (tubarhanū) /tu.bar.ha.nuː/: second-person masculine plural non-past passive subjunctive/jussive of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinū",
+     "barhana",
+     "tubarhanū"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "تبرهنا",
+    "u": "تبرهنا",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "تبرهنا (form Iq)\n# تُبَرْهِنَا (tubarhinā) /tu.bar.hi.naː/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُبَرْهَنَا (tubarhanā) /tu.bar.ha.naː/: inflection of بَرْهَنَ (barhana):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "tubarhinā",
+     "barhana",
+     "tubarhanā"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   },
+   {
+    "w": "برهني",
+    "u": "برهني",
+    "p": "verb",
+    "h": "ar-verb form",
+    "e": "بَرْهِنِي • (barhinī) (form Iq) /bar.hi.niː/\n# second-person feminine singular imperative of بَرْهَنَ (barhana)",
+    "t": "See the etymology of the corresponding lemma form.",
+    "tag": [
+     "form-iq",
+     "no-gloss"
+    ],
+    "r": [
+     "barhinī",
+     "barhana"
+    ],
+    "k": "برهن",
+    "yol": "kök"
+   }
+  ],
+  "renk_sozluk": {
+   "برهنكم": "delil, kanıt",
+   "برهن": "delil, kanıt",
+   "برهنان": "delil, kanıt"
+  },
+  "arabic_ontology": [
+   {
+    "id": "41269",
+    "arapca": [
+     "بُرْهَانٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "هو القياس المؤلّف من اليقينيّات سواء كانت ابتداء وهي الضروريّات أو بواسطة وهي النظريّات والحدّ الأوسط فيه لا بدّ أن يكون علّة لنسبة الأكبر الى الأصغر فإن كان مع ذلك علّة لوجود تلك النسبة في الخارج أيضاً فهو برهان لِمِيّ كقولنا هذا متعفّن الاخلاط وكلّ متعفّن محموم فهذا محموم فتعفّن الاخلاط كما أنّه علّة لثبوت الحمّى في الذهن كذلك علّة لثبوت الحمّى في الخارج وإن لم يكن كذلك بل لا يكون علّة للنسبة إلاّ في الذهن فهو برهان إنّي كقولنا هذا محموم وكل محموم متعفّن الاخلاط فهذا متعفّن الاخلاط فالحمّى وإن كانت علّة لثبوت تعفّن الاخلاط في الذهن إلاّ أنّها ليست علّة له في الخارج بل الأمر بالعكس",
+    "misal": "",
+    "veri_kaynagi": "38",
+    "ust": [
+     [
+      "alt_tur_of",
+      "293284",
+      "proposition"
+     ]
+    ],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "46129",
+    "arapca": [
+     "شَاهِدٌ2",
+     "بُرْهَانٌ",
+     "سَنَدٌ1",
+     "قَرِينَةٌ",
+     "آيَةٌ",
+     "حُجَّةٌ",
+     "دَلِيلٌ",
+     "دَلالَةٌ",
+     "إِثْبَاتٌ",
+     "بَيِّنَةٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "وصف لما يثبت صحة أمر ما ويؤكدّه ويبيِّن الدليل عليه",
+    "misal": "من يقدِّم شكوى عليه إحضار _ على صحّة ما يقول",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "46220",
+    "arapca": [
+     "أَقَرَّ1",
+     "أَقَرَّ1 ب",
+     "أَقَرَّ1 ل",
+     "بَيَّنَ",
+     "عَرَضَ",
+     "عَرَضَ ل",
+     "ظَهَرَ1",
+     "ظَهَرَ1 على",
+     "ظَهَرَ1 عن",
+     "أَظْهَرَ",
+     "بَدَا1",
+     "بَدَا ل",
+     "قَدَّمَ",
+     "قَدَّمَ ل",
+     "أَبْدَى",
+     "أَبْدَى ب",
+     "بَرْهَنَ",
+     "بَرْهَنَ على"
+    ],
+    "ingilizce": [],
+    "tanim": "فعل توضيح شيء والإفصاح عنه",
+    "misal": "_ الوزير بسعادته عندما قام بوضع حجر الأساس لبناء مستشفى لعلاج سرطان الأطفال",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "47599",
+    "arapca": [
+     "بُرْهَانٌ",
+     "مُسَوِّغٌ",
+     "حُجَّةٌ",
+     "مُبَرِّرٌ",
+     "مَصْدَرٌ",
+     "سَبَبٌ",
+     "عِلَّةٌ",
+     "بَيِّنَةٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "وهو ما يترتب عليه مسبب عقلا أو واقعا،  وهو ما يكون مسوغاً لوقوع نتيجة ما",
+    "misal": "كانت إعاقته _اً كافياً لعدم قيامه بتلك المهمة",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "47774",
+    "arapca": [
+     "أَكَّدَ",
+     "أَكَّدَ على",
+     "أَظْهَرَ",
+     "حَقَّقَ",
+     "حَقَّقَ في",
+     "أثْبَتَ",
+     "بَرْهَنَ",
+     "بَرْهَنَ على"
+    ],
+    "ingilizce": [],
+    "tanim": "واقعة التأكيد على شيء وتأييده",
+    "misal": "_ المحامي براءة موكله بأقوال الشهود",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "47903",
+    "arapca": [
+     "شَاهِدٌ2",
+     "بُرْهَانٌ",
+     "قَرِينَةٌ",
+     "آيَةٌ",
+     "حُجَّةٌ",
+     "دَلِيلٌ",
+     "إِثْبَاتٌ",
+     "شَهَادَةٌ",
+     "بَيِّنَةٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "الحُجَّة البيِّنة الفاصلة على صِدق ما يقول",
+    "misal": "قدَّم للقاضي _اً يثبتُ صحَّة ما قال",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   },
+   {
+    "id": "52611",
+    "arapca": [
+     "بُرْهَانٌ"
+    ],
+    "ingilizce": [],
+    "tanim": "حجة قاطعة مدعمة بإثباتات ودلائل واضحة على صحة أو خطأ فرضية ما",
+    "misal": "تفتقر النّتيجة إلى _ واضح",
+    "veri_kaynagi": "43",
+    "ust": [],
+    "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
+   }
+  ]
+ },
+ "kuran_gecisleri": 8,
+ "kuranda_var": true,
+ "sema": {
+  "sema": "graf-ic-graf",
+  "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+  "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+  "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+  "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+  "satir_alanlari": [
+   "kalip",
+   "arapca",
+   "latin",
+   "turkce",
+   "guven",
+   "tanik"
+  ]
+ },
+ "tasnif": {
+  "fasil": "بر",
+  "harf": "ب",
+  "mahrec": "şefeviyye",
+  "bolge": "dudak ve cevf"
+ },
+ "mana_tasnif": {
+  "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "ince": "indication.n.01",
+  "orta": "noun.communication",
+  "ust": "söz ve haber",
+  "dayanak_synset": "proof.n.02",
+  "dayanak_tanim": "a formal series of statements showing that if one thing is true something else necessarily follows from it",
+  "synset_sayisi": 18
+ },
+ "ses_mana_tasnif": {
+  "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "fasil": "الباء والراء",
+  "mihveri": "هو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة. ومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \". أقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".",
+  "sesler": "",
+  "fasil_ozeti": "° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،",
+  "tam_metin": "{قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111]\n[ترجم في التهذيب للبرهان في بره. وكذلك فعل ل، ق ووضعوا برهن أيضًا في باب خاص].\n\"البَرَهْرَهَة: الجارية البيضاء. وبَرَهُها: تَرَارتها وبضاضتها، كأن الماء يجري\n(1/112)\nفيها من النَعْمة \" (وعبارة ق في البَرَهْرَهة: \"الشابّةُ الناعمة أو التي تُرْعَدُ رُطُوبَةً ونُعُومةً \").\n° المعنى المحوري\nهو: امتلاء باطن البدن بلطيف يُصلحه ويُجمّل ظاهره: كما في امتلاء جسم الجارية بالنَعمة.\nومنه \"بَرِه الرجل (كفرح): ثاب جسمه (امتلأ) بعد تغيّر من عِلّة. وأبره الرجلُ: غلب الناسَ وأتى بالعجائب \".\nأقول ومن ذلك \"البرهان: الحجة \"؛ إذ به قِوام الدعوى وصُلوحها؛ لأنه يؤيدها فتقوى وتغلب، وبدونه تكون دعوى فارغة: {قُلْ هَاتُوا بُرْهَانَكُمْ} [البقرة: 111] البرهان: الدليل الذي يوقع اليقين [قر 2/ 75] {وَمَنْ يَدْعُ مَعَ اللَّهِ إِلَهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ} [المؤمنون: 117]. وتأمل قول الحق لموسى: {اسْلُكْ يَدَكَ فِي جَيْبِكَ تَخْرُجْ بَيْضَاءَ مِنْ غَيْرِ سُوءٍ وَاضْمُمْ إِلَيْكَ جَنَاحَكَ مِنَ الرَّهْبِ فَذَانِكَ بُرْهَانَانِ مِنْ رَبِّكَ إِلَى فِرْعَوْنَ وَمَلَئِهِ} [القصص: 32]، فواضح أن هاتين المعجزتين تؤيدان وتقويان بقوة نبوةَ موسى أمام فرعون. ولم يأت في القرآن من التركيب إلا (البرهان) بمعنى الحجة التي توقع اليقين. {لَوْلَا أَنْ رَأَى بُرْهَانَ رَبِّهِ} [يوسف: 24] أستريح إلى قول [قر 9/ 170] \"وبالجملة فذلك البرهان آية من آيات الله أراها الله يوسف حتى قوى إيمانه وامتنع عن المعصية \".\n° معنى الفصل المعجمي (بر): التجرد أو الانكشاف مع العِرَض أو الامتداد - كما يتمثل ذلك في انكشاف البَرّ منبسطًا - في (برر)، وقَشْر الطرَف ممتدًّا - في (برى)، وتسوية الظاهر وسلامته - في (برأ)، وبقاء الأرض البور بلا نبات - في (بور)،\n(1/113)\nوالكشف والإزالة عمقًا - في (بأر)، ونعومة الوبر مع انبساطه على البدن - في (وبر)، وفي نصوع الظاهر لعدم تغطيه - في (برج)، وفي الزوال عن المكان - في (برح)، وفي التماسك كتلة عريضة مستوية - في (برد)، وفي بروز الشيء من بين ما يكتنفه - في (برز) (والاتصال في برزخ يمثل ذلك لكن عبرت الخاء عن كونه باطنيًّا)، وفي اللمعان المَرَضّي - في (برص)، وفي اللمعان الحادّ النافذ من العمق - في (برق)، وفي سعة صدر البعير والاستقرار - في (برك)، وفي امتداد الحبل مع شدة لأمه - في (برم)، وفي بضاضة البدن وبريقه - في (بره)."
+ },
+ "hakikat_mecaz_tasnif": {
+  "durum": "Esâsü'l-Belâğa'da madde yok"
+ },
+ "prototip_yayilim_tasnif": {
+  "durum": "prototip veya mecaz kolu yok"
+ },
+ "kolekzifikasyon_kavramlari": [
+  "establish.v.02",
+  "evidence.n.02",
+  "information.n.02",
+  "lay_down.v.01",
+  "proof.n.03",
+  "prove.v.01",
+  "prove.v.02",
+  "reason.v.01",
+  "reason.v.03",
+  "show.v.01",
+  "show.v.04",
+  "sleep_together.v.01",
+  "tell.v.02",
+  "testify.v.02",
+  "uncover.v.01"
+ ],
+ "muhassas_tasnif": {
+  "durum": "el-Muhassas metninde yeterince geçmiyor"
+ },
+ "mana_tasnif_gomme": {
+  "ust": {
+   "kume": 4,
+   "merkez_kok": "درك",
+   "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+   "boy": 914
+  },
+  "orta": {
+   "kume": 9,
+   "merkez_kok": "درك",
+   "merkez_mana": "Dirak: yetişmek, anlamak; derk: idrak",
+   "boy": 283
+  },
+  "ince": {
+   "kume": 51,
+   "merkez_kok": "بحث",
+   "merkez_mana": "Bahs: araştırmak, incelemek",
+   "boy": 20
+  }
+ },
+ "kaliplar": {},
+ "kelimeler": [
+  {
+   "kelime": "بُرْهَٰنَكُمْ",
+   "kok": "برهن",
+   "lemma": "بُرْهان",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "2:111",
+   "adet": 4,
+   "turkce": {
+    "yuzey": "delil, kanıt",
+    "lemma": "delil, kanıt",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   },
+   "jeffery": {
+    "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+    "translit": "Burhān",
+    "ayet_atiflari": "ii, 111; iv, 175; xii, 24; xxi, 24; xxiii, 116; xxvii, 64; xxviii, 32, 75",
+    "ilk_baslik_dilleri": [],
+    "metin": "ii, 111; iv, 175; xii, 24; xxi, 24; xxiii, 116; xxvii, 64; xxviii, 32, 75. An evident proof. In all the passages save xii, 24, and xxviii, 32, it is used in the sense of a proof or demonstration of the truth of one’s religious position. In these two cases, one from the story of Joseph and the other from that of Moses, the word refers to an evident miraculous sign from 1 2 Levy, Wörterbuch, iv, 125; Telegdi, in JA, ccxxvi (1935), p. 252. See Horn, Grundriss, 182; Nyberg, Glossar, 73. 78 foreign vocabulary of the qurn God for the demonstration of His presence and power to him who beheld it. It is thus clearly used in the Qurān as a technical religious term.1 It is generally taken as a form $: from I, Form IV of which is said to mean to prove, but the straits to which the philologers are put to explain the word (cf. Rāghib, Mufradāt, 44; LA, xvii, 369), show us that we are dealing with a foreign word. Sprenger, Leben, i, 108 had noted this,2 but he makes no attempt to discover its origin. Addai Sher, 21, suggested that it is from the Pers. <*@@ Ã meaning clearly manifest, or well known (cf. Vullers, Lex., i, 352), but this is somewhat remote. The origin clearly, is as Nöldeke has shown (Neue Beiträge, 58),3 in the Eth.  , a common Abyssinian word,4 being found also in Amharic, Tigré, and Tigriña, meaning light, illumination, from a root 6 cognate with Heb. ; Ar. a. It seems to have this original sense in iv, 175; xii, 24, and the sense of proof or demonstration is easily derived from this.",
+    "arapca": "برهان"
+   }
+  },
+  {
+   "kelime": "بُرْهَٰنٌ",
+   "kok": "برهن",
+   "lemma": "بُرْهان",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "4:174",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "delil, kanıt",
+    "lemma": "delil, kanıt",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  },
+  {
+   "kelime": "بُرْهَٰنَ",
+   "kok": "برهن",
+   "lemma": "بُرْهان",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "12:24",
+   "adet": 2,
+   "turkce": {
+    "yuzey": "delil, kanıt",
+    "lemma": "delil, kanıt",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  },
+  {
+   "kelime": "بُرْهَٰنَانِ",
+   "kok": "برهن",
+   "lemma": "بُرْهان",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "28:32",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "delil, kanıt",
+    "lemma": "delil, kanıt",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   }
+  }
+ ],
+ "osmanlica": {
+  "anlam": "Burhan: bürhân; bürhân: delîl",
+  "kelimeler": [
+   "delîl, bürhân",
+   "delîl, bürhân",
+   "delîl, bürhân",
+   "delîl, bürhân"
+  ],
+  "yontem": "EVREN qwen3.8-flash-next ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı"
+ }
 }

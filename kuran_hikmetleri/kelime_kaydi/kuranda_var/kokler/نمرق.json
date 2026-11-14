@@ -1,121 +1,144 @@
 {
-  "kok": "نمرق",
-  "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "yastık ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "نمرق", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "نمرق",
-      "turkce": "Nemrukat: yastık, minder"
-    },
-    "osmanlica_lugatler": {
-      "نَمارِق": {
-        "sorgular": ["namarik"],
-        "maddeler": []
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "النون والميم",
-      "baslik": "نمرق",
-      "mihveri": "اضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
-      "sesler": "",
-      "tam_metin": "{وَنَمَارِقُ مَصْفُوفَةٌ (15)} [الغاشية: 15]\nليس في التركيب إلا النُمرُقة (بضم النون والراء وبكسرهما، وبغير هاء فيهما): الوسَادة \"فهذا هو معناه.\n° المعنى المحوري\nاضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (نم) : انتشار من باطن الشيء إلى ظاهره مع لطف ما كما ينشر رشح الماء من باطن القربة نافذًا إلى ظاهر جلدها، وشذا الطب من النبت النمام واللطف هنا هو عدم الحدّة - في (نمم)، وكما يسري خَدَر النوم في النائم ويظهر عليه سكونًا- في (نوم)، وكما ينتشر الإنس (الأنام) (وغيرهم من الحيوان) على ظهر الأرض ويتحركون، وتعد حركتهم امتدادًا - في (أنم)، وكما ينجع الماء (يسري في البدن ويظهر أثره رِيًّا) وتنفذ الألوان على جلد النمر- في (نمر)، وفي (نمرق) يحشى جوف النمرقة وبظهر أثر الحشو تجسمًا ولينا تُوَثَّر به الفُرُش، وكحركة النمل الدائبة مع دقته التي تجعله كأنه ناشئ من بطن الأرض إلى ظهرها- في (نمل)."
-    },
-    "renk_sozluk": {
-      "ونمارق": "yastıklar"
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نم",
-    "harf": "ن",
-    "mahrec": "zelakiyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "النون والميم",
-    "mihveri": "اضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (نم) : انتشار من باطن الشيء إلى ظاهره مع لطف ما كما ينشر رشح الماء من باطن القربة نافذًا إلى ظاهر جلدها، وشذا الطب من النبت النمام واللطف هنا هو عدم الحدّة - في (نمم)، وكما يسري خَدَر النوم في النائم ويظهر عليه سكونًا- في (نوم)، وكما ينتشر الإنس (الأنام) (وغيرهم من الحيوان) على ظهر الأرض ويتحركون، وتعد حركتهم امتدادًا - في (أنم)، وكما ينجع الماء (يسري في البدن ويظهر أثره رِيًّا) وتنفذ الألوان على جلد النمر- في (نمر)، وفي (نمرق) يحشى جوف النمرقة وبظهر أثر الحشو تجسمًا ولينا تُوَثَّر به الفُرُش، وكحركة النمل الدائبة مع دقته التي تجعله كأنه ناشئ من بطن الأرض إلى ظهرها- في (نمل).",
-    "tam_metin": "{وَنَمَارِقُ مَصْفُوفَةٌ (15)} [الغاشية: 15]\nليس في التركيب إلا النُمرُقة (بضم النون والراء وبكسرهما، وبغير هاء فيهما): الوسَادة \"فهذا هو معناه.\n° المعنى المحوري\nاضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 7,
-      "merkez_kok": "حدق",
-      "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
-      "boy": 986
-    },
-    "orta": {
-      "kume": 31,
-      "merkez_kok": "لفف",
-      "merkez_mana": "Lef: sarmak, dolamak",
-      "boy": 260
-    },
-    "ince": {
-      "kume": 191,
-      "merkez_kok": "هدك",
-      "merkez_mana": "",
-      "boy": 19
-    }
-  },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "وَنَمَارِقُ",
-      "kok": "نمرق",
-      "lemma": "نَمارِق",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "88:15",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "yastıklar",
-        "lemma": "yastıklar",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      },
-      "jeffery": {
-        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
-        "translit": "Namāriq",
-        "ayet_atiflari": "lxxxviii, 15",
-        "ilk_baslik_dilleri": ["Persian", "Middle Persian"],
-        "metin": "lxxxviii, 15. Cushions. Only in an early Sūra in a description of the delights of Paradise. al-Kindī, Risāla, 85, noted it as a loan-word from Persian,5 though it is not given as such by al-Jawālīqī or as-Suyūtī. It occurs not infrequently in the early poetry for the cushion on a camel’s back, and must have been an early borrowing. Lagarde, Symmicta, i, 60,6 pointed out that it is from the Iranian namr meaning soft. In the old Iranian we find namrā,7 which gives namra (Bartholomae, AIW, 1042, cf. Skt.  ), and Av. Phlv. narm (West, Glossary, 240; Salemann, Manichaeische Studien, i, 101), and from some Middle Persian form namr + the suffix ak, it passed both into Aram. plu. was then formed. |B؇ 1 and Ar. |؇, for which a Epiphanius, Panarion, xxix, and Jerome, Comment. on Matt. xii. Bell, Origin, 149; Margoliouth, ERE, x, 540, thinks it was Heb. 3 Horovitz, KU, 145, 146. See also Mingana, Syriac Influence, 96; Fischer, Glossar, 135. 4 Hübschmann, ZDMG, xlvi, 245; Arm. Gramm., i, 312. 5 See also Sprenger, Leben, ii, 504, n. 6 Followed by Fraenkel, Vocab, 8. 7 This form occurs in nemr in the Zaza dialect to-day (Horn, Grundriss, No. 1028). 2 282 foreign vocabulary of the qurn ¤®@1 (Nūh). Occurs some fifty-three times, e.g. iii, 33; iv, 163; xi, 32. Noah. Some of the Muslim authorities would derive the name from ®B<1 to wail, though as al-Jawālīqī, Muarrab, 144, shows, it was 1 commonly recognized as of non-Arabic origin.2 The story of Noah was well known in pre-Islamic days, and was often referred to by the poets, though as a personal name it apparently was not used among the Arabs before Islam.3 The form of the Ar. is in favour of its having come from ®1 the Syr. ` rather than directly from the Heb. 7 .4",
-        "arapca": "نمارق"
-      }
-    }
+ "kok": "نمرق",
+ "sinif": "reddedildi",
+ "turkce_fiil": {
+  "sap": "yastık ol",
+  "kaynak": "ad",
+  "guven": "kontrol"
+ },
+ "mustaklar": {},
+ "reddedilen": [
+  [
+   "kök",
+   "نمرق",
+   "üç harfli değil"
   ]
+ ],
+ "sozlukler": {
+  "kok_anlamlari": {
+   "kok": "نمرق",
+   "turkce": "Nemrukat: yastık, minder"
+  },
+  "osmanlica_lugatler": {
+   "نَمارِق": {
+    "sorgular": [
+     "namarik"
+    ],
+    "maddeler": []
+   }
+  },
+  "cebel_mihveri": {
+   "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
+   "fasil": "النون والميم",
+   "baslik": "نمرق",
+   "mihveri": "اضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
+   "sesler": "",
+   "tam_metin": "{وَنَمَارِقُ مَصْفُوفَةٌ (15)} [الغاشية: 15]\nليس في التركيب إلا النُمرُقة (بضم النون والراء وبكسرهما، وبغير هاء فيهما): الوسَادة \"فهذا هو معناه.\n° المعنى المحوري\nاضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
+   "fasil_ozeti": "° معنى الفصل المعجمي (نم) : انتشار من باطن الشيء إلى ظاهره مع لطف ما كما ينشر رشح الماء من باطن القربة نافذًا إلى ظاهر جلدها، وشذا الطب من النبت النمام واللطف هنا هو عدم الحدّة - في (نمم)، وكما يسري خَدَر النوم في النائم ويظهر عليه سكونًا- في (نوم)، وكما ينتشر الإنس (الأنام) (وغيرهم من الحيوان) على ظهر الأرض ويتحركون، وتعد حركتهم امتدادًا - في (أنم)، وكما ينجع الماء (يسري في البدن ويظهر أثره رِيًّا) وتنفذ الألوان على جلد النمر- في (نمر)، وفي (نمرق) يحشى جوف النمرقة وبظهر أثر الحشو تجسمًا ولينا تُوَثَّر به الفُرُش، وكحركة النمل الدائبة مع دقته التي تجعله كأنه ناشئ من بطن الأرض إلى ظهرها- في (نمل)."
+  },
+  "renk_sozluk": {
+   "ونمارق": "yastıklar"
+  }
+ },
+ "kuran_gecisleri": 1,
+ "kuranda_var": true,
+ "sema": {
+  "sema": "graf-ic-graf",
+  "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
+  "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
+  "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
+  "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
+  "satir_alanlari": [
+   "kalip",
+   "arapca",
+   "latin",
+   "turkce",
+   "guven",
+   "tanik"
+  ]
+ },
+ "tasnif": {
+  "fasil": "نم",
+  "harf": "ن",
+  "mahrec": "zelakiyye",
+  "bolge": "dil"
+ },
+ "mana_tasnif": {
+  "durum": "Arabic WordNet v2 kaydı yok"
+ },
+ "ses_mana_tasnif": {
+  "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "fasil": "النون والميم",
+  "mihveri": "اضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة.",
+  "sesler": "",
+  "fasil_ozeti": "° معنى الفصل المعجمي (نم) : انتشار من باطن الشيء إلى ظاهره مع لطف ما كما ينشر رشح الماء من باطن القربة نافذًا إلى ظاهر جلدها، وشذا الطب من النبت النمام واللطف هنا هو عدم الحدّة - في (نمم)، وكما يسري خَدَر النوم في النائم ويظهر عليه سكونًا- في (نوم)، وكما ينتشر الإنس (الأنام) (وغيرهم من الحيوان) على ظهر الأرض ويتحركون، وتعد حركتهم امتدادًا - في (أنم)، وكما ينجع الماء (يسري في البدن ويظهر أثره رِيًّا) وتنفذ الألوان على جلد النمر- في (نمر)، وفي (نمرق) يحشى جوف النمرقة وبظهر أثر الحشو تجسمًا ولينا تُوَثَّر به الفُرُش، وكحركة النمل الدائبة مع دقته التي تجعله كأنه ناشئ من بطن الأرض إلى ظهرها- في (نمل).",
+  "tam_metin": "{وَنَمَارِقُ مَصْفُوفَةٌ (15)} [الغاشية: 15]\nليس في التركيب إلا النُمرُقة (بضم النون والراء وبكسرهما، وبغير هاء فيهما): الوسَادة \"فهذا هو معناه.\n° المعنى المحوري\nاضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة. وإذا ذكرنا أن \"النامرة مِصْيَدة تُرْبَط بها شاة للذئب \"أي أن التركيب الثلاثي يعبر عن إمساك الشيء المتحرك وأخذه. ومنه \"الماء النَمِير والنَمِرُ- كفرح: الزاكي في الماشية النامي / الناجع (يحصل به الرِيّ والنَضرة)، إذا عرفنا ذلك وأضفنا أن القاف تعبر عن شيء قوي في الجوف تبين أنه لوحظت في تَسمية النُمْرقة أنها كيس يضم ويمسك في جوفه أشياء هي حَشو النمرقة."
+ },
+ "hakikat_mecaz_tasnif": {
+  "durum": "Esâsü'l-Belâğa'da madde yok"
+ },
+ "prototip_yayilim_tasnif": {
+  "durum": "prototip veya mecaz kolu yok"
+ },
+ "kolekzifikasyon_kavramlari": [],
+ "muhassas_tasnif": {
+  "durum": "el-Muhassas metninde yeterince geçmiyor"
+ },
+ "mana_tasnif_gomme": {
+  "ust": {
+   "kume": 7,
+   "merkez_kok": "حدق",
+   "merkez_mana": "Hadak: göz bebeği; hadaka: bakmak",
+   "boy": 986
+  },
+  "orta": {
+   "kume": 31,
+   "merkez_kok": "لفف",
+   "merkez_mana": "Lef: sarmak, dolamak",
+   "boy": 260
+  },
+  "ince": {
+   "kume": 191,
+   "merkez_kok": "هدك",
+   "merkez_mana": "",
+   "boy": 19
+  }
+ },
+ "kaliplar": {},
+ "kelimeler": [
+  {
+   "kelime": "وَنَمَارِقُ",
+   "kok": "نمرق",
+   "lemma": "نَمارِق",
+   "tur": "İsim",
+   "bab": "",
+   "zaman": "",
+   "ilk_gecis": "88:15",
+   "adet": 1,
+   "turkce": {
+    "yuzey": "yastıklar",
+    "lemma": "yastıklar",
+    "lemma_durum": "model-üretimi, doğrulanmadı",
+    "eyupipler": ""
+   },
+   "jeffery": {
+    "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+    "translit": "Namāriq",
+    "ayet_atiflari": "lxxxviii, 15",
+    "ilk_baslik_dilleri": [
+     "Persian",
+     "Middle Persian"
+    ],
+    "metin": "lxxxviii, 15. Cushions. Only in an early Sūra in a description of the delights of Paradise. al-Kindī, Risāla, 85, noted it as a loan-word from Persian,5 though it is not given as such by al-Jawālīqī or as-Suyūtī. It occurs not infrequently in the early poetry for the cushion on a camel’s back, and must have been an early borrowing. Lagarde, Symmicta, i, 60,6 pointed out that it is from the Iranian namr meaning soft. In the old Iranian we find namrā,7 which gives namra (Bartholomae, AIW, 1042, cf. Skt.  ), and Av. Phlv. narm (West, Glossary, 240; Salemann, Manichaeische Studien, i, 101), and from some Middle Persian form namr + the suffix ak, it passed both into Aram. plu. was then formed. |B؇ 1 and Ar. |؇, for which a Epiphanius, Panarion, xxix, and Jerome, Comment. on Matt. xii. Bell, Origin, 149; Margoliouth, ERE, x, 540, thinks it was Heb. 3 Horovitz, KU, 145, 146. See also Mingana, Syriac Influence, 96; Fischer, Glossar, 135. 4 Hübschmann, ZDMG, xlvi, 245; Arm. Gramm., i, 312. 5 See also Sprenger, Leben, ii, 504, n. 6 Followed by Fraenkel, Vocab, 8. 7 This form occurs in nemr in the Zaza dialect to-day (Horn, Grundriss, No. 1028). 2 282 foreign vocabulary of the qurn ¤®@1 (Nūh). Occurs some fifty-three times, e.g. iii, 33; iv, 163; xi, 32. Noah. Some of the Muslim authorities would derive the name from ®B<1 to wail, though as al-Jawālīqī, Muarrab, 144, shows, it was 1 commonly recognized as of non-Arabic origin.2 The story of Noah was well known in pre-Islamic days, and was often referred to by the poets, though as a personal name it apparently was not used among the Arabs before Islam.3 The form of the Ar. is in favour of its having come from ®1 the Syr. ` rather than directly from the Heb. 7 .4",
+    "arapca": "نمارق"
+   }
+  }
+ ],
+ "osmanlica": {
+  "anlam": "Nemrukat: yastık, minder",
+  "kelimeler": [
+   "yastıklar"
+  ],
+  "yontem": "EVREN qwen3.8-flash-next ile Osmanlıcaya çevrildi (Ömer Seyfettin ve Mehmed Âkif üslûbu istemi); doğrulanmadı"
+ }
 }
