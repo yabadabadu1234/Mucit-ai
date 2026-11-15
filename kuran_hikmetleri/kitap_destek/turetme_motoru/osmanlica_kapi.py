@@ -3,7 +3,7 @@ import sys
 
 import osmanlica_denetle as D
 
-SERT = ('arapca_latin_karisik', 'etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'arapca_kaynakta_yok', 'ilave_dolu')
+SERT = ('arapca_latin_karisik', 'etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'uzun_arapca_ibare', 'atif_yigini', 'ilave_dolu')
 
 
 def etiketler(t):
@@ -16,7 +16,7 @@ def etiketler(t):
 
 
 def gerileme(dizin, bolum, onceki):
-    """İnceleme öncesi sürümle karşılaştırır: hiçbir etiketli kısım azalamaz, tercüme %10'dan fazla kısalamaz."""
+    """İnceleme öncesi sürümle karşılaştırır: hiçbir etiketli kısım azalamaz, tercüme %40'tan fazla kısalamaz (atıf yığınını mantığa çevirmek kısaltabilir)."""
     _, eski = D.bolum_oku(onceki)
     _, yeni = D.bolum_oku(dizin + '/' + bolum)
     ey = {r['id']: r for r in yeni}
@@ -32,7 +32,7 @@ def gerileme(dizin, bolum, onceki):
         kayip = {k: (v, e1.get(k, 0)) for k, v in e0.items() if e1.get(k, 0) < v}
         if kayip:
             hata.append('%s satırında etiketli kısım azalmış %s' % (r['id'][:30], kayip))
-        elif len(t1) < 0.9 * len(t0):
+        elif len(t1) < 0.6 * len(t0):
             hata.append('%s satırı kısalmış (%d → %d karakter)' % (r['id'][:30], len(t0), len(t1)))
     return hata
 

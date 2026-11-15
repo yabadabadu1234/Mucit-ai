@@ -71,6 +71,8 @@ def denetle(yol, dizin, kay):
             sorunlar['etiket_kapanis_hatali'].append(r['id'])
         for e in ETIKET.findall(t):
             etk[re.sub(r'\s*\d+$', '', e.strip())] += 1
+        if len(re.findall(r'\b(?:Cebel|Mekâyîs|Zemahşerî|Vikisözlük|EtymArab|Kamus|Vankulu|Kubbe\s*Altı|Kubbealtı|Arabic\s+Ontology|Lugat-ı\s+Remzi|Sıhâh|Lisân)\b', t)) > 2:
+            sorunlar['atif_yigini'].append(r['id'])
         for ad in KAYNAK_ANISI.findall(t):
             if ad not in KAYNAK_ADLARI and not ad.startswith(('Ne', 'Nasıl', 'Neden', 'Esas', 'Niçin')):
                 sorunlar['kaynak_adi_bilinmeyen'].append((r['id'], ad))
@@ -89,6 +91,8 @@ def denetle(yol, dizin, kay):
         # Arapça alıntı doğrulama
         for a in ARAPCA.findall(t.replace('\uFD3E', ' ').replace('\uFD3F', ' ')):
             an = iskelet(a).strip()
+            if len(an.split()) >= 4:
+                sorunlar['uzun_arapca_ibare'].append((r['id'], an[:40]))
             if len(an.split()) >= 3 and an not in kay:
                 sorunlar['arapca_kaynakta_yok'].append((r['id'], an[:40]))
         if r.get('duz_tercume') and r['duz_tercume'] != '-' and ilk.lower() == r['duz_tercume'].lower():

@@ -1,6 +1,6 @@
-durum: tercume-yapiliyor
+durum: bos
 bolum: kelime — Kelime biçimleri
-tercume_eden: tercuman-2
+tercume_eden: -
 inceleyen: -
 
 ---
