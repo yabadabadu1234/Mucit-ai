@@ -127,10 +127,10 @@ def r_of(i):
     if os_: return max(depth[a] for a in os_)
     ps = par[i]
     return sum(r_of(p) for p in ps) / len(ps)
-RD = 250.0
+RD = 520.0
 R = {i: r_of(i) * RD for i in range(len(KAV))}
 R[TOP] = 0.0; R[BOT] = 0.0
-ZG = 430.0
+ZG = 640.0
 Z = {i: -rank[i] * ZG for i in range(len(KAV))}
 if True:
     # alt düğüm: son katman
@@ -173,6 +173,24 @@ for a in ATT:
         if s == t: continue
         sebep.setdefault((s, t), []).append(MANA[a]['sebep'])
 
+
+# öndeki bakışta (x,y düzlemi) kutuların üst üste binmesini en aza indiren genel dönüş
+KUTU_W, KUTU_H, K = 330, 150, 1.2          # bütün kutular aynı ebatta (css px) ve aynı ölçekte
+def boyut_yaklasik(i):
+    return KUTU_W * K, KUTU_H * K
+SZ = {i: boyut_yaklasik(i) for i in range(len(KAV))}
+def cakisma(phi):
+    c = 0
+    ps = {i: (R[i] * math.cos(ang[i] + phi), Z[i]) for i in range(len(KAV))}
+    for i in range(len(KAV)):
+        for j in range(i + 1, len(KAV)):
+            dx = abs(ps[i][0] - ps[j][0]); dy = abs(ps[i][1] - ps[j][1])
+            if dx < (SZ[i][0] + SZ[j][0]) / 2 and dy < (SZ[i][1] + SZ[j][1]) / 2: c += 1
+    return c
+PHI = min((cakisma(2 * math.pi * k / 120), k) for k in range(120))
+PHI0 = 2 * math.pi * PHI[1] / 120
+for i in ang: ang[i] += PHI0
+print('ön görünüşte örtüşen kutu çifti:', PHI[0], 'dönüş (derece):', round(math.degrees(PHI0)))
 def etiket(i):
     e = KAV[i]
     t = []
@@ -187,13 +205,13 @@ def etiket(i):
                 kind='top' if i == TOP else 'bot' if i == BOT else 'mid',
                 renk=(nodes[own[i][0]]['renk'] if own.get(i) else 'ab'),
                 n=len(e))
-D = dict(dugumler=[etiket(i) for i in range(len(KAV))],
+D = dict(kutu=[KUTU_W, KUTU_H], olcek=K, dugumler=[etiket(i) for i in range(len(KAV))],
          kafes_kenarlari=[[u, a] for u, a in E],
          sebep_kenarlari=[[s, t, v] for (s, t), v in sebep.items()],
          halkalar=[RD * k for k in range(1, int(max(depth.values())) + 1)],
          katman_z=[-L * ZG for L in range(NL)])
 (HERE / 'kafes3_veri.json').write_text(json.dumps(D, ensure_ascii=False), encoding='utf-8')
-rapor = dict(nesne=len(OBJ), vasif=len(ATT), kavram_dugumu=len(KAV), hasse_kenari=len(E), katman=NL,
+rapor = dict(kutu_ebadi=[KUTU_W, KUTU_H], olcek=K, on_gorunus_ortusen_cift=PHI[0], nesne=len(OBJ), vasif=len(ATT), kavram_dugumu=len(KAV), hasse_kenari=len(E), katman=NL,
              katman_dugum_sayisi={L: len(order[L]) for L in order}, ihlal=ihlal,
              hiza_sapmasi_derece=hiza, katman_atlayan_kenar=len(atlayan),
              sebep_kenari=len(sebep))
