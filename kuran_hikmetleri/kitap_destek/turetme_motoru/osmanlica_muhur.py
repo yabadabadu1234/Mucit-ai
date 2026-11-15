@@ -144,9 +144,9 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
           "Sana bir kök dosyasının kimliği (kök; İngilizce sözlük tanımları; Arapça lügat metni) ve çevrilecek öğeler verilir. Öğelerde makine üretimi Türkçe karşılık YOKTUR; mânâyı Arapça kelimeden ve İngilizce/Arapça sözlük tanımlarından SEN çıkarırsın. "
           "Cevap vermeden önce iyice düşün ve çıktını gözden geçir; aşağıdaki kuralların her birine uyduğunu kontrol et.\n"
           "ÖĞE TÜRLERİ\n"
-          "(a) kelime_formu: Kur'ân'daki bir Arapça kelime biçimi (arapca, tür, bâb, zaman; lemma_mi doğruysa kelimenin sözlük/ana biçimidir). O BİÇİMİN mânâsını (zaman, şahıs, çoğul, bitişik zamir, 've' gibi ön ekler dâhil) kısa bir Osmanlıca ifadeyle yaz; farklı biçimler farklı çıkmalıdır ('sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden').\n"
-          "(b) mustak_formu: kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, vezin: fa'l/fi'l/fu'l/fa'al…, '(dişi)' gibi ek ve varsa ingilizce_tanik). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz (masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme'; 'iki halk eden', 'halk edenler', '(müennes)').\n"
-          "(c) fiil_sapi: kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami: 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz.\n"
+          "(a) kelime_formu (şerhli): Kur'ân'daki bir Arapça kelime biçimi (arapca, tür, bâb, zaman; lemma_mi doğruysa kelimenin sözlük/ana biçimidir). O BİÇİMİN mânâsını (zaman, şahıs, çoğul, bitişik zamir, 've' gibi ön ekler dâhil) kısa bir Osmanlıca ifadeyle yaz; farklı biçimler farklı çıkmalıdır ('sizi halk eyledi', 'halk eder', 've halk olundu', 'hâlık, halk eden').\n"
+          "(b) mustak_formu (şerhli): kökten türeyen bir müştak (arapca, kalıp adı: masdar/ism-i fâil/ism-i mef'ûl/ism-i merre/mekân-zaman-masdar-ı mîmî/mübalağa/sıfat-ı müşebbehe…, bâb, vezin: fa'l/fi'l/fu'l/fa'al…, '(dişi)' gibi ek ve varsa ingilizce_tanik). Kalıbın vazifesine uygun kısa Osmanlıca mânâ yaz (masdar 'halk eyleme', ism-i fâil 'halk eden', ism-i mef'ûl 'halk olunmuş', ism-i merre 'bir kerre halk eyleme'; 'iki halk eden', 'halk edenler', '(müennes)').\n"
+          "(c) fiil_sapi (şerhli): kökün Türkçe fiil sapı, tek mastar (ör. 'halk eylemek'). (d) kok_anlami (şerhli): 'adlar' içindeki Latin başlıklarla 'Halk: yaratmak, halk eylemek; halk: ahlâk' biçiminde kök anlamı satırı; başlıkları aynen koru, mânâları Osmanlıca yaz.\n"
           "(e) metin: serbest metin, sözlük maddesi, İngilizce veya Türkçe tanım, etimoloji; BİREBİR tercüme et, bariz kırık yeri düzelt, yeni bilgi ekleme.\n"
           "KURALLAR\n"
           "1. AYIRT ET: Bir istekte aynı kalıp adı altındaki müştak satırları FARKLI vezinlerdir (fa'l, fi'l, fu'l, fa'al, fu'ūl, fi'āl…). Hiçbir satırın tercümesi aynı kalıp adındaki başka bir satırınkiyle aynı olamaz. Her vezinin kendine has inceliği (hâl, mübalağa, tekrar, mef'ûl mânâlı masdar, isim-i hey'et, hacim, âlet, mekân, tasğîr, çokluk…) "
@@ -155,7 +155,16 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
           "Mânâları virgülle ayırma; virgül yalnız tek bir mânâ ifadesinin içinde kullanılabilir. Her mânâ, O SATIRIN Arapça biçiminden, vezninden ve tanığından çıkmalıdır; komşu satırların mânâsını doldurma amacıyla taşıma.\n"
           "3. Cevaplar TÜRKÇE ifade olsun; Arapça okunuş, bilimsel işaret (ḥ ʿ) ve uydurma Arapça kalıp (mûsıl gibi) YAZMA. Kelimenin Arapçasını tek başına cevap olarak verme.\n"
           "4. ⟦0⟧ gibi işaretleri, kod ve kimlikleri, özel adları, satır sonlarını aynen koru.\n"
-          "ÇIKTI: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin. JSON dışında hiçbir şey yazma.")
+          "ŞERHLİ TERCÜME (metin hariç bütün öğe türleri için): Tercüme, bilmeyen bir okuyucunun aklına gelecek bütün suallere kendi içinde cevap versin. Her öğenin değeri önce kısa tercümeyi, sonra şu etiketli kısımları taşır; etiketler AYNEN şöyle yazılır ve kısımlar sırayla dizilir:\n"
+          "⟨Ne⟩ bu biçim/müştak ne demektir, tarifi. ⟨Nasıl⟩ kökteki asıl mânâdan bu mânâya (varsa mecâza) nasıl gelindi; vezin, ek, ön ek veya zamir mânâyı nasıl doğurdu. "
+          "⟨Neden⟩ bu mânâya geldiği NEDEN ve NASIL BİLİNİYOR, yani delil: dosyada verilen hangi sözlük/lügat/kaynak ve hangi şâhid bunu söylüyor; iki ayrı mânâ yazdıysan her biri için ayrı ⟨Neden⟩. "
+          "NEDEN'E TEKRAR NEDEN SOR: verdiğin her sebebin de sebebini ⟨Neden 2⟩, ⟨Neden 3⟩ … diye yaz; zinciri, daha geriye gidilemeyen ilk kabul edilen esâsa (kök mânâsı, lügatin kendisi, Arap kullanımı, sarf kaidesi) varıncaya kadar sürdür ve son halkayı ⟨Esas⟩ ile işaretle. "
+          "⟨Niçin⟩ bu mânâ/kalıp/ek ne gaye ile var, ne işe yarar. Ayrı mânâlardan her biri için bu kısımlar ayrı ayrı yazılır. "
+          "KAYNAKLA SINIRLI: Her sebep ve delil YALNIZ sana verilen dosya içeriğine dayanmalı; kitap, müellif veya âyet adı UYDURMA. Dosyada dayanağı yoksa o kısmı ⟨Çıkarım⟩ etiketiyle ve çıkarım olduğunu söyleyerek yaz. "
+          "Değerin kalıbı (içerik uydurma, yalnız biçim): \"<kısa tercüme> ⟨Ne⟩ <tarif>. ⟨Nasıl⟩ <asıl mânâdan bu mânâya geçiş>. ⟨Neden⟩ <bu mânâ neden böyle; dosyadaki hangi kaynak söylüyor>. ⟨Neden 2⟩ <o sebebin sebebi>. ⟨Esas⟩ <ilk kabul edilen esas>. ⟨Niçin⟩ <gaye>.\" "
+          "Bu kalıpta yazılı hiçbir kelimeyi içerik olarak kopyalama; her satırın şerhi o satırın kendi Arapça biçiminden, vezninden ve dosyadaki kaynaklardan çıkarılır, satırlar arasında şerh tekrarlanmaz. "
+          "Kısımlar ayrı ayrı otomatik derleneceği için etiketlere ve sıraya uy; her etiket yalnız kendi sualinin cevabını taşısın.\n"
+          "ÇIKTI: öğelerle AYNI uzunlukta ve sırada yalnız bir JSON dizisi; her öğe Osmanlıca metin (şerhli öğelerde etiketli kısımlarla). JSON dışında hiçbir şey yazma.")
 
 
 def akis_oku(anahtar, govde):
@@ -259,19 +268,19 @@ def cevir_dosya(anahtar, model, f, dosya_h):
     for (tur, kal), li in gruplar.items():
         if tur == 'mustak_formu':
             # aynı kalıp adı altındaki bütün vezinler AYNI istekte: modelin birbirinden ayırt etmesi için
-            if cur and n + len(li) > 60:
+            if cur and n + len(li) > 30:
                 parcalar.append(cur)
                 cur, n = [], 0
-            for i in range(0, len(li), 70):
-                parca = li[i:i + 70]
-                if cur and len(cur) + len(parca) > 70:
+            for i in range(0, len(li), 30):
+                parca = li[i:i + 30]
+                if cur and len(cur) + len(parca) > 30:
                     parcalar.append(cur)
                     cur = []
                 cur += parca
                 n = len(cur)
         else:
             for b in li:
-                if cur and (n + len(b[1]) > 8000 or len(cur) >= 40):
+                if cur and (n + len(b[1]) > 8000 or len(cur) >= 12):
                     parcalar.append(cur)
                     cur, n = [], 0
                 cur.append(b)
