@@ -52,6 +52,7 @@ Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüm
 ## İnceleyici görevi (doğrudan kaynağında düzeltme)
 - İnceleyici `tercüme:` satırını **doğrudan düzeltir ve zenginleştirir**; ayrı bir "tashih" notu, itiraz kısmı veya ⟨Tashih⟩ etiketi **YAZILMAZ**. Bir yanlış gördüğün yerde (yanlış mânâ, uydurma/yanlış kaynak, kayma, aynı kalıpta tekrar, Türkçe olmayan ifade) hatayı **yazıldığı yerde** düzelt: kısa tercümeyi ya da ilgili ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩ cümlesini doğrusuyla değiştir.
 - **İlave sebepler** de aynı şekilde tercümenin içine girer: tercümenin ⟨Neden⟩ zincirinde olmayan ek deliller, başka kaynaklardan (KAYNAKLAR'ı taray) teyit, eksik ⟨Neden k⟩ halkaları, atlanmış mânâlar için ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩/⟨Esas⟩/⟨Niçin⟩ kısımları; etiketler hâlin iktizasına göre serbesttir; yalnız her kısım kendi sualinin cevabını taşır.
+- **SİLME:** Satırda var olan etiketli kısımları (⟨Niçin⟩, ⟨Neden k⟩, ⟨Esas⟩ …) ve delilleri SİLME veya kısaltma; yalnız yanlışı düzelt, eksiği ekle. Bölümü yeniden yazarken öncekinden daha zayıf bir metin bırakma.
 - Yeni delil yalnız KAYNAKLAR'dan; alıntı kısa ve doğru. Tercümedeki sebepler en umumî sebebe çıkarılmamışsa (cüz'î kalmışsa) yukarı çıkar; bozuk veya kaynakta olmayan Arapça alıntıyı KAYNAKLAR'daki doğru yazıyla değiştir. Tekrar etme, şişirme. `duz_tercume:` alanına ve `ilave:` alanına dokunma (`ilave:` boş kalır).
 
 ## Durum protokolü (dosyaları çakıştırmamak için KESİN)
