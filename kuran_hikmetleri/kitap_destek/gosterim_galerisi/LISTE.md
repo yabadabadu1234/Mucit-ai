@@ -192,3 +192,9 @@ Yeni şart: kutu yok, kutuya yazı yok, yerleşim düzeni yok, bağlantı hattı
 | 155 | Cebir: vezin dönüşümleri, kökün yörüngesi | ✅ ❌ padişah: matematikten umduğu bu değil |
 | 156 | Harmonik açılım (Fourier) | ✅ ❌ padişah: matematikten umduğu bu değil |
 | 157 | Fonksiyon eğrisi | ✅ ❌ padişah: matematikten umduğu bu değil |
+
+## İspat usulü (padişah: "neden?" suallerine anında cevap veren, ispata yakın usul)
+
+| # | Usul | Durum |
+|---|---|---|
+| 158 | Kademeli ispat (Lamport usulü): numaralı dayanaklar, adım adım ispat, her adımda "neden?" ve "itiraz", tutmayan adım kırmızı | ✅ |

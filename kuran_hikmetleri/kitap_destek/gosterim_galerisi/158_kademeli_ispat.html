@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kademeli İspat</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf6;--ink:#2b2410;--soft:#6d6650;--red:#b3341e;--blue:#2f6fb3;--green:#3f7f3a}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif;line-height:1.55}
+main{max-width:900px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:26px 0 6px}
+.alt{color:var(--soft);font-size:14px}
+.ar{font-family:Amiri,serif;font-size:1.25em}
+.dayanak{font-size:14px;margin:4px 0 4px 0}
+.dayanak b{color:var(--blue)}
+.y{color:var(--red);font-size:12px}
+.adim{margin:4px 0 4px 0}
+.ic{margin-left:26px;border-left:2px solid #e2d9bd;padding-left:12px;display:none}
+.ic.acik{display:block}
+.no{font-weight:700;color:var(--soft);margin-right:6px;font-family:monospace}
+button{font:inherit;font-size:12px;border:1px solid #c9bd94;background:#fff;border-radius:12px;padding:1px 9px;margin-left:6px;cursor:pointer;color:var(--ink)}
+button.n{color:var(--blue);border-color:var(--blue)}button.i{color:var(--red);border-color:var(--red)}
+.itiraz{display:none;margin:4px 0 6px 26px;font-size:14px}
+.itiraz.acik{display:block}
+.itiraz p{margin:2px 0}
+.eksik{background:#fbe4df;border-radius:4px;padding:0 4px}
+.qed{font-weight:700;color:var(--green)}
+.cite{color:var(--blue);font-family:monospace;font-size:13px}
+</style></head><body><main>
+<h1>158. Kademeli ispat (Lamport usulü): her cümlenin "neden?"i bir tık uzakta</h1>
+<p class="alt">Matematik ispatı gibi kurulur: önce dayanaklar numaralanır, sonra iddia adım adım ispat edilir. Her adımın yanında iki düğme vardır. <b>neden?</b> o adımın alt ispatını açar, en dipte numaralı bir dayanağa varılır. <b>itiraz</b> o adıma yöneltilebilecek suali ve cevabını açar. İspatı tutmayan adım kırmızı işaretlenir; sebep uydurulmaz, eksik açıkça görünür.</p>
+
+<h2>Dayanaklar</h2>
+<div id="dayanaklar"></div>
+
+<h2>Teorem 1. <span class="ar">خُلُق</span> (huy), <span class="ar">خلق</span> kökünün aslından türer.</h2>
+<div id="t1"></div>
+
+<h2>Teorem 2. <span class="ar">خَلِقَ</span> (eskidi), aynı aslından türer.</h2>
+<div id="t2"></div>
+<p class="alt">Teorem 2'de ispat tutmuyor: eskimek ölçüp biçmekten değil, ikinci asıldan (düzlük, pürüzsüzlük) geliyor. Usul bunu saklamıyor, gösteriyor. Buradan çıkan netice şudur: kökün tek esası yoktur, iki aslı vardır; Teorem 1 birinci asla, Teorem 2 ikinci asla bağlanmalıdır.</p>
+<p class="alt">Dayanakların lafızları hafızadan yazıldı ve asıl kitaplardan yoklanmadı; yoklanınca numarasıyla düzeltilecek. Bir dayanak düşerse, ona atıf yapan her adım kendiliğinden şüpheli olur.</p>
+</main>
+<script>
+const D={
+ L1:['İbn Fâris, <i>Mekâyîsü\'l-luga</i>, "خلق" maddesi','<span class="ar">الخاء واللام والقاف أصلان: أحدهما تقدير الشيء، والآخر ملاسة الشيء</span> — "iki asıl: biri bir şeyi ölçüp takdir etmek, öbürü şeyin düz ve pürüzsüz olması."',1],
+ L2:['Râgıb el-İsfahânî, <i>Müfredât</i>, "خلق" maddesi','<span class="ar">الخَلْق والخُلْق في الأصل واحد … لكن خُصّ الخَلْق بالهيئات والأشكال المدركة بالبصر، وخُصّ الخُلْق بالقوى والسجايا المدركة بالبصيرة</span> — "aslen birdir; biri gözle görülen şekle, öbürü basiretle bilinen huylara tahsis edilmiştir."',1],
+ L3:['Kur\'ân, Kalem 68:4','<span class="ar">وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ</span> — "Şüphesiz sen büyük bir huy üzeresin." (kelimenin huy manasında kullanıldığının şahidi)',1],
+ S1:['Sarf kaidesi: <span class="ar">فِعْلَة</span> vezni','hey\'et (hâl, tarz) bildirir: <span class="ar">جِلْسَة</span> oturuş tarzı, <span class="ar">خِلْقَة</span> yaratılış tarzı.',1],
+ M1:['Mantık: tahsis','Umumî bir hüküm, cinsinin her ferdi için doğrudur; ferde hususî ad verilmesi onu umumî hükmün dışına çıkarmaz.',0],
+ M2:['Tarif: türeme','B, A\'dan türer ⇔ B\'nin manası, A\'nın manasına bir kayıt eklenerek (yer, nesne, tarz) elde edilir.',0],
+ L4:['Lügat: <span class="ar">خَلِقَ الثَّوْبُ</span>','"elbise eskidi, yıprandı"; <span class="ar">ثوب خَلَق</span> eski elbise.',1],
+};
+document.getElementById('dayanaklar').innerHTML=Object.entries(D).map(([k,[ad,lf,y]])=>`<div class="dayanak"><b id="d_${k}">[${k}]</b> ${ad}: ${lf} ${y?'<span class="y">(hafızadan, yoklanmadı)</span>':''}</div>`).join('');
+const c=k=>`<a class="cite" href="#d_${k}">[${k}]</a>`;
+const T1=[
+ ['1','<span class="ar">خلق</span> kökünün bir aslı "takdîr"dir: bir şeyi ölçüp tayin etmek.',[['1.1','İbn Fâris kökün iki aslından birini takdîr diye sayar. '+c('L1')]],
+   ['"Yaratmak" daha meşhur değil mi, neden asıl o değil?','Lügatçiler meşhuru değil, bütün kullanımları kapsayan en umumî manayı asıl sayar. Yaratmak, takdîrin bir neticesi olarak bu asla bağlanır (adım 2).']],
+ ['2','Takdir edilerek meydana getirilen her şeyin bir hey\'eti (kalıbı, tarzı) vardır; bu hey\'ete <span class="ar">خِلْقَة</span> denir.',[
+   ['2.1','Ölçüp tayin etmek, şeyin sınırını ve şeklini belirlemektir; belirlenmiş şekil o şeyin hey\'etidir. '+c('M2')],
+   ['2.2','<span class="ar">فِعْلَة</span> vezni hey\'et bildirir; <span class="ar">خِلْقَة</span> bu veznin kökteki karşılığıdır. '+c('S1')]],
+   ['Her şeyin gerçekten bir kalıbı var mı?','Takdîr edilmiş her şeyin vardır; çünkü takdîr, kalıbı tayin etmenin adıdır (2.1). Takdîr edilmemiş şey bu teoremin konusu değildir.']],
+ ['3','İnsanın iç âlemi (nefsi) de takdîr edilerek yaratılmıştır; dolayısıyla onun da bir hey\'eti vardır.',[
+   ['3.1','Adım 2 umumî bir hükümdür; nefs bu cinsin bir ferdidir. '+c('M1')],
+   ['3.2','<span class="eksik">"Nefsin takdîr edilerek yaratıldığı" öncülü burada lügatten değil, inançtan alınmıştır; lügat ispatı içinde ayrı bir dayanağı yoktur.</span>']],
+   ['Nefsin hey\'eti gözle görülmez; o hâlde nasıl hey\'et denir?','Râgıb\'ın ayırdığı gibi: gözle görülen hey\'et <span class="ar">خَلْق</span>, basiretle bilinen hey\'et <span class="ar">خُلْق</span> adını alır (adım 4).']],
+ ['4','Bu iç hey\'ete <span class="ar">خُلُق</span> denir.',[
+   ['4.1','Râgıb: iki kelime aslen birdir; <span class="ar">خُلْق</span> basiretle bilinen huylara tahsis edilmiştir. '+c('L2')],
+   ['4.2','Kur\'ân\'da kelime bu manada kullanılmıştır. '+c('L3')]],
+   ['Bu bir benzetme (istiare) mi, yoksa gerçek manası mı?','Râgıb "aslen birdir" der; buna göre benzetme değil, aynı mananın iç tarafa tahsisidir. Hafızadan yazıldığı için bu cevap [L2] yoklanınca kesinleşir.']],
+ ['5','<span class="qed">Netice:</span> <span class="ar">خُلُق</span>, takdîr aslına "nefiste" kaydı eklenerek elde edilmiştir; tarife göre bu asıldan türer. '+c('M2')+' <span class="qed">∎</span> (adım 3.2\'deki kırmızı öncül hariç)',[],null]
+];
+const T2=[
+ ['1','<span class="ar">خلق</span> kökünün bir aslı takdîrdir.',[['1.1',c('L1')]],null],
+ ['2','<span class="ar">خَلِقَ</span> "eskidi" demektir.',[['2.1',c('L4')]],null],
+ ['3','<span class="eksik">Eskimek, takdîre bir kayıt eklenerek elde edilemez: ölçüp tayin etmeye hangi kayıt eklense "yıpranmak" çıkmaz.</span>',[
+   ['3.1','Takdîr bir şeye şekil vermektir; eskimek şeklin aşınmasıdır. İkisi zıt yönlüdür. '+c('M2')]],
+   ['Eskiyen şey de bir zamanlar ölçülüp yapılmamış mıydı?','Evet, ama bu bir zaman sırasıdır, mana türemesi değildir. Tarif [M2] mananın kayıtla elde edilmesini ister; "önce yapıldı, sonra eskidi" bunu sağlamaz.']],
+ ['4','İkinci asıl "melâset"tir: düz, pürüzsüz olmak. Kullanılan elbisenin yüzü düzleşir, parlar; buna <span class="ar">خَلِقَ</span> denir.',[
+   ['4.1',c('L1')+' ikinci asıl.'],['4.2','"Pürüzsüzleşmek" + "kullanılarak" kaydı = eskimek. '+c('M2')]],
+   ['Eskimiş elbise gerçekten düzleşir mi?','Lügatçiler <span class="ar">ثوب خَلَق</span> ile <span class="ar">صخرة خَلْقاء</span> (dümdüz kaya) kelimelerini aynı aslın altında anar. Bağın ispatı bu ortak anılmaya dayanır; daha sağlamı için lügatin kendi metni yoklanmalıdır.']],
+ ['5','<span class="qed">Netice:</span> Teorem 2, yazıldığı hâliyle yanlıştır. Doğrusu: <span class="ar">خَلِقَ</span> ikinci asıldan türer. <span class="qed">∎</span>',[],null]
+];
+function kur(el,adimlar,derin){
+ adimlar.forEach(([no,cumle,alt,itiraz])=>{
+  const d=document.createElement('div');d.className='adim';
+  d.innerHTML=`<span class="no">⟨${derin}⟩${no}</span>${cumle}`;
+  if(alt&&alt.length){const b=document.createElement('button');b.className='n';b.textContent='neden?';d.appendChild(b);
+   const ic=document.createElement('div');ic.className='ic';alt.forEach(([n,s])=>{const a=document.createElement('div');a.className='adim';a.innerHTML=`<span class="no">⟨${derin+1}⟩${n}</span>${s}`;ic.appendChild(a);});
+   b.onclick=()=>ic.classList.toggle('acik');el.appendChild(d);
+   if(itiraz){const bi=document.createElement('button');bi.className='i';bi.textContent='itiraz';d.appendChild(bi);const it=document.createElement('div');it.className='itiraz';it.innerHTML=`<p><b>Sual:</b> ${itiraz[0]}</p><p><b>Cevap:</b> ${itiraz[1]}</p>`;bi.onclick=()=>it.classList.toggle('acik');el.appendChild(it);}
+   el.appendChild(ic);}
+  else el.appendChild(d);
+ });}
+kur(document.getElementById('t1'),T1,1);kur(document.getElementById('t2'),T2,1);
+</script></body></html>
