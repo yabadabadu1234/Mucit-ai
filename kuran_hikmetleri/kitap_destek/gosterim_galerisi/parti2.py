@@ -197,5 +197,6 @@ def lof():
             mark(x0 + 4 * j, y0 + 16 + 5 * j, 40 + 60 * (n - j), 34 - 5 * j)
     b.append(T('Her köşe işareti (Spencer-Brown "cross") bir ayırım çizer; içteki, dıştakinin içinde ayırt edilmiştir.', 450, 630, 11))
     kaydet('40_laws_of_form', '40. Laws of Form: her türeme bir ayırımın içinde yeni ayırım', 'İşaretin iç içeliği = esastan o manaya kadar basamak sayısı.', b, 900, 650)
-for f in (psets, chord, halka, kucuk, zihin, toulmin, wigmore, isotype, bliss, iching, peirce, frege, lof): f()
+if __name__ == "__main__":
+    for f in (psets, chord, halka, kucuk, zihin, toulmin, wigmore, isotype, bliss, iching, peirce, frege, lof): f()
 print('tamam')

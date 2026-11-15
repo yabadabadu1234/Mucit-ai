@@ -38,49 +38,49 @@
 | 32 | Zihin haritası | ✅ | `gosterim_galerisi/` |
 | 33 | Argüman haritası (Toulmin) | ✅ | `gosterim_galerisi/` |
 | 34 | Wigmore delil çizelgesi | ✅ | `gosterim_galerisi/` |
-| 35 | Isotype (simge tekrarı) | ✅ | `gosterim_galerisi/` |
-| 36 | Bliss tarzı birleşik simge | ✅ | `gosterim_galerisi/` |
-| 37 | I Ching çizgi kodu | ✅ | `gosterim_galerisi/` |
+| 35 | Isotype (simge tekrarı) | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
+| 36 | Bliss tarzı birleşik simge | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
+| 37 | I Ching çizgi kodu | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 38 | Peirce varoluşsal çizgesi | ✅ | `gosterim_galerisi/` |
 | 39 | Frege kavram yazısı | ✅ | `gosterim_galerisi/` |
 | 40 | Laws of Form işaret yazısı | ✅ | `gosterim_galerisi/` |
-| 41 | Kuvvet dinamiği (Talmy) | ⬜ | |
-| 42 | Gezgin / zemin (Langacker) | ⬜ | |
-| 43 | Kavram uzayı (Voronoi) | ⬜ | |
-| 44 | Kutu gömmesi | ⬜ | |
-| 45 | Mapper çizgesi | ⬜ | |
-| 46 | AMR çizgesi (PENMAN) | ⬜ | |
-| 47 | FrameNet çerçevesi | ⬜ | |
-| 48 | Sözlük fonksiyonları (Mel'čuk) | ⬜ | |
-| 49 | Dört illet (kuale) yuvası | ⬜ | |
-| 50 | Kıvılcım çizgi (sparkline) | ⬜ | |
-| 51 | Chernoff yüzleri | ⬜ | |
-| 52 | Metro haritası | ⬜ | |
-| 53 | Periyodik cetvel | ⬜ | |
-| 54 | Zwicky morfolojik kutusu | ⬜ | |
-| 55 | Işınsal kategori (Brugman) | ⬜ | |
-| 56 | İlk sahne ağı (Tyler & Evans) | ⬜ | |
-| 57 | Halliday seçim ağı | ⬜ | |
-| 58 | Bileşen çözümlemesi (± matrisi) | ⬜ | |
-| 59 | Eniyilik tablosu (OT) | ⬜ | |
-| 60 | Penrose/Feynman tarzı tel diyagramı | ⬜ | |
-| 61 | Labanotasyon tarzı dikey şerit | ⬜ | |
-| 62 | Nota tarzı (dikey derinlik, yatay sıra) | ⬜ | |
-| 63 | İskelet formül tarzı | ⬜ | |
-| 64 | SMILES tarzı tek satır yazı | ⬜ | |
-| 65 | Mısır belirleyici / Çince bileşen tarzı glif | ⬜ | |
-| 66 | Emoji dizisi | ⬜ | |
-| 67 | Takvîmü's-sıhha tablosu | ⬜ | |
-| 68 | Teşcîr (ilimler ağacı) | ⬜ | |
-| 69 | Lull bilgi ağacı (yedi parçalı) | ⬜ | |
-| 70 | Vücûh ve nezâir dökümü | ⬜ | |
-| 71 | İzutsu anlam alanı | ⬜ | |
-| 72 | Heisig hikâyesi | ⬜ | |
-| 73 | Hafıza sarayı | ⬜ | |
-| 74 | Uzatılabilir metin | ⬜ | |
-| 75 | Anlamsal yakınlaştırma | ⬜ | |
-| 76 | Cornell notu | ⬜ | |
-| 77 | Veri çizgi romanı | ⬜ | |
-| 78 | Mekânsal hiper metin | ⬜ | |
-| 79 | Glif tasarımı | ⬜ | |
-| 80 | Kalıp dili ağı | ⬜ | |
+| 41 | Kuvvet dinamiği (Talmy) | ✅ | `gosterim_galerisi/` |
+| 42 | Gezgin / zemin (Langacker) | ✅ | `gosterim_galerisi/` |
+| 43 | Kavram uzayı (Voronoi) | ✅ | `gosterim_galerisi/` |
+| 44 | Kutu gömmesi | ✅ | `gosterim_galerisi/` |
+| 45 | Mapper çizgesi | ✅ | `gosterim_galerisi/` |
+| 46 | AMR çizgesi (PENMAN) | ✅ | `gosterim_galerisi/` |
+| 47 | FrameNet çerçevesi | ✅ | `gosterim_galerisi/` |
+| 48 | Sözlük fonksiyonları (Mel'čuk) | ✅ | `gosterim_galerisi/` |
+| 49 | Dört illet (kuale) yuvası | ✅ | `gosterim_galerisi/` |
+| 50 | Kıvılcım çizgi (sparkline) | ✅ | `gosterim_galerisi/` |
+| 51 | Chernoff yüzleri | ✅ | `gosterim_galerisi/` |
+| 52 | Metro haritası | ✅ | `gosterim_galerisi/` |
+| 53 | Periyodik cetvel | ✅ | `gosterim_galerisi/` |
+| 54 | Zwicky morfolojik kutusu | ✅ | `gosterim_galerisi/` |
+| 55 | Işınsal kategori (Brugman) | ✅ | `gosterim_galerisi/` |
+| 56 | İlk sahne ağı (Tyler & Evans) | ✅ | `gosterim_galerisi/` |
+| 57 | Halliday seçim ağı | ✅ | `gosterim_galerisi/` |
+| 58 | Bileşen çözümlemesi (± matrisi) | ✅ | `gosterim_galerisi/` |
+| 59 | Eniyilik tablosu (OT) | ✅ | `gosterim_galerisi/` |
+| 60 | Penrose/Feynman tarzı tel diyagramı | ✅ | `gosterim_galerisi/` |
+| 61 | Labanotasyon tarzı dikey şerit | ✅ | `gosterim_galerisi/` |
+| 62 | Nota tarzı (dikey derinlik, yatay sıra) | ✅ | `gosterim_galerisi/` |
+| 63 | İskelet formül tarzı | ✅ | `gosterim_galerisi/` |
+| 64 | SMILES tarzı tek satır yazı | ✅ | `gosterim_galerisi/` |
+| 65 | Mısır belirleyici / Çince bileşen tarzı glif | ✅ | `gosterim_galerisi/` |
+| 66 | Emoji dizisi | ✅ | `gosterim_galerisi/` |
+| 67 | Takvîmü's-sıhha tablosu | ✅ | `gosterim_galerisi/` |
+| 68 | Teşcîr (ilimler ağacı) | ✅ | `gosterim_galerisi/` |
+| 69 | Lull bilgi ağacı (yedi parçalı) | ✅ | `gosterim_galerisi/` |
+| 70 | Vücûh ve nezâir dökümü | ✅ | `gosterim_galerisi/` |
+| 71 | İzutsu anlam alanı | ✅ | `gosterim_galerisi/` |
+| 72 | Heisig hikâyesi | ✅ | `gosterim_galerisi/` |
+| 73 | Hafıza sarayı | ✅ | `gosterim_galerisi/` |
+| 74 | Uzatılabilir metin | ✅ | `gosterim_galerisi/` |
+| 75 | Anlamsal yakınlaştırma | ✅ | `gosterim_galerisi/` |
+| 76 | Cornell notu | ✅ | `gosterim_galerisi/` |
+| 77 | Veri çizgi romanı | ✅ | `gosterim_galerisi/` |
+| 78 | Mekânsal hiper metin | ✅ | `gosterim_galerisi/` |
+| 79 | Glif tasarımı | ✅ | `gosterim_galerisi/` |
+| 80 | Kalıp dili ağı | ✅ | `gosterim_galerisi/` |
