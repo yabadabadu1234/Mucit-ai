@@ -23,7 +23,7 @@ else
       grep -q "^durum: inceleme-tamam" "$f" && continue 2
       sleep 20
     done
-    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen İNCELEYİCİ ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını incelemek. Durumu 'inceleniyor' (inceleyen: $AD) yap; her satırı oku ve 'ilave:' alanına USUL.md'deki inceleyici görevine göre ilave sebepler / teyit / ⟨Tashih⟩ ekle ('tercüme:' alanını DEĞİŞTİRME); dosyayı bütün hâliyle kaydet ve 'durum: inceleme-tamam' yap. Başka dosyaya dokunma." > "../../log_${AD}_${f%.md}.txt" 2>&1
+    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen İNCELEYİCİ ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını incelemek. Durumu 'inceleniyor' (inceleyen: $AD) yap; her satırın 'tercüme:' alanını oku, kaynaklarla karşılaştır ve USUL.md'deki inceleyici görevine göre DOĞRUDAN KAYNAĞINDA düzelt (yanlış gördüğünü yazıldığı yerde değiştir; 'tashih', 'itiraz' veya ⟨Tashih⟩ notu YAZMA) ve ilave sebepleri aynı tercümenin içine, etiket sırasını bozmadan ekle; 'duz_tercume:' ve 'ilave:' alanlarına dokunma; dosyayı bütün hâliyle kaydet ve 'durum: inceleme-tamam' yap. Başka dosyaya dokunma." > "../../log_${AD}_${f%.md}.txt" 2>&1
     echo "$(date +%T) $AD: $f bitti"
   done
 fi

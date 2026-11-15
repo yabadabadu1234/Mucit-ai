@@ -43,10 +43,10 @@ Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüm
 4. Her mânâ o satırın Arapça biçiminden, vezninden ve kaynaklardan çıkmalı; komşu satırın mânâsını doldurma amacıyla taşıma.
 5. Kök anlamı satırı: başlıkları (Halk: … gibi Latin başlıklar) aynen koru, mânâları Osmanlıca yaz; fiil sapı tek mastar olur.
 
-## İnceleyici görevi (`ilave:` satırı)
-- `tercüme:` satırını **değiştirme**. Okuyup **ilave sebepler** ekle: tercümenin ⟨Neden⟩ zincirinde olmayan ek deliller, başka kaynaklardan (KAYNAKLAR'ı taray) teyit veya itiraz, eksik **⟨Neden k⟩** halkaları, atlanmış mânâlar için ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩/⟨Esas⟩/⟨Niçin⟩ kısımları.
-- Tercümede **hata** varsa (yanlış mânâ, uydurma kaynak, kayma, aynı kalıpta tekrar) `⟨Tashih⟩ doğrusu şudur: … ⟨Neden⟩ …` diye yaz; kaynağı anarak.
-- Yeni delil yalnız KAYNAKLAR'dan; alıntıyı kısa ve doğru yaz. Tekrar etme; sebep eklenmeyen satırda `ilave: -` bırak (ama her satır **gerçekten** incelenmiş olsun).
+## İnceleyici görevi (doğrudan kaynağında düzeltme)
+- İnceleyici `tercüme:` satırını **doğrudan düzeltir ve zenginleştirir**; ayrı bir "tashih" notu, itiraz kısmı veya ⟨Tashih⟩ etiketi **YAZILMAZ**. Bir yanlış gördüğün yerde (yanlış mânâ, uydurma/yanlış kaynak, kayma, aynı kalıpta tekrar, Türkçe olmayan ifade) hatayı **yazıldığı yerde** düzelt: kısa tercümeyi ya da ilgili ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩ cümlesini doğrusuyla değiştir.
+- **İlave sebepler** de aynı şekilde tercümenin içine girer: tercümenin ⟨Neden⟩ zincirinde olmayan ek deliller, başka kaynaklardan (KAYNAKLAR'ı taray) teyit, eksik ⟨Neden k⟩ halkaları, atlanmış mânâlar için ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩/⟨Esas⟩/⟨Niçin⟩ kısımları; etiketlerin sırası ve biçimi bozulmaz (⟨Ne⟩ ⟨Nasıl⟩ ⟨Neden⟩ ⟨Neden 2⟩… ⟨Esas⟩ ⟨Niçin⟩), zincir ⟨Esas⟩ ile kapanır.
+- Yeni delil yalnız KAYNAKLAR'dan; alıntı kısa ve doğru. Tekrar etme, şişirme. `duz_tercume:` alanına ve `ilave:` alanına dokunma (`ilave:` boş kalır).
 
 ## Durum protokolü (dosyaları çakıştırmamak için KESİN)
 - Bir bölüm dosyasını **aynı anda yalnız bir ajan** yazar. Tercüman yalnız `durum: bos` bölümü alır: `tercume-yapiliyor` yap, bitirince `tercume-tamam`; `tercume_eden: tercüman`.
