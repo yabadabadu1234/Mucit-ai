@@ -1,69 +1,69 @@
-durum: bos
+durum: inceleniyor
 bolum: kelime — Kelime biçimleri
-tercume_eden: -
-inceleyen: -
+tercume_eden: tercuman-1
+inceleyen: inceleyici-0
 
 ---
 
-## K|خلق|تَخْلُقُونَهُۥٓ|yuzey|İsim|fe'ale|Muzâri
+## K|خلق|تَخْلُقُونَهُۥٓ|yuzey|Fiil|fe'ale|Muzâri
 arapça: تَخْلُقُونَهُۥٓ
-bilgi: tür: İsim; bâb: fe'ale; zaman: Muzâri; kelime biçimi
+bilgi: tür: Fiil; bâb: fe'ale; zaman: Muzâri; kelime biçimi
 duz_tercume: onu halk edersiniz
-tercüme:
+tercüme: onu halk edersiniz ⟨Ne⟩ Bu kelime, "siz onu halk edersiniz, yaratırsınız" demektir: kök fiilin muzâri' hâli, fail "siz (çoğul)", nesne "onu" diye bağlanmış üçüncü şahıs tekil zamirdir. ⟨Nasıl⟩ Gövde خَلَقَ köküne aittir: başındaki tâ harfi muzâri'in "siz" şahsını, sondaki vâv ve nûn da çokluğunu taşır, böylece fail "siz" olur, fiilin ucundaki sakin hâ ise ayrı bir kelime değil, fiile yapışmış nesne zamiridir ve "onu" der. Mâzî "o, halk etti" der, muzâri' ise "halk ediyor" der, ve bu fiil, şahıs ve nesne ekleriyle "siz onu halk edersiniz" hâline gelmiştir. ⟨Neden⟩ Nesne zamiri fiile yapışır, zira bir işten söz ederken o işin neye yapıldığını da söylemek zaruretidir: iş, nesneden ayrı düşünülemez, ve ayrı bir kelimeyle söylense, cümle iki parçaya ayrılır, dinleyici önce işi, sonra nesneyi alır, ve anlam ikiye bölünür. Fiile yapışan küçük harf ise, işi nesnesiyle tek ses hâlinde verir, zâira kulağa gelen tek kelime, zihne tek manzara olarak gider, ve bu, dilin umumî kâidesidir: baştaki fail zamirleri de, sondaki nesne zamirleri de bu sebeple fiile yapışır. ⟨Neden 2⟩ Bu tasarrufun derin sebebi, sözün tek hareketle bitmesidir: cümle, ağzın bir nefeste yaptığını söyler, her artan kelime bir artan harekettir, ve iş ile nesne insanın gözünde tek bir hâdise ise, dil de onu tek kelimeyle söylemek ister. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca mesele kendiliğinden açılır: bir şeyi yapan kimse, onu bir şeye yapar, ve işle nesne akla tek bir bütün olarak görünür, zâira "yaratmak" derken yaratılan şey de aynı anda gözümüzde belirir. Dil, zihnin bu birlikteliğini yansıtır, ve o hâli tek sesle söyleyen, gerçeği tek sesle söylemiş olur.
 ilave:
 
 ## K|خلق|ٱلْخَٰلِقُ|yuzey|İsim|fe'ale|
 arapça: ٱلْخَٰلِقُ
 bilgi: tür: İsim; bâb: fe'ale; zaman: ; kelime biçimi
 duz_tercume: Hâlık, yaratıcı (Allah)
-tercüme:
+tercüme: Hâlık, yaratıcı (Allah) ⟨Ne⟩ Bu, "Hâlık, yaratıcı" demektir, ve başındaki alif-lâm kelimeyi tayin edip onu bir unvân hâline getirir; bu isim Kur'ân'da Cenâb-ı Hakk'a isnâd olunur, zâira yaratma fiili başkasına verilecek sıradan bir sıfat değildir. ⟨Nasıl⟩ Kelime, خَلَقَ kökünün ism-i fâilidir, vezni fâ'il, "o, halk etti" fiilinden "halk eden, yaratıcı" demektir; başındaki alif-lâm artikeli ise onu "bir yaratıcı"dan "o yaratıcıya", yani bu fiille tanımlanan belirli varlığa çevirir. İsm-i fâil, fiilin failini isimleştirir, zâira bir işi devamlı yapan kimse, o işle tanınır, ve ismi o işin kendisi olur. ⟨Neden⟩ Dil, her faili fiiliyle söylemek mecburiyetinde değildir; bir iş kimde öyle âdet hâline gelmişse, o kimse işin kendisiyle anılır: demirci demirle, nakşî nakşıyla anılır, zâira dinleyenin kulağında "demirci" dediğin anda çekiç sesi duyulur. Yaratmaya gelince: başkalarının işleri geçicidir, yaratıcının işi ise ezelîdir, ve yaratıcı yaratmadan ayrılmaz, zâira O'nun bütün varlığı yaratmaktır. Böyle bir varlığa "o yaratır" demek, fiilin bir anını söylemek olur, "yaratıcı" demek ise bütün hâlini söylemektir. ⟨Neden 2⟩ Peki isim, neden belirli hâle, yani alif-lâmlı hâle bürünmüştür? Çünkü belirli bir işte belirli bir fail olduğunda, fail o işin ta kendisi olur, ve bu işte ikincisi yoktur, başkası yaratıcı olamaz. İki şey aynı olduğunda, dil onları tek isimde toplar, ve alif-lâm o tekliğin işaretidir. ⟨Esas⟩ İnsanın sezgisinde ilk esas şudur: bir varlığın sürekli ve bütün hâli bir iş ise, o iş varlığın ismidir; göz, yangını gördüğü kimseyi "ateşçi" diye değil "ateşin ta kendisi" diye tanımlar, zâira görünür olan ateştir. İsm-i fâil, aklın kâfî gördüğü isimdir, zâira faili fiilinden tanıyan akıl, fiili failin ismi yapar.
 ilave:
 
 ## K|خلق|خُلُقٍ|yuzey|İsim||
 arapça: خُلُقٍ
 bilgi: tür: İsim; bâb: ; zaman: ; kelime biçimi
 duz_tercume: Bir hulkun, ahlâkın
-tercüme:
+tercüme: Bir hulkun, ahlâkın ⟨Ne⟩ Bu, "bir hulkun, bir ahlâkın, bir huyun" demektir; kelime, bir kimsenin içinde sabit olup onun işlerinin kendiliğinden ona göre cereyân ettiği o bâtınî mahiyettir, yani ne kazancın ne görgünün meyvesi olan tabiat, seciyye; sondan gelen kesre onu "bir hulkun" diye tamlamanın içine sokar. ⟨Nasıl⟩ Kökün asıl mânâsı, bir maddeyi ölçüp biçerek belirli bir şeye hazır hâle getirmektir, ve deri, kesmeden önce böyle ölçülür, toprak bir esere böyle hazırlanır. İnsanın tabiatına gelince: onun işleri de bir ölçüye göre cereyân eder, cömert cömertliğinin ölçüsünde verir, sabırlı sabrının ölçüsünde katlanır, ve o ölçü kim tarafından konmuşsa, insanın bütün hâli o ölçünün eseridir. Dil, bir kimsenin hulk'unu söylerken, "onun yaratılışı, kendine biçilmiş hâli" demek ister, ve fu'l vezni, masdar olarak, bu "ölçülmüş ve biçilmiş şey" mânâsını taşır. ⟨Neden⟩ Peki ilk söyleyen, "tabiat" diye bir bâtınî mahiyeti, "ölçüp biçmek" diye bir sözle nasıl ifade etti? Çünkü tabiat, insanın içinde sabit bir şekildir, ve şekil ancak biçilerek olur: taşın şekli biçilmesindedir, kâsenin şekli kabına göre biçilmesindedir. Bir kimsenin "tabiatı" derken aslında "onun kendine göre sabit kalmış şekli" deriz, ve işler o şekle göre akar, tıpkı suyun yatağına göre akması gibi. O sabit şekli, "yaratılmış ve biçilmiş şey" diye söylemek en tabiî yoldur, zâira her sabit şekil bir yaratılışın eseridir. ⟨Neden 2⟩ Meseleyi daha derine indirince: her şey bir ölçüye göre olur, zâhirde de bâtında da; insanın işleri de bir ölçüye göre cereyân eder, ve o ölçü ondan önce konmuştur, zâira insan işini düşünmeden yapar, yani ölçü ondan önce oradadır. Dil, "önce konmuş ölçü"yü, "ölçmek" fiilinden alınan bir isimle söyler, böylece hulk, aslında "insanın kendine göre yaratılmış şekli" olur. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: tabiat, bir ölçünün eseridir, ve ölçü, ölçenden önce gelir; dil, bu "önce gelmiş ölçü"yü, "ölçülmüş şey" diye söyler, ve bu, aklın ilk sezgisidir.
 ilave:
 
 ## K|خلق|فَخَلَقَ|yuzey|Fiil|fe'ale|Mâzî
 arapça: فَخَلَقَ
 bilgi: tür: Fiil; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: böylece halk eyledi
-tercüme:
+tercüme: böylece halk eyledi ⟨Ne⟩ Bu, "ve böylece halk etti, yaratıverdi" demektir: başındaki fâ harfi fiile ait değildir, önceki cümleyi buna bağlayan bir edattır, ve mânâsı "ardından, böylece" demektir; gövde ise mâzî zamanda "o, halk etti" olan خَلَقَ fiilidir. ⟨Nasıl⟩ Gövde خَلَقَ'nın mâzî hâlidir, "o, halk etti" demektir; önüne fâ gelince, fiil önceden gelen olaya bağlanır, ve cümlenin havası "sonra, böylece" olur. Fâ, zamânî sırayı bildiren edattır, zâira "ve"nin aksine, iki olayın yan yana değil, alt alta gelmesini söyler. ⟨Neden⟩ Hâdisât birbirini takip eder, ve hikâye eden kimse, her hadiseyi "ardından" diyerek söylemek ister, zâira dinleyici, olayların sırasını kendisi anlasa bile, söyleyenin dilinde o sırayı duymak ister; sırayı duymak, güven duymaktır, zâira dünya sırayla akar. Dil, bu "ardından" mânâsını, fâ harfi gibi küçük bir sesle söyler, zâira hikâyede önemli olan olayların kendisidir, bağlayan değil, ve bağlayan ne kadar küçükse, olay o kadar görünür olur. ⟨Neden 2⟩ Bu, dilin umumî bir ihtiyacıdır: anlatı, zamanı taklit eder, ve zamanın en temel hâli sıradır; her dil, olayları bağlarken iki lâfız kullanır, biri sırayı, diğeri yan yana gelişi bildirir, ve sıra bildiren edat, hikâyenin omurgasıdır, zâira hikâye, olayların omurgasıdır. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: şeyler ardında birbirini izler, zâira zaman, "bir şey bitmeden diğeri başlamaz" diye akar, ve akıl, "sonra"yı duymadan "önce"yi anlar. Dil, zamanın bu sırasını, küçük bir harfle fiilin başına yapıştırır, böylece cümle, zaman gibi akar, ve dinleyici akışı hissederek hikâyeye bağlanır.
 ilave:
 
-## K|خلق|خَلَقْنَٰهُمْ|yuzey|İsim|fe'ale|Mâzî
-arapça: خَلَقْنَٰهُمْ
-bilgi: tür: İsim; bâb: fe'ale; zaman: Mâzî; kelime biçimi
+## K|خلق|خَلَقْنَىٰهُمْ|yuzey|Fiil|fe'ale|Mâzî
+arapça: خَلَقْنَىٰهُمْ
+bilgi: tür: Fiil; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: onları halk eyledik
-tercüme:
+tercüme: onları halk eyledik ⟨Ne⟩ Bu, "onları halk ettik, yarattık" demektir: mâzî zaman, fail "biz (çoğul)", nesne "onlar (müzekker çoğul)" demektir. ⟨Nasıl⟩ Gövde خَلَقَ'nın mâzî hâlidir; arkasındaki نَا eklemesi faili "biz" yapar, ondan sonraki هُمْ nesneyi "onlar" olarak bağlar, böylece kelime, faili de nesneyi de bünyesinde taşır, "onları yaratan biz" demektir. ⟨Neden⟩ Nesne zamiri fiile yapışır, sebebi "onu" kelimesindekiyle aynıdır, zâira iş nesneden ayrı düşünülemez, ve cümlenin tek nefeste bitmesi dilin kâfidir; bu, önceki satırdaki umumî kâidenin aynı uygulamasıdır. Fail zamiri ise fiilin bünyesine girer, zâira fail de nesne kadar işten ayrılamaz, işi yapan kimse, işin ta kendisidir. Kişi azdır, sabittir: ben, sen, o, biz, siz, onlar; bu azlık yüzünden dil, onlar için ayrı kelimeler yaratmak zorunda kalmamıştır, küçük eklerle her fiilin üstüne yapışmaları hem tasarruf hem birliktir, zâira faili fiilden ayırmak, işi yapanı işten ayırmak olur. ⟨Neden 2⟩ Peki fail ve nesne neden aynı fiilde toplanır? Çünkü bir işin tam resmi, yapanı ve yapılanı birlikte görmektir: "yaptık" dediğinde, "biz" ve "bir şey" aynı anda zihne gelir, ve bu, işin hakikatidir. Dil, bu hakikati tek kelimeyle söyler, zâira hakikat birdir, ve bölünemez. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: her iş bir yapan ve bir yapılanı gerektirir, ve bu ikisi insan hayatında öyle sabittir (kişi azdır, şey bellidir) ki dil, onları fiilin bünyesine ekler; böylece "yaptık" demek, yapanı da yapılanı da söylemektir, zâira ikisi de fiilin içinde görünür.
 ilave:
 
-## K|خلق|نَخْلُقكُّم|yuzey|İsim|fe'ale|Muzâri
-arapça: نَخْلُقكُّم
-bilgi: tür: İsim; bâb: fe'ale; zaman: Muzâri; kelime biçimi
+## K|خلق|نَخْلُقكُمْ|yuzey|Fiil|fe'ale|Muzâri
+arapça: نَخْلُقكُمْ
+bilgi: tür: Fiil; bâb: fe'ale; zaman: Muzâri; kelime biçimi
 duz_tercume: sizi halk ederiz
-tercüme:
+tercüme: sizi halk ederiz ⟨Ne⟩ Bu, "sizi halk ederiz, yaratırız" demektir: muzâri' zaman, fail "biz (çoğul)", nesne "siz (çoğul)" demektir. ⟨Nasıl⟩ Gövde خَلَقَ'nın muzâri' hâlidir, başındaki ن eklemesi faili "biz" yapar, fiilin sonunda gelen كُم nesneyi "siz (çoğul)" olarak bağlar. Kelimede iki kaf görürsün, zâira fiil damme ile biter, nesne zamiri de damme ile başlar, ve iki açık ses üst üste gelince aralarına sakin bir kaf konur, böylece kelime نَخْلُقكُمْ biçiminde yazılır. ⟨Neden⟩ Peki sakin harf neden konur? Çünkü iki damme yan yana gelirse, okuyanın ağzı iki sefer açılır, ve bu iki açılış arasında bir kapalılık olmazsa ses boğulur; dil, her açık ses arasında bir kapalılık ister, tıpkı nefesin her açılış arasında bir durak ister gibi. Bu kâide, nesne zamirlerinin fiile yapıştığı her yerde yürür, zâira nesne zamiri, fiilin sonundaki harekeyle çarpışır, ve bu çarpışma her seferinde sakin bir harfle çözülür. ⟨Neden 2⟩ Sesin bu kâidesi, dilin bütün kelimelerinde cereyân eder: iki vokâl arasına bir sâkin konmazsa, sesler birbirine karışır, ve kelime anlaşılmaz olur. Dil, bu sesi korumak için, sâkin harfi bir köprü gibi koyar, ve iki ses bu köprüden güvenle geçer. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: ses, açılış ve kapalılığın dönüşüdür, ve dil, her açılışın ardından bir kapalılık koyar; bu kapalılaşma, sesin ritmidir. Kelimenin bünyesine giren sakin harf, bu ritmin ifadesidir, zâira dil, sesin ritmini bozmaz, bozarsa kelime konuşanın ağzında erir.
 ilave:
 
-## K|خلق|وَخَلَقْنَٰكُمْ|yuzey|İsim|fe'ale|Mâzî
-arapça: وَخَلَقْنَٰكُمْ
-bilgi: tür: İsim; bâb: fe'ale; zaman: Mâzî; kelime biçimi
+## K|خلق|وَخَلَقْنَىٰكُمْ|yuzey|Fiil|fe'ale|Mâzî
+arapça: وَخَلَقْنَىٰكُمْ
+bilgi: tür: Fiil; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: ve sizi halk eyledik
-tercüme:
+tercüme: ve sizi halk eyledik ⟨Ne⟩ Bu, "ve sizi halk eyledik" demektir: başındaki vâv, önceki cümleyi buna bağlar, gövde "halk ettik" olan mâzî fiildir, nesnesi "siz (çoğul)" demektir. ⟨Nasıl⟩ Gövde خَلَقَ'nın mâzî hâlidir; arkasındaki نَا eklemesi faili "biz" yapar, ondan sonraki كُم nesneyi "siz (çoğul)" olarak bağlar, başındaki vâv ise fiile yapışmamış, önceki cümleyi "ve" diye bağlayan bir edattır. Fâ'nın aksine, vâv "ardından" değil "birlikte, ve" der, ve iki cümleyi aynı konumda, yan yana koyar. ⟨Neden⟩ Peki dil, neden iki farklı bağ edatı icât etti? Çünkü cümleler birbirine iki türlü bağlanır: biri sıra, bir diğeri ardında gelmek; diğeri yan yana, birlikte olmak. Dil, bu iki bağlantıyı iki sesle söyler, zâira dinleyici, cümlelerin sırasını bilmezse, hikâyenin havasını bilmez: "ardından" diyen cümle zamanı, "birlikte" diyen cümle hâli taşır, ve bu, umumî bir kâidedir, zâira bütün dillerde sıralı ve yan yana bağlayan iki ayrı edat vardır, bu iki edatın mânâsı, düşünceye göre iki şeyi birbirine bağlamanın iki yoludur. ⟨Neden 2⟩ Bu iki edat, düşüncenin iki temel hareketini yansıtır: biri zamanı, diğeri mekânı; biri "sonra"yı, diğeri "birlikte"yi. Dil, bu iki hareketi iki sesle söyler, zâira düşünce, bu iki hareketle akar. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: akıl, şeyleri iki türlü toplar, ya bir arada ya bir ardında, ve bu iki toplama, düşüncenin iki temel hâlidir. Dil, düşüncenin bu iki hâlini, iki küçük harfle söyler, zâira düşünce, dilin gölgesidir, ve gölge, düşüncenin şeklinden ayrılamaz.
 ilave:
 
 ## K|خلق|خُلِقَتْ|yuzey|Fiil|fe'ale|Mâzî
 arapça: خُلِقَتْ
 bilgi: tür: Fiil; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: halk olundu (müennes)
-tercüme:
+tercüme: halk olundu (müennes) ⟨Ne⟩ Bu, "halk olundu, yaratıldı" demektir, ve müennes bir ismin, yani dişili bir varlığın yaratıldığını söyler; fail fiilin bünyesinde gizlidir, yani "kimin yarattığı" fiilin kendisinde söylenmemiştir. ⟨Nasıl⟩ Gövde خُلِقَتْ biçimindedir: ilk harf damme, ikinci harf fetha'dır, ve bu damme-fetha kalıbı fiilin meçhul, yani edilgen olduğunu bildirir, fail gizlidir, fiil "yaratıldı" diye söylenir. Sondaki ت harfi ise failin müennes tekil olduğunu gösterir, böylece kelime "o, yaratıldı (müennes)" demektir. ⟨Neden⟩ Peki dil, neden faili gizleyen bir fiil hâli icât etti? Çünkü bazen fail, işten daha az önemlidir: kırık kâseyi gören kimse, kâseyi kırana bakmaz, "kâse kırıldı" der, zâira göz önce nesneyi görür, sonra faili düşünür. Faili gizleyerek, dil, nesneyi öne çıkarır, zâira dinleyicinin dikkati nesneye yönelir, ve bu bazen gerektir, bazen hikmetli, bazen de bir saygıdır. Yaratma fiilinde bu hâl çok tabiîdir, zâira yaratılan şey, yaratandan önce akla gelir, ve "yaratıldı" demek, yaratılanın başlı başına bir hâli olduğunu söylemektir. ⟨Neden 2⟩ Meseleyi derine indirince: her hâdise, nesne üzerinde cereyân eder, ve göz nesneyi görür; fail, akılda bir tahmindir, zâira her işin bir yapanı vardır, fakat bu yapan, işten önce görünmez, sonra tahmin edilir. Dil, bu "nesne önce, fail sonra" sırasını, meçhul fiil hâliyle verir, böylece cümle, gözün gördüğü sırayı taklit eder. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: biz şeyleri önce "var olan" olarak görürüz, sonra "yapılmış" olarak düşünürüz, ve "yapan"ı en son sorarız. Dil, bu "önce nesne, sonra fail" sırasını, meçhul fiil hâliyle verir, ve bu hâl, dilin gözünün sırasıdır, zâira dil, gördüğünü söyler.
 ilave:
 
 ## K|خلق|يُخْلَقْ|yuzey|Fiil|fe'ale|Muzâri
 arapça: يُخْلَقْ
 bilgi: tür: Fiil; bâb: fe'ale; zaman: Muzâri; kelime biçimi
 duz_tercume: halk oluna
-tercüme:
+tercüme: halk oluna ⟨Ne⟩ Bu, "halk oluna, yaratılsın" demektir: bir şeyin yaratılmasının arzu veya şart hâlinde söylenmesi, fail fiilin bünyesinde gizlidir. ⟨Nasıl⟩ Gövde خَلَقَ'nın muzâri' hâlidir, fakat kelime يُخْلَقْ biçimindedir: ilk harf damme, ikinci harf fetha'dır, ve bu damme-fetha kalıbı fiilin meçhul olduğunu bildirir, yani "yaratılır", fail gizlidir. Sondaki sükûn ise meczum kipini bildirir: muzâri' fiilin sonu damme ile biterse "yaratılıyor" diye hakîkaten söylenir, son harfi sükûn ile kesilirse cümle "yapılsın, olsun" diye arzu, şart veya menfî emir hâline girer, böylece kelime "yaratılsın, halk oluna" demektir. ⟨Neden⟩ Peki dil, neden "yapılsın" diye ayrı bir hâl icât etti? Çünkü hâdisâtın üç hâli vardır: olmuş, oluyor, olacak; ilk ikisi gerçek, diğeri arzu, ve arzu gerçekten farklıdır, zâira arzu, "henüz olmayan"ın söylenebilmesi demektir. "Henüz olmayan"ı söyleyen dil, gerçekleri söyleyen dilden farklı bir ses ister, zâira "olmuş"un sesi, "olacak"ın sesi olamaz. Fiilin sonundaki damme "iş bitmiştir" sesidir, sükûn ise "iş durmuştur, bekler" sesidir, ve dil, arzu hâlinde fiilin sonunu sükûna çevirerek, "bu, henüz gerçekleşmemiştir, fakat istenmiştir" der. ⟨Neden 2⟩ Sükûnun sessizliği, arzunun sessiz beklentisidir: "yapılsın" diyen kimse, işi bitirmez, onu bir başkasına bırakır, ve bu bırakış sessizdir. Dil, bu sessizliği, sesin durmasıyla söyler. ⟨Esas⟩ İnsan sezgisinin ilk esasına varınca: dil, zamanın üç hâlini ve arzunun bir hâlini, fiilin sonundaki sesle söyler; arzu, "henüz olmayan"ın dilde ifadesidir, ve "henüz olmayan"ı söyleyen dil, sesin de "henüz bitmemiş" olmasını ister, fakat bitmediği için de sessiz kalır.
 ilave:

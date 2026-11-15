@@ -1,4 +1,4 @@
-durum: bos
+durum: tercume-yapiliyor
 bolum: kelime — Kelime biçimleri
 tercume_eden: -
 inceleyen: -
