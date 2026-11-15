@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matematik Gösterimi</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fffdf6;color:#2b2410;font-family:Georgia,serif}
+main{max-width:960px;margin:0 auto;padding:16px}
+h2{font-size:19px;margin:30px 0 4px}.alt{color:#6d6650;font-size:13.5px;margin:0 0 8px}
+.ar{font-family:Amiri,serif}
+.katex{font-size:1.12em}
+.kirmizi{color:#b3341e}.yesil{color:#3f7f3a}
+.lej{font-size:13px;color:#6d6650;columns:2;margin-top:6px}
+.blok{overflow-x:auto}
+svg text{font-family:Georgia,serif}
+</style></head><body><main>
+
+<p class="alt">Formüllerde kelimeler Latin harfiyle yazıldı (Arapça yazı formül içinde sağdan sola dönüp sırayı bozuyordu): <span class="ar">HLQ = خلق</span> (kök; alt indis $T$ birinci, $P$ ikinci asıl) · <span class="ar">mahlūq = مَخْلُوق · hilqa = خِلْقَة · hulq = خُلُق · halq = خَلْق · ahlāq = أَخْلَاق · halqā = خَلْقَاء · haliqa = خَلِقَ · muhallaq = مُخَلَّق · ihtilāq = اِخْتِلَاق</span></p>
+<h2>159. Türetme ağacı (Gentzen usulü): ispat yalnız formül ve kaide adıdır</h2>
+<p class="alt">Çizginin üstündekiler öncül, altındaki netice; çizginin sağındaki işaret kullanılan kaidedir. "Neden?" sorusunun cevabı her çizginin üstünde durur. Kırmızı öncül lügatten ispat edilmemiş olandır.</p>
+<div class="blok">
+$$
+\dfrac{
+  \dfrac{
+    \dfrac{\color{#b3341e}{T(n)}\quad[\text{inanç}] \qquad \forall x\,\big(T(x)\to\exists h\,H(x,h)\big)\quad[D_1]}
+          {\exists h\,H(n,h)}\;{\scriptstyle \forall E,\ \to E}
+    \qquad N(n)
+  }{\exists h\,\big(H(n,h)\wedge N(n)\big)}\;{\scriptstyle \wedge I}
+  \qquad
+  \mathcal{M}(\mathit{hulq})=\lambda h.\,\exists x\,\big(H(x,h)\wedge N(x)\big)\quad[L_2]
+}{
+  \mathit{hulq}\;\lhd\;\mathit{HLQ}_T
+}\;{\scriptstyle M_2}
+$$
+$$
+\dfrac{
+  \mathcal{M}(\mathit{HLQ}_T)=\lambda x.T(x)\ [L_1]
+  \qquad
+  \mathcal{M}(\mathit{haliqa})=\lambda x.\,Y(x)\ [L_4]
+  \qquad
+  T(x)\wedge\kappa(x)\;\color{#b3341e}{\nvdash}\;Y(x)\ \ \text{(hiçbir kayıt }\kappa\text{ için)}
+}{
+  \color{#b3341e}{\mathit{haliqa}\;\not\lhd\;\mathit{HLQ}_T}
+}
+$$
+$$
+\dfrac{
+  Y(x)\equiv P(x)\wedge U(x)\quad[L_1,L_4]
+}{
+  \color{#3f7f3a}{\mathit{haliqa}\;\lhd\;\mathit{HLQ}_P}
+}
+$$
+</div>
+<div class="lej">
+$T(x)$: $x$ ölçülüp tayin edilmiştir (birinci asıl, takdîr)<br>
+$P(x)$: $x$ düz, pürüzsüzdür (ikinci asıl, melâset)<br>
+$H(x,h)$: $h$, $x$'in hey'etidir (kalıbı)<br>
+$N(x)$: $x$ nefstir · $U(x)$: $x$ kullanılmıştır<br>
+$Y(x)$: $x$ eskimiştir · $\mathcal M(w)$: $w$ kelimesinin manası<br>
+$a\lhd b$: $a$, $b$'den türer ⇔ $\mathcal M(a)=\mathcal M(b)\wedge\kappa$ (bir kayıt eklenerek) $[M_2]$
+</div>
+
+<h2>160. Küme formülleri: her mana bir küme, türeme bir alt küme alma</h2>
+<p class="alt">Kelimenin tarifi küme yazılışıyla verilir. Bir mananın ötekinden türediği, alt küme işaretinden okunur; iki aslın buluştuğu yer kesişimdir.</p>
+<div class="blok">
+$$
+\begin{aligned}
+\mathcal T &= \{x : T(x)\} &&\text{takdîr edilmiş şeyler}\quad(\mathit{HLQ}_T)\\
+\mathit{mahl\bar uq} &= \mathcal T &&\text{yaratılmış}\\
+\mathit{hilqa} &= \{h : \exists x\in\mathcal T,\ H(x,h)\} &&\text{kalıp, yaradılış}\\
+\mathit{hulq} &= \{h\in\mathit{hilqa} : \exists x\in\mathcal N,\ H(x,h)\}\ \subsetneq\ \mathit{hilqa} &&\text{iç kalıp: huy}\\
+\mathit{halq}_{\text{sûret}} &= \mathit{hilqa}\setminus\mathit{hulq} &&\text{dış kalıp: şekil}\\
+\mathit{ahl\bar aq} &= \mathcal P_{\ge 2}(\mathit{hulq}) &&\text{huyların topluluğu}\\[4pt]
+\mathcal P &= \{x : P(x)\} &&\text{düz şeyler}\quad(\mathit{HLQ}_P)\\
+\mathit{halq\bar a} &= \mathcal P\cap\{\text{kaya}\} &&\text{düz kaya}\\
+\mathit{haliqa} &= \mathcal P\cap\mathcal U &&\text{kullanılarak düzleşmiş: eski}\\
+\mathit{muhallaq} &= \mathcal T\cap\mathcal P &&\text{hem ölçülmüş hem düzlenmiş}\\[4pt]
+\mathit{haliqa}\ &\not\subseteq\ \mathcal T \quad\Longrightarrow\quad \mathit{HLQ}_T\neq\mathit{HLQ}_P &&\text{iki asıl vardır}
+\end{aligned}
+$$
+</div>
+
+<h2>161. Mana uzayı: her kelime bir vektör, türeme bir eksen boyunca bir adım</h2>
+<p class="alt">Uzayın eksenleri asıllar ve kayıtlardır. Kelime, hangi asıl ve hangi kayıtları taşıyorsa o koordinatlarda 1 olan bir noktadır. İki kelimenin farkı bir birim vektörse biri ötekinden bir kayıtla türemiştir; fark vektörü "neden?" sorusunun cevabıdır. İki asıl birbirine dik iki eksendir.</p>
+<div class="blok">
+$$
+\mathbb B^{7}=\{0,1\}^{7},\qquad (t,\ p,\ h,\ n,\ c,\ u,\ s)
+$$
+$$
+\begin{aligned}
+\mathit{HLQ}_T&=e_t, & \mathit{hilqa}&=e_t+e_h, & \mathit{hulq}&=e_t+e_h+e_n, & \mathit{ahl\bar aq}&=e_t+e_h+e_n+e_c,\\
+\mathit{ihtil\bar aq}&=e_t+e_s, & \mathit{halq\bar a}&=e_p, & \mathit{haliqa}&=e_p+e_u, & \mathit{muhallaq}&=e_t+e_p
+\end{aligned}
+$$
+$$
+\mathit{hulq}-\mathit{hilqa}=e_n\ \ (\text{neden? nefse ait olduğu için}),\qquad
+\lVert\mathit{haliqa}-\mathit{HLQ}_T\rVert_1=3\ \ (\text{komşu değil})
+$$
+</div>
+<svg viewBox="0 0 900 430" width="100%">
+ <defs><marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0L10,5L0,10z" fill="#2b2410"/></marker></defs>
+ <g stroke="#bbb" stroke-dasharray="4 3">
+  <line x1="120" y1="360" x2="840" y2="360"/><line x1="120" y1="360" x2="120" y2="40"/><line x1="120" y1="360" x2="330" y2="250"/>
+ </g>
+ <text x="845" y="364" font-size="13">p (düzlük)</text><text x="110" y="34" font-size="13" text-anchor="middle">h → n → c (kalıp, nefs, çokluk)</text><text x="338" y="246" font-size="13">s (sahtelik)</text>
+ <g stroke="#2f6fb3" stroke-width="3" marker-end="url(#o)">
+  <line x1="120" y1="360" x2="120" y2="268"/><line x1="120" y1="260" x2="120" y2="178"/><line x1="120" y1="170" x2="120" y2="88"/>
+  <line x1="120" y1="360" x2="244" y2="295"/>
+ </g>
+ <g stroke="#3f7f3a" stroke-width="3" marker-end="url(#o)"><line x1="120" y1="360" x2="472" y2="360"/><line x1="480" y1="360" x2="640" y2="282"/></g>
+ <g fill="#2b2410">
+  <circle cx="120" cy="360" r="6" fill="#b8860b"/><circle cx="120" cy="265" r="6"/><circle cx="120" cy="175" r="6"/><circle cx="120" cy="85" r="6"/><circle cx="250" cy="292" r="6" fill="#b3341e"/>
+  <circle cx="480" cy="360" r="6" fill="#3f7f3a"/><circle cx="645" cy="280" r="6" fill="#3f7f3a"/><circle cx="300" cy="360" r="6" fill="#2c8c7c"/>
+ </g>
+ <g font-size="20" font-family="Amiri,serif">
+  <text x="100" y="392">خلق (e_t)</text><text x="132" y="270">خِلْقَة</text><text x="132" y="180">خُلُق</text><text x="132" y="90">أَخْلَاق</text><text x="258" y="290" fill="#b3341e">اِخْتِلَاق</text>
+  <text x="470" y="392" fill="#3f7f3a">خَلْقَاء (e_p)</text><text x="655" y="278" fill="#3f7f3a">خَلِقَ = e_p + e_u</text><text x="270" y="392" fill="#2c8c7c">مُخَلَّق</text>
+ </g>
+ <g font-size="12" fill="#b3541e"><text x="128" y="318">+e_h</text><text x="128" y="225">+e_n</text><text x="128" y="135">+e_c</text><text x="175" y="318">+e_s</text><text x="560" y="312">+e_u</text></g>
+ <text x="450" y="420" font-size="12.5" text-anchor="middle" fill="#6d6650">Mavi yol birinci aslın (e_t), yeşil yol ikinci aslın (e_p) kayıtlarıdır. مُخَلَّق iki aslın toplamı olduğu için iki eksenin arasında durur.</text>
+</svg>
+<p class="alt">Formüllerdeki yüklemleri ve eksenleri ben seçtim. [L1], [L2] ve [L4] lügat dayanakları (158'deki) hafızadandır, kitaplardan yoklanmadı.</p>
+</main></body></html>

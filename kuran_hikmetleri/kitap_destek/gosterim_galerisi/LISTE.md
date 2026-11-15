@@ -198,3 +198,6 @@ Yeni şart: kutu yok, kutuya yazı yok, yerleşim düzeni yok, bağlantı hattı
 | # | Usul | Durum |
 |---|---|---|
 | 158 | Kademeli ispat (Lamport usulü): numaralı dayanaklar, adım adım ispat, her adımda "neden?" ve "itiraz", tutmayan adım kırmızı | ✅ |
+| 159 | Türetme ağacı (Gentzen): yalnız formül ve kaide adı | ✅ |
+| 160 | Küme formülleri: mana = küme, türeme = alt küme, iki aslın buluşması = kesişim | ✅ |
+| 161 | Mana uzayı {0,1}^7: kelime = vektör, türeme = birim adım, fark vektörü = "neden?" | ✅ |
