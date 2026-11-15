@@ -1,4 +1,4 @@
-durum: inceleme-tamam
+durum: inceleniyor
 tercume_eden: tercüman
 bolum: kok — Kök anlamı ve fiil sapı
 tercume_eden: tercüman
