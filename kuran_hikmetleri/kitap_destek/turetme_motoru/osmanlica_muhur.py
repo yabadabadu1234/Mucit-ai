@@ -13,7 +13,9 @@ KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 GIRDI = os.path.join(KOK, 'kelime_kaydi')
 CIKTI = os.path.join(GIRDI, 'osmanlica')
 HAFIZA = os.path.join(CIKTI, '_hafiza.jsonl')
-UC = 'https://evren-llmapi.ssyz.org.tr/v1/chat/completions'
+SAGLAYICI = os.environ.get('OSM_SAGLAYICI', 'evren')
+UC = {'evren': 'https://evren-llmapi.ssyz.org.tr/v1/chat/completions',
+      'ovh': 'https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions'}[SAGLAYICI]
 ARAP = re.compile(r'[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]')
 LATIN_KELIME = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû][A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû'’‘\-]{2,}")
 TRANSLIT = re.compile(r'[ḍṣṭẓḥšġḫʔʕʿʾāīūēōṯḏǧŝñ]')
@@ -159,7 +161,10 @@ SISTEM = ("Sen Arapça kök sözlüğünü Osmanlı Türkçesine (Latin harfli; 
 def akis_oku(anahtar, govde):
     """SSE akışıyla yanıtı toplar: bağlantı sürekli veri taşıdığı için aradaki vekil ve geçit boşta kesmez; 
     okuma zaman aşımı toplam süreye değil, iki veri arasındaki boşluğa uygulanır."""
-    r = urllib.request.Request(UC, govde, {'X-API-Key': anahtar, 'Content-Type': 'application/json', 'Accept': 'text/event-stream'})
+    baslik = {'Content-Type': 'application/json', 'Accept': 'text/event-stream', 'User-Agent': 'Mozilla/5.0'}
+    if SAGLAYICI == 'evren':
+        baslik['X-API-Key'] = anahtar
+    r = urllib.request.Request(UC, govde, baslik)
     resp = urllib.request.urlopen(r, timeout=45)
     parca, jeton = [], 0
     for ham in resp:
@@ -183,7 +188,8 @@ def akis_oku(anahtar, govde):
 
 
 def sor(anahtar, model, kimlik, ogeler):
-    govde = json.dumps({'model': model, 'max_tokens': 100000, 'reasoning_effort': 'medium', 'stream': True, 'stream_options': {'include_usage': True},
+    ek = {'reasoning_effort': 'medium'} if SAGLAYICI == 'evren' else {}
+    govde = json.dumps({'model': model, 'max_tokens': 100000, 'stream': True, 'stream_options': {'include_usage': True}, **ek,
                         'messages': [{'role': 'system', 'content': SISTEM},
                                      {'role': 'user', 'content': 'DOSYANIN BÜTÜN ARAPÇA VE İNGİLİZCE İÇERİĞİ (kaynak; tercüme edilecek değil, mânâyı çıkarmak içindir):\n' + json.dumps(kimlik, ensure_ascii=False)},
                                      {'role': 'user', 'content': 'ÇEVRİLECEK ÖĞELER:\n' + json.dumps(ogeler, ensure_ascii=False)}]}).encode()
@@ -363,8 +369,25 @@ def kok_dosyalari(kume):
 if __name__ == '__main__':
     kume, komut = sys.argv[1], sys.argv[2]
     hafiza_yukle()
-    anahtar, model = os.environ['EVREN_API_KEY'], sys.argv[3]
+    anahtar, model = os.environ.get('EVREN_API_KEY', ''), sys.argv[3]
     dosya_h = open(HAFIZA, 'a', encoding='utf-8')
+    if komut == 'toplu':
+        paralel_dosya = int(sys.argv[4])
+
+        def dosya_isle(f):
+            if os.path.exists(os.path.join(CIKTI, kume, 'kokler', os.path.basename(f))):
+                return f
+            for _ in range(3):
+                cevir_dosya(anahtar, model, f, dosya_h)
+                if tamam_mi(json.load(open(f, encoding='utf-8'))):
+                    break
+            yaz(f, kume)
+            print('DOSYA', os.path.basename(f), sayac, flush=True)
+            return f
+
+        with concurrent.futures.ThreadPoolExecutor(paralel_dosya) as ex:
+            list(ex.map(dosya_isle, kok_dosyalari(kume)))
+        print('bitti', sayac, flush=True)
     if komut == 'tek':
         f = os.path.join(GIRDI, kume, 'kokler', sys.argv[4] + '.json')
         for _ in range(3):
