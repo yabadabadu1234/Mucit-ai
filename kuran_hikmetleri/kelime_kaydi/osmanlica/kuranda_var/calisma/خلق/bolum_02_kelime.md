@@ -1,4 +1,4 @@
-durum: tercume-tamam
+durum: tercume-yapiliyor
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-1
 inceleyen: -

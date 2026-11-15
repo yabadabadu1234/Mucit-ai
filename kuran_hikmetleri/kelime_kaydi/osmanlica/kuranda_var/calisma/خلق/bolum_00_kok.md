@@ -1,4 +1,4 @@
-durum: bos
+durum: tercume-yapiliyor
 bolum: kok — Kök anlamı ve fiil sapı
 tercume_eden: tercuman-2
 inceleyen: inceleyici-0
