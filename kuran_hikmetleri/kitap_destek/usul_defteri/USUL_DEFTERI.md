@@ -64,8 +64,18 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 | 58 | BioFabric (düğüm yatay çizgi, kenar dikey çizgi) | çizge | Longabaugh 2012 (BMC Bioinformatics) | web aramasında bulundu (künye arama sonucundan) | https://doi.org/10.1186/1471-2105-13-275 | her kenar ayrı sütun, kesişme yok | DENENMEDİ |
 | 59 | Kovan çizimi (hive plot) | çizge | Krzywinski vd. 2012 (Briefings in Bioinformatics) | web aramasında bulundu (künye arama sonucundan) | https://doi.org/10.1093/bib/bbr069 | düğüm eksene kurala göre konur, estetiğe göre değil | DENENMEDİ |
 | 60 | Anlamsal zemin (semantic substrates) | çizge | Shneiderman & Aris 2006 (IEEE TVCG) | web aramasında bulundu (künye arama sonucundan) | — | düğümler vasfa göre bölgelere konur | DENENMEDİ |
+| 61 | Diyagramın sözden üstünlüğü: yere göre dizinleme | kanıt | Larkin & Simon 1987 | künye doğrulandı (Crossref) | https://doi.org/10.1111/j.1551-6708.1987.tb00863.x | birlikte gereken bilgi yan yana: arama azalır, tanıma kolaylaşır | KULLANILDI: kompakt_usul/USUL.md |
+| 62 | Grafik sunumun otomatik tasarımı (ifade gücü, etkililik) | çerçeve | Mackinlay 1986 | künye doğrulandı (Crossref) | https://doi.org/10.1145/22949.22950 | veri türüne göre en etkili işaret seçimi | KULLANILDI: kompakt_usul/USUL.md |
+| 63 | Grafik idrak sırası | kanıt | Cleveland & McGill 1984 | künye doğrulandı (Crossref) | https://doi.org/10.1080/01621459.1984.10478080 | konum > uzunluk > açı > alan > renk doğruluğu | KULLANILDI: kompakt_usul/USUL.md |
+| 64 | VoG: sözlükle çizge özeti (MDL) | sıkıştırma | Koutra, Kang, Vreeken, Faloutsos 2014 | künye doğrulandı (Crossref) | https://doi.org/10.1137/1.9781611973440.11 | yıldız, klik, zincir sözlüğüyle en kısa tarif | KULLANILDI: kompakt_usul/USUL.md |
+| 65 | Formal kavramlarla ikili matris çarpanlaması | sıkıştırma | Belohlavek & Vychodil 2010 | künye doğrulandı (Crossref) | https://doi.org/10.1016/j.jcss.2009.05.002 | tabloyu en az kavram dikdörtgeniyle örter | KULLANILDI: kompakt_usul/USUL.md |
+| 66 | Krimp: sıkıştıran sık kalıplar | sıkıştırma | Vreeken, van Leeuwen, Siebes 2011 | künye doğrulandı (Crossref) | https://doi.org/10.1007/s10618-010-0202-x | kalıp kümesini MDL ile seçer | KULLANILDI: kompakt_usul/USUL.md |
+| 67 | Ön-dikkatli görme | kanıt | Healey & Enns 2012 | künye doğrulandı (Crossref) | https://doi.org/10.1109/tvcg.2011.127 | bakışta ayırt edilen özellikler | KULLANILDI: kompakt_usul/USUL.md |
+| 68 | Bilişsel uyum: tablo mu grafik mi | kanıt | Vessey 1991 | künye doğrulandı (Crossref) | https://doi.org/10.1111/j.1540-5915.1991.tb00344.x | suâl türüne uyan gösterim hızlıdır | KULLANILDI: kompakt_usul/USUL.md |
+| 69 | En kısa tarif ilkesi (MDL) | çerçeve | Grünwald 2005 | künye doğrulandı (Crossref) | https://doi.org/10.7551/mitpress/1114.003.0004 | en iyi model, veriyi en kısa anlatandır | KULLANILDI: kompakt_usul/USUL.md |
 
 ## Güncelleme kaydı
 - 2026-11-15: ilk tarama, 49 kayıt. Tarama kapsamı: sunuş, hiyerarşi, çizge, küme, 3B, öğrenme kanıtı. Dünya literatürünün **tamamı** taranmadı ve taranamaz (bkz. `KAMIL_ISPAT_DURUMU.md`, Teorem 4).
 - Künye doğrulanamayan kayıtlar (eşleşme < 0.5): Kavram haritası (Novak & Gowin), Information Cube (Crossref başka eser getirdi), Kavram haritası meta-analizi (Schroeder vd. 2018; Crossref 2023 tarihli başka bir meta-analiz getirdi). Bunlar hafızadan kayıtlıdır; doğrulanmadı. (Pad++ ve Koni ağacı başlıkları Crossref'te kısa yazıldığı için ölçü sıfır verdi; başlıklar elle bakılınca doğru eserdir.)
 - 2026-11-15 (2): web taraması, 11 yeni kayıt (50–60): doğrusal diyagram ve dayanakları, tablolu Euler, iç içe çizgi diyagramı, BioFabric, kovan çizimi, anlamsal zemin.
+- 2026-11-15 (3): hedefli tarama (kompaktlık + anlaşılma vakti), 9 yeni kayıt (61–69).
