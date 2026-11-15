@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>خلق kafesi (üç boyut)</title>
+<style>
+:root{--bg:#fffdf6;--ink:#2b2410;--line:#b5a97f;--seb:#b3541e}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:Amiri,"Noto Naskh Arabic","DejaVu Sans",sans-serif;overflow:hidden}
+#sahne{position:absolute;inset:0;touch-action:none;cursor:grab}
+#sahne:active{cursor:grabbing}
+svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.kutu{position:absolute;transform:translate(-50%,-50%);border:1.4px solid #7a6a3c;border-radius:9px;padding:5px 8px;box-shadow:0 1px 4px #0003;pointer-events:none;white-space:nowrap}
+.kutu .b{font:700 12.5px/1.25 system-ui,sans-serif;text-align:center;margin-bottom:3px;white-space:normal;max-width:210px}
+.kutu .k{display:grid;grid-template-columns:repeat(var(--c,1),auto);gap:3px 6px}
+.kelime{background:#ffffffb0;border:1px solid #a89a70;border-radius:6px;padding:1px 5px;text-align:center}
+.kelime .ar{font-size:19px;line-height:1.25;direction:rtl}
+.kelime .tr{font:10px/1.1 system-ui,sans-serif;max-width:112px;white-space:normal}
+.kelime .tg{font:8.5px/1 system-ui,sans-serif;color:#777}
+.top{background:#f1d98a}.bot{background:#e6e2d4;opacity:.75}
+.a{background:#cfe6ff}.b{background:#d8f0c6}.c{background:#ffd9b8}.h{background:#f2cfe8}.ab{background:#cfeee6}.dis{background:#e3e3e3}.esas{background:#f1d98a}
+#ctl{position:absolute;left:10px;top:8px;font:13px system-ui,sans-serif;background:#fffdf6e6;border:1px solid #d6caa0;border-radius:8px;padding:6px 8px;z-index:9999}
+#ctl button{font:12px system-ui;margin:0 2px 3px 0;padding:3px 7px;border:1px solid #a89a70;background:#fff;border-radius:6px;cursor:pointer}
+#ctl label{margin-right:8px;white-space:nowrap}
+#nota{position:absolute;right:10px;bottom:8px;font:11.5px/1.4 system-ui,sans-serif;background:#fffdf6e6;border:1px solid #d6caa0;border-radius:8px;padding:6px 9px;max-width:420px;z-index:9999}
+.hal{font:10px system-ui;fill:#8a7a55}
+.seb{font:10px system-ui,sans-serif;fill:var(--seb);paint-order:stroke;stroke:#fffdf6;stroke-width:3px}
+</style></head><body>
+<div id="sahne"><svg id="svg"></svg><div id="kutular"></div></div>
+<div id="ctl">
+ <button data-v="35,28">Genel</button><button data-v="0,90">Üstten (açı ve yarıçap)</button><button data-v="0,0">Yandan (yükseklik)</button><button data-v="90,28">Yan çapraz</button><br>
+ <label><input type="checkbox" id="cL" checked> kafes çizgisi</label><label><input type="checkbox" id="cS" checked> sebep çizgisi</label><label><input type="checkbox" id="cH" checked> halkalar</label>
+</div>
+<div id="nota"><b>Yükseklik</b> kafes katmanı (üstte en umumî) · <b>yarıçap</b> köke uzaklık (esas merkezde) · <b>açı</b> bitişiklik sırası. Sürükle: döndür, tekerlek: yakınlaştır.</div>
+<script>
+const D={"dugumler": [{"id": 0, "rank": 0, "r": 0.0, "theta": 0.0, "z": 0.0, "baslik": ["ESAS: ham maddeyi, murad edilen belli bir şey olsun diye ölçüp biçerek hazırlamak"], "kelimeler": [], "kind": "top", "renk": "ab", "n": 37}, {"id": 1, "rank": 1, "r": 500.0, "theta": 0.0, "z": -430.0, "baslik": ["eskimek, aşınmak"], "kelimeler": [{"ar": "أَخْلَقَ", "tr": "eskitti", "tag": "fiil", "kuran": ""}, {"ar": "خَلَق", "tr": "eski, yıpranmış", "tag": "sıfat", "kuran": ""}, {"ar": "خَلِقَ", "tr": "eskidi", "tag": "fiil", "kuran": ""}, {"ar": "خُلُوقَة", "tr": "eskilik", "tag": "masdar", "kuran": ""}, {"ar": "خُلْقَان", "tr": "eski şeyler, paçavra", "tag": "çoğul", "kuran": ""}], "kind": "mid", "renk": "b", "n": 6}, {"id": 2, "rank": 1, "r": 750.0, "theta": 1.4499658401183662, "z": -430.0, "baslik": ["uydurmak"], "kelimeler": [{"ar": "اِخْتَلَقَ", "tr": "uydurdu", "tag": "fiil", "kuran": ""}, {"ar": "اِخْتِلَاق", "tr": "uydurma", "tag": "masdar", "kuran": "★1"}, {"ar": "مُخْتَلَق", "tr": "uydurulmuş", "tag": "mef‘ûl", "kuran": ""}, {"ar": "مُخْتَلِق", "tr": "uyduran", "tag": "fâil", "kuran": ""}], "kind": "mid", "renk": "a", "n": 6}, {"id": 3, "rank": 1, "r": 500.0, "theta": 1.933287786824488, "z": -430.0, "baslik": ["yaratmak, var etmek"], "kelimeler": [{"ar": "تَخْلِيق", "tr": "yaratma, birleştirip yapma", "tag": "masdar", "kuran": ""}, {"ar": "خَالِق", "tr": "yaratan", "tag": "fâil", "kuran": "★12"}, {"ar": "خَلَّاق", "tr": "çok yaratan", "tag": "mübalağa", "kuran": "★2"}], "kind": "mid", "renk": "a", "n": 5}, {"id": 4, "rank": 1, "r": 750.0, "theta": 2.4166097335306103, "z": -430.0, "baslik": ["yaratılmış olan"], "kelimeler": [{"ar": "مَخْلُوق", "tr": "yaratılmış", "tag": "mef‘ûl", "kuran": ""}, {"ar": "مَخْلُوقَات", "tr": "yaratılmışlar", "tag": "çoğul", "kuran": ""}, {"ar": "مَخْلُوقِيَّة", "tr": "yaratılmışlık", "tag": "sınâî", "kuran": ""}], "kind": "mid", "renk": "a", "n": 5}, {"id": 5, "rank": 1, "r": 250.0, "theta": 0.483321946706122, "z": -430.0, "baslik": ["hazırlanmış olduğu işe yakışmak"], "kelimeler": [{"ar": "خَلُقَ", "tr": "yaraştı", "tag": "fiil", "kuran": ""}, {"ar": "خَلِيق", "tr": "lâyık", "tag": "sıfat", "kuran": ""}], "kind": "mid", "renk": "h", "n": 4}, {"id": 6, "rank": 1, "r": 1250.0, "theta": 4.349897520355098, "z": -430.0, "baslik": ["ahlâk"], "kelimeler": [{"ar": "أَخْلَاق", "tr": "ahlâk", "tag": "çoğul", "kuran": ""}, {"ar": "أَخْلَاقِيَّة", "tr": "ahlâkîlik", "tag": "sınâî", "kuran": ""}, {"ar": "أَخْلَاقِيّ", "tr": "ahlâkî", "tag": "mensûb", "kuran": ""}], "kind": "mid", "renk": "a", "n": 3}, {"id": 7, "rank": 1, "r": 250.0, "theta": 0.966643893412244, "z": -430.0, "baslik": ["düzgün ve pürüzsüz kılmak"], "kelimeler": [{"ar": "خَلَائِق", "tr": "kuyu başı düz taşları", "tag": "çoğul", "kuran": ""}, {"ar": "خَلْقَاء", "tr": "düz kaya", "tag": "müennes", "kuran": ""}], "kind": "mid", "renk": "b", "n": 3}, {"id": 8, "rank": 1, "r": 500.0, "theta": 3.383253626942854, "z": -430.0, "baslik": ["yumuşatıp hoş kılmak (koku sürmek)"], "kelimeler": [{"ar": "خَلَّقَ", "tr": "kokuladı", "tag": "fiil", "kuran": ""}], "kind": "mid", "renk": "b", "n": 3}, {"id": 9, "rank": 1, "r": 1000.0, "theta": 2.8999316802367323, "z": -430.0, "baslik": ["huy"], "kelimeler": [{"ar": "خُلُق", "tr": "huy", "tag": "isim", "kuran": "★2"}], "kind": "mid", "renk": "a", "n": 3}, {"id": 10, "rank": 1, "r": 750.0, "theta": 4.8332194670612205, "z": -430.0, "baslik": ["yaradılıştaki hâl ve suret"], "kelimeler": [{"ar": "خِلْقَة", "tr": "yaradılış, suret", "tag": "isim", "kuran": ""}, {"ar": "خِلْقِيّ", "tr": "yaradılıştan olan", "tag": "mensûb", "kuran": ""}], "kind": "mid", "renk": "a", "n": 2}, {"id": 11, "rank": 1, "r": 500.0, "theta": 3.866575573648976, "z": -430.0, "baslik": ["ölçülüp düzlenerek şekli belirmiş olmak"], "kelimeler": [{"ar": "سَهْم مُخَلَّق", "tr": "düzlenmiş ok", "tag": "terkip", "kuran": ""}], "kind": "mid", "renk": "ab", "n": 2}, {"id": 12, "rank": 2, "r": 250.0, "theta": 0.724982920059183, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "أَخْلَق", "tr": "daha lâyık / düz, pürüzsüz", "tag": "tafdîl", "kuran": ""}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 13, "rank": 2, "r": 375.0, "theta": 0.241660973353061, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "اِخْلَوْلَقَ", "tr": "hazırlandı, olmaya yakın / eskidi (elbise)", "tag": "fiil", "kuran": ""}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 14, "rank": 2, "r": 1250.0, "theta": 1.4499658401183662, "z": -860.0, "baslik": ["öfkelenmek", "olmayan huyu takınmak"], "kelimeler": [{"ar": "تَخَلَّقَ", "tr": "öfkelendi / huy edindi, takındı / uydurdu", "tag": "fiil", "kuran": ""}], "kind": "mid", "renk": "a", "n": 1}, {"id": 15, "rank": 1, "r": 250.0, "theta": 5.316541413767341, "z": -430.0, "baslik": ["ölçülüp ayrılmış pay"], "kelimeler": [{"ar": "خَلَاق", "tr": "nasip, pay", "tag": "isim", "kuran": "★6"}], "kind": "mid", "renk": "c", "n": 1}, {"id": 16, "rank": 2, "r": 250.0, "theta": 1.691626813471427, "z": -860.0, "baslik": ["ölçüp biçmek"], "kelimeler": [{"ar": "خَلَقَ", "tr": "ölçüp biçti (deri) / yarattı / uydurdu (söz, iftira)", "tag": "fiil", "kuran": "★184"}], "kind": "mid", "renk": "a", "n": 1}, {"id": 17, "rank": 2, "r": 750.0, "theta": 3.141592653589793, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "خَلُوق", "tr": "huyu sağlam / safranlı ıtır", "tag": "sıfat", "kuran": ""}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 18, "rank": 2, "r": 875.0, "theta": 2.6582707068836715, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "خَلِيقَة", "tr": "mahlûkat / mizaç", "tag": "isim", "kuran": ""}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 19, "rank": 2, "r": 625.0, "theta": 2.174948760177549, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "خَلْق", "tr": "yaratma / halk, insanlar", "tag": "masdar", "kuran": "★52"}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 20, "rank": 1, "r": 150.0, "theta": 5.799863360473465, "z": -430.0, "baslik": ["kök dışı: ödünç söz"], "kelimeler": [{"ar": "خِلْقِين", "tr": "kazan (Yunancadan)", "tag": "isim", "kuran": ""}], "kind": "mid", "renk": "dis", "n": 1}, {"id": 21, "rank": 2, "r": 500.0, "theta": 3.6249146002959147, "z": -860.0, "baslik": [], "kelimeler": [{"ar": "مُخَلَّق", "tr": "şekli belirmiş / kokulanmış", "tag": "mef‘ûl", "kuran": "★2"}], "kind": "mid", "renk": "ab", "n": 1}, {"id": 22, "rank": 3, "r": 0.0, "theta": 0.0, "z": -1290.0, "baslik": [], "kelimeler": [], "kind": "bot", "renk": "ab", "n": 0}], "kafes_kenarlari": [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [0, 7], [0, 8], [0, 9], [0, 10], [0, 11], [5, 12], [7, 12], [1, 13], [5, 13], [2, 14], [0, 15], [2, 16], [3, 16], [8, 17], [9, 17], [4, 18], [9, 18], [3, 19], [4, 19], [0, 20], [8, 21], [11, 21], [6, 22], [10, 22], [12, 22], [13, 22], [14, 22], [15, 22], [16, 22], [17, 22], [18, 22], [19, 22], [20, 22], [21, 22]], "sebep_kenarlari": [[0, 16, ["çünkü hazırlamanın ilk işi ölçmektir; ölçülmeden kesilmez"]], [0, 7, ["çünkü ham maddeyi murada uydurmak onu eğrilikten ve pürüzden arındırmaktır"]], [0, 15, ["çünkü bir iş için ayrılan şey, o iş için ölçülüp hazırlanmış paydır"]], [0, 5, ["çünkü ölçülüp hazırlanan şey hazırlandığı işe yakışır"]], [16, 3, ["çünkü ölçüp biçilen şey tamamlanınca meydana gelmiş olur"]], [16, 11, ["çünkü hem ölçüp biçilen hem düzlenen şeyin şekli belli olur"]], [7, 11, ["çünkü hem ölçüp biçilen hem düzlenen şeyin şekli belli olur"]], [7, 1, ["çünkü aşınan şey sürtülür, yüzeyi düzleşip yumuşar"]], [7, 8, ["çünkü sürülen koku kabalığı giderir, şeyi kabule şayan kılar"]], [3, 4, ["çünkü yaratma fiilinin sonucu yaratılmıştır"]], [3, 10, ["çünkü her yaratılan, bir yapı ve hâl üzere yaratılmıştır"]], [3, 2, ["çünkü olmayan sözü var göstermek, yaratmanın dille taklididir"]], [10, 9, ["çünkü yaradılışta verilen iç hâl, kişinin huyu olur"]], [9, 6, ["çünkü huy yerleşip çoğalınca bir düzen ve ilim olur"]], [9, 14, ["çünkü huyun taşması öfkedir", "çünkü başka huyu kendine yüklenmek, huyu giyinmektir"]]], "halkalar": [250.0, 500.0, 750.0, 1000.0, 1250.0], "katman_z": [0.0, -430.0, -860.0, -1290.0]};
+const q=new URLSearchParams(location.hash.slice(1));
+let yaw=+(q.get('yaw')||35)*Math.PI/180, pit=+(q.get('pitch')||28)*Math.PI/180, zoom=+(q.get('zoom')||1);
+const cL=document.getElementById('cL'),cS=document.getElementById('cS'),cH=document.getElementById('cH');
+if(q.get('sebep')==='0')cS.checked=false; if(q.get('kafes')==='0')cL.checked=false; if(q.get('halka')==='0')cH.checked=false;
+if(q.get('ctl')==='0')document.getElementById('ctl').style.display='none';
+if(q.get('nota')==='0')document.getElementById('nota').style.display='none';
+const sahne=document.getElementById('sahne'),svg=document.getElementById('svg'),kut=document.getElementById('kutular');
+const P=D.dugumler.map(n=>({...n,x:n.r*Math.cos(n.theta),y:n.r*Math.sin(n.theta)}));
+// kutuları bir kez kur
+const el=P.map(n=>{const d=document.createElement('div');d.className='kutu '+(n.kind==='top'?'top':n.kind==='bot'?'bot':n.renk);
+ let h='';
+ if(n.kind==='bot'){h='<div class="b">alt (boş küme)</div>'}
+ else{ if(n.baslik.length)h+='<div class="b">'+n.baslik.join('<br>')+'</div>';
+  if(n.kelimeler.length){const c=n.kelimeler.length>3?2:1;h+='<div class="k" style="--c:'+c+'">'+n.kelimeler.map(k=>'<div class="kelime"><div class="ar">'+k.ar+'</div><div class="tr">'+k.tr+'</div><div class="tg">'+k.tag+(k.kuran?' '+k.kuran:'')+'</div></div>').join('')+'</div>';}
+  if(!n.baslik.length&&!n.kelimeler.length)h='<div class="b" style="opacity:.6">·</div>';}
+ d.innerHTML=h;kut.appendChild(d);return d;});
+function proj(x,y,z){const c=Math.cos(yaw),s=Math.sin(yaw);const x1=x*c-y*s,y1=x*s+y*c;
+ const up=z*Math.cos(pit)+y1*Math.sin(pit),dep=-y1*Math.cos(pit)+z*Math.sin(pit);return [x1,up,dep];}
+function ciz(){
+ const W=sahne.clientWidth,H=sahne.clientHeight;
+ const zs=D.dugumler.map(n=>n.z);const zmin=Math.min(...zs),zmax=Math.max(...zs);
+ const rmax=Math.max(...D.dugumler.map(n=>n.r));
+ const sc=Math.min(W/(2*rmax+330),H/((zmax-zmin)*Math.cos(pit)+2*rmax*Math.sin(pit)+260))*zoom*1.0;
+ const cx=W/2,cy=H/2+((zmax+zmin)/2)*Math.cos(pit)*sc;
+ const S=(x,y,z)=>{const p=proj(x,y,z);return [cx+p[0]*sc,cy-p[1]*sc,p[2]];};
+ let out='<defs><marker id="ok" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L8,4L0,8z" fill="#b3541e"/></marker></defs>';
+ if(cH.checked){ // halkalar: ilk katman düzleminde
+  const z0=D.katman_z[1];
+  D.halkalar.forEach((r,i)=>{let pts=[];for(let a=0;a<=64;a++){const t=a/64*2*Math.PI;const p=S(r*Math.cos(t),r*Math.sin(t),z0);pts.push(p[0].toFixed(1)+','+p[1].toFixed(1));}
+   out+='<polyline points="'+pts.join(' ')+'" fill="none" stroke="#d9cfa8" stroke-dasharray="3 4"/>';
+   const l=S(r*Math.cos(-0.22),r*Math.sin(-0.22),z0);out+='<text class="hal" x="'+l[0].toFixed(0)+'" y="'+l[1].toFixed(0)+'">köke uzaklık '+(i+1)+'</text>';});
+  // eksen
+  const a=S(0,0,zmax),b=S(0,0,zmin);out+='<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="#d9cfa8" stroke-dasharray="2 5"/>';
+ }
+ if(cL.checked)D.kafes_kenarlari.forEach(([u,a])=>{const p=S(P[u].x,P[u].y,P[u].z),r=S(P[a].x,P[a].y,P[a].z);
+  out+='<line x1="'+p[0].toFixed(1)+'" y1="'+p[1].toFixed(1)+'" x2="'+r[0].toFixed(1)+'" y2="'+r[1].toFixed(1)+'" stroke="#9a8a5c" stroke-width="1.5"/>';});
+ let labs='';
+ if(cS.checked)D.sebep_kenarlari.forEach(([u,a,v])=>{const p=S(P[u].x,P[u].y,P[u].z),r=S(P[a].x,P[a].y,P[a].z);
+  const mx=(p[0]+r[0])/2,my=(p[1]+r[1])/2+(Math.abs(p[1]-r[1])<30?-14:0);
+  out+='<path d="M'+p[0].toFixed(1)+','+p[1].toFixed(1)+' Q'+((p[0]+r[0])/2+ (r[1]-p[1])*0.12).toFixed(1)+','+((p[1]+r[1])/2-(r[0]-p[0])*0.12).toFixed(1)+' '+r[0].toFixed(1)+','+r[1].toFixed(1)+'" fill="none" stroke="#b3541e" stroke-width="1.6" stroke-dasharray="6 3" marker-end="url(#ok)"/>';
+  const t=[...new Set(v)].map(s=>s.replace(/^çünkü /,'')).join(' / ');
+  labs+='<text class="seb" x="'+mx.toFixed(0)+'" y="'+my.toFixed(0)+'" text-anchor="middle">'+t.slice(0,46)+(t.length>46?'…':'')+'</text>';});
+ svg.innerHTML=out+labs;
+ const ds=P.map((n,i)=>{const p=S(n.x,n.y,n.z);return {i,x:p[0],y:p[1],d:p[2]};}).sort((a,b)=>a.d-b.d);
+ ds.forEach((o,k)=>{const e=el[o.i];e.style.left=o.x.toFixed(1)+'px';e.style.top=o.y.toFixed(1)+'px';e.style.zIndex=k+1;e.style.transform='translate(-50%,-50%) scale('+Math.max(.42,Math.min(1.1,sc*1.55))+')';});
+}
+let dr=null;
+sahne.addEventListener('pointerdown',e=>{dr=[e.clientX,e.clientY];sahne.setPointerCapture(e.pointerId);});
+sahne.addEventListener('pointermove',e=>{if(!dr)return;yaw+=(e.clientX-dr[0])*0.008;pit=Math.max(0,Math.min(Math.PI/2,pit+(e.clientY-dr[1])*0.006));dr=[e.clientX,e.clientY];ciz();});
+sahne.addEventListener('pointerup',()=>dr=null);
+sahne.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(.4,Math.min(3,zoom*(e.deltaY<0?1.1:.9)));ciz();},{passive:false});
+document.querySelectorAll('#ctl button').forEach(b=>b.onclick=()=>{const [y,p]=b.dataset.v.split(',').map(Number);yaw=y*Math.PI/180;pit=p*Math.PI/180;ciz();});
+[cL,cS,cH].forEach(c=>c.onchange=ciz);
+addEventListener('resize',ciz);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ciz);
+ciz();
+</script></body></html>
