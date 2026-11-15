@@ -180,8 +180,9 @@ def boyut_yaklasik(i):
     return KUTU_W * K, KUTU_H * K
 SZ = {i: boyut_yaklasik(i) for i in range(len(KAV))}
 def cakisma(phi):
+    # kutular yatay yatar; üstten bakışta (x, z) düzleminde ayak izleri örtüşüyor mu
     c = 0
-    ps = {i: (R[i] * math.cos(ang[i] + phi), Z[i]) for i in range(len(KAV))}
+    ps = {i: (R[i] * math.cos(ang[i] + phi), R[i] * math.sin(ang[i] + phi)) for i in range(len(KAV))}
     for i in range(len(KAV)):
         for j in range(i + 1, len(KAV)):
             dx = abs(ps[i][0] - ps[j][0]); dy = abs(ps[i][1] - ps[j][1])
@@ -190,7 +191,7 @@ def cakisma(phi):
 PHI = min((cakisma(2 * math.pi * k / 120), k) for k in range(120))
 PHI0 = 2 * math.pi * PHI[1] / 120
 for i in ang: ang[i] += PHI0
-print('ön görünüşte örtüşen kutu çifti:', PHI[0], 'dönüş (derece):', round(math.degrees(PHI0)))
+print('üstten bakışta örtüşen kutu çifti:', PHI[0], 'dönüş (derece):', round(math.degrees(PHI0)))
 def etiket(i):
     e = KAV[i]
     t = []
@@ -211,7 +212,7 @@ D = dict(kutu=[KUTU_W, KUTU_H], olcek=K, dugumler=[etiket(i) for i in range(len(
          halkalar=[RD * k for k in range(1, int(max(depth.values())) + 1)],
          katman_z=[-L * ZG for L in range(NL)])
 (HERE / 'kafes3_veri.json').write_text(json.dumps(D, ensure_ascii=False), encoding='utf-8')
-rapor = dict(kutu_ebadi=[KUTU_W, KUTU_H], olcek=K, on_gorunus_ortusen_cift=PHI[0], nesne=len(OBJ), vasif=len(ATT), kavram_dugumu=len(KAV), hasse_kenari=len(E), katman=NL,
+rapor = dict(kutu_ebadi=[KUTU_W, KUTU_H], olcek=K, ust_gorunus_ortusen_cift=PHI[0], nesne=len(OBJ), vasif=len(ATT), kavram_dugumu=len(KAV), hasse_kenari=len(E), katman=NL,
              katman_dugum_sayisi={L: len(order[L]) for L in order}, ihlal=ihlal,
              hiza_sapmasi_derece=hiza, katman_atlayan_kenar=len(atlayan),
              sebep_kenari=len(sebep))

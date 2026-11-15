@@ -60,7 +60,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-metin)
   <div id="bar">
     <div id="ad"><b>خلق</b> kafesi</div>
     <div class="grup"><span>Bakış</span>
-      <button data-v="genel">Genel</button><button data-v="on">Önden</button><button data-v="ust">Üstten</button><button data-v="yan">Yandan</button>
+      <button data-v="genel">Genel</button><button data-v="ust">Üstten</button><button data-v="yan">Yandan</button>
     </div>
     <div class="grup">
       <label><input type="checkbox" id="cDon"> kendiliğinden dön</label>
@@ -88,12 +88,12 @@ const l2=new THREE.CSS2DRenderer();l2.domElement.style.position='absolute';l2.do
 const scene=new THREE.Scene();
 const cam=new THREE.PerspectiveCamera(40,1,20,40000);
 const ctl=new THREE.OrbitControls(cam,renderer.domElement);
-ctl.enableDamping=true;ctl.dampingFactor=.08;ctl.autoRotateSpeed=.7;ctl.minDistance=250;ctl.maxDistance=14000;
+ctl.enableDamping=true;ctl.dampingFactor=.08;ctl.autoRotateSpeed=.7;ctl.minDistance=200;ctl.maxDistance=14000;
 const ZG=D.katman_z, K=D.olcek, CW=D.kutu[0], CH=D.kutu[1];
 const zTop=Math.max(...D.dugumler.map(n=>n.z)), zBot=Math.min(...D.dugumler.map(n=>n.z));
 const orta=new THREE.Vector3(0,(zTop+zBot)/2,0);
 const rmax=Math.max(...D.dugumler.map(n=>n.r));
-const V={genel:[rmax*0.4,(zTop+zBot)/2+rmax*0.28,rmax*1.7],ust:[0,rmax*2.6,1],yan:[0,(zTop+zBot)/2,rmax*2.0],on:[0,(zTop+zBot)/2,rmax*1.75]};
+const V={genel:[0,rmax*1.75,rmax*1.25],ust:[0,rmax*2.2,1],yan:[0,(zTop+zBot)/2,rmax*2.6]};
 let ucus=0;
 function ucur(hedef,bak,sure){const from=cam.position.clone(),fromT=ctl.target.clone(),t0=performance.now();const id=++ucus;
   (function adim(){if(id!==ucus)return;const k=sure?Math.min(1,(performance.now()-t0)/sure):1;const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
@@ -134,7 +134,7 @@ D.dugumler.forEach((n,i)=>{
   const cv=document.createElement('canvas');cv.width=CW*SC;cv.height=CH*SC;
   const tex=new THREE.CanvasTexture(cv);tex.minFilter=THREE.LinearFilter;tex.generateMipmaps=false;tex.anisotropy=8;
   const mat=new THREE.MeshBasicMaterial({map:tex,transparent:true,alphaTest:.02,opacity:1,side:THREE.FrontSide});
-  const g=new THREE.Group();g.position.copy(P[i]);
+  const g=new THREE.Group();g.position.copy(P[i]);g.rotation.x=-Math.PI/2;
   const on=new THREE.Mesh(new THREE.PlaneGeometry(CW*K,CH*K),mat);on.position.z=1.5;on.userData.i=i;
   const arka=new THREE.Mesh(new THREE.PlaneGeometry(CW*K,CH*K),mat);arka.rotation.y=Math.PI;arka.position.z=-1.5;arka.userData.i=i;
   g.add(on);g.add(arka);dunya.add(g);meshler.push(on,arka);kartlar.push({n,cv,tex,mat,g});
@@ -166,7 +166,7 @@ D.sebep_kenarlari.forEach(([u,a,v])=>{const A=P[u],B=P[a];const mid=A.clone().ad
   const son=pts[pts.length-1],on=pts[pts.length-6];const cone=new THREE.Mesh(new THREE.ConeGeometry(11,34,12),new THREE.MeshBasicMaterial({color:new THREE.Color(cssv('--sebep')),transparent:true}));
   cone.position.copy(son);cone.quaternion.setFromUnitVectors(up,new THREE.Vector3().subVectors(son,on).normalize());sebGrup.add(cone);
   const t=[...new Set(v)].map(s=>s.replace(/^çünkü /,'')).join(' / ');const [tex,w,h]=yazKart(t);
-  const pl=new THREE.Mesh(new THREE.PlaneGeometry(w*1.2,h*1.2),new THREE.MeshBasicMaterial({map:tex,transparent:true,side:THREE.DoubleSide}));pl.position.copy(eg.getPoint(.5));pl.visible=false;sebGrup.add(pl);
+  const pl=new THREE.Mesh(new THREE.PlaneGeometry(w*1.2,h*1.2),new THREE.MeshBasicMaterial({map:tex,transparent:true,side:THREE.DoubleSide}));pl.position.copy(eg.getPoint(.5));pl.rotation.x=-Math.PI/2;pl.visible=false;sebGrup.add(pl);
   sebKenar.push({line,cone,pl,u,a});});
 // ---- seçim ----
 const komsu=D.dugumler.map(()=>({ust:[],alt:[]}));D.kafes_kenarlari.forEach(([u,a])=>{komsu[u].alt.push(a);komsu[a].ust.push(u);});
@@ -184,7 +184,7 @@ function sec(i,uc){secili=i;
    +(n.kelimeler.length?'<ul>'+n.kelimeler.map(k=>'<li><span class="ar">'+k.ar+'</span> '+k.tr+' <span class="sol">('+k.tag+(k.kuran?' '+k.kuran:'')+')</span></li>').join('')+'</ul>':'')
    +(komsu[i].ust.length?'<b>Üstündekiler</b><ul>'+komsu[i].ust.map(ad).join('')+'</ul>':'')
    +(komsu[i].alt.length?'<b>Altındakiler</b><ul>'+komsu[i].alt.map(ad).join('')+'</ul>':'');
-  if(uc){const p=P[i];ucur(new THREE.Vector3(p.x,p.y+60,p.z+CH*K*5.2),p.clone(),700);}
+  if(uc){const p=P[i];ucur(new THREE.Vector3(p.x,p.y+CH*K*5.2,p.z+60),p.clone(),700);}
 }
 const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();let down=null;
 renderer.domElement.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];ucus++;});
@@ -202,7 +202,7 @@ const R=RAPOR;document.getElementById('kural').innerHTML='<h3>Kuralların deneti
  +'<tr><td>Çocukların arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='cocuk_arasina_girdi').length+'</td></tr>'
  +'<tr><td>Ebeveynlerin arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='ebeveyn_arasina_girdi').length+'</td></tr>'
  +'<tr><td>Ortak çocuğun hiza sapması (derece)</td><td>'+Math.max(...Object.entries(R.hiza_sapmasi_derece).filter(([k])=>+k!==R.kavram_dugumu-1).map(([,v])=>Math.abs(v)))+'</td></tr>'
- +'<tr><td>Önden bakışta üst üste binen kutu çifti</td><td>'+R.on_gorunus_ortusen_cift+'</td></tr></table>';
+ +'<tr><td>Üstten bakışta üst üste binen kutu çifti</td><td>'+R.ust_gorunus_ortusen_cift+'</td></tr></table>';
 function boyut(){const w=glEl.clientWidth,h=glEl.clientHeight;renderer.setSize(w,h);l2.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
 addEventListener('resize',boyut);boyut();
 function renkYenile(){scene.background=new THREE.Color(cssv('--bg'));}
