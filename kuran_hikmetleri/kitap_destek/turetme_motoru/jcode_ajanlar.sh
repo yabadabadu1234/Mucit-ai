@@ -11,7 +11,7 @@ if [ "$ROL" = "tercuman" ]; then
   MODEL="$3"
   for f in $(ls bolum_*.md | sort); do
     grep -q "^durum: bos" "$f" || continue
-    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen TERCÜMAN ajansın. $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: tercüman) yap; her satırın hazır 'duz_tercume:' değerini esas alıp (dokunmadan) 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + ⟨Ne⟩ ⟨Nasıl⟩ ⟨Neden⟩ ⟨Neden 2⟩… ⟨Esas⟩ ⟨Niçin⟩) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." > "../../log_tercuman_${f%.md}.txt" 2>&1
+    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen TERCÜMAN ajansın. $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: tercüman) yap; her satırın hazır 'duz_tercume:' değerini esas alıp (dokunmadan) 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + hâlin iktizasına göre gerekli etiketli şerh kısımları; etiketlerin sırası ve sayısı serbest) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." > "../../log_tercuman_${f%.md}.txt" 2>&1
     echo "$(date +%T) tercüman: $f bitti"
   done
 else
@@ -23,7 +23,7 @@ else
       grep -q "^durum: inceleme-tamam" "$f" && continue 2
       sleep 20
     done
-    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen İNCELEYİCİ ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını incelemek. Durumu 'inceleniyor' (inceleyen: $AD) yap; her satırın 'tercüme:' alanını oku, kaynaklarla karşılaştır ve USUL.md'deki inceleyici görevine göre DOĞRUDAN KAYNAĞINDA düzelt (yanlış gördüğünü yazıldığı yerde değiştir; 'tashih', 'itiraz' veya ⟨Tashih⟩ notu YAZMA) ve ilave sebepleri aynı tercümenin içine, etiket sırasını bozmadan ekle; 'duz_tercume:' ve 'ilave:' alanlarına dokunma; dosyayı bütün hâliyle kaydet ve 'durum: inceleme-tamam' yap. Başka dosyaya dokunma." > "../../log_${AD}_${f%.md}.txt" 2>&1
+    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen İNCELEYİCİ ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını incelemek. Durumu 'inceleniyor' (inceleyen: $AD) yap; her satırın 'tercüme:' alanını oku, kaynaklarla karşılaştır ve USUL.md'deki inceleyici görevine göre DOĞRUDAN KAYNAĞINDA düzelt (yanlış gördüğünü yazıldığı yerde değiştir; 'tashih', 'itiraz' veya ⟨Tashih⟩ notu YAZMA) ve ilave sebepleri aynı tercümenin içine, hâlin iktizasına göre uygun etiketlerle ekle; 'duz_tercume:' ve 'ilave:' alanlarına dokunma; dosyayı bütün hâliyle kaydet ve 'durum: inceleme-tamam' yap. Başka dosyaya dokunma." > "../../log_${AD}_${f%.md}.txt" 2>&1
     echo "$(date +%T) $AD: $f bitti"
   done
 fi

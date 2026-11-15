@@ -25,16 +25,17 @@ ilave:
 `duz_tercume:` alanı **hazır esas metindir**; tercüman onu baştan çevirmez, **üstüne şerh yazar**. Alanı kimse değiştirmez.
 
 ## Şerhli tercüme biçimi (`tercüme:` satırı — tercüman yazar)
-Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüme olarak alır, açıkça yanlışsa (kaynakla çelişen mânâ, uydurma, aynı kalıpta tekrar, Türkçe olmayan ifade) kaynaktan düzeltir ve düzeltmenin sebebini ⟨Neden⟩ zincirinde söyler. Tek satır; önce **kısa Osmanlıca tercüme**, sonra etiketli kısımlar (etiketler AYNEN, sırayla):
+Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüme olarak alır, açıkça yanlışsa (kaynakla çelişen mânâ, uydurma, aynı kalıpta tekrar, Türkçe olmayan ifade) kaynaktan düzeltir ve düzeltmenin sebebini şerhte söyler. Tek satır: önce **kısa Osmanlıca tercüme**, sonra **etiketli kısımlar**.
 
-`<kısa tercüme> ⟨Ne⟩ … ⟨Nasıl⟩ … ⟨Neden⟩ … ⟨Neden 2⟩ … ⟨Neden 3⟩ … ⟨Esas⟩ … ⟨Niçin⟩ …`
-
+**Etiketlerin sırası ve sayısı serbesttir.** Hangi yerde hangi etiket gerekiyorsa o konur, hâlin iktizası neyse; ⟨Neden⟩ yüz tane de olabilir, sırayı da hâl belirler. Sabit bir sıra veya sabit bir etiket kümesi yoktur. Tek şart: **her kısım yalnız kendi sualinin cevabını taşır** ve etiketi o suali bildirir (sonradan otomatik derlenecek). Kullanılan başlıca etiketler:
 - **⟨Ne⟩** bu biçim/müştak ne demektir, tarif. **⟨Nasıl⟩** kökteki asıl mânâdan bu mânâya (varsa mecâza) nasıl gelindi; vezin, ek, ön ek, zamir mânâyı nasıl doğurdu.
-- **⟨Neden⟩** bu mânâya geldiği neden ve nasıl biliniyor: **KAYNAKLAR'daki hangi madde söylüyor** (kaynağı ve ilgili cümleyi/kelimeyi anarak). İki ayrı mânâ yazdıysan her biri için ayrı ⟨Neden⟩.
-- **Nedene tekrar neden sor:** her sebebin sebebi **⟨Neden 2⟩, ⟨Neden 3⟩ …**; zincir daha geriye gidilemeyen ilk kabul edilen esâsa (kök mânâsı, lügatin kendisi, Arap kullanımı, sarf kaidesi) varınca **⟨Esas⟩** ile biter.
+- **⟨Neden⟩** bu mânâya geldiği neden ve nasıl biliniyor, yani delil: **KAYNAKLAR'daki hangi madde söylüyor** (kaynağı ve ilgili cümleyi/kelimeyi anarak). İki ayrı mânâ yazdıysan her biri için ayrı ⟨Neden⟩.
+- **Nedene tekrar neden sor:** her sebebin sebebi ⟨Neden 2⟩, ⟨Neden 3⟩ … diye sürer; zincir, daha geriye gidilemeyen ilk kabul edilen esâsa (kök mânâsı, lügatin kendisi, Arap kullanımı, sarf kaidesi) varınca ⟨Esas⟩ ile kapanır. Sebep dalları birden çoksa her dal kendi zincirini taşır.
 - **⟨Niçin⟩** bu mânâ/kalıp/ek ne gaye ile var, ne işe yarar.
-- Dosyada dayanağı olmayan hüküm **⟨Çıkarım⟩** etiketiyle ve çıkarım olduğu söylenerek yazılır. **Kitap, müellif, âyet adı uydurma yasak.**
-- Her kısım yalnız kendi sualinin cevabını taşır (sonradan otomatik derlenecek).
+- Dosyada dayanağı olmayan hüküm **⟨Çıkarım⟩** etiketiyle ve çıkarım olduğu söylenerek yazılır. Hâl başka bir etiket gerektiriyorsa (ör. ⟨İtiraz ve cevabı⟩, ⟨Misal⟩, ⟨Karşılaştırma⟩, ⟨Mecâz⟩) o yazılır; etiket adı sualini açıkça bildirmelidir.
+- **Kitap, müellif, âyet adı uydurma yasak.**
+- **EN UMUMÎ SEBEP:** Hangi etikette olursa olsun söylenen sebep, söylenebilecek **en geniş ve en umumî** sebep olmalıdır: dar ve cüz'î bir hâli değil, onu kapsayan en üst kaideyi söyle. (Telefon tablet değil, cihaz; cihaz da değil, eşya; eşya da değil, şey.) Önce kaynaktaki cüz'î delili yaz, sonra aynı etiket zincirinde onu kapsayan **bir üst, bir üst** sebebe çık; en umumî kaideye (ilk kabul edilen esâsa) varınca dur. Cüz'î sebep tek başına bırakılmaz; ona kapsayıcı umumî sebep eklenir. Bir sebep birden çok mânâya/satıra aynı umumî kaideden bağlanıyorsa onu açıkça belirt.
+- **ARAPÇA ALINTI harfi harfine:** Arapça bir ibare alıntılanacaksa KAYNAKLAR'daki yazıdan **harfi harfine, harekesiyle kopyalanır**; kaynakta aynen bulunmayan, hatırdan yazılmış veya harfi eklenip bozulmuş Arapça YAZILMAZ (emin değilsen alıntıyı koyma, Türkçe özetle). Alıntı sonradan otomatik denetlenecek.
 
 ## Tercüme kuralları
 1. Dil Osmanlı Türkçesi, Latin harfli; Ömer Seyfettin ve Mehmed Âkif nesri; yerleşik Arapça-Fârisî asıllı kelimeler; **cevap Türkçe ifade olsun**, Arapça okunuş (naḍada gibi), bilimsel işaret (ḥ, ʿ), uydurma Arapça kalıp yazma.
@@ -45,8 +46,8 @@ Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüm
 
 ## İnceleyici görevi (doğrudan kaynağında düzeltme)
 - İnceleyici `tercüme:` satırını **doğrudan düzeltir ve zenginleştirir**; ayrı bir "tashih" notu, itiraz kısmı veya ⟨Tashih⟩ etiketi **YAZILMAZ**. Bir yanlış gördüğün yerde (yanlış mânâ, uydurma/yanlış kaynak, kayma, aynı kalıpta tekrar, Türkçe olmayan ifade) hatayı **yazıldığı yerde** düzelt: kısa tercümeyi ya da ilgili ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩ cümlesini doğrusuyla değiştir.
-- **İlave sebepler** de aynı şekilde tercümenin içine girer: tercümenin ⟨Neden⟩ zincirinde olmayan ek deliller, başka kaynaklardan (KAYNAKLAR'ı taray) teyit, eksik ⟨Neden k⟩ halkaları, atlanmış mânâlar için ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩/⟨Esas⟩/⟨Niçin⟩ kısımları; etiketlerin sırası ve biçimi bozulmaz (⟨Ne⟩ ⟨Nasıl⟩ ⟨Neden⟩ ⟨Neden 2⟩… ⟨Esas⟩ ⟨Niçin⟩), zincir ⟨Esas⟩ ile kapanır.
-- Yeni delil yalnız KAYNAKLAR'dan; alıntı kısa ve doğru. Tekrar etme, şişirme. `duz_tercume:` alanına ve `ilave:` alanına dokunma (`ilave:` boş kalır).
+- **İlave sebepler** de aynı şekilde tercümenin içine girer: tercümenin ⟨Neden⟩ zincirinde olmayan ek deliller, başka kaynaklardan (KAYNAKLAR'ı taray) teyit, eksik ⟨Neden k⟩ halkaları, atlanmış mânâlar için ⟨Ne⟩/⟨Nasıl⟩/⟨Neden⟩/⟨Esas⟩/⟨Niçin⟩ kısımları; etiketler hâlin iktizasına göre serbesttir; yalnız her kısım kendi sualinin cevabını taşır.
+- Yeni delil yalnız KAYNAKLAR'dan; alıntı kısa ve doğru. Tercümedeki sebepler en umumî sebebe çıkarılmamışsa (cüz'î kalmışsa) yukarı çıkar; bozuk veya kaynakta olmayan Arapça alıntıyı KAYNAKLAR'daki doğru yazıyla değiştir. Tekrar etme, şişirme. `duz_tercume:` alanına ve `ilave:` alanına dokunma (`ilave:` boş kalır).
 
 ## Durum protokolü (dosyaları çakıştırmamak için KESİN)
 - Bir bölüm dosyasını **aynı anda yalnız bir ajan** yazar. Tercüman yalnız `durum: bos` bölümü alır: `tercume-yapiliyor` yap, bitirince `tercume-tamam`; `tercume_eden: tercüman`.
