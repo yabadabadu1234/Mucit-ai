@@ -1,7 +1,7 @@
-durum: tercume-tamam
+durum: inceleme-tamam
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-1
-inceleyen: -
+inceleyen: inceleyici-1
 
 ---
 
@@ -23,7 +23,7 @@ ilave:
 arapça: خَلَقْتَنِى
 bilgi: tür: İsim; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: beni halk eyledim
-tercüme: beni halk eyledim ⟨Ne⟩ Mâzî fiil, birinci şahıs zamiri "senin" ve mef'ûl zamiri "beni" birlikte taşır: beni yarattı, beni halk eyledi demektir. ⟨Nasıl⟩ Fiil gövdesine önce fail zamiri, sonra mef'ûl zamiri bitişir; böylece fiil, failini ve nesnesini kendine yapışmış olarak tek parça hâlinde söylenir. ⟨Neden⟩ Söyleyici, hem eden hem de edileni açıkça işaretlemek ister; ayrı ayrı isim ve zamirle söylemek yorucu ve dağınık olur. Zamirlerin fiile bitişmesi, işi, işleyeni ve işleneni bir tek sesle vermenin en kestirme yoludur. ⟨Esas⟩ İnsanın aklı, bir olayı faili ve nesnesiyle bir arada kavrar; dil de bu kavrayışın gereği olarak olayın öğelerini fiil gövdesine bağlar.
+tercüme: beni halk eyledim ⟨Ne⟩ Mâzî fiil, ikinci tekil şahıs fail zamiri "sen" ve mef'ûl zamiri "beni" birlikte taşır: beni yarattın, beni halk eyledin demektir. ⟨Nasıl⟩ Fiil gövdesine önce fail zamiri, sonra mef'ûl zamiri bitişir; böylece fiil, failini ve nesnesini kendine yapışmış olarak tek parça hâlinde söylenir. ⟨Neden⟩ Söyleyici, hem eden hem de edileni açıkça işaretlemek ister; ayrı ayrı isim ve zamirle söylemek yorucu ve dağınık olur. Zamirlerin fiile bitişmesi, işi, işleyeni ve işleneni bir tek sesle vermenin en kestirme yoludur. ⟨Esas⟩ İnsanın aklı, bir olayı faili ve nesnesiyle bir arada kavrar; dil de bu kavrayışın gereği olarak olayın öğelerini fiil gövdesine bağlar.
 ilave:
 
 ## K|خلق|وَخَلَقْتَهُۥ|yuzey|İsim|fe'ale|Mâzî
@@ -58,14 +58,14 @@ ilave:
 arapça: يُخْلَقُونَ
 bilgi: tür: İsim; bâb: fe'ale; zaman: Muzâri; kelime biçimi
 duz_tercume: halk olunurlar
-tercüme: halk olunurlar ⟨Ne⟩ Muzâri fiilin mef'ûl, yani edilgen hâli; üçüncü çoğul şahıs mef'ûl zamiri "onlar" taşır: onlar yaratılırlar, halk olunurlar demektir. ⟨Nasıl⟩ Fe'ile kalıbının fiiline yâ ile başlayan edat mef'ûllük bildirir; sonunda un ile bitişen zamir, yaratılanın birden çok kişi olduğunu gösterir. ⟨Neden⟩ Söyleyici, faili gizleyip yalnız mef'ûlü öne çıkarmak ister; edilgen yapı tam da bu kayırmayı yapar. ⟨Neden 2⟩ Yaratılan, yaratandan önce gelmez; lûzûm olarak yaratılan, failinin eylemine maruz kalır. Dil de bu maruziyeti, fiilin yapısını değiştirerek, yani mef'ûl hâline getirerek gösterir. ⟨Esas⟩ Her mef'ûl, bir failin eylemiyle var olur; dil de bu bağımlılığı fiil yapısında işler.
+tercüme: halk olunurlar ⟨Ne⟩ Muzâri fiilin mef'ûl, yani edilgen hâli; üçüncü çoğul şahıs mef'ûl zamiri "onlar" taşır: onlar yaratılırlar, halk olunurlar demektir. ⟨Nasıl⟩ Fe'ile kalıbının fiiline yâ ile başlayan ön ek mef'ûllük bildirir; sonunda un ile bitişen zamir, yaratılanın birden çok kişi olduğunu gösterir. ⟨Neden⟩ Söyleyici, faili gizleyip yalnız mef'ûlü öne çıkarmak ister; edilgen yapı tam da bu kayırmayı yapar. ⟨Neden 2⟩ Yaratılan, yaratandan önce gelmez; lûzûm olarak yaratılan, failinin eylemine maruz kalır. Dil de bu maruziyeti, fiilin yapısını değiştirerek, yani mef'ûl hâline getirerek gösterir. ⟨Esas⟩ Her mef'ûl, bir failin eylemiyle var olur; dil de bu bağımlılığı fiil yapısında işler.
 ilave:
 
 ## K|خلق|خَلَقَ|lemma|İsim|fe'ale|Muzâri
 arapça: خَلَقَ
 bilgi: tür: İsim; bâb: fe'ale; zaman: Muzâri; LEMMA (sözlük biçimi)
 duz_tercume: Yarattı
-tercüme: Yarattı ⟨Ne⟩ Mâzî fiilin lemma, yani sözlük gövdesi: yarattı, halk eyledi demektir. ⟨Nasıl⟩ Üçüncü tekil şahıs mâzî biçimi, bütün şubelerin çıkış noktası olarak kabul edilir; sonunda hemze ile biten harf, işin tamamlanıp geçmesini bildirir. ⟨Neden⟩ Söyleyici, bir olayı anlatırken, onun "zaten olmuş" olduğunu vurgulamak ister; mâzî ırâbı, işin kesilip bittiğini sesle de kurar. ⟨Neden 2⟩ Bu bütünlük, kökün asıl tecrübesinden gelir: ölçülüp biçilen şey, sonunda bir suret olarak tamam olur; dil de bu tamamlanmayı fiilin sonunda bir sükûn ile işaret eder. ⟨Esas⟩ Her eda, bir neticeye varır; dil de bu neticeyi, fiilin son harfinin harekesini keserek, yani sükûn ile bildirir.
+tercüme: Yarattı ⟨Ne⟩ Mâzî fiilin lemma, yani sözlük gövdesi: yarattı, halk eyledi demektir. ⟨Nasıl⟩ Üçüncü tekil şahıs mâzî biçimi, bütün şubelerin çıkış noktası olarak kabul edilir; sonunda fetha ile biten harf, işin tamamlanıp geçmesini bildirir. ⟨Neden⟩ Söyleyici, bir olayı anlatırken, onun "zaten olmuş" olduğunu vurgulamak ister; mâzî ırâbı, işin kesilip bittiğini sesle de kurar. ⟨Neden 2⟩ Bu bütünlük, kökün asıl tecrübesinden gelir: ölçülüp biçilen şey, sonunda bir suret olarak tamam olur; dil de bu tamamlanmayı fiilin sonunda bir fetha ile işaret eder. ⟨Esas⟩ Her eda, bir neticeye varır; dil de bu neticeyi, fiilin son harfinde fetha ile bildirir.
 ilave:
 
 ## K|خلق|بِخَلَٰقِهِمْ|yuzey|İsim||
@@ -100,7 +100,7 @@ ilave:
 arapça: خَلْقٍ
 bilgi: tür: İsim; bâb: ; zaman: ; kelime biçimi
 duz_tercume: Bir halkın, yaratılışın
-tercüme: Bir halkın, yaratılışın ⟨Ne⟩ Cer ırâbı ile gelen müennes halk ismi: bir yaratılışın, bir halkın demektir. ⟨Nasıl⟩ İrâb-ı cer, ismi bağımlı kılar; el artikelinin olmaması, onu belirli bir bütün değil, bir cins veya bir tür olarak gösterir. ⟨Neden⟩ Söyleyici, ismi belirli bir şey olarak değil, "bir tür" olarak vermek ister; artikelin yokluğu, bu "bir tür"lüğü sesle kurar. ⟨Neden 2⟩ Yaratılış, tek bir şey değil, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismi müennes bırakarak, yani belirli bir varlıktan ayrı tutarak gösterir. ⟨Esas⟩ Her cins, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismin artikelsiz hâliyle işarete getirir.
+tercüme: Bir halkın, yaratılışın ⟨Ne⟩ Cer ırâbı ile gelen nakıs halk ismi: bir yaratılışın, bir halkın demektir. ⟨Nasıl⟩ İrâb-ı cer, ismi bağımlı kılar; el artikelinin olmaması, onu belirli bir bütün değil, bir cins veya bir tür olarak gösterir. ⟨Neden⟩ Söyleyici, ismi belirli bir şey olarak değil, "bir tür" olarak vermek ister; artikelin yokluğu, bu "bir tür"lüğü sesle kurar. ⟨Neden 2⟩ Yaratılış, tek bir şey değil, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismi nakıs bırakarak, yani belirli bir varlıktan ayrı tutarak gösterir. ⟨Esas⟩ Her cins, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismin artikelsiz hâliyle işarete getirir.
 ilave:
 
 ## K|خلق|خَلَقُوا۟|yuzey|İsim|fe'ale|Mâzî
@@ -121,7 +121,7 @@ ilave:
 arapça: بِخَلْقٍ
 bilgi: tür: İsim; bâb: ; zaman: ; kelime biçimi
 duz_tercume: Bir halk ile, yaratılışla
-tercüme: Bir halk ile, yaratılışla ⟨Ne⟩ Bi edatı ile gelen müennes halk ismi: bir yaratılışla, bir halk ile demektir. ⟨Nasıl⟩ Bi edatı, birliktelik veya vasıta bildirir; artikelin olmaması, ismi belirli bir bütün değil, bir cins olarak gösterir. ⟨Neden⟩ Söyleyici, yaratılışı belirli bir şey olarak değil, "bir tür" olarak vasıta vermek ister; artikelin yokluğu, bu "bir tür"lüğü sesle kurar. ⟨Neden 2⟩ Yaratılış, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismi müennes bırakarak gösterir. ⟨Esas⟩ Her cins, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismin artikelsiz hâliyle işarete getirir.
+tercüme: Bir halk ile, yaratılışla ⟨Ne⟩ Bi edatı ile gelen nakıs halk ismi: bir yaratılışla, bir halk ile demektir. ⟨Nasıl⟩ Bi edatı, birliktelik veya vasıta bildirir; artikelin olmaması, ismi belirli bir bütün değil, bir cins olarak gösterir. ⟨Neden⟩ Söyleyici, yaratılışı belirli bir şey olarak değil, "bir tür" olarak vasıta vermek ister; artikelin yokluğu, bu "bir tür"lüğü sesle kurar. ⟨Neden 2⟩ Yaratılış, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismi nakıs bırakarak gösterir. ⟨Esas⟩ Her cins, bir çok suretin ortak ismidir; dil de bu ortaklığı, ismin artikelsiz hâliyle işarete getirir.
 ilave:
 
 ## K|خلق|خَلَقْنَا|yuzey|İsim|fe'ale|Mâzî
