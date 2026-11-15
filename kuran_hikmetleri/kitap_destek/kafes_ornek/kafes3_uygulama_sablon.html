@@ -38,7 +38,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-metin)
 #panel ul{margin:4px 0 6px;padding-left:16px}
 #kural{position:absolute;left:max(12px,env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(330px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;line-height:1.5;z-index:5}
 #kural h3{margin:0 0 4px;font-size:12.5px}
-#kural table{border-collapse:collapse;width:100%}#kural td{padding:1px 0;vertical-align:top}#kural td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;padding-left:8px}
+#lejant{margin-top:6px;max-height:150px;overflow:auto;border-top:1px solid var(--line);padding-top:4px}#lejant .lj{display:flex;gap:6px;align-items:center;font-size:11px;line-height:1.5}#lejant i{width:22px;height:6px;border-radius:3px;flex:none}#lejant .not{color:var(--muted);font-size:10.5px;margin-bottom:3px}.grup select{font:12px var(--font-metin);background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:3px}#kural table{border-collapse:collapse;width:100%}#kural td{padding:1px 0;vertical-align:top}#kural td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;padding-left:8px}
 .et{transform-origin:center;pointer-events:none}
 .kart{border:1.5px solid var(--kenar);border-radius:10px;padding:5px 8px;color:#2a2414;box-shadow:0 2px 8px #0003;white-space:nowrap;transition:opacity .15s}
 .kart.sonuk{opacity:.18}
@@ -69,6 +69,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-metin)
       <label><input type="checkbox" id="cSyaz"> sebep yazıları</label>
       <label><input type="checkbox" id="cHalka" checked> halkalar</label>
     </div>
+    <div class="grup"><label>Demet renkleri <select id="sDemet"><option value="karisik">karışık</option><option value="ebeveyn">ebeveyne göre</option><option value="evlat">evlada göre</option></select></label></div>
   </div>
   <div id="kural"></div>
   <div id="panel"><h3>Bir kutuya dokun</h3><span class="sol">Sürükle: döndür · tekerlek veya iki parmak: yakınlaş · sağ tuş veya üç parmak: kaydır. Kutu seçince onun ebeveynleri ve çocukları belirir, öbürleri solar.</span></div>
@@ -112,7 +113,10 @@ function kartCiz(n,cv){const ctx=cv.getContext('2d');ctx.setTransform(SC,0,0,SC,
   const renk=RENK[n.kind==='top'?'top':n.kind==='bot'?'bot':n.renk]||RENK.ab;
   rr(ctx,1.5,1.5,CW-3,CH-3,12);ctx.fillStyle=renk;ctx.fill();ctx.lineWidth=2.4;ctx.strokeStyle='#7a6a3c';ctx.stroke();
   ctx.fillStyle='#2a2414';ctx.textAlign='center';ctx.textBaseline='alphabetic';
-  let y=8;
+  if(n._ust){ctx.fillStyle=n._ust;rr(ctx,12,4,CW-24,6,3);ctx.fill();}
+  if(n._alt){ctx.fillStyle=n._alt;rr(ctx,12,CH-10,CW-24,6,3);ctx.fill();}
+  ctx.fillStyle='#2a2414';
+  let y=14;
   const basl=n.kind==='bot'?['alt: boş küme']:n.baslik;
   ctx.font='700 14px Inter,system-ui,sans-serif';
   const bsat=[];basl.forEach(b=>sar(ctx,b,CW-20,3).forEach(s=>bsat.push(s)));
@@ -154,6 +158,20 @@ const up=new THREE.Vector3(0,1,0);
 const kafGrup=new THREE.Group();dunya.add(kafGrup);const kafKenar=[];
 function silindir(a,b,r,renk){const d=new THREE.Vector3().subVectors(b,a),L=d.length();const m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,L,8,1),new THREE.MeshBasicMaterial({color:renk,transparent:true,opacity:.9}));m.position.copy(a).add(b).multiplyScalar(.5);m.quaternion.setFromUnitVectors(up,d.normalize());return m;}
 D.kafes_kenarlari.forEach(([u,a])=>{const m=silindir(P[u],P[a],3.2,new THREE.Color(cssv('--kenar')));m.userData={u,a};kafGrup.add(m);kafKenar.push(m);});
+// ---- demet renkleri ----
+const parOf=D.dugumler.map(()=>[]);D.kafes_kenarlari.forEach(([u,a])=>parOf[a].push(u));
+function karanlik(){const x=document.documentElement.dataset.theme;return x==='dark'||(x!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);}
+function anahtar(u,a,mod){if(mod==='ebeveyn')return 'd'+u;if(mod==='evlat')return 'u'+a;return parOf[a].length>=2?'u'+a:'d'+u;}
+function kisa(s){return s.length>34?s.slice(0,33)+'…':s;}
+function renkUygula(){const mod=document.getElementById('sDemet').value;const kmap={},keys=[],say={};
+  D.kafes_kenarlari.forEach(([u,a])=>{const k=anahtar(u,a,mod);if(!(k in kmap)){kmap[k]=keys.length;keys.push(k);}say[k]=(say[k]||0)+1;});
+  const dark=karanlik();const col=k=>'hsl('+Math.round((kmap[k]*137.508)%360)+','+(dark?74:70)+'%,'+(dark?64:42)+'%)';
+  D.kafes_kenarlari.forEach(([u,a],i)=>{kafKenar[i].material.color.set(col(anahtar(u,a,mod)));});
+  D.dugumler.forEach(n=>{n._ust=null;n._alt=null;});
+  keys.forEach(k=>{const id=+k.slice(1);if(k[0]==='u')D.dugumler[id]._ust=col(k);else D.dugumler[id]._alt=col(k);});
+  document.getElementById('lejant').innerHTML='<div class="not">Her renk bir demet: ya bir ebeveynden aşağı inen kenarlar ya da bir evlattan yukarı çıkan kenarlar. Kutunun üst şeridi onun ebeveynlerine giden demetin, alt şeridi çocuklarına giden demetin rengidir.</div>'
+   +keys.map(k=>{const id=+k.slice(1);return '<div class="lj"><i style="background:'+col(k)+'"></i><span>'+(k[0]==='d'?'altına inen: ':'üstüne çıkan: ')+kisa(adlar[id])+' <span class="sol">('+say[k]+')</span></span></div>';}).join('');
+  kartlariCiz();}
 // ---- sebep kenarları ----
 const sebGrup=new THREE.Group();dunya.add(sebGrup);const sebKenar=[];
 function yazKart(t){const cv=document.createElement('canvas');const c=cv.getContext('2d');c.font='600 15px Inter,system-ui,sans-serif';const sat=sar(c,t,230,3);const w=250,h=14+sat.length*19;cv.width=w*2;cv.height=h*2;
@@ -202,10 +220,10 @@ const R=RAPOR;document.getElementById('kural').innerHTML='<h3>Kuralların deneti
  +'<tr><td>Çocukların arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='cocuk_arasina_girdi').length+'</td></tr>'
  +'<tr><td>Ebeveynlerin arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='ebeveyn_arasina_girdi').length+'</td></tr>'
  +'<tr><td>Ortak çocuğun hiza sapması (derece)</td><td>'+Math.max(...Object.entries(R.hiza_sapmasi_derece).filter(([k])=>+k!==R.kavram_dugumu-1).map(([,v])=>Math.abs(v)))+'</td></tr>'
- +'<tr><td>Üstten bakışta üst üste binen kutu çifti</td><td>'+R.ust_gorunus_ortusen_cift+'</td></tr></table>';
+ +'<tr><td>Üstten bakışta üst üste binen kutu çifti</td><td>'+R.ust_gorunus_ortusen_cift+'</td></tr></table><div id="lejant"></div>';renkUygula();document.getElementById('sDemet').onchange=renkUygula;
 function boyut(){const w=glEl.clientWidth,h=glEl.clientHeight;renderer.setSize(w,h);l2.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
 addEventListener('resize',boyut);boyut();
-function renkYenile(){scene.background=new THREE.Color(cssv('--bg'));}
+function renkYenile(){scene.background=new THREE.Color(cssv('--bg'));renkUygula();}
 renkYenile();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>setTimeout(renkYenile,50));
 new MutationObserver(()=>setTimeout(renkYenile,50)).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
 function dongu(){requestAnimationFrame(dongu);ctl.update();renderer.render(scene,cam);l2.render(scene,cam);}
