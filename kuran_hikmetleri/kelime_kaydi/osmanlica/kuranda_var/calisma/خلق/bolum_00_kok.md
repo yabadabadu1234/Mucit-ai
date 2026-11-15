@@ -1,4 +1,4 @@
-durum: tercume-yapiliyor
+durum: kapi-gecmedi
 bolum: kok — Kök anlamı ve fiil sapı
 tercume_eden: tercuman-2
 inceleyen: inceleyici-0

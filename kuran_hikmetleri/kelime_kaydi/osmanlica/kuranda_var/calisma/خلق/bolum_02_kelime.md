@@ -1,4 +1,4 @@
-durum: inceleme-tamam
+durum: kapi-gecmedi
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-1
 inceleyen: inceleyici-1
