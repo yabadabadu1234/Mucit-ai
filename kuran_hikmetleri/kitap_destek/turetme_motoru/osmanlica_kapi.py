@@ -3,7 +3,7 @@ import sys
 
 import osmanlica_denetle as D
 
-SERT = ('arapca_latin_karisik', 'etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'uzun_arapca_ibare', 'atif_yigini', 'ilave_dolu')
+SERT = ('arapca_latin_karisik', 'etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'uzun_arapca_ibare', 'kaynak_adi_gecti', 'ilave_dolu')
 
 
 def etiketler(t):

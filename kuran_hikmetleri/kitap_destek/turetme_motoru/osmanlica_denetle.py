@@ -71,8 +71,8 @@ def denetle(yol, dizin, kay):
             sorunlar['etiket_kapanis_hatali'].append(r['id'])
         for e in ETIKET.findall(t):
             etk[re.sub(r'\s*\d+$', '', e.strip())] += 1
-        if len(re.findall(r'\b(?:Cebel|Mekâyîs|Zemahşerî|Vikisözlük|EtymArab|Kamus|Vankulu|Kubbe\s*Altı|Kubbealtı|Arabic\s+Ontology|Lugat-ı\s+Remzi|Sıhâh|Lisân)\b', t)) > 2:
-            sorunlar['atif_yigini'].append(r['id'])
+        if re.search(r'(?i)\b(?:Cebel|Mekâyîs|Mekayis|Zemahşerî|Vikisözlük|Wiktionary|EtymArab|Kamus|Vankulu|Kubbe\s*Altı|Kubbealtı|Arabic\s+Ontology|Arabic\s+WordNet|Lugat-ı\s+Remzi|Remzi|Sıhâh|Lisân|Muhassas|Esâsü|Mesnet)\b|lügat|sözlük|kaynakta|kaynaklarda', t.replace('⟨Mesnet⟩', 'Mesnet')):
+            sorunlar['kaynak_adi_gecti'].append(r['id'])
         for ad in KAYNAK_ANISI.findall(t):
             if ad not in KAYNAK_ADLARI and not ad.startswith(('Ne', 'Nasıl', 'Neden', 'Esas', 'Niçin')):
                 sorunlar['kaynak_adi_bilinmeyen'].append((r['id'], ad))
