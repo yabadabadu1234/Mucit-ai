@@ -1,0 +1,18 @@
+durum: bos
+bolum: mustak — ism-i hey'et · sülâsî
+tercume_eden: -
+inceleyen: -
+
+---
+
+## M|خلق|257|خِلْقَة|ism-i hey'et · sülâsî
+arapça: خِلْقَة
+bilgi: kalıp: ism-i hey'et · sülâsî; vezin: fi'le (aday); ingilizce_tanik: 
+tercüme:
+ilave:
+
+## M|خلق|258|خِلْقَتَان|ism-i hey'et · sülâsî
+arapça: خِلْقَتَان
+bilgi: kalıp: ism-i hey'et · sülâsî; vezin: fi'le + tesniye (aday); ingilizce_tanik: 
+tercüme:
+ilave:
