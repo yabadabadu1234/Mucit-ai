@@ -11,7 +11,7 @@ if [ "$ROL" = "tercuman" ]; then
   MODEL="$3"
   for f in $(ls bolum_*.md | sort); do
     grep -q "^durum: bos" "$f" || continue
-    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen TERCÜMAN ajansın. $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: tercüman) yap; her satırın 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + ⟨Ne⟩ ⟨Nasıl⟩ ⟨Neden⟩ ⟨Neden 2⟩… ⟨Esas⟩ ⟨Niçin⟩) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." > "../../log_tercuman_${f%.md}.txt" 2>&1
+    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen TERCÜMAN ajansın. $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: tercüman) yap; her satırın hazır 'duz_tercume:' değerini esas alıp (dokunmadan) 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + ⟨Ne⟩ ⟨Nasıl⟩ ⟨Neden⟩ ⟨Neden 2⟩… ⟨Esas⟩ ⟨Niçin⟩) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." > "../../log_tercuman_${f%.md}.txt" 2>&1
     echo "$(date +%T) tercüman: $f bitti"
   done
 else

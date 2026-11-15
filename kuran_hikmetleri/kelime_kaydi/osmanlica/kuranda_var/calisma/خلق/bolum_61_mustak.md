@@ -8,11 +8,13 @@ inceleyen: -
 ## M|خلق|253|مَخْلَق|masdar-ı mîmî · sülâsî
 arapça: مَخْلَق
 bilgi: kalıp: masdar-ı mîmî · sülâsî; vezin: maf'al (kıyâsî); ingilizce_tanik: 
+duz_tercume: Yaratma yeri, yaratma zamanı
 tercüme:
 ilave:
 
 ## M|خلق|254|مَخْلَقَان|masdar-ı mîmî · sülâsî
 arapça: مَخْلَقَان
 bilgi: kalıp: masdar-ı mîmî · sülâsî; vezin: maf'al + tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: İki yaratma yeri, iki yaratma zamanı
 tercüme:
 ilave:

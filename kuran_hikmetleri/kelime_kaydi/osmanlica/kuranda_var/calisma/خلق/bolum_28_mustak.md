@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|101|تَخَالُق|masdar · bâb VI
 arapça: تَخَالُق
 bilgi: kalıp: masdar · bâb VI; vezin: tafā'ul (kıyâsî); ingilizce_tanik: 
+duz_tercume: Ahlâklı görünme, huy takınma
 tercüme:
 ilave:

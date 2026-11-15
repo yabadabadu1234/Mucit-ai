@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|84|تَخَلُّق|masdar · bâb V
 arapça: تَخَلُّق
 bilgi: kalıp: masdar · bâb V; vezin: tafa''ul (kıyâsî); ingilizce_tanik: 
+duz_tercume: Ahlâklanma, huy edinme
 tercüme:
 ilave:

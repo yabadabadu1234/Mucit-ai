@@ -8,41 +8,48 @@ inceleyen: -
 ## M|خلق|185|مُسْتَخْلَق|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَق
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmiş / yaratılması talep olunmuş
 tercüme:
 ilave:
 
 ## M|خلق|186|مُسْتَخْلَقَة|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقَة
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + müennes (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmiş (müennes) / yaratılması talep olunmuş (dişi)
 tercüme:
 ilave:
 
 ## M|خلق|187|مُسْتَخْلَقَان|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقَان
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmiş ikisi / yaratılması talep olunmuş iki
 tercüme:
 ilave:
 
 ## M|خلق|188|مُسْتَخْلَقَتَان|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقَتَان
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + müennes tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmiş iki dişi / yaratılması talep olunmuş iki müennes
 tercüme:
 ilave:
 
 ## M|خلق|189|مُسْتَخْلَقُون|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقُون
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + cem‘-i sâlim müzekker (-ûn) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmişler / yaratılması talep olunmuş olanlar
 tercüme:
 ilave:
 
 ## M|خلق|190|مُسْتَخْلَقِين|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقِين
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + cem‘-i sâlim müzekker (-în) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmişleri / yaratılması talep olunmuş olanları
 tercüme:
 ilave:
 
 ## M|خلق|191|مُسْتَخْلَقَات|ism-i mef‘ûl · bâb X
 arapça: مُسْتَخْلَقَات
 bilgi: kalıp: ism-i mef‘ûl · bâb X; vezin: mustaf'al + cem‘-i sâlim müennes (-ât) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk olunması istenmiş dişiler / yaratılması talep olunmuş olan müennesler
 tercüme:
 ilave:

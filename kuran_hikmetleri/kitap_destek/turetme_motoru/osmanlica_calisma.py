@@ -7,7 +7,24 @@ import osmanlica_muhur as M
 KOKDIZIN = os.path.join(M.CIKTI, 'kuranda_var', 'calisma')
 
 
+def duz_tercume(kok):
+    """Git geçmişinden alınmış en iyi düz tercüme (977f2361, OVH Qwen3.5-397B-A17B); anahtar -> düz tercüme."""
+    yol = os.path.join(M.CIKTI, 'kuranda_var', 'duz_tercume_kaynagi', kok + '.json')
+    if not os.path.exists(yol):
+        return {}
+    d2 = json.load(open(yol, encoding='utf-8'))
+    esle = {}
+
+    def cb(tur, m, ctx):
+        if tur != 'A':
+            esle[M.anahtar_(tur, m, ctx)] = m
+        return m
+    M.gez(d2, cb)
+    return esle
+
+
 def hazirla(kok, bolum_boyu=20):
+    duz = duz_tercume(kok)
     f = os.path.join(M.GIRDI, 'kuranda_var', 'kokler', kok + '.json')
     d = json.load(open(f, encoding='utf-8'))
     ad = os.path.join(KOKDIZIN, kok)
@@ -42,7 +59,7 @@ def hazirla(kok, bolum_boyu=20):
         yol = os.path.join(ad, 'bolum_%02d_%s.md' % (n, tur))
         g = ['durum: bos', 'bolum: %s — %s' % (tur, baslik), 'tercume_eden: -', 'inceleyen: -', '', '---', '']
         for k, a, b in li:
-            g += ['## ' + k, 'arapça: ' + a, 'bilgi: ' + b, 'tercüme:', 'ilave:', '']
+            g += ['## ' + k, 'arapça: ' + a, 'bilgi: ' + b, 'duz_tercume: ' + duz.get(k, '-'), 'tercüme:', 'ilave:', '']
         open(yol, 'w', encoding='utf-8').write('\n'.join(g))
     print(kok, 'bölüm', len(bolumler), 'satır', sum(len(x[2]) for x in bolumler))
 

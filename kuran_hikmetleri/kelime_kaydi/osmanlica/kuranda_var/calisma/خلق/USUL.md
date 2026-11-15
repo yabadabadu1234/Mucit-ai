@@ -17,12 +17,15 @@ inceleyen: -
 ## <satır kimliği>
 arapça: <Arapça biçim>
 bilgi: <tür, bâb, zaman, kalıp, vezin, ingilizce_tanik …>
+duz_tercume: <hazır düz Osmanlıca tercüme; git geçmişindeki en iyi sürüm (OVH Qwen3.5-397B-A17B)>
 tercüme:
 ilave:
 ```
 
+`duz_tercume:` alanı **hazır esas metindir**; tercüman onu baştan çevirmez, **üstüne şerh yazar**. Alanı kimse değiştirmez.
+
 ## Şerhli tercüme biçimi (`tercüme:` satırı — tercüman yazar)
-Tek satır; önce **kısa Osmanlıca tercüme**, sonra etiketli kısımlar (etiketler AYNEN, sırayla):
+Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüme olarak alır, açıkça yanlışsa (kaynakla çelişen mânâ, uydurma, aynı kalıpta tekrar, Türkçe olmayan ifade) kaynaktan düzeltir ve düzeltmenin sebebini ⟨Neden⟩ zincirinde söyler. Tek satır; önce **kısa Osmanlıca tercüme**, sonra etiketli kısımlar (etiketler AYNEN, sırayla):
 
 `<kısa tercüme> ⟨Ne⟩ … ⟨Nasıl⟩ … ⟨Neden⟩ … ⟨Neden 2⟩ … ⟨Neden 3⟩ … ⟨Esas⟩ … ⟨Niçin⟩ …`
 

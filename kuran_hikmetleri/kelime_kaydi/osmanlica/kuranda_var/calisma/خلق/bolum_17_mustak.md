@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|66|مُخَالَق|mekân/zaman/masdar-ı mîmî · bâb III
 arapça: مُخَالَق
 bilgi: kalıp: mekân/zaman/masdar-ı mîmî · bâb III; vezin: mufā'al (kıyâsî); ingilizce_tanik: 
+duz_tercume: birlikte yaratma yeri
 tercüme:
 ilave:

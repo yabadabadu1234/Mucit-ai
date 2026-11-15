@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|152|مُخْتَلَق|mekân/zaman/masdar-ı mîmî · bâb VIII
 arapça: مُخْتَلَق
 bilgi: kalıp: mekân/zaman/masdar-ı mîmî · bâb VIII; vezin: muftaʿal (kıyâsî); ingilizce_tanik: 
+duz_tercume: uydurma yer
 tercüme:
 ilave:

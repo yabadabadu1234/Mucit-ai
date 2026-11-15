@@ -8,41 +8,48 @@ inceleyen: -
 ## M|خلق|110|مُتَخَالَق|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَق
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuş / karşılıklı yaratılmış
 tercüme:
 ilave:
 
 ## M|خلق|111|مُتَخَالَقَة|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقَة
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + müennes (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuş (müennes) / karşılıklı yaratılmış (dişi)
 tercüme:
 ilave:
 
 ## M|خلق|112|مُتَخَالَقَان|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقَان
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuş ikisi / karşılıklı yaratılmış iki
 tercüme:
 ilave:
 
 ## M|خلق|113|مُتَخَالَقَتَان|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقَتَان
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + müennes tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuş iki dişi / karşılıklı yaratılmış iki müennes
 tercüme:
 ilave:
 
 ## M|خلق|114|مُتَخَالَقُون|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقُون
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + cem‘-i sâlim müzekker (-ûn) (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuşlar / karşılıklı yaratılmış olanlar
 tercüme:
 ilave:
 
 ## M|خلق|115|مُتَخَالَقِين|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقِين
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + cem‘-i sâlim müzekker (-în) (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuşları / karşılıklı yaratılmış olanları
 tercüme:
 ilave:
 
 ## M|خلق|116|مُتَخَالَقَات|ism-i mef‘ûl · bâb VI
 arapça: مُتَخَالَقَات
 bilgi: kalıp: ism-i mef‘ûl · bâb VI; vezin: mutafā'al + cem‘-i sâlim müennes (-ât) (kıyâsî); ingilizce_tanik: 
+duz_tercume: birbirine halk olunmuş dişiler / karşılıklı yaratılmış olan müennesler
 tercüme:
 ilave:

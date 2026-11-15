@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|119|اِنْخِلَاقَة|ism-i merre · bâb VII
 arapça: اِنْخِلَاقَة
 bilgi: kalıp: ism-i merre · bâb VII; vezin: infi'āl + tâ (aday); ingilizce_tanik: 
+duz_tercume: bir kerre halk olunmaktan çekinme
 tercüme:
 ilave:

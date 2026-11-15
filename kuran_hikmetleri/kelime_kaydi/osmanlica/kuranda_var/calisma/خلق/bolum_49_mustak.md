@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|192|مُسْتَخْلَق|mekân/zaman/masdar-ı mîmî · bâb X
 arapça: مُسْتَخْلَق
 bilgi: kalıp: mekân/zaman/masdar-ı mîmî · bâb X; vezin: mustaf'al (kıyâsî); ingilizce_tanik: 
+duz_tercume: yaratılması istenen yer
 tercüme:
 ilave:

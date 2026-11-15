@@ -8,41 +8,48 @@ inceleyen: -
 ## M|خلق|178|مُسْتَخْلِق|ism-i fâil · bâb X
 arapça: مُسْتَخْلِق
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyen / halk olunmasını talep eden (bab X)
 tercüme:
 ilave:
 
 ## M|خلق|179|مُسْتَخْلِقَة|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقَة
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + müennes (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyen (bab X, müennes)
 tercüme:
 ilave:
 
 ## M|خلق|180|مُسْتَخْلِقَان|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقَان
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyen (bab X, tesniye)
 tercüme:
 ilave:
 
 ## M|خلق|181|مُسْتَخْلِقَتَان|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقَتَان
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + müennes tesniye (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyen (bab X, müennes tesniye)
 tercüme:
 ilave:
 
 ## M|خلق|182|مُسْتَخْلِقُون|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقُون
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + cem‘-i sâlim müzekker (-ûn) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyenler (bab X, erkekler)
 tercüme:
 ilave:
 
 ## M|خلق|183|مُسْتَخْلِقِين|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقِين
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + cem‘-i sâlim müzekker (-în) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyenleri (bab X, erkekler, nasb/cerr)
 tercüme:
 ilave:
 
 ## M|خلق|184|مُسْتَخْلِقَات|ism-i fâil · bâb X
 arapça: مُسْتَخْلِقَات
 bilgi: kalıp: ism-i fâil · bâb X; vezin: mustaf'il + cem‘-i sâlim müennes (-ât) (kıyâsî); ingilizce_tanik: 
+duz_tercume: halk eyletmeyi isteyenler (bab X, kadınlar)
 tercüme:
 ilave:

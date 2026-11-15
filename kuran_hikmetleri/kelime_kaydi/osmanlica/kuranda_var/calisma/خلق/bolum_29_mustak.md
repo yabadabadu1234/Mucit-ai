@@ -8,5 +8,6 @@ inceleyen: -
 ## M|خلق|102|تَخَالُقَة|ism-i merre · bâb VI
 arapça: تَخَالُقَة
 bilgi: kalıp: ism-i merre · bâb VI; vezin: tafā'ul + tâ (aday); ingilizce_tanik: 
+duz_tercume: bir kerre birbirine halk eyleme
 tercüme:
 ilave:
