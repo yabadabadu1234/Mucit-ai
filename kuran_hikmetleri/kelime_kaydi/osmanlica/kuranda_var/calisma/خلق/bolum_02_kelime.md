@@ -1,4 +1,4 @@
-durum: tercume-yapiliyor
+durum: tercume-tamam
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-1
 inceleyen: -
@@ -65,7 +65,7 @@ ilave:
 arapça: خَلَقَ
 bilgi: tür: İsim; bâb: fe'ale; zaman: Muzâri; LEMMA (sözlük biçimi)
 duz_tercume: Yarattı
-tercüme: Yarattı ⟨Ne⟩ Fiilin mâzî gövdesi, sözlükte durduğu biçim: yarattı, halk eyledi demektir. ⟨Nasıl⟩ Üçüncü tekil şahıs mâzî biçimi, fiilin bütün şubelerinin çıkış noktasıdır: şahıslar, zamanlar ve ırâblar bu gövdeden çıkar. Gövde, fail zamiri taşımadığı hâliyle, "yaratmak" işinin mücerred nüvesidir. ⟨Neden⟩ Bir fiilin anlamları, bütün şahıs ve zaman biçimlerinde dolaşır; bu biçimlerin hepsi tek bir gövdeden büyür. Şubeler ana gövdeden ayrıldıkça anlam dağılır; ana gövde ise anlamı bütün birliğiyle taşır. ⟨Neden 2⟩ Mâzî, işin bitip geçmesini bildirir: ölçülüp biçilen şey, sonunda bir suret olarak tamam olur ve elden çıkar. Bu tamamlanma, kökün tecrübesinin son durağıdır. ⟨Esas⟩ Her iş, bir neticeye varır; dil de bu neticeyi, mâzî gövdesinin müstakil duruşuyla bildirir.
+tercüme: Yarattı ⟨Ne⟩ Fiilin mâzî gövdesi, ana biçim olarak durduğu hâl: yarattı, halk eyledi demektir. ⟨Nasıl⟩ Üçüncü tekil şahıs mâzî biçimi, fiilin bütün şubelerinin çıkış noktasıdır: şahıslar, zamanlar ve ırâblar bu gövdeden çıkar. Gövde, fail zamiri taşımadığı hâliyle, "yaratmak" işinin mücerred nüvesidir. ⟨Neden⟩ Bir fiilin anlamları, bütün şahıs ve zaman biçimlerinde dolaşır; bu biçimlerin hepsi tek bir gövdeden büyür. Şubeler ana gövdeden ayrıldıkça anlam dağılır; ana gövde ise anlamı bütün birliğiyle taşır. ⟨Neden 2⟩ Mâzî, işin bitip geçmesini bildirir: ölçülüp biçilen şey, sonunda bir suret olarak tamam olur ve elden çıkar. Bu tamamlanma, kökün tecrübesinin son durağıdır. ⟨Esas⟩ Her iş, bir neticeye varır; dil de bu neticeyi, mâzî gövdesinin müstakil duruşuyla bildirir.
 ilave:
 
 ## K|خلق|بِخَلَٰقِهِمْ|yuzey|İsim||
