@@ -75,10 +75,12 @@ def denetle(yol, dizin, kay):
             sorunlar['ilave_dolu'].append(r['id'])
         if '⟨' not in t:
             sorunlar['serh_yok'].append(r['id'])
+        elif '⟨Esas' not in t:
+            sorunlar['esas_yok'].append(r['id'])
         elif 'Neden' not in t:
             sorunlar['neden_yok'].append(r['id'])
         # Arapça alıntı doğrulama
-        for a in ARAPCA.findall(t):
+        for a in ARAPCA.findall(t.replace('\uFD3E', ' ').replace('\uFD3F', ' ')):
             an = iskelet(a).strip()
             if len(an) >= 4 and an not in kay:
                 sorunlar['arapca_kaynakta_yok'].append((r['id'], an[:40]))

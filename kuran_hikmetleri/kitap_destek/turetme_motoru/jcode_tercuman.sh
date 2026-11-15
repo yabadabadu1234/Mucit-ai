@@ -11,6 +11,13 @@ okuma="Önce $DIR/USUL.md dosyasını baştan sona oku (usul, biçim, görev ve 
 for f in $(ls bolum_*.md | sort); do
   grep -q "^durum: bos" "$f" || continue
   mkdir "$KILIT/$f" 2>/dev/null || continue
-  timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "Sen TERCÜMAN ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: $AD) yap; her satırın hazır 'duz_tercume:' değerini esas alıp (dokunmadan) 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + hâlin iktizasına göre gerekli etiketli şerh kısımları; etiketlerin sırası ve sayısı serbest; her sebep en umumî sebebe çıkarılmış; Arapça alıntılar kaynaktan harfi harfine) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:', 'duz_tercume:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." > "../../log_${AD}_${f%.md}.txt" 2>&1
+  ek=""
+  for tur in 1 2 3; do
+    timeout 1500 jcode run --provider-profile ovh --model "$MODEL" --no-update "$ek Sen TERCÜMAN ajansın (adın $AD). $okuma Görevin: $DIR/$f bölüm dosyasını işlemek. Dosyayı oku; durumu 'tercume-yapiliyor' (tercume_eden: $AD) yap; her satırın hazır 'duz_tercume:' değerini esas alıp (dokunmadan) 'tercüme:' alanını USUL.md'deki ŞERHLİ TERCÜME biçimiyle (kısa Osmanlıca tercüme + hâlin iktizasına göre gerekli etiketli şerh kısımları; etiketlerin sırası ve sayısı serbest; her sebep en umumî sebebe çıkarılmış; Arapça alıntılar kaynaktan harfi harfine) tek satırda doldur; dosyayı bütün hâliyle kaydet ve 'durum: tercume-tamam' yap. Başlık, '---', '##', 'arapça:', 'bilgi:', 'duz_tercume:' ve 'ilave:' alanlarına dokunma; başka dosyaya dokunma; hiçbir satırı boş bırakma." >> "../../log_${AD}_${f%.md}.txt" 2>&1
+    hata=$(python3 "$(dirname "$0")/osmanlica_kapi.py" "$DIR" "$f") && break
+    ek="KAPI GERİ ÇEVİRDİ (deneme $tur): $hata. Önce bunları düzelt, sonra bölümü bütün hâliyle yeniden kaydet ve durumu tamam yap. "
+    sed -i "s/^durum: .*/durum: tercume-yapiliyor/" "$f"
+  done
+  python3 "$(dirname "$0")/osmanlica_kapi.py" "$DIR" "$f" >/dev/null || sed -i "s/^durum: .*/durum: kapi-gecmedi/" "$f"
   echo "$(date +%T) $AD: $f bitti"
 done

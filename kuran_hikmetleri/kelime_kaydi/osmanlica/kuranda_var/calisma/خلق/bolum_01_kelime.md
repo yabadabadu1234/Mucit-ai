@@ -1,4 +1,4 @@
-durum: inceleniyor
+durum: bos
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercüman
 inceleyen: inceleyici-0
