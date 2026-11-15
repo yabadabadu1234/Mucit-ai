@@ -83,6 +83,10 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 | 77 | Atom birimleriyle sıkıştırma (Compression Calculus) | çerçeve | Duggal vd. 2026, arXiv 2607.12634 | web aramasında bulundu | — | bilgi tekrar kullanılan atomlarla | DAYANAK: mana_formulu/USUL.md |
 | 78 | Yukarıdan aşağı anlamsal harita aracı | model | NAACL 2025 (arXiv 2412.01423) | web aramasında bulundu | — | diller arası verilerden kavram uzayı ve anlamsal harita | DAYANAK: mana_formulu/USUL.md |
 | 79 | Mana formülü ve mana imzası | usul | bu çalışma (2026-11-15) | web aramasında bulundu | — | kök = esas + işlem dizisi; işlemler pusulada sabit yönde | KULLANILDI: mana_formulu/ |
+| 80 | Anlam asalları (Natural Semantic Metalanguage) | usul | Wierzbicka & Goddard; Kur'ân kelimeleri: Durie 2022 (Russian Journal of Linguistics); dil modeliyle tarif üretimi 2025 (arXiv 2505.11764) | web aramasında bulundu | — | her mana ~65 evrensel asal kelimeyle tarif edilir | GÖSTERİLDİ: garip_usuller/1 |
+| 81 | Metin devresi (DisCoCirc) | usul | Coecke 2019; Liu vd. 2023 boru hattı; QDisCoCirc 2024; arXiv 2505.13208 (2025) | web aramasında bulundu | — | kelime teldir, cümle tel üstünde kapı; metin tek bir devre | GÖSTERİLDİ: garip_usuller/2 |
+| 82 | Kipu (düğümlü ip kaydı) | usul | İnka; Medrano & Urton; St Andrews saç kipusu 2025 | web aramasında bulundu | — | ip, renk ve düğümle kayıt | GÖSTERİLDİ: garip_usuller/3 |
+| 83 | Kurularak kalıcılaşan fizikî ağ (NODKANT) | kanıt | Pahr vd. 2025 (EuroVis/CGF) | web aramasında bulundu | — | kendi kuran, 10–14 gün sonra daha çok hatırladı | DENENMEDİ |
 
 ## Güncelleme kaydı
 - 2026-11-15: ilk tarama, 49 kayıt. Tarama kapsamı: sunuş, hiyerarşi, çizge, küme, 3B, öğrenme kanıtı. Dünya literatürünün **tamamı** taranmadı ve taranamaz (bkz. `KAMIL_ISPAT_DURUMU.md`, Teorem 4).
@@ -90,3 +94,4 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 - 2026-11-15 (2): web taraması, 11 yeni kayıt (50–60): doğrusal diyagram ve dayanakları, tablolu Euler, iç içe çizgi diyagramı, BioFabric, kovan çizimi, anlamsal zemin.
 - 2026-11-15 (3): hedefli tarama (kompaktlık + anlaşılma vakti), 9 yeni kayıt (61–69).
 - 2026-11-15 (4): 2023–2026 taraması (mana uzantısı, düzenli çok anlamlılık, soyutlama sıkıştırması), 10 yeni kayıt (70–79).
+- 2026-11-15 (5): alışılmadık usuller, 4 yeni kayıt (80–83).
