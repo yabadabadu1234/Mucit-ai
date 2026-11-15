@@ -23,7 +23,7 @@ ilave:
 arapça: خَلَقْتَنِى
 bilgi: tür: İsim; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: beni halk eyledim
-tercüme: beni halk eyledim ⟨Ne⟩ Mâzî fiil, ikinci tekil şahıs fail zamiri "sen" ve mef'ûl zamiri "beni" birlikte taşır: beni yarattın, beni halk eyledin demektir. ⟨Nasıl⟩ Fiil gövdesine önce fail zamiri, sonra mef'ûl zamiri bitişir; böylece fiil, failini ve nesnesini kendine yapışmış olarak tek parça hâlinde söylenir. ⟨Neden⟩ Söyleyici, hem eden hem de edileni açıkça işaretlemek ister; ayrı ayrı isim ve zamirle söylemek yorucu ve dağınık olur. Zamirlerin fiile bitişmesi, işi, işleyeni ve işleneni bir tek sesle vermenin en kestirme yoludur. ⟨Esas⟩ İnsanın aklı, bir olayı faili ve nesnesiyle bir arada kavrar; dil de bu kavrayışın gereği olarak olayın öğelerini fiil gövdesine bağlar.
+tercüme: beni yarattın ⟨Ne⟩ Mâzî fiil, ikinci tekil şahıs fail zamiri "sen" ve mef'ûl zamiri "beni" birlikte taşır: beni yarattın, beni halk eyledin demektir. duz_tercume'de "beni halk eyledim" yazılmış olsa da, خَلَقْتَنِى biçiminde תَ harfi ikinci tekil şahıs fail zamiri bildirir; doğru karşılık "beni yarattın"dır. ⟨Nasıl⟩ Fiil gövdesine önce fail zamiri, sonra mef'ûl zamiri bitişir; böylece fiil, failini ve nesnesini kendine yapışmış olarak tek parça hâlinde söylenir. ⟨Neden⟩ Söyleyici, hem eden hem de edileni açıkça işaretlemek ister; ayrı ayrı isim ve zamirle söylemek yorucu ve dağınık olur. Zamirlerin fiile bitişmesi, işi, işleyeni ve işleneni bir tek sesle vermenin en kestirme yoludur. ⟨Esas⟩ İnsanın aklı, bir olayı faili ve nesnesiyle bir arada kavrar; dil de bu kavrayışın gereği olarak olayın öğelerini fiil gövdesine bağlar.
 ilave:
 
 ## K|خلق|وَخَلَقْتَهُۥ|yuzey|İsim|fe'ale|Mâzî
