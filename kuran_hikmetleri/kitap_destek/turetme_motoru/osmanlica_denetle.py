@@ -89,7 +89,7 @@ def denetle(yol, dizin, kay):
         # Arapça alıntı doğrulama
         for a in ARAPCA.findall(t.replace('\uFD3E', ' ').replace('\uFD3F', ' ')):
             an = iskelet(a).strip()
-            if len(an) >= 4 and an not in kay:
+            if len(an.split()) >= 3 and an not in kay:
                 sorunlar['arapca_kaynakta_yok'].append((r['id'], an[:40]))
         if r.get('duz_tercume') and r['duz_tercume'] != '-' and ilk.lower() == r['duz_tercume'].lower():
             rapor['duz_ile_ayni'] = rapor.get('duz_ile_ayni', 0) + 1
