@@ -1,0 +1,195 @@
+<title>خلق Kafesi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Yerleşim: tam ekran sahne, üstte kontrol şeridi, sağda seçili düğüm paneli.
+   Palet: sıcak kâğıt zemin, esas altın, mana mavi/yeşil/şeftali, sebep çizgisi toprak turuncusu. */
+:root{
+  --bg:#fbf8ef; --fg:#2a2414; --muted:#7a6f55; --panel:#fffdf6; --line:#d9cfa8;
+  --esas:#e8c766; --mavi:#bcd9f5; --yesil:#cde8b8; --seftali:#f6cfa6; --pembe:#eac3df; --turkuaz:#bfe6dc; --gri:#dcd8c8;
+  --kenar:#8d7f4f; --sebep:#b3541e; --halka:#cfc293; --kelime:#fffdf6c0;
+  --font-metin:'Inter',system-ui,sans-serif; --font-arap:'Amiri','Noto Naskh Arabic',serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15130d; --fg:#efe8d0; --muted:#a79d7d; --panel:#1e1b12; --line:#3c3724;
+  --esas:#9c7f2a; --mavi:#2d4a66; --yesil:#40592f; --seftali:#6b4a2c; --pembe:#5e3a56; --turkuaz:#2f5c52; --gri:#3a3828;
+  --kenar:#b9a96d; --sebep:#ff9a5c; --halka:#4a4328; --kelime:#15130dc0; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#15130d; --fg:#efe8d0; --muted:#a79d7d; --panel:#1e1b12; --line:#3c3724;
+  --esas:#9c7f2a; --mavi:#2d4a66; --yesil:#40592f; --seftali:#6b4a2c; --pembe:#5e3a56; --turkuaz:#2f5c52; --gri:#3a3828;
+  --kenar:#b9a96d; --sebep:#ff9a5c; --halka:#4a4328; --kelime:#15130dc0; color-scheme:dark;}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-metin);overflow:hidden}
+#app{position:absolute;inset:0;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:max(0px,env(safe-area-inset-left,0px));padding-right:max(0px,env(safe-area-inset-right,0px))}
+#gl,#lab{position:absolute;inset:0}
+#lab{pointer-events:none}
+#bar{position:absolute;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));top:calc(10px + env(safe-area-inset-top,0px));display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;z-index:5;pointer-events:none}
+#bar>*{pointer-events:auto}
+.grup{display:flex;gap:4px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px 6px;font-size:12px}
+.grup button{font:600 12px var(--font-metin);padding:5px 9px;border:1px solid var(--line);background:transparent;color:var(--fg);border-radius:7px;cursor:pointer}
+.grup button:hover,.grup button[aria-pressed=true]{background:var(--esas)}
+.grup label{display:flex;gap:4px;align-items:center;cursor:pointer;white-space:nowrap}
+#ad{font:700 15px var(--font-metin);padding:5px 10px;background:var(--panel);border:1px solid var(--line);border-radius:10px}
+#ad b{font-family:var(--font-arap);font-size:20px;margin-right:4px}
+#panel{position:absolute;right:max(12px,env(safe-area-inset-right,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(340px,calc(100% - 24px));max-height:46%;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:12.5px;line-height:1.45;z-index:5}
+#panel h3{margin:0 0 4px;font-size:13px}
+#panel .ar{font-family:var(--font-arap);font-size:20px;direction:rtl}
+#panel .sol{color:var(--muted)}
+#panel ul{margin:4px 0 6px;padding-left:16px}
+#kural{position:absolute;left:max(12px,env(safe-area-inset-left,0px));bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(330px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;line-height:1.5;z-index:5}
+#kural h3{margin:0 0 4px;font-size:12.5px}
+#kural table{border-collapse:collapse;width:100%}#kural td{padding:1px 0;vertical-align:top}#kural td:last-child{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;padding-left:8px}
+.et{transform-origin:center;pointer-events:none}
+.kart{border:1.5px solid var(--kenar);border-radius:10px;padding:5px 8px;color:#2a2414;box-shadow:0 2px 8px #0003;white-space:nowrap;transition:opacity .15s}
+.kart.sonuk{opacity:.18}
+.kart.secili{outline:3px solid var(--sebep)}
+.kart .b{font:700 12.5px/1.25 var(--font-metin);text-align:center;margin-bottom:3px;white-space:normal;max-width:210px}
+.kart .k{display:grid;gap:3px 6px}
+.kart .kw{background:var(--kelime);border:1px solid #a89a70;border-radius:6px;padding:1px 5px;text-align:center;color:#2a2414}
+.kart .kw .ar{font:400 20px/1.3 var(--font-arap);direction:rtl}
+.kart .kw .tr{font:10px/1.15 var(--font-metin);max-width:116px;white-space:normal}
+.kart .kw .tg{font:8.5px/1 var(--font-metin);color:#6d6650}
+.c-top{background:var(--esas)}.c-bot{background:var(--gri)}.c-a{background:var(--mavi)}.c-b{background:var(--yesil)}.c-c{background:var(--seftali)}.c-h{background:var(--pembe)}.c-ab{background:var(--turkuaz)}.c-dis{background:var(--gri)}.c-esas{background:var(--esas)}
+.sbp{font:600 10.5px var(--font-metin);color:var(--sebep);background:var(--panel);border:1px solid var(--sebep);border-radius:6px;padding:1px 5px;max-width:190px;white-space:normal;text-align:center}
+.halka{font:600 10px var(--font-metin);color:var(--muted);background:var(--panel);border-radius:5px;padding:0 4px}
+#hata{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:24px;text-align:center;z-index:9}
+@media (max-width:640px){#panel{max-height:34%}#kural{display:none}}
+</style>
+<div id="app">
+  <div id="gl"></div><div id="lab"></div>
+  <div id="bar">
+    <div id="ad"><b>خلق</b> kafesi</div>
+    <div class="grup"><span>Bakış</span>
+      <button data-v="genel">Genel</button><button data-v="ust">Üstten</button><button data-v="yan">Yandan</button>
+    </div>
+    <div class="grup">
+      <label><input type="checkbox" id="cDon"> kendiliğinden dön</label>
+      <label><input type="checkbox" id="cKafes" checked> kafes çizgisi</label>
+      <label><input type="checkbox" id="cSebep" checked> sebep çizgisi</label>
+      <label><input type="checkbox" id="cSyaz"> sebep yazıları</label>
+      <label><input type="checkbox" id="cHalka" checked> halkalar</label>
+    </div>
+  </div>
+  <div id="kural"></div>
+  <div id="panel"><h3>Bir kutuya dokun</h3><span class="sol">Sürükle: döndür · tekerlek veya iki parmak: yakınlaş · sağ tuş veya üç parmak: kaydır. Kutu seçince onun ebeveynleri ve çocukları belirir, öbürleri solar.</span></div>
+  <div id="hata"><div>Bu tarayıcıda üç boyutlu çizim (WebGL) açılamadı.</div></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+<script>
+const D=__VERI__, RAPOR=__RAPOR__;
+(function(){
+const cssv=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const glEl=document.getElementById('gl'), labEl=document.getElementById('lab');
+let renderer; try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});}catch(e){document.getElementById('hata').style.display='flex';return;}
+renderer.setPixelRatio(Math.min(devicePixelRatio,2)); glEl.appendChild(renderer.domElement);
+const l2=new THREE.CSS2DRenderer();l2.domElement.style.position='absolute';l2.domElement.style.top='0';l2.domElement.style.left='0';l2.domElement.style.pointerEvents='none';labEl.appendChild(l2.domElement);
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(42,1,10,12000);
+const ctl=new THREE.OrbitControls(cam,renderer.domElement);
+ctl.enableDamping=true;ctl.dampingFactor=.08;ctl.autoRotateSpeed=.8;ctl.minDistance=250;ctl.maxDistance=6000;
+const ZG=D.katman_z; const zTop=Math.max(...D.dugumler.map(n=>n.z)), zBot=Math.min(...D.dugumler.map(n=>n.z));
+const mid=new THREE.Vector3(0,(zTop+zBot)/2,0); ctl.target.copy(mid);
+const V={genel:[1700,380,2700],ust:[0,3900,1],yan:[0,(zTop+zBot)/2,3800]};
+function git(ad,hizli){const p=V[ad];const to=new THREE.Vector3(p[0],p[1],p[2]);const from=cam.position.clone();const t0=performance.now();
+  const dur=hizli?0:650;function adim(){const k=dur?Math.min(1,(performance.now()-t0)/dur):1;const e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;
+   cam.position.lerpVectors(from,to,e);ctl.target.copy(mid);if(k<1)requestAnimationFrame(adim);}adim();}
+git('genel',true);
+// ---- dünya ----
+const dunya=new THREE.Group();scene.add(dunya);
+const P=D.dugumler.map(n=>new THREE.Vector3(n.r*Math.cos(n.theta),n.z,n.r*Math.sin(n.theta)));
+const renkAd={top:'c-top',bot:'c-bot',a:'c-a',b:'c-b',c:'c-c',h:'c-h',ab:'c-ab',dis:'c-dis',esas:'c-esas'};
+const hex=n=>({top:'--esas',bot:'--gri',a:'--mavi',b:'--yesil',c:'--seftali',h:'--pembe',ab:'--turkuaz',dis:'--gri',esas:'--esas'}[n]||'--gri');
+const adlar=D.dugumler.map(n=>n.kind==='top'?'esas':(n.baslik.join(' · ')||n.kelimeler.map(k=>k.ar).join(' ')||'alt'));
+const meshler=[], etler=[], kartlar=[];
+D.dugumler.forEach((n,i)=>{
+  const cols=n.kelimeler.length>3?2:1, rows=Math.max(1,Math.ceil(n.kelimeler.length/cols));
+  const w=n.kind==='top'?250:(100+cols*85), h=(n.baslik.length?(36+14*n.baslik.length):14)+rows*38;
+  const col=new THREE.Color(cssv(hex(n.kind==='top'?'top':n.kind==='bot'?'bot':n.renk)));
+  const geo=new THREE.BoxGeometry(w,h,Math.max(26,22+cols*0));
+  const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.9}));
+  m.position.copy(P[i]);m.userData.i=i;
+  const ed=new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:new THREE.Color(cssv('--kenar'))}));
+  m.add(ed);dunya.add(m);meshler.push(m);
+  // etiket
+  const d=document.createElement('div');d.className='kart '+(n.kind==='top'?'c-top':n.kind==='bot'?'c-bot':renkAd[n.renk]||'c-ab');
+  let hh='';
+  if(n.kind==='bot')hh='<div class="b">alt: boş küme</div>';
+  else{ if(n.baslik.length)hh+='<div class="b">'+n.baslik.join('<br>')+'</div>';
+    if(n.kelimeler.length)hh+='<div class="k" style="grid-template-columns:repeat('+cols+',auto)">'+n.kelimeler.map(k=>'<div class="kw"><div class="ar">'+k.ar+'</div><div class="tr">'+k.tr+'</div><div class="tg">'+k.tag+(k.kuran?' '+k.kuran:'')+'</div></div>').join('')+'</div>';
+    if(!hh)hh='<div class="b" style="opacity:.6">·</div>';}
+  const sar=document.createElement('div');sar.className='et';sar.appendChild(d);d.innerHTML=hh;
+  const o=new THREE.CSS2DObject(sar);o.position.set(0,0,0);m.add(o);etler.push(sar);kartlar.push(d);
+});
+// halkalar ve düzlemler
+const halkaGrup=new THREE.Group();dunya.add(halkaGrup);
+D.halkalar.forEach((r,k)=>{const pts=[];for(let a=0;a<=96;a++){const t=a/96*Math.PI*2;pts.push(new THREE.Vector3(r*Math.cos(t),ZG[1],r*Math.sin(t)));}
+  const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineDashedMaterial({color:new THREE.Color(cssv('--halka')),dashSize:10,gapSize:9}));l.computeLineDistances();halkaGrup.add(l);
+  const d=document.createElement('div');d.className='halka';d.textContent='köke uzaklık '+(k+1);const o=new THREE.CSS2DObject(d);o.position.set(r*Math.cos(-.3),ZG[1],r*Math.sin(-.3));halkaGrup.add(o);});
+ZG.forEach((z,k)=>{const g=new THREE.Mesh(new THREE.CircleGeometry(1400,64),new THREE.MeshBasicMaterial({color:new THREE.Color(cssv('--halka')),transparent:true,opacity:.07,side:THREE.DoubleSide}));g.rotation.x=-Math.PI/2;g.position.y=z-0.5;halkaGrup.add(g);});
+const eksen=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,zTop+80,0),new THREE.Vector3(0,zBot-80,0)]),new THREE.LineDashedMaterial({color:new THREE.Color(cssv('--halka')),dashSize:6,gapSize:8}));eksen.computeLineDistances();halkaGrup.add(eksen);
+// kafes kenarları: silindir
+const kafGrup=new THREE.Group();dunya.add(kafGrup);const kafKenar=[];
+const up=new THREE.Vector3(0,1,0);
+function silindir(a,b,r,renk){const d=new THREE.Vector3().subVectors(b,a),L=d.length();const g=new THREE.CylinderGeometry(r,r,L,8,1);
+  const m=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:renk,transparent:true,opacity:.85}));m.position.copy(a).add(b).multiplyScalar(.5);m.quaternion.setFromUnitVectors(up,d.normalize());return m;}
+D.kafes_kenarlari.forEach(([u,a])=>{const m=silindir(P[u],P[a],2.1,new THREE.Color(cssv('--kenar')));m.userData={u,a};kafGrup.add(m);kafKenar.push(m);});
+// sebep kenarları: eğri + ok + yazı
+const sebGrup=new THREE.Group();dunya.add(sebGrup);const sebYaz=new THREE.Group();dunya.add(sebYaz);const sebKenar=[];
+D.sebep_kenarlari.forEach(([u,a,v])=>{const A=P[u],B=P[a];const mid=A.clone().add(B).multiplyScalar(.5);
+  const dir=new THREE.Vector3().subVectors(B,A);const yan=new THREE.Vector3(-dir.z,0,dir.x);if(yan.lengthSq()<1)yan.set(1,0,0);yan.normalize().multiplyScalar(dir.length()*.18);
+  mid.add(yan);const eg=new THREE.QuadraticBezierCurve3(A,mid,B);const pts=eg.getPoints(40);
+  const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineDashedMaterial({color:new THREE.Color(cssv('--sebep')),dashSize:14,gapSize:8}));line.computeLineDistances();line.userData={u,a};sebGrup.add(line);
+  const son=pts[pts.length-1],on=pts[pts.length-4];const cone=new THREE.Mesh(new THREE.ConeGeometry(7,22,10),new THREE.MeshBasicMaterial({color:new THREE.Color(cssv('--sebep'))}));
+  cone.position.copy(son);cone.quaternion.setFromUnitVectors(up,new THREE.Vector3().subVectors(son,on).normalize());cone.userData={u,a};sebGrup.add(cone);
+  const t=[...new Set(v)].map(s=>s.replace(/^çünkü /,'')).join(' / ');const d=document.createElement('div');d.className='sbp';d.textContent=t;
+  const o=new THREE.CSS2DObject(d);o.position.copy(eg.getPoint(.5));o.userData={u,a};sebYaz.add(o);sebKenar.push({line,cone,o,d,u,a});});
+// ---- seçim ----
+const komsu=D.dugumler.map(()=>({ust:[],alt:[]}));D.kafes_kenarlari.forEach(([u,a])=>{komsu[u].alt.push(a);komsu[a].ust.push(u);});
+const panel=document.getElementById('panel');let secili=-1;
+function ata(i,set,yon){if(set.has(i))return;set.add(i);komsu[i][yon].forEach(j=>ata(j,set,yon));}
+function sec(i){secili=i;
+  if(i<0){kartlar.forEach(k=>k.classList.remove('sonuk','secili'));kafKenar.forEach(m=>m.material.opacity=.85);sebKenar.forEach(s=>{s.line.material.opacity=1;s.cone.material.opacity=1;});return;}
+  const A=new Set(),B=new Set();ata(i,A,'ust');ata(i,B,'alt');const hep=new Set([...A,...B]);
+  kartlar.forEach((k,j)=>{k.classList.toggle('sonuk',!hep.has(j));k.classList.toggle('secili',j===i);});
+  kafKenar.forEach(m=>{const ok=hep.has(m.userData.u)&&hep.has(m.userData.a);m.material.opacity=ok?1:.08;});
+  sebKenar.forEach(s=>{const ok=hep.has(s.u)&&hep.has(s.a);s.line.material.transparent=true;s.line.material.opacity=ok?1:.1;s.cone.material.transparent=true;s.cone.material.opacity=ok?1:.1;s.d.style.opacity=ok?1:.15;});
+  const n=D.dugumler[i];const ad=j=>'<li>'+adlar[j].replace(/</g,'')+'</li>';
+  panel.innerHTML='<h3>'+(n.kind==='top'?'Esas':n.kind==='bot'?'Alt (boş küme)':(n.baslik.join(' · ')||'Kelime kutusu'))+'</h3>'
+   +'<div class="sol">kafes katmanı '+n.rank+' · köke uzaklık '+(n.r?(n.r/250).toFixed(1):'0')+' · bu kutunun altında toplam '+n.n+' kelime</div>'
+   +(n.kelimeler.length?'<ul>'+n.kelimeler.map(k=>'<li><span class="ar">'+k.ar+'</span> '+k.tr+' <span class="sol">('+k.tag+(k.kuran?' '+k.kuran:'')+')</span></li>').join('')+'</ul>':'')
+   +(komsu[i].ust.length?'<b>Üstündekiler</b><ul>'+komsu[i].ust.map(ad).join('')+'</ul>':'')
+   +(komsu[i].alt.length?'<b>Altındakiler</b><ul>'+komsu[i].alt.map(ad).join('')+'</ul>':'');
+}
+const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();let down=null;
+renderer.domElement.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+renderer.domElement.addEventListener('pointerup',e=>{if(!down)return;if(Math.hypot(e.clientX-down[0],e.clientY-down[1])>5){down=null;return;}down=null;
+  const r=renderer.domElement.getBoundingClientRect();ptr.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1);ray.setFromCamera(ptr,cam);
+  const hit=ray.intersectObjects(meshler,false)[0];sec(hit?hit.object.userData.i:-1);});
+// ---- kontroller ----
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>git(b.dataset.v));
+const cDon=document.getElementById('cDon'),cK=document.getElementById('cKafes'),cS=document.getElementById('cSebep'),cY=document.getElementById('cSyaz'),cH=document.getElementById('cHalka');
+const halkaYaz=[];halkaGrup.children.forEach(c=>{if(c.isCSS2DObject||c instanceof THREE.CSS2DObject)halkaYaz.push(c);});
+function gor(){ctl.autoRotate=cDon.checked;kafGrup.visible=cK.checked;sebGrup.visible=cS.checked;sebYaz.visible=cY.checked&&cS.checked;halkaGrup.visible=cH.checked;sebKenar.forEach(s=>{s.o.visible=cY.checked&&cS.checked;});halkaYaz.forEach(o=>{o.visible=cH.checked;});}
+[cDon,cK,cS,cY,cH].forEach(c=>c.onchange=gor);gor();
+// ---- kural paneli ----
+const R=RAPOR;document.getElementById('kural').innerHTML='<h3>Kuralların denetimi</h3><table>'
+ +'<tr><td>Kavram düğümü / kenar / katman</td><td>'+R.kavram_dugumu+' / '+R.hasse_kenari+' / '+R.katman+'</td></tr>'
+ +'<tr><td>Çocukların arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='cocuk_arasina_girdi').length+'</td></tr>'
+ +'<tr><td>Ebeveynlerin arasına giren düğüm</td><td>'+R.ihlal.filter(x=>x[0]==='ebeveyn_arasina_girdi').length+'</td></tr>'
+ +'<tr><td>Ortak çocuğun hiza sapması (derece)</td><td>'+Math.max(...Object.entries(R.hiza_sapmasi_derece).filter(([k])=>+k!==R.kavram_dugumu-1).map(([,v])=>Math.abs(v)))+'</td></tr>'
+ +'<tr><td>Katman atlayan kenar</td><td>'+R.katman_atlayan_kenar+'</td></tr></table>';
+// ---- döngü ----
+function boyut(){const w=glEl.clientWidth,h=glEl.clientHeight;renderer.setSize(w,h);l2.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix();}
+addEventListener('resize',boyut);boyut();
+function renkYenile(){scene.background=new THREE.Color(cssv('--bg'));}
+renkYenile();matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>setTimeout(()=>{renkYenile();},50));
+new MutationObserver(()=>setTimeout(renkYenile,50)).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+const tmp=new THREE.Vector3();
+function dongu(){requestAnimationFrame(dongu);ctl.update();
+  etler.forEach((e,i)=>{meshler[i].getWorldPosition(tmp);const d=cam.position.distanceTo(tmp);const s=Math.max(.28,Math.min(1.25,2500/d*0.5));e.style.transform='scale('+s.toFixed(3)+')';});
+  renderer.render(scene,cam);l2.render(scene,cam);}
+dongu();
+})();
+</script>
