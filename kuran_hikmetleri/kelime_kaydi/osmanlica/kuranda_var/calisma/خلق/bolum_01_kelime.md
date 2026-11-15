@@ -1,7 +1,7 @@
-durum: kapi-gecmedi
+durum: inceleniyor
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-0
-inceleyen: inceleyici-1
+inceleyen: inceleyici-0
 
 ---
 
@@ -9,7 +9,7 @@ inceleyen: inceleyici-1
 arapça: خَلَقَكُمْ
 bilgi: tür: Fiil; bâb: fe'ale; zaman: Mâzî; kelime biçimi
 duz_tercume: sizi halk eyledi
-tercüme: sizi halk eyledi ⟨Ne⟩ Bu biçim, خَلَقَ fiilinin mâzîsidir ve sondaki küm zamiri, fiilin mef'ûlünü siz olarak bildirir. Kelimenin mânâsı sizi halk eyledi şeklindedir: şekilsiz olanı var edip belirli bir hey'ete koyan iş, hitap edilen topluluğa ulaşmıştır. Yani yaratma burada uzak ve genel bir hadise değil, muhatabın kendisine dokunmuş bir iştir. ⟨Nasıl⟩ Kök, işin kendisini taşır; bitişik zamir yalnız hedefi gösterir, fiile yeni bir mânâ katmaz. İş ile hedefi bir tek kelime içinde söylenir, dinleyene bu sûretle bildirilir: yaratma işi havada kalmamış, belirli birine varmıştır. Kökün harekeleri bozulmamış, sonuna yalnız küm eklenmiş ve kelime bir olmuştur; el, elin ulaştığı ile birlikte nefeste söylenir. ⟨Neden⟩ Kökün asıl mânâsı, şekilsiz bir maddeyi arzu edilen belirli bir şey hâline getirmektir: deriyi ölçer keser ve su kabı yapar, yer kuyuya çıkacak şekilde kazılır, bulut yağmur için toplanır. İnsanın yoktan var edilmesinden söz eden ilk kimse de bu kelimeyi almıştır; zîrâ insan da şekle konmuş bir maddedir, hiçlikten bir varlığa çekilmiş bir hey'ettir. ⟨Neden 2⟩ Şekil vermek, takdîr ile neden bir olur? Çünkü şekil, önceki bir kararsız gelir: el biçmeden evvel, kalp şeyin ne olacağını kararlaştırmış olur. Kalpte kararlaştıran, ele geldiğinde hâsıl olur; işte takdîr, evvelden yaratmaktır. ⟨Esas⟩ İnsanın ilk sezgisinde var olan, sınırı olan şeydir; sınırı olmayan şey şey değil, maddedir. Var etmek, insanın gözünde sınırı çekmek, şekli vermektir; ve bu kelime, küm zamiriyle, o şeklin belirli bir topluluğa verildiğini haber verir.
+tercüme: sizi halk eyledi ⟨Ne⟩ Bu biçim, خَلَقَ fiilinin sülâsî mâzîsidir ve sondaki küm zamiri, fiilin mef'ûlünü siz olarak bildirir. Kelimenin mânâsı sizi halk eyledi şeklindedir: şekilsiz olanı var edip belirli bir hey'ete koyan iş, hitap edilen topluluğa ulaşmıştır. Yani yaratma burada uzak ve genel bir hadise değil, muhatabın kendisine dokunmuş bir iştir. ⟨Nasıl⟩ Kök, işin kendisini taşır; bitişik zamir yalnız hedefi gösterir, fiile yeni bir mânâ katmaz. İş ile hedefi bir tek kelime içinde söylenir, dinleyene bu sûretle bildirilir: yaratma işi havada kalmamış, belirli birine varmıştır. Kökün harekeleri bozulmamış, sonuna yalnız küm eklenmiş ve kelime bir olmuştur; el, elin ulaştığı ile birlikte nefeste söylenir. ⟨Neden⟩ Kökün asıl mânâsı, şekilsiz bir maddeyi arzu edilen belirli bir şey hâline getirmektir: deriyi ölçer keser ve su kabı yapar, yer kuyuya çıkacak şekilde kazılır, bulut yağmur için toplanır. İnsanın yoktan var edilmesinden söz eden ilk kimse de bu kelimeyi almıştır; zîrâ insan da şekle konmuş bir maddedir, hiçlikten bir varlığa çekilmiş bir hey'ettir. ⟨Neden 2⟩ Şekil vermek, takdîr ile neden bir olur? Çünkü şekil, önceki bir kararsız gelir: el biçmeden evvel, kalp şeyin ne olacağını kararlaştırmış olur. Kalpte kararlaştıran, ele geldiğinde hâsıl olur; işte takdîr, evvelden yaratmaktır. ⟨Esas⟩ İnsanın ilk sezgisinde var olan, sınırı olan şeydir; sınırı olmayan şey şey değil, maddedir. Var etmek, insanın gözünde sınırı çekmek, şekli vermektir; ve bu kelime, küm zamiriyle, o şeklin belirli bir topluluğa verildiğini haber verir.
 ilave:
 
 ## K|خلق|خَلَقَ|lemma|Fiil|fe'ale|Mâzî
