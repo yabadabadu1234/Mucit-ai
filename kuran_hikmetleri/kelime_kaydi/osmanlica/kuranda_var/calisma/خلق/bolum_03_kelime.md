@@ -1,4 +1,4 @@
-durum: inceleniyor
+durum: tercume-tamam
 bolum: kelime — Kelime biçimleri
 tercume_eden: tercuman-0
 inceleyen: inceleyici-0
