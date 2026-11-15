@@ -87,6 +87,106 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 | 81 | Metin devresi (DisCoCirc) | usul | Coecke 2019; Liu vd. 2023 boru hattı; QDisCoCirc 2024; arXiv 2505.13208 (2025) | web aramasında bulundu | — | kelime teldir, cümle tel üstünde kapı; metin tek bir devre | GÖSTERİLDİ: garip_usuller/2 |
 | 82 | Kipu (düğümlü ip kaydı) | usul | İnka; Medrano & Urton; St Andrews saç kipusu 2025 | web aramasında bulundu | — | ip, renk ve düğümle kayıt | GÖSTERİLDİ: garip_usuller/3 |
 | 83 | Kurularak kalıcılaşan fizikî ağ (NODKANT) | kanıt | Pahr vd. 2025 (EuroVis/CGF) | web aramasında bulundu | — | kendi kuran, 10–14 gün sonra daha çok hatırladı | DENENMEDİ |
+| 84 | Ithkuil | 100 arama | ithkuil.net | web araması #1 | — | bir kökten 10 yuvalı ek sistemiyle çok yoğun mana; iki kelime = 19 kelimelik İngilizce cümle | KAYDEDİLDİ |
+| 85 | Blissymbolics | 100 arama | Wikipedia/BCI | web araması #2 | — | yüzlerce temel simge; sınıflayıcı + gösterge ile birleşik mana; sessiz, yazılı | KAYDEDİLDİ |
+| 86 | Toki Pona | 100 arama | aclanthology 2026.scil-main.4 | web araması #3 | — | ~124 kelime, 10 kural; mana birleştirmeyle; 2026 SCiL Word2Vec çalışması | KAYDEDİLDİ |
+| 87 | Lull çarkları (Ars combinatoria) | 100 arama | Crupi 2019, Volvelles of knowledge | web araması #4 | — | iç içe dönen diskler; her dönüş yeni kavram birleşimi | KAYDEDİLDİ |
+| 88 | Leibniz asal sayı kodlaması | 100 arama | Encyclopedia.com, Wolfram | web araması #5 | — | basit kavram = asal; bileşik = çarpım; yüklem bölünebilirlikle sınanır | KAYDEDİLDİ |
+| 89 | Wilkins gerçek karakter (1668) | 100 arama | Wikipedia, Futility Closet | web araması #6 | — | 40 cins; kelimenin harfleri cins → fark → tür yolunu kodlar | KAYDEDİLDİ |
+| 90 | Peirce varoluşsal çizgeleri | 100 arama | arXiv 2402.15174, 2507.19689 | web araması #7 | — | kâğıda yazmak iddia; yan yana = ve; kesik (oval) = değil; çiçek hesabı 2024, kaydırma ağları 2025 | KAYDEDİLDİ |
+| 91 | Frege Begriffsschrift | 100 arama | Schlimm 2017 | web araması #8 | — | iki boyutlu şart çizgisi, parantezsiz | KAYDEDİLDİ |
+| 92 | Isotype (Neurath) | 100 arama | isotyperevisited.org | web araması #9 | — | çok sayı büyük simgeyle değil aynı simgenin tekrarıyla; simgeler birleşir | KAYDEDİLDİ |
+| 93 | Çince karakter bileşenleri | 100 arama | Pitt radikal gruplama çalışması | web araması #10 | — | mana bileşeni + ses bileşeni; %60–97 karakter böyle | KAYDEDİLDİ |
+| 94 | Laws of Form (Spencer-Brown) | 100 arama | Kauffman | web araması #11 | — | tek işaret: ayrım; çağırma ve geçme kanunu | KAYDEDİLDİ |
+| 95 | I Ching heksagramları | 100 arama | Cottrell | web araması #12 | — | 6 çizgi = 64 hâl; değişen çizgi = bit çevirme (XOR); Gray kodu geçişleri | KAYDEDİLDİ |
+| 96 | İlm-i hurûf (İbn Arabî) | 100 arama | Rašić, The Written World of God | web araması #13 | — | harflerin kozmik manası; ebced değerleri | KAYDEDİLDİ |
+| 97 | İbn Cinnî iştikâk-ı ekber | 100 arama | Muratov 2023 Minbar; el-Hasâis | web araması #14 | — | kök harflerinin bütün dizilişleri ortak manada (ق و ل: çabukluk) | KAYDEDİLDİ |
+| 98 | Halil b. Ahmed Kitâbü'l-Ayn | 100 arama | Wikipedia; Wasit 2025 | web araması #15 | — | mahreç sırasıyla dizilim; harf dizilişlerinin hesabıyla bütün sözlerin sayımı (takâlîb) | KAYDEDİLDİ |
+| 99 | Ses sembolizmi | 100 arama | arXiv 2512.12245, 2603.17306 | web araması #16 | — | dudak ünsüzü yumuşaklık; 27 dilde büyüklük sinyali (2025); fonem başına çok boyutlu mana (2026) | KAYDEDİLDİ |
+| 100 | İmaj şemaları | 100 arama | arXiv 2503.24110 | web araması #17 | — | kap, yol, kuvvet ilkelleri; 2025 ajan akıl yürütmesi | KAYDEDİLDİ |
+| 101 | Kuvvet dinamikleri (Talmy) | 100 arama | Talmy 1988 | web araması #18 | — | agonist (daire) / antagonist; eğilim oku/nokta; güç +/−; netice çizgisi | KAYDEDİLDİ |
+| 102 | Bilişsel gramer çizimleri (Langacker) | 100 arama | Langacker 2008 | web araması #19 | — | gezgin/zemin, profil (hipotenüs üçgenin bir parçasını öne çıkarır) | KAYDEDİLDİ |
+| 103 | Kavram uzayları (Gärdenfors) | 100 arama | Gärdenfors 2024 (JCS, TopiCS, Philosophia) | web araması #20 | — | tabii kavram dışbükey bölge; prototip Voronoi hücreleri; 2024 kelime türleri | KAYDEDİLDİ |
+| 104 | Hiperbolik gömme (Poincaré topu) | 100 arama | NTU WordNet çalışması; arXiv 2512.20029 | web araması #21 | — | umumî kavram merkezde, hususî kenarda; ağaç düz uzaya sığmaz, hiperbolik uzaya sığar | KAYDEDİLDİ |
+| 105 | Kutu gömmeleri | 100 arama | arXiv 2601.09633 (TaxoBell) | web araması #22 | — | kavram = eksen hizalı kutu; içerme = alt kavram; hacim = ihtimal; Gaussian kutular 2026 | KAYDEDİLDİ |
+| 106 | Hiperboyutlu hesap / vektör sembolik mimariler | 100 arama | Kleyko vd. anket; ACM TECS 2026 | web araması #23 | — | bağlama (⊗), demetleme (+), permütasyon; yapı tek vektörde, çözülebilir | KAYDEDİLDİ |
+| 107 | Demet (sheaf) teorisi | 100 arama | Gebhart vd.; arXiv 2603.05685 (2026) | web araması #24 | — | yerel bilgiler çelişmeden yapışırsa küresel bilgi olur; tutarlılık ölçüsü | KAYDEDİLDİ |
+| 108 | Mapper (topolojik veri analizi) | 100 arama | 2024 öğretici; 2025 yorumlanabilirlik | web araması #25 | — | çok boyutlu veriyi küme düğümlü küçük bir çizgeye indirir | KAYDEDİLDİ |
+| 109 | Kalıcı homoloji barkodları | 100 arama | Gromov vd. 2025 (Complexity); Draganov & Skiena 2024 | web araması #26 | — | anlam uzayındaki "delikler" (kelimesi olmayan bölgeler) 2025 | KAYDEDİLDİ |
+| 110 | Dizgi diyagramları (kategori kuramı) | 100 arama | EPTCS 429 | web araması #27 | — | kelime kutu, gramer tel; yüksek mertebe DisCoCat 2025 (DisCoPy) | KAYDEDİLDİ |
+| 111 | AMR / UMR | 100 arama | arXiv 2502.11973 | web araması #28 | — | cümle manası köklü yönlü çizge (PENMAN yazımı); UMR çok dilli, metin düzeyi | KAYDEDİLDİ |
+| 112 | FrameNet çerçeve anlambilimi | 100 arama | FrameGrapher; ACL 2026 kısa | web araması #29 | — | kelime bir sahneyi (çerçeve) uyandırır, rolleri vardır; 1.200+ çerçeve | KAYDEDİLDİ |
+| 113 | Mel'čuk sözlük fonksiyonları | 100 arama | Mel'čuk & Polguère, Lexical Functions: The Naked Truth (LangSci) | web araması #30 | — | Magn(yağmur)=şiddetli, Oper1(dikkat)=vermek, Real; ~60 standart fonksiyon formülü | KAYDEDİLDİ |
+| 114 | Üretken sözlük, kuale yapısı (Pustejovsky) | 100 arama | Pustejovsky 1991; Torrent & Matos 2024 | web araması #31 | — | her isim dört "illet" taşır: şekil, terkip, gaye, fâil (Aristo'nun dört sebebi) | KAYDEDİLDİ |
+| 115 | Hafıza sarayı (sanal gerçeklik) | 100 arama | Applied Sciences 2025; Moll & Sykes 2022 | web araması #32 | — | kelimeyi mekânda bir yere bağlama; 2025 yordamla üretilen saray | KAYDEDİLDİ |
+| 116 | Veri seslendirme | 100 arama | W4A 2025; arXiv 2604.08979 | web araması #33 | — | ses perdesi en yaygın; dokunma sayısı/uzunluk en doğru; görselle birlikte daha iyi | KAYDEDİLDİ |
+| 117 | Veri çizgi romanı | 100 arama | arXiv 2402.12634; arXiv 2607.02361 | web araması #34 | — | metinden daha akılda kalıcı (98 kişi); veri hikâyesi verimliliği artırır (CHI 2024, 103 kişi) | KAYDEDİLDİ |
+| 118 | Keşfedilebilir açıklamalar (Bret Victor) | 100 arama | arXiv 2507.21090 | web araması #35 | — | okuyan değişkeni oynatır; 605 kişilik 2025 çalışması | KAYDEDİLDİ |
+| 119 | Anlamsal yakınlaştırma | 100 arama | arXiv 2510.00003 | web araması #36 | — | yakınlaştıkça içerik değişir (geometrik değil anlamsal); 2025 ZoomTable | KAYDEDİLDİ |
+| 120 | Glif (simge) tasarımı | 100 arama | arXiv 2509.08444 | web araması #37 | — | çok vasıf tek simgede; öğrenilebilirlik kılavuzu 2024 TVCG; GlyphWeaver 2025 | KAYDEDİLDİ |
+| 121 | Uzatılabilir metin (stretchtext) | 100 arama | uygulama kılavuzları (deney yok) | web araması #38 | — | önce öz, istenince ayrıntı; 2–3 kat sınır | KAYDEDİLDİ |
+| 122 | Tanım sözlüğü (Longman 2.000 kelime) | 100 arama | Wikipedia; Xu 2012 Lexikos | web araması #39 | — | bütün tarifler 2.000 kelimeyle; anlam asallarıyla birleşimi | KAYDEDİLDİ |
+| 123 | Anlam asallarıyla öğretim | 100 arama | preprints.org 202507.1732 | web araması #40 | — | 64 asalla zenginleştirilmiş metin, 54 öğrencide yazmayı iyileştirdi (2025 ön baskı) | KAYDEDİLDİ |
+| 124 | Heisig kanji usulü | 100 arama | UH Press; Sustenance 2023 (deney yok) | web araması #41 | — | karakter = ilkel parçalar; her parçaya anahtar kelime, aralarında küçük hikâye; mana önce, okunuş sonra | KAYDEDİLDİ |
+| 125 | Bruno hafıza çarkları (1582) | 100 arama | Wikipedia Memory wheels; Yates | web araması #42 | — | dönen çarklarla hece ve imge birleşimi | KAYDEDİLDİ |
+| 126 | Lull bilgi ağacı (Arbor scientiae) | 100 arama | Llull DB Barselona; Bintley (Cambridge) | web araması #43 | — | 16 ağaç; her ağaç kök, gövde, dal, yaprak, çiçek, meyve diye yedi kat | KAYDEDİLDİ |
+| 127 | Takvîmü's-sıhha (İbn Butlân) | 100 arama | Wikipedia; Iowa katalogu | web araması #44 | — | tıp bilgisinin tablo hâli; her madde: tabiat ve derece, en iyi hâl, fayda, zarar, zararın gideri | KAYDEDİLDİ |
+| 128 | Teşcîr (İslâm ilimler tasnifinin ağaç çizimleri) | 100 arama | de Callataÿ; digitalorientalist 2025 | web araması #45 | — | Bistâmî'nin 4 ağacı (İhvân-ı Safâ kaynaklı); M-Classi dijital aracı 2025 | KAYDEDİLDİ |
+| 129 | Kıvılcım çizgiler (sparklines) | 100 arama | Tufte 2006 | web araması #46 | — | kelime boyunda grafik, yazının içinde | KAYDEDİLDİ |
+| 130 | Chernoff yüzleri | 100 arama | De Soete 1985; Sivagnanasundaram 2013 | web araması #47 | — | çok vasıf bir yüzün parçalarıyla; ağız eğriliği ve göz boyu en belirgin; yüz algısı fayda vermiyor (2013) | KAYDEDİLDİ |
+| 131 | Metro haritası | 100 arama | ASEE 2022; Wu vd. 2020 anket | web araması #48 | — | her program bir hat, ortak dersler aktarma durakları; coğrafya değil topoloji | KAYDEDİLDİ |
+| 132 | Periyodik cetvel benzetmesi | 100 arama | Orban (eleştiri) | web araması #49 | — | iki eksenli periyodiklik; kimya dışında yanıltabilir uyarısı | KAYDEDİLDİ |
+| 133 | Zwicky morfolojik kutusu | 100 arama | Ritchey | web araması #50 | — | parametre × değer kutusu; çelişen ikilileri eleyerek (çapraz tutarlılık) %90–99 azaltma | KAYDEDİLDİ |
+| 134 | TRIZ çelişki matrisi | 100 arama | WIPO TISC; triz40.com | web araması #51 | — | on binlerce buluşu 39×39 çelişki tablosu + 40 ilkeye sıkıştırır | KAYDEDİLDİ |
+| 135 | Kalıp dili (Christopher Alexander) | 100 arama | INPROC 2018 | web araması #52 | — | 253 bağlı kalıp; büyük kalıp küçüğü çağırır, bağlar dilin kendisi | KAYDEDİLDİ |
+| 136 | Zettelkasten (Luhmann) | 100 arama | Lüdecke | web araması #53 | — | ~90.000 not; kategori yok, not nottan dallanır, yapı kendiliğinden çıkar | KAYDEDİLDİ |
+| 137 | Cornell notu | 100 arama | Guelph rehberi | web araması #54 | — | ipucu sütunu + özet; not iyileşir, not başarısı değişmez (2013) | KAYDEDİLDİ |
+| 138 | Görsel etimoloji | 100 arama | WWW 2017; GitHub 2025 | web araması #55 | — | Vikisözlük'ten etimoloji ağacı (etytree); OED görselleştirici | KAYDEDİLDİ |
+| 139 | Mana kayması görselleştirme | 100 arama | arXiv 2501.09538; Hamilton 2016 | web araması #56 | — | aynı kelimenin yıllar arası benzerlik matrisi (2025); gömme yörüngeleri | KAYDEDİLDİ |
+| 140 | Işınsal kategori (Brugman–Lakoff "over") | 100 arama | Gries 2015/2019; Lexikos 2016 | web araması #57 | — | ilk örnek merkezde, 20+ mana çevrede; ağdaki bağ = uzantı türü | KAYDEDİLDİ |
+| 141 | İlkeli çok anlamlılık (Tyler & Evans) | 100 arama | Language 2001; CUP 2003 | web araması #58 | — | ilk sahne (proto-scene) + sınırlı bilişsel ilkeler → mana ağı; öğretimde ezberi azaltır | KAYDEDİLDİ |
+| 142 | Diller arası fiil mana haritaları | 100 arama | Majid vd. 2007; Viberg 2026 | web araması #59 | — | kesme/kırma olayları sınırlı bir anlam uzayında; 11 dilde temel fiiller (2026) | KAYDEDİLDİ |
+| 143 | Kavramsal istiare veritabanı (MetaNet) | 100 arama | metanet.arts.ubc.ca | web araması #60 | — | istiare = kaynak çerçeveden hedef çerçeveye eşleme; çerçeveler ağı | KAYDEDİLDİ |
+| 144 | Kur'ân Arapça külliyatı ontolojisi | 100 arama | corpus.quran.com; SBU 2025 | web araması #61 | — | 300 kavram, 350 ilişki; kelime parçaları kavrama bağlı; 2025 hibrit anlam ağı | KAYDEDİLDİ |
+| 145 | İbn Fâris Mekâyîs: asıl manalar | 100 arama | Trablus tez (uot.edu.ly 9071); Metafizika 2024 | web araması #62 | — | 2.175 madde tek asıl, 355 iki asıl, 68 üç, 15 dört; asıldan türeme yolları: hareke, vezin, benzerlik, mecaz | KAYDEDİLDİ |
+| 146 | Sâmî iki harfli kök (biradikal) | 100 arama | Qeios; PAN | web araması #63 | — | üç harfli kökün ardında iki harfli taban + genişleme; Del Olmo Lete, Hecker; eleştirisi | KAYDEDİLDİ |
+| 147 | İzutsu anlam alanı | 100 arama | Arif (philarchive) | web araması #64 | — | Kur'ân kendi içinde kapalı kelime sistemi; odak kelime, alanlar örtüşür | KAYDEDİLDİ |
+| 148 | Vücûh ve nezâir | 100 arama | DergiPark; usul.ai | web araması #65 | — | aynı lafzın Kur'ân'daki farklı manaları (Mukâtil b. Süleyman, ö. 150); libâs: elbise / takvâ elbisesi | KAYDEDİLDİ |
+| 149 | Râgıb el-İsfahânî Müfredât | 100 arama | Hiss 2024; meftah | web araması #66 | — | her kökte bir asıl kelime; asıl çoğunlukla duyulur, sonra soyuta gider; 10 mana bulma yolu | KAYDEDİLDİ |
+| 150 | Sanskrit Dhâtupâtha (Pânini) | 100 arama | Hyderabad Ü. | web araması #67 | — | her kök bir mana cümlesiyle; köke iliştirilen işaretler türetme kurallarını tetikler | KAYDEDİLDİ |
+| 151 | Shuowen Jiezi (MS 100) | 100 arama | Wikipedia | web araması #68 | — | 540 köke (radikal) göre dizilim; altı ilke (liushu) | KAYDEDİLDİ |
+| 152 | Roget sözlüğü | 100 arama | arXiv 1204.0258 | web araması #69 | — | ~1.000 kavram başlığı, dört katlı tasnif (ör. borç V.ii.iv) | KAYDEDİLDİ |
+| 153 | İngilizcenin Tarihî Eş Anlamlılar Sözlüğü | 100 arama | ht.ac.uk; Dallachy 2024 | web araması #70 | — | 235.000 kategori, 7 kat; her kelime tarihli manalarıyla; 2024 sadeleştirilmiş tematik set | KAYDEDİLDİ |
+| 154 | Sistemik işlevsel dilbilim seçim ağları (Halliday) | 100 arama | Fontaine 2013 | web araması #71 | — | dil = seçenekler ağı; her sistem bir giriş şartıyla açılan şıklar; biçimce tip kafesine denk | KAYDEDİLDİ |
+| 155 | Bileşen çözümlemesi | 100 arama | Kroeger (LibreTexts) | web araması #72 | — | mana = artı/eksi özellikler matrisi (akrabalık: cins, nesil, soy) | KAYDEDİLDİ |
+| 156 | Eniyilik kuramı tablosu (Optimality Theory) | 100 arama | Bradley 2013 | web araması #73 | — | kısıtlar sütun (sıralı), adaylar satır, ihlâl yıldız, ölümcül ihlâl ünlem | KAYDEDİLDİ |
+| 157 | Feynman diyagramları | 100 arama | arXiv 2501.08354 | web araması #74 | — | uzun hesap terimlerinin kısa çizimi; çizim kurallarla formüle çevrilir | KAYDEDİLDİ |
+| 158 | Penrose tensör diyagramları | 100 arama | arXiv 1911.00892; 2605.16610 | web araması #75 | — | indis yerine çizgi; vektör analizi grafik gösterimi; 2026 tensör yemek kitabı | KAYDEDİLDİ |
+| 159 | Labanotasyon (dans yazısı) | 100 arama | Dance Notation Bureau | web araması #76 | — | gövde orta çizgi; simgenin şekli yön, gölgesi seviye, boyu süre | KAYDEDİLDİ |
+| 160 | Nota yazısı | 100 arama | Vis4DH; Heidelberg | web araması #77 | — | yatay zaman, dikey perde; iki boyutlu grafik olarak okunur | KAYDEDİLDİ |
+| 161 | İskelet formülü (kimya) | 100 arama | Wikipedia; LibreTexts | web araması #78 | — | karbon ve hidrojen yazılmaz, çizgiler bağdır; bağlantıyı koruyarak kısalık | KAYDEDİLDİ |
+| 162 | SMILES | 100 arama | OpenSMILES 2007 | web araması #79 | — | molekülü tek satır yazıyla (CCO = etanol); halka rakamla kapanır | KAYDEDİLDİ |
+| 163 | Hoop diyagramı (2024) ve VennFan (2026) | 100 arama | arXiv 2406.13260; 2601.06980 | web araması #80 | — | Venn/Euler'e alternatif yeni küme çizimleri | KAYDEDİLDİ |
+| 164 | Halka (hoop) diyagramı | 100 arama | Rodgers vd., Diagrams 2024 | web araması #81 | — | her küme bir eş merkezli halka, her dilim bir kesişim; doğrusal diyagram gibi ama hep kare; kesişim sorularında daha doğru | KAYDEDİLDİ |
+| 165 | Dil modeliyle kavram haritası (2025) | 100 arama | BEA 2025 (Han & Choi) | web araması #82 | — | metni kavram haritasına çevirmek algılanan yükü %31,5 azalttı, sınav %14 hızlandı (14 kişi) | KAYDEDİLDİ |
+| 166 | Zihin haritası / ızgara hücreleri | 100 arama | arXiv 2503.08608; Nature Comm 2023 | web araması #83 | — | beyin soyut kavramları da mekân gibi haritalar; 2025 ızgara hücresi vektör cebiri | KAYDEDİLDİ |
+| 167 | Yığınlama ve şablon kuramı (satranç) | 100 arama | Gobet & Simon | web araması #84 | — | uzman, sabit çekirdek + değişken yuvalı şablonlarla görür | KAYDEDİLDİ |
+| 168 | Sıkıştırarak öğrenme (Feldman) | 100 arama | Nature 2000; arXiv 2412.02823 | web araması #85 | — | kavramın öğrenme zorluğu en kısa mantık formülünün uzunluğuyla tahmin edilir; dil modellerinde de (2024) | KAYDEDİLDİ |
+| 169 | Düşünce dili ve şekiller (Dehaene) | 100 arama | Cognitive Psychology 2022; CogSci 2025 | web araması #86 | — | insan şekli en kısa üretim programıyla kodlar: tekrar, ard arda, iç içe; MDL hatayı tahmin eder (ρ=0,75) | KAYDEDİLDİ |
+| 170 | Değişim kuramı (Marton) | 100 arama | Leung 2012; Kullberg vd. | web araması #87 | — | karşıtlık, genelleme, ayırma, birleştirme: neyin değişip neyin sabit kaldığını göstermek | KAYDEDİLDİ |
+| 171 | Eşik kavramlar (Meyer & Land) | 100 arama | ETL 2003 | web araması #88 | — | bir ilmi bir arada tutan, zor ama dönüştürücü ve geri dönüşsüz kavramlar | KAYDEDİLDİ |
+| 172 | Bedava çıkarım / gözlem üstünlüğü (Shimojima) | 100 arama | J. Logic, Language, Information 2021 | web araması #89 | — | bazı gösterimlerde yeni bilgi çıkarım yapmadan okunur | KAYDEDİLDİ |
+| 173 | Gösterim seçimi kuramı (rep2rep, Jamnik & Cheng) | 100 arama | Cambridge TR 971; CEUR 2023 | web araması #90 | — | her mesele ve okuyucuya en uygun gösterimi hesaplayan çerçeve; 19 bilişsel özellik | KAYDEDİLDİ |
+| 174 | Kısmî kelime birleşmesi (2025) | 100 arama | ACL 2025; XISM anlamsal harita aracı (arXiv 2507.04070) | web araması #91 | — | yalnız bütün kelime değil kelime parçaları da mana birleştirir; Sâmî kökleri için uygun | KAYDEDİLDİ |
+| 175 | İşaret dili sınıflandırıcıları | 100 arama | Frontiers 2017 | web araması #92 | — | el şekli fiilin nesnesini sınıflar (yuvarlak şey, ince şey); el = el (tutma), el = nesne | KAYDEDİLDİ |
+| 176 | Mısır hiyeroglif belirleyicileri | 100 arama | Goldwasser; arXiv 2407.00475 | web araması #93 | — | okunmayan mana işaretleri kelimenin sonunda: tanrı, insan, uzuv, bitki, soyut | KAYDEDİLDİ |
+| 177 | Emoji birleşimi (2024–25) | 100 arama | Weissman, Cohn vd.; ELCo (LREC 2024) | web araması #94 | — | resim gibi yan yana dizilen emoji, kelime gibi sıralananlardan daha hızlı anlaşılır; soyut fikre istiare gerekir | KAYDEDİLDİ |
+| 178 | Biçimbilim öğretimi meta-analizleri | 100 arama | Goodwin & Ahn 2013; 2016 İspanyolca meta-analiz | web araması #95 | — | kelime ailesi/ek öğretimi kelime bilgisine g≈0,50; 107 çalışmalık 2023 modeli | KAYDEDİLDİ |
+| 179 | Görsel not (sketchnoting) | 100 arama | CLS 2021; Claremont 2024 | web araması #96 | — | 2021'de 45 sorunun 30'unda üstünlük; 2024'te fark yok | KAYDEDİLDİ |
+| 180 | Mekânsal hiper metin (VKB) | 100 arama | Marshall & Shipman 1993 | web araması #97 | — | bağ çizmeden, yakınlık ve hizayla ilişki ifade etme; yapı sonradan biçimlenir | KAYDEDİLDİ |
+| 181 | Kuantum biliş | 100 arama | Aerts vd. arXiv 1208.2362 | web araması #98 | — | kavram birleşimi Hilbert uzayında girişim (evcil+balık = lepistes etkisi) | KAYDEDİLDİ |
+| 182 | Bulanık kavram kafesi | 100 arama | fcaR; van Eijck | web araması #99 | — | üyelik 0–1 derece; ilk örnek ve aile benzerliği | KAYDEDİLDİ |
+| 183 | Sahne soyutlaması (2026) ve LM-Lexicon (2026) | 100 arama | arXiv 2605.22542; 2602.14060 | web araması #100 | — | kelime kullanımını yapılandırılmış "sahne" ile temsil, gömmeden %69 vs %58 iyi; uzman karışımıyla okunur tarif üretimi | KAYDEDİLDİ |
 
 ## Güncelleme kaydı
 - 2026-11-15: ilk tarama, 49 kayıt. Tarama kapsamı: sunuş, hiyerarşi, çizge, küme, 3B, öğrenme kanıtı. Dünya literatürünün **tamamı** taranmadı ve taranamaz (bkz. `KAMIL_ISPAT_DURUMU.md`, Teorem 4).
@@ -95,3 +195,4 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 - 2026-11-15 (3): hedefli tarama (kompaktlık + anlaşılma vakti), 9 yeni kayıt (61–69).
 - 2026-11-15 (4): 2023–2026 taraması (mana uzantısı, düzenli çok anlamlılık, soyutlama sıkıştırması), 10 yeni kayıt (70–79).
 - 2026-11-15 (5): alışılmadık usuller, 4 yeni kayıt (80–83).
+- 2026-11-15 (6): 100 farklı arama; 100 kayıt (84–183). Arama ayrıntısı: ARAMA_KAYDI.md.
