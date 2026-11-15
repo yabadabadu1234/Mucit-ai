@@ -173,3 +173,13 @@ Bu ders üzerine aranıp bulunan 50 yeni usul (81–130):
 | 148 | Müze vitrini | müze | ✅ |
 | 149 | Sınav kâğıdı | sınav | ✅ |
 | 150 | Seyahatname | seyahat | ✅ |
+
+## Üçüncü ret dersi (padişah: 131–150'de de kutu, kutuya yazı, kutuların mevkii ve bağlantı hattı müşterek)
+
+Yeni şart: kutu yok, kutuya yazı yok, yerleşim düzeni yok, bağlantı hattı yok. Bu şartla bulunan üç usul (`151_153_uc_usul.html`):
+
+| # | Usul | Mahiyeti | Durum |
+|---|---|---|---|
+| 151 | Tek tablo (Bruegel, "Hollanda Atasözleri" usulü) | manalar tek bir sahnenin içinde eşya ve hâl olarak gizli; dokununca kelime çıkar | ✅ |
+| 152 | Tek nesnenin dönüşümü | ekranda tek bir şey var; zamanla hâl değiştirir, mana hâlinden okunur | ✅ |
+| 153 | Kinetik yazı | yalnız kelime var; mana harflerin hareketindedir (uzanır, içe çekilir, aşınır, titrer) | ✅ |

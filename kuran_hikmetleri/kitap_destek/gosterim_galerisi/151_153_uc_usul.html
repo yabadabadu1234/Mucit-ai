@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Üç Farklı Usul</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf6;--ink:#2b2410;--soft:#6d6650;--gold:#b8860b}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,serif}
+h2{font-size:20px;margin:28px 16px 4px}p.alt{margin:0 16px 10px;color:var(--soft);font-size:14px}
+.ar{font-family:Amiri,serif}
+section{max-width:960px;margin:0 auto}
+/* 1. Tablo */
+#tablo{width:100%;height:auto;cursor:crosshair;display:block}
+#tablo .o{cursor:pointer;transition:filter .2s}
+#tablo .o:hover{filter:drop-shadow(0 0 6px #e8b400) brightness(1.08)}
+#yazi1{text-align:center;min-height:64px;font-size:17px;padding:6px 16px}
+#yazi1 .ar{font-size:30px;color:#b3541e;margin-left:10px}
+#bulunan{text-align:center;color:var(--soft);font-size:13px}
+/* 2. Dönüşüm */
+#sahne2{width:100%;height:auto;display:block}
+#kelime2{text-align:center;font-size:54px;height:72px;transition:opacity .6s}
+#mana2{text-align:center;font-size:16px;color:var(--soft);height:24px;transition:opacity .6s}
+/* 3. Kinetik */
+#kin{position:relative;height:330px;overflow:hidden;background:#fbf7ea}
+#kin .w{position:absolute;left:0;right:0;top:70px;text-align:center;font-family:Amiri,serif;font-size:120px;line-height:1}
+#kin .m{position:absolute;left:0;right:0;bottom:22px;text-align:center;font-size:16px;color:var(--soft)}
+.harf{display:inline-block}
+@keyframes olc{0%{transform:scaleX(1)}30%{transform:scaleX(1.25)}55%{transform:scaleX(1.25) translateY(0)}70%{transform:scaleX(1)}}
+@keyframes biç{0%,40%{clip-path:inset(0 0 0 0)}55%{clip-path:inset(0 50% 0 0)}70%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes ice{0%{transform:scale(1);opacity:1;color:#2b2410}60%{transform:scale(.25);opacity:.9;color:#c0392b}100%{transform:scale(.25);opacity:.9;color:#c0392b}}
+@keyframes asin{0%{filter:none;transform:none;opacity:1;color:#2b2410}100%{filter:blur(1.5px);transform:translateY(18px) skewX(-6deg);opacity:.35;color:#888}}
+@keyframes titre{0%,100%{transform:translate(0,0);opacity:1}20%{transform:translate(-4px,2px);opacity:.4}40%{transform:translate(5px,-3px);opacity:1}60%{transform:translate(-2px,4px);opacity:.2}80%{transform:translate(3px,0);opacity:.9}}
+@keyframes yigil{0%{transform:translateY(-140px);opacity:0}100%{transform:translateY(0);opacity:1}}
+@keyframes otur{0%{letter-spacing:40px;opacity:.4}100%{letter-spacing:0;opacity:1}}
+@keyframes kab{0%,100%{transform:scale(1);color:#2b2410}50%{transform:scale(1.35);color:#c0392b}}
+.kok{color:var(--gold)}
+footer{max-width:960px;margin:30px auto;padding:0 16px;color:var(--soft);font-size:13px}
+@media (max-width:600px){#kin .w{font-size:72px}#kelime2{font-size:38px}}
+</style></head><body>
+<section>
+<h2>151. Tek tablo (Bruegel usulü): bütün manalar bir sahnenin içine gizlenmiş</h2>
+<p class="alt">Ne kutu var ne ok. Bir terzi dükkânının resmidir; her mana sahnede bir şey olarak durur. Bir şeye dokununca o şeyin kelimesi altta belirir. Hepsini bulmaya çalışın.</p>
+<svg id="tablo" viewBox="0 0 900 560">
+ <defs><linearGradient id="duvar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#efe0bd"/><stop offset="1" stop-color="#e3cf9f"/></linearGradient></defs>
+ <rect width="900" height="380" fill="url(#duvar)"/>
+ <g class="o" data-ar="خَلْقَاء" data-tr="düz, pürüzsüz taş: döşeme düzlenmiş"><rect y="380" width="900" height="180" fill="#cbbd9c"/><path d="M0,430 H900 M0,490 H900 M150,380 V560 M380,380 V560 M610,380 V560 M820,380 V560" stroke="#b7a884" stroke-width="2"/></g>
+ <rect x="560" y="40" width="160" height="120" fill="#bfe0f2" stroke="#7a5a2b" stroke-width="6"/><path d="M640,40 V160 M560,100 H720" stroke="#7a5a2b" stroke-width="4"/>
+ <g class="o" data-ar="خِلْقَة" data-tr="kalıp, yaradılış: duvarda asılı kâğıt kalıp"><path d="M70,60 L170,60 L190,200 L50,200Z" fill="#fff8e6" stroke="#9c8a5a" stroke-dasharray="7 5" stroke-width="2"/><circle cx="120" cy="56" r="4" fill="#7a5a2b"/></g>
+ <g class="o" data-ar="مَخْلُوق" data-tr="yaratılmış: bitmiş kaftan askıda"><path d="M300,40 V70" stroke="#5a4a2a" stroke-width="3"/><path d="M265,72 Q300,62 335,72 L360,240 L240,240Z" fill="#2f6fb3"/><path d="M300,72 V240" stroke="#e8c766" stroke-width="3"/></g>
+ <g class="o" data-ar="خَلَقَ" data-tr="ölçüp biçti: masadaki deri, arşın ve makas"><rect x="80" y="300" width="330" height="22" fill="#8a5a2b"/><rect x="95" y="322" width="16" height="120" fill="#7a4f25"/><rect x="380" y="322" width="16" height="120" fill="#7a4f25"/>
+  <path d="M120,300 Q160,282 240,288 Q300,282 330,298Z" fill="#c9915a"/><rect x="140" y="270" width="200" height="8" fill="#e8c766"/><path d="M150,270 v8 M170,270 v5 M190,270 v8 M210,270 v5 M230,270 v8 M250,270 v5 M270,270 v8 M290,270 v5 M310,270 v8" stroke="#5a4a2a"/>
+  <path d="M350,280 L392,260 M350,264 L392,284" stroke="#555" stroke-width="4"/><circle cx="346" cy="282" r="6" fill="none" stroke="#555" stroke-width="3"/><circle cx="346" cy="262" r="6" fill="none" stroke="#555" stroke-width="3"/></g>
+ <g class="o" data-ar="خَالِق" data-tr="yaratan: ölçüp biçen usta (sözün hakikati Allah'a aittir; burada yalnız kelimenin iş manası)"><circle cx="460" cy="205" r="26" fill="#e9c7a1"/><path d="M425,235 Q460,222 495,235 L505,370 L415,370Z" fill="#6b4b2a"/><path d="M430,260 L380,285" stroke="#e9c7a1" stroke-width="10" stroke-linecap="round"/><path d="M432,190 Q460,168 488,190" fill="#3b2a1a"/></g>
+ <g class="o" data-ar="خُلُق" data-tr="huy: çırağın içinde parlayan kalp"><circle cx="610" cy="250" r="20" fill="#e9c7a1"/><path d="M582,275 Q610,265 638,275 L645,380 L575,380Z" fill="#8c6fb8"/><path d="M610,318 c-9,-12 -24,0 0,18 c24,-18 9,-30 0,-18" fill="#c0392b"><animate attributeName="opacity" values="1;.4;1" dur="1.6s" repeatCount="indefinite"/></path></g>
+ <g class="o" data-ar="أَخْلَاق" data-tr="ahlâk: rafta dizili, aynı huyun ciltleri"><rect x="760" y="190" width="120" height="8" fill="#7a5a2b"/><rect x="766" y="150" width="14" height="40" fill="#7a3fb3"/><rect x="782" y="146" width="14" height="44" fill="#7a3fb3"/><rect x="798" y="152" width="14" height="38" fill="#7a3fb3"/><rect x="814" y="148" width="14" height="42" fill="#7a3fb3"/><rect x="830" y="150" width="14" height="40" fill="#7a3fb3"/><rect x="846" y="146" width="14" height="44" fill="#7a3fb3"/></g>
+ <g class="o" data-ar="تَخَلَّقَ" data-tr="öfkelendi: kapıdaki müşterinin kızaran yüzü"><circle cx="760" cy="300" r="20" fill="#e06b4f"/><path d="M748,292 l8,4 M772,292 l-8,4 M752,310 q8,-6 16,0" stroke="#2b2410" stroke-width="2" fill="none"/><path d="M735,322 Q760,314 785,322 L792,420 L728,420Z" fill="#5a6b7a"/></g>
+ <g class="o" data-ar="تَخَلُّق" data-tr="huy takınmak: başkasının cübbesini giyip aynada prova eden adam"><rect x="680" y="400" width="10" height="110" fill="#7a5a2b"/><ellipse cx="685" cy="400" rx="28" ry="42" fill="#cfe4f0" stroke="#7a5a2b" stroke-width="4"/><circle cx="640" cy="430" r="16" fill="#e9c7a1"/><path d="M618,450 Q640,442 662,450 L672,540 L608,540Z" fill="#b8860b"/></g>
+ <g class="o" data-ar="خُلْقَان" data-tr="paçavralar: köşedeki eskimiş elbise yığını"><path d="M20,520 Q60,470 110,500 Q150,480 170,530 L20,540Z" fill="#9a9a8a"/><path d="M50,505 l12,10 M110,505 l-8,14 M140,515 l6,8" stroke="#6d6d60" stroke-width="3"/></g>
+ <g class="o" data-ar="خَلِقَ" data-tr="eskidi: dirsekleri delinmiş, yüzü parlamış hırka sandalyede"><rect x="200" y="470" width="80" height="10" fill="#7a5a2b"/><rect x="205" y="480" width="8" height="60" fill="#7a5a2b"/><rect x="267" y="480" width="8" height="60" fill="#7a5a2b"/><path d="M205,470 Q240,440 275,470" fill="#a9a395"/><circle cx="230" cy="462" r="4" fill="#cbbd9c"/></g>
+ <g class="o" data-ar="خَلُوق" data-tr="koku: tezgâhta ıtır şişesi, sürülmek üzere"><rect x="440" y="440" width="24" height="44" rx="6" fill="#a8478f"/><rect x="446" y="428" width="12" height="12" fill="#e8c766"/><circle cx="470" cy="420" r="3" fill="#d79ac3"><animate attributeName="cy" values="430;400" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="2s" repeatCount="indefinite"/></circle></g>
+ <g class="o" data-ar="خَلَاق" data-tr="pay: terazide her müşteriye ayrılmış kumaş"><path d="M520,470 V420 M490,425 H550" stroke="#5a4a2a" stroke-width="3"/><path d="M480,425 l-10,25 h30z M560,425 l-10,25 h30z" fill="#e8c766" stroke="#5a4a2a"/><rect x="478" y="440" width="24" height="8" fill="#c26a1e"/><rect x="558" y="440" width="24" height="8" fill="#c26a1e"/><rect x="505" y="470" width="30" height="8" fill="#5a4a2a"/></g>
+ <g class="o" data-ar="خَلِيق" data-tr="lâyık: üstüne tam oturmuş kaftanla çıkan müşteri"><circle cx="840" cy="420" r="18" fill="#e9c7a1"/><path d="M815,440 Q840,432 865,440 L872,545 L808,545Z" fill="#2f6fb3"/><path d="M840,440 V545" stroke="#e8c766" stroke-width="3"/></g>
+ <g class="o" data-ar="اِخْتِلَاق" data-tr="uydurma: pencerede, dikilmemiş bir kaftanı 'bitti' diye satan gölge"><path d="M585,150 q15,-40 30,0 v10 h-30z" fill="#555" opacity=".7"/><path d="M620,120 l40,-10 l-8,20" fill="none" stroke="#555" stroke-dasharray="3 3"/></g>
+ <g class="o" data-ar="خِلْقِين" data-tr="kazan: ocaktaki kazan; kelime Yunancadan gelmiş, bu köke ait değil"><path d="M490,90 Q525,70 560,90" stroke="#555" stroke-width="2" fill="none"/><rect x="478" y="100" width="72" height="8" fill="#555"/><path d="M482,108 Q514,160 546,108Z" fill="#6b6b6b"/><path d="M500,160 l-6,12 M530,160 l6,12" stroke="#c0392b" stroke-width="4"/></g>
+ <g class="o" data-ar="مُخَلَّق" data-tr="şekli belirmiş: masada çizgileri çekilmiş ama henüz biçilmemiş parça"><rect x="160" y="236" width="70" height="30" fill="#e8d1a8" stroke="#9c8a5a"/><path d="M168,244 h54 M168,252 h54 M168,260 h40" stroke="#2f6fb3" stroke-dasharray="3 2"/></g>
+</svg>
+<div id="yazi1">Resmin içindeki bir şeye dokunun.</div>
+<div id="bulunan">bulunan: 0 / 17</div>
+</section>
+
+<section>
+<h2>152. Tek şeyin dönüşümü: bir parça deri, kelimeler değiştikçe kendisi değişir</h2>
+<p class="alt">Ekranda tek bir nesne vardır ve başka hiçbir şey yoktur. Nesne zamanla bir hâlden ötekine akar, kelime de onunla beraber değişir. Mana nesnenin hâlinden okunur.</p>
+<svg id="sahne2" viewBox="0 0 900 380">
+ <rect width="900" height="380" fill="#fbf7ea"/>
+ <path id="nesne" d="M330,250 Q450,230 570,250 L570,260 Q450,240 330,260Z" fill="#c9915a" stroke="#7a5a2b" stroke-width="2"/>
+ <g id="cizgi" opacity="0"><path d="M340,236 H560" stroke="#2f6fb3" stroke-width="3" stroke-dasharray="8 6"/></g>
+ <g id="kalp" opacity="0"><path d="M450,215 c-14,-18 -36,0 0,28 c36,-28 14,-46 0,-28" fill="#c0392b"/></g>
+ <g id="koku" opacity="0"><circle cx="420" cy="90" r="5" fill="#d79ac3"/><circle cx="470" cy="70" r="4" fill="#d79ac3"/><circle cx="500" cy="100" r="6" fill="#d79ac3"/></g>
+</svg>
+<div id="kelime2" class="ar">خَلَقَ</div><div id="mana2">ölçüp biçti</div>
+</section>
+
+<section>
+<h2>153. Kelimenin kendi devinimi (kinetik yazı): mana harflerin hareketindedir</h2>
+<p class="alt">Yalnız kelime vardır. Her kelime manasını yaparak gösterir: ölçülen kelime uzanıp kesilir, huy içe çekilir, eskiyen kelime aşınıp çöker, uydurma titreyip söner, ahlâk huyların yığılmasıyla kurulur.</p>
+<div id="kin"><div class="w" id="kw"></div><div class="m" id="km"></div></div>
+</section>
+<footer>Usuller: Bruegel'in "Hollanda Atasözleri" tablosu (bir sahnede yüzü aşkın atasözü); tek nesnenin hâl değiştirmesi (morph); kinetik tipografi. Resimdeki eşya ve sahneler bu sayfa için çizildi.</footer>
+<script>
+// 1
+const bulun=new Set();const N=document.querySelectorAll('#tablo .o').length;
+document.querySelectorAll('#tablo .o').forEach(g=>g.addEventListener('click',()=>{bulun.add(g.dataset.ar);
+ document.getElementById('yazi1').innerHTML=`<span class="ar">${g.dataset.ar}</span><br>${g.dataset.tr}`;
+ document.getElementById('bulunan').textContent=`bulunan: ${bulun.size} / ${N}`;}));
+// 2
+const S=[
+ ['خَلْقَاء','düz bir deri, pürüzsüz',{d:'M330,250 Q450,230 570,250 L570,260 Q450,240 330,260Z',f:'#c9915a'}],
+ ['خَلَقَ','ölçüldü',{d:'M330,250 Q450,230 570,250 L570,260 Q450,240 330,260Z',f:'#c9915a',c:1}],
+ ['مُخَلَّق','şekli belirdi',{d:'M380,250 L420,120 L480,120 L520,250 Z',f:'#c9915a',c:1}],
+ ['مَخْلُوق','yaratıldı: bir kaftan oldu',{d:'M400,110 Q450,96 500,110 L540,300 L360,300Z',f:'#2f6fb3'}],
+ ['خِلْقَة','kalıbı belli oldu',{d:'M400,110 Q450,96 500,110 L540,300 L360,300Z',f:'none',s:'#2f6fb3'}],
+ ['خُلُق','kalıp içe girdi: huy',{d:'M400,110 Q450,96 500,110 L540,300 L360,300Z',f:'#8c6fb8',h:1}],
+ ['أَخْلَاق','huylar yerleşti: ahlâk',{d:'M390,104 Q450,88 510,104 L556,306 L344,306Z',f:'#7a3fb3',h:1}],
+ ['خَلُوق','koku sürüldü',{d:'M400,110 Q450,96 500,110 L540,300 L360,300Z',f:'#a8478f',k:1}],
+ ['خَلِقَ','yıllar geçti: eskidi',{d:'M405,120 Q450,112 495,122 L525,300 L370,296Z',f:'#9a9a8a'}],
+ ['خُلْقَان','paçavra oldu',{d:'M360,300 Q420,250 470,280 Q520,250 560,300Z',f:'#8a8a7a'}],
+];
+let i=0;const nes=document.getElementById('nesne'),kel=document.getElementById('kelime2'),man=document.getElementById('mana2');
+function adim(){const [ar,tr,o]=S[i];kel.style.opacity=0;man.style.opacity=0;
+ nes.animate([{d:`path("${nes.getAttribute('d')}")`},{d:`path("${o.d}")`}],{duration:1200,easing:'ease-in-out',fill:'forwards'});
+ setTimeout(()=>{nes.setAttribute('d',o.d);nes.setAttribute('fill',o.f);nes.setAttribute('stroke',o.s||'#7a5a2b');nes.setAttribute('stroke-dasharray',o.s?'8 6':'');
+  document.getElementById('cizgi').setAttribute('opacity',o.c?1:0);document.getElementById('kalp').setAttribute('opacity',o.h?1:0);document.getElementById('koku').setAttribute('opacity',o.k?1:0);
+  kel.textContent=ar;man.textContent=tr;kel.style.opacity=1;man.style.opacity=1;},700);
+ i=(i+1)%S.length;}
+adim();setInterval(adim,2800);
+// 3
+const K=[
+ ['خَلَقَ','ölçtü, biçti',(w)=>{w.style.animation='olc 2.6s ease-in-out';}],
+ ['خُلُق','huy: içe çekilen kalıp',(w)=>{w.style.animation='ice 2.6s ease-in forwards';}],
+ ['خَلِقَ','eskidi: aşınıp çöker',(w)=>{w.style.animation='asin 2.6s ease-in forwards';}],
+ ['اِخْتَلَقَ','uydurdu: tutunamaz, titrer',(w)=>{w.style.animation='titre .5s linear infinite';}],
+ ['تَخَلَّقَ','öfkelendi: kabarır',(w)=>{w.style.animation='kab .9s ease-in-out infinite';}],
+ ['خَلِيق','lâyık: yerine oturur',(w)=>{w.style.animation='otur 2s ease-out forwards';}],
+ ['أَخْلَاق','ahlâk: huylar yığılır',null],
+];
+let j=0;const kw=document.getElementById('kw'),km=document.getElementById('km');
+function kin(){const [ar,tr,f]=K[j];kw.style.animation='none';void kw.offsetWidth;kw.style.color='';kw.style.opacity='';
+ if(f){kw.innerHTML=ar;f(kw);}else{kw.innerHTML='';for(let n=0;n<5;n++){const s=document.createElement('div');s.textContent='خُلُق';s.style.cssText=`font-size:40px;line-height:44px;animation:yigil .5s ${n*.35}s both;color:#7a3fb3`;kw.appendChild(s);}
+  setTimeout(()=>{kw.innerHTML=ar;kw.style.animation='otur 1s ease-out forwards';},2200);}
+ km.textContent=tr;j=(j+1)%K.length;}
+kin();setInterval(kin,3400);
+</script>
+</body></html>
