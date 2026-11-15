@@ -25,25 +25,25 @@
 | 19 | Euler / Venn | ✅ | `gosterim_galerisi/` |
 | 20 | Sankey | ✅ | `gosterim_galerisi/` |
 | 21 | Yay (arc) diyagramı | ✅ | `gosterim_galerisi/` |
-| 22 | Kuvvet yönlü çizge | ✅ | `gosterim_galerisi/` |
+| 22 | Kuvvet yönlü çizge | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 23 | Kavram haritası (etiketli oklar) | ✅ | `gosterim_galerisi/` |
 | 24 | Hiperbolik ağaç / Poincaré diski | ✅ | `gosterim_galerisi/` |
 | 25 | Leibniz asal sayı kodu | ✅ | `gosterim_galerisi/` |
-| 26 | Wilkins harf kodu | ✅ | `gosterim_galerisi/` |
+| 26 | Wilkins harf kodu | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 27 | Lull çarkı | ✅ | `gosterim_galerisi/` |
-| 28 | Paralel kümeler (Parallel Sets) | ⬜ | |
-| 29 | Dairesel bağ (chord) | ⬜ | |
-| 30 | Halka (hoop) diyagramı | ⬜ | |
-| 31 | Küçük katlar | ⬜ | |
-| 32 | Zihin haritası | ⬜ | |
-| 33 | Argüman haritası (Toulmin) | ⬜ | |
-| 34 | Wigmore delil çizelgesi | ⬜ | |
-| 35 | Isotype (simge tekrarı) | ⬜ | |
-| 36 | Bliss tarzı birleşik simge | ⬜ | |
-| 37 | I Ching çizgi kodu | ⬜ | |
-| 38 | Peirce varoluşsal çizgesi | ⬜ | |
-| 39 | Frege kavram yazısı | ⬜ | |
-| 40 | Laws of Form işaret yazısı | ⬜ | |
+| 28 | Paralel kümeler (Parallel Sets) | ✅ | `gosterim_galerisi/` |
+| 29 | Dairesel bağ (chord) | ✅ | `gosterim_galerisi/` |
+| 30 | Halka (hoop) diyagramı | ✅ | `gosterim_galerisi/` |
+| 31 | Küçük katlar | ✅ | `gosterim_galerisi/` |
+| 32 | Zihin haritası | ✅ | `gosterim_galerisi/` |
+| 33 | Argüman haritası (Toulmin) | ✅ | `gosterim_galerisi/` |
+| 34 | Wigmore delil çizelgesi | ✅ | `gosterim_galerisi/` |
+| 35 | Isotype (simge tekrarı) | ✅ | `gosterim_galerisi/` |
+| 36 | Bliss tarzı birleşik simge | ✅ | `gosterim_galerisi/` |
+| 37 | I Ching çizgi kodu | ✅ | `gosterim_galerisi/` |
+| 38 | Peirce varoluşsal çizgesi | ✅ | `gosterim_galerisi/` |
+| 39 | Frege kavram yazısı | ✅ | `gosterim_galerisi/` |
+| 40 | Laws of Form işaret yazısı | ✅ | `gosterim_galerisi/` |
 | 41 | Kuvvet dinamiği (Talmy) | ⬜ | |
 | 42 | Gezgin / zemin (Langacker) | ⬜ | |
 | 43 | Kavram uzayı (Voronoi) | ⬜ | |
