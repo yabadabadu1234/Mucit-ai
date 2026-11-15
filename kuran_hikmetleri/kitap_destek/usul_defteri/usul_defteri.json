@@ -537,5 +537,126 @@
   "doi": "10.1145/234972.234975",
   "is_": "3B'nin 2B'ye faydası",
   "durum": "DENENMEDİ"
+ },
+ {
+  "sira": 50,
+  "ad": "Doğrusal diyagram (linear diagram)",
+  "sinif": "küme",
+  "hatira": "Leibniz; Rodgers, Stapleton, Chapman 2015 (ACM TOCHI)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1145/2810012",
+  "is_": "her küme bir çizgi; ortak üyeler aynı sütun/satırda hizalanır; 1.760 katılımcılı 7 deneyle kılavuzlar",
+  "durum": "KULLANILDI: dogrusal_diyagram/ (خلق)"
+ },
+ {
+  "sira": 51,
+  "ad": "Küme diyagramı türlerinin deneysel karşılaştırması",
+  "sinif": "kanıt",
+  "hatira": "Chapman, Stapleton, Rodgers vd. 2014 (Diagrams, LNCS 8578)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": null,
+  "is_": "doğrusal diyagram Venn ve Euler'den hem hızlı hem az hatalı",
+  "durum": "DAYANAK"
+ },
+ {
+  "sira": 52,
+  "ad": "Euler/doğrusal diyagramda küme büyüklüğü",
+  "sinif": "kanıt",
+  "hatira": "Stapleton vd. 2019 (PLOS ONE)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1371/journal.pone.0211234",
+  "is_": "büyüklük gösteriminde alan orantılı Euler + sayı daha iyi",
+  "durum": "DAYANAK (sınır)"
+ },
+ {
+  "sira": 53,
+  "ad": "Doğrusal diyagramda parça sayısını en aza indirmek NP-zordur",
+  "sinif": "kanıt",
+  "hatira": "Chapman, Sim, Chen",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": null,
+  "is_": "en iyi satır sırası genel hâlde zor; sezgisel arama kullanılır",
+  "durum": "DAYANAK: satır sırası yerel aramayla"
+ },
+ {
+  "sira": 54,
+  "ad": "Küme görselleştirme taraması (altı sınıf)",
+  "sinif": "çerçeve",
+  "hatira": "Alsallakh, Micallef, Aigner, Hauser, Miksch, Rodgers 2016 (CGF)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1111/cgf.12722",
+  "is_": "küme görselleştirme usullerinin sınıflandırması",
+  "durum": "DAYANAK"
+ },
+ {
+  "sira": 55,
+  "ad": "İç içe çizgi diyagramı (nested line diagram)",
+  "sinif": "kafes",
+  "hatira": "Wille; Vogt & Wille (TOSCANA)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": null,
+  "is_": "büyük kafesi çarpanlara bölüp iç içe çizer",
+  "durum": "DENENMEDİ"
+ },
+ {
+  "sira": 56,
+  "ad": "Tablolu Euler diyagramı (kavram kafesi için)",
+  "sinif": "kafes",
+  "hatira": "Priss (2021–2026)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1007/978-3-030-72308-8_5",
+  "is_": "kafesin her kavramını tablodaki bir bölgeyle bire bir gösterir; doğrusal diyagramın iki boyutlusu",
+  "durum": "YAKIN: dogrusal_diyagram bunun tek boyutlu hâli"
+ },
+ {
+  "sira": 57,
+  "ad": "Kafes çizgilerini yeni başlayan okuyabilir mi (Mail-Sleuth)",
+  "sinif": "kanıt",
+  "hatira": "Eklund vd. 2004",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": null,
+  "is_": "ayarlarla acemiler çizgi diyagramını okuyabildi",
+  "durum": "DAYANAK"
+ },
+ {
+  "sira": 58,
+  "ad": "BioFabric (düğüm yatay çizgi, kenar dikey çizgi)",
+  "sinif": "çizge",
+  "hatira": "Longabaugh 2012 (BMC Bioinformatics)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1186/1471-2105-13-275",
+  "is_": "her kenar ayrı sütun, kesişme yok",
+  "durum": "DENENMEDİ"
+ },
+ {
+  "sira": 59,
+  "ad": "Kovan çizimi (hive plot)",
+  "sinif": "çizge",
+  "hatira": "Krzywinski vd. 2012 (Briefings in Bioinformatics)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": "10.1093/bib/bbr069",
+  "is_": "düğüm eksene kurala göre konur, estetiğe göre değil",
+  "durum": "DENENMEDİ"
+ },
+ {
+  "sira": 60,
+  "ad": "Anlamsal zemin (semantic substrates)",
+  "sinif": "çizge",
+  "hatira": "Shneiderman & Aris 2006 (IEEE TVCG)",
+  "kunye": "web aramasında bulundu (künye arama sonucundan)",
+  "eslesme": null,
+  "doi": null,
+  "is_": "düğümler vasfa göre bölgelere konur",
+  "durum": "DENENMEDİ"
  }
 ]
