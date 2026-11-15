@@ -98,7 +98,7 @@ Bu ders üzerine aranıp bulunan 50 yeni usul (81–130):
 |---|---|---|---|
 | 81 | Semantik harita (Haspelmath) | ✅ | `gosterim_galerisi/` |
 | 82 | ChainNet mana zinciri | ✅ | `gosterim_galerisi/` |
-| 83 | Sözlük maddesi ağacı (1a, 1a(i)) | ✅ | `gosterim_galerisi/` |
+| 83 | Sözlük maddesi ağacı (1a, 1a(i)) | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 84 | IBIS mesele haritası | ✅ | `gosterim_galerisi/` |
 | 85 | Kialo lehte/aleyhte ağacı | ✅ | `gosterim_galerisi/` |
 | 86 | Rationale gerekçe haritası | ✅ | `gosterim_galerisi/` |
@@ -107,7 +107,7 @@ Bu ders üzerine aranıp bulunan 50 yeni usul (81–130):
 | 89 | Kıyas çarkı | ✅ | `gosterim_galerisi/` |
 | 90 | Balık kılçığı (Ishikawa) | ✅ | `gosterim_galerisi/` |
 | 91 | Nedensel döngü diyagramı | ✅ | `gosterim_galerisi/` |
-| 92 | Etki diyagramı | ✅ | `gosterim_galerisi/` |
+| 92 | Etki diyagramı | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 93 | Minto piramidi | ✅ | `gosterim_galerisi/` |
 | 94 | Mantık modeli | ✅ | `gosterim_galerisi/` |
 | 95 | Kulvar şeması | ✅ | `gosterim_galerisi/` |
@@ -116,7 +116,7 @@ Bu ders üzerine aranıp bulunan 50 yeni usul (81–130):
 | 98 | Çift kabarcık haritası | ✅ | `gosterim_galerisi/` |
 | 99 | T-cetveli | ✅ | `gosterim_galerisi/` |
 | 100 | KWL cetveli | ✅ | `gosterim_galerisi/` |
-| 101 | Zaman şeridi (türeme sırası) | ✅ | `gosterim_galerisi/` |
+| 101 | Zaman şeridi (türeme sırası) | ✅ ❌ padişah: işe yaramaz | `gosterim_galerisi/` |
 | 102 | Çember haritası (Thinking Maps) | ✅ | `gosterim_galerisi/` |
 | 103 | Köprü haritası | ✅ | `gosterim_galerisi/` |
 | 104 | Parça–bütün parantezi | ✅ | `gosterim_galerisi/` |
@@ -146,3 +146,30 @@ Bu ders üzerine aranıp bulunan 50 yeni usul (81–130):
 | 128 | Manzume (öğretici şiir) | ✅ | `gosterim_galerisi/` |
 | 129 | Öğrenme yolu (önşart haritası) | ✅ | `gosterim_galerisi/` |
 | 130 | Yapı eşlemesi (Gentner) | ✅ | `gosterim_galerisi/` |
+
+## İkinci ret dersi (padişah: 83, 92, 101 işe yaramaz; 81–130 "birbirinin tekrarı")
+
+81–130'un çoğu aynı paradigmadır: kutu + ok + yazı; yalnız içerik ve şekil eğilip bükülmüş. Yeni şart: **temsilin cinsi** değişmeli (mekân, oyun, beden, hikâye, mühendislik çizimi, tür/janr, bulmaca, nesne). Bu şartla bulunan 20 usul (131–150):
+
+| # | Usul | Paradigma | Durum |
+|---|---|---|---|
+| 131 | Alegorik harita (Carte de Tendre) | coğrafya | ✅ |
+| 132 | Oyun tahtası (Kaz oyunu) | oyun | ✅ |
+| 133 | Beden haritası | beden | ✅ |
+| 134 | Hikâye çizgileri (xkcd film şeması) | zaman-hikâye | ✅ |
+| 135 | Patlatılmış montaj çizimi | mühendislik | ✅ |
+| 136 | Jeolojik kesit | yerbilim | ✅ |
+| 137 | Mesajlaşma (grup sohbeti) | sohbet | ✅ |
+| 138 | Karagöz perdesi (muhavere) | tiyatro | ✅ |
+| 139 | Gazete ön sayfası | basın | ✅ |
+| 140 | Yemek tarifi | tarif | ✅ |
+| 141 | Origami katlama adımları | el işi | ✅ |
+| 142 | Çapraz bulmaca | bulmaca | ✅ |
+| 143 | Mektup (kökün ağzından) | mektup | ✅ |
+| 144 | Bilmece | bilmece | ✅ |
+| 145 | Kaligram | şekil-şiir | ✅ |
+| 146 | Matruşka | iç içe nesne | ✅ |
+| 147 | Dokuma (çözgü–atkı) | dokuma | ✅ |
+| 148 | Müze vitrini | müze | ✅ |
+| 149 | Sınav kâğıdı | sınav | ✅ |
+| 150 | Seyahatname | seyahat | ✅ |
