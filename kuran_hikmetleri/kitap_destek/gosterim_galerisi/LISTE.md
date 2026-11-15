@@ -188,7 +188,7 @@ Yeni şart: kutu yok, kutuya yazı yok, yerleşim düzeni yok, bağlantı hattı
 
 | # | Usul | Durum |
 |---|---|---|
-| 154 | Yeniden yazma kaideleri (Lindenmayer sistemi) | ✅ |
-| 155 | Cebir: vezin dönüşümleri, kökün yörüngesi | ✅ |
-| 156 | Harmonik açılım (Fourier) | ✅ |
-| 157 | Fonksiyon eğrisi | ✅ |
+| 154 | Yeniden yazma kaideleri (Lindenmayer sistemi) | ✅ ❌ padişah: matematikten umduğu bu değil |
+| 155 | Cebir: vezin dönüşümleri, kökün yörüngesi | ✅ ❌ padişah: matematikten umduğu bu değil |
+| 156 | Harmonik açılım (Fourier) | ✅ ❌ padişah: matematikten umduğu bu değil |
+| 157 | Fonksiyon eğrisi | ✅ ❌ padişah: matematikten umduğu bu değil |
