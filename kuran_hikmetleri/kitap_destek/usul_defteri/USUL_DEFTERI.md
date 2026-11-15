@@ -73,9 +73,20 @@ Bu defter **hiçbir usulü silmez**; yeni bulunan usul sona eklenir (güncelleme
 | 67 | Ön-dikkatli görme | kanıt | Healey & Enns 2012 | künye doğrulandı (Crossref) | https://doi.org/10.1109/tvcg.2011.127 | bakışta ayırt edilen özellikler | KULLANILDI: kompakt_usul/USUL.md |
 | 68 | Bilişsel uyum: tablo mu grafik mi | kanıt | Vessey 1991 | künye doğrulandı (Crossref) | https://doi.org/10.1111/j.1540-5915.1991.tb00344.x | suâl türüne uyan gösterim hızlıdır | KULLANILDI: kompakt_usul/USUL.md |
 | 69 | En kısa tarif ilkesi (MDL) | çerçeve | Grünwald 2005 | künye doğrulandı (Crossref) | https://doi.org/10.7551/mitpress/1114.003.0004 | en iyi model, veriyi en kısa anlatandır | KULLANILDI: kompakt_usul/USUL.md |
+| 70 | Düzenli çok anlamlılıkta ortak dönüşüm (mana benzetme soruları) | kanıt | Li & Armstrong 2024, Cognitive Science | web aramasında bulundu | https://doi.org/10.1111/cogs.13416 | temel mana → türeyen mana dönüşümü kelimeden kelimeye aynı | DAYANAK: mana_formulu/USUL.md |
+| 71 | Düzenli çok anlamlılığın derecelilği (dil modeli şaşkınlığı) | kanıt | Temerko, Garcia, Gamallo 2025, CoNLL | web aramasında bulundu | — | yeni mana uzantısının kabul edilebilirliği ölçülür | DAYANAK: mana_formulu/USUL.md |
+| 72 | CLICS⁴ diller arası mana birleşmeleri | veri | Tjuka, Forkel, Rzymski, List 2025, IWCS | web aramasında bulundu | — | hangi manaların aynı kelimede birleştiği | DAYANAK: mana_formulu/USUL.md |
+| 73 | Mana kaymaları veritabanı (DatSemShift) | veri | Zalizniak vd. | web aramasında bulundu | — | mana kayması türleri; bitişiklik en sık | DAYANAK: mana_formulu/USUL.md |
+| 74 | Sonsuz karışım zincirleme (mana uzantısı) | model | Yu & Xu 2025 | web aramasında bulundu | — | tarihî mana uzantısını verimlilikle tahmin | DAYANAK: mana_formulu/USUL.md |
+| 75 | İnsan soyutlama öğrenmesinde ileriye dönük sıkıştırma | kanıt | Hernandez Cano vd. 2026, arXiv 2605.09985 | web aramasında bulundu | — | insan, gelecek işleri kısaltacak soyutlamayı seçer | DAYANAK: mana_formulu/USUL.md |
+| 76 | LILO: okunur soyutlama kütüphanesi | model | Grand vd. 2024, ICLR | web aramasında bulundu | — | sıkıştırıp adlandırarak okunur kütüphane | DAYANAK: mana_formulu/USUL.md |
+| 77 | Atom birimleriyle sıkıştırma (Compression Calculus) | çerçeve | Duggal vd. 2026, arXiv 2607.12634 | web aramasında bulundu | — | bilgi tekrar kullanılan atomlarla | DAYANAK: mana_formulu/USUL.md |
+| 78 | Yukarıdan aşağı anlamsal harita aracı | model | NAACL 2025 (arXiv 2412.01423) | web aramasında bulundu | — | diller arası verilerden kavram uzayı ve anlamsal harita | DAYANAK: mana_formulu/USUL.md |
+| 79 | Mana formülü ve mana imzası | usul | bu çalışma (2026-11-15) | web aramasında bulundu | — | kök = esas + işlem dizisi; işlemler pusulada sabit yönde | KULLANILDI: mana_formulu/ |
 
 ## Güncelleme kaydı
 - 2026-11-15: ilk tarama, 49 kayıt. Tarama kapsamı: sunuş, hiyerarşi, çizge, küme, 3B, öğrenme kanıtı. Dünya literatürünün **tamamı** taranmadı ve taranamaz (bkz. `KAMIL_ISPAT_DURUMU.md`, Teorem 4).
 - Künye doğrulanamayan kayıtlar (eşleşme < 0.5): Kavram haritası (Novak & Gowin), Information Cube (Crossref başka eser getirdi), Kavram haritası meta-analizi (Schroeder vd. 2018; Crossref 2023 tarihli başka bir meta-analiz getirdi). Bunlar hafızadan kayıtlıdır; doğrulanmadı. (Pad++ ve Koni ağacı başlıkları Crossref'te kısa yazıldığı için ölçü sıfır verdi; başlıklar elle bakılınca doğru eserdir.)
 - 2026-11-15 (2): web taraması, 11 yeni kayıt (50–60): doğrusal diyagram ve dayanakları, tablolu Euler, iç içe çizgi diyagramı, BioFabric, kovan çizimi, anlamsal zemin.
 - 2026-11-15 (3): hedefli tarama (kompaktlık + anlaşılma vakti), 9 yeni kayıt (61–69).
+- 2026-11-15 (4): 2023–2026 taraması (mana uzantısı, düzenli çok anlamlılık, soyutlama sıkıştırması), 10 yeni kayıt (70–79).
