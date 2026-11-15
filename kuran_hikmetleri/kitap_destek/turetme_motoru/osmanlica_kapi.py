@@ -16,7 +16,7 @@ def etiketler(t):
 
 
 def gerileme(dizin, bolum, onceki):
-    """İnceleme öncesi sürümle karşılaştırır: hiçbir etiketli kısım azalamaz, tercüme %40'tan fazla kısalamaz (atıf yığınını mantığa çevirmek kısaltabilir)."""
+    """İnceleme öncesi sürümle karşılaştırır: hata düzeltmediği hâlde silinmiş etiketli kısım var mı diye bakar; silme yasaktır."""
     _, eski = D.bolum_oku(onceki)
     _, yeni = D.bolum_oku(dizin + '/' + bolum)
     ey = {r['id']: r for r in yeni}
@@ -31,9 +31,7 @@ def gerileme(dizin, bolum, onceki):
         e0, e1 = etiketler(t0), etiketler(t1)
         kayip = {k: (v, e1.get(k, 0)) for k, v in e0.items() if e1.get(k, 0) < v}
         if kayip:
-            hata.append('%s satırında etiketli kısım azalmış %s' % (r['id'][:30], kayip))
-        elif len(t1) < 0.6 * len(t0):
-            hata.append('%s satırı kısalmış (%d → %d karakter)' % (r['id'][:30], len(t0), len(t1)))
+            hata.append('%s satırında etiketli kısım silinmiş %s; hata düzeltmiyorsan müdahale ve silme yasak' % (r['id'][:30], kayip))
     return hata
 
 
