@@ -35,6 +35,7 @@ Tercüman `duz_tercume:` değerini esas alır: doğruysa **aynen** kısa tercüm
 - Dosyada dayanağı olmayan hüküm **⟨Çıkarım⟩** etiketiyle ve çıkarım olduğu söylenerek yazılır. Hâl başka bir etiket gerektiriyorsa (ör. ⟨İtiraz ve cevabı⟩, ⟨Misal⟩, ⟨Karşılaştırma⟩, ⟨Mecâz⟩) o yazılır; etiket adı sualini açıkça bildirmelidir.
 - **Kitap, müellif, âyet adı uydurma yasak.**
 - **EN UMUMÎ SEBEP:** Hangi etikette olursa olsun söylenen sebep, söylenebilecek **en geniş ve en umumî** sebep olmalıdır: dar ve cüz'î bir hâli değil, onu kapsayan en üst kaideyi söyle. (Telefon tablet değil, cihaz; cihaz da değil, eşya; eşya da değil, şey.) Önce kaynaktaki cüz'î delili yaz, sonra aynı etiket zincirinde onu kapsayan **bir üst, bir üst** sebebe çık; en umumî kaideye (ilk kabul edilen esâsa) varınca dur. Cüz'î sebep tek başına bırakılmaz; ona kapsayıcı umumî sebep eklenir. Bir sebep birden çok mânâya/satıra aynı umumî kaideden bağlanıyorsa onu açıkça belirt.
+- **ETİKET İŞARETİ:** Etiket tam olarak `⟨` (U+27E8) ile açılır, `⟩` (U+27E9) ile kapanır: `⟨Neden⟩`. Kapatırken `﴾`, `)`, `>` veya başka işaret KULLANMA; etiketin hemen ardından boşluk bırak.
 - **ARAPÇA ALINTI harfi harfine:** Arapça bir ibare alıntılanacaksa KAYNAKLAR'daki yazıdan **harfi harfine, harekesiyle kopyalanır**; kaynakta aynen bulunmayan, hatırdan yazılmış veya harfi eklenip bozulmuş Arapça YAZILMAZ (emin değilsen alıntıyı koyma, Türkçe özetle). Alıntı sonradan otomatik denetlenecek.
 
 ## Tercüme kuralları
