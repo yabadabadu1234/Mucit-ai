@@ -183,3 +183,12 @@ Yeni şart: kutu yok, kutuya yazı yok, yerleşim düzeni yok, bağlantı hattı
 | 151 | Tek tablo (Bruegel, "Hollanda Atasözleri" usulü) | manalar tek bir sahnenin içinde eşya ve hâl olarak gizli; dokununca kelime çıkar | ✅ |
 | 152 | Tek nesnenin dönüşümü | ekranda tek bir şey var; zamanla hâl değiştirir, mana hâlinden okunur | ✅ |
 | 153 | Kinetik yazı | yalnız kelime var; mana harflerin hareketindedir (uzanır, içe çekilir, aşınır, titrer) | ✅ |
+
+## Matematik usulleri (padişah: "matematikle alakalı usullere odaklanmalıyız"; kuvvet/çekici usulü reddedildi)
+
+| # | Usul | Durum |
+|---|---|---|
+| 154 | Yeniden yazma kaideleri (Lindenmayer sistemi) | ✅ |
+| 155 | Cebir: vezin dönüşümleri, kökün yörüngesi | ✅ |
+| 156 | Harmonik açılım (Fourier) | ✅ |
+| 157 | Fonksiyon eğrisi | ✅ |
