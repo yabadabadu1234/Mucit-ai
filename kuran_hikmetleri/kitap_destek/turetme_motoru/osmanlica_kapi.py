@@ -3,7 +3,7 @@ import sys
 
 import osmanlica_denetle as D
 
-SERT = ('etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'arapca_kaynakta_yok', 'ilave_dolu')
+SERT = ('arapca_latin_karisik', 'etiket_kapanis_hatali', 'serh_yok', 'esas_yok', 'tashih_notu', 'arapca_kaynakta_yok', 'ilave_dolu')
 
 
 def kapi(dizin, bolum):

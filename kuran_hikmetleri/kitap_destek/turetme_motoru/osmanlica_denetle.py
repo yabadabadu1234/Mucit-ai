@@ -69,6 +69,8 @@ def denetle(yol, dizin, kay):
             sorunlar['etiket_kapanis_hatali'].append(r['id'])
         for e in ETIKET.findall(t):
             etk[re.sub(r'\s*\d+$', '', e.strip())] += 1
+        if re.search(r'[A-Za-zâîûÂÎÛçğıöşüÇĞİÖŞÜ][\u0600-\u06FF]|[\u0600-\u06FF][A-Za-zâîûÂÎÛçğıöşüÇĞİÖŞÜ]', t.replace('\uFD3E', ' ')):
+            sorunlar['arapca_latin_karisik'].append(r['id'])
         if '⟨Tashih⟩' in t or 'Tashih' in t:
             sorunlar['tashih_notu'].append(r['id'])
         if r.get('ilave') not in ('', '-', None):
