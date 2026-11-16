@@ -254,11 +254,7 @@ def bab_v(bab, grup, bil):
     return v, gecisli, 'aşırı ', 'orta', 'aktif'
 
 
-MASDAR_VEZNI = {
-    "fi'l": '{PF} şey', "fa'al": '{M} hâli', "fi'āl": '{M}den kaçınma', "fu'āl": '{M} illeti, {M} sesi',
-    "fa'āle": '{M} vasfı', "fu'ūle": '{M} vasfı', "fi'āle": '{M} vazifesi, {M} işi', "fa'īl": '{M} sesi, {M} yürüyüşü',
-    "fa'alān": '{M} çalkantısı, coşarak {M}', "tuf'ūl": 'tekrar tekrar {M}', "taf'ila": 'tekrar tekrar {M}',
-    "taf'ala": 'tekrar tekrar {M}', "maf'ula": '{M} sebebi', "maf'ila": '{M} sebebi'}
+MASDAR_VEZNI = {}
 MUBALAGA_VEZNI = {"fa''āl": 'işi {M} olan', "fa''āle": 'pek çok {F}', "fa''ūl": 'pek çok {F}', "fi''īl": '{M}de aşırı giden',
                   "fu''āl": 'son derece {F}', "mif'āl": '{M}yi âdet edinmiş', "mif'īl": '{M}ye düşkün'}
 MEKAN_VEZNI = {"maf'ale": '{M}nin bol olduğu yer', "maf'ile": '{M}nin bol olduğu yer'}
