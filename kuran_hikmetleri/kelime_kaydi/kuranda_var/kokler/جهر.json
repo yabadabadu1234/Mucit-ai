@@ -8,20 +8,27 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "جَهْر", "cahr", "açıkça", "kuran", "Kur'ân"],
+      [0, "جَهْر", "cahr", "Sesi yükseltme, yüksek sesle okuma veya konuşma", "lugat", "Kur'ân · Kubbealtı"],
       [1, "جِهْر", "cihr", "yüksek sesle söyleme", "orta", ""],
       [2, "جُهْر", "cuhr", "yüksek sesle söyleme", "orta", ""],
       [3, "جَهَر", "cahar", "yüksek sesle söyleme", "orta", ""],
       [4, "جِهَر", "cihar", "yüksek sesle söyleme", "orta", ""],
       [5, "جُهُر", "cuhur", "yüksek sesle söyleme", "orta", ""],
       [6, "جُهُور", "cuhūr", "yüksek sesle söyleme", "orta", ""],
-      [7, "جِهَار", "cihār", "yüksek sesle söyleme", "orta", "Vikisözlük: masdar (bâb III): to speak aloud"],
+      [7, "جِهَار", "cihār", "Dört", "lugat", "Vikisözlük: masdar (bâb III): to speak aloud · Luggat"],
       [8, "جُهَار", "cuhār", "yüksek sesle söyleme", "orta", ""],
       [9, "جَهَار", "cahār", "yüksek sesle söyleme", "orta", ""],
       [10, "جَهَارَة", "cahāra", "yüksek sesle söyleme", "orta", ""],
       [11, "جُهُورَة", "cuhūra", "yüksek sesle söyleme", "orta", ""],
       [12, "جِهَارَة", "cihāra", "yüksek sesle söyleme", "orta", ""],
-      [13, "جَهِير", "cahīr", "yüksek sesle söyleme", "orta", "Vikisözlük: raised, loud (voice)"],
+      [
+        13,
+        "جَهِير",
+        "cahīr",
+        "ve Kelâma vasf olur, bülend âvâz ile söylenen söze denir",
+        "lugat",
+        "Vikisözlük: raised, loud (voice) · Kamus"
+      ],
       [14, "جَهُور", "cahūr", "yüksek sesle söyleme", "orta", ""],
       [15, "جَهَرَان", "caharān", "yüksek sesle söyleme", "orta", ""],
       [16, "جُهْرَان", "cuhrān", "yüksek sesle söyleme", "orta", ""],
@@ -77,14 +84,7 @@
         "orta",
         "Vikisözlük: masdar (bâb III): to speak aloud"
       ],
-      [
-        50,
-        "جِهَار",
-        "cihār",
-        "biriyle karşılıklı yüksek sesle söyleme",
-        "orta",
-        "Vikisözlük: masdar (bâb III): to speak aloud"
-      ]
+      [50, "جِهَار", "cihār", "Dört", "lugat", "Vikisözlük: masdar (bâb III): to speak aloud · Luggat"]
     ],
     "ism-i merre · bâb III": [
       [51, "جِهَارَة", "cihāra", "bir kere biriyle karşılıklı yüksek sesle söyleme", "orta", ""]
@@ -334,7 +334,7 @@
     ],
     "ism-i mef‘ûl · sülâsî": [
       [220, "مَجْهُور", "machūr", "yüksek sesle söylenen", "kural", ""],
-      [221, "مَجْهُورَة", "machūra", "yüksek sesle söylenen, müennes", "kural", ""],
+      [221, "مَجْهُورَة", "machūra", "Mamûr olan kuyuya denir", "lugat", "Kamus"],
       [222, "مَجْهُورَان", "machūrān", "yüksek sesle söylenen, iki", "kural", ""],
       [223, "مَجْهُورَتَان", "machūratān", "yüksek sesle söylenen, iki, müennes", "kural", ""],
       [224, "مَجْهُورُون", "machūrūn", "yüksek sesle söylenenler", "kural", ""],
@@ -354,7 +354,14 @@
       [248, "مَجْهُرَتَان", "machuratān", "yüksek sesle söyleme yeri, vakti, iki", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِجْهَر", "michar", "yüksek sesle söyleme âleti", "orta", "Vikisözlük: microscope"],
+      [
+        235,
+        "مِجْهَر",
+        "michar",
+        "Sözü cehr ile söylemek âdeti olan adama denir",
+        "lugat",
+        "Vikisözlük: microscope · Kamus"
+      ],
       [236, "مِجْهَرَان", "micharān", "yüksek sesle söyleme âleti, iki", "orta", ""],
       [237, "مِجْهَار", "michār", "yüksek sesle söyleme âleti", "orta", ""],
       [238, "مِجْهَارَان", "michārān", "yüksek sesle söyleme âleti, iki", "orta", ""],
@@ -382,7 +389,14 @@
       [254, "مَجْهَرَان", "macharān", "yüksek sesle söyleme, iki", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "جَهْرَة", "cahra", "açıkça", "kuran", "Kur'ân"],
+      [
+        255,
+        "جَهْرَة",
+        "cahra",
+        "İsmdir, zâhir ve âşikâr olan şeye denir ve minhu kavluhu taâlâ",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [256, "جَهْرَتَان", "cahratān", "bir kere yüksek sesle söyleme, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -390,8 +404,15 @@
       [258, "جِهْرَتَان", "cihratān", "yüksek sesle söyleme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "جَهِير", "cahīr", "her daim yüksek sesle söyleyen", "orta", "Vikisözlük: raised, loud (voice)"],
-      [260, "جَهِيرَة", "cahīra", "her daim yüksek sesle söyleyen, müennes", "orta", ""],
+      [
+        259,
+        "جَهِير",
+        "cahīr",
+        "ve Kelâma vasf olur, bülend âvâz ile söylenen söze denir",
+        "lugat",
+        "Vikisözlük: raised, loud (voice) · Kamus"
+      ],
+      [260, "جَهِيرَة", "cahīra", "Müennesi", "lugat", "Vankulu"],
       [261, "جَهِيرَان", "cahīrān", "her daim yüksek sesle söyleyen, iki", "orta", ""],
       [262, "جَهِيرَتَان", "cahīratān", "her daim yüksek sesle söyleyen, iki, müennes", "orta", ""],
       [263, "جَهِيرُون", "cahīrūn", "her daim yüksek sesle söyleyenler", "orta", ""],
@@ -425,8 +446,15 @@
       [291, "جَهَرُون", "caharūn", "her daim yüksek sesle söyleyenler", "orta", ""],
       [292, "جَهَرِين", "caharīn", "her daim yüksek sesle söyleyenler", "orta", ""],
       [293, "جَهَرَات", "caharāt", "her daim yüksek sesle söyleyenler, müennes", "orta", ""],
-      [294, "جَهْر", "cahr", "açıkça", "kuran", "Kur'ân"],
-      [295, "جَهْرَة", "cahra", "açıkça", "kuran", "Kur'ân"],
+      [294, "جَهْر", "cahr", "Sesi yükseltme, yüksek sesle okuma veya konuşma", "lugat", "Kur'ân · Kubbealtı"],
+      [
+        295,
+        "جَهْرَة",
+        "cahra",
+        "İsmdir, zâhir ve âşikâr olan şeye denir ve minhu kavluhu taâlâ",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [296, "جَهْرَان", "cahrān", "her daim yüksek sesle söyleyen, iki", "orta", ""],
       [297, "جَهْرَتَان", "cahratān", "her daim yüksek sesle söyleyen, iki, müennes", "orta", ""],
       [298, "جَهْرُون", "cahrūn", "her daim yüksek sesle söyleyenler", "orta", ""],
@@ -514,8 +542,15 @@
       [378, "مِجْهِيرُون", "michīrūn", "yüksek sesle söylemeye düşkünler", "orta", ""],
       [379, "مِجْهِيرِين", "michīrīn", "yüksek sesle söylemeye düşkünler", "orta", ""],
       [380, "مِجْهِيرَات", "michīrāt", "yüksek sesle söylemeye düşkünler, müennes", "orta", ""],
-      [381, "جَهِير", "cahīr", "çok yüksek sesle söyleyen", "orta", "Vikisözlük: raised, loud (voice)"],
-      [382, "جَهِيرَة", "cahīra", "çok yüksek sesle söyleyen, müennes", "orta", ""],
+      [
+        381,
+        "جَهِير",
+        "cahīr",
+        "ve Kelâma vasf olur, bülend âvâz ile söylenen söze denir",
+        "lugat",
+        "Vikisözlük: raised, loud (voice) · Kamus"
+      ],
+      [382, "جَهِيرَة", "cahīra", "Müennesi", "lugat", "Vankulu"],
       [383, "جَهِيرَان", "cahīrān", "çok yüksek sesle söyleyen, iki", "orta", ""],
       [384, "جَهِيرَتَان", "cahīratān", "çok yüksek sesle söyleyen, iki, müennes", "orta", ""],
       [385, "جَهِيرُون", "cahīrūn", "çok yüksek sesle söyleyenler", "orta", ""],
@@ -562,12 +597,12 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "جَهَار", "cahār", "yüksek sesle söyleme", "orta", ""],
       [422, "جُهُور", "cuhūr", "yüksek sesle söyleme", "orta", ""],
-      [423, "جِهَار", "cihār", "yüksek sesle söyleme", "orta", "Vikisözlük: masdar (bâb III): to speak aloud"],
+      [423, "جِهَار", "cihār", "Dört", "lugat", "Vikisözlük: masdar (bâb III): to speak aloud · Luggat"],
       [424, "جُهْر", "cuhr", "yüksek sesle söyleme", "orta", ""],
       [425, "جَهَارَة", "cahāra", "yüksek sesle söyleme", "orta", ""],
       [426, "جِهَارَة", "cihāra", "yüksek sesle söyleme", "orta", ""],
       [427, "جُهُورَة", "cuhūra", "yüksek sesle söyleme", "orta", ""],
-      [428, "جَهْر", "cahr", "açıkça", "kuran", "Kur'ân"],
+      [428, "جَهْر", "cahr", "Sesi yükseltme, yüksek sesle okuma veya konuşma", "lugat", "Kur'ân · Kubbealtı"],
       [429, "جِهْر", "cihr", "yüksek sesle söyleme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -575,13 +610,20 @@
       [432, "جَهَرَة", "cahara", "yüksek sesle söyleme türünden şey", "orta", ""],
       [433, "جُهَرَة", "cuhara", "yüksek sesle söyleme türünden şey", "orta", ""],
       [434, "أُجْهُورَة", "ʾuchūra", "yüksek sesle söyleme türünden şey", "orta", ""],
-      [435, "جَوْهَر", "cawhar", "yüksek sesle söyleme türünden şey", "orta", ""],
+      [435, "جَوْهَر", "cawhar", "Mücevher", "lugat", "Luggat"],
       [437, "جَيْهَر", "cayhar", "yüksek sesle söyleme türünden şey", "orta", ""],
-      [439, "جَهْر", "cahr", "açıkça", "kuran", "Kur'ân"],
+      [439, "جَهْر", "cahr", "Sesi yükseltme, yüksek sesle okuma veya konuşma", "lugat", "Kur'ân · Kubbealtı"],
       [441, "جَهَر", "cahar", "yüksek sesle söyleme türünden şey", "orta", ""],
       [443, "جِهْر", "cihr", "yüksek sesle söyleme türünden şey", "orta", ""],
       [445, "جُهْر", "cuhr", "yüksek sesle söyleme türünden şey", "orta", ""],
-      [447, "جَهِير", "cahīr", "yüksek sesle söyleme türünden şey", "orta", "Vikisözlük: raised, loud (voice)"],
+      [
+        447,
+        "جَهِير",
+        "cahīr",
+        "ve Kelâma vasf olur, bülend âvâz ile söylenen söze denir",
+        "lugat",
+        "Vikisözlük: raised, loud (voice) · Kamus"
+      ],
       [449, "جِهَر", "cihar", "yüksek sesle söyleme türünden şey", "orta", ""],
       [451, "جُهُر", "cuhur", "yüksek sesle söyleme türünden şey", "orta", ""],
       [453, "جَهَار", "cahār", "yüksek sesle söyleme türünden şey", "orta", ""]
@@ -590,11 +632,18 @@
       [431, "جَاهُورَة", "cāhūra", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [436, "جَوْهَرَة", "cawhara", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [438, "جَيْهَرَة", "cayhara", "yüksek sesle söyleme türünden bir tane", "orta", ""],
-      [440, "جَهْرَة", "cahra", "açıkça", "kuran", "Kur'ân"],
+      [
+        440,
+        "جَهْرَة",
+        "cahra",
+        "İsmdir, zâhir ve âşikâr olan şeye denir ve minhu kavluhu taâlâ",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [442, "جَهَرَة", "cahara", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [444, "جِهْرَة", "cihra", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [446, "جُهْرَة", "cuhra", "yüksek sesle söyleme türünden bir tane", "orta", ""],
-      [448, "جَهِيرَة", "cahīra", "yüksek sesle söyleme türünden bir tane", "orta", ""],
+      [448, "جَهِيرَة", "cahīra", "Müennesi", "lugat", "Vankulu"],
       [450, "جِهَرَة", "cihara", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [452, "جُهُرَة", "cuhura", "yüksek sesle söyleme türünden bir tane", "orta", ""],
       [454, "جَهَارَة", "cahāra", "yüksek sesle söyleme türünden bir tane", "orta", ""]
@@ -606,7 +655,7 @@
       [458, "أَجَاهِير", "ʾacāhīr", "yüksek sesle söylemeler", "orta", ""],
       [459, "جُهُور", "cuhūr", "yüksek sesle söylemeler", "orta", ""],
       [460, "جُهُر", "cuhur", "yüksek sesle söylemeler", "orta", ""],
-      [461, "جِهَار", "cihār", "yüksek sesle söylemeler", "orta", "Vikisözlük: masdar (bâb III): to speak aloud"],
+      [461, "جِهَار", "cihār", "Dört", "lugat", "Vikisözlük: masdar (bâb III): to speak aloud · Luggat"],
       [462, "جِهَر", "cihar", "yüksek sesle söylemeler", "orta", ""],
       [463, "جِهَرَة", "cihara", "yüksek sesle söylemeler", "orta", ""],
       [464, "جُهَر", "cuhar", "yüksek sesle söylemeler", "orta", ""],
@@ -617,7 +666,7 @@
       [469, "جَهَر", "cahar", "yüksek sesle söylemeler", "orta", ""],
       [470, "مَجَاهِر", "macāhir", "yüksek sesle söylemeler", "orta", ""],
       [471, "مَجَاهِير", "macāhīr", "yüksek sesle söylemeler", "orta", ""],
-      [472, "جَوَاهِر", "cawāhir", "yüksek sesle söylemeler", "orta", ""],
+      [472, "جَوَاهِر", "cawāhir", "Mücevherler", "lugat", "Luggat"],
       [473, "أَجْهُر", "ʾachur", "yüksek sesle söylemeler", "orta", ""],
       [474, "جُهَّر", "cuhhar", "yüksek sesle söylemeler", "orta", ""],
       [475, "جَهَائِر", "cahāʾir", "yüksek sesle söylemeler", "orta", ""],
@@ -2250,7 +2299,699 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جَهْر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CEHR",
+          "yazilis": "ﺟﻬﺮ",
+          "tur": "i.",
+          "koken": "Ar. cehr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sesi yükseltme, yüksek sesle okuma veya konuşma",
+              "misaller": [
+                ["Duânın bu kısmı hazır bulunanlar tarafından cehr ile okunurdu.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cehr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْجِهَارُ [el-cihâr] (كِتَابٌ [kitâb] vezninde) Bir nesne ayân ve âşikâr olmak manâsınadır; yukâlu: جَهَرَ الْأَمْرُ جَهْرًا وَجِهَارًا مِنَ الْبَابِ الثَّالِثِ إِذَا عَلَنَ Ve bir sözü âşikârece söylemek manâsınadır, bi-nefsihi ve bâ ile müteaddî olur; yukâlu: جَهَرَ الْكَلاَمَ وَبِالْكَلاَمِ إِذَا أَعْلَنَ Ve ref-i savt eylemek manâsınadır; yukâlu: جَهَرَ الصَّوْتَ إِذَا أَعْلاَهُ Ve askeri çoğaltmak manâsına müstameldir; yukâlu: جَهَرَ الْجَيْشَ إِذَا اسْتَكْثَرَهُمْ Ve bir arza sülûk eylemek manâsına müstameldir ki kendisini orada izhârı müstelzimdir; yukâlu: جَهَرَ الْأَرْضَ إِذَا سَلَكَهَا Ve bir adamı bî-hâil âşikârece görmek, alâ-kavlin bir adama nazar eyledikte gözüne büyük görünmek manâsınadır; yukâlu: جَهَرَ الرَّجُلَ إِذَا رَآهُ بِلاَ حِجَابٍ أَوْ نَظَرَ إِلَيْهِ وَعَظُمَ فِي عَيْنِهِ Ve hûb-çehre ve hoş-likâ insânın ve sâir nesnenin heyet-i zîbâ ve cemâl-i dil-ârâsı hâtıra bedî ve acîb gelmek manâsına müstameldir; yukâlu: جَهَرَهُ الشَّيْءُ إِذَا رَاعَهُ جَمَالُهُ وَهَيْئَتُهُ Ve yağ çıkmak için yayığı çalkamak manâsınadır; yukâlu: جَهَرَ السِّقَاءَ إِذَا مَخَضَهُ Ve alel-gafle bir cemâate şeb-hûn eylemek manâsınadır; yukâlu: جَهَرَ الْقَوْمُ الْقُومَ إِذَا صَبَّحَهُمْ عَلَى غِرَّةٍ Ve kuyuyu ayırtlayıp pâk eylemek, alâ-kavlin mecmû suyunu çekmek yâhûd kuyu kazarken suya yetişmek manâsınadır; yukâlu: جَهَرَ الْبِئْرَ إِذَا نَقَّاهَا أَوْ نَزَحَهَا أَوْ بَلَغَ الْمَاءَ Ve bir nesneyi keşf edip zâhire çıkarmak manâsınadır; yukâlu: جَهَرَ الشَّيْءَ إِذَا كَشَفَهُ Ve güneş bir adamın gözünü hîrelendirip kamaştırmak manâsınadır; yukâlu: جَهَرَتِ الشَّمْسُ الْمُسَافِرَ إِذَا أَسْدَرَتْ عَيْنَهُ Ve bir kimseye tazîm eylemek manâsınadır; yukâlu: جَهَرَ فُلاَنًا إِذَا عَظَّمَهُ Ve bir nesneyi takdîr ve tahmîn eylemek manâsınadır; yukâlu: جَهَرَ الشَّيْءَ إِذَا حَزَرَهُ Ve جَهْرٌ [cehr] Toprağı galîz ve dürüşt olan tepeye ve yüksek yere denir.",
+              "misaller": [
+                ["جَهَرَ الْأَمْرُ جَهْرًا وَجِهَارًا مِنَ الْبَابِ الثَّالِثِ إِذَا عَلَنَ", ""],
+                ["جَهَرَ الْكَلاَمَ وَبِالْكَلاَمِ إِذَا أَعْلَنَ", ""],
+                ["جَهَرَ الصَّوْتَ إِذَا أَعْلاَهُ", ""],
+                ["جَهَرَ الْجَيْشَ إِذَا اسْتَكْثَرَهُمْ", ""],
+                ["جَهَرَ الْأَرْضَ إِذَا سَلَكَهَا", ""],
+                ["جَهَرَ الرَّجُلَ إِذَا رَآهُ بِلاَ حِجَابٍ أَوْ نَظَرَ إِلَيْهِ وَعَظُمَ فِي عَيْنِهِ", ""],
+                ["جَهَرَهُ الشَّيْءُ إِذَا رَاعَهُ جَمَالُهُ وَهَيْئَتُهُ", ""],
+                ["جَهَرَ السِّقَاءَ إِذَا مَخَضَهُ", ""],
+                ["جَهَرَ الْقَوْمُ الْقُومَ إِذَا صَبَّحَهُمْ عَلَى غِرَّةٍ", ""],
+                ["جَهَرَ الْبِئْرَ إِذَا نَقَّاهَا أَوْ نَزَحَهَا أَوْ بَلَغَ الْمَاءَ", ""],
+                ["جَهَرَ الشَّيْءَ إِذَا كَشَفَهُ", ""],
+                ["جَهَرَتِ الشَّمْسُ الْمُسَافِرَ إِذَا أَسْدَرَتْ عَيْنَهُ", ""],
+                ["جَهَرَ فُلاَنًا إِذَا عَظَّمَهُ", ""],
+                ["جَهَرَ الشَّيْءَ إِذَا حَزَرَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "yıla denir, سَنَةٌ [senet] manâsına; yukâlu: مَضَى عَلَيْهِ جَهْرٌ أَيْ سَنَةٌ Ve dehr ve zamândan bir mikdâra denir; tekûlu: بِعْتُ مِنْهُ عَسْجَدًا مُذْ جَهْرٍ أَيْ قِطْعَةً مِنَ الدَّهْرِ",
+              "misaller": [
+                ["مَضَى عَلَيْهِ جَهْرٌ أَيْ سَنَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهْرُ",
+          "okunus": "el-cehr",
+          "koken": "قَهْرٌ [kahr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cehr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kuyu pâk etmek; yukâlu: جَهَرْتُ الْبِئْرَ جَهْرًا مِنَ الْبَابِ الثَّالِثِ Ve جَهْرٌ [cehr] Yer yüzünde bilâ-şuûr seyr etmeğe derler; yukâlu: جَهَرْنَا الْأَرْضَ أَيْ سَلَكْنَاهَا مِنْ غَيْرِ مَعْرِفَةٍ Ve bir tâifenin üzerine alel-gaflet varmağa dahi derler; yukâlu: جَهَرْنَا بَنِي فُلَانٍ أَيْ صَبَّحْنَاهُمْ عَلَى غِرَّةٍ Ve tulumu sütle çalkamak, yağı zuhûr etsin diye.",
+              "misaller": [
+                ["جَهَرْتُ الْبِئْرَ جَهْرًا مِنَ الْبَابِ الثَّالِثِ", ""],
+                ["جَهَرْنَا الْأَرْضَ أَيْ سَلَكْنَاهَا مِنْ غَيْرِ مَعْرِفَةٍ", ""],
+                ["جَهَرْنَا بَنِي فُلَانٍ أَيْ صَبَّحْنَاهُمْ عَلَى غِرَّةٍ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَهْرٌ [cehr] Ref-i savt etmeğe de derler; yukâlu: جَهَرَ بِالْقَوْلِ إِذَا رَفَعَ بِهِ صَوْتَهُ Ve bir kimse gözüne azîm görünmeğe dahi derler; tekûlu: جَهَرْتُ الرَّجُلَ وَجَهَرْتُ الْجَيْشَ إِذَا عَظُمَ وَكَثُرَ فِي عَيْنِكَ حِينَ رَأَيْتَهُمْ",
+              "misaller": [
+                ["جَهَرَ بِالْقَوْلِ إِذَا رَفَعَ بِهِ صَوْتَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهْرُ",
+          "okunus": "el-cehr",
+          "koken": ""
+        }
+      ],
+      "جِهَار": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CİHAR",
+          "yazilis": "ﺟﻬﺎﺭ",
+          "tur": "i.",
+          "koken": "Ar. cehr “sesini yükseltmek”ten cihār",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yüksek sesle, alenen ve açıkça söyleme, okuma. ● Cihâren ( ﺟﻬﺎﺭﺍً ) zf. ( cihār ’ın tenvinli şekli) Yüksek sesle, alenen, cehren",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Cihar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمُجَاهَرَةُ [el-mucâheret] (مُقَاتَلَةٌ [mukâtelet] vezninde) Mugâlebe manâsınadır; yukâlu: جَاهَرَهُمْ بِالْأَمْرِ جِهَارًا وَمُجَاهَرَةً إِذَا غَالَبَهُمْ Ve جِهَارٌ [cihâr] (كِتَابٌ [kitâb] vezninde) İsm olur, جَهْرَةً [cehret] gibi ayân ve âşikâre manâsına; cîmin fethiyle de câizdir; yukâlu: لَقِيَهُ جَهَارًا وَجِهَارًا أَيْ عَيَانًا",
+              "misaller": [
+                ["جَاهَرَهُمْ بِالْأَمْرِ جِهَارًا وَمُجَاهَرَةً إِذَا غَالَبَهُمْ", ""],
+                ["لَقِيَهُ جَهَارًا وَجِهَارًا أَيْ عَيَانًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِهَارُ",
+          "okunus": "el-cihâr",
+          "koken": "قِتَالٌ [kitâl] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cihâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dört",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "CİHAR – ÇİHAR – ÇEHAR",
+          "yazilis": "ﭼﻬﺎﺭ – ﺟﻬﺎﺭ",
+          "tur": "sıf.",
+          "koken": "Fars. çehār > çihār > cihār",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dört. Bk. ÇAR ● Cihâr ü dü Bk. CİHÂRÜDÜ ● Cihâr ü se Bk. CİHÂRÜSE ● Cihâr ü yek Bk CİHÂRÜYEK",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جَهِير": [
+        {
+          "eser": "Kamus",
+          "madde": "cehir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمُجْهَرُ [el-mucher] (مُكْرَمٌ [mukrem] vezninde) ve اَلْجَهْوَرِيُّ [el-cehveriyy] (yâ-yı nisbetle) Kelâma vasf olur, bülend âvâz ile söylenen söze denir; yukâlu: كَلاَمٌ جَهِيرٌ وَمُجْهَرٌ وَجَهْوَرِيٌّ أَيْ عَالٍŞârih der ki جَهْوَرِيٌّ [cehveriyy], sâhib-i âvâz-ı bülend dahi vasf olur; yukâlu: رَجُلٌ جَهْوَرِيٌّİntehâ.",
+              "misaller": [
+                ["كَلاَمٌ جَهِيرٌ وَمُجْهَرٌ وَجَهْوَرِيٌّ أَيْ عَالٍ", ""],
+                ["رَجُلٌ جَهْوَرِيٌّ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَهِيرٌ [cehîr] Hoş-likâ ve hûb-çehre insâna ıtlâk olunur; yukâlu: رَجُلٌ جَهِيرٌ أَيْ بَيِّنُ الْجُهُورَةِ وَالْجَهَارَةِ ذُو مَنْظَرٍ Ve lutf ve ihsâna sezâvâr olan adama denir; yukâlu: رَجُلٌ جَهِيرٌ أَيْ خَلِيقٌ لِلْمَعْرُوفِ Cemi جُهَرَاءُ [cuherâ] gelir, أُمَرَاءُ [umerâ] vezninde.",
+              "misaller": [
+                ["رَجُلٌ جَهِيرٌ أَيْ بَيِّنُ الْجُهُورَةِ وَالْجَهَارَةِ ذُو مَنْظَرٍ", ""],
+                ["رَجُلٌ جَهِيرٌ أَيْ خَلِيقٌ لِلْمَعْرُوفِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "su karışmamış hâlis süte denir; yukâlu: لَبَنٌ جَهِيرٌ أَيْ غَيْرُ مَمْذُوقٍ بِالْمَاءِ",
+              "misaller": [
+                ["لَبَنٌ جَهِيرٌ أَيْ غَيْرُ مَمْذُوقٍ بِالْمَاءِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهِيرُ",
+          "okunus": "el-cehîr",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cehir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol süttür ki ona su karışmamış ola.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَهِيرٌ [cehîr] Şol kimseye dahi derler ki hüsn-i manzar sâhibi ola.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهِيرُ",
+          "okunus": "el-cehîr",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cehîrus-savt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "جَهِيرُ الصَّوْتِ [cehîrus-savt] Bi-manâhu; yukâlu minhu: جَهُرَ الرَّجُلُ مِنَ الْبَابِ الْخَامِسِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَجْهُورَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-mechûret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mamûr olan kuyuya denir; yukâlu: بِئْرٌ مَجْهُورَةٌ أَيْ مَعْمُورَةٌ Ve حُرُوفٌمَجْهُورَةٌ [hurûfun mechûret] İndes-sarfiyyîn on sekiz harften ibârettir ki işbu: “ظِلُّ قَوٍّ رَبَضٌ إِذْ غَزَا جُنْدٌ مُطِيعٌ” kelâmı cem eder. Mukâbiline حُرُوفٌ مَهْمُوسَةٌ [hurûfun mehmûset] denir. Şârihin beyânına göre hurûf-ı mezkûre telaffuz hâlinde mahreclerine itimâdı işbâ ederler, şöyle ki nefesi kendiler ile cereyândan men ederler. Bu cihetten مَجْهُورَةٌ [mechûret] ıtlâk olundu. Ammâ مَهْمُوسَةٌ [mehmûset]te nefes bunlar ile cereyân eder, zîrâ mahreclerine itimâdları zaîftir.",
+              "misaller": [
+                ["بِئْرٌ مَجْهُورَةٌ أَيْ مَعْمُورَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَجْهُورَةُ",
+          "okunus": "el-mechûret",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-mechûret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Pâk olmuş kuyu. Ahfeş eyitti: Arab جَهَرْتُ الرَّكِيَّةَ der kaçan suyu balçığın setr etse pâk edilip suyu sâfî kılındıkta; ve minhu kavluhu taâlâ: ﴿حَتَّى نَرَى اللهَ جَهْرَةً﴾ (البقرة 55) أَيْ عَيَانًا يَكْشِفُ مَا بَيْنَنَا وَبَيْنَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَجْهُورَةُ",
+          "okunus": "el-mechûret",
+          "koken": "mîmin fethiyle"
+        }
+      ],
+      "مِجْهَر": [
+        {
+          "eser": "Kamus",
+          "madde": "micher",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمِجْهَارُ [el-michâr] (مِحْرَابٌ [mihrâb] vezninde) Sözü cehr ile söylemek âdeti olan adama denir; yukâlu: رَجُلٌ مِجْهَرٌ وَمِجْهَارٌ إِذَا كَانَتْ عَادَتُهُ أَنْ يَجْهَرَ الْكَلاَمَ",
+              "misaller": [
+                ["رَجُلٌ مِجْهَرٌ وَمِجْهَارٌ إِذَا كَانَتْ عَادَتُهُ أَنْ يَجْهَرَ الْكَلاَمَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمِجْهَرُ",
+          "okunus": "el-micher",
+          "koken": "مِنْبَرٌ [minber] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "micher",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ekseriyyâ çağırı söyleyen kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمِجْهَرُ",
+          "okunus": "el-micher",
+          "koken": "mîmin kesri ve cîmin sükûnuyla ve hânın fethiyle"
+        }
+      ],
+      "جَهْرَة": [
+        {
+          "eser": "Kamus",
+          "madde": "cehret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsmdir, zâhir ve âşikâr olan şeye denir ve minhu kavluhu taâlâ: ﴿أَرِنَا اللهَ جَهْرَةً﴾ أَيْ عَيَانًا غَيْرَ مُسْتَتِرٍ Yanî “Hâilsiz, âşikârece irâe kıl.”",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهْرَةُ",
+          "okunus": "el-cehret",
+          "koken": "cîmin fethi ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cehret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Âşikâre olmak; yukâlu: رَأَيْتُهُ جَهْرَةً وَكَلَّمْتُهُ جَهْرَةً",
+              "misaller": [
+                ["رَأَيْتُهُ جَهْرَةً وَكَلَّمْتُهُ جَهْرَةً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهْرَةُ",
+          "okunus": "el-cehret",
+          "koken": ""
+        }
+      ],
+      "جَهِيرَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "cehiret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müennesi; yukâlu: رَجُلٌ جَهِيرٌ وَامْرَأَةٌ جَهِيرَةٌ أَيْ ذُو مَنْظَرٍ",
+              "misaller": [
+                ["رَجُلٌ جَهِيرٌ وَامْرَأَةٌ جَهِيرَةٌ أَيْ ذُو مَنْظَرٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَهِيرَةُ",
+          "okunus": "el-cehîret",
+          "koken": ""
+        }
+      ],
+      "جَوْهَر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CEVHER",
+          "yazilis": "ﺟﻮﻫﺮ",
+          "tur": "i.",
+          "koken": "Ar. cevher gevher",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Var olan bir şeyin özü, esâsı, varlığındaki maya, gevher",
+              "misaller": [
+                [
+                  "Bu zâhir gözünü örtüp bana tut cân ile gönlün / Ki her bir sözün içinde duyasın cevher-i ma’nâ",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["Etmez ekdâr-ı cihanda dil kabûl-i infiâl / Cevherim vârestedir eczâ-yı âb ü hâkten", "Leskofçalı Gālib"],
+                ["Bu onun cevherinde vardı", "Ahmet H. Tanpınar"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Yaratılıştan gelen değer, fıtrî kābiliyet, iyi ve kıymetli maya, değer, kıymet",
+              "misaller": [
+                ["Cevheri bozuk.", ""],
+                ["Sendeki cevher hepimizde olsa…", "Ömer Seyfeddin"],
+                [
+                  "Delikanlı çağımızdaki cevher / Yalvarmak yakarmak nâfile bugün / Gözünün yaşına bakmadan gider",
+                  "Câhit S. Tarancı"
+                ],
+                ["Ne yağmalar ne kıtaller, bir milleti millet yapan cevheri yok edemez", "Sâmiha Ayverdi"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Elmas, zümrüt, pırlanta gibi değerli süs eşyâsı, mücevher, gevher, güher",
+              "misaller": [
+                ["Fağfûrîde üç hâsiyet vardır ki yeşimden gayri hiçbir cevherde yoktur", "Kâtip Çelebi’den Seç."],
+                ["Yere düşmekle cevher sâkıt olmaz kadr ü kıymetten", "Nâmık Kemal – Ö.T.S."]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "Herhangi bir muâmele görmemiş, işlenmemiş mâden",
+              "misaller": [],
+              "no": 4
+            },
+            {
+              "etiket": "",
+              "tanim": "Kılıcın üzerindeki hâreler, dalgalar, menevişler",
+              "misaller": [
+                ["Tîğ-i hûn-âşâm nakş-i cevherinden bellidir", "Vecdî"]
+              ],
+              "no": 5
+            },
+            {
+              "etiket": "",
+              "tanim": "Ebced hesâbında sâdece noktalı harflerin sayılarının hesaplanması sûretiyle düşürülen târihlerdeki noktalı harflere verilen isim",
+              "misaller": [],
+              "no": 6
+            },
+            {
+              "etiket": "fels.",
+              "tanim": "Varlıklarda değişikliğe uğrayan taraf dışında değişmeden kalan şey, maddenin değişmeyen tarafı, kendi nefsiyle kāim olan, gerçekleşmesi için başka bir nesneye ihtiyâcı olmayan varlık, töz, öz",
+              "misaller": [],
+              "no": 7
+            },
+            {
+              "etiket": "tasavvuf.",
+              "tanim": "Yaratılmış şeylerin hakîkati olan ve Allah’ın ilminde ezelden mevcut bulunan sûretler. Karşıtı",
+              "misaller": [],
+              "no": 8
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Saçmaladığı halde güzel konuştuğunu sananlar için alay yollu kullanılır, cevâhir yumurtlamak",
+              "misaller": [],
+              "deyim": "Cevher yumurtlamak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ak madde",
+              "misaller": [],
+              "deyim": "Cevher-i ebyaz"
+            },
+            {
+              "etiket": "",
+              "tanim": "Âlem-i ceberut",
+              "misaller": [],
+              "deyim": "Cevher-i evvel"
+            },
+            {
+              "etiket": "",
+              "tanim": "Maddenin bölünemeyen en küçük parçası, atom",
+              "misaller": [],
+              "deyim": "Cevher-i ferd"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kâinâtın özü",
+              "misaller": [],
+              "deyim": "Cevher-i kül"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kâinâtın rûhunu meydana getiren, madde hâlinde olmayan varlık",
+              "misaller": [],
+              "deyim": "Cevher-i mücerred"
+            },
+            {
+              "etiket": "",
+              "tanim": "Boz madde",
+              "misaller": [],
+              "deyim": "Cevher-i sincâbî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Yüce cevher, felek, ruh. ● Cevher-dar ( ﺟﻮﻫﺮﺩﺍﺭ ) birl. sıf. (Fars. -dār “sâhip ve mâlik olan” ile) 1",
+              "misaller": [],
+              "deyim": "Cevher-i ulvî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Altına batırsan ey’olmaz kötü / Aslı ham demirden cevherdar olmaz (Karacaoğlan – Ö.T.S.). 2. Mücevherle süslü. 3",
+              "misaller": [],
+              "deyim": "Cevherli, cevheri olan, mayası iyi, yeteneği beğenilen"
+            },
+            {
+              "etiket": "",
+              "tanim": "Oldu târîh-i fevti cevherdâr (Recâîzâde M. Ekrem). ● Cevher-füruş ( ﺟﻮﻫﺮﻓﺮﻭﺵ ) birl. i. (Fars. furūş “satan” ile) Mücevher satan kimse, cevâhirci, kuyumcu",
+              "misaller": [
+                [
+                  "Ah oğlum, benden sonra sen şu hazînelerin kadrini bilemezsin, tıpkı cevher-fürûşa benzersin",
+                  "Ahmed Midhat Efendi"
+                ],
+                ["● Cevherin", "ﺟﻮﻫﺮﻳﻦ"],
+                ["sıf", "Fars. -іn ekiyle"]
+              ],
+              "deyim": "Ebced hesâbında yalnız noktalı harfleri hesap edilerek söylenen (târih)"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Cevherin kadeh.” 2",
+              "misaller": [],
+              "deyim": "Mücevherle yapılmış, cevherle süslenmiş"
+            },
+            {
+              "etiket": "",
+              "tanim": "Semâ pâk ü cevherîn / Meş’alleriyle lâyetenâhî ve pür-ebed / Bir mâbed ihtişâmını almış (Tevfik Fikret). ● Cevher-pâre ( ﺟﻮﻫﺮﭘﺎﺭﻩ ) birl. i. (Fars. pāre “parça” ile) 1. Mücevher parçası. 2. sıf. mec. Mücevher gibi kıymetli. ● Cevher-tıraş ( ﺟﻮﻫﺮﺗﺮﺍﺵ ) birl. sıf. ve i. (Fars. tirāş “yontan” ile) Mücevher işleyen (kimse). ● Cevher-şinas ( ﺟﻮﻫﺮﺷﻨﺎﺱ ) birl. i. (Fars. şinās “tanıyan, bilen” ile) Kuyumcu",
+              "misaller": [],
+              "deyim": "Mücevher gibi"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cevher",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cerî ve mikdâm ve dilîr adama ıtlâk olunur; yukâlu: هُوَ جَوْهَرٌ أَيْ جَرِيءٌ مُقْدِمٌ",
+              "misaller": [
+                ["هُوَ جَوْهَرٌ أَيْ جَرِيءٌ مُقْدِمٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "جَوْهَرٌ",
+          "okunus": "cevher",
+          "koken": ""
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cevher",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mutlakâ şol hacere denir ki kendisinden intifâ olunacak nesne istihrâc olunur ola; murâd cevâhir-i madeniyye olan ahcârdır ki filizzâttan ibârettir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَوْهَرُ الشَّيْءِ [cevheruş-şey] o nesnenin cibilleti kendisi üzere mevzû olan nesneye ıtlâk olunur, yanî o nesnenin asl mâye ve mâddesidir ki o nesne ondan sûret-pezîr-i husûl ola. Meselâ cevher-i insânî mâye-i cibilliyettir ki neşv ü nemâ bil-cümle evzâ ve atvârının mevzûun aleyhidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَوْهَرُ",
+          "okunus": "el-cevher",
+          "koken": "جَوْرَبٌ [cevreb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cevher",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsm-i muarrebdir, kıymetli taş manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "عَرَضٌ [arad]ın mukâbilinde dahi istimâl olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَوْهَرُ",
+          "okunus": "el-cevher",
+          "koken": "alâ-vezni جَوْرَب [cevreb]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevher",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Öz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevher",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mücevher. Öz. Elmas",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevher-i ferd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Maddenin bölünemeyen en küçük parçası",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevher-i ruh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ruh denen öz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جَوَاهِر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CEVÂHİR",
+          "yazilis": "ﺟﻮﺍﻫﺮ",
+          "tur": "i.",
+          "koken": "Ar. cevher ’in çoğul şekli cevāhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cevherler",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Elmas, zümrüt, pırlanta gibi değerli taşlar",
+              "misaller": [
+                ["Kalmadı kadr ü kıymeti dürr ü cevâhirin", "Süleyman Çelebi"],
+                ["Cevâhir taşına kıymet biçilmez / Bulup erbâbına danışmayınca", "Türkü"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Ukalâca fikir yürütenler, saçmaladığı halde güzel konuştuğunu zannedenler hakkında alay yollu kullanılır, cevher yumurtlamak",
+              "misaller": [
+                ["Böyle cevâhir yumurtlarsanız hîlemiz yakında un ufak yerlere dökülür", "Ahmed Vefik Paşa"]
+              ],
+              "deyim": "Cevâhir yumurtlamak"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevâhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mücevherler. Mücevher",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cevâhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cevherler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 16,
   "kuranda_var": true,

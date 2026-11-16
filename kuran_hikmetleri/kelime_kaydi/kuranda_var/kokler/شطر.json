@@ -8,13 +8,13 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "شَطْر", "şaṭr", "yan, taraf", "kuran", "Kur'ân"],
+      [0, "شَطْر", "şaṭr", "Yarım, yarı", "lugat", "Kur'ân · Kubbealtı"],
       [1, "شِطْر", "şiṭr", "yarılama", "orta", ""],
       [2, "شُطْر", "şuṭr", "yarılama", "orta", ""],
       [3, "شَطَر", "şaṭar", "yarılama", "orta", ""],
       [4, "شِطَر", "şiṭar", "yarılama", "orta", ""],
       [5, "شُطُر", "şuṭur", "yarılama", "orta", ""],
-      [6, "شُطُور", "şuṭūr", "yarılama", "orta", ""],
+      [6, "شُطُور", "şuṭūr", "Manâ-yı mezkûrdan masdardır", "lugat", "Kamus"],
       [7, "شِطَار", "şiṭār", "yarılama", "orta", ""],
       [8, "شُطَار", "şuṭār", "yarılama", "orta", ""],
       [9, "شَطَار", "şaṭār", "yarılama", "orta", ""],
@@ -397,7 +397,7 @@
       [291, "شَطَرُون", "şaṭarūn", "her daim yarılayanlar", "orta", ""],
       [292, "شَطَرِين", "şaṭarīn", "her daim yarılayanlar", "orta", ""],
       [293, "شَطَرَات", "şaṭarāt", "her daim yarılayanlar, müennes", "orta", ""],
-      [294, "شَطْر", "şaṭr", "yan, taraf", "kuran", "Kur'ân"],
+      [294, "شَطْر", "şaṭr", "Yarım, yarı", "lugat", "Kur'ân · Kubbealtı"],
       [295, "شَطْرَة", "şaṭra", "her daim yarılayan, müennes", "orta", ""],
       [296, "شَطْرَان", "şaṭrān", "her daim yarılayan, iki", "orta", ""],
       [297, "شَطْرَتَان", "şaṭratān", "her daim yarılayan, iki, müennes", "orta", ""],
@@ -533,13 +533,13 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "شَطَار", "şaṭār", "yarılama", "orta", ""],
-      [422, "شُطُور", "şuṭūr", "yarılama", "orta", ""],
+      [422, "شُطُور", "şuṭūr", "Manâ-yı mezkûrdan masdardır", "lugat", "Kamus"],
       [423, "شِطَار", "şiṭār", "yarılama", "orta", ""],
       [424, "شُطْر", "şuṭr", "yarılama", "orta", ""],
       [425, "شَطَارَة", "şaṭāra", "yarılama", "orta", ""],
       [426, "شِطَارَة", "şiṭāra", "yarılama", "orta", ""],
       [427, "شُطُورَة", "şuṭūra", "yarılama", "orta", ""],
-      [428, "شَطْر", "şaṭr", "yan, taraf", "kuran", "Kur'ân"],
+      [428, "شَطْر", "şaṭr", "Yarım, yarı", "lugat", "Kur'ân · Kubbealtı"],
       [429, "شِطْر", "şiṭr", "yarılama", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُشْطُورَة", "ʾuşṭūra", "yarılama türünden şey", "orta", ""],
       [435, "شَوْطَر", "şawṭar", "yarılama türünden şey", "orta", ""],
       [437, "شَيْطَر", "şayṭar", "yarılama türünden şey", "orta", ""],
-      [439, "شَطْر", "şaṭr", "yan, taraf", "kuran", "Kur'ân"],
+      [439, "شَطْر", "şaṭr", "Yarım, yarı", "lugat", "Kur'ân · Kubbealtı"],
       [441, "شَطَر", "şaṭar", "yarılama türünden şey", "orta", ""],
       [443, "شِطْر", "şiṭr", "yarılama türünden şey", "orta", ""],
       [445, "شُطْر", "şuṭr", "yarılama türünden şey", "orta", ""],
@@ -576,7 +576,7 @@
       [456, "أَشْطِرَة", "ʾaşṭira", "yarılamalar", "orta", ""],
       [457, "أَشَاطِر", "ʾaşāṭir", "yarılamalar", "orta", ""],
       [458, "أَشَاطِير", "ʾaşāṭīr", "yarılamalar", "orta", ""],
-      [459, "شُطُور", "şuṭūr", "yarılamalar", "orta", ""],
+      [459, "شُطُور", "şuṭūr", "Manâ-yı mezkûrdan masdardır", "lugat", "Kamus"],
       [460, "شُطُر", "şuṭur", "yarılamalar", "orta", ""],
       [461, "شِطَار", "şiṭār", "yarılamalar", "orta", ""],
       [462, "شِطَر", "şiṭar", "yarılamalar", "orta", ""],
@@ -1535,7 +1535,140 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شَطْر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ŞATR",
+          "yazilis": "ﺷﻄﺮ",
+          "tur": "i.",
+          "koken": "Ar. şaṭr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yarım, yarı",
+              "misaller": [
+                ["Şatr-ı ömrünü ona sarfeylemişti", "Kâtip Çelebi’den Seç."]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "eski edeb. Bir mısrâı yarıdan bölme, dört “mefâilün” ile yazılan bir mısrâı iki “mefâilün”den ayırma",
+              "misaller": [
+                [" mısrâını, şekline sokma bir şatrdır.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eş-şatr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir şeyin nısfına ve cüzüne denir ki murâd iki cüzünden bir cüzü olacaktır. Fil-asl munfasıl olana mevzû olup badehu gayr-i munfasıl olan nısfta dahi istimâl olundu ve minhu hadîsul-isrâi: “فَوَضَعَ شَطْرَهَا” أَيِ الصَّلَاةَ أَيْ بَعْضَهَا Cemi أَشْطُرٌ [eştur] ve شُطُورٌ [şutûr] gelir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَطْرٌ [şatr] Cihet ve semt ve nâhiye manâsınadır. Bu manâda ondan fil mutasarrıf olmaz yâhûd شَطَرَ شَطْرَهُ denir, قَصَدَ قَصْدَهُ manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "شَطْرٌ [şatr] Nâkanın ve sâir mevâşînin iki memesini sağıp iki âher memesini terk eylemek manâsınadır, zîrâ ileri ve geri dört memeleri olmakla her iki memeye bir شَطْرٌ [şatr] ıtlâk olunur ve ondan fil tasarruf olundu; yukâlu: شَطَرَ النَّاقَةَ إِذَا حَلَبَ شَطْرًا مِنْ خِلْفِهَا وَتَرَكَ شَطْرًا Bu شَطْرٌ [şatr]ın dahi cemi أَشْطُرٌ [eştur] gelir ve minhul-meselu: “حَلَبَ فُلاَنٌ اَلدَّهْرَ أَشْطُرَهُ” إِذَا جَرَّبَهُ خَيْرَهُ وَشَرَّهُ Yanî “Dehrin hayr ve şerrini tecribe eylemiş, takallübât-ı kevniyyeye uğramış, germ ü serd keşîde ve nîk ve bed çeşîde kimse” demektir, nâkanın bir defa iki ön memelerini ve bir defa iki art memelerini sağmaktan müsteârdır.",
+              "misaller": [
+                ["شَطَرَ النَّاقَةَ إِذَا حَلَبَ شَطْرًا مِنْ خِلْفِهَا وَتَرَكَ شَطْرًا", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "أَشْطُرَهُ kelimesi اَلدَّهْرَ lafzından bedeldir; ve kavluhu sallallâhu aleyhi ve selleme: “مَنْ مَنَعَ صَدَقَةً فَإِنَّا آخِذُوهَا وَشَطْرَ مَالِهِ” هَكَذَا رَوَاهُ بَهْزٌ وَوُهِّمَ وَإِنَّمَا الصَّوَابُ “وَشُطِرَ مَالُهُ” كَعُنِيَ يُعْنَى عَلَى بِنَاءِ الْمَجْهُولِ أَيْ جُعِلَ مَالُهُ شَطْرَيْنِ فَيَتَخَيَّرُ عَلَيْهِ الْمُصَدِّقُ فَيَأْخُذُ الصَّدَقَةَ مِنْ خَيْرِ الشَّطْرَيْنِ عُقُوبَةً لِمَنْعِهِ الزَّكَاةَ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّطْرُ",
+          "okunus": "eş-şatr",
+          "koken": "سَطْرٌ [satr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şatr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Nısf manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "fil-meseli: “أُحْلُبْ حَلَبًا لَكَ شَطْرُهُ” Yanî “Sütü sağ, yarısı senin olsun.”",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّطْرُ",
+          "okunus": "eş-şatr",
+          "koken": "şînin fethi ve tânın sükûnuyla"
+        }
+      ],
+      "شُطُور": [
+        {
+          "eser": "Kamus",
+          "madde": "eş-şutûr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلشُّطُورَةُ [eş-şutûret] (hâyla) Manâ-yı mezkûrdan masdardır; yukâlu: شَطَرَتِ الشَّاةُ وَشَطُرَتْ شُطُورًا وَشُطُورَةً مِنَ الْبَابِ اْلأَوَّلِ وَالْخَامِسِ إِذَا صَارَتْ شَطُورًا Ve شُطُورٌ [şutûr] Bir adam bir kimseye bakar iken onun gayrısına bakar gibi bakmak manâsınadır, gûyâ ki nazarını iki bölük eylemiş olur; yukâlu: شَطَرَ بَصَرَهُ شُطُورًا مِنَ الْبَابِ الْأَوَّلِ إِذَا صَارَ كَأَنَّهُ يَنْظُرُ إِلَيْكَ وَإِلَى آخَرَ يَعْنِي كَأَنَّهُ نَصَّفَ بَصَرَهُ Ve شُطُورٌ [şutûr] ve شُطُورَةٌ [şutûret] شَطَارَةٌ [şatâret] manâsına gelir, ke-mâ se-yuzkeru.",
+              "misaller": [
+                [
+                  "شَطَرَتِ الشَّاةُ وَشَطُرَتْ شُطُورًا وَشُطُورَةً مِنَ الْبَابِ اْلأَوَّلِ وَالْخَامِسِ إِذَا صَارَتْ شَطُورًا",
+                  ""
+                ],
+                [
+                  "شَطَرَ بَصَرَهُ شُطُورًا مِنَ الْبَابِ الْأَوَّلِ إِذَا صَارَ كَأَنَّهُ يَنْظُرُ إِلَيْكَ وَإِلَى آخَرَ يَعْنِي كَأَنَّهُ نَصَّفَ بَصَرَهُ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشُّطُورُ",
+          "okunus": "eş-şutûr",
+          "koken": "zammeteynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şutûr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sana nazar ederken senin gayrına nazar eder gibi olmak; yukâlu: شَطَرَ بَصَرُهُ يَشْطُرُ شُطُورًا مِنَ الْبَابِ الْأَوَّلِ Ve sâhib-i Surâhın bu makâmda شُطُورٌ [şutûr] “şûhî kerden” dediği savâb değildir, zîrâ Cevherî şûhî kerden manâsına gelen شَطَارَةٌ [şetâret]tir demiştir.",
+              "misaller": [
+                ["شَطَرَ بَصَرُهُ يَشْطُرُ شُطُورًا مِنَ الْبَابِ الْأَوَّلِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشُّطُورُ",
+          "okunus": "eş-şutûr",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

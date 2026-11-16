@@ -7,7 +7,7 @@
       [0, "سَقْر", "saqr", "", "veri yok", ""],
       [1, "سِقْر", "siqr", "", "veri yok", ""],
       [2, "سُقْر", "suqr", "", "veri yok", ""],
-      [3, "سَقَر", "saqar", "cehennem", "kuran", "Vikisözlük: Hell"],
+      [3, "سَقَر", "saqar", "Cehennemin bir tabakası", "lugat", "Vikisözlük: Hell · Luggat"],
       [4, "سِقَر", "siqar", "", "veri yok", ""],
       [5, "سُقُر", "suqur", "", "veri yok", ""],
       [6, "سُقُور", "suqūr", "", "veri yok", ""],
@@ -379,7 +379,7 @@
       [284, "سَقُرُون", "saqurūn", "", "veri yok", ""],
       [285, "سَقُرِين", "saqurīn", "", "veri yok", ""],
       [286, "سَقُرَات", "saqurāt", "", "veri yok", ""],
-      [287, "سَقَر", "saqar", "cehennem", "kuran", "Vikisözlük: Hell"],
+      [287, "سَقَر", "saqar", "Cehennemin bir tabakası", "lugat", "Vikisözlük: Hell · Luggat"],
       [288, "سَقَرَة", "saqara", "", "veri yok", ""],
       [289, "سَقَرَان", "saqarān", "", "veri yok", ""],
       [290, "سَقَرَتَان", "saqaratān", "", "veri yok", ""],
@@ -539,7 +539,7 @@
       [435, "سَوْقَر", "sawqar", "", "veri yok", ""],
       [437, "سَيْقَر", "sayqar", "", "veri yok", ""],
       [439, "سَقْر", "saqr", "", "veri yok", ""],
-      [441, "سَقَر", "saqar", "cehennem", "kuran", "Vikisözlük: Hell"],
+      [441, "سَقَر", "saqar", "Cehennemin bir tabakası", "lugat", "Vikisözlük: Hell · Luggat"],
       [443, "سِقْر", "siqr", "", "veri yok", ""],
       [445, "سُقْر", "suqr", "", "veri yok", ""],
       [447, "سَقِير", "saqīr", "", "veri yok", ""],
@@ -575,7 +575,7 @@
       [466, "سَقَرَة", "saqara", "", "veri yok", ""],
       [467, "سُقَّار", "suqqār", "", "veri yok", ""],
       [468, "سَقَار", "saqār", "", "veri yok", ""],
-      [469, "سَقَر", "saqar", "cehennem", "kuran", "Vikisözlük: Hell"],
+      [469, "سَقَر", "saqar", "Cehennemin bir tabakası", "lugat", "Vikisözlük: Hell · Luggat"],
       [470, "مَسَاقِر", "masāqir", "", "veri yok", ""],
       [471, "مَسَاقِير", "masāqīr", "", "veri yok", ""],
       [472, "سَوَاقِر", "sawāqir", "", "veri yok", ""],
@@ -785,6 +785,88 @@
     "renk_sozluk": {
       "سقر": "cehennem",
       "المستقر": "durak, kalacak yer"
+    },
+    "mustak_lugat": {
+      "سَقَر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAKAR",
+          "yazilis": "ﺳﻘﺮ",
+          "tur": "i.",
+          "koken": "Ar. seḳar",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cehennem",
+              "misaller": [
+                ["Azâb-ı nâr-ı sakardan emîn ede rahman", "Şinâsî’den"],
+                ["● Sakar-makar", "ﺳﻘﺮ ﻣﻘﺮّ"],
+                ["birl. sıf", "Ar. maḳarr “oturulan yer” ile"],
+                ["Yerinin cehennem olacağı, cehenneme gideceği tahmin edilen, cehennemlik", "kimse"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Sakar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cehennem esmâsındandır, eâzenallâhu taâlâ minhâ.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "işbu سَقَرُ [sakar] kelimesi marifedir, yanî alemiyyet ve vezn-i fil illetleriyle gayr-i munsarıftır. Müellifin Basâirde beyânına göre manâ-yı mezkûrdan mehûzdur, bazılar ucmeliğine zâhib olmuşlardır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "سَقَرُ [Sakar] Mekkede Mansûr Halîfenin kasrı olduğu mevzie müşrif bir cebel adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "سَقَرُ",
+          "okunus": "sakar",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sakar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cehennem âteşinin ismlerinden biridir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّقَرُ",
+          "okunus": "es-sakar",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sakar",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cehennemin bir tabakası",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
     }
   },
   "kuran_gecisleri": 0,

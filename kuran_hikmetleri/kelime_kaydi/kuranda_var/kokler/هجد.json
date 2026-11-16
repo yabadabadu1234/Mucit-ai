@@ -14,7 +14,7 @@
       [3, "هَجَد", "hacad", "uyuma", "orta", ""],
       [4, "هِجَد", "hicad", "uyuma", "orta", ""],
       [5, "هُجُد", "hucud", "uyuma", "orta", ""],
-      [6, "هُجُود", "hucūd", "uyuma", "orta", ""],
+      [6, "هُجُود", "hucūd", "Uyumak", "lugat", "Kamus"],
       [7, "هِجَاد", "hicād", "uyuma", "orta", ""],
       [8, "هُجَاد", "hucād", "uyuma", "orta", ""],
       [9, "هَجَاد", "hacād", "uyuma", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَهْجِدَة", "mahcida", "uyuma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَهْجِيد", "tahcīd", "uyutma", "orta", ""],
+      [29, "تَهْجِيد", "tahcīd", "Bu dahi uyanmak", "lugat", "Kamus"],
       [30, "تَهْجِدَة", "tahcida", "uyutma", "orta", ""],
       [31, "هِجِّاد", "hiccād", "uyutma", "orta", ""]
     ],
@@ -128,9 +128,9 @@
         84,
         "تَهَجُّد",
         "tahaccud",
-        "kendini zorlayarak uyuma",
-        "orta",
-        "Vikisözlük: masdar (bâb V): to sleep in the night, or in the latter part of the night"
+        "Gece namazı",
+        "lugat",
+        "Vikisözlük: masdar (bâb V): to sleep in the night, or in the latter part of the night · Luggat"
       ]
     ],
     "ism-i merre · bâb V": [
@@ -533,7 +533,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "هَجَاد", "hacād", "uyuma", "orta", ""],
-      [422, "هُجُود", "hucūd", "uyuma", "orta", ""],
+      [422, "هُجُود", "hucūd", "Uyumak", "lugat", "Kamus"],
       [423, "هِجَاد", "hicād", "uyuma", "orta", ""],
       [424, "هُجْد", "hucd", "uyuma", "orta", ""],
       [425, "هَجَادَة", "hacāda", "uyuma", "orta", ""],
@@ -576,7 +576,7 @@
       [456, "أَهْجِدَة", "ʾahcida", "uyumalar", "orta", ""],
       [457, "أَهَاجِد", "ʾahācid", "uyumalar", "orta", ""],
       [458, "أَهَاجِيد", "ʾahācīd", "uyumalar", "orta", ""],
-      [459, "هُجُود", "hucūd", "uyumalar", "orta", ""],
+      [459, "هُجُود", "hucūd", "Uyumak", "lugat", "Kamus"],
       [460, "هُجُد", "hucud", "uyumalar", "orta", ""],
       [461, "هِجَاد", "hicād", "uyumalar", "orta", ""],
       [462, "هِجَد", "hicad", "uyumalar", "orta", ""],
@@ -1719,7 +1719,123 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هُجُود": [
+        {
+          "eser": "Kamus",
+          "madde": "hucud",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Uyumak manâsınadır; yukâlu: هَجَدَ الرَّجُلُ هُجُودًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا نَامَ Müellif Basâirde seher ile de tefsîr ve azdâddan olduğunu takrîr eylemekle manâ-yı âtî ondan mehûz olur.",
+              "misaller": [
+                ["هَجَدَ الرَّجُلُ هُجُودًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا نَامَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهُجُودُ",
+          "okunus": "el-hucûd",
+          "koken": "قُعُودٌ [kuûd] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hucud",
+          "manalar": [],
+          "deyimler": [],
+          "yazilis": "اَلْهُجُودُ",
+          "okunus": "el-hucûd",
+          "koken": "zammeteynle"
+        }
+      ],
+      "تَهْجِيد": [
+        {
+          "eser": "Kamus",
+          "madde": "tehcid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi uyanmak manâsınadır; yukâlu: هَجَّدَ النَّائِمُ إِذَا اسْتَيْقَظَ Ve uyandırmak manâsınadır; yukâlu: هَجَّدَهُ إِذَا أَيْقَظَهُ Ve uyutmak manâsınadır; yukâlu: هَجَّدَهُ إِذَا نَوَّمَهُ Ve çökmüş deve kısmı boynunun iç yüzünü yere uzatıp yatırmak manâsınadır ki uykuyu müstelzimdir; yukâlu: هَجَّدَ الْبَعِيرَ إِذَا أَلْقَى جِرَانَهُ بِالْأَرْضِ",
+              "misaller": [
+                ["هَجَّدَ النَّائِمُ إِذَا اسْتَيْقَظَ", ""],
+                ["هَجَّدَهُ إِذَا أَيْقَظَهُ", ""],
+                ["هَجَّدَهُ إِذَا نَوَّمَهُ", ""],
+                ["هَجَّدَ الْبَعِيرَ إِذَا أَلْقَى جِرَانَهُ بِالْأَرْضِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّهْجِيدُ",
+          "okunus": "et-tehcîd",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tehcid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Uyutmak; yukâlu: هَجَّدَنِي أَيْ نَوَّمَنِي",
+              "misaller": [
+                ["هَجَّدَنِي أَيْ نَوَّمَنِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّهْجِيدُ",
+          "okunus": "et-tehcîd",
+          "koken": "tânın fethi ve hânın sükûnuyla"
+        }
+      ],
+      "تَهَجُّد": [
+        {
+          "eser": "Luggat",
+          "madde": "teheccüd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece namazı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEHECCÜT – TEHECCÜD",
+          "yazilis": "ﺗﻬﺠّﺪ",
+          "tur": "i.",
+          "koken": "Ar. hucūd “geceleyin namaz kılmak”tan teheccud",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece kalkıp namaz kılma",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "kısa.",
+              "tanim": "Teheccüt namazı",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Geceleyin kılınan nâfile namaz",
+              "misaller": [],
+              "deyim": "Teheccüt namazı"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -9,12 +9,12 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "ذَقْن", "ẕaqn", "çene", "kontrol", ""],
-      [1, "ذِقْن", "ẕiqn", "çene", "kontrol", "Vikisözlük: chin"],
+      [1, "ذِقْن", "ẕiqn", "Pek pîr-i fânîye denir", "lugat", "Vikisözlük: chin · Kamus"],
       [2, "ذُقْن", "ẕuqn", "çene", "kontrol", ""],
       [3, "ذَقَن", "ẕaqan", "çene", "kontrol", "Vikisözlük: chin"],
       [4, "ذِقَن", "ẕiqan", "çene", "kontrol", ""],
       [5, "ذُقُن", "ẕuqun", "çene", "kontrol", ""],
-      [6, "ذُقُون", "ẕuqūn", "çene", "kontrol", ""],
+      [6, "ذُقُون", "ẕuqūn", "Şol nâkadır ki eneğin yürürken salkı tuta", "lugat", "Vankulu"],
       [7, "ذِقَان", "ẕiqān", "çene", "kontrol", ""],
       [8, "ذُقَان", "ẕuqān", "çene", "kontrol", ""],
       [9, "ذَقَان", "ẕaqān", "çene", "kontrol", ""],
@@ -526,14 +526,14 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "ذَقَان", "ẕaqān", "çene olma", "kontrol", ""],
-      [422, "ذُقُون", "ẕuqūn", "çene olma", "kontrol", ""],
+      [422, "ذُقُون", "ẕuqūn", "Şol nâkadır ki eneğin yürürken salkı tuta", "lugat", "Vankulu"],
       [423, "ذِقَان", "ẕiqān", "çene olma", "kontrol", ""],
       [424, "ذُقْن", "ẕuqn", "çene olma", "kontrol", ""],
       [425, "ذَقَانَة", "ẕaqāna", "çene olma", "kontrol", ""],
       [426, "ذِقَانَة", "ẕiqāna", "çene olma", "kontrol", ""],
       [427, "ذُقُونَة", "ẕuqūna", "çene olma", "kontrol", ""],
       [428, "ذَقْن", "ẕaqn", "çene olma", "kontrol", ""],
-      [429, "ذِقْن", "ẕiqn", "çene olma", "kontrol", "Vikisözlük: chin"]
+      [429, "ذِقْن", "ẕiqn", "Pek pîr-i fânîye denir", "lugat", "Vikisözlük: chin · Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "ذَاقُون", "ẕāqūn", "çene olma türünden şey", "kontrol", ""],
@@ -544,7 +544,7 @@
       [437, "ذَيْقَن", "ẕayqan", "çene olma türünden şey", "kontrol", ""],
       [439, "ذَقْن", "ẕaqn", "çene olma türünden şey", "kontrol", ""],
       [441, "ذَقَن", "ẕaqan", "çene olma türünden şey", "kontrol", "Vikisözlük: chin"],
-      [443, "ذِقْن", "ẕiqn", "çene olma türünden şey", "kontrol", "Vikisözlük: chin"],
+      [443, "ذِقْن", "ẕiqn", "Pek pîr-i fânîye denir", "lugat", "Vikisözlük: chin · Kamus"],
       [445, "ذُقْن", "ẕuqn", "çene olma türünden şey", "kontrol", ""],
       [447, "ذَقِين", "ẕaqīn", "çene olma türünden şey", "kontrol", ""],
       [449, "ذِقَن", "ẕiqan", "çene olma türünden şey", "kontrol", ""],
@@ -569,7 +569,7 @@
       [456, "أَذْقِنَة", "ʾaẕqina", "çene olmalar", "kontrol", ""],
       [457, "أَذَاقِن", "ʾaẕāqin", "çene olmalar", "kontrol", ""],
       [458, "أَذَاقِين", "ʾaẕāqīn", "çene olmalar", "kontrol", ""],
-      [459, "ذُقُون", "ẕuqūn", "çene olmalar", "kontrol", ""],
+      [459, "ذُقُون", "ẕuqūn", "Şol nâkadır ki eneğin yürürken salkı tuta", "lugat", "Vankulu"],
       [460, "ذُقُن", "ẕuqun", "çene olmalar", "kontrol", ""],
       [461, "ذِقَان", "ẕiqān", "çene olmalar", "kontrol", ""],
       [462, "ذِقَن", "ẕiqan", "çene olmalar", "kontrol", ""],
@@ -755,7 +755,49 @@
         "r": ["ḏuqūn"],
         "yol": "asıl madde"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ذِقْن": [
+        {
+          "eser": "Kamus",
+          "madde": "zikn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Pek pîr-i fânîye denir; yukâlu: رَجُلٌ ذِقْنٌ أَيْ شَيْخٌ هَرِمٌ",
+              "misaller": [
+                ["رَجُلٌ ذِقْنٌ أَيْ شَيْخٌ هَرِمٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّقْنُ",
+          "okunus": "ez-zikn",
+          "koken": "zâlın kesri ve kâfın sükûnuyla"
+        }
+      ],
+      "ذُقُون": [
+        {
+          "eser": "Vankulu",
+          "madde": "zukun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol nâkadır ki eneğin yürürken salkı tuta; yukâlu: نَاقَةٌ ذَقُونٌ أَيْ تُرْخِي ذَقَنَهَا فِي السَّيْرِ Ve ذَقُونٌ [zekûn] Şol kovaya derler ki kenârı eğri dikilmiş ola; tekûlu: دَلْوٌ ذَقُونٌ",
+              "misaller": [
+                ["نَاقَةٌ ذَقُونٌ أَيْ تُرْخِي ذَقَنَهَا فِي السَّيْرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذُّقُونُ",
+          "okunus": "ez-zukûn",
+          "koken": "zâlın fethi ve kâfın zammı ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "مَحْو", "maḥw", "silme", "orta", ""],
+      [0, "مَحْو", "maḥw", "Yok etme", "lugat", "Luggat"],
       [1, "مِحْو", "miḥw", "silme", "orta", ""],
       [2, "مُحْو", "muḥw", "silme", "orta", ""],
       [517, "مَحَا", "maḥā", "silme", "orta", ""],
@@ -370,7 +370,7 @@
       [753, "مَحَا", "maḥā", "her daim silen", "orta", ""],
       [754, "مَحَوَان", "maḥawān", "her daim silen, iki", "orta", ""],
       [755, "مَحَوَات", "maḥawāt", "her daim silenler, müennes", "orta", ""],
-      [294, "مَحْو", "maḥw", "her daim silen", "orta", ""],
+      [294, "مَحْو", "maḥw", "Yok etme", "lugat", "Luggat"],
       [295, "مَحْوَة", "maḥwa", "her daim silen, müennes", "orta", ""],
       [296, "مَحْوَان", "maḥwān", "her daim silen, iki", "orta", ""],
       [297, "مَحْوَتَان", "maḥwatān", "her daim silen, iki, müennes", "orta", ""],
@@ -510,7 +510,7 @@
       [836, "مَحَاة", "maḥā", "silme", "orta", ""],
       [837, "مِحَايَة", "miḥāya", "silme", "orta", ""],
       [838, "مُحُوَّة", "muḥuwwa", "silme", "orta", ""],
-      [428, "مَحْو", "maḥw", "silme", "orta", ""],
+      [428, "مَحْو", "maḥw", "Yok etme", "lugat", "Luggat"],
       [429, "مِحْو", "miḥw", "silme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -520,7 +520,7 @@
       [434, "أُمْحُووَة", "ʾumḥūwa", "silme türünden şey", "orta", ""],
       [435, "مَوْحَو", "mawḥaw", "silme türünden şey", "orta", ""],
       [437, "مَيْحَو", "mayḥaw", "silme türünden şey", "orta", ""],
-      [439, "مَحْو", "maḥw", "silme türünden şey", "orta", ""],
+      [439, "مَحْو", "maḥw", "Yok etme", "lugat", "Luggat"],
       [840, "مَحَا", "maḥā", "silme türünden şey", "orta", ""],
       [443, "مِحْو", "miḥw", "silme türünden şey", "orta", ""],
       [445, "مُحْو", "muḥw", "silme türünden şey", "orta", ""],
@@ -1254,7 +1254,137 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَحْو": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MAHV",
+          "yazilis": "ﻣﺤﻮ",
+          "tur": "sıf.",
+          "koken": "Ar. maḥv",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yok etme, varlığına son verme",
+              "misaller": [
+                ["Bîçâre eski hâtıralar mahveder miyim / Ben mahva muktedir bile olsam bugün sizi", "Tevfik Fikret’ten"],
+                ["Cihanda birbirini halk u mahv imiş âdet", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Yok olma, harap olma",
+              "misaller": [
+                [
+                  "Mahv-i envâr-ı cemâl-i vahdet-i aşk idi dil / Olmadan sırr-ı zuhûra emr-i kün munzam henüz",
+                  "Leskofçalı Gālib"
+                ],
+                ["Ben senin mahvına kadar yürürüm", "Ahmed Midhat Efendi"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "tasavvuf.",
+              "tanim": "Kulun beşerî zaaflardan kurtulup bütün iş ve davranışlarında Allah’ın küllî irâdesine teslim olması durumu",
+              "misaller": [
+                [
+                  "Mahv hâlinin üstündeki hâle mahk denir. Mahv hâli birtakım izler ve eserler bıraktığı halde mahk hâli iz ve eser bile bırakmaz",
+                  "Kuşeyrî Risâlesi Terc."
+                ]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Varlıktan, benlikten geçme, Allah’ta fânî olma",
+              "misaller": [
+                [
+                  "Şu’le-i dîdâr ile mahv-ı vücûd etmişti dil / Hey’et-i takvîme Gālib düşmeden sevdâ-yı rûh",
+                  "Leskofçalı Gālib"
+                ]
+              ],
+              "deyim": "Mahv-ı vücut"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Bir yazıyı, bâzı yerlerini çıkarıp atmak yâhut değiştirmek veya birtakım ilâveler yapmak sûretiyle düzeltme, yenileme, tâmir etme. 2. tasavvuf. Kulun, Allah’ın lutfuyle beşerî zaaflardan kurtulup onların yerine iyi vasıflar, güzel hasletler kazanması durumu",
+              "misaller": [
+                [
+                  "Bir kimse kendi hal ve hareketlerinden zemmedilen huyları uzaklaştırır, onun yerine övülen hal ve fiilleri getirirse o kimse mahv ve isbat sâhibidir",
+                  "Kuşeyrî Risâlesi Terc."
+                ]
+              ],
+              "deyim": "Mahv ü isbat"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Mahv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesnenin eserini izâle eylemek manâsınadır ki bütün bütün nâ-bedîd eylemekten ibârettir; yukâlu: مَحَاهُ يَمْحُوهُ وَيَمْحَاهُ مَحْوًا مِنَ الْبَابِ الْأَوَّلِ وَالثَّالِثِ إِذَا أَذْهَبَ أَثَرَهُ Ve bu manâda lâzım olur; yukâlu: مَحَا الشَّيْءُ إِذَا ذَهَبَ أَثَرُهُ Ve مَحْوٌ [mahv] Kamerin yüzünde merî olan siyâhlık sûretine ıtlâk olunur ki eser-i mahv ve mesha-i Cibrîl aleyhis-selâmdır.",
+              "misaller": [
+                ["مَحَاهُ يَمْحُوهُ وَيَمْحَاهُ مَحْوًا مِنَ الْبَابِ الْأَوَّلِ وَالثَّالِثِ إِذَا أَذْهَبَ أَثَرَهُ", ""],
+                ["مَحَا الشَّيْءُ إِذَا ذَهَبَ أَثَرُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَحْوُ",
+          "okunus": "el-mahv",
+          "koken": "صَحْوٌ [sahv] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mahv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bozmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَحْوُ",
+          "okunus": "el-mahv",
+          "koken": "mîmin fethi ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mahv",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yok etme. Yok olma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mahv",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yok etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

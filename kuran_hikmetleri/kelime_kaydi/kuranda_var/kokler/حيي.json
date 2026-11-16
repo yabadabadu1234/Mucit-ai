@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "حَيّ", "ḥayy", "diri, canlı", "kuran", "Kur'ân"],
+      [0, "حَيّ", "ḥayy", "Diri", "lugat", "Kur'ân · Luggat"],
       [1, "حِيّ", "ḥiyy", "yaşama", "orta", ""],
       [2, "حُيّ", "ḥuyy", "yaşama", "orta", ""],
       [517, "حَيَى", "ḥayā", "yaşama", "orta", ""],
@@ -324,7 +324,7 @@
       [724, "مَحْيَيَان", "maḥyayān", "yaşama, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "حَيَّة", "ḥayya", "yılan", "kuran", "Kur'ân"],
+      [255, "حَيَّة", "ḥayya", "Yılan", "lugat", "Kur'ân · Luggat"],
       [256, "حَيَّتَان", "ḥayyatān", "bir kere yaşama, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -365,8 +365,8 @@
       [884, "حَيَوْن", "ḥayawn", "her daim yaşayanlar", "orta", ""],
       [885, "حَيَيْن", "ḥayayn", "her daim yaşayanlar", "orta", ""],
       [755, "حَيَيَات", "ḥayayāt", "her daim yaşayanlar, müennes", "orta", ""],
-      [294, "حَيّ", "ḥayy", "diri, canlı", "kuran", "Kur'ân"],
-      [295, "حَيَّة", "ḥayya", "yılan", "kuran", "Kur'ân"],
+      [294, "حَيّ", "ḥayy", "Diri", "lugat", "Kur'ân · Luggat"],
+      [295, "حَيَّة", "ḥayya", "Yılan", "lugat", "Kur'ân · Luggat"],
       [296, "حَيَّان", "ḥayyān", "her daim yaşayan, iki", "orta", ""],
       [297, "حَيَّتَان", "ḥayyatān", "her daim yaşayan, iki, müennes", "orta", ""],
       [298, "حَيُّون", "ḥayyūn", "her daim yaşayanlar", "orta", ""],
@@ -507,7 +507,7 @@
       [836, "حَيَاة", "ḥayā", "yaşama", "orta", ""],
       [837, "حِيَايَة", "ḥiyāya", "yaşama", "orta", ""],
       [838, "حُيِيَّة", "ḥuyiyya", "yaşama", "orta", ""],
-      [428, "حَيّ", "ḥayy", "diri, canlı", "kuran", "Kur'ân"],
+      [428, "حَيّ", "ḥayy", "Diri", "lugat", "Kur'ân · Luggat"],
       [429, "حِيّ", "ḥiyy", "yaşama", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -517,7 +517,7 @@
       [434, "أُحْيُويَة", "ʾuḥyūya", "yaşama türünden şey", "orta", ""],
       [435, "حَوَيّ", "ḥawayy", "yaşama türünden şey", "orta", ""],
       [437, "حَيَيّ", "ḥayayy", "yaşama türünden şey", "orta", ""],
-      [439, "حَيّ", "ḥayy", "diri, canlı", "kuran", "Kur'ân"],
+      [439, "حَيّ", "ḥayy", "Diri", "lugat", "Kur'ân · Luggat"],
       [840, "حَيَى", "ḥayā", "yaşama türünden şey", "orta", ""],
       [443, "حِيّ", "ḥiyy", "yaşama türünden şey", "orta", ""],
       [445, "حُيّ", "ḥuyy", "yaşama türünden şey", "orta", ""],
@@ -530,7 +530,7 @@
       [431, "حَايُويَة", "ḥāyūya", "yaşama türünden bir tane", "orta", ""],
       [436, "حَوَيَّة", "ḥawayya", "yaşama türünden bir tane", "orta", ""],
       [438, "حَيَيَّة", "ḥayayya", "yaşama türünden bir tane", "orta", ""],
-      [440, "حَيَّة", "ḥayya", "yılan", "kuran", "Kur'ân"],
+      [440, "حَيَّة", "ḥayya", "Yılan", "lugat", "Kur'ân · Luggat"],
       [444, "حِيَّة", "ḥiyya", "yaşama türünden bir tane", "orta", ""],
       [446, "حُيَّة", "ḥuyya", "yaşama türünden bir tane", "orta", ""],
       [842, "حَيِيَّة", "ḥayiyya", "yaşama türünden bir tane", "orta", ""],
@@ -2092,7 +2092,311 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حَيّ": [
+        {
+          "eser": "Kamus",
+          "madde": "hayy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحَوَايَةُ [el-havâyet] (سَحَابَةٌ [sehâbet] vezninde) Bir nesneyi cem ve ihrâz eylemek manâsınadır; yukâlu: حَوَاهُ يَحْوِيهِ حَيًّا وَحَوَايَةً إِذَا جَمَعَهُ وَأَحْرَزَهُ",
+              "misaller": [
+                ["حَوَاهُ يَحْوِيهِ حَيًّا وَحَوَايَةً إِذَا جَمَعَهُ وَأَحْرَزَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيُّ",
+          "okunus": "el-hayy",
+          "koken": "hânın fethi ve yânın teşdîdiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hayy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cem etmek; tekûlu: حَوَاهُ يَحْوِيهِ حَيًّا إِذَا جَمَعَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيُّ",
+          "okunus": "el-hayy",
+          "koken": "hânın fethi ve yânın teşdîdiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hayy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Diri olan kimse.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَيٌّ [hayy] Kabîle manâsına dahi gelir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيُّ",
+          "okunus": "el-hayy",
+          "koken": "hânın fethi ve yânın teşdîdiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Diri",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Daimi hayat sahibi olan (Allah)",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "hayye",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsm-i fil-i emrdir, هَلُمَّ ve أَقْبِلْ manâsına ki “tîz beri gel” demektir, Fârisîde “firâz ây” mürâdifidir; yukâlu: حَيَّ عَلَى الصَّلَاةِ أَيْ هَلُمَّ وَأَقْبِلْ إِلَيْهَا",
+              "misaller": [
+                ["حَيَّ عَلَى الصَّلَاةِ أَيْ هَلُمَّ وَأَقْبِلْ إِلَيْهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "حَيَّ",
+          "okunus": "hayye",
+          "koken": "hânın ve yâ-i müşeddedenin feth üzere binâsıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hayye",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Esmâ-i efâldendir, هَلُمَّ [helumme] ve اَقْبِلْ [akbil] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "âhirinde olan yâ meftûh kılındı mâ-kabli sâkin ve kendi sâkin olduğundan ötürü, nitekim لَيْتَ ve لَعَلَّ kelimelerinde zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Arab tâifesi حَيَّ عَلَى الثَّرِيدِ derler, nitekim bâb-ı lâmda “هلل” tefsîrinde zikr olunmuştur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "حَيَّ",
+          "okunus": "hayye",
+          "koken": "hânın fethi ve yânın teşdîdi ve feth üzere binâsı ile"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy-ı bâki",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sonu olmayan dâimi hayat sahibi (Allah)",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy-ı kayyûm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dâimî hayat sâhibi olup, varlığı kendinden olan ve mahlûkātı varlıkta tutan (Allah)",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy-ı lâyemut",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ölümsüz olup dâimâ hayat sâhibi olan (Allah)",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy-ı meyyit",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yaşayan ölü",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayy-ı mürtebit",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İrtibatlı diri",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حَيَّة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HAYYE",
+          "yazilis": "ﺣﻴّﻪ",
+          "tur": "i.",
+          "koken": "Ar. ḥayye",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yılan",
+              "misaller": [
+                ["Raksetmeye hiç değil müşâbih / Bir hayye gibi bu pîç ü tâbım", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hayye",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yılan",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-hayyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حَيٌّ [hayy] kelimesinin müennesidir, hısb ve rehâ üzere olan otlu sulu şen ve âbâd arza ıtlâk olunur; yukâlu: أَرْضٌ حَيَّةٌ أَيْ مُخْصِبَةٌ غَضَّةُ النَّبَاتِ Ve حَيَّةٌ [hayyet] Yılana denir, Fârisîde mâr derler. Mütercim der ki mevt-i tabîîsi olmamakla ıtlâk olundu yâhûd “ح،و،ي” mâddesindedir, niteki zikr olundu.",
+              "misaller": [
+                ["أَرْضٌ حَيَّةٌ أَيْ مُخْصِبَةٌ غَضَّةُ النَّبَاتِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bunun müzekkerinde حَيٌّ denmez, iltibâs için; cemi حَيَّاتٌ [hayyât] ve حَيَوَاتٌ [hayevât] gelir fetehâtla.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "“Filân habîs ve dâhî ve âfettir” diyecek yerde فُلَانٌ حَيَّةُ الْوَادِي أَوِ الْأَرْضِ أَوِ الْبَلَدِ أَوِ الْحَمَاطِ derler ki أَوْ kelimesi tenvî içindir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حَيَّةُ الْوَادِي [hayyetul-vâdî] arslana ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "حَيَّةُ [Hayyet] Kutb-ı şimâlî cenbinde Ferkadân ile Benâtu Naş miyânında niçe kevkebin yanî kevâkib-i adîdeden muhayyel sûretin ismidir ki bi-aynihi yılan sûretidir ve bu حَيَّةُ الْهَوَاءِ [hayyetul-havâ] ıtlâk ettikleri olacaktır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيَّةُ",
+          "okunus": "el-hayyet",
+          "koken": ""
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-hayyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yılana denir, Fârisîde mâr derler. Bazılar indinde zikr olunan kıvrılmak ve çöreklenmek manâsındandır ve indel-baz حَيَاةٌ [hayât] mâddesindendir ki tûl-i hayâtından nâşî ıtlâk olundu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيَّةُ",
+          "okunus": "el-hayyet",
+          "koken": "hânın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-hayyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yılan, müzekkere ve müennese mütenâvildir, فُلَانٌ حَيَّةٌ ذَكَرٌ derler, zîrâ âhirinde olan hâ vahdet içindir, بَطَّةٌ [battat] ve دَجَاجَةٌ [decâcet] hâsı gibidir, bunun birle bazı Arabdan رَأَيْتُ حَيًّا عَلَى حَيَّةٍ istimâ dahi olunmuştur, رَأَيْتُ ذَكَرًا عَلَى أُنْثَى manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَيَّةُ",
+          "okunus": "el-hayyet",
+          "koken": "hânın fethi ve yânın teşdîdiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 189,
   "kuranda_var": true,

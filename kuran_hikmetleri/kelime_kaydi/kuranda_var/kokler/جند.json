@@ -10,11 +10,11 @@
     "masdar · sülâsî mücerred": [
       [0, "جَنْد", "cand", "asker olma", "orta", ""],
       [1, "جِنْد", "cind", "asker olma", "orta", ""],
-      [2, "جُنْد", "cund", "asker olma", "orta", ""],
+      [2, "جُنْد", "cund", "Asker", "lugat", "Luggat"],
       [3, "جَنَد", "canad", "asker olma", "orta", ""],
       [4, "جِنَد", "cinad", "asker olma", "orta", ""],
       [5, "جُنُد", "cunud", "asker olma", "orta", ""],
-      [6, "جُنُود", "cunūd", "asker olma", "orta", ""],
+      [6, "جُنُود", "cunūd", "Askerler", "lugat", "Luggat"],
       [7, "جِنَاد", "cinād", "asker olma", "orta", ""],
       [8, "جُنَاد", "cunād", "asker olma", "orta", ""],
       [9, "جَنَاد", "canād", "asker olma", "orta", ""],
@@ -533,9 +533,9 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "جَنَاد", "canād", "asker olma", "orta", ""],
-      [422, "جُنُود", "cunūd", "asker olma", "orta", ""],
+      [422, "جُنُود", "cunūd", "Askerler", "lugat", "Luggat"],
       [423, "جِنَاد", "cinād", "asker olma", "orta", ""],
-      [424, "جُنْد", "cund", "asker olma", "orta", ""],
+      [424, "جُنْد", "cund", "Asker", "lugat", "Luggat"],
       [425, "جَنَادَة", "canāda", "asker olma", "orta", ""],
       [426, "جِنَادَة", "cināda", "asker olma", "orta", ""],
       [427, "جُنُودَة", "cunūda", "asker olma", "orta", ""],
@@ -552,7 +552,7 @@
       [439, "جَنْد", "cand", "asker olma türünden şey", "orta", ""],
       [441, "جَنَد", "canad", "asker olma türünden şey", "orta", ""],
       [443, "جِنْد", "cind", "asker olma türünden şey", "orta", ""],
-      [445, "جُنْد", "cund", "asker olma türünden şey", "orta", ""],
+      [445, "جُنْد", "cund", "Asker", "lugat", "Luggat"],
       [447, "جَنِيد", "canīd", "asker olma türünden şey", "orta", ""],
       [449, "جِنَد", "cinad", "asker olma türünden şey", "orta", ""],
       [451, "جُنُد", "cunud", "asker olma türünden şey", "orta", ""],
@@ -572,11 +572,11 @@
       [454, "جَنَادَة", "canāda", "asker olma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْنَاد", "ʾacnād", "asker olmalar", "orta", ""],
+      [455, "أَجْنَاد", "ʾacnād", "Askerler", "lugat", "Kubbealtı"],
       [456, "أَجْنِدَة", "ʾacnida", "asker olmalar", "orta", ""],
       [457, "أَجَانِد", "ʾacānid", "asker olmalar", "orta", ""],
       [458, "أَجَانِيد", "ʾacānīd", "asker olmalar", "orta", ""],
-      [459, "جُنُود", "cunūd", "asker olmalar", "orta", ""],
+      [459, "جُنُود", "cunūd", "Askerler", "lugat", "Luggat"],
       [460, "جُنُد", "cunud", "asker olmalar", "orta", ""],
       [461, "جِنَاد", "cinād", "asker olmalar", "orta", ""],
       [462, "جِنَد", "cinad", "asker olmalar", "orta", ""],
@@ -995,7 +995,136 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جُنْد": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CÜND",
+          "yazilis": "ﺟﻨﺪ",
+          "tur": "i.",
+          "koken": "Ar. cund",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Asker",
+              "misaller": [
+                ["Bârgâh-ı tab’ımızdan cünd-i ma’nî feyz alır / Mehbit-ı ilhamdır Gālib meğer dîvânımız", "Leskofçalı Gālib"],
+                ["Leşker-i mağlûb dil-hun cünd-i gālib bî-huzûr", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cünd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Asker. Ordu",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جُنُود": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CÜNUD",
+          "yazilis": "ﺟﻨﻮﺩ",
+          "tur": "i.",
+          "koken": "Ar. cund ’un çoğul şekli cunūd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Askerler, ordular",
+              "misaller": [
+                [
+                  "Hicret-i Habîb-i Hudâ’nın 160 senesinde Mervan İbnü’l-Hakem, yüz elli bin cünûd-ı müselman ile ve bin pâre merâkible İstanbul’u muhâsara edip…",
+                  "Evliyâ Çelebi"
+                ],
+                ["Gayret-i dîn ile İslâm eyleyip bezl-i vücûd / Üstüne salıp yanar âteş gibi cümle cünûd", "Enderunlu Vâsıf"],
+                ["Îraniyâna karşı gönderilen cünûd-ı gālibenin serdâr-ı besâlet-şiârı olan…", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cünud",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Askerler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cünûd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Askerler. Ordular",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَجْنَاد": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ECNAD",
+          "yazilis": "ﺍﺟﻨﺎﺩ",
+          "tur": "i.",
+          "koken": "Ar. cund “asker”in çoğul şekli ecnād",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Askerler",
+              "misaller": [
+                ["Ecnâd-ı gaybiyyesini size meded-resan eyleyip…", "Ferîdun Bey"],
+                ["O maslahatları kim gördü kevkeb-i nâmın / Nice zaman göremez ittifâkla ecnâd", "Nâbî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ecnad",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "جُنْدٌ [cund]un cemi, askerler manâsına; yukâlu: اَلشَّامُ خَمْسَةُ أَجْنَادٍ دِمَشْقُ بِكَسْرِ الدَّالِ وَفَتْحِ الْمِيمِ وَحِمْصُ بِكَسْرِ الْحَاءِ الْمُهْمَلَةِ وَسُكُونِ الْمِيمِ وَالصَّادِ الْمُهْمَلَةِ وَقِنَّسْرِينُ بِكَسْرِ الْقَافِ وَفَتْحِ النُّونِ مَعَ التَّشْدِيدِ وَأُرْدُنُّ بِضَمِّ الْهَمْزَةِ وَالدَّالِ وَالنُّونِ الْمُشَدَّدَةِ وَفِلَسْطِينُ بِكَسْرِ الْفَاءِ وَفَتْحِ اللَّامِ لِكُلِّ مَدِينَةٍ مِنْهَا جُنْدٌ Yanî bu zikr olunan şehrlerin her birinde bir asker cem olunmağın Şâm-ı şerîfin askeri beş bölük olmuştur.",
+              "misaller": [
+                [
+                  "اَلشَّامُ خَمْسَةُ أَجْنَادٍ دِمَشْقُ بِكَسْرِ الدَّالِ وَفَتْحِ الْمِيمِ وَحِمْصُ بِكَسْرِ الْحَاءِ الْمُهْمَلَةِ وَسُكُونِ الْمِيمِ وَالصَّادِ الْمُهْمَلَةِ وَقِنَّسْرِينُ بِكَسْرِ الْقَافِ وَفَتْحِ النُّونِ مَعَ التَّشْدِيدِ وَأُرْدُنُّ بِضَمِّ الْهَمْزَةِ وَالدَّالِ وَالنُّونِ الْمُشَدَّدَةِ وَفِلَسْطِينُ بِكَسْرِ الْفَاءِ وَفَتْحِ اللَّامِ لِكُلِّ مَدِينَةٍ مِنْهَا جُنْدٌ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْنَادُ",
+          "okunus": "el-ecnâd",
+          "koken": "hemzenin fethi ve cîmin sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 29,
   "kuranda_var": true,

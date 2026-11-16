@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "هَمْس", "hams", "fısıltı", "kuran", "Vikisözlük: masdar (bâb I): to whisper"],
+      [0, "هَمْس", "hams", "Gizli sese denir", "lugat", "Vikisözlük: masdar (bâb I): to whisper · Kamus"],
       [1, "هِمْس", "hims", "fısıldama", "orta", ""],
       [2, "هُمْس", "hums", "fısıldama", "orta", ""],
       [3, "هَمَس", "hamas", "fısıldama", "orta", ""],
@@ -306,7 +306,7 @@
     ],
     "ism-i mef‘ûl · sülâsî": [
       [220, "مَهْمُوس", "mahmūs", "fısıldanan", "orta", ""],
-      [221, "مَهْمُوسَة", "mahmūsa", "fısıldanan, müennes", "orta", ""],
+      [221, "مَهْمُوسَة", "mahmūsa", "İhfâ olunmuş kelimât ve eşyâya denir", "lugat", "Kamus"],
       [222, "مَهْمُوسَان", "mahmūsān", "fısıldanan, iki", "orta", ""],
       [223, "مَهْمُوسَتَان", "mahmūsatān", "fısıldanan, iki, müennes", "orta", ""],
       [224, "مَهْمُوسُون", "mahmūsūn", "fısıldananlar", "orta", ""],
@@ -397,7 +397,7 @@
       [291, "هَمَسُون", "hamasūn", "her daim fısıldayanlar", "orta", ""],
       [292, "هَمَسِين", "hamasīn", "her daim fısıldayanlar", "orta", ""],
       [293, "هَمَسَات", "hamasāt", "her daim fısıldayanlar, müennes", "orta", ""],
-      [294, "هَمْس", "hams", "fısıltı", "kuran", "Vikisözlük: masdar (bâb I): to whisper"],
+      [294, "هَمْس", "hams", "Gizli sese denir", "lugat", "Vikisözlük: masdar (bâb I): to whisper · Kamus"],
       [295, "هَمْسَة", "hamsa", "her daim fısıldayan, müennes", "orta", ""],
       [296, "هَمْسَان", "hamsān", "her daim fısıldayan, iki", "orta", ""],
       [297, "هَمْسَتَان", "hamsatān", "her daim fısıldayan, iki, müennes", "orta", ""],
@@ -539,7 +539,7 @@
       [425, "هَمَاسَة", "hamāsa", "fısıldama", "orta", ""],
       [426, "هِمَاسَة", "himāsa", "fısıldama", "orta", ""],
       [427, "هُمُوسَة", "humūsa", "fısıldama", "orta", ""],
-      [428, "هَمْس", "hams", "fısıltı", "kuran", "Vikisözlük: masdar (bâb I): to whisper"],
+      [428, "هَمْس", "hams", "Gizli sese denir", "lugat", "Vikisözlük: masdar (bâb I): to whisper · Kamus"],
       [429, "هِمْس", "hims", "fısıldama", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُهْمُوسَة", "ʾuhmūsa", "fısıldama türünden şey", "orta", ""],
       [435, "هَوْمَس", "hawmas", "fısıldama türünden şey", "orta", ""],
       [437, "هَيْمَس", "haymas", "fısıldama türünden şey", "orta", ""],
-      [439, "هَمْس", "hams", "fısıltı", "kuran", "Vikisözlük: masdar (bâb I): to whisper"],
+      [439, "هَمْس", "hams", "Gizli sese denir", "lugat", "Vikisözlük: masdar (bâb I): to whisper · Kamus"],
       [441, "هَمَس", "hamas", "fısıldama türünden şey", "orta", ""],
       [443, "هِمْس", "hims", "fısıldama türünden şey", "orta", ""],
       [445, "هُمْس", "hums", "fısıldama türünden şey", "orta", ""],
@@ -1236,7 +1236,113 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هَمْس": [
+        {
+          "eser": "Kamus",
+          "madde": "hems",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gizli sese denir; tekûlu: سَمِعْتُ مِنْ جَانِبِهِ هَمْسًا أَيْ صَوْتًا خَفِيًّا Ve mutlakan gizli nesneye, alâ-kavlin be-gâyet gizli ve yapça ayak tavışına denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "sıkmak manâsına masdar olur; yukâlu: هَمَسَ الْعِنَبَ هَمْسًا مِنَ الْبَابِ الثَّانِي إِذَا عَصَرَهُ Ve kırmak manâsınadır; yukâlu: هَمَسَهُ إِذَا كَسَرَهُ Ve ağzı açmayarak lokma çiğnemek manâsınadır ki gizlice olur; yukâlu: هَمَسَ الطَّعَامَ إِذَا مَضَغَهُ وَفَمُهُ مُنْضَمٌّ Ve kelâl ve fütûrsuz gece gitmek, alâ-kavlin gece ve gündüzde kıllet-i fütûr ile gitmek manâsınadır; yukâlu: هَمَسَ فُلاَنٌ إِذَا سَارَ بِاللَّيْلِ بِلاَ فُتُورٍ أَوْ هُوَ قِلَّةُ الْفُتُورِ بِاللَّيْلِ وَالنَّهَارِ Ve sadrdan çıktığı belli olmayarak ve cehr ve izhâr eylemeyerek ağzın içinden pek gizlice savt gibi söz söylemek manâsınadır; yukâlu: هَمَسَ الْكَلاَمَ إِذَا حَسَّ الصَّوْتَ فِي الْفَمِ مِمَّا لاَ إِشْرَابَ لَهُ مِنْ صَوْتِ الصَّدْرِ وَلاَ جَهَارَةَ فِي الْمَنْطِقِ",
+              "misaller": [
+                ["هَمَسَ الْعِنَبَ هَمْسًا مِنَ الْبَابِ الثَّانِي إِذَا عَصَرَهُ", ""],
+                ["هَمَسَهُ إِذَا كَسَرَهُ", ""],
+                ["هَمَسَ الطَّعَامَ إِذَا مَضَغَهُ وَفَمُهُ مُنْضَمٌّ", ""],
+                [
+                  "هَمَسَ فُلاَنٌ إِذَا سَارَ بِاللَّيْلِ بِلاَ فُتُورٍ أَوْ هُوَ قِلَّةُ الْفُتُورِ بِاللَّيْلِ وَالنَّهَارِ",
+                  ""
+                ],
+                [
+                  "هَمَسَ الْكَلاَمَ إِذَا حَسَّ الصَّوْتَ فِي الْفَمِ مِمَّا لاَ إِشْرَابَ لَهُ مِنْ صَوْتِ الصَّدْرِ وَلاَ جَهَارَةَ فِي الْمَنْطِقِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَمْسُ",
+          "okunus": "el-hems",
+          "koken": "لَمْسٌ [lems] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hems",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gizli âvâz.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "هَمْسُ الْأَقْدَامِ [hemsul-akdâm] Ayaktan hâsıl olan âvâzların en hafîsi. Kâlallâhu taâlâ azze ve celle: ﴿فَلَا تَسْمَعُ إِلَّا هَمْسًا﴾ (طه 108)",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَمْسُ",
+          "okunus": "el-hems",
+          "koken": "hânın fethi ve mîmin sükûnuyla"
+        }
+      ],
+      "مَهْمُوسَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-mehmûset",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İhfâ olunmuş kelimât ve eşyâya denir; ve minhul-hûruful-mehmûse ve hiye: hحَثَّهُ شَخْصٌ فَسَكَتَH Ve bunlar hurûf-ı mechûre mukâbilidir. Pes hurûf-ı mehmûse on harftir ki kelâm-ı mezbûr cem eylemiştir. Bunlar telaffuz olunurken mevzilerine bir mertebe itimâdları zaîftir ki hîn-i telaffuzda nefes bunlar ile bilece cârî olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَهْمُوسَةُ",
+          "okunus": "el-mehmûset",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-hurûful-mehmûset",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hafî olan nesne.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "اَلْحُرُوفُ الْمَهْمُوسَةُ [el-hurûful-mehmûset] Ondur, onu “حَثَّهُ شَخْصٌ فَسَكَتَ” harfleri cem eder.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bunlara hurûf-ı mehmûse dediler, zîrâ bunların telaffuz olunurken mevzilerine itimâdı zaîftir, bir haysiyyetle ki nefes hîn-i telaffuzda bunlarla bile cârî olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَهْمُوسَةُ",
+          "okunus": "el-mehmûset",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

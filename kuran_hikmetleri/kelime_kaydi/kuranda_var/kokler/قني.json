@@ -33,14 +33,35 @@
       [531, "قِنَيَة", "qinaya", "isteme", "orta", ""],
       [23, "قَنْيُويَة", "qanyūya", "isteme", "orta", ""],
       [24, "تُقْنُوي", "tuqnūy", "isteme", "orta", ""],
-      [532, "تَقْنِيَة", "taqniya", "isteme", "orta", "Vikisözlük: masdar (bâb II): to dig"],
+      [
+        532,
+        "تَقْنِيَة",
+        "taqniya",
+        "Bu dahi hayâya mülâzım olmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to dig · Kamus"
+      ],
       [26, "تَقْنَيَة", "taqnaya", "isteme", "orta", ""],
       [27, "مَقْنُيَة", "maqnuya", "isteme", "orta", ""],
       [533, "مَقْنِيَة", "maqniya", "isteme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [534, "تَقْنِيَة", "taqniya", "çokça isteme", "orta", "Vikisözlük: masdar (bâb II): to dig"],
-      [535, "تَقْنِيَة", "taqniya", "çokça isteme", "orta", "Vikisözlük: masdar (bâb II): to dig"],
+      [
+        534,
+        "تَقْنِيَة",
+        "taqniya",
+        "Bu dahi hayâya mülâzım olmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to dig · Kamus"
+      ],
+      [
+        535,
+        "تَقْنِيَة",
+        "taqniya",
+        "Bu dahi hayâya mülâzım olmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to dig · Kamus"
+      ],
       [536, "قِنِّاء", "qinnāʾ", "çokça isteme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
@@ -304,7 +325,7 @@
       [714, "مِقْنَاتَان", "miqnātān", "isteme âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [715, "أَقْنَى", "ʾaqnā", "sermaye verdi", "kuran", "Kur'ân"],
+      [715, "أَقْنَى", "ʾaqnā", "Vasftır, doğan burunlu adama denir", "lugat", "Kur'ân · Kamus"],
       [716, "أَقْنَيَان", "ʾaqnayān", "daha çok isteyen, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
@@ -856,7 +877,67 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "تَقْنِيَة": [
+        {
+          "eser": "Kamus",
+          "madde": "et-takniyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi hayâya mülâzım olmak manâsınadır; yukâlu: قَنَّى الْحَيَاءَ إِذَا لَزِمَهُ",
+              "misaller": [
+                ["قَنَّى الْحَيَاءَ إِذَا لَزِمَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّقْنِيَةُ",
+          "okunus": "et-takniyet",
+          "koken": "تَفْعِلَةٌ [tefilet] vezninde"
+        }
+      ],
+      "أَقْنَى": [
+        {
+          "eser": "Kamus",
+          "madde": "akna",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vasftır, doğan burunlu adama denir; müennesi قَنْوَاءُ [kanvâ]dır; yukâlu: رَجُلٌ أَقْنَى وَامْرَأَةٌ قَنْوَاءُ أَيْ بِأَنْفِهِ قَنًى",
+              "misaller": [
+                ["رَجُلٌ أَقْنَى وَامْرَأَةٌ قَنْوَاءُ أَيْ بِأَنْفِهِ قَنًى", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَقْنَى",
+          "okunus": "el-aknâ",
+          "koken": "أَحْمَرُ [ahmer] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "akna",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Burnu zikr olunan vech üzere olan kimse; yukâlu: رَجُلٌ أَقْنَى الْأَنْفِ",
+              "misaller": [
+                ["رَجُلٌ أَقْنَى الْأَنْفِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَقْنَى",
+          "okunus": "el-aknâ",
+          "koken": "hemzenin fethi ve elifin kasrıyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

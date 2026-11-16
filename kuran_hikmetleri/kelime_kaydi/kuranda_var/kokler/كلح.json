@@ -14,7 +14,14 @@
       [3, "كَلَح", "kalaḥ", "surat asma", "orta", ""],
       [4, "كِلَح", "kilaḥ", "surat asma", "orta", ""],
       [5, "كُلُح", "kuluḥ", "surat asma", "orta", ""],
-      [6, "كُلُوح", "kulūḥ", "surat asma", "orta", "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy"],
+      [
+        6,
+        "كُلُوح",
+        "kulūḥ",
+        "Türş-rûluk arasında sırıtmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy · Kamus"
+      ],
       [7, "كِلَاح", "kilāḥ", "surat asma", "orta", ""],
       [8, "كُلَاح", "kulāḥ", "surat asma", "orta", ""],
       [9, "كَلَاح", "kalāḥ", "surat asma", "orta", ""],
@@ -530,9 +537,9 @@
         422,
         "كُلُوح",
         "kulūḥ",
-        "surat asma",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy"
+        "Türş-rûluk arasında sırıtmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy · Kamus"
       ],
       [423, "كِلَاح", "kilāḥ", "surat asma", "orta", ""],
       [424, "كُلْح", "kulḥ", "surat asma", "orta", ""],
@@ -580,9 +587,9 @@
         459,
         "كُلُوح",
         "kulūḥ",
-        "surat asmalar",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy"
+        "Türş-rûluk arasında sırıtmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to frown, to scowl, to look gloomy · Kamus"
       ],
       [460, "كُلُح", "kuluḥ", "surat asmalar", "orta", ""],
       [461, "كِلَاح", "kilāḥ", "surat asmalar", "orta", ""],
@@ -1264,7 +1271,45 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كُلُوح": [
+        {
+          "eser": "Kamus",
+          "madde": "kuluh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْكُلاَحُ [el-kulâh] (kâfların zammıyla) Türş-rûluk arasında sırıtmak manâsınadır ki dudakları çekilip ön dişleri nümâyân olmaktan ibârettir ki türş-rûluğun bedliği ve pek bî-mîzeliğidir; yukâlu: كَلَحَ الرَّجُلُ كُلُوحًا وَكُلاَحًا مِنَ الْبَابِ الثَّالِثِ إِذَا تَكَشَّرَ فِي عُبُوسٍ",
+              "misaller": [
+                ["كَلَحَ الرَّجُلُ كُلُوحًا وَكُلاَحًا مِنَ الْبَابِ الثَّالِثِ إِذَا تَكَشَّرَ فِي عُبُوسٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكُلُوحُ",
+          "okunus": "el-kulûh",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kuluh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Türş-rûluk arasında olan sırıtmaktır, tebessüm manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكُلُوحُ",
+          "okunus": "el-kulûh",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

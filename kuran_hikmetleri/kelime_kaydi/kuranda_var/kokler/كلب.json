@@ -8,25 +8,25 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "كَلْب", "kalb", "köpek", "kuran", "Kur'ân"],
+      [0, "كَلْب", "kalb", "Köpek", "lugat", "Kur'ân · Luggat"],
       [1, "كِلْب", "kilb", "köpek", "kontrol", ""],
       [2, "كُلْب", "kulb", "köpek", "kontrol", ""],
-      [3, "كَلَب", "kalab", "köpek", "kontrol", ""],
+      [3, "كَلَب", "kalab", "Susamak", "lugat", "Kamus"],
       [4, "كِلَب", "kilab", "köpek", "kontrol", ""],
       [5, "كُلُب", "kulub", "köpek", "kontrol", ""],
       [6, "كُلُوب", "kulūb", "köpek", "kontrol", ""],
-      [7, "كِلَاب", "kilāb", "köpek", "kontrol", ""],
+      [7, "كِلَاب", "kilāb", "Köpekler", "lugat", "Luggat"],
       [8, "كُلَاب", "kulāb", "köpek", "kontrol", ""],
       [9, "كَلَاب", "kalāb", "köpek", "kontrol", ""],
       [10, "كَلَابَة", "kalāba", "köpek", "kontrol", ""],
       [11, "كُلُوبَة", "kulūba", "köpek", "kontrol", ""],
       [12, "كِلَابَة", "kilāba", "köpek", "kontrol", ""],
-      [13, "كَلِيب", "kalīb", "köpek", "kontrol", ""],
+      [13, "كَلِيب", "kalīb", "Köpek gürûhuna denir", "lugat", "Kamus"],
       [14, "كَلُوب", "kalūb", "köpek", "kontrol", ""],
       [15, "كَلَبَان", "kalabān", "köpek", "kontrol", ""],
       [16, "كُلْبَان", "kulbān", "köpek", "kontrol", ""],
       [17, "كِلْبَان", "kilbān", "köpek", "kontrol", ""],
-      [18, "كَلْبَى", "kalbā", "köpek", "kontrol", ""],
+      [18, "كَلْبَى", "kalbā", "in cemi", "lugat", "Vankulu"],
       [19, "كُلْبَى", "kulbā", "köpek", "kontrol", ""],
       [20, "كِلْبَى", "kilbā", "köpek", "kontrol", ""],
       [21, "كَلَبَة", "kalaba", "köpek", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُكَالَبَة", "mukālaba", "biriyle karşılıklı köpek olma", "kontrol", ""],
-      [50, "كِلَاب", "kilāb", "biriyle karşılıklı köpek olma", "kontrol", ""]
+      [50, "كِلَاب", "kilāb", "Köpekler", "lugat", "Luggat"]
     ],
     "ism-i merre · bâb III": [
       [51, "كِلَابَة", "kilāba", "bir kere biriyle karşılıklı köpek olma", "kontrol", ""]
@@ -244,7 +244,14 @@
       [506, "مُكْلَبَّات", "muklabbāt", "iyiden iyiye köpek olanlar, müennes", "kontrol", ""]
     ],
     "masdar · bâb X": [
-      [176, "اِسْتِكْلَاب", "istiklāb", "köpek olmayı isteme", "kontrol", ""]
+      [
+        176,
+        "اِسْتِكْلَاب",
+        "istiklāb",
+        "Zikr olunan lafzı gibi bir adam bâdiyede tenhâ kalmakla köpek gibi ürümek",
+        "lugat",
+        "Kamus"
+      ]
     ],
     "ism-i merre · bâb X": [
       [177, "اِسْتِكْلَابَة", "istiklāba", "bir kere köpek olmayı isteme", "kontrol", ""]
@@ -347,15 +354,29 @@
       [254, "مَكْلَبَان", "maklabān", "köpek olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "كَلْبَة", "kalba", "bir kere köpek olma", "kontrol", ""],
-      [256, "كَلْبَتَان", "kalbatān", "bir kere köpek olma, iki", "kontrol", ""]
+      [
+        255,
+        "كَلْبَة",
+        "kalba",
+        "Meşe ağacı nevinden bir dikenli ağacın adıdır, ona dahi derler, vezninde",
+        "lugat",
+        "Kamus"
+      ],
+      [
+        256,
+        "كَلْبَتَان",
+        "kalbatān",
+        "Demirci kısacına denir ki onunla kızgın demiri kıstırıp kullanırlar",
+        "lugat",
+        "Kamus"
+      ]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "كِلْبَة", "kilba", "köpek olma tarzı", "kontrol", ""],
       [258, "كِلْبَتَان", "kilbatān", "köpek olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "كَلِيب", "kalīb", "her daim köpek olan", "kontrol", ""],
+      [259, "كَلِيب", "kalīb", "Köpek gürûhuna denir", "lugat", "Kamus"],
       [260, "كَلِيبَة", "kalība", "her daim köpek olan, müennes", "kontrol", ""],
       [261, "كَلِيبَان", "kalībān", "her daim köpek olan, iki", "kontrol", ""],
       [262, "كَلِيبَتَان", "kalībatān", "her daim köpek olan, iki, müennes", "kontrol", ""],
@@ -369,7 +390,7 @@
       [270, "كَلُوبُون", "kalūbūn", "her daim köpek olanlar", "kontrol", ""],
       [271, "كَلُوبِين", "kalūbīn", "her daim köpek olanlar", "kontrol", ""],
       [272, "كَلُوبَات", "kalūbāt", "her daim köpek olanlar, müennes", "kontrol", ""],
-      [273, "كَلِب", "kalib", "her daim köpek olan", "kontrol", ""],
+      [273, "كَلِب", "kalib", "Kuduz köpeğe denir", "lugat", "Kamus"],
       [274, "كَلِبَة", "kaliba", "her daim köpek olan, müennes", "kontrol", ""],
       [275, "كَلِبَان", "kalibān", "her daim köpek olan, iki", "kontrol", ""],
       [276, "كَلِبَتَان", "kalibatān", "her daim köpek olan, iki, müennes", "kontrol", ""],
@@ -383,17 +404,31 @@
       [284, "كَلُبُون", "kalubūn", "her daim köpek olanlar", "kontrol", ""],
       [285, "كَلُبِين", "kalubīn", "her daim köpek olanlar", "kontrol", ""],
       [286, "كَلُبَات", "kalubāt", "her daim köpek olanlar, müennes", "kontrol", ""],
-      [287, "كَلَب", "kalab", "her daim köpek olan", "kontrol", ""],
+      [287, "كَلَب", "kalab", "Susamak", "lugat", "Kamus"],
       [288, "كَلَبَة", "kalaba", "her daim köpek olan, müennes", "kontrol", ""],
       [289, "كَلَبَان", "kalabān", "her daim köpek olan, iki", "kontrol", ""],
       [290, "كَلَبَتَان", "kalabatān", "her daim köpek olan, iki, müennes", "kontrol", ""],
       [291, "كَلَبُون", "kalabūn", "her daim köpek olanlar", "kontrol", ""],
       [292, "كَلَبِين", "kalabīn", "her daim köpek olanlar", "kontrol", ""],
       [293, "كَلَبَات", "kalabāt", "her daim köpek olanlar, müennes", "kontrol", ""],
-      [294, "كَلْب", "kalb", "köpek", "kuran", "Kur'ân"],
-      [295, "كَلْبَة", "kalba", "her daim köpek olan, müennes", "kontrol", ""],
+      [294, "كَلْب", "kalb", "Köpek", "lugat", "Kur'ân · Luggat"],
+      [
+        295,
+        "كَلْبَة",
+        "kalba",
+        "Meşe ağacı nevinden bir dikenli ağacın adıdır, ona dahi derler, vezninde",
+        "lugat",
+        "Kamus"
+      ],
       [296, "كَلْبَان", "kalbān", "her daim köpek olan, iki", "kontrol", ""],
-      [297, "كَلْبَتَان", "kalbatān", "her daim köpek olan, iki, müennes", "kontrol", ""],
+      [
+        297,
+        "كَلْبَتَان",
+        "kalbatān",
+        "Demirci kısacına denir ki onunla kızgın demiri kıstırıp kullanırlar",
+        "lugat",
+        "Kamus"
+      ],
       [298, "كَلْبُون", "kalbūn", "her daim köpek olanlar", "kontrol", ""],
       [299, "كَلْبِين", "kalbīn", "her daim köpek olanlar", "kontrol", ""],
       [300, "كَلْبَات", "kalbāt", "her daim köpek olanlar, müennes", "kontrol", ""],
@@ -479,7 +514,7 @@
       [378, "مِكْلِيبُون", "miklībūn", "köpek olmaya düşkünler", "kontrol", ""],
       [379, "مِكْلِيبِين", "miklībīn", "köpek olmaya düşkünler", "kontrol", ""],
       [380, "مِكْلِيبَات", "miklībāt", "köpek olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "كَلِيب", "kalīb", "çok köpek olan", "kontrol", ""],
+      [381, "كَلِيب", "kalīb", "Köpek gürûhuna denir", "lugat", "Kamus"],
       [382, "كَلِيبَة", "kalība", "çok köpek olan, müennes", "kontrol", ""],
       [383, "كَلِيبَان", "kalībān", "çok köpek olan, iki", "kontrol", ""],
       [384, "كَلِيبَتَان", "kalībatān", "çok köpek olan, iki, müennes", "kontrol", ""],
@@ -527,12 +562,12 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "كَلَاب", "kalāb", "köpek olma", "kontrol", ""],
       [422, "كُلُوب", "kulūb", "köpek olma", "kontrol", ""],
-      [423, "كِلَاب", "kilāb", "köpek olma", "kontrol", ""],
+      [423, "كِلَاب", "kilāb", "Köpekler", "lugat", "Luggat"],
       [424, "كُلْب", "kulb", "köpek olma", "kontrol", ""],
       [425, "كَلَابَة", "kalāba", "köpek olma", "kontrol", ""],
       [426, "كِلَابَة", "kilāba", "köpek olma", "kontrol", ""],
       [427, "كُلُوبَة", "kulūba", "köpek olma", "kontrol", ""],
-      [428, "كَلْب", "kalb", "köpek", "kuran", "Kur'ân"],
+      [428, "كَلْب", "kalb", "Köpek", "lugat", "Kur'ân · Luggat"],
       [429, "كِلْب", "kilb", "köpek olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,11 +577,11 @@
       [434, "أُكْلُوبَة", "ʾuklūba", "köpek olma türünden şey", "kontrol", ""],
       [435, "كَوْلَب", "kawlab", "köpek olma türünden şey", "kontrol", ""],
       [437, "كَيْلَب", "kaylab", "köpek olma türünden şey", "kontrol", ""],
-      [439, "كَلْب", "kalb", "köpek", "kuran", "Kur'ân"],
-      [441, "كَلَب", "kalab", "köpek olma türünden şey", "kontrol", ""],
+      [439, "كَلْب", "kalb", "Köpek", "lugat", "Kur'ân · Luggat"],
+      [441, "كَلَب", "kalab", "Susamak", "lugat", "Kamus"],
       [443, "كِلْب", "kilb", "köpek olma türünden şey", "kontrol", ""],
       [445, "كُلْب", "kulb", "köpek olma türünden şey", "kontrol", ""],
-      [447, "كَلِيب", "kalīb", "köpek olma türünden şey", "kontrol", ""],
+      [447, "كَلِيب", "kalīb", "Köpek gürûhuna denir", "lugat", "Kamus"],
       [449, "كِلَب", "kilab", "köpek olma türünden şey", "kontrol", ""],
       [451, "كُلُب", "kulub", "köpek olma türünden şey", "kontrol", ""],
       [453, "كَلَاب", "kalāb", "köpek olma türünden şey", "kontrol", ""]
@@ -555,7 +590,14 @@
       [431, "كَالُوبَة", "kālūba", "köpek olma türünden bir tane", "kontrol", ""],
       [436, "كَوْلَبَة", "kawlaba", "köpek olma türünden bir tane", "kontrol", ""],
       [438, "كَيْلَبَة", "kaylaba", "köpek olma türünden bir tane", "kontrol", ""],
-      [440, "كَلْبَة", "kalba", "köpek olma türünden bir tane", "kontrol", ""],
+      [
+        440,
+        "كَلْبَة",
+        "kalba",
+        "Meşe ağacı nevinden bir dikenli ağacın adıdır, ona dahi derler, vezninde",
+        "lugat",
+        "Kamus"
+      ],
       [442, "كَلَبَة", "kalaba", "köpek olma türünden bir tane", "kontrol", ""],
       [444, "كِلْبَة", "kilba", "köpek olma türünden bir tane", "kontrol", ""],
       [446, "كُلْبَة", "kulba", "köpek olma türünden bir tane", "kontrol", ""],
@@ -571,7 +613,7 @@
       [458, "أَكَالِيب", "ʾakālīb", "köpek olmalar", "kontrol", ""],
       [459, "كُلُوب", "kulūb", "köpek olmalar", "kontrol", ""],
       [460, "كُلُب", "kulub", "köpek olmalar", "kontrol", ""],
-      [461, "كِلَاب", "kilāb", "köpek olmalar", "kontrol", ""],
+      [461, "كِلَاب", "kilāb", "Köpekler", "lugat", "Luggat"],
       [462, "كِلَب", "kilab", "köpek olmalar", "kontrol", ""],
       [463, "كِلَبَة", "kilaba", "köpek olmalar", "kontrol", ""],
       [464, "كُلَب", "kulab", "köpek olmalar", "kontrol", ""],
@@ -579,7 +621,7 @@
       [466, "كَلَبَة", "kalaba", "köpek olmalar", "kontrol", ""],
       [467, "كُلَّاب", "kullāb", "köpek olmalar", "kontrol", ""],
       [468, "كَلَاب", "kalāb", "köpek olmalar", "kontrol", ""],
-      [469, "كَلَب", "kalab", "köpek olmalar", "kontrol", ""],
+      [469, "كَلَب", "kalab", "Susamak", "lugat", "Kamus"],
       [470, "مَكَالِب", "makālib", "köpek olmalar", "kontrol", ""],
       [471, "مَكَالِيب", "makālīb", "köpek olmalar", "kontrol", ""],
       [472, "كَوَالِب", "kawālib", "köpek olmalar", "kontrol", ""],
@@ -1758,7 +1800,651 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كَلْب": [
+        {
+          "eser": "Kamus",
+          "madde": "kelb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Her yırtıcı cânvere denir ki insân ve hayvânı dalayıp ısırıp ve paralayıcı olur, köpek ve arslan ve kaplan ve kurt gibi, سَبُعٌ عَقُورٌ manâsınadır. Badehu köpek tabîr olunan cânverde gâlib olmuştur, şöyle ki ledel-ıtlâk sâire muhtemel olmamakla hakîkat-ü lügaviyye menzilinde olmuştur. Cemi أَكْلُبٌ [eklub] gelir, أَفْلُسٌ [eflus] gibi ve كِلاَبٌ [kilâb] gelir. Evvelin cemül-cemi أَكَالِبُ [ekâlib] ve sânînin كِلاَبَاتٌ [kilâbât] gelir. Müellif Basâirde كَلِيبٌ [kelîb] lafzını dahi ziyâde kılmıştır, عَبْدٌ [abd] ve عَبِيدٌ [abîd] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Arslana denir, lâkin tamîmde dahîl olmakla tahsîsi zâhiren ona dahi ıtlâkı köpek gibi gâlib ve mütedâvil olduğuna mebnîdir, zîrâ bâdiyede köpek kısmından ekser olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Derede suyun ibtidâen yanî henüz artmağa başladığı vaktte evveline denir. Bazılar bunu masdar olarak takyîd eylemiştir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Değirmen çarhında zıvana dedikleri demirin tepesinde olan küçük demire denir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "mütehalhil olan duvara vurdukları dayağa denir ki pâyendân ve destek tabîr olunur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Bir nev balık adıdır ki köpek balığı dedikleridir, كَلْبُ الْمَاءِ [kelbul-mâ] başkadır ki o kunduz olacaktır.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "كَلْبٌ [Kelb] Bir kevkeb adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "bu kevkeb değildir, belki niçe kevâkibden muntazam olmuş bir kelb sûretidir. Seratân burcunun cenûbîsinde Şücâ ile Cebbâr arasında ve sefîne-i nûhun kıç kamarasının üst tarafında vâki olmuştur. Başında ve elleri önünde ve batnında ve kalçası üzere birer kevkeb-i berrâk vardır. Arablar batnında olan pek berrâk kevkebe كَلْبٌ [Kelb] ıtlâk eylemeleriyle müellifin murâdı o kevkeb olacaktır.",
+              "misaller": []
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Hâm gönden kesilmiş kayışa denir, قِدٌّ [kidd] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 10,
+              "etiket": "",
+              "tanim": "yüksek tepenin ve höyüğün başlarının ucuna denir.",
+              "misaller": []
+            },
+            {
+              "no": 11,
+              "etiket": "",
+              "tanim": "kılıç kabzasında olan demir mîha denir ki perâzvânenin üzerinde olur, alâka ona geçirilir.",
+              "misaller": []
+            },
+            {
+              "no": 12,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Şol kırmızı sırıma ve tirşeye denir ki birbirine dikilecek sahtiyânın ve gönün aralığına vaz edip iki taraflı üzerinden dikiş çekerler.",
+              "misaller": []
+            },
+            {
+              "no": 13,
+              "etiket": "",
+              "tanim": "كَلْبٌ [Kelb] Rey ile Kûmis beyninde bir mevzi adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 14,
+              "etiket": "",
+              "tanim": "Yemâme türâbında bir dağın ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 15,
+              "etiket": "",
+              "tanim": "كَلْبُالْفَرَسِ [kelbul-feres] Atın arkasında yelisinden kuyruğuna kadar çekilmiş olan hılkî hatta denir ki levnine muhâlif olur, meselâ doru atta siyâh olur.",
+              "misaller": []
+            },
+            {
+              "no": 16,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Davar semerinin ensesinde olan eğri çengele denir ki karşılıklı iki dâne olur, ona torba ve matara makûlesi nesne geçirip asarlar.",
+              "misaller": []
+            },
+            {
+              "no": 17,
+              "etiket": "",
+              "tanim": "kılıcın kabzasına sardıkları kayışa denir.",
+              "misaller": []
+            },
+            {
+              "no": 18,
+              "etiket": "",
+              "tanim": "mutlakan kendisiyle sarılıp ve bağlanıp metîn ve muhkem olacak şeye denir.",
+              "misaller": []
+            },
+            {
+              "no": 19,
+              "etiket": "",
+              "tanim": "كَلْبٌ [Kelb] Bir kabîle adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 20,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb] Masdar olur, كَلُّوبٌ [kellûb] ile yanî mihmâz ile râkib altında olan hayvâna vurup dürtmek manâsına; yukâlu: كَلَبَ الرَّاكِبُ الْفَرَسَ كَلْبًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا ضَرَبَهُ بِالْكَلُّوبِ Ve bir kimse tenhâ bâdiyede kalmakla yakın yerlerde şenlik var ise elbette köpekleri kendinin savtını işittiklerinde onlar da ürümekle bu cihetten şenlik olduğunu istidlâl için köpek gibi ürümek manâsınadır; yukâlu: كَلَبَ الرَّجُلُ كَلْبًا مِنَ الْبَابِ الثَّانِي إِذَا نَبَحَ لِتَسْمَعَهُ الْكِلاَبُ فَتَنْبَحَ فَيُسْتَدَلَّ بِهَا عَلَيْهِ وَذَلِكَ إِذَا صَارَ فِي قَفْرٍ",
+              "misaller": [
+                ["كَلَبَ الرَّاكِبُ الْفَرَسَ كَلْبًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا ضَرَبَهُ بِالْكَلُّوبِ", ""],
+                [
+                  "كَلَبَ الرَّجُلُ كَلْبًا مِنَ الْبَابِ الثَّانِي إِذَا نَبَحَ لِتَسْمَعَهُ الْكِلاَبُ فَتَنْبَحَ فَيُسْتَدَلَّ بِهَا عَلَيْهِ وَذَلِكَ إِذَا صَارَ فِي قَفْرٍ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبُ",
+          "okunus": "el-kelb",
+          "koken": "kâfın fethi ve lâmın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kelb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İt ki beynen-nâs marûftur ve gâh olur ki sıfat dahi vâki olur; yukâlu: إِمْرَأَةٌ كَلْبَةٌ Ve كَلْبٌ [kelb] شَعِيرَةٌ [şeîret] dedikleri demirdir ki o kılıcın yâhûd bıçağın sapına giren sivri demiridir.",
+              "misaller": [
+                ["إِمْرَأَةٌ كَلْبَةٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "şol mismâra da derler ki kılıç kabzasına vururlar, kabzada olan ılâkadan ötürü.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "şol eğri demire de derler ki müsâfir ona zâdın asar.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "رَأْسُ كَلْبٍ [Resu Kelb] Bir dağın adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "كَلْبٌ [Kelb] Bir yıldızın adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "bir kayışa dahi derler ki iki derinin ara yerine koyup dikerler; tekûlu minhu: كَلَبْتُ الْمَزَادَةَ Ve كَلْبُ الْفَرَسِ [kelbul-feres] Şol hattır ki atın arkasında olur; yukâlu: اِسْتَوَى عَلَى كَلْبِ فَرَسِهِ Ve كَلْبٌ [Kelb] Kudâa tâifesinden bir cemâatin ismidir.",
+              "misaller": [
+                ["اِسْتَوَى عَلَى كَلْبِ فَرَسِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبُ",
+          "okunus": "el-kelb",
+          "koken": "kâfın fethi ve lâmın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kelb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Köpek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "KELP – KELB",
+          "yazilis": "ﻛﻠﺐ",
+          "tur": "i.",
+          "koken": "Ar. kelb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Köpek",
+              "misaller": [
+                ["Kelb rakib sürsün zevk u safâyı", "Pir Sultan Abdal"],
+                ["Ben gül almam tellerini eğmesin / Kelb rakipler de ona değmesin", "Karacaoğlan"],
+                ["Bir kelb ulur uzakta, eder vehmimi füzun", "Hüseyin Sîret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Kelb-i akur"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir sürü kelb-i akūr etti o şîre hamle / Her biri nâr-ı cehennem ile biryân olsun (Enderunlu Fâzıl). 2. mec",
+              "misaller": [],
+              "deyim": "Kuduz köpek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çağırttım kelb-i akūru, mâhiye iki yüz lira cep harçlığı istedi, peki dedim. Yalı alafranga döşenecek dedi, peki dedim (Fahri Celâl)",
+              "misaller": [],
+              "deyim": "Gözü dönmüş saldırgan kimse"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kuzey yarım küresindeki bir takım yıldızı",
+              "misaller": [],
+              "deyim": "Kelbü’l-asgar"
+            },
+            {
+              "etiket": "",
+              "tanim": "Güney yarım küresindeki bir takım yıldızı. ● Kelbî ( ﻛﻠﺒﻰ ) sıf. (nispet eki -і ile) Köpekle ilgili. ● Kelbiyye ( ﻛﻠﺒﻴّﻪ ) sıf. Kelbî kelimesinin tamlamalarda ortaya çıkan aynı mânâdaki müennes şekli. Bk. KELBİYE",
+              "misaller": [],
+              "deyim": "Kelbü’l-ekber"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kelbu hiraş",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَلْبُ خِرَاشٍ [kelbu hirâş] (izâfetle) Uğraşıcı köpeğe denir, كَلْبُ هِرَاشٍ [kelbu hirâş] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Kelbul-Cerebbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَلْبُ الْجَرَبَّةِ [Kelbul-Cerebbet] (cîmin ve rânın ve bâ-yı müşeddedenin fethiyle) Bir mevzidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kelbul-kelibu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلْكَلْبُ الْكَلِبُ [el-kelbul-kelibu] (kâfın fethi ve lâmın sükûnuyla evvelde ve lâmın kesriyle sânîde) Kuduz it ki dîvâne gibi olup halka yapışır; kaçan ki bir kimseyi yaralasa o dahi onun gibi kudurur; yukâlu: رَجُلٌ كَلِبٌ",
+              "misaller": [
+                ["رَجُلٌ كَلِبٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "كَلَب": [
+        {
+          "eser": "Kamus",
+          "madde": "keleb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Susamak, عَطَشٌ [ataş] manâsınadır; yukâlu: كَلِبَ الرَّجُلُ كَلَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا عَطِشَ Ve pezevenklik eylemek, kıyâdet manâsınadır; مَكْلَبَةٌ [meklebet] dahi bu manâyadır; yukâlu: كَلِبَ فُلاَنٌ كَلَبًا وَمَكْلَبَةً إِذَا قَادَ وَمِنْهُ الْكَلْبَتَانُ Ve كَلَبٌ [keleb] Makaranın ipi tekerlekle ok geçen ağacın aralığına düşüp ilişmek manâsınadır ki tekerlek dönmekten kalır; yukâlu: كَلِبَ الْحَبْلُ إِذَا وَقَعَ بَيْنَ الْقَعْوِ وَالْبَكَرَةِ Ve كَلَبٌ [keleb] Bir nesneye pek hırs ve tama eylemek manâsınadır.",
+              "misaller": [
+                ["كَلِبَ الرَّجُلُ كَلَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا عَطِشَ", ""],
+                ["كَلِبَ فُلاَنٌ كَلَبًا وَمَكْلَبَةً إِذَا قَادَ وَمِنْهُ الْكَلْبَتَانُ", ""],
+                ["كَلِبَ الْحَبْلُ إِذَا وَقَعَ بَيْنَ الْقَعْوِ وَالْبَكَرَةِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir nesne şiddet bulmak manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bilâ-şeb ekl-i kesîr manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "كَلَبُ الشِّتَاءِ [kelebuş-şitâ] kışın hiddet ve şiddeti hengâmına ıtlâk olunur, أَنْفُ الشِّتَاءِ [enfuş-şitâ] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "kuduz köpek ısırmış kimse köpek gibi feryâd eylemek manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "köpek kudurup kuduz olmak manâsınadır. İnsân etini yemekten ârız olur; yukâlu: كَلِبَ الْكَلْبُ كَلَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا جُنَّ وَهُوَ يَعْتَرِي مِنَ أَكْلِ لَحْمِ اْلإِنْسَانِ Ve bir kimseyi kuduz köpek dalamakla köpek gibi kudurmak manâsınadır; yukâlu: كَلِبَ الرَّجُلُ كَلَبًا إِذَا أَصَابَهُ الْكَلَبُ مِنْ عَضِّ الْكَلْبِ الْكَلِبِ",
+              "misaller": [
+                [
+                  "كَلِبَ الْكَلْبُ كَلَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا جُنَّ وَهُوَ يَعْتَرِي مِنَ أَكْلِ لَحْمِ اْلإِنْسَانِ",
+                  ""
+                ],
+                ["كَلِبَ الرَّجُلُ كَلَبًا إِذَا أَصَابَهُ الْكَلَبُ مِنْ عَضِّ الْكَلْبِ الْكَلِبِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلَبُ",
+          "okunus": "el-keleb",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "keleb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Geri şiddet manâsına; yukâlu: كَلِبَ الشِّتَاءُ مِنَ الْبَابِ الرَّابِعِ أَيِ اشْتَدَّ Ve şerr manâsına da gelir; yukâlu: دَفَعْتَ عَنْكَ كَلْبَ فُلَانٍ أَيْ شَرَّهُ وَآذَاهُ Ve كَلَبٌ [keleb] Kezâlik cünûna şebîh bir hâlettir.",
+              "misaller": [
+                ["كَلِبَ الشِّتَاءُ مِنَ الْبَابِ الرَّابِعِ أَيِ اشْتَدَّ", ""],
+                ["دَفَعْتَ عَنْكَ كَلْبَ فُلَانٍ أَيْ شَرَّهُ وَآذَاهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلَبُ",
+          "okunus": "el-keleb",
+          "koken": "fethateynle"
+        }
+      ],
+      "كِلَاب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KİLÂB",
+          "yazilis": "ﻛﻼﺏ",
+          "tur": "i.",
+          "koken": "Ar. kelb ’in çoğul şekli kilāb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Köpekler",
+              "misaller": [
+                ["Edip etlerin pâre pâre kilâb / Kavurmuş anı âteş-i iztırâb", "İzzet Molla"],
+                ["Kilâb-ı zulme kaldı gezdiğin nâzende sahrâlar", "Nâmık Kemal"],
+                ["Erkeklerin bağırmaları ile müterâfık av’ave-i kilâb…", "Ahmet Râsim"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kilab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَلْبٌ [kelb]in cemidir ki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "minhul-meselu: “اَلْكِلاَبُ عَلَى الْبَقَرِ” وَيُرْوَى “اَلْكِرَابُ عَلَى الْبَقَرِ” Pes كِلاَبٌ [kilâb] rivâyetine göre “Kelbleri bakar-ı vahşî üzere kışkırtıp salıver” demektir. Mesel-i mezbûr herkesi kendi hâli ve vaz ve sanatıyla terk ve tahliye eyle diyecek yerde îrâd olunur ki “Sanatından ve ülfetinden olmadığı işi teklîf eyleme, herkese bildiği kârı teklîf ve tefvîz kıl demek olur, meselâ ehl-i kalemi cenk ve kıtâle göndermek gibi. Kaldı ki اَلْكِلاَبُ [el-kilâb] yâhûd اَلْكِرَابُ [el-kirâb] kelimesi ibtidâiyyet üzere merfû olur ki اَلْكِلاَبُ أَوِ الْكِرَابُ مُفَوَّضَةٌ عَلَى الْبَقَرِ sebkinde olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "mukadder أَرْسِلَ kelimesiyle mansûb olması dahi câizdir. Meydânînin beyânına göre اَلْكِرَابُ عَلَى الْبَقَرِ rivâyetine göre كِرَابٌ [kirâb] tarlayı nadas etmeğe denmekle بَقَرٌ [bakar]dan murâd çift öküzü olur. Herkesi kendi sanatıyla terk eyle marizinde darb olunur.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "اَلْكِلاَبُ [el-kilâb] rivâyetine göre بَقَرٌ [bakar]dan murâd yaban öküzü olup kavm-i mezbûru birbirine igrâ ve tahrîş ve teslît eyle makâmında îrâd olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكِلاَبُ",
+          "okunus": "el-kilâb",
+          "koken": "kâfın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Kilab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kabîle-i Kureyşten bir tâifenin ismidir ki onlar Kilâb b. Murre evlâdıdır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "كِلَابٌ [Kilâb] Hevâzinden dahi bir tâifenin ismidir ki onlar Kilâb b. Rebîa evlâdıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "كِلَابٌ",
+          "okunus": "Kilâb",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kilâb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Köpekler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "كَلِيب": [
+        {
+          "eser": "Kamus",
+          "madde": "kalib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْكَالِبُ [el-kâlib] (سَالِبٌ [sâlib] vezninde) Köpek gürûhuna denir, جَمَاعَةُ الْكِلاَبِ [cemâatul-kilâb] manâsına. Buna göre ikisi de ism-i cem olacaktır. Lâkin müellif Basâirde كَلِيبٌ [kelîb] lafzını cem olmak üzere sebt eylemiştir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ism-i fâil vezninde ism-i cem garîbdir. Nihâyet Suyûtî Muzhirde خَاشِنٌ [hâşin] lafzını resm eylemiştir, lâkin ümmehât-ı sâirede zafer-yâb olunmamıştır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلِيبُ",
+          "okunus": "el-kelîb",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        }
+      ],
+      "كَلْبَى": [
+        {
+          "eser": "Vankulu",
+          "madde": "kelba",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَلِبٌ [kelib]in cemi; yukâlu: رِجَالٌ كَلْبَى",
+              "misaller": [
+                ["رِجَالٌ كَلْبَى", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبَى",
+          "okunus": "el-kelbâ",
+          "koken": "kâfın fethi ve elifin kasrıyla"
+        }
+      ],
+      "اِسْتِكْلَاب": [
+        {
+          "eser": "Kamus",
+          "madde": "istiklab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zikr olunan كَلْبٌ [kelb] lafzı gibi bir adam bâdiyede tenhâ kalmakla köpek gibi ürümek manâsınadır, tâ ki obalar karîb ise köpekleri işitip ürümekle şenliğe istidlâl eyleye; yukâlu: إِسْتَكْلَبَ الرَّجُلُ بِمَعْنَى كَلَبَ كَمَا ذُكِرَ",
+              "misaller": [
+                ["إِسْتَكْلَبَ الرَّجُلُ بِمَعْنَى كَلَبَ كَمَا ذُكِرَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِكْلاَبُ",
+          "okunus": "el-istiklâb",
+          "koken": ""
+        }
+      ],
+      "كَلْبَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-kelbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Meşe ağacı nevinden bir dikenli ağacın adıdır, ona كَلِبَةٌ [kelibet] dahi derler, فَرِحَةٌ [ferihat] vezninde.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "şâhlardan ârî olan dikenliğe denir ki çalı olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Umân nâm belde kazâsında bir mevzi adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبَةُ",
+          "okunus": "el-kelbet",
+          "koken": "kâfın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kelbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol yerdir ki otu bitirdikte besleyemeyip kuruta; yukâlu: أَرْضٌ كَلْبَةٌ إِذَا لَمْ يَجِدْ نَبَاتُهَا رِيًّا فَيَبِسَ",
+              "misaller": [
+                ["أَرْضٌ كَلْبَةٌ إِذَا لَمْ يَجِدْ نَبَاتُهَا رِيًّا فَيَبِسَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبَةُ",
+          "okunus": "el-kelbet",
+          "koken": ""
+        }
+      ],
+      "كَلْبَتَان": [
+        {
+          "eser": "Kamus",
+          "madde": "kelbetan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Demirci kısacına denir ki onunla kızgın demiri kıstırıp kullanırlar; dülgerlerin dahi olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبَتَانِ",
+          "okunus": "el-kelbetân",
+          "koken": "kâfın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kelbetan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol nesnedir ki demirci onunla kızmış demiri tuta.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلْبَتَانِ",
+          "okunus": "el-kelbetân",
+          "koken": ""
+        }
+      ],
+      "كَلِب": [
+        {
+          "eser": "Kamus",
+          "madde": "kelib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kuduz köpeğe denir. Esâsın beyânına göre kuduz dalamış kimseye dahi كَلِبٌ [kelib] denir. Cemlerinde كَلْبَى [kelbâ] denir, عَطْشَى [atşâ] vezninde; yukâlu: كَلْبٌ كَلِبٌ وَكِلاَبٌ كَلْبَى وَرَجُلٌ كَلِبٌ وَقَوْمٌ كَلْبَى وَمِنْهُ “فِي دِمَاءِ الْمُلُوكِ شِفَاءٌ لِلْكَلْبَى”",
+              "misaller": [
+                ["كَلْبٌ كَلِبٌ وَكِلاَبٌ كَلْبَى وَرَجُلٌ كَلِبٌ وَقَوْمٌ كَلْبَى وَمِنْهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَلِبُ",
+          "okunus": "el-kelib",
+          "koken": "كَتِفٌ [ketif] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kelbul-kelibu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلْكَلْبُ الْكَلِبُ [el-kelbul-kelibu] (kâfın fethi ve lâmın sükûnuyla evvelde ve lâmın kesriyle sânîde) Kuduz it ki dîvâne gibi olup halka yapışır; kaçan ki bir kimseyi yaralasa o dahi onun gibi kudurur; yukâlu: رَجُلٌ كَلِبٌ",
+              "misaller": [
+                ["رَجُلٌ كَلِبٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

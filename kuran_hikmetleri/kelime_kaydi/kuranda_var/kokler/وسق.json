@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "وَسْق", "wasq", "yükleme", "orta", ""],
+      [0, "وَسْق", "wasq", "Bir nesneyi biriktirip yüklenmek", "lugat", "Kamus"],
       [1, "وِسْق", "wisq", "yükleme", "orta", ""],
       [2, "وُسْق", "wusq", "yükleme", "orta", ""],
       [3, "وَسَق", "wasaq", "yükleme", "orta", ""],
@@ -210,9 +210,9 @@
         135,
         "اِتِّسَاق",
         "ittisāq",
-        "kendisi için yükleme",
-        "orta",
-        "Vikisözlük: verbal noun of اِتَّسَقَ (ittasaqa) (form VIII)"
+        "Üslûb-ı vâhid üzere muntazam olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of اِتَّسَقَ (ittasaqa) (form VIII) · Kamus"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -398,7 +398,7 @@
       [291, "وَسَقُون", "wasaqūn", "her daim yükleyenler", "orta", ""],
       [292, "وَسَقِين", "wasaqīn", "her daim yükleyenler", "orta", ""],
       [293, "وَسَقَات", "wasaqāt", "her daim yükleyenler, müennes", "orta", ""],
-      [294, "وَسْق", "wasq", "her daim yükleyen", "orta", ""],
+      [294, "وَسْق", "wasq", "Bir nesneyi biriktirip yüklenmek", "lugat", "Kamus"],
       [295, "وَسْقَة", "wasqa", "her daim yükleyen, müennes", "orta", ""],
       [296, "وَسْقَان", "wasqān", "her daim yükleyen, iki", "orta", ""],
       [297, "وَسْقَتَان", "wasqatān", "her daim yükleyen, iki, müennes", "orta", ""],
@@ -540,7 +540,7 @@
       [425, "وَسَاقَة", "wasāqa", "yükleme", "orta", ""],
       [426, "وِسَاقَة", "wisāqa", "yükleme", "orta", ""],
       [427, "وُسُوقَة", "wusūqa", "yükleme", "orta", ""],
-      [428, "وَسْق", "wasq", "yükleme", "orta", ""],
+      [428, "وَسْق", "wasq", "Bir nesneyi biriktirip yüklenmek", "lugat", "Kamus"],
       [429, "وِسْق", "wisq", "yükleme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -550,7 +550,7 @@
       [434, "أُوسُوقَة", "ʾūsūqa", "yükleme türünden şey", "orta", ""],
       [435, "وَوْسَق", "wawsaq", "yükleme türünden şey", "orta", ""],
       [437, "وَيْسَق", "waysaq", "yükleme türünden şey", "orta", ""],
-      [439, "وَسْق", "wasq", "yükleme türünden şey", "orta", ""],
+      [439, "وَسْق", "wasq", "Bir nesneyi biriktirip yüklenmek", "lugat", "Kamus"],
       [441, "وَسَق", "wasaq", "yükleme türünden şey", "orta", ""],
       [443, "وِسْق", "wisq", "yükleme türünden şey", "orta", ""],
       [445, "وُسْق", "wusq", "yükleme türünden şey", "orta", ""],
@@ -1560,7 +1560,121 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "وَسْق": [
+        {
+          "eser": "Kamus",
+          "madde": "vesk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi biriktirip yüklenmek manâsınadır; yukâlu: وَسَقَهُ يَسِقُهُ وَسْقًا إِذَا جَمَعَهُ وَحَمَلَهُ Ve minhu kavluhu taâlâ: ﴿وَاللَّيْلِ وَمَا وَسَقَ﴾ Zîrâ gece cemî-i cibâl ü bihâr u eşcâr u ahcârı ve rûy-i zemîni ihâtat ve istîâb eylemekle onları cem edip arkasına yüklenmiş gibi olur.",
+              "misaller": [
+                ["وَسَقَهُ يَسِقُهُ وَسْقًا إِذَا جَمَعَهُ وَحَمَلَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "وَسْقٌ [vesk] Sürüp götürmek, طَرْدٌ [tard] manâsınadır; yukâlu: وَسَقَهُ إِذَا طَرَدَهُ Ve dişi hayvânın rahimi erkeğin menîsini götürüp gebe kalmak manâsınadır; yukâlu: وَسَقَتِ النَّاقَةِ إِذَا حَمَلَتْ وَأَغْلَقَتْ عَلَى الْمَاءِ رَحِمَهَا Ve göz, yaşı hâmil olmak manâsına müstameldir; yukâlu: وَسَقَتِ الْعَيْنُ الْمَاءَ إِذَا حَمَلَتْهُ Ve kâle fil-Esâs: لَا أَفْعَلُ ذَلِكَ مَا وَسِقَتْ عَيْنِيَ الْمَاءَ Ve وَسْقٌ [vesk] Altmış sâı müstevib keyl ve mikdâra denir, alâ-kavlin bir deve yükünden ibârettir; yukâlu: عِنْدَهُ وَسْقٌ مِنْ تَمْرٍ أَيْ سِتُّونَ صَاعًا أَوْ حِمْلَ بَعِيرٍ Ve bu حِمْلٌ [himl] manâsındandır. Kavl-i evvele göre altmış sâ-ı nebevî inde ehlil-Hicâz üç yüz yirmi rıtl ederve inde ehlil-Irâk dört yüz seksen rıtl eder, niteki Nihâyede böylece mersûmdur.",
+              "misaller": [
+                ["وَسَقَهُ إِذَا طَرَدَهُ", ""],
+                ["وَسَقَتِ النَّاقَةِ إِذَا حَمَلَتْ وَأَغْلَقَتْ عَلَى الْمَاءِ رَحِمَهَا", ""],
+                ["وَسَقَتِ الْعَيْنُ الْمَاءَ إِذَا حَمَلَتْهُ", ""],
+                ["عِنْدَهُ وَسْقٌ مِنْ تَمْرٍ أَيْ سِتُّونَ صَاعًا أَوْ حِمْلَ بَعِيرٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَسْقُ",
+          "okunus": "el-vesk",
+          "koken": "vâvın fethi ve sînin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "vesk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Masdardır, bir nesneyi cem edip yüklenmek manâsına; yukâlu: وَسَقْتُ الشَّيْءَ إِذَا جَمَعْتَهُ وَحَمَلْتَهُ Ve minhu kavluhu taâlâ: ﴿وَاللَّيْلِ وَمَا وَسَقَ﴾ (الإنشقاق، 17) Zîrâ gece kaçanki dağları ve taşları ve ağaçları ve bahrleri ve cümle yer yüzün ihâta etse onu cem edip yüklenmiş gibi olur.",
+              "misaller": [
+                ["وَسَقْتُ الشَّيْءَ إِذَا جَمَعْتَهُ وَحَمَلْتَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "وَسْقٌ [vesk] Bir nesneyi sürüp alıp gitmeğe dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "وَسْقٌ [vesk] Altmış kîleye dahi derler, سِتُّونَ صَاعًا manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Halîl eyitti: وَسْقٌ [vesk] deve yüküdür ve وِقْرٌ [vikr] katır ve merkeb yüküdür.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "وَسْقٌ [vesk] Göz yaş getirmeğe dahi derler; minhu kavluhum: “لَا أَفْعَلُهُ مَا وَسَقَتْ عَيْنِي الْمَاءَ” أَيْ حَمَلْتُهُ Ve وَسْقٌ [vesk] Nâkanın yâ gayrının rahimi erkek suyunu götürüp hâmile olmağa dahi derler; yukâlu: وَسَقَتِ النَّاقَةُ وَغَيْرُهَا تَسِقُ وَسْقًا إِذَا حَمَلَتْ وَأَغْلَقَتْ رَحِمَهَا عَلَى الْمَاءِ",
+              "misaller": [
+                ["", ""],
+                ["وَسَقَتِ النَّاقَةُ وَغَيْرُهَا تَسِقُ وَسْقًا إِذَا حَمَلَتْ وَأَغْلَقَتْ رَحِمَهَا عَلَى الْمَاءِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَسْقُ",
+          "okunus": "el-vesk",
+          "koken": "vâvın fethi ve sînin sükûnuyla"
+        }
+      ],
+      "اِتِّسَاق": [
+        {
+          "eser": "Kamus",
+          "madde": "ittisak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Üslûb-ı vâhid üzere muntazam olmak manâsınadır; yukâlu: إِتَّسَقَ أَمْرُهُ إِذَا انْتَظَمَ",
+              "misaller": [
+                ["إِتَّسَقَ أَمْرُهُ إِذَا انْتَظَمَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِتِّسَاقُ",
+          "okunus": "el-ittisâk",
+          "koken": "إِتِّفَاقٌ [ittifâk] vezninde ki aslı إِوْتِسَاقٌ idi"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ittisak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İntizâm manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِتِّسَاقُ",
+          "okunus": "el-ittisâk",
+          "koken": "hemzenin kesriyle ve tânın kesri ve teşdîdiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

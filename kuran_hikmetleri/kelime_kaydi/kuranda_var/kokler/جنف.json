@@ -11,7 +11,7 @@
       [0, "جَنْف", "canf", "eğrilme", "orta", ""],
       [1, "جِنْف", "cinf", "eğrilme", "orta", ""],
       [2, "جُنْف", "cunf", "eğrilme", "orta", ""],
-      [3, "جَنَف", "canaf", "eğrilik", "kuran", "Kur'ân"],
+      [3, "جَنَف", "canaf", "Doğrudan sapmak, meyl ve cevr", "lugat", "Kur'ân · Kamus"],
       [4, "جِنَف", "cinaf", "eğrilme", "orta", ""],
       [5, "جُنُف", "cunuf", "eğrilme", "orta", ""],
       [6, "جُنُوف", "cunūf", "eğrilme", "orta", ""],
@@ -327,7 +327,14 @@
       [240, "مِجْنَفَتَان", "micnafatān", "eğrilme âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَجْنَف", "ʾacnaf", "daha çok eğrilen", "orta", "Vikisözlük: leaning towards one side"],
+      [
+        241,
+        "أَجْنَف",
+        "ʾacnaf",
+        "Vasftır, haktan udûl eden kimseye denir",
+        "lugat",
+        "Vikisözlük: leaning towards one side · Kamus"
+      ],
       [242, "أَجْنَفَان", "ʾacnafān", "daha çok eğrilen, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
@@ -383,7 +390,7 @@
       [284, "جَنُفُون", "canufūn", "her daim eğrilenler", "orta", ""],
       [285, "جَنُفِين", "canufīn", "her daim eğrilenler", "orta", ""],
       [286, "جَنُفَات", "canufāt", "her daim eğrilenler, müennes", "orta", ""],
-      [287, "جَنَف", "canaf", "eğrilik", "kuran", "Kur'ân"],
+      [287, "جَنَف", "canaf", "Doğrudan sapmak, meyl ve cevr", "lugat", "Kur'ân · Kamus"],
       [288, "جَنَفَة", "canafa", "her daim eğrilen, müennes", "orta", ""],
       [289, "جَنَفَان", "canafān", "her daim eğrilen, iki", "orta", ""],
       [290, "جَنَفَتَان", "canafatān", "her daim eğrilen, iki, müennes", "orta", ""],
@@ -543,7 +550,7 @@
       [435, "جَوْنَف", "cawnaf", "eğrilme türünden şey", "orta", ""],
       [437, "جَيْنَف", "caynaf", "eğrilme türünden şey", "orta", ""],
       [439, "جَنْف", "canf", "eğrilme türünden şey", "orta", ""],
-      [441, "جَنَف", "canaf", "eğrilik", "kuran", "Kur'ân"],
+      [441, "جَنَف", "canaf", "Doğrudan sapmak, meyl ve cevr", "lugat", "Kur'ân · Kamus"],
       [443, "جِنْف", "cinf", "eğrilme türünden şey", "orta", ""],
       [445, "جُنْف", "cunf", "eğrilme türünden şey", "orta", ""],
       [447, "جَنِيف", "canīf", "eğrilme türünden şey", "orta", ""],
@@ -579,7 +586,7 @@
       [466, "جَنَفَة", "canafa", "eğrilmeler", "orta", ""],
       [467, "جُنَّاف", "cunnāf", "eğrilmeler", "orta", ""],
       [468, "جَنَاف", "canāf", "eğrilmeler", "orta", ""],
-      [469, "جَنَف", "canaf", "eğrilik", "kuran", "Kur'ân"],
+      [469, "جَنَف", "canaf", "Doğrudan sapmak, meyl ve cevr", "lugat", "Kur'ân · Kamus"],
       [470, "مَجَانِف", "macānif", "eğrilmeler", "orta", ""],
       [471, "مَجَانِيف", "macānīf", "eğrilmeler", "orta", ""],
       [472, "جَوَانِف", "cawānif", "eğrilmeler", "orta", ""],
@@ -760,6 +767,89 @@
     "renk_sozluk": {
       "جنفا": "eğrilik",
       "متجانف": "eğilip sapan"
+    },
+    "mustak_lugat": {
+      "جَنَف": [
+        {
+          "eser": "Kamus",
+          "madde": "cenef",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْجُنُوفُ [el-cunûf] (قُعُودٌ [kuûd] vezninde) Doğrudan sapmak, meyl ve cevr manâsınadır; yukâlu: جَنِفَ فُلاَنٌ فِي وَصِيَّتِهِ جَنَفًا وَجُنُوفًا مِنَ الْبَابِ الرَّابِعِ إِذَا مَالَ وَجَارَ ve yukâlu: جَنِفَ عَنْ طَرِيقِهِ جَنَفًا مِنَ الْبَابِ الرَّابِعِ وَجَنَفَ جُنُوفًا مِنَ الْبَابِ الثَّانِي إِذَا عَدَلَ عَنْهُ Ve bazılar dediler ki جَنَفٌ [cenef] bedende göğsün bir yanı içeriye çökük ve bir yanı alâ-hâlihi mutedil olmak vech üzere olan eğriliğe denir; yukâlu: فِيهِ جَنَفٌ وَهُوَ فِي الزَّوْرِ دُخُولُ أَحَدِ شِقَّيْهِ وَانْهِضَامُهُ مَعَ اعْتِدَالِ الْآخَرِ",
+              "misaller": [
+                ["جَنِفَ فُلاَنٌ فِي وَصِيَّتِهِ جَنَفًا وَجُنُوفًا مِنَ الْبَابِ الرَّابِعِ إِذَا مَالَ وَجَارَ", ""],
+                [
+                  "جَنِفَ عَنْ طَرِيقِهِ جَنَفًا مِنَ الْبَابِ الرَّابِعِ وَجَنَفَ جُنُوفًا مِنَ الْبَابِ الثَّانِي إِذَا عَدَلَ عَنْهُ",
+                  ""
+                ],
+                ["فِيهِ جَنَفٌ وَهُوَ فِي الزَّوْرِ دُخُولُ أَحَدِ شِقَّيْهِ وَانْهِضَامُهُ مَعَ اعْتِدَالِ الْآخَرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَنَفُ",
+          "okunus": "el-cenef",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cenef",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Meyle dahi derler; yukâlu: جَنِفَ يَجْنَفُ جَنَفًا مِنَ الْبَابِ الرَّابِعِ Ve minhu kavluhu tââlâ: ﴿فَمَنْ خَافَ مِنْ مُوصٍ جَنَفًا﴾ (البقرة، 182)",
+              "misaller": [
+                ["جَنِفَ يَجْنَفُ جَنَفًا مِنَ الْبَابِ الرَّابِعِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَنَفُ",
+          "okunus": "el-cenef",
+          "koken": "fethateynle"
+        }
+      ],
+      "أَجْنَف": [
+        {
+          "eser": "Kamus",
+          "madde": "ecnef",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vasftır, haktan udûl eden kimseye denir; yukâlu: هُوَ أَجْنَفُ أَيْ مَائِلٌ عَنِ الْحَقِّ Ve göğsünün bir yanı içeriye çökük olan adama denir; yukâlu: رَجُلٌ أَجْنَفُ أَيْ مُتَزَاوِرٌ دَاخِلٌ أَحَدَ شِقَّيِ الزَّوْرِ مُنْهَضِمُهُ Ve beli eğri adama denir; yukâlu: رَجُلٌ أَجْنَفُ أَيِ الْمُنْحَنِي الظَّهْرِ",
+              "misaller": [
+                ["هُوَ أَجْنَفُ أَيْ مَائِلٌ عَنِ الْحَقِّ", ""],
+                ["رَجُلٌ أَجْنَفُ أَيْ مُتَزَاوِرٌ دَاخِلٌ أَحَدَ شِقَّيِ الزَّوْرِ مُنْهَضِمُهُ", ""],
+                ["رَجُلٌ أَجْنَفُ أَيِ الْمُنْحَنِي الظَّهْرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْنَفُ",
+          "okunus": "el-ecnef",
+          "koken": "أَحْمَرُ [ahmer] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ecnef",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Arkası eğri olan kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْنَفُ",
+          "okunus": "el-ecnef",
+          "koken": "hemzenin ve nûnun fethiyle"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 2,

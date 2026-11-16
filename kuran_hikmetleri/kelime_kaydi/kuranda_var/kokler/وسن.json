@@ -11,7 +11,14 @@
       [0, "وَسْن", "wasn", "uyuklamama", "orta", ""],
       [1, "وِسْن", "wisn", "uyuklamama", "orta", ""],
       [2, "وُسْن", "wusn", "uyuklamama", "orta", ""],
-      [3, "وَسَن", "wasan", "uyuklamama", "orta", "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off"],
+      [
+        3,
+        "وَسَن",
+        "wasan",
+        "ve ve Uyku ağırlığına denir ki dimâga ârız olur",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off · Kamus"
+      ],
       [4, "وِسَن", "wisan", "uyuklamama", "orta", ""],
       [5, "وُسُن", "wusun", "uyuklamama", "orta", ""],
       [6, "وُسُون", "wusūn", "uyuklamama", "orta", ""],
@@ -37,7 +44,7 @@
       [26, "تَوْسَنَة", "tawsana", "uyuklamama", "orta", ""],
       [27, "مَوْسُنَة", "mawsuna", "uyuklamama", "orta", ""],
       [28, "مَوْسِنَة", "mawsina", "uyuklamama", "orta", ""],
-      [926, "سِنَة", "sina", "uyuklamama", "orta", "Vikisözlük: drowsiness"]
+      [926, "سِنَة", "sina", "Uyuklama", "lugat", "Vikisözlük: drowsiness · Luggat"]
     ],
     "masdar · bâb II": [
       [29, "تَوْسِين", "tawsīn", "uyuklamatma", "orta", ""],
@@ -395,9 +402,9 @@
         287,
         "وَسَن",
         "wasan",
-        "her daim uyuklamayan",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off"
+        "ve ve Uyku ağırlığına denir ki dimâga ârız olur",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off · Kamus"
       ],
       [288, "وَسَنَة", "wasana", "her daim uyuklamayan, müennes", "orta", ""],
       [289, "وَسَنَان", "wasanān", "her daim uyuklamayan, iki", "orta", ""],
@@ -569,9 +576,9 @@
         441,
         "وَسَن",
         "wasan",
-        "uyuklamama türünden şey",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off"
+        "ve ve Uyku ağırlığına denir ki dimâga ârız olur",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off · Kamus"
       ],
       [443, "وِسْن", "wisn", "uyuklamama türünden şey", "orta", ""],
       [445, "وُسْن", "wusn", "uyuklamama türünden şey", "orta", ""],
@@ -619,9 +626,9 @@
         469,
         "وَسَن",
         "wasan",
-        "uyuklamamalar",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off"
+        "ve ve Uyku ağırlığına denir ki dimâga ârız olur",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slumber, to nap, to doze off · Kamus"
       ],
       [470, "مَوَاسِن", "mawāsin", "uyuklamamalar", "orta", ""],
       [471, "مَوَاسِين", "mawāsīn", "uyuklamamalar", "orta", ""],
@@ -1209,7 +1216,89 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "وَسَن": [
+        {
+          "eser": "Kamus",
+          "madde": "vesen",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْوَسَنَةُ [el-vesenet] (hâyla) ve اَلْوَسْنَةُ [el-vesnet] (تَمْرَةٌ [temret] vezninde) ve اَلسِّنَةُ [es-sinet] (عِدَةٌ [idet] vezninde) Uyku ağırlığına denir ki dimâga ârız olur; henüz kalbe ve göze urûz eylemez, lâkin göz ağırlaşıp süzülmeğe başlar; Fârisîde pînegî ve Türkîde uyuklama, pinekleme ve ehl-i keyf ıstılâhında şeker eyleme tabîr olur; alâ-kavlin uykunun evveline denir ki hemân beynen-nevm vel-yakaza hâletidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "indel-baz ımızganmağa denir ki kalbe ve ondan bir mikdârca göze ârız olur. pes uykunun dört mertebesi olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "asahh olan kavl-i evveldir ve bu nevm haddinden hâricdir; yukâlu: أَخَذَهُ الْوَسَنُ وَالْوَسَنَةُ وَالْوَسَنْةُ وَالسِّنَةُ أَيْ ثِقَلُهُ أَوْ أَوَّلُ النَّوْمِ أَوِ النُّعَاسُ Ve bu manâda masdar olurlar; yukâlu: وَسِنَ الرَّجُلُ وَسَنًا وَوَسَنَةً وَوَسْنَةً وَسِنَةً مِنَ الْبَابِ الرَّابِعِ إِذَا أَخَذَهُ ثِقْلَةُ النَّوْمِ أَوْ أَوَّلُهُ أَوِ النُّعَاسُ Ve وَسَنٌ [vesen] Müddet-i medîde ağzı açılmamış kuyunun bed ve tîz râyihasından bayılmak manâsınadır; yukâlu: وَسِنَ الرَّجُلُ إِذَا غُشِيَ عَلَيْهِ مِنْ نَتْنِ الْبِئْرِ Niteki أَسَنٌ [esen] dahi bu manâyadır.",
+              "misaller": [
+                [
+                  "أَخَذَهُ الْوَسَنُ وَالْوَسَنَةُ وَالْوَسَنْةُ وَالسِّنَةُ أَيْ ثِقَلُهُ أَوْ أَوَّلُ النَّوْمِ أَوِ النُّعَاسُ",
+                  ""
+                ],
+                [
+                  "وَسِنَ الرَّجُلُ وَسَنًا وَوَسَنَةً وَوَسْنَةً وَسِنَةً مِنَ الْبَابِ الرَّابِعِ إِذَا أَخَذَهُ ثِقْلَةُ النَّوْمِ أَوْ أَوَّلُهُ أَوِ النُّعَاسُ",
+                  ""
+                ],
+                ["وَسِنَ الرَّجُلُ إِذَا غُشِيَ عَلَيْهِ مِنْ نَتْنِ الْبِئْرِ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "سِنَةٌ [sinet] Gaflet manâsına müstameldir ki manâ-yı lâzımıdır; yukâlu: هُوَ فِي سِنَةٍ أَيْ غَفْلَةٍ Ve وَسَنٌ [vesen] Hâcet manâsına müstameldir; cemi أَوْسَانٌ [evsân] gelir; tekûlu. مَا هُوَ مِنْ هَمِّي وَلَا مِنْ وَسَنِي أَيْ مِنْ حَاجَتِي ve yukâlu: قَضَتِ الْإِبِلُ أَوْسَانَهَا مِنَ الْمَاءِ أَيْ أَوْطَارَهَا وَحَاجَاتَهَا",
+              "misaller": [
+                ["هُوَ فِي سِنَةٍ أَيْ غَفْلَةٍ", ""],
+                ["قَضَتِ الْإِبِلُ أَوْسَانَهَا مِنَ الْمَاءِ أَيْ أَوْطَارَهَا وَحَاجَاتَهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَسَنُ",
+          "okunus": "el-vesen",
+          "koken": "vâvın ve sînin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "vesen",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Imızganmak, nuâs manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَسَنُ",
+          "okunus": "el-vesen",
+          "koken": "fethateynle"
+        }
+      ],
+      "سِنَة": [
+        {
+          "eser": "Luggat",
+          "madde": "sine",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Uyuklama",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

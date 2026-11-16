@@ -11,7 +11,7 @@
       [0, "لَقْب", "laqb", "nitelik", "orta", ""],
       [1, "لِقْب", "liqb", "nitelik", "orta", ""],
       [2, "لُقْب", "luqb", "nitelik", "orta", ""],
-      [3, "لَقَب", "laqab", "nitelik", "orta", ""],
+      [3, "لَقَب", "laqab", "Lakap", "lugat", "Luggat"],
       [4, "لِقَب", "liqab", "nitelik", "orta", ""],
       [5, "لُقُب", "luqub", "nitelik", "orta", ""],
       [6, "لُقُوب", "luqūb", "nitelik", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَلْقِبَة", "malqiba", "nitelik", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَلْقِيب", "talqīb", "çokça nite olma", "orta", ""],
+      [29, "تَلْقِيب", "talqīb", "Lakap takma, lakaplandırma", "lugat", "Kubbealtı"],
       [30, "تَلْقِبَة", "talqiba", "çokça nite olma", "orta", ""],
       [31, "لِقِّاب", "liqqāb", "çokça nite olma", "orta", ""]
     ],
@@ -383,7 +383,7 @@
       [284, "لَقُبُون", "laqubūn", "her daim nite olanlar", "orta", ""],
       [285, "لَقُبِين", "laqubīn", "her daim nite olanlar", "orta", ""],
       [286, "لَقُبَات", "laqubāt", "her daim nite olanlar, müennes", "orta", ""],
-      [287, "لَقَب", "laqab", "her daim nite olan", "orta", ""],
+      [287, "لَقَب", "laqab", "Lakap", "lugat", "Luggat"],
       [288, "لَقَبَة", "laqaba", "her daim nite olan, müennes", "orta", ""],
       [289, "لَقَبَان", "laqabān", "her daim nite olan, iki", "orta", ""],
       [290, "لَقَبَتَان", "laqabatān", "her daim nite olan, iki, müennes", "orta", ""],
@@ -543,7 +543,7 @@
       [435, "لَوْقَب", "lawqab", "nite olma türünden şey", "orta", ""],
       [437, "لَيْقَب", "layqab", "nite olma türünden şey", "orta", ""],
       [439, "لَقْب", "laqb", "nite olma türünden şey", "orta", ""],
-      [441, "لَقَب", "laqab", "nite olma türünden şey", "orta", ""],
+      [441, "لَقَب", "laqab", "Lakap", "lugat", "Luggat"],
       [443, "لِقْب", "liqb", "nite olma türünden şey", "orta", ""],
       [445, "لُقْب", "luqb", "nite olma türünden şey", "orta", ""],
       [447, "لَقِيب", "laqīb", "nite olma türünden şey", "orta", ""],
@@ -565,7 +565,7 @@
       [454, "لَقَابَة", "laqāba", "nite olma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَلْقَاب", "ʾalqāb", "nite olmalar", "orta", ""],
+      [455, "أَلْقَاب", "ʾalqāb", "Lakaplar, unvanlar", "lugat", "Kubbealtı"],
       [456, "أَلْقِبَة", "ʾalqiba", "nite olmalar", "orta", ""],
       [457, "أَلَاقِب", "ʾalāqib", "nite olmalar", "orta", ""],
       [458, "أَلَاقِيب", "ʾalāqīb", "nite olmalar", "orta", ""],
@@ -579,7 +579,7 @@
       [466, "لَقَبَة", "laqaba", "nite olmalar", "orta", ""],
       [467, "لُقَّاب", "luqqāb", "nite olmalar", "orta", ""],
       [468, "لَقَاب", "laqāb", "nite olmalar", "orta", ""],
-      [469, "لَقَب", "laqab", "nite olmalar", "orta", ""],
+      [469, "لَقَب", "laqab", "Lakap", "lugat", "Luggat"],
       [470, "مَلَاقِب", "malāqib", "nite olmalar", "orta", ""],
       [471, "مَلَاقِيب", "malāqīb", "nite olmalar", "orta", ""],
       [472, "لَوَاقِب", "lawāqib", "nite olmalar", "orta", ""],
@@ -1121,7 +1121,133 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لَقَب": [
+        {
+          "eser": "Kamus",
+          "madde": "lakab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adamın ism-i aslîsinden gayrı müsemmâ olduğu ismdir, نَبْزٌ [nebz] manâsına. Cemi أَلْقَابٌ [elkâb] gelir. لَقَبٌ [lakab]da cânib-i manâ merî olup ve alâmda merî olmaz.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "لَقَبٌ [lakab] üç gûne olur, lakab-ı teşrîf, lakab-ı tarîf ve lakab-ı teshîftir. Mahlas-ı şuarâ nev-i sânîdendir ve menhî olan nev-i sâlistir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّقَبُ",
+          "okunus": "el-lakab",
+          "koken": "lâmın ve kâfın fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "lakab",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lakap",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَلْقِيب": [
+        {
+          "eser": "Kamus",
+          "madde": "telkib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseye لَقَبٌ [lakab] vaz eylemek manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّلْقِيبُ",
+          "okunus": "et-telkîb",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "telkib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Lakab komak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّلْقِيبُ",
+          "okunus": "et-telkîb",
+          "koken": "tânın fethi ve lâmın sükûnuyla"
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TELKİP – TELKİB",
+          "yazilis": "ﺗﻠﻘﻴﺐ",
+          "tur": "i.",
+          "koken": "Ar. laḳab ’dan telḳіb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lakap takma, lakaplandırma",
+              "misaller": [
+                ["muhibb-i insâniyyet", ""],
+                [
+                  "diye telkip ettiği Rusya’nın, demir gibi bildiği İngiltere’nin, millet-i gālibe tanıdığı Fransa’nın, tatlı diye imrendiği İtalya’nın ellerinde zâr u zebun…",
+                  "Ahmet Râsim"
+                ],
+                ["Benden pek çok evvel zâten onu bu sûretle telkip etmişlerdi", "Hâlit Z. Uşaklıgil"],
+                ["Hakîmler filozof nâmıyle telkip olunmalarını istemezler", "Ziyâ Gökalp"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَلْقَاب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ELKAB",
+          "yazilis": "ﺍﻟﻘﺎﺏ",
+          "tur": "i.",
+          "koken": "Ar. laḳab ’ın çoğul şekli elḳāb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lakaplar, unvanlar",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Eskiden hükümdarlardan îtibâren bütün devlet memurları için rütbelerine göre kullanılan belli resmî unvanlar",
+              "misaller": [
+                [
+                  "Fahâmetlü, devletlü, devletlü utûfetlü, devletlü inâyetlü gibi: Kâtip Çelebi’nin bâzı elkābı ilâve ederek zamânına kadar getirdiği, fakat tamamlayamadığı bu eseri…",
+                  "Orhan Ş. Gökyay"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

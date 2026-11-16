@@ -11,7 +11,7 @@
       [0, "وَثْن", "waṯn", "put", "kontrol", ""],
       [1, "وِثْن", "wiṯn", "put", "kontrol", ""],
       [2, "وُثْن", "wuṯn", "put", "kontrol", ""],
-      [3, "وَثَن", "waṯan", "put", "kontrol", ""],
+      [3, "وَثَن", "waṯan", "Put", "lugat", "Kubbealtı"],
       [4, "وِثَن", "wiṯan", "put", "kontrol", ""],
       [5, "وُثُن", "wuṯun", "put", "kontrol", ""],
       [6, "وُثُون", "wuṯūn", "put", "kontrol", ""],
@@ -384,7 +384,7 @@
       [284, "وَثُنُون", "waṯunūn", "her daim put olanlar", "kontrol", ""],
       [285, "وَثُنِين", "waṯunīn", "her daim put olanlar", "kontrol", ""],
       [286, "وَثُنَات", "waṯunāt", "her daim put olanlar, müennes", "kontrol", ""],
-      [287, "وَثَن", "waṯan", "her daim put olan", "kontrol", ""],
+      [287, "وَثَن", "waṯan", "Put", "lugat", "Kubbealtı"],
       [288, "وَثَنَة", "waṯana", "her daim put olan, müennes", "kontrol", ""],
       [289, "وَثَنَان", "waṯanān", "her daim put olan, iki", "kontrol", ""],
       [290, "وَثَنَتَان", "waṯanatān", "her daim put olan, iki, müennes", "kontrol", ""],
@@ -544,7 +544,7 @@
       [435, "وَوْثَن", "wawṯan", "put olma türünden şey", "kontrol", ""],
       [437, "وَيْثَن", "wayṯan", "put olma türünden şey", "kontrol", ""],
       [439, "وَثْن", "waṯn", "put olma türünden şey", "kontrol", ""],
-      [441, "وَثَن", "waṯan", "put olma türünden şey", "kontrol", ""],
+      [441, "وَثَن", "waṯan", "Put", "lugat", "Kubbealtı"],
       [443, "وِثْن", "wiṯn", "put olma türünden şey", "kontrol", ""],
       [445, "وُثْن", "wuṯn", "put olma türünden şey", "kontrol", ""],
       [447, "وَثِين", "waṯīn", "put olma türünden şey", "kontrol", ""],
@@ -566,7 +566,7 @@
       [454, "وَثَانَة", "waṯāna", "put olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَوْثَان", "ʾawṯān", "put olmalar", "kontrol", ""],
+      [455, "أَوْثَان", "ʾawṯān", "Putlar", "lugat", "Kubbealtı"],
       [456, "أَوْثِنَة", "ʾawṯina", "put olmalar", "kontrol", ""],
       [457, "أَوَاثِن", "ʾawāṯin", "put olmalar", "kontrol", ""],
       [458, "أَوَاثِين", "ʾawāṯīn", "put olmalar", "kontrol", ""],
@@ -580,7 +580,7 @@
       [466, "وَثَنَة", "waṯana", "put olmalar", "kontrol", ""],
       [467, "وُثَّان", "wuṯṯān", "put olmalar", "kontrol", ""],
       [468, "وَثَان", "waṯān", "put olmalar", "kontrol", ""],
-      [469, "وَثَن", "waṯan", "put olmalar", "kontrol", ""],
+      [469, "وَثَن", "waṯan", "Put", "lugat", "Kubbealtı"],
       [470, "مَوَاثِن", "mawāṯin", "put olmalar", "kontrol", ""],
       [471, "مَوَاثِين", "mawāṯīn", "put olmalar", "kontrol", ""],
       [472, "وَوَاثِن", "wawāṯin", "put olmalar", "kontrol", ""],
@@ -839,7 +839,82 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "وَثَن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "VESEN",
+          "yazilis": "ﻭﺛﻦ",
+          "tur": "i.",
+          "koken": "Ar. veѕen",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Put",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "vesen",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Puta denir, صَنَمٌ [sanem] manâsına; cemi وُثُنٌ [vusamp;un] gelir zammeteynle ve أَوْثَانٌ [evsamp;ân] gelir; yukâlu: كَأَنَّهُ وَثَنٌ مِنَ الْأَوْثَانِ أَيْ صَنَمٌ Şârih der ki bazılar bunu hicâre ve ahşâb makûlesinden masnûa tahsîs ederler.",
+              "misaller": [
+                ["كَأَنَّهُ وَثَنٌ مِنَ الْأَوْثَانِ أَيْ صَنَمٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَثَنُ",
+          "okunus": "el-vesamp;en",
+          "koken": "fethateynle"
+        }
+      ],
+      "أَوْثَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EVSAN",
+          "yazilis": "ﺍﻭﺛﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. veѕen “put”un çoğul şekli evѕān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Putlar",
+              "misaller": [
+                [" İbâdet-i evsan.", ""],
+                ["Cenâbına, butlân-ı bütan ve tezlîl-i evsan bâbında âyât-ı beyyinat nâzil oldukta…", "Veysî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "evsan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi, أُسْدٌ [usd]le آسَادٌ [âsâd] gibi,أَسَدٌ [esed]in ceminde.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَوْثَانُ",
+          "okunus": "el-evsamp;ân",
+          "koken": "hemzenin fethi ile"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

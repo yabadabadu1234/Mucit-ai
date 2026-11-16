@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "تَيْن", "tayn", "incir", "kontrol", ""],
-      [888, "تِين", "tīn", "incir", "kuran", "Kur'ân"],
+      [888, "تِين", "tīn", "İncir", "lugat", "Kur'ân · Kubbealtı"],
       [889, "تُون", "tūn", "incir", "kontrol", ""],
       [517, "تَان", "tān", "incir", "kontrol", ""],
       [518, "تِيَن", "tiyan", "incir", "kontrol", ""],
@@ -292,7 +292,7 @@
       [693, "تَائِنَات", "tāʾināt", "incir olanlar, müennes", "kontrol", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [694, "مَتِين", "matīn", "incir olunan", "kontrol", ""],
+      [694, "مَتِين", "matīn", "Sağlam, dayanıklı", "lugat", "Luggat"],
       [695, "مَتِينَة", "matīna", "incir olunan, müennes", "kontrol", ""],
       [696, "مَتِينَان", "matīnān", "incir olunan, iki", "kontrol", ""],
       [697, "مَتِينَتَان", "matīnatān", "incir olunan, iki, müennes", "kontrol", ""],
@@ -303,7 +303,7 @@
     "mekân/zaman · sülâsî": [
       [701, "مَتَان", "matān", "incir olma yeri, vakti", "kontrol", ""],
       [702, "مَتَانَان", "matānān", "incir olma yeri, vakti, iki", "kontrol", ""],
-      [703, "مَتِين", "matīn", "incir olma yeri, vakti", "kontrol", ""],
+      [703, "مَتِين", "matīn", "Sağlam, dayanıklı", "lugat", "Luggat"],
       [704, "مَتِينَان", "matīnān", "incir olma yeri, vakti, iki", "kontrol", ""],
       [705, "مَتَانَة", "matāna", "incir olmanın bol olduğu yer", "kontrol", ""],
       [706, "مَتَانَتَان", "matānatān", "incir olmanın bol olduğu yer, iki", "kontrol", ""],
@@ -534,7 +534,7 @@
       [837, "تِيَانَة", "tiyāna", "incir olma", "kontrol", ""],
       [427, "تُيُونَة", "tuyūna", "incir olma", "kontrol", ""],
       [428, "تَيْن", "tayn", "incir olma", "kontrol", ""],
-      [919, "تِين", "tīn", "incir", "kuran", "Kur'ân"]
+      [919, "تِين", "tīn", "İncir", "lugat", "Kur'ân · Kubbealtı"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "تَايُون", "tāyūn", "incir olma türünden şey", "kontrol", ""],
@@ -545,7 +545,7 @@
       [437, "تَيْيَن", "tayyan", "incir olma türünden şey", "kontrol", ""],
       [439, "تَيْن", "tayn", "incir olma türünden şey", "kontrol", ""],
       [840, "تَان", "tān", "incir olma türünden şey", "kontrol", ""],
-      [921, "تِين", "tīn", "incir", "kuran", "Kur'ân"],
+      [921, "تِين", "tīn", "İncir", "lugat", "Kur'ân · Kubbealtı"],
       [923, "تُون", "tūn", "incir olma türünden şey", "kontrol", ""],
       [447, "تَيِين", "tayīn", "incir olma türünden şey", "kontrol", ""],
       [843, "تِيَن", "tiyan", "incir olma türünden şey", "kontrol", ""],
@@ -836,6 +836,141 @@
     ],
     "renk_sozluk": {
       "المتين": "sağlam"
+    },
+    "mustak_lugat": {
+      "تِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TÎN",
+          "yazilis": "ﺗﻴﻦ",
+          "tur": "i.",
+          "koken": "Ar. tіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İncir",
+              "misaller": [
+                ["Cennettir anın yüzü velîkin od içinde / Anı görene tîn ile rummâna mahal yok", "Kadı Burhâneddin"],
+                ["Olur mefhûm her şîrînin olmak telh encâmı / Kelâm-ı Hak’ta der-pey gelmesinden tîn ü zeytûnun", "Nedim"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Tin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Marûftur ki incire denir. Kemâlini bulmuş tâze incir bil-cümle fâkihelerin ahmed ve atyebidir; gıdâsı kesîr ve nefh ve rîhi kalîl ve câzib ve muhallil ve südde-i kebid ve tıhâli müfettih ve müleyyindir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "mevâdd-ı afineyi taraf-ı cilde dâfi olmakla iksârı müvellid-i kehledir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "تِينٌ [Tîn] Şâmda bir dağın adıdır. Kezâlik Şâmda bir mescidin ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Gatafân yurdunda bir dağın adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Dimaşk şehrinin ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتِّينُ",
+          "okunus": "et-tîn",
+          "koken": "tânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İncîr ki meyve kısmındandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتِّينُ",
+          "okunus": "et-tîn",
+          "koken": "tânın kesri ve meddiyle"
+        }
+      ],
+      "مَتِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "METİN",
+          "yazilis": "ﻣﺘﻴﻦ",
+          "tur": "sıf.",
+          "koken": "Ar. metāne t “sert ve kuvvetli olmak”tan metіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sağlam, dayanıklı, kuvvetli, güçlü",
+              "misaller": [
+                ["Metin bir terbiye-i fikriyye üzerine güzel bir terbiye-i askeriyye aşılandı", "Cenap Şahâbeddin"],
+                [
+                  "Ne çâre ki garp millî bünyenin kale bedeni gibi en sağlam, en metin olan burcunu, bârûsunu yıkmış …",
+                  "Sâmiha Ayverdi"
+                ],
+                [
+                  "Evimiz eski tarzda bir evdi / Kalın duvarlı temeller, kepenkli pencereler / Güzel değilse de pek / Metindi çok yapısı",
+                  "Orhan S. Orhon – Ö.T.S."
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "sıf.",
+              "tanim": "ve i. Zorluk, sıkıntı ve acılar karşısında yılgınlık göstermeyen, dayanma gücünü kaybetmeyen, metânetli (kimse)",
+              "misaller": [
+                ["Metin dediklerimiz alelekser hissizlerdir", "Cenap Şahâbeddin – Ö.T.S."],
+                ["Siz metin çocuksunuz diyordu", "Reşat N. Güntekin"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "i.",
+              "tanim": "“Asla acze düşmeyen, zorluk ve sıkıntı nedir bilmeyen, her şeyden ve herkesten sağlam ve güçlü olan” mânâsında esmâ-i hüsnâdan (Allah’ın en güzel isimlerinden)dır",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "metin",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sağlam, dayanıklı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
     }
   },
   "kuran_gecisleri": 1,

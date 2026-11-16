@@ -11,7 +11,7 @@
       [0, "فَتْي", "faty", "fetva isteme", "orta", ""],
       [1, "فِتْي", "fity", "fetva isteme", "orta", ""],
       [2, "فُتْي", "futy", "fetva isteme", "orta", ""],
-      [517, "فَتَى", "fatā", "genç", "kuran", "Kur'ân"],
+      [517, "فَتَى", "fatā", "Genç", "lugat", "Kur'ân · Luggat"],
       [518, "فِتَى", "fitā", "fetva isteme", "orta", ""],
       [519, "فُتِيّ", "futiyy", "fetva isteme", "orta", ""],
       [520, "فُتِيّ", "futiyy", "fetva isteme", "orta", ""],
@@ -328,7 +328,7 @@
       [256, "فَتْيَتَان", "fatyatān", "bir kere fetva isteme, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "فِتْيَة", "fitya", "gençler", "kuran", "Kur'ân"],
+      [257, "فِتْيَة", "fitya", "Kezâlik cemi", "lugat", "Kur'ân · Vankulu"],
       [258, "فِتْيَتَان", "fityatān", "fetva isteme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
@@ -360,7 +360,7 @@
       [750, "فَتُوُّون", "fatuwwūn", "her daim fetva isteyenler", "orta", ""],
       [751, "فَتُوِّين", "fatuwwīn", "her daim fetva isteyenler", "orta", ""],
       [752, "فَتُوَّات", "fatuwwāt", "her daim fetva isteyenler, müennes", "orta", ""],
-      [753, "فَتَى", "fatā", "genç", "kuran", "Kur'ân"],
+      [753, "فَتَى", "fatā", "Genç", "lugat", "Kur'ân · Luggat"],
       [754, "فَتَيَان", "fatayān", "her daim fetva isteyen, iki", "orta", ""],
       [884, "فَتَوْن", "fatawn", "her daim fetva isteyenler", "orta", ""],
       [885, "فَتَيْن", "fatayn", "her daim fetva isteyenler", "orta", ""],
@@ -518,7 +518,7 @@
       [435, "فَوْتَي", "fawtay", "fetva isteme türünden şey", "orta", ""],
       [437, "فَيْتَي", "faytay", "fetva isteme türünden şey", "orta", ""],
       [439, "فَتْي", "faty", "fetva isteme türünden şey", "orta", ""],
-      [840, "فَتَى", "fatā", "genç", "kuran", "Kur'ân"],
+      [840, "فَتَى", "fatā", "Genç", "lugat", "Kur'ân · Luggat"],
       [443, "فِتْي", "fity", "fetva isteme türünden şey", "orta", ""],
       [445, "فُتْي", "futy", "fetva isteme türünden şey", "orta", ""],
       [841, "فَتِيّ", "fatiyy", "fetva isteme türünden şey", "orta", ""],
@@ -531,7 +531,7 @@
       [436, "فَوْتَيَة", "fawtaya", "fetva isteme türünden bir tane", "orta", ""],
       [438, "فَيْتَيَة", "faytaya", "fetva isteme türünden bir tane", "orta", ""],
       [440, "فَتْيَة", "fatya", "fetva isteme türünden bir tane", "orta", ""],
-      [444, "فِتْيَة", "fitya", "gençler", "kuran", "Kur'ân"],
+      [444, "فِتْيَة", "fitya", "Kezâlik cemi", "lugat", "Kur'ân · Vankulu"],
       [446, "فُتْيَة", "futya", "fetva isteme türünden bir tane", "orta", ""],
       [842, "فَتِيَّة", "fatiyya", "fetva isteme türünden bir tane", "orta", ""],
       [845, "فُتِيَّة", "futiyya", "fetva isteme türünden bir tane", "orta", ""],
@@ -551,7 +551,7 @@
       [858, "فَتَاة", "fatā", "fetva istemeler", "orta", ""],
       [859, "فُتَّاء", "futtāʾ", "fetva istemeler", "orta", ""],
       [860, "فَتَاء", "fatāʾ", "fetva istemeler", "orta", ""],
-      [861, "فَتَى", "fatā", "genç", "kuran", "Kur'ân"],
+      [861, "فَتَى", "fatā", "Genç", "lugat", "Kur'ân · Luggat"],
       [862, "مَفَاتِي", "mafātī", "fetva istemeler", "orta", ""],
       [863, "مَفَاتِيّ", "mafātiyy", "fetva istemeler", "orta", ""],
       [864, "فَوَاتِي", "fawātī", "fetva istemeler", "orta", ""],
@@ -850,7 +850,102 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَتَى": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FETÂ",
+          "yazilis": "ﻓﺘﺎ – ﻓﺘﻰ",
+          "tur": "i.",
+          "koken": "Ar. fetā",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Genç, yiğit, mert kimse, delikanlı",
+              "misaller": [
+                ["Ulviyyet-i fıtriyyede engüşt-nümâsın / Benzer revişin Haydar’a bir şanlı fetâsın", "Muallim Nâci’den"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Cömert, kerem sâhibi, fütüvvetli kimse",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Fütüvvet teşkîlâtına girmiş kimse",
+              "misaller": [
+                ["Zülfekardan başka kılıç yok, Ali’den başka er yok", ""],
+                ["Lâ seyfe illâ zülfekar ve lâ fetâ illâ Alî", ""],
+                ["sözünden alınmadır", "Abdülbâki Gölpınarlı"]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "tasavvuf.",
+              "tanim": "Fütüvvet hâli üzre olan kimse",
+              "misaller": [
+                ["Adı İbrâhim olan bir fetânın onlara nasîhat ettiğini işittik. O putları paramparça etmişti", "Enbiyâ 58–60"],
+                ["buyurmuştur. Bir kimsenin nefsi onun putudur; hakîkî fetâ", "yiğit ve kahraman"],
+                [", nefsinin hevâ ve hevesine muhâlefet eden kimsedir", "Kuşeyrî Risâlesi Terc."]
+              ],
+              "no": 4
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "feta",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yiğit, şâbb manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَتَى",
+          "okunus": "el-fetâ",
+          "koken": "fânın fethi ve elifin kasrıyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fetâ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Genç. Cömert",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "فِتْيَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "el-fityet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفِتْيَةُ",
+          "okunus": "el-fityet",
+          "koken": "fânın kesri ve tânın sükûnu ile"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 21,
   "kuranda_var": true,

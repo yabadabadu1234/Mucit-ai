@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "سَرْد", "sard", "bir düzen içinde ilmek", "kuran", "Kur'ân"],
+      [0, "سَرْد", "sard", "Soğuk", "lugat", "Kur'ân · Luggat"],
       [1, "سِرْد", "sird", "sıra sıra dizme", "orta", ""],
       [2, "سُرْد", "surd", "sıra sıra dizme", "orta", ""],
       [3, "سَرَد", "sarad", "sıra sıra dizme", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "سَرَدُون", "saradūn", "her daim sıra sıra dizenler", "orta", ""],
       [292, "سَرَدِين", "saradīn", "her daim sıra sıra dizenler", "orta", ""],
       [293, "سَرَدَات", "saradāt", "her daim sıra sıra dizenler, müennes", "orta", ""],
-      [294, "سَرْد", "sard", "bir düzen içinde ilmek", "kuran", "Kur'ân"],
+      [294, "سَرْد", "sard", "Soğuk", "lugat", "Kur'ân · Luggat"],
       [295, "سَرْدَة", "sarda", "her daim sıra sıra dizen, müennes", "orta", ""],
       [296, "سَرْدَان", "sardān", "her daim sıra sıra dizen, iki", "orta", ""],
       [297, "سَرْدَتَان", "sardatān", "her daim sıra sıra dizen, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "سَرَادَة", "sarāda", "sıra sıra dizme", "orta", ""],
       [426, "سِرَادَة", "sirāda", "sıra sıra dizme", "orta", ""],
       [427, "سُرُودَة", "surūda", "sıra sıra dizme", "orta", ""],
-      [428, "سَرْد", "sard", "bir düzen içinde ilmek", "kuran", "Kur'ân"],
+      [428, "سَرْد", "sard", "Soğuk", "lugat", "Kur'ân · Luggat"],
       [429, "سِرْد", "sird", "sıra sıra dizme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُسْرُودَة", "ʾusrūda", "sıra sıra dizme türünden şey", "orta", ""],
       [435, "سَوْرَد", "sawrad", "sıra sıra dizme türünden şey", "orta", ""],
       [437, "سَيْرَد", "sayrad", "sıra sıra dizme türünden şey", "orta", ""],
-      [439, "سَرْد", "sard", "bir düzen içinde ilmek", "kuran", "Kur'ân"],
+      [439, "سَرْد", "sard", "Soğuk", "lugat", "Kur'ân · Luggat"],
       [441, "سَرَد", "sarad", "sıra sıra dizme türünden şey", "orta", ""],
       [443, "سِرْد", "sird", "sıra sıra dizme türünden şey", "orta", ""],
       [445, "سُرْد", "surd", "sıra sıra dizme türünden şey", "orta", ""],
@@ -1461,7 +1461,168 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "سَرْد": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SERD",
+          "yazilis": "ﺳﺮﺩ",
+          "tur": "i.",
+          "koken": "Ar. serd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "(Sözü) Birbiri ardınca düzgün bir şekilde söyleme, düşüncelerini ileri sürme",
+              "misaller": [
+                ["Delillerin serdi.", ""],
+                ["Serd-i efkâr.", ""],
+                ["her varak-ı medâyihi bir bâb olurdu", "Sâlim Tezkiresi"],
+                ["Bu hususta geniş fikirler serdine hâcet yoktur", "Kâtip Çelebi’den Seç."],
+                ["Nesrin, pek sarih mütâlaalar serdine cesâret edemeyerek kıs kıs gülüyor", "Hâlit Z. Uşaklıgil"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "SERD",
+          "yazilis": "ﺳﺮﺩ",
+          "tur": "sıf.",
+          "koken": "Fars. serd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Soğuk",
+              "misaller": [
+                ["Dahi küçüceksin yalınız yatma üşürsün / Serd oldu havâ çıkma koyundan kuzucağım", "Nedim"],
+                ["Gelir bir nefha-i serd ü siyeh-renk", "Tevfik Fikret"],
+                ["Gizler yüreğinde germ ü serdi / Mâlûm değildi halka derdi", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Sert, şiddetli",
+              "misaller": [
+                ["Tabîbâ kılmışam teşhîs derd-i aşktır derdim / Alâmet âh-ı serd ü rûy-ı zerd ü eşk-i âlimdir", "Fuzûlî"],
+                ["Ederdi darbe-i serdiyle camları lerzan", "Hüseyin Sîret"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Haşin, çirkin, hoyrat",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "serd",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلسِّرَادُ [es-sirâd] (كِتَابٌ [kitâb] vezninde) Meşin ve sahtiyân makûlesi nesne dikmek manâsınadır; yukâlu: سَرَدَ الْأَدِيمَ سَرْدًا وَسِرَادًا مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا خَرَزَهُ Ve delmek manâsınadır; yukâlu: سَرَدَ الشَّيْءَ إِذَا ثَقَبَهُ Ve cenk libâsı olan zırh örmek manâsınadır; yukâlu: سَرَدَ الدِّرْعَ إِذَا نَسَجَهُ Ve سَرْدٌ [serd] lafzı mutlakan örülmüş zırhlara ve sâir halka halka örülmüş nesnelere ism-i câmidir ki vasf bil-masdardır; yukâlu: جَاؤُوا وَعَلَيْهِمْ سَرْدٌ أَيْ دُرُوعٌ Ve سَرْدٌ [serd] Kelâmı cevâhir-i manzûme gibi hüsn-i edâ ile muttasılan ve muntazaman sevk eylemek manâsına müstameldir; yukâlu: سَرَدَ الْحَدِيثَ إِذَا أَجَادَ سِيَاقَهُ Ve سَرْدٌ [Serd] Ezd bilâdında bir mevzi adıdır.",
+              "misaller": [
+                ["سَرَدَ الْأَدِيمَ سَرْدًا وَسِرَادًا مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا خَرَزَهُ", ""],
+                ["سَرَدَ الشَّيْءَ إِذَا ثَقَبَهُ", ""],
+                ["سَرَدَ الدِّرْعَ إِذَا نَسَجَهُ", ""],
+                ["جَاؤُوا وَعَلَيْهِمْ سَرْدٌ أَيْ دُرُوعٌ", ""],
+                ["سَرَدَ الْحَدِيثَ إِذَا أَجَادَ سِيَاقَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَرْدٌ [serd] Muttasılan oruç tutmak manâsına müstameldir; yukâlu: سَرَدَ الصَّوْمَ إِذَا تَابَعَهُ",
+              "misaller": [
+                ["سَرَدَ الصَّوْمَ إِذَا تَابَعَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّرْدُ",
+          "okunus": "es-serd",
+          "koken": "فَرْدٌ [ferd] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "serd",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sahtiyân dikmek.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَرْدٌ [serd] Şol zırha derler ki halkalarından örülmüş ola ve halkalarına dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "sözü muntazam söylemeye dahi derler; yukâlu: فُلَانٌ يَسْرُدُ الْحَدِيثَ سَرْدًا إِذَا كَانَ جَيِّدَ السِّيَاقِ Ve bir nesneyi birbirine ulaştırmağa dahi derler; yukâlu: سَرَدْتُ الصَّوْمَ أَيْ تَابَعْتُهُ Ve bir arâbîye أَتَعْرِفُ الْأَشْهُرَ الْحُرُمَ dediler, eyitti: نَعَمْ ثَلَاثَةٌ سَرْدٌ وَوَاحِدٌ فَرْدٌ ki سَرْدٌ [serd] olan zul-kade ve zil-hicce ve muharrem ve ferd olan recebdir.",
+              "misaller": [
+                ["فُلَانٌ يَسْرُدُ الْحَدِيثَ سَرْدًا إِذَا كَانَ جَيِّدَ السِّيَاقِ", ""],
+                ["سَرَدْتُ الصَّوْمَ أَيْ تَابَعْتُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّرْدُ",
+          "okunus": "es-serd",
+          "koken": "sînin fethi ve rânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "serd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Soğuk. Sert, haşin",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "serd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Düzgün dile getirme. Serd etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "serd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Söz söyleme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

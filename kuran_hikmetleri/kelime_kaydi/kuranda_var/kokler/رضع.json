@@ -97,14 +97,21 @@
       [66, "مُرَاضَع", "murāḍaʿ", "biriyle karşılıklı emzirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِرْضَاع", "ʾirḍāʿ", "emzirtme", "orta", "Vikisözlük: verbal noun of أَرْضَعَ (ʔarḍaʕa) (form IV)"]
+      [
+        67,
+        "إِرْضَاع",
+        "ʾirḍāʿ",
+        "Emzirme, süt verme",
+        "lugat",
+        "Vikisözlük: verbal noun of أَرْضَعَ (ʔarḍaʕa) (form IV) · Luggat"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِرْضَاعَة", "ʾirḍāʿa", "bir kere emzirtme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
       [69, "مُرْضِع", "murḍiʿ", "emzirten", "orta", ""],
-      [70, "مُرْضِعَة", "murḍiʿa", "emziren", "kuran", "Kur'ân"],
+      [70, "مُرْضِعَة", "murḍiʿa", "Sütanne", "lugat", "Kur'ân · Luggat"],
       [71, "مُرْضِعَان", "murḍiʿān", "emzirten, iki", "orta", ""],
       [72, "مُرْضِعَتَان", "murḍiʿatān", "emzirten, iki, müennes", "orta", ""],
       [73, "مُرْضِعُون", "murḍiʿūn", "emzirtenler", "orta", ""],
@@ -1674,7 +1681,99 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "إِرْضَاع": [
+        {
+          "eser": "Luggat",
+          "madde": "irzâ'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emzirme, süt verme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "IRZÂ – İRZÂ",
+          "yazilis": "ﺍﺭﺿﺎﻉ",
+          "tur": "i.",
+          "koken": "Ar. rażā‘a t “emmek”ten irżā‘",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emzirme, emzirerek süt verme, besleme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Emzirmek",
+              "misaller": [],
+              "deyim": "Irzâ etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çocukları emzirme",
+              "misaller": [],
+              "deyim": "Irzâ-ı etfal"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ana sütüyle besleme",
+              "misaller": [],
+              "deyim": "Irzâ-i mâderî"
+            }
+          ]
+        }
+      ],
+      "مُرْضِعَة": [
+        {
+          "eser": "Luggat",
+          "madde": "murzia",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sütanne",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "MURZİA – MURDİA",
+          "yazilis": "ﻣﺮﺿﻌﻪ",
+          "tur": "i.",
+          "koken": "Ar. irżā ‘ “emzirmek”ten murżi‘a – murdi‘a",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bebeğine süt emziren, memede çocuğu olan emzikli kadın",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir bebeğe süt emzirmek üzere ücretle tutulan kadın, sütanne, sütnine",
+              "misaller": [
+                ["Ve murziası Ümmü’l-Fazl idi ki zevce-i Abbas bin Abdülmuttalib’dir", "Fuzûlî"],
+                ["Yukarıda dâima söylenir iki hizmetçi kızla murzia kıyâfetli bir kadın", "Abdülhak Hâmit"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 11,
   "kuranda_var": true,

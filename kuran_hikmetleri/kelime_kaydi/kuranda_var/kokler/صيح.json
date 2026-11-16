@@ -341,7 +341,7 @@
       [724, "مَصَاحَان", "maṣāḥān", "bağırma, iki", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "صَيْحَة", "ṣayḥa", "çığlık", "kuran", "Kur'ân"],
+      [255, "صَيْحَة", "ṣayḥa", "Haykırış", "lugat", "Kur'ân · Luggat"],
       [256, "صَيْحَتَان", "ṣayḥatān", "bir kere bağırma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -385,7 +385,7 @@
       [885, "صَاحِين", "ṣāḥīn", "her daim bağıranlar", "orta", ""],
       [755, "صَاحَات", "ṣāḥāt", "her daim bağıranlar, müennes", "orta", ""],
       [294, "صَيْح", "ṣayḥ", "her daim bağıran", "orta", ""],
-      [295, "صَيْحَة", "ṣayḥa", "çığlık", "kuran", "Kur'ân"],
+      [295, "صَيْحَة", "ṣayḥa", "Haykırış", "lugat", "Kur'ân · Luggat"],
       [296, "صَيْحَان", "ṣayḥān", "her daim bağıran, iki", "orta", ""],
       [297, "صَيْحَتَان", "ṣayḥatān", "her daim bağıran, iki, müennes", "orta", ""],
       [298, "صَيْحُون", "ṣayḥūn", "her daim bağıranlar", "orta", ""],
@@ -556,7 +556,7 @@
       [431, "صَايُوحَة", "ṣāyūḥa", "bağırma türünden bir tane", "orta", ""],
       [436, "صَوْيَحَة", "ṣawyaḥa", "bağırma türünden bir tane", "orta", ""],
       [438, "صَيْيَحَة", "ṣayyaḥa", "bağırma türünden bir tane", "orta", ""],
-      [440, "صَيْحَة", "ṣayḥa", "çığlık", "kuran", "Kur'ân"],
+      [440, "صَيْحَة", "ṣayḥa", "Haykırış", "lugat", "Kur'ân · Luggat"],
       [920, "صَاحَة", "ṣāḥa", "bağırma türünden bir tane", "orta", ""],
       [922, "صِيحَة", "ṣīḥa", "bağırma türünden bir tane", "orta", ""],
       [924, "صُوحَة", "ṣūḥa", "bağırma türünden bir tane", "orta", ""],
@@ -779,7 +779,62 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صَيْحَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAYHA",
+          "yazilis": "ﺻﻴﺤﻪ",
+          "tur": "i.",
+          "koken": "Ar. ṣayḥa",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yüksek sesle bağırma, haykırma, çığlık, nâra",
+              "misaller": [
+                ["Nihâyet gökten bir sayha geldi, cümlesi helâk oldu", "Cevdet Paşa"],
+                ["Kâh teskîn-i heyecan için kalbini tutuyor, kâh men’-i sayha için ağzını kapıyor", "Hüseyin R. Gürpınar"],
+                ["● Sayha-zen", "ﺻﻴﺤﻪ ﺯﻥ"],
+                ["birl. sıf", "Fars. zen “vuran” ile"],
+                [
+                  "Haykıran, çığlık atan: Her ne zaman Kur’an okunduğunu işitse cezbelenerek kendini yere vurup sayha-zen olurmuş",
+                  "Muallim Nâci"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sayha",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Haykırış",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sayha",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ses",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 13,
   "kuranda_var": true,

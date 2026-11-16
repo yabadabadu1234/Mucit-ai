@@ -11,7 +11,7 @@
       [0, "غَسْق", "ğasq", "karanlık", "orta", ""],
       [1, "غِسْق", "ğisq", "karanlık", "orta", ""],
       [2, "غُسْق", "ğusq", "karanlık", "orta", ""],
-      [3, "غَسَق", "ğasaq", "karanlık", "kuran", "Vikisözlük: nightfall; dusk"],
+      [3, "غَسَق", "ğasaq", "Gecenin ibtidâ karanlığına denir", "lugat", "Vikisözlük: nightfall; dusk · Kamus"],
       [4, "غِسَق", "ğisaq", "karanlık", "orta", ""],
       [5, "غُسُق", "ğusuq", "karanlık", "orta", ""],
       [6, "غُسُوق", "ğusūq", "karanlık", "orta", ""],
@@ -289,7 +289,14 @@
       [516, "اِغْسِوَّاق", "iğsiwwāq", "aşırı karan olma", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "غَاسِق", "ğāsiq", "karan olan", "orta", "Vikisözlük: darkness; nightfall"],
+      [
+        213,
+        "غَاسِق",
+        "ğāsiq",
+        "Kamere ıtlâk olunur yâhûd şafak gâib olduğu hînde leyle ıtlâk olunur",
+        "lugat",
+        "Vikisözlük: darkness; nightfall · Kamus"
+      ],
       [214, "غَاسِقَة", "ğāsiqa", "karan olan, müennes", "orta", ""],
       [215, "غَاسِقَان", "ğāsiqān", "karan olan, iki", "orta", ""],
       [216, "غَاسِقَتَان", "ğāsiqatān", "karan olan, iki, müennes", "orta", ""],
@@ -383,7 +390,7 @@
       [284, "غَسُقُون", "ğasuqūn", "her daim karan olanlar", "orta", ""],
       [285, "غَسُقِين", "ğasuqīn", "her daim karan olanlar", "orta", ""],
       [286, "غَسُقَات", "ğasuqāt", "her daim karan olanlar, müennes", "orta", ""],
-      [287, "غَسَق", "ğasaq", "karanlık", "kuran", "Vikisözlük: nightfall; dusk"],
+      [287, "غَسَق", "ğasaq", "Gecenin ibtidâ karanlığına denir", "lugat", "Vikisözlük: nightfall; dusk · Kamus"],
       [288, "غَسَقَة", "ğasaqa", "her daim karan olan, müennes", "orta", ""],
       [289, "غَسَقَان", "ğasaqān", "her daim karan olan, iki", "orta", ""],
       [290, "غَسَقَتَان", "ğasaqatān", "her daim karan olan, iki, müennes", "orta", ""],
@@ -543,7 +550,7 @@
       [435, "غَوْسَق", "ğawsaq", "karan olma türünden şey", "orta", ""],
       [437, "غَيْسَق", "ğaysaq", "karan olma türünden şey", "orta", ""],
       [439, "غَسْق", "ğasq", "karan olma türünden şey", "orta", ""],
-      [441, "غَسَق", "ğasaq", "karanlık", "kuran", "Vikisözlük: nightfall; dusk"],
+      [441, "غَسَق", "ğasaq", "Gecenin ibtidâ karanlığına denir", "lugat", "Vikisözlük: nightfall; dusk · Kamus"],
       [443, "غِسْق", "ğisq", "karan olma türünden şey", "orta", ""],
       [445, "غُسْق", "ğusq", "karan olma türünden şey", "orta", ""],
       [447, "غَسِيق", "ğasīq", "karan olma türünden şey", "orta", ""],
@@ -579,7 +586,7 @@
       [466, "غَسَقَة", "ğasaqa", "karan olmalar", "orta", ""],
       [467, "غُسَّاق", "ğussāq", "karan olmalar", "orta", ""],
       [468, "غَسَاق", "ğasāq", "karan olmalar", "orta", ""],
-      [469, "غَسَق", "ğasaq", "karanlık", "kuran", "Vikisözlük: nightfall; dusk"],
+      [469, "غَسَق", "ğasaq", "Gecenin ibtidâ karanlığına denir", "lugat", "Vikisözlük: nightfall; dusk · Kamus"],
       [470, "مَغَاسِق", "mağāsiq", "karan olmalar", "orta", ""],
       [471, "مَغَاسِيق", "mağāsīq", "karan olmalar", "orta", ""],
       [472, "غَوَاسِق", "ğawāsiq", "karan olmalar", "orta", ""],
@@ -1267,7 +1274,97 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "غَسَق": [
+        {
+          "eser": "Kamus",
+          "madde": "gasak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gecenin ibtidâ karanlığına denir; yukâlu: مِنَ الْغَسَقِ إِلَى الْفَلَقِ أَيْ مِنْ ظُلْمَةِ أَوَّلِ اللَّيْلِ Ve غَسَقٌ [gasak] Buğday içinde زُؤَانٌ [zuân] ve karamuk gibi zâid nesneye denir. Müfredât-ı sâire beyânına göre karamuk olacaktır.",
+              "misaller": [
+                ["مِنَ الْغَسَقِ إِلَى الْفَلَقِ أَيْ مِنْ ظُلْمَةِ أَوَّلِ اللَّيْلِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغَسَقُ",
+          "okunus": "el-gasak",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "gasak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gecenin ibtidâ karanuluğu, evvel-i zulmet-i leyl manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغَسَقُ",
+          "okunus": "el-gasak",
+          "koken": "gaynın ve sînin fethiyle"
+        }
+      ],
+      "غَاسِق": [
+        {
+          "eser": "Kamus",
+          "madde": "gasik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kamere ıtlâk olunur yâhûd şafak gâib olduğu hînde leyle ıtlâk olunur; ve minhu kavluhu taâlâ: ﴿وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ﴾ أَيِ اللَّيْلِ إِذَا دَخَلَ أَوِ الثُّرَيَّا إِذَا سَقَطَتْ لِكَثْرَةِ الطَّوَاعِينِ وَالْأَسْقَامِ عِنْدَ سُقُوطِهَا وَقَالَ ابْنُ عَبَّاسٍ وَجَمَاعَةٌ مِنْ شَرِّ الذِّكَرِ إِذَا قَامَ Yanî bazılar mutlakan kamer ile ve bazılar leyl ile ve bazılar husûfa dâhil kamer ile ve bazılar zulmete dâhil gece ile tefsîr eylediler, zîrâ mevki-i şerr ü şûrdur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bazılar irtifâdan sâkıt olan Süreyyâ ile tefsîr eylediler ki o hengâmda tavâîn ve eskâm çok tahaddüs eder, husûsan devâbb ve mevâşî helâkları o evânda olur ve tulû ve irtifâında mündefi olur, niteki “إِذَا طَلَعَ النَّجْمُ اِرْتَفَعَتِ الْعَاهَاتُ” hadîsinde işâret olunmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "fil-Câmiis-Sagîr “إِذَا طَلَعَتِ الثُّرَيَّا أَمِنَ الزَّرْعُ مِنَ الْعَاهَاتِ” Ve İbn Abbâs ve müfessirînden cemâat-i kesîre kıvâma gelmiş zeker ile beyân eylediler ki şerr ve şûrun âlet-i mahsûsu olduğu tezkîrden müstagnîdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغَاسِقُ",
+          "okunus": "el-gâsik",
+          "koken": "ism-i fâil bünyesiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "gasik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Geceye derler, şafak gâib olduğu hînde.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Bârî taâlânın ﴿وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ﴾ (الفلق، 3) dediği إِذَا دَخَلَ manâsınadır, Hasen rivâyeti üzere. Bazılar غَاسِقٌ [gâsik]ten murâd kamerdir dedi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغَاسِقُ",
+          "okunus": "el-gâsik",
+          "koken": "sînin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 4,
   "kuranda_var": true,

@@ -8,13 +8,13 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "كَأْس", "kaʾs", "kadeh", "kuran", "Kur'ân"],
+      [0, "كَأْس", "kaʾs", "Kadeh, bardak", "lugat", "Kur'ân · Kubbealtı"],
       [1, "كِئْس", "kiʾs", "kadeh", "kontrol", ""],
       [2, "كُؤْس", "kuʾs", "kadeh", "kontrol", ""],
       [3, "كَأَس", "kaʾas", "kadeh", "kontrol", ""],
       [4, "كِئَس", "kiʾas", "kadeh", "kontrol", ""],
       [5, "كُؤُس", "kuʾus", "kadeh", "kontrol", ""],
-      [6, "كُؤُوس", "kuʾūs", "kadeh", "kontrol", ""],
+      [6, "كُؤُوس", "kuʾūs", "Cemi", "lugat", "Vankulu"],
       [7, "كِئَاس", "kiʾās", "kadeh", "kontrol", ""],
       [8, "كُؤَاس", "kuʾās", "kadeh", "kontrol", ""],
       [9, "كَآس", "kaʾās", "kadeh", "kontrol", ""],
@@ -390,7 +390,7 @@
       [291, "كَأَسُون", "kaʾasūn", "her daim kadeh olanlar", "kontrol", ""],
       [292, "كَأَسِين", "kaʾasīn", "her daim kadeh olanlar", "kontrol", ""],
       [293, "كَأَسَات", "kaʾasāt", "her daim kadeh olanlar, müennes", "kontrol", ""],
-      [294, "كَأْس", "kaʾs", "kadeh", "kuran", "Kur'ân"],
+      [294, "كَأْس", "kaʾs", "Kadeh, bardak", "lugat", "Kur'ân · Kubbealtı"],
       [295, "كَأْسَة", "kaʾsa", "her daim kadeh olan, müennes", "kontrol", ""],
       [296, "كَأْسَان", "kaʾsān", "her daim kadeh olan, iki", "kontrol", ""],
       [297, "كَأْسَتَان", "kaʾsatān", "her daim kadeh olan, iki, müennes", "kontrol", ""],
@@ -526,13 +526,13 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "كَآس", "kaʾās", "kadeh olma", "kontrol", ""],
-      [422, "كُؤُوس", "kuʾūs", "kadeh olma", "kontrol", ""],
+      [422, "كُؤُوس", "kuʾūs", "Cemi", "lugat", "Vankulu"],
       [423, "كِئَاس", "kiʾās", "kadeh olma", "kontrol", ""],
       [424, "كُؤْس", "kuʾs", "kadeh olma", "kontrol", ""],
       [425, "كَآسَة", "kaʾāsa", "kadeh olma", "kontrol", ""],
       [426, "كِئَاسَة", "kiʾāsa", "kadeh olma", "kontrol", ""],
       [427, "كُؤُوسَة", "kuʾūsa", "kadeh olma", "kontrol", ""],
-      [428, "كَأْس", "kaʾs", "kadeh", "kuran", "Kur'ân"],
+      [428, "كَأْس", "kaʾs", "Kadeh, bardak", "lugat", "Kur'ân · Kubbealtı"],
       [429, "كِئْس", "kiʾs", "kadeh olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُكْؤُوسَة", "ʾukʾūsa", "kadeh olma türünden şey", "kontrol", ""],
       [435, "كَوْأَس", "kawʾas", "kadeh olma türünden şey", "kontrol", ""],
       [437, "كَيْأَس", "kayʾas", "kadeh olma türünden şey", "kontrol", ""],
-      [439, "كَأْس", "kaʾs", "kadeh", "kuran", "Kur'ân"],
+      [439, "كَأْس", "kaʾs", "Kadeh, bardak", "lugat", "Kur'ân · Kubbealtı"],
       [441, "كَأَس", "kaʾas", "kadeh olma türünden şey", "kontrol", ""],
       [443, "كِئْس", "kiʾs", "kadeh olma türünden şey", "kontrol", ""],
       [445, "كُؤْس", "kuʾs", "kadeh olma türünden şey", "kontrol", ""],
@@ -569,7 +569,7 @@
       [456, "أَكْئِسَة", "ʾakʾisa", "kadeh olmalar", "kontrol", ""],
       [457, "أَكَائِس", "ʾakāʾis", "kadeh olmalar", "kontrol", ""],
       [458, "أَكَائِيس", "ʾakāʾīs", "kadeh olmalar", "kontrol", ""],
-      [459, "كُؤُوس", "kuʾūs", "kadeh olmalar", "kontrol", ""],
+      [459, "كُؤُوس", "kuʾūs", "Cemi", "lugat", "Vankulu"],
       [460, "كُؤُس", "kuʾus", "kadeh olmalar", "kontrol", ""],
       [461, "كِئَاس", "kiʾās", "kadeh olmalar", "kontrol", ""],
       [462, "كِئَس", "kiʾas", "kadeh olmalar", "kontrol", ""],
@@ -921,7 +921,112 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كَأْس": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KE’S",
+          "yazilis": "ﻛﺄﺱ",
+          "tur": "i.",
+          "koken": "Ar. ke’s",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kadeh, bardak",
+              "misaller": [
+                ["Dedi hum-hâne-i Hak’tır bu dünyâ / Serâser ke’s oluptur ana eşyâ", "Şemseddin Sivâsî"],
+                ["Kırık bir meşrebe bulmaz acı su içmeğe rindan / Şarâb-ı nâb içer cühhâl ke’s-i mertebânîden", "Saffet’ten"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Şarap dolu kadeh",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "bota.",
+              "tanim": "Çiçeklerin en dışında bulunan yeşil yaprak kısmı, çanak",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Kes",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Su ve şerbet içecek kaba denir. Alâ-kavlin içinde meşrûbâttan nesne olmadıkça كَأْسٌ [kes] ıtlâk olunmaz. Ümmehât-ı sâirenin beyânına göre كَأْسٌ [kes] hemze ile ve tahfîfle de müstameldir. Marûf bardağa denir ki Fârisîde câm denir. İçinde su ve sâir meşrûb bulunmağa hâstır ve illâ ona قَدْحٌ [kadh] denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "كَأْسٌ [kes] lafzı mehmûz ve müennestir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "كَأْسٌ [kes] İçileceğe de ıtlâk olunur; yukâlu: كَأْسٌ خَالِيَةٌ وَشَرِبْتُ كَأْسًا وَكَأْسٌ طَيِّبَةٌ أَيْ شَرَابٌ Cemi أَكْؤُسٌ [ekus] gelir, أَفْلُسٌ [eflus] gibi ve كُؤُوسٌ [kuûs] gelir ve كَاسَاتٌ [kâsât] gelir, tahfîf-i hemze ile ve كِئَاسٌ [kiâs] gelir kâfın kesriyle.",
+              "misaller": [
+                ["كَأْسٌ خَالِيَةٌ وَشَرِبْتُ كَأْسًا وَكَأْسٌ طَيِّبَةٌ أَيْ شَرَابٌ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "كَأْسٌ [Kes] İsm-i Binti Kelhabet el-Urenîdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَأْسُ",
+          "okunus": "el-kes",
+          "koken": "kâfın fethi ve hemzenin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kes",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Çanak ki onunla bir nesne şürb olunur; müennes-i semâîdir, kâlallâhu taâlâ azze ve celle: ﴿بِكَأْسٍ مِنْ مَعِينٍ بَيْضَاءَ﴾ (الصافات 45، 46) Ve İbnul-Arâbî eyitti: كَأْسٌ [kes]e كَأْسٌ [kes] denmez içinde meşrûbâttan nesne olmadıkça.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَأْسُ",
+          "okunus": "el-kes",
+          "koken": ""
+        }
+      ],
+      "كُؤُوس": [
+        {
+          "eser": "Vankulu",
+          "madde": "kuus",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكُؤُوسُ",
+          "okunus": "el-kuûs",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

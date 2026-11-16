@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "خَبْط", "ḫabṭ", "karanlıkta yürüme", "orta", ""],
+      [0, "خَبْط", "ḫabṭ", "Yanlış hareket", "lugat", "Luggat"],
       [1, "خِبْط", "ḫibṭ", "karanlıkta yürüme", "orta", ""],
       [2, "خُبْط", "ḫubṭ", "karanlıkta yürüme", "orta", ""],
       [3, "خَبَط", "ḫabaṭ", "karanlıkta yürüme", "orta", ""],
@@ -397,7 +397,7 @@
       [291, "خَبَطُون", "ḫabaṭūn", "her daim karanlıkta yürüyenler", "orta", ""],
       [292, "خَبَطِين", "ḫabaṭīn", "her daim karanlıkta yürüyenler", "orta", ""],
       [293, "خَبَطَات", "ḫabaṭāt", "her daim karanlıkta yürüyenler, müennes", "orta", ""],
-      [294, "خَبْط", "ḫabṭ", "her daim karanlıkta yürüyen", "orta", ""],
+      [294, "خَبْط", "ḫabṭ", "Yanlış hareket", "lugat", "Luggat"],
       [295, "خَبْطَة", "ḫabṭa", "her daim karanlıkta yürüyen, müennes", "orta", ""],
       [296, "خَبْطَان", "ḫabṭān", "her daim karanlıkta yürüyen, iki", "orta", ""],
       [297, "خَبْطَتَان", "ḫabṭatān", "her daim karanlıkta yürüyen, iki, müennes", "orta", ""],
@@ -539,7 +539,7 @@
       [425, "خَبَاطَة", "ḫabāṭa", "karanlıkta yürüme", "orta", ""],
       [426, "خِبَاطَة", "ḫibāṭa", "karanlıkta yürüme", "orta", ""],
       [427, "خُبُوطَة", "ḫubūṭa", "karanlıkta yürüme", "orta", ""],
-      [428, "خَبْط", "ḫabṭ", "karanlıkta yürüme", "orta", ""],
+      [428, "خَبْط", "ḫabṭ", "Yanlış hareket", "lugat", "Luggat"],
       [429, "خِبْط", "ḫibṭ", "karanlıkta yürüme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُخْبُوطَة", "ʾuḫbūṭa", "karanlıkta yürüme türünden şey", "orta", ""],
       [435, "خَوْبَط", "ḫawbaṭ", "karanlıkta yürüme türünden şey", "orta", ""],
       [437, "خَيْبَط", "ḫaybaṭ", "karanlıkta yürüme türünden şey", "orta", ""],
-      [439, "خَبْط", "ḫabṭ", "karanlıkta yürüme türünden şey", "orta", ""],
+      [439, "خَبْط", "ḫabṭ", "Yanlış hareket", "lugat", "Luggat"],
       [441, "خَبَط", "ḫabaṭ", "karanlıkta yürüme türünden şey", "orta", ""],
       [443, "خِبْط", "ḫibṭ", "karanlıkta yürüme türünden şey", "orta", ""],
       [445, "خُبْط", "ḫubṭ", "karanlıkta yürüme türünden şey", "orta", ""],
@@ -1479,7 +1479,134 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "خَبْط": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HABT",
+          "yazilis": "ﺧﺒﻂ",
+          "tur": "i.",
+          "koken": "Ar. ḫabṭ “kör gibi yürüme”",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yanlış, hatâ",
+              "misaller": [
+                ["Ne habt ettik günâhımız aceb ne / Neden bizden melûl oldu sebeb ne", "Şeyhoğlu Mustafa"],
+                ["Olıcak habt u hatâ imlâda / Hüsn ü hattan ne çıkar ma’nâda", "Sünbülzâde Vehbî"],
+                ["Gördüm ki avâmın eseri sûd ü zarardır / Her işlerinin âkibeti habt u hatardır", "Bayburtlu Zihni"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Delilik",
+              "misaller": [],
+              "deyim": "Habt-ı dimâğî"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "habt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şiddetle vurmak manâsınadır; yukâlu: خَبَطَهُ خَبْطًا مِنَ الْبَابِ الثَّانِي إِذَا ضَرَبَهُ شَدِيدًا Ve deve elleriyle yere çalmak manâsınadır; yukâlu: خَبَطَ الْبَعِيرُ بِيَدِهِ الْأَرْضَ إِذَا ضَرَبَهَا Ve bir nesneyi şiddetle basıp çiğnemek manâsınadır; yukâlu: خَبَطَهُ إِذَا وَطِئَهُ شَدِيدًا Ve önüne her kim râst gelirse kılıç ile çalıp dövmek manâsına müstameldir; yukâlu: خَبَطَ الْقَوْمَ بِسَيْفِهِ إِذَا جَلَدَهُمْ Ve ağacın dallarını ziyân olmamak için bağladıktan sonra sırık ile yapraklarını silkmek manâsınadır; yukâlu: خَبَطَ الشَّجَرَةَ إِذَا شَدَّهَا ثُمَّ نَفَضَ وَرَقَهَا Ve gece vakti yollu yolsuz kör gidişi gibi görülmeden nere gelirse basarak yürüyüp gitmek manâsına müstameldir; yukâlu: خَبَطَ اللَّيْلَ إِذَا سَارَ فِيهِ عَلَى غَيْرِ هُدًى وَمِنْهُ hخَبْطَ عَشْوَاءَH Ve bir kimseye cin dokunmak manâsınadır ki cin çarpmak tabîr olunur; yukâlu: خَبَطَ الشَّيْطَانُ فُلاَنًا إِذَا مَسَّهُ بِأَذًى Ve karâbet ve muârefe makûlesi vesîle yok iken bir adamdan ihsân taleb eylemek manâsına müstameldir; yukâlu: خَبَطَ زَيْدًا إِذَا سَأَلَهُ الْمَعْرُوفَ مِنْ غَيْرِ آصِرَةٍ Ve bir adam bî-karâbet ihsân isteyen kimseye ihsân eylemek manâsınadır; yukâlu: خَبَطَ زَيْدًا فَخَبَطَهُ زَيْدٌ بِخَيْرٍ أَيْ أَعْطَاهُ Ve ayağa kalkmak manâsınadır; yukâlu: خَبَطَ الرَّجُلُ إِذَا قَامَ Ve deveyi خِبَاطٌ [hibât] dedikleri damga ile damgalamak manâsınadır; yukâlu: خَبَطَ الْبَعِيرَ إِذَا وَسَمَهُ بِالْخِبَاطِ Ve bir kimseyi uyku basmakla uyumak için nere olursa olsun hemân kendisini oraya bırakıp yatmak manâsına müstameldir; yukâlu: خَبَطَ فُلاَنٌ إِذَا طَرَحَ نَفْسَهُ لِيَنَامَ Ve bir adam bir kimseye bî-vesîle-i muârefe inâm eylemek manâsınadır; yukâlu: خَبَطَ فُلاَنٌ فُلاَنًا إِذَا أَنْعَمَ عَلَيْهِ مِنْ غَيْرِ مَعْرِفَةٍ بَيْنَهُمَا",
+              "misaller": [
+                ["خَبَطَهُ خَبْطًا مِنَ الْبَابِ الثَّانِي إِذَا ضَرَبَهُ شَدِيدًا", ""],
+                ["خَبَطَ الْبَعِيرُ بِيَدِهِ الْأَرْضَ إِذَا ضَرَبَهَا", ""],
+                ["خَبَطَهُ إِذَا وَطِئَهُ شَدِيدًا", ""],
+                ["خَبَطَ الْقَوْمَ بِسَيْفِهِ إِذَا جَلَدَهُمْ", ""],
+                ["خَبَطَ الشَّجَرَةَ إِذَا شَدَّهَا ثُمَّ نَفَضَ وَرَقَهَا", ""],
+                ["خَبَطَ اللَّيْلَ إِذَا سَارَ فِيهِ عَلَى غَيْرِ هُدًى وَمِنْهُ", ""],
+                ["خَبَطَ الشَّيْطَانُ فُلاَنًا إِذَا مَسَّهُ بِأَذًى", ""],
+                ["خَبَطَ زَيْدًا إِذَا سَأَلَهُ الْمَعْرُوفَ مِنْ غَيْرِ آصِرَةٍ", ""],
+                ["خَبَطَ زَيْدًا فَخَبَطَهُ زَيْدٌ بِخَيْرٍ أَيْ أَعْطَاهُ", ""],
+                ["خَبَطَ الرَّجُلُ إِذَا قَامَ", ""],
+                ["خَبَطَ الْبَعِيرَ إِذَا وَسَمَهُ بِالْخِبَاطِ", ""],
+                ["خَبَطَ فُلاَنٌ إِذَا طَرَحَ نَفْسَهُ لِيَنَامَ", ""],
+                ["خَبَطَ فُلاَنٌ فُلاَنًا إِذَا أَنْعَمَ عَلَيْهِ مِنْ غَيْرِ مَعْرِفَةٍ بَيْنَهُمَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَبْطُ",
+          "okunus": "el-habt",
+          "koken": "hânın ve bânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "habt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Karıştırmak; yukâlu: خَبَطَ الْبَعِيرُ الْأَرْضَ بِيَدِهِ خَبْطًا ضَرَبَهَا Ve minhu kîle: خَبْطَ عَشْوَاءَ Yanî bir kimse bir emrde hidâyet üzere olmasa خَبَطَ خَبْطَ عَشْوَاءَ derler.",
+              "misaller": [
+                ["خَبَطَ الْبَعِيرُ الْأَرْضَ بِيَدِهِ خَبْطًا ضَرَبَهَا", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "عَشْوَاءُ [aşvâ] ayn-ı mühmelenin fethi ve elifin kasrıyla şol nâkadır ki basarında zaf olmağın bir nesneden sakınmaz.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "خَبْطٌ [habt] Bir kimse uyumak için kendi nefsini kanda olursa bırakmağa dahi derler; yukâlu: خَبَطَ الرَّجُلُ إِذَا طَرَحَ نَفْسَهُ حَيْثُ كَانَ لِيَنَامَ Ve خَبْطٌ [habt] Asâ ile ağacı vurmağa da derler, yaprağı düşsün diye.",
+              "misaller": [
+                ["خَبَطَ الرَّجُلُ إِذَا طَرَحَ نَفْسَهُ حَيْثُ كَانَ لِيَنَامَ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "خَبْطٌ [habt] Bir kmiseyi bilmeden ihsân etmeğe dahi derler; yukâlu: خَبَطْتُ الرَّجُلَ إِذَا أَنْعَمْتَ عَلَيْهِ مِنْ غَيْرِ مَعْرِفَةٍ بَيْنَكُمَا Ve خَبْطٌ [habt] Davarın uyluğu üzerine arkırı dâg çekmeğe dahi derler; tekûlu: خَبَطَ بَعِيرَهُ",
+              "misaller": [
+                ["خَبَطْتُ الرَّجُلَ إِذَا أَنْعَمْتَ عَلَيْهِ مِنْ غَيْرِ مَعْرِفَةٍ بَيْنَكُمَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَبْطُ",
+          "okunus": "el-habt",
+          "koken": "hânın fethi ve bânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "habt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yanlış hareket",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "habtühata",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yanlış yapma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

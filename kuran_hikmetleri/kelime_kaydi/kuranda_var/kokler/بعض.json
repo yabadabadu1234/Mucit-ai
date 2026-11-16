@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "بَعْض", "baʿḍ", "bazı, birkaç", "kuran", "Vikisözlük: some, part"],
+      [0, "بَعْض", "baʿḍ", "Kimi", "lugat", "Vikisözlük: some, part · Luggat"],
       [1, "بِعْض", "biʿḍ", "bir kısım", "kontrol", ""],
       [2, "بُعْض", "buʿḍ", "bir kısım", "kontrol", ""],
       [3, "بَعَض", "baʿaḍ", "bir kısım", "kontrol", ""],
@@ -397,7 +397,7 @@
       [291, "بَعَضُون", "baʿaḍūn", "her daim bir kısım olanlar", "kontrol", ""],
       [292, "بَعَضِين", "baʿaḍīn", "her daim bir kısım olanlar", "kontrol", ""],
       [293, "بَعَضَات", "baʿaḍāt", "her daim bir kısım olanlar, müennes", "kontrol", ""],
-      [294, "بَعْض", "baʿḍ", "bazı, birkaç", "kuran", "Vikisözlük: some, part"],
+      [294, "بَعْض", "baʿḍ", "Kimi", "lugat", "Vikisözlük: some, part · Luggat"],
       [295, "بَعْضَة", "baʿḍa", "her daim bir kısım olan, müennes", "kontrol", ""],
       [296, "بَعْضَان", "baʿḍān", "her daim bir kısım olan, iki", "kontrol", ""],
       [297, "بَعْضَتَان", "baʿḍatān", "her daim bir kısım olan, iki, müennes", "kontrol", ""],
@@ -539,7 +539,7 @@
       [425, "بَعَاضَة", "baʿāḍa", "bir kısım olma", "kontrol", ""],
       [426, "بِعَاضَة", "biʿāḍa", "bir kısım olma", "kontrol", ""],
       [427, "بُعُوضَة", "buʿūḍa", "bir kısım olma", "kontrol", "Vikisözlük: a mosquito, gnat"],
-      [428, "بَعْض", "baʿḍ", "bazı, birkaç", "kuran", "Vikisözlük: some, part"],
+      [428, "بَعْض", "baʿḍ", "Kimi", "lugat", "Vikisözlük: some, part · Luggat"],
       [429, "بِعْض", "biʿḍ", "bir kısım olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُبْعُوضَة", "ʾubʿūḍa", "bir kısım olma türünden şey", "kontrol", ""],
       [435, "بَوْعَض", "bawʿaḍ", "bir kısım olma türünden şey", "kontrol", ""],
       [437, "بَيْعَض", "bayʿaḍ", "bir kısım olma türünden şey", "kontrol", ""],
-      [439, "بَعْض", "baʿḍ", "bazı, birkaç", "kuran", "Vikisözlük: some, part"],
+      [439, "بَعْض", "baʿḍ", "Kimi", "lugat", "Vikisözlük: some, part · Luggat"],
       [441, "بَعَض", "baʿaḍ", "bir kısım olma türünden şey", "kontrol", ""],
       [443, "بِعْض", "biʿḍ", "bir kısım olma türünden şey", "kontrol", ""],
       [445, "بُعْض", "buʿḍ", "bir kısım olma türünden şey", "kontrol", ""],
@@ -1277,7 +1277,42 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَعْض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BA’Z",
+          "yazilis": "ﺑﻌﺾ",
+          "tur": "i.",
+          "koken": "Ar. ba‘ż",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir şeyin küçük kısmı, parçası, cüz’ü [Dilimizde çok az kullanılmış, iyelik ekiyle genişleyerek bâzı şeklini almıştır]",
+              "misaller": [
+                ["Mütecezzî olmayan bir şeyin ba’zını zikretmek küllünü zikir gibidir", "Cevdet Paşa"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "bazı",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kimi",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 158,
   "kuranda_var": true,

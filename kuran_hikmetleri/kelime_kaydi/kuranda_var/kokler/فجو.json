@@ -324,7 +324,14 @@
       [724, "مَفْجَيَان", "mafcayān", "açık olma, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "فَجْوَة", "facwa", "boşluk", "kuran", "Vikisözlük: interval, distance"],
+      [
+        255,
+        "فَجْوَة",
+        "facwa",
+        "İki nesnenin aralık yerine denir ki açık olur",
+        "lugat",
+        "Vikisözlük: interval, distance · Kamus"
+      ],
       [256, "فَجْوَتَان", "facwatān", "bir kere açık olma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -364,7 +371,14 @@
       [754, "فَجَوَان", "facawān", "her daim açık olan, iki", "orta", ""],
       [755, "فَجَوَات", "facawāt", "her daim açık olanlar, müennes", "orta", ""],
       [294, "فَجْو", "facw", "her daim açık olan", "orta", ""],
-      [295, "فَجْوَة", "facwa", "boşluk", "kuran", "Vikisözlük: interval, distance"],
+      [
+        295,
+        "فَجْوَة",
+        "facwa",
+        "İki nesnenin aralık yerine denir ki açık olur",
+        "lugat",
+        "Vikisözlük: interval, distance · Kamus"
+      ],
       [296, "فَجْوَان", "facwān", "her daim açık olan, iki", "orta", ""],
       [297, "فَجْوَتَان", "facwatān", "her daim açık olan, iki, müennes", "orta", ""],
       [298, "فَجْوُون", "facwūn", "her daim açık olanlar", "orta", ""],
@@ -526,7 +540,14 @@
       [431, "فَاجُووَة", "fācūwa", "açık olma türünden bir tane", "orta", ""],
       [436, "فَوْجَوَة", "fawcawa", "açık olma türünden bir tane", "orta", ""],
       [438, "فَيْجَوَة", "faycawa", "açık olma türünden bir tane", "orta", ""],
-      [440, "فَجْوَة", "facwa", "boşluk", "kuran", "Vikisözlük: interval, distance"],
+      [
+        440,
+        "فَجْوَة",
+        "facwa",
+        "İki nesnenin aralık yerine denir ki açık olur",
+        "lugat",
+        "Vikisözlük: interval, distance · Kamus"
+      ],
       [444, "فِجْوَة", "ficwa", "açık olma türünden bir tane", "orta", ""],
       [446, "فُجْوَة", "fucwa", "açık olma türünden bir tane", "orta", ""],
       [842, "فَجِيَّة", "faciyya", "açık olma türünden bir tane", "orta", ""],
@@ -868,7 +889,52 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَجْوَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-fecvet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İki nesnenin aralık yerine denir ki açık olur; yukâlu: بَيْنَهُمَا فَجْوَةٌ أَيْ فُرْجَةٌ Ve geniş ve meydânlı yere denir; tekûlu: بَيْنِي وَبَيْنَهُ فَجْوَةٌ أَيْ أَرْضٌ مُتَّسِعَةٌ Ve ev avlusuna denir; yukâlu: فَجْوَةُ الدَّارِ أَيْ سَاحَتُهَا Ve dâbbe kısmının sağ tırnağıyla sol tırnağının aralığına denir, gerek dururken ve gerek yerde izinde olsun; cemi فَجَوَاتٌ [fecevât] gelir fetehâtla ve فِجَاءٌ [ficâ] gelir, كِسَاءٌ [kisâ] vezninde.",
+              "misaller": [
+                ["بَيْنَهُمَا فَجْوَةٌ أَيْ فُرْجَةٌ", ""],
+                ["فَجْوَةُ الدَّارِ أَيْ سَاحَتُهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَجْوَةُ",
+          "okunus": "el-fecvet",
+          "koken": "fânın fethi ve cîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-fecvet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Aralık ve iki nesnenin mâ-beyninde vâsi olan nesne.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فَجْوَةُ الدَّارِ [fecvetud-dâr] Evin ortasına dahi derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَجْوَةُ",
+          "okunus": "el-fecvet",
+          "koken": "fânın fethi ve cîmin sükûnu ile"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

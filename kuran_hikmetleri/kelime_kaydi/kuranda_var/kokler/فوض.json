@@ -26,7 +26,14 @@
       [15, "فَوَضَان", "fawaḍān", "bırakma", "orta", ""],
       [16, "فُوْضَان", "fuwḍān", "bırakma", "orta", ""],
       [17, "فِوْضَان", "fiwḍān", "bırakma", "orta", ""],
-      [18, "فَوْضَى", "fawḍā", "bırakma", "orta", "Vikisözlük: being in a state of dispersion"],
+      [
+        18,
+        "فَوْضَى",
+        "fawḍā",
+        "[XX. yüzyıl başlarında “anarşi” karşılığında kullanılmıştır] Kargaşalık, anarşi",
+        "lugat",
+        "Vikisözlük: being in a state of dispersion · Kubbealtı"
+      ],
       [19, "فُوْضَى", "fuwḍā", "bırakma", "orta", ""],
       [20, "فِوْضَى", "fiwḍā", "bırakma", "orta", ""],
       [21, "فَوَضَة", "fawaḍa", "bırakma", "orta", ""],
@@ -43,9 +50,9 @@
         29,
         "تَفْوِيض",
         "tafwīḍ",
-        "çokça bırakma",
-        "orta",
-        "Vikisözlük: masdar (bâb II): to entrust, to confer, to commit to"
+        "Birine bırakma",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to entrust, to confer, to commit to · Luggat"
       ],
       [30, "تَفْوِضَة", "tafwiḍa", "çokça bırakma", "orta", ""],
       [31, "فِوِّاض", "fiwwāḍ", "çokça bırakma", "orta", ""]
@@ -1780,7 +1787,110 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَوْضَى": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FEVZÂ",
+          "yazilis": "ﻓﻮﺿﺎ – ﻓﻮﺿﻰ",
+          "tur": "i.",
+          "koken": "Ar. fevżā",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "[XX. yüzyıl başlarında “anarşi” karşılığında kullanılmıştır] Kargaşalık, anarşi",
+              "misaller": [
+                ["âsâr-ı tuğyan ve fevzâdan usanmıştı", "Cenap Şahâbeddin"],
+                [
+                  "Sırtlanları geçmişti beşer yırtıcılıkta / Dişsiz mi bir insan onu kardeşleri yerdi / Fevzâ bütün âfâkını sarmıştı zemînin / Salgındı bugün şarkı yıkan tefrika derdi",
+                  "Mehmet Âkif"
+                ],
+                ["● Fevzâî", "ﻓﻮﺿﺎﺋﻰ"],
+                ["sıf. ve i", "nispet eki -і ile fevżāvі ’den"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَفْوِيض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEFVİZ",
+          "yazilis": "ﺗﻔﻮﻳﺾ",
+          "tur": "i.",
+          "koken": "Ar. fevż > tefvіz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir iş veya şeyi bir kimsenin üstüne bırakma, ihâle",
+              "misaller": [
+                ["Tefvîz edip umûrunu âkıl meşiyyete / Fermân-ı hâliku’l-beşere imtisâl eder", "Nâilî"],
+                ["Eyledin erbâb-ı istihkāka tefvîz-i umûr / Matlabın üzre olur cârî mesâlih ba’de-zin", "Ziyâ Paşa’dan"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Devlet arâzisinin müzâyede ile belirlenen veya takdir edilen bedelinin peşin alınarak satılması",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "din.",
+              "tanim": "Her işini Allah’a bırakma ve O’nun yaptığı her şeyi gönül hoşluğu ile karşılama",
+              "misaller": [
+                [
+                  "Gelir elbette zuhûra ne ise hükm-i kader / Hakk’a tefvîz-i umûr et ne elem çek ne keder",
+                  "Enderunlu Vâsıf’tan"
+                ],
+                [
+                  "Nâil-i neyl-i murâd olmaksa maksûdun eğer / Hakk’a tefvîz-i umûr et fâriğ ol tedbîrden",
+                  "Hersekli Ârif Hikmet’ten"
+                ]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Eskiden bir nikâhta kocanın boşanma hakkını karısına veya üçüncü bir şahsa bırakması",
+              "misaller": [],
+              "deyim": "Tefvîz-i talâk"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefviz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Birine bırakma. İhale etme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefvîz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İşi başkasına bırakma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

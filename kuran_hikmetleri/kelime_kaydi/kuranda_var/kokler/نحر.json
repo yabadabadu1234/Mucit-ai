@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "نَحْر", "naḥr", "kurban kesme", "orta", "Vikisözlük: masdar (bâb I): to slaughter, to butcher"],
+      [
+        0,
+        "نَحْر",
+        "naḥr",
+        "Boğazlama, kesme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slaughter, to butcher · Kubbealtı"
+      ],
       [1, "نِحْر", "niḥr", "kurban kesme", "orta", ""],
       [2, "نُحْر", "nuḥr", "kurban kesme", "orta", ""],
       [3, "نَحَر", "naḥar", "kurban kesme", "orta", ""],
@@ -216,9 +223,9 @@
         135,
         "اِنْتِحَار",
         "intiḥār",
-        "kendisi için kurban kesme",
-        "orta",
-        "Vikisözlük: verbal noun of اِنْتَحَرَ (intaḥara, “to commit suicide”) (form VII)"
+        "Kendini öldürme, canına kıyma",
+        "lugat",
+        "Vikisözlük: verbal noun of اِنْتَحَرَ (intaḥara, “to commit suicide”) (form VII) · Luggat"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -408,9 +415,9 @@
         294,
         "نَحْر",
         "naḥr",
-        "her daim kurban kesen",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to slaughter, to butcher"
+        "Boğazlama, kesme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slaughter, to butcher · Kubbealtı"
       ],
       [295, "نَحْرَة", "naḥra", "her daim kurban kesen, müennes", "orta", ""],
       [296, "نَحْرَان", "naḥrān", "her daim kurban kesen, iki", "orta", ""],
@@ -553,7 +560,14 @@
       [425, "نَحَارَة", "naḥāra", "kurban kesme", "orta", ""],
       [426, "نِحَارَة", "niḥāra", "kurban kesme", "orta", ""],
       [427, "نُحُورَة", "nuḥūra", "kurban kesme", "orta", ""],
-      [428, "نَحْر", "naḥr", "kurban kesme", "orta", "Vikisözlük: masdar (bâb I): to slaughter, to butcher"],
+      [
+        428,
+        "نَحْر",
+        "naḥr",
+        "Boğazlama, kesme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slaughter, to butcher · Kubbealtı"
+      ],
       [429, "نِحْر", "niḥr", "kurban kesme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -567,9 +581,9 @@
         439,
         "نَحْر",
         "naḥr",
-        "kurban kesme türünden şey",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to slaughter, to butcher"
+        "Boğazlama, kesme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to slaughter, to butcher · Kubbealtı"
       ],
       [441, "نَحَر", "naḥar", "kurban kesme türünden şey", "orta", ""],
       [443, "نِحْر", "niḥr", "kurban kesme türünden şey", "orta", ""],
@@ -1266,7 +1280,180 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "نَحْر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "NAHR",
+          "yazilis": "ﻧﺤﺮ",
+          "tur": "i.",
+          "koken": "Ar. naḥr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Boğazlama, kesme",
+              "misaller": [
+                [" Yevmü’n-nahr: Kurban bayramının ilk günü.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Aruz vezninde “mef’ûlât” cüzünü keserek “fa‘” şekline sokma",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "nahr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Göğsün yukarısına denir, ser-i sîne manâsına; alâ-kavlin kılâde mevziine denir ki boyuna kılâde geçirildikte sarkıp durduğu yerden ibarettir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "نَحْرٌ [nahr] lafzı müzekkerdir; cemi نُحُورٌ [nuhûr]dur; yukâlu: ضَرَبَ نَحْرَهُ وَهُوَ أَعْلاَ الصَّدْرِ أَوْ مَوْضِعُ الْقِلاَدَةِ Ve نَحْرٌ [nahr] ve تَنْحَارٌ [tenhâr] (تَذْكَارٌ [tezkâr] vezninde) Bir adamın نَحْرٌ [nahr]ına vurmak yâ dokunmak manâsınadır; yukâlu: نَحَرَهُ نَحْرًا وَتَنْحَارًا مِنَ الْبَابِ الثَّالِثِ إِذَا أَصَابَ نَحْرَهُ Ve göğsün yukarısından boğaz zâhir olacak yere bıçak sokmak manâsınadır ki boğaz çukuru olur. Badehu oradan zebh eylemekte gâlib oldu, zîrâ deveyi ibtidâ oradan zebh ederler; yukâlu: نَحَرَ الْبَعِيرَ إِذَا طَعَنَهُ حَيْثُ يَبْدُو الْحُلْقُومُ مِنْ أَعْلَى الصَّدْرِ [ve]",
+              "misaller": [
+                ["ضَرَبَ نَحْرَهُ وَهُوَ أَعْلاَ الصَّدْرِ أَوْ مَوْضِعُ الْقِلاَدَةِ", ""],
+                ["نَحَرَهُ نَحْرًا وَتَنْحَارًا مِنَ الْبَابِ الثَّالِثِ إِذَا أَصَابَ نَحْرَهُ", ""],
+                ["نَحَرَ الْبَعِيرَ إِذَا طَعَنَهُ حَيْثُ يَبْدُو الْحُلْقُومُ مِنْ أَعْلَى الصَّدْرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّحْرُ",
+          "okunus": "en-nahr",
+          "koken": "بَحْرٌ [bahr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "nahr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kılâde yerine derler, göğüsten.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "نَحْرٌ [nahr] Gündüzün ibtidâsına da derler, evvel-i nehâr manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "نَحْرٌ [nahr] Göğüse karîb yerde boğazlamaktır, ذَبْحٌ [zebh] boğazda olduğu gibi.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "نَحْرٌ [nahr] Bir kimsenin göğsüne vurmağa da derler, nitekim نَحْرٌ [nahr] göğüs üzerine çıkmağa derler; tekûlu: نَحَرْتُ الرَّجُلَ إِذَا أَصَبْتَ فِي مَنْحَرِهِ وَنَحَرْتُهُ إِذَا صِرْتَ فِي نَحْرِهِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّحْرُ",
+          "okunus": "en-nahr",
+          "koken": "nûnun fethi ve hânın sükûnuyla"
+        }
+      ],
+      "اِنْتِحَار": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İNTİHAR",
+          "yazilis": "ﺍﻧﺘﺤﺎﺭ",
+          "tur": "i.",
+          "koken": "Ar. naḥr “hayvanı boğazından kesmek”ten intiḥār",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kendi kendini öldürme",
+              "misaller": [
+                ["İntihar edeceklerin sâbit ve muzlim bakışıyle denize baktılar", "Ahmet Hâşim"],
+                [
+                  "hikâyesi günün birinde ya bir intihârın yâhut da ânî bir kazânın son vermesine kadar dillerde dolaşır",
+                  "Ahmet H. Tanpınar"
+                ],
+                ["Aşk uğrunda intihar ediyorlar", "Aka Gündüz"],
+                ["Hayat böyle çok güzelken intihârı düşündün mü?", "Enis B. Koryürek"],
+                ["Kaçacağımı yâhut intihar edeceğimi sanmış", "Ergun Göze"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "intihar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adam kendi nefsini katl eylemek manâsınadır; yukâlu: إِنْتَحَرَ الرَّجُلُ إِذَا قَتَلَ نَفْسَهُ Ve bir niçe kimseler bir nesne üzere birbirini katl eylemek derecesinde hırs ve dınnet edişmek manâsınadır ki binâsı müşâreket içindir; yukâlu: إِنْتَحَرَ الْقَوْمُ عَلَى الْأَمْرِ إِذَا تَشَاحُّوا عَلَيْهِ فَكَادَ بَعْضُهُمْ يَنْحَرُ بَعْضًا",
+              "misaller": [
+                ["إِنْتَحَرَ الرَّجُلُ إِذَا قَتَلَ نَفْسَهُ", ""],
+                ["إِنْتَحَرَ الْقَوْمُ عَلَى الْأَمْرِ إِذَا تَشَاحُّوا عَلَيْهِ فَكَادَ بَعْضُهُمْ يَنْحَرُ بَعْضًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِنْتِحَارُ",
+          "okunus": "el-intihâr",
+          "koken": "إِفْتِعَالٌ [iftiâl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "intihar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimse kendi nefsini boğazlamağa derler; yukâlu: إِنْتَحَرَ الرَّجُلُ إِذَا نَحَرَ نَفْسَهُ Ve fil-meseli: “سُرِقَ السَّارِقُ فَانْتَحَرَ” Yanî “Uğrudan uğurladığı mâl uğurlandıkta kendi nefsin boğazladı.” Gâliben bu mesel zî-hakk olan sabr etti, olmayan etmedi mahallinde istimâl olunur.",
+              "misaller": [
+                ["إِنْتَحَرَ الرَّجُلُ إِذَا نَحَرَ نَفْسَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "إِنْتِحَارٌ [intihâr] Birkaç kimse bir nesneye harîs olup birbirine bahîllik etmeğe dahi derler; yukâlu: إِنْتَحَرَ الْقَوْمُ عَلَى الشَّيْءِ إِذَا تَشَاحُّوا عَلَيْهِ حِرْصًا",
+              "misaller": [
+                ["إِنْتَحَرَ الْقَوْمُ عَلَى الشَّيْءِ إِذَا تَشَاحُّوا عَلَيْهِ حِرْصًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِنْتِحَارُ",
+          "okunus": "el-intihâr",
+          "koken": "hemzenin ve tânın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "intihâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kendini öldürme, canına kıyma. İntihâr etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

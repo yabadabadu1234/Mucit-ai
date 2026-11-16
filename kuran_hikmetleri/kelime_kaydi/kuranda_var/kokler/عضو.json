@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "عَضْو", "ʿaḍw", "organ", "kontrol", ""],
       [1, "عِضْو", "ʿiḍw", "organ", "kontrol", "Vikisözlük: organ"],
-      [2, "عُضْو", "ʿuḍw", "organ", "kontrol", "Vikisözlük: organ"],
+      [2, "عُضْو", "ʿuḍw", "Organ", "lugat", "Vikisözlük: organ · Luggat"],
       [517, "عَضَا", "ʿaḍā", "organ", "kontrol", ""],
       [518, "عِضَى", "ʿiḍā", "organ", "kontrol", ""],
       [519, "عُضُوّ", "ʿuḍuww", "organ", "kontrol", ""],
@@ -499,7 +499,7 @@
       [833, "عَضَاء", "ʿaḍāʾ", "organ olma", "kontrol", ""],
       [834, "عُضُوّ", "ʿuḍuww", "organ olma", "kontrol", ""],
       [835, "عِضَاء", "ʿiḍāʾ", "organ olma", "kontrol", ""],
-      [424, "عُضْو", "ʿuḍw", "organ olma", "kontrol", "Vikisözlük: organ"],
+      [424, "عُضْو", "ʿuḍw", "Organ", "lugat", "Vikisözlük: organ · Luggat"],
       [836, "عَضَاة", "ʿaḍā", "organ olma", "kontrol", ""],
       [837, "عِضَايَة", "ʿiḍāya", "organ olma", "kontrol", ""],
       [838, "عُضُوَّة", "ʿuḍuwwa", "organ olma", "kontrol", ""],
@@ -516,7 +516,7 @@
       [439, "عَضْو", "ʿaḍw", "organ olma türünden şey", "kontrol", ""],
       [840, "عَضَا", "ʿaḍā", "organ olma türünden şey", "kontrol", ""],
       [443, "عِضْو", "ʿiḍw", "organ olma türünden şey", "kontrol", "Vikisözlük: organ"],
-      [445, "عُضْو", "ʿuḍw", "organ olma türünden şey", "kontrol", "Vikisözlük: organ"],
+      [445, "عُضْو", "ʿuḍw", "Organ", "lugat", "Vikisözlük: organ · Luggat"],
       [841, "عَضِيّ", "ʿaḍiyy", "organ olma türünden şey", "kontrol", ""],
       [843, "عِضَى", "ʿiḍā", "organ olma türünden şey", "kontrol", ""],
       [844, "عُضُوّ", "ʿuḍuww", "organ olma türünden şey", "kontrol", ""],
@@ -534,7 +534,7 @@
       [847, "عَضَاءَة", "ʿaḍāʾa", "organ olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [848, "أَعْضَاء", "ʾaʿḍāʾ", "organ olmalar", "kontrol", ""],
+      [848, "أَعْضَاء", "ʾaʿḍāʾ", "Vücûdu meydana getiren parçalar, organlar", "lugat", "Kubbealtı"],
       [849, "أَعْضِيَة", "ʾaʿḍiya", "organ olmalar", "kontrol", ""],
       [850, "أَعَاضِي", "ʾaʿāḍī", "organ olmalar", "kontrol", ""],
       [851, "أَعَاضِيّ", "ʾaʿāḍiyy", "organ olmalar", "kontrol", ""],
@@ -901,7 +901,124 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "عُضْو": [
+        {
+          "eser": "Luggat",
+          "madde": "uzv",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Organ. Üye",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "UZUV – UZV",
+          "yazilis": "ﻋﻀﻮ",
+          "tur": "i.",
+          "koken": "Ar. ‘użv",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir vücûdu meydana getiren ve belli görevleri olan parçalardan her biri, organ",
+              "misaller": [
+                ["Sardı her uzvunu bir ince sızı / Bu öpüş gül gibi soldurdu kızı", "Yahyâ Kemal"],
+                ["Hiçbir uzvumu duymuyordum, ne ellerimi ne ayaklarımı", "Refik H. Karay"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Belli bir bütünü, bir topluluğu meydana getiren üyelerden her biri",
+              "misaller": [
+                [
+                  "Bugünün mahallesi, artık eskiden olduğu gibi her uzvu birbirine bağlı yaşayan topluluk değildir",
+                  "Ahmet H. Tanpınar"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "uzv-u nâfi'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Faydalı uzuv",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَعْضَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ÂZÂ",
+          "yazilis": "ﺍﻋﻀﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. ‘użv ’un çoğul şekli a‘żā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Vücûdu meydana getiren parçalar, organlar; organ",
+              "misaller": [
+                ["Vücûdundaki âzânın her biri bir başka emele mâlik imiş gibi ayrı ayrı titremeye başladı", "Nâmık Kemal"],
+                ["Cümle âzam isyanda", "Orhan V. Kanık"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir bütünün parçaları",
+              "misaller": [
+                ["Atâullah Beyefendi bu hikâyemizin en mühim âzâsından biridir", "Ahmed Midhat Efendi"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Herhangi bir kuruluş, birlik, komisyon vb.ne bağlı olan kimse, üye [Kelime Türkçe’de bu anlamda tekil gibi kullanılmıştır]",
+              "misaller": [
+                ["Brüksel parlamentosunda âyan âzâsının en mümtazlarından Edmon Riçkar…", "Cenap Şahâbeddin"],
+                ["Câfer Tayyarlar faal âzâları idi", "Hâlide E. Adıvar"],
+                [
+                  "Hatta bir zamanlar İttihat ve Terakkî’nin faal bir âzâsı olarak Meşrûtiyet’in ilk yıllarında Arnavutluk’a gönderilen hey’et-i nâsıha arasında o da vardı",
+                  "Ahmet H. Tanpınar"
+                ]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Bir kuruluşa, birliğe üye olarak girmek",
+              "misaller": [],
+              "deyim": "Âzâ olmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Üye olarak kaydetmek, üyeliğe kabul etmek",
+              "misaller": [
+                ["Sakın beni kulübünüze âzâ yapmayın", "Hâlide E. Adıvar"]
+              ],
+              "deyim": "Âzâ yapmak"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

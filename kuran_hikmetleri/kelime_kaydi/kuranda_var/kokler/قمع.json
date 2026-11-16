@@ -8,8 +8,15 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "قَمْع", "qamʿ", "bastırma", "orta", ""],
-      [1, "قِمْع", "qimʿ", "bastırma", "orta", ""],
+      [0, "قَمْع", "qamʿ", "Ezip buyruğu altına alma, kahretme, zaptetme", "lugat", "Kubbealtı"],
+      [
+        1,
+        "قِمْع",
+        "qimʿ",
+        "Bunlar da hurmâ dânesinin dibinde kehrübâ tarzında yapışık pula denir",
+        "lugat",
+        "Kamus"
+      ],
       [2, "قُمْع", "qumʿ", "bastırma", "orta", ""],
       [3, "قَمَع", "qamaʿ", "bastırma", "orta", ""],
       [4, "قِمَع", "qimaʿ", "bastırma", "orta", ""],
@@ -390,7 +397,7 @@
       [291, "قَمَعُون", "qamaʿūn", "her daim bastıranlar", "orta", ""],
       [292, "قَمَعِين", "qamaʿīn", "her daim bastıranlar", "orta", ""],
       [293, "قَمَعَات", "qamaʿāt", "her daim bastıranlar, müennes", "orta", ""],
-      [294, "قَمْع", "qamʿ", "her daim bastıran", "orta", ""],
+      [294, "قَمْع", "qamʿ", "Ezip buyruğu altına alma, kahretme, zaptetme", "lugat", "Kubbealtı"],
       [295, "قَمْعَة", "qamʿa", "her daim bastıran, müennes", "orta", ""],
       [296, "قَمْعَان", "qamʿān", "her daim bastıran, iki", "orta", ""],
       [297, "قَمْعَتَان", "qamʿatān", "her daim bastıran, iki, müennes", "orta", ""],
@@ -532,8 +539,15 @@
       [425, "قَمَاعَة", "qamāʿa", "bastırma", "orta", ""],
       [426, "قِمَاعَة", "qimāʿa", "bastırma", "orta", ""],
       [427, "قُمُوعَة", "qumūʿa", "bastırma", "orta", ""],
-      [428, "قَمْع", "qamʿ", "bastırma", "orta", ""],
-      [429, "قِمْع", "qimʿ", "bastırma", "orta", ""]
+      [428, "قَمْع", "qamʿ", "Ezip buyruğu altına alma, kahretme, zaptetme", "lugat", "Kubbealtı"],
+      [
+        429,
+        "قِمْع",
+        "qimʿ",
+        "Bunlar da hurmâ dânesinin dibinde kehrübâ tarzında yapışık pula denir",
+        "lugat",
+        "Kamus"
+      ]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "قَامُوع", "qāmūʿ", "bastırma türünden şey", "orta", ""],
@@ -542,9 +556,16 @@
       [434, "أُقْمُوعَة", "ʾuqmūʿa", "bastırma türünden şey", "orta", ""],
       [435, "قَوْمَع", "qawmaʿ", "bastırma türünden şey", "orta", ""],
       [437, "قَيْمَع", "qaymaʿ", "bastırma türünden şey", "orta", ""],
-      [439, "قَمْع", "qamʿ", "bastırma türünden şey", "orta", ""],
+      [439, "قَمْع", "qamʿ", "Ezip buyruğu altına alma, kahretme, zaptetme", "lugat", "Kubbealtı"],
       [441, "قَمَع", "qamaʿ", "bastırma türünden şey", "orta", ""],
-      [443, "قِمْع", "qimʿ", "bastırma türünden şey", "orta", ""],
+      [
+        443,
+        "قِمْع",
+        "qimʿ",
+        "Bunlar da hurmâ dânesinin dibinde kehrübâ tarzında yapışık pula denir",
+        "lugat",
+        "Kamus"
+      ],
       [445, "قُمْع", "qumʿ", "bastırma türünden şey", "orta", ""],
       [447, "قَمِيع", "qamīʿ", "bastırma türünden şey", "orta", ""],
       [449, "قِمَع", "qimaʿ", "bastırma türünden şey", "orta", ""],
@@ -1261,7 +1282,296 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قَمْع": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KAM’",
+          "yazilis": "ﻗﻤﻊ",
+          "tur": "i.",
+          "koken": "Ar. ḳam‘",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ezip buyruğu altına alma, kahretme, zaptetme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "مِقْمَعَةٌ [mikmeat] ile vurmak manâsınadır; yukâlu: قَمَعَهُ قَمْعًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِالْمِقْمَعَةِ Ve zelîl ve makhûr eylemek manâsına müstameldir; yukâlu: قَمَعَ فُلاَنًا إِذَا قَهَرَهُ وَذَلَّلَهُ Ve nesne akıtacak kabın ağzına huni komak manâsınadır; yukâlu: قَمَعَ الْوَطْبَ إِذَا وَضَعَ فِي رَأْسِهِ قِمْعًا Ve bir adamı veche ve maksadından sarf eylemek manâsınadır; yukâlu: قَمَعَ فُلاَنًا إِذَا صَرَفَهُ عَمَّا يُرِيدُهُ Ve bir adamın başına vurmak manâsınadır; yukâlu: قَمَعَهُ إِذَا ضَرَبَهُ رَأْسَهُ Ve bir nesne içre girmek manâsınadır; yukâlu: قَمَعَ فِي الشَّيْءِ إِذَا دَخَلَ Ve ot kısmını soğuk çalmakla bastırıp sindirmek manâsınadır; yukâlu: قَمَعَ الْبَرْدُ النَّبَاتَ إِذَا رَدَّهُ وَأَحْرَقَهُ Ve kapta olan meşrûbu şiddetle içmek manâsınadır; yukâlu: قَمَعَ مَا فِي السِّقَاءِ إِذَا شَرِبَهُ شُرْبًا شَدِيدًا Ve meşrûb yutmaksızın hemân boğazdan kayıp gitmek manâsınadır; yukâlu: قَمَعَ الشَّرَابُ إِذَا مَرَّ فِي الْحَلْقِ مَرًّا بِغَيْرِ جَرْعٍ Ve قَمْعُ السَّمْعِ [kamus-sem] Bir adamın sözüne hamûş olarak kulak tutup dinlemekten ibârettir; yukâlu: قَمَعَ سَمْعَهُ لِفُلاَنٍ إِذَا أَنْصَتَ لَهُ Ve قَمْعٌ [kam] Huniye denir ki onunla gülâb-dân makûlesine gülâb ve dühn gibi nesneler vaz ederken ağzına korlar; yukâlu: جَعَلَ عَلَيْهِ الْقَمْعَ وَهُوَ مَا يُوضَعُ عَلَى فَمِ الْإِنَاءِ يَنْصَبُّ فِيهِ الدُّهْنُ وَغَيْرُهُ Ve hurmâ dânesinin dibinde pul gibi yapışık nesneye denir ki hurmânın takye ve tâcı menzilindedir.",
+              "misaller": [
+                ["قَمَعَهُ قَمْعًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِالْمِقْمَعَةِ", ""],
+                ["قَمَعَ فُلاَنًا إِذَا قَهَرَهُ وَذَلَّلَهُ", ""],
+                ["قَمَعَ الْوَطْبَ إِذَا وَضَعَ فِي رَأْسِهِ قِمْعًا", ""],
+                ["قَمَعَ فُلاَنًا إِذَا صَرَفَهُ عَمَّا يُرِيدُهُ", ""],
+                ["قَمَعَهُ إِذَا ضَرَبَهُ رَأْسَهُ", ""],
+                ["قَمَعَ فِي الشَّيْءِ إِذَا دَخَلَ", ""],
+                ["قَمَعَ الْبَرْدُ النَّبَاتَ إِذَا رَدَّهُ وَأَحْرَقَهُ", ""],
+                ["قَمَعَ مَا فِي السِّقَاءِ إِذَا شَرِبَهُ شُرْبًا شَدِيدًا", ""],
+                ["قَمَعَ الشَّرَابُ إِذَا مَرَّ فِي الْحَلْقِ مَرًّا بِغَيْرِ جَرْعٍ", ""],
+                ["قَمَعَ سَمْعَهُ لِفُلاَنٍ إِذَا أَنْصَتَ لَهُ", ""],
+                [
+                  "جَعَلَ عَلَيْهِ الْقَمْعَ وَهُوَ مَا يُوضَعُ عَلَى فَمِ الْإِنَاءِ يَنْصَبُّ فِيهِ الدُّهْنُ وَغَيْرُهُ",
+                  ""
+                ]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "قَمْعٌ [kam] Tohme ve imtilâ manâsınadır; tekûlu: أَخَذَنِي الْقَمْعُ أَيِ التُّخَمَةُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمْعُ",
+          "okunus": "el-kam",
+          "koken": "جَمْعٌ [cem] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zikr olunan çevgân ile vurmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kahr ve galebe etmeğe dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "قَمْعٌ [kam] Şîşenin meselâ ağzına huni komağa dahi derler içine yağ yâhûd gül-âb komak için; tekûlu: قَمَعْتُ الْوَطْبَ إِذَا وَضَعْتَ فِي رَأْسِهِ الْقِمْعَ Ve وَطَبٌ [vatb] tâ-i mühmelenin sükûnuyla tuluma [derler].",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "قِمْعٌ [kim] (kâfın kesriyle) Huniye derler, alâ-mâ se-yecîu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمْعُ",
+          "okunus": "el-kam",
+          "koken": "kâfın fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-kama",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Havâda toz ve duman şeklinde görünen nesneye denir ki pusarık tabîr olunur; yukâlu: مَا هَذَا الْقَمَعُ فِي السَّمَاءِ وَهُوَ كَالْعَجَاجِ يَثُورُ فِي السَّمَاءِ Ve boğazda boğurtlağın ucuna, alâ-kavlin boğum başına denir ki akciğere nefes girecek mecrâdan ibârettir.",
+              "misaller": [
+                ["مَا هَذَا الْقَمَعُ فِي السَّمَاءِ وَهُوَ كَالْعَجَاجِ يَثُورُ فِي السَّمَاءِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "gözde kirpik diplerinde çıkan hurde sivilcelere denir, alâ-kavlin gözün pınarı fâsid olmakla kıpkızıl olmak yâhûd gözün pınarının eti şişip gömgök olmak yâhûd göze ameş ârız olmakla nûru fersiz zaîf olmak manâsınadır; yukâlu: قَمِعَتْ عَيْنُهُ قَمَعًا مِنَ الْبَابِ الرَّابِعِ إِذَا فَسَدَ مُوقُهَا وَاحْمَرَّ أَوْ كَمِدَ لَحْمُ مُوقِهَا وَوَرِمَ أَوْ عَمِشَ وَقَلَّ نَظَرُهَا Ve atın art ayağının siniri başı kaba ve kalın olmak manâsınadır ki meâyîbdendir; yukâlu: قَمِعَ عُرْقُوبُ الْفَرَسِ إِذَا غَلُظَ رَأْسُهُ Ve atın bir dizi âherinden yoğun olmak manâsınadır; yukâlu: قَمِعَ الْفَرَسُ إِذَا غَلُظَتْ إِحْدَى رُكْبَتَيْهِ عَنِ الْأُخْرَى Ve قَمَعٌ [kama] Boğazda hancerede olan yumruca küçük kemikçeğize denir.",
+              "misaller": [
+                [
+                  "قَمِعَتْ عَيْنُهُ قَمَعًا مِنَ الْبَابِ الرَّابِعِ إِذَا فَسَدَ مُوقُهَا وَاحْمَرَّ أَوْ كَمِدَ لَحْمُ مُوقِهَا وَوَرِمَ أَوْ عَمِشَ وَقَلَّ نَظَرُهَا",
+                  ""
+                ],
+                ["قَمِعَ عُرْقُوبُ الْفَرَسِ إِذَا غَلُظَ رَأْسُهُ", ""],
+                ["قَمِعَ الْفَرَسُ إِذَا غَلُظَتْ إِحْدَى رُكْبَتَيْهِ عَنِ الْأُخْرَى", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "deve köşeğinin hörgücü yağ bağlayıp kabarıp kalkmak manâsınadır; yukâlu: قَمِعَ الْفَصِيلُ إِذَا أَجْذَى فِي سَنَامِهِ وَتَمَكَ فِيهِ الشَّحْمُ Ve devâyı süfûf olarak ağza atmak manâsınadır; yukâlu: قَمِعَ الدَّوَاءَ إِذَا قَمِحَهُ Ve göze düşmüş çörçöp ve toz makûlesini hâtem kulpuyla ve sâir nesne ile çıkarmak manâsınadır; yukâlu: قَمِعَتْ عَيْنُهُ إِذَا وَقَعَ فِيهَا الْقَذَى فَاسْتُخْرِجَ بِالْخَاتَمِ",
+              "misaller": [
+                ["قَمِعَ الْفَصِيلُ إِذَا أَجْذَى فِي سَنَامِهِ وَتَمَكَ فِيهِ الشَّحْمُ", ""],
+                ["قَمِعَ الدَّوَاءَ إِذَا قَمِحَهُ", ""],
+                ["قَمِعَتْ عَيْنُهُ إِذَا وَقَعَ فِيهَا الْقَذَى فَاسْتُخْرِجَ بِالْخَاتَمِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمَعُ",
+          "okunus": "el-kama",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-kami",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi bir dizi âherinden yoğun olan ata denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "büyük hörgüçlü deveye denir; yukâlu: بَعِيرٌ قَمِعٌ أَيْ عَظِيمُ السَّنَامِ Ve büyük hörgüce denir; yukâlu: سَنَامٌ قَمِعٌ أَيْ عَظِيمٌ Ve sivilceli göze denir; yukâlu: طَرْفٌ قَمِعٌ أَيْ فِيهِ بَثْرٌ Ve ürkek hayvâna denir; yukâlu: فَرَسٌ قَمِعٌ أَيْ هَيُوبٌ",
+              "misaller": [
+                ["بَعِيرٌ قَمِعٌ أَيْ عَظِيمُ السَّنَامِ", ""],
+                ["سَنَامٌ قَمِعٌ أَيْ عَظِيمٌ", ""],
+                ["طَرْفٌ قَمِعٌ أَيْ فِيهِ بَثْرٌ", ""],
+                ["فَرَسٌ قَمِعٌ أَيْ هَيُوبٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمِعُ",
+          "okunus": "el-kami",
+          "koken": "كَتِفٌ [ketif] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kama",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "قَمَعٌ [kama] Şol sivilcelere dahi derler ki göz kirpiği dibinde zâhir olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "zikr olunan sivilcelerin çıkmasına dahi derler; tekûlu minhu: قَمِعَتْ عَيْنُهُ مِنَ الْبَابِ الرَّابِعِ Ve قَمَعٌ [kama] Kezâlik şol sineğe derler ki ziyâde ıssı havâda devenin ve âhûnun üzerine konar.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمَعُ",
+          "okunus": "el-kama",
+          "koken": "fethateynle kezâlik"
+        }
+      ],
+      "قِمْع": [
+        {
+          "eser": "Kamus",
+          "madde": "kim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْقِمَعُ [el-kima] (عِنَبٌ [ineb] vezninde) Bunlar da hurmâ dânesinin dibinde kehrübâ tarzında yapışık pula denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "dühn makûlesi vaz olunacak kabın ağzına sokulan huniye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِمْعُ",
+          "okunus": "el-kim",
+          "koken": "kâfın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol nesnedir ki onunla bir dar ağızlı kaba yağ ve yağın gayrı nesne korlar ki ona bazı vilâyette huni derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِمْعُ",
+          "okunus": "el-kim",
+          "koken": "kâfın kesri ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zikr olunan çevgân ile vurmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kahr ve galebe etmeğe dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "قَمْعٌ [kam] Şîşenin meselâ ağzına huni komağa dahi derler içine yağ yâhûd gül-âb komak için; tekûlu: قَمَعْتُ الْوَطْبَ إِذَا وَضَعْتَ فِي رَأْسِهِ الْقِمْعَ Ve وَطَبٌ [vatb] tâ-i mühmelenin sükûnuyla tuluma [derler].",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "قِمْعٌ [kim] (kâfın kesriyle) Huniye derler, alâ-mâ se-yecîu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمْعُ",
+          "okunus": "el-kam",
+          "koken": "kâfın fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kima",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik huni manâsına lügattır, نِطْعٌ [nit] ile نِطَعٌ [nita] gibi ki نِطْعٌ [nit] deriden olan bisâta derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "âmme قَمْعٌ [kam] derler kâfın fethi ve mîmin sükûnuyla.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "قِمْعٌ [kim] ve قِمَعٌ [kima] kâfın kesri ve mîmin sükûnu ve fethiyle kezâlik hurmânın çöpü bittiği yerde olan keverse misâlinde olan nesneye derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِمَعُ",
+          "okunus": "el-kima",
+          "koken": "kâfın kesriyle ve mîmin fethiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

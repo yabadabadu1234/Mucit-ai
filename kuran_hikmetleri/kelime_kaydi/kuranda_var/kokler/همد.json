@@ -14,7 +14,7 @@
       [3, "هَمَد", "hamad", "sönme", "orta", ""],
       [4, "هِمَد", "himad", "sönme", "orta", ""],
       [5, "هُمُد", "humud", "sönme", "orta", ""],
-      [6, "هُمُود", "humūd", "sönme", "orta", "Vikisözlük: masdar (bâb I): to go out, to be extinguished"],
+      [6, "هُمُود", "humūd", "Ölmek", "lugat", "Vikisözlük: masdar (bâb I): to go out, to be extinguished · Kamus"],
       [7, "هِمَاد", "himād", "sönme", "orta", ""],
       [8, "هُمَاد", "humād", "sönme", "orta", ""],
       [9, "هَمَاد", "hamād", "sönme", "orta", ""],
@@ -289,8 +289,15 @@
       [516, "اِهْمِوَّاد", "ihmiwwād", "aşırı sönme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "هَامِد", "hāmid", "sönen", "orta", "Vikisözlük: calm, lifeless, gone out"],
-      [214, "هَامِدَة", "hāmida", "sönen, müennes", "orta", ""],
+      [
+        213,
+        "هَامِد",
+        "hāmid",
+        "İsm-i fâildir, şol nesneye denir ki tûl-i müddet sebebiyle rengine tagayyür ve…",
+        "lugat",
+        "Vikisözlük: calm, lifeless, gone out · Kamus"
+      ],
+      [214, "هَامِدَة", "hāmida", "Kuru yer ki otu olmaya", "lugat", "Vankulu"],
       [215, "هَامِدَان", "hāmidān", "sönen, iki", "orta", ""],
       [216, "هَامِدَتَان", "hāmidatān", "sönen, iki, müennes", "orta", ""],
       [217, "هَامِدُون", "hāmidūn", "sönenler", "orta", ""],
@@ -392,7 +399,7 @@
       [293, "هَمَدَات", "hamadāt", "her daim sönenler, müennes", "orta", ""],
       [294, "هَمْد", "hamd", "her daim sönen", "orta", ""],
       [295, "هَمْدَة", "hamda", "her daim sönen, müennes", "orta", ""],
-      [296, "هَمْدَان", "hamdān", "her daim sönen, iki", "orta", ""],
+      [296, "هَمْدَان", "hamdān", "Yemende bir kabîle adıdır", "lugat", "Kamus"],
       [297, "هَمْدَتَان", "hamdatān", "her daim sönen, iki, müennes", "orta", ""],
       [298, "هَمْدُون", "hamdūn", "her daim sönenler", "orta", ""],
       [299, "هَمْدِين", "hamdīn", "her daim sönenler", "orta", ""],
@@ -404,7 +411,7 @@
       [305, "هُمُدُون", "humudūn", "her daim sönenler", "orta", ""],
       [306, "هُمُدِين", "humudīn", "her daim sönenler", "orta", ""],
       [307, "هُمُدَات", "humudāt", "her daim sönenler, müennes", "orta", ""],
-      [308, "هَمْدَان", "hamdān", "her daim sönen", "orta", ""],
+      [308, "هَمْدَان", "hamdān", "Yemende bir kabîle adıdır", "lugat", "Kamus"],
       [309, "هَمْدَانَة", "hamdāna", "her daim sönen, müennes", "orta", ""],
       [310, "هَمْدَانَان", "hamdānān", "her daim sönen, iki", "orta", ""],
       [311, "هَمْدَانَتَان", "hamdānatān", "her daim sönen, iki, müennes", "orta", ""],
@@ -526,7 +533,14 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "هَمَاد", "hamād", "sönme", "orta", ""],
-      [422, "هُمُود", "humūd", "sönme", "orta", "Vikisözlük: masdar (bâb I): to go out, to be extinguished"],
+      [
+        422,
+        "هُمُود",
+        "humūd",
+        "Ölmek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to go out, to be extinguished · Kamus"
+      ],
       [423, "هِمَاد", "himād", "sönme", "orta", ""],
       [424, "هُمْد", "humd", "sönme", "orta", ""],
       [425, "هَمَادَة", "hamāda", "sönme", "orta", ""],
@@ -569,7 +583,14 @@
       [456, "أَهْمِدَة", "ʾahmida", "sönmeler", "orta", ""],
       [457, "أَهَامِد", "ʾahāmid", "sönmeler", "orta", ""],
       [458, "أَهَامِيد", "ʾahāmīd", "sönmeler", "orta", ""],
-      [459, "هُمُود", "humūd", "sönmeler", "orta", "Vikisözlük: masdar (bâb I): to go out, to be extinguished"],
+      [
+        459,
+        "هُمُود",
+        "humūd",
+        "Ölmek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to go out, to be extinguished · Kamus"
+      ],
       [460, "هُمُد", "humud", "sönmeler", "orta", ""],
       [461, "هِمَاد", "himād", "sönmeler", "orta", ""],
       [462, "هِمَد", "himad", "sönmeler", "orta", ""],
@@ -1557,7 +1578,137 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هُمُود": [
+        {
+          "eser": "Kamus",
+          "madde": "humud",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ölmek manâsınadır, manâ-yı âtîden mehûzdur; yukâlu: هَمَدَ فُلاَنٌ هُمُودًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَاتَ Ve âteş bil-külliyye sönmek, alâ-kavlin harâreti sâkin olmak manâsınadır ve bu manâ-yı mevzûdur; yukâlu: هَمَدَتِ النَّارُ إِذَا طَفِئَتْ أَوْ ذَهَبَتْ حَرَارَتُهَا Kâleş-şârih: قَالَ الْأَصْمَعِيُّ خَمَدَتِ النَّارُ إِذَا سَكَنَ لَهَبُهَا وَهَمَدَتْ إِذَا طَفِئَتْ اَلْبَتَّةَ Ve هُمُودٌ [humûd] ve هَمْدٌ [hemd] (حَمْدٌ [hamd] vezninde) Sevb çok zamân bükülü durmaktan nâşî eskiyip paralanmak manâsına istimâl olunur, şöyle ki zâhiren sahîh zann olunup ele aldıkta yepriyip döküle; yukâlu: هَمَدَ الثَّوْبُ هُمُودًا وَهَمْدًا إِذَا تَقَطَّعَ مِنْ طُولِ الطَّيِّ يَعْنِي إِذَا مَسِسْتَهُ تَنَاثَرَ Ve yer umrân ve şecer ve nebât makûlesinden ve yağmur ve feyzinden ârî arz-ı mevât olmak manâsına müstameldir; yukâlu: هَمَدَتِ الْأَرْضُ إِذَا لَمْ يَكُنْ بِهَا حَيَاةٌ وَلاَ عُودٌ وَلاَ نَبْتٌ وَلاَ مَطَرٌ وَهِيَ هَامِدَةٌ",
+              "misaller": [
+                ["هَمَدَ فُلاَنٌ هُمُودًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَاتَ", ""],
+                ["هَمَدَتِ النَّارُ إِذَا طَفِئَتْ أَوْ ذَهَبَتْ حَرَارَتُهَا", ""],
+                [
+                  "هَمَدَ الثَّوْبُ هُمُودًا وَهَمْدًا إِذَا تَقَطَّعَ مِنْ طُولِ الطَّيِّ يَعْنِي إِذَا مَسِسْتَهُ تَنَاثَرَ",
+                  ""
+                ],
+                [
+                  "هَمَدَتِ الْأَرْضُ إِذَا لَمْ يَكُنْ بِهَا حَيَاةٌ وَلاَ عُودٌ وَلاَ نَبْتٌ وَلاَ مَطَرٌ وَهِيَ هَامِدَةٌ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهُمُودُ",
+          "okunus": "el-humûd",
+          "koken": "قُعُودٌ [kuûd] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "humud",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Od geçmek; yukâlu: هَمَدَتِ النَّارُ تَهْمُدُ هُمُودًا مِنَ الْبَابِ الْأَوَّلِ إِذَا طَفِئَتْ وَذَهَبَتْ اَلْبَتَّةَ Ve هُمُودٌ [humûd] Bez eskimeğe dahi derler, köhne olmak manâsına; yukâlu: هَمَدَ الثَّوْبُ يَهْمُدُ هُمُودًا إِذَا بَلِيَ",
+              "misaller": [
+                ["هَمَدَتِ النَّارُ تَهْمُدُ هُمُودًا مِنَ الْبَابِ الْأَوَّلِ إِذَا طَفِئَتْ وَذَهَبَتْ اَلْبَتَّةَ", ""],
+                ["هَمَدَ الثَّوْبُ يَهْمُدُ هُمُودًا إِذَا بَلِيَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهُمُودُ",
+          "okunus": "el-humûd",
+          "koken": "zammeteynle"
+        }
+      ],
+      "هَامِد": [
+        {
+          "eser": "Kamus",
+          "madde": "hamid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsm-i fâildir, şol nesneye denir ki tûl-i müddet sebebiyle rengine tagayyür ve sevâd gelip çürümüş ve yeprimiş ola; yukâlu: شَيْءٌ هَامِدٌ أَيْ بَالٍ مُسَوَّدٌ مُتَغَيِّرٌ Ve kurumuş otluğa ıtlâk olunur; yukâlu: نَبَاتٌ هَامِدٌ أَيْ يَابِسٌ Ve aslâ nebât eseri olmayan mekâna ıtlâk olunur; yukâlu: مَكَانٌ هَامِدٌ أَيْ لاَ نَبَاتَ بِهِ",
+              "misaller": [
+                ["شَيْءٌ هَامِدٌ أَيْ بَالٍ مُسَوَّدٌ مُتَغَيِّرٌ", ""],
+                ["نَبَاتٌ هَامِدٌ أَيْ يَابِسٌ", ""],
+                ["مَكَانٌ هَامِدٌ أَيْ لاَ نَبَاتَ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَامِدُ",
+          "okunus": "el-hâmid",
+          "koken": ""
+        }
+      ],
+      "هَامِدَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "el-hâmidet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kuru yer ki otu olmaya.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "هَامِدَةٌ [hâmidet] Kuru ota dahi derler, nebât-ı yâbis manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَامِدَةُ",
+          "okunus": "el-hâmidet",
+          "koken": "mîmin kesriyle"
+        }
+      ],
+      "هَمْدَان": [
+        {
+          "eser": "Kamus",
+          "madde": "Hemdan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yemende bir kabîle adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "هَمْدَانُ",
+          "okunus": "Hemdân",
+          "koken": "سَلْمَانُ [selmân] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Hemdan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yemenden bir kabîlenin adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَمْدَانُ",
+          "okunus": "el-Hemdân",
+          "koken": "hânın fethi ve mîmin sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

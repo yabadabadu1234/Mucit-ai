@@ -14,7 +14,7 @@
       [3, "هَطَع", "haṭaʿ", "hızla koşma", "orta", ""],
       [4, "هِطَع", "hiṭaʿ", "hızla koşma", "orta", ""],
       [5, "هُطُع", "huṭuʿ", "hızla koşma", "orta", ""],
-      [6, "هُطُوع", "huṭūʿ", "hızla koşma", "orta", ""],
+      [6, "هُطُوع", "huṭūʿ", "Bir nesneye nazar edip durmak", "lugat", "Vankulu"],
       [7, "هِطَاع", "hiṭāʿ", "hızla koşma", "orta", ""],
       [8, "هُطَاع", "huṭāʿ", "hızla koşma", "orta", ""],
       [9, "هَطَاع", "haṭāʿ", "hızla koşma", "orta", ""],
@@ -103,7 +103,14 @@
       [68, "إِهْطَاعَة", "ʾihṭāʿa", "bir kere hızla koşturma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُهْطِع", "muhṭiʿ", "başını kaldırıp bakan", "kuran", "Kur'ân"],
+      [
+        69,
+        "مُهْطِع",
+        "muhṭiʿ",
+        "Gözünü nazar-gâhına dikip aslâ ayırmamak üzere züll ve meskenetle bakıp durur…",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [70, "مُهْطِعَة", "muhṭiʿa", "hızla koşturan, müennes", "orta", ""],
       [71, "مُهْطِعَان", "muhṭiʿān", "hızla koşturan, iki", "orta", ""],
       [72, "مُهْطِعَتَان", "muhṭiʿatān", "hızla koşturan, iki, müennes", "orta", ""],
@@ -526,7 +533,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "هَطَاع", "haṭāʿ", "hızla koşma", "orta", ""],
-      [422, "هُطُوع", "huṭūʿ", "hızla koşma", "orta", ""],
+      [422, "هُطُوع", "huṭūʿ", "Bir nesneye nazar edip durmak", "lugat", "Vankulu"],
       [423, "هِطَاع", "hiṭāʿ", "hızla koşma", "orta", ""],
       [424, "هُطْع", "huṭʿ", "hızla koşma", "orta", ""],
       [425, "هَطَاعَة", "haṭāʿa", "hızla koşma", "orta", ""],
@@ -569,7 +576,7 @@
       [456, "أَهْطِعَة", "ʾahṭiʿa", "hızla koşmalar", "orta", ""],
       [457, "أَهَاطِع", "ʾahāṭiʿ", "hızla koşmalar", "orta", ""],
       [458, "أَهَاطِيع", "ʾahāṭīʿ", "hızla koşmalar", "orta", ""],
-      [459, "هُطُوع", "huṭūʿ", "hızla koşmalar", "orta", ""],
+      [459, "هُطُوع", "huṭūʿ", "Bir nesneye nazar edip durmak", "lugat", "Vankulu"],
       [460, "هُطُع", "huṭuʿ", "hızla koşmalar", "orta", ""],
       [461, "هِطَاع", "hiṭāʿ", "hızla koşmalar", "orta", ""],
       [462, "هِطَع", "hiṭaʿ", "hızla koşmalar", "orta", ""],
@@ -1118,6 +1125,71 @@
     ],
     "renk_sozluk": {
       "مهطعين": "başını kaldırıp bakan"
+    },
+    "mustak_lugat": {
+      "هُطُوع": [
+        {
+          "eser": "Vankulu",
+          "madde": "hutu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneye nazar edip durmak; yukâlu: هَطَعَ الرَّجُلُ يَهْطَعُ هُطُوعًا مِنَ الْبَابِ الثَّالِثِ إِذَا أَقْبَلَ بِبَصَرِهِ عَلَى الشَّيْءِ لَا يَقْلَعُ عَنْهُ",
+              "misaller": [
+                [
+                  "هَطَعَ الرَّجُلُ يَهْطَعُ هُطُوعًا مِنَ الْبَابِ الثَّالِثِ إِذَا أَقْبَلَ بِبَصَرِهِ عَلَى الشَّيْءِ لَا يَقْلَعُ عَنْهُ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهُطُوعُ",
+          "okunus": "el-hutû",
+          "koken": "zammeteynle"
+        }
+      ],
+      "مُهْطِع": [
+        {
+          "eser": "Kamus",
+          "madde": "muhti",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gözünü nazar-gâhına dikip aslâ ayırmamak üzere züll ve meskenetle bakıp durur olan adama denir, mücrim ve şermsârların bakması gibi; alâ-kavlin sükût ederek kendisini çağıran adama doğru giden kimseye denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "halkî olarak boynu aşağıya doğru eğri ve yatık deveye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُهْطِعُ",
+          "okunus": "el-muhti",
+          "koken": "مُحْسِنٌ [muhsin] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "muhti",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol devedir ki boynın yaratılışından aşağı tuta.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُهْطِعُ",
+          "okunus": "el-muhti",
+          "koken": "mîmin zammı ve tânın kesriyle"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 3,

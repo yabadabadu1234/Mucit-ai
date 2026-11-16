@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "زَيْت", "zayt", "yağ", "kuran", "Kur'ân"],
+      [0, "زَيْت", "zayt", "Zeytin yağı", "lugat", "Kur'ân · Kubbealtı"],
       [888, "زِيت", "zīt", "zeytin yağı", "kontrol", ""],
       [889, "زُوت", "zūt", "zeytin yağı", "kontrol", ""],
       [517, "زَات", "zāt", "zeytin yağı", "kontrol", ""],
@@ -391,11 +391,11 @@
       [884, "زَاتُون", "zātūn", "her daim zeytin yağı olanlar", "kontrol", ""],
       [885, "زَاتِين", "zātīn", "her daim zeytin yağı olanlar", "kontrol", ""],
       [755, "زَاتَات", "zātāt", "her daim zeytin yağı olanlar, müennes", "kontrol", ""],
-      [294, "زَيْت", "zayt", "yağ", "kuran", "Kur'ân"],
+      [294, "زَيْت", "zayt", "Zeytin yağı", "lugat", "Kur'ân · Kubbealtı"],
       [295, "زَيْتَة", "zayta", "her daim zeytin yağı olan, müennes", "kontrol", ""],
       [296, "زَيْتَان", "zaytān", "her daim zeytin yağı olan, iki", "kontrol", ""],
       [297, "زَيْتَتَان", "zaytatān", "her daim zeytin yağı olan, iki, müennes", "kontrol", ""],
-      [298, "زَيْتُون", "zaytūn", "zeytin", "kuran", "Kur'ân"],
+      [298, "زَيْتُون", "zaytūn", "Zeytin", "lugat", "Kur'ân · Luggat"],
       [299, "زَيْتِين", "zaytīn", "her daim zeytin yağı olanlar", "kontrol", ""],
       [300, "زَيْتَات", "zaytāt", "her daim zeytin yağı olanlar, müennes", "kontrol", ""],
       [301, "زُيُت", "zuyut", "her daim zeytin yağı olan", "kontrol", ""],
@@ -540,7 +540,7 @@
       [425, "زَيَاتَة", "zayāta", "zeytin yağı olma", "kontrol", ""],
       [837, "زِيَاتَة", "ziyāta", "zeytin yağı olma", "kontrol", ""],
       [427, "زُيُوتَة", "zuyūta", "zeytin yağı olma", "kontrol", ""],
-      [428, "زَيْت", "zayt", "yağ", "kuran", "Kur'ân"],
+      [428, "زَيْت", "zayt", "Zeytin yağı", "lugat", "Kur'ân · Kubbealtı"],
       [919, "زِيت", "zīt", "zeytin yağı olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -550,7 +550,7 @@
       [434, "أُزْيُوتَة", "ʾuzyūta", "zeytin yağı olma türünden şey", "kontrol", ""],
       [435, "زَوْيَت", "zawyat", "zeytin yağı olma türünden şey", "kontrol", ""],
       [437, "زَيْيَت", "zayyat", "zeytin yağı olma türünden şey", "kontrol", ""],
-      [439, "زَيْت", "zayt", "yağ", "kuran", "Kur'ân"],
+      [439, "زَيْت", "zayt", "Zeytin yağı", "lugat", "Kur'ân · Kubbealtı"],
       [840, "زَات", "zāt", "zeytin yağı olma türünden şey", "kontrol", ""],
       [921, "زِيت", "zīt", "zeytin yağı olma türünden şey", "kontrol", ""],
       [923, "زُوت", "zūt", "zeytin yağı olma türünden şey", "kontrol", ""],
@@ -1272,7 +1272,190 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "زَيْت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZEYT",
+          "yazilis": "ﺯﻳﺖ",
+          "tur": "i.",
+          "koken": "Ar. zeyt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Zeytin yağı",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "teşmil.",
+              "tanim": "Yağ",
+              "misaller": [
+                [" Hâmız-ı zeyt: Acı bâdemden çıkarılan yağ.", ""],
+                [" Zeyt-i hırva: Hint yağı.", ""],
+                [" Zeyt-i hacer: Petrol.", ""],
+                [
+                  "Bu âlem-i medeniyyetin bu Müseylimetü’l-Kezzâb’ına hatta kara yılanı tercih ederim. O hayvan hiç olmazsa gurur ve riyâ bilmez. Zehrini akıttığı yere zeyt-i mukaddes sürdüm demekten utanır",
+                  "Cenap Şahâbeddin"
+                ],
+                ["Zeyt-i kâfur tabâbetin yüzünü ağartan ilâçtan biridir", "Ahmet H. Tanpınar"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zeyt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Muâviye b. Sadın feresi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "زَيْتٌ [zeyt] Bir nev yağ ismidir ki zeytûn yağı dediğimizdir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "زَيْتٌ [zeyt] Masdar olur, bir nesneye zeytûn yağı komak manâsınadır; tekûlu: زِتُّ الطَّعَامَ أَزِيتُهُ زَيْتًا إِذَا جَعَلْتَ فِيهِ الزَّيْتَ Şârih tâ-yı müşeddede ile أَزِتُّهُ nüshalarını tahtie eylemiştir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "bir kimseye zeytûn yağı yedirmek manâsınadır; yukâlu: زَاتَهُمْ أَيْ أَطْعَمَهُمُ الزَّيْتَ",
+              "misaller": [
+                ["زَاتَهُمْ أَيْ أَطْعَمَهُمُ الزَّيْتَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْتُ",
+          "okunus": "ez-Zeyt",
+          "koken": "بَيْتٌ [beyt] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zeyt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zeytûnun yağıdır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "زَيْتٌ [zeyt] Bir nesneye zeyt yağın komağa dahi derler; yukâlu: زِتُّ الطَّعَامَ أَزِيتُهُ زَيْتًا إِذَا جَعَلْتَ فِيهِ الزَّيْتَ Ve zeyt yağın yedirmeğe dahi derler; yukâlu: زِتُّ الْقَوْمَ أَيْ جَعَلْتُ أُدْمَهُمُ الزَّيْتَ Yanî “Onların katığın zeyt kıldım.”",
+              "misaller": [
+                ["زِتُّ الطَّعَامَ أَزِيتُهُ زَيْتًا إِذَا جَعَلْتَ فِيهِ الزَّيْتَ", ""],
+                ["زِتُّ الْقَوْمَ أَيْ جَعَلْتُ أُدْمَهُمُ الزَّيْتَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْتُ",
+          "okunus": "ez-zeyt",
+          "koken": "zânın fethi ve yânın sükûnuyla"
+        }
+      ],
+      "زَيْتُون": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZEYTUN",
+          "yazilis": "ﺯﻳﺘﻮﻥ",
+          "tur": "i.",
+          "koken": "Ar. zeytūn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Zeytin kelimesinin eski metinlerde geçen asıl şekli",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Zeytun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şecer-i marûftur ki zeytûn ağacı tabîr olunur. Şârih der ki meyvesine ve şecerine زَيْتُونٌ [zeytûn] ıtlâk olunur, vâhidi زَيْتُونَةٌ [zeytûnet]tir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "زَيْتُونٌ [Zeytûn] Dimaşk-ı Şâmda vâki mescidin ismidir, alâ-kavlin Cibâl-i Şâma ıtlâk olunur. Şârihin beyânına göre Tûru Sînâda münâcât-gâh-ı Hazret-i Mûsâ olan mescid olacaktır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "زَيْتُونٌ [Zeytûn] Çin ülkesinde bir belde adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Saîd kazâsında bir karyedir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "bir recül adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْتُونُ",
+          "okunus": "ez-zeytûn",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zeytun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Semere-i marûfedir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْتُونُ",
+          "okunus": "ez-zeytûn",
+          "koken": "zânın fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zeytûn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Zeytin",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 7,
   "kuranda_var": true,

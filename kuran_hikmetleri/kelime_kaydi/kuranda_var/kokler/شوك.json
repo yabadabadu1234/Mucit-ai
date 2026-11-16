@@ -292,7 +292,7 @@
       [202, "اِشْوِوَّاك", "işwiwwāk", "aşırı diken olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [687, "شَائِك", "şāʾik", "diken olan", "kontrol", "Vikisözlük: thorny, prickly, spiky"],
+      [687, "شَائِك", "şāʾik", "Dikenli olan ağaç", "lugat", "Vikisözlük: thorny, prickly, spiky · Vankulu"],
       [688, "شَائِكَة", "şāʾika", "diken olan, müennes", "kontrol", ""],
       [689, "شَائِكَان", "şāʾikān", "diken olan, iki", "kontrol", ""],
       [690, "شَائِكَتَان", "şāʾikatān", "diken olan, iki, müennes", "kontrol", ""],
@@ -350,7 +350,14 @@
       [724, "مَشَاكَان", "maşākān", "diken olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "شَوْكَة", "şawka", "diken, güç", "kuran", "Vikisözlük: thorn, sting, prickle"],
+      [
+        255,
+        "شَوْكَة",
+        "şawka",
+        "Kudret ve kuvvetten doğan büyüklük, heybet",
+        "lugat",
+        "Vikisözlük: thorn, sting, prickle · Luggat"
+      ],
       [256, "شَوْكَتَان", "şawkatān", "bir kere diken olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -394,7 +401,14 @@
       [885, "شَاكِين", "şākīn", "her daim diken olanlar", "kontrol", ""],
       [755, "شَاكَات", "şākāt", "her daim diken olanlar, müennes", "kontrol", ""],
       [294, "شَوْك", "şawk", "her daim diken olan", "kontrol", ""],
-      [295, "شَوْكَة", "şawka", "diken, güç", "kuran", "Vikisözlük: thorn, sting, prickle"],
+      [
+        295,
+        "شَوْكَة",
+        "şawka",
+        "Kudret ve kuvvetten doğan büyüklük, heybet",
+        "lugat",
+        "Vikisözlük: thorn, sting, prickle · Luggat"
+      ],
       [296, "شَوْكَان", "şawkān", "her daim diken olan, iki", "kontrol", ""],
       [297, "شَوْكَتَان", "şawkatān", "her daim diken olan, iki, müennes", "kontrol", ""],
       [298, "شَوْكُون", "şawkūn", "her daim diken olanlar", "kontrol", ""],
@@ -565,7 +579,14 @@
       [431, "شَاوُوكَة", "şāwūka", "diken olma türünden bir tane", "kontrol", ""],
       [436, "شَوْوَكَة", "şawwaka", "diken olma türünden bir tane", "kontrol", ""],
       [438, "شَيْوَكَة", "şaywaka", "diken olma türünden bir tane", "kontrol", ""],
-      [440, "شَوْكَة", "şawka", "diken, güç", "kuran", "Vikisözlük: thorn, sting, prickle"],
+      [
+        440,
+        "شَوْكَة",
+        "şawka",
+        "Kudret ve kuvvetten doğan büyüklük, heybet",
+        "lugat",
+        "Vikisözlük: thorn, sting, prickle · Luggat"
+      ],
       [920, "شَاكَة", "şāka", "diken olma türünden bir tane", "kontrol", ""],
       [922, "شِيكَة", "şīka", "diken olma türünden bir tane", "kontrol", ""],
       [924, "شُوكَة", "şūka", "diken olma türünden bir tane", "kontrol", "Vikisözlük: thorn, sting, prickle"],
@@ -814,7 +835,227 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شَائِك": [
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şâik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dikenli olan ağaç.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّائِكُ",
+          "okunus": "eş-şâik",
+          "koken": "yânın kesriyle"
+        }
+      ],
+      "شَوْكَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ŞEVKE",
+          "yazilis": "ﺷﻮﻛﻪ",
+          "tur": "i.",
+          "koken": "Ar. şevke",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Deve dikeni",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "ŞEVKET",
+          "yazilis": "ﺷﻮﻛﺖ",
+          "tur": "i.",
+          "koken": "Ar. şevket “kuvvet ve şiddet”",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Büyüklük, ululuk, heybet, haşmet",
+              "misaller": [
+                ["Hemîşe dâim etsin şevket ü iclâl ile Mevlâ / Vücûdu tâc ü tahta tâ-be-mahşer iftihâr oldu", "Fıtnat Hanım"],
+                ["Âfitâbın dehri tenvîr ettiği günden beri / Olmamıştır böyle bir hurşîd-i şevket müncelî", "Muallim Nâci"],
+                ["Fırat artık eski şevketini düşünerek şimdiki sefâletinden utanmış gibidir", "Refik H. Karay"],
+                ["● Şevket-makrun", "ﺷﻮﻛﺖ ﻣﻘﺮﻭﻥ"],
+                ["birl. sıf", "Ar. maḳrūn “bitiştirilmiş, yakınlaştırılmış” ile"],
+                ["Şevkete ulaşmış", ""],
+                [
+                  "anlamında pâdişahlar için kullanılırdı: 1130 saferinde be-hatt-ı hümâyûn-ı şevket-makrun Mekke-i Mükerreme pâyesiyle ihtiram olundular",
+                  "Sâlim Tezkiresi"
+                ],
+                ["verilmesini ferman eylediler", "Râşid Târihi’nden"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eş-şevket",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "شَوْكٌ [şevk]in müfredidir ki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَوْكَةٌ [şevket] Yarağa denir; yukâlu: جَاءَ وَعَلَيْهِ شَوْكَةٌ أَيْ سِلَاحٌ Ve indel-baz silâhın hiddetine ıtlâk olunur. Evvele göre ism ve sânîye göre masdar yâhûd ism-i masdar olur.",
+              "misaller": [
+                ["جَاءَ وَعَلَيْهِ شَوْكَةٌ أَيْ سِلَاحٌ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "شَوْكَةُ الْقِتَالِ [şevketul-kitâl] harb ve cidâlin şiddetine ve düşmanı ifrât üzere katl ve nikâyet ve istîsâla ıtlâk olunur; yukâlu: دَهَشَتْنِي شَوْكَةُ الْقِتَالِ أَيْ شِدَّةُ بَأْسِهِ وَالنِّكَايَةُ فِي الْعَدُوِّVe شَوْكَةٌ [şevket] Bir maraz-ı marûf ismidir. Şârihin beyânına göre tâûn nevindendir, zâhiren kütüb-i tıbbiyyede bâgire ismiyle mersûm olan illettir ki tâûn tarzında olur, ekser-i mutatabbib onu tâûn zann ederler, lâkin değildir; Mısırda ona كُبَّةٌ [kubbet] derler kâf-ı mazmûme ile ve Şâmda ضَرْبَةٌ [darbet] derler.",
+              "misaller": [
+                ["دَهَشَتْنِي شَوْكَةُ الْقِتَالِ أَيْ شِدَّةُ بَأْسِهِ وَالنِّكَايَةُ فِي الْعَدُوِّ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "kızıllık ve kızıl donlu dedikleri illete denir ki kurdeşeni gibi bütün gövde kıpkızıl olur.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "cullâhların çınbar dedikleri âlete denir ki diken diken olur, eriş ve argacı onunla düzeltirler.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "akrebin iğnesine denir.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "bir hatun ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "شَوْكَةُ الْكَتَّانِ [şevketul-kettân] ketencilerin tarak yerine kullandıkları nesneye denir ki yaş çamura hurmâ dikenleri dizdikten sonra kurutup keteni onunla tararlar.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّوْكَةُ",
+          "okunus": "eş-şevket",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şevket",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vâhidi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَوْكَةٌ [şevket] Şiddet, meneat ve kudrete dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "silâhın keskinliğine de derler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "شَوْكَةُ الْعَقْرَبِ [şevketul-akreb] Akrebin iğnesine derler.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "شَوْكَةُ الْحَائِكِ [şevketul-hâik] Şol dikendir ki cullâh onunla bezin arışın ve argacın ıslâh eder.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّوْكَةُ",
+          "okunus": "eş-şevket",
+          "koken": "kezâlik şînin fethi ve vâvın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "şevket",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kudret ve kuvvetten doğan büyüklük, heybet",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "şevket",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ululuk",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "şevket-i islâmiyet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İslâmiyetin haşmeti",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "şevketmeâb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yüce padişah",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

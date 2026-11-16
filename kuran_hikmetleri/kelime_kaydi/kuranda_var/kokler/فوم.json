@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "فَوْم", "fawm", "sarımsak", "kontrol", ""],
       [888, "فِيم", "fīm", "sarımsak", "kontrol", ""],
-      [889, "فُوم", "fūm", "sarımsak, ekmek", "kuran", "Kur'ân"],
+      [889, "فُوم", "fūm", "Sarmısağa denir", "lugat", "Kur'ân · Kamus"],
       [517, "فَام", "fām", "sarımsak", "kontrol", ""],
       [518, "فِيَم", "fiyam", "sarımsak", "kontrol", ""],
       [5, "فُوُم", "fuwum", "sarımsak", "kontrol", ""],
@@ -538,7 +538,7 @@
       [421, "فَوَام", "fawām", "sarımsak olma", "kontrol", ""],
       [422, "فُوُوم", "fuwūm", "sarımsak olma", "kontrol", ""],
       [835, "فِيَام", "fiyām", "sarımsak olma", "kontrol", ""],
-      [918, "فُوم", "fūm", "sarımsak, ekmek", "kuran", "Kur'ân"],
+      [918, "فُوم", "fūm", "Sarmısağa denir", "lugat", "Kur'ân · Kamus"],
       [425, "فَوَامَة", "fawāma", "sarımsak olma", "kontrol", ""],
       [837, "فِيَامَة", "fiyāma", "sarımsak olma", "kontrol", ""],
       [427, "فُوُومَة", "fuwūma", "sarımsak olma", "kontrol", ""],
@@ -555,7 +555,7 @@
       [439, "فَوْم", "fawm", "sarımsak olma türünden şey", "kontrol", ""],
       [840, "فَام", "fām", "sarımsak olma türünden şey", "kontrol", ""],
       [921, "فِيم", "fīm", "sarımsak olma türünden şey", "kontrol", ""],
-      [923, "فُوم", "fūm", "sarımsak, ekmek", "kuran", "Kur'ân"],
+      [923, "فُوم", "fūm", "Sarmısağa denir", "lugat", "Kur'ân · Kamus"],
       [447, "فَوِيم", "fawīm", "sarımsak olma türünden şey", "kontrol", ""],
       [843, "فِيَم", "fiyam", "sarımsak olma türünden şey", "kontrol", ""],
       [451, "فُوُم", "fuwum", "sarımsak olma türünden şey", "kontrol", ""],
@@ -753,6 +753,90 @@
     },
     "renk_sozluk": {
       "وفومها": "sarımsak, ekmek"
+    },
+    "mustak_lugat": {
+      "فُوم": [
+        {
+          "eser": "Kamus",
+          "madde": "fum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sarmısağa denir; tekûlu: أَكَلْتُ فُومًا أَيْ ثُومًا Ve buğdaya denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "nohuta denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ekmeğe denir, خُبْزٌ [hubz] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "mutlakan kendiden ekmek yapılan hubûbâta denir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "mutlakan münakid nesneye denir, gerek soğandan ve sarmısaktan ve gerek büyük lokmadan olsun.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفُومُ",
+          "okunus": "el-fûm",
+          "koken": "fânın zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "fum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sarımsak, ثُومٌ [samp;ûm] gibidir veznen ve manen.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Abdullâh kırâatinde “وَثُومِهَا” (البقرة، 61) vâki olmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bazılar فُومٌ [fûm] buğday manâsınadır dedi.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "İbn Dureyd فُومٌ [fûm]a sünbüledir yanî buğday başıdır dedi.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "bazılar فُومٌ [fûm] nohuddur dedi, lügat-i Şâmiyye üzere.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفُومُ",
+          "okunus": "el-fûm",
+          "koken": "fânın zammı ve meddiyle"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 1,

@@ -21,7 +21,7 @@
       [10, "رَحَاقَة", "raḥāqa", "saf şarap", "kontrol", ""],
       [11, "رُحُوقَة", "ruḥūqa", "saf şarap", "kontrol", ""],
       [12, "رِحَاقَة", "riḥāqa", "saf şarap", "kontrol", ""],
-      [13, "رَحِيق", "raḥīq", "saf şarap", "kuran", "Kur'ân"],
+      [13, "رَحِيق", "raḥīq", "Hamrın sâfîsi", "lugat", "Kur'ân · Vankulu"],
       [14, "رَحُوق", "raḥūq", "saf şarap", "kontrol", ""],
       [15, "رَحَقَان", "raḥaqān", "saf şarap", "kontrol", ""],
       [16, "رُحْقَان", "ruḥqān", "saf şarap", "kontrol", ""],
@@ -355,7 +355,7 @@
       [258, "رِحْقَتَان", "riḥqatān", "saf şarap olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "رَحِيق", "raḥīq", "saf şarap", "kuran", "Kur'ân"],
+      [259, "رَحِيق", "raḥīq", "Hamrın sâfîsi", "lugat", "Kur'ân · Vankulu"],
       [260, "رَحِيقَة", "raḥīqa", "her daim saf şarap olan, müennes", "kontrol", ""],
       [261, "رَحِيقَان", "raḥīqān", "her daim saf şarap olan, iki", "kontrol", ""],
       [262, "رَحِيقَتَان", "raḥīqatān", "her daim saf şarap olan, iki, müennes", "kontrol", ""],
@@ -479,7 +479,7 @@
       [378, "مِرْحِيقُون", "mirḥīqūn", "saf şarap olmaya düşkünler", "kontrol", ""],
       [379, "مِرْحِيقِين", "mirḥīqīn", "saf şarap olmaya düşkünler", "kontrol", ""],
       [380, "مِرْحِيقَات", "mirḥīqāt", "saf şarap olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "رَحِيق", "raḥīq", "saf şarap", "kuran", "Kur'ân"],
+      [381, "رَحِيق", "raḥīq", "Hamrın sâfîsi", "lugat", "Kur'ân · Vankulu"],
       [382, "رَحِيقَة", "raḥīqa", "çok saf şarap olan, müennes", "kontrol", ""],
       [383, "رَحِيقَان", "raḥīqān", "çok saf şarap olan, iki", "kontrol", ""],
       [384, "رَحِيقَتَان", "raḥīqatān", "çok saf şarap olan, iki, müennes", "kontrol", ""],
@@ -546,7 +546,7 @@
       [441, "رَحَق", "raḥaq", "saf şarap olma türünden şey", "kontrol", ""],
       [443, "رِحْق", "riḥq", "saf şarap olma türünden şey", "kontrol", ""],
       [445, "رُحْق", "ruḥq", "saf şarap olma türünden şey", "kontrol", ""],
-      [447, "رَحِيق", "raḥīq", "saf şarap", "kuran", "Kur'ân"],
+      [447, "رَحِيق", "raḥīq", "Hamrın sâfîsi", "lugat", "Kur'ân · Vankulu"],
       [449, "رِحَق", "riḥaq", "saf şarap olma türünden şey", "kontrol", ""],
       [451, "رُحُق", "ruḥuq", "saf şarap olma türünden şey", "kontrol", ""],
       [453, "رَحَاق", "raḥāq", "saf şarap olma türünden şey", "kontrol", ""]
@@ -782,7 +782,27 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَحِيق": [
+        {
+          "eser": "Vankulu",
+          "madde": "rehik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hamrın sâfîsi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّحِيقُ",
+          "okunus": "er-rehîk",
+          "koken": "rânın fethi ve hâ-i mühmelenin kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

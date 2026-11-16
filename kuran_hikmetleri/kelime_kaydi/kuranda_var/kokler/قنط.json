@@ -14,7 +14,7 @@
       [3, "قَنَط", "qanaṭ", "umudunu kesme", "orta", ""],
       [4, "قِنَط", "qinaṭ", "umudunu kesme", "orta", ""],
       [5, "قُنُط", "qunuṭ", "umudunu kesme", "orta", ""],
-      [6, "قُنُوط", "qunūṭ", "umudunu kesme", "orta", ""],
+      [6, "قُنُوط", "qunūṭ", "Ümitsizlik, ümit kesme, meyus olma", "lugat", "Kubbealtı"],
       [7, "قِنَاط", "qināṭ", "umudunu kesme", "orta", ""],
       [8, "قُنَاط", "qunāṭ", "umudunu kesme", "orta", ""],
       [9, "قَنَاط", "qanāṭ", "umudunu kesme", "orta", ""],
@@ -526,7 +526,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "قَنَاط", "qanāṭ", "umudunu kesme", "orta", ""],
-      [422, "قُنُوط", "qunūṭ", "umudunu kesme", "orta", ""],
+      [422, "قُنُوط", "qunūṭ", "Ümitsizlik, ümit kesme, meyus olma", "lugat", "Kubbealtı"],
       [423, "قِنَاط", "qināṭ", "umudunu kesme", "orta", ""],
       [424, "قُنْط", "qunṭ", "umudunu kesme", "orta", ""],
       [425, "قَنَاطَة", "qanāṭa", "umudunu kesme", "orta", ""],
@@ -569,7 +569,7 @@
       [456, "أَقْنِطَة", "ʾaqniṭa", "umudunu kesmeler", "orta", ""],
       [457, "أَقَانِط", "ʾaqāniṭ", "umudunu kesmeler", "orta", ""],
       [458, "أَقَانِيط", "ʾaqānīṭ", "umudunu kesmeler", "orta", ""],
-      [459, "قُنُوط", "qunūṭ", "umudunu kesmeler", "orta", ""],
+      [459, "قُنُوط", "qunūṭ", "Ümitsizlik, ümit kesme, meyus olma", "lugat", "Kubbealtı"],
       [460, "قُنُط", "qunuṭ", "umudunu kesmeler", "orta", ""],
       [461, "قِنَاط", "qināṭ", "umudunu kesmeler", "orta", ""],
       [462, "قِنَط", "qinaṭ", "umudunu kesmeler", "orta", ""],
@@ -844,7 +844,71 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قُنُوط": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KUNUT",
+          "yazilis": "ﻗﻨﻮﻁ",
+          "tur": "i.",
+          "koken": "Ar. ḳunūṭ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ümitsizlik, ümit kesme, meyus olma",
+              "misaller": [
+                ["Kerem ü lutfun ümîdinde kunûtum yoktur / Gerçi bende-i âsî değilim ehl-i kunûtum", "Enderunlu Fâzıl"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kunut",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْقَنَطُ [el-kanat] (fethateynle) ve اَلْقَنَاطَةُ [el-kanâtat] (سَمَاحَةٌ [semâhat] vezninde) Nevmîd olmak manâsınadır; yukâlu: قَنَطَ الرَّجُلُ قُنُوطًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي وَقَنِطَ قَنَطًا مِنَ الْبَابِ الرَّابِعِ وَقَنُطَ قَنَاطَةً مِنَ الْبَابِ الْخَامِسِ إِذَا يَئِسَ Ve ammâ: وَأَمَّا قَنَطَ يَقْنَطُ كَمَنَعَ يَمْنَعُ وَقَنِطَ يَقْنِطُ كَحَسِبَ يَحْسِبُ فَهَاتَانِ عَلَى الْجَمْعِ بَيْنَ اللُّغَتَيْنِ Yanî bu iki sîga tedâhül-i lügateyn kabîlindendir. Müellif tasvîr-i bâbda teşvîş eylemekle şârihin tanzîmi üzere resm olundu.",
+              "misaller": [
+                [
+                  "قَنَطَ الرَّجُلُ قُنُوطًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي وَقَنِطَ قَنَطًا مِنَ الْبَابِ الرَّابِعِ وَقَنُطَ قَنَاطَةً مِنَ الْبَابِ الْخَامِسِ إِذَا يَئِسَ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقُنُوطُ",
+          "okunus": "el-kunût",
+          "koken": "قُعُودٌ [kuûd] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kunut",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ümîd kesmek, yes manâsına; yukâlu: قَنَطَ يَقْنِطُ قُنُوطًا مِنَ الْبَابِ الثَّانِي مِثْلُ جَلَسَ يَجْلِسُ جُلُوسًا وَكَذَلِكَ قَنَطَ يَقْنُطُ مِنَ الْبَابِ الْأَوَّلِ مِثْلُ قَعَدَ يَقْعُدُ Ve bunda üçüncü lügat vardır ki evvel قَنِطَ يَقْنَطُ قُنُوطًا tur, مِنَ الْبَابِ الرَّابِعِ مِثْلُ تَعِبَ يَتْعَبُ تَعَبًا",
+              "misaller": [
+                [
+                  "قَنَطَ يَقْنِطُ قُنُوطًا مِنَ الْبَابِ الثَّانِي مِثْلُ جَلَسَ يَجْلِسُ جُلُوسًا وَكَذَلِكَ قَنَطَ يَقْنُطُ مِنَ الْبَابِ الْأَوَّلِ مِثْلُ قَعَدَ يَقْعُدُ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقُنُوطُ",
+          "okunus": "el-kunût",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

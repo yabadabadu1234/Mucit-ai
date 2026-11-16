@@ -21,7 +21,7 @@
       [10, "غَلَاظَة", "ğalāẓa", "kalınlaşma", "orta", ""],
       [11, "غُلُوظَة", "ğulūẓa", "kalınlaşma", "orta", ""],
       [12, "غِلَاظَة", "ğilāẓa", "kalınlaşma", "orta", ""],
-      [13, "غَلِيظ", "ğalīẓ", "sert, kalın", "kuran", "Vikisözlük: thick"],
+      [13, "غَلِيظ", "ğalīẓ", "Koyu, yoğun, kaba", "lugat", "Vikisözlük: thick · Luggat"],
       [14, "غَلُوظ", "ğalūẓ", "kalınlaşma", "orta", ""],
       [15, "غَلَظَان", "ğalaẓān", "kalınlaşma", "orta", ""],
       [16, "غُلْظَان", "ğulẓān", "kalınlaşma", "orta", ""],
@@ -351,11 +351,11 @@
       [256, "غَلْظَتَان", "ğalẓatān", "bir kere kalınlaşma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "غِلْظَة", "ğilẓa", "sertlik", "kuran", "Kur'ân"],
+      [257, "غِلْظَة", "ğilẓa", "ve Yoğun olmak", "lugat", "Kur'ân · Kamus"],
       [258, "غِلْظَتَان", "ğilẓatān", "kalınlaşma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "غَلِيظ", "ğalīẓ", "sert, kalın", "kuran", "Vikisözlük: thick"],
+      [259, "غَلِيظ", "ğalīẓ", "Koyu, yoğun, kaba", "lugat", "Vikisözlük: thick · Luggat"],
       [260, "غَلِيظَة", "ğalīẓa", "her daim kalınlaşan, müennes", "orta", ""],
       [261, "غَلِيظَان", "ğalīẓān", "her daim kalınlaşan, iki", "orta", ""],
       [262, "غَلِيظَتَان", "ğalīẓatān", "her daim kalınlaşan, iki, müennes", "orta", ""],
@@ -479,7 +479,7 @@
       [378, "مِغْلِيظُون", "miğlīẓūn", "kalınlaşmaya düşkünler", "orta", ""],
       [379, "مِغْلِيظِين", "miğlīẓīn", "kalınlaşmaya düşkünler", "orta", ""],
       [380, "مِغْلِيظَات", "miğlīẓāt", "kalınlaşmaya düşkünler, müennes", "orta", ""],
-      [381, "غَلِيظ", "ğalīẓ", "sert, kalın", "kuran", "Vikisözlük: thick"],
+      [381, "غَلِيظ", "ğalīẓ", "Koyu, yoğun, kaba", "lugat", "Vikisözlük: thick · Luggat"],
       [382, "غَلِيظَة", "ğalīẓa", "çok kalınlaşan, müennes", "orta", ""],
       [383, "غَلِيظَان", "ğalīẓān", "çok kalınlaşan, iki", "orta", ""],
       [384, "غَلِيظَتَان", "ğalīẓatān", "çok kalınlaşan, iki, müennes", "orta", ""],
@@ -546,7 +546,7 @@
       [441, "غَلَظ", "ğalaẓ", "kalınlaşma türünden şey", "orta", ""],
       [443, "غِلْظ", "ğilẓ", "kalınlaşma türünden şey", "orta", ""],
       [445, "غُلْظ", "ğulẓ", "kalınlaşma türünden şey", "orta", ""],
-      [447, "غَلِيظ", "ğalīẓ", "sert, kalın", "kuran", "Vikisözlük: thick"],
+      [447, "غَلِيظ", "ğalīẓ", "Koyu, yoğun, kaba", "lugat", "Vikisözlük: thick · Luggat"],
       [449, "غِلَظ", "ğilaẓ", "kalınlaşma türünden şey", "orta", ""],
       [451, "غُلُظ", "ğuluẓ", "kalınlaşma türünden şey", "orta", ""],
       [453, "غَلَاظ", "ğalāẓ", "kalınlaşma türünden şey", "orta", ""]
@@ -557,7 +557,7 @@
       [438, "غَيْلَظَة", "ğaylaẓa", "kalınlaşma türünden bir tane", "orta", ""],
       [440, "غَلْظَة", "ğalẓa", "kalınlaşma türünden bir tane", "orta", ""],
       [442, "غَلَظَة", "ğalaẓa", "kalınlaşma türünden bir tane", "orta", ""],
-      [444, "غِلْظَة", "ğilẓa", "sertlik", "kuran", "Kur'ân"],
+      [444, "غِلْظَة", "ğilẓa", "ve Yoğun olmak", "lugat", "Kur'ân · Kamus"],
       [446, "غُلْظَة", "ğulẓa", "kalınlaşma türünden bir tane", "orta", ""],
       [448, "غَلِيظَة", "ğalīẓa", "kalınlaşma türünden bir tane", "orta", ""],
       [450, "غِلَظَة", "ğilaẓa", "kalınlaşma türünden bir tane", "orta", ""],
@@ -1284,7 +1284,99 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "غَلِيظ": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "GALİZ",
+          "yazilis": "ﻏﻠﻴﻆ",
+          "tur": "sıf.",
+          "koken": "Ar. ġilẓe t “kalın, sert, katı olmak”tan ġalіẓ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kaba, çirkin, nezâket ve terbiye dışı",
+              "misaller": [
+                ["O mâvi gömlekli sefil ameleler içiyorlar, çirkin, galiz bir sesle türkü söylüyorlardı", "Hüseyin C. Yalçın"],
+                [
+                  "Arapça, Kürtçe, Türkçe en galiz küfürlerin birbirine karıştığı bu çığırtkan yaygarayı lezzetle dinlerdim",
+                  "Ahmet H. Tanpınar"
+                ],
+                [
+                  "Sarfedilen nükteler, cinaslar biraz sâde ve yeknesaktır. Hatta biraz kaba ve galiz olanları da vardır",
+                  "Selim N. Gerçek"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kalın, sık, yoğun, kesif",
+              "misaller": [
+                [" Ebr-i galiz: Kesif bulut.", ""],
+                [" Bisât-ı galiz: Kalın döşek.", ""],
+                ["● Galîze", "ﻏﻠﻴﻈﻪ"],
+                [" Em’â-i galîze: Kalın bağırsak.", ""],
+                [" Elfâz-ı galîze: Kaba sözler.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "galiz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْغُلاَظُ [el-gulâz] (غُرَابٌ [gurâb] vezninde) Vasflardır, kalın ve künde nesneye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغَلِيظُ",
+          "okunus": "el-galîz",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "galîz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Koyu, yoğun, kaba",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "غِلْظَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-gilzat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْغِلاَظَةُ [el-gilâzat] (كِتَابَةٌ [kitâbet] vezninde) ve اَلْغِلَظُ [el-gilaz] (عِنَبٌ [ineb] vezninde) Yoğun olmak manâsınadır; yukâlu: غَلُظَ الشَّيْءُ غِلْظَةً وَغِلَاظَةً وغِلَظًا مِنَ الْبَابِ الْخَامِسِ وَالثَّانِي ضِدُّ رَقَّ Ve ekin kalınlaşıp dâneleri çıkmak manâsına müstameldir; yukâlu: غَلُظَتِ السُّنْبُلَةُ إِذَا خَرَجَ فِيهَا الْحَبُّ",
+              "misaller": [
+                ["غَلُظَ الشَّيْءُ غِلْظَةً وَغِلَاظَةً وغِلَظًا مِنَ الْبَابِ الْخَامِسِ وَالثَّانِي ضِدُّ رَقَّ", ""],
+                ["غَلُظَتِ السُّنْبُلَةُ إِذَا خَرَجَ فِيهَا الْحَبُّ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْغِلْظَةُ",
+          "okunus": "el-gilzat",
+          "koken": "gaynın harekât-ı selâsıyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 13,
   "kuranda_var": true,

@@ -28,7 +28,7 @@
       [524, "طَرَاة", "ṭarā", "tazeleme", "orta", ""],
       [525, "طُرُوَّة", "ṭuruwwa", "tazeleme", "orta", ""],
       [526, "طِرَايَة", "ṭirāya", "tazeleme", "orta", ""],
-      [527, "طَرِيّ", "ṭariyy", "taze", "kuran", "Kur'ân"],
+      [527, "طَرِيّ", "ṭariyy", "Ter ü tâze şeye denir", "lugat", "Kur'ân · Kamus"],
       [528, "طَرُوّ", "ṭaruww", "tazeleme", "orta", ""],
       [15, "طَرَوَان", "ṭarawān", "tazeleme", "orta", ""],
       [16, "طُرْوَان", "ṭurwān", "tazeleme", "orta", ""],
@@ -103,9 +103,9 @@
         567,
         "إِطْرَاء",
         "ʾiṭrāʾ",
-        "tazeletme",
-        "orta",
-        "Vikisözlük: masdar (bâb IV): to praise, to eulogize, to commend"
+        "Medh ve sitâyişte mübâlaga ve ifrât eylemek",
+        "lugat",
+        "Vikisözlük: masdar (bâb IV): to praise, to eulogize, to commend · Kamus"
       ]
     ],
     "ism-i merre · bâb IV": [
@@ -346,7 +346,7 @@
       [258, "طِرْوَتَان", "ṭirwatān", "tazeleme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [725, "طَرِيّ", "ṭariyy", "taze", "kuran", "Kur'ân"],
+      [725, "طَرِيّ", "ṭariyy", "Ter ü tâze şeye denir", "lugat", "Kur'ân · Kamus"],
       [726, "طَرِيَّة", "ṭariyya", "her daim tazeleyen, müennes", "orta", ""],
       [727, "طَرِيَّان", "ṭariyyān", "her daim tazeleyen, iki", "orta", ""],
       [728, "طَرِيَّتَان", "ṭariyyatān", "her daim tazeleyen, iki, müennes", "orta", ""],
@@ -473,7 +473,7 @@
       [378, "مِطْرِيوُون", "miṭrīwūn", "tazelemeye düşkünler", "orta", ""],
       [379, "مِطْرِيوِين", "miṭrīwīn", "tazelemeye düşkünler", "orta", ""],
       [380, "مِطْرِيوَات", "miṭrīwāt", "tazelemeye düşkünler, müennes", "orta", ""],
-      [808, "طَرِيّ", "ṭariyy", "taze", "kuran", "Kur'ân"],
+      [808, "طَرِيّ", "ṭariyy", "Ter ü tâze şeye denir", "lugat", "Kur'ân · Kamus"],
       [809, "طَرِيَّة", "ṭariyya", "çok tazeleyen, müennes", "orta", ""],
       [810, "طَرِيَّان", "ṭariyyān", "çok tazeleyen, iki", "orta", ""],
       [811, "طَرِيَّتَان", "ṭariyyatān", "çok tazeleyen, iki, müennes", "orta", ""],
@@ -545,7 +545,7 @@
       [840, "طَرَا", "ṭarā", "tazeleme türünden şey", "orta", ""],
       [443, "طِرْو", "ṭirw", "tazeleme türünden şey", "orta", ""],
       [445, "طُرْو", "ṭurw", "tazeleme türünden şey", "orta", ""],
-      [841, "طَرِيّ", "ṭariyy", "taze", "kuran", "Kur'ân"],
+      [841, "طَرِيّ", "ṭariyy", "Ter ü tâze şeye denir", "lugat", "Kur'ân · Kamus"],
       [843, "طِرَى", "ṭirā", "tazeleme türünden şey", "orta", ""],
       [844, "طُرُوّ", "ṭuruww", "tazeleme türünden şey", "orta", ""],
       [
@@ -1540,7 +1540,83 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "طَرِيّ": [
+        {
+          "eser": "Kamus",
+          "madde": "tariyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ter ü tâze şeye denir; yukâlu: شَيْءٌ طَرِيٌّ أَيْ غَضٌّ",
+              "misaller": [
+                ["شَيْءٌ طَرِيٌّ أَيْ غَضٌّ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّرِيُّ",
+          "okunus": "et-tariyy",
+          "koken": "غَنِيٌّ [ganiyy] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tariyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Tâze olan nesne; yukâlu: شَيْءٌ طَرِيٌّ أَيْ غَضٌّ بَيِّنُ الطَّرَاوَةِ",
+              "misaller": [
+                ["شَيْءٌ طَرِيٌّ أَيْ غَضٌّ بَيِّنُ الطَّرَاوَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّرِيُّ",
+          "okunus": "et-tariyy",
+          "koken": "tânın fethi ve yânın teşdîdiyle"
+        }
+      ],
+      "إِطْرَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "itra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Medh ve sitâyişte mübâlaga ve ifrât eylemek manâsınadır; yukâlu: أَطْرَأَهُ إِذَا بَالَغَ فِي مَدْحِهِ",
+              "misaller": [
+                ["أَطْرَأَهُ إِذَا بَالَغَ فِي مَدْحِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "الإِطْرَاءُ",
+          "okunus": "el-itrâ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "itra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi medh etmek; tekûlu: أَطْرَاهُ إِذَا مَدَحَهُ Ve إِطْرَاءُ [itrâ] Balı kıvâma getirmeğe dahi derler; tekûlu: أَطْرَيْتُ الْعَسَلَ إِذَا اعْقَدْتَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِطْرَاءُ",
+          "okunus": "el-itrâ",
+          "koken": "hemzenin kesri ve elifin meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

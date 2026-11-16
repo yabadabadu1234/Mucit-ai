@@ -21,10 +21,10 @@
       [10, "قَمَاصَة", "qamāṣa", "gömlek", "kontrol", ""],
       [11, "قُمُوصَة", "qumūṣa", "gömlek", "kontrol", ""],
       [12, "قِمَاصَة", "qimāṣa", "gömlek", "kontrol", ""],
-      [13, "قَمِيص", "qamīṣ", "gömlek", "kuran", "Kur'ân"],
+      [13, "قَمِيص", "qamīṣ", "Gömlek", "lugat", "Kur'ân · Luggat"],
       [14, "قَمُوص", "qamūṣ", "gömlek", "kontrol", ""],
       [15, "قَمَصَان", "qamaṣān", "gömlek", "kontrol", ""],
-      [16, "قُمْصَان", "qumṣān", "gömlek", "kontrol", ""],
+      [16, "قُمْصَان", "qumṣān", "in cemi, gömlekler", "lugat", "Vankulu"],
       [17, "قِمْصَان", "qimṣān", "gömlek", "kontrol", ""],
       [18, "قَمْصَى", "qamṣā", "gömlek", "kontrol", ""],
       [19, "قُمْصَى", "qumṣā", "gömlek", "kontrol", ""],
@@ -362,7 +362,7 @@
       [258, "قِمْصَتَان", "qimṣatān", "gömlek olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "قَمِيص", "qamīṣ", "gömlek", "kuran", "Kur'ân"],
+      [259, "قَمِيص", "qamīṣ", "Gömlek", "lugat", "Kur'ân · Luggat"],
       [260, "قَمِيصَة", "qamīṣa", "her daim gömlek olan, müennes", "kontrol", ""],
       [261, "قَمِيصَان", "qamīṣān", "her daim gömlek olan, iki", "kontrol", ""],
       [262, "قَمِيصَتَان", "qamīṣatān", "her daim gömlek olan, iki, müennes", "kontrol", ""],
@@ -486,7 +486,7 @@
       [378, "مِقْمِيصُون", "miqmīṣūn", "gömlek olmaya düşkünler", "kontrol", ""],
       [379, "مِقْمِيصِين", "miqmīṣīn", "gömlek olmaya düşkünler", "kontrol", ""],
       [380, "مِقْمِيصَات", "miqmīṣāt", "gömlek olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "قَمِيص", "qamīṣ", "gömlek", "kuran", "Kur'ân"],
+      [381, "قَمِيص", "qamīṣ", "Gömlek", "lugat", "Kur'ân · Luggat"],
       [382, "قَمِيصَة", "qamīṣa", "çok gömlek olan, müennes", "kontrol", ""],
       [383, "قَمِيصَان", "qamīṣān", "çok gömlek olan, iki", "kontrol", ""],
       [384, "قَمِيصَتَان", "qamīṣatān", "çok gömlek olan, iki, müennes", "kontrol", ""],
@@ -553,7 +553,7 @@
       [441, "قَمَص", "qamaṣ", "gömlek olma türünden şey", "kontrol", ""],
       [443, "قِمْص", "qimṣ", "gömlek olma türünden şey", "kontrol", ""],
       [445, "قُمْص", "qumṣ", "gömlek olma türünden şey", "kontrol", ""],
-      [447, "قَمِيص", "qamīṣ", "gömlek", "kuran", "Kur'ân"],
+      [447, "قَمِيص", "qamīṣ", "Gömlek", "lugat", "Kur'ân · Luggat"],
       [449, "قِمَص", "qimaṣ", "gömlek olma türünden şey", "kontrol", ""],
       [451, "قُمُص", "qumuṣ", "gömlek olma türünden şey", "kontrol", ""],
       [453, "قَمَاص", "qamāṣ", "gömlek olma türünden şey", "kontrol", ""]
@@ -573,7 +573,7 @@
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَقْمَاص", "ʾaqmāṣ", "gömlek olmalar", "kontrol", ""],
-      [456, "أَقْمِصَة", "ʾaqmiṣa", "gömlek olmalar", "kontrol", ""],
+      [456, "أَقْمِصَة", "ʾaqmiṣa", "Kezâlik in cemi", "lugat", "Vankulu"],
       [457, "أَقَامِص", "ʾaqāmiṣ", "gömlek olmalar", "kontrol", ""],
       [458, "أَقَامِيص", "ʾaqāmīṣ", "gömlek olmalar", "kontrol", ""],
       [459, "قُمُوص", "qumūṣ", "gömlek olmalar", "kontrol", ""],
@@ -932,7 +932,154 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قَمِيص": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KAMİS",
+          "yazilis": "ﻗﻤﻴﺺ",
+          "tur": "i.",
+          "koken": "Ar. ḳamіṣ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gömlek",
+              "misaller": [
+                [
+                  "Bu gün Ya’kūb-ı kalbe Yûsuf-ı candan haber geldi / Kamîs-i pür-nesîm ile o cânandan haber geldi",
+                  "Niyâzî-i Mısrî"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "anat.",
+              "tanim": "İç organları saran ince deri",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Bitkilerde zar",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1. Kardeşlerinin, kuyuya attıkları Yûsuf peygamberin kurt tarafından parçalandığına inandırmak için babaları Yâkub peygambere götürdükleri kana bulanmış gömleği [Bu olaydan sonra Hz",
+              "misaller": [],
+              "deyim": "Kamîs-i Yûsuf"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kamîs-i Yûsuf’u arz etme Cebrâil ki ben / Deminle şüste şehîdim kefen nedir bilmem (Muallim Nâci). 2. Yûsuf peygamberin hayatta olduğunu bildirmek üzere babası Yâkub peygambere gönderdiği gömlek [Bu gömleği sürünce Hz. Yâkub’un gözleri açılmıştır",
+              "misaller": [],
+              "deyim": "Yâkub’un ağlamaktan gözleri görmez olmuştur]"
+            },
+            {
+              "etiket": "",
+              "tanim": "O yanda kāfile-i müjde-âver-i ihvan / Kamîs-i Yûsuf’u hâmil mübeşşir ü şâdan (Tevfik Fikret)",
+              "misaller": [],
+              "deyim": "Terkip her iki mânâda da dîvan edebiyâtımızda mazmun hâline gelmiştir]"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kamis",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "قَمُوصٌ [kamûs] ile manâ-yı evvelde mürâdiftir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "gömleğe denir, pîrâhen manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bu müzekkerdir, müennes dahi olur. İndel-baz قَمِيصٌ [kamîs] pamuk ipliğinden mensûc olana mahsûstur, yünden ve sâirden olursa ıtlâk olunmaz. Cemi قُمُصٌ [kumus] gelir zammeteynle ve أَقْمِصَةٌ [akmisat]tır ve قُمْصَانٌ [kumsân]dır kâfın zammıyla.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "قَمِيصٌ [kamîs] مَشِيمَةٌ [meşîmet]e ıtlâk olunur ki rahimde çocuk yatağı olan ince deriden ibârettir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "yüreğin gılâfına ıtlâk olunur ki yağ gibi ince zardan ibârettir; yukâlu: هَتَكَ الْخَوْفُ قَمِيصَ قَلْبِهِ أَيْ غِلاَفَهُ",
+              "misaller": [
+                ["هَتَكَ الْخَوْفُ قَمِيصَ قَلْبِهِ أَيْ غِلاَفَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَمِيصُ",
+          "okunus": "el-kamîs",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kamîs",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gömlek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "قُمْصَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "kumsan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "قَمِيصٌ [kamîs]in cemi, gömlekler manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقُمْصَانُ",
+          "okunus": "el-kumsân",
+          "koken": "kâfın zammı ve mîmin sükûnuyla"
+        }
+      ],
+      "أَقْمِصَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "akmisat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik قَمِيصٌ [kamîs]in cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَقْمِصَةُ",
+          "okunus": "el-akmisat",
+          "koken": "hemzenin fethi ve kâfın sükûnu ve mîmin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

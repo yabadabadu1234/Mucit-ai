@@ -8,8 +8,8 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "ذَبْح", "ẕabḥ", "boğazlama", "orta", ""],
-      [1, "ذِبْح", "ẕibḥ", "boğazlama", "orta", ""],
+      [0, "ذَبْح", "ẕabḥ", "Boğazlama", "lugat", "Luggat"],
+      [1, "ذِبْح", "ẕibḥ", "Kurban edilecek hayvan, kurbanlık", "lugat", "Kubbealtı"],
       [2, "ذُبْح", "ẕubḥ", "boğazlama", "orta", ""],
       [3, "ذَبَح", "ẕabaḥ", "boğazlama", "orta", ""],
       [4, "ذِبَح", "ẕibaḥ", "boğazlama", "orta", ""],
@@ -39,7 +39,14 @@
       [28, "مَذْبِحَة", "maẕbiḥa", "boğazlama", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَذْبِيح", "taẕbīḥ", "çokça boğazlama", "orta", ""],
+      [
+        29,
+        "تَذْبِيح",
+        "taẕbīḥ",
+        "vezninde ve mürâdifidir ki rükû heyetinde başı pek aşağıya eğmek",
+        "lugat",
+        "Kamus"
+      ],
       [30, "تَذْبِحَة", "taẕbiḥa", "çokça boğazlama", "orta", ""],
       [31, "ذِبِّاح", "ẕibbāḥ", "çokça boğazlama", "orta", ""]
     ],
@@ -411,7 +418,7 @@
       [291, "ذَبَحُون", "ẕabaḥūn", "her daim boğazlayanlar", "orta", ""],
       [292, "ذَبَحِين", "ẕabaḥīn", "her daim boğazlayanlar", "orta", ""],
       [293, "ذَبَحَات", "ẕabaḥāt", "her daim boğazlayanlar, müennes", "orta", ""],
-      [294, "ذَبْح", "ẕabḥ", "her daim boğazlayan", "orta", ""],
+      [294, "ذَبْح", "ẕabḥ", "Boğazlama", "lugat", "Luggat"],
       [295, "ذَبْحَة", "ẕabḥa", "her daim boğazlayan, müennes", "orta", "Vikisözlük: angina"],
       [296, "ذَبْحَان", "ẕabḥān", "her daim boğazlayan, iki", "orta", ""],
       [297, "ذَبْحَتَان", "ẕabḥatān", "her daim boğazlayan, iki, müennes", "orta", ""],
@@ -553,8 +560,8 @@
       [425, "ذَبَاحَة", "ẕabāḥa", "boğazlama", "orta", ""],
       [426, "ذِبَاحَة", "ẕibāḥa", "boğazlama", "orta", ""],
       [427, "ذُبُوحَة", "ẕubūḥa", "boğazlama", "orta", ""],
-      [428, "ذَبْح", "ẕabḥ", "boğazlama", "orta", ""],
-      [429, "ذِبْح", "ẕibḥ", "boğazlama", "orta", ""]
+      [428, "ذَبْح", "ẕabḥ", "Boğazlama", "lugat", "Luggat"],
+      [429, "ذِبْح", "ẕibḥ", "Kurban edilecek hayvan, kurbanlık", "lugat", "Kubbealtı"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "ذَابُوح", "ẕābūḥ", "boğazlama türünden şey", "orta", ""],
@@ -563,9 +570,9 @@
       [434, "أُذْبُوحَة", "ʾuẕbūḥa", "boğazlama türünden şey", "orta", ""],
       [435, "ذَوْبَح", "ẕawbaḥ", "boğazlama türünden şey", "orta", ""],
       [437, "ذَيْبَح", "ẕaybaḥ", "boğazlama türünden şey", "orta", ""],
-      [439, "ذَبْح", "ẕabḥ", "boğazlama türünden şey", "orta", ""],
+      [439, "ذَبْح", "ẕabḥ", "Boğazlama", "lugat", "Luggat"],
       [441, "ذَبَح", "ẕabaḥ", "boğazlama türünden şey", "orta", ""],
-      [443, "ذِبْح", "ẕibḥ", "boğazlama türünden şey", "orta", ""],
+      [443, "ذِبْح", "ẕibḥ", "Kurban edilecek hayvan, kurbanlık", "lugat", "Kubbealtı"],
       [445, "ذُبْح", "ẕubḥ", "boğazlama türünden şey", "orta", ""],
       [447, "ذَبِيح", "ẕabīḥ", "boğazlama türünden şey", "orta", ""],
       [449, "ذِبَح", "ẕibaḥ", "boğazlama türünden şey", "orta", ""],
@@ -601,7 +608,7 @@
       [467, "ذُبَّاح", "ẕubbāḥ", "boğazlamalar", "orta", ""],
       [468, "ذَبَاح", "ẕabāḥ", "boğazlamalar", "orta", ""],
       [469, "ذَبَح", "ẕabaḥ", "boğazlamalar", "orta", ""],
-      [470, "مَذَابِح", "maẕābiḥ", "boğazlamalar", "orta", ""],
+      [470, "مَذَابِح", "maẕābiḥ", "Kasaplık hayvan kesilip satılan yerler, mezbahalar", "lugat", "Kubbealtı"],
       [471, "مَذَابِيح", "maẕābīḥ", "boğazlamalar", "orta", ""],
       [472, "ذَوَابِح", "ẕawābiḥ", "boğazlamalar", "orta", ""],
       [473, "أَذْبُح", "ʾaẕbuḥ", "boğazlamalar", "orta", ""],
@@ -1886,7 +1893,272 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ذَبْح": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZEBH",
+          "yazilis": "ﺫﺑﺢ",
+          "tur": "i.",
+          "koken": "Ar. ẕebḥ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Boğazlama, kesme",
+              "misaller": [
+                ["Köpek izi olduğunu görünce orada bir köpek zebh ederek defîne dahi münkeşif olmuş", "Ahmed Midhat Efendi"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kurban kesme",
+              "misaller": [
+                ["Îd-i adhâ Kâbe’den hüccâcı teb’îd eyledi / Kendini zebh eden İsmâîl’e kurban istemez", "Bayburtlu Zihni"],
+                [
+                  "Peder, bir îd-i adhânın ilk günü sabahleyin namazdan avdetinde kendisiyle vâlide için âmâde bulunan iki kurbandan birini zebh etti",
+                  "Muallim Nâci"
+                ],
+                ["Kurbanlık olsan da senin gibi hıra, sıska hayvanların zebhi câiz değildir", "Burhan Felek"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zebh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلذَّبَاحُ [ez-zebâh] (zâlın fethiyle) Yarmak manâsınadır; yukâlu: ذَبَحَ الشَّيْءَ ذَبْحًا وَذَبَاحًا مِنَ الْبَابِ الثَّالِثِ إِذَا شَقَّهُ Asl manâ-yı mevzûu budur.",
+              "misaller": [
+                ["ذَبَحَ الشَّيْءَ ذَبْحًا وَذَبَاحًا مِنَ الْبَابِ الثَّالِثِ إِذَا شَقَّهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir nesneyi yarıp ayırmak manâsına istimâl olunur; yukâlu: ذَبَحَهُ إِذَا فَتَقَهُ Ve boğazlamak manâsınadır; yukâlu: ذَبَحَ الشَّاةَ إِذَا نَحَرَهَا Ve bir kimsenin sakalı çenelerinde ve alt dudağının altında bitmeyip hemân eneği altında boğazına doğru bitip sarkık olursa: ذَبَحَتِ اللِّحْيَةُ فُلاَنًا derler, gûyâ ki lihye bıçak gibi yâhûd eser-i zebh gibi boğazında nâbit ve nümâyân olmuştur. O kimseye kursağından sakallı tabîr olunur. Müellifin burada فَهُوَ مَذْبُوحٌ بِهَا kavli bu manâya mütealliktir, بِهَا zamîri لِحْيَةٌ [lihyet]e râcidir.",
+              "misaller": [
+                ["ذَبَحَهُ إِذَا فَتَقَهُ", ""],
+                ["ذَبَحَ الشَّاةَ إِذَا نَحَرَهَا", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ذَبْحٌ [zebh] Boğmak manâsına istimâl olunur; yukâlu: ذَبَحَهُ إِذَا خَنَقَهُ Ve küp makûlesini yarıp delmek manâsına müstameldir; yukâlu: ذَبَحَ الدَّنَّ إِذَا بَزَلَهُ",
+              "misaller": [
+                ["ذَبَحَهُ إِذَا خَنَقَهُ", ""],
+                ["ذَبَحَ الدَّنَّ إِذَا بَزَلَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّبْحُ",
+          "okunus": "ez-zebh",
+          "koken": "zâlın fethi ve bânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zebh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yarmak, şakk manâsına; yukâlu: ذَبَحْتُ الدَّنَّ إِذَا بَزَلْتَهَا Ve بَزْلٌ [bezl] zâ-i muceme ile yarmak; manâsınadır.",
+              "misaller": [
+                ["ذَبَحْتُ الدَّنَّ إِذَا بَزَلْتَهَا", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ذَبْحٌ [zebh] Boğazlamak manâsına dahi gelir; yukâlu: ذَبَحْتُ الشَّاةَ Ve اَلْكُلُّ مِنَ الْبَابِ الثَّالِثِ",
+              "misaller": [
+                ["ذَبَحْتُ الشَّاةَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّبْحُ",
+          "okunus": "ez-zebh",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zebh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Boğazlama. Zebh edilmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذِبْح": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZİBH",
+          "yazilis": "ﺫﺑﺢ",
+          "tur": "i.",
+          "koken": "Ar. zebḥ “boğazlamak, kurban etmek”ten zibḥ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurban edilecek hayvan, kurbanlık",
+              "misaller": [
+                ["Anladım zibh-i azîme bir işârettir bu koç / Hem beşârettir gele Yahyâ ile mihman bana", "Niyâzî-i Mısrî"],
+                ["Îd-i visâl-i yârda zibh-i azîm olur / Her kim ederse rûh-i revânın fedâ-yı aşk", "Osman Şems"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zibh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Boğazlanacak hayvâna denir, kurbânlık koyun gibi. Kâleş-şârih ve minhu kavluhu taâlâ: ﴿وَفَدَيْنَاهُ بِذِبْحٍ عَظِيمٍ﴾ وَهُوَ مَا يُذْبَحُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّبْحُ",
+          "okunus": "ez-zibh",
+          "koken": "zâlın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zibh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Boğazlanan nesne. Kâlallâhu taâlâ: ﴿وَفَدَيْنَاهُ بِذِبْحٍ عَظِيمٍ﴾ (الصافات 107) ki Hazret-i İsmâîlden kurbân fedâ olunduğuna işârettir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّبْحُ",
+          "okunus": "ez-zibh",
+          "koken": "zâlın kesriyle ve bânın sükûnuyla"
+        }
+      ],
+      "تَذْبِيح": [
+        {
+          "eser": "Kamus",
+          "madde": "tezbih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "تَدْبِيحٌ [tedbîh] vezninde ve mürâdifidir ki rükû heyetinde başı pek aşağıya eğmek manâsınadır. Kâleş-şârih ve minhul-hadîsu ennehu aleyhis-selâm: “نَهَى عَنِ التَّذْبِيحِ فِي الصَّلاَةِ” وَالْمَشْهُورُ بِالدَّالِ الْمُهْمَلَةِ ke-mâ zukire.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّذْبِيحُ",
+          "okunus": "et-tezbîh",
+          "koken": ""
+        }
+      ],
+      "مَذَابِح": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEZÂBİH",
+          "yazilis": "ﻣﺬﺍﺑﺢ",
+          "tur": "i.",
+          "koken": "Ar. meẕbaḥ ve meẕbaḥa ’nın çoğul şekli meẕābih",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kasaplık hayvan kesilip satılan yerler, mezbahalar",
+              "misaller": [
+                ["Kaçan koyun bıçaktan kanda varsa / Bulunur anda ana çok mezâbih", "Ahmedî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "mezabih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "مَذْبَحٌ [mezbah]ın cemidir ki ism-i mekândır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَذَابِحُ [mezâbih] Mihrâblara ve maksûrelere ki Nasârâ maâbidlerinde olur ve Nasârâ kitâb-hânelerine ıtlâk olunur, mahâll-i kurbiyyet oldukları için.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bu ıtlâk kablel-İslâmdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَذَابِحُ",
+          "okunus": "el-mezâbih",
+          "koken": "mîmin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mezabih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi; yukâlu: غَادَرَ السَّيْلُ فِي الْأَرْضِ أَخَادِيدَ وَمَذَابِحَ Ve أَخَادِيدُ [ehâdîd] أُخْدُودٌ [uhdûd]un cemidir hemzenin zammıyla, yarık manâsına.",
+              "misaller": [
+                ["غَادَرَ السَّيْلُ فِي الْأَرْضِ أَخَادِيدَ وَمَذَابِحَ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَذَابِحُ [mezâbih] diye mihrâblara dahi derler, onda karâbîn olduğundan ötürü.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "قَرَابِينُ [karâbîn] قُرْبَانٌ [kurbân]ın cemidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "قُرْبَانٌ [kurbân] hakka yakın eden nesnedir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَذَابِحُ",
+          "okunus": "el-mezâbih",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 9,
   "kuranda_var": true,

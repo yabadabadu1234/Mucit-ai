@@ -217,16 +217,16 @@
         135,
         "اِتِّكَاء",
         "ittikāʾ",
-        "kendisi için dayanma",
-        "orta",
-        "Vikisözlük: masdar (bâb VIII): to lean on, to recline, to lie at table"
+        "Dayanma, yaslanma",
+        "lugat",
+        "Vikisözlük: masdar (bâb VIII): to lean on, to recline, to lie at table · Kubbealtı"
       ]
     ],
     "ism-i merre · bâb VIII": [
       [137, "اِتِّكَاءَة", "ittikāʾa", "bir kere kendisi için dayanma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُتَّكِئ", "muttakiʾ", "yaslanmış", "kuran", "Kur'ân"],
+      [138, "مُتَّكِئ", "muttakiʾ", "Bir nesneye söykenip dayanan kimseye denir", "lugat", "Kur'ân · Kamus"],
       [139, "مُتَّكِئَة", "muttakiʾa", "kendisi için dayanan, müennes", "orta", ""],
       [140, "مُتَّكِئَان", "muttakiʾān", "kendisi için dayanan, iki", "orta", ""],
       [141, "مُتَّكِئَتَان", "muttakiʾatān", "kendisi için dayanan, iki, müennes", "orta", ""],
@@ -932,7 +932,88 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "اِتِّكَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İTTİKÂ",
+          "yazilis": "ﺍﺗّﻜﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. vekie > teke’ “dayanmak, yaslanmak”tan ittikā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dayanma, yaslanma",
+              "misaller": [
+                ["Cây-ı kenâr-ı bâm-ı hatar-nâktir sakın / Bâlîn-i câha ârzû-yı ittikâ abes", "Fıtnat Hanım"],
+                ["Yaya bulunsam bana medâr-ı kuvvet olur, ona ittikâ ederek sür’atle kat’-ı mesâfe eylerim", "Fâik Reşat"],
+                [
+                  "Tutunmak için kollarını kaldırıp indiriyor, etrâfında bir nokta-i ittikâ araştırıyordu",
+                  "Hüseyin R. Gürpınar"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "ittika",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi söykenip dayanmak manâsınadır; yukâlu: إِتَّكَأَ عَلَيْهِ بِمَعْنَى وَكَأَ",
+              "misaller": [
+                ["إِتَّكَأَ عَلَيْهِ بِمَعْنَى وَكَأَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِتِّكَاءُ",
+          "okunus": "el-ittikâ",
+          "koken": "hemzenin ve tâ-yı müşeddedenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ittika",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dayanmak; yukâlu: إِتَّكَأَ عَلَى الشَّيْءِ فَهُوَ مُتَّكِئٌ",
+              "misaller": [
+                ["إِتَّكَأَ عَلَى الشَّيْءِ فَهُوَ مُتَّكِئٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِتِّكَاءُ",
+          "okunus": "el-ittikâ",
+          "koken": "kesreteynle ve tânın teşdîdiyle"
+        }
+      ],
+      "مُتَّكِئ": [
+        {
+          "eser": "Kamus",
+          "madde": "mutteki",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneye söykenip dayanan kimseye denir: ve kavluhu sallallâhu aleyhi ve sellem: “أَمَّا أَنَا فَلاَ آكُلُ مُتَّكِئًا” أَيْ جَالِسًا عَلَى هَيْئَةِ الْمُتَمَكِّنِ الْمُتَرَبِّعِ وَنَحْوِه مِنَ الْهَيْئَاتِ الْمُسْتَدْعِيَةِ لِكَثْرَةِ الأَكْلِ وَكَانَ جُلُوسُهُ عَلَيْهِ السَّلاَمُ لِـْلأَكْلِ مُسْتَوْفِزًا مُقْعِيًا غَيْرَ مُتَرَبِّعٍ وَلاَ مُتَمَكِّنٍ وَلَيْسَ الْمُرَادُ الْمَيْلَ عَلَى شِقٍّ كَمَا يَظُنُّهُ عَوَامُّ الطَّلَبَةِ Sâhib-i Nihâyenin ve Râgıbın tahkîki üzere işbu إِتِّكَاءٌ [ittikâ] ve تَوَكُّؤٌ [tevekku] mâddeleri وِكَاءٌ [vikâ] mâddesinden ki kırbanın ağızı bağına denir, mehûzlardır, bir nesneye söykenip dayanmak gûyâ ki onunla bağlanmak gibi olur. Pes mantûk-ı hadîs budur ki “Ben taâm ettiğim vaktte ekkâl cülûsu gibi üzerinde olduğum firâş ve kilime gereği gibi çöküp ittikâ ederek temekkün ve terabbu heyetleri üzere kuûd eylemem, zîrâ Server-i enâm aleyhis-salâtu ves-selâm hazretleri taâm için sofra-zîb-i kuûd olduklarında gûyâ ki hemân bir iki lokma tenâvül edip kıyâm eder vazında çömelip hafîfçe kuûd ederler idi.” Mefhûm-ı şerîf, şiddet-i şereh ü iştihâ ve kesret-i eklden nehyi mutazammındır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُتَّكِئُ",
+          "okunus": "el-mutteki",
+          "koken": "إِتِّكَاءٌ [ittikâ]dan ism-i fâildir"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 11,
   "kuranda_var": true,

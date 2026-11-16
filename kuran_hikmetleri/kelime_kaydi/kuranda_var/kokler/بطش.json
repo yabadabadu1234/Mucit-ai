@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "بَطْش", "baṭş", "sert ele geçirme", "orta", "Vikisözlük: violence, force, brutality, strength"],
+      [
+        0,
+        "بَطْش",
+        "baṭş",
+        "Şiddetle ve kuvvetle tutup yakalama",
+        "lugat",
+        "Vikisözlük: violence, force, brutality, strength · Kubbealtı"
+      ],
       [1, "بِطْش", "biṭş", "sert ele geçirme", "orta", ""],
       [2, "بُطْش", "buṭş", "sert ele geçirme", "orta", ""],
       [3, "بَطَش", "baṭaş", "sert ele geçirme", "orta", ""],
@@ -354,7 +361,7 @@
       [254, "مَبْطَشَان", "mabṭaşān", "sert ele geçirme, iki", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "بَطْشَة", "baṭşa", "şiddetli darbe", "kuran", "Kur'ân"],
+      [255, "بَطْشَة", "baṭşa", "Hamle kılmak ve bir nesneye unfla yapışmak", "lugat", "Kur'ân · Vankulu"],
       [256, "بَطْشَتَان", "baṭşatān", "bir kere sert ele geçirme, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -401,11 +408,11 @@
         294,
         "بَطْش",
         "baṭş",
-        "her daim sert ele geçiren",
-        "orta",
-        "Vikisözlük: violence, force, brutality, strength"
+        "Şiddetle ve kuvvetle tutup yakalama",
+        "lugat",
+        "Vikisözlük: violence, force, brutality, strength · Kubbealtı"
       ],
-      [295, "بَطْشَة", "baṭşa", "şiddetli darbe", "kuran", "Kur'ân"],
+      [295, "بَطْشَة", "baṭşa", "Hamle kılmak ve bir nesneye unfla yapışmak", "lugat", "Kur'ân · Vankulu"],
       [296, "بَطْشَان", "baṭşān", "her daim sert ele geçiren, iki", "orta", ""],
       [297, "بَطْشَتَان", "baṭşatān", "her daim sert ele geçiren, iki, müennes", "orta", ""],
       [298, "بَطْشُون", "baṭşūn", "her daim sert ele geçirenler", "orta", ""],
@@ -546,7 +553,14 @@
       [425, "بَطَاشَة", "baṭāşa", "sert ele geçirme", "orta", ""],
       [426, "بِطَاشَة", "biṭāşa", "sert ele geçirme", "orta", ""],
       [427, "بُطُوشَة", "buṭūşa", "sert ele geçirme", "orta", ""],
-      [428, "بَطْش", "baṭş", "sert ele geçirme", "orta", "Vikisözlük: violence, force, brutality, strength"],
+      [
+        428,
+        "بَطْش",
+        "baṭş",
+        "Şiddetle ve kuvvetle tutup yakalama",
+        "lugat",
+        "Vikisözlük: violence, force, brutality, strength · Kubbealtı"
+      ],
       [429, "بِطْش", "biṭş", "sert ele geçirme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -560,9 +574,9 @@
         439,
         "بَطْش",
         "baṭş",
-        "sert ele geçirme türünden şey",
-        "orta",
-        "Vikisözlük: violence, force, brutality, strength"
+        "Şiddetle ve kuvvetle tutup yakalama",
+        "lugat",
+        "Vikisözlük: violence, force, brutality, strength · Kubbealtı"
       ],
       [441, "بَطَش", "baṭaş", "sert ele geçirme türünden şey", "orta", ""],
       [443, "بِطْش", "biṭş", "sert ele geçirme türünden şey", "orta", ""],
@@ -576,7 +590,7 @@
       [431, "بَاطُوشَة", "bāṭūşa", "sert ele geçirme türünden bir tane", "orta", ""],
       [436, "بَوْطَشَة", "bawṭaşa", "sert ele geçirme türünden bir tane", "orta", ""],
       [438, "بَيْطَشَة", "bayṭaşa", "sert ele geçirme türünden bir tane", "orta", ""],
-      [440, "بَطْشَة", "baṭşa", "şiddetli darbe", "kuran", "Kur'ân"],
+      [440, "بَطْشَة", "baṭşa", "Hamle kılmak ve bir nesneye unfla yapışmak", "lugat", "Kur'ân · Vankulu"],
       [442, "بَطَشَة", "baṭaşa", "sert ele geçirme türünden bir tane", "orta", ""],
       [444, "بِطْشَة", "biṭşa", "sert ele geçirme türünden bir tane", "orta", ""],
       [446, "بُطْشَة", "buṭşa", "sert ele geçirme türünden bir tane", "orta", ""],
@@ -1239,7 +1253,80 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَطْش": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BATŞ",
+          "yazilis": "ﺑﻄﺶ",
+          "tur": "i.",
+          "koken": "Ar. baṭş",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Şiddetle ve kuvvetle tutup yakalama",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "batş",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseyi arslan gibi unf ve satvetle kavrayıp tutmak manâsınadır; yukâlu: بَطَشَ بِهِ بَطْشًا مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا أَخَذَهُ بِالْعُنْفِ وَالسَّطْوَةِ Ve bazılar indinde بَطْشٌ [batş] her nesneyi unf ve şiddetle yapışıp tutmak manâsınadır.",
+              "misaller": [
+                ["بَطَشَ بِهِ بَطْشًا مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا أَخَذَهُ بِالْعُنْفِ وَالسَّطْوَةِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "إِبْطَاشٌ [ibtâş] insânı ahz eylemeğe hâstır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "بَطْشٌ [batş] Bes ve kuvvet manâsına müstameldir; yukâlu: هُوَ ذُو بَطْشٍ أَيْ بَأْسٍ Ve hastalıktan gerçi ifâkat bulup lâkin henüz zaîf olmak manâsınadır; yukâlu: بَطَشَ مِنَ الْحُمَّى إِذَا أَفَاقَ مِنْهَا وَهُوَ ضَعِيفٌ",
+              "misaller": [
+                ["هُوَ ذُو بَطْشٍ أَيْ بَأْسٍ", ""],
+                ["بَطَشَ مِنَ الْحُمَّى إِذَا أَفَاقَ مِنْهَا وَهُوَ ضَعِيفٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبَطْشُ",
+          "okunus": "el-batş",
+          "koken": "bânın fethi ve tânın sükûnuyla"
+        }
+      ],
+      "بَطْشَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "batşat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hamle kılmak ve bir nesneye unfla yapışmak; yukâlu: بَطَشَ بِهِ يَبْطُشُ وَيَبْطِشُ بَطْشًا مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي",
+              "misaller": [
+                ["بَطَشَ بِهِ يَبْطُشُ وَيَبْطِشُ بَطْشًا مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبَطْشَةُ",
+          "okunus": "el-batşat",
+          "koken": "bânın fethi ve tânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 10,
   "kuranda_var": true,

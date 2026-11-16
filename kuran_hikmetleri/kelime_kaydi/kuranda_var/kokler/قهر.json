@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "قَهْر", "qahr", "yenme", "orta", "Vikisözlük: verbal noun of قَهَرَ (qahara)"],
+      [0, "قَهْر", "qahr", "Yok etme", "lugat", "Vikisözlük: verbal noun of قَهَرَ (qahara) · Luggat"],
       [1, "قِهْر", "qihr", "yenme", "orta", ""],
       [2, "قُهْر", "quhr", "yenme", "orta", ""],
       [3, "قَهَر", "qahar", "yenme", "orta", ""],
@@ -289,8 +289,8 @@
       [516, "اِقْهِوَّار", "iqhiwwār", "aşırı yenme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "قَاهِر", "qāhir", "yenen", "orta", ""],
-      [214, "قَاهِرَة", "qāhira", "yenen, müennes", "orta", ""],
+      [213, "قَاهِر", "qāhir", "Kahreden, yok eden", "lugat", "Luggat"],
+      [214, "قَاهِرَة", "qāhira", "Kâide-i diyâr-ı Mısriyye olan şehr-i marûftur", "lugat", "Kamus"],
       [215, "قَاهِرَان", "qāhirān", "yenen, iki", "orta", ""],
       [216, "قَاهِرَتَان", "qāhiratān", "yenen, iki, müennes", "orta", ""],
       [217, "قَاهِرُون", "qāhirūn", "yenenler", "orta", ""],
@@ -298,7 +298,7 @@
       [219, "قَاهِرَات", "qāhirāt", "yenenler, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَقْهُور", "maqhūr", "yenilen", "orta", ""],
+      [220, "مَقْهُور", "maqhūr", "Kahrolmuş, yenilmiş", "lugat", "Luggat"],
       [221, "مَقْهُورَة", "maqhūra", "yenilen, müennes", "orta", ""],
       [222, "مَقْهُورَان", "maqhūrān", "yenilen, iki", "orta", ""],
       [223, "مَقْهُورَتَان", "maqhūratān", "yenilen, iki, müennes", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "قَهَرُون", "qaharūn", "her daim yenenler", "orta", ""],
       [292, "قَهَرِين", "qaharīn", "her daim yenenler", "orta", ""],
       [293, "قَهَرَات", "qaharāt", "her daim yenenler, müennes", "orta", ""],
-      [294, "قَهْر", "qahr", "her daim yenen", "orta", "Vikisözlük: verbal noun of قَهَرَ (qahara)"],
+      [294, "قَهْر", "qahr", "Yok etme", "lugat", "Vikisözlük: verbal noun of قَهَرَ (qahara) · Luggat"],
       [295, "قَهْرَة", "qahra", "her daim yenen, müennes", "orta", ""],
       [296, "قَهْرَان", "qahrān", "her daim yenen, iki", "orta", ""],
       [297, "قَهْرَتَان", "qahratān", "her daim yenen, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "قَهَارَة", "qahāra", "yenme", "orta", ""],
       [426, "قِهَارَة", "qihāra", "yenme", "orta", ""],
       [427, "قُهُورَة", "quhūra", "yenme", "orta", ""],
-      [428, "قَهْر", "qahr", "yenme", "orta", "Vikisözlük: verbal noun of قَهَرَ (qahara)"],
+      [428, "قَهْر", "qahr", "Yok etme", "lugat", "Vikisözlük: verbal noun of قَهَرَ (qahara) · Luggat"],
       [429, "قِهْر", "qihr", "yenme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُقْهُورَة", "ʾuqhūra", "yenme türünden şey", "orta", ""],
       [435, "قَوْهَر", "qawhar", "yenme türünden şey", "orta", ""],
       [437, "قَيْهَر", "qayhar", "yenme türünden şey", "orta", ""],
-      [439, "قَهْر", "qahr", "yenme türünden şey", "orta", "Vikisözlük: verbal noun of قَهَرَ (qahara)"],
+      [439, "قَهْر", "qahr", "Yok etme", "lugat", "Vikisözlük: verbal noun of قَهَرَ (qahara) · Luggat"],
       [441, "قَهَر", "qahar", "yenme türünden şey", "orta", ""],
       [443, "قِهْر", "qihr", "yenme türünden şey", "orta", ""],
       [445, "قُهْر", "quhr", "yenme türünden şey", "orta", ""],
@@ -2153,7 +2153,291 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قَهْر": [
+        {
+          "eser": "Kamus",
+          "madde": "Kahr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseye galebe eylemek manâsınadır ki bi-tarîkit-tezlîl ahz eylemekten ibârettir; yukâlu: قَهَرَهُ قَهْرًا مِنَ الْبَابِ الثَّالِثِ إِذَا غَلَبَهُ Ve قَهْرٌ [Kahr] Bir mevzi adıdır.",
+              "misaller": [
+                ["قَهَرَهُ قَهْرًا مِنَ الْبَابِ الثَّالِثِ إِذَا غَلَبَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَهْرُ",
+          "okunus": "el-kahr",
+          "koken": "kâfın fethi ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kahr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yok etme. Çok üzülme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "KAHIR – KAHR",
+          "yazilis": "ﻗﻬﺮ",
+          "tur": "i.",
+          "koken": "Ar. ḳahr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İnsanın içine işleyen derin üzüntü, sıkıntı, keder [Bu anlamı Türkçe’de kazanmıştır]",
+              "misaller": [
+                ["Kahrdan ikrâh edenler lutfa olmaz müstahak / Müstaidd-i derd olanlar kābil-i dermân olur", "Fuzûlî"],
+                [
+                  "Kahr u lutfu şey’-i vâhid bilmeyen çekti azâb / Ol azabdan kurtulup sultân olan anlar bizi",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["Dosttan gördüm kahrın daniskasını", "Câhit S. Tarancı"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Gālip gelip ezme, perîşan etme, mahv ve helâk etme",
+              "misaller": [
+                ["Kulunun za’fına nisbet çok ise noksânı / Ya O’nun kahrına gālib mi değil ihsânı", "Şinâsî"],
+                ["Vurur, vurur, çekilir… aks-i kahrını dinler", "Hüseyin Sîret"],
+                ["Yavuz’un kahrına göğüs germiş…", "Safiye Erol"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Zorla iş yaptırma, zorlama, baskı, cebir, icbar [Daha çok cebir kelimesiyle berâber kullanılır]",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Yapılan bir kötülükten beklenmeyen bir hayır doğmak",
+              "misaller": [],
+              "deyim": "Kahır yüzünden lutfa uğramak (lutuf görmek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bk. KAHRETMEK",
+              "misaller": [],
+              "deyim": "Kahr etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bk. KAHROLMAK . (Birinin) Kahrına uğramak",
+              "misaller": [],
+              "deyim": "Kahr olmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Kahrından ölmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bu ajanların silâhlı eylemlerini görmeden öldü. Görseydi de kahrından ölürdü (Ergun Göze). 2. mec. Çok fazla üzülmek. (Bir işin veya kimsenin) Kahrını çekmek",
+              "misaller": [
+                ["Verdiği her türlü eziyete katlanmak: On yıldır her türlü kahrımı çeker", "Nâmık Kemal"],
+                ["Keşke yine burada olsaydı da kahrını çekseydim diyor", "Reşat N. Güntekin"]
+              ],
+              "deyim": "Çektiği üzüntü hayâtına mâlolmak"
+            }
+          ]
+        }
+      ],
+      "قَاهِر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KĀHİR",
+          "yazilis": "ﻗﺎﻫﺮ",
+          "tur": "sıf.",
+          "koken": "Ar. ḳahr “üstün gelmek, zorla istediğini yaptırmak”tan ḳāhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kahreden, mahveden, yok eden",
+              "misaller": [
+                ["Sarılır toprağa estikçe o kāhir poyraz", "Cenap Şahâbeddin"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Ezici, ezen, üstün gelen",
+              "misaller": [
+                ["Kāhir kuvvet.", ""],
+                ["Kāhir ekseriyet.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Zehri yok eden, panzehir. ● Kāhire ( ﻗﺎﻫﺮﻩ ) sıf",
+              "misaller": [],
+              "deyim": "Kāhirü’s-sümum"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Kuvve-i kāhire .”",
+              "misaller": [],
+              "deyim": "Kāhir kelimesinin tamlamalarda ortaya çıkan aynı mânâdaki müennes şekli"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kâhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kahreden, yok eden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "قَاهِرَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-Kâhiret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kâide-i diyâr-ı Mısriyye olan şehr-i marûftur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَاهِرَةُ",
+          "okunus": "el-Kâhiret",
+          "koken": ""
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kahiret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mütercim der ki Ubeydiyyûndan el-Muizz li-dînillâh nâm sultân eski Mısırı tahrîb edip şehr-i mezbûru binâya mübâşeret ve Mirrîh sâatinde vaz-ı esâs eylemekle Kâhire ile tesmiye olundu, zîrâ Arab müneccimleri Mirrîhe قَاهِرَةٌ [Kâhiret] ıtlâk ederler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "قَاهِرَةٌ [kâhiret] Mutlakan bâdire manâsına müstameldir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "göğüs tahtasına ve göğüse ıtlâk olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَقْهُور": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MAKHUR",
+          "yazilis": "ﻣﻘﻬﻭﺭ",
+          "tur": "sıf.",
+          "koken": "Ar. ḳahr “yenip mahvetmek, helâk etmek”ten maḳhūr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yenilgiye, bozguna uğramış, yenilmiş, mağlûp olmuş",
+              "misaller": [
+                ["Felek fermânına me’mûr oluptur / Anınçün düşmenin makhûr oluptur", "Ahmed-i Dâî"],
+                ["Etti yevm-i Huneyn o şâh-ı gayûr / Saff-ı a’dâyı serteser makhûr", "Sâlim Tezkiresi"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Mahvolmuş, bitmiş, tükenmiş",
+              "misaller": [
+                ["Derûnu âteş-i hummâ-yı hicr ile makhûr", "Hüseyin Sîret"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Çok üzülmüş, üzgün, perîşan",
+              "misaller": [
+                ["Bu fikr-i musallatla mücâdele-i derûniyyesinden Ahmet Cemil mağlûp, makhur çıktı", "Hâlit Z. Uşaklıgil"],
+                [
+                  "Bir zaferin ebedî hâtırası olan câmiden dilgir ve makhur bir asil kāfile sükûnuyle çıktık",
+                  "Rûşen E. Ünaydın"
+                ]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "Allah’ın gazabına uğramış",
+              "misaller": [
+                ["Anı her halde mansûr ede Hak / Cümle a’dâsını makhûr ede Hak", "Sünbülzâde Vehbî"],
+                ["Her an ediyorsun beni makhûr-ı celâlin / Kurbân olayım nerde senin nerde cemâlin", "Mehmet Âkif’ten"]
+              ],
+              "no": 4
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kazâ ve kaderin kahrına uğramış, kaderin sillesini yemiş",
+              "misaller": [
+                ["İşte Nesrin daha bir gonca-i nev-hande iken / Geçti makhûr-ı kazâ hep bu dikenliklerden", "Tevfik Fikret"],
+                ["● Makhûrâne", "ﻣﻘﻬﻮﺭﺍﻧﻪ"],
+                [
+                  "Mağlûp olanlara, kahır ve gazaba uğrayanlara yakışır şekilde, kahra uğramış bir halde: Nihâyet onu müthiş bir darbe ile makhûrâne öldürüyordu",
+                  "Hâlit Z. Uşaklıgil"
+                ],
+                ["● Makhûren", "ﻣﻘﻬﻮﺭﺍً"]
+              ],
+              "deyim": "Makhûr-ı kazâ"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "makhûr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kahrolmuş, yenilmiş. Gazaba uğramış",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 10,
   "kuranda_var": true,

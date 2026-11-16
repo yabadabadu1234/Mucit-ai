@@ -11,7 +11,7 @@
       [0, "ثَرْي", "ṯary", "zenginleşme", "orta", ""],
       [1, "ثِرْي", "ṯiry", "zenginleşme", "orta", ""],
       [2, "ثُرْي", "ṯury", "zenginleşme", "orta", ""],
-      [517, "ثَرَى", "ṯarā", "toprak, toprak altı", "kuran", "Kur'ân"],
+      [517, "ثَرَى", "ṯarā", "Bir adamın mâlı çok olmak", "lugat", "Kur'ân · Kamus"],
       [518, "ثِرَى", "ṯirā", "zenginleşme", "orta", ""],
       [519, "ثُرِيّ", "ṯuriyy", "zenginleşme", "orta", ""],
       [520, "ثُرِيّ", "ṯuriyy", "zenginleşme", "orta", ""],
@@ -92,7 +92,14 @@
       [566, "مُثَارَى", "muṯārā", "biriyle karşılıklı zenginleşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِثْرَاء", "ʾiṯrāʾ", "zenginleştirme", "orta", "Vikisözlük: masdar (bâb IV): to make rich, to enrich"]
+      [
+        567,
+        "إِثْرَاء",
+        "ʾiṯrāʾ",
+        "Bu dahi mâlı çok olmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb IV): to make rich, to enrich · Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [568, "إِثْرَاءَة", "ʾiṯrāʾa", "bir kere zenginleştirme", "orta", ""]
@@ -360,7 +367,7 @@
       [750, "ثَرُوُّون", "ṯaruwwūn", "her daim zenginleşenler", "orta", ""],
       [751, "ثَرُوِّين", "ṯaruwwīn", "her daim zenginleşenler", "orta", ""],
       [752, "ثَرُوَّات", "ṯaruwwāt", "her daim zenginleşenler, müennes", "orta", ""],
-      [753, "ثَرَى", "ṯarā", "toprak, toprak altı", "kuran", "Kur'ân"],
+      [753, "ثَرَى", "ṯarā", "Bir adamın mâlı çok olmak", "lugat", "Kur'ân · Kamus"],
       [754, "ثَرَيَان", "ṯarayān", "her daim zenginleşen, iki", "orta", ""],
       [884, "ثَرَوْن", "ṯarawn", "her daim zenginleşenler", "orta", ""],
       [885, "ثَرَيْن", "ṯarayn", "her daim zenginleşenler", "orta", ""],
@@ -518,7 +525,7 @@
       [435, "ثَوْرَي", "ṯawray", "zenginleşme türünden şey", "orta", ""],
       [437, "ثَيْرَي", "ṯayray", "zenginleşme türünden şey", "orta", ""],
       [439, "ثَرْي", "ṯary", "zenginleşme türünden şey", "orta", ""],
-      [840, "ثَرَى", "ṯarā", "toprak, toprak altı", "kuran", "Kur'ân"],
+      [840, "ثَرَى", "ṯarā", "Bir adamın mâlı çok olmak", "lugat", "Kur'ân · Kamus"],
       [443, "ثِرْي", "ṯiry", "zenginleşme türünden şey", "orta", ""],
       [445, "ثُرْي", "ṯury", "zenginleşme türünden şey", "orta", ""],
       [841, "ثَرِيّ", "ṯariyy", "zenginleşme türünden şey", "orta", ""],
@@ -551,7 +558,7 @@
       [858, "ثَرَاة", "ṯarā", "zenginleşmeler", "orta", ""],
       [859, "ثُرَّاء", "ṯurrāʾ", "zenginleşmeler", "orta", ""],
       [860, "ثَرَاء", "ṯarāʾ", "zenginleşmeler", "orta", ""],
-      [861, "ثَرَى", "ṯarā", "toprak, toprak altı", "kuran", "Kur'ân"],
+      [861, "ثَرَى", "ṯarā", "Bir adamın mâlı çok olmak", "lugat", "Kur'ân · Kamus"],
       [862, "مَثَارِي", "maṯārī", "zenginleşmeler", "orta", ""],
       [863, "مَثَارِيّ", "maṯāriyy", "zenginleşmeler", "orta", ""],
       [864, "ثَوَارِي", "ṯawārī", "zenginleşmeler", "orta", ""],
@@ -924,7 +931,126 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ثَرَى": [
+        {
+          "eser": "Kamus",
+          "madde": "sera",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adamın mâlı çok olmak manâsınadır; yukâlu: ثَرِيَ الرَّجُلُ ثَرًى مِنَ الْبَابِ الرَّابِعِ إِذَا كَثُرَ مَالُهُ",
+              "misaller": [
+                ["ثَرِيَ الرَّجُلُ ثَرًى مِنَ الْبَابِ الرَّابِعِ إِذَا كَثُرَ مَالُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلثَّرَى",
+          "okunus": "esamp;-samp;erâ",
+          "koken": "هَوَى [hevâ] vezninde"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "sera",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Nem ve نَدَا [nedâ] manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "nem-nâk toprağa denir, alâ-kavlin şol toprağa denir ki ıslandıkta sakızlanıp yapışkan çamur olmaya.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "hayr ve hasene manâsınadır; yukâlu: هُوَ ذُو ثَرًى أَيْ ذُو خَيْرٍ Ve arza denir; tesniyesinde ثَرَيَانِ [samp;ereyân] ve ثَرَوَانِ [samp;erevân] denir fetehâtla; cemi أَثْرَاءٌ [esamp;râ] gelir.",
+              "misaller": [
+                ["هُوَ ذُو ثَرًى أَيْ ذُو خَيْرٍ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "ثَرًى [samp;erâ] Masdar olur, yer gereği gibi kuruyup pekiştikten sonra ıslanıp yumuşamak manâsınadır; yukâlu: ثَرِيَتِ الْأَرْضُ ثَرًى مِنَ الْبَابِ الرَّابِعِ إِذَا نَدِيَتْ وَلَانَتْ بَعْدَ الْجُدُوبَةِ وَالْيُبْسِ",
+              "misaller": [
+                [
+                  "ثَرِيَتِ الْأَرْضُ ثَرًى مِنَ الْبَابِ الرَّابِعِ إِذَا نَدِيَتْ وَلَانَتْ بَعْدَ الْجُدُوبَةِ وَالْيُبْسِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلثَّرَى",
+          "okunus": "esamp;-samp;erâ",
+          "koken": "samp;ânın fethi ve elifin kasrıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sera",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Nem-nâk olan toprak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلثَّرَى",
+          "okunus": "esamp;-samp;erâ",
+          "koken": "samp;ânın fethi ve elifin kasrıyla"
+        }
+      ],
+      "إِثْرَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "isra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi mâlı çok olmak manâsınadır; yukâlu: أَثْرَى فُلَانٌ إِذَا كَثُرَ مَالُهُ",
+              "misaller": [
+                ["أَثْرَى فُلَانٌ إِذَا كَثُرَ مَالُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِثْرَاءُ",
+          "okunus": "el-isamp;râ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "isra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimsenin mâlı çok olmak; yukâlu: أَثْرَى الرَّجُلُ إِذَا كَثُرَتْ أَمْوَالُهُ Ve إِثْرَاءٌ [isamp;râ] Yerin nem-nâk toprağı çok olmak manâsına da gelir; yukâlu: أَثْرَتِ الْأَرْضُ إِذَا كَثُرَ ثَرَاهَا Ve إِثْرَاءٌ [isamp;râ] Toprağı nem-nâk etmeğe dahi derler; yukâlu: أَثْرَى الْمَطَرُ إِذَا بَلَّ الثَّرَى",
+              "misaller": [
+                ["أَثْرَى الرَّجُلُ إِذَا كَثُرَتْ أَمْوَالُهُ", ""],
+                ["أَثْرَتِ الْأَرْضُ إِذَا كَثُرَ ثَرَاهَا", ""],
+                ["أَثْرَى الْمَطَرُ إِذَا بَلَّ الثَّرَى", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِثْرَاءُ",
+          "okunus": "el-isamp;râ",
+          "koken": "hemzenin kesri ve elifin meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

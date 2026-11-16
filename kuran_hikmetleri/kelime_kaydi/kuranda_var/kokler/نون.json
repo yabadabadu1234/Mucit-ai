@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "نَوْن", "nawn", "balık", "kontrol", ""],
       [888, "نِين", "nīn", "balık", "kontrol", ""],
-      [889, "نُون", "nūn", "nun harfi", "kuran", "Kur'ân"],
+      [889, "نُون", "nūn", "Harf-i ziyâdedendir", "lugat", "Kur'ân · Kamus"],
       [517, "نَان", "nān", "balık", "kontrol", ""],
       [518, "نِيَن", "niyan", "balık", "kontrol", ""],
       [5, "نُوُن", "nuwun", "balık", "kontrol", ""],
@@ -39,7 +39,14 @@
       [533, "مَنِينَة", "manīna", "balık", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَنْوِين", "tanwīn", "çokça balık olma", "kontrol", ""],
+      [
+        29,
+        "تَنْوِين",
+        "tanwīn",
+        "Arap ve Osmanlı alfabesinde üstüne konduğu kelimenin sonunu -en, -ün, altına…",
+        "lugat",
+        "Kubbealtı"
+      ],
       [30, "تَنْوِنَة", "tanwina", "çokça balık olma", "kontrol", ""],
       [31, "نِوِّان", "niwwān", "çokça balık olma", "kontrol", ""]
     ],
@@ -538,7 +545,7 @@
       [421, "نَوَان", "nawān", "balık olma", "kontrol", ""],
       [422, "نُوُون", "nuwūn", "balık olma", "kontrol", ""],
       [835, "نِيَان", "niyān", "balık olma", "kontrol", ""],
-      [918, "نُون", "nūn", "nun harfi", "kuran", "Kur'ân"],
+      [918, "نُون", "nūn", "Harf-i ziyâdedendir", "lugat", "Kur'ân · Kamus"],
       [425, "نَوَانَة", "nawāna", "balık olma", "kontrol", ""],
       [837, "نِيَانَة", "niyāna", "balık olma", "kontrol", ""],
       [427, "نُوُونَة", "nuwūna", "balık olma", "kontrol", ""],
@@ -555,7 +562,7 @@
       [439, "نَوْن", "nawn", "balık olma türünden şey", "kontrol", ""],
       [840, "نَان", "nān", "balık olma türünden şey", "kontrol", ""],
       [921, "نِين", "nīn", "balık olma türünden şey", "kontrol", ""],
-      [923, "نُون", "nūn", "nun harfi", "kuran", "Kur'ân"],
+      [923, "نُون", "nūn", "Harf-i ziyâdedendir", "lugat", "Kur'ân · Kamus"],
       [447, "نَوِين", "nawīn", "balık olma türünden şey", "kontrol", ""],
       [843, "نِيَن", "niyan", "balık olma türünden şey", "kontrol", ""],
       [451, "نُوُن", "nuwun", "balık olma türünden şey", "kontrol", ""],
@@ -575,7 +582,7 @@
       [454, "نَوَانَة", "nawāna", "balık olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَنْوَان", "ʾanwān", "balık olmalar", "kontrol", ""],
+      [455, "أَنْوَان", "ʾanwān", "Cemi, balıklar", "lugat", "Vankulu"],
       [456, "أَنْوِنَة", "ʾanwina", "balık olmalar", "kontrol", ""],
       [457, "أَنَاوِن", "ʾanāwin", "balık olmalar", "kontrol", ""],
       [458, "أَنَاوِين", "ʾanāwīn", "balık olmalar", "kontrol", ""],
@@ -1190,7 +1197,135 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "نُون": [
+        {
+          "eser": "Kamus",
+          "madde": "nun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Harf-i ziyâdedendir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "eşârda نُنْ unvânıyla tefevvüh olunmak zarûrete mebnî câizdir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "نُونٌ [nûn] Yazı yazacak divite denir, دَوَاةٌ [devât] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "balığa denir, حُوتٌ [hût] manâsına; cemi نِينَانٌ [nînân]dır nûnun kesriyle ve أَنْوَانٌ [envân]dır. Mütercim der ki Sahîh-i Buhârîde mestûr olan hadîs-i tavîl zeylinde Yehûdînin أَلَا أُخْبِرُك بِإِدَامِ أَهْلِ الْجَنَّةَ قَالَ بَلَى قَالَ بَالَامٌ وَنُونٌ kavlinde بَالَامٌ [bâlâm] İbrânîdir, öküze denir ve نُونٌ [nûn]dan murâd balıktır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "نُونٌ [nûn] Kılıcın ağzına ıtlâk olunur, شَفْرَةُ السَّيْفِ [şefretus-seyf] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنُّونُ",
+          "okunus": "en-nûn",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "nun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Balık, حُوتٌ [hût] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنُّونُ",
+          "okunus": "en-nûn",
+          "koken": "nûnun zammı ve meddiyle"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "en-nûnul-hafiyyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلنُّونُ الْخَفِيَّةُ [en-nûnul-hafiyyet] Sarfiyyûn ıstılâhında nûn-ı hafîfeye ıtlâk olunur ki sakîle mukâbilidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَنْوِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TENVİN",
+          "yazilis": "ﺗﻨﻮﻳﻦ",
+          "tur": "i.",
+          "koken": "Ar. nūn ’dan tenvіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Arap ve Osmanlı alfabesinde üstüne konduğu kelimenin sonunu -en, -ün, altına konduğu zaman -in olarak okutan hareke",
+              "misaller": [
+                ["Akl en .", ""],
+                ["Şekl en .", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tenvin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsmi münevven kılmak; tekûlu: نَوَّنْتُ الْإِسْمَ تَنْوِينًا Ve تَنْوِينٌ [tenvîn] İsmin âhirine mahsûs olan nûn-ı sâkine dahi derler ki telaffuzda zâhir olur, kitâbette olmaz.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّنْوِينُ",
+          "okunus": "et-tenvîn",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ],
+      "أَنْوَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "envan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi, balıklar manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَنْوَانُ",
+          "okunus": "el-envân",
+          "koken": "hemzenin fethiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

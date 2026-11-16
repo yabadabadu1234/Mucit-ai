@@ -18,7 +18,7 @@
       [7, "شِحَام", "şiḥām", "yağ", "kontrol", ""],
       [8, "شُحَام", "şuḥām", "yağ", "kontrol", ""],
       [9, "شَحَام", "şaḥām", "yağ", "kontrol", ""],
-      [10, "شَحَامَة", "şaḥāma", "yağ", "kontrol", ""],
+      [10, "شَحَامَة", "şaḥāma", "Semiz olmak", "lugat", "Kamus"],
       [11, "شُحُومَة", "şuḥūma", "yağ", "kontrol", ""],
       [12, "شِحَامَة", "şiḥāma", "yağ", "kontrol", ""],
       [13, "شَحِيم", "şaḥīm", "yağ", "kontrol", ""],
@@ -351,9 +351,9 @@
         255,
         "شَحْمَة",
         "şaḥma",
-        "bir kere yağ olma",
-        "kontrol",
-        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”)"
+        "dan bir pâreye denir",
+        "lugat",
+        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”) · Kamus"
       ],
       [256, "شَحْمَتَان", "şaḥmatān", "bir kere yağ olma, iki", "kontrol", ""]
     ],
@@ -402,9 +402,9 @@
         295,
         "شَحْمَة",
         "şaḥma",
-        "her daim yağ olan, müennes",
-        "kontrol",
-        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”)"
+        "dan bir pâreye denir",
+        "lugat",
+        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”) · Kamus"
       ],
       [296, "شَحْمَان", "şaḥmān", "her daim yağ olan, iki", "kontrol", ""],
       [297, "شَحْمَتَان", "şaḥmatān", "her daim yağ olan, iki, müennes", "kontrol", ""],
@@ -433,7 +433,7 @@
       [320, "شُحَامِين", "şuḥāmīn", "her daim yağ olanlar", "kontrol", ""],
       [321, "شُحَامَات", "şuḥāmāt", "her daim yağ olanlar, müennes", "kontrol", ""],
       [322, "شَحَام", "şaḥām", "her daim yağ olan", "kontrol", ""],
-      [323, "شَحَامَة", "şaḥāma", "her daim yağ olan, müennes", "kontrol", ""],
+      [323, "شَحَامَة", "şaḥāma", "Semiz olmak", "lugat", "Kamus"],
       [324, "شَحَامَان", "şaḥāmān", "her daim yağ olan, iki", "kontrol", ""],
       [325, "شَحَامَتَان", "şaḥāmatān", "her daim yağ olan, iki, müennes", "kontrol", ""],
       [326, "شَحَامُون", "şaḥāmūn", "her daim yağ olanlar", "kontrol", ""],
@@ -543,7 +543,7 @@
       [422, "شُحُوم", "şuḥūm", "yağlar", "kuran", "Kur'ân"],
       [423, "شِحَام", "şiḥām", "yağ olma", "kontrol", ""],
       [424, "شُحْم", "şuḥm", "yağ olma", "kontrol", ""],
-      [425, "شَحَامَة", "şaḥāma", "yağ olma", "kontrol", ""],
+      [425, "شَحَامَة", "şaḥāma", "Semiz olmak", "lugat", "Kamus"],
       [426, "شِحَامَة", "şiḥāma", "yağ olma", "kontrol", ""],
       [427, "شُحُومَة", "şuḥūma", "yağ olma", "kontrol", ""],
       [428, "شَحْم", "şaḥm", "yağ olma", "kontrol", "Vikisözlük: verbal noun of شَحَمَ (šaḥama) (form I)"],
@@ -580,9 +580,9 @@
         440,
         "شَحْمَة",
         "şaḥma",
-        "yağ olma türünden bir tane",
-        "kontrol",
-        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”)"
+        "dan bir pâreye denir",
+        "lugat",
+        "Vikisözlük: piece of fat, singulative of شَحْم (šaḥm, “fat”) · Kamus"
       ],
       [442, "شَحَمَة", "şaḥama", "yağ olma türünden bir tane", "kontrol", ""],
       [444, "شِحْمَة", "şiḥma", "yağ olma türünden bir tane", "kontrol", ""],
@@ -590,7 +590,7 @@
       [448, "شَحِيمَة", "şaḥīma", "yağ olma türünden bir tane", "kontrol", ""],
       [450, "شِحَمَة", "şiḥama", "yağ olma türünden bir tane", "kontrol", ""],
       [452, "شُحُمَة", "şuḥuma", "yağ olma türünden bir tane", "kontrol", ""],
-      [454, "شَحَامَة", "şaḥāma", "yağ olma türünden bir tane", "kontrol", ""]
+      [454, "شَحَامَة", "şaḥāma", "Semiz olmak", "lugat", "Kamus"]
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَشْحَام", "ʾaşḥām", "yağ olmalar", "kontrol", ""],
@@ -1703,7 +1703,143 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شَحَامَة": [
+        {
+          "eser": "Kamus",
+          "madde": "eş-şehâmet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Semiz olmak manâsınadır; yukâlu: شَحُمَ الرَّجُلُ شَحَامَةً مِنَ الْبَابِ الْخَامِسِ إِذَا كَانَ شَحِيمًا",
+              "misaller": [
+                ["شَحُمَ الرَّجُلُ شَحَامَةً مِنَ الْبَابِ الْخَامِسِ إِذَا كَانَ شَحِيمًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّحَامَةُ",
+          "okunus": "eş-şehâmet",
+          "koken": "كَرَامَةٌ [kerâmet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şehâmet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Semiz olmak; yukâlu: شَحُمَ شَحَامَةً مِنَ الْبَابِ الْخَامِسِ",
+              "misaller": [
+                ["شَحُمَ شَحَامَةً مِنَ الْبَابِ الْخَامِسِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّحَامَةُ",
+          "okunus": "eş-şehâmet",
+          "koken": "şînin fethi ile"
+        }
+      ],
+      "شَحْمَة": [
+        {
+          "eser": "Kamus",
+          "madde": "eş-şahmet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "شَحْمٌ [şahm]dan bir pâreye denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir kuş ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Araba mahsûs bir laib adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْأَرْضِ [şahmetul-ard] Mantara ıtlâk olunur. Kezâlik ak kurtçağızlara denir ki çamurlukta olur, alâ-kavlin yer solucanı dedikleridir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْأُذُنِ [şahmetul-uzun] Kulağın yumuşağına denir ki küpe geçirecek yeridir.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْمَرْجِ [şahmetul-merc] Hâtem çiçeğine denir.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْحَنْظَلِ [şahmetul-hanzal] Ebû cehl karpuzunun çekirdeklerinden gayrı içinde olan etine denir, ağaç kavununun eti gibi.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الرُّمَّانِ [şahmetur-rummân] Narın çekirdekleri arkasında olan sarıca ince zara denir, hurdları beynini fasl eder.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّحْمَةُ",
+          "okunus": "eş-şahmet",
+          "koken": "تَمْرَةٌ [temret] vezninde tâ-yı tahsîsle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şahmet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vâhidi, zikr olunan yağın bir pâresi manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْأَرْضِ [şahmetul-ard] Ak mantar.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "شَحْمَةُ الْأُذُنِ [şahmetul-uzun] Kulakta küpe astıkları yumuşak yer.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "شَحْمٌ [şahm] Yağ yedirmeğe dahi derler; yukâlu: شَحَمَ فُلَانٌ أَصْحَابَهُ إِذَا أَطْعَمَهُمُ الشَّحْمَ",
+              "misaller": [
+                ["شَحَمَ فُلَانٌ أَصْحَابَهُ إِذَا أَطْعَمَهُمُ الشَّحْمَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّحْمَةُ",
+          "okunus": "eş-şahmet",
+          "koken": "vezn-i mezbûr üzere"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

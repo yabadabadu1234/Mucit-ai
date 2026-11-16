@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "وَدْق", "wadq", "yağmur", "kuran", "Kur'ân"],
+      [0, "وَدْق", "wadq", "Yağmura denir", "lugat", "Kur'ân · Kamus"],
       [1, "وِدْق", "widq", "yağmur", "kontrol", ""],
       [2, "وُدْق", "wudq", "yağmur", "kontrol", ""],
       [3, "وَدَق", "wadaq", "yağmur", "kontrol", ""],
@@ -391,7 +391,7 @@
       [291, "وَدَقُون", "wadaqūn", "her daim yağmur olanlar", "kontrol", ""],
       [292, "وَدَقِين", "wadaqīn", "her daim yağmur olanlar", "kontrol", ""],
       [293, "وَدَقَات", "wadaqāt", "her daim yağmur olanlar, müennes", "kontrol", ""],
-      [294, "وَدْق", "wadq", "yağmur", "kuran", "Kur'ân"],
+      [294, "وَدْق", "wadq", "Yağmura denir", "lugat", "Kur'ân · Kamus"],
       [295, "وَدْقَة", "wadqa", "her daim yağmur olan, müennes", "kontrol", ""],
       [296, "وَدْقَان", "wadqān", "her daim yağmur olan, iki", "kontrol", ""],
       [297, "وَدْقَتَان", "wadqatān", "her daim yağmur olan, iki, müennes", "kontrol", ""],
@@ -533,7 +533,7 @@
       [425, "وَدَاقَة", "wadāqa", "yağmur olma", "kontrol", ""],
       [426, "وِدَاقَة", "widāqa", "yağmur olma", "kontrol", ""],
       [427, "وُدُوقَة", "wudūqa", "yağmur olma", "kontrol", ""],
-      [428, "وَدْق", "wadq", "yağmur", "kuran", "Kur'ân"],
+      [428, "وَدْق", "wadq", "Yağmura denir", "lugat", "Kur'ân · Kamus"],
       [429, "وِدْق", "widq", "yağmur olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -543,7 +543,7 @@
       [434, "أُودُوقَة", "ʾūdūqa", "yağmur olma türünden şey", "kontrol", ""],
       [435, "وَوْدَق", "wawdaq", "yağmur olma türünden şey", "kontrol", ""],
       [437, "وَيْدَق", "waydaq", "yağmur olma türünden şey", "kontrol", ""],
-      [439, "وَدْق", "wadq", "yağmur", "kuran", "Kur'ân"],
+      [439, "وَدْق", "wadq", "Yağmura denir", "lugat", "Kur'ân · Kamus"],
       [441, "وَدَق", "wadaq", "yağmur olma türünden şey", "kontrol", ""],
       [443, "وِدْق", "widq", "yağmur olma türünden şey", "kontrol", ""],
       [445, "وُدْق", "wudq", "yağmur olma türünden şey", "kontrol", ""],
@@ -724,6 +724,85 @@
     },
     "renk_sozluk": {
       "الودق": "yağmur"
+    },
+    "mustak_lugat": {
+      "وَدْق": [
+        {
+          "eser": "Kamus",
+          "madde": "vedk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yağmura denir; yukâlu: أَخَذَنَا الْوَدْقُ أَيِ الْمَطَرُ Müellifin Basâirde beyânına göre وَدْقٌ [vedk] matar aralığında gubâr gibi nesneye mevzûdur ki Türkîde ona kay derler, badehu tecevvüzen matarda istimâl olunur.",
+              "misaller": [
+                ["أَخَذَنَا الْوَدْقُ أَيِ الْمَطَرُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "وَدْقٌ [vedk] Masdar olur, yağmur damlamak manâsına; yukâlu: وَدَقَ الْمَطَرُ وَدْقًا مِنَ الْبَابِ الثَّانِي إِذَا قَطَرَ Ve وَدْقٌ [vedk] ve وُدُوقٌ [vudûk] (وُقُوفٌ [vukûf] vezninde) Bir nesne pek gelip çatmakla tüleğe gelmek manâsınadır; yukâlu: وَدَقَ إِلَيْهِ وُدُوقًا وَوَدْقًا إِذَا دَنَا مِنْهُ وَأَمْكَنَهُ ve minhul-meselu: “وَدَقَ الْعَيْرُ إِلَى الْمَاءِ” أَيْ دَنَا مِنْهُ Bu mesel bir nesneye ifrât-ı hırsından tezellül ve huzû eden kimse hakkında darb olunur.",
+              "misaller": [
+                ["وَدَقَ الْمَطَرُ وَدْقًا مِنَ الْبَابِ الثَّانِي إِذَا قَطَرَ", ""],
+                ["وَدَقَ إِلَيْهِ وُدُوقًا وَوَدْقًا إِذَا دَنَا مِنْهُ وَأَمْكَنَهُ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "وَدْقٌ [vedk] Alışıp üns ve ülfet eylemek manâsınadır; yukâlu: وَدَقَ بِهِ إِذَا اسْتَأْنَسَ بِهِ Ve karın vüsatlenmek, alâ-kavlin ishâl eylemek manâsınadır; yukâlu: وَدَقَ بَطْنُهُ إِذَا اتَّسَعَ أَوِ اسْتَطْلَقَ Ve bulut yağmur yağdırmak manâsınadır; yukâlu: وَدَقَتِ السَّمَاءُ إِذَا أَمْطَرَتْ Ve kılıç keskinlenmek manâsınadır; yukâlu: وَدَقَ السَّيْفُ إِذَا حَدَّ Ve bir şahsın pek semizlikten göbeği sölpüklenip sarkmak, alâ-kavlin göbeği çıkık kimse gibi semizlikten taşra uğramak manâsınadır; yukâlu: وَدَقَتْ سُرَّتُهُ إِذَا سَالَتْ وَاسْتَرْخَتْ أَوْ خَرَجَتْ كَأَنَّهُ أَبْجَرُ Ve وَدْقٌ [vedk] Şol kırmızı noktalara ve beneklere denir ki gözde hâdis olur, demin kaynayıp çıkmasından hâdis olur, alâ-kavlin bir etçeğizdir ki gözde hâdis olup giderek büyüyüp galîzlenir yâhûd gözde bir marazdır ki onun darbından kulak şişip kabarır. Müfredi وَدْقَةٌ [vedkat]tır ve bunda dâlın fethiyle de câizdir; yukâlu: أَصَابَ بِعَيْنِهِ وَدْقٌ أَيْ نُقَطٌ حُمْرٌ تَخْرُجُ فِيهَا مِنْ دَمٍ تَشْرَقُ بِهِ أَوْ هِيَ لَحْمَةٌ تَعْظُمُ فِيهَا أَوْ مَرَضٌ فِيهَا تَرِمُ مِنْهُ الْأُذُنُ Lâkin kütüb-i tıbbiyyede وَدْقَةٌ [vedkat] şahmeye şebîh kıta-i beyzâdır ki tabaka-i mültehimede zuhûr eder diye muarref olmakla kavl-i sânî buna akrebdir.",
+              "misaller": [
+                ["وَدَقَ بِهِ إِذَا اسْتَأْنَسَ بِهِ", ""],
+                ["وَدَقَ بَطْنُهُ إِذَا اتَّسَعَ أَوِ اسْتَطْلَقَ", ""],
+                ["وَدَقَتِ السَّمَاءُ إِذَا أَمْطَرَتْ", ""],
+                ["وَدَقَ السَّيْفُ إِذَا حَدَّ", ""],
+                ["وَدَقَتْ سُرَّتُهُ إِذَا سَالَتْ وَاسْتَرْخَتْ أَوْ خَرَجَتْ كَأَنَّهُ أَبْجَرُ", ""],
+                [
+                  "أَصَابَ بِعَيْنِهِ وَدْقٌ أَيْ نُقَطٌ حُمْرٌ تَخْرُجُ فِيهَا مِنْ دَمٍ تَشْرَقُ بِهِ أَوْ هِيَ لَحْمَةٌ تَعْظُمُ فِيهَا أَوْ مَرَضٌ فِيهَا تَرِمُ مِنْهُ الْأُذُنُ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَدْقُ",
+          "okunus": "el-vedk",
+          "koken": "vâvın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "vedk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yağmur.Ve yağmur damlamak manâsına dahi gelir; yukâlu: وَدَقَ الْمَطَرُ يَدِقُ وَدْقًا مِنَ الْبَابِ الثَّانِي إِذَا قَطَرَ Ve karîb olmak manâsına dahi gelir; tekûlu: وَدَقْتُ إِلَيْهِ إِذَا دَنَوْتَ مِنْهُ Ve fil-meseli: “وَدَقَ الْعَيْرُ إِلَى الْمَاءِ” أَيْ دَنَا Ve عَيْرٌ [ayr] aynın fethi ve yânın sükûnuyla hımâra derler vahşî olsun ehlî olsun.",
+              "misaller": [
+                ["وَدَقَ الْمَطَرُ يَدِقُ وَدْقًا مِنَ الْبَابِ الثَّانِي إِذَا قَطَرَ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu mesel şol kimse için darb olunur ki bir nesneye huzû ve tezellül göstere, ziyâde hırsından ötürü.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "وَدْقٌ [vedk] Bir nesneye üns tutmağa dahi derler; tekûlu: وَدَقْتُ بِهِ وَدْقًا إِذَا اسْتَأْنَسْتَ بِهِ Ve وَدْقٌ [vedk] Bütün tırnaklı hayvân erkek istemeğe dahi derler; yukâlu: وَدَقَتْ تَدِقُ وَدْقًا",
+              "misaller": [
+                ["وَدَقَتْ تَدِقُ وَدْقًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَدْقُ",
+          "okunus": "el-vedk",
+          "koken": "vâvın fethi ve dâlın sükûnuyla"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 2,

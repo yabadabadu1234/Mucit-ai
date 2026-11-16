@@ -15,13 +15,13 @@
       [4, "قِلّ", "qill", "taşıma", "orta", ""],
       [5, "قُلّ", "qull", "taşıma", "orta", ""],
       [6, "قُلُول", "qulūl", "taşıma", "orta", ""],
-      [7, "قِلَال", "qilāl", "taşıma", "orta", ""],
+      [7, "قِلَال", "qilāl", "Asma kerevitlerine vurulan dayağa denir", "lugat", "Kamus"],
       [8, "قُلَال", "qulāl", "taşıma", "orta", ""],
       [9, "قَلَال", "qalāl", "taşıma", "orta", ""],
       [10, "قَلَالَة", "qalāla", "taşıma", "orta", ""],
       [11, "قُلُولَة", "qulūla", "taşıma", "orta", ""],
       [12, "قِلَالَة", "qilāla", "taşıma", "orta", ""],
-      [13, "قَلِيل", "qalīl", "az", "kuran", "Vikisözlük: few, little"],
+      [13, "قَلِيل", "qalīl", "Çok olmayan, az", "lugat", "Vikisözlük: few, little · Kubbealtı"],
       [14, "قَلُول", "qalūl", "taşıma", "orta", ""],
       [15, "قَلَّان", "qallān", "taşıma", "orta", ""],
       [16, "قُلَّان", "qullān", "taşıma", "orta", ""],
@@ -30,7 +30,7 @@
       [19, "قُلَّى", "qullā", "taşıma", "orta", ""],
       [20, "قِلَّى", "qillā", "taşıma", "orta", ""],
       [21, "قَلَّة", "qalla", "taşıma", "orta", ""],
-      [22, "قِلَّة", "qilla", "taşıma", "orta", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I)"],
+      [22, "قِلَّة", "qilla", "Az olmak", "lugat", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I) · Vankulu"],
       [23, "قَلُّولَة", "qallūla", "taşıma", "orta", ""],
       [24, "تُقْلُول", "tuqlūl", "taşıma", "orta", ""],
       [25, "تَقِلَّة", "taqilla", "taşıma", "orta", ""],
@@ -43,9 +43,9 @@
         29,
         "تَقْلِيل",
         "taqlīl",
-        "çokça taşıma",
-        "orta",
-        "Vikisözlük: masdar (bâb II): to lessen, to decrease, to reduce, to diminish"
+        "Azaltma, kısma",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to lessen, to decrease, to reduce, to diminish · Luggat"
       ],
       [30, "تَقِلَّة", "taqilla", "çokça taşıma", "orta", ""],
       [31, "قِلِّال", "qillāl", "çokça taşıma", "orta", ""]
@@ -77,7 +77,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُقَالَّة", "muqālla", "biriyle karşılıklı taşıma", "orta", ""],
-      [50, "قِلَال", "qilāl", "biriyle karşılıklı taşıma", "orta", ""]
+      [50, "قِلَال", "qilāl", "Asma kerevitlerine vurulan dayağa denir", "lugat", "Kamus"]
     ],
     "ism-i merre · bâb III": [
       [51, "قِلَالَة", "qilāla", "bir kere biriyle karşılıklı taşıma", "orta", ""]
@@ -110,7 +110,14 @@
       [68, "إِقْلَالَة", "ʾiqlāla", "bir kere taşıtma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُقِلّ", "muqill", "taşıtan", "orta", "Vikisözlük: poor, pauper"],
+      [
+        69,
+        "مُقِلّ",
+        "muqill",
+        "Şol fakîre ıtlâk olunur ki mukaddemâ zengin olup badehu mâlına kıllet gelip…",
+        "lugat",
+        "Vikisözlük: poor, pauper · Kamus"
+      ],
       [70, "مُقِلَّة", "muqilla", "taşıtan, müennes", "orta", ""],
       [71, "مُقِلَّان", "muqillān", "taşıtan, iki", "orta", ""],
       [72, "مُقِلَّتَان", "muqillatān", "taşıtan, iki, müennes", "orta", ""],
@@ -255,9 +262,9 @@
         176,
         "اِسْتِقْلَال",
         "istiqlāl",
-        "taşımayı isteme",
-        "orta",
-        "Vikisözlük: verbal noun of اِسْتَقَلَّ (istaqalla) (form X)"
+        "Bağımsızlık",
+        "lugat",
+        "Vikisözlük: verbal noun of اِسْتَقَلَّ (istaqalla) (form X) · Luggat"
       ]
     ],
     "ism-i merre · bâb X": [
@@ -393,15 +400,15 @@
       [256, "قَلَّتَان", "qallatān", "bir kere taşıma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "قِلَّة", "qilla", "taşıma tarzı", "orta", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I)"],
+      [257, "قِلَّة", "qilla", "Az olmak", "lugat", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I) · Vankulu"],
       [258, "قِلَّتَان", "qillatān", "taşıma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "قَلِيل", "qalīl", "az", "kuran", "Vikisözlük: few, little"],
+      [259, "قَلِيل", "qalīl", "Çok olmayan, az", "lugat", "Vikisözlük: few, little · Kubbealtı"],
       [260, "قَلِيلَة", "qalīla", "az", "kuran", "Kur'ân"],
       [261, "قَلِيلَان", "qalīlān", "her daim taşıyan, iki", "orta", ""],
       [262, "قَلِيلَتَان", "qalīlatān", "her daim taşıyan, iki, müennes", "orta", ""],
-      [263, "قَلِيلُون", "qalīlūn", "her daim taşıyanlar", "orta", ""],
+      [263, "قَلِيلُون", "qalīlūn", "Kezâlik cemi", "lugat", "Vankulu"],
       [264, "قَلِيلِين", "qalīlīn", "her daim taşıyanlar", "orta", ""],
       [265, "قَلِيلَات", "qalīlāt", "her daim taşıyanlar, müennes", "orta", ""],
       [266, "قَلُول", "qalūl", "her daim taşıyan", "orta", ""],
@@ -440,7 +447,7 @@
       [299, "قَلِّين", "qallīn", "her daim taşıyanlar", "orta", ""],
       [300, "قَلَّات", "qallāt", "her daim taşıyanlar, müennes", "orta", ""],
       [301, "قُلّ", "qull", "her daim taşıyan", "orta", ""],
-      [302, "قُلَّة", "qulla", "her daim taşıyan, müennes", "orta", "Vikisözlük: peak, summit, vertex, apogee"],
+      [302, "قُلَّة", "qulla", "Kule", "lugat", "Vikisözlük: peak, summit, vertex, apogee · Luggat"],
       [303, "قُلَّان", "qullān", "her daim taşıyan, iki", "orta", ""],
       [304, "قُلَّتَان", "qullatān", "her daim taşıyan, iki, müennes", "orta", ""],
       [305, "قُلُّون", "qullūn", "her daim taşıyanlar", "orta", ""],
@@ -521,11 +528,11 @@
       [378, "مِقْلِيلُون", "miqlīlūn", "taşımaya düşkünler", "orta", ""],
       [379, "مِقْلِيلِين", "miqlīlīn", "taşımaya düşkünler", "orta", ""],
       [380, "مِقْلِيلَات", "miqlīlāt", "taşımaya düşkünler, müennes", "orta", ""],
-      [381, "قَلِيل", "qalīl", "az", "kuran", "Vikisözlük: few, little"],
+      [381, "قَلِيل", "qalīl", "Çok olmayan, az", "lugat", "Vikisözlük: few, little · Kubbealtı"],
       [382, "قَلِيلَة", "qalīla", "az", "kuran", "Kur'ân"],
       [383, "قَلِيلَان", "qalīlān", "çok taşıyan, iki", "orta", ""],
       [384, "قَلِيلَتَان", "qalīlatān", "çok taşıyan, iki, müennes", "orta", ""],
-      [385, "قَلِيلُون", "qalīlūn", "çok taşıyanlar", "orta", ""],
+      [385, "قَلِيلُون", "qalīlūn", "Kezâlik cemi", "lugat", "Vankulu"],
       [386, "قَلِيلِين", "qalīlīn", "çok taşıyanlar", "orta", ""],
       [387, "قَلِيلَات", "qalīlāt", "çok taşıyanlar, müennes", "orta", ""],
       [388, "قَلَّل", "qallal", "çok taşıyan", "orta", ""],
@@ -569,7 +576,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "قَلَال", "qalāl", "taşıma", "orta", ""],
       [422, "قُلُول", "qulūl", "taşıma", "orta", ""],
-      [423, "قِلَال", "qilāl", "taşıma", "orta", ""],
+      [423, "قِلَال", "qilāl", "Asma kerevitlerine vurulan dayağa denir", "lugat", "Kamus"],
       [424, "قُلّ", "qull", "taşıma", "orta", ""],
       [425, "قَلَالَة", "qalāla", "taşıma", "orta", ""],
       [426, "قِلَالَة", "qilāla", "taşıma", "orta", ""],
@@ -580,7 +587,7 @@
     "ism-i cins · ifrâdî (aday)": [
       [430, "قَالُول", "qālūl", "taşıma türünden şey", "orta", ""],
       [432, "قَلَّة", "qalla", "taşıma türünden şey", "orta", ""],
-      [433, "قُلَّة", "qulla", "taşıma türünden şey", "orta", "Vikisözlük: peak, summit, vertex, apogee"],
+      [433, "قُلَّة", "qulla", "Kule", "lugat", "Vikisözlük: peak, summit, vertex, apogee · Luggat"],
       [434, "أُقْلُولَة", "ʾuqlūla", "taşıma türünden şey", "orta", ""],
       [435, "قَوَلّ", "qawall", "taşıma türünden şey", "orta", ""],
       [437, "قَيَلّ", "qayall", "taşıma türünden şey", "orta", ""],
@@ -588,7 +595,7 @@
       [441, "قَلّ", "qall", "taşıma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to raise"],
       [443, "قِلّ", "qill", "taşıma türünden şey", "orta", ""],
       [445, "قُلّ", "qull", "taşıma türünden şey", "orta", ""],
-      [447, "قَلِيل", "qalīl", "az", "kuran", "Vikisözlük: few, little"],
+      [447, "قَلِيل", "qalīl", "Çok olmayan, az", "lugat", "Vikisözlük: few, little · Kubbealtı"],
       [449, "قِلّ", "qill", "taşıma türünden şey", "orta", ""],
       [451, "قُلّ", "qull", "taşıma türünden şey", "orta", ""],
       [453, "قَلَال", "qalāl", "taşıma türünden şey", "orta", ""]
@@ -599,25 +606,11 @@
       [438, "قَيَلَّة", "qayalla", "taşıma türünden bir tane", "orta", ""],
       [440, "قَلَّة", "qalla", "taşıma türünden bir tane", "orta", ""],
       [442, "قَلَّة", "qalla", "taşıma türünden bir tane", "orta", ""],
-      [
-        444,
-        "قِلَّة",
-        "qilla",
-        "taşıma türünden bir tane",
-        "orta",
-        "Vikisözlük: verbal noun of قَلَّ (qalla) (form I)"
-      ],
-      [446, "قُلَّة", "qulla", "taşıma türünden bir tane", "orta", "Vikisözlük: peak, summit, vertex, apogee"],
+      [444, "قِلَّة", "qilla", "Az olmak", "lugat", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I) · Vankulu"],
+      [446, "قُلَّة", "qulla", "Kule", "lugat", "Vikisözlük: peak, summit, vertex, apogee · Luggat"],
       [448, "قَلِيلَة", "qalīla", "az", "kuran", "Kur'ân"],
-      [
-        450,
-        "قِلَّة",
-        "qilla",
-        "taşıma türünden bir tane",
-        "orta",
-        "Vikisözlük: verbal noun of قَلَّ (qalla) (form I)"
-      ],
-      [452, "قُلَّة", "qulla", "taşıma türünden bir tane", "orta", "Vikisözlük: peak, summit, vertex, apogee"],
+      [450, "قِلَّة", "qilla", "Az olmak", "lugat", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I) · Vankulu"],
+      [452, "قُلَّة", "qulla", "Kule", "lugat", "Vikisözlük: peak, summit, vertex, apogee · Luggat"],
       [454, "قَلَالَة", "qalāla", "taşıma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
@@ -627,9 +620,9 @@
       [458, "أَقَالِيل", "ʾaqālīl", "taşımalar", "orta", ""],
       [459, "قُلُول", "qulūl", "taşımalar", "orta", ""],
       [460, "قُلّ", "qull", "taşımalar", "orta", ""],
-      [461, "قِلَال", "qilāl", "taşımalar", "orta", ""],
+      [461, "قِلَال", "qilāl", "Asma kerevitlerine vurulan dayağa denir", "lugat", "Kamus"],
       [462, "قِلّ", "qill", "taşımalar", "orta", ""],
-      [463, "قِلَّة", "qilla", "taşımalar", "orta", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I)"],
+      [463, "قِلَّة", "qilla", "Az olmak", "lugat", "Vikisözlük: verbal noun of قَلَّ (qalla) (form I) · Vankulu"],
       [464, "قُلّ", "qull", "taşımalar", "orta", ""],
       [465, "قُلّاء", "qullāʾ", "taşımalar", "orta", ""],
       [466, "قَلَّة", "qalla", "taşımalar", "orta", ""],
@@ -2714,7 +2707,510 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قِلَال": [
+        {
+          "eser": "Kamus",
+          "madde": "kilal",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Asma kerevitlerine vurulan dayağa denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "küçük hereğe denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِلَالُ",
+          "okunus": "el-kilâl",
+          "koken": "كِتَابٌ [kitâb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kilal",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik zikr olunan zarf manâsına olan قُلَّةٌ [kullet]in cemi; yukâlu: قِلَال هَجَرَ شَبِيهَةٌ بِالْحِبَابِ Yanî Hecer nâm şehrin destîleri, küplere şebîhtir.",
+              "misaller": [
+                ["قِلَال هَجَرَ شَبِيهَةٌ بِالْحِبَابِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِلَالُ",
+          "okunus": "el-kilâl",
+          "koken": "kâfın kesriyle"
+        }
+      ],
+      "قَلِيل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KALİL",
+          "yazilis": "ﻗﻠﻴﻞ",
+          "tur": "sıf.",
+          "koken": "Ar. ḳille t “az olmak”tan ḳalіl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çok olmayan, az. Karşıtı",
+              "misaller": [
+                [" Kalîlü’l-akl: Aklı az olan.", ""],
+                [" Kalîlü’l-bidâa: Sermâyesi az.", ""],
+                [" Kalîlü’l-i’tibar: Îtibârı az, kıymetsiz.", ""],
+                ["Nesl-i âtîden bir hizb-i kalil burada müçtemi bulunuyorlar", "Ahmet Râsim"],
+                ["Kalîlü’n-nüfus aşîretler arasında muhârebe bir emr-i dâimîdir", "Cenap Şahâbeddin"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Az çok. ● Kalîle ( ﻗﻠﻴﻠﻪ ) sıf",
+              "misaller": [],
+              "deyim": "Kalîl ü kesir"
+            },
+            {
+              "etiket": "",
+              "tanim": "“ Emvâl-i kalîle",
+              "misaller": [
+                ["Az bir miktar mal.” ● Kalîlen", "ﻗﻠﻴﻼً"]
+              ],
+              "deyim": "Kalil kelimesinin tamlamalarda ortaya çıkan aynı mânâdaki müennes şekli"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kalil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vasftır, azca nesneye denir; yukâlu: شَيْءٌ قَلِيلٌ ضِدُّ كَثِيرٍ Ve cüssesi nahîf ve zebûn bodura ıtlâk olunur; yukâlu: رَجُلٌ قَلِيلٌ أَيْ قَصِيرٌ نَحِيفٌ Bunun müennesi قَلِيلَةٌ [kalîlet]tir; cemi قَلِيلُونَ [kalîlûn] ve أَقِلَّاءُ [ekillâ] gelir أَحِبَّاءُ [ehibbâ] vezninde ve قُلُلٌ [kulul] gelir zammeteynle ve قُلُلُونَ [kululûn] gelir zammeteynle.",
+              "misaller": [
+                ["شَيْءٌ قَلِيلٌ ضِدُّ كَثِيرٍ", ""],
+                ["رَجُلٌ قَلِيلٌ أَيْ قَصِيرٌ نَحِيفٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "قَلِيلٌ [kalîl] Adedi az olan nesnede ve cüssesi hurde olan insânda ve hayvânda istimâl olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَلِيلُ",
+          "okunus": "el-kalîl",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kalil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Az olan nesne; yukâlu: شَيْءٌ قَلِيلٌ",
+              "misaller": [
+                ["شَيْءٌ قَلِيلٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَلِيلُ",
+          "okunus": "el-kalîl",
+          "koken": "kâfın fethi ve lâmın kesri ve meddiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kalil",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Az",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "قِلَّة": [
+        {
+          "eser": "Vankulu",
+          "madde": "el-killet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Az olmak; yukâlu: قَلَّ الشَّيْءُ يَقِلُّ قِلَّةً مِنَ الْبَابِ الثَّانِي Ve قِلَّةٌ [killet] Eksiklik manâsına da gelir.",
+              "misaller": [
+                ["قَلَّ الشَّيْءُ يَقِلُّ قِلَّةً مِنَ الْبَابِ الثَّانِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقِلَّةُ",
+          "okunus": "el-killet",
+          "koken": "kâfın kesri ve lâmın teşdîdiyle"
+        }
+      ],
+      "تَقْلِيل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TAKLİL",
+          "yazilis": "ﺗﻘﻠﻴﻞ",
+          "tur": "i.",
+          "koken": "Ar. ḳille t “az olmak, azalmak”tan taḳlіl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Azaltma, indirme",
+              "misaller": [
+                ["Vaktin müsâadesi mertebe masrafı taklil ve îrâdı teksir edip…", "Naîmâ’dan"],
+                ["İşte şerîat-ı mutahharamız bu lezzetin taklîli ile…", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "taklil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi bir nesneyi azaltmak ve ibtidâen azca kılmak manâsınadır; yukâlu: قَلَّلَهُ إِذَا جَعَلَهُ قَلِيلًا",
+              "misaller": [
+                ["قَلَّلَهُ إِذَا جَعَلَهُ قَلِيلًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّقْلِيلُ",
+          "okunus": "et-taklîl",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "taklil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu; yukâlu: أَقَلَّهُ غَيْرُهُ وَقَلَّلَهُ Ve تَقْلِيلٌ [taklîl] Bir nesneyi az göstermeğe dahi derler; yukâlu: قَلَّلَهُ فِي عَيْنِهِ إِذَا أَرَاهُ إِيَّاهُ قَلِيلًا Ve إِقْلَالٌ [iklâl] İhtiyâc manâsına da gelir; yukâlu: أَقَلَّ إِذَا افْتَقَرَ Ve إِقْلَالٌ [iklâl] Bir nesneye kudret eriştirmeğe dahi derler; yukâlu: أَقَلَّ الْجَرَّةَ إِذَا أَطَاقَ حَمْلَهَا",
+              "misaller": [
+                ["أَقَلَّهُ غَيْرُهُ وَقَلَّلَهُ", ""],
+                ["قَلَّلَهُ فِي عَيْنِهِ إِذَا أَرَاهُ إِيَّاهُ قَلِيلًا", ""],
+                ["أَقَلَّ إِذَا افْتَقَرَ", ""],
+                ["أَقَلَّ الْجَرَّةَ إِذَا أَطَاقَ حَمْلَهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّقْلِيلُ",
+          "okunus": "et-taklîl",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "taklîl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Azaltma, kısma. Azaltılma, kısılma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُقِلّ": [
+        {
+          "eser": "Kamus",
+          "madde": "mukill",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْأَقَلُّ [el-ekall] (أَجَلُّ [ecell] vezninde) Şol fakîre ıtlâk olunur ki mukaddemâ zengin olup badehu mâlına kıllet gelip lâkin bir mikdârca bakiyyesi kalmış ola; yukâlu: رَجُلٌ مُقِلٌّ وَأَقَّلُ أَيْ فَقِيرٌ وَبِهِ بَقِيَّةٌ Ve أَقَلُّ [ekall] nefy-i mahz mevkiinde müstameldir, niteki misâli evâil-i mâddede mürûr eyledi.",
+              "misaller": [
+                ["رَجُلٌ مُقِلٌّ وَأَقَّلُ أَيْ فَقِيرٌ وَبِهِ بَقِيَّةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُقِلُّ",
+          "okunus": "el-mukill",
+          "koken": "mîmin zammı ve kâfın kesriyle ki إِقْلَالٌ [iklâl]den ism-i fâildir"
+        }
+      ],
+      "اِسْتِقْلَال": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İSTİKLÂL",
+          "yazilis": "ﺍﺳﺘﻘﻼﻝ",
+          "tur": "i.",
+          "koken": "Ar. ḳall “yüklenip götürmek”ten istiḳlāl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Maddî veya mânevî bakımdan kimseye bağlı ve tâbi olmama, kimsenin buyruğu altında bulunmama, bağımsızlık",
+              "misaller": [
+                ["Kostantin, Rum ve Anadolu ülkesinde istiklâlini elde etti", "Kâtip Çelebi’den Seç."],
+                ["Kumandan istiklâlini kazanan halkın bu deli, bu sarhoş sevincine bakıyor", "Ömer Seyfeddin"],
+                ["Bu hâdiselerin en mühimi şüphesiz en sonuncusu olan İstiklâl Savaşı’dır", "Ahmet H. Tanpınar"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kurtuluş Savaşı, Millî Mücâdele",
+              "misaller": [],
+              "deyim": "İstiklâl Harbi"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kurtuluş Savaşı’ndan sonra Türkiye Büyük Millet Meclisi üyelerine ve savaşta yararlık gösterenlere verilen madalya",
+              "misaller": [],
+              "deyim": "İstiklâl madalyası"
+            },
+            {
+              "etiket": "",
+              "tanim": "Türkiye Cumhûriyeti’nin, sözleri Mehmed Âkif’e, bestesi Zeki Üngör’e âit olan millî marşı",
+              "misaller": [
+                ["Çaldığınız o İstiklâl Marşı / Yıllardır her kulakta yer etmiş", "Câhit S. Tarancı"],
+                ["12 Mart 1337", "1921"],
+                [", İstiklâl Marşı’nın Türkiye Büyük Millet Meclisi tarafından resmen kabûlünün târihidir", "Kaya Bilgegil"],
+                ["● İstiklâl-cû", "ﺍﺳﺘﻘﻼﻝ ﺟﻮ"],
+                ["birl. sıf", "Fars. cū “arayan” ile"]
+              ],
+              "deyim": "İstiklâl Marşı"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "istiklal",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi kaldırıp yüklenmek manâsınadır; yukâlu: إِسْتَقَلَّ الشَّيْءَ إِذَا حَمَلَهُ وَرَفَعَهُ Ve yükselmek manâsınadır; yukâlu: إِسْتَقَلَّ الطَّائِرُ فِي طَيَرَانِهِ إِذَا ارْتَفَعَ Ve nebât uzayıp boylanmak manâsınadır; yukâlu: إِسْتَقَلَّ النَّبَاتُ إِذَا أَنَافَ Ve bir yerden göçüp gitmek manâsınadır; yukâlu: إِسْتَقَلَّ الْقَوْمُ إِذَا ذَهَبُوا وَارْتَحَلُوا Ve bir nesneyi azınsımak manâsınadır; yukâlu: إِسْتَقَلَّهُ إِذَا عَدَّهُ قَلِيلًا Ve darılmak ve öfkelenmek manâsınadır; yukâlu: إِسْتَقَلَّ الرَّجُلُ إِذَا غَضِبَ Ve bir adamı titreme tutmak manâsınadır; yukâlu: إِسْتَقَلَّتْهُ الرِّعْدَةُ إِذَا أَرْعَدَتْ",
+              "misaller": [
+                ["إِسْتَقَلَّ الشَّيْءَ إِذَا حَمَلَهُ وَرَفَعَهُ", ""],
+                ["إِسْتَقَلَّ الطَّائِرُ فِي طَيَرَانِهِ إِذَا ارْتَفَعَ", ""],
+                ["إِسْتَقَلَّ النَّبَاتُ إِذَا أَنَافَ", ""],
+                ["إِسْتَقَلَّ الْقَوْمُ إِذَا ذَهَبُوا وَارْتَحَلُوا", ""],
+                ["إِسْتَقَلَّهُ إِذَا عَدَّهُ قَلِيلًا", ""],
+                ["إِسْتَقَلَّ الرَّجُلُ إِذَا غَضِبَ", ""],
+                ["إِسْتَقَلَّتْهُ الرِّعْدَةُ إِذَا أَرْعَدَتْ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِقْلَالُ",
+          "okunus": "el-istiklâl",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "istiklal",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi az add etmek; yukâlu: إِسْتَقَلَّهُ إِذَا عَدَّهُ قَلِيلًا Ve إِسْتِقْلَالٌ [istiklâl] İrtifâa dahi derler; yukâlu: إِسْتَقَالَتِ السَّمَاءُ أَيِ ارْتَفَعَتْ Ve göçüp gitmeğe dahi derler; yukâlu: إِسْتَقَلَّ الْقَوْمُ إِذَا مَضَوْا وَارْتَحَلُوا",
+              "misaller": [
+                ["إِسْتَقَلَّهُ إِذَا عَدَّهُ قَلِيلًا", ""],
+                ["إِسْتَقَالَتِ السَّمَاءُ أَيِ ارْتَفَعَتْ", ""],
+                ["إِسْتَقَلَّ الْقَوْمُ إِذَا مَضَوْا وَارْتَحَلُوا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِقْلَالُ",
+          "okunus": "el-istiklâl",
+          "koken": "hemzenin ve tânın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "istiklal",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bağımsızlık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "istiklâl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bağımsız olma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "قَلِيلُون": [
+        {
+          "eser": "Vankulu",
+          "madde": "kalilun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi; yukâlu: قَوْمٌ قَلِيلُونَ Ve قَلِيلٌ [kalîl] ceme dahi ıtlâk olunur. Kâlallâhu taâlâ: ﴿وَاذْكُرُوا إِذ أَنْتُمْ قَلِيلٌ﴾ (الأنفال، 26) Ve Arablar لَمْ يَتْرُكْ قَلِيلًا وَلَا كَثِيرًا derler. Ebû Ubeyde eyitti: Arabın âdetidir bu ki az olanla başlar, nitekim اَلْقَمَرَانِ ve اَلْعُمَرَانِ derler ve Rebîa ve Mudar ve Suleym ve Âmirdir.",
+              "misaller": [
+                ["قَوْمٌ قَلِيلُونَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَلِيلُونَ",
+          "okunus": "el-kalîlûn",
+          "koken": "kâfın fethi ve lâmın kesri ve meddiyle"
+        }
+      ],
+      "قُلَّة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KULLE",
+          "yazilis": "ﻗﻠّﻪ",
+          "tur": "i.",
+          "koken": "Ar. ḳulle",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kule kelimesinin eski metinlerde geçen asıl şekli",
+              "misaller": [
+                ["Döğünmekten tenin yer yer siyâh olmuştur ey Zâtî / Sana ancak peleng-i kulle-i kûhsâr bendeştir", "Zâtî"],
+                ["Bu siyâsetgâh içinde kulle-i Kāf’a bedel / Bir binâ yaptı ser-i uşşâktan bennâ-yı aşk", "Yahyâ Bey"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kulle",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kule. Doruk",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-kullet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Başın tepesine denir; yukâlu: قَلَّةُ الرَّأْسِ أَيْ أَعْلَاهُ Kezâlik hörgücün ve dağın tepelerine ıtlâk olunur, alâ-kavlin her nesnenin tepesine ıtlâk olunur.",
+              "misaller": [
+                ["قَلَّةُ الرَّأْسِ أَيْ أَعْلَاهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "cemâat-i insânîye denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "büyük küpe denir, alâ-kavlin büyük destîye denir yâ mutlakan destîye denir yâhûd saksıdan olanına denir; yukâlu: عِنْدَهُ قُلَّةٌ مِنْ قِلَالِ هَجَرَ وَهِيَ الْحُبُّ الْعَظِيمُ أَوِ الْجَرَّةُ الْعَظِيمَةُ أَوْ عَامَّةٌ أَوْ مِنَ الْفَخَّارِ Ve küçük bardağa denmekle zıdd olur; cemi قُلَلٌ [kulel] gelir, صُرَدٌ [surad] vezninde ve قِلَالٌ [kilâl] gelir, جِبَالٌ [cibâl] vezninde.",
+              "misaller": [
+                [
+                  "عِنْدَهُ قُلَّةٌ مِنْ قِلَالِ هَجَرَ وَهِيَ الْحُبُّ الْعَظِيمُ أَوِ الْجَرَّةُ الْعَظِيمَةُ أَوْ عَامَّةٌ أَوْ مِنَ الْفَخَّارِ",
+                  ""
+                ]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "قُلَّةُ السَّيْفِ [kulletus-seyf] kılıcın قَبِيعَةٌ [kabîat]ına yanî perâzvânesine denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقُلَّةُ",
+          "okunus": "el-kullet",
+          "koken": "kâfın zammıyla"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-kulletud-dahyânet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلْقُلَّةُ الضَّحْيَانَةُ [el-kulletud-dahyânet] Güneşe karşı günü kuleye ıtlâk olunur; yukâlu: قُلَّةٌ ضَحْيَانَةٌ أَيْ بَارِزَةٌ لِلشَّمْسِ Kuleden murâd dağın en tepesidir.",
+              "misaller": [
+                ["قُلَّةٌ ضَحْيَانَةٌ أَيْ بَارِزَةٌ لِلشَّمْسِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-kullet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dağın alâsı.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "her nesnenin alâsına قُلَّةٌ [kullet] derler, hattâ insânın başına dahi قُلَّةٌ [kullet] derler; yukâlu: قُلَّةُ الطِّفْلِ أَيْ رَأْسُهُ",
+              "misaller": [
+                ["قُلَّةُ الطِّفْلِ أَيْ رَأْسُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقُلَّةُ",
+          "okunus": "el-kullet",
+          "koken": "kâfın zammı ile"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 76,
   "kuranda_var": true,

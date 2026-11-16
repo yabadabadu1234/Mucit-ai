@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "رَهْو", "rahw", "sakin, durgun", "kuran", "Kur'ân"],
+      [0, "رَهْو", "rahw", "Paçaları ayırmak", "lugat", "Kur'ân · Kamus"],
       [1, "رِهْو", "rihw", "rahatlık", "orta", ""],
       [2, "رُهْو", "ruhw", "rahatlık", "orta", ""],
       [517, "رَهَا", "rahā", "rahatlık", "orta", ""],
@@ -363,7 +363,7 @@
       [753, "رَهَا", "rahā", "her daim rahat olan", "orta", ""],
       [754, "رَهَوَان", "rahawān", "her daim rahat olan, iki", "orta", ""],
       [755, "رَهَوَات", "rahawāt", "her daim rahat olanlar, müennes", "orta", ""],
-      [294, "رَهْو", "rahw", "sakin, durgun", "kuran", "Kur'ân"],
+      [294, "رَهْو", "rahw", "Paçaları ayırmak", "lugat", "Kur'ân · Kamus"],
       [295, "رَهْوَة", "rahwa", "her daim rahat olan, müennes", "orta", ""],
       [296, "رَهْوَان", "rahwān", "her daim rahat olan, iki", "orta", ""],
       [297, "رَهْوَتَان", "rahwatān", "her daim rahat olan, iki, müennes", "orta", ""],
@@ -503,7 +503,7 @@
       [836, "رَهَاة", "rahā", "rahat olma", "orta", ""],
       [837, "رِهَايَة", "rihāya", "rahat olma", "orta", ""],
       [838, "رُهُوَّة", "ruhuwwa", "rahat olma", "orta", ""],
-      [428, "رَهْو", "rahw", "sakin, durgun", "kuran", "Kur'ân"],
+      [428, "رَهْو", "rahw", "Paçaları ayırmak", "lugat", "Kur'ân · Kamus"],
       [429, "رِهْو", "rihw", "rahat olma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -513,7 +513,7 @@
       [434, "أُرْهُووَة", "ʾurhūwa", "rahat olma türünden şey", "orta", ""],
       [435, "رَوْهَو", "rawhaw", "rahat olma türünden şey", "orta", ""],
       [437, "رَيْهَو", "rayhaw", "rahat olma türünden şey", "orta", ""],
-      [439, "رَهْو", "rahw", "sakin, durgun", "kuran", "Kur'ân"],
+      [439, "رَهْو", "rahw", "Paçaları ayırmak", "lugat", "Kur'ân · Kamus"],
       [840, "رَهَا", "rahā", "rahat olma türünden şey", "orta", ""],
       [443, "رِهْو", "rihw", "rahat olma türünden şey", "orta", ""],
       [445, "رُهْو", "ruhw", "rahat olma türünden şey", "orta", ""],
@@ -755,7 +755,82 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَهْو": [
+        {
+          "eser": "Kamus",
+          "madde": "rehv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Paçaları ayırmak manâsınadır ki apışı açmak tabîr olunur; yukâlu: رَهَا بَيْنَ رِجْلَيْهِ يَرْهُو رَهْوًا إِذَا فَتَحَ Ve sühûletle âhestece yürümek manâsınadır; yukâlu: رَهَا الرَّجُلُ إِذَا سَارَ سَهْلًا Ve yüksek yere denir, bayır gibi; yukâlu: مَكَانٌ رَهْوٌ أَيْ مُرْتَفِعٌ Ve alçak yere denmekle zıdd olur, niteki رَهْوَةٌ [rehvet] dahi bu manâlaradır, أَرْضٌ [ard] itibârıyla.",
+              "misaller": [
+                ["رَهَا بَيْنَ رِجْلَيْهِ يَرْهُو رَهْوًا إِذَا فَتَحَ", ""],
+                ["رَهَا الرَّجُلُ إِذَا سَارَ سَهْلًا", ""],
+                ["مَكَانٌ رَهْوٌ أَيْ مُرْتَفِعٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "رَهْوٌ [rehv] Ferci vâsi avrete denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "turna kuşuna denir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "cemâat-i insânîye denir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "kuş kanatlarını açıp yaymak manâsınadır; yukâlu: رَهَا الطَّائِرُ جَنَاحَيْهِ إِذَا نَشَرَهُ Ve sükûn bulmak manâsınadır; yukâlu: رَهَا الْبَحْرُ إِذَا سَكَنَ",
+              "misaller": [
+                ["رَهَا الطَّائِرُ جَنَاحَيْهِ إِذَا نَشَرَهُ", ""],
+                ["رَهَا الْبَحْرُ إِذَا سَكَنَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّهْوُ",
+          "okunus": "er-rehv",
+          "koken": "سَهْوٌ [sehv] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "rehv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimse ayaklarının arasın açmak; Ebû Ubeyde rivâyeti üzere; tekûlu: رَهَا بَيْنَ رِجْلَيْهِ يَرْهُو رَهْوًا إِذَا فَتَحَ Ve minhu kavluhu taâlâ: ﴿وَاتْرُكِ الْبَحْرَ رَهْوًا﴾ (الدخان، 24) Ve رَهْوٌ [rehv] Sühûletle yürümeğe dahi derler; yukâlu: جَاءَتِ الْخَيْلُ رَهْوًا Kâle İbnul-Arâbî: رَهَا يَرْهُو فِي السَّيْرِ إِذَا رَفَقَ Ve رَهْوٌ [rehv] Mekân-ı mürtefia dahi derler.",
+              "misaller": [
+                ["جَاءَتِ الْخَيْلُ رَهْوًا", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "şol çukur yere dahi derler ki onda su irkile. Pes bu azdâddan olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّهْوُ",
+          "okunus": "er-rehv",
+          "koken": "rânın fethi ve hânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

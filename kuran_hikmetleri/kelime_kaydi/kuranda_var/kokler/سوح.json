@@ -312,7 +312,7 @@
     "mekân/zaman · sülâsî": [
       [701, "مَسَاح", "masāḥ", "gezme yeri, vakti", "orta", ""],
       [702, "مَسَاحَان", "masāḥān", "gezme yeri, vakti, iki", "orta", ""],
-      [703, "مَسِيح", "masīḥ", "gezme yeri, vakti", "orta", ""],
+      [703, "مَسِيح", "masīḥ", "İsa", "lugat", "Luggat"],
       [704, "مَسِيحَان", "masīḥān", "gezme yeri, vakti, iki", "orta", ""],
       [705, "مَسَاحَة", "masāḥa", "gezmenin bol olduğu yer", "orta", ""],
       [706, "مَسَاحَتَان", "masāḥatān", "gezmenin bol olduğu yer, iki", "orta", ""],
@@ -926,7 +926,109 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَسِيح": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MESİH",
+          "yazilis": "ﻣﺴﻴﺢ",
+          "tur": "i.",
+          "koken": "Ar. mesіḥ “sıvazlanmış, yağla ovulmuş” māşiaḥ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hz. Îsâ’nın lakabı",
+              "misaller": [
+                ["Ger Mesîh olsa tabîbin açma dâğ-ı sîneni / Gösterilmez yâdigâr-ı âşinâ bîgâneye", "Deli Hikmet’ten"],
+                ["● Mesih-âsâ", "-var"],
+                ["tür. sıf", "Fars. āsā ve vār “gibi” ile"],
+                ["Hz. Îsâ gibi: Nice dil-mürdeyi Mesîh-âsâ / Eyledin bir nefes ile ihyâ", "Fıtnat Hanım"],
+                ["● Mesih-dem", "ﻣﺴﻴﺢ ﺩﻡ"],
+                ["birl. sıf. ve i", "Fars. dem “nefes” ile"],
+                [
+                  "Mûcize olarak ölüyü dirilten Hz. Îsâ’nın nefesi gibi güçlü, hayat ve şifâ verici bir nefese sâhip olan, Îsâ nefesli",
+                  "kimse"
+                ],
+                [", Mesîhâ-dem: Sabâ Mesîh-dem olup bahârdan bu gece / Hıtâ’ya benzedi gülşen nigârdan bu gece", "Ahmedî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Mesih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Îsâ alâ-nebiyyinâ ve aleyhis-selâmdır; yümn ve bereketi sebebiyle tesmiye olunmuştur. Bunun iştikâkı bâbında Meşârikul-Envâr üzere olan şerhimde ve sâir müellefâtımda elli gûne vech zikr ve beyân eyledim, niteki سَوْحٌ [sevh] mâddesinde dahi beyân olundu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَسِيحُ",
+          "okunus": "el-Mesîh",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Mesih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gümüş pâresi ve sürülmüş akçe.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Îsâ salavâtullâhi aleyhi ve selâmuhunun ismi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَسِيحُ",
+          "okunus": "el-mesîh",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mesih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلْمَسِيحُ الْكَذَّابُ [el-mesîhul-kezzâb] Deccâl dedikleri kimsedir ki onun hurûcu eşrât-ı sâattandır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَسِيحٌ [mesîh] Ter, عَرَقٌ [arak] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mesîh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İsa",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

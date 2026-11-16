@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "لَفْظ", "lafẓ", "atma", "orta", "Vikisözlük: expression, term, word"],
+      [0, "لَفْظ", "lafẓ", "Bir nesneyi ağızdan atmaktır", "lugat", "Vikisözlük: expression, term, word · Vankulu"],
       [1, "لِفْظ", "lifẓ", "atma", "orta", ""],
       [2, "لُفْظ", "lufẓ", "atma", "orta", ""],
       [3, "لَفَظ", "lafaẓ", "atma", "orta", ""],
@@ -390,7 +390,14 @@
       [291, "لَفَظُون", "lafaẓūn", "her daim atanlar", "orta", ""],
       [292, "لَفَظِين", "lafaẓīn", "her daim atanlar", "orta", ""],
       [293, "لَفَظَات", "lafaẓāt", "her daim atanlar, müennes", "orta", ""],
-      [294, "لَفْظ", "lafẓ", "her daim atan", "orta", "Vikisözlük: expression, term, word"],
+      [
+        294,
+        "لَفْظ",
+        "lafẓ",
+        "Bir nesneyi ağızdan atmaktır",
+        "lugat",
+        "Vikisözlük: expression, term, word · Vankulu"
+      ],
       [295, "لَفْظَة", "lafẓa", "her daim atan, müennes", "orta", ""],
       [296, "لَفْظَان", "lafẓān", "her daim atan, iki", "orta", ""],
       [297, "لَفْظَتَان", "lafẓatān", "her daim atan, iki, müennes", "orta", ""],
@@ -532,7 +539,14 @@
       [425, "لَفَاظَة", "lafāẓa", "atma", "orta", ""],
       [426, "لِفَاظَة", "lifāẓa", "atma", "orta", ""],
       [427, "لُفُوظَة", "lufūẓa", "atma", "orta", ""],
-      [428, "لَفْظ", "lafẓ", "atma", "orta", "Vikisözlük: expression, term, word"],
+      [
+        428,
+        "لَفْظ",
+        "lafẓ",
+        "Bir nesneyi ağızdan atmaktır",
+        "lugat",
+        "Vikisözlük: expression, term, word · Vankulu"
+      ],
       [429, "لِفْظ", "lifẓ", "atma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +556,14 @@
       [434, "أُلْفُوظَة", "ʾulfūẓa", "atma türünden şey", "orta", ""],
       [435, "لَوْفَظ", "lawfaẓ", "atma türünden şey", "orta", ""],
       [437, "لَيْفَظ", "layfaẓ", "atma türünden şey", "orta", ""],
-      [439, "لَفْظ", "lafẓ", "atma türünden şey", "orta", "Vikisözlük: expression, term, word"],
+      [
+        439,
+        "لَفْظ",
+        "lafẓ",
+        "Bir nesneyi ağızdan atmaktır",
+        "lugat",
+        "Vikisözlük: expression, term, word · Vankulu"
+      ],
       [441, "لَفَظ", "lafaẓ", "atma türünden şey", "orta", ""],
       [443, "لِفْظ", "lifẓ", "atma türünden şey", "orta", ""],
       [445, "لُفْظ", "lufẓ", "atma türünden şey", "orta", ""],
@@ -565,7 +586,7 @@
       [454, "لَفَاظَة", "lafāẓa", "atma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَلْفَاظ", "ʾalfāẓ", "atmalar", "orta", ""],
+      [455, "أَلْفَاظ", "ʾalfāẓ", "Sözler, lafızlar", "lugat", "Luggat"],
       [456, "أَلْفِظَة", "ʾalfiẓa", "atmalar", "orta", ""],
       [457, "أَلَافِظ", "ʾalāfiẓ", "atmalar", "orta", ""],
       [458, "أَلَافِيظ", "ʾalāfīẓ", "atmalar", "orta", ""],
@@ -1639,7 +1660,97 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لَفْظ": [
+        {
+          "eser": "Vankulu",
+          "madde": "lefz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi ağızdan atmaktır; yukâlu: لَفَظْتُ الشَّيْءَ مِنْ فَمِي أَلْفِظُهُ لَفْظًا مِنَ الْبَابِ الثَّانِي إِذَا رَمَيْتَهُ Ve لَفْظٌ [lefz] Tekellüm manâsına da gelir; yukâlu: لَفَظْتُ بِالْكَلَامِ إِذَا تَكَلَّمْتَ بِهِ Ve لَفْظٌ [lefz] مَلْفُوظٌ [melfûz] manâsına dahi gelir, aslında masdardır.",
+              "misaller": [
+                ["لَفَظْتُ الشَّيْءَ مِنْ فَمِي أَلْفِظُهُ لَفْظًا مِنَ الْبَابِ الثَّانِي إِذَا رَمَيْتَهُ", ""],
+                ["لَفَظْتُ بِالْكَلَامِ إِذَا تَكَلَّمْتَ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّفْظُ",
+          "okunus": "el-lefz",
+          "koken": "lâmın fethi ve fânın sükûnuyla"
+        }
+      ],
+      "أَلْفَاظ": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ELFAZ",
+          "yazilis": "ﺍﻟﻔﺎﻅ",
+          "tur": "i.",
+          "koken": "Ar. lafẓ ’ın çoğul şekli elfāẓ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lafızlar, sözler",
+              "misaller": [
+                ["Elfâz maânî için âyîne-i şandır / Elfâza bakılmaz mı diyorlar hezeyandır", "Muallim Nâci"],
+                ["Her lisanda ona verilen isimler paskal, maskara, soytarı gibi elfâzın muâdilidir", "Ahmet Hâşim"],
+                ["Pâdişâha, vükelâya karşı en kaba elfâzı istîmalden çekinmiyorlar", "Yâkup K. Karaosmanoğlu"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kaba ve çirkin sözler, küfür sözleri",
+              "misaller": [],
+              "deyim": "Elfâz-ı galîza (küfür)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Eş sesli (kelimeler)",
+              "misaller": [],
+              "deyim": "Elfâz-ı mütecânise"
+            },
+            {
+              "etiket": "",
+              "tanim": "Eş anlamlı (kelimeler)",
+              "misaller": [],
+              "deyim": "Elfâz-ı müterâdife"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "elfâz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sözler, lafızlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "elfâz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lafızlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

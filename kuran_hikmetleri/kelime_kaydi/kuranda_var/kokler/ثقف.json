@@ -25,7 +25,14 @@
       [7, "ثِقَاف", "ṯiqāf", "bulma", "orta", ""],
       [8, "ثُقَاف", "ṯuqāf", "bulma", "orta", ""],
       [9, "ثَقَاف", "ṯaqāf", "bulma", "orta", ""],
-      [10, "ثَقَافَة", "ṯaqāfa", "bulma", "orta", "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I)"],
+      [
+        10,
+        "ثَقَافَة",
+        "ṯaqāfa",
+        "Hâzık ve cüst olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I) · Vankulu"
+      ],
       [11, "ثُقُوفَة", "ṯuqūfa", "bulma", "orta", ""],
       [12, "ثِقَافَة", "ṯiqāfa", "bulma", "orta", ""],
       [13, "ثَقِيف", "ṯaqīf", "bulma", "orta", ""],
@@ -46,7 +53,7 @@
       [28, "مَثْقِفَة", "maṯqifa", "bulma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَثْقِيف", "taṯqīf", "çokça bulma", "orta", ""],
+      [29, "تَثْقِيف", "taṯqīf", "Eğri mızrağı doğrultmak", "lugat", "Kamus"],
       [30, "تَثْقِفَة", "taṯqifa", "çokça bulma", "orta", ""],
       [31, "ثِقِّاف", "ṯiqqāf", "çokça bulma", "orta", ""]
     ],
@@ -451,9 +458,9 @@
         323,
         "ثَقَافَة",
         "ṯaqāfa",
-        "her daim bulan, müennes",
-        "orta",
-        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I)"
+        "Hâzık ve cüst olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I) · Vankulu"
       ],
       [324, "ثَقَافَان", "ṯaqāfān", "her daim bulan, iki", "orta", ""],
       [325, "ثَقَافَتَان", "ṯaqāfatān", "her daim bulan, iki, müennes", "orta", ""],
@@ -564,7 +571,14 @@
       [422, "ثُقُوف", "ṯuqūf", "bulma", "orta", ""],
       [423, "ثِقَاف", "ṯiqāf", "bulma", "orta", ""],
       [424, "ثُقْف", "ṯuqf", "bulma", "orta", ""],
-      [425, "ثَقَافَة", "ṯaqāfa", "bulma", "orta", "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I)"],
+      [
+        425,
+        "ثَقَافَة",
+        "ṯaqāfa",
+        "Hâzık ve cüst olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I) · Vankulu"
+      ],
       [426, "ثِقَافَة", "ṯiqāfa", "bulma", "orta", ""],
       [427, "ثُقُوفَة", "ṯuqūfa", "bulma", "orta", ""],
       [
@@ -622,9 +636,9 @@
         454,
         "ثَقَافَة",
         "ṯaqāfa",
-        "bulma türünden bir tane",
-        "orta",
-        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I)"
+        "Hâzık ve cüst olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of ثَقُفَ (ṯaqufa) (form I) · Vankulu"
       ]
     ],
     "cem‘-i mükesser (aday)": [
@@ -1994,7 +2008,65 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ثَقَافَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "es-sekâfet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hâzık ve cüst olmak; yukâlu: ثَقُفَ الرَّجُلُ ثَقَافَةً مِنَ الْبَابِ الْخَامِسِ",
+              "misaller": [
+                ["ثَقُفَ الرَّجُلُ ثَقَافَةً مِنَ الْبَابِ الْخَامِسِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلثّقَافَةُ",
+          "okunus": "esamp;-samp;ekâfet",
+          "koken": "samp;ânın fethiyle"
+        }
+      ],
+      "تَثْقِيف": [
+        {
+          "eser": "Kamus",
+          "madde": "teskif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Eğri mızrağı doğrultmak manâsınadır; yukâlu: ثَقَّفَ الرُّمْحَ إِذَا سَوَّاهُ",
+              "misaller": [
+                ["ثَقَّفَ الرُّمْحَ إِذَا سَوَّاهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّثْقِيفُ",
+          "okunus": "et-tesamp;kîf",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "teskif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gönder doğrultmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّثْقِيفُ",
+          "okunus": "et-tesamp;kîf",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

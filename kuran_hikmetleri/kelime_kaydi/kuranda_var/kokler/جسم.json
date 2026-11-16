@@ -9,22 +9,22 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "جَسْم", "casm", "cisimleşme", "orta", ""],
-      [1, "جِسْم", "cism", "beden", "kuran", "Vikisözlük: a body"],
+      [1, "جِسْم", "cism", "Cisim, madde", "lugat", "Vikisözlük: a body · Luggat"],
       [2, "جُسْم", "cusm", "cisimleşme", "orta", ""],
       [3, "جَسَم", "casam", "cisimleşme", "orta", ""],
       [4, "جِسَم", "cisam", "cisimleşme", "orta", ""],
       [5, "جُسُم", "cusum", "cisimleşme", "orta", ""],
       [6, "جُسُوم", "cusūm", "cisimleşme", "orta", ""],
-      [7, "جِسَام", "cisām", "cisimleşme", "orta", ""],
+      [7, "جِسَام", "cisām", "in cemi", "lugat", "Vankulu"],
       [8, "جُسَام", "cusām", "cisimleşme", "orta", ""],
       [9, "جَسَام", "casām", "cisimleşme", "orta", ""],
-      [10, "جَسَامَة", "casāma", "cisimleşme", "orta", "Vikisözlük: magnitude, corpulence"],
+      [10, "جَسَامَة", "casāma", "İrilik", "lugat", "Vikisözlük: magnitude, corpulence · Luggat"],
       [11, "جُسُومَة", "cusūma", "cisimleşme", "orta", ""],
       [12, "جِسَامَة", "cisāma", "cisimleşme", "orta", ""],
-      [13, "جَسِيم", "casīm", "cisimleşme", "orta", ""],
+      [13, "جَسِيم", "casīm", "İri", "lugat", "Luggat"],
       [14, "جَسُوم", "casūm", "cisimleşme", "orta", ""],
       [15, "جَسَمَان", "casamān", "cisimleşme", "orta", ""],
-      [16, "جُسْمَان", "cusmān", "cisimleşme", "orta", "Vikisözlük: torso, body, mass"],
+      [16, "جُسْمَان", "cusmān", "Cesed", "lugat", "Vikisözlük: torso, body, mass · Vankulu"],
       [17, "جِسْمَان", "cismān", "cisimleşme", "orta", ""],
       [18, "جَسْمَى", "casmā", "cisimleşme", "orta", ""],
       [19, "جُسْمَى", "cusmā", "cisimleşme", "orta", ""],
@@ -43,9 +43,9 @@
         29,
         "تَجْسِيم",
         "tacsīm",
-        "cisimleştirme",
-        "orta",
-        "Vikisözlük: masdar (bâb II): to make, present, describe, or conceive of as concrete, physical, mate"
+        "Vücut verme, cisim durumuna getirme",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to make, present, describe, or conceive of as concrete, physical, mate · Kubbealtı"
       ],
       [30, "تَجْسِمَة", "tacsima", "cisimleştirme", "orta", ""],
       [31, "جِسِّام", "cissām", "cisimleştirme", "orta", ""]
@@ -77,7 +77,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُجَاسَمَة", "mucāsama", "biriyle karşılıklı cisimleşme", "orta", ""],
-      [50, "جِسَام", "cisām", "biriyle karşılıklı cisimleşme", "orta", ""]
+      [50, "جِسَام", "cisām", "in cemi", "lugat", "Vankulu"]
     ],
     "ism-i merre · bâb III": [
       [51, "جِسَامَة", "cisāma", "bir kere biriyle karşılıklı cisimleşme", "orta", ""]
@@ -334,7 +334,14 @@
       [240, "مِجْسَمَتَان", "micsamatān", "cisimleşme âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَجْسَم", "ʾacsam", "daha çok cisimleşen", "orta", "Vikisözlük: elative degree of جَسِيم (jasīm):"],
+      [
+        241,
+        "أَجْسَم",
+        "ʾacsam",
+        "vezninde ve mürâdifidir ki pek iri dızman şeye denir",
+        "lugat",
+        "Vikisözlük: elative degree of جَسِيم (jasīm): · Kamus"
+      ],
       [242, "أَجْسَمَان", "ʾacsamān", "daha çok cisimleşen, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
@@ -344,7 +351,7 @@
       [246, "جَسْمَاآن", "casmāʾān", "daha çok cisimleşen, iki", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "جُسَيْم", "cusaym", "azıcık cisimleşme", "orta", ""],
+      [249, "جُسَيْم", "cusaym", "Cisimcik", "lugat", "Kubbealtı"],
       [250, "جُسَيْمَان", "cusaymān", "azıcık cisimleşme, iki", "orta", ""],
       [251, "جُسَيْمَة", "cusayma", "azıcık cisimleşme", "orta", ""],
       [252, "جُسَيْمَتَان", "cusaymatān", "azıcık cisimleşme, iki", "orta", ""]
@@ -362,7 +369,7 @@
       [258, "جِسْمَتَان", "cismatān", "cisimleşme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "جَسِيم", "casīm", "her daim cisimleşen", "orta", ""],
+      [259, "جَسِيم", "casīm", "İri", "lugat", "Luggat"],
       [260, "جَسِيمَة", "casīma", "her daim cisimleşen, müennes", "orta", ""],
       [261, "جَسِيمَان", "casīmān", "her daim cisimleşen, iki", "orta", ""],
       [262, "جَسِيمَتَان", "casīmatān", "her daim cisimleşen, iki, müennes", "orta", ""],
@@ -426,7 +433,7 @@
       [320, "جُسَامِين", "cusāmīn", "her daim cisimleşenler", "orta", ""],
       [321, "جُسَامَات", "cusāmāt", "her daim cisimleşenler, müennes", "orta", ""],
       [322, "جَسَام", "casām", "her daim cisimleşen", "orta", ""],
-      [323, "جَسَامَة", "casāma", "her daim cisimleşen, müennes", "orta", "Vikisözlük: magnitude, corpulence"],
+      [323, "جَسَامَة", "casāma", "İrilik", "lugat", "Vikisözlük: magnitude, corpulence · Luggat"],
       [324, "جَسَامَان", "casāmān", "her daim cisimleşen, iki", "orta", ""],
       [325, "جَسَامَتَان", "casāmatān", "her daim cisimleşen, iki, müennes", "orta", ""],
       [326, "جَسَامُون", "casāmūn", "her daim cisimleşenler", "orta", ""],
@@ -486,7 +493,7 @@
       [378, "مِجْسِيمُون", "micsīmūn", "cisimleşmeye düşkünler", "orta", ""],
       [379, "مِجْسِيمِين", "micsīmīn", "cisimleşmeye düşkünler", "orta", ""],
       [380, "مِجْسِيمَات", "micsīmāt", "cisimleşmeye düşkünler, müennes", "orta", ""],
-      [381, "جَسِيم", "casīm", "çok cisimleşen", "orta", ""],
+      [381, "جَسِيم", "casīm", "İri", "lugat", "Luggat"],
       [382, "جَسِيمَة", "casīma", "çok cisimleşen, müennes", "orta", ""],
       [383, "جَسِيمَان", "casīmān", "çok cisimleşen, iki", "orta", ""],
       [384, "جَسِيمَتَان", "casīmatān", "çok cisimleşen, iki, müennes", "orta", ""],
@@ -534,13 +541,13 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "جَسَام", "casām", "cisimleşme", "orta", ""],
       [422, "جُسُوم", "cusūm", "cisimleşme", "orta", ""],
-      [423, "جِسَام", "cisām", "cisimleşme", "orta", ""],
+      [423, "جِسَام", "cisām", "in cemi", "lugat", "Vankulu"],
       [424, "جُسْم", "cusm", "cisimleşme", "orta", ""],
-      [425, "جَسَامَة", "casāma", "cisimleşme", "orta", "Vikisözlük: magnitude, corpulence"],
+      [425, "جَسَامَة", "casāma", "İrilik", "lugat", "Vikisözlük: magnitude, corpulence · Luggat"],
       [426, "جِسَامَة", "cisāma", "cisimleşme", "orta", ""],
       [427, "جُسُومَة", "cusūma", "cisimleşme", "orta", ""],
       [428, "جَسْم", "casm", "cisimleşme", "orta", ""],
-      [429, "جِسْم", "cism", "beden", "kuran", "Vikisözlük: a body"]
+      [429, "جِسْم", "cism", "Cisim, madde", "lugat", "Vikisözlük: a body · Luggat"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "جَاسُوم", "cāsūm", "cisimleşme türünden şey", "orta", ""],
@@ -551,9 +558,9 @@
       [437, "جَيْسَم", "caysam", "cisimleşme türünden şey", "orta", ""],
       [439, "جَسْم", "casm", "cisimleşme türünden şey", "orta", ""],
       [441, "جَسَم", "casam", "cisimleşme türünden şey", "orta", ""],
-      [443, "جِسْم", "cism", "beden", "kuran", "Vikisözlük: a body"],
+      [443, "جِسْم", "cism", "Cisim, madde", "lugat", "Vikisözlük: a body · Luggat"],
       [445, "جُسْم", "cusm", "cisimleşme türünden şey", "orta", ""],
-      [447, "جَسِيم", "casīm", "cisimleşme türünden şey", "orta", ""],
+      [447, "جَسِيم", "casīm", "İri", "lugat", "Luggat"],
       [449, "جِسَم", "cisam", "cisimleşme türünden şey", "orta", ""],
       [451, "جُسُم", "cusum", "cisimleşme türünden şey", "orta", ""],
       [453, "جَسَام", "casām", "cisimleşme türünden şey", "orta", ""]
@@ -569,16 +576,16 @@
       [448, "جَسِيمَة", "casīma", "cisimleşme türünden bir tane", "orta", ""],
       [450, "جِسَمَة", "cisama", "cisimleşme türünden bir tane", "orta", ""],
       [452, "جُسُمَة", "cusuma", "cisimleşme türünden bir tane", "orta", ""],
-      [454, "جَسَامَة", "casāma", "cisimleşme türünden bir tane", "orta", "Vikisözlük: magnitude, corpulence"]
+      [454, "جَسَامَة", "casāma", "İrilik", "lugat", "Vikisözlük: magnitude, corpulence · Luggat"]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْسَام", "ʾacsām", "cisimleşmeler", "orta", ""],
+      [455, "أَجْسَام", "ʾacsām", "Cisimler", "lugat", "Luggat"],
       [456, "أَجْسِمَة", "ʾacsima", "cisimleşmeler", "orta", ""],
       [457, "أَجَاسِم", "ʾacāsim", "cisimleşmeler", "orta", ""],
       [458, "أَجَاسِيم", "ʾacāsīm", "cisimleşmeler", "orta", ""],
       [459, "جُسُوم", "cusūm", "cisimleşmeler", "orta", ""],
       [460, "جُسُم", "cusum", "cisimleşmeler", "orta", ""],
-      [461, "جِسَام", "cisām", "cisimleşmeler", "orta", ""],
+      [461, "جِسَام", "cisām", "in cemi", "lugat", "Vankulu"],
       [462, "جِسَم", "cisam", "cisimleşmeler", "orta", ""],
       [463, "جِسَمَة", "cisama", "cisimleşmeler", "orta", ""],
       [464, "جُسَم", "cusam", "cisimleşmeler", "orta", ""],
@@ -593,7 +600,7 @@
       [473, "أَجْسُم", "ʾacsum", "cisimleşmeler", "orta", ""],
       [474, "جُسَّم", "cussam", "cisimleşmeler", "orta", ""],
       [475, "جَسَائِم", "casāʾim", "cisimleşmeler", "orta", ""],
-      [476, "جُسَيْم", "cusaym", "cisimleşmeler", "orta", ""]
+      [476, "جُسَيْم", "cusaym", "Cisimcik", "lugat", "Kubbealtı"]
     ],
     "cem‘u’l-cem‘ (aday)": [
       [477, "أَجْسَامَات", "ʾacsāmāt", "cisimleşmeler topluluğu", "orta", ""],
@@ -2198,7 +2205,517 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جِسْم": [
+        {
+          "eser": "Kamus",
+          "madde": "cism",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İnsânın ve sâir hilkati azîm ve müteşahhıs olan envâ-ı hayvânın beden ve azâlarının cemâatine yanî mecmûuna denir;cemi أَجْسَامٌ [ecsâm] ve جُسُومٌ [cusûm] gelir, Türkîde gövde tabîr olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِسْمُ",
+          "okunus": "el-cism",
+          "koken": "cîmin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cism",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cesed.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِسْمُ",
+          "okunus": "el-cism",
+          "koken": "cîmin kesri ve sînin sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cism",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cisim, madde. Vücut, beden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "CİSİM – CİSM",
+          "yazilis": "ﺟﺴﻢ",
+          "tur": "i.",
+          "koken": "Ar. cism",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Boşlukta bir yer kaplayan varlık, madde, nesne",
+              "misaller": [
+                ["En katı cisimler bile eriyor", "Peyâmi Safâ"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Beden, vücut",
+              "misaller": [
+                ["Çalap Âdem cismini topraktan var eyledi / Şeytan geldi Âdem’e tapmağa âr eyledi", "Yûnus Emre – Ö.T.S."],
+                [
+                  "Ger ölümden kurtulam dersen yürü var âşık ol / Döne döne aşk oduyle cism ü cânı kıl kebâb",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["Biçerler cismine beyaz bir kefen", "Ali M. Arolat"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Beş duyu ile kavranamayan melek, cin vb. şeyler",
+              "misaller": [],
+              "deyim": "Cism-i latif"
+            },
+            {
+              "etiket": "",
+              "tanim": "Konuşan varlık, insan. ● Cismen ( ﺟﺴﻤﺎً ) zf. ( cism ’in tenvinli şekli) Cisim olarak, cisim bakımından, vücutça, bedence. ● Cism-perver ( ﺟﺴﻢ ﭘﺮﻭﺭ ) birl. sıf. (Fars. perver “besleyen” ile) Vücûdunu seven, maddî varlığına çok düşkün olan (kimse)",
+              "misaller": [
+                ["Ey nefs-perest ü cism-perver / Olma gam-ı hırs ile mükedder", "Fuzûlî"]
+              ],
+              "deyim": "Cism-i nâtık"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cism-i zîhayât",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hayat sahibi cisim",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جِسَام": [
+        {
+          "eser": "Vankulu",
+          "madde": "cisam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "جَسِيمٌ [cesîm]in cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِسَامُ",
+          "okunus": "el-cisâm",
+          "koken": "cîmin kesriyle"
+        }
+      ],
+      "جَسَامَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CESÂMET",
+          "yazilis": "ﺟﺴﺎﻣﺖ",
+          "tur": "i.",
+          "koken": "Ar. cesāmet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "(Maddî bakımdan) Büyük olma, büyüklük, irilik",
+              "misaller": [
+                [
+                  "Ve hatta bir kayığa alınacak müşteri adedi dahi teknenin cesâmetine göre peremeciler kethüdâsı tarafından tespit olunurdu",
+                  "Sâmiha Ayverdi"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cesamet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Azîmül-cism olmak manâsınadır; yukâlu: جَسُمَ الرَّجُلُ جَسَامَةً مِنَ الْبَابِ الْخَامِسِ إِذَا عَظُمَ",
+              "misaller": [
+                ["جَسُمَ الرَّجُلُ جَسَامَةً مِنَ الْبَابِ الْخَامِسِ إِذَا عَظُمَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَسَامَةُ",
+          "okunus": "el-cesâmet",
+          "koken": "كَرَامَةٌ [kerâmet] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesamet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İrilik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesâmet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Büyüklük",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جَسِيم": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CESİM",
+          "yazilis": "ﺟﺴﻴﻢ",
+          "tur": "sıf.",
+          "koken": "Ar. cesāme t “iri, büyük olmak”tan cesіm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Büyük, geniş",
+              "misaller": [
+                ["Almanya, İspanya, hatta Portekiz ve Belçika’nın da cesim müstemlekeleri vardı", "Ömer Seyfeddin"],
+                [
+                  "Paşanın konağı bir kapısı Fındıklı’da, bir kapısı Kabataş’ta ve yukarıya açılan kapısı da Ayazpaşa’da olan gāyet cesim bir bahçenin içinde idi",
+                  "Sâmiha Ayverdi"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "İri, kocaman, cesâmetli",
+              "misaller": [
+                ["Esircinin o cesim ellerinden tutarak evden çıktılar", "Sâmipaşazâde Sezâî"],
+                ["Ve bu cesim vücut harekete gelince onun süratine yetişmek mümkün olmazdı", "Hâlit Z. Uşaklıgil"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Önemli",
+              "misaller": [
+                ["Emr-i cesim.", ""]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "İri yapılı, iri cüsseli",
+              "misaller": [
+                [
+                  "Çerkez ile berâber bulunan ve gāyet cesîmü’l-cüsse olan bu adam Hacı Ömer isminde bir esirci idi",
+                  "Sâmipaşazâde Sezâî"
+                ],
+                ["● Cesîme", "ﺟﺴﻴﻤﻪ"]
+              ],
+              "deyim": "Cesîmü’l-cüsse (-vücud)"
+            },
+            {
+              "etiket": "",
+              "tanim": "“ Ebniye-i cesîme",
+              "misaller": [],
+              "deyim": "Cesim kelimesinin tamlamalarda ortaya çıkan aynı mânâdaki müennes şekli"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cesim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْجُسَامُ [el-cusâm] (غُرَابٌ [gurâb] vezninde) Vasflardır, tenû-mend ve azîmül-hilkat şeye denir;müennesleri hâyladır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "etli cânlı semiz adama denir; yukâlu:رَجُلٌ جَسِيمٌ أَيْ بَدِينٌ Ve şol mahalle denir ki sahn-ı zemînden yüksek olup lâkin ona su çıkıp aşar ola;cemi جِسَامٌ [cisâm]dır, كِتَابٌ [kitâb] gibi.",
+              "misaller": [
+                ["رَجُلٌ جَسِيمٌ أَيْ بَدِينٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَسِيمُ",
+          "okunus": "el-cesîm",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cesim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Fermûde olan kimse; yukâlu: جَسُمَ الشَّيْءُ مِنَ الْبَابِ الْخَامِسِ إِذَا عَظُمَ",
+              "misaller": [
+                ["جَسُمَ الشَّيْءُ مِنَ الْبَابِ الْخَامِسِ إِذَا عَظُمَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَسِيمُ",
+          "okunus": "el-cesîm",
+          "koken": "cîmin fethi ve sînin kesri ve meddiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesim",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İri",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesîm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İri, büyük",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesîmülcüsse",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İri yapılı, iriyarı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "جُسْمَان": [
+        {
+          "eser": "Kamus",
+          "madde": "cusman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "جِسْمٌ [cism] manâsınadır; yukâlu: لَهُ جِسْمٌ لَطِيفٌ وَجُسْمَانٌ وَهِيَ جَمَاعَةُ الْبَدَنِ وَالْأَعْضَاءِ مِنَ النَّاسِ وَسَائِرِ الْأَنْوَاعِ الْعَظِيمَةِ الْخَلْقِ",
+              "misaller": [
+                [
+                  "لَهُ جِسْمٌ لَطِيفٌ وَجُسْمَانٌ وَهِيَ جَمَاعَةُ الْبَدَنِ وَالْأَعْضَاءِ مِنَ النَّاسِ وَسَائِرِ الْأَنْوَاعِ الْعَظِيمَةِ الْخَلْقِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجُسْمَانُ",
+          "okunus": "el-cusmân",
+          "koken": "cîmin zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cusman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cesed manâsına, جُثْمَانٌ [cusamp;mân] gibidir veznen ve manen.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Asmaî eyitti: جِسْمٌ [cism] ve جُسْمَانٌ [cusmân] cesed manâsınadır ve جُثْمَانٌ [cusamp;mân] şahs manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "mezbûr eyitti: جُسْمَانٌ [cusmân] جِسْمٌ [cism]-i insânın cemi dahi gelir, ذِئْبٌ [zib] ile ذُؤْبَانٌ [zubân] gibi, kurtlar manâsına; yukâlu: لهُ الْجُسْمَانُ أَيْ جِسَامٌ كَثِيرَةٌ",
+              "misaller": [
+                ["لهُ الْجُسْمَانُ أَيْ جِسَامٌ كَثِيرَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجُسْمَانُ",
+          "okunus": "el-cusmân",
+          "koken": "cîmin zammı ve sînin sükûnuyla"
+        }
+      ],
+      "تَجْسِيم": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TECSİM",
+          "yazilis": "ﺗﺠﺴﻴﻢ",
+          "tur": "i.",
+          "koken": "Ar. cesāme t “büyük, iri olmak”tan veya cism ’den tecsіm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Vücut verme, cisim durumuna getirme",
+              "misaller": [
+                [
+                  "En muzlim cihetlerini, en müşkül mahallerini nazar-gâh-ı hüner-verânesinde tecsim etmekle uğraşıyordu",
+                  "Sâmipaşazâde Sezâî"
+                ],
+                [
+                  "Alnımı kırıştırmadan ayaklarımı yorgandan çıkararak hareketsiz, mâvi bir denizi, yeşil bir ovayı tecsîme çalışarak bir şey düşünmeye uğraştım",
+                  "Fahri Celâl"
+                ],
+                [
+                  "Kaç zamandır nazar-ı tahassürü önünde tecsim için gece gündüz hep ona hasr-ı tahayyülât eylediği işte o vücûd-ı nâzik karşısına çıkmıştı",
+                  "Hüseyin R. Gürpınar"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَجْسَم": [
+        {
+          "eser": "Kamus",
+          "madde": "ecsem",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَضْخَمُ [adham] vezninde ve mürâdifidir ki pek iri dızman şeye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْسَمُ",
+          "okunus": "el-ecsem",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ecsem",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Fermûde olan nesne.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْسَمُ",
+          "okunus": "el-ecsem",
+          "koken": "hemzenin ve sînin fethi ile"
+        }
+      ],
+      "جُسَيْم": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CÜSEYM",
+          "yazilis": "ﺟﺴﻴﻢ",
+          "tur": "i.",
+          "koken": "Ar. cism ’den cuseym",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cisimcik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَجْسَام": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ECSAM",
+          "yazilis": "ﺍﺟﺴﺎﻡ",
+          "tur": "i.",
+          "koken": "Ar. cism ’in çoğul şekli ecsām",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cisimler",
+              "misaller": [
+                ["zan ve kabul edilen mâhiyeti meçhul seyyâl-i rakik", "Refik H. Karay"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Gök cisimleri",
+              "misaller": [],
+              "deyim": "Ecsâm-ı semâviyye"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ecsâm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cisimler. Vücutlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

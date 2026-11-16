@@ -23,7 +23,7 @@
       [526, "عِيَايَة", "ʿiyāya", "bitkinlik", "orta", ""],
       [527, "عَيِيّ", "ʿayiyy", "bitkinlik", "orta", ""],
       [528, "عَيُوّ", "ʿayuww", "bitkinlik", "orta", ""],
-      [15, "عَيَّان", "ʿayyān", "bitkinlik", "orta", "Vikisözlük: tired"],
+      [15, "عَيَّان", "ʿayyān", "Yorgun, yorulmuş", "lugat", "Vikisözlük: tired · Kubbealtı"],
       [16, "عُيَّان", "ʿuyyān", "bitkinlik", "orta", ""],
       [17, "عِيَّان", "ʿiyyān", "bitkinlik", "orta", ""],
       [18, "عَيَّى", "ʿayyā", "bitkinlik", "orta", ""],
@@ -92,7 +92,14 @@
       [566, "مُعَايَى", "muʿāyā", "biriyle karşılıklı bitkin olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِعْيَاء", "ʾiʿyāʾ", "bitkinleştirme", "orta", "Vikisözlük: verbal noun of أَعْيَا (ʔaʕyā)"]
+      [
+        567,
+        "إِعْيَاء",
+        "ʾiʿyāʾ",
+        "Yorulup dermânde olmak",
+        "lugat",
+        "Vikisözlük: verbal noun of أَعْيَا (ʔaʕyā) · Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [568, "إِعْيَاءَة", "ʾiʿyāʾa", "bir kere bitkinleştirme", "orta", ""]
@@ -353,7 +360,7 @@
       [736, "عَيُوُّون", "ʿayuwwūn", "her daim bitkin olanlar", "orta", ""],
       [737, "عَيُوِّين", "ʿayuwwīn", "her daim bitkin olanlar", "orta", ""],
       [738, "عَيُوَّات", "ʿayuwwāt", "her daim bitkin olanlar, müennes", "orta", ""],
-      [739, "عَيِي", "ʿayī", "yorgun", "kuran", "Kur'ân"],
+      [739, "عَيِي", "ʿayī", "Ehl-i beyân olmayan kimse", "lugat", "Kur'ân · Vankulu"],
       [740, "عَيِيَة", "ʿayiya", "her daim bitkin olan, müennes", "orta", ""],
       [741, "عَيِيَان", "ʿayiyān", "her daim bitkin olan, iki", "orta", ""],
       [742, "عَيِيَتَان", "ʿayiyatān", "her daim bitkin olan, iki, müennes", "orta", ""],
@@ -374,7 +381,7 @@
       [755, "عَيَيَات", "ʿayayāt", "her daim bitkin olanlar, müennes", "orta", ""],
       [294, "عَيّ", "ʿayy", "her daim bitkin olan", "orta", ""],
       [295, "عَيَّة", "ʿayya", "her daim bitkin olan, müennes", "orta", ""],
-      [296, "عَيَّان", "ʿayyān", "her daim bitkin olan, iki", "orta", "Vikisözlük: tired"],
+      [296, "عَيَّان", "ʿayyān", "Yorgun, yorulmuş", "lugat", "Vikisözlük: tired · Kubbealtı"],
       [297, "عَيَّتَان", "ʿayyatān", "her daim bitkin olan, iki, müennes", "orta", ""],
       [298, "عَيُّون", "ʿayyūn", "her daim bitkin olanlar", "orta", ""],
       [299, "عَيِّين", "ʿayyīn", "her daim bitkin olanlar", "orta", ""],
@@ -386,7 +393,7 @@
       [760, "عُيِيُّون", "ʿuyiyyūn", "her daim bitkin olanlar", "orta", ""],
       [761, "عُيِيِّين", "ʿuyiyyīn", "her daim bitkin olanlar", "orta", ""],
       [762, "عُيِيَّات", "ʿuyiyyāt", "her daim bitkin olanlar, müennes", "orta", ""],
-      [308, "عَيَّان", "ʿayyān", "her daim bitkin olan", "orta", "Vikisözlük: tired"],
+      [308, "عَيَّان", "ʿayyān", "Yorgun, yorulmuş", "lugat", "Vikisözlük: tired · Kubbealtı"],
       [309, "عَيَّانَة", "ʿayyāna", "her daim bitkin olan, müennes", "orta", ""],
       [310, "عَيَّانَان", "ʿayyānān", "her daim bitkin olan, iki", "orta", ""],
       [311, "عَيَّانَتَان", "ʿayyānatān", "her daim bitkin olan, iki, müennes", "orta", ""],
@@ -1063,7 +1070,110 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "عَيَّان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "AYYAN",
+          "yazilis": "ﻋﻴّﺎﻥ",
+          "tur": "sıf.",
+          "koken": "Ar. ‘ayy – ‘ayā’ “aciz ve güçsüz olmak”tan ‘ayyān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yorgun, yorulmuş",
+              "misaller": [
+                ["Dedi ey müddeî ey yolda ayyan / Sana minnet mi var oldunsa ta’ban", "Şemseddin Sivâsî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "ayyân",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْعَيَايَاءُ [el-ayâyâ] (aynın fethiyle) ve اَلْعَيُّ [el-ayy] (طَيٌّ [tayy] vezninde) ve اَلْعَيِي [el-ayî] (فَعِيلٌ [faîl] vezninde) Vech-i mezkûr üzere bir nesneden âciz ve dermânde adama denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "عَيٌّ [ayy] ve عَيِي [ayî] kelimelerinin cemlerinde أَعْيَاءٌ [ayâ] ve أَعْيِيَاءُ [ayiyâ] gelir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعَيَّانُ",
+          "okunus": "el-ayyân",
+          "koken": "رَيَّانُ [reyyân] vezninde"
+        }
+      ],
+      "إِعْيَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "iya",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yorulup dermânde olmak manâsınadır; yukâlu: أَعْيَى الْمَاشِي إِذَا كَلَّ Ve yorup dermânde kılmak manâsınadır; yukâlu: أَعْيَى السَّيْرُ الْبَعِيرَ إِذَا كَلَّهُ Ve âciz eylemek manâsınadır; yukâlu: أَعْيَاهُ الدَّاءُ إِذَا أَعْجَزَهُ",
+              "misaller": [
+                ["أَعْيَى الْمَاشِي إِذَا كَلَّ", ""],
+                ["أَعْيَى السَّيْرُ الْبَعِيرَ إِذَا كَلَّهُ", ""],
+                ["أَعْيَاهُ الدَّاءُ إِذَا أَعْجَزَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِعْيَاءُ",
+          "okunus": "el-iyâ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "iya",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi işlemeden basîret üzere olmamak; tekûlu: عَيِيتُ بِأَمْرِي إِذَا لَمْ تَهْتَدِ لِوَجْهِهِ وَأَعْيَانِي هُوَ Yanî “Bana müşkil oldu o husûs.” Ve إِعْيَاءٌ [iyâ] Bir kimse yorulup âciz olmağa dahi derler; yukâlu: أَعْيَا الرَّجُلُ فِي الَمَشْيِ Ve yorgun edip âciz kılmağa dahi derler; yukâlu: أَعْيَاهُ اللهُ Ve إِعْيَاءٌ [iyâ] Bir kimseye bir iş sab gelmeğe dahi derler.",
+              "misaller": [
+                ["أَعْيَا الرَّجُلُ فِي الَمَشْيِ", ""],
+                ["أَعْيَاهُ اللهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِعْيَاءُ",
+          "okunus": "el-iyâ",
+          "koken": "hemzenin kesri ve elifin meddiyle"
+        }
+      ],
+      "عَيِي": [
+        {
+          "eser": "Vankulu",
+          "madde": "ayiyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ehl-i beyân olmayan kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعَيِيُّ",
+          "okunus": "el-ayiyy",
+          "koken": "aynın fethi ve yâ-yı evvelin kesri ve sânînin teşdîdiyle فَعِيلٌ [faîl] vezni üzere"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

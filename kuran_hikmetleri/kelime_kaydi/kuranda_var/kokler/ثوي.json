@@ -284,7 +284,7 @@
       [700, "مَثْوِيَّات", "maṯwiyyāt", "kalınanlar, müennes", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [701, "مَثْوَى", "maṯwā", "kalma yeri, vakti", "orta", ""],
+      [701, "مَثْوَى", "maṯwā", "Ev, mesken, menzil, me’vâ", "lugat", "Kubbealtı"],
       [702, "مَثْوَيَان", "maṯwayān", "kalma yeri, vakti, iki", "orta", ""],
       [703, "مَثْوِي", "maṯwī", "kalma yeri, vakti", "orta", ""],
       [704, "مَثْوِيَان", "maṯwiyān", "kalma yeri, vakti, iki", "orta", ""],
@@ -320,7 +320,7 @@
       [722, "ثُوَيَّتَان", "ṯuwayyatān", "azıcık kalma, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [723, "مَثْوَى", "maṯwā", "kalma", "orta", ""],
+      [723, "مَثْوَى", "maṯwā", "Ev, mesken, menzil, me’vâ", "lugat", "Kubbealtı"],
       [724, "مَثْوَيَان", "maṯwayān", "kalma, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
@@ -974,7 +974,53 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَثْوَى": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MESVÂ",
+          "yazilis": "ﻣﺜﻮﻯ",
+          "tur": "i.",
+          "koken": "Ar. ѕevā’ “ikāmet etmek, oturmak”tan meѕvā",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ev, mesken, menzil, me’vâ",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Âhiret yurdu",
+              "misaller": [
+                ["Yûnus imdi olma mat şeyhliği âşıklığa sat / Âşıkta n’ister iyi ad mesvâsı hoştur âşıkın", "Yûnus Emre"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "mesva",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Menzil manâsınadır; cemi مَثَاوِي [mesamp;âvî]dir; yukâlu: نَزَلُوا مَثْوًى مُبَارَكًا أَيْ مَنْزِلًا",
+              "misaller": [
+                ["نَزَلُوا مَثْوًى مُبَارَكًا أَيْ مَنْزِلًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَثْوَى",
+          "okunus": "el-mesamp;vâ",
+          "koken": "مَأْوَى [mevâ] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 14,
   "kuranda_var": true,

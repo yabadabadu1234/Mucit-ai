@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "زَيْل", "zayl", "kaldırma", "orta", "Vikisözlük: masdar (bâb I): to (cause to) move away"],
+      [
+        0,
+        "زَيْل",
+        "zayl",
+        "Bir nesneyi yerinden ayırmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to (cause to) move away · Kamus"
+      ],
       [888, "زِيل", "zīl", "kaldırma", "orta", ""],
       [889, "زُول", "zūl", "kaldırma", "orta", ""],
       [517, "زَال", "zāl", "kaldırma", "orta", ""],
@@ -384,7 +391,14 @@
       [884, "زَالُون", "zālūn", "her daim kaldıranlar", "orta", ""],
       [885, "زَالِين", "zālīn", "her daim kaldıranlar", "orta", ""],
       [755, "زَالَات", "zālāt", "her daim kaldıranlar, müennes", "orta", ""],
-      [294, "زَيْل", "zayl", "her daim kaldıran", "orta", "Vikisözlük: masdar (bâb I): to (cause to) move away"],
+      [
+        294,
+        "زَيْل",
+        "zayl",
+        "Bir nesneyi yerinden ayırmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to (cause to) move away · Kamus"
+      ],
       [295, "زَيْلَة", "zayla", "her daim kaldıran, müennes", "orta", ""],
       [296, "زَيْلَان", "zaylān", "her daim kaldıran, iki", "orta", ""],
       [297, "زَيْلَتَان", "zaylatān", "her daim kaldıran, iki, müennes", "orta", ""],
@@ -533,7 +547,14 @@
       [425, "زَيَالَة", "zayāla", "kaldırma", "orta", ""],
       [837, "زِيَالَة", "ziyāla", "kaldırma", "orta", ""],
       [427, "زُيُولَة", "zuyūla", "kaldırma", "orta", ""],
-      [428, "زَيْل", "zayl", "kaldırma", "orta", "Vikisözlük: masdar (bâb I): to (cause to) move away"],
+      [
+        428,
+        "زَيْل",
+        "zayl",
+        "Bir nesneyi yerinden ayırmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to (cause to) move away · Kamus"
+      ],
       [919, "زِيل", "zīl", "kaldırma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -543,7 +564,14 @@
       [434, "أُزْيُولَة", "ʾuzyūla", "kaldırma türünden şey", "orta", ""],
       [435, "زَوْيَل", "zawyal", "kaldırma türünden şey", "orta", ""],
       [437, "زَيْيَل", "zayyal", "kaldırma türünden şey", "orta", ""],
-      [439, "زَيْل", "zayl", "kaldırma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to (cause to) move away"],
+      [
+        439,
+        "زَيْل",
+        "zayl",
+        "Bir nesneyi yerinden ayırmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to (cause to) move away · Kamus"
+      ],
       [840, "زَال", "zāl", "kaldırma türünden şey", "orta", ""],
       [921, "زِيل", "zīl", "kaldırma türünden şey", "orta", ""],
       [923, "زُول", "zūl", "kaldırma türünden şey", "orta", ""],
@@ -1126,6 +1154,48 @@
       "فزيلنا": "ayırdık",
       "زالت": "kaldırdı, zail oldu",
       "زلتم": "kaldırdı, zail oldu"
+    },
+    "mustak_lugat": {
+      "زَيْل": [
+        {
+          "eser": "Kamus",
+          "madde": "zeyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi yerinden ayırmak manâsınadır; yukâlu: زَالَهُ عَنْ مَكَانِهِ يَزِيلُهُ زَيْلًا لُغَةٌ فِي أَزَالَهُ Ve bir nesneyi âhirden ayırıp cüdâ eylemek manâsınadır; tekûlu: زِلْتُهُ أَزِيلُهُ فَلَمْ يَنْزَلْ أَيْ مِزْتُهُ فَلَمْ يَنْمَزْ",
+              "misaller": [
+                ["زَالَهُ عَنْ مَكَانِهِ يَزِيلُهُ زَيْلًا لُغَةٌ فِي أَزَالَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْلُ",
+          "okunus": "ez-zeyl",
+          "koken": "نَيْلٌ [neyl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zeyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi mekânından ayırmak; yukâlu: زِلْتُ الشَّيْءَ مِنْ مَكَانِهِ أَزِيلُهُ زَيْلًا وَهُوَ لُغَةٌ فِي أَزَلْتُهُ Ve زَيْلٌ [zeyl] Temeyyüz ve tefrîk etmeğe dahi derler; yukâlu: زِلْتُ الشَّيْءَ أَزِيلُهُ زَيْلًا إِذَا مَيَّزْتَهُ وَفَرَّقْتَهُ ve yukâlu: زِلْ ضَأْنَكَ مِنْ مِعْزَاكَ Ve مِعْزَى [mizâ] keçiye derler, ضَأْنٌ [dan] koyuna dedikleri gibi.",
+              "misaller": [
+                ["زِلْتُ الشَّيْءَ مِنْ مَكَانِهِ أَزِيلُهُ زَيْلًا وَهُوَ لُغَةٌ فِي أَزَلْتُهُ", ""],
+                ["زِلْتُ الشَّيْءَ أَزِيلُهُ زَيْلًا إِذَا مَيَّزْتَهُ وَفَرَّقْتَهُ", ""],
+                ["زِلْ ضَأْنَكَ مِنْ مِعْزَاكَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّيْلُ",
+          "okunus": "ez-zeyl",
+          "koken": "zânın fethi ve yânın sükûnuyla"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 10,

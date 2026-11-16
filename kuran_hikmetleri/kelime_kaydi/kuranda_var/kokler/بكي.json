@@ -16,7 +16,7 @@
       [519, "بُكِيّ", "bukiyy", "ağlayan", "kuran", "Kur'ân"],
       [520, "بُكِيّ", "bukiyy", "ağlayan", "kuran", "Kur'ân"],
       [521, "بِكَاء", "bikāʾ", "ağlama", "orta", ""],
-      [522, "بُكَاء", "bukāʾ", "ağlama", "orta", "Vikisözlük: verbal noun of بَكَى (bakā) (form I)"],
+      [522, "بُكَاء", "bukāʾ", "Ağlama", "lugat", "Vikisözlük: verbal noun of بَكَى (bakā) (form I) · Luggat"],
       [523, "بَكَاء", "bakāʾ", "ağlama", "orta", ""],
       [524, "بَكَاة", "bakā", "ağlama", "orta", ""],
       [525, "بُكِيَّة", "bukiyya", "ağlama", "orta", ""],
@@ -92,7 +92,14 @@
       [566, "مُبَاكَى", "mubākā", "biriyle karşılıklı ağlama yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِبْكَاء", "ʾibkāʾ", "ağlatma", "orta", "Vikisözlük: masdar (bâb IV): to make (someone) weep"]
+      [
+        567,
+        "إِبْكَاء",
+        "ʾibkāʾ",
+        "Ağlatmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb IV): to make (someone) weep · Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [568, "إِبْكَاءَة", "ʾibkāʾa", "bir kere ağlatma", "orta", ""]
@@ -400,7 +407,7 @@
       [312, "بَكْيَانُون", "bakyānūn", "her daim ağlayanlar", "orta", ""],
       [313, "بَكْيَانِين", "bakyānīn", "her daim ağlayanlar", "orta", ""],
       [314, "بَكْيَانَات", "bakyānāt", "her daim ağlayanlar, müennes", "orta", ""],
-      [763, "بُكَاء", "bukāʾ", "her daim ağlayan", "orta", "Vikisözlük: verbal noun of بَكَى (bakā) (form I)"],
+      [763, "بُكَاء", "bukāʾ", "Ağlama", "lugat", "Vikisözlük: verbal noun of بَكَى (bakā) (form I) · Luggat"],
       [764, "بُكَاءَة", "bukāʾa", "her daim ağlayan, müennes", "orta", ""],
       [765, "بُكَاآن", "bukāʾān", "her daim ağlayan, iki", "orta", ""],
       [766, "بُكَاءَتَان", "bukāʾatān", "her daim ağlayan, iki, müennes", "orta", ""],
@@ -1164,7 +1171,88 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بُكَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BÜKÂ",
+          "yazilis": "ﺑﻜﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. bukā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ağlama, ağlayış",
+              "misaller": [
+                ["Her hâli bükâdır ihtiyârın", "Abdülhak Hâmit"],
+                ["Böyle ağlarken biri üzerine gelerek sebeb-i bükâsını sorsa…", "Hüseyin R. Gürpınar"],
+                [
+                  "Bütün gözü yaşlı zevceler için şurada uzun uzun saf bir bükâ-yı merhametle ağlayacaktı",
+                  "Hâlit Z. Uşaklıgil"
+                ],
+                ["● Bükâ-âlûd", "ﺑﻜﺎ ﺁﻟﻮﺩ"],
+                ["birl. sıf", "Fars. ālūd “bulaşmış, bulaşık” ile"],
+                ["Ağlamaklı. ● Bükâ-engiz", "ﺑﻜﺎ ﺍﻧﮕﻴﺰ"],
+                ["birl. sıf", "Fars. engіz “koparan, karıştıran” ile"],
+                ["Ağlatıcı, ağlatan: Bak şu zulmette çehre-i kamer / Reng-i mevtâ kadar bükâ-engîz", "Hüseyin Sîret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "bükâ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ağlama",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "إِبْكَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "ibka",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ağlatmak manâsınadır; yukâlu: أَبْكَاهُ إِذَا فَعَلَ بِهِ مَا يُوجِبُ بُكَاءَهُ",
+              "misaller": [
+                ["أَبْكَاهُ إِذَا فَعَلَ بِهِ مَا يُوجِبُ بُكَاءَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْكَاءُ",
+          "okunus": "el-ibkâ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ibka",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseyi ağlatmak; tekûlu: أَبْكَيْتُهُ إِذَا صَنَعْتَ بِهِ مَا يَبْكِيهِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْكَاءُ",
+          "okunus": "el-ibkâ",
+          "koken": "hemzenin kesri ve elifin meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 7,
   "kuranda_var": true,

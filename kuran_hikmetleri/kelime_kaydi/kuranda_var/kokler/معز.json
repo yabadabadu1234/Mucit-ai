@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "مَعْز", "maʿz", "keçi", "kuran", "Kur'ân"],
+      [0, "مَعْز", "maʿz", "Keçi", "lugat", "Kur'ân · Kubbealtı"],
       [1, "مِعْز", "miʿz", "keçi", "kontrol", ""],
       [2, "مُعْز", "muʿz", "keçi", "kontrol", ""],
       [3, "مَعَز", "maʿaz", "keçi", "kontrol", ""],
@@ -289,8 +289,8 @@
       [516, "اِمْعِوَّاز", "imʿiwwāz", "aşırı keçi olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "مَاعِز", "māʿiz", "keçi olan", "kontrol", ""],
-      [214, "مَاعِزَة", "māʿiza", "keçi olan, müennes", "kontrol", ""],
+      [213, "مَاعِز", "māʿiz", "ın müfredidir, erkeğine ve dişisine ıtlâk olunur", "lugat", "Kamus"],
+      [214, "مَاعِزَة", "māʿiza", "Müennesi", "lugat", "Vankulu"],
       [215, "مَاعِزَان", "māʿizān", "keçi olan, iki", "kontrol", ""],
       [216, "مَاعِزَتَان", "māʿizatān", "keçi olan, iki, müennes", "kontrol", ""],
       [217, "مَاعِزُون", "māʿizūn", "keçi olanlar", "kontrol", ""],
@@ -390,7 +390,7 @@
       [291, "مَعَزُون", "maʿazūn", "her daim keçi olanlar", "kontrol", ""],
       [292, "مَعَزِين", "maʿazīn", "her daim keçi olanlar", "kontrol", ""],
       [293, "مَعَزَات", "maʿazāt", "her daim keçi olanlar, müennes", "kontrol", ""],
-      [294, "مَعْز", "maʿz", "keçi", "kuran", "Kur'ân"],
+      [294, "مَعْز", "maʿz", "Keçi", "lugat", "Kur'ân · Kubbealtı"],
       [295, "مَعْزَة", "maʿza", "her daim keçi olan, müennes", "kontrol", ""],
       [296, "مَعْزَان", "maʿzān", "her daim keçi olan, iki", "kontrol", ""],
       [297, "مَعْزَتَان", "maʿzatān", "her daim keçi olan, iki, müennes", "kontrol", ""],
@@ -532,7 +532,7 @@
       [425, "مَعَازَة", "maʿāza", "keçi olma", "kontrol", ""],
       [426, "مِعَازَة", "miʿāza", "keçi olma", "kontrol", ""],
       [427, "مُعُوزَة", "muʿūza", "keçi olma", "kontrol", ""],
-      [428, "مَعْز", "maʿz", "keçi", "kuran", "Kur'ân"],
+      [428, "مَعْز", "maʿz", "Keçi", "lugat", "Kur'ân · Kubbealtı"],
       [429, "مِعْز", "miʿz", "keçi olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُمْعُوزَة", "ʾumʿūza", "keçi olma türünden şey", "kontrol", ""],
       [435, "مَوْعَز", "mawʿaz", "keçi olma türünden şey", "kontrol", ""],
       [437, "مَيْعَز", "mayʿaz", "keçi olma türünden şey", "kontrol", ""],
-      [439, "مَعْز", "maʿz", "keçi", "kuran", "Kur'ân"],
+      [439, "مَعْز", "maʿz", "Keçi", "lugat", "Kur'ân · Kubbealtı"],
       [441, "مَعَز", "maʿaz", "keçi olma türünden şey", "kontrol", ""],
       [443, "مِعْز", "miʿz", "keçi olma türünden şey", "kontrol", ""],
       [445, "مُعْز", "muʿz", "keçi olma türünden şey", "kontrol", ""],
@@ -582,7 +582,7 @@
       [469, "مَعَز", "maʿaz", "keçi olmalar", "kontrol", ""],
       [470, "مَمَاعِز", "mamāʿiz", "keçi olmalar", "kontrol", ""],
       [471, "مَمَاعِيز", "mamāʿīz", "keçi olmalar", "kontrol", ""],
-      [472, "مَوَاعِز", "mawāʿiz", "keçi olmalar", "kontrol", ""],
+      [472, "مَوَاعِز", "mawāʿiz", "Cemi, dişi keçiler", "lugat", "Vankulu"],
       [473, "أَمْعُز", "ʾamʿuz", "keçi olmalar", "kontrol", ""],
       [474, "مُعَّز", "muʿʿaz", "keçi olmalar", "kontrol", ""],
       [475, "مَعَائِز", "maʿāʾiz", "keçi olmalar", "kontrol", ""],
@@ -881,7 +881,178 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَعْز": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MA’Z",
+          "yazilis": "ﻣﻌﺰ",
+          "tur": "i.",
+          "koken": "Ar. ma‘z",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Keçi",
+              "misaller": [
+                [" Ma’z-i berrî: Yaban keçisi.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "maz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمَعَزُ [el-meaz] (fethateynle) ve اَلْمَعِيزُ [el-meîz] (أَمِيرٌ [emîr] vezninde) ve اَلْأُمْعُوزُ [el-umûz] (أُسْلُوبٌ [uslûb] vezninde) ve اَلْمِعَازُ [el-miâz] (كِتَابٌ [kitâb] vezninde) ve اَلْمِعْزَى [el-mizâ] (mîmin kesri ve kasr ile ve medd ile câizdir) Ganem sınfından koyunun muhâlifine denir ki Türkîde keçi tabîr olunur, ism-i cinstir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مِعْزَى [mizâ] kelimesi ki kasr iledir, müzekker ve munsarıftır, müennes ve gayr-i munsarıf dahi olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَعْزُ",
+          "okunus": "el-maz",
+          "koken": "mîmin fethi ve aynın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "maz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Keçidir ki koyunun mukâbilidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu ism-i cinstir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَعْزُ",
+          "okunus": "el-maz",
+          "koken": "mîmin fetih ve aynın sükûnuyla"
+        }
+      ],
+      "مَاعِز": [
+        {
+          "eser": "Kamus",
+          "madde": "Maiz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "مَعْزٌ [maz]ın müfredidir, erkeğine ve dişisine ıtlâk olunur. Cemi مَوَاعِزُ [mevâiz]dir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَاعِزٌ [mâiz] Gövdesinin sinirleri kavî ve şedîd olan adama denir; yukâlu: رَجُلٌ مَاعِزٌ أَيِ الشَّدِيدُ عَصْبِ الْخَلْقِ Ve keçinin derisine dahi denir; yukâlu: سَلَخَ الْمَاعِزَ أَيْ جِلْدَ الْمَعَزِ Ve sevâd-ı Irâkta bir karye adıdır.",
+              "misaller": [
+                ["رَجُلٌ مَاعِزٌ أَيِ الشَّدِيدُ عَصْبِ الْخَلْقِ", ""],
+                ["سَلَخَ الْمَاعِزَ أَيْ جِلْدَ الْمَعَزِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "şol adama ıtlâk olunur ki nefsinde sâhib-i şehâmet olmakla verâsından kasd eden bed-hâhlarını def ve men eder ola; yukâlu: رَجُلٌ مَاعِزٌ أَيْ شَهْمٌ مَانِعٌ مَا وَرَاءَهُ Ve مَاعِزٌ [Mâiz] Bir batn pederinin ismidir.",
+              "misaller": [
+                ["رَجُلٌ مَاعِزٌ أَيْ شَهْمٌ مَانِعٌ مَا وَرَاءَهُ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Mâiz b. Mâlik el-Eslemî zamân-ı saâdette recm olundu.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Mâiz b. Mucâlid ve Mâiz b. Mâiz ve Mâiz Temîmî ki bir mahalle nisbeti nâ-malûmdur, sahâbîlerdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَاعِزُ",
+          "okunus": "el-mâiz",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "maiz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "مَعْزٌ [maz]ın vâhididir, صَاحِبٌ [sâhib] ile صَحْبٌ [sahb] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَاعِزُ",
+          "okunus": "el-mâiz",
+          "koken": "aynın kesriyle"
+        }
+      ],
+      "مَاعِزَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "el-mâizet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müennesi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَاعِزَةُ",
+          "okunus": "el-mâizet",
+          "koken": "aynın kesriyle"
+        }
+      ],
+      "مَوَاعِز": [
+        {
+          "eser": "Vankulu",
+          "madde": "mevaiz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi, dişi keçiler manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَاعِزٌ [mâiz] Keçi derisine dahi derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَوَاعِزُ",
+          "okunus": "el-mevâiz",
+          "koken": "mîmin fethi ve aynın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

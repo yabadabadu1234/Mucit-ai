@@ -321,7 +321,7 @@
     "âlet · sülâsî": [
       [235, "مِزْرَب", "mizrab", "sürü ağılı olma âleti", "kontrol", ""],
       [236, "مِزْرَبَان", "mizrabān", "sürü ağılı olma âleti, iki", "kontrol", ""],
-      [237, "مِزْرَاب", "mizrāb", "sürü ağılı olma âleti", "kontrol", ""],
+      [237, "مِزْرَاب", "mizrāb", "vezninde ve mürâdifidir ki zikr olundu", "lugat", "Kamus"],
       [238, "مِزْرَابَان", "mizrābān", "sürü ağılı olma âleti, iki", "kontrol", ""],
       [239, "مِزْرَبَة", "mizraba", "sürü ağılı olma âleti", "kontrol", ""],
       [240, "مِزْرَبَتَان", "mizrabatān", "sürü ağılı olma âleti, iki", "kontrol", ""]
@@ -360,9 +360,9 @@
         260,
         "زَرِيبَة",
         "zarība",
-        "her daim sürü ağılı olan, müennes",
-        "kontrol",
-        "Vikisözlük: barn, shack, stable, hovel, corral, shelter"
+        "Bu dahi koyun ve keçi ağılına ve avcı gömeltisine denir",
+        "lugat",
+        "Vikisözlük: barn, shack, stable, hovel, corral, shelter · Kamus"
       ],
       [261, "زَرِيبَان", "zarībān", "her daim sürü ağılı olan, iki", "kontrol", ""],
       [262, "زَرِيبَتَان", "zarībatān", "her daim sürü ağılı olan, iki, müennes", "kontrol", ""],
@@ -472,7 +472,7 @@
       [364, "زُرَّابُون", "zurrābūn", "son derece sürü ağılı olanlar", "kontrol", ""],
       [365, "زُرَّابِين", "zurrābīn", "son derece sürü ağılı olanlar", "kontrol", ""],
       [366, "زُرَّابَات", "zurrābāt", "son derece sürü ağılı olanlar, müennes", "kontrol", ""],
-      [367, "مِزْرَاب", "mizrāb", "sürü ağılı olmayı âdet edinmiş", "kontrol", ""],
+      [367, "مِزْرَاب", "mizrāb", "vezninde ve mürâdifidir ki zikr olundu", "lugat", "Kamus"],
       [368, "مِزْرَابَة", "mizrāba", "sürü ağılı olmayı âdet edinmiş, müennes", "kontrol", ""],
       [369, "مِزْرَابَان", "mizrābān", "sürü ağılı olmayı âdet edinmiş, iki", "kontrol", ""],
       [370, "مِزْرَابَتَان", "mizrābatān", "sürü ağılı olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
@@ -491,9 +491,9 @@
         382,
         "زَرِيبَة",
         "zarība",
-        "çok sürü ağılı olan, müennes",
-        "kontrol",
-        "Vikisözlük: barn, shack, stable, hovel, corral, shelter"
+        "Bu dahi koyun ve keçi ağılına ve avcı gömeltisine denir",
+        "lugat",
+        "Vikisözlük: barn, shack, stable, hovel, corral, shelter · Kamus"
       ],
       [383, "زَرِيبَان", "zarībān", "çok sürü ağılı olan, iki", "kontrol", ""],
       [384, "زَرِيبَتَان", "zarībatān", "çok sürü ağılı olan, iki, müennes", "kontrol", ""],
@@ -577,9 +577,9 @@
         448,
         "زَرِيبَة",
         "zarība",
-        "sürü ağılı olma türünden bir tane",
-        "kontrol",
-        "Vikisözlük: barn, shack, stable, hovel, corral, shelter"
+        "Bu dahi koyun ve keçi ağılına ve avcı gömeltisine denir",
+        "lugat",
+        "Vikisözlük: barn, shack, stable, hovel, corral, shelter · Kamus"
       ],
       [450, "زِرَبَة", "ziraba", "sürü ağılı olma türünden bir tane", "kontrol", ""],
       [452, "زُرُبَة", "zuruba", "sürü ağılı olma türünden bir tane", "kontrol", ""],
@@ -841,7 +841,58 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مِزْرَاب": [
+        {
+          "eser": "Kamus",
+          "madde": "mizrab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "مِرْزَابٌ [mirzâb] vezninde ve mürâdifidir ki zikr olundu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمِزْرَابُ",
+          "okunus": "el-mizrâb",
+          "koken": ""
+        }
+      ],
+      "زَرِيبَة": [
+        {
+          "eser": "Kamus",
+          "madde": "ez-zerîbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi koyun ve keçi ağılına ve avcı gömeltisine denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّرِيبَةُ",
+          "okunus": "ez-zerîbet",
+          "koken": "غَرِيبَةٌ [garîbet] vezninde"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zerîbetus-sebu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "زَرِيبَةُ السَّبُعِ [zerîbetus-sebu] Yırtıcı cânverlerin inlerine denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

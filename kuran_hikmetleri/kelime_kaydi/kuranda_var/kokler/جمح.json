@@ -14,7 +14,7 @@
       [3, "جَمَح", "camaḥ", "hızla koşma", "orta", ""],
       [4, "جِمَح", "cimaḥ", "hızla koşma", "orta", ""],
       [5, "جُمُح", "cumuḥ", "hızla koşma", "orta", ""],
-      [6, "جُمُوح", "cumūḥ", "hızla koşma", "orta", ""],
+      [6, "جُمُوح", "cumūḥ", "At baş pekliği edip sâhibine gâlib olmak", "lugat", "Vankulu"],
       [7, "جِمَاح", "cimāḥ", "hızla koşma", "orta", ""],
       [8, "جُمَاح", "cumāḥ", "hızla koşma", "orta", ""],
       [9, "جَمَاح", "camāḥ", "hızla koşma", "orta", ""],
@@ -526,7 +526,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "جَمَاح", "camāḥ", "hızla koşma", "orta", ""],
-      [422, "جُمُوح", "cumūḥ", "hızla koşma", "orta", ""],
+      [422, "جُمُوح", "cumūḥ", "At baş pekliği edip sâhibine gâlib olmak", "lugat", "Vankulu"],
       [423, "جِمَاح", "cimāḥ", "hızla koşma", "orta", ""],
       [424, "جُمْح", "cumḥ", "hızla koşma", "orta", ""],
       [425, "جَمَاحَة", "camāḥa", "hızla koşma", "orta", ""],
@@ -569,7 +569,7 @@
       [456, "أَجْمِحَة", "ʾacmiḥa", "hızla koşmalar", "orta", ""],
       [457, "أَجَامِح", "ʾacāmiḥ", "hızla koşmalar", "orta", ""],
       [458, "أَجَامِيح", "ʾacāmīḥ", "hızla koşmalar", "orta", ""],
-      [459, "جُمُوح", "cumūḥ", "hızla koşmalar", "orta", ""],
+      [459, "جُمُوح", "cumūḥ", "At baş pekliği edip sâhibine gâlib olmak", "lugat", "Vankulu"],
       [460, "جُمُح", "cumuḥ", "hızla koşmalar", "orta", ""],
       [461, "جِمَاح", "cimāḥ", "hızla koşmalar", "orta", ""],
       [462, "جِمَح", "cimaḥ", "hızla koşmalar", "orta", ""],
@@ -806,7 +806,36 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جُمُوح": [
+        {
+          "eser": "Vankulu",
+          "madde": "cumuh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْجِمَاحُ [el-cimâh] (cîmin evvelde zammı sânîde kesriyle) At baş pekliği edip sâhibine gâlib olmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "avret talâk verilmezden o kendi evinden çıkıp akribâsı yanına varmak; yukâlu: جَمَحَتِ الْمَرْأَةُ مِنْ زَوْجِهَا إِذَا خَرَجَتْ مِنْ بَيْتِهِ إِلَى بَيْتِ أَهْلِهَا Ve جُمُوحٌ [cumûh] Sürat etmeğe dahi derler; yukâlu: جَمَحَ أَيْ أَسْرَعَ Ebû Ubeyde eyitti: Bârî taâlânın ﴿لَوَلَّوْا إِلَيْهِ وَهُمْ يَجْمَحُونَ﴾ (التوبة 57) kavl-i şerîfinde يَجْمَحُونَ [yecmehûne] يُسْرِعُونَ [yusriûne] manâsınadır.",
+              "misaller": [
+                ["جَمَحَتِ الْمَرْأَةُ مِنْ زَوْجِهَا إِذَا خَرَجَتْ مِنْ بَيْتِهِ إِلَى بَيْتِ أَهْلِهَا", ""],
+                ["جَمَحَ أَيْ أَسْرَعَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجُمُوحُ",
+          "okunus": "el-cumûh",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "رَمْز", "ramz", "işaret", "kuran", "Kur'ân"],
+      [0, "رَمْز", "ramz", "Sembol, işaret", "lugat", "Kur'ân · Luggat"],
       [1, "رِمْز", "rimz", "işaret etme", "orta", ""],
       [2, "رُمْز", "rumz", "işaret etme", "orta", ""],
       [3, "رَمَز", "ramaz", "işaret etme", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "رَمَزُون", "ramazūn", "her daim işaret edenler", "orta", ""],
       [292, "رَمَزِين", "ramazīn", "her daim işaret edenler", "orta", ""],
       [293, "رَمَزَات", "ramazāt", "her daim işaret edenler, müennes", "orta", ""],
-      [294, "رَمْز", "ramz", "işaret", "kuran", "Kur'ân"],
+      [294, "رَمْز", "ramz", "Sembol, işaret", "lugat", "Kur'ân · Luggat"],
       [295, "رَمْزَة", "ramza", "her daim işaret eden, müennes", "orta", ""],
       [296, "رَمْزَان", "ramzān", "her daim işaret eden, iki", "orta", ""],
       [297, "رَمْزَتَان", "ramzatān", "her daim işaret eden, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "رَمَازَة", "ramāza", "işaret etme", "orta", ""],
       [426, "رِمَازَة", "rimāza", "işaret etme", "orta", ""],
       [427, "رُمُوزَة", "rumūza", "işaret etme", "orta", ""],
-      [428, "رَمْز", "ramz", "işaret", "kuran", "Kur'ân"],
+      [428, "رَمْز", "ramz", "Sembol, işaret", "lugat", "Kur'ân · Luggat"],
       [429, "رِمْز", "rimz", "işaret etme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُرْمُوزَة", "ʾurmūza", "işaret etme türünden şey", "orta", ""],
       [435, "رَوْمَز", "rawmaz", "işaret etme türünden şey", "orta", ""],
       [437, "رَيْمَز", "raymaz", "işaret etme türünden şey", "orta", ""],
-      [439, "رَمْز", "ramz", "işaret", "kuran", "Kur'ân"],
+      [439, "رَمْز", "ramz", "Sembol, işaret", "lugat", "Kur'ân · Luggat"],
       [441, "رَمَز", "ramaz", "işaret etme türünden şey", "orta", ""],
       [443, "رِمْز", "rimz", "işaret etme türünden şey", "orta", ""],
       [445, "رُمْز", "rumz", "işaret etme türünden şey", "orta", ""],
@@ -1857,7 +1857,172 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَمْز": [
+        {
+          "eser": "Kamus",
+          "madde": "remz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mutlak işâret eylemek, alâ-kavlin dudaklar ile yâhûd göz ile yâhûd kaş ile yâhûd ağız ile yâhûd el ile yâhûd dil ile işâret eylemek manâsınadır; yukâlu: رَمَزَ إِلَيْهِ رَمْزًا وَرُمْزًا وَرَمَزًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا أَشَارَ أَوْ هُوَ الْإِيمَاءُ بِالشَّفَتَيْنِ أَوِ الْعَيْنَيْنِ أَوِ الْحَاجِبَيْنِ أَوِ الْفَمِ أَوِ الْيَدِ أَوِ اللِّسَانِ Ve sıkletten yâhûd şişmanlıktan yürürken muztarib ve mütelâşî olmak manâsınadır, ke-mâ se-yuzkeru.",
+              "misaller": [
+                [
+                  "رَمَزَ إِلَيْهِ رَمْزًا وَرُمْزًا وَرَمَزًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا أَشَارَ أَوْ هُوَ الْإِيمَاءُ بِالشَّفَتَيْنِ أَوِ الْعَيْنَيْنِ أَوِ الْحَاجِبَيْنِ أَوِ الْفَمِ أَوِ الْيَدِ أَوِ اللِّسَانِ",
+                  ""
+                ]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir adam eski çobanın rayinden hoşnud olmamakla koyununu ve keçisini âher çobana katmak manâsınadır; yukâlu: رَمَزَ غَنَمَهُ رَمْزًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا لَمْ يَرْضَ رِعْيَةَ الرَّاعِي فَحَوَّلَهَا إِلَى رَاعٍ آخَرَ Ve kırba doldurmak manâsınadır; yukâlu: رَمَزَ الْقِرْبَةَ إِذَا مَلَأَهَا",
+              "misaller": [
+                [
+                  "رَمَزَ غَنَمَهُ رَمْزًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا لَمْ يَرْضَ رِعْيَةَ الرَّاعِي فَحَوَّلَهَا إِلَى رَاعٍ آخَرَ",
+                  ""
+                ],
+                ["رَمَزَ الْقِرْبَةَ إِذَا مَلَأَهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّمْزُ",
+          "okunus": "er-remz",
+          "koken": "غَمْزٌ [gamz] vezninde ve rânın zammı ve fethateynle lügattir"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "remz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dudaklarla ve kaşla olan işârettir; yukâlu: رَمَزَ يَرْمُزُ وَيَرْمِزُ مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي",
+              "misaller": [
+                ["رَمَزَ يَرْمُزُ وَيَرْمِزُ مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّمْزُ",
+          "okunus": "er-remz",
+          "koken": "rânın fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "remz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sembol, işaret. İmalı konuşma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "REMİZ – REMZ",
+          "yazilis": "ﺭﻣﺰ",
+          "tur": "i.",
+          "koken": "Ar. remz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir şeyi akla getiren, o şeye delâlet eden nesne, işâret, resim, harf, kısaltma vb., sembol",
+              "misaller": [
+                ["Köpek sadâkatin, bülbül aşkın, kelebek gençliğin remz ü timsâli olmuştur", "Ahmet Hâşim"],
+                ["Rakamları, isimleri, remizleri ne kadar yanlışsız biliyordu", "Refik H. Karay"],
+                ["Bizim oralarda inanılır ki gül Hz. Muhammed’in remzidir", "Nihad S. Banarlı"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Merâmı üstü kapalı bir şekilde gizli bir yolla, îmâ ve işâretle anlatma",
+              "misaller": [
+                [
+                  "Sırr-ı Hakk’ı nicesi fâş eyleyem ben ey sikāt / K’anı ancak remz ile etmiş beyan ehl-i nikât",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["● Remz-âşinâ", "ﺭﻣﺰ ﺁﺷﻨﺎ"],
+                ["birl. sıf. ve i", "Fars. āşinā “bilen, tanıyan” ile"],
+                ["Remizden, îmâdan anlayan, anlayışlı", "kimse"],
+                [
+                  ": Olur her bir kelâmı zîb-i gûş-i Âdem ü Havvâ / Gönül remz-âşinâ-yı alleme’l-esmâ-yı dîgerdir",
+                  "Leskofçalı Gālib"
+                ],
+                ["● Remzî", "ﺭﻣﺰﻯ"],
+                ["sıf", "nispet eki -і ile"],
+                [
+                  "Remizle, işâret ve îmâ ile ilgili, sembolik: O, şahsî yokluğuna rağmen remzî bir varlıkla asırlarca Türk rûhunda, Türk vicdânında yaşamış mâşerî bir mevcuttur",
+                  "Selim N. Gerçek"
+                ],
+                ["● Remziyye", "ﺭﻣﺰﻳّﻪ"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "remz-i hikmet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hikmetin ince işareti",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "remz-i hikmet-i kâinât",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kâinatın yaratılışındaki gayenin ince işareti",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "remz-i kader",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kaderin ince işareti",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "remz-i nizâm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Düzenin ince işareti",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

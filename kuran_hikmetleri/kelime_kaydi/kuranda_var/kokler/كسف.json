@@ -9,12 +9,12 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "كَسْف", "kasf", "karanlık", "orta", ""],
-      [1, "كِسْف", "kisf", "karanlık", "orta", ""],
+      [1, "كِسْف", "kisf", "Cemi", "lugat", "Vankulu"],
       [2, "كُسْف", "kusf", "karanlık", "orta", ""],
       [3, "كَسَف", "kasaf", "karanlık", "orta", ""],
-      [4, "كِسَف", "kisaf", "parçalar", "kuran", "Kur'ân"],
+      [4, "كِسَف", "kisaf", "Kezâlik cemi, pâreler", "lugat", "Kur'ân · Vankulu"],
       [5, "كُسُف", "kusuf", "karanlık", "orta", ""],
-      [6, "كُسُوف", "kusūf", "karanlık", "orta", ""],
+      [6, "كُسُوف", "kusūf", "Güneş tutulması", "lugat", "Luggat"],
       [7, "كِسَاف", "kisāf", "karanlık", "orta", ""],
       [8, "كُسَاف", "kusāf", "karanlık", "orta", ""],
       [9, "كَسَاف", "kasāf", "karanlık", "orta", ""],
@@ -178,7 +178,14 @@
       [117, "مُتَكَاسَف", "mutakāsaf", "birbirine karan olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْكِسَاف", "inkisāf", "karan olunma", "orta", "Vikisözlük: masdar (bâb VII): to be eclipsed"]
+      [
+        118,
+        "اِنْكِسَاف",
+        "inkisāf",
+        "Güneş tutulması",
+        "lugat",
+        "Vikisözlük: masdar (bâb VII): to be eclipsed · Kubbealtı"
+      ]
     ],
     "ism-i merre · bâb VII": [
       [119, "اِنْكِسَافَة", "inkisāfa", "bir kere karan olunma", "orta", ""]
@@ -526,14 +533,14 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "كَسَاف", "kasāf", "karan olma", "orta", ""],
-      [422, "كُسُوف", "kusūf", "karan olma", "orta", ""],
+      [422, "كُسُوف", "kusūf", "Güneş tutulması", "lugat", "Luggat"],
       [423, "كِسَاف", "kisāf", "karan olma", "orta", ""],
       [424, "كُسْف", "kusf", "karan olma", "orta", ""],
       [425, "كَسَافَة", "kasāfa", "karan olma", "orta", ""],
       [426, "كِسَافَة", "kisāfa", "karan olma", "orta", ""],
       [427, "كُسُوفَة", "kusūfa", "karan olma", "orta", ""],
       [428, "كَسْف", "kasf", "karan olma", "orta", ""],
-      [429, "كِسْف", "kisf", "karan olma", "orta", ""]
+      [429, "كِسْف", "kisf", "Cemi", "lugat", "Vankulu"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "كَاسُوف", "kāsūf", "karan olma türünden şey", "orta", ""],
@@ -544,10 +551,10 @@
       [437, "كَيْسَف", "kaysaf", "karan olma türünden şey", "orta", ""],
       [439, "كَسْف", "kasf", "karan olma türünden şey", "orta", ""],
       [441, "كَسَف", "kasaf", "karan olma türünden şey", "orta", ""],
-      [443, "كِسْف", "kisf", "karan olma türünden şey", "orta", ""],
+      [443, "كِسْف", "kisf", "Cemi", "lugat", "Vankulu"],
       [445, "كُسْف", "kusf", "karan olma türünden şey", "orta", ""],
       [447, "كَسِيف", "kasīf", "karan olma türünden şey", "orta", ""],
-      [449, "كِسَف", "kisaf", "parçalar", "kuran", "Kur'ân"],
+      [449, "كِسَف", "kisaf", "Kezâlik cemi, pâreler", "lugat", "Kur'ân · Vankulu"],
       [451, "كُسُف", "kusuf", "karan olma türünden şey", "orta", ""],
       [453, "كَسَاف", "kasāf", "karan olma türünden şey", "orta", ""]
     ],
@@ -569,10 +576,10 @@
       [456, "أَكْسِفَة", "ʾaksifa", "karan olmalar", "orta", ""],
       [457, "أَكَاسِف", "ʾakāsif", "karan olmalar", "orta", ""],
       [458, "أَكَاسِيف", "ʾakāsīf", "karan olmalar", "orta", ""],
-      [459, "كُسُوف", "kusūf", "karan olmalar", "orta", ""],
+      [459, "كُسُوف", "kusūf", "Güneş tutulması", "lugat", "Luggat"],
       [460, "كُسُف", "kusuf", "karan olmalar", "orta", ""],
       [461, "كِسَاف", "kisāf", "karan olmalar", "orta", ""],
-      [462, "كِسَف", "kisaf", "parçalar", "kuran", "Kur'ân"],
+      [462, "كِسَف", "kisaf", "Kezâlik cemi, pâreler", "lugat", "Kur'ân · Vankulu"],
       [463, "كِسَفَة", "kisafa", "karan olmalar", "orta", ""],
       [464, "كُسَف", "kusaf", "karan olmalar", "orta", ""],
       [465, "كُسَفاء", "kusafāʾ", "karan olmalar", "orta", ""],
@@ -945,7 +952,146 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كِسْف": [
+        {
+          "eser": "Vankulu",
+          "madde": "kisf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكِسْفُ",
+          "okunus": "el-kisf",
+          "koken": "kâfın kesri ve sînin sükûnuyla"
+        }
+      ],
+      "كِسَف": [
+        {
+          "eser": "Vankulu",
+          "madde": "kisef",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi, pâreler manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bazılar eyitti: كِسْفٌ [kisf]kâfın kesri ve sînin sükûnuyla vâhiddir, كِسْفَةٌ [kisfet] vâhid olduğu gibi. Ahfeş eyitti: şol kimse ki ﴿كِسَفًا مِنَ السَّمَاءِ﴾ (الشعراء، 187، سبأ 9، الطور، 44) kırâat ettikâfın kesri ve sînin fethiyle, onu cem kıldı.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكِسَفُ",
+          "okunus": "el-kisef",
+          "koken": "kâfın kesri ve sînin fethiyle"
+        }
+      ],
+      "كُسُوف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KÜSUF",
+          "yazilis": "ﻛﺴﻮﻒ",
+          "tur": "i.",
+          "koken": "Ar. kusūf",
+          "manalar": [
+            {
+              "etiket": "astro.",
+              "tanim": "Güneş tutulması",
+              "misaller": [
+                ["Gelmesin cânâ cemâlin âfitâbına küsûf / Ermesin ömrün dırahtı berkine bâd-ı hazan", "Mihrî"],
+                ["Küsûf içinde kalan âfitâba benzettim", "Abdülhak Hâmit’ten"],
+                [
+                  "Aynı anda gecenin karanlık sînesinden Apokalips uçtu. Bir küsuftan fırlayan kara bir ifrit gibi korkunçtu, tehditkârdı",
+                  "Cemil Meriç’ten"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kısmî güneş tutulması",
+              "misaller": [],
+              "deyim": "Küsûf-ı cüz’î"
+            },
+            {
+              "etiket": "",
+              "tanim": "Tam güneş tutulması",
+              "misaller": [],
+              "deyim": "Küsûf-ı küllî"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "küsûf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güneş tutulması",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "اِنْكِسَاف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İNKİSAF",
+          "yazilis": "ﺍﻧﻜﺴﺎﻒ",
+          "tur": "i.",
+          "koken": "Ar. kesf > kusūf “güneş ve ay tutulmak”tan inkisāf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güneş tutulması. “ İnkisâf-ı tam .”",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Parlaklığını kaybetme, sönme",
+              "misaller": [
+                ["Ey subh-ı ezel cebîn-i sâfî / Envârının olmaz inkisâfı", "Mehmet Âkif"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "inkisaf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi ay ve gün tutulmak manâsınadır; yukâlu: إِنْكَسَفَ الشَّمْسُ أَوِ الْقَمَرُ إِذَا احْتَجَبَا",
+              "misaller": [
+                ["إِنْكَسَفَ الشَّمْسُ أَوِ الْقَمَرُ إِذَا احْتَجَبَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِنْكِسَافُ",
+          "okunus": "el-inkisâf",
+          "koken": "إِنْفِعَالٌ [infiâl] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

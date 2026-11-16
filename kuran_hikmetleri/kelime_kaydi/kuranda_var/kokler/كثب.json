@@ -21,10 +21,10 @@
       [10, "كَثَابَة", "kaṯāba", "kum tepesi", "kontrol", ""],
       [11, "كُثُوبَة", "kuṯūba", "kum tepesi", "kontrol", ""],
       [12, "كِثَابَة", "kiṯāba", "kum tepesi", "kontrol", ""],
-      [13, "كَثِيب", "kaṯīb", "kum yığını", "kuran", "Kur'ân"],
+      [13, "كَثِيب", "kaṯīb", "Kum yığınından olan tepeye denir", "lugat", "Kur'ân · Kamus"],
       [14, "كَثُوب", "kaṯūb", "kum tepesi", "kontrol", ""],
       [15, "كَثَبَان", "kaṯabān", "kum tepesi", "kontrol", ""],
-      [16, "كُثْبَان", "kuṯbān", "kum tepesi", "kontrol", ""],
+      [16, "كُثْبَان", "kuṯbān", "in cemidir, kum yığınları ve kumdan tepecikler demek olur", "lugat", "Vankulu"],
       [17, "كِثْبَان", "kiṯbān", "kum tepesi", "kontrol", ""],
       [18, "كَثْبَى", "kaṯbā", "kum tepesi", "kontrol", ""],
       [19, "كُثْبَى", "kuṯbā", "kum tepesi", "kontrol", ""],
@@ -355,7 +355,7 @@
       [258, "كِثْبَتَان", "kiṯbatān", "kum tepesi olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "كَثِيب", "kaṯīb", "kum yığını", "kuran", "Kur'ân"],
+      [259, "كَثِيب", "kaṯīb", "Kum yığınından olan tepeye denir", "lugat", "Kur'ân · Kamus"],
       [260, "كَثِيبَة", "kaṯība", "her daim kum tepesi olan, müennes", "kontrol", ""],
       [261, "كَثِيبَان", "kaṯībān", "her daim kum tepesi olan, iki", "kontrol", ""],
       [262, "كَثِيبَتَان", "kaṯībatān", "her daim kum tepesi olan, iki, müennes", "kontrol", ""],
@@ -479,7 +479,7 @@
       [378, "مِكْثِيبُون", "mikṯībūn", "kum tepesi olmaya düşkünler", "kontrol", ""],
       [379, "مِكْثِيبِين", "mikṯībīn", "kum tepesi olmaya düşkünler", "kontrol", ""],
       [380, "مِكْثِيبَات", "mikṯībāt", "kum tepesi olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "كَثِيب", "kaṯīb", "kum yığını", "kuran", "Kur'ân"],
+      [381, "كَثِيب", "kaṯīb", "Kum yığınından olan tepeye denir", "lugat", "Kur'ân · Kamus"],
       [382, "كَثِيبَة", "kaṯība", "çok kum tepesi olan, müennes", "kontrol", ""],
       [383, "كَثِيبَان", "kaṯībān", "çok kum tepesi olan, iki", "kontrol", ""],
       [384, "كَثِيبَتَان", "kaṯībatān", "çok kum tepesi olan, iki, müennes", "kontrol", ""],
@@ -546,7 +546,7 @@
       [441, "كَثَب", "kaṯab", "kum tepesi olma türünden şey", "kontrol", ""],
       [443, "كِثْب", "kiṯb", "kum tepesi olma türünden şey", "kontrol", ""],
       [445, "كُثْب", "kuṯb", "kum tepesi olma türünden şey", "kontrol", ""],
-      [447, "كَثِيب", "kaṯīb", "kum yığını", "kuran", "Kur'ân"],
+      [447, "كَثِيب", "kaṯīb", "Kum yığınından olan tepeye denir", "lugat", "Kur'ân · Kamus"],
       [449, "كِثَب", "kiṯab", "kum tepesi olma türünden şey", "kontrol", ""],
       [451, "كُثُب", "kuṯub", "kum tepesi olma türünden şey", "kontrol", ""],
       [453, "كَثَاب", "kaṯāb", "kum tepesi olma türünden şey", "kontrol", ""]
@@ -566,7 +566,14 @@
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَكْثَاب", "ʾakṯāb", "kum tepesi olmalar", "kontrol", ""],
-      [456, "أَكْثِبَة", "ʾakṯiba", "kum tepesi olmalar", "kontrol", ""],
+      [
+        456,
+        "أَكْثِبَة",
+        "ʾakṯiba",
+        "Kum yığınları, rüzgârların yığdığı kumlardan meydana gelen kum tepesi, kumul",
+        "lugat",
+        "Kubbealtı"
+      ],
       [457, "أَكَاثِب", "ʾakāṯib", "kum tepesi olmalar", "kontrol", ""],
       [458, "أَكَاثِيب", "ʾakāṯīb", "kum tepesi olmalar", "kontrol", ""],
       [459, "كُثُوب", "kuṯūb", "kum tepesi olmalar", "kontrol", ""],
@@ -867,7 +874,76 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كَثِيب": [
+        {
+          "eser": "Kamus",
+          "madde": "Kesib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kum yığınından olan tepeye denir; cem manâsındandır. Cemi أَكْثِبَةٌ [eksamp;ibet] gelir ki cem-i kılletidir ve كُثُبٌ [kusamp;ub] gelir zammeteynle ve كُثْبَانٌ [kusamp;bân] gelir kâfın zammıyla.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "كَثِيبٌ [Kesamp;îb] Yemen denizi sâhilinde bir mevzi ve Bahreyn kazâsında iki karye adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَثِيبُ",
+          "okunus": "el-kesamp;îb",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        }
+      ],
+      "كُثْبَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "kusban",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَثِيبٌ [kesamp;îb]in cemidir, kum yığınları ve kumdan tepecikler demek olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكُثْبَانُ",
+          "okunus": "el-kusamp;bân",
+          "koken": "kâfın zammıyla ve samp;ânın sükûnuyla"
+        }
+      ],
+      "أَكْثِبَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EKSİBE",
+          "yazilis": "ﺍﻛﺜﺒﻪ",
+          "tur": "i.",
+          "koken": "Ar. keѕіb “kum yığını”nın çoğul şekli ekѕibe",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kum yığınları, rüzgârların yığdığı kumlardan meydana gelen kum tepesi, kumul",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Med ve cezir sebebiyle sâhillere yığılan kum kümeleri",
+              "misaller": [],
+              "deyim": "Eksibe-i bahriyye"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -14,7 +14,7 @@
       [3, "لَحَن", "laḥan", "yanlışlık", "orta", ""],
       [4, "لِحَن", "liḥan", "yanlışlık", "orta", ""],
       [5, "لُحُن", "luḥun", "yanlışlık", "orta", ""],
-      [6, "لُحُون", "luḥūn", "yanlışlık", "orta", ""],
+      [6, "لُحُون", "luḥūn", "Cemi", "lugat", "Vankulu"],
       [7, "لِحَان", "liḥān", "yanlışlık", "orta", ""],
       [8, "لُحَان", "luḥān", "yanlışlık", "orta", ""],
       [9, "لَحَان", "laḥān", "yanlışlık", "orta", ""],
@@ -43,9 +43,9 @@
         29,
         "تَلْحِين",
         "talḥīn",
-        "çokça yanlış olma",
-        "orta",
-        "Vikisözlük: verbal noun of لَحَّنَ (laḥḥana) (form II)"
+        "Bilhassa Kur’an kırâatinde kelimeleri değiştirip yanlış okuma",
+        "lugat",
+        "Vikisözlük: verbal noun of لَحَّنَ (laḥḥana) (form II) · Kubbealtı"
       ],
       [30, "تَلْحِنَة", "talḥina", "çokça yanlış olma", "orta", ""],
       [31, "لِحِّان", "liḥḥān", "çokça yanlış olma", "orta", ""]
@@ -376,7 +376,14 @@
       [270, "لَحُونُون", "laḥūnūn", "her daim yanlış olanlar", "orta", ""],
       [271, "لَحُونِين", "laḥūnīn", "her daim yanlış olanlar", "orta", ""],
       [272, "لَحُونَات", "laḥūnāt", "her daim yanlış olanlar, müennes", "orta", ""],
-      [273, "لَحِن", "laḥin", "her daim yanlış olan", "orta", ""],
+      [
+        273,
+        "لَحِن",
+        "laḥin",
+        "Belli bir kurala göre oluşmuş güzel ve düzgün ses, âhenkli ses, nağme, ezgi,…",
+        "lugat",
+        "Kubbealtı"
+      ],
       [274, "لَحِنَة", "laḥina", "her daim yanlış olan, müennes", "orta", ""],
       [275, "لَحِنَان", "laḥinān", "her daim yanlış olan, iki", "orta", ""],
       [276, "لَحِنَتَان", "laḥinatān", "her daim yanlış olan, iki, müennes", "orta", ""],
@@ -533,7 +540,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "لَحَان", "laḥān", "yanlış olma", "orta", ""],
-      [422, "لُحُون", "luḥūn", "yanlış olma", "orta", ""],
+      [422, "لُحُون", "luḥūn", "Cemi", "lugat", "Vankulu"],
       [423, "لِحَان", "liḥān", "yanlış olma", "orta", ""],
       [424, "لُحْن", "luḥn", "yanlış olma", "orta", ""],
       [425, "لَحَانَة", "laḥāna", "yanlış olma", "orta", ""],
@@ -572,11 +579,11 @@
       [454, "لَحَانَة", "laḥāna", "yanlış olma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَلْحَان", "ʾalḥān", "yanlış olmalar", "orta", ""],
+      [455, "أَلْحَان", "ʾalḥān", "Şarkılar, melodiler", "lugat", "Luggat"],
       [456, "أَلْحِنَة", "ʾalḥina", "yanlış olmalar", "orta", ""],
       [457, "أَلَاحِن", "ʾalāḥin", "yanlış olmalar", "orta", ""],
       [458, "أَلَاحِين", "ʾalāḥīn", "yanlış olmalar", "orta", ""],
-      [459, "لُحُون", "luḥūn", "yanlış olmalar", "orta", ""],
+      [459, "لُحُون", "luḥūn", "Cemi", "lugat", "Vankulu"],
       [460, "لُحُن", "luḥun", "yanlış olmalar", "orta", ""],
       [461, "لِحَان", "liḥān", "yanlış olmalar", "orta", ""],
       [462, "لِحَن", "liḥan", "yanlış olmalar", "orta", ""],
@@ -1591,7 +1598,157 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لُحُون": [
+        {
+          "eser": "Vankulu",
+          "madde": "luhun",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللُّحُونُ",
+          "okunus": "el-luhûn",
+          "koken": "zammeteynle"
+        }
+      ],
+      "تَلْحِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TELHİN",
+          "yazilis": "ﺗﻠﺤﻴﻦ",
+          "tur": "i.",
+          "koken": "Ar. laḥn “yanlış okumak”tan telḥіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bilhassa Kur’an kırâatinde kelimeleri değiştirip yanlış okuma",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Nağme ile, ezgi ile okuma",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "telhin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Nagme ve ezgi ile icrâ-yı makâm ederek okumak manâsınadır; yukâlu: لَحَّنَ فِي قِرَاءَتِهِ إِذَا طَرَبَ فِيهَا Ve bir adamı hatâya nisbet eylemek manâsınadır ki hatâ etti demekten ibârettir; yukâlu: لَحَّنَهُ إِذَا خَطَّأَهُ",
+              "misaller": [
+                ["لَحَّنَ فِي قِرَاءَتِهِ إِذَا طَرَبَ فِيهَا", ""],
+                ["لَحَّنَهُ إِذَا خَطَّأَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّلْحِينُ",
+          "okunus": "et-telhîn",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "telhin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hatâya nisbet etmek, tahtie manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّلْحِينُ",
+          "okunus": "et-telhîn",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ],
+      "لَحِن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "LAHİN – LAHN",
+          "yazilis": "",
+          "tur": "",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Belli bir kurala göre oluşmuş güzel ve düzgün ses, âhenkli ses, nağme, ezgi, melodi",
+              "misaller": [
+                ["Lahn-ı Dâvûd’u andırır bu sedâ", "Muallim Nâci"],
+                ["Ya Schumann’dan bir neşîde yâhut Mendelsohn’dan bir hazin lahin", "Hâlit Z. Uşaklıgil"],
+                ["Hep eski âlem eski edeb meşrebimcedir / Tanbûr-ı Rûm lahn-ı Arab meşrebimcedir", "Yahyâ Kemal"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bilhassa Kur’an tilâvetinde anlamı bozacak derecede nağmeli okuyuş",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir yere veya bir kimseye mahsus kötü ve yanlış telaffuz",
+              "misaller": [
+                ["olurmuş", "Fâik Reşat"]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَلْحَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ELHAN",
+          "yazilis": "ﺍﻟﺤﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. laḥn “nağme”nin çoğul şekli elḥān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Nağmeler, ezgiler, melodiler",
+              "misaller": [
+                ["Tek tesellî mutribin elhân-ı nâyından gelir", "Yahyâ Kemal"],
+                ["Elhan duyulmadıkça belâgat giran gelir / Lâf ü güzâftan mütehassıl kesel gibi", "Yahyâ Kemal"],
+                ["Birdenbire yıldızlar uçup oldu girîzan / Mebhut kadın, sustu pınarlardaki elhan", "Orhan S. Orhon"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "elhân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Şarkılar, melodiler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -15,7 +15,7 @@
       [4, "دِهَق", "dihaq", "bastırma", "orta", ""],
       [5, "دُهُق", "duhuq", "bastırma", "orta", ""],
       [6, "دُهُوق", "duhūq", "bastırma", "orta", ""],
-      [7, "دِهَاق", "dihāq", "bastırma", "orta", ""],
+      [7, "دِهَاق", "dihāq", "Dolu bardağa, alâ-kavlin peyderpey sunulan bardağa denir", "lugat", "Kamus"],
       [8, "دُهَاق", "duhāq", "bastırma", "orta", ""],
       [9, "دَهَاق", "dahāq", "bastırma", "orta", ""],
       [10, "دَهَاقَة", "dahāqa", "bastırma", "orta", ""],
@@ -25,7 +25,7 @@
       [14, "دَهُوق", "dahūq", "bastırma", "orta", ""],
       [15, "دَهَقَان", "dahaqān", "bastırma", "orta", ""],
       [16, "دُهْقَان", "duhqān", "bastırma", "orta", ""],
-      [17, "دِهْقَان", "dihqān", "bastırma", "orta", ""],
+      [17, "دِهْقَان", "dihqān", "Çiftçi", "lugat", "Luggat"],
       [18, "دَهْقَى", "dahqā", "bastırma", "orta", ""],
       [19, "دُهْقَى", "duhqā", "bastırma", "orta", ""],
       [20, "دِهْقَى", "dihqā", "bastırma", "orta", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُدَاهَقَة", "mudāhaqa", "biriyle karşılıklı bastırma", "orta", ""],
-      [50, "دِهَاق", "dihāq", "biriyle karşılıklı bastırma", "orta", ""]
+      [50, "دِهَاق", "dihāq", "Dolu bardağa, alâ-kavlin peyderpey sunulan bardağa denir", "lugat", "Kamus"]
     ],
     "ism-i merre · bâb III": [
       [51, "دِهَاقَة", "dihāqa", "bir kere biriyle karşılıklı bastırma", "orta", ""]
@@ -423,7 +423,7 @@
       [324, "دَهَاقَان", "dahāqān", "her daim bastıran, iki", "orta", ""],
       [325, "دَهَاقَتَان", "dahāqatān", "her daim bastıran, iki, müennes", "orta", ""],
       [326, "دَهَاقُون", "dahāqūn", "her daim bastıranlar", "orta", ""],
-      [327, "دَهَاقِين", "dahāqīn", "her daim bastıranlar", "orta", ""],
+      [327, "دَهَاقِين", "dahāqīn", "Çiftçiler, köylüler", "lugat", "Kubbealtı"],
       [328, "دَهَاقَات", "dahāqāt", "her daim bastıranlar, müennes", "orta", ""]
     ],
     "mübalağa": [
@@ -527,7 +527,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "دَهَاق", "dahāq", "bastırma", "orta", ""],
       [422, "دُهُوق", "duhūq", "bastırma", "orta", ""],
-      [423, "دِهَاق", "dihāq", "bastırma", "orta", ""],
+      [423, "دِهَاق", "dihāq", "Dolu bardağa, alâ-kavlin peyderpey sunulan bardağa denir", "lugat", "Kamus"],
       [424, "دُهْق", "duhq", "bastırma", "orta", ""],
       [425, "دَهَاقَة", "dahāqa", "bastırma", "orta", ""],
       [426, "دِهَاقَة", "dihāqa", "bastırma", "orta", ""],
@@ -571,7 +571,7 @@
       [458, "أَدَاهِيق", "ʾadāhīq", "bastırmalar", "orta", ""],
       [459, "دُهُوق", "duhūq", "bastırmalar", "orta", ""],
       [460, "دُهُق", "duhuq", "bastırmalar", "orta", ""],
-      [461, "دِهَاق", "dihāq", "bastırmalar", "orta", ""],
+      [461, "دِهَاق", "dihāq", "Dolu bardağa, alâ-kavlin peyderpey sunulan bardağa denir", "lugat", "Kamus"],
       [462, "دِهَق", "dihaq", "bastırmalar", "orta", ""],
       [463, "دِهَقَة", "dihaqa", "bastırmalar", "orta", ""],
       [464, "دُهَق", "duhaq", "bastırmalar", "orta", ""],
@@ -774,6 +774,167 @@
     ],
     "renk_sozluk": {
       "دهاقا": "dolu"
+    },
+    "mustak_lugat": {
+      "دِهَاق": [
+        {
+          "eser": "Kamus",
+          "madde": "dihak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dolu bardağa, alâ-kavlin peyderpey sunulan bardağa denir; yukâlu: كَأْسٌ دِهَاقٌ أَيْ مُمْتَلِئَةٌ أَوْ مُتَتَابِعَةٌ Ve çok suya denir; yukâlu: مَاءٌ دِهَاقٌ أَيْ كَثِيرٌ",
+              "misaller": [
+                ["كَأْسٌ دِهَاقٌ أَيْ مُمْتَلِئَةٌ أَوْ مُتَتَابِعَةٌ", ""],
+                ["مَاءٌ دِهَاقٌ أَيْ كَثِيرٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدِّهَاقُ",
+          "okunus": "ed-dihâk",
+          "koken": "كِتَابٌ [kitâb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "dihak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dolu kâse; yukâlu: كَأْسٌ دِهَاقٌ أَيْ مُمْتَلِئَةٌ",
+              "misaller": [
+                ["كَأْسٌ دِهَاقٌ أَيْ مُمْتَلِئَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدِّهَاقُ",
+          "okunus": "ed-dihâk",
+          "koken": "dâlın kesriyle"
+        }
+      ],
+      "دِهْقَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "DİHKAN",
+          "yazilis": "ﺩﻫﻘﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. dihḳān dihgān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çiftçi, köylü",
+              "misaller": [
+                ["Her gün ne tohm eker ki bu dihkān-ı dehr / Yüz karasını hâsıl eder her gece cihan", "Mesîhî"],
+                [
+                  "Hasan İbn-i Zeyyâd dihkanlarından birine suâl ve sizin i’tikâdınızca mürüvvet nedir deyü celb-i makāl edildikte, bizim yanımızda mürüvvet dört hasletten ibârettir ki biri…",
+                  "Âlî Mustafa Efendi"
+                ],
+                ["Tâbiyiz şimdi biz o hâkāna / Şâh vermekte cizye dihkāna", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Köy ağası, köy muhtarı. ● Dihkan-beçe ( ﺩﻫﻘﺎﻥ ﺑﭽﻪ ) birl. i. (Fars. beçe “çocuk” ile) Çiftçi çocuğu",
+              "misaller": [
+                ["Dihkan-beçenin hüsnüne dil verme sakın kim / Meşhûrdur ol destte bâzın yeri yoktur", "Nâbî"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "dihkan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dihhân muarrebidir; mevki-i zikri bâb-ı nûndur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدِّهْقَانُ",
+          "okunus": "ed-dihkân",
+          "koken": "dâlın kesri ve zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "dihkan",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Köy sipâhîsi olan kimse.” Dih-hân”dan muarrebdir,eger âhirinde olan nûn harf-i aslî itibâr olunsa, nitekim تَدَهْقَنَ الرَّجُلُ derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "لَهُ دَهْقَنَةُ مَوْضِعِ كَذَا derler, onu munsarıf kılarsın zîrâ bu takdîrce فِعْلَالٌ [filâl] vezni üzere olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "eger دَهْقٌ [dehk]ten müştakk kılınsa lâ-yansarıf kılarsın, zîrâ bu defa فِعْلَانُ [filân] vezni üzere olup elif ve nûn mezîdetân olur.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "دَهْقٌ [dehk] ufatmaktır, كَسْرٌ [kesr] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدِّهْقَانُ",
+          "okunus": "ed-dihkân",
+          "koken": "dâlın kesri ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "dihkân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çiftçi. Köy ağası",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "دَهَاقِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "DEHÂKİN",
+          "yazilis": "ﺩﻫﺎﻗﻴﻦ",
+          "tur": "i.",
+          "koken": "Ar. dihḳān “çiftçi”nin çoğul şekli dehāḳіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çiftçiler, köylüler",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Köy muhtarları, köy ağaları",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
     }
   },
   "kuran_gecisleri": 1,

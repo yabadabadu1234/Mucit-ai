@@ -53,7 +53,7 @@
       [28, "مَشْفِقَة", "maşfiqa", "esirgeme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَشْفِيق", "taşfīq", "çokça esirgeme", "orta", ""],
+      [29, "تَشْفِيق", "taşfīq", "Bu dahi azaltmak", "lugat", "Kamus"],
       [30, "تَشْفِقَة", "taşfiqa", "çokça esirgeme", "orta", ""],
       [31, "شِفِّاق", "şiffāq", "çokça esirgeme", "orta", ""]
     ],
@@ -111,13 +111,13 @@
       [66, "مُشَافَق", "muşāfaq", "biriyle karşılıklı esirgeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِشْفَاق", "ʾişfāq", "esirgetme", "orta", ""]
+      [67, "إِشْفَاق", "ʾişfāq", "Şefkat etmek", "lugat", "Vankulu"]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِشْفَاقَة", "ʾişfāqa", "bir kere esirgetme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُشْفِق", "muşfiq", "korkan, endişeli", "kuran", "Kur'ân"],
+      [69, "مُشْفِق", "muşfiq", "Şefkatli", "lugat", "Kur'ân · Luggat"],
       [70, "مُشْفِقَة", "muşfiqa", "esirgeden, müennes", "orta", ""],
       [71, "مُشْفِقَان", "muşfiqān", "esirgeden, iki", "orta", ""],
       [72, "مُشْفِقَتَان", "muşfiqatān", "esirgeden, iki, müennes", "orta", ""],
@@ -2108,7 +2108,97 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "تَشْفِيق": [
+        {
+          "eser": "Kamus",
+          "madde": "teşfik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi azaltmak manâsınadır; yukâlu: شَفَّقَهُ إِذَا قَلَّلَهُ Ve bez ve kumaş makûlesini fenâ ve kemter nesc eylemek manâsınadır ki murâd tefesiz yufka nesc eylemektir; yukâlu: شَفَّقَ الثَّوْبَ إِذَا نَسَجَهُ رَدِيئًا",
+              "misaller": [
+                ["شَفَّقَهُ إِذَا قَلَّلَهُ", ""],
+                ["شَفَّقَ الثَّوْبَ إِذَا نَسَجَهُ رَدِيئًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّشْفِيقُ",
+          "okunus": "et-teşfîk",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ],
+      "إِشْفَاق": [
+        {
+          "eser": "Vankulu",
+          "madde": "işfak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şefkat etmek; tekûlu: أَشْفَقْتُ مِنْهُ عَلَيْهِ Ve إِشْفَاقٌ [işfâk] Hazer etmek manâsına da gelir; tekûlu: أَشْفَقْتُ مِنْهُ Hâlâ ki zikr olunan manâlara delâlet eden إِشْفَاقٌ [işfâk]ın sülâsîsi merhamet manâsından gayrıya delâlet etmez, meselâ شَفِقْتُ demezler حَذِرْتُ manâsına. İbn Dureyd eyitti: شَفِقْتُ ve أَشْفَقْتُ derler bir manâya.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ehl-i lügat buna inkâr edip شَفِقْتُ gelmesin câiz görmediler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِشْفَاقُ",
+          "okunus": "el-işfâk",
+          "koken": "hemzenin kesriyle"
+        }
+      ],
+      "مُشْفِق": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MÜŞFİK",
+          "yazilis": "ﻣﺸﻔﻖ",
+          "tur": "sıf.",
+          "koken": "Ar. işfāḳ “şefkat göstermek”ten muşfiḳ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Şefkat gösteren, şefkatli",
+              "misaller": [
+                ["Bulmadım bâdiye-i gamda refîk-i müşfik", "Muallim Nâci"],
+                [
+                  "Bu doğuştan zarif, mütevâzı, müşfik ve ganî çocuk, sanki semâlardan inmiş bir gök taşı gibi bu ananın, bu babanın, bu dedenin, hatta bu kürenin malı değildi",
+                  "Sâmiha Ayverdi"
+                ],
+                ["● Müşfika", "ﻣﺸﻔﻘﻪ"],
+                [
+                  "sıf. Müşfik kelimesinin kadını ifâde eden, kadın ismi olarak kullanılan veya tamlamalarda ortaya çıkan aynı mânâdaki müennes şekli: Sürur ile vâlide-i müşfikasının âgūş-ı mahabbetine atıldı",
+                  "Nâmık Kemal"
+                ],
+                ["● Müşfikāne", "ﻣﺸﻔﻘﺎﻧﻪ"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "müşfik",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Şefkatli",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 11,
   "kuranda_var": true,

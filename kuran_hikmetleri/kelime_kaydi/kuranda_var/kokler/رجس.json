@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "رَجْس", "racs", "pislik", "orta", ""],
-      [1, "رِجْس", "rics", "pislik", "kuran", "Kur'ân"],
+      [1, "رِجْس", "rics", "Maddî kir, pislik, murdarlık", "lugat", "Kur'ân · Kubbealtı"],
       [2, "رُجْس", "rucs", "pislik", "orta", ""],
       [3, "رَجَس", "racas", "pislik", "orta", ""],
       [4, "رِجَس", "ricas", "pislik", "orta", ""],
@@ -18,7 +18,7 @@
       [7, "رِجَاس", "ricās", "pislik", "orta", ""],
       [8, "رُجَاس", "rucās", "pislik", "orta", ""],
       [9, "رَجَاس", "racās", "pislik", "orta", ""],
-      [10, "رَجَاسَة", "racāsa", "pislik", "orta", ""],
+      [10, "رَجَاسَة", "racāsa", "Yaramaz ve çirkîn iş işlemek", "lugat", "Kamus"],
       [11, "رُجُوسَة", "rucūsa", "pislik", "orta", ""],
       [12, "رِجَاسَة", "ricāsa", "pislik", "orta", ""],
       [13, "رَجِيس", "racīs", "pislik", "orta", ""],
@@ -419,7 +419,7 @@
       [320, "رُجَاسِين", "rucāsīn", "her daim pis olanlar", "orta", ""],
       [321, "رُجَاسَات", "rucāsāt", "her daim pis olanlar, müennes", "orta", ""],
       [322, "رَجَاس", "racās", "her daim pis olan", "orta", ""],
-      [323, "رَجَاسَة", "racāsa", "her daim pis olan, müennes", "orta", ""],
+      [323, "رَجَاسَة", "racāsa", "Yaramaz ve çirkîn iş işlemek", "lugat", "Kamus"],
       [324, "رَجَاسَان", "racāsān", "her daim pis olan, iki", "orta", ""],
       [325, "رَجَاسَتَان", "racāsatān", "her daim pis olan, iki, müennes", "orta", ""],
       [326, "رَجَاسُون", "racāsūn", "her daim pis olanlar", "orta", ""],
@@ -529,11 +529,11 @@
       [422, "رُجُوس", "rucūs", "pis olma", "orta", ""],
       [423, "رِجَاس", "ricās", "pis olma", "orta", ""],
       [424, "رُجْس", "rucs", "pis olma", "orta", ""],
-      [425, "رَجَاسَة", "racāsa", "pis olma", "orta", ""],
+      [425, "رَجَاسَة", "racāsa", "Yaramaz ve çirkîn iş işlemek", "lugat", "Kamus"],
       [426, "رِجَاسَة", "ricāsa", "pis olma", "orta", ""],
       [427, "رُجُوسَة", "rucūsa", "pis olma", "orta", ""],
       [428, "رَجْس", "racs", "pis olma", "orta", ""],
-      [429, "رِجْس", "rics", "pislik", "kuran", "Kur'ân"]
+      [429, "رِجْس", "rics", "Maddî kir, pislik, murdarlık", "lugat", "Kur'ân · Kubbealtı"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "رَاجُوس", "rācūs", "pis olma türünden şey", "orta", ""],
@@ -544,7 +544,7 @@
       [437, "رَيْجَس", "raycas", "pis olma türünden şey", "orta", ""],
       [439, "رَجْس", "racs", "pis olma türünden şey", "orta", ""],
       [441, "رَجَس", "racas", "pis olma türünden şey", "orta", ""],
-      [443, "رِجْس", "rics", "pislik", "kuran", "Kur'ân"],
+      [443, "رِجْس", "rics", "Maddî kir, pislik, murdarlık", "lugat", "Kur'ân · Kubbealtı"],
       [445, "رُجْس", "rucs", "pis olma türünden şey", "orta", ""],
       [447, "رَجِيس", "racīs", "pis olma türünden şey", "orta", ""],
       [449, "رِجَس", "ricas", "pis olma türünden şey", "orta", ""],
@@ -562,7 +562,7 @@
       [448, "رَجِيسَة", "racīsa", "pis olma türünden bir tane", "orta", ""],
       [450, "رِجَسَة", "ricasa", "pis olma türünden bir tane", "orta", ""],
       [452, "رُجُسَة", "rucusa", "pis olma türünden bir tane", "orta", ""],
-      [454, "رَجَاسَة", "racāsa", "pis olma türünden bir tane", "orta", ""]
+      [454, "رَجَاسَة", "racāsa", "Yaramaz ve çirkîn iş işlemek", "lugat", "Kamus"]
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَرْجَاس", "ʾarcās", "pis olmalar", "orta", ""],
@@ -1698,7 +1698,138 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رِجْس": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "RİCS",
+          "yazilis": "ﺭﺟﺲ",
+          "tur": "i.",
+          "koken": "Ar. rics",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Maddî kir, pislik, murdarlık",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Mânevî kir, kötü iş, dînin yasakladığı şey, günah",
+              "misaller": [
+                ["Cevher-i zâtı olup rics-i alâyıktan pâk / Mahrem-i bâr-geh-i rahmet-i gufrân oldu", "Fuzûlî"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "rics",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Necis ve murdâra denir, قَذَرٌ [kazer] manâsına; fethateynle ve rânın fethi ve cîmin kesriyle lügattir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "günâh ve mesem manâsınadır; yukâlu: هُوَ رِجْسٌ يَتَلَطَّخُ بِكَ أَيْ قَذَرٌ وَفِيهِ رِجْسٌ أَيْ مَأْثَمٌ Ve mutlakan murdâr ve müstehcen ve mekrûh kâr ve amele denir.",
+              "misaller": [
+                ["هُوَ رِجْسٌ يَتَلَطَّخُ بِكَ أَيْ قَذَرٌ وَفِيهِ رِجْسٌ أَيْ مَأْثَمٌ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "azâbı müeddî olan işe denir; yukâlu: عَمَلُهُ رِجْسٌ أَيْ مُؤَدٍّ إِلَى الْعَذَابِ Ve şekk ve gümân manâsınadır.",
+              "misaller": [
+                ["عَمَلُهُ رِجْسٌ أَيْ مُؤَدٍّ إِلَى الْعَذَابِ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "işkence ve ikâb manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "hışm ve gazab manâsınadır; yukâlu: فِيهِ رِجْسٌ أَيْ شَكٌّ وَهُوَ عَلَى الرِّجْسِ أَيِ الْعِقَابِ وَكَذَا الْغَضَبِ",
+              "misaller": [
+                ["فِيهِ رِجْسٌ أَيْ شَكٌّ وَهُوَ عَلَى الرِّجْسِ أَيِ الْعِقَابِ وَكَذَا الْغَضَبِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّجْسُ",
+          "okunus": "er-rics",
+          "koken": "rânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "rics",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Necâset, قَذِرٌ [kazir] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Ferrâ eyitti: رِجْسٌ [rics] Bârî taâlânın ﴿وَيَجْعَلُ الرِّجْسَ عَلَى الَّذِينَ لَا يَعْقِلُونَ﴾ (يونس 100) buyurduğu kavl-i şerîfinde ikâb ve gazab manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bu رِجْزٌ [ricz]e müşâbihtir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "şöyle zann olunur ki bunlar lügatlar olalar, sîn zâya tebdîl olunmuş ola, أَسَدٌ [esed]e أَزَدٌ [ezed] dedikleri gibi, arslan manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّجْسُ",
+          "okunus": "er-rics",
+          "koken": "rânın kesri ve cîmin sükûnuyla"
+        }
+      ],
+      "رَجَاسَة": [
+        {
+          "eser": "Kamus",
+          "madde": "er-recâset",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yaramaz ve çirkîn iş işlemek manâsınadır; yukâlu: رَجِسَ الرَّجُلُ وَرَجُسَ رَجَاسَةً مِنَ الْبَابِ الرَّابِعِ وَالْخَامِسِ إِذَا عَمِلَ عَمَلاً قَبِيحًا",
+              "misaller": [
+                [
+                  "رَجِسَ الرَّجُلُ وَرَجُسَ رَجَاسَةً مِنَ الْبَابِ الرَّابِعِ وَالْخَامِسِ إِذَا عَمِلَ عَمَلاً قَبِيحًا",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّجَاسَةُ",
+          "okunus": "er-recâset",
+          "koken": "نَجَاسَةٌ [necâset] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 10,
   "kuranda_var": true,

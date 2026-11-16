@@ -290,7 +290,7 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "فَائِد", "fāʾid", "kalp olan", "kontrol", ""],
-      [214, "فَائِدَة", "fāʾida", "kalp olan, müennes", "kontrol", ""],
+      [214, "فَائِدَة", "fāʾida", "Yarar, kazanç, fayda", "lugat", "Luggat"],
       [215, "فَائِدَان", "fāʾidān", "kalp olan, iki", "kontrol", ""],
       [216, "فَائِدَتَان", "fāʾidatān", "kalp olan, iki, müennes", "kontrol", ""],
       [217, "فَائِدُون", "fāʾidūn", "kalp olanlar", "kontrol", ""],
@@ -566,7 +566,7 @@
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَفْآد", "ʾafʾād", "kalp olmalar", "kontrol", ""],
-      [456, "أَفْئِدَة", "ʾafʾida", "kalp olmalar", "kontrol", ""],
+      [456, "أَفْئِدَة", "ʾafʾida", "Kalpler, yürekler", "lugat", "Kubbealtı"],
       [457, "أَفَائِد", "ʾafāʾid", "kalp olmalar", "kontrol", ""],
       [458, "أَفَائِيد", "ʾafāʾīd", "kalp olmalar", "kontrol", ""],
       [459, "فُؤُود", "fuʾūd", "kalp olmalar", "kontrol", ""],
@@ -582,7 +582,7 @@
       [469, "فَأَد", "faʾad", "kalp olmalar", "kontrol", ""],
       [470, "مَفَائِد", "mafāʾid", "kalp olmalar", "kontrol", ""],
       [471, "مَفَائِيد", "mafāʾīd", "kalp olmalar", "kontrol", ""],
-      [472, "فَوَائِد", "fawāʾid", "kalp olmalar", "kontrol", ""],
+      [472, "فَوَائِد", "fawāʾid", "Yararlar, faydalar, kazançlar", "lugat", "Luggat"],
       [473, "أَفْؤُد", "ʾafʾud", "kalp olmalar", "kontrol", ""],
       [474, "فُؤَّد", "fuʾʾad", "kalp olmalar", "kontrol", ""],
       [475, "فَآئِد", "faʾāʾid", "kalp olmalar", "kontrol", ""],
@@ -1014,7 +1014,213 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَائِدَة": [
+        {
+          "eser": "Luggat",
+          "madde": "fâide",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yarar, kazanç, fayda",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "faide",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Fayda",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "FAYDA – FÂİDE",
+          "yazilis": "ﻓﺎﺋﺪﻩ",
+          "tur": "i.",
+          "koken": "Ar. fā’ide > fāyide > fayde > fayda",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İşe yarama, işe yaramanın meydana getirdiği iyi durum, olumlu sonuç, yarar, nefi",
+              "misaller": [
+                ["Zordan hiçbir fayda beklenmez", "Ahmed Midhat Efendi"],
+                ["Ekmek, bal, yoğurt, çiğ kıyma, falan filân yutturmuşlar, faydası yok", "Refik H. Karay"],
+                ["Size küçük bir faydam dokunsun istedim", "Reşat N. Güntekin"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kâr, menfaat",
+              "misaller": [
+                ["Bir fâide var mı meskenetten", "Muallim Nâci"],
+                ["Kederimi, sırrımı sana söylemekte ne fâide var", "Sâmipaşazâde Sezâî"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Eski kitaplarda sırası gelmişken hatırlatılan, faydalanılacak mâlûmat ve fıkralara verilen isim [O kısma başlık olarak yazılırdı. Bu anlamda yalnız Fâide şekli kullanılmıştır]",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "İyi tesir etmek, yaramak, yarar sağlamak",
+              "misaller": [
+                ["Aspirin aldım, fayda etmedi.", ""],
+                ["● Fâide-cû", "ﻓﺎﺋﺪﻩ ﺟﻮ"],
+                ["birl. sıf", "Fars. cū “arayan” ile"],
+                ["Fayda arayan. ● Fâide-mend", "ﻓﺎﺋﺪﻩ ﻣﻨﺪ"],
+                ["tür. sıf", "Fars. -mend ekiyle"],
+                ["Faydalı, yararlı, kârlı. ● Fâide-yab", "ﻓﺎﺋﺪﻩ ﻳﺎﺏ"],
+                ["birl. sıf", "Fars. yāb “bulan” ile"]
+              ],
+              "deyim": "Fayda etmek (vermek) – Faydası olmak"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-fâidet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adamın ilmden yâhûd mâldan istifâde yanî kesb ve tahsîl eylediği nesneye denir. Cemi فَوَائِدُ [fevâid] gelir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu fil-asl ism-i fâildir ve bu nef manâsına olan فَيْدٌ [feyd]den mehûzdur; yukâlu: حَصَلْتُ مِنْهُ فَائِدَةً وَهِيَ مَا اسْتَفَدْتَ مِنْ عِلْمٍ أَوْ مَالٍ",
+              "misaller": [
+                ["حَصَلْتُ مِنْهُ فَائِدَةً وَهِيَ مَا اسْتَفَدْتَ مِنْ عِلْمٍ أَوْ مَالٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَائِدَةُ",
+          "okunus": "el-fâidet",
+          "koken": "زَائِدَةٌ [zâidet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-fâidet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Amelden ve mâldan kesb ettiğin nesne; tekûlu minhu: فَادَتْ لَهُ فَائِدَةٌ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَائِدَةُ",
+          "okunus": "el-fâidet",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fâidebahş",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yararlı, faydalı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَفْئِدَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EF’İDE",
+          "yazilis": "ﺍﻓﺌﺪﻩ",
+          "tur": "i.",
+          "koken": "Ar. fu’ād ’ın çoğul şekli ef’ide",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kalpler, yürekler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "efidet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "فُؤَادٌ [fuâd]ın cemi, gönüller manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْئِدَةُ",
+          "okunus": "el-efidet",
+          "koken": ""
+        }
+      ],
+      "فَوَائِد": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FEVÂİD",
+          "yazilis": "ﻓﻮﺍﺋﺪ",
+          "tur": "i.",
+          "koken": "Ar. fā’ide “fayda”nın çoğul şekli fevā’id",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Faydalar, menfaatler, kârlar",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Eski kitaplarda sırası gelmişken verilen faydalı bilgiler",
+              "misaller": [
+                ["Eserin sonuna bir de fevâid-i müteferrikayı hâvî bir hâtime konmuştur", "Orhan Ş. Gökyay"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fevâid",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yararlar, faydalar, kazançlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 16,
   "kuranda_var": true,

@@ -376,7 +376,14 @@
       [277, "لَدِنُون", "ladinūn", "her daim yanında olanlar", "kontrol", ""],
       [278, "لَدِنِين", "ladinīn", "her daim yanında olanlar", "kontrol", ""],
       [279, "لَدِنَات", "ladināt", "her daim yanında olanlar, müennes", "kontrol", ""],
-      [280, "لَدُن", "ladun", "katından", "kuran", "Kur'ân"],
+      [
+        280,
+        "لَدُن",
+        "ladun",
+        "[Kelime aşağıdaki anlamı Türkçe’de kazanmıştır, ek aldığı zaman bir “n”…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [281, "لَدُنَة", "laduna", "her daim yanında olan, müennes", "kontrol", ""],
       [282, "لَدُنَان", "ladunān", "her daim yanında olan, iki", "kontrol", ""],
       [283, "لَدُنَتَان", "ladunatān", "her daim yanında olan, iki, müennes", "kontrol", ""],
@@ -944,7 +951,40 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لَدُن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "LEDÜN",
+          "yazilis": "ﻟﺪﻥ",
+          "tur": "i.",
+          "koken": "Ar. ledun “yanında, nezdinde”",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "[Kelime aşağıdaki anlamı Türkçe’de kazanmıştır, ek aldığı zaman bir “n” ilâvesiyle ledünn şekline dönüşür] Allah katı, Tanrı huzûru",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "İlâhî sırlara âit ilim; sâdece Cenâb-ı Hakk’a mâlûm olan, ancak dilediği peygamber ve velîlerine öğrettiği ilâhî sırlara vukuf ilmi, gayb ilmi, ilm-i bâtın, ilm-i ledün",
+              "misaller": [
+                [
+                  "İşte sözsüz, sessiz olarak öğrenilen o Allah ilmi, o bâtın bilgisi, yâhut Hakk’ın sırları ve keşifleri ilmi denen ledün ilmi, Hz. Mûsâ’nın Mecma-ı Bahreyn’de Şuayib",
+                  "a.s."
+                ],
+                ["’dan ve Hz. Hızır’dan bulduğu ilimdir", "Ken’an Rifâî"]
+              ],
+              "deyim": "Ledün ilmi"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 18,
   "kuranda_var": true,

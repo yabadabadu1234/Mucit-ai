@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "لَيْل", "layl", "gece", "kuran", "Kur'ân"],
+      [0, "لَيْل", "layl", "Gece", "lugat", "Kur'ân · Luggat"],
       [888, "لِيل", "līl", "geceyi geçirme", "orta", ""],
       [889, "لُول", "lūl", "geceyi geçirme", "orta", ""],
       [517, "لَال", "lāl", "geceyi geçirme", "orta", ""],
@@ -26,7 +26,7 @@
       [15, "لَيَلَان", "layalān", "geceyi geçirme", "orta", ""],
       [16, "لُيْلَان", "luylān", "geceyi geçirme", "orta", ""],
       [17, "لِيْلَان", "liylān", "geceyi geçirme", "orta", ""],
-      [18, "لَيْلَى", "laylā", "geceyi geçirme", "orta", ""],
+      [18, "لَيْلَى", "laylā", "Bir avretin ismidir", "lugat", "Vankulu"],
       [19, "لُيْلَى", "luylā", "geceyi geçirme", "orta", ""],
       [20, "لِيْلَى", "liylā", "geceyi geçirme", "orta", ""],
       [21, "لَيَلَة", "layala", "geceyi geçirme", "orta", ""],
@@ -362,7 +362,7 @@
       [724, "مَلَالَان", "malālān", "geceyi geçirme, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "لَيْلَة", "layla", "gece", "kuran", "Kur'ân"],
+      [255, "لَيْلَة", "layla", "Gece", "lugat", "Kur'ân · Luggat"],
       [256, "لَيْلَتَان", "laylatān", "bir kere geceyi geçirme, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -405,8 +405,8 @@
       [884, "لَالُون", "lālūn", "her daim geceyi geçirenler", "orta", ""],
       [885, "لَالِين", "lālīn", "her daim geceyi geçirenler", "orta", ""],
       [755, "لَالَات", "lālāt", "her daim geceyi geçirenler, müennes", "orta", ""],
-      [294, "لَيْل", "layl", "gece", "kuran", "Kur'ân"],
-      [295, "لَيْلَة", "layla", "gece", "kuran", "Kur'ân"],
+      [294, "لَيْل", "layl", "Gece", "lugat", "Kur'ân · Luggat"],
+      [295, "لَيْلَة", "layla", "Gece", "lugat", "Kur'ân · Luggat"],
       [296, "لَيْلَان", "laylān", "her daim geceyi geçiren, iki", "orta", ""],
       [297, "لَيْلَتَان", "laylatān", "her daim geceyi geçiren, iki, müennes", "orta", ""],
       [298, "لَيْلُون", "laylūn", "her daim geceyi geçirenler", "orta", ""],
@@ -554,7 +554,7 @@
       [425, "لَيَالَة", "layāla", "geceyi geçirme", "orta", ""],
       [837, "لِيَالَة", "liyāla", "geceyi geçirme", "orta", ""],
       [427, "لُيُولَة", "luyūla", "geceyi geçirme", "orta", ""],
-      [428, "لَيْل", "layl", "gece", "kuran", "Kur'ân"],
+      [428, "لَيْل", "layl", "Gece", "lugat", "Kur'ân · Luggat"],
       [919, "لِيل", "līl", "geceyi geçirme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -564,7 +564,7 @@
       [434, "أُلْيُولَة", "ʾulyūla", "geceyi geçirme türünden şey", "orta", ""],
       [435, "لَوْيَل", "lawyal", "geceyi geçirme türünden şey", "orta", ""],
       [437, "لَيْيَل", "layyal", "geceyi geçirme türünden şey", "orta", ""],
-      [439, "لَيْل", "layl", "gece", "kuran", "Kur'ân"],
+      [439, "لَيْل", "layl", "Gece", "lugat", "Kur'ân · Luggat"],
       [840, "لَال", "lāl", "geceyi geçirme türünden şey", "orta", ""],
       [921, "لِيل", "līl", "geceyi geçirme türünden şey", "orta", ""],
       [923, "لُول", "lūl", "geceyi geçirme türünden şey", "orta", ""],
@@ -577,7 +577,7 @@
       [431, "لَايُولَة", "lāyūla", "geceyi geçirme türünden bir tane", "orta", ""],
       [436, "لَوْيَلَة", "lawyala", "geceyi geçirme türünden bir tane", "orta", ""],
       [438, "لَيْيَلَة", "layyala", "geceyi geçirme türünden bir tane", "orta", ""],
-      [440, "لَيْلَة", "layla", "gece", "kuran", "Kur'ân"],
+      [440, "لَيْلَة", "layla", "Gece", "lugat", "Kur'ân · Luggat"],
       [920, "لَالَة", "lāla", "geceyi geçirme türünden bir tane", "orta", ""],
       [922, "لِيلَة", "līla", "geceyi geçirme türünden bir tane", "orta", ""],
       [924, "لُولَة", "lūla", "geceyi geçirme türünden bir tane", "orta", ""],
@@ -1130,7 +1130,365 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لَيْل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "LEYL",
+          "yazilis": "ﻟﻴﻞ",
+          "tur": "i.",
+          "koken": "Ar. leyl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece",
+              "misaller": [
+                [" Leyl ü nehar: Gece ve gündüz.", ""],
+                ["Olma nevrûzda rakîbe karîb / Bir olur ben garîbe leyl ü nehâr", "Zâtî"],
+                ["Her leylin olur âhiri bir fecr-i ziyâdâr", "Abdülaziz Mecdi Efendi’den"],
+                [
+                  "Olur çeşm-i gazâlân leyl-i bî-mehtâba âvîze / Verir bir serv-i sîminden nişan serv-i hırâmanlar",
+                  "Fâruk N. Çamlıbel"
+                ],
+                ["● Leylen", "ﻟﻴﻼً"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَللَّيْلَاةُ [el-leylât] (elif ve hâyla) Geceye denir ki gurûb-ı şemsten fecr-i sâdıkın tulûuna kadar alâ-kavlin şemsin tulûuna kadar müddetten ibârettir; cemi لَيَالِي [leyâlî] gelir gayr-i kıyâs üzere yâ ziyâdesiyle ve لَيَائِلُ [leyâil] gelir ki maklûbdur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّيْلُ",
+          "okunus": "el-leyl",
+          "koken": "سَيْلٌ [seyl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gece, şeb manâsına, lafzı müfred ve manâsı cemdir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir kavm eyitti: لَيْلٌ [leyl] ağaç delen dedikleri kuşun yavrusu ve نَهَارٌ [nehâr] toy demekle marûf kuşun yavrusudur, nitekim bazı eşârda gelmiştir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Kitâb-ı Farkda Asmaî نَهَارٌ [nehâr]ı zikr olunan manâya îrâd etmiştir, لَيْلٌ [leyl]i îrâd etmemiştir. Hafî değildir, Cevherînin لَيْلٌ [leyl] tefsîrinde olan edâsı sâir mevâzide olan edâsına muhaliftir,zîrâ sâir mevâzie nazaran لَيْلٌ [leyl] cemdir, vâhidi لَيْلَةٌ [leylet]tir demek gerekti.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّيْلُ",
+          "okunus": "el-leyl",
+          "koken": "lâmın fethi ve yânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "leyl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leylut-timâm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلُ التِّمَامِ [leylut-timâm] (كِتَابٌ [kitâb] vezninde) Atvel-i leyâlî-i şitâdır ki şeb-i yeldâ tabîr olunan gecedir. Bunda izâfetle لَيْلُ التِّمَامِ ve sıfat olarak لَيْلٌ تِمَامٌ ve nisbetle لَيْلٌ تِمَامِيٌّ dahi câizdir. Alâ-kavlin لَيْلُ التِّمَامِ [leylut-timâm]şol üç gecedir ki noksânı müstebân olmaya ki tesâvî-i leyl ü nehâr hengâmında olurve alâ-reyin on iki sâate ve dahi ziyâdeye bâlig olan geceden ibârettir; yukâlu: هَذِهِ لَيْلَةُ التِّمَامِ وَلَيْلَةٌ تِمَامِيَّةٌ أَيْ أَطْوَلُ لَيَالِي الشِّتَاءِ أَوْ هِيَ ثَلَاثٌ لَا يُسْتَبَانُ نُقْصَانُهَا أَوْ هِيَ إِذَا بَلَغَتِ اثْنَتَا عَشْرَةَ سَاعَةً فَصَاعِدًا",
+              "misaller": [
+                [
+                  "هَذِهِ لَيْلَةُ التِّمَامِ وَلَيْلَةٌ تِمَامِيَّةٌ أَيْ أَطْوَلُ لَيَالِي الشِّتَاءِ أَوْ هِيَ ثَلَاثٌ لَا يُسْتَبَانُ نُقْصَانُهَا أَوْ هِيَ إِذَا بَلَغَتِ اثْنَتَا عَشْرَةَ سَاعَةً فَصَاعِدًا",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leylut-timâm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلُ التِّمَامِ [leylut-timâm] (tânın kesriyledir fethi câiz değildir) Atvel-i leyâlî ki yılda bir vâki olur, şeb-i yeldâ manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "leyl-i münevver",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Nurlu gece",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "leylünehâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece gündüz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "لَيْلَى": [
+        {
+          "eser": "Vankulu",
+          "madde": "leyla",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir avretin ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "لَيْلَى",
+          "okunus": "Leylâ",
+          "koken": "lâmların fethi ve elifin kasrıyla"
+        }
+      ],
+      "لَيْلَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "LEYLE",
+          "yazilis": "ﻟﻴﻠﻪ",
+          "tur": "i.",
+          "koken": "Ar. leyl ’den leyle",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir tek gece [Çoğunlukla kandil geceleri gibi mübârek geceler için kullanılır]",
+              "misaller": [
+                [" Leyle-i berat – Leyletü’l-berat: Berat kandili gecesi.", ""],
+                [" Leyle-i kadir: Kadir gecesi.", ""],
+                [" Leyle-i mîraç: Mîraç kandili gecesi.", ""],
+                [" Leyle-i regāib: Regāip kandili gecesi.", ""],
+                [" Leyletü’l-isrâ: Mîraç gecesi.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Gece",
+              "misaller": [
+                ["Vâlide pederden ziyâde sevindi. O gece bir leyle-i meserret oldu", "Muallim Nâci"],
+                ["Bu leyle-i zifâf karanlık gelir bana", "Abdülhak Hâmit"],
+                [
+                  "Zevcesinden uzak geçirdiği gecelerin kendisi için birer leyle-i ıztırap olduğunu anlatırdı",
+                  "Hüseyin R. Gürpınar"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "leyle",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gece",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyletul-hasbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ الْحَصْبَةِ [leyletul-hasbet] (تَمْرَةٌ [temret] vezninde) Eyyâm-ı teşrîk akibinde olan geceye ıtlâk olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyletul-havz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ الْحَوْزِ [leyletul-havz] Deve kısmını ibtidâ suya sürdükleri geceye ıtlâk olunur; yukâlu: هَذِهِ لَيْلَةُ الْحَوْزِ وَهِيَ أَوَّلُ لَيْلَةِ تَوَجَّهِ الْإِبِلِ إِلَى الْمَاءِ",
+              "misaller": [
+                ["هَذِهِ لَيْلَةُ الْحَوْزِ وَهِيَ أَوَّلُ لَيْلَةِ تَوَجَّهِ الْإِبِلِ إِلَى الْمَاءِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyletul-vasl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ الْوَصْلِ [leyletul-vasl] (vâvın fethiyle) Ayın âhir gecesine ıtlâk olunur; tekûlu: جَاءَنَا لَيْلَةَ الْوَصْلِ أَيْ آخِرَ لَيَالِي الشَّهْرِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyletus-sevâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ السَّوَاءِ [leyletus-sevâ] Ayın on dördüncü yâhûd on üçüncü gecesine ıtlâk olunur, zîrâ ay o gecelerde müstevî olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "leyletut-tarîs",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ التَّعْرِيسِ [leyletut-tarîs] Şol geceye ıtlâk olunmuştur ki onda Fahr-i âlem sallallâhu aleyhi ve sellem hazretleri uyuyup kalmakla vakt-i sabâh güzerân etmiş idi. Bu bir gazâda vâki olmuştur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-leylet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vâhidi, تَمْرَةٌ [temret] ile تَمْرٌ [temr] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّيْلَةُ",
+          "okunus": "el-leylet",
+          "koken": "vezn-i mezbûr üzere"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leyletu hurret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ حُرَّةٍ [leyletu hurret] Bekâret izâle olunmayan geceye derler ke-mâ fî kavlihim: بَاتَتْ فُلَانٌ بِلَيْلَةِ حُرَّةٍ إِذَا لَمْ يَقْدِرْ بَعْلُهَا عَلَى افْتِضَاضِهَا Ve فَضٌّ [fadd] fâ ile ve dâd-ı muceme ile mühr bozmağa derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "izâle-i bekâret olunan geceye لَيْلَةُ الشَّيْبَاءِ derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leyletul-havz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ الْحَوْزِ [leyletul-havz] (hânın fethi ve vâvın sükûnuyla) Deveyi ibtidâ suya sürdükleri geceye derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leyletun-nefr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ النَّفْرِ [leyletun-nefr] Kezâlik Minâdan göç zamânı murâd olur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ona يَوْمُ النَّفَرِ [yevmun-nefer] dahi derler fethateynle.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leyletus-sevâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "لَيْلَةُ السَّوَاءِ [leyletus-sevâ] (sînin fethi ve elifin meddiyle) Ayın on üçüncü gecesidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 92,
   "kuranda_var": true,

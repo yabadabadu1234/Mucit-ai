@@ -21,7 +21,7 @@
       [10, "وَجَافَة", "wacāfa", "titreme", "orta", ""],
       [11, "وُجُوفَة", "wucūfa", "titreme", "orta", ""],
       [12, "وِجَافَة", "wicāfa", "titreme", "orta", ""],
-      [13, "وَجِيف", "wacīf", "titreme", "orta", ""],
+      [13, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
       [14, "وَجُوف", "wacūf", "titreme", "orta", ""],
       [15, "وَجَفَان", "wacafān", "titreme", "orta", ""],
       [16, "وُجْفَان", "wucfān", "titreme", "orta", ""],
@@ -356,7 +356,7 @@
       [258, "وِجْفَتَان", "wicfatān", "titreme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "وَجِيف", "wacīf", "her daim titreyen", "orta", ""],
+      [259, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
       [260, "وَجِيفَة", "wacīfa", "her daim titreyen, müennes", "orta", ""],
       [261, "وَجِيفَان", "wacīfān", "her daim titreyen, iki", "orta", ""],
       [262, "وَجِيفَتَان", "wacīfatān", "her daim titreyen, iki, müennes", "orta", ""],
@@ -480,7 +480,7 @@
       [378, "مِيجِيفُون", "mīcīfūn", "titremeye düşkünler", "orta", ""],
       [379, "مِيجِيفِين", "mīcīfīn", "titremeye düşkünler", "orta", ""],
       [380, "مِيجِيفَات", "mīcīfāt", "titremeye düşkünler, müennes", "orta", ""],
-      [381, "وَجِيف", "wacīf", "çok titreyen", "orta", ""],
+      [381, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
       [382, "وَجِيفَة", "wacīfa", "çok titreyen, müennes", "orta", ""],
       [383, "وَجِيفَان", "wacīfān", "çok titreyen, iki", "orta", ""],
       [384, "وَجِيفَتَان", "wacīfatān", "çok titreyen, iki, müennes", "orta", ""],
@@ -547,7 +547,7 @@
       [441, "وَجَف", "wacaf", "titreme türünden şey", "orta", "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"],
       [443, "وِجْف", "wicf", "titreme türünden şey", "orta", ""],
       [445, "وُجْف", "wucf", "titreme türünden şey", "orta", ""],
-      [447, "وَجِيف", "wacīf", "titreme türünden şey", "orta", ""],
+      [447, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
       [449, "وِجَف", "wicaf", "titreme türünden şey", "orta", ""],
       [451, "وُجُف", "wucuf", "titreme türünden şey", "orta", ""],
       [453, "وَجَاف", "wacāf", "titreme türünden şey", "orta", ""]
@@ -1125,6 +1125,28 @@
     ],
     "renk_sozluk": {
       "واجفة": "korkan"
+    },
+    "mustak_lugat": {
+      "وَجِيف": [
+        {
+          "eser": "Vankulu",
+          "madde": "vecif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesne deprenip muztarib olmak; yukâlu: وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ Ve وَجِيفٌ [vecîf] Devenin ve atın bir cins yürümesi.",
+              "misaller": [
+                ["وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَجِيفُ",
+          "okunus": "el-vecîf",
+          "koken": "vâvın fethi ve cîmin kesri ve meddiyle"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 2,

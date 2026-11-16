@@ -11,7 +11,7 @@
       [0, "شَفْو", "şafw", "iyileşme", "orta", ""],
       [1, "شِفْو", "şifw", "iyileşme", "orta", ""],
       [2, "شُفْو", "şufw", "iyileşme", "orta", ""],
-      [517, "شَفَا", "şafā", "iyileşme", "orta", ""],
+      [517, "شَفَا", "şafā", "Bu dahi güneş batmak", "lugat", "Kamus"],
       [518, "شِفَى", "şifā", "iyileşme", "orta", ""],
       [519, "شُفُوّ", "şufuww", "iyileşme", "orta", ""],
       [520, "شُفُوّ", "şufuww", "iyileşme", "orta", ""],
@@ -360,7 +360,7 @@
       [750, "شَفُوُّون", "şafuwwūn", "her daim iyileşenler", "orta", ""],
       [751, "شَفُوِّين", "şafuwwīn", "her daim iyileşenler", "orta", ""],
       [752, "شَفُوَّات", "şafuwwāt", "her daim iyileşenler, müennes", "orta", ""],
-      [753, "شَفَا", "şafā", "her daim iyileşen", "orta", ""],
+      [753, "شَفَا", "şafā", "Bu dahi güneş batmak", "lugat", "Kamus"],
       [754, "شَفَوَان", "şafawān", "her daim iyileşen, iki", "orta", ""],
       [755, "شَفَوَات", "şafawāt", "her daim iyileşenler, müennes", "orta", ""],
       [294, "شَفْو", "şafw", "her daim iyileşen", "orta", ""],
@@ -514,7 +514,7 @@
       [435, "شَوْفَو", "şawfaw", "iyileşme türünden şey", "orta", ""],
       [437, "شَيْفَو", "şayfaw", "iyileşme türünden şey", "orta", ""],
       [439, "شَفْو", "şafw", "iyileşme türünden şey", "orta", ""],
-      [840, "شَفَا", "şafā", "iyileşme türünden şey", "orta", ""],
+      [840, "شَفَا", "şafā", "Bu dahi güneş batmak", "lugat", "Kamus"],
       [443, "شِفْو", "şifw", "iyileşme türünden şey", "orta", ""],
       [445, "شُفْو", "şufw", "iyileşme türünden şey", "orta", ""],
       [841, "شَفِيّ", "şafiyy", "iyileşme türünden şey", "orta", ""],
@@ -547,7 +547,7 @@
       [858, "شَفَاة", "şafā", "iyileşmeler", "orta", ""],
       [859, "شُفَّاء", "şuffāʾ", "iyileşmeler", "orta", ""],
       [860, "شَفَاء", "şafāʾ", "iyileşmeler", "orta", ""],
-      [861, "شَفَا", "şafā", "iyileşmeler", "orta", ""],
+      [861, "شَفَا", "şafā", "Bu dahi güneş batmak", "lugat", "Kamus"],
       [862, "مَشَافِي", "maşāfī", "iyileşmeler", "orta", ""],
       [863, "مَشَافِيّ", "maşāfiyy", "iyileşmeler", "orta", ""],
       [864, "شَوَافِي", "şawāfī", "iyileşmeler", "orta", ""],
@@ -958,7 +958,60 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شَفَا": [
+        {
+          "eser": "Kamus",
+          "madde": "eş-şefâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi güneş batmak manâsınadır; yukâlu: شَفِيَتِ الشَّمْسُ شَفًا مِنَ الْبَابِ الرَّابِعِ إِذَا غَرَبَتْ Ve شَفَا [şefâ] Şey-i kalîle denir; yukâlu: مَا بَقِيَ مِنْهُ إِلَّا شَفًا أَيْ قَلِيلٌ Ve hilâlin indel-gurûb hayâl gibi bakiyyesine denir.",
+              "misaller": [
+                ["شَفِيَتِ الشَّمْسُ شَفًا مِنَ الْبَابِ الرَّابِعِ إِذَا غَرَبَتْ", ""],
+                ["مَا بَقِيَ مِنْهُ إِلَّا شَفًا أَيْ قَلِيلٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "her şeyin ucuna ve kenârına denir; yukâlu: مَا بَقِيَ مِنَ الشَّيْءِ إِلَّا شَفًا أَيْ حَرْفٌ",
+              "misaller": [
+                ["مَا بَقِيَ مِنَ الشَّيْءِ إِلَّا شَفًا أَيْ حَرْفٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّفَا",
+          "okunus": "eş-şefâ",
+          "koken": "عَصَا [asâ] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şefâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şey-i kalîle derler, İbnus-Sikkît rivâyeti üzere; يُقَالُ لِلرَّجُلِ عِنْدَ مَوْتِهِ وَلِلْقَمَرِ عِنْدَ مِحَاقِهِ وَلِلشَّمْسِ عِنْدَ غُرُوبِهَا مَا بَقِيَ مِنْهُ إِلَّا شَفًا أَيْ قَلِيلٌ Ve مِحَاقٌ [mihâk] ayın âhir gecelerine derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَفًا [şefâ] Her nesnenin tarafına dahi derler. Kâlallâhu taâlâ: ﴿وَكُنْتُمْ عَلَى شَفَا حُفْرَةٍ مِنَ النَّارِ﴾ (آل عمران، 103)",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّفَا",
+          "okunus": "eş-şefâ",
+          "koken": "şînin fethi ve elifin kasrıyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

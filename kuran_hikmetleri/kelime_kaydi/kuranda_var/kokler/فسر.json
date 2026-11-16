@@ -39,7 +39,14 @@
       [28, "مَفْسِرَة", "mafsira", "açıklama", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَفْسِير", "tafsīr", "açıklama", "kuran", "Vikisözlük: verbal noun of فَسَّرَ (fassara) (form II)"],
+      [
+        29,
+        "تَفْسِير",
+        "tafsīr",
+        "Yorum",
+        "lugat",
+        "Vikisözlük: verbal noun of فَسَّرَ (fassara) (form II) · Luggat"
+      ],
       [30, "تَفْسِرَة", "tafsira", "çokça açıklama", "orta", ""],
       [31, "فِسِّار", "fissār", "çokça açıklama", "orta", ""]
     ],
@@ -244,7 +251,14 @@
       [506, "مُفْسَرَّات", "mufsarrāt", "iyiden iyiye açıklayanlar, müennes", "kontrol", ""]
     ],
     "masdar · bâb X": [
-      [176, "اِسْتِفْسَار", "istifsār", "açıklamayı isteme", "orta", "Vikisözlük: a question, query, inquiry"]
+      [
+        176,
+        "اِسْتِفْسَار",
+        "istifsār",
+        "Açıklama isteme, sorma",
+        "lugat",
+        "Vikisözlük: a question, query, inquiry · Luggat"
+      ]
     ],
     "ism-i merre · bâb X": [
       [177, "اِسْتِفْسَارَة", "istifsāra", "bir kere açıklamayı isteme", "orta", ""]
@@ -1429,7 +1443,228 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "تَفْسِير": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEFSİR",
+          "yazilis": "ﺗﻔﺴﻴﺮ",
+          "tur": "",
+          "koken": "Ar. fesr “açıklamak, örtülü şeyi açığa çıkarmak”tan tefsіr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yorumlama, yorum",
+              "misaller": [
+                ["Benim gibi bir bâkirin göz yaşlarını sûret-i âharla tefsîre uğraşmayınız", "Hüseyin R. Gürpınar"],
+                [
+                  "Şehir hâdisenin tahlil, tefsir ve dedikodusunu yapar hâle geldiği zaman pek tabiî ki İbrâhim Efendi Konağı da vak’ayı konuşuyordu",
+                  "Sâmiha Ayverdi"
+                ],
+                [
+                  "Çeşitli tefsir tarzlarından hangisinin müellifin düşüncesine uygun olduğunu tespit imkânsızdır",
+                  "Mehmet Kaplan"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerîm’in âyet veya sûrelerini açıklama",
+              "misaller": [
+                [
+                  "Ben ol esrâr-ı kevn nüsha-i ümmü’l-kitâbım kim / Çıkar tefsîr-i bismillâh her harf-i beyânımdan",
+                  "Leskofçalı Gālib"
+                ]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerîm’in âyet ve sûrelerini açıklayan kitap",
+              "misaller": [],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerîm’in açıklanmasına dâir olan ilim",
+              "misaller": [
+                ["Tefsir ve hadis medreselerde okunmaz oldu", "Eşrefoğlu Rûmî"],
+                ["Tefsir, hadis, ilm-i kırâatte muâsırlarının en kudretlilerindendi", "İsmâil H. Uzunçarşılı"]
+              ],
+              "no": 4
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Tefsir etmek (eylemek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ölmek diyoruz nedir bu ta’bîr / Cânan mı ede bu hâli tefsîr (Abdülhak Hâmit). Herkes onu kendi anlayışına göre tahlil ve tefsir ederdi (Ahmet H. Tanpınar). Ben, kendisiyle hasbihal ede ede kısa cevaplarını tefsir etmeyi öğrenmiştim (Safiye Erol). 2",
+              "misaller": [],
+              "deyim": "Yorumlamak"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Fâtiha sûresini tefsir etti.” Sûre-i Nûr-ı ruhun ervâha tefsîr eyledim / Mihr sanma görünen zerrin kitâbımdır benim (Leskofçalı Gālib)",
+              "misaller": [],
+              "deyim": "Kur’ân-ı Kerîm’in âyet ve sûrelerini açıklamak"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "tefsir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "فَسْرٌ [fesr] gibi pûşîde ve mestûr nesneyi rûşen ve ayân eylemek manâsınadır; yukâlu: فَسَّرَهُ إِذَا كَشَفَهُ وَأَبَانَهُ Ve müfessirîn örfünde تَفْسِيرٌ [tefsîr] İmâm Saleb kavli üzere tevîl ile mürâdiftir.",
+              "misaller": [
+                ["فَسَّرَهُ إِذَا كَشَفَهُ وَأَبَانَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "indel-gayr تَفْسِيرٌ [tefsîr] lafz-ı müşkilden manâ-yı murâdı keşf ve beyân; ve تَأْوِيلٌ [tevîl] iki muhtemel olan manânın birini zâhir-i kelâma mutâbık olan manâya redd eylemekten ibârettir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّفْسِيرُ",
+          "okunus": "et-tefsîr",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tefsir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّفْسِيرُ",
+          "okunus": "et-tefsîr",
+          "koken": "al-vezni اَلتَّكْرِيم [et-tekrîm]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefsir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yorum. Tefsir edilmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefsir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Açıklama",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "اِسْتِفْسَار": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İSTİFSAR",
+          "yazilis": "ﺍﺳﺘﻔﺴﺎﺭ",
+          "tur": "i.",
+          "koken": "Ar. fesr “açıklamak, örtüsünü açmak”tan istifsār",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir şey hakkında ayrıntılı bilgi öğrenmek isteme, açıklama isteme, sorma, araştırma",
+              "misaller": [
+                ["Celâl nasıl?", ""],
+                ["yolundaki istifsârına söze başlar başlamaz ağlayacağını bildiğinden…", "Sâmipaşazâde Sezâî"],
+                ["Genç kadının mesut ve sessiz bir istifsarla bakan gözleri…", "Mehmet Rauf"],
+                ["Etme ahvâl-i halkı istifsâr / Nakl edersem keder verir zîrâ", "Osmanzâde Tâib"],
+                [
+                  "Firavun, ulûhiyet dâvâsına kalkışmadan evvel böyle bir niyette bulunduğunu vezîri Hâmân’a açıp reyini istifsar etmiş",
+                  "Fâik Reşat"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Hâlini hatırını sorma",
+              "misaller": [
+                ["Bir gün hastalanır, ecânipten biri istifsâr-ı hâtıra gelir…", "Fâik Reşat"]
+              ],
+              "deyim": "İstifsâr-ı hâtır"
+            }
+          ]
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "istifsar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi bilmek, taleb etmek; yukâlu: إِسْتَفْسَرْتُهُ كَذَا أَيْ سَأَلْتُهُ أَنْ يُفَسِّرَهُ لِي",
+              "misaller": [
+                ["إِسْتَفْسَرْتُهُ كَذَا أَيْ سَأَلْتُهُ أَنْ يُفَسِّرَهُ لِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِفْسَارُ",
+          "okunus": "el-istifsâr",
+          "koken": "hemzenin ve tânın kesri ve mâ-beynde sînin sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "istifsâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Açıklama isteme, sorma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "istifsâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sorma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

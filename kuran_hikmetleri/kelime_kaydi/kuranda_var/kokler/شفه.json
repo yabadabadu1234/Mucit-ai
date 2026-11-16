@@ -15,7 +15,7 @@
       [4, "شِفَه", "şifah", "dudak", "kontrol", ""],
       [5, "شُفُه", "şufuh", "dudak", "kontrol", ""],
       [6, "شُفُوه", "şufūh", "dudak", "kontrol", ""],
-      [7, "شِفَاه", "şifāh", "dudak", "kontrol", ""],
+      [7, "شِفَاه", "şifāh", "Dudaklar", "lugat", "Kubbealtı"],
       [8, "شُفَاه", "şufāh", "dudak", "kontrol", ""],
       [9, "شَفَاه", "şafāh", "dudak", "kontrol", ""],
       [10, "شَفَاهَة", "şafāha", "dudak", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُشَافَهَة", "muşāfaha", "biriyle karşılıklı dudak olma", "kontrol", ""],
-      [50, "شِفَاه", "şifāh", "biriyle karşılıklı dudak olma", "kontrol", ""]
+      [50, "شِفَاه", "şifāh", "Dudaklar", "lugat", "Kubbealtı"]
     ],
     "ism-i merre · bâb III": [
       [51, "شِفَاهَة", "şifāha", "bir kere biriyle karşılıklı dudak olma", "kontrol", ""]
@@ -496,7 +496,7 @@
     ],
     "mensûb": [
       [395, "شَفْهِيّ", "şafhiyy", "dudak olma ile ilgili", "kontrol", ""],
-      [397, "شَفَهِيّ", "şafahiyy", "dudak olma ile ilgili", "kontrol", ""],
+      [397, "شَفَهِيّ", "şafahiyy", "e mensûb olan nesne", "lugat", "Vankulu"],
       [399, "شِفْهِيّ", "şifhiyy", "dudak olma ile ilgili", "kontrol", ""],
       [401, "شُفْهِيّ", "şufhiyy", "dudak olma ile ilgili", "kontrol", ""],
       [403, "شِفَاهِيّ", "şifāhiyy", "dudak olma ile ilgili", "kontrol", ""],
@@ -527,7 +527,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "شَفَاه", "şafāh", "dudak olma", "kontrol", ""],
       [422, "شُفُوه", "şufūh", "dudak olma", "kontrol", ""],
-      [423, "شِفَاه", "şifāh", "dudak olma", "kontrol", ""],
+      [423, "شِفَاه", "şifāh", "Dudaklar", "lugat", "Kubbealtı"],
       [424, "شُفْه", "şufh", "dudak olma", "kontrol", ""],
       [425, "شَفَاهَة", "şafāha", "dudak olma", "kontrol", ""],
       [426, "شِفَاهَة", "şifāha", "dudak olma", "kontrol", ""],
@@ -571,7 +571,7 @@
       [458, "أَشَافِيه", "ʾaşāfīh", "dudak olmalar", "kontrol", ""],
       [459, "شُفُوه", "şufūh", "dudak olmalar", "kontrol", ""],
       [460, "شُفُه", "şufuh", "dudak olmalar", "kontrol", ""],
-      [461, "شِفَاه", "şifāh", "dudak olmalar", "kontrol", ""],
+      [461, "شِفَاه", "şifāh", "Dudaklar", "lugat", "Kubbealtı"],
       [462, "شِفَه", "şifah", "dudak olmalar", "kontrol", ""],
       [463, "شِفَهَة", "şifaha", "dudak olmalar", "kontrol", ""],
       [464, "شُفَه", "şufah", "dudak olmalar", "kontrol", ""],
@@ -1016,7 +1016,66 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شِفَاه": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ŞİFAH",
+          "yazilis": "ﺷﻔﺎﻩ",
+          "tur": "i.",
+          "koken": "Ar. şefe “dudak”ın çoğul şekli şifāh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dudaklar",
+              "misaller": [
+                ["Revâc-gâhın arar her metâ’ ey Nâbî / Mesâmi’ olmasa mesdûd olur dükkân-ı şifâh", "Nâbî"],
+                ["Öpmemiş kimdir anın dâmen-i âlî-câhın / İşte efvâh-ı havâs işte şifâh-ı a’lâm", "Nâbî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "شَفَهِيّ": [
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şefehiyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "شَفَهٌ [şefeh]e mensûb olan nesne. Eger شَفَةٌ [şefet]i aslı üzerine nisbet kılarsın.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir cemâat şöyle zann ettiler ki شَفَةٌ [şefet]ten nâkıs olan harf vâv ola, zîrâ ceminde شَفَوَاتٌ [şefevât] derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "رَجُلٌ أَشْفَى derler kaçan dudakları birbirine kavuşmasa أَرْوَقُ [ervak] gibi ki أَرْوَقُ [ervak] yukarı ön dişi uzun olana derler, pes أَرْوَقُ [ervak]un îrâdı ön dişi uzun olanın شَفَةٌ [şefet]i ekseriyyâ munzamm olmadığına binâen olur, أَرْوَقُ [ervak] zikr olunan manâya olduğuna binâen olmaz, nitekim öyle tevehhüm olundu.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Cevherî eydür: Cemâat-i mezbûrenin kelâmının sıhhatine delîl yoktur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّفَهِيُّ",
+          "okunus": "eş-şefehiyy",
+          "koken": "fethateynle ve yânın kezâlik teşdîdiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

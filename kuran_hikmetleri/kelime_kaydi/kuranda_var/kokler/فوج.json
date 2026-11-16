@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "فَوْج", "fawc", "grup", "kuran", "Kur'ân"],
+      [0, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
       [888, "فِيج", "fīc", "grup", "kontrol", ""],
       [889, "فُوج", "fūc", "grup", "kontrol", ""],
       [517, "فَاج", "fāc", "grup", "kontrol", ""],
@@ -393,7 +393,7 @@
       [884, "فَاجُون", "fācūn", "her daim grup olanlar", "kontrol", ""],
       [885, "فَاجِين", "fācīn", "her daim grup olanlar", "kontrol", ""],
       [755, "فَاجَات", "fācāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [294, "فَوْج", "fawc", "grup", "kuran", "Kur'ân"],
+      [294, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
       [295, "فَوْجَة", "fawca", "her daim grup olan, müennes", "kontrol", ""],
       [296, "فَوْجَان", "fawcān", "her daim grup olan, iki", "kontrol", ""],
       [297, "فَوْجَتَان", "fawcatān", "her daim grup olan, iki, müennes", "kontrol", ""],
@@ -542,7 +542,7 @@
       [425, "فَوَاجَة", "fawāca", "grup olma", "kontrol", ""],
       [837, "فِيَاجَة", "fiyāca", "grup olma", "kontrol", ""],
       [427, "فُوُوجَة", "fuwūca", "grup olma", "kontrol", ""],
-      [428, "فَوْج", "fawc", "grup", "kuran", "Kur'ân"],
+      [428, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
       [919, "فِيج", "fīc", "grup olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -552,7 +552,7 @@
       [434, "أُفْوُوجَة", "ʾufwūca", "grup olma türünden şey", "kontrol", ""],
       [435, "فَوْوَج", "fawwac", "grup olma türünden şey", "kontrol", ""],
       [437, "فَيْوَج", "faywac", "grup olma türünden şey", "kontrol", ""],
-      [439, "فَوْج", "fawc", "grup", "kuran", "Kur'ân"],
+      [439, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
       [840, "فَاج", "fāc", "grup olma türünden şey", "kontrol", ""],
       [921, "فِيج", "fīc", "grup olma türünden şey", "kontrol", ""],
       [923, "فُوج", "fūc", "grup olma türünden şey", "kontrol", ""],
@@ -924,7 +924,78 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَوْج": [
+        {
+          "eser": "Kamus",
+          "madde": "fevc",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gürûh ve cemâat manâsınadır: Cemi فُوُوجٌ [fuvûc] gelir, fânın zammıyla ve أَفْوَاجٌ [efvâc] gelir ve cemül-cemi أَفَاوِجُ [efâvic] ve أَفَاوِيجُ [efâvîc] gelir; yukâlu: قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ Ve فَوْجٌ [fevc] Masdar olur, râiha-i tayyibe yayılıp kokmak manâsına, فَوْحٌ [favh] manâsında lügattir; yukâlu: فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ Ve gündüz soğuk yâhûd serin olmak manâsınadır; yukâlu: فَاجَ النَّهَارُ إِذَا بَرَدَ",
+              "misaller": [
+                ["قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ", ""],
+                ["فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ", ""],
+                ["فَاجَ النَّهَارُ إِذَا بَرَدَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَوْجُ",
+          "okunus": "el-fevc",
+          "koken": "مَوْجٌ [mevc] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fevc",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Grup, cemaat, zümre. Bölük, takım",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "FEVÇ – FEVC",
+          "yazilis": "ﻓﻮﺝ",
+          "tur": "i.",
+          "koken": "Ar. fevc",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bölük, takım, insan kalabalığı",
+              "misaller": [
+                ["Bir damla gözümde en büyük mevc / Vermez bana korku böyle bin fevc", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Akın akın, akan bir kalabalık hâlinde",
+              "misaller": [
+                ["toplanıyorlardı", "Musâhipzâde Celâl"],
+                [
+                  "Halk-ı Sâdâbad iki sâhil boyunca fevç fevç / Vâde-i teşrîfine alkış tutarken dûrdan / Cedvel-i Sîm’in kenârından bu âvâzın Kemâl / Koptu bir fevvâre-i zerrin gibi mâhûrdan",
+                  "Yahyâ Kemal"
+                ],
+                ["● Fevc-â-fevc", "ﻓﻮﺟﺎﻓﻮﺝ"],
+                ["birl. sıf", "Fars. pekiştirme elifi -ā ile"],
+                ["Akın akın, fevç fevç: Çiçekler, kuşlar etrâfında fevc-â-fevc ü rengârenk", "Tevfik Fikret"]
+              ],
+              "deyim": "Fevç fevç"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

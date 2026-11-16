@@ -8,14 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "حَجْر", "ḥacr", "engelleme", "orta", ""],
-      [1, "حِجْر", "ḥicr", "ev, ırmak, yasak", "kuran", "Kur'ân"],
-      [2, "حُجْر", "ḥucr", "engelleme", "orta", ""],
-      [3, "حَجَر", "ḥacar", "engelleme", "orta", ""],
+      [0, "حَجْر", "ḥacr", "hukuk", "lugat", "Kubbealtı"],
+      [1, "حِجْر", "ḥicr", "i mezkûr ile manâ-yı evvelde mürâdiftir, niteki zikr olundu", "lugat", "Kur'ân · Kamus"],
+      [2, "حُجْر", "ḥucr", "İmruulkays nâm şâir-i meşhûrun pederi ve cedd-i alâsı ismleridir", "lugat", "Kamus"],
+      [3, "حَجَر", "ḥacar", "Taş", "lugat", "Luggat"],
       [4, "حِجَر", "ḥicar", "engelleme", "orta", ""],
       [5, "حُجُر", "ḥucur", "engelleme", "orta", ""],
       [6, "حُجُور", "ḥucūr", "kucaklar", "kuran", "Kur'ân"],
-      [7, "حِجَار", "ḥicār", "engelleme", "orta", ""],
+      [7, "حِجَار", "ḥicār", "Kezâlik bunların ikisi dahi cem-i kesrettir", "lugat", "Vankulu"],
       [8, "حُجَار", "ḥucār", "engelleme", "orta", ""],
       [9, "حَجَار", "ḥacār", "engelleme", "orta", ""],
       [10, "حَجَارَة", "ḥacāra", "engelleme", "orta", ""],
@@ -24,7 +24,7 @@
       [13, "حَجِير", "ḥacīr", "engelleme", "orta", ""],
       [14, "حَجُور", "ḥacūr", "engelleme", "orta", ""],
       [15, "حَجَرَان", "ḥacarān", "engelleme", "orta", ""],
-      [16, "حُجْرَان", "ḥucrān", "engelleme", "orta", ""],
+      [16, "حُجْرَان", "ḥucrān", "in cemidir, in cemi ve ın geldiği gibi", "lugat", "Vankulu"],
       [17, "حِجْرَان", "ḥicrān", "engelleme", "orta", ""],
       [18, "حَجْرَى", "ḥacrā", "engelleme", "orta", ""],
       [19, "حُجْرَى", "ḥucrā", "engelleme", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَحْجِرَة", "maḥcira", "engelleme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَحْجِير", "taḥcīr", "çokça engelleme", "orta", ""],
+      [29, "تَحْجِير", "taḥcīr", "Çit çekme", "lugat", "Luggat"],
       [30, "تَحْجِرَة", "taḥcira", "çokça engelleme", "orta", ""],
       [31, "حِجِّار", "ḥiccār", "çokça engelleme", "orta", ""]
     ],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُحَاجَرَة", "muḥācara", "biriyle karşılıklı engelleme", "orta", ""],
-      [50, "حِجَار", "ḥicār", "biriyle karşılıklı engelleme", "orta", ""]
+      [50, "حِجَار", "ḥicār", "Kezâlik bunların ikisi dahi cem-i kesrettir", "lugat", "Vankulu"]
     ],
     "ism-i merre · bâb III": [
       [51, "حِجَارَة", "ḥicāra", "bir kere biriyle karşılıklı engelleme", "orta", ""]
@@ -305,7 +305,14 @@
       [219, "حَاجِرَات", "ḥācirāt", "engelleyenler, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَحْجُور", "maḥcūr", "yasaklanmış", "kuran", "Kur'ân"],
+      [
+        220,
+        "مَحْجُور",
+        "maḥcūr",
+        "Kendi malını dilediği gibi kullanmaktan kānûnen menedilmiş, hacir altına…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [221, "مَحْجُورَة", "maḥcūra", "engellenen, müennes", "orta", ""],
       [222, "مَحْجُورَان", "maḥcūrān", "engellenen, iki", "orta", ""],
       [223, "مَحْجُورَتَان", "maḥcūratān", "engellenen, iki, müennes", "orta", ""],
@@ -316,7 +323,7 @@
     "mekân/zaman · sülâsî": [
       [227, "مَحْجَر", "maḥcar", "engelleme yeri, vakti", "orta", ""],
       [228, "مَحْجَرَان", "maḥcarān", "engelleme yeri, vakti, iki", "orta", ""],
-      [229, "مَحْجِر", "maḥcir", "engelleme yeri, vakti", "orta", ""],
+      [229, "مَحْجِر", "maḥcir", "Bâgçeye ıtlâk olunur", "lugat", "Kamus"],
       [230, "مَحْجِرَان", "maḥcirān", "engelleme yeri, vakti, iki", "orta", ""],
       [231, "مَحْجَرَة", "maḥcara", "engellemenin bol olduğu yer", "orta", ""],
       [232, "مَحْجَرَتَان", "maḥcaratān", "engellemenin bol olduğu yer, iki", "orta", ""],
@@ -326,7 +333,7 @@
       [248, "مَحْجُرَتَان", "maḥcuratān", "engelleme yeri, vakti, iki", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِحْجَر", "miḥcar", "engelleme âleti", "orta", ""],
+      [235, "مِحْجَر", "miḥcar", "Bâgçeye ıtlâk olunur", "lugat", "Kamus"],
       [236, "مِحْجَرَان", "miḥcarān", "engelleme âleti, iki", "orta", ""],
       [237, "مِحْجَار", "miḥcār", "engelleme âleti", "orta", ""],
       [238, "مِحْجَارَان", "miḥcārān", "engelleme âleti, iki", "orta", ""],
@@ -346,7 +353,7 @@
     "tasğîr · sülâsî": [
       [249, "حُجَيْر", "ḥucayr", "azıcık engelleme", "orta", ""],
       [250, "حُجَيْرَان", "ḥucayrān", "azıcık engelleme, iki", "orta", ""],
-      [251, "حُجَيْرَة", "ḥucayra", "azıcık engelleme", "orta", ""],
+      [251, "حُجَيْرَة", "ḥucayra", "Hücrecik", "lugat", "Luggat"],
       [252, "حُجَيْرَتَان", "ḥucayratān", "azıcık engelleme, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
@@ -376,7 +383,7 @@
       [270, "حَجُورُون", "ḥacūrūn", "her daim engelleyenler", "orta", ""],
       [271, "حَجُورِين", "ḥacūrīn", "her daim engelleyenler", "orta", ""],
       [272, "حَجُورَات", "ḥacūrāt", "her daim engelleyenler, müennes", "orta", ""],
-      [273, "حَجِر", "ḥacir", "her daim engelleyen", "orta", ""],
+      [273, "حَجِر", "ḥacir", "hukuk", "lugat", "Kubbealtı"],
       [274, "حَجِرَة", "ḥacira", "her daim engelleyen, müennes", "orta", ""],
       [275, "حَجِرَان", "ḥacirān", "her daim engelleyen, iki", "orta", ""],
       [276, "حَجِرَتَان", "ḥaciratān", "her daim engelleyen, iki, müennes", "orta", ""],
@@ -390,14 +397,14 @@
       [284, "حَجُرُون", "ḥacurūn", "her daim engelleyenler", "orta", ""],
       [285, "حَجُرِين", "ḥacurīn", "her daim engelleyenler", "orta", ""],
       [286, "حَجُرَات", "ḥacurāt", "her daim engelleyenler, müennes", "orta", ""],
-      [287, "حَجَر", "ḥacar", "her daim engelleyen", "orta", ""],
+      [287, "حَجَر", "ḥacar", "Taş", "lugat", "Luggat"],
       [288, "حَجَرَة", "ḥacara", "her daim engelleyen, müennes", "orta", ""],
       [289, "حَجَرَان", "ḥacarān", "her daim engelleyen, iki", "orta", ""],
       [290, "حَجَرَتَان", "ḥacaratān", "her daim engelleyen, iki, müennes", "orta", ""],
       [291, "حَجَرُون", "ḥacarūn", "her daim engelleyenler", "orta", ""],
       [292, "حَجَرِين", "ḥacarīn", "her daim engelleyenler", "orta", ""],
       [293, "حَجَرَات", "ḥacarāt", "her daim engelleyenler, müennes", "orta", ""],
-      [294, "حَجْر", "ḥacr", "her daim engelleyen", "orta", ""],
+      [294, "حَجْر", "ḥacr", "hukuk", "lugat", "Kubbealtı"],
       [295, "حَجْرَة", "ḥacra", "her daim engelleyen, müennes", "orta", ""],
       [296, "حَجْرَان", "ḥacrān", "her daim engelleyen, iki", "orta", ""],
       [297, "حَجْرَتَان", "ḥacratān", "her daim engelleyen, iki, müennes", "orta", ""],
@@ -410,7 +417,7 @@
       [304, "حُجُرَتَان", "ḥucuratān", "her daim engelleyen, iki, müennes", "orta", ""],
       [305, "حُجُرُون", "ḥucurūn", "her daim engelleyenler", "orta", ""],
       [306, "حُجُرِين", "ḥucurīn", "her daim engelleyenler", "orta", ""],
-      [307, "حُجُرَات", "ḥucurāt", "her daim engelleyenler, müennes", "orta", ""],
+      [307, "حُجُرَات", "ḥucurāt", "Hücreler", "lugat", "Luggat"],
       [308, "حَجْرَان", "ḥacrān", "her daim engelleyen", "orta", ""],
       [309, "حَجْرَانَة", "ḥacrāna", "her daim engelleyen, müennes", "orta", ""],
       [310, "حَجْرَانَان", "ḥacrānān", "her daim engelleyen, iki", "orta", ""],
@@ -534,13 +541,20 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "حَجَار", "ḥacār", "engelleme", "orta", ""],
       [422, "حُجُور", "ḥucūr", "kucaklar", "kuran", "Kur'ân"],
-      [423, "حِجَار", "ḥicār", "engelleme", "orta", ""],
-      [424, "حُجْر", "ḥucr", "engelleme", "orta", ""],
+      [423, "حِجَار", "ḥicār", "Kezâlik bunların ikisi dahi cem-i kesrettir", "lugat", "Vankulu"],
+      [424, "حُجْر", "ḥucr", "İmruulkays nâm şâir-i meşhûrun pederi ve cedd-i alâsı ismleridir", "lugat", "Kamus"],
       [425, "حَجَارَة", "ḥacāra", "engelleme", "orta", ""],
       [426, "حِجَارَة", "ḥicāra", "engelleme", "orta", ""],
       [427, "حُجُورَة", "ḥucūra", "engelleme", "orta", ""],
-      [428, "حَجْر", "ḥacr", "engelleme", "orta", ""],
-      [429, "حِجْر", "ḥicr", "ev, ırmak, yasak", "kuran", "Kur'ân"]
+      [428, "حَجْر", "ḥacr", "hukuk", "lugat", "Kubbealtı"],
+      [
+        429,
+        "حِجْر",
+        "ḥicr",
+        "i mezkûr ile manâ-yı evvelde mürâdiftir, niteki zikr olundu",
+        "lugat",
+        "Kur'ân · Kamus"
+      ]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "حَاجُور", "ḥācūr", "engelleme türünden şey", "orta", ""],
@@ -549,10 +563,17 @@
       [434, "أُحْجُورَة", "ʾuḥcūra", "engelleme türünden şey", "orta", ""],
       [435, "حَوْجَر", "ḥawcar", "engelleme türünden şey", "orta", ""],
       [437, "حَيْجَر", "ḥaycar", "engelleme türünden şey", "orta", ""],
-      [439, "حَجْر", "ḥacr", "engelleme türünden şey", "orta", ""],
-      [441, "حَجَر", "ḥacar", "engelleme türünden şey", "orta", ""],
-      [443, "حِجْر", "ḥicr", "ev, ırmak, yasak", "kuran", "Kur'ân"],
-      [445, "حُجْر", "ḥucr", "engelleme türünden şey", "orta", ""],
+      [439, "حَجْر", "ḥacr", "hukuk", "lugat", "Kubbealtı"],
+      [441, "حَجَر", "ḥacar", "Taş", "lugat", "Luggat"],
+      [
+        443,
+        "حِجْر",
+        "ḥicr",
+        "i mezkûr ile manâ-yı evvelde mürâdiftir, niteki zikr olundu",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
+      [445, "حُجْر", "ḥucr", "İmruulkays nâm şâir-i meşhûrun pederi ve cedd-i alâsı ismleridir", "lugat", "Kamus"],
       [447, "حَجِير", "ḥacīr", "engelleme türünden şey", "orta", ""],
       [449, "حِجَر", "ḥicar", "engelleme türünden şey", "orta", ""],
       [451, "حُجُر", "ḥucur", "engelleme türünden şey", "orta", ""],
@@ -565,14 +586,7 @@
       [440, "حَجْرَة", "ḥacra", "engelleme türünden bir tane", "orta", ""],
       [442, "حَجَرَة", "ḥacara", "engelleme türünden bir tane", "orta", ""],
       [444, "حِجْرَة", "ḥicra", "engelleme türünden bir tane", "orta", ""],
-      [
-        446,
-        "حُجْرَة",
-        "ḥucra",
-        "engelleme türünden bir tane",
-        "orta",
-        "Vikisözlük: room, compartment, cell, chamber"
-      ],
+      [446, "حُجْرَة", "ḥucra", "Odacık", "lugat", "Vikisözlük: room, compartment, cell, chamber · Luggat"],
       [448, "حَجِيرَة", "ḥacīra", "engelleme türünden bir tane", "orta", ""],
       [450, "حِجَرَة", "ḥicara", "engelleme türünden bir tane", "orta", ""],
       [452, "حُجُرَة", "ḥucura", "oda", "kuran", "Kur'ân"],
@@ -585,15 +599,15 @@
       [458, "أَحَاجِير", "ʾaḥācīr", "engellemeler", "orta", ""],
       [459, "حُجُور", "ḥucūr", "kucaklar", "kuran", "Kur'ân"],
       [460, "حُجُر", "ḥucur", "engellemeler", "orta", ""],
-      [461, "حِجَار", "ḥicār", "engellemeler", "orta", ""],
+      [461, "حِجَار", "ḥicār", "Kezâlik bunların ikisi dahi cem-i kesrettir", "lugat", "Vankulu"],
       [462, "حِجَر", "ḥicar", "engellemeler", "orta", ""],
       [463, "حِجَرَة", "ḥicara", "engellemeler", "orta", ""],
-      [464, "حُجَر", "ḥucar", "engellemeler", "orta", ""],
+      [464, "حُجَر", "ḥucar", "in cemidir ki çardağa denir", "lugat", "Kamus"],
       [465, "حُجَراء", "ḥucarāʾ", "engellemeler", "orta", ""],
       [466, "حَجَرَة", "ḥacara", "engellemeler", "orta", ""],
       [467, "حُجَّار", "ḥuccār", "engellemeler", "orta", ""],
       [468, "حَجَار", "ḥacār", "engellemeler", "orta", ""],
-      [469, "حَجَر", "ḥacar", "engellemeler", "orta", ""],
+      [469, "حَجَر", "ḥacar", "Taş", "lugat", "Luggat"],
       [470, "مَحَاجِر", "maḥācir", "engellemeler", "orta", ""],
       [471, "مَحَاجِير", "maḥācīr", "engellemeler", "orta", ""],
       [472, "حَوَاجِر", "ḥawācir", "engellemeler", "orta", ""],
@@ -608,11 +622,11 @@
       [479, "أَحَاجِرَات", "ʾaḥācirāt", "engellemeler topluluğu", "orta", ""],
       [480, "أَحَاجِيرَات", "ʾaḥācīrāt", "engellemeler topluluğu", "orta", ""],
       [481, "حُجُورَات", "ḥucūrāt", "engellemeler topluluğu", "orta", ""],
-      [482, "حُجُرَات", "ḥucurāt", "engellemeler topluluğu", "orta", ""],
+      [482, "حُجُرَات", "ḥucurāt", "Hücreler", "lugat", "Luggat"],
       [483, "حِجَارَات", "ḥicārāt", "engellemeler topluluğu", "orta", ""],
       [484, "حِجَرَات", "ḥicarāt", "engellemeler topluluğu", "orta", ""],
       [485, "حِجَرَات", "ḥicarāt", "engellemeler topluluğu", "orta", ""],
-      [486, "حُجَرَات", "ḥucarāt", "engellemeler topluluğu", "orta", ""],
+      [486, "حُجَرَات", "ḥucarāt", "Hücreler", "lugat", "Kubbealtı"],
       [487, "حُجَراآت", "ḥucarāʾāt", "engellemeler topluluğu", "orta", ""],
       [488, "حَجَرَات", "ḥacarāt", "engellemeler topluluğu", "orta", ""],
       [489, "حُجَّارَات", "ḥuccārāt", "engellemeler topluluğu", "orta", ""],
@@ -624,7 +638,7 @@
       [495, "أَحْجُرَات", "ʾaḥcurāt", "engellemeler topluluğu", "orta", ""],
       [496, "حُجَّرَات", "ḥuccarāt", "engellemeler topluluğu", "orta", ""],
       [497, "حَجَائِرَات", "ḥacāʾirāt", "engellemeler topluluğu", "orta", ""],
-      [498, "حُجَيْرَات", "ḥucayrāt", "engellemeler topluluğu", "orta", ""]
+      [498, "حُجَيْرَات", "ḥucayrāt", "Hücrecikler", "lugat", "Luggat"]
     ]
   },
   "reddedilen": [
@@ -2427,7 +2441,1155 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حَجْر": [
+        {
+          "eser": "Kamus",
+          "madde": "hacr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحُجْرَانُ [el-hucrân] (hânın zammı ve kesriyle) Men eylemek manâsınadır; yukâlu: حَجَرَهُ حُجْرَانًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَنَعَهُ ve yukâlu: حَجَرَ عَلَى الصَّغِيرِ الْقَاضِي إِذَا مَنَعَهُ مِنَ التَّصَرُّفِ فِي مَالِهِ Ve حَجْرٌ [hacr] (hânın fethi ve kesriyle) İnsânın kucağına denir, حِضْنٌ [hidn] ve kenâr ve âgûş manâsınadır; yukâlu: نَشَأَ فِي حِجْرِ فُلاَنٍ أَيْ فِي حِضْنِهِ Fukahânın حِجْرُ حِضَانَةٍ [hicru hidânet] tabîrleri bundandır.",
+              "misaller": [
+                ["حَجَرَهُ حُجْرَانًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَنَعَهُ", ""],
+                ["حَجَرَ عَلَى الصَّغِيرِ الْقَاضِي إِذَا مَنَعَهُ مِنَ التَّصَرُّفِ فِي مَالِهِ", ""],
+                ["نَشَأَ فِي حِجْرِ فُلاَنٍ أَيْ فِي حِضْنِهِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "harâm manâsınadır ki ismdir, şeran muharrem olan nesneden ibârettir; yukâlu: هَذَا حِجْرٌ عَلَيْكَ أَيْ حَرَامٌ Ve fit-Tenzîli: ﴿حِجْرًا مَحْجُورًا﴾ أَيْ حَرَامًا مُحَرَّمًا وَقُرِئَ بِالْفَتْحِ وَالْكَسْرِ ve حَجْرٌ [hacr] (hemân fethle) Beyâz ve pâkîze kumluğa denir.",
+              "misaller": [
+                ["هَذَا حِجْرٌ عَلَيْكَ أَيْ حَرَامٌ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "gözün hânesine denir; مَحْجِرُ الْعَيْنِ [mahcirul-ayn] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حَجْرٌ [Hacr] Yemâme eyâletinin kasabası yanî kâidetül-mülkü olan şehrin adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Benû Ukayl diyârında bir mevzi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "Uzre kabîlesi bilâdıyla Gatafân bilâdı beyninde bir vâdî adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "Benû Suleyme mahsûs bir karye adıdır; bunda hânın kesriyle de zebân-zeddir.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "Gatafân bilâdında bir dağın adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "Yemende bir mevzi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 10,
+              "etiket": "",
+              "tanim": "bir mevzi adıdır ki orada Devs kabîlesiyle Kinâne meyânında bir vaka olmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 11,
+              "etiket": "",
+              "tanim": "حَجْرٌ [hacr] حَجْرَةٌ [hacret] lafzından cem-i cinsi olur ki نَاحِيَةٌ [nâhiyet] manâsınadır; yukâlu: تَنَحَّى فِي حَجْرَةٍ أَيْ نَاحِيَةٍ",
+              "misaller": [
+                ["تَنَحَّى فِي حَجْرَةٍ أَيْ نَاحِيَةٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجْرُ",
+          "okunus": "el-hacr",
+          "koken": "hânın harekât-ı selâsı ve cîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hacr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Tasarruftan men etmek; ve minhu kavluke: حَجَرَ عَلَيْهِ الْقَاضِي يَحْجُرُ حَجْرًا مِنَ الْبَابِ الْأَوَّلِ Ve Muhtâr-ı Sihâhta وَبَابُهُ قَطَعَ dediği sahîh değildir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَجْرٌ [Hacr] Yemâme kasabasının adıdır; müzekker ve müennes istimâl olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حَجْرٌ [hacr] İnsânın kucağı, kenâr-ı merdüm manâsına; kesriyle dahi lügattır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حَجْرٌ [hacr] Harâm manâsına da gelir ve lâkin kesr efsahtır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Bârî taâlânın ﴿وَحَرْثٌ حِجْرٌ﴾ (الأنعام 138) dediği kavl-i şerîfi ve وَيَقُولُ الْمُشْرِكُونَ يَوْمَ الْقِيَامَةِ إِذَا رَأَوْا مَلٰئِكَةَ الْعَذَابِ﴿حِجْرًا مَحْجُورًا﴾ (الفرقان 22) buyurduğu kavl-i şerîfi ki “حَرَامًا مُحَرَّمًا” manâsınadır, fethle ve kesrle kırâat olunmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "“حِجْرًا مَحْجُورًا” dediklerinin aslı budur ki onlar dünyâda havf ettikleri kimseye “فِي الشَّهْرِ الْحَرَامِ” derlerdi eşhür-i hürümde mukâtele olmadığına binâen, âhirinde dahi böyle demekle nefi olur sanırlardı.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجْرُ",
+          "okunus": "el-hacr",
+          "koken": "hânın fethi ve cîmin sükûnuyla"
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "HACİR – HACR",
+          "yazilis": "ﺣﺠﺮ",
+          "tur": "i.",
+          "koken": "Ar. ḥacr",
+          "manalar": [
+            {
+              "etiket": "hukuk.",
+              "tanim": "Bir kimseyi, kānûnun kabul ettiği bir sebeple kendi malını ve haklarını istediği gibi kullanmaktan menetme, kısıt",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Ne yaptığını bilmeyecek durumda olan bir kimseyi kānun yoluyle malını kullanmaktan menetmek. ● Hacren ( ﺣﺠﺮﺍً ) zf. ( ḥacr ’in tenvinli şekli) Hacir yoluyle, malını kullanmaktan menetmek sûretiyle",
+              "misaller": [],
+              "deyim": "Hacir altına almak"
+            }
+          ]
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hacret",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحَجَرَاتُ [el-hacerât] (fethateynle) حَجْرَةٌ [hacret]in cemi, nâhiyeler manâsına, جَمْرَةٌ [cemret] ve جَمْرٌ [cemr] ve جَمَرَاتٌ [cemerât] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَجْرَةٌ [hacret] Mâl ve menâl manâsına da gelir. Kaçan bir kimsenin mâlı çok olsa “قَدِ انْتَشَرَتْ حَجْرَتُهُ” derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجْرُ",
+          "okunus": "el-hacr",
+          "koken": "hânın fethi ve cîmin sükûnuyla"
+        }
+      ],
+      "حِجْر": [
+        {
+          "eser": "Kamus",
+          "madde": "hicr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حَجْرٌ [hacr]-i mezkûr ile manâ-yı evvelde mürâdiftir, niteki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حِجْرٌ [hicr] Akl ve hûş manâsınadır, nâ-sezâ umûrdan sâhibini men eylediği için; yukâlu: هُوَ مِنْ ذَوِي الْحِجْرِ أَيِ الْعَقْلِ ve حِجْرُالْكَعْبَةِ [Hicrul-Kabet] Beyt-i şerîfin cânib-i şimâlîsinde vâki Hatîm ile müdâr olan mevziden ibârettir ki beyt-i şerîftendir, gûyâ ki beyt-i şerîfin kucağıdır yâhûd حَجَرٌ [hacer] ile muhât olduğu mülâhazasına mebnîdir.",
+              "misaller": [
+                ["هُوَ مِنْ ذَوِي الْحِجْرِ أَيِ الْعَقْلِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حِجْرٌ [Hicr] Vâdil-Kurâ kurbünde Semûd kavminin diyârı yâhûd bilâdı ismidir ve fîhi kavluhu taâlâ: ﴿كَذَبَ أَصْحَابُ الْحِجْرِ الْمُرْسَلِينَ﴾ Tâife-i mezbûre Hazret-i Sâlih kavmidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حِجْرٌ [hicr] Kısrak ata ıtlâk olunur, erkeği dirâbdan men eylediği için; bunda hâyla حِجْرَةٌ [hicret] demek lahndır. Cemi حُجُورٌ [hucûr] ve حُجُورَةٌ [hucûret]tir, zammla.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "حِجْرٌ [hicr] Hısımlık ve karâbet manâsınadır ki bîgâneyi mânidir; tekûlu: بَيْنِي وَبَيْنَهُ حِجْرٌ أَيْ قَرَابَةٌ Ve bir adamın kucağında yâ önünde olan sevbe denir.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "حِجْرُالرَّجُلِ [hicrur-recul] ve حِجْرُالْمَرْأَةِ [hicrul-meret] Er ve avretin nâ-mahrem yerlerine ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "حِجْرٌ [Hicr] Benû Suleym diyârında bir karye adıdır. Bu iki mâddede fethle de câizdir ve hıfz ve kenf ve himâyet manâsına müstameldir; yukâlu: نَشَأَ فُلاَنٌ فِي حِجْرِ فُلاَنٍ وَفِي حَجْرِهِ بِالْفَتْحِ أَيْ فِي حِفْظِهِ وَسَتْرِهِ Ve Vehb b. Râşid el-Hicrî ulemâ-i Mısrdandır.",
+              "misaller": [
+                ["نَشَأَ فُلاَنٌ فِي حِجْرِ فُلاَنٍ وَفِي حَجْرِهِ بِالْفَتْحِ أَيْ فِي حِفْظِهِ وَسَتْرِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحِجْرُ",
+          "okunus": "el-hicr",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hicr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İnsânın kucağı, kenâr-ı merdüm manâsına, nitekim mürûr etti.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حِجْرٌ [Hicr] Kabe, verâ-i Hatîmin müştemil olduğu yere dahi derler ki beyt-i şerîftendir, şimâli cânibindedir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "her nesne ki duvar kılına ona حِجْرٌ [hicr] derler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حِجْرٌ [Hicr] Nâhiye-i Şâmda Vâdil-Kurâ kurbünde menâzil-i Semûda dahi derler. Kâlallâhu tebâreke ve taâlâ: ﴿كَذَّبَ أَصْحَابُ الْحِجْرِ الْمُرْسَلِينَ﴾ (الحجر 80) Ve حِجْرٌ [hicr] Müennes olan ata dahi ıtlâk olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحِجْرُ",
+          "okunus": "el-hicr",
+          "koken": "hânın kesriyle ve cîmin sükûnuyla"
+        }
+      ],
+      "حُجْر": [
+        {
+          "eser": "Kamus",
+          "madde": "hucr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İmruulkays nâm şâir-i meşhûrun pederi ve cedd-i alâsı ismleridir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Hucr b. Rebîa ve Hucr b. Adiyy ve Hucr b. en-Nu mân ve Hucr b. Yezîd ashâbdandır ve Hucr b. el-Anbes tabiîndendir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حُجْرٌ [Hucr] Yemende bir karye adıdır ki nevâhî-i Bedrdendir; alâm-ı ulemâdan Yahyâ b. el-Munzir ve Muhammed b. Ahmed b. Câbir el-Hucrî oradandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "حُجْرٌ",
+          "okunus": "hucr",
+          "koken": "hânın zammı ve cîmin sükûnu ve zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hucr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Def manâsına. Tâife-i Arab bir nesneyi kerîh görseler, حُجْرًا لَهُ derler; ey: دَفْعًا ki o kerîh gördükleri emrden istiâze olur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حُجْرٌ [Hucr] Kezâlik ricâlden bir kimsenin adıdır ki o Hucr el-Kindîdir ki Âkilul-Murârla mülakkabdır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Hucr b. Îsânın dahi adıdır ki o el-Edîr demekle mülakkabdır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "bunda zamm-ı ayn dahi câizdir: عُسْرٌ [usr]le عُسُرٌ [usur] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "حُجْرٌ [hucr] Harâma dahi ıtlâk olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُجْرُ",
+          "okunus": "el-hucr",
+          "koken": "hânın zammı ve cîmin sükûnuyla"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-hucrân",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحُجْرَانُ [el-hucrân] (hânın zammı ve kesriyle) Men eylemek manâsınadır; yukâlu: حَجَرَهُ حُجْرَانًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَنَعَهُ ve yukâlu: حَجَرَ عَلَى الصَّغِيرِ الْقَاضِي إِذَا مَنَعَهُ مِنَ التَّصَرُّفِ فِي مَالِهِ Ve حَجْرٌ [hacr] (hânın fethi ve kesriyle) İnsânın kucağına denir, حِضْنٌ [hidn] ve kenâr ve âgûş manâsınadır; yukâlu: نَشَأَ فِي حِجْرِ فُلاَنٍ أَيْ فِي حِضْنِهِ Fukahânın حِجْرُ حِضَانَةٍ [hicru hidânet] tabîrleri bundandır.",
+              "misaller": [
+                ["حَجَرَهُ حُجْرَانًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا مَنَعَهُ", ""],
+                ["حَجَرَ عَلَى الصَّغِيرِ الْقَاضِي إِذَا مَنَعَهُ مِنَ التَّصَرُّفِ فِي مَالِهِ", ""],
+                ["نَشَأَ فِي حِجْرِ فُلاَنٍ أَيْ فِي حِضْنِهِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "harâm manâsınadır ki ismdir, şeran muharrem olan nesneden ibârettir; yukâlu: هَذَا حِجْرٌ عَلَيْكَ أَيْ حَرَامٌ Ve fit-Tenzîli: ﴿حِجْرًا مَحْجُورًا﴾ أَيْ حَرَامًا مُحَرَّمًا وَقُرِئَ بِالْفَتْحِ وَالْكَسْرِ ve حَجْرٌ [hacr] (hemân fethle) Beyâz ve pâkîze kumluğa denir.",
+              "misaller": [
+                ["هَذَا حِجْرٌ عَلَيْكَ أَيْ حَرَامٌ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "gözün hânesine denir; مَحْجِرُ الْعَيْنِ [mahcirul-ayn] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حَجْرٌ [Hacr] Yemâme eyâletinin kasabası yanî kâidetül-mülkü olan şehrin adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Benû Ukayl diyârında bir mevzi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "Uzre kabîlesi bilâdıyla Gatafân bilâdı beyninde bir vâdî adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "Benû Suleyme mahsûs bir karye adıdır; bunda hânın kesriyle de zebân-zeddir.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "Gatafân bilâdında bir dağın adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "Yemende bir mevzi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 10,
+              "etiket": "",
+              "tanim": "bir mevzi adıdır ki orada Devs kabîlesiyle Kinâne meyânında bir vaka olmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 11,
+              "etiket": "",
+              "tanim": "حَجْرٌ [hacr] حَجْرَةٌ [hacret] lafzından cem-i cinsi olur ki نَاحِيَةٌ [nâhiyet] manâsınadır; yukâlu: تَنَحَّى فِي حَجْرَةٍ أَيْ نَاحِيَةٍ",
+              "misaller": [
+                ["تَنَحَّى فِي حَجْرَةٍ أَيْ نَاحِيَةٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجْرُ",
+          "okunus": "el-hacr",
+          "koken": "hânın harekât-ı selâsı ve cîmin sükûnuyla"
+        }
+      ],
+      "حَجَر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HACER",
+          "yazilis": "ﺣﺠﺮ",
+          "tur": "i.",
+          "koken": "Ar. ḥacer",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Taş",
+              "misaller": [
+                ["Kim bunun katında şekker bir hacer", "Süleyman Çelebi"],
+                ["Bir hacer var idi nihâyette / Katı bâlâ idi salâbette", "Sâlim Tezkiresi"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1. Taş, odun türünden değersiz şeyler. 2. mec. İşe yaramayan kıymetsiz adam",
+              "misaller": [],
+              "deyim": "Hacer şecer"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bk. HACERİESVED",
+              "misaller": [],
+              "deyim": "Hacer-i esved"
+            },
+            {
+              "etiket": "",
+              "tanim": "Dağ keteni",
+              "misaller": [],
+              "deyim": "Hacer-i fetîle"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kireç taşı",
+              "misaller": [],
+              "deyim": "Hacer-i kilsî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Manyetit",
+              "misaller": [],
+              "deyim": "Hacer-i mıknatısî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bk. HACERİSEMÂVÎ",
+              "misaller": [],
+              "deyim": "Hacer-i semâvî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Hacer-i semâvî, gök taşı",
+              "misaller": [],
+              "deyim": "Hacerü’l-cev"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "hacer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Taşa denir, âlet-i men olduğu için. Cemi أَحْجَارٌ [ahcâr] ve cem-i kılleti أَحْجُرٌ [ahcur]dur ve حِجَارَةٌ [hicâret] gelir hânın kesriyle ve âhirde hâyla ve حِجَارٌ [hicâr] gelir hâsız.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجَرُ",
+          "okunus": "el-hacer",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "hacer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müellif burada حَجَرٌ [hacer]i صَخْرَةٌ [sahret] ile tefsîr eylemiştir ki tefsîr bil-ahasstır, zîrâ صَخْرَةٌ [sahret] hacer-i azîme denir ki kaya tabîr olunur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Basâirde marûf cevher-i sulb ile beyân eylemiştir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حَجَرٌ [hacer] Madenden çıkıp henüz zevb ve siyâgat olunmamış gümüşe ve altına ıtlâk olunur. حَجَرَانِ [hacerân] altın ile gümüştür.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "حَجَرٌ [hacer] Kuma ıtlâk olunur, رَمْلٌ [reml] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "اَلْحَجَرُالْأَسْوَدُ [el-hacerul-esvedu] Kabe-i muazzama cidârında marûf seng-i esaddır, kemâline mebnî yalnız حَجَرٌ [hacer] dahi ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "حَجَرٌ [Hacer] Endelüste bir şehr-i azîm ismidir ki bir cebel üzerinde vâkidir; muhaddisînden Muhammed b. Yahyâ el-Hacerî oradandır.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "bir başka mevzi adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "حَجَرُالذَّهَبِ [Haceruz-Zeheb] Dimaşkta bir mahalle adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "حَجَرُشُغْلاَنَ [Haceru Şuglâne] (şîn-i mucemenin fethiyle) Antâkiyye kurbünde bir hısn adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 10,
+              "etiket": "",
+              "tanim": "حَجَرٌ [hacer] Âfet ve dâhiyeye ıtlâk olunur; yukâlu: رُمِيَ بِحَجَرِ الْأَرْضِ أَيْ بِدَاهِيَةٍ Ve ashâbdan Evs hazretlerinin pederi ismidir.",
+              "misaller": [
+                ["رُمِيَ بِحَجَرِ الْأَرْضِ أَيْ بِدَاهِيَةٍ", ""]
+              ]
+            },
+            {
+              "no": 11,
+              "etiket": "",
+              "tanim": "şuarâ-yı Câhiliyyeden dîger Evs nâm kimsenin pederi adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 12,
+              "etiket": "",
+              "tanim": "muhaddisînden Enes cenâbının pederi ismidir, alâ-kavlin bu iki كَتِفٌ [ketif] veznindedir.",
+              "misaller": []
+            },
+            {
+              "no": 13,
+              "etiket": "",
+              "tanim": "Eyyûb b. Hacer ve Muhammed b. Yahyâ b. Ebî Hacer hadîs rivâyet eylediler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hacer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Taş.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجَرُ",
+          "okunus": "el-hacer",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hacer",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Taş",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-hacerât",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحَجَرَاتُ [el-hacerât] (fethateynle) حَجْرَةٌ [hacret]in cemi, nâhiyeler manâsına, جَمْرَةٌ [cemret] ve جَمْرٌ [cemr] ve جَمَرَاتٌ [cemerât] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَجْرَةٌ [hacret] Mâl ve menâl manâsına da gelir. Kaçan bir kimsenin mâlı çok olsa “قَدِ انْتَشَرَتْ حَجْرَتُهُ” derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَجْرُ",
+          "okunus": "el-hacr",
+          "koken": "hânın fethi ve cîmin sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hacer-i esved",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Karataş",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hacer-i semâî",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Göktaşı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حِجَار": [
+        {
+          "eser": "Vankulu",
+          "madde": "hicar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْحِجَارَةُ [el-hicâret] (hânın kesriyle) Kezâlik bunların ikisi dahi cem-i kesrettir; ke-kavlike: جَمَلٌ وَجِمَالَةٌ وَذَكَرٌ وَذِكَارَةٌ Faal vezni bu sîga üzere cem olunmak nâdirdir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَجَرٌ [Hacer] İsm-i recül dahi olur, bundandır: Evs b. Hacer ki şuarâ-yı Arabdandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحِجَارُ",
+          "okunus": "el-hicâr",
+          "koken": "hânın kesriyle"
+        }
+      ],
+      "حُجْرَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "hucran",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حَاجِرٌ [hâcir]in cemidir, حَائِرٌ [hâir]in cemi حُورَانٌ [hûrân] ve شَابٌّ [şâbb]ın شُبَّانٌ [şubbân] geldiği gibi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَائِرٌ [hâir] hâ-i mühmele ile su cem olduğu yerdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُجْرَانُ",
+          "okunus": "el-hucrân",
+          "koken": "hânın zammı ve cîmin sükûnuyla"
+        }
+      ],
+      "تَحْجِير": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TAHCİR",
+          "yazilis": "ﺗﺤﺠﻴﺮ",
+          "tur": "i.",
+          "koken": "Ar. ḥacer “taş”tan taḥcіr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir yere taş yığma, bir arâzinin etrâfına başkasının el koymaması için taş koyma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "tahcir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ay incerek ve yufkarak pervâz gibi ağıllanmak, alâ-kavlin yufkaca bulut içre olmakla çevresi buluttan hâle şeklinde olmak manâsınadır; yukâlu: حَجَّرَ الْقَمَرُ إِذَا اسْتَدَارَ بِخَطٍّ دَقِيقٍ مِنْ غَيْرِ أَنْ يَغْلُظَ أَوْ صَارَ حَوْلَهُ دَارَةٌ فِي الْغَيْمِ Ve deve kısmının gözlerinin çevresi değirmi dâgla dâglanmak manâsınadır; yukâlu: حَجَّرَ الْبَعِيرُ إِذَا وُسِمَ حَوْلَ عَيْنَيْهِ بِمِيسَمٍ مُسْتَدِيرٍ",
+              "misaller": [
+                [
+                  "حَجَّرَ الْقَمَرُ إِذَا اسْتَدَارَ بِخَطٍّ دَقِيقٍ مِنْ غَيْرِ أَنْ يَغْلُظَ أَوْ صَارَ حَوْلَهُ دَارَةٌ فِي الْغَيْمِ",
+                  ""
+                ],
+                ["حَجَّرَ الْبَعِيرُ إِذَا وُسِمَ حَوْلَ عَيْنَيْهِ بِمِيسَمٍ مُسْتَدِيرٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّحْجِيرُ",
+          "okunus": "et-tahcîr",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tahcir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ay ağıla girmek; yukâlu: حَجَّرَ الْقَمَرُ إِذَا اسْتَدَارَ بِخَطٍّ دَقِيقٍ وَكَذَلِكَ إِذَا صَارَتْ حَوْلَهُ دَارَةٌ فِي الْغَيْمِ Ve devenin gözü etrâfına müdevver dâg vurmağa dahi derler.",
+              "misaller": [
+                [
+                  "حَجَّرَ الْقَمَرُ إِذَا اسْتَدَارَ بِخَطٍّ دَقِيقٍ وَكَذَلِكَ إِذَا صَارَتْ حَوْلَهُ دَارَةٌ فِي الْغَيْمِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّحْجِيرُ",
+          "okunus": "et-tahcîr",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tahcîr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çit çekme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَحْجُور": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MAHCUR",
+          "yazilis": "ﻣﺤﺠﻮﺭ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve i. (Ar. ḥacr “malını kullanmaktan menetmek”ten maḥcūr ) Kendi malını dilediği gibi kullanmaktan kānûnen menedilmiş, hacir altına alınmış (kimse)",
+              "misaller": [
+                [
+                  "Mahcur iki kısımdır: Birincisi sıbyan, mecânin, mâtûhin gibi zâten mahcur olanlar, ikincisi ber-muktezâ-yı şer’ hâkim tarafından hacir edilenlerdir, süfehâ gibi",
+                  "Lugat-ı Nâci’den"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Hacir altına alınmak",
+              "misaller": [],
+              "deyim": "Mahcur olmak"
+            }
+          ]
+        }
+      ],
+      "مَحْجِر": [
+        {
+          "eser": "Kamus",
+          "madde": "mahcir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمِحْجَرُ [el-mihcer] (مِنْبَرٌ [minber] vezninde) Bâgçeye ıtlâk olunur, حَدِيقَةٌ [hadîkat] manâsına; etrâfında حَاجِرٌ [hâcir] ve حَاجِزٌ [hâciz] yapılmakla bîgâna memnû olur. Cemi مَحَاجِرُ [mehâcir]dir; yukâlu: قَلَّتْ مِيَاهُ الْمَحَاجِرِ أَيِ الْحَدَائِقِ Ve مَحْجِرُالْعَيْنِ [mahcirul-ayn] Gözün oyumuna denir ki Fârisîde hâne-i çeşm denir, nikâbın gözlük tabîr olunan deliğinden oyumunca görünen dâiresinden ibârettir. Alâ-kavlin nikâbın vech-i mezkûr üzere gözlüğüne denir ki Arab nisvânı nikâblarının göze gelecek yerlerinde göz dâiresince birer delik edip taşraya onlardan nazar ederler, yoksa bu diyârın avretleri gibi tâ-be-sîne küşâde eylemezler. Kâle fil-Esâs إِمْرَأَةٌ بَيْضَاءُ الْمَحَاجِرِ وَبَدَا مَحْجِرُهَا مِنَ النِّقَابِ Ve مَحْجِرٌ [mahcir] Başta sarılmış olduğu hâlde sarığa ıtlâk olunur.",
+              "misaller": [
+                ["قَلَّتْ مِيَاهُ الْمَحَاجِرِ أَيِ الْحَدَائِقِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "köyün ve çiftliğin çevresine ve havâlîsine denir; ümerâ-i Yemenin mahsûs koruluklarına مَحْجِرٌ [mahcir] ve mecmûuna مَحَاجِرُ [mehâcir] ıtlâkı bundandır; لِهَذِهِ الْقَرْيَةِ مَحْجِرٌ فِيهَا رِعْيٌ كَثِيرٌ وَهُوَ مَا حَوْلَهَا",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَحْجِرُ",
+          "okunus": "el-mahcir",
+          "koken": "مَجْلِسٌ [meclis] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mahcir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bâgçe, hadîka manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مَحْجِرٌ [mahcir] Kezâlik nikâbda göz görecek mikdârı deliklerdir ki diyâr-ı Arabda nikâb bu vech üzere olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَحْجِرُ",
+          "okunus": "el-mahcir",
+          "koken": "alâ-vezni اَلْمَجْلِس [el-meclis]"
+        }
+      ],
+      "مِحْجَر": [
+        {
+          "eser": "Kamus",
+          "madde": "mihcer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمِحْجَرُ [el-mihcer] (مِنْبَرٌ [minber] vezninde) Bâgçeye ıtlâk olunur, حَدِيقَةٌ [hadîkat] manâsına; etrâfında حَاجِرٌ [hâcir] ve حَاجِزٌ [hâciz] yapılmakla bîgâna memnû olur. Cemi مَحَاجِرُ [mehâcir]dir; yukâlu: قَلَّتْ مِيَاهُ الْمَحَاجِرِ أَيِ الْحَدَائِقِ Ve مَحْجِرُالْعَيْنِ [mahcirul-ayn] Gözün oyumuna denir ki Fârisîde hâne-i çeşm denir, nikâbın gözlük tabîr olunan deliğinden oyumunca görünen dâiresinden ibârettir. Alâ-kavlin nikâbın vech-i mezkûr üzere gözlüğüne denir ki Arab nisvânı nikâblarının göze gelecek yerlerinde göz dâiresince birer delik edip taşraya onlardan nazar ederler, yoksa bu diyârın avretleri gibi tâ-be-sîne küşâde eylemezler. Kâle fil-Esâs إِمْرَأَةٌ بَيْضَاءُ الْمَحَاجِرِ وَبَدَا مَحْجِرُهَا مِنَ النِّقَابِ Ve مَحْجِرٌ [mahcir] Başta sarılmış olduğu hâlde sarığa ıtlâk olunur.",
+              "misaller": [
+                ["قَلَّتْ مِيَاهُ الْمَحَاجِرِ أَيِ الْحَدَائِقِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "köyün ve çiftliğin çevresine ve havâlîsine denir; ümerâ-i Yemenin mahsûs koruluklarına مَحْجِرٌ [mahcir] ve mecmûuna مَحَاجِرُ [mehâcir] ıtlâkı bundandır; لِهَذِهِ الْقَرْيَةِ مَحْجِرٌ فِيهَا رِعْيٌ كَثِيرٌ وَهُوَ مَا حَوْلَهَا",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَحْجِرُ",
+          "okunus": "el-mahcir",
+          "koken": "مَجْلِسٌ [meclis] vezninde"
+        }
+      ],
+      "حُجَيْرَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HÜCEYRE",
+          "yazilis": "ﺣﺠﻴﺮﻩ",
+          "tur": "i.",
+          "koken": "Ar. ḥucre ’den ḥuceyre",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çok küçük hücre, hücrecik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hüceyre",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hücrecik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حَجِر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HACİR – HACR",
+          "yazilis": "ﺣﺠﺮ",
+          "tur": "i.",
+          "koken": "Ar. ḥacr",
+          "manalar": [
+            {
+              "etiket": "hukuk.",
+              "tanim": "Bir kimseyi, kānûnun kabul ettiği bir sebeple kendi malını ve haklarını istediği gibi kullanmaktan menetme, kısıt",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Ne yaptığını bilmeyecek durumda olan bir kimseyi kānun yoluyle malını kullanmaktan menetmek. ● Hacren ( ﺣﺠﺮﺍً ) zf. ( ḥacr ’in tenvinli şekli) Hacir yoluyle, malını kullanmaktan menetmek sûretiyle",
+              "misaller": [],
+              "deyim": "Hacir altına almak"
+            }
+          ]
+        }
+      ],
+      "حُجُرَات": [
+        {
+          "eser": "Luggat",
+          "madde": "hücürât",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hücreler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حُجْرَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HÜCRE",
+          "yazilis": "ﺣﺠﺮﻩ",
+          "tur": "i.",
+          "koken": "Ar. ḥucre",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dışarı ile ilgisi mümkün mertebe az olan küçük oda, odacık",
+              "misaller": [
+                ["Medresede talebe ve müderris hücreleri.", ""],
+                ["Derviş hücresi.", ""],
+                ["Ziyâreti o kadar karanlık yapan ağaçlar kesilmiş, avludaki dergâh hücreleri yıkılmış…", "Ahmet H. Tanpınar"],
+                ["Günah çıkarma hücresine götürüyordu", "Mustafa N. Sepetçioğlu"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Hapishânelerde mahkûmların yalnız olarak kapatıldığı oda",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Gizli siyâsî faâliyet gösteren bir teşkîlâtın, birlikte çalışan belli sayıdaki kişilerden meydana gelen ve kendi üstündeki makāma karşı sorumlu olan en ufak bölümü",
+              "misaller": [],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "Eski binâlarda el altında bulunması gereken öteberiyi koymak için duvar içinde bırakılan, genellikle raflı oyuk kısım",
+              "misaller": [
+                ["Muhakkak bir konsol, hücre veya dolap köşesini işgal ediyor", "Refik H. Karay"],
+                ["Tuhaf şey, duvarın içindeki hücrede de yok", "Yusuf Z. Ortaç"]
+              ],
+              "no": 4
+            },
+            {
+              "etiket": "biyo.",
+              "tanim": "Canlılarda dokuları meydana getiren, bir zar içindeki protoplazma ve çekirdekten ibâret en küçük canlı birim [Kelime bu anlamını Türkçe’de kazanmıştır]",
+              "misaller": [
+                [" Hücre-i asabiyye: Sinir hücresi, nöron.", ""]
+              ],
+              "no": 5
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Bir mahkûmu geceli gündüzlü bir hücreye koymak sûretiyle uygulanan hapis cezası",
+              "misaller": [],
+              "deyim": "Hücre hapsi"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çalışma odası",
+              "misaller": [
+                ["Nâgehan başlayan bir hummâ-yı faâliyetle hücre-i iştigāline kapanarak…", "Hâlit Z. Uşaklıgil"]
+              ],
+              "deyim": "Hücre-i iştigal (mesâî)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Hz. Muhammed’in içinde bulunduğu oda anlamında saygı ifâdesi olarak kullanılır. ● Hücre-nişin ( ﺣﺠﺮﻩ ﻧﺸﻴﻦ ) birl. sıf. (Fars. nişіn “oturan” ile) 1. Hücrede oturan. 2. i. Mevlevîler’de çilesini bitirip kendine mahsus bir hücrede oturan ve “dede” adını alan derviş",
+              "misaller": [
+                ["Râif Dede, bir aralık Yenikapı Mevlevîhânesi’nde hücre-nişin oldu", "Sâdeddin N. Ergun"]
+              ],
+              "deyim": "Hücre-i saâdet"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hücre",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Odacık. Hücre, canlı organizmaların en küçük yapıtaşı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حُجَر": [
+        {
+          "eser": "Kamus",
+          "madde": "hucer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حُجْرَةٌ [hucret]in cemidir ki çardağa denir غُرْفَةٌ [gurfet] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "deve ağılına denir ki etrâfı taştan çevrilir. حُجْرَةُ الدَّارِ [hucretud-dâr] ki odaya denir, bundan mehûzdur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُجَرُ",
+          "okunus": "el-hucer",
+          "koken": "صُرَدٌ [surad] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hucer",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حُجْرَةٌ [hucret]in cemi, غُرْفَةٌ [gurfet] ile غُرَفٌ [guref] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُجَرُ",
+          "okunus": "el-hucer",
+          "koken": "hânın zammı ve cîmin fethiyle"
+        }
+      ],
+      "حُجَرَات": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HÜCERAT",
+          "yazilis": "ﺣﺠﺮﺍﺕ",
+          "tur": "i.",
+          "koken": "Ar. ḥucre ’nin çoğul eki -āt almış şekli ḥucrāt > ḥucerāt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hücreler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "حُجَيْرَات": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HÜCEYRAT",
+          "yazilis": "ﺣﺠﻴﺮﺍﺕ",
+          "tur": "i.",
+          "koken": "Ar. ḥuceyre ’nin çoğul eki -āt almış şekli ḥuceyrāt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Küçücük hücreler, hücrecikler",
+              "misaller": [
+                [
+                  "Saman altından akıttığımı iddia ettikleri su, öyle görünüyor ki Hâlit Fahri Bey’in saman gibi gevşek hüceyrât-ı dimâğiyyesine akıyor",
+                  "Reşat N. Güntekin"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hüceyrat",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hücrecikler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 21,
   "kuranda_var": true,

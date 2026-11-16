@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "حَوْب", "ḥawb", "günah işleme", "orta", ""],
       [888, "حِيب", "ḥīb", "günah işleme", "orta", ""],
-      [889, "حُوب", "ḥūb", "günah", "kuran", "Kur'ân"],
+      [889, "حُوب", "ḥūb", "Günâh ve hüzn ve vahşet manâlarınadır ki zikr olundu", "lugat", "Kur'ân · Kamus"],
       [517, "حَاب", "ḥāb", "günah işleme", "orta", ""],
       [518, "حِيَب", "ḥiyab", "günah işleme", "orta", ""],
       [5, "حُوُب", "ḥuwub", "günah işleme", "orta", ""],
@@ -538,7 +538,7 @@
       [421, "حَوَاب", "ḥawāb", "günah işleme", "orta", ""],
       [422, "حُوُوب", "ḥuwūb", "günah işleme", "orta", ""],
       [835, "حِيَاب", "ḥiyāb", "günah işleme", "orta", ""],
-      [918, "حُوب", "ḥūb", "günah", "kuran", "Kur'ân"],
+      [918, "حُوب", "ḥūb", "Günâh ve hüzn ve vahşet manâlarınadır ki zikr olundu", "lugat", "Kur'ân · Kamus"],
       [425, "حَوَابَة", "ḥawāba", "günah işleme", "orta", ""],
       [837, "حِيَابَة", "ḥiyāba", "günah işleme", "orta", ""],
       [427, "حُوُوبَة", "ḥuwūba", "günah işleme", "orta", ""],
@@ -555,7 +555,7 @@
       [439, "حَوْب", "ḥawb", "günah işleme türünden şey", "orta", ""],
       [840, "حَاب", "ḥāb", "günah işleme türünden şey", "orta", ""],
       [921, "حِيب", "ḥīb", "günah işleme türünden şey", "orta", ""],
-      [923, "حُوب", "ḥūb", "günah", "kuran", "Kur'ân"],
+      [923, "حُوب", "ḥūb", "Günâh ve hüzn ve vahşet manâlarınadır ki zikr olundu", "lugat", "Kur'ân · Kamus"],
       [447, "حَوِيب", "ḥawīb", "günah işleme türünden şey", "orta", ""],
       [843, "حِيَب", "ḥiyab", "günah işleme türünden şey", "orta", ""],
       [451, "حُوُب", "ḥuwub", "günah işleme türünden şey", "orta", ""],
@@ -978,7 +978,61 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حُوب": [
+        {
+          "eser": "Kamus",
+          "madde": "hub",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Günâh ve hüzn ve vahşet manâlarınadır ki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "helâk ve demâr manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "belâ ve mihnet ve maraz u illet manâlarınadır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "nefs ve zât manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُوبُ",
+          "okunus": "el-hûb",
+          "koken": "hânın zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hub",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Günâh, isamp;m manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُوبُ",
+          "okunus": "el-hûb",
+          "koken": "zamm-ı hâ ile"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

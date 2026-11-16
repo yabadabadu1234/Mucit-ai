@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "حَتْم", "ḥatm", "kesin hüküm", "kuran", "Kur'ân"],
+      [0, "حَتْم", "ḥatm", "Hâlis", "lugat", "Kur'ân · Kamus"],
       [1, "حِتْم", "ḥitm", "zorunlu olma", "orta", ""],
       [2, "حُتْم", "ḥutm", "zorunlu olma", "orta", ""],
       [3, "حَتَم", "ḥatam", "zorunlu olma", "orta", ""],
@@ -397,7 +397,7 @@
       [291, "حَتَمُون", "ḥatamūn", "her daim zorunlu olanlar", "orta", ""],
       [292, "حَتَمِين", "ḥatamīn", "her daim zorunlu olanlar", "orta", ""],
       [293, "حَتَمَات", "ḥatamāt", "her daim zorunlu olanlar, müennes", "orta", ""],
-      [294, "حَتْم", "ḥatm", "kesin hüküm", "kuran", "Kur'ân"],
+      [294, "حَتْم", "ḥatm", "Hâlis", "lugat", "Kur'ân · Kamus"],
       [295, "حَتْمَة", "ḥatma", "her daim zorunlu olan, müennes", "orta", ""],
       [296, "حَتْمَان", "ḥatmān", "her daim zorunlu olan, iki", "orta", ""],
       [297, "حَتْمَتَان", "ḥatmatān", "her daim zorunlu olan, iki, müennes", "orta", ""],
@@ -539,7 +539,7 @@
       [425, "حَتَامَة", "ḥatāma", "zorunlu olma", "orta", ""],
       [426, "حِتَامَة", "ḥitāma", "zorunlu olma", "orta", ""],
       [427, "حُتُومَة", "ḥutūma", "zorunlu olma", "orta", ""],
-      [428, "حَتْم", "ḥatm", "kesin hüküm", "kuran", "Kur'ân"],
+      [428, "حَتْم", "ḥatm", "Hâlis", "lugat", "Kur'ân · Kamus"],
       [429, "حِتْم", "ḥitm", "zorunlu olma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُحْتُومَة", "ʾuḥtūma", "zorunlu olma türünden şey", "orta", ""],
       [435, "حَوْتَم", "ḥawtam", "zorunlu olma türünden şey", "orta", ""],
       [437, "حَيْتَم", "ḥaytam", "zorunlu olma türünden şey", "orta", ""],
-      [439, "حَتْم", "ḥatm", "kesin hüküm", "kuran", "Kur'ân"],
+      [439, "حَتْم", "ḥatm", "Hâlis", "lugat", "Kur'ân · Kamus"],
       [441, "حَتَم", "ḥatam", "zorunlu olma türünden şey", "orta", ""],
       [443, "حِتْم", "ḥitm", "zorunlu olma türünden şey", "orta", ""],
       [445, "حُتْم", "ḥutm", "zorunlu olma türünden şey", "orta", ""],
@@ -1092,7 +1092,69 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حَتْم": [
+        {
+          "eser": "Kamus",
+          "madde": "hatm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hâlis manâsınadır; bunda مَحْتٌ [maht] lafzından maklûbdur; yukâlu: شَيْءٌ مَحْتٌ وَحَتْمٌ أَيْ خَالِصٌ Ve hükm ve kazâ manâsınadır; yukâlu: حَتْمٌ مَقْضِيٌّ أَيْ حُكْمٌ Ve îcâb ve ilzâm manâsınadır; yukâlu: وَقَعَ بِحَتْمِهِ أَيْ بِإِيجَابِهِ Ve bir işi muhkem ve metîn eylemeğe denir;cemi حُتُومٌ [hutûm] gelir. Şârih der ki burada bazı nüshada takdîm ve tehîr vâkidir,savâb olan وَإِحْكَامُ الْأَمْرِ وَإِيجَابُهُ unvânında olmaktır.",
+              "misaller": [
+                ["شَيْءٌ مَحْتٌ وَحَتْمٌ أَيْ خَالِصٌ", ""],
+                ["حَتْمٌ مَقْضِيٌّ أَيْ حُكْمٌ", ""],
+                ["وَقَعَ بِحَتْمِهِ أَيْ بِإِيجَابِهِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَتْمٌ [hatm] lafzı fil-asl masdardır, ism mevkiinde dahi müstameldir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حَتْمٌ [hatm] Masdar olur, bir kimse üzere bir nesne ile hükm eylemek manâsına; yukâlu: حَتَمَ بِكَذَا حَتْمًا مِنَ الْبَابِ الثَّانِي أَيْ قَضَى Ve bir nesneyi bir kimse üzere îcâb ve ilzâm eylemek manâsınadır; yukâlu: حَتَمَ عَلَيْهِ الْأَمْرَ إِذَا أَوْجَبَهُ Ve bir işi metîn ve muhkem kılmak manâsınadır; yukâlu: حَتَمَ الْأَمْرَ إِذَا أَحْكَمَهُ",
+              "misaller": [
+                ["حَتَمَ بِكَذَا حَتْمًا مِنَ الْبَابِ الثَّانِي أَيْ قَضَى", ""],
+                ["حَتَمَ عَلَيْهِ الْأَمْرَ إِذَا أَوْجَبَهُ", ""],
+                ["حَتَمَ الْأَمْرَ إِذَا أَحْكَمَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَتْمُ",
+          "okunus": "el-hatm",
+          "koken": "خَتْمٌ [hatm] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hatm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi muhkem kılmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَتْمٌ [hatm] Hükme dahi derler, kazâ manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَتْمُ",
+          "okunus": "el-hatm",
+          "koken": "hânın fethi ve tânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -11,7 +11,7 @@
       [0, "بَصْل", "baṣl", "soğan", "kontrol", ""],
       [1, "بِصْل", "biṣl", "soğan", "kontrol", ""],
       [2, "بُصْل", "buṣl", "soğan", "kontrol", ""],
-      [3, "بَصَل", "baṣal", "soğan", "kuran", "Kur'ân"],
+      [3, "بَصَل", "baṣal", "Soğan", "lugat", "Kur'ân · Kubbealtı"],
       [4, "بِصَل", "biṣal", "soğan", "kontrol", ""],
       [5, "بُصُل", "buṣul", "soğan", "kontrol", ""],
       [6, "بُصُول", "buṣūl", "soğan", "kontrol", ""],
@@ -383,7 +383,7 @@
       [284, "بَصُلُون", "baṣulūn", "her daim soğan olanlar", "kontrol", ""],
       [285, "بَصُلِين", "baṣulīn", "her daim soğan olanlar", "kontrol", ""],
       [286, "بَصُلَات", "baṣulāt", "her daim soğan olanlar, müennes", "kontrol", ""],
-      [287, "بَصَل", "baṣal", "soğan", "kuran", "Kur'ân"],
+      [287, "بَصَل", "baṣal", "Soğan", "lugat", "Kur'ân · Kubbealtı"],
       [288, "بَصَلَة", "baṣala", "her daim soğan olan, müennes", "kontrol", ""],
       [289, "بَصَلَان", "baṣalān", "her daim soğan olan, iki", "kontrol", ""],
       [290, "بَصَلَتَان", "baṣalatān", "her daim soğan olan, iki, müennes", "kontrol", ""],
@@ -543,7 +543,7 @@
       [435, "بَوْصَل", "bawṣal", "soğan olma türünden şey", "kontrol", ""],
       [437, "بَيْصَل", "bayṣal", "soğan olma türünden şey", "kontrol", ""],
       [439, "بَصْل", "baṣl", "soğan olma türünden şey", "kontrol", ""],
-      [441, "بَصَل", "baṣal", "soğan", "kuran", "Kur'ân"],
+      [441, "بَصَل", "baṣal", "Soğan", "lugat", "Kur'ân · Kubbealtı"],
       [443, "بِصْل", "biṣl", "soğan olma türünden şey", "kontrol", ""],
       [445, "بُصْل", "buṣl", "soğan olma türünden şey", "kontrol", ""],
       [447, "بَصِيل", "baṣīl", "soğan olma türünden şey", "kontrol", ""],
@@ -579,7 +579,7 @@
       [466, "بَصَلَة", "baṣala", "soğan olmalar", "kontrol", ""],
       [467, "بُصَّال", "buṣṣāl", "soğan olmalar", "kontrol", ""],
       [468, "بَصَال", "baṣāl", "soğan olmalar", "kontrol", ""],
-      [469, "بَصَل", "baṣal", "soğan", "kuran", "Kur'ân"],
+      [469, "بَصَل", "baṣal", "Soğan", "lugat", "Kur'ân · Kubbealtı"],
       [470, "مَبَاصِل", "mabāṣil", "soğan olmalar", "kontrol", ""],
       [471, "مَبَاصِيل", "mabāṣīl", "soğan olmalar", "kontrol", ""],
       [472, "بَوَاصِل", "bawāṣil", "soğan olmalar", "kontrol", ""],
@@ -880,7 +880,39 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَصَل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BASAL",
+          "yazilis": "ﺑﺼﻞ",
+          "tur": "i.",
+          "koken": "Ar. baṣal",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Soğan",
+              "misaller": [
+                ["İstediği ya basal ya mercimek", "Niyâzî-i Mısrî"],
+                [
+                  "Okkası çıktı ona hayrette kaldık mâ-hasal / Olmamıştır böyle İstanbul’da buhrân-ı basal",
+                  "Üsküdarlı Tal’at Bey"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bâzı otların soğan biçimindeki kökleri",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

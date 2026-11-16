@@ -22,7 +22,7 @@
       [11, "فُخُورَة", "fuḫūra", "övünme", "orta", ""],
       [12, "فِخَارَة", "fiḫāra", "övünme", "orta", ""],
       [13, "فَخِير", "faḫīr", "övünme", "orta", ""],
-      [14, "فَخُور", "faḫūr", "övünen", "kuran", "Vikisözlük: proud"],
+      [14, "فَخُور", "faḫūr", "Zekeri büyük olan at", "lugat", "Vikisözlük: proud · Vankulu"],
       [15, "فَخَرَان", "faḫarān", "övünme", "orta", ""],
       [16, "فُخْرَان", "fuḫrān", "övünme", "orta", ""],
       [17, "فِخْرَان", "fiḫrān", "övünme", "orta", ""],
@@ -151,7 +151,7 @@
       [100, "مُتَفَخَّر", "mutafaḫḫar", "kendini zorlayarak övünme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَفَاخُر", "tafāḫur", "birbirine övünme", "orta", ""]
+      [101, "تَفَاخُر", "tafāḫur", "Övünme", "lugat", "Luggat"]
     ],
     "ism-i merre · bâb VI": [
       [102, "تَفَاخُرَة", "tafāḫura", "bir kere birbirine övünme", "orta", ""]
@@ -209,9 +209,9 @@
         135,
         "اِفْتِخَار",
         "iftiḫār",
-        "kendisi için övünme",
-        "orta",
-        "Vikisözlük: masdar (bâb VIII): to be proud of, to brag, to flaunt"
+        "Övünme",
+        "lugat",
+        "Vikisözlük: masdar (bâb VIII): to be proud of, to brag, to flaunt · Luggat"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -296,7 +296,7 @@
       [516, "اِفْخِوَّار", "ifḫiwwār", "aşırı övünme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "فَاخِر", "fāḫir", "övünen", "orta", "Vikisözlük: proud, boasting"],
+      [213, "فَاخِر", "fāḫir", "Değerli", "lugat", "Vikisözlük: proud, boasting · Luggat"],
       [214, "فَاخِرَة", "fāḫira", "övünen, müennes", "orta", ""],
       [215, "فَاخِرَان", "fāḫirān", "övünen, iki", "orta", ""],
       [216, "فَاخِرَتَان", "fāḫiratān", "övünen, iki, müennes", "orta", ""],
@@ -376,7 +376,7 @@
       [263, "فَخِيرُون", "faḫīrūn", "her daim övünenler", "orta", ""],
       [264, "فَخِيرِين", "faḫīrīn", "her daim övünenler", "orta", ""],
       [265, "فَخِيرَات", "faḫīrāt", "her daim övünenler, müennes", "orta", ""],
-      [266, "فَخُور", "faḫūr", "övünen", "kuran", "Vikisözlük: proud"],
+      [266, "فَخُور", "faḫūr", "Zekeri büyük olan at", "lugat", "Vikisözlük: proud · Vankulu"],
       [267, "فَخُورَة", "faḫūra", "her daim övünen, müennes", "orta", ""],
       [268, "فَخُورَان", "faḫūrān", "her daim övünen, iki", "orta", ""],
       [269, "فَخُورَتَان", "faḫūratān", "her daim övünen, iki, müennes", "orta", ""],
@@ -451,7 +451,7 @@
       [336, "فَخَّارَة", "faḫḫāra", "pek çok övünen", "orta", ""],
       [337, "فَخَّارَتَان", "faḫḫāratān", "pek çok övünen, iki", "orta", ""],
       [338, "فَخَّارَات", "faḫḫārāt", "pek çok övünenler, müennes", "orta", ""],
-      [339, "فَخُور", "faḫūr", "övünen", "kuran", "Vikisözlük: proud"],
+      [339, "فَخُور", "faḫūr", "Zekeri büyük olan at", "lugat", "Vikisözlük: proud · Vankulu"],
       [340, "فَخُورَة", "faḫūra", "çok övünen, müennes", "orta", ""],
       [341, "فَخُورَان", "faḫūrān", "çok övünen, iki", "orta", ""],
       [342, "فَخُورَتَان", "faḫūratān", "çok övünen, iki, müennes", "orta", ""],
@@ -2288,7 +2288,331 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَخُور": [
+        {
+          "eser": "Vankulu",
+          "madde": "fehur",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zekeri büyük olan at.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "özdeği büyük ve budakları kalın olan hurmâ ağacına dahi فَخُورٌ [fehûr] derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Asmaî eyitti: فَخُورٌ [fehûr] memesi büyük olup memenin delikleri küçük olan nâkaya dahi derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَخُورُ",
+          "okunus": "el-fehûr",
+          "koken": "fânın fethi ve hânın zammıyla"
+        }
+      ],
+      "تَفَاخُر": [
+        {
+          "eser": "Luggat",
+          "madde": "tefâhür",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Övünme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEFÂHUR – TEFÂHÜR",
+          "yazilis": "ﺗﻔﺎﺧﺮ",
+          "tur": "i.",
+          "koken": "Ar. faḫr “övünmek”ten tefāḫur",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Övünme",
+              "misaller": [
+                ["Eflâke tefâhur eyle ey hâk / Kim oldu refîkin o dürr-i pâk", "Fuzûlî’den"],
+                ["Tâc ü destâr ile tefâhur eder / Başını açıcak keli görünür", "Nef’î’den"],
+                ["Dünyâda hiçbir şeyle tefâhur etmemeli", "Şemseddin Sâmi"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "اِفْتِخَار": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İFTİHAR",
+          "yazilis": "ﺍﻓﺘﺨﺎﺭ",
+          "tur": "i.",
+          "koken": "Ar. faḫr “övünmek”ten iftiḫār",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir şeyden dolayı haklı olarak övünme, övünç",
+              "misaller": [
+                [
+                  "En büyük milletlere sermâye-i iftihar olabilecek derecelerde âlî olan azamet ve ikbâlini mi unutalım?",
+                  "Nâmık Kemal"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "kısa.",
+              "tanim": "Şeref, şan duymaya sebep olan şey veya kimse",
+              "misaller": [
+                ["İftihâr-ı hulefâ-yı Abbâs / Ya’ni Hârûn o şeh-i nükte-şinâs", "Hâkānî"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "İftihar etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Herkes, evvelce işitilmemiş bir mîmârın ismini bulmakla iftihar ediyor (Ahmet Hâşim). Muhsin Çelebi yaptığı ile iftihar edecek kadar küçük ruhlu değildi (Ömer Seyfeddin). 2",
+              "misaller": [],
+              "deyim": "Bir şeyden dolayı kendini yücelmiş saymak, göğsü kabarmak, övünmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kardeşler, bayrağıma toplanmışsınız, iftihar ederim! (Nâmık Kemal). … bu dünya güzeli evlatlar şüphesiz ki birer iftihar vesîlesiydiler (Sâmiha Ayverdi)",
+              "misaller": [],
+              "deyim": "Şeref ve şan duymak"
+            },
+            {
+              "etiket": "",
+              "tanim": "II. Abdülhamid tarafından ihdas edilen bir madalya, sanâyi madalyası",
+              "misaller": [],
+              "deyim": "İftihar madalyası"
+            },
+            {
+              "etiket": "",
+              "tanim": "II. Mahmud’un ihdas ettiği bir nişan",
+              "misaller": [],
+              "deyim": "İftihar nişanı"
+            },
+            {
+              "etiket": "",
+              "tanim": "Derslerdeki başarısı sebebiyle üstün öğrenci seçilmek",
+              "misaller": [],
+              "deyim": "İftihâra geçmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Akranlar içinde kendisiyle övünülecek kimse",
+              "misaller": [],
+              "deyim": "İftihârü’l-akran"
+            },
+            {
+              "etiket": "",
+              "tanim": "Şâirlerin şeref duymalarına sebep olan kimse",
+              "misaller": [],
+              "deyim": "İftihârü’ş-şuarâ"
+            },
+            {
+              "etiket": "",
+              "tanim": "Âlimlerin iftihar etmesine sebep olan kimse [Ferman ve beratlarda ulemâ sınıfından olanlar için kullanılan resmî tâbir]",
+              "misaller": [],
+              "deyim": "İftihârü’l-ulemâ"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "iftihar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi fahr ve mübâhât eylemek manâsınadır; yukâlu: إِفْتَخَرَ الرَّجُلُ بِمَعْنَى فَخَرَ",
+              "misaller": [
+                ["إِفْتَخَرَ الرَّجُلُ بِمَعْنَى فَخَرَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِفْتِخَارُ",
+          "okunus": "el-iftihâr",
+          "koken": "إِفْتِعَالٌ [iftiâl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "iftihar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "geçmiş nesneleri dahi add etmeğe فَخْرٌ [fahr] ve إِفْتِخَارٌ [iftihâr] derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِفْتِخَارُ",
+          "okunus": "el-iftihâr",
+          "koken": "hemzenin ve tânın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "iftihâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Övünme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "iftihâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Övünme, kıvanma, kıvanç. İftihar etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "iftihâr-ı mukaddes",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "(Allah'a layık) övünme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "فَاخِر": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FÂHİR",
+          "yazilis": "ﻓﺎﺧﺮ",
+          "tur": "sıf.",
+          "koken": "Ar. faḫr “övünmek”ten fāḫir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Övünen, iftihar eden, müftehir",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "İftihar edilecek nitelikte, şâşaalı, ihtişamlı",
+              "misaller": [
+                [
+                  "İşitenler kelâm-ı fâhirim fart-ı letâfetten / Sanırlar selsebîl-i feyz olur cârî zebânımdan",
+                  "Leskofçalı Gālib"
+                ],
+                ["Geçsin ebedî günlerimiz fâhir ü gülgûn", "Tevfik Fikret’ten"],
+                ["● Fâhire", "ﻓﺎﺧﺮﻩ"],
+                [" Libâs-ı fâhire: Kıymetli, ihtişamlı elbise.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "fahir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Fahr ve mübâhât edici adama denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ceyyid ve nefîs ve bihter şeye ıtlâk olunur, gûyâ ki lisân-ı hâlle nefâseti cihetinden fahr eder; yukâlu: شَيْءٌ فَاخِرٌ أَيْ جَيِّدٌ Ve iri olup çekirdeği olmayan hurmâ koruğuna ıtlâk olunur; yukâlu: بُسْرٌ فَاخِرٌ إِذَا صَارَ يَعْظُمُ وَلاَ نَوَى لَهُ",
+              "misaller": [
+                ["شَيْءٌ فَاخِرٌ أَيْ جَيِّدٌ", ""],
+                ["بُسْرٌ فَاخِرٌ إِذَا صَارَ يَعْظُمُ وَلاَ نَوَى لَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَاخِرُ",
+          "okunus": "el-fâhir",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "fahir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hûb olan nesne.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فَاخِرٌ [fâhir] Şol hurmâya derler ki dânesi büyük olup çekirdeği olmaya.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَاخِرُ",
+          "okunus": "el-fâhir",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fâhir",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Değerli. Şerefli, onurlu",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

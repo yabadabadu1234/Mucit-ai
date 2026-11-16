@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "دَفْق", "dafq", "akma", "orta", "Vikisözlük: masdar (bâb I): to pour out"],
+      [0, "دَفْق", "dafq", "Su dökmek", "lugat", "Vikisözlük: masdar (bâb I): to pour out · Kamus"],
       [1, "دِفْق", "difq", "akma", "orta", ""],
       [2, "دُفْق", "dufq", "akma", "orta", ""],
       [3, "دَفَق", "dafaq", "akma", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَدْفِقَة", "madfiqa", "akma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَدْفِيق", "tadfīq", "çokça akma", "orta", ""],
+      [29, "تَدْفِيق", "tadfīq", "Suyu yek-pâre şiddetle dökmek", "lugat", "Kamus"],
       [30, "تَدْفِقَة", "tadfiqa", "çokça akma", "orta", ""],
       [31, "دِفِّاق", "diffāq", "çokça akma", "orta", ""]
     ],
@@ -182,9 +182,9 @@
         118,
         "اِنْدِفَاق",
         "indifāq",
-        "akılma",
-        "orta",
-        "Vikisözlük: masdar (bâb VII): to be poured out, (intransitive) to pour out"
+        "in mutâviidir",
+        "lugat",
+        "Vikisözlük: masdar (bâb VII): to be poured out, (intransitive) to pour out · Kamus"
       ]
     ],
     "ism-i merre · bâb VII": [
@@ -296,7 +296,7 @@
       [516, "اِدْفِوَّاق", "idfiwwāq", "aşırı akma", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "دَافِق", "dāfiq", "akan", "orta", ""],
+      [213, "دَافِق", "dāfiq", "Manâ-yı evvelden ism-i fâildir", "lugat", "Kamus"],
       [214, "دَافِقَة", "dāfiqa", "akan, müennes", "orta", ""],
       [215, "دَافِقَان", "dāfiqān", "akan, iki", "orta", ""],
       [216, "دَافِقَتَان", "dāfiqatān", "akan, iki, müennes", "orta", ""],
@@ -397,7 +397,7 @@
       [291, "دَفَقُون", "dafaqūn", "her daim akanlar", "orta", ""],
       [292, "دَفَقِين", "dafaqīn", "her daim akanlar", "orta", ""],
       [293, "دَفَقَات", "dafaqāt", "her daim akanlar, müennes", "orta", ""],
-      [294, "دَفْق", "dafq", "her daim akan", "orta", "Vikisözlük: masdar (bâb I): to pour out"],
+      [294, "دَفْق", "dafq", "Su dökmek", "lugat", "Vikisözlük: masdar (bâb I): to pour out · Kamus"],
       [295, "دَفْقَة", "dafqa", "her daim akan, müennes", "orta", ""],
       [296, "دَفْقَان", "dafqān", "her daim akan, iki", "orta", ""],
       [297, "دَفْقَتَان", "dafqatān", "her daim akan, iki, müennes", "orta", ""],
@@ -539,7 +539,7 @@
       [425, "دَفَاقَة", "dafāqa", "akma", "orta", ""],
       [426, "دِفَاقَة", "difāqa", "akma", "orta", ""],
       [427, "دُفُوقَة", "dufūqa", "akma", "orta", ""],
-      [428, "دَفْق", "dafq", "akma", "orta", "Vikisözlük: masdar (bâb I): to pour out"],
+      [428, "دَفْق", "dafq", "Su dökmek", "lugat", "Vikisözlük: masdar (bâb I): to pour out · Kamus"],
       [429, "دِفْق", "difq", "akma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُدْفُوقَة", "ʾudfūqa", "akma türünden şey", "orta", ""],
       [435, "دَوْفَق", "dawfaq", "akma türünden şey", "orta", ""],
       [437, "دَيْفَق", "dayfaq", "akma türünden şey", "orta", ""],
-      [439, "دَفْق", "dafq", "akma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to pour out"],
+      [439, "دَفْق", "dafq", "Su dökmek", "lugat", "Vikisözlük: masdar (bâb I): to pour out · Kamus"],
       [441, "دَفَق", "dafaq", "akma türünden şey", "orta", ""],
       [443, "دِفْق", "difq", "akma türünden şey", "orta", ""],
       [445, "دُفْق", "dufq", "akma türünden şey", "orta", ""],
@@ -2315,7 +2315,183 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "دَفْق": [
+        {
+          "eser": "Kamus",
+          "madde": "defk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Su dökmek manâsınadır; yukâlu: دَفَقَ الْمَاءَ دَفْقًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا صَبَّهُ Şârih der ki bunun manâsı süratle mukayyeddir ki birden çabuk dökmek manâsınadır, niteki Mugribde ve sâir ümmehâtta صَبَّهُ صَبًّا فِيهِ دَفْعٌ وَشِدَّةٌ ibâretiyle müfesserdir.",
+              "misaller": [
+                ["دَفَقَ الْمَاءَ دَفْقًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا صَبَّهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "دَفْقُ الرُّوحِ [defkur-rûh] öldürmek manâsına müstameldir; yukâlu: دَفَقَ اللهُ رُوحَهُ أَيْ أَمَاتَهُ Ve kabın içinde olan suyu birden saçıp boşaltmak manâsına müstameldir; yukâlu: دَفَقَ الْكُوزَ إِذَا بَدَّدَ مَا فِيهِ بِمَرَّةٍ Ve دَفْقٌ [defk] ve دُفُوقٌ [dufûk] (قُعُودٌ [kuûd] vezninde) Lâzım olur, su birden dökülmek manâsına; yukâlu: دَفَقَ الْمَاءُ دَفْقًا وَدُفُوقًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا انْصَبَّ بِمَرَّةٍ Ve bu manâ hemân İmâm Leysamp; rivâyetidir, yanî cumhûra göre müteaddî gelir, lâ-gayr.",
+              "misaller": [
+                ["دَفَقَ اللهُ رُوحَهُ أَيْ أَمَاتَهُ", ""],
+                ["دَفَقَ الْكُوزَ إِذَا بَدَّدَ مَا فِيهِ بِمَرَّةٍ", ""],
+                ["دَفَقَ الْمَاءُ دَفْقًا وَدُفُوقًا مِنَ الْبَابِ اْلأَوَّلِ إِذَا انْصَبَّ بِمَرَّةٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدَّفْقُ",
+          "okunus": "ed-defk",
+          "koken": "dâlın fethi ve fânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "defk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dökmek; tekûlu: دَفَقْتُ الْمَاءَ أَدْفُقُهُ دَفْقًا مِنَ الْبَابِ الْأَوَّلِ إِذَا صَبَبْتَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدَّفْقُ",
+          "okunus": "ed-defk",
+          "koken": "dâlın fethi ve fânın sükûnuyla"
+        }
+      ],
+      "تَدْفِيق": [
+        {
+          "eser": "Kamus",
+          "madde": "tedfik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Suyu yek-pâre şiddetle dökmek manâsınadır; ve minhu yukâlu: دَفَّقَتْ كَفَّاهُ النَّدَى إِذَا صَبَّتَاهُ Yanî “Atiyyeyi birden nisâr eyledi.”",
+              "misaller": [
+                ["دَفَّقَتْ كَفَّاهُ النَّدَى إِذَا صَبَّتَاهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّدْفِيقُ",
+          "okunus": "et-tedfîk",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tedfik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik dökmek manâsına; yukâlu eyzan: دَفَّقَتْ كَفَّاهُ النَّدَى أَيْ صَبَّتَا Ve teşdîd teksîr içindir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "نَدَى [nedâ] nûnun fethi ve elifin kasrıyla ihsân manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّدْفِيقُ",
+          "okunus": "et-tedfîk",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ],
+      "اِنْدِفَاق": [
+        {
+          "eser": "Kamus",
+          "madde": "indifak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "تَدْفِيقٌ [tedfîk]in mutâviidir; yukâlu: دَفَّقَ الْمَاءَ فَانْدَفَقَ أَيِ انْصَبَّ",
+              "misaller": [
+                ["دَفَّقَ الْمَاءَ فَانْدَفَقَ أَيِ انْصَبَّ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِنْدِفَاقُ",
+          "okunus": "el-indifâk",
+          "koken": "إِنْفِعَالٌ [infiâl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "indifak",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dökülmek, إِنْصِبَابٌ [insibâb] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِنْدِفَاقُ",
+          "okunus": "el-indifâk",
+          "koken": "hemzenin ve dâlın kesriyle"
+        }
+      ],
+      "دَافِق": [
+        {
+          "eser": "Kamus",
+          "madde": "dafik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Manâ-yı evvelden ism-i fâildir, مَدْفُوقٌ [medfûk] manâsınadır, zîrâ دَفْقٌ [defk] mâddesi cumhûr indinde hemân müteaddîdir; yukâlu: مَاءٌ دَافِقٌ أَيْ مَدْفُوقٌ Şârih der ki İmâm Leysamp; indinde مُنْصَبٌّ manâsına olur.",
+              "misaller": [
+                ["مَاءٌ دَافِقٌ أَيْ مَدْفُوقٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Halîl ve Sîbeveyhi ذُو دَفْقٍ ile tefsîr eylediler, yanî لاَبِنٌ [lâbin] ve تَامِرٌ [tâmir] kabîlinden niseb üzere ism-i fâildir dediler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ehl-i Hicâz mahall-i natında mefûlü fâile tahvîl ederler. Onlara göre de manâ مَاءٌ مَدْفُوقٌ demek olur, niteki سِرٌّ كَاتِمٌ derler, مَكْتُومٌ manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدَّافِقُ",
+          "okunus": "ed-dâfik",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "dafik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dökülmüş su مَدْفُوقٌ [medfûk] manâsına, nitekim سِرٌّ كَاتِمٌ derler, مَكْتُومٌ [mektûm] manâsına, zîrâ bu دُفِقَ الْمَاءُ dan mehûzdur binâ-i mechûl üzere, دَفَقَ الْمَاءُ câiz olmadığı için binâ-i malûm üzere; ve yukâlu: دَفَقَ اللهُ رُوحَهُ إِذَا دَعَا عَلَيْهِ بِالْمَوْتِ Yanî zikr olunan kelâm duâ-yı aleyhtir.",
+              "misaller": [
+                ["دَفَقَ اللهُ رُوحَهُ إِذَا دَعَا عَلَيْهِ بِالْمَوْتِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدَّافِقُ",
+          "okunus": "ed-dâfik",
+          "koken": "fânın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

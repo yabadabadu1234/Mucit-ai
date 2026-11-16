@@ -290,7 +290,7 @@
       [202, "اِيئِوَّال", "īʾiwwāl", "aşırı sığınak olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "وَائِل", "wāʾil", "sığınak olan", "kontrol", ""],
+      [213, "وَائِل", "wāʾil", "Esâmîdendir", "lugat", "Kamus"],
       [214, "وَائِلَة", "wāʾila", "sığınak olan, müennes", "kontrol", ""],
       [215, "وَائِلَان", "wāʾilān", "sığınak olan, iki", "kontrol", ""],
       [216, "وَائِلَتَان", "wāʾilatān", "sığınak olan, iki, müennes", "kontrol", ""],
@@ -310,7 +310,7 @@
     "mekân/zaman · sülâsî": [
       [227, "مَوْأَل", "mawʾal", "sığınak olma yeri, vakti", "kontrol", ""],
       [228, "مَوْأَلَان", "mawʾalān", "sığınak olma yeri, vakti, iki", "kontrol", ""],
-      [229, "مَوْئِل", "mawʾil", "sığınak", "kuran", "Kur'ân"],
+      [229, "مَوْئِل", "mawʾil", "İsm-i mekândır, sığınacak yere denir", "lugat", "Kur'ân · Kamus"],
       [230, "مَوْئِلَان", "mawʾilān", "sığınak olma yeri, vakti, iki", "kontrol", ""],
       [231, "مَوْأَلَة", "mawʾala", "sığınak olmanın bol olduğu yer", "kontrol", ""],
       [232, "مَوْأَلَتَان", "mawʾalatān", "sığınak olmanın bol olduğu yer, iki", "kontrol", ""],
@@ -768,7 +768,104 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "وَائِل": [
+        {
+          "eser": "Kamus",
+          "madde": "Vail",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Esâmîdendir: Vâil b. Kâsit bir kabîlenin pederidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Vâil b. Hucr ve Vâil b. Ebil-Kuays ve Ebû Vâil Şekîk b. Seleme ashâbdandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "وَائِلٌ",
+          "okunus": "Vâil",
+          "koken": ""
+        },
+        {
+          "eser": "Kamus",
+          "madde": "vail",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْوَئِلُ [el-veil] (كَتِفٌ [ketif] vezninde) ve اَلْوَئِيلُ [el-veîl] (أَمِيرٌ [emîr] vezninde) وَيْلٌ [veyl] kelimesini tekîd için îrâd olunur; yukâlu: وَيْلٌ وَائِلٌ وَوَئِلٌ وَوَئِيلٌ مُبَالَغَةً",
+              "misaller": [
+                ["وَيْلٌ وَائِلٌ وَوَئِلٌ وَوَئِيلٌ مُبَالَغَةً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَائِلُ",
+          "okunus": "el-vâil",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Vail",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kabîlenin babasının adıdır ki o Vâil b. Kâsittir ki cedd-i alâları Dumîdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "وَائِلُ",
+          "okunus": "Vâil",
+          "koken": "yânın kesriyle"
+        }
+      ],
+      "مَوْئِل": [
+        {
+          "eser": "Kamus",
+          "madde": "mevil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsm-i mekândır, sığınacak yere denir; yukâlu: هُوَ مَوْئِلُ الْقَوْمِ أَيْ مَلْجَأُهُ Ve sel suyu karâr edecek mahalle ıtlâk olunur; yukâlu: هَذَا مَوْئِلُ السَّيْلِ أَيْ مُسْتَقَرُّهُ",
+              "misaller": [
+                ["هُوَ مَوْئِلُ الْقَوْمِ أَيْ مَلْجَأُهُ", ""],
+                ["هَذَا مَوْئِلُ السَّيْلِ أَيْ مُسْتَقَرُّهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَوْئِلُ",
+          "okunus": "el-mevil",
+          "koken": "مَحْفِلٌ [mahfil] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mevil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sığınacak yer, melce manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَوْئِلُ",
+          "okunus": "el-mevil",
+          "koken": "mîmin fethi ve yânın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

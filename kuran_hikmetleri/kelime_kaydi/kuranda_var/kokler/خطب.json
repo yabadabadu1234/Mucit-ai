@@ -8,20 +8,20 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "خَطْب", "ḫaṭb", "iş, durum", "kuran", "Kur'ân"],
-      [1, "خِطْب", "ḫiṭb", "konuşma", "orta", ""],
+      [0, "خَطْب", "ḫaṭb", "Mutlakan işe denir, şen ve emr", "lugat", "Kur'ân · Kamus"],
+      [1, "خِطْب", "ḫiṭb", "Tezevvüc için taleb olunan yanî dünürlüğüne varılan kadına denir", "lugat", "Kamus"],
       [2, "خُطْب", "ḫuṭb", "konuşma", "orta", ""],
       [3, "خَطَب", "ḫaṭab", "konuşma", "orta", ""],
       [4, "خِطَب", "ḫiṭab", "konuşma", "orta", ""],
       [5, "خُطُب", "ḫuṭub", "konuşma", "orta", ""],
       [6, "خُطُوب", "ḫuṭūb", "konuşma", "orta", ""],
-      [7, "خِطَاب", "ḫiṭāb", "konuşma", "orta", ""],
+      [7, "خِطَاب", "ḫiṭāb", "Konuşma, hitap etme", "lugat", "Luggat"],
       [8, "خُطَاب", "ḫuṭāb", "konuşma", "orta", ""],
       [9, "خَطَاب", "ḫaṭāb", "konuşma", "orta", ""],
-      [10, "خَطَابَة", "ḫaṭāba", "konuşma", "orta", ""],
+      [10, "خَطَابَة", "ḫaṭāba", "Hatîb olmak", "lugat", "Vankulu"],
       [11, "خُطُوبَة", "ḫuṭūba", "konuşma", "orta", ""],
       [12, "خِطَابَة", "ḫiṭāba", "konuşma", "orta", ""],
-      [13, "خَطِيب", "ḫaṭīb", "konuşma", "orta", ""],
+      [13, "خَطِيب", "ḫaṭīb", "Hatip", "lugat", "Luggat"],
       [14, "خَطُوب", "ḫaṭūb", "konuşma", "orta", ""],
       [15, "خَطَبَان", "ḫaṭabān", "konuşma", "orta", ""],
       [16, "خُطْبَان", "ḫuṭbān", "konuşma", "orta", ""],
@@ -73,11 +73,11 @@
         49,
         "مُخَاطَبَة",
         "muḫāṭaba",
-        "biriyle karşılıklı konuşma",
-        "orta",
-        "Vikisözlük: verbal noun of خَاطَبَ (ḵāṭaba) (form III)"
+        "Bir kimse ile karşılıklı konuşma, söyleşme",
+        "lugat",
+        "Vikisözlük: verbal noun of خَاطَبَ (ḵāṭaba) (form III) · Kubbealtı"
       ],
-      [50, "خِطَاب", "ḫiṭāb", "biriyle karşılıklı konuşma", "orta", ""]
+      [50, "خِطَاب", "ḫiṭāb", "Konuşma, hitap etme", "lugat", "Luggat"]
     ],
     "ism-i merre · bâb III": [
       [51, "خِطَابَة", "ḫiṭāba", "bir kere biriyle karşılıklı konuşma", "orta", ""]
@@ -92,14 +92,21 @@
       [58, "مُخَاطِبَات", "muḫāṭibāt", "biriyle karşılıklı konuşanlar, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُخَاطَب", "muḫāṭab", "biriyle karşılıklı konuşulan", "orta", ""],
+      [
+        59,
+        "مُخَاطَب",
+        "muḫāṭab",
+        "Kendisine söz söylenen, kendisiyle konuşulan, hitap edilen kimse",
+        "lugat",
+        "Kubbealtı"
+      ],
       [
         60,
         "مُخَاطَبَة",
         "muḫāṭaba",
-        "biriyle karşılıklı konuşulan, müennes",
-        "orta",
-        "Vikisözlük: verbal noun of خَاطَبَ (ḵāṭaba) (form III)"
+        "Bir kimse ile karşılıklı konuşma, söyleşme",
+        "lugat",
+        "Vikisözlük: verbal noun of خَاطَبَ (ḵāṭaba) (form III) · Kubbealtı"
       ],
       [61, "مُخَاطَبَان", "muḫāṭabān", "biriyle karşılıklı konuşulan, iki", "orta", ""],
       [62, "مُخَاطَبَتَان", "muḫāṭabatān", "biriyle karşılıklı konuşulan, iki, müennes", "orta", ""],
@@ -108,7 +115,14 @@
       [65, "مُخَاطَبَات", "muḫāṭabāt", "biriyle karşılıklı konuşulanlar, müennes", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُخَاطَب", "muḫāṭab", "biriyle karşılıklı konuşma yeri, vakti", "orta", ""]
+      [
+        66,
+        "مُخَاطَب",
+        "muḫāṭab",
+        "Kendisine söz söylenen, kendisiyle konuşulan, hitap edilen kimse",
+        "lugat",
+        "Kubbealtı"
+      ]
     ],
     "masdar · bâb IV": [
       [67, "إِخْطَاب", "ʾiḫṭāb", "konuşturma", "orta", ""]
@@ -372,11 +386,18 @@
       [256, "خَطْبَتَان", "ḫaṭbatān", "bir kere konuşma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "خِطْبَة", "ḫiṭba", "evlenme teklifi", "kuran", "Vikisözlük: verbal noun of خَطَبَ (ḵaṭaba) (form I)"],
+      [
+        257,
+        "خِطْبَة",
+        "ḫiṭba",
+        "Avreti tezevvüce davet etmeğe derler",
+        "lugat",
+        "Vikisözlük: verbal noun of خَطَبَ (ḵaṭaba) (form I) · Vankulu"
+      ],
       [258, "خِطْبَتَان", "ḫiṭbatān", "konuşma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "خَطِيب", "ḫaṭīb", "her daim konuşan", "orta", ""],
+      [259, "خَطِيب", "ḫaṭīb", "Hatip", "lugat", "Luggat"],
       [
         260,
         "خَطِيبَة",
@@ -418,7 +439,7 @@
       [291, "خَطَبُون", "ḫaṭabūn", "her daim konuşanlar", "orta", ""],
       [292, "خَطَبِين", "ḫaṭabīn", "her daim konuşanlar", "orta", ""],
       [293, "خَطَبَات", "ḫaṭabāt", "her daim konuşanlar, müennes", "orta", ""],
-      [294, "خَطْب", "ḫaṭb", "iş, durum", "kuran", "Kur'ân"],
+      [294, "خَطْب", "ḫaṭb", "Mutlakan işe denir, şen ve emr", "lugat", "Kur'ân · Kamus"],
       [295, "خَطْبَة", "ḫaṭba", "her daim konuşan, müennes", "orta", ""],
       [296, "خَطْبَان", "ḫaṭbān", "her daim konuşan, iki", "orta", ""],
       [297, "خَطْبَتَان", "ḫaṭbatān", "her daim konuşan, iki, müennes", "orta", ""],
@@ -447,7 +468,7 @@
       [320, "خُطَابِين", "ḫuṭābīn", "her daim konuşanlar", "orta", ""],
       [321, "خُطَابَات", "ḫuṭābāt", "her daim konuşanlar, müennes", "orta", ""],
       [322, "خَطَاب", "ḫaṭāb", "her daim konuşan", "orta", ""],
-      [323, "خَطَابَة", "ḫaṭāba", "her daim konuşan, müennes", "orta", ""],
+      [323, "خَطَابَة", "ḫaṭāba", "Hatîb olmak", "lugat", "Vankulu"],
       [324, "خَطَابَان", "ḫaṭābān", "her daim konuşan, iki", "orta", ""],
       [325, "خَطَابَتَان", "ḫaṭābatān", "her daim konuşan, iki, müennes", "orta", ""],
       [326, "خَطَابُون", "ḫaṭābūn", "her daim konuşanlar", "orta", ""],
@@ -507,7 +528,7 @@
       [378, "مِخْطِيبُون", "miḫṭībūn", "konuşmaya düşkünler", "orta", ""],
       [379, "مِخْطِيبِين", "miḫṭībīn", "konuşmaya düşkünler", "orta", ""],
       [380, "مِخْطِيبَات", "miḫṭībāt", "konuşmaya düşkünler, müennes", "orta", ""],
-      [381, "خَطِيب", "ḫaṭīb", "çok konuşan", "orta", ""],
+      [381, "خَطِيب", "ḫaṭīb", "Hatip", "lugat", "Luggat"],
       [
         382,
         "خَطِيبَة",
@@ -562,13 +583,13 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "خَطَاب", "ḫaṭāb", "konuşma", "orta", ""],
       [422, "خُطُوب", "ḫuṭūb", "konuşma", "orta", ""],
-      [423, "خِطَاب", "ḫiṭāb", "konuşma", "orta", ""],
+      [423, "خِطَاب", "ḫiṭāb", "Konuşma, hitap etme", "lugat", "Luggat"],
       [424, "خُطْب", "ḫuṭb", "konuşma", "orta", ""],
-      [425, "خَطَابَة", "ḫaṭāba", "konuşma", "orta", ""],
+      [425, "خَطَابَة", "ḫaṭāba", "Hatîb olmak", "lugat", "Vankulu"],
       [426, "خِطَابَة", "ḫiṭāba", "konuşma", "orta", ""],
       [427, "خُطُوبَة", "ḫuṭūba", "konuşma", "orta", ""],
-      [428, "خَطْب", "ḫaṭb", "iş, durum", "kuran", "Kur'ân"],
-      [429, "خِطْب", "ḫiṭb", "konuşma", "orta", ""]
+      [428, "خَطْب", "ḫaṭb", "Mutlakan işe denir, şen ve emr", "lugat", "Kur'ân · Kamus"],
+      [429, "خِطْب", "ḫiṭb", "Tezevvüc için taleb olunan yanî dünürlüğüne varılan kadına denir", "lugat", "Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "خَاطُوب", "ḫāṭūb", "konuşma türünden şey", "orta", ""],
@@ -577,11 +598,11 @@
       [434, "أُخْطُوبَة", "ʾuḫṭūba", "konuşma türünden şey", "orta", ""],
       [435, "خَوْطَب", "ḫawṭab", "konuşma türünden şey", "orta", ""],
       [437, "خَيْطَب", "ḫayṭab", "konuşma türünden şey", "orta", ""],
-      [439, "خَطْب", "ḫaṭb", "iş, durum", "kuran", "Kur'ân"],
+      [439, "خَطْب", "ḫaṭb", "Mutlakan işe denir, şen ve emr", "lugat", "Kur'ân · Kamus"],
       [441, "خَطَب", "ḫaṭab", "konuşma türünden şey", "orta", ""],
-      [443, "خِطْب", "ḫiṭb", "konuşma türünden şey", "orta", ""],
+      [443, "خِطْب", "ḫiṭb", "Tezevvüc için taleb olunan yanî dünürlüğüne varılan kadına denir", "lugat", "Kamus"],
       [445, "خُطْب", "ḫuṭb", "konuşma türünden şey", "orta", ""],
-      [447, "خَطِيب", "ḫaṭīb", "konuşma türünden şey", "orta", ""],
+      [447, "خَطِيب", "ḫaṭīb", "Hatip", "lugat", "Luggat"],
       [449, "خِطَب", "ḫiṭab", "konuşma türünden şey", "orta", ""],
       [451, "خُطُب", "ḫuṭub", "konuşma türünden şey", "orta", ""],
       [453, "خَطَاب", "ḫaṭāb", "konuşma türünden şey", "orta", ""]
@@ -592,8 +613,22 @@
       [438, "خَيْطَبَة", "ḫayṭaba", "konuşma türünden bir tane", "orta", ""],
       [440, "خَطْبَة", "ḫaṭba", "konuşma türünden bir tane", "orta", ""],
       [442, "خَطَبَة", "ḫaṭaba", "konuşma türünden bir tane", "orta", ""],
-      [444, "خِطْبَة", "ḫiṭba", "evlenme teklifi", "kuran", "Vikisözlük: verbal noun of خَطَبَ (ḵaṭaba) (form I)"],
-      [446, "خُطْبَة", "ḫuṭba", "konuşma türünden bir tane", "orta", ""],
+      [
+        444,
+        "خِطْبَة",
+        "ḫiṭba",
+        "Avreti tezevvüce davet etmeğe derler",
+        "lugat",
+        "Vikisözlük: verbal noun of خَطَبَ (ḵaṭaba) (form I) · Vankulu"
+      ],
+      [
+        446,
+        "خُطْبَة",
+        "ḫuṭba",
+        "Cuma namazından önce ve bayram namazlarından sonra hatîbin minberde yaptığı,…",
+        "lugat",
+        "Kubbealtı"
+      ],
       [
         448,
         "خَطِيبَة",
@@ -604,7 +639,7 @@
       ],
       [450, "خِطَبَة", "ḫiṭaba", "konuşma türünden bir tane", "orta", ""],
       [452, "خُطُبَة", "ḫuṭuba", "konuşma türünden bir tane", "orta", ""],
-      [454, "خَطَابَة", "ḫaṭāba", "konuşma türünden bir tane", "orta", ""]
+      [454, "خَطَابَة", "ḫaṭāba", "Hatîb olmak", "lugat", "Vankulu"]
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَخْطَاب", "ʾaḫṭāb", "konuşmalar", "orta", ""],
@@ -613,7 +648,7 @@
       [458, "أَخَاطِيب", "ʾaḫāṭīb", "konuşmalar", "orta", ""],
       [459, "خُطُوب", "ḫuṭūb", "konuşmalar", "orta", ""],
       [460, "خُطُب", "ḫuṭub", "konuşmalar", "orta", ""],
-      [461, "خِطَاب", "ḫiṭāb", "konuşmalar", "orta", ""],
+      [461, "خِطَاب", "ḫiṭāb", "Konuşma, hitap etme", "lugat", "Luggat"],
       [462, "خِطَب", "ḫiṭab", "konuşmalar", "orta", ""],
       [463, "خِطَبَة", "ḫiṭaba", "konuşmalar", "orta", ""],
       [464, "خُطَب", "ḫuṭab", "konuşmalar", "orta", "Vikisözlük: plural of خُطْبَة (ḵuṭba)"],
@@ -2450,7 +2485,574 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "خَطْب": [
+        {
+          "eser": "Kamus",
+          "madde": "hatb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mutlakan işe denir, şen ve emr manâsınadır, gerek sagîr ve gerek azîm olsun. Cemi خُطُوبٌ[hutûb] gelir hânın zammıyla. Lâkin Râgıbın beyânına göre خَطْبٌ [hatb] şol emr-i azîme denir ki onun hakkında tehâtub-ı nâs kesîr ola. Bu sûrette ahass olur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "خَطْبٌ [hatb] Masdar olur, Tezevvüc için hatuna dünürlük eylemek manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطْبُ",
+          "okunus": "el-hatb",
+          "koken": "hânın fethi ve tânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hatb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesnenin sebebi; tekûlu: مَا خَطْبُكَ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطْبُ",
+          "okunus": "el-hatb",
+          "koken": ""
+        }
+      ],
+      "خِطْب": [
+        {
+          "eser": "Kamus",
+          "madde": "hitb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Tezevvüc için taleb olunan yanî dünürlüğüne varılan kadına denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "hatuna tâlib yanî dünür olan er kişiye de denir. Bu manâda hânın zammıyla da câizdir. Cemi أَخْطَابٌ [ahtâb] gelir; yukâlu: هَذِهِ خِطْبُهُ وَهَذَا خِطْبُهُ Ve خِطْبٌ [hitb] Câhiliyyette akd ve tezevvüc edâtından idi. Bir kimse hatun tezevvüc edecek oldukta kendisi yâhûd tarafından giden kimse o hatuna yâhûd tarafından olan kimseye خِطْبٌ [hitb] der idi hânın kesri ve zammıyla ve مخطوب [mahtûb], نِكْحٌ [nikh] der idi nûnun kesri ve zammıyla. Bu tabîr ile hemen beynlerinde nikâh münakid olur idi.",
+              "misaller": [
+                ["هَذِهِ خِطْبُهُ وَهَذَا خِطْبُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِطْبُ",
+          "okunus": "el-hitb",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hitb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol erdir ki avreti tezevvüce davet eder.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "avrete dahi ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "zamân-ı câhiliyyette bir avrete nikâh etmeli olsalar er cânibinden خِطْبٌ [hitb] derlerdi ve avret cânibindenنِكْحٌ [nikh] ve خِطْبٌ derlerdi. Vaktâ ki er cânibinden نِكْحٌ [nikh] deseler nikâhları münakid olurdu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِطْبُ",
+          "okunus": "el-hitb",
+          "koken": "hânın kesriyle ve tânın sükûnuyla"
+        }
+      ],
+      "خِطَاب": [
+        {
+          "eser": "Luggat",
+          "madde": "hitâb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Konuşma, hitap etme. Hitâb etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "HİTAP – HİTAB",
+          "yazilis": "ﺧﻄﺎﺏ",
+          "tur": "i.",
+          "koken": "Ar. ḫiṭāb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sözü veya yazıyı bir kimseye yöneltme, tevcih etme",
+              "misaller": [
+                ["Ona hitâba cesâret edemedim.", ""],
+                [
+                  "Her ne söz ki söylerim âlemde Türkî yâ Arab / Tut kulağın ki sanadır cümle dillerden hitab",
+                  "Niyâzî-i Mısrî"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Sözün bir kimseye yöneltildiğini anlatmak için kullanılan seslenme sözü",
+              "misaller": [
+                ["Bacım hitâbı Anadolu’da çok yaygındır.", ""],
+                ["Gülüm şöyle gülüm böyle demektir yâre mu’tâdım / Seni ey gül sever cânım ki cânâna hitâbımsın", "Nedim"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "din.",
+              "tanim": "ve tasavvuf. İnsanın ancak gönlünde duyduğu ve hissettiği sesleniş, gönüldeki konuşma [Hitaplar ilâhî hitap, melekler yoluyle gelen hitap, nefs-i levvâmeden, nefs-i emmâreden ve şeytandan gelen hitap olmak üzere ayrılmıştır]",
+              "misaller": [
+                [
+                  "Yitirdim benliği benlik bana Hak benliğindendir / Tekellümde hitâb-ı gaybînin kâr-hânesiyim ben",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["Pâk-meşreb saf-dil olmak gerektir âşıka / Tâ ki gûş-i câna ere Hak Teâlâ’dan hitâb", "İsmâil Hakkı Bursevî"]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1. (Birine) Söz söylemek, söz yöneltmek",
+              "misaller": [
+                ["Pür-cür’et ü nahvet / Eylerdi hitâb", "Tevfik Fikret"],
+                ["hanımefendi", ""],
+                ["diye hitap eder", "Ahmet Râsim"],
+                ["O zaman şeyh yaralıya ilk defa hitap etti", "Refik H. Karay"],
+                ["2. mec", "Bir şey birinin"],
+                ["Güzel, fakat bana hitap etmiyor", ""],
+                ["Bu, kahramanlık duygularına hitap eden bir konuşma idi.", ""]
+              ],
+              "deyim": "Hitap etmek (eylemek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Arınmış insan gönlüne Allah’tan gelen ve ancak gönül yoluyle duyulan sesleniş, kulun gönlünde duyduğu Tanrı sözü",
+              "misaller": [
+                ["Ayağından nalınlarını çıkar…", ""],
+                ["hitâb-ı izzetine muhâtap olmuştur", "Mustafa Tahralı"],
+                ["● Hitâben", "ﺧﻄﺎﺑﺎً"],
+                ["Hitap ederek,", "birinin"],
+                [
+                  "yüzüne söylemek veya onun ismine yazmak sûretiyle: Kapıdan girildiği sırada esirci Dilâşub’a hitâben bir tarz-ı mütehakkimâne ile…",
+                  "Nâmık Kemal"
+                ]
+              ],
+              "deyim": "Hitâb-ı izzet"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hitâb-ı izzet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cenab-ı Hakk'ın kuluna hitâbı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "خَطَابَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-hatâbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "خُطْبَةً [hutbet] manâsınadır; yukâlu: خَطَبَ الْخَاطِبُ عَلَى الْمِنْبَرِ خَطَابَةً وَخُطْبَةً",
+              "misaller": [
+                ["خَطَبَ الْخَاطِبُ عَلَى الْمِنْبَرِ خَطَابَةً وَخُطْبَةً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطَابَةُ",
+          "okunus": "el-hatâbet",
+          "koken": "hânın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-hatâbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hatîb olmak; yukâlu: خَطُبَ خَطَابَةً مِنَ الْبَابِ الْخَامِسِ أَيْ صَارَ خَطِيبًا",
+              "misaller": [
+                ["خَطُبَ خَطَابَةً مِنَ الْبَابِ الْخَامِسِ أَيْ صَارَ خَطِيبًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطَابَةُ",
+          "okunus": "el-hatâbet",
+          "koken": "feth-i hâ ile"
+        }
+      ],
+      "خَطِيب": [
+        {
+          "eser": "Kamus",
+          "madde": "hatib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hoş edâ ve hûb nidâ ile güzel hutbe kırâat eden efendiye denir, Reyhânzâde merhûm gibi; yukâlu: رَجُلٌ خَطِيبٌ أَيْ حَسَنُ الْخُطْبَةِ Ve muhaddisînden Ebul-Kâsım Abdullâh b. Muhammed el-Hatîbî ki İbn Cevzî şeyhidir, ve yine muhaddisînden Ebû Hanîfe Muhammed b. Abdullâh b. Muhammed el-Hatîbî, hasenül-hutbe olmalarıyla ona nisbet olundular.",
+              "misaller": [
+                ["رَجُلٌ خَطِيبٌ أَيْ حَسَنُ الْخُطْبَةِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "خُطْبَةٌ [hutbet] (hânın zammıyla) Şol bozumtuk bulanık renktir ki sarımtık kırmızıya mâil ola, tâze buğday levni ve bazı yaban eşeği levni gibi; alâ-kavlin bozluğa denir ki ona yeşillik gâlib ola ki kibrîtî dedikleridir; yukâlu: بِهِ خُطْبَةٌ أَيْ لَوْنٌ كَدِرٌ مُشْرَبٌ حُمْرَةً فِي صُفْرَةٍ أَوْ غُبْرَةُ تَرْهَقُهَا خُضْرَةٌ",
+              "misaller": [
+                ["بِهِ خُطْبَةٌ أَيْ لَوْنٌ كَدِرٌ مُشْرَبٌ حُمْرَةً فِي صُفْرَةٍ أَوْ غُبْرَةُ تَرْهَقُهَا خُضْرَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطِيبُ",
+          "okunus": "el-hatîb",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hatib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "خَاطِبٌ [hâtib] yani avrete خِطْبَةٌ [hitbet] kılan kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَطِيبُ",
+          "okunus": "el-hatîb",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hatîb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hatip",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "HATİP – HATİB",
+          "yazilis": "ﺧﻄﻴﺐ",
+          "tur": "i.",
+          "koken": "Ar. ḫuṭbe “hitap etmek”ten ḫaṭіb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güzel söz söyleyen, hitâbet yeteneği olan kimse",
+              "misaller": [
+                ["Hamdullah Suphi büyük hatiplerimizdendir.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Topluluk karşısında söz söyleyen kimse",
+              "misaller": [
+                ["Hatibi kimse dinlemiyordu.", ""],
+                [
+                  "Bir gündü, Beyazıt’tan geçerken meydanın ortasına konmuş bir kürsüde bir hatip söz söylüyordu",
+                  "Sâmiha Ayverdi"
+                ]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Cuma günleri câmide minbere çıkarak hutbe okumakla görevli olan kimse",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "XVIII. yüzyılda Ayasofya Câmii hatîbi Mehmed Efendi’nin buluşu olduğu için bu isimle bilinen ve çarkıfelek, yürek, yıldız şekilleri kullanılarak yapılan bir ebrû çeşidi",
+              "misaller": [
+                ["Bu celî sülüs levhanın dış pervazında nefis bir hatip ebrûsu kullanılmıştır", "Muhittin Serin"]
+              ],
+              "deyim": "Hatip ebrûsu"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Eskiden halîfe nâmına hutbe okuyan hatiplerin minbere çıkarken yanlarına aldıkları temsîlî kılıç. 2. mec. Sâdece temsîlî değeri olan göstermelik şey",
+              "misaller": [],
+              "deyim": "Hatip kılıcı"
+            }
+          ]
+        }
+      ],
+      "مُخَاطَبَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MUHÂTABE – MUHÂTABA",
+          "yazilis": "ﻣﺨﺎﻃﺒﻪ",
+          "tur": "i.",
+          "koken": "Ar. ḫutbe “hitap etmek”ten muḫātabe",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir kimse ile karşılıklı konuşma, söyleşme",
+              "misaller": [
+                ["Mükâtebe muhâtabe gibidir", "Cevdet Paşa"],
+                [
+                  "Bu hikâyenin içinde İbrâhim Edhem ile oğlu taraflarından muhâtabe sûretinde yazılmış şiirler de var idi",
+                  "Muallim Nâci"
+                ],
+                ["Leyâl-i sayfta kamerle muhâtabe ne kadar hoştur", "Muallim Nâci’den"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "hukuk.",
+              "tanim": "Hukūkî bir mesele hakkında tarafların bir araya gelerek yaptıkları sözlü görüşme",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Ağız kavgası, çekişme, münâkaşa. ● Muhâtabat ( ﻣﺨﺎﻃﺒﺎﺕ ) i. ( Ar. çoğul eki - āt ile ) Yüz yüze yapılan konuşmalar, muhâtabeler",
+              "misaller": [
+                ["Bir rûh-ı sâbit, işte o bir fikr-i zî-sebât / Elbette fikirdir bu derûnî muhâtabât", "Abdülhak Hâmit’ten"]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُخَاطَب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MUHÂTAP – MUHÂTAB",
+          "yazilis": "ﻣﺨﺎﻃﺐ",
+          "tur": "i.",
+          "koken": "Ar. muḫāṭabe “sohbet etmek, konuşmak”tan muḫāṭab",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kendisine söz söylenen, kendisiyle konuşulan, hitap edilen kimse",
+              "misaller": [
+                ["Evet muhâtabımın fikri pek musarrahtı", "Tevfik Fikret"],
+                [
+                  "Muhâtabım biraz düşündükten sonra samîmiyetinden şüphelendiğim tatlı bir edâ ile îtirazlarıma cevap verdi",
+                  "Ahmet Hâşim"
+                ],
+                ["Filhakîka görünüşteki bu iki vücûda rağmen ne mütekellim ne de muhatap vardı", "Sâmiha Ayverdi"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "târih.",
+              "tanim": "Pâdişah huzûrunda yapılan huzur derslerine katılan âlim",
+              "misaller": [
+                [
+                  "Huzur derslerinde Kur’ân-ı Kerim’den zamâna münâsip bir âyet okunarak mukarrir tarafından onun tefsîri yapılır ve muhâtapların suallerine ve îtirazlarına mukarrir cevap verir ve bu sûretle ilmî bir mübâhase cereyan ederdi",
+                  "İsmâil H. Uzunçarşılı"
+                ]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "dilb.",
+              "tanim": "İkinci şahıs",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1. Kendisine söz söylenmek, kendisiyle konuşulmak, hitap edilmek. 2",
+              "misaller": [],
+              "deyim": "Muhâtap olmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Partinin kademelerini ellerinde bulunduran insanların en ufak târizlerine muhâtap olmadı (Ergun Göze)",
+              "misaller": [],
+              "deyim": "Soru, itham, azarlama gibi bir söz veya davranış karşısında kalmak"
+            }
+          ]
+        }
+      ],
+      "خِطْبَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-hitbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْخِطِّيبَى [el-hittîbâ] (دِلِّيلَى [dillîlâ] vezninde) خَطْبٌ [hatb] manâsınadır ki masdardır; yukâlu: خَطَبَ الْمَرْأَةَ خَطْبًا وَخِطْبَةً وَخِطِّيبَى مِنَ الْبَابِ اْلأَوَّلِ اِذَا دَعَاهَا إِلَى التَّزَوُّجِ",
+              "misaller": [
+                [
+                  "خَطَبَ الْمَرْأَةَ خَطْبًا وَخِطْبَةً وَخِطِّيبَى مِنَ الْبَابِ اْلأَوَّلِ اِذَا دَعَاهَا إِلَى التَّزَوُّجِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِطْبَةُ",
+          "okunus": "el-hitbet",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-hitbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Avreti tezevvüce davet etmeğe derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِطْبَةُ",
+          "okunus": "el-hitbet",
+          "koken": "kesr-i hâ ile"
+        }
+      ],
+      "خُطْبَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HUTBE",
+          "yazilis": "ﺧﻄﺒﻪ",
+          "tur": "i.",
+          "koken": "Ar. ḫuṭbe",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cuma namazından önce ve bayram namazlarından sonra hatîbin minberde yaptığı, Arapça ve Türkçe olmak üzere iki kısımdan meydana gelen dînî konuşma",
+              "misaller": [
+                ["Son derece vakur ve münkat bir sükût içinde hutbeyi beklediler", "Rûşen E. Ünaydın"],
+                [
+                  "Müslüman memleketlerinde hükümdarlığın belli başlı alâmeti, hükümdar nâmına para bastırılması ile hutbede adının anılması idi",
+                  "Mithat Sertoğlu"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Cuma ve bayram günlerinde hutbe okumak. ● Hutbe-han ( ﺧﻄﺒﻪ ﺧﻮﺍﻥ ) birl. sıf. ve i. (Fars. ẖān “okuyan” ile) Hutbe okuyan (kimse), hatip",
+              "misaller": [],
+              "deyim": "Hutbe îrat etmek"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-hutbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kelâm-ı marûftur ki hatîb efendi minberde kırâat eder. Bazılar dedi ki خُطْبَةٌ [hutbet] mensûr ve müsecca olan kelâma ıtlâk olunur, kitâb dîbâceleri gibi ve makâme ve meviza gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخُطْبَةُ",
+          "okunus": "el-hutbet",
+          "koken": "hânın zammıyla"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-hutbetuş-şikşikiyyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلْخُطْبَةُ الشِّقْشِقِيَّةُ [el-hutbetuş-şikşikiyyet] (şînlerin kesriyle) İmâm Alî radıyallâhu anhu hazretlerine mensûb olan hutbedir ki kırâat-ı hutbeden fârig oldukta İbn Abbâs radıyallâhu anhumâ: “Yâ emîrel-müminîn, لَوِ اطَّرَدْتَ مِنْ حَيْثُ أَفْضَيْتَ dediklerinde يَا ابْنَ عَبَّاسٍ هَيْهَاتَ تِلْكَ شِقْشِقَةٌ هَدَرَتْ ثُمَّ فَرَّتْ ibâretiyle cevâb vermeleriyle hutbe-i mezbûreye شِقْشِقِيَّةٌ [şikşikiyyet] ıtlâk olunmuştur. Bedâyi ve hikemi hâvî ve envâ-ı belâgatı muhtevî bir hutbe-i bedîadır, kütüb-i siyerde meşrûhtur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "hutbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Misbâhın beyânına göre asl-ı hitâb mütekellim ile sâmi beyninde vâki olan kelâmdır, خُطْبَةٌ [hutbet] ve خِطْبَةٌ [hitbet] ki hânın zammı ve kesriyledir, ondan mehûzdur. Mevizada zamm iledir ki fulet bi-manâ mefûldür, نُسْخَةٌ [nushat] bi-manâ مَنْسُوخٌ [mensûh] olduğu gibi. Cemi خُطَبٌ [hutab] gelir صُرَدٌ [surad] vezninde.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "خِطْبَةٌ [hitbet] ki hânın kesriyledir, ismdir, dünürlük manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "dünürlük edene خَاطِبٌ [hâtib] ve dünürlük husûsunda mâhir olan خَطَّابٌ [hattâb] denir. İntehâ.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "خُطْبَةٌ [hutbet] (hânın zammıyla) Masdar olur, hatîb minberde hutbe okumak manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 12,
   "kuranda_var": true,

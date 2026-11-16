@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "بَلْع", "balʿ", "yutma", "orta", "Vikisözlük: masdar (bâb I): to swallow"],
+      [0, "بَلْع", "balʿ", "Yutmak", "lugat", "Vikisözlük: masdar (bâb I): to swallow · Kubbealtı"],
       [1, "بِلْع", "bilʿ", "yutma", "orta", ""],
       [2, "بُلْع", "bulʿ", "yutma", "orta", ""],
       [3, "بَلَع", "balaʿ", "yutma", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَبْلِعَة", "mabliʿa", "yutma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَبْلِيع", "tablīʿ", "çokça yutma", "orta", ""],
+      [29, "تَبْلِيع", "tablīʿ", "Başta pîrlik nişânı olacak beyâz henüz zuhûr eylemek", "lugat", "Kamus"],
       [30, "تَبْلِعَة", "tabliʿa", "çokça yutma", "orta", ""],
       [31, "بِلِّاع", "billāʿ", "çokça yutma", "orta", ""]
     ],
@@ -97,7 +97,7 @@
       [66, "مُبَالَع", "mubālaʿ", "biriyle karşılıklı yutma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِبْلَاع", "ʾiblāʿ", "yutturma", "orta", "Vikisözlük: masdar (bâb IV): to make swallow"]
+      [67, "إِبْلَاع", "ʾiblāʿ", "Yutturmak", "lugat", "Vikisözlük: masdar (bâb IV): to make swallow · Kamus"]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِبْلَاعَة", "ʾiblāʿa", "bir kere yutturma", "orta", ""]
@@ -209,9 +209,9 @@
         135,
         "اِبْتِلَاع",
         "ibtilāʿ",
-        "kendisi için yutma",
-        "orta",
-        "Vikisözlük: masdar (bâb VIII): to swallow, to swallow up"
+        "Tekellüfle yutmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb VIII): to swallow, to swallow up · Kamus"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -397,7 +397,7 @@
       [291, "بَلَعُون", "balaʿūn", "her daim yutanlar", "orta", ""],
       [292, "بَلَعِين", "balaʿīn", "her daim yutanlar", "orta", ""],
       [293, "بَلَعَات", "balaʿāt", "her daim yutanlar, müennes", "orta", ""],
-      [294, "بَلْع", "balʿ", "her daim yutan", "orta", "Vikisözlük: masdar (bâb I): to swallow"],
+      [294, "بَلْع", "balʿ", "Yutmak", "lugat", "Vikisözlük: masdar (bâb I): to swallow · Kubbealtı"],
       [295, "بَلْعَة", "balʿa", "her daim yutan, müennes", "orta", ""],
       [296, "بَلْعَان", "balʿān", "her daim yutan, iki", "orta", ""],
       [297, "بَلْعَتَان", "balʿatān", "her daim yutan, iki, müennes", "orta", ""],
@@ -539,7 +539,7 @@
       [425, "بَلَاعَة", "balāʿa", "yutma", "orta", ""],
       [426, "بِلَاعَة", "bilāʿa", "yutma", "orta", ""],
       [427, "بُلُوعَة", "bulūʿa", "yutma", "orta", ""],
-      [428, "بَلْع", "balʿ", "yutma", "orta", "Vikisözlük: masdar (bâb I): to swallow"],
+      [428, "بَلْع", "balʿ", "Yutmak", "lugat", "Vikisözlük: masdar (bâb I): to swallow · Kubbealtı"],
       [429, "بِلْع", "bilʿ", "yutma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +549,7 @@
       [434, "أُبْلُوعَة", "ʾublūʿa", "yutma türünden şey", "orta", ""],
       [435, "بَوْلَع", "bawlaʿ", "yutma türünden şey", "orta", ""],
       [437, "بَيْلَع", "baylaʿ", "yutma türünden şey", "orta", ""],
-      [439, "بَلْع", "balʿ", "yutma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to swallow"],
+      [439, "بَلْع", "balʿ", "Yutmak", "lugat", "Vikisözlük: masdar (bâb I): to swallow · Kubbealtı"],
       [441, "بَلَع", "balaʿ", "yutma türünden şey", "orta", ""],
       [443, "بِلْع", "bilʿ", "yutma türünden şey", "orta", ""],
       [445, "بُلْع", "bulʿ", "yutma türünden şey", "orta", ""],
@@ -559,7 +559,14 @@
       [453, "بَلَاع", "balāʿ", "yutma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "بَالُوعَة", "bālūʿa", "yutma türünden bir tane", "orta", "Vikisözlük: sinkhole, drain, sewer"],
+      [
+        431,
+        "بَالُوعَة",
+        "bālūʿa",
+        "Şol kuyudur ki evin ortasında kazarlar",
+        "lugat",
+        "Vikisözlük: sinkhole, drain, sewer · Vankulu"
+      ],
       [436, "بَوْلَعَة", "bawlaʿa", "yutma türünden bir tane", "orta", ""],
       [438, "بَيْلَعَة", "baylaʿa", "yutma türünden bir tane", "orta", ""],
       [440, "بَلْعَة", "balʿa", "yutma türünden bir tane", "orta", ""],
@@ -1787,7 +1794,212 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَلْع": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BEL’",
+          "yazilis": "ﺑﻠﻊ",
+          "tur": "i.",
+          "koken": "Ar. bel‘",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yutma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Bel’ etmek (eylemek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ey mi’delerin zehr-i tekāzâsı önünde / Her zilleti bel’ eyleyen efvâh-ı kadîde (Tevfik Fikret). 2",
+              "misaller": [],
+              "deyim": "Yutmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "O nûr-ı iffeti bel’ etti âh kim zulmet (Recâîzâde M. Ekrem). Toprak suyu bel’ etti (Şemseddin Sâmi)",
+              "misaller": [],
+              "deyim": "Emmek, içine çekmek, massetmek"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "bel",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yutmak manâsınadır; yukâlu: بَلِعَ اللُّقْمَةَ بَلْعًا مِنَ الْبَابِ الرَّابِعِ إِذَا جَذَبَهَا إِلَى الْمَعِدَةِ",
+              "misaller": [
+                ["بَلِعَ اللُّقْمَةَ بَلْعًا مِنَ الْبَابِ الرَّابِعِ إِذَا جَذَبَهَا إِلَى الْمَعِدَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبَلْعُ",
+          "okunus": "el-bel",
+          "koken": "bânın fethi ve lâmın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "bel",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yutmak; yukâlu: بَلِعْتُ الشَّيْءَ مِنَ الْبَابِ الرَّابِعِ",
+              "misaller": [
+                ["بَلِعْتُ الشَّيْءَ مِنَ الْبَابِ الرَّابِعِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "بَلْعٌ",
+          "okunus": "bel",
+          "koken": "bânın fethi ve lâmın sükûnuyla"
+        }
+      ],
+      "تَبْلِيع": [
+        {
+          "eser": "Kamus",
+          "madde": "tebli",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Başta pîrlik nişânı olacak beyâz henüz zuhûr eylemek manâsınadır; yukâlu: بَلَّعَ الشَّيْبُ فِي رَأْسِهِ إِذَا ظَهَرَ أَوَّلاً",
+              "misaller": [
+                ["بَلَّعَ الشَّيْبُ فِي رَأْسِهِ إِذَا ظَهَرَ أَوَّلاً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّبْلِيعُ",
+          "okunus": "et-teblî",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tebli",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Pirliğin ibtidâ zuhûr etmesi; yukâlu: بَلَّعَ الشَّيْبُ فِي رَأْسِهِ تَبْلِيعًا إِذَا ظَهَرَ",
+              "misaller": [
+                ["بَلَّعَ الشَّيْبُ فِي رَأْسِهِ تَبْلِيعًا إِذَا ظَهَرَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّبْلِيعُ",
+          "okunus": "et-teblî",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ],
+      "إِبْلَاع": [
+        {
+          "eser": "Kamus",
+          "madde": "ibla",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yutturmak manâsınadır; tekûlu: أَبْلَعْتُهُ الشَّيْءَ أَيْ مَكَّنْتُهُ مِنْ بَلْعِهِ Ve tekûlul-Arab: “أَبْلِعْنِي رِيقِي” أَيْ أَمْهِلْنِي مِقْدَارِ مَا أَبْلَعُهُ Yanî “Tükrüğümü yutacak mikdâr bana mühlet ver.” Kâlez-Zemahşerî قُلْتُ لِبَعْضِ شُيُوخِي أَبْلِعْنِي رِيقِي فَقَالَ قَدْ أَبْلَعْتُكَ الرَّافِدَيْنِ أَيْ دِجْلَةَ وَالْفُرَاتَ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْلاَعُ",
+          "okunus": "el-iblâ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ibla",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yutturmak; yukâlu: أَبْلَعْتُهُ غَيْرِي",
+              "misaller": [
+                ["أَبْلَعْتُهُ غَيْرِي", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْلَاعُ",
+          "okunus": "el-iblâ",
+          "koken": "hemzenin kesriyle"
+        }
+      ],
+      "اِبْتِلَاع": [
+        {
+          "eser": "Kamus",
+          "madde": "ibtila",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Tekellüfle yutmak manâsınadır; yukâlu: إِبْتَلَعَهَا إِذَا جَذَبَهَا إِلَى الْمَعِدَةِ مُتَكَلِّفًا Garîbdir ki müellif بَلْعٌ [bel]i إِبْتِلاَعٌ [ibtilâ] ile tefsîr ve kasr eylemiştir.",
+              "misaller": [
+                ["إِبْتَلَعَهَا إِذَا جَذَبَهَا إِلَى الْمَعِدَةِ مُتَكَلِّفًا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْتِلاَعُ",
+          "okunus": "el-ibtilâ",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ibtila",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu; yukâlu: بَلِعْتُ الشَّيْءَ وَابْتَلَعْتُهُ",
+              "misaller": [
+                ["بَلِعْتُ الشَّيْءَ وَابْتَلَعْتُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْتِلَاعُ",
+          "okunus": "el-ibtilâ",
+          "koken": "hemzenin ve tânın kesriyle"
+        }
+      ],
+      "بَالُوعَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "baluat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol kuyudur ki evin ortasında kazarlar.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبَالُوعَةُ",
+          "okunus": "el-bâlûat",
+          "koken": "alâ-vezni اَلْقَارُورَة [el-kârûret]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

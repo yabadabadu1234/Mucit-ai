@@ -528,7 +528,7 @@
       [438, "عَيْرَوَة", "ʿayrawa", "çirkin olma türünden bir tane", "orta", ""],
       [440, "عَرْوَة", "ʿarwa", "çirkin olma türünden bir tane", "orta", ""],
       [444, "عِرْوَة", "ʿirwa", "çirkin olma türünden bir tane", "orta", ""],
-      [446, "عُرْوَة", "ʿurwa", "sağlam kulp", "kuran", "Kur'ân"],
+      [446, "عُرْوَة", "ʿurwa", "Kulp", "lugat", "Kur'ân · Luggat"],
       [842, "عَرِيَّة", "ʿariyya", "çirkin olma türünden bir tane", "orta", ""],
       [845, "عُرُوَّة", "ʿuruwwa", "çirkin olma türünden bir tane", "orta", ""],
       [847, "عَرَاءَة", "ʿarāʾa", "çirkin olma türünden bir tane", "orta", ""]
@@ -919,7 +919,115 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "عُرْوَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "URVE",
+          "yazilis": "ﻋﺮﻭﻩ",
+          "tur": "i.",
+          "koken": "Ar. ‘urve",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kova, testi vb. şeylerin kulpu",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Urvet-i vüskā – Urvetü’l-vüskā"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çeksin bizi senden yana / Bu urve-i vüskā-i aşk (Aziz Mahmud Hüdâyî). Halka-i Kâ’be’yi terk etse n’ola Kays-misâl / Dile zencîr yeter urve-i vuskā-i cünun (Nâmık Kemal’den). 2. mec",
+              "misaller": [],
+              "deyim": "Sağlam kulp, tutacak yer"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çün Kitâbullah-durur hablü’l-metin / Pek yapış bu urvetü’l-vuskāya pek (Niyâzî-i Mısrî). Hablü’l-metîn-i aşkına rabt-ı derûn eden / Sıddîktır ki urve-i vuskāya bağlanır (Leskofçalı Gālib)",
+              "misaller": [],
+              "deyim": "İslâmiyet, Müslümanlık"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "urve",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kulp",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-urvet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kova ve bardak makûlesinin kulpuna denir; tekûlu: إِسْتَمْسَكَ بِعُرْوَةِ الدَّلْوِ أَوِ الْكُوزِ أَيْ مَقْبِضِهَا Ve عُرْوَةُ الثَّوْبِ [urvetusamp;-samp;evb] Libâsın iliğine denir ki düğme geçirilir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "عُرْوَةُ الْفَرْجِ [urvetul-ferc] Nisvânın fercinin taşra yüzünden iki taraflı şol incerek uzunca etlerin her birine denir ki cenâh gibi iki cânibde sakbeden aşağıya doğru uzanmış olur, zâhiren emzikli ibriğin kulpları mesâbesindedir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "عُرْوَةٌ [urvet] Mugaylân gibi iri meşelik ağacı bölüğüne, kezâlik şûr otluk bölüğüne denir ki kurak yıllarda ray olunur, mevâşînin عُلْقَةٌ [ulkat]ıdır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "عُرْوَةٌ [urvet] Arslana denir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "şol çatılkı ve orman ağaçlığa denir ki içinde develer kışlayıp ve ondan ekl ve taayyüş edeler.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "şitâ eyyâmında yaprakları hazân olmayan her dem tâze ağaca denir; yukâlu: فِي أَرْضِ كَذَا عُرْوَةٌ أَيْ شَجَرٌ لَا يَسْقُطُ وَرَقُهُ فِي الشِّتَاءِ Şârihin beyânına göre bununla sabûr kimseden kinâye ederler.",
+              "misaller": [
+                ["فِي أَرْضِ كَذَا عُرْوَةٌ أَيْ شَجَرٌ لَا يَسْقُطُ وَرَقُهُ فِي الشِّتَاءِ", ""]
+              ]
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "عُرْوَةٌ [urvet] Nefîs ve fâhir mâla ıtlâk olunur, feres-i kerîm gibi; yukâlu: لِفُلَانٍ عُرْوَةٌ مِنَ الْمَالِ أَيْ النَّفِيسِ Ve şehrin yörelerine ve havâlîsine denir; tekûlu: رَعَيْنَا عُرْوَةَ الْبَلَدِ أَيْ حَوَالَيْهِ",
+              "misaller": [
+                ["لِفُلَانٍ عُرْوَةٌ مِنَ الْمَالِ أَيْ النَّفِيسِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعُرْوَةُ",
+          "okunus": "el-urvet",
+          "koken": "غُرْفَةٌ [gurfet] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "نَكْث", "nakṯ", "bozma", "orta", ""],
+      [0, "نَكْث", "nakṯ", "Bir nesneyi bozmak ve üzmek", "lugat", "Kamus"],
       [1, "نِكْث", "nikṯ", "bozma", "orta", ""],
       [2, "نُكْث", "nukṯ", "bozma", "orta", ""],
       [3, "نَكَث", "nakaṯ", "bozma", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "نَكَثُون", "nakaṯūn", "her daim bozanlar", "orta", ""],
       [292, "نَكَثِين", "nakaṯīn", "her daim bozanlar", "orta", ""],
       [293, "نَكَثَات", "nakaṯāt", "her daim bozanlar, müennes", "orta", ""],
-      [294, "نَكْث", "nakṯ", "her daim bozan", "orta", ""],
+      [294, "نَكْث", "nakṯ", "Bir nesneyi bozmak ve üzmek", "lugat", "Kamus"],
       [295, "نَكْثَة", "nakṯa", "her daim bozan, müennes", "orta", ""],
       [296, "نَكْثَان", "nakṯān", "her daim bozan, iki", "orta", ""],
       [297, "نَكْثَتَان", "nakṯatān", "her daim bozan, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "نَكَاثَة", "nakāṯa", "bozma", "orta", ""],
       [426, "نِكَاثَة", "nikāṯa", "bozma", "orta", ""],
       [427, "نُكُوثَة", "nukūṯa", "bozma", "orta", ""],
-      [428, "نَكْث", "nakṯ", "bozma", "orta", ""],
+      [428, "نَكْث", "nakṯ", "Bir nesneyi bozmak ve üzmek", "lugat", "Kamus"],
       [429, "نِكْث", "nikṯ", "bozma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُنْكُوثَة", "ʾunkūṯa", "bozma türünden şey", "orta", ""],
       [435, "نَوْكَث", "nawkaṯ", "bozma türünden şey", "orta", ""],
       [437, "نَيْكَث", "naykaṯ", "bozma türünden şey", "orta", ""],
-      [439, "نَكْث", "nakṯ", "bozma türünden şey", "orta", ""],
+      [439, "نَكْث", "nakṯ", "Bir nesneyi bozmak ve üzmek", "lugat", "Kamus"],
       [441, "نَكَث", "nakaṯ", "bozma türünden şey", "orta", ""],
       [443, "نِكْث", "nikṯ", "bozma türünden şey", "orta", ""],
       [445, "نُكْث", "nukṯ", "bozma türünden şey", "orta", ""],
@@ -1259,7 +1259,46 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "نَكْث": [
+        {
+          "eser": "Kamus",
+          "madde": "neks",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi bozmak ve üzmek manâsınadır, ipin katlarını çözüp bozmak ve tesbîhi üzmek gibi; yukâlu: نَكَثَ الْعَهْدَ وَالْحَبْلَ نَكْثًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا نَقَضَهُ Ve misvâkın başı dağılmak manâsınadır; yukâlu: نَكَثَ السِّوَاكُ إِذَا تَشَعَّثَ رَأْسُهُ",
+              "misaller": [
+                ["نَكَثَ الْعَهْدَ وَالْحَبْلَ نَكْثًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا نَقَضَهُ", ""],
+                ["نَكَثَ السِّوَاكُ إِذَا تَشَعَّثَ رَأْسُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّكْثُ",
+          "okunus": "en-neksamp;",
+          "koken": "مَكْثٌ [meksamp;] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "neks",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bozmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّكْثُ",
+          "okunus": "en-neksamp;",
+          "koken": "nûnun fethiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 7,
   "kuranda_var": true,

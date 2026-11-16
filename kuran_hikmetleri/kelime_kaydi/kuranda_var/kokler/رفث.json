@@ -11,7 +11,7 @@
       [0, "رَفْث", "rafṯ", "kötü söz söyleme", "orta", ""],
       [1, "رِفْث", "rifṯ", "kötü söz söyleme", "orta", ""],
       [2, "رُفْث", "rufṯ", "kötü söz söyleme", "orta", ""],
-      [3, "رَفَث", "rafaṯ", "cinsel söz", "kuran", "Kur'ân"],
+      [3, "رَفَث", "rafaṯ", "Cimâ eylemek", "lugat", "Kur'ân · Kamus"],
       [4, "رِفَث", "rifaṯ", "kötü söz söyleme", "orta", ""],
       [5, "رُفُث", "rufuṯ", "kötü söz söyleme", "orta", ""],
       [6, "رُفُوث", "rufūṯ", "kötü söz söyleme", "orta", ""],
@@ -383,7 +383,7 @@
       [284, "رَفُثُون", "rafuṯūn", "her daim kötü söz söyleyenler", "orta", ""],
       [285, "رَفُثِين", "rafuṯīn", "her daim kötü söz söyleyenler", "orta", ""],
       [286, "رَفُثَات", "rafuṯāt", "her daim kötü söz söyleyenler, müennes", "orta", ""],
-      [287, "رَفَث", "rafaṯ", "cinsel söz", "kuran", "Kur'ân"],
+      [287, "رَفَث", "rafaṯ", "Cimâ eylemek", "lugat", "Kur'ân · Kamus"],
       [288, "رَفَثَة", "rafaṯa", "her daim kötü söz söyleyen, müennes", "orta", ""],
       [289, "رَفَثَان", "rafaṯān", "her daim kötü söz söyleyen, iki", "orta", ""],
       [290, "رَفَثَتَان", "rafaṯatān", "her daim kötü söz söyleyen, iki, müennes", "orta", ""],
@@ -543,7 +543,7 @@
       [435, "رَوْفَث", "rawfaṯ", "kötü söz söyleme türünden şey", "orta", ""],
       [437, "رَيْفَث", "rayfaṯ", "kötü söz söyleme türünden şey", "orta", ""],
       [439, "رَفْث", "rafṯ", "kötü söz söyleme türünden şey", "orta", ""],
-      [441, "رَفَث", "rafaṯ", "cinsel söz", "kuran", "Kur'ân"],
+      [441, "رَفَث", "rafaṯ", "Cimâ eylemek", "lugat", "Kur'ân · Kamus"],
       [443, "رِفْث", "rifṯ", "kötü söz söyleme türünden şey", "orta", ""],
       [445, "رُفْث", "rufṯ", "kötü söz söyleme türünden şey", "orta", ""],
       [447, "رَفِيث", "rafīṯ", "kötü söz söyleme türünden şey", "orta", ""],
@@ -579,7 +579,7 @@
       [466, "رَفَثَة", "rafaṯa", "kötü söz söylemeler", "orta", ""],
       [467, "رُفَّاث", "ruffāṯ", "kötü söz söylemeler", "orta", ""],
       [468, "رَفَاث", "rafāṯ", "kötü söz söylemeler", "orta", ""],
-      [469, "رَفَث", "rafaṯ", "cinsel söz", "kuran", "Kur'ân"],
+      [469, "رَفَث", "rafaṯ", "Cimâ eylemek", "lugat", "Kur'ân · Kamus"],
       [470, "مَرَافِث", "marāfiṯ", "kötü söz söylemeler", "orta", ""],
       [471, "مَرَافِيث", "marāfīṯ", "kötü söz söylemeler", "orta", ""],
       [472, "رَوَافِث", "rawāfiṯ", "kötü söz söylemeler", "orta", ""],
@@ -719,6 +719,60 @@
     "renk_sozluk": {
       "الرفث": "cinsel söz",
       "رفث": "cinsel söz"
+    },
+    "mustak_lugat": {
+      "رَفَث": [
+        {
+          "eser": "Kamus",
+          "madde": "refes",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلرُّفُوثُ [er-rufûsamp;] (قُعُودٌ [kuûd] vezninde) Cimâ eylemek manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "fuhş kelâm söylemek manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "hatunlara cimâa müteallik söz söylemek, alâ-kavlin yüzlerine karşı fuhşiyyâta müteallik söz söylemek manâsınadır; yukâlu: رَفَثَ إِلَى امْرَأَتِهِ وَرَفِثَ وَرَفُثَ رَفَثًا وَرُفُوثًا مِنَ الْبَابِ اْلأَوَّلِ وَالرَّابِعِ وَالْخَامِسِ إِذَا جَامَعَهَا ve yukâlu: رَفَثَ وَرَفِثَ وَرَفُثَ إِذَا تَكَلَّمَ بِالْفُحْشِ",
+              "misaller": [
+                [
+                  "رَفَثَ إِلَى امْرَأَتِهِ وَرَفِثَ وَرَفُثَ رَفَثًا وَرُفُوثًا مِنَ الْبَابِ اْلأَوَّلِ وَالرَّابِعِ وَالْخَامِسِ إِذَا جَامَعَهَا",
+                  ""
+                ],
+                ["رَفَثَ وَرَفِثَ وَرَفُثَ إِذَا تَكَلَّمَ بِالْفُحْشِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّفَثُ",
+          "okunus": "er-refesamp;",
+          "koken": "rânın ve fânın fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "refes",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cimâ etmek ve fuhşiyyât söylemek ve nisâ tâifesine cimâa müteallik söz söylemek; tekûlu: رَفَثَ الرَّجُلُ يَرْفُثُ مِنَ الْبَابِ الْأَوَّلِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّفَثُ",
+          "okunus": "er-refesamp;",
+          "koken": "fethateynle"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 2,

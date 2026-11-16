@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "شَيْء", "şayʾ", "dileme", "orta", "Vikisözlük: thing"],
+      [0, "شَيْء", "şayʾ", "Şey", "lugat", "Vikisözlük: thing · Luggat"],
       [888, "شِيء", "şīʾ", "dileme", "orta", ""],
       [889, "شُوء", "şūʾ", "dileme", "orta", ""],
       [517, "شَاء", "şāʾ", "dileme", "orta", ""],
@@ -46,7 +46,14 @@
       ]
     ],
     "masdar · bâb II": [
-      [29, "تَشْيِيء", "taşyīʾ", "çokça dileme", "orta", "Vikisözlük: masdar (bâb II): to objectify"],
+      [
+        29,
+        "تَشْيِيء",
+        "taşyīʾ",
+        "Bir kimseyi bir husûsa haml ve sevk eylemek",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to objectify · Kamus"
+      ],
       [30, "تَشْيِئَة", "taşyiʾa", "çokça dileme", "orta", ""],
       [31, "شِيِّاء", "şiyyāʾ", "çokça dileme", "orta", ""]
     ],
@@ -405,7 +412,7 @@
       [884, "شَاؤُون", "şāʾūn", "her daim dileyenler", "orta", ""],
       [885, "شَائِين", "şāʾīn", "her daim dileyenler", "orta", ""],
       [755, "شَاآت", "şāʾāt", "her daim dileyenler, müennes", "orta", ""],
-      [294, "شَيْء", "şayʾ", "her daim dileyen", "orta", "Vikisözlük: thing"],
+      [294, "شَيْء", "şayʾ", "Şey", "lugat", "Vikisözlük: thing · Luggat"],
       [295, "شَيْأَة", "şayʾa", "her daim dileyen, müennes", "orta", ""],
       [296, "شَيْآن", "şayʾān", "her daim dileyen, iki", "orta", ""],
       [297, "شَيْأَتَان", "şayʾatān", "her daim dileyen, iki, müennes", "orta", ""],
@@ -554,7 +561,7 @@
       [425, "شَيَاءَة", "şayāʾa", "dileme", "orta", ""],
       [837, "شِيَاءَة", "şiyāʾa", "dileme", "orta", ""],
       [427, "شُيُوءَة", "şuyūʾa", "dileme", "orta", ""],
-      [428, "شَيْء", "şayʾ", "dileme", "orta", "Vikisözlük: thing"],
+      [428, "شَيْء", "şayʾ", "Şey", "lugat", "Vikisözlük: thing · Luggat"],
       [919, "شِيء", "şīʾ", "dileme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -564,7 +571,7 @@
       [434, "أُشْيُوءَة", "ʾuşyūʾa", "dileme türünden şey", "orta", ""],
       [435, "شَوْيَأ", "şawyaʾ", "dileme türünden şey", "orta", ""],
       [437, "شَيْيَأ", "şayyaʾ", "dileme türünden şey", "orta", ""],
-      [439, "شَيْء", "şayʾ", "dileme türünden şey", "orta", "Vikisözlük: thing"],
+      [439, "شَيْء", "şayʾ", "Şey", "lugat", "Vikisözlük: thing · Luggat"],
       [840, "شَاء", "şāʾ", "dileme türünden şey", "orta", ""],
       [921, "شِيء", "şīʾ", "dileme türünden şey", "orta", ""],
       [923, "شُوء", "şūʾ", "dileme türünden şey", "orta", ""],
@@ -587,7 +594,14 @@
       [454, "شَيَاءَة", "şayāʾa", "dileme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَشْيَاء", "ʾaşyāʾ", "dilemeler", "orta", ""],
+      [
+        455,
+        "أَشْيَاء",
+        "ʾaşyāʾ",
+        "Yiyecek ve içecek dışında insan için gerekli olan her türlü şey, nesneler",
+        "lugat",
+        "Kubbealtı"
+      ],
       [456, "أَشْيِئَة", "ʾaşyiʾa", "dilemeler", "orta", ""],
       [457, "أَشَايِئ", "ʾaşāyiʾ", "dilemeler", "orta", ""],
       [458, "أَشَايِيء", "ʾaşāyīʾ", "dilemeler", "orta", ""],
@@ -2237,7 +2251,116 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شَيْء": [
+        {
+          "eser": "Luggat",
+          "madde": "şey'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Şey",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eş-şey",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve الْمَشِيئَةُ [el-meşîet] (خَطِيئَةٌ [hatîet] vezninde) ve الْمَشَاءَةُ [el-meşâet] (كَرَامَةٌ [kerâmet] vezninde) ve الْمَشَائِيَةُ [el-meşâiyet] (عَلاَنِيَةٌ [alâniyet] vezninde) Dilemek manâsınadır ki Fârisîde hâsten mürâdifidir; tekûlu: شِئْتُهُ أَشَاؤُهُ شَيْئًا وَمَشِيئَةً وَمَشَاءَةً وَمَشَائِيَةً مِنَ الْبَابِ الرَّابِعِ أَيْ أَرَدْتُهُ Ve شَيْءٌ [şey] Her mevcûda denir ki Fârisîde çîz ve Türkîde nesne tabîr olunur, gerek hissî olsun ecsâm gibi ve gerek hükmî olsun akvâl gibi. Cemi أَشْيَاءُ [eşyâ] ve أَشْيَاوَاتٌ [eşyâvât] ve أَشَاوَاتٌ [eşâvât] ve أَشَاوَى [eşâvâ] gelir ki vâvın fethi ve kesriyle de mahkîdir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "işbu أَشَاوَى [eşâvâ] kelimesinin aslı أَشَايِيُّ [eşâyiyy] idi yâât-ı selâsla, yâ-yı müşeddede tahfîf olunduktan sonra kesreden fetha ve yâdan elif ibdâl olunup badehu yâ, vâva kalb olunmuştur. Cevherînin “Aslı hemze ile أَشَائِيُّ [eşâiyy] idi.” kavli galattır, zîrâ yâ-yı ûlâyı hemzeye kalb eylemek sahîh değildir, zîrâ yâ-yı ûlâ asliyyedir, zâid değildir. İbdâlin şartı ise zâid olmaktır, niteki أَبْيَاتٌ [ebyât] lafzının ceminde أَبَابِيتُ [ebâbît] denir, yâyı adem-i ziyâdesine mebnî isbâtla. Pes eliften sonra olan yâyı dahi asâletine mebnî hemzeye ibdâl câiz değildir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "الشَّيْءُ",
+          "okunus": "eş-şey",
+          "koken": "şînin fethi ve yânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şey",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mevcûd olan nesne, tasgîri شُيَيْءٌ [şuyey] ve شِيَيْءٌ [şiyey] gelir eyzan bi-kesriş-şîn; وَلَا تَقُلْ شُوَيْءٌ Cemi اَلْأَشْيَاءُ [el-eşyâ] gelir, gayr-i munsarıftır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشَّيْءُ",
+          "okunus": "eş-şey",
+          "koken": ""
+        }
+      ],
+      "تَشْيِيء": [
+        {
+          "eser": "Kamus",
+          "madde": "teşyi",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseyi bir husûsa haml ve sevk eylemek manâsınadır, tekûlu: شَيَّأْتُهُ عَلَى الأَمْرِ تَشْيِيئًا أَيْ حَمَلْتُهُ عَلَيْهِ Ve çirkîn eylemek, teşvîş ve takbîh manâsınadır; yukâlu: شَيَّأَ اللهُ وَجْهَهُ أَيْ قَبَّحَهُ",
+              "misaller": [
+                ["شَيَّأَ اللهُ وَجْهَهُ أَيْ قَبَّحَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "التَّشْيِيءُ",
+          "okunus": "et-teşyî",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ],
+      "أَشْيَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EŞYÂ",
+          "yazilis": "ﺍﺷﻴﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. şey ’in çoğul şekli eşyā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yiyecek ve içecek dışında insan için gerekli olan her türlü şey, nesneler",
+              "misaller": [
+                ["Ev eşyâsı.", ""],
+                ["Giyim eşyâsı.", ""],
+                ["Tuvalet eşyâsı.", ""],
+                ["Yüz çeşit eşyâ dizilmiş bir yer sergisi", "Refik H. Karay"],
+                ["Ben ölürsem ölürüm bir şey değil / Ne olursa garip eşyâma olur", "Câhit S. Tarancı"],
+                ["Her zaman güzel mi bu kadar / Bu eşyâ, bu pencere", "Orhan V. Kanık"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Yaratılmış olan her şey, şeyler, nesneler",
+              "misaller": [
+                ["Bu gece eşyâya Hak rahmet kılar", "Süleyman Çelebi"],
+                ["Vech-i eşyâdan Hudâ her bâr kendin gösterir", "Leskofçalı Gālib"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 519,
   "kuranda_var": true,

@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "جَزْء", "cazʾ", "bölünme", "orta", ""],
       [1, "جِزْء", "cizʾ", "bölünme", "orta", ""],
-      [2, "جُزْء", "cuzʾ", "bölüm, pay", "kuran", "Vikisözlük: component, constituent"],
+      [2, "جُزْء", "cuzʾ", "Parça", "lugat", "Vikisözlük: component, constituent · Luggat"],
       [3, "جَزَأ", "cazaʾ", "bölünme", "orta", ""],
       [4, "جِزَأ", "cizaʾ", "bölünme", "orta", ""],
       [5, "جُزُؤ", "cuzuʾ", "bölünme", "orta", ""],
@@ -33,14 +33,14 @@
       [22, "جِزَأَة", "cizaʾa", "bölünme", "orta", ""],
       [23, "جَزْؤُوءَة", "cazʾūʾa", "bölünme", "orta", ""],
       [24, "تُجْزُوء", "tuczūʾ", "bölünme", "orta", ""],
-      [25, "تَجْزِئَة", "tacziʾa", "bölünme", "orta", ""],
+      [25, "تَجْزِئَة", "tacziʾa", "Parçalara ayırma, bölme", "lugat", "Luggat"],
       [26, "تَجْزَأَة", "taczaʾa", "bölünme", "orta", ""],
       [27, "مَجْزُؤَة", "maczuʾa", "bölünme", "orta", ""],
       [28, "مَجْزِئَة", "macziʾa", "bölünme", "orta", ""]
     ],
     "masdar · bâb II": [
       [29, "تَجْزِيء", "taczīʾ", "çokça bölünme", "orta", ""],
-      [30, "تَجْزِئَة", "tacziʾa", "çokça bölünme", "orta", ""],
+      [30, "تَجْزِئَة", "tacziʾa", "Parçalara ayırma, bölme", "lugat", "Luggat"],
       [31, "جِزِّاء", "cizzāʾ", "çokça bölünme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
@@ -535,7 +535,7 @@
       [421, "جَزَاء", "cazāʾ", "bölünme", "orta", ""],
       [422, "جُزُوء", "cuzūʾ", "bölünme", "orta", ""],
       [423, "جِزَاء", "cizāʾ", "bölünme", "orta", ""],
-      [424, "جُزْء", "cuzʾ", "bölüm, pay", "kuran", "Vikisözlük: component, constituent"],
+      [424, "جُزْء", "cuzʾ", "Parça", "lugat", "Vikisözlük: component, constituent · Luggat"],
       [425, "جَزَاءَة", "cazāʾa", "bölünme", "orta", ""],
       [426, "جِزَاءَة", "cizāʾa", "bölünme", "orta", ""],
       [427, "جُزُوءَة", "cuzūʾa", "bölünme", "orta", ""],
@@ -552,7 +552,7 @@
       [439, "جَزْء", "cazʾ", "bölünme türünden şey", "orta", ""],
       [441, "جَزَأ", "cazaʾ", "bölünme türünden şey", "orta", ""],
       [443, "جِزْء", "cizʾ", "bölünme türünden şey", "orta", ""],
-      [445, "جُزْء", "cuzʾ", "bölüm, pay", "kuran", "Vikisözlük: component, constituent"],
+      [445, "جُزْء", "cuzʾ", "Parça", "lugat", "Vikisözlük: component, constituent · Luggat"],
       [447, "جَزِيء", "cazīʾ", "bölünme türünden şey", "orta", ""],
       [449, "جِزَأ", "cizaʾ", "bölünme türünden şey", "orta", ""],
       [451, "جُزُؤ", "cuzuʾ", "bölünme türünden şey", "orta", ""],
@@ -572,7 +572,7 @@
       [454, "جَزَاءَة", "cazāʾa", "bölünme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْزَاء", "ʾaczāʾ", "bölünmeler", "orta", ""],
+      [455, "أَجْزَاء", "ʾaczāʾ", "Cüzler, parçalar, kısımlar", "lugat", "Kubbealtı"],
       [456, "أَجْزِئَة", "ʾacziʾa", "bölünmeler", "orta", ""],
       [457, "أَجَازِئ", "ʾacāziʾ", "bölünmeler", "orta", ""],
       [458, "أَجَازِيء", "ʾacāzīʾ", "bölünmeler", "orta", ""],
@@ -1150,7 +1150,289 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جُزْء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CÜZ",
+          "yazilis": "ﺟﺰﺀ",
+          "tur": "i.",
+          "koken": "Ar. cuz’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir bütünü meydana getiren kısımlardan her biri, kısım, parça. Karşıtı",
+              "misaller": [
+                [
+                  "KÜL. Bugünün mahallesi, artık eskiden olduğu gibi her uzvu birbirine bağlı yaşayan topluluk değildir, sâdece belediye teşkîlâtının bir cüzü olarak mevcuttur",
+                  "Ahmet H. Tanpınar"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ânın bölündüğü otuz kısımdan her biri",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "cüzünün sonu ile",
+              "misaller": [],
+              "no": 22
+            },
+            {
+              "etiket": "",
+              "tanim": "cüzünün başında yer alır.”",
+              "misaller": [],
+              "no": 23
+            },
+            {
+              "etiket": "",
+              "tanim": "Eskiden mahalle mekteplerinde ders kitabı olarak okunan, içinde elifbâ, elifbâya âit bilgiler, namaz duâları ve bâzı sûreler bulunan ufak kitapçık",
+              "misaller": [
+                ["Elif cüzü.", ""],
+                ["Amme cüzü.", ""],
+                ["Tebâreke cüzü.", ""],
+                ["İki üç çocuk ellerinde cüzler gelip rahleye sıralandılar", "Ahmet Râsim"]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir kitabın ayrı bir kapak içinde çıkarılan bir veya birkaç formalık bölümü, fasikül",
+              "misaller": [],
+              "no": 4
+            },
+            {
+              "etiket": "edeb.",
+              "tanim": "Aruzda, bir mısrâyı teşkil eden ve Arapça “fa’l” ( ﻓﻌﻞ ) kökünden türetilmiş olan “mefâilün, fâilâtün, müstef’ilün, mef’ûlü” gibi vezin parçalarından her biri, tef’ile",
+              "misaller": [],
+              "no": 5
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kur’ân’ın cüz başlarında yer alan ve içinde cüz numarası yazılı olan süsleme motifi",
+              "misaller": [],
+              "deyim": "Cüz gülü"
+            },
+            {
+              "etiket": "",
+              "tanim": "Eskiden mahalle mekteplerinde okuyan çocukların Kur’an ve kitap cüzlerini mektebe götürmek için boyunlarına astıkları, çanta vazîfesini gören, deriden veya kumaştan yapılmış sırma işlemeli kese",
+              "misaller": [
+                ["Ders yok, cüzleri, cüz keselerini getirmeyin, âminden sonra âzat", "Ahmet Râsim"]
+              ],
+              "deyim": "Cüz kesesi"
+            },
+            {
+              "etiket": "",
+              "tanim": "Atom",
+              "misaller": [],
+              "deyim": "Cüz’-i ferd"
+            },
+            {
+              "etiket": "",
+              "tanim": "Atomculuk, atomizm, cüz’-i lâ-yetecezzâ nazariyesi",
+              "misaller": [],
+              "deyim": "Cüz’-i ferdiyye"
+            },
+            {
+              "etiket": "",
+              "tanim": "Eskiden maddenin bölünemez kabul edilen en ufak parçası, zerre, atom",
+              "misaller": [],
+              "deyim": "Cüz’-i lâ-yetecezzâ"
+            },
+            {
+              "etiket": "",
+              "tanim": "Atomculuk, atomizm",
+              "misaller": [],
+              "deyim": "Cüz’-i lâ-yetecezzâ nazariyesi"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Bir bütünün kendi karakterini taşıyan en küçük parçası. 2. Gerekli sınıfları bünyesinde bulunduran askerî birlik",
+              "misaller": [],
+              "deyim": "Cüz’-i tam"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cüz'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Parça. Medrese alfabe kitabı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cüz'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bütünü oluşturan parçalardan herbiri",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cüz'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurânın özel bölünmüş yirmi sahîfesi",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cüz'-i ihtiyârî",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kulun tercîhi, irâdesi",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَجْزِئَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TECZİE",
+          "yazilis": "ﺗﺠﺰﺋﻪ",
+          "tur": "i.",
+          "koken": "Ar. cez’ “parçalara bölmek”ten teczi’e",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bölme, parçalara ayırma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "teczie",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Parçalara ayırma, bölme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَجْزَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ECZÂ",
+          "yazilis": "ﺍﺟﺰﺍﺀ",
+          "tur": "i.",
+          "koken": "Ar. cuz’ un çoğul şekli eczā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cüzler, parçalar, kısımlar",
+              "misaller": [
+                ["Yandırıp eczâ-yı terkîbim külüm versen yele / Yok yolundan dönmegüm varım senindir cüz’ ü kül", "Fuzûlî"],
+                ["Pek dilber imiş o duhter / Eczâsına bak ne rûh-perver", "Abdülhak Hâmit"],
+                ["Eczâ-yı terkîbiyyesi bozulmaya başlamış bir ihtiyar çehre", "Sâmipaşazâde Sezâî"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kimya yoluyle elde edilen, ilâç yapımında ve sanâyide çeşitli işlerde kullanılan birleşiklerin ortak adı",
+              "misaller": [
+                ["Acâyip bir eczâ kokusu neşreden bir boya ile basılmıştı", "Refik H. Karay"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "teşmil.",
+              "tanim": "İlâç",
+              "misaller": [
+                ["Eczâ çantası.", ""],
+                ["Eczâ dolabı.", ""],
+                [
+                  "İstanbul’da birkaç eczâ deposundan başka doğrudan doğruya eczâ fabrikalarıyle temâsa girmişti",
+                  "Ahmet H. Tanpınar"
+                ],
+                [
+                  "Eğer bizde de eczâhâneler Avrupa’daki gibi tahdîde tâbi, eczâ satışları reçeteye bağlı olsa eczâ ticâreti bu kadar mergup olmaz",
+                  "Burhan Felek"
+                ]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "halk ağzı. Kibrit, kapsül vb. şeylerin ucundaki yanıcı kısım",
+              "misaller": [],
+              "no": 4
+            },
+            {
+              "etiket": "",
+              "tanim": "Ciltlenmemiş kitap formaları, cüzler",
+              "misaller": [],
+              "no": 5
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Yanıcı kimyevî maddeler",
+              "misaller": [],
+              "deyim": "Eczâ-i nâriyye"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerim cüzleri",
+              "misaller": [],
+              "deyim": "Eczâ-i şerîfe"
+            }
+          ]
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ecza",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَجْزَاءُ",
+          "okunus": "el-eczâ",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

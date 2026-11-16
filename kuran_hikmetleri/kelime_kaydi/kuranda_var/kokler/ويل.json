@@ -4,7 +4,7 @@
   "turkce_fiil": null,
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "وَيْل", "wayl", "vay, helak", "kuran", "Kur'ân"],
+      [0, "وَيْل", "wayl", "Yazık", "lugat", "Kur'ân · Luggat"],
       [888, "وِيل", "wīl", "", "veri yok", ""],
       [889, "وُول", "wūl", "", "veri yok", ""],
       [517, "وَال", "wāl", "", "veri yok", ""],
@@ -395,7 +395,7 @@
       [884, "وَالُون", "wālūn", "", "veri yok", ""],
       [885, "وَالِين", "wālīn", "", "veri yok", ""],
       [755, "وَالَات", "wālāt", "", "veri yok", ""],
-      [294, "وَيْل", "wayl", "vay, helak", "kuran", "Kur'ân"],
+      [294, "وَيْل", "wayl", "Yazık", "lugat", "Kur'ân · Luggat"],
       [295, "وَيْلَة", "wayla", "", "veri yok", ""],
       [296, "وَيْلَان", "waylān", "", "veri yok", ""],
       [297, "وَيْلَتَان", "waylatān", "", "veri yok", ""],
@@ -544,7 +544,7 @@
       [425, "وَيَالَة", "wayāla", "", "veri yok", ""],
       [837, "وِيَالَة", "wiyāla", "", "veri yok", ""],
       [427, "وُيُولَة", "wuyūla", "", "veri yok", ""],
-      [428, "وَيْل", "wayl", "vay, helak", "kuran", "Kur'ân"],
+      [428, "وَيْل", "wayl", "Yazık", "lugat", "Kur'ân · Luggat"],
       [919, "وِيل", "wīl", "", "veri yok", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -554,7 +554,7 @@
       [434, "أُويُولَة", "ʾūyūla", "", "veri yok", ""],
       [435, "وَوْيَل", "wawyal", "", "veri yok", ""],
       [437, "وَيْيَل", "wayyal", "", "veri yok", ""],
-      [439, "وَيْل", "wayl", "vay, helak", "kuran", "Kur'ân"],
+      [439, "وَيْل", "wayl", "Yazık", "lugat", "Kur'ân · Luggat"],
       [840, "وَال", "wāl", "", "veri yok", ""],
       [921, "وِيل", "wīl", "", "veri yok", ""],
       [923, "وُول", "wūl", "", "veri yok", ""],
@@ -1056,6 +1056,122 @@
       "يويلنا": "vay, helak",
       "ويل": "vay, helak",
       "ويلك": "vay, helak"
+    },
+    "mustak_lugat": {
+      "وَيْل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "VEYL",
+          "yazilis": "ﻭﻳﻞ",
+          "tur": "ünl.",
+          "koken": "Ar. veyl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yazık, vah vah",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "i.",
+              "tanim": "Cehennemde bir vâdînin adı",
+              "misaller": [
+                ["Yâr ile bâğ-ı behişt olsa n’ola Veyl ü lezâ", "yakıcı ateş"],
+                ["/ Mahz-ı nîrân oldu tenhâ sâha-yı cennet bana", "Bayburtlu Zihni"],
+                ["Deniz sanki cehennemin Veyl deresi imiş gibi ateş kesilir gider idi", "Ahmed Midhat Efendi"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "veyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hulûlüş-şerr manâsınadır; yukâlu: وَيْلٌ لَهُ أَيْ حَلَّ بِهِ الشَّرُّ Bazılar dedi ki وَيْلٌ [veyl] kelime-i tefcîdir, bir musîbet hudûsunda îrâd olunur, lisânımızda vay yazık ve hayf ve dirîg ile tabîr olunur; yukâlu: وَيْلَهُ وَوَيْلَكَ وَوَيْلِي Ve hâlet-i nüdbede وَيْلَاهُ derler, kendisine isâbet eden emr-i fezîden nâşî gûyâ ki veyl ve helâkı davet eder.",
+              "misaller": [
+                ["وَيْلٌ لَهُ أَيْ حَلَّ بِهِ الشَّرُّ", ""],
+                ["وَيْلَهُ وَوَيْلَكَ وَوَيْلِي", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "وَيْلٌ [veyl] kelime-i azâb olur ki berbâdlık ve helâk ve hasâr manâsına olur; yukâlu: وَيْلٌ لَهُ أَيْ هُلْكٌ وَعَذَابٌ لَهُ وَتَقُولُ وَيْلُ الشَّيْطَانِ مُثَلَّثَةَ اللَّامِ مُضَافَةً وَوَيْلًا لَهُ مُثَلَّثَةً مُنَوَّنَةً",
+              "misaller": [
+                [
+                  "وَيْلٌ لَهُ أَيْ هُلْكٌ وَعَذَابٌ لَهُ وَتَقُولُ وَيْلُ الشَّيْطَانِ مُثَلَّثَةَ اللَّامِ مُضَافَةً وَوَيْلًا لَهُ مُثَلَّثَةً مُنَوَّنَةً",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَيْلُ",
+          "okunus": "el-veyl",
+          "koken": "لَيْلٌ [leyl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "veyl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kelime-i وَيْحٌ [veyh] gibidir. Bu kadar var ki وَيْلٌ [veyl] kelime-i azâbdır, hışım ve gazab makâmında istimâl olunur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "وَيْحٌ [veyh] kelime-i rahmettir, terahhum makâmında istimâl olunur; yukâlu: وَيْلَهُ وَوَيْلَكَ وَوَيْلِي Ve hâlet-i nüdbede وَيْلَاهُ dahi derler.",
+              "misaller": [
+                ["وَيْلَهُ وَوَيْلَكَ وَوَيْلِي", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "gâh olur üzerine kelime-i tâ dâhil kılıp وَيْلَةٌ [veylet] derler; ve tekûlu: وَيْلٌ لِزَيْدٍ وَوَيْلًا لِزَيْدٍ فَالنَّصْبُ عَلَى إِضْمَارِ الْفِعْلِ وَالرَّفْعُ عَلَى الْإِبْتِدَاءِ Ve bu zikr olunan muzâf olmadıkçadır ve eger muzâf olsa nasbdan gayrı câiz olmaz, zîrâ merfû olsa onun için haber müyesser olmaz.Ve Âtâ b. Yesâr eyitti: وَيْلٌ [veyl] cehennemde bir derenin ismidir ki eger dağlar bırakılsa eriyip mahv olaydı, ziyâde harâretinden.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "وَيْلٌ",
+          "okunus": "veyl",
+          "koken": "vâvın fethi ve yânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "veyl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yazık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "veyl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yazık, yazıklar olsun, eyvahlar olsun",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
     }
   },
   "kuran_gecisleri": 0,

@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "سَبْت", "sabt", "cumartesi", "kuran", "Kur'ân"],
+      [0, "سَبْت", "sabt", "Cumartesi", "lugat", "Kur'ân · Kubbealtı"],
       [1, "سِبْت", "sibt", "dinlenme", "orta", ""],
       [2, "سُبْت", "subt", "dinlenme", "orta", ""],
       [3, "سَبَت", "sabat", "dinlenme", "orta", ""],
@@ -16,7 +16,14 @@
       [5, "سُبُت", "subut", "dinlenme", "orta", ""],
       [6, "سُبُوت", "subūt", "dinlenme", "orta", ""],
       [7, "سِبَات", "sibāt", "dinlenme", "orta", ""],
-      [8, "سُبَات", "subāt", "dinlenme", "orta", "Vikisözlük: stupor, lethargy, ailment of excessive sleep"],
+      [
+        8,
+        "سُبَات",
+        "subāt",
+        "Uyku, uyku hâli, dalgınlık",
+        "lugat",
+        "Vikisözlük: stupor, lethargy, ailment of excessive sleep · Kubbealtı"
+      ],
       [9, "سَبَات", "sabāt", "dinlenme", "orta", ""],
       [10, "سَبَاتَة", "sabāta", "dinlenme", "orta", ""],
       [11, "سُبُوتَة", "subūta", "dinlenme", "orta", ""],
@@ -390,7 +397,7 @@
       [291, "سَبَتُون", "sabatūn", "her daim dinlenenler", "orta", ""],
       [292, "سَبَتِين", "sabatīn", "her daim dinlenenler", "orta", ""],
       [293, "سَبَتَات", "sabatāt", "her daim dinlenenler, müennes", "orta", ""],
-      [294, "سَبْت", "sabt", "cumartesi", "kuran", "Kur'ân"],
+      [294, "سَبْت", "sabt", "Cumartesi", "lugat", "Kur'ân · Kubbealtı"],
       [295, "سَبْتَة", "sabta", "her daim dinlenen, müennes", "orta", ""],
       [296, "سَبْتَان", "sabtān", "her daim dinlenen, iki", "orta", ""],
       [297, "سَبْتَتَان", "sabtatān", "her daim dinlenen, iki, müennes", "orta", ""],
@@ -415,9 +422,9 @@
         315,
         "سُبَات",
         "subāt",
-        "her daim dinlenen",
-        "orta",
-        "Vikisözlük: stupor, lethargy, ailment of excessive sleep"
+        "Uyku, uyku hâli, dalgınlık",
+        "lugat",
+        "Vikisözlük: stupor, lethargy, ailment of excessive sleep · Kubbealtı"
       ],
       [316, "سُبَاتَة", "subāta", "her daim dinlenen, müennes", "orta", ""],
       [317, "سُبَاتَان", "subātān", "her daim dinlenen, iki", "orta", ""],
@@ -539,7 +546,7 @@
       [425, "سَبَاتَة", "sabāta", "dinlenme", "orta", ""],
       [426, "سِبَاتَة", "sibāta", "dinlenme", "orta", ""],
       [427, "سُبُوتَة", "subūta", "dinlenme", "orta", ""],
-      [428, "سَبْت", "sabt", "cumartesi", "kuran", "Kur'ân"],
+      [428, "سَبْت", "sabt", "Cumartesi", "lugat", "Kur'ân · Kubbealtı"],
       [429, "سِبْت", "sibt", "dinlenme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -549,7 +556,7 @@
       [434, "أُسْبُوتَة", "ʾusbūta", "dinlenme türünden şey", "orta", ""],
       [435, "سَوْبَت", "sawbat", "dinlenme türünden şey", "orta", ""],
       [437, "سَيْبَت", "saybat", "dinlenme türünden şey", "orta", ""],
-      [439, "سَبْت", "sabt", "cumartesi", "kuran", "Kur'ân"],
+      [439, "سَبْت", "sabt", "Cumartesi", "lugat", "Kur'ân · Kubbealtı"],
       [441, "سَبَت", "sabat", "dinlenme türünden şey", "orta", ""],
       [443, "سِبْت", "sibt", "dinlenme türünden şey", "orta", ""],
       [445, "سُبْت", "subt", "dinlenme türünden şey", "orta", ""],
@@ -1093,7 +1100,189 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "سَبْت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SEBT",
+          "yazilis": "ﺳﺒﺖ",
+          "tur": "i.",
+          "koken": "Ar. sebt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cumartesi",
+              "misaller": [
+                [" Ashâbü’s-sebt: Cumartesi gününe îtibar edenler, o günü sâhiplenenler, yahûdiler.", ""],
+                [" Yevmü’s-sebt: Cumartesi günü.", ""],
+                ["İ’tibârından yehûdun sebte etmez iktizâ / Râcih olmak hüsn ile pencşenbih ü âzîneye", "Nâbî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "sebt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sükûn ve râhat eylemek manâsınadır; yukâlu: سَبَتَ الرَّجُلُ سَبْتًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا اسْتَرَاحَ وَسَكَنَ Ve kesmek manâsınadır; yukâlu: سَبَتَ الشَّيْءَ إِذَا قَطَعَهُ Ve سَبْتٌ [sebt] Dehr ve zamâna denir, ke-mâ se-yuzkeru.",
+              "misaller": [
+                ["سَبَتَ الرَّجُلُ سَبْتًا مِنَ الْبَابِ اْلأَوَّلِ وَالثَّانِي إِذَا اسْتَرَاحَ وَسَكَنَ", ""],
+                ["سَبَتَ الشَّيْءَ إِذَا قَطَعَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "baş tırâş eylemek manâsınadır; yukâlu: سَبَتَ رَأْسَهُ إِذَا حَلَقَهُ Ve başta bürülüp top olan saçtan bir mikdârını salıvermek manâsınadır; yukâlu: سَبَتَ شَعْرَهُ إِذَا أَرْسَلَهُ عَنِ الْعَقْصِ Ve سَبْتٌ [sebt] Deveye mahsûs bir gûne yürüyüş ismidir ki murâd seyr-i serîdir.",
+              "misaller": [
+                ["سَبَتَ رَأْسَهُ إِذَا حَلَقَهُ", ""],
+                ["سَبَتَ شَعْرَهُ إِذَا أَرْسَلَهُ عَنِ الْعَقْصِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] Mütehayyir olmak manâsınadır; yukâlu سَبَتَ الرَّجُلُ إِذَا حَارَ Ve سَبْتٌ [sebt] Yüğrük soy ata denir, vasf bil-masdardır, kat-ı mesâfe eylediği için; yukâlu: فَرَسٌ سَبْتٌ أَيْ جَوَادٌ Ve hiddetli, haşarı, serkeş ve küstâh ve cerî oğlana denir; yukâlu: غُلاَمٌ سَبْتٌ أَيْ عَارِمٌ جَرِيءٌ Ve boyun vurmak manâsınadır; yukâlu: سَبَتَ عُنُقَهُ إِذَا ضَرَبَهُ Ve سَبْتٌ [sebt] Hafta günlerinden bir gün adıdır ki Fârisîde şenbe ve lisânımızda cuma ertesi tabîr olunur. Cem-i kılleti أَسْبُتٌ [esbut] gelir, فَلْسٌ [fels] ve أَفْلُسٌ [eflus] gibi, cem-i kesreti سُبُوتٌ [subût] gelir. Müellifin Basâirde beyânına göre kat manâsından mehûzdur, zîrâ Hak celle ve alâ arz ve semâvâtın halkına ehad günü ibtidâ edip altı gün müddette itmâm ve yevm-i mezbûrda halk ve îcâd amelini kat eylemekle سَبْتٌ [sebt] ile müsemmâ olmuştur.",
+              "misaller": [
+                ["فَرَسٌ سَبْتٌ أَيْ جَوَادٌ", ""],
+                ["غُلاَمٌ سَبْتٌ أَيْ عَارِمٌ جَرِيءٌ", ""],
+                ["سَبَتَ عُنُقَهُ إِذَا ضَرَبَهُ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "burada yevmden murâd mikdâr-ı yevmdir ve tedrîcî halkı delîl ihtiyâr ve itibâr-ı nuzzârdır ve ibâda teennî lutfunu talîme mebnîdir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] Uykucu kimseye denir; yukâlu: رَجُلٌ سَبْتٌ أَيْ كَثِيرُ النَّوْمِ Ve be-gâyet zîrek ve dâhiye olan kişiye denir.",
+              "misaller": [
+                ["رَجُلٌ سَبْتٌ أَيْ كَثِيرُ النَّوْمِ", ""]
+              ]
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] Yehûd tâifesi sebt gününe müteallik maîşet ve iktisâbdan munkatı olmak makûlesi umûra kıyâm ve mürâât eylemek manâsınadır; yukâlu: سَبَتَ الْيَهُودُ إِذَا قَامُوا بِأَمْرِهِ",
+              "misaller": [
+                ["سَبَتَ الْيَهُودُ إِذَا قَامُوا بِأَمْرِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّبْتُ",
+          "okunus": "es-sebt",
+          "koken": "نَبْتٌ [nebt] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sebt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Râhat olmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] diye dehre dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] diye baş tırâş etmeğe dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] Dolaşık saç içinden saç sarkıtmağa dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] diye deve yürümesinden bir nev yürümeğe dahi derler ki ondan عَنَقٌ [anak] diye tabîr olunur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "سَبْتٌ [sebt] Boyun vurmağa da derler; yukâlu: سَبَتَ عِلَاوَتَهُ سَبْتًا إِذَا ضَرَبَ عُنُقَهُ Ve يَوْمُ سَبْتٍ [yevmu sebt]e يَوْمُ سَبْتٍ [yevmu sebt] dediklerinin manâsı sâir eyyâm-ı hafta yevm-i sebtte munkatı olduğu içindir.",
+              "misaller": [
+                ["سَبَتَ عِلَاوَتَهُ سَبْتًا إِذَا ضَرَبَ عُنُقَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّبْتُ",
+          "okunus": "es-sebt",
+          "koken": ""
+        }
+      ],
+      "سُبَات": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SÜBAT",
+          "yazilis": "ﺳﺒﺎﺕ",
+          "tur": "i.",
+          "koken": "Ar. subāt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Uyku, uyku hâli, dalgınlık",
+              "misaller": [
+                ["Tedbîr-i tabîb-i müşfika muhtâcım / Zîrâ ki sübâta mübtelâdır bahtım", "Azmîzâde Hâletî"],
+                ["Dün nigehbânıydı milyonlarca zî-rûhun sübat / Silkinip çıkmış o mahbesten bugün bir kâinat", "Mehmet Âkif"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "tıp.",
+              "tanim": "XIX. yüzyılın ikinci yarısında ölüm uykusu, koma, letarji karşılığı olarak kullanılmıştır",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "“Derin uyku” Ölüme benzer bir uykuyle hastanın kendinden geçmesi, derin koma hâli",
+              "misaller": [],
+              "deyim": "Sübât-ı amik"
+            },
+            {
+              "etiket": "",
+              "tanim": "Gaflet uykusu",
+              "misaller": [
+                ["Dîde-i candan sübât-ı gafleti def’et", "Nergisî’den"]
+              ],
+              "deyim": "Sübât-ı gaflet"
+            },
+            {
+              "etiket": "",
+              "tanim": "Uykusuzluğun, uyuyamama hastalığının verdiği dalgınlık, hafif uyku hâli",
+              "misaller": [
+                ["Bister-i safha-i mecmûada hâbîde iken / Oldu illet-zede-i renc-i sübât-ı seherî", "Nâbî"]
+              ],
+              "deyim": "Sübât-ı seherî"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 9,
   "kuranda_var": true,

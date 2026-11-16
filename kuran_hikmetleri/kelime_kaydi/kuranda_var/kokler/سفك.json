@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "سَفْك", "safk", "dökme", "orta", "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I)"],
+      [
+        0,
+        "سَفْك",
+        "safk",
+        "Dökme, akıtma",
+        "lugat",
+        "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I) · Kubbealtı"
+      ],
       [1, "سِفْك", "sifk", "dökme", "orta", ""],
       [2, "سُفْك", "sufk", "dökme", "orta", ""],
       [3, "سَفَك", "safak", "dökme", "orta", ""],
@@ -390,7 +397,14 @@
       [291, "سَفَكُون", "safakūn", "her daim dökenler", "orta", ""],
       [292, "سَفَكِين", "safakīn", "her daim dökenler", "orta", ""],
       [293, "سَفَكَات", "safakāt", "her daim dökenler, müennes", "orta", ""],
-      [294, "سَفْك", "safk", "her daim döken", "orta", "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I)"],
+      [
+        294,
+        "سَفْك",
+        "safk",
+        "Dökme, akıtma",
+        "lugat",
+        "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I) · Kubbealtı"
+      ],
       [295, "سَفْكَة", "safka", "her daim döken, müennes", "orta", ""],
       [296, "سَفْكَان", "safkān", "her daim döken, iki", "orta", ""],
       [297, "سَفْكَتَان", "safkatān", "her daim döken, iki, müennes", "orta", ""],
@@ -532,7 +546,14 @@
       [425, "سَفَاكَة", "safāka", "dökme", "orta", ""],
       [426, "سِفَاكَة", "sifāka", "dökme", "orta", ""],
       [427, "سُفُوكَة", "sufūka", "dökme", "orta", ""],
-      [428, "سَفْك", "safk", "dökme", "orta", "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I)"],
+      [
+        428,
+        "سَفْك",
+        "safk",
+        "Dökme, akıtma",
+        "lugat",
+        "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I) · Kubbealtı"
+      ],
       [429, "سِفْك", "sifk", "dökme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +563,14 @@
       [434, "أُسْفُوكَة", "ʾusfūka", "dökme türünden şey", "orta", ""],
       [435, "سَوْفَك", "sawfak", "dökme türünden şey", "orta", ""],
       [437, "سَيْفَك", "sayfak", "dökme türünden şey", "orta", ""],
-      [439, "سَفْك", "safk", "dökme türünden şey", "orta", "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I)"],
+      [
+        439,
+        "سَفْك",
+        "safk",
+        "Dökme, akıtma",
+        "lugat",
+        "Vikisözlük: verbal noun of سَفَكَ (safaka) (form I) · Kubbealtı"
+      ],
       [441, "سَفَك", "safak", "dökme türünden şey", "orta", ""],
       [443, "سِفْك", "sifk", "dökme türünden şey", "orta", ""],
       [445, "سُفْك", "sufk", "dökme türünden şey", "orta", ""],
@@ -1643,7 +1671,73 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "سَفْك": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SEFK",
+          "yazilis": "ﺳﻔﻚ",
+          "tur": "i.",
+          "koken": "Ar. sefk",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dökme, akıtma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kan dökme",
+              "misaller": [
+                ["Bir kaç senedir sefk-i dimâı mûcip olan mes’eleler…", "Nâmık Kemal’den"],
+                ["Sefk-i demden olur mu âdem şâd?", "Muallim Nâci"],
+                ["Bir imtiyâz-ı vahşet iken sefk-i dem bize / Hattâ cezâ da olsa sezâdır adem bize", "Abdülhak Hâmit’ten"]
+              ],
+              "deyim": "Sefk-i dem (dimâ)"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "sefk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Su ve kan makûlesi nesneyi dökmek manâsınadır, kanda kesîrül-istimâldır; yukâlu: سَفَكَ الدَّمَ سَفْكًا مِنَ الْبَابِ الثَّانِي إِذَا صَبَّهُ Ve süratle çok kelâm söylemek manâsına müstameldir; yukâlu: سَفَكَ الْكَلَامَ إِذَا نَثَرَهُ",
+              "misaller": [
+                ["سَفَكَ الدَّمَ سَفْكًا مِنَ الْبَابِ الثَّانِي إِذَا صَبَّهُ", ""],
+                ["سَفَكَ الْكَلَامَ إِذَا نَثَرَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّفْكُ",
+          "okunus": "es-sefk",
+          "koken": "sînin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sefk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dökmek; tekûlu: سَفَكْتُ الدَّمَ وَالدَّمْعَ إِذَا هَرَقْتَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّفْكُ",
+          "okunus": "es-sefk",
+          "koken": "sînin fethi ve fânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

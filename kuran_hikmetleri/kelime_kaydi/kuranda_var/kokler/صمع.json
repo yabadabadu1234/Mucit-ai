@@ -553,7 +553,7 @@
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
       [431, "صَامُوعَة", "ṣāmūʿa", "sağır olma türünden bir tane", "kontrol", ""],
-      [436, "صَوْمَعَة", "ṣawmaʿa", "sağır olma türünden bir tane", "kontrol", ""],
+      [436, "صَوْمَعَة", "ṣawmaʿa", "Manastır", "lugat", "Luggat"],
       [438, "صَيْمَعَة", "ṣaymaʿa", "sağır olma türünden bir tane", "kontrol", ""],
       [440, "صَمْعَة", "ṣamʿa", "sağır olma türünden bir tane", "kontrol", ""],
       [442, "صَمَعَة", "ṣamaʿa", "sağır olma türünden bir tane", "kontrol", ""],
@@ -582,7 +582,7 @@
       [469, "صَمَع", "ṣamaʿ", "sağır olmalar", "kontrol", ""],
       [470, "مَصَامِع", "maṣāmiʿ", "sağır olmalar", "kontrol", ""],
       [471, "مَصَامِيع", "maṣāmīʿ", "sağır olmalar", "kontrol", ""],
-      [472, "صَوَامِع", "ṣawāmiʿ", "sağır olmalar", "kontrol", ""],
+      [472, "صَوَامِع", "ṣawāmiʿ", "Tapınaklar, savmaalar", "lugat", "Kubbealtı"],
       [473, "أَصْمُع", "ʾaṣmuʿ", "sağır olmalar", "kontrol", ""],
       [474, "صُمَّع", "ṣummaʿ", "sağır olmalar", "kontrol", ""],
       [475, "صَمَائِع", "ṣamāʾiʿ", "sağır olmalar", "kontrol", ""],
@@ -767,7 +767,76 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صَوْمَعَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAVMAA",
+          "yazilis": "ﺻﻮﻣﻌﻪ",
+          "tur": "i.",
+          "koken": "Ar. ṣavma‘a",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İçinde ibâdet edilen ve uzlete girilen çeşitli dinlere âit tapınak",
+              "misaller": [
+                ["Sôfî vü şeyh savmaada el bir ettiler", "Şeyhülislâm Yahyâ"],
+                ["Rûh yok savmaanın pîr-i abâ-pûşunda / Hâl var meygedenin rind-i kadeh-nûşunda", "Nâilî’den"],
+                ["Zâhid yürü var savmaada çille-nişîn ol / Sen meygedenin zevk u safâsın ne bilirsin", "Nâbî"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Halktan ayrı yaşayan hıristiyan râhip ve râhibelere mahsus ibâdet yeri, manastır",
+              "misaller": [
+                ["Savmaalarda tüten buhur gibi bayıltıcı bir eser", "Yahyâ Kemal"],
+                ["● Savmaa-nişin", "ﺻﻮﻣﻌﻪ ﻧﺸﻴﻦ"],
+                ["birl. sıf. ve i", "Fars. nişіn “oturan” ile"],
+                ["Savmaada oturan, uzlete, inzivâya çekilen,", "kimse"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "savmaa",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Manastır. Mabet",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "صَوَامِع": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAVÂMİ",
+          "yazilis": "ﺻﻮﺍﻣﻊ",
+          "tur": "i.",
+          "koken": "Ar. ṣavma‘a ’nın çoğul şekli ṣavāmi‘",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Tapınaklar, savmaalar",
+              "misaller": [
+                ["Ola elfâzın ol resme cevâmi’ / Ki evrâd edine ehl-i savâmi’", "Şeyhî"],
+                ["Dolaş savâmii gel sonra bezm-i rindâna", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

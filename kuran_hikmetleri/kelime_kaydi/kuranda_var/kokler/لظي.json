@@ -11,7 +11,7 @@
       [0, "لَظْي", "laẓy", "alev", "kontrol", ""],
       [1, "لِظْي", "liẓy", "alev", "kontrol", ""],
       [2, "لُظْي", "luẓy", "alev", "kontrol", ""],
-      [517, "لَظَى", "laẓā", "alevli ateş", "kuran", "Kur'ân"],
+      [517, "لَظَى", "laẓā", "Âteşe yâhûd yalınına ve alevine denir", "lugat", "Kur'ân · Kamus"],
       [518, "لِظَى", "liẓā", "alev", "kontrol", ""],
       [519, "لُظِيّ", "luẓiyy", "alev", "kontrol", ""],
       [520, "لُظِيّ", "luẓiyy", "alev", "kontrol", ""],
@@ -360,7 +360,7 @@
       [750, "لَظُوُّون", "laẓuwwūn", "her daim alev olanlar", "kontrol", ""],
       [751, "لَظُوِّين", "laẓuwwīn", "her daim alev olanlar", "kontrol", ""],
       [752, "لَظُوَّات", "laẓuwwāt", "her daim alev olanlar, müennes", "kontrol", ""],
-      [753, "لَظَى", "laẓā", "alevli ateş", "kuran", "Kur'ân"],
+      [753, "لَظَى", "laẓā", "Âteşe yâhûd yalınına ve alevine denir", "lugat", "Kur'ân · Kamus"],
       [754, "لَظَيَان", "laẓayān", "her daim alev olan, iki", "kontrol", ""],
       [884, "لَظَوْن", "laẓawn", "her daim alev olanlar", "kontrol", ""],
       [885, "لَظَيْن", "laẓayn", "her daim alev olanlar", "kontrol", ""],
@@ -518,7 +518,7 @@
       [435, "لَوْظَي", "lawẓay", "alev olma türünden şey", "kontrol", ""],
       [437, "لَيْظَي", "layẓay", "alev olma türünden şey", "kontrol", ""],
       [439, "لَظْي", "laẓy", "alev olma türünden şey", "kontrol", ""],
-      [840, "لَظَى", "laẓā", "alevli ateş", "kuran", "Kur'ân"],
+      [840, "لَظَى", "laẓā", "Âteşe yâhûd yalınına ve alevine denir", "lugat", "Kur'ân · Kamus"],
       [443, "لِظْي", "liẓy", "alev olma türünden şey", "kontrol", ""],
       [445, "لُظْي", "luẓy", "alev olma türünden şey", "kontrol", ""],
       [841, "لَظِيّ", "laẓiyy", "alev olma türünden şey", "kontrol", ""],
@@ -551,7 +551,7 @@
       [858, "لَظَاة", "laẓā", "alev olmalar", "kontrol", ""],
       [859, "لُظَّاء", "luẓẓāʾ", "alev olmalar", "kontrol", ""],
       [860, "لَظَاء", "laẓāʾ", "alev olmalar", "kontrol", ""],
-      [861, "لَظَى", "laẓā", "alevli ateş", "kuran", "Kur'ân"],
+      [861, "لَظَى", "laẓā", "Âteşe yâhûd yalınına ve alevine denir", "lugat", "Kur'ân · Kamus"],
       [862, "مَلَاظِي", "malāẓī", "alev olmalar", "kontrol", ""],
       [863, "مَلَاظِيّ", "malāẓiyy", "alev olmalar", "kontrol", ""],
       [864, "لَوَاظِي", "lawāẓī", "alev olmalar", "kontrol", ""],
@@ -1443,7 +1443,53 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لَظَى": [
+        {
+          "eser": "Kamus",
+          "madde": "leza",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Âteşe yâhûd yalınına ve alevine denir; yukâlu: مَا أَشَدَّ اللَّظَى أَيِ النَّارَ أَوْ لَهِيبَهَا Ve لَظَى [lezâ] Cehennem esmâsındandır ve marifedir. Pes alemiyyet ve tenîsle gayr-i munsarıftır.",
+              "misaller": [
+                ["مَا أَشَدَّ اللَّظَى أَيِ النَّارَ أَوْ لَهِيبَهَا", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "masdar olur, âteş alevlenmek manâsınadır; yukâlu: لَظِيَتِ النَّارُ لَظًى مِنَ الْبَابِ الرَّابِعِ إِذَا تَلَهَّبَتْ",
+              "misaller": [
+                ["لَظِيَتِ النَّارُ لَظًى مِنَ الْبَابِ الرَّابِعِ إِذَا تَلَهَّبَتْ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّظَى",
+          "okunus": "el-lezâ",
+          "koken": "zâ-yı muceme ile فَتًى [fetâ] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "leza",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Esmâ-i nârdan bir ismdir; marifedir lâ-yansarıftır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "لَظَى",
+          "okunus": "lezâ",
+          "koken": "lâmın fethi ve elifin kezâlik kasrıyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

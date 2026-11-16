@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "تَسْع", "tasʿ", "dokuz", "kontrol", ""],
-      [1, "تِسْع", "tisʿ", "dokuz", "kuran", "Kur'ân"],
+      [1, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
       [2, "تُسْع", "tusʿ", "dokuz", "kontrol", ""],
       [3, "تَسَع", "tasaʿ", "dokuz", "kontrol", ""],
       [4, "تِسَع", "tisaʿ", "dokuz", "kontrol", ""],
@@ -289,8 +289,8 @@
       [516, "اِتْسِوَّاع", "itsiwwāʿ", "aşırı dokuz olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "تَاسِع", "tāsiʿ", "dokuz olan", "kontrol", "Vikisözlük: ninth"],
-      [214, "تَاسِعَة", "tāsiʿa", "dokuz olan, müennes", "kontrol", ""],
+      [213, "تَاسِع", "tāsiʿ", "Dokuzuncu", "lugat", "Vikisözlük: ninth · Luggat"],
+      [214, "تَاسِعَة", "tāsiʿa", "târih", "lugat", "Kubbealtı"],
       [215, "تَاسِعَان", "tāsiʿān", "dokuz olan, iki", "kontrol", ""],
       [216, "تَاسِعَتَان", "tāsiʿatān", "dokuz olan, iki, müennes", "kontrol", ""],
       [217, "تَاسِعُون", "tāsiʿūn", "dokuz olanlar", "kontrol", ""],
@@ -351,7 +351,7 @@
       [256, "تَسْعَتَان", "tasʿatān", "bir kere dokuz olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "تِسْعَة", "tisʿa", "dokuz", "kuran", "Kur'ân"],
+      [257, "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
       [258, "تِسْعَتَان", "tisʿatān", "dokuz olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
@@ -533,7 +533,7 @@
       [426, "تِسَاعَة", "tisāʿa", "dokuz olma", "kontrol", ""],
       [427, "تُسُوعَة", "tusūʿa", "dokuz olma", "kontrol", ""],
       [428, "تَسْع", "tasʿ", "dokuz olma", "kontrol", ""],
-      [429, "تِسْع", "tisʿ", "dokuz", "kuran", "Kur'ân"]
+      [429, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "تَاسُوع", "tāsūʿ", "dokuz olma türünden şey", "kontrol", ""],
@@ -544,7 +544,7 @@
       [437, "تَيْسَع", "taysaʿ", "dokuz olma türünden şey", "kontrol", ""],
       [439, "تَسْع", "tasʿ", "dokuz olma türünden şey", "kontrol", ""],
       [441, "تَسَع", "tasaʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [443, "تِسْع", "tisʿ", "dokuz", "kuran", "Kur'ân"],
+      [443, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
       [445, "تُسْع", "tusʿ", "dokuz olma türünden şey", "kontrol", ""],
       [447, "تَسِيع", "tasīʿ", "dokuz olma türünden şey", "kontrol", ""],
       [449, "تِسَع", "tisaʿ", "dokuz olma türünden şey", "kontrol", ""],
@@ -557,7 +557,7 @@
       [438, "تَيْسَعَة", "taysaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
       [440, "تَسْعَة", "tasʿa", "dokuz olma türünden bir tane", "kontrol", ""],
       [442, "تَسَعَة", "tasaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [444, "تِسْعَة", "tisʿa", "dokuz", "kuran", "Kur'ân"],
+      [444, "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
       [446, "تُسْعَة", "tusʿa", "dokuz olma türünden bir tane", "kontrol", ""],
       [448, "تَسِيعَة", "tasīʿa", "dokuz olma türünden bir tane", "kontrol", ""],
       [450, "تِسَعَة", "tisaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
@@ -1574,7 +1574,179 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "تِسْع": [
+        {
+          "eser": "Vankulu",
+          "madde": "tis",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müennesi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "تِسْعٌ [tis] Kezâlik deve suvarma günlerinden bir gündür.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتِّسْعُ",
+          "okunus": "et-tis",
+          "koken": "kezâlik kesri ile"
+        }
+      ],
+      "تَاسِع": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TÂSİ",
+          "yazilis": "ﺗﺎﺳﻊ",
+          "tur": "sıf.",
+          "koken": "Ar. tis‘a “dokuz”dan tāsi‘",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dokuzuncu",
+              "misaller": [
+                ["Fasl-ı tâsi.", ""],
+                ["Bab-ı tâsi.", ""],
+                ["Yükselir bunda duâ-yı müstecâb-ı mü’minin / Cilve-gâh eyler verâ-yı asumân-ı tâsii", "Emirî"],
+                ["● Tâsia", "ﺗﺎﺳﻌﻪ"],
+                ["Derece-i tâsia.", ""],
+                ["Bk. TÂSİA ● Tâsian", "ﺗﺎﺳﻌﺎً"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "tasi",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dokuzuncu demektir; yukâlu: هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
+              "misaller": [
+                [
+                  "هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّاسِعُ",
+          "okunus": "et-tâsi",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tâsi'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dokuzuncu",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَاسِعَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TÂSİA",
+          "yazilis": "ﺗﺎﺳﻌﻪ",
+          "tur": "i.",
+          "koken": "Ar. tāsi‘ “dokuzuncu”dan tāsi‘a",
+          "manalar": [
+            {
+              "etiket": "târih.",
+              "tanim": "Osmanlılar’da kadılara verilen bir rütbe",
+              "misaller": [
+                ["derecelerine kadar çıkardı", "İsmâil H. Uzunçarşılı"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تِسْعَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TİS’A",
+          "yazilis": "ﺗﺴﻌﻪ",
+          "tur": "i.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve sıf. (Ar. tis‘a ) Dokuz, dokuzuncu",
+              "misaller": [
+                ["Dedenden rif’atin olsun hümâyun / Ki tis’a seb’adan efzundur efzun", "Necâtî Bey"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tis'a",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dokuz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "et-tisat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dokuz adede denir. Kâide üzere aded müzekkerdir, müennesinde تِسْعٌ denir; yukâlu: تِسْعَةُ رِجَالٍ ve تِسْعُ نِسْوَةٍ ve minhu kavluhu taâlâ: ﴿وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ﴾ Müellif işbu beytte o dokuz âyâtı cem eylemiştir: “عَصًا سَنَةٌ بَحْرٌ جَرَادٌ وَقُمَّلٌ || دَمٌ وَيَدٌ بَعْدَ الضَّفَادِعِ طُوفَانُ” Ve تِسْعٌ [tis] Devenin susuz kalıp suvardıkları günden bir günün adıdır ki dokuzuncu gün suya götürmektir.",
+              "misaller": [
+                ["تِسْعَةُ رِجَالٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتِّسْعَةُ",
+          "okunus": "et-tisat",
+          "koken": "tânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "et-tisat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Aded-i müzekkerdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتِّسْعَةُ",
+          "okunus": "et-tisat",
+          "koken": "tânın kesri ve sînin sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 7,
   "kuranda_var": true,

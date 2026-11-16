@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "حَوْت", "ḥawt", "kapma", "orta", ""],
       [888, "حِيت", "ḥīt", "kapma", "orta", ""],
-      [889, "حُوت", "ḥūt", "balık", "kuran", "Kur'ân"],
+      [889, "حُوت", "ḥūt", "Balık", "lugat", "Kur'ân · Luggat"],
       [517, "حَات", "ḥāt", "kapma", "orta", ""],
       [518, "حِيَت", "ḥiyat", "kapma", "orta", ""],
       [5, "حُوُت", "ḥuwut", "kapma", "orta", ""],
@@ -538,7 +538,7 @@
       [421, "حَوَات", "ḥawāt", "kapma", "orta", ""],
       [422, "حُوُوت", "ḥuwūt", "kapma", "orta", ""],
       [835, "حِيَات", "ḥiyāt", "kapma", "orta", ""],
-      [918, "حُوت", "ḥūt", "balık", "kuran", "Kur'ân"],
+      [918, "حُوت", "ḥūt", "Balık", "lugat", "Kur'ân · Luggat"],
       [425, "حَوَاتَة", "ḥawāta", "kapma", "orta", ""],
       [837, "حِيَاتَة", "ḥiyāta", "kapma", "orta", ""],
       [427, "حُوُوتَة", "ḥuwūta", "kapma", "orta", ""],
@@ -555,7 +555,7 @@
       [439, "حَوْت", "ḥawt", "kapma türünden şey", "orta", ""],
       [840, "حَات", "ḥāt", "kapma türünden şey", "orta", ""],
       [921, "حِيت", "ḥīt", "kapma türünden şey", "orta", ""],
-      [923, "حُوت", "ḥūt", "balık", "kuran", "Kur'ân"],
+      [923, "حُوت", "ḥūt", "Balık", "lugat", "Kur'ân · Luggat"],
       [447, "حَوِيت", "ḥawīt", "kapma türünden şey", "orta", ""],
       [843, "حِيَت", "ḥiyat", "kapma türünden şey", "orta", ""],
       [451, "حُوُت", "ḥuwut", "kapma türünden şey", "orta", ""],
@@ -845,7 +845,109 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حُوت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HUT",
+          "yazilis": "ﺣﻮﺕ",
+          "tur": "i.",
+          "koken": "Ar. ḥūt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Büyük balık",
+              "misaller": [
+                ["Kâh batn-ı hût içinde Yûnus ile söyleşem / Kâh çıkam arş üzre bir cân olam Selmân olam", "Yûnus Emre"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Balık (burcu)",
+              "misaller": [
+                [
+                  "Âh edersem sâkin-i cennât için olur kebâb / Lücce-i deryâ-i eflâk içre cism-i burc-i Hût",
+                  "Bayburtlu Zihni"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "hut",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "] Balığa denir, سَمَكٌ [semek] manâsına. Cemi أَحْوَاتٌ [ahvât] gelir ve حِوَتَةٌ [hivetet] gelir عِنَبَةٌ [inebet] vezninde ve حِيتَانٌ [hîtân] gelir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حُوتٌ [hût] Burûc-i felekiyyeden bir burc adıdır ki onda kevâkibden حُوتٌ [hût] sûreti bâis-i tesmiyedir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "حُوتٌ [Hût] Esâmîdendir: Hût b. el-Hârisamp; el-Asgar, Kinde kabîlesinden bir batn pederidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Hût b. Sebu b. Sab ricâl-i Arabdandır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Ebû Bekr Osamp;mân b. Muhammed el-Maâfirî ki İbnul-Hût ile müteâreftir, muhaddisîndendir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُوتُ",
+          "okunus": "el-hût",
+          "koken": "hânın zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hut",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Balık, semek manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحُوتُ",
+          "okunus": "el-hût",
+          "koken": "hânın zammıyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "hût",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Balık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

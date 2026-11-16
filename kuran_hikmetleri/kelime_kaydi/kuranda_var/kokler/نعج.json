@@ -15,7 +15,7 @@
       [4, "نِعَج", "niʿac", "koyun", "kontrol", ""],
       [5, "نُعُج", "nuʿuc", "koyun", "kontrol", ""],
       [6, "نُعُوج", "nuʿūc", "koyun", "kontrol", ""],
-      [7, "نِعَاج", "niʿāc", "koyun", "kontrol", ""],
+      [7, "نِعَاج", "niʿāc", "in cemi", "lugat", "Vankulu"],
       [8, "نُعَاج", "nuʿāc", "koyun", "kontrol", ""],
       [9, "نَعَاج", "naʿāc", "koyun", "kontrol", ""],
       [10, "نَعَاجَة", "naʿāca", "koyun", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُنَاعَجَة", "munāʿaca", "biriyle karşılıklı koyun olma", "kontrol", ""],
-      [50, "نِعَاج", "niʿāc", "biriyle karşılıklı koyun olma", "kontrol", ""]
+      [50, "نِعَاج", "niʿāc", "in cemi", "lugat", "Vankulu"]
     ],
     "ism-i merre · bâb III": [
       [51, "نِعَاجَة", "niʿāca", "bir kere biriyle karşılıklı koyun olma", "kontrol", ""]
@@ -347,7 +347,7 @@
       [254, "مَنْعَجَان", "manʿacān", "koyun olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "نَعْجَة", "naʿca", "koyun", "kuran", "Kur'ân"],
+      [255, "نَعْجَة", "naʿca", "Dişi koyuna denir", "lugat", "Kur'ân · Kamus"],
       [256, "نَعْجَتَان", "naʿcatān", "bir kere koyun olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -391,7 +391,7 @@
       [292, "نَعَجِين", "naʿacīn", "her daim koyun olanlar", "kontrol", ""],
       [293, "نَعَجَات", "naʿacāt", "her daim koyun olanlar, müennes", "kontrol", ""],
       [294, "نَعْج", "naʿc", "her daim koyun olan", "kontrol", ""],
-      [295, "نَعْجَة", "naʿca", "koyun", "kuran", "Kur'ân"],
+      [295, "نَعْجَة", "naʿca", "Dişi koyuna denir", "lugat", "Kur'ân · Kamus"],
       [296, "نَعْجَان", "naʿcān", "her daim koyun olan, iki", "kontrol", ""],
       [297, "نَعْجَتَان", "naʿcatān", "her daim koyun olan, iki, müennes", "kontrol", ""],
       [298, "نَعْجُون", "naʿcūn", "her daim koyun olanlar", "kontrol", ""],
@@ -527,7 +527,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "نَعَاج", "naʿāc", "koyun olma", "kontrol", ""],
       [422, "نُعُوج", "nuʿūc", "koyun olma", "kontrol", ""],
-      [423, "نِعَاج", "niʿāc", "koyun olma", "kontrol", ""],
+      [423, "نِعَاج", "niʿāc", "in cemi", "lugat", "Vankulu"],
       [424, "نُعْج", "nuʿc", "koyun olma", "kontrol", ""],
       [425, "نَعَاجَة", "naʿāca", "koyun olma", "kontrol", ""],
       [426, "نِعَاجَة", "niʿāca", "koyun olma", "kontrol", ""],
@@ -555,7 +555,7 @@
       [431, "نَاعُوجَة", "nāʿūca", "koyun olma türünden bir tane", "kontrol", ""],
       [436, "نَوْعَجَة", "nawʿaca", "koyun olma türünden bir tane", "kontrol", ""],
       [438, "نَيْعَجَة", "nayʿaca", "koyun olma türünden bir tane", "kontrol", ""],
-      [440, "نَعْجَة", "naʿca", "koyun", "kuran", "Kur'ân"],
+      [440, "نَعْجَة", "naʿca", "Dişi koyuna denir", "lugat", "Kur'ân · Kamus"],
       [442, "نَعَجَة", "naʿaca", "koyun olma türünden bir tane", "kontrol", ""],
       [444, "نِعْجَة", "niʿca", "koyun olma türünden bir tane", "kontrol", ""],
       [446, "نُعْجَة", "nuʿca", "koyun olma türünden bir tane", "kontrol", ""],
@@ -571,7 +571,7 @@
       [458, "أَنَاعِيج", "ʾanāʿīc", "koyun olmalar", "kontrol", ""],
       [459, "نُعُوج", "nuʿūc", "koyun olmalar", "kontrol", ""],
       [460, "نُعُج", "nuʿuc", "koyun olmalar", "kontrol", ""],
-      [461, "نِعَاج", "niʿāc", "koyun olmalar", "kontrol", ""],
+      [461, "نِعَاج", "niʿāc", "in cemi", "lugat", "Vankulu"],
       [462, "نِعَج", "niʿac", "koyun olmalar", "kontrol", ""],
       [463, "نِعَجَة", "niʿaca", "koyun olmalar", "kontrol", ""],
       [464, "نُعَج", "nuʿac", "koyun olmalar", "kontrol", ""],
@@ -742,6 +742,84 @@
     "renk_sozluk": {
       "نعجة": "koyun",
       "نعجتك": "koyun"
+    },
+    "mustak_lugat": {
+      "نِعَاج": [
+        {
+          "eser": "Vankulu",
+          "madde": "niac",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلنَّعَجَاتُ [en-neacât] (fethateynle) نَعْجَةٌ [nacet]in cemi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "نِعَاجُ الرَّمْلِ [niâcur-reml] Sığırlar manâsına dahi gelir, kezâlik نَعْجَةٌ [nacet]in cemi olmak üzere; ve: لَا يُقَالُ لِغَيْرِ الْبَقَرِ مِنَ الْوَحْشِ نِعَاجٌ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنِّعَاجُ",
+          "okunus": "en-niâc",
+          "koken": "nûnun kesriyle"
+        }
+      ],
+      "نَعْجَة": [
+        {
+          "eser": "Kamus",
+          "madde": "en-nacet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dişi koyuna denir. Cemi نِعَاجٌ [niâc] gelir nûnun kesriyle ve نَعَجَاتٌ [naacât] gelir fetehâtla. Şârihin beyânına göre bunun lafzından müzekkeri yoktur. Müzekkeri ضَأْنٌ [dan]dır, niteki عِكْرِشَةٌ [ikrişet] dişi tavşana ve لَقْوَةٌ [lakvet] dişi ukâb kuşuna mahsûstur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Arablar bakar-ı vahşîye نِعَاجُ الرَّمْلِ [niâcur-reml] ıtlâk ederler. Müfredi نَعْجَةٌ [nacet]tir ki نَعْجَةُ الرَّمْلِ [nacetur-reml] derler ve bakar-ı vahşîden gayrıya ıtlâk eylemezler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "نَعْجَةٌ [Nacet] Esâmîdendir: Ebû Nace meşâhîr-i şuarâdan Sâlih b. Hubeyl künyesidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Ahnes b. Nace el-Kelbî kezâlik şuarâdandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّعْجَةُ",
+          "okunus": "en-nacet",
+          "koken": "حَمْزَةُ [hamzet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "en-nacet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dişi koyun ve dişi sığır, inek manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّعْجَةُ",
+          "okunus": "en-nacet",
+          "koken": "nûnun fethi ve aynın sükûnuyla"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 4,

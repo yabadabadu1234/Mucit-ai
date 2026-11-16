@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "رَغْم", "rağm", "zorlama", "orta", ""],
+      [0, "رَغْم", "rağm", "Toprağa düşüp yere berâber olmak", "lugat", "Vankulu"],
       [1, "رِغْم", "riğm", "zorlama", "orta", ""],
       [2, "رُغْم", "ruğm", "zorlama", "orta", ""],
       [3, "رَغَم", "rağam", "zorlama", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَرْغِمَة", "marğima", "zorlama", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَرْغِيم", "tarğīm", "çokça zorlama", "orta", ""],
+      [29, "تَرْغِيم", "tarğīm", "Bir adamın hakkında hor ve hakîr olsun diye duâ eylemek", "lugat", "Kamus"],
       [30, "تَرْغِمَة", "tarğima", "çokça zorlama", "orta", ""],
       [31, "رِغِّام", "riğğām", "çokça zorlama", "orta", ""]
     ],
@@ -97,7 +97,14 @@
       [66, "مُرَاغَم", "murāğam", "biriyle karşılıklı zorlama yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِرْغَام", "ʾirğām", "zorlatma", "orta", "Vikisözlük: masdar (bâb IV): to compel, to force, to coerce"]
+      [
+        67,
+        "إِرْغَام",
+        "ʾirğām",
+        "Toprağa sürmek amnâsınadır",
+        "lugat",
+        "Vikisözlük: masdar (bâb IV): to compel, to force, to coerce · Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِرْغَامَة", "ʾirğāma", "bir kere zorlatma", "orta", ""]
@@ -390,7 +397,7 @@
       [291, "رَغَمُون", "rağamūn", "her daim zorlayanlar", "orta", ""],
       [292, "رَغَمِين", "rağamīn", "her daim zorlayanlar", "orta", ""],
       [293, "رَغَمَات", "rağamāt", "her daim zorlayanlar, müennes", "orta", ""],
-      [294, "رَغْم", "rağm", "her daim zorlayan", "orta", ""],
+      [294, "رَغْم", "rağm", "Toprağa düşüp yere berâber olmak", "lugat", "Vankulu"],
       [295, "رَغْمَة", "rağma", "her daim zorlayan, müennes", "orta", ""],
       [296, "رَغْمَان", "rağmān", "her daim zorlayan, iki", "orta", ""],
       [297, "رَغْمَتَان", "rağmatān", "her daim zorlayan, iki, müennes", "orta", ""],
@@ -532,7 +539,7 @@
       [425, "رَغَامَة", "rağāma", "zorlama", "orta", ""],
       [426, "رِغَامَة", "riğāma", "zorlama", "orta", ""],
       [427, "رُغُومَة", "ruğūma", "zorlama", "orta", ""],
-      [428, "رَغْم", "rağm", "zorlama", "orta", ""],
+      [428, "رَغْم", "rağm", "Toprağa düşüp yere berâber olmak", "lugat", "Vankulu"],
       [429, "رِغْم", "riğm", "zorlama", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +549,7 @@
       [434, "أُرْغُومَة", "ʾurğūma", "zorlama türünden şey", "orta", ""],
       [435, "رَوْغَم", "rawğam", "zorlama türünden şey", "orta", ""],
       [437, "رَيْغَم", "rayğam", "zorlama türünden şey", "orta", ""],
-      [439, "رَغْم", "rağm", "zorlama türünden şey", "orta", ""],
+      [439, "رَغْم", "rağm", "Toprağa düşüp yere berâber olmak", "lugat", "Vankulu"],
       [441, "رَغَم", "rağam", "zorlama türünden şey", "orta", ""],
       [443, "رِغْم", "riğm", "zorlama türünden şey", "orta", ""],
       [445, "رُغْم", "ruğm", "zorlama türünden şey", "orta", ""],
@@ -1838,7 +1845,141 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَغْم": [
+        {
+          "eser": "Kamus",
+          "madde": "ragm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمَرْغَمَةُ [el-mergamet] (مَرْحَمَةٌ [merhamet] vezninde) كُرْهٌ [kurh] manâsınadır ki hoşlanmamaktan ibârettir, ismlerdir; tekûlu: فَعَلْتُ ذَلِكَ عَلَى رَغْمِهِ وَمَرْغَمَتِهِ أَيْ عَلَى كُرْهٍ مِنْهُ Ve رَغْمٌ [ragm] (rânın fethi ve gaynın sükûnuyla) Masdar olur, bir nesneden hoşlanmayıp kerîh görmek manâsınadır; yukâlu: رَغِمَهُ وَرَغَمَهُ رَغْمًا مِنَ الْبَابِ الرَّابِعِ وَالثَّالِثِ إِذَا كَرِهَهُ Ve رَغْمٌ [ragm] Toprağa denir; yukâlu: أَلْقَى عَلَيَّ الرَّغْمَ أَيِ التُّرَابَ Ve bir işi bir adama zoraki tutturmak manâsınadır; yukâlu: رَغَمَهُ رَغْمًا مِنَ الْبَابِ الثَّالِثِ إِذَا قَسَرَهُ Ve züll ve hakâret manâsınadır; yukâlu: رَغِمَ أَنْفُ فُلَانٍ رَغْمًا مِنَ الْبَابِ الرَّابِعِ إِذَا ذَلَّ Ve bu kinâye bâbındandır; ve yukâlu: رَغِمَ أَنْفِي لِلَّهِ مُثَلَّثَةَ الرَّاءِ أَيْ ذَلَّ عَنْ كُرْهٍ Yanî bâb-ı râbiden ve sâlisten ve hâmistendir.",
+              "misaller": [
+                ["رَغِمَهُ وَرَغَمَهُ رَغْمًا مِنَ الْبَابِ الرَّابِعِ وَالثَّالِثِ إِذَا كَرِهَهُ", ""],
+                ["أَلْقَى عَلَيَّ الرَّغْمَ أَيِ التُّرَابَ", ""],
+                ["رَغَمَهُ رَغْمًا مِنَ الْبَابِ الثَّالِثِ إِذَا قَسَرَهُ", ""],
+                ["رَغِمَ أَنْفُ فُلَانٍ رَغْمًا مِنَ الْبَابِ الرَّابِعِ إِذَا ذَلَّ", ""],
+                ["رَغِمَ أَنْفِي لِلَّهِ مُثَلَّثَةَ الرَّاءِ أَيْ ذَلَّ عَنْ كُرْهٍ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "للهِ kavli لِأَمْرِ اللهِ takdîrinde olmakla “Nefsim istemeyip hoşlanmayarak züll ve tevâzu eder oldu” demektir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "رَغْمٌ [ragm] Bir adamı mahz tezlîl ve tekdîr için bir iş işlemek manâsınadır; tekûlu: رَغِمْتُهُ أَيْ فَعَلْتُ شَيْئًا عَلَى رَغْمِهِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّغْمُ",
+          "okunus": "er-ragm",
+          "koken": "rânın harekât-ı selâsı ve gayn-ı mucemenin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ragm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Toprağa düşüp yere berâber olmak; rânın zammı ve kesri dahi lügattir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir nesneyi kerîh görmeğe dahi derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّغْمُ",
+          "okunus": "er-ragm",
+          "koken": "rânın fethi ve gaynın sükûnuyla"
+        }
+      ],
+      "تَرْغِيم": [
+        {
+          "eser": "Kamus",
+          "madde": "tergim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adamın hakkında hor ve hakîr olsun diye duâ eylemek manâsınadır; yukâlu: رَغَّمَهُ إِذَا قَالَ لَهُ رَغْمًا رَغْمًا وَقَوْلُهُمْ رَاغِمٌ دَاغِمٌ إِتْبَاعٌ",
+              "misaller": [
+                ["رَغَّمَهُ إِذَا قَالَ لَهُ رَغْمًا رَغْمًا وَقَوْلُهُمْ رَاغِمٌ دَاغِمٌ إِتْبَاعٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّرْغِيمُ",
+          "okunus": "et-tergîm",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ],
+      "إِرْغَام": [
+        {
+          "eser": "Kamus",
+          "madde": "irgam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Toprağa sürmek amnâsınadır; yukâlu: أَرْغَمَهُ الذُّلُّ أَيْ أَلْصَقَهُ بِالتُّرَابِ Yanî pek hâkisâr etti, ıstılâhımızda dahi burnunu toprağa sürttü tabîri zebân-zededir.",
+              "misaller": [
+                ["أَرْغَمَهُ الذُّلُّ أَيْ أَلْصَقَهُ بِالتُّرَابِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir adamı hoşnûd etmeyip gazab-nâk eylemek manâsınadır; yukâlu: أَرْغَمَهُ أَيْ أَسْخَطَهُ Şârih der ki burada teşvîş-i nüsha vardır, zîrâ asl mehazlarda وَأَرْغَمَهُ أَسْخَطَهُ وَأَرْغَمَهُ اللهُ وَأَدْغَمَهُ سَوَّدَهُ unvânında müsebbettir.",
+              "misaller": [
+                ["أَرْغَمَهُ أَيْ أَسْخَطَهُ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "إِرْغَامٌ [irgâm] إِدْغَامٌ [idgâm] manâsınadır ki yüz karartmaktır ki tezlîl ve tahkîrden kinâyedir; yukâlu: أَرْغَمَهُ اللهُ وَأَدْغَمَهُ أَيْ سَوَّدَ وَجْهَهُ",
+              "misaller": [
+                ["أَرْغَمَهُ اللهُ وَأَدْغَمَهُ أَيْ سَوَّدَ وَجْهَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِرْغَامُ",
+          "okunus": "el-irgâm",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "irgam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Toprağa sürmek; yukâlu: أَرْغَمَ اللهُ أَنْفَهُ أَيْ أَلْصَقَهُ بِالرُّغَامِ Ve minhu hadîsu Âişe radıyallâhu anhâ fil-hidâb: “إِسْلِتِيهِ وأَرْغِمِيهِ” Ve سَلْتٌ [selt] hınnâ bağın elden çözüp gidermektir.",
+              "misaller": [
+                ["أَرْغَمَ اللهُ أَنْفَهُ أَيْ أَلْصَقَهُ بِالرُّغَامِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِرْغَامُ",
+          "okunus": "el-irgâm",
+          "koken": "hemzenin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

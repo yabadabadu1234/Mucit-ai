@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "رَتْق", "ratq", "birleşik, bağlı", "kuran", "Kur'ân"],
+      [0, "رَتْق", "ratq", "Bir işi iyi idare etme", "lugat", "Kur'ân · Luggat"],
       [1, "رِتْق", "ritq", "dikme", "orta", ""],
       [2, "رُتْق", "rutq", "dikme", "orta", ""],
       [3, "رَتَق", "rataq", "dikme", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "رَتَقُون", "rataqūn", "her daim dikenler", "orta", ""],
       [292, "رَتَقِين", "rataqīn", "her daim dikenler", "orta", ""],
       [293, "رَتَقَات", "rataqāt", "her daim dikenler, müennes", "orta", ""],
-      [294, "رَتْق", "ratq", "birleşik, bağlı", "kuran", "Kur'ân"],
+      [294, "رَتْق", "ratq", "Bir işi iyi idare etme", "lugat", "Kur'ân · Luggat"],
       [295, "رَتْقَة", "ratqa", "her daim diken, müennes", "orta", ""],
       [296, "رَتْقَان", "ratqān", "her daim diken, iki", "orta", ""],
       [297, "رَتْقَتَان", "ratqatān", "her daim diken, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "رَتَاقَة", "ratāqa", "dikme", "orta", ""],
       [426, "رِتَاقَة", "ritāqa", "dikme", "orta", ""],
       [427, "رُتُوقَة", "rutūqa", "dikme", "orta", ""],
-      [428, "رَتْق", "ratq", "birleşik, bağlı", "kuran", "Kur'ân"],
+      [428, "رَتْق", "ratq", "Bir işi iyi idare etme", "lugat", "Kur'ân · Luggat"],
       [429, "رِتْق", "ritq", "dikme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُرْتُوقَة", "ʾurtūqa", "dikme türünden şey", "orta", ""],
       [435, "رَوْتَق", "rawtaq", "dikme türünden şey", "orta", ""],
       [437, "رَيْتَق", "raytaq", "dikme türünden şey", "orta", ""],
-      [439, "رَتْق", "ratq", "birleşik, bağlı", "kuran", "Kur'ân"],
+      [439, "رَتْق", "ratq", "Bir işi iyi idare etme", "lugat", "Kur'ân · Luggat"],
       [441, "رَتَق", "rataq", "dikme türünden şey", "orta", ""],
       [443, "رِتْق", "ritq", "dikme türünden şey", "orta", ""],
       [445, "رُتْق", "rutq", "dikme türünden şey", "orta", ""],
@@ -842,7 +842,87 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَتْق": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "RETK",
+          "yazilis": "",
+          "tur": "",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "[ k kalın] ( ﺭﺗﻖ ) i. (Ar. retḳ ) Bir yırtık veya yarığı bitiştirme, onarma, tâmir etme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Bitiştirmek",
+              "misaller": [],
+              "deyim": "Retk etmek (eylemek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Bitiştirme ve ayırma” Onarma, düzeltme, iyi yönetip yoluna koyma, fetk ü retk",
+              "misaller": [],
+              "deyim": "Retk ü fetk"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "retk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesnenin şakkını kavuşturup bitiştirmek manâsınadır; yukâlu: رَتَقَ الشَّيْءَ رَتْقًا مِنَ الْبَابِ اْلأَوَّلِ ضِدُّ فَتَقَهُ",
+              "misaller": [
+                ["رَتَقَ الشَّيْءَ رَتْقًا مِنَ الْبَابِ اْلأَوَّلِ ضِدُّ فَتَقَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّتْقُ",
+          "okunus": "er-retk",
+          "koken": "فَتْقٌ [fetk] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "retk",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesnenin şakkın bitirmek; فَتْقٌ [fetk]ın mukâbilidir; tekûlu: رَتَقْتُ الْفَتْقَ أَرْتُقُهُ مِنَ الْبَابِ الْأَوَّلِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّتْقُ",
+          "okunus": "er-retk",
+          "koken": "rânın fethi ve tânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "retküfetk",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir işi iyi idare etme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

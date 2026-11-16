@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "جَبْت", "cabt", "put", "kontrol", ""],
-      [1, "جِبْت", "cibt", "geldi, gittin", "kuran", "Kur'ân"],
+      [1, "جِبْت", "cibt", "Puta denir", "lugat", "Kur'ân · Kamus"],
       [2, "جُبْت", "cubt", "put", "kontrol", ""],
       [3, "جَبَت", "cabat", "put", "kontrol", ""],
       [4, "جِبَت", "cibat", "put", "kontrol", ""],
@@ -533,7 +533,7 @@
       [426, "جِبَاتَة", "cibāta", "put olma", "kontrol", ""],
       [427, "جُبُوتَة", "cubūta", "put olma", "kontrol", ""],
       [428, "جَبْت", "cabt", "put olma", "kontrol", ""],
-      [429, "جِبْت", "cibt", "geldi, gittin", "kuran", "Kur'ân"]
+      [429, "جِبْت", "cibt", "Puta denir", "lugat", "Kur'ân · Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "جَابُوت", "cābūt", "put olma türünden şey", "kontrol", ""],
@@ -544,7 +544,7 @@
       [437, "جَيْبَت", "caybat", "put olma türünden şey", "kontrol", ""],
       [439, "جَبْت", "cabt", "put olma türünden şey", "kontrol", ""],
       [441, "جَبَت", "cabat", "put olma türünden şey", "kontrol", ""],
-      [443, "جِبْت", "cibt", "geldi, gittin", "kuran", "Kur'ân"],
+      [443, "جِبْت", "cibt", "Puta denir", "lugat", "Kur'ân · Kamus"],
       [445, "جُبْت", "cubt", "put olma türünden şey", "kontrol", ""],
       [447, "جَبِيت", "cabīt", "put olma türünden şey", "kontrol", ""],
       [449, "جِبَت", "cibat", "put olma türünden şey", "kontrol", ""],
@@ -786,7 +786,115 @@
         "r": ["jabbat", "jabba", "jubbat"],
         "yol": "müştak"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جِبْت": [
+        {
+          "eser": "Kamus",
+          "madde": "cibt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Puta denir, صَنَمٌ [sanem] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kâhine denir ki kehâneti olan kimsedir, mugayyebâttan haber vermek kaydında olur. Eslâfta istirâkk-ı sem ile şeyâtîn, kâhinlere havâdis-i âtiyeden ihbâr eylemeleriyle onlar dahi nâsa haber verirler idi.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "جِبْتٌ [cibt] Sâhir ve câdûya denir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "sihre denir ki sihr-i sâhirdir.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "bî-hayr u menfaat olan hasîs ve kemter şeye denir. Asl bu manâ-yı mevzûudur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "mutlakan mabûd-bil-hakk olan Hudâ-yı müteâlden gayrı mabûd ittihâz olunan şeye denir.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "bu, manâ-yı evvelden eammdır, zîrâ avret fercine dahi perestiş eden eşhâs dahi vardır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِبْتُ",
+          "okunus": "el-cibt",
+          "koken": "cîmin kesri ve bânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cibt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir lafzdır ki saneme ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "mugayyebâttan haber verene ve sâhire dahi ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "fil-hadîsi: “اَلطِّيَرَةُ وَالْعِيَافَةُ وَالطَّرْقُ مِنَ الْجِبْتِ” [ Ve] طِيَرَةٌ [tiyeret] bir nesne ile yaramaz yum etmek.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "عِيَافَةٌ [iyâfet] ayn-ı mühmele ile ve fâ ile gâyibden haber vermeğe ve طَرْقٌ [tark] ufak taşlar ile fâl etmeğe derler.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "جِبْتٌ [cibt] lafzı hâlis Arabî değildir, zîrâ ki cîmle tâ cem olmuştur, kelime-i vâhidede harf-i ذَوْلَقِيٌّ [zevlekiyy]siz.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "ذَوْلَقٌ [zevlak] zâl-ı mucemenin fethiyle dil ucuna derler.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "her harf ki dil ucundan gelir râ gibi ve lâm gibi, ona harf-i ذَوْلَقِيٌّ [zevlekiyy] derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِبْتُ",
+          "okunus": "el-cibt",
+          "koken": "cîmin kesri ve bânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

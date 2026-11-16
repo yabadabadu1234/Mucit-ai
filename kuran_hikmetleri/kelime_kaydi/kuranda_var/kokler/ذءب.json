@@ -9,13 +9,13 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "ذَأْب", "ẕaʾb", "kurt", "kontrol", ""],
-      [1, "ذِئْب", "ẕiʾb", "kurt", "kuran", "Kur'ân"],
+      [1, "ذِئْب", "ẕiʾb", "Kurt", "lugat", "Kur'ân · Luggat"],
       [2, "ذُؤْب", "ẕuʾb", "kurt", "kontrol", ""],
       [3, "ذَأَب", "ẕaʾab", "kurt", "kontrol", ""],
       [4, "ذِئَب", "ẕiʾab", "kurt", "kontrol", ""],
       [5, "ذُؤُب", "ẕuʾub", "kurt", "kontrol", ""],
       [6, "ذُؤُوب", "ẕuʾūb", "kurt", "kontrol", ""],
-      [7, "ذِئَاب", "ẕiʾāb", "kurt", "kontrol", ""],
+      [7, "ذِئَاب", "ẕiʾāb", "Kurtlar, canavarlar", "lugat", "Kubbealtı"],
       [8, "ذُؤَاب", "ẕuʾāb", "kurt", "kontrol", ""],
       [9, "ذَآب", "ẕaʾāb", "kurt", "kontrol", ""],
       [10, "ذَآبَة", "ẕaʾāba", "kurt", "kontrol", ""],
@@ -24,7 +24,7 @@
       [13, "ذَئِيب", "ẕaʾīb", "kurt", "kontrol", ""],
       [14, "ذَؤُوب", "ẕaʾūb", "kurt", "kontrol", ""],
       [15, "ذَأَبَان", "ẕaʾabān", "kurt", "kontrol", ""],
-      [16, "ذُؤْبَان", "ẕuʾbān", "kurt", "kontrol", ""],
+      [16, "ذُؤْبَان", "ẕuʾbān", "Kurtlar", "lugat", "Luggat"],
       [17, "ذِئْبَان", "ẕiʾbān", "kurt", "kontrol", ""],
       [18, "ذَأْبَى", "ẕaʾbā", "kurt", "kontrol", ""],
       [19, "ذُؤْبَى", "ẕuʾbā", "kurt", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُذَاءَبَة", "muẕāʾaba", "biriyle karşılıklı kurt olma", "kontrol", ""],
-      [50, "ذِئَاب", "ẕiʾāb", "biriyle karşılıklı kurt olma", "kontrol", ""]
+      [50, "ذِئَاب", "ẕiʾāb", "Kurtlar, canavarlar", "lugat", "Kubbealtı"]
     ],
     "ism-i merre · bâb III": [
       [51, "ذِئَابَة", "ẕiʾāba", "bir kere biriyle karşılıklı kurt olma", "kontrol", ""]
@@ -351,7 +351,14 @@
       [256, "ذَأْبَتَان", "ẕaʾbatān", "bir kere kurt olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "ذِئْبَة", "ẕiʾba", "kurt olma tarzı", "kontrol", ""],
+      [
+        257,
+        "ذِئْبَة",
+        "ẕiʾba",
+        "Rebîa nâm şâirin vâlidesi ismidir ve elif-lâmsız Hâciz el-Ezdî nâm kimsenin…",
+        "lugat",
+        "Kamus"
+      ],
       [258, "ذِئْبَتَان", "ẕiʾbatān", "kurt olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
@@ -527,13 +534,13 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "ذَآب", "ẕaʾāb", "kurt olma", "kontrol", ""],
       [422, "ذُؤُوب", "ẕuʾūb", "kurt olma", "kontrol", ""],
-      [423, "ذِئَاب", "ẕiʾāb", "kurt olma", "kontrol", ""],
+      [423, "ذِئَاب", "ẕiʾāb", "Kurtlar, canavarlar", "lugat", "Kubbealtı"],
       [424, "ذُؤْب", "ẕuʾb", "kurt olma", "kontrol", ""],
       [425, "ذَآبَة", "ẕaʾāba", "kurt olma", "kontrol", ""],
       [426, "ذِئَابَة", "ẕiʾāba", "kurt olma", "kontrol", ""],
       [427, "ذُؤُوبَة", "ẕuʾūba", "kurt olma", "kontrol", ""],
       [428, "ذَأْب", "ẕaʾb", "kurt olma", "kontrol", ""],
-      [429, "ذِئْب", "ẕiʾb", "kurt", "kuran", "Kur'ân"]
+      [429, "ذِئْب", "ẕiʾb", "Kurt", "lugat", "Kur'ân · Luggat"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "ذَاؤُوب", "ẕāʾūb", "kurt olma türünden şey", "kontrol", ""],
@@ -544,7 +551,7 @@
       [437, "ذَيْأَب", "ẕayʾab", "kurt olma türünden şey", "kontrol", ""],
       [439, "ذَأْب", "ẕaʾb", "kurt olma türünden şey", "kontrol", ""],
       [441, "ذَأَب", "ẕaʾab", "kurt olma türünden şey", "kontrol", ""],
-      [443, "ذِئْب", "ẕiʾb", "kurt", "kuran", "Kur'ân"],
+      [443, "ذِئْب", "ẕiʾb", "Kurt", "lugat", "Kur'ân · Luggat"],
       [445, "ذُؤْب", "ẕuʾb", "kurt olma türünden şey", "kontrol", ""],
       [447, "ذَئِيب", "ẕaʾīb", "kurt olma türünden şey", "kontrol", ""],
       [449, "ذِئَب", "ẕiʾab", "kurt olma türünden şey", "kontrol", ""],
@@ -557,7 +564,14 @@
       [438, "ذَيْأَبَة", "ẕayʾaba", "kurt olma türünden bir tane", "kontrol", ""],
       [440, "ذَأْبَة", "ẕaʾba", "kurt olma türünden bir tane", "kontrol", ""],
       [442, "ذَأَبَة", "ẕaʾaba", "kurt olma türünden bir tane", "kontrol", ""],
-      [444, "ذِئْبَة", "ẕiʾba", "kurt olma türünden bir tane", "kontrol", ""],
+      [
+        444,
+        "ذِئْبَة",
+        "ẕiʾba",
+        "Rebîa nâm şâirin vâlidesi ismidir ve elif-lâmsız Hâciz el-Ezdî nâm kimsenin…",
+        "lugat",
+        "Kamus"
+      ],
       [446, "ذُؤْبَة", "ẕuʾba", "kurt olma türünden bir tane", "kontrol", ""],
       [448, "ذَئِيبَة", "ẕaʾība", "kurt olma türünden bir tane", "kontrol", ""],
       [450, "ذِئَبَة", "ẕiʾaba", "kurt olma türünden bir tane", "kontrol", ""],
@@ -571,7 +585,7 @@
       [458, "أَذَائِيب", "ʾaẕāʾīb", "kurt olmalar", "kontrol", ""],
       [459, "ذُؤُوب", "ẕuʾūb", "kurt olmalar", "kontrol", ""],
       [460, "ذُؤُب", "ẕuʾub", "kurt olmalar", "kontrol", ""],
-      [461, "ذِئَاب", "ẕiʾāb", "kurt olmalar", "kontrol", ""],
+      [461, "ذِئَاب", "ẕiʾāb", "Kurtlar, canavarlar", "lugat", "Kubbealtı"],
       [462, "ذِئَب", "ẕiʾab", "kurt olmalar", "kontrol", ""],
       [463, "ذِئَبَة", "ẕiʾaba", "kurt olmalar", "kontrol", ""],
       [464, "ذُؤَب", "ẕuʾab", "kurt olmalar", "kontrol", ""],
@@ -1082,7 +1096,249 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ذِئْب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "Zİ’B",
+          "yazilis": "ﺫﺋﺐ",
+          "tur": "i.",
+          "koken": "Ar. ẕi’b",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurt, canavar",
+              "misaller": [
+                [" Dâü’z-zi’b: Kurt hastalığı, karnı doymama.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Deniz kurdu denen balık",
+              "misaller": [],
+              "deyim": "Zi’b-i bahrî"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَلْبُ الْبَرِّ [kelbul-berr] yanî yaban köpeği ki sibâdan kurt tabîr olunan cânverin ismidir. Cemi أَذْؤُبٌ [ezub] gelir أَكْلُبٌ [eklub] vezninde ve ذِئَابٌ [ziâb] gelir, كِلاَبٌ [kilâb] vezninde ve ذُؤْبَانٌ [zubân] gelir zâlın zammıyla. Müennesi ذِئْبَةٌ [zibet]tir hâyla.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّئْبُ",
+          "okunus": "ez-zib",
+          "koken": "zâlın kesri ve hemzenin sükûnuyla ve hemzenin terkiyle yanî harf-i medde ibdâlle câizdir"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kurt ki yırtıcı cânverlerdendir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "gâh hemze ile ve gâh hemzesiz istimâl olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّئْبُ",
+          "okunus": "ez-zib",
+          "koken": "zâlın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zi'b",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurt",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ez-zibul-emat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "اَلذِّئْبُ الْأَمْعَطُ [ez-zibul-emat] Şol kurttur ki tüyü dökülmüş ola; yukâlu: مَعِطَ الذِّئْبُ مِنَ الْبَابِ الرَّابِعِ وَلَا يُقَالُ مُعِطَ شَعْرُهُ عَلَى الْبِنَاءِ لِلْمَجْهُولِ Ve uğruya لِصٌّ أَمْعَطُ dedikleri kurda teşbîhendir, لُصُوصٌ مُعْطٌ derler.",
+              "misaller": [
+                ["مَعِطَ الذِّئْبُ مِنَ الْبَابِ الرَّابِعِ وَلَا يُقَالُ مُعِطَ شَعْرُهُ عَلَى الْبِنَاءِ لِلْمَجْهُولِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذِئَاب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZİAB",
+          "yazilis": "ﺫﺋﺎﺏ",
+          "tur": "i.",
+          "koken": "Ar. ẕi’b ’in çoğul şekli ẕi’āb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurtlar, canavarlar",
+              "misaller": [
+                ["tıfl-i nâz-ı nâzük-tabîattır. Sibâ’ ve ziâba mukābil olan mukāvemete kudreti yetmez", "Fuzûlî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Ziâbul-Gadâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ذِئَابُ الْغَضَا [Ziâbul-Gadâ] Benû Kab b. Mâlik b. Hanzala kabîlesinin lakabıdır. غَضَا [gadâ] gaynın fethiyle bâdiye eşcârından meşhûr şecerdir ki kurt kısmı onun olduğu yerlerde îvâ edip ve orada perveriş bulan kurt kısmı pek ahbes olur. Kâbîle-i mezbûre ehli be-gâyet şirrîr ve ahbes olmalarıyla onunla mülakkab oldular.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Ziâbul-Gadâ",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ذِئَابُ الْغَضَا [Ziâbul-Gadâ] Benû Kab b. Mâlik b. Hanzale cemâatidir ki pek habîs ve bed-kâr olurlar.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذُؤْبَان": [
+        {
+          "eser": "Kamus",
+          "madde": "zuban",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ذِئْبٌ [zib]in cemidir ki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ذُؤْبَانٌ [zubân] Kurt gibi habîs ve dilîr olan hırsızlara ve harâmîlere ıtlâk olunur; ve minhu: ذُؤْبَانُ الْعَرَبِ أَيْ لُصُوصُهُمْ وَصَعَالِيكُهُمْ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذُّؤْبَانُ",
+          "okunus": "ez-zubân",
+          "koken": "zâlın zammıyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zu'bân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kurtlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذِئْبَة": [
+        {
+          "eser": "Kamus",
+          "madde": "ez-Zibet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Rebîa nâm şâirin vâlidesi ismidir ve elif-lâmsız ذِئْبَةُ [Zibet] Hâciz el-Ezdî nâm kimsenin feresi ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ذِئْبَةٌ [zibet] Bir marazdır ki davarın boğazında hâdis olur, kulağının dibini demir çuvaldız gibi nesne ile delip hurde darı dânesi gibi bir şey istihrâc eylemekle o marazdan halâs olur. Maraz-ı mezbûra uğramış davara مَذْؤُوبٌ [mezûb] derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ذِئْبَةٌ [zibet] At eyerinin ve semerin iki deffesinin aralığında olan fürceye denir ki ön kaşıyla art kaşının aralığı olacaktır.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "kaltağın ve semerin ve havudun iki tarafından kavuştuğu yerin ilerisinin mâ-tahtına denir ki iki taraftan kürek kemiklerini sıktığı yer olacaktır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّئْبَةُ",
+          "okunus": "ez-Zibet",
+          "koken": "zâlın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ez-zibet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müennesi ve eyerin ön kaşıyla art kaşının ara yerine dahi ذِئْبَةٌ [zibet] derler, mâ-beynel-hinveyn manâsına ki حِنْوٌ [hinv] hâ-i mühmele ve nûnla eyer kaşıdır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ذِئْبٌ [zib]in cem-i kılleti اَلْأَذْؤُبُ [el-ezub] hemze-i ûlânın fethi ve sâniyenin zammıyla ve cem-i kesreti اَلذِّئَابُ [ez-ziâb] ve اَلذُّؤْبَانُ [ez-zubân] gelir zâlın evvelde kesri, sânîde zammıyla.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ذُؤْبَانٌ [zubân] Şol uğrulara derler ki bahâdırlık izhâr etmek için uğruluk ederler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذِّئْبَةُ",
+          "okunus": "ez-zibet",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

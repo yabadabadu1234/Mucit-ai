@@ -14,7 +14,7 @@
       [3, "لَغَب", "lağab", "yorgunluk", "orta", ""],
       [4, "لِغَب", "liğab", "yorgunluk", "orta", ""],
       [5, "لُغُب", "luğub", "yorgunluk", "orta", ""],
-      [6, "لُغُوب", "luğūb", "yorgunluk", "kuran", "Kur'ân"],
+      [6, "لُغُوب", "luğūb", "Zahmet, taab", "lugat", "Kur'ân · Vankulu"],
       [7, "لِغَاب", "liğāb", "yorgunluk", "orta", ""],
       [8, "لُغَاب", "luğāb", "yorgunluk", "orta", ""],
       [9, "لَغَاب", "lağāb", "yorgunluk", "orta", ""],
@@ -526,7 +526,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "لَغَاب", "lağāb", "yorgun olma", "orta", ""],
-      [422, "لُغُوب", "luğūb", "yorgunluk", "kuran", "Kur'ân"],
+      [422, "لُغُوب", "luğūb", "Zahmet, taab", "lugat", "Kur'ân · Vankulu"],
       [423, "لِغَاب", "liğāb", "yorgun olma", "orta", ""],
       [424, "لُغْب", "luğb", "yorgun olma", "orta", ""],
       [425, "لَغَابَة", "lağāba", "yorgun olma", "orta", ""],
@@ -569,7 +569,7 @@
       [456, "أَلْغِبَة", "ʾalğiba", "yorgun olmalar", "orta", ""],
       [457, "أَلَاغِب", "ʾalāğib", "yorgun olmalar", "orta", ""],
       [458, "أَلَاغِيب", "ʾalāğīb", "yorgun olmalar", "orta", ""],
-      [459, "لُغُوب", "luğūb", "yorgunluk", "kuran", "Kur'ân"],
+      [459, "لُغُوب", "luğūb", "Zahmet, taab", "lugat", "Kur'ân · Vankulu"],
       [460, "لُغُب", "luğub", "yorgun olmalar", "orta", ""],
       [461, "لِغَاب", "liğāb", "yorgun olmalar", "orta", ""],
       [462, "لِغَب", "liğab", "yorgun olmalar", "orta", ""],
@@ -854,7 +854,27 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لُغُوب": [
+        {
+          "eser": "Vankulu",
+          "madde": "lugub",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zahmet, taab manâsına; tekûlu minhu: لَغَبَ يَلْغُبُ لُغُوبًا مِنَ الْبَابِ الْأَوَّلِ Ve لَغِبَ يَلْغَبُ لُغُوبًا مِنَ الْبَابِ الرَّابِعِ Lügat-ı zaîfedir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللُّغُوبُ",
+          "okunus": "el-lugûb",
+          "koken": "lâmın ve gaynın zammıyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

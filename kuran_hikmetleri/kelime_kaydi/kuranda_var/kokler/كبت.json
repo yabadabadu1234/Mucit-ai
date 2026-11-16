@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "كَبْت", "kabt", "alçaltma", "orta", "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress"],
+      [
+        0,
+        "كَبْت",
+        "kabt",
+        "Bir kimseyi yere çalmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress · Kamus"
+      ],
       [1, "كِبْت", "kibt", "alçaltma", "orta", ""],
       [2, "كُبْت", "kubt", "alçaltma", "orta", ""],
       [3, "كَبَت", "kabat", "alçaltma", "orta", ""],
@@ -394,9 +401,9 @@
         294,
         "كَبْت",
         "kabt",
-        "her daim alçaltan",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress"
+        "Bir kimseyi yere çalmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress · Kamus"
       ],
       [295, "كَبْتَة", "kabta", "her daim alçaltan, müennes", "orta", ""],
       [296, "كَبْتَان", "kabtān", "her daim alçaltan, iki", "orta", ""],
@@ -539,7 +546,14 @@
       [425, "كَبَاتَة", "kabāta", "alçaltma", "orta", ""],
       [426, "كِبَاتَة", "kibāta", "alçaltma", "orta", ""],
       [427, "كُبُوتَة", "kubūta", "alçaltma", "orta", ""],
-      [428, "كَبْت", "kabt", "alçaltma", "orta", "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress"],
+      [
+        428,
+        "كَبْت",
+        "kabt",
+        "Bir kimseyi yere çalmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress · Kamus"
+      ],
       [429, "كِبْت", "kibt", "alçaltma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -553,9 +567,9 @@
         439,
         "كَبْت",
         "kabt",
-        "alçaltma türünden şey",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress"
+        "Bir kimseyi yere çalmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to curb, to keep back, to suppress · Kamus"
       ],
       [441, "كَبَت", "kabat", "alçaltma türünden şey", "orta", ""],
       [443, "كِبْت", "kibt", "alçaltma türünden şey", "orta", ""],
@@ -1428,7 +1442,53 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كَبْت": [
+        {
+          "eser": "Kamus",
+          "madde": "kebt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseyi yere çalmak manâsınadır; yukâlu: كَبَتَهُ كَبْتًا مِنَ الْبَابِ الثَّانِي إِذَا صَرَعَهُ Ve bir kimseyi hacil ve rüsvâ eylemek manâsınadır; yukâlu: كَبَتَهُ إِذَا أَخْزَاهُ Ve bir nesneden sarf ve men eylemek manâsınadır; yukâlu: كَبَتَهُ إِذَا صَرَفَهُ Ve kesr eylemek manâsınadır; yukâlu: كَبَتَهُ إِذَا كَسَرَهُ Ve düşmanı gayz ve kînle redd eylemek manâsınadır; yukâlu: كَبَتَ الْعَدُوَّ إِذَا رَدَّهُ بِغَيْظِهِ Ve zelîl ve mühân eylemek manâsınadır; yukâlu: كَبَتَهُ إِذَا أَذَلَّهُ",
+              "misaller": [
+                ["كَبَتَهُ كَبْتًا مِنَ الْبَابِ الثَّانِي إِذَا صَرَعَهُ", ""],
+                ["كَبَتَهُ إِذَا أَخْزَاهُ", ""],
+                ["كَبَتَهُ إِذَا صَرَفَهُ", ""],
+                ["كَبَتَهُ إِذَا كَسَرَهُ", ""],
+                ["كَبَتَ الْعَدُوَّ إِذَا رَدَّهُ بِغَيْظِهِ", ""],
+                ["كَبَتَهُ إِذَا أَذَلَّهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَبْتُ",
+          "okunus": "el-kebt",
+          "koken": "سَبْتٌ [sebt] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kebt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Men edip zelîl etmeğe derler; yukâlu: كَبَتَ اللهُ الْعَدُوَّ أَيْ صَرَفَهُ وَأَذَلَّهُ Ve bir kimseyi yüzü üzerine bırakmağa dahi derler; yukâlu: كَبَتَهُ لِوَجْهِهِ أَيْ صَرَعَهُ",
+              "misaller": [
+                ["كَبَتَ اللهُ الْعَدُوَّ أَيْ صَرَفَهُ وَأَذَلَّهُ", ""],
+                ["كَبَتَهُ لِوَجْهِهِ أَيْ صَرَعَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَبْتُ",
+          "okunus": "el-kebt",
+          "koken": "kâfın fethi ve bânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

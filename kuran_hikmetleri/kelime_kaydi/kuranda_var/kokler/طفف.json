@@ -21,7 +21,7 @@
       [10, "طَفَافَة", "ṭafāfa", "eksik tartma", "orta", ""],
       [11, "طُفُوفَة", "ṭufūfa", "eksik tartma", "orta", ""],
       [12, "طِفَافَة", "ṭifāfa", "eksik tartma", "orta", ""],
-      [13, "طَفِيف", "ṭafīf", "eksik tartma", "orta", "Vikisözlük: insignificant, little, minor"],
+      [13, "طَفِيف", "ṭafīf", "Azca nesneye denir", "lugat", "Vikisözlük: insignificant, little, minor · Kamus"],
       [14, "طَفُوف", "ṭafūf", "eksik tartma", "orta", ""],
       [15, "طَفَّان", "ṭaffān", "eksik tartma", "orta", ""],
       [16, "طُفَّان", "ṭuffān", "eksik tartma", "orta", ""],
@@ -383,7 +383,7 @@
       [258, "طِفَّتَان", "ṭiffatān", "eksik tartma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "طَفِيف", "ṭafīf", "her daim eksik tartan", "orta", "Vikisözlük: insignificant, little, minor"],
+      [259, "طَفِيف", "ṭafīf", "Azca nesneye denir", "lugat", "Vikisözlük: insignificant, little, minor · Kamus"],
       [260, "طَفِيفَة", "ṭafīfa", "her daim eksik tartan, müennes", "orta", ""],
       [261, "طَفِيفَان", "ṭafīfān", "her daim eksik tartan, iki", "orta", ""],
       [262, "طَفِيفَتَان", "ṭafīfatān", "her daim eksik tartan, iki, müennes", "orta", ""],
@@ -507,7 +507,7 @@
       [378, "مِطْفِيفُون", "miṭfīfūn", "eksik tartmaya düşkünler", "orta", ""],
       [379, "مِطْفِيفِين", "miṭfīfīn", "eksik tartmaya düşkünler", "orta", ""],
       [380, "مِطْفِيفَات", "miṭfīfāt", "eksik tartmaya düşkünler, müennes", "orta", ""],
-      [381, "طَفِيف", "ṭafīf", "çok eksik tartan", "orta", "Vikisözlük: insignificant, little, minor"],
+      [381, "طَفِيف", "ṭafīf", "Azca nesneye denir", "lugat", "Vikisözlük: insignificant, little, minor · Kamus"],
       [382, "طَفِيفَة", "ṭafīfa", "çok eksik tartan, müennes", "orta", ""],
       [383, "طَفِيفَان", "ṭafīfān", "çok eksik tartan, iki", "orta", ""],
       [384, "طَفِيفَتَان", "ṭafīfatān", "çok eksik tartan, iki, müennes", "orta", ""],
@@ -574,7 +574,7 @@
       [441, "طَفّ", "ṭaff", "eksik tartma türünden şey", "orta", ""],
       [443, "طِفّ", "ṭiff", "eksik tartma türünden şey", "orta", ""],
       [445, "طُفّ", "ṭuff", "eksik tartma türünden şey", "orta", ""],
-      [447, "طَفِيف", "ṭafīf", "eksik tartma türünden şey", "orta", "Vikisözlük: insignificant, little, minor"],
+      [447, "طَفِيف", "ṭafīf", "Azca nesneye denir", "lugat", "Vikisözlük: insignificant, little, minor · Kamus"],
       [449, "طِفّ", "ṭiff", "eksik tartma türünden şey", "orta", ""],
       [451, "طُفّ", "ṭuff", "eksik tartma türünden şey", "orta", ""],
       [453, "طَفَاف", "ṭafāf", "eksik tartma türünden şey", "orta", ""]
@@ -1082,7 +1082,46 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "طَفِيف": [
+        {
+          "eser": "Kamus",
+          "madde": "tafif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Azca nesneye denir; yukâlu: شَيْءٌ طَفِيفٌ أَيْ قَلِيلٌ Ve nâ-tamâm nesneye denir; yukâlu: شَيْءٌ طَفِيفٌ أَيْ غَيْرُ تَامٍّ",
+              "misaller": [
+                ["شَيْءٌ طَفِيفٌ أَيْ قَلِيلٌ", ""],
+                ["شَيْءٌ طَفِيفٌ أَيْ غَيْرُ تَامٍّ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّفِيفُ",
+          "okunus": "et-tafîf",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tafif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kalîl manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّفِيفُ",
+          "okunus": "et-tafîf",
+          "koken": "tânın fethi ve fânın kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

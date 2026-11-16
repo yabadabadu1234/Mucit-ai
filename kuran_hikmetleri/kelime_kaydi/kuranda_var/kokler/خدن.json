@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "خَدْن", "ḫadn", "arkadaş", "kontrol", ""],
-      [1, "خِدْن", "ḫidn", "arkadaş", "kontrol", ""],
+      [1, "خِدْن", "ḫidn", "Bir adamın yâr ve sâhibine denir", "lugat", "Kamus"],
       [2, "خُدْن", "ḫudn", "arkadaş", "kontrol", ""],
       [3, "خَدَن", "ḫadan", "arkadaş", "kontrol", ""],
       [4, "خِدَن", "ḫidan", "arkadaş", "kontrol", ""],
@@ -533,7 +533,7 @@
       [426, "خِدَانَة", "ḫidāna", "arkadaş olma", "kontrol", ""],
       [427, "خُدُونَة", "ḫudūna", "arkadaş olma", "kontrol", ""],
       [428, "خَدْن", "ḫadn", "arkadaş olma", "kontrol", ""],
-      [429, "خِدْن", "ḫidn", "arkadaş olma", "kontrol", ""]
+      [429, "خِدْن", "ḫidn", "Bir adamın yâr ve sâhibine denir", "lugat", "Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "خَادُون", "ḫādūn", "arkadaş olma türünden şey", "kontrol", ""],
@@ -544,7 +544,7 @@
       [437, "خَيْدَن", "ḫaydan", "arkadaş olma türünden şey", "kontrol", ""],
       [439, "خَدْن", "ḫadn", "arkadaş olma türünden şey", "kontrol", ""],
       [441, "خَدَن", "ḫadan", "arkadaş olma türünden şey", "kontrol", ""],
-      [443, "خِدْن", "ḫidn", "arkadaş olma türünden şey", "kontrol", ""],
+      [443, "خِدْن", "ḫidn", "Bir adamın yâr ve sâhibine denir", "lugat", "Kamus"],
       [445, "خُدْن", "ḫudn", "arkadaş olma türünden şey", "kontrol", ""],
       [447, "خَدِين", "ḫadīn", "arkadaş olma türünden şey", "kontrol", ""],
       [449, "خِدَن", "ḫidan", "arkadaş olma türünden şey", "kontrol", ""],
@@ -565,7 +565,7 @@
       [454, "خَدَانَة", "ḫadāna", "arkadaş olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَخْدَان", "ʾaḫdān", "arkadaş olmalar", "kontrol", ""],
+      [455, "أَخْدَان", "ʾaḫdān", "Dostlar, arkadaşlar, ahbaplar", "lugat", "Kubbealtı"],
       [456, "أَخْدِنَة", "ʾaḫdina", "arkadaş olmalar", "kontrol", ""],
       [457, "أَخَادِن", "ʾaḫādin", "arkadaş olmalar", "kontrol", ""],
       [458, "أَخَادِين", "ʾaḫādīn", "arkadaş olmalar", "kontrol", ""],
@@ -1020,7 +1020,65 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "خِدْن": [
+        {
+          "eser": "Kamus",
+          "madde": "hidn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْخَدِينُ [el-hadîn] (أَمِيرٌ [emîr] vezninde) Bir adamın yâr ve sâhibine denir; tekûlu: هُوَ خِدْنِي وَخَدِينِي أَيْ صَاحِبِي Ve bir kimseye zâhirî ve bâtınî her umûrunda hem-dem ve gam-güsâr olan adama denir; yukâlu: هُوَ خِدْنُهُ وَخَدِينُهُ أَيْ يُخَادِنُهُ فِي كُلِّ أَمْرِهِ ظَاهِرٍ وَبَاطِنٍ",
+              "misaller": [
+                ["هُوَ خِدْنُهُ وَخَدِينُهُ أَيْ يُخَادِنُهُ فِي كُلِّ أَمْرِهِ ظَاهِرٍ وَبَاطِنٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِدْنُ",
+          "okunus": "el-hidn",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hidn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dost, sadîk manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِدْنُ",
+          "okunus": "el-hidn",
+          "koken": "hânın kesri ve dâl-ı mühmelenin sükûnuyla"
+        }
+      ],
+      "أَخْدَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "AHDAN",
+          "yazilis": "ﺍﺧﺪﺍﻥ",
+          "tur": "i.",
+          "koken": "Ar. ḫidn ve ḫadіn’ in çoğul şekli aḫdān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dostlar, arkadaşlar, ahbaplar",
+              "misaller": [
+                ["Sütûde-menkıbe Râmî Efendi’nin pederi / Vefât edince hazîn oldu cümleten ahdan", "Şinâsî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

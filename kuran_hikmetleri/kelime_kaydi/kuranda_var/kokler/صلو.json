@@ -383,7 +383,7 @@
       [752, "صَلُوَّات", "ṣaluwwāt", "her daim namaz kılanlar, müennes", "orta", ""],
       [753, "صَلَا", "ṣalā", "her daim namaz kılan", "orta", ""],
       [754, "صَلَوَان", "ṣalawān", "her daim namaz kılan, iki", "orta", ""],
-      [755, "صَلَوَات", "ṣalawāt", "her daim namaz kılanlar, müennes", "orta", ""],
+      [755, "صَلَوَات", "ṣalawāt", "Salâtlar", "lugat", "Luggat"],
       [294, "صَلْو", "ṣalw", "her daim namaz kılan", "orta", ""],
       [295, "صَلْوَة", "ṣalwa", "her daim namaz kılan, müennes", "orta", ""],
       [296, "صَلْوَان", "ṣalwān", "her daim namaz kılan, iki", "orta", ""],
@@ -597,7 +597,7 @@
       [876, "صَلَاات", "ṣalāāt", "namaz kılmalar topluluğu", "orta", ""],
       [877, "صُلَّاآت", "ṣullāʾāt", "namaz kılmalar topluluğu", "orta", ""],
       [878, "صَلَاآت", "ṣalāʾāt", "namaz kılmalar topluluğu", "orta", ""],
-      [879, "صَلَوَات", "ṣalawāt", "namaz kılmalar topluluğu", "orta", ""],
+      [879, "صَلَوَات", "ṣalawāt", "Salâtlar", "lugat", "Luggat"],
       [880, "مَصَالِيَات", "maṣāliyāt", "namaz kılmalar topluluğu", "orta", ""],
       [881, "مَصَالِيَّات", "maṣāliyyāt", "namaz kılmalar topluluğu", "orta", ""],
       [882, "صَوَالِيَات", "ṣawāliyāt", "namaz kılmalar topluluğu", "orta", ""],
@@ -1218,7 +1218,118 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صَلَوَات": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SALAVAT",
+          "yazilis": "",
+          "tur": "",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Namazlar, salâtlar",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "“Allahım, (Efendimiz) Hz. Muhammed’e ve (Efendimiz) Hz. Muhammed’in soyundan gelenlere salât eyle, onların şeref ve kadrini yücelt” anlamına gelen “Allâhümme salli alâ (seyyidinâ) Muhammedin ve alâ âli (seyyidinâ) Muhammed” cümlesi veya aynı anlama gelebilen duâlardan her biri",
+              "misaller": [
+                ["Çok salavat âdemi mesrûr eder / Allâhümme salli alâ Muhammed", "Derviş Mûsâ"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Salavat duâsını arka arkaya okumak",
+              "misaller": [],
+              "deyim": "Salavat çekmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Sevap kazanmak için veya Hz",
+              "misaller": [],
+              "deyim": "Salavat getirmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Durma Muhammed’e salavat getir (Pir Sultan Abdal). Salavat getirsin cemâlin gören / Bakışın turna da sekişin ceyran (Karacaoğlan). Her iki rekâtta bir güzel sesler salavat getirmeye başladı (Rûşen E. Ünaydın)",
+              "misaller": [],
+              "deyim": "Muhammed’in rûhâniyetine sığınmak amacıyle salavat okumak"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "salavat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "صَلَاةٌ [salât] lafzından cemdir ki namâza denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Yehûd kenîselerine denir ki havra tabîr olunur. Bunun da müfredi صَلَاةٌ [salât]tır, mevzi-i ibâdet ibâdetle müsemmâ olmuştur. Bunun aslı صَلُوتَا [salûtâ] idi ki İbrânîdir, sâdın fethi ve lâmın zammıyla. Şârih der ki asl صَلُوثَا [sulûsamp;â] idi ki samp;â-yı müsellese iledir, mevzi-i namâz demektir. Bu cihetle صَلَاةٌ [salât] ondan muarreb yâhûd müterâdif olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّلَوَاتُ",
+          "okunus": "es-salavât",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "salavat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kenâis-i yehûd. Bârî taâlânın ﴿وَبِيَعٌ وَصَلَوَاتٌ﴾ (الحج، 40) dediği kavlinde صَلَوَاتٌ [salavât]tan murâd mevâzi-i ibâdâttır, İbn Abbâs rivâyeti üzere.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّلَوَاتُ",
+          "okunus": "es-salâvât",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "salavat",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Salâtlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "salavât",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Peygamberimizeasm yapılan duâ",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 99,
   "kuranda_var": true,

@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "مَقْت", "maqt", "nefret, buğz", "kuran", "Kur'ân"],
+      [0, "مَقْت", "maqt", "Bir kimseden bir emr-i kabîh görmekle ona bugz eylemek", "lugat", "Kur'ân · Kamus"],
       [1, "مِقْت", "miqt", "nefret etme", "orta", ""],
       [2, "مُقْت", "muqt", "nefret etme", "orta", ""],
       [3, "مَقَت", "maqat", "nefret etme", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "مَقَتُون", "maqatūn", "her daim nefret edenler", "orta", ""],
       [292, "مَقَتِين", "maqatīn", "her daim nefret edenler", "orta", ""],
       [293, "مَقَتَات", "maqatāt", "her daim nefret edenler, müennes", "orta", ""],
-      [294, "مَقْت", "maqt", "nefret, buğz", "kuran", "Kur'ân"],
+      [294, "مَقْت", "maqt", "Bir kimseden bir emr-i kabîh görmekle ona bugz eylemek", "lugat", "Kur'ân · Kamus"],
       [295, "مَقْتَة", "maqta", "her daim nefret eden, müennes", "orta", ""],
       [296, "مَقْتَان", "maqtān", "her daim nefret eden, iki", "orta", ""],
       [297, "مَقْتَتَان", "maqtatān", "her daim nefret eden, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "مَقَاتَة", "maqāta", "nefret etme", "orta", ""],
       [426, "مِقَاتَة", "miqāta", "nefret etme", "orta", ""],
       [427, "مُقُوتَة", "muqūta", "nefret etme", "orta", ""],
-      [428, "مَقْت", "maqt", "nefret, buğz", "kuran", "Kur'ân"],
+      [428, "مَقْت", "maqt", "Bir kimseden bir emr-i kabîh görmekle ona bugz eylemek", "lugat", "Kur'ân · Kamus"],
       [429, "مِقْت", "miqt", "nefret etme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُمْقُوتَة", "ʾumqūta", "nefret etme türünden şey", "orta", ""],
       [435, "مَوْقَت", "mawqat", "nefret etme türünden şey", "orta", ""],
       [437, "مَيْقَت", "mayqat", "nefret etme türünden şey", "orta", ""],
-      [439, "مَقْت", "maqt", "nefret, buğz", "kuran", "Kur'ân"],
+      [439, "مَقْت", "maqt", "Bir kimseden bir emr-i kabîh görmekle ona bugz eylemek", "lugat", "Kur'ân · Kamus"],
       [441, "مَقَت", "maqat", "nefret etme türünden şey", "orta", ""],
       [443, "مِقْت", "miqt", "nefret etme türünden şey", "orta", ""],
       [445, "مُقْت", "muqt", "nefret etme türünden şey", "orta", ""],
@@ -1537,7 +1537,53 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَقْت": [
+        {
+          "eser": "Kamus",
+          "madde": "makt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمَقَاتَةُ [el-makâtet] (mîmin fethiyle) Bir kimseden bir emr-i kabîh görmekle ona bugz eylemek manâsınadır; yukâlu: مَقَتَهُ مَقْتًا وَمَقَاتَةً مِنَ الْبَابِ اْلأَوَّلِ إِذَا أَبْغَضَهُ Ve نِكَاحُ الْمَقْتِ [nikâhul-makt] Ki Câhiliyye nikâhındandır, bir kişi pederinin hatununu nikâh eylemekten ibârettir ve o kişiye, alâ-kavlin ondan hâsıl olana مَقْتِيٌّ [maktiyy] denir, yâ-yı nisbetle. Kâlallâhu taâlâ: ﴿وَ لاَ تَنْكِحُوا مَا نَكَحَ آبَاؤُكُمْ مِنَ النِّسَاءِ إِلاَّ مَا قَدْ سَلَفَ إِنَّهُ كَانَ فَاحِشَةً وَمَقْتًا وَسَاءَ سَبِيلاً﴾ Bugz manâsından mehûzdur.",
+              "misaller": [
+                ["مَقَتَهُ مَقْتًا وَمَقَاتَةً مِنَ الْبَابِ اْلأَوَّلِ إِذَا أَبْغَضَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Arablar taaccüb bünyesiyle فُلاَنٌ مَا أَمْقَتَهُ عِنْدِي derler, o kimsenin memkût ve mebgûz olduğunu ihbâr makâmında ki “Filân benim yanımda aceb mebgûzdur demek olur ve مَا أَمْقَتَنِي لَهُ derler, “Filân kimse bana aceb mâkit ve mübgız oldu” demek makâmında.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَقْتُ",
+          "okunus": "el-makt",
+          "koken": "mîmin fethi ve kâfın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "makt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bugz etmek; yukâlu: مَقَتَهُ مَقْتًا إِذَا أَبْغَضَهُ Ve نِكَاحُ الْمَقْتِ [nikâhul-makt] Zamân-ı câhiliyyette olurdu ki o bir kimse babasının avretin almaktır.",
+              "misaller": [
+                ["مَقَتَهُ مَقْتًا إِذَا أَبْغَضَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَقْتُ",
+          "okunus": "el-makt",
+          "koken": "mîmin fethi ve kâfın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

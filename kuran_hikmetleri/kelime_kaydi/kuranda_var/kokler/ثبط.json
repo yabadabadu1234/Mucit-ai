@@ -43,9 +43,9 @@
         29,
         "تَثْبِيط",
         "taṯbīṭ",
-        "çokça engelleme",
-        "orta",
-        "Vikisözlük: verbal noun of ثَبَّطَ (ṯabbaṭa) (form II)"
+        "Bu dahi bir kimseyi işinden avk ve tehîr eylemek ve geciktirmek",
+        "lugat",
+        "Vikisözlük: verbal noun of ثَبَّطَ (ṯabbaṭa) (form II) · Kamus"
       ],
       [30, "تَثْبِطَة", "taṯbiṭa", "çokça engelleme", "orta", ""],
       [31, "ثِبِّاط", "ṯibbāṭ", "çokça engelleme", "orta", ""]
@@ -104,7 +104,14 @@
       [66, "مُثَابَط", "muṯābaṭ", "biriyle karşılıklı engelleme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِثْبَاط", "ʾiṯbāṭ", "engelletme", "orta", ""]
+      [
+        67,
+        "إِثْبَاط",
+        "ʾiṯbāṭ",
+        "Bir kimseye ârız olan maraz aslâ müfârakat eylemeyip müzmin olup kalmak",
+        "lugat",
+        "Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِثْبَاطَة", "ʾiṯbāṭa", "bir kere engelletme", "orta", ""]
@@ -1312,7 +1319,49 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "تَثْبِيط": [
+        {
+          "eser": "Kamus",
+          "madde": "tesbit",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi bir kimseyi işinden avk ve tehîr eylemek ve geciktirmek manâsınadır; yukâlu: ثَبَّطَهُ عَنِ الْأَمْرِ بِمَعْنَى ثَبَطَهُ",
+              "misaller": [
+                ["ثَبَّطَهُ عَنِ الْأَمْرِ بِمَعْنَى ثَبَطَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّثْبِيطُ",
+          "okunus": "et-tesamp;bît",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ],
+      "إِثْبَاط": [
+        {
+          "eser": "Kamus",
+          "madde": "isbat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseye ârız olan maraz aslâ müfârakat eylemeyip müzmin olup kalmak manâsınadır; yukâlu: أَثْبَطَهُ الْمَرَضُ إِذَا كَانَ لَمْ يَكَدْ يُفَارِقُهُ",
+              "misaller": [
+                ["أَثْبَطَهُ الْمَرَضُ إِذَا كَانَ لَمْ يَكَدْ يُفَارِقُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِثْبَاطُ",
+          "okunus": "el-isamp;bât",
+          "koken": "hemzenin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

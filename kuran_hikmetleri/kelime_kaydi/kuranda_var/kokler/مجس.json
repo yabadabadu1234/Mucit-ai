@@ -22,7 +22,7 @@
       [11, "مُجُوسَة", "mucūsa", "Mecusîleşme", "orta", ""],
       [12, "مِجَاسَة", "micāsa", "Mecusîleşme", "orta", ""],
       [13, "مَجِيس", "macīs", "Mecusîleşme", "orta", ""],
-      [14, "مَجُوس", "macūs", "Mecusî", "kuran", "Kur'ân"],
+      [14, "مَجُوس", "macūs", "Eski Îran’da Zerdüşt dînine inananlar, Zerdüştîler", "lugat", "Kur'ân · Kubbealtı"],
       [15, "مَجَسَان", "macasān", "Mecusîleşme", "orta", ""],
       [16, "مُجْسَان", "mucsān", "Mecusîleşme", "orta", ""],
       [17, "مِجْسَان", "micsān", "Mecusîleşme", "orta", ""],
@@ -43,9 +43,9 @@
         29,
         "تَمْجِيس",
         "tamcīs",
-        "Mecusîleştirme",
-        "orta",
-        "Vikisözlük: masdar (bâb II): to Zoroastrianize, to teach someone Zoroastrianism"
+        "Bir kimseyi mecûsî kılmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to Zoroastrianize, to teach someone Zoroastrianism · Kamus"
       ],
       [30, "تَمْجِسَة", "tamcisa", "Mecusîleştirme", "orta", ""],
       [31, "مِجِّاس", "miccās", "Mecusîleştirme", "orta", ""]
@@ -376,7 +376,7 @@
       [263, "مَجِيسُون", "macīsūn", "her daim Mecusîleşenler", "orta", ""],
       [264, "مَجِيسِين", "macīsīn", "her daim Mecusîleşenler", "orta", ""],
       [265, "مَجِيسَات", "macīsāt", "her daim Mecusîleşenler, müennes", "orta", ""],
-      [266, "مَجُوس", "macūs", "Mecusî", "kuran", "Kur'ân"],
+      [266, "مَجُوس", "macūs", "Eski Îran’da Zerdüşt dînine inananlar, Zerdüştîler", "lugat", "Kur'ân · Kubbealtı"],
       [267, "مَجُوسَة", "macūsa", "her daim Mecusîleşen, müennes", "orta", ""],
       [268, "مَجُوسَان", "macūsān", "her daim Mecusîleşen, iki", "orta", ""],
       [269, "مَجُوسَتَان", "macūsatān", "her daim Mecusîleşen, iki, müennes", "orta", ""],
@@ -451,7 +451,7 @@
       [336, "مَجَّاسَة", "maccāsa", "pek çok Mecusîleşen", "orta", ""],
       [337, "مَجَّاسَتَان", "maccāsatān", "pek çok Mecusîleşen, iki", "orta", ""],
       [338, "مَجَّاسَات", "maccāsāt", "pek çok Mecusîleşenler, müennes", "orta", ""],
-      [339, "مَجُوس", "macūs", "Mecusî", "kuran", "Kur'ân"],
+      [339, "مَجُوس", "macūs", "Eski Îran’da Zerdüşt dînine inananlar, Zerdüştîler", "lugat", "Kur'ân · Kubbealtı"],
       [340, "مَجُوسَة", "macūsa", "çok Mecusîleşen, müennes", "orta", ""],
       [341, "مَجُوسَان", "macūsān", "çok Mecusîleşen, iki", "orta", ""],
       [342, "مَجُوسَتَان", "macūsatān", "çok Mecusîleşen, iki, müennes", "orta", ""],
@@ -1077,7 +1077,122 @@
         "k": "مجس",
         "yol": "kök"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَجُوس": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MECUS",
+          "yazilis": "ﻣﺠﻮﺱ",
+          "tur": "i.",
+          "koken": "Ar. mecūs magos “büyücü” muġ “ateşe tapan”",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Eski Îran’da Zerdüşt dînine inananlar, Zerdüştîler",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Ateşe tapanlar",
+              "misaller": [
+                ["Sen anladın mı müselmân isen nedir vâiz / Vücûd-ı gebr ü mecûs u cühûddan maksad", "Yenişehirli Avnî’den"],
+                ["Bir hâkten inşâ olunur deyr ile mescid / Birdir nazar-ı Hak’ta mecûs ile müselman", "Ziyâ Paşa’dan"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "târih.",
+              "tanim": "Orta Çağ’da İslâm idâresinde bulunan İspanya’ya akınlar yapan Fransızlaşmış Normanlar’a ve Avrupa’da Norman olarak tanınan İskandinavya korsanlarına Mağrip ve İspanya’daki müslüman târihçilerin verdiği “müşrik veya ateşe tapan” anlamındaki isim",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Mecus",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Selefte kulağı küçük bir kimse ismidir ki âteş-perestlik ayînini vaz ve ihtirâ edip nâsı ona davet eylemişti. Menc-gûş-ı Fârisî muarrebidir ki küçük kulaklı demektir. Giderek etbâına ıtlâk olunmuştur ki kabîle mecrâsına cârî olmuştur. Müfredinde مَجُوسِيٌّ [mecûsiyy] ve cemi cinsinde مَجُوسٌ [mecûs] denir, يَهُودِيٌّ [yehûdiyy] ve يَهُودٌ [yehûd] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "مَجُوسٌ",
+          "okunus": "Mecûs",
+          "koken": "صَبُورٌ [sabûr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mecus",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi. Ebû Alî en-Nahvî eyitti: مَجُوسٌ [mecûs] ile يَهُودٌ [yehûd]un müfred ve cemi yâ-yı nisbetle fark olundu. يَهُودِيٌّ [yehûdiyy] ve يَهُودٌ [yehûd] مَجُوسِيٌّ [mecûsiyy] ve مَجُوسٌ [mecûs] dediler, شَعِيرَةٌ [şaîret] ve شَعِيرٌ [şaîr] dedikleri gibi ve cemi elif lâmla tarîf olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "eger manâ-yı cemiyyet melhûz olmasa elif-lâm dâhil olması câiz olmaz idi, zîrâ bunlar yanî مَجُوسٌ [mecûs]la يَهُودٌ [yehûd] marifelerdir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Ebû Alî-i mezbûr eyitti: مَجُوسٌ [mecûs]la يَهُودٌ [yehûd] müenneslerdir, kelâm-ı Arabda قَبِيلَةٌ [kabîlet] mecrâsına cârî oldular, حَيٌّ [hayy gibi müzekker itibâr olunmadılar.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَجُوسُ",
+          "okunus": "el-mecûs",
+          "koken": "yâ-yı nisbetin hazfiyle"
+        }
+      ],
+      "تَمْجِيس": [
+        {
+          "eser": "Kamus",
+          "madde": "temcis",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimseyi mecûsî kılmak manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّمْجِيسُ",
+          "okunus": "et-temcîs",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "temcis",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mecûs tâifesinden kılmak; yukâlu: مَجَّسَهُ غَيْرُهُ Ve fil-hadîsi: “فَأَبَوَاهُ يُمَجِّسَانِهِ”",
+              "misaller": [
+                ["مَجَّسَهُ غَيْرُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّمْجِيسُ",
+          "okunus": "et-temcîs",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

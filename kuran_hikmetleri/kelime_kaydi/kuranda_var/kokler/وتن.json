@@ -21,7 +21,7 @@
       [10, "وَتَانَة", "watāna", "tahta", "kontrol", ""],
       [11, "وُتُونَة", "wutūna", "tahta", "kontrol", ""],
       [12, "وِتَانَة", "witāna", "tahta", "kontrol", ""],
-      [13, "وَتِين", "watīn", "şah damar", "kuran", "Kur'ân"],
+      [13, "وَتِين", "watīn", "Yürek damarına denir ki kesildikte sâhibi helâk olur", "lugat", "Kur'ân · Kamus"],
       [14, "وَتُون", "watūn", "tahta", "kontrol", ""],
       [15, "وَتَنَان", "watanān", "tahta", "kontrol", ""],
       [16, "وُتْنَان", "wutnān", "tahta", "kontrol", ""],
@@ -356,7 +356,7 @@
       [258, "وِتْنَتَان", "witnatān", "tahta olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "وَتِين", "watīn", "şah damar", "kuran", "Kur'ân"],
+      [259, "وَتِين", "watīn", "Yürek damarına denir ki kesildikte sâhibi helâk olur", "lugat", "Kur'ân · Kamus"],
       [260, "وَتِينَة", "watīna", "her daim tahta olan, müennes", "kontrol", ""],
       [261, "وَتِينَان", "watīnān", "her daim tahta olan, iki", "kontrol", ""],
       [262, "وَتِينَتَان", "watīnatān", "her daim tahta olan, iki, müennes", "kontrol", ""],
@@ -480,7 +480,7 @@
       [378, "مِيتِينُون", "mītīnūn", "tahta olmaya düşkünler", "kontrol", ""],
       [379, "مِيتِينِين", "mītīnīn", "tahta olmaya düşkünler", "kontrol", ""],
       [380, "مِيتِينَات", "mītīnāt", "tahta olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "وَتِين", "watīn", "şah damar", "kuran", "Kur'ân"],
+      [381, "وَتِين", "watīn", "Yürek damarına denir ki kesildikte sâhibi helâk olur", "lugat", "Kur'ân · Kamus"],
       [382, "وَتِينَة", "watīna", "çok tahta olan, müennes", "kontrol", ""],
       [383, "وَتِينَان", "watīnān", "çok tahta olan, iki", "kontrol", ""],
       [384, "وَتِينَتَان", "watīnatān", "çok tahta olan, iki, müennes", "kontrol", ""],
@@ -547,7 +547,7 @@
       [441, "وَتَن", "watan", "tahta olma türünden şey", "kontrol", ""],
       [443, "وِتْن", "witn", "tahta olma türünden şey", "kontrol", ""],
       [445, "وُتْن", "wutn", "tahta olma türünden şey", "kontrol", ""],
-      [447, "وَتِين", "watīn", "şah damar", "kuran", "Kur'ân"],
+      [447, "وَتِين", "watīn", "Yürek damarına denir ki kesildikte sâhibi helâk olur", "lugat", "Kur'ân · Kamus"],
       [449, "وِتَن", "witan", "tahta olma türünden şey", "kontrol", ""],
       [451, "وُتُن", "wutun", "tahta olma türünden şey", "kontrol", ""],
       [453, "وَتَان", "watān", "tahta olma türünden şey", "kontrol", ""]
@@ -778,7 +778,43 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "وَتِين": [
+        {
+          "eser": "Kamus",
+          "madde": "vetin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yürek damarına denir ki kesildikte sâhibi helâk olur; cemi وُتْنٌ [vutn] gelir vâvın zammıyla ve أَوْتِنَةٌ [evtinet] gelir, أَجْوِبَةٌ [ecvibet] vezninde ve bu devâm manâsındandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَتِينُ",
+          "okunus": "el-vetîn",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "vetin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yürekde bir damardır ki munkatı oldukta sâhibi helâk olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْوَتِينُ",
+          "okunus": "el-vetîn",
+          "koken": "vâvın fethi ve tânın kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

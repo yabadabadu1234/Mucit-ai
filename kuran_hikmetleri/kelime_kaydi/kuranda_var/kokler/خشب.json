@@ -11,7 +11,7 @@
       [0, "خَشْب", "ḫaşb", "odun", "kontrol", ""],
       [1, "خِشْب", "ḫişb", "odun", "kontrol", ""],
       [2, "خُشْب", "ḫuşb", "odun", "kontrol", ""],
-      [3, "خَشَب", "ḫaşab", "odun", "kontrol", "Vikisözlük: wood, lumber, timber"],
+      [3, "خَشَب", "ḫaşab", "Odun", "lugat", "Vikisözlük: wood, lumber, timber · Luggat"],
       [4, "خِشَب", "ḫişab", "odun", "kontrol", ""],
       [5, "خُشُب", "ḫuşub", "odunlar", "kuran", "Kur'ân"],
       [6, "خُشُوب", "ḫuşūb", "odun", "kontrol", ""],
@@ -24,7 +24,7 @@
       [13, "خَشِيب", "ḫaşīb", "odun", "kontrol", ""],
       [14, "خَشُوب", "ḫaşūb", "odun", "kontrol", ""],
       [15, "خَشَبَان", "ḫaşabān", "odun", "kontrol", ""],
-      [16, "خُشْبَان", "ḫuşbān", "odun", "kontrol", ""],
+      [16, "خُشْبَان", "ḫuşbān", "Şol huşûnetli dağlara denir ki ne azîm ve ne sagîr olalar", "lugat", "Kamus"],
       [17, "خِشْبَان", "ḫişbān", "odun", "kontrol", ""],
       [18, "خَشْبَى", "ḫaşbā", "odun", "kontrol", ""],
       [19, "خُشْبَى", "ḫuşbā", "odun", "kontrol", ""],
@@ -397,7 +397,7 @@
       [284, "خَشُبُون", "ḫaşubūn", "her daim odun olanlar", "kontrol", ""],
       [285, "خَشُبِين", "ḫaşubīn", "her daim odun olanlar", "kontrol", ""],
       [286, "خَشُبَات", "ḫaşubāt", "her daim odun olanlar, müennes", "kontrol", ""],
-      [287, "خَشَب", "ḫaşab", "her daim odun olan", "kontrol", "Vikisözlük: wood, lumber, timber"],
+      [287, "خَشَب", "ḫaşab", "Odun", "lugat", "Vikisözlük: wood, lumber, timber · Luggat"],
       [288, "خَشَبَة", "ḫaşaba", "her daim odun olan, müennes", "kontrol", ""],
       [289, "خَشَبَان", "ḫaşabān", "her daim odun olan, iki", "kontrol", ""],
       [290, "خَشَبَتَان", "ḫaşabatān", "her daim odun olan, iki, müennes", "kontrol", ""],
@@ -510,7 +510,14 @@
     ],
     "mensûb": [
       [395, "خَشْبِيّ", "ḫaşbiyy", "odun olma ile ilgili", "kontrol", ""],
-      [397, "خَشَبِيّ", "ḫaşabiyy", "odun olma ile ilgili", "kontrol", "Vikisözlük: wooden"],
+      [
+        397,
+        "خَشَبِيّ",
+        "ḫaşabiyy",
+        "Fustâtın yanî Eski Mısırın verâsında bir mevzidir",
+        "lugat",
+        "Vikisözlük: wooden · Kamus"
+      ],
       [399, "خِشْبِيّ", "ḫişbiyy", "odun olma ile ilgili", "kontrol", ""],
       [401, "خُشْبِيّ", "ḫuşbiyy", "odun olma ile ilgili", "kontrol", ""],
       [403, "خِشَابِيّ", "ḫişābiyy", "odun olma ile ilgili", "kontrol", ""],
@@ -557,7 +564,7 @@
       [435, "خَوْشَب", "ḫawşab", "odun olma türünden şey", "kontrol", ""],
       [437, "خَيْشَب", "ḫayşab", "odun olma türünden şey", "kontrol", ""],
       [439, "خَشْب", "ḫaşb", "odun olma türünden şey", "kontrol", ""],
-      [441, "خَشَب", "ḫaşab", "odun olma türünden şey", "kontrol", "Vikisözlük: wood, lumber, timber"],
+      [441, "خَشَب", "ḫaşab", "Odun", "lugat", "Vikisözlük: wood, lumber, timber · Luggat"],
       [443, "خِشْب", "ḫişb", "odun olma türünden şey", "kontrol", ""],
       [445, "خُشْب", "ḫuşb", "odun olma türünden şey", "kontrol", ""],
       [447, "خَشِيب", "ḫaşīb", "odun olma türünden şey", "kontrol", ""],
@@ -593,7 +600,7 @@
       [466, "خَشَبَة", "ḫaşaba", "odun olmalar", "kontrol", ""],
       [467, "خُشَّاب", "ḫuşşāb", "odun olmalar", "kontrol", ""],
       [468, "خَشَاب", "ḫaşāb", "odun olmalar", "kontrol", ""],
-      [469, "خَشَب", "ḫaşab", "odun olmalar", "kontrol", "Vikisözlük: wood, lumber, timber"],
+      [469, "خَشَب", "ḫaşab", "Odun", "lugat", "Vikisözlük: wood, lumber, timber · Luggat"],
       [470, "مَخَاشِب", "maḫāşib", "odun olmalar", "kontrol", ""],
       [471, "مَخَاشِيب", "maḫāşīb", "odun olmalar", "kontrol", ""],
       [472, "خَوَاشِب", "ḫawāşib", "odun olmalar", "kontrol", ""],
@@ -1255,7 +1262,119 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "خَشَب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HAŞEB",
+          "yazilis": "ﺧﺸﺐ",
+          "tur": "i.",
+          "koken": "Ar. ḫaşeb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ağacın odun kısmı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Ağacın kabuğu ile iç kısmı arasında meydana gelen odunumsu tabaka, henüz odunlaşmamış kısım",
+              "misaller": [],
+              "deyim": "Haşeb-i kâzip"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ağacın asıl odun kısmı",
+              "misaller": [],
+              "deyim": "Haşeb-i sâdık"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "haşeb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kalın kuru ağaç pâresine denir ki kereste ederler. Cemi خَشَبٌ [haşeb] gelir müfredi gibi ve خُشُبٌ [huşub] gelir zammeteynle ve خُشْبٌ [huşb] gelir hânın zammı ve şînin sükûnuyla ve خُشْبَانٌ [huşbân] gelir بُلْدَانٌ [buldân] vezninde; yukâlu: قَطَعَ الْخَشَبَ وَهُوَ مَا غَلُظَ مِنَ الْعِيدَانِ",
+              "misaller": [
+                ["قَطَعَ الْخَشَبَ وَهُوَ مَا غَلُظَ مِنَ الْعِيدَانِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَشَبُ",
+          "okunus": "el-haşeb",
+          "koken": "hânın ve şîn-i mucemenin fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "haşeb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Odun",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "خُشْبَان": [
+        {
+          "eser": "Kamus",
+          "madde": "Huşban",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol huşûnetli dağlara denir ki ne azîm ve ne sagîr olalar. Zâhiren müfredi خَشِيبٌ [haşîb]dir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "خُشْبَانُ [Huşbân] Bir recül adıdır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bir mevzi ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخُشْبَانُ",
+          "okunus": "el-huşbân",
+          "koken": "عُثْمَانُ [usamp;mân] vezninde"
+        }
+      ],
+      "خَشَبِيّ": [
+        {
+          "eser": "Kamus",
+          "madde": "Haşebiyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Fustâtın yanî Eski Mısırın verâsında bir mevzidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخَشَبِيُّ",
+          "okunus": "el-Haşebiyy",
+          "koken": "عَرَبِيٌّ [arabiyy] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -9,10 +9,10 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "بَنّ", "bann", "parma", "orta", ""],
-      [1, "بِنّ", "binn", "parma", "orta", ""],
+      [1, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"],
       [2, "بُنّ", "bunn", "parma", "orta", ""],
       [3, "بَنّ", "bann", "parma", "orta", ""],
-      [4, "بِنّ", "binn", "parma", "orta", ""],
+      [4, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"],
       [5, "بُنّ", "bunn", "parma", "orta", ""],
       [6, "بُنُون", "bunūn", "parma", "orta", ""],
       [7, "بِنَان", "binān", "parma", "orta", ""],
@@ -561,7 +561,7 @@
       [426, "بِنَانَة", "bināna", "parma", "orta", ""],
       [427, "بُنُونَة", "bunūna", "parma", "orta", ""],
       [428, "بَنّ", "bann", "parma", "orta", ""],
-      [429, "بِنّ", "binn", "parma", "orta", ""]
+      [429, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "بَانُون", "bānūn", "parma türünden şey", "orta", ""],
@@ -572,10 +572,10 @@
       [437, "بَيَنّ", "bayann", "parma türünden şey", "orta", ""],
       [439, "بَنّ", "bann", "parma türünden şey", "orta", ""],
       [441, "بَنّ", "bann", "parma türünden şey", "orta", ""],
-      [443, "بِنّ", "binn", "parma türünden şey", "orta", ""],
+      [443, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"],
       [445, "بُنّ", "bunn", "parma türünden şey", "orta", ""],
       [447, "بَنِين", "banīn", "parma türünden şey", "orta", ""],
-      [449, "بِنّ", "binn", "parma türünden şey", "orta", ""],
+      [449, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"],
       [451, "بُنّ", "bunn", "parma türünden şey", "orta", ""],
       [453, "بَنَان", "banān", "parma türünden şey", "orta", ""]
     ],
@@ -600,7 +600,7 @@
       [459, "بُنُون", "bunūn", "parmalar", "orta", ""],
       [460, "بُنّ", "bunn", "parmalar", "orta", ""],
       [461, "بِنَان", "binān", "parmalar", "orta", ""],
-      [462, "بِنّ", "binn", "parmalar", "orta", ""],
+      [462, "بِنّ", "binn", "Bedende kat kat semizlik eserine ve kuvvetine denir", "lugat", "Kamus"],
       [463, "بِنَّة", "binna", "parmalar", "orta", ""],
       [464, "بُنّ", "bunn", "parmalar", "orta", ""],
       [465, "بُنّاء", "bunnāʾ", "parmalar", "orta", ""],
@@ -1998,7 +1998,30 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بِنّ": [
+        {
+          "eser": "Kamus",
+          "madde": "binn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bedende kat kat semizlik eserine ve kuvvetine denir; ve minhu yukâlu: بِنٌّ عَلَى بِنٍّ أَيْ طِرْقٌ عَلَى طِرْقٍ أَيْ قُوَّةٌ مِنَ الشَّحْمِ وَالسِّمَنِ عَلَى قُوَّةٍ Ve müteaffin ve bed-bûy mahalle denir; yukâlu: مَكَانٌ بِنٌّ أَيِ الْمُنْتِنُ الرَّائِحَةِ",
+              "misaller": [
+                ["بِنٌّ عَلَى بِنٍّ أَيْ طِرْقٌ عَلَى طِرْقٍ أَيْ قُوَّةٌ مِنَ الشَّحْمِ وَالسِّمَنِ عَلَى قُوَّةٍ", ""],
+                ["مَكَانٌ بِنٌّ أَيِ الْمُنْتِنُ الرَّائِحَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبِنُّ",
+          "okunus": "el-binn",
+          "koken": "bânın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

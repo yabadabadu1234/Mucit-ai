@@ -15,7 +15,7 @@
       [4, "صِرَط", "ṣiraṭ", "yol", "kontrol", ""],
       [5, "صُرُط", "ṣuruṭ", "yol", "kontrol", ""],
       [6, "صُرُوط", "ṣurūṭ", "yol", "kontrol", ""],
-      [7, "صِرَاط", "ṣirāṭ", "yol", "kontrol", ""],
+      [7, "صِرَاط", "ṣirāṭ", "Yola denir", "lugat", "Kamus"],
       [8, "صُرَاط", "ṣurāṭ", "yol", "kontrol", ""],
       [9, "صَرَاط", "ṣarāṭ", "yol", "kontrol", ""],
       [10, "صَرَاطَة", "ṣarāṭa", "yol", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُصَارَطَة", "muṣāraṭa", "biriyle karşılıklı yol olma", "kontrol", ""],
-      [50, "صِرَاط", "ṣirāṭ", "biriyle karşılıklı yol olma", "kontrol", ""]
+      [50, "صِرَاط", "ṣirāṭ", "Yola denir", "lugat", "Kamus"]
     ],
     "ism-i merre · bâb III": [
       [51, "صِرَاطَة", "ṣirāṭa", "bir kere biriyle karşılıklı yol olma", "kontrol", ""]
@@ -527,7 +527,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "صَرَاط", "ṣarāṭ", "yol olma", "kontrol", ""],
       [422, "صُرُوط", "ṣurūṭ", "yol olma", "kontrol", ""],
-      [423, "صِرَاط", "ṣirāṭ", "yol olma", "kontrol", ""],
+      [423, "صِرَاط", "ṣirāṭ", "Yola denir", "lugat", "Kamus"],
       [424, "صُرْط", "ṣurṭ", "yol olma", "kontrol", ""],
       [425, "صَرَاطَة", "ṣarāṭa", "yol olma", "kontrol", ""],
       [426, "صِرَاطَة", "ṣirāṭa", "yol olma", "kontrol", ""],
@@ -571,7 +571,7 @@
       [458, "أَصَارِيط", "ʾaṣārīṭ", "yol olmalar", "kontrol", ""],
       [459, "صُرُوط", "ṣurūṭ", "yol olmalar", "kontrol", ""],
       [460, "صُرُط", "ṣuruṭ", "yol olmalar", "kontrol", ""],
-      [461, "صِرَاط", "ṣirāṭ", "yol olmalar", "kontrol", ""],
+      [461, "صِرَاط", "ṣirāṭ", "Yola denir", "lugat", "Kamus"],
       [462, "صِرَط", "ṣiraṭ", "yol olmalar", "kontrol", ""],
       [463, "صِرَطَة", "ṣiraṭa", "yol olmalar", "kontrol", ""],
       [464, "صُرَط", "ṣuraṭ", "yol olmalar", "kontrol", ""],
@@ -866,7 +866,51 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صِرَاط": [
+        {
+          "eser": "Kamus",
+          "madde": "sirat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yola denir; yukâlu: أَخَذَ صِرَاطًا مُسْتَقِيمًا أَيْ طَرِيقًا Niteki سِرَاطٌ [sirât] dahi lügattir ki zikr olundu.",
+              "misaller": [
+                ["أَخَذَ صِرَاطًا مُسْتَقِيمًا أَيْ طَرِيقًا", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "cehennem üzere kurulmuş bir köprüye ıtlâk olunur ki hadîs-i sahîhte vasfı mübeyyendir ki kıldan ince ve kılıçtan keskindir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصِّرَاطُ",
+          "okunus": "es-sirât",
+          "koken": "كِتَابٌ [kitâb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sirat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلسِّرَاطُ [es-sirât] ve اَلزِّرَاطُ [ez-zirât] bunların cemîisi طَرِيقٌ [tarîk] manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصِّرَاطُ",
+          "okunus": "es-sirât",
+          "koken": "sâdın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 45,
   "kuranda_var": true,

@@ -566,7 +566,7 @@
     ],
     "cem‘-i mükesser (aday)": [
       [455, "أَلْسَان", "ʾalsān", "dil olmalar", "kontrol", ""],
-      [456, "أَلْسِنَة", "ʾalsina", "dil olmalar", "kontrol", ""],
+      [456, "أَلْسِنَة", "ʾalsina", "Diller, lisanlar", "lugat", "Luggat"],
       [457, "أَلَاسِن", "ʾalāsin", "dil olmalar", "kontrol", ""],
       [458, "أَلَاسِين", "ʾalāsīn", "dil olmalar", "kontrol", ""],
       [459, "لُسُون", "lusūn", "dil olmalar", "kontrol", ""],
@@ -1099,7 +1099,62 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَلْسِنَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ELSİNE",
+          "yazilis": "ﺍﻟﺴﻨﻪ",
+          "tur": "i.",
+          "koken": "Ar. lisān ’ın çoğul şekli elsine",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Diller, lisanlar",
+              "misaller": [
+                ["Lîk emriyle lisân-ı Arabî / Oldu her elsinenin müntehabı", "Sünbülzâde Vehbî"],
+                ["Kim elsinenin odur bihîni / En rûh-şinâsı, dil-nişîni", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Eklemeli diller",
+              "misaller": [],
+              "deyim": "Elsine-i iltisâkiyye"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Üç dil” Osmanlı devrinde Türkçe, Farsça ve Arapça’ya verilen isim",
+              "misaller": [],
+              "deyim": "Elsine-i selâse"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bükümlü diller",
+              "misaller": [],
+              "deyim": "Elsine-i tasrîfiyye"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "elsine",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Diller, lisanlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 25,
   "kuranda_var": true,

@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "قَدْو", "qadw", "örnek alma", "orta", "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food)"],
+      [
+        0,
+        "قَدْو",
+        "qadw",
+        "Et yâhûd taâm râyiha-i tayyibe vermek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food) · Vankulu"
+      ],
       [1, "قِدْو", "qidw", "örnek alma", "orta", ""],
       [2, "قُدْو", "qudw", "örnek alma", "orta", ""],
       [517, "قَدَا", "qadā", "örnek alma", "orta", ""],
@@ -190,9 +197,9 @@
         625,
         "اِقْتِدَاء",
         "iqtidāʾ",
-        "kendisi için örnek alma",
-        "orta",
-        "Vikisözlük: masdar (bâb VIII): to imitate or emulate or be guided by [+بِ (object)] as a model or exa"
+        "Birini örnek alıp ona uyma, örnek tutma, tâbi olma",
+        "lugat",
+        "Vikisözlük: masdar (bâb VIII): to imitate or emulate or be guided by [+بِ (object)] as a model or exa · Kubbealtı"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -374,9 +381,9 @@
         294,
         "قَدْو",
         "qadw",
-        "her daim örnek alan",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food)"
+        "Et yâhûd taâm râyiha-i tayyibe vermek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food) · Vankulu"
       ],
       [295, "قَدْوَة", "qadwa", "her daim örnek alan, müennes", "orta", ""],
       [296, "قَدْوَان", "qadwān", "her daim örnek alan, iki", "orta", ""],
@@ -521,9 +528,9 @@
         428,
         "قَدْو",
         "qadw",
-        "örnek alma",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food)"
+        "Et yâhûd taâm râyiha-i tayyibe vermek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food) · Vankulu"
       ],
       [429, "قِدْو", "qidw", "örnek alma", "orta", ""]
     ],
@@ -538,9 +545,9 @@
         439,
         "قَدْو",
         "qadw",
-        "örnek alma türünden şey",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food)"
+        "Et yâhûd taâm râyiha-i tayyibe vermek",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be tasty, to taste good (of food) · Vankulu"
       ],
       [840, "قَدَا", "qadā", "örnek alma türünden şey", "orta", ""],
       [443, "قِدْو", "qidw", "örnek alma türünden şey", "orta", ""],
@@ -857,7 +864,89 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "قَدْو": [
+        {
+          "eser": "Kamus",
+          "madde": "kadv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "قَدَاوَةٌ [kadâvet] manâsınadır; yukâlu: قَدَا الطَّعَامُ يَقْدُو قَدْوًا بِمَعْنَى قَدِيَ Ve karîb olmak manâsınadır; yukâlu: قَدَا الرَّجُلُ إِذَا قَرُبَ Ve seferden gelmek manâsınadır; yukâlu: قَدَا فُلَانٌ إِذَا قَدِمَ مِنَ السَّفَرِ",
+              "misaller": [
+                ["قَدَا الطَّعَامُ يَقْدُو قَدْوًا بِمَعْنَى قَدِيَ", ""],
+                ["قَدَا الرَّجُلُ إِذَا قَرُبَ", ""],
+                ["قَدَا فُلَانٌ إِذَا قَدِمَ مِنَ السَّفَرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَدْوُ",
+          "okunus": "el-kadv",
+          "koken": "عَدْوٌ [adv] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kadv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Et yâhûd taâm râyiha-i tayyibe vermek.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْقَدْوُ",
+          "okunus": "el-kadv",
+          "koken": "kâfın fethi ve dâlın sükûnuyla"
+        }
+      ],
+      "اِقْتِدَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İKTİDÂ",
+          "yazilis": "ﺍﻗﺘﺪﺍﺀ",
+          "tur": "i.",
+          "koken": "Ar. ḳidve t “örnek, kendisine uyulan kimse”den iḳtidā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Birini örnek alıp ona uyma, örnek tutma, tâbi olma",
+              "misaller": [
+                ["Ey gönül gel gayrdan geç aşka eyle iktidâ / Zümre-i ehl-i hakîkat aşkı eyler muktedâ", "Niyâzî-i Mısrî"],
+                ["Bülbüllere iktidâ ederdim", "Cenap Şahâbeddin"],
+                ["Geç akla bu yolda iktidâdan", "Abdülhak Hâmit"],
+                ["● İktidâen", "ﺍﻗﺘﺪﺍﺀً"],
+                ["Uyarak, tâbi olarak: Şeyhine iktidâen tasfiye-i derûna çalıştı", "Şemseddin Sâmi"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "iktida",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adama uymak manâsınadır; yukâlu: إِقْتَدَى بِهِ إِذَا تَسَنَّنَ بِهِ",
+              "misaller": [
+                ["إِقْتَدَى بِهِ إِذَا تَسَنَّنَ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِقْتِدَاءُ",
+          "okunus": "el-iktidâ",
+          "koken": "إِفْتِعَالٌ [iftiâl] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

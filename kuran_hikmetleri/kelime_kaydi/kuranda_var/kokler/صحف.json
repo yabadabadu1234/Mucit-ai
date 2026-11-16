@@ -13,9 +13,9 @@
       [2, "صُحْف", "ṣuḥf", "sayfalama", "orta", ""],
       [3, "صَحَف", "ṣaḥaf", "sayfalama", "orta", ""],
       [4, "صِحَف", "ṣiḥaf", "sayfalama", "orta", ""],
-      [5, "صُحُف", "ṣuḥuf", "sahifeler", "kuran", "Kur'ân"],
+      [5, "صُحُف", "ṣuḥuf", "Sahîfeler", "lugat", "Kur'ân · Luggat"],
       [6, "صُحُوف", "ṣuḥūf", "sayfalama", "orta", ""],
-      [7, "صِحَاف", "ṣiḥāf", "sayfalama", "orta", ""],
+      [7, "صِحَاف", "ṣiḥāf", "Su irkilecek küçük yerlere denir", "lugat", "Kamus"],
       [8, "صُحَاف", "ṣuḥāf", "sayfalama", "orta", ""],
       [9, "صَحَاف", "ṣaḥāf", "sayfalama", "orta", ""],
       [10, "صَحَافَة", "ṣaḥāfa", "sayfalama", "orta", "Vikisözlük: journalism, news business"],
@@ -43,9 +43,9 @@
         29,
         "تَصْحِيف",
         "taṣḥīf",
-        "çokça sayfalama",
-        "orta",
-        "Vikisözlük: verbal noun of صَحَّفَ (ṣaḥḥafa) (form II)"
+        "Kelimeyi yanlış yazma",
+        "lugat",
+        "Vikisözlük: verbal noun of صَحَّفَ (ṣaḥḥafa) (form II) · Luggat"
       ],
       [30, "تَصْحِفَة", "taṣḥifa", "çokça sayfalama", "orta", ""],
       [31, "صِحِّاف", "ṣiḥḥāf", "çokça sayfalama", "orta", ""]
@@ -77,7 +77,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُصَاحَفَة", "muṣāḥafa", "biriyle karşılıklı sayfalama", "orta", ""],
-      [50, "صِحَاف", "ṣiḥāf", "biriyle karşılıklı sayfalama", "orta", ""]
+      [50, "صِحَاف", "ṣiḥāf", "Su irkilecek küçük yerlere denir", "lugat", "Kamus"]
     ],
     "ism-i merre · bâb III": [
       [
@@ -133,7 +133,7 @@
       [75, "مُصْحِفَات", "muṣḥifāt", "sayfalatanlar, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُصْحَف", "muṣḥaf", "sayfalatılan", "orta", "Vikisözlük: volume, edition, copy, printing"],
+      [76, "مُصْحَف", "muṣḥaf", "Kur'ân", "lugat", "Vikisözlük: volume, edition, copy, printing · Luggat"],
       [77, "مُصْحَفَة", "muṣḥafa", "sayfalatılan, müennes", "orta", ""],
       [78, "مُصْحَفَان", "muṣḥafān", "sayfalatılan, iki", "orta", ""],
       [79, "مُصْحَفَتَان", "muṣḥafatān", "sayfalatılan, iki, müennes", "orta", ""],
@@ -142,7 +142,7 @@
       [82, "مُصْحَفَات", "muṣḥafāt", "sayfalatılanlar, müennes", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُصْحَف", "muṣḥaf", "sayfalatma yeri, vakti", "orta", "Vikisözlük: volume, edition, copy, printing"]
+      [83, "مُصْحَف", "muṣḥaf", "Kur'ân", "lugat", "Vikisözlük: volume, edition, copy, printing · Luggat"]
     ],
     "masdar · bâb V": [
       [
@@ -335,7 +335,14 @@
       [226, "مَصْحُوفَات", "maṣḥūfāt", "sayfalananlar, müennes", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَصْحَف", "maṣḥaf", "sayfalama yeri, vakti", "orta", "Vikisözlük: volume, edition, copy, printing"],
+      [
+        227,
+        "مَصْحَف",
+        "maṣḥaf",
+        "Bi-manâhu kezâlik",
+        "lugat",
+        "Vikisözlük: volume, edition, copy, printing · Vankulu"
+      ],
       [228, "مَصْحَفَان", "maṣḥafān", "sayfalama yeri, vakti, iki", "orta", ""],
       [229, "مَصْحِف", "maṣḥif", "sayfalama yeri, vakti", "orta", ""],
       [230, "مَصْحِفَان", "maṣḥifān", "sayfalama yeri, vakti, iki", "orta", ""],
@@ -371,11 +378,18 @@
       [252, "صُحَيْفَتَان", "ṣuḥayfatān", "azıcık sayfalama, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَصْحَف", "maṣḥaf", "sayfalama", "orta", "Vikisözlük: volume, edition, copy, printing"],
+      [
+        253,
+        "مَصْحَف",
+        "maṣḥaf",
+        "Bi-manâhu kezâlik",
+        "lugat",
+        "Vikisözlük: volume, edition, copy, printing · Vankulu"
+      ],
       [254, "مَصْحَفَان", "maṣḥafān", "sayfalama, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "صَحْفَة", "ṣaḥfa", "bir kere sayfalama", "orta", "Vikisözlük: large bowl, plate, dish"],
+      [255, "صَحْفَة", "ṣaḥfa", "Marûftur ki çanağa denir", "lugat", "Vikisözlük: large bowl, plate, dish · Kamus"],
       [256, "صَحْفَتَان", "ṣaḥfatān", "bir kere sayfalama, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
@@ -384,7 +398,7 @@
     ],
     "sıfat-ı müşebbehe": [
       [259, "صَحِيف", "ṣaḥīf", "her daim sayfalayan", "orta", ""],
-      [260, "صَحِيفَة", "ṣaḥīfa", "her daim sayfalayan, müennes", "orta", ""],
+      [260, "صَحِيفَة", "ṣaḥīfa", "Sayfa", "lugat", "Luggat"],
       [261, "صَحِيفَان", "ṣaḥīfān", "her daim sayfalayan, iki", "orta", ""],
       [262, "صَحِيفَتَان", "ṣaḥīfatān", "her daim sayfalayan, iki, müennes", "orta", ""],
       [263, "صَحِيفُون", "ṣaḥīfūn", "her daim sayfalayanlar", "orta", ""],
@@ -419,13 +433,13 @@
       [292, "صَحَفِين", "ṣaḥafīn", "her daim sayfalayanlar", "orta", ""],
       [293, "صَحَفَات", "ṣaḥafāt", "her daim sayfalayanlar, müennes", "orta", ""],
       [294, "صَحْف", "ṣaḥf", "her daim sayfalayan", "orta", ""],
-      [295, "صَحْفَة", "ṣaḥfa", "her daim sayfalayan, müennes", "orta", "Vikisözlük: large bowl, plate, dish"],
+      [295, "صَحْفَة", "ṣaḥfa", "Marûftur ki çanağa denir", "lugat", "Vikisözlük: large bowl, plate, dish · Kamus"],
       [296, "صَحْفَان", "ṣaḥfān", "her daim sayfalayan, iki", "orta", ""],
       [297, "صَحْفَتَان", "ṣaḥfatān", "her daim sayfalayan, iki, müennes", "orta", ""],
       [298, "صَحْفُون", "ṣaḥfūn", "her daim sayfalayanlar", "orta", ""],
       [299, "صَحْفِين", "ṣaḥfīn", "her daim sayfalayanlar", "orta", ""],
       [300, "صَحْفَات", "ṣaḥfāt", "her daim sayfalayanlar, müennes", "orta", ""],
-      [301, "صُحُف", "ṣuḥuf", "sahifeler", "kuran", "Kur'ân"],
+      [301, "صُحُف", "ṣuḥuf", "Sahîfeler", "lugat", "Kur'ân · Luggat"],
       [302, "صُحُفَة", "ṣuḥufa", "her daim sayfalayan, müennes", "orta", ""],
       [303, "صُحُفَان", "ṣuḥufān", "her daim sayfalayan, iki", "orta", ""],
       [304, "صُحُفَتَان", "ṣuḥufatān", "her daim sayfalayan, iki, müennes", "orta", ""],
@@ -455,7 +469,7 @@
       [328, "صَحَافَات", "ṣaḥāfāt", "her daim sayfalayanlar, müennes", "orta", ""]
     ],
     "mübalağa": [
-      [329, "صَحَّاف", "ṣaḥḥāf", "işi sayfalama olan", "orta", "Vikisözlük: bookseller, newspaper trader"],
+      [329, "صَحَّاف", "ṣaḥḥāf", "Kitapçı", "lugat", "Vikisözlük: bookseller, newspaper trader · Luggat"],
       [330, "صَحَّافَة", "ṣaḥḥāfa", "işi sayfalama olan, müennes", "orta", ""],
       [331, "صَحَّافَان", "ṣaḥḥāfān", "işi sayfalama olan, iki", "orta", ""],
       [332, "صَحَّافَتَان", "ṣaḥḥāfatān", "işi sayfalama olan, iki, müennes", "orta", ""],
@@ -508,7 +522,7 @@
       [379, "مِصْحِيفِين", "miṣḥīfīn", "sayfalamaya düşkünler", "orta", ""],
       [380, "مِصْحِيفَات", "miṣḥīfāt", "sayfalamaya düşkünler, müennes", "orta", ""],
       [381, "صَحِيف", "ṣaḥīf", "çok sayfalayan", "orta", ""],
-      [382, "صَحِيفَة", "ṣaḥīfa", "çok sayfalayan, müennes", "orta", ""],
+      [382, "صَحِيفَة", "ṣaḥīfa", "Sayfa", "lugat", "Luggat"],
       [383, "صَحِيفَان", "ṣaḥīfān", "çok sayfalayan, iki", "orta", ""],
       [384, "صَحِيفَتَان", "ṣaḥīfatān", "çok sayfalayan, iki, müennes", "orta", ""],
       [385, "صَحِيفُون", "ṣaḥīfūn", "çok sayfalayanlar", "orta", ""],
@@ -524,7 +538,7 @@
     ],
     "mensûb": [
       [395, "صَحْفِيّ", "ṣaḥfiyy", "sayfalama ile ilgili", "orta", ""],
-      [397, "صَحَفِيّ", "ṣaḥafiyy", "sayfalama ile ilgili", "orta", ""],
+      [397, "صَحَفِيّ", "ṣaḥafiyy", "kırââtinde hatâ eden yanî yanlış okur olan kimseye denir", "lugat", "Kamus"],
       [399, "صِحْفِيّ", "ṣiḥfiyy", "sayfalama ile ilgili", "orta", ""],
       [401, "صُحْفِيّ", "ṣuḥfiyy", "sayfalama ile ilgili", "orta", ""],
       [403, "صِحَافِيّ", "ṣiḥāfiyy", "sayfalama ile ilgili", "orta", "Vikisözlük: journalist"],
@@ -555,7 +569,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "صَحَاف", "ṣaḥāf", "sayfalama", "orta", ""],
       [422, "صُحُوف", "ṣuḥūf", "sayfalama", "orta", ""],
-      [423, "صِحَاف", "ṣiḥāf", "sayfalama", "orta", ""],
+      [423, "صِحَاف", "ṣiḥāf", "Su irkilecek küçük yerlere denir", "lugat", "Kamus"],
       [424, "صُحْف", "ṣuḥf", "sayfalama", "orta", ""],
       [425, "صَحَافَة", "ṣaḥāfa", "sayfalama", "orta", "Vikisözlük: journalism, news business"],
       [426, "صِحَافَة", "ṣiḥāfa", "sayfalama", "orta", "Vikisözlük: journalism, news business"],
@@ -576,18 +590,18 @@
       [445, "صُحْف", "ṣuḥf", "sayfalama türünden şey", "orta", ""],
       [447, "صَحِيف", "ṣaḥīf", "sayfalama türünden şey", "orta", ""],
       [449, "صِحَف", "ṣiḥaf", "sayfalama türünden şey", "orta", ""],
-      [451, "صُحُف", "ṣuḥuf", "sahifeler", "kuran", "Kur'ân"],
+      [451, "صُحُف", "ṣuḥuf", "Sahîfeler", "lugat", "Kur'ân · Luggat"],
       [453, "صَحَاف", "ṣaḥāf", "sayfalama türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
       [431, "صَاحُوفَة", "ṣāḥūfa", "sayfalama türünden bir tane", "orta", ""],
       [436, "صَوْحَفَة", "ṣawḥafa", "sayfalama türünden bir tane", "orta", ""],
       [438, "صَيْحَفَة", "ṣayḥafa", "sayfalama türünden bir tane", "orta", ""],
-      [440, "صَحْفَة", "ṣaḥfa", "sayfalama türünden bir tane", "orta", "Vikisözlük: large bowl, plate, dish"],
+      [440, "صَحْفَة", "ṣaḥfa", "Marûftur ki çanağa denir", "lugat", "Vikisözlük: large bowl, plate, dish · Kamus"],
       [442, "صَحَفَة", "ṣaḥafa", "sayfalama türünden bir tane", "orta", ""],
       [444, "صِحْفَة", "ṣiḥfa", "sayfalama türünden bir tane", "orta", ""],
       [446, "صُحْفَة", "ṣuḥfa", "sayfalama türünden bir tane", "orta", ""],
-      [448, "صَحِيفَة", "ṣaḥīfa", "sayfalama türünden bir tane", "orta", ""],
+      [448, "صَحِيفَة", "ṣaḥīfa", "Sayfa", "lugat", "Luggat"],
       [450, "صِحَفَة", "ṣiḥafa", "sayfalama türünden bir tane", "orta", ""],
       [452, "صُحُفَة", "ṣuḥufa", "sayfalama türünden bir tane", "orta", ""],
       [454, "صَحَافَة", "ṣaḥāfa", "sayfalama türünden bir tane", "orta", "Vikisözlük: journalism, news business"]
@@ -598,8 +612,8 @@
       [457, "أَصَاحِف", "ʾaṣāḥif", "sayfalamalar", "orta", ""],
       [458, "أَصَاحِيف", "ʾaṣāḥīf", "sayfalamalar", "orta", ""],
       [459, "صُحُوف", "ṣuḥūf", "sayfalamalar", "orta", ""],
-      [460, "صُحُف", "ṣuḥuf", "sahifeler", "kuran", "Kur'ân"],
-      [461, "صِحَاف", "ṣiḥāf", "sayfalamalar", "orta", ""],
+      [460, "صُحُف", "ṣuḥuf", "Sahîfeler", "lugat", "Kur'ân · Luggat"],
+      [461, "صِحَاف", "ṣiḥāf", "Su irkilecek küçük yerlere denir", "lugat", "Kamus"],
       [462, "صِحَف", "ṣiḥaf", "sayfalamalar", "orta", ""],
       [463, "صِحَفَة", "ṣiḥafa", "sayfalamalar", "orta", ""],
       [464, "صُحَف", "ṣuḥaf", "sayfalamalar", "orta", ""],
@@ -608,12 +622,12 @@
       [467, "صُحَّاف", "ṣuḥḥāf", "sayfalamalar", "orta", ""],
       [468, "صَحَاف", "ṣaḥāf", "sayfalamalar", "orta", ""],
       [469, "صَحَف", "ṣaḥaf", "sayfalamalar", "orta", ""],
-      [470, "مَصَاحِف", "maṣāḥif", "sayfalamalar", "orta", ""],
+      [470, "مَصَاحِف", "maṣāḥif", "Sayfalardan meydana gelen şeyler, kitaplar", "lugat", "Kubbealtı"],
       [471, "مَصَاحِيف", "maṣāḥīf", "sayfalamalar", "orta", ""],
       [472, "صَوَاحِف", "ṣawāḥif", "sayfalamalar", "orta", ""],
       [473, "أَصْحُف", "ʾaṣḥuf", "sayfalamalar", "orta", ""],
       [474, "صُحَّف", "ṣuḥḥaf", "sayfalamalar", "orta", ""],
-      [475, "صَحَائِف", "ṣaḥāʾif", "sayfalamalar", "orta", ""],
+      [475, "صَحَائِف", "ṣaḥāʾif", "Sayfalar", "lugat", "Luggat"],
       [476, "صُحَيْف", "ṣuḥayf", "sayfalamalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
@@ -1809,7 +1823,540 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صُحُف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SUHUF",
+          "yazilis": "ﺻﺤﻒ",
+          "tur": "i.",
+          "koken": "Ar. ṣaḥіfe ’nin çoğul şekli ṣuḥuf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Allah’ın Tevrat, Zebur, İncil ve Kur’ân-ı Kerim isimleriyle bilinen dört büyük kitaptan başka bâzı peygamberlere gönderdiği vahiyleri ihtivâ eden sahîfeler, risâleler [Bunların tamâmının Hz. Adem’e 10, Hz. Şît’e 50, Hz. İdrîs’e 30 ve Hz. İbrâhim’e 10 sahife olmak üzere 100 adet olduğu rivâyet edilmektedir]",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "suhuf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصُّحُفُ",
+          "okunus": "es-suhuf",
+          "koken": "zammeteynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "suhuf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sahîfeler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "suhuf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sayfalar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "صِحَاف": [
+        {
+          "eser": "Kamus",
+          "madde": "sihaf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Su irkilecek küçük yerlere denir; cemi صُحُفٌ [suhuf] gelir, كُتُبٌ [kutub] vezninde.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصِّحَافُ",
+          "okunus": "es-sihâf",
+          "koken": "كِتَابٌ [kitâb] vezninde"
+        }
+      ],
+      "تَصْحِيف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TASHİF",
+          "yazilis": "ﺗﺼﺤﻴﻒ",
+          "tur": "i.",
+          "koken": "Ar. ṣaḥafі “yanlış okuyan”dan taṣḥіf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yanlış yazma, bir ibâreyi bozma",
+              "misaller": [
+                ["Tashif bir kelimenin şeklini, noktalarını değiştirmek, meselâ sûr’u", "ﺳﻮﺭ"],
+                [", göz’ü", "ﮔﻮﺯ"],
+                ["şeklinde yazmaktır", "Tâhirü’l-Mevlevî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "tashif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sahîfedte hatâ eylemek yanî sahîfede müsebbet kelime ve kelâmı hatâen tagyîr eylemek manâsınadır. Hurûfların iştibâhından neşet eder, meselâ خَبَرٌ [haber] lafzını خَيْرٌ [hayr] okumak gibi; yukâlu: صَحَّفَ الْكَلِمَةَ إِذَا أَخْطَأَ فِي قِرَاءَتِهَا وَرِوَايَتِهَا فِي الصَّحِيفَةِ",
+              "misaller": [
+                ["صَحَّفَ الْكَلِمَةَ إِذَا أَخْطَأَ فِي قِرَاءَتِهَا وَرِوَايَتِهَا فِي الصَّحِيفَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّصْحِيفُ",
+          "okunus": "et-tashîf",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tashif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sahîfede hatâ etmek manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّصْحِيفُ",
+          "okunus": "et-tashîf",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tashîf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kelimeyi yanlış yazma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُصْحَف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MUSHAF",
+          "yazilis": "ﻣﺼﺤﻒ",
+          "tur": "i.",
+          "koken": "Ar. iṣḥāf “sayfalar hâlinde toplamak”tan muṣḥaf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerim",
+              "misaller": [
+                [
+                  "Kemâl erbâbı ârâyişle aslâ iftihâr etmez / Değildir hürmeti mushafların cild-i mutallâdan",
+                  "Lebîb-i Âmidî’den"
+                ],
+                ["Annemin, çocukluğundan beri yanından ayırmadığı köhne ciltli küçük bir mushafı vardı", "Yahyâ Kemal"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Sayfa hâlinde meydana getirilmiş şey, kitap",
+              "misaller": [
+                ["Mahabbet mushafın hatm eyledim ben / Züleyhâ sûre-i Yûsuf’ta kaldı", "Muallim Nâci"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "mushaf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sahîfelerin beyned-deffeteyn müctemi olduğu kitâb-ı müşerrezden ibârettir. Binâ-i mechûlle أُصْحِفَ إِصْحَافًا terkîbinden mehûzdur; yukâlu: أُصْحِفَ إِذَا جُعِلَتْ فِيهِ الصُّحُفُ",
+              "misaller": [
+                ["أُصْحِفَ إِذَا جُعِلَتْ فِيهِ الصُّحُفُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُصْحَفُ",
+          "okunus": "el-mushaf",
+          "koken": "mîmin harekât-ı selâsıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mushaf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُصْحَفُ",
+          "okunus": "el-mushaf",
+          "koken": "mîmin zammı ve hânın fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mushaf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kur'ân",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَصْحَف": [
+        {
+          "eser": "Vankulu",
+          "madde": "mashaf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمَصْحَفُ [el-mashaf] (mîmin ve hânın fethiyle) Bi-manâhu kezâlik. Ferrâ eyitti: Arab birkaç kelimede zammeyi sakîl görüp mîmi meksûr ettiler hâlâ ki aslı zammdır,o kelimelerin biri مِصْحَفٌ [mishaf] biri مِخْدَعٌ [mihda] ve biri مِطْرَفٌ [mitref] ve biri مِجْسَدٌ [micsed] ve biri مِغْزَلٌ [migzel]dir, zîrâ مِصْحَفٌ [mishaf] أَصْحَفْتُ den mehûzdur, جَمَعْتُ فِيهَا الصُّحُفَ manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "مِخْدَعٌ [mihda] أَخْدَعَ den mehûzdur, kezâlik imsâk ve cem manâsına ki مِخْدَعٌ [mihda] hizâne manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "مِطْرَفٌ [mitref] أُطْرِفَ فِي طَرَفَيْهِ عَلَمَانِ den mehûzdur.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "مِجْسَدٌ [micsed] أُجْسِدَ den mehûzdur, أُلْصِقَ بِالْجَسَدِ manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "مِغْزَلٌ [migzel] أُغْزِلَ den mehûzdur, أُدِيرَ ve فُتِلَ manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمِصْحَفُ",
+          "okunus": "el-mishaf",
+          "koken": "mîmin kesri ve hânın fethiyle"
+        }
+      ],
+      "صَحْفَة": [
+        {
+          "eser": "Kamus",
+          "madde": "es-sahfet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Marûftur ki çanağa denir, قَصْعَةٌ [kasat] manâsına. Malûm ola ki çanakların azamına جَفْنَةٌ [cefnet], badehu قَصْعَةٌ [kasat], badehu صَحْفَةٌ [sahfet], badehu مِئْكَلَةٌ [mikelet], badehu صَحِيفَةٌ [suhayfet] denir musaggar bünyesiyle.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحْفَةُ",
+          "okunus": "es-sahfet",
+          "koken": "sâdın fethi ve hâ-yı mühmelenin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "es-sahfet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Çanak, pes صَحْفَةٌ [sahfet] قَصْعَةٌ [kasat] gibi olur veznen ve manen. Kisâî eyitti: Kâselerin azamı جَفْنَةٌ [cefnet], ondan sonra قَصْعَةٌ [kasat]tır ki جَفْنَةٌ [cefnet]e karîbdir on kimseye vefâ eder, ondan sonra صَحْفَةٌ [sahfet]tir ki beş kimseye vefâ eder, ondan sonra مِئْكَلَةٌ [mikelet]tir ki iki yâ üç kimseye vefâ eder, ondan sonra صُحَيْفَةٌ [suhayfet]tir ki sîga-i tasgîr üzere hemîn bir kimseye vefâ eder.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحْفَةُ",
+          "okunus": "es-sahfet",
+          "koken": "sâdın fethi ve hânın sükûnuyla"
+        }
+      ],
+      "صَحِيفَة": [
+        {
+          "eser": "Luggat",
+          "madde": "sahife",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sayfa",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAYFA – SAHİFE",
+          "yazilis": "ﺻﺤﻴﻔﻪ",
+          "tur": "i.",
+          "koken": "Ar. ṣaḥіfe",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir defter veya kitap yaprağının iki yüzünden her biri",
+              "misaller": [
+                ["… elçilerin ahvâlini bildiren sahîfeyi hâkāna okur", "Kâtip Çelebi’den Seç."],
+                ["Târih nâmına sahîfeler doldurmuşlar", "Cenap Şahâbeddin"],
+                ["Tıpkı Şehnâme sayfalarında görülen eski kahramanların resimlerine benziyordu", "Ömer Seyfeddin"],
+                ["Önünde matbaa hurûfuyla basılmış bir sayfanın durduğunu unuturdu", "Ahmet Hâşim"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "(İsim tamlamasının ikinci öğesi olarak) Dergi, gazete vb. yayınlarda bir konuya ayrılmış bölüm",
+              "misaller": [
+                ["Sanat sayfası.", ""]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Olayların zaman içinde yer alan safhalarından her biri",
+              "misaller": [
+                ["Roma târihinin karanlık sayfaları.", ""],
+                ["Artık ben o sayfayı kapattım.", ""]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Gazete ve dergilerde basılan yazıları sayfa hâline getirmek. ● Sayfalarca – Sahifelerce zf. Birçok sayfa devâmınca",
+              "misaller": [],
+              "deyim": "Sayfa bağlamak"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "es-sahîfet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kitâb manâsınadır ki yazılacak ve yazılmış varakadan ibârettir. Cemi صَحَائِفُ [sahâif] gelir ve صُحُفٌ [suhuf] gelir, كُتُبٌ [kutub] vezninde.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu nâdirdir, zîrâ فَعِيلَةٌ [faîlet] فُعُلٌ [fuul] vezni üzere cemlenmez; yukâlu: مَعَهُ صَحِيفَةٌ أَيْ كِتَابٌ يَعْنِي قِطْعَةٌ مِنْ قِرْطَاسٍ يُكْتَبُ فِيهِ",
+              "misaller": [
+                ["مَعَهُ صَحِيفَةٌ أَيْ كِتَابٌ يَعْنِي قِطْعَةٌ مِنْ قِرْطَاسٍ يُكْتَبُ فِيهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحِيفَةُ",
+          "okunus": "es-sahîfet",
+          "koken": "سَفِينَةٌ [sefînet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "es-sahîfet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kitâb manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحِيفَةُ",
+          "okunus": "es-sahîfet",
+          "koken": "sâdın fethi ve hânın kesri ve meddiyle"
+        }
+      ],
+      "صَحَّاف": [
+        {
+          "eser": "Luggat",
+          "madde": "sahhaf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kitapçı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "SAHAF – SAHHAF",
+          "yazilis": "ﺻﺤّﺎﻒ",
+          "tur": "i.",
+          "koken": "Ar. ṣaḥіfe “kitap, sayfa”dan ṣaḥḥāf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yazma ve basma eserler alıp satan kitapçı",
+              "misaller": [
+                ["İstanbul bezzâzistânında oturur sahhâf idi", "Sehî Bey Tezkiresi"],
+                [
+                  "Boş bir sahhaf dükkânının içinde rutûbet ve toz kokulu kadim ciltler beni aksırtarak el yazması dîvanlar arardım",
+                  "Rûşen E. Ünaydın"
+                ],
+                ["hoşuna giderdi", "Ahmet H. Tanpınar"],
+                [
+                  "Bugün sahhaflar çarşısından yüzer paraya bir terkîbibent ile bir tercîibent alıp getirin de onu okutayım",
+                  ""
+                ],
+                ["demiştir", "Kaya Bilgegil"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "İhtilâflarını halletmek, devlet dâirelerinde işlerini tâkip etmek, kendilerini temsil etmek üzere sahaf esnafı tarafından seçilen sahaf loncasının başı",
+              "misaller": [
+                ["Muzaffer Hoca", ""]
+              ],
+              "deyim": "Sahaflar şeyhi"
+            }
+          ]
+        }
+      ],
+      "صَحَفِيّ": [
+        {
+          "eser": "Kamus",
+          "madde": "sahafiyy",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "صُحُفٌ [suhuf] kırââtinde hatâ eden yanî yanlış okur olan kimseye denir. Bunda zammeteynle صُحُفِيٌّ demek lahndır; yukâlu: هُوَ صَحَفِيٌّ أَيْ يُخْطِئُ فِي قِرَاءَةِ الصَّحِيفَةِ",
+              "misaller": [
+                ["هُوَ صَحَفِيٌّ أَيْ يُخْطِئُ فِي قِرَاءَةِ الصَّحِيفَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحَفِيُّ",
+          "okunus": "es-sahafiyy",
+          "koken": "عَرَبِيٌّ [arabiyy] vezninde"
+        }
+      ],
+      "مَصَاحِف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MASÂHİF – MESÂHİF",
+          "yazilis": "ﻣﺼﺎﺣﻒ",
+          "tur": "i.",
+          "koken": "Ar. muṣḥaf ’ın çoğul şekli meṣāḥif",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sayfalardan meydana gelen şeyler, kitaplar",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kur’ân-ı Kerim’ler, mushaflar",
+              "misaller": [
+                [" Tedkîk-i masâhif: Elle yazılan veya basılan Kur’ân-ı Kerim’leri gözden geçirme, kontrol etme.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "صَحَائِف": [
+        {
+          "eser": "Vankulu",
+          "madde": "sahaif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّحَائِفُ",
+          "okunus": "es-sahâif",
+          "koken": "sâdın fethi ve yânın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sahâif",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sayfalar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 9,
   "kuranda_var": true,

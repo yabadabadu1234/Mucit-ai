@@ -21,7 +21,7 @@
       [10, "حَضَاضَة", "ḥaḍāḍa", "teşvik etme", "orta", ""],
       [11, "حُضُوضَة", "ḥuḍūḍa", "teşvik etme", "orta", ""],
       [12, "حِضَاضَة", "ḥiḍāḍa", "teşvik etme", "orta", ""],
-      [13, "حَضِيض", "ḥaḍīḍ", "teşvik etme", "orta", "Vikisözlük: bottom (of the sea)"],
+      [13, "حَضِيض", "ḥaḍīḍ", "En aşağı en alçak yer", "lugat", "Vikisözlük: bottom (of the sea) · Kubbealtı"],
       [14, "حَضُوض", "ḥaḍūḍ", "teşvik etme", "orta", ""],
       [15, "حَضَّان", "ḥaḍḍān", "teşvik etme", "orta", ""],
       [16, "حُضَّان", "ḥuḍḍān", "teşvik etme", "orta", ""],
@@ -404,7 +404,7 @@
       [258, "حِضَّتَان", "ḥiḍḍatān", "teşvik etme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "حَضِيض", "ḥaḍīḍ", "her daim teşvik eden", "orta", "Vikisözlük: bottom (of the sea)"],
+      [259, "حَضِيض", "ḥaḍīḍ", "En aşağı en alçak yer", "lugat", "Vikisözlük: bottom (of the sea) · Kubbealtı"],
       [260, "حَضِيضَة", "ḥaḍīḍa", "her daim teşvik eden, müennes", "orta", ""],
       [261, "حَضِيضَان", "ḥaḍīḍān", "her daim teşvik eden, iki", "orta", ""],
       [262, "حَضِيضَتَان", "ḥaḍīḍatān", "her daim teşvik eden, iki, müennes", "orta", ""],
@@ -528,7 +528,7 @@
       [378, "مِحْضِيضُون", "miḥḍīḍūn", "teşvik etmeye düşkünler", "orta", ""],
       [379, "مِحْضِيضِين", "miḥḍīḍīn", "teşvik etmeye düşkünler", "orta", ""],
       [380, "مِحْضِيضَات", "miḥḍīḍāt", "teşvik etmeye düşkünler, müennes", "orta", ""],
-      [381, "حَضِيض", "ḥaḍīḍ", "çok teşvik eden", "orta", "Vikisözlük: bottom (of the sea)"],
+      [381, "حَضِيض", "ḥaḍīḍ", "En aşağı en alçak yer", "lugat", "Vikisözlük: bottom (of the sea) · Kubbealtı"],
       [382, "حَضِيضَة", "ḥaḍīḍa", "çok teşvik eden, müennes", "orta", ""],
       [383, "حَضِيضَان", "ḥaḍīḍān", "çok teşvik eden, iki", "orta", ""],
       [384, "حَضِيضَتَان", "ḥaḍīḍatān", "çok teşvik eden, iki, müennes", "orta", ""],
@@ -595,7 +595,7 @@
       [441, "حَضّ", "ḥaḍḍ", "teşvik etme türünden şey", "orta", "Vikisözlük: masdar (bâb I): to urge"],
       [443, "حِضّ", "ḥiḍḍ", "teşvik etme türünden şey", "orta", ""],
       [445, "حُضّ", "ḥuḍḍ", "teşvik etme türünden şey", "orta", ""],
-      [447, "حَضِيض", "ḥaḍīḍ", "teşvik etme türünden şey", "orta", "Vikisözlük: bottom (of the sea)"],
+      [447, "حَضِيض", "ḥaḍīḍ", "En aşağı en alçak yer", "lugat", "Vikisözlük: bottom (of the sea) · Kubbealtı"],
       [449, "حِضّ", "ḥiḍḍ", "teşvik etme türünden şey", "orta", ""],
       [451, "حُضّ", "ḥuḍḍ", "teşvik etme türünden şey", "orta", ""],
       [453, "حَضَاض", "ḥaḍāḍ", "teşvik etme türünden şey", "orta", ""]
@@ -1923,7 +1923,45 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حَضِيض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HAZİZ",
+          "yazilis": "ﺣﻀﻴﺾ",
+          "tur": "i.",
+          "koken": "Ar. ḥażіż",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "En aşağı en alçak yer",
+              "misaller": [
+                ["Yeksan nazar et mertebe-i evc ü hazîze / Ne izzet ile şâdan ne zilletle hazîn ol", "Nazîm"],
+                [
+                  "Hâk ile yeksân isek çok mu hazîz-i ye’ste / Nüh sipihr-i rif’atin tâ evc-i a’lâsındayız",
+                  "Yenişehirli Avnî’den"
+                ],
+                ["Uçmuş gitmiş hümâ-yı ikbâl / Düşmüş bu hazîz-i hâke şehbâl", "Abdülhak Hâmit"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "astro.",
+              "tanim": "Yer ve gezegenlerin güneşlerine en yakın oldukları nokta, günberi. Karşıtı",
+              "misaller": [
+                [
+                  "EVC: Güneşindir istivâ hattında evc olsun yeri / İnmesin hergiz hazîze hîç zevâle düşmesin",
+                  "Kadı Burhâneddin"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

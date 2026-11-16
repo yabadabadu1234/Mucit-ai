@@ -11,7 +11,7 @@
       [0, "صَدْي", "ṣady", "önüne geçme", "orta", ""],
       [1, "صِدْي", "ṣidy", "önüne geçme", "orta", ""],
       [2, "صُدْي", "ṣudy", "önüne geçme", "orta", ""],
-      [517, "صَدَى", "ṣadā", "önüne geçme", "orta", ""],
+      [517, "صَدَى", "ṣadā", "Bedeni latîf hoş-endâm adama denir", "lugat", "Kamus"],
       [518, "صِدَى", "ṣidā", "önüne geçme", "orta", ""],
       [519, "صُدِيّ", "ṣudiyy", "önüne geçme", "orta", ""],
       [520, "صُدِيّ", "ṣudiyy", "önüne geçme", "orta", ""],
@@ -33,14 +33,14 @@
       [531, "صِدَيَة", "ṣidaya", "önüne geçme", "orta", ""],
       [23, "صَدْيُويَة", "ṣadyūya", "önüne geçme", "orta", ""],
       [24, "تُصْدُوي", "tuṣdūy", "önüne geçme", "orta", ""],
-      [532, "تَصْدِيَة", "taṣdiya", "el çırpma", "kuran", "Kur'ân"],
+      [532, "تَصْدِيَة", "taṣdiya", "El kakmak", "lugat", "Kur'ân · Kamus"],
       [26, "تَصْدَيَة", "taṣdaya", "önüne geçme", "orta", ""],
       [27, "مَصْدُيَة", "maṣduya", "önüne geçme", "orta", ""],
       [533, "مَصْدِيَة", "maṣdiya", "önüne geçme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [534, "تَصْدِيَة", "taṣdiya", "el çırpma", "kuran", "Kur'ân"],
-      [535, "تَصْدِيَة", "taṣdiya", "el çırpma", "kuran", "Kur'ân"],
+      [534, "تَصْدِيَة", "taṣdiya", "El kakmak", "lugat", "Kur'ân · Kamus"],
+      [535, "تَصْدِيَة", "taṣdiya", "El kakmak", "lugat", "Kur'ân · Kamus"],
       [536, "صِدِّاء", "ṣiddāʾ", "önüne geçtirme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
@@ -360,7 +360,7 @@
       [750, "صَدُوُّون", "ṣaduwwūn", "her daim önüne geçenler", "orta", ""],
       [751, "صَدُوِّين", "ṣaduwwīn", "her daim önüne geçenler", "orta", ""],
       [752, "صَدُوَّات", "ṣaduwwāt", "her daim önüne geçenler, müennes", "orta", ""],
-      [753, "صَدَى", "ṣadā", "her daim önüne geçen", "orta", ""],
+      [753, "صَدَى", "ṣadā", "Bedeni latîf hoş-endâm adama denir", "lugat", "Kamus"],
       [754, "صَدَيَان", "ṣadayān", "her daim önüne geçen, iki", "orta", ""],
       [884, "صَدَوْن", "ṣadawn", "her daim önüne geçenler", "orta", ""],
       [885, "صَدَيْن", "ṣadayn", "her daim önüne geçenler", "orta", ""],
@@ -518,7 +518,7 @@
       [435, "صَوْدَي", "ṣawday", "önüne geçme türünden şey", "orta", ""],
       [437, "صَيْدَي", "ṣayday", "önüne geçme türünden şey", "orta", ""],
       [439, "صَدْي", "ṣady", "önüne geçme türünden şey", "orta", ""],
-      [840, "صَدَى", "ṣadā", "önüne geçme türünden şey", "orta", ""],
+      [840, "صَدَى", "ṣadā", "Bedeni latîf hoş-endâm adama denir", "lugat", "Kamus"],
       [443, "صِدْي", "ṣidy", "önüne geçme türünden şey", "orta", ""],
       [445, "صُدْي", "ṣudy", "önüne geçme türünden şey", "orta", ""],
       [841, "صَدِيّ", "ṣadiyy", "önüne geçme türünden şey", "orta", ""],
@@ -551,7 +551,7 @@
       [858, "صَدَاة", "ṣadā", "önüne geçmeler", "orta", ""],
       [859, "صُدَّاء", "ṣuddāʾ", "önüne geçmeler", "orta", ""],
       [860, "صَدَاء", "ṣadāʾ", "önüne geçmeler", "orta", ""],
-      [861, "صَدَى", "ṣadā", "önüne geçmeler", "orta", ""],
+      [861, "صَدَى", "ṣadā", "Bedeni latîf hoş-endâm adama denir", "lugat", "Kamus"],
       [862, "مَصَادِي", "maṣādī", "önüne geçmeler", "orta", ""],
       [863, "مَصَادِيّ", "maṣādiyy", "önüne geçmeler", "orta", ""],
       [864, "صَوَادِي", "ṣawādī", "önüne geçmeler", "orta", ""],
@@ -1197,6 +1197,148 @@
     "renk_sozluk": {
       "وتصدية": "el çırpma",
       "تصدي": "önüne geçti"
+    },
+    "mustak_lugat": {
+      "صَدَى": [
+        {
+          "eser": "Kamus",
+          "madde": "sada",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bedeni latîf hoş-endâm adama denir; yukâlu: رَجُلٌ صَدًى أَيِ اللَّطِيفُ الْجَسَدِ Ve meyyit olan cesed-i âdemîye denir.",
+              "misaller": [
+                ["رَجُلٌ صَدًى أَيِ اللَّطِيفُ الْجَسَدِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "başın içinde olan haşv ve eczâsına denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "beyniye denir, دِمَاغٌ [dimâg] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "bir kuş adıdır ki geceler ötüp ve oradan oraya sıçrayıp uçar.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "zum-ı Câhiliyye üzere bir kuşun dahi ismidir ki maktûlün kabrde azâsı çürüdükte başından hurûc ve zuhûr eder; bu kuş baykuş olacaktır, ke-mâ se-yuzkeru.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "صَدًى [sadâ] Bir nesneye tasaddî ve taarruz eden adamın filine denir ki ism olur, taarruz manâsına; tekûlu: مَنَعْتُ صَدَاهُ أَيْ تَعَرُّضَهُ Ve devâbb ve mevâşî kısmının mesâlihine ve tîmâr ve riâyeti husûsuna ârif ve âgâh olan adama denir; yukâlu: هُوَ صَدًى أَيْ عَالِمٌ بِمَصْلَحَةِ الْمَالِ Ve susuzluğa denir.",
+              "misaller": [
+                ["هُوَ صَدًى أَيْ عَالِمٌ بِمَصْلَحَةِ الْمَالِ", ""]
+              ]
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "susamak manâsınadır; yukâlu: صَدِيَ الرَّجُلُ صَدًى مِنَ الْبَابِ الرَّابِعِ إِذَا عَطِشَ Ve صَدَا [sadâ] Çağrıldıkta dağ ve künbed makûlesinden münakis olan âvâza denir ki yankı tabîr olunur; tekûlu: سَمِعْتُ صَدًى وَهُوَ مَا يَرُدُّهُ الْجَبَلُ عَلَى الْمُصَوِّتِ Ve minhu yukâlu: أَصَمَّ اللهُ صَدَاهُ أَيْ أَهْلَكَهُ Zîrâ âvâzı munkatı olmakla صَدَا [sadâ] dahi münakis olmaz.",
+              "misaller": [
+                ["صَدِيَ الرَّجُلُ صَدًى مِنَ الْبَابِ الرَّابِعِ إِذَا عَطِشَ", ""],
+                ["أَصَمَّ اللهُ صَدَاهُ أَيْ أَهْلَكَهُ", ""]
+              ]
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "صَدَا [sadâ] Erkek baykuşa denir; yukâlu: طَارَ صَدًى أَيْ ذَكَرُ الْبُومِ Ve bir cins uzun ve siyâh balık adıdır.",
+              "misaller": [
+                ["طَارَ صَدًى أَيْ ذَكَرُ الْبُومِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّدَى",
+          "okunus": "es-sadâ",
+          "koken": "عَصَا [asâ] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sada",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Baykuş demekle marûf olan kuşun erkeği. Adebbes eyitti: صَدَى [sadâ] şol kuştur ki gece vaktinde ötüp bir yerden bir yere kalkıp uçar.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "halk onu جُنْدَبٌ [cundeb] demekle marûf olan kuş zum ederler, öyle değildir, zîrâ جُنْدَبٌ [cundeb] صَدَى [sadâ]dan asgardır dedi.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "صَدَى [sadâ] Şol nesnedir ki âvâz münakis olmakla dağlarda ve dağlara şebîh olan yerlerde senin savtına şebîh savtla cevâb verir; yukâlu: صَمَّ صَدَاهُ وَأَصَمَّ اللهُ صَدَاهُ أَيْ أَهْلَكَهُ لِأَنَّ الرَّجُلَ إِذَا مَاتَ لَمْ يُسْمَعِ الصَّدَى مِنْهُ شَيْئًا فَيُجِيبُهُ Ve صَدَى [sadâ] Şol kimseye dahi derler ki deve ahvâlin bilip onun mesâlihin tedârük kıla; yukâlu: إِنَّهُ لَصَدَى إِبِلِهِ Ve صَدَى [sadâ] Susuzluğa dahi derler, عَطَشٌ [ataş] manâsına; yukâlu: صَدِيَ صَدًى مِنَ الْبَابِ الرَّابِعِ",
+              "misaller": [
+                [
+                  "صَمَّ صَدَاهُ وَأَصَمَّ اللهُ صَدَاهُ أَيْ أَهْلَكَهُ لِأَنَّ الرَّجُلَ إِذَا مَاتَ لَمْ يُسْمَعِ الصَّدَى مِنْهُ شَيْئًا فَيُجِيبُهُ",
+                  ""
+                ],
+                ["إِنَّهُ لَصَدَى إِبِلِهِ", ""],
+                ["صَدِيَ صَدًى مِنَ الْبَابِ الرَّابِعِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّدَى",
+          "okunus": "es-sadâ",
+          "koken": "sâdın fethi ve elifin kasrıyla"
+        }
+      ],
+      "تَصْدِيَة": [
+        {
+          "eser": "Kamus",
+          "madde": "et-tasdiyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "El kakmak, تَصْفِيقٌ [tasfîk] manâsınadır yâhûd صَدٌّ kelimesinden ki irâz manâsınadır ki تَفْعِلَةٌ [tefilet]tir ki dâl-ı sâniye yâya maklûb olur; yukâlu: صَدَّى بِيَدَيْهِ تَصْدِيَةً إِذَا صَفَّقَ أَوْ هُوَ تَفْعِلَةٌ مِنَ الصَّدِّ Müellif bununla ﴿وَمَا كَانَ صَلَاتُهُمْ عِنْدَ الْبَيْتِ إِلَّا مُكَاءً وَتَصْدِيَةً﴾ اَلْآيَة kerîmesini telmîh eylemiştir. Burada تَصْدِيَةٌ [tasdiyet] el kakmak manâsınadır yâhûd صَدٌّ mâddesinden تَفْعِلَةٌ [tefilet]tir, zîrâ onlar İslâmdan sadd ve irâz ederler.",
+              "misaller": [
+                ["صَدَّى بِيَدَيْهِ تَصْدِيَةً إِذَا صَفَّقَ أَوْ هُوَ تَفْعِلَةٌ مِنَ الصَّدِّ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّصْدِيَةُ",
+          "okunus": "et-tasdiyet",
+          "koken": "تَفْعِلَةٌ [tefilet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "et-tasdiyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimse iki elin birbirine vurmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّصْدِيَةُ",
+          "okunus": "et-tasdiyet",
+          "koken": "alâ-vezni اَلتَّرْبِيَة [et-terbiyet]"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 2,

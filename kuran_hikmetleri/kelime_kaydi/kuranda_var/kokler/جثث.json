@@ -205,7 +205,7 @@
       [134, "مُنْجَثّ", "muncaṯṯ", "ceset olunma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِجْتِثَاث", "ictiṯāṯ", "kendisi için ceset olma", "kontrol", ""]
+      [135, "اِجْتِثَاث", "ictiṯāṯ", "Koparmak", "lugat", "Vankulu"]
     ],
     "ism-i merre · bâb VIII": [
       [137, "اِجْتِثَاثَة", "ictiṯāṯa", "bir kere kendisi için ceset olma", "kontrol", ""]
@@ -433,7 +433,7 @@
       [299, "جَثِّين", "caṯṯīn", "her daim ceset olanlar", "kontrol", ""],
       [300, "جَثَّات", "caṯṯāt", "her daim ceset olanlar, müennes", "kontrol", ""],
       [301, "جُثّ", "cuṯṯ", "her daim ceset olan", "kontrol", ""],
-      [302, "جُثَّة", "cuṯṯa", "her daim ceset olan, müennes", "kontrol", "Vikisözlük: corpse, cadaver"],
+      [302, "جُثَّة", "cuṯṯa", "Gövde, yapı", "lugat", "Vikisözlük: corpse, cadaver · Luggat"],
       [303, "جُثَّان", "cuṯṯān", "her daim ceset olan, iki", "kontrol", ""],
       [304, "جُثَّتَان", "cuṯṯatān", "her daim ceset olan, iki, müennes", "kontrol", ""],
       [305, "جُثُّون", "cuṯṯūn", "her daim ceset olanlar", "kontrol", ""],
@@ -573,7 +573,7 @@
     "ism-i cins · ifrâdî (aday)": [
       [430, "جَاثُوث", "cāṯūṯ", "ceset olma türünden şey", "kontrol", ""],
       [432, "جَثَّة", "caṯṯa", "ceset olma türünden şey", "kontrol", ""],
-      [433, "جُثَّة", "cuṯṯa", "ceset olma türünden şey", "kontrol", "Vikisözlük: corpse, cadaver"],
+      [433, "جُثَّة", "cuṯṯa", "Gövde, yapı", "lugat", "Vikisözlük: corpse, cadaver · Luggat"],
       [434, "أُجْثُوثَة", "ʾucṯūṯa", "ceset olma türünden şey", "kontrol", ""],
       [435, "جَوَثّ", "cawaṯṯ", "ceset olma türünden şey", "kontrol", ""],
       [437, "جَيَثّ", "cayaṯṯ", "ceset olma türünden şey", "kontrol", ""],
@@ -593,10 +593,10 @@
       [440, "جَثَّة", "caṯṯa", "ceset olma türünden bir tane", "kontrol", ""],
       [442, "جَثَّة", "caṯṯa", "ceset olma türünden bir tane", "kontrol", ""],
       [444, "جِثَّة", "ciṯṯa", "ceset olma türünden bir tane", "kontrol", ""],
-      [446, "جُثَّة", "cuṯṯa", "ceset olma türünden bir tane", "kontrol", "Vikisözlük: corpse, cadaver"],
+      [446, "جُثَّة", "cuṯṯa", "Gövde, yapı", "lugat", "Vikisözlük: corpse, cadaver · Luggat"],
       [448, "جَثِيثَة", "caṯīṯa", "ceset olma türünden bir tane", "kontrol", ""],
       [450, "جِثَّة", "ciṯṯa", "ceset olma türünden bir tane", "kontrol", ""],
-      [452, "جُثَّة", "cuṯṯa", "ceset olma türünden bir tane", "kontrol", "Vikisözlük: corpse, cadaver"],
+      [452, "جُثَّة", "cuṯṯa", "Gövde, yapı", "lugat", "Vikisözlük: corpse, cadaver · Luggat"],
       [454, "جَثَاثَة", "caṯāṯa", "ceset olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
@@ -1165,7 +1165,66 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "اِجْتِثَاث": [
+        {
+          "eser": "Vankulu",
+          "madde": "ictisas",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Koparmak, إِقْتِلَاعٌ [iktilâ] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِجْتِثَاثُ",
+          "okunus": "el-ictisamp;âsamp;",
+          "koken": "hemzenin kesriyle ve cîmin sükûnuyla"
+        }
+      ],
+      "جُثَّة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CÜSSE",
+          "yazilis": "ﺟﺜّﻪ",
+          "tur": "i.",
+          "koken": "Ar. cuѕѕe",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "(Canlılarda) Gövde, vücut, beden, kalıp",
+              "misaller": [
+                ["Bu iri cüssenin içinde bir çocuk rûhu saklanmıştı", "Hâlit Z. Uşaklıgil"],
+                [
+                  "[Teşmil yoluyle eşyâ ve bilhassa binâlar için de kullanılır]: Türk’ü, Ciğerdelen’den Tuna’nın karşı yakasına sürüp Beç’e doğru bir atlama taşı işini gören bu cüssesi küçük, mânâsı büyük palankayı ortadan kaldırmak istemişti",
+                  "Safiye Erol"
+                ],
+                ["● Cüsse-dar", "ﺟﺜّﻪ ﺩﺍﺭ"],
+                ["birl. sıf", "Fars. dār “sâhip ve mâlik olan” ile"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cüsse",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gövde, yapı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

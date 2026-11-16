@@ -11,7 +11,7 @@
       [0, "بَطْر", "baṭr", "nimete şükretmeme", "orta", ""],
       [1, "بِطْر", "biṭr", "nimete şükretmeme", "orta", ""],
       [2, "بُطْر", "buṭr", "nimete şükretmeme", "orta", ""],
-      [3, "بَطَر", "baṭar", "şımarıklık", "kuran", "Kur'ân"],
+      [3, "بَطَر", "baṭar", "İfrât üzere şâdumân olmak", "lugat", "Kur'ân · Kamus"],
       [4, "بِطَر", "biṭar", "nimete şükretmeme", "orta", ""],
       [5, "بُطُر", "buṭur", "nimete şükretmeme", "orta", ""],
       [6, "بُطُور", "buṭūr", "nimete şükretmeme", "orta", ""],
@@ -383,7 +383,7 @@
       [284, "بَطُرُون", "baṭurūn", "her daim nimete şükretmeyenler", "orta", ""],
       [285, "بَطُرِين", "baṭurīn", "her daim nimete şükretmeyenler", "orta", ""],
       [286, "بَطُرَات", "baṭurāt", "her daim nimete şükretmeyenler, müennes", "orta", ""],
-      [287, "بَطَر", "baṭar", "şımarıklık", "kuran", "Kur'ân"],
+      [287, "بَطَر", "baṭar", "İfrât üzere şâdumân olmak", "lugat", "Kur'ân · Kamus"],
       [288, "بَطَرَة", "baṭara", "her daim nimete şükretmeyen, müennes", "orta", ""],
       [289, "بَطَرَان", "baṭarān", "her daim nimete şükretmeyen, iki", "orta", ""],
       [290, "بَطَرَتَان", "baṭaratān", "her daim nimete şükretmeyen, iki, müennes", "orta", ""],
@@ -543,7 +543,7 @@
       [435, "بَوْطَر", "bawṭar", "nimete şükretmeme türünden şey", "orta", ""],
       [437, "بَيْطَر", "bayṭar", "nimete şükretmeme türünden şey", "orta", ""],
       [439, "بَطْر", "baṭr", "nimete şükretmeme türünden şey", "orta", ""],
-      [441, "بَطَر", "baṭar", "şımarıklık", "kuran", "Kur'ân"],
+      [441, "بَطَر", "baṭar", "İfrât üzere şâdumân olmak", "lugat", "Kur'ân · Kamus"],
       [443, "بِطْر", "biṭr", "nimete şükretmeme türünden şey", "orta", ""],
       [445, "بُطْر", "buṭr", "nimete şükretmeme türünden şey", "orta", ""],
       [447, "بَطِير", "baṭīr", "nimete şükretmeme türünden şey", "orta", ""],
@@ -554,7 +554,7 @@
     "ism-i cins · cem‘î ve tekili (+tâ)": [
       [431, "بَاطُورَة", "bāṭūra", "nimete şükretmeme türünden bir tane", "orta", ""],
       [436, "بَوْطَرَة", "bawṭara", "nimete şükretmeme türünden bir tane", "orta", ""],
-      [438, "بَيْطَرَة", "bayṭara", "nimete şükretmeme türünden bir tane", "orta", ""],
+      [438, "بَيْطَرَة", "bayṭara", "Baytarlık ilmi, baytarlık", "lugat", "Kubbealtı"],
       [440, "بَطْرَة", "baṭra", "nimete şükretmeme türünden bir tane", "orta", ""],
       [442, "بَطَرَة", "baṭara", "nimete şükretmeme türünden bir tane", "orta", ""],
       [444, "بِطْرَة", "biṭra", "nimete şükretmeme türünden bir tane", "orta", ""],
@@ -579,7 +579,7 @@
       [466, "بَطَرَة", "baṭara", "nimete şükretmemeler", "orta", ""],
       [467, "بُطَّار", "buṭṭār", "nimete şükretmemeler", "orta", ""],
       [468, "بَطَار", "baṭār", "nimete şükretmemeler", "orta", ""],
-      [469, "بَطَر", "baṭar", "şımarıklık", "kuran", "Kur'ân"],
+      [469, "بَطَر", "baṭar", "İfrât üzere şâdumân olmak", "lugat", "Kur'ân · Kamus"],
       [470, "مَبَاطِر", "mabāṭir", "nimete şükretmemeler", "orta", ""],
       [471, "مَبَاطِير", "mabāṭīr", "nimete şükretmemeler", "orta", ""],
       [472, "بَوَاطِر", "bawāṭir", "nimete şükretmemeler", "orta", ""],
@@ -875,7 +875,57 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَطَر": [
+        {
+          "eser": "Kamus",
+          "madde": "batar",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İfrât üzere şâdumân olmak manâsınadır; yukâlu: بَطِرَ الرَّجُلُ بَطَرًا مِنَ الْبَابِ الرَّابِعِ إِذَا نَشِطَ وَأَشِرَ Ve bir adamın nimet ve mâlı pek firâvân olmakla tahammülüne bî-hazm ve bî-havsala olduğundan nâşî mest gibi medhûş ve hayrân olmak manâsınadır ki nev-devletân ve mest-i mey-i ikbâl ü sâmân olanların şîvesidir; yukâlu: بَطِرَ الرَّجُلُ إِذَا حَارَ وَدُهِشَ مِنْ قِلَّةِ احْتِمَالِ النِّعْمَةِ Ve mâl ve nimet ve ikbâlin vefret ve temâdîsi sebebiyle küfrân-ı nimetle tugyân eylemek manâsınadır. Bundan lisânımızda buturluk ile tabîr olunur ki Arabiyyeden mehûzdur; yukâlu: بَطِرَ الرَّجُلُ إِذَا طَغَى بِالنِّعْمَةِ Râgıb Müfredâtta دَهِشٌ يَعْتَرِي الْإِنْسَانَ مَعَ سُوءِ احْتِمَالِ النِّعْمَةِ وَقِلَّةِ الْقِيَامِ بِحَقِّهَا وَصَرْفِهَا إِلَى غَيْرِ وَجْهِهَا ibâretiyle tefsîr eylemiştir.",
+              "misaller": [
+                ["بَطِرَ الرَّجُلُ بَطَرًا مِنَ الْبَابِ الرَّابِعِ إِذَا نَشِطَ وَأَشِرَ", ""],
+                ["بَطِرَ الرَّجُلُ إِذَا حَارَ وَدُهِشَ مِنْ قِلَّةِ احْتِمَالِ النِّعْمَةِ", ""],
+                ["بَطِرَ الرَّجُلُ إِذَا طَغَى بِالنِّعْمَةِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "بَطَرٌ [batar] Bir nesne kerâhet ve istikbâha lâyık değil iken onu kerîh ve kabîh görmek manâsınadır; yukâlu: بَطِرَ الشَّيْءَ إِذَا كَرِهَهُ مِنْ غَيْرِ أَنْ يَسْتَحِقَّ الْكَرَاهَةَ Ve بَطَرُالْحَقِّ [batarul-hakk] Hak olan nesneden tekebbür ve tecebbür sebebiyle ibâ ve irâz eylemekten ibârettir. Müellif bununla işbu “اَلْكِبْرُ بَطَرُ الْحَقِّ” hadîsine telmîh eylemiştir. Kâle fin-Nihâye ve minhul-hadîsu: “اَلْكِبْرُ بَطَرُ الْحَقِّ” هُوَ أَنْ يَجْعَلَ مَا جَعَلَهُ اللهُ حَقًّا مِنْ تَوْحِيدِهِ وَعِبَادَتِهِ بَاطِلاً وَقِيلَ هُوَ أَنْ يَتَجَبَّرَ عِنْدَ الْحَقِّ فَلاَ يَرَاهُ حَقًّا وَقِيلَ هُوَ أَنْ يَتَكَبَّرَ عَنِ الْحَقِّ فَلاَ يَقْبِلَهُ Pes müellif kavl-i sâlise zâhib olmuştur.",
+              "misaller": [
+                ["بَطِرَ الشَّيْءَ إِذَا كَرِهَهُ مِنْ غَيْرِ أَنْ يَسْتَحِقَّ الْكَرَاهَةَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْبَطَرُ",
+          "okunus": "el-batar",
+          "koken": "bânın ve mîmin fethiyle"
+        }
+      ],
+      "بَيْطَرَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BAYTARA",
+          "yazilis": "ﺑﻴﻄﺮﻩ",
+          "tur": "i.",
+          "koken": "Ar. bayṭara",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Baytarlık ilmi, baytarlık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

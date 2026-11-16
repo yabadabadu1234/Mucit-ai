@@ -14,7 +14,14 @@
       [3, "هَبَط", "habaṭ", "inme", "orta", ""],
       [4, "هِبَط", "hibaṭ", "inme", "orta", ""],
       [5, "هُبُط", "hubuṭ", "inme", "orta", ""],
-      [6, "هُبُوط", "hubūṭ", "inme", "orta", "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I)"],
+      [
+        6,
+        "هُبُوط",
+        "hubūṭ",
+        "Yukarıdan aşağıya inme",
+        "lugat",
+        "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I) · Kubbealtı"
+      ],
       [7, "هِبَاط", "hibāṭ", "inme", "orta", ""],
       [8, "هُبَاط", "hubāṭ", "inme", "orta", ""],
       [9, "هَبَاط", "habāṭ", "inme", "orta", ""],
@@ -320,9 +327,9 @@
         229,
         "مَهْبِط",
         "mahbiṭ",
-        "inme yeri, vakti",
-        "orta",
-        "Vikisözlük: aerodrome, landing pad, landing ground, landing strip"
+        "İnecek yer, iniş yeri",
+        "lugat",
+        "Vikisözlük: aerodrome, landing pad, landing ground, landing strip · Kubbealtı"
       ],
       [230, "مَهْبِطَان", "mahbiṭān", "inme yeri, vakti, iki", "orta", ""],
       [231, "مَهْبَطَة", "mahbaṭa", "inmenin bol olduğu yer", "orta", ""],
@@ -540,7 +547,14 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "هَبَاط", "habāṭ", "inme", "orta", ""],
-      [422, "هُبُوط", "hubūṭ", "inme", "orta", "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I)"],
+      [
+        422,
+        "هُبُوط",
+        "hubūṭ",
+        "Yukarıdan aşağıya inme",
+        "lugat",
+        "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I) · Kubbealtı"
+      ],
       [423, "هِبَاط", "hibāṭ", "inme", "orta", ""],
       [424, "هُبْط", "hubṭ", "inme", "orta", ""],
       [425, "هَبَاطَة", "habāṭa", "inme", "orta", ""],
@@ -583,7 +597,14 @@
       [456, "أَهْبِطَة", "ʾahbiṭa", "inmeler", "orta", ""],
       [457, "أَهَابِط", "ʾahābiṭ", "inmeler", "orta", ""],
       [458, "أَهَابِيط", "ʾahābīṭ", "inmeler", "orta", ""],
-      [459, "هُبُوط", "hubūṭ", "inmeler", "orta", "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I)"],
+      [
+        459,
+        "هُبُوط",
+        "hubūṭ",
+        "Yukarıdan aşağıya inme",
+        "lugat",
+        "Vikisözlük: verbal noun of هَبَطَ (habaṭa) (form I) · Kubbealtı"
+      ],
       [460, "هُبُط", "hubuṭ", "inmeler", "orta", ""],
       [461, "هِبَاط", "hibāṭ", "inmeler", "orta", ""],
       [462, "هِبَط", "hibaṭ", "inmeler", "orta", ""],
@@ -2557,7 +2578,66 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هُبُوط": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HÜBUT",
+          "yazilis": "ﻫﺒﻮﻁ",
+          "tur": "i.",
+          "koken": "Ar. hubūṭ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yukarıdan aşağıya inme",
+              "misaller": [
+                ["Bâis nedir hübûta bu hâk-i gam-medâra", "Recâîzâde M. Ekrem"],
+                ["Zavallı eyledi bir gün zemîn-i ye’se hübût", "Cenap Şahâbeddin"],
+                ["İşte çok sürmedi sükût ettin / Sönmüş ahter gibi hübût ettin", "Ali E. Bolayır"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Hz. Âdem’in cennetten yeryüzüne inmesi",
+              "misaller": [],
+              "deyim": "Hübût-ı Âdem"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kuvvetten düşme",
+              "misaller": [],
+              "deyim": "Hübût-ı kuvâ"
+            }
+          ]
+        }
+      ],
+      "مَهْبِط": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEHBIT – MEHBİT",
+          "yazilis": "ﻣﻬﺒﻂ",
+          "tur": "i.",
+          "koken": "Ar. hubūṭ “aşağı inmek”ten mehbiṭ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İnecek yer, iniş yeri",
+              "misaller": [
+                ["Nefha-i Îsâ gelir şîrin lebinden canlara / Sâbit oldu kim lebindir mehbıt-ı rûhü’l-emin", "Nesîmî’den"],
+                ["Mehbıt-ı ednâsıdır evc-i fezâ-yı lâ-mekân / Her ne dem ki bâl aça murg-ı dil-i çâlâkimiz", "Zâtî"],
+                ["Bârgâh-ı tab’ımızdan cünd-i ma’nî feyz alır / Mehbıt-ı ilhâmdır Gālib meğer dîvânımız", "Leskofçalı Gālib"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 8,
   "kuranda_var": true,

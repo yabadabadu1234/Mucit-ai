@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "رَجْز", "racz", "pislik", "orta", ""],
-      [1, "رِجْز", "ricz", "azap, pislik", "kuran", "Kur'ân"],
+      [1, "رِجْز", "ricz", "Necis ve murdâra denir", "lugat", "Kur'ân · Kamus"],
       [2, "رُجْز", "rucz", "pislik", "orta", ""],
       [3, "رَجَز", "racaz", "pislik", "orta", ""],
       [4, "رِجَز", "ricaz", "pislik", "orta", ""],
@@ -533,7 +533,7 @@
       [426, "رِجَازَة", "ricāza", "pis olma", "orta", ""],
       [427, "رُجُوزَة", "rucūza", "pis olma", "orta", ""],
       [428, "رَجْز", "racz", "pis olma", "orta", ""],
-      [429, "رِجْز", "ricz", "azap, pislik", "kuran", "Kur'ân"]
+      [429, "رِجْز", "ricz", "Necis ve murdâra denir", "lugat", "Kur'ân · Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "رَاجُوز", "rācūz", "pis olma türünden şey", "orta", ""],
@@ -544,7 +544,7 @@
       [437, "رَيْجَز", "raycaz", "pis olma türünden şey", "orta", ""],
       [439, "رَجْز", "racz", "pis olma türünden şey", "orta", ""],
       [441, "رَجَز", "racaz", "pis olma türünden şey", "orta", ""],
-      [443, "رِجْز", "ricz", "azap, pislik", "kuran", "Kur'ân"],
+      [443, "رِجْز", "ricz", "Necis ve murdâra denir", "lugat", "Kur'ân · Kamus"],
       [445, "رُجْز", "rucz", "pis olma türünden şey", "orta", ""],
       [447, "رَجِيز", "racīz", "pis olma türünden şey", "orta", ""],
       [449, "رِجَز", "ricaz", "pis olma türünden şey", "orta", ""],
@@ -752,6 +752,71 @@
       "رجزا": "azap, pislik",
       "الرجز": "azap, pislik",
       "رجز": "azap, pislik"
+    },
+    "mustak_lugat": {
+      "رِجْز": [
+        {
+          "eser": "Kamus",
+          "madde": "ricz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Necis ve murdâra denir, قَذَرٌ [kazar] manâsına; yukâlu: تَلَطَّخَ بِالرِّجْزِ أَيِ الْقَذَرِ Ve puta tapmaya denir; عِبَادَةُ أَوْثَانٍ manâsına.",
+              "misaller": [
+                ["تَلَطَّخَ بِالرِّجْزِ أَيِ الْقَذَرِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "işkence ve azâb manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "şirk manasınadır ki hâşâ vâhid-i bî-çûn celle şânuhu tarafına şerîk isnâd eylemektir; yukâlu: اِتَّقُوا مِنَ الرِّجْزِ أَيْ عِبَادَةِ الْأَوْثَانِ وَالشِّرْكِ ve yukâlu: كَشَفَ اللهُ عَنْكَ الرِّجْزَ أَيِ الْعَذَابَ",
+              "misaller": [
+                ["اِتَّقُوا مِنَ الرِّجْزِ أَيْ عِبَادَةِ الْأَوْثَانِ وَالشِّرْكِ", ""],
+                ["كَشَفَ اللهُ عَنْكَ الرِّجْزَ أَيِ الْعَذَابَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّجْزُ",
+          "okunus": "er-ricz",
+          "koken": "rânın kesri ve zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ricz",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Necâset, رِجْسٌ [rics] gibi veznen ve manen.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "zamm-ı râyla dahi lügattır; ve kurie kavluhu taâlâ: ﴿وَالرُّجْزَ فَاهْجُرْ﴾ (المدثر 5) بِالضَّمِّ وَالْكَسْرِ Ve Mucâhid eyitti, رُجْزٌ [rucz] sanem manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ammâ Bârî taâlânın ﴿رِجْزًا مِنَ السَّمَاءِ﴾ (البقرة 59) dediği kavlinde murâd azâbdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّجْزُ",
+          "okunus": "er-ricz",
+          "koken": "rânın kesri ve cîmin sükûnuyla"
+        }
+      ]
     }
   },
   "kuran_gecisleri": 10,

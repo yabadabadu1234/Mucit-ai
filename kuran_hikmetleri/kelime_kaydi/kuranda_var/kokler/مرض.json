@@ -11,7 +11,7 @@
       [0, "مَرْض", "marḍ", "hastalık", "kontrol", ""],
       [1, "مِرْض", "mirḍ", "hastalık", "kontrol", ""],
       [2, "مُرْض", "murḍ", "hastalık", "kontrol", ""],
-      [3, "مَرَض", "maraḍ", "hastalık", "kuran", "Kur'ân"],
+      [3, "مَرَض", "maraḍ", "Hastalık, bela", "lugat", "Kur'ân · Luggat"],
       [4, "مِرَض", "miraḍ", "hastalık", "kontrol", ""],
       [5, "مُرُض", "muruḍ", "hastalık", "kontrol", ""],
       [6, "مُرُوض", "murūḍ", "hastalık", "kontrol", ""],
@@ -397,7 +397,7 @@
       [284, "مَرُضُون", "maruḍūn", "her daim hasta olanlar", "kontrol", ""],
       [285, "مَرُضِين", "maruḍīn", "her daim hasta olanlar", "kontrol", ""],
       [286, "مَرُضَات", "maruḍāt", "her daim hasta olanlar, müennes", "kontrol", ""],
-      [287, "مَرَض", "maraḍ", "hastalık", "kuran", "Kur'ân"],
+      [287, "مَرَض", "maraḍ", "Hastalık, bela", "lugat", "Kur'ân · Luggat"],
       [288, "مَرَضَة", "maraḍa", "her daim hasta olan, müennes", "kontrol", ""],
       [289, "مَرَضَان", "maraḍān", "her daim hasta olan, iki", "kontrol", ""],
       [290, "مَرَضَتَان", "maraḍatān", "her daim hasta olan, iki, müennes", "kontrol", ""],
@@ -557,7 +557,7 @@
       [435, "مَوْرَض", "mawraḍ", "hasta olma türünden şey", "kontrol", ""],
       [437, "مَيْرَض", "mayraḍ", "hasta olma türünden şey", "kontrol", ""],
       [439, "مَرْض", "marḍ", "hasta olma türünden şey", "kontrol", ""],
-      [441, "مَرَض", "maraḍ", "hastalık", "kuran", "Kur'ân"],
+      [441, "مَرَض", "maraḍ", "Hastalık, bela", "lugat", "Kur'ân · Luggat"],
       [443, "مِرْض", "mirḍ", "hasta olma türünden şey", "kontrol", ""],
       [445, "مُرْض", "murḍ", "hasta olma türünden şey", "kontrol", ""],
       [447, "مَرِيض", "marīḍ", "hasta", "kuran", "Kur'ân"],
@@ -579,7 +579,7 @@
       [454, "مَرَاضَة", "marāḍa", "hasta olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَمْرَاض", "ʾamrāḍ", "hasta olmalar", "kontrol", ""],
+      [455, "أَمْرَاض", "ʾamrāḍ", "Hastalıklar", "lugat", "Luggat"],
       [456, "أَمْرِضَة", "ʾamriḍa", "hasta olmalar", "kontrol", ""],
       [457, "أَمَارِض", "ʾamāriḍ", "hasta olmalar", "kontrol", ""],
       [458, "أَمَارِيض", "ʾamārīḍ", "hasta olmalar", "kontrol", ""],
@@ -593,7 +593,7 @@
       [466, "مَرَضَة", "maraḍa", "hasta olmalar", "kontrol", ""],
       [467, "مُرَّاض", "murrāḍ", "hasta olmalar", "kontrol", ""],
       [468, "مَرَاض", "marāḍ", "hasta olmalar", "kontrol", ""],
-      [469, "مَرَض", "maraḍ", "hastalık", "kuran", "Kur'ân"],
+      [469, "مَرَض", "maraḍ", "Hastalık, bela", "lugat", "Kur'ân · Luggat"],
       [470, "مَمَارِض", "mamāriḍ", "hasta olmalar", "kontrol", ""],
       [471, "مَمَارِيض", "mamārīḍ", "hasta olmalar", "kontrol", ""],
       [472, "مَوَارِض", "mawāriḍ", "hasta olmalar", "kontrol", ""],
@@ -2030,7 +2030,196 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَرَض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MARAZ",
+          "yazilis": "ﻣﺮﺽ",
+          "tur": "i.",
+          "koken": "Ar. maraż",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hastalık, illet",
+              "misaller": [
+                [
+                  "Harâb cismi azâb-ı marazla bî-derman / Garîb gönlü yanık âteş-i zarûretle / Fakat bulur yine rûhuyle iştigāle zaman",
+                  "Tevfik Fikret"
+                ],
+                ["Sinir yorgunlukları bu marazı arttırır", "Reşat N. Güntekin"],
+                ["Her nefeste ciğerlerimize illet doluyor, kanımıza maraz karışıyor", "Refik H. Karay"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "(Eski ahlâk kitaplarında) Kibir, gurur, benlik, bencillik gibi mânevî bünyeyi rahatsız eden kusurlardan her biri",
+              "misaller": [],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "halk ağzı. Sara nöbeti",
+              "misaller": [],
+              "no": 3
+            },
+            {
+              "etiket": "sıf.",
+              "tanim": "halk ağzı. Çevresindekileri rahatsız edecek derecede huysuz ve titiz olan (kimse)",
+              "misaller": [
+                ["Çok maraz adamdır.", ""]
+              ],
+              "no": 4
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Sinir hastalığı, nevroz",
+              "misaller": [],
+              "deyim": "Maraz-ı asabî"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Kalp hastalığı. 2. mec. Acı, hüzün, ıztırap",
+              "misaller": [],
+              "deyim": "Maraz-ı kalp"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ölüm hastalığı, ölümle sonuçlanan rahatsızlık",
+              "misaller": [
+                [
+                  "borcu olduğunu ikrar ettiği takdirde eğer maraz-ı mevtinde ise diğer verese tasdik etmedikçe bu ikrârı hüccet değildir",
+                  "Cevdet Paşa"
+                ]
+              ],
+              "deyim": "Maraz-ı mevt"
+            },
+            {
+              "etiket": "",
+              "tanim": "Salgın hastalık",
+              "misaller": [],
+              "deyim": "Maraz-ı müstevlî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir türlü geçmeyen rahatsızlık, kronik hastalık",
+              "misaller": [],
+              "deyim": "Maraz-ı müzmin"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ruh hastalığı",
+              "misaller": [],
+              "deyim": "Maraz-ı rûhî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Bulaşıcı hastalık",
+              "misaller": [],
+              "deyim": "Maraz-ı sârî"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "maraz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hastalık, bela",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "maraz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hastalık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "maraz-ı rûhânî",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ruha âit hastalık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "maraz-ı vesvese",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kuruntu hastalığı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمْرَاض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMRAZ",
+          "yazilis": "ﺍﻣﺮﺍﺽ",
+          "tur": "i.",
+          "koken": "Ar. maraż ’ın çoğul şekli emrāż",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hastalıklar, illetler, marazlar",
+              "misaller": [
+                [" Emrâz-ı asabiyye.", ""],
+                ["Emrâz-ı cildiyye .", ""],
+                [
+                  "En ehemmiyetsiz bir nezleden en vahim emrâza kadar en evvel onun hazâkat-ı teşhîsiyyesine mürâcaat edilirdi",
+                  "Hüseyin R. Gürpınar"
+                ],
+                [
+                  "İbsen’in eseri, herhangi bir fizyoloji ve emrâz-ı asabiyye kitabından çok daha basit ve fakirdir",
+                  "Reşat N. Güntekin"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emrâz",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hastalıklar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 24,
   "kuranda_var": true,

@@ -20,7 +20,7 @@
       [523, "دَرَاء", "darāʾ", "bilme", "orta", ""],
       [524, "دَرَاة", "darā", "bilme", "orta", ""],
       [525, "دُرِيَّة", "duriyya", "bilme", "orta", ""],
-      [526, "دِرَايَة", "dirāya", "bilme", "orta", ""],
+      [526, "دِرَايَة", "dirāya", "Beceriklilik", "lugat", "Luggat"],
       [527, "دَرِيّ", "dariyy", "bilme", "orta", ""],
       [528, "دَرُوّ", "daruww", "bilme", "orta", ""],
       [15, "دَرَيَان", "darayān", "bilme", "orta", ""],
@@ -92,7 +92,7 @@
       [566, "مُدَارَى", "mudārā", "biriyle karşılıklı bilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِدْرَاء", "ʾidrāʾ", "bildirme", "orta", "Vikisözlük: masdar (bâb IV): to inform, to notify"]
+      [567, "إِدْرَاء", "ʾidrāʾ", "Bildirmek", "lugat", "Vikisözlük: masdar (bâb IV): to inform, to notify · Kamus"]
     ],
     "ism-i merre · bâb IV": [
       [568, "إِدْرَاءَة", "ʾidrāʾa", "bir kere bildirme", "orta", ""]
@@ -505,7 +505,7 @@
       [835, "دِرَاء", "dirāʾ", "bilme", "orta", ""],
       [424, "دُرْي", "dury", "bilme", "orta", ""],
       [836, "دَرَاة", "darā", "bilme", "orta", ""],
-      [837, "دِرَايَة", "dirāya", "bilme", "orta", ""],
+      [837, "دِرَايَة", "dirāya", "Beceriklilik", "lugat", "Luggat"],
       [838, "دُرِيَّة", "duriyya", "bilme", "orta", ""],
       [428, "دَرْي", "dary", "bilme", "orta", ""],
       [429, "دِرْي", "diry", "bilme", "orta", ""]
@@ -987,7 +987,106 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "دِرَايَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "DİRÂYET",
+          "yazilis": "ﺩﺭﺍﻳﺖ",
+          "tur": "i.",
+          "koken": "Ar. dirāyet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çabuk kavrama yeteneği, kavrayış, anlayış",
+              "misaller": [
+                ["Tahsîlinde fevkalâde bir himmet, nihâyet derecelerde bir dirâyet göstermeğe başladı", "Nâmık Kemal"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "İlim ve tecrübenin verdiği beceriklilik, iktidar",
+              "misaller": [
+                ["Dirâyet sâhibi bir müdür.", ""],
+                ["● Dirâyetkâr", "-mend"],
+                ["tür. sıf", "Fars. -kār ve -mend ekleriyle"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "dirayet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu kezâlik; tekûlu: دَرَيْتُهُ وَدَرَيْتُ بِهِ دَرْيًا وَدِرْيَةً وَدَرْيَةً وَدِرَايَةً إِذَا عَلِمْتَ بِهِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلدِّرَايَةُ",
+          "okunus": "ed-dirâyet",
+          "koken": "dâlın kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "dirâyet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Beceriklilik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "إِدْرَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "idra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bildirmek manâsınadır; yukâlu: أَدْرَاهُ بِهِ إِذَا أَعْلَمَهُ",
+              "misaller": [
+                ["أَدْرَاهُ بِهِ إِذَا أَعْلَمَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِدْرَاءُ",
+          "okunus": "el-idrâ",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "idra",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Devenin doğurması karîb oldukta süt inmek; yukâlu: أَدْرَأَتِ النَّاقَةُ بِضَرْعِهَا فَهِيَ دَرِيءٌ",
+              "misaller": [
+                ["أَدْرَأَتِ النَّاقَةُ بِضَرْعِهَا فَهِيَ دَرِيءٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِدْرَاءُ",
+          "okunus": "el-idrâ",
+          "koken": "min-bâbi اَلْإِفْعَال [el-ifâl]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 29,
   "kuranda_var": true,

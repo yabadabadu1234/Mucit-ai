@@ -11,7 +11,7 @@
       [0, "سَبْء", "sabʾ", "yolu tutma", "orta", ""],
       [1, "سِبْء", "sibʾ", "yolu tutma", "orta", ""],
       [2, "سُبْء", "subʾ", "yolu tutma", "orta", ""],
-      [3, "سَبَأ", "sabaʾ", "yolu tutma", "orta", ""],
+      [3, "سَبَأ", "sabaʾ", "irâdesiyle sarfı ve itibârıyla men-i sarfı câizdir", "lugat", "Kamus"],
       [4, "سِبَأ", "sibaʾ", "yolu tutma", "orta", ""],
       [5, "سُبُؤ", "subuʾ", "yolu tutma", "orta", ""],
       [6, "سُبُوء", "subūʾ", "yolu tutma", "orta", ""],
@@ -383,7 +383,7 @@
       [284, "سَبُؤُون", "sabuʾūn", "her daim yolu tutanlar", "orta", ""],
       [285, "سَبُئِين", "sabuʾīn", "her daim yolu tutanlar", "orta", ""],
       [286, "سَبُؤَات", "sabuʾāt", "her daim yolu tutanlar, müennes", "orta", ""],
-      [287, "سَبَأ", "sabaʾ", "her daim yolu tutan", "orta", ""],
+      [287, "سَبَأ", "sabaʾ", "irâdesiyle sarfı ve itibârıyla men-i sarfı câizdir", "lugat", "Kamus"],
       [288, "سَبَأَة", "sabaʾa", "her daim yolu tutan, müennes", "orta", ""],
       [289, "سَبَآن", "sabaʾān", "her daim yolu tutan, iki", "orta", ""],
       [290, "سَبَأَتَان", "sabaʾatān", "her daim yolu tutan, iki, müennes", "orta", ""],
@@ -543,7 +543,7 @@
       [435, "سَوْبَأ", "sawbaʾ", "yolu tutma türünden şey", "orta", ""],
       [437, "سَيْبَأ", "saybaʾ", "yolu tutma türünden şey", "orta", ""],
       [439, "سَبْء", "sabʾ", "yolu tutma türünden şey", "orta", ""],
-      [441, "سَبَأ", "sabaʾ", "yolu tutma türünden şey", "orta", ""],
+      [441, "سَبَأ", "sabaʾ", "irâdesiyle sarfı ve itibârıyla men-i sarfı câizdir", "lugat", "Kamus"],
       [443, "سِبْء", "sibʾ", "yolu tutma türünden şey", "orta", ""],
       [445, "سُبْء", "subʾ", "yolu tutma türünden şey", "orta", ""],
       [447, "سَبِيء", "sabīʾ", "yolu tutma türünden şey", "orta", ""],
@@ -579,7 +579,7 @@
       [466, "سَبَأَة", "sabaʾa", "yolu tutmalar", "orta", ""],
       [467, "سُبَّاء", "subbāʾ", "yolu tutmalar", "orta", ""],
       [468, "سَبَاء", "sabāʾ", "yolu tutmalar", "orta", ""],
-      [469, "سَبَأ", "sabaʾ", "yolu tutmalar", "orta", ""],
+      [469, "سَبَأ", "sabaʾ", "irâdesiyle sarfı ve itibârıyla men-i sarfı câizdir", "lugat", "Kamus"],
       [470, "مَسَابِئ", "masābiʾ", "yolu tutmalar", "orta", ""],
       [471, "مَسَابِيء", "masābīʾ", "yolu tutmalar", "orta", ""],
       [472, "سَوَابِئ", "sawābiʾ", "yolu tutmalar", "orta", ""],
@@ -813,7 +813,49 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "سَبَأ": [
+        {
+          "eser": "Kamus",
+          "madde": "Sebe",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حَيٌّ [hayy] irâdesiyle sarfı ve بَلْدَةٌ [beldet] itibârıyla men-i sarfı câizdir; Yemende Bilkîs cenâblarının şehridir. Selefte be-gâyet âbâdân ve cemî-i arzı bâg ve hıyâbân idi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَبَأُ [Sebe] Abduşems b. Yeşcub b. Yarub b. Kahtân nâm kimsenin lakabıdır, cümle-i kabâil-i Yemeni câmi yanî cümlesi ona mensûb ve ondan müteşaib ve müteferri olmuşlardır; ve minhul-meselu: “تَفَرَّقُوا أَيْدِي سَبَا” وَ”أَيَادِي سَبَا” أَيْ تَبَدَّدُوا Burada سَبَا [sebâ] kelimesi sükûn üzere mebnî olarak tekellüm olunur, سَبَاءٌ [sebâ] lafzından muhaffef değildir, belki sükûnu hemzeden bedeldir. Mesel-i mezbûr bir cemiyyetin perîşân ve târümâr olmasında darb olunur. أَيْدِي [eydî] kelimesi يَدٌ [yed] lafzından cemdir ve أَيَادِي [eyâdî] cemül-cemidir. يَدٌ [yed] tarîk manâsınadır yâhûd nimet manâsınadır; badel-izâfet, خَمْسَةَ عَشَرَ [hamsete aşere] gibi ism-i vâhid hükmünde olmuştur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "سَبَأُ",
+          "okunus": "Sebe",
+          "koken": "جَبَلٌ [cebel] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Sebe",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir kimsenin ismidir ki âmme-i kabâil-i Yemen onun neslidir ki Sebe b. Yeşcub b. Yarub b. Kahtân derler, yusrafu ve lâ yusrafu; yumeddu ve lâ yumeddu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "سَبَأٌ",
+          "okunus": "Sebe",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

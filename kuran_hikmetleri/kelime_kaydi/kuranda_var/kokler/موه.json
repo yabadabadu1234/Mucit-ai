@@ -15,7 +15,7 @@
       [518, "مِيَه", "miyah", "su", "kontrol", ""],
       [5, "مُوُه", "muwuh", "su", "kontrol", ""],
       [6, "مُوُوه", "muwūh", "su", "kontrol", ""],
-      [521, "مِيَاه", "miyāh", "su", "kontrol", ""],
+      [521, "مِيَاه", "miyāh", "Sular", "lugat", "Luggat"],
       [8, "مُوَاه", "muwāh", "su", "kontrol", ""],
       [9, "مَوَاه", "mawāh", "su", "kontrol", ""],
       [10, "مَوَاهَة", "mawāha", "su", "kontrol", ""],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُمَاوَهَة", "mumāwaha", "biriyle karşılıklı su olma", "kontrol", ""],
-      [552, "مِيَاه", "miyāh", "biriyle karşılıklı su olma", "kontrol", ""]
+      [552, "مِيَاه", "miyāh", "Sular", "lugat", "Luggat"]
     ],
     "ism-i merre · bâb III": [
       [553, "مِيَاهَة", "miyāha", "bir kere biriyle karşılıklı su olma", "kontrol", ""]
@@ -537,7 +537,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "مَوَاه", "mawāh", "su olma", "kontrol", ""],
       [422, "مُوُوه", "muwūh", "su olma", "kontrol", ""],
-      [835, "مِيَاه", "miyāh", "su olma", "kontrol", ""],
+      [835, "مِيَاه", "miyāh", "Sular", "lugat", "Luggat"],
       [918, "مُوه", "mūh", "su olma", "kontrol", ""],
       [425, "مَوَاهَة", "mawāha", "su olma", "kontrol", ""],
       [837, "مِيَاهَة", "miyāha", "su olma", "kontrol", ""],
@@ -581,7 +581,7 @@
       [458, "أَمَاوِيه", "ʾamāwīh", "su olmalar", "kontrol", ""],
       [459, "مُوُوه", "muwūh", "su olmalar", "kontrol", ""],
       [460, "مُوُه", "muwuh", "su olmalar", "kontrol", ""],
-      [854, "مِيَاه", "miyāh", "su olmalar", "kontrol", ""],
+      [854, "مِيَاه", "miyāh", "Sular", "lugat", "Luggat"],
       [855, "مِيَه", "miyah", "su olmalar", "kontrol", ""],
       [463, "مِوَهَة", "miwaha", "su olmalar", "kontrol", ""],
       [464, "مُوَه", "muwah", "su olmalar", "kontrol", ""],
@@ -1211,7 +1211,71 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مِيَاه": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MİYAH",
+          "yazilis": "ﻣﻴﺎﻩ",
+          "tur": "i.",
+          "koken": "Ar. mā’ nın çoğul şekli miyāh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sular",
+              "misaller": [
+                ["Ne kudrettir edip tedvîr arzı / Kılan vâreste cûşişten miyâhı", "Recâîzâde M. Ekrem"],
+                [
+                  "Tuğyân-ı miyah, zelzele, fırtına gibi avârız-ı tabîiyyede mâlûmât-ı umûmiyye meyânına dâhil…",
+                  "Ahmet Râsim"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Akarsular, nehirler",
+              "misaller": [],
+              "deyim": "Miyâh-ı câriye"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kaplıca, ılıca suları gibi yerden kaynayan sıcak sular",
+              "misaller": [],
+              "deyim": "Miyâh-ı hârre"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kireçli sular",
+              "misaller": [],
+              "deyim": "Miyâh-ı kilsiyye"
+            },
+            {
+              "etiket": "",
+              "tanim": "İçinde erimiş halde tuz bulunan sular",
+              "misaller": [],
+              "deyim": "Miyâh-ı mâlihe"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "miyâh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sular",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 63,
   "kuranda_var": true,

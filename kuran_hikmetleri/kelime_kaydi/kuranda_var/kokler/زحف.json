@@ -290,7 +290,7 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "زَاحِف", "zāḥif", "sürünen", "orta", ""],
-      [214, "زَاحِفَة", "zāḥifa", "sürünen, müennes", "orta", ""],
+      [214, "زَاحِفَة", "zāḥifa", "Sürüngen, sürüngenler", "lugat", "Kubbealtı"],
       [215, "زَاحِفَان", "zāḥifān", "sürünen, iki", "orta", ""],
       [216, "زَاحِفَتَان", "zāḥifatān", "sürünen, iki, müennes", "orta", ""],
       [217, "زَاحِفُون", "zāḥifūn", "sürünenler", "orta", ""],
@@ -596,7 +596,7 @@
       [469, "زَحَف", "zaḥaf", "sürünmeler", "orta", ""],
       [470, "مَزَاحِف", "mazāḥif", "sürünmeler", "orta", ""],
       [471, "مَزَاحِيف", "mazāḥīf", "sürünmeler", "orta", ""],
-      [472, "زَوَاحِف", "zawāḥif", "sürünmeler", "orta", ""],
+      [472, "زَوَاحِف", "zawāḥif", "Ayağın sürüyen develer", "lugat", "Vankulu"],
       [473, "أَزْحُف", "ʾazḥuf", "sürünmeler", "orta", ""],
       [474, "زُحَّف", "zuḥḥaf", "sürünmeler", "orta", ""],
       [475, "زَحَائِف", "zaḥāʾif", "sürünmeler", "orta", ""],
@@ -1317,7 +1317,66 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "زَاحِفَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZÂHİFE",
+          "yazilis": "ﺯﺍﺣﻔﻪ",
+          "tur": "i.",
+          "koken": "Ar. zāḥif ’ten zāḥife",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sürüngen, sürüngenler",
+              "misaller": [
+                [
+                  "İzzet-i nefissiz kölelerden, zâhifeler gibi yerlerde sürünen mülevves esirlerden nefret ederdi",
+                  "Ömer Seyfeddin"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ez-zâhifet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vâhidi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّاحِفَةُ",
+          "okunus": "ez-zâhifet",
+          "koken": "hânın kesriyle"
+        }
+      ],
+      "زَوَاحِف": [
+        {
+          "eser": "Vankulu",
+          "madde": "zevahif",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ayağın sürüyen develer.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلزَّوَاحِفُ",
+          "okunus": "ez-zevâhif",
+          "koken": "zânın fethi ve hânın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

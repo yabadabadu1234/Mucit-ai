@@ -24,7 +24,14 @@
       [13, "لَقِيم", "laqīm", "lokma", "kontrol", ""],
       [14, "لَقُوم", "laqūm", "lokma", "kontrol", ""],
       [15, "لَقَمَان", "laqamān", "lokma", "kontrol", ""],
-      [16, "لُقْمَان", "luqmān", "lokma", "kontrol", ""],
+      [
+        16,
+        "لُقْمَان",
+        "luqmān",
+        "Kerkesler sâhibi olan kimsenin ismidir ki şuarâ onu Âda nisbet kılıp Lokmân b",
+        "lugat",
+        "Vankulu"
+      ],
       [17, "لِقْمَان", "liqmān", "lokma", "kontrol", ""],
       [18, "لَقْمَى", "laqmā", "lokma", "kontrol", ""],
       [19, "لُقْمَى", "luqmā", "lokma", "kontrol", ""],
@@ -226,7 +233,7 @@
       [134, "مُنْلَقَم", "munlaqam", "lokma olunma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِلْتِقَام", "iltiqām", "kendisi için lokma olma", "kontrol", ""]
+      [135, "اِلْتِقَام", "iltiqām", "Yutma, yutulma, yeme, yenilme", "lugat", "Kubbealtı"]
     ],
     "ism-i merre · bâb VIII": [
       [137, "اِلْتِقَامَة", "iltiqāma", "bir kere kendisi için lokma olma", "kontrol", ""]
@@ -579,7 +586,7 @@
       [440, "لَقْمَة", "laqma", "lokma olma türünden bir tane", "kontrol", ""],
       [442, "لَقَمَة", "laqama", "lokma olma türünden bir tane", "kontrol", ""],
       [444, "لِقْمَة", "liqma", "lokma olma türünden bir tane", "kontrol", ""],
-      [446, "لُقْمَة", "luqma", "lokma olma türünden bir tane", "kontrol", "Vikisözlük: bite"],
+      [446, "لُقْمَة", "luqma", "Lokma", "lugat", "Vikisözlük: bite · Luggat"],
       [448, "لَقِيمَة", "laqīma", "lokma olma türünden bir tane", "kontrol", ""],
       [450, "لِقَمَة", "liqama", "lokma olma türünden bir tane", "kontrol", ""],
       [452, "لُقُمَة", "luquma", "lokma olma türünden bir tane", "kontrol", ""],
@@ -595,7 +602,7 @@
       [461, "لِقَام", "liqām", "lokma olmalar", "kontrol", ""],
       [462, "لِقَم", "liqam", "lokma olmalar", "kontrol", ""],
       [463, "لِقَمَة", "liqama", "lokma olmalar", "kontrol", ""],
-      [464, "لُقَم", "luqam", "lokma olmalar", "kontrol", ""],
+      [464, "لُقَم", "luqam", "Yolun göm ve muzam yerine yâhûd vasatına denir", "lugat", "Kamus"],
       [465, "لُقَماء", "luqamāʾ", "lokma olmalar", "kontrol", ""],
       [466, "لَقَمَة", "laqama", "lokma olmalar", "kontrol", ""],
       [467, "لُقَّام", "luqqām", "lokma olmalar", "kontrol", ""],
@@ -967,7 +974,99 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لُقْمَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "Lukman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kerkesler sâhibi olan kimsenin ismidir ki şuarâ onu Âda nisbet kılıp Lokmân b. Âddır derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "لُقْمَانُ",
+          "okunus": "Lukmân",
+          "koken": "lâmın zammı ve kâfın sükûnuyla"
+        }
+      ],
+      "اِلْتِقَام": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İLTİKAM",
+          "yazilis": "ﺍﻟﺘﻘﺎﻡ",
+          "tur": "i.",
+          "koken": "Ar. laḳm “yutmak, yemek”ten iltiḳām",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yutma, yutulma, yeme, yenilme",
+              "misaller": [
+                ["Birbirin mahv eylemektir iktizâ-yı kâinât / İltikām-ı yekdiğerdendir gıdâ-yı kâinât", "Yenişehirli Avnî"],
+                ["Bu sofracık efendiler ki iltikāma muntazır / Huzûrunuzda titriyor şu milletin hayâtıdır", "Tevfik Fikret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "لُقْمَة": [
+        {
+          "eser": "Luggat",
+          "madde": "lukme",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lokma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-lukmet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yutmak için tehyie olunan tumeye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللُّقْمَةُ",
+          "okunus": "el-lukmet",
+          "koken": "lâmın zammıyla ve fethiyle"
+        }
+      ],
+      "لُقَم": [
+        {
+          "eser": "Kamus",
+          "madde": "lukam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَللُّقَمُ [el-lukam] (صُرَدٌ [surad] vezninde) Yolun göm ve muzam yerine yâhûd vasatına denir; yukâlu: أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ",
+              "misaller": [
+                ["أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللَّقَمُ",
+          "okunus": "el-lekam",
+          "koken": "lâmın ve kâfın fethiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

@@ -8,7 +8,14 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "هَضْم", "haḍm", "sindirme", "kuran", "Kur'ân"],
+      [
+        0,
+        "هَضْم",
+        "haḍm",
+        "Yenen şeylerin vücutta değişikliklere uğrayarak kana karışacak duruma gelmesi…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [1, "هِضْم", "hiḍm", "sindirme", "orta", ""],
       [2, "هُضْم", "huḍm", "sindirme", "orta", ""],
       [3, "هَضَم", "haḍam", "sindirme", "orta", ""],
@@ -390,7 +397,14 @@
       [291, "هَضَمُون", "haḍamūn", "her daim sindirenler", "orta", ""],
       [292, "هَضَمِين", "haḍamīn", "her daim sindirenler", "orta", ""],
       [293, "هَضَمَات", "haḍamāt", "her daim sindirenler, müennes", "orta", ""],
-      [294, "هَضْم", "haḍm", "sindirme", "kuran", "Kur'ân"],
+      [
+        294,
+        "هَضْم",
+        "haḍm",
+        "Yenen şeylerin vücutta değişikliklere uğrayarak kana karışacak duruma gelmesi…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [295, "هَضْمَة", "haḍma", "her daim sindiren, müennes", "orta", ""],
       [296, "هَضْمَان", "haḍmān", "her daim sindiren, iki", "orta", ""],
       [297, "هَضْمَتَان", "haḍmatān", "her daim sindiren, iki, müennes", "orta", ""],
@@ -532,7 +546,14 @@
       [425, "هَضَامَة", "haḍāma", "sindirme", "orta", ""],
       [426, "هِضَامَة", "hiḍāma", "sindirme", "orta", ""],
       [427, "هُضُومَة", "huḍūma", "sindirme", "orta", ""],
-      [428, "هَضْم", "haḍm", "sindirme", "kuran", "Kur'ân"],
+      [
+        428,
+        "هَضْم",
+        "haḍm",
+        "Yenen şeylerin vücutta değişikliklere uğrayarak kana karışacak duruma gelmesi…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [429, "هِضْم", "hiḍm", "sindirme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +563,14 @@
       [434, "أُهْضُومَة", "ʾuhḍūma", "sindirme türünden şey", "orta", ""],
       [435, "هَوْضَم", "hawḍam", "sindirme türünden şey", "orta", ""],
       [437, "هَيْضَم", "hayḍam", "sindirme türünden şey", "orta", ""],
-      [439, "هَضْم", "haḍm", "sindirme", "kuran", "Kur'ân"],
+      [
+        439,
+        "هَضْم",
+        "haḍm",
+        "Yenen şeylerin vücutta değişikliklere uğrayarak kana karışacak duruma gelmesi…",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [441, "هَضَم", "haḍam", "sindirme türünden şey", "orta", ""],
       [443, "هِضْم", "hiḍm", "sindirme türünden şey", "orta", ""],
       [445, "هُضْم", "huḍm", "sindirme türünden şey", "orta", ""],
@@ -1455,7 +1483,45 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هَضْم": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HAZIM – HAZM",
+          "yazilis": "ﻫﻀﻢ",
+          "tur": "i.",
+          "koken": "Ar. hażm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yenen şeylerin vücutta değişikliklere uğrayarak kana karışacak duruma gelmesi işi, sindirim",
+              "misaller": [
+                ["Ve hiçbir zaman sû-i hazmı hatırına getirmeksizin daha, biraz daha, biraz daha diyor", "Cenap Şahâbeddin"],
+                ["Yemek yiyemiyor, hazım cihâzı zayıflamış olduğundan aldığı gıdâyı geri atıyor", "Sâmiha Ayverdi"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Şikâyet etmeden katlanma, basit kusurları mesele yapmama, içinde eriterek tahammül etme, gönlü geniş olma",
+              "misaller": [
+                ["Şiddet-i sevdâsını göstermek istemez. Dâima hazım ve sükûnetle muâmele gösterir", "Hüseyin R. Gürpınar"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kendine hâkim olma",
+              "misaller": [],
+              "deyim": "Hazm-ı nefs"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

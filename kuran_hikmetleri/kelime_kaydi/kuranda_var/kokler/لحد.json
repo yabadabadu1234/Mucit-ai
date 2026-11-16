@@ -14,7 +14,7 @@
       [3, "لَحَد", "laḥad", "sapma", "orta", ""],
       [4, "لِحَد", "liḥad", "sapma", "orta", ""],
       [5, "لُحُد", "luḥud", "sapma", "orta", ""],
-      [6, "لُحُود", "luḥūd", "sapma", "orta", ""],
+      [6, "لُحُود", "luḥūd", "Lahitler", "lugat", "Kubbealtı"],
       [7, "لِحَاد", "liḥād", "sapma", "orta", ""],
       [8, "لُحَاد", "luḥād", "sapma", "orta", ""],
       [9, "لَحَاد", "laḥād", "sapma", "orta", ""],
@@ -97,13 +97,20 @@
       [66, "مُلَاحَد", "mulāḥad", "biriyle karşılıklı sapma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِلْحَاد", "ʾilḥād", "saptırma", "orta", "Vikisözlük: masdar (bâb IV): to miss, to deviate"]
+      [
+        67,
+        "إِلْحَاد",
+        "ʾilḥād",
+        "Dinden çıkma, dinsizlik",
+        "lugat",
+        "Vikisözlük: masdar (bâb IV): to miss, to deviate · Luggat"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِلْحَادَة", "ʾilḥāda", "bir kere saptırma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُلْحِد", "mulḥid", "saptıran", "orta", ""],
+      [69, "مُلْحِد", "mulḥid", "Dinsiz", "lugat", "Luggat"],
       [70, "مُلْحِدَة", "mulḥida", "saptıran, müennes", "orta", ""],
       [71, "مُلْحِدَان", "mulḥidān", "saptıran, iki", "orta", ""],
       [72, "مُلْحِدَتَان", "mulḥidatān", "saptıran, iki, müennes", "orta", ""],
@@ -526,7 +533,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "لَحَاد", "laḥād", "sapma", "orta", ""],
-      [422, "لُحُود", "luḥūd", "sapma", "orta", ""],
+      [422, "لُحُود", "luḥūd", "Lahitler", "lugat", "Kubbealtı"],
       [423, "لِحَاد", "liḥād", "sapma", "orta", ""],
       [424, "لُحْد", "luḥd", "sapma", "orta", ""],
       [425, "لَحَادَة", "laḥāda", "sapma", "orta", ""],
@@ -569,7 +576,7 @@
       [456, "أَلْحِدَة", "ʾalḥida", "sapmalar", "orta", ""],
       [457, "أَلَاحِد", "ʾalāḥid", "sapmalar", "orta", ""],
       [458, "أَلَاحِيد", "ʾalāḥīd", "sapmalar", "orta", ""],
-      [459, "لُحُود", "luḥūd", "sapmalar", "orta", ""],
+      [459, "لُحُود", "luḥūd", "Lahitler", "lugat", "Kubbealtı"],
       [460, "لُحُد", "luḥud", "sapmalar", "orta", ""],
       [461, "لِحَاد", "liḥād", "sapmalar", "orta", ""],
       [462, "لِحَد", "liḥad", "sapmalar", "orta", ""],
@@ -1109,7 +1116,127 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لُحُود": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "LÜHUD",
+          "yazilis": "ﻟﺤﻮﺩ",
+          "tur": "i.",
+          "koken": "Ar. laḥd ’in çoğul şekli lüḥūd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Lahitler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "إِلْحَاد": [
+        {
+          "eser": "Luggat",
+          "madde": "ilhâd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dinden çıkma, dinsizlik",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ilhad",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dinden çıkma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "İLHAT – İLHAD",
+          "yazilis": "ﺍﻟﺤﺎﺩ",
+          "tur": "i.",
+          "koken": "Ar. laḥd “yüz çevirmek, sapmak”tan ilḥād",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gerçek inançtan dönme",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Allah’ın varlığına inanmama, inançsızlık, tanrı tanımazlık, ateizm",
+              "misaller": [
+                ["Ne bilsin şer’-i pâki ehl-i ilhâd / Ol a’dânın a’dâsıdır şerîat", "Niyâzî-i Mısrî"],
+                ["Vâye-dâr olsa eğer âtıfet-i feyzinden / Olur ârâyiş-i seccâde cebîn-i ilhâd", "Nâbî"],
+                [
+                  "Her hakîkati muhâlif-i din sûretinde göstermekle mâruf olan ruhban gürûhu tarafından ilhat ile itham olunur",
+                  "Nâmık Kemal"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُلْحِد": [
+        {
+          "eser": "Luggat",
+          "madde": "mülhid",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Dinsiz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "MÜLHİT – MÜLHİD",
+          "yazilis": "ﻣﻠﺤﺪ",
+          "tur": "i.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve sıf. (Ar. ilḥād “inançtan dönmek, inkâr etmek”ten mulḥid ) Allah’ı tanımayan, Tanrı’yı inkâr eden, dinsiz, îmansız kimse",
+              "misaller": [
+                [
+                  "Gör ol şeyhsiz gidenleri kimi mülhid kimi dehrî / Olmagıl cebrî ya kaderî zinhâr şeyhe eriş şeyhe",
+                  "Eşrefoğlu Rûmî"
+                ],
+                ["● Mülhidâne", "ﻣﻠﺤﺪﺍﻧﻪ"],
+                ["sıf. ve zf", "Fars. -āne ekiyle"],
+                [
+                  "Mülhit bir kimseye yakışır tarzda, îmansızca: Kendüden bâzı kelimât-ı mülhidâne sudûr eylediğinden…",
+                  "Râşid Târihi’nden"
+                ],
+                ["● Mülhidin", "ﻣﻠﺤﺪﻳﻦ"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

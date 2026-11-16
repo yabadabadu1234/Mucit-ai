@@ -13,8 +13,8 @@
       [2, "عُتْو", "ʿutw", "azma", "orta", ""],
       [517, "عَتَا", "ʿatā", "azma", "orta", ""],
       [518, "عِتَى", "ʿitā", "azma", "orta", ""],
-      [519, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
-      [520, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
+      [519, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
+      [520, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
       [521, "عِتَاء", "ʿitāʾ", "azma", "orta", ""],
       [522, "عُتَاء", "ʿutāʾ", "azma", "orta", ""],
       [523, "عَتَاء", "ʿatāʾ", "azma", "orta", ""],
@@ -370,7 +370,7 @@
       [298, "عَتْوُون", "ʿatwūn", "her daim azanlar", "orta", ""],
       [299, "عَتْوِين", "ʿatwīn", "her daim azanlar", "orta", ""],
       [300, "عَتْوَات", "ʿatwāt", "her daim azanlar, müennes", "orta", ""],
-      [756, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
+      [756, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
       [757, "عُتُوَّة", "ʿutuwwa", "her daim azan, müennes", "orta", ""],
       [758, "عُتُوَّان", "ʿutuwwān", "her daim azan, iki", "orta", ""],
       [759, "عُتُوَّتَان", "ʿutuwwatān", "her daim azan, iki, müennes", "orta", ""],
@@ -497,7 +497,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [833, "عَتَاء", "ʿatāʾ", "azma", "orta", ""],
-      [834, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
+      [834, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
       [835, "عِتَاء", "ʿitāʾ", "azma", "orta", ""],
       [424, "عُتْو", "ʿutw", "azma", "orta", ""],
       [836, "عَتَاة", "ʿatā", "azma", "orta", ""],
@@ -519,7 +519,7 @@
       [445, "عُتْو", "ʿutw", "azma türünden şey", "orta", ""],
       [841, "عَتِيّ", "ʿatiyy", "azma türünden şey", "orta", ""],
       [843, "عِتَى", "ʿitā", "azma türünden şey", "orta", ""],
-      [844, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
+      [844, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
       [846, "عَتَاء", "ʿatāʾ", "azma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
@@ -538,8 +538,8 @@
       [849, "أَعْتِيَة", "ʾaʿtiya", "azmalar", "orta", ""],
       [850, "أَعَاتِي", "ʾaʿātī", "azmalar", "orta", ""],
       [851, "أَعَاتِيّ", "ʾaʿātiyy", "azmalar", "orta", ""],
-      [852, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
-      [853, "عُتُوّ", "ʿutuww", "azgınlık", "kuran", "Kur'ân"],
+      [852, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
+      [853, "عُتُوّ", "ʿutuww", "ve Haddi mütecâviz serkeşlikle tekebbür eylemek", "lugat", "Kur'ân · Kamus"],
       [854, "عِتَاء", "ʿitāʾ", "azmalar", "orta", ""],
       [855, "عِتَى", "ʿitā", "azmalar", "orta", ""],
       [856, "عِتَيَة", "ʿitaya", "azmalar", "orta", ""],
@@ -1260,7 +1260,49 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "عُتُوّ": [
+        {
+          "eser": "Kamus",
+          "madde": "utuvv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْعُتِيُّ [el-utiyy] (aynın zammı ve tânın kesriyle) ve اَلْعِتِيُّ [el-itiyy] (kesreteynle) Haddi mütecâviz serkeşlikle tekebbür eylemek manâsınadır; yukâlu: عَتَا الرَّجُلُ عُتُوًّا وَعُتِيًّا وَعِتِيًّا مِنَ الْبَابِ الْأَوَّلِ إِذَا اسْتَكْبَرَ وَجَاوَزَ الْحَدَّ Ve عُتِيٌّ [utiyy] (aynın zammı ve fethiyle) Pek kocamak manâsına müstameldir; yukâlu: عَتَا الشَّيْخُ عُتِيًّا إِذَا كَبِرَ وَوَلَّى",
+              "misaller": [
+                [
+                  "عَتَا الرَّجُلُ عُتُوًّا وَعُتِيًّا وَعِتِيًّا مِنَ الْبَابِ الْأَوَّلِ إِذَا اسْتَكْبَرَ وَجَاوَزَ الْحَدَّ",
+                  ""
+                ],
+                ["عَتَا الشَّيْخُ عُتِيًّا إِذَا كَبِرَ وَوَلَّى", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعُتُوُّ",
+          "okunus": "el-utuvv",
+          "koken": "عُلُوٌّ [uluvv] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "utuvv",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Hadden tecâvüz etmek.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعُتُوُّ",
+          "okunus": "el-utuvv",
+          "koken": "zammeteynle ve vâvın teşdîdiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 10,
   "kuranda_var": true,

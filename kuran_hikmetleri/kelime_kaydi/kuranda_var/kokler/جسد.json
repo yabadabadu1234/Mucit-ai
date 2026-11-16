@@ -11,7 +11,7 @@
       [0, "جَسْد", "casd", "cisimleşme", "orta", ""],
       [1, "جِسْد", "cisd", "cisimleşme", "orta", ""],
       [2, "جُسْد", "cusd", "cisimleşme", "orta", ""],
-      [3, "جَسَد", "casad", "beden", "kuran", "Kur'ân"],
+      [3, "جَسَد", "casad", "Beden", "lugat", "Kur'ân · Luggat"],
       [4, "جِسَد", "cisad", "cisimleşme", "orta", ""],
       [5, "جُسُد", "cusud", "cisimleşme", "orta", ""],
       [6, "جُسُود", "cusūd", "cisimleşme", "orta", ""],
@@ -383,7 +383,7 @@
       [284, "جَسُدُون", "casudūn", "her daim cisimleşenler", "orta", ""],
       [285, "جَسُدِين", "casudīn", "her daim cisimleşenler", "orta", ""],
       [286, "جَسُدَات", "casudāt", "her daim cisimleşenler, müennes", "orta", ""],
-      [287, "جَسَد", "casad", "beden", "kuran", "Kur'ân"],
+      [287, "جَسَد", "casad", "Beden", "lugat", "Kur'ân · Luggat"],
       [288, "جَسَدَة", "casada", "her daim cisimleşen, müennes", "orta", ""],
       [289, "جَسَدَان", "casadān", "her daim cisimleşen, iki", "orta", ""],
       [290, "جَسَدَتَان", "casadatān", "her daim cisimleşen, iki, müennes", "orta", ""],
@@ -543,7 +543,7 @@
       [435, "جَوْسَد", "cawsad", "cisimleşme türünden şey", "orta", ""],
       [437, "جَيْسَد", "caysad", "cisimleşme türünden şey", "orta", ""],
       [439, "جَسْد", "casd", "cisimleşme türünden şey", "orta", ""],
-      [441, "جَسَد", "casad", "beden", "kuran", "Kur'ân"],
+      [441, "جَسَد", "casad", "Beden", "lugat", "Kur'ân · Luggat"],
       [443, "جِسْد", "cisd", "cisimleşme türünden şey", "orta", ""],
       [445, "جُسْد", "cusd", "cisimleşme türünden şey", "orta", ""],
       [447, "جَسِيد", "casīd", "cisimleşme türünden şey", "orta", ""],
@@ -565,7 +565,7 @@
       [454, "جَسَادَة", "casāda", "cisimleşme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْسَاد", "ʾacsād", "cisimleşmeler", "orta", ""],
+      [455, "أَجْسَاد", "ʾacsād", "Cesetler", "lugat", "Luggat"],
       [456, "أَجْسِدَة", "ʾacsida", "cisimleşmeler", "orta", ""],
       [457, "أَجَاسِد", "ʾacāsid", "cisimleşmeler", "orta", ""],
       [458, "أَجَاسِيد", "ʾacāsīd", "cisimleşmeler", "orta", ""],
@@ -579,7 +579,7 @@
       [466, "جَسَدَة", "casada", "cisimleşmeler", "orta", ""],
       [467, "جُسَّاد", "cussād", "cisimleşmeler", "orta", ""],
       [468, "جَسَاد", "casād", "cisimleşmeler", "orta", ""],
-      [469, "جَسَد", "casad", "beden", "kuran", "Kur'ân"],
+      [469, "جَسَد", "casad", "Beden", "lugat", "Kur'ân · Luggat"],
       [470, "مَجَاسِد", "macāsid", "cisimleşmeler", "orta", ""],
       [471, "مَجَاسِيد", "macāsīd", "cisimleşmeler", "orta", ""],
       [472, "جَوَاسِد", "cawāsid", "cisimleşmeler", "orta", ""],
@@ -1228,7 +1228,208 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جَسَد": [
+        {
+          "eser": "Kamus",
+          "madde": "cesed",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müellifin Basâirde beyânına göre جَسَدٌ [cesed] جِسْمٌ [cism]den ahasstır, zevil-ukûle mahsûstur, lâkin جِسْمٌ [cism] ebâd-ı selâseyi müştemil olmakla sâir hayvân ve cemâdâta ıtlâk olunur. Pes sâire ıtlâkı teşbîh vechiyle olur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَسَدٌ [cesed] levn sâhibi olana ve جِسْمٌ [cism] su ve havâ gibi levni olmayana ıtlâk olunur. Bu cihetle dem ve zaferâna ıtlâk eylediler. İntehâ.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "جَسَدٌ [cesed] Zaferâna denir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Benî İsrâîlin buzağısına ıtlâk olunur ki Sâmirî huliyyâttan düzüp Cibrîl-i Emîn hazretlerinin atı ayağı altından aldığı toprak bereketiyle mazhar-ı hayât olup ve ona ibâdet eylediler. Ke-mâ kâle taâlâ ﴿فَأَخْرَجَ لَهُمْ عِجْلاً جَسَدًا لَهُ خُوَارٌ﴾ Pes جَسَدٌ [cesed] kelimesi bedel olur. Bazılar ذَا جَسَدٍ ile tevîl eylediler.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "جَسَدٌ [cesed] Kurumuş kana ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "masdar olur, bir nesneye kan yapışmak manâsınadır; yukâlu: جَسِدَ الدَّمُ بِهِ جَسَدًا مِنَ الْبَابِ الرَّابِعِ إِذَا لَصِقَ بِهِ",
+              "misaller": [
+                ["جَسِدَ الدَّمُ بِهِ جَسَدًا مِنَ الْبَابِ الرَّابِعِ إِذَا لَصِقَ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cesed",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İnsânın ve cin ve melâikenin cism ve bedenine denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَسَدُ",
+          "okunus": "el-cesed",
+          "koken": "cîmin ve sînin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cesed",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Beden; tekûlu minhu: تَجَسَّدَ كَمَا تَقُولُ مِنَ الْجِسْمِ تَجَسَّمَ Ve جَسَدٌ [cesed] Zaferân misilli nesneye dahi derler ki onunla boya boyarlar.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَسَدٌ [cesed] Kana dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "جَسَدٌ [cesed] Kezâlik masdar dahi gelir: جَسِدَ بِهِ الدَّمُ يَجْسَدُ den ki bâb-ı râbidendir kan yapışmak manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَسَدُ",
+          "okunus": "el-cesed",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesed",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Beden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "CESET – CESED",
+          "yazilis": "ﺟﺴﺪ",
+          "tur": "i.",
+          "koken": "Ar. cesed “gövde”",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cansız, ölü vücut, naaş",
+              "misaller": [
+                ["Düşman altmış dört ceset bırakmış", "Ömer Seyfeddin"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Rûhun içine girmiş olduğu cisim kalıbı, beden",
+              "misaller": [
+                ["Kim hased birle helâk olur cesed", "Süleyman Çelebi"],
+                ["Çok emekler verdim hep zâyi oldu / Cesedim içinde candan usandım", "Karacaoğlan – Ö.T.S."]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesed-i misâlî",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Madde âleminden olmayan nurânî beden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "cesed-i necmî",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yıldız gibi nurlu beden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَجْسَاد": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ECSAD",
+          "yazilis": "ﺍﺟﺴﺎﺩ",
+          "tur": "i.",
+          "koken": "Ar. cesed ’in çoğul şekli ecsād",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cesetler, bedenler",
+              "misaller": [
+                ["Milyonla barındırdığın ecsâd arasından / Kaç nâsiye vardır çıkacak pâk ü dırahşan", "Tevfik Fikret"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "eski. kimya.",
+              "tanim": "Maddeler, cisimler",
+              "misaller": [
+                [" Ecsâd-ı seb’a: Yedi cisim.", ""],
+                [" Ümmü’l-ecsad: Cıva.", ""]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ecsâd",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cesetler. Bedenler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 4,
   "kuranda_var": true,

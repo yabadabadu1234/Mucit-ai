@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "جَيْب", "cayb", "cep, yaka", "kuran", "Kur'ân"],
+      [0, "جَيْب", "cayb", "Cep", "lugat", "Kur'ân · Luggat"],
       [888, "جِيب", "cīb", "cep yapma", "orta", ""],
       [889, "جُوب", "cūb", "cep yapma", "orta", ""],
       [517, "جَاب", "cāb", "cep yapma", "orta", ""],
@@ -384,7 +384,7 @@
       [884, "جَابُون", "cābūn", "her daim cep yapanlar", "orta", ""],
       [885, "جَابِين", "cābīn", "her daim cep yapanlar", "orta", ""],
       [755, "جَابَات", "cābāt", "her daim cep yapanlar, müennes", "orta", ""],
-      [294, "جَيْب", "cayb", "cep, yaka", "kuran", "Kur'ân"],
+      [294, "جَيْب", "cayb", "Cep", "lugat", "Kur'ân · Luggat"],
       [295, "جَيْبَة", "cayba", "her daim cep yapan, müennes", "orta", ""],
       [296, "جَيْبَان", "caybān", "her daim cep yapan, iki", "orta", ""],
       [297, "جَيْبَتَان", "caybatān", "her daim cep yapan, iki, müennes", "orta", ""],
@@ -533,7 +533,7 @@
       [425, "جَيَابَة", "cayāba", "cep yapma", "orta", ""],
       [837, "جِيَابَة", "ciyāba", "cep yapma", "orta", ""],
       [427, "جُيُوبَة", "cuyūba", "cep yapma", "orta", ""],
-      [428, "جَيْب", "cayb", "cep, yaka", "kuran", "Kur'ân"],
+      [428, "جَيْب", "cayb", "Cep", "lugat", "Kur'ân · Luggat"],
       [919, "جِيب", "cīb", "cep yapma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -543,7 +543,7 @@
       [434, "أُجْيُوبَة", "ʾucyūba", "cep yapma türünden şey", "orta", ""],
       [435, "جَوْيَب", "cawyab", "cep yapma türünden şey", "orta", ""],
       [437, "جَيْيَب", "cayyab", "cep yapma türünden şey", "orta", ""],
-      [439, "جَيْب", "cayb", "cep, yaka", "kuran", "Kur'ân"],
+      [439, "جَيْب", "cayb", "Cep", "lugat", "Kur'ân · Luggat"],
       [840, "جَاب", "cāb", "cep yapma türünden şey", "orta", ""],
       [921, "جِيب", "cīb", "cep yapma türünden şey", "orta", ""],
       [923, "جُوب", "cūb", "cep yapma türünden şey", "orta", ""],
@@ -1141,7 +1141,161 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جَيْب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "CEYB",
+          "yazilis": "ﺟﻴﺐ",
+          "tur": "i.",
+          "koken": "Ar. ceyb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yaka",
+              "misaller": [
+                ["Mestâne na’rasın işitip bülbülün seher / Fi’l-hâl bu kıvâm ile çâk etti gonca ceybin", "Mesîhî"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Cep",
+              "misaller": [
+                ["Zemîne bâd-ı havâdan çok akçe düştü yine / Pür etti dâmen-i sahrâyı doldu ceyb-i cibâl", "Bâkî"],
+                ["Sehâb-ı keffi kim bir feyz bahş etmişti deryâya / Onun âsârıdır ceyb-i sadefte gevher-i yektâ", "Nedim"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "mat.",
+              "tanim": "Sinüs",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Osmanlı pâdişahlarının kendilerine âit parası ve hazînesi, kîse-i hümâyun",
+              "misaller": [],
+              "deyim": "Ceyb-i hümâyun"
+            },
+            {
+              "etiket": "",
+              "tanim": "Pâdişahların şahsî hesapları ile uğraşan dâire",
+              "misaller": [
+                [
+                  "O günkü ceyb-i hümâyun dâiresine, Yıldız Câmii’nin karşısındaki selâmlık seyredilen açık seddin arkasından gidilirdi",
+                  "Hâlide E. Adıvar"
+                ]
+              ],
+              "deyim": "Ceyb-i hümâyun dâiresi"
+            },
+            {
+              "etiket": "tasavvuf.",
+              "tanim": "(Bilhassa dervişler için) Başını öne, yakasının üzerine eğerek kendi iç âlemine dalmak",
+              "misaller": [],
+              "deyim": "Ceyb-i murâkabeye (tefekküre) dalmak (varmak …)"
+            },
+            {
+              "etiket": "",
+              "tanim": "Kosinüs. ● Ceybî ( ﺟﻴﺒﻰ ) sıf. (nispet eki -і ile) Sinüsle ilgili",
+              "misaller": [],
+              "deyim": "Ceyb-i tamam"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "ceyb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yakaya denir, girîbân manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "masdar olur, libâsa yaka açmak manâsına; tekûlu: جُبْتُ الْقَمِيصَ أَجُوبُهُ جَوْبًا وَأَجِيبُهُ جَيْبًا أَيْ قَوَّرْتُ جَيْبَهُ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَيْبُ",
+          "okunus": "el-ceyb",
+          "koken": "غَيْبٌ [gayb] vezninde"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "ceyb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yakaya denir, girîbân manâsına; cemi جُيُوبٌ [cuyûb] gelir. İndel-baz bunun mevzi-i zikri bu makâmdır, جَوْبٌ [cevb] mâddesi değildir. Şârih der ki hâlen libâsın yanlarında ceyb ıtlâk olunan yerler ki libâs kesesi menzilindedir, bu lügat-ı âmmiyyedir, yakaya teşbîhle ıtlâk olunmuştur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جَيْبٌ [ceyb] Yaka açmak manâsınadır; tekûlu: جُبْتُ الْقَمِيصَ أَجِيبُهُ كَأَجُوبُهُ Müellif bunu جَوْبٌ [cevb] zeylinde dahi zikr eylemiştir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "جَيْبٌ [ceyb] Sadr ve kalb manâsına istimâl olunur; yukâlu: هُوَ نَاصِحُ الْجَيْبِ أَيِ الْقَلْبِ وَالصَّدْرِ يَعْنِي أَمِينُهُمَا Ve جَيْبُ اْلأَرْضِ [ceybul-ard] derler, مَدْخَلُ اْلأَرْضِ [medhalul-ard] manâsına.",
+              "misaller": [
+                ["هُوَ نَاصِحُ الْجَيْبِ أَيِ الْقَلْبِ وَالصَّدْرِ يَعْنِي أَمِينُهُمَا", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "Hamza b. Huseyn el-Ceyyâb ki شَدَّادٌ [şeddâd] veznindedir, muhaddisîndendir ve Muhammed b. Mucîb el-Kûfî muhaddistir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَيْبُ",
+          "okunus": "el-ceyb",
+          "koken": "عَيْبٌ [ayb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ceyb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yaka, girîbân manâsına; tekûlu: جُبْتُ الْقَمِيصَ أَجُوبُهُ وَأَجِيبُهُ مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي إِذَا قَوَّرْتَ جَيْبَهُ Yanî yakasın oysan.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجَيْبُ",
+          "okunus": "el-ceyb",
+          "koken": "cîmin fethi ve yânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ceyb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Cep",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

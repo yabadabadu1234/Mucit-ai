@@ -298,7 +298,7 @@
       [219, "سَاجِرَات", "sācirāt", "alevlendirenler, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَسْجُور", "mascūr", "alevlendirilmiş", "kuran", "Kur'ân"],
+      [220, "مَسْجُور", "mascūr", "Taşkın, dalgalı (su, deniz)", "lugat", "Kur'ân · Kubbealtı"],
       [221, "مَسْجُورَة", "mascūra", "alevlendirilen, müennes", "orta", ""],
       [222, "مَسْجُورَان", "mascūrān", "alevlendirilen, iki", "orta", ""],
       [223, "مَسْجُورَتَان", "mascūratān", "alevlendirilen, iki, müennes", "orta", ""],
@@ -536,7 +536,14 @@
       [429, "سِجْر", "sicr", "alevlendirme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "سَاجُور", "sācūr", "alevlendirme türünden şey", "orta", ""],
+      [
+        430,
+        "سَاجُور",
+        "sācūr",
+        "Kelb kısmının boynuna geçirdikleri ağaçtan tavka denir ki muharrefi halta tabîr…",
+        "lugat",
+        "Kamus"
+      ],
       [432, "سَجَرَة", "sacara", "alevlendirme türünden şey", "orta", ""],
       [433, "سُجَرَة", "sucara", "alevlendirme türünden şey", "orta", ""],
       [434, "أُسْجُورَة", "ʾuscūra", "alevlendirme türünden şey", "orta", ""],
@@ -906,7 +913,133 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "مَسْجُور": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MESCUR",
+          "yazilis": "ﻣﺴﺠﻮﺭ",
+          "tur": "sıf.",
+          "koken": "Ar. secr “iyice ısıtıp kızdırmak; dolmak, doldurmak”tan mescūr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Taşkın, dalgalı (su, deniz)",
+              "misaller": [
+                ["Kulağını sadef et Ahmedî dediği söze / Ki anın tabîatı bir bahr-ı dürdür mescur", "Ahmedî"],
+                ["Kâse-i çarhı şikest eyledi tîr-i da’vât / Cereyân eyledi hep âleme bahr-i mescur", "Enderunlu Fâzıl’dan"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "i.",
+              "tanim": "Alevli ateş, kızgın fırın",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "mescur",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Alevlendirilmiş âteşe ve kızdırılmış fırına denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "alevi ve kızgınlığı sâkin olmuşa denmekle zıdd olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "şol deryâya denir ki suyu kendiden ekser ola, yanî taşkın ola ve bu doldurmak manâsından mehûzdur; yukâlu: بَحْرٌ مَسْجُورٌ إِذَا كَانَ مَاؤُهُ أَكْثَرَ مِنْهُ Ve gerdanında âvîze gibi salınmış inci dizisine denir; yukâlu: لُؤْلُؤٌ مَسْجُورٌ أَيْ مَنْظُومٌ مَسْتَرْسِلٌ",
+              "misaller": [
+                ["بَحْرٌ مَسْجُورٌ إِذَا كَانَ مَاؤُهُ أَكْثَرَ مِنْهُ", ""],
+                ["لُؤْلُؤٌ مَسْجُورٌ أَيْ مَنْظُومٌ مَسْتَرْسِلٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَسْجُورُ",
+          "okunus": "el-mescûr",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mescur",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dolmuş su; ve minhu اَلْبَحْرُ الْمَسْجُورُ Ve مَسْجُورٌ [mescûr] Şol süte derler ki onun suyu ziyâde ola.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "dizilmiş, asılmış inciye de derler; yukâlu: كَاللُّؤْلُؤِ الْمَسْجُورِ",
+              "misaller": [
+                ["كَاللُّؤْلُؤِ الْمَسْجُورِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَسْجُورُ",
+          "okunus": "el-mescûr",
+          "koken": "mîmin fethi ve sînin sükûnuyla"
+        }
+      ],
+      "سَاجُور": [
+        {
+          "eser": "Kamus",
+          "madde": "Sacur",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kelb kısmının boynuna geçirdikleri ağaçtan tavka denir ki قِلاَدَةٌ [kilâdet] muharrefi halta tabîr olunur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَاجُورٌ [Sâcûr] Menbic türâbında bir nehrin ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّاجُورُ",
+          "okunus": "es-sâcûr",
+          "koken": "كَافُورٌ [kâfûr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Sacur",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol ağaçtır ki kelbin boynuna takarlar; yukâlu: كَلْبٌ مُسَوْجَرٌ Ve سَاجُورٌ [Sâcûr] Bir mevziin ismidir.",
+              "misaller": [
+                ["كَلْبٌ مُسَوْجَرٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّاجُورُ",
+          "okunus": "es-sâcûr",
+          "koken": "alâ-vezni اَلْكَافُور [el-kâfûr]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

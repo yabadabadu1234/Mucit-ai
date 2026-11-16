@@ -8,13 +8,13 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "كَهْف", "kahf", "mağara", "kuran", "Kur'ân"],
+      [0, "كَهْف", "kahf", "Mağara", "lugat", "Kur'ân · Luggat"],
       [1, "كِهْف", "kihf", "mağara", "kontrol", ""],
       [2, "كُهْف", "kuhf", "mağara", "kontrol", ""],
       [3, "كَهَف", "kahaf", "mağara", "kontrol", ""],
       [4, "كِهَف", "kihaf", "mağara", "kontrol", ""],
       [5, "كُهُف", "kuhuf", "mağara", "kontrol", ""],
-      [6, "كُهُوف", "kuhūf", "mağara", "kontrol", ""],
+      [6, "كُهُوف", "kuhūf", "Cemi", "lugat", "Vankulu"],
       [7, "كِهَاف", "kihāf", "mağara", "kontrol", ""],
       [8, "كُهَاف", "kuhāf", "mağara", "kontrol", ""],
       [9, "كَهَاف", "kahāf", "mağara", "kontrol", ""],
@@ -390,7 +390,7 @@
       [291, "كَهَفُون", "kahafūn", "her daim mağara olanlar", "kontrol", ""],
       [292, "كَهَفِين", "kahafīn", "her daim mağara olanlar", "kontrol", ""],
       [293, "كَهَفَات", "kahafāt", "her daim mağara olanlar, müennes", "kontrol", ""],
-      [294, "كَهْف", "kahf", "mağara", "kuran", "Kur'ân"],
+      [294, "كَهْف", "kahf", "Mağara", "lugat", "Kur'ân · Luggat"],
       [295, "كَهْفَة", "kahfa", "her daim mağara olan, müennes", "kontrol", ""],
       [296, "كَهْفَان", "kahfān", "her daim mağara olan, iki", "kontrol", ""],
       [297, "كَهْفَتَان", "kahfatān", "her daim mağara olan, iki, müennes", "kontrol", ""],
@@ -526,13 +526,13 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "كَهَاف", "kahāf", "mağara olma", "kontrol", ""],
-      [422, "كُهُوف", "kuhūf", "mağara olma", "kontrol", ""],
+      [422, "كُهُوف", "kuhūf", "Cemi", "lugat", "Vankulu"],
       [423, "كِهَاف", "kihāf", "mağara olma", "kontrol", ""],
       [424, "كُهْف", "kuhf", "mağara olma", "kontrol", ""],
       [425, "كَهَافَة", "kahāfa", "mağara olma", "kontrol", ""],
       [426, "كِهَافَة", "kihāfa", "mağara olma", "kontrol", ""],
       [427, "كُهُوفَة", "kuhūfa", "mağara olma", "kontrol", ""],
-      [428, "كَهْف", "kahf", "mağara", "kuran", "Kur'ân"],
+      [428, "كَهْف", "kahf", "Mağara", "lugat", "Kur'ân · Luggat"],
       [429, "كِهْف", "kihf", "mağara olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُكْهُوفَة", "ʾukhūfa", "mağara olma türünden şey", "kontrol", ""],
       [435, "كَوْهَف", "kawhaf", "mağara olma türünden şey", "kontrol", ""],
       [437, "كَيْهَف", "kayhaf", "mağara olma türünden şey", "kontrol", ""],
-      [439, "كَهْف", "kahf", "mağara", "kuran", "Kur'ân"],
+      [439, "كَهْف", "kahf", "Mağara", "lugat", "Kur'ân · Luggat"],
       [441, "كَهَف", "kahaf", "mağara olma türünden şey", "kontrol", ""],
       [443, "كِهْف", "kihf", "mağara olma türünden şey", "kontrol", ""],
       [445, "كُهْف", "kuhf", "mağara olma türünden şey", "kontrol", ""],
@@ -569,7 +569,7 @@
       [456, "أَكْهِفَة", "ʾakhifa", "mağara olmalar", "kontrol", ""],
       [457, "أَكَاهِف", "ʾakāhif", "mağara olmalar", "kontrol", ""],
       [458, "أَكَاهِيف", "ʾakāhīf", "mağara olmalar", "kontrol", ""],
-      [459, "كُهُوف", "kuhūf", "mağara olmalar", "kontrol", ""],
+      [459, "كُهُوف", "kuhūf", "Cemi", "lugat", "Vankulu"],
       [460, "كُهُف", "kuhuf", "mağara olmalar", "kontrol", ""],
       [461, "كِهَاف", "kihāf", "mağara olmalar", "kontrol", ""],
       [462, "كِهَف", "kihaf", "mağara olmalar", "kontrol", ""],
@@ -819,7 +819,153 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كَهْف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KEHF",
+          "yazilis": "ﻛﻬﻒ",
+          "tur": "i.",
+          "koken": "Ar. kehf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mağara, in",
+              "misaller": [
+                [" Ashâb-ı kehf . ", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Sığınacak yer, melce",
+              "misaller": [
+                ["Kehfü’l-fukarâ melce-i ashâb-ı recâdır", "Nâilî"],
+                ["Melce-i bî-çâregânsın destgîr-i ehl-i gam / Hâk-i pây-i devletindir âleme kehfü’l-eman", "Ziyâ Paşa"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "anat.",
+              "tanim": "Vücutta tabiî olarak bulunan veya bir hastalıktan ileri gelen oyuk",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Veremin akciğerde açtığı oyuk",
+              "misaller": [],
+              "deyim": "Kehf-i rie"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "kehf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Dağlarda oyulmuş ev gibi yere denir, غَارٌ [gâr] ve مَغَارَةٌ [megâret] tabîr olunur. Alâ-kavlin غَارٌ [gâr] tarzında olur, lâkin bu ondan vâsi olur; küçük olursa غَارٌ [gâr] ve büyük olursa كَهْفٌ [kehf] derler. Cemi كُهُوفٌ [kuhûf] gelir; yukâlu: لَجَؤُوا إِلَى كَهْفٍ وَهُوَ كَالْبَيْتِ الْمَنْقُورِ فِي الْجَبَلِ أوْ كَالْغَارِ فِي الْجَبَلِ إِلاَّ أَنَّهُ وَاسِعٌ فَإِذَا صَغُرَ فَغَارٌ Ve كَهْفٌ [kehf] Sığınacak ve penâh getirecek yere ve adama ıtlâk olunur; yukâlu: هُوَ كَهْفُ الْقَوْمِ أَيْ وَزَرُهُمٌ وَمَلْجَؤُهُمْ Ve كَهْفٌ [kehf] Masdar olur, süratle yürümek ve süratle seğirtmek manâsınadır.",
+              "misaller": [
+                [
+                  "لَجَؤُوا إِلَى كَهْفٍ وَهُوَ كَالْبَيْتِ الْمَنْقُورِ فِي الْجَبَلِ أوْ كَالْغَارِ فِي الْجَبَلِ إِلاَّ أَنَّهُ وَاسِعٌ فَإِذَا صَغُرَ فَغَارٌ",
+                  ""
+                ],
+                ["هُوَ كَهْفُ الْقَوْمِ أَيْ وَزَرُهُمٌ وَمَلْجَؤُهُمْ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bunun fili mümât ve mehcûrdur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "zikr olunan كَنْهَفَ عَنَّا sîgası ki nûnu zâidedir, bundan mutasarrıftır; tekûlu: أَعْجَبَنِي كَهْفُهُ أَيْ سُرْعَةُ عَدْوِهِ وَمَشْيِهِ [Ve]",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَهْفُ",
+          "okunus": "el-kehf",
+          "koken": "kâfın fethi ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "kehf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ev gibi bir nesnedir ki kayadan keserler, مَغَارَةٌ [megâret] manâsına, ekser dağlarda olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكَهْفُ",
+          "okunus": "el-kehf",
+          "koken": "kâfın fethi ve hânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kehf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mağara",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Kehfuz-Zulm",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "كَهْفُ الظُّلْمِ [Kehfuz-Zulm] (zâyın zammıyla) Bir recül-i marûf adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "كُهُوف": [
+        {
+          "eser": "Vankulu",
+          "madde": "kuhuf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "كَهْفٌ [kehf] Sığınacak mekân manâsına dahi gelir; yukâlu:فُلَانٌ كَهْفٌ أَيْ مَلْجَأٌ",
+              "misaller": [
+                ["فُلَانٌ كَهْفٌ أَيْ مَلْجَأٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكُهُوفُ",
+          "okunus": "el-kuhûf",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 6,
   "kuranda_var": true,

@@ -11,7 +11,7 @@
       [0, "صَنْم", "ṣanm", "put", "kontrol", ""],
       [1, "صِنْم", "ṣinm", "put", "kontrol", ""],
       [2, "صُنْم", "ṣunm", "put", "kontrol", ""],
-      [3, "صَنَم", "ṣanam", "put", "kontrol", ""],
+      [3, "صَنَم", "ṣanam", "Put", "lugat", "Luggat"],
       [4, "صِنَم", "ṣinam", "put", "kontrol", ""],
       [5, "صُنُم", "ṣunum", "put", "kontrol", ""],
       [6, "صُنُوم", "ṣunūm", "put", "kontrol", ""],
@@ -39,7 +39,7 @@
       [28, "مَصْنِمَة", "maṣnima", "put", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَصْنِيم", "taṣnīm", "çokça put olma", "kontrol", ""],
+      [29, "تَصْنِيم", "taṣnīm", "Sûret düzmek", "lugat", "Kamus"],
       [30, "تَصْنِمَة", "taṣnima", "çokça put olma", "kontrol", ""],
       [31, "صِنِّام", "ṣinnām", "çokça put olma", "kontrol", ""]
     ],
@@ -383,7 +383,7 @@
       [284, "صَنُمُون", "ṣanumūn", "her daim put olanlar", "kontrol", ""],
       [285, "صَنُمِين", "ṣanumīn", "her daim put olanlar", "kontrol", ""],
       [286, "صَنُمَات", "ṣanumāt", "her daim put olanlar, müennes", "kontrol", ""],
-      [287, "صَنَم", "ṣanam", "her daim put olan", "kontrol", ""],
+      [287, "صَنَم", "ṣanam", "Put", "lugat", "Luggat"],
       [288, "صَنَمَة", "ṣanama", "her daim put olan, müennes", "kontrol", ""],
       [289, "صَنَمَان", "ṣanamān", "her daim put olan, iki", "kontrol", ""],
       [290, "صَنَمَتَان", "ṣanamatān", "her daim put olan, iki, müennes", "kontrol", ""],
@@ -543,7 +543,7 @@
       [435, "صَوْنَم", "ṣawnam", "put olma türünden şey", "kontrol", ""],
       [437, "صَيْنَم", "ṣaynam", "put olma türünden şey", "kontrol", ""],
       [439, "صَنْم", "ṣanm", "put olma türünden şey", "kontrol", ""],
-      [441, "صَنَم", "ṣanam", "put olma türünden şey", "kontrol", ""],
+      [441, "صَنَم", "ṣanam", "Put", "lugat", "Luggat"],
       [443, "صِنْم", "ṣinm", "put olma türünden şey", "kontrol", ""],
       [445, "صُنْم", "ṣunm", "put olma türünden şey", "kontrol", ""],
       [447, "صَنِيم", "ṣanīm", "put olma türünden şey", "kontrol", ""],
@@ -565,7 +565,7 @@
       [454, "صَنَامَة", "ṣanāma", "put olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَصْنَام", "ʾaṣnām", "put olmalar", "kontrol", ""],
+      [455, "أَصْنَام", "ʾaṣnām", "Putlar", "lugat", "Luggat"],
       [456, "أَصْنِمَة", "ʾaṣnima", "put olmalar", "kontrol", ""],
       [457, "أَصَانِم", "ʾaṣānim", "put olmalar", "kontrol", ""],
       [458, "أَصَانِيم", "ʾaṣānīm", "put olmalar", "kontrol", ""],
@@ -579,7 +579,7 @@
       [466, "صَنَمَة", "ṣanama", "put olmalar", "kontrol", ""],
       [467, "صُنَّام", "ṣunnām", "put olmalar", "kontrol", ""],
       [468, "صَنَام", "ṣanām", "put olmalar", "kontrol", ""],
-      [469, "صَنَم", "ṣanam", "put olmalar", "kontrol", ""],
+      [469, "صَنَم", "ṣanam", "Put", "lugat", "Luggat"],
       [470, "مَصَانِم", "maṣānim", "put olmalar", "kontrol", ""],
       [471, "مَصَانِيم", "maṣānīm", "put olmalar", "kontrol", ""],
       [472, "صَوَانِم", "ṣawānim", "put olmalar", "kontrol", ""],
@@ -1544,7 +1544,195 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "صَنَم": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SANEM",
+          "yazilis": "ﺻﻨﻢ",
+          "tur": "i.",
+          "koken": "Ar. ṣanem",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Put",
+              "misaller": [
+                ["Sûreti zîbâ sanemler yok demen büt-hânede / Var çok ammâ bir sana benzer büt-i hunhâr yok", "Fuzûlî"],
+                ["Mey dökülsün mü kabr-i ashâba / Yakışır mı sanem şu mihrâba", "Nâmık Kemal’den"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Çok güzel kimse, dilber, mahbûbe",
+              "misaller": [
+                ["Çağırdım sanem sanem / Ses verdi menem menem", "Hatâyî’den"],
+                ["Meftun yine dil bir sanem-i mâh-cemâle / Elden ne gelir ağlamadan başka bu hâle", "Ali E. Bolayır’dan"],
+                ["● Sanem-han", "ﺻﻨﻤﺨﻮﺍﻥ"],
+                ["birl. i", "Fars. ẖān > ḫān “okuyan” ile"],
+                [
+                  "Puta duâ eden, puta tapan kimse, putperest: Ey niçe Mansûr-ı Hak-gûyu sanem-hân etti aşk / Ey niçe kutbun mekânın kâfiristân etti aşk",
+                  "Esrar Dede"
+                ],
+                [
+                  "Küfr-i zülfün yâd eden mü’min müselmân olmasın / Nûr-ı vechin seyr eden kâfir sanem-hân olmasın",
+                  "Şeyh Gālib"
+                ],
+                ["● Sanem-hâne", "ﺻﻨﻤﺨﺎﻧﻪ"],
+                ["birl. i", "Fars. ḫāne “ev” ile"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "sanem",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Râyiha bed ve çirkîn olmak manâsına masdar ve ism olur; yukâlu: صَنِمَتِ الرَّائِحَةُ صَنَمًا مِنَ الْبَابِ الرَّابِعِ إِذَا خَبُثَتْ Ve kul cinsi büyüyüp kuvvetlenmek manâsınadır; yukâlu: صَنِمَ الْعَبْدُ إِذَا قَوِيَ Ve صَنَمٌ [sanem] Müşrikînin perestiş ettikleri puta denir, وَثَنٌ [vesamp;en] manâsına.",
+              "misaller": [
+                ["صَنِمَتِ الرَّائِحَةُ صَنَمًا مِنَ الْبَابِ الرَّابِعِ إِذَا خَبُثَتْ", ""],
+                ["صَنِمَ الْعَبْدُ إِذَا قَوِيَ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "صَنَمٌ [sanem] lafzı şemen muarrebidir ki Fârisîdir. Mütercim der ki bazılar صَنَمٌ [sanem] ile وَثَنٌ [vesamp;en] beynini fark eylediler, صَنَمٌ [sanem]i cevâhir-i madiniyye-i müzâbeden düzülmüş puta ve وَثَنٌ [vesamp;en]i ahcâr ve ahşâbdan sâhte puta tahsîs eylediler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّنَمُ",
+          "okunus": "es-sanem",
+          "koken": "sâdın ve nûnun fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "sanem",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Put ki kâfirler tapar. Bazılar صَنَمٌ [sanem] “şemen”in muarrebidir ve “şemen” vesen manâsınadır dedi. Cevherînin ibâreti budur, lâkin lügât-ı Fârisiyyede “şemen” puta tapan kâfirdir demişler hattâ bu beytle istişhâd olunmuştur: “But-perestî girifteîm heme în cihân çun butest u mâ şemenîm.” Meger ki lafz-ı müşterek olduğu sâbit ola.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلصَّنَمُ",
+          "okunus": "es-sanem",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sanem",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Put. Put kadar güzel",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sanem",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Put",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "sanem-misâl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Puta benzer",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَصْنِيم": [
+        {
+          "eser": "Kamus",
+          "madde": "tasnim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sûret düzmek manâsınadır; yukâlu: صَنَّمَ الرَّجُلُ إِذَا صَوَّرَ Ve nâkaya hoşça takayyüd ve tîmâr eylemekle sütünü çoğaltmak manâsınadır; yukâlu: صَنَّمَ النُّوقَ إِذَا غَزَّرَهَا",
+              "misaller": [
+                ["صَنَّمَ الرَّجُلُ إِذَا صَوَّرَ", ""],
+                ["صَنَّمَ النُّوقَ إِذَا غَزَّرَهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّصْنِيمُ",
+          "okunus": "et-tasnîm",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ],
+      "أَصْنَام": [
+        {
+          "eser": "Luggat",
+          "madde": "esnâm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Putlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "ASNAM – ESNAM",
+          "yazilis": "ﺍﺻﻨﺎﻡ",
+          "tur": "i.",
+          "koken": "Ar. ṣanem ’in çoğul şekli aṣnām",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Putlar, tapınılan şeyler",
+              "misaller": [
+                ["Lâyık mı kırıldı bunca asnam", "Abdülhak Hâmit"],
+                [
+                  "Tebcîl-i asnam yerine takdîs-i fünûnu âyîn-i din ittihaz eylemek, işte Rönesans dedikleri asr-ı intibah bu mezheb-i dimâğî ile başlamıştı",
+                  "Cenap Şahâbeddin"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "edeb.",
+              "tanim": "Sevgililer",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

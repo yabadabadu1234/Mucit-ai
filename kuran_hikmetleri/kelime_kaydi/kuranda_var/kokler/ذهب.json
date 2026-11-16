@@ -11,13 +11,13 @@
       [0, "ذَهْب", "ẕahb", "gitme", "orta", ""],
       [1, "ذِهْب", "ẕihb", "gitme", "orta", ""],
       [2, "ذُهْب", "ẕuhb", "gitme", "orta", ""],
-      [3, "ذَهَب", "ẕahab", "gitme", "orta", "Vikisözlük: gold"],
+      [3, "ذَهَب", "ẕahab", "Altın", "lugat", "Vikisözlük: gold · Luggat"],
       [4, "ذِهَب", "ẕihab", "gitme", "orta", ""],
       [5, "ذُهُب", "ẕuhub", "gitme", "orta", ""],
       [6, "ذُهُوب", "ẕuhūb", "gitme", "orta", ""],
       [7, "ذِهَاب", "ẕihāb", "gitme", "orta", ""],
       [8, "ذُهَاب", "ẕuhāb", "gitme", "orta", ""],
-      [9, "ذَهَاب", "ẕahāb", "gitme", "orta", "Vikisözlük: masdar (bâb I): to go, to travel"],
+      [9, "ذَهَاب", "ẕahāb", "Gidiş", "lugat", "Vikisözlük: masdar (bâb I): to go, to travel · Luggat"],
       [10, "ذَهَابَة", "ẕahāba", "gitme", "orta", ""],
       [11, "ذُهُوبَة", "ẕuhūba", "gitme", "orta", ""],
       [12, "ذِهَابَة", "ẕihāba", "gitme", "orta", ""],
@@ -39,7 +39,7 @@
       [28, "مَذْهِبَة", "maẕhiba", "gitme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَذْهِيب", "taẕhīb", "götürme", "orta", ""],
+      [29, "تَذْهِيب", "taẕhīb", "Süsleme", "lugat", "Luggat"],
       [30, "تَذْهِبَة", "taẕhiba", "götürme", "orta", ""],
       [31, "ذِهِّاب", "ẕihhāb", "götürme", "orta", ""]
     ],
@@ -97,13 +97,20 @@
       [66, "مُذَاهَب", "muẕāhab", "biriyle karşılıklı gitme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِذْهَاب", "ʾiẕhāb", "götürme", "orta", "Vikisözlük: verbal noun of أَذْهَبَ (ʔaḏhaba) (form IV)"]
+      [
+        67,
+        "إِذْهَاب",
+        "ʾiẕhāb",
+        "Gidermek ve iletmek",
+        "lugat",
+        "Vikisözlük: verbal noun of أَذْهَبَ (ʔaḏhaba) (form IV) · Kamus"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِذْهَابَة", "ʾiẕhāba", "bir kere götürme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُذْهِب", "muẕhib", "götüren", "orta", ""],
+      [69, "مُذْهِب", "muẕhib", "Altın suyu süren kimse", "lugat", "Vankulu"],
       [70, "مُذْهِبَة", "muẕhiba", "götüren, müennes", "orta", ""],
       [71, "مُذْهِبَان", "muẕhibān", "götüren, iki", "orta", ""],
       [72, "مُذْهِبَتَان", "muẕhibatān", "götüren, iki, müennes", "orta", ""],
@@ -112,7 +119,7 @@
       [75, "مُذْهِبَات", "muẕhibāt", "götürenler, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُذْهَب", "muẕhab", "götürülen", "orta", ""],
+      [76, "مُذْهَب", "muẕhab", "Kabe-i muazzamanın ismidir", "lugat", "Kamus"],
       [77, "مُذْهَبَة", "muẕhaba", "götürülen, müennes", "orta", ""],
       [78, "مُذْهَبَان", "muẕhabān", "götürülen, iki", "orta", ""],
       [79, "مُذْهَبَتَان", "muẕhabatān", "götürülen, iki, müennes", "orta", ""],
@@ -121,7 +128,7 @@
       [82, "مُذْهَبَات", "muẕhabāt", "götürülenler, müennes", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُذْهَب", "muẕhab", "götürme yeri, vakti", "orta", ""]
+      [83, "مُذْهَب", "muẕhab", "Kabe-i muazzamanın ismidir", "lugat", "Kamus"]
     ],
     "masdar · bâb V": [
       [84, "تَذَهُّب", "taẕahhub", "kendini zorlayarak gitme", "orta", ""]
@@ -307,7 +314,7 @@
       [226, "مَذْهُوبَات", "maẕhūbāt", "gidilenler, müennes", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَذْهَب", "maẕhab", "gitme yeri, vakti", "orta", "Vikisözlük: verbal noun of ذَهَبَ (ḏahaba) (form I)"],
+      [227, "مَذْهَب", "maẕhab", "Yol", "lugat", "Vikisözlük: verbal noun of ذَهَبَ (ḏahaba) (form I) · Luggat"],
       [228, "مَذْهَبَان", "maẕhabān", "gitme yeri, vakti, iki", "orta", ""],
       [229, "مَذْهِب", "maẕhib", "gitme yeri, vakti", "orta", ""],
       [230, "مَذْهِبَان", "maẕhibān", "gitme yeri, vakti, iki", "orta", ""],
@@ -343,7 +350,7 @@
       [252, "ذُهَيْبَتَان", "ẕuhaybatān", "azıcık gitme, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَذْهَب", "maẕhab", "gitme", "kural", "Vikisözlük: verbal noun of ذَهَبَ (ḏahaba) (form I)"],
+      [253, "مَذْهَب", "maẕhab", "Yol", "lugat", "Vikisözlük: verbal noun of ذَهَبَ (ḏahaba) (form I) · Luggat"],
       [254, "مَذْهَبَان", "maẕhabān", "gitme, iki", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
@@ -383,7 +390,7 @@
       [284, "ذَهُبُون", "ẕahubūn", "her daim gidenler", "orta", ""],
       [285, "ذَهُبِين", "ẕahubīn", "her daim gidenler", "orta", ""],
       [286, "ذَهُبَات", "ẕahubāt", "her daim gidenler, müennes", "orta", ""],
-      [287, "ذَهَب", "ẕahab", "her daim giden", "orta", "Vikisözlük: gold"],
+      [287, "ذَهَب", "ẕahab", "Altın", "lugat", "Vikisözlük: gold · Luggat"],
       [288, "ذَهَبَة", "ẕahaba", "her daim giden, müennes", "orta", ""],
       [289, "ذَهَبَان", "ẕahabān", "her daim giden, iki", "orta", ""],
       [290, "ذَهَبَتَان", "ẕahabatān", "her daim giden, iki, müennes", "orta", ""],
@@ -418,7 +425,7 @@
       [319, "ذُهَابُون", "ẕuhābūn", "her daim gidenler", "orta", ""],
       [320, "ذُهَابِين", "ẕuhābīn", "her daim gidenler", "orta", ""],
       [321, "ذُهَابَات", "ẕuhābāt", "her daim gidenler, müennes", "orta", ""],
-      [322, "ذَهَاب", "ẕahāb", "her daim giden", "orta", "Vikisözlük: masdar (bâb I): to go, to travel"],
+      [322, "ذَهَاب", "ẕahāb", "Gidiş", "lugat", "Vikisözlük: masdar (bâb I): to go, to travel · Luggat"],
       [323, "ذَهَابَة", "ẕahāba", "her daim giden, müennes", "orta", ""],
       [324, "ذَهَابَان", "ẕahābān", "her daim giden, iki", "orta", ""],
       [325, "ذَهَابَتَان", "ẕahābatān", "her daim giden, iki, müennes", "orta", ""],
@@ -532,7 +539,7 @@
       [420, "اِدِّهَابِيَّة", "iddihābiyya", "gidenlik", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "ذَهَاب", "ẕahāb", "gitme", "orta", "Vikisözlük: masdar (bâb I): to go, to travel"],
+      [421, "ذَهَاب", "ẕahāb", "Gidiş", "lugat", "Vikisözlük: masdar (bâb I): to go, to travel · Luggat"],
       [422, "ذُهُوب", "ẕuhūb", "gitme", "orta", ""],
       [423, "ذِهَاب", "ẕihāb", "gitme", "orta", ""],
       [424, "ذُهْب", "ẕuhb", "gitme", "orta", ""],
@@ -550,13 +557,13 @@
       [435, "ذَوْهَب", "ẕawhab", "gitme türünden şey", "orta", ""],
       [437, "ذَيْهَب", "ẕayhab", "gitme türünden şey", "orta", ""],
       [439, "ذَهْب", "ẕahb", "gitme türünden şey", "orta", ""],
-      [441, "ذَهَب", "ẕahab", "gitme türünden şey", "orta", "Vikisözlük: gold"],
+      [441, "ذَهَب", "ẕahab", "Altın", "lugat", "Vikisözlük: gold · Luggat"],
       [443, "ذِهْب", "ẕihb", "gitme türünden şey", "orta", ""],
       [445, "ذُهْب", "ẕuhb", "gitme türünden şey", "orta", ""],
       [447, "ذَهِيب", "ẕahīb", "gitme türünden şey", "orta", ""],
       [449, "ذِهَب", "ẕihab", "gitme türünden şey", "orta", ""],
       [451, "ذُهُب", "ẕuhub", "gitme türünden şey", "orta", ""],
-      [453, "ذَهَاب", "ẕahāb", "gitme türünden şey", "orta", "Vikisözlük: masdar (bâb I): to go, to travel"]
+      [453, "ذَهَاب", "ẕahāb", "Gidiş", "lugat", "Vikisözlük: masdar (bâb I): to go, to travel · Luggat"]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
       [431, "ذَاهُوبَة", "ẕāhūba", "gitme türünden bir tane", "orta", ""],
@@ -585,9 +592,9 @@
       [465, "ذُهَباء", "ẕuhabāʾ", "gitmeler", "orta", ""],
       [466, "ذَهَبَة", "ẕahaba", "gitmeler", "orta", ""],
       [467, "ذُهَّاب", "ẕuhhāb", "gitmeler", "orta", ""],
-      [468, "ذَهَاب", "ẕahāb", "gitmeler", "orta", "Vikisözlük: masdar (bâb I): to go, to travel"],
-      [469, "ذَهَب", "ẕahab", "gitmeler", "orta", "Vikisözlük: gold"],
-      [470, "مَذَاهِب", "maẕāhib", "gitmeler", "orta", ""],
+      [468, "ذَهَاب", "ẕahāb", "Gidiş", "lugat", "Vikisözlük: masdar (bâb I): to go, to travel · Luggat"],
+      [469, "ذَهَب", "ẕahab", "Altın", "lugat", "Vikisözlük: gold · Luggat"],
+      [470, "مَذَاهِب", "maẕāhib", "Mezhepler", "lugat", "Luggat"],
       [471, "مَذَاهِيب", "maẕāhīb", "gitmeler", "orta", ""],
       [472, "ذَوَاهِب", "ẕawāhib", "gitmeler", "orta", ""],
       [473, "أَذْهُب", "ʾaẕhub", "gitmeler", "orta", ""],
@@ -3368,7 +3375,616 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ذَهَب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZEHEB",
+          "yazilis": "ﺫﻫﺐ",
+          "tur": "i.",
+          "koken": "Ar. ẕeheb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Altın",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "zeheb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cins-i madenîden altına denir, تِبْرٌ [tibr] manâsına. Müellif تِبْرٌ [tibr] mâddesinde alel-ihtilâf beyân eylemiştir. Meşhûru henüz madenden çıkıp sikke ve sıyâgat görmemiş altına تِبْرٌ [tibr] ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ذَهَبٌ [zeheb] müzekker ve müennes dahi olur. Vâhidi ذَهَبَةٌ [zehebet]tir hâyla; cemi أَذْهَابٌ [ezhâb] gelir ve ذُهُوبٌ [zuhûb] ve ذُهْبَانٌ [zuhbân] gelir zâlın zammeleriyle ve bu sâhib-i Nihâyeden menkûldür.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ذَهَبٌ [zeheb] Masdar olur, bir kimse nâgehânî madene yâ darb-hâneye girip harman harman altın kümelerini gördükte gözleri kamaşıp âşüfte ve deng ve hayrân kalmak manâsınadır; yukâlu: ذَهِبَ الرَّجُلُ ذَهَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا هَجَمَ فِي الْمَعْدِنِ عَلَى ذَهَبٍ كَثِيرٍ فَزَالَ عَقْلُهُ وَبَرِقَ بَصَرُهُ Ve bu mâddenin filinde Benî Temîm lügati üzere ذِهِبَ [zihibe] dahi câizdir, zâlın ve hânın kesreleriyle. Şârih der ki Ebû Mansûrdan bu resm muttarid olduğu menkûldür, filin aynı harf-i halk-ı meksûr olursa.",
+              "misaller": [
+                [
+                  "ذَهِبَ الرَّجُلُ ذَهَبًا مِنَ الْبَابِ الرَّابِعِ إِذَا هَجَمَ فِي الْمَعْدِنِ عَلَى ذَهَبٍ كَثِيرٍ فَزَالَ عَقْلُهُ وَبَرِقَ بَصَرُهُ",
+                  ""
+                ]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "ذَهَبٌ [zeheb] Yumurtanın sarısına ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "Yemen ehline mahsûs bir gûne ölçek adıdır. Cemi ذِهَابٌ [zihâb] gelir zâlın kesriyle ve أَذْهَابٌ [ezhâb] gelir, أَسْبَابٌ [esbâb] gibi.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "cemul-cemi أَذَاهِبُ [ezâhib] أَقَارِبُ [ekârib] vezninde ve أَذَاهِيبُ [ezâhîb] gelir, مَرَاكِيبُ [merâkîb] vezninde.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّهَبُ",
+          "okunus": "ez-zeheb",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zeheb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Altın.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "gâh olur ki tenîsin câiz görürler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ehl-i Yemen için bir marûf kîlenin ismidir. Altın manâsına olanın cemi اَلْأَذْهَابُ ve اَلذُّهُوب [ez-zuhûb] gelir ve mikyâl manâsına olanın cemi kezâlik أَذْهَابٌ [ezhâb] ve ceminin cemi اَلْأَذَاهِبُ [el-ezâhib] gelir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "ذَهَبٌ [zeheb] Kânda ziyâde altın görüp göz mütehayyir olmağa dahi derler; yukâlu: ذَهِبَ الرَّجُلُ مِنَ الْبَابِ الرَّابِعِ إِذَا رَآى ذَهَبًا فِي الْمَعْدِنِ فَبَرِقَ بَصَرُهُ مِنْ عِظَمِهِ فِي عَيْنِهِ",
+              "misaller": [
+                [
+                  "ذَهِبَ الرَّجُلُ مِنَ الْبَابِ الرَّابِعِ إِذَا رَآى ذَهَبًا فِي الْمَعْدِنِ فَبَرِقَ بَصَرُهُ مِنْ عِظَمِهِ فِي عَيْنِهِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّهَبُ",
+          "okunus": "ez-zeheb",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zeheb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Altın",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذَهَاب": [
+        {
+          "eser": "Kamus",
+          "madde": "zehab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلذُّهُوبُ [ez-zuhûb] (رُكُوبٌ [rukûb] vezninde) ve اَلْمَذْهَبُ [el-mezheb] (مَقْعَدٌ [makad] vezninde) Yürüyüp gitmek, seyr manâsınadır; alâ-kavlin geçip gitmek, mürûr manâsınadır; yukâlu: ذَهَبَ الرَّجُلُ ذَهَابًا وَذُهُوبًا وَمَذْهَبًا مِنَ الْبَابِ الثَّالِثِ إِذَا سَارَ أَوْ مَرَّ Ve bâ ile tadiye olundukta gidermek ve iletmek manâsına olur; yukâlu: ذَهَبَ بِهِ أَيْ أَزَالَهُ",
+              "misaller": [
+                ["ذَهَبَ الرَّجُلُ ذَهَابًا وَذُهُوبًا وَمَذْهَبًا مِنَ الْبَابِ الثَّالِثِ إِذَا سَارَ أَوْ مَرَّ", ""],
+                ["ذَهَبَ بِهِ أَيْ أَزَالَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّهَابُ",
+          "okunus": "ez-zehâb",
+          "koken": "صَوَابٌ [savâb] vezninde"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Zehab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Eyyâm-ı Arabdan bir yevm-i marûftur ki bir vakayı müştemildir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bir kabîle adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "ذَهَابٌ",
+          "okunus": "Zehâb",
+          "koken": "سَحَابٌ [sehâb] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "zehab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gitmek.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "اَلذُّهُوبُ [ez-zuhûb] (zammeteynle) Gitmek; yukâlu: ذَهَبَ فُلَانٌ ذَهَابًا وَذُهُوبًا مِنَ الْبَابِ الثَّالِثِ",
+              "misaller": [
+                ["ذَهَبَ فُلَانٌ ذَهَابًا وَذُهُوبًا مِنَ الْبَابِ الثَّالِثِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذَّهَابُ",
+          "okunus": "ez-zehâb",
+          "koken": "fethle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "zehâb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gidiş. Sanıya kapılma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZEHAP – ZEHAB",
+          "yazilis": "ﺫﻫﺎﺏ",
+          "tur": "i.",
+          "koken": "Ar. ẕehāb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gitme, gidiş",
+              "misaller": [
+                [" Zehâb u iyâb: Gidip gelme.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir fikir veya düşünceye uyma, sâhip olma; sanma, öyle zannetme, zan",
+              "misaller": [
+                ["Mülâyemet ile iş görmek ise o pek yanlış zehap", "Ziyâ Paşa"],
+                [
+                  "Her zaman evvelce mevcut olmuş bir Ankara’nın enkāzı zehâbını uyandıran şehir, mermer basamakları olan mermer bir ehram haşmetindeydi",
+                  "Rûşen E. Ünaydın"
+                ],
+                ["Bana insanlar görerek değil koku alarak evlerini bulurlar zehâbını verir", "Refik H. Karay"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "… Gibi sanmak, … gibi zannetmek",
+              "misaller": [
+                [
+                  "Ben çiçek koklarken o derece kuvvetli bir zevk duyarım ki bir günah işlediğim zehâbına kapılırım",
+                  "Refik H. Karay"
+                ],
+                ["İnsan, bu adamların buraya niçin geldiklerini bilmediği zehâbına kapılabilirdi", "Sait Fâik"]
+              ],
+              "deyim": "… Zehâbına kapılmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Boş inanç, bâtıl fikir",
+              "misaller": [
+                ["Bu husustaki zehâb-ı bâtıllarını tashih etmek maksadıyle…", "Fuat Köprülü"]
+              ],
+              "deyim": "Zehâb-ı bâtıl"
+            }
+          ]
+        }
+      ],
+      "تَذْهِيب": [
+        {
+          "eser": "Kamus",
+          "madde": "tezhib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneye altın sürmek ve yaldızlamak manâsınadır; yukâlu: ذَهَّبَهُ تَذْهِيبًا أَيْ طَلاَهُ بِالذَّهَبِ",
+              "misaller": [
+                ["ذَهَّبَهُ تَذْهِيبًا أَيْ طَلاَهُ بِالذَّهَبِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّذْهِيبُ",
+          "okunus": "et-tezhîb",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tezhîb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Süsleme. Yaldızlama. Altın sürme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEZHİP – TEZHİB",
+          "yazilis": "ﺗﺬﻫﻴﺐ",
+          "tur": "i.",
+          "koken": "Ar. ẕeheb “altın”dan teẕhіb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yaldız sürme, yaldızlama",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Yazma kitaplar, levhalar, murakkalar üzerine ezilerek fırçayla sürülecek hâle getirilmiş olan altının ve çeşitli renklerin kullanılmasıyle gerçekleştirilen süsleme sanatı",
+              "misaller": [
+                ["Bir Kur’ân’ın yazı ve tezhîbine takdir ve hayretle baktım", "Ahmet Hâşim"],
+                ["O cûşâcuş çiçekli Türk tezhiplerini bir renk ve şâşaa vâveylâsı gibi âdeta dinlerdim", "Rûşen E. Ünaydın"],
+                ["Tezhip hattın elbisesidir, hattı onsuz bırakmamalı", "Necmeddin Okyay"],
+                ["Son derece ince bir güzel sanatlar kolu olan tezhip hattata düşen iş değildi", "Sâmiha Ayverdi"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "إِذْهَاب": [
+        {
+          "eser": "Kamus",
+          "madde": "izhab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gidermek ve iletmek manâsınadır; yukâlu: أَذْهَبَهُ وَأَذْهَبَ بِهِ أَيْ أَزَالَهُ Ve bir nesneye altın sürüp yaldızlamak manâsınadır; yukâlu: أَذْهَبَهُ أَيْ طَلاَهُ بِالذَّهَبِ",
+              "misaller": [
+                ["أَذْهَبَهُ وَأَذْهَبَ بِهِ أَيْ أَزَالَهُ", ""],
+                ["أَذْهَبَهُ أَيْ طَلاَهُ بِالذَّهَبِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِذْهَابُ",
+          "okunus": "el-izhâb",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "izhab",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلتَّذْهِيبُ [et-tezhîb] Bir manâyadır, bir nesneye altın sürmeğe derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "gidermek manâsına dahi gelir; yukâlu: أَذْهَبَ غَيْرُهُ",
+              "misaller": [
+                ["أَذْهَبَ غَيْرُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِذْهَابُ",
+          "okunus": "el-izhâb",
+          "koken": ""
+        }
+      ],
+      "مُذْهِب": [
+        {
+          "eser": "Vankulu",
+          "madde": "muzhib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Altın suyu süren kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُذْهِبُ",
+          "okunus": "el-muzhib",
+          "koken": "mîmin zammı ve hânın kesriyle"
+        }
+      ],
+      "مُذْهَب": [
+        {
+          "eser": "Kamus",
+          "madde": "Muzheb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kabe-i muazzamanın ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Ebrehe b. Umeyr ve Ganî b. Asur nâm kimselerin feresleri ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "âbdest esnâsında vesvese ilkâ eden şeytânın ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "bunda savâb olan hânın kesriyle olmaktır, Cevherî vehmine mebnî fethle takyîd eylemiştir. Şârih der ki Kurtubî ve muhaddisînden bir cemâat hânın fethiyle cezm eylediler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُذْهَبُ",
+          "okunus": "el-Muzheb",
+          "koken": "مُكْرَمٌ [mukrem] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Muzheb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Her nesnedir ki altın suyu sürülmüş ola.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "şol ata dahi derler ki onun kırmızı rengine sarılık gâlib ola.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "eger gâyet kırmızı olup sarılık gâlib olmasa ona مُدْمَى [mudmâ] derler, mîm-i ûlânın zammı ve sâniyenin fethiyle.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمُذْهَبُ",
+          "okunus": "el-muzheb",
+          "koken": "mîmin zammı ve hânın fethi ve tahfîfi ile"
+        }
+      ],
+      "مَذْهَب": [
+        {
+          "eser": "Vankulu",
+          "madde": "mezheb",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Tarîkat; yukâlu: ذَهَبَ فُلَانٌ مَذْهَبًا حَسَنًا Ve مَذْهَبٌ [mezheb] Vesveseye dahi derler; ve minhu kavluhum: بِهِ مَذْهَبٌ يَعْنُونَ الْوَسْوَسَةَ فِي الْمَاءِ وَكَثْرَةُ اسْتِعْمَالِهِ فِي الْوُضُوءِ Yanî kaçan ki مَذْهَبٌ [mezheb]i mutlak zikr edip بِهِ مَذْهَبٌ deseler vesvese murâd olur.",
+              "misaller": [
+                ["ذَهَبَ فُلَانٌ مَذْهَبًا حَسَنًا", ""],
+                ["بِهِ مَذْهَبٌ يَعْنُونَ الْوَسْوَسَةَ فِي الْمَاءِ وَكَثْرَةُ اسْتِعْمَالِهِ فِي الْوُضُوءِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَذْهَبُ",
+          "okunus": "el-mezheb",
+          "koken": "mîmin ve hânın fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mezheb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yol. Mezhep. Ekol",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEZHEP – MEZHEB",
+          "yazilis": "ﻣﺬﻫﺐ",
+          "tur": "i.",
+          "koken": "Ar. ẕehāb “gitmek, yönelmek”ten meẕheb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir dinde belirli görüş ve anlayış farklılıklarından doğan kollardan her biri",
+              "misaller": [
+                [
+                  "Eski zamanlarda mezhep muhârebeleri, haysiyet muhârebeleri, şan muhârebeleri, satvet muhârebeleri varmış",
+                  "Cenap Şahâbeddin"
+                ],
+                ["Suriye’de bâzı küçük mezhepler ekalliyetlerini ezdirmediler", "Refik H. Karay"],
+                ["Meselâ Hanefî mezhebinde kadına dokunmak abdesti bozmaz", "Süleyman Uludağ"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Gidilen, benimsenen yol",
+              "misaller": [
+                [
+                  "Hak mezhebi mezhebleri deryâ-yı zât meşrebleri / Hâsıl kamu matlûbları kadr içredir her an kamu",
+                  "Niyâzî-i Mısrî"
+                ],
+                ["Ne meşrebde ne mezhebde idüğü mâlûm değil", "Kâtip Çelebi’den Seç."]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "eski.",
+              "tanim": "Din",
+              "misaller": [
+                ["Mezheb-i İslâm.", ""]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "",
+              "tanim": "İlimde, felsefede birbirinden bâzı farklarla ayrılan kollara verilen isim, çığır, meslek",
+              "misaller": [
+                ["Bu meselede onun mezheb-i felsefesine bir reybet-i amîka ârız olmaya başlamıştı", "Hâlit Z. Uşaklıgil"],
+                ["Kibarlar kahveyi de karışık mezheplerine uydurdular", ""],
+                ["diye alay ediyor", "Ahmet Kabaklı"]
+              ],
+              "no": 4
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "İffet husûsunda titiz davranmayan, toplumun ayıp saydığı şeylere göz yuman, geniş mezhepli",
+              "misaller": [],
+              "deyim": "Mezhebi geniş"
+            },
+            {
+              "etiket": "",
+              "tanim": "Davranışları, yaşayış tarzı savunduğu düşüncelere, inandığı prensip ve kurallara ters düşmek",
+              "misaller": [],
+              "deyim": "Mezhebi meşrebine uymamak"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mezheb-i selef",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Hicri ilk üç asırdaki salih insanların yolu",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَذَاهِب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEZÂHİB",
+          "yazilis": "ﻣﺬﺍﻫﺐ",
+          "tur": "i.",
+          "koken": "Ar. meẕheb ’in çoğul şekli meẕāhib",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mezhepler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Müslümanlıkta amel ve ibâdetle ilgi olan ve Hanefî, Mâlikî, Şâfiî, Hanbelî isimleriyle bilinen dört hak mezhep",
+              "misaller": [],
+              "deyim": "Mezâhib-i erbaa"
+            }
+          ]
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "mezahib",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol kayışlardır ki altın suyu sürülmüştür.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَذَاهِبُ",
+          "okunus": "el-mezâhib",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mezâhib",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Mezhepler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 56,
   "kuranda_var": true,

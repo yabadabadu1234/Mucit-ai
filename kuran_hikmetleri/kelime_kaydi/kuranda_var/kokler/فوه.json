@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "فَوْه", "fawh", "ağız", "kontrol", ""],
       [888, "فِيه", "fīh", "ağız", "kontrol", ""],
-      [889, "فُوه", "fūh", "ağız", "kontrol", ""],
+      [889, "فُوه", "fūh", "Vâhidi, eczâ-yı tîbden biri", "lugat", "Vankulu"],
       [517, "فَاه", "fāh", "ağız", "kontrol", ""],
       [518, "فِيَه", "fiyah", "ağız", "kontrol", ""],
       [5, "فُوُه", "fuwuh", "ağız", "kontrol", ""],
@@ -330,13 +330,13 @@
       [240, "مِفْوَهَتَان", "mifwahatān", "ağız olma âleti, iki", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَفْوَه", "ʾafwah", "daha çok ağız olan", "kontrol", ""],
+      [241, "أَفْوَه", "ʾafwah", "Vasf-ı mezkûr üzere olan kişiye denir", "lugat", "Kamus"],
       [242, "أَفْوَهَان", "ʾafwahān", "daha çok ağız olan, iki", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "فُوْهَى", "fuwhā", "daha çok ağız olan", "kontrol", ""],
       [244, "فُوْهَيَان", "fuwhayān", "daha çok ağız olan, iki", "kontrol", ""],
-      [245, "فَوْهَاء", "fawhāʾ", "daha çok ağız olan", "kontrol", ""],
+      [245, "فَوْهَاء", "fawhāʾ", "in müennesidir", "lugat", "Kamus"],
       [246, "فَوْهَاآن", "fawhāʾān", "daha çok ağız olan, iki", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
@@ -538,7 +538,7 @@
       [421, "فَوَاه", "fawāh", "ağız olma", "kontrol", ""],
       [422, "فُوُوه", "fuwūh", "ağız olma", "kontrol", ""],
       [835, "فِيَاه", "fiyāh", "ağız olma", "kontrol", ""],
-      [918, "فُوه", "fūh", "ağız olma", "kontrol", ""],
+      [918, "فُوه", "fūh", "Vâhidi, eczâ-yı tîbden biri", "lugat", "Vankulu"],
       [425, "فَوَاهَة", "fawāha", "ağız olma", "kontrol", ""],
       [837, "فِيَاهَة", "fiyāha", "ağız olma", "kontrol", ""],
       [427, "فُوُوهَة", "fuwūha", "ağız olma", "kontrol", ""],
@@ -555,7 +555,7 @@
       [439, "فَوْه", "fawh", "ağız olma türünden şey", "kontrol", ""],
       [840, "فَاه", "fāh", "ağız olma türünden şey", "kontrol", ""],
       [921, "فِيه", "fīh", "ağız olma türünden şey", "kontrol", ""],
-      [923, "فُوه", "fūh", "ağız olma türünden şey", "kontrol", ""],
+      [923, "فُوه", "fūh", "Vâhidi, eczâ-yı tîbden biri", "lugat", "Vankulu"],
       [447, "فَوِيه", "fawīh", "ağız olma türünden şey", "kontrol", ""],
       [843, "فِيَه", "fiyah", "ağız olma türünden şey", "kontrol", ""],
       [451, "فُوُه", "fuwuh", "ağız olma türünden şey", "kontrol", ""],
@@ -575,10 +575,10 @@
       [454, "فَوَاهَة", "fawāha", "ağız olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَفْوَاه", "ʾafwāh", "ağız olmalar", "kontrol", ""],
+      [455, "أَفْوَاه", "ʾafwāh", "Ağızlar", "lugat", "Luggat"],
       [456, "أَفْوِهَة", "ʾafwiha", "ağız olmalar", "kontrol", ""],
       [457, "أَفَاوِه", "ʾafāwih", "ağız olmalar", "kontrol", ""],
-      [458, "أَفَاوِيه", "ʾafāwīh", "ağız olmalar", "kontrol", ""],
+      [458, "أَفَاوِيه", "ʾafāwīh", "ın cemi, eczâ-yı tîb", "lugat", "Vankulu"],
       [459, "فُوُوه", "fuwūh", "ağız olmalar", "kontrol", ""],
       [460, "فُوُه", "fuwuh", "ağız olmalar", "kontrol", ""],
       [854, "فِيَاه", "fiyāh", "ağız olmalar", "kontrol", ""],
@@ -914,7 +914,293 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فُوه": [
+        {
+          "eser": "Vankulu",
+          "madde": "fuh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vâhidi, eczâ-yı tîbden biri manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفُوهُ",
+          "okunus": "el-fûh",
+          "koken": "fânın zammı ve meddiyle"
+        }
+      ],
+      "أَفْوَه": [
+        {
+          "eser": "Kamus",
+          "madde": "Efveh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vasf-ı mezkûr üzere olan kişiye denir; müennesinde فَوْهَاءُ [fevhâ] denir; yukâlu: فَوِهَ الرَّجُلُ فَوَهًا مِنَ الْبَابِ الرَّابِعِ فَهُوَ أَفْوَهُ وَهِيَ فَوْهَاءُ Ve أَفْوَهُ [Efveh] Ezd kabîlesinden bir şâirdir.",
+              "misaller": [
+                ["فَوِهَ الرَّجُلُ فَوَهًا مِنَ الْبَابِ الرَّابِعِ فَهُوَ أَفْوَهُ وَهِيَ فَوْهَاءُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْوَهُ",
+          "okunus": "el-efveh",
+          "koken": "أَحْمَرُ [ahmer] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "efveh",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ağzı büyük olan kimse.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "اَلْأَفْوَهُ الْأَوْدِيُّ [el-Efveh el-Evdiyy] Bir şâirin ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْوَهُ",
+          "okunus": "el-efveh",
+          "koken": "hemzenin ve vâvın fethiyle"
+        }
+      ],
+      "فَوْهَاء": [
+        {
+          "eser": "Kamus",
+          "madde": "fevha",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَفْوَهُ [efveh]in müennesidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ağzı bol kuyuya denir; yukâlu: بِئْرٌ فَوْهَاءُ أَيْ وَاسِعَةُ الْفَمِ ve şol makaraya ıtlâk olunur ki diş tarzında olan kertik uçları uzun ve aralıkları meydânlı ola.",
+              "misaller": [
+                ["بِئْرٌ فَوْهَاءُ أَيْ وَاسِعَةُ الْفَمِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ağzı yayvan mızrak yarasına vasf olur; yukâlu: مَحَالَةٌ فَوْهَاءُ وَطَعْنَةٌ فَوْهَاءُ أَيْ وَاسِعَةٌ",
+              "misaller": [
+                ["مَحَالَةٌ فَوْهَاءُ وَطَعْنَةٌ فَوْهَاءُ أَيْ وَاسِعَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَوْهَاءُ",
+          "okunus": "el-fevhâ",
+          "koken": "حَمْرَاءُ [hamrâ] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "fevha",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müennesi, ağzı büyük olan avret manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فَوْهَاءُ [fevhâ] Şol bekre ağacına dahi derler ki dişleri uzun ola.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "dişlerden murâd şol çivilerdir ki ip onun arasından yürür.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَوْهَاءُ",
+          "okunus": "el-fevhâ",
+          "koken": "fânın fethi ve vâvın sükûnu ve elifin meddiyle"
+        }
+      ],
+      "أَفْوَاه": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EFVAH",
+          "yazilis": "ﺍﻓﻮﺍﻩ",
+          "tur": "i.",
+          "koken": "Ar. fem – fūh “ağız”ın çoğul şekli efvāh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ağızlar",
+              "misaller": [
+                ["Kethüdâ-yı şeref-efzâ-yı vezîr-i a’zam / Cümle hep medh ü senâsıyle lebâleb efvâh", "Nedim"],
+                ["Gerek efvâh-ı ricalden işiterek ve gerek nazar-ı mütâlaadan geçirebildiğim kitaplarda…", "Muallim Nâci"],
+                ["Ey mîdelerin zehr-i takāzâsı önünde / Her zilleti bel’ eyleyen efvâh-ı kadîde", "Tevfik Fikret"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Ağız gibi giriş çıkış yerleri, menfezler",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "“Ateşli ağızlar” Top, tüfek, tabanca gibi ateşli silâhlar",
+              "misaller": [],
+              "deyim": "Efvâh-ı nâriyye"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "efvah",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "فُوهٌ [fûh]-ı âtî cemidir, taâma lezzet için kattıkları fülfül ve kemmûn makûlesi nesnelere denir, تَوَابِلُ [tevâbil] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "tîb katıntısına denir ki tîbe katmakla râyihasını hoş edecek nesnelerden ibârettir, Fârisîde tîb-efrâz derler; yukâlu: عِنْدَهُ أَفْوَاهُ الطِّيبِ أَيْ نَوَافِحُهُ Ve elvân ve gûnâgûn şükûfelere ıtlâk olunur; yukâlu: جَاءَ وَبِيَدِهِ أَفْوَاهُ النَّوْرِ أَيْ أَلْوَانُهُ وَضُرُوبُهُ Ve mutlakan her şeyin envâ ve asnâfına ıtlâk olunur; yukâlu: قَدْ أَصَابَ الْمَالَ مِنْ أَفْوَاهِ الْبَقْلِ أَيْ أَصْنَافِهِ وَأَنْوَاعِهِ Ve أَفْوَاهٌ [efvâh] lafzının müfredi فُوهٌ [fûh]tur fânın zammıyla, سُوقٌ [sûk] vezninde ve cemül-cemi أَفَاوِيهُ [efâvîh] gelir.",
+              "misaller": [
+                ["عِنْدَهُ أَفْوَاهُ الطِّيبِ أَيْ نَوَافِحُهُ", ""],
+                ["جَاءَ وَبِيَدِهِ أَفْوَاهُ النَّوْرِ أَيْ أَلْوَانُهُ وَضُرُوبُهُ", ""],
+                ["قَدْ أَصَابَ الْمَالَ مِنْ أَفْوَاهِ الْبَقْلِ أَيْ أَصْنَافِهِ وَأَنْوَاعِهِ", ""]
+              ]
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "أَفْوَاهٌ [efvâh] Zikr olunduğu üzere ağız manâsına olan فُوهٌ [fûh] lafzının cemidir ki ağızlar demektir. Bu münâsebetle bir nesnenin evâiline ıtlâk olunur, niteki أَرْجُلٌ [ercul] evâhirine ıtlâk olunur; ve minhu yukâlu: دَخَلُوا فِي أَفْوَاهِ الْبَلَدِ أَيْ أَوَائِلِهِ وَخَرَجُوا مِنْ أَرْجُلِهِ أَيْ أَوَاخِرِهِ Ve Arablar bir adam bir hoş kelâm yâhûd bir berceste şir söylese duâ makâmında لَا فُضَّ فُوهُ derler, لَا فُضَّ ثَغْرُهُ demektir; hâliyyet ve mahalliyyet alâkasıyla yanî “Dişleri rahne-dâr olmasın, dâimâ böylece dürüst sözler söylesin” demektir ki mercii tûl-i ömrüne duâdır.",
+              "misaller": [
+                ["دَخَلُوا فِي أَفْوَاهِ الْبَلَدِ أَيْ أَوَائِلِهِ وَخَرَجُوا مِنْ أَرْجُلِهِ أَيْ أَوَاخِرِهِ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "tekûlul-Arab: مَاتَ لِفِيهِ أَيْ لِوَجْهِهِ ve yukâlu: سَقَطَ لِفِيهِ أَيْ لِوَجْهِهِ Bunlarda lâm عَلَى manâsınadır ki “Ağzı üzere yanî yüzü üzere kapanıp düştü.” Pes alâka cüziyyet ve külliyyet olur.",
+              "misaller": [
+                ["سَقَطَ لِفِيهِ أَيْ لِوَجْهِهِ", ""]
+              ]
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "yukâlu: لَوْ وَجَدْتُ إِلَيْهِ فَا كَرِشٍ أَيْ أَدْنَى طَرِيقٍ Yanî “Ona işkenbe ağzı kadar yolcağızda bulur isen hemân tevakkuf eylemeyip iktihâm eyle” demektir.",
+              "misaller": [
+                ["لَوْ وَجَدْتُ إِلَيْهِ فَا كَرِشٍ أَيْ أَدْنَى طَرِيقٍ", ""]
+              ]
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "bu mesel “ك،ر،ش” mâddesinde dahi güzerân eyledi.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "yukâlu: فَاهَا لِفِيكَ أَيْ جَعَلَ اللهُ فَمَ الدَّاهِيَةِ بِفَمِكَ Bu mesel bed-duâ mevkiinde îrâd olunur. فَاهَا zamîri دَاهِيَةٌ [dâhiyet]e râcidir, münevven değildir, efâli muzmer olan masâdır mecrâsına icrâ olunmuştur, murâd “Beliyye ve dâhiye dâimâ sana karîn ve mukâbil olsun!” demektir.",
+              "misaller": [
+                ["فَاهَا لِفِيكَ أَيْ جَعَلَ اللهُ فَمَ الدَّاهِيَةِ بِفَمِكَ", ""]
+              ]
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "yukâlu: سَقَى فُلَانٌ إِبِلَهُ عَلَى أَفْوَاهِهَا أَيْ نَزَعَ لَهَا الْمَاءَ وَهِيَ تَشْرَبُ Yanî “Develere mukaddemâ havuzda su ihzâr eylemeyip bakiyyeyi içmeğe başladıklarında kuyudan su çekmeğe mübâderet eyledi” ki o vaktte elinde olan kovaya ve kaba üşüntü ederler.",
+              "misaller": [
+                ["سَقَى فُلَانٌ إِبِلَهُ عَلَى أَفْوَاهِهَا أَيْ نَزَعَ لَهَا الْمَاءَ وَهِيَ تَشْرَبُ", ""]
+              ]
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "yukâlu: جَرَّ فُلَانٌ إِبِلَهُ عَلَى أَفْوَاهِهَا أَيْ تَرَكَهَا تَرْعَى وَتَسِيرُ Yanî “Develeri müseyyeb eylemekle kendi başlarına gezip otlar oldular.”",
+              "misaller": [
+                ["جَرَّ فُلَانٌ إِبِلَهُ عَلَى أَفْوَاهِهَا أَيْ تَرَكَهَا تَرْعَى وَتَسِيرُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْوَاهُ",
+          "okunus": "el-efvâh",
+          "koken": "hemzenin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "efvah",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol nesnelerdir ki tîbe katarlar, tîbin râyihasın hûb etmek için, nitekim تَوَابِلُ [tevâbil] şol nesnelere derler ki taâmâ katarlar, taâmın lezzetin hûb etsin diye.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْوَاهُ",
+          "okunus": "el-efvâh",
+          "koken": "hemzenin fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "efvâh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Ağızlar",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَفَاوِيه": [
+        {
+          "eser": "Vankulu",
+          "madde": "efavih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَفْوَاهٌ [efvâh]ın cemi, eczâ-yı tîb manâsına. فُوهٌ [fûh] evvelâ أَفْعَالٌ [efâl] vezni üzere cem olunmuştur, سُوقٌ [sûk]la أَسْوَاقٌ [esvâk]gibi badehu أَفَاعِيلُ [efâîl] vezni üzere cem olunmuştur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفَاوِيهُ",
+          "okunus": "el-efâvîh",
+          "koken": "hemzenin fethi ve vâvın kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 13,
   "kuranda_var": true,

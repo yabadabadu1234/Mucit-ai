@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "رَفْد", "rafd", "destekleme", "orta", ""],
-      [1, "رِفْد", "rifd", "ihsan", "kuran", "Kur'ân"],
+      [1, "رِفْد", "rifd", "İsmdir, atâ ve bahşîşe ve sıla ve câizeye denir", "lugat", "Kur'ân · Kamus"],
       [2, "رُفْد", "rufd", "destekleme", "orta", ""],
       [3, "رَفَد", "rafad", "destekleme", "orta", ""],
       [4, "رِفَد", "rifad", "destekleme", "orta", ""],
@@ -248,9 +248,9 @@
         176,
         "اِسْتِرْفَاد",
         "istirfād",
-        "desteklemeyi isteme",
-        "orta",
-        "Vikisözlük: masdar (bâb X): to ask (someone) for help or support"
+        "Yardım istemek",
+        "lugat",
+        "Vikisözlük: masdar (bâb X): to ask (someone) for help or support · Kamus"
       ]
     ],
     "ism-i merre · bâb X": [
@@ -296,7 +296,7 @@
       [516, "اِرْفِوَّاد", "irfiwwād", "aşırı destekleme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "رَافِد", "rāfid", "destekleyen", "orta", "Vikisözlük: tributary"],
+      [213, "رَافِد", "rāfid", "ve Esâmî-i ricâldendir", "lugat", "Vikisözlük: tributary · Kamus"],
       [214, "رَافِدَة", "rāfida", "destekleyen, müennes", "orta", ""],
       [215, "رَافِدَان", "rāfidān", "destekleyen, iki", "orta", ""],
       [216, "رَافِدَتَان", "rāfidatān", "destekleyen, iki, müennes", "orta", ""],
@@ -540,7 +540,7 @@
       [426, "رِفَادَة", "rifāda", "destekleme", "orta", ""],
       [427, "رُفُودَة", "rufūda", "destekleme", "orta", ""],
       [428, "رَفْد", "rafd", "destekleme", "orta", ""],
-      [429, "رِفْد", "rifd", "ihsan", "kuran", "Kur'ân"]
+      [429, "رِفْد", "rifd", "İsmdir, atâ ve bahşîşe ve sıla ve câizeye denir", "lugat", "Kur'ân · Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "رَافُود", "rāfūd", "destekleme türünden şey", "orta", ""],
@@ -551,7 +551,7 @@
       [437, "رَيْفَد", "rayfad", "destekleme türünden şey", "orta", ""],
       [439, "رَفْد", "rafd", "destekleme türünden şey", "orta", ""],
       [441, "رَفَد", "rafad", "destekleme türünden şey", "orta", ""],
-      [443, "رِفْد", "rifd", "ihsan", "kuran", "Kur'ân"],
+      [443, "رِفْد", "rifd", "İsmdir, atâ ve bahşîşe ve sıla ve câizeye denir", "lugat", "Kur'ân · Kamus"],
       [445, "رُفْد", "rufd", "destekleme türünden şey", "orta", ""],
       [447, "رَفِيد", "rafīd", "destekleme türünden şey", "orta", ""],
       [449, "رِفَد", "rifad", "destekleme türünden şey", "orta", ""],
@@ -1055,7 +1055,118 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رِفْد": [
+        {
+          "eser": "Kamus",
+          "madde": "rifd",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İsmdir, atâ ve bahşîşe ve sıla ve câizeye denir; yukâlu: هُوَ عَظِيمُ الرِّفْدِ أَيِ الْعَطَاءِ وَالصِّلَةِ",
+              "misaller": [
+                ["هُوَ عَظِيمُ الرِّفْدِ أَيِ الْعَطَاءِ وَالصِّلَةِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّفْدُ",
+          "okunus": "er-rifd",
+          "koken": "rânın kesri ve fânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "rifd",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Atâ ve bahşiş.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرِّفْدُ",
+          "okunus": "er-rifd",
+          "koken": "rânın kesriyle ve fânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "rifd",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Masdardır, bağışlamak manâsına; yukâlu: رَفَدْتُهُ أَرْفُدَهُ رَفْدًا مِنَ الْبَابِ الثَّانِي Ve yardım etmek manâsına da gelir; yukâlu: رَفَدْتُهُ أَيْ أَعَنْتُهُ Ve رَفْدٌ [refd] ve رِفْدٌ [rifd] (rânın fethi ve kesriyle) Şol kadehtir ki büyük ola.",
+              "misaller": [
+                ["رَفَدْتُهُ أَرْفُدَهُ رَفْدًا مِنَ الْبَابِ الثَّانِي", ""],
+                ["رَفَدْتُهُ أَيْ أَعَنْتُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلرَّفْدُ",
+          "okunus": "er-refd",
+          "koken": "rânın fethi ve fânın sükûnuyla"
+        }
+      ],
+      "اِسْتِرْفَاد": [
+        {
+          "eser": "Kamus",
+          "madde": "istirfad",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yardım istemek manâsınadır; yukâlu: إِسْتَرْفَدَهُ إِذَا اسْتَعَانَهُ",
+              "misaller": [
+                ["إِسْتَرْفَدَهُ إِذَا اسْتَعَانَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِرْفَادُ",
+          "okunus": "el-istirfâd",
+          "koken": ""
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "istirfad",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yardım taleb etmek, istiânet manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْتِرْفَادُ",
+          "okunus": "el-istirfâd",
+          "koken": "hemzenin ve tânın kesriyle"
+        }
+      ],
+      "رَافِد": [
+        {
+          "eser": "Kamus",
+          "madde": "Rafid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve رُفَيْدٌ [Rufeyd] (زُبَيْرٌ [zubeyr] vezninde) ve مُرْفِدٌ [Murfid] (مُظْهِرٌ [muzhir] vezninde) Esâmî-i ricâldendir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "رَافِدٌ",
+          "okunus": "Râfid",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

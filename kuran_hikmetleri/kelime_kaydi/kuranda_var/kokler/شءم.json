@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "شَأْم", "şaʾm", "uğursuz sayma", "orta", ""],
       [1, "شِئْم", "şiʾm", "uğursuz sayma", "orta", ""],
-      [2, "شُؤْم", "şuʾm", "uğursuz sayma", "orta", "Vikisözlük: bad omen, calamity, fatality"],
+      [2, "شُؤْم", "şuʾm", "Uğursuzluk", "lugat", "Vikisözlük: bad omen, calamity, fatality · Kamus"],
       [3, "شَأَم", "şaʾam", "uğursuz sayma", "orta", ""],
       [4, "شِئَم", "şiʾam", "uğursuz sayma", "orta", ""],
       [5, "شُؤُم", "şuʾum", "uğursuz sayma", "orta", ""],
@@ -305,7 +305,14 @@
       [219, "شَائِمَات", "şāʾimāt", "uğursuz sayanlar, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَشْؤُوم", "maşʾūm", "uğursuz sayılan", "orta", "Vikisözlük: disastrous, fateful, evil, inauspicious"],
+      [
+        220,
+        "مَشْؤُوم",
+        "maşʾūm",
+        "Uğursuz, şom",
+        "lugat",
+        "Vikisözlük: disastrous, fateful, evil, inauspicious · Luggat"
+      ],
       [221, "مَشْؤُومَة", "maşʾūma", "uğursuz sayılan, müennes", "orta", ""],
       [222, "مَشْؤُومَان", "maşʾūmān", "uğursuz sayılan, iki", "orta", ""],
       [223, "مَشْؤُومَتَان", "maşʾūmatān", "uğursuz sayılan, iki, müennes", "orta", ""],
@@ -318,7 +325,7 @@
       [228, "مَشْأَمَان", "maşʾamān", "uğursuz sayma yeri, vakti, iki", "orta", ""],
       [229, "مَشْئِم", "maşʾim", "uğursuz sayma yeri, vakti", "orta", ""],
       [230, "مَشْئِمَان", "maşʾimān", "uğursuz sayma yeri, vakti, iki", "orta", ""],
-      [231, "مَشْأَمَة", "maşʾama", "sol taraf", "kuran", "Vikisözlük: left side, left hand"],
+      [231, "مَشْأَمَة", "maşʾama", "Meysere", "lugat", "Vikisözlük: left side, left hand · Vankulu"],
       [232, "مَشْأَمَتَان", "maşʾamatān", "uğursuz saymanın bol olduğu yer, iki", "orta", ""],
       [233, "مَشْئِمَة", "maşʾima", "uğursuz saymanın bol olduğu yer", "orta", ""],
       [234, "مَشْئِمَتَان", "maşʾimatān", "uğursuz saymanın bol olduğu yer, iki", "orta", ""],
@@ -535,7 +542,7 @@
       [421, "شَآم", "şaʾām", "uğursuz sayma", "orta", ""],
       [422, "شُؤُوم", "şuʾūm", "uğursuz sayma", "orta", ""],
       [423, "شِئَام", "şiʾām", "uğursuz sayma", "orta", ""],
-      [424, "شُؤْم", "şuʾm", "uğursuz sayma", "orta", "Vikisözlük: bad omen, calamity, fatality"],
+      [424, "شُؤْم", "şuʾm", "Uğursuzluk", "lugat", "Vikisözlük: bad omen, calamity, fatality · Kamus"],
       [425, "شَآمَة", "şaʾāma", "uğursuz sayma", "orta", ""],
       [426, "شِئَامَة", "şiʾāma", "uğursuz sayma", "orta", ""],
       [427, "شُؤُومَة", "şuʾūma", "uğursuz sayma", "orta", ""],
@@ -552,7 +559,7 @@
       [439, "شَأْم", "şaʾm", "uğursuz sayma türünden şey", "orta", ""],
       [441, "شَأَم", "şaʾam", "uğursuz sayma türünden şey", "orta", ""],
       [443, "شِئْم", "şiʾm", "uğursuz sayma türünden şey", "orta", ""],
-      [445, "شُؤْم", "şuʾm", "uğursuz sayma türünden şey", "orta", "Vikisözlük: bad omen, calamity, fatality"],
+      [445, "شُؤْم", "şuʾm", "Uğursuzluk", "lugat", "Vikisözlük: bad omen, calamity, fatality · Kamus"],
       [447, "شَئِيم", "şaʾīm", "uğursuz sayma türünden şey", "orta", ""],
       [449, "شِئَم", "şiʾam", "uğursuz sayma türünden şey", "orta", ""],
       [451, "شُؤُم", "şuʾum", "uğursuz sayma türünden şey", "orta", ""],
@@ -1017,7 +1024,158 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "شُؤْم": [
+        {
+          "eser": "Kamus",
+          "madde": "eş-şum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Uğursuzluk manâsınadır; yukâlu: بِهِ شُؤْمٌ أَيْ ضِدُّ الْيُمْنِ Şârih der ki Arablar bir semte giderken sol taraftan merî olan cânveri tetayyür eylemekle uğursuza شَؤُومٌ [şeûm] ıtlâkı ondan münşaib olmuştur. İntehâ.",
+              "misaller": [
+                ["بِهِ شُؤْمٌ أَيْ ضِدُّ الْيُمْنِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "شَؤُومٌ [şeûm] Siyâh develere denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ak tüylü develere denir. Bu iki manâda lafzından müfredi yoktur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشُّؤْمُ",
+          "okunus": "eş-şum",
+          "koken": "şînin zammıyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eş-şum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Nâ-mübâreklik ki يُمْنٌ [yumn]un nakîzidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلشُّؤْمُ",
+          "okunus": "eş-şum",
+          "koken": "şînin zammı ve hemzenin sükûnuyla"
+        }
+      ],
+      "مَشْؤُوم": [
+        {
+          "eser": "Kamus",
+          "madde": "meşum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْمَشُومُ [el-meşûm] (مَقُولٌ [mekûl] vezninde) Uğursuz, bed-ahter ve menhûs kimseye denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَشْؤُومُ",
+          "okunus": "el-meşûm",
+          "koken": "مَذْمُومٌ [mezmûm] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "meşum",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَشْؤُومُ",
+          "okunus": "el-meşûm",
+          "koken": "mîmin fethi ve şînin sükûnu ve hemzenin ve zammı ve meddiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "meş'um",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Uğursuz, şom",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "meş'ûm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Uğursuz",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEŞUM – MEŞ’UM",
+          "yazilis": "ﻣﺸﺌﻮﻡ",
+          "tur": "sıf.",
+          "koken": "Ar. şe’m “uğursuzluğa uğratmak”tan meş’ūm",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Uğursuz, şom, meymenetsiz, şeâmetli, menhus",
+              "misaller": [
+                ["Şalgo’nun tepesinde şan, nâmus kefeni olan meşum beyaz bayrak dalgalanıyordu", "Ömer Seyfeddin"],
+                ["Bu maksad-ı meş’um için neler harap olacak ve kimler ezilecek?", "Cenap Şahâbeddin"],
+                ["Hepimiz için âkıbet o meşum şafak sökecek", "Yâkup K. Karaosmanoğlu"],
+                ["● Meş’ûme", "ﻣﺸﺌﻮﻣﻪ"],
+                [" Akvâl-i meş’ûme: Uğursuz sözler.", ""],
+                [" Sefâlet-i meş’ûme: Uğursuz sefâlet.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَشْأَمَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "el-meşemet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Meysere manâsınadır ki مَيْمَنَةٌ [meymenet]in mukâbilidir ki sol cânib demek olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْمَشْأَمَةُ",
+          "okunus": "el-meşemet",
+          "koken": "mîmin ve hemzenin fethi ve şînin mâ-beynde sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

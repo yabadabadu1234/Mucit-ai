@@ -20,7 +20,14 @@
       [523, "كَفَاء", "kafāʾ", "yetme", "orta", ""],
       [524, "كَفَاة", "kafā", "yetme", "orta", ""],
       [525, "كُفِيَّة", "kufiyya", "yetme", "orta", ""],
-      [526, "كِفَايَة", "kifāya", "yetme", "orta", "Vikisözlük: verbal noun of كَفَى (kafā) (form I)"],
+      [
+        526,
+        "كِفَايَة",
+        "kifāya",
+        "Yeterli olma",
+        "lugat",
+        "Vikisözlük: verbal noun of كَفَى (kafā) (form I) · Luggat"
+      ],
       [527, "كَفِيّ", "kafiyy", "yetme", "orta", ""],
       [528, "كَفُوّ", "kafuww", "yetme", "orta", ""],
       [15, "كَفَيَان", "kafayān", "yetme", "orta", ""],
@@ -190,9 +197,9 @@
         625,
         "اِكْتِفَاء",
         "iktifāʾ",
-        "kendisi için yetme",
-        "orta",
-        "Vikisözlük: verbal noun of اِكْتَفَى (iktafā) (form VIII)"
+        "Olduğu kadarını yeterli bulma, kâfi görme, fazlasını istememe, yetinme",
+        "lugat",
+        "Vikisözlük: verbal noun of اِكْتَفَى (iktafā) (form VIII) · Kubbealtı"
       ]
     ],
     "ism-i merre · bâb VIII": [
@@ -512,7 +519,14 @@
       [835, "كِفَاء", "kifāʾ", "yetme", "orta", ""],
       [424, "كُفْي", "kufy", "yetme", "orta", ""],
       [836, "كَفَاة", "kafā", "yetme", "orta", ""],
-      [837, "كِفَايَة", "kifāya", "yetme", "orta", "Vikisözlük: verbal noun of كَفَى (kafā) (form I)"],
+      [
+        837,
+        "كِفَايَة",
+        "kifāya",
+        "Yeterli olma",
+        "lugat",
+        "Vikisözlük: verbal noun of كَفَى (kafā) (form I) · Luggat"
+      ],
       [838, "كُفِيَّة", "kufiyya", "yetme", "orta", ""],
       [428, "كَفْي", "kafy", "yetme", "orta", ""],
       [429, "كِفْي", "kify", "yetme", "orta", ""]
@@ -1457,7 +1471,177 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "كِفَايَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "KİFÂYE",
+          "yazilis": "ﻛﻔﺎﻳﻪ",
+          "tur": "i.",
+          "koken": "Ar. kifāye",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kifâyet kelimesinin tamlamalarda aldığı şekil",
+              "misaller": [
+                ["Farz-ı kifâye.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "KİFÂYET",
+          "yazilis": "ﻛﻔﺎﻳﺖ",
+          "tur": "i.",
+          "koken": "Ar. kifāyet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yeter miktarda olma, yetişme, elverme, kâfi olma",
+              "misaller": [
+                [" Kifâyet-i müzâkere: Müzâkerenin yeterli olması.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Bir işi yapma husûsunda başkasına ihtiyaç göstermeyecek güçte olma, yeterlik, iktidar",
+              "misaller": [
+                [
+                  "İlmî kifâyeti yoksa da netîceleri sezebilecek pratik ve klasik bir devletçilik ferâseti vardı",
+                  "Sâmiha Ayverdi"
+                ]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Yetmek, yetişmek, kâfi gelmek",
+              "misaller": [
+                ["Bunun için dört saat kifâyet ediyor", "Ömer Seyfeddin"],
+                ["Neden sonra arkadaşları içkinin kifâyet ettiğine karar verdiler", "Ahmet H. Tanpınar"],
+                ["Aldığım emekli maaşı kifâyet etmiyor", "Burhan Felek"]
+              ],
+              "deyim": "Kifâyet etmek"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-kifâyet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi bir kimseye yetiştirmek ve yetişir eylemek manâsınadır ki onunla gayrdan müstagnî eylemekten ibârettir, Fârisîde beside kerden denir; yukâlu: كَفَاهُ مَؤُونَتَهُ يَكْفِيهِ كِفَايَةً إِذَا جَعَلَهَا كَافِيَةً لَهُ Ve bir nesne bir adama yetişir olmak manâsınadır ki sâire ihtiyâcı kalmaz olur; tekûlu: كَفَاكَ الشَّيْءُ إِذَا حَصَلَ بِهِ الْإِسْتِغْنَاءُ عَنْ غَيْرِهِ Pes fil-i mezbûr iki mefûle müteaddî oldukta جَعَلَ manâsını tazmînle “Mühimmini yetiştirdi” manâsına olur ve bir mefûle müteaddî oldukta “Ona kifâyet ve vefâ eyledi” Yanî “Yeter ve yetişir oldu” manâsına olur.",
+              "misaller": [
+                ["كَفَاهُ مَؤُونَتَهُ يَكْفِيهِ كِفَايَةً إِذَا جَعَلَهَا كَافِيَةً لَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kavluhu taâlâ: ﴿وَكَفَا بِاللهِ وَكِيلًا﴾ Yanî “Kâr-sâz olan Hazret-i Hudâ-yı müteâl kâfidir.” Yanî iş bitirmeğe yetişir gayrdan istimdâda hâcet yoktur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْكِفَايَةُ",
+          "okunus": "el-kifâyet",
+          "koken": "كِتَابَةٌ [kitâbet] vezninde"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kifayet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yeterli olma. Yararlılık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "kifâyet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yetme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "اِكْتِفَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İKTİFÂ",
+          "yazilis": "ﺍﻛﺘﻔﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. kifāye t “yetmek”ten iktifā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Olduğu kadarını yeterli bulma, kâfi görme, fazlasını istememe, yetinme",
+              "misaller": [
+                ["Baharın yalnız çemeniyle, gülüyle, lâlesiyle iktifâ etmeyeceğim", "Nâmık Kemal"],
+                ["Şimdilik bu kadarla iktifâ ederek bir fıkra ile yazımı bağlamak istiyorum", "Burhan Felek"],
+                ["Sonra hâdiseleri tâkiple iktifâ etmedik, hâdiselere yön vermeye de çalıştık", "Ergun Göze"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "iktifa",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu dahi bir nesneyi yüzü koyu tersine kapamak manâsınadır; yukâlu: إِكْتَفَأَهُ أَيْ كَبَّهُ وَقَلَبَهُ",
+              "misaller": [
+                ["إِكْتَفَأَهُ أَيْ كَبَّهُ وَقَلَبَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "الإِكْتِفَاءُ",
+          "okunus": "el-iktifâ",
+          "koken": "إِفْتِعَالٌ [iftiâl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "iktifa",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Çanağı kapamak; yukâlu: إِكْتَفَأْتُ الْإِنَاءَ مِثْلُ كَفَأْتُهُ أَيْ قَلَبْتُهُ",
+              "misaller": [
+                ["إِكْتَفَأْتُ الْإِنَاءَ مِثْلُ كَفَأْتُهُ أَيْ قَلَبْتُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِكْتِفَاءُ",
+          "okunus": "el-iktifâ",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 33,
   "kuranda_var": true,

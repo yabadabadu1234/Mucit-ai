@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "طَيْن", "ṭayn", "çamur", "kontrol", ""],
-      [888, "طِين", "ṭīn", "çamur", "kuran", "Kur'ân"],
+      [888, "طِين", "ṭīn", "Çamur, balçık", "lugat", "Kur'ân · Kubbealtı"],
       [889, "طُون", "ṭūn", "çamur", "kontrol", ""],
       [517, "طَان", "ṭān", "çamur", "kontrol", ""],
       [518, "طِيَن", "ṭiyan", "çamur", "kontrol", ""],
@@ -534,7 +534,7 @@
       [837, "طِيَانَة", "ṭiyāna", "çamur olma", "kontrol", ""],
       [427, "طُيُونَة", "ṭuyūna", "çamur olma", "kontrol", ""],
       [428, "طَيْن", "ṭayn", "çamur olma", "kontrol", ""],
-      [919, "طِين", "ṭīn", "çamur", "kuran", "Kur'ân"]
+      [919, "طِين", "ṭīn", "Çamur, balçık", "lugat", "Kur'ân · Kubbealtı"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "طَايُون", "ṭāyūn", "çamur olma türünden şey", "kontrol", ""],
@@ -545,7 +545,7 @@
       [437, "طَيْيَن", "ṭayyan", "çamur olma türünden şey", "kontrol", ""],
       [439, "طَيْن", "ṭayn", "çamur olma türünden şey", "kontrol", ""],
       [840, "طَان", "ṭān", "çamur olma türünden şey", "kontrol", ""],
-      [921, "طِين", "ṭīn", "çamur", "kuran", "Kur'ân"],
+      [921, "طِين", "ṭīn", "Çamur, balçık", "lugat", "Kur'ân · Kubbealtı"],
       [923, "طُون", "ṭūn", "çamur olma türünden şey", "kontrol", ""],
       [447, "طَيِين", "ṭayīn", "çamur olma türünden şey", "kontrol", ""],
       [843, "طِيَن", "ṭiyan", "çamur olma türünden şey", "kontrol", ""],
@@ -876,7 +876,94 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "طِين": [
+        {
+          "eser": "Kamus",
+          "madde": "tin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Balçığa denir ki marûftur. Fârisîde kâf-ı meksûre-i Fârisiyye ile gil derler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطِّينُ",
+          "okunus": "et-tîn",
+          "koken": "tânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Balçık, marûftur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطِّينُ",
+          "okunus": "et-tîn",
+          "koken": "tânın kesri ve meddiyle"
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TIYN – TÎN",
+          "yazilis": "ﻃﻴﻦ",
+          "tur": "i.",
+          "koken": "Ar. ṭіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çamur, balçık",
+              "misaller": [
+                ["Gâh od u su yel ü toprak ferd ferd / Gâh tıyn gâh tıynde pinhân olmuşam", "Eşrefoğlu Rûmî"],
+                ["Eylemişti dâmen-i feyzim melâik secde-gâh / Olmadan terkîb-bend-i mâ u tıyn Âdem henüz", "Leskofçalı Gālib"],
+                ["Dest-i lutfunda hamîri bulmasaydı terbiyet / Sûret-i insâna girmezdi muhakkak mâ ü tıyn", "Osman Şems"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kırmızı aşı boyası",
+              "misaller": [],
+              "deyim": "Tıyn-i ahmer"
+            },
+            {
+              "etiket": "",
+              "tanim": "Sarı aşı boyası",
+              "misaller": [],
+              "deyim": "Tıyn-i asfer"
+            },
+            {
+              "etiket": "",
+              "tanim": "Tebeşir",
+              "misaller": [],
+              "deyim": "Tıyn-i ebyaz"
+            },
+            {
+              "etiket": "",
+              "tanim": "Aşı boyası",
+              "misaller": [],
+              "deyim": "Tıyn-i hadîdî"
+            },
+            {
+              "etiket": "",
+              "tanim": "Hattatlar tarafından tebeşire verilen isim",
+              "misaller": [],
+              "deyim": "Tıyn-i hikmet"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 12,
   "kuranda_var": true,

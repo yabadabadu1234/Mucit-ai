@@ -11,7 +11,7 @@
       [0, "سَرْف", "sarf", "israf etme", "orta", ""],
       [1, "سِرْف", "sirf", "israf etme", "orta", ""],
       [2, "سُرْف", "surf", "israf etme", "orta", ""],
-      [3, "سَرَف", "saraf", "israf etme", "orta", "Vikisözlük: dissipation, waste"],
+      [3, "سَرَف", "saraf", "Boş yere harcama, israf", "lugat", "Vikisözlük: dissipation, waste · Kubbealtı"],
       [4, "سِرَف", "siraf", "israf etme", "orta", ""],
       [5, "سُرُف", "suruf", "israf etme", "orta", ""],
       [6, "سُرُوف", "surūf", "israf etme", "orta", ""],
@@ -97,13 +97,20 @@
       [66, "مُسَارَف", "musāraf", "biriyle karşılıklı israf etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِسْرَاف", "ʾisrāf", "israf ettirme", "orta", "Vikisözlük: verbal noun of أَسْرَفَ (ʔasrafa) (form IV)"]
+      [
+        67,
+        "إِسْرَاف",
+        "ʾisrāf",
+        "Savurganlık",
+        "lugat",
+        "Vikisözlük: verbal noun of أَسْرَفَ (ʔasrafa) (form IV) · Luggat"
+      ]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِسْرَافَة", "ʾisrāfa", "bir kere israf ettirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُسْرِف", "musrif", "israf eden", "kuran", "Kur'ân"],
+      [69, "مُسْرِف", "musrif", "Savurgan", "lugat", "Kur'ân · Luggat"],
       [70, "مُسْرِفَة", "musrifa", "israf ettiren, müennes", "orta", ""],
       [71, "مُسْرِفَان", "musrifān", "israf ettiren, iki", "orta", ""],
       [72, "مُسْرِفَتَان", "musrifatān", "israf ettiren, iki, müennes", "orta", ""],
@@ -383,7 +390,7 @@
       [284, "سَرُفُون", "sarufūn", "her daim israf edenler", "orta", ""],
       [285, "سَرُفِين", "sarufīn", "her daim israf edenler", "orta", ""],
       [286, "سَرُفَات", "sarufāt", "her daim israf edenler, müennes", "orta", ""],
-      [287, "سَرَف", "saraf", "her daim israf eden", "orta", "Vikisözlük: dissipation, waste"],
+      [287, "سَرَف", "saraf", "Boş yere harcama, israf", "lugat", "Vikisözlük: dissipation, waste · Kubbealtı"],
       [288, "سَرَفَة", "sarafa", "her daim israf eden, müennes", "orta", ""],
       [289, "سَرَفَان", "sarafān", "her daim israf eden, iki", "orta", ""],
       [290, "سَرَفَتَان", "sarafatān", "her daim israf eden, iki, müennes", "orta", ""],
@@ -543,7 +550,7 @@
       [435, "سَوْرَف", "sawraf", "israf etme türünden şey", "orta", ""],
       [437, "سَيْرَف", "sayraf", "israf etme türünden şey", "orta", ""],
       [439, "سَرْف", "sarf", "israf etme türünden şey", "orta", ""],
-      [441, "سَرَف", "saraf", "israf etme türünden şey", "orta", "Vikisözlük: dissipation, waste"],
+      [441, "سَرَف", "saraf", "Boş yere harcama, israf", "lugat", "Vikisözlük: dissipation, waste · Kubbealtı"],
       [443, "سِرْف", "sirf", "israf etme türünden şey", "orta", ""],
       [445, "سُرْف", "surf", "israf etme türünden şey", "orta", ""],
       [447, "سَرِيف", "sarīf", "israf etme türünden şey", "orta", ""],
@@ -579,7 +586,7 @@
       [466, "سَرَفَة", "sarafa", "israf etmeler", "orta", ""],
       [467, "سُرَّاف", "surrāf", "israf etmeler", "orta", ""],
       [468, "سَرَاف", "sarāf", "israf etmeler", "orta", ""],
-      [469, "سَرَف", "saraf", "israf etmeler", "orta", "Vikisözlük: dissipation, waste"],
+      [469, "سَرَف", "saraf", "Boş yere harcama, israf", "lugat", "Vikisözlük: dissipation, waste · Kubbealtı"],
       [470, "مَسَارِف", "masārif", "israf etmeler", "orta", ""],
       [471, "مَسَارِيف", "masārīf", "israf etmeler", "orta", ""],
       [472, "سَوَارِف", "sawārif", "israf etmeler", "orta", ""],
@@ -1292,7 +1299,239 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "سَرَف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "SEREF",
+          "yazilis": "ﺳﺮﻒ",
+          "tur": "i.",
+          "koken": "Ar. seref",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Boş yere harcama, israf",
+              "misaller": [
+                ["İndimde medîhalar sereftir / Memdûh değilse medhe ahrâ", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Seref",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesnede hadd ve itidâli tecâvüze denir ki ismdir. Şârih der ki Zemahşerînin beyânına göre سُرْفَةٌ [surfet]-i şecer manâsından mehûzdur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Râgibin beyânına göre alel-akstir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bunun vazı umûm üzere olup badehu infâk ve masrafta gâlib oldu; yukâlu: فِيهِ سَرَفٌ أَيْ ضِدُّ الْقَصْدِ Ve cehl ve gaflet ve hatâ eylemek manâsına masdar olur; yukâlu: سَرِفَهُ سَرَفًا مِنَ الْبَابِ الرَّابِعِ إِذَا أَغْفَلَهُ وَجَهِلَهُ Ve سَرَفُ الْخَمْرِ [sereful-hamr] şarâba idmân eylemekten ibârettir; yukâlu: سَرِفَ فِي الْخَمْرِ إِذَا ضَرِيَ Ve سَرَفٌ [Seref] Muhaddisînden Muhammed b. Hâtimin ceddi ismidir.",
+              "misaller": [
+                ["فِيهِ سَرَفٌ أَيْ ضِدُّ الْقَصْدِ", ""],
+                ["سَرِفَهُ سَرَفًا مِنَ الْبَابِ الرَّابِعِ إِذَا أَغْفَلَهُ وَجَهِلَهُ", ""],
+                ["سَرِفَ فِي الْخَمْرِ إِذَا ضَرِيَ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "سَرَفٌ [seref] Şân ve şeref ve kadr ve itibâr manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "minhul-hadîs: “لاَ يَنْتَهِبُ الرَّجُلُ نُهْبَةً ذَاتَ سَرَفٍ وَهُوَ مُؤْمِنٌ” أَيْ ذَاتَ شَرَفٍ وَقَدْرٍ كَبِيرٍ وَرُوِيَ بِالشِّينِ أَيْضًا Ve Arablar ذَهَبَ مَاءُ الْحَوْضِ سَرَفًا derler, havuzun suyu etrâfından taşıp cereyân eyledikte.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "bu manâ-yı evvelden mehûzdur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّرَفُ",
+          "okunus": "es-seref",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "Seref",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İtidâlden hâric olmak, قَصْدٌ [kasd]ın mukâbilidir ki قَصْدٌ [kasd] itidâl üzere olmaktır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "سَرَفٌ [seref] İgfâl ve hatâya dahi derler; tekûlu: سَرِفْتُ الشَّيْءَ مِنَ الْبَابِ الرَّابِعِ إِذَا أَغْفَلْتَهُ وَجَهِلْتَهُ Yanî terk edip unutsan.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "Asmaî bazı arâbdan hikâyet edip eyitti: Mezbûr ashâbı ile bir mekânda buluşmak vade edip hilâf ettiğinde niçin hilâf ettin dediler,eyitti: مَرَرْتُ بِكُمْ فَسَرِفْتُكُمْ Yanî “Sizinle muvâade ettiğim mekâna vardım ve sizi onda bulamadım.” Ve سَرَفٌ [seref] ضَرَاوَةٌ [darâvet]e yanî itiyâda dahi derler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "fil-hadîsi: “إِنَّ لِلَّحْمِ سَرَفًا كَسَرَفِ الْخَمْرِ” Bazılar eyitti: hadîs-i şerîfte سَرَفٌ [seref] إِسْرَافٌ [isrâf]tandır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلسَّرَفُ",
+          "okunus": "es-seref",
+          "koken": "fethateynle"
+        }
+      ],
+      "إِسْرَاف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İSRAF",
+          "yazilis": "ﺍﺳﺮﺍﻒ",
+          "tur": "i.",
+          "koken": "Ar. seref “haddi aşmak”tan isrāf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gereksiz yere harcama, boşuna sarfetme, lüzûmundan fazla harcama, savurganlık",
+              "misaller": [
+                ["Yakın bir iflâsın korkusu içinde bütün şehir bu isrâfın üzerinde düşünür", "Ahmet H. Tanpınar"],
+                ["Servetini israf eden bir mirasyedi çâresizliği ile sonunda başkalarına avuç açtı", "Sâmiha Ayverdi"],
+                ["● İsrâfat", "ﺍﺳﺮﺍﻓﺎﺕ"],
+                [" Men’-i isrâfat kānûnu: İsrâfı yasaklayan kānun.", ""],
+                [
+                  "Bîçâre çocuğun isrâfat ve sefâhât-ı sâbıkasını unutarak behemehal kendisine merhamet eylerdiniz",
+                  "Ahmed Midhat Efendi"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "israf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Haddi mütecâviz sarf ve harc eylemek manâsınadır, alâ-kavlin haktan gayrı yere mâl sarf ve infâk eylemek manâsınadır; yukâlu: أَسْرَفَ مَالَهُ إِذَا بَذَّرَهُ أَوْ أَنْفَقَهُ فِي غَيْرِ طَاعَةٍ",
+              "misaller": [
+                ["أَسْرَفَ مَالَهُ إِذَا بَذَّرَهُ أَوْ أَنْفَقَهُ فِي غَيْرِ طَاعَةٍ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْرَافُ",
+          "okunus": "el-isrâf",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "israf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mühimm olandan ziyâde harc etmek, تَبْذِيرٌ [tebzîr] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِسْرَافُ",
+          "okunus": "el-isrâf",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "isrâf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Savurganlık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُسْرِف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MÜSRİF",
+          "yazilis": "ﻣﺴﺮﻒ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve i. (Ar. isrāf “haddi aşmak, yanılmak”tan musrif ) İsraf eden, tutumsuz, savurgan (kimse)",
+              "misaller": [
+                ["Halbuki oğlu hodgâm, azimsiz, müsrif, tembel, karaktersiz bir serseriydi", "Ömer Seyfeddin"],
+                ["Müsrifsin, idâreni bilmiyorsun, elbet zarûret çekersin dedi", "Fâik Reşat"],
+                ["Bir müsrifin delice saçtığı servet gibi / Sarfedip gidiyorum günlerimi yâ Rabbi", "Enis B. Koryürek"],
+                ["● Müsrifâne", "ﻣﺴﺮﻓﺎﻧﻪ"],
+                ["sıf. ve zf", "Fars. -āne ekiyle"],
+                ["Savurgan bir kimseye yakışır tarzda, tutumsuzca, müsrifçe. ● Müsrife", "ﻣﺴﺮﻓﻪ"],
+                ["Nisvân-ı müsrife.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "müsrif",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Savurgan",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "müsrif",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İsraf eden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 23,
   "kuranda_var": true,

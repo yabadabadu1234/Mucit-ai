@@ -11,7 +11,7 @@
       [0, "عَنْت", "ʿant", "zorluk", "orta", ""],
       [1, "عِنْت", "ʿint", "zorluk", "orta", ""],
       [2, "عُنْت", "ʿunt", "zorluk", "orta", ""],
-      [3, "عَنَت", "ʿanat", "ağır geldi, yüzü eğildi", "kuran", "Kur'ân"],
+      [3, "عَنَت", "ʿanat", "Bir nesne fâsid ve tebâh olmak", "lugat", "Kur'ân · Kamus"],
       [4, "عِنَت", "ʿinat", "zorluk", "orta", ""],
       [5, "عُنُت", "ʿunut", "zorluk", "orta", ""],
       [6, "عُنُوت", "ʿunūt", "zorluk", "orta", ""],
@@ -390,7 +390,7 @@
       [284, "عَنُتُون", "ʿanutūn", "her daim zor olanlar", "orta", ""],
       [285, "عَنُتِين", "ʿanutīn", "her daim zor olanlar", "orta", ""],
       [286, "عَنُتَات", "ʿanutāt", "her daim zor olanlar, müennes", "orta", ""],
-      [287, "عَنَت", "ʿanat", "ağır geldi, yüzü eğildi", "kuran", "Kur'ân"],
+      [287, "عَنَت", "ʿanat", "Bir nesne fâsid ve tebâh olmak", "lugat", "Kur'ân · Kamus"],
       [288, "عَنَتَة", "ʿanata", "her daim zor olan, müennes", "orta", ""],
       [289, "عَنَتَان", "ʿanatān", "her daim zor olan, iki", "orta", ""],
       [290, "عَنَتَتَان", "ʿanatatān", "her daim zor olan, iki, müennes", "orta", ""],
@@ -550,7 +550,7 @@
       [435, "عَوْنَت", "ʿawnat", "zor olma türünden şey", "orta", ""],
       [437, "عَيْنَت", "ʿaynat", "zor olma türünden şey", "orta", ""],
       [439, "عَنْت", "ʿant", "zor olma türünden şey", "orta", ""],
-      [441, "عَنَت", "ʿanat", "ağır geldi, yüzü eğildi", "kuran", "Kur'ân"],
+      [441, "عَنَت", "ʿanat", "Bir nesne fâsid ve tebâh olmak", "lugat", "Kur'ân · Kamus"],
       [443, "عِنْت", "ʿint", "zor olma türünden şey", "orta", ""],
       [445, "عُنْت", "ʿunt", "zor olma türünden şey", "orta", ""],
       [447, "عَنِيت", "ʿanīt", "zor olma türünden şey", "orta", ""],
@@ -586,7 +586,7 @@
       [466, "عَنَتَة", "ʿanata", "zor olmalar", "orta", ""],
       [467, "عُنَّات", "ʿunnāt", "zor olmalar", "orta", ""],
       [468, "عَنَات", "ʿanāt", "zor olmalar", "orta", ""],
-      [469, "عَنَت", "ʿanat", "ağır geldi, yüzü eğildi", "kuran", "Kur'ân"],
+      [469, "عَنَت", "ʿanat", "Bir nesne fâsid ve tebâh olmak", "lugat", "Kur'ân · Kamus"],
       [470, "مَعَانِت", "maʿānit", "zor olmalar", "orta", ""],
       [471, "مَعَانِيت", "maʿānīt", "zor olmalar", "orta", ""],
       [472, "عَوَانِت", "ʿawānit", "zor olmalar", "orta", ""],
@@ -879,7 +879,63 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "عَنَت": [
+        {
+          "eser": "Kamus",
+          "madde": "ânet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesne fâsid ve tebâh olmak manâsınadır; yukâlu: عَنِتَ الشَّيْءُ عَنَتًا مِنَ الْبَابِ الرَّابِعِ إِذَا فَسَدَ Ve عَنَتٌ [anet] İsm ve günâh manâsına ismdir; yukâlu: فِيهِ عَنَتٌ أَي اِثْمٌ Ve helâk manâsınadır; yukâlu: وَقَعَ فِي الْعَنَتِ أَيِ الْهَلاَكِ Ve insâna bir zahmet ve meşakkat uğramak manâsınadır; yukâlu: عَنِتَ فُلاَنٌ عَنَتًا إِذَا دَخَلَ عَلَيْهِ الْمَشَّقَةُ Ve bir kimse bir şiddet ve mihnete sataşmak manâsınadır; yukâlu: عَنِتَ الرَّجُلُ إِذَا لَقِيَ الشِّدَّةَ Ve zinâ eylemek manâsınadır; ve minhu kavluhu taâlâ: ﴿لِمَنْ خَشِيَ الْعَنَتَ مِنْكُمْ﴾ أَيِ الْفُجُورَ وَالزِّنَا Ve bir nesneye vehy ve zaf gelip kırılmak manâsınadır; yukâlu: عَنِتَ الْعَظْمُ إِذَا وَهَى وَانْكَسَرَ Ve günâh kazanmak manâsınadır; yukâlu: عَنِتَ الرَّجُلُ إِذَا اكْتَسَبَ مَأْثَمًا Ve kırık kemik sarılıp onulduktan sonra tekrâr bir sebeble kırılmak manâsınadır; yukâlu: عَنِتَ اْلعَظْمُ إِذَا انهَاضَ بَعْدَ الْجَبْرِ",
+              "misaller": [
+                ["عَنِتَ الشَّيْءُ عَنَتًا مِنَ الْبَابِ الرَّابِعِ إِذَا فَسَدَ", ""],
+                ["فِيهِ عَنَتٌ أَي اِثْمٌ", ""],
+                ["وَقَعَ فِي الْعَنَتِ أَيِ الْهَلاَكِ", ""],
+                ["عَنِتَ فُلاَنٌ عَنَتًا إِذَا دَخَلَ عَلَيْهِ الْمَشَّقَةُ", ""],
+                ["عَنِتَ الرَّجُلُ إِذَا لَقِيَ الشِّدَّةَ", ""],
+                ["عَنِتَ الْعَظْمُ إِذَا وَهَى وَانْكَسَرَ", ""],
+                ["عَنِتَ الرَّجُلُ إِذَا اكْتَسَبَ مَأْثَمًا", ""],
+                ["عَنِتَ اْلعَظْمُ إِذَا انهَاضَ بَعْدَ الْجَبْرِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعَنَتُ",
+          "okunus": "el-anet",
+          "koken": "fethateynle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "ânet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Günâh, إِثْمٌ [isamp;m] manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "günâh etmek manâsına da gelir; yukâlu: عَنِتَ الرَّجُلُ مِنَ الْبَابِ الرَّابِعِ Ve kâlallâhu taâlâ: ﴿عَزِيزٌ عَلَيْهِ مَا عَنِتُّمْ﴾ (التوبة 128) ve kavluhu: ﴿ذَلِكَ لِمَنْ خَشِيَ الْعَنَتَ مِنْكُمْ﴾ (النساء 25) يَعْنِي الْفُجُورَ وَالزِّنَا Ve عَنَتٌ [anet] Bir meşakkatli nesneye düşmeğe dahi derler; yukâlu: عَنِتَ الرَّجُلُ Ve اَلْإِعْنَاتُ [el-inât] (hemzenin kesriyle) Meşakkate düşürmek; yukâlu: أَعْنَتَهُ غَيْرُهُ Ve إِعْنَاتٌ [inât] Ufanmış kemiği onulduktan sonra bir nesne erişip geri ufatmağa derler; yukâlu: أَعْنَتَ الشَّيْءُ الْعَظْمَ إِذَا أَصَابَهُ فَهَاضَهُ",
+              "misaller": [
+                ["عَنِتَ الرَّجُلُ مِنَ الْبَابِ الرَّابِعِ", ""],
+                ["عَنِتَ الرَّجُلُ", ""],
+                ["أَعْنَتَهُ غَيْرُهُ", ""],
+                ["أَعْنَتَ الشَّيْءُ الْعَظْمَ إِذَا أَصَابَهُ فَهَاضَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْعَنَتُ",
+          "okunus": "el-anet",
+          "koken": "fethateynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

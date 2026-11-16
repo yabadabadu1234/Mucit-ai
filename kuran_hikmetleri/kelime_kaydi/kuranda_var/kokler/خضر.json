@@ -334,13 +334,13 @@
       [240, "مِخْضَرَتَان", "miḫḍaratān", "yeşerme âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَخْضَر", "ʾaḫḍar", "yeşil", "kuran", "Vikisözlük: green; verdant"],
+      [241, "أَخْضَر", "ʾaḫḍar", "Yeşil", "lugat", "Vikisözlük: green; verdant · Luggat"],
       [242, "أَخْضَرَان", "ʾaḫḍarān", "daha çok yeşeren, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "خُضْرَى", "ḫuḍrā", "daha çok yeşeren", "orta", ""],
       [244, "خُضْرَيَان", "ḫuḍrayān", "daha çok yeşeren, iki", "orta", ""],
-      [245, "خَضْرَاء", "ḫaḍrāʾ", "daha çok yeşeren", "orta", ""],
+      [245, "خَضْرَاء", "ḫaḍrāʾ", "Yeşil", "lugat", "Kubbealtı"],
       [246, "خَضْرَاآن", "ḫaḍrāʾān", "daha çok yeşeren, iki", "orta", ""]
     ],
     "tasğîr · sülâsî": [
@@ -1175,7 +1175,85 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَخْضَر": [
+        {
+          "eser": "Luggat",
+          "madde": "ahzar",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yeşil",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "AHDAR – AHZAR",
+          "yazilis": "ﺍﺧﻀﺮ",
+          "tur": "sıf.",
+          "koken": "Ar. ḫaḍr – ḫuḍret “yeşermek”ten aḫḍar",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yeşil, yemyeşil",
+              "misaller": [
+                ["Hattı hem çünki cennet-i ahdardır", "Kadı Burhâneddin"],
+                ["Onu hem sulaya sakkā-i nîsan / Döşeye ferş-i ahdar der-gülistan", "Şemseddin Sivâsî"],
+                ["Çemen bir bahr-i ahdar şeklini aldı, şöyle kim…", "Recâîzâde M. Ekrem"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "خَضْرَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "HADRÂ – HAZRÂ",
+          "yazilis": "ﺧﻀﺮﺍﺀ",
+          "tur": "sıf.",
+          "koken": "Ar. ḫaḍr – ḫuḍre t “yeşermek”ten aḫḍar ’ın müennes şekli ḫaḍrā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Yeşil",
+              "misaller": [
+                ["Dıraht-ı hadrâ.", ""],
+                ["Kubbe-i hadrâ.", ""],
+                ["Havâ ârâyiş-i gülzâra oldu çehre-güşâ / Bahâr gülşene giydirdi hulle-i hadrâ", "Fuzûlî"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "i.",
+              "tanim": "Yenen yeşillik, sebze",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "“Çöplük bitkisi” mec",
+              "misaller": [],
+              "deyim": "Hadrâ-i dimen"
+            },
+            {
+              "etiket": "",
+              "tanim": "Mehpeyker gibi seyyiat ile perverde olmuş bir hadrâ-i dimen (Nâmık Kemal)",
+              "misaller": [],
+              "deyim": "Orta malı olan, soysuz güzel kadın"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 8,
   "kuranda_var": true,

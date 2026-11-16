@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "طَمْث", "ṭamṯ", "âdet görme", "orta", "Vikisözlük: menstruation"],
+      [0, "طَمْث", "ṭamṯ", "Âdet görme, aybaşı", "lugat", "Vikisözlük: menstruation · Kubbealtı"],
       [1, "طِمْث", "ṭimṯ", "âdet görme", "orta", ""],
       [2, "طُمْث", "ṭumṯ", "âdet görme", "orta", ""],
       [3, "طَمَث", "ṭamaṯ", "âdet görme", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "طَمَثُون", "ṭamaṯūn", "her daim âdet görenler", "orta", ""],
       [292, "طَمَثِين", "ṭamaṯīn", "her daim âdet görenler", "orta", ""],
       [293, "طَمَثَات", "ṭamaṯāt", "her daim âdet görenler, müennes", "orta", ""],
-      [294, "طَمْث", "ṭamṯ", "her daim âdet gören", "orta", "Vikisözlük: menstruation"],
+      [294, "طَمْث", "ṭamṯ", "Âdet görme, aybaşı", "lugat", "Vikisözlük: menstruation · Kubbealtı"],
       [295, "طَمْثَة", "ṭamṯa", "her daim âdet gören, müennes", "orta", ""],
       [296, "طَمْثَان", "ṭamṯān", "her daim âdet gören, iki", "orta", ""],
       [297, "طَمْثَتَان", "ṭamṯatān", "her daim âdet gören, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "طَمَاثَة", "ṭamāṯa", "âdet görme", "orta", ""],
       [426, "طِمَاثَة", "ṭimāṯa", "âdet görme", "orta", ""],
       [427, "طُمُوثَة", "ṭumūṯa", "âdet görme", "orta", ""],
-      [428, "طَمْث", "ṭamṯ", "âdet görme", "orta", "Vikisözlük: menstruation"],
+      [428, "طَمْث", "ṭamṯ", "Âdet görme, aybaşı", "lugat", "Vikisözlük: menstruation · Kubbealtı"],
       [429, "طِمْث", "ṭimṯ", "âdet görme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُطْمُوثَة", "ʾuṭmūṯa", "âdet görme türünden şey", "orta", ""],
       [435, "طَوْمَث", "ṭawmaṯ", "âdet görme türünden şey", "orta", ""],
       [437, "طَيْمَث", "ṭaymaṯ", "âdet görme türünden şey", "orta", ""],
-      [439, "طَمْث", "ṭamṯ", "âdet görme türünden şey", "orta", "Vikisözlük: menstruation"],
+      [439, "طَمْث", "ṭamṯ", "Âdet görme, aybaşı", "lugat", "Vikisözlük: menstruation · Kubbealtı"],
       [441, "طَمَث", "ṭamaṯ", "âdet görme türünden şey", "orta", ""],
       [443, "طِمْث", "ṭimṯ", "âdet görme türünden şey", "orta", ""],
       [445, "طُمْث", "ṭumṯ", "âdet görme türünden şey", "orta", ""],
@@ -743,7 +743,72 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "طَمْث": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TAMS",
+          "yazilis": "ﻃﻤﺚ",
+          "tur": "i.",
+          "koken": "Ar. ṭamѕ",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Âdet görme, aybaşı",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "tams",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kızın bekâretini izâle eylemek manâsınadır; yukâlu: طَمَثَهَا طَمْثًا مِنَ الْبَابِ الثَّانِي وَالأَوَّلِ إِذَا افْتَضَّهَا",
+              "misaller": [
+                ["طَمَثَهَا طَمْثًا مِنَ الْبَابِ الثَّانِي وَالأَوَّلِ إِذَا افْتَضَّهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّمْثُ",
+          "okunus": "et-tamsamp;",
+          "koken": "مَكْثٌ [meksamp;] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tams",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kızın bekâretin almak; yukâlu: طَمَثَهَا يَطْمُثُهَا وَيَطْمِثُهَا مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي أَيْضًا إِذَا افْتَضَّهَا Ebû Amr eyitti: طَمْثٌ [tamsamp;] mutlakan bir nesneye değmeğe derler, pes طَمْثٌ [tamsamp;] her değilen yerde istimâl olunur; yukâlu: مَا طَمَثَ ذَلِكَ الْمَرْتَعَ أَحَدٌ وَمَا طَمَثَتْ هَذِهِ النَّاقَةَ حَبْلٌ derler, ey: مَا مَسَّهَا عِقَالٌ Ve مَرْتَعٌ [merta] otlağa ve عِقَالٌ [ikâl] deve dizi bağına derler.",
+              "misaller": [
+                ["طَمَثَهَا يَطْمُثُهَا وَيَطْمِثُهَا مِنَ الْبَابِ الْأَوَّلِ وَالثَّانِي أَيْضًا إِذَا افْتَضَّهَا", ""],
+                ["مَا طَمَثَ ذَلِكَ الْمَرْتَعَ أَحَدٌ وَمَا طَمَثَتْ هَذِهِ النَّاقَةَ حَبْلٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "طَمْثٌ [tamsamp;] Avret hayz görmeğe dahi derler; yukâlu: طَمَثَتِ الْمَرْأَةُ تَطْمُثُ مِنَ الْبَابِ الْأَوَّلِ Ve طَمِثَتْ dahi bâb-ı râbiden lügattır.",
+              "misaller": [
+                ["طَمَثَتِ الْمَرْأَةُ تَطْمُثُ مِنَ الْبَابِ الْأَوَّلِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلطَّمْثُ",
+          "okunus": "et-tamsamp;",
+          "koken": "tânın fethi ve mîmin sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

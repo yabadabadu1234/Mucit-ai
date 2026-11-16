@@ -289,7 +289,14 @@
       [516, "اِنْسِوَّاك", "insiwwāk", "aşırı ibadet etme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "نَاسِك", "nāsik", "ibadet eden", "orta", ""],
+      [
+        213,
+        "نَاسِك",
+        "nāsik",
+        "Dînine bağlı olup ibâdet eden, dînî emirleri yerine getiren (kimse)",
+        "lugat",
+        "Kubbealtı"
+      ],
       [214, "نَاسِكَة", "nāsika", "ibadet eden, müennes", "orta", ""],
       [215, "نَاسِكَان", "nāsikān", "ibadet eden, iki", "orta", ""],
       [216, "نَاسِكَتَان", "nāsikatān", "ibadet eden, iki, müennes", "orta", ""],
@@ -1005,7 +1012,45 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "نَاسِك": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "NÂSİK",
+          "yazilis": "ﻧﺎﺳﻚ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve i. (Ar. nesk “kulluk etmek”ten nāsik ) Dînine bağlı olup ibâdet eden, dînî emirleri yerine getiren (kimse)",
+              "misaller": [
+                ["Sâlik-i nâsik eğer göre yüzünü bir dem / Hasretinden dudağının yeri meyhâne ola", "Ahmedî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "nasik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Âbid manâsınadır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلنَّاسِكُ",
+          "okunus": "en-nâsik",
+          "koken": "sînin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 7,
   "kuranda_var": true,

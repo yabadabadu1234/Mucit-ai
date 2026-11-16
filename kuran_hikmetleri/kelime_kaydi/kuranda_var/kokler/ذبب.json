@@ -16,7 +16,7 @@
       [5, "ذُبّ", "ẕubb", "kovma", "orta", ""],
       [6, "ذُبُوب", "ẕubūb", "kovma", "orta", ""],
       [7, "ذِبَاب", "ẕibāb", "kovma", "orta", "Vikisözlük: flies, fly (insect)"],
-      [8, "ذُبَاب", "ẕubāb", "kovma", "orta", "Vikisözlük: flies, fly (insect)"],
+      [8, "ذُبَاب", "ẕubāb", "Sinek", "lugat", "Vikisözlük: flies, fly (insect) · Kubbealtı"],
       [9, "ذَبَاب", "ẕabāb", "kovma", "orta", "Vikisözlük: flies, fly (insect)"],
       [10, "ذَبَابَة", "ẕabāba", "kovma", "orta", "Vikisözlük: fly (insect)"],
       [11, "ذُبُوبَة", "ẕubūba", "kovma", "orta", ""],
@@ -439,8 +439,15 @@
       [312, "ذَبَّانُون", "ẕabbānūn", "her daim kovanlar", "orta", ""],
       [313, "ذَبَّانِين", "ẕabbānīn", "her daim kovanlar", "orta", ""],
       [314, "ذَبَّانَات", "ẕabbānāt", "her daim kovanlar, müennes", "orta", ""],
-      [315, "ذُبَاب", "ẕubāb", "her daim kovan", "orta", "Vikisözlük: flies, fly (insect)"],
-      [316, "ذُبَابَة", "ẕubāba", "her daim kovan, müennes", "orta", "Vikisözlük: fly (insect)"],
+      [315, "ذُبَاب", "ẕubāb", "Sinek", "lugat", "Vikisözlük: flies, fly (insect) · Kubbealtı"],
+      [
+        316,
+        "ذُبَابَة",
+        "ẕubāba",
+        "Medyûn zimmetinde kalan borç bakiyyesine denir",
+        "lugat",
+        "Vikisözlük: fly (insect) · Kamus"
+      ],
       [317, "ذُبَابَان", "ẕubābān", "her daim kovan, iki", "orta", ""],
       [318, "ذُبَابَتَان", "ẕubābatān", "her daim kovan, iki, müennes", "orta", ""],
       [319, "ذُبَابُون", "ẕubābūn", "her daim kovanlar", "orta", ""],
@@ -1314,7 +1321,57 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "ذُبَاب": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ZÜBAB",
+          "yazilis": "ﺫﺑﺎﺏ",
+          "tur": "i.",
+          "koken": "Ar. ẕubāb",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sinek",
+              "misaller": [
+                [" Tanîn-i zübab: Sinek vızıltısı.", ""],
+                ["Ruh u lebin ko gönül kim zübâb u pervâne / Çün ölümü gele şem’ ü şarâb ile oynar", "Necâtî Bey"],
+                ["Hâlden hâlî değildir ey şeker-leb leblerin / Kanda kand olsa anın birkaç zübâb üstündedir", "Zâtî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "ذُبَابَة": [
+        {
+          "eser": "Kamus",
+          "madde": "ez-zubâbet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Medyûn zimmetinde kalan borç bakiyyesine denir; yukâlu: عَلَى فُلاَنٍ ذُبَابَةٌ مِنْ دَيْنٍ أَيْ بَقِيَّةٌ Ve Ece nâm cebel kurbünde bir mevzi adıdır.",
+              "misaller": [
+                ["عَلَى فُلاَنٍ ذُبَابَةٌ مِنْ دَيْنٍ أَيْ بَقِيَّةٌ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Yemende Aden-i Ebyen nâm cezîrede bir mevzi adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلذُّبَابَةُ",
+          "okunus": "ez-zubâbet",
+          "koken": "ثُمَامَةٌ [samp;umâmet] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

@@ -22,7 +22,14 @@
       [11, "هُلُوعَة", "hulūʿa", "ürkme", "orta", ""],
       [12, "هِلَاعَة", "hilāʿa", "ürkme", "orta", ""],
       [13, "هَلِيع", "halīʿ", "ürkme", "orta", ""],
-      [14, "هَلُوع", "halūʿ", "çok hırslı", "kuran", "Kur'ân"],
+      [
+        14,
+        "هَلُوع",
+        "halūʿ",
+        "Şol kimseye denir ki şerr ve kerîhe vukûundan ceza ve feza edip ve cem-i mâla…",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [15, "هَلَعَان", "halaʿān", "ürkme", "orta", ""],
       [16, "هُلْعَان", "hulʿān", "ürkme", "orta", ""],
       [17, "هِلْعَان", "hilʿān", "ürkme", "orta", ""],
@@ -362,14 +369,21 @@
       [263, "هَلِيعُون", "halīʿūn", "her daim ürkenler", "orta", ""],
       [264, "هَلِيعِين", "halīʿīn", "her daim ürkenler", "orta", ""],
       [265, "هَلِيعَات", "halīʿāt", "her daim ürkenler, müennes", "orta", ""],
-      [266, "هَلُوع", "halūʿ", "çok hırslı", "kuran", "Kur'ân"],
+      [
+        266,
+        "هَلُوع",
+        "halūʿ",
+        "Şol kimseye denir ki şerr ve kerîhe vukûundan ceza ve feza edip ve cem-i mâla…",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [267, "هَلُوعَة", "halūʿa", "her daim ürken, müennes", "orta", ""],
       [268, "هَلُوعَان", "halūʿān", "her daim ürken, iki", "orta", ""],
       [269, "هَلُوعَتَان", "halūʿatān", "her daim ürken, iki, müennes", "orta", ""],
       [270, "هَلُوعُون", "halūʿūn", "her daim ürkenler", "orta", ""],
       [271, "هَلُوعِين", "halūʿīn", "her daim ürkenler", "orta", ""],
       [272, "هَلُوعَات", "halūʿāt", "her daim ürkenler, müennes", "orta", ""],
-      [273, "هَلِع", "haliʿ", "her daim ürken", "orta", ""],
+      [273, "هَلِع", "haliʿ", "Bî-sabr olan kimse", "lugat", "Vankulu"],
       [274, "هَلِعَة", "haliʿa", "her daim ürken, müennes", "orta", ""],
       [275, "هَلِعَان", "haliʿān", "her daim ürken, iki", "orta", ""],
       [276, "هَلِعَتَان", "haliʿatān", "her daim ürken, iki, müennes", "orta", ""],
@@ -444,7 +458,14 @@
       [336, "هَلَّاعَة", "hallāʿa", "pek çok ürken", "orta", ""],
       [337, "هَلَّاعَتَان", "hallāʿatān", "pek çok ürken, iki", "orta", ""],
       [338, "هَلَّاعَات", "hallāʿāt", "pek çok ürkenler, müennes", "orta", ""],
-      [339, "هَلُوع", "halūʿ", "çok hırslı", "kuran", "Kur'ân"],
+      [
+        339,
+        "هَلُوع",
+        "halūʿ",
+        "Şol kimseye denir ki şerr ve kerîhe vukûundan ceza ve feza edip ve cem-i mâla…",
+        "lugat",
+        "Kur'ân · Kamus"
+      ],
       [340, "هَلُوعَة", "halūʿa", "çok ürken, müennes", "orta", ""],
       [341, "هَلُوعَان", "halūʿān", "çok ürken, iki", "orta", ""],
       [342, "هَلُوعَتَان", "halūʿatān", "çok ürken, iki, müennes", "orta", ""],
@@ -1332,7 +1353,96 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "هَلُوع": [
+        {
+          "eser": "Kamus",
+          "madde": "helu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Şol kimseye denir ki şerr ve kerîhe vukûundan ceza ve feza edip ve cem-i mâla harîs ve mütehâlik ve bahîl ola. Alâ-kavlin pek teng-meşreb olmakla mesâib ve beliyyât hengâmında kalbi sıkılıp sabrsızlık ede ki murâd beliyye zuhûrunda telâş ve ıztırâb edip nâsa zacret ve mihnetinden dem-be-dem şikâyetlenir olan kimsedir; yukâlu: رَجُلٌ هَلُوعٌ إِذَا كَانَ يَفْزَعُ مِنَ الشَّرِّ وَيَحْرِصُ وَيَشِحُّ عَلَى الْمَالِ أَوِ الضَّجُورُ لاَ يَصْبِرُ عَلَى الْمَصَائِبِ Şârihin beyânına göre ﴿إِنَّ الْإِنْسَانَ خُلِقَ هَلُوعًا﴾ âyetinin zeylinde vârid olan ﴿إِذَا مَسَّهُ الشَّرُّ جَزُوعًا وَإِذَا مَسَّهُ الْخَيْرُ مَنُوعًا﴾ âyet-i kerîmeler هَلُوعٌ [helû]un tefsîridir.",
+              "misaller": [
+                [
+                  "رَجُلٌ هَلُوعٌ إِذَا كَانَ يَفْزَعُ مِنَ الشَّرِّ وَيَحْرِصُ وَيَشِحُّ عَلَى الْمَالِ أَوِ الضَّجُورُ لاَ يَصْبِرُ عَلَى الْمَصَائِبِ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَلُوعُ",
+          "okunus": "el-helû",
+          "koken": "صَبُورٌ [sabûr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "helu",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bi-manâhu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kad câe fil-hadîsi: “مِنْ شَرِّ مَا أُوتِيَ الْعَبْدُ شُحٌّ هَالِعٌ وَجُبْنٌ خَالِعٌ” Yanî şol buhldür insâna verilen yaramaz nesnelerin biri ki kıllet-i sabrı ve hüznü mûcib ola.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "بُخْلٌ [buhl]u هَالِعٌ [hâli] ile sıfatlamak, يَوْمٌ [yevm]i عَاصِفٌ [asif]le ve لَيْلٌ [leyl]i نَائِمٌ [nâim] ile sıfatlamak gibidir, يَوْمٌ عَاصِفٌ ve لَيْلٌ نَائِمٌ dedikleri kelâmda.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "عَاصِفٌ [âsif] şedîd olan yele derler pes işbu hadîs-i şerîf onu müşir olur ki fil-i mezbûrda sıfat فَاعِلٌ [fâil] vezni üzere dahi gele.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "bu dahi muhtemeldir ki هَالِعٌ [hâli]in فَاعِلٌ [fâil] vezni üzere gelmesi خَالِعٌ [hâli] kelimesine münâsebetten ötürü ola.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "خَالِعٌ [hâli]den murâd şol havftır ki kalbi kopara, pür-ziyâde şiddetinden.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَلُوعُ",
+          "okunus": "el-helû",
+          "koken": "hânın fethi ve lâmın zammı ve meddiyle"
+        }
+      ],
+      "هَلِع": [
+        {
+          "eser": "Vankulu",
+          "madde": "heli",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bî-sabr olan kimse.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْهَلِعُ",
+          "okunus": "el-heli",
+          "koken": "hânın fethi ve lâmın kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

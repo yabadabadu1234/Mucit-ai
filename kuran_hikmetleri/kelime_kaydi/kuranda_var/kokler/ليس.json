@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "لَيْس", "lays", "değil", "kontrol", ""],
-      [888, "لِيس", "līs", "değil", "kontrol", ""],
+      [888, "لِيس", "līs", "Cemi", "lugat", "Vankulu"],
       [889, "لُوس", "lūs", "değil", "kontrol", ""],
       [517, "لَاس", "lās", "değil", "kontrol", ""],
       [518, "لِيَس", "liyas", "değil", "kontrol", ""],
@@ -534,7 +534,7 @@
       [837, "لِيَاسَة", "liyāsa", "değil olma", "kontrol", ""],
       [427, "لُيُوسَة", "luyūsa", "değil olma", "kontrol", ""],
       [428, "لَيْس", "lays", "değil olma", "kontrol", ""],
-      [919, "لِيس", "līs", "değil olma", "kontrol", ""]
+      [919, "لِيس", "līs", "Cemi", "lugat", "Vankulu"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "لَايُوس", "lāyūs", "değil olma türünden şey", "kontrol", ""],
@@ -545,7 +545,7 @@
       [437, "لَيْيَس", "layyas", "değil olma türünden şey", "kontrol", ""],
       [439, "لَيْس", "lays", "değil olma türünden şey", "kontrol", ""],
       [840, "لَاس", "lās", "değil olma türünden şey", "kontrol", ""],
-      [921, "لِيس", "līs", "değil olma türünden şey", "kontrol", ""],
+      [921, "لِيس", "līs", "Cemi", "lugat", "Vankulu"],
       [923, "لُوس", "lūs", "değil olma türünden şey", "kontrol", ""],
       [447, "لَيِيس", "layīs", "değil olma türünden şey", "kontrol", ""],
       [843, "لِيَس", "liyas", "değil olma türünden şey", "kontrol", ""],
@@ -1284,7 +1284,33 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "لِيس": [
+        {
+          "eser": "Vankulu",
+          "madde": "lis",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Ferrâ eyitti: اَللِّيسُ [el-lîs] şol devedir ki ne denli yük vursan götürür.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَللِّيسُ",
+          "okunus": "el-lîs",
+          "koken": "lâmın kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 89,
   "kuranda_var": true,

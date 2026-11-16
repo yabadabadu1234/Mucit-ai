@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "جَيْد", "cayd", "boyun", "kontrol", ""],
-      [888, "جِيد", "cīd", "boyun", "kuran", "Kur'ân"],
+      [888, "جِيد", "cīd", "Boyuna denir", "lugat", "Kur'ân · Kamus"],
       [889, "جُود", "cūd", "boyun", "kontrol", ""],
       [517, "جَاد", "cād", "boyun", "kontrol", ""],
       [518, "جِيَد", "ciyad", "boyun", "kontrol", ""],
@@ -534,7 +534,7 @@
       [837, "جِيَادَة", "ciyāda", "boyun olma", "kontrol", ""],
       [427, "جُيُودَة", "cuyūda", "boyun olma", "kontrol", ""],
       [428, "جَيْد", "cayd", "boyun olma", "kontrol", ""],
-      [919, "جِيد", "cīd", "boyun", "kuran", "Kur'ân"]
+      [919, "جِيد", "cīd", "Boyuna denir", "lugat", "Kur'ân · Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "جَايُود", "cāyūd", "boyun olma türünden şey", "kontrol", ""],
@@ -545,7 +545,7 @@
       [437, "جَيْيَد", "cayyad", "boyun olma türünden şey", "kontrol", ""],
       [439, "جَيْد", "cayd", "boyun olma türünden şey", "kontrol", ""],
       [840, "جَاد", "cād", "boyun olma türünden şey", "kontrol", ""],
-      [921, "جِيد", "cīd", "boyun", "kuran", "Kur'ân"],
+      [921, "جِيد", "cīd", "Boyuna denir", "lugat", "Kur'ân · Kamus"],
       [923, "جُود", "cūd", "boyun olma türünden şey", "kontrol", ""],
       [447, "جَيِيد", "cayīd", "boyun olma türünden şey", "kontrol", ""],
       [843, "جِيَد", "ciyad", "boyun olma türünden şey", "kontrol", ""],
@@ -884,7 +884,65 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "جِيد": [
+        {
+          "eser": "Kamus",
+          "madde": "cid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Boyuna denir, عُنُقٌ [unuk] manâsına, alâ-kavlin boyunda kılâde geçirecek yere yâhûd boyunun önüne denir, مُقَدَّمُ الْعُنُقِ [mukaddemul-unuk] manâsına. Cemi أَجْيَادٌ [ecyâd] ve جُيُودٌ [cuyûd] gelir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "جِيدٌ [cîd] Hatunların yünden olan küçük iç libâsına denir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِيدُ",
+          "okunus": "el-cîd",
+          "koken": "cîmin kesriyle"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "cid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yâî olmakla an-karîb zikr olunur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِيدُ",
+          "okunus": "el-cîd",
+          "koken": "cîmin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "cid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "cîmin kesriyle) Boyun, عُنُقٌ [unuk] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْجِيدُ",
+          "okunus": "el-cîd",
+          "koken": ""
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

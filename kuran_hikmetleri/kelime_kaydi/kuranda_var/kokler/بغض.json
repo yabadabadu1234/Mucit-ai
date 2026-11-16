@@ -21,7 +21,7 @@
       [10, "بَغَاضَة", "bağāḍa", "düşmanlık", "orta", ""],
       [11, "بُغُوضَة", "buğūḍa", "düşmanlık", "orta", ""],
       [12, "بِغَاضَة", "biğāḍa", "düşmanlık", "orta", ""],
-      [13, "بَغِيض", "bağīḍ", "düşmanlık", "orta", ""],
+      [13, "بَغِيض", "bağīḍ", "Herkese karşı kin besleyen, insanları sevmeyen (kimse", "lugat", "Kubbealtı"],
       [14, "بَغُوض", "bağūḍ", "düşmanlık", "orta", ""],
       [15, "بَغَضَان", "bağaḍān", "düşmanlık", "orta", ""],
       [16, "بُغْضَان", "buğḍān", "düşmanlık", "orta", ""],
@@ -326,7 +326,14 @@
       [219, "بَاغِضَات", "bāğiḍāt", "düşman olanlar, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَبْغُوض", "mabğūḍ", "düşman olunan", "orta", ""],
+      [
+        220,
+        "مَبْغُوض",
+        "mabğūḍ",
+        "İçten içe düşmanlık beslenen, nefret edilen, kin bağlanan, buğzedilen (kimse)",
+        "lugat",
+        "Kubbealtı"
+      ],
       [221, "مَبْغُوضَة", "mabğūḍa", "düşman olunan, müennes", "orta", ""],
       [222, "مَبْغُوضَان", "mabğūḍān", "düşman olunan, iki", "orta", ""],
       [223, "مَبْغُوضَتَان", "mabğūḍatān", "düşman olunan, iki, müennes", "orta", ""],
@@ -383,7 +390,7 @@
       [258, "بِغْضَتَان", "biğḍatān", "düşman olma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "بَغِيض", "bağīḍ", "her daim düşman olan", "orta", ""],
+      [259, "بَغِيض", "bağīḍ", "Herkese karşı kin besleyen, insanları sevmeyen (kimse", "lugat", "Kubbealtı"],
       [260, "بَغِيضَة", "bağīḍa", "her daim düşman olan, müennes", "orta", ""],
       [261, "بَغِيضَان", "bağīḍān", "her daim düşman olan, iki", "orta", ""],
       [262, "بَغِيضَتَان", "bağīḍatān", "her daim düşman olan, iki, müennes", "orta", ""],
@@ -507,7 +514,7 @@
       [378, "مِبْغِيضُون", "mibğīḍūn", "düşman olmaya düşkünler", "orta", ""],
       [379, "مِبْغِيضِين", "mibğīḍīn", "düşman olmaya düşkünler", "orta", ""],
       [380, "مِبْغِيضَات", "mibğīḍāt", "düşman olmaya düşkünler, müennes", "orta", ""],
-      [381, "بَغِيض", "bağīḍ", "çok düşman olan", "orta", ""],
+      [381, "بَغِيض", "bağīḍ", "Herkese karşı kin besleyen, insanları sevmeyen (kimse", "lugat", "Kubbealtı"],
       [382, "بَغِيضَة", "bağīḍa", "çok düşman olan, müennes", "orta", ""],
       [383, "بَغِيضَان", "bağīḍān", "çok düşman olan, iki", "orta", ""],
       [384, "بَغِيضَتَان", "bağīḍatān", "çok düşman olan, iki, müennes", "orta", ""],
@@ -574,7 +581,7 @@
       [441, "بَغَض", "bağaḍ", "düşman olma türünden şey", "orta", ""],
       [443, "بِغْض", "biğḍ", "düşman olma türünden şey", "orta", ""],
       [445, "بُغْض", "buğḍ", "düşman olma türünden şey", "orta", ""],
-      [447, "بَغِيض", "bağīḍ", "düşman olma türünden şey", "orta", ""],
+      [447, "بَغِيض", "bağīḍ", "Herkese karşı kin besleyen, insanları sevmeyen (kimse", "lugat", "Kubbealtı"],
       [449, "بِغَض", "biğaḍ", "düşman olma türünden şey", "orta", ""],
       [451, "بُغُض", "buğuḍ", "düşman olma türünden şey", "orta", ""],
       [453, "بَغَاض", "bağāḍ", "düşman olma türünden şey", "orta", ""]
@@ -2333,7 +2340,49 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "بَغِيض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "BAGİZ",
+          "yazilis": "ﺑﻐﻴﺾ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve i. (Ar. buġż “kin bağlamak, nefret etmek”ten baġіż ) Herkese karşı kin besleyen, insanları sevmeyen (kimse)",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مَبْغُوض": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MEBGUZ",
+          "yazilis": "ﻣﺒﻐﻮﺽ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "ve i. (Ar. buġż “kin bağlamak, nefret etmek”ten mebġūż ) İçten içe düşmanlık beslenen, nefret edilen, kin bağlanan, buğzedilen (kimse)",
+              "misaller": [
+                ["Gıybet nice bir kātı-ı râh ola sana / Mebgūzuna rahmet ü günâh ola sana", "Nâbî"],
+                ["Mâlını eyleme bî-vech itlâf / Oldu mebgūz-ı ilâhî isrâf", "Nâbî’den"],
+                ["Ey bîm-i tecessüsle kilitlenmiş ağızlar / Ey gayret-i milliyye ki mebgūz u muhakkar", "Tevfik Fikret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

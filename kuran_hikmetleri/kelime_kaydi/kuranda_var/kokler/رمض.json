@@ -23,7 +23,14 @@
       [12, "رِمَاضَة", "rimāḍa", "kızgın olma", "orta", ""],
       [13, "رَمِيض", "ramīḍ", "kızgın olma", "orta", ""],
       [14, "رَمُوض", "ramūḍ", "kızgın olma", "orta", ""],
-      [15, "رَمَضَان", "ramaḍān", "kızgın olma", "orta", "Vikisözlük: Ramadan"],
+      [
+        15,
+        "رَمَضَان",
+        "ramaḍān",
+        "Arabî ayların şâban ve şevval arasında kalan ve devâmı boyunca oruç tutulan…",
+        "lugat",
+        "Vikisözlük: Ramadan · Kubbealtı"
+      ],
       [16, "رُمْضَان", "rumḍān", "kızgın olma", "orta", ""],
       [17, "رِمْضَان", "rimḍān", "kızgın olma", "orta", ""],
       [18, "رَمْضَى", "ramḍā", "kızgın olma", "orta", ""],
@@ -385,7 +392,14 @@
       [286, "رَمُضَات", "ramuḍāt", "her daim kızgın olanlar, müennes", "orta", ""],
       [287, "رَمَض", "ramaḍ", "her daim kızgın olan", "orta", ""],
       [288, "رَمَضَة", "ramaḍa", "her daim kızgın olan, müennes", "orta", ""],
-      [289, "رَمَضَان", "ramaḍān", "her daim kızgın olan, iki", "orta", "Vikisözlük: Ramadan"],
+      [
+        289,
+        "رَمَضَان",
+        "ramaḍān",
+        "Arabî ayların şâban ve şevval arasında kalan ve devâmı boyunca oruç tutulan…",
+        "lugat",
+        "Vikisözlük: Ramadan · Kubbealtı"
+      ],
       [290, "رَمَضَتَان", "ramaḍatān", "her daim kızgın olan, iki, müennes", "orta", ""],
       [291, "رَمَضُون", "ramaḍūn", "her daim kızgın olanlar", "orta", ""],
       [292, "رَمَضِين", "ramaḍīn", "her daim kızgın olanlar", "orta", ""],
@@ -907,7 +921,77 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "رَمَضَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "RAMAZAN",
+          "yazilis": "ﺭﻣﻀﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. ramaż “şiddetli sıcak olmak, yakmak”tan ramażan",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Arabî ayların şâban ve şevval arasında kalan ve devâmı boyunca oruç tutulan dokuzuncu ayı [Kısaltması, seneyi gösteren rakamdan sonra konan “nun” ( ﻥ ) ’dur]",
+              "misaller": [
+                ["Merhabâ ey rahmet ayı ramazan / Seni haber verdi bize Kur’an", "Ramazan mânisi"],
+                [
+                  "İstanbul şehrinde ramazan toplar, davulcular ve mânilerle karşılanmadan çok evvel hazırlığı başlardı",
+                  "Sâmiha Ayverdi"
+                ],
+                ["çok sıcak gün, güneş kumları", ""],
+                [
+                  "anlamına geliyor. İbâdet ayı olduğu için günahlarımız yanıp uçuyor da onun için mi, yoksa sıcak yaz günlerinde oruç tutanların içleri kavrulup tutuştuğu için mi bu kutsal aya ramazan denmiş?",
+                  "İsmet Bozdağ"
+                ]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Ramazan ayı bittikten sonra üç gün boyunca kutlanan bayram, şeker bayramı",
+              "misaller": [],
+              "deyim": "Ramazan bayramı"
+            },
+            {
+              "etiket": "",
+              "tanim": "Oruç tutanları sahura kaldırmak için imsakten önce sokaklarda çalınan davul",
+              "misaller": [],
+              "deyim": "Ramazan davulu"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ramazanda ramazan davulu eşliğinde okunan ve ramazana âit güzellikleri dile getiren nükteli mâni",
+              "misaller": [],
+              "deyim": "Ramazan mânisi"
+            },
+            {
+              "etiket": "",
+              "tanim": "halk ağzı",
+              "misaller": [],
+              "deyim": "Ramazanı tutmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Derenin kenârında / Kalayladım kazanı / Kız ben senin yüzünden / Tutmadım ramazanı (Türkü)",
+              "misaller": [],
+              "deyim": "Oruç tutmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Oruç tutmamak, oruç yemek",
+              "misaller": [
+                ["Yoksa ramazanı hep yedin mi?", "Kemal Tâhir’den"]
+              ],
+              "deyim": "Ramazanı yemek"
+            }
+          ]
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

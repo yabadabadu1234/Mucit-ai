@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "حَرْد", "ḥard", "kin, azim", "kuran", "Kur'ân"],
+      [0, "حَرْد", "ḥard", "Kasd ve âhenk eylemek", "lugat", "Kur'ân · Kamus"],
       [1, "حِرْد", "ḥird", "kızgınlık", "orta", ""],
       [2, "حُرْد", "ḥurd", "kızgınlık", "orta", ""],
       [3, "حَرَد", "ḥarad", "kızgınlık", "orta", ""],
@@ -390,7 +390,7 @@
       [291, "حَرَدُون", "ḥaradūn", "her daim kızgın olanlar", "orta", ""],
       [292, "حَرَدِين", "ḥaradīn", "her daim kızgın olanlar", "orta", ""],
       [293, "حَرَدَات", "ḥaradāt", "her daim kızgın olanlar, müennes", "orta", ""],
-      [294, "حَرْد", "ḥard", "kin, azim", "kuran", "Kur'ân"],
+      [294, "حَرْد", "ḥard", "Kasd ve âhenk eylemek", "lugat", "Kur'ân · Kamus"],
       [295, "حَرْدَة", "ḥarda", "her daim kızgın olan, müennes", "orta", ""],
       [296, "حَرْدَان", "ḥardān", "her daim kızgın olan, iki", "orta", ""],
       [297, "حَرْدَتَان", "ḥardatān", "her daim kızgın olan, iki, müennes", "orta", ""],
@@ -532,7 +532,7 @@
       [425, "حَرَادَة", "ḥarāda", "kızgın olma", "orta", ""],
       [426, "حِرَادَة", "ḥirāda", "kızgın olma", "orta", ""],
       [427, "حُرُودَة", "ḥurūda", "kızgın olma", "orta", ""],
-      [428, "حَرْد", "ḥard", "kin, azim", "kuran", "Kur'ân"],
+      [428, "حَرْد", "ḥard", "Kasd ve âhenk eylemek", "lugat", "Kur'ân · Kamus"],
       [429, "حِرْد", "ḥird", "kızgın olma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -542,7 +542,7 @@
       [434, "أُحْرُودَة", "ʾuḥrūda", "kızgın olma türünden şey", "orta", ""],
       [435, "حَوْرَد", "ḥawrad", "kızgın olma türünden şey", "orta", ""],
       [437, "حَيْرَد", "ḥayrad", "kızgın olma türünden şey", "orta", ""],
-      [439, "حَرْد", "ḥard", "kin, azim", "kuran", "Kur'ân"],
+      [439, "حَرْد", "ḥard", "Kasd ve âhenk eylemek", "lugat", "Kur'ân · Kamus"],
       [441, "حَرَد", "ḥarad", "kızgın olma türünden şey", "orta", ""],
       [443, "حِرْد", "ḥird", "kızgın olma türünden şey", "orta", ""],
       [445, "حُرْد", "ḥurd", "kızgın olma türünden şey", "orta", ""],
@@ -937,7 +937,66 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "حَرْد": [
+        {
+          "eser": "Kamus",
+          "madde": "hard",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kasd ve âhenk eylemek manâsınadır; yukâlu: حَرَدَهُ حَرْدًا مِنَ الْبَابِ الثَّانِي إِذَا قَصَدَهُ Ve men eylemek manâsınadır; yukâlu: حَرَدَهُ إِذَا مَنَعَهُ Ve delmek manâsınadır; yukâlu: حَرَدَ الْخَشَبَ إِذَا ثَقَبَهُ Ve حَرْدٌ [hard] Vasf olur, حَارِدٌ [hârid] ve حَرِيدٌ [harîd] gibi, ke-mâ se-yuzkeru.",
+              "misaller": [
+                ["حَرَدَهُ حَرْدًا مِنَ الْبَابِ الثَّانِي إِذَا قَصَدَهُ", ""],
+                ["حَرَدَهُ إِذَا مَنَعَهُ", ""],
+                ["حَرَدَ الْخَشَبَ إِذَا ثَقَبَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "حَرْدٌ [hard] Darılmak manâsınadır; yukâlu: حَرَدَ عَلَيْهِ وَحَرِدَ حَرْدًا مِنَ الْبَابِ الثَّانِي وَالرَّابِعِ إِذَا غَضِبَ",
+              "misaller": [
+                ["حَرَدَ عَلَيْهِ وَحَرِدَ حَرْدًا مِنَ الْبَابِ الثَّانِي وَالرَّابِعِ إِذَا غَضِبَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَرْدُ",
+          "okunus": "el-hard",
+          "koken": "hânın fethi ve rânın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "hard",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kasd etmek; yukâlu: حَرَدَ يَحْرِدُ حَرْدًا مِنَ الْبَابِ الثَّانِي إِذَا قَصَدَ ve tekûlu: حَرَدْتُ حَرْدَكَ أَيْ قَصَدْتُ قَصْدَكَ Kâlallâhu taâlâ: ﴿وَغَدَوْا عَلَى حَرْدٍ قَادِرِينَ﴾ (القلم 25) أَيْ عَلَى قَصْدٍ وَقِيلَ عَلَى منه مِنْ قَوْلِهِمْ حَارَدَتِ الْإِبِلُ حِرَادًا إِذَا قَلَّتْ أَلْبَانُهَا Ve حَرْدٌ [hard] Gazab manâsına da gelir; yukâlu: هُوَ مَمْلُوءٌ مِنْ غَضَبٍ وَحَرْدٍ Ve الْحِرَادُ [el-hirâd] (hânın kesriyle) Kıllet-i leben, nitekim el-ân mürûr etti.",
+              "misaller": [
+                ["حَرَدَ يَحْرِدُ حَرْدًا مِنَ الْبَابِ الثَّانِي إِذَا قَصَدَ", ""],
+                ["هُوَ مَمْلُوءٌ مِنْ غَضَبٍ وَحَرْدٍ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "yılın yağmuru az olmağa dahi derler; yukâlu: حَارَدَتِ السَّنَةُ إِذَا قَلَّ مَطَرُهَا",
+              "misaller": [
+                ["حَارَدَتِ السَّنَةُ إِذَا قَلَّ مَطَرُهَا", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْحَرْدُ",
+          "okunus": "el-hard",
+          "koken": "hânın fethi ve rânın sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

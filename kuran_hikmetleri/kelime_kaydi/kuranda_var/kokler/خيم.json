@@ -15,7 +15,7 @@
       [518, "خِيَم", "ḫiyam", "konaklama", "orta", ""],
       [5, "خُيُم", "ḫuyum", "konaklama", "orta", ""],
       [6, "خُيُوم", "ḫuyūm", "konaklama", "orta", ""],
-      [521, "خِيَام", "ḫiyām", "konaklama", "orta", ""],
+      [521, "خِيَام", "ḫiyām", "Haymeler, çadırlar", "lugat", "Kubbealtı"],
       [8, "خُيَام", "ḫuyām", "konaklama", "orta", ""],
       [9, "خَيَام", "ḫayām", "konaklama", "orta", ""],
       [10, "خَيَامَة", "ḫayāma", "konaklama", "orta", ""],
@@ -39,7 +39,7 @@
       [533, "مَخِيمَة", "maḫīma", "konaklama", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَخْيِيم", "taḫyīm", "çokça konaklama", "orta", ""],
+      [29, "تَخْيِيم", "taḫyīm", "Haymeye girip oturmak", "lugat", "Kamus"],
       [30, "تَخْيِمَة", "taḫyima", "çokça konaklama", "orta", ""],
       [31, "خِيِّام", "ḫiyyām", "çokça konaklama", "orta", ""]
     ],
@@ -70,7 +70,7 @@
     ],
     "masdar · bâb III": [
       [49, "مُخَايَمَة", "muḫāyama", "biriyle karşılıklı konaklama", "orta", ""],
-      [552, "خِيَام", "ḫiyām", "biriyle karşılıklı konaklama", "orta", ""]
+      [552, "خِيَام", "ḫiyām", "Haymeler, çadırlar", "lugat", "Kubbealtı"]
     ],
     "ism-i merre · bâb III": [
       [553, "خِيَامَة", "ḫiyāma", "bir kere biriyle karşılıklı konaklama", "orta", ""]
@@ -528,7 +528,7 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "خَيَام", "ḫayām", "konaklama", "orta", ""],
       [422, "خُيُوم", "ḫuyūm", "konaklama", "orta", ""],
-      [835, "خِيَام", "ḫiyām", "konaklama", "orta", ""],
+      [835, "خِيَام", "ḫiyām", "Haymeler, çadırlar", "lugat", "Kubbealtı"],
       [918, "خُوم", "ḫūm", "konaklama", "orta", ""],
       [425, "خَيَامَة", "ḫayāma", "konaklama", "orta", ""],
       [837, "خِيَامَة", "ḫiyāma", "konaklama", "orta", ""],
@@ -572,7 +572,7 @@
       [458, "أَخَايِيم", "ʾaḫāyīm", "konaklamalar", "orta", ""],
       [459, "خُيُوم", "ḫuyūm", "konaklamalar", "orta", ""],
       [460, "خُيُم", "ḫuyum", "konaklamalar", "orta", ""],
-      [854, "خِيَام", "ḫiyām", "konaklamalar", "orta", ""],
+      [854, "خِيَام", "ḫiyām", "Haymeler, çadırlar", "lugat", "Kubbealtı"],
       [855, "خِيَم", "ḫiyam", "konaklamalar", "orta", ""],
       [463, "خِيَمَة", "ḫiyama", "konaklamalar", "orta", ""],
       [464, "خُيَم", "ḫuyam", "konaklamalar", "orta", ""],
@@ -1136,7 +1136,95 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "خِيَام": [
+        {
+          "eser": "Vankulu",
+          "madde": "hiyam",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi, haymeler manâsına,فَرْخٌ [ferh]le فِرَاخٌ [firâh] gibi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْخِيَامُ",
+          "okunus": "el-hiyâm",
+          "koken": "hânın kesriyle"
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "HIYAM – HİYAM – HIYEM – HİYEM",
+          "yazilis": "ﺧﻴﻢ – ﺧﻴﺎﻡ",
+          "tur": "i.",
+          "koken": "Ar. ḫayme ’nin çoğul şekilleri ḫiyām – ḫiyem",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Haymeler, çadırlar",
+              "misaller": [
+                [
+                  "Sefere gittiklerinde hıyam ve otağ tertîbinde dahi bu kıyas üzre tedârikleri lâzımdır",
+                  "Âlî Mustafa Efendi"
+                ],
+                ["Anın ol vakte göredir kelâmı / Ne nisvan kaldı şimdi ne hıyâmı", "Aziz Mahmud Hüdâyî"],
+                ["Hıyâm-ı çarha sütûn-ı duâyı ref’ eyle / Niyâz-nâmeyi Nâbî çok eyledin ıtnâb", "Nâbî"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَخْيِيم": [
+        {
+          "eser": "Kamus",
+          "madde": "tahyim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Haymeye girip oturmak manâsınadır ki hayme-nişîn olmak tabîr olunur; yukâlu: خَيَّمَ الْقَوْمُ إِذَا دَخَلُوا فِي الْخَيْمَةِ Ve bir mahalde mukîm olmak manâsına müstameldir; yukâlu. خَيَّمُوا بِالْمَكَانِ إِذَا َأَقَامُوا بِهِ Ve bir hoş-bû nesneyi râyihası sinmek için mendil makûlesi örtüp bürümek manâsınadır; yukâlu: خَيَّمَ الشَّيْءَ إِذَا غَطَّاهُ بِشَيْءٍ كَيْ يَعْبَقَ بِهِ",
+              "misaller": [
+                ["خَيَّمَ الْقَوْمُ إِذَا دَخَلُوا فِي الْخَيْمَةِ", ""],
+                ["خَيَّمَ الشَّيْءَ إِذَا غَطَّاهُ بِشَيْءٍ كَيْ يَعْبَقَ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّخْيِيمُ",
+          "okunus": "et-tahyîm",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "tahyim",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi hayme gibi kılmak.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "تَخْيِيمٌ [tahyîm] Bir yerde hayme kurmağa dahi derler; yukâlu: خَيَّمَهُ إِذَا جَعَلَهُ كَالْخَيْمَةِ وَخَيَّمَ بِالْمَكَانِ إِذَا أَقَامَ",
+              "misaller": [
+                ["خَيَّمَهُ إِذَا جَعَلَهُ كَالْخَيْمَةِ وَخَيَّمَ بِالْمَكَانِ إِذَا أَقَامَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّخْيِيمُ",
+          "okunus": "et-tahyîm",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

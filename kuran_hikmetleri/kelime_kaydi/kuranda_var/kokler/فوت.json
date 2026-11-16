@@ -12,9 +12,9 @@
         0,
         "فَوْت",
         "fawt",
-        "kaçma",
-        "kuran",
-        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost"
+        "Geçip gitme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost · Luggat"
       ],
       [888, "فِيت", "fīt", "kaçırma", "orta", ""],
       [889, "فُوت", "fūt", "kaçırma", "orta", ""],
@@ -166,16 +166,16 @@
         101,
         "تَفَاوُت",
         "tafāwut",
-        "birbirine kaçırma",
-        "orta",
-        "Vikisözlük: verbal noun of تَفَاوَتَ (tafāwata) (form VI)"
+        "Birbirinden farklı olma",
+        "lugat",
+        "Vikisözlük: verbal noun of تَفَاوَتَ (tafāwata) (form VI) · Luggat"
       ]
     ],
     "ism-i merre · bâb VI": [
       [102, "تَفَاوُتَة", "tafāwuta", "bir kere birbirine kaçırma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَفَاوِت", "mutafāwit", "birbirine kaçıran", "orta", ""],
+      [103, "مُتَفَاوِت", "mutafāwit", "Aralarında fark bulunan, farklı, çeşitli, muhtelif", "lugat", "Kubbealtı"],
       [104, "مُتَفَاوِتَة", "mutafāwita", "birbirine kaçıran, müennes", "orta", ""],
       [105, "مُتَفَاوِتَان", "mutafāwitān", "birbirine kaçıran, iki", "orta", ""],
       [106, "مُتَفَاوِتَتَان", "mutafāwitatān", "birbirine kaçıran, iki, müennes", "orta", ""],
@@ -418,9 +418,9 @@
         294,
         "فَوْت",
         "fawt",
-        "kaçma",
-        "kuran",
-        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost"
+        "Geçip gitme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost · Luggat"
       ],
       [295, "فَوْتَة", "fawta", "her daim kaçıran, müennes", "orta", ""],
       [296, "فَوْتَان", "fawtān", "her daim kaçıran, iki", "orta", ""],
@@ -588,9 +588,9 @@
         428,
         "فَوْت",
         "fawt",
-        "kaçma",
-        "kuran",
-        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost"
+        "Geçip gitme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost · Luggat"
       ],
       [919, "فِيت", "fīt", "kaçırma", "orta", ""]
     ],
@@ -605,9 +605,9 @@
         439,
         "فَوْت",
         "fawt",
-        "kaçma",
-        "kuran",
-        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost"
+        "Geçip gitme",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to pass, pass by, escape, run out, be missed or lost · Luggat"
       ],
       [840, "فَات", "fāt", "kaçırma türünden şey", "orta", ""],
       [921, "فِيت", "fīt", "kaçırma türünden şey", "orta", ""],
@@ -1753,7 +1753,200 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فَوْت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FEVT",
+          "yazilis": "ﻓﻮﺕ",
+          "tur": "i.",
+          "koken": "Ar. fevt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir şeyi bir daha ele geçmeyecek şekilde kaybetme, elden kaçırma",
+              "misaller": [
+                [" Fevt-i fırsat: Fırsatı elden kaçırma.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Ölüm, mevt",
+              "misaller": [
+                [" Fevt-i nâgehânî: Ansızın gelen ölüm.", ""],
+                ["Fevtinin Gālib dedim târîhini / Göçtü yâhû Zikrî ismullâh ile", "Şeyh Gālib"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "fevt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْفَوَاتُ [el-fevât] (fânın fethiyle) Bir nesne elden gitmek ve geçip savuşmak manâsınadır, şöyle ki bir dahi idrâki müteazzir ola. Asl فَوْتٌ [fevt] bir dahi vusûl ve idrâki mümkin olmamak vechiyle bir şeyin insândan geçip dûr olması manâsına mevzûdur; yukâlu: فَاتَهُ اْلأَمْرُ يَفُوتُ فَوْتًا وَفَوَاتًا إِذَا ذَهَبَ عَنْهُ Ve Arablar هُوَ فَوْتَ فَمِهِ وَفَوْتَ رُمْحِهِ وَفَوْتَ يَدِهِ derler, “O nesne onun gözü görüp eli yetişmediği yerdedir” diyecek mahalde. Meselâ bed-duâ makâmında جَعَلَ اللهُ رِزْقَهُ فَوْتَ فَمِهِ أَوْ فَوْتَ رُمْحِهِ أَوْ فَوْتَ يَدِهِ derler, yanî “Hak taâlâ rızkını şu vechile kılsın ki gözü görsün ağızı yâhûd mızrağı yâhûd eli erişmesin.” Ve yukâlu: هُوَ مِنِّي فَوْتَ الرِّيحِ أَيْ بِحَيْثُ لاَ تُدْرِكُهُ الرِّيحُ Buralarda فَوْتَ lafzı zarf mecrâsındadır, مَكَانٌ فَوْتَ فَمِهِ takdîrindedir.",
+              "misaller": [
+                ["فَاتَهُ اْلأَمْرُ يَفُوتُ فَوْتًا وَفَوَاتًا إِذَا ذَهَبَ عَنْهُ", ""],
+                ["هُوَ مِنِّي فَوْتَ الرِّيحِ أَيْ بِحَيْثُ لاَ تُدْرِكُهُ الرِّيحُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فَوْتٌ [fevt] Her iki parmağın aralığına ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "فَوَاتٌ [fevât] مَوْتُ فَجْأَةٍ [mevtu fecet] manâsına istimâl olunur, سَبْقٌ [sebk] manâsından mehûzdur ki فَاتَنِي فُلاَنٌ بِكَذَا derler, سَبَقَنِي manâsına ki bu dahi mecâzdır; ve minhul-hadîsu: “مَرَّ بِحَائِطٍ مَائِلٍ فَأَسْرَعَ فَقِيلَ يَا رَسُولَ اللهِ أَسْرَعْتَ الْمَشْيَ فَقَالَ أَخَافُ مَوْتَ الْفَوَاتِ” أَيْ مَوْتَ الْفَجْأَةِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَوْتُ",
+          "okunus": "el-fevt",
+          "koken": "fânın fethi ve vâvın sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "fevt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْفَوَاتُ [el-fevât] (fethateynle) Bir kimseden bir nesne geçmek; yukâlu: فَاتَهُ الشَّيْءُ Ve bir nesneye erişmemeğe derler; yukâlu fî mahalliş-şetmi: “جَعَلَ اللهُ رِزْقَهُ فَوْتَ فَمِهِ” أَيْ حَيْثُ يَرَاهُ وَلَا يَصِلُ إِلَيْهِ ve tekûlu: “هُوَ مِنِّي فَوْتَ الرُّمْحِ” أَيْ حَيْثُ لَا يَبْلُغُهُ Ve iki parmak arasında olan ferceye derler.",
+              "misaller": [
+                ["فَاتَهُ الشَّيْءُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فَوَاتٌ [fevât] Müfâceet manâsına da gelir; yukâlu: مَاتَ فُلَانٌ مَوْتَ فَوَاتٍ أَيْ فَجْأَةً",
+              "misaller": [
+                ["مَاتَ فُلَانٌ مَوْتَ فَوَاتٍ أَيْ فَجْأَةً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفَوْتُ",
+          "okunus": "el-fevt",
+          "koken": "fânın fethiyle ve vâvın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fevt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Geçip gitme. Ölüm",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "تَفَاوُت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEFÂVÜT",
+          "yazilis": "ﺗﻔﺎﻭﺕ",
+          "tur": "i.",
+          "koken": "Ar. fevt > tefāvut",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Birbirinden farklı olma",
+              "misaller": [],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "İki şey arasındaki fark, farklılık",
+              "misaller": [
+                ["Merâtib üzredir erbâb-ı tevhîd / Tefâvüt üzredir ashâb-ı tevhîd", "Aziz Mahmud Hüdâyî"],
+                ["Eğer herkes rütbede berâber olaydı cennet sekiz adet ve tefâvüt üzerine olmazdı", "İsmâil Hakkı Bursevî"],
+                ["Hulken ise beyinlerinde hayli tefâvüt var imiş", "Muallim Nâci"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Mâlî sene ile hicrî sene arasındaki on gün ve yirmi bir saatlik farktan ileri gelen gelir fazlalığı",
+              "misaller": [
+                [
+                  "Bunun için mâliyece bir mukātaa ihâle olunduğu zaman muâmele hicrî sene üzerine yapılır ise de hazîne yâni mâliye hesâbını mâlî veya rûmî sene üzerine yürütür ve aradaki on gün ve küsur saatlik farkı alırdı; bundan dolayı mâliyeciler bu farka tefâvüt-i hasene ismini vermişlerdi",
+                  "İsmâil H. Uzunçarşılı"
+                ]
+              ],
+              "deyim": "Tefâvüt-i hasene"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefâvüt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Birbirinden farklı olma",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "tefâvüt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Farklılık",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُتَفَاوِت": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "MÜTEFÂVİT",
+          "yazilis": "ﻣﺘﻔﺎﻭﺕ",
+          "tur": "sıf.",
+          "koken": "Ar. tefāvut “birbirinden farklı olmak”tan mutefāvit",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Aralarında fark bulunan, farklı, çeşitli, muhtelif",
+              "misaller": [
+                ["Cebrâil eyitti: Yâ nebiyyallah, mahabbetleri mütesâvî midir yâ mütefâvit midir?", "Fuzûlî"],
+                [
+                  "İmdi akl-ı maaş kendi mertebesinde mütefâvit olduğu gibi akl-ı maad dahi öylece mütefâvittir",
+                  "Ahmet A. Konuk"
+                ],
+                ["● Mütefâvite", "ﻣﺘﻔﺎﻭﺗﻪ"],
+                [" Derecât-ı mütefâvite: Farklı dereceler.", ""]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

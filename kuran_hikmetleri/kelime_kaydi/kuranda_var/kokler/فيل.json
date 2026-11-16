@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "فَيْل", "fayl", "fil", "kontrol", ""],
-      [888, "فِيل", "fīl", "fil", "kuran", "Kur'ân"],
+      [888, "فِيل", "fīl", "Fil", "lugat", "Kur'ân · Luggat"],
       [889, "فُول", "fūl", "fil", "kontrol", ""],
       [517, "فَال", "fāl", "fil", "kontrol", ""],
       [518, "فِيَل", "fiyal", "fil", "kontrol", ""],
@@ -534,7 +534,7 @@
       [837, "فِيَالَة", "fiyāla", "fil olma", "kontrol", ""],
       [427, "فُيُولَة", "fuyūla", "fil olma", "kontrol", ""],
       [428, "فَيْل", "fayl", "fil olma", "kontrol", ""],
-      [919, "فِيل", "fīl", "fil", "kuran", "Kur'ân"]
+      [919, "فِيل", "fīl", "Fil", "lugat", "Kur'ân · Luggat"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "فَايُول", "fāyūl", "fil olma türünden şey", "kontrol", ""],
@@ -545,7 +545,7 @@
       [437, "فَيْيَل", "fayyal", "fil olma türünden şey", "kontrol", ""],
       [439, "فَيْل", "fayl", "fil olma türünden şey", "kontrol", ""],
       [840, "فَال", "fāl", "fil olma türünden şey", "kontrol", ""],
-      [921, "فِيل", "fīl", "fil", "kuran", "Kur'ân"],
+      [921, "فِيل", "fīl", "Fil", "lugat", "Kur'ân · Luggat"],
       [923, "فُول", "fūl", "fil olma türünden şey", "kontrol", ""],
       [447, "فَيِيل", "fayīl", "fil olma türünden şey", "kontrol", ""],
       [843, "فِيَل", "fiyal", "fil olma türünden şey", "kontrol", ""],
@@ -566,7 +566,7 @@
       [454, "فَيَالَة", "fayāla", "fil olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَفْيَال", "ʾafyāl", "fil olmalar", "kontrol", ""],
+      [455, "أَفْيَال", "ʾafyāl", "Cemi", "lugat", "Vankulu"],
       [456, "أَفْيِلَة", "ʾafyila", "fil olmalar", "kontrol", ""],
       [457, "أَفَايِل", "ʾafāyil", "fil olmalar", "kontrol", ""],
       [458, "أَفَايِيل", "ʾafāyīl", "fil olmalar", "kontrol", ""],
@@ -954,7 +954,124 @@
         "r": ["ʔafyāl"],
         "yol": "müştak"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "فِيل": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "FİL",
+          "yazilis": "ﻓﻴﻞ",
+          "tur": "i.",
+          "koken": "Ar. fіl pіl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Afrika ve Asya’nın sıcak bölgelerinde yaşayan, kolayca evcilleşen, yaşamakta olan kara hayvanlarının en irisi, hortumlu, kalın derili, memeli hayvan. Elephas",
+              "misaller": [
+                ["Karınca yükünü fil çekmez oldu", "Pir Sultan Abdal"],
+                ["Karıncanın gözü bir fili görebilir miydi?", "Sâmiha Ayverdi"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Satranç oyununda çapraz hareket eden taş",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Çok şişman",
+              "misaller": [],
+              "deyim": "Fil gibi"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çok yemek",
+              "misaller": [],
+              "deyim": "Fil gibi yemek"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Fil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bu ismle marûf hayvândır; cemi أَفْيَالٌ [efyâl] ve فُيُولٌ [fuyûl] gelir ve فِيَلَةٌ [fiyelet] gelir, عِنَبَةٌ [inebet] vezninde; müennesi فِيلَةٌ [fîlet]tir. Mütercim der ki Fârisîde pîl denir, sâhib-i Tırâz ondan muarreb olmak üzere resm eylemiştir. İntehâ.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "فِيلٌ [fîl] sakîl ve hasîs ve nâkese ıtlâk olunur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "fikri zaîf ve rey ve zihn ve tedbîri sahîf ve muhtî adama فِيلُ الرَّأْيِ [fîlur-rey] ıtlâk olunur fânın kesri ve fethiyle, ke-mâ se-yuzkeru; cemi أَفْيَالٌ [efyâl]dir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفِيلُ",
+          "okunus": "el-fîl",
+          "koken": "fânın kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "fil",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Marûf cânverdir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْفِيلُ",
+          "okunus": "el-fîl",
+          "koken": "fânın kesri ve meddiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "fil",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Fil",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَفْيَال": [
+        {
+          "eser": "Vankulu",
+          "madde": "efyal",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَفْيَالُ",
+          "okunus": "el-efyâl",
+          "koken": "hemzenin fethiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,
