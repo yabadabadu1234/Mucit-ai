@@ -3,10 +3,10 @@
    misal kendi manasının altında; sınama kipi manaları gizler, dokununca açar; süs yoktur. */
 const MC_ = {}, MDurum = {acik: new Set(), gor: new Set(), sina: false, surum: 0};
 const ZON = {
-  A: {yaz: '#3b2f1e', ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
-  M: {yaz: '#1f3550', ad: 'Mecaz ve genişleme', isaret: '◐', zemin: 'rgba(47,111,179,.09)', kenar: '#4f7fb3'},
-  I: {yaz: '#24402a', ad: 'Istılah', isaret: '◆', zemin: 'rgba(63,127,58,.10)', kenar: '#4f8a46'},
-  D: {yaz: '#3d2648', ad: 'Deyimler', isaret: '❝', zemin: 'rgba(138,63,160,.08)', kenar: '#8a5aa0'}};
+  A: {yaz: '#3b2f1e', acik: '#eadcbc', ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
+  M: {yaz: '#1f3550', acik: '#c8dcf3', ad: 'Mecaz ve genişleme', isaret: '◐', zemin: 'rgba(47,111,179,.09)', kenar: '#4f7fb3'},
+  I: {yaz: '#24402a', acik: '#cde6c6', ad: 'Istılah', isaret: '◆', zemin: 'rgba(63,127,58,.10)', kenar: '#4f8a46'},
+  D: {yaz: '#3d2648', acik: '#e4cdee', ad: 'Deyimler', isaret: '❝', zemin: 'rgba(138,63,160,.08)', kenar: '#8a5aa0'}};
 const ISTILAH = /^(huk|hukuk|tasavvuf|fık|fel|felsefe|mant|edeb|gram|dilb|spor|tıp|kim|fiz|mat|astr|ask|müz|biy|coğ|din|kelâm|hadis|tefsir|ekon|tic|zool|bot|mim|hes|mûsikî|denizcilik|denizc|bilişim|anat|jeol|tiyatro|sin|psik|sosy)/i;
 function zonu(etiket, eser) {
   const e = (etiket || '').toLowerCase();
@@ -95,7 +95,7 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
     else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : ZON[o[6]].yaz;
+    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : (KARA_(R.yaz) ? ZON[o[6]].yaz : ZON[o[6]].acik);
       if (yazi && !gz) { ctx.font = (t === 'mt' ? 'italic 10.5px' : '11.5px') + ' Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; ctx.font = '9px Georgia'; ctx.fillText('  ' + o[4], x + w, y) } }
       else { ctx.globalAlpha = gz ? .18 : .3; ctx.fillRect(x, y - 7, Math.min(370, o[3].length * 5.6), 7); ctx.globalAlpha = 1 } }
     else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; ctx.font = '10.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
@@ -129,3 +129,5 @@ function cerceve_(c, z, x, y, w, h) {
   for (let j = 1; j < ny; j++) { const py = y + h * j / ny; motif_(c, z, x, py, r); motif_(c, z, x + w, py, r) }
   c.restore();
 }
+
+function KARA_(c){c=String(c).trim();const m=String(c).match(/\d+/g);let r,g,b;if(String(c)[0]==='#'){const h=c.slice(1);[r,g,b]=[0,2,4].map(i=>parseInt(h.length===3?h[i/2]+h[i/2]:h.slice(i,i+2),16))}else[r,g,b]=m.map(Number);return .299*r+.587*g+.114*b<128}
