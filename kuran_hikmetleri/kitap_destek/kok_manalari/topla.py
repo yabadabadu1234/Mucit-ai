@@ -38,15 +38,21 @@ for f in sorted(glob.glob(str(KOK / '*.json'))):
             ekle(en, p)
     VT[k] = {'turkce': tr, 'ingilizce_etymarab': en, 'mekayis_asil': mekayis_asil(s.get('mekayis')),
              'cebel_mihver': ((s.get('cebel_mihveri') or {}).get('mihveri') or '').split('.')[0].strip()}
-(HERE / 'KOK_ESAS_MANALARI.json').write_text(json.dumps(VT, ensure_ascii=False, indent=1), encoding='utf-8')
-md = ['# Kur\'ân köklerinin esas manaları', '', f'{len(VT)} kök. Biçim: `kök: Türkçe manalar` · altında EtymArab İngilizce manaları, İbn Fâris\'in asıl cümlesi ve Cebel\'in mihver manası (kaynakta varsa).', '']
+TER = {}
+for f in sorted((HERE / 'tercume').glob('*.json')): TER.update(json.loads(f.read_text(encoding='utf-8')))
 for k, v in VT.items():
-    md.append(f'**{k}**: ' + ' / '.join(v['turkce']))
-    if v['ingilizce_etymarab']: md.append(f'  - EtymArab: ' + ' / '.join(v['ingilizce_etymarab']))
-    if v['mekayis_asil']: md.append(f'  - Mekâyîs: {v["mekayis_asil"]}')
-    if v['cebel_mihver']: md.append(f'  - Cebel: {v["cebel_mihver"]}')
+    L = []
+    for x in TER.get(k, []): ekle(L, x)
+    for x in v['turkce']:
+        if not any(x.lower() in y.lower() for y in L): ekle(L, x)
+    v['esas_manalar'] = L
+VT = {k: {'esas_manalar': v['esas_manalar'], **v} for k, v in VT.items()}
+(HERE / 'KOK_ESAS_MANALARI.json').write_text(json.dumps(VT, ensure_ascii=False, indent=1), encoding='utf-8')
+md = ['# Kur\'ân köklerinin esas manaları', '', f'{len(VT)} kök. Her satır: kök: manaları. Kaynak: İbn Fâris\'in Mekâyîs\'i (asıllar önce), EtymArab, Cebel ve depodaki kök manaları; tercüme tercume/ klasöründedir.', '']
+for k, v in VT.items():
+    md.append(f'**{k}**: ' + ' / '.join(v['esas_manalar']) + '  ')
 (HERE / 'KOK_ESAS_MANALARI.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
 import statistics
-print(len(VT), 'Türkçe ort', statistics.mean(len(v['turkce']) for v in VT.values()), 'Türkçesiz', sum(not v['turkce'] for v in VT.values()),
+print(len(VT), 'esas ort', statistics.mean(len(v['esas_manalar']) for v in VT.values()), 'Türkçe ort', statistics.mean(len(v['turkce']) for v in VT.values()), 'Türkçesiz', sum(not v['turkce'] for v in VT.values()),
       'EtymArab dolu', sum(bool(v['ingilizce_etymarab']) for v in VT.values()), 'Mekâyîs', sum(bool(v['mekayis_asil']) for v in VT.values()))
 for k in ['خلق', 'قطع', 'فرق', 'ضرب']: print(k, VT.get(k, {}).get('turkce'), VT.get(k, {}).get('ingilizce_etymarab')[:12] if VT.get(k) else '')
