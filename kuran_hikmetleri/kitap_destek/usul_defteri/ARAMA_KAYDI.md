@@ -86,7 +86,7 @@ Her satır: arama no · bulunan usul · özü · kaynak
 83 · Zihin haritası / ızgara hücreleri · beyin soyut kavramları da mekân gibi haritalar; 2025 ızgara hücresi vektör cebiri · arXiv 2503.08608; Nature Comm 2023
 84 · Yığınlama ve şablon kuramı (satranç) · uzman, sabit çekirdek + değişken yuvalı şablonlarla görür · Gobet & Simon
 85 · Sıkıştırarak öğrenme (Feldman) · kavramın öğrenme zorluğu en kısa mantık formülünün uzunluğuyla tahmin edilir; dil modellerinde de (2024) · Nature 2000; arXiv 2412.02823
-86 · Düşünce dili ve şekiller (Dehaene) · insan şekli en kısa üretim programıyla kodlar: tekrar, ard arda, iç içe; MDL hatayı tahmin eder (ρ=0,75) · Cognitive Psychology 2022; CogSci 2025
+86 · Düşünce dili ve şekiller (Dehaene) · insan şekli en kısa üretim programıyla kodlar: tekrar, ard arda, iç içe · Cognitive Psychology 2022; CogSci 2025
 87 · Değişim kuramı (Marton) · karşıtlık, genelleme, ayırma, birleştirme: neyin değişip neyin sabit kaldığını göstermek · Leung 2012; Kullberg vd.
 88 · Eşik kavramlar (Meyer & Land) · bir ilmi bir arada tutan, zor ama dönüştürücü ve geri dönüşsüz kavramlar · ETL 2003
 89 · Bedava çıkarım / gözlem üstünlüğü (Shimojima) · bazı gösterimlerde yeni bilgi çıkarım yapmadan okunur · J. Logic, Language, Information 2021
