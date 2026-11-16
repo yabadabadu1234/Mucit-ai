@@ -23,6 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Yayın kaynağını yalnız bu iş akışına bağla (dal yayını eski nüshayı üstüne yazmasın)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X PUT "repos/${GITHUB_REPOSITORY}/pages" -f build_type=workflow && echo KAYNAK_DEGISTI
+          gh api "repos/${GITHUB_REPOSITORY}/pages" --jq .build_type
+
       - name: Enable GitHub Pages
         uses: actions/configure-pages@v5
         with:
