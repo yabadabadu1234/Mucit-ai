@@ -83,15 +83,17 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: README ve kök bağlantısını yeni sürüme bağla
+      - name: Dal yayınının bitmesini bekle (o biterse eski nüshayı üstüne yazar)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          SHA="${GITHUB_SHA::7}"
-          sed -i -E "s#(kuran_hikmetleri/kuran_hikmetleri_kitap\.html)(\?v=[0-9a-f]+)?#\1?v=${SHA}#g" README.md index.html
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md index.html
-          if [ -d lora-ders ]; then git add -A lora-ders; fi
-          if ! git diff --cached --quiet; then
-            git commit -m "Kitap bağlantısı yeni sürüme bağlandı (v=${SHA}); ders sitesi güncellendi [skip ci]"
-            git push origin HEAD:${GITHUB_REF_NAME}
-          fi
+          for i in $(seq 1 60); do
+            b=$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.commit+" "+.status' 2>/dev/null || true)
+            echo "$b"
+            case "$b" in "${GITHUB_SHA} built"*|"${GITHUB_SHA} errored"*) break;; esac
+            sleep 10
+          done
+
+      - name: Yeniden yayınla (son sözü bu iş akışı söylesin)
+        uses: actions/deploy-pages@v4
