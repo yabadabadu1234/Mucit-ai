@@ -6,11 +6,12 @@ html,body{margin:0;height:100%;background:var(--zemin);color:var(--yazi);font-fa
 #c{display:block;width:100%;touch-action:none;cursor:grab}
 #bil{position:fixed;right:10px;top:58px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}
 </style></head><body>
-<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit">← Kitap</a>__LEJ__<span style="color:var(--ince)">· her hücre bir kökün bir aslı · yaklaştıkça hücrede türeme ağacı, merkezinde müştak listesi (koyu: lügatte geçer · gri: kaideye uygun · kırmızı: kaideye aykırı)</span></div>
+<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit">← Kitap</a>__LEJ__<button id="sina" style="font:inherit;font-size:12px;padding:2px 8px;margin-left:6px">Sına</button><span style="color:var(--ince)">· her hücre bir kökün bir aslı · yaklaştıkça hücrede türeme ağacı, merkezinde müştak listesi (koyu: lügatte geçer · gri: kaideye uygun · kırmızı: kaideye aykırı)</span></div>
 <canvas id="c"></canvas><div id="bil"></div>
+<script src="mustak_cizim.js"></script>
 <script>
 const D=__VERI__,V=D.V,IDX={};for(const k in V)IDX[V[k][7]]=k;
-const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
+const MYER={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
@@ -30,32 +31,6 @@ function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=
  return AGC[i]={L,T,rc,fs}}
 const MC={};
 function sar(t,n){const w=String(t).split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>n&&b){o.push(b);b=x}else b=(b+' '+x).trim()}if(b)o.push(b);return o}
-const ESER={Kubbealtı:'#2f6fb3',Luggat:'#3f7f3a',Kamus:'#b3541e',Vankulu:'#8a3fa0'};
-function lugatSatir(R,G){G.forEach(e=>{const c=ESER[e[0]]||'#6b5a3a';R.push(['lb',e[0]+' — '+e[1]+(e[2]?' ('+e[2]+')':''),c]);
- e[3].forEach(n=>{R.push(['mb',c]);sar((n[0]?n[0]+'. ':'')+(n[1]?n[1]+' ':'')+n[2],58).forEach(l=>R.push(['ln',l]));
-  n[3].forEach(m=>{R.push(['sb']);sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),52).forEach(l=>R.push(['ls',l]));R.push(['se'])});R.push(['me'])});
- e[4].forEach(d=>{R.push(['db']);sar(d[0]+': '+d[1],56).forEach((l,i)=>R.push(['ld',l,i==0]));
-  d[2].forEach(m=>{R.push(['sb']);sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),50).forEach(l=>R.push(['ls',l]));R.push(['se'])});R.push(['de'])});R.push(['lE'])})}
-const YUK={b:1.6,t:1.2,m:1,lb:1.1,mb:.3,me:.35,sb:.2,se:.25,db:.3,de:.35,lE:.5,ln:.78,ls:.78,ld:.78};
-function mustakDuzen(k){if(MC[k])return MC[k];const D2=SA[k];if(!D2)return null;const S2=19,WC=440,R=[];
- D2.forEach(([b,K])=>{R.push(['b',b]);K.forEach(([t,L])=>{R.push(['t',t+' ('+L.length+')']);L.forEach(x=>{R.push(['m',x]);if(x[3])lugatSatir(R,x[3])})})});
- const top=R.reduce((a,r)=>a+YUK[r[0]],0),C=Math.max(1,Math.round(Math.sqrt(top*S2/WC))),hed=top/C,O=[],ST=[];let col=0,y=40,dol=0,mx=0,son='';
- const kutu=(b,y1)=>O.push(['box',b.t,col*WC+16+b.d*9,b.y0,WC-34-b.d*18,y1-b.y0,b.c,b.d]);
- R.forEach(r=>{const h=YUK[r[0]];if(dol+h>hed*1.02&&col<C-1&&dol>0&&!['me','se','de','lE'].includes(r[0])){ST.forEach(b=>kutu(b,y));mx=Math.max(mx,y);col++;y=40;dol=0;ST.forEach((b,i)=>b.y0=y-14+i*3);if(r[0]=='m'||ST.length){O.push(['t',col*WC,y,son+' (devamı)']);y+=S2*0.9}}
-  dol+=h;const x=col*WC,d=ST.length,ix=x+26+d*9;
-  if(r[0]=='b'){O.push(['b',x,y,r[1]]);y+=S2*1.6}
-  else if(r[0]=='t'){son=r[1].replace(/ \(\d+\)$/,'');O.push(['t',x,y,r[1]]);y+=S2*0.9}
-  else if(r[0]=='lb'){ST.push({t:'L',y0:y-13,c:r[2],d});O.push(['le',ix,y+2,r[1],r[2]]);y+=S2*1.1}
-  else if(r[0]=='mb'){ST.push({t:'M',y0:y-10,c:r[1],d});y+=S2*.3}
-  else if(r[0]=='sb'){ST.push({t:'S',y0:y-9,c:'#b8860b',d});y+=S2*.2}
-  else if(r[0]=='db'){ST.push({t:'D',y0:y-10,c:'#8a3fa0',d});y+=S2*.3}
-  else if(['me','se','de','lE'].includes(r[0])){const b=ST.pop();if(b)kutu(b,y-S2*0.35);y+=S2*h}
-  else if(r[0][0]=='l'){O.push([r[0],ix,y,r[1],r[2]]);y+=S2*.78}
-  else{O.push(['m',x,y,r[1][0],r[1][1],r[1][2]]);y+=S2}});
- mx=Math.max(mx,y);O.sort((p,q)=>(p[0]=='box'?0:1)-(q[0]=='box'?0:1)||(p[0]=='box'?p[7]-q[7]:0));return MC[k]={O,W:(col+1)*WC,H:mx}}
-function sekil(c,t,x,y,w,h){c.beginPath();if(t=='S'){const r=Math.min(h/2,11);c.roundRect(x,y,w,h,r)}
- else if(t=='D'){const k=Math.min(8,h/3);c.moveTo(x+k,y);c.lineTo(x+w-k,y);c.lineTo(x+w,y+k);c.lineTo(x+w,y+h-k);c.lineTo(x+w-k,y+h);c.lineTo(x+k,y+h);c.lineTo(x,y+h-k);c.lineTo(x,y+k);c.closePath()}
- else c.roundRect(x,y,w,h,t=='L'?12:6)}
 function yukle(k){if(SA[k]!==undefined)return;SA[k]=null;const e=document.createElement('script');e.src='mustak_listesi/'+k+'.js';e.onload=()=>{kirli=true};document.head.appendChild(e)}
 function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('--ince');
  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle=zem;ctx.fillRect(0,0,W,H);
@@ -71,14 +46,8 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
   ctx.fillStyle=zem;ctx.strokeStyle='#b8860b';ctx.lineWidth=1.5/S;ctx.beginPath();ctx.arc(v[0],v[1],A.rc,0,7);ctx.fill();ctx.stroke();
   if(A.rc*S>40){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const yan=1.45*A.rc,sc=Math.min(yan/M.W,yan/M.H),ox=v[0]-M.W*sc/2,oy=v[1]-M.H*sc/2+A.rc*0.05,es=S*sc;
    ctx.fillStyle=yaz;ctx.font=(A.rc*0.16)+'px Amiri';ctx.textAlign='center';ctx.fillText(v[6],v[0],v[1]-yan/2-A.rc*0.08);
-   ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);const lx0=(x0-ox)/sc,ly0=(y0-oy)/sc,lx1=(x1-ox)/sc,ly1=(y1-oy)/sc,yazi=12.5*es>3.5;
-   M.O.forEach(o=>{if(o[0]=='box'){if(o[2]+o[4]<lx0||o[2]>lx1||o[3]+o[5]<ly0||o[3]>ly1)return;sekil(ctx,o[1],o[2],o[3],o[4],o[5]);ctx.globalAlpha={L:.07,M:.09,S:.12,D:.1}[o[1]];ctx.fillStyle=o[6];ctx.fill();ctx.globalAlpha={L:.9,M:.55,S:.6,D:.7}[o[1]];ctx.strokeStyle=o[6];ctx.lineWidth={L:1.8,M:1,S:.9,D:1.1}[o[1]];ctx.stroke();ctx.globalAlpha=1;return}
-    if(o[1]+440<lx0||o[1]>lx1||o[2]+20<ly0||o[2]-20>ly1)return;
-    if(o[0]=='b'){ctx.fillStyle='#2f6fb3';ctx.fillRect(o[1],o[2]+4,410,1.5);if(yazi){ctx.font='bold 15px Georgia';ctx.textAlign='left';ctx.fillText(o[3],o[1],o[2])}}
-    else if(o[0]=='t'){ctx.fillStyle='#b3541e';if(yazi){ctx.font='bold 12.5px Georgia';ctx.textAlign='left';ctx.fillText(o[3],o[1]+4,o[2])}else ctx.fillRect(o[1]+4,o[2]-6,150,5)}
-    else if(o[0][0]=='l'){const st={le:['bold 11px Georgia',o[4]],ln:['11px Georgia',yaz],ls:['italic 10.5px Georgia','#7a6a45'],ld:[(o[4]?'bold ':'')+'11px Georgia','#7b3590']}[o[0]];ctx.fillStyle=st[1];
-     if(yazi){ctx.font=st[0];ctx.textAlign='left';ctx.fillText(o[3],o[1],o[2]+3)}else{ctx.globalAlpha=.35;ctx.fillRect(o[1],o[2]-3,Math.min(360,o[3].length*5.4),5);ctx.globalAlpha=1}}
-    else{ctx.fillStyle=inc;ctx.fillRect(o[1]+10,o[2],10,1);if(yazi){ctx.fillStyle=yaz;ctx.fillStyle=['#c0392b','#9a917a',yaz][o[5]];ctx.font='17px Amiri';ctx.textAlign='right';ctx.fillText(o[3],o[1]+110,o[2]+5);ctx.font='12.5px Georgia';ctx.textAlign='left';ctx.fillText('('+o[4]+')',o[1]+116,o[2]+4);ctx.globalAlpha=1}else{ctx.globalAlpha=.55;ctx.fillStyle=['#c0392b','#9a917a',yaz][o[5]];ctx.fillRect(o[1]+60,o[2]-4,50,7);ctx.fillRect(o[1]+116,o[2]-4,8*o[4].length,6);ctx.globalAlpha=1}}});
+   ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);const lx0=(x0-ox)/sc,ly0=(y0-oy)/sc,lx1=(x1-ox)/sc,ly1=(y1-oy)/sc;
+   mustakCiz(ctx,M,lx0,ly0,lx1,ly1,S*sc,{yaz,inc});MYER[v[7]]=[ox,oy,sc,v[6]];
    ctx.restore()}}
   ctx.restore()});
  const ic=new Set(icler);
@@ -107,9 +76,10 @@ function birak(e){PT.delete(e.pointerId);if(PT.size<2)ilkD=0}
 cv.addEventListener('pointercancel',birak);
 cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h>6||PT.size)return;const [x,y]=yer(e),wx=(x-TX)/S,wy=(y-TY)/S;let en=null,ed=1e18;
  for(const k in V){const v=V[k],d=(v[0]-wx)**2+(v[1]-wy)**2;if(d<ed){ed=d;en=k}}
+ if(en){const my=MYER[V[en][7]];if(my){const M=mustakDuzen(my[3]);if(M&&mustakTikla(M,(wx-my[0])/my[2],(wy-my[1])/my[2])){kirli=true;return}}}
  if(en&&ctx.isPointInPath(HP[V[en][7]],wx,wy)&&en!==secK)sec(en);else temizle()});
 function temizle(){secK=null;document.getElementById('bil').style.display='none';kirli=true}
 function sec(k){secK=k;kirli=true;const v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k),b=document.getElementById('bil');b.style.display='block';
  b.innerHTML=`<span style="float:right;cursor:pointer;padding:0 4px" onclick="temizle()">✕</span><b style="font-family:Amiri;font-size:22px">${k}</b> ${v[4]}<br>${v[2]} › ${v[3]}<br><br>yakınları: ${v[5].join(' ')}<br>aynı kökün öbür asılları (kırmızı kesik): ${kard.join(' ')||'yok'}<br><a href="zihin_haritasi.html#${v[6]}">türeme ağacı</a>`}
-addEventListener('resize',()=>{boyut()});boyut();sigdir();if(document.fonts)document.fonts.ready.then(()=>kirli=true);requestAnimationFrame(dongu);
+document.getElementById('sina').onclick=()=>{MDurum.sina=!MDurum.sina;MDurum.gor.clear();MDurum.surum++;document.getElementById('sina').textContent=MDurum.sina?'Sınamayı bitir':'Sına';kirli=true};addEventListener('resize',()=>{boyut()});boyut();sigdir();if(document.fonts)document.fonts.ready.then(()=>kirli=true);requestAnimationFrame(dongu);
 </script></body></html>
