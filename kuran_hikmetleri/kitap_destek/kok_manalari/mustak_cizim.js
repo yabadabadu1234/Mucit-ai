@@ -3,10 +3,10 @@
    misal kendi manasının altında; sınama kipi manaları gizler, dokununca açar; süs yoktur. */
 const MC_ = {}, MDurum = {acik: new Set(), gor: new Set(), sina: false, surum: 0};
 const ZON = {
-  A: {ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
-  M: {ad: 'Mecaz ve genişleme', isaret: '◐', zemin: 'rgba(47,111,179,.09)', kenar: '#4f7fb3'},
-  I: {ad: 'Istılah', isaret: '◆', zemin: 'rgba(63,127,58,.10)', kenar: '#4f8a46'},
-  D: {ad: 'Deyimler', isaret: '❝', zemin: 'rgba(138,63,160,.08)', kenar: '#8a5aa0'}};
+  A: {yaz: '#3b2f1e', ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
+  M: {yaz: '#1f3550', ad: 'Mecaz ve genişleme', isaret: '◐', zemin: 'rgba(47,111,179,.09)', kenar: '#4f7fb3'},
+  I: {yaz: '#24402a', ad: 'Istılah', isaret: '◆', zemin: 'rgba(63,127,58,.10)', kenar: '#4f8a46'},
+  D: {yaz: '#3d2648', ad: 'Deyimler', isaret: '❝', zemin: 'rgba(138,63,160,.08)', kenar: '#8a5aa0'}};
 const ISTILAH = /^(huk|hukuk|tasavvuf|fık|fel|felsefe|mant|edeb|gram|dilb|spor|tıp|kim|fiz|mat|astr|ask|müz|biy|coğ|din|kelâm|hadis|tefsir|ekon|tic|zool|bot|mim|hes|mûsikî|denizcilik|denizc|bilişim|anat|jeol|tiyatro|sin|psik|sosy)/i;
 function zonu(etiket, eser) {
   const e = (etiket || '').toLowerCase();
@@ -32,7 +32,7 @@ function kelimeBlok(x, ix, kok) {
     const goster = acik ? L : L.slice(0, 4);
     goster.forEach((s, i) => {
       const satirlar = sar_((i + 1) + '. ' + (s.et ? '[' + s.et + '] ' : '') + s.t, 62);
-      satirlar.forEach((l, j) => { O.push(['zt', 32, y + 10, l, j === satirlar.length - 1 ? s.ky : '', key]); y += S });
+      satirlar.forEach((l, j) => { O.push(['zt', 32, y + 10, l, j === satirlar.length - 1 ? s.ky : '', key, z]); y += S });
       (acik ? s.mis : s.mis.slice(0, 2)).forEach(m => {
         const ml = sar_('“' + m[0] + '”' + (m[1] ? ' — ' + m[1] : ''), 58), b0 = y + 2;
         ml.forEach(l => { O.push(['mt', 52, y + 13, l, key]); y += 14 });
@@ -95,7 +95,7 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
     else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#6e5a2e' : R.yaz;
+    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : ZON[o[6]].yaz;
       if (yazi && !gz) { ctx.font = (t === 'mt' ? 'italic 10.5px' : '11.5px') + ' Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; ctx.font = '9px Georgia'; ctx.fillText('  ' + o[4], x + w, y) } }
       else { ctx.globalAlpha = gz ? .18 : .3; ctx.fillRect(x, y - 7, Math.min(370, o[3].length * 5.6), 7); ctx.globalAlpha = 1 } }
     else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; ctx.font = '10.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
