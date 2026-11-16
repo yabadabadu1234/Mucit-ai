@@ -14,6 +14,10 @@ const D={"V":{"ءبب¹":[1367.7721852375098,1208.2456153691007,"bitki","meyveni
 const MYER={},KBT={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
+const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(!v)return;const a=h[0],cx=v[0],cy=v[1],n=a.length/2,b=[];let dm=1e9;
+ for(let j=0;j<n;j++){const x1=a[2*j],y1=a[2*j+1],x2=a[2*((j+1)%n)],y2=a[2*((j+1)%n)+1],ex=x2-x1,ey=y2-y1,L=ex*ex+ey*ey||1,t=Math.max(0,Math.min(1,((cx-x1)*ex+(cy-y1)*ey)/L));dm=Math.min(dm,Math.hypot(cx-x1-t*ex,cy-y1-t*ey))}
+ RCK[i]=Math.min(v[8]*0.86,dm*0.9);const r0=RCK[i]*1.07;
+ for(let j=0;j<n;j++){const x1=a[2*j],y1=a[2*j+1],x2=a[2*((j+1)%n)],y2=a[2*((j+1)%n)+1];for(let t=0;t<8;t++){let x=x1+(x2-x1)*t/8,y=y1+(y2-y1)*t/8;const dx=x-cx,dy=y-cy,d=Math.hypot(dx,dy);if(d>r0){const e=r0+(d-r0)*0.33;x=cx+dx*e/d;y=cy+dy*e/d}b.push(x,y)}}h[0]=b});
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
 const BP=D.B.map(yolla),KP=D.K.map(k=>yolla(k[0]));
@@ -25,7 +29,7 @@ function say(n){return 1+n.turev.reduce((a,c)=>a+say(c),0)}function derin(n){ret
 function satir(t,m){const w=t.split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>m&&b){o.push(b);b=x}else b=(b+' '+x).trim()}o.push(b);return o}
 const AGC={};
 const ACR={};function acikRenk(c){if(ACR[c])return ACR[c];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle;let r,g,b;if(h[0]==='#'){r=parseInt(h.slice(1,3),16);g=parseInt(h.slice(3,5),16);b=parseInt(h.slice(5,7),16)}else[r,g,b]=h.match(/\d+/g).map(Number);const m=(a,z)=>Math.round(a*.22+z*.78);return ACR[c]=`rgb(${m(r,251)},${m(g,248)},${m(b,239)})`}
-function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=v[0],cy=v[1],rc=r*0.86,dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=r/22,L=[],T=[];
+function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=v[0],cy=v[1],rc=RCK[i],dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=r/22,L=[],T=[];
  (function yer(m,a0,a1,d,c,px,py){const a=(a0+a1)/2,q=d?rc+d*adim:0,x=cx+q*Math.cos(a),y=cy+q*Math.sin(a);
   if(d){L.push([px,py,x,y,c]);const sag=Math.cos(a)>=0;satir(m.mana,24).forEach((l,j,A)=>T.push([x+(sag?1:-1)*fs*0.4,y+fs*0.35+(j-(A.length-1)/2)*fs*1.05,l,fs*(d==1?1:0.85),sag,c,x,y]))}
   let t=a0;const tt=say(m)-1;m.turev.forEach((k2,j)=>{const p=(a1-a0)*say(k2)/tt;yer(k2,t,t+p,d+1,d==0?RR[j%8]:c,x,y);t+=p})})(n,-Math.PI,Math.PI,0,'#b8860b',cx,cy);
@@ -41,10 +45,10 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
  const icler=[];gorunen.forEach(i=>{const v=V[IDX[i]];if(v[8]*S>55)icler.push(i)});
- if(icler.length<=40)icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);ctx.fillStyle=zem;ctx.fill(HP[i]);
+ if(icler.length<=40)icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
   ctx.lineWidth=1.5/S;A.L.forEach(l=>{ctx.strokeStyle=l[4];ctx.beginPath();ctx.moveTo(l[0],l[1]);ctx.lineTo(l[2],l[3]);ctx.stroke()});
   const yaziVar=A.fs*S>4;A.T.forEach(t=>{ctx.fillStyle=t[5];ctx.beginPath();ctx.arc(t[6],t[7],A.fs*0.25,0,7);ctx.fill();if(yaziVar){ctx.fillStyle=yaz;ctx.font=t[3]+'px Georgia';ctx.textAlign=t[4]?'left':'right';ctx.fillText(t[2],t[0],t[1])}});
-  ctx.fillStyle=acikRenk(D.R[D.H[i][1]]);ctx.strokeStyle=D.R[D.H[i][1]];ctx.lineWidth=2/S;ctx.beginPath();ctx.arc(v[0],v[1],A.rc,0,7);ctx.fill();ctx.stroke();
+  ctx.restore();ctx.save();cekirdek(ctx,i,S);
   if(A.rc*S>40){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const ri=halkaCiz(ctx,M,v[0],v[1],A.rc,S);
    ctx.fillStyle=yaz;ctx.font=(ri*0.09)+'px Amiri';ctx.textAlign='center';ctx.fillText(v[6],v[0],v[1]-ri*0.86);
    const nk=M.kirmizi.reduce((a,b)=>a+b[1].length,0);if(nk){const bw=ri*0.62,bh=ri*0.09,bx=v[0]-bw/2,by=v[1]+ri*0.74;ctx.fillStyle='#fbeaea';ctx.strokeStyle='#c0392b';ctx.lineWidth=1/S;ctx.beginPath();ctx.roundRect(bx,by,bw,bh,bh/2);ctx.fill();ctx.stroke();ctx.fillStyle='#c0392b';ctx.font=(bh*0.55)+'px Georgia';ctx.textBaseline='middle';ctx.fillText('kaideye aykırılar ('+nk+') ▸',v[0],by+bh/2);ctx.textBaseline='alphabetic';KBT[v[7]]=[bx,by,bw,bh,v[6]]}
@@ -64,7 +68,10 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
 const KIRP={};function kirp(m,w,h){const K=KIRP[m]||(KIRP[m]=(()=>{ctx.font='bold 10px Georgia';const ks=m.split(' '),O=[];for(let n=1;n<=Math.min(4,ks.length);n++){let s=[],b='',hd=ks.join(' ').length/n;ks.forEach(x=>{if(b&&(b+' '+x).length>hd*1.15&&s.length<n-1){s.push(b);b=x}else b=(b?b+' ':'')+x});s.push(b);O.push([s,Math.max(...s.map(t=>ctx.measureText(t).width))/10])}return O})());
  let en=null;K.forEach(([s,gw])=>{const f=Math.min(w*.92/gw,h*.9/(s.length*1.12),15);if(!en||f>en.f)en={f,s}});return en&&en.f>=6?en:null}
 const ZK=2.4;let ZEM=null;
-function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillStyle=D.R[D.H[i][1]];c.fill(HP[i])});
+const ZR={};function zitRenk(c){if(ZR[c])return ZR[c];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle;let r=parseInt(h.slice(1,3),16)/255,g=parseInt(h.slice(3,5),16)/255,b=parseInt(h.slice(5,7),16)/255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let hu=0;if(mx!==mn){const d=mx-mn;hu=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4}hu=(hu*60+180+360)%360;return ZR[c]=`hsl(${hu},70%,38%)`}
+function cekirdek(c,i,s){const v=V[IDX[i]];if(!v)return;c.globalAlpha=1;c.beginPath();c.arc(v[0],v[1],RCK[i],0,7);c.fillStyle=karis(D.R[D.H[i][1]],D.H[i][2]);c.fill();c.strokeStyle=zitRenk(D.R[D.H[i][1]]);c.lineWidth=1.6/s;c.stroke()}
+const KR={};function karis(c,a){const k=c+a;if(KR[k])return KR[k];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle,z=[251,248,239],m=[1,3,5].map((o,j)=>Math.round(parseInt(h.slice(o,o+2),16)*a+z[j]*(1-a)));return KR[k]=`rgb(${m})`}
+function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillStyle=D.R[D.H[i][1]];c.fill(HP[i])});lst.forEach(i=>cekirdek(c,i,s));
  c.globalAlpha=1;c.lineWidth=0.7/s;c.strokeStyle=zem;lst.forEach(i=>c.stroke(HP[i]));
  c.globalAlpha=.3;c.strokeStyle=yaz;c.lineWidth=0.9/s;BP.forEach(p=>c.stroke(p));c.globalAlpha=1;c.lineWidth=2/s;KP.forEach(p=>c.stroke(p))}
 function zeminKur(zem,yaz){ZEM=document.createElement('canvas');ZEM.width=ZEM.height=Math.round(1800*ZK);ZEM.tema=zem;const c=ZEM.getContext('2d');c.setTransform(ZK,0,0,ZK,0,0);
