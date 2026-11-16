@@ -58,46 +58,6 @@ for u, L in KA.AGAC:
 json.dump({'hiyerarsi': H, 'asillar': {ad(i): {'kok': N[i][0], 'asil': N[i][2], 'kavram': KA.KOD[N[i][3]][1], 'ust': KA.KOD[N[i][3]][0], 'bolge': BOL[bolge[i]]['ad'],
            'xy': [round(float(P[i, 0]), 1), round(float(P[i, 1]), 1)], 'komsu': [ad(j) for j in np.argsort(-sim[i])[:4]]} for i in range(len(N))}},
           open(HERE / 'KAVRAM_UZAYI.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-JS = r'''
-const IDX={};for(const k in V)IDX[V[k][7]]=k;
-const ic=document.getElementById('ic'),SA={};
-function say(n){return 1+n.turev.reduce((a,c)=>a+say(c),0)}
-function derin(n){return n.turev.length?1+Math.max(...n.turev.map(derin)):0}
-function satir(t,m){const w=t.split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>m&&b){o.push(b);b=x}else b=(b+' '+x).trim()}o.push(b);return o}
-const RR=['#b3541e','#2f6fb3','#3f7f3a','#8a3fa0','#b8860b','#2c8c7c','#a0304a','#5a6b2a'];
-function agac(n,cx,cy,r){let h='';const rc=r*0.42,dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=r/22;
- function yer(m,a0,a1,d,c){const a=(a0+a1)/2,q=d?rc+d*adim:0;m._x=cx+q*Math.cos(a);m._y=cy+q*Math.sin(a);m._a=a;m._d=d;m._c=c;let t=a0;const T=say(m)-1;m.turev.forEach((k,i)=>{const p=(a1-a0)*say(k)/T;yer(k,t,t+p,d+1,d==0?RR[i%8]:c);t+=p})}
- yer(n,-Math.PI,Math.PI,0,'#b8860b');
- function cz(m){m.turev.forEach(k=>{h+=`<line x1="${m._x}" y1="${m._y}" x2="${k._x}" y2="${k._y}" stroke="${k._c}" stroke-width="1.6" opacity=".85"/>`;cz(k)})}cz(n);
- function yz(m){if(m._d){const sag=Math.cos(m._a)>=0,L=satir(m.mana,24);h+=`<circle cx="${m._x}" cy="${m._y}" r="${fs*0.25}" fill="${m._c}"/>`;
-   L.forEach((l,i)=>h+=`<text x="${m._x+(sag?1:-1)*fs*0.4}" y="${m._y+fs*0.35+(i-(L.length-1)/2)*fs*1.05}" font-size="${fs*(m._d==1?1:0.85)}" text-anchor="${sag?'start':'end'}" class="ici">${l}</text>`)}
-  m.turev.forEach(yz)}yz(n);
- h+=`<circle cx="${cx}" cy="${cy}" r="${rc}" fill="var(--zemin)" stroke="#b8860b" stroke-width="${fs*0.1}"/>`;
- return [h,rc]}
-function mustak(k,cx,cy,rc){const D=SA[k];if(!D)return '';const S=19,WC=440;
- const R=[];D.forEach(([b,K])=>{R.push(['b',b]);K.forEach(([t,L])=>{R.push(['t',t+' ('+L.length+')']);L.forEach(x=>R.push(['m',x,t]))})});
- const yuk=r=>r[0]=='b'?1.6:r[0]=='t'?1.2:1,top=R.reduce((a,r)=>a+yuk(r),0),C=Math.max(1,Math.round(Math.sqrt(top*S/WC))),hed=top/C;
- let h='',col=0,y=40,dol=0,mx=0,sonT='',x=0,y0=null;
- const kapa=()=>{if(y0!==null){h+=`<line x1="${x+10}" y1="${y0}" x2="${x+10}" y2="${y-S}" stroke="var(--yazi)"/>`;y0=null}};
- R.forEach(r=>{if(dol+yuk(r)>hed*1.02&&col<C-1&&dol>0){kapa();mx=Math.max(mx,y);col++;y=40;dol=0;x=col*WC;if(r[0]=='m'){h+=`<text x="${x+4}" y="${y}" font-size="12.5" font-weight="bold" fill="#b3541e" class="ici">${sonT} (devamı)</text>`;y+=S*0.9}}
-  dol+=yuk(r);x=col*WC;
-  if(r[0]=='b'){kapa();h+=`<text x="${x}" y="${y}" font-size="15" font-weight="bold" fill="#2f6fb3" class="ici">${r[1]}</text><line x1="${x}" y1="${y+5}" x2="${x+WC-30}" y2="${y+5}" stroke="#2f6fb3" stroke-width="1.5"/>`;y+=S*1.6}
-  else if(r[0]=='t'){kapa();sonT=r[1].replace(/ \(\d+\)$/,'');h+=`<text x="${x+4}" y="${y}" font-size="12.5" font-weight="bold" fill="#b3541e" class="ici">${r[1]}</text>`;y+=S*0.9}
-  else{if(y0===null)y0=y;const [ar,tr]=r[1];h+=`<line x1="${x+10}" y1="${y}" x2="${x+20}" y2="${y}" stroke="var(--ince)"/><text x="${x+110}" y="${y+5}" font-size="17" class="ar" text-anchor="end">${ar}</text><text x="${x+116}" y="${y+4}" font-size="12.5" class="ici">(${tr})</text>`;y+=S}});
- kapa();mx=Math.max(mx,y);
- const W=(col+1)*WC,yan=1.45*rc,sc=Math.min(yan/W,yan/mx);
- return `<text x="${cx}" y="${cy-yan/2-rc*0.08}" font-size="${rc*0.16}" text-anchor="middle" class="ar">${k}</text><g transform="translate(${cx-W*sc/2},${cy-mx*sc/2+rc*0.05}) scale(${sc})">${h}</g>`}
-function yukle(k){if(SA[k]!==undefined)return;SA[k]=null;const e=document.createElement('script');e.src='secim_agi/'+k+'.js';e.onload=()=>ciz();document.head.appendChild(e)}
-let zam=null;function ciz(){clearTimeout(zam);zam=setTimeout(_ciz,60)}
-function _ciz(){const r=s.getBoundingClientRect(),sc=r.width/vb[2];let h='';
- document.getElementById('s').classList.toggle('yakin',sc>4);
- for(const k in V){const v=V[k],R=v[8]*sc;if(R<55)continue;if(v[0]<vb[0]-v[8]||v[0]>vb[0]+vb[2]+v[8]||v[1]<vb[1]-v[8]||v[1]>vb[1]+vb[3]+v[8])continue;
-  const [t,rc]=agac(v[9],v[0],v[1],v[8]);let m='';if(rc*sc>40){yukle(v[6]);m=mustak(v[6],v[0],v[1],rc)}
-  h+=`<clipPath id="kp${v[7]}"><use href="#c${v[7]}"/></clipPath><g clip-path="url(#kp${v[7]})">${t}${m}</g>`}
- ic.innerHTML=h}
-
-s.ondblclick=e=>yakin(1/3,e.clientX,e.clientY);
-'''
 RENK = ['#7a7a7a', '#5a7a2a', '#b3541e', '#2f6fb3', '#8a3fa0', '#a0304a', '#2c8c7c', '#b8860b', '#6b5a3a']
 cer = box(40, 40, 1760, 1760)
 Vo = Voronoi(np.vstack([P, [[-5000, -5000], [-5000, 7000], [7000, -5000], [7000, 7000]]]))
@@ -107,54 +67,20 @@ hucre = []
 for i in range(len(N)):
     r = Vo.regions[Vo.point_region[i]]; poly = Polygon([Vo.vertices[v] for v in r]).intersection(cer)
     hucre.append(poly.intersection(kab))
-def yol(g):
-    gs = getattr(g, 'geoms', [g]); return ''.join('M' + 'L'.join(f'{x:.1f},{y:.1f}' for x, y in q.exterior.coords) + 'Z' for q in gs if q.geom_type == 'Polygon')
-svg = []
-for i in range(len(N)):
-    ton = 0.15 + 0.22 * ((bolge[i] * 37) % 7) / 6
-    svg.append(f'<path id="c{i}" d="{yol(hucre[i])}" fill="{RENK[ust_i[N[i][3]]]}" fill-opacity="{ton:.2f}" stroke="var(--zemin)" stroke-width=".6"/>')
-for b in BOL:
-    svg.append(f'<path d="{yol(unary_union([hucre[i] for i in b["uyeler"]]))}" fill="none" stroke="var(--yazi)" stroke-opacity=".3" stroke-width=".9"><title>{b["ad"]}</title></path>')
-for ci, c in enumerate(KODLAR):
-    g = unary_union([hucre[i] for i in ix_of[c]])
-    svg.append(f'<path d="{yol(g)}" fill="none" stroke="var(--yazi)" stroke-width="2.2"/>')
-    p = P[ix_of[c]].mean(0); svg.append(f'<text class="kad" x="{p[0]:.0f}" y="{p[1]:.0f}">{KA.KOD[c][1]}</text>')
-for i in range(len(N)):
-    svg.append(f'<g class="k" data-k="{ad(i)}"><circle cx="{P[i,0]:.1f}" cy="{P[i,1]:.1f}" r="1.6"/><text x="{P[i,0]+2.5:.1f}" y="{P[i,1]+3:.1f}">{ad(i)}</text></g>')
-lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
+def halka(g):
+    if g.geom_type != 'Polygon': g = max(getattr(g, 'geoms', [g]), key=lambda q: q.area)
+    return [round(c, 1) for xy in g.exterior.coords for c in xy]
+def halkalar(g):
+    return [[round(c, 1) for xy in q.exterior.coords for c in xy] for q in getattr(g, 'geoms', [g]) if q.geom_type == 'Polygon']
 from shapely.geometry import Point
 IC = [max(4.0, hucre[i].exterior.distance(Point(P[i, 0], P[i, 1]))) if hucre[i].geom_type == 'Polygon' else 8.0 for i in range(len(N))]
-AG = [A[N[i][0]][N[i][1]] for i in range(len(N))]
-VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), AG[i]] for i in range(len(N))}
-HTML = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kavram Uzayı</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
-:root{{--zemin:#fbf8ef;--yazi:#2b2410;--ince:#8a7f62}}@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--zemin:#1d1b16;--yazi:#eee6cf;--ince:#a99f83}}}}
-body{{margin:0;background:var(--zemin);color:var(--yazi);font-family:Georgia,serif}}#lej{{padding:8px 16px;font-size:13px;display:flex;flex-wrap:wrap;gap:12px}}
-#lej i{{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}}svg{{width:100%;height:calc(100vh - 60px);cursor:grab;touch-action:none}}
-.k text{{font-family:Amiri,serif;font-size:8.5px;fill:var(--yazi)}}.k circle{{fill:var(--yazi)}}.kad{{font-size:14px;font-weight:bold;text-anchor:middle;fill:var(--yazi);paint-order:stroke;stroke:var(--zemin);stroke-width:4;pointer-events:none}}
-#bil{{position:fixed;right:12px;top:60px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}}.cz{{stroke:#b8860b;stroke-width:1.5}}path,line{{vector-effect:non-scaling-stroke}}#s.yakin .kad{{display:none}}.ici{{fill:var(--yazi);font-family:Georgia,serif}}.ar{{font-family:Amiri,serif;fill:var(--yazi)}}#s.yakin .k{{display:none}}</style></head><body>
-<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a>{lej}<span style="color:var(--ince)">· her hücre bir kökün bir aslı (¹ ² birinci, ikinci asıl) · kalın sınır: kavram · ince sınır: mana bölgesi · yaklaştıkça hücrenin içinde türeme ağacı, merkezinde müştak ağı belirir (çift tık: yaklaş)</span></div>
-<svg id="s" viewBox="0 0 1800 1800"><g>{''.join(svg)}<g id="ic"></g><g id="cz"></g></g></svg><div id="bil"></div>
-<script>const V={json.dumps(VER, ensure_ascii=False)};
-const s=document.getElementById('s');let vb=[0,0,1800,1800],secK=null;const up=()=>s.setAttribute('viewBox',vb.join(' '));
-const dunya=(x,y)=>{{const r=s.getBoundingClientRect();return [vb[0]+(x-r.left)/r.width*vb[2],vb[1]+(y-r.top)/r.height*vb[3]]}};
-function yakin(f,x,y){{const [mx,my]=dunya(x,y);vb=[mx-(mx-vb[0])*f,my-(my-vb[1])*f,vb[2]*f,vb[3]*f];up();ciz()}}
-s.addEventListener('wheel',e=>{{e.preventDefault();yakin(e.deltaY>0?1.15:0.87,e.clientX,e.clientY)}},{{passive:false}});
-const P=new Map();let hareket=0,ilkD=0;
-s.addEventListener('pointerdown',e=>{{s.setPointerCapture(e.pointerId);P.set(e.pointerId,[e.clientX,e.clientY]);hareket=0;if(P.size==2){{const v=[...P.values()];ilkD=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}}});
-s.addEventListener('pointermove',e=>{{const o=P.get(e.pointerId);if(!o)return;
- if(P.size==1){{const r=s.getBoundingClientRect();vb[0]-=(e.clientX-o[0])/r.width*vb[2];vb[1]-=(e.clientY-o[1])/r.height*vb[3];hareket+=Math.abs(e.clientX-o[0])+Math.abs(e.clientY-o[1]);P.set(e.pointerId,[e.clientX,e.clientY]);up();ciz()}}
- else{{P.set(e.pointerId,[e.clientX,e.clientY]);const v=[...P.values()],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);if(ilkD>0)yakin(ilkD/d,(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2);ilkD=d;hareket+=99}}}});
-function birak(e){{P.delete(e.pointerId);if(P.size<2)ilkD=0}}
-s.addEventListener('pointercancel',birak);
-s.addEventListener('pointerup',e=>{{const h=hareket;birak(e);if(h>6||P.size)return;const q=document.elementFromPoint(e.clientX,e.clientY),g=q&&q.closest('.k');const hk=g?g.dataset.k:(q&&q.id&&/^c\d+$/.test(q.id)?IDX[+q.id.slice(1)]:null);if(hk&&hk!==secK)sec(hk);else temizle()}});
-function temizle(){{secK=null;document.getElementById('cz').innerHTML='';document.getElementById('bil').style.display='none'}}
-function sec(k){{secK=k;const v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k);
-document.getElementById('cz').innerHTML=v[5].map(n=>`<line class="cz" x1="${{v[0]}}" y1="${{v[1]}}" x2="${{V[n][0]}}" y2="${{V[n][1]}}"/>`).join('')+kard.map(n=>`<line x1="${{v[0]}}" y1="${{v[1]}}" x2="${{V[n][0]}}" y2="${{V[n][1]}}" stroke="#a0304a" stroke-dasharray="4 3" stroke-width="1.3"/>`).join('');
-const b=document.getElementById('bil');b.style.display='block';b.innerHTML=`<span style="float:right;cursor:pointer;padding:0 4px" onclick="temizle()">✕</span><b style="font-family:Amiri;font-size:22px">${{k}}</b> ${{v[4]}}<br>${{v[2]}} › ${{v[3]}}<br><br>yakınları: ${{v[5].join(' ')}}<br>aynı kökün öbür asılları (kırmızı kesik): ${{kard.join(' ')||'yok'}}<br><a href="zihin_haritasi.html#${{v[6]}}">türeme ağacı</a>`}}
-JS_YER
-</script></body></html>"""
-HTML = HTML.replace('JS_YER', JS)
+HUC = [[halka(hucre[i]), ust_i[N[i][3]], round(0.15 + 0.22 * ((bolge[i] * 37) % 7) / 6, 2)] for i in range(len(N))]
+BOLS = [halkalar(unary_union([hucre[i] for i in b['uyeler']])) for b in BOL]
+KAVS = [[halkalar(unary_union([hucre[i] for i in ix_of[c]])), KA.KOD[c][1], [round(float(x), 1) for x in P[ix_of[c]].mean(0)]] for c in KODLAR]
+VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
+lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': BOLS, 'K': KAVS, 'R': RENK}, ensure_ascii=False, separators=(',', ':'))
+HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI)
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
     from playwright.sync_api import sync_playwright
