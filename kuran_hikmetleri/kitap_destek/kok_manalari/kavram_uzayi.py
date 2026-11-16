@@ -78,34 +78,41 @@ def zarf(pts, pad):
     if len(pts) < 3: c = pts.mean(0); return [(c[0] + pad * math.cos(a), c[1] + pad * math.sin(a)) for a in np.linspace(0, 2 * math.pi, 12)]
     h = pts[ConvexHull(pts).vertices]; c = h.mean(0)
     return [tuple(c + (p - c) * (1 + pad / (np.linalg.norm(p - c) + 1e-9))) for p in h]
+from scipy.spatial import Voronoi
+from shapely.geometry import Polygon, box
+from shapely.ops import unary_union
+cer = box(40, 40, 1760, 1760)
+V_ = Voronoi(np.vstack([P, [[-5000, -5000], [-5000, 7000], [7000, -5000], [7000, 7000]]]))
+hucre = []
+for i in range(len(K)):
+    r = V_.regions[V_.point_region[i]]
+    hucre.append(Polygon([V_.vertices[v] for v in r]).intersection(cer) if -1 not in r and r else None)
+def yol(g):
+    gs = getattr(g, 'geoms', [g]); return ''.join('M' + 'L'.join(f'{x:.1f},{y:.1f}' for x, y in q.exterior.coords) + 'Z' for q in gs if q.geom_type == 'Polygon')
 svg = []
+for i, k in enumerate(K):
+    if hucre[i] is not None:
+        bi = bk[k]; ton = 0.16 + 0.22 * ((bi * 37) % 7) / 6
+        svg.append(f'<path d="{yol(hucre[i])}" fill="{ur[UST[i]]}" fill-opacity="{ton:.2f}" stroke="var(--zemin)" stroke-width=".6"/>')
+for b in bolgeler:
+    g = unary_union([hucre[K.index(k)] for k in b['kokler'] if hucre[K.index(k)] is not None])
+    svg.append(f'<path d="{yol(g)}" fill="none" stroke="var(--yazi)" stroke-opacity=".35" stroke-width="1"><title>{b["ad"]}</title></path>')
 for o in orta_ler:
     ix = [i for i in range(len(K)) if ORTA[i] == o]
-    if len(ix) < 1: continue
-    u = collections.Counter(UST[i] for i in ix).most_common(1)[0][0]
-    pts = P[ix]; z = zarf(pts, 14)
-    svg.append(f'<path class="ku" d="M{"L".join(f"{x:.0f},{y:.0f}" for x, y in z)}Z" fill="{ur[u]}" fill-opacity=".07" stroke="{ur[u]}" stroke-width="1.5"/>')
-    c = np.median(pts, 0); svg.append(f'<text class="kad" x="{c[0]:.0f}" y="{c[1]:.0f}" fill="{ur[u]}">{AD.get(o, o)}</text>')
-kopru = []
-for i in range(len(K)):
-    j = int(np.argmax(np.where(np.array(ORTA) != ORTA[i], sim[i], -1)))
-    if sim[i, j] > 0.75 and i < j: kopru.append((i, j))
-for i, j in kopru: svg.append(f'<line x1="{P[i,0]:.0f}" y1="{P[i,1]:.0f}" x2="{P[j,0]:.0f}" y2="{P[j,1]:.0f}" stroke="#b8860b" stroke-opacity=".35" stroke-width=".8"/>')
-for b in bolgeler:
-    ix = [K.index(k) for k in b['kokler']]
-    if len(ix) >= 3:
-        z = zarf(P[ix], 6); svg.append(f'<path class="bo" d="M{"L".join(f"{x:.0f},{y:.0f}" for x, y in z)}Z"><title>{b["ad"]}</title></path>')
+    g = unary_union([hucre[i] for i in ix if hucre[i] is not None])
+    svg.append(f'<path d="{yol(g)}" fill="none" stroke="var(--yazi)" stroke-width="2.4"/>')
+    c = g.representative_point(); svg.append(f'<text class="kad" x="{c.x:.0f}" y="{c.y:.0f}">{AD.get(o, o)}</text>')
 for i, k in enumerate(K):
-    svg.append(f'<g class="k" data-k="{k}"><circle cx="{P[i,0]:.1f}" cy="{P[i,1]:.1f}" r="3.2" fill="{ur[UST[i]]}"/><text x="{P[i,0]+4:.1f}" y="{P[i,1]+3:.1f}">{k}</text></g>')
+    svg.append(f'<g class="k" data-k="{k}"><circle cx="{P[i,0]:.1f}" cy="{P[i,1]:.1f}" r="1.8" fill="var(--yazi)"/><text x="{P[i,0]+3:.1f}" y="{P[i,1]+3:.1f}">{k}</text></g>')
 lej = ''.join(f'<span><i style="background:{ur[u]}"></i>{u}</span>' for u in ustler)
 HTML = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kavram Uzayı</title>
 <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
 :root{{--zemin:#fbf8ef;--yazi:#2b2410;--ince:#8a7f62}}@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--zemin:#1d1b16;--yazi:#eee6cf;--ince:#a99f83}}}}
 body{{margin:0;background:var(--zemin);color:var(--yazi);font-family:Georgia,serif}}#lej{{padding:8px 16px;font-size:13px;display:flex;flex-wrap:wrap;gap:12px}}
 #lej i{{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}}svg{{width:100%;height:calc(100vh - 40px);cursor:grab}}
-.k text{{font-family:Amiri,serif;font-size:10px;fill:var(--yazi)}}.kad{{font-size:15px;font-weight:bold;text-anchor:middle;paint-order:stroke;stroke:var(--zemin);stroke-width:4;pointer-events:none}}
+.k text{{font-family:Amiri,serif;font-size:10px;fill:var(--yazi)}}.kad{{font-size:15px;font-weight:bold;text-anchor:middle;fill:var(--yazi);paint-order:stroke;stroke:var(--zemin);stroke-width:4;pointer-events:none}}
 .bo{{fill:none;stroke:var(--ince);stroke-dasharray:3 3;stroke-width:.8}}#bil{{position:fixed;right:12px;top:44px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}}
-.cz{{stroke:#b8860b;stroke-width:1.5}}</style></head><body><div id="lej">{lej}<span style="color:var(--ince)">· kesik çizgi: mana bölgesi · altın çizgi: başka kavram uzayındaki en yakın kök · köke dokun: en yakın dört kök</span></div>
+.cz{{stroke:#b8860b;stroke-width:1.5}}</style></head><body><div id="lej">{lej}<span style="color:var(--ince)">· her kök bir hücre · kalın sınır: kavram uzayı · ince sınır: mana bölgesi · köke dokun: en yakın dört kök</span></div>
 <svg id="s" viewBox="0 0 1800 1800"><g id="g">{''.join(svg)}<g id="cz"></g></g></svg><div id="bil"></div>
 <script>const V={json.dumps({K[i]: [float(P[i,0]), float(P[i,1]), AD.get(ORTA[i], ORTA[i]), bolgeler[bk[K[i]]]['ad'], asil(A[K[i]]), komsu[K[i]]] for i in range(len(K))}, ensure_ascii=False)};
 const s=document.getElementById('s');let vb=[0,0,1800,1800],dr=null;const up=()=>s.setAttribute('viewBox',vb.join(' '));
