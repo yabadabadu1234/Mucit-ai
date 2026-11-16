@@ -86,7 +86,7 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
   const yazi = 12.5 * es > 3.5, gizli = k => MDurum.sina && !MDurum.gor.has(k);
   for (const o of M.O) {
     const t = o[0], x = o[1], y = o[2];
-    if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.setLineDash(z === 'M' ? [5, 3] : []); ctx.stroke(); ctx.setLineDash([]); continue }
+    if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); if (yazi) { cerceve_(ctx, z, bx, by, bw, bh) } else { ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.stroke() } continue }
     if (t === 'bal') { if (x + o[3] < lx0 || x > lx1 || y + o[4] < ly0 || y > ly1) continue; balon_(ctx, x, y, o[3], o[4]); ctx.fillStyle = 'rgba(255,250,235,.85)'; ctx.fill(); ctx.strokeStyle = '#c9b27a'; ctx.lineWidth = .8; ctx.stroke(); continue }
     if (x + 460 < lx0 || x > lx1 || y + 20 < ly0 || y - 20 > ly1) continue;
     if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 5, 430, 1.5); if (yazi) { ctx.font = 'bold 15px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
@@ -119,4 +119,13 @@ function semse_(c, x, y, w, h, renk) {
   c.quadraticCurveTo(x + w - 10, y + h, x + w - 26, y + h); c.lineTo(x + 26, y + h); c.quadraticCurveTo(x + 10, y + h, x, cy); c.closePath();
   c.fillStyle = 'rgba(184,134,11,.08)'; c.fill(); c.strokeStyle = renk; c.lineWidth = 1; c.stroke();
   yildiz_(c, x + 9, cy, 4, 8, .55); c.fillStyle = renk; c.fill(); yildiz_(c, x + w - 9, cy, 4, 8, .55); c.fill(); c.restore();
+}
+
+/* Çerçeve: kenar, kutunun mana cinsine ait motifin tekrarıyla örülür; motifler arası ince bağ çizgisi. */
+function cerceve_(c, z, x, y, w, h) {
+  const r = 4.2, ad = 15, nx = Math.max(2, Math.round(w / ad)), ny = Math.max(2, Math.round(h / ad));
+  c.save(); c.globalAlpha = .75; c.strokeStyle = ZON[z].kenar; c.lineWidth = .5; c.beginPath(); c.rect(x, y, w, h); c.stroke();
+  for (let i = 0; i <= nx; i++) { const px = x + w * i / nx; motif_(c, z, px, y, r); motif_(c, z, px, y + h, r) }
+  for (let j = 1; j < ny; j++) { const py = y + h * j / ny; motif_(c, z, x, py, r); motif_(c, z, x + w, py, r) }
+  c.restore();
 }
