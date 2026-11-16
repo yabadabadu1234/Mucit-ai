@@ -10,10 +10,7 @@
   --kenar:#8d7f4f; --sebep:#b3541e; --halka:#cfc293; --kelime:#fffdf6c0;
   --font-metin:'Inter',system-ui,sans-serif; --font-arap:'Amiri','Noto Naskh Arabic',serif;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#15130d; --fg:#efe8d0; --muted:#a79d7d; --panel:#1e1b12; --line:#3c3724;
-  --esas:#9c7f2a; --mavi:#2d4a66; --yesil:#40592f; --seftali:#6b4a2c; --pembe:#5e3a56; --turkuaz:#2f5c52; --gri:#3a3828;
-  --kenar:#b9a96d; --sebep:#ff9a5c; --halka:#4a4328; --kelime:#15130dc0; color-scheme:dark;}}
+
 :root[data-theme="dark"]{
   --bg:#15130d; --fg:#efe8d0; --muted:#a79d7d; --panel:#1e1b12; --line:#3c3724;
   --esas:#9c7f2a; --mavi:#2d4a66; --yesil:#40592f; --seftali:#6b4a2c; --pembe:#5e3a56; --turkuaz:#2f5c52; --gri:#3a3828;
@@ -191,7 +188,7 @@ function silindir(a,b,r,renk){const d=new THREE.Vector3().subVectors(b,a),L=d.le
 D.kafes_kenarlari.forEach(([u,a])=>{const m=silindir(P[u],P[a],3.2,new THREE.Color(cssv('--kenar')));m.userData={u,a};kafGrup.add(m);kafKenar.push(m);});
 // ---- demet renkleri ----
 const parOf=D.dugumler.map(()=>[]);D.kafes_kenarlari.forEach(([u,a])=>parOf[a].push(u));
-function karanlik(){const x=document.documentElement.dataset.theme;return x==='dark'||(x!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);}
+function karanlik(){return false;}
 function anahtar(u,a,mod){if(mod==='ebeveyn')return 'd'+u;if(mod==='evlat')return 'u'+a;return parOf[a].length>=2?'u'+a:'d'+u;}
 function kisa(s){return s.length>34?s.slice(0,33)+'…':s;}
 function renkUygula(){const mod=document.getElementById('sDemet').value;const kmap={},keys=[],say={};

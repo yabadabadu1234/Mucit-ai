@@ -103,7 +103,7 @@ svg.sema .eps { stroke:#64748b; stroke-width:1.5; stroke-dasharray:4 3; }
 ol.netice { padding-left:20px; } ol.netice li { margin:10px 0; }
 .sinir { background:#fffbeb; border-left:4px solid #d97706; padding:10px 14px; border-radius:6px; font-size:10.5pt; }
 @media (max-width:620px) { .formul .satir { grid-template-columns:1fr; gap:2px; } table.roller { font-size:9pt; } }
-@media (prefers-color-scheme:dark) { table.roller th { background:#1a2438; } table.roller tr.vur td { background:#1c1608; } .sinir { background:#1c1608; } svg.sema .K { stroke:#f87171; color:#f87171; } svg.sema .don { stroke:#34d399; color:#34d399; } }
+
 
 .gvtaban { display:flex; gap:14px; align-items:center; margin:12px 0; } .gvnot { color:var(--sessiz); font-size:10pt; }
 .gvizgara { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin:12px 0; }
@@ -115,14 +115,7 @@ figure.gv .ar { font-family:'Amiri',serif; font-size:17pt; }
 .rz { font-size:8.5pt; padding:1px 8px; border-radius:99px; color:#fff; } .rz.y { background:#15803d; } .rz.t { background:#64748b; }
 pre.kod { white-space:pre-wrap; font-size:9pt; line-height:1.45; overflow:auto; }
 @media (max-width:560px) { .harfler { font-size:48pt; } .imge { font-size:15pt; } }
-@media (prefers-color-scheme:dark) {
-  :root { --zemin:#0b1220; --kart:#111a2c; --yazi:#e2e8f0; --sessiz:#94a3b8; --cizgi:#243247; --vurgu:#fbbf24; }
-  .harfler, .dugum .kelime, .komsu .kk { color:#f1f5f9; }
-  .dugum .mana, .ayet .meal, .kapsul p, details.soru > div { color:#cbd5e1; }
-  .dugum.tahmin { background:#0f172a; }
-  .sahne { background:#1c1608; }
-  .gecisler span { background:#1e293b; color:#cbd5e1; }
-}
+
 """
 
 JS = """

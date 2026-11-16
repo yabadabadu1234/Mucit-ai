@@ -536,7 +536,7 @@ SAYFA = r"""<!doctype html>
 <title>Kategori Yerleşimi</title>
 <style>
 :root{--bg:#fbf8f1;--fg:#222;--panel:#fffdf8;--line:#d8d0bd;--mut:#6b6558}
-@media (prefers-color-scheme:dark){:root{--bg:#1a1814;--fg:#ece6d6;--panel:#23201a;--line:#3a352b;--mut:#a79f8b}}
+
 *{box-sizing:border-box}html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:Georgia,serif}
 #app{display:grid;grid-template-columns:310px 1fr;grid-template-rows:minmax(0,1fr);height:100%}
 #yan{min-height:0;overflow:auto;padding:12px 14px;background:var(--panel);border-right:1px solid var(--line);font-size:13px;line-height:1.5}

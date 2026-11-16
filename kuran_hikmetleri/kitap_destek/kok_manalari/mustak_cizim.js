@@ -95,7 +95,7 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
     else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : (KARA_(R.yaz) ? ZON[o[6]].yaz : ZON[o[6]].acik);
+    else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : ZON[o[6]].yaz;
       if (yazi && !gz) { ctx.font = (t === 'mt' ? 'italic 10.5px' : '11.5px') + ' Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; ctx.font = '9px Georgia'; ctx.fillText('  ' + o[4], x + w, y) } }
       else { ctx.globalAlpha = gz ? .18 : .3; ctx.fillRect(x, y - 7, Math.min(370, o[3].length * 5.6), 7); ctx.globalAlpha = 1 } }
     else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; ctx.font = '10.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }

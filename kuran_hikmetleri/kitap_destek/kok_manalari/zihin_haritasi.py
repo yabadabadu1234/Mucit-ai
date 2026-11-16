@@ -22,7 +22,7 @@ for k in A:
 HTML = r"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kök Zihin Haritası</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>:root{--zemin:#fbf8ef;--yazi:#2b2410;--ince:#8a7f62;--cizgi:#c9bd98}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--zemin:#1d1b16;--yazi:#eee6cf;--ince:#a99f83;--cizgi:#5a5240}}
+
 body{margin:0;background:var(--zemin);color:var(--yazi);font-family:Georgia,serif}
 header{display:flex;gap:10px;align-items:center;padding:10px 16px;flex-wrap:wrap}
 input{font:inherit;padding:6px 10px;border:1px solid var(--cizgi);border-radius:6px;background:transparent;color:inherit;width:12em}
