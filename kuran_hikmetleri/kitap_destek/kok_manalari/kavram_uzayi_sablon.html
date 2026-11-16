@@ -55,9 +55,11 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
  ctx.setTransform(dpr,0,0,dpr,0,0);if(S<4){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.lineWidth=4;ctx.textAlign='center';
-  const fs=Math.min(15,Math.max(9,26*S)),dolu=[];ctx.font='bold '+fs+'px Georgia';
-  D.K.forEach(k=>{const x=k[2][0]*S+TX,y=k[2][1]*S+TY;if(x<-80||x>W+80||y<-20||y>H+20)return;const w=ctx.measureText(k[1]).width+6,r=[x-w/2,y-fs,x+w/2,y+4];
-   if(dolu.some(d=>r[0]<d[2]&&r[2]>d[0]&&r[1]<d[3]&&r[3]>d[1]))return;dolu.push(r);ctx.strokeText(k[1],x,y);ctx.fillText(k[1],x,y)})}}
+  D.K.forEach(k=>{const [cx,cy,bw,bh]=k[2],x=cx*S+TX,y=cy*S+TY,w=bw*S,h=bh*S;if(x+w/2<0||x-w/2>W||y+h/2<0||y-h/2>H)return;
+   const L=kirp(k[1],w,h);if(!L)return;ctx.font='bold '+L.f+'px Georgia';ctx.lineWidth=Math.max(2,L.f/3.5);ctx.textBaseline='middle';
+   L.s.forEach((t,i)=>{const yy=y+(i-(L.s.length-1)/2)*L.f*1.12;ctx.strokeText(t,x,yy);ctx.fillText(t,x,yy)});ctx.textBaseline='alphabetic'})}}
+const KIRP={};function kirp(m,w,h){const K=KIRP[m]||(KIRP[m]=(()=>{ctx.font='bold 10px Georgia';const ks=m.split(' '),O=[];for(let n=1;n<=Math.min(4,ks.length);n++){let s=[],b='',hd=ks.join(' ').length/n;ks.forEach(x=>{if(b&&(b+' '+x).length>hd*1.15&&s.length<n-1){s.push(b);b=x}else b=(b?b+' ':'')+x});s.push(b);O.push([s,Math.max(...s.map(t=>ctx.measureText(t).width))/10])}return O})());
+ let en=null;K.forEach(([s,gw])=>{const f=Math.min(w*.92/gw,h*.9/(s.length*1.12),15);if(!en||f>en.f)en={f,s}});return en&&en.f>=6?en:null}
 const ZK=2.4;let ZEM=null;
 function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillStyle=D.R[D.H[i][1]];c.fill(HP[i])});
  c.globalAlpha=1;c.lineWidth=0.7/s;c.strokeStyle=zem;lst.forEach(i=>c.stroke(HP[i]));

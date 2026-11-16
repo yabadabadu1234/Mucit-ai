@@ -76,7 +76,30 @@ from shapely.geometry import Point
 IC = [max(4.0, hucre[i].exterior.distance(Point(P[i, 0], P[i, 1]))) if hucre[i].geom_type == 'Polygon' else 8.0 for i in range(len(N))]
 HUC = [[halka(hucre[i]), ust_i[N[i][3]], round(0.15 + 0.22 * ((bolge[i] * 37) % 7) / 6, 2)] for i in range(len(N))]
 BOLS = [halkalar(unary_union([hucre[i] for i in b['uyeler']])) for b in BOL]
-KAVS = [[halkalar(unary_union([hucre[i] for i in ix_of[c]])), KA.KOD[c][1], [round(float(x), 1) for x in P[ix_of[c]].mean(0)]] for c in KODLAR]
+def ic_kutu(g):
+    from shapely.ops import polylabel
+    if g.geom_type != 'Polygon':
+        g = max(g.geoms, key=lambda q: q.area)
+    g = g.buffer(-3)
+    if g.is_empty:
+        return [0, 0, 0, 0]
+    if g.geom_type != 'Polygon':
+        g = max(g.geoms, key=lambda q: q.area)
+    m = polylabel(g, 1)
+    en = None
+    for a in (1, 1.5, 2, 3, 4, 6, 9):
+        lo, hi = 0, 2000
+        for _ in range(22):
+            o = (lo + hi) / 2
+            if g.contains(box(m.x - a * o, m.y - o, m.x + a * o, m.y + o)): lo = o
+            else: hi = o
+        if en is None or (a * lo) * lo > en[2] * en[3] / 4:
+            en = [m.x, m.y, 2 * a * lo, 2 * lo]
+    return [round(float(x), 1) for x in en]
+KAVS = []
+for c in KODLAR:
+    gk = unary_union([hucre[i] for i in ix_of[c]])
+    KAVS.append([halkalar(gk), KA.KOD[c][1], ic_kutu(gk)])
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
 VERI = json.dumps({'V': VER, 'H': HUC, 'B': BOLS, 'K': KAVS, 'R': RENK}, ensure_ascii=False, separators=(',', ':'))
