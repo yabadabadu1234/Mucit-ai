@@ -65,6 +65,9 @@ jobs:
           cp zubde/ZUBDE.zbd _site/zubde/
           cp zubde/misal/*.html zubde/misal/*.zbd _site/zubde/misal/
 
+      - name: Her sayfaya sürüm damgası ve sürüm bekçisi (eski nüsha gösterilmez)
+        run: python3 .github/surum_damgala.py _site "${GITHUB_SHA}"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
