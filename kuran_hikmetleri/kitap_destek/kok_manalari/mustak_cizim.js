@@ -87,28 +87,38 @@ function halkaOlc(ctx, M) {
   ctx.restore(); return M.olc = L;
 }
 function halkaYerlestir(L, maxR, ic) {
-  const top = L.reduce((a, b) => a + b.w, 0);
-  for (let f = 0.006; f > 0.0003; f *= 0.94) {
-    const dr = f * 16; let r = 0.985 - dr / 2, row = 0, uz = 0, P = [], ok = true;
-    for (const it of L) { const w = it.w * f; if (uz + w > 2 * Math.PI * r * 0.995) { row++; r -= dr; uz = 0; if (row >= maxR || r < ic) { ok = false; break } } P.push([it, r, (uz + w / 2) / r]); uz += w }
-    if (ok) return {f, P, ri: r - dr / 2};
+  const ws = L.filter(x => !x.b).map(x => x.w).sort((a, b) => a - b), w0 = Math.max(60, ws[Math.floor(ws.length * .85)] || 60) + 10, h0 = 22;
+  const dizi = []; L.forEach(it => { if (it.b) dizi.push({bas: 1, it}); else dizi.push({it}) });
+  for (let f = 0.006; f > 0.00015; f *= 0.95) {
+    const dr = h0 * f;
+    for (let R = 1; R <= maxR; R++) {
+      const rs = 0.985 - (R - 0.5) * dr; if (rs - dr / 2 < ic) break;
+      const K = Math.floor(2 * Math.PI * rs / (w0 * f)); if (K < 4) break;
+      let j = 0; const P = [];
+      for (const d of dizi) { if (d.bas && j % R) j += R - j % R; P.push([d.it, Math.floor(j / R), j % R]); j++ }
+      if (j <= K * R) return {f, K, R, dr, w0, h0, P: P.map(([it, c, r]) => [it, 0.985 - (r + 0.5) * dr, (c + 0.5) * 2 * Math.PI / K]), ri: 0.985 - R * dr};
+    }
   }
   return null;
 }
 function halkaCiz(ctx, M, cx, cy, rc, es) {
-  const L = halkaOlc(ctx, M), H = M.yer || (M.yer = halkaYerlestir(L, M.bos ? 30 : 6, M.bos ? 0.15 : 0.55));
+  const L = halkaOlc(ctx, M), H = M.yer || (M.yer = halkaYerlestir(L, M.bos ? 40 : 10, M.bos ? 0.12 : 0.5));
   if (!H) return 0.6 * rc;
-  const f = H.f * rc; if (f * 12 * es < 2.5) { ctx.save(); ctx.globalAlpha = .25; ctx.strokeStyle = '#8a7f62'; ctx.lineWidth = H.f * rc * 10; ctx.beginPath(); ctx.arc(cx, cy, rc * (0.985 + H.ri) / 2, 0, 7); ctx.stroke(); ctx.restore(); return H.ri * rc }
+  const f = H.f * rc, uzak = f * 12 * es < 2.5;
   ctx.save();
   for (const [it, r, a0] of H.P) {
-    const a = a0 - Math.PI / 2, x = cx + Math.cos(a) * r * rc, y = cy + Math.sin(a) * r * rc, alt = Math.sin(a) > 0.05;
-    ctx.save(); ctx.translate(x, y); ctx.rotate(alt ? a - Math.PI / 2 : a + Math.PI / 2); ctx.scale(f, f); ctx.textBaseline = 'middle';
-    if (it.b) { ctx.fillStyle = '#2f6fb3'; ctx.font = 'bold 10px Georgia'; ctx.textAlign = 'center'; ctx.fillText(it.t, 0, 0) }
-    else { const x0 = -it.w / 2 + 4; ctx.fillStyle = it.sn === 1 ? '#8a7f62' : '#3b2f1e'; ctx.font = '12px Amiri'; ctx.textAlign = 'left'; ctx.fillText(it.ar, x0, 0); ctx.font = '10px Georgia'; ctx.fillText(it.tr, x0 + it.wa + 3, 0) }
+    const a = a0 - Math.PI / 2, x = cx + Math.cos(a) * r * rc, y = cy + Math.sin(a) * r * rc, alt = Math.sin(a) > 0.02, bw = H.w0 - 8, bh = H.h0 - 5;
+    ctx.save(); ctx.translate(x, y); ctx.rotate(alt ? a - Math.PI / 2 : a + Math.PI / 2); ctx.scale(f, f);
+    ctx.beginPath(); ctx.roundRect(-bw / 2, -bh / 2, bw, bh, bh / 2);
+    ctx.fillStyle = it.b ? '#e6eef8' : it.sn === 1 ? '#f4f1e8' : '#f6ecd2'; ctx.fill(); ctx.lineWidth = 1; ctx.strokeStyle = it.b ? '#2f6fb3' : it.sn === 1 ? '#bdb59e' : '#a8842a'; ctx.stroke();
+    if (!uzak) { ctx.textBaseline = 'middle';
+      if (it.b) { ctx.fillStyle = '#2f6fb3'; ctx.font = 'bold 10px Georgia'; ctx.textAlign = 'center'; const k = Math.min(1, (bw - 8) / (it.w - 8)); ctx.scale(k, k); ctx.fillText(it.t.replace(/ ·$/, ''), 0, 0) }
+      else { const k = Math.min(1, (bw - 8) / (it.w - 10)); ctx.scale(k, k); const x0 = -(it.wa + it.wt + 3) / 2; ctx.fillStyle = it.sn === 1 ? '#7a7058' : '#3b2f1e'; ctx.font = '12px Amiri'; ctx.textAlign = 'left'; ctx.fillText(it.ar, x0, 0); ctx.font = '10px Georgia'; ctx.fillText(it.tr, x0 + it.wa + 3, 0) } }
     ctx.restore();
   }
   ctx.restore(); return H.ri * rc;
 }
+
 function mustakTikla(M, lx, ly) {
   for (const h of M.HIT) if (lx >= h[0] && lx <= h[0] + h[2] && ly >= h[1] && ly <= h[1] + h[3]) {
     const S = h[4] === 'acik' ? MDurum.acik : MDurum.gor;
