@@ -80,7 +80,7 @@ KAVS = [[halkalar(unary_union([hucre[i] for i in ix_of[c]])), KA.KOD[c][1], [rou
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
 VERI = json.dumps({'V': VER, 'H': HUC, 'B': BOLS, 'K': KAVS, 'R': RENK}, ensure_ascii=False, separators=(',', ':'))
-HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI)
+HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
     from playwright.sync_api import sync_playwright

@@ -6,9 +6,9 @@ html,body{margin:0;height:100%;background:var(--zemin);color:var(--yazi);font-fa
 #c{display:block;width:100%;touch-action:none;cursor:grab}
 #bil{position:fixed;right:10px;top:58px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}
 </style></head><body>
-<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit">← Kitap</a>__LEJ__<button id="sina" style="font:inherit;font-size:12px;padding:2px 8px;margin-left:6px">Sına</button><span style="color:var(--ince)">· her hücre bir kökün bir aslı · yaklaştıkça hücrede türeme ağacı, merkezinde müştak listesi (koyu: lügatte geçer · gri: kaideye uygun · kırmızı: kaideye aykırı)</span></div>
+<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit">← Kitap</a>__LEJ__<button id="sina" style="font:inherit;font-size:12px;padding:2px 8px;margin-left:6px">Sına</button><span style="color:var(--ince)">· her hücre bir kökün bir aslı · yaklaştıkça hücrede türeme ağacı, merkezinde müştak listesi (kelime rengi: koyu lügatte geçer · gri kaideye uygun · kırmızı kaideye aykırı; kutu kenarı: ✸ asıl · ✶ mecaz · ⊞ ıstılah · ✿ deyim; «Sına» manaları gizler)</span></div>
 <canvas id="c"></canvas><div id="bil"></div>
-<script src="mustak_cizim.js"></script>
+<script src="mustak_cizim.js?v=__V__"></script>
 <script>
 const D=__VERI__,V=D.V,IDX={};for(const k in V)IDX[V[k][7]]=k;
 const MYER={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
@@ -54,8 +54,10 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  if(S>0.6){const fz=Math.min(8.5,15/S),rz=Math.min(1.6,2.5/S);ctx.fillStyle=yaz;ctx.font=fz+'px Amiri';ctx.textAlign='left';gorunen.forEach(i=>{if(ic.has(i)&&icler.length<=40)return;const v=V[IDX[i]];ctx.beginPath();ctx.arc(v[0],v[1],rz,0,7);ctx.fill();ctx.fillText(IDX[i],v[0]+rz*1.6,v[1]+fz*0.35)})}
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
- ctx.setTransform(dpr,0,0,dpr,0,0);if(S<4){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.lineWidth=4;ctx.font='bold '+(W<600?11:13)+'px Georgia';ctx.textAlign='center';
-  D.K.forEach(k=>{const x=k[2][0]*S+TX,y=k[2][1]*S+TY;if(x<-80||x>W+80||y<-20||y>H+20)return;ctx.strokeText(k[1],x,y);ctx.fillText(k[1],x,y)})}}
+ ctx.setTransform(dpr,0,0,dpr,0,0);if(S<4){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.lineWidth=4;ctx.textAlign='center';
+  const fs=Math.min(15,Math.max(9,26*S)),dolu=[];ctx.font='bold '+fs+'px Georgia';
+  D.K.forEach(k=>{const x=k[2][0]*S+TX,y=k[2][1]*S+TY;if(x<-80||x>W+80||y<-20||y>H+20)return;const w=ctx.measureText(k[1]).width+6,r=[x-w/2,y-fs,x+w/2,y+4];
+   if(dolu.some(d=>r[0]<d[2]&&r[2]>d[0]&&r[1]<d[3]&&r[3]>d[1]))return;dolu.push(r);ctx.strokeText(k[1],x,y);ctx.fillText(k[1],x,y)})}}
 const ZK=2.4;let ZEM=null;
 function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillStyle=D.R[D.H[i][1]];c.fill(HP[i])});
  c.globalAlpha=1;c.lineWidth=0.7/s;c.strokeStyle=zem;lst.forEach(i=>c.stroke(HP[i]));
@@ -63,7 +65,7 @@ function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillSt
 function zeminKur(zem,yaz){ZEM=document.createElement('canvas');ZEM.width=ZEM.height=Math.round(1800*ZK);ZEM.tema=zem;const c=ZEM.getContext('2d');c.setTransform(ZK,0,0,ZK,0,0);
  taban(c,HP.map((_,i)=>i),ZK/1.6,zem,yaz)}
 function dongu(){if(kirli)ciz();requestAnimationFrame(dongu)}
-function yakin(f,x,y){const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
+function yakin(f,x,y){const en=Math.min(W,H)/1800*0.85;if(S*f<en)f=en/S;const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
 const yer=e=>{const r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};
 cv.addEventListener('wheel',e=>{e.preventDefault();const [x,y]=yer(e);yakin(e.deltaY>0?0.87:1.15,x,y)},{passive:false});
 cv.addEventListener('dblclick',e=>{const [x,y]=yer(e);yakin(3,x,y)});
