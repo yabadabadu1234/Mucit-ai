@@ -69,10 +69,10 @@
 **ءون**: yumuşaklık, rıfk / vakit / yorgunluk / zaman  
 **ءوه**: inlemek, ah çekmek / üzüntü, acı / üzüntü ünlemi  
 **ءوي**: sığınmak, barınmak / barınak, mesken / acımak / yuva  
-**ءيد**: kuvvet / korumak / kuvvetlendirmek, te'yid etmek / sığınak, kale / destek / güç vermek / te'yîd  
+**ءيد**: kuvvet / korumak / kuvvetlendirmek, te'yid etmek / sığınak, kale / destek / güç vermek  
 **ءيم**: eşi olmayan kadın, dul / duman / yılan / eksiklik / eşsiz / dul kadın  
 **ءين**: yorgunluk / bir şeyin yakınlaşması, vakti gelmek  
-**ءيي**: âyet, işaret, alâmet / ibret / ayet / alamet / 'ey' ünlemi  
+**ءيي**: âyet, işaret, alâmet / ibret / 'ey' ünlemi  
 **بءر**: kuyu / gizlemek, saklamak / su kuyusu  
 **بءس**: şiddet, zorluk / kuvvet, cesaret / sefalet, yoksulluk / azap, korku / üzülmek / belâ  
 **بتر**: tamamlanmadan kesmek / soyu kesik / kopmak  
@@ -118,7 +118,7 @@
 **بطء**: işte yavaşlık, gecikmek / yavaşlamak  
 **بطر**: yarmak / nimetin kadrini bilmemek, şımarmak / kibirlenmek / nimete şükretmemek  
 **بطش**: bir şeyi kahr ve kuvvetle yakalamak / şiddetle saldırmak / sert ele geçirmek / bâtış  
-**بطل**: bir şeyin gidip kalmaması, zail olmak / bâtıl olmak, hükümsüz kalmak / durmak, işlemez olmak / işsiz kalmak / kahraman, yiğit / boş, beyhude / yanlış / boşa giden / boşluk / batıl  
+**بطل**: bir şeyin gidip kalmaması, zail olmak / bâtıl olmak, hükümsüz kalmak / durmak, işlemez olmak / işsiz kalmak / kahraman, yiğit / boş, beyhude / yanlış / boşa giden / boşluk  
 **بطن**: bir şeyin içi, iç yüzü / karın / gizli olmak, saklamak / astar / çukur arazi / maiyet, yakınlar / gizlenmek / batın  
 **بعث**: harekete geçirmek, kaldırmak / göndermek / diriltmek / uyandırmak, kışkırtmak / elçi, heyet  
 **بعثر**: dağıtmak, saçmak / altını üstüne getirmek / israf etmek / savurmak  
@@ -151,14 +151,14 @@
 **بهم**: girişi bilinmeyen, kapalı şey / karanlık, müphem / hayvan, davar / başparmak / dilsiz / belirsizlik  
 **بوء**: bir şeye dönmek / iki şeyin denk olması / yer edinmek, yerleşmek / yurt, mesken / yüklenmek, uğramak / itiraf etmek / yerleştirmek / konaklatmak  
 **بوب**: kapı / bölüm, bâb / sınıf, nevi / yol, çare / başlık  
-**بور**: helâk olmak / işlemez ve boş kalmak / ekilmemiş arazi / bozuk / denemek / helak / yok olma / helak olan  
+**بور**: helâk olmak / işlemez ve boş kalmak / ekilmemiş arazi / bozuk / denemek / yok olma / helak olan  
 **بول**: süzülen su: bevl / korku / kalp, zihin / hâl, durum / ehemmiyet / idrar  
 **بيت**: sığınak, barınak, ev / ailenin toplandığı yer / geceyi geçirmek / gece baskını / çadır / mesken / Kâbe  
 **بيد**: bir şeyin yok olup gitmesi / çöl / helâk olmak / ancak, şu kadar ki / boş / beyaz  
 **بيض**: beyazlık / yumurta / beyazlatmak / şeref, yüz akı / ak renk  
 **بيع**: satmak / satın almak / bey'at / satış / ticaret  
 **بين**: bir şeyin uzaklaşması ve açılması / ayrılık / ara, aralık / açık olmak, belirmek / beyan etmek, açıklamak / farklı olmak / arasında / ayrılık ve birleşme  
-**تبب**: hüsran, ziyan / helâk etmek / yerleşip düzene girmek / helak / zarar / helak olmuş  
+**تبب**: hüsran, ziyan / helâk etmek / yerleşip düzene girmek / zarar / helak olmuş  
 **تبر**: helâk / altın tozu, maden cevheri / kırıp parçalamak / yok etmek  
 **تبع**: peşinden gitmek, arkasından varmak / uymak, tabi olmak / takip etmek / netice / alacaklı / Himyer meliklerinin unvanı / izlemek  
 **تجر**: ticaret yapmak / tüccar / ticaret malı / alışveriş  
@@ -179,7 +179,7 @@
 **تين**: incir  
 **تيه**: şaşkınlık, hayret / yolunu kaybetmek / izsiz çöl / kibirlenmek / şaşırmak  
 **ثبت**: bir şeyin devamı, sebat / sağlam durmak / isbat etmek / yerine mıhlamak / kanıtlanmak / kalıcı  
-**ثبر**: kolaylık / helâk / bir işe devam etmek / alıkoymak / helak / yok olma / dayanma / sabır  
+**ثبر**: kolaylık / helâk / bir işe devam etmek / alıkoymak / yok olma / dayanma / sabır  
 **ثبط**: ağır ve uyuşuk olmak / bir işten alıkoymak, cesaretini kırmak / engellemek  
 **ثبي**: bir şeye devam etmek / bölük bölük topluluk / kazanmak / almak / sesin ilişkilisi  
 **ثجج**: dökmek / şiddetle akmak, sağanak / yağmur akması  
@@ -227,7 +227,7 @@
 **جرع**: yudumlamak, içmek / su tutmayan toprak / içen  
 **جرف**: bir şeyi büsbütün süpürüp almak / yarı oyulmuş yar, uçurum / sel alıp götürmek / yıkıntı / toprak kayması / kenar  
 **جرم**: kesmek, koparmak / kazanmak / suç işlemek / cisim, kütle / hak etmek / günah  
-**جري**: bir şeyin akıp gitmesi / koşmak / akmak, cereyan etmek / gemi / cariye, hizmetçi / yol, usul / cârî  
+**جري**: bir şeyin akıp gitmesi / koşmak / akmak, cereyan etmek / gemi / cariye, hizmetçi / yol, usul  
 **جزء**: parça, cüz / bölmek / yetinmek, kâfi gelmek / bölüm / kısmi  
 **جزع**: kesilmek, ikiye bölünmek / bir cins değerli taş / sabırsızlanmak, feryat etmek / geçip aşmak / sabırsızlık  
 **جزي**: bir şeyin başkasının yerine geçip karşılık olması / karşılık vermek, mükâfat ve ceza / cizye, vergi / yetmek, kâfi gelmek / ödül  
@@ -411,12 +411,12 @@
 **خفض**: alçaltmak, indirmek / yumuşaklık, rahat yaşamak  
 **خفف**: ağırlığın zıddı: hafiflik / hafifletmek / acele etmek / kolaylaştırmak  
 **خفي**: gizlemek / ortaya çıkarmak (zıt iki mana) / gizli olmak / mezar soymak  
-**خلد**: sebat ve bir yerde ayrılmadan durmak / ebedî kalmak / meyletmek, bağlanmak / ebedi kalmak / hâlid  
+**خلد**: sebat ve bir yerde ayrılmadan durmak / ebedî kalmak / meyletmek, bağlanmak / hâlid  
 **خلص**: bir şeyi arıtıp temizlemek / halis olmak / kurtulmak / ayrılmak, çekilmek / ulaşmak / saf olmak / kurtuluş  
 **خلط**: karıştırmak / karışım / birbirine karışıp ünsiyet etmek / ortaklık  
 **خلع**: sarındığı şeyden ayrılmak, soyunmak / çıkarmak / ahdi bozmak / hul' (kadının boşanması) / soymak  
 **خلف**: bir şeyin ardından gelip yerine geçmesi / önün zıddı: arka / değişmek, bozulmak / halef, halife / muhalefet etmek / sözünden dönmek / ardından gelen / yerine geçen / aykırılık  
-**خلق**: bir şeyi ölçüp takdir etmek, ölçüp biçmek / düz ve pürüzsüz olmak / yaratmak / yaratılmışlar, halk / yaratılış, beden yapısı / huy, tabiat, seciye / ahlâk / uydurmak / pay, nasip / eski, yıpranmış / koku sürmek / lâyık olmak / ahlak  
+**خلق**: bir şeyi ölçüp takdir etmek, ölçüp biçmek / düz ve pürüzsüz olmak / yaratmak / yaratılmışlar, halk / yaratılış, beden yapısı / huy, tabiat, seciye / ahlâk / uydurmak / pay, nasip / eski, yıpranmış / koku sürmek / lâyık olmak  
 **خلل**: incelik / aralık, gedik / araya girmek / dostluk, halîl / ihtiyaç, yoksulluk / sirke / kusur / eksiklik / bozukluk / hilâl  
 **خلو**: bir şeyin bir şeyden soyulması, boş kalmak / yalnız kalmak, halvet / geçip gitmek / serbest bırakmak / boşaltmak / geçmek  
 **خمد**: hareketin dinip sönmesi / ölmek / sönmek / sakinleşmek  
@@ -436,7 +436,7 @@
 **خيب**: faydasızlık ve mahrumiyet / ümidi boşa çıkmak / umutsuz olmak / hayal kırıklığı  
 **خير**: meyil, yönelmek / iyilik, hayır / seçmek, tercih etmek / daha hayırlı / mal / iyilikler  
 **خيط**: bir şeyin incelikle uzanması / iplik / dikmek / iplik gibi  
-**خيل**: renk renk hareket etmek / hayal etmek, sanmak / kibir / at, süvari / at ve süvari / hayâl  
+**خيل**: renk renk hareket etmek / hayal etmek, sanmak / kibir / at, süvari / at ve süvari  
 **خيم**: ikamet ve sebat / çadır / otağ  
 **دءب**: bir işe devamla bağlı kalmak / âdet, alışkanlık / huy  
 **دبب**: yerde yürümekten hafif hareket, kımıldamak / canlı, hayvan / yayılmak / sürünmek / uğraşmak  
@@ -473,7 +473,7 @@
 **دمغ**: beyin / başını yarmak, beyne vurmak / bâtılı ezip yok etmek / kırmak  
 **دمو**: kan / kan dökmek / yaşlar  
 **دنر**: dinar / altın para  
-**دنو**: yaklaşmak, yakın olmak / dünya, bu hayat / alçak, aşağılık olmak / yakınlaşmak / dünyâ  
+**دنو**: yaklaşmak, yakın olmak / dünya, bu hayat / alçak, aşağılık olmak / yakınlaşmak  
 **دهر**: galebe ve kahır / zaman, dehr / felâket, musibet / ömür  
 **دهق**: dolu olmak, taşmak / ardı ardına basınç / dökmek / bastırmak / ezmek  
 **دهم**: karanlıkta bir şeyi kaplamak / koyu siyah, koyu yeşil / ansızın basmak / kalabalık / sıkıntı  
@@ -611,7 +611,7 @@
 **زفر**: yük taşımak / bir ses: iç çekmek, inlemek / nefes almak  
 **زفف**: her şeyde hafiflik / hızlı yürümek / gelini götürmek / gelin götürmek / düğün  
 **زقم**: bir cins yemek, yutmak / zakkum / zakkum ağacı  
-**زكو**: artmak, gelişmek / temizlik, saflık / zekât / salih olmak / temizlenmek / arınma / arınmak / zekat  
+**زكو**: artmak, gelişmek / temizlik, saflık / zekât / salih olmak / temizlenmek / arınma / arınmak  
 **زلزل**: sarsmak, şiddetle titretmek / deprem / sarsıntı  
 **زلف**: bir şeye yaklaşmak için ilerlemek / yakınlık, makam / gecenin ilk saatleri / saç  
 **زلق**: bir şeyin yerinden kayması / kaygan yer / kaymak  
@@ -889,7 +889,7 @@
 **ضوء**: nur, ışık / aydınlatmak, parlamak / aydınlık / ziyâ  
 **ضير**: zarar vermek / ziyan  
 **ضيز**: eğrilik / haksız, adaletsiz (taksim) / haksızlık / eşitsizlik  
-**ضيع**: bir şeyin elden kaçıp gitmesi ve helâk olması / zayi etmek, ihmal / çiftlik, arazi / kaybetmek / zâyi  
+**ضيع**: bir şeyin elden kaçıp gitmesi ve helâk olması / zayi etmek, ihmal / çiftlik, arazi / kaybetmek  
 **ضيف**: bir şeyin bir şeye meyletmesi / misafir, ağırlamak / eklemek, izafe / güneşin batmaya yönelmesi / misafirlik  
 **ضيق**: genişliğin zıddı: darlık / yoksulluk / sıkılmak / sıkıntı  
 **طبع**: bir şeyin varıp mühürlendiği son nokta / mühürlemek / yaratılış, tabiat / basmak, iz bırakmak / huy  
@@ -934,7 +934,7 @@
 **ظلم**: ışık ve nurun zıddı: karanlık / bir şeyi haddi aşarak yerinden başka yere koymak, zulüm / haksızlık / bir şeyi yerinde olmayan yere koymak  
 **ظمء**: susuzluk  
 **ظنن**: yakîn ve şek (iki zıt mana) / sanmak, zannetmek / töhmet / tahmin etmek  
-**ظهر**: kuvvet ve ortaya çıkmak / sırt / açığa çıkmak, görünmek / yardım etmek / öğle vakti / galip gelmek / zâhir / zahir  
+**ظهر**: kuvvet ve ortaya çıkmak / sırt / açığa çıkmak, görünmek / yardım etmek / öğle vakti / galip gelmek / zâhir  
 **عبء**: ağırlıkta toplanma, yük / hazırlamak / önem vermek / donatmak  
 **عبث**: karıştırmak / boş iş, oyun  
 **عبد**: yumuşaklık ve zillet: kulluk, ibadet / sertlik ve kalınlık / kul, köle / kulluk etmek / tapmak  
@@ -1117,7 +1117,7 @@
 **فرغ**: boşluk ve gönül ferahlığı / boş olmak / bir işi bitirmek / dökmek / boşalmak / bitmek  
 **فرق**: iki şeyi birbirinden ayırt edip ayırmak / dağılmak / furkân, ayırıcı / bölük, fırka / korkmak / ayrılmak  
 **فره**: şımarıklık ve maharet / şen ve becerikli olmak / sevinç / neşe / sevinçli  
-**فري**: kesmek, yırtmak / uydurmak, iftira / acayip iş / iftirâ  
+**فري**: kesmek, yırtmak / uydurmak, iftira / acayip iş  
 **فزز**: hafiflik / ürkütüp yerinden oynatmak / korkmak / ürpermek  
 **فزع**: korku, dehşet / yardıma koşmak / korkmuş  
 **فسح**: genişlik, ferahlık / yer açmak / genişletmek  
@@ -1134,7 +1134,7 @@
 **فضو**: boş ve geniş yer / birbirine ulaşmak / fazla / artık / boşluk  
 **فطر**: bir şeyi yarıp ortaya çıkarmak / yaratmak, fıtrat / orucu açmak / mantar / yaratılış / oruç açma  
 **فظظ**: kabalık, katı yüreklilik  
-**فعل**: bir iş ve benzerini meydana getirmek, yapmak / fiil / iş yapmak / eylem / fi'il  
+**فعل**: bir iş ve benzerini meydana getirmek, yapmak / fiil / iş yapmak / eylem  
 **فقد**: bir şeyin gidip kaybolması / yitirmek / aramak, yoklamak / kaybetmek  
 **فقر**: bir uzuvda veya başka şeyde açıklık / omur / yoksulluk, ihtiyaç / belâ  
 **فقع**: parlak sarılık / patlamak / mantar / kabarcık / kabarmış  
@@ -1142,7 +1142,7 @@
 **فكر**: kalbin bir şey üzerinde gezinmesi, düşünmek / düşünce  
 **فكك**: açılmak ve ayrılmak / çözmek, kurtarmak / çene / çözülme  
 **فكه**: hoşluk ve hoşa gitmek / meyve / şakacı ve neşeli olmak / pişman olmak (tefekkuh) / mizah  
-**فلح**: yarmak, toprağı sürmek / kurtuluş ve beka, felâh / başarı / çiftçi / kurtulmak / felah  
+**فلح**: yarmak, toprağı sürmek / kurtuluş ve beka, felâh / başarı / çiftçi / kurtulmak  
 **فلق**: bir şeyde yarık ve ayrılık / yarmak / sabah aydınlığı / büyük iş  
 **فلك**: bir şeyde yuvarlaklık / yörünge, felek / gemi / gök yörüngesi  
 **فلن**: falan, filan kimse / şu kişi / ön ad  
@@ -1198,7 +1198,7 @@
 **قشعر**: ürpermek, tüyleri diken diken olmak / derinin kuruyup sertleşmesi / tüylerin diken diken olması / korku  
 **قصد**: bir şeye gelip yönelmek / bir şeyde dolgunluk / itidal, orta yol / kırmak / niyet / amaçlar  
 **قصر**: bir şeyin gayesine ulaşmaması, kısa kalmak / hapsetmek, alıkoymak / köşk, saray / kusur etmek / kısaltmak  
-**قصص**: bir şeyin izini takip etmek / anlatmak, kıssa / kısas / kesmek / hikâye / anlatı / kusa / hikaye  
+**قصص**: bir şeyin izini takip etmek / anlatmak, kıssa / kısas / kesmek / hikâye / anlatı / kusa  
 **قصف**: bir şeyi kırmak / gürlemek, şiddetli rüzgâr / kesmek / gürültü  
 **قصم**: kırmak / kökünden yok etmek / parçalamak  
 **قصو**: uzak olmak / en uzak, aksâ / ulaşılamaz  
@@ -1272,7 +1272,7 @@
 **كعب**: bir şeyde çıkıntı ve yükseklik / topuk, aşık kemiği / göğsü kabarmış genç kız / Kâbe / düğüm / kare yapı  
 **كفء**: iki şeyin denkliği / meyletmek, eğmek / benzer / yeterli  
 **كفت**: toplamak ve kucaklamak / toplanma yeri / çekmek  
-**كفر**: örtmek, gizlemek / inkâr etmek, küfür / nimeti örtmek, nankörlük / kefaret / çiftçi / inkâr eden / inkar  
+**كفر**: örtmek, gizlemek / inkâr etmek, küfür / nimeti örtmek, nankörlük / kefaret / çiftçi / inkâr eden  
 **كفف**: tutmak ve büzülmek / el ayası / men etmek, el çekmek / hepsi, bütünüyle / engellemek / durdurmak  
 **كفل**: bir şeyin bir şeyi tazmin etmesi, kefil olmak / pay, nasip / kalça / sorumluluk üstlenmek  
 **كفي**: kâfi gelmek, yetmek / korumak / yeterlik  
@@ -1422,7 +1422,7 @@
 **موج**: bir şeyde çalkantı, dalga / akıntı  
 **مور**: gidip gelmek, çalkalanmak / dalgalanmak / hareket  
 **موس**: başı kazımak / Mûsâ  
-**مول**: mal edinmek / mal, servet / efendi / yardımcı / mâl  
+**مول**: mal edinmek / mal, servet / efendi / yardımcı  
 **موه**: su / şey / malzeme  
 **ميد**: bir şeyde hareket, sallanmak / fayda ve bağış: sofra (mâide) / sarsılmak  
 **مير**: erzak getirmek / yol azığı  
@@ -1512,7 +1512,7 @@
 **نكث**: bir şeyi bozmak, ahdi bozmak  
 **نكح**: evlenmek, nikâh / nikâh akdi  
 **نكد**: bir şeyin isteyene güçlükle çıkması / hayırsız ve kıt olmak / hastalık / sıkıntı  
-**نكر**: kalbin yatıştığı bilmenin zıddı: tanımamak / inkâr etmek / münker, çirkin / kurnazlık / bilmemek / reddetmek / bilinmeyen / inkar etmek  
+**نكر**: kalbin yatıştığı bilmenin zıddı: tanımamak / inkâr etmek / münker, çirkin / kurnazlık / bilmemek / reddetmek / bilinmeyen  
 **نكس**: bir şeyi tersine çevirmek / baş aşağı olmak / başını eğmek / geri dönmek  
 **نكص**: geri dönmek, gerisin geri kaçmak  
 **نكف**: bir şeyi kesip uzaklaştırmak / istinkâf etmek, çekimser kalmak / bir uzuv / kaçınmak / yüz çevirmek  
@@ -1530,10 +1530,10 @@
 **نوص**: gidip gelmek / kaçacak yer / geri çekilmek / kaçmak  
 **نوق**: yükseklik / dişi deve  
 **نوم**: donukluk ve hareketin sükûnu, uyku / uyuyan / uyumak  
-**نون**: balık / Nûn harfi / hokka / nûn' harfi  
+**نون**: balık / Nûn harfi / hokka  
 **نوي**: yönelmek, niyet / çekirdek / göç yeri / istek / düşünce  
 **نيل**: ulaşmak, elde etmek / bağış / zarar vermek / ırmak  
-**هاء**: işte, al (hâ) / he / ha  
+**هاء**: işte, al (hâ) / he  
 **هات**: getir, ver / gel  
 **هبط**: inmek / bir yere konmak / düşmek, alçalmak / aşağı düşmek  
 **هبو**: incelikle toz / havada uçuşan toz zerresi / savrulan toz  
@@ -1556,7 +1556,7 @@
 **هطع**: bir şeye boyun uzatıp yönelmek, koşmak / hızla koşmak / başını eğmek  
 **هلع**: süratle keskinlik: sabırsızlık, hırs / korku, endişe  
 **هلك**: kırılıp düşmek, helâk olmak / ölmek / yok etmek / yok olmak  
-**هلل**: ses yükseltmek, tehlil / hilâl / sevinmek / ay / hilal / çekilmek  
+**هلل**: ses yükseltmek, tehlil / hilâl / sevinmek / ay / çekilmek  
 **هلم**: haydi gel, getir / buraya gel  
 **همد**: bir şeyin sönmesi / toprağın ölü ve kurak olması / sönmek / durmak / sönüklük  
 **همر**: dökmek ve dökülmek, sağanak / akmak  
@@ -1577,7 +1577,7 @@
 **وءد**: bir şeyi bir şeyle ağırlaştırmak / kız çocuğunu diri diri gömmek / ağır ayak sesi  
 **وءل**: toplanmak ve sığınmak / sığınak / kurtuluş  
 **وبر**: deve ve tavşan tüyü / çöl ehli / yün / deve tüyü  
-**وبق**: helâk etmek / helâk yeri / helak / yok olmak  
+**وبق**: helâk etmek / helâk yeri / yok olmak  
 **وبل**: bir şeyde şiddet ve toplanma / şiddetli sağanak / ağır vebal, kötü akıbet / sağlığa yaramamak / sağanak yağmur / bol yağmur  
 **وتد**: kazık / sabit kalmak / çivi  
 **وتر**: yay kirişi / tek sayı / kan davası, öç / eksiltmek  
@@ -1591,7 +1591,7 @@
 **وجل**: korku, ürperme / endişe  
 **وجه**: bir şeyin karşılaşılan tarafı, yüz / yön, cihet / rıza (Allah'ın yüzü) / itibar sahibi  
 **وحد**: tek kalmak, teklik / birlemek, tevhid / bir, yegâne / tek görmek  
-**وحش**: ünsiyetin zıddı: yabanîlik / yabanî hayvan / ıssızlık / yabani hayvan / vahşilik  
+**وحش**: ünsiyetin zıddı: yabanîlik / yabanî hayvan / ıssızlık / vahşilik  
 **وحي**: gizlice bildirmek, işaret etmek / vahiy / ilham / yazmak / gizlice ulaştırma  
 **ودد**: sevgi, muhabbet / istemek, temenni / sevmek / dostluk  
 **ودع**: bir şeyi bırakıp salıvermek / emanet bırakmak / vedalaşmak / rahat, sükûn / uğurlamak / ayrılmak  

@@ -10,9 +10,10 @@ def parca(s):
         if ':' in p: p = p.split(':', 1)[1].strip()
         if p and p not in out and len(p) < 60: out.append(p)
     return out
+def sade(x): return x.lower().translate(str.maketrans('âîûÂÎÛ', 'aiuaiu')).replace("'", '')
 def ekle(L, x):
     x = x.strip()
-    if x and x.lower() not in [y.lower() for y in L]: L.append(x)
+    if x and sade(x) not in [sade(y) for y in L]: L.append(x)
 def etym(m):
     t = m.get('kok_maddesi', '') if isinstance(m, dict) else ''
     return [q.strip() for q in re.findall(r'‘([^’]+)’', t) if q.strip() and q.strip() != '…']
@@ -44,7 +45,7 @@ for k, v in VT.items():
     L = []
     for x in TER.get(k, []): ekle(L, x)
     for x in v['turkce']:
-        if not any(x.lower() in y.lower() for y in L): ekle(L, x)
+        if not any(sade(x) in sade(y) for y in L): ekle(L, x)
     v['esas_manalar'] = L
 VT = {k: {'esas_manalar': v['esas_manalar'], **v} for k, v in VT.items()}
 (HERE / 'KOK_ESAS_MANALARI.json').write_text(json.dumps(VT, ensure_ascii=False, indent=1), encoding='utf-8')
