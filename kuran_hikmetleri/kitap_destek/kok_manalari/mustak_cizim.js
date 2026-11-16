@@ -16,9 +16,9 @@ function zonu(etiket, eser) {
 }
 function sar_(t, n) { const w = String(t).split(' '), o = []; let b = ''; for (const x of w) { if ((b + ' ' + x).trim().length > n && b) { o.push(b); b = x } else b = (b + ' ' + x).trim() } if (b) o.push(b); return o }
 function kelimeBlok(x, ix, kok) {
-  const [ar, tr, sn, G] = x, key = kok + '|' + ar, S = 15, O = [], W = 430;
+  const [ar, tr, sn, G] = x, key = kok + '|' + ar, S = 19, O = [], W = 430;
   let y = 0;
-  O.push(['w', 0, y, ar, tr, sn, key]); y += 20;
+  O.push(['w', 0, y, ar, tr, sn, key]); y += 26;
   if (!G) return {O, h: y, key};
   const Z = {A: [], M: [], I: [], D: []}, gor = new Set();
   G.forEach(e => {
@@ -28,44 +28,86 @@ function kelimeBlok(x, ix, kok) {
   const acik = MDurum.acik.has(key);
   for (const z of ['A', 'M', 'I', 'D']) {
     const L = Z[z]; if (!L.length) continue;
-    const y0 = y; y += 4; O.push(['zl', 34, y + 9, ZON[z].ad + ' (' + L.length + ')', z]); y += 16;
+    const y0 = y; y += 8; O.push(['zl', 34, y + 11, ZON[z].ad + ' (' + L.length + ')', z]); y += 22;
     const goster = acik ? L : L.slice(0, 4);
     goster.forEach((s, i) => {
       const satirlar = sar_((i + 1) + '. ' + (s.et ? '[' + s.et + '] ' : '') + s.t, 62);
       satirlar.forEach((l, j) => { O.push(['zt', 32, y + 10, l, j === satirlar.length - 1 ? s.ky : '', key, z]); y += S });
       (acik ? s.mis : s.mis.slice(0, 2)).forEach(m => {
         const ml = sar_('“' + m[0] + '”' + (m[1] ? ' — ' + m[1] : ''), 58), b0 = y + 2;
-        ml.forEach(l => { O.push(['mt', 52, y + 13, l, key]); y += 14 });
-        O.push(['bal', 44, b0, W - 70, y - b0 + 6]); y += 8;
+        ml.forEach(l => { O.push(['mt', 52, y + 15, l, key]); y += 17 });
+        O.push(['bal', 44, b0, W - 70, y - b0 + 8]); y += 12;
       });
     });
     if (!acik && (L.length > 4 || L.some(s => s.mis.length > 2))) { O.push(['fold', 32, y + 10, '… ' + (L.length > 4 ? (L.length - 4) + ' mana daha' : 'misallerin hepsi') + ' (dokun)', key]); y += S }
     if (acik && (L.length > 4 || L.some(s => s.mis.length > 2))) { O.push(['fold', 32, y + 10, '▲ topla (dokun)', key]); y += S }
-    O.push(['box', 14, y0, W - 24, y - y0 + 4, z]); y += 8;
+    O.push(['box', 14, y0, W - 24, y - y0 + 10, z]); y += 22;
   }
   return {O, h: y + 4, key};
 }
+const BABAD = {II: "tef'îl", III: "mufâ'ale", IV: "if'âl", V: "tefe''ul", VI: "tefâ'ul", VII: "infi'âl", VIII: "ifti'âl", IX: "if'ilâl", X: "istif'âl", XI: "if'îlâl", XII: "if'î'âl", XIII: "if'ivvâl"};
+function babAdi(b) { return String(b).replace(/bâb (XIII|XII|XI|IX|X|VIII|VII|VI|IV|V|III|II)\b/, (m, r) => BABAD[r] + ' bâbı') }
 function mustakDuzen(k) {
   const v = MDurum.surum; if (MC_[k] && MC_[k].v === v) return MC_[k];
   const D2 = SA[k]; if (!D2) return null;
-  const WC = 460, blok = [];
-  D2.forEach(([b, K]) => { blok.push({tip: 'b', t: b, h: 30}); K.forEach(([t, L]) => { blok.push({tip: 't', t: t + ' (' + L.length + ')', h: 22}); L.forEach((x, i) => { const B = kelimeBlok(x, i, k); B.tip = 'k'; blok.push(B) }) }) });
-  const top = blok.reduce((a, b) => a + b.h, 0), C = Math.max(1, Math.round(Math.sqrt(top / WC))), hed = top / C, O = [], HIT = [];
-  let col = 0, y = 30, mx = 0;
-  blok.forEach(b => {
-    if (y - 30 + b.h > hed * 1.03 && col < C - 1 && y > 30 && b.tip !== 'b') { mx = Math.max(mx, y); col++; y = 30 }
-    const x = col * WC;
-    if (b.tip === 'b') { O.push(['b', x, y + 16, b.t]); y += b.h; return }
-    if (b.tip === 't') { O.push(['t', x, y + 14, b.t]); y += b.h; return }
-    b.O.forEach(o => { const p = o.slice(); p[1] += x; p[2] += y; O.push(p) });
-    HIT.push([x, y, WC - 20, 20, 'gor', b.key]);
-    b.O.forEach(o => { if (o[0] === 'fold') HIT.push([x + o[1], y + o[2] - 12, 300, 16, 'acik', o[4]]) });
-    y += b.h;
+  const blok = [], halka = [], kirmizi = [];
+  D2.forEach(([b, K]) => {
+    const bad = babAdi(b), lb = [], hb = [], kb = [];
+    K.forEach(([t, L]) => { L.forEach((x, i) => { if (x[2] === 0) { kb.push([t, x]); return } hb.push(x); if (x[3]) { const B = kelimeBlok(x, i, k); B.tip = 'k'; B.t = t; lb.push(B) } }) });
+    if (hb.length) halka.push([bad, hb]); if (kb.length) kirmizi.push([bad, kb]);
+    if (lb.length) { blok.push({tip: 'b', t: bad, h: 40}); let ot = null; lb.forEach(B => { if (B.t !== ot) { blok.push({tip: 't', t: B.t, h: 30}); ot = B.t } blok.push(B) }) }
   });
-  mx = Math.max(mx, y);
-  const sira = {box: 0, bal: 1};
-  O.sort((a, b) => (sira[a[0]] ?? 2) - (sira[b[0]] ?? 2));
-  return MC_[k] = {O, HIT, W: (col + 1) * WC, H: mx, v};
+  const WC = 520, top = blok.reduce((a, b) => a + b.h, 0);
+  let en = null;
+  for (let C = 1; C <= 8; C++) {
+    const hed = top / C, O = [], HIT = []; let col = 0, y = 30, mx = 0;
+    blok.forEach(b => {
+      if (y - 30 + b.h > hed * 1.03 && col < C - 1 && y > 30 && b.tip !== 'b' && b.tip !== 't') { mx = Math.max(mx, y); col++; y = 30 }
+      const x = col * WC;
+      if (b.tip === 'b') { O.push(['b', x, y + 22, b.t]); y += b.h; return }
+      if (b.tip === 't') { O.push(['t', x, y + 18, b.t]); y += b.h; return }
+      b.O.forEach(o => { const p = o.slice(); p[1] += x; p[2] += y; O.push(p) });
+      HIT.push([x, y, WC - 40, 26, 'gor', b.key]);
+      b.O.forEach(o => { if (o[0] === 'fold') HIT.push([x + o[1], y + o[2] - 14, 300, 18, 'acik', o[4]]) });
+      y += b.h;
+    });
+    mx = Math.max(mx, y); const Wd = (col + 1) * WC - 60, sk = 1 / Math.max(Wd, mx);
+    if (!en || sk > en.sk) en = {O, HIT, W: Wd, H: mx, sk};
+  }
+  const sira = {box: 0, bal: 1}; en.O.sort((a, b) => (sira[a[0]] ?? 2) - (sira[b[0]] ?? 2));
+  en.halka = halka; en.kirmizi = kirmizi; en.v = v; en.bos = !blok.length;
+  return MC_[k] = en;
+}
+const HOLC = {};
+function halkaOlc(ctx, M) {
+  if (M.olc) return M.olc;
+  const L = []; ctx.save();
+  M.halka.forEach(([b, X]) => { ctx.font = 'bold 10px Georgia'; L.push({b: 1, t: b + ' ·', w: ctx.measureText(b + ' ·').width + 8});
+    X.forEach(x => { ctx.font = '12px Amiri'; const wa = ctx.measureText(x[0]).width; ctx.font = '10px Georgia'; const wt = ctx.measureText('(' + x[1] + ')').width; L.push({ar: x[0], tr: '(' + x[1] + ')', sn: x[2], wa, wt, w: wa + wt + 14}) }) });
+  ctx.restore(); return M.olc = L;
+}
+function halkaYerlestir(L, maxR, ic) {
+  const top = L.reduce((a, b) => a + b.w, 0);
+  for (let f = 0.006; f > 0.0003; f *= 0.94) {
+    const dr = f * 16; let r = 0.985 - dr / 2, row = 0, uz = 0, P = [], ok = true;
+    for (const it of L) { const w = it.w * f; if (uz + w > 2 * Math.PI * r * 0.995) { row++; r -= dr; uz = 0; if (row >= maxR || r < ic) { ok = false; break } } P.push([it, r, (uz + w / 2) / r]); uz += w }
+    if (ok) return {f, P, ri: r - dr / 2};
+  }
+  return null;
+}
+function halkaCiz(ctx, M, cx, cy, rc, es) {
+  const L = halkaOlc(ctx, M), H = M.yer || (M.yer = halkaYerlestir(L, M.bos ? 30 : 6, M.bos ? 0.15 : 0.55));
+  if (!H) return 0.6 * rc;
+  const f = H.f * rc; if (f * 12 * es < 2.5) { ctx.save(); ctx.globalAlpha = .25; ctx.strokeStyle = '#8a7f62'; ctx.lineWidth = H.f * rc * 10; ctx.beginPath(); ctx.arc(cx, cy, rc * (0.985 + H.ri) / 2, 0, 7); ctx.stroke(); ctx.restore(); return H.ri * rc }
+  ctx.save();
+  for (const [it, r, a0] of H.P) {
+    const a = a0 - Math.PI / 2, x = cx + Math.cos(a) * r * rc, y = cy + Math.sin(a) * r * rc, alt = Math.sin(a) > 0.05;
+    ctx.save(); ctx.translate(x, y); ctx.rotate(alt ? a - Math.PI / 2 : a + Math.PI / 2); ctx.scale(f, f); ctx.textBaseline = 'middle';
+    if (it.b) { ctx.fillStyle = '#2f6fb3'; ctx.font = 'bold 10px Georgia'; ctx.textAlign = 'center'; ctx.fillText(it.t, 0, 0) }
+    else { const x0 = -it.w / 2 + 4; ctx.fillStyle = it.sn === 1 ? '#8a7f62' : '#3b2f1e'; ctx.font = '12px Amiri'; ctx.textAlign = 'left'; ctx.fillText(it.ar, x0, 0); ctx.font = '10px Georgia'; ctx.fillText(it.tr, x0 + it.wa + 3, 0) }
+    ctx.restore();
+  }
+  ctx.restore(); return H.ri * rc;
 }
 function mustakTikla(M, lx, ly) {
   for (const h of M.HIT) if (lx >= h[0] && lx <= h[0] + h[2] && ly >= h[1] && ly <= h[1] + h[3]) {
@@ -89,8 +131,8 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
     if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); if (yazi) { cerceve_(ctx, z, bx, by, bw, bh) } else { ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.stroke() } continue }
     if (t === 'bal') { if (x + o[3] < lx0 || x > lx1 || y + o[4] < ly0 || y > ly1) continue; balon_(ctx, x, y, o[3], o[4]); ctx.fillStyle = 'rgba(255,250,235,.85)'; ctx.fill(); ctx.strokeStyle = '#c9b27a'; ctx.lineWidth = .8; ctx.stroke(); continue }
     if (x + 460 < lx0 || x > lx1 || y + 20 < ly0 || y - 20 > ly1) continue;
-    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 5, 430, 1.5); if (yazi) { ctx.font = 'bold 15px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
+    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 7, 430, 1.5); if (yazi) { ctx.font = 'bold 19px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 15px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
     else if (t === 'w') { const c = ['#c0392b', '#9a917a', R.yaz][o[5]]; if (yazi) semse_(ctx, x - 4, y - 3, 122, 24, c); ctx.fillStyle = c;
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
