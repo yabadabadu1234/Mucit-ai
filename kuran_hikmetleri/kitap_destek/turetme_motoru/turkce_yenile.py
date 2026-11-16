@@ -2,6 +2,7 @@
 import json, glob, os, collections
 import turkce as T
 import mustak_lugat as ML
+import lugat_yapisi as LY
 LUG = ML.yukle()
 from kelime_kaydi import okunur
 KLAS = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi')
@@ -13,6 +14,7 @@ for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
     for e in d.get('kelimeler', []):
         tr = (e.get('turkce') or {}).get('lemma')
         if e.get('lemma') and tr: kur.setdefault(e['lemma'], tr)
+    yap = {}
     satir = []
     for g, L in d['mustaklar'].items():
         for x in L:
@@ -26,6 +28,9 @@ for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
         x = s['_x']
         lm = LUG.get(k + '|' + s['ar'])
         lt, le = ML.mana_cikar(lm['maddeler']) if lm else (None, None)
+        if lm and lm['maddeler'] and s['ar'] not in yap:
+            yy = LY.yapilandir(lm['maddeler'])
+            if yy: yap[s['ar']] = yy
         if lt:
             x[3], x[4] = lt, 'lugat'; say['lugat'] += 1
             if le not in (x[5] or ''): x[5] = ((x[5] + ' · ') if x[5] else '') + le
@@ -34,5 +39,8 @@ for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
             if not x[5]: x[5] = "Kur'ân"
         else:
             x[3], x[4] = s.get('tr', x[3]), s.get('guven', x[4]); say['kural'] += 1
+    soz = d.setdefault('sozlukler', {})
+    if yap: soz['mustak_lugat'] = yap
+    else: soz.pop('mustak_lugat', None)
     open(f, 'w', encoding='utf-8').write(okunur(d))
 print(dict(say))

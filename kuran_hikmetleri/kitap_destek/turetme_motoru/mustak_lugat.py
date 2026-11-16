@@ -52,7 +52,7 @@ def tara(kok, w):
             t = re.sub(r'\s+', ' ', O.temiz(e.get('mana_html')))
             sp = [norm(x) for x in O.arapca_spanlar(e.get('mana_html'))[:3]] + [norm(ilk_arapca(t))]
             if hedef in sp:
-                out[e['id']] = {'eser': e['eser_isim'], 'madde': e['kelime'], 'mana': t[:1500]}
+                out[e['id']] = {'eser': e['eser_isim'], 'madde': e['kelime'], 'mana': t}
         if out: break
     return {'sorgular': sorgular(w), 'maddeler': list(out.values()), 'hata': hata}
 def yukle():
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     ob = yukle(); yap = [x for x in isler if x[0] + '|' + x[1] not in ob]
     print('yapılacak', len(yap), flush=True)
     f = open(ONB, 'a', encoding='utf-8'); n = 0
-    with ThreadPoolExecutor(8) as ex:
+    with ThreadPoolExecutor(24) as ex:
         for kl, r in ex.map(lambda kl: (kl, tara(*kl)), yap):
             if r['hata'] and not r['maddeler']: continue
             f.write(json.dumps({'q': kl[0] + '|' + kl[1], 'd': r}, ensure_ascii=False) + '\n'); n += 1

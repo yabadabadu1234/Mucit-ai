@@ -12,10 +12,11 @@ SIN = {'mesmu': 2, 'kiyasi': 1, 'aykiri': 0}
 BAB = ['sülâsî mücerred', 'sülâsî'] + ['bâb ' + r for r in 'II III IV V VI VII VIII IX X XI XII XIII'.split()]
 for k in A:
     dk = json.load(open(KOK / f'{k}.json', encoding='utf-8')); m = dk.get('mustaklar') or {}; SN = MS.siniflar(dk)
+    LUG = {a: [[e['eser'], e['madde'], ' · '.join(x for x in (e.get('tur', ''), e.get('koken', '')) if x), [[n.get('no', ''), n.get('etiket', ''), n['tanim'], n['misaller']] for n in e['manalar']], [[n['deyim'], n['tanim'], n['misaller']] for n in e['deyimler']]] for e in v] for a, v in ((dk.get('sozlukler') or {}).get('mustak_lugat') or {}).items()}
     T = {}
     for g, L in m.items():
         kat, _, bab = g.partition(' · '); bab = bab or 'bâbsız'
-        T.setdefault(bab, {}).setdefault(kat, [[x[1], x[3], SIN[SN[(g, j)]]] for j, x in enumerate(L)])
+        T.setdefault(bab, {}).setdefault(kat, [[x[1], x[3], SIN[SN[(g, j)]]] + ([LUG[x[1]]] if x[1] in LUG and SN[(g, j)] == 'mesmu' else []) for j, x in enumerate(L)])
     sira = sorted(T, key=lambda b: BAB.index(b) if b in BAB else 99)
     (SA / f'{k}.js').write_text('SA[' + json.dumps(k) + ']=' + json.dumps([[b, list(T[b].items())] for b in sira], ensure_ascii=False, separators=(',', ':')) + ';', encoding='utf-8')
 HTML = r"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -58,7 +59,9 @@ const L=document.getElementById('liste');Object.keys(A).forEach(k=>{const a=docu
 document.getElementById('ara').oninput=e=>{const v=e.target.value.trim();if(A[v])ciz(v)};
 addEventListener('hashchange',()=>{const k=decodeURIComponent(location.hash.slice(1));if(A[k])ciz(k)});addEventListener('resize',()=>ciz(decodeURIComponent(location.hash.slice(1))||'خلق'));
 ciz(decodeURIComponent(location.hash.slice(1))||'خلق');
-const SA={};let agAcik=false;const RK=['#c0392b','#9a917a','var(--yazi)'];
+const SA={};let agAcik=false;
+function sar(t,n){const w=String(t).split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>n&&b){o.push(b);b=x}else b=(b+' '+x).trim()}if(b)o.push(b);return o}
+function LS(G){const R=[];G.forEach(e=>{R.push(['le',e[0]+' — '+e[1]+(e[2]?' ('+e[2]+')':'')]);e[3].forEach(n=>{sar((n[0]?n[0]+'. ':'')+(n[1]?n[1]+' ':'')+n[2],90).forEach(l=>R.push(['ln',l]));n[3].forEach(m=>sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),86).forEach(l=>R.push(['ls',l])))});e[4].forEach(d=>{sar('◆ '+d[0]+': '+d[1],88).forEach(l=>R.push(['ld',l]));d[2].forEach(m=>sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),86).forEach(l=>R.push(['ls',l])))})});return R}const RK=['#c0392b','#9a917a','var(--yazi)'];
 function agYukle(k,f){if(SA[k])return f();const e=document.createElement('script');e.src='mustak_listesi/'+k+'.js';e.onload=f;document.head.appendChild(e)}
 function kol(x,y,ad,cocuk,h){/* Halliday köşeli parantezi */}
 function agCiz(k){agYukle(k,()=>{const D=SA[k];let h='',y=20;const S=19,X0=20,X1=150,X2=300,X3=480;
@@ -66,7 +69,7 @@ function agCiz(k){agYukle(k,()=>{const D=SA[k];let h='',y=20;const S=19,X0=20,X1
  const H=satir*S+60,ky=H/2;h+=`<text x="${X0}" y="${ky+8}" font-size="30" class="ar">${k}</text>`;
  const by=[];
  D.forEach(([b,K])=>{const y0=y;const ky2=[];
-  K.forEach(([t,L])=>{const t0=y;L.forEach(([ar,tr,L2])=>{h+=`<line x1="${X3-12}" y1="${y}" x2="${X3}" y2="${y}" stroke="var(--cizgi)"/><text x="${X3+90}" y="${y+5}" font-size="17" class="ar" text-anchor="end" style="fill:${RK[L2]}">${ar}</text><text x="${X3+96}" y="${y+4}" font-size="12.5" style="fill:${RK[L2]}">(${tr})</text>`;y+=S});
+  K.forEach(([t,L])=>{const t0=y;L.forEach(([ar,tr,L2,LG])=>{h+=`<line x1="${X3-12}" y1="${y}" x2="${X3}" y2="${y}" stroke="var(--cizgi)"/><text x="${X3+90}" y="${y+5}" font-size="17" class="ar" text-anchor="end" style="fill:${RK[L2]}">${ar}</text><text x="${X3+96}" y="${y+4}" font-size="12.5" style="fill:${RK[L2]}">(${tr})</text>`;y+=S;if(LG)LS(LG).forEach(([c,t])=>{const st={le:['bold',`#2f6fb3`,22],ln:['',`var(--yazi)`,26],ls:['italic',`#7a6a45`,42],ld:['',`#8a3fa0`,26]}[c];h+=`<text x="${X3+st[2]}" y="${y-2}" font-size="11.5" style="fill:${st[1]};font-style:${st[0]=='italic'?'italic':'normal'};font-weight:${st[0]=='bold'?'bold':'normal'}">${t.replace(/</g,'&lt;')}</text>`;y+=S*0.8})});
    const m=(t0+y-S)/2;ky2.push(m);h+=`<line x1="${X3-12}" y1="${t0}" x2="${X3-12}" y2="${y-S}" stroke="var(--yazi)"/><line x1="${X2}" y1="${m}" x2="${X3-12}" y2="${m}" stroke="var(--yazi)"/><text x="${X2+6}" y="${m-4}" font-size="12">${t} (${L.length})</text>`;y+=S*0.4});
   const m=(ky2[0]+ky2[ky2.length-1])/2;by.push(m);
   h+=`<line x1="${X2}" y1="${ky2[0]}" x2="${X2}" y2="${ky2[ky2.length-1]}" stroke="#b3541e" stroke-width="1.6"/>`+
