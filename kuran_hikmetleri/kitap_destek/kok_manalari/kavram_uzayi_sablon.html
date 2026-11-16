@@ -16,8 +16,7 @@ const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
 const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(!v)return;const a=h[0],cx=v[0],cy=v[1],n=a.length/2,b=[];let dm=1e9;
  for(let j=0;j<n;j++){const x1=a[2*j],y1=a[2*j+1],x2=a[2*((j+1)%n)],y2=a[2*((j+1)%n)+1],ex=x2-x1,ey=y2-y1,L=ex*ex+ey*ey||1,t=Math.max(0,Math.min(1,((cx-x1)*ex+(cy-y1)*ey)/L));dm=Math.min(dm,Math.hypot(cx-x1-t*ex,cy-y1-t*ey))}
- RCK[i]=Math.min(v[8]*0.86,dm*0.9);const r0=RCK[i]*1.07;
- for(let j=0;j<n;j++){const x1=a[2*j],y1=a[2*j+1],x2=a[2*((j+1)%n)],y2=a[2*((j+1)%n)+1];for(let t=0;t<8;t++){let x=x1+(x2-x1)*t/8,y=y1+(y2-y1)*t/8;const dx=x-cx,dy=y-cy,d=Math.hypot(dx,dy);if(d>r0){const e=r0+(d-r0)*0.33;x=cx+dx*e/d;y=cy+dy*e/d}b.push(x,y)}}h[0]=b});
+ RCK[i]=Math.min(v[8]*0.86,dm*0.74);const k=0.84;for(let j=0;j<n;j++)b.push(cx+(a[2*j]-cx)*k,cy+(a[2*j+1]-cy)*k);h[0]=b});
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
 const BP=D.B.map(yolla),KP=D.K.map(k=>yolla(k[0]));
@@ -73,7 +72,7 @@ function cekirdek(c,i,s){const v=V[IDX[i]];if(!v)return;c.globalAlpha=1;c.beginP
 const KR={};function karis(c,a){const k=c+a;if(KR[k])return KR[k];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle,z=[251,248,239],m=[1,3,5].map((o,j)=>Math.round(parseInt(h.slice(o,o+2),16)*a+z[j]*(1-a)));return KR[k]=`rgb(${m})`}
 function taban(c,lst,s,zem,yaz){lst.forEach(i=>{c.globalAlpha=D.H[i][2];c.fillStyle=D.R[D.H[i][1]];c.fill(HP[i])});lst.forEach(i=>cekirdek(c,i,s));
  c.globalAlpha=1;c.lineWidth=0.7/s;c.strokeStyle=zem;lst.forEach(i=>c.stroke(HP[i]));
- c.globalAlpha=.3;c.strokeStyle=yaz;c.lineWidth=0.9/s;BP.forEach(p=>c.stroke(p));c.globalAlpha=1;c.lineWidth=2/s;KP.forEach(p=>c.stroke(p))}
+ c.globalAlpha=1}
 function zeminKur(zem,yaz){ZEM=document.createElement('canvas');ZEM.width=ZEM.height=Math.round(1800*ZK);ZEM.tema=zem;const c=ZEM.getContext('2d');c.setTransform(ZK,0,0,ZK,0,0);
  taban(c,HP.map((_,i)=>i),ZK/1.6,zem,yaz)}
 function dongu(){if(kirli)ciz();requestAnimationFrame(dongu)}
