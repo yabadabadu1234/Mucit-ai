@@ -28,7 +28,7 @@ function kelimeBlok(x, ix, kok) {
   const acik = MDurum.acik.has(key);
   for (const z of ['A', 'M', 'I', 'D']) {
     const L = Z[z]; if (!L.length) continue;
-    const y0 = y; y += 4; O.push(['zl', 22, y + 9, ZON[z].isaret + ' ' + ZON[z].ad + ' (' + L.length + ')', z]); y += 16;
+    const y0 = y; y += 4; O.push(['zl', 34, y + 9, ZON[z].ad + ' (' + L.length + ')', z]); y += 16;
     const goster = acik ? L : L.slice(0, 4);
     goster.forEach((s, i) => {
       const satirlar = sar_((i + 1) + '. ' + (s.et ? '[' + s.et + '] ' : '') + s.t, 62);
@@ -91,13 +91,32 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
     if (x + 460 < lx0 || x > lx1 || y + 20 < ly0 || y - 20 > ly1) continue;
     if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 5, 430, 1.5); if (yazi) { ctx.font = 'bold 15px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
     else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
-    else if (t === 'w') { const c = ['#c0392b', '#9a917a', R.yaz][o[5]]; ctx.fillStyle = c;
+    else if (t === 'w') { const c = ['#c0392b', '#9a917a', R.yaz][o[5]]; if (yazi) semse_(ctx, x - 4, y - 3, 122, 24, c); ctx.fillStyle = c;
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
-    else if (t === 'zl') { ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
     else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#6e5a2e' : R.yaz;
       if (yazi && !gz) { ctx.font = (t === 'mt' ? 'italic 10.5px' : '11.5px') + ' Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; ctx.font = '9px Georgia'; ctx.fillText('  ' + o[4], x + w, y) } }
       else { ctx.globalAlpha = gz ? .18 : .3; ctx.fillRect(x, y - 7, Math.min(370, o[3].length * 5.6), 7); ctx.globalAlpha = 1 } }
     else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; ctx.font = '10.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
   }
+}
+/* Motifler: açık kaynaktan resim almak yerine riyazî olarak çizilir (yıldız çokgenleri, rozet, şemse kartuşu).
+   Her motif bir mana cinsine bağlıdır: asıl = sekiz köşe yıldız, mecaz = altı köşe yıldız, ıstılah = dört kollu kilit, deyim = beş yapraklı rozet. */
+function yildiz_(c, x, y, r, n, ic) { c.beginPath(); for (let i = 0; i < 2 * n; i++) { const a = Math.PI * i / n - Math.PI / 2, rr = i % 2 ? r * ic : r; c.lineTo(x + rr * Math.cos(a), y + rr * Math.sin(a)) } c.closePath() }
+function rozet_(c, x, y, r, n) { c.beginPath(); for (let i = 0; i < n; i++) { const a = 2 * Math.PI * i / n - Math.PI / 2; c.moveTo(x, y); c.ellipse(x + r * .5 * Math.cos(a), y + r * .5 * Math.sin(a), r * .5, r * .26, a, 0, 2 * Math.PI) } }
+function motif_(c, z, x, y, r) {
+  const k = ZON[z].kenar; c.save(); c.lineWidth = Math.max(.6, r / 9); c.strokeStyle = k; c.fillStyle = ZON[z].zemin.replace(/[\d.]+\)$/, '.55)');
+  if (z === 'A') { yildiz_(c, x, y, r, 8, .62); c.fill(); c.stroke(); yildiz_(c, x, y, r * .5, 8, .62); c.stroke() }
+  else if (z === 'M') { yildiz_(c, x, y, r, 6, .58); c.fill(); c.stroke(); c.beginPath(); c.arc(x, y, r * .3, 0, 7); c.stroke() }
+  else if (z === 'I') { c.beginPath(); for (let i = 0; i < 4; i++) { const a = Math.PI / 2 * i; c.rect(x + Math.cos(a) * r * .55 - r * .22, y + Math.sin(a) * r * .55 - r * .22, r * .44, r * .44) } c.rect(x - r * .3, y - r * .3, r * .6, r * .6); c.fill(); c.stroke() }
+  else { rozet_(c, x, y, r, 5); c.fill(); c.stroke() }
+  c.restore();
+}
+function semse_(c, x, y, w, h, renk) {
+  const cx = x + w / 2, cy = y + h / 2; c.save(); c.beginPath();
+  c.moveTo(x, cy); c.quadraticCurveTo(x + 10, y, x + 26, y); c.lineTo(x + w - 26, y); c.quadraticCurveTo(x + w - 10, y, x + w, cy);
+  c.quadraticCurveTo(x + w - 10, y + h, x + w - 26, y + h); c.lineTo(x + 26, y + h); c.quadraticCurveTo(x + 10, y + h, x, cy); c.closePath();
+  c.fillStyle = 'rgba(184,134,11,.08)'; c.fill(); c.strokeStyle = renk; c.lineWidth = 1; c.stroke();
+  yildiz_(c, x + 9, cy, 4, 8, .55); c.fillStyle = renk; c.fill(); yildiz_(c, x + w - 9, cy, 4, 8, .55); c.fill(); c.restore();
 }
