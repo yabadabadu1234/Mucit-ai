@@ -38,7 +38,7 @@ def bilgi(d):
         if e.get('bab') in KURAN_BAB: bablar.add(KURAN_BAB[e['bab']])
     for L in (d.get('mustaklar') or {}).values():
         for x in L:
-            if x[5] and x[5].startswith('Vikisözlük'): mesmu.add(x[1])
+            if (x[5] and x[5].startswith('Vikisözlük')) or x[4] in ('lugat', 'kuran'): mesmu.add(x[1])
     return mesmu, bablar, harekeler
 
 

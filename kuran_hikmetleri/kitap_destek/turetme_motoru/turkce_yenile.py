@@ -1,6 +1,8 @@
 """Kök dosyalarındaki müştak Türkçelerini turkce.py kurallarıyla yeniden yazar; Kur'ân'da geçen müştakta Kur'ân kelimesinin Türkçesi esastır."""
 import json, glob, os, collections
 import turkce as T
+import mustak_lugat as ML
+LUG = ML.yukle()
 from kelime_kaydi import okunur
 KLAS = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi')
 say = collections.Counter()
@@ -22,7 +24,12 @@ for f in glob.glob(os.path.join(KLAS, 'kuranda_*', 'kokler', '*.json')):
         say['hata'] += 1; continue
     for s in satir:
         x = s['_x']
-        if s['ar'] in kur:
+        lm = LUG.get(k + '|' + s['ar'])
+        lt, le = ML.mana_cikar(lm['maddeler']) if lm else (None, None)
+        if lt:
+            x[3], x[4] = lt, 'lugat'; say['lugat'] += 1
+            if le not in (x[5] or ''): x[5] = ((x[5] + ' · ') if x[5] else '') + le
+        elif s['ar'] in kur:
             x[3], x[4] = kur[s['ar']], 'kuran'; say['kuran'] += 1
             if not x[5]: x[5] = "Kur'ân"
         else:
