@@ -18,27 +18,34 @@ function say(n){return 1+n.turev.reduce((a,c)=>a+say(c),0)}
 function derin(n){return n.turev.length?1+Math.max(...n.turev.map(derin)):0}
 function satir(t,m){const w=t.split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>m&&b){o.push(b);b=x}else b=(b+' '+x).trim()}o.push(b);return o}
 const RR=['#b3541e','#2f6fb3','#3f7f3a','#8a3fa0','#b8860b','#2c8c7c','#a0304a','#5a6b2a'];
-function agac(n,cx,cy,r){let h='';const dm=Math.max(derin(n),1),adim=r*0.92/dm,fs=r/16;
- function yer(m,a0,a1,d,c){const a=(a0+a1)/2,q=d*adim;m._x=cx+q*Math.cos(a);m._y=cy+q*Math.sin(a);m._a=a;m._d=d;m._c=c;let t=a0;const T=say(m)-1;m.turev.forEach((k,i)=>{const p=(a1-a0)*say(k)/T;yer(k,t,t+p,d+1,d==0?RR[i%8]:c);t+=p})}
+function agac(n,cx,cy,r){let h='';const rc=r*0.42,dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=r/22;
+ function yer(m,a0,a1,d,c){const a=(a0+a1)/2,q=d?rc+d*adim:0;m._x=cx+q*Math.cos(a);m._y=cy+q*Math.sin(a);m._a=a;m._d=d;m._c=c;let t=a0;const T=say(m)-1;m.turev.forEach((k,i)=>{const p=(a1-a0)*say(k)/T;yer(k,t,t+p,d+1,d==0?RR[i%8]:c);t+=p})}
  yer(n,-Math.PI,Math.PI,0,'#b8860b');
- function cz(m){m.turev.forEach(k=>{h+=`<line x1="${m._x}" y1="${m._y}" x2="${k._x}" y2="${k._y}" stroke="${k._c}" stroke-width="${fs*0.12}" opacity=".8"/>`;cz(k)})}cz(n);
+ function cz(m){m.turev.forEach(k=>{h+=`<line x1="${m._x}" y1="${m._y}" x2="${k._x}" y2="${k._y}" stroke="${k._c}" stroke-width="1.6" opacity=".85"/>`;cz(k)})}cz(n);
  function yz(m){if(m._d){const sag=Math.cos(m._a)>=0,L=satir(m.mana,24);h+=`<circle cx="${m._x}" cy="${m._y}" r="${fs*0.25}" fill="${m._c}"/>`;
    L.forEach((l,i)=>h+=`<text x="${m._x+(sag?1:-1)*fs*0.4}" y="${m._y+fs*0.35+(i-(L.length-1)/2)*fs*1.05}" font-size="${fs*(m._d==1?1:0.85)}" text-anchor="${sag?'start':'end'}" class="ici">${l}</text>`)}
   m.turev.forEach(yz)}yz(n);
- const rc=r*0.13;h+=`<circle cx="${cx}" cy="${cy}" r="${rc}" fill="var(--zemin)" stroke="#b8860b" stroke-width="${fs*0.1}"/>`;
+ h+=`<circle cx="${cx}" cy="${cy}" r="${rc}" fill="var(--zemin)" stroke="#b8860b" stroke-width="${fs*0.1}"/>`;
  return [h,rc]}
-function mustak(k,cx,cy,rc){const D=SA[k];if(!D)return '';const S=19,X1=150,X2=300,X3=480;let h='',y=20;const by=[];
- D.forEach(([b,K])=>{const ky2=[];K.forEach(([t,L])=>{const t0=y;L.forEach(([ar,tr])=>{h+=`<line x1="${X3-12}" y1="${y}" x2="${X3}" y2="${y}" stroke="var(--ince)"/><text x="${X3+90}" y="${y+5}" font-size="17" class="ar" text-anchor="end">${ar}</text><text x="${X3+96}" y="${y+4}" font-size="12.5" class="ici">(${tr})</text>`;y+=S});
-  const m=(t0+y-S)/2;ky2.push(m);h+=`<line x1="${X3-12}" y1="${t0}" x2="${X3-12}" y2="${y-S}" stroke="var(--yazi)"/><line x1="${X2}" y1="${m}" x2="${X3-12}" y2="${m}" stroke="var(--yazi)"/><text x="${X2+6}" y="${m-4}" font-size="12" class="ici">${t} (${L.length})</text>`;y+=S*0.4});
-  const m=(ky2[0]+ky2[ky2.length-1])/2;by.push(m);h+=`<line x1="${X2}" y1="${ky2[0]}" x2="${X2}" y2="${ky2[ky2.length-1]}" stroke="#b3541e" stroke-width="1.6"/><line x1="${X1}" y1="${m}" x2="${X2}" y2="${m}" stroke="#b3541e" stroke-width="1.6"/><text x="${X1+6}" y="${m-5}" font-size="13" font-weight="bold" class="ici">${b}</text>`;y+=S*0.8});
- h+=`<line x1="${X1}" y1="${by[0]}" x2="${X1}" y2="${by[by.length-1]}" stroke="#2f6fb3" stroke-width="2"/><line x1="70" y1="${y/2}" x2="${X1}" y2="${y/2}" stroke="#2f6fb3" stroke-width="2"/><text x="10" y="${y/2+10}" font-size="30" class="ar">${k}</text>`;
- const W=1100,sc=Math.min(1.7*rc/W,1.7*rc/y);return `<g transform="translate(${cx-W*sc/2},${cy-y*sc/2}) scale(${sc})">${h}</g>`}
+function mustak(k,cx,cy,rc){const D=SA[k];if(!D)return '';const S=19,WC=440;
+ const R=[];D.forEach(([b,K])=>{R.push(['b',b]);K.forEach(([t,L])=>{R.push(['t',t+' ('+L.length+')']);L.forEach(x=>R.push(['m',x,t]))})});
+ const yuk=r=>r[0]=='b'?1.6:r[0]=='t'?1.2:1,top=R.reduce((a,r)=>a+yuk(r),0),C=Math.max(1,Math.round(Math.sqrt(top*S/WC))),hed=top/C;
+ let h='',col=0,y=40,dol=0,mx=0,sonT='',x=0,y0=null;
+ const kapa=()=>{if(y0!==null){h+=`<line x1="${x+10}" y1="${y0}" x2="${x+10}" y2="${y-S}" stroke="var(--yazi)"/>`;y0=null}};
+ R.forEach(r=>{if(dol+yuk(r)>hed*1.02&&col<C-1&&dol>0){kapa();mx=Math.max(mx,y);col++;y=40;dol=0;x=col*WC;if(r[0]=='m'){h+=`<text x="${x+4}" y="${y}" font-size="12.5" font-weight="bold" fill="#b3541e" class="ici">${sonT} (devamı)</text>`;y+=S*0.9}}
+  dol+=yuk(r);x=col*WC;
+  if(r[0]=='b'){kapa();h+=`<text x="${x}" y="${y}" font-size="15" font-weight="bold" fill="#2f6fb3" class="ici">${r[1]}</text><line x1="${x}" y1="${y+5}" x2="${x+WC-30}" y2="${y+5}" stroke="#2f6fb3" stroke-width="1.5"/>`;y+=S*1.6}
+  else if(r[0]=='t'){kapa();sonT=r[1].replace(/ \(\d+\)$/,'');h+=`<text x="${x+4}" y="${y}" font-size="12.5" font-weight="bold" fill="#b3541e" class="ici">${r[1]}</text>`;y+=S*0.9}
+  else{if(y0===null)y0=y;const [ar,tr]=r[1];h+=`<line x1="${x+10}" y1="${y}" x2="${x+20}" y2="${y}" stroke="var(--ince)"/><text x="${x+110}" y="${y+5}" font-size="17" class="ar" text-anchor="end">${ar}</text><text x="${x+116}" y="${y+4}" font-size="12.5" class="ici">(${tr})</text>`;y+=S}});
+ kapa();mx=Math.max(mx,y);
+ const W=(col+1)*WC,yan=1.45*rc,sc=Math.min(yan/W,yan/mx);
+ return `<text x="${cx}" y="${cy-yan/2-rc*0.08}" font-size="${rc*0.16}" text-anchor="middle" class="ar">${k}</text><g transform="translate(${cx-W*sc/2},${cy-mx*sc/2+rc*0.05}) scale(${sc})">${h}</g>`}
 function yukle(k){if(SA[k]!==undefined)return;SA[k]=null;const e=document.createElement('script');e.src='secim_agi/'+k+'.js';e.onload=()=>ciz();document.head.appendChild(e)}
 let zam=null;function ciz(){clearTimeout(zam);zam=setTimeout(_ciz,60)}
 function _ciz(){const r=s.getBoundingClientRect(),sc=r.width/vb[2];let h='';
  document.getElementById('s').classList.toggle('yakin',sc>4);
  for(const k in V){const v=V[k],R=v[8]*sc;if(R<55)continue;if(v[0]<vb[0]-v[8]||v[0]>vb[0]+vb[2]+v[8]||v[1]<vb[1]-v[8]||v[1]>vb[1]+vb[3]+v[8])continue;
-  const [t,rc]=agac(v[9],v[0],v[1],v[8]);let m='';if(rc*sc>70){yukle(v[6]);m=mustak(v[6],v[0],v[1],rc)}
+  const [t,rc]=agac(v[9],v[0],v[1],v[8]);let m='';if(rc*sc>40){yukle(v[6]);m=mustak(v[6],v[0],v[1],rc)}
   h+=`<clipPath id="kp${v[7]}"><use href="#c${v[7]}"/></clipPath><g clip-path="url(#kp${v[7]})">${t}${m}</g>`}
  ic.innerHTML=h}
 s.addEventListener('wheel',ciz);s.addEventListener('pointermove',()=>{if(dr)ciz()});
