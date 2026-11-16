@@ -27,7 +27,7 @@ input{font:inherit;padding:6px 10px;border:1px solid var(--cizgi);border-radius:
 #liste a.sec{background:#b8860b33}
 svg{width:100%;height:calc(100vh - 140px);display:block}#ag{display:none;overflow:auto;height:calc(100vh - 140px)}#ag svg{height:auto}
 .ar{font-family:Amiri,serif}text{fill:var(--yazi)}path{fill:none}</style></head><body>
-<header><input id="ara" placeholder="kök ara (خلق)"><button id="dug" style="font:inherit;padding:5px 10px">Seçim ağı</button><span id="bilgi" style="color:var(--ince);font-size:14px"></span></header>
+<header><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a><input id="ara" placeholder="kök ara (خلق)"><button id="dug" style="font:inherit;padding:5px 10px">Seçim ağı</button><span id="bilgi" style="color:var(--ince);font-size:14px"></span></header>
 <div id="liste"></div><svg id="s"></svg><div id="ag"></div>
 <script>const A=__VERI__;
 const R=['#b3541e','#2f6fb3','#3f7f3a','#8a3fa0','#b8860b','#2c8c7c','#a0304a','#5a6b2a'];

@@ -90,7 +90,7 @@ body{{margin:0;background:var(--zemin);color:var(--yazi);font-family:Georgia,ser
 #lej i{{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}}svg{{width:100%;height:calc(100vh - 60px);cursor:grab}}
 .k text{{font-family:Amiri,serif;font-size:8.5px;fill:var(--yazi)}}.k circle{{fill:var(--yazi)}}.kad{{font-size:14px;font-weight:bold;text-anchor:middle;fill:var(--yazi);paint-order:stroke;stroke:var(--zemin);stroke-width:4;pointer-events:none}}
 #bil{{position:fixed;right:12px;top:60px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}}.cz{{stroke:#b8860b;stroke-width:1.5}}</style></head><body>
-<div id="lej">{lej}<span style="color:var(--ince)">· her hücre bir kökün bir aslı (¹ ² birinci, ikinci asıl) · kalın sınır: kavram · ince sınır: mana bölgesi</span></div>
+<div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a>{lej}<span style="color:var(--ince)">· her hücre bir kökün bir aslı (¹ ² birinci, ikinci asıl) · kalın sınır: kavram · ince sınır: mana bölgesi</span></div>
 <svg id="s" viewBox="0 0 1800 1800"><g>{''.join(svg)}<g id="cz"></g></g></svg><div id="bil"></div>
 <script>const V={json.dumps(VER, ensure_ascii=False)};
 const s=document.getElementById('s');let vb=[0,0,1800,1800],dr=null;const up=()=>s.setAttribute('viewBox',vb.join(' '));
