@@ -8,15 +8,15 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "مَوْت", "mawt", "ölme", "orta", ""],
-      [888, "مِيت", "mīt", "ölme", "orta", ""],
+      [0, "مَوْت", "mawt", "ölüm", "kuran", "Kur'ân"],
+      [888, "مِيت", "mīt", "ölünen şey", "orta", ""],
       [889, "مُوت", "mūt", "ölme", "orta", ""],
-      [517, "مَات", "māt", "ölme", "orta", ""],
+      [517, "مَات", "māt", "ölme hâli", "orta", ""],
       [518, "مِيَت", "miyat", "ölme", "orta", ""],
       [5, "مُوُت", "muwut", "ölme", "orta", ""],
       [6, "مُوُوت", "muwūt", "ölme", "orta", ""],
-      [521, "مِيَات", "miyāt", "ölme", "orta", ""],
-      [8, "مُوَات", "muwāt", "ölme", "orta", ""],
+      [521, "مِيَات", "miyāt", "ölmeden kaçınma", "orta", ""],
+      [8, "مُوَات", "muwāt", "ölme illeti, ölme sesi", "orta", ""],
       [
         9,
         "مَوَات",
@@ -25,16 +25,16 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be or become unoccupied (of land, a city, etc.)"
       ],
-      [10, "مَوَاتَة", "mawāta", "ölme", "orta", ""],
-      [11, "مُوُوتَة", "muwūta", "ölme", "orta", ""],
-      [526, "مِيَاتَة", "miyāta", "ölme", "orta", ""],
-      [13, "مَوِيت", "mawīt", "ölme", "orta", ""],
+      [10, "مَوَاتَة", "mawāta", "ölme vasfı", "orta", ""],
+      [11, "مُوُوتَة", "muwūta", "ölme vasfı", "orta", ""],
+      [526, "مِيَاتَة", "miyāta", "ölme vazifesi, ölme işi", "orta", ""],
+      [13, "مَوِيت", "mawīt", "ölme sesi, ölme yürüyüşü", "orta", ""],
       [14, "مَوُوت", "mawūt", "ölme", "orta", ""],
       [
         15,
         "مَوَتَان",
         "mawatān",
-        "ölme",
+        "ölme çalkantısı, coşarak ölme",
         "orta",
         "Vikisözlük: inanimate goods, dead stock, lands and houses as opposed to beasts or "
       ],
@@ -46,11 +46,11 @@
       [21, "مَوَتَة", "mawata", "ölme", "orta", ""],
       [22, "مِوَتَة", "miwata", "ölme", "orta", ""],
       [23, "مَوْتُوتَة", "mawtūta", "ölme", "orta", ""],
-      [24, "تُمْوُوت", "tumwūt", "ölme", "orta", ""],
-      [25, "تَمْوِتَة", "tamwita", "ölme", "orta", ""],
-      [26, "تَمْوَتَة", "tamwata", "ölme", "orta", ""],
-      [27, "مَمْوُتَة", "mamwuta", "ölme", "orta", ""],
-      [533, "مَمِيتَة", "mamīta", "ölme", "orta", ""]
+      [24, "تُمْوُوت", "tumwūt", "tekrar tekrar ölme", "orta", ""],
+      [25, "تَمْوِتَة", "tamwita", "tekrar tekrar ölme", "orta", ""],
+      [26, "تَمْوَتَة", "tamwata", "tekrar tekrar ölme", "orta", ""],
+      [27, "مَمْوُتَة", "mamwuta", "ölme sebebi", "orta", ""],
+      [533, "مَمِيتَة", "mamīta", "ölme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
       [29, "تَمْوِيت", "tamwīt", "öldürme", "orta", "Vikisözlük: verbal noun of مَوَّتَ (mawwata) (form II)"],
@@ -63,203 +63,203 @@
     ],
     "ism-i fâil · bâb II": [
       [34, "مُمَوِّت", "mumawwit", "öldüren", "orta", ""],
-      [35, "مُمَوِّتَة", "mumawwita", "öldüren (dişi)", "orta", ""],
-      [36, "مُمَوِّتَان", "mumawwitān", "iki öldüren", "orta", ""],
-      [37, "مُمَوِّتَتَان", "mumawwitatān", "iki öldüren (dişi)", "orta", ""],
+      [35, "مُمَوِّتَة", "mumawwita", "öldüren (müennes)", "orta", ""],
+      [36, "مُمَوِّتَان", "mumawwitān", "öldüren (iki)", "orta", ""],
+      [37, "مُمَوِّتَتَان", "mumawwitatān", "öldüren (iki, müennes)", "orta", ""],
       [38, "مُمَوِّتُون", "mumawwitūn", "öldürenler", "orta", ""],
       [39, "مُمَوِّتِين", "mumawwitīn", "öldürenler", "orta", ""],
-      [40, "مُمَوِّتَات", "mumawwitāt", "öldürenler (dişi)", "orta", ""]
+      [40, "مُمَوِّتَات", "mumawwitāt", "öldürenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُمَوَّت", "mumawwat", "öldürülmüş", "orta", ""],
-      [42, "مُمَوَّتَة", "mumawwata", "öldürülmüş (dişi)", "orta", ""],
-      [43, "مُمَوَّتَان", "mumawwatān", "iki öldürülmüş", "orta", ""],
-      [44, "مُمَوَّتَتَان", "mumawwatatān", "iki öldürülmüş (dişi)", "orta", ""],
-      [45, "مُمَوَّتُون", "mumawwatūn", "öldürülmüşler", "orta", ""],
-      [46, "مُمَوَّتِين", "mumawwatīn", "öldürülmüşler", "orta", ""],
-      [47, "مُمَوَّتَات", "mumawwatāt", "öldürülmüşler (dişi)", "orta", ""]
+      [41, "مُمَوَّت", "mumawwat", "öldürülen", "orta", ""],
+      [42, "مُمَوَّتَة", "mumawwata", "öldürülen (müennes)", "orta", ""],
+      [43, "مُمَوَّتَان", "mumawwatān", "öldürülen (iki)", "orta", ""],
+      [44, "مُمَوَّتَتَان", "mumawwatatān", "öldürülen (iki, müennes)", "orta", ""],
+      [45, "مُمَوَّتُون", "mumawwatūn", "öldürülenler", "orta", ""],
+      [46, "مُمَوَّتِين", "mumawwatīn", "öldürülenler", "orta", ""],
+      [47, "مُمَوَّتَات", "mumawwatāt", "öldürülenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُمَوَّت", "mumawwat", "öldürme (yeri/zamanı)", "orta", ""]
+      [48, "مُمَوَّت", "mumawwat", "öldürme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُمَاوَتَة", "mumāwata", "ölüşme", "orta", ""],
-      [552, "مِيَات", "miyāt", "ölüşme", "orta", ""]
+      [49, "مُمَاوَتَة", "mumāwata", "biriyle karşılıklı ölme", "orta", ""],
+      [552, "مِيَات", "miyāt", "biriyle karşılıklı ölme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [553, "مِيَاتَة", "miyāta", "bir kere ölüşme", "orta", ""]
+      [553, "مِيَاتَة", "miyāta", "bir kere biriyle karşılıklı ölme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُمَاوِت", "mumāwit", "ölüşen", "orta", ""],
-      [53, "مُمَاوِتَة", "mumāwita", "ölüşen (dişi)", "orta", ""],
-      [54, "مُمَاوِتَان", "mumāwitān", "iki ölüşen", "orta", ""],
-      [55, "مُمَاوِتَتَان", "mumāwitatān", "iki ölüşen (dişi)", "orta", ""],
-      [56, "مُمَاوِتُون", "mumāwitūn", "ölüşenler", "orta", ""],
-      [57, "مُمَاوِتِين", "mumāwitīn", "ölüşenler", "orta", ""],
-      [58, "مُمَاوِتَات", "mumāwitāt", "ölüşenler (dişi)", "orta", ""]
+      [52, "مُمَاوِت", "mumāwit", "biriyle karşılıklı ölen", "orta", ""],
+      [53, "مُمَاوِتَة", "mumāwita", "biriyle karşılıklı ölen (müennes)", "orta", ""],
+      [54, "مُمَاوِتَان", "mumāwitān", "biriyle karşılıklı ölen (iki)", "orta", ""],
+      [55, "مُمَاوِتَتَان", "mumāwitatān", "biriyle karşılıklı ölen (iki, müennes)", "orta", ""],
+      [56, "مُمَاوِتُون", "mumāwitūn", "biriyle karşılıklı ölenler", "orta", ""],
+      [57, "مُمَاوِتِين", "mumāwitīn", "biriyle karşılıklı ölenler", "orta", ""],
+      [58, "مُمَاوِتَات", "mumāwitāt", "biriyle karşılıklı ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُمَاوَت", "mumāwat", "ölüşmüş", "orta", ""],
-      [60, "مُمَاوَتَة", "mumāwata", "ölüşmüş (dişi)", "orta", ""],
-      [61, "مُمَاوَتَان", "mumāwatān", "iki ölüşmüş", "orta", ""],
-      [62, "مُمَاوَتَتَان", "mumāwatatān", "iki ölüşmüş (dişi)", "orta", ""],
-      [63, "مُمَاوَتُون", "mumāwatūn", "ölüşmüşler", "orta", ""],
-      [64, "مُمَاوَتِين", "mumāwatīn", "ölüşmüşler", "orta", ""],
-      [65, "مُمَاوَتَات", "mumāwatāt", "ölüşmüşler (dişi)", "orta", ""]
+      [59, "مُمَاوَت", "mumāwat", "biriyle karşılıklı ölünen", "orta", ""],
+      [60, "مُمَاوَتَة", "mumāwata", "biriyle karşılıklı ölünen (müennes)", "orta", ""],
+      [61, "مُمَاوَتَان", "mumāwatān", "biriyle karşılıklı ölünen (iki)", "orta", ""],
+      [62, "مُمَاوَتَتَان", "mumāwatatān", "biriyle karşılıklı ölünen (iki, müennes)", "orta", ""],
+      [63, "مُمَاوَتُون", "mumāwatūn", "biriyle karşılıklı ölünenler", "orta", ""],
+      [64, "مُمَاوَتِين", "mumāwatīn", "biriyle karşılıklı ölünenler", "orta", ""],
+      [65, "مُمَاوَتَات", "mumāwatāt", "biriyle karşılıklı ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُمَاوَت", "mumāwat", "ölüşme (yeri/zamanı)", "orta", ""]
+      [66, "مُمَاوَت", "mumāwat", "biriyle karşılıklı ölme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
       [567, "إِمَاتَة", "ʾimāta", "öldürme", "orta", "Vikisözlük: verbal noun of أَمَاتَ (ʔamāta) (form IV)"]
     ],
     "ism-i fâil · bâb IV": [
       [569, "مُمِيت", "mumīt", "öldüren", "orta", ""],
-      [570, "مُمِيتَة", "mumīta", "öldüren (dişi)", "orta", ""],
-      [571, "مُمِيتَان", "mumītān", "iki öldüren", "orta", ""],
-      [572, "مُمِيتَتَان", "mumītatān", "iki öldüren (dişi)", "orta", ""],
+      [570, "مُمِيتَة", "mumīta", "öldüren (müennes)", "orta", ""],
+      [571, "مُمِيتَان", "mumītān", "öldüren (iki)", "orta", ""],
+      [572, "مُمِيتَتَان", "mumītatān", "öldüren (iki, müennes)", "orta", ""],
       [573, "مُمِيتُون", "mumītūn", "öldürenler", "orta", ""],
       [574, "مُمِيتِين", "mumītīn", "öldürenler", "orta", ""],
-      [575, "مُمِيتَات", "mumītāt", "öldürenler (dişi)", "orta", ""]
+      [575, "مُمِيتَات", "mumītāt", "öldürenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [576, "مُمَات", "mumāt", "öldürülmüş", "orta", "Vikisözlük: passive participle of أَمَاتَ (ʔamāta)"],
-      [890, "مُمَاتَة", "mumāta", "öldürülmüş (dişi)", "orta", ""],
-      [577, "مُمَاتَان", "mumātān", "iki öldürülmüş", "orta", ""],
-      [891, "مُمَاتَتَان", "mumātatān", "iki öldürülmüş (dişi)", "orta", ""],
-      [578, "مُمَاتُون", "mumātūn", "öldürülmüşler", "orta", ""],
-      [579, "مُمَاتِين", "mumātīn", "öldürülmüşler", "orta", ""],
-      [580, "مُمَاتَات", "mumātāt", "öldürülmüşler (dişi)", "orta", ""]
+      [576, "مُمَات", "mumāt", "öldürülen", "orta", "Vikisözlük: passive participle of أَمَاتَ (ʔamāta)"],
+      [890, "مُمَاتَة", "mumāta", "öldürülen (müennes)", "orta", ""],
+      [577, "مُمَاتَان", "mumātān", "öldürülen (iki)", "orta", ""],
+      [891, "مُمَاتَتَان", "mumātatān", "öldürülen (iki, müennes)", "orta", ""],
+      [578, "مُمَاتُون", "mumātūn", "öldürülenler", "orta", ""],
+      [579, "مُمَاتِين", "mumātīn", "öldürülenler", "orta", ""],
+      [580, "مُمَاتَات", "mumātāt", "öldürülenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [
-        581,
-        "مُمَات",
-        "mumāt",
-        "öldürme (yeri/zamanı)",
-        "orta",
-        "Vikisözlük: passive participle of أَمَاتَ (ʔamāta)"
-      ]
+      [581, "مُمَات", "mumāt", "öldürme yeri, vakti", "orta", "Vikisözlük: passive participle of أَمَاتَ (ʔamāta)"]
     ],
     "masdar · bâb V": [
-      [84, "تَمَوُّت", "tamawwut", "ölme", "orta", ""]
+      [84, "تَمَوُّت", "tamawwut", "kendini zorlayarak ölme", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَمَوُّتَة", "tamawwuta", "bir kere ölme", "orta", ""]
+      [85, "تَمَوُّتَة", "tamawwuta", "bir kere kendini zorlayarak ölme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَمَوِّت", "mutamawwit", "ölen", "orta", ""],
-      [87, "مُتَمَوِّتَة", "mutamawwita", "ölen (dişi)", "orta", ""],
-      [88, "مُتَمَوِّتَان", "mutamawwitān", "iki ölen", "orta", ""],
-      [89, "مُتَمَوِّتَتَان", "mutamawwitatān", "iki ölen (dişi)", "orta", ""],
-      [90, "مُتَمَوِّتُون", "mutamawwitūn", "ölenler", "orta", ""],
-      [91, "مُتَمَوِّتِين", "mutamawwitīn", "ölenler", "orta", ""],
-      [92, "مُتَمَوِّتَات", "mutamawwitāt", "ölenler (dişi)", "orta", ""]
+      [86, "مُتَمَوِّت", "mutamawwit", "kendini zorlayarak ölen", "orta", ""],
+      [87, "مُتَمَوِّتَة", "mutamawwita", "kendini zorlayarak ölen (müennes)", "orta", ""],
+      [88, "مُتَمَوِّتَان", "mutamawwitān", "kendini zorlayarak ölen (iki)", "orta", ""],
+      [89, "مُتَمَوِّتَتَان", "mutamawwitatān", "kendini zorlayarak ölen (iki, müennes)", "orta", ""],
+      [90, "مُتَمَوِّتُون", "mutamawwitūn", "kendini zorlayarak ölenler", "orta", ""],
+      [91, "مُتَمَوِّتِين", "mutamawwitīn", "kendini zorlayarak ölenler", "orta", ""],
+      [92, "مُتَمَوِّتَات", "mutamawwitāt", "kendini zorlayarak ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَمَوَّت", "mutamawwat", "ölmüş", "orta", ""],
-      [94, "مُتَمَوَّتَة", "mutamawwata", "ölmüş (dişi)", "orta", ""],
-      [95, "مُتَمَوَّتَان", "mutamawwatān", "iki ölmüş", "orta", ""],
-      [96, "مُتَمَوَّتَتَان", "mutamawwatatān", "iki ölmüş (dişi)", "orta", ""],
-      [97, "مُتَمَوَّتُون", "mutamawwatūn", "ölmüşler", "orta", ""],
-      [98, "مُتَمَوَّتِين", "mutamawwatīn", "ölmüşler", "orta", ""],
-      [99, "مُتَمَوَّتَات", "mutamawwatāt", "ölmüşler (dişi)", "orta", ""]
+      [93, "مُتَمَوَّت", "mutamawwat", "kendini zorlayarak ölünen", "orta", ""],
+      [94, "مُتَمَوَّتَة", "mutamawwata", "kendini zorlayarak ölünen (müennes)", "orta", ""],
+      [95, "مُتَمَوَّتَان", "mutamawwatān", "kendini zorlayarak ölünen (iki)", "orta", ""],
+      [96, "مُتَمَوَّتَتَان", "mutamawwatatān", "kendini zorlayarak ölünen (iki, müennes)", "orta", ""],
+      [97, "مُتَمَوَّتُون", "mutamawwatūn", "kendini zorlayarak ölünenler", "orta", ""],
+      [98, "مُتَمَوَّتِين", "mutamawwatīn", "kendini zorlayarak ölünenler", "orta", ""],
+      [99, "مُتَمَوَّتَات", "mutamawwatāt", "kendini zorlayarak ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَمَوَّت", "mutamawwat", "ölme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَمَوَّت", "mutamawwat", "kendini zorlayarak ölme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَمَاوُت", "tamāwut", "ölüşme", "orta", "Vikisözlük: verbal noun of تَمَاوَتَ (tamāwata) (form VI)"]
+      [
+        101,
+        "تَمَاوُت",
+        "tamāwut",
+        "hep birlikte ölme",
+        "orta",
+        "Vikisözlük: verbal noun of تَمَاوَتَ (tamāwata) (form VI)"
+      ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَمَاوُتَة", "tamāwuta", "bir kere ölüşme", "orta", ""]
+      [102, "تَمَاوُتَة", "tamāwuta", "bir kere hep birlikte ölme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَمَاوِت", "mutamāwit", "ölüşen", "orta", ""],
-      [104, "مُتَمَاوِتَة", "mutamāwita", "ölüşen (dişi)", "orta", ""],
-      [105, "مُتَمَاوِتَان", "mutamāwitān", "iki ölüşen", "orta", ""],
-      [106, "مُتَمَاوِتَتَان", "mutamāwitatān", "iki ölüşen (dişi)", "orta", ""],
-      [107, "مُتَمَاوِتُون", "mutamāwitūn", "ölüşenler", "orta", ""],
-      [108, "مُتَمَاوِتِين", "mutamāwitīn", "ölüşenler", "orta", ""],
-      [109, "مُتَمَاوِتَات", "mutamāwitāt", "ölüşenler (dişi)", "orta", ""]
+      [103, "مُتَمَاوِت", "mutamāwit", "hep birlikte ölen", "orta", ""],
+      [104, "مُتَمَاوِتَة", "mutamāwita", "hep birlikte ölen (müennes)", "orta", ""],
+      [105, "مُتَمَاوِتَان", "mutamāwitān", "hep birlikte ölen (iki)", "orta", ""],
+      [106, "مُتَمَاوِتَتَان", "mutamāwitatān", "hep birlikte ölen (iki, müennes)", "orta", ""],
+      [107, "مُتَمَاوِتُون", "mutamāwitūn", "hep birlikte ölenler", "orta", ""],
+      [108, "مُتَمَاوِتِين", "mutamāwitīn", "hep birlikte ölenler", "orta", ""],
+      [109, "مُتَمَاوِتَات", "mutamāwitāt", "hep birlikte ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَمَاوَت", "mutamāwat", "ölüşmüş", "orta", ""],
-      [111, "مُتَمَاوَتَة", "mutamāwata", "ölüşmüş (dişi)", "orta", ""],
-      [112, "مُتَمَاوَتَان", "mutamāwatān", "iki ölüşmüş", "orta", ""],
-      [113, "مُتَمَاوَتَتَان", "mutamāwatatān", "iki ölüşmüş (dişi)", "orta", ""],
-      [114, "مُتَمَاوَتُون", "mutamāwatūn", "ölüşmüşler", "orta", ""],
-      [115, "مُتَمَاوَتِين", "mutamāwatīn", "ölüşmüşler", "orta", ""],
-      [116, "مُتَمَاوَتَات", "mutamāwatāt", "ölüşmüşler (dişi)", "orta", ""]
+      [110, "مُتَمَاوَت", "mutamāwat", "hep birlikte ölünen", "orta", ""],
+      [111, "مُتَمَاوَتَة", "mutamāwata", "hep birlikte ölünen (müennes)", "orta", ""],
+      [112, "مُتَمَاوَتَان", "mutamāwatān", "hep birlikte ölünen (iki)", "orta", ""],
+      [113, "مُتَمَاوَتَتَان", "mutamāwatatān", "hep birlikte ölünen (iki, müennes)", "orta", ""],
+      [114, "مُتَمَاوَتُون", "mutamāwatūn", "hep birlikte ölünenler", "orta", ""],
+      [115, "مُتَمَاوَتِين", "mutamāwatīn", "hep birlikte ölünenler", "orta", ""],
+      [116, "مُتَمَاوَتَات", "mutamāwatāt", "hep birlikte ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَمَاوَت", "mutamāwat", "ölüşme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَمَاوَت", "mutamāwat", "hep birlikte ölme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [610, "اِنْمِيَات", "inmiyāt", "ölme", "orta", ""]
+      [610, "اِنْمِيَات", "inmiyāt", "kendiliğinden ölme", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [611, "اِنْمِيَاتَة", "inmiyāta", "bir kere ölme", "orta", ""]
+      [611, "اِنْمِيَاتَة", "inmiyāta", "bir kere kendiliğinden ölme", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [612, "مُنْمَات", "munmāt", "ölen", "orta", ""],
-      [613, "مُنْمَاتَة", "munmāta", "ölen (dişi)", "orta", ""],
-      [614, "مُنْمَاتَان", "munmātān", "iki ölen", "orta", ""],
-      [615, "مُنْمَاتَتَان", "munmātatān", "iki ölen (dişi)", "orta", ""],
-      [616, "مُنْمَاتُون", "munmātūn", "ölenler", "orta", ""],
-      [617, "مُنْمَاتِين", "munmātīn", "ölenler", "orta", ""],
-      [618, "مُنْمَاتَات", "munmātāt", "ölenler (dişi)", "orta", ""]
+      [612, "مُنْمَات", "munmāt", "kendiliğinden ölen", "orta", ""],
+      [613, "مُنْمَاتَة", "munmāta", "kendiliğinden ölen (müennes)", "orta", ""],
+      [614, "مُنْمَاتَان", "munmātān", "kendiliğinden ölen (iki)", "orta", ""],
+      [615, "مُنْمَاتَتَان", "munmātatān", "kendiliğinden ölen (iki, müennes)", "orta", ""],
+      [616, "مُنْمَاتُون", "munmātūn", "kendiliğinden ölenler", "orta", ""],
+      [617, "مُنْمَاتِين", "munmātīn", "kendiliğinden ölenler", "orta", ""],
+      [618, "مُنْمَاتَات", "munmātāt", "kendiliğinden ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْمَات", "munmāt", "ölmüş", "orta", ""],
-      [892, "مُنْمَاتَة", "munmāta", "ölmüş (dişi)", "orta", ""],
-      [620, "مُنْمَاتَان", "munmātān", "iki ölmüş", "orta", ""],
-      [893, "مُنْمَاتَتَان", "munmātatān", "iki ölmüş (dişi)", "orta", ""],
-      [621, "مُنْمَاتُون", "munmātūn", "ölmüşler", "orta", ""],
-      [622, "مُنْمَاتِين", "munmātīn", "ölmüşler", "orta", ""],
-      [623, "مُنْمَاتَات", "munmātāt", "ölmüşler (dişi)", "orta", ""]
+      [619, "مُنْمَات", "munmāt", "kendiliğinden ölünen", "orta", ""],
+      [892, "مُنْمَاتَة", "munmāta", "kendiliğinden ölünen (müennes)", "orta", ""],
+      [620, "مُنْمَاتَان", "munmātān", "kendiliğinden ölünen (iki)", "orta", ""],
+      [893, "مُنْمَاتَتَان", "munmātatān", "kendiliğinden ölünen (iki, müennes)", "orta", ""],
+      [621, "مُنْمَاتُون", "munmātūn", "kendiliğinden ölünenler", "orta", ""],
+      [622, "مُنْمَاتِين", "munmātīn", "kendiliğinden ölünenler", "orta", ""],
+      [623, "مُنْمَاتَات", "munmātāt", "kendiliğinden ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْمَات", "munmāt", "ölme (yeri/zamanı)", "orta", ""]
+      [624, "مُنْمَات", "munmāt", "kendiliğinden ölme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [625, "اِمْتِيَات", "imtiyāt", "ölme", "orta", ""]
+      [625, "اِمْتِيَات", "imtiyāt", "kendisi için ölme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [627, "اِمْتِيَاتَة", "imtiyāta", "bir kere ölme", "orta", ""]
+      [627, "اِمْتِيَاتَة", "imtiyāta", "bir kere kendisi için ölme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [628, "مُمْتَات", "mumtāt", "ölen", "orta", ""],
-      [629, "مُمْتَاتَة", "mumtāta", "ölen (dişi)", "orta", ""],
-      [630, "مُمْتَاتَان", "mumtātān", "iki ölen", "orta", ""],
-      [631, "مُمْتَاتَتَان", "mumtātatān", "iki ölen (dişi)", "orta", ""],
-      [632, "مُمْتَاتُون", "mumtātūn", "ölenler", "orta", ""],
-      [633, "مُمْتَاتِين", "mumtātīn", "ölenler", "orta", ""],
-      [634, "مُمْتَاتَات", "mumtātāt", "ölenler (dişi)", "orta", ""]
+      [628, "مُمْتَات", "mumtāt", "kendisi için ölen", "orta", ""],
+      [629, "مُمْتَاتَة", "mumtāta", "kendisi için ölen (müennes)", "orta", ""],
+      [630, "مُمْتَاتَان", "mumtātān", "kendisi için ölen (iki)", "orta", ""],
+      [631, "مُمْتَاتَتَان", "mumtātatān", "kendisi için ölen (iki, müennes)", "orta", ""],
+      [632, "مُمْتَاتُون", "mumtātūn", "kendisi için ölenler", "orta", ""],
+      [633, "مُمْتَاتِين", "mumtātīn", "kendisi için ölenler", "orta", ""],
+      [634, "مُمْتَاتَات", "mumtātāt", "kendisi için ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُمْتَات", "mumtāt", "ölmüş", "orta", ""],
-      [894, "مُمْتَاتَة", "mumtāta", "ölmüş (dişi)", "orta", ""],
-      [636, "مُمْتَاتَان", "mumtātān", "iki ölmüş", "orta", ""],
-      [895, "مُمْتَاتَتَان", "mumtātatān", "iki ölmüş (dişi)", "orta", ""],
-      [637, "مُمْتَاتُون", "mumtātūn", "ölmüşler", "orta", ""],
-      [638, "مُمْتَاتِين", "mumtātīn", "ölmüşler", "orta", ""],
-      [639, "مُمْتَاتَات", "mumtātāt", "ölmüşler (dişi)", "orta", ""]
+      [635, "مُمْتَات", "mumtāt", "kendisi için ölünen", "orta", ""],
+      [894, "مُمْتَاتَة", "mumtāta", "kendisi için ölünen (müennes)", "orta", ""],
+      [636, "مُمْتَاتَان", "mumtātān", "kendisi için ölünen (iki)", "orta", ""],
+      [895, "مُمْتَاتَتَان", "mumtātatān", "kendisi için ölünen (iki, müennes)", "orta", ""],
+      [637, "مُمْتَاتُون", "mumtātūn", "kendisi için ölünenler", "orta", ""],
+      [638, "مُمْتَاتِين", "mumtātīn", "kendisi için ölünenler", "orta", ""],
+      [639, "مُمْتَاتَات", "mumtātāt", "kendisi için ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُمْتَات", "mumtāt", "ölme (yeri/zamanı)", "orta", ""]
+      [640, "مُمْتَات", "mumtāt", "kendisi için ölme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِمْوِتَات", "imwitāt", "ölleşme", "kontrol", ""]
+      [168, "اِمْوِتَات", "imwitāt", "iyiden iyiye ölme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُمْوَتّ", "mumwatt", "ölleşen", "kontrol", ""],
-      [170, "مُمْوَتَّة", "mumwatta", "ölleşen (dişi)", "kontrol", ""],
-      [171, "مُمْوَتَّان", "mumwattān", "iki ölleşen", "kontrol", ""],
-      [172, "مُمْوَتَّتَان", "mumwattatān", "iki ölleşen (dişi)", "kontrol", ""],
-      [173, "مُمْوَتُّون", "mumwattūn", "ölleşenler", "kontrol", ""],
-      [174, "مُمْوَتِّين", "mumwattīn", "ölleşenler", "kontrol", ""],
-      [175, "مُمْوَتَّات", "mumwattāt", "ölleşenler (dişi)", "kontrol", ""]
+      [169, "مُمْوَتّ", "mumwatt", "iyiden iyiye ölen", "kontrol", ""],
+      [170, "مُمْوَتَّة", "mumwatta", "iyiden iyiye ölen (müennes)", "kontrol", ""],
+      [171, "مُمْوَتَّان", "mumwattān", "iyiden iyiye ölen (iki)", "kontrol", ""],
+      [172, "مُمْوَتَّتَان", "mumwattatān", "iyiden iyiye ölen (iki, müennes)", "kontrol", ""],
+      [173, "مُمْوَتُّون", "mumwattūn", "iyiden iyiye ölenler", "kontrol", ""],
+      [174, "مُمْوَتِّين", "mumwattīn", "iyiden iyiye ölenler", "kontrol", ""],
+      [175, "مُمْوَتَّات", "mumwattāt", "iyiden iyiye ölenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
@@ -273,24 +273,24 @@
     ],
     "ism-i fâil · bâb X": [
       [664, "مُسْتَمِيت", "mustamīt", "ölmeyi isteyen", "orta", ""],
-      [665, "مُسْتَمِيتَة", "mustamīta", "ölmeyi isteyen (dişi)", "orta", ""],
-      [666, "مُسْتَمِيتَان", "mustamītān", "iki ölmeyi isteyen", "orta", ""],
-      [667, "مُسْتَمِيتَتَان", "mustamītatān", "iki ölmeyi isteyen (dişi)", "orta", ""],
+      [665, "مُسْتَمِيتَة", "mustamīta", "ölmeyi isteyen (müennes)", "orta", ""],
+      [666, "مُسْتَمِيتَان", "mustamītān", "ölmeyi isteyen (iki)", "orta", ""],
+      [667, "مُسْتَمِيتَتَان", "mustamītatān", "ölmeyi isteyen (iki, müennes)", "orta", ""],
       [668, "مُسْتَمِيتُون", "mustamītūn", "ölmeyi isteyenler", "orta", ""],
       [669, "مُسْتَمِيتِين", "mustamītīn", "ölmeyi isteyenler", "orta", ""],
-      [670, "مُسْتَمِيتَات", "mustamītāt", "ölmeyi isteyenler (dişi)", "orta", ""]
+      [670, "مُسْتَمِيتَات", "mustamītāt", "ölmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَمَات", "mustamāt", "ölmeyi istenen", "orta", ""],
-      [898, "مُسْتَمَاتَة", "mustamāta", "ölmeyi istenen (dişi)", "orta", ""],
-      [672, "مُسْتَمَاتَان", "mustamātān", "iki ölmeyi istenen", "orta", ""],
-      [899, "مُسْتَمَاتَتَان", "mustamātatān", "iki ölmeyi istenen (dişi)", "orta", ""],
-      [673, "مُسْتَمَاتُون", "mustamātūn", "ölmeyi istenenler", "orta", ""],
-      [674, "مُسْتَمَاتِين", "mustamātīn", "ölmeyi istenenler", "orta", ""],
-      [675, "مُسْتَمَاتَات", "mustamātāt", "ölmeyi istenenler (dişi)", "orta", ""]
+      [671, "مُسْتَمَات", "mustamāt", "ölmesi istenen", "orta", ""],
+      [898, "مُسْتَمَاتَة", "mustamāta", "ölmesi istenen (müennes)", "orta", ""],
+      [672, "مُسْتَمَاتَان", "mustamātān", "ölmesi istenen (iki)", "orta", ""],
+      [899, "مُسْتَمَاتَتَان", "mustamātatān", "ölmesi istenen (iki, müennes)", "orta", ""],
+      [673, "مُسْتَمَاتُون", "mustamātūn", "ölmesi istenenler", "orta", ""],
+      [674, "مُسْتَمَاتِين", "mustamātīn", "ölmesi istenenler", "orta", ""],
+      [675, "مُسْتَمَاتَات", "mustamātāt", "ölmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَمَات", "mustamāt", "ölme (yeri/zamanı)", "orta", ""]
+      [676, "مُسْتَمَات", "mustamāt", "ölmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
       [900, "اِسْتِمْوَات", "istimwāt", "ölmeyi isteme", "orta", ""]
@@ -299,19 +299,19 @@
       [901, "مُسْتَمْوِت", "mustamwit", "ölmeyi isteyen", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [902, "مُسْتَمْوَت", "mustamwat", "ölmeyi istenen", "orta", ""]
+      [902, "مُسْتَمْوَت", "mustamwat", "ölmesi istenen", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِمْوِيتَات", "imwītāt", "iyice ölleşme", "kontrol", ""]
+      [193, "اِمْوِيتَات", "imwītāt", "büsbütün ölme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُمْوَاتّ", "mumwātt", "iyice ölleşen", "kontrol", ""],
-      [195, "مُمْوَاتَّة", "mumwātta", "iyice ölleşen (dişi)", "kontrol", ""],
-      [196, "مُمْوَاتَّان", "mumwāttān", "iki iyice ölleşen", "kontrol", ""],
-      [197, "مُمْوَاتَّتَان", "mumwāttatān", "iki iyice ölleşen (dişi)", "kontrol", ""],
-      [198, "مُمْوَاتُّون", "mumwāttūn", "iyice ölleşenler", "kontrol", ""],
-      [199, "مُمْوَاتِّين", "mumwāttīn", "iyice ölleşenler", "kontrol", ""],
-      [200, "مُمْوَاتَّات", "mumwāttāt", "iyice ölleşenler (dişi)", "kontrol", ""]
+      [194, "مُمْوَاتّ", "mumwātt", "büsbütün ölen", "kontrol", ""],
+      [195, "مُمْوَاتَّة", "mumwātta", "büsbütün ölen (müennes)", "kontrol", ""],
+      [196, "مُمْوَاتَّان", "mumwāttān", "büsbütün ölen (iki)", "kontrol", ""],
+      [197, "مُمْوَاتَّتَان", "mumwāttatān", "büsbütün ölen (iki, müennes)", "kontrol", ""],
+      [198, "مُمْوَاتُّون", "mumwāttūn", "büsbütün ölenler", "kontrol", ""],
+      [199, "مُمْوَاتِّين", "mumwāttīn", "büsbütün ölenler", "kontrol", ""],
+      [200, "مُمْوَاتَّات", "mumwāttāt", "büsbütün ölenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
       [201, "اِمْوِوْوَات", "imwiwwāt", "aşırı ölme", "orta", ""]
@@ -321,238 +321,252 @@
     ],
     "ism-i fâil · sülâsî": [
       [687, "مَائِت", "māʾit", "ölen", "orta", "Vikisözlük: active participle of مَاتَ (māta)"],
-      [688, "مَائِتَة", "māʾita", "ölen (dişi)", "orta", ""],
-      [689, "مَائِتَان", "māʾitān", "iki ölen", "orta", ""],
-      [690, "مَائِتَتَان", "māʾitatān", "iki ölen (dişi)", "orta", ""],
+      [688, "مَائِتَة", "māʾita", "ölen (müennes)", "orta", ""],
+      [689, "مَائِتَان", "māʾitān", "ölen (iki)", "orta", ""],
+      [690, "مَائِتَتَان", "māʾitatān", "ölen (iki, müennes)", "orta", ""],
       [691, "مَائِتُون", "māʾitūn", "ölenler", "orta", ""],
       [692, "مَائِتِين", "māʾitīn", "ölenler", "orta", ""],
-      [693, "مَائِتَات", "māʾitāt", "ölenler (dişi)", "orta", ""]
+      [693, "مَائِتَات", "māʾitāt", "ölenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [694, "مَمُوت", "mamūt", "ölmüş", "orta", ""],
-      [695, "مَمُوتَة", "mamūta", "ölmüş (dişi)", "orta", ""],
-      [696, "مَمُوتَان", "mamūtān", "iki ölmüş", "orta", ""],
-      [697, "مَمُوتَتَان", "mamūtatān", "iki ölmüş (dişi)", "orta", ""],
-      [698, "مَمُوتُون", "mamūtūn", "ölmüşler", "orta", ""],
-      [699, "مَمُوتِين", "mamūtīn", "ölmüşler", "orta", ""],
-      [700, "مَمُوتَات", "mamūtāt", "ölmüşler (dişi)", "orta", ""]
+      [694, "مَمُوت", "mamūt", "ölünen", "orta", ""],
+      [695, "مَمُوتَة", "mamūta", "ölünen (müennes)", "orta", ""],
+      [696, "مَمُوتَان", "mamūtān", "ölünen (iki)", "orta", ""],
+      [697, "مَمُوتَتَان", "mamūtatān", "ölünen (iki, müennes)", "orta", ""],
+      [698, "مَمُوتُون", "mamūtūn", "ölünenler", "orta", ""],
+      [699, "مَمُوتِين", "mamūtīn", "ölünenler", "orta", ""],
+      [700, "مَمُوتَات", "mamūtāt", "ölünenler (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [701, "مَمَات", "mamāt", "ölme (yeri/zamanı)", "orta", ""],
-      [702, "مَمَاتَان", "mamātān", "iki ölme (yeri/zamanı)", "orta", ""],
-      [703, "مَمِيت", "mamīt", "ölme (yeri/zamanı)", "orta", ""],
-      [704, "مَمِيتَان", "mamītān", "iki ölme (yeri/zamanı)", "orta", ""],
-      [705, "مَمَاتَة", "mamāta", "ölme (yeri/zamanı)", "orta", ""],
-      [706, "مَمَاتَتَان", "mamātatān", "iki ölme (yeri/zamanı)", "orta", ""],
-      [707, "مَمِيتَة", "mamīta", "ölme (yeri/zamanı)", "orta", ""],
-      [708, "مَمِيتَتَان", "mamītatān", "iki ölme (yeri/zamanı)", "orta", ""],
-      [247, "مَمْوُتَة", "mamwuta", "ölme (yeri/zamanı)", "orta", ""],
-      [248, "مَمْوُتَتَان", "mamwutatān", "iki ölme (yeri/zamanı)", "orta", ""]
+      [701, "مَمَات", "mamāt", "ölme yeri, vakti", "orta", ""],
+      [702, "مَمَاتَان", "mamātān", "ölme yeri, vakti (iki)", "orta", ""],
+      [703, "مَمِيت", "mamīt", "ölme yeri, vakti", "orta", ""],
+      [704, "مَمِيتَان", "mamītān", "ölme yeri, vakti (iki)", "orta", ""],
+      [705, "مَمَاتَة", "mamāta", "ölmenin bol olduğu yer", "orta", ""],
+      [706, "مَمَاتَتَان", "mamātatān", "ölmenin bol olduğu yer (iki)", "orta", ""],
+      [707, "مَمِيتَة", "mamīta", "ölmenin bol olduğu yer", "orta", ""],
+      [708, "مَمِيتَتَان", "mamītatān", "ölmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَمْوُتَة", "mamwuta", "ölme yeri, vakti", "orta", ""],
+      [248, "مَمْوُتَتَان", "mamwutatān", "ölme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِمْوَت", "mimwat", "ölmeye yarayan araç", "orta", ""],
-      [236, "مِمْوَتَان", "mimwatān", "iki ölmeye yarayan araç", "orta", ""],
-      [237, "مِمْوَات", "mimwāt", "ölmeye yarayan araç", "orta", ""],
-      [238, "مِمْوَاتَان", "mimwātān", "iki ölmeye yarayan araç", "orta", ""],
-      [239, "مِمْوَتَة", "mimwata", "ölmeye yarayan araç", "orta", ""],
-      [240, "مِمْوَتَتَان", "mimwatatān", "iki ölmeye yarayan araç", "orta", ""]
+      [235, "مِمْوَت", "mimwat", "ölme âleti", "orta", ""],
+      [236, "مِمْوَتَان", "mimwatān", "ölme âleti (iki)", "orta", ""],
+      [237, "مِمْوَات", "mimwāt", "ölme âleti", "orta", ""],
+      [238, "مِمْوَاتَان", "mimwātān", "ölme âleti (iki)", "orta", ""],
+      [239, "مِمْوَتَة", "mimwata", "ölme âleti", "orta", ""],
+      [240, "مِمْوَتَتَان", "mimwatatān", "ölme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَمْوَت", "ʾamwat", "daha çok ölen", "orta", ""],
-      [242, "أَمْوَتَان", "ʾamwatān", "iki daha çok ölen", "orta", ""]
+      [242, "أَمْوَتَان", "ʾamwatān", "daha çok ölen (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "مُوْتَى", "muwtā", "daha çok ölen", "orta", ""],
-      [244, "مُوْتَيَان", "muwtayān", "iki daha çok ölen", "orta", ""],
+      [244, "مُوْتَيَان", "muwtayān", "daha çok ölen (iki)", "orta", ""],
       [245, "مَوْتَاء", "mawtāʾ", "daha çok ölen", "orta", ""],
-      [246, "مَوْتَاآن", "mawtāʾān", "iki daha çok ölen", "orta", ""]
+      [246, "مَوْتَاآن", "mawtāʾān", "daha çok ölen (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "مُوَيْت", "muwayt", "küçük ölme", "orta", ""],
-      [250, "مُوَيْتَان", "muwaytān", "iki küçük ölme", "orta", ""],
-      [251, "مُوَيْتَة", "muwayta", "küçük ölme", "orta", ""],
-      [252, "مُوَيْتَتَان", "muwaytatān", "iki küçük ölme", "orta", ""]
+      [249, "مُوَيْت", "muwayt", "azıcık ölme", "orta", ""],
+      [250, "مُوَيْتَان", "muwaytān", "azıcık ölme (iki)", "orta", ""],
+      [251, "مُوَيْتَة", "muwayta", "azıcık ölme", "orta", ""],
+      [252, "مُوَيْتَتَان", "muwaytatān", "azıcık ölme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [723, "مَمَات", "mamāt", "ölme", "orta", ""],
-      [724, "مَمَاتَان", "mamātān", "iki ölme", "orta", ""]
+      [724, "مَمَاتَان", "mamātān", "ölme (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "مَوْتَة", "mawta", "bir kere ölme", "orta", "Vikisözlük: instance noun of مَاتَ (māta); a death"],
-      [256, "مَوْتَتَان", "mawtatān", "iki bir kere ölme", "orta", ""]
+      [256, "مَوْتَتَان", "mawtatān", "bir kere ölme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [903, "مِيتَة", "mīta", "ölme tarzı", "orta", "Vikisözlük: manner of death"],
-      [904, "مِيتَتَان", "mītatān", "iki ölme tarzı", "orta", ""]
+      [904, "مِيتَتَان", "mītatān", "ölme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "مَوِيت", "mawīt", "sürekli ölen", "orta", ""],
-      [260, "مَوِيتَة", "mawīta", "sürekli ölen (dişi)", "orta", ""],
-      [261, "مَوِيتَان", "mawītān", "iki sürekli ölen", "orta", ""],
-      [262, "مَوِيتَتَان", "mawītatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [263, "مَوِيتُون", "mawītūn", "sürekli ölenler", "orta", ""],
-      [264, "مَوِيتِين", "mawītīn", "sürekli ölenler", "orta", ""],
-      [265, "مَوِيتَات", "mawītāt", "sürekli ölenler (dişi)", "orta", ""],
-      [266, "مَوُوت", "mawūt", "sürekli ölen", "orta", ""],
-      [267, "مَوُوتَة", "mawūta", "sürekli ölen (dişi)", "orta", ""],
-      [268, "مَوُوتَان", "mawūtān", "iki sürekli ölen", "orta", ""],
-      [269, "مَوُوتَتَان", "mawūtatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [270, "مَوُوتُون", "mawūtūn", "sürekli ölenler", "orta", ""],
-      [271, "مَوُوتِين", "mawūtīn", "sürekli ölenler", "orta", ""],
-      [272, "مَوُوتَات", "mawūtāt", "sürekli ölenler (dişi)", "orta", ""],
-      [273, "مَوِت", "mawit", "sürekli ölen", "orta", ""],
-      [274, "مَوِتَة", "mawita", "sürekli ölen (dişi)", "orta", ""],
-      [275, "مَوِتَان", "mawitān", "iki sürekli ölen", "orta", ""],
-      [276, "مَوِتَتَان", "mawitatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [277, "مَوِتُون", "mawitūn", "sürekli ölenler", "orta", ""],
-      [278, "مَوِتِين", "mawitīn", "sürekli ölenler", "orta", ""],
-      [279, "مَوِتَات", "mawitāt", "sürekli ölenler (dişi)", "orta", ""],
-      [280, "مَوُت", "mawut", "sürekli ölen", "orta", ""],
-      [281, "مَوُتَة", "mawuta", "sürekli ölen (dişi)", "orta", ""],
-      [282, "مَوُتَان", "mawutān", "iki sürekli ölen", "orta", ""],
-      [283, "مَوُتَتَان", "mawutatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [284, "مَوُتُون", "mawutūn", "sürekli ölenler", "orta", ""],
-      [285, "مَوُتِين", "mawutīn", "sürekli ölenler", "orta", ""],
-      [286, "مَوُتَات", "mawutāt", "sürekli ölenler (dişi)", "orta", ""],
-      [753, "مَات", "māt", "sürekli ölen", "orta", ""],
-      [905, "مَاتَة", "māta", "sürekli ölen (dişi)", "orta", ""],
-      [754, "مَاتَان", "mātān", "iki sürekli ölen", "orta", ""],
-      [906, "مَاتَتَان", "mātatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [884, "مَاتُون", "mātūn", "sürekli ölenler", "orta", ""],
-      [885, "مَاتِين", "mātīn", "sürekli ölenler", "orta", ""],
-      [755, "مَاتَات", "mātāt", "sürekli ölenler (dişi)", "orta", ""],
-      [294, "مَوْت", "mawt", "sürekli ölen", "orta", ""],
-      [295, "مَوْتَة", "mawta", "sürekli ölen (dişi)", "orta", "Vikisözlük: instance noun of مَاتَ (māta); a death"],
-      [296, "مَوْتَان", "mawtān", "iki sürekli ölen", "orta", "Vikisözlük: inexcitable, dead, dull, not sprightly"],
-      [297, "مَوْتَتَان", "mawtatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [298, "مَوْتُون", "mawtūn", "sürekli ölenler", "orta", ""],
-      [299, "مَوْتِين", "mawtīn", "sürekli ölenler", "orta", ""],
-      [300, "مَوْتَات", "mawtāt", "sürekli ölenler (dişi)", "orta", ""],
-      [301, "مُوُت", "muwut", "sürekli ölen", "orta", ""],
-      [302, "مُوُتَة", "muwuta", "sürekli ölen (dişi)", "orta", ""],
-      [303, "مُوُتَان", "muwutān", "iki sürekli ölen", "orta", ""],
-      [304, "مُوُتَتَان", "muwutatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [305, "مُوُتُون", "muwutūn", "sürekli ölenler", "orta", ""],
-      [306, "مُوُتِين", "muwutīn", "sürekli ölenler", "orta", ""],
-      [307, "مُوُتَات", "muwutāt", "sürekli ölenler (dişi)", "orta", ""],
-      [308, "مَوْتَان", "mawtān", "sürekli ölen", "orta", "Vikisözlük: inexcitable, dead, dull, not sprightly"],
-      [309, "مَوْتَانَة", "mawtāna", "sürekli ölen (dişi)", "orta", ""],
-      [310, "مَوْتَانَان", "mawtānān", "iki sürekli ölen", "orta", ""],
-      [311, "مَوْتَانَتَان", "mawtānatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [312, "مَوْتَانُون", "mawtānūn", "sürekli ölenler", "orta", ""],
-      [313, "مَوْتَانِين", "mawtānīn", "sürekli ölenler", "orta", ""],
-      [314, "مَوْتَانَات", "mawtānāt", "sürekli ölenler (dişi)", "orta", ""],
-      [315, "مُوَات", "muwāt", "sürekli ölen", "orta", ""],
-      [316, "مُوَاتَة", "muwāta", "sürekli ölen (dişi)", "orta", ""],
-      [317, "مُوَاتَان", "muwātān", "iki sürekli ölen", "orta", ""],
-      [318, "مُوَاتَتَان", "muwātatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [319, "مُوَاتُون", "muwātūn", "sürekli ölenler", "orta", ""],
-      [320, "مُوَاتِين", "muwātīn", "sürekli ölenler", "orta", ""],
-      [321, "مُوَاتَات", "muwātāt", "sürekli ölenler (dişi)", "orta", ""],
+      [259, "مَوِيت", "mawīt", "her daim ölen", "orta", ""],
+      [260, "مَوِيتَة", "mawīta", "her daim ölen (müennes)", "orta", ""],
+      [261, "مَوِيتَان", "mawītān", "her daim ölen (iki)", "orta", ""],
+      [262, "مَوِيتَتَان", "mawītatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [263, "مَوِيتُون", "mawītūn", "her daim ölenler", "orta", ""],
+      [264, "مَوِيتِين", "mawītīn", "her daim ölenler", "orta", ""],
+      [265, "مَوِيتَات", "mawītāt", "her daim ölenler (müennes)", "orta", ""],
+      [266, "مَوُوت", "mawūt", "her daim ölen", "orta", ""],
+      [267, "مَوُوتَة", "mawūta", "her daim ölen (müennes)", "orta", ""],
+      [268, "مَوُوتَان", "mawūtān", "her daim ölen (iki)", "orta", ""],
+      [269, "مَوُوتَتَان", "mawūtatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [270, "مَوُوتُون", "mawūtūn", "her daim ölenler", "orta", ""],
+      [271, "مَوُوتِين", "mawūtīn", "her daim ölenler", "orta", ""],
+      [272, "مَوُوتَات", "mawūtāt", "her daim ölenler (müennes)", "orta", ""],
+      [273, "مَوِت", "mawit", "her daim ölen", "orta", ""],
+      [274, "مَوِتَة", "mawita", "her daim ölen (müennes)", "orta", ""],
+      [275, "مَوِتَان", "mawitān", "her daim ölen (iki)", "orta", ""],
+      [276, "مَوِتَتَان", "mawitatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [277, "مَوِتُون", "mawitūn", "her daim ölenler", "orta", ""],
+      [278, "مَوِتِين", "mawitīn", "her daim ölenler", "orta", ""],
+      [279, "مَوِتَات", "mawitāt", "her daim ölenler (müennes)", "orta", ""],
+      [280, "مَوُت", "mawut", "her daim ölen", "orta", ""],
+      [281, "مَوُتَة", "mawuta", "her daim ölen (müennes)", "orta", ""],
+      [282, "مَوُتَان", "mawutān", "her daim ölen (iki)", "orta", ""],
+      [283, "مَوُتَتَان", "mawutatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [284, "مَوُتُون", "mawutūn", "her daim ölenler", "orta", ""],
+      [285, "مَوُتِين", "mawutīn", "her daim ölenler", "orta", ""],
+      [286, "مَوُتَات", "mawutāt", "her daim ölenler (müennes)", "orta", ""],
+      [753, "مَات", "māt", "her daim ölen", "orta", ""],
+      [905, "مَاتَة", "māta", "her daim ölen (müennes)", "orta", ""],
+      [754, "مَاتَان", "mātān", "her daim ölen (iki)", "orta", ""],
+      [906, "مَاتَتَان", "mātatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [884, "مَاتُون", "mātūn", "her daim ölenler", "orta", ""],
+      [885, "مَاتِين", "mātīn", "her daim ölenler", "orta", ""],
+      [755, "مَاتَات", "mātāt", "her daim ölenler (müennes)", "orta", ""],
+      [294, "مَوْت", "mawt", "ölüm", "kuran", "Kur'ân"],
+      [
+        295,
+        "مَوْتَة",
+        "mawta",
+        "her daim ölen (müennes)",
+        "orta",
+        "Vikisözlük: instance noun of مَاتَ (māta); a death"
+      ],
+      [
+        296,
+        "مَوْتَان",
+        "mawtān",
+        "her daim ölen (iki)",
+        "orta",
+        "Vikisözlük: inexcitable, dead, dull, not sprightly"
+      ],
+      [297, "مَوْتَتَان", "mawtatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [298, "مَوْتُون", "mawtūn", "her daim ölenler", "orta", ""],
+      [299, "مَوْتِين", "mawtīn", "her daim ölenler", "orta", ""],
+      [300, "مَوْتَات", "mawtāt", "her daim ölenler (müennes)", "orta", ""],
+      [301, "مُوُت", "muwut", "her daim ölen", "orta", ""],
+      [302, "مُوُتَة", "muwuta", "her daim ölen (müennes)", "orta", ""],
+      [303, "مُوُتَان", "muwutān", "her daim ölen (iki)", "orta", ""],
+      [304, "مُوُتَتَان", "muwutatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [305, "مُوُتُون", "muwutūn", "her daim ölenler", "orta", ""],
+      [306, "مُوُتِين", "muwutīn", "her daim ölenler", "orta", ""],
+      [307, "مُوُتَات", "muwutāt", "her daim ölenler (müennes)", "orta", ""],
+      [308, "مَوْتَان", "mawtān", "her daim ölen", "orta", "Vikisözlük: inexcitable, dead, dull, not sprightly"],
+      [309, "مَوْتَانَة", "mawtāna", "her daim ölen (müennes)", "orta", ""],
+      [310, "مَوْتَانَان", "mawtānān", "her daim ölen (iki)", "orta", ""],
+      [311, "مَوْتَانَتَان", "mawtānatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [312, "مَوْتَانُون", "mawtānūn", "her daim ölenler", "orta", ""],
+      [313, "مَوْتَانِين", "mawtānīn", "her daim ölenler", "orta", ""],
+      [314, "مَوْتَانَات", "mawtānāt", "her daim ölenler (müennes)", "orta", ""],
+      [315, "مُوَات", "muwāt", "her daim ölen", "orta", ""],
+      [316, "مُوَاتَة", "muwāta", "her daim ölen (müennes)", "orta", ""],
+      [317, "مُوَاتَان", "muwātān", "her daim ölen (iki)", "orta", ""],
+      [318, "مُوَاتَتَان", "muwātatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [319, "مُوَاتُون", "muwātūn", "her daim ölenler", "orta", ""],
+      [320, "مُوَاتِين", "muwātīn", "her daim ölenler", "orta", ""],
+      [321, "مُوَاتَات", "muwātāt", "her daim ölenler (müennes)", "orta", ""],
       [
         322,
         "مَوَات",
         "mawāt",
-        "sürekli ölen",
+        "her daim ölen",
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be or become unoccupied (of land, a city, etc.)"
       ],
-      [323, "مَوَاتَة", "mawāta", "sürekli ölen (dişi)", "orta", ""],
-      [324, "مَوَاتَان", "mawātān", "iki sürekli ölen", "orta", ""],
-      [325, "مَوَاتَتَان", "mawātatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [326, "مَوَاتُون", "mawātūn", "sürekli ölenler", "orta", ""],
-      [327, "مَوَاتِين", "mawātīn", "sürekli ölenler", "orta", ""],
-      [328, "مَوَاتَات", "mawātāt", "sürekli ölenler (dişi)", "orta", ""],
-      [907, "مَيِّت", "mayyit", "sürekli ölen", "orta", "Vikisözlük: dead"],
-      [908, "مَيِّتَة", "mayyita", "sürekli ölen (dişi)", "orta", ""],
-      [909, "مَيِّتَان", "mayyitān", "iki sürekli ölen", "orta", ""],
-      [910, "مَيِّتَتَان", "mayyitatān", "iki sürekli ölen (dişi)", "orta", ""],
-      [911, "مَيِّتُون", "mayyitūn", "sürekli ölenler", "orta", ""],
-      [912, "مَيِّتِين", "mayyitīn", "sürekli ölenler", "orta", ""],
-      [913, "مَيِّتَات", "mayyitāt", "sürekli ölenler (dişi)", "orta", ""]
+      [323, "مَوَاتَة", "mawāta", "her daim ölen (müennes)", "orta", ""],
+      [324, "مَوَاتَان", "mawātān", "her daim ölen (iki)", "orta", ""],
+      [325, "مَوَاتَتَان", "mawātatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [326, "مَوَاتُون", "mawātūn", "her daim ölenler", "orta", ""],
+      [327, "مَوَاتِين", "mawātīn", "her daim ölenler", "orta", ""],
+      [328, "مَوَاتَات", "mawātāt", "her daim ölenler (müennes)", "orta", ""],
+      [907, "مَيِّت", "mayyit", "her daim ölen", "orta", "Vikisözlük: dead"],
+      [908, "مَيِّتَة", "mayyita", "her daim ölen (müennes)", "orta", ""],
+      [909, "مَيِّتَان", "mayyitān", "her daim ölen (iki)", "orta", ""],
+      [910, "مَيِّتَتَان", "mayyitatān", "her daim ölen (iki, müennes)", "orta", ""],
+      [911, "مَيِّتُون", "mayyitūn", "her daim ölenler", "orta", ""],
+      [912, "مَيِّتِين", "mayyitīn", "her daim ölenler", "orta", ""],
+      [913, "مَيِّتَات", "mayyitāt", "her daim ölenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "مَوَّات", "mawwāt", "çok ölen", "orta", ""],
-      [330, "مَوَّاتَة", "mawwāta", "çok ölen (dişi)", "orta", ""],
-      [331, "مَوَّاتَان", "mawwātān", "iki çok ölen", "orta", ""],
-      [332, "مَوَّاتَتَان", "mawwātatān", "iki çok ölen (dişi)", "orta", ""],
-      [333, "مَوَّاتُون", "mawwātūn", "çok ölenler", "orta", ""],
-      [334, "مَوَّاتِين", "mawwātīn", "çok ölenler", "orta", ""],
-      [335, "مَوَّاتَات", "mawwātāt", "çok ölenler (dişi)", "orta", ""],
-      [336, "مَوَّاتَة", "mawwāta", "çok ölen", "orta", ""],
-      [337, "مَوَّاتَتَان", "mawwātatān", "iki çok ölen", "orta", ""],
-      [338, "مَوَّاتَات", "mawwātāt", "çok ölenler (dişi)", "orta", ""],
+      [329, "مَوَّات", "mawwāt", "işi ölme olan", "orta", ""],
+      [330, "مَوَّاتَة", "mawwāta", "işi ölme olan (müennes)", "orta", ""],
+      [331, "مَوَّاتَان", "mawwātān", "işi ölme olan (iki)", "orta", ""],
+      [332, "مَوَّاتَتَان", "mawwātatān", "işi ölme olan (iki, müennes)", "orta", ""],
+      [333, "مَوَّاتُون", "mawwātūn", "işi ölme olanlar", "orta", ""],
+      [334, "مَوَّاتِين", "mawwātīn", "işi ölme olanlar", "orta", ""],
+      [335, "مَوَّاتَات", "mawwātāt", "işi ölme olanlar (müennes)", "orta", ""],
+      [336, "مَوَّاتَة", "mawwāta", "pek çok ölen", "orta", ""],
+      [337, "مَوَّاتَتَان", "mawwātatān", "pek çok ölen (iki)", "orta", ""],
+      [338, "مَوَّاتَات", "mawwātāt", "pek çok ölenler (müennes)", "orta", ""],
       [339, "مَوُوت", "mawūt", "çok ölen", "orta", ""],
-      [340, "مَوُوتَة", "mawūta", "çok ölen (dişi)", "orta", ""],
-      [341, "مَوُوتَان", "mawūtān", "iki çok ölen", "orta", ""],
-      [342, "مَوُوتَتَان", "mawūtatān", "iki çok ölen (dişi)", "orta", ""],
+      [340, "مَوُوتَة", "mawūta", "çok ölen (müennes)", "orta", ""],
+      [341, "مَوُوتَان", "mawūtān", "çok ölen (iki)", "orta", ""],
+      [342, "مَوُوتَتَان", "mawūtatān", "çok ölen (iki, müennes)", "orta", ""],
       [343, "مَوُوتُون", "mawūtūn", "çok ölenler", "orta", ""],
       [344, "مَوُوتِين", "mawūtīn", "çok ölenler", "orta", ""],
-      [345, "مَوُوتَات", "mawūtāt", "çok ölenler (dişi)", "orta", ""],
-      [346, "مَوُّوت", "mawwūt", "çok ölen", "orta", ""],
-      [347, "مَوُّوتَة", "mawwūta", "çok ölen (dişi)", "orta", ""],
-      [348, "مَوُّوتَان", "mawwūtān", "iki çok ölen", "orta", ""],
-      [349, "مَوُّوتَتَان", "mawwūtatān", "iki çok ölen (dişi)", "orta", ""],
-      [350, "مَوُّوتُون", "mawwūtūn", "çok ölenler", "orta", ""],
-      [351, "مَوُّوتِين", "mawwūtīn", "çok ölenler", "orta", ""],
-      [352, "مَوُّوتَات", "mawwūtāt", "çok ölenler (dişi)", "orta", ""],
-      [353, "مِوِّيت", "miwwīt", "çok ölen", "orta", ""],
-      [354, "مِوِّيتَة", "miwwīta", "çok ölen (dişi)", "orta", ""],
-      [355, "مِوِّيتَان", "miwwītān", "iki çok ölen", "orta", ""],
-      [356, "مِوِّيتَتَان", "miwwītatān", "iki çok ölen (dişi)", "orta", ""],
-      [357, "مِوِّيتُون", "miwwītūn", "çok ölenler", "orta", ""],
-      [358, "مِوِّيتِين", "miwwītīn", "çok ölenler", "orta", ""],
-      [359, "مِوِّيتَات", "miwwītāt", "çok ölenler (dişi)", "orta", ""],
-      [360, "مُوَّات", "muwwāt", "çok ölen", "orta", ""],
-      [361, "مُوَّاتَة", "muwwāta", "çok ölen (dişi)", "orta", ""],
-      [362, "مُوَّاتَان", "muwwātān", "iki çok ölen", "orta", ""],
-      [363, "مُوَّاتَتَان", "muwwātatān", "iki çok ölen (dişi)", "orta", ""],
-      [364, "مُوَّاتُون", "muwwātūn", "çok ölenler", "orta", ""],
-      [365, "مُوَّاتِين", "muwwātīn", "çok ölenler", "orta", ""],
-      [366, "مُوَّاتَات", "muwwātāt", "çok ölenler (dişi)", "orta", ""],
-      [367, "مِمْوَات", "mimwāt", "çok ölen", "orta", ""],
-      [368, "مِمْوَاتَة", "mimwāta", "çok ölen (dişi)", "orta", ""],
-      [369, "مِمْوَاتَان", "mimwātān", "iki çok ölen", "orta", ""],
-      [370, "مِمْوَاتَتَان", "mimwātatān", "iki çok ölen (dişi)", "orta", ""],
-      [371, "مِمْوَاتُون", "mimwātūn", "çok ölenler", "orta", ""],
-      [372, "مِمْوَاتِين", "mimwātīn", "çok ölenler", "orta", ""],
-      [373, "مِمْوَاتَات", "mimwātāt", "çok ölenler (dişi)", "orta", ""],
-      [374, "مِمْوِيت", "mimwīt", "çok ölen", "orta", ""],
-      [375, "مِمْوِيتَة", "mimwīta", "çok ölen (dişi)", "orta", ""],
-      [376, "مِمْوِيتَان", "mimwītān", "iki çok ölen", "orta", ""],
-      [377, "مِمْوِيتَتَان", "mimwītatān", "iki çok ölen (dişi)", "orta", ""],
-      [378, "مِمْوِيتُون", "mimwītūn", "çok ölenler", "orta", ""],
-      [379, "مِمْوِيتِين", "mimwītīn", "çok ölenler", "orta", ""],
-      [380, "مِمْوِيتَات", "mimwītāt", "çok ölenler (dişi)", "orta", ""],
+      [345, "مَوُوتَات", "mawūtāt", "çok ölenler (müennes)", "orta", ""],
+      [346, "مَوُّوت", "mawwūt", "pek çok ölen", "orta", ""],
+      [347, "مَوُّوتَة", "mawwūta", "pek çok ölen (müennes)", "orta", ""],
+      [348, "مَوُّوتَان", "mawwūtān", "pek çok ölen (iki)", "orta", ""],
+      [349, "مَوُّوتَتَان", "mawwūtatān", "pek çok ölen (iki, müennes)", "orta", ""],
+      [350, "مَوُّوتُون", "mawwūtūn", "pek çok ölenler", "orta", ""],
+      [351, "مَوُّوتِين", "mawwūtīn", "pek çok ölenler", "orta", ""],
+      [352, "مَوُّوتَات", "mawwūtāt", "pek çok ölenler (müennes)", "orta", ""],
+      [353, "مِوِّيت", "miwwīt", "ölmede aşırı giden", "orta", ""],
+      [354, "مِوِّيتَة", "miwwīta", "ölmede aşırı giden (müennes)", "orta", ""],
+      [355, "مِوِّيتَان", "miwwītān", "ölmede aşırı giden (iki)", "orta", ""],
+      [356, "مِوِّيتَتَان", "miwwītatān", "ölmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "مِوِّيتُون", "miwwītūn", "ölmede aşırı gidenler", "orta", ""],
+      [358, "مِوِّيتِين", "miwwītīn", "ölmede aşırı gidenler", "orta", ""],
+      [359, "مِوِّيتَات", "miwwītāt", "ölmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "مُوَّات", "muwwāt", "son derece ölen", "orta", ""],
+      [361, "مُوَّاتَة", "muwwāta", "son derece ölen (müennes)", "orta", ""],
+      [362, "مُوَّاتَان", "muwwātān", "son derece ölen (iki)", "orta", ""],
+      [363, "مُوَّاتَتَان", "muwwātatān", "son derece ölen (iki, müennes)", "orta", ""],
+      [364, "مُوَّاتُون", "muwwātūn", "son derece ölenler", "orta", ""],
+      [365, "مُوَّاتِين", "muwwātīn", "son derece ölenler", "orta", ""],
+      [366, "مُوَّاتَات", "muwwātāt", "son derece ölenler (müennes)", "orta", ""],
+      [367, "مِمْوَات", "mimwāt", "ölmeyi âdet edinmiş", "orta", ""],
+      [368, "مِمْوَاتَة", "mimwāta", "ölmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِمْوَاتَان", "mimwātān", "ölmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِمْوَاتَتَان", "mimwātatān", "ölmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِمْوَاتُون", "mimwātūn", "ölmeyi âdet edinmişler", "orta", ""],
+      [372, "مِمْوَاتِين", "mimwātīn", "ölmeyi âdet edinmişler", "orta", ""],
+      [373, "مِمْوَاتَات", "mimwātāt", "ölmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِمْوِيت", "mimwīt", "ölmeye düşkün", "orta", ""],
+      [375, "مِمْوِيتَة", "mimwīta", "ölmeye düşkün (müennes)", "orta", ""],
+      [376, "مِمْوِيتَان", "mimwītān", "ölmeye düşkün (iki)", "orta", ""],
+      [377, "مِمْوِيتَتَان", "mimwītatān", "ölmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِمْوِيتُون", "mimwītūn", "ölmeye düşkünler", "orta", ""],
+      [379, "مِمْوِيتِين", "mimwītīn", "ölmeye düşkünler", "orta", ""],
+      [380, "مِمْوِيتَات", "mimwītāt", "ölmeye düşkünler (müennes)", "orta", ""],
       [381, "مَوِيت", "mawīt", "çok ölen", "orta", ""],
-      [382, "مَوِيتَة", "mawīta", "çok ölen (dişi)", "orta", ""],
-      [383, "مَوِيتَان", "mawītān", "iki çok ölen", "orta", ""],
-      [384, "مَوِيتَتَان", "mawītatān", "iki çok ölen (dişi)", "orta", ""],
+      [382, "مَوِيتَة", "mawīta", "çok ölen (müennes)", "orta", ""],
+      [383, "مَوِيتَان", "mawītān", "çok ölen (iki)", "orta", ""],
+      [384, "مَوِيتَتَان", "mawītatān", "çok ölen (iki, müennes)", "orta", ""],
       [385, "مَوِيتُون", "mawītūn", "çok ölenler", "orta", ""],
       [386, "مَوِيتِين", "mawītīn", "çok ölenler", "orta", ""],
-      [387, "مَوِيتَات", "mawītāt", "çok ölenler (dişi)", "orta", ""],
+      [387, "مَوِيتَات", "mawītāt", "çok ölenler (müennes)", "orta", ""],
       [388, "مَوَّت", "mawwat", "çok ölen", "orta", ""],
-      [389, "مَوَّتَة", "mawwata", "çok ölen (dişi)", "orta", ""],
-      [390, "مَوَّتَان", "mawwatān", "iki çok ölen", "orta", ""],
-      [391, "مَوَّتَتَان", "mawwatatān", "iki çok ölen (dişi)", "orta", ""],
+      [389, "مَوَّتَة", "mawwata", "çok ölen (müennes)", "orta", ""],
+      [390, "مَوَّتَان", "mawwatān", "çok ölen (iki)", "orta", ""],
+      [391, "مَوَّتَتَان", "mawwatatān", "çok ölen (iki, müennes)", "orta", ""],
       [392, "مَوَّتُون", "mawwatūn", "çok ölenler", "orta", ""],
       [393, "مَوَّتِين", "mawwatīn", "çok ölenler", "orta", ""],
-      [394, "مَوَّتَات", "mawwatāt", "çok ölenler (dişi)", "orta", ""]
+      [394, "مَوَّتَات", "mawwatāt", "çok ölenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "مَوْتِيّ", "mawtiyy", "ölmeye ilgili", "orta", ""],
-      [886, "مَاتِيّ", "mātiyy", "ölmeye ilgili", "orta", ""],
-      [914, "مِيتِيّ", "mītiyy", "ölmeye ilgili", "orta", ""],
-      [916, "مُوتِيّ", "mūtiyy", "ölmeye ilgili", "orta", ""],
-      [815, "مِيَاتِيّ", "miyātiyy", "ölmeye ilgili", "orta", ""],
-      [817, "مَائِتِيّ", "māʾitiyy", "ölmeye ilgili", "orta", ""],
-      [819, "مَمُوتِيّ", "mamūtiyy", "ölmeye ilgili", "orta", ""],
-      [409, "مَوِيتِيّ", "mawītiyy", "ölmeye ilgili", "orta", ""],
-      [823, "مَمَاتِيّ", "mamātiyy", "ölmeye ilgili", "orta", ""],
-      [413, "تَمْوِيتِيّ", "tamwītiyy", "ölmeye ilgili", "orta", ""],
-      [415, "تَمَاوُتِيّ", "tamāwutiyy", "ölmeye ilgili", "orta", ""],
-      [829, "إِمَاتِيّ", "ʾimātiyy", "ölmeye ilgili", "orta", ""],
-      [831, "اِمْتِيَاتِيّ", "imtiyātiyy", "ölmeye ilgili", "orta", ""]
+      [395, "مَوْتِيّ", "mawtiyy", "ölme ile ilgili", "orta", ""],
+      [886, "مَاتِيّ", "mātiyy", "ölme ile ilgili", "orta", ""],
+      [914, "مِيتِيّ", "mītiyy", "ölme ile ilgili", "orta", ""],
+      [916, "مُوتِيّ", "mūtiyy", "ölme ile ilgili", "orta", ""],
+      [815, "مِيَاتِيّ", "miyātiyy", "ölme ile ilgili", "orta", ""],
+      [817, "مَائِتِيّ", "māʾitiyy", "ölme ile ilgili", "orta", ""],
+      [819, "مَمُوتِيّ", "mamūtiyy", "ölme ile ilgili", "orta", ""],
+      [409, "مَوِيتِيّ", "mawītiyy", "ölme ile ilgili", "orta", ""],
+      [823, "مَمَاتِيّ", "mamātiyy", "ölme ile ilgili", "orta", ""],
+      [413, "تَمْوِيتِيّ", "tamwītiyy", "ölme ile ilgili", "orta", ""],
+      [415, "تَمَاوُتِيّ", "tamāwutiyy", "ölme ile ilgili", "orta", ""],
+      [829, "إِمَاتِيّ", "ʾimātiyy", "ölme ile ilgili", "orta", ""],
+      [831, "اِمْتِيَاتِيّ", "imtiyātiyy", "ölme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "مَوْتِيَّة", "mawtiyya", "ölenlik", "orta", ""],
@@ -584,106 +598,106 @@
       [425, "مَوَاتَة", "mawāta", "ölme", "orta", ""],
       [837, "مِيَاتَة", "miyāta", "ölme", "orta", ""],
       [427, "مُوُوتَة", "muwūta", "ölme", "orta", ""],
-      [428, "مَوْت", "mawt", "ölme", "orta", ""],
+      [428, "مَوْت", "mawt", "ölüm", "kuran", "Kur'ân"],
       [919, "مِيت", "mīt", "ölme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "مَاوُوت", "māwūt", "ölenler (topluluk adı)", "orta", ""],
-      [432, "مَوَتَة", "mawata", "ölenler (topluluk adı)", "orta", ""],
-      [433, "مُوَتَة", "muwata", "ölenler (topluluk adı)", "orta", ""],
-      [434, "أُمْوُوتَة", "ʾumwūta", "ölenler (topluluk adı)", "orta", ""],
-      [435, "مَوْوَت", "mawwat", "ölenler (topluluk adı)", "orta", ""],
-      [437, "مَيْوَت", "maywat", "ölenler (topluluk adı)", "orta", ""],
-      [439, "مَوْت", "mawt", "ölenler (topluluk adı)", "orta", ""],
-      [840, "مَات", "māt", "ölenler (topluluk adı)", "orta", ""],
-      [921, "مِيت", "mīt", "ölenler (topluluk adı)", "orta", ""],
-      [923, "مُوت", "mūt", "ölenler (topluluk adı)", "orta", ""],
-      [447, "مَوِيت", "mawīt", "ölenler (topluluk adı)", "orta", ""],
-      [843, "مِيَت", "miyat", "ölenler (topluluk adı)", "orta", ""],
-      [451, "مُوُت", "muwut", "ölenler (topluluk adı)", "orta", ""],
+      [430, "مَاوُوت", "māwūt", "ölme türünden şey", "orta", ""],
+      [432, "مَوَتَة", "mawata", "ölme türünden şey", "orta", ""],
+      [433, "مُوَتَة", "muwata", "ölme türünden şey", "orta", ""],
+      [434, "أُمْوُوتَة", "ʾumwūta", "ölme türünden şey", "orta", ""],
+      [435, "مَوْوَت", "mawwat", "ölme türünden şey", "orta", ""],
+      [437, "مَيْوَت", "maywat", "ölme türünden şey", "orta", ""],
+      [439, "مَوْت", "mawt", "ölüm", "kuran", "Kur'ân"],
+      [840, "مَات", "māt", "ölme türünden şey", "orta", ""],
+      [921, "مِيت", "mīt", "ölme türünden şey", "orta", ""],
+      [923, "مُوت", "mūt", "ölme türünden şey", "orta", ""],
+      [447, "مَوِيت", "mawīt", "ölme türünden şey", "orta", ""],
+      [843, "مِيَت", "miyat", "ölme türünden şey", "orta", ""],
+      [451, "مُوُت", "muwut", "ölme türünden şey", "orta", ""],
       [
         453,
         "مَوَات",
         "mawāt",
-        "ölenler (topluluk adı)",
+        "ölme türünden şey",
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be or become unoccupied (of land, a city, etc.)"
       ]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "مَاوُوتَة", "māwūta", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [436, "مَوْوَتَة", "mawwata", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [438, "مَيْوَتَة", "maywata", "bir tane ölenler (topluluk adı)", "orta", ""],
+      [431, "مَاوُوتَة", "māwūta", "ölme türünden bir tane", "orta", ""],
+      [436, "مَوْوَتَة", "mawwata", "ölme türünden bir tane", "orta", ""],
+      [438, "مَيْوَتَة", "maywata", "ölme türünden bir tane", "orta", ""],
       [
         440,
         "مَوْتَة",
         "mawta",
-        "bir tane ölenler (topluluk adı)",
+        "ölme türünden bir tane",
         "orta",
         "Vikisözlük: instance noun of مَاتَ (māta); a death"
       ],
-      [920, "مَاتَة", "māta", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [922, "مِيتَة", "mīta", "bir tane ölenler (topluluk adı)", "orta", "Vikisözlük: manner of death"],
-      [924, "مُوتَة", "mūta", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [448, "مَوِيتَة", "mawīta", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [925, "مِيَتَة", "miyata", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [452, "مُوُتَة", "muwuta", "bir tane ölenler (topluluk adı)", "orta", ""],
-      [454, "مَوَاتَة", "mawāta", "bir tane ölenler (topluluk adı)", "orta", ""]
+      [920, "مَاتَة", "māta", "ölme türünden bir tane", "orta", ""],
+      [922, "مِيتَة", "mīta", "ölme türünden bir tane", "orta", "Vikisözlük: manner of death"],
+      [924, "مُوتَة", "mūta", "ölme türünden bir tane", "orta", ""],
+      [448, "مَوِيتَة", "mawīta", "ölme türünden bir tane", "orta", ""],
+      [925, "مِيَتَة", "miyata", "ölme türünden bir tane", "orta", ""],
+      [452, "مُوُتَة", "muwuta", "ölme türünden bir tane", "orta", ""],
+      [454, "مَوَاتَة", "mawāta", "ölme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَمْوَات", "ʾamwāt", "ölenler (kırık çoğul)", "orta", ""],
-      [456, "أَمْوِتَة", "ʾamwita", "ölenler (kırık çoğul)", "orta", ""],
-      [457, "أَمَاوِت", "ʾamāwit", "ölenler (kırık çoğul)", "orta", ""],
-      [458, "أَمَاوِيت", "ʾamāwīt", "ölenler (kırık çoğul)", "orta", ""],
-      [459, "مُوُوت", "muwūt", "ölenler (kırık çoğul)", "orta", ""],
-      [460, "مُوُت", "muwut", "ölenler (kırık çoğul)", "orta", ""],
-      [854, "مِيَات", "miyāt", "ölenler (kırık çoğul)", "orta", ""],
-      [855, "مِيَت", "miyat", "ölenler (kırık çoğul)", "orta", ""],
-      [463, "مِوَتَة", "miwata", "ölenler (kırık çoğul)", "orta", ""],
-      [464, "مُوَت", "muwat", "ölenler (kırık çoğul)", "orta", ""],
-      [465, "مُوَتاء", "muwatāʾ", "ölenler (kırık çoğul)", "orta", ""],
-      [466, "مَوَتَة", "mawata", "ölenler (kırık çoğul)", "orta", ""],
-      [467, "مُوَّات", "muwwāt", "ölenler (kırık çoğul)", "orta", ""],
+      [455, "أَمْوَات", "ʾamwāt", "ölmeler", "orta", ""],
+      [456, "أَمْوِتَة", "ʾamwita", "ölmeler", "orta", ""],
+      [457, "أَمَاوِت", "ʾamāwit", "ölmeler", "orta", ""],
+      [458, "أَمَاوِيت", "ʾamāwīt", "ölmeler", "orta", ""],
+      [459, "مُوُوت", "muwūt", "ölmeler", "orta", ""],
+      [460, "مُوُت", "muwut", "ölmeler", "orta", ""],
+      [854, "مِيَات", "miyāt", "ölmeler", "orta", ""],
+      [855, "مِيَت", "miyat", "ölmeler", "orta", ""],
+      [463, "مِوَتَة", "miwata", "ölmeler", "orta", ""],
+      [464, "مُوَت", "muwat", "ölmeler", "orta", ""],
+      [465, "مُوَتاء", "muwatāʾ", "ölmeler", "orta", ""],
+      [466, "مَوَتَة", "mawata", "ölmeler", "orta", ""],
+      [467, "مُوَّات", "muwwāt", "ölmeler", "orta", ""],
       [
         468,
         "مَوَات",
         "mawāt",
-        "ölenler (kırık çoğul)",
+        "ölmeler",
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be or become unoccupied (of land, a city, etc.)"
       ],
-      [861, "مَات", "māt", "ölenler (kırık çoğul)", "orta", ""],
-      [470, "مَمَاوِت", "mamāwit", "ölenler (kırık çoğul)", "orta", ""],
-      [471, "مَمَاوِيت", "mamāwīt", "ölenler (kırık çoğul)", "orta", ""],
-      [472, "مَوَاوِت", "mawāwit", "ölenler (kırık çoğul)", "orta", ""],
-      [473, "أَمْوُت", "ʾamwut", "ölenler (kırık çoğul)", "orta", ""],
-      [474, "مُوَّت", "muwwat", "ölenler (kırık çoğul)", "orta", ""],
-      [475, "مَوَائِت", "mawāʾit", "ölenler (kırık çoğul)", "orta", ""],
-      [476, "مُوَيْت", "muwayt", "ölenler (kırık çoğul)", "orta", ""]
+      [861, "مَات", "māt", "ölmeler", "orta", ""],
+      [470, "مَمَاوِت", "mamāwit", "ölmeler", "orta", ""],
+      [471, "مَمَاوِيت", "mamāwīt", "ölmeler", "orta", ""],
+      [472, "مَوَاوِت", "mawāwit", "ölmeler", "orta", ""],
+      [473, "أَمْوُت", "ʾamwut", "ölmeler", "orta", ""],
+      [474, "مُوَّت", "muwwat", "ölmeler", "orta", ""],
+      [475, "مَوَائِت", "mawāʾit", "ölmeler", "orta", ""],
+      [476, "مُوَيْت", "muwayt", "ölmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَمْوَاتَات", "ʾamwātāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَمْوِتَات", "ʾamwitāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَمَاوِتَات", "ʾamāwitāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَمَاوِيتَات", "ʾamāwītāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [481, "مُوُوتَات", "muwūtāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [482, "مُوُتَات", "muwutāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [872, "مِيَاتَات", "miyātāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [873, "مِيَتَات", "miyatāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [485, "مِوَتَات", "miwatāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [486, "مُوَتَات", "muwatāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [487, "مُوَتاآت", "muwatāʾāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [488, "مَوَتَات", "mawatāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [489, "مُوَّاتَات", "muwwātāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [490, "مَوَاتَات", "mawātāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [879, "مَاتَات", "mātāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَمَاوِتَات", "mamāwitāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَمَاوِيتَات", "mamāwītāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [494, "مَوَاوِتَات", "mawāwitāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَمْوُتَات", "ʾamwutāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [496, "مُوَّتَات", "muwwatāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [497, "مَوَائِتَات", "mawāʾitāt", "ölenler (çoğulun çoğulu)", "orta", ""],
-      [498, "مُوَيْتَات", "muwaytāt", "ölenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَمْوَاتَات", "ʾamwātāt", "ölmeler topluluğu", "orta", ""],
+      [478, "أَمْوِتَات", "ʾamwitāt", "ölmeler topluluğu", "orta", ""],
+      [479, "أَمَاوِتَات", "ʾamāwitāt", "ölmeler topluluğu", "orta", ""],
+      [480, "أَمَاوِيتَات", "ʾamāwītāt", "ölmeler topluluğu", "orta", ""],
+      [481, "مُوُوتَات", "muwūtāt", "ölmeler topluluğu", "orta", ""],
+      [482, "مُوُتَات", "muwutāt", "ölmeler topluluğu", "orta", ""],
+      [872, "مِيَاتَات", "miyātāt", "ölmeler topluluğu", "orta", ""],
+      [873, "مِيَتَات", "miyatāt", "ölmeler topluluğu", "orta", ""],
+      [485, "مِوَتَات", "miwatāt", "ölmeler topluluğu", "orta", ""],
+      [486, "مُوَتَات", "muwatāt", "ölmeler topluluğu", "orta", ""],
+      [487, "مُوَتاآت", "muwatāʾāt", "ölmeler topluluğu", "orta", ""],
+      [488, "مَوَتَات", "mawatāt", "ölmeler topluluğu", "orta", ""],
+      [489, "مُوَّاتَات", "muwwātāt", "ölmeler topluluğu", "orta", ""],
+      [490, "مَوَاتَات", "mawātāt", "ölmeler topluluğu", "orta", ""],
+      [879, "مَاتَات", "mātāt", "ölmeler topluluğu", "orta", ""],
+      [492, "مَمَاوِتَات", "mamāwitāt", "ölmeler topluluğu", "orta", ""],
+      [493, "مَمَاوِيتَات", "mamāwītāt", "ölmeler topluluğu", "orta", ""],
+      [494, "مَوَاوِتَات", "mawāwitāt", "ölmeler topluluğu", "orta", ""],
+      [495, "أَمْوُتَات", "ʾamwutāt", "ölmeler topluluğu", "orta", ""],
+      [496, "مُوَّتَات", "muwwatāt", "ölmeler topluluğu", "orta", ""],
+      [497, "مَوَائِتَات", "mawāʾitāt", "ölmeler topluluğu", "orta", ""],
+      [498, "مُوَيْتَات", "muwaytāt", "ölmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

@@ -9,9 +9,9 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "صَفْر", "ṣafr", "boş kalma", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [1, "صِفْر", "ṣifr", "boş kalma", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [2, "صُفْر", "ṣufr", "boş kalma", "orta", "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"],
-      [3, "صَفَر", "ṣafar", "boş kalma", "orta", "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"],
+      [1, "صِفْر", "ṣifr", "boş kalınan şey", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [2, "صُفْر", "ṣufr", "sarı", "kuran", "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"],
+      [3, "صَفَر", "ṣafar", "boş kalma hâli", "orta", "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"],
       [4, "صِفَر", "ṣifar", "boş kalma", "orta", ""],
       [5, "صُفُر", "ṣufur", "boş kalma", "orta", "Vikisözlük: empty; void; devoid; free from"],
       [
@@ -22,15 +22,29 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be devoid, to be vacant"
       ],
-      [7, "صِفَار", "ṣifār", "boş kalma", "orta", ""],
-      [8, "صُفَار", "ṣufār", "boş kalma", "orta", "Vikisözlük: yellow pigment, yellow dye, yellow coloring"],
+      [7, "صِفَار", "ṣifār", "boş kalmadan kaçınma", "orta", ""],
+      [
+        8,
+        "صُفَار",
+        "ṣufār",
+        "boş kalma illeti, boş kalma sesi",
+        "orta",
+        "Vikisözlük: yellow pigment, yellow dye, yellow coloring"
+      ],
       [9, "صَفَار", "ṣafār", "boş kalma", "orta", "Vikisözlük: yellow pigment, yellow dye, yellow coloring"],
-      [10, "صَفَارَة", "ṣafāra", "boş kalma", "orta", ""],
-      [11, "صُفُورَة", "ṣufūra", "boş kalma", "orta", ""],
-      [12, "صِفَارَة", "ṣifāra", "boş kalma", "orta", ""],
-      [13, "صَفِير", "ṣafīr", "boş kalma", "orta", "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"],
+      [10, "صَفَارَة", "ṣafāra", "boş kalma vasfı", "orta", ""],
+      [11, "صُفُورَة", "ṣufūra", "boş kalma vasfı", "orta", ""],
+      [12, "صِفَارَة", "ṣifāra", "boş kalma vazifesi, boş kalma işi", "orta", ""],
+      [
+        13,
+        "صَفِير",
+        "ṣafīr",
+        "boş kalma sesi, boş kalma yürüyüşü",
+        "orta",
+        "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"
+      ],
       [14, "صَفُور", "ṣafūr", "boş kalma", "orta", ""],
-      [15, "صَفَرَان", "ṣafarān", "boş kalma", "orta", ""],
+      [15, "صَفَرَان", "ṣafarān", "boş kalma çalkantısı, coşarak boş kalma", "orta", ""],
       [16, "صُفْرَان", "ṣufrān", "boş kalma", "orta", ""],
       [17, "صِفْرَان", "ṣifrān", "boş kalma", "orta", ""],
       [18, "صَفْرَى", "ṣafrā", "boş kalma", "orta", ""],
@@ -39,11 +53,11 @@
       [21, "صَفَرَة", "ṣafara", "boş kalma", "orta", ""],
       [22, "صِفَرَة", "ṣifara", "boş kalma", "orta", ""],
       [23, "صَفْرُورَة", "ṣafrūra", "boş kalma", "orta", ""],
-      [24, "تُصْفُور", "tuṣfūr", "boş kalma", "orta", ""],
-      [25, "تَصْفِرَة", "taṣfira", "boş kalma", "orta", ""],
-      [26, "تَصْفَرَة", "taṣfara", "boş kalma", "orta", ""],
-      [27, "مَصْفُرَة", "maṣfura", "boş kalma", "orta", ""],
-      [28, "مَصْفِرَة", "maṣfira", "boş kalma", "orta", ""]
+      [24, "تُصْفُور", "tuṣfūr", "tekrar tekrar boş kalma", "orta", ""],
+      [25, "تَصْفِرَة", "taṣfira", "tekrar tekrar boş kalma", "orta", ""],
+      [26, "تَصْفَرَة", "taṣfara", "tekrar tekrar boş kalma", "orta", ""],
+      [27, "مَصْفُرَة", "maṣfura", "boş kalma sebebi", "orta", ""],
+      [28, "مَصْفِرَة", "maṣfira", "boş kalma sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
       [29, "تَصْفِير", "taṣfīr", "boş kaldırma", "orta", ""],
@@ -56,52 +70,52 @@
     ],
     "ism-i fâil · bâb II": [
       [34, "مُصَفِّر", "muṣaffir", "boş kaldıran", "orta", ""],
-      [35, "مُصَفِّرَة", "muṣaffira", "boş kaldıran (dişi)", "orta", ""],
-      [36, "مُصَفِّرَان", "muṣaffirān", "iki boş kaldıran", "orta", ""],
-      [37, "مُصَفِّرَتَان", "muṣaffiratān", "iki boş kaldıran (dişi)", "orta", ""],
+      [35, "مُصَفِّرَة", "muṣaffira", "boş kaldıran (müennes)", "orta", ""],
+      [36, "مُصَفِّرَان", "muṣaffirān", "boş kaldıran (iki)", "orta", ""],
+      [37, "مُصَفِّرَتَان", "muṣaffiratān", "boş kaldıran (iki, müennes)", "orta", ""],
       [38, "مُصَفِّرُون", "muṣaffirūn", "boş kaldıranlar", "orta", ""],
       [39, "مُصَفِّرِين", "muṣaffirīn", "boş kaldıranlar", "orta", ""],
-      [40, "مُصَفِّرَات", "muṣaffirāt", "boş kaldıranlar (dişi)", "orta", ""]
+      [40, "مُصَفِّرَات", "muṣaffirāt", "boş kaldıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُصَفَّر", "muṣaffar", "boş kaldırılmış", "orta", ""],
-      [42, "مُصَفَّرَة", "muṣaffara", "boş kaldırılmış (dişi)", "orta", ""],
-      [43, "مُصَفَّرَان", "muṣaffarān", "iki boş kaldırılmış", "orta", ""],
-      [44, "مُصَفَّرَتَان", "muṣaffaratān", "iki boş kaldırılmış (dişi)", "orta", ""],
-      [45, "مُصَفَّرُون", "muṣaffarūn", "boş kaldırılmışlar", "orta", ""],
-      [46, "مُصَفَّرِين", "muṣaffarīn", "boş kaldırılmışlar", "orta", ""],
-      [47, "مُصَفَّرَات", "muṣaffarāt", "boş kaldırılmışlar (dişi)", "orta", ""]
+      [41, "مُصَفَّر", "muṣaffar", "boş kaldırılan", "orta", ""],
+      [42, "مُصَفَّرَة", "muṣaffara", "boş kaldırılan (müennes)", "orta", ""],
+      [43, "مُصَفَّرَان", "muṣaffarān", "boş kaldırılan (iki)", "orta", ""],
+      [44, "مُصَفَّرَتَان", "muṣaffaratān", "boş kaldırılan (iki, müennes)", "orta", ""],
+      [45, "مُصَفَّرُون", "muṣaffarūn", "boş kaldırılanlar", "orta", ""],
+      [46, "مُصَفَّرِين", "muṣaffarīn", "boş kaldırılanlar", "orta", ""],
+      [47, "مُصَفَّرَات", "muṣaffarāt", "boş kaldırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُصَفَّر", "muṣaffar", "boş kaldırma (yeri/zamanı)", "orta", ""]
+      [48, "مُصَفَّر", "muṣaffar", "boş kaldırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُصَافَرَة", "muṣāfara", "boş kalışma", "orta", ""],
-      [50, "صِفَار", "ṣifār", "boş kalışma", "orta", ""]
+      [49, "مُصَافَرَة", "muṣāfara", "biriyle karşılıklı boş kalma", "orta", ""],
+      [50, "صِفَار", "ṣifār", "biriyle karşılıklı boş kalma", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "صِفَارَة", "ṣifāra", "bir kere boş kalışma", "orta", ""]
+      [51, "صِفَارَة", "ṣifāra", "bir kere biriyle karşılıklı boş kalma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُصَافِر", "muṣāfir", "boş kalışan", "orta", ""],
-      [53, "مُصَافِرَة", "muṣāfira", "boş kalışan (dişi)", "orta", ""],
-      [54, "مُصَافِرَان", "muṣāfirān", "iki boş kalışan", "orta", ""],
-      [55, "مُصَافِرَتَان", "muṣāfiratān", "iki boş kalışan (dişi)", "orta", ""],
-      [56, "مُصَافِرُون", "muṣāfirūn", "boş kalışanlar", "orta", ""],
-      [57, "مُصَافِرِين", "muṣāfirīn", "boş kalışanlar", "orta", ""],
-      [58, "مُصَافِرَات", "muṣāfirāt", "boş kalışanlar (dişi)", "orta", ""]
+      [52, "مُصَافِر", "muṣāfir", "biriyle karşılıklı boş kalan", "orta", ""],
+      [53, "مُصَافِرَة", "muṣāfira", "biriyle karşılıklı boş kalan (müennes)", "orta", ""],
+      [54, "مُصَافِرَان", "muṣāfirān", "biriyle karşılıklı boş kalan (iki)", "orta", ""],
+      [55, "مُصَافِرَتَان", "muṣāfiratān", "biriyle karşılıklı boş kalan (iki, müennes)", "orta", ""],
+      [56, "مُصَافِرُون", "muṣāfirūn", "biriyle karşılıklı boş kalanlar", "orta", ""],
+      [57, "مُصَافِرِين", "muṣāfirīn", "biriyle karşılıklı boş kalanlar", "orta", ""],
+      [58, "مُصَافِرَات", "muṣāfirāt", "biriyle karşılıklı boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُصَافَر", "muṣāfar", "boş kalışmış", "orta", ""],
-      [60, "مُصَافَرَة", "muṣāfara", "boş kalışmış (dişi)", "orta", ""],
-      [61, "مُصَافَرَان", "muṣāfarān", "iki boş kalışmış", "orta", ""],
-      [62, "مُصَافَرَتَان", "muṣāfaratān", "iki boş kalışmış (dişi)", "orta", ""],
-      [63, "مُصَافَرُون", "muṣāfarūn", "boş kalışmışlar", "orta", ""],
-      [64, "مُصَافَرِين", "muṣāfarīn", "boş kalışmışlar", "orta", ""],
-      [65, "مُصَافَرَات", "muṣāfarāt", "boş kalışmışlar (dişi)", "orta", ""]
+      [59, "مُصَافَر", "muṣāfar", "biriyle karşılıklı boş kalınan", "orta", ""],
+      [60, "مُصَافَرَة", "muṣāfara", "biriyle karşılıklı boş kalınan (müennes)", "orta", ""],
+      [61, "مُصَافَرَان", "muṣāfarān", "biriyle karşılıklı boş kalınan (iki)", "orta", ""],
+      [62, "مُصَافَرَتَان", "muṣāfaratān", "biriyle karşılıklı boş kalınan (iki, müennes)", "orta", ""],
+      [63, "مُصَافَرُون", "muṣāfarūn", "biriyle karşılıklı boş kalınanlar", "orta", ""],
+      [64, "مُصَافَرِين", "muṣāfarīn", "biriyle karşılıklı boş kalınanlar", "orta", ""],
+      [65, "مُصَافَرَات", "muṣāfarāt", "biriyle karşılıklı boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُصَافَر", "muṣāfar", "boş kalışma (yeri/zamanı)", "orta", ""]
+      [66, "مُصَافَر", "muṣāfar", "biriyle karşılıklı boş kalma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
       [67, "إِصْفَار", "ʾiṣfār", "boş kaldırma", "orta", ""]
@@ -111,190 +125,190 @@
     ],
     "ism-i fâil · bâb IV": [
       [69, "مُصْفِر", "muṣfir", "boş kaldıran", "orta", ""],
-      [70, "مُصْفِرَة", "muṣfira", "boş kaldıran (dişi)", "orta", ""],
-      [71, "مُصْفِرَان", "muṣfirān", "iki boş kaldıran", "orta", ""],
-      [72, "مُصْفِرَتَان", "muṣfiratān", "iki boş kaldıran (dişi)", "orta", ""],
+      [70, "مُصْفِرَة", "muṣfira", "boş kaldıran (müennes)", "orta", ""],
+      [71, "مُصْفِرَان", "muṣfirān", "boş kaldıran (iki)", "orta", ""],
+      [72, "مُصْفِرَتَان", "muṣfiratān", "boş kaldıran (iki, müennes)", "orta", ""],
       [73, "مُصْفِرُون", "muṣfirūn", "boş kaldıranlar", "orta", ""],
       [74, "مُصْفِرِين", "muṣfirīn", "boş kaldıranlar", "orta", ""],
-      [75, "مُصْفِرَات", "muṣfirāt", "boş kaldıranlar (dişi)", "orta", ""]
+      [75, "مُصْفِرَات", "muṣfirāt", "boş kaldıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُصْفَر", "muṣfar", "boş kaldırılmış", "orta", ""],
-      [77, "مُصْفَرَة", "muṣfara", "boş kaldırılmış (dişi)", "orta", ""],
-      [78, "مُصْفَرَان", "muṣfarān", "iki boş kaldırılmış", "orta", ""],
-      [79, "مُصْفَرَتَان", "muṣfaratān", "iki boş kaldırılmış (dişi)", "orta", ""],
-      [80, "مُصْفَرُون", "muṣfarūn", "boş kaldırılmışlar", "orta", ""],
-      [81, "مُصْفَرِين", "muṣfarīn", "boş kaldırılmışlar", "orta", ""],
-      [82, "مُصْفَرَات", "muṣfarāt", "boş kaldırılmışlar (dişi)", "orta", ""]
+      [76, "مُصْفَر", "muṣfar", "boş kaldırılan", "orta", ""],
+      [77, "مُصْفَرَة", "muṣfara", "boş kaldırılan (müennes)", "orta", ""],
+      [78, "مُصْفَرَان", "muṣfarān", "boş kaldırılan (iki)", "orta", ""],
+      [79, "مُصْفَرَتَان", "muṣfaratān", "boş kaldırılan (iki, müennes)", "orta", ""],
+      [80, "مُصْفَرُون", "muṣfarūn", "boş kaldırılanlar", "orta", ""],
+      [81, "مُصْفَرِين", "muṣfarīn", "boş kaldırılanlar", "orta", ""],
+      [82, "مُصْفَرَات", "muṣfarāt", "boş kaldırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُصْفَر", "muṣfar", "boş kaldırma (yeri/zamanı)", "orta", ""]
+      [83, "مُصْفَر", "muṣfar", "boş kaldırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَصَفُّر", "taṣaffur", "boş kalma", "orta", ""]
+      [84, "تَصَفُّر", "taṣaffur", "kendini zorlayarak boş kalma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَصَفُّرَة", "taṣaffura", "bir kere boş kalma", "orta", ""]
+      [85, "تَصَفُّرَة", "taṣaffura", "bir kere kendini zorlayarak boş kalma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَصَفِّر", "mutaṣaffir", "boş kalan", "orta", ""],
-      [87, "مُتَصَفِّرَة", "mutaṣaffira", "boş kalan (dişi)", "orta", ""],
-      [88, "مُتَصَفِّرَان", "mutaṣaffirān", "iki boş kalan", "orta", ""],
-      [89, "مُتَصَفِّرَتَان", "mutaṣaffiratān", "iki boş kalan (dişi)", "orta", ""],
-      [90, "مُتَصَفِّرُون", "mutaṣaffirūn", "boş kalanlar", "orta", ""],
-      [91, "مُتَصَفِّرِين", "mutaṣaffirīn", "boş kalanlar", "orta", ""],
-      [92, "مُتَصَفِّرَات", "mutaṣaffirāt", "boş kalanlar (dişi)", "orta", ""]
+      [86, "مُتَصَفِّر", "mutaṣaffir", "kendini zorlayarak boş kalan", "orta", ""],
+      [87, "مُتَصَفِّرَة", "mutaṣaffira", "kendini zorlayarak boş kalan (müennes)", "orta", ""],
+      [88, "مُتَصَفِّرَان", "mutaṣaffirān", "kendini zorlayarak boş kalan (iki)", "orta", ""],
+      [89, "مُتَصَفِّرَتَان", "mutaṣaffiratān", "kendini zorlayarak boş kalan (iki, müennes)", "orta", ""],
+      [90, "مُتَصَفِّرُون", "mutaṣaffirūn", "kendini zorlayarak boş kalanlar", "orta", ""],
+      [91, "مُتَصَفِّرِين", "mutaṣaffirīn", "kendini zorlayarak boş kalanlar", "orta", ""],
+      [92, "مُتَصَفِّرَات", "mutaṣaffirāt", "kendini zorlayarak boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَصَفَّر", "mutaṣaffar", "boş kalmış", "orta", ""],
-      [94, "مُتَصَفَّرَة", "mutaṣaffara", "boş kalmış (dişi)", "orta", ""],
-      [95, "مُتَصَفَّرَان", "mutaṣaffarān", "iki boş kalmış", "orta", ""],
-      [96, "مُتَصَفَّرَتَان", "mutaṣaffaratān", "iki boş kalmış (dişi)", "orta", ""],
-      [97, "مُتَصَفَّرُون", "mutaṣaffarūn", "boş kalmışlar", "orta", ""],
-      [98, "مُتَصَفَّرِين", "mutaṣaffarīn", "boş kalmışlar", "orta", ""],
-      [99, "مُتَصَفَّرَات", "mutaṣaffarāt", "boş kalmışlar (dişi)", "orta", ""]
+      [93, "مُتَصَفَّر", "mutaṣaffar", "kendini zorlayarak boş kalınan", "orta", ""],
+      [94, "مُتَصَفَّرَة", "mutaṣaffara", "kendini zorlayarak boş kalınan (müennes)", "orta", ""],
+      [95, "مُتَصَفَّرَان", "mutaṣaffarān", "kendini zorlayarak boş kalınan (iki)", "orta", ""],
+      [96, "مُتَصَفَّرَتَان", "mutaṣaffaratān", "kendini zorlayarak boş kalınan (iki, müennes)", "orta", ""],
+      [97, "مُتَصَفَّرُون", "mutaṣaffarūn", "kendini zorlayarak boş kalınanlar", "orta", ""],
+      [98, "مُتَصَفَّرِين", "mutaṣaffarīn", "kendini zorlayarak boş kalınanlar", "orta", ""],
+      [99, "مُتَصَفَّرَات", "mutaṣaffarāt", "kendini zorlayarak boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَصَفَّر", "mutaṣaffar", "boş kalma (yeri/zamanı)", "orta", ""]
+      [100, "مُتَصَفَّر", "mutaṣaffar", "kendini zorlayarak boş kalma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَصَافُر", "taṣāfur", "boş kalışma", "orta", ""]
+      [101, "تَصَافُر", "taṣāfur", "hep birlikte boş kalma", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَصَافُرَة", "taṣāfura", "bir kere boş kalışma", "orta", ""]
+      [102, "تَصَافُرَة", "taṣāfura", "bir kere hep birlikte boş kalma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَصَافِر", "mutaṣāfir", "boş kalışan", "orta", ""],
-      [104, "مُتَصَافِرَة", "mutaṣāfira", "boş kalışan (dişi)", "orta", ""],
-      [105, "مُتَصَافِرَان", "mutaṣāfirān", "iki boş kalışan", "orta", ""],
-      [106, "مُتَصَافِرَتَان", "mutaṣāfiratān", "iki boş kalışan (dişi)", "orta", ""],
-      [107, "مُتَصَافِرُون", "mutaṣāfirūn", "boş kalışanlar", "orta", ""],
-      [108, "مُتَصَافِرِين", "mutaṣāfirīn", "boş kalışanlar", "orta", ""],
-      [109, "مُتَصَافِرَات", "mutaṣāfirāt", "boş kalışanlar (dişi)", "orta", ""]
+      [103, "مُتَصَافِر", "mutaṣāfir", "hep birlikte boş kalan", "orta", ""],
+      [104, "مُتَصَافِرَة", "mutaṣāfira", "hep birlikte boş kalan (müennes)", "orta", ""],
+      [105, "مُتَصَافِرَان", "mutaṣāfirān", "hep birlikte boş kalan (iki)", "orta", ""],
+      [106, "مُتَصَافِرَتَان", "mutaṣāfiratān", "hep birlikte boş kalan (iki, müennes)", "orta", ""],
+      [107, "مُتَصَافِرُون", "mutaṣāfirūn", "hep birlikte boş kalanlar", "orta", ""],
+      [108, "مُتَصَافِرِين", "mutaṣāfirīn", "hep birlikte boş kalanlar", "orta", ""],
+      [109, "مُتَصَافِرَات", "mutaṣāfirāt", "hep birlikte boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَصَافَر", "mutaṣāfar", "boş kalışmış", "orta", ""],
-      [111, "مُتَصَافَرَة", "mutaṣāfara", "boş kalışmış (dişi)", "orta", ""],
-      [112, "مُتَصَافَرَان", "mutaṣāfarān", "iki boş kalışmış", "orta", ""],
-      [113, "مُتَصَافَرَتَان", "mutaṣāfaratān", "iki boş kalışmış (dişi)", "orta", ""],
-      [114, "مُتَصَافَرُون", "mutaṣāfarūn", "boş kalışmışlar", "orta", ""],
-      [115, "مُتَصَافَرِين", "mutaṣāfarīn", "boş kalışmışlar", "orta", ""],
-      [116, "مُتَصَافَرَات", "mutaṣāfarāt", "boş kalışmışlar (dişi)", "orta", ""]
+      [110, "مُتَصَافَر", "mutaṣāfar", "hep birlikte boş kalınan", "orta", ""],
+      [111, "مُتَصَافَرَة", "mutaṣāfara", "hep birlikte boş kalınan (müennes)", "orta", ""],
+      [112, "مُتَصَافَرَان", "mutaṣāfarān", "hep birlikte boş kalınan (iki)", "orta", ""],
+      [113, "مُتَصَافَرَتَان", "mutaṣāfaratān", "hep birlikte boş kalınan (iki, müennes)", "orta", ""],
+      [114, "مُتَصَافَرُون", "mutaṣāfarūn", "hep birlikte boş kalınanlar", "orta", ""],
+      [115, "مُتَصَافَرِين", "mutaṣāfarīn", "hep birlikte boş kalınanlar", "orta", ""],
+      [116, "مُتَصَافَرَات", "mutaṣāfarāt", "hep birlikte boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَصَافَر", "mutaṣāfar", "boş kalışma (yeri/zamanı)", "orta", ""]
+      [117, "مُتَصَافَر", "mutaṣāfar", "hep birlikte boş kalma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْصِفَار", "inṣifār", "boş kalma", "orta", ""]
+      [118, "اِنْصِفَار", "inṣifār", "kendiliğinden boş kalma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْصِفَارَة", "inṣifāra", "bir kere boş kalma", "orta", ""]
+      [119, "اِنْصِفَارَة", "inṣifāra", "bir kere kendiliğinden boş kalma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْصَفِر", "munṣafir", "boş kalan", "orta", ""],
-      [121, "مُنْصَفِرَة", "munṣafira", "boş kalan (dişi)", "orta", ""],
-      [122, "مُنْصَفِرَان", "munṣafirān", "iki boş kalan", "orta", ""],
-      [123, "مُنْصَفِرَتَان", "munṣafiratān", "iki boş kalan (dişi)", "orta", ""],
-      [124, "مُنْصَفِرُون", "munṣafirūn", "boş kalanlar", "orta", ""],
-      [125, "مُنْصَفِرِين", "munṣafirīn", "boş kalanlar", "orta", ""],
-      [126, "مُنْصَفِرَات", "munṣafirāt", "boş kalanlar (dişi)", "orta", ""]
+      [120, "مُنْصَفِر", "munṣafir", "kendiliğinden boş kalan", "orta", ""],
+      [121, "مُنْصَفِرَة", "munṣafira", "kendiliğinden boş kalan (müennes)", "orta", ""],
+      [122, "مُنْصَفِرَان", "munṣafirān", "kendiliğinden boş kalan (iki)", "orta", ""],
+      [123, "مُنْصَفِرَتَان", "munṣafiratān", "kendiliğinden boş kalan (iki, müennes)", "orta", ""],
+      [124, "مُنْصَفِرُون", "munṣafirūn", "kendiliğinden boş kalanlar", "orta", ""],
+      [125, "مُنْصَفِرِين", "munṣafirīn", "kendiliğinden boş kalanlar", "orta", ""],
+      [126, "مُنْصَفِرَات", "munṣafirāt", "kendiliğinden boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْصَفَر", "munṣafar", "boş kalmış", "orta", ""],
-      [128, "مُنْصَفَرَة", "munṣafara", "boş kalmış (dişi)", "orta", ""],
-      [129, "مُنْصَفَرَان", "munṣafarān", "iki boş kalmış", "orta", ""],
-      [130, "مُنْصَفَرَتَان", "munṣafaratān", "iki boş kalmış (dişi)", "orta", ""],
-      [131, "مُنْصَفَرُون", "munṣafarūn", "boş kalmışlar", "orta", ""],
-      [132, "مُنْصَفَرِين", "munṣafarīn", "boş kalmışlar", "orta", ""],
-      [133, "مُنْصَفَرَات", "munṣafarāt", "boş kalmışlar (dişi)", "orta", ""]
+      [127, "مُنْصَفَر", "munṣafar", "kendiliğinden boş kalınan", "orta", ""],
+      [128, "مُنْصَفَرَة", "munṣafara", "kendiliğinden boş kalınan (müennes)", "orta", ""],
+      [129, "مُنْصَفَرَان", "munṣafarān", "kendiliğinden boş kalınan (iki)", "orta", ""],
+      [130, "مُنْصَفَرَتَان", "munṣafaratān", "kendiliğinden boş kalınan (iki, müennes)", "orta", ""],
+      [131, "مُنْصَفَرُون", "munṣafarūn", "kendiliğinden boş kalınanlar", "orta", ""],
+      [132, "مُنْصَفَرِين", "munṣafarīn", "kendiliğinden boş kalınanlar", "orta", ""],
+      [133, "مُنْصَفَرَات", "munṣafarāt", "kendiliğinden boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْصَفَر", "munṣafar", "boş kalma (yeri/zamanı)", "orta", ""]
+      [134, "مُنْصَفَر", "munṣafar", "kendiliğinden boş kalma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِصْطِفَار", "iṣṭifār", "boş kalma", "orta", ""]
+      [135, "اِصْطِفَار", "iṣṭifār", "kendisi için boş kalma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِصْطِفَارَة", "iṣṭifāra", "bir kere boş kalma", "orta", ""]
+      [137, "اِصْطِفَارَة", "iṣṭifāra", "bir kere kendisi için boş kalma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُصْطَفِر", "muṣṭafir", "boş kalan", "orta", ""],
-      [139, "مُصْطَفِرَة", "muṣṭafira", "boş kalan (dişi)", "orta", ""],
-      [140, "مُصْطَفِرَان", "muṣṭafirān", "iki boş kalan", "orta", ""],
-      [141, "مُصْطَفِرَتَان", "muṣṭafiratān", "iki boş kalan (dişi)", "orta", ""],
-      [142, "مُصْطَفِرُون", "muṣṭafirūn", "boş kalanlar", "orta", ""],
-      [143, "مُصْطَفِرِين", "muṣṭafirīn", "boş kalanlar", "orta", ""],
-      [144, "مُصْطَفِرَات", "muṣṭafirāt", "boş kalanlar (dişi)", "orta", ""]
+      [138, "مُصْطَفِر", "muṣṭafir", "kendisi için boş kalan", "orta", ""],
+      [139, "مُصْطَفِرَة", "muṣṭafira", "kendisi için boş kalan (müennes)", "orta", ""],
+      [140, "مُصْطَفِرَان", "muṣṭafirān", "kendisi için boş kalan (iki)", "orta", ""],
+      [141, "مُصْطَفِرَتَان", "muṣṭafiratān", "kendisi için boş kalan (iki, müennes)", "orta", ""],
+      [142, "مُصْطَفِرُون", "muṣṭafirūn", "kendisi için boş kalanlar", "orta", ""],
+      [143, "مُصْطَفِرِين", "muṣṭafirīn", "kendisi için boş kalanlar", "orta", ""],
+      [144, "مُصْطَفِرَات", "muṣṭafirāt", "kendisi için boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُصْطَفَر", "muṣṭafar", "boş kalmış", "orta", ""],
-      [146, "مُصْطَفَرَة", "muṣṭafara", "boş kalmış (dişi)", "orta", ""],
-      [147, "مُصْطَفَرَان", "muṣṭafarān", "iki boş kalmış", "orta", ""],
-      [148, "مُصْطَفَرَتَان", "muṣṭafaratān", "iki boş kalmış (dişi)", "orta", ""],
-      [149, "مُصْطَفَرُون", "muṣṭafarūn", "boş kalmışlar", "orta", ""],
-      [150, "مُصْطَفَرِين", "muṣṭafarīn", "boş kalmışlar", "orta", ""],
-      [151, "مُصْطَفَرَات", "muṣṭafarāt", "boş kalmışlar (dişi)", "orta", ""]
+      [145, "مُصْطَفَر", "muṣṭafar", "kendisi için boş kalınan", "orta", ""],
+      [146, "مُصْطَفَرَة", "muṣṭafara", "kendisi için boş kalınan (müennes)", "orta", ""],
+      [147, "مُصْطَفَرَان", "muṣṭafarān", "kendisi için boş kalınan (iki)", "orta", ""],
+      [148, "مُصْطَفَرَتَان", "muṣṭafaratān", "kendisi için boş kalınan (iki, müennes)", "orta", ""],
+      [149, "مُصْطَفَرُون", "muṣṭafarūn", "kendisi için boş kalınanlar", "orta", ""],
+      [150, "مُصْطَفَرِين", "muṣṭafarīn", "kendisi için boş kalınanlar", "orta", ""],
+      [151, "مُصْطَفَرَات", "muṣṭafarāt", "kendisi için boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُصْطَفَر", "muṣṭafar", "boş kalma (yeri/zamanı)", "orta", ""]
+      [152, "مُصْطَفَر", "muṣṭafar", "kendisi için boş kalma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
       [
         499,
         "اِصْفِرَار",
         "iṣfirār",
-        "boş kallaşma",
+        "iyiden iyiye boş kalma",
         "kontrol",
         "Vikisözlük: masdar (bâb IX): to turn yellow, to yellow"
       ]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُصْفَرّ", "muṣfarr", "boş kallaşan", "kontrol", ""],
-      [501, "مُصْفَرَّة", "muṣfarra", "boş kallaşan (dişi)", "kontrol", ""],
-      [502, "مُصْفَرَّان", "muṣfarrān", "iki boş kallaşan", "kontrol", ""],
-      [503, "مُصْفَرَّتَان", "muṣfarratān", "iki boş kallaşan (dişi)", "kontrol", ""],
-      [504, "مُصْفَرُّون", "muṣfarrūn", "boş kallaşanlar", "kontrol", ""],
-      [505, "مُصْفَرِّين", "muṣfarrīn", "boş kallaşanlar", "kontrol", ""],
-      [506, "مُصْفَرَّات", "muṣfarrāt", "boş kallaşanlar (dişi)", "kontrol", ""]
+      [500, "مُصْفَرّ", "muṣfarr", "sararmış", "kuran", "Kur'ân"],
+      [501, "مُصْفَرَّة", "muṣfarra", "iyiden iyiye boş kalan (müennes)", "kontrol", ""],
+      [502, "مُصْفَرَّان", "muṣfarrān", "iyiden iyiye boş kalan (iki)", "kontrol", ""],
+      [503, "مُصْفَرَّتَان", "muṣfarratān", "iyiden iyiye boş kalan (iki, müennes)", "kontrol", ""],
+      [504, "مُصْفَرُّون", "muṣfarrūn", "iyiden iyiye boş kalanlar", "kontrol", ""],
+      [505, "مُصْفَرِّين", "muṣfarrīn", "iyiden iyiye boş kalanlar", "kontrol", ""],
+      [506, "مُصْفَرَّات", "muṣfarrāt", "iyiden iyiye boş kalanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِصْفَار", "istiṣfār", "boş kalmayı isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِصْفَارَة", "istiṣfāra", "bir kere boş kalma", "orta", ""]
+      [177, "اِسْتِصْفَارَة", "istiṣfāra", "bir kere boş kalmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَصْفِر", "mustaṣfir", "boş kalmayı isteyen", "orta", ""],
-      [179, "مُسْتَصْفِرَة", "mustaṣfira", "boş kalmayı isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَصْفِرَان", "mustaṣfirān", "iki boş kalmayı isteyen", "orta", ""],
-      [181, "مُسْتَصْفِرَتَان", "mustaṣfiratān", "iki boş kalmayı isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَصْفِرَة", "mustaṣfira", "boş kalmayı isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَصْفِرَان", "mustaṣfirān", "boş kalmayı isteyen (iki)", "orta", ""],
+      [181, "مُسْتَصْفِرَتَان", "mustaṣfiratān", "boş kalmayı isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَصْفِرُون", "mustaṣfirūn", "boş kalmayı isteyenler", "orta", ""],
       [183, "مُسْتَصْفِرِين", "mustaṣfirīn", "boş kalmayı isteyenler", "orta", ""],
-      [184, "مُسْتَصْفِرَات", "mustaṣfirāt", "boş kalmayı isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَصْفِرَات", "mustaṣfirāt", "boş kalmayı isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَصْفَر", "mustaṣfar", "boş kalmayı istenen", "orta", ""],
-      [186, "مُسْتَصْفَرَة", "mustaṣfara", "boş kalmayı istenen (dişi)", "orta", ""],
-      [187, "مُسْتَصْفَرَان", "mustaṣfarān", "iki boş kalmayı istenen", "orta", ""],
-      [188, "مُسْتَصْفَرَتَان", "mustaṣfaratān", "iki boş kalmayı istenen (dişi)", "orta", ""],
-      [189, "مُسْتَصْفَرُون", "mustaṣfarūn", "boş kalmayı istenenler", "orta", ""],
-      [190, "مُسْتَصْفَرِين", "mustaṣfarīn", "boş kalmayı istenenler", "orta", ""],
-      [191, "مُسْتَصْفَرَات", "mustaṣfarāt", "boş kalmayı istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَصْفَر", "mustaṣfar", "boş kalması istenen", "orta", ""],
+      [186, "مُسْتَصْفَرَة", "mustaṣfara", "boş kalması istenen (müennes)", "orta", ""],
+      [187, "مُسْتَصْفَرَان", "mustaṣfarān", "boş kalması istenen (iki)", "orta", ""],
+      [188, "مُسْتَصْفَرَتَان", "mustaṣfaratān", "boş kalması istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَصْفَرُون", "mustaṣfarūn", "boş kalması istenenler", "orta", ""],
+      [190, "مُسْتَصْفَرِين", "mustaṣfarīn", "boş kalması istenenler", "orta", ""],
+      [191, "مُسْتَصْفَرَات", "mustaṣfarāt", "boş kalması istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَصْفَر", "mustaṣfar", "boş kalma (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَصْفَر", "mustaṣfar", "boş kalmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِصْفِيرَار", "iṣfīrār", "iyice boş kallaşma", "kontrol", ""]
+      [507, "اِصْفِيرَار", "iṣfīrār", "büsbütün boş kalma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُصْفَارّ", "muṣfārr", "iyice boş kallaşan", "kontrol", ""],
-      [509, "مُصْفَارَّة", "muṣfārra", "iyice boş kallaşan (dişi)", "kontrol", ""],
-      [510, "مُصْفَارَّان", "muṣfārrān", "iki iyice boş kallaşan", "kontrol", ""],
-      [511, "مُصْفَارَّتَان", "muṣfārratān", "iki iyice boş kallaşan (dişi)", "kontrol", ""],
-      [512, "مُصْفَارُّون", "muṣfārrūn", "iyice boş kallaşanlar", "kontrol", ""],
-      [513, "مُصْفَارِّين", "muṣfārrīn", "iyice boş kallaşanlar", "kontrol", ""],
-      [514, "مُصْفَارَّات", "muṣfārrāt", "iyice boş kallaşanlar (dişi)", "kontrol", ""]
+      [508, "مُصْفَارّ", "muṣfārr", "büsbütün boş kalan", "kontrol", ""],
+      [509, "مُصْفَارَّة", "muṣfārra", "büsbütün boş kalan (müennes)", "kontrol", ""],
+      [510, "مُصْفَارَّان", "muṣfārrān", "büsbütün boş kalan (iki)", "kontrol", ""],
+      [511, "مُصْفَارَّتَان", "muṣfārratān", "büsbütün boş kalan (iki, müennes)", "kontrol", ""],
+      [512, "مُصْفَارُّون", "muṣfārrūn", "büsbütün boş kalanlar", "kontrol", ""],
+      [513, "مُصْفَارِّين", "muṣfārrīn", "büsbütün boş kalanlar", "kontrol", ""],
+      [514, "مُصْفَارَّات", "muṣfārrāt", "büsbütün boş kalanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِصْفِوْفَار", "iṣfiwfār", "aşırı boş kalma", "orta", ""]
@@ -304,41 +318,41 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "صَافِر", "ṣāfir", "boş kalan", "orta", ""],
-      [214, "صَافِرَة", "ṣāfira", "boş kalan (dişi)", "orta", ""],
-      [215, "صَافِرَان", "ṣāfirān", "iki boş kalan", "orta", ""],
-      [216, "صَافِرَتَان", "ṣāfiratān", "iki boş kalan (dişi)", "orta", ""],
+      [214, "صَافِرَة", "ṣāfira", "boş kalan (müennes)", "orta", ""],
+      [215, "صَافِرَان", "ṣāfirān", "boş kalan (iki)", "orta", ""],
+      [216, "صَافِرَتَان", "ṣāfiratān", "boş kalan (iki, müennes)", "orta", ""],
       [217, "صَافِرُون", "ṣāfirūn", "boş kalanlar", "orta", ""],
       [218, "صَافِرِين", "ṣāfirīn", "boş kalanlar", "orta", ""],
-      [219, "صَافِرَات", "ṣāfirāt", "boş kalanlar (dişi)", "orta", ""]
+      [219, "صَافِرَات", "ṣāfirāt", "boş kalanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَصْفُور", "maṣfūr", "boş kalmış", "orta", ""],
-      [221, "مَصْفُورَة", "maṣfūra", "boş kalmış (dişi)", "orta", ""],
-      [222, "مَصْفُورَان", "maṣfūrān", "iki boş kalmış", "orta", ""],
-      [223, "مَصْفُورَتَان", "maṣfūratān", "iki boş kalmış (dişi)", "orta", ""],
-      [224, "مَصْفُورُون", "maṣfūrūn", "boş kalmışlar", "orta", ""],
-      [225, "مَصْفُورِين", "maṣfūrīn", "boş kalmışlar", "orta", ""],
-      [226, "مَصْفُورَات", "maṣfūrāt", "boş kalmışlar (dişi)", "orta", ""]
+      [220, "مَصْفُور", "maṣfūr", "boş kalınan", "orta", ""],
+      [221, "مَصْفُورَة", "maṣfūra", "boş kalınan (müennes)", "orta", ""],
+      [222, "مَصْفُورَان", "maṣfūrān", "boş kalınan (iki)", "orta", ""],
+      [223, "مَصْفُورَتَان", "maṣfūratān", "boş kalınan (iki, müennes)", "orta", ""],
+      [224, "مَصْفُورُون", "maṣfūrūn", "boş kalınanlar", "orta", ""],
+      [225, "مَصْفُورِين", "maṣfūrīn", "boş kalınanlar", "orta", ""],
+      [226, "مَصْفُورَات", "maṣfūrāt", "boş kalınanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَصْفَر", "maṣfar", "boş kalma (yeri/zamanı)", "orta", ""],
-      [228, "مَصْفَرَان", "maṣfarān", "iki boş kalma (yeri/zamanı)", "orta", ""],
-      [229, "مَصْفِر", "maṣfir", "boş kalma (yeri/zamanı)", "orta", ""],
-      [230, "مَصْفِرَان", "maṣfirān", "iki boş kalma (yeri/zamanı)", "orta", ""],
-      [231, "مَصْفَرَة", "maṣfara", "boş kalma (yeri/zamanı)", "orta", ""],
-      [232, "مَصْفَرَتَان", "maṣfaratān", "iki boş kalma (yeri/zamanı)", "orta", ""],
-      [233, "مَصْفِرَة", "maṣfira", "boş kalma (yeri/zamanı)", "orta", ""],
-      [234, "مَصْفِرَتَان", "maṣfiratān", "iki boş kalma (yeri/zamanı)", "orta", ""],
-      [247, "مَصْفُرَة", "maṣfura", "boş kalma (yeri/zamanı)", "orta", ""],
-      [248, "مَصْفُرَتَان", "maṣfuratān", "iki boş kalma (yeri/zamanı)", "orta", ""]
+      [227, "مَصْفَر", "maṣfar", "boş kalma yeri, vakti", "orta", ""],
+      [228, "مَصْفَرَان", "maṣfarān", "boş kalma yeri, vakti (iki)", "orta", ""],
+      [229, "مَصْفِر", "maṣfir", "boş kalma yeri, vakti", "orta", ""],
+      [230, "مَصْفِرَان", "maṣfirān", "boş kalma yeri, vakti (iki)", "orta", ""],
+      [231, "مَصْفَرَة", "maṣfara", "boş kalmanın bol olduğu yer", "orta", ""],
+      [232, "مَصْفَرَتَان", "maṣfaratān", "boş kalmanın bol olduğu yer (iki)", "orta", ""],
+      [233, "مَصْفِرَة", "maṣfira", "boş kalmanın bol olduğu yer", "orta", ""],
+      [234, "مَصْفِرَتَان", "maṣfiratān", "boş kalmanın bol olduğu yer (iki)", "orta", ""],
+      [247, "مَصْفُرَة", "maṣfura", "boş kalma yeri, vakti", "orta", ""],
+      [248, "مَصْفُرَتَان", "maṣfuratān", "boş kalma yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِصْفَر", "miṣfar", "boş kalmaya yarayan araç", "orta", ""],
-      [236, "مِصْفَرَان", "miṣfarān", "iki boş kalmaya yarayan araç", "orta", ""],
-      [237, "مِصْفَار", "miṣfār", "boş kalmaya yarayan araç", "orta", ""],
-      [238, "مِصْفَارَان", "miṣfārān", "iki boş kalmaya yarayan araç", "orta", ""],
-      [239, "مِصْفَرَة", "miṣfara", "boş kalmaya yarayan araç", "orta", ""],
-      [240, "مِصْفَرَتَان", "miṣfaratān", "iki boş kalmaya yarayan araç", "orta", ""]
+      [235, "مِصْفَر", "miṣfar", "boş kalma âleti", "orta", ""],
+      [236, "مِصْفَرَان", "miṣfarān", "boş kalma âleti (iki)", "orta", ""],
+      [237, "مِصْفَار", "miṣfār", "boş kalma âleti", "orta", ""],
+      [238, "مِصْفَارَان", "miṣfārān", "boş kalma âleti (iki)", "orta", ""],
+      [239, "مِصْفَرَة", "miṣfara", "boş kalma âleti", "orta", ""],
+      [240, "مِصْفَرَتَان", "miṣfaratān", "boş kalma âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [
@@ -349,124 +363,124 @@
         "orta",
         "Vikisözlük: elative degree of صَفْر (ṣafr), elative degree of صِفْر (ṣifr), elativ"
       ],
-      [242, "أَصْفَرَان", "ʾaṣfarān", "iki daha çok boş kalan", "orta", ""]
+      [242, "أَصْفَرَان", "ʾaṣfarān", "daha çok boş kalan (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "صُفْرَى", "ṣufrā", "daha çok boş kalan", "orta", ""],
-      [244, "صُفْرَيَان", "ṣufrayān", "iki daha çok boş kalan", "orta", ""],
+      [244, "صُفْرَيَان", "ṣufrayān", "daha çok boş kalan (iki)", "orta", ""],
       [245, "صَفْرَاء", "ṣafrāʾ", "daha çok boş kalan", "orta", "Vikisözlük: feminine singular of أَصْفَر (ʔaṣfar)"],
-      [246, "صَفْرَاآن", "ṣafrāʾān", "iki daha çok boş kalan", "orta", ""]
+      [246, "صَفْرَاآن", "ṣafrāʾān", "daha çok boş kalan (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "صُفَيْر", "ṣufayr", "küçük boş kalma", "orta", ""],
-      [250, "صُفَيْرَان", "ṣufayrān", "iki küçük boş kalma", "orta", ""],
-      [251, "صُفَيْرَة", "ṣufayra", "küçük boş kalma", "orta", ""],
-      [252, "صُفَيْرَتَان", "ṣufayratān", "iki küçük boş kalma", "orta", ""]
+      [249, "صُفَيْر", "ṣufayr", "azıcık boş kalma", "orta", ""],
+      [250, "صُفَيْرَان", "ṣufayrān", "azıcık boş kalma (iki)", "orta", ""],
+      [251, "صُفَيْرَة", "ṣufayra", "azıcık boş kalma", "orta", ""],
+      [252, "صُفَيْرَتَان", "ṣufayratān", "azıcık boş kalma (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَصْفَر", "maṣfar", "boş kalma", "orta", ""],
-      [254, "مَصْفَرَان", "maṣfarān", "iki boş kalma", "orta", ""]
+      [254, "مَصْفَرَان", "maṣfarān", "boş kalma (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "صَفْرَة", "ṣafra", "bir kere boş kalma", "orta", ""],
-      [256, "صَفْرَتَان", "ṣafratān", "iki bir kere boş kalma", "orta", ""]
+      [256, "صَفْرَتَان", "ṣafratān", "bir kere boş kalma (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "صِفْرَة", "ṣifra", "boş kalma tarzı", "orta", ""],
-      [258, "صِفْرَتَان", "ṣifratān", "iki boş kalma tarzı", "orta", ""]
+      [258, "صِفْرَتَان", "ṣifratān", "boş kalma tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "صَفِير", "ṣafīr", "sürekli boş kalan", "orta", "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"],
-      [260, "صَفِيرَة", "ṣafīra", "sürekli boş kalan (dişi)", "orta", ""],
-      [261, "صَفِيرَان", "ṣafīrān", "iki sürekli boş kalan", "orta", ""],
-      [262, "صَفِيرَتَان", "ṣafīratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [263, "صَفِيرُون", "ṣafīrūn", "sürekli boş kalanlar", "orta", ""],
-      [264, "صَفِيرِين", "ṣafīrīn", "sürekli boş kalanlar", "orta", ""],
-      [265, "صَفِيرَات", "ṣafīrāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [266, "صَفُور", "ṣafūr", "sürekli boş kalan", "orta", ""],
-      [267, "صَفُورَة", "ṣafūra", "sürekli boş kalan (dişi)", "orta", ""],
-      [268, "صَفُورَان", "ṣafūrān", "iki sürekli boş kalan", "orta", ""],
-      [269, "صَفُورَتَان", "ṣafūratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [270, "صَفُورُون", "ṣafūrūn", "sürekli boş kalanlar", "orta", ""],
-      [271, "صَفُورِين", "ṣafūrīn", "sürekli boş kalanlar", "orta", ""],
-      [272, "صَفُورَات", "ṣafūrāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [273, "صَفِر", "ṣafir", "sürekli boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [274, "صَفِرَة", "ṣafira", "sürekli boş kalan (dişi)", "orta", ""],
-      [275, "صَفِرَان", "ṣafirān", "iki sürekli boş kalan", "orta", ""],
-      [276, "صَفِرَتَان", "ṣafiratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [277, "صَفِرُون", "ṣafirūn", "sürekli boş kalanlar", "orta", ""],
-      [278, "صَفِرِين", "ṣafirīn", "sürekli boş kalanlar", "orta", ""],
-      [279, "صَفِرَات", "ṣafirāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [280, "صَفُر", "ṣafur", "sürekli boş kalan", "orta", ""],
-      [281, "صَفُرَة", "ṣafura", "sürekli boş kalan (dişi)", "orta", ""],
-      [282, "صَفُرَان", "ṣafurān", "iki sürekli boş kalan", "orta", ""],
-      [283, "صَفُرَتَان", "ṣafuratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [284, "صَفُرُون", "ṣafurūn", "sürekli boş kalanlar", "orta", ""],
-      [285, "صَفُرِين", "ṣafurīn", "sürekli boş kalanlar", "orta", ""],
-      [286, "صَفُرَات", "ṣafurāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [287, "صَفَر", "ṣafar", "sürekli boş kalan", "orta", "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"],
-      [288, "صَفَرَة", "ṣafara", "sürekli boş kalan (dişi)", "orta", ""],
-      [289, "صَفَرَان", "ṣafarān", "iki sürekli boş kalan", "orta", ""],
-      [290, "صَفَرَتَان", "ṣafaratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [291, "صَفَرُون", "ṣafarūn", "sürekli boş kalanlar", "orta", ""],
-      [292, "صَفَرِين", "ṣafarīn", "sürekli boş kalanlar", "orta", ""],
-      [293, "صَفَرَات", "ṣafarāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [294, "صَفْر", "ṣafr", "sürekli boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [295, "صَفْرَة", "ṣafra", "sürekli boş kalan (dişi)", "orta", ""],
-      [296, "صَفْرَان", "ṣafrān", "iki sürekli boş kalan", "orta", ""],
-      [297, "صَفْرَتَان", "ṣafratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [298, "صَفْرُون", "ṣafrūn", "sürekli boş kalanlar", "orta", ""],
-      [299, "صَفْرِين", "ṣafrīn", "sürekli boş kalanlar", "orta", ""],
-      [300, "صَفْرَات", "ṣafrāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [301, "صُفُر", "ṣufur", "sürekli boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [302, "صُفُرَة", "ṣufura", "sürekli boş kalan (dişi)", "orta", ""],
-      [303, "صُفُرَان", "ṣufurān", "iki sürekli boş kalan", "orta", ""],
-      [304, "صُفُرَتَان", "ṣufuratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [305, "صُفُرُون", "ṣufurūn", "sürekli boş kalanlar", "orta", ""],
-      [306, "صُفُرِين", "ṣufurīn", "sürekli boş kalanlar", "orta", ""],
-      [307, "صُفُرَات", "ṣufurāt", "sürekli boş kalanlar (dişi)", "orta", ""],
-      [308, "صَفْرَان", "ṣafrān", "sürekli boş kalan", "orta", ""],
-      [309, "صَفْرَانَة", "ṣafrāna", "sürekli boş kalan (dişi)", "orta", ""],
-      [310, "صَفْرَانَان", "ṣafrānān", "iki sürekli boş kalan", "orta", ""],
-      [311, "صَفْرَانَتَان", "ṣafrānatān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [312, "صَفْرَانُون", "ṣafrānūn", "sürekli boş kalanlar", "orta", ""],
-      [313, "صَفْرَانِين", "ṣafrānīn", "sürekli boş kalanlar", "orta", ""],
-      [314, "صَفْرَانَات", "ṣafrānāt", "sürekli boş kalanlar (dişi)", "orta", ""],
+      [259, "صَفِير", "ṣafīr", "her daim boş kalan", "orta", "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"],
+      [260, "صَفِيرَة", "ṣafīra", "her daim boş kalan (müennes)", "orta", ""],
+      [261, "صَفِيرَان", "ṣafīrān", "her daim boş kalan (iki)", "orta", ""],
+      [262, "صَفِيرَتَان", "ṣafīratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [263, "صَفِيرُون", "ṣafīrūn", "her daim boş kalanlar", "orta", ""],
+      [264, "صَفِيرِين", "ṣafīrīn", "her daim boş kalanlar", "orta", ""],
+      [265, "صَفِيرَات", "ṣafīrāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [266, "صَفُور", "ṣafūr", "her daim boş kalan", "orta", ""],
+      [267, "صَفُورَة", "ṣafūra", "her daim boş kalan (müennes)", "orta", ""],
+      [268, "صَفُورَان", "ṣafūrān", "her daim boş kalan (iki)", "orta", ""],
+      [269, "صَفُورَتَان", "ṣafūratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [270, "صَفُورُون", "ṣafūrūn", "her daim boş kalanlar", "orta", ""],
+      [271, "صَفُورِين", "ṣafūrīn", "her daim boş kalanlar", "orta", ""],
+      [272, "صَفُورَات", "ṣafūrāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [273, "صَفِر", "ṣafir", "her daim boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [274, "صَفِرَة", "ṣafira", "her daim boş kalan (müennes)", "orta", ""],
+      [275, "صَفِرَان", "ṣafirān", "her daim boş kalan (iki)", "orta", ""],
+      [276, "صَفِرَتَان", "ṣafiratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [277, "صَفِرُون", "ṣafirūn", "her daim boş kalanlar", "orta", ""],
+      [278, "صَفِرِين", "ṣafirīn", "her daim boş kalanlar", "orta", ""],
+      [279, "صَفِرَات", "ṣafirāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [280, "صَفُر", "ṣafur", "her daim boş kalan", "orta", ""],
+      [281, "صَفُرَة", "ṣafura", "her daim boş kalan (müennes)", "orta", ""],
+      [282, "صَفُرَان", "ṣafurān", "her daim boş kalan (iki)", "orta", ""],
+      [283, "صَفُرَتَان", "ṣafuratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [284, "صَفُرُون", "ṣafurūn", "her daim boş kalanlar", "orta", ""],
+      [285, "صَفُرِين", "ṣafurīn", "her daim boş kalanlar", "orta", ""],
+      [286, "صَفُرَات", "ṣafurāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [287, "صَفَر", "ṣafar", "her daim boş kalan", "orta", "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"],
+      [288, "صَفَرَة", "ṣafara", "her daim boş kalan (müennes)", "orta", ""],
+      [289, "صَفَرَان", "ṣafarān", "her daim boş kalan (iki)", "orta", ""],
+      [290, "صَفَرَتَان", "ṣafaratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [291, "صَفَرُون", "ṣafarūn", "her daim boş kalanlar", "orta", ""],
+      [292, "صَفَرِين", "ṣafarīn", "her daim boş kalanlar", "orta", ""],
+      [293, "صَفَرَات", "ṣafarāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [294, "صَفْر", "ṣafr", "her daim boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [295, "صَفْرَة", "ṣafra", "her daim boş kalan (müennes)", "orta", ""],
+      [296, "صَفْرَان", "ṣafrān", "her daim boş kalan (iki)", "orta", ""],
+      [297, "صَفْرَتَان", "ṣafratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [298, "صَفْرُون", "ṣafrūn", "her daim boş kalanlar", "orta", ""],
+      [299, "صَفْرِين", "ṣafrīn", "her daim boş kalanlar", "orta", ""],
+      [300, "صَفْرَات", "ṣafrāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [301, "صُفُر", "ṣufur", "her daim boş kalan", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [302, "صُفُرَة", "ṣufura", "her daim boş kalan (müennes)", "orta", ""],
+      [303, "صُفُرَان", "ṣufurān", "her daim boş kalan (iki)", "orta", ""],
+      [304, "صُفُرَتَان", "ṣufuratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [305, "صُفُرُون", "ṣufurūn", "her daim boş kalanlar", "orta", ""],
+      [306, "صُفُرِين", "ṣufurīn", "her daim boş kalanlar", "orta", ""],
+      [307, "صُفُرَات", "ṣufurāt", "her daim boş kalanlar (müennes)", "orta", ""],
+      [308, "صَفْرَان", "ṣafrān", "her daim boş kalan", "orta", ""],
+      [309, "صَفْرَانَة", "ṣafrāna", "her daim boş kalan (müennes)", "orta", ""],
+      [310, "صَفْرَانَان", "ṣafrānān", "her daim boş kalan (iki)", "orta", ""],
+      [311, "صَفْرَانَتَان", "ṣafrānatān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [312, "صَفْرَانُون", "ṣafrānūn", "her daim boş kalanlar", "orta", ""],
+      [313, "صَفْرَانِين", "ṣafrānīn", "her daim boş kalanlar", "orta", ""],
+      [314, "صَفْرَانَات", "ṣafrānāt", "her daim boş kalanlar (müennes)", "orta", ""],
       [
         315,
         "صُفَار",
         "ṣufār",
-        "sürekli boş kalan",
+        "her daim boş kalan",
         "orta",
         "Vikisözlük: yellow pigment, yellow dye, yellow coloring"
       ],
-      [316, "صُفَارَة", "ṣufāra", "sürekli boş kalan (dişi)", "orta", ""],
-      [317, "صُفَارَان", "ṣufārān", "iki sürekli boş kalan", "orta", ""],
-      [318, "صُفَارَتَان", "ṣufāratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [319, "صُفَارُون", "ṣufārūn", "sürekli boş kalanlar", "orta", ""],
-      [320, "صُفَارِين", "ṣufārīn", "sürekli boş kalanlar", "orta", ""],
-      [321, "صُفَارَات", "ṣufārāt", "sürekli boş kalanlar (dişi)", "orta", ""],
+      [316, "صُفَارَة", "ṣufāra", "her daim boş kalan (müennes)", "orta", ""],
+      [317, "صُفَارَان", "ṣufārān", "her daim boş kalan (iki)", "orta", ""],
+      [318, "صُفَارَتَان", "ṣufāratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [319, "صُفَارُون", "ṣufārūn", "her daim boş kalanlar", "orta", ""],
+      [320, "صُفَارِين", "ṣufārīn", "her daim boş kalanlar", "orta", ""],
+      [321, "صُفَارَات", "ṣufārāt", "her daim boş kalanlar (müennes)", "orta", ""],
       [
         322,
         "صَفَار",
         "ṣafār",
-        "sürekli boş kalan",
+        "her daim boş kalan",
         "orta",
         "Vikisözlük: yellow pigment, yellow dye, yellow coloring"
       ],
-      [323, "صَفَارَة", "ṣafāra", "sürekli boş kalan (dişi)", "orta", ""],
-      [324, "صَفَارَان", "ṣafārān", "iki sürekli boş kalan", "orta", ""],
-      [325, "صَفَارَتَان", "ṣafāratān", "iki sürekli boş kalan (dişi)", "orta", ""],
-      [326, "صَفَارُون", "ṣafārūn", "sürekli boş kalanlar", "orta", ""],
-      [327, "صَفَارِين", "ṣafārīn", "sürekli boş kalanlar", "orta", ""],
-      [328, "صَفَارَات", "ṣafārāt", "sürekli boş kalanlar (dişi)", "orta", ""]
+      [323, "صَفَارَة", "ṣafāra", "her daim boş kalan (müennes)", "orta", ""],
+      [324, "صَفَارَان", "ṣafārān", "her daim boş kalan (iki)", "orta", ""],
+      [325, "صَفَارَتَان", "ṣafāratān", "her daim boş kalan (iki, müennes)", "orta", ""],
+      [326, "صَفَارُون", "ṣafārūn", "her daim boş kalanlar", "orta", ""],
+      [327, "صَفَارِين", "ṣafārīn", "her daim boş kalanlar", "orta", ""],
+      [328, "صَفَارَات", "ṣafārāt", "her daim boş kalanlar (müennes)", "orta", ""]
     ],
     "mübalağa": [
       [
         329,
         "صَفَّار",
         "ṣaffār",
-        "çok boş kalan",
+        "işi boş kalma olan",
         "orta",
         "Vikisözlük: Schimpera arabica (the leaves of it serve for salad greens)"
       ],
@@ -474,96 +488,96 @@
         330,
         "صَفَّارَة",
         "ṣaffāra",
-        "çok boş kalan (dişi)",
+        "işi boş kalma olan (müennes)",
         "orta",
         "Vikisözlük: what makes a shrill sound to raise attention, siren, whistle, and the "
       ],
-      [331, "صَفَّارَان", "ṣaffārān", "iki çok boş kalan", "orta", ""],
-      [332, "صَفَّارَتَان", "ṣaffāratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [333, "صَفَّارُون", "ṣaffārūn", "çok boş kalanlar", "orta", ""],
-      [334, "صَفَّارِين", "ṣaffārīn", "çok boş kalanlar", "orta", ""],
-      [335, "صَفَّارَات", "ṣaffārāt", "çok boş kalanlar (dişi)", "orta", ""],
+      [331, "صَفَّارَان", "ṣaffārān", "işi boş kalma olan (iki)", "orta", ""],
+      [332, "صَفَّارَتَان", "ṣaffāratān", "işi boş kalma olan (iki, müennes)", "orta", ""],
+      [333, "صَفَّارُون", "ṣaffārūn", "işi boş kalma olanlar", "orta", ""],
+      [334, "صَفَّارِين", "ṣaffārīn", "işi boş kalma olanlar", "orta", ""],
+      [335, "صَفَّارَات", "ṣaffārāt", "işi boş kalma olanlar (müennes)", "orta", ""],
       [
         336,
         "صَفَّارَة",
         "ṣaffāra",
-        "çok boş kalan",
+        "pek çok boş kalan",
         "orta",
         "Vikisözlük: what makes a shrill sound to raise attention, siren, whistle, and the "
       ],
-      [337, "صَفَّارَتَان", "ṣaffāratān", "iki çok boş kalan", "orta", ""],
-      [338, "صَفَّارَات", "ṣaffārāt", "çok boş kalanlar (dişi)", "orta", ""],
+      [337, "صَفَّارَتَان", "ṣaffāratān", "pek çok boş kalan (iki)", "orta", ""],
+      [338, "صَفَّارَات", "ṣaffārāt", "pek çok boş kalanlar (müennes)", "orta", ""],
       [339, "صَفُور", "ṣafūr", "çok boş kalan", "orta", ""],
-      [340, "صَفُورَة", "ṣafūra", "çok boş kalan (dişi)", "orta", ""],
-      [341, "صَفُورَان", "ṣafūrān", "iki çok boş kalan", "orta", ""],
-      [342, "صَفُورَتَان", "ṣafūratān", "iki çok boş kalan (dişi)", "orta", ""],
+      [340, "صَفُورَة", "ṣafūra", "çok boş kalan (müennes)", "orta", ""],
+      [341, "صَفُورَان", "ṣafūrān", "çok boş kalan (iki)", "orta", ""],
+      [342, "صَفُورَتَان", "ṣafūratān", "çok boş kalan (iki, müennes)", "orta", ""],
       [343, "صَفُورُون", "ṣafūrūn", "çok boş kalanlar", "orta", ""],
       [344, "صَفُورِين", "ṣafūrīn", "çok boş kalanlar", "orta", ""],
-      [345, "صَفُورَات", "ṣafūrāt", "çok boş kalanlar (dişi)", "orta", ""],
-      [346, "صَفُّور", "ṣaffūr", "çok boş kalan", "orta", ""],
-      [347, "صَفُّورَة", "ṣaffūra", "çok boş kalan (dişi)", "orta", ""],
-      [348, "صَفُّورَان", "ṣaffūrān", "iki çok boş kalan", "orta", ""],
-      [349, "صَفُّورَتَان", "ṣaffūratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [350, "صَفُّورُون", "ṣaffūrūn", "çok boş kalanlar", "orta", ""],
-      [351, "صَفُّورِين", "ṣaffūrīn", "çok boş kalanlar", "orta", ""],
-      [352, "صَفُّورَات", "ṣaffūrāt", "çok boş kalanlar (dişi)", "orta", ""],
-      [353, "صِفِّير", "ṣiffīr", "çok boş kalan", "orta", ""],
-      [354, "صِفِّيرَة", "ṣiffīra", "çok boş kalan (dişi)", "orta", ""],
-      [355, "صِفِّيرَان", "ṣiffīrān", "iki çok boş kalan", "orta", ""],
-      [356, "صِفِّيرَتَان", "ṣiffīratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [357, "صِفِّيرُون", "ṣiffīrūn", "çok boş kalanlar", "orta", ""],
-      [358, "صِفِّيرِين", "ṣiffīrīn", "çok boş kalanlar", "orta", ""],
-      [359, "صِفِّيرَات", "ṣiffīrāt", "çok boş kalanlar (dişi)", "orta", ""],
-      [360, "صُفَّار", "ṣuffār", "çok boş kalan", "orta", ""],
-      [361, "صُفَّارَة", "ṣuffāra", "çok boş kalan (dişi)", "orta", ""],
-      [362, "صُفَّارَان", "ṣuffārān", "iki çok boş kalan", "orta", ""],
-      [363, "صُفَّارَتَان", "ṣuffāratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [364, "صُفَّارُون", "ṣuffārūn", "çok boş kalanlar", "orta", ""],
-      [365, "صُفَّارِين", "ṣuffārīn", "çok boş kalanlar", "orta", ""],
-      [366, "صُفَّارَات", "ṣuffārāt", "çok boş kalanlar (dişi)", "orta", ""],
-      [367, "مِصْفَار", "miṣfār", "çok boş kalan", "orta", ""],
-      [368, "مِصْفَارَة", "miṣfāra", "çok boş kalan (dişi)", "orta", ""],
-      [369, "مِصْفَارَان", "miṣfārān", "iki çok boş kalan", "orta", ""],
-      [370, "مِصْفَارَتَان", "miṣfāratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [371, "مِصْفَارُون", "miṣfārūn", "çok boş kalanlar", "orta", ""],
-      [372, "مِصْفَارِين", "miṣfārīn", "çok boş kalanlar", "orta", ""],
-      [373, "مِصْفَارَات", "miṣfārāt", "çok boş kalanlar (dişi)", "orta", ""],
-      [374, "مِصْفِير", "miṣfīr", "çok boş kalan", "orta", ""],
-      [375, "مِصْفِيرَة", "miṣfīra", "çok boş kalan (dişi)", "orta", ""],
-      [376, "مِصْفِيرَان", "miṣfīrān", "iki çok boş kalan", "orta", ""],
-      [377, "مِصْفِيرَتَان", "miṣfīratān", "iki çok boş kalan (dişi)", "orta", ""],
-      [378, "مِصْفِيرُون", "miṣfīrūn", "çok boş kalanlar", "orta", ""],
-      [379, "مِصْفِيرِين", "miṣfīrīn", "çok boş kalanlar", "orta", ""],
-      [380, "مِصْفِيرَات", "miṣfīrāt", "çok boş kalanlar (dişi)", "orta", ""],
+      [345, "صَفُورَات", "ṣafūrāt", "çok boş kalanlar (müennes)", "orta", ""],
+      [346, "صَفُّور", "ṣaffūr", "pek çok boş kalan", "orta", ""],
+      [347, "صَفُّورَة", "ṣaffūra", "pek çok boş kalan (müennes)", "orta", ""],
+      [348, "صَفُّورَان", "ṣaffūrān", "pek çok boş kalan (iki)", "orta", ""],
+      [349, "صَفُّورَتَان", "ṣaffūratān", "pek çok boş kalan (iki, müennes)", "orta", ""],
+      [350, "صَفُّورُون", "ṣaffūrūn", "pek çok boş kalanlar", "orta", ""],
+      [351, "صَفُّورِين", "ṣaffūrīn", "pek çok boş kalanlar", "orta", ""],
+      [352, "صَفُّورَات", "ṣaffūrāt", "pek çok boş kalanlar (müennes)", "orta", ""],
+      [353, "صِفِّير", "ṣiffīr", "boş kalmada aşırı giden", "orta", ""],
+      [354, "صِفِّيرَة", "ṣiffīra", "boş kalmada aşırı giden (müennes)", "orta", ""],
+      [355, "صِفِّيرَان", "ṣiffīrān", "boş kalmada aşırı giden (iki)", "orta", ""],
+      [356, "صِفِّيرَتَان", "ṣiffīratān", "boş kalmada aşırı giden (iki, müennes)", "orta", ""],
+      [357, "صِفِّيرُون", "ṣiffīrūn", "boş kalmada aşırı gidenler", "orta", ""],
+      [358, "صِفِّيرِين", "ṣiffīrīn", "boş kalmada aşırı gidenler", "orta", ""],
+      [359, "صِفِّيرَات", "ṣiffīrāt", "boş kalmada aşırı gidenler (müennes)", "orta", ""],
+      [360, "صُفَّار", "ṣuffār", "son derece boş kalan", "orta", ""],
+      [361, "صُفَّارَة", "ṣuffāra", "son derece boş kalan (müennes)", "orta", ""],
+      [362, "صُفَّارَان", "ṣuffārān", "son derece boş kalan (iki)", "orta", ""],
+      [363, "صُفَّارَتَان", "ṣuffāratān", "son derece boş kalan (iki, müennes)", "orta", ""],
+      [364, "صُفَّارُون", "ṣuffārūn", "son derece boş kalanlar", "orta", ""],
+      [365, "صُفَّارِين", "ṣuffārīn", "son derece boş kalanlar", "orta", ""],
+      [366, "صُفَّارَات", "ṣuffārāt", "son derece boş kalanlar (müennes)", "orta", ""],
+      [367, "مِصْفَار", "miṣfār", "boş kalmayı âdet edinmiş", "orta", ""],
+      [368, "مِصْفَارَة", "miṣfāra", "boş kalmayı âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِصْفَارَان", "miṣfārān", "boş kalmayı âdet edinmiş (iki)", "orta", ""],
+      [370, "مِصْفَارَتَان", "miṣfāratān", "boş kalmayı âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِصْفَارُون", "miṣfārūn", "boş kalmayı âdet edinmişler", "orta", ""],
+      [372, "مِصْفَارِين", "miṣfārīn", "boş kalmayı âdet edinmişler", "orta", ""],
+      [373, "مِصْفَارَات", "miṣfārāt", "boş kalmayı âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِصْفِير", "miṣfīr", "boş kalmaya düşkün", "orta", ""],
+      [375, "مِصْفِيرَة", "miṣfīra", "boş kalmaya düşkün (müennes)", "orta", ""],
+      [376, "مِصْفِيرَان", "miṣfīrān", "boş kalmaya düşkün (iki)", "orta", ""],
+      [377, "مِصْفِيرَتَان", "miṣfīratān", "boş kalmaya düşkün (iki, müennes)", "orta", ""],
+      [378, "مِصْفِيرُون", "miṣfīrūn", "boş kalmaya düşkünler", "orta", ""],
+      [379, "مِصْفِيرِين", "miṣfīrīn", "boş kalmaya düşkünler", "orta", ""],
+      [380, "مِصْفِيرَات", "miṣfīrāt", "boş kalmaya düşkünler (müennes)", "orta", ""],
       [381, "صَفِير", "ṣafīr", "çok boş kalan", "orta", "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"],
-      [382, "صَفِيرَة", "ṣafīra", "çok boş kalan (dişi)", "orta", ""],
-      [383, "صَفِيرَان", "ṣafīrān", "iki çok boş kalan", "orta", ""],
-      [384, "صَفِيرَتَان", "ṣafīratān", "iki çok boş kalan (dişi)", "orta", ""],
+      [382, "صَفِيرَة", "ṣafīra", "çok boş kalan (müennes)", "orta", ""],
+      [383, "صَفِيرَان", "ṣafīrān", "çok boş kalan (iki)", "orta", ""],
+      [384, "صَفِيرَتَان", "ṣafīratān", "çok boş kalan (iki, müennes)", "orta", ""],
       [385, "صَفِيرُون", "ṣafīrūn", "çok boş kalanlar", "orta", ""],
       [386, "صَفِيرِين", "ṣafīrīn", "çok boş kalanlar", "orta", ""],
-      [387, "صَفِيرَات", "ṣafīrāt", "çok boş kalanlar (dişi)", "orta", ""],
+      [387, "صَفِيرَات", "ṣafīrāt", "çok boş kalanlar (müennes)", "orta", ""],
       [388, "صَفَّر", "ṣaffar", "çok boş kalan", "orta", ""],
-      [389, "صَفَّرَة", "ṣaffara", "çok boş kalan (dişi)", "orta", ""],
-      [390, "صَفَّرَان", "ṣaffarān", "iki çok boş kalan", "orta", ""],
-      [391, "صَفَّرَتَان", "ṣaffaratān", "iki çok boş kalan (dişi)", "orta", ""],
+      [389, "صَفَّرَة", "ṣaffara", "çok boş kalan (müennes)", "orta", ""],
+      [390, "صَفَّرَان", "ṣaffarān", "çok boş kalan (iki)", "orta", ""],
+      [391, "صَفَّرَتَان", "ṣaffaratān", "çok boş kalan (iki, müennes)", "orta", ""],
       [392, "صَفَّرُون", "ṣaffarūn", "çok boş kalanlar", "orta", ""],
       [393, "صَفَّرِين", "ṣaffarīn", "çok boş kalanlar", "orta", ""],
-      [394, "صَفَّرَات", "ṣaffarāt", "çok boş kalanlar (dişi)", "orta", ""]
+      [394, "صَفَّرَات", "ṣaffarāt", "çok boş kalanlar (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "صَفْرِيّ", "ṣafriyy", "boş kalmaya ilgili", "orta", ""],
-      [397, "صَفَرِيّ", "ṣafariyy", "boş kalmaya ilgili", "orta", ""],
-      [399, "صِفْرِيّ", "ṣifriyy", "boş kalmaya ilgili", "orta", "Vikisözlük: zeroth"],
-      [401, "صُفْرِيّ", "ṣufriyy", "boş kalmaya ilgili", "orta", ""],
-      [403, "صِفَارِيّ", "ṣifāriyy", "boş kalmaya ilgili", "orta", ""],
-      [405, "صَافِرِيّ", "ṣāfiriyy", "boş kalmaya ilgili", "orta", ""],
-      [407, "مَصْفُورِيّ", "maṣfūriyy", "boş kalmaya ilgili", "orta", ""],
-      [409, "صَفِيرِيّ", "ṣafīriyy", "boş kalmaya ilgili", "orta", ""],
-      [411, "مَصْفَرِيّ", "maṣfariyy", "boş kalmaya ilgili", "orta", ""],
-      [413, "تَصْفِيرِيّ", "taṣfīriyy", "boş kalmaya ilgili", "orta", ""],
-      [415, "تَصَافُرِيّ", "taṣāfuriyy", "boş kalmaya ilgili", "orta", ""],
-      [417, "إِصْفَارِيّ", "ʾiṣfāriyy", "boş kalmaya ilgili", "orta", ""],
-      [419, "اِصْطِفَارِيّ", "iṣṭifāriyy", "boş kalmaya ilgili", "orta", ""]
+      [395, "صَفْرِيّ", "ṣafriyy", "boş kalma ile ilgili", "orta", ""],
+      [397, "صَفَرِيّ", "ṣafariyy", "boş kalma ile ilgili", "orta", ""],
+      [399, "صِفْرِيّ", "ṣifriyy", "boş kalma ile ilgili", "orta", "Vikisözlük: zeroth"],
+      [401, "صُفْرِيّ", "ṣufriyy", "boş kalma ile ilgili", "orta", ""],
+      [403, "صِفَارِيّ", "ṣifāriyy", "boş kalma ile ilgili", "orta", ""],
+      [405, "صَافِرِيّ", "ṣāfiriyy", "boş kalma ile ilgili", "orta", ""],
+      [407, "مَصْفُورِيّ", "maṣfūriyy", "boş kalma ile ilgili", "orta", ""],
+      [409, "صَفِيرِيّ", "ṣafīriyy", "boş kalma ile ilgili", "orta", ""],
+      [411, "مَصْفَرِيّ", "maṣfariyy", "boş kalma ile ilgili", "orta", ""],
+      [413, "تَصْفِيرِيّ", "taṣfīriyy", "boş kalma ile ilgili", "orta", ""],
+      [415, "تَصَافُرِيّ", "taṣāfuriyy", "boş kalma ile ilgili", "orta", ""],
+      [417, "إِصْفَارِيّ", "ʾiṣfāriyy", "boş kalma ile ilgili", "orta", ""],
+      [419, "اِصْطِفَارِيّ", "iṣṭifāriyy", "boş kalma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "صَفْرِيَّة", "ṣafriyya", "boş kalanlık", "orta", ""],
@@ -591,7 +605,7 @@
         "Vikisözlük: masdar (bâb I): to be empty, to be devoid, to be vacant"
       ],
       [423, "صِفَار", "ṣifār", "boş kalma", "orta", ""],
-      [424, "صُفْر", "ṣufr", "boş kalma", "orta", "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"],
+      [424, "صُفْر", "ṣufr", "sarı", "kuran", "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"],
       [425, "صَفَارَة", "ṣafāra", "boş kalma", "orta", ""],
       [426, "صِفَارَة", "ṣifāra", "boş kalma", "orta", ""],
       [427, "صُفُورَة", "ṣufūra", "boş kalma", "orta", ""],
@@ -599,130 +613,109 @@
       [429, "صِفْر", "ṣifr", "boş kalma", "orta", "Vikisözlük: empty; void; devoid; free from"]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "صَافُور", "ṣāfūr", "boş kalanlar (topluluk adı)", "orta", ""],
-      [432, "صَفَرَة", "ṣafara", "boş kalanlar (topluluk adı)", "orta", ""],
-      [433, "صُفَرَة", "ṣufara", "boş kalanlar (topluluk adı)", "orta", ""],
-      [434, "أُصْفُورَة", "ʾuṣfūra", "boş kalanlar (topluluk adı)", "orta", ""],
-      [435, "صَوْفَر", "ṣawfar", "boş kalanlar (topluluk adı)", "orta", ""],
-      [437, "صَيْفَر", "ṣayfar", "boş kalanlar (topluluk adı)", "orta", ""],
-      [439, "صَفْر", "ṣafr", "boş kalanlar (topluluk adı)", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [430, "صَافُور", "ṣāfūr", "boş kalma türünden şey", "orta", ""],
+      [432, "صَفَرَة", "ṣafara", "boş kalma türünden şey", "orta", ""],
+      [433, "صُفَرَة", "ṣufara", "boş kalma türünden şey", "orta", ""],
+      [434, "أُصْفُورَة", "ʾuṣfūra", "boş kalma türünden şey", "orta", ""],
+      [435, "صَوْفَر", "ṣawfar", "boş kalma türünden şey", "orta", ""],
+      [437, "صَيْفَر", "ṣayfar", "boş kalma türünden şey", "orta", ""],
+      [439, "صَفْر", "ṣafr", "boş kalma türünden şey", "orta", "Vikisözlük: empty; void; devoid; free from"],
       [
         441,
         "صَفَر",
         "ṣafar",
-        "boş kalanlar (topluluk adı)",
+        "boş kalma türünden şey",
         "orta",
         "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"
       ],
-      [443, "صِفْر", "ṣifr", "boş kalanlar (topluluk adı)", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [
-        445,
-        "صُفْر",
-        "ṣufr",
-        "boş kalanlar (topluluk adı)",
-        "orta",
-        "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"
-      ],
+      [443, "صِفْر", "ṣifr", "boş kalma türünden şey", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [445, "صُفْر", "ṣufr", "sarı", "kuran", "Vikisözlük: plural of أَصْفَر (ʔaṣfar, “yellow”)"],
       [
         447,
         "صَفِير",
         "ṣafīr",
-        "boş kalanlar (topluluk adı)",
+        "boş kalma türünden şey",
         "orta",
         "Vikisözlük: verbal noun of صَفَرَ (ṣafara) (form I)"
       ],
-      [449, "صِفَر", "ṣifar", "boş kalanlar (topluluk adı)", "orta", ""],
-      [451, "صُفُر", "ṣufur", "boş kalanlar (topluluk adı)", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [449, "صِفَر", "ṣifar", "boş kalma türünden şey", "orta", ""],
+      [451, "صُفُر", "ṣufur", "boş kalma türünden şey", "orta", "Vikisözlük: empty; void; devoid; free from"],
       [
         453,
         "صَفَار",
         "ṣafār",
-        "boş kalanlar (topluluk adı)",
+        "boş kalma türünden şey",
         "orta",
         "Vikisözlük: yellow pigment, yellow dye, yellow coloring"
       ]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "صَافُورَة", "ṣāfūra", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [436, "صَوْفَرَة", "ṣawfara", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [438, "صَيْفَرَة", "ṣayfara", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [440, "صَفْرَة", "ṣafra", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [442, "صَفَرَة", "ṣafara", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [444, "صِفْرَة", "ṣifra", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [446, "صُفْرَة", "ṣufra", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [448, "صَفِيرَة", "ṣafīra", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [450, "صِفَرَة", "ṣifara", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [452, "صُفُرَة", "ṣufura", "bir tane boş kalanlar (topluluk adı)", "orta", ""],
-      [454, "صَفَارَة", "ṣafāra", "bir tane boş kalanlar (topluluk adı)", "orta", ""]
+      [431, "صَافُورَة", "ṣāfūra", "boş kalma türünden bir tane", "orta", ""],
+      [436, "صَوْفَرَة", "ṣawfara", "boş kalma türünden bir tane", "orta", ""],
+      [438, "صَيْفَرَة", "ṣayfara", "boş kalma türünden bir tane", "orta", ""],
+      [440, "صَفْرَة", "ṣafra", "boş kalma türünden bir tane", "orta", ""],
+      [442, "صَفَرَة", "ṣafara", "boş kalma türünden bir tane", "orta", ""],
+      [444, "صِفْرَة", "ṣifra", "boş kalma türünden bir tane", "orta", ""],
+      [446, "صُفْرَة", "ṣufra", "boş kalma türünden bir tane", "orta", ""],
+      [448, "صَفِيرَة", "ṣafīra", "boş kalma türünden bir tane", "orta", ""],
+      [450, "صِفَرَة", "ṣifara", "boş kalma türünden bir tane", "orta", ""],
+      [452, "صُفُرَة", "ṣufura", "boş kalma türünden bir tane", "orta", ""],
+      [454, "صَفَارَة", "ṣafāra", "boş kalma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَصْفَار", "ʾaṣfār", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [456, "أَصْفِرَة", "ʾaṣfira", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [457, "أَصَافِر", "ʾaṣāfir", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [458, "أَصَافِير", "ʾaṣāfīr", "boş kalanlar (kırık çoğul)", "orta", ""],
+      [455, "أَصْفَار", "ʾaṣfār", "boş kalmalar", "orta", ""],
+      [456, "أَصْفِرَة", "ʾaṣfira", "boş kalmalar", "orta", ""],
+      [457, "أَصَافِر", "ʾaṣāfir", "boş kalmalar", "orta", ""],
+      [458, "أَصَافِير", "ʾaṣāfīr", "boş kalmalar", "orta", ""],
       [
         459,
         "صُفُور",
         "ṣufūr",
-        "boş kalanlar (kırık çoğul)",
+        "boş kalmalar",
         "orta",
         "Vikisözlük: masdar (bâb I): to be empty, to be devoid, to be vacant"
       ],
-      [460, "صُفُر", "ṣufur", "boş kalanlar (kırık çoğul)", "orta", "Vikisözlük: empty; void; devoid; free from"],
-      [461, "صِفَار", "ṣifār", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [462, "صِفَر", "ṣifar", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [463, "صِفَرَة", "ṣifara", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [464, "صُفَر", "ṣufar", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [465, "صُفَراء", "ṣufarāʾ", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [466, "صَفَرَة", "ṣafara", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [467, "صُفَّار", "ṣuffār", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [
-        468,
-        "صَفَار",
-        "ṣafār",
-        "boş kalanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: yellow pigment, yellow dye, yellow coloring"
-      ],
-      [
-        469,
-        "صَفَر",
-        "ṣafar",
-        "boş kalanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"
-      ],
-      [470, "مَصَافِر", "maṣāfir", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [471, "مَصَافِير", "maṣāfīr", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [472, "صَوَافِر", "ṣawāfir", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [473, "أَصْفُر", "ʾaṣfur", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [474, "صُفَّر", "ṣuffar", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [475, "صَفَائِر", "ṣafāʾir", "boş kalanlar (kırık çoğul)", "orta", ""],
-      [476, "صُفَيْر", "ṣufayr", "boş kalanlar (kırık çoğul)", "orta", ""]
+      [460, "صُفُر", "ṣufur", "boş kalmalar", "orta", "Vikisözlük: empty; void; devoid; free from"],
+      [461, "صِفَار", "ṣifār", "boş kalmalar", "orta", ""],
+      [462, "صِفَر", "ṣifar", "boş kalmalar", "orta", ""],
+      [463, "صِفَرَة", "ṣifara", "boş kalmalar", "orta", ""],
+      [464, "صُفَر", "ṣufar", "boş kalmalar", "orta", ""],
+      [465, "صُفَراء", "ṣufarāʾ", "boş kalmalar", "orta", ""],
+      [466, "صَفَرَة", "ṣafara", "boş kalmalar", "orta", ""],
+      [467, "صُفَّار", "ṣuffār", "boş kalmalar", "orta", ""],
+      [468, "صَفَار", "ṣafār", "boş kalmalar", "orta", "Vikisözlük: yellow pigment, yellow dye, yellow coloring"],
+      [469, "صَفَر", "ṣafar", "boş kalmalar", "orta", "Vikisözlük: verbal noun of صَفِرَ (ṣafira) (form I)"],
+      [470, "مَصَافِر", "maṣāfir", "boş kalmalar", "orta", ""],
+      [471, "مَصَافِير", "maṣāfīr", "boş kalmalar", "orta", ""],
+      [472, "صَوَافِر", "ṣawāfir", "boş kalmalar", "orta", ""],
+      [473, "أَصْفُر", "ʾaṣfur", "boş kalmalar", "orta", ""],
+      [474, "صُفَّر", "ṣuffar", "boş kalmalar", "orta", ""],
+      [475, "صَفَائِر", "ṣafāʾir", "boş kalmalar", "orta", ""],
+      [476, "صُفَيْر", "ṣufayr", "boş kalmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَصْفَارَات", "ʾaṣfārāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [478, "أَصْفِرَات", "ʾaṣfirāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [479, "أَصَافِرَات", "ʾaṣāfirāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [480, "أَصَافِيرَات", "ʾaṣāfīrāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [481, "صُفُورَات", "ṣufūrāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [482, "صُفُرَات", "ṣufurāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [483, "صِفَارَات", "ṣifārāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [484, "صِفَرَات", "ṣifarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [485, "صِفَرَات", "ṣifarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [486, "صُفَرَات", "ṣufarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [487, "صُفَراآت", "ṣufarāʾāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [488, "صَفَرَات", "ṣafarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [489, "صُفَّارَات", "ṣuffārāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [490, "صَفَارَات", "ṣafārāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [491, "صَفَرَات", "ṣafarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [492, "مَصَافِرَات", "maṣāfirāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [493, "مَصَافِيرَات", "maṣāfīrāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [494, "صَوَافِرَات", "ṣawāfirāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [495, "أَصْفُرَات", "ʾaṣfurāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [496, "صُفَّرَات", "ṣuffarāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [497, "صَفَائِرَات", "ṣafāʾirāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""],
-      [498, "صُفَيْرَات", "ṣufayrāt", "boş kalanlar (çoğulun çoğulu)", "orta", ""]
+      [477, "أَصْفَارَات", "ʾaṣfārāt", "boş kalmalar topluluğu", "orta", ""],
+      [478, "أَصْفِرَات", "ʾaṣfirāt", "boş kalmalar topluluğu", "orta", ""],
+      [479, "أَصَافِرَات", "ʾaṣāfirāt", "boş kalmalar topluluğu", "orta", ""],
+      [480, "أَصَافِيرَات", "ʾaṣāfīrāt", "boş kalmalar topluluğu", "orta", ""],
+      [481, "صُفُورَات", "ṣufūrāt", "boş kalmalar topluluğu", "orta", ""],
+      [482, "صُفُرَات", "ṣufurāt", "boş kalmalar topluluğu", "orta", ""],
+      [483, "صِفَارَات", "ṣifārāt", "boş kalmalar topluluğu", "orta", ""],
+      [484, "صِفَرَات", "ṣifarāt", "boş kalmalar topluluğu", "orta", ""],
+      [485, "صِفَرَات", "ṣifarāt", "boş kalmalar topluluğu", "orta", ""],
+      [486, "صُفَرَات", "ṣufarāt", "boş kalmalar topluluğu", "orta", ""],
+      [487, "صُفَراآت", "ṣufarāʾāt", "boş kalmalar topluluğu", "orta", ""],
+      [488, "صَفَرَات", "ṣafarāt", "boş kalmalar topluluğu", "orta", ""],
+      [489, "صُفَّارَات", "ṣuffārāt", "boş kalmalar topluluğu", "orta", ""],
+      [490, "صَفَارَات", "ṣafārāt", "boş kalmalar topluluğu", "orta", ""],
+      [491, "صَفَرَات", "ṣafarāt", "boş kalmalar topluluğu", "orta", ""],
+      [492, "مَصَافِرَات", "maṣāfirāt", "boş kalmalar topluluğu", "orta", ""],
+      [493, "مَصَافِيرَات", "maṣāfīrāt", "boş kalmalar topluluğu", "orta", ""],
+      [494, "صَوَافِرَات", "ṣawāfirāt", "boş kalmalar topluluğu", "orta", ""],
+      [495, "أَصْفُرَات", "ʾaṣfurāt", "boş kalmalar topluluğu", "orta", ""],
+      [496, "صُفَّرَات", "ṣuffarāt", "boş kalmalar topluluğu", "orta", ""],
+      [497, "صَفَائِرَات", "ṣafāʾirāt", "boş kalmalar topluluğu", "orta", ""],
+      [498, "صُفَيْرَات", "ṣufayrāt", "boş kalmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

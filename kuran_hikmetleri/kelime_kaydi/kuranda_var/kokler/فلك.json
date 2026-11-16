@@ -10,7 +10,7 @@
     "masdar · sülâsî mücerred": [
       [0, "فَلْك", "falk", "gök yörüngesi", "kontrol", ""],
       [1, "فِلْك", "filk", "gök yörüngesi", "kontrol", ""],
-      [2, "فُلْك", "fulk", "gök yörüngesi", "kontrol", ""],
+      [2, "فُلْك", "fulk", "gemi", "kuran", "Kur'ân"],
       [3, "فَلَك", "falak", "gök yörüngesi", "kontrol", "Vikisözlük: orbit, rounded course"],
       [4, "فِلَك", "filak", "gök yörüngesi", "kontrol", ""],
       [5, "فُلُك", "fuluk", "gök yörüngesi", "kontrol", ""],
@@ -39,143 +39,157 @@
       [28, "مَفْلِكَة", "maflika", "gök yörüngesi", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَفْلِيك", "taflīk", "gök yörüngesi olma", "kontrol", ""],
-      [30, "تَفْلِكَة", "taflika", "gök yörüngesi olma", "kontrol", ""],
-      [31, "فِلِّاك", "fillāk", "gök yörüngesi olma", "kontrol", ""]
+      [29, "تَفْلِيك", "taflīk", "çokça gök yörüngesi olma", "kontrol", ""],
+      [30, "تَفْلِكَة", "taflika", "çokça gök yörüngesi olma", "kontrol", ""],
+      [31, "فِلِّاك", "fillāk", "çokça gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَفْلِيكَة", "taflīka", "bir kere gök yörüngesi olma", "kontrol", ""],
-      [33, "فِلِّاكَة", "fillāka", "bir kere gök yörüngesi olma", "kontrol", ""]
+      [32, "تَفْلِيكَة", "taflīka", "bir kere çokça gök yörüngesi olma", "kontrol", ""],
+      [33, "فِلِّاكَة", "fillāka", "bir kere çokça gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُفَلِّك", "mufallik", "gök yörüngesi olan", "kontrol", ""],
-      [35, "مُفَلِّكَة", "mufallika", "gök yörüngesi olan (dişi)", "kontrol", ""],
-      [36, "مُفَلِّكَان", "mufallikān", "iki gök yörüngesi olan", "kontrol", ""],
-      [37, "مُفَلِّكَتَان", "mufallikatān", "iki gök yörüngesi olan (dişi)", "kontrol", ""],
-      [38, "مُفَلِّكُون", "mufallikūn", "gök yörüngesi olanlar", "kontrol", ""],
-      [39, "مُفَلِّكِين", "mufallikīn", "gök yörüngesi olanlar", "kontrol", ""],
-      [40, "مُفَلِّكَات", "mufallikāt", "gök yörüngesi olanlar (dişi)", "kontrol", ""]
+      [34, "مُفَلِّك", "mufallik", "çokça gök yörüngesi olan", "kontrol", ""],
+      [35, "مُفَلِّكَة", "mufallika", "çokça gök yörüngesi olan (müennes)", "kontrol", ""],
+      [36, "مُفَلِّكَان", "mufallikān", "çokça gök yörüngesi olan (iki)", "kontrol", ""],
+      [37, "مُفَلِّكَتَان", "mufallikatān", "çokça gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [38, "مُفَلِّكُون", "mufallikūn", "çokça gök yörüngesi olanlar", "kontrol", ""],
+      [39, "مُفَلِّكِين", "mufallikīn", "çokça gök yörüngesi olanlar", "kontrol", ""],
+      [40, "مُفَلِّكَات", "mufallikāt", "çokça gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُفَلَّك", "mufallak", "gök yörüngesi olunmuş", "kontrol", ""],
-      [42, "مُفَلَّكَة", "mufallaka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [43, "مُفَلَّكَان", "mufallakān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [44, "مُفَلَّكَتَان", "mufallakatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [45, "مُفَلَّكُون", "mufallakūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [46, "مُفَلَّكِين", "mufallakīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [47, "مُفَلَّكَات", "mufallakāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [41, "مُفَلَّك", "mufallak", "çokça gök yörüngesi olunan", "kontrol", ""],
+      [42, "مُفَلَّكَة", "mufallaka", "çokça gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [43, "مُفَلَّكَان", "mufallakān", "çokça gök yörüngesi olunan (iki)", "kontrol", ""],
+      [44, "مُفَلَّكَتَان", "mufallakatān", "çokça gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [45, "مُفَلَّكُون", "mufallakūn", "çokça gök yörüngesi olunanlar", "kontrol", ""],
+      [46, "مُفَلَّكِين", "mufallakīn", "çokça gök yörüngesi olunanlar", "kontrol", ""],
+      [47, "مُفَلَّكَات", "mufallakāt", "çokça gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُفَلَّك", "mufallak", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""]
+      [48, "مُفَلَّك", "mufallak", "çokça gök yörüngesi olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُفَالَكَة", "mufālaka", "gök yörüngesi oluşma", "kontrol", ""],
-      [50, "فِلَاك", "filāk", "gök yörüngesi oluşma", "kontrol", ""]
+      [49, "مُفَالَكَة", "mufālaka", "biriyle karşılıklı gök yörüngesi olma", "kontrol", ""],
+      [50, "فِلَاك", "filāk", "biriyle karşılıklı gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "فِلَاكَة", "filāka", "bir kere gök yörüngesi oluşma", "kontrol", ""]
+      [51, "فِلَاكَة", "filāka", "bir kere biriyle karşılıklı gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُفَالِك", "mufālik", "gök yörüngesi oluşan", "kontrol", ""],
-      [53, "مُفَالِكَة", "mufālika", "gök yörüngesi oluşan (dişi)", "kontrol", ""],
-      [54, "مُفَالِكَان", "mufālikān", "iki gök yörüngesi oluşan", "kontrol", ""],
-      [55, "مُفَالِكَتَان", "mufālikatān", "iki gök yörüngesi oluşan (dişi)", "kontrol", ""],
-      [56, "مُفَالِكُون", "mufālikūn", "gök yörüngesi oluşanlar", "kontrol", ""],
-      [57, "مُفَالِكِين", "mufālikīn", "gök yörüngesi oluşanlar", "kontrol", ""],
-      [58, "مُفَالِكَات", "mufālikāt", "gök yörüngesi oluşanlar (dişi)", "kontrol", ""]
+      [52, "مُفَالِك", "mufālik", "biriyle karşılıklı gök yörüngesi olan", "kontrol", ""],
+      [53, "مُفَالِكَة", "mufālika", "biriyle karşılıklı gök yörüngesi olan (müennes)", "kontrol", ""],
+      [54, "مُفَالِكَان", "mufālikān", "biriyle karşılıklı gök yörüngesi olan (iki)", "kontrol", ""],
+      [55, "مُفَالِكَتَان", "mufālikatān", "biriyle karşılıklı gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [56, "مُفَالِكُون", "mufālikūn", "biriyle karşılıklı gök yörüngesi olanlar", "kontrol", ""],
+      [57, "مُفَالِكِين", "mufālikīn", "biriyle karşılıklı gök yörüngesi olanlar", "kontrol", ""],
+      [58, "مُفَالِكَات", "mufālikāt", "biriyle karşılıklı gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُفَالَك", "mufālak", "gök yörüngesi oluşmuş", "kontrol", ""],
-      [60, "مُفَالَكَة", "mufālaka", "gök yörüngesi oluşmuş (dişi)", "kontrol", ""],
-      [61, "مُفَالَكَان", "mufālakān", "iki gök yörüngesi oluşmuş", "kontrol", ""],
-      [62, "مُفَالَكَتَان", "mufālakatān", "iki gök yörüngesi oluşmuş (dişi)", "kontrol", ""],
-      [63, "مُفَالَكُون", "mufālakūn", "gök yörüngesi oluşmuşlar", "kontrol", ""],
-      [64, "مُفَالَكِين", "mufālakīn", "gök yörüngesi oluşmuşlar", "kontrol", ""],
-      [65, "مُفَالَكَات", "mufālakāt", "gök yörüngesi oluşmuşlar (dişi)", "kontrol", ""]
+      [59, "مُفَالَك", "mufālak", "biriyle karşılıklı gök yörüngesi olunan", "kontrol", ""],
+      [60, "مُفَالَكَة", "mufālaka", "biriyle karşılıklı gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [61, "مُفَالَكَان", "mufālakān", "biriyle karşılıklı gök yörüngesi olunan (iki)", "kontrol", ""],
+      [62, "مُفَالَكَتَان", "mufālakatān", "biriyle karşılıklı gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [63, "مُفَالَكُون", "mufālakūn", "biriyle karşılıklı gök yörüngesi olunanlar", "kontrol", ""],
+      [64, "مُفَالَكِين", "mufālakīn", "biriyle karşılıklı gök yörüngesi olunanlar", "kontrol", ""],
+      [65, "مُفَالَكَات", "mufālakāt", "biriyle karşılıklı gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُفَالَك", "mufālak", "gök yörüngesi oluşma (yeri/zamanı)", "kontrol", ""]
+      [66, "مُفَالَك", "mufālak", "biriyle karşılıklı gök yörüngesi olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِفْلَاك", "ʾiflāk", "gök yörüngesi olma", "kontrol", ""]
+      [67, "إِفْلَاك", "ʾiflāk", "gök yörüngesi etme", "kontrol", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِفْلَاكَة", "ʾiflāka", "bir kere gök yörüngesi olma", "kontrol", ""]
+      [68, "إِفْلَاكَة", "ʾiflāka", "bir kere gök yörüngesi etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُفْلِك", "muflik", "gök yörüngesi olan", "kontrol", ""],
-      [70, "مُفْلِكَة", "muflika", "gök yörüngesi olan (dişi)", "kontrol", ""],
-      [71, "مُفْلِكَان", "muflikān", "iki gök yörüngesi olan", "kontrol", ""],
-      [72, "مُفْلِكَتَان", "muflikatān", "iki gök yörüngesi olan (dişi)", "kontrol", ""],
-      [73, "مُفْلِكُون", "muflikūn", "gök yörüngesi olanlar", "kontrol", ""],
-      [74, "مُفْلِكِين", "muflikīn", "gök yörüngesi olanlar", "kontrol", ""],
-      [75, "مُفْلِكَات", "muflikāt", "gök yörüngesi olanlar (dişi)", "kontrol", ""]
+      [69, "مُفْلِك", "muflik", "gök yörüngesi eden", "kontrol", ""],
+      [70, "مُفْلِكَة", "muflika", "gök yörüngesi eden (müennes)", "kontrol", ""],
+      [71, "مُفْلِكَان", "muflikān", "gök yörüngesi eden (iki)", "kontrol", ""],
+      [72, "مُفْلِكَتَان", "muflikatān", "gök yörüngesi eden (iki, müennes)", "kontrol", ""],
+      [73, "مُفْلِكُون", "muflikūn", "gök yörüngesi edenler", "kontrol", ""],
+      [74, "مُفْلِكِين", "muflikīn", "gök yörüngesi edenler", "kontrol", ""],
+      [75, "مُفْلِكَات", "muflikāt", "gök yörüngesi edenler (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُفْلَك", "muflak", "gök yörüngesi olunmuş", "kontrol", ""],
-      [77, "مُفْلَكَة", "muflaka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [78, "مُفْلَكَان", "muflakān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [79, "مُفْلَكَتَان", "muflakatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [80, "مُفْلَكُون", "muflakūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [81, "مُفْلَكِين", "muflakīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [82, "مُفْلَكَات", "muflakāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [76, "مُفْلَك", "muflak", "gök yörüngesi edilen", "kontrol", ""],
+      [77, "مُفْلَكَة", "muflaka", "gök yörüngesi edilen (müennes)", "kontrol", ""],
+      [78, "مُفْلَكَان", "muflakān", "gök yörüngesi edilen (iki)", "kontrol", ""],
+      [79, "مُفْلَكَتَان", "muflakatān", "gök yörüngesi edilen (iki, müennes)", "kontrol", ""],
+      [80, "مُفْلَكُون", "muflakūn", "gök yörüngesi edilenler", "kontrol", ""],
+      [81, "مُفْلَكِين", "muflakīn", "gök yörüngesi edilenler", "kontrol", ""],
+      [82, "مُفْلَكَات", "muflakāt", "gök yörüngesi edilenler (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُفْلَك", "muflak", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""]
+      [83, "مُفْلَك", "muflak", "gök yörüngesi etme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَفَلُّك", "tafalluk", "gök yörüngesi olunma", "kontrol", ""]
+      [84, "تَفَلُّك", "tafalluk", "kendini zorlayarak gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَفَلُّكَة", "tafalluka", "bir kere gök yörüngesi olunma", "kontrol", ""]
+      [85, "تَفَلُّكَة", "tafalluka", "bir kere kendini zorlayarak gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَفَلِّك", "mutafallik", "gök yörüngesi olunan", "kontrol", ""],
-      [87, "مُتَفَلِّكَة", "mutafallika", "gök yörüngesi olunan (dişi)", "kontrol", ""],
-      [88, "مُتَفَلِّكَان", "mutafallikān", "iki gök yörüngesi olunan", "kontrol", ""],
-      [89, "مُتَفَلِّكَتَان", "mutafallikatān", "iki gök yörüngesi olunan (dişi)", "kontrol", ""],
-      [90, "مُتَفَلِّكُون", "mutafallikūn", "gök yörüngesi olunanlar", "kontrol", ""],
-      [91, "مُتَفَلِّكِين", "mutafallikīn", "gök yörüngesi olunanlar", "kontrol", ""],
-      [92, "مُتَفَلِّكَات", "mutafallikāt", "gök yörüngesi olunanlar (dişi)", "kontrol", ""]
+      [86, "مُتَفَلِّك", "mutafallik", "kendini zorlayarak gök yörüngesi olan", "kontrol", ""],
+      [87, "مُتَفَلِّكَة", "mutafallika", "kendini zorlayarak gök yörüngesi olan (müennes)", "kontrol", ""],
+      [88, "مُتَفَلِّكَان", "mutafallikān", "kendini zorlayarak gök yörüngesi olan (iki)", "kontrol", ""],
+      [
+        89,
+        "مُتَفَلِّكَتَان",
+        "mutafallikatān",
+        "kendini zorlayarak gök yörüngesi olan (iki, müennes)",
+        "kontrol",
+        ""
+      ],
+      [90, "مُتَفَلِّكُون", "mutafallikūn", "kendini zorlayarak gök yörüngesi olanlar", "kontrol", ""],
+      [91, "مُتَفَلِّكِين", "mutafallikīn", "kendini zorlayarak gök yörüngesi olanlar", "kontrol", ""],
+      [92, "مُتَفَلِّكَات", "mutafallikāt", "kendini zorlayarak gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَفَلَّك", "mutafallak", "gök yörüngesi olunmuş", "kontrol", ""],
-      [94, "مُتَفَلَّكَة", "mutafallaka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [95, "مُتَفَلَّكَان", "mutafallakān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [96, "مُتَفَلَّكَتَان", "mutafallakatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [97, "مُتَفَلَّكُون", "mutafallakūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [98, "مُتَفَلَّكِين", "mutafallakīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [99, "مُتَفَلَّكَات", "mutafallakāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [93, "مُتَفَلَّك", "mutafallak", "kendini zorlayarak gök yörüngesi olunan", "kontrol", ""],
+      [94, "مُتَفَلَّكَة", "mutafallaka", "kendini zorlayarak gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [95, "مُتَفَلَّكَان", "mutafallakān", "kendini zorlayarak gök yörüngesi olunan (iki)", "kontrol", ""],
+      [
+        96,
+        "مُتَفَلَّكَتَان",
+        "mutafallakatān",
+        "kendini zorlayarak gök yörüngesi olunan (iki, müennes)",
+        "kontrol",
+        ""
+      ],
+      [97, "مُتَفَلَّكُون", "mutafallakūn", "kendini zorlayarak gök yörüngesi olunanlar", "kontrol", ""],
+      [98, "مُتَفَلَّكِين", "mutafallakīn", "kendini zorlayarak gök yörüngesi olunanlar", "kontrol", ""],
+      [99, "مُتَفَلَّكَات", "mutafallakāt", "kendini zorlayarak gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَفَلَّك", "mutafallak", "gök yörüngesi olunma (yeri/zamanı)", "kontrol", ""]
+      [100, "مُتَفَلَّك", "mutafallak", "kendini zorlayarak gök yörüngesi olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَفَالُك", "tafāluk", "gök yörüngesi oluşma", "kontrol", ""]
+      [101, "تَفَالُك", "tafāluk", "birbirine gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَفَالُكَة", "tafāluka", "bir kere gök yörüngesi oluşma", "kontrol", ""]
+      [102, "تَفَالُكَة", "tafāluka", "bir kere birbirine gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَفَالِك", "mutafālik", "gök yörüngesi oluşan", "kontrol", ""],
-      [104, "مُتَفَالِكَة", "mutafālika", "gök yörüngesi oluşan (dişi)", "kontrol", ""],
-      [105, "مُتَفَالِكَان", "mutafālikān", "iki gök yörüngesi oluşan", "kontrol", ""],
-      [106, "مُتَفَالِكَتَان", "mutafālikatān", "iki gök yörüngesi oluşan (dişi)", "kontrol", ""],
-      [107, "مُتَفَالِكُون", "mutafālikūn", "gök yörüngesi oluşanlar", "kontrol", ""],
-      [108, "مُتَفَالِكِين", "mutafālikīn", "gök yörüngesi oluşanlar", "kontrol", ""],
-      [109, "مُتَفَالِكَات", "mutafālikāt", "gök yörüngesi oluşanlar (dişi)", "kontrol", ""]
+      [103, "مُتَفَالِك", "mutafālik", "birbirine gök yörüngesi olan", "kontrol", ""],
+      [104, "مُتَفَالِكَة", "mutafālika", "birbirine gök yörüngesi olan (müennes)", "kontrol", ""],
+      [105, "مُتَفَالِكَان", "mutafālikān", "birbirine gök yörüngesi olan (iki)", "kontrol", ""],
+      [106, "مُتَفَالِكَتَان", "mutafālikatān", "birbirine gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [107, "مُتَفَالِكُون", "mutafālikūn", "birbirine gök yörüngesi olanlar", "kontrol", ""],
+      [108, "مُتَفَالِكِين", "mutafālikīn", "birbirine gök yörüngesi olanlar", "kontrol", ""],
+      [109, "مُتَفَالِكَات", "mutafālikāt", "birbirine gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَفَالَك", "mutafālak", "gök yörüngesi oluşmuş", "kontrol", ""],
-      [111, "مُتَفَالَكَة", "mutafālaka", "gök yörüngesi oluşmuş (dişi)", "kontrol", ""],
-      [112, "مُتَفَالَكَان", "mutafālakān", "iki gök yörüngesi oluşmuş", "kontrol", ""],
-      [113, "مُتَفَالَكَتَان", "mutafālakatān", "iki gök yörüngesi oluşmuş (dişi)", "kontrol", ""],
-      [114, "مُتَفَالَكُون", "mutafālakūn", "gök yörüngesi oluşmuşlar", "kontrol", ""],
-      [115, "مُتَفَالَكِين", "mutafālakīn", "gök yörüngesi oluşmuşlar", "kontrol", ""],
-      [116, "مُتَفَالَكَات", "mutafālakāt", "gök yörüngesi oluşmuşlar (dişi)", "kontrol", ""]
+      [110, "مُتَفَالَك", "mutafālak", "birbirine gök yörüngesi olunan", "kontrol", ""],
+      [111, "مُتَفَالَكَة", "mutafālaka", "birbirine gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [112, "مُتَفَالَكَان", "mutafālakān", "birbirine gök yörüngesi olunan (iki)", "kontrol", ""],
+      [113, "مُتَفَالَكَتَان", "mutafālakatān", "birbirine gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [114, "مُتَفَالَكُون", "mutafālakūn", "birbirine gök yörüngesi olunanlar", "kontrol", ""],
+      [115, "مُتَفَالَكِين", "mutafālakīn", "birbirine gök yörüngesi olunanlar", "kontrol", ""],
+      [116, "مُتَفَالَكَات", "mutafālakāt", "birbirine gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَفَالَك", "mutafālak", "gök yörüngesi oluşma (yeri/zamanı)", "kontrol", ""]
+      [117, "مُتَفَالَك", "mutafālak", "birbirine gök yörüngesi olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْفِلَاك", "infilāk", "gök yörüngesi olunma", "kontrol", ""]
@@ -185,102 +199,102 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْفَلِك", "munfalik", "gök yörüngesi olunan", "kontrol", ""],
-      [121, "مُنْفَلِكَة", "munfalika", "gök yörüngesi olunan (dişi)", "kontrol", ""],
-      [122, "مُنْفَلِكَان", "munfalikān", "iki gök yörüngesi olunan", "kontrol", ""],
-      [123, "مُنْفَلِكَتَان", "munfalikatān", "iki gök yörüngesi olunan (dişi)", "kontrol", ""],
+      [121, "مُنْفَلِكَة", "munfalika", "gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [122, "مُنْفَلِكَان", "munfalikān", "gök yörüngesi olunan (iki)", "kontrol", ""],
+      [123, "مُنْفَلِكَتَان", "munfalikatān", "gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
       [124, "مُنْفَلِكُون", "munfalikūn", "gök yörüngesi olunanlar", "kontrol", ""],
       [125, "مُنْفَلِكِين", "munfalikīn", "gök yörüngesi olunanlar", "kontrol", ""],
-      [126, "مُنْفَلِكَات", "munfalikāt", "gök yörüngesi olunanlar (dişi)", "kontrol", ""]
+      [126, "مُنْفَلِكَات", "munfalikāt", "gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْفَلَك", "munfalak", "gök yörüngesi olunmuş", "kontrol", ""],
-      [128, "مُنْفَلَكَة", "munfalaka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [129, "مُنْفَلَكَان", "munfalakān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [130, "مُنْفَلَكَتَان", "munfalakatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [131, "مُنْفَلَكُون", "munfalakūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [132, "مُنْفَلَكِين", "munfalakīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [133, "مُنْفَلَكَات", "munfalakāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [127, "مُنْفَلَك", "munfalak", "gök yörüngesi olunan", "kontrol", ""],
+      [128, "مُنْفَلَكَة", "munfalaka", "gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [129, "مُنْفَلَكَان", "munfalakān", "gök yörüngesi olunan (iki)", "kontrol", ""],
+      [130, "مُنْفَلَكَتَان", "munfalakatān", "gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [131, "مُنْفَلَكُون", "munfalakūn", "gök yörüngesi olunanlar", "kontrol", ""],
+      [132, "مُنْفَلَكِين", "munfalakīn", "gök yörüngesi olunanlar", "kontrol", ""],
+      [133, "مُنْفَلَكَات", "munfalakāt", "gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْفَلَك", "munfalak", "gök yörüngesi olunma (yeri/zamanı)", "kontrol", ""]
+      [134, "مُنْفَلَك", "munfalak", "gök yörüngesi olunma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِفْتِلَاك", "iftilāk", "gök yörüngesi olunma", "kontrol", ""]
+      [135, "اِفْتِلَاك", "iftilāk", "kendisi için gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِفْتِلَاكَة", "iftilāka", "bir kere gök yörüngesi olunma", "kontrol", ""]
+      [137, "اِفْتِلَاكَة", "iftilāka", "bir kere kendisi için gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُفْتَلِك", "muftalik", "gök yörüngesi olunan", "kontrol", ""],
-      [139, "مُفْتَلِكَة", "muftalika", "gök yörüngesi olunan (dişi)", "kontrol", ""],
-      [140, "مُفْتَلِكَان", "muftalikān", "iki gök yörüngesi olunan", "kontrol", ""],
-      [141, "مُفْتَلِكَتَان", "muftalikatān", "iki gök yörüngesi olunan (dişi)", "kontrol", ""],
-      [142, "مُفْتَلِكُون", "muftalikūn", "gök yörüngesi olunanlar", "kontrol", ""],
-      [143, "مُفْتَلِكِين", "muftalikīn", "gök yörüngesi olunanlar", "kontrol", ""],
-      [144, "مُفْتَلِكَات", "muftalikāt", "gök yörüngesi olunanlar (dişi)", "kontrol", ""]
+      [138, "مُفْتَلِك", "muftalik", "kendisi için gök yörüngesi olan", "kontrol", ""],
+      [139, "مُفْتَلِكَة", "muftalika", "kendisi için gök yörüngesi olan (müennes)", "kontrol", ""],
+      [140, "مُفْتَلِكَان", "muftalikān", "kendisi için gök yörüngesi olan (iki)", "kontrol", ""],
+      [141, "مُفْتَلِكَتَان", "muftalikatān", "kendisi için gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [142, "مُفْتَلِكُون", "muftalikūn", "kendisi için gök yörüngesi olanlar", "kontrol", ""],
+      [143, "مُفْتَلِكِين", "muftalikīn", "kendisi için gök yörüngesi olanlar", "kontrol", ""],
+      [144, "مُفْتَلِكَات", "muftalikāt", "kendisi için gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُفْتَلَك", "muftalak", "gök yörüngesi olunmuş", "kontrol", ""],
-      [146, "مُفْتَلَكَة", "muftalaka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [147, "مُفْتَلَكَان", "muftalakān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [148, "مُفْتَلَكَتَان", "muftalakatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [149, "مُفْتَلَكُون", "muftalakūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [150, "مُفْتَلَكِين", "muftalakīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [151, "مُفْتَلَكَات", "muftalakāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [145, "مُفْتَلَك", "muftalak", "kendisi için gök yörüngesi olunan", "kontrol", ""],
+      [146, "مُفْتَلَكَة", "muftalaka", "kendisi için gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [147, "مُفْتَلَكَان", "muftalakān", "kendisi için gök yörüngesi olunan (iki)", "kontrol", ""],
+      [148, "مُفْتَلَكَتَان", "muftalakatān", "kendisi için gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [149, "مُفْتَلَكُون", "muftalakūn", "kendisi için gök yörüngesi olunanlar", "kontrol", ""],
+      [150, "مُفْتَلَكِين", "muftalakīn", "kendisi için gök yörüngesi olunanlar", "kontrol", ""],
+      [151, "مُفْتَلَكَات", "muftalakāt", "kendisi için gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُفْتَلَك", "muftalak", "gök yörüngesi olunma (yeri/zamanı)", "kontrol", ""]
+      [152, "مُفْتَلَك", "muftalak", "kendisi için gök yörüngesi olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِفْلِكَاك", "iflikāk", "gökleşme", "kontrol", ""]
+      [499, "اِفْلِكَاك", "iflikāk", "iyiden iyiye gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُفْلَكّ", "muflakk", "gökleşen", "kontrol", ""],
-      [501, "مُفْلَكَّة", "muflakka", "gökleşen (dişi)", "kontrol", ""],
-      [502, "مُفْلَكَّان", "muflakkān", "iki gökleşen", "kontrol", ""],
-      [503, "مُفْلَكَّتَان", "muflakkatān", "iki gökleşen (dişi)", "kontrol", ""],
-      [504, "مُفْلَكُّون", "muflakkūn", "gökleşenler", "kontrol", ""],
-      [505, "مُفْلَكِّين", "muflakkīn", "gökleşenler", "kontrol", ""],
-      [506, "مُفْلَكَّات", "muflakkāt", "gökleşenler (dişi)", "kontrol", ""]
+      [500, "مُفْلَكّ", "muflakk", "iyiden iyiye gök yörüngesi olan", "kontrol", ""],
+      [501, "مُفْلَكَّة", "muflakka", "iyiden iyiye gök yörüngesi olan (müennes)", "kontrol", ""],
+      [502, "مُفْلَكَّان", "muflakkān", "iyiden iyiye gök yörüngesi olan (iki)", "kontrol", ""],
+      [503, "مُفْلَكَّتَان", "muflakkatān", "iyiden iyiye gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [504, "مُفْلَكُّون", "muflakkūn", "iyiden iyiye gök yörüngesi olanlar", "kontrol", ""],
+      [505, "مُفْلَكِّين", "muflakkīn", "iyiden iyiye gök yörüngesi olanlar", "kontrol", ""],
+      [506, "مُفْلَكَّات", "muflakkāt", "iyiden iyiye gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِفْلَاك", "istiflāk", "gök yörüngesi olmayı isteme", "kontrol", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِفْلَاكَة", "istiflāka", "bir kere gök yörüngesi olma", "kontrol", ""]
+      [177, "اِسْتِفْلَاكَة", "istiflāka", "bir kere gök yörüngesi olmayı isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَفْلِك", "mustaflik", "gök yörüngesi olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَفْلِكَة", "mustaflika", "gök yörüngesi olmayı isteyen (dişi)", "kontrol", ""],
-      [180, "مُسْتَفْلِكَان", "mustaflikān", "iki gök yörüngesi olmayı isteyen", "kontrol", ""],
-      [181, "مُسْتَفْلِكَتَان", "mustaflikatān", "iki gök yörüngesi olmayı isteyen (dişi)", "kontrol", ""],
+      [179, "مُسْتَفْلِكَة", "mustaflika", "gök yörüngesi olmayı isteyen (müennes)", "kontrol", ""],
+      [180, "مُسْتَفْلِكَان", "mustaflikān", "gök yörüngesi olmayı isteyen (iki)", "kontrol", ""],
+      [181, "مُسْتَفْلِكَتَان", "mustaflikatān", "gök yörüngesi olmayı isteyen (iki, müennes)", "kontrol", ""],
       [182, "مُسْتَفْلِكُون", "mustaflikūn", "gök yörüngesi olmayı isteyenler", "kontrol", ""],
       [183, "مُسْتَفْلِكِين", "mustaflikīn", "gök yörüngesi olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَفْلِكَات", "mustaflikāt", "gök yörüngesi olmayı isteyenler (dişi)", "kontrol", ""]
+      [184, "مُسْتَفْلِكَات", "mustaflikāt", "gök yörüngesi olmayı isteyenler (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَفْلَك", "mustaflak", "gök yörüngesi olmayı istenen", "kontrol", ""],
-      [186, "مُسْتَفْلَكَة", "mustaflaka", "gök yörüngesi olmayı istenen (dişi)", "kontrol", ""],
-      [187, "مُسْتَفْلَكَان", "mustaflakān", "iki gök yörüngesi olmayı istenen", "kontrol", ""],
-      [188, "مُسْتَفْلَكَتَان", "mustaflakatān", "iki gök yörüngesi olmayı istenen (dişi)", "kontrol", ""],
-      [189, "مُسْتَفْلَكُون", "mustaflakūn", "gök yörüngesi olmayı istenenler", "kontrol", ""],
-      [190, "مُسْتَفْلَكِين", "mustaflakīn", "gök yörüngesi olmayı istenenler", "kontrol", ""],
-      [191, "مُسْتَفْلَكَات", "mustaflakāt", "gök yörüngesi olmayı istenenler (dişi)", "kontrol", ""]
+      [185, "مُسْتَفْلَك", "mustaflak", "gök yörüngesi olması istenen", "kontrol", ""],
+      [186, "مُسْتَفْلَكَة", "mustaflaka", "gök yörüngesi olması istenen (müennes)", "kontrol", ""],
+      [187, "مُسْتَفْلَكَان", "mustaflakān", "gök yörüngesi olması istenen (iki)", "kontrol", ""],
+      [188, "مُسْتَفْلَكَتَان", "mustaflakatān", "gök yörüngesi olması istenen (iki, müennes)", "kontrol", ""],
+      [189, "مُسْتَفْلَكُون", "mustaflakūn", "gök yörüngesi olması istenenler", "kontrol", ""],
+      [190, "مُسْتَفْلَكِين", "mustaflakīn", "gök yörüngesi olması istenenler", "kontrol", ""],
+      [191, "مُسْتَفْلَكَات", "mustaflakāt", "gök yörüngesi olması istenenler (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَفْلَك", "mustaflak", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""]
+      [192, "مُسْتَفْلَك", "mustaflak", "gök yörüngesi olmayı isteme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِفْلِيكَاك", "iflīkāk", "iyice gökleşme", "kontrol", ""]
+      [507, "اِفْلِيكَاك", "iflīkāk", "büsbütün gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُفْلَاكّ", "muflākk", "iyice gökleşen", "kontrol", ""],
-      [509, "مُفْلَاكَّة", "muflākka", "iyice gökleşen (dişi)", "kontrol", ""],
-      [510, "مُفْلَاكَّان", "muflākkān", "iki iyice gökleşen", "kontrol", ""],
-      [511, "مُفْلَاكَّتَان", "muflākkatān", "iki iyice gökleşen (dişi)", "kontrol", ""],
-      [512, "مُفْلَاكُّون", "muflākkūn", "iyice gökleşenler", "kontrol", ""],
-      [513, "مُفْلَاكِّين", "muflākkīn", "iyice gökleşenler", "kontrol", ""],
-      [514, "مُفْلَاكَّات", "muflākkāt", "iyice gökleşenler (dişi)", "kontrol", ""]
+      [508, "مُفْلَاكّ", "muflākk", "büsbütün gök yörüngesi olan", "kontrol", ""],
+      [509, "مُفْلَاكَّة", "muflākka", "büsbütün gök yörüngesi olan (müennes)", "kontrol", ""],
+      [510, "مُفْلَاكَّان", "muflākkān", "büsbütün gök yörüngesi olan (iki)", "kontrol", ""],
+      [511, "مُفْلَاكَّتَان", "muflākkatān", "büsbütün gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [512, "مُفْلَاكُّون", "muflākkūn", "büsbütün gök yörüngesi olanlar", "kontrol", ""],
+      [513, "مُفْلَاكِّين", "muflākkīn", "büsbütün gök yörüngesi olanlar", "kontrol", ""],
+      [514, "مُفْلَاكَّات", "muflākkāt", "büsbütün gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِفْلِوْلَاك", "ifliwlāk", "aşırı gök yörüngesi olma", "kontrol", ""]
@@ -290,224 +304,224 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "فَالِك", "fālik", "gök yörüngesi olan", "kontrol", ""],
-      [214, "فَالِكَة", "fālika", "gök yörüngesi olan (dişi)", "kontrol", ""],
-      [215, "فَالِكَان", "fālikān", "iki gök yörüngesi olan", "kontrol", ""],
-      [216, "فَالِكَتَان", "fālikatān", "iki gök yörüngesi olan (dişi)", "kontrol", ""],
+      [214, "فَالِكَة", "fālika", "gök yörüngesi olan (müennes)", "kontrol", ""],
+      [215, "فَالِكَان", "fālikān", "gök yörüngesi olan (iki)", "kontrol", ""],
+      [216, "فَالِكَتَان", "fālikatān", "gök yörüngesi olan (iki, müennes)", "kontrol", ""],
       [217, "فَالِكُون", "fālikūn", "gök yörüngesi olanlar", "kontrol", ""],
       [218, "فَالِكِين", "fālikīn", "gök yörüngesi olanlar", "kontrol", ""],
-      [219, "فَالِكَات", "fālikāt", "gök yörüngesi olanlar (dişi)", "kontrol", ""]
+      [219, "فَالِكَات", "fālikāt", "gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَفْلُوك", "maflūk", "gök yörüngesi olunmuş", "kontrol", ""],
-      [221, "مَفْلُوكَة", "maflūka", "gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [222, "مَفْلُوكَان", "maflūkān", "iki gök yörüngesi olunmuş", "kontrol", ""],
-      [223, "مَفْلُوكَتَان", "maflūkatān", "iki gök yörüngesi olunmuş (dişi)", "kontrol", ""],
-      [224, "مَفْلُوكُون", "maflūkūn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [225, "مَفْلُوكِين", "maflūkīn", "gök yörüngesi olunmuşlar", "kontrol", ""],
-      [226, "مَفْلُوكَات", "maflūkāt", "gök yörüngesi olunmuşlar (dişi)", "kontrol", ""]
+      [220, "مَفْلُوك", "maflūk", "gök yörüngesi olunan", "kontrol", ""],
+      [221, "مَفْلُوكَة", "maflūka", "gök yörüngesi olunan (müennes)", "kontrol", ""],
+      [222, "مَفْلُوكَان", "maflūkān", "gök yörüngesi olunan (iki)", "kontrol", ""],
+      [223, "مَفْلُوكَتَان", "maflūkatān", "gök yörüngesi olunan (iki, müennes)", "kontrol", ""],
+      [224, "مَفْلُوكُون", "maflūkūn", "gök yörüngesi olunanlar", "kontrol", ""],
+      [225, "مَفْلُوكِين", "maflūkīn", "gök yörüngesi olunanlar", "kontrol", ""],
+      [226, "مَفْلُوكَات", "maflūkāt", "gök yörüngesi olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَفْلَك", "maflak", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [228, "مَفْلَكَان", "maflakān", "iki gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [229, "مَفْلِك", "maflik", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [230, "مَفْلِكَان", "maflikān", "iki gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [231, "مَفْلَكَة", "maflaka", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [232, "مَفْلَكَتَان", "maflakatān", "iki gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [233, "مَفْلِكَة", "maflika", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [234, "مَفْلِكَتَان", "maflikatān", "iki gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [247, "مَفْلُكَة", "mafluka", "gök yörüngesi olma (yeri/zamanı)", "kontrol", ""],
-      [248, "مَفْلُكَتَان", "maflukatān", "iki gök yörüngesi olma (yeri/zamanı)", "kontrol", ""]
+      [227, "مَفْلَك", "maflak", "gök yörüngesi olma yeri, vakti", "kontrol", ""],
+      [228, "مَفْلَكَان", "maflakān", "gök yörüngesi olma yeri, vakti (iki)", "kontrol", ""],
+      [229, "مَفْلِك", "maflik", "gök yörüngesi olma yeri, vakti", "kontrol", ""],
+      [230, "مَفْلِكَان", "maflikān", "gök yörüngesi olma yeri, vakti (iki)", "kontrol", ""],
+      [231, "مَفْلَكَة", "maflaka", "gök yörüngesi olmanın bol olduğu yer", "kontrol", ""],
+      [232, "مَفْلَكَتَان", "maflakatān", "gök yörüngesi olmanın bol olduğu yer (iki)", "kontrol", ""],
+      [233, "مَفْلِكَة", "maflika", "gök yörüngesi olmanın bol olduğu yer", "kontrol", ""],
+      [234, "مَفْلِكَتَان", "maflikatān", "gök yörüngesi olmanın bol olduğu yer (iki)", "kontrol", ""],
+      [247, "مَفْلُكَة", "mafluka", "gök yörüngesi olma yeri, vakti", "kontrol", ""],
+      [248, "مَفْلُكَتَان", "maflukatān", "gök yörüngesi olma yeri, vakti (iki)", "kontrol", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِفْلَك", "miflak", "gök yörüngesi olmaya yarayan araç", "kontrol", ""],
-      [236, "مِفْلَكَان", "miflakān", "iki gök yörüngesi olmaya yarayan araç", "kontrol", ""],
-      [237, "مِفْلَاك", "miflāk", "gök yörüngesi olmaya yarayan araç", "kontrol", ""],
-      [238, "مِفْلَاكَان", "miflākān", "iki gök yörüngesi olmaya yarayan araç", "kontrol", ""],
-      [239, "مِفْلَكَة", "miflaka", "gök yörüngesi olmaya yarayan araç", "kontrol", ""],
-      [240, "مِفْلَكَتَان", "miflakatān", "iki gök yörüngesi olmaya yarayan araç", "kontrol", ""]
+      [235, "مِفْلَك", "miflak", "gök yörüngesi olma âleti", "kontrol", ""],
+      [236, "مِفْلَكَان", "miflakān", "gök yörüngesi olma âleti (iki)", "kontrol", ""],
+      [237, "مِفْلَاك", "miflāk", "gök yörüngesi olma âleti", "kontrol", ""],
+      [238, "مِفْلَاكَان", "miflākān", "gök yörüngesi olma âleti (iki)", "kontrol", ""],
+      [239, "مِفْلَكَة", "miflaka", "gök yörüngesi olma âleti", "kontrol", ""],
+      [240, "مِفْلَكَتَان", "miflakatān", "gök yörüngesi olma âleti (iki)", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَفْلَك", "ʾaflak", "daha çok gök yörüngesi olan", "kontrol", ""],
-      [242, "أَفْلَكَان", "ʾaflakān", "iki daha çok gök yörüngesi olan", "kontrol", ""]
+      [242, "أَفْلَكَان", "ʾaflakān", "daha çok gök yörüngesi olan (iki)", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "فُلْكَى", "fulkā", "daha çok gök yörüngesi olan", "kontrol", ""],
-      [244, "فُلْكَيَان", "fulkayān", "iki daha çok gök yörüngesi olan", "kontrol", ""],
+      [244, "فُلْكَيَان", "fulkayān", "daha çok gök yörüngesi olan (iki)", "kontrol", ""],
       [245, "فَلْكَاء", "falkāʾ", "daha çok gök yörüngesi olan", "kontrol", ""],
-      [246, "فَلْكَاآن", "falkāʾān", "iki daha çok gök yörüngesi olan", "kontrol", ""]
+      [246, "فَلْكَاآن", "falkāʾān", "daha çok gök yörüngesi olan (iki)", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "فُلَيْك", "fulayk", "küçük gök yörüngesi olma", "kontrol", ""],
-      [250, "فُلَيْكَان", "fulaykān", "iki küçük gök yörüngesi olma", "kontrol", ""],
-      [251, "فُلَيْكَة", "fulayka", "küçük gök yörüngesi olma", "kontrol", ""],
-      [252, "فُلَيْكَتَان", "fulaykatān", "iki küçük gök yörüngesi olma", "kontrol", ""]
+      [249, "فُلَيْك", "fulayk", "azıcık gök yörüngesi olma", "kontrol", ""],
+      [250, "فُلَيْكَان", "fulaykān", "azıcık gök yörüngesi olma (iki)", "kontrol", ""],
+      [251, "فُلَيْكَة", "fulayka", "azıcık gök yörüngesi olma", "kontrol", ""],
+      [252, "فُلَيْكَتَان", "fulaykatān", "azıcık gök yörüngesi olma (iki)", "kontrol", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَفْلَك", "maflak", "gök yörüngesi olma", "kontrol", ""],
-      [254, "مَفْلَكَان", "maflakān", "iki gök yörüngesi olma", "kontrol", ""]
+      [254, "مَفْلَكَان", "maflakān", "gök yörüngesi olma (iki)", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "فَلْكَة", "falka", "bir kere gök yörüngesi olma", "kontrol", ""],
-      [256, "فَلْكَتَان", "falkatān", "iki bir kere gök yörüngesi olma", "kontrol", ""]
+      [256, "فَلْكَتَان", "falkatān", "bir kere gök yörüngesi olma (iki)", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "فِلْكَة", "filka", "gök yörüngesi olma tarzı", "kontrol", ""],
-      [258, "فِلْكَتَان", "filkatān", "iki gök yörüngesi olma tarzı", "kontrol", ""]
+      [258, "فِلْكَتَان", "filkatān", "gök yörüngesi olma tarzı (iki)", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "فَلِيك", "falīk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [260, "فَلِيكَة", "falīka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [261, "فَلِيكَان", "falīkān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [262, "فَلِيكَتَان", "falīkatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [263, "فَلِيكُون", "falīkūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [264, "فَلِيكِين", "falīkīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [265, "فَلِيكَات", "falīkāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [266, "فَلُوك", "falūk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [267, "فَلُوكَة", "falūka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [268, "فَلُوكَان", "falūkān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [269, "فَلُوكَتَان", "falūkatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [270, "فَلُوكُون", "falūkūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [271, "فَلُوكِين", "falūkīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [272, "فَلُوكَات", "falūkāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [273, "فَلِك", "falik", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [274, "فَلِكَة", "falika", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [275, "فَلِكَان", "falikān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [276, "فَلِكَتَان", "falikatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [277, "فَلِكُون", "falikūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [278, "فَلِكِين", "falikīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [279, "فَلِكَات", "falikāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [280, "فَلُك", "faluk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [281, "فَلُكَة", "faluka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [282, "فَلُكَان", "falukān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [283, "فَلُكَتَان", "falukatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [284, "فَلُكُون", "falukūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [285, "فَلُكِين", "falukīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [286, "فَلُكَات", "falukāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [287, "فَلَك", "falak", "sürekli gök yörüngesi olan", "kontrol", "Vikisözlük: orbit, rounded course"],
-      [288, "فَلَكَة", "falaka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [289, "فَلَكَان", "falakān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [290, "فَلَكَتَان", "falakatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [291, "فَلَكُون", "falakūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [292, "فَلَكِين", "falakīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [293, "فَلَكَات", "falakāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [294, "فَلْك", "falk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [295, "فَلْكَة", "falka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [296, "فَلْكَان", "falkān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [297, "فَلْكَتَان", "falkatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [298, "فَلْكُون", "falkūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [299, "فَلْكِين", "falkīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [300, "فَلْكَات", "falkāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [301, "فُلُك", "fuluk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [302, "فُلُكَة", "fuluka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [303, "فُلُكَان", "fulukān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [304, "فُلُكَتَان", "fulukatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [305, "فُلُكُون", "fulukūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [306, "فُلُكِين", "fulukīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [307, "فُلُكَات", "fulukāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [308, "فَلْكَان", "falkān", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [309, "فَلْكَانَة", "falkāna", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [310, "فَلْكَانَان", "falkānān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [311, "فَلْكَانَتَان", "falkānatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [312, "فَلْكَانُون", "falkānūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [313, "فَلْكَانِين", "falkānīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [314, "فَلْكَانَات", "falkānāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [315, "فُلَاك", "fulāk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [316, "فُلَاكَة", "fulāka", "sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [317, "فُلَاكَان", "fulākān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [318, "فُلَاكَتَان", "fulākatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [319, "فُلَاكُون", "fulākūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [320, "فُلَاكِين", "fulākīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [321, "فُلَاكَات", "fulākāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [322, "فَلَاك", "falāk", "sürekli gök yörüngesi olan", "kontrol", ""],
-      [323, "فَلَاكَة", "falāka", "sürekli gök yörüngesi olan (dişi)", "kontrol", "Vikisözlük: poverty"],
-      [324, "فَلَاكَان", "falākān", "iki sürekli gök yörüngesi olan", "kontrol", ""],
-      [325, "فَلَاكَتَان", "falākatān", "iki sürekli gök yörüngesi olan (dişi)", "kontrol", ""],
-      [326, "فَلَاكُون", "falākūn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [327, "فَلَاكِين", "falākīn", "sürekli gök yörüngesi olanlar", "kontrol", ""],
-      [328, "فَلَاكَات", "falākāt", "sürekli gök yörüngesi olanlar (dişi)", "kontrol", ""]
+      [259, "فَلِيك", "falīk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [260, "فَلِيكَة", "falīka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [261, "فَلِيكَان", "falīkān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [262, "فَلِيكَتَان", "falīkatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [263, "فَلِيكُون", "falīkūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [264, "فَلِيكِين", "falīkīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [265, "فَلِيكَات", "falīkāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [266, "فَلُوك", "falūk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [267, "فَلُوكَة", "falūka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [268, "فَلُوكَان", "falūkān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [269, "فَلُوكَتَان", "falūkatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [270, "فَلُوكُون", "falūkūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [271, "فَلُوكِين", "falūkīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [272, "فَلُوكَات", "falūkāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [273, "فَلِك", "falik", "her daim gök yörüngesi olan", "kontrol", ""],
+      [274, "فَلِكَة", "falika", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [275, "فَلِكَان", "falikān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [276, "فَلِكَتَان", "falikatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [277, "فَلِكُون", "falikūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [278, "فَلِكِين", "falikīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [279, "فَلِكَات", "falikāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [280, "فَلُك", "faluk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [281, "فَلُكَة", "faluka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [282, "فَلُكَان", "falukān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [283, "فَلُكَتَان", "falukatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [284, "فَلُكُون", "falukūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [285, "فَلُكِين", "falukīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [286, "فَلُكَات", "falukāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [287, "فَلَك", "falak", "her daim gök yörüngesi olan", "kontrol", "Vikisözlük: orbit, rounded course"],
+      [288, "فَلَكَة", "falaka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [289, "فَلَكَان", "falakān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [290, "فَلَكَتَان", "falakatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [291, "فَلَكُون", "falakūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [292, "فَلَكِين", "falakīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [293, "فَلَكَات", "falakāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [294, "فَلْك", "falk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [295, "فَلْكَة", "falka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [296, "فَلْكَان", "falkān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [297, "فَلْكَتَان", "falkatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [298, "فَلْكُون", "falkūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [299, "فَلْكِين", "falkīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [300, "فَلْكَات", "falkāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [301, "فُلُك", "fuluk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [302, "فُلُكَة", "fuluka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [303, "فُلُكَان", "fulukān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [304, "فُلُكَتَان", "fulukatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [305, "فُلُكُون", "fulukūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [306, "فُلُكِين", "fulukīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [307, "فُلُكَات", "fulukāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [308, "فَلْكَان", "falkān", "her daim gök yörüngesi olan", "kontrol", ""],
+      [309, "فَلْكَانَة", "falkāna", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [310, "فَلْكَانَان", "falkānān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [311, "فَلْكَانَتَان", "falkānatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [312, "فَلْكَانُون", "falkānūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [313, "فَلْكَانِين", "falkānīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [314, "فَلْكَانَات", "falkānāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [315, "فُلَاك", "fulāk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [316, "فُلَاكَة", "fulāka", "her daim gök yörüngesi olan (müennes)", "kontrol", ""],
+      [317, "فُلَاكَان", "fulākān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [318, "فُلَاكَتَان", "fulākatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [319, "فُلَاكُون", "fulākūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [320, "فُلَاكِين", "fulākīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [321, "فُلَاكَات", "fulākāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [322, "فَلَاك", "falāk", "her daim gök yörüngesi olan", "kontrol", ""],
+      [323, "فَلَاكَة", "falāka", "her daim gök yörüngesi olan (müennes)", "kontrol", "Vikisözlük: poverty"],
+      [324, "فَلَاكَان", "falākān", "her daim gök yörüngesi olan (iki)", "kontrol", ""],
+      [325, "فَلَاكَتَان", "falākatān", "her daim gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [326, "فَلَاكُون", "falākūn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [327, "فَلَاكِين", "falākīn", "her daim gök yörüngesi olanlar", "kontrol", ""],
+      [328, "فَلَاكَات", "falākāt", "her daim gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "mübalağa": [
-      [329, "فَلَّاك", "fallāk", "çok gök yörüngesi olan", "kontrol", ""],
-      [330, "فَلَّاكَة", "fallāka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [331, "فَلَّاكَان", "fallākān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [332, "فَلَّاكَتَان", "fallākatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [333, "فَلَّاكُون", "fallākūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [334, "فَلَّاكِين", "fallākīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [335, "فَلَّاكَات", "fallākāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [336, "فَلَّاكَة", "fallāka", "çok gök yörüngesi olan", "kontrol", ""],
-      [337, "فَلَّاكَتَان", "fallākatān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [338, "فَلَّاكَات", "fallākāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
+      [329, "فَلَّاك", "fallāk", "işi gök yörüngesi olma olan", "kontrol", ""],
+      [330, "فَلَّاكَة", "fallāka", "işi gök yörüngesi olma olan (müennes)", "kontrol", ""],
+      [331, "فَلَّاكَان", "fallākān", "işi gök yörüngesi olma olan (iki)", "kontrol", ""],
+      [332, "فَلَّاكَتَان", "fallākatān", "işi gök yörüngesi olma olan (iki, müennes)", "kontrol", ""],
+      [333, "فَلَّاكُون", "fallākūn", "işi gök yörüngesi olma olanlar", "kontrol", ""],
+      [334, "فَلَّاكِين", "fallākīn", "işi gök yörüngesi olma olanlar", "kontrol", ""],
+      [335, "فَلَّاكَات", "fallākāt", "işi gök yörüngesi olma olanlar (müennes)", "kontrol", ""],
+      [336, "فَلَّاكَة", "fallāka", "pek çok gök yörüngesi olan", "kontrol", ""],
+      [337, "فَلَّاكَتَان", "fallākatān", "pek çok gök yörüngesi olan (iki)", "kontrol", ""],
+      [338, "فَلَّاكَات", "fallākāt", "pek çok gök yörüngesi olanlar (müennes)", "kontrol", ""],
       [339, "فَلُوك", "falūk", "çok gök yörüngesi olan", "kontrol", ""],
-      [340, "فَلُوكَة", "falūka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [341, "فَلُوكَان", "falūkān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [342, "فَلُوكَتَان", "falūkatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
+      [340, "فَلُوكَة", "falūka", "çok gök yörüngesi olan (müennes)", "kontrol", ""],
+      [341, "فَلُوكَان", "falūkān", "çok gök yörüngesi olan (iki)", "kontrol", ""],
+      [342, "فَلُوكَتَان", "falūkatān", "çok gök yörüngesi olan (iki, müennes)", "kontrol", ""],
       [343, "فَلُوكُون", "falūkūn", "çok gök yörüngesi olanlar", "kontrol", ""],
       [344, "فَلُوكِين", "falūkīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [345, "فَلُوكَات", "falūkāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [346, "فَلُّوك", "fallūk", "çok gök yörüngesi olan", "kontrol", ""],
-      [347, "فَلُّوكَة", "fallūka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [348, "فَلُّوكَان", "fallūkān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [349, "فَلُّوكَتَان", "fallūkatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [350, "فَلُّوكُون", "fallūkūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [351, "فَلُّوكِين", "fallūkīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [352, "فَلُّوكَات", "fallūkāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [353, "فِلِّيك", "fillīk", "çok gök yörüngesi olan", "kontrol", ""],
-      [354, "فِلِّيكَة", "fillīka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [355, "فِلِّيكَان", "fillīkān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [356, "فِلِّيكَتَان", "fillīkatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [357, "فِلِّيكُون", "fillīkūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [358, "فِلِّيكِين", "fillīkīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [359, "فِلِّيكَات", "fillīkāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [360, "فُلَّاك", "fullāk", "çok gök yörüngesi olan", "kontrol", ""],
-      [361, "فُلَّاكَة", "fullāka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [362, "فُلَّاكَان", "fullākān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [363, "فُلَّاكَتَان", "fullākatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [364, "فُلَّاكُون", "fullākūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [365, "فُلَّاكِين", "fullākīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [366, "فُلَّاكَات", "fullākāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [367, "مِفْلَاك", "miflāk", "çok gök yörüngesi olan", "kontrol", ""],
-      [368, "مِفْلَاكَة", "miflāka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [369, "مِفْلَاكَان", "miflākān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [370, "مِفْلَاكَتَان", "miflākatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [371, "مِفْلَاكُون", "miflākūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [372, "مِفْلَاكِين", "miflākīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [373, "مِفْلَاكَات", "miflākāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
-      [374, "مِفْلِيك", "miflīk", "çok gök yörüngesi olan", "kontrol", ""],
-      [375, "مِفْلِيكَة", "miflīka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [376, "مِفْلِيكَان", "miflīkān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [377, "مِفْلِيكَتَان", "miflīkatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [378, "مِفْلِيكُون", "miflīkūn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [379, "مِفْلِيكِين", "miflīkīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [380, "مِفْلِيكَات", "miflīkāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
+      [345, "فَلُوكَات", "falūkāt", "çok gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [346, "فَلُّوك", "fallūk", "pek çok gök yörüngesi olan", "kontrol", ""],
+      [347, "فَلُّوكَة", "fallūka", "pek çok gök yörüngesi olan (müennes)", "kontrol", ""],
+      [348, "فَلُّوكَان", "fallūkān", "pek çok gök yörüngesi olan (iki)", "kontrol", ""],
+      [349, "فَلُّوكَتَان", "fallūkatān", "pek çok gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [350, "فَلُّوكُون", "fallūkūn", "pek çok gök yörüngesi olanlar", "kontrol", ""],
+      [351, "فَلُّوكِين", "fallūkīn", "pek çok gök yörüngesi olanlar", "kontrol", ""],
+      [352, "فَلُّوكَات", "fallūkāt", "pek çok gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [353, "فِلِّيك", "fillīk", "gök yörüngesi olmada aşırı giden", "kontrol", ""],
+      [354, "فِلِّيكَة", "fillīka", "gök yörüngesi olmada aşırı giden (müennes)", "kontrol", ""],
+      [355, "فِلِّيكَان", "fillīkān", "gök yörüngesi olmada aşırı giden (iki)", "kontrol", ""],
+      [356, "فِلِّيكَتَان", "fillīkatān", "gök yörüngesi olmada aşırı giden (iki, müennes)", "kontrol", ""],
+      [357, "فِلِّيكُون", "fillīkūn", "gök yörüngesi olmada aşırı gidenler", "kontrol", ""],
+      [358, "فِلِّيكِين", "fillīkīn", "gök yörüngesi olmada aşırı gidenler", "kontrol", ""],
+      [359, "فِلِّيكَات", "fillīkāt", "gök yörüngesi olmada aşırı gidenler (müennes)", "kontrol", ""],
+      [360, "فُلَّاك", "fullāk", "son derece gök yörüngesi olan", "kontrol", ""],
+      [361, "فُلَّاكَة", "fullāka", "son derece gök yörüngesi olan (müennes)", "kontrol", ""],
+      [362, "فُلَّاكَان", "fullākān", "son derece gök yörüngesi olan (iki)", "kontrol", ""],
+      [363, "فُلَّاكَتَان", "fullākatān", "son derece gök yörüngesi olan (iki, müennes)", "kontrol", ""],
+      [364, "فُلَّاكُون", "fullākūn", "son derece gök yörüngesi olanlar", "kontrol", ""],
+      [365, "فُلَّاكِين", "fullākīn", "son derece gök yörüngesi olanlar", "kontrol", ""],
+      [366, "فُلَّاكَات", "fullākāt", "son derece gök yörüngesi olanlar (müennes)", "kontrol", ""],
+      [367, "مِفْلَاك", "miflāk", "gök yörüngesi olmayı âdet edinmiş", "kontrol", ""],
+      [368, "مِفْلَاكَة", "miflāka", "gök yörüngesi olmayı âdet edinmiş (müennes)", "kontrol", ""],
+      [369, "مِفْلَاكَان", "miflākān", "gök yörüngesi olmayı âdet edinmiş (iki)", "kontrol", ""],
+      [370, "مِفْلَاكَتَان", "miflākatān", "gök yörüngesi olmayı âdet edinmiş (iki, müennes)", "kontrol", ""],
+      [371, "مِفْلَاكُون", "miflākūn", "gök yörüngesi olmayı âdet edinmişler", "kontrol", ""],
+      [372, "مِفْلَاكِين", "miflākīn", "gök yörüngesi olmayı âdet edinmişler", "kontrol", ""],
+      [373, "مِفْلَاكَات", "miflākāt", "gök yörüngesi olmayı âdet edinmişler (müennes)", "kontrol", ""],
+      [374, "مِفْلِيك", "miflīk", "gök yörüngesi olmaya düşkün", "kontrol", ""],
+      [375, "مِفْلِيكَة", "miflīka", "gök yörüngesi olmaya düşkün (müennes)", "kontrol", ""],
+      [376, "مِفْلِيكَان", "miflīkān", "gök yörüngesi olmaya düşkün (iki)", "kontrol", ""],
+      [377, "مِفْلِيكَتَان", "miflīkatān", "gök yörüngesi olmaya düşkün (iki, müennes)", "kontrol", ""],
+      [378, "مِفْلِيكُون", "miflīkūn", "gök yörüngesi olmaya düşkünler", "kontrol", ""],
+      [379, "مِفْلِيكِين", "miflīkīn", "gök yörüngesi olmaya düşkünler", "kontrol", ""],
+      [380, "مِفْلِيكَات", "miflīkāt", "gök yörüngesi olmaya düşkünler (müennes)", "kontrol", ""],
       [381, "فَلِيك", "falīk", "çok gök yörüngesi olan", "kontrol", ""],
-      [382, "فَلِيكَة", "falīka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [383, "فَلِيكَان", "falīkān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [384, "فَلِيكَتَان", "falīkatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
+      [382, "فَلِيكَة", "falīka", "çok gök yörüngesi olan (müennes)", "kontrol", ""],
+      [383, "فَلِيكَان", "falīkān", "çok gök yörüngesi olan (iki)", "kontrol", ""],
+      [384, "فَلِيكَتَان", "falīkatān", "çok gök yörüngesi olan (iki, müennes)", "kontrol", ""],
       [385, "فَلِيكُون", "falīkūn", "çok gök yörüngesi olanlar", "kontrol", ""],
       [386, "فَلِيكِين", "falīkīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [387, "فَلِيكَات", "falīkāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""],
+      [387, "فَلِيكَات", "falīkāt", "çok gök yörüngesi olanlar (müennes)", "kontrol", ""],
       [388, "فَلَّك", "fallak", "çok gök yörüngesi olan", "kontrol", ""],
-      [389, "فَلَّكَة", "fallaka", "çok gök yörüngesi olan (dişi)", "kontrol", ""],
-      [390, "فَلَّكَان", "fallakān", "iki çok gök yörüngesi olan", "kontrol", ""],
-      [391, "فَلَّكَتَان", "fallakatān", "iki çok gök yörüngesi olan (dişi)", "kontrol", ""],
+      [389, "فَلَّكَة", "fallaka", "çok gök yörüngesi olan (müennes)", "kontrol", ""],
+      [390, "فَلَّكَان", "fallakān", "çok gök yörüngesi olan (iki)", "kontrol", ""],
+      [391, "فَلَّكَتَان", "fallakatān", "çok gök yörüngesi olan (iki, müennes)", "kontrol", ""],
       [392, "فَلَّكُون", "fallakūn", "çok gök yörüngesi olanlar", "kontrol", ""],
       [393, "فَلَّكِين", "fallakīn", "çok gök yörüngesi olanlar", "kontrol", ""],
-      [394, "فَلَّكَات", "fallakāt", "çok gök yörüngesi olanlar (dişi)", "kontrol", ""]
+      [394, "فَلَّكَات", "fallakāt", "çok gök yörüngesi olanlar (müennes)", "kontrol", ""]
     ],
     "mensûb": [
-      [395, "فَلْكِيّ", "falkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [397, "فَلَكِيّ", "falakiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [399, "فِلْكِيّ", "filkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [401, "فُلْكِيّ", "fulkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [403, "فِلَاكِيّ", "filākiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [405, "فَالِكِيّ", "fālikiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [407, "مَفْلُوكِيّ", "maflūkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [409, "فَلِيكِيّ", "falīkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [411, "مَفْلَكِيّ", "maflakiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [413, "تَفْلِيكِيّ", "taflīkiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [415, "تَفَالُكِيّ", "tafālukiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [417, "إِفْلَاكِيّ", "ʾiflākiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""],
-      [419, "اِفْتِلَاكِيّ", "iftilākiyy", "gök yörüngesi olmaya ilgili", "kontrol", ""]
+      [395, "فَلْكِيّ", "falkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [397, "فَلَكِيّ", "falakiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [399, "فِلْكِيّ", "filkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [401, "فُلْكِيّ", "fulkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [403, "فِلَاكِيّ", "filākiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [405, "فَالِكِيّ", "fālikiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [407, "مَفْلُوكِيّ", "maflūkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [409, "فَلِيكِيّ", "falīkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [411, "مَفْلَكِيّ", "maflakiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [413, "تَفْلِيكِيّ", "taflīkiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [415, "تَفَالُكِيّ", "tafālukiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [417, "إِفْلَاكِيّ", "ʾiflākiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""],
+      [419, "اِفْتِلَاكِيّ", "iftilākiyy", "gök yörüngesi olma ile ilgili", "kontrol", ""]
     ],
     "masdar-ı sınâî": [
       [396, "فَلْكِيَّة", "falkiyya", "gök yörüngesi olanlık", "kontrol", ""],
@@ -528,7 +542,7 @@
       [421, "فَلَاك", "falāk", "gök yörüngesi olma", "kontrol", ""],
       [422, "فُلُوك", "fulūk", "gök yörüngesi olma", "kontrol", ""],
       [423, "فِلَاك", "filāk", "gök yörüngesi olma", "kontrol", ""],
-      [424, "فُلْك", "fulk", "gök yörüngesi olma", "kontrol", ""],
+      [424, "فُلْك", "fulk", "gemi", "kuran", "Kur'ân"],
       [425, "فَلَاكَة", "falāka", "gök yörüngesi olma", "kontrol", "Vikisözlük: poverty"],
       [426, "فِلَاكَة", "filāka", "gök yörüngesi olma", "kontrol", ""],
       [427, "فُلُوكَة", "fulūka", "gök yörüngesi olma", "kontrol", ""],
@@ -536,88 +550,81 @@
       [429, "فِلْك", "filk", "gök yörüngesi olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "فَالُوك", "fālūk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [432, "فَلَكَة", "falaka", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [433, "فُلَكَة", "fulaka", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [434, "أُفْلُوكَة", "ʾuflūka", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [435, "فَوْلَك", "fawlak", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [437, "فَيْلَك", "faylak", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [439, "فَلْك", "falk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [
-        441,
-        "فَلَك",
-        "falak",
-        "gök yörüngesi olanlar (topluluk adı)",
-        "kontrol",
-        "Vikisözlük: orbit, rounded course"
-      ],
-      [443, "فِلْك", "filk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [445, "فُلْك", "fulk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [447, "فَلِيك", "falīk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [449, "فِلَك", "filak", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [451, "فُلُك", "fuluk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [453, "فَلَاك", "falāk", "gök yörüngesi olanlar (topluluk adı)", "kontrol", ""]
+      [430, "فَالُوك", "fālūk", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [432, "فَلَكَة", "falaka", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [433, "فُلَكَة", "fulaka", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [434, "أُفْلُوكَة", "ʾuflūka", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [435, "فَوْلَك", "fawlak", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [437, "فَيْلَك", "faylak", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [439, "فَلْك", "falk", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [441, "فَلَك", "falak", "gök yörüngesi olma türünden şey", "kontrol", "Vikisözlük: orbit, rounded course"],
+      [443, "فِلْك", "filk", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [445, "فُلْك", "fulk", "gemi", "kuran", "Kur'ân"],
+      [447, "فَلِيك", "falīk", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [449, "فِلَك", "filak", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [451, "فُلُك", "fuluk", "gök yörüngesi olma türünden şey", "kontrol", ""],
+      [453, "فَلَاك", "falāk", "gök yörüngesi olma türünden şey", "kontrol", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "فَالُوكَة", "fālūka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [436, "فَوْلَكَة", "fawlaka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [438, "فَيْلَكَة", "faylaka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [440, "فَلْكَة", "falka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [442, "فَلَكَة", "falaka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [444, "فِلْكَة", "filka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [446, "فُلْكَة", "fulka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [448, "فَلِيكَة", "falīka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [450, "فِلَكَة", "filaka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [452, "فُلُكَة", "fuluka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", ""],
-      [454, "فَلَاكَة", "falāka", "bir tane gök yörüngesi olanlar (topluluk adı)", "kontrol", "Vikisözlük: poverty"]
+      [431, "فَالُوكَة", "fālūka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [436, "فَوْلَكَة", "fawlaka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [438, "فَيْلَكَة", "faylaka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [440, "فَلْكَة", "falka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [442, "فَلَكَة", "falaka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [444, "فِلْكَة", "filka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [446, "فُلْكَة", "fulka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [448, "فَلِيكَة", "falīka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [450, "فِلَكَة", "filaka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [452, "فُلُكَة", "fuluka", "gök yörüngesi olma türünden bir tane", "kontrol", ""],
+      [454, "فَلَاكَة", "falāka", "gök yörüngesi olma türünden bir tane", "kontrol", "Vikisözlük: poverty"]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَفْلَاك", "ʾaflāk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [456, "أَفْلِكَة", "ʾaflika", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [457, "أَفَالِك", "ʾafālik", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [458, "أَفَالِيك", "ʾafālīk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [459, "فُلُوك", "fulūk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [460, "فُلُك", "fuluk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [461, "فِلَاك", "filāk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [462, "فِلَك", "filak", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [463, "فِلَكَة", "filaka", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [464, "فُلَك", "fulak", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [465, "فُلَكاء", "fulakāʾ", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [466, "فَلَكَة", "falaka", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [467, "فُلَّاك", "fullāk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [468, "فَلَاك", "falāk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [469, "فَلَك", "falak", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", "Vikisözlük: orbit, rounded course"],
-      [470, "مَفَالِك", "mafālik", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [471, "مَفَالِيك", "mafālīk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [472, "فَوَالِك", "fawālik", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [473, "أَفْلُك", "ʾafluk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [474, "فُلَّك", "fullak", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [475, "فَلَائِك", "falāʾik", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""],
-      [476, "فُلَيْك", "fulayk", "gök yörüngesi olanlar (kırık çoğul)", "kontrol", ""]
+      [455, "أَفْلَاك", "ʾaflāk", "gök yörüngesi olmalar", "kontrol", ""],
+      [456, "أَفْلِكَة", "ʾaflika", "gök yörüngesi olmalar", "kontrol", ""],
+      [457, "أَفَالِك", "ʾafālik", "gök yörüngesi olmalar", "kontrol", ""],
+      [458, "أَفَالِيك", "ʾafālīk", "gök yörüngesi olmalar", "kontrol", ""],
+      [459, "فُلُوك", "fulūk", "gök yörüngesi olmalar", "kontrol", ""],
+      [460, "فُلُك", "fuluk", "gök yörüngesi olmalar", "kontrol", ""],
+      [461, "فِلَاك", "filāk", "gök yörüngesi olmalar", "kontrol", ""],
+      [462, "فِلَك", "filak", "gök yörüngesi olmalar", "kontrol", ""],
+      [463, "فِلَكَة", "filaka", "gök yörüngesi olmalar", "kontrol", ""],
+      [464, "فُلَك", "fulak", "gök yörüngesi olmalar", "kontrol", ""],
+      [465, "فُلَكاء", "fulakāʾ", "gök yörüngesi olmalar", "kontrol", ""],
+      [466, "فَلَكَة", "falaka", "gök yörüngesi olmalar", "kontrol", ""],
+      [467, "فُلَّاك", "fullāk", "gök yörüngesi olmalar", "kontrol", ""],
+      [468, "فَلَاك", "falāk", "gök yörüngesi olmalar", "kontrol", ""],
+      [469, "فَلَك", "falak", "gök yörüngesi olmalar", "kontrol", "Vikisözlük: orbit, rounded course"],
+      [470, "مَفَالِك", "mafālik", "gök yörüngesi olmalar", "kontrol", ""],
+      [471, "مَفَالِيك", "mafālīk", "gök yörüngesi olmalar", "kontrol", ""],
+      [472, "فَوَالِك", "fawālik", "gök yörüngesi olmalar", "kontrol", ""],
+      [473, "أَفْلُك", "ʾafluk", "gök yörüngesi olmalar", "kontrol", ""],
+      [474, "فُلَّك", "fullak", "gök yörüngesi olmalar", "kontrol", ""],
+      [475, "فَلَائِك", "falāʾik", "gök yörüngesi olmalar", "kontrol", ""],
+      [476, "فُلَيْك", "fulayk", "gök yörüngesi olmalar", "kontrol", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَفْلَاكَات", "ʾaflākāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [478, "أَفْلِكَات", "ʾaflikāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [479, "أَفَالِكَات", "ʾafālikāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [480, "أَفَالِيكَات", "ʾafālīkāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [481, "فُلُوكَات", "fulūkāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [482, "فُلُكَات", "fulukāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [483, "فِلَاكَات", "filākāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [484, "فِلَكَات", "filakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [485, "فِلَكَات", "filakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [486, "فُلَكَات", "fulakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [487, "فُلَكاآت", "fulakāʾāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [488, "فَلَكَات", "falakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [489, "فُلَّاكَات", "fullākāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [490, "فَلَاكَات", "falākāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [491, "فَلَكَات", "falakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [492, "مَفَالِكَات", "mafālikāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [493, "مَفَالِيكَات", "mafālīkāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [494, "فَوَالِكَات", "fawālikāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [495, "أَفْلُكَات", "ʾaflukāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [496, "فُلَّكَات", "fullakāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [497, "فَلَائِكَات", "falāʾikāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [498, "فُلَيْكَات", "fulaykāt", "gök yörüngesi olanlar (çoğulun çoğulu)", "kontrol", ""]
+      [477, "أَفْلَاكَات", "ʾaflākāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [478, "أَفْلِكَات", "ʾaflikāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [479, "أَفَالِكَات", "ʾafālikāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [480, "أَفَالِيكَات", "ʾafālīkāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [481, "فُلُوكَات", "fulūkāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [482, "فُلُكَات", "fulukāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [483, "فِلَاكَات", "filākāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [484, "فِلَكَات", "filakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [485, "فِلَكَات", "filakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [486, "فُلَكَات", "fulakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [487, "فُلَكاآت", "fulakāʾāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [488, "فَلَكَات", "falakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [489, "فُلَّاكَات", "fullākāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [490, "فَلَاكَات", "falākāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [491, "فَلَكَات", "falakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [492, "مَفَالِكَات", "mafālikāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [493, "مَفَالِيكَات", "mafālīkāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [494, "فَوَالِكَات", "fawālikāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [495, "أَفْلُكَات", "ʾaflukāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [496, "فُلَّكَات", "fullakāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [497, "فَلَائِكَات", "falāʾikāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""],
+      [498, "فُلَيْكَات", "fulaykāt", "gök yörüngesi olmalar topluluğu", "kontrol", ""]
     ]
   },
   "reddedilen": [

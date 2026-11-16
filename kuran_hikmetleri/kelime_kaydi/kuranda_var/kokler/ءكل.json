@@ -9,21 +9,21 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "أَكْل", "ʾakl", "yeme", "orta", "Vikisözlük: masdar (bâb I): to eat; to consume (food)"],
-      [1, "إِكْل", "ʾikl", "yeme", "orta", ""],
+      [1, "إِكْل", "ʾikl", "yenen şey", "orta", ""],
       [2, "أُكْل", "ʾukl", "yeme", "orta", ""],
-      [3, "أَكَل", "ʾakal", "yeme", "orta", ""],
+      [3, "أَكَل", "ʾakal", "yeme hâli", "orta", ""],
       [4, "إِكَل", "ʾikal", "yeme", "orta", ""],
       [5, "أُكُل", "ʾukul", "yeme", "orta", ""],
       [6, "أُكُول", "ʾukūl", "yeme", "orta", ""],
-      [7, "إِكَال", "ʾikāl", "yeme", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"],
-      [8, "أُكَال", "ʾukāl", "yeme", "orta", ""],
+      [7, "إِكَال", "ʾikāl", "yemeden kaçınma", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"],
+      [8, "أُكَال", "ʾukāl", "yeme illeti, yeme sesi", "orta", ""],
       [9, "أَكَال", "ʾakāl", "yeme", "orta", ""],
-      [10, "أَكَالَة", "ʾakāla", "yeme", "orta", ""],
-      [11, "أُكُولَة", "ʾukūla", "yeme", "orta", ""],
-      [12, "إِكَالَة", "ʾikāla", "yeme", "orta", ""],
-      [13, "أَكِيل", "ʾakīl", "yeme", "orta", ""],
+      [10, "أَكَالَة", "ʾakāla", "yeme vasfı", "orta", ""],
+      [11, "أُكُولَة", "ʾukūla", "yeme vasfı", "orta", ""],
+      [12, "إِكَالَة", "ʾikāla", "yeme vazifesi, yeme işi", "orta", ""],
+      [13, "أَكِيل", "ʾakīl", "yeme sesi, yeme yürüyüşü", "orta", ""],
       [14, "أَكُول", "ʾakūl", "yeme", "orta", "Vikisözlük: eating much, voracious"],
-      [15, "أَكَلَان", "ʾakalān", "yeme", "orta", ""],
+      [15, "أَكَلَان", "ʾakalān", "yeme çalkantısı, coşarak yeme", "orta", ""],
       [16, "أُكْلَان", "ʾuklān", "yeme", "orta", ""],
       [17, "إِكْلَان", "ʾiklān", "yeme", "orta", ""],
       [18, "أَكْلَى", "ʾaklā", "yeme", "orta", ""],
@@ -32,157 +32,185 @@
       [21, "أَكَلَة", "ʾakala", "yeme", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
       [22, "إِكَلَة", "ʾikala", "yeme", "orta", ""],
       [23, "أَكْلُولَة", "ʾaklūla", "yeme", "orta", ""],
-      [24, "تُؤْكُول", "tuʾkūl", "yeme", "orta", ""],
-      [25, "تَأْكِلَة", "taʾkila", "yeme", "orta", ""],
-      [26, "تَأْكَلَة", "taʾkala", "yeme", "orta", ""],
-      [27, "مَأْكُلَة", "maʾkula", "yeme", "orta", ""],
-      [28, "مَأْكِلَة", "maʾkila", "yeme", "orta", ""]
+      [24, "تُؤْكُول", "tuʾkūl", "tekrar tekrar yeme", "orta", ""],
+      [25, "تَأْكِلَة", "taʾkila", "tekrar tekrar yeme", "orta", ""],
+      [26, "تَأْكَلَة", "taʾkala", "tekrar tekrar yeme", "orta", ""],
+      [27, "مَأْكُلَة", "maʾkula", "yeme sebebi", "orta", ""],
+      [28, "مَأْكِلَة", "maʾkila", "yeme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَأْكِيل", "taʾkīl", "yeme", "orta", "Vikisözlük: verbal noun of أَكَّلَ (ʔakkala) (form II)"],
-      [30, "تَأْكِلَة", "taʾkila", "yeme", "orta", ""],
-      [31, "إِكِّال", "ʾikkāl", "yeme", "orta", ""]
+      [29, "تَأْكِيل", "taʾkīl", "çokça yeme", "orta", "Vikisözlük: verbal noun of أَكَّلَ (ʔakkala) (form II)"],
+      [30, "تَأْكِلَة", "taʾkila", "çokça yeme", "orta", ""],
+      [31, "إِكِّال", "ʾikkāl", "çokça yeme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَأْكِيلَة", "taʾkīla", "bir kere yeme", "orta", ""],
-      [33, "إِكِّالَة", "ʾikkāla", "bir kere yeme", "orta", ""]
+      [32, "تَأْكِيلَة", "taʾkīla", "bir kere çokça yeme", "orta", ""],
+      [33, "إِكِّالَة", "ʾikkāla", "bir kere çokça yeme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُؤَكِّل", "muʾakkil", "yeyen", "orta", ""],
-      [35, "مُؤَكِّلَة", "muʾakkila", "yeyen (dişi)", "orta", ""],
-      [36, "مُؤَكِّلَان", "muʾakkilān", "iki yeyen", "orta", ""],
-      [37, "مُؤَكِّلَتَان", "muʾakkilatān", "iki yeyen (dişi)", "orta", ""],
-      [38, "مُؤَكِّلُون", "muʾakkilūn", "yeyenler", "orta", ""],
-      [39, "مُؤَكِّلِين", "muʾakkilīn", "yeyenler", "orta", ""],
-      [40, "مُؤَكِّلَات", "muʾakkilāt", "yeyenler (dişi)", "orta", ""]
+      [34, "مُؤَكِّل", "muʾakkil", "çokça yeyen", "orta", ""],
+      [35, "مُؤَكِّلَة", "muʾakkila", "çokça yeyen (müennes)", "orta", ""],
+      [36, "مُؤَكِّلَان", "muʾakkilān", "çokça yeyen (iki)", "orta", ""],
+      [37, "مُؤَكِّلَتَان", "muʾakkilatān", "çokça yeyen (iki, müennes)", "orta", ""],
+      [38, "مُؤَكِّلُون", "muʾakkilūn", "çokça yeyenler", "orta", ""],
+      [39, "مُؤَكِّلِين", "muʾakkilīn", "çokça yeyenler", "orta", ""],
+      [40, "مُؤَكِّلَات", "muʾakkilāt", "çokça yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُؤَكَّل", "muʾakkal", "yenmiş", "orta", ""],
-      [42, "مُؤَكَّلَة", "muʾakkala", "yenmiş (dişi)", "orta", ""],
-      [43, "مُؤَكَّلَان", "muʾakkalān", "iki yenmiş", "orta", ""],
-      [44, "مُؤَكَّلَتَان", "muʾakkalatān", "iki yenmiş (dişi)", "orta", ""],
-      [45, "مُؤَكَّلُون", "muʾakkalūn", "yenmişler", "orta", ""],
-      [46, "مُؤَكَّلِين", "muʾakkalīn", "yenmişler", "orta", ""],
-      [47, "مُؤَكَّلَات", "muʾakkalāt", "yenmişler (dişi)", "orta", ""]
+      [41, "مُؤَكَّل", "muʾakkal", "çokça yenen", "orta", ""],
+      [42, "مُؤَكَّلَة", "muʾakkala", "çokça yenen (müennes)", "orta", ""],
+      [43, "مُؤَكَّلَان", "muʾakkalān", "çokça yenen (iki)", "orta", ""],
+      [44, "مُؤَكَّلَتَان", "muʾakkalatān", "çokça yenen (iki, müennes)", "orta", ""],
+      [45, "مُؤَكَّلُون", "muʾakkalūn", "çokça yenenler", "orta", ""],
+      [46, "مُؤَكَّلِين", "muʾakkalīn", "çokça yenenler", "orta", ""],
+      [47, "مُؤَكَّلَات", "muʾakkalāt", "çokça yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُؤَكَّل", "muʾakkal", "yeme (yeri/zamanı)", "orta", ""]
+      [48, "مُؤَكَّل", "muʾakkal", "çokça yeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُؤَاكَلَة", "muʾākala", "yeşme", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"],
-      [50, "إِكَال", "ʾikāl", "yeşme", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"]
+      [
+        49,
+        "مُؤَاكَلَة",
+        "muʾākala",
+        "biriyle karşılıklı yeme",
+        "orta",
+        "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"
+      ],
+      [
+        50,
+        "إِكَال",
+        "ʾikāl",
+        "biriyle karşılıklı yeme",
+        "orta",
+        "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"
+      ]
     ],
     "ism-i merre · bâb III": [
-      [51, "إِكَالَة", "ʾikāla", "bir kere yeşme", "orta", ""]
+      [51, "إِكَالَة", "ʾikāla", "bir kere biriyle karşılıklı yeme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُؤَاكِل", "muʾākil", "yeşen", "orta", ""],
-      [53, "مُؤَاكِلَة", "muʾākila", "yeşen (dişi)", "orta", ""],
-      [54, "مُؤَاكِلَان", "muʾākilān", "iki yeşen", "orta", ""],
-      [55, "مُؤَاكِلَتَان", "muʾākilatān", "iki yeşen (dişi)", "orta", ""],
-      [56, "مُؤَاكِلُون", "muʾākilūn", "yeşenler", "orta", ""],
-      [57, "مُؤَاكِلِين", "muʾākilīn", "yeşenler", "orta", ""],
-      [58, "مُؤَاكِلَات", "muʾākilāt", "yeşenler (dişi)", "orta", ""]
+      [52, "مُؤَاكِل", "muʾākil", "biriyle karşılıklı yeyen", "orta", ""],
+      [53, "مُؤَاكِلَة", "muʾākila", "biriyle karşılıklı yeyen (müennes)", "orta", ""],
+      [54, "مُؤَاكِلَان", "muʾākilān", "biriyle karşılıklı yeyen (iki)", "orta", ""],
+      [55, "مُؤَاكِلَتَان", "muʾākilatān", "biriyle karşılıklı yeyen (iki, müennes)", "orta", ""],
+      [56, "مُؤَاكِلُون", "muʾākilūn", "biriyle karşılıklı yeyenler", "orta", ""],
+      [57, "مُؤَاكِلِين", "muʾākilīn", "biriyle karşılıklı yeyenler", "orta", ""],
+      [58, "مُؤَاكِلَات", "muʾākilāt", "biriyle karşılıklı yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُؤَاكَل", "muʾākal", "yeşmiş", "orta", ""],
+      [59, "مُؤَاكَل", "muʾākal", "biriyle karşılıklı yenen", "orta", ""],
       [
         60,
         "مُؤَاكَلَة",
         "muʾākala",
-        "yeşmiş (dişi)",
+        "biriyle karşılıklı yenen (müennes)",
         "orta",
         "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"
       ],
-      [61, "مُؤَاكَلَان", "muʾākalān", "iki yeşmiş", "orta", ""],
-      [62, "مُؤَاكَلَتَان", "muʾākalatān", "iki yeşmiş (dişi)", "orta", ""],
-      [63, "مُؤَاكَلُون", "muʾākalūn", "yeşmişler", "orta", ""],
-      [64, "مُؤَاكَلِين", "muʾākalīn", "yeşmişler", "orta", ""],
-      [65, "مُؤَاكَلَات", "muʾākalāt", "yeşmişler (dişi)", "orta", ""]
+      [61, "مُؤَاكَلَان", "muʾākalān", "biriyle karşılıklı yenen (iki)", "orta", ""],
+      [62, "مُؤَاكَلَتَان", "muʾākalatān", "biriyle karşılıklı yenen (iki, müennes)", "orta", ""],
+      [63, "مُؤَاكَلُون", "muʾākalūn", "biriyle karşılıklı yenenler", "orta", ""],
+      [64, "مُؤَاكَلِين", "muʾākalīn", "biriyle karşılıklı yenenler", "orta", ""],
+      [65, "مُؤَاكَلَات", "muʾākalāt", "biriyle karşılıklı yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُؤَاكَل", "muʾākal", "yeşme (yeri/zamanı)", "orta", ""]
+      [66, "مُؤَاكَل", "muʾākal", "biriyle karşılıklı yeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِيكَال", "ʾīkāl", "yeme", "kural", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form IV)"]
+      [67, "إِيكَال", "ʾīkāl", "yedirme", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form IV)"]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِيكَالَة", "ʾīkāla", "bir kere yeme", "orta", ""]
+      [68, "إِيكَالَة", "ʾīkāla", "bir kere yedirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُؤْكِل", "muʾkil", "yeyen", "kural", ""],
-      [70, "مُؤْكِلَة", "muʾkila", "yeyen (dişi)", "kural", ""],
-      [71, "مُؤْكِلَان", "muʾkilān", "iki yeyen", "kural", ""],
-      [72, "مُؤْكِلَتَان", "muʾkilatān", "iki yeyen (dişi)", "kural", ""],
-      [73, "مُؤْكِلُون", "muʾkilūn", "yeyenler", "kural", ""],
-      [74, "مُؤْكِلِين", "muʾkilīn", "yeyenler", "kural", ""],
-      [75, "مُؤْكِلَات", "muʾkilāt", "yeyenler (dişi)", "kural", ""]
+      [69, "مُؤْكِل", "muʾkil", "yediren", "orta", ""],
+      [70, "مُؤْكِلَة", "muʾkila", "yediren (müennes)", "orta", ""],
+      [71, "مُؤْكِلَان", "muʾkilān", "yediren (iki)", "orta", ""],
+      [72, "مُؤْكِلَتَان", "muʾkilatān", "yediren (iki, müennes)", "orta", ""],
+      [73, "مُؤْكِلُون", "muʾkilūn", "yedirenler", "orta", ""],
+      [74, "مُؤْكِلِين", "muʾkilīn", "yedirenler", "orta", ""],
+      [75, "مُؤْكِلَات", "muʾkilāt", "yedirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُؤْكَل", "muʾkal", "yenmiş", "kural", ""],
-      [77, "مُؤْكَلَة", "muʾkala", "yenmiş (dişi)", "kural", ""],
-      [78, "مُؤْكَلَان", "muʾkalān", "iki yenmiş", "kural", ""],
-      [79, "مُؤْكَلَتَان", "muʾkalatān", "iki yenmiş (dişi)", "kural", ""],
-      [80, "مُؤْكَلُون", "muʾkalūn", "yenmişler", "kural", ""],
-      [81, "مُؤْكَلِين", "muʾkalīn", "yenmişler", "kural", ""],
-      [82, "مُؤْكَلَات", "muʾkalāt", "yenmişler (dişi)", "kural", ""]
+      [76, "مُؤْكَل", "muʾkal", "yedirilen", "orta", ""],
+      [77, "مُؤْكَلَة", "muʾkala", "yedirilen (müennes)", "orta", ""],
+      [78, "مُؤْكَلَان", "muʾkalān", "yedirilen (iki)", "orta", ""],
+      [79, "مُؤْكَلَتَان", "muʾkalatān", "yedirilen (iki, müennes)", "orta", ""],
+      [80, "مُؤْكَلُون", "muʾkalūn", "yedirilenler", "orta", ""],
+      [81, "مُؤْكَلِين", "muʾkalīn", "yedirilenler", "orta", ""],
+      [82, "مُؤْكَلَات", "muʾkalāt", "yedirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُؤْكَل", "muʾkal", "yeme (yeri/zamanı)", "orta", ""]
+      [83, "مُؤْكَل", "muʾkal", "yedirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَأَكُّل", "taʾakkul", "yenme", "orta", "Vikisözlük: masdar (bâb V): to be devoured, to be consumed"]
+      [
+        84,
+        "تَأَكُّل",
+        "taʾakkul",
+        "kendini zorlayarak yeme",
+        "orta",
+        "Vikisözlük: masdar (bâb V): to be devoured, to be consumed"
+      ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَأَكُّلَة", "taʾakkula", "bir kere yenme", "orta", ""]
+      [85, "تَأَكُّلَة", "taʾakkula", "bir kere kendini zorlayarak yeme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَأَكِّل", "mutaʾakkil", "yenen", "orta", ""],
-      [87, "مُتَأَكِّلَة", "mutaʾakkila", "yenen (dişi)", "orta", ""],
-      [88, "مُتَأَكِّلَان", "mutaʾakkilān", "iki yenen", "orta", ""],
-      [89, "مُتَأَكِّلَتَان", "mutaʾakkilatān", "iki yenen (dişi)", "orta", ""],
-      [90, "مُتَأَكِّلُون", "mutaʾakkilūn", "yenenler", "orta", ""],
-      [91, "مُتَأَكِّلِين", "mutaʾakkilīn", "yenenler", "orta", ""],
-      [92, "مُتَأَكِّلَات", "mutaʾakkilāt", "yenenler (dişi)", "orta", ""]
+      [86, "مُتَأَكِّل", "mutaʾakkil", "kendini zorlayarak yeyen", "orta", ""],
+      [87, "مُتَأَكِّلَة", "mutaʾakkila", "kendini zorlayarak yeyen (müennes)", "orta", ""],
+      [88, "مُتَأَكِّلَان", "mutaʾakkilān", "kendini zorlayarak yeyen (iki)", "orta", ""],
+      [89, "مُتَأَكِّلَتَان", "mutaʾakkilatān", "kendini zorlayarak yeyen (iki, müennes)", "orta", ""],
+      [90, "مُتَأَكِّلُون", "mutaʾakkilūn", "kendini zorlayarak yeyenler", "orta", ""],
+      [91, "مُتَأَكِّلِين", "mutaʾakkilīn", "kendini zorlayarak yeyenler", "orta", ""],
+      [92, "مُتَأَكِّلَات", "mutaʾakkilāt", "kendini zorlayarak yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَأَكَّل", "mutaʾakkal", "yenmiş", "orta", ""],
-      [94, "مُتَأَكَّلَة", "mutaʾakkala", "yenmiş (dişi)", "orta", ""],
-      [95, "مُتَأَكَّلَان", "mutaʾakkalān", "iki yenmiş", "orta", ""],
-      [96, "مُتَأَكَّلَتَان", "mutaʾakkalatān", "iki yenmiş (dişi)", "orta", ""],
-      [97, "مُتَأَكَّلُون", "mutaʾakkalūn", "yenmişler", "orta", ""],
-      [98, "مُتَأَكَّلِين", "mutaʾakkalīn", "yenmişler", "orta", ""],
-      [99, "مُتَأَكَّلَات", "mutaʾakkalāt", "yenmişler (dişi)", "orta", ""]
+      [93, "مُتَأَكَّل", "mutaʾakkal", "kendini zorlayarak yenen", "orta", ""],
+      [94, "مُتَأَكَّلَة", "mutaʾakkala", "kendini zorlayarak yenen (müennes)", "orta", ""],
+      [95, "مُتَأَكَّلَان", "mutaʾakkalān", "kendini zorlayarak yenen (iki)", "orta", ""],
+      [96, "مُتَأَكَّلَتَان", "mutaʾakkalatān", "kendini zorlayarak yenen (iki, müennes)", "orta", ""],
+      [97, "مُتَأَكَّلُون", "mutaʾakkalūn", "kendini zorlayarak yenenler", "orta", ""],
+      [98, "مُتَأَكَّلِين", "mutaʾakkalīn", "kendini zorlayarak yenenler", "orta", ""],
+      [99, "مُتَأَكَّلَات", "mutaʾakkalāt", "kendini zorlayarak yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَأَكَّل", "mutaʾakkal", "yenme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَأَكَّل", "mutaʾakkal", "kendini zorlayarak yeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَآكُل", "taʾākul", "yeşme", "orta", "Vikisözlük: verbal noun of تَآكَلَ (taʔākala) (form VI)"]
+      [
+        101,
+        "تَآكُل",
+        "taʾākul",
+        "birbirine yeme",
+        "orta",
+        "Vikisözlük: verbal noun of تَآكَلَ (taʔākala) (form VI)"
+      ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَآكُلَة", "taʾākula", "bir kere yeşme", "orta", ""]
+      [102, "تَآكُلَة", "taʾākula", "bir kere birbirine yeme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَآكِل", "mutaʾākil", "yeşen", "orta", ""],
-      [104, "مُتَآكِلَة", "mutaʾākila", "yeşen (dişi)", "orta", ""],
-      [105, "مُتَآكِلَان", "mutaʾākilān", "iki yeşen", "orta", ""],
-      [106, "مُتَآكِلَتَان", "mutaʾākilatān", "iki yeşen (dişi)", "orta", ""],
-      [107, "مُتَآكِلُون", "mutaʾākilūn", "yeşenler", "orta", ""],
-      [108, "مُتَآكِلِين", "mutaʾākilīn", "yeşenler", "orta", ""],
-      [109, "مُتَآكِلَات", "mutaʾākilāt", "yeşenler (dişi)", "orta", ""]
+      [103, "مُتَآكِل", "mutaʾākil", "birbirine yeyen", "orta", ""],
+      [104, "مُتَآكِلَة", "mutaʾākila", "birbirine yeyen (müennes)", "orta", ""],
+      [105, "مُتَآكِلَان", "mutaʾākilān", "birbirine yeyen (iki)", "orta", ""],
+      [106, "مُتَآكِلَتَان", "mutaʾākilatān", "birbirine yeyen (iki, müennes)", "orta", ""],
+      [107, "مُتَآكِلُون", "mutaʾākilūn", "birbirine yeyenler", "orta", ""],
+      [108, "مُتَآكِلِين", "mutaʾākilīn", "birbirine yeyenler", "orta", ""],
+      [109, "مُتَآكِلَات", "mutaʾākilāt", "birbirine yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَآكَل", "mutaʾākal", "yeşmiş", "orta", ""],
-      [111, "مُتَآكَلَة", "mutaʾākala", "yeşmiş (dişi)", "orta", ""],
-      [112, "مُتَآكَلَان", "mutaʾākalān", "iki yeşmiş", "orta", ""],
-      [113, "مُتَآكَلَتَان", "mutaʾākalatān", "iki yeşmiş (dişi)", "orta", ""],
-      [114, "مُتَآكَلُون", "mutaʾākalūn", "yeşmişler", "orta", ""],
-      [115, "مُتَآكَلِين", "mutaʾākalīn", "yeşmişler", "orta", ""],
-      [116, "مُتَآكَلَات", "mutaʾākalāt", "yeşmişler (dişi)", "orta", ""]
+      [110, "مُتَآكَل", "mutaʾākal", "birbirine yenen", "orta", ""],
+      [111, "مُتَآكَلَة", "mutaʾākala", "birbirine yenen (müennes)", "orta", ""],
+      [112, "مُتَآكَلَان", "mutaʾākalān", "birbirine yenen (iki)", "orta", ""],
+      [113, "مُتَآكَلَتَان", "mutaʾākalatān", "birbirine yenen (iki, müennes)", "orta", ""],
+      [114, "مُتَآكَلُون", "mutaʾākalūn", "birbirine yenenler", "orta", ""],
+      [115, "مُتَآكَلِين", "mutaʾākalīn", "birbirine yenenler", "orta", ""],
+      [116, "مُتَآكَلَات", "mutaʾākalāt", "birbirine yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَآكَل", "mutaʾākal", "yeşme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَآكَل", "mutaʾākal", "birbirine yeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْئِكَال", "inʾikāl", "yenme", "orta", ""]
@@ -192,126 +220,133 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْأَكِل", "munʾakil", "yenen", "orta", ""],
-      [121, "مُنْأَكِلَة", "munʾakila", "yenen (dişi)", "orta", ""],
-      [122, "مُنْأَكِلَان", "munʾakilān", "iki yenen", "orta", ""],
-      [123, "مُنْأَكِلَتَان", "munʾakilatān", "iki yenen (dişi)", "orta", ""],
+      [121, "مُنْأَكِلَة", "munʾakila", "yenen (müennes)", "orta", ""],
+      [122, "مُنْأَكِلَان", "munʾakilān", "yenen (iki)", "orta", ""],
+      [123, "مُنْأَكِلَتَان", "munʾakilatān", "yenen (iki, müennes)", "orta", ""],
       [124, "مُنْأَكِلُون", "munʾakilūn", "yenenler", "orta", ""],
       [125, "مُنْأَكِلِين", "munʾakilīn", "yenenler", "orta", ""],
-      [126, "مُنْأَكِلَات", "munʾakilāt", "yenenler (dişi)", "orta", ""]
+      [126, "مُنْأَكِلَات", "munʾakilāt", "yenenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْأَكَل", "munʾakal", "yenmiş", "orta", ""],
-      [128, "مُنْأَكَلَة", "munʾakala", "yenmiş (dişi)", "orta", ""],
-      [129, "مُنْأَكَلَان", "munʾakalān", "iki yenmiş", "orta", ""],
-      [130, "مُنْأَكَلَتَان", "munʾakalatān", "iki yenmiş (dişi)", "orta", ""],
-      [131, "مُنْأَكَلُون", "munʾakalūn", "yenmişler", "orta", ""],
-      [132, "مُنْأَكَلِين", "munʾakalīn", "yenmişler", "orta", ""],
-      [133, "مُنْأَكَلَات", "munʾakalāt", "yenmişler (dişi)", "orta", ""]
+      [127, "مُنْأَكَل", "munʾakal", "yenen", "orta", ""],
+      [128, "مُنْأَكَلَة", "munʾakala", "yenen (müennes)", "orta", ""],
+      [129, "مُنْأَكَلَان", "munʾakalān", "yenen (iki)", "orta", ""],
+      [130, "مُنْأَكَلَتَان", "munʾakalatān", "yenen (iki, müennes)", "orta", ""],
+      [131, "مُنْأَكَلُون", "munʾakalūn", "yenenler", "orta", ""],
+      [132, "مُنْأَكَلِين", "munʾakalīn", "yenenler", "orta", ""],
+      [133, "مُنْأَكَلَات", "munʾakalāt", "yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْأَكَل", "munʾakal", "yenme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْأَكَل", "munʾakal", "yenme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِئْتِكَال", "iʾtikāl", "yenme", "orta", "Vikisözlük: masdar (bâb VIII): to corrode, erode"]
+      [
+        135,
+        "اِئْتِكَال",
+        "iʾtikāl",
+        "kendisi için yeme",
+        "orta",
+        "Vikisözlük: masdar (bâb VIII): to corrode, erode"
+      ]
     ],
     "masdar · bâb VIII (hemze idgamlı)": [
-      [136, "اِتِّكَال", "ittikāl", "yenme", "orta", ""]
+      [136, "اِتِّكَال", "ittikāl", "kendisi için yeme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِئْتِكَالَة", "iʾtikāla", "bir kere yenme", "orta", ""]
+      [137, "اِئْتِكَالَة", "iʾtikāla", "bir kere kendisi için yeme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُؤْتَكِل", "muʾtakil", "yenen", "orta", ""],
-      [139, "مُؤْتَكِلَة", "muʾtakila", "yenen (dişi)", "orta", ""],
-      [140, "مُؤْتَكِلَان", "muʾtakilān", "iki yenen", "orta", ""],
-      [141, "مُؤْتَكِلَتَان", "muʾtakilatān", "iki yenen (dişi)", "orta", ""],
-      [142, "مُؤْتَكِلُون", "muʾtakilūn", "yenenler", "orta", ""],
-      [143, "مُؤْتَكِلِين", "muʾtakilīn", "yenenler", "orta", ""],
-      [144, "مُؤْتَكِلَات", "muʾtakilāt", "yenenler (dişi)", "orta", ""]
+      [138, "مُؤْتَكِل", "muʾtakil", "kendisi için yeyen", "orta", ""],
+      [139, "مُؤْتَكِلَة", "muʾtakila", "kendisi için yeyen (müennes)", "orta", ""],
+      [140, "مُؤْتَكِلَان", "muʾtakilān", "kendisi için yeyen (iki)", "orta", ""],
+      [141, "مُؤْتَكِلَتَان", "muʾtakilatān", "kendisi için yeyen (iki, müennes)", "orta", ""],
+      [142, "مُؤْتَكِلُون", "muʾtakilūn", "kendisi için yeyenler", "orta", ""],
+      [143, "مُؤْتَكِلِين", "muʾtakilīn", "kendisi için yeyenler", "orta", ""],
+      [144, "مُؤْتَكِلَات", "muʾtakilāt", "kendisi için yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُؤْتَكَل", "muʾtakal", "yenmiş", "orta", ""],
-      [146, "مُؤْتَكَلَة", "muʾtakala", "yenmiş (dişi)", "orta", ""],
-      [147, "مُؤْتَكَلَان", "muʾtakalān", "iki yenmiş", "orta", ""],
-      [148, "مُؤْتَكَلَتَان", "muʾtakalatān", "iki yenmiş (dişi)", "orta", ""],
-      [149, "مُؤْتَكَلُون", "muʾtakalūn", "yenmişler", "orta", ""],
-      [150, "مُؤْتَكَلِين", "muʾtakalīn", "yenmişler", "orta", ""],
-      [151, "مُؤْتَكَلَات", "muʾtakalāt", "yenmişler (dişi)", "orta", ""]
+      [145, "مُؤْتَكَل", "muʾtakal", "kendisi için yenen", "orta", ""],
+      [146, "مُؤْتَكَلَة", "muʾtakala", "kendisi için yenen (müennes)", "orta", ""],
+      [147, "مُؤْتَكَلَان", "muʾtakalān", "kendisi için yenen (iki)", "orta", ""],
+      [148, "مُؤْتَكَلَتَان", "muʾtakalatān", "kendisi için yenen (iki, müennes)", "orta", ""],
+      [149, "مُؤْتَكَلُون", "muʾtakalūn", "kendisi için yenenler", "orta", ""],
+      [150, "مُؤْتَكَلِين", "muʾtakalīn", "kendisi için yenenler", "orta", ""],
+      [151, "مُؤْتَكَلَات", "muʾtakalāt", "kendisi için yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُؤْتَكَل", "muʾtakal", "yenme (yeri/zamanı)", "orta", ""]
+      [152, "مُؤْتَكَل", "muʾtakal", "kendisi için yeme yeri, vakti", "orta", ""]
     ],
     "ism-i fâil · bâb VIII (hemze idgamlı)": [
-      [153, "مُتَّكِل", "muttakil", "yenen", "orta", ""],
-      [154, "مُتَّكِلَة", "muttakila", "yenen (dişi)", "orta", ""],
-      [155, "مُتَّكِلَان", "muttakilān", "iki yenen", "orta", ""],
-      [156, "مُتَّكِلَتَان", "muttakilatān", "iki yenen (dişi)", "orta", ""],
-      [157, "مُتَّكِلُون", "muttakilūn", "yenenler", "orta", ""],
-      [158, "مُتَّكِلِين", "muttakilīn", "yenenler", "orta", ""],
-      [159, "مُتَّكِلَات", "muttakilāt", "yenenler (dişi)", "orta", ""]
+      [153, "مُتَّكِل", "muttakil", "kendisi için yeyen", "orta", ""],
+      [154, "مُتَّكِلَة", "muttakila", "kendisi için yeyen (müennes)", "orta", ""],
+      [155, "مُتَّكِلَان", "muttakilān", "kendisi için yeyen (iki)", "orta", ""],
+      [156, "مُتَّكِلَتَان", "muttakilatān", "kendisi için yeyen (iki, müennes)", "orta", ""],
+      [157, "مُتَّكِلُون", "muttakilūn", "kendisi için yeyenler", "orta", ""],
+      [158, "مُتَّكِلِين", "muttakilīn", "kendisi için yeyenler", "orta", ""],
+      [159, "مُتَّكِلَات", "muttakilāt", "kendisi için yeyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII (hemze idgamlı)": [
-      [160, "مُتَّكَل", "muttakal", "yenmiş", "orta", ""],
-      [161, "مُتَّكَلَة", "muttakala", "yenmiş (dişi)", "orta", ""],
-      [162, "مُتَّكَلَان", "muttakalān", "iki yenmiş", "orta", ""],
-      [163, "مُتَّكَلَتَان", "muttakalatān", "iki yenmiş (dişi)", "orta", ""],
-      [164, "مُتَّكَلُون", "muttakalūn", "yenmişler", "orta", ""],
-      [165, "مُتَّكَلِين", "muttakalīn", "yenmişler", "orta", ""],
-      [166, "مُتَّكَلَات", "muttakalāt", "yenmişler (dişi)", "orta", ""]
+      [160, "مُتَّكَل", "muttakal", "kendisi için yenen", "orta", ""],
+      [161, "مُتَّكَلَة", "muttakala", "kendisi için yenen (müennes)", "orta", ""],
+      [162, "مُتَّكَلَان", "muttakalān", "kendisi için yenen (iki)", "orta", ""],
+      [163, "مُتَّكَلَتَان", "muttakalatān", "kendisi için yenen (iki, müennes)", "orta", ""],
+      [164, "مُتَّكَلُون", "muttakalūn", "kendisi için yenenler", "orta", ""],
+      [165, "مُتَّكَلِين", "muttakalīn", "kendisi için yenenler", "orta", ""],
+      [166, "مُتَّكَلَات", "muttakalāt", "kendisi için yenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII (hemze idgamlı)": [
-      [167, "مُتَّكَل", "muttakal", "yenme (yeri/zamanı)", "orta", ""]
+      [167, "مُتَّكَل", "muttakal", "kendisi için yeme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِئْكِلَال", "iʾkilāl", "yeleşme", "kontrol", ""]
+      [499, "اِئْكِلَال", "iʾkilāl", "iyiden iyiye yeme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُؤْكَلّ", "muʾkall", "yeleşen", "kontrol", ""],
-      [501, "مُؤْكَلَّة", "muʾkalla", "yeleşen (dişi)", "kontrol", ""],
-      [502, "مُؤْكَلَّان", "muʾkallān", "iki yeleşen", "kontrol", ""],
-      [503, "مُؤْكَلَّتَان", "muʾkallatān", "iki yeleşen (dişi)", "kontrol", ""],
-      [504, "مُؤْكَلُّون", "muʾkallūn", "yeleşenler", "kontrol", ""],
-      [505, "مُؤْكَلِّين", "muʾkallīn", "yeleşenler", "kontrol", ""],
-      [506, "مُؤْكَلَّات", "muʾkallāt", "yeleşenler (dişi)", "kontrol", ""]
+      [500, "مُؤْكَلّ", "muʾkall", "iyiden iyiye yeyen", "kontrol", ""],
+      [501, "مُؤْكَلَّة", "muʾkalla", "iyiden iyiye yeyen (müennes)", "kontrol", ""],
+      [502, "مُؤْكَلَّان", "muʾkallān", "iyiden iyiye yeyen (iki)", "kontrol", ""],
+      [503, "مُؤْكَلَّتَان", "muʾkallatān", "iyiden iyiye yeyen (iki, müennes)", "kontrol", ""],
+      [504, "مُؤْكَلُّون", "muʾkallūn", "iyiden iyiye yeyenler", "kontrol", ""],
+      [505, "مُؤْكَلِّين", "muʾkallīn", "iyiden iyiye yeyenler", "kontrol", ""],
+      [506, "مُؤْكَلَّات", "muʾkallāt", "iyiden iyiye yeyenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِئْكَال", "istiʾkāl", "yemeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِئْكَالَة", "istiʾkāla", "bir kere yeme", "orta", ""]
+      [177, "اِسْتِئْكَالَة", "istiʾkāla", "bir kere yemeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَأْكِل", "mustaʾkil", "yemeyi isteyen", "orta", ""],
-      [179, "مُسْتَأْكِلَة", "mustaʾkila", "yemeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَأْكِلَان", "mustaʾkilān", "iki yemeyi isteyen", "orta", ""],
-      [181, "مُسْتَأْكِلَتَان", "mustaʾkilatān", "iki yemeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَأْكِلَة", "mustaʾkila", "yemeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَأْكِلَان", "mustaʾkilān", "yemeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَأْكِلَتَان", "mustaʾkilatān", "yemeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَأْكِلُون", "mustaʾkilūn", "yemeyi isteyenler", "orta", ""],
       [183, "مُسْتَأْكِلِين", "mustaʾkilīn", "yemeyi isteyenler", "orta", ""],
-      [184, "مُسْتَأْكِلَات", "mustaʾkilāt", "yemeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَأْكِلَات", "mustaʾkilāt", "yemeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَأْكَل", "mustaʾkal", "yemeyi istenen", "orta", ""],
-      [186, "مُسْتَأْكَلَة", "mustaʾkala", "yemeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَأْكَلَان", "mustaʾkalān", "iki yemeyi istenen", "orta", ""],
-      [188, "مُسْتَأْكَلَتَان", "mustaʾkalatān", "iki yemeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَأْكَلُون", "mustaʾkalūn", "yemeyi istenenler", "orta", ""],
-      [190, "مُسْتَأْكَلِين", "mustaʾkalīn", "yemeyi istenenler", "orta", ""],
-      [191, "مُسْتَأْكَلَات", "mustaʾkalāt", "yemeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَأْكَل", "mustaʾkal", "yemesi istenen", "orta", ""],
+      [186, "مُسْتَأْكَلَة", "mustaʾkala", "yemesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَأْكَلَان", "mustaʾkalān", "yemesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَأْكَلَتَان", "mustaʾkalatān", "yemesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَأْكَلُون", "mustaʾkalūn", "yemesi istenenler", "orta", ""],
+      [190, "مُسْتَأْكَلِين", "mustaʾkalīn", "yemesi istenenler", "orta", ""],
+      [191, "مُسْتَأْكَلَات", "mustaʾkalāt", "yemesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَأْكَل", "mustaʾkal", "yeme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَأْكَل", "mustaʾkal", "yemeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِئْكِيلَال", "iʾkīlāl", "iyice yeleşme", "kontrol", ""]
+      [507, "اِئْكِيلَال", "iʾkīlāl", "büsbütün yeme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُؤْكَالّ", "muʾkāll", "iyice yeleşen", "kontrol", ""],
-      [509, "مُؤْكَالَّة", "muʾkālla", "iyice yeleşen (dişi)", "kontrol", ""],
-      [510, "مُؤْكَالَّان", "muʾkāllān", "iki iyice yeleşen", "kontrol", ""],
-      [511, "مُؤْكَالَّتَان", "muʾkāllatān", "iki iyice yeleşen (dişi)", "kontrol", ""],
-      [512, "مُؤْكَالُّون", "muʾkāllūn", "iyice yeleşenler", "kontrol", ""],
-      [513, "مُؤْكَالِّين", "muʾkāllīn", "iyice yeleşenler", "kontrol", ""],
-      [514, "مُؤْكَالَّات", "muʾkāllāt", "iyice yeleşenler (dişi)", "kontrol", ""]
+      [508, "مُؤْكَالّ", "muʾkāll", "büsbütün yeyen", "kontrol", ""],
+      [509, "مُؤْكَالَّة", "muʾkālla", "büsbütün yeyen (müennes)", "kontrol", ""],
+      [510, "مُؤْكَالَّان", "muʾkāllān", "büsbütün yeyen (iki)", "kontrol", ""],
+      [511, "مُؤْكَالَّتَان", "muʾkāllatān", "büsbütün yeyen (iki, müennes)", "kontrol", ""],
+      [512, "مُؤْكَالُّون", "muʾkāllūn", "büsbütün yeyenler", "kontrol", ""],
+      [513, "مُؤْكَالِّين", "muʾkāllīn", "büsbütün yeyenler", "kontrol", ""],
+      [514, "مُؤْكَالَّات", "muʾkāllāt", "büsbütün yeyenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِئْكِوْكَال", "iʾkiwkāl", "aşırı yeme", "orta", ""]
@@ -321,238 +356,238 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "آكِل", "ʾākil", "yeyen", "kural", ""],
-      [214, "آكِلَة", "ʾākila", "yeyen (dişi)", "kural", ""],
-      [215, "آكِلَان", "ʾākilān", "iki yeyen", "kural", ""],
-      [216, "آكِلَتَان", "ʾākilatān", "iki yeyen (dişi)", "kural", ""],
+      [214, "آكِلَة", "ʾākila", "yeyen (müennes)", "kural", ""],
+      [215, "آكِلَان", "ʾākilān", "yeyen (iki)", "kural", ""],
+      [216, "آكِلَتَان", "ʾākilatān", "yeyen (iki, müennes)", "kural", ""],
       [217, "آكِلُون", "ʾākilūn", "yeyenler", "kural", ""],
       [218, "آكِلِين", "ʾākilīn", "yeyenler", "kural", ""],
-      [219, "آكِلَات", "ʾākilāt", "yeyenler (dişi)", "kural", ""]
+      [219, "آكِلَات", "ʾākilāt", "yeyenler (müennes)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَأْكُول", "maʾkūl", "yenmiş", "kural", ""],
-      [221, "مَأْكُولَة", "maʾkūla", "yenmiş (dişi)", "kural", ""],
-      [222, "مَأْكُولَان", "maʾkūlān", "iki yenmiş", "kural", ""],
-      [223, "مَأْكُولَتَان", "maʾkūlatān", "iki yenmiş (dişi)", "kural", ""],
-      [224, "مَأْكُولُون", "maʾkūlūn", "yenmişler", "kural", ""],
-      [225, "مَأْكُولِين", "maʾkūlīn", "yenmişler", "kural", ""],
-      [226, "مَأْكُولَات", "maʾkūlāt", "yenmişler (dişi)", "kural", ""]
+      [220, "مَأْكُول", "maʾkūl", "yenilmiş", "kuran", "Kur'ân"],
+      [221, "مَأْكُولَة", "maʾkūla", "yenen (müennes)", "kural", ""],
+      [222, "مَأْكُولَان", "maʾkūlān", "yenen (iki)", "kural", ""],
+      [223, "مَأْكُولَتَان", "maʾkūlatān", "yenen (iki, müennes)", "kural", ""],
+      [224, "مَأْكُولُون", "maʾkūlūn", "yenenler", "kural", ""],
+      [225, "مَأْكُولِين", "maʾkūlīn", "yenenler", "kural", ""],
+      [226, "مَأْكُولَات", "maʾkūlāt", "yenenler (müennes)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [
-        227,
-        "مَأْكَل",
-        "maʾkal",
-        "yeme (yeri/zamanı)",
-        "orta",
-        "Vikisözlük: verbal noun of أَكَلَ (ʔakala) (form I)"
-      ],
-      [228, "مَأْكَلَان", "maʾkalān", "iki yeme (yeri/zamanı)", "orta", ""],
-      [229, "مَأْكِل", "maʾkil", "yeme (yeri/zamanı)", "orta", ""],
-      [230, "مَأْكِلَان", "maʾkilān", "iki yeme (yeri/zamanı)", "orta", ""],
-      [231, "مَأْكَلَة", "maʾkala", "yeme (yeri/zamanı)", "orta", ""],
-      [232, "مَأْكَلَتَان", "maʾkalatān", "iki yeme (yeri/zamanı)", "orta", ""],
-      [233, "مَأْكِلَة", "maʾkila", "yeme (yeri/zamanı)", "orta", ""],
-      [234, "مَأْكِلَتَان", "maʾkilatān", "iki yeme (yeri/zamanı)", "orta", ""],
-      [247, "مَأْكُلَة", "maʾkula", "yeme (yeri/zamanı)", "orta", ""],
-      [248, "مَأْكُلَتَان", "maʾkulatān", "iki yeme (yeri/zamanı)", "orta", ""]
+      [227, "مَأْكَل", "maʾkal", "yeme yeri, vakti", "orta", "Vikisözlük: verbal noun of أَكَلَ (ʔakala) (form I)"],
+      [228, "مَأْكَلَان", "maʾkalān", "yeme yeri, vakti (iki)", "orta", ""],
+      [229, "مَأْكِل", "maʾkil", "yeme yeri, vakti", "orta", ""],
+      [230, "مَأْكِلَان", "maʾkilān", "yeme yeri, vakti (iki)", "orta", ""],
+      [231, "مَأْكَلَة", "maʾkala", "yemenin bol olduğu yer", "orta", ""],
+      [232, "مَأْكَلَتَان", "maʾkalatān", "yemenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَأْكِلَة", "maʾkila", "yemenin bol olduğu yer", "orta", ""],
+      [234, "مَأْكِلَتَان", "maʾkilatān", "yemenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَأْكُلَة", "maʾkula", "yeme yeri, vakti", "orta", ""],
+      [248, "مَأْكُلَتَان", "maʾkulatān", "yeme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِئْكَل", "miʾkal", "yemeye yarayan araç", "orta", ""],
-      [236, "مِئْكَلَان", "miʾkalān", "iki yemeye yarayan araç", "orta", ""],
-      [237, "مِئْكَال", "miʾkāl", "yemeye yarayan araç", "orta", ""],
-      [238, "مِئْكَالَان", "miʾkālān", "iki yemeye yarayan araç", "orta", ""],
-      [239, "مِئْكَلَة", "miʾkala", "yemeye yarayan araç", "orta", ""],
-      [240, "مِئْكَلَتَان", "miʾkalatān", "iki yemeye yarayan araç", "orta", ""]
+      [235, "مِئْكَل", "miʾkal", "yeme âleti", "orta", ""],
+      [236, "مِئْكَلَان", "miʾkalān", "yeme âleti (iki)", "orta", ""],
+      [237, "مِئْكَال", "miʾkāl", "yeme âleti", "orta", ""],
+      [238, "مِئْكَالَان", "miʾkālān", "yeme âleti (iki)", "orta", ""],
+      [239, "مِئْكَلَة", "miʾkala", "yeme âleti", "orta", ""],
+      [240, "مِئْكَلَتَان", "miʾkalatān", "yeme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "آكَل", "ʾākal", "daha çok yeyen", "orta", ""],
-      [242, "آكَلَان", "ʾākalān", "iki daha çok yeyen", "orta", ""]
+      [242, "آكَلَان", "ʾākalān", "daha çok yeyen (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "أُكْلَى", "ʾuklā", "daha çok yeyen", "orta", ""],
-      [244, "أُكْلَيَان", "ʾuklayān", "iki daha çok yeyen", "orta", ""],
+      [244, "أُكْلَيَان", "ʾuklayān", "daha çok yeyen (iki)", "orta", ""],
       [245, "أَكْلَاء", "ʾaklāʾ", "daha çok yeyen", "orta", ""],
-      [246, "أَكْلَاآن", "ʾaklāʾān", "iki daha çok yeyen", "orta", ""]
+      [246, "أَكْلَاآن", "ʾaklāʾān", "daha çok yeyen (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "أُكَيْل", "ʾukayl", "küçük yeme", "orta", ""],
-      [250, "أُكَيْلَان", "ʾukaylān", "iki küçük yeme", "orta", ""],
-      [251, "أُكَيْلَة", "ʾukayla", "küçük yeme", "orta", ""],
-      [252, "أُكَيْلَتَان", "ʾukaylatān", "iki küçük yeme", "orta", ""]
+      [249, "أُكَيْل", "ʾukayl", "azıcık yeme", "orta", ""],
+      [250, "أُكَيْلَان", "ʾukaylān", "azıcık yeme (iki)", "orta", ""],
+      [251, "أُكَيْلَة", "ʾukayla", "azıcık yeme", "orta", ""],
+      [252, "أُكَيْلَتَان", "ʾukaylatān", "azıcık yeme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَأْكَل", "maʾkal", "yeme", "kural", "Vikisözlük: verbal noun of أَكَلَ (ʔakala) (form I)"],
-      [254, "مَأْكَلَان", "maʾkalān", "iki yeme", "kural", ""]
+      [254, "مَأْكَلَان", "maʾkalān", "yeme (iki)", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "أَكْلَة", "ʾakla", "bir kere yeme", "orta", "Vikisözlük: meal, an instance of food, some scran"],
-      [256, "أَكْلَتَان", "ʾaklatān", "iki bir kere yeme", "orta", ""]
+      [256, "أَكْلَتَان", "ʾaklatān", "bir kere yeme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "إِكْلَة", "ʾikla", "yeme tarzı", "orta", ""],
-      [258, "إِكْلَتَان", "ʾiklatān", "iki yeme tarzı", "orta", ""]
+      [258, "إِكْلَتَان", "ʾiklatān", "yeme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "أَكِيل", "ʾakīl", "sürekli yeyen", "orta", ""],
-      [260, "أَكِيلَة", "ʾakīla", "sürekli yeyen (dişi)", "orta", ""],
-      [261, "أَكِيلَان", "ʾakīlān", "iki sürekli yeyen", "orta", ""],
-      [262, "أَكِيلَتَان", "ʾakīlatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [263, "أَكِيلُون", "ʾakīlūn", "sürekli yeyenler", "orta", ""],
-      [264, "أَكِيلِين", "ʾakīlīn", "sürekli yeyenler", "orta", ""],
-      [265, "أَكِيلَات", "ʾakīlāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [266, "أَكُول", "ʾakūl", "sürekli yeyen", "orta", "Vikisözlük: eating much, voracious"],
-      [267, "أَكُولَة", "ʾakūla", "sürekli yeyen (dişi)", "orta", ""],
-      [268, "أَكُولَان", "ʾakūlān", "iki sürekli yeyen", "orta", ""],
-      [269, "أَكُولَتَان", "ʾakūlatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [270, "أَكُولُون", "ʾakūlūn", "sürekli yeyenler", "orta", ""],
-      [271, "أَكُولِين", "ʾakūlīn", "sürekli yeyenler", "orta", ""],
-      [272, "أَكُولَات", "ʾakūlāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [273, "أَكِل", "ʾakil", "sürekli yeyen", "orta", ""],
+      [259, "أَكِيل", "ʾakīl", "her daim yeyen", "orta", ""],
+      [260, "أَكِيلَة", "ʾakīla", "her daim yeyen (müennes)", "orta", ""],
+      [261, "أَكِيلَان", "ʾakīlān", "her daim yeyen (iki)", "orta", ""],
+      [262, "أَكِيلَتَان", "ʾakīlatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [263, "أَكِيلُون", "ʾakīlūn", "her daim yeyenler", "orta", ""],
+      [264, "أَكِيلِين", "ʾakīlīn", "her daim yeyenler", "orta", ""],
+      [265, "أَكِيلَات", "ʾakīlāt", "her daim yeyenler (müennes)", "orta", ""],
+      [266, "أَكُول", "ʾakūl", "her daim yeyen", "orta", "Vikisözlük: eating much, voracious"],
+      [267, "أَكُولَة", "ʾakūla", "her daim yeyen (müennes)", "orta", ""],
+      [268, "أَكُولَان", "ʾakūlān", "her daim yeyen (iki)", "orta", ""],
+      [269, "أَكُولَتَان", "ʾakūlatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [270, "أَكُولُون", "ʾakūlūn", "her daim yeyenler", "orta", ""],
+      [271, "أَكُولِين", "ʾakūlīn", "her daim yeyenler", "orta", ""],
+      [272, "أَكُولَات", "ʾakūlāt", "her daim yeyenler (müennes)", "orta", ""],
+      [273, "أَكِل", "ʾakil", "her daim yeyen", "orta", ""],
       [
         274,
         "أَكِلَة",
         "ʾakila",
-        "sürekli yeyen (dişi)",
+        "her daim yeyen (müennes)",
         "orta",
         "Vikisözlük: a female camel which suffers itching from hair or hair on her fetus"
       ],
-      [275, "أَكِلَان", "ʾakilān", "iki sürekli yeyen", "orta", ""],
-      [276, "أَكِلَتَان", "ʾakilatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [277, "أَكِلُون", "ʾakilūn", "sürekli yeyenler", "orta", ""],
-      [278, "أَكِلِين", "ʾakilīn", "sürekli yeyenler", "orta", ""],
-      [279, "أَكِلَات", "ʾakilāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [280, "أَكُل", "ʾakul", "sürekli yeyen", "orta", ""],
-      [281, "أَكُلَة", "ʾakula", "sürekli yeyen (dişi)", "orta", ""],
-      [282, "أَكُلَان", "ʾakulān", "iki sürekli yeyen", "orta", ""],
-      [283, "أَكُلَتَان", "ʾakulatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [284, "أَكُلُون", "ʾakulūn", "sürekli yeyenler", "orta", ""],
-      [285, "أَكُلِين", "ʾakulīn", "sürekli yeyenler", "orta", ""],
-      [286, "أَكُلَات", "ʾakulāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [287, "أَكَل", "ʾakal", "sürekli yeyen", "orta", ""],
-      [288, "أَكَلَة", "ʾakala", "sürekli yeyen (dişi)", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
-      [289, "أَكَلَان", "ʾakalān", "iki sürekli yeyen", "orta", ""],
-      [290, "أَكَلَتَان", "ʾakalatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [291, "أَكَلُون", "ʾakalūn", "sürekli yeyenler", "orta", ""],
-      [292, "أَكَلِين", "ʾakalīn", "sürekli yeyenler", "orta", ""],
-      [293, "أَكَلَات", "ʾakalāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [294, "أَكْل", "ʾakl", "sürekli yeyen", "orta", "Vikisözlük: masdar (bâb I): to eat; to consume (food)"],
-      [295, "أَكْلَة", "ʾakla", "sürekli yeyen (dişi)", "orta", "Vikisözlük: meal, an instance of food, some scran"],
-      [296, "أَكْلَان", "ʾaklān", "iki sürekli yeyen", "orta", ""],
-      [297, "أَكْلَتَان", "ʾaklatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [298, "أَكْلُون", "ʾaklūn", "sürekli yeyenler", "orta", ""],
-      [299, "أَكْلِين", "ʾaklīn", "sürekli yeyenler", "orta", ""],
-      [300, "أَكْلَات", "ʾaklāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [301, "أُكُل", "ʾukul", "sürekli yeyen", "orta", ""],
-      [302, "أُكُلَة", "ʾukula", "sürekli yeyen (dişi)", "orta", ""],
-      [303, "أُكُلَان", "ʾukulān", "iki sürekli yeyen", "orta", ""],
-      [304, "أُكُلَتَان", "ʾukulatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [305, "أُكُلُون", "ʾukulūn", "sürekli yeyenler", "orta", ""],
-      [306, "أُكُلِين", "ʾukulīn", "sürekli yeyenler", "orta", ""],
-      [307, "أُكُلَات", "ʾukulāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [308, "أَكْلَان", "ʾaklān", "sürekli yeyen", "orta", ""],
-      [309, "أَكْلَانَة", "ʾaklāna", "sürekli yeyen (dişi)", "orta", ""],
-      [310, "أَكْلَانَان", "ʾaklānān", "iki sürekli yeyen", "orta", ""],
-      [311, "أَكْلَانَتَان", "ʾaklānatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [312, "أَكْلَانُون", "ʾaklānūn", "sürekli yeyenler", "orta", ""],
-      [313, "أَكْلَانِين", "ʾaklānīn", "sürekli yeyenler", "orta", ""],
-      [314, "أَكْلَانَات", "ʾaklānāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [315, "أُكَال", "ʾukāl", "sürekli yeyen", "orta", ""],
-      [316, "أُكَالَة", "ʾukāla", "sürekli yeyen (dişi)", "orta", ""],
-      [317, "أُكَالَان", "ʾukālān", "iki sürekli yeyen", "orta", ""],
-      [318, "أُكَالَتَان", "ʾukālatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [319, "أُكَالُون", "ʾukālūn", "sürekli yeyenler", "orta", ""],
-      [320, "أُكَالِين", "ʾukālīn", "sürekli yeyenler", "orta", ""],
-      [321, "أُكَالَات", "ʾukālāt", "sürekli yeyenler (dişi)", "orta", ""],
-      [322, "أَكَال", "ʾakāl", "sürekli yeyen", "orta", ""],
-      [323, "أَكَالَة", "ʾakāla", "sürekli yeyen (dişi)", "orta", ""],
-      [324, "أَكَالَان", "ʾakālān", "iki sürekli yeyen", "orta", ""],
-      [325, "أَكَالَتَان", "ʾakālatān", "iki sürekli yeyen (dişi)", "orta", ""],
-      [326, "أَكَالُون", "ʾakālūn", "sürekli yeyenler", "orta", ""],
-      [327, "أَكَالِين", "ʾakālīn", "sürekli yeyenler", "orta", ""],
-      [328, "أَكَالَات", "ʾakālāt", "sürekli yeyenler (dişi)", "orta", ""]
+      [275, "أَكِلَان", "ʾakilān", "her daim yeyen (iki)", "orta", ""],
+      [276, "أَكِلَتَان", "ʾakilatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [277, "أَكِلُون", "ʾakilūn", "her daim yeyenler", "orta", ""],
+      [278, "أَكِلِين", "ʾakilīn", "her daim yeyenler", "orta", ""],
+      [279, "أَكِلَات", "ʾakilāt", "her daim yeyenler (müennes)", "orta", ""],
+      [280, "أَكُل", "ʾakul", "her daim yeyen", "orta", ""],
+      [281, "أَكُلَة", "ʾakula", "her daim yeyen (müennes)", "orta", ""],
+      [282, "أَكُلَان", "ʾakulān", "her daim yeyen (iki)", "orta", ""],
+      [283, "أَكُلَتَان", "ʾakulatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [284, "أَكُلُون", "ʾakulūn", "her daim yeyenler", "orta", ""],
+      [285, "أَكُلِين", "ʾakulīn", "her daim yeyenler", "orta", ""],
+      [286, "أَكُلَات", "ʾakulāt", "her daim yeyenler (müennes)", "orta", ""],
+      [287, "أَكَل", "ʾakal", "her daim yeyen", "orta", ""],
+      [288, "أَكَلَة", "ʾakala", "her daim yeyen (müennes)", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
+      [289, "أَكَلَان", "ʾakalān", "her daim yeyen (iki)", "orta", ""],
+      [290, "أَكَلَتَان", "ʾakalatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [291, "أَكَلُون", "ʾakalūn", "her daim yeyenler", "orta", ""],
+      [292, "أَكَلِين", "ʾakalīn", "her daim yeyenler", "orta", ""],
+      [293, "أَكَلَات", "ʾakalāt", "her daim yeyenler (müennes)", "orta", ""],
+      [294, "أَكْل", "ʾakl", "her daim yeyen", "orta", "Vikisözlük: masdar (bâb I): to eat; to consume (food)"],
+      [
+        295,
+        "أَكْلَة",
+        "ʾakla",
+        "her daim yeyen (müennes)",
+        "orta",
+        "Vikisözlük: meal, an instance of food, some scran"
+      ],
+      [296, "أَكْلَان", "ʾaklān", "her daim yeyen (iki)", "orta", ""],
+      [297, "أَكْلَتَان", "ʾaklatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [298, "أَكْلُون", "ʾaklūn", "her daim yeyenler", "orta", ""],
+      [299, "أَكْلِين", "ʾaklīn", "her daim yeyenler", "orta", ""],
+      [300, "أَكْلَات", "ʾaklāt", "her daim yeyenler (müennes)", "orta", ""],
+      [301, "أُكُل", "ʾukul", "her daim yeyen", "orta", ""],
+      [302, "أُكُلَة", "ʾukula", "her daim yeyen (müennes)", "orta", ""],
+      [303, "أُكُلَان", "ʾukulān", "her daim yeyen (iki)", "orta", ""],
+      [304, "أُكُلَتَان", "ʾukulatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [305, "أُكُلُون", "ʾukulūn", "her daim yeyenler", "orta", ""],
+      [306, "أُكُلِين", "ʾukulīn", "her daim yeyenler", "orta", ""],
+      [307, "أُكُلَات", "ʾukulāt", "her daim yeyenler (müennes)", "orta", ""],
+      [308, "أَكْلَان", "ʾaklān", "her daim yeyen", "orta", ""],
+      [309, "أَكْلَانَة", "ʾaklāna", "her daim yeyen (müennes)", "orta", ""],
+      [310, "أَكْلَانَان", "ʾaklānān", "her daim yeyen (iki)", "orta", ""],
+      [311, "أَكْلَانَتَان", "ʾaklānatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [312, "أَكْلَانُون", "ʾaklānūn", "her daim yeyenler", "orta", ""],
+      [313, "أَكْلَانِين", "ʾaklānīn", "her daim yeyenler", "orta", ""],
+      [314, "أَكْلَانَات", "ʾaklānāt", "her daim yeyenler (müennes)", "orta", ""],
+      [315, "أُكَال", "ʾukāl", "her daim yeyen", "orta", ""],
+      [316, "أُكَالَة", "ʾukāla", "her daim yeyen (müennes)", "orta", ""],
+      [317, "أُكَالَان", "ʾukālān", "her daim yeyen (iki)", "orta", ""],
+      [318, "أُكَالَتَان", "ʾukālatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [319, "أُكَالُون", "ʾukālūn", "her daim yeyenler", "orta", ""],
+      [320, "أُكَالِين", "ʾukālīn", "her daim yeyenler", "orta", ""],
+      [321, "أُكَالَات", "ʾukālāt", "her daim yeyenler (müennes)", "orta", ""],
+      [322, "أَكَال", "ʾakāl", "her daim yeyen", "orta", ""],
+      [323, "أَكَالَة", "ʾakāla", "her daim yeyen (müennes)", "orta", ""],
+      [324, "أَكَالَان", "ʾakālān", "her daim yeyen (iki)", "orta", ""],
+      [325, "أَكَالَتَان", "ʾakālatān", "her daim yeyen (iki, müennes)", "orta", ""],
+      [326, "أَكَالُون", "ʾakālūn", "her daim yeyenler", "orta", ""],
+      [327, "أَكَالِين", "ʾakālīn", "her daim yeyenler", "orta", ""],
+      [328, "أَكَالَات", "ʾakālāt", "her daim yeyenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "أَكَّال", "ʾakkāl", "çok yeyen", "orta", "Vikisözlük: gluttonous, voracious"],
-      [330, "أَكَّالَة", "ʾakkāla", "çok yeyen (dişi)", "orta", ""],
-      [331, "أَكَّالَان", "ʾakkālān", "iki çok yeyen", "orta", ""],
-      [332, "أَكَّالَتَان", "ʾakkālatān", "iki çok yeyen (dişi)", "orta", ""],
-      [333, "أَكَّالُون", "ʾakkālūn", "çok yeyenler", "orta", ""],
-      [334, "أَكَّالِين", "ʾakkālīn", "çok yeyenler", "orta", ""],
-      [335, "أَكَّالَات", "ʾakkālāt", "çok yeyenler (dişi)", "orta", ""],
-      [336, "أَكَّالَة", "ʾakkāla", "çok yeyen", "orta", ""],
-      [337, "أَكَّالَتَان", "ʾakkālatān", "iki çok yeyen", "orta", ""],
-      [338, "أَكَّالَات", "ʾakkālāt", "çok yeyenler (dişi)", "orta", ""],
+      [329, "أَكَّال", "ʾakkāl", "işi yeme olan", "orta", "Vikisözlük: gluttonous, voracious"],
+      [330, "أَكَّالَة", "ʾakkāla", "işi yeme olan (müennes)", "orta", ""],
+      [331, "أَكَّالَان", "ʾakkālān", "işi yeme olan (iki)", "orta", ""],
+      [332, "أَكَّالَتَان", "ʾakkālatān", "işi yeme olan (iki, müennes)", "orta", ""],
+      [333, "أَكَّالُون", "ʾakkālūn", "işi yeme olanlar", "orta", ""],
+      [334, "أَكَّالِين", "ʾakkālīn", "işi yeme olanlar", "orta", ""],
+      [335, "أَكَّالَات", "ʾakkālāt", "işi yeme olanlar (müennes)", "orta", ""],
+      [336, "أَكَّالَة", "ʾakkāla", "pek çok yeyen", "orta", ""],
+      [337, "أَكَّالَتَان", "ʾakkālatān", "pek çok yeyen (iki)", "orta", ""],
+      [338, "أَكَّالَات", "ʾakkālāt", "pek çok yeyenler (müennes)", "orta", ""],
       [339, "أَكُول", "ʾakūl", "çok yeyen", "orta", "Vikisözlük: eating much, voracious"],
-      [340, "أَكُولَة", "ʾakūla", "çok yeyen (dişi)", "orta", ""],
-      [341, "أَكُولَان", "ʾakūlān", "iki çok yeyen", "orta", ""],
-      [342, "أَكُولَتَان", "ʾakūlatān", "iki çok yeyen (dişi)", "orta", ""],
+      [340, "أَكُولَة", "ʾakūla", "çok yeyen (müennes)", "orta", ""],
+      [341, "أَكُولَان", "ʾakūlān", "çok yeyen (iki)", "orta", ""],
+      [342, "أَكُولَتَان", "ʾakūlatān", "çok yeyen (iki, müennes)", "orta", ""],
       [343, "أَكُولُون", "ʾakūlūn", "çok yeyenler", "orta", ""],
       [344, "أَكُولِين", "ʾakūlīn", "çok yeyenler", "orta", ""],
-      [345, "أَكُولَات", "ʾakūlāt", "çok yeyenler (dişi)", "orta", ""],
-      [346, "أَكُّول", "ʾakkūl", "çok yeyen", "orta", ""],
-      [347, "أَكُّولَة", "ʾakkūla", "çok yeyen (dişi)", "orta", ""],
-      [348, "أَكُّولَان", "ʾakkūlān", "iki çok yeyen", "orta", ""],
-      [349, "أَكُّولَتَان", "ʾakkūlatān", "iki çok yeyen (dişi)", "orta", ""],
-      [350, "أَكُّولُون", "ʾakkūlūn", "çok yeyenler", "orta", ""],
-      [351, "أَكُّولِين", "ʾakkūlīn", "çok yeyenler", "orta", ""],
-      [352, "أَكُّولَات", "ʾakkūlāt", "çok yeyenler (dişi)", "orta", ""],
-      [353, "إِكِّيل", "ʾikkīl", "çok yeyen", "orta", ""],
-      [354, "إِكِّيلَة", "ʾikkīla", "çok yeyen (dişi)", "orta", ""],
-      [355, "إِكِّيلَان", "ʾikkīlān", "iki çok yeyen", "orta", ""],
-      [356, "إِكِّيلَتَان", "ʾikkīlatān", "iki çok yeyen (dişi)", "orta", ""],
-      [357, "إِكِّيلُون", "ʾikkīlūn", "çok yeyenler", "orta", ""],
-      [358, "إِكِّيلِين", "ʾikkīlīn", "çok yeyenler", "orta", ""],
-      [359, "إِكِّيلَات", "ʾikkīlāt", "çok yeyenler (dişi)", "orta", ""],
-      [360, "أُكَّال", "ʾukkāl", "çok yeyen", "orta", ""],
-      [361, "أُكَّالَة", "ʾukkāla", "çok yeyen (dişi)", "orta", ""],
-      [362, "أُكَّالَان", "ʾukkālān", "iki çok yeyen", "orta", ""],
-      [363, "أُكَّالَتَان", "ʾukkālatān", "iki çok yeyen (dişi)", "orta", ""],
-      [364, "أُكَّالُون", "ʾukkālūn", "çok yeyenler", "orta", ""],
-      [365, "أُكَّالِين", "ʾukkālīn", "çok yeyenler", "orta", ""],
-      [366, "أُكَّالَات", "ʾukkālāt", "çok yeyenler (dişi)", "orta", ""],
-      [367, "مِئْكَال", "miʾkāl", "çok yeyen", "orta", ""],
-      [368, "مِئْكَالَة", "miʾkāla", "çok yeyen (dişi)", "orta", ""],
-      [369, "مِئْكَالَان", "miʾkālān", "iki çok yeyen", "orta", ""],
-      [370, "مِئْكَالَتَان", "miʾkālatān", "iki çok yeyen (dişi)", "orta", ""],
-      [371, "مِئْكَالُون", "miʾkālūn", "çok yeyenler", "orta", ""],
-      [372, "مِئْكَالِين", "miʾkālīn", "çok yeyenler", "orta", ""],
-      [373, "مِئْكَالَات", "miʾkālāt", "çok yeyenler (dişi)", "orta", ""],
-      [374, "مِئْكِيل", "miʾkīl", "çok yeyen", "orta", ""],
-      [375, "مِئْكِيلَة", "miʾkīla", "çok yeyen (dişi)", "orta", ""],
-      [376, "مِئْكِيلَان", "miʾkīlān", "iki çok yeyen", "orta", ""],
-      [377, "مِئْكِيلَتَان", "miʾkīlatān", "iki çok yeyen (dişi)", "orta", ""],
-      [378, "مِئْكِيلُون", "miʾkīlūn", "çok yeyenler", "orta", ""],
-      [379, "مِئْكِيلِين", "miʾkīlīn", "çok yeyenler", "orta", ""],
-      [380, "مِئْكِيلَات", "miʾkīlāt", "çok yeyenler (dişi)", "orta", ""],
+      [345, "أَكُولَات", "ʾakūlāt", "çok yeyenler (müennes)", "orta", ""],
+      [346, "أَكُّول", "ʾakkūl", "pek çok yeyen", "orta", ""],
+      [347, "أَكُّولَة", "ʾakkūla", "pek çok yeyen (müennes)", "orta", ""],
+      [348, "أَكُّولَان", "ʾakkūlān", "pek çok yeyen (iki)", "orta", ""],
+      [349, "أَكُّولَتَان", "ʾakkūlatān", "pek çok yeyen (iki, müennes)", "orta", ""],
+      [350, "أَكُّولُون", "ʾakkūlūn", "pek çok yeyenler", "orta", ""],
+      [351, "أَكُّولِين", "ʾakkūlīn", "pek çok yeyenler", "orta", ""],
+      [352, "أَكُّولَات", "ʾakkūlāt", "pek çok yeyenler (müennes)", "orta", ""],
+      [353, "إِكِّيل", "ʾikkīl", "yemede aşırı giden", "orta", ""],
+      [354, "إِكِّيلَة", "ʾikkīla", "yemede aşırı giden (müennes)", "orta", ""],
+      [355, "إِكِّيلَان", "ʾikkīlān", "yemede aşırı giden (iki)", "orta", ""],
+      [356, "إِكِّيلَتَان", "ʾikkīlatān", "yemede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "إِكِّيلُون", "ʾikkīlūn", "yemede aşırı gidenler", "orta", ""],
+      [358, "إِكِّيلِين", "ʾikkīlīn", "yemede aşırı gidenler", "orta", ""],
+      [359, "إِكِّيلَات", "ʾikkīlāt", "yemede aşırı gidenler (müennes)", "orta", ""],
+      [360, "أُكَّال", "ʾukkāl", "son derece yeyen", "orta", ""],
+      [361, "أُكَّالَة", "ʾukkāla", "son derece yeyen (müennes)", "orta", ""],
+      [362, "أُكَّالَان", "ʾukkālān", "son derece yeyen (iki)", "orta", ""],
+      [363, "أُكَّالَتَان", "ʾukkālatān", "son derece yeyen (iki, müennes)", "orta", ""],
+      [364, "أُكَّالُون", "ʾukkālūn", "son derece yeyenler", "orta", ""],
+      [365, "أُكَّالِين", "ʾukkālīn", "son derece yeyenler", "orta", ""],
+      [366, "أُكَّالَات", "ʾukkālāt", "son derece yeyenler (müennes)", "orta", ""],
+      [367, "مِئْكَال", "miʾkāl", "yemeyi âdet edinmiş", "orta", ""],
+      [368, "مِئْكَالَة", "miʾkāla", "yemeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِئْكَالَان", "miʾkālān", "yemeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِئْكَالَتَان", "miʾkālatān", "yemeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِئْكَالُون", "miʾkālūn", "yemeyi âdet edinmişler", "orta", ""],
+      [372, "مِئْكَالِين", "miʾkālīn", "yemeyi âdet edinmişler", "orta", ""],
+      [373, "مِئْكَالَات", "miʾkālāt", "yemeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِئْكِيل", "miʾkīl", "yemeye düşkün", "orta", ""],
+      [375, "مِئْكِيلَة", "miʾkīla", "yemeye düşkün (müennes)", "orta", ""],
+      [376, "مِئْكِيلَان", "miʾkīlān", "yemeye düşkün (iki)", "orta", ""],
+      [377, "مِئْكِيلَتَان", "miʾkīlatān", "yemeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِئْكِيلُون", "miʾkīlūn", "yemeye düşkünler", "orta", ""],
+      [379, "مِئْكِيلِين", "miʾkīlīn", "yemeye düşkünler", "orta", ""],
+      [380, "مِئْكِيلَات", "miʾkīlāt", "yemeye düşkünler (müennes)", "orta", ""],
       [381, "أَكِيل", "ʾakīl", "çok yeyen", "orta", ""],
-      [382, "أَكِيلَة", "ʾakīla", "çok yeyen (dişi)", "orta", ""],
-      [383, "أَكِيلَان", "ʾakīlān", "iki çok yeyen", "orta", ""],
-      [384, "أَكِيلَتَان", "ʾakīlatān", "iki çok yeyen (dişi)", "orta", ""],
+      [382, "أَكِيلَة", "ʾakīla", "çok yeyen (müennes)", "orta", ""],
+      [383, "أَكِيلَان", "ʾakīlān", "çok yeyen (iki)", "orta", ""],
+      [384, "أَكِيلَتَان", "ʾakīlatān", "çok yeyen (iki, müennes)", "orta", ""],
       [385, "أَكِيلُون", "ʾakīlūn", "çok yeyenler", "orta", ""],
       [386, "أَكِيلِين", "ʾakīlīn", "çok yeyenler", "orta", ""],
-      [387, "أَكِيلَات", "ʾakīlāt", "çok yeyenler (dişi)", "orta", ""],
+      [387, "أَكِيلَات", "ʾakīlāt", "çok yeyenler (müennes)", "orta", ""],
       [388, "أَكَّل", "ʾakkal", "çok yeyen", "orta", ""],
-      [389, "أَكَّلَة", "ʾakkala", "çok yeyen (dişi)", "orta", ""],
-      [390, "أَكَّلَان", "ʾakkalān", "iki çok yeyen", "orta", ""],
-      [391, "أَكَّلَتَان", "ʾakkalatān", "iki çok yeyen (dişi)", "orta", ""],
+      [389, "أَكَّلَة", "ʾakkala", "çok yeyen (müennes)", "orta", ""],
+      [390, "أَكَّلَان", "ʾakkalān", "çok yeyen (iki)", "orta", ""],
+      [391, "أَكَّلَتَان", "ʾakkalatān", "çok yeyen (iki, müennes)", "orta", ""],
       [392, "أَكَّلُون", "ʾakkalūn", "çok yeyenler", "orta", ""],
       [393, "أَكَّلِين", "ʾakkalīn", "çok yeyenler", "orta", ""],
-      [394, "أَكَّلَات", "ʾakkalāt", "çok yeyenler (dişi)", "orta", ""]
+      [394, "أَكَّلَات", "ʾakkalāt", "çok yeyenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "أَكْلِيّ", "ʾakliyy", "yemeye ilgili", "orta", ""],
-      [397, "أَكَلِيّ", "ʾakaliyy", "yemeye ilgili", "orta", ""],
-      [399, "إِكْلِيّ", "ʾikliyy", "yemeye ilgili", "orta", ""],
-      [401, "أُكْلِيّ", "ʾukliyy", "yemeye ilgili", "orta", ""],
-      [403, "إِكَالِيّ", "ʾikāliyy", "yemeye ilgili", "orta", ""],
-      [405, "آكِلِيّ", "ʾākiliyy", "yemeye ilgili", "orta", ""],
-      [407, "مَأْكُولِيّ", "maʾkūliyy", "yemeye ilgili", "orta", ""],
-      [409, "أَكِيلِيّ", "ʾakīliyy", "yemeye ilgili", "orta", ""],
-      [411, "مَأْكَلِيّ", "maʾkaliyy", "yemeye ilgili", "orta", ""],
-      [413, "تَأْكِيلِيّ", "taʾkīliyy", "yemeye ilgili", "orta", ""],
-      [415, "تَآكُلِيّ", "taʾākuliyy", "yemeye ilgili", "orta", ""],
-      [417, "إِيكَالِيّ", "ʾīkāliyy", "yemeye ilgili", "orta", ""],
-      [419, "اِئْتِكَالِيّ", "iʾtikāliyy", "yemeye ilgili", "orta", ""]
+      [395, "أَكْلِيّ", "ʾakliyy", "yeme ile ilgili", "orta", ""],
+      [397, "أَكَلِيّ", "ʾakaliyy", "yeme ile ilgili", "orta", ""],
+      [399, "إِكْلِيّ", "ʾikliyy", "yeme ile ilgili", "orta", ""],
+      [401, "أُكْلِيّ", "ʾukliyy", "yeme ile ilgili", "orta", ""],
+      [403, "إِكَالِيّ", "ʾikāliyy", "yeme ile ilgili", "orta", ""],
+      [405, "آكِلِيّ", "ʾākiliyy", "yeme ile ilgili", "orta", ""],
+      [407, "مَأْكُولِيّ", "maʾkūliyy", "yeme ile ilgili", "orta", ""],
+      [409, "أَكِيلِيّ", "ʾakīliyy", "yeme ile ilgili", "orta", ""],
+      [411, "مَأْكَلِيّ", "maʾkaliyy", "yeme ile ilgili", "orta", ""],
+      [413, "تَأْكِيلِيّ", "taʾkīliyy", "yeme ile ilgili", "orta", ""],
+      [415, "تَآكُلِيّ", "taʾākuliyy", "yeme ile ilgili", "orta", ""],
+      [417, "إِيكَالِيّ", "ʾīkāliyy", "yeme ile ilgili", "orta", ""],
+      [419, "اِئْتِكَالِيّ", "iʾtikāliyy", "yeme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "أَكْلِيَّة", "ʾakliyya", "yeyenlik", "orta", ""],
@@ -581,109 +616,88 @@
       [429, "إِكْل", "ʾikl", "yeme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "آكُول", "ʾākūl", "yeyenler (topluluk adı)", "orta", ""],
-      [432, "أَكَلَة", "ʾakala", "yeyenler (topluluk adı)", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
-      [433, "أُكَلَة", "ʾukala", "yeyenler (topluluk adı)", "orta", ""],
-      [434, "أُوكُولَة", "ʾūkūla", "yeyenler (topluluk adı)", "orta", ""],
-      [435, "أَوْكَل", "ʾawkal", "yeyenler (topluluk adı)", "orta", ""],
-      [437, "أَيْكَل", "ʾaykal", "yeyenler (topluluk adı)", "orta", ""],
-      [
-        439,
-        "أَكْل",
-        "ʾakl",
-        "yeyenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to eat; to consume (food)"
-      ],
-      [441, "أَكَل", "ʾakal", "yeyenler (topluluk adı)", "orta", ""],
-      [443, "إِكْل", "ʾikl", "yeyenler (topluluk adı)", "orta", ""],
-      [445, "أُكْل", "ʾukl", "yeyenler (topluluk adı)", "orta", ""],
-      [447, "أَكِيل", "ʾakīl", "yeyenler (topluluk adı)", "orta", ""],
-      [449, "إِكَل", "ʾikal", "yeyenler (topluluk adı)", "orta", ""],
-      [451, "أُكُل", "ʾukul", "yeyenler (topluluk adı)", "orta", ""],
-      [453, "أَكَال", "ʾakāl", "yeyenler (topluluk adı)", "orta", ""]
+      [430, "آكُول", "ʾākūl", "yeme türünden şey", "orta", ""],
+      [432, "أَكَلَة", "ʾakala", "yeme türünden şey", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
+      [433, "أُكَلَة", "ʾukala", "yeme türünden şey", "orta", ""],
+      [434, "أُوكُولَة", "ʾūkūla", "yeme türünden şey", "orta", ""],
+      [435, "أَوْكَل", "ʾawkal", "yeme türünden şey", "orta", ""],
+      [437, "أَيْكَل", "ʾaykal", "yeme türünden şey", "orta", ""],
+      [439, "أَكْل", "ʾakl", "yeme türünden şey", "orta", "Vikisözlük: masdar (bâb I): to eat; to consume (food)"],
+      [441, "أَكَل", "ʾakal", "yeme türünden şey", "orta", ""],
+      [443, "إِكْل", "ʾikl", "yeme türünden şey", "orta", ""],
+      [445, "أُكْل", "ʾukl", "yeme türünden şey", "orta", ""],
+      [447, "أَكِيل", "ʾakīl", "yeme türünden şey", "orta", ""],
+      [449, "إِكَل", "ʾikal", "yeme türünden şey", "orta", ""],
+      [451, "أُكُل", "ʾukul", "yeme türünden şey", "orta", ""],
+      [453, "أَكَال", "ʾakāl", "yeme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "آكُولَة", "ʾākūla", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [436, "أَوْكَلَة", "ʾawkala", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [438, "أَيْكَلَة", "ʾaykala", "bir tane yeyenler (topluluk adı)", "orta", ""],
+      [431, "آكُولَة", "ʾākūla", "yeme türünden bir tane", "orta", ""],
+      [436, "أَوْكَلَة", "ʾawkala", "yeme türünden bir tane", "orta", ""],
+      [438, "أَيْكَلَة", "ʾaykala", "yeme türünden bir tane", "orta", ""],
       [
         440,
         "أَكْلَة",
         "ʾakla",
-        "bir tane yeyenler (topluluk adı)",
+        "yeme türünden bir tane",
         "orta",
         "Vikisözlük: meal, an instance of food, some scran"
       ],
-      [
-        442,
-        "أَكَلَة",
-        "ʾakala",
-        "bir tane yeyenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: plural of آكِل (ʔākil, “eating”)"
-      ],
-      [444, "إِكْلَة", "ʾikla", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [446, "أُكْلَة", "ʾukla", "bir tane yeyenler (topluluk adı)", "orta", "Vikisözlük: morsel, bit of food"],
-      [448, "أَكِيلَة", "ʾakīla", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [450, "إِكَلَة", "ʾikala", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [452, "أُكُلَة", "ʾukula", "bir tane yeyenler (topluluk adı)", "orta", ""],
-      [454, "أَكَالَة", "ʾakāla", "bir tane yeyenler (topluluk adı)", "orta", ""]
+      [442, "أَكَلَة", "ʾakala", "yeme türünden bir tane", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
+      [444, "إِكْلَة", "ʾikla", "yeme türünden bir tane", "orta", ""],
+      [446, "أُكْلَة", "ʾukla", "yeme türünden bir tane", "orta", "Vikisözlük: morsel, bit of food"],
+      [448, "أَكِيلَة", "ʾakīla", "yeme türünden bir tane", "orta", ""],
+      [450, "إِكَلَة", "ʾikala", "yeme türünden bir tane", "orta", ""],
+      [452, "أُكُلَة", "ʾukula", "yeme türünden bir tane", "orta", ""],
+      [454, "أَكَالَة", "ʾakāla", "yeme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "آكَال", "ʾākāl", "yeyenler (kırık çoğul)", "orta", ""],
-      [456, "آكِلَة", "ʾākila", "yeyenler (kırık çoğul)", "orta", ""],
-      [457, "أَآكِل", "ʾaʾākil", "yeyenler (kırık çoğul)", "orta", ""],
-      [458, "أَآكِيل", "ʾaʾākīl", "yeyenler (kırık çoğul)", "orta", ""],
-      [459, "أُكُول", "ʾukūl", "yeyenler (kırık çoğul)", "orta", ""],
-      [460, "أُكُل", "ʾukul", "yeyenler (kırık çoğul)", "orta", ""],
-      [
-        461,
-        "إِكَال",
-        "ʾikāl",
-        "yeyenler (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"
-      ],
-      [462, "إِكَل", "ʾikal", "yeyenler (kırık çoğul)", "orta", ""],
-      [463, "إِكَلَة", "ʾikala", "yeyenler (kırık çoğul)", "orta", ""],
-      [464, "أُكَل", "ʾukal", "yeyenler (kırık çoğul)", "orta", ""],
-      [465, "أُكَلاء", "ʾukalāʾ", "yeyenler (kırık çoğul)", "orta", ""],
-      [466, "أَكَلَة", "ʾakala", "yeyenler (kırık çoğul)", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
-      [467, "أُكَّال", "ʾukkāl", "yeyenler (kırık çoğul)", "orta", ""],
-      [468, "أَكَال", "ʾakāl", "yeyenler (kırık çoğul)", "orta", ""],
-      [469, "أَكَل", "ʾakal", "yeyenler (kırık çoğul)", "orta", ""],
-      [470, "مَآكِل", "maʾākil", "yeyenler (kırık çoğul)", "orta", ""],
-      [471, "مَآكِيل", "maʾākīl", "yeyenler (kırık çoğul)", "orta", ""],
-      [472, "أَوَاكِل", "ʾawākil", "yeyenler (kırık çoğul)", "orta", ""],
-      [473, "آكُل", "ʾākul", "yeyenler (kırık çoğul)", "orta", ""],
-      [474, "أُكَّل", "ʾukkal", "yeyenler (kırık çoğul)", "orta", ""],
-      [475, "أَكَائِل", "ʾakāʾil", "yeyenler (kırık çoğul)", "orta", ""],
-      [476, "أُكَيْل", "ʾukayl", "yeyenler (kırık çoğul)", "orta", ""]
+      [455, "آكَال", "ʾākāl", "yemeler", "orta", ""],
+      [456, "آكِلَة", "ʾākila", "yemeler", "orta", ""],
+      [457, "أَآكِل", "ʾaʾākil", "yemeler", "orta", ""],
+      [458, "أَآكِيل", "ʾaʾākīl", "yemeler", "orta", ""],
+      [459, "أُكُول", "ʾukūl", "yemeler", "orta", ""],
+      [460, "أُكُل", "ʾukul", "yemeler", "orta", ""],
+      [461, "إِكَال", "ʾikāl", "yemeler", "orta", "Vikisözlük: verbal noun of آكَلَ (ʔākala) (form III)"],
+      [462, "إِكَل", "ʾikal", "yemeler", "orta", ""],
+      [463, "إِكَلَة", "ʾikala", "yemeler", "orta", ""],
+      [464, "أُكَل", "ʾukal", "yemeler", "orta", ""],
+      [465, "أُكَلاء", "ʾukalāʾ", "yemeler", "orta", ""],
+      [466, "أَكَلَة", "ʾakala", "yemeler", "orta", "Vikisözlük: plural of آكِل (ʔākil, “eating”)"],
+      [467, "أُكَّال", "ʾukkāl", "yemeler", "orta", ""],
+      [468, "أَكَال", "ʾakāl", "yemeler", "orta", ""],
+      [469, "أَكَل", "ʾakal", "yemeler", "orta", ""],
+      [470, "مَآكِل", "maʾākil", "yemeler", "orta", ""],
+      [471, "مَآكِيل", "maʾākīl", "yemeler", "orta", ""],
+      [472, "أَوَاكِل", "ʾawākil", "yemeler", "orta", ""],
+      [473, "آكُل", "ʾākul", "yemeler", "orta", ""],
+      [474, "أُكَّل", "ʾukkal", "yemeler", "orta", ""],
+      [475, "أَكَائِل", "ʾakāʾil", "yemeler", "orta", ""],
+      [476, "أُكَيْل", "ʾukayl", "yemeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "آكَالَات", "ʾākālāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [478, "آكِلَات", "ʾākilāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَآكِلَات", "ʾaʾākilāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَآكِيلَات", "ʾaʾākīlāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [481, "أُكُولَات", "ʾukūlāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [482, "أُكُلَات", "ʾukulāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [483, "إِكَالَات", "ʾikālāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [484, "إِكَلَات", "ʾikalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [485, "إِكَلَات", "ʾikalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [486, "أُكَلَات", "ʾukalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [487, "أُكَلاآت", "ʾukalāʾāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [488, "أَكَلَات", "ʾakalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [489, "أُكَّالَات", "ʾukkālāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [490, "أَكَالَات", "ʾakālāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [491, "أَكَلَات", "ʾakalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَآكِلَات", "maʾākilāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَآكِيلَات", "maʾākīlāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [494, "أَوَاكِلَات", "ʾawākilāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [495, "آكُلَات", "ʾākulāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [496, "أُكَّلَات", "ʾukkalāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [497, "أَكَائِلَات", "ʾakāʾilāt", "yeyenler (çoğulun çoğulu)", "orta", ""],
-      [498, "أُكَيْلَات", "ʾukaylāt", "yeyenler (çoğulun çoğulu)", "orta", ""]
+      [477, "آكَالَات", "ʾākālāt", "yemeler topluluğu", "orta", ""],
+      [478, "آكِلَات", "ʾākilāt", "yemeler topluluğu", "orta", ""],
+      [479, "أَآكِلَات", "ʾaʾākilāt", "yemeler topluluğu", "orta", ""],
+      [480, "أَآكِيلَات", "ʾaʾākīlāt", "yemeler topluluğu", "orta", ""],
+      [481, "أُكُولَات", "ʾukūlāt", "yemeler topluluğu", "orta", ""],
+      [482, "أُكُلَات", "ʾukulāt", "yemeler topluluğu", "orta", ""],
+      [483, "إِكَالَات", "ʾikālāt", "yemeler topluluğu", "orta", ""],
+      [484, "إِكَلَات", "ʾikalāt", "yemeler topluluğu", "orta", ""],
+      [485, "إِكَلَات", "ʾikalāt", "yemeler topluluğu", "orta", ""],
+      [486, "أُكَلَات", "ʾukalāt", "yemeler topluluğu", "orta", ""],
+      [487, "أُكَلاآت", "ʾukalāʾāt", "yemeler topluluğu", "orta", ""],
+      [488, "أَكَلَات", "ʾakalāt", "yemeler topluluğu", "orta", ""],
+      [489, "أُكَّالَات", "ʾukkālāt", "yemeler topluluğu", "orta", ""],
+      [490, "أَكَالَات", "ʾakālāt", "yemeler topluluğu", "orta", ""],
+      [491, "أَكَلَات", "ʾakalāt", "yemeler topluluğu", "orta", ""],
+      [492, "مَآكِلَات", "maʾākilāt", "yemeler topluluğu", "orta", ""],
+      [493, "مَآكِيلَات", "maʾākīlāt", "yemeler topluluğu", "orta", ""],
+      [494, "أَوَاكِلَات", "ʾawākilāt", "yemeler topluluğu", "orta", ""],
+      [495, "آكُلَات", "ʾākulāt", "yemeler topluluğu", "orta", ""],
+      [496, "أُكَّلَات", "ʾukkalāt", "yemeler topluluğu", "orta", ""],
+      [497, "أَكَائِلَات", "ʾakāʾilāt", "yemeler topluluğu", "orta", ""],
+      [498, "أُكَيْلَات", "ʾukaylāt", "yemeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

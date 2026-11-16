@@ -9,14 +9,14 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "أَذْن", "ʾaẕn", "izin verme", "orta", "Vikisözlük: verbal noun of أَذَنَ (ʔaḏana) (form I)"],
-      [1, "إِذْن", "ʾiẕn", "izin verme", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [1, "إِذْن", "ʾiẕn", "o halde", "kuran", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
       [2, "أُذْن", "ʾuẕn", "izin verme", "orta", ""],
-      [3, "أَذَن", "ʾaẕan", "izin verme", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [3, "أَذَن", "ʾaẕan", "izin verme hâli", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
       [4, "إِذَن", "ʾiẕan", "izin verme", "orta", ""],
       [5, "أُذُن", "ʾuẕun", "izin verme", "orta", ""],
       [6, "أُذُون", "ʾuẕūn", "izin verme", "orta", ""],
-      [7, "إِذَان", "ʾiẕān", "izin verme", "orta", ""],
-      [8, "أُذَان", "ʾuẕān", "izin verme", "orta", ""],
+      [7, "إِذَان", "ʾiẕān", "izin vermeden kaçınma", "orta", ""],
+      [8, "أُذَان", "ʾuẕān", "izin verme illeti, izin verme sesi", "orta", ""],
       [
         9,
         "أَذَان",
@@ -25,12 +25,12 @@
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina, “to listen, to hear, to allow”) (form I"
       ],
-      [10, "أَذَانَة", "ʾaẕāna", "izin verme", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
-      [11, "أُذُونَة", "ʾuẕūna", "izin verme", "orta", ""],
-      [12, "إِذَانَة", "ʾiẕāna", "izin verme", "orta", ""],
-      [13, "أَذِين", "ʾaẕīn", "izin verme", "orta", ""],
+      [10, "أَذَانَة", "ʾaẕāna", "izin verme vasfı", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [11, "أُذُونَة", "ʾuẕūna", "izin verme vasfı", "orta", ""],
+      [12, "إِذَانَة", "ʾiẕāna", "izin verme vazifesi, izin verme işi", "orta", ""],
+      [13, "أَذِين", "ʾaẕīn", "izin verme sesi, izin verme yürüyüşü", "orta", ""],
       [14, "أَذُون", "ʾaẕūn", "izin verme", "orta", ""],
-      [15, "أَذَنَان", "ʾaẕanān", "izin verme", "orta", ""],
+      [15, "أَذَنَان", "ʾaẕanān", "izin verme çalkantısı, coşarak izin verme", "orta", ""],
       [16, "أُذْنَان", "ʾuẕnān", "izin verme", "orta", ""],
       [17, "إِذْنَان", "ʾiẕnān", "izin verme", "orta", ""],
       [18, "أَذْنَى", "ʾaẕnā", "izin verme", "orta", ""],
@@ -39,157 +39,164 @@
       [21, "أَذَنَة", "ʾaẕana", "izin verme", "orta", ""],
       [22, "إِذَنَة", "ʾiẕana", "izin verme", "orta", ""],
       [23, "أَذْنُونَة", "ʾaẕnūna", "izin verme", "orta", ""],
-      [24, "تُؤْذُون", "tuʾẕūn", "izin verme", "orta", ""],
-      [25, "تَأْذِنَة", "taʾẕina", "izin verme", "orta", ""],
-      [26, "تَأْذَنَة", "taʾẕana", "izin verme", "orta", ""],
-      [27, "مَأْذُنَة", "maʾẕuna", "izin verme", "orta", ""],
-      [28, "مَأْذِنَة", "maʾẕina", "izin verme", "orta", ""]
+      [24, "تُؤْذُون", "tuʾẕūn", "tekrar tekrar izin verme", "orta", ""],
+      [25, "تَأْذِنَة", "taʾẕina", "tekrar tekrar izin verme", "orta", ""],
+      [26, "تَأْذَنَة", "taʾẕana", "tekrar tekrar izin verme", "orta", ""],
+      [27, "مَأْذُنَة", "maʾẕuna", "izin verme sebebi", "orta", ""],
+      [28, "مَأْذِنَة", "maʾẕina", "izin verme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَأْذِين", "taʾẕīn", "izin verme", "orta", "Vikisözlük: verbal noun of أَذَّنَ (ʔaḏḏana) (form II)"],
-      [30, "تَأْذِنَة", "taʾẕina", "izin verme", "orta", ""],
-      [31, "إِذِّان", "ʾiẕẕān", "izin verme", "orta", ""]
+      [
+        29,
+        "تَأْذِين",
+        "taʾẕīn",
+        "çokça izin verme",
+        "orta",
+        "Vikisözlük: verbal noun of أَذَّنَ (ʔaḏḏana) (form II)"
+      ],
+      [30, "تَأْذِنَة", "taʾẕina", "çokça izin verme", "orta", ""],
+      [31, "إِذِّان", "ʾiẕẕān", "çokça izin verme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَأْذِينَة", "taʾẕīna", "bir kere izin verme", "orta", ""],
-      [33, "إِذِّانَة", "ʾiẕẕāna", "bir kere izin verme", "orta", ""]
+      [32, "تَأْذِينَة", "taʾẕīna", "bir kere çokça izin verme", "orta", ""],
+      [33, "إِذِّانَة", "ʾiẕẕāna", "bir kere çokça izin verme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
       [
         34,
         "مُؤَذِّن",
         "muʾaẕẕin",
-        "izin veren",
-        "orta",
+        "ezan okuyan",
+        "kuran",
         "Vikisözlük: muezzin (the person who issues the call to prayer from one of the mina"
       ],
-      [35, "مُؤَذِّنَة", "muʾaẕẕina", "izin veren (dişi)", "orta", ""],
-      [36, "مُؤَذِّنَان", "muʾaẕẕinān", "iki izin veren", "orta", ""],
-      [37, "مُؤَذِّنَتَان", "muʾaẕẕinatān", "iki izin veren (dişi)", "orta", ""],
-      [38, "مُؤَذِّنُون", "muʾaẕẕinūn", "izin verenler", "orta", ""],
-      [39, "مُؤَذِّنِين", "muʾaẕẕinīn", "izin verenler", "orta", ""],
-      [40, "مُؤَذِّنَات", "muʾaẕẕināt", "izin verenler (dişi)", "orta", ""]
+      [35, "مُؤَذِّنَة", "muʾaẕẕina", "çokça izin veren (müennes)", "orta", ""],
+      [36, "مُؤَذِّنَان", "muʾaẕẕinān", "çokça izin veren (iki)", "orta", ""],
+      [37, "مُؤَذِّنَتَان", "muʾaẕẕinatān", "çokça izin veren (iki, müennes)", "orta", ""],
+      [38, "مُؤَذِّنُون", "muʾaẕẕinūn", "çokça izin verenler", "orta", ""],
+      [39, "مُؤَذِّنِين", "muʾaẕẕinīn", "çokça izin verenler", "orta", ""],
+      [40, "مُؤَذِّنَات", "muʾaẕẕināt", "çokça izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُؤَذَّن", "muʾaẕẕan", "izin verilmiş", "orta", ""],
-      [42, "مُؤَذَّنَة", "muʾaẕẕana", "izin verilmiş (dişi)", "orta", ""],
-      [43, "مُؤَذَّنَان", "muʾaẕẕanān", "iki izin verilmiş", "orta", ""],
-      [44, "مُؤَذَّنَتَان", "muʾaẕẕanatān", "iki izin verilmiş (dişi)", "orta", ""],
-      [45, "مُؤَذَّنُون", "muʾaẕẕanūn", "izin verilmişler", "orta", ""],
-      [46, "مُؤَذَّنِين", "muʾaẕẕanīn", "izin verilmişler", "orta", ""],
-      [47, "مُؤَذَّنَات", "muʾaẕẕanāt", "izin verilmişler (dişi)", "orta", ""]
+      [41, "مُؤَذَّن", "muʾaẕẕan", "çokça izin verilen", "orta", ""],
+      [42, "مُؤَذَّنَة", "muʾaẕẕana", "çokça izin verilen (müennes)", "orta", ""],
+      [43, "مُؤَذَّنَان", "muʾaẕẕanān", "çokça izin verilen (iki)", "orta", ""],
+      [44, "مُؤَذَّنَتَان", "muʾaẕẕanatān", "çokça izin verilen (iki, müennes)", "orta", ""],
+      [45, "مُؤَذَّنُون", "muʾaẕẕanūn", "çokça izin verilenler", "orta", ""],
+      [46, "مُؤَذَّنِين", "muʾaẕẕanīn", "çokça izin verilenler", "orta", ""],
+      [47, "مُؤَذَّنَات", "muʾaẕẕanāt", "çokça izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُؤَذَّن", "muʾaẕẕan", "izin verme (yeri/zamanı)", "orta", ""]
+      [48, "مُؤَذَّن", "muʾaẕẕan", "çokça izin verme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُؤَاذَنَة", "muʾāẕana", "izin verişme", "orta", ""],
-      [50, "إِذَان", "ʾiẕān", "izin verişme", "orta", ""]
+      [49, "مُؤَاذَنَة", "muʾāẕana", "biriyle karşılıklı izin verme", "orta", ""],
+      [50, "إِذَان", "ʾiẕān", "biriyle karşılıklı izin verme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "إِذَانَة", "ʾiẕāna", "bir kere izin verişme", "orta", ""]
+      [51, "إِذَانَة", "ʾiẕāna", "bir kere biriyle karşılıklı izin verme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُؤَاذِن", "muʾāẕin", "izin verişen", "orta", ""],
-      [53, "مُؤَاذِنَة", "muʾāẕina", "izin verişen (dişi)", "orta", ""],
-      [54, "مُؤَاذِنَان", "muʾāẕinān", "iki izin verişen", "orta", ""],
-      [55, "مُؤَاذِنَتَان", "muʾāẕinatān", "iki izin verişen (dişi)", "orta", ""],
-      [56, "مُؤَاذِنُون", "muʾāẕinūn", "izin verişenler", "orta", ""],
-      [57, "مُؤَاذِنِين", "muʾāẕinīn", "izin verişenler", "orta", ""],
-      [58, "مُؤَاذِنَات", "muʾāẕināt", "izin verişenler (dişi)", "orta", ""]
+      [52, "مُؤَاذِن", "muʾāẕin", "biriyle karşılıklı izin veren", "orta", ""],
+      [53, "مُؤَاذِنَة", "muʾāẕina", "biriyle karşılıklı izin veren (müennes)", "orta", ""],
+      [54, "مُؤَاذِنَان", "muʾāẕinān", "biriyle karşılıklı izin veren (iki)", "orta", ""],
+      [55, "مُؤَاذِنَتَان", "muʾāẕinatān", "biriyle karşılıklı izin veren (iki, müennes)", "orta", ""],
+      [56, "مُؤَاذِنُون", "muʾāẕinūn", "biriyle karşılıklı izin verenler", "orta", ""],
+      [57, "مُؤَاذِنِين", "muʾāẕinīn", "biriyle karşılıklı izin verenler", "orta", ""],
+      [58, "مُؤَاذِنَات", "muʾāẕināt", "biriyle karşılıklı izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُؤَاذَن", "muʾāẕan", "izin verişmiş", "orta", ""],
-      [60, "مُؤَاذَنَة", "muʾāẕana", "izin verişmiş (dişi)", "orta", ""],
-      [61, "مُؤَاذَنَان", "muʾāẕanān", "iki izin verişmiş", "orta", ""],
-      [62, "مُؤَاذَنَتَان", "muʾāẕanatān", "iki izin verişmiş (dişi)", "orta", ""],
-      [63, "مُؤَاذَنُون", "muʾāẕanūn", "izin verişmişler", "orta", ""],
-      [64, "مُؤَاذَنِين", "muʾāẕanīn", "izin verişmişler", "orta", ""],
-      [65, "مُؤَاذَنَات", "muʾāẕanāt", "izin verişmişler (dişi)", "orta", ""]
+      [59, "مُؤَاذَن", "muʾāẕan", "biriyle karşılıklı izin verilen", "orta", ""],
+      [60, "مُؤَاذَنَة", "muʾāẕana", "biriyle karşılıklı izin verilen (müennes)", "orta", ""],
+      [61, "مُؤَاذَنَان", "muʾāẕanān", "biriyle karşılıklı izin verilen (iki)", "orta", ""],
+      [62, "مُؤَاذَنَتَان", "muʾāẕanatān", "biriyle karşılıklı izin verilen (iki, müennes)", "orta", ""],
+      [63, "مُؤَاذَنُون", "muʾāẕanūn", "biriyle karşılıklı izin verilenler", "orta", ""],
+      [64, "مُؤَاذَنِين", "muʾāẕanīn", "biriyle karşılıklı izin verilenler", "orta", ""],
+      [65, "مُؤَاذَنَات", "muʾāẕanāt", "biriyle karşılıklı izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُؤَاذَن", "muʾāẕan", "izin verişme (yeri/zamanı)", "orta", ""]
+      [66, "مُؤَاذَن", "muʾāẕan", "biriyle karşılıklı izin verme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِيذَان", "ʾīẕān", "izin verme", "orta", "Vikisözlük: verbal noun of آذَنَ (ʔāḏana) (form IV)"]
+      [67, "إِيذَان", "ʾīẕān", "izin verdirme", "orta", "Vikisözlük: verbal noun of آذَنَ (ʔāḏana) (form IV)"]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِيذَانَة", "ʾīẕāna", "bir kere izin verme", "orta", ""]
+      [68, "إِيذَانَة", "ʾīẕāna", "bir kere izin verdirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُؤْذِن", "muʾẕin", "izin veren", "orta", ""],
-      [70, "مُؤْذِنَة", "muʾẕina", "izin veren (dişi)", "orta", ""],
-      [71, "مُؤْذِنَان", "muʾẕinān", "iki izin veren", "orta", ""],
-      [72, "مُؤْذِنَتَان", "muʾẕinatān", "iki izin veren (dişi)", "orta", ""],
-      [73, "مُؤْذِنُون", "muʾẕinūn", "izin verenler", "orta", ""],
-      [74, "مُؤْذِنِين", "muʾẕinīn", "izin verenler", "orta", ""],
-      [75, "مُؤْذِنَات", "muʾẕināt", "izin verenler (dişi)", "orta", ""]
+      [69, "مُؤْذِن", "muʾẕin", "izin verdiren", "orta", ""],
+      [70, "مُؤْذِنَة", "muʾẕina", "izin verdiren (müennes)", "orta", ""],
+      [71, "مُؤْذِنَان", "muʾẕinān", "izin verdiren (iki)", "orta", ""],
+      [72, "مُؤْذِنَتَان", "muʾẕinatān", "izin verdiren (iki, müennes)", "orta", ""],
+      [73, "مُؤْذِنُون", "muʾẕinūn", "izin verdirenler", "orta", ""],
+      [74, "مُؤْذِنِين", "muʾẕinīn", "izin verdirenler", "orta", ""],
+      [75, "مُؤْذِنَات", "muʾẕināt", "izin verdirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُؤْذَن", "muʾẕan", "izin verilmiş", "orta", ""],
-      [77, "مُؤْذَنَة", "muʾẕana", "izin verilmiş (dişi)", "orta", ""],
-      [78, "مُؤْذَنَان", "muʾẕanān", "iki izin verilmiş", "orta", ""],
-      [79, "مُؤْذَنَتَان", "muʾẕanatān", "iki izin verilmiş (dişi)", "orta", ""],
-      [80, "مُؤْذَنُون", "muʾẕanūn", "izin verilmişler", "orta", ""],
-      [81, "مُؤْذَنِين", "muʾẕanīn", "izin verilmişler", "orta", ""],
-      [82, "مُؤْذَنَات", "muʾẕanāt", "izin verilmişler (dişi)", "orta", ""]
+      [76, "مُؤْذَن", "muʾẕan", "izin verdirilen", "orta", ""],
+      [77, "مُؤْذَنَة", "muʾẕana", "izin verdirilen (müennes)", "orta", ""],
+      [78, "مُؤْذَنَان", "muʾẕanān", "izin verdirilen (iki)", "orta", ""],
+      [79, "مُؤْذَنَتَان", "muʾẕanatān", "izin verdirilen (iki, müennes)", "orta", ""],
+      [80, "مُؤْذَنُون", "muʾẕanūn", "izin verdirilenler", "orta", ""],
+      [81, "مُؤْذَنِين", "muʾẕanīn", "izin verdirilenler", "orta", ""],
+      [82, "مُؤْذَنَات", "muʾẕanāt", "izin verdirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُؤْذَن", "muʾẕan", "izin verme (yeri/zamanı)", "orta", ""]
+      [83, "مُؤْذَن", "muʾẕan", "izin verdirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَأَذُّن", "taʾaẕẕun", "izin verinme", "orta", ""]
+      [84, "تَأَذُّن", "taʾaẕẕun", "kendini zorlayarak izin verme", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَأَذُّنَة", "taʾaẕẕuna", "bir kere izin verinme", "orta", ""]
+      [85, "تَأَذُّنَة", "taʾaẕẕuna", "bir kere kendini zorlayarak izin verme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَأَذِّن", "mutaʾaẕẕin", "izin verinen", "orta", ""],
-      [87, "مُتَأَذِّنَة", "mutaʾaẕẕina", "izin verinen (dişi)", "orta", ""],
-      [88, "مُتَأَذِّنَان", "mutaʾaẕẕinān", "iki izin verinen", "orta", ""],
-      [89, "مُتَأَذِّنَتَان", "mutaʾaẕẕinatān", "iki izin verinen (dişi)", "orta", ""],
-      [90, "مُتَأَذِّنُون", "mutaʾaẕẕinūn", "izin verinenler", "orta", ""],
-      [91, "مُتَأَذِّنِين", "mutaʾaẕẕinīn", "izin verinenler", "orta", ""],
-      [92, "مُتَأَذِّنَات", "mutaʾaẕẕināt", "izin verinenler (dişi)", "orta", ""]
+      [86, "مُتَأَذِّن", "mutaʾaẕẕin", "kendini zorlayarak izin veren", "orta", ""],
+      [87, "مُتَأَذِّنَة", "mutaʾaẕẕina", "kendini zorlayarak izin veren (müennes)", "orta", ""],
+      [88, "مُتَأَذِّنَان", "mutaʾaẕẕinān", "kendini zorlayarak izin veren (iki)", "orta", ""],
+      [89, "مُتَأَذِّنَتَان", "mutaʾaẕẕinatān", "kendini zorlayarak izin veren (iki, müennes)", "orta", ""],
+      [90, "مُتَأَذِّنُون", "mutaʾaẕẕinūn", "kendini zorlayarak izin verenler", "orta", ""],
+      [91, "مُتَأَذِّنِين", "mutaʾaẕẕinīn", "kendini zorlayarak izin verenler", "orta", ""],
+      [92, "مُتَأَذِّنَات", "mutaʾaẕẕināt", "kendini zorlayarak izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَأَذَّن", "mutaʾaẕẕan", "izin verinmiş", "orta", ""],
-      [94, "مُتَأَذَّنَة", "mutaʾaẕẕana", "izin verinmiş (dişi)", "orta", ""],
-      [95, "مُتَأَذَّنَان", "mutaʾaẕẕanān", "iki izin verinmiş", "orta", ""],
-      [96, "مُتَأَذَّنَتَان", "mutaʾaẕẕanatān", "iki izin verinmiş (dişi)", "orta", ""],
-      [97, "مُتَأَذَّنُون", "mutaʾaẕẕanūn", "izin verinmişler", "orta", ""],
-      [98, "مُتَأَذَّنِين", "mutaʾaẕẕanīn", "izin verinmişler", "orta", ""],
-      [99, "مُتَأَذَّنَات", "mutaʾaẕẕanāt", "izin verinmişler (dişi)", "orta", ""]
+      [93, "مُتَأَذَّن", "mutaʾaẕẕan", "kendini zorlayarak izin verilen", "orta", ""],
+      [94, "مُتَأَذَّنَة", "mutaʾaẕẕana", "kendini zorlayarak izin verilen (müennes)", "orta", ""],
+      [95, "مُتَأَذَّنَان", "mutaʾaẕẕanān", "kendini zorlayarak izin verilen (iki)", "orta", ""],
+      [96, "مُتَأَذَّنَتَان", "mutaʾaẕẕanatān", "kendini zorlayarak izin verilen (iki, müennes)", "orta", ""],
+      [97, "مُتَأَذَّنُون", "mutaʾaẕẕanūn", "kendini zorlayarak izin verilenler", "orta", ""],
+      [98, "مُتَأَذَّنِين", "mutaʾaẕẕanīn", "kendini zorlayarak izin verilenler", "orta", ""],
+      [99, "مُتَأَذَّنَات", "mutaʾaẕẕanāt", "kendini zorlayarak izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَأَذَّن", "mutaʾaẕẕan", "izin verinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَأَذَّن", "mutaʾaẕẕan", "kendini zorlayarak izin verme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَآذُن", "taʾāẕun", "izin verişme", "orta", ""]
+      [101, "تَآذُن", "taʾāẕun", "birbirine izin verme", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَآذُنَة", "taʾāẕuna", "bir kere izin verişme", "orta", ""]
+      [102, "تَآذُنَة", "taʾāẕuna", "bir kere birbirine izin verme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَآذِن", "mutaʾāẕin", "izin verişen", "orta", ""],
-      [104, "مُتَآذِنَة", "mutaʾāẕina", "izin verişen (dişi)", "orta", ""],
-      [105, "مُتَآذِنَان", "mutaʾāẕinān", "iki izin verişen", "orta", ""],
-      [106, "مُتَآذِنَتَان", "mutaʾāẕinatān", "iki izin verişen (dişi)", "orta", ""],
-      [107, "مُتَآذِنُون", "mutaʾāẕinūn", "izin verişenler", "orta", ""],
-      [108, "مُتَآذِنِين", "mutaʾāẕinīn", "izin verişenler", "orta", ""],
-      [109, "مُتَآذِنَات", "mutaʾāẕināt", "izin verişenler (dişi)", "orta", ""]
+      [103, "مُتَآذِن", "mutaʾāẕin", "birbirine izin veren", "orta", ""],
+      [104, "مُتَآذِنَة", "mutaʾāẕina", "birbirine izin veren (müennes)", "orta", ""],
+      [105, "مُتَآذِنَان", "mutaʾāẕinān", "birbirine izin veren (iki)", "orta", ""],
+      [106, "مُتَآذِنَتَان", "mutaʾāẕinatān", "birbirine izin veren (iki, müennes)", "orta", ""],
+      [107, "مُتَآذِنُون", "mutaʾāẕinūn", "birbirine izin verenler", "orta", ""],
+      [108, "مُتَآذِنِين", "mutaʾāẕinīn", "birbirine izin verenler", "orta", ""],
+      [109, "مُتَآذِنَات", "mutaʾāẕināt", "birbirine izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَآذَن", "mutaʾāẕan", "izin verişmiş", "orta", ""],
-      [111, "مُتَآذَنَة", "mutaʾāẕana", "izin verişmiş (dişi)", "orta", ""],
-      [112, "مُتَآذَنَان", "mutaʾāẕanān", "iki izin verişmiş", "orta", ""],
-      [113, "مُتَآذَنَتَان", "mutaʾāẕanatān", "iki izin verişmiş (dişi)", "orta", ""],
-      [114, "مُتَآذَنُون", "mutaʾāẕanūn", "izin verişmişler", "orta", ""],
-      [115, "مُتَآذَنِين", "mutaʾāẕanīn", "izin verişmişler", "orta", ""],
-      [116, "مُتَآذَنَات", "mutaʾāẕanāt", "izin verişmişler (dişi)", "orta", ""]
+      [110, "مُتَآذَن", "mutaʾāẕan", "birbirine izin verilen", "orta", ""],
+      [111, "مُتَآذَنَة", "mutaʾāẕana", "birbirine izin verilen (müennes)", "orta", ""],
+      [112, "مُتَآذَنَان", "mutaʾāẕanān", "birbirine izin verilen (iki)", "orta", ""],
+      [113, "مُتَآذَنَتَان", "mutaʾāẕanatān", "birbirine izin verilen (iki, müennes)", "orta", ""],
+      [114, "مُتَآذَنُون", "mutaʾāẕanūn", "birbirine izin verilenler", "orta", ""],
+      [115, "مُتَآذَنِين", "mutaʾāẕanīn", "birbirine izin verilenler", "orta", ""],
+      [116, "مُتَآذَنَات", "mutaʾāẕanāt", "birbirine izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَآذَن", "mutaʾāẕan", "izin verişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَآذَن", "mutaʾāẕan", "birbirine izin verme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْئِذَان", "inʾiẕān", "izin verilme", "orta", ""]
@@ -199,87 +206,87 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْأَذِن", "munʾaẕin", "izin verilen", "orta", ""],
-      [121, "مُنْأَذِنَة", "munʾaẕina", "izin verilen (dişi)", "orta", ""],
-      [122, "مُنْأَذِنَان", "munʾaẕinān", "iki izin verilen", "orta", ""],
-      [123, "مُنْأَذِنَتَان", "munʾaẕinatān", "iki izin verilen (dişi)", "orta", ""],
+      [121, "مُنْأَذِنَة", "munʾaẕina", "izin verilen (müennes)", "orta", ""],
+      [122, "مُنْأَذِنَان", "munʾaẕinān", "izin verilen (iki)", "orta", ""],
+      [123, "مُنْأَذِنَتَان", "munʾaẕinatān", "izin verilen (iki, müennes)", "orta", ""],
       [124, "مُنْأَذِنُون", "munʾaẕinūn", "izin verilenler", "orta", ""],
       [125, "مُنْأَذِنِين", "munʾaẕinīn", "izin verilenler", "orta", ""],
-      [126, "مُنْأَذِنَات", "munʾaẕināt", "izin verilenler (dişi)", "orta", ""]
+      [126, "مُنْأَذِنَات", "munʾaẕināt", "izin verilenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْأَذَن", "munʾaẕan", "izin verilmiş", "orta", ""],
-      [128, "مُنْأَذَنَة", "munʾaẕana", "izin verilmiş (dişi)", "orta", ""],
-      [129, "مُنْأَذَنَان", "munʾaẕanān", "iki izin verilmiş", "orta", ""],
-      [130, "مُنْأَذَنَتَان", "munʾaẕanatān", "iki izin verilmiş (dişi)", "orta", ""],
-      [131, "مُنْأَذَنُون", "munʾaẕanūn", "izin verilmişler", "orta", ""],
-      [132, "مُنْأَذَنِين", "munʾaẕanīn", "izin verilmişler", "orta", ""],
-      [133, "مُنْأَذَنَات", "munʾaẕanāt", "izin verilmişler (dişi)", "orta", ""]
+      [127, "مُنْأَذَن", "munʾaẕan", "izin verilen", "orta", ""],
+      [128, "مُنْأَذَنَة", "munʾaẕana", "izin verilen (müennes)", "orta", ""],
+      [129, "مُنْأَذَنَان", "munʾaẕanān", "izin verilen (iki)", "orta", ""],
+      [130, "مُنْأَذَنَتَان", "munʾaẕanatān", "izin verilen (iki, müennes)", "orta", ""],
+      [131, "مُنْأَذَنُون", "munʾaẕanūn", "izin verilenler", "orta", ""],
+      [132, "مُنْأَذَنِين", "munʾaẕanīn", "izin verilenler", "orta", ""],
+      [133, "مُنْأَذَنَات", "munʾaẕanāt", "izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْأَذَن", "munʾaẕan", "izin verilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْأَذَن", "munʾaẕan", "izin verilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِئْتِذَان", "iʾtiẕān", "izin verinme", "orta", ""]
+      [135, "اِئْتِذَان", "iʾtiẕān", "kendisi için izin verme", "orta", ""]
     ],
     "masdar · bâb VIII (hemze idgamlı)": [
-      [136, "اِتِّذَان", "ittiẕān", "izin verinme", "orta", ""]
+      [136, "اِتِّذَان", "ittiẕān", "kendisi için izin verme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِئْتِذَانَة", "iʾtiẕāna", "bir kere izin verinme", "orta", ""]
+      [137, "اِئْتِذَانَة", "iʾtiẕāna", "bir kere kendisi için izin verme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُؤْتَذِن", "muʾtaẕin", "izin verinen", "orta", ""],
-      [139, "مُؤْتَذِنَة", "muʾtaẕina", "izin verinen (dişi)", "orta", ""],
-      [140, "مُؤْتَذِنَان", "muʾtaẕinān", "iki izin verinen", "orta", ""],
-      [141, "مُؤْتَذِنَتَان", "muʾtaẕinatān", "iki izin verinen (dişi)", "orta", ""],
-      [142, "مُؤْتَذِنُون", "muʾtaẕinūn", "izin verinenler", "orta", ""],
-      [143, "مُؤْتَذِنِين", "muʾtaẕinīn", "izin verinenler", "orta", ""],
-      [144, "مُؤْتَذِنَات", "muʾtaẕināt", "izin verinenler (dişi)", "orta", ""]
+      [138, "مُؤْتَذِن", "muʾtaẕin", "kendisi için izin veren", "orta", ""],
+      [139, "مُؤْتَذِنَة", "muʾtaẕina", "kendisi için izin veren (müennes)", "orta", ""],
+      [140, "مُؤْتَذِنَان", "muʾtaẕinān", "kendisi için izin veren (iki)", "orta", ""],
+      [141, "مُؤْتَذِنَتَان", "muʾtaẕinatān", "kendisi için izin veren (iki, müennes)", "orta", ""],
+      [142, "مُؤْتَذِنُون", "muʾtaẕinūn", "kendisi için izin verenler", "orta", ""],
+      [143, "مُؤْتَذِنِين", "muʾtaẕinīn", "kendisi için izin verenler", "orta", ""],
+      [144, "مُؤْتَذِنَات", "muʾtaẕināt", "kendisi için izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُؤْتَذَن", "muʾtaẕan", "izin verinmiş", "orta", ""],
-      [146, "مُؤْتَذَنَة", "muʾtaẕana", "izin verinmiş (dişi)", "orta", ""],
-      [147, "مُؤْتَذَنَان", "muʾtaẕanān", "iki izin verinmiş", "orta", ""],
-      [148, "مُؤْتَذَنَتَان", "muʾtaẕanatān", "iki izin verinmiş (dişi)", "orta", ""],
-      [149, "مُؤْتَذَنُون", "muʾtaẕanūn", "izin verinmişler", "orta", ""],
-      [150, "مُؤْتَذَنِين", "muʾtaẕanīn", "izin verinmişler", "orta", ""],
-      [151, "مُؤْتَذَنَات", "muʾtaẕanāt", "izin verinmişler (dişi)", "orta", ""]
+      [145, "مُؤْتَذَن", "muʾtaẕan", "kendisi için izin verilen", "orta", ""],
+      [146, "مُؤْتَذَنَة", "muʾtaẕana", "kendisi için izin verilen (müennes)", "orta", ""],
+      [147, "مُؤْتَذَنَان", "muʾtaẕanān", "kendisi için izin verilen (iki)", "orta", ""],
+      [148, "مُؤْتَذَنَتَان", "muʾtaẕanatān", "kendisi için izin verilen (iki, müennes)", "orta", ""],
+      [149, "مُؤْتَذَنُون", "muʾtaẕanūn", "kendisi için izin verilenler", "orta", ""],
+      [150, "مُؤْتَذَنِين", "muʾtaẕanīn", "kendisi için izin verilenler", "orta", ""],
+      [151, "مُؤْتَذَنَات", "muʾtaẕanāt", "kendisi için izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُؤْتَذَن", "muʾtaẕan", "izin verinme (yeri/zamanı)", "orta", ""]
+      [152, "مُؤْتَذَن", "muʾtaẕan", "kendisi için izin verme yeri, vakti", "orta", ""]
     ],
     "ism-i fâil · bâb VIII (hemze idgamlı)": [
-      [153, "مُتَّذِن", "muttaẕin", "izin verinen", "orta", ""],
-      [154, "مُتَّذِنَة", "muttaẕina", "izin verinen (dişi)", "orta", ""],
-      [155, "مُتَّذِنَان", "muttaẕinān", "iki izin verinen", "orta", ""],
-      [156, "مُتَّذِنَتَان", "muttaẕinatān", "iki izin verinen (dişi)", "orta", ""],
-      [157, "مُتَّذِنُون", "muttaẕinūn", "izin verinenler", "orta", ""],
-      [158, "مُتَّذِنِين", "muttaẕinīn", "izin verinenler", "orta", ""],
-      [159, "مُتَّذِنَات", "muttaẕināt", "izin verinenler (dişi)", "orta", ""]
+      [153, "مُتَّذِن", "muttaẕin", "kendisi için izin veren", "orta", ""],
+      [154, "مُتَّذِنَة", "muttaẕina", "kendisi için izin veren (müennes)", "orta", ""],
+      [155, "مُتَّذِنَان", "muttaẕinān", "kendisi için izin veren (iki)", "orta", ""],
+      [156, "مُتَّذِنَتَان", "muttaẕinatān", "kendisi için izin veren (iki, müennes)", "orta", ""],
+      [157, "مُتَّذِنُون", "muttaẕinūn", "kendisi için izin verenler", "orta", ""],
+      [158, "مُتَّذِنِين", "muttaẕinīn", "kendisi için izin verenler", "orta", ""],
+      [159, "مُتَّذِنَات", "muttaẕināt", "kendisi için izin verenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII (hemze idgamlı)": [
-      [160, "مُتَّذَن", "muttaẕan", "izin verinmiş", "orta", ""],
-      [161, "مُتَّذَنَة", "muttaẕana", "izin verinmiş (dişi)", "orta", ""],
-      [162, "مُتَّذَنَان", "muttaẕanān", "iki izin verinmiş", "orta", ""],
-      [163, "مُتَّذَنَتَان", "muttaẕanatān", "iki izin verinmiş (dişi)", "orta", ""],
-      [164, "مُتَّذَنُون", "muttaẕanūn", "izin verinmişler", "orta", ""],
-      [165, "مُتَّذَنِين", "muttaẕanīn", "izin verinmişler", "orta", ""],
-      [166, "مُتَّذَنَات", "muttaẕanāt", "izin verinmişler (dişi)", "orta", ""]
+      [160, "مُتَّذَن", "muttaẕan", "kendisi için izin verilen", "orta", ""],
+      [161, "مُتَّذَنَة", "muttaẕana", "kendisi için izin verilen (müennes)", "orta", ""],
+      [162, "مُتَّذَنَان", "muttaẕanān", "kendisi için izin verilen (iki)", "orta", ""],
+      [163, "مُتَّذَنَتَان", "muttaẕanatān", "kendisi için izin verilen (iki, müennes)", "orta", ""],
+      [164, "مُتَّذَنُون", "muttaẕanūn", "kendisi için izin verilenler", "orta", ""],
+      [165, "مُتَّذَنِين", "muttaẕanīn", "kendisi için izin verilenler", "orta", ""],
+      [166, "مُتَّذَنَات", "muttaẕanāt", "kendisi için izin verilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII (hemze idgamlı)": [
-      [167, "مُتَّذَن", "muttaẕan", "izin verinme (yeri/zamanı)", "orta", ""]
+      [167, "مُتَّذَن", "muttaẕan", "kendisi için izin verme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِئْذِنَان", "iʾẕinān", "izin verleşme", "kontrol", ""]
+      [499, "اِئْذِنَان", "iʾẕinān", "iyiden iyiye izin verme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُؤْذَنّ", "muʾẕann", "izin verleşen", "kontrol", ""],
-      [501, "مُؤْذَنَّة", "muʾẕanna", "izin verleşen (dişi)", "kontrol", ""],
-      [502, "مُؤْذَنَّان", "muʾẕannān", "iki izin verleşen", "kontrol", ""],
-      [503, "مُؤْذَنَّتَان", "muʾẕannatān", "iki izin verleşen (dişi)", "kontrol", ""],
-      [504, "مُؤْذَنُّون", "muʾẕannūn", "izin verleşenler", "kontrol", ""],
-      [505, "مُؤْذَنِّين", "muʾẕannīn", "izin verleşenler", "kontrol", ""],
-      [506, "مُؤْذَنَّات", "muʾẕannāt", "izin verleşenler (dişi)", "kontrol", ""]
+      [500, "مُؤْذَنّ", "muʾẕann", "iyiden iyiye izin veren", "kontrol", ""],
+      [501, "مُؤْذَنَّة", "muʾẕanna", "iyiden iyiye izin veren (müennes)", "kontrol", ""],
+      [502, "مُؤْذَنَّان", "muʾẕannān", "iyiden iyiye izin veren (iki)", "kontrol", ""],
+      [503, "مُؤْذَنَّتَان", "muʾẕannatān", "iyiden iyiye izin veren (iki, müennes)", "kontrol", ""],
+      [504, "مُؤْذَنُّون", "muʾẕannūn", "iyiden iyiye izin verenler", "kontrol", ""],
+      [505, "مُؤْذَنِّين", "muʾẕannīn", "iyiden iyiye izin verenler", "kontrol", ""],
+      [506, "مُؤْذَنَّات", "muʾẕannāt", "iyiden iyiye izin verenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
@@ -292,40 +299,40 @@
       ]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِئْذَانَة", "istiʾẕāna", "bir kere izin verme", "orta", ""]
+      [177, "اِسْتِئْذَانَة", "istiʾẕāna", "bir kere izin vermeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَأْذِن", "mustaʾẕin", "izin vermeyi isteyen", "orta", ""],
-      [179, "مُسْتَأْذِنَة", "mustaʾẕina", "izin vermeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَأْذِنَان", "mustaʾẕinān", "iki izin vermeyi isteyen", "orta", ""],
-      [181, "مُسْتَأْذِنَتَان", "mustaʾẕinatān", "iki izin vermeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَأْذِنَة", "mustaʾẕina", "izin vermeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَأْذِنَان", "mustaʾẕinān", "izin vermeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَأْذِنَتَان", "mustaʾẕinatān", "izin vermeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَأْذِنُون", "mustaʾẕinūn", "izin vermeyi isteyenler", "orta", ""],
       [183, "مُسْتَأْذِنِين", "mustaʾẕinīn", "izin vermeyi isteyenler", "orta", ""],
-      [184, "مُسْتَأْذِنَات", "mustaʾẕināt", "izin vermeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَأْذِنَات", "mustaʾẕināt", "izin vermeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَأْذَن", "mustaʾẕan", "izin vermeyi istenen", "orta", ""],
-      [186, "مُسْتَأْذَنَة", "mustaʾẕana", "izin vermeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَأْذَنَان", "mustaʾẕanān", "iki izin vermeyi istenen", "orta", ""],
-      [188, "مُسْتَأْذَنَتَان", "mustaʾẕanatān", "iki izin vermeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَأْذَنُون", "mustaʾẕanūn", "izin vermeyi istenenler", "orta", ""],
-      [190, "مُسْتَأْذَنِين", "mustaʾẕanīn", "izin vermeyi istenenler", "orta", ""],
-      [191, "مُسْتَأْذَنَات", "mustaʾẕanāt", "izin vermeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَأْذَن", "mustaʾẕan", "izin vermesi istenen", "orta", ""],
+      [186, "مُسْتَأْذَنَة", "mustaʾẕana", "izin vermesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَأْذَنَان", "mustaʾẕanān", "izin vermesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَأْذَنَتَان", "mustaʾẕanatān", "izin vermesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَأْذَنُون", "mustaʾẕanūn", "izin vermesi istenenler", "orta", ""],
+      [190, "مُسْتَأْذَنِين", "mustaʾẕanīn", "izin vermesi istenenler", "orta", ""],
+      [191, "مُسْتَأْذَنَات", "mustaʾẕanāt", "izin vermesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَأْذَن", "mustaʾẕan", "izin verme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَأْذَن", "mustaʾẕan", "izin vermeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِئْذِينَان", "iʾẕīnān", "iyice izin verleşme", "kontrol", ""]
+      [507, "اِئْذِينَان", "iʾẕīnān", "büsbütün izin verme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُؤْذَانّ", "muʾẕānn", "iyice izin verleşen", "kontrol", ""],
-      [509, "مُؤْذَانَّة", "muʾẕānna", "iyice izin verleşen (dişi)", "kontrol", ""],
-      [510, "مُؤْذَانَّان", "muʾẕānnān", "iki iyice izin verleşen", "kontrol", ""],
-      [511, "مُؤْذَانَّتَان", "muʾẕānnatān", "iki iyice izin verleşen (dişi)", "kontrol", ""],
-      [512, "مُؤْذَانُّون", "muʾẕānnūn", "iyice izin verleşenler", "kontrol", ""],
-      [513, "مُؤْذَانِّين", "muʾẕānnīn", "iyice izin verleşenler", "kontrol", ""],
-      [514, "مُؤْذَانَّات", "muʾẕānnāt", "iyice izin verleşenler (dişi)", "kontrol", ""]
+      [508, "مُؤْذَانّ", "muʾẕānn", "büsbütün izin veren", "kontrol", ""],
+      [509, "مُؤْذَانَّة", "muʾẕānna", "büsbütün izin veren (müennes)", "kontrol", ""],
+      [510, "مُؤْذَانَّان", "muʾẕānnān", "büsbütün izin veren (iki)", "kontrol", ""],
+      [511, "مُؤْذَانَّتَان", "muʾẕānnatān", "büsbütün izin veren (iki, müennes)", "kontrol", ""],
+      [512, "مُؤْذَانُّون", "muʾẕānnūn", "büsbütün izin verenler", "kontrol", ""],
+      [513, "مُؤْذَانِّين", "muʾẕānnīn", "büsbütün izin verenler", "kontrol", ""],
+      [514, "مُؤْذَانَّات", "muʾẕānnāt", "büsbütün izin verenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِئْذِوْذَان", "iʾẕiwẕān", "aşırı izin verme", "orta", ""]
@@ -335,139 +342,139 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "آذِن", "ʾāẕin", "izin veren", "kural", ""],
-      [214, "آذِنَة", "ʾāẕina", "izin veren (dişi)", "kural", ""],
-      [215, "آذِنَان", "ʾāẕinān", "iki izin veren", "kural", ""],
-      [216, "آذِنَتَان", "ʾāẕinatān", "iki izin veren (dişi)", "kural", ""],
+      [214, "آذِنَة", "ʾāẕina", "izin veren (müennes)", "kural", ""],
+      [215, "آذِنَان", "ʾāẕinān", "izin veren (iki)", "kural", ""],
+      [216, "آذِنَتَان", "ʾāẕinatān", "izin veren (iki, müennes)", "kural", ""],
       [217, "آذِنُون", "ʾāẕinūn", "izin verenler", "kural", ""],
       [218, "آذِنِين", "ʾāẕinīn", "izin verenler", "kural", ""],
-      [219, "آذِنَات", "ʾāẕināt", "izin verenler (dişi)", "kural", ""]
+      [219, "آذِنَات", "ʾāẕināt", "izin verenler (müennes)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَأْذُون", "maʾẕūn", "izin verilmiş", "kural", ""],
-      [221, "مَأْذُونَة", "maʾẕūna", "izin verilmiş (dişi)", "kural", ""],
-      [222, "مَأْذُونَان", "maʾẕūnān", "iki izin verilmiş", "kural", ""],
-      [223, "مَأْذُونَتَان", "maʾẕūnatān", "iki izin verilmiş (dişi)", "kural", ""],
-      [224, "مَأْذُونُون", "maʾẕūnūn", "izin verilmişler", "kural", ""],
-      [225, "مَأْذُونِين", "maʾẕūnīn", "izin verilmişler", "kural", ""],
-      [226, "مَأْذُونَات", "maʾẕūnāt", "izin verilmişler (dişi)", "kural", ""]
+      [220, "مَأْذُون", "maʾẕūn", "izin verilen", "kural", ""],
+      [221, "مَأْذُونَة", "maʾẕūna", "izin verilen (müennes)", "kural", ""],
+      [222, "مَأْذُونَان", "maʾẕūnān", "izin verilen (iki)", "kural", ""],
+      [223, "مَأْذُونَتَان", "maʾẕūnatān", "izin verilen (iki, müennes)", "kural", ""],
+      [224, "مَأْذُونُون", "maʾẕūnūn", "izin verilenler", "kural", ""],
+      [225, "مَأْذُونِين", "maʾẕūnīn", "izin verilenler", "kural", ""],
+      [226, "مَأْذُونَات", "maʾẕūnāt", "izin verilenler (müennes)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَأْذَن", "maʾẕan", "izin verme (yeri/zamanı)", "orta", ""],
-      [228, "مَأْذَنَان", "maʾẕanān", "iki izin verme (yeri/zamanı)", "orta", ""],
-      [229, "مَأْذِن", "maʾẕin", "izin verme (yeri/zamanı)", "orta", ""],
-      [230, "مَأْذِنَان", "maʾẕinān", "iki izin verme (yeri/zamanı)", "orta", ""],
-      [231, "مَأْذَنَة", "maʾẕana", "izin verme (yeri/zamanı)", "orta", ""],
-      [232, "مَأْذَنَتَان", "maʾẕanatān", "iki izin verme (yeri/zamanı)", "orta", ""],
-      [233, "مَأْذِنَة", "maʾẕina", "izin verme (yeri/zamanı)", "orta", ""],
-      [234, "مَأْذِنَتَان", "maʾẕinatān", "iki izin verme (yeri/zamanı)", "orta", ""],
-      [247, "مَأْذُنَة", "maʾẕuna", "izin verme (yeri/zamanı)", "orta", ""],
-      [248, "مَأْذُنَتَان", "maʾẕunatān", "iki izin verme (yeri/zamanı)", "orta", ""]
+      [227, "مَأْذَن", "maʾẕan", "izin verme yeri, vakti", "orta", ""],
+      [228, "مَأْذَنَان", "maʾẕanān", "izin verme yeri, vakti (iki)", "orta", ""],
+      [229, "مَأْذِن", "maʾẕin", "izin verme yeri, vakti", "orta", ""],
+      [230, "مَأْذِنَان", "maʾẕinān", "izin verme yeri, vakti (iki)", "orta", ""],
+      [231, "مَأْذَنَة", "maʾẕana", "izin vermenin bol olduğu yer", "orta", ""],
+      [232, "مَأْذَنَتَان", "maʾẕanatān", "izin vermenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَأْذِنَة", "maʾẕina", "izin vermenin bol olduğu yer", "orta", ""],
+      [234, "مَأْذِنَتَان", "maʾẕinatān", "izin vermenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَأْذُنَة", "maʾẕuna", "izin verme yeri, vakti", "orta", ""],
+      [248, "مَأْذُنَتَان", "maʾẕunatān", "izin verme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِئْذَن", "miʾẕan", "izin vermeye yarayan araç", "orta", ""],
-      [236, "مِئْذَنَان", "miʾẕanān", "iki izin vermeye yarayan araç", "orta", ""],
-      [237, "مِئْذَان", "miʾẕān", "izin vermeye yarayan araç", "orta", ""],
-      [238, "مِئْذَانَان", "miʾẕānān", "iki izin vermeye yarayan araç", "orta", ""],
-      [239, "مِئْذَنَة", "miʾẕana", "izin vermeye yarayan araç", "orta", "Vikisözlük: minaret"],
-      [240, "مِئْذَنَتَان", "miʾẕanatān", "iki izin vermeye yarayan araç", "orta", ""]
+      [235, "مِئْذَن", "miʾẕan", "izin verme âleti", "orta", ""],
+      [236, "مِئْذَنَان", "miʾẕanān", "izin verme âleti (iki)", "orta", ""],
+      [237, "مِئْذَان", "miʾẕān", "izin verme âleti", "orta", ""],
+      [238, "مِئْذَانَان", "miʾẕānān", "izin verme âleti (iki)", "orta", ""],
+      [239, "مِئْذَنَة", "miʾẕana", "izin verme âleti", "orta", "Vikisözlük: minaret"],
+      [240, "مِئْذَنَتَان", "miʾẕanatān", "izin verme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "آذَن", "ʾāẕan", "daha çok izin veren", "orta", ""],
-      [242, "آذَنَان", "ʾāẕanān", "iki daha çok izin veren", "orta", ""]
+      [242, "آذَنَان", "ʾāẕanān", "daha çok izin veren (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "أُذْنَى", "ʾuẕnā", "daha çok izin veren", "orta", ""],
-      [244, "أُذْنَيَان", "ʾuẕnayān", "iki daha çok izin veren", "orta", ""],
+      [244, "أُذْنَيَان", "ʾuẕnayān", "daha çok izin veren (iki)", "orta", ""],
       [245, "أَذْنَاء", "ʾaẕnāʾ", "daha çok izin veren", "orta", ""],
-      [246, "أَذْنَاآن", "ʾaẕnāʾān", "iki daha çok izin veren", "orta", ""]
+      [246, "أَذْنَاآن", "ʾaẕnāʾān", "daha çok izin veren (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "أُذَيْن", "ʾuẕayn", "küçük izin verme", "orta", ""],
-      [250, "أُذَيْنَان", "ʾuẕaynān", "iki küçük izin verme", "orta", ""],
-      [251, "أُذَيْنَة", "ʾuẕayna", "küçük izin verme", "orta", ""],
-      [252, "أُذَيْنَتَان", "ʾuẕaynatān", "iki küçük izin verme", "orta", ""]
+      [249, "أُذَيْن", "ʾuẕayn", "azıcık izin verme", "orta", ""],
+      [250, "أُذَيْنَان", "ʾuẕaynān", "azıcık izin verme (iki)", "orta", ""],
+      [251, "أُذَيْنَة", "ʾuẕayna", "azıcık izin verme", "orta", ""],
+      [252, "أُذَيْنَتَان", "ʾuẕaynatān", "azıcık izin verme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَأْذَن", "maʾẕan", "izin verme", "kural", ""],
-      [254, "مَأْذَنَان", "maʾẕanān", "iki izin verme", "kural", ""]
+      [254, "مَأْذَنَان", "maʾẕanān", "izin verme (iki)", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "أَذْنَة", "ʾaẕna", "bir kere izin verme", "orta", ""],
-      [256, "أَذْنَتَان", "ʾaẕnatān", "iki bir kere izin verme", "orta", ""]
+      [256, "أَذْنَتَان", "ʾaẕnatān", "bir kere izin verme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "إِذْنَة", "ʾiẕna", "izin verme tarzı", "orta", ""],
-      [258, "إِذْنَتَان", "ʾiẕnatān", "iki izin verme tarzı", "orta", ""]
+      [258, "إِذْنَتَان", "ʾiẕnatān", "izin verme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "أَذِين", "ʾaẕīn", "sürekli izin veren", "orta", ""],
-      [260, "أَذِينَة", "ʾaẕīna", "sürekli izin veren (dişi)", "orta", ""],
-      [261, "أَذِينَان", "ʾaẕīnān", "iki sürekli izin veren", "orta", ""],
-      [262, "أَذِينَتَان", "ʾaẕīnatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [263, "أَذِينُون", "ʾaẕīnūn", "sürekli izin verenler", "orta", ""],
-      [264, "أَذِينِين", "ʾaẕīnīn", "sürekli izin verenler", "orta", ""],
-      [265, "أَذِينَات", "ʾaẕīnāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [266, "أَذُون", "ʾaẕūn", "sürekli izin veren", "orta", ""],
-      [267, "أَذُونَة", "ʾaẕūna", "sürekli izin veren (dişi)", "orta", ""],
-      [268, "أَذُونَان", "ʾaẕūnān", "iki sürekli izin veren", "orta", ""],
-      [269, "أَذُونَتَان", "ʾaẕūnatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [270, "أَذُونُون", "ʾaẕūnūn", "sürekli izin verenler", "orta", ""],
-      [271, "أَذُونِين", "ʾaẕūnīn", "sürekli izin verenler", "orta", ""],
-      [272, "أَذُونَات", "ʾaẕūnāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [273, "أَذِن", "ʾaẕin", "sürekli izin veren", "orta", ""],
-      [274, "أَذِنَة", "ʾaẕina", "sürekli izin veren (dişi)", "orta", ""],
-      [275, "أَذِنَان", "ʾaẕinān", "iki sürekli izin veren", "orta", ""],
-      [276, "أَذِنَتَان", "ʾaẕinatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [277, "أَذِنُون", "ʾaẕinūn", "sürekli izin verenler", "orta", ""],
-      [278, "أَذِنِين", "ʾaẕinīn", "sürekli izin verenler", "orta", ""],
-      [279, "أَذِنَات", "ʾaẕināt", "sürekli izin verenler (dişi)", "orta", ""],
-      [280, "أَذُن", "ʾaẕun", "sürekli izin veren", "orta", ""],
-      [281, "أَذُنَة", "ʾaẕuna", "sürekli izin veren (dişi)", "orta", ""],
-      [282, "أَذُنَان", "ʾaẕunān", "iki sürekli izin veren", "orta", ""],
-      [283, "أَذُنَتَان", "ʾaẕunatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [284, "أَذُنُون", "ʾaẕunūn", "sürekli izin verenler", "orta", ""],
-      [285, "أَذُنِين", "ʾaẕunīn", "sürekli izin verenler", "orta", ""],
-      [286, "أَذُنَات", "ʾaẕunāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [287, "أَذَن", "ʾaẕan", "sürekli izin veren", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
-      [288, "أَذَنَة", "ʾaẕana", "sürekli izin veren (dişi)", "orta", ""],
-      [289, "أَذَنَان", "ʾaẕanān", "iki sürekli izin veren", "orta", ""],
-      [290, "أَذَنَتَان", "ʾaẕanatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [291, "أَذَنُون", "ʾaẕanūn", "sürekli izin verenler", "orta", ""],
-      [292, "أَذَنِين", "ʾaẕanīn", "sürekli izin verenler", "orta", ""],
-      [293, "أَذَنَات", "ʾaẕanāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [294, "أَذْن", "ʾaẕn", "sürekli izin veren", "orta", "Vikisözlük: verbal noun of أَذَنَ (ʔaḏana) (form I)"],
-      [295, "أَذْنَة", "ʾaẕna", "sürekli izin veren (dişi)", "orta", ""],
-      [296, "أَذْنَان", "ʾaẕnān", "iki sürekli izin veren", "orta", ""],
-      [297, "أَذْنَتَان", "ʾaẕnatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [298, "أَذْنُون", "ʾaẕnūn", "sürekli izin verenler", "orta", ""],
-      [299, "أَذْنِين", "ʾaẕnīn", "sürekli izin verenler", "orta", ""],
-      [300, "أَذْنَات", "ʾaẕnāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [301, "أُذُن", "ʾuẕun", "sürekli izin veren", "orta", ""],
-      [302, "أُذُنَة", "ʾuẕuna", "sürekli izin veren (dişi)", "orta", ""],
-      [303, "أُذُنَان", "ʾuẕunān", "iki sürekli izin veren", "orta", ""],
-      [304, "أُذُنَتَان", "ʾuẕunatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [305, "أُذُنُون", "ʾuẕunūn", "sürekli izin verenler", "orta", ""],
-      [306, "أُذُنِين", "ʾuẕunīn", "sürekli izin verenler", "orta", ""],
-      [307, "أُذُنَات", "ʾuẕunāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [308, "أَذْنَان", "ʾaẕnān", "sürekli izin veren", "orta", ""],
-      [309, "أَذْنَانَة", "ʾaẕnāna", "sürekli izin veren (dişi)", "orta", ""],
-      [310, "أَذْنَانَان", "ʾaẕnānān", "iki sürekli izin veren", "orta", ""],
-      [311, "أَذْنَانَتَان", "ʾaẕnānatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [312, "أَذْنَانُون", "ʾaẕnānūn", "sürekli izin verenler", "orta", ""],
-      [313, "أَذْنَانِين", "ʾaẕnānīn", "sürekli izin verenler", "orta", ""],
-      [314, "أَذْنَانَات", "ʾaẕnānāt", "sürekli izin verenler (dişi)", "orta", ""],
-      [315, "أُذَان", "ʾuẕān", "sürekli izin veren", "orta", ""],
-      [316, "أُذَانَة", "ʾuẕāna", "sürekli izin veren (dişi)", "orta", ""],
-      [317, "أُذَانَان", "ʾuẕānān", "iki sürekli izin veren", "orta", ""],
-      [318, "أُذَانَتَان", "ʾuẕānatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [319, "أُذَانُون", "ʾuẕānūn", "sürekli izin verenler", "orta", ""],
-      [320, "أُذَانِين", "ʾuẕānīn", "sürekli izin verenler", "orta", ""],
-      [321, "أُذَانَات", "ʾuẕānāt", "sürekli izin verenler (dişi)", "orta", ""],
+      [259, "أَذِين", "ʾaẕīn", "her daim izin veren", "orta", ""],
+      [260, "أَذِينَة", "ʾaẕīna", "her daim izin veren (müennes)", "orta", ""],
+      [261, "أَذِينَان", "ʾaẕīnān", "her daim izin veren (iki)", "orta", ""],
+      [262, "أَذِينَتَان", "ʾaẕīnatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [263, "أَذِينُون", "ʾaẕīnūn", "her daim izin verenler", "orta", ""],
+      [264, "أَذِينِين", "ʾaẕīnīn", "her daim izin verenler", "orta", ""],
+      [265, "أَذِينَات", "ʾaẕīnāt", "her daim izin verenler (müennes)", "orta", ""],
+      [266, "أَذُون", "ʾaẕūn", "her daim izin veren", "orta", ""],
+      [267, "أَذُونَة", "ʾaẕūna", "her daim izin veren (müennes)", "orta", ""],
+      [268, "أَذُونَان", "ʾaẕūnān", "her daim izin veren (iki)", "orta", ""],
+      [269, "أَذُونَتَان", "ʾaẕūnatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [270, "أَذُونُون", "ʾaẕūnūn", "her daim izin verenler", "orta", ""],
+      [271, "أَذُونِين", "ʾaẕūnīn", "her daim izin verenler", "orta", ""],
+      [272, "أَذُونَات", "ʾaẕūnāt", "her daim izin verenler (müennes)", "orta", ""],
+      [273, "أَذِن", "ʾaẕin", "her daim izin veren", "orta", ""],
+      [274, "أَذِنَة", "ʾaẕina", "her daim izin veren (müennes)", "orta", ""],
+      [275, "أَذِنَان", "ʾaẕinān", "her daim izin veren (iki)", "orta", ""],
+      [276, "أَذِنَتَان", "ʾaẕinatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [277, "أَذِنُون", "ʾaẕinūn", "her daim izin verenler", "orta", ""],
+      [278, "أَذِنِين", "ʾaẕinīn", "her daim izin verenler", "orta", ""],
+      [279, "أَذِنَات", "ʾaẕināt", "her daim izin verenler (müennes)", "orta", ""],
+      [280, "أَذُن", "ʾaẕun", "her daim izin veren", "orta", ""],
+      [281, "أَذُنَة", "ʾaẕuna", "her daim izin veren (müennes)", "orta", ""],
+      [282, "أَذُنَان", "ʾaẕunān", "her daim izin veren (iki)", "orta", ""],
+      [283, "أَذُنَتَان", "ʾaẕunatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [284, "أَذُنُون", "ʾaẕunūn", "her daim izin verenler", "orta", ""],
+      [285, "أَذُنِين", "ʾaẕunīn", "her daim izin verenler", "orta", ""],
+      [286, "أَذُنَات", "ʾaẕunāt", "her daim izin verenler (müennes)", "orta", ""],
+      [287, "أَذَن", "ʾaẕan", "her daim izin veren", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [288, "أَذَنَة", "ʾaẕana", "her daim izin veren (müennes)", "orta", ""],
+      [289, "أَذَنَان", "ʾaẕanān", "her daim izin veren (iki)", "orta", ""],
+      [290, "أَذَنَتَان", "ʾaẕanatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [291, "أَذَنُون", "ʾaẕanūn", "her daim izin verenler", "orta", ""],
+      [292, "أَذَنِين", "ʾaẕanīn", "her daim izin verenler", "orta", ""],
+      [293, "أَذَنَات", "ʾaẕanāt", "her daim izin verenler (müennes)", "orta", ""],
+      [294, "أَذْن", "ʾaẕn", "her daim izin veren", "orta", "Vikisözlük: verbal noun of أَذَنَ (ʔaḏana) (form I)"],
+      [295, "أَذْنَة", "ʾaẕna", "her daim izin veren (müennes)", "orta", ""],
+      [296, "أَذْنَان", "ʾaẕnān", "her daim izin veren (iki)", "orta", ""],
+      [297, "أَذْنَتَان", "ʾaẕnatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [298, "أَذْنُون", "ʾaẕnūn", "her daim izin verenler", "orta", ""],
+      [299, "أَذْنِين", "ʾaẕnīn", "her daim izin verenler", "orta", ""],
+      [300, "أَذْنَات", "ʾaẕnāt", "her daim izin verenler (müennes)", "orta", ""],
+      [301, "أُذُن", "ʾuẕun", "her daim izin veren", "orta", ""],
+      [302, "أُذُنَة", "ʾuẕuna", "her daim izin veren (müennes)", "orta", ""],
+      [303, "أُذُنَان", "ʾuẕunān", "her daim izin veren (iki)", "orta", ""],
+      [304, "أُذُنَتَان", "ʾuẕunatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [305, "أُذُنُون", "ʾuẕunūn", "her daim izin verenler", "orta", ""],
+      [306, "أُذُنِين", "ʾuẕunīn", "her daim izin verenler", "orta", ""],
+      [307, "أُذُنَات", "ʾuẕunāt", "her daim izin verenler (müennes)", "orta", ""],
+      [308, "أَذْنَان", "ʾaẕnān", "her daim izin veren", "orta", ""],
+      [309, "أَذْنَانَة", "ʾaẕnāna", "her daim izin veren (müennes)", "orta", ""],
+      [310, "أَذْنَانَان", "ʾaẕnānān", "her daim izin veren (iki)", "orta", ""],
+      [311, "أَذْنَانَتَان", "ʾaẕnānatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [312, "أَذْنَانُون", "ʾaẕnānūn", "her daim izin verenler", "orta", ""],
+      [313, "أَذْنَانِين", "ʾaẕnānīn", "her daim izin verenler", "orta", ""],
+      [314, "أَذْنَانَات", "ʾaẕnānāt", "her daim izin verenler (müennes)", "orta", ""],
+      [315, "أُذَان", "ʾuẕān", "her daim izin veren", "orta", ""],
+      [316, "أُذَانَة", "ʾuẕāna", "her daim izin veren (müennes)", "orta", ""],
+      [317, "أُذَانَان", "ʾuẕānān", "her daim izin veren (iki)", "orta", ""],
+      [318, "أُذَانَتَان", "ʾuẕānatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [319, "أُذَانُون", "ʾuẕānūn", "her daim izin verenler", "orta", ""],
+      [320, "أُذَانِين", "ʾuẕānīn", "her daim izin verenler", "orta", ""],
+      [321, "أُذَانَات", "ʾuẕānāt", "her daim izin verenler (müennes)", "orta", ""],
       [
         322,
         "أَذَان",
         "ʾaẕān",
-        "sürekli izin veren",
+        "her daim izin veren",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina, “to listen, to hear, to allow”) (form I"
       ],
@@ -475,98 +482,98 @@
         323,
         "أَذَانَة",
         "ʾaẕāna",
-        "sürekli izin veren (dişi)",
+        "her daim izin veren (müennes)",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"
       ],
-      [324, "أَذَانَان", "ʾaẕānān", "iki sürekli izin veren", "orta", ""],
-      [325, "أَذَانَتَان", "ʾaẕānatān", "iki sürekli izin veren (dişi)", "orta", ""],
-      [326, "أَذَانُون", "ʾaẕānūn", "sürekli izin verenler", "orta", ""],
-      [327, "أَذَانِين", "ʾaẕānīn", "sürekli izin verenler", "orta", ""],
-      [328, "أَذَانَات", "ʾaẕānāt", "sürekli izin verenler (dişi)", "orta", ""]
+      [324, "أَذَانَان", "ʾaẕānān", "her daim izin veren (iki)", "orta", ""],
+      [325, "أَذَانَتَان", "ʾaẕānatān", "her daim izin veren (iki, müennes)", "orta", ""],
+      [326, "أَذَانُون", "ʾaẕānūn", "her daim izin verenler", "orta", ""],
+      [327, "أَذَانِين", "ʾaẕānīn", "her daim izin verenler", "orta", ""],
+      [328, "أَذَانَات", "ʾaẕānāt", "her daim izin verenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "أَذَّان", "ʾaẕẕān", "çok izin veren", "orta", ""],
-      [330, "أَذَّانَة", "ʾaẕẕāna", "çok izin veren (dişi)", "orta", ""],
-      [331, "أَذَّانَان", "ʾaẕẕānān", "iki çok izin veren", "orta", ""],
-      [332, "أَذَّانَتَان", "ʾaẕẕānatān", "iki çok izin veren (dişi)", "orta", ""],
-      [333, "أَذَّانُون", "ʾaẕẕānūn", "çok izin verenler", "orta", ""],
-      [334, "أَذَّانِين", "ʾaẕẕānīn", "çok izin verenler", "orta", ""],
-      [335, "أَذَّانَات", "ʾaẕẕānāt", "çok izin verenler (dişi)", "orta", ""],
-      [336, "أَذَّانَة", "ʾaẕẕāna", "çok izin veren", "orta", ""],
-      [337, "أَذَّانَتَان", "ʾaẕẕānatān", "iki çok izin veren", "orta", ""],
-      [338, "أَذَّانَات", "ʾaẕẕānāt", "çok izin verenler (dişi)", "orta", ""],
+      [329, "أَذَّان", "ʾaẕẕān", "işi izin verme olan", "orta", ""],
+      [330, "أَذَّانَة", "ʾaẕẕāna", "işi izin verme olan (müennes)", "orta", ""],
+      [331, "أَذَّانَان", "ʾaẕẕānān", "işi izin verme olan (iki)", "orta", ""],
+      [332, "أَذَّانَتَان", "ʾaẕẕānatān", "işi izin verme olan (iki, müennes)", "orta", ""],
+      [333, "أَذَّانُون", "ʾaẕẕānūn", "işi izin verme olanlar", "orta", ""],
+      [334, "أَذَّانِين", "ʾaẕẕānīn", "işi izin verme olanlar", "orta", ""],
+      [335, "أَذَّانَات", "ʾaẕẕānāt", "işi izin verme olanlar (müennes)", "orta", ""],
+      [336, "أَذَّانَة", "ʾaẕẕāna", "pek çok izin veren", "orta", ""],
+      [337, "أَذَّانَتَان", "ʾaẕẕānatān", "pek çok izin veren (iki)", "orta", ""],
+      [338, "أَذَّانَات", "ʾaẕẕānāt", "pek çok izin verenler (müennes)", "orta", ""],
       [339, "أَذُون", "ʾaẕūn", "çok izin veren", "orta", ""],
-      [340, "أَذُونَة", "ʾaẕūna", "çok izin veren (dişi)", "orta", ""],
-      [341, "أَذُونَان", "ʾaẕūnān", "iki çok izin veren", "orta", ""],
-      [342, "أَذُونَتَان", "ʾaẕūnatān", "iki çok izin veren (dişi)", "orta", ""],
+      [340, "أَذُونَة", "ʾaẕūna", "çok izin veren (müennes)", "orta", ""],
+      [341, "أَذُونَان", "ʾaẕūnān", "çok izin veren (iki)", "orta", ""],
+      [342, "أَذُونَتَان", "ʾaẕūnatān", "çok izin veren (iki, müennes)", "orta", ""],
       [343, "أَذُونُون", "ʾaẕūnūn", "çok izin verenler", "orta", ""],
       [344, "أَذُونِين", "ʾaẕūnīn", "çok izin verenler", "orta", ""],
-      [345, "أَذُونَات", "ʾaẕūnāt", "çok izin verenler (dişi)", "orta", ""],
-      [346, "أَذُّون", "ʾaẕẕūn", "çok izin veren", "orta", ""],
-      [347, "أَذُّونَة", "ʾaẕẕūna", "çok izin veren (dişi)", "orta", ""],
-      [348, "أَذُّونَان", "ʾaẕẕūnān", "iki çok izin veren", "orta", ""],
-      [349, "أَذُّونَتَان", "ʾaẕẕūnatān", "iki çok izin veren (dişi)", "orta", ""],
-      [350, "أَذُّونُون", "ʾaẕẕūnūn", "çok izin verenler", "orta", ""],
-      [351, "أَذُّونِين", "ʾaẕẕūnīn", "çok izin verenler", "orta", ""],
-      [352, "أَذُّونَات", "ʾaẕẕūnāt", "çok izin verenler (dişi)", "orta", ""],
-      [353, "إِذِّين", "ʾiẕẕīn", "çok izin veren", "orta", ""],
-      [354, "إِذِّينَة", "ʾiẕẕīna", "çok izin veren (dişi)", "orta", ""],
-      [355, "إِذِّينَان", "ʾiẕẕīnān", "iki çok izin veren", "orta", ""],
-      [356, "إِذِّينَتَان", "ʾiẕẕīnatān", "iki çok izin veren (dişi)", "orta", ""],
-      [357, "إِذِّينُون", "ʾiẕẕīnūn", "çok izin verenler", "orta", ""],
-      [358, "إِذِّينِين", "ʾiẕẕīnīn", "çok izin verenler", "orta", ""],
-      [359, "إِذِّينَات", "ʾiẕẕīnāt", "çok izin verenler (dişi)", "orta", ""],
-      [360, "أُذَّان", "ʾuẕẕān", "çok izin veren", "orta", ""],
-      [361, "أُذَّانَة", "ʾuẕẕāna", "çok izin veren (dişi)", "orta", ""],
-      [362, "أُذَّانَان", "ʾuẕẕānān", "iki çok izin veren", "orta", ""],
-      [363, "أُذَّانَتَان", "ʾuẕẕānatān", "iki çok izin veren (dişi)", "orta", ""],
-      [364, "أُذَّانُون", "ʾuẕẕānūn", "çok izin verenler", "orta", ""],
-      [365, "أُذَّانِين", "ʾuẕẕānīn", "çok izin verenler", "orta", ""],
-      [366, "أُذَّانَات", "ʾuẕẕānāt", "çok izin verenler (dişi)", "orta", ""],
-      [367, "مِئْذَان", "miʾẕān", "çok izin veren", "orta", ""],
-      [368, "مِئْذَانَة", "miʾẕāna", "çok izin veren (dişi)", "orta", ""],
-      [369, "مِئْذَانَان", "miʾẕānān", "iki çok izin veren", "orta", ""],
-      [370, "مِئْذَانَتَان", "miʾẕānatān", "iki çok izin veren (dişi)", "orta", ""],
-      [371, "مِئْذَانُون", "miʾẕānūn", "çok izin verenler", "orta", ""],
-      [372, "مِئْذَانِين", "miʾẕānīn", "çok izin verenler", "orta", ""],
-      [373, "مِئْذَانَات", "miʾẕānāt", "çok izin verenler (dişi)", "orta", ""],
-      [374, "مِئْذِين", "miʾẕīn", "çok izin veren", "orta", ""],
-      [375, "مِئْذِينَة", "miʾẕīna", "çok izin veren (dişi)", "orta", ""],
-      [376, "مِئْذِينَان", "miʾẕīnān", "iki çok izin veren", "orta", ""],
-      [377, "مِئْذِينَتَان", "miʾẕīnatān", "iki çok izin veren (dişi)", "orta", ""],
-      [378, "مِئْذِينُون", "miʾẕīnūn", "çok izin verenler", "orta", ""],
-      [379, "مِئْذِينِين", "miʾẕīnīn", "çok izin verenler", "orta", ""],
-      [380, "مِئْذِينَات", "miʾẕīnāt", "çok izin verenler (dişi)", "orta", ""],
+      [345, "أَذُونَات", "ʾaẕūnāt", "çok izin verenler (müennes)", "orta", ""],
+      [346, "أَذُّون", "ʾaẕẕūn", "pek çok izin veren", "orta", ""],
+      [347, "أَذُّونَة", "ʾaẕẕūna", "pek çok izin veren (müennes)", "orta", ""],
+      [348, "أَذُّونَان", "ʾaẕẕūnān", "pek çok izin veren (iki)", "orta", ""],
+      [349, "أَذُّونَتَان", "ʾaẕẕūnatān", "pek çok izin veren (iki, müennes)", "orta", ""],
+      [350, "أَذُّونُون", "ʾaẕẕūnūn", "pek çok izin verenler", "orta", ""],
+      [351, "أَذُّونِين", "ʾaẕẕūnīn", "pek çok izin verenler", "orta", ""],
+      [352, "أَذُّونَات", "ʾaẕẕūnāt", "pek çok izin verenler (müennes)", "orta", ""],
+      [353, "إِذِّين", "ʾiẕẕīn", "izin vermede aşırı giden", "orta", ""],
+      [354, "إِذِّينَة", "ʾiẕẕīna", "izin vermede aşırı giden (müennes)", "orta", ""],
+      [355, "إِذِّينَان", "ʾiẕẕīnān", "izin vermede aşırı giden (iki)", "orta", ""],
+      [356, "إِذِّينَتَان", "ʾiẕẕīnatān", "izin vermede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "إِذِّينُون", "ʾiẕẕīnūn", "izin vermede aşırı gidenler", "orta", ""],
+      [358, "إِذِّينِين", "ʾiẕẕīnīn", "izin vermede aşırı gidenler", "orta", ""],
+      [359, "إِذِّينَات", "ʾiẕẕīnāt", "izin vermede aşırı gidenler (müennes)", "orta", ""],
+      [360, "أُذَّان", "ʾuẕẕān", "son derece izin veren", "orta", ""],
+      [361, "أُذَّانَة", "ʾuẕẕāna", "son derece izin veren (müennes)", "orta", ""],
+      [362, "أُذَّانَان", "ʾuẕẕānān", "son derece izin veren (iki)", "orta", ""],
+      [363, "أُذَّانَتَان", "ʾuẕẕānatān", "son derece izin veren (iki, müennes)", "orta", ""],
+      [364, "أُذَّانُون", "ʾuẕẕānūn", "son derece izin verenler", "orta", ""],
+      [365, "أُذَّانِين", "ʾuẕẕānīn", "son derece izin verenler", "orta", ""],
+      [366, "أُذَّانَات", "ʾuẕẕānāt", "son derece izin verenler (müennes)", "orta", ""],
+      [367, "مِئْذَان", "miʾẕān", "izin vermeyi âdet edinmiş", "orta", ""],
+      [368, "مِئْذَانَة", "miʾẕāna", "izin vermeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِئْذَانَان", "miʾẕānān", "izin vermeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِئْذَانَتَان", "miʾẕānatān", "izin vermeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِئْذَانُون", "miʾẕānūn", "izin vermeyi âdet edinmişler", "orta", ""],
+      [372, "مِئْذَانِين", "miʾẕānīn", "izin vermeyi âdet edinmişler", "orta", ""],
+      [373, "مِئْذَانَات", "miʾẕānāt", "izin vermeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِئْذِين", "miʾẕīn", "izin vermeye düşkün", "orta", ""],
+      [375, "مِئْذِينَة", "miʾẕīna", "izin vermeye düşkün (müennes)", "orta", ""],
+      [376, "مِئْذِينَان", "miʾẕīnān", "izin vermeye düşkün (iki)", "orta", ""],
+      [377, "مِئْذِينَتَان", "miʾẕīnatān", "izin vermeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِئْذِينُون", "miʾẕīnūn", "izin vermeye düşkünler", "orta", ""],
+      [379, "مِئْذِينِين", "miʾẕīnīn", "izin vermeye düşkünler", "orta", ""],
+      [380, "مِئْذِينَات", "miʾẕīnāt", "izin vermeye düşkünler (müennes)", "orta", ""],
       [381, "أَذِين", "ʾaẕīn", "çok izin veren", "orta", ""],
-      [382, "أَذِينَة", "ʾaẕīna", "çok izin veren (dişi)", "orta", ""],
-      [383, "أَذِينَان", "ʾaẕīnān", "iki çok izin veren", "orta", ""],
-      [384, "أَذِينَتَان", "ʾaẕīnatān", "iki çok izin veren (dişi)", "orta", ""],
+      [382, "أَذِينَة", "ʾaẕīna", "çok izin veren (müennes)", "orta", ""],
+      [383, "أَذِينَان", "ʾaẕīnān", "çok izin veren (iki)", "orta", ""],
+      [384, "أَذِينَتَان", "ʾaẕīnatān", "çok izin veren (iki, müennes)", "orta", ""],
       [385, "أَذِينُون", "ʾaẕīnūn", "çok izin verenler", "orta", ""],
       [386, "أَذِينِين", "ʾaẕīnīn", "çok izin verenler", "orta", ""],
-      [387, "أَذِينَات", "ʾaẕīnāt", "çok izin verenler (dişi)", "orta", ""],
+      [387, "أَذِينَات", "ʾaẕīnāt", "çok izin verenler (müennes)", "orta", ""],
       [388, "أَذَّن", "ʾaẕẕan", "çok izin veren", "orta", ""],
-      [389, "أَذَّنَة", "ʾaẕẕana", "çok izin veren (dişi)", "orta", ""],
-      [390, "أَذَّنَان", "ʾaẕẕanān", "iki çok izin veren", "orta", ""],
-      [391, "أَذَّنَتَان", "ʾaẕẕanatān", "iki çok izin veren (dişi)", "orta", ""],
+      [389, "أَذَّنَة", "ʾaẕẕana", "çok izin veren (müennes)", "orta", ""],
+      [390, "أَذَّنَان", "ʾaẕẕanān", "çok izin veren (iki)", "orta", ""],
+      [391, "أَذَّنَتَان", "ʾaẕẕanatān", "çok izin veren (iki, müennes)", "orta", ""],
       [392, "أَذَّنُون", "ʾaẕẕanūn", "çok izin verenler", "orta", ""],
       [393, "أَذَّنِين", "ʾaẕẕanīn", "çok izin verenler", "orta", ""],
-      [394, "أَذَّنَات", "ʾaẕẕanāt", "çok izin verenler (dişi)", "orta", ""]
+      [394, "أَذَّنَات", "ʾaẕẕanāt", "çok izin verenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "أَذْنِيّ", "ʾaẕniyy", "izin vermeye ilgili", "orta", ""],
-      [397, "أَذَنِيّ", "ʾaẕaniyy", "izin vermeye ilgili", "orta", ""],
-      [399, "إِذْنِيّ", "ʾiẕniyy", "izin vermeye ilgili", "orta", ""],
-      [401, "أُذْنِيّ", "ʾuẕniyy", "izin vermeye ilgili", "orta", ""],
-      [403, "إِذَانِيّ", "ʾiẕāniyy", "izin vermeye ilgili", "orta", ""],
-      [405, "آذِنِيّ", "ʾāẕiniyy", "izin vermeye ilgili", "orta", ""],
-      [407, "مَأْذُونِيّ", "maʾẕūniyy", "izin vermeye ilgili", "orta", ""],
-      [409, "أَذِينِيّ", "ʾaẕīniyy", "izin vermeye ilgili", "orta", ""],
-      [411, "مَأْذَنِيّ", "maʾẕaniyy", "izin vermeye ilgili", "orta", ""],
-      [413, "تَأْذِينِيّ", "taʾẕīniyy", "izin vermeye ilgili", "orta", ""],
-      [415, "تَآذُنِيّ", "taʾāẕuniyy", "izin vermeye ilgili", "orta", ""],
-      [417, "إِيذَانِيّ", "ʾīẕāniyy", "izin vermeye ilgili", "orta", ""],
-      [419, "اِئْتِذَانِيّ", "iʾtiẕāniyy", "izin vermeye ilgili", "orta", ""]
+      [395, "أَذْنِيّ", "ʾaẕniyy", "izin verme ile ilgili", "orta", ""],
+      [397, "أَذَنِيّ", "ʾaẕaniyy", "izin verme ile ilgili", "orta", ""],
+      [399, "إِذْنِيّ", "ʾiẕniyy", "izin verme ile ilgili", "orta", ""],
+      [401, "أُذْنِيّ", "ʾuẕniyy", "izin verme ile ilgili", "orta", ""],
+      [403, "إِذَانِيّ", "ʾiẕāniyy", "izin verme ile ilgili", "orta", ""],
+      [405, "آذِنِيّ", "ʾāẕiniyy", "izin verme ile ilgili", "orta", ""],
+      [407, "مَأْذُونِيّ", "maʾẕūniyy", "izin verme ile ilgili", "orta", ""],
+      [409, "أَذِينِيّ", "ʾaẕīniyy", "izin verme ile ilgili", "orta", ""],
+      [411, "مَأْذَنِيّ", "maʾẕaniyy", "izin verme ile ilgili", "orta", ""],
+      [413, "تَأْذِينِيّ", "taʾẕīniyy", "izin verme ile ilgili", "orta", ""],
+      [415, "تَآذُنِيّ", "taʾāẕuniyy", "izin verme ile ilgili", "orta", ""],
+      [417, "إِيذَانِيّ", "ʾīẕāniyy", "izin verme ile ilgili", "orta", ""],
+      [419, "اِئْتِذَانِيّ", "iʾtiẕāniyy", "izin verme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "أَذْنِيَّة", "ʾaẕniyya", "izin verenlik", "orta", ""],
@@ -599,20 +606,20 @@
       [426, "إِذَانَة", "ʾiẕāna", "izin verme", "orta", ""],
       [427, "أُذُونَة", "ʾuẕūna", "izin verme", "orta", ""],
       [428, "أَذْن", "ʾaẕn", "izin verme", "orta", "Vikisözlük: verbal noun of أَذَنَ (ʔaḏana) (form I)"],
-      [429, "إِذْن", "ʾiẕn", "izin verme", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"]
+      [429, "إِذْن", "ʾiẕn", "o halde", "kuran", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "آذُون", "ʾāẕūn", "izin verenler (topluluk adı)", "orta", ""],
-      [432, "أَذَنَة", "ʾaẕana", "izin verenler (topluluk adı)", "orta", ""],
-      [433, "أُذَنَة", "ʾuẕana", "izin verenler (topluluk adı)", "orta", ""],
-      [434, "أُوذُونَة", "ʾūẕūna", "izin verenler (topluluk adı)", "orta", ""],
-      [435, "أَوْذَن", "ʾawẕan", "izin verenler (topluluk adı)", "orta", ""],
-      [437, "أَيْذَن", "ʾayẕan", "izin verenler (topluluk adı)", "orta", ""],
+      [430, "آذُون", "ʾāẕūn", "izin verme türünden şey", "orta", ""],
+      [432, "أَذَنَة", "ʾaẕana", "izin verme türünden şey", "orta", ""],
+      [433, "أُذَنَة", "ʾuẕana", "izin verme türünden şey", "orta", ""],
+      [434, "أُوذُونَة", "ʾūẕūna", "izin verme türünden şey", "orta", ""],
+      [435, "أَوْذَن", "ʾawẕan", "izin verme türünden şey", "orta", ""],
+      [437, "أَيْذَن", "ʾayẕan", "izin verme türünden şey", "orta", ""],
       [
         439,
         "أَذْن",
         "ʾaẕn",
-        "izin verenler (topluluk adı)",
+        "izin verme türünden şey",
         "orta",
         "Vikisözlük: verbal noun of أَذَنَ (ʔaḏana) (form I)"
       ],
@@ -620,112 +627,98 @@
         441,
         "أَذَن",
         "ʾaẕan",
-        "izin verenler (topluluk adı)",
+        "izin verme türünden şey",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"
       ],
-      [
-        443,
-        "إِذْن",
-        "ʾiẕn",
-        "izin verenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"
-      ],
-      [445, "أُذْن", "ʾuẕn", "izin verenler (topluluk adı)", "orta", ""],
-      [447, "أَذِين", "ʾaẕīn", "izin verenler (topluluk adı)", "orta", ""],
-      [449, "إِذَن", "ʾiẕan", "izin verenler (topluluk adı)", "orta", ""],
-      [451, "أُذُن", "ʾuẕun", "izin verenler (topluluk adı)", "orta", ""],
+      [443, "إِذْن", "ʾiẕn", "o halde", "kuran", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [445, "أُذْن", "ʾuẕn", "izin verme türünden şey", "orta", ""],
+      [447, "أَذِين", "ʾaẕīn", "izin verme türünden şey", "orta", ""],
+      [449, "إِذَن", "ʾiẕan", "izin verme türünden şey", "orta", ""],
+      [451, "أُذُن", "ʾuẕun", "izin verme türünden şey", "orta", ""],
       [
         453,
         "أَذَان",
         "ʾaẕān",
-        "izin verenler (topluluk adı)",
+        "izin verme türünden şey",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina, “to listen, to hear, to allow”) (form I"
       ]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "آذُونَة", "ʾāẕūna", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [436, "أَوْذَنَة", "ʾawẕana", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [438, "أَيْذَنَة", "ʾayẕana", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [440, "أَذْنَة", "ʾaẕna", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [442, "أَذَنَة", "ʾaẕana", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [444, "إِذْنَة", "ʾiẕna", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [446, "أُذْنَة", "ʾuẕna", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [448, "أَذِينَة", "ʾaẕīna", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [450, "إِذَنَة", "ʾiẕana", "bir tane izin verenler (topluluk adı)", "orta", ""],
-      [452, "أُذُنَة", "ʾuẕuna", "bir tane izin verenler (topluluk adı)", "orta", ""],
+      [431, "آذُونَة", "ʾāẕūna", "izin verme türünden bir tane", "orta", ""],
+      [436, "أَوْذَنَة", "ʾawẕana", "izin verme türünden bir tane", "orta", ""],
+      [438, "أَيْذَنَة", "ʾayẕana", "izin verme türünden bir tane", "orta", ""],
+      [440, "أَذْنَة", "ʾaẕna", "izin verme türünden bir tane", "orta", ""],
+      [442, "أَذَنَة", "ʾaẕana", "izin verme türünden bir tane", "orta", ""],
+      [444, "إِذْنَة", "ʾiẕna", "izin verme türünden bir tane", "orta", ""],
+      [446, "أُذْنَة", "ʾuẕna", "izin verme türünden bir tane", "orta", ""],
+      [448, "أَذِينَة", "ʾaẕīna", "izin verme türünden bir tane", "orta", ""],
+      [450, "إِذَنَة", "ʾiẕana", "izin verme türünden bir tane", "orta", ""],
+      [452, "أُذُنَة", "ʾuẕuna", "izin verme türünden bir tane", "orta", ""],
       [
         454,
         "أَذَانَة",
         "ʾaẕāna",
-        "bir tane izin verenler (topluluk adı)",
+        "izin verme türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"
       ]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "آذَان", "ʾāẕān", "izin verenler (kırık çoğul)", "orta", ""],
-      [456, "آذِنَة", "ʾāẕina", "izin verenler (kırık çoğul)", "orta", ""],
-      [457, "أَآذِن", "ʾaʾāẕin", "izin verenler (kırık çoğul)", "orta", ""],
-      [458, "أَآذِين", "ʾaʾāẕīn", "izin verenler (kırık çoğul)", "orta", ""],
-      [459, "أُذُون", "ʾuẕūn", "izin verenler (kırık çoğul)", "orta", ""],
-      [460, "أُذُن", "ʾuẕun", "izin verenler (kırık çoğul)", "orta", ""],
-      [461, "إِذَان", "ʾiẕān", "izin verenler (kırık çoğul)", "orta", ""],
-      [462, "إِذَن", "ʾiẕan", "izin verenler (kırık çoğul)", "orta", ""],
-      [463, "إِذَنَة", "ʾiẕana", "izin verenler (kırık çoğul)", "orta", ""],
-      [464, "أُذَن", "ʾuẕan", "izin verenler (kırık çoğul)", "orta", ""],
-      [465, "أُذَناء", "ʾuẕanāʾ", "izin verenler (kırık çoğul)", "orta", ""],
-      [466, "أَذَنَة", "ʾaẕana", "izin verenler (kırık çoğul)", "orta", ""],
-      [467, "أُذَّان", "ʾuẕẕān", "izin verenler (kırık çoğul)", "orta", ""],
+      [455, "آذَان", "ʾāẕān", "izin vermeler", "orta", ""],
+      [456, "آذِنَة", "ʾāẕina", "izin vermeler", "orta", ""],
+      [457, "أَآذِن", "ʾaʾāẕin", "izin vermeler", "orta", ""],
+      [458, "أَآذِين", "ʾaʾāẕīn", "izin vermeler", "orta", ""],
+      [459, "أُذُون", "ʾuẕūn", "izin vermeler", "orta", ""],
+      [460, "أُذُن", "ʾuẕun", "izin vermeler", "orta", ""],
+      [461, "إِذَان", "ʾiẕān", "izin vermeler", "orta", ""],
+      [462, "إِذَن", "ʾiẕan", "izin vermeler", "orta", ""],
+      [463, "إِذَنَة", "ʾiẕana", "izin vermeler", "orta", ""],
+      [464, "أُذَن", "ʾuẕan", "izin vermeler", "orta", ""],
+      [465, "أُذَناء", "ʾuẕanāʾ", "izin vermeler", "orta", ""],
+      [466, "أَذَنَة", "ʾaẕana", "izin vermeler", "orta", ""],
+      [467, "أُذَّان", "ʾuẕẕān", "izin vermeler", "orta", ""],
       [
         468,
         "أَذَان",
         "ʾaẕān",
-        "izin verenler (kırık çoğul)",
+        "izin vermeler",
         "orta",
         "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina, “to listen, to hear, to allow”) (form I"
       ],
-      [
-        469,
-        "أَذَن",
-        "ʾaẕan",
-        "izin verenler (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"
-      ],
-      [470, "مَآذِن", "maʾāẕin", "izin verenler (kırık çoğul)", "orta", ""],
-      [471, "مَآذِين", "maʾāẕīn", "izin verenler (kırık çoğul)", "orta", ""],
-      [472, "أَوَاذِن", "ʾawāẕin", "izin verenler (kırık çoğul)", "orta", ""],
-      [473, "آذُن", "ʾāẕun", "izin verenler (kırık çoğul)", "orta", ""],
-      [474, "أُذَّن", "ʾuẕẕan", "izin verenler (kırık çoğul)", "orta", ""],
-      [475, "أَذَائِن", "ʾaẕāʾin", "izin verenler (kırık çoğul)", "orta", ""],
-      [476, "أُذَيْن", "ʾuẕayn", "izin verenler (kırık çoğul)", "orta", ""]
+      [469, "أَذَن", "ʾaẕan", "izin vermeler", "orta", "Vikisözlük: verbal noun of أَذِنَ (ʔaḏina) (form I)"],
+      [470, "مَآذِن", "maʾāẕin", "izin vermeler", "orta", ""],
+      [471, "مَآذِين", "maʾāẕīn", "izin vermeler", "orta", ""],
+      [472, "أَوَاذِن", "ʾawāẕin", "izin vermeler", "orta", ""],
+      [473, "آذُن", "ʾāẕun", "izin vermeler", "orta", ""],
+      [474, "أُذَّن", "ʾuẕẕan", "izin vermeler", "orta", ""],
+      [475, "أَذَائِن", "ʾaẕāʾin", "izin vermeler", "orta", ""],
+      [476, "أُذَيْن", "ʾuẕayn", "izin vermeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "آذَانَات", "ʾāẕānāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [478, "آذِنَات", "ʾāẕināt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَآذِنَات", "ʾaʾāẕināt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَآذِينَات", "ʾaʾāẕīnāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [481, "أُذُونَات", "ʾuẕūnāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [482, "أُذُنَات", "ʾuẕunāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [483, "إِذَانَات", "ʾiẕānāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [484, "إِذَنَات", "ʾiẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [485, "إِذَنَات", "ʾiẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [486, "أُذَنَات", "ʾuẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [487, "أُذَناآت", "ʾuẕanāʾāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [488, "أَذَنَات", "ʾaẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [489, "أُذَّانَات", "ʾuẕẕānāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [490, "أَذَانَات", "ʾaẕānāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [491, "أَذَنَات", "ʾaẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَآذِنَات", "maʾāẕināt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَآذِينَات", "maʾāẕīnāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [494, "أَوَاذِنَات", "ʾawāẕināt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [495, "آذُنَات", "ʾāẕunāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [496, "أُذَّنَات", "ʾuẕẕanāt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [497, "أَذَائِنَات", "ʾaẕāʾināt", "izin verenler (çoğulun çoğulu)", "orta", ""],
-      [498, "أُذَيْنَات", "ʾuẕaynāt", "izin verenler (çoğulun çoğulu)", "orta", ""]
+      [477, "آذَانَات", "ʾāẕānāt", "izin vermeler topluluğu", "orta", ""],
+      [478, "آذِنَات", "ʾāẕināt", "izin vermeler topluluğu", "orta", ""],
+      [479, "أَآذِنَات", "ʾaʾāẕināt", "izin vermeler topluluğu", "orta", ""],
+      [480, "أَآذِينَات", "ʾaʾāẕīnāt", "izin vermeler topluluğu", "orta", ""],
+      [481, "أُذُونَات", "ʾuẕūnāt", "izin vermeler topluluğu", "orta", ""],
+      [482, "أُذُنَات", "ʾuẕunāt", "izin vermeler topluluğu", "orta", ""],
+      [483, "إِذَانَات", "ʾiẕānāt", "izin vermeler topluluğu", "orta", ""],
+      [484, "إِذَنَات", "ʾiẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [485, "إِذَنَات", "ʾiẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [486, "أُذَنَات", "ʾuẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [487, "أُذَناآت", "ʾuẕanāʾāt", "izin vermeler topluluğu", "orta", ""],
+      [488, "أَذَنَات", "ʾaẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [489, "أُذَّانَات", "ʾuẕẕānāt", "izin vermeler topluluğu", "orta", ""],
+      [490, "أَذَانَات", "ʾaẕānāt", "izin vermeler topluluğu", "orta", ""],
+      [491, "أَذَنَات", "ʾaẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [492, "مَآذِنَات", "maʾāẕināt", "izin vermeler topluluğu", "orta", ""],
+      [493, "مَآذِينَات", "maʾāẕīnāt", "izin vermeler topluluğu", "orta", ""],
+      [494, "أَوَاذِنَات", "ʾawāẕināt", "izin vermeler topluluğu", "orta", ""],
+      [495, "آذُنَات", "ʾāẕunāt", "izin vermeler topluluğu", "orta", ""],
+      [496, "أُذَّنَات", "ʾuẕẕanāt", "izin vermeler topluluğu", "orta", ""],
+      [497, "أَذَائِنَات", "ʾaẕāʾināt", "izin vermeler topluluğu", "orta", ""],
+      [498, "أُذَيْنَات", "ʾuẕaynāt", "izin vermeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

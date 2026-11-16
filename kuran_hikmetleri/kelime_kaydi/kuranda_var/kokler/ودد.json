@@ -9,9 +9,9 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "وَدّ", "wadd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [1, "وِدّ", "widd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [1, "وِدّ", "widd", "sevilen şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [2, "وُدّ", "wudd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [3, "وَدّ", "wadd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [3, "وَدّ", "wadd", "sevme hâli", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [4, "وِدّ", "widd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [5, "وُدّ", "wudd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [6, "وُدُود", "wudūd", "sevme", "orta", ""],
@@ -19,18 +19,32 @@
         7,
         "وِدَاد",
         "widād",
-        "sevme",
+        "sevmeden kaçınma",
         "orta",
         "Vikisözlük: masdar (bâb III): to engage in fellowship with, to try or strive to be friends with"
       ],
-      [8, "وُدَاد", "wudād", "sevme", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
+      [8, "وُدَاد", "wudād", "sevme illeti, sevme sesi", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
       [9, "وَدَاد", "wadād", "sevme", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [10, "وَدَادَة", "wadāda", "sevme", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [11, "وُدُودَة", "wudūda", "sevme", "orta", ""],
-      [12, "وِدَادَة", "widāda", "sevme", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [13, "وَدِيد", "wadīd", "sevme", "orta", "Vikisözlük: one who loves, one who has affection"],
-      [14, "وَدُود", "wadūd", "sevme", "orta", ""],
-      [15, "وَدَّان", "waddān", "sevme", "orta", ""],
+      [10, "وَدَادَة", "wadāda", "sevme vasfı", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
+      [11, "وُدُودَة", "wudūda", "sevme vasfı", "orta", ""],
+      [
+        12,
+        "وِدَادَة",
+        "widāda",
+        "sevme vazifesi, sevme işi",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to love, to like"
+      ],
+      [
+        13,
+        "وَدِيد",
+        "wadīd",
+        "sevme sesi, sevme yürüyüşü",
+        "orta",
+        "Vikisözlük: one who loves, one who has affection"
+      ],
+      [14, "وَدُود", "wadūd", "çok seven", "kuran", "Kur'ân"],
+      [15, "وَدَّان", "waddān", "sevme çalkantısı, coşarak sevme", "orta", ""],
       [16, "وُدَّان", "wuddān", "sevme", "orta", ""],
       [17, "وِدَّان", "widdān", "sevme", "orta", ""],
       [18, "وَدَّى", "waddā", "sevme", "orta", ""],
@@ -39,179 +53,200 @@
       [21, "وَدَّة", "wadda", "sevme", "orta", ""],
       [22, "وِدَّة", "widda", "sevme", "orta", ""],
       [23, "وَدُّودَة", "waddūda", "sevme", "orta", ""],
-      [24, "تُودُود", "tūdūd", "sevme", "orta", ""],
-      [25, "تَوِدَّة", "tawidda", "sevme", "orta", ""],
-      [26, "تَوَدَّة", "tawadda", "sevme", "orta", ""],
-      [27, "مَوُدَّة", "mawudda", "sevme", "orta", ""],
-      [28, "مَوِدَّة", "mawidda", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [24, "تُودُود", "tūdūd", "tekrar tekrar sevme", "orta", ""],
+      [25, "تَوِدَّة", "tawidda", "tekrar tekrar sevme", "orta", ""],
+      [26, "تَوَدَّة", "tawadda", "tekrar tekrar sevme", "orta", ""],
+      [27, "مَوُدَّة", "mawudda", "sevme sebebi", "orta", ""],
+      [28, "مَوِدَّة", "mawidda", "sevme sebebi", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [926, "دَّة", "dda", "sevme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَوْدِيد", "tawdīd", "sevme", "orta", ""],
-      [30, "تَوِدَّة", "tawidda", "sevme", "orta", ""],
-      [31, "وِدِّاد", "widdād", "sevme", "orta", ""]
+      [29, "تَوْدِيد", "tawdīd", "çokça sevme", "orta", ""],
+      [30, "تَوِدَّة", "tawidda", "çokça sevme", "orta", ""],
+      [31, "وِدِّاد", "widdād", "çokça sevme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَوْدِيدَة", "tawdīda", "bir kere sevme", "orta", ""],
-      [33, "وِدِّادَة", "widdāda", "bir kere sevme", "orta", ""]
+      [32, "تَوْدِيدَة", "tawdīda", "bir kere çokça sevme", "orta", ""],
+      [33, "وِدِّادَة", "widdāda", "bir kere çokça sevme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُوَدِّد", "muwaddid", "seven", "orta", ""],
-      [35, "مُوَدِّدَة", "muwaddida", "seven (dişi)", "orta", ""],
-      [36, "مُوَدِّدَان", "muwaddidān", "iki seven", "orta", ""],
-      [37, "مُوَدِّدَتَان", "muwaddidatān", "iki seven (dişi)", "orta", ""],
-      [38, "مُوَدِّدُون", "muwaddidūn", "sevenler", "orta", ""],
-      [39, "مُوَدِّدِين", "muwaddidīn", "sevenler", "orta", ""],
-      [40, "مُوَدِّدَات", "muwaddidāt", "sevenler (dişi)", "orta", ""]
+      [34, "مُوَدِّد", "muwaddid", "çokça seven", "orta", ""],
+      [35, "مُوَدِّدَة", "muwaddida", "çokça seven (müennes)", "orta", ""],
+      [36, "مُوَدِّدَان", "muwaddidān", "çokça seven (iki)", "orta", ""],
+      [37, "مُوَدِّدَتَان", "muwaddidatān", "çokça seven (iki, müennes)", "orta", ""],
+      [38, "مُوَدِّدُون", "muwaddidūn", "çokça sevenler", "orta", ""],
+      [39, "مُوَدِّدِين", "muwaddidīn", "çokça sevenler", "orta", ""],
+      [40, "مُوَدِّدَات", "muwaddidāt", "çokça sevenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُوَدَّد", "muwaddad", "sevilmiş", "orta", ""],
-      [42, "مُوَدَّدَة", "muwaddada", "sevilmiş (dişi)", "orta", ""],
-      [43, "مُوَدَّدَان", "muwaddadān", "iki sevilmiş", "orta", ""],
-      [44, "مُوَدَّدَتَان", "muwaddadatān", "iki sevilmiş (dişi)", "orta", ""],
-      [45, "مُوَدَّدُون", "muwaddadūn", "sevilmişler", "orta", ""],
-      [46, "مُوَدَّدِين", "muwaddadīn", "sevilmişler", "orta", ""],
-      [47, "مُوَدَّدَات", "muwaddadāt", "sevilmişler (dişi)", "orta", ""]
+      [41, "مُوَدَّد", "muwaddad", "çokça sevilen", "orta", ""],
+      [42, "مُوَدَّدَة", "muwaddada", "çokça sevilen (müennes)", "orta", ""],
+      [43, "مُوَدَّدَان", "muwaddadān", "çokça sevilen (iki)", "orta", ""],
+      [44, "مُوَدَّدَتَان", "muwaddadatān", "çokça sevilen (iki, müennes)", "orta", ""],
+      [45, "مُوَدَّدُون", "muwaddadūn", "çokça sevilenler", "orta", ""],
+      [46, "مُوَدَّدِين", "muwaddadīn", "çokça sevilenler", "orta", ""],
+      [47, "مُوَدَّدَات", "muwaddadāt", "çokça sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُوَدَّد", "muwaddad", "sevme (yeri/zamanı)", "orta", ""]
+      [48, "مُوَدَّد", "muwaddad", "çokça sevme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُوَادَّة", "muwādda", "sevişme", "orta", "Vikisözlük: verbal noun of وَادَّ (wādda) (form III)"],
+      [
+        49,
+        "مُوَادَّة",
+        "muwādda",
+        "biriyle karşılıklı sevme",
+        "orta",
+        "Vikisözlük: verbal noun of وَادَّ (wādda) (form III)"
+      ],
       [
         50,
         "وِدَاد",
         "widād",
-        "sevişme",
+        "biriyle karşılıklı sevme",
         "orta",
         "Vikisözlük: masdar (bâb III): to engage in fellowship with, to try or strive to be friends with"
       ]
     ],
     "ism-i merre · bâb III": [
-      [51, "وِدَادَة", "widāda", "bir kere sevişme", "orta", "Vikisözlük: masdar (bâb I): to love, to like"]
+      [
+        51,
+        "وِدَادَة",
+        "widāda",
+        "bir kere biriyle karşılıklı sevme",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to love, to like"
+      ]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُوَادّ", "muwādd", "sevişen", "orta", ""],
-      [53, "مُوَادَّة", "muwādda", "sevişen (dişi)", "orta", "Vikisözlük: verbal noun of وَادَّ (wādda) (form III)"],
-      [54, "مُوَادَّان", "muwāddān", "iki sevişen", "orta", ""],
-      [55, "مُوَادَّتَان", "muwāddatān", "iki sevişen (dişi)", "orta", ""],
-      [56, "مُوَادُّون", "muwāddūn", "sevişenler", "orta", ""],
-      [57, "مُوَادِّين", "muwāddīn", "sevişenler", "orta", ""],
-      [58, "مُوَادَّات", "muwāddāt", "sevişenler (dişi)", "orta", ""]
+      [52, "مُوَادّ", "muwādd", "biriyle karşılıklı seven", "orta", ""],
+      [
+        53,
+        "مُوَادَّة",
+        "muwādda",
+        "biriyle karşılıklı seven (müennes)",
+        "orta",
+        "Vikisözlük: verbal noun of وَادَّ (wādda) (form III)"
+      ],
+      [54, "مُوَادَّان", "muwāddān", "biriyle karşılıklı seven (iki)", "orta", ""],
+      [55, "مُوَادَّتَان", "muwāddatān", "biriyle karşılıklı seven (iki, müennes)", "orta", ""],
+      [56, "مُوَادُّون", "muwāddūn", "biriyle karşılıklı sevenler", "orta", ""],
+      [57, "مُوَادِّين", "muwāddīn", "biriyle karşılıklı sevenler", "orta", ""],
+      [58, "مُوَادَّات", "muwāddāt", "biriyle karşılıklı sevenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُوَادّ", "muwādd", "sevişmiş", "orta", ""],
+      [59, "مُوَادّ", "muwādd", "biriyle karşılıklı sevilen", "orta", ""],
       [
         60,
         "مُوَادَّة",
         "muwādda",
-        "sevişmiş (dişi)",
+        "biriyle karşılıklı sevilen (müennes)",
         "orta",
         "Vikisözlük: verbal noun of وَادَّ (wādda) (form III)"
       ],
-      [61, "مُوَادَّان", "muwāddān", "iki sevişmiş", "orta", ""],
-      [62, "مُوَادَّتَان", "muwāddatān", "iki sevişmiş (dişi)", "orta", ""],
-      [63, "مُوَادُّون", "muwāddūn", "sevişmişler", "orta", ""],
-      [64, "مُوَادِّين", "muwāddīn", "sevişmişler", "orta", ""],
-      [65, "مُوَادَّات", "muwāddāt", "sevişmişler (dişi)", "orta", ""]
+      [61, "مُوَادَّان", "muwāddān", "biriyle karşılıklı sevilen (iki)", "orta", ""],
+      [62, "مُوَادَّتَان", "muwāddatān", "biriyle karşılıklı sevilen (iki, müennes)", "orta", ""],
+      [63, "مُوَادُّون", "muwāddūn", "biriyle karşılıklı sevilenler", "orta", ""],
+      [64, "مُوَادِّين", "muwāddīn", "biriyle karşılıklı sevilenler", "orta", ""],
+      [65, "مُوَادَّات", "muwāddāt", "biriyle karşılıklı sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُوَادّ", "muwādd", "sevişme (yeri/zamanı)", "orta", ""]
+      [66, "مُوَادّ", "muwādd", "biriyle karşılıklı sevme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِيدَاد", "ʾīdād", "sevme", "kural", ""]
+      [67, "إِيدَاد", "ʾīdād", "sevdirme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِيدَادَة", "ʾīdāda", "bir kere sevme", "orta", ""]
+      [68, "إِيدَادَة", "ʾīdāda", "bir kere sevdirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُودّ", "mūdd", "seven", "kural", ""],
-      [70, "مُودَّة", "mūdda", "seven (dişi)", "kural", ""],
-      [71, "مُودَّان", "mūddān", "iki seven", "kural", ""],
-      [72, "مُودَّتَان", "mūddatān", "iki seven (dişi)", "kural", ""],
-      [73, "مُودُّون", "mūddūn", "sevenler", "kural", ""],
-      [74, "مُودِّين", "mūddīn", "sevenler", "kural", ""],
-      [75, "مُودَّات", "mūddāt", "sevenler (dişi)", "kural", ""]
+      [69, "مُودّ", "mūdd", "sevdiren", "orta", ""],
+      [70, "مُودَّة", "mūdda", "sevdiren (müennes)", "orta", ""],
+      [71, "مُودَّان", "mūddān", "sevdiren (iki)", "orta", ""],
+      [72, "مُودَّتَان", "mūddatān", "sevdiren (iki, müennes)", "orta", ""],
+      [73, "مُودُّون", "mūddūn", "sevdirenler", "orta", ""],
+      [74, "مُودِّين", "mūddīn", "sevdirenler", "orta", ""],
+      [75, "مُودَّات", "mūddāt", "sevdirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُودّ", "mūdd", "sevilmiş", "kural", ""],
-      [77, "مُودَّة", "mūdda", "sevilmiş (dişi)", "kural", ""],
-      [78, "مُودَّان", "mūddān", "iki sevilmiş", "kural", ""],
-      [79, "مُودَّتَان", "mūddatān", "iki sevilmiş (dişi)", "kural", ""],
-      [80, "مُودُّون", "mūddūn", "sevilmişler", "kural", ""],
-      [81, "مُودِّين", "mūddīn", "sevilmişler", "kural", ""],
-      [82, "مُودَّات", "mūddāt", "sevilmişler (dişi)", "kural", ""]
+      [76, "مُودّ", "mūdd", "sevdirilen", "orta", ""],
+      [77, "مُودَّة", "mūdda", "sevdirilen (müennes)", "orta", ""],
+      [78, "مُودَّان", "mūddān", "sevdirilen (iki)", "orta", ""],
+      [79, "مُودَّتَان", "mūddatān", "sevdirilen (iki, müennes)", "orta", ""],
+      [80, "مُودُّون", "mūddūn", "sevdirilenler", "orta", ""],
+      [81, "مُودِّين", "mūddīn", "sevdirilenler", "orta", ""],
+      [82, "مُودَّات", "mūddāt", "sevdirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُودّ", "mūdd", "sevme (yeri/zamanı)", "orta", ""]
+      [83, "مُودّ", "mūdd", "sevdirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
       [
         84,
         "تَوَدُّد",
         "tawaddud",
-        "sevinme",
+        "kendini zorlayarak sevme",
         "orta",
         "Vikisözlük: masdar (bâb V): to seek someone's attention, respect, to court, flirt"
       ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَوَدُّدَة", "tawadduda", "bir kere sevinme", "orta", ""]
+      [85, "تَوَدُّدَة", "tawadduda", "bir kere kendini zorlayarak sevme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَوَدِّد", "mutawaddid", "sevinen", "orta", ""],
-      [87, "مُتَوَدِّدَة", "mutawaddida", "sevinen (dişi)", "orta", ""],
-      [88, "مُتَوَدِّدَان", "mutawaddidān", "iki sevinen", "orta", ""],
-      [89, "مُتَوَدِّدَتَان", "mutawaddidatān", "iki sevinen (dişi)", "orta", ""],
-      [90, "مُتَوَدِّدُون", "mutawaddidūn", "sevinenler", "orta", ""],
-      [91, "مُتَوَدِّدِين", "mutawaddidīn", "sevinenler", "orta", ""],
-      [92, "مُتَوَدِّدَات", "mutawaddidāt", "sevinenler (dişi)", "orta", ""]
+      [86, "مُتَوَدِّد", "mutawaddid", "kendini zorlayarak seven", "orta", ""],
+      [87, "مُتَوَدِّدَة", "mutawaddida", "kendini zorlayarak seven (müennes)", "orta", ""],
+      [88, "مُتَوَدِّدَان", "mutawaddidān", "kendini zorlayarak seven (iki)", "orta", ""],
+      [89, "مُتَوَدِّدَتَان", "mutawaddidatān", "kendini zorlayarak seven (iki, müennes)", "orta", ""],
+      [90, "مُتَوَدِّدُون", "mutawaddidūn", "kendini zorlayarak sevenler", "orta", ""],
+      [91, "مُتَوَدِّدِين", "mutawaddidīn", "kendini zorlayarak sevenler", "orta", ""],
+      [92, "مُتَوَدِّدَات", "mutawaddidāt", "kendini zorlayarak sevenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَوَدَّد", "mutawaddad", "sevinmiş", "orta", ""],
-      [94, "مُتَوَدَّدَة", "mutawaddada", "sevinmiş (dişi)", "orta", ""],
-      [95, "مُتَوَدَّدَان", "mutawaddadān", "iki sevinmiş", "orta", ""],
-      [96, "مُتَوَدَّدَتَان", "mutawaddadatān", "iki sevinmiş (dişi)", "orta", ""],
-      [97, "مُتَوَدَّدُون", "mutawaddadūn", "sevinmişler", "orta", ""],
-      [98, "مُتَوَدَّدِين", "mutawaddadīn", "sevinmişler", "orta", ""],
-      [99, "مُتَوَدَّدَات", "mutawaddadāt", "sevinmişler (dişi)", "orta", ""]
+      [93, "مُتَوَدَّد", "mutawaddad", "kendini zorlayarak sevilen", "orta", ""],
+      [94, "مُتَوَدَّدَة", "mutawaddada", "kendini zorlayarak sevilen (müennes)", "orta", ""],
+      [95, "مُتَوَدَّدَان", "mutawaddadān", "kendini zorlayarak sevilen (iki)", "orta", ""],
+      [96, "مُتَوَدَّدَتَان", "mutawaddadatān", "kendini zorlayarak sevilen (iki, müennes)", "orta", ""],
+      [97, "مُتَوَدَّدُون", "mutawaddadūn", "kendini zorlayarak sevilenler", "orta", ""],
+      [98, "مُتَوَدَّدِين", "mutawaddadīn", "kendini zorlayarak sevilenler", "orta", ""],
+      [99, "مُتَوَدَّدَات", "mutawaddadāt", "kendini zorlayarak sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَوَدَّد", "mutawaddad", "sevinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَوَدَّد", "mutawaddad", "kendini zorlayarak sevme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
       [
         101,
         "تَوَادّ",
         "tawādd",
-        "sevişme",
+        "birbirine sevme",
         "orta",
         "Vikisözlük: masdar (bâb VI): to be or become friends, live in harmony, have amicable relations, be "
       ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَوَادَّة", "tawādda", "bir kere sevişme", "orta", ""]
+      [102, "تَوَادَّة", "tawādda", "bir kere birbirine sevme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَوَادّ", "mutawādd", "sevişen", "orta", ""],
-      [104, "مُتَوَادَّة", "mutawādda", "sevişen (dişi)", "orta", ""],
-      [105, "مُتَوَادَّان", "mutawāddān", "iki sevişen", "orta", ""],
-      [106, "مُتَوَادَّتَان", "mutawāddatān", "iki sevişen (dişi)", "orta", ""],
-      [107, "مُتَوَادُّون", "mutawāddūn", "sevişenler", "orta", ""],
-      [108, "مُتَوَادِّين", "mutawāddīn", "sevişenler", "orta", ""],
-      [109, "مُتَوَادَّات", "mutawāddāt", "sevişenler (dişi)", "orta", ""]
+      [103, "مُتَوَادّ", "mutawādd", "birbirine seven", "orta", ""],
+      [104, "مُتَوَادَّة", "mutawādda", "birbirine seven (müennes)", "orta", ""],
+      [105, "مُتَوَادَّان", "mutawāddān", "birbirine seven (iki)", "orta", ""],
+      [106, "مُتَوَادَّتَان", "mutawāddatān", "birbirine seven (iki, müennes)", "orta", ""],
+      [107, "مُتَوَادُّون", "mutawāddūn", "birbirine sevenler", "orta", ""],
+      [108, "مُتَوَادِّين", "mutawāddīn", "birbirine sevenler", "orta", ""],
+      [109, "مُتَوَادَّات", "mutawāddāt", "birbirine sevenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَوَادّ", "mutawādd", "sevişmiş", "orta", ""],
-      [111, "مُتَوَادَّة", "mutawādda", "sevişmiş (dişi)", "orta", ""],
-      [112, "مُتَوَادَّان", "mutawāddān", "iki sevişmiş", "orta", ""],
-      [113, "مُتَوَادَّتَان", "mutawāddatān", "iki sevişmiş (dişi)", "orta", ""],
-      [114, "مُتَوَادُّون", "mutawāddūn", "sevişmişler", "orta", ""],
-      [115, "مُتَوَادِّين", "mutawāddīn", "sevişmişler", "orta", ""],
-      [116, "مُتَوَادَّات", "mutawāddāt", "sevişmişler (dişi)", "orta", ""]
+      [110, "مُتَوَادّ", "mutawādd", "birbirine sevilen", "orta", ""],
+      [111, "مُتَوَادَّة", "mutawādda", "birbirine sevilen (müennes)", "orta", ""],
+      [112, "مُتَوَادَّان", "mutawāddān", "birbirine sevilen (iki)", "orta", ""],
+      [113, "مُتَوَادَّتَان", "mutawāddatān", "birbirine sevilen (iki, müennes)", "orta", ""],
+      [114, "مُتَوَادُّون", "mutawāddūn", "birbirine sevilenler", "orta", ""],
+      [115, "مُتَوَادِّين", "mutawāddīn", "birbirine sevilenler", "orta", ""],
+      [116, "مُتَوَادَّات", "mutawāddāt", "birbirine sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَوَادّ", "mutawādd", "sevişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَوَادّ", "mutawādd", "birbirine sevme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْوِدَاد", "inwidād", "sevilme", "orta", ""]
@@ -221,102 +256,102 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْوَدّ", "munwadd", "sevilen", "orta", ""],
-      [121, "مُنْوَدَّة", "munwadda", "sevilen (dişi)", "orta", ""],
-      [122, "مُنْوَدَّان", "munwaddān", "iki sevilen", "orta", ""],
-      [123, "مُنْوَدَّتَان", "munwaddatān", "iki sevilen (dişi)", "orta", ""],
+      [121, "مُنْوَدَّة", "munwadda", "sevilen (müennes)", "orta", ""],
+      [122, "مُنْوَدَّان", "munwaddān", "sevilen (iki)", "orta", ""],
+      [123, "مُنْوَدَّتَان", "munwaddatān", "sevilen (iki, müennes)", "orta", ""],
       [124, "مُنْوَدُّون", "munwaddūn", "sevilenler", "orta", ""],
       [125, "مُنْوَدِّين", "munwaddīn", "sevilenler", "orta", ""],
-      [126, "مُنْوَدَّات", "munwaddāt", "sevilenler (dişi)", "orta", ""]
+      [126, "مُنْوَدَّات", "munwaddāt", "sevilenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْوَدّ", "munwadd", "sevilmiş", "orta", ""],
-      [128, "مُنْوَدَّة", "munwadda", "sevilmiş (dişi)", "orta", ""],
-      [129, "مُنْوَدَّان", "munwaddān", "iki sevilmiş", "orta", ""],
-      [130, "مُنْوَدَّتَان", "munwaddatān", "iki sevilmiş (dişi)", "orta", ""],
-      [131, "مُنْوَدُّون", "munwaddūn", "sevilmişler", "orta", ""],
-      [132, "مُنْوَدِّين", "munwaddīn", "sevilmişler", "orta", ""],
-      [133, "مُنْوَدَّات", "munwaddāt", "sevilmişler (dişi)", "orta", ""]
+      [127, "مُنْوَدّ", "munwadd", "sevilen", "orta", ""],
+      [128, "مُنْوَدَّة", "munwadda", "sevilen (müennes)", "orta", ""],
+      [129, "مُنْوَدَّان", "munwaddān", "sevilen (iki)", "orta", ""],
+      [130, "مُنْوَدَّتَان", "munwaddatān", "sevilen (iki, müennes)", "orta", ""],
+      [131, "مُنْوَدُّون", "munwaddūn", "sevilenler", "orta", ""],
+      [132, "مُنْوَدِّين", "munwaddīn", "sevilenler", "orta", ""],
+      [133, "مُنْوَدَّات", "munwaddāt", "sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْوَدّ", "munwadd", "sevilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْوَدّ", "munwadd", "sevilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِتِّدَاد", "ittidād", "sevinme", "orta", ""]
+      [135, "اِتِّدَاد", "ittidād", "kendisi için sevme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِتِّدَادَة", "ittidāda", "bir kere sevinme", "orta", ""]
+      [137, "اِتِّدَادَة", "ittidāda", "bir kere kendisi için sevme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُتَّدّ", "muttadd", "sevinen", "orta", ""],
-      [139, "مُتَّدَّة", "muttadda", "sevinen (dişi)", "orta", ""],
-      [140, "مُتَّدَّان", "muttaddān", "iki sevinen", "orta", ""],
-      [141, "مُتَّدَّتَان", "muttaddatān", "iki sevinen (dişi)", "orta", ""],
-      [142, "مُتَّدُّون", "muttaddūn", "sevinenler", "orta", ""],
-      [143, "مُتَّدِّين", "muttaddīn", "sevinenler", "orta", ""],
-      [144, "مُتَّدَّات", "muttaddāt", "sevinenler (dişi)", "orta", ""]
+      [138, "مُتَّدّ", "muttadd", "kendisi için seven", "orta", ""],
+      [139, "مُتَّدَّة", "muttadda", "kendisi için seven (müennes)", "orta", ""],
+      [140, "مُتَّدَّان", "muttaddān", "kendisi için seven (iki)", "orta", ""],
+      [141, "مُتَّدَّتَان", "muttaddatān", "kendisi için seven (iki, müennes)", "orta", ""],
+      [142, "مُتَّدُّون", "muttaddūn", "kendisi için sevenler", "orta", ""],
+      [143, "مُتَّدِّين", "muttaddīn", "kendisi için sevenler", "orta", ""],
+      [144, "مُتَّدَّات", "muttaddāt", "kendisi için sevenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُتَّدّ", "muttadd", "sevinmiş", "orta", ""],
-      [146, "مُتَّدَّة", "muttadda", "sevinmiş (dişi)", "orta", ""],
-      [147, "مُتَّدَّان", "muttaddān", "iki sevinmiş", "orta", ""],
-      [148, "مُتَّدَّتَان", "muttaddatān", "iki sevinmiş (dişi)", "orta", ""],
-      [149, "مُتَّدُّون", "muttaddūn", "sevinmişler", "orta", ""],
-      [150, "مُتَّدِّين", "muttaddīn", "sevinmişler", "orta", ""],
-      [151, "مُتَّدَّات", "muttaddāt", "sevinmişler (dişi)", "orta", ""]
+      [145, "مُتَّدّ", "muttadd", "kendisi için sevilen", "orta", ""],
+      [146, "مُتَّدَّة", "muttadda", "kendisi için sevilen (müennes)", "orta", ""],
+      [147, "مُتَّدَّان", "muttaddān", "kendisi için sevilen (iki)", "orta", ""],
+      [148, "مُتَّدَّتَان", "muttaddatān", "kendisi için sevilen (iki, müennes)", "orta", ""],
+      [149, "مُتَّدُّون", "muttaddūn", "kendisi için sevilenler", "orta", ""],
+      [150, "مُتَّدِّين", "muttaddīn", "kendisi için sevilenler", "orta", ""],
+      [151, "مُتَّدَّات", "muttaddāt", "kendisi için sevilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُتَّدّ", "muttadd", "sevinme (yeri/zamanı)", "orta", ""]
+      [152, "مُتَّدّ", "muttadd", "kendisi için sevme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِيدِدَاد", "īdidād", "sevleşme", "kontrol", ""]
+      [168, "اِيدِدَاد", "īdidād", "iyiden iyiye sevme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُودَدّ", "mūdadd", "sevleşen", "kontrol", ""],
-      [170, "مُودَدَّة", "mūdadda", "sevleşen (dişi)", "kontrol", ""],
-      [171, "مُودَدَّان", "mūdaddān", "iki sevleşen", "kontrol", ""],
-      [172, "مُودَدَّتَان", "mūdaddatān", "iki sevleşen (dişi)", "kontrol", ""],
-      [173, "مُودَدُّون", "mūdaddūn", "sevleşenler", "kontrol", ""],
-      [174, "مُودَدِّين", "mūdaddīn", "sevleşenler", "kontrol", ""],
-      [175, "مُودَدَّات", "mūdaddāt", "sevleşenler (dişi)", "kontrol", ""]
+      [169, "مُودَدّ", "mūdadd", "iyiden iyiye seven", "kontrol", ""],
+      [170, "مُودَدَّة", "mūdadda", "iyiden iyiye seven (müennes)", "kontrol", ""],
+      [171, "مُودَدَّان", "mūdaddān", "iyiden iyiye seven (iki)", "kontrol", ""],
+      [172, "مُودَدَّتَان", "mūdaddatān", "iyiden iyiye seven (iki, müennes)", "kontrol", ""],
+      [173, "مُودَدُّون", "mūdaddūn", "iyiden iyiye sevenler", "kontrol", ""],
+      [174, "مُودَدِّين", "mūdaddīn", "iyiden iyiye sevenler", "kontrol", ""],
+      [175, "مُودَدَّات", "mūdaddāt", "iyiden iyiye sevenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِيدَاد", "istīdād", "sevmeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِيدَادَة", "istīdāda", "bir kere sevme", "orta", ""]
+      [177, "اِسْتِيدَادَة", "istīdāda", "bir kere sevmeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَوِدّ", "mustawidd", "sevmeyi isteyen", "orta", ""],
-      [179, "مُسْتَوِدَّة", "mustawidda", "sevmeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَوِدَّان", "mustawiddān", "iki sevmeyi isteyen", "orta", ""],
-      [181, "مُسْتَوِدَّتَان", "mustawiddatān", "iki sevmeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَوِدَّة", "mustawidda", "sevmeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَوِدَّان", "mustawiddān", "sevmeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَوِدَّتَان", "mustawiddatān", "sevmeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَوِدُّون", "mustawiddūn", "sevmeyi isteyenler", "orta", ""],
       [183, "مُسْتَوِدِّين", "mustawiddīn", "sevmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَوِدَّات", "mustawiddāt", "sevmeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَوِدَّات", "mustawiddāt", "sevmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَوَدّ", "mustawadd", "sevmeyi istenen", "orta", ""],
-      [186, "مُسْتَوَدَّة", "mustawadda", "sevmeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَوَدَّان", "mustawaddān", "iki sevmeyi istenen", "orta", ""],
-      [188, "مُسْتَوَدَّتَان", "mustawaddatān", "iki sevmeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَوَدُّون", "mustawaddūn", "sevmeyi istenenler", "orta", ""],
-      [190, "مُسْتَوَدِّين", "mustawaddīn", "sevmeyi istenenler", "orta", ""],
-      [191, "مُسْتَوَدَّات", "mustawaddāt", "sevmeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَوَدّ", "mustawadd", "sevmesi istenen", "orta", ""],
+      [186, "مُسْتَوَدَّة", "mustawadda", "sevmesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَوَدَّان", "mustawaddān", "sevmesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَوَدَّتَان", "mustawaddatān", "sevmesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَوَدُّون", "mustawaddūn", "sevmesi istenenler", "orta", ""],
+      [190, "مُسْتَوَدِّين", "mustawaddīn", "sevmesi istenenler", "orta", ""],
+      [191, "مُسْتَوَدَّات", "mustawaddāt", "sevmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَوَدّ", "mustawadd", "sevme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَوَدّ", "mustawadd", "sevmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِيدِيدَاد", "īdīdād", "iyice sevleşme", "kontrol", ""]
+      [193, "اِيدِيدَاد", "īdīdād", "büsbütün sevme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُودَادّ", "mūdādd", "iyice sevleşen", "kontrol", ""],
-      [195, "مُودَادَّة", "mūdādda", "iyice sevleşen (dişi)", "kontrol", ""],
-      [196, "مُودَادَّان", "mūdāddān", "iki iyice sevleşen", "kontrol", ""],
-      [197, "مُودَادَّتَان", "mūdāddatān", "iki iyice sevleşen (dişi)", "kontrol", ""],
-      [198, "مُودَادُّون", "mūdāddūn", "iyice sevleşenler", "kontrol", ""],
-      [199, "مُودَادِّين", "mūdāddīn", "iyice sevleşenler", "kontrol", ""],
-      [200, "مُودَادَّات", "mūdāddāt", "iyice sevleşenler (dişi)", "kontrol", ""]
+      [194, "مُودَادّ", "mūdādd", "büsbütün seven", "kontrol", ""],
+      [195, "مُودَادَّة", "mūdādda", "büsbütün seven (müennes)", "kontrol", ""],
+      [196, "مُودَادَّان", "mūdāddān", "büsbütün seven (iki)", "kontrol", ""],
+      [197, "مُودَادَّتَان", "mūdāddatān", "büsbütün seven (iki, müennes)", "kontrol", ""],
+      [198, "مُودَادُّون", "mūdāddūn", "büsbütün sevenler", "kontrol", ""],
+      [199, "مُودَادِّين", "mūdāddīn", "büsbütün sevenler", "kontrol", ""],
+      [200, "مُودَادَّات", "mūdāddāt", "büsbütün sevenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
       [201, "اِيدِوْدَاد", "īdiwdād", "aşırı sevme", "orta", ""]
@@ -326,238 +361,245 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "وَادّ", "wādd", "seven", "kural", "Vikisözlük: active participle of وَدَّ (wadda)"],
-      [214, "وَادَّة", "wādda", "seven (dişi)", "kural", ""],
-      [215, "وَادَّان", "wāddān", "iki seven", "kural", ""],
-      [216, "وَادَّتَان", "wāddatān", "iki seven (dişi)", "kural", ""],
+      [214, "وَادَّة", "wādda", "seven (müennes)", "kural", ""],
+      [215, "وَادَّان", "wāddān", "seven (iki)", "kural", ""],
+      [216, "وَادَّتَان", "wāddatān", "seven (iki, müennes)", "kural", ""],
       [217, "وَادُّون", "wāddūn", "sevenler", "kural", ""],
       [218, "وَادِّين", "wāddīn", "sevenler", "kural", ""],
-      [219, "وَادَّات", "wāddāt", "sevenler (dişi)", "kural", ""]
+      [219, "وَادَّات", "wāddāt", "sevenler (müennes)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَوْدُود", "mawdūd", "sevilmiş", "kural", ""],
-      [221, "مَوْدُودَة", "mawdūda", "sevilmiş (dişi)", "kural", ""],
-      [222, "مَوْدُودَان", "mawdūdān", "iki sevilmiş", "kural", ""],
-      [223, "مَوْدُودَتَان", "mawdūdatān", "iki sevilmiş (dişi)", "kural", ""],
-      [224, "مَوْدُودُون", "mawdūdūn", "sevilmişler", "kural", ""],
-      [225, "مَوْدُودِين", "mawdūdīn", "sevilmişler", "kural", ""],
-      [226, "مَوْدُودَات", "mawdūdāt", "sevilmişler (dişi)", "kural", ""]
+      [220, "مَوْدُود", "mawdūd", "sevilen", "kural", ""],
+      [221, "مَوْدُودَة", "mawdūda", "sevilen (müennes)", "kural", ""],
+      [222, "مَوْدُودَان", "mawdūdān", "sevilen (iki)", "kural", ""],
+      [223, "مَوْدُودَتَان", "mawdūdatān", "sevilen (iki, müennes)", "kural", ""],
+      [224, "مَوْدُودُون", "mawdūdūn", "sevilenler", "kural", ""],
+      [225, "مَوْدُودِين", "mawdūdīn", "sevilenler", "kural", ""],
+      [226, "مَوْدُودَات", "mawdūdāt", "sevilenler (müennes)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَوَدّ", "mawadd", "sevme (yeri/zamanı)", "orta", ""],
-      [228, "مَوَدَّان", "mawaddān", "iki sevme (yeri/zamanı)", "orta", ""],
-      [229, "مَوِدّ", "mawidd", "sevme (yeri/zamanı)", "orta", ""],
-      [230, "مَوِدَّان", "mawiddān", "iki sevme (yeri/zamanı)", "orta", ""],
-      [
-        231,
-        "مَوَدَّة",
-        "mawadda",
-        "sevme (yeri/zamanı)",
-        "orta",
-        "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"
-      ],
-      [232, "مَوَدَّتَان", "mawaddatān", "iki sevme (yeri/zamanı)", "orta", ""],
+      [227, "مَوَدّ", "mawadd", "sevme yeri, vakti", "orta", ""],
+      [228, "مَوَدَّان", "mawaddān", "sevme yeri, vakti (iki)", "orta", ""],
+      [229, "مَوِدّ", "mawidd", "sevme yeri, vakti", "orta", ""],
+      [230, "مَوِدَّان", "mawiddān", "sevme yeri, vakti (iki)", "orta", ""],
+      [231, "مَوَدَّة", "mawadda", "sevgi", "kuran", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [232, "مَوَدَّتَان", "mawaddatān", "sevmenin bol olduğu yer (iki)", "orta", ""],
       [
         233,
         "مَوِدَّة",
         "mawidda",
-        "sevme (yeri/zamanı)",
+        "sevmenin bol olduğu yer",
         "orta",
         "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"
       ],
-      [234, "مَوِدَّتَان", "mawiddatān", "iki sevme (yeri/zamanı)", "orta", ""],
-      [247, "مَوُدَّة", "mawudda", "sevme (yeri/zamanı)", "orta", ""],
-      [248, "مَوُدَّتَان", "mawuddatān", "iki sevme (yeri/zamanı)", "orta", ""]
+      [234, "مَوِدَّتَان", "mawiddatān", "sevmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَوُدَّة", "mawudda", "sevme yeri, vakti", "orta", ""],
+      [248, "مَوُدَّتَان", "mawuddatān", "sevme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِيدّ", "mīdd", "sevmeye yarayan araç", "orta", ""],
-      [236, "مِيدَّان", "mīddān", "iki sevmeye yarayan araç", "orta", ""],
-      [237, "مِيدَاد", "mīdād", "sevmeye yarayan araç", "orta", ""],
-      [238, "مِيدَادَان", "mīdādān", "iki sevmeye yarayan araç", "orta", ""],
-      [239, "مِيدَّة", "mīdda", "sevmeye yarayan araç", "orta", ""],
-      [240, "مِيدَّتَان", "mīddatān", "iki sevmeye yarayan araç", "orta", ""]
+      [235, "مِيدّ", "mīdd", "sevme âleti", "orta", ""],
+      [236, "مِيدَّان", "mīddān", "sevme âleti (iki)", "orta", ""],
+      [237, "مِيدَاد", "mīdād", "sevme âleti", "orta", ""],
+      [238, "مِيدَادَان", "mīdādān", "sevme âleti (iki)", "orta", ""],
+      [239, "مِيدَّة", "mīdda", "sevme âleti", "orta", ""],
+      [240, "مِيدَّتَان", "mīddatān", "sevme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَوَدّ", "ʾawadd", "daha çok seven", "orta", ""],
-      [242, "أَوَدَّان", "ʾawaddān", "iki daha çok seven", "orta", ""]
+      [242, "أَوَدَّان", "ʾawaddān", "daha çok seven (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "وُدَّى", "wuddā", "daha çok seven", "orta", ""],
-      [244, "وُدَّيَان", "wuddayān", "iki daha çok seven", "orta", ""],
+      [244, "وُدَّيَان", "wuddayān", "daha çok seven (iki)", "orta", ""],
       [245, "وَدَّاء", "waddāʾ", "daha çok seven", "orta", ""],
-      [246, "وَدَّاآن", "waddāʾān", "iki daha çok seven", "orta", ""]
+      [246, "وَدَّاآن", "waddāʾān", "daha çok seven (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "وُدَيْد", "wudayd", "küçük sevme", "orta", ""],
-      [250, "وُدَيْدَان", "wudaydān", "iki küçük sevme", "orta", ""],
-      [251, "وُدَيْدَة", "wudayda", "küçük sevme", "orta", ""],
-      [252, "وُدَيْدَتَان", "wudaydatān", "iki küçük sevme", "orta", ""]
+      [249, "وُدَيْد", "wudayd", "azıcık sevme", "orta", ""],
+      [250, "وُدَيْدَان", "wudaydān", "azıcık sevme (iki)", "orta", ""],
+      [251, "وُدَيْدَة", "wudayda", "azıcık sevme", "orta", ""],
+      [252, "وُدَيْدَتَان", "wudaydatān", "azıcık sevme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَوَدّ", "mawadd", "sevme", "kural", ""],
-      [254, "مَوَدَّان", "mawaddān", "iki sevme", "kural", ""]
+      [254, "مَوَدَّان", "mawaddān", "sevme (iki)", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "وَدَّة", "wadda", "bir kere sevme", "orta", ""],
-      [256, "وَدَّتَان", "waddatān", "iki bir kere sevme", "orta", ""]
+      [256, "وَدَّتَان", "waddatān", "bir kere sevme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "وِدَّة", "widda", "sevme tarzı", "orta", ""],
-      [258, "وِدَّتَان", "widdatān", "iki sevme tarzı", "orta", ""]
+      [258, "وِدَّتَان", "widdatān", "sevme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "وَدِيد", "wadīd", "sürekli seven", "orta", "Vikisözlük: one who loves, one who has affection"],
-      [260, "وَدِيدَة", "wadīda", "sürekli seven (dişi)", "orta", ""],
-      [261, "وَدِيدَان", "wadīdān", "iki sürekli seven", "orta", ""],
-      [262, "وَدِيدَتَان", "wadīdatān", "iki sürekli seven (dişi)", "orta", ""],
-      [263, "وَدِيدُون", "wadīdūn", "sürekli sevenler", "orta", ""],
-      [264, "وَدِيدِين", "wadīdīn", "sürekli sevenler", "orta", ""],
-      [265, "وَدِيدَات", "wadīdāt", "sürekli sevenler (dişi)", "orta", ""],
-      [266, "وَدُود", "wadūd", "sürekli seven", "orta", ""],
-      [267, "وَدُودَة", "wadūda", "sürekli seven (dişi)", "orta", ""],
-      [268, "وَدُودَان", "wadūdān", "iki sürekli seven", "orta", ""],
-      [269, "وَدُودَتَان", "wadūdatān", "iki sürekli seven (dişi)", "orta", ""],
-      [270, "وَدُودُون", "wadūdūn", "sürekli sevenler", "orta", ""],
-      [271, "وَدُودِين", "wadūdīn", "sürekli sevenler", "orta", ""],
-      [272, "وَدُودَات", "wadūdāt", "sürekli sevenler (dişi)", "orta", ""],
-      [273, "وَدّ", "wadd", "sürekli seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [274, "وَدَّة", "wadda", "sürekli seven (dişi)", "orta", ""],
-      [275, "وَدَّان", "waddān", "iki sürekli seven", "orta", ""],
-      [276, "وَدَّتَان", "waddatān", "iki sürekli seven (dişi)", "orta", ""],
-      [277, "وَدُّون", "waddūn", "sürekli sevenler", "orta", ""],
-      [278, "وَدِّين", "waddīn", "sürekli sevenler", "orta", ""],
-      [279, "وَدَّات", "waddāt", "sürekli sevenler (dişi)", "orta", ""],
-      [280, "وَدّ", "wadd", "sürekli seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [281, "وَدَّة", "wadda", "sürekli seven (dişi)", "orta", ""],
-      [282, "وَدَّان", "waddān", "iki sürekli seven", "orta", ""],
-      [283, "وَدَّتَان", "waddatān", "iki sürekli seven (dişi)", "orta", ""],
-      [284, "وَدُّون", "waddūn", "sürekli sevenler", "orta", ""],
-      [285, "وَدِّين", "waddīn", "sürekli sevenler", "orta", ""],
-      [286, "وَدَّات", "waddāt", "sürekli sevenler (dişi)", "orta", ""],
-      [287, "وَدّ", "wadd", "sürekli seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [288, "وَدَّة", "wadda", "sürekli seven (dişi)", "orta", ""],
-      [289, "وَدَّان", "waddān", "iki sürekli seven", "orta", ""],
-      [290, "وَدَّتَان", "waddatān", "iki sürekli seven (dişi)", "orta", ""],
-      [291, "وَدُّون", "waddūn", "sürekli sevenler", "orta", ""],
-      [292, "وَدِّين", "waddīn", "sürekli sevenler", "orta", ""],
-      [293, "وَدَّات", "waddāt", "sürekli sevenler (dişi)", "orta", ""],
-      [294, "وَدّ", "wadd", "sürekli seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [295, "وَدَّة", "wadda", "sürekli seven (dişi)", "orta", ""],
-      [296, "وَدَّان", "waddān", "iki sürekli seven", "orta", ""],
-      [297, "وَدَّتَان", "waddatān", "iki sürekli seven (dişi)", "orta", ""],
-      [298, "وَدُّون", "waddūn", "sürekli sevenler", "orta", ""],
-      [299, "وَدِّين", "waddīn", "sürekli sevenler", "orta", ""],
-      [300, "وَدَّات", "waddāt", "sürekli sevenler (dişi)", "orta", ""],
-      [301, "وُدّ", "wudd", "sürekli seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [302, "وُدَّة", "wudda", "sürekli seven (dişi)", "orta", ""],
-      [303, "وُدَّان", "wuddān", "iki sürekli seven", "orta", ""],
-      [304, "وُدَّتَان", "wuddatān", "iki sürekli seven (dişi)", "orta", ""],
-      [305, "وُدُّون", "wuddūn", "sürekli sevenler", "orta", ""],
-      [306, "وُدِّين", "wuddīn", "sürekli sevenler", "orta", ""],
-      [307, "وُدَّات", "wuddāt", "sürekli sevenler (dişi)", "orta", ""],
-      [308, "وَدَّان", "waddān", "sürekli seven", "orta", ""],
-      [309, "وَدَّانَة", "waddāna", "sürekli seven (dişi)", "orta", ""],
-      [310, "وَدَّانَان", "waddānān", "iki sürekli seven", "orta", ""],
-      [311, "وَدَّانَتَان", "waddānatān", "iki sürekli seven (dişi)", "orta", ""],
-      [312, "وَدَّانُون", "waddānūn", "sürekli sevenler", "orta", ""],
-      [313, "وَدَّانِين", "waddānīn", "sürekli sevenler", "orta", ""],
-      [314, "وَدَّانَات", "waddānāt", "sürekli sevenler (dişi)", "orta", ""],
-      [315, "وُدَاد", "wudād", "sürekli seven", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [316, "وُدَادَة", "wudāda", "sürekli seven (dişi)", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [317, "وُدَادَان", "wudādān", "iki sürekli seven", "orta", ""],
-      [318, "وُدَادَتَان", "wudādatān", "iki sürekli seven (dişi)", "orta", ""],
-      [319, "وُدَادُون", "wudādūn", "sürekli sevenler", "orta", ""],
-      [320, "وُدَادِين", "wudādīn", "sürekli sevenler", "orta", ""],
-      [321, "وُدَادَات", "wudādāt", "sürekli sevenler (dişi)", "orta", ""],
-      [322, "وَدَاد", "wadād", "sürekli seven", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [323, "وَدَادَة", "wadāda", "sürekli seven (dişi)", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [324, "وَدَادَان", "wadādān", "iki sürekli seven", "orta", ""],
-      [325, "وَدَادَتَان", "wadādatān", "iki sürekli seven (dişi)", "orta", ""],
-      [326, "وَدَادُون", "wadādūn", "sürekli sevenler", "orta", ""],
-      [327, "وَدَادِين", "wadādīn", "sürekli sevenler", "orta", ""],
-      [328, "وَدَادَات", "wadādāt", "sürekli sevenler (dişi)", "orta", ""]
+      [259, "وَدِيد", "wadīd", "her daim seven", "orta", "Vikisözlük: one who loves, one who has affection"],
+      [260, "وَدِيدَة", "wadīda", "her daim seven (müennes)", "orta", ""],
+      [261, "وَدِيدَان", "wadīdān", "her daim seven (iki)", "orta", ""],
+      [262, "وَدِيدَتَان", "wadīdatān", "her daim seven (iki, müennes)", "orta", ""],
+      [263, "وَدِيدُون", "wadīdūn", "her daim sevenler", "orta", ""],
+      [264, "وَدِيدِين", "wadīdīn", "her daim sevenler", "orta", ""],
+      [265, "وَدِيدَات", "wadīdāt", "her daim sevenler (müennes)", "orta", ""],
+      [266, "وَدُود", "wadūd", "çok seven", "kuran", "Kur'ân"],
+      [267, "وَدُودَة", "wadūda", "her daim seven (müennes)", "orta", ""],
+      [268, "وَدُودَان", "wadūdān", "her daim seven (iki)", "orta", ""],
+      [269, "وَدُودَتَان", "wadūdatān", "her daim seven (iki, müennes)", "orta", ""],
+      [270, "وَدُودُون", "wadūdūn", "her daim sevenler", "orta", ""],
+      [271, "وَدُودِين", "wadūdīn", "her daim sevenler", "orta", ""],
+      [272, "وَدُودَات", "wadūdāt", "her daim sevenler (müennes)", "orta", ""],
+      [273, "وَدّ", "wadd", "her daim seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [274, "وَدَّة", "wadda", "her daim seven (müennes)", "orta", ""],
+      [275, "وَدَّان", "waddān", "her daim seven (iki)", "orta", ""],
+      [276, "وَدَّتَان", "waddatān", "her daim seven (iki, müennes)", "orta", ""],
+      [277, "وَدُّون", "waddūn", "her daim sevenler", "orta", ""],
+      [278, "وَدِّين", "waddīn", "her daim sevenler", "orta", ""],
+      [279, "وَدَّات", "waddāt", "her daim sevenler (müennes)", "orta", ""],
+      [280, "وَدّ", "wadd", "her daim seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [281, "وَدَّة", "wadda", "her daim seven (müennes)", "orta", ""],
+      [282, "وَدَّان", "waddān", "her daim seven (iki)", "orta", ""],
+      [283, "وَدَّتَان", "waddatān", "her daim seven (iki, müennes)", "orta", ""],
+      [284, "وَدُّون", "waddūn", "her daim sevenler", "orta", ""],
+      [285, "وَدِّين", "waddīn", "her daim sevenler", "orta", ""],
+      [286, "وَدَّات", "waddāt", "her daim sevenler (müennes)", "orta", ""],
+      [287, "وَدّ", "wadd", "her daim seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [288, "وَدَّة", "wadda", "her daim seven (müennes)", "orta", ""],
+      [289, "وَدَّان", "waddān", "her daim seven (iki)", "orta", ""],
+      [290, "وَدَّتَان", "waddatān", "her daim seven (iki, müennes)", "orta", ""],
+      [291, "وَدُّون", "waddūn", "her daim sevenler", "orta", ""],
+      [292, "وَدِّين", "waddīn", "her daim sevenler", "orta", ""],
+      [293, "وَدَّات", "waddāt", "her daim sevenler (müennes)", "orta", ""],
+      [294, "وَدّ", "wadd", "her daim seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [295, "وَدَّة", "wadda", "her daim seven (müennes)", "orta", ""],
+      [296, "وَدَّان", "waddān", "her daim seven (iki)", "orta", ""],
+      [297, "وَدَّتَان", "waddatān", "her daim seven (iki, müennes)", "orta", ""],
+      [298, "وَدُّون", "waddūn", "her daim sevenler", "orta", ""],
+      [299, "وَدِّين", "waddīn", "her daim sevenler", "orta", ""],
+      [300, "وَدَّات", "waddāt", "her daim sevenler (müennes)", "orta", ""],
+      [301, "وُدّ", "wudd", "her daim seven", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [302, "وُدَّة", "wudda", "her daim seven (müennes)", "orta", ""],
+      [303, "وُدَّان", "wuddān", "her daim seven (iki)", "orta", ""],
+      [304, "وُدَّتَان", "wuddatān", "her daim seven (iki, müennes)", "orta", ""],
+      [305, "وُدُّون", "wuddūn", "her daim sevenler", "orta", ""],
+      [306, "وُدِّين", "wuddīn", "her daim sevenler", "orta", ""],
+      [307, "وُدَّات", "wuddāt", "her daim sevenler (müennes)", "orta", ""],
+      [308, "وَدَّان", "waddān", "her daim seven", "orta", ""],
+      [309, "وَدَّانَة", "waddāna", "her daim seven (müennes)", "orta", ""],
+      [310, "وَدَّانَان", "waddānān", "her daim seven (iki)", "orta", ""],
+      [311, "وَدَّانَتَان", "waddānatān", "her daim seven (iki, müennes)", "orta", ""],
+      [312, "وَدَّانُون", "waddānūn", "her daim sevenler", "orta", ""],
+      [313, "وَدَّانِين", "waddānīn", "her daim sevenler", "orta", ""],
+      [314, "وَدَّانَات", "waddānāt", "her daim sevenler (müennes)", "orta", ""],
+      [315, "وُدَاد", "wudād", "her daim seven", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
+      [
+        316,
+        "وُدَادَة",
+        "wudāda",
+        "her daim seven (müennes)",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to love, to like"
+      ],
+      [317, "وُدَادَان", "wudādān", "her daim seven (iki)", "orta", ""],
+      [318, "وُدَادَتَان", "wudādatān", "her daim seven (iki, müennes)", "orta", ""],
+      [319, "وُدَادُون", "wudādūn", "her daim sevenler", "orta", ""],
+      [320, "وُدَادِين", "wudādīn", "her daim sevenler", "orta", ""],
+      [321, "وُدَادَات", "wudādāt", "her daim sevenler (müennes)", "orta", ""],
+      [322, "وَدَاد", "wadād", "her daim seven", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
+      [
+        323,
+        "وَدَادَة",
+        "wadāda",
+        "her daim seven (müennes)",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to love, to like"
+      ],
+      [324, "وَدَادَان", "wadādān", "her daim seven (iki)", "orta", ""],
+      [325, "وَدَادَتَان", "wadādatān", "her daim seven (iki, müennes)", "orta", ""],
+      [326, "وَدَادُون", "wadādūn", "her daim sevenler", "orta", ""],
+      [327, "وَدَادِين", "wadādīn", "her daim sevenler", "orta", ""],
+      [328, "وَدَادَات", "wadādāt", "her daim sevenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "وَدَّاد", "waddād", "çok seven", "orta", ""],
-      [330, "وَدَّادَة", "waddāda", "çok seven (dişi)", "orta", ""],
-      [331, "وَدَّادَان", "waddādān", "iki çok seven", "orta", ""],
-      [332, "وَدَّادَتَان", "waddādatān", "iki çok seven (dişi)", "orta", ""],
-      [333, "وَدَّادُون", "waddādūn", "çok sevenler", "orta", ""],
-      [334, "وَدَّادِين", "waddādīn", "çok sevenler", "orta", ""],
-      [335, "وَدَّادَات", "waddādāt", "çok sevenler (dişi)", "orta", ""],
-      [336, "وَدَّادَة", "waddāda", "çok seven", "orta", ""],
-      [337, "وَدَّادَتَان", "waddādatān", "iki çok seven", "orta", ""],
-      [338, "وَدَّادَات", "waddādāt", "çok sevenler (dişi)", "orta", ""],
-      [339, "وَدُود", "wadūd", "çok seven", "orta", ""],
-      [340, "وَدُودَة", "wadūda", "çok seven (dişi)", "orta", ""],
-      [341, "وَدُودَان", "wadūdān", "iki çok seven", "orta", ""],
-      [342, "وَدُودَتَان", "wadūdatān", "iki çok seven (dişi)", "orta", ""],
+      [329, "وَدَّاد", "waddād", "işi sevme olan", "orta", ""],
+      [330, "وَدَّادَة", "waddāda", "işi sevme olan (müennes)", "orta", ""],
+      [331, "وَدَّادَان", "waddādān", "işi sevme olan (iki)", "orta", ""],
+      [332, "وَدَّادَتَان", "waddādatān", "işi sevme olan (iki, müennes)", "orta", ""],
+      [333, "وَدَّادُون", "waddādūn", "işi sevme olanlar", "orta", ""],
+      [334, "وَدَّادِين", "waddādīn", "işi sevme olanlar", "orta", ""],
+      [335, "وَدَّادَات", "waddādāt", "işi sevme olanlar (müennes)", "orta", ""],
+      [336, "وَدَّادَة", "waddāda", "pek çok seven", "orta", ""],
+      [337, "وَدَّادَتَان", "waddādatān", "pek çok seven (iki)", "orta", ""],
+      [338, "وَدَّادَات", "waddādāt", "pek çok sevenler (müennes)", "orta", ""],
+      [339, "وَدُود", "wadūd", "çok seven", "kuran", "Kur'ân"],
+      [340, "وَدُودَة", "wadūda", "çok seven (müennes)", "orta", ""],
+      [341, "وَدُودَان", "wadūdān", "çok seven (iki)", "orta", ""],
+      [342, "وَدُودَتَان", "wadūdatān", "çok seven (iki, müennes)", "orta", ""],
       [343, "وَدُودُون", "wadūdūn", "çok sevenler", "orta", ""],
       [344, "وَدُودِين", "wadūdīn", "çok sevenler", "orta", ""],
-      [345, "وَدُودَات", "wadūdāt", "çok sevenler (dişi)", "orta", ""],
-      [346, "وَدُّود", "waddūd", "çok seven", "orta", ""],
-      [347, "وَدُّودَة", "waddūda", "çok seven (dişi)", "orta", ""],
-      [348, "وَدُّودَان", "waddūdān", "iki çok seven", "orta", ""],
-      [349, "وَدُّودَتَان", "waddūdatān", "iki çok seven (dişi)", "orta", ""],
-      [350, "وَدُّودُون", "waddūdūn", "çok sevenler", "orta", ""],
-      [351, "وَدُّودِين", "waddūdīn", "çok sevenler", "orta", ""],
-      [352, "وَدُّودَات", "waddūdāt", "çok sevenler (dişi)", "orta", ""],
-      [353, "وِدِّيد", "widdīd", "çok seven", "orta", ""],
-      [354, "وِدِّيدَة", "widdīda", "çok seven (dişi)", "orta", ""],
-      [355, "وِدِّيدَان", "widdīdān", "iki çok seven", "orta", ""],
-      [356, "وِدِّيدَتَان", "widdīdatān", "iki çok seven (dişi)", "orta", ""],
-      [357, "وِدِّيدُون", "widdīdūn", "çok sevenler", "orta", ""],
-      [358, "وِدِّيدِين", "widdīdīn", "çok sevenler", "orta", ""],
-      [359, "وِدِّيدَات", "widdīdāt", "çok sevenler (dişi)", "orta", ""],
-      [360, "وُدَّاد", "wuddād", "çok seven", "orta", ""],
-      [361, "وُدَّادَة", "wuddāda", "çok seven (dişi)", "orta", ""],
-      [362, "وُدَّادَان", "wuddādān", "iki çok seven", "orta", ""],
-      [363, "وُدَّادَتَان", "wuddādatān", "iki çok seven (dişi)", "orta", ""],
-      [364, "وُدَّادُون", "wuddādūn", "çok sevenler", "orta", ""],
-      [365, "وُدَّادِين", "wuddādīn", "çok sevenler", "orta", ""],
-      [366, "وُدَّادَات", "wuddādāt", "çok sevenler (dişi)", "orta", ""],
-      [367, "مِيدَاد", "mīdād", "çok seven", "orta", ""],
-      [368, "مِيدَادَة", "mīdāda", "çok seven (dişi)", "orta", ""],
-      [369, "مِيدَادَان", "mīdādān", "iki çok seven", "orta", ""],
-      [370, "مِيدَادَتَان", "mīdādatān", "iki çok seven (dişi)", "orta", ""],
-      [371, "مِيدَادُون", "mīdādūn", "çok sevenler", "orta", ""],
-      [372, "مِيدَادِين", "mīdādīn", "çok sevenler", "orta", ""],
-      [373, "مِيدَادَات", "mīdādāt", "çok sevenler (dişi)", "orta", ""],
-      [374, "مِيدِيد", "mīdīd", "çok seven", "orta", ""],
-      [375, "مِيدِيدَة", "mīdīda", "çok seven (dişi)", "orta", ""],
-      [376, "مِيدِيدَان", "mīdīdān", "iki çok seven", "orta", ""],
-      [377, "مِيدِيدَتَان", "mīdīdatān", "iki çok seven (dişi)", "orta", ""],
-      [378, "مِيدِيدُون", "mīdīdūn", "çok sevenler", "orta", ""],
-      [379, "مِيدِيدِين", "mīdīdīn", "çok sevenler", "orta", ""],
-      [380, "مِيدِيدَات", "mīdīdāt", "çok sevenler (dişi)", "orta", ""],
+      [345, "وَدُودَات", "wadūdāt", "çok sevenler (müennes)", "orta", ""],
+      [346, "وَدُّود", "waddūd", "pek çok seven", "orta", ""],
+      [347, "وَدُّودَة", "waddūda", "pek çok seven (müennes)", "orta", ""],
+      [348, "وَدُّودَان", "waddūdān", "pek çok seven (iki)", "orta", ""],
+      [349, "وَدُّودَتَان", "waddūdatān", "pek çok seven (iki, müennes)", "orta", ""],
+      [350, "وَدُّودُون", "waddūdūn", "pek çok sevenler", "orta", ""],
+      [351, "وَدُّودِين", "waddūdīn", "pek çok sevenler", "orta", ""],
+      [352, "وَدُّودَات", "waddūdāt", "pek çok sevenler (müennes)", "orta", ""],
+      [353, "وِدِّيد", "widdīd", "sevmede aşırı giden", "orta", ""],
+      [354, "وِدِّيدَة", "widdīda", "sevmede aşırı giden (müennes)", "orta", ""],
+      [355, "وِدِّيدَان", "widdīdān", "sevmede aşırı giden (iki)", "orta", ""],
+      [356, "وِدِّيدَتَان", "widdīdatān", "sevmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "وِدِّيدُون", "widdīdūn", "sevmede aşırı gidenler", "orta", ""],
+      [358, "وِدِّيدِين", "widdīdīn", "sevmede aşırı gidenler", "orta", ""],
+      [359, "وِدِّيدَات", "widdīdāt", "sevmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "وُدَّاد", "wuddād", "son derece seven", "orta", ""],
+      [361, "وُدَّادَة", "wuddāda", "son derece seven (müennes)", "orta", ""],
+      [362, "وُدَّادَان", "wuddādān", "son derece seven (iki)", "orta", ""],
+      [363, "وُدَّادَتَان", "wuddādatān", "son derece seven (iki, müennes)", "orta", ""],
+      [364, "وُدَّادُون", "wuddādūn", "son derece sevenler", "orta", ""],
+      [365, "وُدَّادِين", "wuddādīn", "son derece sevenler", "orta", ""],
+      [366, "وُدَّادَات", "wuddādāt", "son derece sevenler (müennes)", "orta", ""],
+      [367, "مِيدَاد", "mīdād", "sevmeyi âdet edinmiş", "orta", ""],
+      [368, "مِيدَادَة", "mīdāda", "sevmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِيدَادَان", "mīdādān", "sevmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِيدَادَتَان", "mīdādatān", "sevmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِيدَادُون", "mīdādūn", "sevmeyi âdet edinmişler", "orta", ""],
+      [372, "مِيدَادِين", "mīdādīn", "sevmeyi âdet edinmişler", "orta", ""],
+      [373, "مِيدَادَات", "mīdādāt", "sevmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِيدِيد", "mīdīd", "sevmeye düşkün", "orta", ""],
+      [375, "مِيدِيدَة", "mīdīda", "sevmeye düşkün (müennes)", "orta", ""],
+      [376, "مِيدِيدَان", "mīdīdān", "sevmeye düşkün (iki)", "orta", ""],
+      [377, "مِيدِيدَتَان", "mīdīdatān", "sevmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِيدِيدُون", "mīdīdūn", "sevmeye düşkünler", "orta", ""],
+      [379, "مِيدِيدِين", "mīdīdīn", "sevmeye düşkünler", "orta", ""],
+      [380, "مِيدِيدَات", "mīdīdāt", "sevmeye düşkünler (müennes)", "orta", ""],
       [381, "وَدِيد", "wadīd", "çok seven", "orta", "Vikisözlük: one who loves, one who has affection"],
-      [382, "وَدِيدَة", "wadīda", "çok seven (dişi)", "orta", ""],
-      [383, "وَدِيدَان", "wadīdān", "iki çok seven", "orta", ""],
-      [384, "وَدِيدَتَان", "wadīdatān", "iki çok seven (dişi)", "orta", ""],
+      [382, "وَدِيدَة", "wadīda", "çok seven (müennes)", "orta", ""],
+      [383, "وَدِيدَان", "wadīdān", "çok seven (iki)", "orta", ""],
+      [384, "وَدِيدَتَان", "wadīdatān", "çok seven (iki, müennes)", "orta", ""],
       [385, "وَدِيدُون", "wadīdūn", "çok sevenler", "orta", ""],
       [386, "وَدِيدِين", "wadīdīn", "çok sevenler", "orta", ""],
-      [387, "وَدِيدَات", "wadīdāt", "çok sevenler (dişi)", "orta", ""],
+      [387, "وَدِيدَات", "wadīdāt", "çok sevenler (müennes)", "orta", ""],
       [388, "وَدَّد", "waddad", "çok seven", "orta", ""],
-      [389, "وَدَّدَة", "waddada", "çok seven (dişi)", "orta", ""],
-      [390, "وَدَّدَان", "waddadān", "iki çok seven", "orta", ""],
-      [391, "وَدَّدَتَان", "waddadatān", "iki çok seven (dişi)", "orta", ""],
+      [389, "وَدَّدَة", "waddada", "çok seven (müennes)", "orta", ""],
+      [390, "وَدَّدَان", "waddadān", "çok seven (iki)", "orta", ""],
+      [391, "وَدَّدَتَان", "waddadatān", "çok seven (iki, müennes)", "orta", ""],
       [392, "وَدَّدُون", "waddadūn", "çok sevenler", "orta", ""],
       [393, "وَدَّدِين", "waddadīn", "çok sevenler", "orta", ""],
-      [394, "وَدَّدَات", "waddadāt", "çok sevenler (dişi)", "orta", ""]
+      [394, "وَدَّدَات", "waddadāt", "çok sevenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "وَدِّيّ", "waddiyy", "sevmeye ilgili", "orta", ""],
-      [397, "وَدِّيّ", "waddiyy", "sevmeye ilgili", "orta", ""],
-      [399, "وِدِّيّ", "widdiyy", "sevmeye ilgili", "orta", ""],
-      [401, "وُدِّيّ", "wuddiyy", "sevmeye ilgili", "orta", ""],
-      [403, "وِدَادِيّ", "widādiyy", "sevmeye ilgili", "orta", ""],
-      [405, "وَادِّيّ", "wāddiyy", "sevmeye ilgili", "orta", ""],
-      [407, "مَوْدُودِيّ", "mawdūdiyy", "sevmeye ilgili", "orta", ""],
-      [409, "وَدِيدِيّ", "wadīdiyy", "sevmeye ilgili", "orta", ""],
-      [411, "مَوَدِّيّ", "mawaddiyy", "sevmeye ilgili", "orta", ""],
-      [413, "تَوْدِيدِيّ", "tawdīdiyy", "sevmeye ilgili", "orta", ""],
-      [415, "تَوَادِّيّ", "tawāddiyy", "sevmeye ilgili", "orta", ""],
-      [417, "إِيدَادِيّ", "ʾīdādiyy", "sevmeye ilgili", "orta", ""],
-      [419, "اِتِّدَادِيّ", "ittidādiyy", "sevmeye ilgili", "orta", ""]
+      [395, "وَدِّيّ", "waddiyy", "sevme ile ilgili", "orta", ""],
+      [397, "وَدِّيّ", "waddiyy", "sevme ile ilgili", "orta", ""],
+      [399, "وِدِّيّ", "widdiyy", "sevme ile ilgili", "orta", ""],
+      [401, "وُدِّيّ", "wuddiyy", "sevme ile ilgili", "orta", ""],
+      [403, "وِدَادِيّ", "widādiyy", "sevme ile ilgili", "orta", ""],
+      [405, "وَادِّيّ", "wāddiyy", "sevme ile ilgili", "orta", ""],
+      [407, "مَوْدُودِيّ", "mawdūdiyy", "sevme ile ilgili", "orta", ""],
+      [409, "وَدِيدِيّ", "wadīdiyy", "sevme ile ilgili", "orta", ""],
+      [411, "مَوَدِّيّ", "mawaddiyy", "sevme ile ilgili", "orta", ""],
+      [413, "تَوْدِيدِيّ", "tawdīdiyy", "sevme ile ilgili", "orta", ""],
+      [415, "تَوَادِّيّ", "tawāddiyy", "sevme ile ilgili", "orta", ""],
+      [417, "إِيدَادِيّ", "ʾīdādiyy", "sevme ile ilgili", "orta", ""],
+      [419, "اِتِّدَادِيّ", "ittidādiyy", "sevme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "وَدِّيَّة", "waddiyya", "sevenlik", "orta", ""],
@@ -593,102 +635,88 @@
       [429, "وِدّ", "widd", "sevme", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "وَادُود", "wādūd", "sevenler (topluluk adı)", "orta", ""],
-      [432, "وَدَّة", "wadda", "sevenler (topluluk adı)", "orta", ""],
-      [433, "وُدَّة", "wudda", "sevenler (topluluk adı)", "orta", ""],
-      [434, "أُودُودَة", "ʾūdūda", "sevenler (topluluk adı)", "orta", ""],
-      [435, "وَوَدّ", "wawadd", "sevenler (topluluk adı)", "orta", ""],
-      [437, "وَيَدّ", "wayadd", "sevenler (topluluk adı)", "orta", ""],
-      [439, "وَدّ", "wadd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [441, "وَدّ", "wadd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [443, "وِدّ", "widd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [445, "وُدّ", "wudd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [
-        447,
-        "وَدِيد",
-        "wadīd",
-        "sevenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: one who loves, one who has affection"
-      ],
-      [449, "وِدّ", "widd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [451, "وُدّ", "wudd", "sevenler (topluluk adı)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [453, "وَدَاد", "wadād", "sevenler (topluluk adı)", "orta", "Vikisözlük: masdar (bâb I): to love, to like"]
+      [430, "وَادُود", "wādūd", "sevme türünden şey", "orta", ""],
+      [432, "وَدَّة", "wadda", "sevme türünden şey", "orta", ""],
+      [433, "وُدَّة", "wudda", "sevme türünden şey", "orta", ""],
+      [434, "أُودُودَة", "ʾūdūda", "sevme türünden şey", "orta", ""],
+      [435, "وَوَدّ", "wawadd", "sevme türünden şey", "orta", ""],
+      [437, "وَيَدّ", "wayadd", "sevme türünden şey", "orta", ""],
+      [439, "وَدّ", "wadd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [441, "وَدّ", "wadd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [443, "وِدّ", "widd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [445, "وُدّ", "wudd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [447, "وَدِيد", "wadīd", "sevme türünden şey", "orta", "Vikisözlük: one who loves, one who has affection"],
+      [449, "وِدّ", "widd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [451, "وُدّ", "wudd", "sevme türünden şey", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [453, "وَدَاد", "wadād", "sevme türünden şey", "orta", "Vikisözlük: masdar (bâb I): to love, to like"]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "وَادُودَة", "wādūda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [436, "وَوَدَّة", "wawadda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [438, "وَيَدَّة", "wayadda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [440, "وَدَّة", "wadda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [442, "وَدَّة", "wadda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [444, "وِدَّة", "widda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [446, "وُدَّة", "wudda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [448, "وَدِيدَة", "wadīda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [450, "وِدَّة", "widda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [452, "وُدَّة", "wudda", "bir tane sevenler (topluluk adı)", "orta", ""],
-      [
-        454,
-        "وَدَادَة",
-        "wadāda",
-        "bir tane sevenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to love, to like"
-      ]
+      [431, "وَادُودَة", "wādūda", "sevme türünden bir tane", "orta", ""],
+      [436, "وَوَدَّة", "wawadda", "sevme türünden bir tane", "orta", ""],
+      [438, "وَيَدَّة", "wayadda", "sevme türünden bir tane", "orta", ""],
+      [440, "وَدَّة", "wadda", "sevme türünden bir tane", "orta", ""],
+      [442, "وَدَّة", "wadda", "sevme türünden bir tane", "orta", ""],
+      [444, "وِدَّة", "widda", "sevme türünden bir tane", "orta", ""],
+      [446, "وُدَّة", "wudda", "sevme türünden bir tane", "orta", ""],
+      [448, "وَدِيدَة", "wadīda", "sevme türünden bir tane", "orta", ""],
+      [450, "وِدَّة", "widda", "sevme türünden bir tane", "orta", ""],
+      [452, "وُدَّة", "wudda", "sevme türünden bir tane", "orta", ""],
+      [454, "وَدَادَة", "wadāda", "sevme türünden bir tane", "orta", "Vikisözlük: masdar (bâb I): to love, to like"]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَوْدَاد", "ʾawdād", "sevenler (kırık çoğul)", "orta", ""],
-      [456, "أَوِدَّة", "ʾawidda", "sevenler (kırık çoğul)", "orta", ""],
-      [457, "أَوَادّ", "ʾawādd", "sevenler (kırık çoğul)", "orta", ""],
-      [458, "أَوَادِيد", "ʾawādīd", "sevenler (kırık çoğul)", "orta", ""],
-      [459, "وُدُود", "wudūd", "sevenler (kırık çoğul)", "orta", ""],
-      [460, "وُدّ", "wudd", "sevenler (kırık çoğul)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [455, "أَوْدَاد", "ʾawdād", "sevmeler", "orta", ""],
+      [456, "أَوِدَّة", "ʾawidda", "sevmeler", "orta", ""],
+      [457, "أَوَادّ", "ʾawādd", "sevmeler", "orta", ""],
+      [458, "أَوَادِيد", "ʾawādīd", "sevmeler", "orta", ""],
+      [459, "وُدُود", "wudūd", "sevmeler", "orta", ""],
+      [460, "وُدّ", "wudd", "sevmeler", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
       [
         461,
         "وِدَاد",
         "widād",
-        "sevenler (kırık çoğul)",
+        "sevmeler",
         "orta",
         "Vikisözlük: masdar (bâb III): to engage in fellowship with, to try or strive to be friends with"
       ],
-      [462, "وِدّ", "widd", "sevenler (kırık çoğul)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [463, "وِدَّة", "widda", "sevenler (kırık çoğul)", "orta", ""],
-      [464, "وُدّ", "wudd", "sevenler (kırık çoğul)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [465, "وُدّاء", "wuddāʾ", "sevenler (kırık çoğul)", "orta", ""],
-      [466, "وَدَّة", "wadda", "sevenler (kırık çoğul)", "orta", ""],
-      [467, "وُدَّاد", "wuddād", "sevenler (kırık çoğul)", "orta", ""],
-      [468, "وَدَاد", "wadād", "sevenler (kırık çoğul)", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
-      [469, "وَدّ", "wadd", "sevenler (kırık çoğul)", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
-      [470, "مَوَادّ", "mawādd", "sevenler (kırık çoğul)", "orta", ""],
-      [471, "مَوَادِيد", "mawādīd", "sevenler (kırık çoğul)", "orta", ""],
-      [472, "وَوَادّ", "wawādd", "sevenler (kırık çoğul)", "orta", ""],
-      [473, "أَوُدّ", "ʾawudd", "sevenler (kırık çoğul)", "orta", ""],
-      [474, "وُدَّد", "wuddad", "sevenler (kırık çoğul)", "orta", ""],
-      [475, "وَدَائِد", "wadāʾid", "sevenler (kırık çoğul)", "orta", ""],
-      [476, "وُدَيْد", "wudayd", "sevenler (kırık çoğul)", "orta", ""]
+      [462, "وِدّ", "widd", "sevmeler", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [463, "وِدَّة", "widda", "sevmeler", "orta", ""],
+      [464, "وُدّ", "wudd", "sevmeler", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [465, "وُدّاء", "wuddāʾ", "sevmeler", "orta", ""],
+      [466, "وَدَّة", "wadda", "sevmeler", "orta", ""],
+      [467, "وُدَّاد", "wuddād", "sevmeler", "orta", ""],
+      [468, "وَدَاد", "wadād", "sevmeler", "orta", "Vikisözlük: masdar (bâb I): to love, to like"],
+      [469, "وَدّ", "wadd", "sevmeler", "orta", "Vikisözlük: verbal noun of وَدَّ (wadda) (form I)"],
+      [470, "مَوَادّ", "mawādd", "sevmeler", "orta", ""],
+      [471, "مَوَادِيد", "mawādīd", "sevmeler", "orta", ""],
+      [472, "وَوَادّ", "wawādd", "sevmeler", "orta", ""],
+      [473, "أَوُدّ", "ʾawudd", "sevmeler", "orta", ""],
+      [474, "وُدَّد", "wuddad", "sevmeler", "orta", ""],
+      [475, "وَدَائِد", "wadāʾid", "sevmeler", "orta", ""],
+      [476, "وُدَيْد", "wudayd", "sevmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَوْدَادَات", "ʾawdādāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَوِدَّات", "ʾawiddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَوَادَّات", "ʾawāddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَوَادِيدَات", "ʾawādīdāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [481, "وُدُودَات", "wudūdāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [482, "وُدَّات", "wuddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [483, "وِدَادَات", "widādāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [484, "وِدَّات", "widdāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [485, "وِدَّات", "widdāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [486, "وُدَّات", "wuddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [487, "وُدّاآت", "wuddāʾāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [488, "وَدَّات", "waddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [489, "وُدَّادَات", "wuddādāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [490, "وَدَادَات", "wadādāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [491, "وَدَّات", "waddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَوَادَّات", "mawāddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَوَادِيدَات", "mawādīdāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [494, "وَوَادَّات", "wawāddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَوُدَّات", "ʾawuddāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [496, "وُدَّدَات", "wuddadāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [497, "وَدَائِدَات", "wadāʾidāt", "sevenler (çoğulun çoğulu)", "orta", ""],
-      [498, "وُدَيْدَات", "wudaydāt", "sevenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَوْدَادَات", "ʾawdādāt", "sevmeler topluluğu", "orta", ""],
+      [478, "أَوِدَّات", "ʾawiddāt", "sevmeler topluluğu", "orta", ""],
+      [479, "أَوَادَّات", "ʾawāddāt", "sevmeler topluluğu", "orta", ""],
+      [480, "أَوَادِيدَات", "ʾawādīdāt", "sevmeler topluluğu", "orta", ""],
+      [481, "وُدُودَات", "wudūdāt", "sevmeler topluluğu", "orta", ""],
+      [482, "وُدَّات", "wuddāt", "sevmeler topluluğu", "orta", ""],
+      [483, "وِدَادَات", "widādāt", "sevmeler topluluğu", "orta", ""],
+      [484, "وِدَّات", "widdāt", "sevmeler topluluğu", "orta", ""],
+      [485, "وِدَّات", "widdāt", "sevmeler topluluğu", "orta", ""],
+      [486, "وُدَّات", "wuddāt", "sevmeler topluluğu", "orta", ""],
+      [487, "وُدّاآت", "wuddāʾāt", "sevmeler topluluğu", "orta", ""],
+      [488, "وَدَّات", "waddāt", "sevmeler topluluğu", "orta", ""],
+      [489, "وُدَّادَات", "wuddādāt", "sevmeler topluluğu", "orta", ""],
+      [490, "وَدَادَات", "wadādāt", "sevmeler topluluğu", "orta", ""],
+      [491, "وَدَّات", "waddāt", "sevmeler topluluğu", "orta", ""],
+      [492, "مَوَادَّات", "mawāddāt", "sevmeler topluluğu", "orta", ""],
+      [493, "مَوَادِيدَات", "mawādīdāt", "sevmeler topluluğu", "orta", ""],
+      [494, "وَوَادَّات", "wawāddāt", "sevmeler topluluğu", "orta", ""],
+      [495, "أَوُدَّات", "ʾawuddāt", "sevmeler topluluğu", "orta", ""],
+      [496, "وُدَّدَات", "wuddadāt", "sevmeler topluluğu", "orta", ""],
+      [497, "وَدَائِدَات", "wadāʾidāt", "sevmeler topluluğu", "orta", ""],
+      [498, "وُدَيْدَات", "wudaydāt", "sevmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

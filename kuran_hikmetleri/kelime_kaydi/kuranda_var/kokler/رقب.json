@@ -9,9 +9,9 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "رَقْب", "raqb", "gözetleme", "orta", ""],
-      [1, "رِقْب", "riqb", "gözetleme", "orta", ""],
+      [1, "رِقْب", "riqb", "gözetlenen şey", "orta", ""],
       [2, "رُقْب", "ruqb", "gözetleme", "orta", ""],
-      [3, "رَقَب", "raqab", "gözetleme", "orta", ""],
+      [3, "رَقَب", "raqab", "gözetleme hâli", "orta", ""],
       [4, "رِقَب", "riqab", "gözetleme", "orta", ""],
       [5, "رُقُب", "ruqub", "gözetleme", "orta", ""],
       [
@@ -22,20 +22,20 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [7, "رِقَاب", "riqāb", "gözetleme", "orta", ""],
-      [8, "رُقَاب", "ruqāb", "gözetleme", "orta", ""],
+      [7, "رِقَاب", "riqāb", "gözetlemeden kaçınma", "orta", ""],
+      [8, "رُقَاب", "ruqāb", "gözetleme illeti, gözetleme sesi", "orta", ""],
       [9, "رَقَاب", "raqāb", "gözetleme", "orta", ""],
       [
         10,
         "رَقَابَة",
         "raqāba",
-        "gözetleme",
+        "gözetleme vasfı",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [11, "رُقُوبَة", "ruqūba", "gözetleme", "orta", ""],
-      [12, "رِقَابَة", "riqāba", "gözetleme", "orta", ""],
-      [13, "رَقِيب", "raqīb", "gözetleme", "orta", "Vikisözlük: watchman"],
+      [11, "رُقُوبَة", "ruqūba", "gözetleme vasfı", "orta", ""],
+      [12, "رِقَابَة", "riqāba", "gözetleme vazifesi, gözetleme işi", "orta", ""],
+      [13, "رَقِيب", "raqīb", "gözetleyen", "kuran", "Vikisözlük: watchman"],
       [
         14,
         "رَقُوب",
@@ -44,7 +44,7 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [15, "رَقَبَان", "raqabān", "gözetleme", "orta", ""],
+      [15, "رَقَبَان", "raqabān", "gözetleme çalkantısı, coşarak gözetleme", "orta", ""],
       [16, "رُقْبَان", "ruqbān", "gözetleme", "orta", ""],
       [
         17,
@@ -57,167 +57,188 @@
       [18, "رَقْبَى", "raqbā", "gözetleme", "orta", ""],
       [19, "رُقْبَى", "ruqbā", "gözetleme", "orta", ""],
       [20, "رِقْبَى", "riqbā", "gözetleme", "orta", ""],
-      [21, "رَقَبَة", "raqaba", "gözetleme", "orta", "Vikisözlük: neck"],
+      [21, "رَقَبَة", "raqaba", "boyun, köle", "kuran", "Vikisözlük: neck"],
       [22, "رِقَبَة", "riqaba", "gözetleme", "orta", ""],
       [23, "رَقْبُوبَة", "raqbūba", "gözetleme", "orta", ""],
-      [24, "تُرْقُوب", "turqūb", "gözetleme", "orta", ""],
-      [25, "تَرْقِبَة", "tarqiba", "gözetleme", "orta", ""],
-      [26, "تَرْقَبَة", "tarqaba", "gözetleme", "orta", ""],
-      [27, "مَرْقُبَة", "marquba", "gözetleme", "orta", ""],
-      [28, "مَرْقِبَة", "marqiba", "gözetleme", "orta", ""]
+      [24, "تُرْقُوب", "turqūb", "tekrar tekrar gözetleme", "orta", ""],
+      [25, "تَرْقِبَة", "tarqiba", "tekrar tekrar gözetleme", "orta", ""],
+      [26, "تَرْقَبَة", "tarqaba", "tekrar tekrar gözetleme", "orta", ""],
+      [27, "مَرْقُبَة", "marquba", "gözetleme sebebi", "orta", ""],
+      [28, "مَرْقِبَة", "marqiba", "gözetleme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَرْقِيب", "tarqīb", "gözetleme", "orta", ""],
-      [30, "تَرْقِبَة", "tarqiba", "gözetleme", "orta", ""],
-      [31, "رِقِّاب", "riqqāb", "gözetleme", "orta", ""]
+      [29, "تَرْقِيب", "tarqīb", "çokça gözetleme", "orta", ""],
+      [30, "تَرْقِبَة", "tarqiba", "çokça gözetleme", "orta", ""],
+      [31, "رِقِّاب", "riqqāb", "çokça gözetleme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَرْقِيبَة", "tarqība", "bir kere gözetleme", "orta", ""],
-      [33, "رِقِّابَة", "riqqāba", "bir kere gözetleme", "orta", ""]
+      [32, "تَرْقِيبَة", "tarqība", "bir kere çokça gözetleme", "orta", ""],
+      [33, "رِقِّابَة", "riqqāba", "bir kere çokça gözetleme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُرَقِّب", "muraqqib", "gözetleyen", "orta", ""],
-      [35, "مُرَقِّبَة", "muraqqiba", "gözetleyen (dişi)", "orta", ""],
-      [36, "مُرَقِّبَان", "muraqqibān", "iki gözetleyen", "orta", ""],
-      [37, "مُرَقِّبَتَان", "muraqqibatān", "iki gözetleyen (dişi)", "orta", ""],
-      [38, "مُرَقِّبُون", "muraqqibūn", "gözetleyenler", "orta", ""],
-      [39, "مُرَقِّبِين", "muraqqibīn", "gözetleyenler", "orta", ""],
-      [40, "مُرَقِّبَات", "muraqqibāt", "gözetleyenler (dişi)", "orta", ""]
+      [34, "مُرَقِّب", "muraqqib", "çokça gözetleyen", "orta", ""],
+      [35, "مُرَقِّبَة", "muraqqiba", "çokça gözetleyen (müennes)", "orta", ""],
+      [36, "مُرَقِّبَان", "muraqqibān", "çokça gözetleyen (iki)", "orta", ""],
+      [37, "مُرَقِّبَتَان", "muraqqibatān", "çokça gözetleyen (iki, müennes)", "orta", ""],
+      [38, "مُرَقِّبُون", "muraqqibūn", "çokça gözetleyenler", "orta", ""],
+      [39, "مُرَقِّبِين", "muraqqibīn", "çokça gözetleyenler", "orta", ""],
+      [40, "مُرَقِّبَات", "muraqqibāt", "çokça gözetleyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُرَقَّب", "muraqqab", "gözetlenmiş", "orta", ""],
-      [42, "مُرَقَّبَة", "muraqqaba", "gözetlenmiş (dişi)", "orta", ""],
-      [43, "مُرَقَّبَان", "muraqqabān", "iki gözetlenmiş", "orta", ""],
-      [44, "مُرَقَّبَتَان", "muraqqabatān", "iki gözetlenmiş (dişi)", "orta", ""],
-      [45, "مُرَقَّبُون", "muraqqabūn", "gözetlenmişler", "orta", ""],
-      [46, "مُرَقَّبِين", "muraqqabīn", "gözetlenmişler", "orta", ""],
-      [47, "مُرَقَّبَات", "muraqqabāt", "gözetlenmişler (dişi)", "orta", ""]
+      [41, "مُرَقَّب", "muraqqab", "çokça gözetlenen", "orta", ""],
+      [42, "مُرَقَّبَة", "muraqqaba", "çokça gözetlenen (müennes)", "orta", ""],
+      [43, "مُرَقَّبَان", "muraqqabān", "çokça gözetlenen (iki)", "orta", ""],
+      [44, "مُرَقَّبَتَان", "muraqqabatān", "çokça gözetlenen (iki, müennes)", "orta", ""],
+      [45, "مُرَقَّبُون", "muraqqabūn", "çokça gözetlenenler", "orta", ""],
+      [46, "مُرَقَّبِين", "muraqqabīn", "çokça gözetlenenler", "orta", ""],
+      [47, "مُرَقَّبَات", "muraqqabāt", "çokça gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُرَقَّب", "muraqqab", "gözetleme (yeri/zamanı)", "orta", ""]
+      [48, "مُرَقَّب", "muraqqab", "çokça gözetleme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
       [
         49,
         "مُرَاقَبَة",
         "murāqaba",
-        "gözetleşme",
+        "biriyle karşılıklı gözetleme",
         "orta",
         "Vikisözlük: masdar (bâb III): to keep track, to monitor"
       ],
-      [50, "رِقَاب", "riqāb", "gözetleşme", "orta", ""]
+      [50, "رِقَاب", "riqāb", "biriyle karşılıklı gözetleme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "رِقَابَة", "riqāba", "bir kere gözetleşme", "orta", ""]
+      [51, "رِقَابَة", "riqāba", "bir kere biriyle karşılıklı gözetleme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُرَاقِب", "murāqib", "gözetleşen", "orta", "Vikisözlük: controller, monitor, observer"],
-      [53, "مُرَاقِبَة", "murāqiba", "gözetleşen (dişi)", "orta", ""],
-      [54, "مُرَاقِبَان", "murāqibān", "iki gözetleşen", "orta", ""],
-      [55, "مُرَاقِبَتَان", "murāqibatān", "iki gözetleşen (dişi)", "orta", ""],
-      [56, "مُرَاقِبُون", "murāqibūn", "gözetleşenler", "orta", ""],
-      [57, "مُرَاقِبِين", "murāqibīn", "gözetleşenler", "orta", ""],
-      [58, "مُرَاقِبَات", "murāqibāt", "gözetleşenler (dişi)", "orta", ""]
+      [
+        52,
+        "مُرَاقِب",
+        "murāqib",
+        "biriyle karşılıklı gözetleyen",
+        "orta",
+        "Vikisözlük: controller, monitor, observer"
+      ],
+      [53, "مُرَاقِبَة", "murāqiba", "biriyle karşılıklı gözetleyen (müennes)", "orta", ""],
+      [54, "مُرَاقِبَان", "murāqibān", "biriyle karşılıklı gözetleyen (iki)", "orta", ""],
+      [55, "مُرَاقِبَتَان", "murāqibatān", "biriyle karşılıklı gözetleyen (iki, müennes)", "orta", ""],
+      [56, "مُرَاقِبُون", "murāqibūn", "biriyle karşılıklı gözetleyenler", "orta", ""],
+      [57, "مُرَاقِبِين", "murāqibīn", "biriyle karşılıklı gözetleyenler", "orta", ""],
+      [58, "مُرَاقِبَات", "murāqibāt", "biriyle karşılıklı gözetleyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُرَاقَب", "murāqab", "gözetleşmiş", "orta", "Vikisözlük: controlled, supervised"],
+      [59, "مُرَاقَب", "murāqab", "biriyle karşılıklı gözetlenen", "orta", "Vikisözlük: controlled, supervised"],
       [
         60,
         "مُرَاقَبَة",
         "murāqaba",
-        "gözetleşmiş (dişi)",
+        "biriyle karşılıklı gözetlenen (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb III): to keep track, to monitor"
       ],
-      [61, "مُرَاقَبَان", "murāqabān", "iki gözetleşmiş", "orta", ""],
-      [62, "مُرَاقَبَتَان", "murāqabatān", "iki gözetleşmiş (dişi)", "orta", ""],
-      [63, "مُرَاقَبُون", "murāqabūn", "gözetleşmişler", "orta", ""],
-      [64, "مُرَاقَبِين", "murāqabīn", "gözetleşmişler", "orta", ""],
-      [65, "مُرَاقَبَات", "murāqabāt", "gözetleşmişler (dişi)", "orta", ""]
+      [61, "مُرَاقَبَان", "murāqabān", "biriyle karşılıklı gözetlenen (iki)", "orta", ""],
+      [62, "مُرَاقَبَتَان", "murāqabatān", "biriyle karşılıklı gözetlenen (iki, müennes)", "orta", ""],
+      [63, "مُرَاقَبُون", "murāqabūn", "biriyle karşılıklı gözetlenenler", "orta", ""],
+      [64, "مُرَاقَبِين", "murāqabīn", "biriyle karşılıklı gözetlenenler", "orta", ""],
+      [65, "مُرَاقَبَات", "murāqabāt", "biriyle karşılıklı gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُرَاقَب", "murāqab", "gözetleşme (yeri/zamanı)", "orta", "Vikisözlük: controlled, supervised"]
+      [
+        66,
+        "مُرَاقَب",
+        "murāqab",
+        "biriyle karşılıklı gözetleme yeri, vakti",
+        "orta",
+        "Vikisözlük: controlled, supervised"
+      ]
     ],
     "masdar · bâb IV": [
-      [67, "إِرْقَاب", "ʾirqāb", "gözetleme", "orta", ""]
+      [67, "إِرْقَاب", "ʾirqāb", "gözetletme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِرْقَابَة", "ʾirqāba", "bir kere gözetleme", "orta", ""]
+      [68, "إِرْقَابَة", "ʾirqāba", "bir kere gözetletme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُرْقِب", "murqib", "gözetleyen", "orta", ""],
-      [70, "مُرْقِبَة", "murqiba", "gözetleyen (dişi)", "orta", ""],
-      [71, "مُرْقِبَان", "murqibān", "iki gözetleyen", "orta", ""],
-      [72, "مُرْقِبَتَان", "murqibatān", "iki gözetleyen (dişi)", "orta", ""],
-      [73, "مُرْقِبُون", "murqibūn", "gözetleyenler", "orta", ""],
-      [74, "مُرْقِبِين", "murqibīn", "gözetleyenler", "orta", ""],
-      [75, "مُرْقِبَات", "murqibāt", "gözetleyenler (dişi)", "orta", ""]
+      [69, "مُرْقِب", "murqib", "gözetleten", "orta", ""],
+      [70, "مُرْقِبَة", "murqiba", "gözetleten (müennes)", "orta", ""],
+      [71, "مُرْقِبَان", "murqibān", "gözetleten (iki)", "orta", ""],
+      [72, "مُرْقِبَتَان", "murqibatān", "gözetleten (iki, müennes)", "orta", ""],
+      [73, "مُرْقِبُون", "murqibūn", "gözetletenler", "orta", ""],
+      [74, "مُرْقِبِين", "murqibīn", "gözetletenler", "orta", ""],
+      [75, "مُرْقِبَات", "murqibāt", "gözetletenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُرْقَب", "murqab", "gözetlenmiş", "orta", ""],
-      [77, "مُرْقَبَة", "murqaba", "gözetlenmiş (dişi)", "orta", ""],
-      [78, "مُرْقَبَان", "murqabān", "iki gözetlenmiş", "orta", ""],
-      [79, "مُرْقَبَتَان", "murqabatān", "iki gözetlenmiş (dişi)", "orta", ""],
-      [80, "مُرْقَبُون", "murqabūn", "gözetlenmişler", "orta", ""],
-      [81, "مُرْقَبِين", "murqabīn", "gözetlenmişler", "orta", ""],
-      [82, "مُرْقَبَات", "murqabāt", "gözetlenmişler (dişi)", "orta", ""]
+      [76, "مُرْقَب", "murqab", "gözetletilen", "orta", ""],
+      [77, "مُرْقَبَة", "murqaba", "gözetletilen (müennes)", "orta", ""],
+      [78, "مُرْقَبَان", "murqabān", "gözetletilen (iki)", "orta", ""],
+      [79, "مُرْقَبَتَان", "murqabatān", "gözetletilen (iki, müennes)", "orta", ""],
+      [80, "مُرْقَبُون", "murqabūn", "gözetletilenler", "orta", ""],
+      [81, "مُرْقَبِين", "murqabīn", "gözetletilenler", "orta", ""],
+      [82, "مُرْقَبَات", "murqabāt", "gözetletilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُرْقَب", "murqab", "gözetleme (yeri/zamanı)", "orta", ""]
+      [83, "مُرْقَب", "murqab", "gözetletme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَرَقُّب", "taraqqub", "gözetlenme", "orta", "Vikisözlük: masdar (bâb V): to be vigilant"]
+      [
+        84,
+        "تَرَقُّب",
+        "taraqqub",
+        "kendini zorlayarak gözetleme",
+        "orta",
+        "Vikisözlük: masdar (bâb V): to be vigilant"
+      ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَرَقُّبَة", "taraqquba", "bir kere gözetlenme", "orta", ""]
+      [85, "تَرَقُّبَة", "taraqquba", "bir kere kendini zorlayarak gözetleme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَرَقِّب", "mutaraqqib", "gözetlenen", "orta", ""],
-      [87, "مُتَرَقِّبَة", "mutaraqqiba", "gözetlenen (dişi)", "orta", ""],
-      [88, "مُتَرَقِّبَان", "mutaraqqibān", "iki gözetlenen", "orta", ""],
-      [89, "مُتَرَقِّبَتَان", "mutaraqqibatān", "iki gözetlenen (dişi)", "orta", ""],
-      [90, "مُتَرَقِّبُون", "mutaraqqibūn", "gözetlenenler", "orta", ""],
-      [91, "مُتَرَقِّبِين", "mutaraqqibīn", "gözetlenenler", "orta", ""],
-      [92, "مُتَرَقِّبَات", "mutaraqqibāt", "gözetlenenler (dişi)", "orta", ""]
+      [86, "مُتَرَقِّب", "mutaraqqib", "kendini zorlayarak gözetleyen", "orta", ""],
+      [87, "مُتَرَقِّبَة", "mutaraqqiba", "kendini zorlayarak gözetleyen (müennes)", "orta", ""],
+      [88, "مُتَرَقِّبَان", "mutaraqqibān", "kendini zorlayarak gözetleyen (iki)", "orta", ""],
+      [89, "مُتَرَقِّبَتَان", "mutaraqqibatān", "kendini zorlayarak gözetleyen (iki, müennes)", "orta", ""],
+      [90, "مُتَرَقِّبُون", "mutaraqqibūn", "kendini zorlayarak gözetleyenler", "orta", ""],
+      [91, "مُتَرَقِّبِين", "mutaraqqibīn", "kendini zorlayarak gözetleyenler", "orta", ""],
+      [92, "مُتَرَقِّبَات", "mutaraqqibāt", "kendini zorlayarak gözetleyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَرَقَّب", "mutaraqqab", "gözetlenmiş", "orta", ""],
-      [94, "مُتَرَقَّبَة", "mutaraqqaba", "gözetlenmiş (dişi)", "orta", ""],
-      [95, "مُتَرَقَّبَان", "mutaraqqabān", "iki gözetlenmiş", "orta", ""],
-      [96, "مُتَرَقَّبَتَان", "mutaraqqabatān", "iki gözetlenmiş (dişi)", "orta", ""],
-      [97, "مُتَرَقَّبُون", "mutaraqqabūn", "gözetlenmişler", "orta", ""],
-      [98, "مُتَرَقَّبِين", "mutaraqqabīn", "gözetlenmişler", "orta", ""],
-      [99, "مُتَرَقَّبَات", "mutaraqqabāt", "gözetlenmişler (dişi)", "orta", ""]
+      [93, "مُتَرَقَّب", "mutaraqqab", "kendini zorlayarak gözetlenen", "orta", ""],
+      [94, "مُتَرَقَّبَة", "mutaraqqaba", "kendini zorlayarak gözetlenen (müennes)", "orta", ""],
+      [95, "مُتَرَقَّبَان", "mutaraqqabān", "kendini zorlayarak gözetlenen (iki)", "orta", ""],
+      [96, "مُتَرَقَّبَتَان", "mutaraqqabatān", "kendini zorlayarak gözetlenen (iki, müennes)", "orta", ""],
+      [97, "مُتَرَقَّبُون", "mutaraqqabūn", "kendini zorlayarak gözetlenenler", "orta", ""],
+      [98, "مُتَرَقَّبِين", "mutaraqqabīn", "kendini zorlayarak gözetlenenler", "orta", ""],
+      [99, "مُتَرَقَّبَات", "mutaraqqabāt", "kendini zorlayarak gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَرَقَّب", "mutaraqqab", "gözetlenme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَرَقَّب", "mutaraqqab", "kendini zorlayarak gözetleme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَرَاقُب", "tarāqub", "gözetleşme", "orta", ""]
+      [101, "تَرَاقُب", "tarāqub", "birbirine gözetleme", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَرَاقُبَة", "tarāquba", "bir kere gözetleşme", "orta", ""]
+      [102, "تَرَاقُبَة", "tarāquba", "bir kere birbirine gözetleme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَرَاقِب", "mutarāqib", "gözetleşen", "orta", ""],
-      [104, "مُتَرَاقِبَة", "mutarāqiba", "gözetleşen (dişi)", "orta", ""],
-      [105, "مُتَرَاقِبَان", "mutarāqibān", "iki gözetleşen", "orta", ""],
-      [106, "مُتَرَاقِبَتَان", "mutarāqibatān", "iki gözetleşen (dişi)", "orta", ""],
-      [107, "مُتَرَاقِبُون", "mutarāqibūn", "gözetleşenler", "orta", ""],
-      [108, "مُتَرَاقِبِين", "mutarāqibīn", "gözetleşenler", "orta", ""],
-      [109, "مُتَرَاقِبَات", "mutarāqibāt", "gözetleşenler (dişi)", "orta", ""]
+      [103, "مُتَرَاقِب", "mutarāqib", "birbirine gözetleyen", "orta", ""],
+      [104, "مُتَرَاقِبَة", "mutarāqiba", "birbirine gözetleyen (müennes)", "orta", ""],
+      [105, "مُتَرَاقِبَان", "mutarāqibān", "birbirine gözetleyen (iki)", "orta", ""],
+      [106, "مُتَرَاقِبَتَان", "mutarāqibatān", "birbirine gözetleyen (iki, müennes)", "orta", ""],
+      [107, "مُتَرَاقِبُون", "mutarāqibūn", "birbirine gözetleyenler", "orta", ""],
+      [108, "مُتَرَاقِبِين", "mutarāqibīn", "birbirine gözetleyenler", "orta", ""],
+      [109, "مُتَرَاقِبَات", "mutarāqibāt", "birbirine gözetleyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَرَاقَب", "mutarāqab", "gözetleşmiş", "orta", ""],
-      [111, "مُتَرَاقَبَة", "mutarāqaba", "gözetleşmiş (dişi)", "orta", ""],
-      [112, "مُتَرَاقَبَان", "mutarāqabān", "iki gözetleşmiş", "orta", ""],
-      [113, "مُتَرَاقَبَتَان", "mutarāqabatān", "iki gözetleşmiş (dişi)", "orta", ""],
-      [114, "مُتَرَاقَبُون", "mutarāqabūn", "gözetleşmişler", "orta", ""],
-      [115, "مُتَرَاقَبِين", "mutarāqabīn", "gözetleşmişler", "orta", ""],
-      [116, "مُتَرَاقَبَات", "mutarāqabāt", "gözetleşmişler (dişi)", "orta", ""]
+      [110, "مُتَرَاقَب", "mutarāqab", "birbirine gözetlenen", "orta", ""],
+      [111, "مُتَرَاقَبَة", "mutarāqaba", "birbirine gözetlenen (müennes)", "orta", ""],
+      [112, "مُتَرَاقَبَان", "mutarāqabān", "birbirine gözetlenen (iki)", "orta", ""],
+      [113, "مُتَرَاقَبَتَان", "mutarāqabatān", "birbirine gözetlenen (iki, müennes)", "orta", ""],
+      [114, "مُتَرَاقَبُون", "mutarāqabūn", "birbirine gözetlenenler", "orta", ""],
+      [115, "مُتَرَاقَبِين", "mutarāqabīn", "birbirine gözetlenenler", "orta", ""],
+      [116, "مُتَرَاقَبَات", "mutarāqabāt", "birbirine gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَرَاقَب", "mutarāqab", "gözetleşme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَرَاقَب", "mutarāqab", "birbirine gözetleme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْرِقَاب", "inriqāb", "gözetlenme", "orta", ""]
@@ -227,109 +248,109 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْرَقِب", "munraqib", "gözetlenen", "orta", ""],
-      [121, "مُنْرَقِبَة", "munraqiba", "gözetlenen (dişi)", "orta", ""],
-      [122, "مُنْرَقِبَان", "munraqibān", "iki gözetlenen", "orta", ""],
-      [123, "مُنْرَقِبَتَان", "munraqibatān", "iki gözetlenen (dişi)", "orta", ""],
+      [121, "مُنْرَقِبَة", "munraqiba", "gözetlenen (müennes)", "orta", ""],
+      [122, "مُنْرَقِبَان", "munraqibān", "gözetlenen (iki)", "orta", ""],
+      [123, "مُنْرَقِبَتَان", "munraqibatān", "gözetlenen (iki, müennes)", "orta", ""],
       [124, "مُنْرَقِبُون", "munraqibūn", "gözetlenenler", "orta", ""],
       [125, "مُنْرَقِبِين", "munraqibīn", "gözetlenenler", "orta", ""],
-      [126, "مُنْرَقِبَات", "munraqibāt", "gözetlenenler (dişi)", "orta", ""]
+      [126, "مُنْرَقِبَات", "munraqibāt", "gözetlenenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْرَقَب", "munraqab", "gözetlenmiş", "orta", ""],
-      [128, "مُنْرَقَبَة", "munraqaba", "gözetlenmiş (dişi)", "orta", ""],
-      [129, "مُنْرَقَبَان", "munraqabān", "iki gözetlenmiş", "orta", ""],
-      [130, "مُنْرَقَبَتَان", "munraqabatān", "iki gözetlenmiş (dişi)", "orta", ""],
-      [131, "مُنْرَقَبُون", "munraqabūn", "gözetlenmişler", "orta", ""],
-      [132, "مُنْرَقَبِين", "munraqabīn", "gözetlenmişler", "orta", ""],
-      [133, "مُنْرَقَبَات", "munraqabāt", "gözetlenmişler (dişi)", "orta", ""]
+      [127, "مُنْرَقَب", "munraqab", "gözetlenen", "orta", ""],
+      [128, "مُنْرَقَبَة", "munraqaba", "gözetlenen (müennes)", "orta", ""],
+      [129, "مُنْرَقَبَان", "munraqabān", "gözetlenen (iki)", "orta", ""],
+      [130, "مُنْرَقَبَتَان", "munraqabatān", "gözetlenen (iki, müennes)", "orta", ""],
+      [131, "مُنْرَقَبُون", "munraqabūn", "gözetlenenler", "orta", ""],
+      [132, "مُنْرَقَبِين", "munraqabīn", "gözetlenenler", "orta", ""],
+      [133, "مُنْرَقَبَات", "munraqabāt", "gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْرَقَب", "munraqab", "gözetlenme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْرَقَب", "munraqab", "gözetlenme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
       [
         135,
         "اِرْتِقَاب",
         "irtiqāb",
-        "gözetlenme",
+        "kendisi için gözetleme",
         "orta",
         "Vikisözlük: masdar (bâb VIII): to anticipate, to expect"
       ]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِرْتِقَابَة", "irtiqāba", "bir kere gözetlenme", "orta", ""]
+      [137, "اِرْتِقَابَة", "irtiqāba", "bir kere kendisi için gözetleme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُرْتَقِب", "murtaqib", "gözetlenen", "orta", ""],
-      [139, "مُرْتَقِبَة", "murtaqiba", "gözetlenen (dişi)", "orta", ""],
-      [140, "مُرْتَقِبَان", "murtaqibān", "iki gözetlenen", "orta", ""],
-      [141, "مُرْتَقِبَتَان", "murtaqibatān", "iki gözetlenen (dişi)", "orta", ""],
-      [142, "مُرْتَقِبُون", "murtaqibūn", "gözetlenenler", "orta", ""],
-      [143, "مُرْتَقِبِين", "murtaqibīn", "gözetlenenler", "orta", ""],
-      [144, "مُرْتَقِبَات", "murtaqibāt", "gözetlenenler (dişi)", "orta", ""]
+      [138, "مُرْتَقِب", "murtaqib", "bekleyen", "kuran", "Kur'ân"],
+      [139, "مُرْتَقِبَة", "murtaqiba", "kendisi için gözetleyen (müennes)", "orta", ""],
+      [140, "مُرْتَقِبَان", "murtaqibān", "kendisi için gözetleyen (iki)", "orta", ""],
+      [141, "مُرْتَقِبَتَان", "murtaqibatān", "kendisi için gözetleyen (iki, müennes)", "orta", ""],
+      [142, "مُرْتَقِبُون", "murtaqibūn", "kendisi için gözetleyenler", "orta", ""],
+      [143, "مُرْتَقِبِين", "murtaqibīn", "kendisi için gözetleyenler", "orta", ""],
+      [144, "مُرْتَقِبَات", "murtaqibāt", "kendisi için gözetleyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُرْتَقَب", "murtaqab", "gözetlenmiş", "orta", ""],
-      [146, "مُرْتَقَبَة", "murtaqaba", "gözetlenmiş (dişi)", "orta", ""],
-      [147, "مُرْتَقَبَان", "murtaqabān", "iki gözetlenmiş", "orta", ""],
-      [148, "مُرْتَقَبَتَان", "murtaqabatān", "iki gözetlenmiş (dişi)", "orta", ""],
-      [149, "مُرْتَقَبُون", "murtaqabūn", "gözetlenmişler", "orta", ""],
-      [150, "مُرْتَقَبِين", "murtaqabīn", "gözetlenmişler", "orta", ""],
-      [151, "مُرْتَقَبَات", "murtaqabāt", "gözetlenmişler (dişi)", "orta", ""]
+      [145, "مُرْتَقَب", "murtaqab", "kendisi için gözetlenen", "orta", ""],
+      [146, "مُرْتَقَبَة", "murtaqaba", "kendisi için gözetlenen (müennes)", "orta", ""],
+      [147, "مُرْتَقَبَان", "murtaqabān", "kendisi için gözetlenen (iki)", "orta", ""],
+      [148, "مُرْتَقَبَتَان", "murtaqabatān", "kendisi için gözetlenen (iki, müennes)", "orta", ""],
+      [149, "مُرْتَقَبُون", "murtaqabūn", "kendisi için gözetlenenler", "orta", ""],
+      [150, "مُرْتَقَبِين", "murtaqabīn", "kendisi için gözetlenenler", "orta", ""],
+      [151, "مُرْتَقَبَات", "murtaqabāt", "kendisi için gözetlenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُرْتَقَب", "murtaqab", "gözetlenme (yeri/zamanı)", "orta", ""]
+      [152, "مُرْتَقَب", "murtaqab", "kendisi için gözetleme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِرْقِبَاب", "irqibāb", "gözetleleşme", "kontrol", ""]
+      [499, "اِرْقِبَاب", "irqibāb", "iyiden iyiye gözetleme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُرْقَبّ", "murqabb", "gözetleleşen", "kontrol", ""],
-      [501, "مُرْقَبَّة", "murqabba", "gözetleleşen (dişi)", "kontrol", ""],
-      [502, "مُرْقَبَّان", "murqabbān", "iki gözetleleşen", "kontrol", ""],
-      [503, "مُرْقَبَّتَان", "murqabbatān", "iki gözetleleşen (dişi)", "kontrol", ""],
-      [504, "مُرْقَبُّون", "murqabbūn", "gözetleleşenler", "kontrol", ""],
-      [505, "مُرْقَبِّين", "murqabbīn", "gözetleleşenler", "kontrol", ""],
-      [506, "مُرْقَبَّات", "murqabbāt", "gözetleleşenler (dişi)", "kontrol", ""]
+      [500, "مُرْقَبّ", "murqabb", "iyiden iyiye gözetleyen", "kontrol", ""],
+      [501, "مُرْقَبَّة", "murqabba", "iyiden iyiye gözetleyen (müennes)", "kontrol", ""],
+      [502, "مُرْقَبَّان", "murqabbān", "iyiden iyiye gözetleyen (iki)", "kontrol", ""],
+      [503, "مُرْقَبَّتَان", "murqabbatān", "iyiden iyiye gözetleyen (iki, müennes)", "kontrol", ""],
+      [504, "مُرْقَبُّون", "murqabbūn", "iyiden iyiye gözetleyenler", "kontrol", ""],
+      [505, "مُرْقَبِّين", "murqabbīn", "iyiden iyiye gözetleyenler", "kontrol", ""],
+      [506, "مُرْقَبَّات", "murqabbāt", "iyiden iyiye gözetleyenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِرْقَاب", "istirqāb", "gözetlemeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِرْقَابَة", "istirqāba", "bir kere gözetleme", "orta", ""]
+      [177, "اِسْتِرْقَابَة", "istirqāba", "bir kere gözetlemeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَرْقِب", "mustarqib", "gözetlemeyi isteyen", "orta", ""],
-      [179, "مُسْتَرْقِبَة", "mustarqiba", "gözetlemeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَرْقِبَان", "mustarqibān", "iki gözetlemeyi isteyen", "orta", ""],
-      [181, "مُسْتَرْقِبَتَان", "mustarqibatān", "iki gözetlemeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَرْقِبَة", "mustarqiba", "gözetlemeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَرْقِبَان", "mustarqibān", "gözetlemeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَرْقِبَتَان", "mustarqibatān", "gözetlemeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَرْقِبُون", "mustarqibūn", "gözetlemeyi isteyenler", "orta", ""],
       [183, "مُسْتَرْقِبِين", "mustarqibīn", "gözetlemeyi isteyenler", "orta", ""],
-      [184, "مُسْتَرْقِبَات", "mustarqibāt", "gözetlemeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَرْقِبَات", "mustarqibāt", "gözetlemeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَرْقَب", "mustarqab", "gözetlemeyi istenen", "orta", ""],
-      [186, "مُسْتَرْقَبَة", "mustarqaba", "gözetlemeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَرْقَبَان", "mustarqabān", "iki gözetlemeyi istenen", "orta", ""],
-      [188, "مُسْتَرْقَبَتَان", "mustarqabatān", "iki gözetlemeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَرْقَبُون", "mustarqabūn", "gözetlemeyi istenenler", "orta", ""],
-      [190, "مُسْتَرْقَبِين", "mustarqabīn", "gözetlemeyi istenenler", "orta", ""],
-      [191, "مُسْتَرْقَبَات", "mustarqabāt", "gözetlemeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَرْقَب", "mustarqab", "gözetlemesi istenen", "orta", ""],
+      [186, "مُسْتَرْقَبَة", "mustarqaba", "gözetlemesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَرْقَبَان", "mustarqabān", "gözetlemesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَرْقَبَتَان", "mustarqabatān", "gözetlemesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَرْقَبُون", "mustarqabūn", "gözetlemesi istenenler", "orta", ""],
+      [190, "مُسْتَرْقَبِين", "mustarqabīn", "gözetlemesi istenenler", "orta", ""],
+      [191, "مُسْتَرْقَبَات", "mustarqabāt", "gözetlemesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَرْقَب", "mustarqab", "gözetleme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَرْقَب", "mustarqab", "gözetlemeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِرْقِيبَاب", "irqībāb", "iyice gözetleleşme", "kontrol", ""]
+      [507, "اِرْقِيبَاب", "irqībāb", "büsbütün gözetleme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُرْقَابّ", "murqābb", "iyice gözetleleşen", "kontrol", ""],
-      [509, "مُرْقَابَّة", "murqābba", "iyice gözetleleşen (dişi)", "kontrol", ""],
-      [510, "مُرْقَابَّان", "murqābbān", "iki iyice gözetleleşen", "kontrol", ""],
-      [511, "مُرْقَابَّتَان", "murqābbatān", "iki iyice gözetleleşen (dişi)", "kontrol", ""],
-      [512, "مُرْقَابُّون", "murqābbūn", "iyice gözetleleşenler", "kontrol", ""],
-      [513, "مُرْقَابِّين", "murqābbīn", "iyice gözetleleşenler", "kontrol", ""],
-      [514, "مُرْقَابَّات", "murqābbāt", "iyice gözetleleşenler (dişi)", "kontrol", ""]
+      [508, "مُرْقَابّ", "murqābb", "büsbütün gözetleyen", "kontrol", ""],
+      [509, "مُرْقَابَّة", "murqābba", "büsbütün gözetleyen (müennes)", "kontrol", ""],
+      [510, "مُرْقَابَّان", "murqābbān", "büsbütün gözetleyen (iki)", "kontrol", ""],
+      [511, "مُرْقَابَّتَان", "murqābbatān", "büsbütün gözetleyen (iki, müennes)", "kontrol", ""],
+      [512, "مُرْقَابُّون", "murqābbūn", "büsbütün gözetleyenler", "kontrol", ""],
+      [513, "مُرْقَابِّين", "murqābbīn", "büsbütün gözetleyenler", "kontrol", ""],
+      [514, "مُرْقَابَّات", "murqābbāt", "büsbütün gözetleyenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِرْقِوْقَاب", "irqiwqāb", "aşırı gözetleme", "orta", ""]
@@ -339,61 +360,61 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "رَاقِب", "rāqib", "gözetleyen", "kural", ""],
-      [214, "رَاقِبَة", "rāqiba", "gözetleyen (dişi)", "kural", ""],
-      [215, "رَاقِبَان", "rāqibān", "iki gözetleyen", "kural", ""],
-      [216, "رَاقِبَتَان", "rāqibatān", "iki gözetleyen (dişi)", "kural", ""],
+      [214, "رَاقِبَة", "rāqiba", "gözetleyen (müennes)", "kural", ""],
+      [215, "رَاقِبَان", "rāqibān", "gözetleyen (iki)", "kural", ""],
+      [216, "رَاقِبَتَان", "rāqibatān", "gözetleyen (iki, müennes)", "kural", ""],
       [217, "رَاقِبُون", "rāqibūn", "gözetleyenler", "kural", ""],
       [218, "رَاقِبِين", "rāqibīn", "gözetleyenler", "kural", ""],
-      [219, "رَاقِبَات", "rāqibāt", "gözetleyenler (dişi)", "kural", ""]
+      [219, "رَاقِبَات", "rāqibāt", "gözetleyenler (müennes)", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَرْقُوب", "marqūb", "gözetlenmiş", "kural", ""],
-      [221, "مَرْقُوبَة", "marqūba", "gözetlenmiş (dişi)", "kural", ""],
-      [222, "مَرْقُوبَان", "marqūbān", "iki gözetlenmiş", "kural", ""],
-      [223, "مَرْقُوبَتَان", "marqūbatān", "iki gözetlenmiş (dişi)", "kural", ""],
-      [224, "مَرْقُوبُون", "marqūbūn", "gözetlenmişler", "kural", ""],
-      [225, "مَرْقُوبِين", "marqūbīn", "gözetlenmişler", "kural", ""],
-      [226, "مَرْقُوبَات", "marqūbāt", "gözetlenmişler (dişi)", "kural", ""]
+      [220, "مَرْقُوب", "marqūb", "gözetlenen", "kural", ""],
+      [221, "مَرْقُوبَة", "marqūba", "gözetlenen (müennes)", "kural", ""],
+      [222, "مَرْقُوبَان", "marqūbān", "gözetlenen (iki)", "kural", ""],
+      [223, "مَرْقُوبَتَان", "marqūbatān", "gözetlenen (iki, müennes)", "kural", ""],
+      [224, "مَرْقُوبُون", "marqūbūn", "gözetlenenler", "kural", ""],
+      [225, "مَرْقُوبِين", "marqūbīn", "gözetlenenler", "kural", ""],
+      [226, "مَرْقُوبَات", "marqūbāt", "gözetlenenler (müennes)", "kural", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَرْقَب", "marqab", "gözetleme (yeri/zamanı)", "orta", ""],
-      [228, "مَرْقَبَان", "marqabān", "iki gözetleme (yeri/zamanı)", "orta", ""],
-      [229, "مَرْقِب", "marqib", "gözetleme (yeri/zamanı)", "orta", ""],
-      [230, "مَرْقِبَان", "marqibān", "iki gözetleme (yeri/zamanı)", "orta", ""],
-      [231, "مَرْقَبَة", "marqaba", "gözetleme (yeri/zamanı)", "orta", ""],
-      [232, "مَرْقَبَتَان", "marqabatān", "iki gözetleme (yeri/zamanı)", "orta", ""],
-      [233, "مَرْقِبَة", "marqiba", "gözetleme (yeri/zamanı)", "orta", ""],
-      [234, "مَرْقِبَتَان", "marqibatān", "iki gözetleme (yeri/zamanı)", "orta", ""],
-      [247, "مَرْقُبَة", "marquba", "gözetleme (yeri/zamanı)", "orta", ""],
-      [248, "مَرْقُبَتَان", "marqubatān", "iki gözetleme (yeri/zamanı)", "orta", ""]
+      [227, "مَرْقَب", "marqab", "gözetleme yeri, vakti", "orta", ""],
+      [228, "مَرْقَبَان", "marqabān", "gözetleme yeri, vakti (iki)", "orta", ""],
+      [229, "مَرْقِب", "marqib", "gözetleme yeri, vakti", "orta", ""],
+      [230, "مَرْقِبَان", "marqibān", "gözetleme yeri, vakti (iki)", "orta", ""],
+      [231, "مَرْقَبَة", "marqaba", "gözetlemenin bol olduğu yer", "orta", ""],
+      [232, "مَرْقَبَتَان", "marqabatān", "gözetlemenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَرْقِبَة", "marqiba", "gözetlemenin bol olduğu yer", "orta", ""],
+      [234, "مَرْقِبَتَان", "marqibatān", "gözetlemenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَرْقُبَة", "marquba", "gözetleme yeri, vakti", "orta", ""],
+      [248, "مَرْقُبَتَان", "marqubatān", "gözetleme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِرْقَب", "mirqab", "gözetlemeye yarayan araç", "orta", ""],
-      [236, "مِرْقَبَان", "mirqabān", "iki gözetlemeye yarayan araç", "orta", ""],
-      [237, "مِرْقَاب", "mirqāb", "gözetlemeye yarayan araç", "orta", ""],
-      [238, "مِرْقَابَان", "mirqābān", "iki gözetlemeye yarayan araç", "orta", ""],
-      [239, "مِرْقَبَة", "mirqaba", "gözetlemeye yarayan araç", "orta", ""],
-      [240, "مِرْقَبَتَان", "mirqabatān", "iki gözetlemeye yarayan araç", "orta", ""]
+      [235, "مِرْقَب", "mirqab", "gözetleme âleti", "orta", ""],
+      [236, "مِرْقَبَان", "mirqabān", "gözetleme âleti (iki)", "orta", ""],
+      [237, "مِرْقَاب", "mirqāb", "gözetleme âleti", "orta", ""],
+      [238, "مِرْقَابَان", "mirqābān", "gözetleme âleti (iki)", "orta", ""],
+      [239, "مِرْقَبَة", "mirqaba", "gözetleme âleti", "orta", ""],
+      [240, "مِرْقَبَتَان", "mirqabatān", "gözetleme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَرْقَب", "ʾarqab", "daha çok gözetleyen", "orta", ""],
-      [242, "أَرْقَبَان", "ʾarqabān", "iki daha çok gözetleyen", "orta", ""]
+      [242, "أَرْقَبَان", "ʾarqabān", "daha çok gözetleyen (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "رُقْبَى", "ruqbā", "daha çok gözetleyen", "orta", ""],
-      [244, "رُقْبَيَان", "ruqbayān", "iki daha çok gözetleyen", "orta", ""],
+      [244, "رُقْبَيَان", "ruqbayān", "daha çok gözetleyen (iki)", "orta", ""],
       [245, "رَقْبَاء", "raqbāʾ", "daha çok gözetleyen", "orta", ""],
-      [246, "رَقْبَاآن", "raqbāʾān", "iki daha çok gözetleyen", "orta", ""]
+      [246, "رَقْبَاآن", "raqbāʾān", "daha çok gözetleyen (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "رُقَيْب", "ruqayb", "küçük gözetleme", "orta", ""],
-      [250, "رُقَيْبَان", "ruqaybān", "iki küçük gözetleme", "orta", ""],
-      [251, "رُقَيْبَة", "ruqayba", "küçük gözetleme", "orta", ""],
-      [252, "رُقَيْبَتَان", "ruqaybatān", "iki küçük gözetleme", "orta", ""]
+      [249, "رُقَيْب", "ruqayb", "azıcık gözetleme", "orta", ""],
+      [250, "رُقَيْبَان", "ruqaybān", "azıcık gözetleme (iki)", "orta", ""],
+      [251, "رُقَيْبَة", "ruqayba", "azıcık gözetleme", "orta", ""],
+      [252, "رُقَيْبَتَان", "ruqaybatān", "azıcık gözetleme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَرْقَب", "marqab", "gözetleme", "kural", ""],
-      [254, "مَرْقَبَان", "marqabān", "iki gözetleme", "kural", ""]
+      [254, "مَرْقَبَان", "marqabān", "gözetleme (iki)", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
       [
@@ -404,7 +425,7 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [256, "رَقْبَتَان", "raqbatān", "iki bir kere gözetleme", "orta", ""]
+      [256, "رَقْبَتَان", "raqbatān", "bir kere gözetleme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [
@@ -415,112 +436,112 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [258, "رِقْبَتَان", "riqbatān", "iki gözetleme tarzı", "orta", ""]
+      [258, "رِقْبَتَان", "riqbatān", "gözetleme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "رَقِيب", "raqīb", "sürekli gözetleyen", "orta", "Vikisözlük: watchman"],
-      [260, "رَقِيبَة", "raqība", "sürekli gözetleyen (dişi)", "orta", ""],
-      [261, "رَقِيبَان", "raqībān", "iki sürekli gözetleyen", "orta", ""],
-      [262, "رَقِيبَتَان", "raqībatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [263, "رَقِيبُون", "raqībūn", "sürekli gözetleyenler", "orta", ""],
-      [264, "رَقِيبِين", "raqībīn", "sürekli gözetleyenler", "orta", ""],
-      [265, "رَقِيبَات", "raqībāt", "sürekli gözetleyenler (dişi)", "orta", ""],
+      [259, "رَقِيب", "raqīb", "gözetleyen", "kuran", "Vikisözlük: watchman"],
+      [260, "رَقِيبَة", "raqība", "her daim gözetleyen (müennes)", "orta", ""],
+      [261, "رَقِيبَان", "raqībān", "her daim gözetleyen (iki)", "orta", ""],
+      [262, "رَقِيبَتَان", "raqībatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [263, "رَقِيبُون", "raqībūn", "her daim gözetleyenler", "orta", ""],
+      [264, "رَقِيبِين", "raqībīn", "her daim gözetleyenler", "orta", ""],
+      [265, "رَقِيبَات", "raqībāt", "her daim gözetleyenler (müennes)", "orta", ""],
       [
         266,
         "رَقُوب",
         "raqūb",
-        "sürekli gözetleyen",
+        "her daim gözetleyen",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [267, "رَقُوبَة", "raqūba", "sürekli gözetleyen (dişi)", "orta", ""],
-      [268, "رَقُوبَان", "raqūbān", "iki sürekli gözetleyen", "orta", ""],
-      [269, "رَقُوبَتَان", "raqūbatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [270, "رَقُوبُون", "raqūbūn", "sürekli gözetleyenler", "orta", ""],
-      [271, "رَقُوبِين", "raqūbīn", "sürekli gözetleyenler", "orta", ""],
-      [272, "رَقُوبَات", "raqūbāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [273, "رَقِب", "raqib", "sürekli gözetleyen", "orta", ""],
-      [274, "رَقِبَة", "raqiba", "sürekli gözetleyen (dişi)", "orta", ""],
-      [275, "رَقِبَان", "raqibān", "iki sürekli gözetleyen", "orta", ""],
-      [276, "رَقِبَتَان", "raqibatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [277, "رَقِبُون", "raqibūn", "sürekli gözetleyenler", "orta", ""],
-      [278, "رَقِبِين", "raqibīn", "sürekli gözetleyenler", "orta", ""],
-      [279, "رَقِبَات", "raqibāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [280, "رَقُب", "raqub", "sürekli gözetleyen", "orta", ""],
-      [281, "رَقُبَة", "raquba", "sürekli gözetleyen (dişi)", "orta", ""],
-      [282, "رَقُبَان", "raqubān", "iki sürekli gözetleyen", "orta", ""],
-      [283, "رَقُبَتَان", "raqubatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [284, "رَقُبُون", "raqubūn", "sürekli gözetleyenler", "orta", ""],
-      [285, "رَقُبِين", "raqubīn", "sürekli gözetleyenler", "orta", ""],
-      [286, "رَقُبَات", "raqubāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [287, "رَقَب", "raqab", "sürekli gözetleyen", "orta", ""],
-      [288, "رَقَبَة", "raqaba", "sürekli gözetleyen (dişi)", "orta", "Vikisözlük: neck"],
-      [289, "رَقَبَان", "raqabān", "iki sürekli gözetleyen", "orta", ""],
-      [290, "رَقَبَتَان", "raqabatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [291, "رَقَبُون", "raqabūn", "sürekli gözetleyenler", "orta", ""],
-      [292, "رَقَبِين", "raqabīn", "sürekli gözetleyenler", "orta", ""],
-      [293, "رَقَبَات", "raqabāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [294, "رَقْب", "raqb", "sürekli gözetleyen", "orta", ""],
+      [267, "رَقُوبَة", "raqūba", "her daim gözetleyen (müennes)", "orta", ""],
+      [268, "رَقُوبَان", "raqūbān", "her daim gözetleyen (iki)", "orta", ""],
+      [269, "رَقُوبَتَان", "raqūbatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [270, "رَقُوبُون", "raqūbūn", "her daim gözetleyenler", "orta", ""],
+      [271, "رَقُوبِين", "raqūbīn", "her daim gözetleyenler", "orta", ""],
+      [272, "رَقُوبَات", "raqūbāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [273, "رَقِب", "raqib", "her daim gözetleyen", "orta", ""],
+      [274, "رَقِبَة", "raqiba", "her daim gözetleyen (müennes)", "orta", ""],
+      [275, "رَقِبَان", "raqibān", "her daim gözetleyen (iki)", "orta", ""],
+      [276, "رَقِبَتَان", "raqibatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [277, "رَقِبُون", "raqibūn", "her daim gözetleyenler", "orta", ""],
+      [278, "رَقِبِين", "raqibīn", "her daim gözetleyenler", "orta", ""],
+      [279, "رَقِبَات", "raqibāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [280, "رَقُب", "raqub", "her daim gözetleyen", "orta", ""],
+      [281, "رَقُبَة", "raquba", "her daim gözetleyen (müennes)", "orta", ""],
+      [282, "رَقُبَان", "raqubān", "her daim gözetleyen (iki)", "orta", ""],
+      [283, "رَقُبَتَان", "raqubatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [284, "رَقُبُون", "raqubūn", "her daim gözetleyenler", "orta", ""],
+      [285, "رَقُبِين", "raqubīn", "her daim gözetleyenler", "orta", ""],
+      [286, "رَقُبَات", "raqubāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [287, "رَقَب", "raqab", "her daim gözetleyen", "orta", ""],
+      [288, "رَقَبَة", "raqaba", "boyun, köle", "kuran", "Vikisözlük: neck"],
+      [289, "رَقَبَان", "raqabān", "her daim gözetleyen (iki)", "orta", ""],
+      [290, "رَقَبَتَان", "raqabatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [291, "رَقَبُون", "raqabūn", "her daim gözetleyenler", "orta", ""],
+      [292, "رَقَبِين", "raqabīn", "her daim gözetleyenler", "orta", ""],
+      [293, "رَقَبَات", "raqabāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [294, "رَقْب", "raqb", "her daim gözetleyen", "orta", ""],
       [
         295,
         "رَقْبَة",
         "raqba",
-        "sürekli gözetleyen (dişi)",
+        "her daim gözetleyen (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [296, "رَقْبَان", "raqbān", "iki sürekli gözetleyen", "orta", ""],
-      [297, "رَقْبَتَان", "raqbatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [298, "رَقْبُون", "raqbūn", "sürekli gözetleyenler", "orta", ""],
-      [299, "رَقْبِين", "raqbīn", "sürekli gözetleyenler", "orta", ""],
-      [300, "رَقْبَات", "raqbāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [301, "رُقُب", "ruqub", "sürekli gözetleyen", "orta", ""],
-      [302, "رُقُبَة", "ruquba", "sürekli gözetleyen (dişi)", "orta", ""],
-      [303, "رُقُبَان", "ruqubān", "iki sürekli gözetleyen", "orta", ""],
-      [304, "رُقُبَتَان", "ruqubatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [305, "رُقُبُون", "ruqubūn", "sürekli gözetleyenler", "orta", ""],
-      [306, "رُقُبِين", "ruqubīn", "sürekli gözetleyenler", "orta", ""],
-      [307, "رُقُبَات", "ruqubāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [308, "رَقْبَان", "raqbān", "sürekli gözetleyen", "orta", ""],
-      [309, "رَقْبَانَة", "raqbāna", "sürekli gözetleyen (dişi)", "orta", ""],
-      [310, "رَقْبَانَان", "raqbānān", "iki sürekli gözetleyen", "orta", ""],
-      [311, "رَقْبَانَتَان", "raqbānatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [312, "رَقْبَانُون", "raqbānūn", "sürekli gözetleyenler", "orta", ""],
-      [313, "رَقْبَانِين", "raqbānīn", "sürekli gözetleyenler", "orta", ""],
-      [314, "رَقْبَانَات", "raqbānāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [315, "رُقَاب", "ruqāb", "sürekli gözetleyen", "orta", ""],
-      [316, "رُقَابَة", "ruqāba", "sürekli gözetleyen (dişi)", "orta", ""],
-      [317, "رُقَابَان", "ruqābān", "iki sürekli gözetleyen", "orta", ""],
-      [318, "رُقَابَتَان", "ruqābatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [319, "رُقَابُون", "ruqābūn", "sürekli gözetleyenler", "orta", ""],
-      [320, "رُقَابِين", "ruqābīn", "sürekli gözetleyenler", "orta", ""],
-      [321, "رُقَابَات", "ruqābāt", "sürekli gözetleyenler (dişi)", "orta", ""],
-      [322, "رَقَاب", "raqāb", "sürekli gözetleyen", "orta", ""],
+      [296, "رَقْبَان", "raqbān", "her daim gözetleyen (iki)", "orta", ""],
+      [297, "رَقْبَتَان", "raqbatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [298, "رَقْبُون", "raqbūn", "her daim gözetleyenler", "orta", ""],
+      [299, "رَقْبِين", "raqbīn", "her daim gözetleyenler", "orta", ""],
+      [300, "رَقْبَات", "raqbāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [301, "رُقُب", "ruqub", "her daim gözetleyen", "orta", ""],
+      [302, "رُقُبَة", "ruquba", "her daim gözetleyen (müennes)", "orta", ""],
+      [303, "رُقُبَان", "ruqubān", "her daim gözetleyen (iki)", "orta", ""],
+      [304, "رُقُبَتَان", "ruqubatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [305, "رُقُبُون", "ruqubūn", "her daim gözetleyenler", "orta", ""],
+      [306, "رُقُبِين", "ruqubīn", "her daim gözetleyenler", "orta", ""],
+      [307, "رُقُبَات", "ruqubāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [308, "رَقْبَان", "raqbān", "her daim gözetleyen", "orta", ""],
+      [309, "رَقْبَانَة", "raqbāna", "her daim gözetleyen (müennes)", "orta", ""],
+      [310, "رَقْبَانَان", "raqbānān", "her daim gözetleyen (iki)", "orta", ""],
+      [311, "رَقْبَانَتَان", "raqbānatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [312, "رَقْبَانُون", "raqbānūn", "her daim gözetleyenler", "orta", ""],
+      [313, "رَقْبَانِين", "raqbānīn", "her daim gözetleyenler", "orta", ""],
+      [314, "رَقْبَانَات", "raqbānāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [315, "رُقَاب", "ruqāb", "her daim gözetleyen", "orta", ""],
+      [316, "رُقَابَة", "ruqāba", "her daim gözetleyen (müennes)", "orta", ""],
+      [317, "رُقَابَان", "ruqābān", "her daim gözetleyen (iki)", "orta", ""],
+      [318, "رُقَابَتَان", "ruqābatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [319, "رُقَابُون", "ruqābūn", "her daim gözetleyenler", "orta", ""],
+      [320, "رُقَابِين", "ruqābīn", "her daim gözetleyenler", "orta", ""],
+      [321, "رُقَابَات", "ruqābāt", "her daim gözetleyenler (müennes)", "orta", ""],
+      [322, "رَقَاب", "raqāb", "her daim gözetleyen", "orta", ""],
       [
         323,
         "رَقَابَة",
         "raqāba",
-        "sürekli gözetleyen (dişi)",
+        "her daim gözetleyen (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [324, "رَقَابَان", "raqābān", "iki sürekli gözetleyen", "orta", ""],
-      [325, "رَقَابَتَان", "raqābatān", "iki sürekli gözetleyen (dişi)", "orta", ""],
-      [326, "رَقَابُون", "raqābūn", "sürekli gözetleyenler", "orta", ""],
-      [327, "رَقَابِين", "raqābīn", "sürekli gözetleyenler", "orta", ""],
-      [328, "رَقَابَات", "raqābāt", "sürekli gözetleyenler (dişi)", "orta", ""]
+      [324, "رَقَابَان", "raqābān", "her daim gözetleyen (iki)", "orta", ""],
+      [325, "رَقَابَتَان", "raqābatān", "her daim gözetleyen (iki, müennes)", "orta", ""],
+      [326, "رَقَابُون", "raqābūn", "her daim gözetleyenler", "orta", ""],
+      [327, "رَقَابِين", "raqābīn", "her daim gözetleyenler", "orta", ""],
+      [328, "رَقَابَات", "raqābāt", "her daim gözetleyenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "رَقَّاب", "raqqāb", "çok gözetleyen", "orta", ""],
-      [330, "رَقَّابَة", "raqqāba", "çok gözetleyen (dişi)", "orta", ""],
-      [331, "رَقَّابَان", "raqqābān", "iki çok gözetleyen", "orta", ""],
-      [332, "رَقَّابَتَان", "raqqābatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [333, "رَقَّابُون", "raqqābūn", "çok gözetleyenler", "orta", ""],
-      [334, "رَقَّابِين", "raqqābīn", "çok gözetleyenler", "orta", ""],
-      [335, "رَقَّابَات", "raqqābāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [336, "رَقَّابَة", "raqqāba", "çok gözetleyen", "orta", ""],
-      [337, "رَقَّابَتَان", "raqqābatān", "iki çok gözetleyen", "orta", ""],
-      [338, "رَقَّابَات", "raqqābāt", "çok gözetleyenler (dişi)", "orta", ""],
+      [329, "رَقَّاب", "raqqāb", "işi gözetleme olan", "orta", ""],
+      [330, "رَقَّابَة", "raqqāba", "işi gözetleme olan (müennes)", "orta", ""],
+      [331, "رَقَّابَان", "raqqābān", "işi gözetleme olan (iki)", "orta", ""],
+      [332, "رَقَّابَتَان", "raqqābatān", "işi gözetleme olan (iki, müennes)", "orta", ""],
+      [333, "رَقَّابُون", "raqqābūn", "işi gözetleme olanlar", "orta", ""],
+      [334, "رَقَّابِين", "raqqābīn", "işi gözetleme olanlar", "orta", ""],
+      [335, "رَقَّابَات", "raqqābāt", "işi gözetleme olanlar (müennes)", "orta", ""],
+      [336, "رَقَّابَة", "raqqāba", "pek çok gözetleyen", "orta", ""],
+      [337, "رَقَّابَتَان", "raqqābatān", "pek çok gözetleyen (iki)", "orta", ""],
+      [338, "رَقَّابَات", "raqqābāt", "pek çok gözetleyenler (müennes)", "orta", ""],
       [
         339,
         "رَقُوب",
@@ -529,76 +550,76 @@
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [340, "رَقُوبَة", "raqūba", "çok gözetleyen (dişi)", "orta", ""],
-      [341, "رَقُوبَان", "raqūbān", "iki çok gözetleyen", "orta", ""],
-      [342, "رَقُوبَتَان", "raqūbatān", "iki çok gözetleyen (dişi)", "orta", ""],
+      [340, "رَقُوبَة", "raqūba", "çok gözetleyen (müennes)", "orta", ""],
+      [341, "رَقُوبَان", "raqūbān", "çok gözetleyen (iki)", "orta", ""],
+      [342, "رَقُوبَتَان", "raqūbatān", "çok gözetleyen (iki, müennes)", "orta", ""],
       [343, "رَقُوبُون", "raqūbūn", "çok gözetleyenler", "orta", ""],
       [344, "رَقُوبِين", "raqūbīn", "çok gözetleyenler", "orta", ""],
-      [345, "رَقُوبَات", "raqūbāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [346, "رَقُّوب", "raqqūb", "çok gözetleyen", "orta", ""],
-      [347, "رَقُّوبَة", "raqqūba", "çok gözetleyen (dişi)", "orta", ""],
-      [348, "رَقُّوبَان", "raqqūbān", "iki çok gözetleyen", "orta", ""],
-      [349, "رَقُّوبَتَان", "raqqūbatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [350, "رَقُّوبُون", "raqqūbūn", "çok gözetleyenler", "orta", ""],
-      [351, "رَقُّوبِين", "raqqūbīn", "çok gözetleyenler", "orta", ""],
-      [352, "رَقُّوبَات", "raqqūbāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [353, "رِقِّيب", "riqqīb", "çok gözetleyen", "orta", ""],
-      [354, "رِقِّيبَة", "riqqība", "çok gözetleyen (dişi)", "orta", ""],
-      [355, "رِقِّيبَان", "riqqībān", "iki çok gözetleyen", "orta", ""],
-      [356, "رِقِّيبَتَان", "riqqībatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [357, "رِقِّيبُون", "riqqībūn", "çok gözetleyenler", "orta", ""],
-      [358, "رِقِّيبِين", "riqqībīn", "çok gözetleyenler", "orta", ""],
-      [359, "رِقِّيبَات", "riqqībāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [360, "رُقَّاب", "ruqqāb", "çok gözetleyen", "orta", ""],
-      [361, "رُقَّابَة", "ruqqāba", "çok gözetleyen (dişi)", "orta", ""],
-      [362, "رُقَّابَان", "ruqqābān", "iki çok gözetleyen", "orta", ""],
-      [363, "رُقَّابَتَان", "ruqqābatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [364, "رُقَّابُون", "ruqqābūn", "çok gözetleyenler", "orta", ""],
-      [365, "رُقَّابِين", "ruqqābīn", "çok gözetleyenler", "orta", ""],
-      [366, "رُقَّابَات", "ruqqābāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [367, "مِرْقَاب", "mirqāb", "çok gözetleyen", "orta", ""],
-      [368, "مِرْقَابَة", "mirqāba", "çok gözetleyen (dişi)", "orta", ""],
-      [369, "مِرْقَابَان", "mirqābān", "iki çok gözetleyen", "orta", ""],
-      [370, "مِرْقَابَتَان", "mirqābatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [371, "مِرْقَابُون", "mirqābūn", "çok gözetleyenler", "orta", ""],
-      [372, "مِرْقَابِين", "mirqābīn", "çok gözetleyenler", "orta", ""],
-      [373, "مِرْقَابَات", "mirqābāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [374, "مِرْقِيب", "mirqīb", "çok gözetleyen", "orta", ""],
-      [375, "مِرْقِيبَة", "mirqība", "çok gözetleyen (dişi)", "orta", ""],
-      [376, "مِرْقِيبَان", "mirqībān", "iki çok gözetleyen", "orta", ""],
-      [377, "مِرْقِيبَتَان", "mirqībatān", "iki çok gözetleyen (dişi)", "orta", ""],
-      [378, "مِرْقِيبُون", "mirqībūn", "çok gözetleyenler", "orta", ""],
-      [379, "مِرْقِيبِين", "mirqībīn", "çok gözetleyenler", "orta", ""],
-      [380, "مِرْقِيبَات", "mirqībāt", "çok gözetleyenler (dişi)", "orta", ""],
-      [381, "رَقِيب", "raqīb", "çok gözetleyen", "orta", "Vikisözlük: watchman"],
-      [382, "رَقِيبَة", "raqība", "çok gözetleyen (dişi)", "orta", ""],
-      [383, "رَقِيبَان", "raqībān", "iki çok gözetleyen", "orta", ""],
-      [384, "رَقِيبَتَان", "raqībatān", "iki çok gözetleyen (dişi)", "orta", ""],
+      [345, "رَقُوبَات", "raqūbāt", "çok gözetleyenler (müennes)", "orta", ""],
+      [346, "رَقُّوب", "raqqūb", "pek çok gözetleyen", "orta", ""],
+      [347, "رَقُّوبَة", "raqqūba", "pek çok gözetleyen (müennes)", "orta", ""],
+      [348, "رَقُّوبَان", "raqqūbān", "pek çok gözetleyen (iki)", "orta", ""],
+      [349, "رَقُّوبَتَان", "raqqūbatān", "pek çok gözetleyen (iki, müennes)", "orta", ""],
+      [350, "رَقُّوبُون", "raqqūbūn", "pek çok gözetleyenler", "orta", ""],
+      [351, "رَقُّوبِين", "raqqūbīn", "pek çok gözetleyenler", "orta", ""],
+      [352, "رَقُّوبَات", "raqqūbāt", "pek çok gözetleyenler (müennes)", "orta", ""],
+      [353, "رِقِّيب", "riqqīb", "gözetlemede aşırı giden", "orta", ""],
+      [354, "رِقِّيبَة", "riqqība", "gözetlemede aşırı giden (müennes)", "orta", ""],
+      [355, "رِقِّيبَان", "riqqībān", "gözetlemede aşırı giden (iki)", "orta", ""],
+      [356, "رِقِّيبَتَان", "riqqībatān", "gözetlemede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "رِقِّيبُون", "riqqībūn", "gözetlemede aşırı gidenler", "orta", ""],
+      [358, "رِقِّيبِين", "riqqībīn", "gözetlemede aşırı gidenler", "orta", ""],
+      [359, "رِقِّيبَات", "riqqībāt", "gözetlemede aşırı gidenler (müennes)", "orta", ""],
+      [360, "رُقَّاب", "ruqqāb", "son derece gözetleyen", "orta", ""],
+      [361, "رُقَّابَة", "ruqqāba", "son derece gözetleyen (müennes)", "orta", ""],
+      [362, "رُقَّابَان", "ruqqābān", "son derece gözetleyen (iki)", "orta", ""],
+      [363, "رُقَّابَتَان", "ruqqābatān", "son derece gözetleyen (iki, müennes)", "orta", ""],
+      [364, "رُقَّابُون", "ruqqābūn", "son derece gözetleyenler", "orta", ""],
+      [365, "رُقَّابِين", "ruqqābīn", "son derece gözetleyenler", "orta", ""],
+      [366, "رُقَّابَات", "ruqqābāt", "son derece gözetleyenler (müennes)", "orta", ""],
+      [367, "مِرْقَاب", "mirqāb", "gözetlemeyi âdet edinmiş", "orta", ""],
+      [368, "مِرْقَابَة", "mirqāba", "gözetlemeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِرْقَابَان", "mirqābān", "gözetlemeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِرْقَابَتَان", "mirqābatān", "gözetlemeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِرْقَابُون", "mirqābūn", "gözetlemeyi âdet edinmişler", "orta", ""],
+      [372, "مِرْقَابِين", "mirqābīn", "gözetlemeyi âdet edinmişler", "orta", ""],
+      [373, "مِرْقَابَات", "mirqābāt", "gözetlemeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِرْقِيب", "mirqīb", "gözetlemeye düşkün", "orta", ""],
+      [375, "مِرْقِيبَة", "mirqība", "gözetlemeye düşkün (müennes)", "orta", ""],
+      [376, "مِرْقِيبَان", "mirqībān", "gözetlemeye düşkün (iki)", "orta", ""],
+      [377, "مِرْقِيبَتَان", "mirqībatān", "gözetlemeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِرْقِيبُون", "mirqībūn", "gözetlemeye düşkünler", "orta", ""],
+      [379, "مِرْقِيبِين", "mirqībīn", "gözetlemeye düşkünler", "orta", ""],
+      [380, "مِرْقِيبَات", "mirqībāt", "gözetlemeye düşkünler (müennes)", "orta", ""],
+      [381, "رَقِيب", "raqīb", "gözetleyen", "kuran", "Vikisözlük: watchman"],
+      [382, "رَقِيبَة", "raqība", "çok gözetleyen (müennes)", "orta", ""],
+      [383, "رَقِيبَان", "raqībān", "çok gözetleyen (iki)", "orta", ""],
+      [384, "رَقِيبَتَان", "raqībatān", "çok gözetleyen (iki, müennes)", "orta", ""],
       [385, "رَقِيبُون", "raqībūn", "çok gözetleyenler", "orta", ""],
       [386, "رَقِيبِين", "raqībīn", "çok gözetleyenler", "orta", ""],
-      [387, "رَقِيبَات", "raqībāt", "çok gözetleyenler (dişi)", "orta", ""],
+      [387, "رَقِيبَات", "raqībāt", "çok gözetleyenler (müennes)", "orta", ""],
       [388, "رَقَّب", "raqqab", "çok gözetleyen", "orta", ""],
-      [389, "رَقَّبَة", "raqqaba", "çok gözetleyen (dişi)", "orta", ""],
-      [390, "رَقَّبَان", "raqqabān", "iki çok gözetleyen", "orta", ""],
-      [391, "رَقَّبَتَان", "raqqabatān", "iki çok gözetleyen (dişi)", "orta", ""],
+      [389, "رَقَّبَة", "raqqaba", "çok gözetleyen (müennes)", "orta", ""],
+      [390, "رَقَّبَان", "raqqabān", "çok gözetleyen (iki)", "orta", ""],
+      [391, "رَقَّبَتَان", "raqqabatān", "çok gözetleyen (iki, müennes)", "orta", ""],
       [392, "رَقَّبُون", "raqqabūn", "çok gözetleyenler", "orta", ""],
       [393, "رَقَّبِين", "raqqabīn", "çok gözetleyenler", "orta", ""],
-      [394, "رَقَّبَات", "raqqabāt", "çok gözetleyenler (dişi)", "orta", ""]
+      [394, "رَقَّبَات", "raqqabāt", "çok gözetleyenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "رَقْبِيّ", "raqbiyy", "gözetlemeye ilgili", "orta", ""],
-      [397, "رَقَبِيّ", "raqabiyy", "gözetlemeye ilgili", "orta", ""],
-      [399, "رِقْبِيّ", "riqbiyy", "gözetlemeye ilgili", "orta", ""],
-      [401, "رُقْبِيّ", "ruqbiyy", "gözetlemeye ilgili", "orta", ""],
-      [403, "رِقَابِيّ", "riqābiyy", "gözetlemeye ilgili", "orta", ""],
-      [405, "رَاقِبِيّ", "rāqibiyy", "gözetlemeye ilgili", "orta", ""],
-      [407, "مَرْقُوبِيّ", "marqūbiyy", "gözetlemeye ilgili", "orta", ""],
-      [409, "رَقِيبِيّ", "raqībiyy", "gözetlemeye ilgili", "orta", ""],
-      [411, "مَرْقَبِيّ", "marqabiyy", "gözetlemeye ilgili", "orta", ""],
-      [413, "تَرْقِيبِيّ", "tarqībiyy", "gözetlemeye ilgili", "orta", ""],
-      [415, "تَرَاقُبِيّ", "tarāqubiyy", "gözetlemeye ilgili", "orta", ""],
-      [417, "إِرْقَابِيّ", "ʾirqābiyy", "gözetlemeye ilgili", "orta", ""],
-      [419, "اِرْتِقَابِيّ", "irtiqābiyy", "gözetlemeye ilgili", "orta", ""]
+      [395, "رَقْبِيّ", "raqbiyy", "gözetleme ile ilgili", "orta", ""],
+      [397, "رَقَبِيّ", "raqabiyy", "gözetleme ile ilgili", "orta", ""],
+      [399, "رِقْبِيّ", "riqbiyy", "gözetleme ile ilgili", "orta", ""],
+      [401, "رُقْبِيّ", "ruqbiyy", "gözetleme ile ilgili", "orta", ""],
+      [403, "رِقَابِيّ", "riqābiyy", "gözetleme ile ilgili", "orta", ""],
+      [405, "رَاقِبِيّ", "rāqibiyy", "gözetleme ile ilgili", "orta", ""],
+      [407, "مَرْقُوبِيّ", "marqūbiyy", "gözetleme ile ilgili", "orta", ""],
+      [409, "رَقِيبِيّ", "raqībiyy", "gözetleme ile ilgili", "orta", ""],
+      [411, "مَرْقَبِيّ", "marqabiyy", "gözetleme ile ilgili", "orta", ""],
+      [413, "تَرْقِيبِيّ", "tarqībiyy", "gözetleme ile ilgili", "orta", ""],
+      [415, "تَرَاقُبِيّ", "tarāqubiyy", "gözetleme ile ilgili", "orta", ""],
+      [417, "إِرْقَابِيّ", "ʾirqābiyy", "gözetleme ile ilgili", "orta", ""],
+      [419, "اِرْتِقَابِيّ", "irtiqābiyy", "gözetleme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "رَقْبِيَّة", "raqbiyya", "gözetleyenlik", "orta", ""],
@@ -641,109 +662,109 @@
       [429, "رِقْب", "riqb", "gözetleme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "رَاقُوب", "rāqūb", "gözetleyenler (topluluk adı)", "orta", ""],
-      [432, "رَقَبَة", "raqaba", "gözetleyenler (topluluk adı)", "orta", "Vikisözlük: neck"],
-      [433, "رُقَبَة", "ruqaba", "gözetleyenler (topluluk adı)", "orta", ""],
-      [434, "أُرْقُوبَة", "ʾurqūba", "gözetleyenler (topluluk adı)", "orta", ""],
-      [435, "رَوْقَب", "rawqab", "gözetleyenler (topluluk adı)", "orta", ""],
-      [437, "رَيْقَب", "rayqab", "gözetleyenler (topluluk adı)", "orta", ""],
-      [439, "رَقْب", "raqb", "gözetleyenler (topluluk adı)", "orta", ""],
-      [441, "رَقَب", "raqab", "gözetleyenler (topluluk adı)", "orta", ""],
-      [443, "رِقْب", "riqb", "gözetleyenler (topluluk adı)", "orta", ""],
-      [445, "رُقْب", "ruqb", "gözetleyenler (topluluk adı)", "orta", ""],
-      [447, "رَقِيب", "raqīb", "gözetleyenler (topluluk adı)", "orta", "Vikisözlük: watchman"],
-      [449, "رِقَب", "riqab", "gözetleyenler (topluluk adı)", "orta", ""],
-      [451, "رُقُب", "ruqub", "gözetleyenler (topluluk adı)", "orta", ""],
-      [453, "رَقَاب", "raqāb", "gözetleyenler (topluluk adı)", "orta", ""]
+      [430, "رَاقُوب", "rāqūb", "gözetleme türünden şey", "orta", ""],
+      [432, "رَقَبَة", "raqaba", "boyun, köle", "kuran", "Vikisözlük: neck"],
+      [433, "رُقَبَة", "ruqaba", "gözetleme türünden şey", "orta", ""],
+      [434, "أُرْقُوبَة", "ʾurqūba", "gözetleme türünden şey", "orta", ""],
+      [435, "رَوْقَب", "rawqab", "gözetleme türünden şey", "orta", ""],
+      [437, "رَيْقَب", "rayqab", "gözetleme türünden şey", "orta", ""],
+      [439, "رَقْب", "raqb", "gözetleme türünden şey", "orta", ""],
+      [441, "رَقَب", "raqab", "gözetleme türünden şey", "orta", ""],
+      [443, "رِقْب", "riqb", "gözetleme türünden şey", "orta", ""],
+      [445, "رُقْب", "ruqb", "gözetleme türünden şey", "orta", ""],
+      [447, "رَقِيب", "raqīb", "gözetleyen", "kuran", "Vikisözlük: watchman"],
+      [449, "رِقَب", "riqab", "gözetleme türünden şey", "orta", ""],
+      [451, "رُقُب", "ruqub", "gözetleme türünden şey", "orta", ""],
+      [453, "رَقَاب", "raqāb", "gözetleme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "رَاقُوبَة", "rāqūba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
-      [436, "رَوْقَبَة", "rawqaba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
-      [438, "رَيْقَبَة", "rayqaba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
+      [431, "رَاقُوبَة", "rāqūba", "gözetleme türünden bir tane", "orta", ""],
+      [436, "رَوْقَبَة", "rawqaba", "gözetleme türünden bir tane", "orta", ""],
+      [438, "رَيْقَبَة", "rayqaba", "gözetleme türünden bir tane", "orta", ""],
       [
         440,
         "رَقْبَة",
         "raqba",
-        "bir tane gözetleyenler (topluluk adı)",
+        "gözetleme türünden bir tane",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [442, "رَقَبَة", "raqaba", "bir tane gözetleyenler (topluluk adı)", "orta", "Vikisözlük: neck"],
+      [442, "رَقَبَة", "raqaba", "boyun, köle", "kuran", "Vikisözlük: neck"],
       [
         444,
         "رِقْبَة",
         "riqba",
-        "bir tane gözetleyenler (topluluk adı)",
+        "gözetleme türünden bir tane",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [446, "رُقْبَة", "ruqba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
-      [448, "رَقِيبَة", "raqība", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
-      [450, "رِقَبَة", "riqaba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
-      [452, "رُقُبَة", "ruquba", "bir tane gözetleyenler (topluluk adı)", "orta", ""],
+      [446, "رُقْبَة", "ruqba", "gözetleme türünden bir tane", "orta", ""],
+      [448, "رَقِيبَة", "raqība", "gözetleme türünden bir tane", "orta", ""],
+      [450, "رِقَبَة", "riqaba", "gözetleme türünden bir tane", "orta", ""],
+      [452, "رُقُبَة", "ruquba", "gözetleme türünden bir tane", "orta", ""],
       [
         454,
         "رَقَابَة",
         "raqāba",
-        "bir tane gözetleyenler (topluluk adı)",
+        "gözetleme türünden bir tane",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَرْقَاب", "ʾarqāb", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [456, "أَرْقِبَة", "ʾarqiba", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [457, "أَرَاقِب", "ʾarāqib", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [458, "أَرَاقِيب", "ʾarāqīb", "gözetleyenler (kırık çoğul)", "orta", ""],
+      [455, "أَرْقَاب", "ʾarqāb", "gözetlemeler", "orta", ""],
+      [456, "أَرْقِبَة", "ʾarqiba", "gözetlemeler", "orta", ""],
+      [457, "أَرَاقِب", "ʾarāqib", "gözetlemeler", "orta", ""],
+      [458, "أَرَاقِيب", "ʾarāqīb", "gözetlemeler", "orta", ""],
       [
         459,
         "رُقُوب",
         "ruqūb",
-        "gözetleyenler (kırık çoğul)",
+        "gözetlemeler",
         "orta",
         "Vikisözlük: masdar (bâb I): to observe attentively, to be on the watch for, to watch, to expect"
       ],
-      [460, "رُقُب", "ruqub", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [461, "رِقَاب", "riqāb", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [462, "رِقَب", "riqab", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [463, "رِقَبَة", "riqaba", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [464, "رُقَب", "ruqab", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [465, "رُقَباء", "ruqabāʾ", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [466, "رَقَبَة", "raqaba", "gözetleyenler (kırık çoğul)", "orta", "Vikisözlük: neck"],
-      [467, "رُقَّاب", "ruqqāb", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [468, "رَقَاب", "raqāb", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [469, "رَقَب", "raqab", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [470, "مَرَاقِب", "marāqib", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [471, "مَرَاقِيب", "marāqīb", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [472, "رَوَاقِب", "rawāqib", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [473, "أَرْقُب", "ʾarqub", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [474, "رُقَّب", "ruqqab", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [475, "رَقَائِب", "raqāʾib", "gözetleyenler (kırık çoğul)", "orta", ""],
-      [476, "رُقَيْب", "ruqayb", "gözetleyenler (kırık çoğul)", "orta", ""]
+      [460, "رُقُب", "ruqub", "gözetlemeler", "orta", ""],
+      [461, "رِقَاب", "riqāb", "gözetlemeler", "orta", ""],
+      [462, "رِقَب", "riqab", "gözetlemeler", "orta", ""],
+      [463, "رِقَبَة", "riqaba", "gözetlemeler", "orta", ""],
+      [464, "رُقَب", "ruqab", "gözetlemeler", "orta", ""],
+      [465, "رُقَباء", "ruqabāʾ", "gözetlemeler", "orta", ""],
+      [466, "رَقَبَة", "raqaba", "boyun, köle", "kuran", "Vikisözlük: neck"],
+      [467, "رُقَّاب", "ruqqāb", "gözetlemeler", "orta", ""],
+      [468, "رَقَاب", "raqāb", "gözetlemeler", "orta", ""],
+      [469, "رَقَب", "raqab", "gözetlemeler", "orta", ""],
+      [470, "مَرَاقِب", "marāqib", "gözetlemeler", "orta", ""],
+      [471, "مَرَاقِيب", "marāqīb", "gözetlemeler", "orta", ""],
+      [472, "رَوَاقِب", "rawāqib", "gözetlemeler", "orta", ""],
+      [473, "أَرْقُب", "ʾarqub", "gözetlemeler", "orta", ""],
+      [474, "رُقَّب", "ruqqab", "gözetlemeler", "orta", ""],
+      [475, "رَقَائِب", "raqāʾib", "gözetlemeler", "orta", ""],
+      [476, "رُقَيْب", "ruqayb", "gözetlemeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَرْقَابَات", "ʾarqābāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَرْقِبَات", "ʾarqibāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَرَاقِبَات", "ʾarāqibāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَرَاقِيبَات", "ʾarāqībāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [481, "رُقُوبَات", "ruqūbāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [482, "رُقُبَات", "ruqubāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [483, "رِقَابَات", "riqābāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [484, "رِقَبَات", "riqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [485, "رِقَبَات", "riqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [486, "رُقَبَات", "ruqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [487, "رُقَباآت", "ruqabāʾāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [488, "رَقَبَات", "raqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [489, "رُقَّابَات", "ruqqābāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [490, "رَقَابَات", "raqābāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [491, "رَقَبَات", "raqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَرَاقِبَات", "marāqibāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَرَاقِيبَات", "marāqībāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [494, "رَوَاقِبَات", "rawāqibāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَرْقُبَات", "ʾarqubāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [496, "رُقَّبَات", "ruqqabāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [497, "رَقَائِبَات", "raqāʾibāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""],
-      [498, "رُقَيْبَات", "ruqaybāt", "gözetleyenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَرْقَابَات", "ʾarqābāt", "gözetlemeler topluluğu", "orta", ""],
+      [478, "أَرْقِبَات", "ʾarqibāt", "gözetlemeler topluluğu", "orta", ""],
+      [479, "أَرَاقِبَات", "ʾarāqibāt", "gözetlemeler topluluğu", "orta", ""],
+      [480, "أَرَاقِيبَات", "ʾarāqībāt", "gözetlemeler topluluğu", "orta", ""],
+      [481, "رُقُوبَات", "ruqūbāt", "gözetlemeler topluluğu", "orta", ""],
+      [482, "رُقُبَات", "ruqubāt", "gözetlemeler topluluğu", "orta", ""],
+      [483, "رِقَابَات", "riqābāt", "gözetlemeler topluluğu", "orta", ""],
+      [484, "رِقَبَات", "riqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [485, "رِقَبَات", "riqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [486, "رُقَبَات", "ruqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [487, "رُقَباآت", "ruqabāʾāt", "gözetlemeler topluluğu", "orta", ""],
+      [488, "رَقَبَات", "raqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [489, "رُقَّابَات", "ruqqābāt", "gözetlemeler topluluğu", "orta", ""],
+      [490, "رَقَابَات", "raqābāt", "gözetlemeler topluluğu", "orta", ""],
+      [491, "رَقَبَات", "raqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [492, "مَرَاقِبَات", "marāqibāt", "gözetlemeler topluluğu", "orta", ""],
+      [493, "مَرَاقِيبَات", "marāqībāt", "gözetlemeler topluluğu", "orta", ""],
+      [494, "رَوَاقِبَات", "rawāqibāt", "gözetlemeler topluluğu", "orta", ""],
+      [495, "أَرْقُبَات", "ʾarqubāt", "gözetlemeler topluluğu", "orta", ""],
+      [496, "رُقَّبَات", "ruqqabāt", "gözetlemeler topluluğu", "orta", ""],
+      [497, "رَقَائِبَات", "raqāʾibāt", "gözetlemeler topluluğu", "orta", ""],
+      [498, "رُقَيْبَات", "ruqaybāt", "gözetlemeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

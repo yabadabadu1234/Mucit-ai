@@ -9,28 +9,28 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "نَزْل", "nazl", "inme", "orta", ""],
-      [1, "نِزْل", "nizl", "inme", "orta", ""],
+      [1, "نِزْل", "nizl", "inilen şey", "orta", ""],
       [2, "نُزْل", "nuzl", "inme", "orta", "Vikisözlük: food served to a guest"],
-      [3, "نَزَل", "nazal", "inme", "orta", ""],
+      [3, "نَزَل", "nazal", "inme hâli", "orta", ""],
       [4, "نِزَل", "nizal", "inme", "orta", ""],
       [5, "نُزُل", "nuzul", "inme", "orta", "Vikisözlük: quarter, lodging"],
       [6, "نُزُول", "nuzūl", "inme", "orta", "Vikisözlük: masdar (bâb I): to descend, to come down, to go down"],
-      [7, "نِزَال", "nizāl", "inme", "orta", "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"],
-      [8, "نُزَال", "nuzāl", "inme", "orta", ""],
+      [7, "نِزَال", "nizāl", "inmeden kaçınma", "orta", "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"],
+      [8, "نُزَال", "nuzāl", "inme illeti, inme sesi", "orta", ""],
       [9, "نَزَال", "nazāl", "inme", "orta", ""],
-      [10, "نَزَالَة", "nazāla", "inme", "orta", ""],
-      [11, "نُزُولَة", "nuzūla", "inme", "orta", ""],
-      [12, "نِزَالَة", "nizāla", "inme", "orta", ""],
+      [10, "نَزَالَة", "nazāla", "inme vasfı", "orta", ""],
+      [11, "نُزُولَة", "nuzūla", "inme vasfı", "orta", ""],
+      [12, "نِزَالَة", "nizāla", "inme vazifesi, inme işi", "orta", ""],
       [
         13,
         "نَزِيل",
         "nazīl",
-        "inme",
+        "inme sesi, inme yürüyüşü",
         "orta",
         "Vikisözlük: lodger, person who bides in a facility (e.g. a hospital, a prison, a h"
       ],
       [14, "نَزُول", "nazūl", "inme", "orta", ""],
-      [15, "نَزَلَان", "nazalān", "inme", "orta", ""],
+      [15, "نَزَلَان", "nazalān", "inme çalkantısı, coşarak inme", "orta", ""],
       [16, "نُزْلَان", "nuzlān", "inme", "orta", ""],
       [17, "نِزْلَان", "nizlān", "inme", "orta", ""],
       [18, "نَزْلَى", "nazlā", "inme", "orta", ""],
@@ -39,11 +39,11 @@
       [21, "نَزَلَة", "nazala", "inme", "orta", ""],
       [22, "نِزَلَة", "nizala", "inme", "orta", ""],
       [23, "نَزْلُولَة", "nazlūla", "inme", "orta", ""],
-      [24, "تُنْزُول", "tunzūl", "inme", "orta", ""],
-      [25, "تَنْزِلَة", "tanzila", "inme", "orta", ""],
-      [26, "تَنْزَلَة", "tanzala", "inme", "orta", ""],
-      [27, "مَنْزُلَة", "manzula", "inme", "orta", ""],
-      [28, "مَنْزِلَة", "manzila", "inme", "orta", "Vikisözlük: position, status, rank"]
+      [24, "تُنْزُول", "tunzūl", "tekrar tekrar inme", "orta", ""],
+      [25, "تَنْزِلَة", "tanzila", "tekrar tekrar inme", "orta", ""],
+      [26, "تَنْزَلَة", "tanzala", "tekrar tekrar inme", "orta", ""],
+      [27, "مَنْزُلَة", "manzula", "inme sebebi", "orta", ""],
+      [28, "مَنْزِلَة", "manzila", "inme sebebi", "orta", "Vikisözlük: position, status, rank"]
     ],
     "masdar · bâb II": [
       [29, "تَنْزِيل", "tanzīl", "indirme", "orta", "Vikisözlük: verbal noun of نَزَّلَ (nazzala) (form II)"],
@@ -56,59 +56,73 @@
     ],
     "ism-i fâil · bâb II": [
       [34, "مُنَزِّل", "munazzil", "indiren", "orta", ""],
-      [35, "مُنَزِّلَة", "munazzila", "indiren (dişi)", "orta", ""],
-      [36, "مُنَزِّلَان", "munazzilān", "iki indiren", "orta", ""],
-      [37, "مُنَزِّلَتَان", "munazzilatān", "iki indiren (dişi)", "orta", ""],
+      [35, "مُنَزِّلَة", "munazzila", "indiren (müennes)", "orta", ""],
+      [36, "مُنَزِّلَان", "munazzilān", "indiren (iki)", "orta", ""],
+      [37, "مُنَزِّلَتَان", "munazzilatān", "indiren (iki, müennes)", "orta", ""],
       [38, "مُنَزِّلُون", "munazzilūn", "indirenler", "orta", ""],
       [39, "مُنَزِّلِين", "munazzilīn", "indirenler", "orta", ""],
-      [40, "مُنَزِّلَات", "munazzilāt", "indirenler (dişi)", "orta", ""]
+      [40, "مُنَزِّلَات", "munazzilāt", "indirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُنَزَّل", "munazzal", "indirilmiş", "orta", ""],
-      [42, "مُنَزَّلَة", "munazzala", "indirilmiş (dişi)", "orta", ""],
-      [43, "مُنَزَّلَان", "munazzalān", "iki indirilmiş", "orta", ""],
-      [44, "مُنَزَّلَتَان", "munazzalatān", "iki indirilmiş (dişi)", "orta", ""],
-      [45, "مُنَزَّلُون", "munazzalūn", "indirilmişler", "orta", ""],
-      [46, "مُنَزَّلِين", "munazzalīn", "indirilmişler", "orta", ""],
-      [47, "مُنَزَّلَات", "munazzalāt", "indirilmişler (dişi)", "orta", ""]
+      [41, "مُنَزَّل", "munazzal", "indirilen", "orta", ""],
+      [42, "مُنَزَّلَة", "munazzala", "indirilen (müennes)", "orta", ""],
+      [43, "مُنَزَّلَان", "munazzalān", "indirilen (iki)", "orta", ""],
+      [44, "مُنَزَّلَتَان", "munazzalatān", "indirilen (iki, müennes)", "orta", ""],
+      [45, "مُنَزَّلُون", "munazzalūn", "indirilenler", "orta", ""],
+      [46, "مُنَزَّلِين", "munazzalīn", "indirilenler", "orta", ""],
+      [47, "مُنَزَّلَات", "munazzalāt", "indirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُنَزَّل", "munazzal", "indirme (yeri/zamanı)", "orta", ""]
+      [48, "مُنَزَّل", "munazzal", "indirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُنَازَلَة", "munāzala", "inişme", "orta", "Vikisözlük: masdar (bâb III): to dismount for battle"],
-      [50, "نِزَال", "nizāl", "inişme", "orta", "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"]
+      [
+        49,
+        "مُنَازَلَة",
+        "munāzala",
+        "biriyle karşılıklı inme",
+        "orta",
+        "Vikisözlük: masdar (bâb III): to dismount for battle"
+      ],
+      [
+        50,
+        "نِزَال",
+        "nizāl",
+        "biriyle karşılıklı inme",
+        "orta",
+        "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"
+      ]
     ],
     "ism-i merre · bâb III": [
-      [51, "نِزَالَة", "nizāla", "bir kere inişme", "orta", ""]
+      [51, "نِزَالَة", "nizāla", "bir kere biriyle karşılıklı inme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُنَازِل", "munāzil", "inişen", "orta", ""],
-      [53, "مُنَازِلَة", "munāzila", "inişen (dişi)", "orta", ""],
-      [54, "مُنَازِلَان", "munāzilān", "iki inişen", "orta", ""],
-      [55, "مُنَازِلَتَان", "munāzilatān", "iki inişen (dişi)", "orta", ""],
-      [56, "مُنَازِلُون", "munāzilūn", "inişenler", "orta", ""],
-      [57, "مُنَازِلِين", "munāzilīn", "inişenler", "orta", ""],
-      [58, "مُنَازِلَات", "munāzilāt", "inişenler (dişi)", "orta", ""]
+      [52, "مُنَازِل", "munāzil", "biriyle karşılıklı inen", "orta", ""],
+      [53, "مُنَازِلَة", "munāzila", "biriyle karşılıklı inen (müennes)", "orta", ""],
+      [54, "مُنَازِلَان", "munāzilān", "biriyle karşılıklı inen (iki)", "orta", ""],
+      [55, "مُنَازِلَتَان", "munāzilatān", "biriyle karşılıklı inen (iki, müennes)", "orta", ""],
+      [56, "مُنَازِلُون", "munāzilūn", "biriyle karşılıklı inenler", "orta", ""],
+      [57, "مُنَازِلِين", "munāzilīn", "biriyle karşılıklı inenler", "orta", ""],
+      [58, "مُنَازِلَات", "munāzilāt", "biriyle karşılıklı inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُنَازَل", "munāzal", "inişmiş", "orta", ""],
+      [59, "مُنَازَل", "munāzal", "biriyle karşılıklı inilen", "orta", ""],
       [
         60,
         "مُنَازَلَة",
         "munāzala",
-        "inişmiş (dişi)",
+        "biriyle karşılıklı inilen (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb III): to dismount for battle"
       ],
-      [61, "مُنَازَلَان", "munāzalān", "iki inişmiş", "orta", ""],
-      [62, "مُنَازَلَتَان", "munāzalatān", "iki inişmiş (dişi)", "orta", ""],
-      [63, "مُنَازَلُون", "munāzalūn", "inişmişler", "orta", ""],
-      [64, "مُنَازَلِين", "munāzalīn", "inişmişler", "orta", ""],
-      [65, "مُنَازَلَات", "munāzalāt", "inişmişler (dişi)", "orta", ""]
+      [61, "مُنَازَلَان", "munāzalān", "biriyle karşılıklı inilen (iki)", "orta", ""],
+      [62, "مُنَازَلَتَان", "munāzalatān", "biriyle karşılıklı inilen (iki, müennes)", "orta", ""],
+      [63, "مُنَازَلُون", "munāzalūn", "biriyle karşılıklı inilenler", "orta", ""],
+      [64, "مُنَازَلِين", "munāzalīn", "biriyle karşılıklı inilenler", "orta", ""],
+      [65, "مُنَازَلَات", "munāzalāt", "biriyle karşılıklı inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُنَازَل", "munāzal", "inişme (yeri/zamanı)", "orta", ""]
+      [66, "مُنَازَل", "munāzal", "biriyle karşılıklı inme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
       [67, "إِنْزَال", "ʾinzāl", "indirme", "orta", "Vikisözlük: masdar (bâb IV): to make go down, to get down"]
@@ -118,183 +132,190 @@
     ],
     "ism-i fâil · bâb IV": [
       [69, "مُنْزِل", "munzil", "indiren", "orta", ""],
-      [70, "مُنْزِلَة", "munzila", "indiren (dişi)", "orta", ""],
-      [71, "مُنْزِلَان", "munzilān", "iki indiren", "orta", ""],
-      [72, "مُنْزِلَتَان", "munzilatān", "iki indiren (dişi)", "orta", ""],
+      [70, "مُنْزِلَة", "munzila", "indiren (müennes)", "orta", ""],
+      [71, "مُنْزِلَان", "munzilān", "indiren (iki)", "orta", ""],
+      [72, "مُنْزِلَتَان", "munzilatān", "indiren (iki, müennes)", "orta", ""],
       [73, "مُنْزِلُون", "munzilūn", "indirenler", "orta", ""],
       [74, "مُنْزِلِين", "munzilīn", "indirenler", "orta", ""],
-      [75, "مُنْزِلَات", "munzilāt", "indirenler (dişi)", "orta", ""]
+      [75, "مُنْزِلَات", "munzilāt", "indirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُنْزَل", "munzal", "indirilmiş", "orta", ""],
-      [77, "مُنْزَلَة", "munzala", "indirilmiş (dişi)", "orta", ""],
-      [78, "مُنْزَلَان", "munzalān", "iki indirilmiş", "orta", ""],
-      [79, "مُنْزَلَتَان", "munzalatān", "iki indirilmiş (dişi)", "orta", ""],
-      [80, "مُنْزَلُون", "munzalūn", "indirilmişler", "orta", ""],
-      [81, "مُنْزَلِين", "munzalīn", "indirilmişler", "orta", ""],
-      [82, "مُنْزَلَات", "munzalāt", "indirilmişler (dişi)", "orta", ""]
+      [76, "مُنْزَل", "munzal", "indirilen", "orta", ""],
+      [77, "مُنْزَلَة", "munzala", "indirilen (müennes)", "orta", ""],
+      [78, "مُنْزَلَان", "munzalān", "indirilen (iki)", "orta", ""],
+      [79, "مُنْزَلَتَان", "munzalatān", "indirilen (iki, müennes)", "orta", ""],
+      [80, "مُنْزَلُون", "munzalūn", "indirilenler", "orta", ""],
+      [81, "مُنْزَلِين", "munzalīn", "indirilenler", "orta", ""],
+      [82, "مُنْزَلَات", "munzalāt", "indirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُنْزَل", "munzal", "indirme (yeri/zamanı)", "orta", ""]
+      [83, "مُنْزَل", "munzal", "indirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَنَزُّل", "tanazzul", "inme", "orta", "Vikisözlük: masdar (bâb V): to descend, to come down"]
+      [
+        84,
+        "تَنَزُّل",
+        "tanazzul",
+        "kendini zorlayarak inme",
+        "orta",
+        "Vikisözlük: masdar (bâb V): to descend, to come down"
+      ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَنَزُّلَة", "tanazzula", "bir kere inme", "orta", ""]
+      [85, "تَنَزُّلَة", "tanazzula", "bir kere kendini zorlayarak inme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَنَزِّل", "mutanazzil", "inen", "orta", ""],
-      [87, "مُتَنَزِّلَة", "mutanazzila", "inen (dişi)", "orta", ""],
-      [88, "مُتَنَزِّلَان", "mutanazzilān", "iki inen", "orta", ""],
-      [89, "مُتَنَزِّلَتَان", "mutanazzilatān", "iki inen (dişi)", "orta", ""],
-      [90, "مُتَنَزِّلُون", "mutanazzilūn", "inenler", "orta", ""],
-      [91, "مُتَنَزِّلِين", "mutanazzilīn", "inenler", "orta", ""],
-      [92, "مُتَنَزِّلَات", "mutanazzilāt", "inenler (dişi)", "orta", ""]
+      [86, "مُتَنَزِّل", "mutanazzil", "kendini zorlayarak inen", "orta", ""],
+      [87, "مُتَنَزِّلَة", "mutanazzila", "kendini zorlayarak inen (müennes)", "orta", ""],
+      [88, "مُتَنَزِّلَان", "mutanazzilān", "kendini zorlayarak inen (iki)", "orta", ""],
+      [89, "مُتَنَزِّلَتَان", "mutanazzilatān", "kendini zorlayarak inen (iki, müennes)", "orta", ""],
+      [90, "مُتَنَزِّلُون", "mutanazzilūn", "kendini zorlayarak inenler", "orta", ""],
+      [91, "مُتَنَزِّلِين", "mutanazzilīn", "kendini zorlayarak inenler", "orta", ""],
+      [92, "مُتَنَزِّلَات", "mutanazzilāt", "kendini zorlayarak inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَنَزَّل", "mutanazzal", "inmiş", "orta", ""],
-      [94, "مُتَنَزَّلَة", "mutanazzala", "inmiş (dişi)", "orta", ""],
-      [95, "مُتَنَزَّلَان", "mutanazzalān", "iki inmiş", "orta", ""],
-      [96, "مُتَنَزَّلَتَان", "mutanazzalatān", "iki inmiş (dişi)", "orta", ""],
-      [97, "مُتَنَزَّلُون", "mutanazzalūn", "inmişler", "orta", ""],
-      [98, "مُتَنَزَّلِين", "mutanazzalīn", "inmişler", "orta", ""],
-      [99, "مُتَنَزَّلَات", "mutanazzalāt", "inmişler (dişi)", "orta", ""]
+      [93, "مُتَنَزَّل", "mutanazzal", "kendini zorlayarak inilen", "orta", ""],
+      [94, "مُتَنَزَّلَة", "mutanazzala", "kendini zorlayarak inilen (müennes)", "orta", ""],
+      [95, "مُتَنَزَّلَان", "mutanazzalān", "kendini zorlayarak inilen (iki)", "orta", ""],
+      [96, "مُتَنَزَّلَتَان", "mutanazzalatān", "kendini zorlayarak inilen (iki, müennes)", "orta", ""],
+      [97, "مُتَنَزَّلُون", "mutanazzalūn", "kendini zorlayarak inilenler", "orta", ""],
+      [98, "مُتَنَزَّلِين", "mutanazzalīn", "kendini zorlayarak inilenler", "orta", ""],
+      [99, "مُتَنَزَّلَات", "mutanazzalāt", "kendini zorlayarak inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَنَزَّل", "mutanazzal", "inme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَنَزَّل", "mutanazzal", "kendini zorlayarak inme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَنَازُل", "tanāzul", "inişme", "orta", ""]
+      [101, "تَنَازُل", "tanāzul", "hep birlikte inme", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَنَازُلَة", "tanāzula", "bir kere inişme", "orta", ""]
+      [102, "تَنَازُلَة", "tanāzula", "bir kere hep birlikte inme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَنَازِل", "mutanāzil", "inişen", "orta", ""],
-      [104, "مُتَنَازِلَة", "mutanāzila", "inişen (dişi)", "orta", ""],
-      [105, "مُتَنَازِلَان", "mutanāzilān", "iki inişen", "orta", ""],
-      [106, "مُتَنَازِلَتَان", "mutanāzilatān", "iki inişen (dişi)", "orta", ""],
-      [107, "مُتَنَازِلُون", "mutanāzilūn", "inişenler", "orta", ""],
-      [108, "مُتَنَازِلِين", "mutanāzilīn", "inişenler", "orta", ""],
-      [109, "مُتَنَازِلَات", "mutanāzilāt", "inişenler (dişi)", "orta", ""]
+      [103, "مُتَنَازِل", "mutanāzil", "hep birlikte inen", "orta", ""],
+      [104, "مُتَنَازِلَة", "mutanāzila", "hep birlikte inen (müennes)", "orta", ""],
+      [105, "مُتَنَازِلَان", "mutanāzilān", "hep birlikte inen (iki)", "orta", ""],
+      [106, "مُتَنَازِلَتَان", "mutanāzilatān", "hep birlikte inen (iki, müennes)", "orta", ""],
+      [107, "مُتَنَازِلُون", "mutanāzilūn", "hep birlikte inenler", "orta", ""],
+      [108, "مُتَنَازِلِين", "mutanāzilīn", "hep birlikte inenler", "orta", ""],
+      [109, "مُتَنَازِلَات", "mutanāzilāt", "hep birlikte inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَنَازَل", "mutanāzal", "inişmiş", "orta", ""],
-      [111, "مُتَنَازَلَة", "mutanāzala", "inişmiş (dişi)", "orta", ""],
-      [112, "مُتَنَازَلَان", "mutanāzalān", "iki inişmiş", "orta", ""],
-      [113, "مُتَنَازَلَتَان", "mutanāzalatān", "iki inişmiş (dişi)", "orta", ""],
-      [114, "مُتَنَازَلُون", "mutanāzalūn", "inişmişler", "orta", ""],
-      [115, "مُتَنَازَلِين", "mutanāzalīn", "inişmişler", "orta", ""],
-      [116, "مُتَنَازَلَات", "mutanāzalāt", "inişmişler (dişi)", "orta", ""]
+      [110, "مُتَنَازَل", "mutanāzal", "hep birlikte inilen", "orta", ""],
+      [111, "مُتَنَازَلَة", "mutanāzala", "hep birlikte inilen (müennes)", "orta", ""],
+      [112, "مُتَنَازَلَان", "mutanāzalān", "hep birlikte inilen (iki)", "orta", ""],
+      [113, "مُتَنَازَلَتَان", "mutanāzalatān", "hep birlikte inilen (iki, müennes)", "orta", ""],
+      [114, "مُتَنَازَلُون", "mutanāzalūn", "hep birlikte inilenler", "orta", ""],
+      [115, "مُتَنَازَلِين", "mutanāzalīn", "hep birlikte inilenler", "orta", ""],
+      [116, "مُتَنَازَلَات", "mutanāzalāt", "hep birlikte inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَنَازَل", "mutanāzal", "inişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَنَازَل", "mutanāzal", "hep birlikte inme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْنِزَال", "innizāl", "inme", "orta", ""]
+      [118, "اِنْنِزَال", "innizāl", "kendiliğinden inme", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْنِزَالَة", "innizāla", "bir kere inme", "orta", ""]
+      [119, "اِنْنِزَالَة", "innizāla", "bir kere kendiliğinden inme", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْنَزِل", "munnazil", "inen", "orta", ""],
-      [121, "مُنْنَزِلَة", "munnazila", "inen (dişi)", "orta", ""],
-      [122, "مُنْنَزِلَان", "munnazilān", "iki inen", "orta", ""],
-      [123, "مُنْنَزِلَتَان", "munnazilatān", "iki inen (dişi)", "orta", ""],
-      [124, "مُنْنَزِلُون", "munnazilūn", "inenler", "orta", ""],
-      [125, "مُنْنَزِلِين", "munnazilīn", "inenler", "orta", ""],
-      [126, "مُنْنَزِلَات", "munnazilāt", "inenler (dişi)", "orta", ""]
+      [120, "مُنْنَزِل", "munnazil", "kendiliğinden inen", "orta", ""],
+      [121, "مُنْنَزِلَة", "munnazila", "kendiliğinden inen (müennes)", "orta", ""],
+      [122, "مُنْنَزِلَان", "munnazilān", "kendiliğinden inen (iki)", "orta", ""],
+      [123, "مُنْنَزِلَتَان", "munnazilatān", "kendiliğinden inen (iki, müennes)", "orta", ""],
+      [124, "مُنْنَزِلُون", "munnazilūn", "kendiliğinden inenler", "orta", ""],
+      [125, "مُنْنَزِلِين", "munnazilīn", "kendiliğinden inenler", "orta", ""],
+      [126, "مُنْنَزِلَات", "munnazilāt", "kendiliğinden inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْنَزَل", "munnazal", "inmiş", "orta", ""],
-      [128, "مُنْنَزَلَة", "munnazala", "inmiş (dişi)", "orta", ""],
-      [129, "مُنْنَزَلَان", "munnazalān", "iki inmiş", "orta", ""],
-      [130, "مُنْنَزَلَتَان", "munnazalatān", "iki inmiş (dişi)", "orta", ""],
-      [131, "مُنْنَزَلُون", "munnazalūn", "inmişler", "orta", ""],
-      [132, "مُنْنَزَلِين", "munnazalīn", "inmişler", "orta", ""],
-      [133, "مُنْنَزَلَات", "munnazalāt", "inmişler (dişi)", "orta", ""]
+      [127, "مُنْنَزَل", "munnazal", "kendiliğinden inilen", "orta", ""],
+      [128, "مُنْنَزَلَة", "munnazala", "kendiliğinden inilen (müennes)", "orta", ""],
+      [129, "مُنْنَزَلَان", "munnazalān", "kendiliğinden inilen (iki)", "orta", ""],
+      [130, "مُنْنَزَلَتَان", "munnazalatān", "kendiliğinden inilen (iki, müennes)", "orta", ""],
+      [131, "مُنْنَزَلُون", "munnazalūn", "kendiliğinden inilenler", "orta", ""],
+      [132, "مُنْنَزَلِين", "munnazalīn", "kendiliğinden inilenler", "orta", ""],
+      [133, "مُنْنَزَلَات", "munnazalāt", "kendiliğinden inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْنَزَل", "munnazal", "inme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْنَزَل", "munnazal", "kendiliğinden inme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِنْتِزَال", "intizāl", "inme", "orta", ""]
+      [135, "اِنْتِزَال", "intizāl", "kendisi için inme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِنْتِزَالَة", "intizāla", "bir kere inme", "orta", ""]
+      [137, "اِنْتِزَالَة", "intizāla", "bir kere kendisi için inme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُنْتَزِل", "muntazil", "inen", "orta", ""],
-      [139, "مُنْتَزِلَة", "muntazila", "inen (dişi)", "orta", ""],
-      [140, "مُنْتَزِلَان", "muntazilān", "iki inen", "orta", ""],
-      [141, "مُنْتَزِلَتَان", "muntazilatān", "iki inen (dişi)", "orta", ""],
-      [142, "مُنْتَزِلُون", "muntazilūn", "inenler", "orta", ""],
-      [143, "مُنْتَزِلِين", "muntazilīn", "inenler", "orta", ""],
-      [144, "مُنْتَزِلَات", "muntazilāt", "inenler (dişi)", "orta", ""]
+      [138, "مُنْتَزِل", "muntazil", "kendisi için inen", "orta", ""],
+      [139, "مُنْتَزِلَة", "muntazila", "kendisi için inen (müennes)", "orta", ""],
+      [140, "مُنْتَزِلَان", "muntazilān", "kendisi için inen (iki)", "orta", ""],
+      [141, "مُنْتَزِلَتَان", "muntazilatān", "kendisi için inen (iki, müennes)", "orta", ""],
+      [142, "مُنْتَزِلُون", "muntazilūn", "kendisi için inenler", "orta", ""],
+      [143, "مُنْتَزِلِين", "muntazilīn", "kendisi için inenler", "orta", ""],
+      [144, "مُنْتَزِلَات", "muntazilāt", "kendisi için inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُنْتَزَل", "muntazal", "inmiş", "orta", ""],
-      [146, "مُنْتَزَلَة", "muntazala", "inmiş (dişi)", "orta", ""],
-      [147, "مُنْتَزَلَان", "muntazalān", "iki inmiş", "orta", ""],
-      [148, "مُنْتَزَلَتَان", "muntazalatān", "iki inmiş (dişi)", "orta", ""],
-      [149, "مُنْتَزَلُون", "muntazalūn", "inmişler", "orta", ""],
-      [150, "مُنْتَزَلِين", "muntazalīn", "inmişler", "orta", ""],
-      [151, "مُنْتَزَلَات", "muntazalāt", "inmişler (dişi)", "orta", ""]
+      [145, "مُنْتَزَل", "muntazal", "kendisi için inilen", "orta", ""],
+      [146, "مُنْتَزَلَة", "muntazala", "kendisi için inilen (müennes)", "orta", ""],
+      [147, "مُنْتَزَلَان", "muntazalān", "kendisi için inilen (iki)", "orta", ""],
+      [148, "مُنْتَزَلَتَان", "muntazalatān", "kendisi için inilen (iki, müennes)", "orta", ""],
+      [149, "مُنْتَزَلُون", "muntazalūn", "kendisi için inilenler", "orta", ""],
+      [150, "مُنْتَزَلِين", "muntazalīn", "kendisi için inilenler", "orta", ""],
+      [151, "مُنْتَزَلَات", "muntazalāt", "kendisi için inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُنْتَزَل", "muntazal", "inme (yeri/zamanı)", "orta", ""]
+      [152, "مُنْتَزَل", "muntazal", "kendisi için inme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِنْزِلَال", "inzilāl", "inleşme", "kontrol", ""]
+      [499, "اِنْزِلَال", "inzilāl", "iyiden iyiye inme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُنْزَلّ", "munzall", "inleşen", "kontrol", ""],
-      [501, "مُنْزَلَّة", "munzalla", "inleşen (dişi)", "kontrol", ""],
-      [502, "مُنْزَلَّان", "munzallān", "iki inleşen", "kontrol", ""],
-      [503, "مُنْزَلَّتَان", "munzallatān", "iki inleşen (dişi)", "kontrol", ""],
-      [504, "مُنْزَلُّون", "munzallūn", "inleşenler", "kontrol", ""],
-      [505, "مُنْزَلِّين", "munzallīn", "inleşenler", "kontrol", ""],
-      [506, "مُنْزَلَّات", "munzallāt", "inleşenler (dişi)", "kontrol", ""]
+      [500, "مُنْزَلّ", "munzall", "iyiden iyiye inen", "kontrol", ""],
+      [501, "مُنْزَلَّة", "munzalla", "iyiden iyiye inen (müennes)", "kontrol", ""],
+      [502, "مُنْزَلَّان", "munzallān", "iyiden iyiye inen (iki)", "kontrol", ""],
+      [503, "مُنْزَلَّتَان", "munzallatān", "iyiden iyiye inen (iki, müennes)", "kontrol", ""],
+      [504, "مُنْزَلُّون", "munzallūn", "iyiden iyiye inenler", "kontrol", ""],
+      [505, "مُنْزَلِّين", "munzallīn", "iyiden iyiye inenler", "kontrol", ""],
+      [506, "مُنْزَلَّات", "munzallāt", "iyiden iyiye inenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِنْزَال", "istinzāl", "inmeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِنْزَالَة", "istinzāla", "bir kere inme", "orta", ""]
+      [177, "اِسْتِنْزَالَة", "istinzāla", "bir kere inmeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَنْزِل", "mustanzil", "inmeyi isteyen", "orta", ""],
-      [179, "مُسْتَنْزِلَة", "mustanzila", "inmeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَنْزِلَان", "mustanzilān", "iki inmeyi isteyen", "orta", ""],
-      [181, "مُسْتَنْزِلَتَان", "mustanzilatān", "iki inmeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَنْزِلَة", "mustanzila", "inmeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَنْزِلَان", "mustanzilān", "inmeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَنْزِلَتَان", "mustanzilatān", "inmeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَنْزِلُون", "mustanzilūn", "inmeyi isteyenler", "orta", ""],
       [183, "مُسْتَنْزِلِين", "mustanzilīn", "inmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَنْزِلَات", "mustanzilāt", "inmeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَنْزِلَات", "mustanzilāt", "inmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَنْزَل", "mustanzal", "inmeyi istenen", "orta", ""],
-      [186, "مُسْتَنْزَلَة", "mustanzala", "inmeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَنْزَلَان", "mustanzalān", "iki inmeyi istenen", "orta", ""],
-      [188, "مُسْتَنْزَلَتَان", "mustanzalatān", "iki inmeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَنْزَلُون", "mustanzalūn", "inmeyi istenenler", "orta", ""],
-      [190, "مُسْتَنْزَلِين", "mustanzalīn", "inmeyi istenenler", "orta", ""],
-      [191, "مُسْتَنْزَلَات", "mustanzalāt", "inmeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَنْزَل", "mustanzal", "inmesi istenen", "orta", ""],
+      [186, "مُسْتَنْزَلَة", "mustanzala", "inmesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَنْزَلَان", "mustanzalān", "inmesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَنْزَلَتَان", "mustanzalatān", "inmesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَنْزَلُون", "mustanzalūn", "inmesi istenenler", "orta", ""],
+      [190, "مُسْتَنْزَلِين", "mustanzalīn", "inmesi istenenler", "orta", ""],
+      [191, "مُسْتَنْزَلَات", "mustanzalāt", "inmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَنْزَل", "mustanzal", "inme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَنْزَل", "mustanzal", "inmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِنْزِيلَال", "inzīlāl", "iyice inleşme", "kontrol", ""]
+      [507, "اِنْزِيلَال", "inzīlāl", "büsbütün inme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُنْزَالّ", "munzāll", "iyice inleşen", "kontrol", ""],
-      [509, "مُنْزَالَّة", "munzālla", "iyice inleşen (dişi)", "kontrol", ""],
-      [510, "مُنْزَالَّان", "munzāllān", "iki iyice inleşen", "kontrol", ""],
-      [511, "مُنْزَالَّتَان", "munzāllatān", "iki iyice inleşen (dişi)", "kontrol", ""],
-      [512, "مُنْزَالُّون", "munzāllūn", "iyice inleşenler", "kontrol", ""],
-      [513, "مُنْزَالِّين", "munzāllīn", "iyice inleşenler", "kontrol", ""],
-      [514, "مُنْزَالَّات", "munzāllāt", "iyice inleşenler (dişi)", "kontrol", ""]
+      [508, "مُنْزَالّ", "munzāll", "büsbütün inen", "kontrol", ""],
+      [509, "مُنْزَالَّة", "munzālla", "büsbütün inen (müennes)", "kontrol", ""],
+      [510, "مُنْزَالَّان", "munzāllān", "büsbütün inen (iki)", "kontrol", ""],
+      [511, "مُنْزَالَّتَان", "munzāllatān", "büsbütün inen (iki, müennes)", "kontrol", ""],
+      [512, "مُنْزَالُّون", "munzāllūn", "büsbütün inenler", "kontrol", ""],
+      [513, "مُنْزَالِّين", "munzāllīn", "büsbütün inenler", "kontrol", ""],
+      [514, "مُنْزَالَّات", "munzāllāt", "büsbütün inenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِنْزِوْزَال", "inziwzāl", "aşırı inme", "orta", ""]
@@ -304,202 +325,202 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "نَازِل", "nāzil", "inen", "orta", "Vikisözlük: active participle of نَزَلَ (nazala)"],
-      [214, "نَازِلَة", "nāzila", "inen (dişi)", "orta", ""],
-      [215, "نَازِلَان", "nāzilān", "iki inen", "orta", ""],
-      [216, "نَازِلَتَان", "nāzilatān", "iki inen (dişi)", "orta", ""],
+      [214, "نَازِلَة", "nāzila", "inen (müennes)", "orta", ""],
+      [215, "نَازِلَان", "nāzilān", "inen (iki)", "orta", ""],
+      [216, "نَازِلَتَان", "nāzilatān", "inen (iki, müennes)", "orta", ""],
       [217, "نَازِلُون", "nāzilūn", "inenler", "orta", ""],
       [218, "نَازِلِين", "nāzilīn", "inenler", "orta", ""],
-      [219, "نَازِلَات", "nāzilāt", "inenler (dişi)", "orta", ""]
+      [219, "نَازِلَات", "nāzilāt", "inenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَنْزُول", "manzūl", "inmiş", "orta", ""],
-      [221, "مَنْزُولَة", "manzūla", "inmiş (dişi)", "orta", ""],
-      [222, "مَنْزُولَان", "manzūlān", "iki inmiş", "orta", ""],
-      [223, "مَنْزُولَتَان", "manzūlatān", "iki inmiş (dişi)", "orta", ""],
-      [224, "مَنْزُولُون", "manzūlūn", "inmişler", "orta", ""],
-      [225, "مَنْزُولِين", "manzūlīn", "inmişler", "orta", ""],
-      [226, "مَنْزُولَات", "manzūlāt", "inmişler (dişi)", "orta", ""]
+      [220, "مَنْزُول", "manzūl", "inilen", "orta", ""],
+      [221, "مَنْزُولَة", "manzūla", "inilen (müennes)", "orta", ""],
+      [222, "مَنْزُولَان", "manzūlān", "inilen (iki)", "orta", ""],
+      [223, "مَنْزُولَتَان", "manzūlatān", "inilen (iki, müennes)", "orta", ""],
+      [224, "مَنْزُولُون", "manzūlūn", "inilenler", "orta", ""],
+      [225, "مَنْزُولِين", "manzūlīn", "inilenler", "orta", ""],
+      [226, "مَنْزُولَات", "manzūlāt", "inilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَنْزَل", "manzal", "inme (yeri/zamanı)", "orta", ""],
-      [228, "مَنْزَلَان", "manzalān", "iki inme (yeri/zamanı)", "orta", ""],
-      [229, "مَنْزِل", "manzil", "inme (yeri/zamanı)", "orta", ""],
-      [230, "مَنْزِلَان", "manzilān", "iki inme (yeri/zamanı)", "orta", ""],
-      [231, "مَنْزَلَة", "manzala", "inme (yeri/zamanı)", "orta", ""],
-      [232, "مَنْزَلَتَان", "manzalatān", "iki inme (yeri/zamanı)", "orta", ""],
-      [233, "مَنْزِلَة", "manzila", "inme (yeri/zamanı)", "orta", "Vikisözlük: position, status, rank"],
-      [234, "مَنْزِلَتَان", "manzilatān", "iki inme (yeri/zamanı)", "orta", ""],
-      [247, "مَنْزُلَة", "manzula", "inme (yeri/zamanı)", "orta", ""],
-      [248, "مَنْزُلَتَان", "manzulatān", "iki inme (yeri/zamanı)", "orta", ""]
+      [227, "مَنْزَل", "manzal", "inme yeri, vakti", "orta", ""],
+      [228, "مَنْزَلَان", "manzalān", "inme yeri, vakti (iki)", "orta", ""],
+      [229, "مَنْزِل", "manzil", "inme yeri, vakti", "orta", ""],
+      [230, "مَنْزِلَان", "manzilān", "inme yeri, vakti (iki)", "orta", ""],
+      [231, "مَنْزَلَة", "manzala", "inmenin bol olduğu yer", "orta", ""],
+      [232, "مَنْزَلَتَان", "manzalatān", "inmenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَنْزِلَة", "manzila", "inmenin bol olduğu yer", "orta", "Vikisözlük: position, status, rank"],
+      [234, "مَنْزِلَتَان", "manzilatān", "inmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَنْزُلَة", "manzula", "inme yeri, vakti", "orta", ""],
+      [248, "مَنْزُلَتَان", "manzulatān", "inme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِنْزَل", "minzal", "inmeye yarayan araç", "orta", ""],
-      [236, "مِنْزَلَان", "minzalān", "iki inmeye yarayan araç", "orta", ""],
-      [237, "مِنْزَال", "minzāl", "inmeye yarayan araç", "orta", ""],
-      [238, "مِنْزَالَان", "minzālān", "iki inmeye yarayan araç", "orta", ""],
-      [239, "مِنْزَلَة", "minzala", "inmeye yarayan araç", "orta", ""],
-      [240, "مِنْزَلَتَان", "minzalatān", "iki inmeye yarayan araç", "orta", ""]
+      [235, "مِنْزَل", "minzal", "inme âleti", "orta", ""],
+      [236, "مِنْزَلَان", "minzalān", "inme âleti (iki)", "orta", ""],
+      [237, "مِنْزَال", "minzāl", "inme âleti", "orta", ""],
+      [238, "مِنْزَالَان", "minzālān", "inme âleti (iki)", "orta", ""],
+      [239, "مِنْزَلَة", "minzala", "inme âleti", "orta", ""],
+      [240, "مِنْزَلَتَان", "minzalatān", "inme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَنْزَل", "ʾanzal", "daha çok inen", "orta", ""],
-      [242, "أَنْزَلَان", "ʾanzalān", "iki daha çok inen", "orta", ""]
+      [242, "أَنْزَلَان", "ʾanzalān", "daha çok inen (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "نُزْلَى", "nuzlā", "daha çok inen", "orta", ""],
-      [244, "نُزْلَيَان", "nuzlayān", "iki daha çok inen", "orta", ""],
+      [244, "نُزْلَيَان", "nuzlayān", "daha çok inen (iki)", "orta", ""],
       [245, "نَزْلَاء", "nazlāʾ", "daha çok inen", "orta", ""],
-      [246, "نَزْلَاآن", "nazlāʾān", "iki daha çok inen", "orta", ""]
+      [246, "نَزْلَاآن", "nazlāʾān", "daha çok inen (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "نُزَيْل", "nuzayl", "küçük inme", "orta", ""],
-      [250, "نُزَيْلَان", "nuzaylān", "iki küçük inme", "orta", ""],
-      [251, "نُزَيْلَة", "nuzayla", "küçük inme", "orta", ""],
-      [252, "نُزَيْلَتَان", "nuzaylatān", "iki küçük inme", "orta", ""]
+      [249, "نُزَيْل", "nuzayl", "azıcık inme", "orta", ""],
+      [250, "نُزَيْلَان", "nuzaylān", "azıcık inme (iki)", "orta", ""],
+      [251, "نُزَيْلَة", "nuzayla", "azıcık inme", "orta", ""],
+      [252, "نُزَيْلَتَان", "nuzaylatān", "azıcık inme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَنْزَل", "manzal", "inme", "orta", ""],
-      [254, "مَنْزَلَان", "manzalān", "iki inme", "orta", ""]
+      [254, "مَنْزَلَان", "manzalān", "inme (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "نَزْلَة", "nazla", "bir kere inme", "orta", ""],
-      [256, "نَزْلَتَان", "nazlatān", "iki bir kere inme", "orta", ""]
+      [255, "نَزْلَة", "nazla", "iniş", "kuran", "Kur'ân"],
+      [256, "نَزْلَتَان", "nazlatān", "bir kere inme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "نِزْلَة", "nizla", "inme tarzı", "orta", ""],
-      [258, "نِزْلَتَان", "nizlatān", "iki inme tarzı", "orta", ""]
+      [258, "نِزْلَتَان", "nizlatān", "inme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
       [
         259,
         "نَزِيل",
         "nazīl",
-        "sürekli inen",
+        "her daim inen",
         "orta",
         "Vikisözlük: lodger, person who bides in a facility (e.g. a hospital, a prison, a h"
       ],
-      [260, "نَزِيلَة", "nazīla", "sürekli inen (dişi)", "orta", ""],
-      [261, "نَزِيلَان", "nazīlān", "iki sürekli inen", "orta", ""],
-      [262, "نَزِيلَتَان", "nazīlatān", "iki sürekli inen (dişi)", "orta", ""],
-      [263, "نَزِيلُون", "nazīlūn", "sürekli inenler", "orta", ""],
-      [264, "نَزِيلِين", "nazīlīn", "sürekli inenler", "orta", ""],
-      [265, "نَزِيلَات", "nazīlāt", "sürekli inenler (dişi)", "orta", ""],
-      [266, "نَزُول", "nazūl", "sürekli inen", "orta", ""],
-      [267, "نَزُولَة", "nazūla", "sürekli inen (dişi)", "orta", ""],
-      [268, "نَزُولَان", "nazūlān", "iki sürekli inen", "orta", ""],
-      [269, "نَزُولَتَان", "nazūlatān", "iki sürekli inen (dişi)", "orta", ""],
-      [270, "نَزُولُون", "nazūlūn", "sürekli inenler", "orta", ""],
-      [271, "نَزُولِين", "nazūlīn", "sürekli inenler", "orta", ""],
-      [272, "نَزُولَات", "nazūlāt", "sürekli inenler (dişi)", "orta", ""],
-      [273, "نَزِل", "nazil", "sürekli inen", "orta", ""],
-      [274, "نَزِلَة", "nazila", "sürekli inen (dişi)", "orta", ""],
-      [275, "نَزِلَان", "nazilān", "iki sürekli inen", "orta", ""],
-      [276, "نَزِلَتَان", "nazilatān", "iki sürekli inen (dişi)", "orta", ""],
-      [277, "نَزِلُون", "nazilūn", "sürekli inenler", "orta", ""],
-      [278, "نَزِلِين", "nazilīn", "sürekli inenler", "orta", ""],
-      [279, "نَزِلَات", "nazilāt", "sürekli inenler (dişi)", "orta", ""],
-      [280, "نَزُل", "nazul", "sürekli inen", "orta", ""],
-      [281, "نَزُلَة", "nazula", "sürekli inen (dişi)", "orta", ""],
-      [282, "نَزُلَان", "nazulān", "iki sürekli inen", "orta", ""],
-      [283, "نَزُلَتَان", "nazulatān", "iki sürekli inen (dişi)", "orta", ""],
-      [284, "نَزُلُون", "nazulūn", "sürekli inenler", "orta", ""],
-      [285, "نَزُلِين", "nazulīn", "sürekli inenler", "orta", ""],
-      [286, "نَزُلَات", "nazulāt", "sürekli inenler (dişi)", "orta", ""],
-      [287, "نَزَل", "nazal", "sürekli inen", "orta", ""],
-      [288, "نَزَلَة", "nazala", "sürekli inen (dişi)", "orta", ""],
-      [289, "نَزَلَان", "nazalān", "iki sürekli inen", "orta", ""],
-      [290, "نَزَلَتَان", "nazalatān", "iki sürekli inen (dişi)", "orta", ""],
-      [291, "نَزَلُون", "nazalūn", "sürekli inenler", "orta", ""],
-      [292, "نَزَلِين", "nazalīn", "sürekli inenler", "orta", ""],
-      [293, "نَزَلَات", "nazalāt", "sürekli inenler (dişi)", "orta", ""],
-      [294, "نَزْل", "nazl", "sürekli inen", "orta", ""],
-      [295, "نَزْلَة", "nazla", "sürekli inen (dişi)", "orta", ""],
-      [296, "نَزْلَان", "nazlān", "iki sürekli inen", "orta", ""],
-      [297, "نَزْلَتَان", "nazlatān", "iki sürekli inen (dişi)", "orta", ""],
-      [298, "نَزْلُون", "nazlūn", "sürekli inenler", "orta", ""],
-      [299, "نَزْلِين", "nazlīn", "sürekli inenler", "orta", ""],
-      [300, "نَزْلَات", "nazlāt", "sürekli inenler (dişi)", "orta", ""],
-      [301, "نُزُل", "nuzul", "sürekli inen", "orta", "Vikisözlük: quarter, lodging"],
-      [302, "نُزُلَة", "nuzula", "sürekli inen (dişi)", "orta", ""],
-      [303, "نُزُلَان", "nuzulān", "iki sürekli inen", "orta", ""],
-      [304, "نُزُلَتَان", "nuzulatān", "iki sürekli inen (dişi)", "orta", ""],
-      [305, "نُزُلُون", "nuzulūn", "sürekli inenler", "orta", ""],
-      [306, "نُزُلِين", "nuzulīn", "sürekli inenler", "orta", ""],
-      [307, "نُزُلَات", "nuzulāt", "sürekli inenler (dişi)", "orta", ""],
-      [308, "نَزْلَان", "nazlān", "sürekli inen", "orta", ""],
-      [309, "نَزْلَانَة", "nazlāna", "sürekli inen (dişi)", "orta", ""],
-      [310, "نَزْلَانَان", "nazlānān", "iki sürekli inen", "orta", ""],
-      [311, "نَزْلَانَتَان", "nazlānatān", "iki sürekli inen (dişi)", "orta", ""],
-      [312, "نَزْلَانُون", "nazlānūn", "sürekli inenler", "orta", ""],
-      [313, "نَزْلَانِين", "nazlānīn", "sürekli inenler", "orta", ""],
-      [314, "نَزْلَانَات", "nazlānāt", "sürekli inenler (dişi)", "orta", ""],
-      [315, "نُزَال", "nuzāl", "sürekli inen", "orta", ""],
-      [316, "نُزَالَة", "nuzāla", "sürekli inen (dişi)", "orta", ""],
-      [317, "نُزَالَان", "nuzālān", "iki sürekli inen", "orta", ""],
-      [318, "نُزَالَتَان", "nuzālatān", "iki sürekli inen (dişi)", "orta", ""],
-      [319, "نُزَالُون", "nuzālūn", "sürekli inenler", "orta", ""],
-      [320, "نُزَالِين", "nuzālīn", "sürekli inenler", "orta", ""],
-      [321, "نُزَالَات", "nuzālāt", "sürekli inenler (dişi)", "orta", ""],
-      [322, "نَزَال", "nazāl", "sürekli inen", "orta", ""],
-      [323, "نَزَالَة", "nazāla", "sürekli inen (dişi)", "orta", ""],
-      [324, "نَزَالَان", "nazālān", "iki sürekli inen", "orta", ""],
-      [325, "نَزَالَتَان", "nazālatān", "iki sürekli inen (dişi)", "orta", ""],
-      [326, "نَزَالُون", "nazālūn", "sürekli inenler", "orta", ""],
-      [327, "نَزَالِين", "nazālīn", "sürekli inenler", "orta", ""],
-      [328, "نَزَالَات", "nazālāt", "sürekli inenler (dişi)", "orta", ""]
+      [260, "نَزِيلَة", "nazīla", "her daim inen (müennes)", "orta", ""],
+      [261, "نَزِيلَان", "nazīlān", "her daim inen (iki)", "orta", ""],
+      [262, "نَزِيلَتَان", "nazīlatān", "her daim inen (iki, müennes)", "orta", ""],
+      [263, "نَزِيلُون", "nazīlūn", "her daim inenler", "orta", ""],
+      [264, "نَزِيلِين", "nazīlīn", "her daim inenler", "orta", ""],
+      [265, "نَزِيلَات", "nazīlāt", "her daim inenler (müennes)", "orta", ""],
+      [266, "نَزُول", "nazūl", "her daim inen", "orta", ""],
+      [267, "نَزُولَة", "nazūla", "her daim inen (müennes)", "orta", ""],
+      [268, "نَزُولَان", "nazūlān", "her daim inen (iki)", "orta", ""],
+      [269, "نَزُولَتَان", "nazūlatān", "her daim inen (iki, müennes)", "orta", ""],
+      [270, "نَزُولُون", "nazūlūn", "her daim inenler", "orta", ""],
+      [271, "نَزُولِين", "nazūlīn", "her daim inenler", "orta", ""],
+      [272, "نَزُولَات", "nazūlāt", "her daim inenler (müennes)", "orta", ""],
+      [273, "نَزِل", "nazil", "her daim inen", "orta", ""],
+      [274, "نَزِلَة", "nazila", "her daim inen (müennes)", "orta", ""],
+      [275, "نَزِلَان", "nazilān", "her daim inen (iki)", "orta", ""],
+      [276, "نَزِلَتَان", "nazilatān", "her daim inen (iki, müennes)", "orta", ""],
+      [277, "نَزِلُون", "nazilūn", "her daim inenler", "orta", ""],
+      [278, "نَزِلِين", "nazilīn", "her daim inenler", "orta", ""],
+      [279, "نَزِلَات", "nazilāt", "her daim inenler (müennes)", "orta", ""],
+      [280, "نَزُل", "nazul", "her daim inen", "orta", ""],
+      [281, "نَزُلَة", "nazula", "her daim inen (müennes)", "orta", ""],
+      [282, "نَزُلَان", "nazulān", "her daim inen (iki)", "orta", ""],
+      [283, "نَزُلَتَان", "nazulatān", "her daim inen (iki, müennes)", "orta", ""],
+      [284, "نَزُلُون", "nazulūn", "her daim inenler", "orta", ""],
+      [285, "نَزُلِين", "nazulīn", "her daim inenler", "orta", ""],
+      [286, "نَزُلَات", "nazulāt", "her daim inenler (müennes)", "orta", ""],
+      [287, "نَزَل", "nazal", "her daim inen", "orta", ""],
+      [288, "نَزَلَة", "nazala", "her daim inen (müennes)", "orta", ""],
+      [289, "نَزَلَان", "nazalān", "her daim inen (iki)", "orta", ""],
+      [290, "نَزَلَتَان", "nazalatān", "her daim inen (iki, müennes)", "orta", ""],
+      [291, "نَزَلُون", "nazalūn", "her daim inenler", "orta", ""],
+      [292, "نَزَلِين", "nazalīn", "her daim inenler", "orta", ""],
+      [293, "نَزَلَات", "nazalāt", "her daim inenler (müennes)", "orta", ""],
+      [294, "نَزْل", "nazl", "her daim inen", "orta", ""],
+      [295, "نَزْلَة", "nazla", "iniş", "kuran", "Kur'ân"],
+      [296, "نَزْلَان", "nazlān", "her daim inen (iki)", "orta", ""],
+      [297, "نَزْلَتَان", "nazlatān", "her daim inen (iki, müennes)", "orta", ""],
+      [298, "نَزْلُون", "nazlūn", "her daim inenler", "orta", ""],
+      [299, "نَزْلِين", "nazlīn", "her daim inenler", "orta", ""],
+      [300, "نَزْلَات", "nazlāt", "her daim inenler (müennes)", "orta", ""],
+      [301, "نُزُل", "nuzul", "her daim inen", "orta", "Vikisözlük: quarter, lodging"],
+      [302, "نُزُلَة", "nuzula", "her daim inen (müennes)", "orta", ""],
+      [303, "نُزُلَان", "nuzulān", "her daim inen (iki)", "orta", ""],
+      [304, "نُزُلَتَان", "nuzulatān", "her daim inen (iki, müennes)", "orta", ""],
+      [305, "نُزُلُون", "nuzulūn", "her daim inenler", "orta", ""],
+      [306, "نُزُلِين", "nuzulīn", "her daim inenler", "orta", ""],
+      [307, "نُزُلَات", "nuzulāt", "her daim inenler (müennes)", "orta", ""],
+      [308, "نَزْلَان", "nazlān", "her daim inen", "orta", ""],
+      [309, "نَزْلَانَة", "nazlāna", "her daim inen (müennes)", "orta", ""],
+      [310, "نَزْلَانَان", "nazlānān", "her daim inen (iki)", "orta", ""],
+      [311, "نَزْلَانَتَان", "nazlānatān", "her daim inen (iki, müennes)", "orta", ""],
+      [312, "نَزْلَانُون", "nazlānūn", "her daim inenler", "orta", ""],
+      [313, "نَزْلَانِين", "nazlānīn", "her daim inenler", "orta", ""],
+      [314, "نَزْلَانَات", "nazlānāt", "her daim inenler (müennes)", "orta", ""],
+      [315, "نُزَال", "nuzāl", "her daim inen", "orta", ""],
+      [316, "نُزَالَة", "nuzāla", "her daim inen (müennes)", "orta", ""],
+      [317, "نُزَالَان", "nuzālān", "her daim inen (iki)", "orta", ""],
+      [318, "نُزَالَتَان", "nuzālatān", "her daim inen (iki, müennes)", "orta", ""],
+      [319, "نُزَالُون", "nuzālūn", "her daim inenler", "orta", ""],
+      [320, "نُزَالِين", "nuzālīn", "her daim inenler", "orta", ""],
+      [321, "نُزَالَات", "nuzālāt", "her daim inenler (müennes)", "orta", ""],
+      [322, "نَزَال", "nazāl", "her daim inen", "orta", ""],
+      [323, "نَزَالَة", "nazāla", "her daim inen (müennes)", "orta", ""],
+      [324, "نَزَالَان", "nazālān", "her daim inen (iki)", "orta", ""],
+      [325, "نَزَالَتَان", "nazālatān", "her daim inen (iki, müennes)", "orta", ""],
+      [326, "نَزَالُون", "nazālūn", "her daim inenler", "orta", ""],
+      [327, "نَزَالِين", "nazālīn", "her daim inenler", "orta", ""],
+      [328, "نَزَالَات", "nazālāt", "her daim inenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "نَزَّال", "nazzāl", "çok inen", "orta", ""],
-      [330, "نَزَّالَة", "nazzāla", "çok inen (dişi)", "orta", ""],
-      [331, "نَزَّالَان", "nazzālān", "iki çok inen", "orta", ""],
-      [332, "نَزَّالَتَان", "nazzālatān", "iki çok inen (dişi)", "orta", ""],
-      [333, "نَزَّالُون", "nazzālūn", "çok inenler", "orta", ""],
-      [334, "نَزَّالِين", "nazzālīn", "çok inenler", "orta", ""],
-      [335, "نَزَّالَات", "nazzālāt", "çok inenler (dişi)", "orta", ""],
-      [336, "نَزَّالَة", "nazzāla", "çok inen", "orta", ""],
-      [337, "نَزَّالَتَان", "nazzālatān", "iki çok inen", "orta", ""],
-      [338, "نَزَّالَات", "nazzālāt", "çok inenler (dişi)", "orta", ""],
+      [329, "نَزَّال", "nazzāl", "işi inme olan", "orta", ""],
+      [330, "نَزَّالَة", "nazzāla", "işi inme olan (müennes)", "orta", ""],
+      [331, "نَزَّالَان", "nazzālān", "işi inme olan (iki)", "orta", ""],
+      [332, "نَزَّالَتَان", "nazzālatān", "işi inme olan (iki, müennes)", "orta", ""],
+      [333, "نَزَّالُون", "nazzālūn", "işi inme olanlar", "orta", ""],
+      [334, "نَزَّالِين", "nazzālīn", "işi inme olanlar", "orta", ""],
+      [335, "نَزَّالَات", "nazzālāt", "işi inme olanlar (müennes)", "orta", ""],
+      [336, "نَزَّالَة", "nazzāla", "pek çok inen", "orta", ""],
+      [337, "نَزَّالَتَان", "nazzālatān", "pek çok inen (iki)", "orta", ""],
+      [338, "نَزَّالَات", "nazzālāt", "pek çok inenler (müennes)", "orta", ""],
       [339, "نَزُول", "nazūl", "çok inen", "orta", ""],
-      [340, "نَزُولَة", "nazūla", "çok inen (dişi)", "orta", ""],
-      [341, "نَزُولَان", "nazūlān", "iki çok inen", "orta", ""],
-      [342, "نَزُولَتَان", "nazūlatān", "iki çok inen (dişi)", "orta", ""],
+      [340, "نَزُولَة", "nazūla", "çok inen (müennes)", "orta", ""],
+      [341, "نَزُولَان", "nazūlān", "çok inen (iki)", "orta", ""],
+      [342, "نَزُولَتَان", "nazūlatān", "çok inen (iki, müennes)", "orta", ""],
       [343, "نَزُولُون", "nazūlūn", "çok inenler", "orta", ""],
       [344, "نَزُولِين", "nazūlīn", "çok inenler", "orta", ""],
-      [345, "نَزُولَات", "nazūlāt", "çok inenler (dişi)", "orta", ""],
-      [346, "نَزُّول", "nazzūl", "çok inen", "orta", ""],
-      [347, "نَزُّولَة", "nazzūla", "çok inen (dişi)", "orta", ""],
-      [348, "نَزُّولَان", "nazzūlān", "iki çok inen", "orta", ""],
-      [349, "نَزُّولَتَان", "nazzūlatān", "iki çok inen (dişi)", "orta", ""],
-      [350, "نَزُّولُون", "nazzūlūn", "çok inenler", "orta", ""],
-      [351, "نَزُّولِين", "nazzūlīn", "çok inenler", "orta", ""],
-      [352, "نَزُّولَات", "nazzūlāt", "çok inenler (dişi)", "orta", ""],
-      [353, "نِزِّيل", "nizzīl", "çok inen", "orta", ""],
-      [354, "نِزِّيلَة", "nizzīla", "çok inen (dişi)", "orta", ""],
-      [355, "نِزِّيلَان", "nizzīlān", "iki çok inen", "orta", ""],
-      [356, "نِزِّيلَتَان", "nizzīlatān", "iki çok inen (dişi)", "orta", ""],
-      [357, "نِزِّيلُون", "nizzīlūn", "çok inenler", "orta", ""],
-      [358, "نِزِّيلِين", "nizzīlīn", "çok inenler", "orta", ""],
-      [359, "نِزِّيلَات", "nizzīlāt", "çok inenler (dişi)", "orta", ""],
-      [360, "نُزَّال", "nuzzāl", "çok inen", "orta", ""],
-      [361, "نُزَّالَة", "nuzzāla", "çok inen (dişi)", "orta", ""],
-      [362, "نُزَّالَان", "nuzzālān", "iki çok inen", "orta", ""],
-      [363, "نُزَّالَتَان", "nuzzālatān", "iki çok inen (dişi)", "orta", ""],
-      [364, "نُزَّالُون", "nuzzālūn", "çok inenler", "orta", ""],
-      [365, "نُزَّالِين", "nuzzālīn", "çok inenler", "orta", ""],
-      [366, "نُزَّالَات", "nuzzālāt", "çok inenler (dişi)", "orta", ""],
-      [367, "مِنْزَال", "minzāl", "çok inen", "orta", ""],
-      [368, "مِنْزَالَة", "minzāla", "çok inen (dişi)", "orta", ""],
-      [369, "مِنْزَالَان", "minzālān", "iki çok inen", "orta", ""],
-      [370, "مِنْزَالَتَان", "minzālatān", "iki çok inen (dişi)", "orta", ""],
-      [371, "مِنْزَالُون", "minzālūn", "çok inenler", "orta", ""],
-      [372, "مِنْزَالِين", "minzālīn", "çok inenler", "orta", ""],
-      [373, "مِنْزَالَات", "minzālāt", "çok inenler (dişi)", "orta", ""],
-      [374, "مِنْزِيل", "minzīl", "çok inen", "orta", ""],
-      [375, "مِنْزِيلَة", "minzīla", "çok inen (dişi)", "orta", ""],
-      [376, "مِنْزِيلَان", "minzīlān", "iki çok inen", "orta", ""],
-      [377, "مِنْزِيلَتَان", "minzīlatān", "iki çok inen (dişi)", "orta", ""],
-      [378, "مِنْزِيلُون", "minzīlūn", "çok inenler", "orta", ""],
-      [379, "مِنْزِيلِين", "minzīlīn", "çok inenler", "orta", ""],
-      [380, "مِنْزِيلَات", "minzīlāt", "çok inenler (dişi)", "orta", ""],
+      [345, "نَزُولَات", "nazūlāt", "çok inenler (müennes)", "orta", ""],
+      [346, "نَزُّول", "nazzūl", "pek çok inen", "orta", ""],
+      [347, "نَزُّولَة", "nazzūla", "pek çok inen (müennes)", "orta", ""],
+      [348, "نَزُّولَان", "nazzūlān", "pek çok inen (iki)", "orta", ""],
+      [349, "نَزُّولَتَان", "nazzūlatān", "pek çok inen (iki, müennes)", "orta", ""],
+      [350, "نَزُّولُون", "nazzūlūn", "pek çok inenler", "orta", ""],
+      [351, "نَزُّولِين", "nazzūlīn", "pek çok inenler", "orta", ""],
+      [352, "نَزُّولَات", "nazzūlāt", "pek çok inenler (müennes)", "orta", ""],
+      [353, "نِزِّيل", "nizzīl", "inmede aşırı giden", "orta", ""],
+      [354, "نِزِّيلَة", "nizzīla", "inmede aşırı giden (müennes)", "orta", ""],
+      [355, "نِزِّيلَان", "nizzīlān", "inmede aşırı giden (iki)", "orta", ""],
+      [356, "نِزِّيلَتَان", "nizzīlatān", "inmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "نِزِّيلُون", "nizzīlūn", "inmede aşırı gidenler", "orta", ""],
+      [358, "نِزِّيلِين", "nizzīlīn", "inmede aşırı gidenler", "orta", ""],
+      [359, "نِزِّيلَات", "nizzīlāt", "inmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "نُزَّال", "nuzzāl", "son derece inen", "orta", ""],
+      [361, "نُزَّالَة", "nuzzāla", "son derece inen (müennes)", "orta", ""],
+      [362, "نُزَّالَان", "nuzzālān", "son derece inen (iki)", "orta", ""],
+      [363, "نُزَّالَتَان", "nuzzālatān", "son derece inen (iki, müennes)", "orta", ""],
+      [364, "نُزَّالُون", "nuzzālūn", "son derece inenler", "orta", ""],
+      [365, "نُزَّالِين", "nuzzālīn", "son derece inenler", "orta", ""],
+      [366, "نُزَّالَات", "nuzzālāt", "son derece inenler (müennes)", "orta", ""],
+      [367, "مِنْزَال", "minzāl", "inmeyi âdet edinmiş", "orta", ""],
+      [368, "مِنْزَالَة", "minzāla", "inmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِنْزَالَان", "minzālān", "inmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِنْزَالَتَان", "minzālatān", "inmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِنْزَالُون", "minzālūn", "inmeyi âdet edinmişler", "orta", ""],
+      [372, "مِنْزَالِين", "minzālīn", "inmeyi âdet edinmişler", "orta", ""],
+      [373, "مِنْزَالَات", "minzālāt", "inmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِنْزِيل", "minzīl", "inmeye düşkün", "orta", ""],
+      [375, "مِنْزِيلَة", "minzīla", "inmeye düşkün (müennes)", "orta", ""],
+      [376, "مِنْزِيلَان", "minzīlān", "inmeye düşkün (iki)", "orta", ""],
+      [377, "مِنْزِيلَتَان", "minzīlatān", "inmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِنْزِيلُون", "minzīlūn", "inmeye düşkünler", "orta", ""],
+      [379, "مِنْزِيلِين", "minzīlīn", "inmeye düşkünler", "orta", ""],
+      [380, "مِنْزِيلَات", "minzīlāt", "inmeye düşkünler (müennes)", "orta", ""],
       [
         381,
         "نَزِيل",
@@ -508,34 +529,34 @@
         "orta",
         "Vikisözlük: lodger, person who bides in a facility (e.g. a hospital, a prison, a h"
       ],
-      [382, "نَزِيلَة", "nazīla", "çok inen (dişi)", "orta", ""],
-      [383, "نَزِيلَان", "nazīlān", "iki çok inen", "orta", ""],
-      [384, "نَزِيلَتَان", "nazīlatān", "iki çok inen (dişi)", "orta", ""],
+      [382, "نَزِيلَة", "nazīla", "çok inen (müennes)", "orta", ""],
+      [383, "نَزِيلَان", "nazīlān", "çok inen (iki)", "orta", ""],
+      [384, "نَزِيلَتَان", "nazīlatān", "çok inen (iki, müennes)", "orta", ""],
       [385, "نَزِيلُون", "nazīlūn", "çok inenler", "orta", ""],
       [386, "نَزِيلِين", "nazīlīn", "çok inenler", "orta", ""],
-      [387, "نَزِيلَات", "nazīlāt", "çok inenler (dişi)", "orta", ""],
+      [387, "نَزِيلَات", "nazīlāt", "çok inenler (müennes)", "orta", ""],
       [388, "نَزَّل", "nazzal", "çok inen", "orta", ""],
-      [389, "نَزَّلَة", "nazzala", "çok inen (dişi)", "orta", ""],
-      [390, "نَزَّلَان", "nazzalān", "iki çok inen", "orta", ""],
-      [391, "نَزَّلَتَان", "nazzalatān", "iki çok inen (dişi)", "orta", ""],
+      [389, "نَزَّلَة", "nazzala", "çok inen (müennes)", "orta", ""],
+      [390, "نَزَّلَان", "nazzalān", "çok inen (iki)", "orta", ""],
+      [391, "نَزَّلَتَان", "nazzalatān", "çok inen (iki, müennes)", "orta", ""],
       [392, "نَزَّلُون", "nazzalūn", "çok inenler", "orta", ""],
       [393, "نَزَّلِين", "nazzalīn", "çok inenler", "orta", ""],
-      [394, "نَزَّلَات", "nazzalāt", "çok inenler (dişi)", "orta", ""]
+      [394, "نَزَّلَات", "nazzalāt", "çok inenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "نَزْلِيّ", "nazliyy", "inmeye ilgili", "orta", ""],
-      [397, "نَزَلِيّ", "nazaliyy", "inmeye ilgili", "orta", ""],
-      [399, "نِزْلِيّ", "nizliyy", "inmeye ilgili", "orta", ""],
-      [401, "نُزْلِيّ", "nuzliyy", "inmeye ilgili", "orta", ""],
-      [403, "نِزَالِيّ", "nizāliyy", "inmeye ilgili", "orta", ""],
-      [405, "نَازِلِيّ", "nāziliyy", "inmeye ilgili", "orta", ""],
-      [407, "مَنْزُولِيّ", "manzūliyy", "inmeye ilgili", "orta", ""],
-      [409, "نَزِيلِيّ", "nazīliyy", "inmeye ilgili", "orta", ""],
-      [411, "مَنْزَلِيّ", "manzaliyy", "inmeye ilgili", "orta", ""],
-      [413, "تَنْزِيلِيّ", "tanzīliyy", "inmeye ilgili", "orta", ""],
-      [415, "تَنَازُلِيّ", "tanāzuliyy", "inmeye ilgili", "orta", "Vikisözlük: descending"],
-      [417, "إِنْزَالِيّ", "ʾinzāliyy", "inmeye ilgili", "orta", ""],
-      [419, "اِنْتِزَالِيّ", "intizāliyy", "inmeye ilgili", "orta", ""]
+      [395, "نَزْلِيّ", "nazliyy", "inme ile ilgili", "orta", ""],
+      [397, "نَزَلِيّ", "nazaliyy", "inme ile ilgili", "orta", ""],
+      [399, "نِزْلِيّ", "nizliyy", "inme ile ilgili", "orta", ""],
+      [401, "نُزْلِيّ", "nuzliyy", "inme ile ilgili", "orta", ""],
+      [403, "نِزَالِيّ", "nizāliyy", "inme ile ilgili", "orta", ""],
+      [405, "نَازِلِيّ", "nāziliyy", "inme ile ilgili", "orta", ""],
+      [407, "مَنْزُولِيّ", "manzūliyy", "inme ile ilgili", "orta", ""],
+      [409, "نَزِيلِيّ", "nazīliyy", "inme ile ilgili", "orta", ""],
+      [411, "مَنْزَلِيّ", "manzaliyy", "inme ile ilgili", "orta", ""],
+      [413, "تَنْزِيلِيّ", "tanzīliyy", "inme ile ilgili", "orta", ""],
+      [415, "تَنَازُلِيّ", "tanāzuliyy", "inme ile ilgili", "orta", "Vikisözlük: descending"],
+      [417, "إِنْزَالِيّ", "ʾinzāliyy", "inme ile ilgili", "orta", ""],
+      [419, "اِنْتِزَالِيّ", "intizāliyy", "inme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "نَزْلِيَّة", "nazliyya", "inenlik", "orta", ""],
@@ -564,102 +585,95 @@
       [429, "نِزْل", "nizl", "inme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "نَازُول", "nāzūl", "inenler (topluluk adı)", "orta", ""],
-      [432, "نَزَلَة", "nazala", "inenler (topluluk adı)", "orta", ""],
-      [433, "نُزَلَة", "nuzala", "inenler (topluluk adı)", "orta", ""],
-      [434, "أُنْزُولَة", "ʾunzūla", "inenler (topluluk adı)", "orta", ""],
-      [435, "نَوْزَل", "nawzal", "inenler (topluluk adı)", "orta", ""],
-      [437, "نَيْزَل", "nayzal", "inenler (topluluk adı)", "orta", ""],
-      [439, "نَزْل", "nazl", "inenler (topluluk adı)", "orta", ""],
-      [441, "نَزَل", "nazal", "inenler (topluluk adı)", "orta", ""],
-      [443, "نِزْل", "nizl", "inenler (topluluk adı)", "orta", ""],
-      [445, "نُزْل", "nuzl", "inenler (topluluk adı)", "orta", "Vikisözlük: food served to a guest"],
+      [430, "نَازُول", "nāzūl", "inme türünden şey", "orta", ""],
+      [432, "نَزَلَة", "nazala", "inme türünden şey", "orta", ""],
+      [433, "نُزَلَة", "nuzala", "inme türünden şey", "orta", ""],
+      [434, "أُنْزُولَة", "ʾunzūla", "inme türünden şey", "orta", ""],
+      [435, "نَوْزَل", "nawzal", "inme türünden şey", "orta", ""],
+      [437, "نَيْزَل", "nayzal", "inme türünden şey", "orta", ""],
+      [439, "نَزْل", "nazl", "inme türünden şey", "orta", ""],
+      [441, "نَزَل", "nazal", "inme türünden şey", "orta", ""],
+      [443, "نِزْل", "nizl", "inme türünden şey", "orta", ""],
+      [445, "نُزْل", "nuzl", "inme türünden şey", "orta", "Vikisözlük: food served to a guest"],
       [
         447,
         "نَزِيل",
         "nazīl",
-        "inenler (topluluk adı)",
+        "inme türünden şey",
         "orta",
         "Vikisözlük: lodger, person who bides in a facility (e.g. a hospital, a prison, a h"
       ],
-      [449, "نِزَل", "nizal", "inenler (topluluk adı)", "orta", ""],
-      [451, "نُزُل", "nuzul", "inenler (topluluk adı)", "orta", "Vikisözlük: quarter, lodging"],
-      [453, "نَزَال", "nazāl", "inenler (topluluk adı)", "orta", ""]
+      [449, "نِزَل", "nizal", "inme türünden şey", "orta", ""],
+      [451, "نُزُل", "nuzul", "inme türünden şey", "orta", "Vikisözlük: quarter, lodging"],
+      [453, "نَزَال", "nazāl", "inme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "نَازُولَة", "nāzūla", "bir tane inenler (topluluk adı)", "orta", ""],
-      [436, "نَوْزَلَة", "nawzala", "bir tane inenler (topluluk adı)", "orta", ""],
-      [438, "نَيْزَلَة", "nayzala", "bir tane inenler (topluluk adı)", "orta", ""],
-      [440, "نَزْلَة", "nazla", "bir tane inenler (topluluk adı)", "orta", ""],
-      [442, "نَزَلَة", "nazala", "bir tane inenler (topluluk adı)", "orta", ""],
-      [444, "نِزْلَة", "nizla", "bir tane inenler (topluluk adı)", "orta", ""],
-      [446, "نُزْلَة", "nuzla", "bir tane inenler (topluluk adı)", "orta", ""],
-      [448, "نَزِيلَة", "nazīla", "bir tane inenler (topluluk adı)", "orta", ""],
-      [450, "نِزَلَة", "nizala", "bir tane inenler (topluluk adı)", "orta", ""],
-      [452, "نُزُلَة", "nuzula", "bir tane inenler (topluluk adı)", "orta", ""],
-      [454, "نَزَالَة", "nazāla", "bir tane inenler (topluluk adı)", "orta", ""]
+      [431, "نَازُولَة", "nāzūla", "inme türünden bir tane", "orta", ""],
+      [436, "نَوْزَلَة", "nawzala", "inme türünden bir tane", "orta", ""],
+      [438, "نَيْزَلَة", "nayzala", "inme türünden bir tane", "orta", ""],
+      [440, "نَزْلَة", "nazla", "iniş", "kuran", "Kur'ân"],
+      [442, "نَزَلَة", "nazala", "inme türünden bir tane", "orta", ""],
+      [444, "نِزْلَة", "nizla", "inme türünden bir tane", "orta", ""],
+      [446, "نُزْلَة", "nuzla", "inme türünden bir tane", "orta", ""],
+      [448, "نَزِيلَة", "nazīla", "inme türünden bir tane", "orta", ""],
+      [450, "نِزَلَة", "nizala", "inme türünden bir tane", "orta", ""],
+      [452, "نُزُلَة", "nuzula", "inme türünden bir tane", "orta", ""],
+      [454, "نَزَالَة", "nazāla", "inme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَنْزَال", "ʾanzāl", "inenler (kırık çoğul)", "orta", ""],
-      [456, "أَنْزِلَة", "ʾanzila", "inenler (kırık çoğul)", "orta", ""],
-      [457, "أَنَازِل", "ʾanāzil", "inenler (kırık çoğul)", "orta", ""],
-      [458, "أَنَازِيل", "ʾanāzīl", "inenler (kırık çoğul)", "orta", ""],
+      [455, "أَنْزَال", "ʾanzāl", "inmeler", "orta", ""],
+      [456, "أَنْزِلَة", "ʾanzila", "inmeler", "orta", ""],
+      [457, "أَنَازِل", "ʾanāzil", "inmeler", "orta", ""],
+      [458, "أَنَازِيل", "ʾanāzīl", "inmeler", "orta", ""],
       [
         459,
         "نُزُول",
         "nuzūl",
-        "inenler (kırık çoğul)",
+        "inmeler",
         "orta",
         "Vikisözlük: masdar (bâb I): to descend, to come down, to go down"
       ],
-      [460, "نُزُل", "nuzul", "inenler (kırık çoğul)", "orta", "Vikisözlük: quarter, lodging"],
-      [
-        461,
-        "نِزَال",
-        "nizāl",
-        "inenler (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"
-      ],
-      [462, "نِزَل", "nizal", "inenler (kırık çoğul)", "orta", ""],
-      [463, "نِزَلَة", "nizala", "inenler (kırık çoğul)", "orta", ""],
-      [464, "نُزَل", "nuzal", "inenler (kırık çoğul)", "orta", ""],
-      [465, "نُزَلاء", "nuzalāʾ", "inenler (kırık çoğul)", "orta", ""],
-      [466, "نَزَلَة", "nazala", "inenler (kırık çoğul)", "orta", ""],
-      [467, "نُزَّال", "nuzzāl", "inenler (kırık çoğul)", "orta", ""],
-      [468, "نَزَال", "nazāl", "inenler (kırık çoğul)", "orta", ""],
-      [469, "نَزَل", "nazal", "inenler (kırık çoğul)", "orta", ""],
-      [470, "مَنَازِل", "manāzil", "inenler (kırık çoğul)", "orta", ""],
-      [471, "مَنَازِيل", "manāzīl", "inenler (kırık çoğul)", "orta", ""],
-      [472, "نَوَازِل", "nawāzil", "inenler (kırık çoğul)", "orta", ""],
-      [473, "أَنْزُل", "ʾanzul", "inenler (kırık çoğul)", "orta", ""],
-      [474, "نُزَّل", "nuzzal", "inenler (kırık çoğul)", "orta", ""],
-      [475, "نَزَائِل", "nazāʾil", "inenler (kırık çoğul)", "orta", ""],
-      [476, "نُزَيْل", "nuzayl", "inenler (kırık çoğul)", "orta", ""]
+      [460, "نُزُل", "nuzul", "inmeler", "orta", "Vikisözlük: quarter, lodging"],
+      [461, "نِزَال", "nizāl", "inmeler", "orta", "Vikisözlük: verbal noun of نَازَلَ (nāzala) (form III)"],
+      [462, "نِزَل", "nizal", "inmeler", "orta", ""],
+      [463, "نِزَلَة", "nizala", "inmeler", "orta", ""],
+      [464, "نُزَل", "nuzal", "inmeler", "orta", ""],
+      [465, "نُزَلاء", "nuzalāʾ", "inmeler", "orta", ""],
+      [466, "نَزَلَة", "nazala", "inmeler", "orta", ""],
+      [467, "نُزَّال", "nuzzāl", "inmeler", "orta", ""],
+      [468, "نَزَال", "nazāl", "inmeler", "orta", ""],
+      [469, "نَزَل", "nazal", "inmeler", "orta", ""],
+      [470, "مَنَازِل", "manāzil", "inmeler", "orta", ""],
+      [471, "مَنَازِيل", "manāzīl", "inmeler", "orta", ""],
+      [472, "نَوَازِل", "nawāzil", "inmeler", "orta", ""],
+      [473, "أَنْزُل", "ʾanzul", "inmeler", "orta", ""],
+      [474, "نُزَّل", "nuzzal", "inmeler", "orta", ""],
+      [475, "نَزَائِل", "nazāʾil", "inmeler", "orta", ""],
+      [476, "نُزَيْل", "nuzayl", "inmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَنْزَالَات", "ʾanzālāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَنْزِلَات", "ʾanzilāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَنَازِلَات", "ʾanāzilāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَنَازِيلَات", "ʾanāzīlāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [481, "نُزُولَات", "nuzūlāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [482, "نُزُلَات", "nuzulāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [483, "نِزَالَات", "nizālāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [484, "نِزَلَات", "nizalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [485, "نِزَلَات", "nizalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [486, "نُزَلَات", "nuzalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [487, "نُزَلاآت", "nuzalāʾāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [488, "نَزَلَات", "nazalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [489, "نُزَّالَات", "nuzzālāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [490, "نَزَالَات", "nazālāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [491, "نَزَلَات", "nazalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَنَازِلَات", "manāzilāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَنَازِيلَات", "manāzīlāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [494, "نَوَازِلَات", "nawāzilāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَنْزُلَات", "ʾanzulāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [496, "نُزَّلَات", "nuzzalāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [497, "نَزَائِلَات", "nazāʾilāt", "inenler (çoğulun çoğulu)", "orta", ""],
-      [498, "نُزَيْلَات", "nuzaylāt", "inenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَنْزَالَات", "ʾanzālāt", "inmeler topluluğu", "orta", ""],
+      [478, "أَنْزِلَات", "ʾanzilāt", "inmeler topluluğu", "orta", ""],
+      [479, "أَنَازِلَات", "ʾanāzilāt", "inmeler topluluğu", "orta", ""],
+      [480, "أَنَازِيلَات", "ʾanāzīlāt", "inmeler topluluğu", "orta", ""],
+      [481, "نُزُولَات", "nuzūlāt", "inmeler topluluğu", "orta", ""],
+      [482, "نُزُلَات", "nuzulāt", "inmeler topluluğu", "orta", ""],
+      [483, "نِزَالَات", "nizālāt", "inmeler topluluğu", "orta", ""],
+      [484, "نِزَلَات", "nizalāt", "inmeler topluluğu", "orta", ""],
+      [485, "نِزَلَات", "nizalāt", "inmeler topluluğu", "orta", ""],
+      [486, "نُزَلَات", "nuzalāt", "inmeler topluluğu", "orta", ""],
+      [487, "نُزَلاآت", "nuzalāʾāt", "inmeler topluluğu", "orta", ""],
+      [488, "نَزَلَات", "nazalāt", "inmeler topluluğu", "orta", ""],
+      [489, "نُزَّالَات", "nuzzālāt", "inmeler topluluğu", "orta", ""],
+      [490, "نَزَالَات", "nazālāt", "inmeler topluluğu", "orta", ""],
+      [491, "نَزَلَات", "nazalāt", "inmeler topluluğu", "orta", ""],
+      [492, "مَنَازِلَات", "manāzilāt", "inmeler topluluğu", "orta", ""],
+      [493, "مَنَازِيلَات", "manāzīlāt", "inmeler topluluğu", "orta", ""],
+      [494, "نَوَازِلَات", "nawāzilāt", "inmeler topluluğu", "orta", ""],
+      [495, "أَنْزُلَات", "ʾanzulāt", "inmeler topluluğu", "orta", ""],
+      [496, "نُزَّلَات", "nuzzalāt", "inmeler topluluğu", "orta", ""],
+      [497, "نَزَائِلَات", "nazāʾilāt", "inmeler topluluğu", "orta", ""],
+      [498, "نُزَيْلَات", "nuzaylāt", "inmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

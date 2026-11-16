@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "جَذْع", "caẕʿ", "hurma kütüğü", "kontrol", ""],
-      [1, "جِذْع", "ciẕʿ", "hurma kütüğü", "kontrol", ""],
+      [1, "جِذْع", "ciẕʿ", "kütük, gövde", "kuran", "Kur'ân"],
       [2, "جُذْع", "cuẕʿ", "hurma kütüğü", "kontrol", ""],
       [3, "جَذَع", "caẕaʿ", "hurma kütüğü", "kontrol", ""],
       [4, "جِذَع", "ciẕaʿ", "hurma kütüğü", "kontrol", ""],
@@ -39,143 +39,157 @@
       [28, "مَجْذِعَة", "macẕiʿa", "hurma kütüğü", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَجْذِيع", "tacẕīʿ", "hurma kütüğü olma", "kontrol", ""],
-      [30, "تَجْذِعَة", "tacẕiʿa", "hurma kütüğü olma", "kontrol", ""],
-      [31, "جِذِّاع", "ciẕẕāʿ", "hurma kütüğü olma", "kontrol", ""]
+      [29, "تَجْذِيع", "tacẕīʿ", "çokça hurma kütüğü olma", "kontrol", ""],
+      [30, "تَجْذِعَة", "tacẕiʿa", "çokça hurma kütüğü olma", "kontrol", ""],
+      [31, "جِذِّاع", "ciẕẕāʿ", "çokça hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَجْذِيعَة", "tacẕīʿa", "bir kere hurma kütüğü olma", "kontrol", ""],
-      [33, "جِذِّاعَة", "ciẕẕāʿa", "bir kere hurma kütüğü olma", "kontrol", ""]
+      [32, "تَجْذِيعَة", "tacẕīʿa", "bir kere çokça hurma kütüğü olma", "kontrol", ""],
+      [33, "جِذِّاعَة", "ciẕẕāʿa", "bir kere çokça hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُجَذِّع", "mucaẕẕiʿ", "hurma kütüğü olan", "kontrol", ""],
-      [35, "مُجَذِّعَة", "mucaẕẕiʿa", "hurma kütüğü olan (dişi)", "kontrol", ""],
-      [36, "مُجَذِّعَان", "mucaẕẕiʿān", "iki hurma kütüğü olan", "kontrol", ""],
-      [37, "مُجَذِّعَتَان", "mucaẕẕiʿatān", "iki hurma kütüğü olan (dişi)", "kontrol", ""],
-      [38, "مُجَذِّعُون", "mucaẕẕiʿūn", "hurma kütüğü olanlar", "kontrol", ""],
-      [39, "مُجَذِّعِين", "mucaẕẕiʿīn", "hurma kütüğü olanlar", "kontrol", ""],
-      [40, "مُجَذِّعَات", "mucaẕẕiʿāt", "hurma kütüğü olanlar (dişi)", "kontrol", ""]
+      [34, "مُجَذِّع", "mucaẕẕiʿ", "çokça hurma kütüğü olan", "kontrol", ""],
+      [35, "مُجَذِّعَة", "mucaẕẕiʿa", "çokça hurma kütüğü olan (müennes)", "kontrol", ""],
+      [36, "مُجَذِّعَان", "mucaẕẕiʿān", "çokça hurma kütüğü olan (iki)", "kontrol", ""],
+      [37, "مُجَذِّعَتَان", "mucaẕẕiʿatān", "çokça hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [38, "مُجَذِّعُون", "mucaẕẕiʿūn", "çokça hurma kütüğü olanlar", "kontrol", ""],
+      [39, "مُجَذِّعِين", "mucaẕẕiʿīn", "çokça hurma kütüğü olanlar", "kontrol", ""],
+      [40, "مُجَذِّعَات", "mucaẕẕiʿāt", "çokça hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُجَذَّع", "mucaẕẕaʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [42, "مُجَذَّعَة", "mucaẕẕaʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [43, "مُجَذَّعَان", "mucaẕẕaʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [44, "مُجَذَّعَتَان", "mucaẕẕaʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [45, "مُجَذَّعُون", "mucaẕẕaʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [46, "مُجَذَّعِين", "mucaẕẕaʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [47, "مُجَذَّعَات", "mucaẕẕaʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [41, "مُجَذَّع", "mucaẕẕaʿ", "çokça hurma kütüğü olunan", "kontrol", ""],
+      [42, "مُجَذَّعَة", "mucaẕẕaʿa", "çokça hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [43, "مُجَذَّعَان", "mucaẕẕaʿān", "çokça hurma kütüğü olunan (iki)", "kontrol", ""],
+      [44, "مُجَذَّعَتَان", "mucaẕẕaʿatān", "çokça hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [45, "مُجَذَّعُون", "mucaẕẕaʿūn", "çokça hurma kütüğü olunanlar", "kontrol", ""],
+      [46, "مُجَذَّعِين", "mucaẕẕaʿīn", "çokça hurma kütüğü olunanlar", "kontrol", ""],
+      [47, "مُجَذَّعَات", "mucaẕẕaʿāt", "çokça hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُجَذَّع", "mucaẕẕaʿ", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""]
+      [48, "مُجَذَّع", "mucaẕẕaʿ", "çokça hurma kütüğü olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُجَاذَعَة", "mucāẕaʿa", "hurma kütüğü oluşma", "kontrol", ""],
-      [50, "جِذَاع", "ciẕāʿ", "hurma kütüğü oluşma", "kontrol", ""]
+      [49, "مُجَاذَعَة", "mucāẕaʿa", "biriyle karşılıklı hurma kütüğü olma", "kontrol", ""],
+      [50, "جِذَاع", "ciẕāʿ", "biriyle karşılıklı hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "جِذَاعَة", "ciẕāʿa", "bir kere hurma kütüğü oluşma", "kontrol", ""]
+      [51, "جِذَاعَة", "ciẕāʿa", "bir kere biriyle karşılıklı hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُجَاذِع", "mucāẕiʿ", "hurma kütüğü oluşan", "kontrol", ""],
-      [53, "مُجَاذِعَة", "mucāẕiʿa", "hurma kütüğü oluşan (dişi)", "kontrol", ""],
-      [54, "مُجَاذِعَان", "mucāẕiʿān", "iki hurma kütüğü oluşan", "kontrol", ""],
-      [55, "مُجَاذِعَتَان", "mucāẕiʿatān", "iki hurma kütüğü oluşan (dişi)", "kontrol", ""],
-      [56, "مُجَاذِعُون", "mucāẕiʿūn", "hurma kütüğü oluşanlar", "kontrol", ""],
-      [57, "مُجَاذِعِين", "mucāẕiʿīn", "hurma kütüğü oluşanlar", "kontrol", ""],
-      [58, "مُجَاذِعَات", "mucāẕiʿāt", "hurma kütüğü oluşanlar (dişi)", "kontrol", ""]
+      [52, "مُجَاذِع", "mucāẕiʿ", "biriyle karşılıklı hurma kütüğü olan", "kontrol", ""],
+      [53, "مُجَاذِعَة", "mucāẕiʿa", "biriyle karşılıklı hurma kütüğü olan (müennes)", "kontrol", ""],
+      [54, "مُجَاذِعَان", "mucāẕiʿān", "biriyle karşılıklı hurma kütüğü olan (iki)", "kontrol", ""],
+      [55, "مُجَاذِعَتَان", "mucāẕiʿatān", "biriyle karşılıklı hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [56, "مُجَاذِعُون", "mucāẕiʿūn", "biriyle karşılıklı hurma kütüğü olanlar", "kontrol", ""],
+      [57, "مُجَاذِعِين", "mucāẕiʿīn", "biriyle karşılıklı hurma kütüğü olanlar", "kontrol", ""],
+      [58, "مُجَاذِعَات", "mucāẕiʿāt", "biriyle karşılıklı hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُجَاذَع", "mucāẕaʿ", "hurma kütüğü oluşmuş", "kontrol", ""],
-      [60, "مُجَاذَعَة", "mucāẕaʿa", "hurma kütüğü oluşmuş (dişi)", "kontrol", ""],
-      [61, "مُجَاذَعَان", "mucāẕaʿān", "iki hurma kütüğü oluşmuş", "kontrol", ""],
-      [62, "مُجَاذَعَتَان", "mucāẕaʿatān", "iki hurma kütüğü oluşmuş (dişi)", "kontrol", ""],
-      [63, "مُجَاذَعُون", "mucāẕaʿūn", "hurma kütüğü oluşmuşlar", "kontrol", ""],
-      [64, "مُجَاذَعِين", "mucāẕaʿīn", "hurma kütüğü oluşmuşlar", "kontrol", ""],
-      [65, "مُجَاذَعَات", "mucāẕaʿāt", "hurma kütüğü oluşmuşlar (dişi)", "kontrol", ""]
+      [59, "مُجَاذَع", "mucāẕaʿ", "biriyle karşılıklı hurma kütüğü olunan", "kontrol", ""],
+      [60, "مُجَاذَعَة", "mucāẕaʿa", "biriyle karşılıklı hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [61, "مُجَاذَعَان", "mucāẕaʿān", "biriyle karşılıklı hurma kütüğü olunan (iki)", "kontrol", ""],
+      [62, "مُجَاذَعَتَان", "mucāẕaʿatān", "biriyle karşılıklı hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [63, "مُجَاذَعُون", "mucāẕaʿūn", "biriyle karşılıklı hurma kütüğü olunanlar", "kontrol", ""],
+      [64, "مُجَاذَعِين", "mucāẕaʿīn", "biriyle karşılıklı hurma kütüğü olunanlar", "kontrol", ""],
+      [65, "مُجَاذَعَات", "mucāẕaʿāt", "biriyle karşılıklı hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُجَاذَع", "mucāẕaʿ", "hurma kütüğü oluşma (yeri/zamanı)", "kontrol", ""]
+      [66, "مُجَاذَع", "mucāẕaʿ", "biriyle karşılıklı hurma kütüğü olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِجْذَاع", "ʾicẕāʿ", "hurma kütüğü olma", "kontrol", ""]
+      [67, "إِجْذَاع", "ʾicẕāʿ", "hurma kütüğü etme", "kontrol", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِجْذَاعَة", "ʾicẕāʿa", "bir kere hurma kütüğü olma", "kontrol", ""]
+      [68, "إِجْذَاعَة", "ʾicẕāʿa", "bir kere hurma kütüğü etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُجْذِع", "mucẕiʿ", "hurma kütüğü olan", "kontrol", ""],
-      [70, "مُجْذِعَة", "mucẕiʿa", "hurma kütüğü olan (dişi)", "kontrol", ""],
-      [71, "مُجْذِعَان", "mucẕiʿān", "iki hurma kütüğü olan", "kontrol", ""],
-      [72, "مُجْذِعَتَان", "mucẕiʿatān", "iki hurma kütüğü olan (dişi)", "kontrol", ""],
-      [73, "مُجْذِعُون", "mucẕiʿūn", "hurma kütüğü olanlar", "kontrol", ""],
-      [74, "مُجْذِعِين", "mucẕiʿīn", "hurma kütüğü olanlar", "kontrol", ""],
-      [75, "مُجْذِعَات", "mucẕiʿāt", "hurma kütüğü olanlar (dişi)", "kontrol", ""]
+      [69, "مُجْذِع", "mucẕiʿ", "hurma kütüğü eden", "kontrol", ""],
+      [70, "مُجْذِعَة", "mucẕiʿa", "hurma kütüğü eden (müennes)", "kontrol", ""],
+      [71, "مُجْذِعَان", "mucẕiʿān", "hurma kütüğü eden (iki)", "kontrol", ""],
+      [72, "مُجْذِعَتَان", "mucẕiʿatān", "hurma kütüğü eden (iki, müennes)", "kontrol", ""],
+      [73, "مُجْذِعُون", "mucẕiʿūn", "hurma kütüğü edenler", "kontrol", ""],
+      [74, "مُجْذِعِين", "mucẕiʿīn", "hurma kütüğü edenler", "kontrol", ""],
+      [75, "مُجْذِعَات", "mucẕiʿāt", "hurma kütüğü edenler (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُجْذَع", "mucẕaʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [77, "مُجْذَعَة", "mucẕaʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [78, "مُجْذَعَان", "mucẕaʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [79, "مُجْذَعَتَان", "mucẕaʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [80, "مُجْذَعُون", "mucẕaʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [81, "مُجْذَعِين", "mucẕaʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [82, "مُجْذَعَات", "mucẕaʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [76, "مُجْذَع", "mucẕaʿ", "hurma kütüğü edilen", "kontrol", ""],
+      [77, "مُجْذَعَة", "mucẕaʿa", "hurma kütüğü edilen (müennes)", "kontrol", ""],
+      [78, "مُجْذَعَان", "mucẕaʿān", "hurma kütüğü edilen (iki)", "kontrol", ""],
+      [79, "مُجْذَعَتَان", "mucẕaʿatān", "hurma kütüğü edilen (iki, müennes)", "kontrol", ""],
+      [80, "مُجْذَعُون", "mucẕaʿūn", "hurma kütüğü edilenler", "kontrol", ""],
+      [81, "مُجْذَعِين", "mucẕaʿīn", "hurma kütüğü edilenler", "kontrol", ""],
+      [82, "مُجْذَعَات", "mucẕaʿāt", "hurma kütüğü edilenler (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُجْذَع", "mucẕaʿ", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""]
+      [83, "مُجْذَع", "mucẕaʿ", "hurma kütüğü etme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَجَذُّع", "tacaẕẕuʿ", "hurma kütüğü olunma", "kontrol", ""]
+      [84, "تَجَذُّع", "tacaẕẕuʿ", "kendini zorlayarak hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَجَذُّعَة", "tacaẕẕuʿa", "bir kere hurma kütüğü olunma", "kontrol", ""]
+      [85, "تَجَذُّعَة", "tacaẕẕuʿa", "bir kere kendini zorlayarak hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَجَذِّع", "mutacaẕẕiʿ", "hurma kütüğü olunan", "kontrol", ""],
-      [87, "مُتَجَذِّعَة", "mutacaẕẕiʿa", "hurma kütüğü olunan (dişi)", "kontrol", ""],
-      [88, "مُتَجَذِّعَان", "mutacaẕẕiʿān", "iki hurma kütüğü olunan", "kontrol", ""],
-      [89, "مُتَجَذِّعَتَان", "mutacaẕẕiʿatān", "iki hurma kütüğü olunan (dişi)", "kontrol", ""],
-      [90, "مُتَجَذِّعُون", "mutacaẕẕiʿūn", "hurma kütüğü olunanlar", "kontrol", ""],
-      [91, "مُتَجَذِّعِين", "mutacaẕẕiʿīn", "hurma kütüğü olunanlar", "kontrol", ""],
-      [92, "مُتَجَذِّعَات", "mutacaẕẕiʿāt", "hurma kütüğü olunanlar (dişi)", "kontrol", ""]
+      [86, "مُتَجَذِّع", "mutacaẕẕiʿ", "kendini zorlayarak hurma kütüğü olan", "kontrol", ""],
+      [87, "مُتَجَذِّعَة", "mutacaẕẕiʿa", "kendini zorlayarak hurma kütüğü olan (müennes)", "kontrol", ""],
+      [88, "مُتَجَذِّعَان", "mutacaẕẕiʿān", "kendini zorlayarak hurma kütüğü olan (iki)", "kontrol", ""],
+      [
+        89,
+        "مُتَجَذِّعَتَان",
+        "mutacaẕẕiʿatān",
+        "kendini zorlayarak hurma kütüğü olan (iki, müennes)",
+        "kontrol",
+        ""
+      ],
+      [90, "مُتَجَذِّعُون", "mutacaẕẕiʿūn", "kendini zorlayarak hurma kütüğü olanlar", "kontrol", ""],
+      [91, "مُتَجَذِّعِين", "mutacaẕẕiʿīn", "kendini zorlayarak hurma kütüğü olanlar", "kontrol", ""],
+      [92, "مُتَجَذِّعَات", "mutacaẕẕiʿāt", "kendini zorlayarak hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَجَذَّع", "mutacaẕẕaʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [94, "مُتَجَذَّعَة", "mutacaẕẕaʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [95, "مُتَجَذَّعَان", "mutacaẕẕaʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [96, "مُتَجَذَّعَتَان", "mutacaẕẕaʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [97, "مُتَجَذَّعُون", "mutacaẕẕaʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [98, "مُتَجَذَّعِين", "mutacaẕẕaʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [99, "مُتَجَذَّعَات", "mutacaẕẕaʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [93, "مُتَجَذَّع", "mutacaẕẕaʿ", "kendini zorlayarak hurma kütüğü olunan", "kontrol", ""],
+      [94, "مُتَجَذَّعَة", "mutacaẕẕaʿa", "kendini zorlayarak hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [95, "مُتَجَذَّعَان", "mutacaẕẕaʿān", "kendini zorlayarak hurma kütüğü olunan (iki)", "kontrol", ""],
+      [
+        96,
+        "مُتَجَذَّعَتَان",
+        "mutacaẕẕaʿatān",
+        "kendini zorlayarak hurma kütüğü olunan (iki, müennes)",
+        "kontrol",
+        ""
+      ],
+      [97, "مُتَجَذَّعُون", "mutacaẕẕaʿūn", "kendini zorlayarak hurma kütüğü olunanlar", "kontrol", ""],
+      [98, "مُتَجَذَّعِين", "mutacaẕẕaʿīn", "kendini zorlayarak hurma kütüğü olunanlar", "kontrol", ""],
+      [99, "مُتَجَذَّعَات", "mutacaẕẕaʿāt", "kendini zorlayarak hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَجَذَّع", "mutacaẕẕaʿ", "hurma kütüğü olunma (yeri/zamanı)", "kontrol", ""]
+      [100, "مُتَجَذَّع", "mutacaẕẕaʿ", "kendini zorlayarak hurma kütüğü olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَجَاذُع", "tacāẕuʿ", "hurma kütüğü oluşma", "kontrol", ""]
+      [101, "تَجَاذُع", "tacāẕuʿ", "birbirine hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَجَاذُعَة", "tacāẕuʿa", "bir kere hurma kütüğü oluşma", "kontrol", ""]
+      [102, "تَجَاذُعَة", "tacāẕuʿa", "bir kere birbirine hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَجَاذِع", "mutacāẕiʿ", "hurma kütüğü oluşan", "kontrol", ""],
-      [104, "مُتَجَاذِعَة", "mutacāẕiʿa", "hurma kütüğü oluşan (dişi)", "kontrol", ""],
-      [105, "مُتَجَاذِعَان", "mutacāẕiʿān", "iki hurma kütüğü oluşan", "kontrol", ""],
-      [106, "مُتَجَاذِعَتَان", "mutacāẕiʿatān", "iki hurma kütüğü oluşan (dişi)", "kontrol", ""],
-      [107, "مُتَجَاذِعُون", "mutacāẕiʿūn", "hurma kütüğü oluşanlar", "kontrol", ""],
-      [108, "مُتَجَاذِعِين", "mutacāẕiʿīn", "hurma kütüğü oluşanlar", "kontrol", ""],
-      [109, "مُتَجَاذِعَات", "mutacāẕiʿāt", "hurma kütüğü oluşanlar (dişi)", "kontrol", ""]
+      [103, "مُتَجَاذِع", "mutacāẕiʿ", "birbirine hurma kütüğü olan", "kontrol", ""],
+      [104, "مُتَجَاذِعَة", "mutacāẕiʿa", "birbirine hurma kütüğü olan (müennes)", "kontrol", ""],
+      [105, "مُتَجَاذِعَان", "mutacāẕiʿān", "birbirine hurma kütüğü olan (iki)", "kontrol", ""],
+      [106, "مُتَجَاذِعَتَان", "mutacāẕiʿatān", "birbirine hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [107, "مُتَجَاذِعُون", "mutacāẕiʿūn", "birbirine hurma kütüğü olanlar", "kontrol", ""],
+      [108, "مُتَجَاذِعِين", "mutacāẕiʿīn", "birbirine hurma kütüğü olanlar", "kontrol", ""],
+      [109, "مُتَجَاذِعَات", "mutacāẕiʿāt", "birbirine hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَجَاذَع", "mutacāẕaʿ", "hurma kütüğü oluşmuş", "kontrol", ""],
-      [111, "مُتَجَاذَعَة", "mutacāẕaʿa", "hurma kütüğü oluşmuş (dişi)", "kontrol", ""],
-      [112, "مُتَجَاذَعَان", "mutacāẕaʿān", "iki hurma kütüğü oluşmuş", "kontrol", ""],
-      [113, "مُتَجَاذَعَتَان", "mutacāẕaʿatān", "iki hurma kütüğü oluşmuş (dişi)", "kontrol", ""],
-      [114, "مُتَجَاذَعُون", "mutacāẕaʿūn", "hurma kütüğü oluşmuşlar", "kontrol", ""],
-      [115, "مُتَجَاذَعِين", "mutacāẕaʿīn", "hurma kütüğü oluşmuşlar", "kontrol", ""],
-      [116, "مُتَجَاذَعَات", "mutacāẕaʿāt", "hurma kütüğü oluşmuşlar (dişi)", "kontrol", ""]
+      [110, "مُتَجَاذَع", "mutacāẕaʿ", "birbirine hurma kütüğü olunan", "kontrol", ""],
+      [111, "مُتَجَاذَعَة", "mutacāẕaʿa", "birbirine hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [112, "مُتَجَاذَعَان", "mutacāẕaʿān", "birbirine hurma kütüğü olunan (iki)", "kontrol", ""],
+      [113, "مُتَجَاذَعَتَان", "mutacāẕaʿatān", "birbirine hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [114, "مُتَجَاذَعُون", "mutacāẕaʿūn", "birbirine hurma kütüğü olunanlar", "kontrol", ""],
+      [115, "مُتَجَاذَعِين", "mutacāẕaʿīn", "birbirine hurma kütüğü olunanlar", "kontrol", ""],
+      [116, "مُتَجَاذَعَات", "mutacāẕaʿāt", "birbirine hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَجَاذَع", "mutacāẕaʿ", "hurma kütüğü oluşma (yeri/zamanı)", "kontrol", ""]
+      [117, "مُتَجَاذَع", "mutacāẕaʿ", "birbirine hurma kütüğü olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْجِذَاع", "inciẕāʿ", "hurma kütüğü olunma", "kontrol", ""]
@@ -185,102 +199,102 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْجَذِع", "muncaẕiʿ", "hurma kütüğü olunan", "kontrol", ""],
-      [121, "مُنْجَذِعَة", "muncaẕiʿa", "hurma kütüğü olunan (dişi)", "kontrol", ""],
-      [122, "مُنْجَذِعَان", "muncaẕiʿān", "iki hurma kütüğü olunan", "kontrol", ""],
-      [123, "مُنْجَذِعَتَان", "muncaẕiʿatān", "iki hurma kütüğü olunan (dişi)", "kontrol", ""],
+      [121, "مُنْجَذِعَة", "muncaẕiʿa", "hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [122, "مُنْجَذِعَان", "muncaẕiʿān", "hurma kütüğü olunan (iki)", "kontrol", ""],
+      [123, "مُنْجَذِعَتَان", "muncaẕiʿatān", "hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
       [124, "مُنْجَذِعُون", "muncaẕiʿūn", "hurma kütüğü olunanlar", "kontrol", ""],
       [125, "مُنْجَذِعِين", "muncaẕiʿīn", "hurma kütüğü olunanlar", "kontrol", ""],
-      [126, "مُنْجَذِعَات", "muncaẕiʿāt", "hurma kütüğü olunanlar (dişi)", "kontrol", ""]
+      [126, "مُنْجَذِعَات", "muncaẕiʿāt", "hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْجَذَع", "muncaẕaʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [128, "مُنْجَذَعَة", "muncaẕaʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [129, "مُنْجَذَعَان", "muncaẕaʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [130, "مُنْجَذَعَتَان", "muncaẕaʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [131, "مُنْجَذَعُون", "muncaẕaʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [132, "مُنْجَذَعِين", "muncaẕaʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [133, "مُنْجَذَعَات", "muncaẕaʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [127, "مُنْجَذَع", "muncaẕaʿ", "hurma kütüğü olunan", "kontrol", ""],
+      [128, "مُنْجَذَعَة", "muncaẕaʿa", "hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [129, "مُنْجَذَعَان", "muncaẕaʿān", "hurma kütüğü olunan (iki)", "kontrol", ""],
+      [130, "مُنْجَذَعَتَان", "muncaẕaʿatān", "hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [131, "مُنْجَذَعُون", "muncaẕaʿūn", "hurma kütüğü olunanlar", "kontrol", ""],
+      [132, "مُنْجَذَعِين", "muncaẕaʿīn", "hurma kütüğü olunanlar", "kontrol", ""],
+      [133, "مُنْجَذَعَات", "muncaẕaʿāt", "hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْجَذَع", "muncaẕaʿ", "hurma kütüğü olunma (yeri/zamanı)", "kontrol", ""]
+      [134, "مُنْجَذَع", "muncaẕaʿ", "hurma kütüğü olunma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِجْتِذَاع", "ictiẕāʿ", "hurma kütüğü olunma", "kontrol", ""]
+      [135, "اِجْتِذَاع", "ictiẕāʿ", "kendisi için hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِجْتِذَاعَة", "ictiẕāʿa", "bir kere hurma kütüğü olunma", "kontrol", ""]
+      [137, "اِجْتِذَاعَة", "ictiẕāʿa", "bir kere kendisi için hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُجْتَذِع", "muctaẕiʿ", "hurma kütüğü olunan", "kontrol", ""],
-      [139, "مُجْتَذِعَة", "muctaẕiʿa", "hurma kütüğü olunan (dişi)", "kontrol", ""],
-      [140, "مُجْتَذِعَان", "muctaẕiʿān", "iki hurma kütüğü olunan", "kontrol", ""],
-      [141, "مُجْتَذِعَتَان", "muctaẕiʿatān", "iki hurma kütüğü olunan (dişi)", "kontrol", ""],
-      [142, "مُجْتَذِعُون", "muctaẕiʿūn", "hurma kütüğü olunanlar", "kontrol", ""],
-      [143, "مُجْتَذِعِين", "muctaẕiʿīn", "hurma kütüğü olunanlar", "kontrol", ""],
-      [144, "مُجْتَذِعَات", "muctaẕiʿāt", "hurma kütüğü olunanlar (dişi)", "kontrol", ""]
+      [138, "مُجْتَذِع", "muctaẕiʿ", "kendisi için hurma kütüğü olan", "kontrol", ""],
+      [139, "مُجْتَذِعَة", "muctaẕiʿa", "kendisi için hurma kütüğü olan (müennes)", "kontrol", ""],
+      [140, "مُجْتَذِعَان", "muctaẕiʿān", "kendisi için hurma kütüğü olan (iki)", "kontrol", ""],
+      [141, "مُجْتَذِعَتَان", "muctaẕiʿatān", "kendisi için hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [142, "مُجْتَذِعُون", "muctaẕiʿūn", "kendisi için hurma kütüğü olanlar", "kontrol", ""],
+      [143, "مُجْتَذِعِين", "muctaẕiʿīn", "kendisi için hurma kütüğü olanlar", "kontrol", ""],
+      [144, "مُجْتَذِعَات", "muctaẕiʿāt", "kendisi için hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُجْتَذَع", "muctaẕaʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [146, "مُجْتَذَعَة", "muctaẕaʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [147, "مُجْتَذَعَان", "muctaẕaʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [148, "مُجْتَذَعَتَان", "muctaẕaʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [149, "مُجْتَذَعُون", "muctaẕaʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [150, "مُجْتَذَعِين", "muctaẕaʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [151, "مُجْتَذَعَات", "muctaẕaʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [145, "مُجْتَذَع", "muctaẕaʿ", "kendisi için hurma kütüğü olunan", "kontrol", ""],
+      [146, "مُجْتَذَعَة", "muctaẕaʿa", "kendisi için hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [147, "مُجْتَذَعَان", "muctaẕaʿān", "kendisi için hurma kütüğü olunan (iki)", "kontrol", ""],
+      [148, "مُجْتَذَعَتَان", "muctaẕaʿatān", "kendisi için hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [149, "مُجْتَذَعُون", "muctaẕaʿūn", "kendisi için hurma kütüğü olunanlar", "kontrol", ""],
+      [150, "مُجْتَذَعِين", "muctaẕaʿīn", "kendisi için hurma kütüğü olunanlar", "kontrol", ""],
+      [151, "مُجْتَذَعَات", "muctaẕaʿāt", "kendisi için hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُجْتَذَع", "muctaẕaʿ", "hurma kütüğü olunma (yeri/zamanı)", "kontrol", ""]
+      [152, "مُجْتَذَع", "muctaẕaʿ", "kendisi için hurma kütüğü olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِجْذِعَاع", "icẕiʿāʿ", "hurmalaşma", "kontrol", ""]
+      [499, "اِجْذِعَاع", "icẕiʿāʿ", "iyiden iyiye hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُجْذَعّ", "mucẕaʿʿ", "hurmalaşan", "kontrol", ""],
-      [501, "مُجْذَعَّة", "mucẕaʿʿa", "hurmalaşan (dişi)", "kontrol", ""],
-      [502, "مُجْذَعَّان", "mucẕaʿʿān", "iki hurmalaşan", "kontrol", ""],
-      [503, "مُجْذَعَّتَان", "mucẕaʿʿatān", "iki hurmalaşan (dişi)", "kontrol", ""],
-      [504, "مُجْذَعُّون", "mucẕaʿʿūn", "hurmalaşanlar", "kontrol", ""],
-      [505, "مُجْذَعِّين", "mucẕaʿʿīn", "hurmalaşanlar", "kontrol", ""],
-      [506, "مُجْذَعَّات", "mucẕaʿʿāt", "hurmalaşanlar (dişi)", "kontrol", ""]
+      [500, "مُجْذَعّ", "mucẕaʿʿ", "iyiden iyiye hurma kütüğü olan", "kontrol", ""],
+      [501, "مُجْذَعَّة", "mucẕaʿʿa", "iyiden iyiye hurma kütüğü olan (müennes)", "kontrol", ""],
+      [502, "مُجْذَعَّان", "mucẕaʿʿān", "iyiden iyiye hurma kütüğü olan (iki)", "kontrol", ""],
+      [503, "مُجْذَعَّتَان", "mucẕaʿʿatān", "iyiden iyiye hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [504, "مُجْذَعُّون", "mucẕaʿʿūn", "iyiden iyiye hurma kütüğü olanlar", "kontrol", ""],
+      [505, "مُجْذَعِّين", "mucẕaʿʿīn", "iyiden iyiye hurma kütüğü olanlar", "kontrol", ""],
+      [506, "مُجْذَعَّات", "mucẕaʿʿāt", "iyiden iyiye hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِجْذَاع", "isticẕāʿ", "hurma kütüğü olmayı isteme", "kontrol", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِجْذَاعَة", "isticẕāʿa", "bir kere hurma kütüğü olma", "kontrol", ""]
+      [177, "اِسْتِجْذَاعَة", "isticẕāʿa", "bir kere hurma kütüğü olmayı isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَجْذِع", "mustacẕiʿ", "hurma kütüğü olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَجْذِعَة", "mustacẕiʿa", "hurma kütüğü olmayı isteyen (dişi)", "kontrol", ""],
-      [180, "مُسْتَجْذِعَان", "mustacẕiʿān", "iki hurma kütüğü olmayı isteyen", "kontrol", ""],
-      [181, "مُسْتَجْذِعَتَان", "mustacẕiʿatān", "iki hurma kütüğü olmayı isteyen (dişi)", "kontrol", ""],
+      [179, "مُسْتَجْذِعَة", "mustacẕiʿa", "hurma kütüğü olmayı isteyen (müennes)", "kontrol", ""],
+      [180, "مُسْتَجْذِعَان", "mustacẕiʿān", "hurma kütüğü olmayı isteyen (iki)", "kontrol", ""],
+      [181, "مُسْتَجْذِعَتَان", "mustacẕiʿatān", "hurma kütüğü olmayı isteyen (iki, müennes)", "kontrol", ""],
       [182, "مُسْتَجْذِعُون", "mustacẕiʿūn", "hurma kütüğü olmayı isteyenler", "kontrol", ""],
       [183, "مُسْتَجْذِعِين", "mustacẕiʿīn", "hurma kütüğü olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَجْذِعَات", "mustacẕiʿāt", "hurma kütüğü olmayı isteyenler (dişi)", "kontrol", ""]
+      [184, "مُسْتَجْذِعَات", "mustacẕiʿāt", "hurma kütüğü olmayı isteyenler (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَجْذَع", "mustacẕaʿ", "hurma kütüğü olmayı istenen", "kontrol", ""],
-      [186, "مُسْتَجْذَعَة", "mustacẕaʿa", "hurma kütüğü olmayı istenen (dişi)", "kontrol", ""],
-      [187, "مُسْتَجْذَعَان", "mustacẕaʿān", "iki hurma kütüğü olmayı istenen", "kontrol", ""],
-      [188, "مُسْتَجْذَعَتَان", "mustacẕaʿatān", "iki hurma kütüğü olmayı istenen (dişi)", "kontrol", ""],
-      [189, "مُسْتَجْذَعُون", "mustacẕaʿūn", "hurma kütüğü olmayı istenenler", "kontrol", ""],
-      [190, "مُسْتَجْذَعِين", "mustacẕaʿīn", "hurma kütüğü olmayı istenenler", "kontrol", ""],
-      [191, "مُسْتَجْذَعَات", "mustacẕaʿāt", "hurma kütüğü olmayı istenenler (dişi)", "kontrol", ""]
+      [185, "مُسْتَجْذَع", "mustacẕaʿ", "hurma kütüğü olması istenen", "kontrol", ""],
+      [186, "مُسْتَجْذَعَة", "mustacẕaʿa", "hurma kütüğü olması istenen (müennes)", "kontrol", ""],
+      [187, "مُسْتَجْذَعَان", "mustacẕaʿān", "hurma kütüğü olması istenen (iki)", "kontrol", ""],
+      [188, "مُسْتَجْذَعَتَان", "mustacẕaʿatān", "hurma kütüğü olması istenen (iki, müennes)", "kontrol", ""],
+      [189, "مُسْتَجْذَعُون", "mustacẕaʿūn", "hurma kütüğü olması istenenler", "kontrol", ""],
+      [190, "مُسْتَجْذَعِين", "mustacẕaʿīn", "hurma kütüğü olması istenenler", "kontrol", ""],
+      [191, "مُسْتَجْذَعَات", "mustacẕaʿāt", "hurma kütüğü olması istenenler (müennes)", "kontrol", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَجْذَع", "mustacẕaʿ", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""]
+      [192, "مُسْتَجْذَع", "mustacẕaʿ", "hurma kütüğü olmayı isteme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِجْذِيعَاع", "icẕīʿāʿ", "iyice hurmalaşma", "kontrol", ""]
+      [507, "اِجْذِيعَاع", "icẕīʿāʿ", "büsbütün hurma kütüğü olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُجْذَاعّ", "mucẕāʿʿ", "iyice hurmalaşan", "kontrol", ""],
-      [509, "مُجْذَاعَّة", "mucẕāʿʿa", "iyice hurmalaşan (dişi)", "kontrol", ""],
-      [510, "مُجْذَاعَّان", "mucẕāʿʿān", "iki iyice hurmalaşan", "kontrol", ""],
-      [511, "مُجْذَاعَّتَان", "mucẕāʿʿatān", "iki iyice hurmalaşan (dişi)", "kontrol", ""],
-      [512, "مُجْذَاعُّون", "mucẕāʿʿūn", "iyice hurmalaşanlar", "kontrol", ""],
-      [513, "مُجْذَاعِّين", "mucẕāʿʿīn", "iyice hurmalaşanlar", "kontrol", ""],
-      [514, "مُجْذَاعَّات", "mucẕāʿʿāt", "iyice hurmalaşanlar (dişi)", "kontrol", ""]
+      [508, "مُجْذَاعّ", "mucẕāʿʿ", "büsbütün hurma kütüğü olan", "kontrol", ""],
+      [509, "مُجْذَاعَّة", "mucẕāʿʿa", "büsbütün hurma kütüğü olan (müennes)", "kontrol", ""],
+      [510, "مُجْذَاعَّان", "mucẕāʿʿān", "büsbütün hurma kütüğü olan (iki)", "kontrol", ""],
+      [511, "مُجْذَاعَّتَان", "mucẕāʿʿatān", "büsbütün hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [512, "مُجْذَاعُّون", "mucẕāʿʿūn", "büsbütün hurma kütüğü olanlar", "kontrol", ""],
+      [513, "مُجْذَاعِّين", "mucẕāʿʿīn", "büsbütün hurma kütüğü olanlar", "kontrol", ""],
+      [514, "مُجْذَاعَّات", "mucẕāʿʿāt", "büsbütün hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِجْذِوْذَاع", "icẕiwẕāʿ", "aşırı hurma kütüğü olma", "kontrol", ""]
@@ -290,224 +304,224 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "جَاذِع", "cāẕiʿ", "hurma kütüğü olan", "kontrol", ""],
-      [214, "جَاذِعَة", "cāẕiʿa", "hurma kütüğü olan (dişi)", "kontrol", ""],
-      [215, "جَاذِعَان", "cāẕiʿān", "iki hurma kütüğü olan", "kontrol", ""],
-      [216, "جَاذِعَتَان", "cāẕiʿatān", "iki hurma kütüğü olan (dişi)", "kontrol", ""],
+      [214, "جَاذِعَة", "cāẕiʿa", "hurma kütüğü olan (müennes)", "kontrol", ""],
+      [215, "جَاذِعَان", "cāẕiʿān", "hurma kütüğü olan (iki)", "kontrol", ""],
+      [216, "جَاذِعَتَان", "cāẕiʿatān", "hurma kütüğü olan (iki, müennes)", "kontrol", ""],
       [217, "جَاذِعُون", "cāẕiʿūn", "hurma kütüğü olanlar", "kontrol", ""],
       [218, "جَاذِعِين", "cāẕiʿīn", "hurma kütüğü olanlar", "kontrol", ""],
-      [219, "جَاذِعَات", "cāẕiʿāt", "hurma kütüğü olanlar (dişi)", "kontrol", ""]
+      [219, "جَاذِعَات", "cāẕiʿāt", "hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَجْذُوع", "macẕūʿ", "hurma kütüğü olunmuş", "kontrol", ""],
-      [221, "مَجْذُوعَة", "macẕūʿa", "hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [222, "مَجْذُوعَان", "macẕūʿān", "iki hurma kütüğü olunmuş", "kontrol", ""],
-      [223, "مَجْذُوعَتَان", "macẕūʿatān", "iki hurma kütüğü olunmuş (dişi)", "kontrol", ""],
-      [224, "مَجْذُوعُون", "macẕūʿūn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [225, "مَجْذُوعِين", "macẕūʿīn", "hurma kütüğü olunmuşlar", "kontrol", ""],
-      [226, "مَجْذُوعَات", "macẕūʿāt", "hurma kütüğü olunmuşlar (dişi)", "kontrol", ""]
+      [220, "مَجْذُوع", "macẕūʿ", "hurma kütüğü olunan", "kontrol", ""],
+      [221, "مَجْذُوعَة", "macẕūʿa", "hurma kütüğü olunan (müennes)", "kontrol", ""],
+      [222, "مَجْذُوعَان", "macẕūʿān", "hurma kütüğü olunan (iki)", "kontrol", ""],
+      [223, "مَجْذُوعَتَان", "macẕūʿatān", "hurma kütüğü olunan (iki, müennes)", "kontrol", ""],
+      [224, "مَجْذُوعُون", "macẕūʿūn", "hurma kütüğü olunanlar", "kontrol", ""],
+      [225, "مَجْذُوعِين", "macẕūʿīn", "hurma kütüğü olunanlar", "kontrol", ""],
+      [226, "مَجْذُوعَات", "macẕūʿāt", "hurma kütüğü olunanlar (müennes)", "kontrol", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَجْذَع", "macẕaʿ", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [228, "مَجْذَعَان", "macẕaʿān", "iki hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [229, "مَجْذِع", "macẕiʿ", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [230, "مَجْذِعَان", "macẕiʿān", "iki hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [231, "مَجْذَعَة", "macẕaʿa", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [232, "مَجْذَعَتَان", "macẕaʿatān", "iki hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [233, "مَجْذِعَة", "macẕiʿa", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [234, "مَجْذِعَتَان", "macẕiʿatān", "iki hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [247, "مَجْذُعَة", "macẕuʿa", "hurma kütüğü olma (yeri/zamanı)", "kontrol", ""],
-      [248, "مَجْذُعَتَان", "macẕuʿatān", "iki hurma kütüğü olma (yeri/zamanı)", "kontrol", ""]
+      [227, "مَجْذَع", "macẕaʿ", "hurma kütüğü olma yeri, vakti", "kontrol", ""],
+      [228, "مَجْذَعَان", "macẕaʿān", "hurma kütüğü olma yeri, vakti (iki)", "kontrol", ""],
+      [229, "مَجْذِع", "macẕiʿ", "hurma kütüğü olma yeri, vakti", "kontrol", ""],
+      [230, "مَجْذِعَان", "macẕiʿān", "hurma kütüğü olma yeri, vakti (iki)", "kontrol", ""],
+      [231, "مَجْذَعَة", "macẕaʿa", "hurma kütüğü olmanın bol olduğu yer", "kontrol", ""],
+      [232, "مَجْذَعَتَان", "macẕaʿatān", "hurma kütüğü olmanın bol olduğu yer (iki)", "kontrol", ""],
+      [233, "مَجْذِعَة", "macẕiʿa", "hurma kütüğü olmanın bol olduğu yer", "kontrol", ""],
+      [234, "مَجْذِعَتَان", "macẕiʿatān", "hurma kütüğü olmanın bol olduğu yer (iki)", "kontrol", ""],
+      [247, "مَجْذُعَة", "macẕuʿa", "hurma kütüğü olma yeri, vakti", "kontrol", ""],
+      [248, "مَجْذُعَتَان", "macẕuʿatān", "hurma kütüğü olma yeri, vakti (iki)", "kontrol", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِجْذَع", "micẕaʿ", "hurma kütüğü olmaya yarayan araç", "kontrol", ""],
-      [236, "مِجْذَعَان", "micẕaʿān", "iki hurma kütüğü olmaya yarayan araç", "kontrol", ""],
-      [237, "مِجْذَاع", "micẕāʿ", "hurma kütüğü olmaya yarayan araç", "kontrol", ""],
-      [238, "مِجْذَاعَان", "micẕāʿān", "iki hurma kütüğü olmaya yarayan araç", "kontrol", ""],
-      [239, "مِجْذَعَة", "micẕaʿa", "hurma kütüğü olmaya yarayan araç", "kontrol", ""],
-      [240, "مِجْذَعَتَان", "micẕaʿatān", "iki hurma kütüğü olmaya yarayan araç", "kontrol", ""]
+      [235, "مِجْذَع", "micẕaʿ", "hurma kütüğü olma âleti", "kontrol", ""],
+      [236, "مِجْذَعَان", "micẕaʿān", "hurma kütüğü olma âleti (iki)", "kontrol", ""],
+      [237, "مِجْذَاع", "micẕāʿ", "hurma kütüğü olma âleti", "kontrol", ""],
+      [238, "مِجْذَاعَان", "micẕāʿān", "hurma kütüğü olma âleti (iki)", "kontrol", ""],
+      [239, "مِجْذَعَة", "micẕaʿa", "hurma kütüğü olma âleti", "kontrol", ""],
+      [240, "مِجْذَعَتَان", "micẕaʿatān", "hurma kütüğü olma âleti (iki)", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَجْذَع", "ʾacẕaʿ", "daha çok hurma kütüğü olan", "kontrol", ""],
-      [242, "أَجْذَعَان", "ʾacẕaʿān", "iki daha çok hurma kütüğü olan", "kontrol", ""]
+      [242, "أَجْذَعَان", "ʾacẕaʿān", "daha çok hurma kütüğü olan (iki)", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "جُذْعَى", "cuẕʿā", "daha çok hurma kütüğü olan", "kontrol", ""],
-      [244, "جُذْعَيَان", "cuẕʿayān", "iki daha çok hurma kütüğü olan", "kontrol", ""],
+      [244, "جُذْعَيَان", "cuẕʿayān", "daha çok hurma kütüğü olan (iki)", "kontrol", ""],
       [245, "جَذْعَاء", "caẕʿāʾ", "daha çok hurma kütüğü olan", "kontrol", ""],
-      [246, "جَذْعَاآن", "caẕʿāʾān", "iki daha çok hurma kütüğü olan", "kontrol", ""]
+      [246, "جَذْعَاآن", "caẕʿāʾān", "daha çok hurma kütüğü olan (iki)", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "جُذَيْع", "cuẕayʿ", "küçük hurma kütüğü olma", "kontrol", ""],
-      [250, "جُذَيْعَان", "cuẕayʿān", "iki küçük hurma kütüğü olma", "kontrol", ""],
-      [251, "جُذَيْعَة", "cuẕayʿa", "küçük hurma kütüğü olma", "kontrol", ""],
-      [252, "جُذَيْعَتَان", "cuẕayʿatān", "iki küçük hurma kütüğü olma", "kontrol", ""]
+      [249, "جُذَيْع", "cuẕayʿ", "azıcık hurma kütüğü olma", "kontrol", ""],
+      [250, "جُذَيْعَان", "cuẕayʿān", "azıcık hurma kütüğü olma (iki)", "kontrol", ""],
+      [251, "جُذَيْعَة", "cuẕayʿa", "azıcık hurma kütüğü olma", "kontrol", ""],
+      [252, "جُذَيْعَتَان", "cuẕayʿatān", "azıcık hurma kütüğü olma (iki)", "kontrol", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَجْذَع", "macẕaʿ", "hurma kütüğü olma", "kontrol", ""],
-      [254, "مَجْذَعَان", "macẕaʿān", "iki hurma kütüğü olma", "kontrol", ""]
+      [254, "مَجْذَعَان", "macẕaʿān", "hurma kütüğü olma (iki)", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "جَذْعَة", "caẕʿa", "bir kere hurma kütüğü olma", "kontrol", ""],
-      [256, "جَذْعَتَان", "caẕʿatān", "iki bir kere hurma kütüğü olma", "kontrol", ""]
+      [256, "جَذْعَتَان", "caẕʿatān", "bir kere hurma kütüğü olma (iki)", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "جِذْعَة", "ciẕʿa", "hurma kütüğü olma tarzı", "kontrol", ""],
-      [258, "جِذْعَتَان", "ciẕʿatān", "iki hurma kütüğü olma tarzı", "kontrol", ""]
+      [258, "جِذْعَتَان", "ciẕʿatān", "hurma kütüğü olma tarzı (iki)", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "جَذِيع", "caẕīʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [260, "جَذِيعَة", "caẕīʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [261, "جَذِيعَان", "caẕīʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [262, "جَذِيعَتَان", "caẕīʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [263, "جَذِيعُون", "caẕīʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [264, "جَذِيعِين", "caẕīʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [265, "جَذِيعَات", "caẕīʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [266, "جَذُوع", "caẕūʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [267, "جَذُوعَة", "caẕūʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [268, "جَذُوعَان", "caẕūʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [269, "جَذُوعَتَان", "caẕūʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [270, "جَذُوعُون", "caẕūʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [271, "جَذُوعِين", "caẕūʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [272, "جَذُوعَات", "caẕūʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [273, "جَذِع", "caẕiʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [274, "جَذِعَة", "caẕiʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [275, "جَذِعَان", "caẕiʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [276, "جَذِعَتَان", "caẕiʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [277, "جَذِعُون", "caẕiʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [278, "جَذِعِين", "caẕiʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [279, "جَذِعَات", "caẕiʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [280, "جَذُع", "caẕuʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [281, "جَذُعَة", "caẕuʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [282, "جَذُعَان", "caẕuʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [283, "جَذُعَتَان", "caẕuʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [284, "جَذُعُون", "caẕuʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [285, "جَذُعِين", "caẕuʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [286, "جَذُعَات", "caẕuʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [287, "جَذَع", "caẕaʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [288, "جَذَعَة", "caẕaʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [289, "جَذَعَان", "caẕaʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [290, "جَذَعَتَان", "caẕaʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [291, "جَذَعُون", "caẕaʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [292, "جَذَعِين", "caẕaʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [293, "جَذَعَات", "caẕaʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [294, "جَذْع", "caẕʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [295, "جَذْعَة", "caẕʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [296, "جَذْعَان", "caẕʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [297, "جَذْعَتَان", "caẕʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [298, "جَذْعُون", "caẕʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [299, "جَذْعِين", "caẕʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [300, "جَذْعَات", "caẕʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [301, "جُذُع", "cuẕuʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [302, "جُذُعَة", "cuẕuʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [303, "جُذُعَان", "cuẕuʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [304, "جُذُعَتَان", "cuẕuʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [305, "جُذُعُون", "cuẕuʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [306, "جُذُعِين", "cuẕuʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [307, "جُذُعَات", "cuẕuʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [308, "جَذْعَان", "caẕʿān", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [309, "جَذْعَانَة", "caẕʿāna", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [310, "جَذْعَانَان", "caẕʿānān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [311, "جَذْعَانَتَان", "caẕʿānatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [312, "جَذْعَانُون", "caẕʿānūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [313, "جَذْعَانِين", "caẕʿānīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [314, "جَذْعَانَات", "caẕʿānāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [315, "جُذَاع", "cuẕāʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [316, "جُذَاعَة", "cuẕāʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [317, "جُذَاعَان", "cuẕāʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [318, "جُذَاعَتَان", "cuẕāʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [319, "جُذَاعُون", "cuẕāʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [320, "جُذَاعِين", "cuẕāʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [321, "جُذَاعَات", "cuẕāʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [322, "جَذَاع", "caẕāʿ", "sürekli hurma kütüğü olan", "kontrol", ""],
-      [323, "جَذَاعَة", "caẕāʿa", "sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [324, "جَذَاعَان", "caẕāʿān", "iki sürekli hurma kütüğü olan", "kontrol", ""],
-      [325, "جَذَاعَتَان", "caẕāʿatān", "iki sürekli hurma kütüğü olan (dişi)", "kontrol", ""],
-      [326, "جَذَاعُون", "caẕāʿūn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [327, "جَذَاعِين", "caẕāʿīn", "sürekli hurma kütüğü olanlar", "kontrol", ""],
-      [328, "جَذَاعَات", "caẕāʿāt", "sürekli hurma kütüğü olanlar (dişi)", "kontrol", ""]
+      [259, "جَذِيع", "caẕīʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [260, "جَذِيعَة", "caẕīʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [261, "جَذِيعَان", "caẕīʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [262, "جَذِيعَتَان", "caẕīʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [263, "جَذِيعُون", "caẕīʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [264, "جَذِيعِين", "caẕīʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [265, "جَذِيعَات", "caẕīʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [266, "جَذُوع", "caẕūʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [267, "جَذُوعَة", "caẕūʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [268, "جَذُوعَان", "caẕūʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [269, "جَذُوعَتَان", "caẕūʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [270, "جَذُوعُون", "caẕūʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [271, "جَذُوعِين", "caẕūʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [272, "جَذُوعَات", "caẕūʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [273, "جَذِع", "caẕiʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [274, "جَذِعَة", "caẕiʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [275, "جَذِعَان", "caẕiʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [276, "جَذِعَتَان", "caẕiʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [277, "جَذِعُون", "caẕiʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [278, "جَذِعِين", "caẕiʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [279, "جَذِعَات", "caẕiʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [280, "جَذُع", "caẕuʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [281, "جَذُعَة", "caẕuʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [282, "جَذُعَان", "caẕuʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [283, "جَذُعَتَان", "caẕuʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [284, "جَذُعُون", "caẕuʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [285, "جَذُعِين", "caẕuʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [286, "جَذُعَات", "caẕuʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [287, "جَذَع", "caẕaʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [288, "جَذَعَة", "caẕaʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [289, "جَذَعَان", "caẕaʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [290, "جَذَعَتَان", "caẕaʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [291, "جَذَعُون", "caẕaʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [292, "جَذَعِين", "caẕaʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [293, "جَذَعَات", "caẕaʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [294, "جَذْع", "caẕʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [295, "جَذْعَة", "caẕʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [296, "جَذْعَان", "caẕʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [297, "جَذْعَتَان", "caẕʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [298, "جَذْعُون", "caẕʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [299, "جَذْعِين", "caẕʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [300, "جَذْعَات", "caẕʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [301, "جُذُع", "cuẕuʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [302, "جُذُعَة", "cuẕuʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [303, "جُذُعَان", "cuẕuʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [304, "جُذُعَتَان", "cuẕuʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [305, "جُذُعُون", "cuẕuʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [306, "جُذُعِين", "cuẕuʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [307, "جُذُعَات", "cuẕuʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [308, "جَذْعَان", "caẕʿān", "her daim hurma kütüğü olan", "kontrol", ""],
+      [309, "جَذْعَانَة", "caẕʿāna", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [310, "جَذْعَانَان", "caẕʿānān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [311, "جَذْعَانَتَان", "caẕʿānatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [312, "جَذْعَانُون", "caẕʿānūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [313, "جَذْعَانِين", "caẕʿānīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [314, "جَذْعَانَات", "caẕʿānāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [315, "جُذَاع", "cuẕāʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [316, "جُذَاعَة", "cuẕāʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [317, "جُذَاعَان", "cuẕāʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [318, "جُذَاعَتَان", "cuẕāʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [319, "جُذَاعُون", "cuẕāʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [320, "جُذَاعِين", "cuẕāʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [321, "جُذَاعَات", "cuẕāʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [322, "جَذَاع", "caẕāʿ", "her daim hurma kütüğü olan", "kontrol", ""],
+      [323, "جَذَاعَة", "caẕāʿa", "her daim hurma kütüğü olan (müennes)", "kontrol", ""],
+      [324, "جَذَاعَان", "caẕāʿān", "her daim hurma kütüğü olan (iki)", "kontrol", ""],
+      [325, "جَذَاعَتَان", "caẕāʿatān", "her daim hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [326, "جَذَاعُون", "caẕāʿūn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [327, "جَذَاعِين", "caẕāʿīn", "her daim hurma kütüğü olanlar", "kontrol", ""],
+      [328, "جَذَاعَات", "caẕāʿāt", "her daim hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "mübalağa": [
-      [329, "جَذَّاع", "caẕẕāʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [330, "جَذَّاعَة", "caẕẕāʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [331, "جَذَّاعَان", "caẕẕāʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [332, "جَذَّاعَتَان", "caẕẕāʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [333, "جَذَّاعُون", "caẕẕāʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [334, "جَذَّاعِين", "caẕẕāʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [335, "جَذَّاعَات", "caẕẕāʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [336, "جَذَّاعَة", "caẕẕāʿa", "çok hurma kütüğü olan", "kontrol", ""],
-      [337, "جَذَّاعَتَان", "caẕẕāʿatān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [338, "جَذَّاعَات", "caẕẕāʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
+      [329, "جَذَّاع", "caẕẕāʿ", "işi hurma kütüğü olma olan", "kontrol", ""],
+      [330, "جَذَّاعَة", "caẕẕāʿa", "işi hurma kütüğü olma olan (müennes)", "kontrol", ""],
+      [331, "جَذَّاعَان", "caẕẕāʿān", "işi hurma kütüğü olma olan (iki)", "kontrol", ""],
+      [332, "جَذَّاعَتَان", "caẕẕāʿatān", "işi hurma kütüğü olma olan (iki, müennes)", "kontrol", ""],
+      [333, "جَذَّاعُون", "caẕẕāʿūn", "işi hurma kütüğü olma olanlar", "kontrol", ""],
+      [334, "جَذَّاعِين", "caẕẕāʿīn", "işi hurma kütüğü olma olanlar", "kontrol", ""],
+      [335, "جَذَّاعَات", "caẕẕāʿāt", "işi hurma kütüğü olma olanlar (müennes)", "kontrol", ""],
+      [336, "جَذَّاعَة", "caẕẕāʿa", "pek çok hurma kütüğü olan", "kontrol", ""],
+      [337, "جَذَّاعَتَان", "caẕẕāʿatān", "pek çok hurma kütüğü olan (iki)", "kontrol", ""],
+      [338, "جَذَّاعَات", "caẕẕāʿāt", "pek çok hurma kütüğü olanlar (müennes)", "kontrol", ""],
       [339, "جَذُوع", "caẕūʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [340, "جَذُوعَة", "caẕūʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [341, "جَذُوعَان", "caẕūʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [342, "جَذُوعَتَان", "caẕūʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
+      [340, "جَذُوعَة", "caẕūʿa", "çok hurma kütüğü olan (müennes)", "kontrol", ""],
+      [341, "جَذُوعَان", "caẕūʿān", "çok hurma kütüğü olan (iki)", "kontrol", ""],
+      [342, "جَذُوعَتَان", "caẕūʿatān", "çok hurma kütüğü olan (iki, müennes)", "kontrol", ""],
       [343, "جَذُوعُون", "caẕūʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
       [344, "جَذُوعِين", "caẕūʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [345, "جَذُوعَات", "caẕūʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [346, "جَذُّوع", "caẕẕūʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [347, "جَذُّوعَة", "caẕẕūʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [348, "جَذُّوعَان", "caẕẕūʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [349, "جَذُّوعَتَان", "caẕẕūʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [350, "جَذُّوعُون", "caẕẕūʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [351, "جَذُّوعِين", "caẕẕūʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [352, "جَذُّوعَات", "caẕẕūʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [353, "جِذِّيع", "ciẕẕīʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [354, "جِذِّيعَة", "ciẕẕīʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [355, "جِذِّيعَان", "ciẕẕīʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [356, "جِذِّيعَتَان", "ciẕẕīʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [357, "جِذِّيعُون", "ciẕẕīʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [358, "جِذِّيعِين", "ciẕẕīʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [359, "جِذِّيعَات", "ciẕẕīʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [360, "جُذَّاع", "cuẕẕāʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [361, "جُذَّاعَة", "cuẕẕāʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [362, "جُذَّاعَان", "cuẕẕāʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [363, "جُذَّاعَتَان", "cuẕẕāʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [364, "جُذَّاعُون", "cuẕẕāʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [365, "جُذَّاعِين", "cuẕẕāʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [366, "جُذَّاعَات", "cuẕẕāʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [367, "مِجْذَاع", "micẕāʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [368, "مِجْذَاعَة", "micẕāʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [369, "مِجْذَاعَان", "micẕāʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [370, "مِجْذَاعَتَان", "micẕāʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [371, "مِجْذَاعُون", "micẕāʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [372, "مِجْذَاعِين", "micẕāʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [373, "مِجْذَاعَات", "micẕāʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
-      [374, "مِجْذِيع", "micẕīʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [375, "مِجْذِيعَة", "micẕīʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [376, "مِجْذِيعَان", "micẕīʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [377, "مِجْذِيعَتَان", "micẕīʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [378, "مِجْذِيعُون", "micẕīʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [379, "مِجْذِيعِين", "micẕīʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [380, "مِجْذِيعَات", "micẕīʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
+      [345, "جَذُوعَات", "caẕūʿāt", "çok hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [346, "جَذُّوع", "caẕẕūʿ", "pek çok hurma kütüğü olan", "kontrol", ""],
+      [347, "جَذُّوعَة", "caẕẕūʿa", "pek çok hurma kütüğü olan (müennes)", "kontrol", ""],
+      [348, "جَذُّوعَان", "caẕẕūʿān", "pek çok hurma kütüğü olan (iki)", "kontrol", ""],
+      [349, "جَذُّوعَتَان", "caẕẕūʿatān", "pek çok hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [350, "جَذُّوعُون", "caẕẕūʿūn", "pek çok hurma kütüğü olanlar", "kontrol", ""],
+      [351, "جَذُّوعِين", "caẕẕūʿīn", "pek çok hurma kütüğü olanlar", "kontrol", ""],
+      [352, "جَذُّوعَات", "caẕẕūʿāt", "pek çok hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [353, "جِذِّيع", "ciẕẕīʿ", "hurma kütüğü olmada aşırı giden", "kontrol", ""],
+      [354, "جِذِّيعَة", "ciẕẕīʿa", "hurma kütüğü olmada aşırı giden (müennes)", "kontrol", ""],
+      [355, "جِذِّيعَان", "ciẕẕīʿān", "hurma kütüğü olmada aşırı giden (iki)", "kontrol", ""],
+      [356, "جِذِّيعَتَان", "ciẕẕīʿatān", "hurma kütüğü olmada aşırı giden (iki, müennes)", "kontrol", ""],
+      [357, "جِذِّيعُون", "ciẕẕīʿūn", "hurma kütüğü olmada aşırı gidenler", "kontrol", ""],
+      [358, "جِذِّيعِين", "ciẕẕīʿīn", "hurma kütüğü olmada aşırı gidenler", "kontrol", ""],
+      [359, "جِذِّيعَات", "ciẕẕīʿāt", "hurma kütüğü olmada aşırı gidenler (müennes)", "kontrol", ""],
+      [360, "جُذَّاع", "cuẕẕāʿ", "son derece hurma kütüğü olan", "kontrol", ""],
+      [361, "جُذَّاعَة", "cuẕẕāʿa", "son derece hurma kütüğü olan (müennes)", "kontrol", ""],
+      [362, "جُذَّاعَان", "cuẕẕāʿān", "son derece hurma kütüğü olan (iki)", "kontrol", ""],
+      [363, "جُذَّاعَتَان", "cuẕẕāʿatān", "son derece hurma kütüğü olan (iki, müennes)", "kontrol", ""],
+      [364, "جُذَّاعُون", "cuẕẕāʿūn", "son derece hurma kütüğü olanlar", "kontrol", ""],
+      [365, "جُذَّاعِين", "cuẕẕāʿīn", "son derece hurma kütüğü olanlar", "kontrol", ""],
+      [366, "جُذَّاعَات", "cuẕẕāʿāt", "son derece hurma kütüğü olanlar (müennes)", "kontrol", ""],
+      [367, "مِجْذَاع", "micẕāʿ", "hurma kütüğü olmayı âdet edinmiş", "kontrol", ""],
+      [368, "مِجْذَاعَة", "micẕāʿa", "hurma kütüğü olmayı âdet edinmiş (müennes)", "kontrol", ""],
+      [369, "مِجْذَاعَان", "micẕāʿān", "hurma kütüğü olmayı âdet edinmiş (iki)", "kontrol", ""],
+      [370, "مِجْذَاعَتَان", "micẕāʿatān", "hurma kütüğü olmayı âdet edinmiş (iki, müennes)", "kontrol", ""],
+      [371, "مِجْذَاعُون", "micẕāʿūn", "hurma kütüğü olmayı âdet edinmişler", "kontrol", ""],
+      [372, "مِجْذَاعِين", "micẕāʿīn", "hurma kütüğü olmayı âdet edinmişler", "kontrol", ""],
+      [373, "مِجْذَاعَات", "micẕāʿāt", "hurma kütüğü olmayı âdet edinmişler (müennes)", "kontrol", ""],
+      [374, "مِجْذِيع", "micẕīʿ", "hurma kütüğü olmaya düşkün", "kontrol", ""],
+      [375, "مِجْذِيعَة", "micẕīʿa", "hurma kütüğü olmaya düşkün (müennes)", "kontrol", ""],
+      [376, "مِجْذِيعَان", "micẕīʿān", "hurma kütüğü olmaya düşkün (iki)", "kontrol", ""],
+      [377, "مِجْذِيعَتَان", "micẕīʿatān", "hurma kütüğü olmaya düşkün (iki, müennes)", "kontrol", ""],
+      [378, "مِجْذِيعُون", "micẕīʿūn", "hurma kütüğü olmaya düşkünler", "kontrol", ""],
+      [379, "مِجْذِيعِين", "micẕīʿīn", "hurma kütüğü olmaya düşkünler", "kontrol", ""],
+      [380, "مِجْذِيعَات", "micẕīʿāt", "hurma kütüğü olmaya düşkünler (müennes)", "kontrol", ""],
       [381, "جَذِيع", "caẕīʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [382, "جَذِيعَة", "caẕīʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [383, "جَذِيعَان", "caẕīʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [384, "جَذِيعَتَان", "caẕīʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
+      [382, "جَذِيعَة", "caẕīʿa", "çok hurma kütüğü olan (müennes)", "kontrol", ""],
+      [383, "جَذِيعَان", "caẕīʿān", "çok hurma kütüğü olan (iki)", "kontrol", ""],
+      [384, "جَذِيعَتَان", "caẕīʿatān", "çok hurma kütüğü olan (iki, müennes)", "kontrol", ""],
       [385, "جَذِيعُون", "caẕīʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
       [386, "جَذِيعِين", "caẕīʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [387, "جَذِيعَات", "caẕīʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""],
+      [387, "جَذِيعَات", "caẕīʿāt", "çok hurma kütüğü olanlar (müennes)", "kontrol", ""],
       [388, "جَذَّع", "caẕẕaʿ", "çok hurma kütüğü olan", "kontrol", ""],
-      [389, "جَذَّعَة", "caẕẕaʿa", "çok hurma kütüğü olan (dişi)", "kontrol", ""],
-      [390, "جَذَّعَان", "caẕẕaʿān", "iki çok hurma kütüğü olan", "kontrol", ""],
-      [391, "جَذَّعَتَان", "caẕẕaʿatān", "iki çok hurma kütüğü olan (dişi)", "kontrol", ""],
+      [389, "جَذَّعَة", "caẕẕaʿa", "çok hurma kütüğü olan (müennes)", "kontrol", ""],
+      [390, "جَذَّعَان", "caẕẕaʿān", "çok hurma kütüğü olan (iki)", "kontrol", ""],
+      [391, "جَذَّعَتَان", "caẕẕaʿatān", "çok hurma kütüğü olan (iki, müennes)", "kontrol", ""],
       [392, "جَذَّعُون", "caẕẕaʿūn", "çok hurma kütüğü olanlar", "kontrol", ""],
       [393, "جَذَّعِين", "caẕẕaʿīn", "çok hurma kütüğü olanlar", "kontrol", ""],
-      [394, "جَذَّعَات", "caẕẕaʿāt", "çok hurma kütüğü olanlar (dişi)", "kontrol", ""]
+      [394, "جَذَّعَات", "caẕẕaʿāt", "çok hurma kütüğü olanlar (müennes)", "kontrol", ""]
     ],
     "mensûb": [
-      [395, "جَذْعِيّ", "caẕʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [397, "جَذَعِيّ", "caẕaʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [399, "جِذْعِيّ", "ciẕʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [401, "جُذْعِيّ", "cuẕʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [403, "جِذَاعِيّ", "ciẕāʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [405, "جَاذِعِيّ", "cāẕiʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [407, "مَجْذُوعِيّ", "macẕūʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [409, "جَذِيعِيّ", "caẕīʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [411, "مَجْذَعِيّ", "macẕaʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [413, "تَجْذِيعِيّ", "tacẕīʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [415, "تَجَاذُعِيّ", "tacāẕuʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [417, "إِجْذَاعِيّ", "ʾicẕāʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""],
-      [419, "اِجْتِذَاعِيّ", "ictiẕāʿiyy", "hurma kütüğü olmaya ilgili", "kontrol", ""]
+      [395, "جَذْعِيّ", "caẕʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [397, "جَذَعِيّ", "caẕaʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [399, "جِذْعِيّ", "ciẕʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [401, "جُذْعِيّ", "cuẕʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [403, "جِذَاعِيّ", "ciẕāʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [405, "جَاذِعِيّ", "cāẕiʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [407, "مَجْذُوعِيّ", "macẕūʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [409, "جَذِيعِيّ", "caẕīʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [411, "مَجْذَعِيّ", "macẕaʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [413, "تَجْذِيعِيّ", "tacẕīʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [415, "تَجَاذُعِيّ", "tacāẕuʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [417, "إِجْذَاعِيّ", "ʾicẕāʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""],
+      [419, "اِجْتِذَاعِيّ", "ictiẕāʿiyy", "hurma kütüğü olma ile ilgili", "kontrol", ""]
     ],
     "masdar-ı sınâî": [
       [396, "جَذْعِيَّة", "caẕʿiyya", "hurma kütüğü olanlık", "kontrol", ""],
@@ -533,84 +547,84 @@
       [426, "جِذَاعَة", "ciẕāʿa", "hurma kütüğü olma", "kontrol", ""],
       [427, "جُذُوعَة", "cuẕūʿa", "hurma kütüğü olma", "kontrol", ""],
       [428, "جَذْع", "caẕʿ", "hurma kütüğü olma", "kontrol", ""],
-      [429, "جِذْع", "ciẕʿ", "hurma kütüğü olma", "kontrol", ""]
+      [429, "جِذْع", "ciẕʿ", "kütük, gövde", "kuran", "Kur'ân"]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "جَاذُوع", "cāẕūʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [432, "جَذَعَة", "caẕaʿa", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [433, "جُذَعَة", "cuẕaʿa", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [434, "أُجْذُوعَة", "ʾucẕūʿa", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [435, "جَوْذَع", "cawẕaʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [437, "جَيْذَع", "cayẕaʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [439, "جَذْع", "caẕʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [441, "جَذَع", "caẕaʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [443, "جِذْع", "ciẕʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [445, "جُذْع", "cuẕʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [447, "جَذِيع", "caẕīʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [449, "جِذَع", "ciẕaʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [451, "جُذُع", "cuẕuʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [453, "جَذَاع", "caẕāʿ", "hurma kütüğü olanlar (topluluk adı)", "kontrol", ""]
+      [430, "جَاذُوع", "cāẕūʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [432, "جَذَعَة", "caẕaʿa", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [433, "جُذَعَة", "cuẕaʿa", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [434, "أُجْذُوعَة", "ʾucẕūʿa", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [435, "جَوْذَع", "cawẕaʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [437, "جَيْذَع", "cayẕaʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [439, "جَذْع", "caẕʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [441, "جَذَع", "caẕaʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [443, "جِذْع", "ciẕʿ", "kütük, gövde", "kuran", "Kur'ân"],
+      [445, "جُذْع", "cuẕʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [447, "جَذِيع", "caẕīʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [449, "جِذَع", "ciẕaʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [451, "جُذُع", "cuẕuʿ", "hurma kütüğü olma türünden şey", "kontrol", ""],
+      [453, "جَذَاع", "caẕāʿ", "hurma kütüğü olma türünden şey", "kontrol", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "جَاذُوعَة", "cāẕūʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [436, "جَوْذَعَة", "cawẕaʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [438, "جَيْذَعَة", "cayẕaʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [440, "جَذْعَة", "caẕʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [442, "جَذَعَة", "caẕaʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [444, "جِذْعَة", "ciẕʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [446, "جُذْعَة", "cuẕʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [448, "جَذِيعَة", "caẕīʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [450, "جِذَعَة", "ciẕaʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [452, "جُذُعَة", "cuẕuʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""],
-      [454, "جَذَاعَة", "caẕāʿa", "bir tane hurma kütüğü olanlar (topluluk adı)", "kontrol", ""]
+      [431, "جَاذُوعَة", "cāẕūʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [436, "جَوْذَعَة", "cawẕaʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [438, "جَيْذَعَة", "cayẕaʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [440, "جَذْعَة", "caẕʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [442, "جَذَعَة", "caẕaʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [444, "جِذْعَة", "ciẕʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [446, "جُذْعَة", "cuẕʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [448, "جَذِيعَة", "caẕīʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [450, "جِذَعَة", "ciẕaʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [452, "جُذُعَة", "cuẕuʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""],
+      [454, "جَذَاعَة", "caẕāʿa", "hurma kütüğü olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْذَاع", "ʾacẕāʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [456, "أَجْذِعَة", "ʾacẕiʿa", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [457, "أَجَاذِع", "ʾacāẕiʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [458, "أَجَاذِيع", "ʾacāẕīʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [459, "جُذُوع", "cuẕūʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [460, "جُذُع", "cuẕuʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [461, "جِذَاع", "ciẕāʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [462, "جِذَع", "ciẕaʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [463, "جِذَعَة", "ciẕaʿa", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [464, "جُذَع", "cuẕaʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [465, "جُذَعاء", "cuẕaʿāʾ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [466, "جَذَعَة", "caẕaʿa", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [467, "جُذَّاع", "cuẕẕāʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [468, "جَذَاع", "caẕāʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [469, "جَذَع", "caẕaʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [470, "مَجَاذِع", "macāẕiʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [471, "مَجَاذِيع", "macāẕīʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [472, "جَوَاذِع", "cawāẕiʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [473, "أَجْذُع", "ʾacẕuʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [474, "جُذَّع", "cuẕẕaʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [475, "جَذَائِع", "caẕāʾiʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""],
-      [476, "جُذَيْع", "cuẕayʿ", "hurma kütüğü olanlar (kırık çoğul)", "kontrol", ""]
+      [455, "أَجْذَاع", "ʾacẕāʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [456, "أَجْذِعَة", "ʾacẕiʿa", "hurma kütüğü olmalar", "kontrol", ""],
+      [457, "أَجَاذِع", "ʾacāẕiʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [458, "أَجَاذِيع", "ʾacāẕīʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [459, "جُذُوع", "cuẕūʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [460, "جُذُع", "cuẕuʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [461, "جِذَاع", "ciẕāʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [462, "جِذَع", "ciẕaʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [463, "جِذَعَة", "ciẕaʿa", "hurma kütüğü olmalar", "kontrol", ""],
+      [464, "جُذَع", "cuẕaʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [465, "جُذَعاء", "cuẕaʿāʾ", "hurma kütüğü olmalar", "kontrol", ""],
+      [466, "جَذَعَة", "caẕaʿa", "hurma kütüğü olmalar", "kontrol", ""],
+      [467, "جُذَّاع", "cuẕẕāʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [468, "جَذَاع", "caẕāʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [469, "جَذَع", "caẕaʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [470, "مَجَاذِع", "macāẕiʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [471, "مَجَاذِيع", "macāẕīʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [472, "جَوَاذِع", "cawāẕiʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [473, "أَجْذُع", "ʾacẕuʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [474, "جُذَّع", "cuẕẕaʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [475, "جَذَائِع", "caẕāʾiʿ", "hurma kütüğü olmalar", "kontrol", ""],
+      [476, "جُذَيْع", "cuẕayʿ", "hurma kütüğü olmalar", "kontrol", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَجْذَاعَات", "ʾacẕāʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [478, "أَجْذِعَات", "ʾacẕiʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [479, "أَجَاذِعَات", "ʾacāẕiʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [480, "أَجَاذِيعَات", "ʾacāẕīʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [481, "جُذُوعَات", "cuẕūʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [482, "جُذُعَات", "cuẕuʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [483, "جِذَاعَات", "ciẕāʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [484, "جِذَعَات", "ciẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [485, "جِذَعَات", "ciẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [486, "جُذَعَات", "cuẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [487, "جُذَعاآت", "cuẕaʿāʾāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [488, "جَذَعَات", "caẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [489, "جُذَّاعَات", "cuẕẕāʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [490, "جَذَاعَات", "caẕāʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [491, "جَذَعَات", "caẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [492, "مَجَاذِعَات", "macāẕiʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [493, "مَجَاذِيعَات", "macāẕīʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [494, "جَوَاذِعَات", "cawāẕiʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [495, "أَجْذُعَات", "ʾacẕuʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [496, "جُذَّعَات", "cuẕẕaʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [497, "جَذَائِعَات", "caẕāʾiʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""],
-      [498, "جُذَيْعَات", "cuẕayʿāt", "hurma kütüğü olanlar (çoğulun çoğulu)", "kontrol", ""]
+      [477, "أَجْذَاعَات", "ʾacẕāʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [478, "أَجْذِعَات", "ʾacẕiʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [479, "أَجَاذِعَات", "ʾacāẕiʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [480, "أَجَاذِيعَات", "ʾacāẕīʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [481, "جُذُوعَات", "cuẕūʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [482, "جُذُعَات", "cuẕuʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [483, "جِذَاعَات", "ciẕāʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [484, "جِذَعَات", "ciẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [485, "جِذَعَات", "ciẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [486, "جُذَعَات", "cuẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [487, "جُذَعاآت", "cuẕaʿāʾāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [488, "جَذَعَات", "caẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [489, "جُذَّاعَات", "cuẕẕāʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [490, "جَذَاعَات", "caẕāʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [491, "جَذَعَات", "caẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [492, "مَجَاذِعَات", "macāẕiʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [493, "مَجَاذِيعَات", "macāẕīʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [494, "جَوَاذِعَات", "cawāẕiʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [495, "أَجْذُعَات", "ʾacẕuʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [496, "جُذَّعَات", "cuẕẕaʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [497, "جَذَائِعَات", "caẕāʾiʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""],
+      [498, "جُذَيْعَات", "cuẕayʿāt", "hurma kütüğü olmalar topluluğu", "kontrol", ""]
     ]
   },
   "reddedilen": [

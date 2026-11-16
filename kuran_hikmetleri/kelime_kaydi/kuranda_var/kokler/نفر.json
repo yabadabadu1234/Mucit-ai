@@ -9,28 +9,28 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "نَفْر", "nafr", "kaçma", "orta", ""],
-      [1, "نِفْر", "nifr", "kaçma", "orta", ""],
+      [1, "نِفْر", "nifr", "kaçılan şey", "orta", ""],
       [2, "نُفْر", "nufr", "kaçma", "orta", ""],
       [
         3,
         "نَفَر",
         "nafar",
-        "kaçma",
+        "kaçma hâli",
         "orta",
         "Vikisözlük: masdar (bâb I): to flee, to run away, to turn tail, to scamper, to abscond, to get awa"
       ],
       [4, "نِفَر", "nifar", "kaçma", "orta", ""],
       [5, "نُفُر", "nufur", "kaçma", "orta", ""],
-      [6, "نُفُور", "nufūr", "kaçma", "orta", "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"],
-      [7, "نِفَار", "nifār", "kaçma", "orta", "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"],
-      [8, "نُفَار", "nufār", "kaçma", "orta", ""],
+      [6, "نُفُور", "nufūr", "nefret, kaçma", "kuran", "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"],
+      [7, "نِفَار", "nifār", "kaçmadan kaçınma", "orta", "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"],
+      [8, "نُفَار", "nufār", "kaçma illeti, kaçma sesi", "orta", ""],
       [9, "نَفَار", "nafār", "kaçma", "orta", ""],
-      [10, "نَفَارَة", "nafāra", "kaçma", "orta", ""],
-      [11, "نُفُورَة", "nufūra", "kaçma", "orta", ""],
-      [12, "نِفَارَة", "nifāra", "kaçma", "orta", ""],
-      [13, "نَفِير", "nafīr", "kaçma", "orta", "Vikisözlük: trumpet, horn"],
+      [10, "نَفَارَة", "nafāra", "kaçma vasfı", "orta", ""],
+      [11, "نُفُورَة", "nufūra", "kaçma vasfı", "orta", ""],
+      [12, "نِفَارَة", "nifāra", "kaçma vazifesi, kaçma işi", "orta", ""],
+      [13, "نَفِير", "nafīr", "nefir, kafile", "kuran", "Vikisözlük: trumpet, horn"],
       [14, "نَفُور", "nafūr", "kaçma", "orta", ""],
-      [15, "نَفَرَان", "nafarān", "kaçma", "orta", ""],
+      [15, "نَفَرَان", "nafarān", "kaçma çalkantısı, coşarak kaçma", "orta", ""],
       [16, "نُفْرَان", "nufrān", "kaçma", "orta", ""],
       [17, "نِفْرَان", "nifrān", "kaçma", "orta", ""],
       [18, "نَفْرَى", "nafrā", "kaçma", "orta", ""],
@@ -39,11 +39,11 @@
       [21, "نَفَرَة", "nafara", "kaçma", "orta", ""],
       [22, "نِفَرَة", "nifara", "kaçma", "orta", ""],
       [23, "نَفْرُورَة", "nafrūra", "kaçma", "orta", ""],
-      [24, "تُنْفُور", "tunfūr", "kaçma", "orta", ""],
-      [25, "تَنْفِرَة", "tanfira", "kaçma", "orta", ""],
-      [26, "تَنْفَرَة", "tanfara", "kaçma", "orta", ""],
-      [27, "مَنْفُرَة", "manfura", "kaçma", "orta", ""],
-      [28, "مَنْفِرَة", "manfira", "kaçma", "orta", ""]
+      [24, "تُنْفُور", "tunfūr", "tekrar tekrar kaçma", "orta", ""],
+      [25, "تَنْفِرَة", "tanfira", "tekrar tekrar kaçma", "orta", ""],
+      [26, "تَنْفَرَة", "tanfara", "tekrar tekrar kaçma", "orta", ""],
+      [27, "مَنْفُرَة", "manfura", "kaçma sebebi", "orta", ""],
+      [28, "مَنْفِرَة", "manfira", "kaçma sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
       [29, "تَنْفِير", "tanfīr", "kaçırma", "orta", ""],
@@ -56,66 +56,73 @@
     ],
     "ism-i fâil · bâb II": [
       [34, "مُنَفِّر", "munaffir", "kaçıran", "orta", ""],
-      [35, "مُنَفِّرَة", "munaffira", "kaçıran (dişi)", "orta", ""],
-      [36, "مُنَفِّرَان", "munaffirān", "iki kaçıran", "orta", ""],
-      [37, "مُنَفِّرَتَان", "munaffiratān", "iki kaçıran (dişi)", "orta", ""],
+      [35, "مُنَفِّرَة", "munaffira", "kaçıran (müennes)", "orta", ""],
+      [36, "مُنَفِّرَان", "munaffirān", "kaçıran (iki)", "orta", ""],
+      [37, "مُنَفِّرَتَان", "munaffiratān", "kaçıran (iki, müennes)", "orta", ""],
       [38, "مُنَفِّرُون", "munaffirūn", "kaçıranlar", "orta", ""],
       [39, "مُنَفِّرِين", "munaffirīn", "kaçıranlar", "orta", ""],
-      [40, "مُنَفِّرَات", "munaffirāt", "kaçıranlar (dişi)", "orta", ""]
+      [40, "مُنَفِّرَات", "munaffirāt", "kaçıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُنَفَّر", "munaffar", "kaçırılmış", "orta", ""],
-      [42, "مُنَفَّرَة", "munaffara", "kaçırılmış (dişi)", "orta", ""],
-      [43, "مُنَفَّرَان", "munaffarān", "iki kaçırılmış", "orta", ""],
-      [44, "مُنَفَّرَتَان", "munaffaratān", "iki kaçırılmış (dişi)", "orta", ""],
-      [45, "مُنَفَّرُون", "munaffarūn", "kaçırılmışlar", "orta", ""],
-      [46, "مُنَفَّرِين", "munaffarīn", "kaçırılmışlar", "orta", ""],
-      [47, "مُنَفَّرَات", "munaffarāt", "kaçırılmışlar (dişi)", "orta", ""]
+      [41, "مُنَفَّر", "munaffar", "kaçırılan", "orta", ""],
+      [42, "مُنَفَّرَة", "munaffara", "kaçırılan (müennes)", "orta", ""],
+      [43, "مُنَفَّرَان", "munaffarān", "kaçırılan (iki)", "orta", ""],
+      [44, "مُنَفَّرَتَان", "munaffaratān", "kaçırılan (iki, müennes)", "orta", ""],
+      [45, "مُنَفَّرُون", "munaffarūn", "kaçırılanlar", "orta", ""],
+      [46, "مُنَفَّرِين", "munaffarīn", "kaçırılanlar", "orta", ""],
+      [47, "مُنَفَّرَات", "munaffarāt", "kaçırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُنَفَّر", "munaffar", "kaçırma (yeri/zamanı)", "orta", ""]
+      [48, "مُنَفَّر", "munaffar", "kaçırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
       [
         49,
         "مُنَافَرَة",
         "munāfara",
-        "kaçışma",
+        "biriyle karşılıklı kaçma",
         "orta",
         "Vikisözlük: masdar (bâb III): to avoid, to keep away, to have an aversion"
       ],
-      [50, "نِفَار", "nifār", "kaçışma", "orta", "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"]
+      [
+        50,
+        "نِفَار",
+        "nifār",
+        "biriyle karşılıklı kaçma",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"
+      ]
     ],
     "ism-i merre · bâb III": [
-      [51, "نِفَارَة", "nifāra", "bir kere kaçışma", "orta", ""]
+      [51, "نِفَارَة", "nifāra", "bir kere biriyle karşılıklı kaçma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُنَافِر", "munāfir", "kaçışan", "orta", ""],
-      [53, "مُنَافِرَة", "munāfira", "kaçışan (dişi)", "orta", ""],
-      [54, "مُنَافِرَان", "munāfirān", "iki kaçışan", "orta", ""],
-      [55, "مُنَافِرَتَان", "munāfiratān", "iki kaçışan (dişi)", "orta", ""],
-      [56, "مُنَافِرُون", "munāfirūn", "kaçışanlar", "orta", ""],
-      [57, "مُنَافِرِين", "munāfirīn", "kaçışanlar", "orta", ""],
-      [58, "مُنَافِرَات", "munāfirāt", "kaçışanlar (dişi)", "orta", ""]
+      [52, "مُنَافِر", "munāfir", "biriyle karşılıklı kaçan", "orta", ""],
+      [53, "مُنَافِرَة", "munāfira", "biriyle karşılıklı kaçan (müennes)", "orta", ""],
+      [54, "مُنَافِرَان", "munāfirān", "biriyle karşılıklı kaçan (iki)", "orta", ""],
+      [55, "مُنَافِرَتَان", "munāfiratān", "biriyle karşılıklı kaçan (iki, müennes)", "orta", ""],
+      [56, "مُنَافِرُون", "munāfirūn", "biriyle karşılıklı kaçanlar", "orta", ""],
+      [57, "مُنَافِرِين", "munāfirīn", "biriyle karşılıklı kaçanlar", "orta", ""],
+      [58, "مُنَافِرَات", "munāfirāt", "biriyle karşılıklı kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُنَافَر", "munāfar", "kaçışmış", "orta", ""],
+      [59, "مُنَافَر", "munāfar", "biriyle karşılıklı kaçılan", "orta", ""],
       [
         60,
         "مُنَافَرَة",
         "munāfara",
-        "kaçışmış (dişi)",
+        "biriyle karşılıklı kaçılan (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb III): to avoid, to keep away, to have an aversion"
       ],
-      [61, "مُنَافَرَان", "munāfarān", "iki kaçışmış", "orta", ""],
-      [62, "مُنَافَرَتَان", "munāfaratān", "iki kaçışmış (dişi)", "orta", ""],
-      [63, "مُنَافَرُون", "munāfarūn", "kaçışmışlar", "orta", ""],
-      [64, "مُنَافَرِين", "munāfarīn", "kaçışmışlar", "orta", ""],
-      [65, "مُنَافَرَات", "munāfarāt", "kaçışmışlar (dişi)", "orta", ""]
+      [61, "مُنَافَرَان", "munāfarān", "biriyle karşılıklı kaçılan (iki)", "orta", ""],
+      [62, "مُنَافَرَتَان", "munāfaratān", "biriyle karşılıklı kaçılan (iki, müennes)", "orta", ""],
+      [63, "مُنَافَرُون", "munāfarūn", "biriyle karşılıklı kaçılanlar", "orta", ""],
+      [64, "مُنَافَرِين", "munāfarīn", "biriyle karşılıklı kaçılanlar", "orta", ""],
+      [65, "مُنَافَرَات", "munāfarāt", "biriyle karşılıklı kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُنَافَر", "munāfar", "kaçışma (yeri/zamanı)", "orta", ""]
+      [66, "مُنَافَر", "munāfar", "biriyle karşılıklı kaçma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
       [67, "إِنْفَار", "ʾinfār", "kaçırma", "orta", ""]
@@ -125,144 +132,151 @@
     ],
     "ism-i fâil · bâb IV": [
       [69, "مُنْفِر", "munfir", "kaçıran", "orta", ""],
-      [70, "مُنْفِرَة", "munfira", "kaçıran (dişi)", "orta", ""],
-      [71, "مُنْفِرَان", "munfirān", "iki kaçıran", "orta", ""],
-      [72, "مُنْفِرَتَان", "munfiratān", "iki kaçıran (dişi)", "orta", ""],
+      [70, "مُنْفِرَة", "munfira", "kaçıran (müennes)", "orta", ""],
+      [71, "مُنْفِرَان", "munfirān", "kaçıran (iki)", "orta", ""],
+      [72, "مُنْفِرَتَان", "munfiratān", "kaçıran (iki, müennes)", "orta", ""],
       [73, "مُنْفِرُون", "munfirūn", "kaçıranlar", "orta", ""],
       [74, "مُنْفِرِين", "munfirīn", "kaçıranlar", "orta", ""],
-      [75, "مُنْفِرَات", "munfirāt", "kaçıranlar (dişi)", "orta", ""]
+      [75, "مُنْفِرَات", "munfirāt", "kaçıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُنْفَر", "munfar", "kaçırılmış", "orta", ""],
-      [77, "مُنْفَرَة", "munfara", "kaçırılmış (dişi)", "orta", ""],
-      [78, "مُنْفَرَان", "munfarān", "iki kaçırılmış", "orta", ""],
-      [79, "مُنْفَرَتَان", "munfaratān", "iki kaçırılmış (dişi)", "orta", ""],
-      [80, "مُنْفَرُون", "munfarūn", "kaçırılmışlar", "orta", ""],
-      [81, "مُنْفَرِين", "munfarīn", "kaçırılmışlar", "orta", ""],
-      [82, "مُنْفَرَات", "munfarāt", "kaçırılmışlar (dişi)", "orta", ""]
+      [76, "مُنْفَر", "munfar", "kaçırılan", "orta", ""],
+      [77, "مُنْفَرَة", "munfara", "kaçırılan (müennes)", "orta", ""],
+      [78, "مُنْفَرَان", "munfarān", "kaçırılan (iki)", "orta", ""],
+      [79, "مُنْفَرَتَان", "munfaratān", "kaçırılan (iki, müennes)", "orta", ""],
+      [80, "مُنْفَرُون", "munfarūn", "kaçırılanlar", "orta", ""],
+      [81, "مُنْفَرِين", "munfarīn", "kaçırılanlar", "orta", ""],
+      [82, "مُنْفَرَات", "munfarāt", "kaçırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُنْفَر", "munfar", "kaçırma (yeri/zamanı)", "orta", ""]
+      [83, "مُنْفَر", "munfar", "kaçırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَنَفُّر", "tanaffur", "kaçma", "orta", ""]
+      [84, "تَنَفُّر", "tanaffur", "kendini zorlayarak kaçma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَنَفُّرَة", "tanaffura", "bir kere kaçma", "orta", ""]
+      [85, "تَنَفُّرَة", "tanaffura", "bir kere kendini zorlayarak kaçma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَنَفِّر", "mutanaffir", "kaçan", "orta", ""],
-      [87, "مُتَنَفِّرَة", "mutanaffira", "kaçan (dişi)", "orta", ""],
-      [88, "مُتَنَفِّرَان", "mutanaffirān", "iki kaçan", "orta", ""],
-      [89, "مُتَنَفِّرَتَان", "mutanaffiratān", "iki kaçan (dişi)", "orta", ""],
-      [90, "مُتَنَفِّرُون", "mutanaffirūn", "kaçanlar", "orta", ""],
-      [91, "مُتَنَفِّرِين", "mutanaffirīn", "kaçanlar", "orta", ""],
-      [92, "مُتَنَفِّرَات", "mutanaffirāt", "kaçanlar (dişi)", "orta", ""]
+      [86, "مُتَنَفِّر", "mutanaffir", "kendini zorlayarak kaçan", "orta", ""],
+      [87, "مُتَنَفِّرَة", "mutanaffira", "kendini zorlayarak kaçan (müennes)", "orta", ""],
+      [88, "مُتَنَفِّرَان", "mutanaffirān", "kendini zorlayarak kaçan (iki)", "orta", ""],
+      [89, "مُتَنَفِّرَتَان", "mutanaffiratān", "kendini zorlayarak kaçan (iki, müennes)", "orta", ""],
+      [90, "مُتَنَفِّرُون", "mutanaffirūn", "kendini zorlayarak kaçanlar", "orta", ""],
+      [91, "مُتَنَفِّرِين", "mutanaffirīn", "kendini zorlayarak kaçanlar", "orta", ""],
+      [92, "مُتَنَفِّرَات", "mutanaffirāt", "kendini zorlayarak kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَنَفَّر", "mutanaffar", "kaçmış", "orta", ""],
-      [94, "مُتَنَفَّرَة", "mutanaffara", "kaçmış (dişi)", "orta", ""],
-      [95, "مُتَنَفَّرَان", "mutanaffarān", "iki kaçmış", "orta", ""],
-      [96, "مُتَنَفَّرَتَان", "mutanaffaratān", "iki kaçmış (dişi)", "orta", ""],
-      [97, "مُتَنَفَّرُون", "mutanaffarūn", "kaçmışlar", "orta", ""],
-      [98, "مُتَنَفَّرِين", "mutanaffarīn", "kaçmışlar", "orta", ""],
-      [99, "مُتَنَفَّرَات", "mutanaffarāt", "kaçmışlar (dişi)", "orta", ""]
+      [93, "مُتَنَفَّر", "mutanaffar", "kendini zorlayarak kaçılan", "orta", ""],
+      [94, "مُتَنَفَّرَة", "mutanaffara", "kendini zorlayarak kaçılan (müennes)", "orta", ""],
+      [95, "مُتَنَفَّرَان", "mutanaffarān", "kendini zorlayarak kaçılan (iki)", "orta", ""],
+      [96, "مُتَنَفَّرَتَان", "mutanaffaratān", "kendini zorlayarak kaçılan (iki, müennes)", "orta", ""],
+      [97, "مُتَنَفَّرُون", "mutanaffarūn", "kendini zorlayarak kaçılanlar", "orta", ""],
+      [98, "مُتَنَفَّرِين", "mutanaffarīn", "kendini zorlayarak kaçılanlar", "orta", ""],
+      [99, "مُتَنَفَّرَات", "mutanaffarāt", "kendini zorlayarak kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَنَفَّر", "mutanaffar", "kaçma (yeri/zamanı)", "orta", ""]
+      [100, "مُتَنَفَّر", "mutanaffar", "kendini zorlayarak kaçma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَنَافُر", "tanāfur", "kaçışma", "orta", "Vikisözlük: masdar (bâb VI): to avoid one another"]
+      [
+        101,
+        "تَنَافُر",
+        "tanāfur",
+        "hep birlikte kaçma",
+        "orta",
+        "Vikisözlük: masdar (bâb VI): to avoid one another"
+      ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَنَافُرَة", "tanāfura", "bir kere kaçışma", "orta", ""]
+      [102, "تَنَافُرَة", "tanāfura", "bir kere hep birlikte kaçma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَنَافِر", "mutanāfir", "kaçışan", "orta", ""],
-      [104, "مُتَنَافِرَة", "mutanāfira", "kaçışan (dişi)", "orta", ""],
-      [105, "مُتَنَافِرَان", "mutanāfirān", "iki kaçışan", "orta", ""],
-      [106, "مُتَنَافِرَتَان", "mutanāfiratān", "iki kaçışan (dişi)", "orta", ""],
-      [107, "مُتَنَافِرُون", "mutanāfirūn", "kaçışanlar", "orta", ""],
-      [108, "مُتَنَافِرِين", "mutanāfirīn", "kaçışanlar", "orta", ""],
-      [109, "مُتَنَافِرَات", "mutanāfirāt", "kaçışanlar (dişi)", "orta", ""]
+      [103, "مُتَنَافِر", "mutanāfir", "hep birlikte kaçan", "orta", ""],
+      [104, "مُتَنَافِرَة", "mutanāfira", "hep birlikte kaçan (müennes)", "orta", ""],
+      [105, "مُتَنَافِرَان", "mutanāfirān", "hep birlikte kaçan (iki)", "orta", ""],
+      [106, "مُتَنَافِرَتَان", "mutanāfiratān", "hep birlikte kaçan (iki, müennes)", "orta", ""],
+      [107, "مُتَنَافِرُون", "mutanāfirūn", "hep birlikte kaçanlar", "orta", ""],
+      [108, "مُتَنَافِرِين", "mutanāfirīn", "hep birlikte kaçanlar", "orta", ""],
+      [109, "مُتَنَافِرَات", "mutanāfirāt", "hep birlikte kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَنَافَر", "mutanāfar", "kaçışmış", "orta", ""],
-      [111, "مُتَنَافَرَة", "mutanāfara", "kaçışmış (dişi)", "orta", ""],
-      [112, "مُتَنَافَرَان", "mutanāfarān", "iki kaçışmış", "orta", ""],
-      [113, "مُتَنَافَرَتَان", "mutanāfaratān", "iki kaçışmış (dişi)", "orta", ""],
-      [114, "مُتَنَافَرُون", "mutanāfarūn", "kaçışmışlar", "orta", ""],
-      [115, "مُتَنَافَرِين", "mutanāfarīn", "kaçışmışlar", "orta", ""],
-      [116, "مُتَنَافَرَات", "mutanāfarāt", "kaçışmışlar (dişi)", "orta", ""]
+      [110, "مُتَنَافَر", "mutanāfar", "hep birlikte kaçılan", "orta", ""],
+      [111, "مُتَنَافَرَة", "mutanāfara", "hep birlikte kaçılan (müennes)", "orta", ""],
+      [112, "مُتَنَافَرَان", "mutanāfarān", "hep birlikte kaçılan (iki)", "orta", ""],
+      [113, "مُتَنَافَرَتَان", "mutanāfaratān", "hep birlikte kaçılan (iki, müennes)", "orta", ""],
+      [114, "مُتَنَافَرُون", "mutanāfarūn", "hep birlikte kaçılanlar", "orta", ""],
+      [115, "مُتَنَافَرِين", "mutanāfarīn", "hep birlikte kaçılanlar", "orta", ""],
+      [116, "مُتَنَافَرَات", "mutanāfarāt", "hep birlikte kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَنَافَر", "mutanāfar", "kaçışma (yeri/zamanı)", "orta", ""]
+      [117, "مُتَنَافَر", "mutanāfar", "hep birlikte kaçma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْنِفَار", "innifār", "kaçma", "orta", ""]
+      [118, "اِنْنِفَار", "innifār", "kendiliğinden kaçma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْنِفَارَة", "innifāra", "bir kere kaçma", "orta", ""]
+      [119, "اِنْنِفَارَة", "innifāra", "bir kere kendiliğinden kaçma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْنَفِر", "munnafir", "kaçan", "orta", ""],
-      [121, "مُنْنَفِرَة", "munnafira", "kaçan (dişi)", "orta", ""],
-      [122, "مُنْنَفِرَان", "munnafirān", "iki kaçan", "orta", ""],
-      [123, "مُنْنَفِرَتَان", "munnafiratān", "iki kaçan (dişi)", "orta", ""],
-      [124, "مُنْنَفِرُون", "munnafirūn", "kaçanlar", "orta", ""],
-      [125, "مُنْنَفِرِين", "munnafirīn", "kaçanlar", "orta", ""],
-      [126, "مُنْنَفِرَات", "munnafirāt", "kaçanlar (dişi)", "orta", ""]
+      [120, "مُنْنَفِر", "munnafir", "kendiliğinden kaçan", "orta", ""],
+      [121, "مُنْنَفِرَة", "munnafira", "kendiliğinden kaçan (müennes)", "orta", ""],
+      [122, "مُنْنَفِرَان", "munnafirān", "kendiliğinden kaçan (iki)", "orta", ""],
+      [123, "مُنْنَفِرَتَان", "munnafiratān", "kendiliğinden kaçan (iki, müennes)", "orta", ""],
+      [124, "مُنْنَفِرُون", "munnafirūn", "kendiliğinden kaçanlar", "orta", ""],
+      [125, "مُنْنَفِرِين", "munnafirīn", "kendiliğinden kaçanlar", "orta", ""],
+      [126, "مُنْنَفِرَات", "munnafirāt", "kendiliğinden kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْنَفَر", "munnafar", "kaçmış", "orta", ""],
-      [128, "مُنْنَفَرَة", "munnafara", "kaçmış (dişi)", "orta", ""],
-      [129, "مُنْنَفَرَان", "munnafarān", "iki kaçmış", "orta", ""],
-      [130, "مُنْنَفَرَتَان", "munnafaratān", "iki kaçmış (dişi)", "orta", ""],
-      [131, "مُنْنَفَرُون", "munnafarūn", "kaçmışlar", "orta", ""],
-      [132, "مُنْنَفَرِين", "munnafarīn", "kaçmışlar", "orta", ""],
-      [133, "مُنْنَفَرَات", "munnafarāt", "kaçmışlar (dişi)", "orta", ""]
+      [127, "مُنْنَفَر", "munnafar", "kendiliğinden kaçılan", "orta", ""],
+      [128, "مُنْنَفَرَة", "munnafara", "kendiliğinden kaçılan (müennes)", "orta", ""],
+      [129, "مُنْنَفَرَان", "munnafarān", "kendiliğinden kaçılan (iki)", "orta", ""],
+      [130, "مُنْنَفَرَتَان", "munnafaratān", "kendiliğinden kaçılan (iki, müennes)", "orta", ""],
+      [131, "مُنْنَفَرُون", "munnafarūn", "kendiliğinden kaçılanlar", "orta", ""],
+      [132, "مُنْنَفَرِين", "munnafarīn", "kendiliğinden kaçılanlar", "orta", ""],
+      [133, "مُنْنَفَرَات", "munnafarāt", "kendiliğinden kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْنَفَر", "munnafar", "kaçma (yeri/zamanı)", "orta", ""]
+      [134, "مُنْنَفَر", "munnafar", "kendiliğinden kaçma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِنْتِفَار", "intifār", "kaçma", "orta", ""]
+      [135, "اِنْتِفَار", "intifār", "kendisi için kaçma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِنْتِفَارَة", "intifāra", "bir kere kaçma", "orta", ""]
+      [137, "اِنْتِفَارَة", "intifāra", "bir kere kendisi için kaçma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُنْتَفِر", "muntafir", "kaçan", "orta", ""],
-      [139, "مُنْتَفِرَة", "muntafira", "kaçan (dişi)", "orta", ""],
-      [140, "مُنْتَفِرَان", "muntafirān", "iki kaçan", "orta", ""],
-      [141, "مُنْتَفِرَتَان", "muntafiratān", "iki kaçan (dişi)", "orta", ""],
-      [142, "مُنْتَفِرُون", "muntafirūn", "kaçanlar", "orta", ""],
-      [143, "مُنْتَفِرِين", "muntafirīn", "kaçanlar", "orta", ""],
-      [144, "مُنْتَفِرَات", "muntafirāt", "kaçanlar (dişi)", "orta", ""]
+      [138, "مُنْتَفِر", "muntafir", "kendisi için kaçan", "orta", ""],
+      [139, "مُنْتَفِرَة", "muntafira", "kendisi için kaçan (müennes)", "orta", ""],
+      [140, "مُنْتَفِرَان", "muntafirān", "kendisi için kaçan (iki)", "orta", ""],
+      [141, "مُنْتَفِرَتَان", "muntafiratān", "kendisi için kaçan (iki, müennes)", "orta", ""],
+      [142, "مُنْتَفِرُون", "muntafirūn", "kendisi için kaçanlar", "orta", ""],
+      [143, "مُنْتَفِرِين", "muntafirīn", "kendisi için kaçanlar", "orta", ""],
+      [144, "مُنْتَفِرَات", "muntafirāt", "kendisi için kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُنْتَفَر", "muntafar", "kaçmış", "orta", ""],
-      [146, "مُنْتَفَرَة", "muntafara", "kaçmış (dişi)", "orta", ""],
-      [147, "مُنْتَفَرَان", "muntafarān", "iki kaçmış", "orta", ""],
-      [148, "مُنْتَفَرَتَان", "muntafaratān", "iki kaçmış (dişi)", "orta", ""],
-      [149, "مُنْتَفَرُون", "muntafarūn", "kaçmışlar", "orta", ""],
-      [150, "مُنْتَفَرِين", "muntafarīn", "kaçmışlar", "orta", ""],
-      [151, "مُنْتَفَرَات", "muntafarāt", "kaçmışlar (dişi)", "orta", ""]
+      [145, "مُنْتَفَر", "muntafar", "kendisi için kaçılan", "orta", ""],
+      [146, "مُنْتَفَرَة", "muntafara", "kendisi için kaçılan (müennes)", "orta", ""],
+      [147, "مُنْتَفَرَان", "muntafarān", "kendisi için kaçılan (iki)", "orta", ""],
+      [148, "مُنْتَفَرَتَان", "muntafaratān", "kendisi için kaçılan (iki, müennes)", "orta", ""],
+      [149, "مُنْتَفَرُون", "muntafarūn", "kendisi için kaçılanlar", "orta", ""],
+      [150, "مُنْتَفَرِين", "muntafarīn", "kendisi için kaçılanlar", "orta", ""],
+      [151, "مُنْتَفَرَات", "muntafarāt", "kendisi için kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُنْتَفَر", "muntafar", "kaçma (yeri/zamanı)", "orta", ""]
+      [152, "مُنْتَفَر", "muntafar", "kendisi için kaçma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِنْفِرَار", "infirār", "kaçlaşma", "kontrol", ""]
+      [499, "اِنْفِرَار", "infirār", "iyiden iyiye kaçma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُنْفَرّ", "munfarr", "kaçlaşan", "kontrol", ""],
-      [501, "مُنْفَرَّة", "munfarra", "kaçlaşan (dişi)", "kontrol", ""],
-      [502, "مُنْفَرَّان", "munfarrān", "iki kaçlaşan", "kontrol", ""],
-      [503, "مُنْفَرَّتَان", "munfarratān", "iki kaçlaşan (dişi)", "kontrol", ""],
-      [504, "مُنْفَرُّون", "munfarrūn", "kaçlaşanlar", "kontrol", ""],
-      [505, "مُنْفَرِّين", "munfarrīn", "kaçlaşanlar", "kontrol", ""],
-      [506, "مُنْفَرَّات", "munfarrāt", "kaçlaşanlar (dişi)", "kontrol", ""]
+      [500, "مُنْفَرّ", "munfarr", "iyiden iyiye kaçan", "kontrol", ""],
+      [501, "مُنْفَرَّة", "munfarra", "iyiden iyiye kaçan (müennes)", "kontrol", ""],
+      [502, "مُنْفَرَّان", "munfarrān", "iyiden iyiye kaçan (iki)", "kontrol", ""],
+      [503, "مُنْفَرَّتَان", "munfarratān", "iyiden iyiye kaçan (iki, müennes)", "kontrol", ""],
+      [504, "مُنْفَرُّون", "munfarrūn", "iyiden iyiye kaçanlar", "kontrol", ""],
+      [505, "مُنْفَرِّين", "munfarrīn", "iyiden iyiye kaçanlar", "kontrol", ""],
+      [506, "مُنْفَرَّات", "munfarrāt", "iyiden iyiye kaçanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
@@ -275,40 +289,40 @@
       ]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِنْفَارَة", "istinfāra", "bir kere kaçma", "orta", ""]
+      [177, "اِسْتِنْفَارَة", "istinfāra", "bir kere kaçmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَنْفِر", "mustanfir", "kaçmayı isteyen", "orta", ""],
-      [179, "مُسْتَنْفِرَة", "mustanfira", "kaçmayı isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَنْفِرَان", "mustanfirān", "iki kaçmayı isteyen", "orta", ""],
-      [181, "مُسْتَنْفِرَتَان", "mustanfiratān", "iki kaçmayı isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَنْفِرَة", "mustanfira", "kaçmayı isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَنْفِرَان", "mustanfirān", "kaçmayı isteyen (iki)", "orta", ""],
+      [181, "مُسْتَنْفِرَتَان", "mustanfiratān", "kaçmayı isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَنْفِرُون", "mustanfirūn", "kaçmayı isteyenler", "orta", ""],
       [183, "مُسْتَنْفِرِين", "mustanfirīn", "kaçmayı isteyenler", "orta", ""],
-      [184, "مُسْتَنْفِرَات", "mustanfirāt", "kaçmayı isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَنْفِرَات", "mustanfirāt", "kaçmayı isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَنْفَر", "mustanfar", "kaçmayı istenen", "orta", ""],
-      [186, "مُسْتَنْفَرَة", "mustanfara", "kaçmayı istenen (dişi)", "orta", ""],
-      [187, "مُسْتَنْفَرَان", "mustanfarān", "iki kaçmayı istenen", "orta", ""],
-      [188, "مُسْتَنْفَرَتَان", "mustanfaratān", "iki kaçmayı istenen (dişi)", "orta", ""],
-      [189, "مُسْتَنْفَرُون", "mustanfarūn", "kaçmayı istenenler", "orta", ""],
-      [190, "مُسْتَنْفَرِين", "mustanfarīn", "kaçmayı istenenler", "orta", ""],
-      [191, "مُسْتَنْفَرَات", "mustanfarāt", "kaçmayı istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَنْفَر", "mustanfar", "kaçması istenen", "orta", ""],
+      [186, "مُسْتَنْفَرَة", "mustanfara", "kaçması istenen (müennes)", "orta", ""],
+      [187, "مُسْتَنْفَرَان", "mustanfarān", "kaçması istenen (iki)", "orta", ""],
+      [188, "مُسْتَنْفَرَتَان", "mustanfaratān", "kaçması istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَنْفَرُون", "mustanfarūn", "kaçması istenenler", "orta", ""],
+      [190, "مُسْتَنْفَرِين", "mustanfarīn", "kaçması istenenler", "orta", ""],
+      [191, "مُسْتَنْفَرَات", "mustanfarāt", "kaçması istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَنْفَر", "mustanfar", "kaçma (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَنْفَر", "mustanfar", "kaçmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِنْفِيرَار", "infīrār", "iyice kaçlaşma", "kontrol", ""]
+      [507, "اِنْفِيرَار", "infīrār", "büsbütün kaçma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُنْفَارّ", "munfārr", "iyice kaçlaşan", "kontrol", ""],
-      [509, "مُنْفَارَّة", "munfārra", "iyice kaçlaşan (dişi)", "kontrol", ""],
-      [510, "مُنْفَارَّان", "munfārrān", "iki iyice kaçlaşan", "kontrol", ""],
-      [511, "مُنْفَارَّتَان", "munfārratān", "iki iyice kaçlaşan (dişi)", "kontrol", ""],
-      [512, "مُنْفَارُّون", "munfārrūn", "iyice kaçlaşanlar", "kontrol", ""],
-      [513, "مُنْفَارِّين", "munfārrīn", "iyice kaçlaşanlar", "kontrol", ""],
-      [514, "مُنْفَارَّات", "munfārrāt", "iyice kaçlaşanlar (dişi)", "kontrol", ""]
+      [508, "مُنْفَارّ", "munfārr", "büsbütün kaçan", "kontrol", ""],
+      [509, "مُنْفَارَّة", "munfārra", "büsbütün kaçan (müennes)", "kontrol", ""],
+      [510, "مُنْفَارَّان", "munfārrān", "büsbütün kaçan (iki)", "kontrol", ""],
+      [511, "مُنْفَارَّتَان", "munfārratān", "büsbütün kaçan (iki, müennes)", "kontrol", ""],
+      [512, "مُنْفَارُّون", "munfārrūn", "büsbütün kaçanlar", "kontrol", ""],
+      [513, "مُنْفَارِّين", "munfārrīn", "büsbütün kaçanlar", "kontrol", ""],
+      [514, "مُنْفَارَّات", "munfārrāt", "büsbütün kaçanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِنْفِوْفَار", "infiwfār", "aşırı kaçma", "orta", ""]
@@ -318,231 +332,231 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "نَافِر", "nāfir", "kaçan", "orta", ""],
-      [214, "نَافِرَة", "nāfira", "kaçan (dişi)", "orta", ""],
-      [215, "نَافِرَان", "nāfirān", "iki kaçan", "orta", ""],
-      [216, "نَافِرَتَان", "nāfiratān", "iki kaçan (dişi)", "orta", ""],
+      [214, "نَافِرَة", "nāfira", "kaçan (müennes)", "orta", ""],
+      [215, "نَافِرَان", "nāfirān", "kaçan (iki)", "orta", ""],
+      [216, "نَافِرَتَان", "nāfiratān", "kaçan (iki, müennes)", "orta", ""],
       [217, "نَافِرُون", "nāfirūn", "kaçanlar", "orta", ""],
       [218, "نَافِرِين", "nāfirīn", "kaçanlar", "orta", ""],
-      [219, "نَافِرَات", "nāfirāt", "kaçanlar (dişi)", "orta", ""]
+      [219, "نَافِرَات", "nāfirāt", "kaçanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَنْفُور", "manfūr", "kaçmış", "orta", ""],
-      [221, "مَنْفُورَة", "manfūra", "kaçmış (dişi)", "orta", ""],
-      [222, "مَنْفُورَان", "manfūrān", "iki kaçmış", "orta", ""],
-      [223, "مَنْفُورَتَان", "manfūratān", "iki kaçmış (dişi)", "orta", ""],
-      [224, "مَنْفُورُون", "manfūrūn", "kaçmışlar", "orta", ""],
-      [225, "مَنْفُورِين", "manfūrīn", "kaçmışlar", "orta", ""],
-      [226, "مَنْفُورَات", "manfūrāt", "kaçmışlar (dişi)", "orta", ""]
+      [220, "مَنْفُور", "manfūr", "kaçılan", "orta", ""],
+      [221, "مَنْفُورَة", "manfūra", "kaçılan (müennes)", "orta", ""],
+      [222, "مَنْفُورَان", "manfūrān", "kaçılan (iki)", "orta", ""],
+      [223, "مَنْفُورَتَان", "manfūratān", "kaçılan (iki, müennes)", "orta", ""],
+      [224, "مَنْفُورُون", "manfūrūn", "kaçılanlar", "orta", ""],
+      [225, "مَنْفُورِين", "manfūrīn", "kaçılanlar", "orta", ""],
+      [226, "مَنْفُورَات", "manfūrāt", "kaçılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَنْفَر", "manfar", "kaçma (yeri/zamanı)", "orta", ""],
-      [228, "مَنْفَرَان", "manfarān", "iki kaçma (yeri/zamanı)", "orta", ""],
-      [229, "مَنْفِر", "manfir", "kaçma (yeri/zamanı)", "orta", ""],
-      [230, "مَنْفِرَان", "manfirān", "iki kaçma (yeri/zamanı)", "orta", ""],
-      [231, "مَنْفَرَة", "manfara", "kaçma (yeri/zamanı)", "orta", ""],
-      [232, "مَنْفَرَتَان", "manfaratān", "iki kaçma (yeri/zamanı)", "orta", ""],
-      [233, "مَنْفِرَة", "manfira", "kaçma (yeri/zamanı)", "orta", ""],
-      [234, "مَنْفِرَتَان", "manfiratān", "iki kaçma (yeri/zamanı)", "orta", ""],
-      [247, "مَنْفُرَة", "manfura", "kaçma (yeri/zamanı)", "orta", ""],
-      [248, "مَنْفُرَتَان", "manfuratān", "iki kaçma (yeri/zamanı)", "orta", ""]
+      [227, "مَنْفَر", "manfar", "kaçma yeri, vakti", "orta", ""],
+      [228, "مَنْفَرَان", "manfarān", "kaçma yeri, vakti (iki)", "orta", ""],
+      [229, "مَنْفِر", "manfir", "kaçma yeri, vakti", "orta", ""],
+      [230, "مَنْفِرَان", "manfirān", "kaçma yeri, vakti (iki)", "orta", ""],
+      [231, "مَنْفَرَة", "manfara", "kaçmanın bol olduğu yer", "orta", ""],
+      [232, "مَنْفَرَتَان", "manfaratān", "kaçmanın bol olduğu yer (iki)", "orta", ""],
+      [233, "مَنْفِرَة", "manfira", "kaçmanın bol olduğu yer", "orta", ""],
+      [234, "مَنْفِرَتَان", "manfiratān", "kaçmanın bol olduğu yer (iki)", "orta", ""],
+      [247, "مَنْفُرَة", "manfura", "kaçma yeri, vakti", "orta", ""],
+      [248, "مَنْفُرَتَان", "manfuratān", "kaçma yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِنْفَر", "minfar", "kaçmaya yarayan araç", "orta", ""],
-      [236, "مِنْفَرَان", "minfarān", "iki kaçmaya yarayan araç", "orta", ""],
-      [237, "مِنْفَار", "minfār", "kaçmaya yarayan araç", "orta", ""],
-      [238, "مِنْفَارَان", "minfārān", "iki kaçmaya yarayan araç", "orta", ""],
-      [239, "مِنْفَرَة", "minfara", "kaçmaya yarayan araç", "orta", ""],
-      [240, "مِنْفَرَتَان", "minfaratān", "iki kaçmaya yarayan araç", "orta", ""]
+      [235, "مِنْفَر", "minfar", "kaçma âleti", "orta", ""],
+      [236, "مِنْفَرَان", "minfarān", "kaçma âleti (iki)", "orta", ""],
+      [237, "مِنْفَار", "minfār", "kaçma âleti", "orta", ""],
+      [238, "مِنْفَارَان", "minfārān", "kaçma âleti (iki)", "orta", ""],
+      [239, "مِنْفَرَة", "minfara", "kaçma âleti", "orta", ""],
+      [240, "مِنْفَرَتَان", "minfaratān", "kaçma âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَنْفَر", "ʾanfar", "daha çok kaçan", "orta", ""],
-      [242, "أَنْفَرَان", "ʾanfarān", "iki daha çok kaçan", "orta", ""]
+      [242, "أَنْفَرَان", "ʾanfarān", "daha çok kaçan (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "نُفْرَى", "nufrā", "daha çok kaçan", "orta", ""],
-      [244, "نُفْرَيَان", "nufrayān", "iki daha çok kaçan", "orta", ""],
+      [244, "نُفْرَيَان", "nufrayān", "daha çok kaçan (iki)", "orta", ""],
       [245, "نَفْرَاء", "nafrāʾ", "daha çok kaçan", "orta", ""],
-      [246, "نَفْرَاآن", "nafrāʾān", "iki daha çok kaçan", "orta", ""]
+      [246, "نَفْرَاآن", "nafrāʾān", "daha çok kaçan (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "نُفَيْر", "nufayr", "küçük kaçma", "orta", ""],
-      [250, "نُفَيْرَان", "nufayrān", "iki küçük kaçma", "orta", ""],
-      [251, "نُفَيْرَة", "nufayra", "küçük kaçma", "orta", ""],
-      [252, "نُفَيْرَتَان", "nufayratān", "iki küçük kaçma", "orta", ""]
+      [249, "نُفَيْر", "nufayr", "azıcık kaçma", "orta", ""],
+      [250, "نُفَيْرَان", "nufayrān", "azıcık kaçma (iki)", "orta", ""],
+      [251, "نُفَيْرَة", "nufayra", "azıcık kaçma", "orta", ""],
+      [252, "نُفَيْرَتَان", "nufayratān", "azıcık kaçma (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَنْفَر", "manfar", "kaçma", "orta", ""],
-      [254, "مَنْفَرَان", "manfarān", "iki kaçma", "orta", ""]
+      [254, "مَنْفَرَان", "manfarān", "kaçma (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "نَفْرَة", "nafra", "bir kere kaçma", "orta", ""],
-      [256, "نَفْرَتَان", "nafratān", "iki bir kere kaçma", "orta", ""]
+      [256, "نَفْرَتَان", "nafratān", "bir kere kaçma (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "نِفْرَة", "nifra", "kaçma tarzı", "orta", ""],
-      [258, "نِفْرَتَان", "nifratān", "iki kaçma tarzı", "orta", ""]
+      [258, "نِفْرَتَان", "nifratān", "kaçma tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "نَفِير", "nafīr", "sürekli kaçan", "orta", "Vikisözlük: trumpet, horn"],
-      [260, "نَفِيرَة", "nafīra", "sürekli kaçan (dişi)", "orta", ""],
-      [261, "نَفِيرَان", "nafīrān", "iki sürekli kaçan", "orta", ""],
-      [262, "نَفِيرَتَان", "nafīratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [263, "نَفِيرُون", "nafīrūn", "sürekli kaçanlar", "orta", ""],
-      [264, "نَفِيرِين", "nafīrīn", "sürekli kaçanlar", "orta", ""],
-      [265, "نَفِيرَات", "nafīrāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [266, "نَفُور", "nafūr", "sürekli kaçan", "orta", ""],
-      [267, "نَفُورَة", "nafūra", "sürekli kaçan (dişi)", "orta", ""],
-      [268, "نَفُورَان", "nafūrān", "iki sürekli kaçan", "orta", ""],
-      [269, "نَفُورَتَان", "nafūratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [270, "نَفُورُون", "nafūrūn", "sürekli kaçanlar", "orta", ""],
-      [271, "نَفُورِين", "nafūrīn", "sürekli kaçanlar", "orta", ""],
-      [272, "نَفُورَات", "nafūrāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [273, "نَفِر", "nafir", "sürekli kaçan", "orta", ""],
-      [274, "نَفِرَة", "nafira", "sürekli kaçan (dişi)", "orta", ""],
-      [275, "نَفِرَان", "nafirān", "iki sürekli kaçan", "orta", ""],
-      [276, "نَفِرَتَان", "nafiratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [277, "نَفِرُون", "nafirūn", "sürekli kaçanlar", "orta", ""],
-      [278, "نَفِرِين", "nafirīn", "sürekli kaçanlar", "orta", ""],
-      [279, "نَفِرَات", "nafirāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [280, "نَفُر", "nafur", "sürekli kaçan", "orta", ""],
-      [281, "نَفُرَة", "nafura", "sürekli kaçan (dişi)", "orta", ""],
-      [282, "نَفُرَان", "nafurān", "iki sürekli kaçan", "orta", ""],
-      [283, "نَفُرَتَان", "nafuratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [284, "نَفُرُون", "nafurūn", "sürekli kaçanlar", "orta", ""],
-      [285, "نَفُرِين", "nafurīn", "sürekli kaçanlar", "orta", ""],
-      [286, "نَفُرَات", "nafurāt", "sürekli kaçanlar (dişi)", "orta", ""],
+      [259, "نَفِير", "nafīr", "nefir, kafile", "kuran", "Vikisözlük: trumpet, horn"],
+      [260, "نَفِيرَة", "nafīra", "her daim kaçan (müennes)", "orta", ""],
+      [261, "نَفِيرَان", "nafīrān", "her daim kaçan (iki)", "orta", ""],
+      [262, "نَفِيرَتَان", "nafīratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [263, "نَفِيرُون", "nafīrūn", "her daim kaçanlar", "orta", ""],
+      [264, "نَفِيرِين", "nafīrīn", "her daim kaçanlar", "orta", ""],
+      [265, "نَفِيرَات", "nafīrāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [266, "نَفُور", "nafūr", "her daim kaçan", "orta", ""],
+      [267, "نَفُورَة", "nafūra", "her daim kaçan (müennes)", "orta", ""],
+      [268, "نَفُورَان", "nafūrān", "her daim kaçan (iki)", "orta", ""],
+      [269, "نَفُورَتَان", "nafūratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [270, "نَفُورُون", "nafūrūn", "her daim kaçanlar", "orta", ""],
+      [271, "نَفُورِين", "nafūrīn", "her daim kaçanlar", "orta", ""],
+      [272, "نَفُورَات", "nafūrāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [273, "نَفِر", "nafir", "her daim kaçan", "orta", ""],
+      [274, "نَفِرَة", "nafira", "her daim kaçan (müennes)", "orta", ""],
+      [275, "نَفِرَان", "nafirān", "her daim kaçan (iki)", "orta", ""],
+      [276, "نَفِرَتَان", "nafiratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [277, "نَفِرُون", "nafirūn", "her daim kaçanlar", "orta", ""],
+      [278, "نَفِرِين", "nafirīn", "her daim kaçanlar", "orta", ""],
+      [279, "نَفِرَات", "nafirāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [280, "نَفُر", "nafur", "her daim kaçan", "orta", ""],
+      [281, "نَفُرَة", "nafura", "her daim kaçan (müennes)", "orta", ""],
+      [282, "نَفُرَان", "nafurān", "her daim kaçan (iki)", "orta", ""],
+      [283, "نَفُرَتَان", "nafuratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [284, "نَفُرُون", "nafurūn", "her daim kaçanlar", "orta", ""],
+      [285, "نَفُرِين", "nafurīn", "her daim kaçanlar", "orta", ""],
+      [286, "نَفُرَات", "nafurāt", "her daim kaçanlar (müennes)", "orta", ""],
       [
         287,
         "نَفَر",
         "nafar",
-        "sürekli kaçan",
+        "her daim kaçan",
         "orta",
         "Vikisözlük: masdar (bâb I): to flee, to run away, to turn tail, to scamper, to abscond, to get awa"
       ],
-      [288, "نَفَرَة", "nafara", "sürekli kaçan (dişi)", "orta", ""],
-      [289, "نَفَرَان", "nafarān", "iki sürekli kaçan", "orta", ""],
-      [290, "نَفَرَتَان", "nafaratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [291, "نَفَرُون", "nafarūn", "sürekli kaçanlar", "orta", ""],
-      [292, "نَفَرِين", "nafarīn", "sürekli kaçanlar", "orta", ""],
-      [293, "نَفَرَات", "nafarāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [294, "نَفْر", "nafr", "sürekli kaçan", "orta", ""],
-      [295, "نَفْرَة", "nafra", "sürekli kaçan (dişi)", "orta", ""],
-      [296, "نَفْرَان", "nafrān", "iki sürekli kaçan", "orta", ""],
-      [297, "نَفْرَتَان", "nafratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [298, "نَفْرُون", "nafrūn", "sürekli kaçanlar", "orta", ""],
-      [299, "نَفْرِين", "nafrīn", "sürekli kaçanlar", "orta", ""],
-      [300, "نَفْرَات", "nafrāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [301, "نُفُر", "nufur", "sürekli kaçan", "orta", ""],
-      [302, "نُفُرَة", "nufura", "sürekli kaçan (dişi)", "orta", ""],
-      [303, "نُفُرَان", "nufurān", "iki sürekli kaçan", "orta", ""],
-      [304, "نُفُرَتَان", "nufuratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [305, "نُفُرُون", "nufurūn", "sürekli kaçanlar", "orta", ""],
-      [306, "نُفُرِين", "nufurīn", "sürekli kaçanlar", "orta", ""],
-      [307, "نُفُرَات", "nufurāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [308, "نَفْرَان", "nafrān", "sürekli kaçan", "orta", ""],
-      [309, "نَفْرَانَة", "nafrāna", "sürekli kaçan (dişi)", "orta", ""],
-      [310, "نَفْرَانَان", "nafrānān", "iki sürekli kaçan", "orta", ""],
-      [311, "نَفْرَانَتَان", "nafrānatān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [312, "نَفْرَانُون", "nafrānūn", "sürekli kaçanlar", "orta", ""],
-      [313, "نَفْرَانِين", "nafrānīn", "sürekli kaçanlar", "orta", ""],
-      [314, "نَفْرَانَات", "nafrānāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [315, "نُفَار", "nufār", "sürekli kaçan", "orta", ""],
-      [316, "نُفَارَة", "nufāra", "sürekli kaçan (dişi)", "orta", ""],
-      [317, "نُفَارَان", "nufārān", "iki sürekli kaçan", "orta", ""],
-      [318, "نُفَارَتَان", "nufāratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [319, "نُفَارُون", "nufārūn", "sürekli kaçanlar", "orta", ""],
-      [320, "نُفَارِين", "nufārīn", "sürekli kaçanlar", "orta", ""],
-      [321, "نُفَارَات", "nufārāt", "sürekli kaçanlar (dişi)", "orta", ""],
-      [322, "نَفَار", "nafār", "sürekli kaçan", "orta", ""],
-      [323, "نَفَارَة", "nafāra", "sürekli kaçan (dişi)", "orta", ""],
-      [324, "نَفَارَان", "nafārān", "iki sürekli kaçan", "orta", ""],
-      [325, "نَفَارَتَان", "nafāratān", "iki sürekli kaçan (dişi)", "orta", ""],
-      [326, "نَفَارُون", "nafārūn", "sürekli kaçanlar", "orta", ""],
-      [327, "نَفَارِين", "nafārīn", "sürekli kaçanlar", "orta", ""],
-      [328, "نَفَارَات", "nafārāt", "sürekli kaçanlar (dişi)", "orta", ""]
+      [288, "نَفَرَة", "nafara", "her daim kaçan (müennes)", "orta", ""],
+      [289, "نَفَرَان", "nafarān", "her daim kaçan (iki)", "orta", ""],
+      [290, "نَفَرَتَان", "nafaratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [291, "نَفَرُون", "nafarūn", "her daim kaçanlar", "orta", ""],
+      [292, "نَفَرِين", "nafarīn", "her daim kaçanlar", "orta", ""],
+      [293, "نَفَرَات", "nafarāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [294, "نَفْر", "nafr", "her daim kaçan", "orta", ""],
+      [295, "نَفْرَة", "nafra", "her daim kaçan (müennes)", "orta", ""],
+      [296, "نَفْرَان", "nafrān", "her daim kaçan (iki)", "orta", ""],
+      [297, "نَفْرَتَان", "nafratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [298, "نَفْرُون", "nafrūn", "her daim kaçanlar", "orta", ""],
+      [299, "نَفْرِين", "nafrīn", "her daim kaçanlar", "orta", ""],
+      [300, "نَفْرَات", "nafrāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [301, "نُفُر", "nufur", "her daim kaçan", "orta", ""],
+      [302, "نُفُرَة", "nufura", "her daim kaçan (müennes)", "orta", ""],
+      [303, "نُفُرَان", "nufurān", "her daim kaçan (iki)", "orta", ""],
+      [304, "نُفُرَتَان", "nufuratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [305, "نُفُرُون", "nufurūn", "her daim kaçanlar", "orta", ""],
+      [306, "نُفُرِين", "nufurīn", "her daim kaçanlar", "orta", ""],
+      [307, "نُفُرَات", "nufurāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [308, "نَفْرَان", "nafrān", "her daim kaçan", "orta", ""],
+      [309, "نَفْرَانَة", "nafrāna", "her daim kaçan (müennes)", "orta", ""],
+      [310, "نَفْرَانَان", "nafrānān", "her daim kaçan (iki)", "orta", ""],
+      [311, "نَفْرَانَتَان", "nafrānatān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [312, "نَفْرَانُون", "nafrānūn", "her daim kaçanlar", "orta", ""],
+      [313, "نَفْرَانِين", "nafrānīn", "her daim kaçanlar", "orta", ""],
+      [314, "نَفْرَانَات", "nafrānāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [315, "نُفَار", "nufār", "her daim kaçan", "orta", ""],
+      [316, "نُفَارَة", "nufāra", "her daim kaçan (müennes)", "orta", ""],
+      [317, "نُفَارَان", "nufārān", "her daim kaçan (iki)", "orta", ""],
+      [318, "نُفَارَتَان", "nufāratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [319, "نُفَارُون", "nufārūn", "her daim kaçanlar", "orta", ""],
+      [320, "نُفَارِين", "nufārīn", "her daim kaçanlar", "orta", ""],
+      [321, "نُفَارَات", "nufārāt", "her daim kaçanlar (müennes)", "orta", ""],
+      [322, "نَفَار", "nafār", "her daim kaçan", "orta", ""],
+      [323, "نَفَارَة", "nafāra", "her daim kaçan (müennes)", "orta", ""],
+      [324, "نَفَارَان", "nafārān", "her daim kaçan (iki)", "orta", ""],
+      [325, "نَفَارَتَان", "nafāratān", "her daim kaçan (iki, müennes)", "orta", ""],
+      [326, "نَفَارُون", "nafārūn", "her daim kaçanlar", "orta", ""],
+      [327, "نَفَارِين", "nafārīn", "her daim kaçanlar", "orta", ""],
+      [328, "نَفَارَات", "nafārāt", "her daim kaçanlar (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "نَفَّار", "naffār", "çok kaçan", "orta", ""],
-      [330, "نَفَّارَة", "naffāra", "çok kaçan (dişi)", "orta", ""],
-      [331, "نَفَّارَان", "naffārān", "iki çok kaçan", "orta", ""],
-      [332, "نَفَّارَتَان", "naffāratān", "iki çok kaçan (dişi)", "orta", ""],
-      [333, "نَفَّارُون", "naffārūn", "çok kaçanlar", "orta", ""],
-      [334, "نَفَّارِين", "naffārīn", "çok kaçanlar", "orta", ""],
-      [335, "نَفَّارَات", "naffārāt", "çok kaçanlar (dişi)", "orta", ""],
-      [336, "نَفَّارَة", "naffāra", "çok kaçan", "orta", ""],
-      [337, "نَفَّارَتَان", "naffāratān", "iki çok kaçan", "orta", ""],
-      [338, "نَفَّارَات", "naffārāt", "çok kaçanlar (dişi)", "orta", ""],
+      [329, "نَفَّار", "naffār", "işi kaçma olan", "orta", ""],
+      [330, "نَفَّارَة", "naffāra", "işi kaçma olan (müennes)", "orta", ""],
+      [331, "نَفَّارَان", "naffārān", "işi kaçma olan (iki)", "orta", ""],
+      [332, "نَفَّارَتَان", "naffāratān", "işi kaçma olan (iki, müennes)", "orta", ""],
+      [333, "نَفَّارُون", "naffārūn", "işi kaçma olanlar", "orta", ""],
+      [334, "نَفَّارِين", "naffārīn", "işi kaçma olanlar", "orta", ""],
+      [335, "نَفَّارَات", "naffārāt", "işi kaçma olanlar (müennes)", "orta", ""],
+      [336, "نَفَّارَة", "naffāra", "pek çok kaçan", "orta", ""],
+      [337, "نَفَّارَتَان", "naffāratān", "pek çok kaçan (iki)", "orta", ""],
+      [338, "نَفَّارَات", "naffārāt", "pek çok kaçanlar (müennes)", "orta", ""],
       [339, "نَفُور", "nafūr", "çok kaçan", "orta", ""],
-      [340, "نَفُورَة", "nafūra", "çok kaçan (dişi)", "orta", ""],
-      [341, "نَفُورَان", "nafūrān", "iki çok kaçan", "orta", ""],
-      [342, "نَفُورَتَان", "nafūratān", "iki çok kaçan (dişi)", "orta", ""],
+      [340, "نَفُورَة", "nafūra", "çok kaçan (müennes)", "orta", ""],
+      [341, "نَفُورَان", "nafūrān", "çok kaçan (iki)", "orta", ""],
+      [342, "نَفُورَتَان", "nafūratān", "çok kaçan (iki, müennes)", "orta", ""],
       [343, "نَفُورُون", "nafūrūn", "çok kaçanlar", "orta", ""],
       [344, "نَفُورِين", "nafūrīn", "çok kaçanlar", "orta", ""],
-      [345, "نَفُورَات", "nafūrāt", "çok kaçanlar (dişi)", "orta", ""],
-      [346, "نَفُّور", "naffūr", "çok kaçan", "orta", ""],
-      [347, "نَفُّورَة", "naffūra", "çok kaçan (dişi)", "orta", ""],
-      [348, "نَفُّورَان", "naffūrān", "iki çok kaçan", "orta", ""],
-      [349, "نَفُّورَتَان", "naffūratān", "iki çok kaçan (dişi)", "orta", ""],
-      [350, "نَفُّورُون", "naffūrūn", "çok kaçanlar", "orta", ""],
-      [351, "نَفُّورِين", "naffūrīn", "çok kaçanlar", "orta", ""],
-      [352, "نَفُّورَات", "naffūrāt", "çok kaçanlar (dişi)", "orta", ""],
-      [353, "نِفِّير", "niffīr", "çok kaçan", "orta", ""],
-      [354, "نِفِّيرَة", "niffīra", "çok kaçan (dişi)", "orta", ""],
-      [355, "نِفِّيرَان", "niffīrān", "iki çok kaçan", "orta", ""],
-      [356, "نِفِّيرَتَان", "niffīratān", "iki çok kaçan (dişi)", "orta", ""],
-      [357, "نِفِّيرُون", "niffīrūn", "çok kaçanlar", "orta", ""],
-      [358, "نِفِّيرِين", "niffīrīn", "çok kaçanlar", "orta", ""],
-      [359, "نِفِّيرَات", "niffīrāt", "çok kaçanlar (dişi)", "orta", ""],
-      [360, "نُفَّار", "nuffār", "çok kaçan", "orta", ""],
-      [361, "نُفَّارَة", "nuffāra", "çok kaçan (dişi)", "orta", ""],
-      [362, "نُفَّارَان", "nuffārān", "iki çok kaçan", "orta", ""],
-      [363, "نُفَّارَتَان", "nuffāratān", "iki çok kaçan (dişi)", "orta", ""],
-      [364, "نُفَّارُون", "nuffārūn", "çok kaçanlar", "orta", ""],
-      [365, "نُفَّارِين", "nuffārīn", "çok kaçanlar", "orta", ""],
-      [366, "نُفَّارَات", "nuffārāt", "çok kaçanlar (dişi)", "orta", ""],
-      [367, "مِنْفَار", "minfār", "çok kaçan", "orta", ""],
-      [368, "مِنْفَارَة", "minfāra", "çok kaçan (dişi)", "orta", ""],
-      [369, "مِنْفَارَان", "minfārān", "iki çok kaçan", "orta", ""],
-      [370, "مِنْفَارَتَان", "minfāratān", "iki çok kaçan (dişi)", "orta", ""],
-      [371, "مِنْفَارُون", "minfārūn", "çok kaçanlar", "orta", ""],
-      [372, "مِنْفَارِين", "minfārīn", "çok kaçanlar", "orta", ""],
-      [373, "مِنْفَارَات", "minfārāt", "çok kaçanlar (dişi)", "orta", ""],
-      [374, "مِنْفِير", "minfīr", "çok kaçan", "orta", ""],
-      [375, "مِنْفِيرَة", "minfīra", "çok kaçan (dişi)", "orta", ""],
-      [376, "مِنْفِيرَان", "minfīrān", "iki çok kaçan", "orta", ""],
-      [377, "مِنْفِيرَتَان", "minfīratān", "iki çok kaçan (dişi)", "orta", ""],
-      [378, "مِنْفِيرُون", "minfīrūn", "çok kaçanlar", "orta", ""],
-      [379, "مِنْفِيرِين", "minfīrīn", "çok kaçanlar", "orta", ""],
-      [380, "مِنْفِيرَات", "minfīrāt", "çok kaçanlar (dişi)", "orta", ""],
-      [381, "نَفِير", "nafīr", "çok kaçan", "orta", "Vikisözlük: trumpet, horn"],
-      [382, "نَفِيرَة", "nafīra", "çok kaçan (dişi)", "orta", ""],
-      [383, "نَفِيرَان", "nafīrān", "iki çok kaçan", "orta", ""],
-      [384, "نَفِيرَتَان", "nafīratān", "iki çok kaçan (dişi)", "orta", ""],
+      [345, "نَفُورَات", "nafūrāt", "çok kaçanlar (müennes)", "orta", ""],
+      [346, "نَفُّور", "naffūr", "pek çok kaçan", "orta", ""],
+      [347, "نَفُّورَة", "naffūra", "pek çok kaçan (müennes)", "orta", ""],
+      [348, "نَفُّورَان", "naffūrān", "pek çok kaçan (iki)", "orta", ""],
+      [349, "نَفُّورَتَان", "naffūratān", "pek çok kaçan (iki, müennes)", "orta", ""],
+      [350, "نَفُّورُون", "naffūrūn", "pek çok kaçanlar", "orta", ""],
+      [351, "نَفُّورِين", "naffūrīn", "pek çok kaçanlar", "orta", ""],
+      [352, "نَفُّورَات", "naffūrāt", "pek çok kaçanlar (müennes)", "orta", ""],
+      [353, "نِفِّير", "niffīr", "kaçmada aşırı giden", "orta", ""],
+      [354, "نِفِّيرَة", "niffīra", "kaçmada aşırı giden (müennes)", "orta", ""],
+      [355, "نِفِّيرَان", "niffīrān", "kaçmada aşırı giden (iki)", "orta", ""],
+      [356, "نِفِّيرَتَان", "niffīratān", "kaçmada aşırı giden (iki, müennes)", "orta", ""],
+      [357, "نِفِّيرُون", "niffīrūn", "kaçmada aşırı gidenler", "orta", ""],
+      [358, "نِفِّيرِين", "niffīrīn", "kaçmada aşırı gidenler", "orta", ""],
+      [359, "نِفِّيرَات", "niffīrāt", "kaçmada aşırı gidenler (müennes)", "orta", ""],
+      [360, "نُفَّار", "nuffār", "son derece kaçan", "orta", ""],
+      [361, "نُفَّارَة", "nuffāra", "son derece kaçan (müennes)", "orta", ""],
+      [362, "نُفَّارَان", "nuffārān", "son derece kaçan (iki)", "orta", ""],
+      [363, "نُفَّارَتَان", "nuffāratān", "son derece kaçan (iki, müennes)", "orta", ""],
+      [364, "نُفَّارُون", "nuffārūn", "son derece kaçanlar", "orta", ""],
+      [365, "نُفَّارِين", "nuffārīn", "son derece kaçanlar", "orta", ""],
+      [366, "نُفَّارَات", "nuffārāt", "son derece kaçanlar (müennes)", "orta", ""],
+      [367, "مِنْفَار", "minfār", "kaçmayı âdet edinmiş", "orta", ""],
+      [368, "مِنْفَارَة", "minfāra", "kaçmayı âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِنْفَارَان", "minfārān", "kaçmayı âdet edinmiş (iki)", "orta", ""],
+      [370, "مِنْفَارَتَان", "minfāratān", "kaçmayı âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِنْفَارُون", "minfārūn", "kaçmayı âdet edinmişler", "orta", ""],
+      [372, "مِنْفَارِين", "minfārīn", "kaçmayı âdet edinmişler", "orta", ""],
+      [373, "مِنْفَارَات", "minfārāt", "kaçmayı âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِنْفِير", "minfīr", "kaçmaya düşkün", "orta", ""],
+      [375, "مِنْفِيرَة", "minfīra", "kaçmaya düşkün (müennes)", "orta", ""],
+      [376, "مِنْفِيرَان", "minfīrān", "kaçmaya düşkün (iki)", "orta", ""],
+      [377, "مِنْفِيرَتَان", "minfīratān", "kaçmaya düşkün (iki, müennes)", "orta", ""],
+      [378, "مِنْفِيرُون", "minfīrūn", "kaçmaya düşkünler", "orta", ""],
+      [379, "مِنْفِيرِين", "minfīrīn", "kaçmaya düşkünler", "orta", ""],
+      [380, "مِنْفِيرَات", "minfīrāt", "kaçmaya düşkünler (müennes)", "orta", ""],
+      [381, "نَفِير", "nafīr", "nefir, kafile", "kuran", "Vikisözlük: trumpet, horn"],
+      [382, "نَفِيرَة", "nafīra", "çok kaçan (müennes)", "orta", ""],
+      [383, "نَفِيرَان", "nafīrān", "çok kaçan (iki)", "orta", ""],
+      [384, "نَفِيرَتَان", "nafīratān", "çok kaçan (iki, müennes)", "orta", ""],
       [385, "نَفِيرُون", "nafīrūn", "çok kaçanlar", "orta", ""],
       [386, "نَفِيرِين", "nafīrīn", "çok kaçanlar", "orta", ""],
-      [387, "نَفِيرَات", "nafīrāt", "çok kaçanlar (dişi)", "orta", ""],
+      [387, "نَفِيرَات", "nafīrāt", "çok kaçanlar (müennes)", "orta", ""],
       [388, "نَفَّر", "naffar", "çok kaçan", "orta", ""],
-      [389, "نَفَّرَة", "naffara", "çok kaçan (dişi)", "orta", ""],
-      [390, "نَفَّرَان", "naffarān", "iki çok kaçan", "orta", ""],
-      [391, "نَفَّرَتَان", "naffaratān", "iki çok kaçan (dişi)", "orta", ""],
+      [389, "نَفَّرَة", "naffara", "çok kaçan (müennes)", "orta", ""],
+      [390, "نَفَّرَان", "naffarān", "çok kaçan (iki)", "orta", ""],
+      [391, "نَفَّرَتَان", "naffaratān", "çok kaçan (iki, müennes)", "orta", ""],
       [392, "نَفَّرُون", "naffarūn", "çok kaçanlar", "orta", ""],
       [393, "نَفَّرِين", "naffarīn", "çok kaçanlar", "orta", ""],
-      [394, "نَفَّرَات", "naffarāt", "çok kaçanlar (dişi)", "orta", ""]
+      [394, "نَفَّرَات", "naffarāt", "çok kaçanlar (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "نَفْرِيّ", "nafriyy", "kaçmaya ilgili", "orta", ""],
-      [397, "نَفَرِيّ", "nafariyy", "kaçmaya ilgili", "orta", ""],
-      [399, "نِفْرِيّ", "nifriyy", "kaçmaya ilgili", "orta", ""],
-      [401, "نُفْرِيّ", "nufriyy", "kaçmaya ilgili", "orta", ""],
-      [403, "نِفَارِيّ", "nifāriyy", "kaçmaya ilgili", "orta", ""],
-      [405, "نَافِرِيّ", "nāfiriyy", "kaçmaya ilgili", "orta", ""],
-      [407, "مَنْفُورِيّ", "manfūriyy", "kaçmaya ilgili", "orta", ""],
-      [409, "نَفِيرِيّ", "nafīriyy", "kaçmaya ilgili", "orta", ""],
-      [411, "مَنْفَرِيّ", "manfariyy", "kaçmaya ilgili", "orta", ""],
-      [413, "تَنْفِيرِيّ", "tanfīriyy", "kaçmaya ilgili", "orta", ""],
-      [415, "تَنَافُرِيّ", "tanāfuriyy", "kaçmaya ilgili", "orta", ""],
-      [417, "إِنْفَارِيّ", "ʾinfāriyy", "kaçmaya ilgili", "orta", ""],
-      [419, "اِنْتِفَارِيّ", "intifāriyy", "kaçmaya ilgili", "orta", ""]
+      [395, "نَفْرِيّ", "nafriyy", "kaçma ile ilgili", "orta", ""],
+      [397, "نَفَرِيّ", "nafariyy", "kaçma ile ilgili", "orta", ""],
+      [399, "نِفْرِيّ", "nifriyy", "kaçma ile ilgili", "orta", ""],
+      [401, "نُفْرِيّ", "nufriyy", "kaçma ile ilgili", "orta", ""],
+      [403, "نِفَارِيّ", "nifāriyy", "kaçma ile ilgili", "orta", ""],
+      [405, "نَافِرِيّ", "nāfiriyy", "kaçma ile ilgili", "orta", ""],
+      [407, "مَنْفُورِيّ", "manfūriyy", "kaçma ile ilgili", "orta", ""],
+      [409, "نَفِيرِيّ", "nafīriyy", "kaçma ile ilgili", "orta", ""],
+      [411, "مَنْفَرِيّ", "manfariyy", "kaçma ile ilgili", "orta", ""],
+      [413, "تَنْفِيرِيّ", "tanfīriyy", "kaçma ile ilgili", "orta", ""],
+      [415, "تَنَافُرِيّ", "tanāfuriyy", "kaçma ile ilgili", "orta", ""],
+      [417, "إِنْفَارِيّ", "ʾinfāriyy", "kaçma ile ilgili", "orta", ""],
+      [419, "اِنْتِفَارِيّ", "intifāriyy", "kaçma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "نَفْرِيَّة", "nafriyya", "kaçanlık", "orta", ""],
@@ -561,7 +575,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "نَفَار", "nafār", "kaçma", "orta", ""],
-      [422, "نُفُور", "nufūr", "kaçma", "orta", "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"],
+      [422, "نُفُور", "nufūr", "nefret, kaçma", "kuran", "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"],
       [423, "نِفَار", "nifār", "kaçma", "orta", "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"],
       [424, "نُفْر", "nufr", "kaçma", "orta", ""],
       [425, "نَفَارَة", "nafāra", "kaçma", "orta", ""],
@@ -571,116 +585,102 @@
       [429, "نِفْر", "nifr", "kaçma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "نَافُور", "nāfūr", "kaçanlar (topluluk adı)", "orta", ""],
-      [432, "نَفَرَة", "nafara", "kaçanlar (topluluk adı)", "orta", ""],
-      [433, "نُفَرَة", "nufara", "kaçanlar (topluluk adı)", "orta", ""],
-      [434, "أُنْفُورَة", "ʾunfūra", "kaçanlar (topluluk adı)", "orta", ""],
-      [435, "نَوْفَر", "nawfar", "kaçanlar (topluluk adı)", "orta", ""],
-      [437, "نَيْفَر", "nayfar", "kaçanlar (topluluk adı)", "orta", ""],
-      [439, "نَفْر", "nafr", "kaçanlar (topluluk adı)", "orta", ""],
+      [430, "نَافُور", "nāfūr", "kaçma türünden şey", "orta", ""],
+      [432, "نَفَرَة", "nafara", "kaçma türünden şey", "orta", ""],
+      [433, "نُفَرَة", "nufara", "kaçma türünden şey", "orta", ""],
+      [434, "أُنْفُورَة", "ʾunfūra", "kaçma türünden şey", "orta", ""],
+      [435, "نَوْفَر", "nawfar", "kaçma türünden şey", "orta", ""],
+      [437, "نَيْفَر", "nayfar", "kaçma türünden şey", "orta", ""],
+      [439, "نَفْر", "nafr", "kaçma türünden şey", "orta", ""],
       [
         441,
         "نَفَر",
         "nafar",
-        "kaçanlar (topluluk adı)",
+        "kaçma türünden şey",
         "orta",
         "Vikisözlük: masdar (bâb I): to flee, to run away, to turn tail, to scamper, to abscond, to get awa"
       ],
-      [443, "نِفْر", "nifr", "kaçanlar (topluluk adı)", "orta", ""],
-      [445, "نُفْر", "nufr", "kaçanlar (topluluk adı)", "orta", ""],
-      [447, "نَفِير", "nafīr", "kaçanlar (topluluk adı)", "orta", "Vikisözlük: trumpet, horn"],
-      [449, "نِفَر", "nifar", "kaçanlar (topluluk adı)", "orta", ""],
-      [451, "نُفُر", "nufur", "kaçanlar (topluluk adı)", "orta", ""],
-      [453, "نَفَار", "nafār", "kaçanlar (topluluk adı)", "orta", ""]
+      [443, "نِفْر", "nifr", "kaçma türünden şey", "orta", ""],
+      [445, "نُفْر", "nufr", "kaçma türünden şey", "orta", ""],
+      [447, "نَفِير", "nafīr", "nefir, kafile", "kuran", "Vikisözlük: trumpet, horn"],
+      [449, "نِفَر", "nifar", "kaçma türünden şey", "orta", ""],
+      [451, "نُفُر", "nufur", "kaçma türünden şey", "orta", ""],
+      [453, "نَفَار", "nafār", "kaçma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
       [
         431,
         "نَافُورَة",
         "nāfūra",
-        "bir tane kaçanlar (topluluk adı)",
+        "kaçma türünden bir tane",
         "orta",
         "Vikisözlük: fountain (artificial water feature)"
       ],
-      [436, "نَوْفَرَة", "nawfara", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [438, "نَيْفَرَة", "nayfara", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [440, "نَفْرَة", "nafra", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [442, "نَفَرَة", "nafara", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [444, "نِفْرَة", "nifra", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [446, "نُفْرَة", "nufra", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [448, "نَفِيرَة", "nafīra", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [450, "نِفَرَة", "nifara", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [452, "نُفُرَة", "nufura", "bir tane kaçanlar (topluluk adı)", "orta", ""],
-      [454, "نَفَارَة", "nafāra", "bir tane kaçanlar (topluluk adı)", "orta", ""]
+      [436, "نَوْفَرَة", "nawfara", "kaçma türünden bir tane", "orta", ""],
+      [438, "نَيْفَرَة", "nayfara", "kaçma türünden bir tane", "orta", ""],
+      [440, "نَفْرَة", "nafra", "kaçma türünden bir tane", "orta", ""],
+      [442, "نَفَرَة", "nafara", "kaçma türünden bir tane", "orta", ""],
+      [444, "نِفْرَة", "nifra", "kaçma türünden bir tane", "orta", ""],
+      [446, "نُفْرَة", "nufra", "kaçma türünden bir tane", "orta", ""],
+      [448, "نَفِيرَة", "nafīra", "kaçma türünden bir tane", "orta", ""],
+      [450, "نِفَرَة", "nifara", "kaçma türünden bir tane", "orta", ""],
+      [452, "نُفُرَة", "nufura", "kaçma türünden bir tane", "orta", ""],
+      [454, "نَفَارَة", "nafāra", "kaçma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَنْفَار", "ʾanfār", "kaçanlar (kırık çoğul)", "orta", ""],
-      [456, "أَنْفِرَة", "ʾanfira", "kaçanlar (kırık çoğul)", "orta", ""],
-      [457, "أَنَافِر", "ʾanāfir", "kaçanlar (kırık çoğul)", "orta", ""],
-      [458, "أَنَافِير", "ʾanāfīr", "kaçanlar (kırık çoğul)", "orta", ""],
-      [
-        459,
-        "نُفُور",
-        "nufūr",
-        "kaçanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"
-      ],
-      [460, "نُفُر", "nufur", "kaçanlar (kırık çoğul)", "orta", ""],
-      [
-        461,
-        "نِفَار",
-        "nifār",
-        "kaçanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"
-      ],
-      [462, "نِفَر", "nifar", "kaçanlar (kırık çoğul)", "orta", ""],
-      [463, "نِفَرَة", "nifara", "kaçanlar (kırık çoğul)", "orta", ""],
-      [464, "نُفَر", "nufar", "kaçanlar (kırık çoğul)", "orta", ""],
-      [465, "نُفَراء", "nufarāʾ", "kaçanlar (kırık çoğul)", "orta", ""],
-      [466, "نَفَرَة", "nafara", "kaçanlar (kırık çoğul)", "orta", ""],
-      [467, "نُفَّار", "nuffār", "kaçanlar (kırık çoğul)", "orta", ""],
-      [468, "نَفَار", "nafār", "kaçanlar (kırık çoğul)", "orta", ""],
+      [455, "أَنْفَار", "ʾanfār", "kaçmalar", "orta", ""],
+      [456, "أَنْفِرَة", "ʾanfira", "kaçmalar", "orta", ""],
+      [457, "أَنَافِر", "ʾanāfir", "kaçmalar", "orta", ""],
+      [458, "أَنَافِير", "ʾanāfīr", "kaçmalar", "orta", ""],
+      [459, "نُفُور", "nufūr", "nefret, kaçma", "kuran", "Vikisözlük: verbal noun of نَفَرَ (nafara) (form I)"],
+      [460, "نُفُر", "nufur", "kaçmalar", "orta", ""],
+      [461, "نِفَار", "nifār", "kaçmalar", "orta", "Vikisözlük: masdar (bâb I): to shy, to bolt, to stampede"],
+      [462, "نِفَر", "nifar", "kaçmalar", "orta", ""],
+      [463, "نِفَرَة", "nifara", "kaçmalar", "orta", ""],
+      [464, "نُفَر", "nufar", "kaçmalar", "orta", ""],
+      [465, "نُفَراء", "nufarāʾ", "kaçmalar", "orta", ""],
+      [466, "نَفَرَة", "nafara", "kaçmalar", "orta", ""],
+      [467, "نُفَّار", "nuffār", "kaçmalar", "orta", ""],
+      [468, "نَفَار", "nafār", "kaçmalar", "orta", ""],
       [
         469,
         "نَفَر",
         "nafar",
-        "kaçanlar (kırık çoğul)",
+        "kaçmalar",
         "orta",
         "Vikisözlük: masdar (bâb I): to flee, to run away, to turn tail, to scamper, to abscond, to get awa"
       ],
-      [470, "مَنَافِر", "manāfir", "kaçanlar (kırık çoğul)", "orta", ""],
-      [471, "مَنَافِير", "manāfīr", "kaçanlar (kırık çoğul)", "orta", ""],
-      [472, "نَوَافِر", "nawāfir", "kaçanlar (kırık çoğul)", "orta", ""],
-      [473, "أَنْفُر", "ʾanfur", "kaçanlar (kırık çoğul)", "orta", ""],
-      [474, "نُفَّر", "nuffar", "kaçanlar (kırık çoğul)", "orta", ""],
-      [475, "نَفَائِر", "nafāʾir", "kaçanlar (kırık çoğul)", "orta", ""],
-      [476, "نُفَيْر", "nufayr", "kaçanlar (kırık çoğul)", "orta", ""]
+      [470, "مَنَافِر", "manāfir", "kaçmalar", "orta", ""],
+      [471, "مَنَافِير", "manāfīr", "kaçmalar", "orta", ""],
+      [472, "نَوَافِر", "nawāfir", "kaçmalar", "orta", ""],
+      [473, "أَنْفُر", "ʾanfur", "kaçmalar", "orta", ""],
+      [474, "نُفَّر", "nuffar", "kaçmalar", "orta", ""],
+      [475, "نَفَائِر", "nafāʾir", "kaçmalar", "orta", ""],
+      [476, "نُفَيْر", "nufayr", "kaçmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَنْفَارَات", "ʾanfārāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [478, "أَنْفِرَات", "ʾanfirāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [479, "أَنَافِرَات", "ʾanāfirāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [480, "أَنَافِيرَات", "ʾanāfīrāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [481, "نُفُورَات", "nufūrāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [482, "نُفُرَات", "nufurāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [483, "نِفَارَات", "nifārāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [484, "نِفَرَات", "nifarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [485, "نِفَرَات", "nifarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [486, "نُفَرَات", "nufarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [487, "نُفَراآت", "nufarāʾāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [488, "نَفَرَات", "nafarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [489, "نُفَّارَات", "nuffārāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [490, "نَفَارَات", "nafārāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [491, "نَفَرَات", "nafarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [492, "مَنَافِرَات", "manāfirāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [493, "مَنَافِيرَات", "manāfīrāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [494, "نَوَافِرَات", "nawāfirāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [495, "أَنْفُرَات", "ʾanfurāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [496, "نُفَّرَات", "nuffarāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [497, "نَفَائِرَات", "nafāʾirāt", "kaçanlar (çoğulun çoğulu)", "orta", ""],
-      [498, "نُفَيْرَات", "nufayrāt", "kaçanlar (çoğulun çoğulu)", "orta", ""]
+      [477, "أَنْفَارَات", "ʾanfārāt", "kaçmalar topluluğu", "orta", ""],
+      [478, "أَنْفِرَات", "ʾanfirāt", "kaçmalar topluluğu", "orta", ""],
+      [479, "أَنَافِرَات", "ʾanāfirāt", "kaçmalar topluluğu", "orta", ""],
+      [480, "أَنَافِيرَات", "ʾanāfīrāt", "kaçmalar topluluğu", "orta", ""],
+      [481, "نُفُورَات", "nufūrāt", "kaçmalar topluluğu", "orta", ""],
+      [482, "نُفُرَات", "nufurāt", "kaçmalar topluluğu", "orta", ""],
+      [483, "نِفَارَات", "nifārāt", "kaçmalar topluluğu", "orta", ""],
+      [484, "نِفَرَات", "nifarāt", "kaçmalar topluluğu", "orta", ""],
+      [485, "نِفَرَات", "nifarāt", "kaçmalar topluluğu", "orta", ""],
+      [486, "نُفَرَات", "nufarāt", "kaçmalar topluluğu", "orta", ""],
+      [487, "نُفَراآت", "nufarāʾāt", "kaçmalar topluluğu", "orta", ""],
+      [488, "نَفَرَات", "nafarāt", "kaçmalar topluluğu", "orta", ""],
+      [489, "نُفَّارَات", "nuffārāt", "kaçmalar topluluğu", "orta", ""],
+      [490, "نَفَارَات", "nafārāt", "kaçmalar topluluğu", "orta", ""],
+      [491, "نَفَرَات", "nafarāt", "kaçmalar topluluğu", "orta", ""],
+      [492, "مَنَافِرَات", "manāfirāt", "kaçmalar topluluğu", "orta", ""],
+      [493, "مَنَافِيرَات", "manāfīrāt", "kaçmalar topluluğu", "orta", ""],
+      [494, "نَوَافِرَات", "nawāfirāt", "kaçmalar topluluğu", "orta", ""],
+      [495, "أَنْفُرَات", "ʾanfurāt", "kaçmalar topluluğu", "orta", ""],
+      [496, "نُفَّرَات", "nuffarāt", "kaçmalar topluluğu", "orta", ""],
+      [497, "نَفَائِرَات", "nafāʾirāt", "kaçmalar topluluğu", "orta", ""],
+      [498, "نُفَيْرَات", "nufayrāt", "kaçmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

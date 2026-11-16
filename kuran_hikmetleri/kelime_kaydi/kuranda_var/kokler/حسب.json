@@ -9,21 +9,21 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "حَسْب", "ḥasb", "sayma", "orta", "Vikisözlük: masdar (bâb I): to calculate, to compute"],
-      [1, "حِسْب", "ḥisb", "sayma", "orta", ""],
+      [1, "حِسْب", "ḥisb", "sayılan şey", "orta", ""],
       [2, "حُسْب", "ḥusb", "sayma", "orta", ""],
-      [3, "حَسَب", "ḥasab", "sayma", "orta", ""],
+      [3, "حَسَب", "ḥasab", "sayma hâli", "orta", ""],
       [4, "حِسَب", "ḥisab", "sayma", "orta", ""],
       [5, "حُسُب", "ḥusub", "sayma", "orta", ""],
       [6, "حُسُوب", "ḥusūb", "sayma", "orta", ""],
-      [7, "حِسَاب", "ḥisāb", "sayma", "orta", "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"],
-      [8, "حُسَاب", "ḥusāb", "sayma", "orta", ""],
+      [7, "حِسَاب", "ḥisāb", "saymadan kaçınma", "orta", "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"],
+      [8, "حُسَاب", "ḥusāb", "sayma illeti, sayma sesi", "orta", ""],
       [9, "حَسَاب", "ḥasāb", "sayma", "orta", ""],
-      [10, "حَسَابَة", "ḥasāba", "sayma", "orta", "Vikisözlük: verbal noun of حَسُبَ (ḥasuba) (form I)"],
-      [11, "حُسُوبَة", "ḥusūba", "sayma", "orta", ""],
-      [12, "حِسَابَة", "ḥisāba", "sayma", "orta", ""],
-      [13, "حَسِيب", "ḥasīb", "sayma", "orta", ""],
+      [10, "حَسَابَة", "ḥasāba", "sayma vasfı", "orta", "Vikisözlük: verbal noun of حَسُبَ (ḥasuba) (form I)"],
+      [11, "حُسُوبَة", "ḥusūba", "sayma vasfı", "orta", ""],
+      [12, "حِسَابَة", "ḥisāba", "sayma vazifesi, sayma işi", "orta", ""],
+      [13, "حَسِيب", "ḥasīb", "hesap soran", "kuran", "Kur'ân"],
       [14, "حَسُوب", "ḥasūb", "sayma", "orta", ""],
-      [15, "حَسَبَان", "ḥasabān", "sayma", "orta", ""],
+      [15, "حَسَبَان", "ḥasabān", "sayma çalkantısı, coşarak sayma", "orta", ""],
       [16, "حُسْبَان", "ḥusbān", "sayma", "orta", "Vikisözlük: masdar (bâb I): to calculate, to compute"],
       [17, "حِسْبَان", "ḥisbān", "sayma", "orta", ""],
       [18, "حَسْبَى", "ḥasbā", "sayma", "orta", ""],
@@ -32,150 +32,185 @@
       [21, "حَسَبَة", "ḥasaba", "sayma", "orta", ""],
       [22, "حِسَبَة", "ḥisaba", "sayma", "orta", ""],
       [23, "حَسْبُوبَة", "ḥasbūba", "sayma", "orta", ""],
-      [24, "تُحْسُوب", "tuḥsūb", "sayma", "orta", ""],
-      [25, "تَحْسِبَة", "taḥsiba", "sayma", "orta", ""],
-      [26, "تَحْسَبَة", "taḥsaba", "sayma", "orta", ""],
-      [27, "مَحْسُبَة", "maḥsuba", "sayma", "orta", ""],
-      [28, "مَحْسِبَة", "maḥsiba", "sayma", "orta", "Vikisözlük: verbal noun of حَسِبَ (ḥasiba) (form I)"]
+      [24, "تُحْسُوب", "tuḥsūb", "tekrar tekrar sayma", "orta", ""],
+      [25, "تَحْسِبَة", "taḥsiba", "tekrar tekrar sayma", "orta", ""],
+      [26, "تَحْسَبَة", "taḥsaba", "tekrar tekrar sayma", "orta", ""],
+      [27, "مَحْسُبَة", "maḥsuba", "sayma sebebi", "orta", ""],
+      [28, "مَحْسِبَة", "maḥsiba", "sayma sebebi", "orta", "Vikisözlük: verbal noun of حَسِبَ (ḥasiba) (form I)"]
     ],
     "masdar · bâb II": [
-      [29, "تَحْسِيب", "taḥsīb", "sayma", "orta", ""],
-      [30, "تَحْسِبَة", "taḥsiba", "sayma", "orta", ""],
-      [31, "حِسِّاب", "ḥissāb", "sayma", "orta", ""]
+      [29, "تَحْسِيب", "taḥsīb", "çokça sayma", "orta", ""],
+      [30, "تَحْسِبَة", "taḥsiba", "çokça sayma", "orta", ""],
+      [31, "حِسِّاب", "ḥissāb", "çokça sayma", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَحْسِيبَة", "taḥsība", "bir kere sayma", "orta", ""],
-      [33, "حِسِّابَة", "ḥissāba", "bir kere sayma", "orta", ""]
+      [32, "تَحْسِيبَة", "taḥsība", "bir kere çokça sayma", "orta", ""],
+      [33, "حِسِّابَة", "ḥissāba", "bir kere çokça sayma", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُحَسِّب", "muḥassib", "sayan", "orta", ""],
-      [35, "مُحَسِّبَة", "muḥassiba", "sayan (dişi)", "orta", ""],
-      [36, "مُحَسِّبَان", "muḥassibān", "iki sayan", "orta", ""],
-      [37, "مُحَسِّبَتَان", "muḥassibatān", "iki sayan (dişi)", "orta", ""],
-      [38, "مُحَسِّبُون", "muḥassibūn", "sayanlar", "orta", ""],
-      [39, "مُحَسِّبِين", "muḥassibīn", "sayanlar", "orta", ""],
-      [40, "مُحَسِّبَات", "muḥassibāt", "sayanlar (dişi)", "orta", ""]
+      [34, "مُحَسِّب", "muḥassib", "çokça sayan", "orta", ""],
+      [35, "مُحَسِّبَة", "muḥassiba", "çokça sayan (müennes)", "orta", ""],
+      [36, "مُحَسِّبَان", "muḥassibān", "çokça sayan (iki)", "orta", ""],
+      [37, "مُحَسِّبَتَان", "muḥassibatān", "çokça sayan (iki, müennes)", "orta", ""],
+      [38, "مُحَسِّبُون", "muḥassibūn", "çokça sayanlar", "orta", ""],
+      [39, "مُحَسِّبِين", "muḥassibīn", "çokça sayanlar", "orta", ""],
+      [40, "مُحَسِّبَات", "muḥassibāt", "çokça sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُحَسَّب", "muḥassab", "sayılmış", "orta", ""],
-      [42, "مُحَسَّبَة", "muḥassaba", "sayılmış (dişi)", "orta", ""],
-      [43, "مُحَسَّبَان", "muḥassabān", "iki sayılmış", "orta", ""],
-      [44, "مُحَسَّبَتَان", "muḥassabatān", "iki sayılmış (dişi)", "orta", ""],
-      [45, "مُحَسَّبُون", "muḥassabūn", "sayılmışlar", "orta", ""],
-      [46, "مُحَسَّبِين", "muḥassabīn", "sayılmışlar", "orta", ""],
-      [47, "مُحَسَّبَات", "muḥassabāt", "sayılmışlar (dişi)", "orta", ""]
+      [41, "مُحَسَّب", "muḥassab", "çokça sayılan", "orta", ""],
+      [42, "مُحَسَّبَة", "muḥassaba", "çokça sayılan (müennes)", "orta", ""],
+      [43, "مُحَسَّبَان", "muḥassabān", "çokça sayılan (iki)", "orta", ""],
+      [44, "مُحَسَّبَتَان", "muḥassabatān", "çokça sayılan (iki, müennes)", "orta", ""],
+      [45, "مُحَسَّبُون", "muḥassabūn", "çokça sayılanlar", "orta", ""],
+      [46, "مُحَسَّبِين", "muḥassabīn", "çokça sayılanlar", "orta", ""],
+      [47, "مُحَسَّبَات", "muḥassabāt", "çokça sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُحَسَّب", "muḥassab", "sayma (yeri/zamanı)", "orta", ""]
+      [48, "مُحَسَّب", "muḥassab", "çokça sayma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُحَاسَبَة", "muḥāsaba", "sayışma", "orta", "Vikisözlük: verbal noun of حَاسَبَ (ḥāsaba)."],
-      [50, "حِسَاب", "ḥisāb", "sayışma", "orta", "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"]
+      [
+        49,
+        "مُحَاسَبَة",
+        "muḥāsaba",
+        "biriyle karşılıklı sayma",
+        "orta",
+        "Vikisözlük: verbal noun of حَاسَبَ (ḥāsaba)."
+      ],
+      [
+        50,
+        "حِسَاب",
+        "ḥisāb",
+        "biriyle karşılıklı sayma",
+        "orta",
+        "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"
+      ]
     ],
     "ism-i merre · bâb III": [
-      [51, "حِسَابَة", "ḥisāba", "bir kere sayışma", "orta", ""]
+      [51, "حِسَابَة", "ḥisāba", "bir kere biriyle karşılıklı sayma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُحَاسِب", "muḥāsib", "sayışan", "orta", "Vikisözlük: accountant, bookkeeper"],
-      [53, "مُحَاسِبَة", "muḥāsiba", "sayışan (dişi)", "orta", ""],
-      [54, "مُحَاسِبَان", "muḥāsibān", "iki sayışan", "orta", ""],
-      [55, "مُحَاسِبَتَان", "muḥāsibatān", "iki sayışan (dişi)", "orta", ""],
-      [56, "مُحَاسِبُون", "muḥāsibūn", "sayışanlar", "orta", ""],
-      [57, "مُحَاسِبِين", "muḥāsibīn", "sayışanlar", "orta", ""],
-      [58, "مُحَاسِبَات", "muḥāsibāt", "sayışanlar (dişi)", "orta", ""]
+      [52, "مُحَاسِب", "muḥāsib", "biriyle karşılıklı sayan", "orta", "Vikisözlük: accountant, bookkeeper"],
+      [53, "مُحَاسِبَة", "muḥāsiba", "biriyle karşılıklı sayan (müennes)", "orta", ""],
+      [54, "مُحَاسِبَان", "muḥāsibān", "biriyle karşılıklı sayan (iki)", "orta", ""],
+      [55, "مُحَاسِبَتَان", "muḥāsibatān", "biriyle karşılıklı sayan (iki, müennes)", "orta", ""],
+      [56, "مُحَاسِبُون", "muḥāsibūn", "biriyle karşılıklı sayanlar", "orta", ""],
+      [57, "مُحَاسِبِين", "muḥāsibīn", "biriyle karşılıklı sayanlar", "orta", ""],
+      [58, "مُحَاسِبَات", "muḥāsibāt", "biriyle karşılıklı sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُحَاسَب", "muḥāsab", "sayışmış", "orta", ""],
-      [60, "مُحَاسَبَة", "muḥāsaba", "sayışmış (dişi)", "orta", "Vikisözlük: verbal noun of حَاسَبَ (ḥāsaba)."],
-      [61, "مُحَاسَبَان", "muḥāsabān", "iki sayışmış", "orta", ""],
-      [62, "مُحَاسَبَتَان", "muḥāsabatān", "iki sayışmış (dişi)", "orta", ""],
-      [63, "مُحَاسَبُون", "muḥāsabūn", "sayışmışlar", "orta", ""],
-      [64, "مُحَاسَبِين", "muḥāsabīn", "sayışmışlar", "orta", ""],
-      [65, "مُحَاسَبَات", "muḥāsabāt", "sayışmışlar (dişi)", "orta", ""]
+      [59, "مُحَاسَب", "muḥāsab", "biriyle karşılıklı sayılan", "orta", ""],
+      [
+        60,
+        "مُحَاسَبَة",
+        "muḥāsaba",
+        "biriyle karşılıklı sayılan (müennes)",
+        "orta",
+        "Vikisözlük: verbal noun of حَاسَبَ (ḥāsaba)."
+      ],
+      [61, "مُحَاسَبَان", "muḥāsabān", "biriyle karşılıklı sayılan (iki)", "orta", ""],
+      [62, "مُحَاسَبَتَان", "muḥāsabatān", "biriyle karşılıklı sayılan (iki, müennes)", "orta", ""],
+      [63, "مُحَاسَبُون", "muḥāsabūn", "biriyle karşılıklı sayılanlar", "orta", ""],
+      [64, "مُحَاسَبِين", "muḥāsabīn", "biriyle karşılıklı sayılanlar", "orta", ""],
+      [65, "مُحَاسَبَات", "muḥāsabāt", "biriyle karşılıklı sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُحَاسَب", "muḥāsab", "sayışma (yeri/zamanı)", "orta", ""]
+      [66, "مُحَاسَب", "muḥāsab", "biriyle karşılıklı sayma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِحْسَاب", "ʾiḥsāb", "sayma", "orta", ""]
+      [67, "إِحْسَاب", "ʾiḥsāb", "saydırma", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِحْسَابَة", "ʾiḥsāba", "bir kere sayma", "orta", ""]
+      [68, "إِحْسَابَة", "ʾiḥsāba", "bir kere saydırma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُحْسِب", "muḥsib", "sayan", "orta", ""],
-      [70, "مُحْسِبَة", "muḥsiba", "sayan (dişi)", "orta", ""],
-      [71, "مُحْسِبَان", "muḥsibān", "iki sayan", "orta", ""],
-      [72, "مُحْسِبَتَان", "muḥsibatān", "iki sayan (dişi)", "orta", ""],
-      [73, "مُحْسِبُون", "muḥsibūn", "sayanlar", "orta", ""],
-      [74, "مُحْسِبِين", "muḥsibīn", "sayanlar", "orta", ""],
-      [75, "مُحْسِبَات", "muḥsibāt", "sayanlar (dişi)", "orta", ""]
+      [69, "مُحْسِب", "muḥsib", "saydıran", "orta", ""],
+      [70, "مُحْسِبَة", "muḥsiba", "saydıran (müennes)", "orta", ""],
+      [71, "مُحْسِبَان", "muḥsibān", "saydıran (iki)", "orta", ""],
+      [72, "مُحْسِبَتَان", "muḥsibatān", "saydıran (iki, müennes)", "orta", ""],
+      [73, "مُحْسِبُون", "muḥsibūn", "saydıranlar", "orta", ""],
+      [74, "مُحْسِبِين", "muḥsibīn", "saydıranlar", "orta", ""],
+      [75, "مُحْسِبَات", "muḥsibāt", "saydıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُحْسَب", "muḥsab", "sayılmış", "orta", ""],
-      [77, "مُحْسَبَة", "muḥsaba", "sayılmış (dişi)", "orta", ""],
-      [78, "مُحْسَبَان", "muḥsabān", "iki sayılmış", "orta", ""],
-      [79, "مُحْسَبَتَان", "muḥsabatān", "iki sayılmış (dişi)", "orta", ""],
-      [80, "مُحْسَبُون", "muḥsabūn", "sayılmışlar", "orta", ""],
-      [81, "مُحْسَبِين", "muḥsabīn", "sayılmışlar", "orta", ""],
-      [82, "مُحْسَبَات", "muḥsabāt", "sayılmışlar (dişi)", "orta", ""]
+      [76, "مُحْسَب", "muḥsab", "saydırılan", "orta", ""],
+      [77, "مُحْسَبَة", "muḥsaba", "saydırılan (müennes)", "orta", ""],
+      [78, "مُحْسَبَان", "muḥsabān", "saydırılan (iki)", "orta", ""],
+      [79, "مُحْسَبَتَان", "muḥsabatān", "saydırılan (iki, müennes)", "orta", ""],
+      [80, "مُحْسَبُون", "muḥsabūn", "saydırılanlar", "orta", ""],
+      [81, "مُحْسَبِين", "muḥsabīn", "saydırılanlar", "orta", ""],
+      [82, "مُحْسَبَات", "muḥsabāt", "saydırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُحْسَب", "muḥsab", "sayma (yeri/zamanı)", "orta", ""]
+      [83, "مُحْسَب", "muḥsab", "saydırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَحَسُّب", "taḥassub", "sayınma", "orta", "Vikisözlük: masdar (bâb V): to be careful, to be on guard"]
+      [
+        84,
+        "تَحَسُّب",
+        "taḥassub",
+        "kendini zorlayarak sayma",
+        "orta",
+        "Vikisözlük: masdar (bâb V): to be careful, to be on guard"
+      ]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَحَسُّبَة", "taḥassuba", "bir kere sayınma", "orta", ""]
+      [85, "تَحَسُّبَة", "taḥassuba", "bir kere kendini zorlayarak sayma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَحَسِّب", "mutaḥassib", "sayınan", "orta", ""],
-      [87, "مُتَحَسِّبَة", "mutaḥassiba", "sayınan (dişi)", "orta", ""],
-      [88, "مُتَحَسِّبَان", "mutaḥassibān", "iki sayınan", "orta", ""],
-      [89, "مُتَحَسِّبَتَان", "mutaḥassibatān", "iki sayınan (dişi)", "orta", ""],
-      [90, "مُتَحَسِّبُون", "mutaḥassibūn", "sayınanlar", "orta", ""],
-      [91, "مُتَحَسِّبِين", "mutaḥassibīn", "sayınanlar", "orta", ""],
-      [92, "مُتَحَسِّبَات", "mutaḥassibāt", "sayınanlar (dişi)", "orta", ""]
+      [86, "مُتَحَسِّب", "mutaḥassib", "kendini zorlayarak sayan", "orta", ""],
+      [87, "مُتَحَسِّبَة", "mutaḥassiba", "kendini zorlayarak sayan (müennes)", "orta", ""],
+      [88, "مُتَحَسِّبَان", "mutaḥassibān", "kendini zorlayarak sayan (iki)", "orta", ""],
+      [89, "مُتَحَسِّبَتَان", "mutaḥassibatān", "kendini zorlayarak sayan (iki, müennes)", "orta", ""],
+      [90, "مُتَحَسِّبُون", "mutaḥassibūn", "kendini zorlayarak sayanlar", "orta", ""],
+      [91, "مُتَحَسِّبِين", "mutaḥassibīn", "kendini zorlayarak sayanlar", "orta", ""],
+      [92, "مُتَحَسِّبَات", "mutaḥassibāt", "kendini zorlayarak sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَحَسَّب", "mutaḥassab", "sayınmış", "orta", ""],
-      [94, "مُتَحَسَّبَة", "mutaḥassaba", "sayınmış (dişi)", "orta", ""],
-      [95, "مُتَحَسَّبَان", "mutaḥassabān", "iki sayınmış", "orta", ""],
-      [96, "مُتَحَسَّبَتَان", "mutaḥassabatān", "iki sayınmış (dişi)", "orta", ""],
-      [97, "مُتَحَسَّبُون", "mutaḥassabūn", "sayınmışlar", "orta", ""],
-      [98, "مُتَحَسَّبِين", "mutaḥassabīn", "sayınmışlar", "orta", ""],
-      [99, "مُتَحَسَّبَات", "mutaḥassabāt", "sayınmışlar (dişi)", "orta", ""]
+      [93, "مُتَحَسَّب", "mutaḥassab", "kendini zorlayarak sayılan", "orta", ""],
+      [94, "مُتَحَسَّبَة", "mutaḥassaba", "kendini zorlayarak sayılan (müennes)", "orta", ""],
+      [95, "مُتَحَسَّبَان", "mutaḥassabān", "kendini zorlayarak sayılan (iki)", "orta", ""],
+      [96, "مُتَحَسَّبَتَان", "mutaḥassabatān", "kendini zorlayarak sayılan (iki, müennes)", "orta", ""],
+      [97, "مُتَحَسَّبُون", "mutaḥassabūn", "kendini zorlayarak sayılanlar", "orta", ""],
+      [98, "مُتَحَسَّبِين", "mutaḥassabīn", "kendini zorlayarak sayılanlar", "orta", ""],
+      [99, "مُتَحَسَّبَات", "mutaḥassabāt", "kendini zorlayarak sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَحَسَّب", "mutaḥassab", "sayınma (yeri/zamanı)", "orta", ""]
+      [100, "مُتَحَسَّب", "mutaḥassab", "kendini zorlayarak sayma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَحَاسُب", "taḥāsub", "sayışma", "orta", "Vikisözlük: masdar (bâb VI): to settle a mutual account"]
+      [
+        101,
+        "تَحَاسُب",
+        "taḥāsub",
+        "birbirine sayma",
+        "orta",
+        "Vikisözlük: masdar (bâb VI): to settle a mutual account"
+      ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَحَاسُبَة", "taḥāsuba", "bir kere sayışma", "orta", ""]
+      [102, "تَحَاسُبَة", "taḥāsuba", "bir kere birbirine sayma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَحَاسِب", "mutaḥāsib", "sayışan", "orta", ""],
-      [104, "مُتَحَاسِبَة", "mutaḥāsiba", "sayışan (dişi)", "orta", ""],
-      [105, "مُتَحَاسِبَان", "mutaḥāsibān", "iki sayışan", "orta", ""],
-      [106, "مُتَحَاسِبَتَان", "mutaḥāsibatān", "iki sayışan (dişi)", "orta", ""],
-      [107, "مُتَحَاسِبُون", "mutaḥāsibūn", "sayışanlar", "orta", ""],
-      [108, "مُتَحَاسِبِين", "mutaḥāsibīn", "sayışanlar", "orta", ""],
-      [109, "مُتَحَاسِبَات", "mutaḥāsibāt", "sayışanlar (dişi)", "orta", ""]
+      [103, "مُتَحَاسِب", "mutaḥāsib", "birbirine sayan", "orta", ""],
+      [104, "مُتَحَاسِبَة", "mutaḥāsiba", "birbirine sayan (müennes)", "orta", ""],
+      [105, "مُتَحَاسِبَان", "mutaḥāsibān", "birbirine sayan (iki)", "orta", ""],
+      [106, "مُتَحَاسِبَتَان", "mutaḥāsibatān", "birbirine sayan (iki, müennes)", "orta", ""],
+      [107, "مُتَحَاسِبُون", "mutaḥāsibūn", "birbirine sayanlar", "orta", ""],
+      [108, "مُتَحَاسِبِين", "mutaḥāsibīn", "birbirine sayanlar", "orta", ""],
+      [109, "مُتَحَاسِبَات", "mutaḥāsibāt", "birbirine sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَحَاسَب", "mutaḥāsab", "sayışmış", "orta", ""],
-      [111, "مُتَحَاسَبَة", "mutaḥāsaba", "sayışmış (dişi)", "orta", ""],
-      [112, "مُتَحَاسَبَان", "mutaḥāsabān", "iki sayışmış", "orta", ""],
-      [113, "مُتَحَاسَبَتَان", "mutaḥāsabatān", "iki sayışmış (dişi)", "orta", ""],
-      [114, "مُتَحَاسَبُون", "mutaḥāsabūn", "sayışmışlar", "orta", ""],
-      [115, "مُتَحَاسَبِين", "mutaḥāsabīn", "sayışmışlar", "orta", ""],
-      [116, "مُتَحَاسَبَات", "mutaḥāsabāt", "sayışmışlar (dişi)", "orta", ""]
+      [110, "مُتَحَاسَب", "mutaḥāsab", "birbirine sayılan", "orta", ""],
+      [111, "مُتَحَاسَبَة", "mutaḥāsaba", "birbirine sayılan (müennes)", "orta", ""],
+      [112, "مُتَحَاسَبَان", "mutaḥāsabān", "birbirine sayılan (iki)", "orta", ""],
+      [113, "مُتَحَاسَبَتَان", "mutaḥāsabatān", "birbirine sayılan (iki, müennes)", "orta", ""],
+      [114, "مُتَحَاسَبُون", "mutaḥāsabūn", "birbirine sayılanlar", "orta", ""],
+      [115, "مُتَحَاسَبِين", "mutaḥāsabīn", "birbirine sayılanlar", "orta", ""],
+      [116, "مُتَحَاسَبَات", "mutaḥāsabāt", "birbirine sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَحَاسَب", "mutaḥāsab", "sayışma (yeri/zamanı)", "orta", ""]
+      [117, "مُتَحَاسَب", "mutaḥāsab", "birbirine sayma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْحِسَاب", "inḥisāb", "sayılma", "orta", ""]
@@ -185,102 +220,109 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْحَسِب", "munḥasib", "sayılan", "orta", ""],
-      [121, "مُنْحَسِبَة", "munḥasiba", "sayılan (dişi)", "orta", ""],
-      [122, "مُنْحَسِبَان", "munḥasibān", "iki sayılan", "orta", ""],
-      [123, "مُنْحَسِبَتَان", "munḥasibatān", "iki sayılan (dişi)", "orta", ""],
+      [121, "مُنْحَسِبَة", "munḥasiba", "sayılan (müennes)", "orta", ""],
+      [122, "مُنْحَسِبَان", "munḥasibān", "sayılan (iki)", "orta", ""],
+      [123, "مُنْحَسِبَتَان", "munḥasibatān", "sayılan (iki, müennes)", "orta", ""],
       [124, "مُنْحَسِبُون", "munḥasibūn", "sayılanlar", "orta", ""],
       [125, "مُنْحَسِبِين", "munḥasibīn", "sayılanlar", "orta", ""],
-      [126, "مُنْحَسِبَات", "munḥasibāt", "sayılanlar (dişi)", "orta", ""]
+      [126, "مُنْحَسِبَات", "munḥasibāt", "sayılanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْحَسَب", "munḥasab", "sayılmış", "orta", ""],
-      [128, "مُنْحَسَبَة", "munḥasaba", "sayılmış (dişi)", "orta", ""],
-      [129, "مُنْحَسَبَان", "munḥasabān", "iki sayılmış", "orta", ""],
-      [130, "مُنْحَسَبَتَان", "munḥasabatān", "iki sayılmış (dişi)", "orta", ""],
-      [131, "مُنْحَسَبُون", "munḥasabūn", "sayılmışlar", "orta", ""],
-      [132, "مُنْحَسَبِين", "munḥasabīn", "sayılmışlar", "orta", ""],
-      [133, "مُنْحَسَبَات", "munḥasabāt", "sayılmışlar (dişi)", "orta", ""]
+      [127, "مُنْحَسَب", "munḥasab", "sayılan", "orta", ""],
+      [128, "مُنْحَسَبَة", "munḥasaba", "sayılan (müennes)", "orta", ""],
+      [129, "مُنْحَسَبَان", "munḥasabān", "sayılan (iki)", "orta", ""],
+      [130, "مُنْحَسَبَتَان", "munḥasabatān", "sayılan (iki, müennes)", "orta", ""],
+      [131, "مُنْحَسَبُون", "munḥasabūn", "sayılanlar", "orta", ""],
+      [132, "مُنْحَسَبِين", "munḥasabīn", "sayılanlar", "orta", ""],
+      [133, "مُنْحَسَبَات", "munḥasabāt", "sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْحَسَب", "munḥasab", "sayılma (yeri/zamanı)", "orta", ""]
+      [134, "مُنْحَسَب", "munḥasab", "sayılma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِحْتِسَاب", "iḥtisāb", "sayınma", "orta", "Vikisözlük: masdar (bâb VIII): to debit, to credit"]
+      [
+        135,
+        "اِحْتِسَاب",
+        "iḥtisāb",
+        "kendisi için sayma",
+        "orta",
+        "Vikisözlük: masdar (bâb VIII): to debit, to credit"
+      ]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِحْتِسَابَة", "iḥtisāba", "bir kere sayınma", "orta", ""]
+      [137, "اِحْتِسَابَة", "iḥtisāba", "bir kere kendisi için sayma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُحْتَسِب", "muḥtasib", "sayınan", "orta", ""],
-      [139, "مُحْتَسِبَة", "muḥtasiba", "sayınan (dişi)", "orta", ""],
-      [140, "مُحْتَسِبَان", "muḥtasibān", "iki sayınan", "orta", ""],
-      [141, "مُحْتَسِبَتَان", "muḥtasibatān", "iki sayınan (dişi)", "orta", ""],
-      [142, "مُحْتَسِبُون", "muḥtasibūn", "sayınanlar", "orta", ""],
-      [143, "مُحْتَسِبِين", "muḥtasibīn", "sayınanlar", "orta", ""],
-      [144, "مُحْتَسِبَات", "muḥtasibāt", "sayınanlar (dişi)", "orta", ""]
+      [138, "مُحْتَسِب", "muḥtasib", "kendisi için sayan", "orta", ""],
+      [139, "مُحْتَسِبَة", "muḥtasiba", "kendisi için sayan (müennes)", "orta", ""],
+      [140, "مُحْتَسِبَان", "muḥtasibān", "kendisi için sayan (iki)", "orta", ""],
+      [141, "مُحْتَسِبَتَان", "muḥtasibatān", "kendisi için sayan (iki, müennes)", "orta", ""],
+      [142, "مُحْتَسِبُون", "muḥtasibūn", "kendisi için sayanlar", "orta", ""],
+      [143, "مُحْتَسِبِين", "muḥtasibīn", "kendisi için sayanlar", "orta", ""],
+      [144, "مُحْتَسِبَات", "muḥtasibāt", "kendisi için sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُحْتَسَب", "muḥtasab", "sayınmış", "orta", ""],
-      [146, "مُحْتَسَبَة", "muḥtasaba", "sayınmış (dişi)", "orta", ""],
-      [147, "مُحْتَسَبَان", "muḥtasabān", "iki sayınmış", "orta", ""],
-      [148, "مُحْتَسَبَتَان", "muḥtasabatān", "iki sayınmış (dişi)", "orta", ""],
-      [149, "مُحْتَسَبُون", "muḥtasabūn", "sayınmışlar", "orta", ""],
-      [150, "مُحْتَسَبِين", "muḥtasabīn", "sayınmışlar", "orta", ""],
-      [151, "مُحْتَسَبَات", "muḥtasabāt", "sayınmışlar (dişi)", "orta", ""]
+      [145, "مُحْتَسَب", "muḥtasab", "kendisi için sayılan", "orta", ""],
+      [146, "مُحْتَسَبَة", "muḥtasaba", "kendisi için sayılan (müennes)", "orta", ""],
+      [147, "مُحْتَسَبَان", "muḥtasabān", "kendisi için sayılan (iki)", "orta", ""],
+      [148, "مُحْتَسَبَتَان", "muḥtasabatān", "kendisi için sayılan (iki, müennes)", "orta", ""],
+      [149, "مُحْتَسَبُون", "muḥtasabūn", "kendisi için sayılanlar", "orta", ""],
+      [150, "مُحْتَسَبِين", "muḥtasabīn", "kendisi için sayılanlar", "orta", ""],
+      [151, "مُحْتَسَبَات", "muḥtasabāt", "kendisi için sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُحْتَسَب", "muḥtasab", "sayınma (yeri/zamanı)", "orta", ""]
+      [152, "مُحْتَسَب", "muḥtasab", "kendisi için sayma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِحْسِبَاب", "iḥsibāb", "saylaşma", "kontrol", ""]
+      [499, "اِحْسِبَاب", "iḥsibāb", "iyiden iyiye sayma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُحْسَبّ", "muḥsabb", "saylaşan", "kontrol", ""],
-      [501, "مُحْسَبَّة", "muḥsabba", "saylaşan (dişi)", "kontrol", ""],
-      [502, "مُحْسَبَّان", "muḥsabbān", "iki saylaşan", "kontrol", ""],
-      [503, "مُحْسَبَّتَان", "muḥsabbatān", "iki saylaşan (dişi)", "kontrol", ""],
-      [504, "مُحْسَبُّون", "muḥsabbūn", "saylaşanlar", "kontrol", ""],
-      [505, "مُحْسَبِّين", "muḥsabbīn", "saylaşanlar", "kontrol", ""],
-      [506, "مُحْسَبَّات", "muḥsabbāt", "saylaşanlar (dişi)", "kontrol", ""]
+      [500, "مُحْسَبّ", "muḥsabb", "iyiden iyiye sayan", "kontrol", ""],
+      [501, "مُحْسَبَّة", "muḥsabba", "iyiden iyiye sayan (müennes)", "kontrol", ""],
+      [502, "مُحْسَبَّان", "muḥsabbān", "iyiden iyiye sayan (iki)", "kontrol", ""],
+      [503, "مُحْسَبَّتَان", "muḥsabbatān", "iyiden iyiye sayan (iki, müennes)", "kontrol", ""],
+      [504, "مُحْسَبُّون", "muḥsabbūn", "iyiden iyiye sayanlar", "kontrol", ""],
+      [505, "مُحْسَبِّين", "muḥsabbīn", "iyiden iyiye sayanlar", "kontrol", ""],
+      [506, "مُحْسَبَّات", "muḥsabbāt", "iyiden iyiye sayanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِحْسَاب", "istiḥsāb", "saymayı isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِحْسَابَة", "istiḥsāba", "bir kere sayma", "orta", ""]
+      [177, "اِسْتِحْسَابَة", "istiḥsāba", "bir kere saymayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَحْسِب", "mustaḥsib", "saymayı isteyen", "orta", ""],
-      [179, "مُسْتَحْسِبَة", "mustaḥsiba", "saymayı isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَحْسِبَان", "mustaḥsibān", "iki saymayı isteyen", "orta", ""],
-      [181, "مُسْتَحْسِبَتَان", "mustaḥsibatān", "iki saymayı isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَحْسِبَة", "mustaḥsiba", "saymayı isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَحْسِبَان", "mustaḥsibān", "saymayı isteyen (iki)", "orta", ""],
+      [181, "مُسْتَحْسِبَتَان", "mustaḥsibatān", "saymayı isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَحْسِبُون", "mustaḥsibūn", "saymayı isteyenler", "orta", ""],
       [183, "مُسْتَحْسِبِين", "mustaḥsibīn", "saymayı isteyenler", "orta", ""],
-      [184, "مُسْتَحْسِبَات", "mustaḥsibāt", "saymayı isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَحْسِبَات", "mustaḥsibāt", "saymayı isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَحْسَب", "mustaḥsab", "saymayı istenen", "orta", ""],
-      [186, "مُسْتَحْسَبَة", "mustaḥsaba", "saymayı istenen (dişi)", "orta", ""],
-      [187, "مُسْتَحْسَبَان", "mustaḥsabān", "iki saymayı istenen", "orta", ""],
-      [188, "مُسْتَحْسَبَتَان", "mustaḥsabatān", "iki saymayı istenen (dişi)", "orta", ""],
-      [189, "مُسْتَحْسَبُون", "mustaḥsabūn", "saymayı istenenler", "orta", ""],
-      [190, "مُسْتَحْسَبِين", "mustaḥsabīn", "saymayı istenenler", "orta", ""],
-      [191, "مُسْتَحْسَبَات", "mustaḥsabāt", "saymayı istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَحْسَب", "mustaḥsab", "sayması istenen", "orta", ""],
+      [186, "مُسْتَحْسَبَة", "mustaḥsaba", "sayması istenen (müennes)", "orta", ""],
+      [187, "مُسْتَحْسَبَان", "mustaḥsabān", "sayması istenen (iki)", "orta", ""],
+      [188, "مُسْتَحْسَبَتَان", "mustaḥsabatān", "sayması istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَحْسَبُون", "mustaḥsabūn", "sayması istenenler", "orta", ""],
+      [190, "مُسْتَحْسَبِين", "mustaḥsabīn", "sayması istenenler", "orta", ""],
+      [191, "مُسْتَحْسَبَات", "mustaḥsabāt", "sayması istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَحْسَب", "mustaḥsab", "sayma (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَحْسَب", "mustaḥsab", "saymayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِحْسِيبَاب", "iḥsībāb", "iyice saylaşma", "kontrol", ""]
+      [507, "اِحْسِيبَاب", "iḥsībāb", "büsbütün sayma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُحْسَابّ", "muḥsābb", "iyice saylaşan", "kontrol", ""],
-      [509, "مُحْسَابَّة", "muḥsābba", "iyice saylaşan (dişi)", "kontrol", ""],
-      [510, "مُحْسَابَّان", "muḥsābbān", "iki iyice saylaşan", "kontrol", ""],
-      [511, "مُحْسَابَّتَان", "muḥsābbatān", "iki iyice saylaşan (dişi)", "kontrol", ""],
-      [512, "مُحْسَابُّون", "muḥsābbūn", "iyice saylaşanlar", "kontrol", ""],
-      [513, "مُحْسَابِّين", "muḥsābbīn", "iyice saylaşanlar", "kontrol", ""],
-      [514, "مُحْسَابَّات", "muḥsābbāt", "iyice saylaşanlar (dişi)", "kontrol", ""]
+      [508, "مُحْسَابّ", "muḥsābb", "büsbütün sayan", "kontrol", ""],
+      [509, "مُحْسَابَّة", "muḥsābba", "büsbütün sayan (müennes)", "kontrol", ""],
+      [510, "مُحْسَابَّان", "muḥsābbān", "büsbütün sayan (iki)", "kontrol", ""],
+      [511, "مُحْسَابَّتَان", "muḥsābbatān", "büsbütün sayan (iki, müennes)", "kontrol", ""],
+      [512, "مُحْسَابُّون", "muḥsābbūn", "büsbütün sayanlar", "kontrol", ""],
+      [513, "مُحْسَابِّين", "muḥsābbīn", "büsbütün sayanlar", "kontrol", ""],
+      [514, "مُحْسَابَّات", "muḥsābbāt", "büsbütün sayanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِحْسِوْسَاب", "iḥsiwsāb", "aşırı sayma", "orta", ""]
@@ -294,248 +336,248 @@
         214,
         "حَاسِبَة",
         "ḥāsiba",
-        "sayan (dişi)",
+        "sayan (müennes)",
         "orta",
         "Vikisözlük: ellipsis of آلَة حَاسِبَة (ʔāla ḥāsiba): calculator (mechanical or ele"
       ],
-      [215, "حَاسِبَان", "ḥāsibān", "iki sayan", "orta", ""],
-      [216, "حَاسِبَتَان", "ḥāsibatān", "iki sayan (dişi)", "orta", ""],
+      [215, "حَاسِبَان", "ḥāsibān", "sayan (iki)", "orta", ""],
+      [216, "حَاسِبَتَان", "ḥāsibatān", "sayan (iki, müennes)", "orta", ""],
       [217, "حَاسِبُون", "ḥāsibūn", "sayanlar", "orta", ""],
       [218, "حَاسِبِين", "ḥāsibīn", "sayanlar", "orta", ""],
-      [219, "حَاسِبَات", "ḥāsibāt", "sayanlar (dişi)", "orta", ""]
+      [219, "حَاسِبَات", "ḥāsibāt", "sayanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَحْسُوب", "maḥsūb", "sayılmış", "orta", ""],
-      [221, "مَحْسُوبَة", "maḥsūba", "sayılmış (dişi)", "orta", ""],
-      [222, "مَحْسُوبَان", "maḥsūbān", "iki sayılmış", "orta", ""],
-      [223, "مَحْسُوبَتَان", "maḥsūbatān", "iki sayılmış (dişi)", "orta", ""],
-      [224, "مَحْسُوبُون", "maḥsūbūn", "sayılmışlar", "orta", ""],
-      [225, "مَحْسُوبِين", "maḥsūbīn", "sayılmışlar", "orta", ""],
-      [226, "مَحْسُوبَات", "maḥsūbāt", "sayılmışlar (dişi)", "orta", ""]
+      [220, "مَحْسُوب", "maḥsūb", "sayılan", "orta", ""],
+      [221, "مَحْسُوبَة", "maḥsūba", "sayılan (müennes)", "orta", ""],
+      [222, "مَحْسُوبَان", "maḥsūbān", "sayılan (iki)", "orta", ""],
+      [223, "مَحْسُوبَتَان", "maḥsūbatān", "sayılan (iki, müennes)", "orta", ""],
+      [224, "مَحْسُوبُون", "maḥsūbūn", "sayılanlar", "orta", ""],
+      [225, "مَحْسُوبِين", "maḥsūbīn", "sayılanlar", "orta", ""],
+      [226, "مَحْسُوبَات", "maḥsūbāt", "sayılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَحْسَب", "maḥsab", "sayma (yeri/zamanı)", "orta", ""],
-      [228, "مَحْسَبَان", "maḥsabān", "iki sayma (yeri/zamanı)", "orta", ""],
-      [229, "مَحْسِب", "maḥsib", "sayma (yeri/zamanı)", "orta", ""],
-      [230, "مَحْسِبَان", "maḥsibān", "iki sayma (yeri/zamanı)", "orta", ""],
+      [227, "مَحْسَب", "maḥsab", "sayma yeri, vakti", "orta", ""],
+      [228, "مَحْسَبَان", "maḥsabān", "sayma yeri, vakti (iki)", "orta", ""],
+      [229, "مَحْسِب", "maḥsib", "sayma yeri, vakti", "orta", ""],
+      [230, "مَحْسِبَان", "maḥsibān", "sayma yeri, vakti (iki)", "orta", ""],
       [
         231,
         "مَحْسَبَة",
         "maḥsaba",
-        "sayma (yeri/zamanı)",
+        "saymanın bol olduğu yer",
         "orta",
         "Vikisözlük: verbal noun of حَسِبَ (ḥasiba) (form I)"
       ],
-      [232, "مَحْسَبَتَان", "maḥsabatān", "iki sayma (yeri/zamanı)", "orta", ""],
+      [232, "مَحْسَبَتَان", "maḥsabatān", "saymanın bol olduğu yer (iki)", "orta", ""],
       [
         233,
         "مَحْسِبَة",
         "maḥsiba",
-        "sayma (yeri/zamanı)",
+        "saymanın bol olduğu yer",
         "orta",
         "Vikisözlük: verbal noun of حَسِبَ (ḥasiba) (form I)"
       ],
-      [234, "مَحْسِبَتَان", "maḥsibatān", "iki sayma (yeri/zamanı)", "orta", ""],
-      [247, "مَحْسُبَة", "maḥsuba", "sayma (yeri/zamanı)", "orta", ""],
-      [248, "مَحْسُبَتَان", "maḥsubatān", "iki sayma (yeri/zamanı)", "orta", ""]
+      [234, "مَحْسِبَتَان", "maḥsibatān", "saymanın bol olduğu yer (iki)", "orta", ""],
+      [247, "مَحْسُبَة", "maḥsuba", "sayma yeri, vakti", "orta", ""],
+      [248, "مَحْسُبَتَان", "maḥsubatān", "sayma yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِحْسَب", "miḥsab", "saymaya yarayan araç", "orta", ""],
-      [236, "مِحْسَبَان", "miḥsabān", "iki saymaya yarayan araç", "orta", ""],
-      [237, "مِحْسَاب", "miḥsāb", "saymaya yarayan araç", "orta", ""],
-      [238, "مِحْسَابَان", "miḥsābān", "iki saymaya yarayan araç", "orta", ""],
-      [239, "مِحْسَبَة", "miḥsaba", "saymaya yarayan araç", "orta", ""],
-      [240, "مِحْسَبَتَان", "miḥsabatān", "iki saymaya yarayan araç", "orta", ""]
+      [235, "مِحْسَب", "miḥsab", "sayma âleti", "orta", ""],
+      [236, "مِحْسَبَان", "miḥsabān", "sayma âleti (iki)", "orta", ""],
+      [237, "مِحْسَاب", "miḥsāb", "sayma âleti", "orta", ""],
+      [238, "مِحْسَابَان", "miḥsābān", "sayma âleti (iki)", "orta", ""],
+      [239, "مِحْسَبَة", "miḥsaba", "sayma âleti", "orta", ""],
+      [240, "مِحْسَبَتَان", "miḥsabatān", "sayma âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَحْسَب", "ʾaḥsab", "daha çok sayan", "orta", ""],
-      [242, "أَحْسَبَان", "ʾaḥsabān", "iki daha çok sayan", "orta", ""]
+      [242, "أَحْسَبَان", "ʾaḥsabān", "daha çok sayan (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "حُسْبَى", "ḥusbā", "daha çok sayan", "orta", ""],
-      [244, "حُسْبَيَان", "ḥusbayān", "iki daha çok sayan", "orta", ""],
+      [244, "حُسْبَيَان", "ḥusbayān", "daha çok sayan (iki)", "orta", ""],
       [245, "حَسْبَاء", "ḥasbāʾ", "daha çok sayan", "orta", ""],
-      [246, "حَسْبَاآن", "ḥasbāʾān", "iki daha çok sayan", "orta", ""]
+      [246, "حَسْبَاآن", "ḥasbāʾān", "daha çok sayan (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "حُسَيْب", "ḥusayb", "küçük sayma", "orta", ""],
-      [250, "حُسَيْبَان", "ḥusaybān", "iki küçük sayma", "orta", ""],
-      [251, "حُسَيْبَة", "ḥusayba", "küçük sayma", "orta", ""],
-      [252, "حُسَيْبَتَان", "ḥusaybatān", "iki küçük sayma", "orta", ""]
+      [249, "حُسَيْب", "ḥusayb", "azıcık sayma", "orta", ""],
+      [250, "حُسَيْبَان", "ḥusaybān", "azıcık sayma (iki)", "orta", ""],
+      [251, "حُسَيْبَة", "ḥusayba", "azıcık sayma", "orta", ""],
+      [252, "حُسَيْبَتَان", "ḥusaybatān", "azıcık sayma (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَحْسَب", "maḥsab", "sayma", "orta", ""],
-      [254, "مَحْسَبَان", "maḥsabān", "iki sayma", "orta", ""]
+      [254, "مَحْسَبَان", "maḥsabān", "sayma (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "حَسْبَة", "ḥasba", "bir kere sayma", "orta", ""],
-      [256, "حَسْبَتَان", "ḥasbatān", "iki bir kere sayma", "orta", ""]
+      [256, "حَسْبَتَان", "ḥasbatān", "bir kere sayma (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "حِسْبَة", "ḥisba", "sayma tarzı", "orta", ""],
-      [258, "حِسْبَتَان", "ḥisbatān", "iki sayma tarzı", "orta", ""]
+      [258, "حِسْبَتَان", "ḥisbatān", "sayma tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "حَسِيب", "ḥasīb", "sürekli sayan", "orta", ""],
-      [260, "حَسِيبَة", "ḥasība", "sürekli sayan (dişi)", "orta", ""],
-      [261, "حَسِيبَان", "ḥasībān", "iki sürekli sayan", "orta", ""],
-      [262, "حَسِيبَتَان", "ḥasībatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [263, "حَسِيبُون", "ḥasībūn", "sürekli sayanlar", "orta", ""],
-      [264, "حَسِيبِين", "ḥasībīn", "sürekli sayanlar", "orta", ""],
-      [265, "حَسِيبَات", "ḥasībāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [266, "حَسُوب", "ḥasūb", "sürekli sayan", "orta", ""],
-      [267, "حَسُوبَة", "ḥasūba", "sürekli sayan (dişi)", "orta", ""],
-      [268, "حَسُوبَان", "ḥasūbān", "iki sürekli sayan", "orta", ""],
-      [269, "حَسُوبَتَان", "ḥasūbatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [270, "حَسُوبُون", "ḥasūbūn", "sürekli sayanlar", "orta", ""],
-      [271, "حَسُوبِين", "ḥasūbīn", "sürekli sayanlar", "orta", ""],
-      [272, "حَسُوبَات", "ḥasūbāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [273, "حَسِب", "ḥasib", "sürekli sayan", "orta", ""],
-      [274, "حَسِبَة", "ḥasiba", "sürekli sayan (dişi)", "orta", ""],
-      [275, "حَسِبَان", "ḥasibān", "iki sürekli sayan", "orta", ""],
-      [276, "حَسِبَتَان", "ḥasibatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [277, "حَسِبُون", "ḥasibūn", "sürekli sayanlar", "orta", ""],
-      [278, "حَسِبِين", "ḥasibīn", "sürekli sayanlar", "orta", ""],
-      [279, "حَسِبَات", "ḥasibāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [280, "حَسُب", "ḥasub", "sürekli sayan", "orta", ""],
-      [281, "حَسُبَة", "ḥasuba", "sürekli sayan (dişi)", "orta", ""],
-      [282, "حَسُبَان", "ḥasubān", "iki sürekli sayan", "orta", ""],
-      [283, "حَسُبَتَان", "ḥasubatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [284, "حَسُبُون", "ḥasubūn", "sürekli sayanlar", "orta", ""],
-      [285, "حَسُبِين", "ḥasubīn", "sürekli sayanlar", "orta", ""],
-      [286, "حَسُبَات", "ḥasubāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [287, "حَسَب", "ḥasab", "sürekli sayan", "orta", ""],
-      [288, "حَسَبَة", "ḥasaba", "sürekli sayan (dişi)", "orta", ""],
-      [289, "حَسَبَان", "ḥasabān", "iki sürekli sayan", "orta", ""],
-      [290, "حَسَبَتَان", "ḥasabatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [291, "حَسَبُون", "ḥasabūn", "sürekli sayanlar", "orta", ""],
-      [292, "حَسَبِين", "ḥasabīn", "sürekli sayanlar", "orta", ""],
-      [293, "حَسَبَات", "ḥasabāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [294, "حَسْب", "ḥasb", "sürekli sayan", "orta", "Vikisözlük: masdar (bâb I): to calculate, to compute"],
-      [295, "حَسْبَة", "ḥasba", "sürekli sayan (dişi)", "orta", ""],
-      [296, "حَسْبَان", "ḥasbān", "iki sürekli sayan", "orta", ""],
-      [297, "حَسْبَتَان", "ḥasbatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [298, "حَسْبُون", "ḥasbūn", "sürekli sayanlar", "orta", ""],
-      [299, "حَسْبِين", "ḥasbīn", "sürekli sayanlar", "orta", ""],
-      [300, "حَسْبَات", "ḥasbāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [301, "حُسُب", "ḥusub", "sürekli sayan", "orta", ""],
-      [302, "حُسُبَة", "ḥusuba", "sürekli sayan (dişi)", "orta", ""],
-      [303, "حُسُبَان", "ḥusubān", "iki sürekli sayan", "orta", ""],
-      [304, "حُسُبَتَان", "ḥusubatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [305, "حُسُبُون", "ḥusubūn", "sürekli sayanlar", "orta", ""],
-      [306, "حُسُبِين", "ḥusubīn", "sürekli sayanlar", "orta", ""],
-      [307, "حُسُبَات", "ḥusubāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [308, "حَسْبَان", "ḥasbān", "sürekli sayan", "orta", ""],
-      [309, "حَسْبَانَة", "ḥasbāna", "sürekli sayan (dişi)", "orta", ""],
-      [310, "حَسْبَانَان", "ḥasbānān", "iki sürekli sayan", "orta", ""],
-      [311, "حَسْبَانَتَان", "ḥasbānatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [312, "حَسْبَانُون", "ḥasbānūn", "sürekli sayanlar", "orta", ""],
-      [313, "حَسْبَانِين", "ḥasbānīn", "sürekli sayanlar", "orta", ""],
-      [314, "حَسْبَانَات", "ḥasbānāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [315, "حُسَاب", "ḥusāb", "sürekli sayan", "orta", ""],
-      [316, "حُسَابَة", "ḥusāba", "sürekli sayan (dişi)", "orta", ""],
-      [317, "حُسَابَان", "ḥusābān", "iki sürekli sayan", "orta", ""],
-      [318, "حُسَابَتَان", "ḥusābatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [319, "حُسَابُون", "ḥusābūn", "sürekli sayanlar", "orta", ""],
-      [320, "حُسَابِين", "ḥusābīn", "sürekli sayanlar", "orta", ""],
-      [321, "حُسَابَات", "ḥusābāt", "sürekli sayanlar (dişi)", "orta", ""],
-      [322, "حَسَاب", "ḥasāb", "sürekli sayan", "orta", ""],
+      [259, "حَسِيب", "ḥasīb", "hesap soran", "kuran", "Kur'ân"],
+      [260, "حَسِيبَة", "ḥasība", "her daim sayan (müennes)", "orta", ""],
+      [261, "حَسِيبَان", "ḥasībān", "her daim sayan (iki)", "orta", ""],
+      [262, "حَسِيبَتَان", "ḥasībatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [263, "حَسِيبُون", "ḥasībūn", "her daim sayanlar", "orta", ""],
+      [264, "حَسِيبِين", "ḥasībīn", "her daim sayanlar", "orta", ""],
+      [265, "حَسِيبَات", "ḥasībāt", "her daim sayanlar (müennes)", "orta", ""],
+      [266, "حَسُوب", "ḥasūb", "her daim sayan", "orta", ""],
+      [267, "حَسُوبَة", "ḥasūba", "her daim sayan (müennes)", "orta", ""],
+      [268, "حَسُوبَان", "ḥasūbān", "her daim sayan (iki)", "orta", ""],
+      [269, "حَسُوبَتَان", "ḥasūbatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [270, "حَسُوبُون", "ḥasūbūn", "her daim sayanlar", "orta", ""],
+      [271, "حَسُوبِين", "ḥasūbīn", "her daim sayanlar", "orta", ""],
+      [272, "حَسُوبَات", "ḥasūbāt", "her daim sayanlar (müennes)", "orta", ""],
+      [273, "حَسِب", "ḥasib", "her daim sayan", "orta", ""],
+      [274, "حَسِبَة", "ḥasiba", "her daim sayan (müennes)", "orta", ""],
+      [275, "حَسِبَان", "ḥasibān", "her daim sayan (iki)", "orta", ""],
+      [276, "حَسِبَتَان", "ḥasibatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [277, "حَسِبُون", "ḥasibūn", "her daim sayanlar", "orta", ""],
+      [278, "حَسِبِين", "ḥasibīn", "her daim sayanlar", "orta", ""],
+      [279, "حَسِبَات", "ḥasibāt", "her daim sayanlar (müennes)", "orta", ""],
+      [280, "حَسُب", "ḥasub", "her daim sayan", "orta", ""],
+      [281, "حَسُبَة", "ḥasuba", "her daim sayan (müennes)", "orta", ""],
+      [282, "حَسُبَان", "ḥasubān", "her daim sayan (iki)", "orta", ""],
+      [283, "حَسُبَتَان", "ḥasubatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [284, "حَسُبُون", "ḥasubūn", "her daim sayanlar", "orta", ""],
+      [285, "حَسُبِين", "ḥasubīn", "her daim sayanlar", "orta", ""],
+      [286, "حَسُبَات", "ḥasubāt", "her daim sayanlar (müennes)", "orta", ""],
+      [287, "حَسَب", "ḥasab", "her daim sayan", "orta", ""],
+      [288, "حَسَبَة", "ḥasaba", "her daim sayan (müennes)", "orta", ""],
+      [289, "حَسَبَان", "ḥasabān", "her daim sayan (iki)", "orta", ""],
+      [290, "حَسَبَتَان", "ḥasabatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [291, "حَسَبُون", "ḥasabūn", "her daim sayanlar", "orta", ""],
+      [292, "حَسَبِين", "ḥasabīn", "her daim sayanlar", "orta", ""],
+      [293, "حَسَبَات", "ḥasabāt", "her daim sayanlar (müennes)", "orta", ""],
+      [294, "حَسْب", "ḥasb", "her daim sayan", "orta", "Vikisözlük: masdar (bâb I): to calculate, to compute"],
+      [295, "حَسْبَة", "ḥasba", "her daim sayan (müennes)", "orta", ""],
+      [296, "حَسْبَان", "ḥasbān", "her daim sayan (iki)", "orta", ""],
+      [297, "حَسْبَتَان", "ḥasbatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [298, "حَسْبُون", "ḥasbūn", "her daim sayanlar", "orta", ""],
+      [299, "حَسْبِين", "ḥasbīn", "her daim sayanlar", "orta", ""],
+      [300, "حَسْبَات", "ḥasbāt", "her daim sayanlar (müennes)", "orta", ""],
+      [301, "حُسُب", "ḥusub", "her daim sayan", "orta", ""],
+      [302, "حُسُبَة", "ḥusuba", "her daim sayan (müennes)", "orta", ""],
+      [303, "حُسُبَان", "ḥusubān", "her daim sayan (iki)", "orta", ""],
+      [304, "حُسُبَتَان", "ḥusubatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [305, "حُسُبُون", "ḥusubūn", "her daim sayanlar", "orta", ""],
+      [306, "حُسُبِين", "ḥusubīn", "her daim sayanlar", "orta", ""],
+      [307, "حُسُبَات", "ḥusubāt", "her daim sayanlar (müennes)", "orta", ""],
+      [308, "حَسْبَان", "ḥasbān", "her daim sayan", "orta", ""],
+      [309, "حَسْبَانَة", "ḥasbāna", "her daim sayan (müennes)", "orta", ""],
+      [310, "حَسْبَانَان", "ḥasbānān", "her daim sayan (iki)", "orta", ""],
+      [311, "حَسْبَانَتَان", "ḥasbānatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [312, "حَسْبَانُون", "ḥasbānūn", "her daim sayanlar", "orta", ""],
+      [313, "حَسْبَانِين", "ḥasbānīn", "her daim sayanlar", "orta", ""],
+      [314, "حَسْبَانَات", "ḥasbānāt", "her daim sayanlar (müennes)", "orta", ""],
+      [315, "حُسَاب", "ḥusāb", "her daim sayan", "orta", ""],
+      [316, "حُسَابَة", "ḥusāba", "her daim sayan (müennes)", "orta", ""],
+      [317, "حُسَابَان", "ḥusābān", "her daim sayan (iki)", "orta", ""],
+      [318, "حُسَابَتَان", "ḥusābatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [319, "حُسَابُون", "ḥusābūn", "her daim sayanlar", "orta", ""],
+      [320, "حُسَابِين", "ḥusābīn", "her daim sayanlar", "orta", ""],
+      [321, "حُسَابَات", "ḥusābāt", "her daim sayanlar (müennes)", "orta", ""],
+      [322, "حَسَاب", "ḥasāb", "her daim sayan", "orta", ""],
       [
         323,
         "حَسَابَة",
         "ḥasāba",
-        "sürekli sayan (dişi)",
+        "her daim sayan (müennes)",
         "orta",
         "Vikisözlük: verbal noun of حَسُبَ (ḥasuba) (form I)"
       ],
-      [324, "حَسَابَان", "ḥasābān", "iki sürekli sayan", "orta", ""],
-      [325, "حَسَابَتَان", "ḥasābatān", "iki sürekli sayan (dişi)", "orta", ""],
-      [326, "حَسَابُون", "ḥasābūn", "sürekli sayanlar", "orta", ""],
-      [327, "حَسَابِين", "ḥasābīn", "sürekli sayanlar", "orta", ""],
-      [328, "حَسَابَات", "ḥasābāt", "sürekli sayanlar (dişi)", "orta", ""]
+      [324, "حَسَابَان", "ḥasābān", "her daim sayan (iki)", "orta", ""],
+      [325, "حَسَابَتَان", "ḥasābatān", "her daim sayan (iki, müennes)", "orta", ""],
+      [326, "حَسَابُون", "ḥasābūn", "her daim sayanlar", "orta", ""],
+      [327, "حَسَابِين", "ḥasābīn", "her daim sayanlar", "orta", ""],
+      [328, "حَسَابَات", "ḥasābāt", "her daim sayanlar (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "حَسَّاب", "ḥassāb", "çok sayan", "orta", ""],
-      [330, "حَسَّابَة", "ḥassāba", "çok sayan (dişi)", "orta", ""],
-      [331, "حَسَّابَان", "ḥassābān", "iki çok sayan", "orta", ""],
-      [332, "حَسَّابَتَان", "ḥassābatān", "iki çok sayan (dişi)", "orta", ""],
-      [333, "حَسَّابُون", "ḥassābūn", "çok sayanlar", "orta", ""],
-      [334, "حَسَّابِين", "ḥassābīn", "çok sayanlar", "orta", ""],
-      [335, "حَسَّابَات", "ḥassābāt", "çok sayanlar (dişi)", "orta", ""],
-      [336, "حَسَّابَة", "ḥassāba", "çok sayan", "orta", ""],
-      [337, "حَسَّابَتَان", "ḥassābatān", "iki çok sayan", "orta", ""],
-      [338, "حَسَّابَات", "ḥassābāt", "çok sayanlar (dişi)", "orta", ""],
+      [329, "حَسَّاب", "ḥassāb", "işi sayma olan", "orta", ""],
+      [330, "حَسَّابَة", "ḥassāba", "işi sayma olan (müennes)", "orta", ""],
+      [331, "حَسَّابَان", "ḥassābān", "işi sayma olan (iki)", "orta", ""],
+      [332, "حَسَّابَتَان", "ḥassābatān", "işi sayma olan (iki, müennes)", "orta", ""],
+      [333, "حَسَّابُون", "ḥassābūn", "işi sayma olanlar", "orta", ""],
+      [334, "حَسَّابِين", "ḥassābīn", "işi sayma olanlar", "orta", ""],
+      [335, "حَسَّابَات", "ḥassābāt", "işi sayma olanlar (müennes)", "orta", ""],
+      [336, "حَسَّابَة", "ḥassāba", "pek çok sayan", "orta", ""],
+      [337, "حَسَّابَتَان", "ḥassābatān", "pek çok sayan (iki)", "orta", ""],
+      [338, "حَسَّابَات", "ḥassābāt", "pek çok sayanlar (müennes)", "orta", ""],
       [339, "حَسُوب", "ḥasūb", "çok sayan", "orta", ""],
-      [340, "حَسُوبَة", "ḥasūba", "çok sayan (dişi)", "orta", ""],
-      [341, "حَسُوبَان", "ḥasūbān", "iki çok sayan", "orta", ""],
-      [342, "حَسُوبَتَان", "ḥasūbatān", "iki çok sayan (dişi)", "orta", ""],
+      [340, "حَسُوبَة", "ḥasūba", "çok sayan (müennes)", "orta", ""],
+      [341, "حَسُوبَان", "ḥasūbān", "çok sayan (iki)", "orta", ""],
+      [342, "حَسُوبَتَان", "ḥasūbatān", "çok sayan (iki, müennes)", "orta", ""],
       [343, "حَسُوبُون", "ḥasūbūn", "çok sayanlar", "orta", ""],
       [344, "حَسُوبِين", "ḥasūbīn", "çok sayanlar", "orta", ""],
-      [345, "حَسُوبَات", "ḥasūbāt", "çok sayanlar (dişi)", "orta", ""],
-      [346, "حَسُّوب", "ḥassūb", "çok sayan", "orta", ""],
-      [347, "حَسُّوبَة", "ḥassūba", "çok sayan (dişi)", "orta", ""],
-      [348, "حَسُّوبَان", "ḥassūbān", "iki çok sayan", "orta", ""],
-      [349, "حَسُّوبَتَان", "ḥassūbatān", "iki çok sayan (dişi)", "orta", ""],
-      [350, "حَسُّوبُون", "ḥassūbūn", "çok sayanlar", "orta", ""],
-      [351, "حَسُّوبِين", "ḥassūbīn", "çok sayanlar", "orta", ""],
-      [352, "حَسُّوبَات", "ḥassūbāt", "çok sayanlar (dişi)", "orta", ""],
-      [353, "حِسِّيب", "ḥissīb", "çok sayan", "orta", ""],
-      [354, "حِسِّيبَة", "ḥissība", "çok sayan (dişi)", "orta", ""],
-      [355, "حِسِّيبَان", "ḥissībān", "iki çok sayan", "orta", ""],
-      [356, "حِسِّيبَتَان", "ḥissībatān", "iki çok sayan (dişi)", "orta", ""],
-      [357, "حِسِّيبُون", "ḥissībūn", "çok sayanlar", "orta", ""],
-      [358, "حِسِّيبِين", "ḥissībīn", "çok sayanlar", "orta", ""],
-      [359, "حِسِّيبَات", "ḥissībāt", "çok sayanlar (dişi)", "orta", ""],
-      [360, "حُسَّاب", "ḥussāb", "çok sayan", "orta", ""],
-      [361, "حُسَّابَة", "ḥussāba", "çok sayan (dişi)", "orta", ""],
-      [362, "حُسَّابَان", "ḥussābān", "iki çok sayan", "orta", ""],
-      [363, "حُسَّابَتَان", "ḥussābatān", "iki çok sayan (dişi)", "orta", ""],
-      [364, "حُسَّابُون", "ḥussābūn", "çok sayanlar", "orta", ""],
-      [365, "حُسَّابِين", "ḥussābīn", "çok sayanlar", "orta", ""],
-      [366, "حُسَّابَات", "ḥussābāt", "çok sayanlar (dişi)", "orta", ""],
-      [367, "مِحْسَاب", "miḥsāb", "çok sayan", "orta", ""],
-      [368, "مِحْسَابَة", "miḥsāba", "çok sayan (dişi)", "orta", ""],
-      [369, "مِحْسَابَان", "miḥsābān", "iki çok sayan", "orta", ""],
-      [370, "مِحْسَابَتَان", "miḥsābatān", "iki çok sayan (dişi)", "orta", ""],
-      [371, "مِحْسَابُون", "miḥsābūn", "çok sayanlar", "orta", ""],
-      [372, "مِحْسَابِين", "miḥsābīn", "çok sayanlar", "orta", ""],
-      [373, "مِحْسَابَات", "miḥsābāt", "çok sayanlar (dişi)", "orta", ""],
-      [374, "مِحْسِيب", "miḥsīb", "çok sayan", "orta", ""],
-      [375, "مِحْسِيبَة", "miḥsība", "çok sayan (dişi)", "orta", ""],
-      [376, "مِحْسِيبَان", "miḥsībān", "iki çok sayan", "orta", ""],
-      [377, "مِحْسِيبَتَان", "miḥsībatān", "iki çok sayan (dişi)", "orta", ""],
-      [378, "مِحْسِيبُون", "miḥsībūn", "çok sayanlar", "orta", ""],
-      [379, "مِحْسِيبِين", "miḥsībīn", "çok sayanlar", "orta", ""],
-      [380, "مِحْسِيبَات", "miḥsībāt", "çok sayanlar (dişi)", "orta", ""],
-      [381, "حَسِيب", "ḥasīb", "çok sayan", "orta", ""],
-      [382, "حَسِيبَة", "ḥasība", "çok sayan (dişi)", "orta", ""],
-      [383, "حَسِيبَان", "ḥasībān", "iki çok sayan", "orta", ""],
-      [384, "حَسِيبَتَان", "ḥasībatān", "iki çok sayan (dişi)", "orta", ""],
+      [345, "حَسُوبَات", "ḥasūbāt", "çok sayanlar (müennes)", "orta", ""],
+      [346, "حَسُّوب", "ḥassūb", "pek çok sayan", "orta", ""],
+      [347, "حَسُّوبَة", "ḥassūba", "pek çok sayan (müennes)", "orta", ""],
+      [348, "حَسُّوبَان", "ḥassūbān", "pek çok sayan (iki)", "orta", ""],
+      [349, "حَسُّوبَتَان", "ḥassūbatān", "pek çok sayan (iki, müennes)", "orta", ""],
+      [350, "حَسُّوبُون", "ḥassūbūn", "pek çok sayanlar", "orta", ""],
+      [351, "حَسُّوبِين", "ḥassūbīn", "pek çok sayanlar", "orta", ""],
+      [352, "حَسُّوبَات", "ḥassūbāt", "pek çok sayanlar (müennes)", "orta", ""],
+      [353, "حِسِّيب", "ḥissīb", "saymada aşırı giden", "orta", ""],
+      [354, "حِسِّيبَة", "ḥissība", "saymada aşırı giden (müennes)", "orta", ""],
+      [355, "حِسِّيبَان", "ḥissībān", "saymada aşırı giden (iki)", "orta", ""],
+      [356, "حِسِّيبَتَان", "ḥissībatān", "saymada aşırı giden (iki, müennes)", "orta", ""],
+      [357, "حِسِّيبُون", "ḥissībūn", "saymada aşırı gidenler", "orta", ""],
+      [358, "حِسِّيبِين", "ḥissībīn", "saymada aşırı gidenler", "orta", ""],
+      [359, "حِسِّيبَات", "ḥissībāt", "saymada aşırı gidenler (müennes)", "orta", ""],
+      [360, "حُسَّاب", "ḥussāb", "son derece sayan", "orta", ""],
+      [361, "حُسَّابَة", "ḥussāba", "son derece sayan (müennes)", "orta", ""],
+      [362, "حُسَّابَان", "ḥussābān", "son derece sayan (iki)", "orta", ""],
+      [363, "حُسَّابَتَان", "ḥussābatān", "son derece sayan (iki, müennes)", "orta", ""],
+      [364, "حُسَّابُون", "ḥussābūn", "son derece sayanlar", "orta", ""],
+      [365, "حُسَّابِين", "ḥussābīn", "son derece sayanlar", "orta", ""],
+      [366, "حُسَّابَات", "ḥussābāt", "son derece sayanlar (müennes)", "orta", ""],
+      [367, "مِحْسَاب", "miḥsāb", "saymayı âdet edinmiş", "orta", ""],
+      [368, "مِحْسَابَة", "miḥsāba", "saymayı âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِحْسَابَان", "miḥsābān", "saymayı âdet edinmiş (iki)", "orta", ""],
+      [370, "مِحْسَابَتَان", "miḥsābatān", "saymayı âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِحْسَابُون", "miḥsābūn", "saymayı âdet edinmişler", "orta", ""],
+      [372, "مِحْسَابِين", "miḥsābīn", "saymayı âdet edinmişler", "orta", ""],
+      [373, "مِحْسَابَات", "miḥsābāt", "saymayı âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِحْسِيب", "miḥsīb", "saymaya düşkün", "orta", ""],
+      [375, "مِحْسِيبَة", "miḥsība", "saymaya düşkün (müennes)", "orta", ""],
+      [376, "مِحْسِيبَان", "miḥsībān", "saymaya düşkün (iki)", "orta", ""],
+      [377, "مِحْسِيبَتَان", "miḥsībatān", "saymaya düşkün (iki, müennes)", "orta", ""],
+      [378, "مِحْسِيبُون", "miḥsībūn", "saymaya düşkünler", "orta", ""],
+      [379, "مِحْسِيبِين", "miḥsībīn", "saymaya düşkünler", "orta", ""],
+      [380, "مِحْسِيبَات", "miḥsībāt", "saymaya düşkünler (müennes)", "orta", ""],
+      [381, "حَسِيب", "ḥasīb", "hesap soran", "kuran", "Kur'ân"],
+      [382, "حَسِيبَة", "ḥasība", "çok sayan (müennes)", "orta", ""],
+      [383, "حَسِيبَان", "ḥasībān", "çok sayan (iki)", "orta", ""],
+      [384, "حَسِيبَتَان", "ḥasībatān", "çok sayan (iki, müennes)", "orta", ""],
       [385, "حَسِيبُون", "ḥasībūn", "çok sayanlar", "orta", ""],
       [386, "حَسِيبِين", "ḥasībīn", "çok sayanlar", "orta", ""],
-      [387, "حَسِيبَات", "ḥasībāt", "çok sayanlar (dişi)", "orta", ""],
+      [387, "حَسِيبَات", "ḥasībāt", "çok sayanlar (müennes)", "orta", ""],
       [388, "حَسَّب", "ḥassab", "çok sayan", "orta", ""],
-      [389, "حَسَّبَة", "ḥassaba", "çok sayan (dişi)", "orta", ""],
-      [390, "حَسَّبَان", "ḥassabān", "iki çok sayan", "orta", ""],
-      [391, "حَسَّبَتَان", "ḥassabatān", "iki çok sayan (dişi)", "orta", ""],
+      [389, "حَسَّبَة", "ḥassaba", "çok sayan (müennes)", "orta", ""],
+      [390, "حَسَّبَان", "ḥassabān", "çok sayan (iki)", "orta", ""],
+      [391, "حَسَّبَتَان", "ḥassabatān", "çok sayan (iki, müennes)", "orta", ""],
       [392, "حَسَّبُون", "ḥassabūn", "çok sayanlar", "orta", ""],
       [393, "حَسَّبِين", "ḥassabīn", "çok sayanlar", "orta", ""],
-      [394, "حَسَّبَات", "ḥassabāt", "çok sayanlar (dişi)", "orta", ""]
+      [394, "حَسَّبَات", "ḥassabāt", "çok sayanlar (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "حَسْبِيّ", "ḥasbiyy", "saymaya ilgili", "orta", ""],
-      [397, "حَسَبِيّ", "ḥasabiyy", "saymaya ilgili", "orta", ""],
-      [399, "حِسْبِيّ", "ḥisbiyy", "saymaya ilgili", "orta", ""],
-      [401, "حُسْبِيّ", "ḥusbiyy", "saymaya ilgili", "orta", ""],
-      [403, "حِسَابِيّ", "ḥisābiyy", "saymaya ilgili", "orta", ""],
-      [405, "حَاسِبِيّ", "ḥāsibiyy", "saymaya ilgili", "orta", ""],
-      [407, "مَحْسُوبِيّ", "maḥsūbiyy", "saymaya ilgili", "orta", ""],
-      [409, "حَسِيبِيّ", "ḥasībiyy", "saymaya ilgili", "orta", ""],
-      [411, "مَحْسَبِيّ", "maḥsabiyy", "saymaya ilgili", "orta", ""],
-      [413, "تَحْسِيبِيّ", "taḥsībiyy", "saymaya ilgili", "orta", ""],
-      [415, "تَحَاسُبِيّ", "taḥāsubiyy", "saymaya ilgili", "orta", ""],
-      [417, "إِحْسَابِيّ", "ʾiḥsābiyy", "saymaya ilgili", "orta", ""],
-      [419, "اِحْتِسَابِيّ", "iḥtisābiyy", "saymaya ilgili", "orta", ""]
+      [395, "حَسْبِيّ", "ḥasbiyy", "sayma ile ilgili", "orta", ""],
+      [397, "حَسَبِيّ", "ḥasabiyy", "sayma ile ilgili", "orta", ""],
+      [399, "حِسْبِيّ", "ḥisbiyy", "sayma ile ilgili", "orta", ""],
+      [401, "حُسْبِيّ", "ḥusbiyy", "sayma ile ilgili", "orta", ""],
+      [403, "حِسَابِيّ", "ḥisābiyy", "sayma ile ilgili", "orta", ""],
+      [405, "حَاسِبِيّ", "ḥāsibiyy", "sayma ile ilgili", "orta", ""],
+      [407, "مَحْسُوبِيّ", "maḥsūbiyy", "sayma ile ilgili", "orta", ""],
+      [409, "حَسِيبِيّ", "ḥasībiyy", "sayma ile ilgili", "orta", ""],
+      [411, "مَحْسَبِيّ", "maḥsabiyy", "sayma ile ilgili", "orta", ""],
+      [413, "تَحْسِيبِيّ", "taḥsībiyy", "sayma ile ilgili", "orta", ""],
+      [415, "تَحَاسُبِيّ", "taḥāsubiyy", "sayma ile ilgili", "orta", ""],
+      [417, "إِحْسَابِيّ", "ʾiḥsābiyy", "sayma ile ilgili", "orta", ""],
+      [419, "اِحْتِسَابِيّ", "iḥtisābiyy", "sayma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "حَسْبِيَّة", "ḥasbiyya", "sayanlık", "orta", ""],
@@ -564,102 +606,88 @@
       [429, "حِسْب", "ḥisb", "sayma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "حَاسُوب", "ḥāsūb", "sayanlar (topluluk adı)", "orta", "Vikisözlük: computer"],
-      [432, "حَسَبَة", "ḥasaba", "sayanlar (topluluk adı)", "orta", ""],
-      [433, "حُسَبَة", "ḥusaba", "sayanlar (topluluk adı)", "orta", ""],
-      [434, "أُحْسُوبَة", "ʾuḥsūba", "sayanlar (topluluk adı)", "orta", ""],
-      [435, "حَوْسَب", "ḥawsab", "sayanlar (topluluk adı)", "orta", ""],
-      [437, "حَيْسَب", "ḥaysab", "sayanlar (topluluk adı)", "orta", ""],
-      [
-        439,
-        "حَسْب",
-        "ḥasb",
-        "sayanlar (topluluk adı)",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to calculate, to compute"
-      ],
-      [441, "حَسَب", "ḥasab", "sayanlar (topluluk adı)", "orta", ""],
-      [443, "حِسْب", "ḥisb", "sayanlar (topluluk adı)", "orta", ""],
-      [445, "حُسْب", "ḥusb", "sayanlar (topluluk adı)", "orta", ""],
-      [447, "حَسِيب", "ḥasīb", "sayanlar (topluluk adı)", "orta", ""],
-      [449, "حِسَب", "ḥisab", "sayanlar (topluluk adı)", "orta", ""],
-      [451, "حُسُب", "ḥusub", "sayanlar (topluluk adı)", "orta", ""],
-      [453, "حَسَاب", "ḥasāb", "sayanlar (topluluk adı)", "orta", ""]
+      [430, "حَاسُوب", "ḥāsūb", "sayma türünden şey", "orta", "Vikisözlük: computer"],
+      [432, "حَسَبَة", "ḥasaba", "sayma türünden şey", "orta", ""],
+      [433, "حُسَبَة", "ḥusaba", "sayma türünden şey", "orta", ""],
+      [434, "أُحْسُوبَة", "ʾuḥsūba", "sayma türünden şey", "orta", ""],
+      [435, "حَوْسَب", "ḥawsab", "sayma türünden şey", "orta", ""],
+      [437, "حَيْسَب", "ḥaysab", "sayma türünden şey", "orta", ""],
+      [439, "حَسْب", "ḥasb", "sayma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to calculate, to compute"],
+      [441, "حَسَب", "ḥasab", "sayma türünden şey", "orta", ""],
+      [443, "حِسْب", "ḥisb", "sayma türünden şey", "orta", ""],
+      [445, "حُسْب", "ḥusb", "sayma türünden şey", "orta", ""],
+      [447, "حَسِيب", "ḥasīb", "hesap soran", "kuran", "Kur'ân"],
+      [449, "حِسَب", "ḥisab", "sayma türünden şey", "orta", ""],
+      [451, "حُسُب", "ḥusub", "sayma türünden şey", "orta", ""],
+      [453, "حَسَاب", "ḥasāb", "sayma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "حَاسُوبَة", "ḥāsūba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [436, "حَوْسَبَة", "ḥawsaba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [438, "حَيْسَبَة", "ḥaysaba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [440, "حَسْبَة", "ḥasba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [442, "حَسَبَة", "ḥasaba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [444, "حِسْبَة", "ḥisba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [446, "حُسْبَة", "ḥusba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [448, "حَسِيبَة", "ḥasība", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [450, "حِسَبَة", "ḥisaba", "bir tane sayanlar (topluluk adı)", "orta", ""],
-      [452, "حُسُبَة", "ḥusuba", "bir tane sayanlar (topluluk adı)", "orta", ""],
+      [431, "حَاسُوبَة", "ḥāsūba", "sayma türünden bir tane", "orta", ""],
+      [436, "حَوْسَبَة", "ḥawsaba", "sayma türünden bir tane", "orta", ""],
+      [438, "حَيْسَبَة", "ḥaysaba", "sayma türünden bir tane", "orta", ""],
+      [440, "حَسْبَة", "ḥasba", "sayma türünden bir tane", "orta", ""],
+      [442, "حَسَبَة", "ḥasaba", "sayma türünden bir tane", "orta", ""],
+      [444, "حِسْبَة", "ḥisba", "sayma türünden bir tane", "orta", ""],
+      [446, "حُسْبَة", "ḥusba", "sayma türünden bir tane", "orta", ""],
+      [448, "حَسِيبَة", "ḥasība", "sayma türünden bir tane", "orta", ""],
+      [450, "حِسَبَة", "ḥisaba", "sayma türünden bir tane", "orta", ""],
+      [452, "حُسُبَة", "ḥusuba", "sayma türünden bir tane", "orta", ""],
       [
         454,
         "حَسَابَة",
         "ḥasāba",
-        "bir tane sayanlar (topluluk adı)",
+        "sayma türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of حَسُبَ (ḥasuba) (form I)"
       ]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَحْسَاب", "ʾaḥsāb", "sayanlar (kırık çoğul)", "orta", ""],
-      [456, "أَحْسِبَة", "ʾaḥsiba", "sayanlar (kırık çoğul)", "orta", ""],
-      [457, "أَحَاسِب", "ʾaḥāsib", "sayanlar (kırık çoğul)", "orta", ""],
-      [458, "أَحَاسِيب", "ʾaḥāsīb", "sayanlar (kırık çoğul)", "orta", ""],
-      [459, "حُسُوب", "ḥusūb", "sayanlar (kırık çoğul)", "orta", ""],
-      [460, "حُسُب", "ḥusub", "sayanlar (kırık çoğul)", "orta", ""],
-      [
-        461,
-        "حِسَاب",
-        "ḥisāb",
-        "sayanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"
-      ],
-      [462, "حِسَب", "ḥisab", "sayanlar (kırık çoğul)", "orta", ""],
-      [463, "حِسَبَة", "ḥisaba", "sayanlar (kırık çoğul)", "orta", ""],
-      [464, "حُسَب", "ḥusab", "sayanlar (kırık çoğul)", "orta", ""],
-      [465, "حُسَباء", "ḥusabāʾ", "sayanlar (kırık çoğul)", "orta", ""],
-      [466, "حَسَبَة", "ḥasaba", "sayanlar (kırık çoğul)", "orta", ""],
-      [467, "حُسَّاب", "ḥussāb", "sayanlar (kırık çoğul)", "orta", ""],
-      [468, "حَسَاب", "ḥasāb", "sayanlar (kırık çoğul)", "orta", ""],
-      [469, "حَسَب", "ḥasab", "sayanlar (kırık çoğul)", "orta", ""],
-      [470, "مَحَاسِب", "maḥāsib", "sayanlar (kırık çoğul)", "orta", ""],
-      [471, "مَحَاسِيب", "maḥāsīb", "sayanlar (kırık çoğul)", "orta", ""],
-      [472, "حَوَاسِب", "ḥawāsib", "sayanlar (kırık çoğul)", "orta", ""],
-      [473, "أَحْسُب", "ʾaḥsub", "sayanlar (kırık çoğul)", "orta", ""],
-      [474, "حُسَّب", "ḥussab", "sayanlar (kırık çoğul)", "orta", ""],
-      [475, "حَسَائِب", "ḥasāʾib", "sayanlar (kırık çoğul)", "orta", ""],
-      [476, "حُسَيْب", "ḥusayb", "sayanlar (kırık çoğul)", "orta", ""]
+      [455, "أَحْسَاب", "ʾaḥsāb", "saymalar", "orta", ""],
+      [456, "أَحْسِبَة", "ʾaḥsiba", "saymalar", "orta", ""],
+      [457, "أَحَاسِب", "ʾaḥāsib", "saymalar", "orta", ""],
+      [458, "أَحَاسِيب", "ʾaḥāsīb", "saymalar", "orta", ""],
+      [459, "حُسُوب", "ḥusūb", "saymalar", "orta", ""],
+      [460, "حُسُب", "ḥusub", "saymalar", "orta", ""],
+      [461, "حِسَاب", "ḥisāb", "saymalar", "orta", "Vikisözlük: verbal noun of حَسَبَ (ḥasaba) (form I)"],
+      [462, "حِسَب", "ḥisab", "saymalar", "orta", ""],
+      [463, "حِسَبَة", "ḥisaba", "saymalar", "orta", ""],
+      [464, "حُسَب", "ḥusab", "saymalar", "orta", ""],
+      [465, "حُسَباء", "ḥusabāʾ", "saymalar", "orta", ""],
+      [466, "حَسَبَة", "ḥasaba", "saymalar", "orta", ""],
+      [467, "حُسَّاب", "ḥussāb", "saymalar", "orta", ""],
+      [468, "حَسَاب", "ḥasāb", "saymalar", "orta", ""],
+      [469, "حَسَب", "ḥasab", "saymalar", "orta", ""],
+      [470, "مَحَاسِب", "maḥāsib", "saymalar", "orta", ""],
+      [471, "مَحَاسِيب", "maḥāsīb", "saymalar", "orta", ""],
+      [472, "حَوَاسِب", "ḥawāsib", "saymalar", "orta", ""],
+      [473, "أَحْسُب", "ʾaḥsub", "saymalar", "orta", ""],
+      [474, "حُسَّب", "ḥussab", "saymalar", "orta", ""],
+      [475, "حَسَائِب", "ḥasāʾib", "saymalar", "orta", ""],
+      [476, "حُسَيْب", "ḥusayb", "saymalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَحْسَابَات", "ʾaḥsābāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [478, "أَحْسِبَات", "ʾaḥsibāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [479, "أَحَاسِبَات", "ʾaḥāsibāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [480, "أَحَاسِيبَات", "ʾaḥāsībāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [481, "حُسُوبَات", "ḥusūbāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [482, "حُسُبَات", "ḥusubāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [483, "حِسَابَات", "ḥisābāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [484, "حِسَبَات", "ḥisabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [485, "حِسَبَات", "ḥisabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [486, "حُسَبَات", "ḥusabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [487, "حُسَباآت", "ḥusabāʾāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [488, "حَسَبَات", "ḥasabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [489, "حُسَّابَات", "ḥussābāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [490, "حَسَابَات", "ḥasābāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [491, "حَسَبَات", "ḥasabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [492, "مَحَاسِبَات", "maḥāsibāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [493, "مَحَاسِيبَات", "maḥāsībāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [494, "حَوَاسِبَات", "ḥawāsibāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [495, "أَحْسُبَات", "ʾaḥsubāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [496, "حُسَّبَات", "ḥussabāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [497, "حَسَائِبَات", "ḥasāʾibāt", "sayanlar (çoğulun çoğulu)", "orta", ""],
-      [498, "حُسَيْبَات", "ḥusaybāt", "sayanlar (çoğulun çoğulu)", "orta", ""]
+      [477, "أَحْسَابَات", "ʾaḥsābāt", "saymalar topluluğu", "orta", ""],
+      [478, "أَحْسِبَات", "ʾaḥsibāt", "saymalar topluluğu", "orta", ""],
+      [479, "أَحَاسِبَات", "ʾaḥāsibāt", "saymalar topluluğu", "orta", ""],
+      [480, "أَحَاسِيبَات", "ʾaḥāsībāt", "saymalar topluluğu", "orta", ""],
+      [481, "حُسُوبَات", "ḥusūbāt", "saymalar topluluğu", "orta", ""],
+      [482, "حُسُبَات", "ḥusubāt", "saymalar topluluğu", "orta", ""],
+      [483, "حِسَابَات", "ḥisābāt", "saymalar topluluğu", "orta", ""],
+      [484, "حِسَبَات", "ḥisabāt", "saymalar topluluğu", "orta", ""],
+      [485, "حِسَبَات", "ḥisabāt", "saymalar topluluğu", "orta", ""],
+      [486, "حُسَبَات", "ḥusabāt", "saymalar topluluğu", "orta", ""],
+      [487, "حُسَباآت", "ḥusabāʾāt", "saymalar topluluğu", "orta", ""],
+      [488, "حَسَبَات", "ḥasabāt", "saymalar topluluğu", "orta", ""],
+      [489, "حُسَّابَات", "ḥussābāt", "saymalar topluluğu", "orta", ""],
+      [490, "حَسَابَات", "ḥasābāt", "saymalar topluluğu", "orta", ""],
+      [491, "حَسَبَات", "ḥasabāt", "saymalar topluluğu", "orta", ""],
+      [492, "مَحَاسِبَات", "maḥāsibāt", "saymalar topluluğu", "orta", ""],
+      [493, "مَحَاسِيبَات", "maḥāsībāt", "saymalar topluluğu", "orta", ""],
+      [494, "حَوَاسِبَات", "ḥawāsibāt", "saymalar topluluğu", "orta", ""],
+      [495, "أَحْسُبَات", "ʾaḥsubāt", "saymalar topluluğu", "orta", ""],
+      [496, "حُسَّبَات", "ḥussabāt", "saymalar topluluğu", "orta", ""],
+      [497, "حَسَائِبَات", "ḥasāʾibāt", "saymalar topluluğu", "orta", ""],
+      [498, "حُسَيْبَات", "ḥusaybāt", "saymalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

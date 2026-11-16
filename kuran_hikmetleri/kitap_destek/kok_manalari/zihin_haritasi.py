@@ -5,14 +5,14 @@ from agac_oku import oku
 HERE = pathlib.Path(__file__).resolve().parent
 A = oku()
 KOK = HERE.parents[1] / 'kelime_kaydi/kuranda_var/kokler'
-SA = HERE / 'secim_agi'; SA.mkdir(exist_ok=True)
+SA = HERE / 'mustak_listesi'; SA.mkdir(exist_ok=True)
 BAB = ['sülâsî mücerred', 'sülâsî'] + ['bâb ' + r for r in 'II III IV V VI VII VIII IX X XI XII XIII'.split()]
 for k in A:
     m = json.load(open(KOK / f'{k}.json', encoding='utf-8')).get('mustaklar') or {}
     T = {}
     for g, L in m.items():
         kat, _, bab = g.partition(' · '); bab = bab or 'bâbsız'
-        T.setdefault(bab, {}).setdefault(kat, [[x[1], x[3]] for x in L])
+        T.setdefault(bab, {}).setdefault(kat, [[x[1], x[3], 1 if x[5] else 0] for x in L])
     sira = sorted(T, key=lambda b: BAB.index(b) if b in BAB else 99)
     (SA / f'{k}.js').write_text('SA[' + json.dumps(k) + ']=' + json.dumps([[b, list(T[b].items())] for b in sira], ensure_ascii=False, separators=(',', ':')) + ';', encoding='utf-8')
 HTML = r"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -27,7 +27,7 @@ input{font:inherit;padding:6px 10px;border:1px solid var(--cizgi);border-radius:
 #liste a.sec{background:#b8860b33}
 svg{width:100%;height:calc(100vh - 140px);display:block}#ag{display:none;overflow:auto;height:calc(100vh - 140px)}#ag svg{height:auto}
 .ar{font-family:Amiri,serif}text{fill:var(--yazi)}path{fill:none}</style></head><body>
-<header><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a><input id="ara" placeholder="kök ara (خلق)"><button id="dug" style="font:inherit;padding:5px 10px">Seçim ağı</button><span id="bilgi" style="color:var(--ince);font-size:14px"></span></header>
+<header><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a><input id="ara" placeholder="kök ara (خلق)"><button id="dug" style="font:inherit;padding:5px 10px">Müştak listesi</button><span id="bilgi" style="color:var(--ince);font-size:14px"></span></header>
 <div id="liste"></div><svg id="s"></svg><div id="ag"></div>
 <script>const A=__VERI__;
 const R=['#b3541e','#2f6fb3','#3f7f3a','#8a3fa0','#b8860b','#2c8c7c','#a0304a','#5a6b2a'];
@@ -56,22 +56,22 @@ document.getElementById('ara').oninput=e=>{const v=e.target.value.trim();if(A[v]
 addEventListener('hashchange',()=>{const k=decodeURIComponent(location.hash.slice(1));if(A[k])ciz(k)});addEventListener('resize',()=>ciz(decodeURIComponent(location.hash.slice(1))||'خلق'));
 ciz(decodeURIComponent(location.hash.slice(1))||'خلق');
 const SA={};let agAcik=false;
-function agYukle(k,f){if(SA[k])return f();const e=document.createElement('script');e.src='secim_agi/'+k+'.js';e.onload=f;document.head.appendChild(e)}
+function agYukle(k,f){if(SA[k])return f();const e=document.createElement('script');e.src='mustak_listesi/'+k+'.js';e.onload=f;document.head.appendChild(e)}
 function kol(x,y,ad,cocuk,h){/* Halliday köşeli parantezi */}
 function agCiz(k){agYukle(k,()=>{const D=SA[k];let h='',y=20;const S=19,X0=20,X1=150,X2=300,X3=480;
  const satir=D.reduce((a,[b,K])=>a+K.reduce((c,[t,L])=>c+L.length,0)+K.length*0.4+0.8,0);
  const H=satir*S+60,ky=H/2;h+=`<text x="${X0}" y="${ky+8}" font-size="30" class="ar">${k}</text>`;
  const by=[];
  D.forEach(([b,K])=>{const y0=y;const ky2=[];
-  K.forEach(([t,L])=>{const t0=y;L.forEach(([ar,tr])=>{h+=`<line x1="${X3-12}" y1="${y}" x2="${X3}" y2="${y}" stroke="var(--cizgi)"/><text x="${X3+90}" y="${y+5}" font-size="17" class="ar" text-anchor="end">${ar}</text><text x="${X3+96}" y="${y+4}" font-size="12.5">(${tr})</text>`;y+=S});
+  K.forEach(([t,L])=>{const t0=y;L.forEach(([ar,tr,L2])=>{h+=`<line x1="${X3-12}" y1="${y}" x2="${X3}" y2="${y}" stroke="var(--cizgi)"/><text x="${X3+90}" y="${y+5}" font-size="17" class="ar" text-anchor="end" opacity="${L2?1:.45}">${ar}</text><text x="${X3+96}" y="${y+4}" font-size="12.5" opacity="${L2?1:.45}">(${tr})</text>`;y+=S});
    const m=(t0+y-S)/2;ky2.push(m);h+=`<line x1="${X3-12}" y1="${t0}" x2="${X3-12}" y2="${y-S}" stroke="var(--yazi)"/><line x1="${X2}" y1="${m}" x2="${X3-12}" y2="${m}" stroke="var(--yazi)"/><text x="${X2+6}" y="${m-4}" font-size="12">${t} (${L.length})</text>`;y+=S*0.4});
   const m=(ky2[0]+ky2[ky2.length-1])/2;by.push(m);
   h+=`<line x1="${X2}" y1="${ky2[0]}" x2="${X2}" y2="${ky2[ky2.length-1]}" stroke="#b3541e" stroke-width="1.6"/>`+
    `<line x1="${X1}" y1="${m}" x2="${X2}" y2="${m}" stroke="#b3541e" stroke-width="1.6"/><text x="${X1+6}" y="${m-5}" font-size="13" font-weight="bold">${b}</text>`;y+=S*0.8});
  h+=`<line x1="${X1}" y1="${by[0]}" x2="${X1}" y2="${by[by.length-1]}" stroke="#2f6fb3" stroke-width="2"/><line x1="${X0+70}" y1="${ky}" x2="${X1}" y2="${ky}" stroke="#2f6fb3" stroke-width="2"/>`;
  const n=D.reduce((a,[b,K])=>a+K.reduce((c,[t,L])=>c+L.length,0),0);
- document.getElementById('ag').innerHTML=`<svg viewBox="0 0 1100 ${y+20}" style="width:1100px;max-width:100%;height:auto">${h}</svg>`;document.getElementById('bilgi').textContent=`${D.length} bâb · ${n} müştak`})}
-document.getElementById('dug').onclick=()=>{agAcik=!agAcik;document.getElementById('ag').style.display=agAcik?'block':'none';s.style.display=agAcik?'none':'block';document.getElementById('dug').textContent=agAcik?'Türeme ağacı':'Seçim ağı';const k=decodeURIComponent(location.hash.slice(1))||'خلق';agAcik?agCiz(k):ciz(k)};
+ document.getElementById('ag').innerHTML=`<svg viewBox="0 0 1100 ${y+20}" style="width:1100px;max-width:100%;height:auto">${h}</svg>`;document.getElementById('bilgi').textContent=`${D.length} bâb · ${n} müştak · soluk olanlar lügatte ve Kur'ân'da görülmeyen, kalıptan türetilmiş müştaklardır`})}
+document.getElementById('dug').onclick=()=>{agAcik=!agAcik;document.getElementById('ag').style.display=agAcik?'block':'none';s.style.display=agAcik?'none':'block';document.getElementById('dug').textContent=agAcik?'Türeme ağacı':'Müştak listesi';const k=decodeURIComponent(location.hash.slice(1))||'خلق';agAcik?agCiz(k):ciz(k)};
 const eskiCiz=ciz;ciz=function(k){eskiCiz(k);if(agAcik)agCiz(k)};</script></body></html>"""
 cikti = HERE / 'zihin_haritasi.html'
 cikti.write_text(HTML.replace('__VERI__', json.dumps(A, ensure_ascii=False)), encoding='utf-8')
@@ -88,5 +88,5 @@ if '--png' in sys.argv:
             if '--ag' in sys.argv:
                 g.evaluate("document.getElementById('dug').click()"); g.wait_for_timeout(800)
                 g.evaluate("document.getElementById('ag').style.height='auto';document.getElementById('ag').style.display='block'")
-                g.locator('#ag svg').screenshot(path=str(d / f'{k}_secim_agi.png'))
+                g.locator('#ag svg').screenshot(path=str(d / f'{k}_mustak_listesi.png'))
         b.close()

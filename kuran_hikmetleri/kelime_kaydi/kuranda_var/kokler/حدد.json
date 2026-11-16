@@ -9,21 +9,21 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "حَدّ", "ḥadd", "karşı çıkma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [1, "حِدّ", "ḥidd", "karşı çıkma", "orta", ""],
+      [1, "حِدّ", "ḥidd", "karşı çıkılan şey", "orta", ""],
       [2, "حُدّ", "ḥudd", "karşı çıkma", "orta", ""],
-      [3, "حَدّ", "ḥadd", "karşı çıkma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [3, "حَدّ", "ḥadd", "karşı çıkma hâli", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
       [4, "حِدّ", "ḥidd", "karşı çıkma", "orta", ""],
       [5, "حُدّ", "ḥudd", "karşı çıkma", "orta", ""],
-      [6, "حُدُود", "ḥudūd", "karşı çıkma", "orta", ""],
-      [7, "حِدَاد", "ḥidād", "karşı çıkma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [8, "حُدَاد", "ḥudād", "karşı çıkma", "orta", ""],
+      [6, "حُدُود", "ḥudūd", "sınırlar", "kuran", "Kur'ân"],
+      [7, "حِدَاد", "ḥidād", "karşı çıkmadan kaçınma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [8, "حُدَاد", "ḥudād", "karşı çıkma illeti, karşı çıkma sesi", "orta", ""],
       [9, "حَدَاد", "ḥadād", "karşı çıkma", "orta", ""],
-      [10, "حَدَادَة", "ḥadāda", "karşı çıkma", "orta", ""],
-      [11, "حُدُودَة", "ḥudūda", "karşı çıkma", "orta", ""],
-      [12, "حِدَادَة", "ḥidāda", "karşı çıkma", "orta", ""],
-      [13, "حَدِيد", "ḥadīd", "karşı çıkma", "orta", "Vikisözlük: armor, helmet"],
+      [10, "حَدَادَة", "ḥadāda", "karşı çıkma vasfı", "orta", ""],
+      [11, "حُدُودَة", "ḥudūda", "karşı çıkma vasfı", "orta", ""],
+      [12, "حِدَادَة", "ḥidāda", "karşı çıkma vazifesi, karşı çıkma işi", "orta", ""],
+      [13, "حَدِيد", "ḥadīd", "demir", "kuran", "Vikisözlük: armor, helmet"],
       [14, "حَدُود", "ḥadūd", "karşı çıkma", "orta", ""],
-      [15, "حَدَّان", "ḥaddān", "karşı çıkma", "orta", ""],
+      [15, "حَدَّان", "ḥaddān", "karşı çıkma çalkantısı, coşarak karşı çıkma", "orta", ""],
       [16, "حُدَّان", "ḥuddān", "karşı çıkma", "orta", ""],
       [17, "حِدَّان", "ḥiddān", "karşı çıkma", "orta", ""],
       [18, "حَدَّى", "ḥaddā", "karşı çıkma", "orta", ""],
@@ -32,11 +32,11 @@
       [21, "حَدَّة", "ḥadda", "karşı çıkma", "orta", ""],
       [22, "حِدَّة", "ḥidda", "karşı çıkma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
       [23, "حَدُّودَة", "ḥaddūda", "karşı çıkma", "orta", ""],
-      [24, "تُحْدُود", "tuḥdūd", "karşı çıkma", "orta", ""],
-      [25, "تَحِدَّة", "taḥidda", "karşı çıkma", "orta", ""],
-      [26, "تَحَدَّة", "taḥadda", "karşı çıkma", "orta", ""],
-      [27, "مَحُدَّة", "maḥudda", "karşı çıkma", "orta", ""],
-      [28, "مَحِدَّة", "maḥidda", "karşı çıkma", "orta", ""]
+      [24, "تُحْدُود", "tuḥdūd", "tekrar tekrar karşı çıkma", "orta", ""],
+      [25, "تَحِدَّة", "taḥidda", "tekrar tekrar karşı çıkma", "orta", ""],
+      [26, "تَحَدَّة", "taḥadda", "tekrar tekrar karşı çıkma", "orta", ""],
+      [27, "مَحُدَّة", "maḥudda", "karşı çıkma sebebi", "orta", ""],
+      [28, "مَحِدَّة", "maḥidda", "karşı çıkma sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
       [29, "تَحْدِيد", "taḥdīd", "karşı çıktırma", "orta", "Vikisözlük: masdar (bâb II): to sharpen"],
@@ -49,52 +49,59 @@
     ],
     "ism-i fâil · bâb II": [
       [34, "مُحَدِّد", "muḥaddid", "karşı çıktıran", "orta", "Vikisözlük: active participle of حَدَّدَ (ḥaddada)"],
-      [35, "مُحَدِّدَة", "muḥaddida", "karşı çıktıran (dişi)", "orta", ""],
-      [36, "مُحَدِّدَان", "muḥaddidān", "iki karşı çıktıran", "orta", ""],
-      [37, "مُحَدِّدَتَان", "muḥaddidatān", "iki karşı çıktıran (dişi)", "orta", ""],
+      [35, "مُحَدِّدَة", "muḥaddida", "karşı çıktıran (müennes)", "orta", ""],
+      [36, "مُحَدِّدَان", "muḥaddidān", "karşı çıktıran (iki)", "orta", ""],
+      [37, "مُحَدِّدَتَان", "muḥaddidatān", "karşı çıktıran (iki, müennes)", "orta", ""],
       [38, "مُحَدِّدُون", "muḥaddidūn", "karşı çıktıranlar", "orta", ""],
       [39, "مُحَدِّدِين", "muḥaddidīn", "karşı çıktıranlar", "orta", ""],
-      [40, "مُحَدِّدَات", "muḥaddidāt", "karşı çıktıranlar (dişi)", "orta", ""]
+      [40, "مُحَدِّدَات", "muḥaddidāt", "karşı çıktıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُحَدَّد", "muḥaddad", "karşı çıktırılmış", "orta", ""],
-      [42, "مُحَدَّدَة", "muḥaddada", "karşı çıktırılmış (dişi)", "orta", ""],
-      [43, "مُحَدَّدَان", "muḥaddadān", "iki karşı çıktırılmış", "orta", ""],
-      [44, "مُحَدَّدَتَان", "muḥaddadatān", "iki karşı çıktırılmış (dişi)", "orta", ""],
-      [45, "مُحَدَّدُون", "muḥaddadūn", "karşı çıktırılmışlar", "orta", ""],
-      [46, "مُحَدَّدِين", "muḥaddadīn", "karşı çıktırılmışlar", "orta", ""],
-      [47, "مُحَدَّدَات", "muḥaddadāt", "karşı çıktırılmışlar (dişi)", "orta", ""]
+      [41, "مُحَدَّد", "muḥaddad", "karşı çıktırılan", "orta", ""],
+      [42, "مُحَدَّدَة", "muḥaddada", "karşı çıktırılan (müennes)", "orta", ""],
+      [43, "مُحَدَّدَان", "muḥaddadān", "karşı çıktırılan (iki)", "orta", ""],
+      [44, "مُحَدَّدَتَان", "muḥaddadatān", "karşı çıktırılan (iki, müennes)", "orta", ""],
+      [45, "مُحَدَّدُون", "muḥaddadūn", "karşı çıktırılanlar", "orta", ""],
+      [46, "مُحَدَّدِين", "muḥaddadīn", "karşı çıktırılanlar", "orta", ""],
+      [47, "مُحَدَّدَات", "muḥaddadāt", "karşı çıktırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُحَدَّد", "muḥaddad", "karşı çıktırma (yeri/zamanı)", "orta", ""]
+      [48, "مُحَدَّد", "muḥaddad", "karşı çıktırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُحَادَّة", "muḥādda", "karşı çıkışma", "orta", ""],
-      [50, "حِدَاد", "ḥidād", "karşı çıkışma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"]
+      [49, "مُحَادَّة", "muḥādda", "biriyle karşılıklı karşı çıkma", "orta", ""],
+      [
+        50,
+        "حِدَاد",
+        "ḥidād",
+        "biriyle karşılıklı karşı çıkma",
+        "orta",
+        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
+      ]
     ],
     "ism-i merre · bâb III": [
-      [51, "حِدَادَة", "ḥidāda", "bir kere karşı çıkışma", "orta", ""]
+      [51, "حِدَادَة", "ḥidāda", "bir kere biriyle karşılıklı karşı çıkma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُحَادّ", "muḥādd", "karşı çıkışan", "orta", ""],
-      [53, "مُحَادَّة", "muḥādda", "karşı çıkışan (dişi)", "orta", ""],
-      [54, "مُحَادَّان", "muḥāddān", "iki karşı çıkışan", "orta", ""],
-      [55, "مُحَادَّتَان", "muḥāddatān", "iki karşı çıkışan (dişi)", "orta", ""],
-      [56, "مُحَادُّون", "muḥāddūn", "karşı çıkışanlar", "orta", ""],
-      [57, "مُحَادِّين", "muḥāddīn", "karşı çıkışanlar", "orta", ""],
-      [58, "مُحَادَّات", "muḥāddāt", "karşı çıkışanlar (dişi)", "orta", ""]
+      [52, "مُحَادّ", "muḥādd", "biriyle karşılıklı karşı çıkan", "orta", ""],
+      [53, "مُحَادَّة", "muḥādda", "biriyle karşılıklı karşı çıkan (müennes)", "orta", ""],
+      [54, "مُحَادَّان", "muḥāddān", "biriyle karşılıklı karşı çıkan (iki)", "orta", ""],
+      [55, "مُحَادَّتَان", "muḥāddatān", "biriyle karşılıklı karşı çıkan (iki, müennes)", "orta", ""],
+      [56, "مُحَادُّون", "muḥāddūn", "biriyle karşılıklı karşı çıkanlar", "orta", ""],
+      [57, "مُحَادِّين", "muḥāddīn", "biriyle karşılıklı karşı çıkanlar", "orta", ""],
+      [58, "مُحَادَّات", "muḥāddāt", "biriyle karşılıklı karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُحَادّ", "muḥādd", "karşı çıkışmış", "orta", ""],
-      [60, "مُحَادَّة", "muḥādda", "karşı çıkışmış (dişi)", "orta", ""],
-      [61, "مُحَادَّان", "muḥāddān", "iki karşı çıkışmış", "orta", ""],
-      [62, "مُحَادَّتَان", "muḥāddatān", "iki karşı çıkışmış (dişi)", "orta", ""],
-      [63, "مُحَادُّون", "muḥāddūn", "karşı çıkışmışlar", "orta", ""],
-      [64, "مُحَادِّين", "muḥāddīn", "karşı çıkışmışlar", "orta", ""],
-      [65, "مُحَادَّات", "muḥāddāt", "karşı çıkışmışlar (dişi)", "orta", ""]
+      [59, "مُحَادّ", "muḥādd", "biriyle karşılıklı karşı çıkılan", "orta", ""],
+      [60, "مُحَادَّة", "muḥādda", "biriyle karşılıklı karşı çıkılan (müennes)", "orta", ""],
+      [61, "مُحَادَّان", "muḥāddān", "biriyle karşılıklı karşı çıkılan (iki)", "orta", ""],
+      [62, "مُحَادَّتَان", "muḥāddatān", "biriyle karşılıklı karşı çıkılan (iki, müennes)", "orta", ""],
+      [63, "مُحَادُّون", "muḥāddūn", "biriyle karşılıklı karşı çıkılanlar", "orta", ""],
+      [64, "مُحَادِّين", "muḥāddīn", "biriyle karşılıklı karşı çıkılanlar", "orta", ""],
+      [65, "مُحَادَّات", "muḥāddāt", "biriyle karşılıklı karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُحَادّ", "muḥādd", "karşı çıkışma (yeri/zamanı)", "orta", ""]
+      [66, "مُحَادّ", "muḥādd", "biriyle karşılıklı karşı çıkma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
       [67, "إِحْدَاد", "ʾiḥdād", "karşı çıktırma", "orta", "Vikisözlük: masdar (bâb IV): to sharpen"]
@@ -104,190 +111,190 @@
     ],
     "ism-i fâil · bâb IV": [
       [69, "مُحِدّ", "muḥidd", "karşı çıktıran", "orta", ""],
-      [70, "مُحِدَّة", "muḥidda", "karşı çıktıran (dişi)", "orta", ""],
-      [71, "مُحِدَّان", "muḥiddān", "iki karşı çıktıran", "orta", ""],
-      [72, "مُحِدَّتَان", "muḥiddatān", "iki karşı çıktıran (dişi)", "orta", ""],
+      [70, "مُحِدَّة", "muḥidda", "karşı çıktıran (müennes)", "orta", ""],
+      [71, "مُحِدَّان", "muḥiddān", "karşı çıktıran (iki)", "orta", ""],
+      [72, "مُحِدَّتَان", "muḥiddatān", "karşı çıktıran (iki, müennes)", "orta", ""],
       [73, "مُحِدُّون", "muḥiddūn", "karşı çıktıranlar", "orta", ""],
       [74, "مُحِدِّين", "muḥiddīn", "karşı çıktıranlar", "orta", ""],
-      [75, "مُحِدَّات", "muḥiddāt", "karşı çıktıranlar (dişi)", "orta", ""]
+      [75, "مُحِدَّات", "muḥiddāt", "karşı çıktıranlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُحَدّ", "muḥadd", "karşı çıktırılmış", "orta", ""],
-      [77, "مُحَدَّة", "muḥadda", "karşı çıktırılmış (dişi)", "orta", ""],
-      [78, "مُحَدَّان", "muḥaddān", "iki karşı çıktırılmış", "orta", ""],
-      [79, "مُحَدَّتَان", "muḥaddatān", "iki karşı çıktırılmış (dişi)", "orta", ""],
-      [80, "مُحَدُّون", "muḥaddūn", "karşı çıktırılmışlar", "orta", ""],
-      [81, "مُحَدِّين", "muḥaddīn", "karşı çıktırılmışlar", "orta", ""],
-      [82, "مُحَدَّات", "muḥaddāt", "karşı çıktırılmışlar (dişi)", "orta", ""]
+      [76, "مُحَدّ", "muḥadd", "karşı çıktırılan", "orta", ""],
+      [77, "مُحَدَّة", "muḥadda", "karşı çıktırılan (müennes)", "orta", ""],
+      [78, "مُحَدَّان", "muḥaddān", "karşı çıktırılan (iki)", "orta", ""],
+      [79, "مُحَدَّتَان", "muḥaddatān", "karşı çıktırılan (iki, müennes)", "orta", ""],
+      [80, "مُحَدُّون", "muḥaddūn", "karşı çıktırılanlar", "orta", ""],
+      [81, "مُحَدِّين", "muḥaddīn", "karşı çıktırılanlar", "orta", ""],
+      [82, "مُحَدَّات", "muḥaddāt", "karşı çıktırılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُحَدّ", "muḥadd", "karşı çıktırma (yeri/zamanı)", "orta", ""]
+      [83, "مُحَدّ", "muḥadd", "karşı çıktırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَحَدُّد", "taḥaddud", "karşı çıkma", "orta", ""]
+      [84, "تَحَدُّد", "taḥaddud", "kendini zorlayarak karşı çıkma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَحَدُّدَة", "taḥadduda", "bir kere karşı çıkma", "orta", ""]
+      [85, "تَحَدُّدَة", "taḥadduda", "bir kere kendini zorlayarak karşı çıkma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَحَدِّد", "mutaḥaddid", "karşı çıkan", "orta", ""],
-      [87, "مُتَحَدِّدَة", "mutaḥaddida", "karşı çıkan (dişi)", "orta", ""],
-      [88, "مُتَحَدِّدَان", "mutaḥaddidān", "iki karşı çıkan", "orta", ""],
-      [89, "مُتَحَدِّدَتَان", "mutaḥaddidatān", "iki karşı çıkan (dişi)", "orta", ""],
-      [90, "مُتَحَدِّدُون", "mutaḥaddidūn", "karşı çıkanlar", "orta", ""],
-      [91, "مُتَحَدِّدِين", "mutaḥaddidīn", "karşı çıkanlar", "orta", ""],
-      [92, "مُتَحَدِّدَات", "mutaḥaddidāt", "karşı çıkanlar (dişi)", "orta", ""]
+      [86, "مُتَحَدِّد", "mutaḥaddid", "kendini zorlayarak karşı çıkan", "orta", ""],
+      [87, "مُتَحَدِّدَة", "mutaḥaddida", "kendini zorlayarak karşı çıkan (müennes)", "orta", ""],
+      [88, "مُتَحَدِّدَان", "mutaḥaddidān", "kendini zorlayarak karşı çıkan (iki)", "orta", ""],
+      [89, "مُتَحَدِّدَتَان", "mutaḥaddidatān", "kendini zorlayarak karşı çıkan (iki, müennes)", "orta", ""],
+      [90, "مُتَحَدِّدُون", "mutaḥaddidūn", "kendini zorlayarak karşı çıkanlar", "orta", ""],
+      [91, "مُتَحَدِّدِين", "mutaḥaddidīn", "kendini zorlayarak karşı çıkanlar", "orta", ""],
+      [92, "مُتَحَدِّدَات", "mutaḥaddidāt", "kendini zorlayarak karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَحَدَّد", "mutaḥaddad", "karşı çıkmış", "orta", ""],
-      [94, "مُتَحَدَّدَة", "mutaḥaddada", "karşı çıkmış (dişi)", "orta", ""],
-      [95, "مُتَحَدَّدَان", "mutaḥaddadān", "iki karşı çıkmış", "orta", ""],
-      [96, "مُتَحَدَّدَتَان", "mutaḥaddadatān", "iki karşı çıkmış (dişi)", "orta", ""],
-      [97, "مُتَحَدَّدُون", "mutaḥaddadūn", "karşı çıkmışlar", "orta", ""],
-      [98, "مُتَحَدَّدِين", "mutaḥaddadīn", "karşı çıkmışlar", "orta", ""],
-      [99, "مُتَحَدَّدَات", "mutaḥaddadāt", "karşı çıkmışlar (dişi)", "orta", ""]
+      [93, "مُتَحَدَّد", "mutaḥaddad", "kendini zorlayarak karşı çıkılan", "orta", ""],
+      [94, "مُتَحَدَّدَة", "mutaḥaddada", "kendini zorlayarak karşı çıkılan (müennes)", "orta", ""],
+      [95, "مُتَحَدَّدَان", "mutaḥaddadān", "kendini zorlayarak karşı çıkılan (iki)", "orta", ""],
+      [96, "مُتَحَدَّدَتَان", "mutaḥaddadatān", "kendini zorlayarak karşı çıkılan (iki, müennes)", "orta", ""],
+      [97, "مُتَحَدَّدُون", "mutaḥaddadūn", "kendini zorlayarak karşı çıkılanlar", "orta", ""],
+      [98, "مُتَحَدَّدِين", "mutaḥaddadīn", "kendini zorlayarak karşı çıkılanlar", "orta", ""],
+      [99, "مُتَحَدَّدَات", "mutaḥaddadāt", "kendini zorlayarak karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَحَدَّد", "mutaḥaddad", "karşı çıkma (yeri/zamanı)", "orta", ""]
+      [100, "مُتَحَدَّد", "mutaḥaddad", "kendini zorlayarak karşı çıkma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَحَادّ", "taḥādd", "karşı çıkışma", "orta", ""]
+      [101, "تَحَادّ", "taḥādd", "hep birlikte karşı çıkma", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَحَادَّة", "taḥādda", "bir kere karşı çıkışma", "orta", ""]
+      [102, "تَحَادَّة", "taḥādda", "bir kere hep birlikte karşı çıkma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَحَادّ", "mutaḥādd", "karşı çıkışan", "orta", ""],
-      [104, "مُتَحَادَّة", "mutaḥādda", "karşı çıkışan (dişi)", "orta", ""],
-      [105, "مُتَحَادَّان", "mutaḥāddān", "iki karşı çıkışan", "orta", ""],
-      [106, "مُتَحَادَّتَان", "mutaḥāddatān", "iki karşı çıkışan (dişi)", "orta", ""],
-      [107, "مُتَحَادُّون", "mutaḥāddūn", "karşı çıkışanlar", "orta", ""],
-      [108, "مُتَحَادِّين", "mutaḥāddīn", "karşı çıkışanlar", "orta", ""],
-      [109, "مُتَحَادَّات", "mutaḥāddāt", "karşı çıkışanlar (dişi)", "orta", ""]
+      [103, "مُتَحَادّ", "mutaḥādd", "hep birlikte karşı çıkan", "orta", ""],
+      [104, "مُتَحَادَّة", "mutaḥādda", "hep birlikte karşı çıkan (müennes)", "orta", ""],
+      [105, "مُتَحَادَّان", "mutaḥāddān", "hep birlikte karşı çıkan (iki)", "orta", ""],
+      [106, "مُتَحَادَّتَان", "mutaḥāddatān", "hep birlikte karşı çıkan (iki, müennes)", "orta", ""],
+      [107, "مُتَحَادُّون", "mutaḥāddūn", "hep birlikte karşı çıkanlar", "orta", ""],
+      [108, "مُتَحَادِّين", "mutaḥāddīn", "hep birlikte karşı çıkanlar", "orta", ""],
+      [109, "مُتَحَادَّات", "mutaḥāddāt", "hep birlikte karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَحَادّ", "mutaḥādd", "karşı çıkışmış", "orta", ""],
-      [111, "مُتَحَادَّة", "mutaḥādda", "karşı çıkışmış (dişi)", "orta", ""],
-      [112, "مُتَحَادَّان", "mutaḥāddān", "iki karşı çıkışmış", "orta", ""],
-      [113, "مُتَحَادَّتَان", "mutaḥāddatān", "iki karşı çıkışmış (dişi)", "orta", ""],
-      [114, "مُتَحَادُّون", "mutaḥāddūn", "karşı çıkışmışlar", "orta", ""],
-      [115, "مُتَحَادِّين", "mutaḥāddīn", "karşı çıkışmışlar", "orta", ""],
-      [116, "مُتَحَادَّات", "mutaḥāddāt", "karşı çıkışmışlar (dişi)", "orta", ""]
+      [110, "مُتَحَادّ", "mutaḥādd", "hep birlikte karşı çıkılan", "orta", ""],
+      [111, "مُتَحَادَّة", "mutaḥādda", "hep birlikte karşı çıkılan (müennes)", "orta", ""],
+      [112, "مُتَحَادَّان", "mutaḥāddān", "hep birlikte karşı çıkılan (iki)", "orta", ""],
+      [113, "مُتَحَادَّتَان", "mutaḥāddatān", "hep birlikte karşı çıkılan (iki, müennes)", "orta", ""],
+      [114, "مُتَحَادُّون", "mutaḥāddūn", "hep birlikte karşı çıkılanlar", "orta", ""],
+      [115, "مُتَحَادِّين", "mutaḥāddīn", "hep birlikte karşı çıkılanlar", "orta", ""],
+      [116, "مُتَحَادَّات", "mutaḥāddāt", "hep birlikte karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَحَادّ", "mutaḥādd", "karşı çıkışma (yeri/zamanı)", "orta", ""]
+      [117, "مُتَحَادّ", "mutaḥādd", "hep birlikte karşı çıkma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْحِدَاد", "inḥidād", "karşı çıkma", "orta", ""]
+      [118, "اِنْحِدَاد", "inḥidād", "kendiliğinden karşı çıkma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْحِدَادَة", "inḥidāda", "bir kere karşı çıkma", "orta", ""]
+      [119, "اِنْحِدَادَة", "inḥidāda", "bir kere kendiliğinden karşı çıkma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْحَدّ", "munḥadd", "karşı çıkan", "orta", ""],
-      [121, "مُنْحَدَّة", "munḥadda", "karşı çıkan (dişi)", "orta", ""],
-      [122, "مُنْحَدَّان", "munḥaddān", "iki karşı çıkan", "orta", ""],
-      [123, "مُنْحَدَّتَان", "munḥaddatān", "iki karşı çıkan (dişi)", "orta", ""],
-      [124, "مُنْحَدُّون", "munḥaddūn", "karşı çıkanlar", "orta", ""],
-      [125, "مُنْحَدِّين", "munḥaddīn", "karşı çıkanlar", "orta", ""],
-      [126, "مُنْحَدَّات", "munḥaddāt", "karşı çıkanlar (dişi)", "orta", ""]
+      [120, "مُنْحَدّ", "munḥadd", "kendiliğinden karşı çıkan", "orta", ""],
+      [121, "مُنْحَدَّة", "munḥadda", "kendiliğinden karşı çıkan (müennes)", "orta", ""],
+      [122, "مُنْحَدَّان", "munḥaddān", "kendiliğinden karşı çıkan (iki)", "orta", ""],
+      [123, "مُنْحَدَّتَان", "munḥaddatān", "kendiliğinden karşı çıkan (iki, müennes)", "orta", ""],
+      [124, "مُنْحَدُّون", "munḥaddūn", "kendiliğinden karşı çıkanlar", "orta", ""],
+      [125, "مُنْحَدِّين", "munḥaddīn", "kendiliğinden karşı çıkanlar", "orta", ""],
+      [126, "مُنْحَدَّات", "munḥaddāt", "kendiliğinden karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْحَدّ", "munḥadd", "karşı çıkmış", "orta", ""],
-      [128, "مُنْحَدَّة", "munḥadda", "karşı çıkmış (dişi)", "orta", ""],
-      [129, "مُنْحَدَّان", "munḥaddān", "iki karşı çıkmış", "orta", ""],
-      [130, "مُنْحَدَّتَان", "munḥaddatān", "iki karşı çıkmış (dişi)", "orta", ""],
-      [131, "مُنْحَدُّون", "munḥaddūn", "karşı çıkmışlar", "orta", ""],
-      [132, "مُنْحَدِّين", "munḥaddīn", "karşı çıkmışlar", "orta", ""],
-      [133, "مُنْحَدَّات", "munḥaddāt", "karşı çıkmışlar (dişi)", "orta", ""]
+      [127, "مُنْحَدّ", "munḥadd", "kendiliğinden karşı çıkılan", "orta", ""],
+      [128, "مُنْحَدَّة", "munḥadda", "kendiliğinden karşı çıkılan (müennes)", "orta", ""],
+      [129, "مُنْحَدَّان", "munḥaddān", "kendiliğinden karşı çıkılan (iki)", "orta", ""],
+      [130, "مُنْحَدَّتَان", "munḥaddatān", "kendiliğinden karşı çıkılan (iki, müennes)", "orta", ""],
+      [131, "مُنْحَدُّون", "munḥaddūn", "kendiliğinden karşı çıkılanlar", "orta", ""],
+      [132, "مُنْحَدِّين", "munḥaddīn", "kendiliğinden karşı çıkılanlar", "orta", ""],
+      [133, "مُنْحَدَّات", "munḥaddāt", "kendiliğinden karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْحَدّ", "munḥadd", "karşı çıkma (yeri/zamanı)", "orta", ""]
+      [134, "مُنْحَدّ", "munḥadd", "kendiliğinden karşı çıkma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
       [
         135,
         "اِحْتِدَاد",
         "iḥtidād",
-        "karşı çıkma",
+        "kendisi için karşı çıkma",
         "orta",
         "Vikisözlük: masdar (bâb VIII): to become heated, to become passionate, to collect affections, to be e"
       ]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِحْتِدَادَة", "iḥtidāda", "bir kere karşı çıkma", "orta", ""]
+      [137, "اِحْتِدَادَة", "iḥtidāda", "bir kere kendisi için karşı çıkma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُحْتَدّ", "muḥtadd", "karşı çıkan", "orta", ""],
-      [139, "مُحْتَدَّة", "muḥtadda", "karşı çıkan (dişi)", "orta", ""],
-      [140, "مُحْتَدَّان", "muḥtaddān", "iki karşı çıkan", "orta", ""],
-      [141, "مُحْتَدَّتَان", "muḥtaddatān", "iki karşı çıkan (dişi)", "orta", ""],
-      [142, "مُحْتَدُّون", "muḥtaddūn", "karşı çıkanlar", "orta", ""],
-      [143, "مُحْتَدِّين", "muḥtaddīn", "karşı çıkanlar", "orta", ""],
-      [144, "مُحْتَدَّات", "muḥtaddāt", "karşı çıkanlar (dişi)", "orta", ""]
+      [138, "مُحْتَدّ", "muḥtadd", "kendisi için karşı çıkan", "orta", ""],
+      [139, "مُحْتَدَّة", "muḥtadda", "kendisi için karşı çıkan (müennes)", "orta", ""],
+      [140, "مُحْتَدَّان", "muḥtaddān", "kendisi için karşı çıkan (iki)", "orta", ""],
+      [141, "مُحْتَدَّتَان", "muḥtaddatān", "kendisi için karşı çıkan (iki, müennes)", "orta", ""],
+      [142, "مُحْتَدُّون", "muḥtaddūn", "kendisi için karşı çıkanlar", "orta", ""],
+      [143, "مُحْتَدِّين", "muḥtaddīn", "kendisi için karşı çıkanlar", "orta", ""],
+      [144, "مُحْتَدَّات", "muḥtaddāt", "kendisi için karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُحْتَدّ", "muḥtadd", "karşı çıkmış", "orta", ""],
-      [146, "مُحْتَدَّة", "muḥtadda", "karşı çıkmış (dişi)", "orta", ""],
-      [147, "مُحْتَدَّان", "muḥtaddān", "iki karşı çıkmış", "orta", ""],
-      [148, "مُحْتَدَّتَان", "muḥtaddatān", "iki karşı çıkmış (dişi)", "orta", ""],
-      [149, "مُحْتَدُّون", "muḥtaddūn", "karşı çıkmışlar", "orta", ""],
-      [150, "مُحْتَدِّين", "muḥtaddīn", "karşı çıkmışlar", "orta", ""],
-      [151, "مُحْتَدَّات", "muḥtaddāt", "karşı çıkmışlar (dişi)", "orta", ""]
+      [145, "مُحْتَدّ", "muḥtadd", "kendisi için karşı çıkılan", "orta", ""],
+      [146, "مُحْتَدَّة", "muḥtadda", "kendisi için karşı çıkılan (müennes)", "orta", ""],
+      [147, "مُحْتَدَّان", "muḥtaddān", "kendisi için karşı çıkılan (iki)", "orta", ""],
+      [148, "مُحْتَدَّتَان", "muḥtaddatān", "kendisi için karşı çıkılan (iki, müennes)", "orta", ""],
+      [149, "مُحْتَدُّون", "muḥtaddūn", "kendisi için karşı çıkılanlar", "orta", ""],
+      [150, "مُحْتَدِّين", "muḥtaddīn", "kendisi için karşı çıkılanlar", "orta", ""],
+      [151, "مُحْتَدَّات", "muḥtaddāt", "kendisi için karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُحْتَدّ", "muḥtadd", "karşı çıkma (yeri/zamanı)", "orta", ""]
+      [152, "مُحْتَدّ", "muḥtadd", "kendisi için karşı çıkma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِحْدِدَاد", "iḥdidād", "karşı çıklaşma", "kontrol", ""]
+      [168, "اِحْدِدَاد", "iḥdidād", "iyiden iyiye karşı çıkma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُحْدَدّ", "muḥdadd", "karşı çıklaşan", "kontrol", ""],
-      [170, "مُحْدَدَّة", "muḥdadda", "karşı çıklaşan (dişi)", "kontrol", ""],
-      [171, "مُحْدَدَّان", "muḥdaddān", "iki karşı çıklaşan", "kontrol", ""],
-      [172, "مُحْدَدَّتَان", "muḥdaddatān", "iki karşı çıklaşan (dişi)", "kontrol", ""],
-      [173, "مُحْدَدُّون", "muḥdaddūn", "karşı çıklaşanlar", "kontrol", ""],
-      [174, "مُحْدَدِّين", "muḥdaddīn", "karşı çıklaşanlar", "kontrol", ""],
-      [175, "مُحْدَدَّات", "muḥdaddāt", "karşı çıklaşanlar (dişi)", "kontrol", ""]
+      [169, "مُحْدَدّ", "muḥdadd", "iyiden iyiye karşı çıkan", "kontrol", ""],
+      [170, "مُحْدَدَّة", "muḥdadda", "iyiden iyiye karşı çıkan (müennes)", "kontrol", ""],
+      [171, "مُحْدَدَّان", "muḥdaddān", "iyiden iyiye karşı çıkan (iki)", "kontrol", ""],
+      [172, "مُحْدَدَّتَان", "muḥdaddatān", "iyiden iyiye karşı çıkan (iki, müennes)", "kontrol", ""],
+      [173, "مُحْدَدُّون", "muḥdaddūn", "iyiden iyiye karşı çıkanlar", "kontrol", ""],
+      [174, "مُحْدَدِّين", "muḥdaddīn", "iyiden iyiye karşı çıkanlar", "kontrol", ""],
+      [175, "مُحْدَدَّات", "muḥdaddāt", "iyiden iyiye karşı çıkanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِحْدَاد", "istiḥdād", "karşı çıkmayı isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِحْدَادَة", "istiḥdāda", "bir kere karşı çıkma", "orta", ""]
+      [177, "اِسْتِحْدَادَة", "istiḥdāda", "bir kere karşı çıkmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَحِدّ", "mustaḥidd", "karşı çıkmayı isteyen", "orta", ""],
-      [179, "مُسْتَحِدَّة", "mustaḥidda", "karşı çıkmayı isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَحِدَّان", "mustaḥiddān", "iki karşı çıkmayı isteyen", "orta", ""],
-      [181, "مُسْتَحِدَّتَان", "mustaḥiddatān", "iki karşı çıkmayı isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَحِدَّة", "mustaḥidda", "karşı çıkmayı isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَحِدَّان", "mustaḥiddān", "karşı çıkmayı isteyen (iki)", "orta", ""],
+      [181, "مُسْتَحِدَّتَان", "mustaḥiddatān", "karşı çıkmayı isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَحِدُّون", "mustaḥiddūn", "karşı çıkmayı isteyenler", "orta", ""],
       [183, "مُسْتَحِدِّين", "mustaḥiddīn", "karşı çıkmayı isteyenler", "orta", ""],
-      [184, "مُسْتَحِدَّات", "mustaḥiddāt", "karşı çıkmayı isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَحِدَّات", "mustaḥiddāt", "karşı çıkmayı isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَحَدّ", "mustaḥadd", "karşı çıkmayı istenen", "orta", ""],
-      [186, "مُسْتَحَدَّة", "mustaḥadda", "karşı çıkmayı istenen (dişi)", "orta", ""],
-      [187, "مُسْتَحَدَّان", "mustaḥaddān", "iki karşı çıkmayı istenen", "orta", ""],
-      [188, "مُسْتَحَدَّتَان", "mustaḥaddatān", "iki karşı çıkmayı istenen (dişi)", "orta", ""],
-      [189, "مُسْتَحَدُّون", "mustaḥaddūn", "karşı çıkmayı istenenler", "orta", ""],
-      [190, "مُسْتَحَدِّين", "mustaḥaddīn", "karşı çıkmayı istenenler", "orta", ""],
-      [191, "مُسْتَحَدَّات", "mustaḥaddāt", "karşı çıkmayı istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَحَدّ", "mustaḥadd", "karşı çıkması istenen", "orta", ""],
+      [186, "مُسْتَحَدَّة", "mustaḥadda", "karşı çıkması istenen (müennes)", "orta", ""],
+      [187, "مُسْتَحَدَّان", "mustaḥaddān", "karşı çıkması istenen (iki)", "orta", ""],
+      [188, "مُسْتَحَدَّتَان", "mustaḥaddatān", "karşı çıkması istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَحَدُّون", "mustaḥaddūn", "karşı çıkması istenenler", "orta", ""],
+      [190, "مُسْتَحَدِّين", "mustaḥaddīn", "karşı çıkması istenenler", "orta", ""],
+      [191, "مُسْتَحَدَّات", "mustaḥaddāt", "karşı çıkması istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَحَدّ", "mustaḥadd", "karşı çıkma (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَحَدّ", "mustaḥadd", "karşı çıkmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِحْدِيدَاد", "iḥdīdād", "iyice karşı çıklaşma", "kontrol", ""]
+      [193, "اِحْدِيدَاد", "iḥdīdād", "büsbütün karşı çıkma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُحْدَادّ", "muḥdādd", "iyice karşı çıklaşan", "kontrol", ""],
-      [195, "مُحْدَادَّة", "muḥdādda", "iyice karşı çıklaşan (dişi)", "kontrol", ""],
-      [196, "مُحْدَادَّان", "muḥdāddān", "iki iyice karşı çıklaşan", "kontrol", ""],
-      [197, "مُحْدَادَّتَان", "muḥdāddatān", "iki iyice karşı çıklaşan (dişi)", "kontrol", ""],
-      [198, "مُحْدَادُّون", "muḥdāddūn", "iyice karşı çıklaşanlar", "kontrol", ""],
-      [199, "مُحْدَادِّين", "muḥdāddīn", "iyice karşı çıklaşanlar", "kontrol", ""],
-      [200, "مُحْدَادَّات", "muḥdāddāt", "iyice karşı çıklaşanlar (dişi)", "kontrol", ""]
+      [194, "مُحْدَادّ", "muḥdādd", "büsbütün karşı çıkan", "kontrol", ""],
+      [195, "مُحْدَادَّة", "muḥdādda", "büsbütün karşı çıkan (müennes)", "kontrol", ""],
+      [196, "مُحْدَادَّان", "muḥdāddān", "büsbütün karşı çıkan (iki)", "kontrol", ""],
+      [197, "مُحْدَادَّتَان", "muḥdāddatān", "büsbütün karşı çıkan (iki, müennes)", "kontrol", ""],
+      [198, "مُحْدَادُّون", "muḥdāddūn", "büsbütün karşı çıkanlar", "kontrol", ""],
+      [199, "مُحْدَادِّين", "muḥdāddīn", "büsbütün karşı çıkanlar", "kontrol", ""],
+      [200, "مُحْدَادَّات", "muḥdāddāt", "büsbütün karşı çıkanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
       [201, "اِحْدِوْدَاد", "iḥdiwdād", "aşırı karşı çıkma", "orta", ""]
@@ -303,7 +310,7 @@
       [205, "مُحَدْحِد", "muḥadḥid", "ardı ardına karşı çıkan", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mücerred": [
-      [206, "مُحَدْحَد", "muḥadḥad", "ardı ardına karşı çıkmış", "orta", ""]
+      [206, "مُحَدْحَد", "muḥadḥad", "ardı ardına karşı çıkılan", "orta", ""]
     ],
     "masdar · Rubâ‘î mutâvaa": [
       [207, "تَحَدْحُد", "taḥadḥud", "ardı ardına karşı çıkma", "orta", ""]
@@ -312,7 +319,7 @@
       [208, "مُتَحَدْحِد", "mutaḥadḥid", "ardı ardına karşı çıkan", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mutâvaa": [
-      [209, "مُتَحَدْحَد", "mutaḥadḥad", "ardı ardına karşı çıkmış", "orta", ""]
+      [209, "مُتَحَدْحَد", "mutaḥadḥad", "ardı ardına karşı çıkılan", "orta", ""]
     ],
     "masdar · Rubâ‘î mezîd": [
       [210, "اِحْدِنْحَاد", "iḥdinḥād", "ardı ardına karşı çıkma", "orta", ""]
@@ -321,228 +328,228 @@
       [211, "مُحْدَنْحِد", "muḥdanḥid", "ardı ardına karşı çıkan", "orta", ""]
     ],
     "ism-i mef‘ûl · Rubâ‘î mezîd": [
-      [212, "مُحْدَنْحَد", "muḥdanḥad", "ardı ardına karşı çıkmış", "orta", ""]
+      [212, "مُحْدَنْحَد", "muḥdanḥad", "ardı ardına karşı çıkılan", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
       [213, "حَادّ", "ḥādd", "karşı çıkan", "orta", "Vikisözlük: sharp, pointed"],
-      [214, "حَادَّة", "ḥādda", "karşı çıkan (dişi)", "orta", ""],
-      [215, "حَادَّان", "ḥāddān", "iki karşı çıkan", "orta", ""],
-      [216, "حَادَّتَان", "ḥāddatān", "iki karşı çıkan (dişi)", "orta", ""],
+      [214, "حَادَّة", "ḥādda", "karşı çıkan (müennes)", "orta", ""],
+      [215, "حَادَّان", "ḥāddān", "karşı çıkan (iki)", "orta", ""],
+      [216, "حَادَّتَان", "ḥāddatān", "karşı çıkan (iki, müennes)", "orta", ""],
       [217, "حَادُّون", "ḥāddūn", "karşı çıkanlar", "orta", ""],
       [218, "حَادِّين", "ḥāddīn", "karşı çıkanlar", "orta", ""],
-      [219, "حَادَّات", "ḥāddāt", "karşı çıkanlar (dişi)", "orta", ""]
+      [219, "حَادَّات", "ḥāddāt", "karşı çıkanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَحْدُود", "maḥdūd", "karşı çıkmış", "orta", "Vikisözlük: bounded, bordered (by)"],
-      [221, "مَحْدُودَة", "maḥdūda", "karşı çıkmış (dişi)", "orta", ""],
-      [222, "مَحْدُودَان", "maḥdūdān", "iki karşı çıkmış", "orta", ""],
-      [223, "مَحْدُودَتَان", "maḥdūdatān", "iki karşı çıkmış (dişi)", "orta", ""],
-      [224, "مَحْدُودُون", "maḥdūdūn", "karşı çıkmışlar", "orta", ""],
-      [225, "مَحْدُودِين", "maḥdūdīn", "karşı çıkmışlar", "orta", ""],
-      [226, "مَحْدُودَات", "maḥdūdāt", "karşı çıkmışlar (dişi)", "orta", ""]
+      [220, "مَحْدُود", "maḥdūd", "karşı çıkılan", "orta", "Vikisözlük: bounded, bordered (by)"],
+      [221, "مَحْدُودَة", "maḥdūda", "karşı çıkılan (müennes)", "orta", ""],
+      [222, "مَحْدُودَان", "maḥdūdān", "karşı çıkılan (iki)", "orta", ""],
+      [223, "مَحْدُودَتَان", "maḥdūdatān", "karşı çıkılan (iki, müennes)", "orta", ""],
+      [224, "مَحْدُودُون", "maḥdūdūn", "karşı çıkılanlar", "orta", ""],
+      [225, "مَحْدُودِين", "maḥdūdīn", "karşı çıkılanlar", "orta", ""],
+      [226, "مَحْدُودَات", "maḥdūdāt", "karşı çıkılanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَحَدّ", "maḥadd", "karşı çıkma (yeri/zamanı)", "orta", ""],
-      [228, "مَحَدَّان", "maḥaddān", "iki karşı çıkma (yeri/zamanı)", "orta", ""],
-      [229, "مَحِدّ", "maḥidd", "karşı çıkma (yeri/zamanı)", "orta", ""],
-      [230, "مَحِدَّان", "maḥiddān", "iki karşı çıkma (yeri/zamanı)", "orta", ""],
-      [231, "مَحَدَّة", "maḥadda", "karşı çıkma (yeri/zamanı)", "orta", ""],
-      [232, "مَحَدَّتَان", "maḥaddatān", "iki karşı çıkma (yeri/zamanı)", "orta", ""],
-      [233, "مَحِدَّة", "maḥidda", "karşı çıkma (yeri/zamanı)", "orta", ""],
-      [234, "مَحِدَّتَان", "maḥiddatān", "iki karşı çıkma (yeri/zamanı)", "orta", ""],
-      [247, "مَحُدَّة", "maḥudda", "karşı çıkma (yeri/zamanı)", "orta", ""],
-      [248, "مَحُدَّتَان", "maḥuddatān", "iki karşı çıkma (yeri/zamanı)", "orta", ""]
+      [227, "مَحَدّ", "maḥadd", "karşı çıkma yeri, vakti", "orta", ""],
+      [228, "مَحَدَّان", "maḥaddān", "karşı çıkma yeri, vakti (iki)", "orta", ""],
+      [229, "مَحِدّ", "maḥidd", "karşı çıkma yeri, vakti", "orta", ""],
+      [230, "مَحِدَّان", "maḥiddān", "karşı çıkma yeri, vakti (iki)", "orta", ""],
+      [231, "مَحَدَّة", "maḥadda", "karşı çıkmanın bol olduğu yer", "orta", ""],
+      [232, "مَحَدَّتَان", "maḥaddatān", "karşı çıkmanın bol olduğu yer (iki)", "orta", ""],
+      [233, "مَحِدَّة", "maḥidda", "karşı çıkmanın bol olduğu yer", "orta", ""],
+      [234, "مَحِدَّتَان", "maḥiddatān", "karşı çıkmanın bol olduğu yer (iki)", "orta", ""],
+      [247, "مَحُدَّة", "maḥudda", "karşı çıkma yeri, vakti", "orta", ""],
+      [248, "مَحُدَّتَان", "maḥuddatān", "karşı çıkma yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِحَدّ", "miḥadd", "karşı çıkmaya yarayan araç", "orta", ""],
-      [236, "مِحَدَّان", "miḥaddān", "iki karşı çıkmaya yarayan araç", "orta", ""],
-      [237, "مِحْدَاد", "miḥdād", "karşı çıkmaya yarayan araç", "orta", ""],
-      [238, "مِحْدَادَان", "miḥdādān", "iki karşı çıkmaya yarayan araç", "orta", ""],
-      [239, "مِحَدَّة", "miḥadda", "karşı çıkmaya yarayan araç", "orta", ""],
-      [240, "مِحَدَّتَان", "miḥaddatān", "iki karşı çıkmaya yarayan araç", "orta", ""]
+      [235, "مِحَدّ", "miḥadd", "karşı çıkma âleti", "orta", ""],
+      [236, "مِحَدَّان", "miḥaddān", "karşı çıkma âleti (iki)", "orta", ""],
+      [237, "مِحْدَاد", "miḥdād", "karşı çıkma âleti", "orta", ""],
+      [238, "مِحْدَادَان", "miḥdādān", "karşı çıkma âleti (iki)", "orta", ""],
+      [239, "مِحَدَّة", "miḥadda", "karşı çıkma âleti", "orta", ""],
+      [240, "مِحَدَّتَان", "miḥaddatān", "karşı çıkma âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَحَدّ", "ʾaḥadd", "daha çok karşı çıkan", "orta", ""],
-      [242, "أَحَدَّان", "ʾaḥaddān", "iki daha çok karşı çıkan", "orta", ""]
+      [242, "أَحَدَّان", "ʾaḥaddān", "daha çok karşı çıkan (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "حُدَّى", "ḥuddā", "daha çok karşı çıkan", "orta", ""],
-      [244, "حُدَّيَان", "ḥuddayān", "iki daha çok karşı çıkan", "orta", ""],
+      [244, "حُدَّيَان", "ḥuddayān", "daha çok karşı çıkan (iki)", "orta", ""],
       [245, "حَدَّاء", "ḥaddāʾ", "daha çok karşı çıkan", "orta", ""],
-      [246, "حَدَّاآن", "ḥaddāʾān", "iki daha çok karşı çıkan", "orta", ""]
+      [246, "حَدَّاآن", "ḥaddāʾān", "daha çok karşı çıkan (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "حُدَيْد", "ḥudayd", "küçük karşı çıkma", "orta", ""],
-      [250, "حُدَيْدَان", "ḥudaydān", "iki küçük karşı çıkma", "orta", ""],
-      [251, "حُدَيْدَة", "ḥudayda", "küçük karşı çıkma", "orta", ""],
-      [252, "حُدَيْدَتَان", "ḥudaydatān", "iki küçük karşı çıkma", "orta", ""]
+      [249, "حُدَيْد", "ḥudayd", "azıcık karşı çıkma", "orta", ""],
+      [250, "حُدَيْدَان", "ḥudaydān", "azıcık karşı çıkma (iki)", "orta", ""],
+      [251, "حُدَيْدَة", "ḥudayda", "azıcık karşı çıkma", "orta", ""],
+      [252, "حُدَيْدَتَان", "ḥudaydatān", "azıcık karşı çıkma (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَحَدّ", "maḥadd", "karşı çıkma", "orta", ""],
-      [254, "مَحَدَّان", "maḥaddān", "iki karşı çıkma", "orta", ""]
+      [254, "مَحَدَّان", "maḥaddān", "karşı çıkma (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "حَدَّة", "ḥadda", "bir kere karşı çıkma", "orta", ""],
-      [256, "حَدَّتَان", "ḥaddatān", "iki bir kere karşı çıkma", "orta", ""]
+      [256, "حَدَّتَان", "ḥaddatān", "bir kere karşı çıkma (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "حِدَّة", "ḥidda", "karşı çıkma tarzı", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [258, "حِدَّتَان", "ḥiddatān", "iki karşı çıkma tarzı", "orta", ""]
+      [258, "حِدَّتَان", "ḥiddatān", "karşı çıkma tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "حَدِيد", "ḥadīd", "sürekli karşı çıkan", "orta", "Vikisözlük: armor, helmet"],
-      [260, "حَدِيدَة", "ḥadīda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [261, "حَدِيدَان", "ḥadīdān", "iki sürekli karşı çıkan", "orta", ""],
-      [262, "حَدِيدَتَان", "ḥadīdatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [263, "حَدِيدُون", "ḥadīdūn", "sürekli karşı çıkanlar", "orta", ""],
-      [264, "حَدِيدِين", "ḥadīdīn", "sürekli karşı çıkanlar", "orta", ""],
-      [265, "حَدِيدَات", "ḥadīdāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [266, "حَدُود", "ḥadūd", "sürekli karşı çıkan", "orta", ""],
-      [267, "حَدُودَة", "ḥadūda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [268, "حَدُودَان", "ḥadūdān", "iki sürekli karşı çıkan", "orta", ""],
-      [269, "حَدُودَتَان", "ḥadūdatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [270, "حَدُودُون", "ḥadūdūn", "sürekli karşı çıkanlar", "orta", ""],
-      [271, "حَدُودِين", "ḥadūdīn", "sürekli karşı çıkanlar", "orta", ""],
-      [272, "حَدُودَات", "ḥadūdāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [273, "حَدّ", "ḥadd", "sürekli karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [274, "حَدَّة", "ḥadda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [275, "حَدَّان", "ḥaddān", "iki sürekli karşı çıkan", "orta", ""],
-      [276, "حَدَّتَان", "ḥaddatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [277, "حَدُّون", "ḥaddūn", "sürekli karşı çıkanlar", "orta", ""],
-      [278, "حَدِّين", "ḥaddīn", "sürekli karşı çıkanlar", "orta", ""],
-      [279, "حَدَّات", "ḥaddāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [280, "حَدّ", "ḥadd", "sürekli karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [281, "حَدَّة", "ḥadda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [282, "حَدَّان", "ḥaddān", "iki sürekli karşı çıkan", "orta", ""],
-      [283, "حَدَّتَان", "ḥaddatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [284, "حَدُّون", "ḥaddūn", "sürekli karşı çıkanlar", "orta", ""],
-      [285, "حَدِّين", "ḥaddīn", "sürekli karşı çıkanlar", "orta", ""],
-      [286, "حَدَّات", "ḥaddāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [287, "حَدّ", "ḥadd", "sürekli karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [288, "حَدَّة", "ḥadda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [289, "حَدَّان", "ḥaddān", "iki sürekli karşı çıkan", "orta", ""],
-      [290, "حَدَّتَان", "ḥaddatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [291, "حَدُّون", "ḥaddūn", "sürekli karşı çıkanlar", "orta", ""],
-      [292, "حَدِّين", "ḥaddīn", "sürekli karşı çıkanlar", "orta", ""],
-      [293, "حَدَّات", "ḥaddāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [294, "حَدّ", "ḥadd", "sürekli karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
-      [295, "حَدَّة", "ḥadda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [296, "حَدَّان", "ḥaddān", "iki sürekli karşı çıkan", "orta", ""],
-      [297, "حَدَّتَان", "ḥaddatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [298, "حَدُّون", "ḥaddūn", "sürekli karşı çıkanlar", "orta", ""],
-      [299, "حَدِّين", "ḥaddīn", "sürekli karşı çıkanlar", "orta", ""],
-      [300, "حَدَّات", "ḥaddāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [301, "حُدّ", "ḥudd", "sürekli karşı çıkan", "orta", ""],
-      [302, "حُدَّة", "ḥudda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [303, "حُدَّان", "ḥuddān", "iki sürekli karşı çıkan", "orta", ""],
-      [304, "حُدَّتَان", "ḥuddatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [305, "حُدُّون", "ḥuddūn", "sürekli karşı çıkanlar", "orta", ""],
-      [306, "حُدِّين", "ḥuddīn", "sürekli karşı çıkanlar", "orta", ""],
-      [307, "حُدَّات", "ḥuddāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [308, "حَدَّان", "ḥaddān", "sürekli karşı çıkan", "orta", ""],
-      [309, "حَدَّانَة", "ḥaddāna", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [310, "حَدَّانَان", "ḥaddānān", "iki sürekli karşı çıkan", "orta", ""],
-      [311, "حَدَّانَتَان", "ḥaddānatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [312, "حَدَّانُون", "ḥaddānūn", "sürekli karşı çıkanlar", "orta", ""],
-      [313, "حَدَّانِين", "ḥaddānīn", "sürekli karşı çıkanlar", "orta", ""],
-      [314, "حَدَّانَات", "ḥaddānāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [315, "حُدَاد", "ḥudād", "sürekli karşı çıkan", "orta", ""],
-      [316, "حُدَادَة", "ḥudāda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [317, "حُدَادَان", "ḥudādān", "iki sürekli karşı çıkan", "orta", ""],
-      [318, "حُدَادَتَان", "ḥudādatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [319, "حُدَادُون", "ḥudādūn", "sürekli karşı çıkanlar", "orta", ""],
-      [320, "حُدَادِين", "ḥudādīn", "sürekli karşı çıkanlar", "orta", ""],
-      [321, "حُدَادَات", "ḥudādāt", "sürekli karşı çıkanlar (dişi)", "orta", ""],
-      [322, "حَدَاد", "ḥadād", "sürekli karşı çıkan", "orta", ""],
-      [323, "حَدَادَة", "ḥadāda", "sürekli karşı çıkan (dişi)", "orta", ""],
-      [324, "حَدَادَان", "ḥadādān", "iki sürekli karşı çıkan", "orta", ""],
-      [325, "حَدَادَتَان", "ḥadādatān", "iki sürekli karşı çıkan (dişi)", "orta", ""],
-      [326, "حَدَادُون", "ḥadādūn", "sürekli karşı çıkanlar", "orta", ""],
-      [327, "حَدَادِين", "ḥadādīn", "sürekli karşı çıkanlar", "orta", ""],
-      [328, "حَدَادَات", "ḥadādāt", "sürekli karşı çıkanlar (dişi)", "orta", ""]
+      [259, "حَدِيد", "ḥadīd", "demir", "kuran", "Vikisözlük: armor, helmet"],
+      [260, "حَدِيدَة", "ḥadīda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [261, "حَدِيدَان", "ḥadīdān", "her daim karşı çıkan (iki)", "orta", ""],
+      [262, "حَدِيدَتَان", "ḥadīdatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [263, "حَدِيدُون", "ḥadīdūn", "her daim karşı çıkanlar", "orta", ""],
+      [264, "حَدِيدِين", "ḥadīdīn", "her daim karşı çıkanlar", "orta", ""],
+      [265, "حَدِيدَات", "ḥadīdāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [266, "حَدُود", "ḥadūd", "her daim karşı çıkan", "orta", ""],
+      [267, "حَدُودَة", "ḥadūda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [268, "حَدُودَان", "ḥadūdān", "her daim karşı çıkan (iki)", "orta", ""],
+      [269, "حَدُودَتَان", "ḥadūdatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [270, "حَدُودُون", "ḥadūdūn", "her daim karşı çıkanlar", "orta", ""],
+      [271, "حَدُودِين", "ḥadūdīn", "her daim karşı çıkanlar", "orta", ""],
+      [272, "حَدُودَات", "ḥadūdāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [273, "حَدّ", "ḥadd", "her daim karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [274, "حَدَّة", "ḥadda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [275, "حَدَّان", "ḥaddān", "her daim karşı çıkan (iki)", "orta", ""],
+      [276, "حَدَّتَان", "ḥaddatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [277, "حَدُّون", "ḥaddūn", "her daim karşı çıkanlar", "orta", ""],
+      [278, "حَدِّين", "ḥaddīn", "her daim karşı çıkanlar", "orta", ""],
+      [279, "حَدَّات", "ḥaddāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [280, "حَدّ", "ḥadd", "her daim karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [281, "حَدَّة", "ḥadda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [282, "حَدَّان", "ḥaddān", "her daim karşı çıkan (iki)", "orta", ""],
+      [283, "حَدَّتَان", "ḥaddatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [284, "حَدُّون", "ḥaddūn", "her daim karşı çıkanlar", "orta", ""],
+      [285, "حَدِّين", "ḥaddīn", "her daim karşı çıkanlar", "orta", ""],
+      [286, "حَدَّات", "ḥaddāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [287, "حَدّ", "ḥadd", "her daim karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [288, "حَدَّة", "ḥadda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [289, "حَدَّان", "ḥaddān", "her daim karşı çıkan (iki)", "orta", ""],
+      [290, "حَدَّتَان", "ḥaddatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [291, "حَدُّون", "ḥaddūn", "her daim karşı çıkanlar", "orta", ""],
+      [292, "حَدِّين", "ḥaddīn", "her daim karşı çıkanlar", "orta", ""],
+      [293, "حَدَّات", "ḥaddāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [294, "حَدّ", "ḥadd", "her daim karşı çıkan", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [295, "حَدَّة", "ḥadda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [296, "حَدَّان", "ḥaddān", "her daim karşı çıkan (iki)", "orta", ""],
+      [297, "حَدَّتَان", "ḥaddatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [298, "حَدُّون", "ḥaddūn", "her daim karşı çıkanlar", "orta", ""],
+      [299, "حَدِّين", "ḥaddīn", "her daim karşı çıkanlar", "orta", ""],
+      [300, "حَدَّات", "ḥaddāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [301, "حُدّ", "ḥudd", "her daim karşı çıkan", "orta", ""],
+      [302, "حُدَّة", "ḥudda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [303, "حُدَّان", "ḥuddān", "her daim karşı çıkan (iki)", "orta", ""],
+      [304, "حُدَّتَان", "ḥuddatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [305, "حُدُّون", "ḥuddūn", "her daim karşı çıkanlar", "orta", ""],
+      [306, "حُدِّين", "ḥuddīn", "her daim karşı çıkanlar", "orta", ""],
+      [307, "حُدَّات", "ḥuddāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [308, "حَدَّان", "ḥaddān", "her daim karşı çıkan", "orta", ""],
+      [309, "حَدَّانَة", "ḥaddāna", "her daim karşı çıkan (müennes)", "orta", ""],
+      [310, "حَدَّانَان", "ḥaddānān", "her daim karşı çıkan (iki)", "orta", ""],
+      [311, "حَدَّانَتَان", "ḥaddānatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [312, "حَدَّانُون", "ḥaddānūn", "her daim karşı çıkanlar", "orta", ""],
+      [313, "حَدَّانِين", "ḥaddānīn", "her daim karşı çıkanlar", "orta", ""],
+      [314, "حَدَّانَات", "ḥaddānāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [315, "حُدَاد", "ḥudād", "her daim karşı çıkan", "orta", ""],
+      [316, "حُدَادَة", "ḥudāda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [317, "حُدَادَان", "ḥudādān", "her daim karşı çıkan (iki)", "orta", ""],
+      [318, "حُدَادَتَان", "ḥudādatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [319, "حُدَادُون", "ḥudādūn", "her daim karşı çıkanlar", "orta", ""],
+      [320, "حُدَادِين", "ḥudādīn", "her daim karşı çıkanlar", "orta", ""],
+      [321, "حُدَادَات", "ḥudādāt", "her daim karşı çıkanlar (müennes)", "orta", ""],
+      [322, "حَدَاد", "ḥadād", "her daim karşı çıkan", "orta", ""],
+      [323, "حَدَادَة", "ḥadāda", "her daim karşı çıkan (müennes)", "orta", ""],
+      [324, "حَدَادَان", "ḥadādān", "her daim karşı çıkan (iki)", "orta", ""],
+      [325, "حَدَادَتَان", "ḥadādatān", "her daim karşı çıkan (iki, müennes)", "orta", ""],
+      [326, "حَدَادُون", "ḥadādūn", "her daim karşı çıkanlar", "orta", ""],
+      [327, "حَدَادِين", "ḥadādīn", "her daim karşı çıkanlar", "orta", ""],
+      [328, "حَدَادَات", "ḥadādāt", "her daim karşı çıkanlar (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "حَدَّاد", "ḥaddād", "çok karşı çıkan", "orta", "Vikisözlük: ironsmith, blacksmith"],
-      [330, "حَدَّادَة", "ḥaddāda", "çok karşı çıkan (dişi)", "orta", ""],
-      [331, "حَدَّادَان", "ḥaddādān", "iki çok karşı çıkan", "orta", ""],
-      [332, "حَدَّادَتَان", "ḥaddādatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [333, "حَدَّادُون", "ḥaddādūn", "çok karşı çıkanlar", "orta", ""],
-      [334, "حَدَّادِين", "ḥaddādīn", "çok karşı çıkanlar", "orta", ""],
-      [335, "حَدَّادَات", "ḥaddādāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [336, "حَدَّادَة", "ḥaddāda", "çok karşı çıkan", "orta", ""],
-      [337, "حَدَّادَتَان", "ḥaddādatān", "iki çok karşı çıkan", "orta", ""],
-      [338, "حَدَّادَات", "ḥaddādāt", "çok karşı çıkanlar (dişi)", "orta", ""],
+      [329, "حَدَّاد", "ḥaddād", "işi karşı çıkma olan", "orta", "Vikisözlük: ironsmith, blacksmith"],
+      [330, "حَدَّادَة", "ḥaddāda", "işi karşı çıkma olan (müennes)", "orta", ""],
+      [331, "حَدَّادَان", "ḥaddādān", "işi karşı çıkma olan (iki)", "orta", ""],
+      [332, "حَدَّادَتَان", "ḥaddādatān", "işi karşı çıkma olan (iki, müennes)", "orta", ""],
+      [333, "حَدَّادُون", "ḥaddādūn", "işi karşı çıkma olanlar", "orta", ""],
+      [334, "حَدَّادِين", "ḥaddādīn", "işi karşı çıkma olanlar", "orta", ""],
+      [335, "حَدَّادَات", "ḥaddādāt", "işi karşı çıkma olanlar (müennes)", "orta", ""],
+      [336, "حَدَّادَة", "ḥaddāda", "pek çok karşı çıkan", "orta", ""],
+      [337, "حَدَّادَتَان", "ḥaddādatān", "pek çok karşı çıkan (iki)", "orta", ""],
+      [338, "حَدَّادَات", "ḥaddādāt", "pek çok karşı çıkanlar (müennes)", "orta", ""],
       [339, "حَدُود", "ḥadūd", "çok karşı çıkan", "orta", ""],
-      [340, "حَدُودَة", "ḥadūda", "çok karşı çıkan (dişi)", "orta", ""],
-      [341, "حَدُودَان", "ḥadūdān", "iki çok karşı çıkan", "orta", ""],
-      [342, "حَدُودَتَان", "ḥadūdatān", "iki çok karşı çıkan (dişi)", "orta", ""],
+      [340, "حَدُودَة", "ḥadūda", "çok karşı çıkan (müennes)", "orta", ""],
+      [341, "حَدُودَان", "ḥadūdān", "çok karşı çıkan (iki)", "orta", ""],
+      [342, "حَدُودَتَان", "ḥadūdatān", "çok karşı çıkan (iki, müennes)", "orta", ""],
       [343, "حَدُودُون", "ḥadūdūn", "çok karşı çıkanlar", "orta", ""],
       [344, "حَدُودِين", "ḥadūdīn", "çok karşı çıkanlar", "orta", ""],
-      [345, "حَدُودَات", "ḥadūdāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [346, "حَدُّود", "ḥaddūd", "çok karşı çıkan", "orta", ""],
-      [347, "حَدُّودَة", "ḥaddūda", "çok karşı çıkan (dişi)", "orta", ""],
-      [348, "حَدُّودَان", "ḥaddūdān", "iki çok karşı çıkan", "orta", ""],
-      [349, "حَدُّودَتَان", "ḥaddūdatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [350, "حَدُّودُون", "ḥaddūdūn", "çok karşı çıkanlar", "orta", ""],
-      [351, "حَدُّودِين", "ḥaddūdīn", "çok karşı çıkanlar", "orta", ""],
-      [352, "حَدُّودَات", "ḥaddūdāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [353, "حِدِّيد", "ḥiddīd", "çok karşı çıkan", "orta", ""],
-      [354, "حِدِّيدَة", "ḥiddīda", "çok karşı çıkan (dişi)", "orta", ""],
-      [355, "حِدِّيدَان", "ḥiddīdān", "iki çok karşı çıkan", "orta", ""],
-      [356, "حِدِّيدَتَان", "ḥiddīdatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [357, "حِدِّيدُون", "ḥiddīdūn", "çok karşı çıkanlar", "orta", ""],
-      [358, "حِدِّيدِين", "ḥiddīdīn", "çok karşı çıkanlar", "orta", ""],
-      [359, "حِدِّيدَات", "ḥiddīdāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [360, "حُدَّاد", "ḥuddād", "çok karşı çıkan", "orta", ""],
-      [361, "حُدَّادَة", "ḥuddāda", "çok karşı çıkan (dişi)", "orta", ""],
-      [362, "حُدَّادَان", "ḥuddādān", "iki çok karşı çıkan", "orta", ""],
-      [363, "حُدَّادَتَان", "ḥuddādatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [364, "حُدَّادُون", "ḥuddādūn", "çok karşı çıkanlar", "orta", ""],
-      [365, "حُدَّادِين", "ḥuddādīn", "çok karşı çıkanlar", "orta", ""],
-      [366, "حُدَّادَات", "ḥuddādāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [367, "مِحْدَاد", "miḥdād", "çok karşı çıkan", "orta", ""],
-      [368, "مِحْدَادَة", "miḥdāda", "çok karşı çıkan (dişi)", "orta", ""],
-      [369, "مِحْدَادَان", "miḥdādān", "iki çok karşı çıkan", "orta", ""],
-      [370, "مِحْدَادَتَان", "miḥdādatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [371, "مِحْدَادُون", "miḥdādūn", "çok karşı çıkanlar", "orta", ""],
-      [372, "مِحْدَادِين", "miḥdādīn", "çok karşı çıkanlar", "orta", ""],
-      [373, "مِحْدَادَات", "miḥdādāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [374, "مِحْدِيد", "miḥdīd", "çok karşı çıkan", "orta", ""],
-      [375, "مِحْدِيدَة", "miḥdīda", "çok karşı çıkan (dişi)", "orta", ""],
-      [376, "مِحْدِيدَان", "miḥdīdān", "iki çok karşı çıkan", "orta", ""],
-      [377, "مِحْدِيدَتَان", "miḥdīdatān", "iki çok karşı çıkan (dişi)", "orta", ""],
-      [378, "مِحْدِيدُون", "miḥdīdūn", "çok karşı çıkanlar", "orta", ""],
-      [379, "مِحْدِيدِين", "miḥdīdīn", "çok karşı çıkanlar", "orta", ""],
-      [380, "مِحْدِيدَات", "miḥdīdāt", "çok karşı çıkanlar (dişi)", "orta", ""],
-      [381, "حَدِيد", "ḥadīd", "çok karşı çıkan", "orta", "Vikisözlük: armor, helmet"],
-      [382, "حَدِيدَة", "ḥadīda", "çok karşı çıkan (dişi)", "orta", ""],
-      [383, "حَدِيدَان", "ḥadīdān", "iki çok karşı çıkan", "orta", ""],
-      [384, "حَدِيدَتَان", "ḥadīdatān", "iki çok karşı çıkan (dişi)", "orta", ""],
+      [345, "حَدُودَات", "ḥadūdāt", "çok karşı çıkanlar (müennes)", "orta", ""],
+      [346, "حَدُّود", "ḥaddūd", "pek çok karşı çıkan", "orta", ""],
+      [347, "حَدُّودَة", "ḥaddūda", "pek çok karşı çıkan (müennes)", "orta", ""],
+      [348, "حَدُّودَان", "ḥaddūdān", "pek çok karşı çıkan (iki)", "orta", ""],
+      [349, "حَدُّودَتَان", "ḥaddūdatān", "pek çok karşı çıkan (iki, müennes)", "orta", ""],
+      [350, "حَدُّودُون", "ḥaddūdūn", "pek çok karşı çıkanlar", "orta", ""],
+      [351, "حَدُّودِين", "ḥaddūdīn", "pek çok karşı çıkanlar", "orta", ""],
+      [352, "حَدُّودَات", "ḥaddūdāt", "pek çok karşı çıkanlar (müennes)", "orta", ""],
+      [353, "حِدِّيد", "ḥiddīd", "karşı çıkmada aşırı giden", "orta", ""],
+      [354, "حِدِّيدَة", "ḥiddīda", "karşı çıkmada aşırı giden (müennes)", "orta", ""],
+      [355, "حِدِّيدَان", "ḥiddīdān", "karşı çıkmada aşırı giden (iki)", "orta", ""],
+      [356, "حِدِّيدَتَان", "ḥiddīdatān", "karşı çıkmada aşırı giden (iki, müennes)", "orta", ""],
+      [357, "حِدِّيدُون", "ḥiddīdūn", "karşı çıkmada aşırı gidenler", "orta", ""],
+      [358, "حِدِّيدِين", "ḥiddīdīn", "karşı çıkmada aşırı gidenler", "orta", ""],
+      [359, "حِدِّيدَات", "ḥiddīdāt", "karşı çıkmada aşırı gidenler (müennes)", "orta", ""],
+      [360, "حُدَّاد", "ḥuddād", "son derece karşı çıkan", "orta", ""],
+      [361, "حُدَّادَة", "ḥuddāda", "son derece karşı çıkan (müennes)", "orta", ""],
+      [362, "حُدَّادَان", "ḥuddādān", "son derece karşı çıkan (iki)", "orta", ""],
+      [363, "حُدَّادَتَان", "ḥuddādatān", "son derece karşı çıkan (iki, müennes)", "orta", ""],
+      [364, "حُدَّادُون", "ḥuddādūn", "son derece karşı çıkanlar", "orta", ""],
+      [365, "حُدَّادِين", "ḥuddādīn", "son derece karşı çıkanlar", "orta", ""],
+      [366, "حُدَّادَات", "ḥuddādāt", "son derece karşı çıkanlar (müennes)", "orta", ""],
+      [367, "مِحْدَاد", "miḥdād", "karşı çıkmayı âdet edinmiş", "orta", ""],
+      [368, "مِحْدَادَة", "miḥdāda", "karşı çıkmayı âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِحْدَادَان", "miḥdādān", "karşı çıkmayı âdet edinmiş (iki)", "orta", ""],
+      [370, "مِحْدَادَتَان", "miḥdādatān", "karşı çıkmayı âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِحْدَادُون", "miḥdādūn", "karşı çıkmayı âdet edinmişler", "orta", ""],
+      [372, "مِحْدَادِين", "miḥdādīn", "karşı çıkmayı âdet edinmişler", "orta", ""],
+      [373, "مِحْدَادَات", "miḥdādāt", "karşı çıkmayı âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِحْدِيد", "miḥdīd", "karşı çıkmaya düşkün", "orta", ""],
+      [375, "مِحْدِيدَة", "miḥdīda", "karşı çıkmaya düşkün (müennes)", "orta", ""],
+      [376, "مِحْدِيدَان", "miḥdīdān", "karşı çıkmaya düşkün (iki)", "orta", ""],
+      [377, "مِحْدِيدَتَان", "miḥdīdatān", "karşı çıkmaya düşkün (iki, müennes)", "orta", ""],
+      [378, "مِحْدِيدُون", "miḥdīdūn", "karşı çıkmaya düşkünler", "orta", ""],
+      [379, "مِحْدِيدِين", "miḥdīdīn", "karşı çıkmaya düşkünler", "orta", ""],
+      [380, "مِحْدِيدَات", "miḥdīdāt", "karşı çıkmaya düşkünler (müennes)", "orta", ""],
+      [381, "حَدِيد", "ḥadīd", "demir", "kuran", "Vikisözlük: armor, helmet"],
+      [382, "حَدِيدَة", "ḥadīda", "çok karşı çıkan (müennes)", "orta", ""],
+      [383, "حَدِيدَان", "ḥadīdān", "çok karşı çıkan (iki)", "orta", ""],
+      [384, "حَدِيدَتَان", "ḥadīdatān", "çok karşı çıkan (iki, müennes)", "orta", ""],
       [385, "حَدِيدُون", "ḥadīdūn", "çok karşı çıkanlar", "orta", ""],
       [386, "حَدِيدِين", "ḥadīdīn", "çok karşı çıkanlar", "orta", ""],
-      [387, "حَدِيدَات", "ḥadīdāt", "çok karşı çıkanlar (dişi)", "orta", ""],
+      [387, "حَدِيدَات", "ḥadīdāt", "çok karşı çıkanlar (müennes)", "orta", ""],
       [388, "حَدَّد", "ḥaddad", "çok karşı çıkan", "orta", ""],
-      [389, "حَدَّدَة", "ḥaddada", "çok karşı çıkan (dişi)", "orta", ""],
-      [390, "حَدَّدَان", "ḥaddadān", "iki çok karşı çıkan", "orta", ""],
-      [391, "حَدَّدَتَان", "ḥaddadatān", "iki çok karşı çıkan (dişi)", "orta", ""],
+      [389, "حَدَّدَة", "ḥaddada", "çok karşı çıkan (müennes)", "orta", ""],
+      [390, "حَدَّدَان", "ḥaddadān", "çok karşı çıkan (iki)", "orta", ""],
+      [391, "حَدَّدَتَان", "ḥaddadatān", "çok karşı çıkan (iki, müennes)", "orta", ""],
       [392, "حَدَّدُون", "ḥaddadūn", "çok karşı çıkanlar", "orta", ""],
       [393, "حَدَّدِين", "ḥaddadīn", "çok karşı çıkanlar", "orta", ""],
-      [394, "حَدَّدَات", "ḥaddadāt", "çok karşı çıkanlar (dişi)", "orta", ""]
+      [394, "حَدَّدَات", "ḥaddadāt", "çok karşı çıkanlar (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "حَدِّيّ", "ḥaddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [397, "حَدِّيّ", "ḥaddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [399, "حِدِّيّ", "ḥiddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [401, "حُدِّيّ", "ḥuddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [403, "حِدَادِيّ", "ḥidādiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [405, "حَادِّيّ", "ḥāddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [407, "مَحْدُودِيّ", "maḥdūdiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [409, "حَدِيدِيّ", "ḥadīdiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [411, "مَحَدِّيّ", "maḥaddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [413, "تَحْدِيدِيّ", "taḥdīdiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [415, "تَحَادِّيّ", "taḥāddiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [417, "إِحْدَادِيّ", "ʾiḥdādiyy", "karşı çıkmaya ilgili", "orta", ""],
-      [419, "اِحْتِدَادِيّ", "iḥtidādiyy", "karşı çıkmaya ilgili", "orta", ""]
+      [395, "حَدِّيّ", "ḥaddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [397, "حَدِّيّ", "ḥaddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [399, "حِدِّيّ", "ḥiddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [401, "حُدِّيّ", "ḥuddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [403, "حِدَادِيّ", "ḥidādiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [405, "حَادِّيّ", "ḥāddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [407, "مَحْدُودِيّ", "maḥdūdiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [409, "حَدِيدِيّ", "ḥadīdiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [411, "مَحَدِّيّ", "maḥaddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [413, "تَحْدِيدِيّ", "taḥdīdiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [415, "تَحَادِّيّ", "taḥāddiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [417, "إِحْدَادِيّ", "ʾiḥdādiyy", "karşı çıkma ile ilgili", "orta", ""],
+      [419, "اِحْتِدَادِيّ", "iḥtidādiyy", "karşı çıkma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "حَدِّيَّة", "ḥaddiyya", "karşı çıkanlık", "orta", ""],
@@ -561,7 +568,7 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "حَدَاد", "ḥadād", "karşı çıkma", "orta", ""],
-      [422, "حُدُود", "ḥudūd", "karşı çıkma", "orta", ""],
+      [422, "حُدُود", "ḥudūd", "sınırlar", "kuran", "Kur'ân"],
       [423, "حِدَاد", "ḥidād", "karşı çıkma", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
       [424, "حُدّ", "ḥudd", "karşı çıkma", "orta", ""],
       [425, "حَدَادَة", "ḥadāda", "karşı çıkma", "orta", ""],
@@ -571,130 +578,95 @@
       [429, "حِدّ", "ḥidd", "karşı çıkma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "حَادُود", "ḥādūd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [432, "حَدَّة", "ḥadda", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [433, "حُدَّة", "ḥudda", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [434, "أُحْدُودَة", "ʾuḥdūda", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [435, "حَوَدّ", "ḥawadd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [437, "حَيَدّ", "ḥayadd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [
-        439,
-        "حَدّ",
-        "ḥadd",
-        "karşı çıkanlar (topluluk adı)",
-        "orta",
-        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
-      ],
-      [
-        441,
-        "حَدّ",
-        "ḥadd",
-        "karşı çıkanlar (topluluk adı)",
-        "orta",
-        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
-      ],
-      [443, "حِدّ", "ḥidd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [445, "حُدّ", "ḥudd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [447, "حَدِيد", "ḥadīd", "karşı çıkanlar (topluluk adı)", "orta", "Vikisözlük: armor, helmet"],
-      [449, "حِدّ", "ḥidd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [451, "حُدّ", "ḥudd", "karşı çıkanlar (topluluk adı)", "orta", ""],
-      [453, "حَدَاد", "ḥadād", "karşı çıkanlar (topluluk adı)", "orta", ""]
+      [430, "حَادُود", "ḥādūd", "karşı çıkma türünden şey", "orta", ""],
+      [432, "حَدَّة", "ḥadda", "karşı çıkma türünden şey", "orta", ""],
+      [433, "حُدَّة", "ḥudda", "karşı çıkma türünden şey", "orta", ""],
+      [434, "أُحْدُودَة", "ʾuḥdūda", "karşı çıkma türünden şey", "orta", ""],
+      [435, "حَوَدّ", "ḥawadd", "karşı çıkma türünden şey", "orta", ""],
+      [437, "حَيَدّ", "ḥayadd", "karşı çıkma türünden şey", "orta", ""],
+      [439, "حَدّ", "ḥadd", "karşı çıkma türünden şey", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [441, "حَدّ", "ḥadd", "karşı çıkma türünden şey", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [443, "حِدّ", "ḥidd", "karşı çıkma türünden şey", "orta", ""],
+      [445, "حُدّ", "ḥudd", "karşı çıkma türünden şey", "orta", ""],
+      [447, "حَدِيد", "ḥadīd", "demir", "kuran", "Vikisözlük: armor, helmet"],
+      [449, "حِدّ", "ḥidd", "karşı çıkma türünden şey", "orta", ""],
+      [451, "حُدّ", "ḥudd", "karşı çıkma türünden şey", "orta", ""],
+      [453, "حَدَاد", "ḥadād", "karşı çıkma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "حَادُودَة", "ḥādūda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [436, "حَوَدَّة", "ḥawadda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [438, "حَيَدَّة", "ḥayadda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [440, "حَدَّة", "ḥadda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [442, "حَدَّة", "ḥadda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
+      [431, "حَادُودَة", "ḥādūda", "karşı çıkma türünden bir tane", "orta", ""],
+      [436, "حَوَدَّة", "ḥawadda", "karşı çıkma türünden bir tane", "orta", ""],
+      [438, "حَيَدَّة", "ḥayadda", "karşı çıkma türünden bir tane", "orta", ""],
+      [440, "حَدَّة", "ḥadda", "karşı çıkma türünden bir tane", "orta", ""],
+      [442, "حَدَّة", "ḥadda", "karşı çıkma türünden bir tane", "orta", ""],
       [
         444,
         "حِدَّة",
         "ḥidda",
-        "bir tane karşı çıkanlar (topluluk adı)",
+        "karşı çıkma türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
       ],
-      [446, "حُدَّة", "ḥudda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [448, "حَدِيدَة", "ḥadīda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
+      [446, "حُدَّة", "ḥudda", "karşı çıkma türünden bir tane", "orta", ""],
+      [448, "حَدِيدَة", "ḥadīda", "karşı çıkma türünden bir tane", "orta", ""],
       [
         450,
         "حِدَّة",
         "ḥidda",
-        "bir tane karşı çıkanlar (topluluk adı)",
+        "karşı çıkma türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
       ],
-      [452, "حُدَّة", "ḥudda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""],
-      [454, "حَدَادَة", "ḥadāda", "bir tane karşı çıkanlar (topluluk adı)", "orta", ""]
+      [452, "حُدَّة", "ḥudda", "karşı çıkma türünden bir tane", "orta", ""],
+      [454, "حَدَادَة", "ḥadāda", "karşı çıkma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَحْدَاد", "ʾaḥdād", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [456, "أَحِدَّة", "ʾaḥidda", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [457, "أَحَادّ", "ʾaḥādd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [458, "أَحَادِيد", "ʾaḥādīd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [459, "حُدُود", "ḥudūd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [460, "حُدّ", "ḥudd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [
-        461,
-        "حِدَاد",
-        "ḥidād",
-        "karşı çıkanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
-      ],
-      [462, "حِدّ", "ḥidd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [
-        463,
-        "حِدَّة",
-        "ḥidda",
-        "karşı çıkanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
-      ],
-      [464, "حُدّ", "ḥudd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [465, "حُدّاء", "ḥuddāʾ", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [466, "حَدَّة", "ḥadda", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [467, "حُدَّاد", "ḥuddād", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [468, "حَدَاد", "ḥadād", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [
-        469,
-        "حَدّ",
-        "ḥadd",
-        "karşı çıkanlar (kırık çoğul)",
-        "orta",
-        "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"
-      ],
-      [470, "مَحَادّ", "maḥādd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [471, "مَحَادِيد", "maḥādīd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [472, "حَوَادّ", "ḥawādd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [473, "أَحُدّ", "ʾaḥudd", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [474, "حُدَّد", "ḥuddad", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [475, "حَدَائِد", "ḥadāʾid", "karşı çıkanlar (kırık çoğul)", "orta", ""],
-      [476, "حُدَيْد", "ḥudayd", "karşı çıkanlar (kırık çoğul)", "orta", ""]
+      [455, "أَحْدَاد", "ʾaḥdād", "karşı çıkmalar", "orta", ""],
+      [456, "أَحِدَّة", "ʾaḥidda", "karşı çıkmalar", "orta", ""],
+      [457, "أَحَادّ", "ʾaḥādd", "karşı çıkmalar", "orta", ""],
+      [458, "أَحَادِيد", "ʾaḥādīd", "karşı çıkmalar", "orta", ""],
+      [459, "حُدُود", "ḥudūd", "sınırlar", "kuran", "Kur'ân"],
+      [460, "حُدّ", "ḥudd", "karşı çıkmalar", "orta", ""],
+      [461, "حِدَاد", "ḥidād", "karşı çıkmalar", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [462, "حِدّ", "ḥidd", "karşı çıkmalar", "orta", ""],
+      [463, "حِدَّة", "ḥidda", "karşı çıkmalar", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [464, "حُدّ", "ḥudd", "karşı çıkmalar", "orta", ""],
+      [465, "حُدّاء", "ḥuddāʾ", "karşı çıkmalar", "orta", ""],
+      [466, "حَدَّة", "ḥadda", "karşı çıkmalar", "orta", ""],
+      [467, "حُدَّاد", "ḥuddād", "karşı çıkmalar", "orta", ""],
+      [468, "حَدَاد", "ḥadād", "karşı çıkmalar", "orta", ""],
+      [469, "حَدّ", "ḥadd", "karşı çıkmalar", "orta", "Vikisözlük: verbal noun of حَدَّ (ḥadda) (form I)"],
+      [470, "مَحَادّ", "maḥādd", "karşı çıkmalar", "orta", ""],
+      [471, "مَحَادِيد", "maḥādīd", "karşı çıkmalar", "orta", ""],
+      [472, "حَوَادّ", "ḥawādd", "karşı çıkmalar", "orta", ""],
+      [473, "أَحُدّ", "ʾaḥudd", "karşı çıkmalar", "orta", ""],
+      [474, "حُدَّد", "ḥuddad", "karşı çıkmalar", "orta", ""],
+      [475, "حَدَائِد", "ḥadāʾid", "karşı çıkmalar", "orta", ""],
+      [476, "حُدَيْد", "ḥudayd", "karşı çıkmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَحْدَادَات", "ʾaḥdādāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [478, "أَحِدَّات", "ʾaḥiddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [479, "أَحَادَّات", "ʾaḥāddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [480, "أَحَادِيدَات", "ʾaḥādīdāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [481, "حُدُودَات", "ḥudūdāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [482, "حُدَّات", "ḥuddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [483, "حِدَادَات", "ḥidādāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [484, "حِدَّات", "ḥiddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [485, "حِدَّات", "ḥiddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [486, "حُدَّات", "ḥuddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [487, "حُدّاآت", "ḥuddāʾāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [488, "حَدَّات", "ḥaddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [489, "حُدَّادَات", "ḥuddādāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [490, "حَدَادَات", "ḥadādāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [491, "حَدَّات", "ḥaddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [492, "مَحَادَّات", "maḥāddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [493, "مَحَادِيدَات", "maḥādīdāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [494, "حَوَادَّات", "ḥawāddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [495, "أَحُدَّات", "ʾaḥuddāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [496, "حُدَّدَات", "ḥuddadāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [497, "حَدَائِدَات", "ḥadāʾidāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""],
-      [498, "حُدَيْدَات", "ḥudaydāt", "karşı çıkanlar (çoğulun çoğulu)", "orta", ""]
+      [477, "أَحْدَادَات", "ʾaḥdādāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [478, "أَحِدَّات", "ʾaḥiddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [479, "أَحَادَّات", "ʾaḥāddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [480, "أَحَادِيدَات", "ʾaḥādīdāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [481, "حُدُودَات", "ḥudūdāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [482, "حُدَّات", "ḥuddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [483, "حِدَادَات", "ḥidādāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [484, "حِدَّات", "ḥiddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [485, "حِدَّات", "ḥiddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [486, "حُدَّات", "ḥuddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [487, "حُدّاآت", "ḥuddāʾāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [488, "حَدَّات", "ḥaddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [489, "حُدَّادَات", "ḥuddādāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [490, "حَدَادَات", "ḥadādāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [491, "حَدَّات", "ḥaddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [492, "مَحَادَّات", "maḥāddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [493, "مَحَادِيدَات", "maḥādīdāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [494, "حَوَادَّات", "ḥawāddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [495, "أَحُدَّات", "ʾaḥuddāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [496, "حُدَّدَات", "ḥuddadāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [497, "حَدَائِدَات", "ḥadāʾidāt", "karşı çıkmalar topluluğu", "orta", ""],
+      [498, "حُدَيْدَات", "ḥudaydāt", "karşı çıkmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

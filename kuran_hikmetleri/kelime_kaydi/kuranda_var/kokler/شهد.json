@@ -9,21 +9,28 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "شَهْد", "şahd", "şahitlik etme", "orta", ""],
-      [1, "شِهْد", "şihd", "şahitlik etme", "orta", ""],
+      [1, "شِهْد", "şihd", "şahitlik edilen şey", "orta", ""],
       [2, "شُهْد", "şuhd", "şahitlik etme", "orta", ""],
-      [3, "شَهَد", "şahad", "şahitlik etme", "orta", ""],
+      [3, "شَهَد", "şahad", "şahitlik etme hâli", "orta", ""],
       [4, "شِهَد", "şihad", "şahitlik etme", "orta", ""],
       [5, "شُهُد", "şuhud", "şahitlik etme", "orta", ""],
       [6, "شُهُود", "şuhūd", "şahitlik etme", "orta", "Vikisözlük: masdar (bâb I): to witness, to be a witness"],
-      [7, "شِهَاد", "şihād", "şahitlik etme", "orta", ""],
-      [8, "شُهَاد", "şuhād", "şahitlik etme", "orta", ""],
+      [7, "شِهَاد", "şihād", "şahitlik etmeden kaçınma", "orta", ""],
+      [8, "شُهَاد", "şuhād", "şahitlik etme illeti, şahitlik etme sesi", "orta", ""],
       [9, "شَهَاد", "şahād", "şahitlik etme", "orta", ""],
-      [10, "شَهَادَة", "şahāda", "şahitlik etme", "orta", "Vikisözlük: verbal noun of شَهِدَ (šahida) (form I)"],
-      [11, "شُهُودَة", "şuhūda", "şahitlik etme", "orta", ""],
-      [12, "شِهَادَة", "şihāda", "şahitlik etme", "orta", ""],
-      [13, "شَهِيد", "şahīd", "şahitlik etme", "orta", "Vikisözlük: witness"],
+      [
+        10,
+        "شَهَادَة",
+        "şahāda",
+        "şahitlik etme vasfı",
+        "orta",
+        "Vikisözlük: verbal noun of شَهِدَ (šahida) (form I)"
+      ],
+      [11, "شُهُودَة", "şuhūda", "şahitlik etme vasfı", "orta", ""],
+      [12, "شِهَادَة", "şihāda", "şahitlik etme vazifesi, şahitlik etme işi", "orta", ""],
+      [13, "شَهِيد", "şahīd", "şahit", "kuran", "Vikisözlük: witness"],
       [14, "شَهُود", "şahūd", "şahitlik etme", "orta", ""],
-      [15, "شَهَدَان", "şahadān", "şahitlik etme", "orta", ""],
+      [15, "شَهَدَان", "şahadān", "şahitlik etme çalkantısı, coşarak şahitlik etme", "orta", ""],
       [16, "شُهْدَان", "şuhdān", "şahitlik etme", "orta", ""],
       [17, "شِهْدَان", "şihdān", "şahitlik etme", "orta", ""],
       [18, "شَهْدَى", "şahdā", "şahitlik etme", "orta", ""],
@@ -32,164 +39,164 @@
       [21, "شَهَدَة", "şahada", "şahitlik etme", "orta", ""],
       [22, "شِهَدَة", "şihada", "şahitlik etme", "orta", ""],
       [23, "شَهْدُودَة", "şahdūda", "şahitlik etme", "orta", ""],
-      [24, "تُشْهُود", "tuşhūd", "şahitlik etme", "orta", ""],
-      [25, "تَشْهِدَة", "taşhida", "şahitlik etme", "orta", ""],
-      [26, "تَشْهَدَة", "taşhada", "şahitlik etme", "orta", ""],
-      [27, "مَشْهُدَة", "maşhuda", "şahitlik etme", "orta", ""],
-      [28, "مَشْهِدَة", "maşhida", "şahitlik etme", "orta", ""]
+      [24, "تُشْهُود", "tuşhūd", "tekrar tekrar şahitlik etme", "orta", ""],
+      [25, "تَشْهِدَة", "taşhida", "tekrar tekrar şahitlik etme", "orta", ""],
+      [26, "تَشْهَدَة", "taşhada", "tekrar tekrar şahitlik etme", "orta", ""],
+      [27, "مَشْهُدَة", "maşhuda", "şahitlik etme sebebi", "orta", ""],
+      [28, "مَشْهِدَة", "maşhida", "şahitlik etme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَشْهِيد", "taşhīd", "şahitlik etme", "orta", ""],
-      [30, "تَشْهِدَة", "taşhida", "şahitlik etme", "orta", ""],
-      [31, "شِهِّاد", "şihhād", "şahitlik etme", "orta", ""]
+      [29, "تَشْهِيد", "taşhīd", "çokça şahitlik etme", "orta", ""],
+      [30, "تَشْهِدَة", "taşhida", "çokça şahitlik etme", "orta", ""],
+      [31, "شِهِّاد", "şihhād", "çokça şahitlik etme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَشْهِيدَة", "taşhīda", "bir kere şahitlik etme", "orta", ""],
-      [33, "شِهِّادَة", "şihhāda", "bir kere şahitlik etme", "orta", ""]
+      [32, "تَشْهِيدَة", "taşhīda", "bir kere çokça şahitlik etme", "orta", ""],
+      [33, "شِهِّادَة", "şihhāda", "bir kere çokça şahitlik etme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُشَهِّد", "muşahhid", "şahitlik eden", "orta", ""],
-      [35, "مُشَهِّدَة", "muşahhida", "şahitlik eden (dişi)", "orta", ""],
-      [36, "مُشَهِّدَان", "muşahhidān", "iki şahitlik eden", "orta", ""],
-      [37, "مُشَهِّدَتَان", "muşahhidatān", "iki şahitlik eden (dişi)", "orta", ""],
-      [38, "مُشَهِّدُون", "muşahhidūn", "şahitlik edenler", "orta", ""],
-      [39, "مُشَهِّدِين", "muşahhidīn", "şahitlik edenler", "orta", ""],
-      [40, "مُشَهِّدَات", "muşahhidāt", "şahitlik edenler (dişi)", "orta", ""]
+      [34, "مُشَهِّد", "muşahhid", "çokça şahitlik eden", "orta", ""],
+      [35, "مُشَهِّدَة", "muşahhida", "çokça şahitlik eden (müennes)", "orta", ""],
+      [36, "مُشَهِّدَان", "muşahhidān", "çokça şahitlik eden (iki)", "orta", ""],
+      [37, "مُشَهِّدَتَان", "muşahhidatān", "çokça şahitlik eden (iki, müennes)", "orta", ""],
+      [38, "مُشَهِّدُون", "muşahhidūn", "çokça şahitlik edenler", "orta", ""],
+      [39, "مُشَهِّدِين", "muşahhidīn", "çokça şahitlik edenler", "orta", ""],
+      [40, "مُشَهِّدَات", "muşahhidāt", "çokça şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُشَهَّد", "muşahhad", "şahitlik edilmiş", "orta", ""],
-      [42, "مُشَهَّدَة", "muşahhada", "şahitlik edilmiş (dişi)", "orta", ""],
-      [43, "مُشَهَّدَان", "muşahhadān", "iki şahitlik edilmiş", "orta", ""],
-      [44, "مُشَهَّدَتَان", "muşahhadatān", "iki şahitlik edilmiş (dişi)", "orta", ""],
-      [45, "مُشَهَّدُون", "muşahhadūn", "şahitlik edilmişler", "orta", ""],
-      [46, "مُشَهَّدِين", "muşahhadīn", "şahitlik edilmişler", "orta", ""],
-      [47, "مُشَهَّدَات", "muşahhadāt", "şahitlik edilmişler (dişi)", "orta", ""]
+      [41, "مُشَهَّد", "muşahhad", "çokça şahitlik edilen", "orta", ""],
+      [42, "مُشَهَّدَة", "muşahhada", "çokça şahitlik edilen (müennes)", "orta", ""],
+      [43, "مُشَهَّدَان", "muşahhadān", "çokça şahitlik edilen (iki)", "orta", ""],
+      [44, "مُشَهَّدَتَان", "muşahhadatān", "çokça şahitlik edilen (iki, müennes)", "orta", ""],
+      [45, "مُشَهَّدُون", "muşahhadūn", "çokça şahitlik edilenler", "orta", ""],
+      [46, "مُشَهَّدِين", "muşahhadīn", "çokça şahitlik edilenler", "orta", ""],
+      [47, "مُشَهَّدَات", "muşahhadāt", "çokça şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُشَهَّد", "muşahhad", "şahitlik etme (yeri/zamanı)", "orta", ""]
+      [48, "مُشَهَّد", "muşahhad", "çokça şahitlik etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
       [
         49,
         "مُشَاهَدَة",
         "muşāhada",
-        "şahitlik etişme",
+        "biriyle karşılıklı şahitlik etme",
         "orta",
         "Vikisözlük: verbal noun of شَاهَدَ (šāhada) (form III)"
       ],
-      [50, "شِهَاد", "şihād", "şahitlik etişme", "orta", ""]
+      [50, "شِهَاد", "şihād", "biriyle karşılıklı şahitlik etme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "شِهَادَة", "şihāda", "bir kere şahitlik etişme", "orta", ""]
+      [51, "شِهَادَة", "şihāda", "bir kere biriyle karşılıklı şahitlik etme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُشَاهِد", "muşāhid", "şahitlik etişen", "orta", ""],
-      [53, "مُشَاهِدَة", "muşāhida", "şahitlik etişen (dişi)", "orta", ""],
-      [54, "مُشَاهِدَان", "muşāhidān", "iki şahitlik etişen", "orta", ""],
-      [55, "مُشَاهِدَتَان", "muşāhidatān", "iki şahitlik etişen (dişi)", "orta", ""],
-      [56, "مُشَاهِدُون", "muşāhidūn", "şahitlik etişenler", "orta", ""],
-      [57, "مُشَاهِدِين", "muşāhidīn", "şahitlik etişenler", "orta", ""],
-      [58, "مُشَاهِدَات", "muşāhidāt", "şahitlik etişenler (dişi)", "orta", ""]
+      [52, "مُشَاهِد", "muşāhid", "biriyle karşılıklı şahitlik eden", "orta", ""],
+      [53, "مُشَاهِدَة", "muşāhida", "biriyle karşılıklı şahitlik eden (müennes)", "orta", ""],
+      [54, "مُشَاهِدَان", "muşāhidān", "biriyle karşılıklı şahitlik eden (iki)", "orta", ""],
+      [55, "مُشَاهِدَتَان", "muşāhidatān", "biriyle karşılıklı şahitlik eden (iki, müennes)", "orta", ""],
+      [56, "مُشَاهِدُون", "muşāhidūn", "biriyle karşılıklı şahitlik edenler", "orta", ""],
+      [57, "مُشَاهِدِين", "muşāhidīn", "biriyle karşılıklı şahitlik edenler", "orta", ""],
+      [58, "مُشَاهِدَات", "muşāhidāt", "biriyle karşılıklı şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُشَاهَد", "muşāhad", "şahitlik etişmiş", "orta", ""],
+      [59, "مُشَاهَد", "muşāhad", "biriyle karşılıklı şahitlik edilen", "orta", ""],
       [
         60,
         "مُشَاهَدَة",
         "muşāhada",
-        "şahitlik etişmiş (dişi)",
+        "biriyle karşılıklı şahitlik edilen (müennes)",
         "orta",
         "Vikisözlük: verbal noun of شَاهَدَ (šāhada) (form III)"
       ],
-      [61, "مُشَاهَدَان", "muşāhadān", "iki şahitlik etişmiş", "orta", ""],
-      [62, "مُشَاهَدَتَان", "muşāhadatān", "iki şahitlik etişmiş (dişi)", "orta", ""],
-      [63, "مُشَاهَدُون", "muşāhadūn", "şahitlik etişmişler", "orta", ""],
-      [64, "مُشَاهَدِين", "muşāhadīn", "şahitlik etişmişler", "orta", ""],
-      [65, "مُشَاهَدَات", "muşāhadāt", "şahitlik etişmişler (dişi)", "orta", ""]
+      [61, "مُشَاهَدَان", "muşāhadān", "biriyle karşılıklı şahitlik edilen (iki)", "orta", ""],
+      [62, "مُشَاهَدَتَان", "muşāhadatān", "biriyle karşılıklı şahitlik edilen (iki, müennes)", "orta", ""],
+      [63, "مُشَاهَدُون", "muşāhadūn", "biriyle karşılıklı şahitlik edilenler", "orta", ""],
+      [64, "مُشَاهَدِين", "muşāhadīn", "biriyle karşılıklı şahitlik edilenler", "orta", ""],
+      [65, "مُشَاهَدَات", "muşāhadāt", "biriyle karşılıklı şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُشَاهَد", "muşāhad", "şahitlik etişme (yeri/zamanı)", "orta", ""]
+      [66, "مُشَاهَد", "muşāhad", "biriyle karşılıklı şahitlik etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِشْهَاد", "ʾişhād", "şahitlik etme", "orta", "Vikisözlük: masdar (bâb IV): to call a witness"]
+      [67, "إِشْهَاد", "ʾişhād", "şahitlik ettirme", "orta", "Vikisözlük: masdar (bâb IV): to call a witness"]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِشْهَادَة", "ʾişhāda", "bir kere şahitlik etme", "orta", ""]
+      [68, "إِشْهَادَة", "ʾişhāda", "bir kere şahitlik ettirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُشْهِد", "muşhid", "şahitlik eden", "orta", ""],
-      [70, "مُشْهِدَة", "muşhida", "şahitlik eden (dişi)", "orta", ""],
-      [71, "مُشْهِدَان", "muşhidān", "iki şahitlik eden", "orta", ""],
-      [72, "مُشْهِدَتَان", "muşhidatān", "iki şahitlik eden (dişi)", "orta", ""],
-      [73, "مُشْهِدُون", "muşhidūn", "şahitlik edenler", "orta", ""],
-      [74, "مُشْهِدِين", "muşhidīn", "şahitlik edenler", "orta", ""],
-      [75, "مُشْهِدَات", "muşhidāt", "şahitlik edenler (dişi)", "orta", ""]
+      [69, "مُشْهِد", "muşhid", "şahitlik ettiren", "orta", ""],
+      [70, "مُشْهِدَة", "muşhida", "şahitlik ettiren (müennes)", "orta", ""],
+      [71, "مُشْهِدَان", "muşhidān", "şahitlik ettiren (iki)", "orta", ""],
+      [72, "مُشْهِدَتَان", "muşhidatān", "şahitlik ettiren (iki, müennes)", "orta", ""],
+      [73, "مُشْهِدُون", "muşhidūn", "şahitlik ettirenler", "orta", ""],
+      [74, "مُشْهِدِين", "muşhidīn", "şahitlik ettirenler", "orta", ""],
+      [75, "مُشْهِدَات", "muşhidāt", "şahitlik ettirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُشْهَد", "muşhad", "şahitlik edilmiş", "orta", ""],
-      [77, "مُشْهَدَة", "muşhada", "şahitlik edilmiş (dişi)", "orta", ""],
-      [78, "مُشْهَدَان", "muşhadān", "iki şahitlik edilmiş", "orta", ""],
-      [79, "مُشْهَدَتَان", "muşhadatān", "iki şahitlik edilmiş (dişi)", "orta", ""],
-      [80, "مُشْهَدُون", "muşhadūn", "şahitlik edilmişler", "orta", ""],
-      [81, "مُشْهَدِين", "muşhadīn", "şahitlik edilmişler", "orta", ""],
-      [82, "مُشْهَدَات", "muşhadāt", "şahitlik edilmişler (dişi)", "orta", ""]
+      [76, "مُشْهَد", "muşhad", "şahitlik ettirilen", "orta", ""],
+      [77, "مُشْهَدَة", "muşhada", "şahitlik ettirilen (müennes)", "orta", ""],
+      [78, "مُشْهَدَان", "muşhadān", "şahitlik ettirilen (iki)", "orta", ""],
+      [79, "مُشْهَدَتَان", "muşhadatān", "şahitlik ettirilen (iki, müennes)", "orta", ""],
+      [80, "مُشْهَدُون", "muşhadūn", "şahitlik ettirilenler", "orta", ""],
+      [81, "مُشْهَدِين", "muşhadīn", "şahitlik ettirilenler", "orta", ""],
+      [82, "مُشْهَدَات", "muşhadāt", "şahitlik ettirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُشْهَد", "muşhad", "şahitlik etme (yeri/zamanı)", "orta", ""]
+      [83, "مُشْهَد", "muşhad", "şahitlik ettirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَشَهُّد", "taşahhud", "şahitlik edinme", "orta", "Vikisözlük: testimony of faith."]
+      [84, "تَشَهُّد", "taşahhud", "kendini zorlayarak şahitlik etme", "orta", "Vikisözlük: testimony of faith."]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَشَهُّدَة", "taşahhuda", "bir kere şahitlik edinme", "orta", ""]
+      [85, "تَشَهُّدَة", "taşahhuda", "bir kere kendini zorlayarak şahitlik etme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَشَهِّد", "mutaşahhid", "şahitlik edinen", "orta", ""],
-      [87, "مُتَشَهِّدَة", "mutaşahhida", "şahitlik edinen (dişi)", "orta", ""],
-      [88, "مُتَشَهِّدَان", "mutaşahhidān", "iki şahitlik edinen", "orta", ""],
-      [89, "مُتَشَهِّدَتَان", "mutaşahhidatān", "iki şahitlik edinen (dişi)", "orta", ""],
-      [90, "مُتَشَهِّدُون", "mutaşahhidūn", "şahitlik edinenler", "orta", ""],
-      [91, "مُتَشَهِّدِين", "mutaşahhidīn", "şahitlik edinenler", "orta", ""],
-      [92, "مُتَشَهِّدَات", "mutaşahhidāt", "şahitlik edinenler (dişi)", "orta", ""]
+      [86, "مُتَشَهِّد", "mutaşahhid", "kendini zorlayarak şahitlik eden", "orta", ""],
+      [87, "مُتَشَهِّدَة", "mutaşahhida", "kendini zorlayarak şahitlik eden (müennes)", "orta", ""],
+      [88, "مُتَشَهِّدَان", "mutaşahhidān", "kendini zorlayarak şahitlik eden (iki)", "orta", ""],
+      [89, "مُتَشَهِّدَتَان", "mutaşahhidatān", "kendini zorlayarak şahitlik eden (iki, müennes)", "orta", ""],
+      [90, "مُتَشَهِّدُون", "mutaşahhidūn", "kendini zorlayarak şahitlik edenler", "orta", ""],
+      [91, "مُتَشَهِّدِين", "mutaşahhidīn", "kendini zorlayarak şahitlik edenler", "orta", ""],
+      [92, "مُتَشَهِّدَات", "mutaşahhidāt", "kendini zorlayarak şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَشَهَّد", "mutaşahhad", "şahitlik edinmiş", "orta", ""],
-      [94, "مُتَشَهَّدَة", "mutaşahhada", "şahitlik edinmiş (dişi)", "orta", ""],
-      [95, "مُتَشَهَّدَان", "mutaşahhadān", "iki şahitlik edinmiş", "orta", ""],
-      [96, "مُتَشَهَّدَتَان", "mutaşahhadatān", "iki şahitlik edinmiş (dişi)", "orta", ""],
-      [97, "مُتَشَهَّدُون", "mutaşahhadūn", "şahitlik edinmişler", "orta", ""],
-      [98, "مُتَشَهَّدِين", "mutaşahhadīn", "şahitlik edinmişler", "orta", ""],
-      [99, "مُتَشَهَّدَات", "mutaşahhadāt", "şahitlik edinmişler (dişi)", "orta", ""]
+      [93, "مُتَشَهَّد", "mutaşahhad", "kendini zorlayarak şahitlik edilen", "orta", ""],
+      [94, "مُتَشَهَّدَة", "mutaşahhada", "kendini zorlayarak şahitlik edilen (müennes)", "orta", ""],
+      [95, "مُتَشَهَّدَان", "mutaşahhadān", "kendini zorlayarak şahitlik edilen (iki)", "orta", ""],
+      [96, "مُتَشَهَّدَتَان", "mutaşahhadatān", "kendini zorlayarak şahitlik edilen (iki, müennes)", "orta", ""],
+      [97, "مُتَشَهَّدُون", "mutaşahhadūn", "kendini zorlayarak şahitlik edilenler", "orta", ""],
+      [98, "مُتَشَهَّدِين", "mutaşahhadīn", "kendini zorlayarak şahitlik edilenler", "orta", ""],
+      [99, "مُتَشَهَّدَات", "mutaşahhadāt", "kendini zorlayarak şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَشَهَّد", "mutaşahhad", "şahitlik edinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَشَهَّد", "mutaşahhad", "kendini zorlayarak şahitlik etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَشَاهُد", "taşāhud", "şahitlik etişme", "orta", ""]
+      [101, "تَشَاهُد", "taşāhud", "birbirine şahitlik etme", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَشَاهُدَة", "taşāhuda", "bir kere şahitlik etişme", "orta", ""]
+      [102, "تَشَاهُدَة", "taşāhuda", "bir kere birbirine şahitlik etme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَشَاهِد", "mutaşāhid", "şahitlik etişen", "orta", ""],
-      [104, "مُتَشَاهِدَة", "mutaşāhida", "şahitlik etişen (dişi)", "orta", ""],
-      [105, "مُتَشَاهِدَان", "mutaşāhidān", "iki şahitlik etişen", "orta", ""],
-      [106, "مُتَشَاهِدَتَان", "mutaşāhidatān", "iki şahitlik etişen (dişi)", "orta", ""],
-      [107, "مُتَشَاهِدُون", "mutaşāhidūn", "şahitlik etişenler", "orta", ""],
-      [108, "مُتَشَاهِدِين", "mutaşāhidīn", "şahitlik etişenler", "orta", ""],
-      [109, "مُتَشَاهِدَات", "mutaşāhidāt", "şahitlik etişenler (dişi)", "orta", ""]
+      [103, "مُتَشَاهِد", "mutaşāhid", "birbirine şahitlik eden", "orta", ""],
+      [104, "مُتَشَاهِدَة", "mutaşāhida", "birbirine şahitlik eden (müennes)", "orta", ""],
+      [105, "مُتَشَاهِدَان", "mutaşāhidān", "birbirine şahitlik eden (iki)", "orta", ""],
+      [106, "مُتَشَاهِدَتَان", "mutaşāhidatān", "birbirine şahitlik eden (iki, müennes)", "orta", ""],
+      [107, "مُتَشَاهِدُون", "mutaşāhidūn", "birbirine şahitlik edenler", "orta", ""],
+      [108, "مُتَشَاهِدِين", "mutaşāhidīn", "birbirine şahitlik edenler", "orta", ""],
+      [109, "مُتَشَاهِدَات", "mutaşāhidāt", "birbirine şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَشَاهَد", "mutaşāhad", "şahitlik etişmiş", "orta", ""],
-      [111, "مُتَشَاهَدَة", "mutaşāhada", "şahitlik etişmiş (dişi)", "orta", ""],
-      [112, "مُتَشَاهَدَان", "mutaşāhadān", "iki şahitlik etişmiş", "orta", ""],
-      [113, "مُتَشَاهَدَتَان", "mutaşāhadatān", "iki şahitlik etişmiş (dişi)", "orta", ""],
-      [114, "مُتَشَاهَدُون", "mutaşāhadūn", "şahitlik etişmişler", "orta", ""],
-      [115, "مُتَشَاهَدِين", "mutaşāhadīn", "şahitlik etişmişler", "orta", ""],
-      [116, "مُتَشَاهَدَات", "mutaşāhadāt", "şahitlik etişmişler (dişi)", "orta", ""]
+      [110, "مُتَشَاهَد", "mutaşāhad", "birbirine şahitlik edilen", "orta", ""],
+      [111, "مُتَشَاهَدَة", "mutaşāhada", "birbirine şahitlik edilen (müennes)", "orta", ""],
+      [112, "مُتَشَاهَدَان", "mutaşāhadān", "birbirine şahitlik edilen (iki)", "orta", ""],
+      [113, "مُتَشَاهَدَتَان", "mutaşāhadatān", "birbirine şahitlik edilen (iki, müennes)", "orta", ""],
+      [114, "مُتَشَاهَدُون", "mutaşāhadūn", "birbirine şahitlik edilenler", "orta", ""],
+      [115, "مُتَشَاهَدِين", "mutaşāhadīn", "birbirine şahitlik edilenler", "orta", ""],
+      [116, "مُتَشَاهَدَات", "mutaşāhadāt", "birbirine şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَشَاهَد", "mutaşāhad", "şahitlik etişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَشَاهَد", "mutaşāhad", "birbirine şahitlik etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْشِهَاد", "inşihād", "şahitlik edilme", "orta", ""]
@@ -199,63 +206,63 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْشَهِد", "munşahid", "şahitlik edilen", "orta", ""],
-      [121, "مُنْشَهِدَة", "munşahida", "şahitlik edilen (dişi)", "orta", ""],
-      [122, "مُنْشَهِدَان", "munşahidān", "iki şahitlik edilen", "orta", ""],
-      [123, "مُنْشَهِدَتَان", "munşahidatān", "iki şahitlik edilen (dişi)", "orta", ""],
+      [121, "مُنْشَهِدَة", "munşahida", "şahitlik edilen (müennes)", "orta", ""],
+      [122, "مُنْشَهِدَان", "munşahidān", "şahitlik edilen (iki)", "orta", ""],
+      [123, "مُنْشَهِدَتَان", "munşahidatān", "şahitlik edilen (iki, müennes)", "orta", ""],
       [124, "مُنْشَهِدُون", "munşahidūn", "şahitlik edilenler", "orta", ""],
       [125, "مُنْشَهِدِين", "munşahidīn", "şahitlik edilenler", "orta", ""],
-      [126, "مُنْشَهِدَات", "munşahidāt", "şahitlik edilenler (dişi)", "orta", ""]
+      [126, "مُنْشَهِدَات", "munşahidāt", "şahitlik edilenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْشَهَد", "munşahad", "şahitlik edilmiş", "orta", ""],
-      [128, "مُنْشَهَدَة", "munşahada", "şahitlik edilmiş (dişi)", "orta", ""],
-      [129, "مُنْشَهَدَان", "munşahadān", "iki şahitlik edilmiş", "orta", ""],
-      [130, "مُنْشَهَدَتَان", "munşahadatān", "iki şahitlik edilmiş (dişi)", "orta", ""],
-      [131, "مُنْشَهَدُون", "munşahadūn", "şahitlik edilmişler", "orta", ""],
-      [132, "مُنْشَهَدِين", "munşahadīn", "şahitlik edilmişler", "orta", ""],
-      [133, "مُنْشَهَدَات", "munşahadāt", "şahitlik edilmişler (dişi)", "orta", ""]
+      [127, "مُنْشَهَد", "munşahad", "şahitlik edilen", "orta", ""],
+      [128, "مُنْشَهَدَة", "munşahada", "şahitlik edilen (müennes)", "orta", ""],
+      [129, "مُنْشَهَدَان", "munşahadān", "şahitlik edilen (iki)", "orta", ""],
+      [130, "مُنْشَهَدَتَان", "munşahadatān", "şahitlik edilen (iki, müennes)", "orta", ""],
+      [131, "مُنْشَهَدُون", "munşahadūn", "şahitlik edilenler", "orta", ""],
+      [132, "مُنْشَهَدِين", "munşahadīn", "şahitlik edilenler", "orta", ""],
+      [133, "مُنْشَهَدَات", "munşahadāt", "şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْشَهَد", "munşahad", "şahitlik edilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْشَهَد", "munşahad", "şahitlik edilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِشْتِهَاد", "iştihād", "şahitlik edinme", "orta", ""]
+      [135, "اِشْتِهَاد", "iştihād", "kendisi için şahitlik etme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِشْتِهَادَة", "iştihāda", "bir kere şahitlik edinme", "orta", ""]
+      [137, "اِشْتِهَادَة", "iştihāda", "bir kere kendisi için şahitlik etme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُشْتَهِد", "muştahid", "şahitlik edinen", "orta", ""],
-      [139, "مُشْتَهِدَة", "muştahida", "şahitlik edinen (dişi)", "orta", ""],
-      [140, "مُشْتَهِدَان", "muştahidān", "iki şahitlik edinen", "orta", ""],
-      [141, "مُشْتَهِدَتَان", "muştahidatān", "iki şahitlik edinen (dişi)", "orta", ""],
-      [142, "مُشْتَهِدُون", "muştahidūn", "şahitlik edinenler", "orta", ""],
-      [143, "مُشْتَهِدِين", "muştahidīn", "şahitlik edinenler", "orta", ""],
-      [144, "مُشْتَهِدَات", "muştahidāt", "şahitlik edinenler (dişi)", "orta", ""]
+      [138, "مُشْتَهِد", "muştahid", "kendisi için şahitlik eden", "orta", ""],
+      [139, "مُشْتَهِدَة", "muştahida", "kendisi için şahitlik eden (müennes)", "orta", ""],
+      [140, "مُشْتَهِدَان", "muştahidān", "kendisi için şahitlik eden (iki)", "orta", ""],
+      [141, "مُشْتَهِدَتَان", "muştahidatān", "kendisi için şahitlik eden (iki, müennes)", "orta", ""],
+      [142, "مُشْتَهِدُون", "muştahidūn", "kendisi için şahitlik edenler", "orta", ""],
+      [143, "مُشْتَهِدِين", "muştahidīn", "kendisi için şahitlik edenler", "orta", ""],
+      [144, "مُشْتَهِدَات", "muştahidāt", "kendisi için şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُشْتَهَد", "muştahad", "şahitlik edinmiş", "orta", ""],
-      [146, "مُشْتَهَدَة", "muştahada", "şahitlik edinmiş (dişi)", "orta", ""],
-      [147, "مُشْتَهَدَان", "muştahadān", "iki şahitlik edinmiş", "orta", ""],
-      [148, "مُشْتَهَدَتَان", "muştahadatān", "iki şahitlik edinmiş (dişi)", "orta", ""],
-      [149, "مُشْتَهَدُون", "muştahadūn", "şahitlik edinmişler", "orta", ""],
-      [150, "مُشْتَهَدِين", "muştahadīn", "şahitlik edinmişler", "orta", ""],
-      [151, "مُشْتَهَدَات", "muştahadāt", "şahitlik edinmişler (dişi)", "orta", ""]
+      [145, "مُشْتَهَد", "muştahad", "kendisi için şahitlik edilen", "orta", ""],
+      [146, "مُشْتَهَدَة", "muştahada", "kendisi için şahitlik edilen (müennes)", "orta", ""],
+      [147, "مُشْتَهَدَان", "muştahadān", "kendisi için şahitlik edilen (iki)", "orta", ""],
+      [148, "مُشْتَهَدَتَان", "muştahadatān", "kendisi için şahitlik edilen (iki, müennes)", "orta", ""],
+      [149, "مُشْتَهَدُون", "muştahadūn", "kendisi için şahitlik edilenler", "orta", ""],
+      [150, "مُشْتَهَدِين", "muştahadīn", "kendisi için şahitlik edilenler", "orta", ""],
+      [151, "مُشْتَهَدَات", "muştahadāt", "kendisi için şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُشْتَهَد", "muştahad", "şahitlik edinme (yeri/zamanı)", "orta", ""]
+      [152, "مُشْتَهَد", "muştahad", "kendisi için şahitlik etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِشْهِدَاد", "işhidād", "şahitlik etleşme", "kontrol", ""]
+      [499, "اِشْهِدَاد", "işhidād", "iyiden iyiye şahitlik etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُشْهَدّ", "muşhadd", "şahitlik etleşen", "kontrol", ""],
-      [501, "مُشْهَدَّة", "muşhadda", "şahitlik etleşen (dişi)", "kontrol", ""],
-      [502, "مُشْهَدَّان", "muşhaddān", "iki şahitlik etleşen", "kontrol", ""],
-      [503, "مُشْهَدَّتَان", "muşhaddatān", "iki şahitlik etleşen (dişi)", "kontrol", ""],
-      [504, "مُشْهَدُّون", "muşhaddūn", "şahitlik etleşenler", "kontrol", ""],
-      [505, "مُشْهَدِّين", "muşhaddīn", "şahitlik etleşenler", "kontrol", ""],
-      [506, "مُشْهَدَّات", "muşhaddāt", "şahitlik etleşenler (dişi)", "kontrol", ""]
+      [500, "مُشْهَدّ", "muşhadd", "iyiden iyiye şahitlik eden", "kontrol", ""],
+      [501, "مُشْهَدَّة", "muşhadda", "iyiden iyiye şahitlik eden (müennes)", "kontrol", ""],
+      [502, "مُشْهَدَّان", "muşhaddān", "iyiden iyiye şahitlik eden (iki)", "kontrol", ""],
+      [503, "مُشْهَدَّتَان", "muşhaddatān", "iyiden iyiye şahitlik eden (iki, müennes)", "kontrol", ""],
+      [504, "مُشْهَدُّون", "muşhaddūn", "iyiden iyiye şahitlik edenler", "kontrol", ""],
+      [505, "مُشْهَدِّين", "muşhaddīn", "iyiden iyiye şahitlik edenler", "kontrol", ""],
+      [506, "مُشْهَدَّات", "muşhaddāt", "iyiden iyiye şahitlik edenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
@@ -268,40 +275,40 @@
       ]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِشْهَادَة", "istişhāda", "bir kere şahitlik etme", "orta", ""]
+      [177, "اِسْتِشْهَادَة", "istişhāda", "bir kere şahitlik etmeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَشْهِد", "mustaşhid", "şahitlik etmeyi isteyen", "orta", ""],
-      [179, "مُسْتَشْهِدَة", "mustaşhida", "şahitlik etmeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَشْهِدَان", "mustaşhidān", "iki şahitlik etmeyi isteyen", "orta", ""],
-      [181, "مُسْتَشْهِدَتَان", "mustaşhidatān", "iki şahitlik etmeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَشْهِدَة", "mustaşhida", "şahitlik etmeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَشْهِدَان", "mustaşhidān", "şahitlik etmeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَشْهِدَتَان", "mustaşhidatān", "şahitlik etmeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَشْهِدُون", "mustaşhidūn", "şahitlik etmeyi isteyenler", "orta", ""],
       [183, "مُسْتَشْهِدِين", "mustaşhidīn", "şahitlik etmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَشْهِدَات", "mustaşhidāt", "şahitlik etmeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَشْهِدَات", "mustaşhidāt", "şahitlik etmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَشْهَد", "mustaşhad", "şahitlik etmeyi istenen", "orta", ""],
-      [186, "مُسْتَشْهَدَة", "mustaşhada", "şahitlik etmeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَشْهَدَان", "mustaşhadān", "iki şahitlik etmeyi istenen", "orta", ""],
-      [188, "مُسْتَشْهَدَتَان", "mustaşhadatān", "iki şahitlik etmeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَشْهَدُون", "mustaşhadūn", "şahitlik etmeyi istenenler", "orta", ""],
-      [190, "مُسْتَشْهَدِين", "mustaşhadīn", "şahitlik etmeyi istenenler", "orta", ""],
-      [191, "مُسْتَشْهَدَات", "mustaşhadāt", "şahitlik etmeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَشْهَد", "mustaşhad", "şahitlik etmesi istenen", "orta", ""],
+      [186, "مُسْتَشْهَدَة", "mustaşhada", "şahitlik etmesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَشْهَدَان", "mustaşhadān", "şahitlik etmesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَشْهَدَتَان", "mustaşhadatān", "şahitlik etmesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَشْهَدُون", "mustaşhadūn", "şahitlik etmesi istenenler", "orta", ""],
+      [190, "مُسْتَشْهَدِين", "mustaşhadīn", "şahitlik etmesi istenenler", "orta", ""],
+      [191, "مُسْتَشْهَدَات", "mustaşhadāt", "şahitlik etmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَشْهَد", "mustaşhad", "şahitlik etme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَشْهَد", "mustaşhad", "şahitlik etmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِشْهِيدَاد", "işhīdād", "iyice şahitlik etleşme", "kontrol", ""]
+      [507, "اِشْهِيدَاد", "işhīdād", "büsbütün şahitlik etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُشْهَادّ", "muşhādd", "iyice şahitlik etleşen", "kontrol", ""],
-      [509, "مُشْهَادَّة", "muşhādda", "iyice şahitlik etleşen (dişi)", "kontrol", ""],
-      [510, "مُشْهَادَّان", "muşhāddān", "iki iyice şahitlik etleşen", "kontrol", ""],
-      [511, "مُشْهَادَّتَان", "muşhāddatān", "iki iyice şahitlik etleşen (dişi)", "kontrol", ""],
-      [512, "مُشْهَادُّون", "muşhāddūn", "iyice şahitlik etleşenler", "kontrol", ""],
-      [513, "مُشْهَادِّين", "muşhāddīn", "iyice şahitlik etleşenler", "kontrol", ""],
-      [514, "مُشْهَادَّات", "muşhāddāt", "iyice şahitlik etleşenler (dişi)", "kontrol", ""]
+      [508, "مُشْهَادّ", "muşhādd", "büsbütün şahitlik eden", "kontrol", ""],
+      [509, "مُشْهَادَّة", "muşhādda", "büsbütün şahitlik eden (müennes)", "kontrol", ""],
+      [510, "مُشْهَادَّان", "muşhāddān", "büsbütün şahitlik eden (iki)", "kontrol", ""],
+      [511, "مُشْهَادَّتَان", "muşhāddatān", "büsbütün şahitlik eden (iki, müennes)", "kontrol", ""],
+      [512, "مُشْهَادُّون", "muşhāddūn", "büsbütün şahitlik edenler", "kontrol", ""],
+      [513, "مُشْهَادِّين", "muşhāddīn", "büsbütün şahitlik edenler", "kontrol", ""],
+      [514, "مُشْهَادَّات", "muşhāddāt", "büsbütün şahitlik edenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِشْهِوْهَاد", "işhiwhād", "aşırı şahitlik etme", "orta", ""]
@@ -311,238 +318,231 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "شَاهِد", "şāhid", "şahitlik eden", "orta", ""],
-      [214, "شَاهِدَة", "şāhida", "şahitlik eden (dişi)", "orta", ""],
-      [215, "شَاهِدَان", "şāhidān", "iki şahitlik eden", "orta", ""],
-      [216, "شَاهِدَتَان", "şāhidatān", "iki şahitlik eden (dişi)", "orta", ""],
+      [214, "شَاهِدَة", "şāhida", "şahitlik eden (müennes)", "orta", ""],
+      [215, "شَاهِدَان", "şāhidān", "şahitlik eden (iki)", "orta", ""],
+      [216, "شَاهِدَتَان", "şāhidatān", "şahitlik eden (iki, müennes)", "orta", ""],
       [217, "شَاهِدُون", "şāhidūn", "şahitlik edenler", "orta", ""],
       [218, "شَاهِدِين", "şāhidīn", "şahitlik edenler", "orta", ""],
-      [219, "شَاهِدَات", "şāhidāt", "şahitlik edenler (dişi)", "orta", ""]
+      [219, "شَاهِدَات", "şāhidāt", "şahitlik edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَشْهُود", "maşhūd", "şahitlik edilmiş", "orta", ""],
-      [221, "مَشْهُودَة", "maşhūda", "şahitlik edilmiş (dişi)", "orta", ""],
-      [222, "مَشْهُودَان", "maşhūdān", "iki şahitlik edilmiş", "orta", ""],
-      [223, "مَشْهُودَتَان", "maşhūdatān", "iki şahitlik edilmiş (dişi)", "orta", ""],
-      [224, "مَشْهُودُون", "maşhūdūn", "şahitlik edilmişler", "orta", ""],
-      [225, "مَشْهُودِين", "maşhūdīn", "şahitlik edilmişler", "orta", ""],
-      [226, "مَشْهُودَات", "maşhūdāt", "şahitlik edilmişler (dişi)", "orta", ""]
+      [220, "مَشْهُود", "maşhūd", "şahit olunan", "kuran", "Kur'ân"],
+      [221, "مَشْهُودَة", "maşhūda", "şahitlik edilen (müennes)", "orta", ""],
+      [222, "مَشْهُودَان", "maşhūdān", "şahitlik edilen (iki)", "orta", ""],
+      [223, "مَشْهُودَتَان", "maşhūdatān", "şahitlik edilen (iki, müennes)", "orta", ""],
+      [224, "مَشْهُودُون", "maşhūdūn", "şahitlik edilenler", "orta", ""],
+      [225, "مَشْهُودِين", "maşhūdīn", "şahitlik edilenler", "orta", ""],
+      [226, "مَشْهُودَات", "maşhūdāt", "şahitlik edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [
-        227,
-        "مَشْهَد",
-        "maşhad",
-        "şahitlik etme (yeri/zamanı)",
-        "orta",
-        "Vikisözlük: place of assembly, meeting, meeting place"
-      ],
-      [228, "مَشْهَدَان", "maşhadān", "iki şahitlik etme (yeri/zamanı)", "orta", ""],
-      [229, "مَشْهِد", "maşhid", "şahitlik etme (yeri/zamanı)", "orta", ""],
-      [230, "مَشْهِدَان", "maşhidān", "iki şahitlik etme (yeri/zamanı)", "orta", ""],
-      [231, "مَشْهَدَة", "maşhada", "şahitlik etme (yeri/zamanı)", "orta", ""],
-      [232, "مَشْهَدَتَان", "maşhadatān", "iki şahitlik etme (yeri/zamanı)", "orta", ""],
-      [233, "مَشْهِدَة", "maşhida", "şahitlik etme (yeri/zamanı)", "orta", ""],
-      [234, "مَشْهِدَتَان", "maşhidatān", "iki şahitlik etme (yeri/zamanı)", "orta", ""],
-      [247, "مَشْهُدَة", "maşhuda", "şahitlik etme (yeri/zamanı)", "orta", ""],
-      [248, "مَشْهُدَتَان", "maşhudatān", "iki şahitlik etme (yeri/zamanı)", "orta", ""]
+      [227, "مَشْهَد", "maşhad", "sahne", "kuran", "Vikisözlük: place of assembly, meeting, meeting place"],
+      [228, "مَشْهَدَان", "maşhadān", "şahitlik etme yeri, vakti (iki)", "orta", ""],
+      [229, "مَشْهِد", "maşhid", "şahitlik etme yeri, vakti", "orta", ""],
+      [230, "مَشْهِدَان", "maşhidān", "şahitlik etme yeri, vakti (iki)", "orta", ""],
+      [231, "مَشْهَدَة", "maşhada", "şahitlik etmenin bol olduğu yer", "orta", ""],
+      [232, "مَشْهَدَتَان", "maşhadatān", "şahitlik etmenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَشْهِدَة", "maşhida", "şahitlik etmenin bol olduğu yer", "orta", ""],
+      [234, "مَشْهِدَتَان", "maşhidatān", "şahitlik etmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَشْهُدَة", "maşhuda", "şahitlik etme yeri, vakti", "orta", ""],
+      [248, "مَشْهُدَتَان", "maşhudatān", "şahitlik etme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِشْهَد", "mişhad", "şahitlik etmeye yarayan araç", "orta", ""],
-      [236, "مِشْهَدَان", "mişhadān", "iki şahitlik etmeye yarayan araç", "orta", ""],
-      [237, "مِشْهَاد", "mişhād", "şahitlik etmeye yarayan araç", "orta", ""],
-      [238, "مِشْهَادَان", "mişhādān", "iki şahitlik etmeye yarayan araç", "orta", ""],
-      [239, "مِشْهَدَة", "mişhada", "şahitlik etmeye yarayan araç", "orta", ""],
-      [240, "مِشْهَدَتَان", "mişhadatān", "iki şahitlik etmeye yarayan araç", "orta", ""]
+      [235, "مِشْهَد", "mişhad", "şahitlik etme âleti", "orta", ""],
+      [236, "مِشْهَدَان", "mişhadān", "şahitlik etme âleti (iki)", "orta", ""],
+      [237, "مِشْهَاد", "mişhād", "şahitlik etme âleti", "orta", ""],
+      [238, "مِشْهَادَان", "mişhādān", "şahitlik etme âleti (iki)", "orta", ""],
+      [239, "مِشْهَدَة", "mişhada", "şahitlik etme âleti", "orta", ""],
+      [240, "مِشْهَدَتَان", "mişhadatān", "şahitlik etme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَشْهَد", "ʾaşhad", "daha çok şahitlik eden", "orta", ""],
-      [242, "أَشْهَدَان", "ʾaşhadān", "iki daha çok şahitlik eden", "orta", ""]
+      [242, "أَشْهَدَان", "ʾaşhadān", "daha çok şahitlik eden (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "شُهْدَى", "şuhdā", "daha çok şahitlik eden", "orta", ""],
-      [244, "شُهْدَيَان", "şuhdayān", "iki daha çok şahitlik eden", "orta", ""],
+      [244, "شُهْدَيَان", "şuhdayān", "daha çok şahitlik eden (iki)", "orta", ""],
       [245, "شَهْدَاء", "şahdāʾ", "daha çok şahitlik eden", "orta", ""],
-      [246, "شَهْدَاآن", "şahdāʾān", "iki daha çok şahitlik eden", "orta", ""]
+      [246, "شَهْدَاآن", "şahdāʾān", "daha çok şahitlik eden (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "شُهَيْد", "şuhayd", "küçük şahitlik etme", "orta", ""],
-      [250, "شُهَيْدَان", "şuhaydān", "iki küçük şahitlik etme", "orta", ""],
-      [251, "شُهَيْدَة", "şuhayda", "küçük şahitlik etme", "orta", ""],
-      [252, "شُهَيْدَتَان", "şuhaydatān", "iki küçük şahitlik etme", "orta", ""]
+      [249, "شُهَيْد", "şuhayd", "azıcık şahitlik etme", "orta", ""],
+      [250, "شُهَيْدَان", "şuhaydān", "azıcık şahitlik etme (iki)", "orta", ""],
+      [251, "شُهَيْدَة", "şuhayda", "azıcık şahitlik etme", "orta", ""],
+      [252, "شُهَيْدَتَان", "şuhaydatān", "azıcık şahitlik etme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَشْهَد", "maşhad", "şahitlik etme", "orta", "Vikisözlük: place of assembly, meeting, meeting place"],
-      [254, "مَشْهَدَان", "maşhadān", "iki şahitlik etme", "orta", ""]
+      [253, "مَشْهَد", "maşhad", "sahne", "kuran", "Vikisözlük: place of assembly, meeting, meeting place"],
+      [254, "مَشْهَدَان", "maşhadān", "şahitlik etme (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "شَهْدَة", "şahda", "bir kere şahitlik etme", "orta", ""],
-      [256, "شَهْدَتَان", "şahdatān", "iki bir kere şahitlik etme", "orta", ""]
+      [256, "شَهْدَتَان", "şahdatān", "bir kere şahitlik etme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "شِهْدَة", "şihda", "şahitlik etme tarzı", "orta", ""],
-      [258, "شِهْدَتَان", "şihdatān", "iki şahitlik etme tarzı", "orta", ""]
+      [258, "شِهْدَتَان", "şihdatān", "şahitlik etme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "شَهِيد", "şahīd", "sürekli şahitlik eden", "orta", "Vikisözlük: witness"],
-      [260, "شَهِيدَة", "şahīda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [261, "شَهِيدَان", "şahīdān", "iki sürekli şahitlik eden", "orta", ""],
-      [262, "شَهِيدَتَان", "şahīdatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [263, "شَهِيدُون", "şahīdūn", "sürekli şahitlik edenler", "orta", ""],
-      [264, "شَهِيدِين", "şahīdīn", "sürekli şahitlik edenler", "orta", ""],
-      [265, "شَهِيدَات", "şahīdāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [266, "شَهُود", "şahūd", "sürekli şahitlik eden", "orta", ""],
-      [267, "شَهُودَة", "şahūda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [268, "شَهُودَان", "şahūdān", "iki sürekli şahitlik eden", "orta", ""],
-      [269, "شَهُودَتَان", "şahūdatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [270, "شَهُودُون", "şahūdūn", "sürekli şahitlik edenler", "orta", ""],
-      [271, "شَهُودِين", "şahūdīn", "sürekli şahitlik edenler", "orta", ""],
-      [272, "شَهُودَات", "şahūdāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [273, "شَهِد", "şahid", "sürekli şahitlik eden", "orta", ""],
-      [274, "شَهِدَة", "şahida", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [275, "شَهِدَان", "şahidān", "iki sürekli şahitlik eden", "orta", ""],
-      [276, "شَهِدَتَان", "şahidatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [277, "شَهِدُون", "şahidūn", "sürekli şahitlik edenler", "orta", ""],
-      [278, "شَهِدِين", "şahidīn", "sürekli şahitlik edenler", "orta", ""],
-      [279, "شَهِدَات", "şahidāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [280, "شَهُد", "şahud", "sürekli şahitlik eden", "orta", ""],
-      [281, "شَهُدَة", "şahuda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [282, "شَهُدَان", "şahudān", "iki sürekli şahitlik eden", "orta", ""],
-      [283, "شَهُدَتَان", "şahudatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [284, "شَهُدُون", "şahudūn", "sürekli şahitlik edenler", "orta", ""],
-      [285, "شَهُدِين", "şahudīn", "sürekli şahitlik edenler", "orta", ""],
-      [286, "شَهُدَات", "şahudāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [287, "شَهَد", "şahad", "sürekli şahitlik eden", "orta", ""],
-      [288, "شَهَدَة", "şahada", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [289, "شَهَدَان", "şahadān", "iki sürekli şahitlik eden", "orta", ""],
-      [290, "شَهَدَتَان", "şahadatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [291, "شَهَدُون", "şahadūn", "sürekli şahitlik edenler", "orta", ""],
-      [292, "شَهَدِين", "şahadīn", "sürekli şahitlik edenler", "orta", ""],
-      [293, "شَهَدَات", "şahadāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [294, "شَهْد", "şahd", "sürekli şahitlik eden", "orta", ""],
-      [295, "شَهْدَة", "şahda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [296, "شَهْدَان", "şahdān", "iki sürekli şahitlik eden", "orta", ""],
-      [297, "شَهْدَتَان", "şahdatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [298, "شَهْدُون", "şahdūn", "sürekli şahitlik edenler", "orta", ""],
-      [299, "شَهْدِين", "şahdīn", "sürekli şahitlik edenler", "orta", ""],
-      [300, "شَهْدَات", "şahdāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [301, "شُهُد", "şuhud", "sürekli şahitlik eden", "orta", ""],
-      [302, "شُهُدَة", "şuhuda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [303, "شُهُدَان", "şuhudān", "iki sürekli şahitlik eden", "orta", ""],
-      [304, "شُهُدَتَان", "şuhudatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [305, "شُهُدُون", "şuhudūn", "sürekli şahitlik edenler", "orta", ""],
-      [306, "شُهُدِين", "şuhudīn", "sürekli şahitlik edenler", "orta", ""],
-      [307, "شُهُدَات", "şuhudāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [308, "شَهْدَان", "şahdān", "sürekli şahitlik eden", "orta", ""],
-      [309, "شَهْدَانَة", "şahdāna", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [310, "شَهْدَانَان", "şahdānān", "iki sürekli şahitlik eden", "orta", ""],
-      [311, "شَهْدَانَتَان", "şahdānatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [312, "شَهْدَانُون", "şahdānūn", "sürekli şahitlik edenler", "orta", ""],
-      [313, "شَهْدَانِين", "şahdānīn", "sürekli şahitlik edenler", "orta", ""],
-      [314, "شَهْدَانَات", "şahdānāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [315, "شُهَاد", "şuhād", "sürekli şahitlik eden", "orta", ""],
-      [316, "شُهَادَة", "şuhāda", "sürekli şahitlik eden (dişi)", "orta", ""],
-      [317, "شُهَادَان", "şuhādān", "iki sürekli şahitlik eden", "orta", ""],
-      [318, "شُهَادَتَان", "şuhādatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [319, "شُهَادُون", "şuhādūn", "sürekli şahitlik edenler", "orta", ""],
-      [320, "شُهَادِين", "şuhādīn", "sürekli şahitlik edenler", "orta", ""],
-      [321, "شُهَادَات", "şuhādāt", "sürekli şahitlik edenler (dişi)", "orta", ""],
-      [322, "شَهَاد", "şahād", "sürekli şahitlik eden", "orta", ""],
+      [259, "شَهِيد", "şahīd", "şahit", "kuran", "Vikisözlük: witness"],
+      [260, "شَهِيدَة", "şahīda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [261, "شَهِيدَان", "şahīdān", "her daim şahitlik eden (iki)", "orta", ""],
+      [262, "شَهِيدَتَان", "şahīdatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [263, "شَهِيدُون", "şahīdūn", "her daim şahitlik edenler", "orta", ""],
+      [264, "شَهِيدِين", "şahīdīn", "her daim şahitlik edenler", "orta", ""],
+      [265, "شَهِيدَات", "şahīdāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [266, "شَهُود", "şahūd", "her daim şahitlik eden", "orta", ""],
+      [267, "شَهُودَة", "şahūda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [268, "شَهُودَان", "şahūdān", "her daim şahitlik eden (iki)", "orta", ""],
+      [269, "شَهُودَتَان", "şahūdatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [270, "شَهُودُون", "şahūdūn", "her daim şahitlik edenler", "orta", ""],
+      [271, "شَهُودِين", "şahūdīn", "her daim şahitlik edenler", "orta", ""],
+      [272, "شَهُودَات", "şahūdāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [273, "شَهِد", "şahid", "her daim şahitlik eden", "orta", ""],
+      [274, "شَهِدَة", "şahida", "her daim şahitlik eden (müennes)", "orta", ""],
+      [275, "شَهِدَان", "şahidān", "her daim şahitlik eden (iki)", "orta", ""],
+      [276, "شَهِدَتَان", "şahidatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [277, "شَهِدُون", "şahidūn", "her daim şahitlik edenler", "orta", ""],
+      [278, "شَهِدِين", "şahidīn", "her daim şahitlik edenler", "orta", ""],
+      [279, "شَهِدَات", "şahidāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [280, "شَهُد", "şahud", "her daim şahitlik eden", "orta", ""],
+      [281, "شَهُدَة", "şahuda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [282, "شَهُدَان", "şahudān", "her daim şahitlik eden (iki)", "orta", ""],
+      [283, "شَهُدَتَان", "şahudatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [284, "شَهُدُون", "şahudūn", "her daim şahitlik edenler", "orta", ""],
+      [285, "شَهُدِين", "şahudīn", "her daim şahitlik edenler", "orta", ""],
+      [286, "شَهُدَات", "şahudāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [287, "شَهَد", "şahad", "her daim şahitlik eden", "orta", ""],
+      [288, "شَهَدَة", "şahada", "her daim şahitlik eden (müennes)", "orta", ""],
+      [289, "شَهَدَان", "şahadān", "her daim şahitlik eden (iki)", "orta", ""],
+      [290, "شَهَدَتَان", "şahadatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [291, "شَهَدُون", "şahadūn", "her daim şahitlik edenler", "orta", ""],
+      [292, "شَهَدِين", "şahadīn", "her daim şahitlik edenler", "orta", ""],
+      [293, "شَهَدَات", "şahadāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [294, "شَهْد", "şahd", "her daim şahitlik eden", "orta", ""],
+      [295, "شَهْدَة", "şahda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [296, "شَهْدَان", "şahdān", "her daim şahitlik eden (iki)", "orta", ""],
+      [297, "شَهْدَتَان", "şahdatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [298, "شَهْدُون", "şahdūn", "her daim şahitlik edenler", "orta", ""],
+      [299, "شَهْدِين", "şahdīn", "her daim şahitlik edenler", "orta", ""],
+      [300, "شَهْدَات", "şahdāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [301, "شُهُد", "şuhud", "her daim şahitlik eden", "orta", ""],
+      [302, "شُهُدَة", "şuhuda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [303, "شُهُدَان", "şuhudān", "her daim şahitlik eden (iki)", "orta", ""],
+      [304, "شُهُدَتَان", "şuhudatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [305, "شُهُدُون", "şuhudūn", "her daim şahitlik edenler", "orta", ""],
+      [306, "شُهُدِين", "şuhudīn", "her daim şahitlik edenler", "orta", ""],
+      [307, "شُهُدَات", "şuhudāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [308, "شَهْدَان", "şahdān", "her daim şahitlik eden", "orta", ""],
+      [309, "شَهْدَانَة", "şahdāna", "her daim şahitlik eden (müennes)", "orta", ""],
+      [310, "شَهْدَانَان", "şahdānān", "her daim şahitlik eden (iki)", "orta", ""],
+      [311, "شَهْدَانَتَان", "şahdānatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [312, "شَهْدَانُون", "şahdānūn", "her daim şahitlik edenler", "orta", ""],
+      [313, "شَهْدَانِين", "şahdānīn", "her daim şahitlik edenler", "orta", ""],
+      [314, "شَهْدَانَات", "şahdānāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [315, "شُهَاد", "şuhād", "her daim şahitlik eden", "orta", ""],
+      [316, "شُهَادَة", "şuhāda", "her daim şahitlik eden (müennes)", "orta", ""],
+      [317, "شُهَادَان", "şuhādān", "her daim şahitlik eden (iki)", "orta", ""],
+      [318, "شُهَادَتَان", "şuhādatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [319, "شُهَادُون", "şuhādūn", "her daim şahitlik edenler", "orta", ""],
+      [320, "شُهَادِين", "şuhādīn", "her daim şahitlik edenler", "orta", ""],
+      [321, "شُهَادَات", "şuhādāt", "her daim şahitlik edenler (müennes)", "orta", ""],
+      [322, "شَهَاد", "şahād", "her daim şahitlik eden", "orta", ""],
       [
         323,
         "شَهَادَة",
         "şahāda",
-        "sürekli şahitlik eden (dişi)",
+        "her daim şahitlik eden (müennes)",
         "orta",
         "Vikisözlük: verbal noun of شَهِدَ (šahida) (form I)"
       ],
-      [324, "شَهَادَان", "şahādān", "iki sürekli şahitlik eden", "orta", ""],
-      [325, "شَهَادَتَان", "şahādatān", "iki sürekli şahitlik eden (dişi)", "orta", ""],
-      [326, "شَهَادُون", "şahādūn", "sürekli şahitlik edenler", "orta", ""],
-      [327, "شَهَادِين", "şahādīn", "sürekli şahitlik edenler", "orta", ""],
-      [328, "شَهَادَات", "şahādāt", "sürekli şahitlik edenler (dişi)", "orta", ""]
+      [324, "شَهَادَان", "şahādān", "her daim şahitlik eden (iki)", "orta", ""],
+      [325, "شَهَادَتَان", "şahādatān", "her daim şahitlik eden (iki, müennes)", "orta", ""],
+      [326, "شَهَادُون", "şahādūn", "her daim şahitlik edenler", "orta", ""],
+      [327, "شَهَادِين", "şahādīn", "her daim şahitlik edenler", "orta", ""],
+      [328, "شَهَادَات", "şahādāt", "her daim şahitlik edenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "شَهَّاد", "şahhād", "çok şahitlik eden", "orta", ""],
-      [330, "شَهَّادَة", "şahhāda", "çok şahitlik eden (dişi)", "orta", ""],
-      [331, "شَهَّادَان", "şahhādān", "iki çok şahitlik eden", "orta", ""],
-      [332, "شَهَّادَتَان", "şahhādatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [333, "شَهَّادُون", "şahhādūn", "çok şahitlik edenler", "orta", ""],
-      [334, "شَهَّادِين", "şahhādīn", "çok şahitlik edenler", "orta", ""],
-      [335, "شَهَّادَات", "şahhādāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [336, "شَهَّادَة", "şahhāda", "çok şahitlik eden", "orta", ""],
-      [337, "شَهَّادَتَان", "şahhādatān", "iki çok şahitlik eden", "orta", ""],
-      [338, "شَهَّادَات", "şahhādāt", "çok şahitlik edenler (dişi)", "orta", ""],
+      [329, "شَهَّاد", "şahhād", "işi şahitlik etme olan", "orta", ""],
+      [330, "شَهَّادَة", "şahhāda", "işi şahitlik etme olan (müennes)", "orta", ""],
+      [331, "شَهَّادَان", "şahhādān", "işi şahitlik etme olan (iki)", "orta", ""],
+      [332, "شَهَّادَتَان", "şahhādatān", "işi şahitlik etme olan (iki, müennes)", "orta", ""],
+      [333, "شَهَّادُون", "şahhādūn", "işi şahitlik etme olanlar", "orta", ""],
+      [334, "شَهَّادِين", "şahhādīn", "işi şahitlik etme olanlar", "orta", ""],
+      [335, "شَهَّادَات", "şahhādāt", "işi şahitlik etme olanlar (müennes)", "orta", ""],
+      [336, "شَهَّادَة", "şahhāda", "pek çok şahitlik eden", "orta", ""],
+      [337, "شَهَّادَتَان", "şahhādatān", "pek çok şahitlik eden (iki)", "orta", ""],
+      [338, "شَهَّادَات", "şahhādāt", "pek çok şahitlik edenler (müennes)", "orta", ""],
       [339, "شَهُود", "şahūd", "çok şahitlik eden", "orta", ""],
-      [340, "شَهُودَة", "şahūda", "çok şahitlik eden (dişi)", "orta", ""],
-      [341, "شَهُودَان", "şahūdān", "iki çok şahitlik eden", "orta", ""],
-      [342, "شَهُودَتَان", "şahūdatān", "iki çok şahitlik eden (dişi)", "orta", ""],
+      [340, "شَهُودَة", "şahūda", "çok şahitlik eden (müennes)", "orta", ""],
+      [341, "شَهُودَان", "şahūdān", "çok şahitlik eden (iki)", "orta", ""],
+      [342, "شَهُودَتَان", "şahūdatān", "çok şahitlik eden (iki, müennes)", "orta", ""],
       [343, "شَهُودُون", "şahūdūn", "çok şahitlik edenler", "orta", ""],
       [344, "شَهُودِين", "şahūdīn", "çok şahitlik edenler", "orta", ""],
-      [345, "شَهُودَات", "şahūdāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [346, "شَهُّود", "şahhūd", "çok şahitlik eden", "orta", ""],
-      [347, "شَهُّودَة", "şahhūda", "çok şahitlik eden (dişi)", "orta", ""],
-      [348, "شَهُّودَان", "şahhūdān", "iki çok şahitlik eden", "orta", ""],
-      [349, "شَهُّودَتَان", "şahhūdatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [350, "شَهُّودُون", "şahhūdūn", "çok şahitlik edenler", "orta", ""],
-      [351, "شَهُّودِين", "şahhūdīn", "çok şahitlik edenler", "orta", ""],
-      [352, "شَهُّودَات", "şahhūdāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [353, "شِهِّيد", "şihhīd", "çok şahitlik eden", "orta", ""],
-      [354, "شِهِّيدَة", "şihhīda", "çok şahitlik eden (dişi)", "orta", ""],
-      [355, "شِهِّيدَان", "şihhīdān", "iki çok şahitlik eden", "orta", ""],
-      [356, "شِهِّيدَتَان", "şihhīdatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [357, "شِهِّيدُون", "şihhīdūn", "çok şahitlik edenler", "orta", ""],
-      [358, "شِهِّيدِين", "şihhīdīn", "çok şahitlik edenler", "orta", ""],
-      [359, "شِهِّيدَات", "şihhīdāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [360, "شُهَّاد", "şuhhād", "çok şahitlik eden", "orta", ""],
-      [361, "شُهَّادَة", "şuhhāda", "çok şahitlik eden (dişi)", "orta", ""],
-      [362, "شُهَّادَان", "şuhhādān", "iki çok şahitlik eden", "orta", ""],
-      [363, "شُهَّادَتَان", "şuhhādatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [364, "شُهَّادُون", "şuhhādūn", "çok şahitlik edenler", "orta", ""],
-      [365, "شُهَّادِين", "şuhhādīn", "çok şahitlik edenler", "orta", ""],
-      [366, "شُهَّادَات", "şuhhādāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [367, "مِشْهَاد", "mişhād", "çok şahitlik eden", "orta", ""],
-      [368, "مِشْهَادَة", "mişhāda", "çok şahitlik eden (dişi)", "orta", ""],
-      [369, "مِشْهَادَان", "mişhādān", "iki çok şahitlik eden", "orta", ""],
-      [370, "مِشْهَادَتَان", "mişhādatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [371, "مِشْهَادُون", "mişhādūn", "çok şahitlik edenler", "orta", ""],
-      [372, "مِشْهَادِين", "mişhādīn", "çok şahitlik edenler", "orta", ""],
-      [373, "مِشْهَادَات", "mişhādāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [374, "مِشْهِيد", "mişhīd", "çok şahitlik eden", "orta", ""],
-      [375, "مِشْهِيدَة", "mişhīda", "çok şahitlik eden (dişi)", "orta", ""],
-      [376, "مِشْهِيدَان", "mişhīdān", "iki çok şahitlik eden", "orta", ""],
-      [377, "مِشْهِيدَتَان", "mişhīdatān", "iki çok şahitlik eden (dişi)", "orta", ""],
-      [378, "مِشْهِيدُون", "mişhīdūn", "çok şahitlik edenler", "orta", ""],
-      [379, "مِشْهِيدِين", "mişhīdīn", "çok şahitlik edenler", "orta", ""],
-      [380, "مِشْهِيدَات", "mişhīdāt", "çok şahitlik edenler (dişi)", "orta", ""],
-      [381, "شَهِيد", "şahīd", "çok şahitlik eden", "orta", "Vikisözlük: witness"],
-      [382, "شَهِيدَة", "şahīda", "çok şahitlik eden (dişi)", "orta", ""],
-      [383, "شَهِيدَان", "şahīdān", "iki çok şahitlik eden", "orta", ""],
-      [384, "شَهِيدَتَان", "şahīdatān", "iki çok şahitlik eden (dişi)", "orta", ""],
+      [345, "شَهُودَات", "şahūdāt", "çok şahitlik edenler (müennes)", "orta", ""],
+      [346, "شَهُّود", "şahhūd", "pek çok şahitlik eden", "orta", ""],
+      [347, "شَهُّودَة", "şahhūda", "pek çok şahitlik eden (müennes)", "orta", ""],
+      [348, "شَهُّودَان", "şahhūdān", "pek çok şahitlik eden (iki)", "orta", ""],
+      [349, "شَهُّودَتَان", "şahhūdatān", "pek çok şahitlik eden (iki, müennes)", "orta", ""],
+      [350, "شَهُّودُون", "şahhūdūn", "pek çok şahitlik edenler", "orta", ""],
+      [351, "شَهُّودِين", "şahhūdīn", "pek çok şahitlik edenler", "orta", ""],
+      [352, "شَهُّودَات", "şahhūdāt", "pek çok şahitlik edenler (müennes)", "orta", ""],
+      [353, "شِهِّيد", "şihhīd", "şahitlik etmede aşırı giden", "orta", ""],
+      [354, "شِهِّيدَة", "şihhīda", "şahitlik etmede aşırı giden (müennes)", "orta", ""],
+      [355, "شِهِّيدَان", "şihhīdān", "şahitlik etmede aşırı giden (iki)", "orta", ""],
+      [356, "شِهِّيدَتَان", "şihhīdatān", "şahitlik etmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "شِهِّيدُون", "şihhīdūn", "şahitlik etmede aşırı gidenler", "orta", ""],
+      [358, "شِهِّيدِين", "şihhīdīn", "şahitlik etmede aşırı gidenler", "orta", ""],
+      [359, "شِهِّيدَات", "şihhīdāt", "şahitlik etmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "شُهَّاد", "şuhhād", "son derece şahitlik eden", "orta", ""],
+      [361, "شُهَّادَة", "şuhhāda", "son derece şahitlik eden (müennes)", "orta", ""],
+      [362, "شُهَّادَان", "şuhhādān", "son derece şahitlik eden (iki)", "orta", ""],
+      [363, "شُهَّادَتَان", "şuhhādatān", "son derece şahitlik eden (iki, müennes)", "orta", ""],
+      [364, "شُهَّادُون", "şuhhādūn", "son derece şahitlik edenler", "orta", ""],
+      [365, "شُهَّادِين", "şuhhādīn", "son derece şahitlik edenler", "orta", ""],
+      [366, "شُهَّادَات", "şuhhādāt", "son derece şahitlik edenler (müennes)", "orta", ""],
+      [367, "مِشْهَاد", "mişhād", "şahitlik etmeyi âdet edinmiş", "orta", ""],
+      [368, "مِشْهَادَة", "mişhāda", "şahitlik etmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِشْهَادَان", "mişhādān", "şahitlik etmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِشْهَادَتَان", "mişhādatān", "şahitlik etmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِشْهَادُون", "mişhādūn", "şahitlik etmeyi âdet edinmişler", "orta", ""],
+      [372, "مِشْهَادِين", "mişhādīn", "şahitlik etmeyi âdet edinmişler", "orta", ""],
+      [373, "مِشْهَادَات", "mişhādāt", "şahitlik etmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِشْهِيد", "mişhīd", "şahitlik etmeye düşkün", "orta", ""],
+      [375, "مِشْهِيدَة", "mişhīda", "şahitlik etmeye düşkün (müennes)", "orta", ""],
+      [376, "مِشْهِيدَان", "mişhīdān", "şahitlik etmeye düşkün (iki)", "orta", ""],
+      [377, "مِشْهِيدَتَان", "mişhīdatān", "şahitlik etmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِشْهِيدُون", "mişhīdūn", "şahitlik etmeye düşkünler", "orta", ""],
+      [379, "مِشْهِيدِين", "mişhīdīn", "şahitlik etmeye düşkünler", "orta", ""],
+      [380, "مِشْهِيدَات", "mişhīdāt", "şahitlik etmeye düşkünler (müennes)", "orta", ""],
+      [381, "شَهِيد", "şahīd", "şahit", "kuran", "Vikisözlük: witness"],
+      [382, "شَهِيدَة", "şahīda", "çok şahitlik eden (müennes)", "orta", ""],
+      [383, "شَهِيدَان", "şahīdān", "çok şahitlik eden (iki)", "orta", ""],
+      [384, "شَهِيدَتَان", "şahīdatān", "çok şahitlik eden (iki, müennes)", "orta", ""],
       [385, "شَهِيدُون", "şahīdūn", "çok şahitlik edenler", "orta", ""],
       [386, "شَهِيدِين", "şahīdīn", "çok şahitlik edenler", "orta", ""],
-      [387, "شَهِيدَات", "şahīdāt", "çok şahitlik edenler (dişi)", "orta", ""],
+      [387, "شَهِيدَات", "şahīdāt", "çok şahitlik edenler (müennes)", "orta", ""],
       [388, "شَهَّد", "şahhad", "çok şahitlik eden", "orta", ""],
-      [389, "شَهَّدَة", "şahhada", "çok şahitlik eden (dişi)", "orta", ""],
-      [390, "شَهَّدَان", "şahhadān", "iki çok şahitlik eden", "orta", ""],
-      [391, "شَهَّدَتَان", "şahhadatān", "iki çok şahitlik eden (dişi)", "orta", ""],
+      [389, "شَهَّدَة", "şahhada", "çok şahitlik eden (müennes)", "orta", ""],
+      [390, "شَهَّدَان", "şahhadān", "çok şahitlik eden (iki)", "orta", ""],
+      [391, "شَهَّدَتَان", "şahhadatān", "çok şahitlik eden (iki, müennes)", "orta", ""],
       [392, "شَهَّدُون", "şahhadūn", "çok şahitlik edenler", "orta", ""],
       [393, "شَهَّدِين", "şahhadīn", "çok şahitlik edenler", "orta", ""],
-      [394, "شَهَّدَات", "şahhadāt", "çok şahitlik edenler (dişi)", "orta", ""]
+      [394, "شَهَّدَات", "şahhadāt", "çok şahitlik edenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "شَهْدِيّ", "şahdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [397, "شَهَدِيّ", "şahadiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [399, "شِهْدِيّ", "şihdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [401, "شُهْدِيّ", "şuhdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [403, "شِهَادِيّ", "şihādiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [405, "شَاهِدِيّ", "şāhidiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [407, "مَشْهُودِيّ", "maşhūdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [409, "شَهِيدِيّ", "şahīdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [411, "مَشْهَدِيّ", "maşhadiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [413, "تَشْهِيدِيّ", "taşhīdiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [415, "تَشَاهُدِيّ", "taşāhudiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [417, "إِشْهَادِيّ", "ʾişhādiyy", "şahitlik etmeye ilgili", "orta", ""],
-      [419, "اِشْتِهَادِيّ", "iştihādiyy", "şahitlik etmeye ilgili", "orta", ""]
+      [395, "شَهْدِيّ", "şahdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [397, "شَهَدِيّ", "şahadiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [399, "شِهْدِيّ", "şihdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [401, "شُهْدِيّ", "şuhdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [403, "شِهَادِيّ", "şihādiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [405, "شَاهِدِيّ", "şāhidiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [407, "مَشْهُودِيّ", "maşhūdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [409, "شَهِيدِيّ", "şahīdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [411, "مَشْهَدِيّ", "maşhadiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [413, "تَشْهِيدِيّ", "taşhīdiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [415, "تَشَاهُدِيّ", "taşāhudiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [417, "إِشْهَادِيّ", "ʾişhādiyy", "şahitlik etme ile ilgili", "orta", ""],
+      [419, "اِشْتِهَادِيّ", "iştihādiyy", "şahitlik etme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "شَهْدِيَّة", "şahdiyya", "şahitlik edenlik", "orta", ""],
@@ -571,95 +571,95 @@
       [429, "شِهْد", "şihd", "şahitlik etme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "شَاهُود", "şāhūd", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [432, "شَهَدَة", "şahada", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [433, "شُهَدَة", "şuhada", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [434, "أُشْهُودَة", "ʾuşhūda", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [435, "شَوْهَد", "şawhad", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [437, "شَيْهَد", "şayhad", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [439, "شَهْد", "şahd", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [441, "شَهَد", "şahad", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [443, "شِهْد", "şihd", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [445, "شُهْد", "şuhd", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [447, "شَهِيد", "şahīd", "şahitlik edenler (topluluk adı)", "orta", "Vikisözlük: witness"],
-      [449, "شِهَد", "şihad", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [451, "شُهُد", "şuhud", "şahitlik edenler (topluluk adı)", "orta", ""],
-      [453, "شَهَاد", "şahād", "şahitlik edenler (topluluk adı)", "orta", ""]
+      [430, "شَاهُود", "şāhūd", "şahitlik etme türünden şey", "orta", ""],
+      [432, "شَهَدَة", "şahada", "şahitlik etme türünden şey", "orta", ""],
+      [433, "شُهَدَة", "şuhada", "şahitlik etme türünden şey", "orta", ""],
+      [434, "أُشْهُودَة", "ʾuşhūda", "şahitlik etme türünden şey", "orta", ""],
+      [435, "شَوْهَد", "şawhad", "şahitlik etme türünden şey", "orta", ""],
+      [437, "شَيْهَد", "şayhad", "şahitlik etme türünden şey", "orta", ""],
+      [439, "شَهْد", "şahd", "şahitlik etme türünden şey", "orta", ""],
+      [441, "شَهَد", "şahad", "şahitlik etme türünden şey", "orta", ""],
+      [443, "شِهْد", "şihd", "şahitlik etme türünden şey", "orta", ""],
+      [445, "شُهْد", "şuhd", "şahitlik etme türünden şey", "orta", ""],
+      [447, "شَهِيد", "şahīd", "şahit", "kuran", "Vikisözlük: witness"],
+      [449, "شِهَد", "şihad", "şahitlik etme türünden şey", "orta", ""],
+      [451, "شُهُد", "şuhud", "şahitlik etme türünden şey", "orta", ""],
+      [453, "شَهَاد", "şahād", "şahitlik etme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "شَاهُودَة", "şāhūda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [436, "شَوْهَدَة", "şawhada", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [438, "شَيْهَدَة", "şayhada", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [440, "شَهْدَة", "şahda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [442, "شَهَدَة", "şahada", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [444, "شِهْدَة", "şihda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [446, "شُهْدَة", "şuhda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [448, "شَهِيدَة", "şahīda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [450, "شِهَدَة", "şihada", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
-      [452, "شُهُدَة", "şuhuda", "bir tane şahitlik edenler (topluluk adı)", "orta", ""],
+      [431, "شَاهُودَة", "şāhūda", "şahitlik etme türünden bir tane", "orta", ""],
+      [436, "شَوْهَدَة", "şawhada", "şahitlik etme türünden bir tane", "orta", ""],
+      [438, "شَيْهَدَة", "şayhada", "şahitlik etme türünden bir tane", "orta", ""],
+      [440, "شَهْدَة", "şahda", "şahitlik etme türünden bir tane", "orta", ""],
+      [442, "شَهَدَة", "şahada", "şahitlik etme türünden bir tane", "orta", ""],
+      [444, "شِهْدَة", "şihda", "şahitlik etme türünden bir tane", "orta", ""],
+      [446, "شُهْدَة", "şuhda", "şahitlik etme türünden bir tane", "orta", ""],
+      [448, "شَهِيدَة", "şahīda", "şahitlik etme türünden bir tane", "orta", ""],
+      [450, "شِهَدَة", "şihada", "şahitlik etme türünden bir tane", "orta", ""],
+      [452, "شُهُدَة", "şuhuda", "şahitlik etme türünden bir tane", "orta", ""],
       [
         454,
         "شَهَادَة",
         "şahāda",
-        "bir tane şahitlik edenler (topluluk adı)",
+        "şahitlik etme türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of شَهِدَ (šahida) (form I)"
       ]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَشْهَاد", "ʾaşhād", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [456, "أَشْهِدَة", "ʾaşhida", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [457, "أَشَاهِد", "ʾaşāhid", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [458, "أَشَاهِيد", "ʾaşāhīd", "şahitlik edenler (kırık çoğul)", "orta", ""],
+      [455, "أَشْهَاد", "ʾaşhād", "şahitlik etmeler", "orta", ""],
+      [456, "أَشْهِدَة", "ʾaşhida", "şahitlik etmeler", "orta", ""],
+      [457, "أَشَاهِد", "ʾaşāhid", "şahitlik etmeler", "orta", ""],
+      [458, "أَشَاهِيد", "ʾaşāhīd", "şahitlik etmeler", "orta", ""],
       [
         459,
         "شُهُود",
         "şuhūd",
-        "şahitlik edenler (kırık çoğul)",
+        "şahitlik etmeler",
         "orta",
         "Vikisözlük: masdar (bâb I): to witness, to be a witness"
       ],
-      [460, "شُهُد", "şuhud", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [461, "شِهَاد", "şihād", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [462, "شِهَد", "şihad", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [463, "شِهَدَة", "şihada", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [464, "شُهَد", "şuhad", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [465, "شُهَداء", "şuhadāʾ", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [466, "شَهَدَة", "şahada", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [467, "شُهَّاد", "şuhhād", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [468, "شَهَاد", "şahād", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [469, "شَهَد", "şahad", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [470, "مَشَاهِد", "maşāhid", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [471, "مَشَاهِيد", "maşāhīd", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [472, "شَوَاهِد", "şawāhid", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [473, "أَشْهُد", "ʾaşhud", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [474, "شُهَّد", "şuhhad", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [475, "شَهَائِد", "şahāʾid", "şahitlik edenler (kırık çoğul)", "orta", ""],
-      [476, "شُهَيْد", "şuhayd", "şahitlik edenler (kırık çoğul)", "orta", ""]
+      [460, "شُهُد", "şuhud", "şahitlik etmeler", "orta", ""],
+      [461, "شِهَاد", "şihād", "şahitlik etmeler", "orta", ""],
+      [462, "شِهَد", "şihad", "şahitlik etmeler", "orta", ""],
+      [463, "شِهَدَة", "şihada", "şahitlik etmeler", "orta", ""],
+      [464, "شُهَد", "şuhad", "şahitlik etmeler", "orta", ""],
+      [465, "شُهَداء", "şuhadāʾ", "şahitlik etmeler", "orta", ""],
+      [466, "شَهَدَة", "şahada", "şahitlik etmeler", "orta", ""],
+      [467, "شُهَّاد", "şuhhād", "şahitlik etmeler", "orta", ""],
+      [468, "شَهَاد", "şahād", "şahitlik etmeler", "orta", ""],
+      [469, "شَهَد", "şahad", "şahitlik etmeler", "orta", ""],
+      [470, "مَشَاهِد", "maşāhid", "şahitlik etmeler", "orta", ""],
+      [471, "مَشَاهِيد", "maşāhīd", "şahitlik etmeler", "orta", ""],
+      [472, "شَوَاهِد", "şawāhid", "şahitlik etmeler", "orta", ""],
+      [473, "أَشْهُد", "ʾaşhud", "şahitlik etmeler", "orta", ""],
+      [474, "شُهَّد", "şuhhad", "şahitlik etmeler", "orta", ""],
+      [475, "شَهَائِد", "şahāʾid", "şahitlik etmeler", "orta", ""],
+      [476, "شُهَيْد", "şuhayd", "şahitlik etmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَشْهَادَات", "ʾaşhādāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَشْهِدَات", "ʾaşhidāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَشَاهِدَات", "ʾaşāhidāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَشَاهِيدَات", "ʾaşāhīdāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [481, "شُهُودَات", "şuhūdāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [482, "شُهُدَات", "şuhudāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [483, "شِهَادَات", "şihādāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [484, "شِهَدَات", "şihadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [485, "شِهَدَات", "şihadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [486, "شُهَدَات", "şuhadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [487, "شُهَداآت", "şuhadāʾāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [488, "شَهَدَات", "şahadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [489, "شُهَّادَات", "şuhhādāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [490, "شَهَادَات", "şahādāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [491, "شَهَدَات", "şahadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَشَاهِدَات", "maşāhidāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَشَاهِيدَات", "maşāhīdāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [494, "شَوَاهِدَات", "şawāhidāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَشْهُدَات", "ʾaşhudāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [496, "شُهَّدَات", "şuhhadāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [497, "شَهَائِدَات", "şahāʾidāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""],
-      [498, "شُهَيْدَات", "şuhaydāt", "şahitlik edenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَشْهَادَات", "ʾaşhādāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [478, "أَشْهِدَات", "ʾaşhidāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [479, "أَشَاهِدَات", "ʾaşāhidāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [480, "أَشَاهِيدَات", "ʾaşāhīdāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [481, "شُهُودَات", "şuhūdāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [482, "شُهُدَات", "şuhudāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [483, "شِهَادَات", "şihādāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [484, "شِهَدَات", "şihadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [485, "شِهَدَات", "şihadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [486, "شُهَدَات", "şuhadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [487, "شُهَداآت", "şuhadāʾāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [488, "شَهَدَات", "şahadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [489, "شُهَّادَات", "şuhhādāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [490, "شَهَادَات", "şahādāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [491, "شَهَدَات", "şahadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [492, "مَشَاهِدَات", "maşāhidāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [493, "مَشَاهِيدَات", "maşāhīdāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [494, "شَوَاهِدَات", "şawāhidāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [495, "أَشْهُدَات", "ʾaşhudāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [496, "شُهَّدَات", "şuhhadāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [497, "شَهَائِدَات", "şahāʾidāt", "şahitlik etmeler topluluğu", "orta", ""],
+      [498, "شُهَيْدَات", "şuhaydāt", "şahitlik etmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

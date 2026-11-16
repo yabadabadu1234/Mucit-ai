@@ -9,28 +9,28 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "شَبْه", "şabh", "benzeşme", "orta", ""],
-      [1, "شِبْه", "şibh", "benzeşme", "orta", ""],
+      [1, "شِبْه", "şibh", "benzeşilen şey", "orta", ""],
       [2, "شُبْه", "şubh", "benzeşme", "orta", ""],
       [
         3,
         "شَبَه",
         "şabah",
-        "benzeşme",
+        "benzeşme hâli",
         "orta",
         "Vikisözlük: masdar (bâb I): to resemble, to bear a resemblance, to be similar"
       ],
       [4, "شِبَه", "şibah", "benzeşme", "orta", ""],
       [5, "شُبُه", "şubuh", "benzeşme", "orta", ""],
       [6, "شُبُوه", "şubūh", "benzeşme", "orta", ""],
-      [7, "شِبَاه", "şibāh", "benzeşme", "orta", ""],
-      [8, "شُبَاه", "şubāh", "benzeşme", "orta", ""],
+      [7, "شِبَاه", "şibāh", "benzeşmeden kaçınma", "orta", ""],
+      [8, "شُبَاه", "şubāh", "benzeşme illeti, benzeşme sesi", "orta", ""],
       [9, "شَبَاه", "şabāh", "benzeşme", "orta", ""],
-      [10, "شَبَاهَة", "şabāha", "benzeşme", "orta", ""],
-      [11, "شُبُوهَة", "şubūha", "benzeşme", "orta", ""],
-      [12, "شِبَاهَة", "şibāha", "benzeşme", "orta", ""],
-      [13, "شَبِيه", "şabīh", "benzeşme", "orta", "Vikisözlük: similar, resembling"],
+      [10, "شَبَاهَة", "şabāha", "benzeşme vasfı", "orta", ""],
+      [11, "شُبُوهَة", "şubūha", "benzeşme vasfı", "orta", ""],
+      [12, "شِبَاهَة", "şibāha", "benzeşme vazifesi, benzeşme işi", "orta", ""],
+      [13, "شَبِيه", "şabīh", "benzeşme sesi, benzeşme yürüyüşü", "orta", "Vikisözlük: similar, resembling"],
       [14, "شَبُوه", "şabūh", "benzeşme", "orta", ""],
-      [15, "شَبَهَان", "şabahān", "benzeşme", "orta", ""],
+      [15, "شَبَهَان", "şabahān", "benzeşme çalkantısı, coşarak benzeşme", "orta", ""],
       [16, "شُبْهَان", "şubhān", "benzeşme", "orta", ""],
       [17, "شِبْهَان", "şibhān", "benzeşme", "orta", ""],
       [18, "شَبْهَى", "şabhā", "benzeşme", "orta", ""],
@@ -39,150 +39,171 @@
       [21, "شَبَهَة", "şabaha", "benzeşme", "orta", ""],
       [22, "شِبَهَة", "şibaha", "benzeşme", "orta", ""],
       [23, "شَبْهُوهَة", "şabhūha", "benzeşme", "orta", ""],
-      [24, "تُشْبُوه", "tuşbūh", "benzeşme", "orta", ""],
-      [25, "تَشْبِهَة", "taşbiha", "benzeşme", "orta", ""],
-      [26, "تَشْبَهَة", "taşbaha", "benzeşme", "orta", ""],
-      [27, "مَشْبُهَة", "maşbuha", "benzeşme", "orta", ""],
-      [28, "مَشْبِهَة", "maşbiha", "benzeşme", "orta", ""]
+      [24, "تُشْبُوه", "tuşbūh", "tekrar tekrar benzeşme", "orta", ""],
+      [25, "تَشْبِهَة", "taşbiha", "tekrar tekrar benzeşme", "orta", ""],
+      [26, "تَشْبَهَة", "taşbaha", "tekrar tekrar benzeşme", "orta", ""],
+      [27, "مَشْبُهَة", "maşbuha", "benzeşme sebebi", "orta", ""],
+      [28, "مَشْبِهَة", "maşbiha", "benzeşme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَشْبِيه", "taşbīh", "benzeşme", "orta", "Vikisözlük: verbal noun of شَبَّهَ (šabbaha) (form II)"],
-      [30, "تَشْبِهَة", "taşbiha", "benzeşme", "orta", ""],
-      [31, "شِبِّاه", "şibbāh", "benzeşme", "orta", ""]
+      [29, "تَشْبِيه", "taşbīh", "çokça benzeşme", "orta", "Vikisözlük: verbal noun of شَبَّهَ (šabbaha) (form II)"],
+      [30, "تَشْبِهَة", "taşbiha", "çokça benzeşme", "orta", ""],
+      [31, "شِبِّاه", "şibbāh", "çokça benzeşme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَشْبِيهَة", "taşbīha", "bir kere benzeşme", "orta", ""],
-      [33, "شِبِّاهَة", "şibbāha", "bir kere benzeşme", "orta", ""]
+      [32, "تَشْبِيهَة", "taşbīha", "bir kere çokça benzeşme", "orta", ""],
+      [33, "شِبِّاهَة", "şibbāha", "bir kere çokça benzeşme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُشَبِّه", "muşabbih", "benzeşen", "orta", ""],
-      [35, "مُشَبِّهَة", "muşabbiha", "benzeşen (dişi)", "orta", ""],
-      [36, "مُشَبِّهَان", "muşabbihān", "iki benzeşen", "orta", ""],
-      [37, "مُشَبِّهَتَان", "muşabbihatān", "iki benzeşen (dişi)", "orta", ""],
-      [38, "مُشَبِّهُون", "muşabbihūn", "benzeşenler", "orta", ""],
-      [39, "مُشَبِّهِين", "muşabbihīn", "benzeşenler", "orta", ""],
-      [40, "مُشَبِّهَات", "muşabbihāt", "benzeşenler (dişi)", "orta", ""]
+      [34, "مُشَبِّه", "muşabbih", "çokça benzeşen", "orta", ""],
+      [35, "مُشَبِّهَة", "muşabbiha", "çokça benzeşen (müennes)", "orta", ""],
+      [36, "مُشَبِّهَان", "muşabbihān", "çokça benzeşen (iki)", "orta", ""],
+      [37, "مُشَبِّهَتَان", "muşabbihatān", "çokça benzeşen (iki, müennes)", "orta", ""],
+      [38, "مُشَبِّهُون", "muşabbihūn", "çokça benzeşenler", "orta", ""],
+      [39, "مُشَبِّهِين", "muşabbihīn", "çokça benzeşenler", "orta", ""],
+      [40, "مُشَبِّهَات", "muşabbihāt", "çokça benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُشَبَّه", "muşabbah", "benzeşilmiş", "orta", ""],
-      [42, "مُشَبَّهَة", "muşabbaha", "benzeşilmiş (dişi)", "orta", ""],
-      [43, "مُشَبَّهَان", "muşabbahān", "iki benzeşilmiş", "orta", ""],
-      [44, "مُشَبَّهَتَان", "muşabbahatān", "iki benzeşilmiş (dişi)", "orta", ""],
-      [45, "مُشَبَّهُون", "muşabbahūn", "benzeşilmişler", "orta", ""],
-      [46, "مُشَبَّهِين", "muşabbahīn", "benzeşilmişler", "orta", ""],
-      [47, "مُشَبَّهَات", "muşabbahāt", "benzeşilmişler (dişi)", "orta", ""]
+      [41, "مُشَبَّه", "muşabbah", "çokça benzeşilen", "orta", ""],
+      [42, "مُشَبَّهَة", "muşabbaha", "çokça benzeşilen (müennes)", "orta", ""],
+      [43, "مُشَبَّهَان", "muşabbahān", "çokça benzeşilen (iki)", "orta", ""],
+      [44, "مُشَبَّهَتَان", "muşabbahatān", "çokça benzeşilen (iki, müennes)", "orta", ""],
+      [45, "مُشَبَّهُون", "muşabbahūn", "çokça benzeşilenler", "orta", ""],
+      [46, "مُشَبَّهِين", "muşabbahīn", "çokça benzeşilenler", "orta", ""],
+      [47, "مُشَبَّهَات", "muşabbahāt", "çokça benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُشَبَّه", "muşabbah", "benzeşme (yeri/zamanı)", "orta", ""]
+      [48, "مُشَبَّه", "muşabbah", "çokça benzeşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُشَابَهَة", "muşābaha", "benzeşişme", "orta", "Vikisözlük: masdar (bâb III): to resemble"],
-      [50, "شِبَاه", "şibāh", "benzeşişme", "orta", ""]
+      [
+        49,
+        "مُشَابَهَة",
+        "muşābaha",
+        "biriyle karşılıklı benzeşme",
+        "orta",
+        "Vikisözlük: masdar (bâb III): to resemble"
+      ],
+      [50, "شِبَاه", "şibāh", "biriyle karşılıklı benzeşme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "شِبَاهَة", "şibāha", "bir kere benzeşişme", "orta", ""]
+      [51, "شِبَاهَة", "şibāha", "bir kere biriyle karşılıklı benzeşme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُشَابِه", "muşābih", "benzeşişen", "orta", ""],
-      [53, "مُشَابِهَة", "muşābiha", "benzeşişen (dişi)", "orta", ""],
-      [54, "مُشَابِهَان", "muşābihān", "iki benzeşişen", "orta", ""],
-      [55, "مُشَابِهَتَان", "muşābihatān", "iki benzeşişen (dişi)", "orta", ""],
-      [56, "مُشَابِهُون", "muşābihūn", "benzeşişenler", "orta", ""],
-      [57, "مُشَابِهِين", "muşābihīn", "benzeşişenler", "orta", ""],
-      [58, "مُشَابِهَات", "muşābihāt", "benzeşişenler (dişi)", "orta", ""]
+      [52, "مُشَابِه", "muşābih", "biriyle karşılıklı benzeşen", "orta", ""],
+      [53, "مُشَابِهَة", "muşābiha", "biriyle karşılıklı benzeşen (müennes)", "orta", ""],
+      [54, "مُشَابِهَان", "muşābihān", "biriyle karşılıklı benzeşen (iki)", "orta", ""],
+      [55, "مُشَابِهَتَان", "muşābihatān", "biriyle karşılıklı benzeşen (iki, müennes)", "orta", ""],
+      [56, "مُشَابِهُون", "muşābihūn", "biriyle karşılıklı benzeşenler", "orta", ""],
+      [57, "مُشَابِهِين", "muşābihīn", "biriyle karşılıklı benzeşenler", "orta", ""],
+      [58, "مُشَابِهَات", "muşābihāt", "biriyle karşılıklı benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُشَابَه", "muşābah", "benzeşişmiş", "orta", ""],
-      [60, "مُشَابَهَة", "muşābaha", "benzeşişmiş (dişi)", "orta", "Vikisözlük: masdar (bâb III): to resemble"],
-      [61, "مُشَابَهَان", "muşābahān", "iki benzeşişmiş", "orta", ""],
-      [62, "مُشَابَهَتَان", "muşābahatān", "iki benzeşişmiş (dişi)", "orta", ""],
-      [63, "مُشَابَهُون", "muşābahūn", "benzeşişmişler", "orta", ""],
-      [64, "مُشَابَهِين", "muşābahīn", "benzeşişmişler", "orta", ""],
-      [65, "مُشَابَهَات", "muşābahāt", "benzeşişmişler (dişi)", "orta", ""]
+      [59, "مُشَابَه", "muşābah", "biriyle karşılıklı benzeşilen", "orta", ""],
+      [
+        60,
+        "مُشَابَهَة",
+        "muşābaha",
+        "biriyle karşılıklı benzeşilen (müennes)",
+        "orta",
+        "Vikisözlük: masdar (bâb III): to resemble"
+      ],
+      [61, "مُشَابَهَان", "muşābahān", "biriyle karşılıklı benzeşilen (iki)", "orta", ""],
+      [62, "مُشَابَهَتَان", "muşābahatān", "biriyle karşılıklı benzeşilen (iki, müennes)", "orta", ""],
+      [63, "مُشَابَهُون", "muşābahūn", "biriyle karşılıklı benzeşilenler", "orta", ""],
+      [64, "مُشَابَهِين", "muşābahīn", "biriyle karşılıklı benzeşilenler", "orta", ""],
+      [65, "مُشَابَهَات", "muşābahāt", "biriyle karşılıklı benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُشَابَه", "muşābah", "benzeşişme (yeri/zamanı)", "orta", ""]
+      [66, "مُشَابَه", "muşābah", "biriyle karşılıklı benzeşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِشْبَاه", "ʾişbāh", "benzeşme", "orta", ""]
+      [67, "إِشْبَاه", "ʾişbāh", "benzeştirme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِشْبَاهَة", "ʾişbāha", "bir kere benzeşme", "orta", ""]
+      [68, "إِشْبَاهَة", "ʾişbāha", "bir kere benzeştirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُشْبِه", "muşbih", "benzeşen", "orta", ""],
-      [70, "مُشْبِهَة", "muşbiha", "benzeşen (dişi)", "orta", ""],
-      [71, "مُشْبِهَان", "muşbihān", "iki benzeşen", "orta", ""],
-      [72, "مُشْبِهَتَان", "muşbihatān", "iki benzeşen (dişi)", "orta", ""],
-      [73, "مُشْبِهُون", "muşbihūn", "benzeşenler", "orta", ""],
-      [74, "مُشْبِهِين", "muşbihīn", "benzeşenler", "orta", ""],
-      [75, "مُشْبِهَات", "muşbihāt", "benzeşenler (dişi)", "orta", ""]
+      [69, "مُشْبِه", "muşbih", "benzeştiren", "orta", ""],
+      [70, "مُشْبِهَة", "muşbiha", "benzeştiren (müennes)", "orta", ""],
+      [71, "مُشْبِهَان", "muşbihān", "benzeştiren (iki)", "orta", ""],
+      [72, "مُشْبِهَتَان", "muşbihatān", "benzeştiren (iki, müennes)", "orta", ""],
+      [73, "مُشْبِهُون", "muşbihūn", "benzeştirenler", "orta", ""],
+      [74, "مُشْبِهِين", "muşbihīn", "benzeştirenler", "orta", ""],
+      [75, "مُشْبِهَات", "muşbihāt", "benzeştirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُشْبَه", "muşbah", "benzeşilmiş", "orta", ""],
-      [77, "مُشْبَهَة", "muşbaha", "benzeşilmiş (dişi)", "orta", ""],
-      [78, "مُشْبَهَان", "muşbahān", "iki benzeşilmiş", "orta", ""],
-      [79, "مُشْبَهَتَان", "muşbahatān", "iki benzeşilmiş (dişi)", "orta", ""],
-      [80, "مُشْبَهُون", "muşbahūn", "benzeşilmişler", "orta", ""],
-      [81, "مُشْبَهِين", "muşbahīn", "benzeşilmişler", "orta", ""],
-      [82, "مُشْبَهَات", "muşbahāt", "benzeşilmişler (dişi)", "orta", ""]
+      [76, "مُشْبَه", "muşbah", "benzeştirilen", "orta", ""],
+      [77, "مُشْبَهَة", "muşbaha", "benzeştirilen (müennes)", "orta", ""],
+      [78, "مُشْبَهَان", "muşbahān", "benzeştirilen (iki)", "orta", ""],
+      [79, "مُشْبَهَتَان", "muşbahatān", "benzeştirilen (iki, müennes)", "orta", ""],
+      [80, "مُشْبَهُون", "muşbahūn", "benzeştirilenler", "orta", ""],
+      [81, "مُشْبَهِين", "muşbahīn", "benzeştirilenler", "orta", ""],
+      [82, "مُشْبَهَات", "muşbahāt", "benzeştirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُشْبَه", "muşbah", "benzeşme (yeri/zamanı)", "orta", ""]
+      [83, "مُشْبَه", "muşbah", "benzeştirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَشَبُّه", "taşabbuh", "benzeşinme", "orta", ""]
+      [84, "تَشَبُّه", "taşabbuh", "kendini zorlayarak benzeşme", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَشَبُّهَة", "taşabbuha", "bir kere benzeşinme", "orta", ""]
+      [85, "تَشَبُّهَة", "taşabbuha", "bir kere kendini zorlayarak benzeşme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَشَبِّه", "mutaşabbih", "benzeşinen", "orta", ""],
-      [87, "مُتَشَبِّهَة", "mutaşabbiha", "benzeşinen (dişi)", "orta", ""],
-      [88, "مُتَشَبِّهَان", "mutaşabbihān", "iki benzeşinen", "orta", ""],
-      [89, "مُتَشَبِّهَتَان", "mutaşabbihatān", "iki benzeşinen (dişi)", "orta", ""],
-      [90, "مُتَشَبِّهُون", "mutaşabbihūn", "benzeşinenler", "orta", ""],
-      [91, "مُتَشَبِّهِين", "mutaşabbihīn", "benzeşinenler", "orta", ""],
-      [92, "مُتَشَبِّهَات", "mutaşabbihāt", "benzeşinenler (dişi)", "orta", ""]
+      [86, "مُتَشَبِّه", "mutaşabbih", "kendini zorlayarak benzeşen", "orta", ""],
+      [87, "مُتَشَبِّهَة", "mutaşabbiha", "kendini zorlayarak benzeşen (müennes)", "orta", ""],
+      [88, "مُتَشَبِّهَان", "mutaşabbihān", "kendini zorlayarak benzeşen (iki)", "orta", ""],
+      [89, "مُتَشَبِّهَتَان", "mutaşabbihatān", "kendini zorlayarak benzeşen (iki, müennes)", "orta", ""],
+      [90, "مُتَشَبِّهُون", "mutaşabbihūn", "kendini zorlayarak benzeşenler", "orta", ""],
+      [91, "مُتَشَبِّهِين", "mutaşabbihīn", "kendini zorlayarak benzeşenler", "orta", ""],
+      [92, "مُتَشَبِّهَات", "mutaşabbihāt", "kendini zorlayarak benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَشَبَّه", "mutaşabbah", "benzeşinmiş", "orta", ""],
-      [94, "مُتَشَبَّهَة", "mutaşabbaha", "benzeşinmiş (dişi)", "orta", ""],
-      [95, "مُتَشَبَّهَان", "mutaşabbahān", "iki benzeşinmiş", "orta", ""],
-      [96, "مُتَشَبَّهَتَان", "mutaşabbahatān", "iki benzeşinmiş (dişi)", "orta", ""],
-      [97, "مُتَشَبَّهُون", "mutaşabbahūn", "benzeşinmişler", "orta", ""],
-      [98, "مُتَشَبَّهِين", "mutaşabbahīn", "benzeşinmişler", "orta", ""],
-      [99, "مُتَشَبَّهَات", "mutaşabbahāt", "benzeşinmişler (dişi)", "orta", ""]
+      [93, "مُتَشَبَّه", "mutaşabbah", "kendini zorlayarak benzeşilen", "orta", ""],
+      [94, "مُتَشَبَّهَة", "mutaşabbaha", "kendini zorlayarak benzeşilen (müennes)", "orta", ""],
+      [95, "مُتَشَبَّهَان", "mutaşabbahān", "kendini zorlayarak benzeşilen (iki)", "orta", ""],
+      [96, "مُتَشَبَّهَتَان", "mutaşabbahatān", "kendini zorlayarak benzeşilen (iki, müennes)", "orta", ""],
+      [97, "مُتَشَبَّهُون", "mutaşabbahūn", "kendini zorlayarak benzeşilenler", "orta", ""],
+      [98, "مُتَشَبَّهِين", "mutaşabbahīn", "kendini zorlayarak benzeşilenler", "orta", ""],
+      [99, "مُتَشَبَّهَات", "mutaşabbahāt", "kendini zorlayarak benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَشَبَّه", "mutaşabbah", "benzeşinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَشَبَّه", "mutaşabbah", "kendini zorlayarak benzeşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَشَابُه", "taşābuh", "benzeşişme", "orta", "Vikisözlük: masdar (bâb VI): to resemble one another"]
+      [
+        101,
+        "تَشَابُه",
+        "taşābuh",
+        "birbirine benzeşme",
+        "orta",
+        "Vikisözlük: masdar (bâb VI): to resemble one another"
+      ]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَشَابُهَة", "taşābuha", "bir kere benzeşişme", "orta", ""]
+      [102, "تَشَابُهَة", "taşābuha", "bir kere birbirine benzeşme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَشَابِه", "mutaşābih", "benzeşişen", "orta", ""],
-      [104, "مُتَشَابِهَة", "mutaşābiha", "benzeşişen (dişi)", "orta", ""],
-      [105, "مُتَشَابِهَان", "mutaşābihān", "iki benzeşişen", "orta", ""],
-      [106, "مُتَشَابِهَتَان", "mutaşābihatān", "iki benzeşişen (dişi)", "orta", ""],
-      [107, "مُتَشَابِهُون", "mutaşābihūn", "benzeşişenler", "orta", ""],
-      [108, "مُتَشَابِهِين", "mutaşābihīn", "benzeşişenler", "orta", ""],
-      [109, "مُتَشَابِهَات", "mutaşābihāt", "benzeşişenler (dişi)", "orta", ""]
+      [103, "مُتَشَابِه", "mutaşābih", "birbirine benzeşen", "orta", ""],
+      [104, "مُتَشَابِهَة", "mutaşābiha", "birbirine benzeşen (müennes)", "orta", ""],
+      [105, "مُتَشَابِهَان", "mutaşābihān", "birbirine benzeşen (iki)", "orta", ""],
+      [106, "مُتَشَابِهَتَان", "mutaşābihatān", "birbirine benzeşen (iki, müennes)", "orta", ""],
+      [107, "مُتَشَابِهُون", "mutaşābihūn", "birbirine benzeşenler", "orta", ""],
+      [108, "مُتَشَابِهِين", "mutaşābihīn", "birbirine benzeşenler", "orta", ""],
+      [109, "مُتَشَابِهَات", "mutaşābihāt", "birbirine benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَشَابَه", "mutaşābah", "benzeşişmiş", "orta", ""],
-      [111, "مُتَشَابَهَة", "mutaşābaha", "benzeşişmiş (dişi)", "orta", ""],
-      [112, "مُتَشَابَهَان", "mutaşābahān", "iki benzeşişmiş", "orta", ""],
-      [113, "مُتَشَابَهَتَان", "mutaşābahatān", "iki benzeşişmiş (dişi)", "orta", ""],
-      [114, "مُتَشَابَهُون", "mutaşābahūn", "benzeşişmişler", "orta", ""],
-      [115, "مُتَشَابَهِين", "mutaşābahīn", "benzeşişmişler", "orta", ""],
-      [116, "مُتَشَابَهَات", "mutaşābahāt", "benzeşişmişler (dişi)", "orta", ""]
+      [110, "مُتَشَابَه", "mutaşābah", "birbirine benzeşilen", "orta", ""],
+      [111, "مُتَشَابَهَة", "mutaşābaha", "birbirine benzeşilen (müennes)", "orta", ""],
+      [112, "مُتَشَابَهَان", "mutaşābahān", "birbirine benzeşilen (iki)", "orta", ""],
+      [113, "مُتَشَابَهَتَان", "mutaşābahatān", "birbirine benzeşilen (iki, müennes)", "orta", ""],
+      [114, "مُتَشَابَهُون", "mutaşābahūn", "birbirine benzeşilenler", "orta", ""],
+      [115, "مُتَشَابَهِين", "mutaşābahīn", "birbirine benzeşilenler", "orta", ""],
+      [116, "مُتَشَابَهَات", "mutaşābahāt", "birbirine benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَشَابَه", "mutaşābah", "benzeşişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَشَابَه", "mutaşābah", "birbirine benzeşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْشِبَاه", "inşibāh", "benzeşilme", "orta", ""]
@@ -192,102 +213,109 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْشَبِه", "munşabih", "benzeşilen", "orta", ""],
-      [121, "مُنْشَبِهَة", "munşabiha", "benzeşilen (dişi)", "orta", ""],
-      [122, "مُنْشَبِهَان", "munşabihān", "iki benzeşilen", "orta", ""],
-      [123, "مُنْشَبِهَتَان", "munşabihatān", "iki benzeşilen (dişi)", "orta", ""],
+      [121, "مُنْشَبِهَة", "munşabiha", "benzeşilen (müennes)", "orta", ""],
+      [122, "مُنْشَبِهَان", "munşabihān", "benzeşilen (iki)", "orta", ""],
+      [123, "مُنْشَبِهَتَان", "munşabihatān", "benzeşilen (iki, müennes)", "orta", ""],
       [124, "مُنْشَبِهُون", "munşabihūn", "benzeşilenler", "orta", ""],
       [125, "مُنْشَبِهِين", "munşabihīn", "benzeşilenler", "orta", ""],
-      [126, "مُنْشَبِهَات", "munşabihāt", "benzeşilenler (dişi)", "orta", ""]
+      [126, "مُنْشَبِهَات", "munşabihāt", "benzeşilenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْشَبَه", "munşabah", "benzeşilmiş", "orta", ""],
-      [128, "مُنْشَبَهَة", "munşabaha", "benzeşilmiş (dişi)", "orta", ""],
-      [129, "مُنْشَبَهَان", "munşabahān", "iki benzeşilmiş", "orta", ""],
-      [130, "مُنْشَبَهَتَان", "munşabahatān", "iki benzeşilmiş (dişi)", "orta", ""],
-      [131, "مُنْشَبَهُون", "munşabahūn", "benzeşilmişler", "orta", ""],
-      [132, "مُنْشَبَهِين", "munşabahīn", "benzeşilmişler", "orta", ""],
-      [133, "مُنْشَبَهَات", "munşabahāt", "benzeşilmişler (dişi)", "orta", ""]
+      [127, "مُنْشَبَه", "munşabah", "benzeşilen", "orta", ""],
+      [128, "مُنْشَبَهَة", "munşabaha", "benzeşilen (müennes)", "orta", ""],
+      [129, "مُنْشَبَهَان", "munşabahān", "benzeşilen (iki)", "orta", ""],
+      [130, "مُنْشَبَهَتَان", "munşabahatān", "benzeşilen (iki, müennes)", "orta", ""],
+      [131, "مُنْشَبَهُون", "munşabahūn", "benzeşilenler", "orta", ""],
+      [132, "مُنْشَبَهِين", "munşabahīn", "benzeşilenler", "orta", ""],
+      [133, "مُنْشَبَهَات", "munşabahāt", "benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْشَبَه", "munşabah", "benzeşilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْشَبَه", "munşabah", "benzeşilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِشْتِبَاه", "iştibāh", "benzeşinme", "orta", "Vikisözlük: verbal noun of اِشْتَبَهَ (ištabaha)"]
+      [
+        135,
+        "اِشْتِبَاه",
+        "iştibāh",
+        "kendisi için benzeşme",
+        "orta",
+        "Vikisözlük: verbal noun of اِشْتَبَهَ (ištabaha)"
+      ]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِشْتِبَاهَة", "iştibāha", "bir kere benzeşinme", "orta", ""]
+      [137, "اِشْتِبَاهَة", "iştibāha", "bir kere kendisi için benzeşme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُشْتَبِه", "muştabih", "benzeşinen", "orta", ""],
-      [139, "مُشْتَبِهَة", "muştabiha", "benzeşinen (dişi)", "orta", ""],
-      [140, "مُشْتَبِهَان", "muştabihān", "iki benzeşinen", "orta", ""],
-      [141, "مُشْتَبِهَتَان", "muştabihatān", "iki benzeşinen (dişi)", "orta", ""],
-      [142, "مُشْتَبِهُون", "muştabihūn", "benzeşinenler", "orta", ""],
-      [143, "مُشْتَبِهِين", "muştabihīn", "benzeşinenler", "orta", ""],
-      [144, "مُشْتَبِهَات", "muştabihāt", "benzeşinenler (dişi)", "orta", ""]
+      [138, "مُشْتَبِه", "muştabih", "benzeşen", "kuran", "Kur'ân"],
+      [139, "مُشْتَبِهَة", "muştabiha", "kendisi için benzeşen (müennes)", "orta", ""],
+      [140, "مُشْتَبِهَان", "muştabihān", "kendisi için benzeşen (iki)", "orta", ""],
+      [141, "مُشْتَبِهَتَان", "muştabihatān", "kendisi için benzeşen (iki, müennes)", "orta", ""],
+      [142, "مُشْتَبِهُون", "muştabihūn", "kendisi için benzeşenler", "orta", ""],
+      [143, "مُشْتَبِهِين", "muştabihīn", "kendisi için benzeşenler", "orta", ""],
+      [144, "مُشْتَبِهَات", "muştabihāt", "kendisi için benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُشْتَبَه", "muştabah", "benzeşinmiş", "orta", ""],
-      [146, "مُشْتَبَهَة", "muştabaha", "benzeşinmiş (dişi)", "orta", ""],
-      [147, "مُشْتَبَهَان", "muştabahān", "iki benzeşinmiş", "orta", ""],
-      [148, "مُشْتَبَهَتَان", "muştabahatān", "iki benzeşinmiş (dişi)", "orta", ""],
-      [149, "مُشْتَبَهُون", "muştabahūn", "benzeşinmişler", "orta", ""],
-      [150, "مُشْتَبَهِين", "muştabahīn", "benzeşinmişler", "orta", ""],
-      [151, "مُشْتَبَهَات", "muştabahāt", "benzeşinmişler (dişi)", "orta", ""]
+      [145, "مُشْتَبَه", "muştabah", "kendisi için benzeşilen", "orta", ""],
+      [146, "مُشْتَبَهَة", "muştabaha", "kendisi için benzeşilen (müennes)", "orta", ""],
+      [147, "مُشْتَبَهَان", "muştabahān", "kendisi için benzeşilen (iki)", "orta", ""],
+      [148, "مُشْتَبَهَتَان", "muştabahatān", "kendisi için benzeşilen (iki, müennes)", "orta", ""],
+      [149, "مُشْتَبَهُون", "muştabahūn", "kendisi için benzeşilenler", "orta", ""],
+      [150, "مُشْتَبَهِين", "muştabahīn", "kendisi için benzeşilenler", "orta", ""],
+      [151, "مُشْتَبَهَات", "muştabahāt", "kendisi için benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُشْتَبَه", "muştabah", "benzeşinme (yeri/zamanı)", "orta", ""]
+      [152, "مُشْتَبَه", "muştabah", "kendisi için benzeşme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِشْبِهَاه", "işbihāh", "benzeşleşme", "kontrol", ""]
+      [499, "اِشْبِهَاه", "işbihāh", "iyiden iyiye benzeşme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُشْبَهّ", "muşbahh", "benzeşleşen", "kontrol", ""],
-      [501, "مُشْبَهَّة", "muşbahha", "benzeşleşen (dişi)", "kontrol", ""],
-      [502, "مُشْبَهَّان", "muşbahhān", "iki benzeşleşen", "kontrol", ""],
-      [503, "مُشْبَهَّتَان", "muşbahhatān", "iki benzeşleşen (dişi)", "kontrol", ""],
-      [504, "مُشْبَهُّون", "muşbahhūn", "benzeşleşenler", "kontrol", ""],
-      [505, "مُشْبَهِّين", "muşbahhīn", "benzeşleşenler", "kontrol", ""],
-      [506, "مُشْبَهَّات", "muşbahhāt", "benzeşleşenler (dişi)", "kontrol", ""]
+      [500, "مُشْبَهّ", "muşbahh", "iyiden iyiye benzeşen", "kontrol", ""],
+      [501, "مُشْبَهَّة", "muşbahha", "iyiden iyiye benzeşen (müennes)", "kontrol", ""],
+      [502, "مُشْبَهَّان", "muşbahhān", "iyiden iyiye benzeşen (iki)", "kontrol", ""],
+      [503, "مُشْبَهَّتَان", "muşbahhatān", "iyiden iyiye benzeşen (iki, müennes)", "kontrol", ""],
+      [504, "مُشْبَهُّون", "muşbahhūn", "iyiden iyiye benzeşenler", "kontrol", ""],
+      [505, "مُشْبَهِّين", "muşbahhīn", "iyiden iyiye benzeşenler", "kontrol", ""],
+      [506, "مُشْبَهَّات", "muşbahhāt", "iyiden iyiye benzeşenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِشْبَاه", "istişbāh", "benzeşmeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِشْبَاهَة", "istişbāha", "bir kere benzeşme", "orta", ""]
+      [177, "اِسْتِشْبَاهَة", "istişbāha", "bir kere benzeşmeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَشْبِه", "mustaşbih", "benzeşmeyi isteyen", "orta", ""],
-      [179, "مُسْتَشْبِهَة", "mustaşbiha", "benzeşmeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَشْبِهَان", "mustaşbihān", "iki benzeşmeyi isteyen", "orta", ""],
-      [181, "مُسْتَشْبِهَتَان", "mustaşbihatān", "iki benzeşmeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَشْبِهَة", "mustaşbiha", "benzeşmeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَشْبِهَان", "mustaşbihān", "benzeşmeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَشْبِهَتَان", "mustaşbihatān", "benzeşmeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَشْبِهُون", "mustaşbihūn", "benzeşmeyi isteyenler", "orta", ""],
       [183, "مُسْتَشْبِهِين", "mustaşbihīn", "benzeşmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَشْبِهَات", "mustaşbihāt", "benzeşmeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَشْبِهَات", "mustaşbihāt", "benzeşmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَشْبَه", "mustaşbah", "benzeşmeyi istenen", "orta", ""],
-      [186, "مُسْتَشْبَهَة", "mustaşbaha", "benzeşmeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَشْبَهَان", "mustaşbahān", "iki benzeşmeyi istenen", "orta", ""],
-      [188, "مُسْتَشْبَهَتَان", "mustaşbahatān", "iki benzeşmeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَشْبَهُون", "mustaşbahūn", "benzeşmeyi istenenler", "orta", ""],
-      [190, "مُسْتَشْبَهِين", "mustaşbahīn", "benzeşmeyi istenenler", "orta", ""],
-      [191, "مُسْتَشْبَهَات", "mustaşbahāt", "benzeşmeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَشْبَه", "mustaşbah", "benzeşmesi istenen", "orta", ""],
+      [186, "مُسْتَشْبَهَة", "mustaşbaha", "benzeşmesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَشْبَهَان", "mustaşbahān", "benzeşmesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَشْبَهَتَان", "mustaşbahatān", "benzeşmesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَشْبَهُون", "mustaşbahūn", "benzeşmesi istenenler", "orta", ""],
+      [190, "مُسْتَشْبَهِين", "mustaşbahīn", "benzeşmesi istenenler", "orta", ""],
+      [191, "مُسْتَشْبَهَات", "mustaşbahāt", "benzeşmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَشْبَه", "mustaşbah", "benzeşme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَشْبَه", "mustaşbah", "benzeşmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِشْبِيهَاه", "işbīhāh", "iyice benzeşleşme", "kontrol", ""]
+      [507, "اِشْبِيهَاه", "işbīhāh", "büsbütün benzeşme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُشْبَاهّ", "muşbāhh", "iyice benzeşleşen", "kontrol", ""],
-      [509, "مُشْبَاهَّة", "muşbāhha", "iyice benzeşleşen (dişi)", "kontrol", ""],
-      [510, "مُشْبَاهَّان", "muşbāhhān", "iki iyice benzeşleşen", "kontrol", ""],
-      [511, "مُشْبَاهَّتَان", "muşbāhhatān", "iki iyice benzeşleşen (dişi)", "kontrol", ""],
-      [512, "مُشْبَاهُّون", "muşbāhhūn", "iyice benzeşleşenler", "kontrol", ""],
-      [513, "مُشْبَاهِّين", "muşbāhhīn", "iyice benzeşleşenler", "kontrol", ""],
-      [514, "مُشْبَاهَّات", "muşbāhhāt", "iyice benzeşleşenler (dişi)", "kontrol", ""]
+      [508, "مُشْبَاهّ", "muşbāhh", "büsbütün benzeşen", "kontrol", ""],
+      [509, "مُشْبَاهَّة", "muşbāhha", "büsbütün benzeşen (müennes)", "kontrol", ""],
+      [510, "مُشْبَاهَّان", "muşbāhhān", "büsbütün benzeşen (iki)", "kontrol", ""],
+      [511, "مُشْبَاهَّتَان", "muşbāhhatān", "büsbütün benzeşen (iki, müennes)", "kontrol", ""],
+      [512, "مُشْبَاهُّون", "muşbāhhūn", "büsbütün benzeşenler", "kontrol", ""],
+      [513, "مُشْبَاهِّين", "muşbāhhīn", "büsbütün benzeşenler", "kontrol", ""],
+      [514, "مُشْبَاهَّات", "muşbāhhāt", "büsbütün benzeşenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِشْبِوْبَاه", "işbiwbāh", "aşırı benzeşme", "orta", ""]
@@ -297,231 +325,231 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "شَابِه", "şābih", "benzeşen", "orta", ""],
-      [214, "شَابِهَة", "şābiha", "benzeşen (dişi)", "orta", ""],
-      [215, "شَابِهَان", "şābihān", "iki benzeşen", "orta", ""],
-      [216, "شَابِهَتَان", "şābihatān", "iki benzeşen (dişi)", "orta", ""],
+      [214, "شَابِهَة", "şābiha", "benzeşen (müennes)", "orta", ""],
+      [215, "شَابِهَان", "şābihān", "benzeşen (iki)", "orta", ""],
+      [216, "شَابِهَتَان", "şābihatān", "benzeşen (iki, müennes)", "orta", ""],
       [217, "شَابِهُون", "şābihūn", "benzeşenler", "orta", ""],
       [218, "شَابِهِين", "şābihīn", "benzeşenler", "orta", ""],
-      [219, "شَابِهَات", "şābihāt", "benzeşenler (dişi)", "orta", ""]
+      [219, "شَابِهَات", "şābihāt", "benzeşenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَشْبُوه", "maşbūh", "benzeşilmiş", "orta", "Vikisözlük: doubtful, dubious"],
-      [221, "مَشْبُوهَة", "maşbūha", "benzeşilmiş (dişi)", "orta", ""],
-      [222, "مَشْبُوهَان", "maşbūhān", "iki benzeşilmiş", "orta", ""],
-      [223, "مَشْبُوهَتَان", "maşbūhatān", "iki benzeşilmiş (dişi)", "orta", ""],
-      [224, "مَشْبُوهُون", "maşbūhūn", "benzeşilmişler", "orta", ""],
-      [225, "مَشْبُوهِين", "maşbūhīn", "benzeşilmişler", "orta", ""],
-      [226, "مَشْبُوهَات", "maşbūhāt", "benzeşilmişler (dişi)", "orta", ""]
+      [220, "مَشْبُوه", "maşbūh", "benzeşilen", "orta", "Vikisözlük: doubtful, dubious"],
+      [221, "مَشْبُوهَة", "maşbūha", "benzeşilen (müennes)", "orta", ""],
+      [222, "مَشْبُوهَان", "maşbūhān", "benzeşilen (iki)", "orta", ""],
+      [223, "مَشْبُوهَتَان", "maşbūhatān", "benzeşilen (iki, müennes)", "orta", ""],
+      [224, "مَشْبُوهُون", "maşbūhūn", "benzeşilenler", "orta", ""],
+      [225, "مَشْبُوهِين", "maşbūhīn", "benzeşilenler", "orta", ""],
+      [226, "مَشْبُوهَات", "maşbūhāt", "benzeşilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَشْبَه", "maşbah", "benzeşme (yeri/zamanı)", "orta", ""],
-      [228, "مَشْبَهَان", "maşbahān", "iki benzeşme (yeri/zamanı)", "orta", ""],
-      [229, "مَشْبِه", "maşbih", "benzeşme (yeri/zamanı)", "orta", ""],
-      [230, "مَشْبِهَان", "maşbihān", "iki benzeşme (yeri/zamanı)", "orta", ""],
-      [231, "مَشْبَهَة", "maşbaha", "benzeşme (yeri/zamanı)", "orta", ""],
-      [232, "مَشْبَهَتَان", "maşbahatān", "iki benzeşme (yeri/zamanı)", "orta", ""],
-      [233, "مَشْبِهَة", "maşbiha", "benzeşme (yeri/zamanı)", "orta", ""],
-      [234, "مَشْبِهَتَان", "maşbihatān", "iki benzeşme (yeri/zamanı)", "orta", ""],
-      [247, "مَشْبُهَة", "maşbuha", "benzeşme (yeri/zamanı)", "orta", ""],
-      [248, "مَشْبُهَتَان", "maşbuhatān", "iki benzeşme (yeri/zamanı)", "orta", ""]
+      [227, "مَشْبَه", "maşbah", "benzeşme yeri, vakti", "orta", ""],
+      [228, "مَشْبَهَان", "maşbahān", "benzeşme yeri, vakti (iki)", "orta", ""],
+      [229, "مَشْبِه", "maşbih", "benzeşme yeri, vakti", "orta", ""],
+      [230, "مَشْبِهَان", "maşbihān", "benzeşme yeri, vakti (iki)", "orta", ""],
+      [231, "مَشْبَهَة", "maşbaha", "benzeşmenin bol olduğu yer", "orta", ""],
+      [232, "مَشْبَهَتَان", "maşbahatān", "benzeşmenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَشْبِهَة", "maşbiha", "benzeşmenin bol olduğu yer", "orta", ""],
+      [234, "مَشْبِهَتَان", "maşbihatān", "benzeşmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَشْبُهَة", "maşbuha", "benzeşme yeri, vakti", "orta", ""],
+      [248, "مَشْبُهَتَان", "maşbuhatān", "benzeşme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِشْبَه", "mişbah", "benzeşmeye yarayan araç", "orta", ""],
-      [236, "مِشْبَهَان", "mişbahān", "iki benzeşmeye yarayan araç", "orta", ""],
-      [237, "مِشْبَاه", "mişbāh", "benzeşmeye yarayan araç", "orta", ""],
-      [238, "مِشْبَاهَان", "mişbāhān", "iki benzeşmeye yarayan araç", "orta", ""],
-      [239, "مِشْبَهَة", "mişbaha", "benzeşmeye yarayan araç", "orta", ""],
-      [240, "مِشْبَهَتَان", "mişbahatān", "iki benzeşmeye yarayan araç", "orta", ""]
+      [235, "مِشْبَه", "mişbah", "benzeşme âleti", "orta", ""],
+      [236, "مِشْبَهَان", "mişbahān", "benzeşme âleti (iki)", "orta", ""],
+      [237, "مِشْبَاه", "mişbāh", "benzeşme âleti", "orta", ""],
+      [238, "مِشْبَاهَان", "mişbāhān", "benzeşme âleti (iki)", "orta", ""],
+      [239, "مِشْبَهَة", "mişbaha", "benzeşme âleti", "orta", ""],
+      [240, "مِشْبَهَتَان", "mişbahatān", "benzeşme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَشْبَه", "ʾaşbah", "daha çok benzeşen", "orta", ""],
-      [242, "أَشْبَهَان", "ʾaşbahān", "iki daha çok benzeşen", "orta", ""]
+      [242, "أَشْبَهَان", "ʾaşbahān", "daha çok benzeşen (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "شُبْهَى", "şubhā", "daha çok benzeşen", "orta", ""],
-      [244, "شُبْهَيَان", "şubhayān", "iki daha çok benzeşen", "orta", ""],
+      [244, "شُبْهَيَان", "şubhayān", "daha çok benzeşen (iki)", "orta", ""],
       [245, "شَبْهَاء", "şabhāʾ", "daha çok benzeşen", "orta", ""],
-      [246, "شَبْهَاآن", "şabhāʾān", "iki daha çok benzeşen", "orta", ""]
+      [246, "شَبْهَاآن", "şabhāʾān", "daha çok benzeşen (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "شُبَيْه", "şubayh", "küçük benzeşme", "orta", ""],
-      [250, "شُبَيْهَان", "şubayhān", "iki küçük benzeşme", "orta", ""],
-      [251, "شُبَيْهَة", "şubayha", "küçük benzeşme", "orta", ""],
-      [252, "شُبَيْهَتَان", "şubayhatān", "iki küçük benzeşme", "orta", ""]
+      [249, "شُبَيْه", "şubayh", "azıcık benzeşme", "orta", ""],
+      [250, "شُبَيْهَان", "şubayhān", "azıcık benzeşme (iki)", "orta", ""],
+      [251, "شُبَيْهَة", "şubayha", "azıcık benzeşme", "orta", ""],
+      [252, "شُبَيْهَتَان", "şubayhatān", "azıcık benzeşme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَشْبَه", "maşbah", "benzeşme", "orta", ""],
-      [254, "مَشْبَهَان", "maşbahān", "iki benzeşme", "orta", ""]
+      [254, "مَشْبَهَان", "maşbahān", "benzeşme (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "شَبْهَة", "şabha", "bir kere benzeşme", "orta", ""],
-      [256, "شَبْهَتَان", "şabhatān", "iki bir kere benzeşme", "orta", ""]
+      [256, "شَبْهَتَان", "şabhatān", "bir kere benzeşme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "شِبْهَة", "şibha", "benzeşme tarzı", "orta", ""],
-      [258, "شِبْهَتَان", "şibhatān", "iki benzeşme tarzı", "orta", ""]
+      [258, "شِبْهَتَان", "şibhatān", "benzeşme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "شَبِيه", "şabīh", "sürekli benzeşen", "orta", "Vikisözlük: similar, resembling"],
-      [260, "شَبِيهَة", "şabīha", "sürekli benzeşen (dişi)", "orta", ""],
-      [261, "شَبِيهَان", "şabīhān", "iki sürekli benzeşen", "orta", ""],
-      [262, "شَبِيهَتَان", "şabīhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [263, "شَبِيهُون", "şabīhūn", "sürekli benzeşenler", "orta", ""],
-      [264, "شَبِيهِين", "şabīhīn", "sürekli benzeşenler", "orta", ""],
-      [265, "شَبِيهَات", "şabīhāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [266, "شَبُوه", "şabūh", "sürekli benzeşen", "orta", ""],
-      [267, "شَبُوهَة", "şabūha", "sürekli benzeşen (dişi)", "orta", ""],
-      [268, "شَبُوهَان", "şabūhān", "iki sürekli benzeşen", "orta", ""],
-      [269, "شَبُوهَتَان", "şabūhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [270, "شَبُوهُون", "şabūhūn", "sürekli benzeşenler", "orta", ""],
-      [271, "شَبُوهِين", "şabūhīn", "sürekli benzeşenler", "orta", ""],
-      [272, "شَبُوهَات", "şabūhāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [273, "شَبِه", "şabih", "sürekli benzeşen", "orta", ""],
-      [274, "شَبِهَة", "şabiha", "sürekli benzeşen (dişi)", "orta", ""],
-      [275, "شَبِهَان", "şabihān", "iki sürekli benzeşen", "orta", ""],
-      [276, "شَبِهَتَان", "şabihatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [277, "شَبِهُون", "şabihūn", "sürekli benzeşenler", "orta", ""],
-      [278, "شَبِهِين", "şabihīn", "sürekli benzeşenler", "orta", ""],
-      [279, "شَبِهَات", "şabihāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [280, "شَبُه", "şabuh", "sürekli benzeşen", "orta", ""],
-      [281, "شَبُهَة", "şabuha", "sürekli benzeşen (dişi)", "orta", ""],
-      [282, "شَبُهَان", "şabuhān", "iki sürekli benzeşen", "orta", ""],
-      [283, "شَبُهَتَان", "şabuhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [284, "شَبُهُون", "şabuhūn", "sürekli benzeşenler", "orta", ""],
-      [285, "شَبُهِين", "şabuhīn", "sürekli benzeşenler", "orta", ""],
-      [286, "شَبُهَات", "şabuhāt", "sürekli benzeşenler (dişi)", "orta", ""],
+      [259, "شَبِيه", "şabīh", "her daim benzeşen", "orta", "Vikisözlük: similar, resembling"],
+      [260, "شَبِيهَة", "şabīha", "her daim benzeşen (müennes)", "orta", ""],
+      [261, "شَبِيهَان", "şabīhān", "her daim benzeşen (iki)", "orta", ""],
+      [262, "شَبِيهَتَان", "şabīhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [263, "شَبِيهُون", "şabīhūn", "her daim benzeşenler", "orta", ""],
+      [264, "شَبِيهِين", "şabīhīn", "her daim benzeşenler", "orta", ""],
+      [265, "شَبِيهَات", "şabīhāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [266, "شَبُوه", "şabūh", "her daim benzeşen", "orta", ""],
+      [267, "شَبُوهَة", "şabūha", "her daim benzeşen (müennes)", "orta", ""],
+      [268, "شَبُوهَان", "şabūhān", "her daim benzeşen (iki)", "orta", ""],
+      [269, "شَبُوهَتَان", "şabūhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [270, "شَبُوهُون", "şabūhūn", "her daim benzeşenler", "orta", ""],
+      [271, "شَبُوهِين", "şabūhīn", "her daim benzeşenler", "orta", ""],
+      [272, "شَبُوهَات", "şabūhāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [273, "شَبِه", "şabih", "her daim benzeşen", "orta", ""],
+      [274, "شَبِهَة", "şabiha", "her daim benzeşen (müennes)", "orta", ""],
+      [275, "شَبِهَان", "şabihān", "her daim benzeşen (iki)", "orta", ""],
+      [276, "شَبِهَتَان", "şabihatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [277, "شَبِهُون", "şabihūn", "her daim benzeşenler", "orta", ""],
+      [278, "شَبِهِين", "şabihīn", "her daim benzeşenler", "orta", ""],
+      [279, "شَبِهَات", "şabihāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [280, "شَبُه", "şabuh", "her daim benzeşen", "orta", ""],
+      [281, "شَبُهَة", "şabuha", "her daim benzeşen (müennes)", "orta", ""],
+      [282, "شَبُهَان", "şabuhān", "her daim benzeşen (iki)", "orta", ""],
+      [283, "شَبُهَتَان", "şabuhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [284, "شَبُهُون", "şabuhūn", "her daim benzeşenler", "orta", ""],
+      [285, "شَبُهِين", "şabuhīn", "her daim benzeşenler", "orta", ""],
+      [286, "شَبُهَات", "şabuhāt", "her daim benzeşenler (müennes)", "orta", ""],
       [
         287,
         "شَبَه",
         "şabah",
-        "sürekli benzeşen",
+        "her daim benzeşen",
         "orta",
         "Vikisözlük: masdar (bâb I): to resemble, to bear a resemblance, to be similar"
       ],
-      [288, "شَبَهَة", "şabaha", "sürekli benzeşen (dişi)", "orta", ""],
-      [289, "شَبَهَان", "şabahān", "iki sürekli benzeşen", "orta", ""],
-      [290, "شَبَهَتَان", "şabahatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [291, "شَبَهُون", "şabahūn", "sürekli benzeşenler", "orta", ""],
-      [292, "شَبَهِين", "şabahīn", "sürekli benzeşenler", "orta", ""],
-      [293, "شَبَهَات", "şabahāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [294, "شَبْه", "şabh", "sürekli benzeşen", "orta", ""],
-      [295, "شَبْهَة", "şabha", "sürekli benzeşen (dişi)", "orta", ""],
-      [296, "شَبْهَان", "şabhān", "iki sürekli benzeşen", "orta", ""],
-      [297, "شَبْهَتَان", "şabhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [298, "شَبْهُون", "şabhūn", "sürekli benzeşenler", "orta", ""],
-      [299, "شَبْهِين", "şabhīn", "sürekli benzeşenler", "orta", ""],
-      [300, "شَبْهَات", "şabhāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [301, "شُبُه", "şubuh", "sürekli benzeşen", "orta", ""],
-      [302, "شُبُهَة", "şubuha", "sürekli benzeşen (dişi)", "orta", ""],
-      [303, "شُبُهَان", "şubuhān", "iki sürekli benzeşen", "orta", ""],
-      [304, "شُبُهَتَان", "şubuhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [305, "شُبُهُون", "şubuhūn", "sürekli benzeşenler", "orta", ""],
-      [306, "شُبُهِين", "şubuhīn", "sürekli benzeşenler", "orta", ""],
-      [307, "شُبُهَات", "şubuhāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [308, "شَبْهَان", "şabhān", "sürekli benzeşen", "orta", ""],
-      [309, "شَبْهَانَة", "şabhāna", "sürekli benzeşen (dişi)", "orta", ""],
-      [310, "شَبْهَانَان", "şabhānān", "iki sürekli benzeşen", "orta", ""],
-      [311, "شَبْهَانَتَان", "şabhānatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [312, "شَبْهَانُون", "şabhānūn", "sürekli benzeşenler", "orta", ""],
-      [313, "شَبْهَانِين", "şabhānīn", "sürekli benzeşenler", "orta", ""],
-      [314, "شَبْهَانَات", "şabhānāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [315, "شُبَاه", "şubāh", "sürekli benzeşen", "orta", ""],
-      [316, "شُبَاهَة", "şubāha", "sürekli benzeşen (dişi)", "orta", ""],
-      [317, "شُبَاهَان", "şubāhān", "iki sürekli benzeşen", "orta", ""],
-      [318, "شُبَاهَتَان", "şubāhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [319, "شُبَاهُون", "şubāhūn", "sürekli benzeşenler", "orta", ""],
-      [320, "شُبَاهِين", "şubāhīn", "sürekli benzeşenler", "orta", ""],
-      [321, "شُبَاهَات", "şubāhāt", "sürekli benzeşenler (dişi)", "orta", ""],
-      [322, "شَبَاه", "şabāh", "sürekli benzeşen", "orta", ""],
-      [323, "شَبَاهَة", "şabāha", "sürekli benzeşen (dişi)", "orta", ""],
-      [324, "شَبَاهَان", "şabāhān", "iki sürekli benzeşen", "orta", ""],
-      [325, "شَبَاهَتَان", "şabāhatān", "iki sürekli benzeşen (dişi)", "orta", ""],
-      [326, "شَبَاهُون", "şabāhūn", "sürekli benzeşenler", "orta", ""],
-      [327, "شَبَاهِين", "şabāhīn", "sürekli benzeşenler", "orta", ""],
-      [328, "شَبَاهَات", "şabāhāt", "sürekli benzeşenler (dişi)", "orta", ""]
+      [288, "شَبَهَة", "şabaha", "her daim benzeşen (müennes)", "orta", ""],
+      [289, "شَبَهَان", "şabahān", "her daim benzeşen (iki)", "orta", ""],
+      [290, "شَبَهَتَان", "şabahatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [291, "شَبَهُون", "şabahūn", "her daim benzeşenler", "orta", ""],
+      [292, "شَبَهِين", "şabahīn", "her daim benzeşenler", "orta", ""],
+      [293, "شَبَهَات", "şabahāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [294, "شَبْه", "şabh", "her daim benzeşen", "orta", ""],
+      [295, "شَبْهَة", "şabha", "her daim benzeşen (müennes)", "orta", ""],
+      [296, "شَبْهَان", "şabhān", "her daim benzeşen (iki)", "orta", ""],
+      [297, "شَبْهَتَان", "şabhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [298, "شَبْهُون", "şabhūn", "her daim benzeşenler", "orta", ""],
+      [299, "شَبْهِين", "şabhīn", "her daim benzeşenler", "orta", ""],
+      [300, "شَبْهَات", "şabhāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [301, "شُبُه", "şubuh", "her daim benzeşen", "orta", ""],
+      [302, "شُبُهَة", "şubuha", "her daim benzeşen (müennes)", "orta", ""],
+      [303, "شُبُهَان", "şubuhān", "her daim benzeşen (iki)", "orta", ""],
+      [304, "شُبُهَتَان", "şubuhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [305, "شُبُهُون", "şubuhūn", "her daim benzeşenler", "orta", ""],
+      [306, "شُبُهِين", "şubuhīn", "her daim benzeşenler", "orta", ""],
+      [307, "شُبُهَات", "şubuhāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [308, "شَبْهَان", "şabhān", "her daim benzeşen", "orta", ""],
+      [309, "شَبْهَانَة", "şabhāna", "her daim benzeşen (müennes)", "orta", ""],
+      [310, "شَبْهَانَان", "şabhānān", "her daim benzeşen (iki)", "orta", ""],
+      [311, "شَبْهَانَتَان", "şabhānatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [312, "شَبْهَانُون", "şabhānūn", "her daim benzeşenler", "orta", ""],
+      [313, "شَبْهَانِين", "şabhānīn", "her daim benzeşenler", "orta", ""],
+      [314, "شَبْهَانَات", "şabhānāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [315, "شُبَاه", "şubāh", "her daim benzeşen", "orta", ""],
+      [316, "شُبَاهَة", "şubāha", "her daim benzeşen (müennes)", "orta", ""],
+      [317, "شُبَاهَان", "şubāhān", "her daim benzeşen (iki)", "orta", ""],
+      [318, "شُبَاهَتَان", "şubāhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [319, "شُبَاهُون", "şubāhūn", "her daim benzeşenler", "orta", ""],
+      [320, "شُبَاهِين", "şubāhīn", "her daim benzeşenler", "orta", ""],
+      [321, "شُبَاهَات", "şubāhāt", "her daim benzeşenler (müennes)", "orta", ""],
+      [322, "شَبَاه", "şabāh", "her daim benzeşen", "orta", ""],
+      [323, "شَبَاهَة", "şabāha", "her daim benzeşen (müennes)", "orta", ""],
+      [324, "شَبَاهَان", "şabāhān", "her daim benzeşen (iki)", "orta", ""],
+      [325, "شَبَاهَتَان", "şabāhatān", "her daim benzeşen (iki, müennes)", "orta", ""],
+      [326, "شَبَاهُون", "şabāhūn", "her daim benzeşenler", "orta", ""],
+      [327, "شَبَاهِين", "şabāhīn", "her daim benzeşenler", "orta", ""],
+      [328, "شَبَاهَات", "şabāhāt", "her daim benzeşenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "شَبَّاه", "şabbāh", "çok benzeşen", "orta", ""],
-      [330, "شَبَّاهَة", "şabbāha", "çok benzeşen (dişi)", "orta", ""],
-      [331, "شَبَّاهَان", "şabbāhān", "iki çok benzeşen", "orta", ""],
-      [332, "شَبَّاهَتَان", "şabbāhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [333, "شَبَّاهُون", "şabbāhūn", "çok benzeşenler", "orta", ""],
-      [334, "شَبَّاهِين", "şabbāhīn", "çok benzeşenler", "orta", ""],
-      [335, "شَبَّاهَات", "şabbāhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [336, "شَبَّاهَة", "şabbāha", "çok benzeşen", "orta", ""],
-      [337, "شَبَّاهَتَان", "şabbāhatān", "iki çok benzeşen", "orta", ""],
-      [338, "شَبَّاهَات", "şabbāhāt", "çok benzeşenler (dişi)", "orta", ""],
+      [329, "شَبَّاه", "şabbāh", "işi benzeşme olan", "orta", ""],
+      [330, "شَبَّاهَة", "şabbāha", "işi benzeşme olan (müennes)", "orta", ""],
+      [331, "شَبَّاهَان", "şabbāhān", "işi benzeşme olan (iki)", "orta", ""],
+      [332, "شَبَّاهَتَان", "şabbāhatān", "işi benzeşme olan (iki, müennes)", "orta", ""],
+      [333, "شَبَّاهُون", "şabbāhūn", "işi benzeşme olanlar", "orta", ""],
+      [334, "شَبَّاهِين", "şabbāhīn", "işi benzeşme olanlar", "orta", ""],
+      [335, "شَبَّاهَات", "şabbāhāt", "işi benzeşme olanlar (müennes)", "orta", ""],
+      [336, "شَبَّاهَة", "şabbāha", "pek çok benzeşen", "orta", ""],
+      [337, "شَبَّاهَتَان", "şabbāhatān", "pek çok benzeşen (iki)", "orta", ""],
+      [338, "شَبَّاهَات", "şabbāhāt", "pek çok benzeşenler (müennes)", "orta", ""],
       [339, "شَبُوه", "şabūh", "çok benzeşen", "orta", ""],
-      [340, "شَبُوهَة", "şabūha", "çok benzeşen (dişi)", "orta", ""],
-      [341, "شَبُوهَان", "şabūhān", "iki çok benzeşen", "orta", ""],
-      [342, "شَبُوهَتَان", "şabūhatān", "iki çok benzeşen (dişi)", "orta", ""],
+      [340, "شَبُوهَة", "şabūha", "çok benzeşen (müennes)", "orta", ""],
+      [341, "شَبُوهَان", "şabūhān", "çok benzeşen (iki)", "orta", ""],
+      [342, "شَبُوهَتَان", "şabūhatān", "çok benzeşen (iki, müennes)", "orta", ""],
       [343, "شَبُوهُون", "şabūhūn", "çok benzeşenler", "orta", ""],
       [344, "شَبُوهِين", "şabūhīn", "çok benzeşenler", "orta", ""],
-      [345, "شَبُوهَات", "şabūhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [346, "شَبُّوه", "şabbūh", "çok benzeşen", "orta", ""],
-      [347, "شَبُّوهَة", "şabbūha", "çok benzeşen (dişi)", "orta", ""],
-      [348, "شَبُّوهَان", "şabbūhān", "iki çok benzeşen", "orta", ""],
-      [349, "شَبُّوهَتَان", "şabbūhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [350, "شَبُّوهُون", "şabbūhūn", "çok benzeşenler", "orta", ""],
-      [351, "شَبُّوهِين", "şabbūhīn", "çok benzeşenler", "orta", ""],
-      [352, "شَبُّوهَات", "şabbūhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [353, "شِبِّيه", "şibbīh", "çok benzeşen", "orta", ""],
-      [354, "شِبِّيهَة", "şibbīha", "çok benzeşen (dişi)", "orta", ""],
-      [355, "شِبِّيهَان", "şibbīhān", "iki çok benzeşen", "orta", ""],
-      [356, "شِبِّيهَتَان", "şibbīhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [357, "شِبِّيهُون", "şibbīhūn", "çok benzeşenler", "orta", ""],
-      [358, "شِبِّيهِين", "şibbīhīn", "çok benzeşenler", "orta", ""],
-      [359, "شِبِّيهَات", "şibbīhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [360, "شُبَّاه", "şubbāh", "çok benzeşen", "orta", ""],
-      [361, "شُبَّاهَة", "şubbāha", "çok benzeşen (dişi)", "orta", ""],
-      [362, "شُبَّاهَان", "şubbāhān", "iki çok benzeşen", "orta", ""],
-      [363, "شُبَّاهَتَان", "şubbāhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [364, "شُبَّاهُون", "şubbāhūn", "çok benzeşenler", "orta", ""],
-      [365, "شُبَّاهِين", "şubbāhīn", "çok benzeşenler", "orta", ""],
-      [366, "شُبَّاهَات", "şubbāhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [367, "مِشْبَاه", "mişbāh", "çok benzeşen", "orta", ""],
-      [368, "مِشْبَاهَة", "mişbāha", "çok benzeşen (dişi)", "orta", ""],
-      [369, "مِشْبَاهَان", "mişbāhān", "iki çok benzeşen", "orta", ""],
-      [370, "مِشْبَاهَتَان", "mişbāhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [371, "مِشْبَاهُون", "mişbāhūn", "çok benzeşenler", "orta", ""],
-      [372, "مِشْبَاهِين", "mişbāhīn", "çok benzeşenler", "orta", ""],
-      [373, "مِشْبَاهَات", "mişbāhāt", "çok benzeşenler (dişi)", "orta", ""],
-      [374, "مِشْبِيه", "mişbīh", "çok benzeşen", "orta", ""],
-      [375, "مِشْبِيهَة", "mişbīha", "çok benzeşen (dişi)", "orta", ""],
-      [376, "مِشْبِيهَان", "mişbīhān", "iki çok benzeşen", "orta", ""],
-      [377, "مِشْبِيهَتَان", "mişbīhatān", "iki çok benzeşen (dişi)", "orta", ""],
-      [378, "مِشْبِيهُون", "mişbīhūn", "çok benzeşenler", "orta", ""],
-      [379, "مِشْبِيهِين", "mişbīhīn", "çok benzeşenler", "orta", ""],
-      [380, "مِشْبِيهَات", "mişbīhāt", "çok benzeşenler (dişi)", "orta", ""],
+      [345, "شَبُوهَات", "şabūhāt", "çok benzeşenler (müennes)", "orta", ""],
+      [346, "شَبُّوه", "şabbūh", "pek çok benzeşen", "orta", ""],
+      [347, "شَبُّوهَة", "şabbūha", "pek çok benzeşen (müennes)", "orta", ""],
+      [348, "شَبُّوهَان", "şabbūhān", "pek çok benzeşen (iki)", "orta", ""],
+      [349, "شَبُّوهَتَان", "şabbūhatān", "pek çok benzeşen (iki, müennes)", "orta", ""],
+      [350, "شَبُّوهُون", "şabbūhūn", "pek çok benzeşenler", "orta", ""],
+      [351, "شَبُّوهِين", "şabbūhīn", "pek çok benzeşenler", "orta", ""],
+      [352, "شَبُّوهَات", "şabbūhāt", "pek çok benzeşenler (müennes)", "orta", ""],
+      [353, "شِبِّيه", "şibbīh", "benzeşmede aşırı giden", "orta", ""],
+      [354, "شِبِّيهَة", "şibbīha", "benzeşmede aşırı giden (müennes)", "orta", ""],
+      [355, "شِبِّيهَان", "şibbīhān", "benzeşmede aşırı giden (iki)", "orta", ""],
+      [356, "شِبِّيهَتَان", "şibbīhatān", "benzeşmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "شِبِّيهُون", "şibbīhūn", "benzeşmede aşırı gidenler", "orta", ""],
+      [358, "شِبِّيهِين", "şibbīhīn", "benzeşmede aşırı gidenler", "orta", ""],
+      [359, "شِبِّيهَات", "şibbīhāt", "benzeşmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "شُبَّاه", "şubbāh", "son derece benzeşen", "orta", ""],
+      [361, "شُبَّاهَة", "şubbāha", "son derece benzeşen (müennes)", "orta", ""],
+      [362, "شُبَّاهَان", "şubbāhān", "son derece benzeşen (iki)", "orta", ""],
+      [363, "شُبَّاهَتَان", "şubbāhatān", "son derece benzeşen (iki, müennes)", "orta", ""],
+      [364, "شُبَّاهُون", "şubbāhūn", "son derece benzeşenler", "orta", ""],
+      [365, "شُبَّاهِين", "şubbāhīn", "son derece benzeşenler", "orta", ""],
+      [366, "شُبَّاهَات", "şubbāhāt", "son derece benzeşenler (müennes)", "orta", ""],
+      [367, "مِشْبَاه", "mişbāh", "benzeşmeyi âdet edinmiş", "orta", ""],
+      [368, "مِشْبَاهَة", "mişbāha", "benzeşmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِشْبَاهَان", "mişbāhān", "benzeşmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِشْبَاهَتَان", "mişbāhatān", "benzeşmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِشْبَاهُون", "mişbāhūn", "benzeşmeyi âdet edinmişler", "orta", ""],
+      [372, "مِشْبَاهِين", "mişbāhīn", "benzeşmeyi âdet edinmişler", "orta", ""],
+      [373, "مِشْبَاهَات", "mişbāhāt", "benzeşmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِشْبِيه", "mişbīh", "benzeşmeye düşkün", "orta", ""],
+      [375, "مِشْبِيهَة", "mişbīha", "benzeşmeye düşkün (müennes)", "orta", ""],
+      [376, "مِشْبِيهَان", "mişbīhān", "benzeşmeye düşkün (iki)", "orta", ""],
+      [377, "مِشْبِيهَتَان", "mişbīhatān", "benzeşmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِشْبِيهُون", "mişbīhūn", "benzeşmeye düşkünler", "orta", ""],
+      [379, "مِشْبِيهِين", "mişbīhīn", "benzeşmeye düşkünler", "orta", ""],
+      [380, "مِشْبِيهَات", "mişbīhāt", "benzeşmeye düşkünler (müennes)", "orta", ""],
       [381, "شَبِيه", "şabīh", "çok benzeşen", "orta", "Vikisözlük: similar, resembling"],
-      [382, "شَبِيهَة", "şabīha", "çok benzeşen (dişi)", "orta", ""],
-      [383, "شَبِيهَان", "şabīhān", "iki çok benzeşen", "orta", ""],
-      [384, "شَبِيهَتَان", "şabīhatān", "iki çok benzeşen (dişi)", "orta", ""],
+      [382, "شَبِيهَة", "şabīha", "çok benzeşen (müennes)", "orta", ""],
+      [383, "شَبِيهَان", "şabīhān", "çok benzeşen (iki)", "orta", ""],
+      [384, "شَبِيهَتَان", "şabīhatān", "çok benzeşen (iki, müennes)", "orta", ""],
       [385, "شَبِيهُون", "şabīhūn", "çok benzeşenler", "orta", ""],
       [386, "شَبِيهِين", "şabīhīn", "çok benzeşenler", "orta", ""],
-      [387, "شَبِيهَات", "şabīhāt", "çok benzeşenler (dişi)", "orta", ""],
+      [387, "شَبِيهَات", "şabīhāt", "çok benzeşenler (müennes)", "orta", ""],
       [388, "شَبَّه", "şabbah", "çok benzeşen", "orta", ""],
-      [389, "شَبَّهَة", "şabbaha", "çok benzeşen (dişi)", "orta", ""],
-      [390, "شَبَّهَان", "şabbahān", "iki çok benzeşen", "orta", ""],
-      [391, "شَبَّهَتَان", "şabbahatān", "iki çok benzeşen (dişi)", "orta", ""],
+      [389, "شَبَّهَة", "şabbaha", "çok benzeşen (müennes)", "orta", ""],
+      [390, "شَبَّهَان", "şabbahān", "çok benzeşen (iki)", "orta", ""],
+      [391, "شَبَّهَتَان", "şabbahatān", "çok benzeşen (iki, müennes)", "orta", ""],
       [392, "شَبَّهُون", "şabbahūn", "çok benzeşenler", "orta", ""],
       [393, "شَبَّهِين", "şabbahīn", "çok benzeşenler", "orta", ""],
-      [394, "شَبَّهَات", "şabbahāt", "çok benzeşenler (dişi)", "orta", ""]
+      [394, "شَبَّهَات", "şabbahāt", "çok benzeşenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "شَبْهِيّ", "şabhiyy", "benzeşmeye ilgili", "orta", ""],
-      [397, "شَبَهِيّ", "şabahiyy", "benzeşmeye ilgili", "orta", ""],
-      [399, "شِبْهِيّ", "şibhiyy", "benzeşmeye ilgili", "orta", ""],
-      [401, "شُبْهِيّ", "şubhiyy", "benzeşmeye ilgili", "orta", ""],
-      [403, "شِبَاهِيّ", "şibāhiyy", "benzeşmeye ilgili", "orta", ""],
-      [405, "شَابِهِيّ", "şābihiyy", "benzeşmeye ilgili", "orta", ""],
-      [407, "مَشْبُوهِيّ", "maşbūhiyy", "benzeşmeye ilgili", "orta", ""],
-      [409, "شَبِيهِيّ", "şabīhiyy", "benzeşmeye ilgili", "orta", ""],
-      [411, "مَشْبَهِيّ", "maşbahiyy", "benzeşmeye ilgili", "orta", ""],
-      [413, "تَشْبِيهِيّ", "taşbīhiyy", "benzeşmeye ilgili", "orta", ""],
-      [415, "تَشَابُهِيّ", "taşābuhiyy", "benzeşmeye ilgili", "orta", ""],
-      [417, "إِشْبَاهِيّ", "ʾişbāhiyy", "benzeşmeye ilgili", "orta", ""],
-      [419, "اِشْتِبَاهِيّ", "iştibāhiyy", "benzeşmeye ilgili", "orta", ""]
+      [395, "شَبْهِيّ", "şabhiyy", "benzeşme ile ilgili", "orta", ""],
+      [397, "شَبَهِيّ", "şabahiyy", "benzeşme ile ilgili", "orta", ""],
+      [399, "شِبْهِيّ", "şibhiyy", "benzeşme ile ilgili", "orta", ""],
+      [401, "شُبْهِيّ", "şubhiyy", "benzeşme ile ilgili", "orta", ""],
+      [403, "شِبَاهِيّ", "şibāhiyy", "benzeşme ile ilgili", "orta", ""],
+      [405, "شَابِهِيّ", "şābihiyy", "benzeşme ile ilgili", "orta", ""],
+      [407, "مَشْبُوهِيّ", "maşbūhiyy", "benzeşme ile ilgili", "orta", ""],
+      [409, "شَبِيهِيّ", "şabīhiyy", "benzeşme ile ilgili", "orta", ""],
+      [411, "مَشْبَهِيّ", "maşbahiyy", "benzeşme ile ilgili", "orta", ""],
+      [413, "تَشْبِيهِيّ", "taşbīhiyy", "benzeşme ile ilgili", "orta", ""],
+      [415, "تَشَابُهِيّ", "taşābuhiyy", "benzeşme ile ilgili", "orta", ""],
+      [417, "إِشْبَاهِيّ", "ʾişbāhiyy", "benzeşme ile ilgili", "orta", ""],
+      [419, "اِشْتِبَاهِيّ", "iştibāhiyy", "benzeşme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "شَبْهِيَّة", "şabhiyya", "benzeşenlik", "orta", ""],
@@ -550,95 +578,95 @@
       [429, "شِبْه", "şibh", "benzeşme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "شَابُوه", "şābūh", "benzeşenler (topluluk adı)", "orta", ""],
-      [432, "شَبَهَة", "şabaha", "benzeşenler (topluluk adı)", "orta", ""],
-      [433, "شُبَهَة", "şubaha", "benzeşenler (topluluk adı)", "orta", ""],
-      [434, "أُشْبُوهَة", "ʾuşbūha", "benzeşenler (topluluk adı)", "orta", ""],
-      [435, "شَوْبَه", "şawbah", "benzeşenler (topluluk adı)", "orta", ""],
-      [437, "شَيْبَه", "şaybah", "benzeşenler (topluluk adı)", "orta", ""],
-      [439, "شَبْه", "şabh", "benzeşenler (topluluk adı)", "orta", ""],
+      [430, "شَابُوه", "şābūh", "benzeşme türünden şey", "orta", ""],
+      [432, "شَبَهَة", "şabaha", "benzeşme türünden şey", "orta", ""],
+      [433, "شُبَهَة", "şubaha", "benzeşme türünden şey", "orta", ""],
+      [434, "أُشْبُوهَة", "ʾuşbūha", "benzeşme türünden şey", "orta", ""],
+      [435, "شَوْبَه", "şawbah", "benzeşme türünden şey", "orta", ""],
+      [437, "شَيْبَه", "şaybah", "benzeşme türünden şey", "orta", ""],
+      [439, "شَبْه", "şabh", "benzeşme türünden şey", "orta", ""],
       [
         441,
         "شَبَه",
         "şabah",
-        "benzeşenler (topluluk adı)",
+        "benzeşme türünden şey",
         "orta",
         "Vikisözlük: masdar (bâb I): to resemble, to bear a resemblance, to be similar"
       ],
-      [443, "شِبْه", "şibh", "benzeşenler (topluluk adı)", "orta", ""],
-      [445, "شُبْه", "şubh", "benzeşenler (topluluk adı)", "orta", ""],
-      [447, "شَبِيه", "şabīh", "benzeşenler (topluluk adı)", "orta", "Vikisözlük: similar, resembling"],
-      [449, "شِبَه", "şibah", "benzeşenler (topluluk adı)", "orta", ""],
-      [451, "شُبُه", "şubuh", "benzeşenler (topluluk adı)", "orta", ""],
-      [453, "شَبَاه", "şabāh", "benzeşenler (topluluk adı)", "orta", ""]
+      [443, "شِبْه", "şibh", "benzeşme türünden şey", "orta", ""],
+      [445, "شُبْه", "şubh", "benzeşme türünden şey", "orta", ""],
+      [447, "شَبِيه", "şabīh", "benzeşme türünden şey", "orta", "Vikisözlük: similar, resembling"],
+      [449, "شِبَه", "şibah", "benzeşme türünden şey", "orta", ""],
+      [451, "شُبُه", "şubuh", "benzeşme türünden şey", "orta", ""],
+      [453, "شَبَاه", "şabāh", "benzeşme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "شَابُوهَة", "şābūha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [436, "شَوْبَهَة", "şawbaha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [438, "شَيْبَهَة", "şaybaha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [440, "شَبْهَة", "şabha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [442, "شَبَهَة", "şabaha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [444, "شِبْهَة", "şibha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [446, "شُبْهَة", "şubha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [448, "شَبِيهَة", "şabīha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [450, "شِبَهَة", "şibaha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [452, "شُبُهَة", "şubuha", "bir tane benzeşenler (topluluk adı)", "orta", ""],
-      [454, "شَبَاهَة", "şabāha", "bir tane benzeşenler (topluluk adı)", "orta", ""]
+      [431, "شَابُوهَة", "şābūha", "benzeşme türünden bir tane", "orta", ""],
+      [436, "شَوْبَهَة", "şawbaha", "benzeşme türünden bir tane", "orta", ""],
+      [438, "شَيْبَهَة", "şaybaha", "benzeşme türünden bir tane", "orta", ""],
+      [440, "شَبْهَة", "şabha", "benzeşme türünden bir tane", "orta", ""],
+      [442, "شَبَهَة", "şabaha", "benzeşme türünden bir tane", "orta", ""],
+      [444, "شِبْهَة", "şibha", "benzeşme türünden bir tane", "orta", ""],
+      [446, "شُبْهَة", "şubha", "benzeşme türünden bir tane", "orta", ""],
+      [448, "شَبِيهَة", "şabīha", "benzeşme türünden bir tane", "orta", ""],
+      [450, "شِبَهَة", "şibaha", "benzeşme türünden bir tane", "orta", ""],
+      [452, "شُبُهَة", "şubuha", "benzeşme türünden bir tane", "orta", ""],
+      [454, "شَبَاهَة", "şabāha", "benzeşme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَشْبَاه", "ʾaşbāh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [456, "أَشْبِهَة", "ʾaşbiha", "benzeşenler (kırık çoğul)", "orta", ""],
-      [457, "أَشَابِه", "ʾaşābih", "benzeşenler (kırık çoğul)", "orta", ""],
-      [458, "أَشَابِيه", "ʾaşābīh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [459, "شُبُوه", "şubūh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [460, "شُبُه", "şubuh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [461, "شِبَاه", "şibāh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [462, "شِبَه", "şibah", "benzeşenler (kırık çoğul)", "orta", ""],
-      [463, "شِبَهَة", "şibaha", "benzeşenler (kırık çoğul)", "orta", ""],
-      [464, "شُبَه", "şubah", "benzeşenler (kırık çoğul)", "orta", ""],
-      [465, "شُبَهاء", "şubahāʾ", "benzeşenler (kırık çoğul)", "orta", ""],
-      [466, "شَبَهَة", "şabaha", "benzeşenler (kırık çoğul)", "orta", ""],
-      [467, "شُبَّاه", "şubbāh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [468, "شَبَاه", "şabāh", "benzeşenler (kırık çoğul)", "orta", ""],
+      [455, "أَشْبَاه", "ʾaşbāh", "benzeşmeler", "orta", ""],
+      [456, "أَشْبِهَة", "ʾaşbiha", "benzeşmeler", "orta", ""],
+      [457, "أَشَابِه", "ʾaşābih", "benzeşmeler", "orta", ""],
+      [458, "أَشَابِيه", "ʾaşābīh", "benzeşmeler", "orta", ""],
+      [459, "شُبُوه", "şubūh", "benzeşmeler", "orta", ""],
+      [460, "شُبُه", "şubuh", "benzeşmeler", "orta", ""],
+      [461, "شِبَاه", "şibāh", "benzeşmeler", "orta", ""],
+      [462, "شِبَه", "şibah", "benzeşmeler", "orta", ""],
+      [463, "شِبَهَة", "şibaha", "benzeşmeler", "orta", ""],
+      [464, "شُبَه", "şubah", "benzeşmeler", "orta", ""],
+      [465, "شُبَهاء", "şubahāʾ", "benzeşmeler", "orta", ""],
+      [466, "شَبَهَة", "şabaha", "benzeşmeler", "orta", ""],
+      [467, "شُبَّاه", "şubbāh", "benzeşmeler", "orta", ""],
+      [468, "شَبَاه", "şabāh", "benzeşmeler", "orta", ""],
       [
         469,
         "شَبَه",
         "şabah",
-        "benzeşenler (kırık çoğul)",
+        "benzeşmeler",
         "orta",
         "Vikisözlük: masdar (bâb I): to resemble, to bear a resemblance, to be similar"
       ],
-      [470, "مَشَابِه", "maşābih", "benzeşenler (kırık çoğul)", "orta", ""],
-      [471, "مَشَابِيه", "maşābīh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [472, "شَوَابِه", "şawābih", "benzeşenler (kırık çoğul)", "orta", ""],
-      [473, "أَشْبُه", "ʾaşbuh", "benzeşenler (kırık çoğul)", "orta", ""],
-      [474, "شُبَّه", "şubbah", "benzeşenler (kırık çoğul)", "orta", ""],
-      [475, "شَبَائِه", "şabāʾih", "benzeşenler (kırık çoğul)", "orta", ""],
-      [476, "شُبَيْه", "şubayh", "benzeşenler (kırık çoğul)", "orta", ""]
+      [470, "مَشَابِه", "maşābih", "benzeşmeler", "orta", ""],
+      [471, "مَشَابِيه", "maşābīh", "benzeşmeler", "orta", ""],
+      [472, "شَوَابِه", "şawābih", "benzeşmeler", "orta", ""],
+      [473, "أَشْبُه", "ʾaşbuh", "benzeşmeler", "orta", ""],
+      [474, "شُبَّه", "şubbah", "benzeşmeler", "orta", ""],
+      [475, "شَبَائِه", "şabāʾih", "benzeşmeler", "orta", ""],
+      [476, "شُبَيْه", "şubayh", "benzeşmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَشْبَاهَات", "ʾaşbāhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَشْبِهَات", "ʾaşbihāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَشَابِهَات", "ʾaşābihāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَشَابِيهَات", "ʾaşābīhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [481, "شُبُوهَات", "şubūhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [482, "شُبُهَات", "şubuhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [483, "شِبَاهَات", "şibāhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [484, "شِبَهَات", "şibahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [485, "شِبَهَات", "şibahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [486, "شُبَهَات", "şubahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [487, "شُبَهاآت", "şubahāʾāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [488, "شَبَهَات", "şabahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [489, "شُبَّاهَات", "şubbāhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [490, "شَبَاهَات", "şabāhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [491, "شَبَهَات", "şabahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَشَابِهَات", "maşābihāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَشَابِيهَات", "maşābīhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [494, "شَوَابِهَات", "şawābihāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَشْبُهَات", "ʾaşbuhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [496, "شُبَّهَات", "şubbahāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [497, "شَبَائِهَات", "şabāʾihāt", "benzeşenler (çoğulun çoğulu)", "orta", ""],
-      [498, "شُبَيْهَات", "şubayhāt", "benzeşenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَشْبَاهَات", "ʾaşbāhāt", "benzeşmeler topluluğu", "orta", ""],
+      [478, "أَشْبِهَات", "ʾaşbihāt", "benzeşmeler topluluğu", "orta", ""],
+      [479, "أَشَابِهَات", "ʾaşābihāt", "benzeşmeler topluluğu", "orta", ""],
+      [480, "أَشَابِيهَات", "ʾaşābīhāt", "benzeşmeler topluluğu", "orta", ""],
+      [481, "شُبُوهَات", "şubūhāt", "benzeşmeler topluluğu", "orta", ""],
+      [482, "شُبُهَات", "şubuhāt", "benzeşmeler topluluğu", "orta", ""],
+      [483, "شِبَاهَات", "şibāhāt", "benzeşmeler topluluğu", "orta", ""],
+      [484, "شِبَهَات", "şibahāt", "benzeşmeler topluluğu", "orta", ""],
+      [485, "شِبَهَات", "şibahāt", "benzeşmeler topluluğu", "orta", ""],
+      [486, "شُبَهَات", "şubahāt", "benzeşmeler topluluğu", "orta", ""],
+      [487, "شُبَهاآت", "şubahāʾāt", "benzeşmeler topluluğu", "orta", ""],
+      [488, "شَبَهَات", "şabahāt", "benzeşmeler topluluğu", "orta", ""],
+      [489, "شُبَّاهَات", "şubbāhāt", "benzeşmeler topluluğu", "orta", ""],
+      [490, "شَبَاهَات", "şabāhāt", "benzeşmeler topluluğu", "orta", ""],
+      [491, "شَبَهَات", "şabahāt", "benzeşmeler topluluğu", "orta", ""],
+      [492, "مَشَابِهَات", "maşābihāt", "benzeşmeler topluluğu", "orta", ""],
+      [493, "مَشَابِيهَات", "maşābīhāt", "benzeşmeler topluluğu", "orta", ""],
+      [494, "شَوَابِهَات", "şawābihāt", "benzeşmeler topluluğu", "orta", ""],
+      [495, "أَشْبُهَات", "ʾaşbuhāt", "benzeşmeler topluluğu", "orta", ""],
+      [496, "شُبَّهَات", "şubbahāt", "benzeşmeler topluluğu", "orta", ""],
+      [497, "شَبَائِهَات", "şabāʾihāt", "benzeşmeler topluluğu", "orta", ""],
+      [498, "شُبَيْهَات", "şubayhāt", "benzeşmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

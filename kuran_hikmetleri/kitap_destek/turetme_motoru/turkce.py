@@ -11,6 +11,7 @@ KESIK = 'çfhkpsşt'
 UN4 = {'a': 'ı', 'ı': 'ı', 'e': 'i', 'i': 'i', 'o': 'u', 'u': 'u', 'ö': 'ü', 'ü': 'ü'}
 DB_YOL = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kaynak', 'lugat', 'kok_anlamlari.json')
 
+ARAPCA_ET = set('emr sabr şükr kahr zikr nazar fikr ferm zann hükm affet'.split())
 GECISSIZ = set('''ol gel git dur otur kalk uyu uyan öl doğ uç koş yürü gül ağla yüksel büyü küçül düş çık gir in bin yat kal geç kaç var yaşa
 titre çürü sus bat piş yan ürper kork şaş sevin üz solu parla ışılda doy tüken eksil artı çoğal azal soğu ısın ısı sarar kızar ağar
 uy morar yeşer sarkık tükür ak akış karar şişin inan'''.split())
@@ -46,6 +47,11 @@ def hece(s):
 
 def yum(v):
     if v == 'et' or v.endswith(' et') or v == 'git' or v.endswith(' git'):
+        return v[:-1] + 'd'
+    w = v.split()[-1]
+    if len(w) >= 4 and w.endswith('et') and w[-3] not in VOW and w[-4] not in VOW and not w.endswith(('let', 'lat', 'ret', 'rat', 'net', 'nat')):
+        return v[:-1] + 'd'
+    if len(w) >= 5 and w.endswith(('ret', 'net')) and w[-4] not in VOW and w[-5] in VOW and w[:-2] in ARAPCA_ET:
         return v[:-1] + 'd'
     return v
 
@@ -87,6 +93,9 @@ def f_donus(v):
 
 
 def f_ettir(v):
+    if v.endswith(' ol'):
+        w = v[:-3]
+        return w + ('leştir' if a_e(w) == 'e' else 'laştır') if ' ' not in w else w + ' et'
     if v in DUZENSIZ_ETTIR:
         return DUZENSIZ_ETTIR[v]
     if unluyle_biter(v) or (hece(v) > 1 and v[-1] in 'lr'):
@@ -210,101 +219,127 @@ def kok_bilgisi(kok):
     return {'stem': stem, 'tr': tr, 'trk': trk, 'kaynak': kaynak, 'guven': guven, 'ham': x['turkce'], 'adlar': adlar}
 
 
+def f_pasfail(v):
+    p = f_pas(v)
+    return p + a_e(p) + 'n'
+
+
 def bab_v(bab, grup, bil):
     v, tr, trk = bil['stem'], bil['tr'], bil['trk']
     gecisli = tr in ('tr', 'aux')
-    cap = 'kural'
-    pre = ''
-    ist = False
     if 'Rubâ' in grup:
-        return v, gecisli, 'ardı ardına ', 'orta', False
+        return v, gecisli, 'ardı ardına ', 'orta', 'aktif'
     if bab in ('', None):
-        return v, gecisli, '', cap, False
-    if bab in ('II', 'IV'):
-        if not gecisli:
-            v = f_ettir(v)
-            cap = 'orta'
-        elif not trk:
-            cap = 'orta'
-        return v, True, '', ('orta' if bab == 'II' else cap), False
-    if bab in ('III', 'VI'):
-        return f_istes(v), False, '', 'orta', False
+        return v, gecisli, '', 'kural', 'aktif'
+    if bab == 'II':
+        return (v, True, 'çokça ', 'orta', 'aktif') if gecisli else (f_ettir(v), True, '', 'orta', 'aktif')
+    if bab == 'IV':
+        return f_ettir(v), True, '', 'orta', 'aktif'
+    if bab == 'III':
+        return v, gecisli, 'biriyle karşılıklı ', 'orta', 'aktif'
+    if bab == 'VI':
+        return v, False, ('birbirine ' if gecisli else 'hep birlikte '), 'orta', 'aktif'
     if bab == 'V':
-        return (f_donus(v) if gecisli else v), False, '', 'orta', False
+        return v, False, 'kendini zorlayarak ', 'orta', 'aktif'
     if bab == 'VII':
-        return (f_pas(v) if gecisli else v), False, '', 'orta', False
+        return (v, False, '', 'orta', 'edilgen') if gecisli else (v, False, 'kendiliğinden ', 'orta', 'aktif')
     if bab == 'VIII':
-        return (f_donus(v) if gecisli else v), False, '', 'orta', False
-    if bab in ('IX', 'XI'):
-        w = v.split()[0] if bil['kaynak'] == 'ad' else v
-        return w + ('leş' if son_unlu(w) not in ARKA else 'laş'), False, ('iyice ' if bab == 'XI' else ''), 'kontrol', False
+        return v, gecisli, 'kendisi için ', 'orta', 'aktif'
     if bab == 'X':
-        return v, gecisli, '', 'orta', True
-    return v, gecisli, 'aşırı ', 'orta', False
+        return v, gecisli, '', 'orta', 'istek'
+    if bab == 'IX':
+        return v, False, 'iyiden iyiye ', 'kontrol', 'aktif'
+    if bab == 'XI':
+        return v, False, 'büsbütün ', 'kontrol', 'aktif'
+    return v, gecisli, 'aşırı ', 'orta', 'aktif'
 
 
-def temel(grup, v, gecisli, pre, ist):
+MASDAR_VEZNI = {
+    "fi'l": '{PF} şey', "fa'al": '{M} hâli', "fi'āl": '{M}den kaçınma', "fu'āl": '{M} illeti, {M} sesi',
+    "fa'āle": '{M} vasfı', "fu'ūle": '{M} vasfı', "fi'āle": '{M} vazifesi, {M} işi', "fa'īl": '{M} sesi, {M} yürüyüşü',
+    "fa'alān": '{M} çalkantısı, coşarak {M}', "tuf'ūl": 'tekrar tekrar {M}', "taf'ila": 'tekrar tekrar {M}',
+    "taf'ala": 'tekrar tekrar {M}', "maf'ula": '{M} sebebi', "maf'ila": '{M} sebebi'}
+MUBALAGA_VEZNI = {"fa''āl": 'işi {M} olan', "fa''āle": 'pek çok {F}', "fa''ūl": 'pek çok {F}', "fi''īl": '{M}de aşırı giden',
+                  "fu''āl": 'son derece {F}', "mif'āl": '{M}yi âdet edinmiş', "mif'īl": '{M}ye düşkün'}
+MEKAN_VEZNI = {"maf'ale": '{M}nin bol olduğu yer', "maf'ile": '{M}nin bol olduğu yer'}
+
+
+def temel(grup, ad, v, gecisli, pre, kip):
+    vez = ad.split(' + ')[0].strip()
+    m = f_mastar(v)
+    if kip == 'edilgen':
+        M, F, PF = pre + f_mastar(f_pas(v)), pre + f_pasfail(v), pre + f_pasfail(v)
+    elif kip == 'istek':
+        M, F, PF = f_acc(m) + ' isteme', f_acc(m) + ' isteyen', m + 's' + i4(m) + ' istenen'
+    else:
+        M, F, PF = pre + m, pre + f_fail(v), pre + f_pasfail(v)
+    sub = lambda t: t.format(M=M, F=F, PF=PF)
+    ek = lambda s, ekler: s + ('y' if unluyle_biter(s) else '') + ekler
     g = grup
     if g.startswith('masdar-ı sınâî'):
-        f = f_fail(v)
-        return pre + f + 'l' + i4(f) + 'k', 'orta'
+        return F + 'l' + i4(F) + 'k', 'orta'
+    if g.startswith('masdar · sülâsî'):
+        t = MASDAR_VEZNI.get(vez)
+        if t:
+            t = t.replace('{M}den', ek(M, 'den' if a_e(M) == 'e' else 'dan')[len(M):].join([M, ''])) if False else t
+            return sub(t.replace('{M}den', M + ('den' if a_e(M) == 'e' else 'dan'))), 'orta'
+        return M, 'kural'
     if g.startswith('masdar') or g.startswith('ism-i masdar'):
-        if ist:
-            return f_acc(f_mastar(v)) + ' isteme', 'kural'
-        return pre + f_mastar(v), 'kural'
+        return M, 'kural'
     if g.startswith('ism-i merre'):
-        return 'bir kere ' + pre + f_mastar(v), 'kural'
-    if g.startswith('ism-i fâil'):
-        if ist:
-            return f_acc(f_mastar(v)) + ' isteyen', 'orta'
-        return pre + f_fail(v), 'kural'
-    if g.startswith('ism-i mef'):
-        if ist:
-            return f_acc(f_mastar(v)) + ' istenen', 'orta'
-        if gecisli:
-            return pre + f_mefp(v), 'kural'
-        return pre + f_pf(v), 'orta'
-    if g.startswith('mekân/zaman') or g.startswith('masdar-ı mîmî'):
-        m = f_mastar(v)
-        return (pre + m + ' (yeri/zamanı)'), 'orta'
-    if g.startswith('âlet'):
-        return datif(f_mastar(v)) + ' yarayan araç', 'orta'
-    if g.startswith('tafdîl'):
-        return 'daha çok ' + pre + f_fail(v), 'orta'
-    if g.startswith('tasğîr'):
-        return 'küçük ' + pre + f_mastar(v), 'orta'
+        return 'bir kere ' + M, 'kural'
     if g.startswith("ism-i hey'et"):
-        return pre + f_mastar(v) + ' tarzı', 'orta'
+        return M + ' tarzı', 'orta'
+    if g.startswith('ism-i fâil'):
+        return F, 'kural'
+    if g.startswith('ism-i mef'):
+        return PF, ('kural' if gecisli else 'orta')
+    if g.startswith('mekân/zaman') and not g.startswith('mekân/zaman/masdar'):
+        t = MEKAN_VEZNI.get(vez)
+        return (sub(t.replace('{M}nin', M + 'n' + i4(M) + 'n')) if t else M + ' yeri, vakti'), 'orta'
+    if g.startswith('mekân/zaman/masdar'):
+        return M + ' yeri, vakti', 'orta'
+    if g.startswith('masdar-ı mîmî'):
+        return M, 'orta'
+    if g.startswith('âlet'):
+        return M + ' âleti', 'orta'
+    if g.startswith('tafdîl'):
+        return 'daha çok ' + F, 'orta'
+    if g.startswith('tasğîr'):
+        return 'azıcık ' + M, 'orta'
     if g.startswith('sıfat-ı müşebbehe'):
-        return 'sürekli ' + pre + f_fail(v), 'orta'
+        return 'her daim ' + F, 'orta'
     if g.startswith('mübalağa'):
-        return 'çok ' + pre + f_fail(v), 'orta'
+        t = MUBALAGA_VEZNI.get(vez, 'çok {F}')
+        t = t.replace('{M}de', M + ('de' if a_e(M) == 'e' else 'da')).replace('{M}yi', M + 'y' + i4(M)).replace('{M}ye', M + 'y' + a_e(M))
+        return sub(t), 'orta'
     if g.startswith('mensûb'):
-        m = f_mastar(v)
-        return pre + m + 'y' + a_e(m) + ' ilgili', 'orta'
+        return M + ' ile ilgili', 'orta'
     if g.startswith('ism-i cins'):
-        f = pre + f_fail(v)
-        return (cogul(f) + ' (topluluk adı)'), 'orta'
+        return M + ' türünden şey', 'orta'
     if g.startswith('cem‘-i mükesser'):
-        return cogul(pre + f_fail(v)) + ' (kırık çoğul)', 'orta'
+        return cogul(M), 'orta'
     if g.startswith('cem‘u’l-cem‘'):
-        return cogul(pre + f_fail(v)) + ' (çoğulun çoğulu)', 'orta'
-    return pre + f_mastar(v), 'orta'
+        return cogul(M) + ' topluluğu', 'orta'
+    return M, 'orta'
 
 
-def ek_uygula(ad, t):
+def ek_uygula(ad, t, grup=''):
+    tekil_kisi = not (grup.startswith('mekân') or grup.startswith('âlet') or grup.startswith('masdar') or grup.startswith('ism-i merre') or grup.startswith("ism-i hey'et"))
     if ' + müennes tesniye' in ad:
-        return 'iki ' + t + ' (dişi)'
+        return t + ', iki, müennes'
     if ' + müennes' in ad and 'cem' not in ad:
-        return t + ' (dişi)'
+        return t + ', müennes'
     if ' + tesniye' in ad:
-        return 'iki ' + t
+        return t + ', iki'
     if 'cem‘-i sâlim müennes' in ad:
-        return cogul(t) + ' (dişi)'
+        return (cogul(t) if tekil_kisi and ',' not in t else t + ', çoğul') + ', müennes'
     if 'cem‘-i sâlim müzekker' in ad:
-        return cogul(t)
+        return cogul(t) if tekil_kisi and ',' not in t else t + ' (çoğul)'
     if ad.endswith(' + tâ (tekili)'):
-        return 'bir tane ' + t
+        return t.replace(' türünden şey', ' türünden bir tane')
+    if grup.startswith('ism-i cins · cem'):
+        return t.replace(' türünden şey', ' türünden şeyler')
     return t
 
 
@@ -316,11 +351,11 @@ def isle(kok, satir):
             s['tr'], s['guven'] = '', 'veri yok'
             sayac['veri yok'] += 1
             continue
-        v, gecisli, pre, cap, ist = bab_v(s['bab'], s['grup'], bil)
-        t, k = temel(s['grup'], v, gecisli, pre, ist)
+        v, gecisli, pre, cap, kip = bab_v(s['bab'], s['grup'], bil)
+        t, k = temel(s['grup'], s['ad'], v, gecisli, pre, kip)
         if s['grup'].startswith('masdar · sülâsî') and bil['kaynak'] == 'ad' and bil['adlar']:
             t, k = bil['adlar'][0], 'orta'
-        t = ek_uygula(s['ad'], t)
+        t = ek_uygula(s['ad'], t, s['grup'])
         sira = {'kural': 0, 'orta': 1, 'kontrol': 2}
         son = max([bil['guven'], cap, k], key=lambda z: sira[z])
         if 'aday' in s['etiket'] and son == 'kural':

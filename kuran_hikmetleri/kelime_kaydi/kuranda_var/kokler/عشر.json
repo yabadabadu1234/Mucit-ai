@@ -8,8 +8,8 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "عَشْر", "ʿaşr", "arkadaşlık etme", "orta", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
-      [1, "عِشْر", "ʿişr", "arkadaşlık etme", "orta", ""],
+      [0, "عَشْر", "ʿaşr", "on", "kuran", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
+      [1, "عِشْر", "ʿişr", "arkadaşlık edilen şey", "orta", ""],
       [
         2,
         "عُشْر",
@@ -18,19 +18,26 @@
         "orta",
         "Vikisözlük: apple of Sodom (Calotropis procera) as well as crown flower (Calotropi"
       ],
-      [3, "عَشَر", "ʿaşar", "arkadaşlık etme", "orta", ""],
+      [3, "عَشَر", "ʿaşar", "arkadaşlık etme hâli", "orta", ""],
       [4, "عِشَر", "ʿişar", "arkadaşlık etme", "orta", ""],
       [5, "عُشُر", "ʿuşur", "arkadaşlık etme", "orta", "Vikisözlük: one tenth"],
       [6, "عُشُور", "ʿuşūr", "arkadaşlık etme", "orta", ""],
-      [7, "عِشَار", "ʿişār", "arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"],
-      [8, "عُشَار", "ʿuşār", "arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"],
+      [7, "عِشَار", "ʿişār", "arkadaşlık etmeden kaçınma", "orta", "Vikisözlük: full-term she-camels"],
+      [
+        8,
+        "عُشَار",
+        "ʿuşār",
+        "arkadaşlık etme illeti, arkadaşlık etme sesi",
+        "orta",
+        "Vikisözlük: full-term she-camels"
+      ],
       [9, "عَشَار", "ʿaşār", "arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"],
-      [10, "عَشَارَة", "ʿaşāra", "arkadaşlık etme", "orta", ""],
-      [11, "عُشُورَة", "ʿuşūra", "arkadaşlık etme", "orta", ""],
-      [12, "عِشَارَة", "ʿişāra", "arkadaşlık etme", "orta", ""],
-      [13, "عَشِير", "ʿaşīr", "arkadaşlık etme", "orta", ""],
+      [10, "عَشَارَة", "ʿaşāra", "arkadaşlık etme vasfı", "orta", ""],
+      [11, "عُشُورَة", "ʿuşūra", "arkadaşlık etme vasfı", "orta", ""],
+      [12, "عِشَارَة", "ʿişāra", "arkadaşlık etme vazifesi, arkadaşlık etme işi", "orta", ""],
+      [13, "عَشِير", "ʿaşīr", "eş, yoldaş", "kuran", "Kur'ân"],
       [14, "عَشُور", "ʿaşūr", "arkadaşlık etme", "orta", ""],
-      [15, "عَشَرَان", "ʿaşarān", "arkadaşlık etme", "orta", ""],
+      [15, "عَشَرَان", "ʿaşarān", "arkadaşlık etme çalkantısı, coşarak arkadaşlık etme", "orta", ""],
       [16, "عُشْرَان", "ʿuşrān", "arkadaşlık etme", "orta", ""],
       [17, "عِشْرَان", "ʿişrān", "arkadaşlık etme", "orta", ""],
       [18, "عَشْرَى", "ʿaşrā", "arkadaşlık etme", "orta", ""],
@@ -39,157 +46,164 @@
       [21, "عَشَرَة", "ʿaşara", "arkadaşlık etme", "orta", ""],
       [22, "عِشَرَة", "ʿişara", "arkadaşlık etme", "orta", ""],
       [23, "عَشْرُورَة", "ʿaşrūra", "arkadaşlık etme", "orta", ""],
-      [24, "تُعْشُور", "tuʿşūr", "arkadaşlık etme", "orta", ""],
-      [25, "تَعْشِرَة", "taʿşira", "arkadaşlık etme", "orta", ""],
-      [26, "تَعْشَرَة", "taʿşara", "arkadaşlık etme", "orta", ""],
-      [27, "مَعْشُرَة", "maʿşura", "arkadaşlık etme", "orta", ""],
-      [28, "مَعْشِرَة", "maʿşira", "arkadaşlık etme", "orta", ""]
+      [24, "تُعْشُور", "tuʿşūr", "tekrar tekrar arkadaşlık etme", "orta", ""],
+      [25, "تَعْشِرَة", "taʿşira", "tekrar tekrar arkadaşlık etme", "orta", ""],
+      [26, "تَعْشَرَة", "taʿşara", "tekrar tekrar arkadaşlık etme", "orta", ""],
+      [27, "مَعْشُرَة", "maʿşura", "arkadaşlık etme sebebi", "orta", ""],
+      [28, "مَعْشِرَة", "maʿşira", "arkadaşlık etme sebebi", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَعْشِير", "taʿşīr", "arkadaşlık etme", "orta", ""],
-      [30, "تَعْشِرَة", "taʿşira", "arkadaşlık etme", "orta", ""],
-      [31, "عِشِّار", "ʿişşār", "arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"]
+      [29, "تَعْشِير", "taʿşīr", "çokça arkadaşlık etme", "orta", ""],
+      [30, "تَعْشِرَة", "taʿşira", "çokça arkadaşlık etme", "orta", ""],
+      [31, "عِشِّار", "ʿişşār", "çokça arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَعْشِيرَة", "taʿşīra", "bir kere arkadaşlık etme", "orta", ""],
-      [33, "عِشِّارَة", "ʿişşāra", "bir kere arkadaşlık etme", "orta", ""]
+      [32, "تَعْشِيرَة", "taʿşīra", "bir kere çokça arkadaşlık etme", "orta", ""],
+      [33, "عِشِّارَة", "ʿişşāra", "bir kere çokça arkadaşlık etme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُعَشِّر", "muʿaşşir", "arkadaşlık eden", "orta", ""],
-      [35, "مُعَشِّرَة", "muʿaşşira", "arkadaşlık eden (dişi)", "orta", ""],
-      [36, "مُعَشِّرَان", "muʿaşşirān", "iki arkadaşlık eden", "orta", ""],
-      [37, "مُعَشِّرَتَان", "muʿaşşiratān", "iki arkadaşlık eden (dişi)", "orta", ""],
-      [38, "مُعَشِّرُون", "muʿaşşirūn", "arkadaşlık edenler", "orta", ""],
-      [39, "مُعَشِّرِين", "muʿaşşirīn", "arkadaşlık edenler", "orta", ""],
-      [40, "مُعَشِّرَات", "muʿaşşirāt", "arkadaşlık edenler (dişi)", "orta", ""]
+      [34, "مُعَشِّر", "muʿaşşir", "çokça arkadaşlık eden", "orta", ""],
+      [35, "مُعَشِّرَة", "muʿaşşira", "çokça arkadaşlık eden (müennes)", "orta", ""],
+      [36, "مُعَشِّرَان", "muʿaşşirān", "çokça arkadaşlık eden (iki)", "orta", ""],
+      [37, "مُعَشِّرَتَان", "muʿaşşiratān", "çokça arkadaşlık eden (iki, müennes)", "orta", ""],
+      [38, "مُعَشِّرُون", "muʿaşşirūn", "çokça arkadaşlık edenler", "orta", ""],
+      [39, "مُعَشِّرِين", "muʿaşşirīn", "çokça arkadaşlık edenler", "orta", ""],
+      [40, "مُعَشِّرَات", "muʿaşşirāt", "çokça arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُعَشَّر", "muʿaşşar", "arkadaşlık edilmiş", "orta", ""],
-      [42, "مُعَشَّرَة", "muʿaşşara", "arkadaşlık edilmiş (dişi)", "orta", ""],
-      [43, "مُعَشَّرَان", "muʿaşşarān", "iki arkadaşlık edilmiş", "orta", ""],
-      [44, "مُعَشَّرَتَان", "muʿaşşaratān", "iki arkadaşlık edilmiş (dişi)", "orta", ""],
-      [45, "مُعَشَّرُون", "muʿaşşarūn", "arkadaşlık edilmişler", "orta", ""],
-      [46, "مُعَشَّرِين", "muʿaşşarīn", "arkadaşlık edilmişler", "orta", ""],
-      [47, "مُعَشَّرَات", "muʿaşşarāt", "arkadaşlık edilmişler (dişi)", "orta", ""]
+      [41, "مُعَشَّر", "muʿaşşar", "çokça arkadaşlık edilen", "orta", ""],
+      [42, "مُعَشَّرَة", "muʿaşşara", "çokça arkadaşlık edilen (müennes)", "orta", ""],
+      [43, "مُعَشَّرَان", "muʿaşşarān", "çokça arkadaşlık edilen (iki)", "orta", ""],
+      [44, "مُعَشَّرَتَان", "muʿaşşaratān", "çokça arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [45, "مُعَشَّرُون", "muʿaşşarūn", "çokça arkadaşlık edilenler", "orta", ""],
+      [46, "مُعَشَّرِين", "muʿaşşarīn", "çokça arkadaşlık edilenler", "orta", ""],
+      [47, "مُعَشَّرَات", "muʿaşşarāt", "çokça arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُعَشَّر", "muʿaşşar", "arkadaşlık etme (yeri/zamanı)", "orta", ""]
+      [48, "مُعَشَّر", "muʿaşşar", "çokça arkadaşlık etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُعَاشَرَة", "muʿāşara", "arkadaşlık etişme", "orta", "Vikisözlük: masdar (bâb III): to befriend"],
-      [50, "عِشَار", "ʿişār", "arkadaşlık etişme", "orta", "Vikisözlük: full-term she-camels"]
+      [
+        49,
+        "مُعَاشَرَة",
+        "muʿāşara",
+        "biriyle karşılıklı arkadaşlık etme",
+        "orta",
+        "Vikisözlük: masdar (bâb III): to befriend"
+      ],
+      [50, "عِشَار", "ʿişār", "biriyle karşılıklı arkadaşlık etme", "orta", "Vikisözlük: full-term she-camels"]
     ],
     "ism-i merre · bâb III": [
-      [51, "عِشَارَة", "ʿişāra", "bir kere arkadaşlık etişme", "orta", ""]
+      [51, "عِشَارَة", "ʿişāra", "bir kere biriyle karşılıklı arkadaşlık etme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُعَاشِر", "muʿāşir", "arkadaşlık etişen", "orta", ""],
-      [53, "مُعَاشِرَة", "muʿāşira", "arkadaşlık etişen (dişi)", "orta", ""],
-      [54, "مُعَاشِرَان", "muʿāşirān", "iki arkadaşlık etişen", "orta", ""],
-      [55, "مُعَاشِرَتَان", "muʿāşiratān", "iki arkadaşlık etişen (dişi)", "orta", ""],
-      [56, "مُعَاشِرُون", "muʿāşirūn", "arkadaşlık etişenler", "orta", ""],
-      [57, "مُعَاشِرِين", "muʿāşirīn", "arkadaşlık etişenler", "orta", ""],
-      [58, "مُعَاشِرَات", "muʿāşirāt", "arkadaşlık etişenler (dişi)", "orta", ""]
+      [52, "مُعَاشِر", "muʿāşir", "biriyle karşılıklı arkadaşlık eden", "orta", ""],
+      [53, "مُعَاشِرَة", "muʿāşira", "biriyle karşılıklı arkadaşlık eden (müennes)", "orta", ""],
+      [54, "مُعَاشِرَان", "muʿāşirān", "biriyle karşılıklı arkadaşlık eden (iki)", "orta", ""],
+      [55, "مُعَاشِرَتَان", "muʿāşiratān", "biriyle karşılıklı arkadaşlık eden (iki, müennes)", "orta", ""],
+      [56, "مُعَاشِرُون", "muʿāşirūn", "biriyle karşılıklı arkadaşlık edenler", "orta", ""],
+      [57, "مُعَاشِرِين", "muʿāşirīn", "biriyle karşılıklı arkadaşlık edenler", "orta", ""],
+      [58, "مُعَاشِرَات", "muʿāşirāt", "biriyle karşılıklı arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُعَاشَر", "muʿāşar", "arkadaşlık etişmiş", "orta", ""],
+      [59, "مُعَاشَر", "muʿāşar", "biriyle karşılıklı arkadaşlık edilen", "orta", ""],
       [
         60,
         "مُعَاشَرَة",
         "muʿāşara",
-        "arkadaşlık etişmiş (dişi)",
+        "biriyle karşılıklı arkadaşlık edilen (müennes)",
         "orta",
         "Vikisözlük: masdar (bâb III): to befriend"
       ],
-      [61, "مُعَاشَرَان", "muʿāşarān", "iki arkadaşlık etişmiş", "orta", ""],
-      [62, "مُعَاشَرَتَان", "muʿāşaratān", "iki arkadaşlık etişmiş (dişi)", "orta", ""],
-      [63, "مُعَاشَرُون", "muʿāşarūn", "arkadaşlık etişmişler", "orta", ""],
-      [64, "مُعَاشَرِين", "muʿāşarīn", "arkadaşlık etişmişler", "orta", ""],
-      [65, "مُعَاشَرَات", "muʿāşarāt", "arkadaşlık etişmişler (dişi)", "orta", ""]
+      [61, "مُعَاشَرَان", "muʿāşarān", "biriyle karşılıklı arkadaşlık edilen (iki)", "orta", ""],
+      [62, "مُعَاشَرَتَان", "muʿāşaratān", "biriyle karşılıklı arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [63, "مُعَاشَرُون", "muʿāşarūn", "biriyle karşılıklı arkadaşlık edilenler", "orta", ""],
+      [64, "مُعَاشَرِين", "muʿāşarīn", "biriyle karşılıklı arkadaşlık edilenler", "orta", ""],
+      [65, "مُعَاشَرَات", "muʿāşarāt", "biriyle karşılıklı arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُعَاشَر", "muʿāşar", "arkadaşlık etişme (yeri/zamanı)", "orta", ""]
+      [66, "مُعَاشَر", "muʿāşar", "biriyle karşılıklı arkadaşlık etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِعْشَار", "ʾiʿşār", "arkadaşlık etme", "orta", ""]
+      [67, "إِعْشَار", "ʾiʿşār", "arkadaşlık ettirme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِعْشَارَة", "ʾiʿşāra", "bir kere arkadaşlık etme", "orta", ""]
+      [68, "إِعْشَارَة", "ʾiʿşāra", "bir kere arkadaşlık ettirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُعْشِر", "muʿşir", "arkadaşlık eden", "orta", ""],
-      [70, "مُعْشِرَة", "muʿşira", "arkadaşlık eden (dişi)", "orta", ""],
-      [71, "مُعْشِرَان", "muʿşirān", "iki arkadaşlık eden", "orta", ""],
-      [72, "مُعْشِرَتَان", "muʿşiratān", "iki arkadaşlık eden (dişi)", "orta", ""],
-      [73, "مُعْشِرُون", "muʿşirūn", "arkadaşlık edenler", "orta", ""],
-      [74, "مُعْشِرِين", "muʿşirīn", "arkadaşlık edenler", "orta", ""],
-      [75, "مُعْشِرَات", "muʿşirāt", "arkadaşlık edenler (dişi)", "orta", ""]
+      [69, "مُعْشِر", "muʿşir", "arkadaşlık ettiren", "orta", ""],
+      [70, "مُعْشِرَة", "muʿşira", "arkadaşlık ettiren (müennes)", "orta", ""],
+      [71, "مُعْشِرَان", "muʿşirān", "arkadaşlık ettiren (iki)", "orta", ""],
+      [72, "مُعْشِرَتَان", "muʿşiratān", "arkadaşlık ettiren (iki, müennes)", "orta", ""],
+      [73, "مُعْشِرُون", "muʿşirūn", "arkadaşlık ettirenler", "orta", ""],
+      [74, "مُعْشِرِين", "muʿşirīn", "arkadaşlık ettirenler", "orta", ""],
+      [75, "مُعْشِرَات", "muʿşirāt", "arkadaşlık ettirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُعْشَر", "muʿşar", "arkadaşlık edilmiş", "orta", ""],
-      [77, "مُعْشَرَة", "muʿşara", "arkadaşlık edilmiş (dişi)", "orta", ""],
-      [78, "مُعْشَرَان", "muʿşarān", "iki arkadaşlık edilmiş", "orta", ""],
-      [79, "مُعْشَرَتَان", "muʿşaratān", "iki arkadaşlık edilmiş (dişi)", "orta", ""],
-      [80, "مُعْشَرُون", "muʿşarūn", "arkadaşlık edilmişler", "orta", ""],
-      [81, "مُعْشَرِين", "muʿşarīn", "arkadaşlık edilmişler", "orta", ""],
-      [82, "مُعْشَرَات", "muʿşarāt", "arkadaşlık edilmişler (dişi)", "orta", ""]
+      [76, "مُعْشَر", "muʿşar", "arkadaşlık ettirilen", "orta", ""],
+      [77, "مُعْشَرَة", "muʿşara", "arkadaşlık ettirilen (müennes)", "orta", ""],
+      [78, "مُعْشَرَان", "muʿşarān", "arkadaşlık ettirilen (iki)", "orta", ""],
+      [79, "مُعْشَرَتَان", "muʿşaratān", "arkadaşlık ettirilen (iki, müennes)", "orta", ""],
+      [80, "مُعْشَرُون", "muʿşarūn", "arkadaşlık ettirilenler", "orta", ""],
+      [81, "مُعْشَرِين", "muʿşarīn", "arkadaşlık ettirilenler", "orta", ""],
+      [82, "مُعْشَرَات", "muʿşarāt", "arkadaşlık ettirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُعْشَر", "muʿşar", "arkadaşlık etme (yeri/zamanı)", "orta", ""]
+      [83, "مُعْشَر", "muʿşar", "arkadaşlık ettirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَعَشُّر", "taʿaşşur", "arkadaşlık edinme", "orta", ""]
+      [84, "تَعَشُّر", "taʿaşşur", "kendini zorlayarak arkadaşlık etme", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَعَشُّرَة", "taʿaşşura", "bir kere arkadaşlık edinme", "orta", ""]
+      [85, "تَعَشُّرَة", "taʿaşşura", "bir kere kendini zorlayarak arkadaşlık etme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَعَشِّر", "mutaʿaşşir", "arkadaşlık edinen", "orta", ""],
-      [87, "مُتَعَشِّرَة", "mutaʿaşşira", "arkadaşlık edinen (dişi)", "orta", ""],
-      [88, "مُتَعَشِّرَان", "mutaʿaşşirān", "iki arkadaşlık edinen", "orta", ""],
-      [89, "مُتَعَشِّرَتَان", "mutaʿaşşiratān", "iki arkadaşlık edinen (dişi)", "orta", ""],
-      [90, "مُتَعَشِّرُون", "mutaʿaşşirūn", "arkadaşlık edinenler", "orta", ""],
-      [91, "مُتَعَشِّرِين", "mutaʿaşşirīn", "arkadaşlık edinenler", "orta", ""],
-      [92, "مُتَعَشِّرَات", "mutaʿaşşirāt", "arkadaşlık edinenler (dişi)", "orta", ""]
+      [86, "مُتَعَشِّر", "mutaʿaşşir", "kendini zorlayarak arkadaşlık eden", "orta", ""],
+      [87, "مُتَعَشِّرَة", "mutaʿaşşira", "kendini zorlayarak arkadaşlık eden (müennes)", "orta", ""],
+      [88, "مُتَعَشِّرَان", "mutaʿaşşirān", "kendini zorlayarak arkadaşlık eden (iki)", "orta", ""],
+      [89, "مُتَعَشِّرَتَان", "mutaʿaşşiratān", "kendini zorlayarak arkadaşlık eden (iki, müennes)", "orta", ""],
+      [90, "مُتَعَشِّرُون", "mutaʿaşşirūn", "kendini zorlayarak arkadaşlık edenler", "orta", ""],
+      [91, "مُتَعَشِّرِين", "mutaʿaşşirīn", "kendini zorlayarak arkadaşlık edenler", "orta", ""],
+      [92, "مُتَعَشِّرَات", "mutaʿaşşirāt", "kendini zorlayarak arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَعَشَّر", "mutaʿaşşar", "arkadaşlık edinmiş", "orta", ""],
-      [94, "مُتَعَشَّرَة", "mutaʿaşşara", "arkadaşlık edinmiş (dişi)", "orta", ""],
-      [95, "مُتَعَشَّرَان", "mutaʿaşşarān", "iki arkadaşlık edinmiş", "orta", ""],
-      [96, "مُتَعَشَّرَتَان", "mutaʿaşşaratān", "iki arkadaşlık edinmiş (dişi)", "orta", ""],
-      [97, "مُتَعَشَّرُون", "mutaʿaşşarūn", "arkadaşlık edinmişler", "orta", ""],
-      [98, "مُتَعَشَّرِين", "mutaʿaşşarīn", "arkadaşlık edinmişler", "orta", ""],
-      [99, "مُتَعَشَّرَات", "mutaʿaşşarāt", "arkadaşlık edinmişler (dişi)", "orta", ""]
+      [93, "مُتَعَشَّر", "mutaʿaşşar", "kendini zorlayarak arkadaşlık edilen", "orta", ""],
+      [94, "مُتَعَشَّرَة", "mutaʿaşşara", "kendini zorlayarak arkadaşlık edilen (müennes)", "orta", ""],
+      [95, "مُتَعَشَّرَان", "mutaʿaşşarān", "kendini zorlayarak arkadaşlık edilen (iki)", "orta", ""],
+      [96, "مُتَعَشَّرَتَان", "mutaʿaşşaratān", "kendini zorlayarak arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [97, "مُتَعَشَّرُون", "mutaʿaşşarūn", "kendini zorlayarak arkadaşlık edilenler", "orta", ""],
+      [98, "مُتَعَشَّرِين", "mutaʿaşşarīn", "kendini zorlayarak arkadaşlık edilenler", "orta", ""],
+      [99, "مُتَعَشَّرَات", "mutaʿaşşarāt", "kendini zorlayarak arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَعَشَّر", "mutaʿaşşar", "arkadaşlık edinme (yeri/zamanı)", "orta", ""]
+      [100, "مُتَعَشَّر", "mutaʿaşşar", "kendini zorlayarak arkadaşlık etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَعَاشُر", "taʿāşur", "arkadaşlık etişme", "orta", ""]
+      [101, "تَعَاشُر", "taʿāşur", "birbirine arkadaşlık etme", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَعَاشُرَة", "taʿāşura", "bir kere arkadaşlık etişme", "orta", ""]
+      [102, "تَعَاشُرَة", "taʿāşura", "bir kere birbirine arkadaşlık etme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَعَاشِر", "mutaʿāşir", "arkadaşlık etişen", "orta", ""],
-      [104, "مُتَعَاشِرَة", "mutaʿāşira", "arkadaşlık etişen (dişi)", "orta", ""],
-      [105, "مُتَعَاشِرَان", "mutaʿāşirān", "iki arkadaşlık etişen", "orta", ""],
-      [106, "مُتَعَاشِرَتَان", "mutaʿāşiratān", "iki arkadaşlık etişen (dişi)", "orta", ""],
-      [107, "مُتَعَاشِرُون", "mutaʿāşirūn", "arkadaşlık etişenler", "orta", ""],
-      [108, "مُتَعَاشِرِين", "mutaʿāşirīn", "arkadaşlık etişenler", "orta", ""],
-      [109, "مُتَعَاشِرَات", "mutaʿāşirāt", "arkadaşlık etişenler (dişi)", "orta", ""]
+      [103, "مُتَعَاشِر", "mutaʿāşir", "birbirine arkadaşlık eden", "orta", ""],
+      [104, "مُتَعَاشِرَة", "mutaʿāşira", "birbirine arkadaşlık eden (müennes)", "orta", ""],
+      [105, "مُتَعَاشِرَان", "mutaʿāşirān", "birbirine arkadaşlık eden (iki)", "orta", ""],
+      [106, "مُتَعَاشِرَتَان", "mutaʿāşiratān", "birbirine arkadaşlık eden (iki, müennes)", "orta", ""],
+      [107, "مُتَعَاشِرُون", "mutaʿāşirūn", "birbirine arkadaşlık edenler", "orta", ""],
+      [108, "مُتَعَاشِرِين", "mutaʿāşirīn", "birbirine arkadaşlık edenler", "orta", ""],
+      [109, "مُتَعَاشِرَات", "mutaʿāşirāt", "birbirine arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَعَاشَر", "mutaʿāşar", "arkadaşlık etişmiş", "orta", ""],
-      [111, "مُتَعَاشَرَة", "mutaʿāşara", "arkadaşlık etişmiş (dişi)", "orta", ""],
-      [112, "مُتَعَاشَرَان", "mutaʿāşarān", "iki arkadaşlık etişmiş", "orta", ""],
-      [113, "مُتَعَاشَرَتَان", "mutaʿāşaratān", "iki arkadaşlık etişmiş (dişi)", "orta", ""],
-      [114, "مُتَعَاشَرُون", "mutaʿāşarūn", "arkadaşlık etişmişler", "orta", ""],
-      [115, "مُتَعَاشَرِين", "mutaʿāşarīn", "arkadaşlık etişmişler", "orta", ""],
-      [116, "مُتَعَاشَرَات", "mutaʿāşarāt", "arkadaşlık etişmişler (dişi)", "orta", ""]
+      [110, "مُتَعَاشَر", "mutaʿāşar", "birbirine arkadaşlık edilen", "orta", ""],
+      [111, "مُتَعَاشَرَة", "mutaʿāşara", "birbirine arkadaşlık edilen (müennes)", "orta", ""],
+      [112, "مُتَعَاشَرَان", "mutaʿāşarān", "birbirine arkadaşlık edilen (iki)", "orta", ""],
+      [113, "مُتَعَاشَرَتَان", "mutaʿāşaratān", "birbirine arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [114, "مُتَعَاشَرُون", "mutaʿāşarūn", "birbirine arkadaşlık edilenler", "orta", ""],
+      [115, "مُتَعَاشَرِين", "mutaʿāşarīn", "birbirine arkadaşlık edilenler", "orta", ""],
+      [116, "مُتَعَاشَرَات", "mutaʿāşarāt", "birbirine arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَعَاشَر", "mutaʿāşar", "arkadaşlık etişme (yeri/zamanı)", "orta", ""]
+      [117, "مُتَعَاشَر", "mutaʿāşar", "birbirine arkadaşlık etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْعِشَار", "inʿişār", "arkadaşlık edilme", "orta", ""]
@@ -199,102 +213,102 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْعَشِر", "munʿaşir", "arkadaşlık edilen", "orta", ""],
-      [121, "مُنْعَشِرَة", "munʿaşira", "arkadaşlık edilen (dişi)", "orta", ""],
-      [122, "مُنْعَشِرَان", "munʿaşirān", "iki arkadaşlık edilen", "orta", ""],
-      [123, "مُنْعَشِرَتَان", "munʿaşiratān", "iki arkadaşlık edilen (dişi)", "orta", ""],
+      [121, "مُنْعَشِرَة", "munʿaşira", "arkadaşlık edilen (müennes)", "orta", ""],
+      [122, "مُنْعَشِرَان", "munʿaşirān", "arkadaşlık edilen (iki)", "orta", ""],
+      [123, "مُنْعَشِرَتَان", "munʿaşiratān", "arkadaşlık edilen (iki, müennes)", "orta", ""],
       [124, "مُنْعَشِرُون", "munʿaşirūn", "arkadaşlık edilenler", "orta", ""],
       [125, "مُنْعَشِرِين", "munʿaşirīn", "arkadaşlık edilenler", "orta", ""],
-      [126, "مُنْعَشِرَات", "munʿaşirāt", "arkadaşlık edilenler (dişi)", "orta", ""]
+      [126, "مُنْعَشِرَات", "munʿaşirāt", "arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْعَشَر", "munʿaşar", "arkadaşlık edilmiş", "orta", ""],
-      [128, "مُنْعَشَرَة", "munʿaşara", "arkadaşlık edilmiş (dişi)", "orta", ""],
-      [129, "مُنْعَشَرَان", "munʿaşarān", "iki arkadaşlık edilmiş", "orta", ""],
-      [130, "مُنْعَشَرَتَان", "munʿaşaratān", "iki arkadaşlık edilmiş (dişi)", "orta", ""],
-      [131, "مُنْعَشَرُون", "munʿaşarūn", "arkadaşlık edilmişler", "orta", ""],
-      [132, "مُنْعَشَرِين", "munʿaşarīn", "arkadaşlık edilmişler", "orta", ""],
-      [133, "مُنْعَشَرَات", "munʿaşarāt", "arkadaşlık edilmişler (dişi)", "orta", ""]
+      [127, "مُنْعَشَر", "munʿaşar", "arkadaşlık edilen", "orta", ""],
+      [128, "مُنْعَشَرَة", "munʿaşara", "arkadaşlık edilen (müennes)", "orta", ""],
+      [129, "مُنْعَشَرَان", "munʿaşarān", "arkadaşlık edilen (iki)", "orta", ""],
+      [130, "مُنْعَشَرَتَان", "munʿaşaratān", "arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [131, "مُنْعَشَرُون", "munʿaşarūn", "arkadaşlık edilenler", "orta", ""],
+      [132, "مُنْعَشَرِين", "munʿaşarīn", "arkadaşlık edilenler", "orta", ""],
+      [133, "مُنْعَشَرَات", "munʿaşarāt", "arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْعَشَر", "munʿaşar", "arkadaşlık edilme (yeri/zamanı)", "orta", ""]
+      [134, "مُنْعَشَر", "munʿaşar", "arkadaşlık edilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِعْتِشَار", "iʿtişār", "arkadaşlık edinme", "orta", ""]
+      [135, "اِعْتِشَار", "iʿtişār", "kendisi için arkadaşlık etme", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِعْتِشَارَة", "iʿtişāra", "bir kere arkadaşlık edinme", "orta", ""]
+      [137, "اِعْتِشَارَة", "iʿtişāra", "bir kere kendisi için arkadaşlık etme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُعْتَشِر", "muʿtaşir", "arkadaşlık edinen", "orta", ""],
-      [139, "مُعْتَشِرَة", "muʿtaşira", "arkadaşlık edinen (dişi)", "orta", ""],
-      [140, "مُعْتَشِرَان", "muʿtaşirān", "iki arkadaşlık edinen", "orta", ""],
-      [141, "مُعْتَشِرَتَان", "muʿtaşiratān", "iki arkadaşlık edinen (dişi)", "orta", ""],
-      [142, "مُعْتَشِرُون", "muʿtaşirūn", "arkadaşlık edinenler", "orta", ""],
-      [143, "مُعْتَشِرِين", "muʿtaşirīn", "arkadaşlık edinenler", "orta", ""],
-      [144, "مُعْتَشِرَات", "muʿtaşirāt", "arkadaşlık edinenler (dişi)", "orta", ""]
+      [138, "مُعْتَشِر", "muʿtaşir", "kendisi için arkadaşlık eden", "orta", ""],
+      [139, "مُعْتَشِرَة", "muʿtaşira", "kendisi için arkadaşlık eden (müennes)", "orta", ""],
+      [140, "مُعْتَشِرَان", "muʿtaşirān", "kendisi için arkadaşlık eden (iki)", "orta", ""],
+      [141, "مُعْتَشِرَتَان", "muʿtaşiratān", "kendisi için arkadaşlık eden (iki, müennes)", "orta", ""],
+      [142, "مُعْتَشِرُون", "muʿtaşirūn", "kendisi için arkadaşlık edenler", "orta", ""],
+      [143, "مُعْتَشِرِين", "muʿtaşirīn", "kendisi için arkadaşlık edenler", "orta", ""],
+      [144, "مُعْتَشِرَات", "muʿtaşirāt", "kendisi için arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُعْتَشَر", "muʿtaşar", "arkadaşlık edinmiş", "orta", ""],
-      [146, "مُعْتَشَرَة", "muʿtaşara", "arkadaşlık edinmiş (dişi)", "orta", ""],
-      [147, "مُعْتَشَرَان", "muʿtaşarān", "iki arkadaşlık edinmiş", "orta", ""],
-      [148, "مُعْتَشَرَتَان", "muʿtaşaratān", "iki arkadaşlık edinmiş (dişi)", "orta", ""],
-      [149, "مُعْتَشَرُون", "muʿtaşarūn", "arkadaşlık edinmişler", "orta", ""],
-      [150, "مُعْتَشَرِين", "muʿtaşarīn", "arkadaşlık edinmişler", "orta", ""],
-      [151, "مُعْتَشَرَات", "muʿtaşarāt", "arkadaşlık edinmişler (dişi)", "orta", ""]
+      [145, "مُعْتَشَر", "muʿtaşar", "kendisi için arkadaşlık edilen", "orta", ""],
+      [146, "مُعْتَشَرَة", "muʿtaşara", "kendisi için arkadaşlık edilen (müennes)", "orta", ""],
+      [147, "مُعْتَشَرَان", "muʿtaşarān", "kendisi için arkadaşlık edilen (iki)", "orta", ""],
+      [148, "مُعْتَشَرَتَان", "muʿtaşaratān", "kendisi için arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [149, "مُعْتَشَرُون", "muʿtaşarūn", "kendisi için arkadaşlık edilenler", "orta", ""],
+      [150, "مُعْتَشَرِين", "muʿtaşarīn", "kendisi için arkadaşlık edilenler", "orta", ""],
+      [151, "مُعْتَشَرَات", "muʿtaşarāt", "kendisi için arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُعْتَشَر", "muʿtaşar", "arkadaşlık edinme (yeri/zamanı)", "orta", ""]
+      [152, "مُعْتَشَر", "muʿtaşar", "kendisi için arkadaşlık etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِعْشِرَار", "iʿşirār", "arkadaşlık etleşme", "kontrol", ""]
+      [499, "اِعْشِرَار", "iʿşirār", "iyiden iyiye arkadaşlık etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُعْشَرّ", "muʿşarr", "arkadaşlık etleşen", "kontrol", ""],
-      [501, "مُعْشَرَّة", "muʿşarra", "arkadaşlık etleşen (dişi)", "kontrol", ""],
-      [502, "مُعْشَرَّان", "muʿşarrān", "iki arkadaşlık etleşen", "kontrol", ""],
-      [503, "مُعْشَرَّتَان", "muʿşarratān", "iki arkadaşlık etleşen (dişi)", "kontrol", ""],
-      [504, "مُعْشَرُّون", "muʿşarrūn", "arkadaşlık etleşenler", "kontrol", ""],
-      [505, "مُعْشَرِّين", "muʿşarrīn", "arkadaşlık etleşenler", "kontrol", ""],
-      [506, "مُعْشَرَّات", "muʿşarrāt", "arkadaşlık etleşenler (dişi)", "kontrol", ""]
+      [500, "مُعْشَرّ", "muʿşarr", "iyiden iyiye arkadaşlık eden", "kontrol", ""],
+      [501, "مُعْشَرَّة", "muʿşarra", "iyiden iyiye arkadaşlık eden (müennes)", "kontrol", ""],
+      [502, "مُعْشَرَّان", "muʿşarrān", "iyiden iyiye arkadaşlık eden (iki)", "kontrol", ""],
+      [503, "مُعْشَرَّتَان", "muʿşarratān", "iyiden iyiye arkadaşlık eden (iki, müennes)", "kontrol", ""],
+      [504, "مُعْشَرُّون", "muʿşarrūn", "iyiden iyiye arkadaşlık edenler", "kontrol", ""],
+      [505, "مُعْشَرِّين", "muʿşarrīn", "iyiden iyiye arkadaşlık edenler", "kontrol", ""],
+      [506, "مُعْشَرَّات", "muʿşarrāt", "iyiden iyiye arkadaşlık edenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [176, "اِسْتِعْشَار", "istiʿşār", "arkadaşlık etmeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِعْشَارَة", "istiʿşāra", "bir kere arkadaşlık etme", "orta", ""]
+      [177, "اِسْتِعْشَارَة", "istiʿşāra", "bir kere arkadaşlık etmeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَعْشِر", "mustaʿşir", "arkadaşlık etmeyi isteyen", "orta", ""],
-      [179, "مُسْتَعْشِرَة", "mustaʿşira", "arkadaşlık etmeyi isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَعْشِرَان", "mustaʿşirān", "iki arkadaşlık etmeyi isteyen", "orta", ""],
-      [181, "مُسْتَعْشِرَتَان", "mustaʿşiratān", "iki arkadaşlık etmeyi isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَعْشِرَة", "mustaʿşira", "arkadaşlık etmeyi isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَعْشِرَان", "mustaʿşirān", "arkadaşlık etmeyi isteyen (iki)", "orta", ""],
+      [181, "مُسْتَعْشِرَتَان", "mustaʿşiratān", "arkadaşlık etmeyi isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَعْشِرُون", "mustaʿşirūn", "arkadaşlık etmeyi isteyenler", "orta", ""],
       [183, "مُسْتَعْشِرِين", "mustaʿşirīn", "arkadaşlık etmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَعْشِرَات", "mustaʿşirāt", "arkadaşlık etmeyi isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَعْشِرَات", "mustaʿşirāt", "arkadaşlık etmeyi isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَعْشَر", "mustaʿşar", "arkadaşlık etmeyi istenen", "orta", ""],
-      [186, "مُسْتَعْشَرَة", "mustaʿşara", "arkadaşlık etmeyi istenen (dişi)", "orta", ""],
-      [187, "مُسْتَعْشَرَان", "mustaʿşarān", "iki arkadaşlık etmeyi istenen", "orta", ""],
-      [188, "مُسْتَعْشَرَتَان", "mustaʿşaratān", "iki arkadaşlık etmeyi istenen (dişi)", "orta", ""],
-      [189, "مُسْتَعْشَرُون", "mustaʿşarūn", "arkadaşlık etmeyi istenenler", "orta", ""],
-      [190, "مُسْتَعْشَرِين", "mustaʿşarīn", "arkadaşlık etmeyi istenenler", "orta", ""],
-      [191, "مُسْتَعْشَرَات", "mustaʿşarāt", "arkadaşlık etmeyi istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَعْشَر", "mustaʿşar", "arkadaşlık etmesi istenen", "orta", ""],
+      [186, "مُسْتَعْشَرَة", "mustaʿşara", "arkadaşlık etmesi istenen (müennes)", "orta", ""],
+      [187, "مُسْتَعْشَرَان", "mustaʿşarān", "arkadaşlık etmesi istenen (iki)", "orta", ""],
+      [188, "مُسْتَعْشَرَتَان", "mustaʿşaratān", "arkadaşlık etmesi istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَعْشَرُون", "mustaʿşarūn", "arkadaşlık etmesi istenenler", "orta", ""],
+      [190, "مُسْتَعْشَرِين", "mustaʿşarīn", "arkadaşlık etmesi istenenler", "orta", ""],
+      [191, "مُسْتَعْشَرَات", "mustaʿşarāt", "arkadaşlık etmesi istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَعْشَر", "mustaʿşar", "arkadaşlık etme (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَعْشَر", "mustaʿşar", "arkadaşlık etmeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِعْشِيرَار", "iʿşīrār", "iyice arkadaşlık etleşme", "kontrol", ""]
+      [507, "اِعْشِيرَار", "iʿşīrār", "büsbütün arkadaşlık etme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُعْشَارّ", "muʿşārr", "iyice arkadaşlık etleşen", "kontrol", ""],
-      [509, "مُعْشَارَّة", "muʿşārra", "iyice arkadaşlık etleşen (dişi)", "kontrol", ""],
-      [510, "مُعْشَارَّان", "muʿşārrān", "iki iyice arkadaşlık etleşen", "kontrol", ""],
-      [511, "مُعْشَارَّتَان", "muʿşārratān", "iki iyice arkadaşlık etleşen (dişi)", "kontrol", ""],
-      [512, "مُعْشَارُّون", "muʿşārrūn", "iyice arkadaşlık etleşenler", "kontrol", ""],
-      [513, "مُعْشَارِّين", "muʿşārrīn", "iyice arkadaşlık etleşenler", "kontrol", ""],
-      [514, "مُعْشَارَّات", "muʿşārrāt", "iyice arkadaşlık etleşenler (dişi)", "kontrol", ""]
+      [508, "مُعْشَارّ", "muʿşārr", "büsbütün arkadaşlık eden", "kontrol", ""],
+      [509, "مُعْشَارَّة", "muʿşārra", "büsbütün arkadaşlık eden (müennes)", "kontrol", ""],
+      [510, "مُعْشَارَّان", "muʿşārrān", "büsbütün arkadaşlık eden (iki)", "kontrol", ""],
+      [511, "مُعْشَارَّتَان", "muʿşārratān", "büsbütün arkadaşlık eden (iki, müennes)", "kontrol", ""],
+      [512, "مُعْشَارُّون", "muʿşārrūn", "büsbütün arkadaşlık edenler", "kontrol", ""],
+      [513, "مُعْشَارِّين", "muʿşārrīn", "büsbütün arkadaşlık edenler", "kontrol", ""],
+      [514, "مُعْشَارَّات", "muʿşārrāt", "büsbütün arkadaşlık edenler (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِعْشِوْشَار", "iʿşiwşār", "aşırı arkadaşlık etme", "orta", ""]
@@ -304,72 +318,72 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "عَاشِر", "ʿāşir", "arkadaşlık eden", "orta", ""],
-      [214, "عَاشِرَة", "ʿāşira", "arkadaşlık eden (dişi)", "orta", ""],
-      [215, "عَاشِرَان", "ʿāşirān", "iki arkadaşlık eden", "orta", ""],
-      [216, "عَاشِرَتَان", "ʿāşiratān", "iki arkadaşlık eden (dişi)", "orta", ""],
+      [214, "عَاشِرَة", "ʿāşira", "arkadaşlık eden (müennes)", "orta", ""],
+      [215, "عَاشِرَان", "ʿāşirān", "arkadaşlık eden (iki)", "orta", ""],
+      [216, "عَاشِرَتَان", "ʿāşiratān", "arkadaşlık eden (iki, müennes)", "orta", ""],
       [217, "عَاشِرُون", "ʿāşirūn", "arkadaşlık edenler", "orta", ""],
       [218, "عَاشِرِين", "ʿāşirīn", "arkadaşlık edenler", "orta", ""],
-      [219, "عَاشِرَات", "ʿāşirāt", "arkadaşlık edenler (dişi)", "orta", ""]
+      [219, "عَاشِرَات", "ʿāşirāt", "arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَعْشُور", "maʿşūr", "arkadaşlık edilmiş", "orta", ""],
-      [221, "مَعْشُورَة", "maʿşūra", "arkadaşlık edilmiş (dişi)", "orta", ""],
-      [222, "مَعْشُورَان", "maʿşūrān", "iki arkadaşlık edilmiş", "orta", ""],
-      [223, "مَعْشُورَتَان", "maʿşūratān", "iki arkadaşlık edilmiş (dişi)", "orta", ""],
-      [224, "مَعْشُورُون", "maʿşūrūn", "arkadaşlık edilmişler", "orta", ""],
-      [225, "مَعْشُورِين", "maʿşūrīn", "arkadaşlık edilmişler", "orta", ""],
-      [226, "مَعْشُورَات", "maʿşūrāt", "arkadaşlık edilmişler (dişi)", "orta", ""]
+      [220, "مَعْشُور", "maʿşūr", "arkadaşlık edilen", "orta", ""],
+      [221, "مَعْشُورَة", "maʿşūra", "arkadaşlık edilen (müennes)", "orta", ""],
+      [222, "مَعْشُورَان", "maʿşūrān", "arkadaşlık edilen (iki)", "orta", ""],
+      [223, "مَعْشُورَتَان", "maʿşūratān", "arkadaşlık edilen (iki, müennes)", "orta", ""],
+      [224, "مَعْشُورُون", "maʿşūrūn", "arkadaşlık edilenler", "orta", ""],
+      [225, "مَعْشُورِين", "maʿşūrīn", "arkadaşlık edilenler", "orta", ""],
+      [226, "مَعْشُورَات", "maʿşūrāt", "arkadaşlık edilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَعْشَر", "maʿşar", "arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [228, "مَعْشَرَان", "maʿşarān", "iki arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [229, "مَعْشِر", "maʿşir", "arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [230, "مَعْشِرَان", "maʿşirān", "iki arkadaşlık etme (yeri/zamanı)", "orta", ""],
+      [227, "مَعْشَر", "maʿşar", "topluluk", "kuran", "Kur'ân"],
+      [228, "مَعْشَرَان", "maʿşarān", "arkadaşlık etme yeri, vakti (iki)", "orta", ""],
+      [229, "مَعْشِر", "maʿşir", "arkadaşlık etme yeri, vakti", "orta", ""],
+      [230, "مَعْشِرَان", "maʿşirān", "arkadaşlık etme yeri, vakti (iki)", "orta", ""],
       [
         231,
         "مَعْشَرَة",
         "maʿşara",
-        "arkadaşlık etme (yeri/zamanı)",
+        "arkadaşlık etmenin bol olduğu yer",
         "orta",
         "Vikisözlük: a company or collective body of people"
       ],
-      [232, "مَعْشَرَتَان", "maʿşaratān", "iki arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [233, "مَعْشِرَة", "maʿşira", "arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [234, "مَعْشِرَتَان", "maʿşiratān", "iki arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [247, "مَعْشُرَة", "maʿşura", "arkadaşlık etme (yeri/zamanı)", "orta", ""],
-      [248, "مَعْشُرَتَان", "maʿşuratān", "iki arkadaşlık etme (yeri/zamanı)", "orta", ""]
+      [232, "مَعْشَرَتَان", "maʿşaratān", "arkadaşlık etmenin bol olduğu yer (iki)", "orta", ""],
+      [233, "مَعْشِرَة", "maʿşira", "arkadaşlık etmenin bol olduğu yer", "orta", ""],
+      [234, "مَعْشِرَتَان", "maʿşiratān", "arkadaşlık etmenin bol olduğu yer (iki)", "orta", ""],
+      [247, "مَعْشُرَة", "maʿşura", "arkadaşlık etme yeri, vakti", "orta", ""],
+      [248, "مَعْشُرَتَان", "maʿşuratān", "arkadaşlık etme yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِعْشَر", "miʿşar", "arkadaşlık etmeye yarayan araç", "orta", ""],
-      [236, "مِعْشَرَان", "miʿşarān", "iki arkadaşlık etmeye yarayan araç", "orta", ""],
-      [237, "مِعْشَار", "miʿşār", "arkadaşlık etmeye yarayan araç", "orta", ""],
-      [238, "مِعْشَارَان", "miʿşārān", "iki arkadaşlık etmeye yarayan araç", "orta", ""],
-      [239, "مِعْشَرَة", "miʿşara", "arkadaşlık etmeye yarayan araç", "orta", ""],
-      [240, "مِعْشَرَتَان", "miʿşaratān", "iki arkadaşlık etmeye yarayan araç", "orta", ""]
+      [235, "مِعْشَر", "miʿşar", "arkadaşlık etme âleti", "orta", ""],
+      [236, "مِعْشَرَان", "miʿşarān", "arkadaşlık etme âleti (iki)", "orta", ""],
+      [237, "مِعْشَار", "miʿşār", "arkadaşlık etme âleti", "orta", ""],
+      [238, "مِعْشَارَان", "miʿşārān", "arkadaşlık etme âleti (iki)", "orta", ""],
+      [239, "مِعْشَرَة", "miʿşara", "arkadaşlık etme âleti", "orta", ""],
+      [240, "مِعْشَرَتَان", "miʿşaratān", "arkadaşlık etme âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَعْشَر", "ʾaʿşar", "daha çok arkadaşlık eden", "orta", ""],
-      [242, "أَعْشَرَان", "ʾaʿşarān", "iki daha çok arkadaşlık eden", "orta", ""]
+      [242, "أَعْشَرَان", "ʾaʿşarān", "daha çok arkadaşlık eden (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "عُشْرَى", "ʿuşrā", "daha çok arkadaşlık eden", "orta", ""],
-      [244, "عُشْرَيَان", "ʿuşrayān", "iki daha çok arkadaşlık eden", "orta", ""],
+      [244, "عُشْرَيَان", "ʿuşrayān", "daha çok arkadaşlık eden (iki)", "orta", ""],
       [245, "عَشْرَاء", "ʿaşrāʾ", "daha çok arkadaşlık eden", "orta", ""],
-      [246, "عَشْرَاآن", "ʿaşrāʾān", "iki daha çok arkadaşlık eden", "orta", ""]
+      [246, "عَشْرَاآن", "ʿaşrāʾān", "daha çok arkadaşlık eden (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "عُشَيْر", "ʿuşayr", "küçük arkadaşlık etme", "orta", ""],
-      [250, "عُشَيْرَان", "ʿuşayrān", "iki küçük arkadaşlık etme", "orta", ""],
-      [251, "عُشَيْرَة", "ʿuşayra", "küçük arkadaşlık etme", "orta", ""],
-      [252, "عُشَيْرَتَان", "ʿuşayratān", "iki küçük arkadaşlık etme", "orta", ""]
+      [249, "عُشَيْر", "ʿuşayr", "azıcık arkadaşlık etme", "orta", ""],
+      [250, "عُشَيْرَان", "ʿuşayrān", "azıcık arkadaşlık etme (iki)", "orta", ""],
+      [251, "عُشَيْرَة", "ʿuşayra", "azıcık arkadaşlık etme", "orta", ""],
+      [252, "عُشَيْرَتَان", "ʿuşayratān", "azıcık arkadaşlık etme (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَعْشَر", "maʿşar", "arkadaşlık etme", "orta", ""],
-      [254, "مَعْشَرَان", "maʿşarān", "iki arkadaşlık etme", "orta", ""]
+      [253, "مَعْشَر", "maʿşar", "topluluk", "kuran", "Kur'ân"],
+      [254, "مَعْشَرَان", "maʿşarān", "arkadaşlık etme (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "عَشْرَة", "ʿaşra", "bir kere arkadaşlık etme", "orta", ""],
-      [256, "عَشْرَتَان", "ʿaşratān", "iki bir kere arkadaşlık etme", "orta", ""]
+      [255, "عَشْرَة", "ʿaşra", "on", "kuran", "Kur'ân"],
+      [256, "عَشْرَتَان", "ʿaşratān", "bir kere arkadaşlık etme (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [
@@ -380,169 +394,169 @@
         "orta",
         "Vikisözlük: companionship, friendship, partnership"
       ],
-      [258, "عِشْرَتَان", "ʿişratān", "iki arkadaşlık etme tarzı", "orta", ""]
+      [258, "عِشْرَتَان", "ʿişratān", "arkadaşlık etme tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "عَشِير", "ʿaşīr", "sürekli arkadaşlık eden", "orta", ""],
-      [260, "عَشِيرَة", "ʿaşīra", "sürekli arkadaşlık eden (dişi)", "orta", "Vikisözlük: clan"],
-      [261, "عَشِيرَان", "ʿaşīrān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [262, "عَشِيرَتَان", "ʿaşīratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [263, "عَشِيرُون", "ʿaşīrūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [264, "عَشِيرِين", "ʿaşīrīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [265, "عَشِيرَات", "ʿaşīrāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [266, "عَشُور", "ʿaşūr", "sürekli arkadaşlık eden", "orta", ""],
-      [267, "عَشُورَة", "ʿaşūra", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [268, "عَشُورَان", "ʿaşūrān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [269, "عَشُورَتَان", "ʿaşūratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [270, "عَشُورُون", "ʿaşūrūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [271, "عَشُورِين", "ʿaşūrīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [272, "عَشُورَات", "ʿaşūrāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [273, "عَشِر", "ʿaşir", "sürekli arkadaşlık eden", "orta", ""],
-      [274, "عَشِرَة", "ʿaşira", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [275, "عَشِرَان", "ʿaşirān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [276, "عَشِرَتَان", "ʿaşiratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [277, "عَشِرُون", "ʿaşirūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [278, "عَشِرِين", "ʿaşirīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [279, "عَشِرَات", "ʿaşirāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [280, "عَشُر", "ʿaşur", "sürekli arkadaşlık eden", "orta", ""],
-      [281, "عَشُرَة", "ʿaşura", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [282, "عَشُرَان", "ʿaşurān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [283, "عَشُرَتَان", "ʿaşuratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [284, "عَشُرُون", "ʿaşurūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [285, "عَشُرِين", "ʿaşurīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [286, "عَشُرَات", "ʿaşurāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [287, "عَشَر", "ʿaşar", "sürekli arkadaşlık eden", "orta", ""],
-      [288, "عَشَرَة", "ʿaşara", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [289, "عَشَرَان", "ʿaşarān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [290, "عَشَرَتَان", "ʿaşaratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [291, "عَشَرُون", "ʿaşarūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [292, "عَشَرِين", "ʿaşarīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [293, "عَشَرَات", "ʿaşarāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [294, "عَشْر", "ʿaşr", "sürekli arkadaşlık eden", "orta", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
-      [295, "عَشْرَة", "ʿaşra", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [296, "عَشْرَان", "ʿaşrān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [297, "عَشْرَتَان", "ʿaşratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [298, "عَشْرُون", "ʿaşrūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [299, "عَشْرِين", "ʿaşrīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [300, "عَشْرَات", "ʿaşrāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [301, "عُشُر", "ʿuşur", "sürekli arkadaşlık eden", "orta", "Vikisözlük: one tenth"],
-      [302, "عُشُرَة", "ʿuşura", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [303, "عُشُرَان", "ʿuşurān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [304, "عُشُرَتَان", "ʿuşuratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [305, "عُشُرُون", "ʿuşurūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [306, "عُشُرِين", "ʿuşurīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [307, "عُشُرَات", "ʿuşurāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [308, "عَشْرَان", "ʿaşrān", "sürekli arkadaşlık eden", "orta", ""],
-      [309, "عَشْرَانَة", "ʿaşrāna", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [310, "عَشْرَانَان", "ʿaşrānān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [311, "عَشْرَانَتَان", "ʿaşrānatān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [312, "عَشْرَانُون", "ʿaşrānūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [313, "عَشْرَانِين", "ʿaşrānīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [314, "عَشْرَانَات", "ʿaşrānāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [315, "عُشَار", "ʿuşār", "sürekli arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
-      [316, "عُشَارَة", "ʿuşāra", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [317, "عُشَارَان", "ʿuşārān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [318, "عُشَارَتَان", "ʿuşāratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [319, "عُشَارُون", "ʿuşārūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [320, "عُشَارِين", "ʿuşārīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [321, "عُشَارَات", "ʿuşārāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""],
-      [322, "عَشَار", "ʿaşār", "sürekli arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
-      [323, "عَشَارَة", "ʿaşāra", "sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [324, "عَشَارَان", "ʿaşārān", "iki sürekli arkadaşlık eden", "orta", ""],
-      [325, "عَشَارَتَان", "ʿaşāratān", "iki sürekli arkadaşlık eden (dişi)", "orta", ""],
-      [326, "عَشَارُون", "ʿaşārūn", "sürekli arkadaşlık edenler", "orta", ""],
-      [327, "عَشَارِين", "ʿaşārīn", "sürekli arkadaşlık edenler", "orta", ""],
-      [328, "عَشَارَات", "ʿaşārāt", "sürekli arkadaşlık edenler (dişi)", "orta", ""]
+      [259, "عَشِير", "ʿaşīr", "eş, yoldaş", "kuran", "Kur'ân"],
+      [260, "عَشِيرَة", "ʿaşīra", "her daim arkadaşlık eden (müennes)", "orta", "Vikisözlük: clan"],
+      [261, "عَشِيرَان", "ʿaşīrān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [262, "عَشِيرَتَان", "ʿaşīratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [263, "عَشِيرُون", "ʿaşīrūn", "her daim arkadaşlık edenler", "orta", ""],
+      [264, "عَشِيرِين", "ʿaşīrīn", "her daim arkadaşlık edenler", "orta", ""],
+      [265, "عَشِيرَات", "ʿaşīrāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [266, "عَشُور", "ʿaşūr", "her daim arkadaşlık eden", "orta", ""],
+      [267, "عَشُورَة", "ʿaşūra", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [268, "عَشُورَان", "ʿaşūrān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [269, "عَشُورَتَان", "ʿaşūratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [270, "عَشُورُون", "ʿaşūrūn", "her daim arkadaşlık edenler", "orta", ""],
+      [271, "عَشُورِين", "ʿaşūrīn", "her daim arkadaşlık edenler", "orta", ""],
+      [272, "عَشُورَات", "ʿaşūrāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [273, "عَشِر", "ʿaşir", "her daim arkadaşlık eden", "orta", ""],
+      [274, "عَشِرَة", "ʿaşira", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [275, "عَشِرَان", "ʿaşirān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [276, "عَشِرَتَان", "ʿaşiratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [277, "عَشِرُون", "ʿaşirūn", "her daim arkadaşlık edenler", "orta", ""],
+      [278, "عَشِرِين", "ʿaşirīn", "her daim arkadaşlık edenler", "orta", ""],
+      [279, "عَشِرَات", "ʿaşirāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [280, "عَشُر", "ʿaşur", "her daim arkadaşlık eden", "orta", ""],
+      [281, "عَشُرَة", "ʿaşura", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [282, "عَشُرَان", "ʿaşurān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [283, "عَشُرَتَان", "ʿaşuratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [284, "عَشُرُون", "ʿaşurūn", "her daim arkadaşlık edenler", "orta", ""],
+      [285, "عَشُرِين", "ʿaşurīn", "her daim arkadaşlık edenler", "orta", ""],
+      [286, "عَشُرَات", "ʿaşurāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [287, "عَشَر", "ʿaşar", "her daim arkadaşlık eden", "orta", ""],
+      [288, "عَشَرَة", "ʿaşara", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [289, "عَشَرَان", "ʿaşarān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [290, "عَشَرَتَان", "ʿaşaratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [291, "عَشَرُون", "ʿaşarūn", "her daim arkadaşlık edenler", "orta", ""],
+      [292, "عَشَرِين", "ʿaşarīn", "her daim arkadaşlık edenler", "orta", ""],
+      [293, "عَشَرَات", "ʿaşarāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [294, "عَشْر", "ʿaşr", "on", "kuran", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
+      [295, "عَشْرَة", "ʿaşra", "on", "kuran", "Kur'ân"],
+      [296, "عَشْرَان", "ʿaşrān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [297, "عَشْرَتَان", "ʿaşratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [298, "عَشْرُون", "ʿaşrūn", "her daim arkadaşlık edenler", "orta", ""],
+      [299, "عَشْرِين", "ʿaşrīn", "her daim arkadaşlık edenler", "orta", ""],
+      [300, "عَشْرَات", "ʿaşrāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [301, "عُشُر", "ʿuşur", "her daim arkadaşlık eden", "orta", "Vikisözlük: one tenth"],
+      [302, "عُشُرَة", "ʿuşura", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [303, "عُشُرَان", "ʿuşurān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [304, "عُشُرَتَان", "ʿuşuratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [305, "عُشُرُون", "ʿuşurūn", "her daim arkadaşlık edenler", "orta", ""],
+      [306, "عُشُرِين", "ʿuşurīn", "her daim arkadaşlık edenler", "orta", ""],
+      [307, "عُشُرَات", "ʿuşurāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [308, "عَشْرَان", "ʿaşrān", "her daim arkadaşlık eden", "orta", ""],
+      [309, "عَشْرَانَة", "ʿaşrāna", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [310, "عَشْرَانَان", "ʿaşrānān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [311, "عَشْرَانَتَان", "ʿaşrānatān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [312, "عَشْرَانُون", "ʿaşrānūn", "her daim arkadaşlık edenler", "orta", ""],
+      [313, "عَشْرَانِين", "ʿaşrānīn", "her daim arkadaşlık edenler", "orta", ""],
+      [314, "عَشْرَانَات", "ʿaşrānāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [315, "عُشَار", "ʿuşār", "her daim arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
+      [316, "عُشَارَة", "ʿuşāra", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [317, "عُشَارَان", "ʿuşārān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [318, "عُشَارَتَان", "ʿuşāratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [319, "عُشَارُون", "ʿuşārūn", "her daim arkadaşlık edenler", "orta", ""],
+      [320, "عُشَارِين", "ʿuşārīn", "her daim arkadaşlık edenler", "orta", ""],
+      [321, "عُشَارَات", "ʿuşārāt", "her daim arkadaşlık edenler (müennes)", "orta", ""],
+      [322, "عَشَار", "ʿaşār", "her daim arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
+      [323, "عَشَارَة", "ʿaşāra", "her daim arkadaşlık eden (müennes)", "orta", ""],
+      [324, "عَشَارَان", "ʿaşārān", "her daim arkadaşlık eden (iki)", "orta", ""],
+      [325, "عَشَارَتَان", "ʿaşāratān", "her daim arkadaşlık eden (iki, müennes)", "orta", ""],
+      [326, "عَشَارُون", "ʿaşārūn", "her daim arkadaşlık edenler", "orta", ""],
+      [327, "عَشَارِين", "ʿaşārīn", "her daim arkadaşlık edenler", "orta", ""],
+      [328, "عَشَارَات", "ʿaşārāt", "her daim arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "mübalağa": [
       [
         329,
         "عَشَّار",
         "ʿaşşār",
-        "çok arkadaşlık eden",
+        "işi arkadaşlık etme olan",
         "orta",
         "Vikisözlük: tither, publican, who collects tithes or other levies"
       ],
-      [330, "عَشَّارَة", "ʿaşşāra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [331, "عَشَّارَان", "ʿaşşārān", "iki çok arkadaşlık eden", "orta", ""],
-      [332, "عَشَّارَتَان", "ʿaşşāratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [333, "عَشَّارُون", "ʿaşşārūn", "çok arkadaşlık edenler", "orta", ""],
-      [334, "عَشَّارِين", "ʿaşşārīn", "çok arkadaşlık edenler", "orta", ""],
-      [335, "عَشَّارَات", "ʿaşşārāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [336, "عَشَّارَة", "ʿaşşāra", "çok arkadaşlık eden", "orta", ""],
-      [337, "عَشَّارَتَان", "ʿaşşāratān", "iki çok arkadaşlık eden", "orta", ""],
-      [338, "عَشَّارَات", "ʿaşşārāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
+      [330, "عَشَّارَة", "ʿaşşāra", "işi arkadaşlık etme olan (müennes)", "orta", ""],
+      [331, "عَشَّارَان", "ʿaşşārān", "işi arkadaşlık etme olan (iki)", "orta", ""],
+      [332, "عَشَّارَتَان", "ʿaşşāratān", "işi arkadaşlık etme olan (iki, müennes)", "orta", ""],
+      [333, "عَشَّارُون", "ʿaşşārūn", "işi arkadaşlık etme olanlar", "orta", ""],
+      [334, "عَشَّارِين", "ʿaşşārīn", "işi arkadaşlık etme olanlar", "orta", ""],
+      [335, "عَشَّارَات", "ʿaşşārāt", "işi arkadaşlık etme olanlar (müennes)", "orta", ""],
+      [336, "عَشَّارَة", "ʿaşşāra", "pek çok arkadaşlık eden", "orta", ""],
+      [337, "عَشَّارَتَان", "ʿaşşāratān", "pek çok arkadaşlık eden (iki)", "orta", ""],
+      [338, "عَشَّارَات", "ʿaşşārāt", "pek çok arkadaşlık edenler (müennes)", "orta", ""],
       [339, "عَشُور", "ʿaşūr", "çok arkadaşlık eden", "orta", ""],
-      [340, "عَشُورَة", "ʿaşūra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [341, "عَشُورَان", "ʿaşūrān", "iki çok arkadaşlık eden", "orta", ""],
-      [342, "عَشُورَتَان", "ʿaşūratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
+      [340, "عَشُورَة", "ʿaşūra", "çok arkadaşlık eden (müennes)", "orta", ""],
+      [341, "عَشُورَان", "ʿaşūrān", "çok arkadaşlık eden (iki)", "orta", ""],
+      [342, "عَشُورَتَان", "ʿaşūratān", "çok arkadaşlık eden (iki, müennes)", "orta", ""],
       [343, "عَشُورُون", "ʿaşūrūn", "çok arkadaşlık edenler", "orta", ""],
       [344, "عَشُورِين", "ʿaşūrīn", "çok arkadaşlık edenler", "orta", ""],
-      [345, "عَشُورَات", "ʿaşūrāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [346, "عَشُّور", "ʿaşşūr", "çok arkadaşlık eden", "orta", ""],
-      [347, "عَشُّورَة", "ʿaşşūra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [348, "عَشُّورَان", "ʿaşşūrān", "iki çok arkadaşlık eden", "orta", ""],
-      [349, "عَشُّورَتَان", "ʿaşşūratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [350, "عَشُّورُون", "ʿaşşūrūn", "çok arkadaşlık edenler", "orta", ""],
-      [351, "عَشُّورِين", "ʿaşşūrīn", "çok arkadaşlık edenler", "orta", ""],
-      [352, "عَشُّورَات", "ʿaşşūrāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [353, "عِشِّير", "ʿişşīr", "çok arkadaşlık eden", "orta", ""],
-      [354, "عِشِّيرَة", "ʿişşīra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [355, "عِشِّيرَان", "ʿişşīrān", "iki çok arkadaşlık eden", "orta", ""],
-      [356, "عِشِّيرَتَان", "ʿişşīratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [357, "عِشِّيرُون", "ʿişşīrūn", "çok arkadaşlık edenler", "orta", ""],
-      [358, "عِشِّيرِين", "ʿişşīrīn", "çok arkadaşlık edenler", "orta", ""],
-      [359, "عِشِّيرَات", "ʿişşīrāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [360, "عُشَّار", "ʿuşşār", "çok arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
-      [361, "عُشَّارَة", "ʿuşşāra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [362, "عُشَّارَان", "ʿuşşārān", "iki çok arkadaşlık eden", "orta", ""],
-      [363, "عُشَّارَتَان", "ʿuşşāratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [364, "عُشَّارُون", "ʿuşşārūn", "çok arkadaşlık edenler", "orta", ""],
-      [365, "عُشَّارِين", "ʿuşşārīn", "çok arkadaşlık edenler", "orta", ""],
-      [366, "عُشَّارَات", "ʿuşşārāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [367, "مِعْشَار", "miʿşār", "çok arkadaşlık eden", "orta", ""],
-      [368, "مِعْشَارَة", "miʿşāra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [369, "مِعْشَارَان", "miʿşārān", "iki çok arkadaşlık eden", "orta", ""],
-      [370, "مِعْشَارَتَان", "miʿşāratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [371, "مِعْشَارُون", "miʿşārūn", "çok arkadaşlık edenler", "orta", ""],
-      [372, "مِعْشَارِين", "miʿşārīn", "çok arkadaşlık edenler", "orta", ""],
-      [373, "مِعْشَارَات", "miʿşārāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [374, "مِعْشِير", "miʿşīr", "çok arkadaşlık eden", "orta", ""],
-      [375, "مِعْشِيرَة", "miʿşīra", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [376, "مِعْشِيرَان", "miʿşīrān", "iki çok arkadaşlık eden", "orta", ""],
-      [377, "مِعْشِيرَتَان", "miʿşīratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
-      [378, "مِعْشِيرُون", "miʿşīrūn", "çok arkadaşlık edenler", "orta", ""],
-      [379, "مِعْشِيرِين", "miʿşīrīn", "çok arkadaşlık edenler", "orta", ""],
-      [380, "مِعْشِيرَات", "miʿşīrāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
-      [381, "عَشِير", "ʿaşīr", "çok arkadaşlık eden", "orta", ""],
-      [382, "عَشِيرَة", "ʿaşīra", "çok arkadaşlık eden (dişi)", "orta", "Vikisözlük: clan"],
-      [383, "عَشِيرَان", "ʿaşīrān", "iki çok arkadaşlık eden", "orta", ""],
-      [384, "عَشِيرَتَان", "ʿaşīratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
+      [345, "عَشُورَات", "ʿaşūrāt", "çok arkadaşlık edenler (müennes)", "orta", ""],
+      [346, "عَشُّور", "ʿaşşūr", "pek çok arkadaşlık eden", "orta", ""],
+      [347, "عَشُّورَة", "ʿaşşūra", "pek çok arkadaşlık eden (müennes)", "orta", ""],
+      [348, "عَشُّورَان", "ʿaşşūrān", "pek çok arkadaşlık eden (iki)", "orta", ""],
+      [349, "عَشُّورَتَان", "ʿaşşūratān", "pek çok arkadaşlık eden (iki, müennes)", "orta", ""],
+      [350, "عَشُّورُون", "ʿaşşūrūn", "pek çok arkadaşlık edenler", "orta", ""],
+      [351, "عَشُّورِين", "ʿaşşūrīn", "pek çok arkadaşlık edenler", "orta", ""],
+      [352, "عَشُّورَات", "ʿaşşūrāt", "pek çok arkadaşlık edenler (müennes)", "orta", ""],
+      [353, "عِشِّير", "ʿişşīr", "arkadaşlık etmede aşırı giden", "orta", ""],
+      [354, "عِشِّيرَة", "ʿişşīra", "arkadaşlık etmede aşırı giden (müennes)", "orta", ""],
+      [355, "عِشِّيرَان", "ʿişşīrān", "arkadaşlık etmede aşırı giden (iki)", "orta", ""],
+      [356, "عِشِّيرَتَان", "ʿişşīratān", "arkadaşlık etmede aşırı giden (iki, müennes)", "orta", ""],
+      [357, "عِشِّيرُون", "ʿişşīrūn", "arkadaşlık etmede aşırı gidenler", "orta", ""],
+      [358, "عِشِّيرِين", "ʿişşīrīn", "arkadaşlık etmede aşırı gidenler", "orta", ""],
+      [359, "عِشِّيرَات", "ʿişşīrāt", "arkadaşlık etmede aşırı gidenler (müennes)", "orta", ""],
+      [360, "عُشَّار", "ʿuşşār", "son derece arkadaşlık eden", "orta", "Vikisözlük: full-term she-camels"],
+      [361, "عُشَّارَة", "ʿuşşāra", "son derece arkadaşlık eden (müennes)", "orta", ""],
+      [362, "عُشَّارَان", "ʿuşşārān", "son derece arkadaşlık eden (iki)", "orta", ""],
+      [363, "عُشَّارَتَان", "ʿuşşāratān", "son derece arkadaşlık eden (iki, müennes)", "orta", ""],
+      [364, "عُشَّارُون", "ʿuşşārūn", "son derece arkadaşlık edenler", "orta", ""],
+      [365, "عُشَّارِين", "ʿuşşārīn", "son derece arkadaşlık edenler", "orta", ""],
+      [366, "عُشَّارَات", "ʿuşşārāt", "son derece arkadaşlık edenler (müennes)", "orta", ""],
+      [367, "مِعْشَار", "miʿşār", "arkadaşlık etmeyi âdet edinmiş", "orta", ""],
+      [368, "مِعْشَارَة", "miʿşāra", "arkadaşlık etmeyi âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِعْشَارَان", "miʿşārān", "arkadaşlık etmeyi âdet edinmiş (iki)", "orta", ""],
+      [370, "مِعْشَارَتَان", "miʿşāratān", "arkadaşlık etmeyi âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِعْشَارُون", "miʿşārūn", "arkadaşlık etmeyi âdet edinmişler", "orta", ""],
+      [372, "مِعْشَارِين", "miʿşārīn", "arkadaşlık etmeyi âdet edinmişler", "orta", ""],
+      [373, "مِعْشَارَات", "miʿşārāt", "arkadaşlık etmeyi âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِعْشِير", "miʿşīr", "arkadaşlık etmeye düşkün", "orta", ""],
+      [375, "مِعْشِيرَة", "miʿşīra", "arkadaşlık etmeye düşkün (müennes)", "orta", ""],
+      [376, "مِعْشِيرَان", "miʿşīrān", "arkadaşlık etmeye düşkün (iki)", "orta", ""],
+      [377, "مِعْشِيرَتَان", "miʿşīratān", "arkadaşlık etmeye düşkün (iki, müennes)", "orta", ""],
+      [378, "مِعْشِيرُون", "miʿşīrūn", "arkadaşlık etmeye düşkünler", "orta", ""],
+      [379, "مِعْشِيرِين", "miʿşīrīn", "arkadaşlık etmeye düşkünler", "orta", ""],
+      [380, "مِعْشِيرَات", "miʿşīrāt", "arkadaşlık etmeye düşkünler (müennes)", "orta", ""],
+      [381, "عَشِير", "ʿaşīr", "eş, yoldaş", "kuran", "Kur'ân"],
+      [382, "عَشِيرَة", "ʿaşīra", "çok arkadaşlık eden (müennes)", "orta", "Vikisözlük: clan"],
+      [383, "عَشِيرَان", "ʿaşīrān", "çok arkadaşlık eden (iki)", "orta", ""],
+      [384, "عَشِيرَتَان", "ʿaşīratān", "çok arkadaşlık eden (iki, müennes)", "orta", ""],
       [385, "عَشِيرُون", "ʿaşīrūn", "çok arkadaşlık edenler", "orta", ""],
       [386, "عَشِيرِين", "ʿaşīrīn", "çok arkadaşlık edenler", "orta", ""],
-      [387, "عَشِيرَات", "ʿaşīrāt", "çok arkadaşlık edenler (dişi)", "orta", ""],
+      [387, "عَشِيرَات", "ʿaşīrāt", "çok arkadaşlık edenler (müennes)", "orta", ""],
       [388, "عَشَّر", "ʿaşşar", "çok arkadaşlık eden", "orta", ""],
-      [389, "عَشَّرَة", "ʿaşşara", "çok arkadaşlık eden (dişi)", "orta", ""],
-      [390, "عَشَّرَان", "ʿaşşarān", "iki çok arkadaşlık eden", "orta", ""],
-      [391, "عَشَّرَتَان", "ʿaşşaratān", "iki çok arkadaşlık eden (dişi)", "orta", ""],
+      [389, "عَشَّرَة", "ʿaşşara", "çok arkadaşlık eden (müennes)", "orta", ""],
+      [390, "عَشَّرَان", "ʿaşşarān", "çok arkadaşlık eden (iki)", "orta", ""],
+      [391, "عَشَّرَتَان", "ʿaşşaratān", "çok arkadaşlık eden (iki, müennes)", "orta", ""],
       [392, "عَشَّرُون", "ʿaşşarūn", "çok arkadaşlık edenler", "orta", ""],
       [393, "عَشَّرِين", "ʿaşşarīn", "çok arkadaşlık edenler", "orta", ""],
-      [394, "عَشَّرَات", "ʿaşşarāt", "çok arkadaşlık edenler (dişi)", "orta", ""]
+      [394, "عَشَّرَات", "ʿaşşarāt", "çok arkadaşlık edenler (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "عَشْرِيّ", "ʿaşriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [397, "عَشَرِيّ", "ʿaşariyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [399, "عِشْرِيّ", "ʿişriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [401, "عُشْرِيّ", "ʿuşriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [403, "عِشَارِيّ", "ʿişāriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [405, "عَاشِرِيّ", "ʿāşiriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [407, "مَعْشُورِيّ", "maʿşūriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [409, "عَشِيرِيّ", "ʿaşīriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [411, "مَعْشَرِيّ", "maʿşariyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [413, "تَعْشِيرِيّ", "taʿşīriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [415, "تَعَاشُرِيّ", "taʿāşuriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [417, "إِعْشَارِيّ", "ʾiʿşāriyy", "arkadaşlık etmeye ilgili", "orta", ""],
-      [419, "اِعْتِشَارِيّ", "iʿtişāriyy", "arkadaşlık etmeye ilgili", "orta", ""]
+      [395, "عَشْرِيّ", "ʿaşriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [397, "عَشَرِيّ", "ʿaşariyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [399, "عِشْرِيّ", "ʿişriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [401, "عُشْرِيّ", "ʿuşriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [403, "عِشَارِيّ", "ʿişāriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [405, "عَاشِرِيّ", "ʿāşiriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [407, "مَعْشُورِيّ", "maʿşūriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [409, "عَشِيرِيّ", "ʿaşīriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [411, "مَعْشَرِيّ", "maʿşariyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [413, "تَعْشِيرِيّ", "taʿşīriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [415, "تَعَاشُرِيّ", "taʿāşuriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [417, "إِعْشَارِيّ", "ʾiʿşāriyy", "arkadaşlık etme ile ilgili", "orta", ""],
+      [419, "اِعْتِشَارِيّ", "iʿtişāriyy", "arkadaşlık etme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "عَشْرِيَّة", "ʿaşriyya", "arkadaşlık edenlik", "orta", ""],
@@ -574,113 +588,106 @@
       [425, "عَشَارَة", "ʿaşāra", "arkadaşlık etme", "orta", ""],
       [426, "عِشَارَة", "ʿişāra", "arkadaşlık etme", "orta", ""],
       [427, "عُشُورَة", "ʿuşūra", "arkadaşlık etme", "orta", ""],
-      [428, "عَشْر", "ʿaşr", "arkadaşlık etme", "orta", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
+      [428, "عَشْر", "ʿaşr", "on", "kuran", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
       [429, "عِشْر", "ʿişr", "arkadaşlık etme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "عَاشُور", "ʿāşūr", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [432, "عَشَرَة", "ʿaşara", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [433, "عُشَرَة", "ʿuşara", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [434, "أُعْشُورَة", "ʾuʿşūra", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [435, "عَوْشَر", "ʿawşar", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [437, "عَيْشَر", "ʿayşar", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [
-        439,
-        "عَشْر",
-        "ʿaşr",
-        "arkadaşlık edenler (topluluk adı)",
-        "orta",
-        "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"
-      ],
-      [441, "عَشَر", "ʿaşar", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [443, "عِشْر", "ʿişr", "arkadaşlık edenler (topluluk adı)", "orta", ""],
+      [430, "عَاشُور", "ʿāşūr", "arkadaşlık etme türünden şey", "orta", ""],
+      [432, "عَشَرَة", "ʿaşara", "arkadaşlık etme türünden şey", "orta", ""],
+      [433, "عُشَرَة", "ʿuşara", "arkadaşlık etme türünden şey", "orta", ""],
+      [434, "أُعْشُورَة", "ʾuʿşūra", "arkadaşlık etme türünden şey", "orta", ""],
+      [435, "عَوْشَر", "ʿawşar", "arkadaşlık etme türünden şey", "orta", ""],
+      [437, "عَيْشَر", "ʿayşar", "arkadaşlık etme türünden şey", "orta", ""],
+      [439, "عَشْر", "ʿaşr", "on", "kuran", "Vikisözlük: masculine of عَشَرَة (ʕašara, “ten”)"],
+      [441, "عَشَر", "ʿaşar", "arkadaşlık etme türünden şey", "orta", ""],
+      [443, "عِشْر", "ʿişr", "arkadaşlık etme türünden şey", "orta", ""],
       [
         445,
         "عُشْر",
         "ʿuşr",
-        "arkadaşlık edenler (topluluk adı)",
+        "arkadaşlık etme türünden şey",
         "orta",
         "Vikisözlük: apple of Sodom (Calotropis procera) as well as crown flower (Calotropi"
       ],
-      [447, "عَشِير", "ʿaşīr", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [449, "عِشَر", "ʿişar", "arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [451, "عُشُر", "ʿuşur", "arkadaşlık edenler (topluluk adı)", "orta", "Vikisözlük: one tenth"],
-      [453, "عَشَار", "ʿaşār", "arkadaşlık edenler (topluluk adı)", "orta", "Vikisözlük: full-term she-camels"]
+      [447, "عَشِير", "ʿaşīr", "eş, yoldaş", "kuran", "Kur'ân"],
+      [449, "عِشَر", "ʿişar", "arkadaşlık etme türünden şey", "orta", ""],
+      [451, "عُشُر", "ʿuşur", "arkadaşlık etme türünden şey", "orta", "Vikisözlük: one tenth"],
+      [453, "عَشَار", "ʿaşār", "arkadaşlık etme türünden şey", "orta", "Vikisözlük: full-term she-camels"]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "عَاشُورَة", "ʿāşūra", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [436, "عَوْشَرَة", "ʿawşara", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [438, "عَيْشَرَة", "ʿayşara", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [440, "عَشْرَة", "ʿaşra", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [442, "عَشَرَة", "ʿaşara", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
+      [431, "عَاشُورَة", "ʿāşūra", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [436, "عَوْشَرَة", "ʿawşara", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [438, "عَيْشَرَة", "ʿayşara", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [440, "عَشْرَة", "ʿaşra", "on", "kuran", "Kur'ân"],
+      [442, "عَشَرَة", "ʿaşara", "arkadaşlık etme türünden bir tane", "orta", ""],
       [
         444,
         "عِشْرَة",
         "ʿişra",
-        "bir tane arkadaşlık edenler (topluluk adı)",
+        "arkadaşlık etme türünden bir tane",
         "orta",
         "Vikisözlük: companionship, friendship, partnership"
       ],
-      [446, "عُشْرَة", "ʿuşra", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [448, "عَشِيرَة", "ʿaşīra", "bir tane arkadaşlık edenler (topluluk adı)", "orta", "Vikisözlük: clan"],
-      [450, "عِشَرَة", "ʿişara", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [452, "عُشُرَة", "ʿuşura", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""],
-      [454, "عَشَارَة", "ʿaşāra", "bir tane arkadaşlık edenler (topluluk adı)", "orta", ""]
+      [446, "عُشْرَة", "ʿuşra", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [448, "عَشِيرَة", "ʿaşīra", "arkadaşlık etme türünden bir tane", "orta", "Vikisözlük: clan"],
+      [450, "عِشَرَة", "ʿişara", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [452, "عُشُرَة", "ʿuşura", "arkadaşlık etme türünden bir tane", "orta", ""],
+      [454, "عَشَارَة", "ʿaşāra", "arkadaşlık etme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَعْشَار", "ʾaʿşār", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [456, "أَعْشِرَة", "ʾaʿşira", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [457, "أَعَاشِر", "ʾaʿāşir", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [458, "أَعَاشِير", "ʾaʿāşīr", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [459, "عُشُور", "ʿuşūr", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [460, "عُشُر", "ʿuşur", "arkadaşlık edenler (kırık çoğul)", "orta", "Vikisözlük: one tenth"],
-      [461, "عِشَار", "ʿişār", "arkadaşlık edenler (kırık çoğul)", "orta", "Vikisözlük: full-term she-camels"],
-      [462, "عِشَر", "ʿişar", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [463, "عِشَرَة", "ʿişara", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
+      [455, "أَعْشَار", "ʾaʿşār", "arkadaşlık etmeler", "orta", ""],
+      [456, "أَعْشِرَة", "ʾaʿşira", "arkadaşlık etmeler", "orta", ""],
+      [457, "أَعَاشِر", "ʾaʿāşir", "arkadaşlık etmeler", "orta", ""],
+      [458, "أَعَاشِير", "ʾaʿāşīr", "arkadaşlık etmeler", "orta", ""],
+      [459, "عُشُور", "ʿuşūr", "arkadaşlık etmeler", "orta", ""],
+      [460, "عُشُر", "ʿuşur", "arkadaşlık etmeler", "orta", "Vikisözlük: one tenth"],
+      [461, "عِشَار", "ʿişār", "arkadaşlık etmeler", "orta", "Vikisözlük: full-term she-camels"],
+      [462, "عِشَر", "ʿişar", "arkadaşlık etmeler", "orta", ""],
+      [463, "عِشَرَة", "ʿişara", "arkadaşlık etmeler", "orta", ""],
       [
         464,
         "عُشَر",
         "ʿuşar",
-        "arkadaşlık edenler (kırık çoğul)",
+        "arkadaşlık etmeler",
         "orta",
         "Vikisözlük: apple of Sodom (Calotropis procera) as well as crown flower (Calotropi"
       ],
-      [465, "عُشَراء", "ʿuşarāʾ", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [466, "عَشَرَة", "ʿaşara", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [467, "عُشَّار", "ʿuşşār", "arkadaşlık edenler (kırık çoğul)", "orta", "Vikisözlük: full-term she-camels"],
-      [468, "عَشَار", "ʿaşār", "arkadaşlık edenler (kırık çoğul)", "orta", "Vikisözlük: full-term she-camels"],
-      [469, "عَشَر", "ʿaşar", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [470, "مَعَاشِر", "maʿāşir", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [471, "مَعَاشِير", "maʿāşīr", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [472, "عَوَاشِر", "ʿawāşir", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [473, "أَعْشُر", "ʾaʿşur", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [474, "عُشَّر", "ʿuşşar", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [475, "عَشَائِر", "ʿaşāʾir", "arkadaşlık edenler (kırık çoğul)", "orta", ""],
-      [476, "عُشَيْر", "ʿuşayr", "arkadaşlık edenler (kırık çoğul)", "orta", ""]
+      [465, "عُشَراء", "ʿuşarāʾ", "arkadaşlık etmeler", "orta", ""],
+      [466, "عَشَرَة", "ʿaşara", "arkadaşlık etmeler", "orta", ""],
+      [467, "عُشَّار", "ʿuşşār", "arkadaşlık etmeler", "orta", "Vikisözlük: full-term she-camels"],
+      [468, "عَشَار", "ʿaşār", "arkadaşlık etmeler", "orta", "Vikisözlük: full-term she-camels"],
+      [469, "عَشَر", "ʿaşar", "arkadaşlık etmeler", "orta", ""],
+      [470, "مَعَاشِر", "maʿāşir", "arkadaşlık etmeler", "orta", ""],
+      [471, "مَعَاشِير", "maʿāşīr", "arkadaşlık etmeler", "orta", ""],
+      [472, "عَوَاشِر", "ʿawāşir", "arkadaşlık etmeler", "orta", ""],
+      [473, "أَعْشُر", "ʾaʿşur", "arkadaşlık etmeler", "orta", ""],
+      [474, "عُشَّر", "ʿuşşar", "arkadaşlık etmeler", "orta", ""],
+      [475, "عَشَائِر", "ʿaşāʾir", "arkadaşlık etmeler", "orta", ""],
+      [476, "عُشَيْر", "ʿuşayr", "arkadaşlık etmeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَعْشَارَات", "ʾaʿşārāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [478, "أَعْشِرَات", "ʾaʿşirāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [479, "أَعَاشِرَات", "ʾaʿāşirāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [480, "أَعَاشِيرَات", "ʾaʿāşīrāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [481, "عُشُورَات", "ʿuşūrāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [482, "عُشُرَات", "ʿuşurāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [483, "عِشَارَات", "ʿişārāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [484, "عِشَرَات", "ʿişarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [485, "عِشَرَات", "ʿişarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [486, "عُشَرَات", "ʿuşarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [487, "عُشَراآت", "ʿuşarāʾāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [488, "عَشَرَات", "ʿaşarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [489, "عُشَّارَات", "ʿuşşārāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [490, "عَشَارَات", "ʿaşārāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [491, "عَشَرَات", "ʿaşarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [492, "مَعَاشِرَات", "maʿāşirāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [493, "مَعَاشِيرَات", "maʿāşīrāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [494, "عَوَاشِرَات", "ʿawāşirāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [495, "أَعْشُرَات", "ʾaʿşurāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [496, "عُشَّرَات", "ʿuşşarāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [497, "عَشَائِرَات", "ʿaşāʾirāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""],
-      [498, "عُشَيْرَات", "ʿuşayrāt", "arkadaşlık edenler (çoğulun çoğulu)", "orta", ""]
+      [477, "أَعْشَارَات", "ʾaʿşārāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [478, "أَعْشِرَات", "ʾaʿşirāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [479, "أَعَاشِرَات", "ʾaʿāşirāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [480, "أَعَاشِيرَات", "ʾaʿāşīrāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [481, "عُشُورَات", "ʿuşūrāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [482, "عُشُرَات", "ʿuşurāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [483, "عِشَارَات", "ʿişārāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [484, "عِشَرَات", "ʿişarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [485, "عِشَرَات", "ʿişarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [486, "عُشَرَات", "ʿuşarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [487, "عُشَراآت", "ʿuşarāʾāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [488, "عَشَرَات", "ʿaşarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [489, "عُشَّارَات", "ʿuşşārāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [490, "عَشَارَات", "ʿaşārāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [491, "عَشَرَات", "ʿaşarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [492, "مَعَاشِرَات", "maʿāşirāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [493, "مَعَاشِيرَات", "maʿāşīrāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [494, "عَوَاشِرَات", "ʿawāşirāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [495, "أَعْشُرَات", "ʾaʿşurāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [496, "عُشَّرَات", "ʿuşşarāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [497, "عَشَائِرَات", "ʿaşāʾirāt", "arkadaşlık etmeler topluluğu", "orta", ""],
+      [498, "عُشَيْرَات", "ʿuşayrāt", "arkadaşlık etmeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [

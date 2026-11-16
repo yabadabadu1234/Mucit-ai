@@ -36,7 +36,7 @@
       [11, "جُهُولَة", "cuhūla", "bilgisizlik", "orta", ""],
       [12, "جِهَالَة", "cihāla", "bilgisizlik", "orta", ""],
       [13, "جَهِيل", "cahīl", "bilgisizlik", "orta", ""],
-      [14, "جَهُول", "cahūl", "bilgisizlik", "orta", ""],
+      [14, "جَهُول", "cahūl", "cahil", "kuran", "Kur'ân"],
       [15, "جَهَلَان", "cahalān", "bilgisizlik", "orta", ""],
       [16, "جُهْلَان", "cuhlān", "bilgisizlik", "orta", ""],
       [17, "جِهْلَان", "cihlān", "bilgisizlik", "orta", ""],
@@ -53,143 +53,150 @@
       [28, "مَجْهِلَة", "machila", "bilgisizlik", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَجْهِيل", "tachīl", "bilgisiz olma", "orta", "Vikisözlük: masdar (bâb II): to attribute ignorance to"],
-      [30, "تَجْهِلَة", "tachila", "bilgisiz olma", "orta", ""],
-      [31, "جِهِّال", "cihhāl", "bilgisiz olma", "orta", ""]
+      [
+        29,
+        "تَجْهِيل",
+        "tachīl",
+        "çokça bilgisiz olma",
+        "orta",
+        "Vikisözlük: masdar (bâb II): to attribute ignorance to"
+      ],
+      [30, "تَجْهِلَة", "tachila", "çokça bilgisiz olma", "orta", ""],
+      [31, "جِهِّال", "cihhāl", "çokça bilgisiz olma", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَجْهِيلَة", "tachīla", "bir kere bilgisiz olma", "orta", ""],
-      [33, "جِهِّالَة", "cihhāla", "bir kere bilgisiz olma", "orta", ""]
+      [32, "تَجْهِيلَة", "tachīla", "bir kere çokça bilgisiz olma", "orta", ""],
+      [33, "جِهِّالَة", "cihhāla", "bir kere çokça bilgisiz olma", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُجَهِّل", "mucahhil", "bilgisiz olan", "orta", ""],
-      [35, "مُجَهِّلَة", "mucahhila", "bilgisiz olan (dişi)", "orta", ""],
-      [36, "مُجَهِّلَان", "mucahhilān", "iki bilgisiz olan", "orta", ""],
-      [37, "مُجَهِّلَتَان", "mucahhilatān", "iki bilgisiz olan (dişi)", "orta", ""],
-      [38, "مُجَهِّلُون", "mucahhilūn", "bilgisiz olanlar", "orta", ""],
-      [39, "مُجَهِّلِين", "mucahhilīn", "bilgisiz olanlar", "orta", ""],
-      [40, "مُجَهِّلَات", "mucahhilāt", "bilgisiz olanlar (dişi)", "orta", ""]
+      [34, "مُجَهِّل", "mucahhil", "çokça bilgisiz olan", "orta", ""],
+      [35, "مُجَهِّلَة", "mucahhila", "çokça bilgisiz olan (müennes)", "orta", ""],
+      [36, "مُجَهِّلَان", "mucahhilān", "çokça bilgisiz olan (iki)", "orta", ""],
+      [37, "مُجَهِّلَتَان", "mucahhilatān", "çokça bilgisiz olan (iki, müennes)", "orta", ""],
+      [38, "مُجَهِّلُون", "mucahhilūn", "çokça bilgisiz olanlar", "orta", ""],
+      [39, "مُجَهِّلِين", "mucahhilīn", "çokça bilgisiz olanlar", "orta", ""],
+      [40, "مُجَهِّلَات", "mucahhilāt", "çokça bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُجَهَّل", "mucahhal", "bilgisiz olunmuş", "orta", ""],
-      [42, "مُجَهَّلَة", "mucahhala", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [43, "مُجَهَّلَان", "mucahhalān", "iki bilgisiz olunmuş", "orta", ""],
-      [44, "مُجَهَّلَتَان", "mucahhalatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [45, "مُجَهَّلُون", "mucahhalūn", "bilgisiz olunmuşlar", "orta", ""],
-      [46, "مُجَهَّلِين", "mucahhalīn", "bilgisiz olunmuşlar", "orta", ""],
-      [47, "مُجَهَّلَات", "mucahhalāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [41, "مُجَهَّل", "mucahhal", "çokça bilgisiz olunan", "orta", ""],
+      [42, "مُجَهَّلَة", "mucahhala", "çokça bilgisiz olunan (müennes)", "orta", ""],
+      [43, "مُجَهَّلَان", "mucahhalān", "çokça bilgisiz olunan (iki)", "orta", ""],
+      [44, "مُجَهَّلَتَان", "mucahhalatān", "çokça bilgisiz olunan (iki, müennes)", "orta", ""],
+      [45, "مُجَهَّلُون", "mucahhalūn", "çokça bilgisiz olunanlar", "orta", ""],
+      [46, "مُجَهَّلِين", "mucahhalīn", "çokça bilgisiz olunanlar", "orta", ""],
+      [47, "مُجَهَّلَات", "mucahhalāt", "çokça bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُجَهَّل", "mucahhal", "bilgisiz olma (yeri/zamanı)", "orta", ""]
+      [48, "مُجَهَّل", "mucahhal", "çokça bilgisiz olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُجَاهَلَة", "mucāhala", "bilgisiz oluşma", "orta", ""],
-      [50, "جِهَال", "cihāl", "bilgisiz oluşma", "orta", ""]
+      [49, "مُجَاهَلَة", "mucāhala", "biriyle karşılıklı bilgisiz olma", "orta", ""],
+      [50, "جِهَال", "cihāl", "biriyle karşılıklı bilgisiz olma", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "جِهَالَة", "cihāla", "bir kere bilgisiz oluşma", "orta", ""]
+      [51, "جِهَالَة", "cihāla", "bir kere biriyle karşılıklı bilgisiz olma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُجَاهِل", "mucāhil", "bilgisiz oluşan", "orta", ""],
-      [53, "مُجَاهِلَة", "mucāhila", "bilgisiz oluşan (dişi)", "orta", ""],
-      [54, "مُجَاهِلَان", "mucāhilān", "iki bilgisiz oluşan", "orta", ""],
-      [55, "مُجَاهِلَتَان", "mucāhilatān", "iki bilgisiz oluşan (dişi)", "orta", ""],
-      [56, "مُجَاهِلُون", "mucāhilūn", "bilgisiz oluşanlar", "orta", ""],
-      [57, "مُجَاهِلِين", "mucāhilīn", "bilgisiz oluşanlar", "orta", ""],
-      [58, "مُجَاهِلَات", "mucāhilāt", "bilgisiz oluşanlar (dişi)", "orta", ""]
+      [52, "مُجَاهِل", "mucāhil", "biriyle karşılıklı bilgisiz olan", "orta", ""],
+      [53, "مُجَاهِلَة", "mucāhila", "biriyle karşılıklı bilgisiz olan (müennes)", "orta", ""],
+      [54, "مُجَاهِلَان", "mucāhilān", "biriyle karşılıklı bilgisiz olan (iki)", "orta", ""],
+      [55, "مُجَاهِلَتَان", "mucāhilatān", "biriyle karşılıklı bilgisiz olan (iki, müennes)", "orta", ""],
+      [56, "مُجَاهِلُون", "mucāhilūn", "biriyle karşılıklı bilgisiz olanlar", "orta", ""],
+      [57, "مُجَاهِلِين", "mucāhilīn", "biriyle karşılıklı bilgisiz olanlar", "orta", ""],
+      [58, "مُجَاهِلَات", "mucāhilāt", "biriyle karşılıklı bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُجَاهَل", "mucāhal", "bilgisiz oluşmuş", "orta", ""],
-      [60, "مُجَاهَلَة", "mucāhala", "bilgisiz oluşmuş (dişi)", "orta", ""],
-      [61, "مُجَاهَلَان", "mucāhalān", "iki bilgisiz oluşmuş", "orta", ""],
-      [62, "مُجَاهَلَتَان", "mucāhalatān", "iki bilgisiz oluşmuş (dişi)", "orta", ""],
-      [63, "مُجَاهَلُون", "mucāhalūn", "bilgisiz oluşmuşlar", "orta", ""],
-      [64, "مُجَاهَلِين", "mucāhalīn", "bilgisiz oluşmuşlar", "orta", ""],
-      [65, "مُجَاهَلَات", "mucāhalāt", "bilgisiz oluşmuşlar (dişi)", "orta", ""]
+      [59, "مُجَاهَل", "mucāhal", "biriyle karşılıklı bilgisiz olunan", "orta", ""],
+      [60, "مُجَاهَلَة", "mucāhala", "biriyle karşılıklı bilgisiz olunan (müennes)", "orta", ""],
+      [61, "مُجَاهَلَان", "mucāhalān", "biriyle karşılıklı bilgisiz olunan (iki)", "orta", ""],
+      [62, "مُجَاهَلَتَان", "mucāhalatān", "biriyle karşılıklı bilgisiz olunan (iki, müennes)", "orta", ""],
+      [63, "مُجَاهَلُون", "mucāhalūn", "biriyle karşılıklı bilgisiz olunanlar", "orta", ""],
+      [64, "مُجَاهَلِين", "mucāhalīn", "biriyle karşılıklı bilgisiz olunanlar", "orta", ""],
+      [65, "مُجَاهَلَات", "mucāhalāt", "biriyle karşılıklı bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُجَاهَل", "mucāhal", "bilgisiz oluşma (yeri/zamanı)", "orta", ""]
+      [66, "مُجَاهَل", "mucāhal", "biriyle karşılıklı bilgisiz olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِجْهَال", "ʾichāl", "bilgisiz olma", "orta", ""]
+      [67, "إِجْهَال", "ʾichāl", "bilgisizleştirme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِجْهَالَة", "ʾichāla", "bir kere bilgisiz olma", "orta", ""]
+      [68, "إِجْهَالَة", "ʾichāla", "bir kere bilgisizleştirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُجْهِل", "muchil", "bilgisiz olan", "orta", ""],
-      [70, "مُجْهِلَة", "muchila", "bilgisiz olan (dişi)", "orta", ""],
-      [71, "مُجْهِلَان", "muchilān", "iki bilgisiz olan", "orta", ""],
-      [72, "مُجْهِلَتَان", "muchilatān", "iki bilgisiz olan (dişi)", "orta", ""],
-      [73, "مُجْهِلُون", "muchilūn", "bilgisiz olanlar", "orta", ""],
-      [74, "مُجْهِلِين", "muchilīn", "bilgisiz olanlar", "orta", ""],
-      [75, "مُجْهِلَات", "muchilāt", "bilgisiz olanlar (dişi)", "orta", ""]
+      [69, "مُجْهِل", "muchil", "bilgisizleştiren", "orta", ""],
+      [70, "مُجْهِلَة", "muchila", "bilgisizleştiren (müennes)", "orta", ""],
+      [71, "مُجْهِلَان", "muchilān", "bilgisizleştiren (iki)", "orta", ""],
+      [72, "مُجْهِلَتَان", "muchilatān", "bilgisizleştiren (iki, müennes)", "orta", ""],
+      [73, "مُجْهِلُون", "muchilūn", "bilgisizleştirenler", "orta", ""],
+      [74, "مُجْهِلِين", "muchilīn", "bilgisizleştirenler", "orta", ""],
+      [75, "مُجْهِلَات", "muchilāt", "bilgisizleştirenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُجْهَل", "muchal", "bilgisiz olunmuş", "orta", ""],
-      [77, "مُجْهَلَة", "muchala", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [78, "مُجْهَلَان", "muchalān", "iki bilgisiz olunmuş", "orta", ""],
-      [79, "مُجْهَلَتَان", "muchalatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [80, "مُجْهَلُون", "muchalūn", "bilgisiz olunmuşlar", "orta", ""],
-      [81, "مُجْهَلِين", "muchalīn", "bilgisiz olunmuşlar", "orta", ""],
-      [82, "مُجْهَلَات", "muchalāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [76, "مُجْهَل", "muchal", "bilgisizleştirilen", "orta", ""],
+      [77, "مُجْهَلَة", "muchala", "bilgisizleştirilen (müennes)", "orta", ""],
+      [78, "مُجْهَلَان", "muchalān", "bilgisizleştirilen (iki)", "orta", ""],
+      [79, "مُجْهَلَتَان", "muchalatān", "bilgisizleştirilen (iki, müennes)", "orta", ""],
+      [80, "مُجْهَلُون", "muchalūn", "bilgisizleştirilenler", "orta", ""],
+      [81, "مُجْهَلِين", "muchalīn", "bilgisizleştirilenler", "orta", ""],
+      [82, "مُجْهَلَات", "muchalāt", "bilgisizleştirilenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُجْهَل", "muchal", "bilgisiz olma (yeri/zamanı)", "orta", ""]
+      [83, "مُجْهَل", "muchal", "bilgisizleştirme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَجَهُّل", "tacahhul", "bilgisiz olunma", "orta", ""]
+      [84, "تَجَهُّل", "tacahhul", "kendini zorlayarak bilgisiz olma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَجَهُّلَة", "tacahhula", "bir kere bilgisiz olunma", "orta", ""]
+      [85, "تَجَهُّلَة", "tacahhula", "bir kere kendini zorlayarak bilgisiz olma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَجَهِّل", "mutacahhil", "bilgisiz olunan", "orta", ""],
-      [87, "مُتَجَهِّلَة", "mutacahhila", "bilgisiz olunan (dişi)", "orta", ""],
-      [88, "مُتَجَهِّلَان", "mutacahhilān", "iki bilgisiz olunan", "orta", ""],
-      [89, "مُتَجَهِّلَتَان", "mutacahhilatān", "iki bilgisiz olunan (dişi)", "orta", ""],
-      [90, "مُتَجَهِّلُون", "mutacahhilūn", "bilgisiz olunanlar", "orta", ""],
-      [91, "مُتَجَهِّلِين", "mutacahhilīn", "bilgisiz olunanlar", "orta", ""],
-      [92, "مُتَجَهِّلَات", "mutacahhilāt", "bilgisiz olunanlar (dişi)", "orta", ""]
+      [86, "مُتَجَهِّل", "mutacahhil", "kendini zorlayarak bilgisiz olan", "orta", ""],
+      [87, "مُتَجَهِّلَة", "mutacahhila", "kendini zorlayarak bilgisiz olan (müennes)", "orta", ""],
+      [88, "مُتَجَهِّلَان", "mutacahhilān", "kendini zorlayarak bilgisiz olan (iki)", "orta", ""],
+      [89, "مُتَجَهِّلَتَان", "mutacahhilatān", "kendini zorlayarak bilgisiz olan (iki, müennes)", "orta", ""],
+      [90, "مُتَجَهِّلُون", "mutacahhilūn", "kendini zorlayarak bilgisiz olanlar", "orta", ""],
+      [91, "مُتَجَهِّلِين", "mutacahhilīn", "kendini zorlayarak bilgisiz olanlar", "orta", ""],
+      [92, "مُتَجَهِّلَات", "mutacahhilāt", "kendini zorlayarak bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَجَهَّل", "mutacahhal", "bilgisiz olunmuş", "orta", ""],
-      [94, "مُتَجَهَّلَة", "mutacahhala", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [95, "مُتَجَهَّلَان", "mutacahhalān", "iki bilgisiz olunmuş", "orta", ""],
-      [96, "مُتَجَهَّلَتَان", "mutacahhalatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [97, "مُتَجَهَّلُون", "mutacahhalūn", "bilgisiz olunmuşlar", "orta", ""],
-      [98, "مُتَجَهَّلِين", "mutacahhalīn", "bilgisiz olunmuşlar", "orta", ""],
-      [99, "مُتَجَهَّلَات", "mutacahhalāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [93, "مُتَجَهَّل", "mutacahhal", "kendini zorlayarak bilgisiz olunan", "orta", ""],
+      [94, "مُتَجَهَّلَة", "mutacahhala", "kendini zorlayarak bilgisiz olunan (müennes)", "orta", ""],
+      [95, "مُتَجَهَّلَان", "mutacahhalān", "kendini zorlayarak bilgisiz olunan (iki)", "orta", ""],
+      [96, "مُتَجَهَّلَتَان", "mutacahhalatān", "kendini zorlayarak bilgisiz olunan (iki, müennes)", "orta", ""],
+      [97, "مُتَجَهَّلُون", "mutacahhalūn", "kendini zorlayarak bilgisiz olunanlar", "orta", ""],
+      [98, "مُتَجَهَّلِين", "mutacahhalīn", "kendini zorlayarak bilgisiz olunanlar", "orta", ""],
+      [99, "مُتَجَهَّلَات", "mutacahhalāt", "kendini zorlayarak bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَجَهَّل", "mutacahhal", "bilgisiz olunma (yeri/zamanı)", "orta", ""]
+      [100, "مُتَجَهَّل", "mutacahhal", "kendini zorlayarak bilgisiz olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَجَاهُل", "tacāhul", "bilgisiz oluşma", "orta", "Vikisözlük: masdar (bâb VI): to ignore"]
+      [101, "تَجَاهُل", "tacāhul", "birbirine bilgisiz olma", "orta", "Vikisözlük: masdar (bâb VI): to ignore"]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَجَاهُلَة", "tacāhula", "bir kere bilgisiz oluşma", "orta", ""]
+      [102, "تَجَاهُلَة", "tacāhula", "bir kere birbirine bilgisiz olma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَجَاهِل", "mutacāhil", "bilgisiz oluşan", "orta", ""],
-      [104, "مُتَجَاهِلَة", "mutacāhila", "bilgisiz oluşan (dişi)", "orta", ""],
-      [105, "مُتَجَاهِلَان", "mutacāhilān", "iki bilgisiz oluşan", "orta", ""],
-      [106, "مُتَجَاهِلَتَان", "mutacāhilatān", "iki bilgisiz oluşan (dişi)", "orta", ""],
-      [107, "مُتَجَاهِلُون", "mutacāhilūn", "bilgisiz oluşanlar", "orta", ""],
-      [108, "مُتَجَاهِلِين", "mutacāhilīn", "bilgisiz oluşanlar", "orta", ""],
-      [109, "مُتَجَاهِلَات", "mutacāhilāt", "bilgisiz oluşanlar (dişi)", "orta", ""]
+      [103, "مُتَجَاهِل", "mutacāhil", "birbirine bilgisiz olan", "orta", ""],
+      [104, "مُتَجَاهِلَة", "mutacāhila", "birbirine bilgisiz olan (müennes)", "orta", ""],
+      [105, "مُتَجَاهِلَان", "mutacāhilān", "birbirine bilgisiz olan (iki)", "orta", ""],
+      [106, "مُتَجَاهِلَتَان", "mutacāhilatān", "birbirine bilgisiz olan (iki, müennes)", "orta", ""],
+      [107, "مُتَجَاهِلُون", "mutacāhilūn", "birbirine bilgisiz olanlar", "orta", ""],
+      [108, "مُتَجَاهِلِين", "mutacāhilīn", "birbirine bilgisiz olanlar", "orta", ""],
+      [109, "مُتَجَاهِلَات", "mutacāhilāt", "birbirine bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَجَاهَل", "mutacāhal", "bilgisiz oluşmuş", "orta", ""],
-      [111, "مُتَجَاهَلَة", "mutacāhala", "bilgisiz oluşmuş (dişi)", "orta", ""],
-      [112, "مُتَجَاهَلَان", "mutacāhalān", "iki bilgisiz oluşmuş", "orta", ""],
-      [113, "مُتَجَاهَلَتَان", "mutacāhalatān", "iki bilgisiz oluşmuş (dişi)", "orta", ""],
-      [114, "مُتَجَاهَلُون", "mutacāhalūn", "bilgisiz oluşmuşlar", "orta", ""],
-      [115, "مُتَجَاهَلِين", "mutacāhalīn", "bilgisiz oluşmuşlar", "orta", ""],
-      [116, "مُتَجَاهَلَات", "mutacāhalāt", "bilgisiz oluşmuşlar (dişi)", "orta", ""]
+      [110, "مُتَجَاهَل", "mutacāhal", "birbirine bilgisiz olunan", "orta", ""],
+      [111, "مُتَجَاهَلَة", "mutacāhala", "birbirine bilgisiz olunan (müennes)", "orta", ""],
+      [112, "مُتَجَاهَلَان", "mutacāhalān", "birbirine bilgisiz olunan (iki)", "orta", ""],
+      [113, "مُتَجَاهَلَتَان", "mutacāhalatān", "birbirine bilgisiz olunan (iki, müennes)", "orta", ""],
+      [114, "مُتَجَاهَلُون", "mutacāhalūn", "birbirine bilgisiz olunanlar", "orta", ""],
+      [115, "مُتَجَاهَلِين", "mutacāhalīn", "birbirine bilgisiz olunanlar", "orta", ""],
+      [116, "مُتَجَاهَلَات", "mutacāhalāt", "birbirine bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَجَاهَل", "mutacāhal", "bilgisiz oluşma (yeri/zamanı)", "orta", ""]
+      [117, "مُتَجَاهَل", "mutacāhal", "birbirine bilgisiz olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
       [118, "اِنْجِهَال", "incihāl", "bilgisiz olunma", "orta", ""]
@@ -199,63 +206,63 @@
     ],
     "ism-i fâil · bâb VII": [
       [120, "مُنْجَهِل", "muncahil", "bilgisiz olunan", "orta", ""],
-      [121, "مُنْجَهِلَة", "muncahila", "bilgisiz olunan (dişi)", "orta", ""],
-      [122, "مُنْجَهِلَان", "muncahilān", "iki bilgisiz olunan", "orta", ""],
-      [123, "مُنْجَهِلَتَان", "muncahilatān", "iki bilgisiz olunan (dişi)", "orta", ""],
+      [121, "مُنْجَهِلَة", "muncahila", "bilgisiz olunan (müennes)", "orta", ""],
+      [122, "مُنْجَهِلَان", "muncahilān", "bilgisiz olunan (iki)", "orta", ""],
+      [123, "مُنْجَهِلَتَان", "muncahilatān", "bilgisiz olunan (iki, müennes)", "orta", ""],
       [124, "مُنْجَهِلُون", "muncahilūn", "bilgisiz olunanlar", "orta", ""],
       [125, "مُنْجَهِلِين", "muncahilīn", "bilgisiz olunanlar", "orta", ""],
-      [126, "مُنْجَهِلَات", "muncahilāt", "bilgisiz olunanlar (dişi)", "orta", ""]
+      [126, "مُنْجَهِلَات", "muncahilāt", "bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْجَهَل", "muncahal", "bilgisiz olunmuş", "orta", ""],
-      [128, "مُنْجَهَلَة", "muncahala", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [129, "مُنْجَهَلَان", "muncahalān", "iki bilgisiz olunmuş", "orta", ""],
-      [130, "مُنْجَهَلَتَان", "muncahalatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [131, "مُنْجَهَلُون", "muncahalūn", "bilgisiz olunmuşlar", "orta", ""],
-      [132, "مُنْجَهَلِين", "muncahalīn", "bilgisiz olunmuşlar", "orta", ""],
-      [133, "مُنْجَهَلَات", "muncahalāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [127, "مُنْجَهَل", "muncahal", "bilgisiz olunan", "orta", ""],
+      [128, "مُنْجَهَلَة", "muncahala", "bilgisiz olunan (müennes)", "orta", ""],
+      [129, "مُنْجَهَلَان", "muncahalān", "bilgisiz olunan (iki)", "orta", ""],
+      [130, "مُنْجَهَلَتَان", "muncahalatān", "bilgisiz olunan (iki, müennes)", "orta", ""],
+      [131, "مُنْجَهَلُون", "muncahalūn", "bilgisiz olunanlar", "orta", ""],
+      [132, "مُنْجَهَلِين", "muncahalīn", "bilgisiz olunanlar", "orta", ""],
+      [133, "مُنْجَهَلَات", "muncahalāt", "bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْجَهَل", "muncahal", "bilgisiz olunma (yeri/zamanı)", "orta", ""]
+      [134, "مُنْجَهَل", "muncahal", "bilgisiz olunma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِجْتِهَال", "ictihāl", "bilgisiz olunma", "orta", ""]
+      [135, "اِجْتِهَال", "ictihāl", "kendisi için bilgisiz olma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِجْتِهَالَة", "ictihāla", "bir kere bilgisiz olunma", "orta", ""]
+      [137, "اِجْتِهَالَة", "ictihāla", "bir kere kendisi için bilgisiz olma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُجْتَهِل", "muctahil", "bilgisiz olunan", "orta", ""],
-      [139, "مُجْتَهِلَة", "muctahila", "bilgisiz olunan (dişi)", "orta", ""],
-      [140, "مُجْتَهِلَان", "muctahilān", "iki bilgisiz olunan", "orta", ""],
-      [141, "مُجْتَهِلَتَان", "muctahilatān", "iki bilgisiz olunan (dişi)", "orta", ""],
-      [142, "مُجْتَهِلُون", "muctahilūn", "bilgisiz olunanlar", "orta", ""],
-      [143, "مُجْتَهِلِين", "muctahilīn", "bilgisiz olunanlar", "orta", ""],
-      [144, "مُجْتَهِلَات", "muctahilāt", "bilgisiz olunanlar (dişi)", "orta", ""]
+      [138, "مُجْتَهِل", "muctahil", "kendisi için bilgisiz olan", "orta", ""],
+      [139, "مُجْتَهِلَة", "muctahila", "kendisi için bilgisiz olan (müennes)", "orta", ""],
+      [140, "مُجْتَهِلَان", "muctahilān", "kendisi için bilgisiz olan (iki)", "orta", ""],
+      [141, "مُجْتَهِلَتَان", "muctahilatān", "kendisi için bilgisiz olan (iki, müennes)", "orta", ""],
+      [142, "مُجْتَهِلُون", "muctahilūn", "kendisi için bilgisiz olanlar", "orta", ""],
+      [143, "مُجْتَهِلِين", "muctahilīn", "kendisi için bilgisiz olanlar", "orta", ""],
+      [144, "مُجْتَهِلَات", "muctahilāt", "kendisi için bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُجْتَهَل", "muctahal", "bilgisiz olunmuş", "orta", ""],
-      [146, "مُجْتَهَلَة", "muctahala", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [147, "مُجْتَهَلَان", "muctahalān", "iki bilgisiz olunmuş", "orta", ""],
-      [148, "مُجْتَهَلَتَان", "muctahalatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [149, "مُجْتَهَلُون", "muctahalūn", "bilgisiz olunmuşlar", "orta", ""],
-      [150, "مُجْتَهَلِين", "muctahalīn", "bilgisiz olunmuşlar", "orta", ""],
-      [151, "مُجْتَهَلَات", "muctahalāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [145, "مُجْتَهَل", "muctahal", "kendisi için bilgisiz olunan", "orta", ""],
+      [146, "مُجْتَهَلَة", "muctahala", "kendisi için bilgisiz olunan (müennes)", "orta", ""],
+      [147, "مُجْتَهَلَان", "muctahalān", "kendisi için bilgisiz olunan (iki)", "orta", ""],
+      [148, "مُجْتَهَلَتَان", "muctahalatān", "kendisi için bilgisiz olunan (iki, müennes)", "orta", ""],
+      [149, "مُجْتَهَلُون", "muctahalūn", "kendisi için bilgisiz olunanlar", "orta", ""],
+      [150, "مُجْتَهَلِين", "muctahalīn", "kendisi için bilgisiz olunanlar", "orta", ""],
+      [151, "مُجْتَهَلَات", "muctahalāt", "kendisi için bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُجْتَهَل", "muctahal", "bilgisiz olunma (yeri/zamanı)", "orta", ""]
+      [152, "مُجْتَهَل", "muctahal", "kendisi için bilgisiz olma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِجْهِلَال", "ichilāl", "bilgisizleşme", "kontrol", ""]
+      [499, "اِجْهِلَال", "ichilāl", "iyiden iyiye bilgisiz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُجْهَلّ", "muchall", "bilgisizleşen", "kontrol", ""],
-      [501, "مُجْهَلَّة", "muchalla", "bilgisizleşen (dişi)", "kontrol", ""],
-      [502, "مُجْهَلَّان", "muchallān", "iki bilgisizleşen", "kontrol", ""],
-      [503, "مُجْهَلَّتَان", "muchallatān", "iki bilgisizleşen (dişi)", "kontrol", ""],
-      [504, "مُجْهَلُّون", "muchallūn", "bilgisizleşenler", "kontrol", ""],
-      [505, "مُجْهَلِّين", "muchallīn", "bilgisizleşenler", "kontrol", ""],
-      [506, "مُجْهَلَّات", "muchallāt", "bilgisizleşenler (dişi)", "kontrol", ""]
+      [500, "مُجْهَلّ", "muchall", "iyiden iyiye bilgisiz olan", "kontrol", ""],
+      [501, "مُجْهَلَّة", "muchalla", "iyiden iyiye bilgisiz olan (müennes)", "kontrol", ""],
+      [502, "مُجْهَلَّان", "muchallān", "iyiden iyiye bilgisiz olan (iki)", "kontrol", ""],
+      [503, "مُجْهَلَّتَان", "muchallatān", "iyiden iyiye bilgisiz olan (iki, müennes)", "kontrol", ""],
+      [504, "مُجْهَلُّون", "muchallūn", "iyiden iyiye bilgisiz olanlar", "kontrol", ""],
+      [505, "مُجْهَلِّين", "muchallīn", "iyiden iyiye bilgisiz olanlar", "kontrol", ""],
+      [506, "مُجْهَلَّات", "muchallāt", "iyiden iyiye bilgisiz olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb X": [
       [
@@ -268,40 +275,40 @@
       ]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِجْهَالَة", "istichāla", "bir kere bilgisiz olma", "orta", ""]
+      [177, "اِسْتِجْهَالَة", "istichāla", "bir kere bilgisiz olmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
       [178, "مُسْتَجْهِل", "mustachil", "bilgisiz olmayı isteyen", "orta", ""],
-      [179, "مُسْتَجْهِلَة", "mustachila", "bilgisiz olmayı isteyen (dişi)", "orta", ""],
-      [180, "مُسْتَجْهِلَان", "mustachilān", "iki bilgisiz olmayı isteyen", "orta", ""],
-      [181, "مُسْتَجْهِلَتَان", "mustachilatān", "iki bilgisiz olmayı isteyen (dişi)", "orta", ""],
+      [179, "مُسْتَجْهِلَة", "mustachila", "bilgisiz olmayı isteyen (müennes)", "orta", ""],
+      [180, "مُسْتَجْهِلَان", "mustachilān", "bilgisiz olmayı isteyen (iki)", "orta", ""],
+      [181, "مُسْتَجْهِلَتَان", "mustachilatān", "bilgisiz olmayı isteyen (iki, müennes)", "orta", ""],
       [182, "مُسْتَجْهِلُون", "mustachilūn", "bilgisiz olmayı isteyenler", "orta", ""],
       [183, "مُسْتَجْهِلِين", "mustachilīn", "bilgisiz olmayı isteyenler", "orta", ""],
-      [184, "مُسْتَجْهِلَات", "mustachilāt", "bilgisiz olmayı isteyenler (dişi)", "orta", ""]
+      [184, "مُسْتَجْهِلَات", "mustachilāt", "bilgisiz olmayı isteyenler (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَجْهَل", "mustachal", "bilgisiz olmayı istenen", "orta", ""],
-      [186, "مُسْتَجْهَلَة", "mustachala", "bilgisiz olmayı istenen (dişi)", "orta", ""],
-      [187, "مُسْتَجْهَلَان", "mustachalān", "iki bilgisiz olmayı istenen", "orta", ""],
-      [188, "مُسْتَجْهَلَتَان", "mustachalatān", "iki bilgisiz olmayı istenen (dişi)", "orta", ""],
-      [189, "مُسْتَجْهَلُون", "mustachalūn", "bilgisiz olmayı istenenler", "orta", ""],
-      [190, "مُسْتَجْهَلِين", "mustachalīn", "bilgisiz olmayı istenenler", "orta", ""],
-      [191, "مُسْتَجْهَلَات", "mustachalāt", "bilgisiz olmayı istenenler (dişi)", "orta", ""]
+      [185, "مُسْتَجْهَل", "mustachal", "bilgisiz olması istenen", "orta", ""],
+      [186, "مُسْتَجْهَلَة", "mustachala", "bilgisiz olması istenen (müennes)", "orta", ""],
+      [187, "مُسْتَجْهَلَان", "mustachalān", "bilgisiz olması istenen (iki)", "orta", ""],
+      [188, "مُسْتَجْهَلَتَان", "mustachalatān", "bilgisiz olması istenen (iki, müennes)", "orta", ""],
+      [189, "مُسْتَجْهَلُون", "mustachalūn", "bilgisiz olması istenenler", "orta", ""],
+      [190, "مُسْتَجْهَلِين", "mustachalīn", "bilgisiz olması istenenler", "orta", ""],
+      [191, "مُسْتَجْهَلَات", "mustachalāt", "bilgisiz olması istenenler (müennes)", "orta", ""]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَجْهَل", "mustachal", "bilgisiz olma (yeri/zamanı)", "orta", ""]
+      [192, "مُسْتَجْهَل", "mustachal", "bilgisiz olmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِجْهِيلَال", "ichīlāl", "iyice bilgisizleşme", "kontrol", ""]
+      [507, "اِجْهِيلَال", "ichīlāl", "büsbütün bilgisiz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُجْهَالّ", "muchāll", "iyice bilgisizleşen", "kontrol", ""],
-      [509, "مُجْهَالَّة", "muchālla", "iyice bilgisizleşen (dişi)", "kontrol", ""],
-      [510, "مُجْهَالَّان", "muchāllān", "iki iyice bilgisizleşen", "kontrol", ""],
-      [511, "مُجْهَالَّتَان", "muchāllatān", "iki iyice bilgisizleşen (dişi)", "kontrol", ""],
-      [512, "مُجْهَالُّون", "muchāllūn", "iyice bilgisizleşenler", "kontrol", ""],
-      [513, "مُجْهَالِّين", "muchāllīn", "iyice bilgisizleşenler", "kontrol", ""],
-      [514, "مُجْهَالَّات", "muchāllāt", "iyice bilgisizleşenler (dişi)", "kontrol", ""]
+      [508, "مُجْهَالّ", "muchāll", "büsbütün bilgisiz olan", "kontrol", ""],
+      [509, "مُجْهَالَّة", "muchālla", "büsbütün bilgisiz olan (müennes)", "kontrol", ""],
+      [510, "مُجْهَالَّان", "muchāllān", "büsbütün bilgisiz olan (iki)", "kontrol", ""],
+      [511, "مُجْهَالَّتَان", "muchāllatān", "büsbütün bilgisiz olan (iki, müennes)", "kontrol", ""],
+      [512, "مُجْهَالُّون", "muchāllūn", "büsbütün bilgisiz olanlar", "kontrol", ""],
+      [513, "مُجْهَالِّين", "muchāllīn", "büsbütün bilgisiz olanlar", "kontrol", ""],
+      [514, "مُجْهَالَّات", "muchāllāt", "büsbütün bilgisiz olanlar (müennes)", "kontrol", ""]
     ],
     "masdar · bâb XII": [
       [515, "اِجْهِوْهَال", "ichiwhāl", "aşırı bilgisiz olma", "orta", ""]
@@ -311,238 +318,238 @@
     ],
     "ism-i fâil · sülâsî": [
       [213, "جَاهِل", "cāhil", "bilgisiz olan", "orta", ""],
-      [214, "جَاهِلَة", "cāhila", "bilgisiz olan (dişi)", "orta", ""],
-      [215, "جَاهِلَان", "cāhilān", "iki bilgisiz olan", "orta", ""],
-      [216, "جَاهِلَتَان", "cāhilatān", "iki bilgisiz olan (dişi)", "orta", ""],
+      [214, "جَاهِلَة", "cāhila", "bilgisiz olan (müennes)", "orta", ""],
+      [215, "جَاهِلَان", "cāhilān", "bilgisiz olan (iki)", "orta", ""],
+      [216, "جَاهِلَتَان", "cāhilatān", "bilgisiz olan (iki, müennes)", "orta", ""],
       [217, "جَاهِلُون", "cāhilūn", "bilgisiz olanlar", "orta", ""],
       [218, "جَاهِلِين", "cāhilīn", "bilgisiz olanlar", "orta", ""],
-      [219, "جَاهِلَات", "cāhilāt", "bilgisiz olanlar (dişi)", "orta", ""]
+      [219, "جَاهِلَات", "cāhilāt", "bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَجْهُول", "machūl", "bilgisiz olunmuş", "orta", "Vikisözlük: passive voice"],
-      [221, "مَجْهُولَة", "machūla", "bilgisiz olunmuş (dişi)", "orta", ""],
-      [222, "مَجْهُولَان", "machūlān", "iki bilgisiz olunmuş", "orta", ""],
-      [223, "مَجْهُولَتَان", "machūlatān", "iki bilgisiz olunmuş (dişi)", "orta", ""],
-      [224, "مَجْهُولُون", "machūlūn", "bilgisiz olunmuşlar", "orta", ""],
-      [225, "مَجْهُولِين", "machūlīn", "bilgisiz olunmuşlar", "orta", ""],
-      [226, "مَجْهُولَات", "machūlāt", "bilgisiz olunmuşlar (dişi)", "orta", ""]
+      [220, "مَجْهُول", "machūl", "bilgisiz olunan", "orta", "Vikisözlük: passive voice"],
+      [221, "مَجْهُولَة", "machūla", "bilgisiz olunan (müennes)", "orta", ""],
+      [222, "مَجْهُولَان", "machūlān", "bilgisiz olunan (iki)", "orta", ""],
+      [223, "مَجْهُولَتَان", "machūlatān", "bilgisiz olunan (iki, müennes)", "orta", ""],
+      [224, "مَجْهُولُون", "machūlūn", "bilgisiz olunanlar", "orta", ""],
+      [225, "مَجْهُولِين", "machūlīn", "bilgisiz olunanlar", "orta", ""],
+      [226, "مَجْهُولَات", "machūlāt", "bilgisiz olunanlar (müennes)", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَجْهَل", "machal", "bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [228, "مَجْهَلَان", "machalān", "iki bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [229, "مَجْهِل", "machil", "bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [230, "مَجْهِلَان", "machilān", "iki bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [231, "مَجْهَلَة", "machala", "bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [232, "مَجْهَلَتَان", "machalatān", "iki bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [233, "مَجْهِلَة", "machila", "bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [234, "مَجْهِلَتَان", "machilatān", "iki bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [247, "مَجْهُلَة", "machula", "bilgisiz olma (yeri/zamanı)", "orta", ""],
-      [248, "مَجْهُلَتَان", "machulatān", "iki bilgisiz olma (yeri/zamanı)", "orta", ""]
+      [227, "مَجْهَل", "machal", "bilgisiz olma yeri, vakti", "orta", ""],
+      [228, "مَجْهَلَان", "machalān", "bilgisiz olma yeri, vakti (iki)", "orta", ""],
+      [229, "مَجْهِل", "machil", "bilgisiz olma yeri, vakti", "orta", ""],
+      [230, "مَجْهِلَان", "machilān", "bilgisiz olma yeri, vakti (iki)", "orta", ""],
+      [231, "مَجْهَلَة", "machala", "bilgisiz olmanın bol olduğu yer", "orta", ""],
+      [232, "مَجْهَلَتَان", "machalatān", "bilgisiz olmanın bol olduğu yer (iki)", "orta", ""],
+      [233, "مَجْهِلَة", "machila", "bilgisiz olmanın bol olduğu yer", "orta", ""],
+      [234, "مَجْهِلَتَان", "machilatān", "bilgisiz olmanın bol olduğu yer (iki)", "orta", ""],
+      [247, "مَجْهُلَة", "machula", "bilgisiz olma yeri, vakti", "orta", ""],
+      [248, "مَجْهُلَتَان", "machulatān", "bilgisiz olma yeri, vakti (iki)", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِجْهَل", "michal", "bilgisiz olmaya yarayan araç", "orta", ""],
-      [236, "مِجْهَلَان", "michalān", "iki bilgisiz olmaya yarayan araç", "orta", ""],
-      [237, "مِجْهَال", "michāl", "bilgisiz olmaya yarayan araç", "orta", ""],
-      [238, "مِجْهَالَان", "michālān", "iki bilgisiz olmaya yarayan araç", "orta", ""],
-      [239, "مِجْهَلَة", "michala", "bilgisiz olmaya yarayan araç", "orta", ""],
-      [240, "مِجْهَلَتَان", "michalatān", "iki bilgisiz olmaya yarayan araç", "orta", ""]
+      [235, "مِجْهَل", "michal", "bilgisiz olma âleti", "orta", ""],
+      [236, "مِجْهَلَان", "michalān", "bilgisiz olma âleti (iki)", "orta", ""],
+      [237, "مِجْهَال", "michāl", "bilgisiz olma âleti", "orta", ""],
+      [238, "مِجْهَالَان", "michālān", "bilgisiz olma âleti (iki)", "orta", ""],
+      [239, "مِجْهَلَة", "michala", "bilgisiz olma âleti", "orta", ""],
+      [240, "مِجْهَلَتَان", "michalatān", "bilgisiz olma âleti (iki)", "orta", ""]
     ],
     "tafdîl · sülâsî": [
       [241, "أَجْهَل", "ʾachal", "daha çok bilgisiz olan", "orta", "Vikisözlük: elative degree of جَاهِل (jāhil)"],
-      [242, "أَجْهَلَان", "ʾachalān", "iki daha çok bilgisiz olan", "orta", ""]
+      [242, "أَجْهَلَان", "ʾachalān", "daha çok bilgisiz olan (iki)", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
       [243, "جُهْلَى", "cuhlā", "daha çok bilgisiz olan", "orta", ""],
-      [244, "جُهْلَيَان", "cuhlayān", "iki daha çok bilgisiz olan", "orta", ""],
+      [244, "جُهْلَيَان", "cuhlayān", "daha çok bilgisiz olan (iki)", "orta", ""],
       [245, "جَهْلَاء", "cahlāʾ", "daha çok bilgisiz olan", "orta", ""],
-      [246, "جَهْلَاآن", "cahlāʾān", "iki daha çok bilgisiz olan", "orta", ""]
+      [246, "جَهْلَاآن", "cahlāʾān", "daha çok bilgisiz olan (iki)", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "جُهَيْل", "cuhayl", "küçük bilgisiz olma", "orta", ""],
-      [250, "جُهَيْلَان", "cuhaylān", "iki küçük bilgisiz olma", "orta", ""],
-      [251, "جُهَيْلَة", "cuhayla", "küçük bilgisiz olma", "orta", ""],
-      [252, "جُهَيْلَتَان", "cuhaylatān", "iki küçük bilgisiz olma", "orta", ""]
+      [249, "جُهَيْل", "cuhayl", "azıcık bilgisiz olma", "orta", ""],
+      [250, "جُهَيْلَان", "cuhaylān", "azıcık bilgisiz olma (iki)", "orta", ""],
+      [251, "جُهَيْلَة", "cuhayla", "azıcık bilgisiz olma", "orta", ""],
+      [252, "جُهَيْلَتَان", "cuhaylatān", "azıcık bilgisiz olma (iki)", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
       [253, "مَجْهَل", "machal", "bilgisiz olma", "orta", ""],
-      [254, "مَجْهَلَان", "machalān", "iki bilgisiz olma", "orta", ""]
+      [254, "مَجْهَلَان", "machalān", "bilgisiz olma (iki)", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [255, "جَهْلَة", "cahla", "bir kere bilgisiz olma", "orta", ""],
-      [256, "جَهْلَتَان", "cahlatān", "iki bir kere bilgisiz olma", "orta", ""]
+      [256, "جَهْلَتَان", "cahlatān", "bir kere bilgisiz olma (iki)", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
       [257, "جِهْلَة", "cihla", "bilgisiz olma tarzı", "orta", ""],
-      [258, "جِهْلَتَان", "cihlatān", "iki bilgisiz olma tarzı", "orta", ""]
+      [258, "جِهْلَتَان", "cihlatān", "bilgisiz olma tarzı (iki)", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "جَهِيل", "cahīl", "sürekli bilgisiz olan", "orta", ""],
-      [260, "جَهِيلَة", "cahīla", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [261, "جَهِيلَان", "cahīlān", "iki sürekli bilgisiz olan", "orta", ""],
-      [262, "جَهِيلَتَان", "cahīlatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [263, "جَهِيلُون", "cahīlūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [264, "جَهِيلِين", "cahīlīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [265, "جَهِيلَات", "cahīlāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [266, "جَهُول", "cahūl", "sürekli bilgisiz olan", "orta", ""],
-      [267, "جَهُولَة", "cahūla", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [268, "جَهُولَان", "cahūlān", "iki sürekli bilgisiz olan", "orta", ""],
-      [269, "جَهُولَتَان", "cahūlatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [270, "جَهُولُون", "cahūlūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [271, "جَهُولِين", "cahūlīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [272, "جَهُولَات", "cahūlāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [273, "جَهِل", "cahil", "sürekli bilgisiz olan", "orta", ""],
-      [274, "جَهِلَة", "cahila", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [275, "جَهِلَان", "cahilān", "iki sürekli bilgisiz olan", "orta", ""],
-      [276, "جَهِلَتَان", "cahilatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [277, "جَهِلُون", "cahilūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [278, "جَهِلِين", "cahilīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [279, "جَهِلَات", "cahilāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [280, "جَهُل", "cahul", "sürekli bilgisiz olan", "orta", ""],
-      [281, "جَهُلَة", "cahula", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [282, "جَهُلَان", "cahulān", "iki sürekli bilgisiz olan", "orta", ""],
-      [283, "جَهُلَتَان", "cahulatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [284, "جَهُلُون", "cahulūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [285, "جَهُلِين", "cahulīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [286, "جَهُلَات", "cahulāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [287, "جَهَل", "cahal", "sürekli bilgisiz olan", "orta", ""],
-      [288, "جَهَلَة", "cahala", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [289, "جَهَلَان", "cahalān", "iki sürekli bilgisiz olan", "orta", ""],
-      [290, "جَهَلَتَان", "cahalatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [291, "جَهَلُون", "cahalūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [292, "جَهَلِين", "cahalīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [293, "جَهَلَات", "cahalāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
+      [259, "جَهِيل", "cahīl", "her daim bilgisiz olan", "orta", ""],
+      [260, "جَهِيلَة", "cahīla", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [261, "جَهِيلَان", "cahīlān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [262, "جَهِيلَتَان", "cahīlatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [263, "جَهِيلُون", "cahīlūn", "her daim bilgisiz olanlar", "orta", ""],
+      [264, "جَهِيلِين", "cahīlīn", "her daim bilgisiz olanlar", "orta", ""],
+      [265, "جَهِيلَات", "cahīlāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [266, "جَهُول", "cahūl", "cahil", "kuran", "Kur'ân"],
+      [267, "جَهُولَة", "cahūla", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [268, "جَهُولَان", "cahūlān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [269, "جَهُولَتَان", "cahūlatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [270, "جَهُولُون", "cahūlūn", "her daim bilgisiz olanlar", "orta", ""],
+      [271, "جَهُولِين", "cahūlīn", "her daim bilgisiz olanlar", "orta", ""],
+      [272, "جَهُولَات", "cahūlāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [273, "جَهِل", "cahil", "her daim bilgisiz olan", "orta", ""],
+      [274, "جَهِلَة", "cahila", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [275, "جَهِلَان", "cahilān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [276, "جَهِلَتَان", "cahilatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [277, "جَهِلُون", "cahilūn", "her daim bilgisiz olanlar", "orta", ""],
+      [278, "جَهِلِين", "cahilīn", "her daim bilgisiz olanlar", "orta", ""],
+      [279, "جَهِلَات", "cahilāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [280, "جَهُل", "cahul", "her daim bilgisiz olan", "orta", ""],
+      [281, "جَهُلَة", "cahula", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [282, "جَهُلَان", "cahulān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [283, "جَهُلَتَان", "cahulatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [284, "جَهُلُون", "cahulūn", "her daim bilgisiz olanlar", "orta", ""],
+      [285, "جَهُلِين", "cahulīn", "her daim bilgisiz olanlar", "orta", ""],
+      [286, "جَهُلَات", "cahulāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [287, "جَهَل", "cahal", "her daim bilgisiz olan", "orta", ""],
+      [288, "جَهَلَة", "cahala", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [289, "جَهَلَان", "cahalān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [290, "جَهَلَتَان", "cahalatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [291, "جَهَلُون", "cahalūn", "her daim bilgisiz olanlar", "orta", ""],
+      [292, "جَهَلِين", "cahalīn", "her daim bilgisiz olanlar", "orta", ""],
+      [293, "جَهَلَات", "cahalāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
       [
         294,
         "جَهْل",
         "cahl",
-        "sürekli bilgisiz olan",
+        "her daim bilgisiz olan",
         "orta",
         "Vikisözlük: masdar (bâb I): to be ignorant of, not to know (with بِ (bi) or transitive)"
       ],
-      [295, "جَهْلَة", "cahla", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [296, "جَهْلَان", "cahlān", "iki sürekli bilgisiz olan", "orta", ""],
-      [297, "جَهْلَتَان", "cahlatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [298, "جَهْلُون", "cahlūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [299, "جَهْلِين", "cahlīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [300, "جَهْلَات", "cahlāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [301, "جُهُل", "cuhul", "sürekli bilgisiz olan", "orta", ""],
-      [302, "جُهُلَة", "cuhula", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [303, "جُهُلَان", "cuhulān", "iki sürekli bilgisiz olan", "orta", ""],
-      [304, "جُهُلَتَان", "cuhulatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [305, "جُهُلُون", "cuhulūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [306, "جُهُلِين", "cuhulīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [307, "جُهُلَات", "cuhulāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [308, "جَهْلَان", "cahlān", "sürekli bilgisiz olan", "orta", ""],
-      [309, "جَهْلَانَة", "cahlāna", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [310, "جَهْلَانَان", "cahlānān", "iki sürekli bilgisiz olan", "orta", ""],
-      [311, "جَهْلَانَتَان", "cahlānatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [312, "جَهْلَانُون", "cahlānūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [313, "جَهْلَانِين", "cahlānīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [314, "جَهْلَانَات", "cahlānāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [315, "جُهَال", "cuhāl", "sürekli bilgisiz olan", "orta", ""],
-      [316, "جُهَالَة", "cuhāla", "sürekli bilgisiz olan (dişi)", "orta", ""],
-      [317, "جُهَالَان", "cuhālān", "iki sürekli bilgisiz olan", "orta", ""],
-      [318, "جُهَالَتَان", "cuhālatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [319, "جُهَالُون", "cuhālūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [320, "جُهَالِين", "cuhālīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [321, "جُهَالَات", "cuhālāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""],
-      [322, "جَهَال", "cahāl", "sürekli bilgisiz olan", "orta", ""],
+      [295, "جَهْلَة", "cahla", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [296, "جَهْلَان", "cahlān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [297, "جَهْلَتَان", "cahlatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [298, "جَهْلُون", "cahlūn", "her daim bilgisiz olanlar", "orta", ""],
+      [299, "جَهْلِين", "cahlīn", "her daim bilgisiz olanlar", "orta", ""],
+      [300, "جَهْلَات", "cahlāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [301, "جُهُل", "cuhul", "her daim bilgisiz olan", "orta", ""],
+      [302, "جُهُلَة", "cuhula", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [303, "جُهُلَان", "cuhulān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [304, "جُهُلَتَان", "cuhulatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [305, "جُهُلُون", "cuhulūn", "her daim bilgisiz olanlar", "orta", ""],
+      [306, "جُهُلِين", "cuhulīn", "her daim bilgisiz olanlar", "orta", ""],
+      [307, "جُهُلَات", "cuhulāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [308, "جَهْلَان", "cahlān", "her daim bilgisiz olan", "orta", ""],
+      [309, "جَهْلَانَة", "cahlāna", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [310, "جَهْلَانَان", "cahlānān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [311, "جَهْلَانَتَان", "cahlānatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [312, "جَهْلَانُون", "cahlānūn", "her daim bilgisiz olanlar", "orta", ""],
+      [313, "جَهْلَانِين", "cahlānīn", "her daim bilgisiz olanlar", "orta", ""],
+      [314, "جَهْلَانَات", "cahlānāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [315, "جُهَال", "cuhāl", "her daim bilgisiz olan", "orta", ""],
+      [316, "جُهَالَة", "cuhāla", "her daim bilgisiz olan (müennes)", "orta", ""],
+      [317, "جُهَالَان", "cuhālān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [318, "جُهَالَتَان", "cuhālatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [319, "جُهَالُون", "cuhālūn", "her daim bilgisiz olanlar", "orta", ""],
+      [320, "جُهَالِين", "cuhālīn", "her daim bilgisiz olanlar", "orta", ""],
+      [321, "جُهَالَات", "cuhālāt", "her daim bilgisiz olanlar (müennes)", "orta", ""],
+      [322, "جَهَال", "cahāl", "her daim bilgisiz olan", "orta", ""],
       [
         323,
         "جَهَالَة",
         "cahāla",
-        "sürekli bilgisiz olan (dişi)",
+        "her daim bilgisiz olan (müennes)",
         "orta",
         "Vikisözlük: verbal noun of جَهِلَ (jahila, “to be ignorant, be stupid”) (form I)"
       ],
-      [324, "جَهَالَان", "cahālān", "iki sürekli bilgisiz olan", "orta", ""],
-      [325, "جَهَالَتَان", "cahālatān", "iki sürekli bilgisiz olan (dişi)", "orta", ""],
-      [326, "جَهَالُون", "cahālūn", "sürekli bilgisiz olanlar", "orta", ""],
-      [327, "جَهَالِين", "cahālīn", "sürekli bilgisiz olanlar", "orta", ""],
-      [328, "جَهَالَات", "cahālāt", "sürekli bilgisiz olanlar (dişi)", "orta", ""]
+      [324, "جَهَالَان", "cahālān", "her daim bilgisiz olan (iki)", "orta", ""],
+      [325, "جَهَالَتَان", "cahālatān", "her daim bilgisiz olan (iki, müennes)", "orta", ""],
+      [326, "جَهَالُون", "cahālūn", "her daim bilgisiz olanlar", "orta", ""],
+      [327, "جَهَالِين", "cahālīn", "her daim bilgisiz olanlar", "orta", ""],
+      [328, "جَهَالَات", "cahālāt", "her daim bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "mübalağa": [
-      [329, "جَهَّال", "cahhāl", "çok bilgisiz olan", "orta", ""],
-      [330, "جَهَّالَة", "cahhāla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [331, "جَهَّالَان", "cahhālān", "iki çok bilgisiz olan", "orta", ""],
-      [332, "جَهَّالَتَان", "cahhālatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [333, "جَهَّالُون", "cahhālūn", "çok bilgisiz olanlar", "orta", ""],
-      [334, "جَهَّالِين", "cahhālīn", "çok bilgisiz olanlar", "orta", ""],
-      [335, "جَهَّالَات", "cahhālāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [336, "جَهَّالَة", "cahhāla", "çok bilgisiz olan", "orta", ""],
-      [337, "جَهَّالَتَان", "cahhālatān", "iki çok bilgisiz olan", "orta", ""],
-      [338, "جَهَّالَات", "cahhālāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [339, "جَهُول", "cahūl", "çok bilgisiz olan", "orta", ""],
-      [340, "جَهُولَة", "cahūla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [341, "جَهُولَان", "cahūlān", "iki çok bilgisiz olan", "orta", ""],
-      [342, "جَهُولَتَان", "cahūlatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
+      [329, "جَهَّال", "cahhāl", "işi bilgisiz olma olan", "orta", ""],
+      [330, "جَهَّالَة", "cahhāla", "işi bilgisiz olma olan (müennes)", "orta", ""],
+      [331, "جَهَّالَان", "cahhālān", "işi bilgisiz olma olan (iki)", "orta", ""],
+      [332, "جَهَّالَتَان", "cahhālatān", "işi bilgisiz olma olan (iki, müennes)", "orta", ""],
+      [333, "جَهَّالُون", "cahhālūn", "işi bilgisiz olma olanlar", "orta", ""],
+      [334, "جَهَّالِين", "cahhālīn", "işi bilgisiz olma olanlar", "orta", ""],
+      [335, "جَهَّالَات", "cahhālāt", "işi bilgisiz olma olanlar (müennes)", "orta", ""],
+      [336, "جَهَّالَة", "cahhāla", "pek çok bilgisiz olan", "orta", ""],
+      [337, "جَهَّالَتَان", "cahhālatān", "pek çok bilgisiz olan (iki)", "orta", ""],
+      [338, "جَهَّالَات", "cahhālāt", "pek çok bilgisiz olanlar (müennes)", "orta", ""],
+      [339, "جَهُول", "cahūl", "cahil", "kuran", "Kur'ân"],
+      [340, "جَهُولَة", "cahūla", "çok bilgisiz olan (müennes)", "orta", ""],
+      [341, "جَهُولَان", "cahūlān", "çok bilgisiz olan (iki)", "orta", ""],
+      [342, "جَهُولَتَان", "cahūlatān", "çok bilgisiz olan (iki, müennes)", "orta", ""],
       [343, "جَهُولُون", "cahūlūn", "çok bilgisiz olanlar", "orta", ""],
       [344, "جَهُولِين", "cahūlīn", "çok bilgisiz olanlar", "orta", ""],
-      [345, "جَهُولَات", "cahūlāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [346, "جَهُّول", "cahhūl", "çok bilgisiz olan", "orta", ""],
-      [347, "جَهُّولَة", "cahhūla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [348, "جَهُّولَان", "cahhūlān", "iki çok bilgisiz olan", "orta", ""],
-      [349, "جَهُّولَتَان", "cahhūlatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [350, "جَهُّولُون", "cahhūlūn", "çok bilgisiz olanlar", "orta", ""],
-      [351, "جَهُّولِين", "cahhūlīn", "çok bilgisiz olanlar", "orta", ""],
-      [352, "جَهُّولَات", "cahhūlāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [353, "جِهِّيل", "cihhīl", "çok bilgisiz olan", "orta", ""],
-      [354, "جِهِّيلَة", "cihhīla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [355, "جِهِّيلَان", "cihhīlān", "iki çok bilgisiz olan", "orta", ""],
-      [356, "جِهِّيلَتَان", "cihhīlatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [357, "جِهِّيلُون", "cihhīlūn", "çok bilgisiz olanlar", "orta", ""],
-      [358, "جِهِّيلِين", "cihhīlīn", "çok bilgisiz olanlar", "orta", ""],
-      [359, "جِهِّيلَات", "cihhīlāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [360, "جُهَّال", "cuhhāl", "çok bilgisiz olan", "orta", ""],
-      [361, "جُهَّالَة", "cuhhāla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [362, "جُهَّالَان", "cuhhālān", "iki çok bilgisiz olan", "orta", ""],
-      [363, "جُهَّالَتَان", "cuhhālatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [364, "جُهَّالُون", "cuhhālūn", "çok bilgisiz olanlar", "orta", ""],
-      [365, "جُهَّالِين", "cuhhālīn", "çok bilgisiz olanlar", "orta", ""],
-      [366, "جُهَّالَات", "cuhhālāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [367, "مِجْهَال", "michāl", "çok bilgisiz olan", "orta", ""],
-      [368, "مِجْهَالَة", "michāla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [369, "مِجْهَالَان", "michālān", "iki çok bilgisiz olan", "orta", ""],
-      [370, "مِجْهَالَتَان", "michālatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [371, "مِجْهَالُون", "michālūn", "çok bilgisiz olanlar", "orta", ""],
-      [372, "مِجْهَالِين", "michālīn", "çok bilgisiz olanlar", "orta", ""],
-      [373, "مِجْهَالَات", "michālāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
-      [374, "مِجْهِيل", "michīl", "çok bilgisiz olan", "orta", ""],
-      [375, "مِجْهِيلَة", "michīla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [376, "مِجْهِيلَان", "michīlān", "iki çok bilgisiz olan", "orta", ""],
-      [377, "مِجْهِيلَتَان", "michīlatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
-      [378, "مِجْهِيلُون", "michīlūn", "çok bilgisiz olanlar", "orta", ""],
-      [379, "مِجْهِيلِين", "michīlīn", "çok bilgisiz olanlar", "orta", ""],
-      [380, "مِجْهِيلَات", "michīlāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
+      [345, "جَهُولَات", "cahūlāt", "çok bilgisiz olanlar (müennes)", "orta", ""],
+      [346, "جَهُّول", "cahhūl", "pek çok bilgisiz olan", "orta", ""],
+      [347, "جَهُّولَة", "cahhūla", "pek çok bilgisiz olan (müennes)", "orta", ""],
+      [348, "جَهُّولَان", "cahhūlān", "pek çok bilgisiz olan (iki)", "orta", ""],
+      [349, "جَهُّولَتَان", "cahhūlatān", "pek çok bilgisiz olan (iki, müennes)", "orta", ""],
+      [350, "جَهُّولُون", "cahhūlūn", "pek çok bilgisiz olanlar", "orta", ""],
+      [351, "جَهُّولِين", "cahhūlīn", "pek çok bilgisiz olanlar", "orta", ""],
+      [352, "جَهُّولَات", "cahhūlāt", "pek çok bilgisiz olanlar (müennes)", "orta", ""],
+      [353, "جِهِّيل", "cihhīl", "bilgisiz olmada aşırı giden", "orta", ""],
+      [354, "جِهِّيلَة", "cihhīla", "bilgisiz olmada aşırı giden (müennes)", "orta", ""],
+      [355, "جِهِّيلَان", "cihhīlān", "bilgisiz olmada aşırı giden (iki)", "orta", ""],
+      [356, "جِهِّيلَتَان", "cihhīlatān", "bilgisiz olmada aşırı giden (iki, müennes)", "orta", ""],
+      [357, "جِهِّيلُون", "cihhīlūn", "bilgisiz olmada aşırı gidenler", "orta", ""],
+      [358, "جِهِّيلِين", "cihhīlīn", "bilgisiz olmada aşırı gidenler", "orta", ""],
+      [359, "جِهِّيلَات", "cihhīlāt", "bilgisiz olmada aşırı gidenler (müennes)", "orta", ""],
+      [360, "جُهَّال", "cuhhāl", "son derece bilgisiz olan", "orta", ""],
+      [361, "جُهَّالَة", "cuhhāla", "son derece bilgisiz olan (müennes)", "orta", ""],
+      [362, "جُهَّالَان", "cuhhālān", "son derece bilgisiz olan (iki)", "orta", ""],
+      [363, "جُهَّالَتَان", "cuhhālatān", "son derece bilgisiz olan (iki, müennes)", "orta", ""],
+      [364, "جُهَّالُون", "cuhhālūn", "son derece bilgisiz olanlar", "orta", ""],
+      [365, "جُهَّالِين", "cuhhālīn", "son derece bilgisiz olanlar", "orta", ""],
+      [366, "جُهَّالَات", "cuhhālāt", "son derece bilgisiz olanlar (müennes)", "orta", ""],
+      [367, "مِجْهَال", "michāl", "bilgisiz olmayı âdet edinmiş", "orta", ""],
+      [368, "مِجْهَالَة", "michāla", "bilgisiz olmayı âdet edinmiş (müennes)", "orta", ""],
+      [369, "مِجْهَالَان", "michālān", "bilgisiz olmayı âdet edinmiş (iki)", "orta", ""],
+      [370, "مِجْهَالَتَان", "michālatān", "bilgisiz olmayı âdet edinmiş (iki, müennes)", "orta", ""],
+      [371, "مِجْهَالُون", "michālūn", "bilgisiz olmayı âdet edinmişler", "orta", ""],
+      [372, "مِجْهَالِين", "michālīn", "bilgisiz olmayı âdet edinmişler", "orta", ""],
+      [373, "مِجْهَالَات", "michālāt", "bilgisiz olmayı âdet edinmişler (müennes)", "orta", ""],
+      [374, "مِجْهِيل", "michīl", "bilgisiz olmaya düşkün", "orta", ""],
+      [375, "مِجْهِيلَة", "michīla", "bilgisiz olmaya düşkün (müennes)", "orta", ""],
+      [376, "مِجْهِيلَان", "michīlān", "bilgisiz olmaya düşkün (iki)", "orta", ""],
+      [377, "مِجْهِيلَتَان", "michīlatān", "bilgisiz olmaya düşkün (iki, müennes)", "orta", ""],
+      [378, "مِجْهِيلُون", "michīlūn", "bilgisiz olmaya düşkünler", "orta", ""],
+      [379, "مِجْهِيلِين", "michīlīn", "bilgisiz olmaya düşkünler", "orta", ""],
+      [380, "مِجْهِيلَات", "michīlāt", "bilgisiz olmaya düşkünler (müennes)", "orta", ""],
       [381, "جَهِيل", "cahīl", "çok bilgisiz olan", "orta", ""],
-      [382, "جَهِيلَة", "cahīla", "çok bilgisiz olan (dişi)", "orta", ""],
-      [383, "جَهِيلَان", "cahīlān", "iki çok bilgisiz olan", "orta", ""],
-      [384, "جَهِيلَتَان", "cahīlatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
+      [382, "جَهِيلَة", "cahīla", "çok bilgisiz olan (müennes)", "orta", ""],
+      [383, "جَهِيلَان", "cahīlān", "çok bilgisiz olan (iki)", "orta", ""],
+      [384, "جَهِيلَتَان", "cahīlatān", "çok bilgisiz olan (iki, müennes)", "orta", ""],
       [385, "جَهِيلُون", "cahīlūn", "çok bilgisiz olanlar", "orta", ""],
       [386, "جَهِيلِين", "cahīlīn", "çok bilgisiz olanlar", "orta", ""],
-      [387, "جَهِيلَات", "cahīlāt", "çok bilgisiz olanlar (dişi)", "orta", ""],
+      [387, "جَهِيلَات", "cahīlāt", "çok bilgisiz olanlar (müennes)", "orta", ""],
       [388, "جَهَّل", "cahhal", "çok bilgisiz olan", "orta", ""],
-      [389, "جَهَّلَة", "cahhala", "çok bilgisiz olan (dişi)", "orta", ""],
-      [390, "جَهَّلَان", "cahhalān", "iki çok bilgisiz olan", "orta", ""],
-      [391, "جَهَّلَتَان", "cahhalatān", "iki çok bilgisiz olan (dişi)", "orta", ""],
+      [389, "جَهَّلَة", "cahhala", "çok bilgisiz olan (müennes)", "orta", ""],
+      [390, "جَهَّلَان", "cahhalān", "çok bilgisiz olan (iki)", "orta", ""],
+      [391, "جَهَّلَتَان", "cahhalatān", "çok bilgisiz olan (iki, müennes)", "orta", ""],
       [392, "جَهَّلُون", "cahhalūn", "çok bilgisiz olanlar", "orta", ""],
       [393, "جَهَّلِين", "cahhalīn", "çok bilgisiz olanlar", "orta", ""],
-      [394, "جَهَّلَات", "cahhalāt", "çok bilgisiz olanlar (dişi)", "orta", ""]
+      [394, "جَهَّلَات", "cahhalāt", "çok bilgisiz olanlar (müennes)", "orta", ""]
     ],
     "mensûb": [
-      [395, "جَهْلِيّ", "cahliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [397, "جَهَلِيّ", "cahaliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [399, "جِهْلِيّ", "cihliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [401, "جُهْلِيّ", "cuhliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [403, "جِهَالِيّ", "cihāliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [405, "جَاهِلِيّ", "cāhiliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [407, "مَجْهُولِيّ", "machūliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [409, "جَهِيلِيّ", "cahīliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [411, "مَجْهَلِيّ", "machaliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [413, "تَجْهِيلِيّ", "tachīliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [415, "تَجَاهُلِيّ", "tacāhuliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [417, "إِجْهَالِيّ", "ʾichāliyy", "bilgisiz olmaya ilgili", "orta", ""],
-      [419, "اِجْتِهَالِيّ", "ictihāliyy", "bilgisiz olmaya ilgili", "orta", ""]
+      [395, "جَهْلِيّ", "cahliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [397, "جَهَلِيّ", "cahaliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [399, "جِهْلِيّ", "cihliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [401, "جُهْلِيّ", "cuhliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [403, "جِهَالِيّ", "cihāliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [405, "جَاهِلِيّ", "cāhiliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [407, "مَجْهُولِيّ", "machūliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [409, "جَهِيلِيّ", "cahīliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [411, "مَجْهَلِيّ", "machaliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [413, "تَجْهِيلِيّ", "tachīliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [415, "تَجَاهُلِيّ", "tacāhuliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [417, "إِجْهَالِيّ", "ʾichāliyy", "bilgisiz olma ile ilgili", "orta", ""],
+      [419, "اِجْتِهَالِيّ", "ictihāliyy", "bilgisiz olma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
       [396, "جَهْلِيَّة", "cahliyya", "bilgisiz olanlık", "orta", ""],
@@ -585,95 +592,95 @@
       [429, "جِهْل", "cihl", "bilgisiz olma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "جَاهُول", "cāhūl", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [432, "جَهَلَة", "cahala", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [433, "جُهَلَة", "cuhala", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [434, "أُجْهُولَة", "ʾuchūla", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [435, "جَوْهَل", "cawhal", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [437, "جَيْهَل", "cayhal", "bilgisiz olanlar (topluluk adı)", "orta", ""],
+      [430, "جَاهُول", "cāhūl", "bilgisiz olma türünden şey", "orta", ""],
+      [432, "جَهَلَة", "cahala", "bilgisiz olma türünden şey", "orta", ""],
+      [433, "جُهَلَة", "cuhala", "bilgisiz olma türünden şey", "orta", ""],
+      [434, "أُجْهُولَة", "ʾuchūla", "bilgisiz olma türünden şey", "orta", ""],
+      [435, "جَوْهَل", "cawhal", "bilgisiz olma türünden şey", "orta", ""],
+      [437, "جَيْهَل", "cayhal", "bilgisiz olma türünden şey", "orta", ""],
       [
         439,
         "جَهْل",
         "cahl",
-        "bilgisiz olanlar (topluluk adı)",
+        "bilgisiz olma türünden şey",
         "orta",
         "Vikisözlük: masdar (bâb I): to be ignorant of, not to know (with بِ (bi) or transitive)"
       ],
-      [441, "جَهَل", "cahal", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [443, "جِهْل", "cihl", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [445, "جُهْل", "cuhl", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [447, "جَهِيل", "cahīl", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [449, "جِهَل", "cihal", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [451, "جُهُل", "cuhul", "bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [453, "جَهَال", "cahāl", "bilgisiz olanlar (topluluk adı)", "orta", ""]
+      [441, "جَهَل", "cahal", "bilgisiz olma türünden şey", "orta", ""],
+      [443, "جِهْل", "cihl", "bilgisiz olma türünden şey", "orta", ""],
+      [445, "جُهْل", "cuhl", "bilgisiz olma türünden şey", "orta", ""],
+      [447, "جَهِيل", "cahīl", "bilgisiz olma türünden şey", "orta", ""],
+      [449, "جِهَل", "cihal", "bilgisiz olma türünden şey", "orta", ""],
+      [451, "جُهُل", "cuhul", "bilgisiz olma türünden şey", "orta", ""],
+      [453, "جَهَال", "cahāl", "bilgisiz olma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "جَاهُولَة", "cāhūla", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [436, "جَوْهَلَة", "cawhala", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [438, "جَيْهَلَة", "cayhala", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [440, "جَهْلَة", "cahla", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [442, "جَهَلَة", "cahala", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [444, "جِهْلَة", "cihla", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [446, "جُهْلَة", "cuhla", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [448, "جَهِيلَة", "cahīla", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [450, "جِهَلَة", "cihala", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
-      [452, "جُهُلَة", "cuhula", "bir tane bilgisiz olanlar (topluluk adı)", "orta", ""],
+      [431, "جَاهُولَة", "cāhūla", "bilgisiz olma türünden bir tane", "orta", ""],
+      [436, "جَوْهَلَة", "cawhala", "bilgisiz olma türünden bir tane", "orta", ""],
+      [438, "جَيْهَلَة", "cayhala", "bilgisiz olma türünden bir tane", "orta", ""],
+      [440, "جَهْلَة", "cahla", "bilgisiz olma türünden bir tane", "orta", ""],
+      [442, "جَهَلَة", "cahala", "bilgisiz olma türünden bir tane", "orta", ""],
+      [444, "جِهْلَة", "cihla", "bilgisiz olma türünden bir tane", "orta", ""],
+      [446, "جُهْلَة", "cuhla", "bilgisiz olma türünden bir tane", "orta", ""],
+      [448, "جَهِيلَة", "cahīla", "bilgisiz olma türünden bir tane", "orta", ""],
+      [450, "جِهَلَة", "cihala", "bilgisiz olma türünden bir tane", "orta", ""],
+      [452, "جُهُلَة", "cuhula", "bilgisiz olma türünden bir tane", "orta", ""],
       [
         454,
         "جَهَالَة",
         "cahāla",
-        "bir tane bilgisiz olanlar (topluluk adı)",
+        "bilgisiz olma türünden bir tane",
         "orta",
         "Vikisözlük: verbal noun of جَهِلَ (jahila, “to be ignorant, be stupid”) (form I)"
       ]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَجْهَال", "ʾachāl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [456, "أَجْهِلَة", "ʾachila", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [457, "أَجَاهِل", "ʾacāhil", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [458, "أَجَاهِيل", "ʾacāhīl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [459, "جُهُول", "cuhūl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [460, "جُهُل", "cuhul", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [461, "جِهَال", "cihāl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [462, "جِهَل", "cihal", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [463, "جِهَلَة", "cihala", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [464, "جُهَل", "cuhal", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [465, "جُهَلاء", "cuhalāʾ", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [466, "جَهَلَة", "cahala", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [467, "جُهَّال", "cuhhāl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [468, "جَهَال", "cahāl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [469, "جَهَل", "cahal", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [470, "مَجَاهِل", "macāhil", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [471, "مَجَاهِيل", "macāhīl", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [472, "جَوَاهِل", "cawāhil", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [473, "أَجْهُل", "ʾachul", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [474, "جُهَّل", "cuhhal", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [475, "جَهَائِل", "cahāʾil", "bilgisiz olanlar (kırık çoğul)", "orta", ""],
-      [476, "جُهَيْل", "cuhayl", "bilgisiz olanlar (kırık çoğul)", "orta", ""]
+      [455, "أَجْهَال", "ʾachāl", "bilgisiz olmalar", "orta", ""],
+      [456, "أَجْهِلَة", "ʾachila", "bilgisiz olmalar", "orta", ""],
+      [457, "أَجَاهِل", "ʾacāhil", "bilgisiz olmalar", "orta", ""],
+      [458, "أَجَاهِيل", "ʾacāhīl", "bilgisiz olmalar", "orta", ""],
+      [459, "جُهُول", "cuhūl", "bilgisiz olmalar", "orta", ""],
+      [460, "جُهُل", "cuhul", "bilgisiz olmalar", "orta", ""],
+      [461, "جِهَال", "cihāl", "bilgisiz olmalar", "orta", ""],
+      [462, "جِهَل", "cihal", "bilgisiz olmalar", "orta", ""],
+      [463, "جِهَلَة", "cihala", "bilgisiz olmalar", "orta", ""],
+      [464, "جُهَل", "cuhal", "bilgisiz olmalar", "orta", ""],
+      [465, "جُهَلاء", "cuhalāʾ", "bilgisiz olmalar", "orta", ""],
+      [466, "جَهَلَة", "cahala", "bilgisiz olmalar", "orta", ""],
+      [467, "جُهَّال", "cuhhāl", "bilgisiz olmalar", "orta", ""],
+      [468, "جَهَال", "cahāl", "bilgisiz olmalar", "orta", ""],
+      [469, "جَهَل", "cahal", "bilgisiz olmalar", "orta", ""],
+      [470, "مَجَاهِل", "macāhil", "bilgisiz olmalar", "orta", ""],
+      [471, "مَجَاهِيل", "macāhīl", "bilgisiz olmalar", "orta", ""],
+      [472, "جَوَاهِل", "cawāhil", "bilgisiz olmalar", "orta", ""],
+      [473, "أَجْهُل", "ʾachul", "bilgisiz olmalar", "orta", ""],
+      [474, "جُهَّل", "cuhhal", "bilgisiz olmalar", "orta", ""],
+      [475, "جَهَائِل", "cahāʾil", "bilgisiz olmalar", "orta", ""],
+      [476, "جُهَيْل", "cuhayl", "bilgisiz olmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَجْهَالَات", "ʾachālāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [478, "أَجْهِلَات", "ʾachilāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [479, "أَجَاهِلَات", "ʾacāhilāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [480, "أَجَاهِيلَات", "ʾacāhīlāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [481, "جُهُولَات", "cuhūlāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [482, "جُهُلَات", "cuhulāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [483, "جِهَالَات", "cihālāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [484, "جِهَلَات", "cihalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [485, "جِهَلَات", "cihalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [486, "جُهَلَات", "cuhalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [487, "جُهَلاآت", "cuhalāʾāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [488, "جَهَلَات", "cahalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [489, "جُهَّالَات", "cuhhālāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [490, "جَهَالَات", "cahālāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [491, "جَهَلَات", "cahalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [492, "مَجَاهِلَات", "macāhilāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [493, "مَجَاهِيلَات", "macāhīlāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [494, "جَوَاهِلَات", "cawāhilāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [495, "أَجْهُلَات", "ʾachulāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [496, "جُهَّلَات", "cuhhalāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [497, "جَهَائِلَات", "cahāʾilāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""],
-      [498, "جُهَيْلَات", "cuhaylāt", "bilgisiz olanlar (çoğulun çoğulu)", "orta", ""]
+      [477, "أَجْهَالَات", "ʾachālāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [478, "أَجْهِلَات", "ʾachilāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [479, "أَجَاهِلَات", "ʾacāhilāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [480, "أَجَاهِيلَات", "ʾacāhīlāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [481, "جُهُولَات", "cuhūlāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [482, "جُهُلَات", "cuhulāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [483, "جِهَالَات", "cihālāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [484, "جِهَلَات", "cihalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [485, "جِهَلَات", "cihalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [486, "جُهَلَات", "cuhalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [487, "جُهَلاآت", "cuhalāʾāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [488, "جَهَلَات", "cahalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [489, "جُهَّالَات", "cuhhālāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [490, "جَهَالَات", "cahālāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [491, "جَهَلَات", "cahalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [492, "مَجَاهِلَات", "macāhilāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [493, "مَجَاهِيلَات", "macāhīlāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [494, "جَوَاهِلَات", "cawāhilāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [495, "أَجْهُلَات", "ʾachulāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [496, "جُهَّلَات", "cuhhalāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [497, "جَهَائِلَات", "cahāʾilāt", "bilgisiz olmalar topluluğu", "orta", ""],
+      [498, "جُهَيْلَات", "cuhaylāt", "bilgisiz olmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [
