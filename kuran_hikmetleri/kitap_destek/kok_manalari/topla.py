@@ -13,7 +13,10 @@ def parca(s):
 def sade(x): return x.lower().translate(str.maketrans('âîûÂÎÛ', 'aiuaiu')).replace("'", '')
 def ekle(L, x):
     x = x.strip()
-    if x and sade(x) not in [sade(y) for y in L]: L.append(x)
+    if not x: return
+    var = {sade(p).strip() for y in L for p in y.split(',')}
+    if all(sade(p).strip() in var for p in x.split(',')): return
+    L.append(x)
 def etym(m):
     t = m.get('kok_maddesi', '') if isinstance(m, dict) else ''
     return [q.strip() for q in re.findall(r'‘([^’]+)’', t) if q.strip() and q.strip() != '…']
@@ -41,6 +44,8 @@ for f in sorted(glob.glob(str(KOK / '*.json'))):
              'cebel_mihver': ((s.get('cebel_mihveri') or {}).get('mihveri') or '').split('.')[0].strip()}
 TER = {}
 for f in sorted((HERE / 'tercume').glob('*.json')): TER.update(json.loads(f.read_text(encoding='utf-8')))
+for f in sorted((HERE / 'tercume_ek').glob('*.json')):
+    for k, L in json.loads(f.read_text(encoding='utf-8')).items(): TER.setdefault(k, []).extend(L)
 for k, v in VT.items():
     L = []
     for x in TER.get(k, []): ekle(L, x)
