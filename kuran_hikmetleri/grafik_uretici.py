@@ -635,6 +635,7 @@ document.querySelectorAll('.segment-rect').forEach(rect => {{
     tooltip.style.display = 'none';
   }});
 }});
+document.addEventListener('pointerdown', (e) => {{ if (!e.target.closest('.segment-rect')) tooltip.style.display = 'none'; }});
 
 function showSurahModal(sno) {{
   window.open('sureler/' + sno + '_detay.html', '_blank');

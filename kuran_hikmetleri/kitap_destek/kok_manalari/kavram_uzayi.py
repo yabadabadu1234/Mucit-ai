@@ -95,8 +95,8 @@ function _ciz(){const r=s.getBoundingClientRect(),sc=r.width/vb[2];let h='';
   const [t,rc]=agac(v[9],v[0],v[1],v[8]);let m='';if(rc*sc>40){yukle(v[6]);m=mustak(v[6],v[0],v[1],rc)}
   h+=`<clipPath id="kp${v[7]}"><use href="#c${v[7]}"/></clipPath><g clip-path="url(#kp${v[7]})">${t}${m}</g>`}
  ic.innerHTML=h}
-s.addEventListener('wheel',ciz);s.addEventListener('pointermove',()=>{if(dr)ciz()});
-s.ondblclick=e=>{const r=s.getBoundingClientRect(),mx=vb[0]+(e.clientX-r.left)/r.width*vb[2],my=vb[1]+(e.clientY-r.top)/r.height*vb[3];vb=[mx-vb[2]/6,my-vb[3]/6,vb[2]/3,vb[3]/3];up();ciz()};
+
+s.ondblclick=e=>yakin(1/3,e.clientX,e.clientY);
 '''
 RENK = ['#7a7a7a', '#5a7a2a', '#b3541e', '#2f6fb3', '#8a3fa0', '#a0304a', '#2c8c7c', '#b8860b', '#6b5a3a']
 cer = box(40, 40, 1760, 1760)
@@ -130,19 +130,30 @@ HTML = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name
 <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet"><style>
 :root{{--zemin:#fbf8ef;--yazi:#2b2410;--ince:#8a7f62}}@media (prefers-color-scheme:dark){{:root:not([data-theme=light]){{--zemin:#1d1b16;--yazi:#eee6cf;--ince:#a99f83}}}}
 body{{margin:0;background:var(--zemin);color:var(--yazi);font-family:Georgia,serif}}#lej{{padding:8px 16px;font-size:13px;display:flex;flex-wrap:wrap;gap:12px}}
-#lej i{{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}}svg{{width:100%;height:calc(100vh - 60px);cursor:grab}}
+#lej i{{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:4px}}svg{{width:100%;height:calc(100vh - 60px);cursor:grab;touch-action:none}}
 .k text{{font-family:Amiri,serif;font-size:8.5px;fill:var(--yazi)}}.k circle{{fill:var(--yazi)}}.kad{{font-size:14px;font-weight:bold;text-anchor:middle;fill:var(--yazi);paint-order:stroke;stroke:var(--zemin);stroke-width:4;pointer-events:none}}
 #bil{{position:fixed;right:12px;top:60px;max-width:300px;background:var(--zemin);border:1px solid var(--ince);padding:8px;font-size:13px;display:none}}.cz{{stroke:#b8860b;stroke-width:1.5}}path,line{{vector-effect:non-scaling-stroke}}#s.yakin .kad{{display:none}}.ici{{fill:var(--yazi);font-family:Georgia,serif}}.ar{{font-family:Amiri,serif;fill:var(--yazi)}}#s.yakin .k{{display:none}}</style></head><body>
 <div id="lej"><a href="../../kuran_hikmetleri_kitap.html" style="color:inherit;margin-right:10px">← Kitap</a>{lej}<span style="color:var(--ince)">· her hücre bir kökün bir aslı (¹ ² birinci, ikinci asıl) · kalın sınır: kavram · ince sınır: mana bölgesi · yaklaştıkça hücrenin içinde türeme ağacı, merkezinde müştak ağı belirir (çift tık: yaklaş)</span></div>
 <svg id="s" viewBox="0 0 1800 1800"><g>{''.join(svg)}<g id="ic"></g><g id="cz"></g></g></svg><div id="bil"></div>
 <script>const V={json.dumps(VER, ensure_ascii=False)};
-const s=document.getElementById('s');let vb=[0,0,1800,1800],dr=null;const up=()=>s.setAttribute('viewBox',vb.join(' '));
-s.onwheel=e=>{{e.preventDefault();const f=e.deltaY>0?1.15:0.87,r=s.getBoundingClientRect(),mx=vb[0]+(e.clientX-r.left)/r.width*vb[2],my=vb[1]+(e.clientY-r.top)/r.height*vb[3];vb=[mx-(mx-vb[0])*f,my-(my-vb[1])*f,vb[2]*f,vb[3]*f];up()}};
-s.onpointerdown=e=>dr=[e.clientX,e.clientY,vb[0],vb[1]];onpointerup=()=>dr=null;s.onpointermove=e=>{{if(!dr)return;const r=s.getBoundingClientRect();vb[0]=dr[2]-(e.clientX-dr[0])/r.width*vb[2];vb[1]=dr[3]-(e.clientY-dr[1])/r.height*vb[3];up()}};
-JS_YER
-document.querySelectorAll('.k').forEach(g=>g.onclick=()=>{{const k=g.dataset.k,v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k);
+const s=document.getElementById('s');let vb=[0,0,1800,1800],secK=null;const up=()=>s.setAttribute('viewBox',vb.join(' '));
+const dunya=(x,y)=>{{const r=s.getBoundingClientRect();return [vb[0]+(x-r.left)/r.width*vb[2],vb[1]+(y-r.top)/r.height*vb[3]]}};
+function yakin(f,x,y){{const [mx,my]=dunya(x,y);vb=[mx-(mx-vb[0])*f,my-(my-vb[1])*f,vb[2]*f,vb[3]*f];up();ciz()}}
+s.addEventListener('wheel',e=>{{e.preventDefault();yakin(e.deltaY>0?1.15:0.87,e.clientX,e.clientY)}},{{passive:false}});
+const P=new Map();let hareket=0,ilkD=0;
+s.addEventListener('pointerdown',e=>{{s.setPointerCapture(e.pointerId);P.set(e.pointerId,[e.clientX,e.clientY]);hareket=0;if(P.size==2){{const v=[...P.values()];ilkD=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1])}}}});
+s.addEventListener('pointermove',e=>{{const o=P.get(e.pointerId);if(!o)return;
+ if(P.size==1){{const r=s.getBoundingClientRect();vb[0]-=(e.clientX-o[0])/r.width*vb[2];vb[1]-=(e.clientY-o[1])/r.height*vb[3];hareket+=Math.abs(e.clientX-o[0])+Math.abs(e.clientY-o[1]);P.set(e.pointerId,[e.clientX,e.clientY]);up();ciz()}}
+ else{{P.set(e.pointerId,[e.clientX,e.clientY]);const v=[...P.values()],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);if(ilkD>0)yakin(ilkD/d,(v[0][0]+v[1][0])/2,(v[0][1]+v[1][1])/2);ilkD=d;hareket+=99}}}});
+function birak(e){{P.delete(e.pointerId);if(P.size<2)ilkD=0}}
+s.addEventListener('pointercancel',birak);
+s.addEventListener('pointerup',e=>{{const h=hareket;birak(e);if(h>6||P.size)return;const q=document.elementFromPoint(e.clientX,e.clientY),g=q&&q.closest('.k');const hk=g?g.dataset.k:(q&&q.id&&/^c\d+$/.test(q.id)?IDX[+q.id.slice(1)]:null);if(hk&&hk!==secK)sec(hk);else temizle()}});
+function temizle(){{secK=null;document.getElementById('cz').innerHTML='';document.getElementById('bil').style.display='none'}}
+function sec(k){{secK=k;const v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k);
 document.getElementById('cz').innerHTML=v[5].map(n=>`<line class="cz" x1="${{v[0]}}" y1="${{v[1]}}" x2="${{V[n][0]}}" y2="${{V[n][1]}}"/>`).join('')+kard.map(n=>`<line x1="${{v[0]}}" y1="${{v[1]}}" x2="${{V[n][0]}}" y2="${{V[n][1]}}" stroke="#a0304a" stroke-dasharray="4 3" stroke-width="1.3"/>`).join('');
-const b=document.getElementById('bil');b.style.display='block';b.innerHTML=`<b style="font-family:Amiri;font-size:22px">${{k}}</b> ${{v[4]}}<br>${{v[2]}} › ${{v[3]}}<br><br>yakınları: ${{v[5].join(' ')}}<br>aynı kökün öbür asılları (kırmızı kesik): ${{kard.join(' ')||'yok'}}<br><a href="zihin_haritasi.html#${{v[6]}}">türeme ağacı</a>`}});</script></body></html>"""
+const b=document.getElementById('bil');b.style.display='block';b.innerHTML=`<span style="float:right;cursor:pointer;padding:0 4px" onclick="temizle()">✕</span><b style="font-family:Amiri;font-size:22px">${{k}}</b> ${{v[4]}}<br>${{v[2]}} › ${{v[3]}}<br><br>yakınları: ${{v[5].join(' ')}}<br>aynı kökün öbür asılları (kırmızı kesik): ${{kard.join(' ')||'yok'}}<br><a href="zihin_haritasi.html#${{v[6]}}">türeme ağacı</a>`}}
+JS_YER
+</script></body></html>"""
 HTML = HTML.replace('JS_YER', JS)
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:

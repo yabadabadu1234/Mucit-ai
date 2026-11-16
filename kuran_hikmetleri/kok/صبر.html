@@ -1095,7 +1095,7 @@ document.querySelectorAll('.ayet').forEach(function(a){
   a.addEventListener('click', function(){
     var id = a.getAttribute('data-dal');
     var dal = document.querySelector('.dal[data-id="' + id + '"]');
-    if (dal) { dal.classList.add('acik'); dal.scrollIntoView({behavior:'smooth', block:'center'}); }
+    if (dal) { dal.classList.toggle('acik'); if (dal.classList.contains('acik')) dal.scrollIntoView({behavior:'smooth', block:'center'}); }
   });
 });
 </script>

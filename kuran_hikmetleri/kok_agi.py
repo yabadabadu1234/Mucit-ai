@@ -274,7 +274,7 @@ alan.addEventListener('pointermove', function(e){
 });
 alan.addEventListener('pointerup', function(e){
   delete ptr[e.pointerId]; alan.classList.remove('tut');
-  if (hareket < 6) { var i = en_yakin(e.clientX, e.clientY); if (i >= 0) sec(i); else if (secili >= 0) kapat(); }
+  if (hareket < 6) { var i = en_yakin(e.clientX, e.clientY); if (i >= 0 && i !== secili) sec(i); else if (secili >= 0) kapat(); }
 });
 alan.addEventListener('pointercancel', function(e){ delete ptr[e.pointerId]; alan.classList.remove('tut'); });
 function yakinlas(mx, my, oran){ var z = Math.max(0.5, Math.min(14, gor.z * oran)); oran = z / gor.z; gor.x = mx - (mx - gor.x) * oran; gor.y = my - (my - gor.y) * oran; gor.z = z; ciz(); }

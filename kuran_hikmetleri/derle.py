@@ -1568,7 +1568,7 @@ body {{ padding-top: 72px; }}
 <script>
 function menuAc() {{ document.getElementById('menuPanel').classList.toggle('acik'); }}
 function surelerAc() {{
-  document.getElementById('kenar').classList.add('acik');
+  document.getElementById('kenar').classList.toggle('acik');
   document.getElementById('menuPanel').classList.remove('acik');
 }}
 function surelerKapat() {{ document.getElementById('kenar').classList.remove('acik'); }}
