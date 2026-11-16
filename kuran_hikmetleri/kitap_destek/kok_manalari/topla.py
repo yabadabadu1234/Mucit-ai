@@ -18,8 +18,8 @@ def etym(m):
     return [q.strip() for q in re.findall(r'‘([^’]+)’', t) if q.strip() and q.strip() != '…']
 def mekayis_asil(L):
     for x in L or []:
-        t = x.get('metin', '')
-        m = re.search(r'[^.]*أَصْل[^.]*\.', t)
+        t = x.get('metin', '').replace('\n', ' ')
+        m = re.match(r'[^.]*\.', t)
         if m: return m.group(0).strip()
     return ''
 VT = {}

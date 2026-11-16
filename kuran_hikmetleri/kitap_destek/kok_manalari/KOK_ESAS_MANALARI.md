@@ -5,18 +5,21 @@
 **ءبب**: otlak / ot / hazırlanmak
   - Cebel: لاستعمالات هذا التركيب هو: التهيؤ للأمر تقدما أو ارتفاعا: كالتهيؤ للمسير (البعيد)
 **ءبد**: sonsuzluk / ebediyet
+  - Mekâyîs: (أَبَدَ) الْهَمْزَةُ وَالْبَاءُ وَالدَّالُ يَدُلُّ بِنَاؤُهَا عَلَى طُولِ الْمُدَّةِ، وَعَلَى التَّوَحُّشِ.
   - Cebel: هو: البقاء الدائم أو الإقامة الدائمة بلا حدَّ مع عدم الأُلفة أي الأُنس: كما هو واضح في الاستعمال المذكور
 **ءبق**: kaçmak / kaçak köle / kaçan
+  - Mekâyîs: (أَبَقَ) الْهَمْزَةُ وَالْبَاءُ وَالْقَافُ يَدُلُّ عَلَى إِبَاقِ الْعَبْدِ، وَالتَّشَدُّدِ فِي الْأَمْرِ.
   - Cebel: هو: حَبْسٌ مكروهٌ في حيّز أو جوف شيء: كاللبن في جوف الناقة وحبسه شديد (يضرّها ويضير أصحابها)
 **ءبل**: deve / deve sürüsü
   - EtymArab: camels / camels, to acquire camels, to look after camels / to stay away from one
-  - Mekâyîs: بَنَاهُ وَصَلَّبَ فِيهِ وَصَارَا
-قَالَ: يُرِيدُ أَبِيليٌّ، فَلَمَّا اضْطُرَّ قَدَّمَ الْيَاءَ، كَمَا يُقَالُ: أَيْنَقُ وَالْأَصْلُ أَنْوَقُ.
+  - Mekâyîs: (أَبَلَ) الْهَمْزَةُ وَالْبَاءُ وَاللَّامُ بِنَاءٌ عَلَى أُصُولٍ ثَلَاثَةٍ: [عَلَى] الْإِبِلِ، وَعَلَى الِاجْتِزَاءِ، وَعَلَى الثِّقَلِ، وَ [عَلَى] الْغَلَبَةِ.
   - Cebel: هو: احتواء باطن الشيء على غضًّ أو لطيف كثير: كالماء في جوف إبل السحاب والجِمال، إذ الجِمال أطولُ الأنعام والدوابِّ رِيًّا؛ لأنها تصبر عن الماء ثمانية عشر يومًا (1)، كما هو معروف، لذا فُضّلت في التنقل في الصحراء
 **ءبو**: baba / kökten ilişki ve sahiplik
+  - Mekâyîs: (أَبَوَ) الْهَمْزَةُ وَالْبَاءُ وَالْوَاوُ يَدُلُّ عَلَى التَّرْبِيَةِ وَالْغَذْوِ.
   - Cebel: لاستعمالات هذا التركيب هو: الغَذْو: كما هو واضح من الاستعمالين المذكورين
 **ءبي**: reddetmek / istememek
   - EtymArab: ... / aversion, disdain / to refuse, turn down, reject
+  - Mekâyîs: (أَبَيَ) الْهَمْزَةُ وَالْبَاءُ وَالْيَاءُ يَدُلُّ عَلَى الِامْتِنَاعِ.
 **ءتي**: gelmek
   - EtymArab: tax, due, toll, tribute / to come / to come, to arrive, to bring, to bring forward / to commit / to direct / to afflict / to bestow / to become possible, to become suitable / to yield, to fruit / tax, due toll, tribute / portier / araigné / personnage importante / maladie grave
 **ءثث**: eşya / döşeme / eşyalı
@@ -24,6 +27,7 @@
   - Cebel: هو: تجمع الدقاق اللطيفة بكثافة في شيء أو حوله فتكوّن طبقة لينة: كالشّعر، والنبات الكثير الملتف، والمال الكثير، واللحم المجتمع
 **ءثر**: iz / yansıma / te'sîr
   - EtymArab: track, trace / egoistic, selfish / to prefer / to monopolize / ether / trace, mark, track, remnants, remains / landmarks, monuments / authority, favour / to mark / deeds / to pass along, to transmit / to favour, to prefer / trace, pas, vestige / lieu, place / marcher / lieu, région / trace, vestige / trace / vestige, inscription / après / suivre / qui, que / sanctuaire, temple, arbre sacré / beurre / éclat de la lame d / choisir / upper air / bright, purer air / the sky
+  - Mekâyîs: (أَثَرَ) الْهَمْزَةُ وَالثَّاءُ وَالرَّاءُ، لَهُ ثَلَاثَةُ أُصُولٍ: تَقْدِيمُ الشَّيْءِ، وَذِكْرُ الشَّيْءِ، وَرَسْمُ الشَّيْءِ الْبَاقِي.
   - Cebel: هو: بقيةٌ (أو علامة) تبقى من جرم الشيء ثابتة تَخْلُفه: كالبقية من الشيء، وبقية الشحم الذي ذاب
 **ءثل**: tarak ağacı / sert ağaç türü
   - EtymArab: ... / tamarisk tree / to be deep-rooted, be of noble origin / to acquire great wealth / to endure / nobility / noble / nobleman / the nobles / original or traditional kind, noble kind of descent, purity of origin / of pure, noble descent, thoroughbred, genuine / earth / glory, honour, dignity, nobility / to be of ancient noble origin / to have root, or a foundation, to be firmly rooted / root
@@ -74,10 +78,10 @@
   - Mekâyîs: (أَذَيَ) الْهَمْزَةُ وَالذَّالُ وَالْيَاءُ أَصْلٌ وَاحِدٌ، وَهُوَ الشَّيْءُ تَتَكَرَّهُهُ وَلَا تَقَِرُّ عَلَيْهِ.
 **ءرب**: ihtiyaç / menfaat / ihtiyaç sahibi
   - EtymArab: ... / power, purpose, need / knot / intelligent, resourceful, able and fit
+  - Mekâyîs: (أَرَبَ) الْهَمْزَةُ وَالرَّاءُ وَالْبَاءُ لَهَا أَرْبَعَةُ أُصُولٍ إِلَيْهَا تَرْجِعُ الْفُرُوعُ: وَهِيَ الْحَاجَةُ، وَالْعَقْلُ، وَالنَّصِيبُ، وَالْعَقْدُ.
   - Cebel: جمع المتفرق (أو ما شأنه التفرق) أي ربطه معًا بضبط وإحكام -كربط العقدة من طَرَفَي الحبْلين، وكما تَشُدّ الأَخِيّة الدابة، وكتجمع العضو المنفصل من الذبيحة مُوَفَّرًا تامًّا لم ينقص منه شيء
 **ءرض**: yeryüzü / toprak
-  - Mekâyîs: (أَرَضَ) الْهَمْزَةُ وَالرَّاءُ وَالضَّادُ ثَلَاثَةُ أُصُولٍ، أَصْلٌ يَتَفَرَّعُ وَتَكْثُرُ مَسَائِلُهُ، وَأَصْلَانِ لَا يَنْقَاسَانِ بَلْ كُلُّ وَاحِدٍ مَوْضُوعٌ حَيْثُ وَضَعَتْهُ
-الْعَرَبُ.
+  - Mekâyîs: (أَرَضَ) الْهَمْزَةُ وَالرَّاءُ وَالضَّادُ ثَلَاثَةُ أُصُولٍ، أَصْلٌ يَتَفَرَّعُ وَتَكْثُرُ مَسَائِلُهُ، وَأَصْلَانِ لَا يَنْقَاسَانِ بَلْ كُلُّ وَاحِدٍ مَوْضُوعٌ حَيْثُ وَضَعَتْهُ الْعَرَبُ.
   - Cebel: كثافة الجرم مع غِنَى باطنه بلطيف تقوم به وعليه الأشياء: كهذه الأرض التي نحن عليها، فهي كثيفة الجرم وتحمل كل ما عليها، وغنية الباطن بما ينبت النبات
 **ءرك**: bir ağaç türü / misvak ağacı
   - EtymArab: ... / lote-tree, to feed on such a tree, to stay put near such trees / couches, soft furnishings
@@ -91,6 +95,7 @@
   - EtymArab: ... / to whiz, to buzz, to hum / to agitate, to shake up, to incite, to stir up
   - Cebel: ازدحامُ الأشياء وتضاغُطُها لقلة الفراغ بينها، ويلزم ذلك حركة كالتموّج: كالناس في البيت والمجلس، والجنود في الكتائب، والنساء في السوق، وحَبّ الرمان في الرُمَّانة
 **ءزف**: yaklaşmak / yaklaşan
+  - Mekâyîs: (أَزِفَ) الْهَمْزَةُ وَالزَّاءُ وَالْفَاءُ يَدُلُّ عَلَى الدُّنُوِّ وَالْمُقَارَبَةِ، يُقَالُ: أَزِفَ الرَّحِيلُ: إِذَا اقْتَرَبَ وَدَنَا.
   - Cebel: تقارب المتباعد من الشيء أو جوانبه فيتضايق ما بينها:
 **ءسر**: esir alma / esâret
   - EtymArab: strap, thong / to bind, tie / to take captive / entire body / family / shield, shackles, bondage, to shackle, to capture / captive / family, limbs, physique, body structure / entirety, wholeness / what is bound/tied/held together / to bind, join / to hobble / lier, enchaîner / enfermer / prisonnier / lier, capturer / entraves, liens / lier capturer / lien, emprisonnement / lier, emmener captif / lier
@@ -120,7 +125,7 @@
   - Cebel: شدٌّ للحبس أو الجمع كالإصار (وهو اسم آلة) والأواصر وكالآصرة والمأصر
 **ءصل**: kök / esas / asîl
   - EtymArab: root, source, origin / firmness, purity of origin, authenticity / base, root, foundation / to be deep-rooted / to eradicate / time before sunset / nobility / noble / nobleman / the nobles / original or traditional kind, noble kind of descent, purity of origin / of pure, noble descent, thoroughbred, genuine / earth / glory, honour, dignity, nobility / to be of ancient noble origin / to have root, or a foundation, to be firmly rooted / root
-  - Mekâyîs: فَأَمَّا الْأَوَّلُ فَالْأَصْلُ أَصْلُ الشَّيْءِ، قَالَ الْكِسَائِيُّ فِي قَوْلِهِمْ: &quot; لَا أَصْلَ لَهُ وَلَا فَصْلَ لَهُ &quot;: إِنَّ الْأَصْلَ الْحَسَبُ، وَالْفَصْلَ اللِّسَانُ.
+  - Mekâyîs: (أَصَلَ) الْهَمْزَةُ وَالصَّادُ وَاللَّامُ، ثَلَاثَةُ أُصُولٍ مُتَبَاعِدٍ بَعْضُهَا مِنْ بَعْضٍ، أَحَدُهَا: أَسَاسُ الشَّيْءِ، وَالثَّانِي: الْحَيَّةُ، وَالثَّالِثُ: مَا كَانَ مِنَ النَّهَارِ بَعْدَ الْعَشِيِّ.
   - Cebel: امتداد في العمق يقوم عليه الشيء ويمتد منه إلى الأعلى
 **ءفف**: öf demek / sıkıntı belirtisi
   - EtymArab: ... / dirt under the nails or in the ear / contamination / grumbling, complaint, to grumble
@@ -143,6 +148,7 @@
   - Cebel: طَحْن الحيّ المادّة المطعومة مَضْغًا بفمه وبلعُها: كالأكل المعروف {وَمَا أَكَلَ السَّبُعُ} [المائدة: 3]، والأُكُل شأنه أن يؤكَل
 **ءلت**: azaltmak / eksiltmek / hak
   - EtymArab: ... / oath / decrease, to decrease, reduce / to prevent, deny
+  - Mekâyîs: (أَلَتَ) الْهَمْزَةُ وَاللَّامُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، تَدُلُّ عَلَى النُّقْصَانِ، يُقَالُ: أَلَتَهُ يَأْلِتُهُ، أَيْ: نَقَصَهُ.
   - Cebel: النقص عن المستحَقّ أو المتوقَّع: كالعطية الشَقْنة القليلة
 **ءلف**: bin / alışmak
   - EtymArab: name of the letter «ا» / thousand / to be acquainted, familiar, conversant, on intimate terms with, be\get accustomed, used, habituated to, become tame / to unite, join, combine, put together, compile, compose, write (a book) / to put together, bring together / to habituate / to get accustomed / to soften up / intimate / mate / ʔalif ‘ for the first letter of the Arabic alphabet goes back to the hieroglyphic pictogram for ‘cattle / l-ḥurūfᵃ kullahā , i.e. ‘because it can be associated with any of the other consonants / cattle / ox / to bring together, compile / head of large cattle / herd of cattle > a lot > thousand / to keep to s.th. / to unite, bring together / to be familiar / to teach / to teach, instruct / id. / cattle/ox / boeuf / génisse / grande quantité, mille / mille (?) / mille, dix mille / mille / prince, chef / chef / croître / people, clan / nation / to put together / agreement, concord / to make a peace settlement / to be attached, friendly / to be good, patient, docile / (head of large) cattle, ox / to put together, compile / to be quite, friendly / to domesticate / (head of) cattle / animal → domestication/tameness → familiar / herd → gather → compose / herd/group → administrative/military unit → thousand / herd > a lot, many / to wrap, roll up, wind, connect / cattle/ox → herd / to stick together, be familiar → to gather/bring together / aleph
@@ -167,9 +173,11 @@
   - Cebel: تخلخل الأثناء المفترض امتلاؤها من الشيء الممتد: كذلك الاسترخاء والتثني في جِلْد القربة غير التامة الامتلاء وهي عندما تمتلئ تقوم مبسوطة الجلد ممتدًّا بلا تثنٍّ، وكالوهدة بين النَشْزِين من الأرض وما بين التلال
 **ءمد**: süre / zaman sınırı / uzunluk
   - EtymArab: ... / end, terminus / term, period, span, long time / to be angry
+  - Mekâyîs: (أَمَدَ) الْهَمْزَةُ وَالْمِيمُ وَالدَّالُ، الْأَمَدُ: الْغَايَةُ.
   - Cebel: حدود ما يُجْهَد فيه جريًا أو حَمْلًا: كالسفية المملوءة؛ حيث بلغت شحنتُها حدودَ طاقتها، وأمَدُ الخيل: مسافة السباق ما بين حدِّ أول جَرْيها وآخِرِه
 **ءمر**: buyruk / iş / durum
   - EtymArab: to order, command, bid, instruct / order, command, instruction, decree / power / (gram.) imperative / commander / prince, emir / tribal chief / government(al), state-owned, state, public / commissioned, charged / commissioner / civil officer / head of a markaz or qism (Eg.) / matter, affair, concern, business / to ask s.o. / deliberation, counsel / conference / plot, conspiracy / sign, token, symptom, mark, characteristic / simple-minded, stupid / † ram, lamb / pericardium ( anat. ) / soul, mind, spirit / form, blank / to be in good quantity / to have numerous flocks / to multiply, make abundant (e.g., o. / multiplied, much, abundant / (hence also:) blessed / serious, painful, very difficult (affair) / the affair became severe, distressful, grievous, afflictive / passions / convent of monks / man / certain beast of the sea / ( or: ) small beast, kind of mountain-goat, having a single branching horn in the middle of his head / 1 bolder, marker, landmark, hillock / 2 affliction / 3a chief, to appoint as chief / 3b command, to command / 4 affair / 5 to increase, multiply / 6 to guide / to see, know, make known, say / to say / to see / to show / to speak / to see > to indicate > to command / ram, lamb / to command / sign, mark / to see, be seen / morning, daylight, dawn / to burn (intr.) / to shine, be bright / dawn / morning, daylight / A to be visible, observable / fact, issue, matter, affair > B to see, take notice of s.th. (that is visible or comes into sight, a fact, an issue, etc.) > C to indicate, show, demonstrate, point to s.th. (a thing, matter, case, etc.) > D to say > E to command / sun / visibility / the shining one / moon / 1 to be visible, observable / 2 fact, issue, matter, affair / to consult s.o./each other on an issue / to conspire / person consulted, or to be consulted, in an affair/on all kinds of issues / (mostly children) who always ask others to explain things, seek advice on every issue / top, summit / column / to be high / to see > say > command / to be plentiful, many / to afflict / (high) heap of stones / date palm / altitude / to be visible, to see / person (to be) consulted on all kinds of issues / affair, issue / person who commands, gives orders / person of high standing / person excelling among the people / palm tree / s.th. high / multitude, plentitude, abundance / to see, take notice of s.th. (that is visible or comes into sight, a fact, an issue, etc.), observe / to take s.th. as an indicator\sign for o.s. / to indicate, show, demonstrate, point to s.th. (a thing, matter, case, etc.) / revelation / to indicate, etc. / to say s.th. to s.o. / to draw his/her attention to it, point to it / order, command, etc. / commanding / saying / pointing to, indicating / issue / person endowed with authority, commander, chief / person (to be) consulted in all kinds of affairs / command / the baser self (of man) that incites to evil / soul / intellect / heart / pericardium / (document/move) to ask for a decree, ¹ ʔamr / (document/move) to look into a matter, ↗² ʔamr / small beast, kind of mountain-goat, having a single branching horn in the middle of his head / roebuck / to know / knowledge, to get to know / recognition / sign, mark, token (on the wayside) / decree¬ / matter / affair / saying, command / to utter, say / word, command / to say, tell / to say, speak / praefectus / to proclaim / command (of a god), oracle / monstrare, ostendere / notum facere / demonstrare / to command, order, enjoin / ordonner / ordonner, manifester / dire / dire, parler, ordonner / ordre(?) / souhait, parole(?) / voir, regarder / être visible, voir / examiner / montrer, indiquer / signe / clair, bien connu / savoir / être clair / connaissance / raison, intelligence / signe, marque, science / sommet d / colonne pilier / signe, indice, repère / tour, tourelles / être beau, plaisant, aimable / soleil / chevreau, agneau / être oisif / gâter, rendre oisif / sans jugement, stupide / être nombreux, abondant, croître / soulever(?) / brindille / sang, cœur / antre du lion / chèvre de montagne / engorgement de l / tuiles / ambre / to burn / morning, dawn / morning / morning, tomorrow / tomorrow / sun, day, time / day / evening / le soleil, le feu, tout corps en combustion qui chauffe à une distance / chaleur rayonnée / rayons du soleil chauffant doucement / ensoleiller, se mettre au soleil / sunny side of a mountain / moonlight
+  - Mekâyîs: (أَمَرَ) الْهَمْزَةُ وَالْمِيمُ وَالرَّاءُ أُصُولٌ خَمْسَةٌ: الْأَمْرُ مِنَ الْأُمُورِ، وَالْأَمْرُ ضِدُّ النَّهْيِ، وَالْأَمَرَ النَّمَاءُ وَالْبَرَكَةُ بِفَتْحِ الْمِيمِ، وَالْمَعْلَمُ، وَالْعَجَبُ.
   - Cebel: نفاذ مع علُوٍّ وراءه جمع بشدة
 **ءمل**: umut / istek
   - EtymArab: to hope / to look attentively, regard, contemplate, meditate, ponder / very long and broad distinct sand dune / to ascertain, to discriminate / to mull over / to hope, expectations / se faner (plante), se déssécher (huile) / espérer / examiner / dunes de sable / manteau, tapis / courge
@@ -214,6 +222,7 @@
   - Cebel: حقيقة الشيء المتحصَّلة منه، أي صُلْبِ مادته التي تخلص بعد تنحية ما يشوبها أو يغطيها كاللبن الخاثر الذي هو مادة اللبن الكثيفة، وكذا الشراب الخاثر بعد تبخر ما يعدّ شوبًا لا أثر له عندهم
 **ءون**: zaman / vakit
   - EtymArab: ... / time, to fall due, fatigue
+  - Mekâyîs: (أَوَنَ) الْهَمْزَةُ وَالْوَاوُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى الرِّفْقِ.
   - Cebel: اتساع الحيّز لما يوضع فيه وامتلاؤه به امتلاء تامًّا
 **ءوه**: inleme / üzüntü ünlemi
   - EtymArab: ... / measles / pain, sadness / to moan, to sigh
@@ -226,10 +235,10 @@
   - Cebel: تحصين الشيء وتقويته من حوله (أي من جانب أو جانبين): كالتُرابِ حَوْلَ الحَوْض والخِبَاءِ والمَعْقِل وتلك الأشياء التي تَحْمِي وتَحْفَظ الشيء
 **ءيم**: dul / eşsiz / dul kadın
   - EtymArab: ... / defect, shortcoming / to be without spouse, lose one
-  - Mekâyîs: قَالَ الْأَصْمَعِيُّ: أَصْلُهُ التَّشْدِيدُ، يُقَالُ: أَيِّمٌ وَأَيْمٌ، كَهَيِّنٍ وَهَيْنٍ.
+  - Mekâyîs: (أَيَمَ) الْهَمْزَةُ وَالْيَاءُ وَالْمِيمُ ثَلَاثَةُ أُصُولٍ مُتَبَايِنَةٍ: الدُّخَانُ، وَالْحَيَّةُ، وَالْمَرْأَةُ لَا زَوْجَ لَهَا.
   - Cebel: ذهاب كثافة الشيء ونَداه أو كماله رغم اجتماع ظاهره أو استوائه
 **ءين**: 
-  - Mekâyîs: وَأَمَّا الْحَيَّةُ الَّتِي تُدْعَى (الْأَيْنُ) فَذَلِكَ إِبْدَالٌ وَالْأَصْلُ الْمِيمُ.
+  - Mekâyîs: (أَيَنَ) الْهَمْزَةُ وَالْيَاءُ وَالنُّونُ يَدُلُّ عَلَى الْإِعْيَاءِ، وَقُرْبِ الشَّيْءِ.
   - Cebel: لزومُ الأرض أو بطءُ مفارقتها كحال المُعْيِى والمُتْعَب وحال الحية ونحوها في الزحف
 **ءيي**: ayet / işaret / alamet / 'ey' ünlemi
 **بءر**: kuyu / su kuyusu
@@ -255,6 +264,7 @@
   - Cebel: نَشْر ما كان مجتمعًا منضمًّا وتفريقه (1): كالتمر وسائر
 **بجس**: su çıkarmak / fışkırmak
   - EtymArab: ... / to cause water to gush out / to come upon, be full of, boil over
+  - Mekâyîs: (بَجَسَ) الْبَاءُ وَالْجِيمُ وَالسِّينُ: تَفَتُّحُ الشَّيْءِ بِالْمَاءِ خَاصَّةً.
   - Cebel: هو: تفجر سائل بقوة من شيء كثيف الجرم: كالأرض، والقِرْبة، والحَجَر {أَنِ اضْرِبْ بِعَصَاكَ الْحَجَرَ فَانْبَجَسَتْ مِنْهُ اثْنَتَا عَشْرَةَ عَيْنًا} [الأعراف: 160]
 **بحث**: araştırmak / incelemek
   - EtymArab: to scrape up (in search of s.th.) / [and hence:] to look for, search for s.th., to research, investigate / to discuss / mine / great serpent / to rummage in the dust looking for s.th., to claw the dust, to search, to seek information / to look for, search for s.th., to research, investigate / to scrape, dig up (the earth), scratch / to scrape up, stir / mélanger (?) / agiter, remuer, rechercher, attiser / se hâter / spatule / cuiller à pot / cendres chaudes, ratissages / creux de l / chercher, examiner / agiter / gratter la terre, fouiller / creuser / fouiller / to be in quest of / to hunt / jagen (Löwen, Elefanten, Wild) / ein Jägersmann / prey / to stir / to dig up, scrape ut the dust/earth / a certain game (played in the dust, or earth), ʔibl † baḥūṯ ‘camels that scrape up the dust, or earth, with their forefeet / mine (in which one searches for gold and silver) / great serpent (because it scrapes up the dust or earth) / secret (hidden in the dust and to be search for) / dust, earth (which is scraped up from what is searched for therein)
@@ -262,8 +272,7 @@
   - Cebel: فحص التراب المتراكم ونحوه وإخراجه نثرًا متفرقًا: كبحث التراب في ما سبق
 **بحر**: deniz / büyük nehir / bahîre
   - EtymArab: sea, ocean / river / generous person / great knowledge / vegetable garden, truck garden / (poet.) meter / to pierce (the ear of a she-camel destined to be sacrificed) / she-camel having her ear slit, chosen to be sacrificed / to be startled, bewildered (with fright) / crisis (of an illness) / climax, culmination (also, e.g., of ecstasy) / vehemence of heat in mid-summer / moon / bottom of the womb / pure, intense red (blood) / lyer / ocean, sea, great river, great expanse of water, lake / to slit an animal / mer, lac / citerne / aménager une citerne / perle / substance, qualité / cours d / sol / tombeau / pays, terre / cultiver un jardin / potager, plaine basse / choisir / élire / élire (?) / fendre (l / jeune homme complètement développé / être très affaibli amaigri (par la phtisie) / être effrayé / qui court jusqu / effrayer / s / forte chaleur du cœur de l / rouge vif (sang) / fieffé menteur / Wasserfülle, Überschwemmung / Name eines Gewässers in Unterägypten / sea (in toponym)
-  - Mekâyîs: أُنُفٌ، يَغُمُّ الضَّالَ نَبْتُ بِحَارِهَا
-وَالْأَصْلُ الثَّانِي دَاءٌ، يُقَالُ: بَحِرَتِ الْغَنَمُ وَأَبْحَرُوهَا: إِذَا أَكَلَتْ عُشْبًا عَلَيْهِ نَدًى فَبَحِرَتْ عَنْهُ، وَذَلِكَ أَنْ تَخْمُصَ بُطُونُهَا وَتُهْلَسَ أَجْسَامُهَا.
+  - Mekâyîs: (بَحَرَ) الْبَاءُ وَالْحَاءُ وَالرَّاءُ.
   - Cebel: هو: شَقٌّ عظيم، أو فَجْوة عظيمة، في جرم شديد، تَشْغلها مادة مسترسلة الحركة: كالبحر، وهو شق عظيم يلزمه ماؤه الملح (واستعمل في ذي الماء العَذْب عندما يُشبه ذا الماء المِلْح في السَعة وكثرة الماء)
 **بخس**: eksik vermek / haksızlık
   - Mekâyîs: (بَخَسَ) الْبَاءُ وَالْخَاءُ وَالسِّينُ أَصْلٌ وَاحِدٌ، وَهُوَ النَّقْصُ.
@@ -274,10 +283,11 @@
   - Cebel: هو: استفراغ قوة الشيء أو قوامه الغض الذي في باطنه منه بقوة: كاستخراج ماء الركية بالمبالغة في الحفر، وكما في بَخْع الأرض (إنهاكها) بمتابعة زرعها دون إجمام
 **بخل**: cimrilik / cimri
   - EtymArab: to be niggardly, be stingy / to be stingy, to be covetous / to be grudging, meanness
+  - Mekâyîs: (بَخَلَ) الْبَاءُ وَالْخَاءُ وَاللَّامُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ: الْبُخْلُ وَالْبَخَلُ.
   - Cebel: هو: إمساكُ ما يُتَطلب ويمكن إخراجه - أي عَدَمُ إرساله: كالبخل بالمستحَقّ
 **بدء**: başlamak / yaratmak
   - EtymArab: to begin, start (s.th.) / to set in, begin, start, arise, spring up, crop up / beginning, starting point / basis, foundation / principle / invention / (pl.) principles, convictions / ideology / rudiments, fundamental concepts, elements / to begin, to initiate, the beginning, the lead / chief, exceptional person / surprising novelty, to appear or come into existence suddenly and unexpectedly / to come quickly or unexpectedly on, surprise, break forth suddenly / to come unexpectedly, surprise / to appear / to strike s.o. / to surprise s.o. / to appear, emerge / to cut: to separate, split, pierce, disperse, etc. / separation, distance / gap / pressure / sudden appearance of s.th. “creeping/squeezing itself” into the gap / to originate, bring into being, create / first occasion / to invent, devise, fabricate / to cheat, deceive / to lie / to make for the first time / to begin / to create, invent / imaginer, inventer | to invent, fabricate, concoct / inventer, mentir / to invent, fabricate / inventer / balivernes / créer le premier, inventer, commencer / chatter / première fois / commencer, mentir / commencer / mentir / to invent, devise / to feign, devise, pretend, speak falsely / liar, fabricator, impostor / fabrication, fiction / fiction, phantasy / invented, fabricated, concocted, imaginary, made up / fabrication, falsehood, prevarication / lying, invented, fabricated, false / blague / bavardage / fanfaronnade
-  - Mekâyîs: وَأَظُنُّهُ مِمَّا هُمِزَ وَلَيْسَ أَصْلَهُ الْهَمْزُ.
+  - Mekâyîs: (بَدَأَ) الْبَاءُ وَالدَّالُ وَالْهَمْزَةُ مِنِ افْتِتَاحِ الشَّيْءِ، يُقَالُ: بَدَأْتُ بِالْأَمْرِ وَابْتَدَأْتُ، مِنَ الِابْتِدَاءِ.
   - Cebel: هو: ظهور الشيء أو تكونه لأول مرة: كالبئر المستحدثة، وكذلك البَثْر الذي يظهر جديدًا على الجلد، وأسنان الصبي التي تخرج بعد سقوط الأولى هي الأسنان الدائمة، وكأن نباتها بدءٌ آخر؛ ولذا عبروا (1/85) بـ (أبدأ) دون (بدأ)، كان المعنى: صار صاحب بدء حقيقي للأسنان
 **بدر**: dolunay / erken / acele
   - EtymArab: to come unexpectedly, by surprise / full moon / huge amount of money (formerly= 10,000 dirhams) / threshing floor / full moon, sign, herald, harbinger / to give surprise, to take the initiative / surprendre, arriver inopinément, précipitamment / hâte-toi! / être véloce, prévenir / cursus / se hâter, précéder, rattraper, rivaliser / hâte / dehors / panier (?) / pleine lune, lune / chevrette / être tacheté / prêter de l / prêt, revanche, vengeance / month / mois, mois lunaire
@@ -316,11 +326,11 @@
   - Cebel: هو: زوال الشيء من مقره باتساع مع جفاف أو شدة: كانتقال التراب وهو جافّ من مكانه بقوة الريح في مساحة عريضة، وكانتقال قرص الشمس وهو دائم الحركة من حيث يبدو لاصقًا بالسماء
 **برد**: soğuk
   - EtymArab: cold / hail / garment / to file (a piece of metal, etc.) / collyrium / post, mail / papyrus / saltpeter / gunpodwer / to be cold / hail. / curtain, veil / piece of fabric, curtain / flat, extended / long wollen gown made of wool / id. / froid / être froid, frais / être en bon état / adoucir une douleur / refroidir / devenir froid / grêle / tacheté / foncé, couleur olive (vêtement) / bigarré / limer / lime / couper / offrir / nitre / poudre à fusil, salpêtre / salpêtre, nitre / poudre à fusil / cheval de poste / cheval ou chameau de poste, courrier / émissaire, ambassadeur / danser la danse de guerre / être secoué par des mouvements nerveux / avoir le vertige pour avoir bu / touffe de papyrus / papier de papyrus / jaunir (p.e. poivron)
-  - Mekâyîs: وَأَمَّا الْأَصْلُ الْآخَرُ فَالْبَرْدُ النَّوْمُ.
+  - Mekâyîs: (بَرَدَ) الْبَاءُ وَالرَّاءُ وَالدَّالُ أُصُولٌ أَرْبَعَةٌ: أَحَدُهَا خِلَافُ الْحَرِّ، وَالْآخَرُ السُّكُونُ وَالثُّبُوتُ، وَالثَّالِثُ الْمَلْبُوسُ، وَالرَّابِعُ الِاضْطِرَابُ وَالْحَرَكَةُ.
   - Cebel: هو: تقلّص (1) الشيء (المتسيب) فيتداخل أو يتجمد فلا يمتد: كما يتماسك الماء فيتجمد في حَبَّ الغمام {وَيُنَزِّلُ مِنَ السَّمَاءِ مِنْ جِبَالٍ فِيهَا مِنْ بَرَدٍ} [النور: 43]
 **برر**: iyilik / doğruluk / kara
   - EtymArab: ... / open country, desert, wilderness, land (as opposed to sea) / to be free of impurity, be free of guilt, be pious, be devoted / to fulfil one / to be(come) clear, pure, white
-  - Mekâyîs: وَأَصْلُ الْإِبْرَارِ مَا ذَكَرْنَاهُ فِي الْقَهْرِ وَالْغَلَبَةِ، وَمَرْجِعُهُ إِلَى الصِّدْقِ.
+  - Mekâyîs: (بَرَّ) الْبَاءُ وَالرَّاءُ فِي الْمُضَاعَفِ أَرْبَعَةُ أُصُولٍ: الصِّدْقُ، وَحِكَايَةُ صَوْتٍ، وَخِلَافُ الْبَحْرِ، وَنَبْتٌ.
   - Cebel: انبساطٌ عظيم مع تجرد أو انكشاف وجفاف ما (1):
 **برز**: ortaya çıkmak / açığa çıkmak
   - EtymArab: ... / open land / to go out in the open, be prominent / to outdo others / to duel / to evacuate the bowels
@@ -343,9 +353,7 @@
   - Cebel: هو: ثبات واستمرار مع لطف: كالماء الكثير (وهو لطيف) يخرج ويبقى أو يستمر في الِبرْكة، وصدر البعير يعتمد عليه البعير في بروكه وقيامه؛ فهو من الثبات
 **برم**: gücenmek / sıkılmak
   - EtymArab: ... / a stone pot / a twisted rope / to twist, to tighten / to confirm, to plan
-  - Mekâyîs: إِذَا الْمُرْضِعُ الْعَوْجَاءُ جَالَ بَرِيمُهَا
-وَالْأَصْلُ الرَّابِعُ: الْبَرَمُ، [وَأَطْيَبُهَا رِيحًا] بَرَمُ السَّلَمِ، وَأَخْبَثُهَا رِيحًا بَرَمَةُ
-الْعُرْفُطِ، وَهِيَ بَيْضَاءُ كَبَرَمَةِ الْآسِ.
+  - Mekâyîs: (بَرَمَ) الْبَاءُ وَالرَّاءُ وَالْمِيمُ يَدُلُّ عَلَى أَرْبَعَةِ أُصُولٍ: إِحْكَامُ الشَّيْءِ، وَالْغَرَضُ بِهِ، وَاخْتِلَافُ اللَّوْنَيْنِ، وَجِنْسٌ مِنَ النَّبَاتِ.
   - Cebel: لأْمُ شيئين (أو أشياء) معًا لأما شديدًا بحيث لا تتسيب ولا تنتشر: كالحبلين المفتولين حبلًا واحدًا، وكالثوب المفتول الغزل طاقين، وكالبريم بمعانيه المذكورة
 **برهن**: kanıt / delil
   - EtymArab: evident proof / ... / (the quadruple structure of this root together with the limited derivatives it has in Arabic give support to its being a very early ing, possibly from Pers. Some philologists, however, consider it a derivation from root brh ‘to cut / whiteness
@@ -391,7 +399,7 @@
   - Cebel: هو: تجمع النامي في كُرَةٍ ذات حَرافة: كالبصل
 **بضع**: birkaç / sayı azlığı
   - EtymArab: ... / flesh, lump of flesh, to slice / to be intimate with a woman / to marry / a piece of merchandise, a small number of items (from three to ten) / a small flock of sheep
-  - Mekâyîs: وَأَمَّا الْأَصْلُ الثَّالِثُ فَقَوْلُهُمْ: بَضَعْتُ مِنَ الْمَاءِ: رَوِيتُ مِنْهُ.
+  - Mekâyîs: (بَضَعَ) الْبَاءُ وَالضَّادُ وَالْعَيْنُ أُصُولٌ ثَلَاثَةٌ: الْأَوَّلُ الطَّائِفَةُ مِنَ الشَّيْءِ عُضْوًا أَوْ غَيْرَهُ، وَالثَّانِي بُقْعَةٌ، وَالثَّالِثُ أَنْ يُشْفَى شَيْءٌ بِكَلَامٍ أَوْ غَيْرِهِ.
   - Cebel: هو: فِلَذ اللحم ونحوها مما يتجمع في قطع رخوة: كقطعة اللحم، وكعُكَن الفخذ ونحوها
 **بطء**: yavaşlamak / gecikmek
   - Mekâyîs: (بَطَأَ) الْبَاءُ وَالطَّاءُ وَالْهَمْزَةُ أَصْلٌ وَاحِدٌ وَهُوَ الْبُطْءُ فِي الْأَمْرِ.
@@ -433,8 +441,7 @@
   - Cebel: هو: أخذ (: اقتطاع) جزء مما يحتويه الشيء: كما يفعل البق (يمص الدم)
 **بعل**: koca / put / sahip
   - EtymArab: the god Baal / lord / husband / land or plants thriving on natural water supply / unirrigated palm trees, a male palm tree / a husband, a wife / to marry / courtship / master, deity / land or plants thriving on natural water supplyʼ and perh. the god Baʕl may be related. ▪ BʕL_1 : (Orel&Stolbova1994) From protSem * baʕl- ‘husband, masterʼ baʕil- ‘manʼ. ▪ BʕL_2 ‘…
-  - Mekâyîs: إِذَا اللَّيْلُ أَدْجَى لَمْ تَجِدْ مَنْ تُبَاعِلُهْ
-وَالْأَصْلُ الثَّانِي جِنْسٌ مِنَ الْحَيْرَةِ وَالدَّهَشِ، يُقَالُ: بَعِلَ الرَّجُلُ: إِذَا دَهِشَ.
+  - Mekâyîs: (بَعَلَ) الْبَاءُ وَالْعَيْنُ وَاللَّامُ أُصُولٌ ثَلَاثَةٌ: فَالْأَوَّلُ الصَّاحِبُ، يُقَالُ لِلزَّوْجِ بَعْلٌ، وَكَانُوا يُسَمُّونَ بَعْضَ الْأَصْنَامِ بَعْلًا.
   - Cebel: هو: استقلالُ الشيء في تحصيل ما بِهِ قِوامُه مَصًّا: كما (1/147) يمتص النخل الماءَ من الأرض بعروقه
 **بغت**: ansızın / birden
   - EtymArab: ... / surprise
@@ -446,6 +453,7 @@
   - Cebel: هو: احتواء القلب على مشاعر غليظة (من باب الكره والعداوة): {قَدْ بَدَتِ الْبَغْضَاءُ مِنْ أَفْوَاهِهِمْ وَمَا تُخْفِي صُدُورُهُمْ أَكْبَرُ} [آل عمران: 118] وليس في القرآن من التركيب إلا كلمة {الْبَغْضَاءُ}
 **بغل**: katır / hayvan
   - EtymArab: mule / ... / to be stupid, to affect stupidity
+  - Mekâyîs: (بَغَلَ) الْبَاءُ وَالْغَيْنُ وَاللَّامُ يَدُلُّ عَلَى قُوَّةٍ فِي الْجِسْمِ.
   - Cebel: هو: اختلاط سلالة الحي بسلالة جنس أغلظ منه فيبقى أثره فيها: كما في البغل، وكذلك شوب الأولاد بهجنة من جفاء جنس الأب
 **بغي**: haddi aşmak / zulüm / bağy de isyan
   - EtymArab: ... / a shoot / an unripe fruit / to seek, to go after, to wish for, to covet / to go over the limits, to transgress / to facilitate / to earn one / to seek
@@ -512,9 +520,11 @@
   - Cebel: هو: انشراح الصدر وسروره لبديع منظر ناشئ من باطن: كالشحم في السنام، وهو مستحبّ منظرًا ومخبرًا، ويبدو كأنه ناشئ من البدن
 **بهل**: lânet okumak / lânetleşmek / ortaklık
   - EtymArab: ... / to leave an animal unattended, eglect / to be without a husband / to chase out / to curse, invoke God
+  - Mekâyîs: (بَهَلَ) الْبَاءُ وَالْهَاءُ وَاللَّامُ.
   - Cebel: هو: الخلو مما يَحْفظ حَجْبًا أو حِماية أو رعاية: كالناقة الباهل لبنها غير محجوب عن ولدها
 **بهم**: karanlık / belirsizlik / belirsiz
   - EtymArab: (to be) obscure, dark, cryptic / animal, quadruped, lamb, sheep, cattle / thumb / big toe / four-footed animals / to be dumb / obscure, unintelligible / to be dark / unmarked / unable to speak, dumb / thumb, toe / qui ne sait pas parler: barbare, étranger / muet / être muet / bétail, vaches / animal / bétail / âne / agneau, chevreau, veau / bête, animal / agneaux / obscurité, ténèbres / bloc de pierre / doigt / pouce / animal, cattle / unable to speak, dumb, mute
+  - Mekâyîs: (بَهِمَ) الْبَاءُ وَالْهَاءُ وَالْمِيمُ: أَنْ يَبْقَى الشَّيْءُ لَا يُعْرَفُ الْمَأْتَى إِلَيْهِ.
   - Cebel: هو: خلو ظاهر الشيء العريض من الفتحات أو المعالم التي تميز أو تكشف: كما ذُكِر
 **بوء**: yerleştirmek / konaklatmak
   - EtymArab: milieu, surroundings, environment, climate / dwelling, home, abode, residence / to take up a place for settling in, to provide abode for others / to take a wife, marriage / to come back / to incur / to admit / situation / equality
@@ -552,6 +562,7 @@
   - Cebel: هو: امتداد بين طرفين أو جانبين مع فصل كبير أو
 **تبب**: helak / zarar / helak olmuş
   - EtymArab: ... / to stamp down, to flatten, to crush, to ruin / to cause to lose, to destroy / to become stable, to settle down, to become well-ordered
+  - Mekâyîs: (تَبَّ) التَّاءُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التِّبَابُ، وَهُوَ الْخُسْرَانُ.
   - Cebel: هو: ذهاب غلظ الشيء وشدته من ضغط حادٍّ عليه (1):
 **تبر**: yok etmek / helâk
   - EtymArab: ... / gold dust, raw metal, ore / to fragment, crush, destroy, annihilate
@@ -563,7 +574,9 @@
   - Cebel: هو: لحُوق الشيء بمتقدم أو سابق بلا فصل (مع رقة ولين): كما يتربى الشحْم مع رقته على اللحم ويلحق به، وكاطّراد امتداد الغصن مع استوائه، فذلك لحوق لأوله بلا فصل، والاستواء رقة ولين؛ لأن الأُبَن غليظة
 **تجر**: alışveriş / tüccar
   - EtymArab: trade, commerce / to trade, deal, do business / tradesman, merchant / merchandise / wine merchant, wine seller / to barter, buy or sell / to trade, exchange / (of a camel) to be saleable / merchant, trader, money-lender / to do business, use (silver etc.) in business transactions / merchant / commerce, trade
+  - Mekâyîs: (تَجَرَ) التَّاءُ وَالْجِيمُ وَالرَّاءُ، التِّجَارَةُ مَعْرُوفَةٌ.
 **تحت**: altında / aşağı
+  - Mekâyîs: (تَحْتَ) التَّاءُ وَالْحَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، تَحْتَ الشَّيْءِ.
   - Cebel: هو: كون الشيء أسفل جرم آخر كأنه لاصق بأسفله: وواضح أن استعمال التحوت في السفلة مجازي
 **ترب**: toprak / sevinç
   - EtymArab: dust, earth, dirt / ground, soil / earth, dust, to cover with dust / to become poor, poverty, need / playmates, people of similar age / to become wealthy / to become tame, to become docile / the base of the neck, the area between the breasts and collar bone
@@ -571,19 +584,25 @@
   - Cebel: هو: تراكمٌ أو توالٍ لأشياء دقيقة (أو ناعمة) في ظاهر الشيء لاصقة أو عالقة به: كتراب الأرض (كالدقيق يتراكم على وجهها)، وكأضلاع الصدر مفرّقة ممسكة بعمود عَظْم الصدر (أو الترائب هي لحمُها اللطيف فرقها سمي للمجاورة)، وكشِقَق الورقة المفرَّضة، وكالأناملِ ممسكةً باليد: {يَخْرُجُ مِنْ بَيْنِ الصُّلْبِ وَالتَّرَائِبِ} [الطارق: 7] (الترائب فُسّرت أعلاه)
 **ترف**: nazlı yaşam / bolluk
   - EtymArab: ... / a watering place within easy access, (of plants) to be watered / good food / to live in luxury, provide with lavish means, affluence
+  - Mekâyîs: (تَرَفٌ) التَّاءُ وَالرَّاءُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التُّرْفَةُ.
   - Cebel: هو: امتلاء الشيء بالرِيّ والرخاوة حتي ينتبر متميزًا عمّا حوله: كتلك الهنة
 **ترق**: yükselmek / çıkmak
   - EtymArab: ... / (no evidence of verbal root) collarbone, the uppermost of the chest
+  - Mekâyîs: (تَرَقَ) التَّاءُ وَالرَّاءُ وَالْقَافُ لَيْسَ فِيهِ شَيْءٌ غَيْرُ التَّرْقُوَةِ، فَإِنَّ الْخَلِيلَ زَعَمَ أَنَّهَا فَعْلُوَةٌ، وَهُوَ عَظَمٌ وَصَلَ مَا بَيْنَ ثُغْرَةِ النَّحْرِ وَالْعَاتِقِ.
 **ترك**: bırakmak / miras
   - EtymArab: to let be, leave, abandon, etc. / to leave behind, bequeath / to relinquish, to abandon, to let be, to do without, to finish with, to leave behind / neglected, forlorn, spinster
+  - Mekâyîs: (تَرَكَ) التَّاءُ وَالرَّاءُ وَالْكَافُ: التَّرْكُ التَّخْلِيَةُ عَنِ الشَّيْءِ، وَهُوَ قِيَاسُ الْبَابِ، وَلِذَلِكَ تُسَمَّى الْبَيْضَةُ بِالْعَرَاءِ تَرِيكَةً.
   - Cebel: هو: مفارقة الشيء ما كان يعلق به: كالفرخ من البيضة، والتمر والعنب من الكباسة أو العنقود
 **تسع**: dokuz
   - EtymArab: nine / this root revolves around the number nine
+  - Mekâyîs: (تِسْعٌ) التَّاءُ وَالسِّينُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التِّسْعَةُ فِي الْعَدَدِ.
 **تعس**: yüz üstü düşmek / mahvolmuş
   - EtymArab: ... / peril, misfortune, destruction / to fall on one
+  - Mekâyîs: (تَعِسَ) التَّاءُ وَالْعَيْنُ وَالسِّينُ كَلِمَةٌ وَاحِدَةٌ وَهُوَ الْكَبُّ، يُقَالُ تَعَسَهُ اللَّهُ وَأَتْعَسَهُ.
   - Cebel: هو: سقوط الإنسان والبعير مرتطمًا بانكباب على وجهه: كتلك الهيأة
 **تفث**: saçı tırnağı uzatmak / kir
   - EtymArab: ... / hair matting and dirt accumulating on the body as a result of leaving off acts of body cleansing, to become dirty in such a manner
+  - Mekâyîs: (تَفَثَ) التَّاءُ وَالْفَاءُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ فِي قَوْلِ اللَّهِ تَعَالَى: {ثُمَّ لْيَقْضُوا تَفَثَهُمْ} [الحج: 29] .
   - Cebel: هو: انتشار الوَسَخ ونحوه - مما يفرزه الجسم أو يعلق به - عليه: كشعُّث الشعر والوسخ ونمو شعر العانة
 **تقن**: kıvrak / becerikli / sağlamlaştırmak
   - EtymArab: ... / dregs of a well, to dredge up a well / nature / to do s.th. well, be skilful, be eloquent / to perfect, perfection
@@ -603,6 +622,7 @@
   - Cebel: هو استيفاء جِرم الشيء حَجْمه متميزًا عن غيره (1): كالقمر ليلة البدْر، وكالتامّ الخَلْق من الناس، والخيل، والنَبْت - تامة الجرم
 **توب**: dönmek / pişman olup dönmek / tövbe etmek
   - EtymArab: to repent, turn away from / the Relenting one (one of the names of God) / to return, go back, relent, to encourage s.o. to abandon their bad deeds
+  - Mekâyîs: (تَوَبَ) التَّاءُ وَالْوَاوُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى الرُّجُوعِ.
   - Cebel: توقف الشخص وانقطاعه عما كان يعمله من الذنوب ونحوها (لرقّة اعترته): فالتوبة ترك التمادي في المعاصي: {وَاللَّذَانِ يَأْتِيَانِهَا مِنْكُمْ فَآذُوهُمَا فَإِنْ تَابَا وَأَصْلَحَا فَأَعْرِضُوا عَنْهُمَا} [النساء: 16]
 **تور**: kap / kâse / başka
   - EtymArab: once / sometimes, at times / Torah, Pentateuch / Old Testament / ...
@@ -613,11 +633,14 @@
   - Mekâyîs: (تِينٌ) التَّاءُ وَالْيَاءُ وَالنُّونُ لَيْسَ أَصْلًا، إِلَّا التِّينَ، وَهُوَ مَعْرُوفٌ.
 **تيه**: şaşırmak / yolunu kaybetmek
   - EtymArab: ... / expanse of desolate unmarked featureless desert / wilderness / to lose one
+  - Mekâyîs: (تِيهٌ) التَّاءُ وَالْيَاءُ وَالْهَاءُ، كَلِمَةٌ صَحِيحَةٌ، وَهِيَ جِنْسٌ مِنَ الْحَيْرَةِ، وَالتِّيهُ وَالتَّيْهَاءُ: الْمَفَازَةُ يَتِيهُ فِيهَا الْإِنْسَانُ.
 **ثبت**: kanıtlanmak / kalıcı
   - EtymArab: ... / to stand firm, be fixed, hold out / to establish, make fast / to prove / to transfix / to be constant
+  - Mekâyîs: (ثَبَتَ) الثَّاءُ وَالْبَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ دَوَامُ الشَّيْءِ.
   - Cebel: هو: متانة ارتباط الشيء (المتنقّل) بما لُزّ به أو قام عليه لا يتحلحل: كما يرسخ الرحْل على ظهر الجمل بالثِبات
 **ثبر**: helak / yok olma / dayanma / sabır
   - EtymArab: to destroy, ruin / ruin, destruction, to perish / to be vanquished, to be transfixed, to be detained / to persist, to be diligent / to break, crash
+  - Mekâyîs: (ثَبَرَ) الثَّاءُ وَالْبَاءُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ: الْأَوَّلُ السُّهُولَةُ، وَالثَّانِي الْهَلَاكُ، وَالثَّالِثُ الْمُوَاظَبَةُ عَلَى الشَّيْءِ.
   - Cebel: هو: تجمع الشيء انقباضًا أو تقبُّضًا وعدمَ انتشار: كجَزْر ماء البحر بعد المدّ، وكالجلوس، وكما تتماسك كل من كتل الثبرة التي يُبْنَى بها
 **ثبط**: engellemek / alıkoymak
   - EtymArab: ... / to be slow, sluggish, phlegmatic / to cause s.o. to lose heart, to discourage, turn away
@@ -631,6 +654,7 @@
   - Cebel: هو: غزارة المائع الناشئ أو الخارج حتى يتجمع منه قدر كثيف (1): كالماء واللبن المذكورين
 **ثخن**: kalınlık / ağırlık / kalın
   - EtymArab: ... / thickness, solidity / to do s.th. to the utmost / to wear out, exhaust, weaken, conquer / to be solemn, be overcome with strain
+  - Mekâyîs: (ثَخُنَ) الثَّاءُ وَالْخَاءُ وَالنُّونُ يَدُلُّ عَلَى رَزَانَةِ الشَّيْءِ فِي ثِقَلٍ.
   - Cebel: هو: كثافة الشيء وغِلَظُ سَمْكه - مع رخاوة تتخلل أثناءه
 **ثرب**: yağ / içyağı / sürü
   - EtymArab: ... / thin layer of fat over the stomach / fingers / to point out faults, blame, abuse, reproach, upbraid
@@ -644,9 +668,11 @@
   - Cebel: هو: خروج المائع أو شبهه متصلًا أو ممتدًّا متماسكًا من ثُقْب أو شبهه أو على هذه الهيئة: كالماء من المَثْعب، والدم من الجُرْح والأنف، والرُوالة من الفم
 **ثقب**: delmek / delik / parlayan yıldız
   - EtymArab: ... / to bore, perforate, puncture, pierce a hole / to heighten / to kindle, light, shine up
+  - Mekâyîs: (ثُقْبٌ) الثَّاءُ وَالْقَافُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ أَنْ يَنْفُذَ الشَّيْءُ.
   - Cebel: هو: اختراقٌ دقيقٌ لعمق شيء متين: كثَقْب الدُرِّ والجلْد والسِتْر
 **ثقف**: bulmak / yakalamak / anlayış
   - EtymArab: to find, meet / to be skillful, smart, clever / culture / intellectual / to straighten, to put into the correct shape / a capable person / to locate, to catch, to overcome, to dispute
+  - Mekâyîs: (ثَقِفَ) الثَّاءُ وَالْقَافُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ إِلَيْهَا يَرْجِعُ الْفُرُوعُ، وَهُوَ إِقَامَةُ دَرْءِ الشَّيْءِ.
   - Cebel: هو: تمكّنٌ يُبْلَغُ به أتقنُ أحوال الشيء وأحكمها: كالخل الموصوف لإحكام تعتيقه، واستقامة الرمح والقوس على ما يراد منهما بتحكم الثِقَاف فيهما (تثقيف الرماح ونحوها بالثقاف الموصوف يسميه حدّادو المسلح: التقنيس)
 **ثقل**: ağırlık / ağır
   - EtymArab: ... / weight, to weigh, heavy, loads / sin, responsibility / to find heavy, become reluctant, find burdensome / to oppress, distress / phlegmatic, dull / to weigh
@@ -654,6 +680,7 @@
   - Cebel: هو: انجذاب الشيء المحمول إلى الأرض أو إلى أسفل (بقدر وزن مادته): كما هو شائع في استعمال التركيب
 **ثلث**: üçte bir / üç
   - EtymArab: three / this root revolves around the concept of the number three
+  - Mekâyîs: (ثُلْثٌ) الثَّاءُ وَاللَّامُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ فِي الْعَدَدِ، يُقَالُ اثْنَانِ وَثَلَاثَةٌ.
   - Cebel: هو: إمساكٌ وتعلُّق لبضع حبات أو أشياء: كما في الثَلِثَان
 **ثلل**: kuvvet / direnç / çekip çıkarmak
   - EtymArab: ... / a herd of sheep, wool, a group of people / to perish, to ruin
@@ -684,6 +711,7 @@
   - Cebel: هو: انتشار (حادٍّ) كامنٍ في عُمْق الشيء إلى حيث يُريَ في ظاهره: كالطُحلَب النافذ على وجه الماء الراكد في بئر أو حوض، يكوّن طبقة خضراء أعلاه
 **ثوي**: kalmak / yerleşmek / konaklama yeri
   - EtymArab: ... / dwelling, abode, animal enclosure, to abide in a place, live for a long time in one place
+  - Mekâyîs: (ثَوِيَ) الثَّاءُ وَالْوَاوُ وَالْيَاءُ كَلِمَةٌ وَاحِدَةٌ صَحِيحَةٌ تَدُلُّ عَلَى الْإِقَامَةِ.
 **ثيب**: dul kadın / dul
 **جءر**: feryat etmek / yalvarmak
   - EtymArab: ... / (of cattle) to low / to cry for help / anxiety / (of plants) to grow tall and plentiful / to be stout
@@ -694,6 +722,7 @@
   - Cebel: استواء المتجسم ظاهريا (بالقطع) (1) (= استواء ظاهر
 **جبت**: put / büyü / sihir / kâhinlik
   - EtymArab: idol, sorcery, devil (?) / ... / recent event / idols of recent (time), recent gods
+  - Mekâyîs: (جِبْتٌ) الْجِيمُ وَالْبَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ.
 **جبر**: zorlama / tamir
   - EtymArab: force, compulsion, coercion, duress / power, might / (predestined, inescapable) decree of fate / giant, gigantic, colossal, huge / tyrant, oppressor / almighty, omnipotent (God) / Orion ( astron. ) / to set (broken bones) / to restore, bring back to normal / to help back on o. / algebra / to treat with kindness, friendliness, be nice to s.o. / pride, haughtiness / (the archangel) Gabriel / man / young man, courageous (Lane) | homme, surtout fort, puissant (BK1860) / king / slave / aloes-wood / 1 vanité, mensonge / 2 ce qui est en pure perte / 3 sang versé et non vengé / 4 exempt, libre ou innocent de qc (BK1860)| thing of which no account, or for which no revenge or retaliation or mulct, is taken (Lane ii 1865) | erlaubtes Blutvergießen / Krieg / frei, quit (Wahrmund1886) / torrent / (pre-Islamic name of) Tuesday / bandage / truss / splints (pieces of wood with which bones are set) / leather bag / portfolio / middling in wealth, talents / simple, good (man) (Hava1899) | Mensch von geringem Vermögen od. Talent (Wahrmund1886) / to set broken bones / to restore, assist / to compel, force, be impregnable / giant, tyrant, almighty / man / ( DRS :) homme fait, dans toute sa force / to be strong / to be(come) strong, prevail, work / to rise, raise o.s. / hence also: strength / to restore / to compel, overpower > man / strength / setting broken bones / force / power / strong, powerful / great / great (esp. in size and number) / to recover and regain strength / numerous / to set (broken bones), repair, restore / power, strength / to press/force broken bones together in order to set them / to form, shape, build up / restoring, repairing / to treat as a fellow human being / (friendly) coercion / to make it easy/comfortable for s.o. / to consider (s.o.) as honest / to consider as a man / to converse kindly with s.o / to force/exert [mild?] coercion on s.o. / s.o. exerting himself much/exceedingly/to the utmost in paying frequent attention to me, taking care of me, putting my affairs into a right/proper state / einem ( fī mit etw.) ein Vergnügen machen / to feel powerful, think of o.s. as mighty, behave arrogantly / the lion / the one boasting of his power / pride, arrogance / my strength / strong one is God / my strong one / strong one, man / god / (young, courageous) man | homme, surtout fort, puissant / naturel de l / homme fait, dans toute sa force / the one boasting of power / slave, servant / strength, strong man / 4 exempt, libre ou innocent de quelque chose (BK1860)| thing of which no account, or for which no revenge or retaliation or mulct, is taken (Lane ii 1865) | erlaubtes Blutvergießen / qui ne paie pas d / être exempt d / exempter de payer la dime/l / taxes / to set (broken bones), restore, repair > help to recover | raffermir, consolider > … / reverdir (se dit d / rétablir ses affaires, redevenir riche après avoir été dans la misère / relever qn, le remettre dans l / s / to set (broken bones) > repair > help to recover > do s.th. good to s.o., exempt/relieve s.o. from s.th. / force, power / the powerful one / day of “forcing”, i.e., channeling the water (of the Nile) (into the now-abandoned ↗ḫalīǧ , or City Canal) / water masses forced into a narrow bed / strength, power / poignet / bracelet, ornement du poignet / splints / wrap, bandage / bracelet / wrist / needle, pin / board or piece of leather or cloth used as a cover for a book / id. (?) / kind of quiver (for arrows etc.) / working/toiling person, worker, toiler, drudge / proletarian / artificer, mechanic / Good morning, oh man! / Sunday / Monday / Wednesday / Thursday / Friday / Saturday / fort / vaincre, être supérieur / homme / héros / être fort / puissance / être fort, gabrā , Mand gabra , nWAram gabrōnā ‘homme / héros, géant / mari / garçon / puissant / puissant, orgueilleux / esclave corvéable / force, contrainte / violence / travailleur, valet, esclave / faire / esclave / faire, faire violence / tribut / payer le tribut / se ressouder (os), se rétablir, se raffermir / aider / réparer, sauver / durillon, callosité / mammelon de bouclier, hernie / planchette ou morceau de cuir ou de toile servant de couverture à un livre / aiguille, broche / nécropole (?) / to surpass / strong / to prevail / manly / mighty deeds / to be strong, prevail / to force to do s.th., submit / powerful man, constraint, coercion / to act, do, work, make, be active, practice, labor, perform, manufacture, produce, bring forth, create, build, fashion, function, carry out, prepare, achieve, execute, procure, enact, keep (ordinances), observe (ordinances, fast) / to cultivate land, till land, pay taxes / to constrain, force, compel, coerce, impose tribute / affair, matter, thing, act, work, workmanship, manner, mode, action, task, office, duty, event, deed, service, business, function, procedure, charge, activity, occupation, doing of work, situation, product, produce, conduct, tribute, contribution, religious service, magical activity, force, reality, compulsion, constraint, necessity, (K*) taxes / practice, conduct, prescription against black magic, practice of magic / workman, laborer, farmer, peasant / one who pays taxes / work, working, construction, building, workmanship / service, action, servitude, enslavement, bondage / pertaining to servants / to do, make / to enslave, subdue / to make, do / to farm / to force / to tame / to pay taxes / to work / to be restored to a former state / to repair / trouver / be restored / contenter, satisfaire (chez tous les Bédouins d / beistehen, erhalten / zwingen / obliger, assister qn dans le besoin / o (Gott) der du Gedeihen gibst / faire avoir de bonheur par faire profiter de (fî) / compensation, bonheur / to console / zufriedenstellen / höchst zufrieden / cogliere, raccogliere, risarcire, ristaurare / ersetzen, vergelten | to restore, replace, repay / Arbeit, Werk / Arbeiter, Beauftragter / adult male / strength, power, force / to set (broken bones), restore, repair / strength, force / relief, ease, exemption (from due taxes etc.) / restore, repair, help up again / to amass, bring together, pile up / height, eminence, greatness / to assemble, bring/put together, (re)collect, (re)unite / to plait / (pile up >) multitude / mountain / to (re)shape, bring into form (again), repair, restore, set (broken bones) / to help recover / to relieve, exempt (from paying blood-money, taxes, etc.) / roidir, devenir raide / restaurer, réparer / pain / plat à pétrir / vase dans lequel on prend la pâte pour faire le pain / wood (in general, as well as aloes-wood in particular) / wood with which one sets bones / …with which one fumigates
   - Mekâyîs: (جَبَرَ) الْجِيمُ وَالْبَاءُ وَالرَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ جِنْسٌ مِنَ الْعَظَمَةِ وَالْعُلُوِّ وَالِاسْتِقَامَةِ.
@@ -704,15 +733,18 @@
   - Cebel: تجمع عظيم شديد الأثناء مع غلظ هيأة
 **جبن**: korkaklık / korkak
   - EtymArab: cowardice / cheese / forehead / facade, front / cemetry / forehead, the two sides of the forehead / to be cowardly / to be flat / cemetery / shrinking together, forming a bumpy surface / to be curved, bowed, hunchback / hump, hunch / difference in altitude, elevation, level / contracting, shrinking / shrinking substance, showing wrinkles, furrows / eyebrow, front / brow, eyebrow / wrinkles, furrows / contracting / elevated plain with some hills, or bumps / shrinking, or bumpy, surface, with “wrinkles” / bossu / sommet, crête (de montagne) / bosse / sommets / terrain élevé de forme plate mais où on trouve des monticules / sourcil / côté du front, front, tempe / front / être lâche, poltron / fromage / contracter, coaguler / faute, culpabilité / espionner / hunchbacked / hump / hump, hill / gibbosus / plaie faite par le bât à la bosse du chameau / qui a la bosse endommagée ou coupé (chameau) / qui n / to be hunchbacked / to be curved, bowed, bent / one having defective eyebrow / eyebrow, eyelash / eyebrow / supercilia / vertex, cacumen / brow, eyebrow, eyelash / brow / les deux extremites du front, les deux parties comprises entre les sourcils et les cheveux / humpbacked', the context of Lv 21:20 rather suggests a defect in the eye area 2 . Hapax legomenon in Job 10:10. ▪ SED I #67 (Sem * gVb(V)b- , * gVb(b)-an- ‘hump, hunch / side and back of torso / to be bent / eyebrow, eye-pit, front / hillock (?)
+  - Mekâyîs: (جَبَنَ) الْجِيمُ وَالْبَاءُ وَالنُّونُ ثَلَاثُ كَلِمَاتٍ لَا يُقَاسُ بَعْضُهَا بِبَعْضٍ.
   - Cebel: تجمد ظاهر الجرم على خلاء أورقة في أثنائه: كالجُبْن مع خلوه من الدَسَم (إذ كانوا يمخضون الزبد أولًا)، والأرض المذكورة على (1/274) خصوبتها وهي رقة أثناء ورخاوة، وعلى الأموات في باطنهما (فراغ لهم) والجبينان مستويا الظاهر على رخاوة في باطنهما تُحسّ {فَلَمَّا أَسْلَمَا وَتَلَّهُ لِلْجَبِينِ}
 **جبه**: alın / yüz / alınlar
   - EtymArab: forehead, front / to meet, face, confront / forehead, to strike on the forehead / chief / to embarrass, to hold the head down, to be humiliated / group of horses / eyebrow, eye-pit, front / to be bald (on the forehead) / height / height, elevation / forehead / thick, fleshy part / front / brow / front, brow / front (tant chez l / front large, vaste et beau / broadfronted / forehead | Locke oder Flechte des Haares / to be high / high / to be high, elated
+  - Mekâyîs: (جَبَهَ) الْجِيمُ وَالْبَاءُ وَالْهَاءُ كَلِمَةٌ وَاحِدَةٌ، ثُمَّ يُشَبَّهُ بِهَا.
   - Cebel: المواجهة بصلب عريض في مقدّم الشيء ليس فيه رخاوة - كجبهة الفرس والإنسان {فَتُكْوَى بِهَا جِبَاهُهُمْ} والعياذ بالله تعالى
 **جبي**: vergi toplamak / vergi toplayan
   - EtymArab: to collect, raise, levy (taxes, duties) / to prostrate o.s. (in prayer) / pool, basin / pools / basins, cauldrons, to collect water in a basin, collected drinking water / to request / to select / to invent / to kneel down / to gather, collect, amass, coagulate, etc. / collecting / levying taxes / cistern, collection of water / collecting, gathering, amassing / hollow of stagnating water / pit where water has assembled / encaisser / collecte / collecteur / faire rentrer / taxer, lever des impôts / recueillir (de l / rassembler, choisir / mendier, recueillir (des souscriptions, etc.), choisir / mendier / rassembler / fermenter, déborder / descendre / passer / choisir / revenir / temps de la collecte des impôts / trouver / revenir à, se réunir à / confluer / arriver, se produire / rencontrer / se tourner / entrer / retourner / réunion / étang, marais / fossé, réservoir à eau / fosse, anfractuosité où l / , Hbr * gēb , gōb (coll. gobay , gōbay ), JudPalAram gōbā , gōbay ‘sauterelle / surgir, s / nuée de criquets / totalité / ?Ar ǧabʔ ‘truffe / s / poltron / to collect (a bill, taxes) / to collect tax / to exact tribute / to impose tithes / to collect tribute / restituere / reddere / ad se recipere / cogere, colligere / congregare / fossé / porte
   - Mekâyîs: (جَبَيَ) الْجِيمُ وَالْبَاءُ وَمَا بَعْدَهُ مِنَ الْمُعْتَلِّ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى جَمْعِ الشَّيْءِ وَالتَّجَمُّعِ.
 **جثث**: ceset / cisim / cüsse
   - EtymArab: to tear out, uproot / body / corpse, cadaver / carcass / mujtathth / remains of bees mixed with honey / wax / remains of bees in honey / dead locust / envelope of a date / hillock / palm-tree grove / shoot of palm-tree / seedling, to transplant / to uproot, eradicate / body, corpse / impurities / carcass (of an animal) / tearing out / to cut / form, shape / body, mortal frame / body of person, image, bodily form of god | Leib / cadavre, charogne / corps / personne / hollow / remains of (dead) bees in honey / carcasses / to tear out / couper, trancher / déraciner, arracher / arrachage / annuler, effacer, abîmer, vaincre, déflorer une fille / faire détester / refuser, désobéir / être abîmé / poteau, pieu, pal / corps, cadavre / restes, débris (d / vétusté, ruine / cadavre / abschneiden / ein Lamm, zum Schlachten geeignet | fatling / to scrape away, shave of, pluck out (hair) / to wipe off with the hand, sweep / to efface, wipe out / to remove completely by cutting and digging / to tear up, root up / to wipe / Rumpf einer Leiche | tronc d / corps, taille et volume du corps (tout de l / er hat seinen Leib bezahlt / agneau de boucherie / bête grasse
+  - Mekâyîs: (جَثَّ) الْجِيمُ وَالثَّاءُ يَدُلُّ عَلَى تَجَمُّعِ الشَّيْءِ.
   - Cebel: تميز كتلة كثيفة ذات حجم اقتلاعا أو ارتفاعا (1)
 **جثم**: çömelmek / yere çökmek
   - Mekâyîs: (جَثَمَ) الْجِيمُ وَالثَّاءُ وَالْمِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَجَمُّعِ الشَّيْءِ.
@@ -724,14 +756,15 @@
   - Cebel: جفاف الباطن ويبسه على ما يتجمع فيه من قُوَى فلا تنبسط إلى ما يُتَوقع منها
 **جحم**: cehennem ateşi / ateşli
   - EtymArab: Hell, hell-fire / to open (the eyes) / to cast a piercing look ( bi at) / swelling of the eyes / to abstain / to depart ( ʕan from) / great fire, blaze, intense fire, to light a fire, to burn / allumer et attiser le feu / feu ardent / inflammation (de l / to frown, glower / clouds / to roast / coal / hell / charbon / réduire en charbon / perdre la vue / être chaud, chauffé / acquérir, pouvoir, gagner / être assis (chien) / burn them / Hell, hell-fire, fiercely burning fire / to open (the eyes) | die Augen öffnen und auf etwas richten / catch sight of, espy, look at | sehen, erblicken / weit blicken (vom Auge)
-  - Mekâyîs: وَكَيْفَ كَانَ فَهِيَ مِنْ هَذَا الْأَصْلِ ; لِأَنَّ الْعَيْنَيْنِ سِرَاجَانِ مُتَوَقِّدَانِ.
+  - Mekâyîs: (جَحَمَ) الْجِيمُ وَالْحَاءُ وَالْمِيمُ عُظْمُهَا بِهِ الْحَرَارَةُ وَشِدَّتُهَا.
   - Cebel: (بؤرة متوقدة الأثناء) توقد أثناء الشيء الجسيم حِدّة مع غلظه في نفسه - كحُمْرة جَحْمَتى الأسد (والحمرة شدة) إذْ تبدُوان في صفائهما مع الحمرة والحدّة كجَمْرتي نار، وكالحرارة في المكان
 **جدث**: mezar / mezar taşı
   - EtymArab: ... / (a doubtful verbal root) a grave, to make or prepare a grave
+  - Mekâyîs: (جَدَثَ) الْجِيمُ وَالدَّالُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ: الْجَدَثُ الْقَبْرُ، وَجَمْعُهُ أَجْدَاثٌ.
   - Cebel: نَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51]
 **جدد**: yenilemek / yeni
   - EtymArab: grandfather / good luck, good fortune / seriousness / to be new, recent / Jidda (seaport in Saudi Arabia) / main street / couper (se dit du fabricant qui coupe d / coupons / pièces coupées sur le métier: chaque pièce pour faire une robe / cut, cut off | coupé, séparé de son tout / pièce d / having some part(s) cut, or cut off (e.g., ear, teats, udder), lop-eared (ewe) / taille de palmiers, action de les tailler / époque, saison à laquelle on taille les palmiers / petits arbres (palmiers ou autres) / dry (breast, udder, road), small-breasted (female) / having little milk (L) | brebis ou chamelle qui ne donne que fort peu ou point de lait / to dry out (udder) / waterless, cut off from the water (desert) / dégoutter d / abundant, or scanty (well) | eau aux confins du désert / hard, more easy to walk/ride upon, plain, level (road) / † ǧadad (pl. ʔaǧdād ), also ǧadǧad (L), ‘hard level ground / thin sand / surface of the earth | terrain uni et dur / sol dur, neuf / to become smooth (road) [prob.: hard, hence easy to walk/ride upon / see above] / mark, dividing line / stripe/streak on the back of an ass, differing from his general colour (L) / b streak in anything (as in a mountain) differing in colour from the rest, line, mark, sign | ligne d / way, manner | manière, façon, moyen / he set upon a way, or manner, of performing the affair, he formed an opinion respecting the affair, or case / shore, bank/side of a river / côté, bord (de toute chose) / littoral, côte, littoral du Hedjaz, de la Mecque / collier au cou du chien / fat(ness), obesity / fat (she-ass) / anesse grasse / obésité, corpulence / homme puissant / marchand de vin / vigneron, celui qui fait le vin / intertwisted boughs | branches entrelacées, fils embrouillés, mêlés, b [ fig. ] chemins battus / c rags (Pers) | vêtements usés / ancestor, grandparent / luck, good fortune / greatness, glory, majesty / hard work, seriousness / new, to renew / middle of the road, main road, straight, correct path, level land / good luck, fortune / to cut, cut off / to be great / serious / fortune, success, luck / great, serious / fortune, chance / Gad / glory, honor, dignity, nobility / to be good, lucky, excellent / to be good, approvable, excellent / standing out, prominent, marking o.s. as different from the surroundings, “cutting edge” / grandfather, ancestor / the great, serious one, “majesty”)? ▪ [v4] ‘(to be) new, recent / to cut, make an incision / Jidda / grandmother / scarcity of water / to be cut off (sc. from water supply), dryness, scarcity of water / road / id. / track, beaten way, path, road / to cut / cutting / to cut, cut off, cut out (a garment) / to cut, lop, prune / cut-out piece / cut, cut off / having some part(s) cut, or cut off (ear, teats, udder), lop-eared (ewe) / dry (breast, udder, road), small-breasted (female), having little milk (goat, sheep, camel), to dry out (udder) / to drip, let fall drops (house, tent, etc.) / new / unusual, cutting, breaking the usual / main street, boulevard / (clearly) dividing, “cutting” one (line, track, street) / dividing line / way, manner / path, track / dividing line, mark / to cut, cut out / fat(ness), obesity (?> mighty man) / seller or producer of wine / intertwisted boughs, ravelled threads, entangled branches, [ fig. ] chemins battus / rags, worn garments / vêtement usé, rapiécé / short trees / low mountains / découdre? taillader? / se faire des incisions / couper, inciser / couper autour, rogner / couper, partager / amputer, retrancher / être coupé, raccourci / répartir, accorder / couper, retrancher / puits intermittent / être décidé, paraître sérieux (événement, fait) / zèle, effort / grand / magnifier / sérieux / être plus grand, surpasser, étonner / oh! étonnant! / bande, troupe / bande de brigands / (chef de) bandes / bataillon, chœur / bande, groupe / troupe, bande / brigand / empirer / endommager, nuire / endommager par places (comme font les sauterelles) / se précipiter ensemble contre, attaquer / se précipiter aveuglément / contrainte, force / obliger, contraindre / refuser, résister / manquer, être nécessaire / mur, rempart / remblai (délimitant un champ) / précipice / précipice escarpé, bord élevé / bord d / terrain uni et dur / surface du sol / adolescent / nouveau / être neuf / assignation, distribution / augure / qui porte chance / collier (de chien) / entraver, enchaîner / se tenir tranquille / ne pas bouger / âpre, amer / absinthe / amer / coriandre / fortune / luck / fortuna, sors / to be fortunate / luck, fortune / luck, good luck or good fortune / genius, godhead / great / majesty, glory / to be serious / serius, gravis / serious, severe / vehementia, gravitas / new, recent / adolescens, juvenis / to enforce, validate a decree / to renew, validate / abtrennen / steep or straight embankment / a wady between steep embankments / a hedge, mount / repartir, accorder / track, way on a hill side / murus, macerial ambiens, septum / to chop / to make incisions upon oneself / to cut off / abscidit, amputavit / to tear, make a hole / having some part(s) cut, or cut off (e.g., ear, teats, udder, palm twigs), trim palm trees, season of trimming palm trees / (*cut off from milk or water >) dry (breast, udder, well, road, desert region), small-breasted (female), intermittent well, to drip, let fall drops (a house, tent, etc.) / (*dry >) hard, level, plain ground, more easy to walk/ride upon > surface of the earth / couper, inciser, etc.«, i.e., the obsolete value listed here as † [v7]. This would include also [v3] ‘(to be) great / shore, river bank / dog / streak/dividing line on the neck of a dog / aïeul, grand-père / ancêtre / gravité, sérieux / Mageddo / excellence (of gifts of nature) / fructus / excellence / greatness, “majesty”, seriousness etc. / standing out / the great, serious one, “majesty”). ▪ [v4] ‘(to be) new, recent / to cut off, separate from the whole > piece of tissue sufficient to sew a garment > new garment (cf. labisa l-ǧadīd ‘he put on a new garment / coastline / to be cut off (sc. from water supply), dryness
-  - Mekâyîs: هَذَا هُوَ الْأَصْلُ، ثُمَّ سُمِّيَ كُلُّ شَيْءٍ لَمْ تَأْتِ عَلَيْهِ الْأَيَّامُ جَدِيدًا ; وَلِذَلِكَ يُسَمَّى اللَّيْلُ وَالنَّهَارُ الْجَدِيدَيْنِ وَالْأَجَدَّيْنِ ; لِأَنَّ كُلَّ وَاحِدٍ مِنْهُمَا إِذَا جَاءَ فَهُوَ جَدِيدٌ.
+  - Mekâyîs: (جَدَّ) الْجِيمُ وَالدَّالُ أُصُولٌ ثَلَاثَةٌ: الْأَوَّلُ الْعَظَمَةُ، وَالثَّانِي الْحَظُّ، وَالثَّالِثُ الْقَطْعُ.
   - Cebel: عِظَم الجرم مع تماسكه مستويا ممتدًّا أو منبسطًا (1)
 **جدر**: duvar
   - EtymArab: to befit, be suitable, proper, appropriate, be worthy (of s.th.), deserve / wall / smallpox / dish made of rice or bulgur with lentils, onions and oil / to sprout (plant) / to form its grains and sprout (vine) / to have young trees (land) / to shoot forth (tree) / wall, walling-in, an enclosure / pustules, smallpox / to be worthy of s.th. / to be fit, suitable, worthy / wall, fencing, etc. / to sprout, shoot forth / good luck, chance, fortune / happiness, fortune / (to be) suitable\good / luck / fence, wall / hence also: produce pustules on the skin, etc. / mur en pierres / tas de pierres / clôture séparation / mur / aux alentours de, à côté de / parois de la hutte, mur de la maison / sorte de hangar pour les animaux / ceinture (?) / être digne de, apte à / s / puissant / rang social, respect / hurler, mugir (animal mâle) / poindre, bourgeonner / pustule variolique / petite vérole / Umfriedung / fence / to fence in / pond, pool / in the surroundings of, at the side of / parois de hutte, mur de la maison / a kind of enclosure made of sticks and thorns in which cattle spend the night while in the fields / wall, cairn, piled stones / bouillir fortement / faire du bruit (eau bouillante, etc.) / Like a divine viper in a hedge / cattle pen inside the house / to be fit, suitable, be worth / fortune / feliciter / genius, god of fortune / fortune, luck, success / fortune, success, luck, fate / Glück, chance / good, nice / good / big, much / id. / big / many / grow big, become many\much / whole, entire / wealth / to be suitable\good / suitable / gut, tüchtig, schön / to suit, be fortunate / to satisfy | gratum esse, morem gerere, placere / to make a deal / it is pleasant, I like it / to be suitable / to bring to an agreement / it is permitted\lawful / appropriate time / time (hora, tempus) / year / holiday, year, appropriate time / religious feast / time, year / suitable, appropriate / bank, shore, side of s.th. / bank, side of a river / its banks / bank, riverside, waterside / wall, side / côté, bord (de toute chose) / bord, rive (d / rivage, bord (d / fort, fortress, citadel / to sprout / to infect with smallpox, show pustules / dish that looks like smallpox on the skin
@@ -745,7 +778,7 @@
   - Mekâyîs: (جَذَّ) الْجِيمُ وَالذَّالُ أَصْلٌ وَاحِدٌ، إِمَّا كَسْرٌ وَإِمَّا قَطْعٌ.
   - Cebel: كَسْرُ الصُلْبِ أو قَطْعُ الشديد الغليظ (1): ككسر حجارة وقراضات الذهب، وجَذاذ ثمر النخل وهو يكون عذوقًا كثيرة
 **جذع**: hurma kütüğü / gövde / ciz
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: جِذْعُ الشَّجَرَةِ.
+  - Mekâyîs: (جِذْعُ) الْجِيمُ وَالذَّالُ وَالْعَيْنُ ثَلَاثَةُ أُصُولٍ: أَحَدُهَا يَدُلُّ عَلَى حُدُوثِ السِّنِّ وَطَرَاوَتِهِ.
   - Cebel: مقاربةُ النامي انتصابًا كمالَ نمو - كجَذَعِ الإبل وغيرها ومنه "جِذْع النخلة - بالكسر: ساقُها " (قائم، وهو الجزء الذي يتمثل فيه النُمُو فكأنَّ صيغة اسمه
 **جذو**: kısık ateş / cezâ
   - Mekâyîs: (جَذَوَ) الْجِيمُ وَالذَّالُ وَالْوَاوُ أَصْلٌ يَدُلُّ عَلَى الِانْتِصَابِ.
@@ -788,16 +821,20 @@
   - Cebel: انقطاع وسط الشيء مع التئام ظاهره أو اتصاله - كالخرز يكون مثقوب الوسط متصل الظاهر، والوادي فارغ الوسط لكنه يُعْبر، وكفراغ ما تحت الخشبة المعروضة، مع اتصالها هي
 **جزي**: karşılık / ödül / ceza
   - EtymArab: recompense, to repay, to reward, to punish for bad deeds, judgement / to stand in for / taxation, tribute / disparaître / se cacher (?) / séparer, couper / couper / être privé de / rétribuer, donner sa juste part / distribuer de façon que le meilleur revienne à chacun alternativement / agir injustement / portion plus grande (par suite d / partialité / décision, ordre / destin / mort / temps / tumeur
+  - Mekâyîs: (جَزَيَ) الْجِيمُ وَالزَّاءُ وَالْيَاءُ: قِيَامُ الشَّيْءِ مَقَامَ غَيْرِهِ وَمُكَافَأَتُهُ إِيَّاهُ.
 **جسد**: vücut / iri
+  - Mekâyîs: (جَسَدَ) الْجِيمُ وَالسِّينُ وَالدَّالُ يَدُلُّ عَلَى تَجَمُّعِ الشَّيْءِ أَيْضًا وَاشْتِدَادِهِ.
   - Cebel: تجمد الجرم كتلة مشبعة المسامّ يابسة - كالثوب والدم
 **جسس**: araştırmak / casusluk etmek
   - EtymArab: ... / to test by hand, probe, examine / to spy, probe into other people
   - Mekâyîs: (جَسَّ) الْجِيمُ وَالسِّينُ أَصْلٌ وَاحِدٌ، وَهُوَ تَعَرُّفُ الشَّيْءِ بِمَسٍّ لِطَيْفٍ.
   - Cebel: نفاذٌ إلى باطن الشيء بدقة ولطف (1)
 **جسم**: cisim / vücut
+  - Mekâyîs: (جَسَمَ) الْجِيمُ وَالسِّينُ وَالْمِيمُ يَدُلُّ عَلَى تَجَمُّعِ الشَّيْءِ.
   - Cebel: تكتل مادي (له طول وعرض وعمق) كالبَدَن، وضَخْم الجثة، وكالرمل والجبل {وَزَادَهُ بَسْطَةً فِي الْعِلْمِ وَالْجِسْمِ} [البقرة: 247]
 **جعل**: yapmak / kılmak / sırt
   - EtymArab: ... / reward/payment set for a task to be carried out, bribe / to put, to place / to make, create, constitute / to attribute / scarab, seedling
+  - Mekâyîs: (جَعَلَ) الْجِيمُ وَالْعَيْنُ وَاللَّامُ كَلِمَاتٌ غَيْرُ مُنْقَاسَةٍ، لَا يُشْبِهُ بَعْضُهَا بَعْضًا.
   - Cebel: تحويل الشيء إلى وضع أو هيئة معينة (بعد تحول كتلته أو انتقالها): كالفسيلة تُحَوَّل وتصير نخلة، والجُعَل مشهور بالتحول والتجبية، فيقال: "جَبَّى جُعَلُ "ثم هو (يُدَهْدِهُ) دائمًا شيئًا يجمعه - (تحويل)، وكجَعْل خشب الشجرة بابًا إلخ
 **جفء**: dökülüp atılmak / köpük
   - EtymArab: ... / scum, flotsam / corruption, falsehood / to cleanse, uproot, knock down
@@ -821,9 +858,7 @@
   - Cebel: ارتفاعٌ أو نتوءٌ (محدود) مع تجمع جرم وشدة تماسك
 **جلل**: büyüklük / yücelik / büyük
   - EtymArab: to roll / circuit, district / skull
-  - Mekâyîs: قَالَ كُثَيِّرٌ:
-وَإِكْرَامِيَ الْعِدَى مِنْ جَلَالِهَا
-وَالْأَصْلُ الثَّانِي شَيْءٌ يَشْمَلُ شَيْئًا، مِثْلَ جُلِّ الْفَرَسِ، وَمِثْلُ [الْمُجَلِّلِ] الْغَيْثُ الَّذِي يُجَلِّلُ الْأَرْضَ بِالْمَاءِ وَالنَّبَاتِ.
+  - Mekâyîs: (جَلَّ) الْجِيمُ وَاللَّامُ أُصُولٌ ثَلَاثَةٌ: جَلَّ الشَّيْءُ: عَظُمَ، وَجُلُّ الشَّيْءِ مُعْظَمُهُ.
   - Cebel: تغطية عظيمة أي واسعة (يقصد بها الصون) (1) كالجُلة
 **جلو**: parlatmak / açıklamak
   - EtymArab: ... / to appear in glory / evacuation, to evacuate, clear away / to manifest, clarify, appear / to polish, remove / to go away
@@ -857,7 +892,7 @@
   - Cebel: امتداد - أو اندفاع - من الجوانب قوي أو حادّ
 **جند**: asker / ordu
   - EtymArab: soldiers, army / troops, forces, host, army / helpers, supporters / thick rocky land / to enlist a fighting force, to muster / courageous, brave, strong / combattant / raw / strong / hero / raw/brutal, strong, massive, rude
-  - Mekâyîs: وَالْجَنَدُ: الْأَرْضُ الْغَلِيظَةُ فِيهَا حِجَارَةٌ بِيضٌ ; فَهَذَا مُحْتَمِلٌ أَنْ يَكُونَ مِنَ الْبَابِ، وَيَجُوزُ أَنْ يَكُونَ مِنَ الْإِبْدَالِ، وَالْأَصْلُ الْجَلَدُ.
+  - Mekâyîs: (جَنَدَ) الْجِيمُ وَالنُّونُ وَالدَّالُ يَدُلُّ عَلَى التَّجَمُّعِ وَالنُّصْرَةِ.
   - Cebel: " صلابة الشيء وغِلَظه (كأنما ضغط على ما فيه)
 **جنف**: meyil / eğrilik / yan
   - EtymArab: ... / hunchback, to incline, deviate, go over, be crooked, crookedness
@@ -905,16 +940,19 @@
   - Cebel: تخلل واختراق بحدة لشيء
 **جوع**: açlık / aç
   - EtymArab: hunger, to hunger, to yearn for s.th., to starve, starvation, famine / mourir / avoir faim / affamé / mépriser / glanage
+  - Mekâyîs: (جُوعٌ) الْجِيمُ وَالْوَاوُ وَالْعَيْنُ، كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: فراغ في جوف الشيء (من ذهاب ما كان يملؤه) كما في الجُوع والفراغ في القِدْر وضُمور البطن من قلة ما فيها
 **جوف**: iç / içi boş
   - EtymArab: hollow, cavity / inside, centre / abdomen / guava (fruit, brush) / corpse, cadaver / ( hence also: ) to stink / (name of a species of fish) / belly, interior, inside / valley, to be hollow / to penetrate / heart, middle, interior / body / hollow / interior / hollow, empty / hole
-  - Mekâyîs: وَأَصْلُهُ رَجُلٌ كَانَ يَحْمِي وَادِيًا لَهُ.
+  - Mekâyîs: (جَوْفٌ) الْجِيمُ وَالْوَاوُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ جَوْفُ الشَّيْءِ.
   - Cebel: فراغٌ واسع في قلب الشيء وباطنه
 **جوو**: iç / derinlik / hava / boşluk
   - EtymArab: atmosphere, the arch of the sky, air, the space between the face of the earth and what appears to be the sky / large expanse of open land / intérieur / corps / viscères, intestins / poitrine / sein, giron, poitrine / vallée / vallée large / pénétrer dans les profondeurs de la terre / terre / côté / dos / couleur noirâtre / pièce cousue / devenir dur
+  - Mekâyîs: (جَوٌّ) الْجِيمُ وَالْوَاوُ شَيْءٌ وَاحِدٌ يَحْتَوِي عَلَى شَيْءٍ مِنْ جَوَانِبِهِ.
   - Cebel: تجوف قوي مُكتنَف الجوانب في جرم شيء: كما في النقرة الخ
 **جيء**: suyun birikip durduğu çukur / gelmek
   - EtymArab: to come / to come, to arrive, to reach, to get, to bring / large ditch for collecting rain / valley / venir / vomir, cracher
+  - Mekâyîs: (جَيَأَ) الْجِيمُ وَالْيَاءُ وَالْهَمْزَةُ كَلِمَتَانِ مِنْ غَيْرِ قِيَاسٍ بَيْنِهِمَا.
   - Cebel: انحدار إلى حيز أو تجوف سُفلي مُهَيّأ جامع: كالماء في الهبطة والحفرة وكالمِدّة قي الجرح والخُراج، والحَشا في جَيْأة البطن
 **جيب**: cep / içi boş yer
   - EtymArab: breast, bosom, heart / sine ( math. ) / hole, cavity / pocket / purse / jeep / to bring / to cut out the collar (of a shirt) / to pierce, penetrate, cut through / opening, gap / hole, pit / cavity, hole / chest / belly / interior / to come with s.th., bring along s.th. / woman
@@ -926,6 +964,7 @@
   - Cebel: قوة خروج الماء (وما هو سلس) من جوف الشيء
 **حبب**: sevgi / sevgili / sevmek
   - EtymArab: ... / grains, seeds, plants, bulbs / core of the heart, affection, love, to love, prefer / loved one, a friend / dew
+  - Mekâyîs: (حَبَّ) الْحَاءُ وَالْبَاءُ أُصُولٌ ثَلَاثَةٌ، أَحَدُهَا اللُّزُومُ وَالثَّبَاتُ، وَالْآخَرُ الْحَبَّةُ مِنَ الشَّيْءِ ذِي الْحَبِّ، وَالثَّالِثُ وَصْفُ الْقِصَرِ.
   - Cebel: تجمع الدقيق أو اللطيف مكتنزًا معًا (1): كما في حَبّ
 **حبر**: bilgin / âlim / mürekkep
   - EtymArab: ... / Jewish Doctor of the Law / trace of an old mound, striped cloth made in the Yemen / embroidery, to embroider, silken material / to make beautiful, make happy, make pleasant / ink, writing / learned person, priest, rabbi, an authority in matters of faith
@@ -933,6 +972,7 @@
   - Cebel: أثر ظاهر يستحسن من تجمع لطيف (في الأثناء): كالوَشْى وهو محيط في الثوب، والثوب الناعم من رقة خيوطه ونَسْجه
 **حبس**: hapsetmek / alıkoymak
   - EtymArab: ... / to detain, restrict, confine, prison / to endow
+  - Mekâyîs: (حَبَسَ) الْحَاءُ وَالْبَاءُ وَالسِّينُ.
   - Cebel: امتساك الشيء في حيّزٍ لا يتسيب أو ينفذ منه، لسدّ السُمُوم والمنافذ التي يمكن أن يتسرب منها
 **حبط**: boşa gitmek / değersizleşmek
   - EtymArab: ... / cattle disease of swelling of the stomach caused by overeating and gas, to bloat / to be frustrated, come to nothing, be undone, be futile, be of no avail
@@ -960,8 +1000,7 @@
   - Cebel: حماية أو ستر للشيء بحائل قوي يحجز غيره عنه
 **حجج**: delil / kanıt / yolculuk / hac
   - EtymArab: hajj, pilgrimage to Mecca / to dispute, debate, argue, reason / circumorbital ring ( anat. ) / head fracture, to test the depth of a head fracture / proof, argument, to argue, to defeat in an argument / to visit, to make a pilgrimage – particularly to the Holy Mosque in Mecca, pilgrim / a year / to make a pilgrimage / fête religieuse / to danse\move around s.th. in a circle / danser, tournoyer / décrire un cercle / os de l / faire un pèlerinage / fête religieuse (avec pèlerinage) / fête / réunion / pèlerinage à la Mecque ou à Jérusalem / marcher, aller, se rendre à, ou vers qc de révéré, faire le pèlerinage / route, partie (de la route sur laquelle on marche) / se porter vers / aller au pèlerinage / pèlerinage / pèlerin / derviche / retranchement, confluent / l / preuve, argument / s / querelle / ordonnance, droit, titre / empêcher une/sa femme d / faire des lois, décréter, ordonner / loi, règlement, coutume / faire une loi / être fixé, sûr / délimiter / loi, coutume / comme, selon / explorer, sonder (une blessure à la tête) / trépaner / être dur, solide (crâne) / trou (au lobe de l / exhaler une odeur forte / gronder, grogner (chien) / être échaudé par le soleil ou la gelée, roussir, dépérir, être stérile / oublier par inadvertance / importuner
-  - Mekâyîs: أَسِيٌّ عَلَى أُمِّ الدِّمَاغِ حَجِيجُ
-وَالْأَصْلُ الْآخَرُ: الْحِجَّةُ وَهِيَ السَّنَةُ.
+  - Mekâyîs: (حَجَّ) الْحَاءُ وَالْجِيمُ أُصُولٌ أَرْبَعَةٌ.
   - Cebel: تجوف كهفي صُلب أو مَتين (يحمي ضعيفًا في داخله) (2) - كحِجاج العين (يحمي مُقْلَة العين بكل ما حولها) وكوقرة العظم
 **حجر**: taş / akıl
   - EtymArab: stone, to stone / to solidify / enclosure, room / to confine / to deny access, to limit, to declare legally incompetent, to freeze / cunning person, brains, discerning faculty / to prevent, hinder, restrain / ? / to twist, be(come) twisted, perverse, cross, confuse / to gird / to hinder / ankle, chain / tordre, être ou devenir tordu, pervers / croiser sur, envelopper, entortiller / empêcher, barrer la route / ceindre / boiteuse / enceinte / ceindre, sangler / réprimer, retenir / retenir, empêcher, rendre boiteux, boiter / boiteux / empêcher d / être entouré d / mur, haie, digue / enclos, chambre / protection, tutelle, giron / bas-ventre, basque d / réserver (à un usage) / terre réservée (à un usage) / ordonner, commander / surveiller, protéger, être bienveillant / attendre / gardien / réunion publique / groupe d / entourage / animaux domestiques / fossette jugulaire / interdire, arrêter / indigène / pierre / pépins de raisin / clarifié (beurre) / s
@@ -993,6 +1032,7 @@
   - Cebel: تَوَتُّرُ أثناءِ الشيء أي اشتدادها وتداخلُ بعضِها في (1/393) بعض مع غلظة ظاهره -كتلك الأرض والجبل
 **حرب**: savaş / savaşçı
   - EtymArab: war, combat / prayer niche / spear / to extort / war, to wage war / to become angry / lion / épée, lance / couteau, épée / lance / aiguiser / flèche, baïonnette / être en colère, être pillé, dépouillé / piller, dépouiller qn / faire la guerre contre / guerre / combattre / faire la guerre / être en guerre avec / butin, prise / bataille / brave, valeureux / asile / château / palais royal / chefs / se disposer à la colère et au mal / sac à blé, à farine / terrain rocailleux / outre / repas / prendre le repas du soir, dîner / repas du soir / racler, tanner / être laissé pour le lendemain (reste de nourriture) / rester célibataire / reste de nourriture / célibataire / dos, chair du dos / caméléon
+  - Mekâyîs: (حَرَبَ) الْحَاءُ وَالرَّاءُ وَالْبَاءُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا السَّلْبُ، وَالْآخَرُ دُوَيْبَّةٌ، وَالثَّالِثُ بَعْضُ الْمَجَالِسِ.
   - Cebel: سَلْبُ الشيء أي سَحْبه وأخذه بقوة أو حدّة
 **حرث**: ekin ekmek / tarla
   - EtymArab: ... / plantation, cultivated land / plough, to plough, sow seeds, to till, tillage / earnings, to earn, work for one
@@ -1004,11 +1044,11 @@
   - Cebel: ضيق المكان من كثافة الشجر العظيم المرتفع فيه فيعسر النفاذ فيه أو منه
 **حرد**: kızgınlık / öfke
   - EtymArab: ... / severance of the tendon of a camel
+  - Mekâyîs: (حَرَدَ) الْحَاءُ وَالرَّاءُ وَالدَّالُ أُصُولٌ ثَلَاثَةٌ: الْقَصْدُ، وَالْغَضَبُ، وَالتَّنَحِّي.
   - Cebel: جفاف الباطن ويُنسُه بذهاب الندَي والطراءة منه
 **حرر**: özgürlük / özgürleştirme
   - EtymArab: heat, to burn / stony area, rocky terrain / (to be born) free, freedom / nobility / (fig.:) the best of anything / to write elegantly / to dedicate to the service of God / silk / stony area / heat / the burnt area / to be free / fabric/tissue free from unevenness / être chaud, brûlant, sec / to become moldy / brûler, rôtir / brûler, flamber / être chaud / être sec / être chaud, brûlant / fièvre / chaleur / chaleur, boutons de chaleur / température / couche de brûlé au fond d / gratter le brûlé du fond d / être noir / être sec, brûlé par le feu / brûler (feu), se brûler, être brûlé / brûler / briller, étinceler / être carbonisé / maladie du grain / terrain rocheux, terre pierreuse / né libre / libre, noble / libre / affranchi / libre, pur, franc / noble, libre / né libre, noble / condition de l / armée, officiers / soldat / armée, troupe / vulve (de la femme) / soie / canal d / système d / aqueduc / mettre à l / armée / heat, thirst, to become hot, to intensify / volcanic rocky land / free person, to liberate, to set free / the best of anything / to set right / être chaud, brûlant, brûler / être animé de colère, de haine / free
-  - Mekâyîs: (حَرَّ) الْحَاءُ وَالرَّاءُ فِي الْمُضَاعَفِ لَهُ أَصْلَانِ:
-فَالْأَوَّلُ مَا خَالَفَ الْعُبُودِيَّةَ وَبَرِئَ مِنَ الْعَيْبِ وَالنَّقْصِ.
+  - Mekâyîs: (حَرَّ) الْحَاءُ وَالرَّاءُ فِي الْمُضَاعَفِ لَهُ أَصْلَانِ: فَالْأَوَّلُ مَا خَالَفَ الْعُبُودِيَّةَ وَبَرِئَ مِنَ الْعَيْبِ وَالنَّقْصِ.
   - Cebel: خلوص الشيء من الغليظ الذي يعروه أو يخالط أثناءه (بأن يخرج منها) فيصفو ويَنْقَى (1): كحَرّ الأرض الموصوف، وكخلوص الطين
 **حرس**: korumak / gözetmek / bekçi
   - EtymArab: ... / guard, to stand guard, watch, protect
@@ -1024,8 +1064,7 @@
   - Cebel: خرطُ مادة التماسك والحدّة مما هي فيه
 **حرف**: harf / kenar / yön
   - EtymArab: cutting\sharp edge, border, rim, brink, verge / letter / consonant / particle ( gram. ) / type ( typ. ) ↗² ḥarf / c ‘common garden pepper cress (Lepidium sativum L. / bot. ) ↗¹ ḥurf . – Cf. perhaps also d † ḥarafa ( i , ḥarfaẗ ) ʕayna-hū ‘to apply collyrium to one / to ill-treat ( h s.o.) (H), emaciate, render lean (a she-camel) (L) / to slant, incline, make oblique / bend off\up\down\back, distort, corrupt, twist, pervert / to turn away ( ʕan ) / to discard s.o. ( ʕan from) / to change s.th. / to alter (a word, a book) / to tamper with / altered / angular (body) / ill-fatedness, privation of prosperity, debarment from the means of subsistence / bad luck / to suffer the loss of somewhat of o. / one whose property has gone / to be debarred from the means of subsistence, to have o. / profession, occupation, vocation, business, craft, trade / to earn ( li for o. / to use shifts for a livelihood / studio, atelier / † place in which a man earns or gains subsistence, or labours to do so, and employs himself as he pleases, his various pursuits (L) / customer, patron, client ( tun. ) / fellow-worker, associate (H,L) / artisan (H) / to repay ( bi-sūʔ evil, h to s.o.), requite s.o. for what he has done / to probe, measure (a wound, with a miḥrāf ) / surgeon / to become rich (H), become in a good state or condition (L) / man whose property increases and becomes in a good state or condition, or whose cattle increases c. / manière / edge, ledge, side / to deviate, to veer, to slant / to distort, pervert / a profession, a craft / to take up a trade / to be hot and spicy / limit / extremity, side / sharpening / cutting\sharp edge / common garden pepper cress / invective, reviling / stinging, sharp words / sword, knife / lance, spear / the limit where the cutting of the ṣawt occurs, its end, its extremity / writing / scraping with a sharp point / to scratch with a sharp point, [then also] ‘to write / to apply collyrium to one / sharp edge / eye-lining / contouring, marking the edges / to ill-treat ( ‑h s.o.) (H), emaciate, render lean, a she-camel (L) / sort malheureux, triste destin / famine, pauvreté / turning away, discarding / changing, altering, distorting / sharp edge > edge, side > to go beyond the edge, deviate > to bend off, turn away from > to distort, corrupt, pervert, tamper > to change, alter / falsifier / sens caché, devinette / éloigner, déplacer / déplacer, retirer / bad luck † ² ḥurf ) or, in YemAr, as ‘famine, poverty / sharpening, sharp edge / to turn away, to distort / fellow-worker, associate / to repay, requite s.o. for what he has done / to become rich / to break/ruin [v2], to scratch with a sharp point [v1] / blacksmith / maker of swords and knives / to turn away / to probe, measure (a wound) with a miḥrāf (i.e., a surgeon / limits / profession, business, craft, trade / ill-fatedness, privation of prosperity, being denied prosperity / lack of good fortune, debarment from the means of subsistence / unlucky (H), prevented\withheld from obtaining good, withheld from good fortune\sustenance, denied\refused good or prosperity, lacking good fortune / having no increase of one / tenir des propos méprisants, acérés / outrager, tourner en dérision / aiguiser / être aigu, être sévère / pointe / pointe, bord, marge, extrémité, tranchant du couteau / au goût piquant / enlever une partie, rogner / tailler obliquement le calame / lettre, mot / amaigrir / refuser parce qu / refuser sa fille à qn / écraser, moudre, amincir / retourner, mettre à l / travailler, gagner de quoi pourvoir aux besoins des siens / métier / qui excelle dans le travail / perspicacité, adresse, application / fiancée / ami, compagnon, camarade / employé, client, ami, apparenté / ami, parent / avoir des relations avec, demander en mariage / to sharpen / to be pointed, sharp / to reproach, taunt / taunt / reproach / shame / disgrace / to revile / taunts / shame, disgrace / sharpness / acumen / cutting edge / dagger, short sword / sword, cutting tool / famine, poverty / to refuse because one is very embarrassed / to refuse one / to crush, grind, make thin / to pluck (a fruit), cut off (fruit) / to turn away, dicard from / to remove / profession, occupation, skill / fellow worker, companion / picnic or entertainment to which each partaker contributes / id. / companion / wise(ly), sagacious(ly), knowing(ly) / skilful(ly), expert(‑like) / knowing / wisely, acutely / proportion of any payment / like a ʿārif ‘, i.e., like a ‘holy man, saint / the highest grade to which a mystic can attain / picnic, etc. / companion-like sharing / profession, skill / working fellow, companion / colleague, companion / one / fellow (always derogatory)
-  - Mekâyîs: وَعَمُّهَا خَالُهَا جَرْدَاءُ شِمْلِيلُ
-وَالْأَصْلُ الثَّانِي: الِانْحِرَافُ عَنِ الشَّيْءِ.
+  - Mekâyîs: (حَرَفَ) الْحَاءُ الرَّاءُ وَالْفَاءُ ثَلَاثَةُ أُصُولٍ: حَدُّ الشَّيْءِ، وَالْعُدُولُ، وَتَقْدِيرُ الشَّيْءِ.
   - Cebel: نهاية جانبٍ أو وجهٍ من الشيء يبدأ به جانب آخر -كالحرْف في ما ذُكر، وانتهاءُ الجانب انقطاع له
 **حرق**: yakmak / yanan
   - EtymArab: to burn / fire, flame, to bum, to scorch / to eradicate / to erode, to file away / to be bad-tempered / to long for / palm-tree pollen / rechercher, examiner, explorer / être brûlé / brûler à grand feu, incendier / brûler (tr.), blâmer, causer de la peine / brûlure, flamme / se mettre en colère contreʼ / Mhr Ḥrs ḥárḳ ‘chaleur, temps chaud / brûler (intr.) / brûler (tr.) / amorce pour le feu / mégots, cendres / être, se mettre en colère / grincer des dents / limer, frotter une partie contre l / bourdonner (dans l / bras / faire un bond pour éviter une gifle / refuser de se laisser maltraiter / tomber (cheveux)
@@ -1050,7 +1089,7 @@
   - Cebel: جفاف وخشونه تخالط باطن الشيء أو تمتد فيه قيغلظ ويخشن
 **حسب**: sayma / hesap / yeterli / yeter
   - EtymArab: to compute, reckon, calculate, count / to charge, credit / small pillow / burial, to bury / tawny, red-haired / good lineage, great ancestry / honour and glory / sufficiency, to suffice / to submit to / to reckon, to calculate, to take to task / to consider, to assume, to presume / to investigate / to count / to take into account / to consider, estimate, reckon with, think, believe / charging, debiting, crediting / sufficiency, satiety / paying respect, holding in high esteem, merits earned by way of a honorable life, nobility / book-keeping, accounting / computer / pet, favorite / to anticipate a reward in the hereafter by resigning in God / to give a son, be bereaved of a son / held in high esteem / compter / compter, tenir compte de, faire attention, penser / compter, imputer, penser / penser / estimer, supposer / suffisance / mérite / compte, calcul / conjecture / prendre en compte / compter sur / compte / estimer, croire / penser, réfléchir / peine, calamité / tourmenter / rembarrer en permanence / coussin / inhumation d / roux mêlé d / reward / promote good and forbid evil / calculation / sufficiency / small ant / small arrow / thunderbolt / cloud / hailstone / to place a pillow for s.o. / to recline upon a pillow / white from disease (skin)
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: الْكِفَايَةُ.
+  - Mekâyîs: (حَسِبَ) الْحَاءُ وَالسِّينُ وَالْبَاءُ أُصُولٌ أَرْبَعَةٌ: فَالْأَوَّلُ: الْعَدُّ.
   - Cebel: جمع ما هو منتشر في حيّز يضمه حتى يمتلئ به -كما يجمَع الثُمَام الجاف ونحوه فتحشى به الوسادة، وكما يمتلئ بطنُ من أحسِب طعامًا وشرابًا، وكما يمتلئ بدن الإبل الموصوفة
 **حسد**: kıskançlık
   - EtymArab: ... / to peel off, scrape off / to envy, grudge / to be kind, ashamed
@@ -1074,7 +1113,7 @@
   - Cebel: نَقَاءُ الشيء ورقته بخروج الخَشن أو الغليظ -الذي يخالطه فيَشُوبُ رِقتَه- منه
 **حشر**: toplanmak / toplamak / kıyamet günü toplanma / haşir
   - EtymArab: ... / insects / yield of the land / to gather together, assemble, rally, round up (of animals) / to hone, sharpen up / to ruin
-  - Mekâyîs: وَمِمَّا شَذَّ عَنِ الْأَصْلِ قَوْلُهُمْ لِلرَّجُلِ الْخَفِيفِ حَشْرٌ.
+  - Mekâyîs: (حَشَرَ) الْحَاءُ وَالشِّينُ وَالرَّاءُ قَرِيبُ الْمَعْنَى مِنَ الَّذِي قَبْلَهُ، وَفِيهِ زِيَادَةُ مَعْنًى، وَهُوَ السُّوقُ وَالْبَعْثُ وَالِانْبِعَاثُ.
   - Cebel: قَشر ظاهر الشيء أو انتشر علي ظاهر الشيء
 **حصب**: çakıl / taş / ateş odunu
   - EtymArab: ... / pebbles, to pelt with pebbles / gravel-carrying wind, hail-showering clouds / measles / fuel, to fuel, torment
@@ -1103,7 +1142,7 @@
   - EtymArab: ... / pebbles, to count / to comprehend / to keep, stick with / mind, discerning faculty / ability to express o.s. clearly
 **حضر**: huzur / bulunmak / yerleşik hayat / hazır olmak
   - EtymArab: to be present, attend / to come, arrive, visit, go to, appear, show up / to be readily called / to prepare / to die / civilized region / settled population, town dwellers / presence / His Highness, Monsieur / sedentary life / civilisation, culture / minutes, official report / lecture / a small group of 6 to 12 people, patrol, squad / fleet (horse) / thick purulent matter in a wound, afterbirth / urban areas, a community settled around a water source / to be present, to be at home, adjacency to water / to bring, to fetch / to lie down dying, hardship, strife / fence, enclosure / to surround, encircle / blockade, siege / to fence in / enclosure / collective body of a people / collective body / gathering, coming together / what collects in a wound, of thick purulent matter / what collects in the membrane that encloses the fœtus, of the [fluid called] suḫd and the like / […] what a woman emits after childbirth and [after] the stopping of her blood / […] what a she-camel emits after bringing forth / present > ready > quick / to settle / to gather in a place / pubis / anse de vase / être présent, prêt / assister à / présence, demeure fixe (par opp. au nomadisme) / être présent (dans un lieu) / être présent / persuader / migrer du désert vers la ville en été / célébrer une fête (pour une divinité), accomplir un pélerinage / offrir / yard / camp / area / fence / dwelling
-  - Mekâyîs: وَقَدْ يَجِيءُ مَا يَبْعُدُ عَنْ هَذَا وَإِنْ كَانَ الْأَصْلُ وَاحِدًا.
+  - Mekâyîs: (حَضَرَ) الْحَاءُ وَالضَّادُ وَالرَّاءُ إِيرَادُ الشَّيْءِ، وَوُرُودُهُ وَمُشَاهَدَتُهُ.
   - Cebel: انتقال بكثافة أو قوة إلى مجمع يدوم
 **حضض**: teşvik etmek
   - EtymArab: ... / foot of a mountain, depth, bottom of a valley / to incite, encourage, urge
@@ -1143,6 +1182,7 @@
   - Cebel: حياطة قوية ضابطة للشيء فلا يضيع ولا يتفلت
 **حفف**: çevrelemek / halka olmak
   - EtymArab: ... / sides of a mountain / entourage / to surround, encompass / to clip, trim, edges / paucity of food / to surround, enclose, cover
+  - Mekâyîs: (حَفَّ) الْحَاءُ وَالْفَاءُ ثَلَاثَةُ أُصُولٍ: الْأَوَّلُ ضَرْبٌ مِنَ الصَّوْتِ، وَالثَّانِي أَنْ يُطِيفَ الشَّيْءُ بِالشَّيْءِ، وَالثَّالِثُ شِدَّةٌ فِي الْعَيْشِ.
   - Cebel: إحاطةٌ بجفاف تُنهِى امتدادَ الشيء أو الامتدادَ إليه (1)
 **حفو**: ikramda bulunmak / iyilik
   - EtymArab: ... / condition of chafing, abrading or wearing out of feet, particularly of camel hooves, caused by long travel barefoot in the hot desert, barefootedness / to strip bare, scrape off, trim / to welcome, be gracious / to dispute / to exact, harass / to be knowledgeable
@@ -1169,7 +1209,7 @@
   - Cebel: حدّة في الشيء تكون من ظاهره (= خارجه)
 **حلق**: boğaz / tıraş etmek / çember
   - EtymArab: ... / throat / circle, to encircle / to fly, to hover, circle in the air / to peel off, shave off hair / famine
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي الْحَلْقَةُ حَلْقَةُ الْحَدِيدِ.
+  - Mekâyîs: (حَلَقَ) الْحَاءُ وَاللَّامُ وَالْقَافُ أُصُولٌ ثَلَاثَةٌ: فَالْأَوَّلُ تَنْحِيَةُ الشَّعْرِ عَنِ الرَّأْسِ، ثُمَّ يُحْمَلُ عَلَيْهِ غَيْرُهُ.
   - Cebel: زوال وَسَط مادة قوية -مع بقاء مُحِيطه شديدًا: كذهاب المادة من وسط الحَلْق (والمتبادر بالنسبة لما هو كالقصبة أن يمتلئ وَسَطه) - وكذهاب التراب من المجاري والأودية
 **حلل**: çözmek / helal kılmak / helal
   - EtymArab: to untie, solve, loosen, release, analyze, exculpate / to be allowed, permissible, lawful / (legal) husband, wife / to be due / to dismount, alight, stop, halt, settle down, stay / place, residence / to befall, occur, happen / to occupy / to become incarnate (in s.o. / God) / to set in, begin (time, season) / clothing, dress, suit / outer opening of the urethra / cooking pot ( EgAr ) / sesame / pain between the legs / locale, residing area, township / stopping place, way station / to unpack, to come down, to take up residence, to terminate one / to be(come) clean, pure, holy / pur / être pur, libre / purificateur / être désacralisé / officiant (?) / profane, non sacré / rendre profane, profaner / détacher, ouvrir, donner accès à / jeter bas, détruire / tenir pour permis, purifier / être permis, licite / être obligatoire / chose permise, licite / dénouer, déplier, résoudre / ouvrir / être à la merci de, être sans protection contre / annuler, mettre fin, perdre / trouver du secours, être secouru / vannes d / déclarer licite / rendre licite, pardonner / être résolu / être purgé / disparaître / purge / prendre le repas du soir en mois de ramadan / brave homme / profitable, avantageux / légitime (épouse, enfant) / licite (pour les Musulmans) / biens / propriété (foncière) / dépouilles (du combat) / prendre place / séjour, quartier / halte, campement / lieu, place / camper / s / endroit / ville / demeure, chambre / séjourner / virevolter, aller de place en place / être rassemblé, entrer / voile / robe, manteau / canal du pis ou de la verge / trachée artère, gorge / jonc, bambou / tube de houka / conduite d / pénis / sésame / huile / douleur dans les cuisses / cocotte, marmite / rein sein, werden / frei sein / lösen (vom Bann) / to begin / untie, loosen, open / to wash, rinse / to degrade, profane / to purify / to untie (a knot) / to be lawful / alight, settle in a place / to encamp / to be unprotected (against) / to be gathered, come in / to loosen / to untie / cooking pot / sesame oil (of a specific quality) / to become pure / 1 clean, pure / 2 holy, sacred / 3 free, noble / (cultically) clean person / purity / 1 to become pure, to become free (of debt by royal decree) / to purify, to make pure, to keep pure, to consecrate to a deity, to make free / to cleanse o.s., to be purified / goods / cooking pot, vessel / pain in the legs, between the thighs / to loose, untie, open, set free / to unsaddle, put down the luggage, unload / to stop, rest, settle down / to untie, open, release, set free / to allow, desacralize / windpipe / canal of the udder or of the urethrea / hooka pipe / released / clothing, garb, dress, suit / to loose, untie, release / (legitimate) husband / legitimate / to undo, free, be permissible / legally permissible / to loose, untie,… / to unsaddle, unload / to rest, settle down / place, to settle / clothing, dress, robe / garment of fine linen / to untie, release / (now mostly synonymous with) September / dust, fine dust / white film in the eyes, cataract / harvest season / to be allowed, permissable
@@ -1177,7 +1217,7 @@
   - Cebel: فَكّ ما كان مَشدُودًا (أي مَرْبوطًا مُوثَقًا) أو تَسْييبُه فيَسْلَسُ هو أو يَسْلَسُ أمرُ ما كان يضمه (1)
 **حلم**: yumuşaklık / sabır / rüya
   - EtymArab: dream, to dream / to have wet dreams, nightly pollutions / sexual maturity, puberty, to attain puberty / gentleness, clemency, patience / tick / mite / nipple, mammilla / haloomi (a kind of cheese) / dream, to dream, to have wet dreams, to attain puberty / to gain wisdom, to be patient, clemency / a sensible person / nipple, a young goat / haloomi cheese / to dream / to be mature, fat, vigorous. / rêver / rêve / songe / prophétesse, voyante / avoir une pollution nocture / qui a eu une pollution nocture / être fort (jeune animal) / rendre bien portant / sain, en bonne santé / arriver à l / gras (animal) / enfler (blessure) / être doux, indulgent, intelligent / indulgence, tranquillité. – 3 Ar ḥalima ‘avoir la peau infestée de parasites / tique / bout du sein / agneau, chevreau / mature animal / to be healthy, strong / sanus, integer, validus / to become fat / fat / dream / Their kids become mature, growing in the wild, they go away and to not return to them / Restore me to health and make me live / He gave no strength to liars / Since they gave strength to Jacob … / sleep / (to) sleep / sexual maturity, puberty / insight, wisdom / maturity / to have nightly pollutions / strength, healthiness / sexual maturity / to spare, have compassion / to bear / tick, mite / young goat / nipple
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: قَوْلُهُمْ حَلِمَ الْأَدِيمُ إِذَا تَثَقَّبَ وَفَسَدَ ; وَذَلِكَ أَنْ يَقَعَ فِيهِ دَوَابُّ تُفْسِدُهُ.
+  - Mekâyîs: (حَلَمَ) الْحَاءُ وَاللَّامُ وَالْمِيمُ، أُصُولٌ ثَلَاثَةٌ: الْأَوَّلُ تَرْكُ الْعَجَلَةَ، وَالثَّانِي تَثَقُّبُ الشَّيْءِ، وَالثَّالِثُ رُؤْيَةُ الشَّيْءِ فِي الْمَنَامِ.
   - Cebel: رخاوة أو لطف متميز في باطن الجرم يستوي عليه ظاهره: كالشحم في البعير والشاة المذكورين، وكالدودة بين الجِلْدين وكحَلَمة الثدْي في وسطها خرق يجري منه اللبن عند الإرضاع
 **حلي**: süs / takı / süslemek
   - EtymArab: sweet, pleasant to the tongue / pleasant, charming, pretty / candy, confection, sweetmeats / adornment, decoration, jewelry / ornament, jewellery, to adorn, to grace / dowry, gratuity / sweet, to sweeten, to enjoy / to be sweet, pleasant to the tongue / to adorn / to be sweet / être doux, agréable au goût / agréable / trouver agréable / collier, parure / ornement, parure, bijou / orner de pierreries, de bijoux / musicien / chanter / chant / hymne / donner qc à qn / cadeau, don / don / donner / donner un pot-de-vin / pot-de-vin, don, récompense / sweet juice sucked from the abdomen of a hornet / sweet
@@ -1198,6 +1238,7 @@
   - Cebel: حوز أو ضم بإقلال رفعًا أو تعليقًا
 **حمم**: sıcaklık / ateş / kor
   - EtymArab: dove, pigeon / bath / heat, fever / death / to become due / hot boiling water, to heat up, a bath, to bathe / fever, to develop a fever / coal, black choking smoke, intense fire / an intimate friend, family, entourage / pigeon / to be hot / warm, hot / être chaud / chaleur / être brûlant, chaud / chauffer / avoir de la fièvre / chaleur intense / bains / faire chaud à midi / être malade / faire mal / maladie / être en chaleur / mettre en chaleur / chaud (jour) / avoir des envies (femme enceinte) / être en chaleur, en rut / griller (les plantes), dessécher / brûler, être échauffé, chauffé / être en colère / ardeur du feu / source d / ardeur du soleil / devenir noir / charbon, suie, cendres / suie / saleté / recueillir du charbon de bois / charbon / charbon, suie / suie, cendre d / commencer à noircir, commencer à pousser (barbe, poil) / moustache naissante / être marécageux, boueux / pigeon, colombe, tourterelle / destiner à qn, réserver à qn par ses arrêts (Dieu) / arrêt / mort / être envieux, avare / refugeʼ. - 7 ḥamm ‘meilleure partie d / chef / s / parent, proche
+  - Mekâyîs: (حُمَّ) الْحَاءُ وَالْمِيمُ فِيهِ تَفَاوُتٌ ; لِأَنَّهُ مُتَشَعِّبُ الْأَبْوَابِ جِدًّا.
   - Cebel: حرارة أو حدّة تسري في أثناء الشيء البارد حتى تعمه (1) كما في تسخين الماء وحَم ّالشحْم والتنَّور
 **حمي**: koruma / sakınma / ateş
 **حنث**: yemini bozmak / söz bozmak
@@ -1241,7 +1282,7 @@
   - Cebel: ضم مع تواز وامتداد: كما هو حال الحاذ من الإنسان والفرس بما فيه من إحاطة ممتدة متوازية، وكذلك الحاذان ممتلئان ومتوازيان (عرّفهما في اللسان بأنهما "لحمتان في ظاهر الفخذين تكونان في الإنسان وغيره "أي أن الامتلاء ملحوظ وهو ضَمٌّ
 **حور**: dönüş / değişim / siyah gözlü kadın
   - EtymArab: marked contrast between the white of the cornea and the black of the iris / virgins of paradise / (white) poplar / to return / to recede, decrease, diminish, be reduced / (caus.) to answer / quarter / lane, side street / apostle / axis, crucial point / to change, modify / to roll out (dough) / to talk, converse, have a dialogue / cretaceous rock, chalk / Hauran / oysters / bark-tanned sheepskin, basil / bottom (of a well, etc.) / intelligence, depth in penetration, discerning power / third star (the one next the body) of the three in the tail of Ursa Major [i.e. Alioth?] / young camel / fine flour / Jupiter / circle, to encircle, return to, go away from / to have a dialogue, entourage, disciples / discerning power / to decrease / marked contrast between black and white in a woman / hollowness together with roundness / [ḤWR_3] to return / [ḤWR_9] to reply to in an argument / to settle (tr. and intr.) in (a town). ▪ BAH2008 give the range of meanings for ClassAr as (corresponding item numbers as used in EtymArab added before the values): ‘[–] circle, to encircle, [ḤWR_3] to return to, go away from / [ḤWR_9] to have a dialogue, [ḤWR_5] entourage, disciples / [ḤWR_15] discerning power / [ḤWR_3] to decrease / [ḤWR_1] marked contrast between black and white in a woman / être blanc / blanchir / blanc / être très blanc / être d / farine très blance, pain très blanc / pain / nuit très noire / indigotier / noir / noircir, devenir noir / brouillard / revenir, retourner / répondre / retourner, revenir / apôtre / aller / voyageur, messager, apôtre / quartier (d / mur circulaire non couvert / établir, s / résident, habitant, immigrant (dans une ville) / ordonner, décréter / être mis en vigeur, être publié / décréter, ordonner / taureau / mâle (des animaux) / étendre la pâte avec le miḥwar (rouleau) / modifier / axe / discuter / profondeur / dépression dans le sol, fond de citerne / maigre / dommage, malheur / coquillage / peau de chevreau / white / white poplar / fine (white) flour / to (re)turn / man in a defective and bad state, perishing, dying / depth, bottom (of a cistern) / marcher rapidement / to retreat / distant, lointain, être loin / axis / answer, reply / bottom (of a well etc.) / (contrast between black and) white / sheep-skin leather / red skins, with which [baskets of the kind called] silāl are covered / (pl. ḥūrān , ḥawarān ) a hide dyed red / red skins […] / skins tanned without qaraẓ , thin white skins of which [receptacles of the kind called] ʔasfāṭ are made / prepared sheep-skins / damage, mishap, malheur / (pure, clear) intellect / young camel when just born, or until weaned / i.e. from the time of its birth until big and weaned / egg / white, fair / white, fair woman / pl. ‑āt , women of the cities or towns / women clear (white, fair) in complexion and skin / women inhabitants of regions, districts, or tracts, of cities, towns, or villages, and of cultivated land / women / settling down / to settle (tr. and intr.) in (a town) / resident, inhabitant (of a town) / quarter, lane (of a town, village) / to be(come) white / to whiten / to be white / plane-tree / certain kind of wood / to turn / turn away, depart / return / hole / Ḥawrān / to recede / to perish, die / to decline in force or vigour, grow weak, dwindle / quarter, lane / circle, to encircle / encircled (district), enclosure / uncovered circular wall / to depart, be distant / road / to go, travel / to settle / bleechers, white-washers / to discuss / those who discuss, debate / those who return to you with a reply, answer your questions, comment on them / (to en)circle / entourage / messager / envoyé / apôtres / revenir / ? annoncer, proclamer / pin of wood (or iron) on which the sheave of a pulley turns, iron [pin] that unites the bent piece of iron which is on each side of the sheave of a pulley, and in which it [the miḥwar ] is inserted, and the sheave itself / wooden implement of the baker or maker of bread with which he expands the dough […] and makes it round, to put it into the hot ashes in which it is baked / baker / he returned him answer for answer / held a dialogue, colloquy, conference, disputation, or debate, with him / or bandied words with him / intelligent / deep in penetration / black land / black / land of caves / hollow / oyster / mother-of-pearl shell / oyster-shell / place that returns [like a circle], in which a return is made [to the point of commencement] / concha of the ear / the external, deep, and wide, cavity, around the ear-hole / contrast between black and white / thing with the marked black-white contrast / thing that looks like a spiral / side, region, quarter, tract, etc. / thing resembling [the kind of vehicle called] hawdaǧ / dorsers, panniers, oblong chests which are borne, one on either side, by a camel, and, with a small tent over them, compose a hawdaǧ / [ornamented hawdaǧ called the] maḥmil [vulgarly pronounced maḥmal ] of the pilgrims [which is borne by a camel, but without a rider, and is regarded as the royal banner of the caravan / such as is described and figured in Manners and Customs of the Modern Egyptians ] / sharp contrast between white and black / contrast between white and black / whiteness
-  - Mekâyîs: هَذَا هُوَ الْأَصْلُ، ثُمَّ قِيلَ لِكُلِّ نَاصِرٍ حَوَارِيٌّ.
+  - Mekâyîs: (حَوِرَ) الْحَاءُ وَالْوَاوُ وَالرَّاءُ ثَلَاثَةُ أُصُولٍ: أَحَدُهَا لَوْنٌ، وَالْآخَرُ الرُّجُوعُ، وَالثَّالِثُ أَنْ يَدُورَ الشَّيْءُ دَوْرًا.
   - Cebel: تجوف مع استدارة: كما هو واضح في القعر وأثر الكية إلخ
 **حوز**: toplamak / zapt etmek / alan
   - EtymArab: ... / area, domain, holding / to incline, side with, press together
@@ -1249,10 +1290,11 @@
   - Cebel: إحاطةٌ قوية بسطح عريض كالأرض وما عَلِقَ بها -كذلك الحوز والحيز ومنه "تحوَّز عنه وتحتز: كتَنَحّى (من الناحية -كأنما اتخذ لنفسه حَوْزًا بعيدَا عن غيره {أَوْ مُتَحَيِّزًا إِلَى فِئَةٍ} والحوزِي -بالضم: المُتنزهُ في المَحَلّ: الذي يحتمل ويحل وحده ولا يخالط البيوت "
 **حوش**: çit / avlu / bahçe
   - EtymArab: ... / an enclosure / unfamiliar / to exclude, avoid, turn away from / to hold off
-  - Mekâyîs: وَأَصْلُ الْكَلِمَةِ إِنْ صَحَّتْ فَمِنَ التَّجَمُّعِ وَالْجَمْعِ، يُقَالُ حُشْتُ الصَّيْدَ وَأَحَشْتُهُ، إِذَا أَخَذْتَهُ مِنْ حَوَالِهِ وَجَمَعْتَهُ لِتَصْرِفَهُ إِلَى الْحِبَالَةِ.
+  - Mekâyîs: (حَوَشَ) الْحَاءُ وَالْوَاوُ وَالشِّينُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: احتياز الشيء أو الأشياء المتباعدة نحو حيّز لتنضم اليه أو تجتمع فيه
 **حوط**: çevirmek / korumak / bahçe
   - EtymArab: ... / wall, fence, to encircle, encompass, protect / to comprehend / to be careful, guard against / to overwhelm, overtake
+  - Mekâyîs: (حَوَطَ) الْحَاءُ وَالْوَاوُ وَالطَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ الشَّيْءُ يُطِيفُ بِالشَّيْءِ.
   - Cebel: الاستدارة حول الشيء بنحو الجدار: كالحائط والحظيرة للطعام والمال (: الماشية)
 **حول**: çevre / yıl / korku
   - EtymArab: ... / year, to complete a year / to change, alter, shift, deviate / to prevent, screen off, interpose, to bar / to try / to refer / around, about, circa / power / to plan, contrive, beguile / method / circumstance, conditions / to go around, turn, change / bill of exchange / to turn, change
@@ -1277,6 +1319,7 @@
   - Cebel: ضيق الفتحة في الشيء أو بين الشيئين ضيقا شديدًا: كالعين الحوصاء يحيد جفناها أو أحدهما عند مُؤْخِرها -متقاربين- فيكادان يتضامان، وقريب من هذا ما يحدث في فتحة حياء الحائص، وكالحَوْص: الخياطة المتباعدة
 **حيض**: âdet görmek / âdet gören
   - EtymArab: ... / flooding, to flood / to menstruate, menstruation
+  - Mekâyîs: (حَيَضَ) الْحَاءُ وَالْيَاءُ وَالضَّادُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: سيلان مائع نحوِ الدم -يتجمع في الجوف- منه بشدة أو عُسر
 **حيف**: zulüm / haksızlık / zalim
   - EtymArab: ... / deviation, to veer away / to be unjust, to wrong / to curtail, impair
@@ -1284,6 +1327,7 @@
   - Cebel: انقطاع امتداد الشيء عَرْضًا أي من جوانبه
 **حيق**: kuşatmak / çevirmek
   - EtymArab: ... / to surround, encompass / to come back against, hardship / retribution, befitting punishment
+  - Mekâyîs: (حَيَقَ) الْحَاءُ وَالْيَاءُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ نُزُولُ الشَّيْءِ بِالشَّيْءِ، يُقَالُ حَاقَ بِهِ السُّوءُ يَحِيقُ.
   - Cebel: القطع الغائر في الشيء
 **حين**: zaman / bir süre
   - EtymArab: ... / time, period, a certain time / to approach, draw near, watch out for, await the opportunity, fix a regular time
@@ -1295,6 +1339,7 @@
   - Cebel: امتلاء بالطراءة التي لها حِدّةٌ ما أو فاعلية تتمثل في رهافة الحسّ وفي النمو حركة أو امتدادًا: كجِرْم الحية ممتدَّا يتحرك (والامتداد يصور النمو)، وتتجلى طراءته في مرونته وتَلَويِّه دُونَ أن ينقطع كأنه مليءٌ بمانع
 **خبء**: gizlemek / gizlenmiş
   - EtymArab: ... / (there is a degree of overlap between this root and the root ḫ-b-w) to hide, to keep in safety, to treasure / secrets, treasure / woollen tents for living in, shelter
+  - Mekâyîs: (خَبَأَ) الْخَاءُ وَالْبَاءُ وَالْحَرْفُ الْمُعْتَلُّ وَالْهَمْزَةُ يَدُلُّ عَلَى سَتْرِ الشَّيْءِ.
   - Cebel: إخفاء الشيء وتغطيته في كِنٌّ مناسب التجوّف: كما يخفي الخباء مَن بداخله، وكما يَسْتُر غِشاءُ البُرّة ما في جوفه سَتْرًا تامًّا
 **خبت**: sönmek / durmak
   - EtymArab: ... / wide low land, deep valley covered with herbage / to subside, abate, lie low / to become humble, show humility, feel tenderness in one
@@ -1362,7 +1407,7 @@
   - Cebel: هُوِى الشيء بقوة وتدارك لتسيُّبه أو تسيب أثنائه (1)
 **خرص**: tahmin / zan / tahmin etmek
   - EtymArab: ... / palm tree branch / to estimate the amount of fruit carried by a palm tree / guessing, conjecturing, approximation / lying / a large water basin, estuary
-  - Mekâyîs: وَأَصْلٌ آخَرُ، يُقَالُ لِلْحَلْقَةِ مِنَ الذَّهَبِ خُرْصٌ.
+  - Mekâyîs: (خَرَصَ) الْخَاءُ وَالرَّاءُ وَالصَّادُ أُصُولٌ مُتَبَايِنَةٌ جِدًّا.
   - Cebel: خلوص الشيء من آخَر مجتمعا في استواء أو تحدُّد: كالقضيب فهو ملتف الجِرم ممتد من الشجرة في استدقاق، وكالسنان يمتد من الرمح بتضام حتى يدِقّ
 **خرطم**: burun / büyük burun
   - EtymArab: ... / nose, trunk (of an elephant), to hit on the nose, to bottle up one
@@ -1378,6 +1423,7 @@
 **خزي**: rezillik / utanç
 **خسء**: uzaklaşmak / kovulmak
   - EtymArab: ... / to drive away, to chase out / to cast out / to humble / rejected, spurned / to defeat, to impair / to confuse, to dull, to frustrate
+  - Mekâyîs: (خَسَأَ) الْخَاءُ وَالسِّينُ وَالْهَمْزَةُ يَدُلُّ عَلَى الْإِبْعَادِ.
   - Cebel: إبعاد ما هو دقيق القدر عن الحوزة أو الأثناء -كما في طَرد الكلب والخنزير من الحوزة، وكمنعه من الدنو منها كذلك
 **خسر**: zarar / kaybetmek
   - EtymArab: ... / to go astray, to lose one
@@ -1397,6 +1443,7 @@
   - Cebel: هبوط ما شأنه الارتفاعُ والغِلَظ، لتسيب أثنائه
 **خشي**: korkmak / saygı duymak
   - EtymArab: to fear dread, be afraid / to fear, to dread, to dislike / to hope / to know / dates killed by frost, dry rotten herbage / to be fearful, reverent, righteous – Huehnergard2011. … – ▪ DRS 10 (2012) #ḪŚY- 1 Ar ḫašiya ‘craindre, redouter / être peureux, timide / sec, aride / cacher sous qc, fourrer / farcir / abaya très fine
+  - Mekâyîs: (خَشِيَ) الْخَاءُ وَالشِّينُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى خَوْفٍ وَذُعْرٍ، ثُمَّ يُحْمَلُ عَلَيْهِ الْمَجَازُ.
 **خصص**: ayırmak / özel kılmak / özel
   - EtymArab: small holes in a sieve / a keyhole / small breaks in the clouds / to be in dire straits, to be hard up / to belong to a small circle / to choose above others, to single out, to favour / construire une hutte de roseaux / affecter exclusivement à qn / être l / avantager, donner la préférence / mener des enquêtes, faire des recherches / accorder une attention particulière à, être lié à, un ami intime de / s / défectueux, incomplet / pauvreté, indigence / manquer, être déficient, faire faute, faire défaut (à) / préjudice, fait fâcheux / nuire à, jouer un mauvais tour à / bassin, vasque / jet d
   - Mekâyîs: (خَصَّ) الْخَاءُ وَالصَّادُ أَصْلٌ مُطَّرِدٌ مُنْقَاسٌ، وَهُوَ يَدُلُّ عَلَى الْفُرْجَةِ وَالثُّلْمَةِ.
@@ -1470,7 +1517,7 @@
   - Cebel: انفصال الشيء -مما يلابسه (أو ينشدُّ إليه) ملابسة قوية: كخلع الثوب والنعل والقيد وزوال المفصل {فَاخْلَعْ نَعْلَيْكَ}
 **خلف**: ardından gelen / yerine geçen / aykırılık
   - EtymArab: back, rear part / to come after, succeed, follow, substitute, replace / vicar, deputy / successor / caliph / dissimilarity, difference, contrast, variance / teat, nipple, mammilla / province (Yemen) / camel saddle / Salix ægyptia , Egyptian willow / to repair (a garment) | rapiécer un vêtement, y mettre une pièce / patch on clothes / remplacer une chose (vieille) par une autre (neuve) / restaurer / habit usé dans le milieu, et dont l / to draw water ( li for s.o.) | puiser (de l / id. / to find (water) to be sweet / water-drawer / to ascend a mountain | gravir une montagne / back, backside, behind, in the rear / to stay behind, to be put behind / to delay, to be a straggler / to replace, to succeed, to be appointed as successor / a ruler, representative, governor / an offshoot, a son, a generation, a follower / to differ, to be different, to be contrary / to fail to keep a promise, to let down, to alternate / to pass, follow / to pass by, leave behind, replace / replacing, substituting, etc. / to differ, vary / province, région / window / outside (of a town, etc.) / to repair / usé par le milieu, et dont on a retranché ce milieu usé, et rapproché les bouts / willow / to repair (a garment) / to succeed > replace / to stay behind in order to draw water / to pass, pass by, stay behind, etc. / être louche, peu fiable / être gaucher / être gâté, corrompu, puant / mauvaise période, famine / accusé / remplaçant / passer, s / passer (temps) / passer devant, disparaître / vicissitude, sort / succéder à / suivre, être derrière, succéder à / remplacer / ce qui est différent / désaccord, différend, contradiction / chamelles suitées / chamelle pleine (?) / violer (un serment) / gouverneur / prendre la place de / changer / suivre, prendre la place de / alterner / passer / surpasser, dépasser / supériorité / surpasser / bon, excellent / être meilleur, beau, joli / tresses de cheveux / fenêtre / porte (d / citadins (?) / se glisser dans / vêtement, manteau / vêtement, déguisement / vêtement de dessus / vêtement / chêne / saule / to pass on, pass away, / to change, substitute / permutavit, substituit / mutatus est / to follow, succeed / to pass by / to succeed, come after / to take the place of someone / to come into being, become, change, grow up, come to pass / children / to govern, control, administer | etwas tun, etwas ausführen (was befohlen war) / region, the vicinity of a town / Ländereien / district (?), estate (?) / controller, administrator / to leave behind / to slip in / substitute
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ خَلْفٌ، وَهُوَ غَيْرُ قَدَّامٍ.
+  - Mekâyîs: (خَلَفَ) الْخَاءُ وَاللَّامُ وَالْفَاءُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا أَنْ يَجِيءَ شَيْءٌ بَعْدَ شَيْءٍ يَقُومُ مَقَامَهُ، وَالثَّانِي خِلَافُ قُدَّامٍ، وَالثَّالِثُ التَّغَيُّرُ.
   - Cebel: كَوْن أو بقية بعد ذاهب أو وراءه في ظهره
 **خلق**: yaratmak / yaratılış / ahlak
   - EtymArab: to create, shape, form, mold / creatures / people, man, mankind / physical constitution / innate peculiarity, natural disposition, character, temper, nature / to invent, contrive, fabricate, concoct / to attribute falsely / portion, share / morals, ethics / shabby, threadbare, worn (garment) / to aromatize, perfume ( -h s.th.) / to become angry / caldron, boiler, kettle / to create, originate, design, creation, the entire creation, the human race / natural disposition, innate nature / to be shapely, comely / to deal tactfully with others, assume a certain disposition / to estimate / to be of good character / luck, share / to be capable / (of a garment) to wear out / a fragrant substance / (to make) even, smooth / [v4] smooth > smooth stone > small stones used to distribute lots > [v2] lot, portion, share… [which we may extend to] … > to measure > [v1] to shape, mold > to compose, create > creation, nature, constitution > character, temper > [v3] morals, ethics / to divide, measure / to shape, mold, create / morals / to disappear (Akk), perish (Akk, Ug, Hbr, Gz), flee (Akk) > ‘to be absent (Ug), [v4] be consumed, worn out, threadbare (Akk, Ar), to finish, be finished (Tña, Amh, Gur, Arg), to die without having been slaughtered (Te) / bad / underwear / clothing, garment / smooth, polish, shine / to be united, smooth / shaping, molding / wearing out / share, lot (of happiness) / to form, compose, create / to make smooth, even / to be worn out / shaping, molding, creating / creation, creature > nature, character, temper / good-natured, kind / fabricated, invented, concocted / (ill-temper =) rage / nature, character, temper / to create > creature > nature, temper / to be even, smooth (wood) / polish, shining / yellow perfume, compound of saffron / autumn crocus, C. autumnale / colchicum / colchicum, autumn crocus / aromate / bupleurum / smoothening, softening / aromatised / he lost his temper / anger / vase, marmite / cuivre, bronze / colcotar / fleur de cuivre, couperose / pousse, fleur / to be fine, goodly in make (woman) / to behave kindly ( ‑h with) / generous, good-natured / share of happiness / to take the measure of / to wear out (a garment) / to disgrace o.s. / to polish (wood) / smooth / even, smooth / inner part of the hoof / interior of the palate / smooth part of the forehead / to become smooth (back of a horse, cloud) / to become even with the earth (ruined house) / it may be, it is likely that / to be perfumed / aromatised (wine) / to get angry with s.o. / diviser, partager / part / part, portion / distribuer, attribuer / créer / mesurer, former, composer, créer / rendre lisse, uni / part de bonheur attribué / portion / champ / décision / être né, créé, fait / forme / compter, énumérer / nombre, compte / nombre / compter / to divide, apportion, give a share / distribuit / to measure, proportion / to count, number / portion, share, lot / être perdu, disparaître, périr, s / fuyard / mauvais / périr / être absent / détruire / être uni, lisse / insinuant, hypocrite / être usé, râpé (vêtement) / être consumé, détruit, périr / finir, être fini / mourir sans avoir été abattu (animal) / finir, être fini, consumé / vêtement usagé / sous-vêtement / habit, vêtement / slippery ground / slippery places / to slip / threadbare, worn out / to disapprove of s.th., be hostile towards ( r towards) / disaffected person / rebel, perverse of heart, evil doer / cunning, devious, hostile towards / ill-disposed, devious / grief, anger / anger, surge, bravery / female slaves / id. / nature / creatures, men and beasts / created, creature / latte di pollo / egg beaten into coffee / to smooth out / to shape beautifully / to fabricate lies / to caress, flatter / caress / a kind of fragrance / light red / light red, light red wine / wine merchant / wine warehouse or factory
@@ -1567,7 +1614,7 @@
   - Cebel: حركة بطيئة أو خفية لثقل عظيم (1) (أي تكون من بطئها لا تكاد تلحظ): كالناقة الدَبُوب، وكالجمل إذا وقع في الرمل، وكما يَدِبّ الشيخ والطفل لزيادة ثقلهما عن طاقتهما، ودبيب القوم الموصوف قد يكون حقيقة وهم ثقال لأنهم (قوم) أي كثيرون، وقد يكون البطء مُتَوهَمًّا من كثرتهم فلا تبدو حركة جماعتهم قوية -كما يسمى الجيش زَحْفا، وليس من شأنه الزحف، ولكن كثرته تبدي حركته بطيئة
 **دبر**: düzenlemek / idare etmek / arka / tefekkür etmek
   - EtymArab: ... / back, backside, buttocks, the tail end, to turn one / (honey‑)bee / to turn one / back / bee / the following, follower / to follow
-  - Mekâyîs: أَصْلُ هَذَا الْبَابِ أَنَّ جُلَّهُ فِي قِيَاسٍ وَاحِدٍ، وَهُوَ آخِرُ الشَّيْءِ وَخَلْفُهُ خِلَافُ قُبُلِهِ.
+  - Mekâyîs: (دَبَرَ) الدَّالُ وَالْبَاءُ وَالرَّاءُ.
   - Cebel: امتداد (غائر) إلى آخر الشيءِ أو خلفه بقوة (ضغط أو اندفاع)
 **دثر**: örtmek / bürümek / örtü
   - EtymArab: ... / to become blotted out, be forgotten / to become cold, to rust / to be covered, be wrapped up, an outer garment
@@ -1678,11 +1725,13 @@
   - Cebel: سيلان المائع قليلًا قليلًا من جِسم يبدو ملتئمًا: كالسائل من عُرْض الجبل وهو ملتئم، ومن الكرْم، والعين كذلك
 **دمغ**: vurmak / kırmak / beyin
   - EtymArab: ... / brain, a concussion, to fracture a skull, to kill by a blow to the head / sunstroke / to vanquish, destroy
+  - Mekâyîs: (دَمَغَ) الدَّالُ وَالْمِيمُ وَالْغَيْنُ كَلِمَةٌ وَاحِدَةٌ لَا تَتَفَرَّعُ وَلَا يُقَاسُ عَلَيْهَا.
   - Cebel: التمكن والتحكم في الشيء من أعلى: كما أن دامغة الطلع يمكن أن تُفْسده، فلا تثمر النخلة لأن الطلع هو نَوْر النخلة (أول ما يُرىَ من عِذْق النخلة)
 **دمو**: yaşlar / kan
   - EtymArab: ... / blood, to bleed, blood revenge, to be red in colour
   - Cebel: مائع أحمر تمتلئ به أثناء بدن الحيّ فيتجسم الحيّ ويتماسك: كالدم المعروف في أثناء البدن وعروقه {حُرِّمَتْ عَلَيْكُمُ الْمَيْتَةُ وَالدَّمُ} [المائدة: 3]، ومنه "الدُمْية: الصَنَم/ الصورةُ المُنَقَّشَة من العاج ونحوه (للتجسم أو لأن تصويرها ونقشها يوحيان بحياتها وأنها ذاتُ دَمٍ) ودَمَّى الراعي الماشيةَ -ض: أَرْعَاها فسَمِنَتْ حتى صارت كالدُمَى
 **دنر**: altın para
+  - Mekâyîs: (دَنَرَ) الدَّالُ وَالنُّونُ وَالرَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الدِّينَارُ.
 **دنو**: yakınlaşmak / dünyâ
   - EtymArab: to be near, come close, approach, bring close / to approximate / this life (as opposed to the next) / the world, the earth / to become bare, behave despicably, a vile person
   - Cebel: قُرْب الوصول إلى المقر المراد أو المعتاد نزولًا: كسُقُوط الشمس في الأفق متجهةً إلى مغيبها
@@ -1692,6 +1741,7 @@
   - Cebel: مرور بسلاسة واندفاع إلى جوف أو مَهواة: كاللُقَم (2/689) المتتابعة في الفم إلى الجوف، والحائطِ يهوِى كلُّه إلى الأرض
 **دهق**: bastırmak / ezmek
   - EtymArab: ... / great pressure, to apply continuous pressure / to empty out, spill / to fill up, fill to the brim, set things tightly close to each other
+  - Mekâyîs: (دَهَقَ) الدَّالُ وَالْهَاءُ وَالْقَافُ يَدُلُّ عَلَى امْتِلَاءٍ فِي مَجِيءٍ وَذَهَابٍ وَاضْطِرَابٍ.
   - Cebel: صَبُّ الشيء في فَجْوة أو أثناءٍ بحيث ينضغط فيها أشد الانضغاط: كما تُصَبّ الرِجْل (1) (أي تُدْخَل وتُحْبَس) في الدَهَق مع غِلظة ذلك
 **دهم**: karanlık / sıkıntı
   - EtymArab: ... / blackness, dark green / large numbers of people / attack, to overtake, overwhelm, calamity
@@ -1731,7 +1781,7 @@
   - Mekâyîs: (ذَأَمَ) الذَّالُ وَالْهَمْزَةُ وَالْمِيمُ أَصْلٌ يَدُلُّ عَلَى كَرَاهَةٍ وَعَيْبٍ.
 **ذبب**: sinek / kovmak
   - EtymArab: flies / flies, bees, ‘fly-whisk
-  - Mekâyîs: وَالْأَصْلُ الثَّالِثُ: الذَّبْذَبَةُ: نَوْسُ الشَّيْءِ الْمُعَلَّقِ فِي الْهَوَاءِ.
+  - Mekâyîs: (ذَبَّ) الذَّالُ وَالْبَاءُ فِي الْمُضَاعَفِ أُصُولٌ ثَلَاثَةٌ: أَحُدُّهَا طُوَيْئِرٌ، ثُمَّ يُحْمَلُ عَلَيْهِ وَيُشَبَّهُ بِهِ غَيْرُهُ، وَالْآخَرُ الْحَدُّ وَالْحِدَّةُ، وَالثَّالِثُ الِاضْطِرَابُ وَالْحَرَكَةُ.
   - Cebel: حادٌّ دقيقُ الجِرم يسبق أو ينفذ باندفاع (1): كحَدّ طَرَف السيفِ وكالنابِ وحَدّ الأسنان، وطَرَف أُذُنّى الفرس مجمع الدقة والجفاف
 **ذبح**: boğazlamak / kesmek
   - EtymArab: cut the throat, slay, slaughter / to sacrifice / disease in the throat, angina / flood channels / a certain plant / or truffle / a disease in the throat / to cut the throat, to slay, a butchered animal, to sacrifice, an animal fit or prepared for slaughter or sacrifice / 1. flood channels / 2. a disease in the throat / 3. to cut the throat, to slay, a butchered animal, to sacrifice, an animal fit or prepared for slaughter or sacrifice / to cut the throat, sacrifice / a disease, or pain, in the throat which sometimes kills, blood which chokes and kills, an ulcer that comes forth in the throat or fauces of a man […], an ulcer that appears in that part, obstructing it, and stopping the breath, and killing / a trench in the earth, […] such as is made by a torrent, the channel of a torrent […] / a certain plant which ostriches eat / a species of […] truffle, of a white colour / to cut lengthwise, split / to cut the throat / disease in the throat / species tuberum terrestrium / idem, tum Pastinaca silvestris et planta alia cuius pastu gaudent struthiocameli
@@ -1742,6 +1792,7 @@
   - Cebel: حادٌّ دقيقُ الجِرم يسبق أو ينفذ باندفاع (1): كحَدّ طَرَف السيفِ وكالنابِ وحَدّ الأسنان، وطَرَف أُذُنّى الفرس مجمع الدقة والجفاف
 **ذخر**: biriktirmek / saklamak / birikim
   - EtymArab: ... / the lower section of the stomach, stored provisions, to select, store up, treasure
+  - Mekâyîs: (ذَخَرَ) الذَّالُ وَالْخَاءُ وَالرَّاءُ يَدُلُّ عَلَى إِحْرَازِ شَيْءٍ يَحْفَظُهُ.
   - Cebel: حفظ الشيء في جوف أو ظرف زمنًا ممتدًّا: كما يضم المِعَى ما يصل إليه من مَهْضُوم الطعام آنا بعدَ آخرَ، وكالسِمَن في البَدَن، وكما يحتوي الطيب على الإذْخِر فتبقى ريحُه فيه
 **ذرء**: yaratmak / çoğaltmak / yaratılış
   - EtymArab: ... / first sprouts of a plant / offspring, to create, cause to increase in number / to spread / to produce
@@ -1764,6 +1815,7 @@
   - Cebel: انقيادٌ بسلاسة مع في الباطن (أي عدم تصلبه أو استعصائه): كتلك الناقة السَلِسة الرأس وهو معنى الخضوع والذُل
 **ذقن**: çene
   - EtymArab: ... / chin, beard / to place the hand under the chin, hit on the chin / to annoy
+  - Mekâyîs: (ذَقَنَ) الذَّالُ وَالْقَافُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ إِلَيْهَا يَرْجِعُ سَائِرُ مَا يُشْتَقُّ مِنَ الْبَابِ.
   - Cebel: نتوءٌ دقيق عن السَواء له أصل عريض مع صلابة في الباطن: كذقن الإنسان وجمعها أذقان (ومنه آية التركيب، وسائر كلمة (أدقان) في القرآن، وكالدلو الموصوفة تكون في شفتها زاوية مثلثة (صُلْبة)
 **ذكر**: anmak / hatırlamak / hatırlatmak / zikir
   - EtymArab: male / steel / to remember / male, male organ, manhood, masculinity / weighty head of the axe / power / honour, renown, good name / to mention, to remember, to remind, to commit to memory, to learn by heart, to study, to investigate / to propose marriage / a record / to praise / to insult, to defame / mentioned / talked of / much talked-of / remember, mention / to be sharp / déclarer, mentionner, nommer, invoquer / discours, mention, ordre, renommée, serment / se souvenir de / rappeler, commémorer / réciter (une incantation) / mention / souvenir, mémorial / commémoré / revenant, devin / se souvenir, rappeler, mentionner, raconter / souvenir, mention, récit, renommée / mentionner, enregistrer / déclaration, notification / penser, se souvenir / souvenir, mémoire / faire un repas funéraire / mémorial / mâle, viril / virilité / homme / homme, bélier / mâle / bélier / chevreau mâle / palmier mâle / acier / acérer le tranchant
@@ -1782,11 +1834,11 @@
   - Cebel: دقيق
 **ذنب**: günah / kuyruk
   - EtymArab: tail / offense, sin, crime / tail, tail end, consequence / guilt, crime, sin, to sin / the end of the valley, the place where floodwater gathers, a great bucket / share, portion / fish glue
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ الذَّنَبُ، وَهُوَ مُؤَخَّرُ الدَّوَابِّ، وَلِذَلِكَ سُمِّيَ الْأَتْبَاعُ الذُّنَابَى.
+  - Mekâyîs: (ذَنَبَ) الذَّالُ وَالنُّونُ وَالْبَاءُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا الْجُرْمُ، وَالْآخَرُ مُؤَخَّرُ الشَّيْءِ، وَالثَّالِثُ كَالْحَظِّ وَالنَّصِيبِ.
   - Cebel: امتدادٌ مع دقة إلى الخلف وإلى أسفل: كذَنَب الفرس والعَيْر يمتد من آخر ظهره وثيقَ الاتصال به وهو جسم طويل مستدِقٌّ متدلٍّ، وكالمِذْنب المَسِيل، وذُنابة الوادي، كلاهما يمتد مستدقًّا منحدرًا، ويتصل بالماء أصلًا أو دائمًا
 **ذهب**: gitmek / gidiş / altın
   - EtymArab: gold / to go / to go, to go away, to set out / to take away / creed, faction, sect, to adopt as a conviction / pluie fine / champ / vallée alluvial / irrigation semi-annuelle / terre alluviale / être inondé / inondation
-  - Mekâyîs: وَبَقِيَ أَصْلٌ آخَرُ، وَهُوَ ذَهَابُ الشَّيْءِ: مُضِيُّهُ.
+  - Mekâyîs: (ذَهَبَ) الذَّالُ وَالْهَاءُ وَالْبَاءُ أُصَيْلٌ يَدُلُّ عَلَى حُسْنٍ وَنَضَارَةٍ.
   - Cebel: انتقال الشيء أو خلو حيزه منه (إلى حيز آخر) -كخلو حيزّ الرجل والماء منهما بانتقالهما إلى ما غابا فيه، والبر يُحوّل من هيئته إلى سبائك وحُلِيّ
 **ذهل**: dalgınlık / şaşkınlık
   - EtymArab: ... / part of the night / to become distracted, be bewildered, forget
@@ -1809,12 +1861,13 @@
   - Cebel: الطرف الجامع لقوام الشيء في أعلاه أو مقدمه
 **رءف**: şefkat / şefkatli
   - EtymArab: ... / mercy, kindness, compassion, to have pity, show kindness, be merciful
+  - Mekâyîs: (رَأَفَ) الرَّاءُ وَالْهَمْزَةُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى رِقَّةٍ وَرَحْمَةٍ، وَهِيَ الرَّأْفَةُ.
   - Cebel: الرحمة والرقة
 **رءي**: görüş / düşünce
   - EtymArab: to see / to act ostentatiously, make a show / to act the hypocrite, (dis)simulate, dissemble / opinion, view / vision / dream / looking glass, mirror / banner, flag / an Egyptian variety of salmon / lung / »Listen to us« / to see, to behold, to sight, in full view / spectator / mirror / to show vanity / to cause to see, to make a show before others, to act hypocritically, to demonstrate, to come into view / to conceive, to consider, to deem, an opinion / a dream, a vision, outer appearance / indicator / a type of Nile fish / alestes dentex / ray, skate / to see, expect / (human) appearance, feature / vision, dream / to watch closely (esp. from a lurking place), spy out, be on the lookout for / view, opinion / id. / glasses / ray
 **ربب**: Allah / rablik / rab / efendi
   - EtymArab: rabbi / master, lord, owner, guardian, to have possessions / to be characteristic of / to pamper, to raise, to educate / a word / an adopted person / animal kept for milk / a woman newly delivered of a baby / to do well / mesh, thickened juice / a group of people / a rabbi, a person learned in divine law / early youth, to approximate
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ لُزُومُ الشَّيْءِ وَالْإِقَامَةُ عَلَيْهِ، وَهُوَ مُنَاسِبٌ لِلْأَصْلِ الْأَوَّلِ.
+  - Mekâyîs: (رَبَّ) الرَّاءُ وَالْبَاءُ يَدُلُّ عَلَى أُصُولٍ.
   - Cebel: استغلاظ المائع ونحوه حتى يتماسك من أجل الإصلاح أو الانتفاع (1): كاستغلاظ رُبِّ العنب وعُصَارة التمر وصُلُوحهما
 **ربح**: kâr / kazanç / kazanan
   - EtymArab: growth, gain, to profit, to earn, to win / trade, goods kept for trading / young sheep and camels
@@ -1830,13 +1883,14 @@
   - Cebel: شَدُّ الشيء أي تثبيته وإمساكه لا يتسيب أو يبرح: كالدابة والماء كلٍّ في مكانه، وكالتمر في الجراب
 **ربع**: dörtte bir / mesken / yurt
   - EtymArab: four / quartan (fever) / fourth part, quarter / forty / Ascension Day / Wednesday / lunar quarter / quadrangle / square, plaza / tile, floor tile / partner in an agricultural enterprise (sharing one quarter of the gains or losses) / to gallop (horse), jump high (jerboa) / jerboa / to sit, stay, live / living zone, inhabited area, territory / large group of people, clan / of medium height, medium-sized, well-built (of people) / athlete (boxer, wrestler, weight lifter, etc.) / spring, vernal season / Rabia I and II (name of the third and fourth months of the Muslim year / four, fourth, to happen each fourth day, foursome / square, quarter / living quarters, neighbourhood / a well-built, medium-height person / spring, to become fertile, spring rains, to be in one
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ: الْإِقَامَةُ، يُقَالُ رَبَعَ يَرْبَعُ.
+  - Mekâyîs: (رَبَعَ) الرَّاءُ وَالْبَاءُ وَالْعَيْنُ أُصُولٌ ثَلَاثَةٌ، أَحَدُهَا جُزْءٌ مِنْ أَرْبَعَةِ أَشْيَاءَ، وَالْآخَرُ الْإِقَامَةُ، وَالثَّالِثُ الْإِشَالَةُ وَالرَّفْعُ.
   - Cebel: (تجمع مع تحبس وتناسب أبعاد): التئامُ الشيء متجمعًا (2/746) متناسب الأبعاد مع عدم انتشار انتقالًا او امتدادًا وطولا
 **ربو**: artmak / yükselmek / tepe
   - EtymArab: hill, elevated part of the land, to go on the top of a hill / growth, to increase / usury / to be out of breath, to have asthma / to raise, to grow under s.o.
   - Cebel: نمو الشيء مستغلظًا مرتفعًا
 **رتع**: otlamak / eğlenmek
   - EtymArab: ... / to pasture in lush grass, be in fertile land, have plenty to eat and drink, live in great affluence / to lark about in a carefree manner
+  - Mekâyîs: (رَتَعَ) الرَّاءُ وَالتَّاءُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ; وَهِيَ تَدُلُّ عَلَى الِاتِّسَاعِ فِي الْمَأْكَلِ.
   - Cebel: الإقامة على مرعى خَصْب كثير الكلأَ
 **رتق**: dikmek / birleştirmek / açmak
   - EtymArab: ... / space between any two fingers / a closed up mass, darkness / to mend, join together, repair, patch up / sticking together
@@ -1866,7 +1920,7 @@
   - Cebel: اضطراب الشيء من أصله شديدًا بحيث يكاد ينقلع منه كالسِنِّ ترجف لضعف إمساك أصلها وتخلخلِها، والشجر يكاد ينقلع، والبعير كذلك ويكاد يقلع الرحل
 **رجل**: erkek / insan / ayak
   - EtymArab: foot / swarm (esp. of locusts) / common purslane (Portulaca oleracea L. / bot.) / man / masculinity, virility, manhood / to comb (hair) / to improvise, extemporise / cooking kettle, caldron / boiler / set free with its mother (suckling) / to let (a young one) free with his mother / ( fig. ) to grant a respite to s.o. / somewhat curly (hair) / variegated (garment) / hard ground / blank paper / misfortune / precedence / time / ... / purslane / man, manhood, masculinity / foot, leg, to go on foot, dismount / to comb one / to have fat hips / to be fat (arms) / to be moved, tremble, quiver, sway, be faint / to shake > to hit / strong one 1 ▪ [v2] : ‘Swarm (esp. of locusts) / to let/set free / (s.th., animal, etc.) set free and now spreading freely, uncontrollably / common purslane / curly hair / curly (hair) / to be set free and spread uncontrollably / to behave like a man, masculinity, virility, manhood, etc. / pedestrian / foot-soldier / going by foot / vigour in walking / to let (hair) fall down freely / improvisation, extemporisation / to let/set free to spread/unfold spontaneously, uncontrolled / manliness, manly virtue / marchander / letting free / manly virtue / kettle with “feet” / kettle with feet / kettle put/set down on (some kind of) feet (e.g., stones) / to set down, discharge / set free with its mother / newly born, managing/strong enough to stand on its own feet and to run around and/or to drink from her teats / to let free / somewhat curly (hair) and † ‘set free / hair “set free”, hair that grows without control, like a young foal running/hopping freely around / variegated / leaving traces of wings on the sand (locusts) / white-spotted on one foot / large-footed / common purslane (↗³ riǧl / riǧl time / ( esp. ) hind-leg of beasts\quadrupeds / ( meton. ) part, portion / foot of... / sea-gulf / Rigel, fixed star in the left foot of Orio / star in the right foot of Orio / feet / filago, lion / arum, friar / atriplex, oroche / † riǧl al-ḥamāmaẗ ‘anchusa, pigeon / chamemelum, hen / layopus, hare / lotus ornithopodus, bird / ornithopodus, bird / glechoma, ground-ivy / † riǧl al-qaʕq , riǧl al-zurzūr , riǧl al-ʕiqāb ‘coronopus, crow / podophyllum, duck / delphinium, lark / curly / to have a white-spotted foot (horse) / white spot on a horse's foot / to tie s.o. by the feet / to tie (a beast) by the foot / to seize s.o. / to go foot / walking on foot / pedestrianism / pedestrian, on foot / foot-passenger / foot-passenger, pedestrian / good walker, tramp / hunters / to go at a middling pace (horse) / perfect / vigorous / husband / manlike woman, virago / manliness / to be manlike (woman) / to go down (a well) without rope / to alight (rider) / ( fig. ) to be advanced (day) / to come\go on foot, dismount, step forward / to let s.o. go on foot / to be set free with his mother (young beast) / to let (a female) suckle her young / to suck (his mother: young) / set free with his mother (suckling) / having curly hair / to be curly (hair) / to comb (the hair) / to comfort s.o. / comb / combed / hence also: variegated (garment) / garden purslane / smallage (herb) / swarm of locusts / hence also: large troop of beasts / and also: army / to extemporise (speech) / copper caldron / to cook s.th. in a kettle / to be fullformed, thick in her shank (a woman) / thigh / father / snake / servant at the feet of ...
-  - Mekâyîs: وَمِمَّا شَذَّ عَنِ الْأَصْلِ أَيْضًا الرِّجْلَةُ، هِيَ الَّتِي يُقَالُ لَهَا الْبَقْلَةُ الْحَمْقَاءُ.
+  - Mekâyîs: (رَجَلَ) الرَّاءُ وَالْجِيمُ وَاللَّامُ مُعْظَمُ بَابِهِ يَدُلُّ عَلَى الْعُضْوِ الَّذِي هُوَ رِجْلُ كُلِّ ذِي رِجْلٍ.
   - Cebel: اختلافٌ (أي حركة في كل اتجاه) مع امتداد ونَصْب أو إقلال (أي حَمْل) رَأْسِيّ وإن شئت قلت: سَعْى مع نصْب أو حمل -كاختلاف الرِجْل بالمشي ذَهابًا وإيابًا، مع نصبها البدن
 **رجم**: taşlamak / kovulmuş
   - EtymArab: to curse / to stone / heap of stones / dragoman, to interpret / shooting stars, meteorites / diet / cross-beams of a pulley / strong / battering (horse) / sling / 1 stones, to stone, kill by stoning, heap up stones (on a grave), heap abuse (on) / 2 to curse, drive out, expel / 3 to doubt, conjecture / 4 boycotting / 5 shooting stars / 6 to gauge the level of water in a well / to call / to prophesy / to summon / to lodge a claim, sue / to say, tell, announce / to revile, utter evil speech / to plead in defense of someone / to curse, insult / to blame one another with harsh words / être lapidé / to cover, protect / to cover (usually food to keep the flies off it) / to cover, put a lid on / couvrir, protéger / to be stoned / to cover (a dead body, with stones and soil) / (corpse) to be buried / to be covered, buried alive (as, e.g., a witch) / stoned, covered by stones / covered by stones and soil (in the grave) / stones that are placed upon a grave / to place a stone on one / to blame, curse / to cover (with stones). / to cover with stones / to stone (as punishment) / to cover / to speak, say, shout / to speak against, bring legal action against / to abuse, curse / to cast stones [while cursing] / stone, tombstone / meteorites / to interpret / groups of Bedouin tribes / to reunite / the two cross-beams of a pulley / stone for cleansing a well / stone-work around a well / cursing / casting (of stones) / to speak, say / to cast stones / to heap up stones / to make a statement / steinigen / verfluchen / Stein / to call, call out / to summon, convoke / to lodge a claim, sue, bring a legal complaint, claim s.th. by lawsuit / voice, sound / noise / call, proclamation / thunder / wailing, lamentation / complaint, request, legal complaint / to say, tell, announce, report, talk / (L-stem) to plead in defense of someone / to curse, insult, revile / to stone, kill by stoning / to shout, etc. / to say, speak, call, shout, contest, lay claim to / to speak to one another, translate / to curse, damn, revile / to shout, contest, lay claim to / stones, missiles / stoning / the cursed one / interpreter / to speak, shout, call, etc. / stones / are cast through the sky
@@ -1881,6 +1935,7 @@
   - Cebel: انبساط الحيز اللاحق بشيء، كرَحَبَة المسجد والدار لاحقين بهما، ويحوزان الناس، ورِحاب الوادي تحوزُ الماء، ورَحَبَة العنب تحوزه
 **رحق**: saf şarap / beyaz
   - EtymArab: wine / ... / wine, the most exquisite pure mature wine (83:25) they are given to drink of the best of wines, sealed
+  - Mekâyîs: (رَحَقَ) الرَّاءُ وَالْحَاءُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: صفاء الشيء وسهولته بذهاب غلظه وحِدّته من أثنائه: كتلك الخمر بصفاتها المذكورة، فهي صافية سلسة ليس فيها حُمُوزة -كما قال تعالى عنها: {وَأَنْهَارٌ مِنْ خَمْرٍ لَذَّةٍ لِلشَّارِبِينَ}، وأيضًا {لَا فِيهَا غَوْلٌ} [الصافات: 47]، {يُسْقَوْنَ مِنْ رَحِيقٍ مَخْتُومٍ (25) خِتَامُهُ مِسْكٌ} [المطففين: 25 - 26]، فهذه هي خمر الجنة
 **رحل**: göç / yolculuk
   - EtymArab: camel saddle / saddlebags, baggage, luggage / to depart, leave, emigrate / trip, excursion / travelogue / nomad(ic) / great traveler, explorer / day / deceased, late / female riding camel / Rachel (younger daughter of Laban, wife of Jacob) / ... / to travel, to set out, to go away / travel gear, travel bags, saddles / to take as a mount / (of a camel) a strong traveller / journey / saddle / to saddle, make ready for departure / to depart / to load / Rachel / ewe, sheep / (individual) ewe / saddle, harness, to put equipment (on a beast) / load / saddle for camel / to bring water from a distance, us. by camel / to travel a moderate distance / to emigrate / † act of saddling (camels) / journey, trip / trip, journey / ewe / she-lamb / to strike s.o. with one / to saddle, load, put a burden (on the back of a camel, etc.) / to strike with a sword / to go to war, fight / arms
@@ -1913,12 +1968,11 @@
   - EtymArab: ... / death, destruction, demise, to perish, kill, cause death, die by falling, animal killed by falling, to bring to the ground, ruin / garment, cloak, to wear / to increase
 **رذل**: alçak / değersiz
   - EtymArab: ... / to be base, uncouth, vile, low, despicable / dregs of society, rejects, dirt, vice
-  - Mekâyîs: مِنْ ذَلِكَ (رَعْبَلْتُ) اللَّحْمَ رَعْبَلَةً; إِذَا قَطَّعْتَهُ، قَالَ:
-تَرَى الْمُلُوكَ حَوْلَهُ مُرَعْبَلَهْ
-فَهَذَا مِمَّا زِيدَتْ فِيهِ الْبَاءُ، وَأَصْلُهُ مِنْ رَعَلَ، وَقَدْ مَضَى.
+  - Mekâyîs: (رَذَلَ) الرَّاءُ وَالذَّالُ وَاللَّامُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ.
   - Cebel: تميز الشيء ضعيفًا (رديئًا أو فاسدًا) بعدَ ذهاب جيده منه "
 **رزق**: geçim / nasip / rızık vermek / rızık
   - EtymArab: to provide with the means of subsistence, bestow s.th. upon s.o. (said of God) / wine / long-berried grapes / white lily | (huile qu / garment of white flax | nom d / provision, livelihood, earnings, means of living, subsistence, income, bounty, (of God) to provide with means of living, to seek to earn a living, (of God) to bestow with bounties or to favour with bounties, to grant as means of sustenance / bounty, provision / daily bread, sustenance / white lily / belonging to/granted by the Provider / garment of white flax / property / livelihood / he fed, provided means of subsistence / sustenance depending on the grace of God or on skill / cliff / danger [for the merchants
+  - Mekâyîs: (رَزَقَ) الرَّاءُ وَالزَّاءُ وَالْقَافُ أُصَيْلٌ وَاحِدٌ يَدُلُّ عَلَى عَطَاءٍ لِوَقْتٍ، ثُمَّ يُحْمَلُ عَلَيْهِ غَيْرُ الْمَوْقُوتِ.
   - Cebel: ما يدخل الجوف من طعام ونحوه باسترسال أي دائمًا
 **رسخ**: sabit / yerleşik / köklü
   - EtymArab: ... / to be firmly fixed, be deeply rooted, be strongly established, stand firm, be completely absorbed into the soil, be thoroughly informed
@@ -1959,7 +2013,7 @@
   - Cebel: تندَّى الشيء الكثيف المتماسك وبللُ أثنائه وطراءتها
 **رعب**: korku / korkutan
   - EtymArab: ... / fear, terror, fright, to frighten / to fill up a drinking trough / to be fat and flabby / to be sliced / a tall, slim, beautiful woman
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ قَوْلُهُمْ: سَيْلٌ رَاعِبٌ، إِذَا مَلَأَ الْوَادِيَ.
+  - Mekâyîs: (رَعَبَ) الرَّاءُ وَالْعَيْنُ وَالْبَاءُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا الْخَوْفُ، وَالثَّانِي الْمَلْءُ، وَالْآخَرُ الْقَطْعُ.
   - Cebel: امتلاء جوف الشيء بغضٍّ طَرِىٍّ يرتجّ فيه: كالشحم، والماء، وكالسنام والجارية والناقة الموصوفات
 **رعد**: gök gürültüsü
   - EtymArab: thunder, tremor, shiver, shudder, to agitate / to take fright, to threaten, faint-hearted / to be flabby
@@ -2052,10 +2106,11 @@
   - Cebel: تجوف أو ظرف شديد الجوانب يجمع ما في باطنه كالمِرْكن من خزف أو أدَم وهو خاص بغسل الثياب، وكالضَرْع المركَّن يبدو لعِظَمه وعدم استطالته ملتئمًا بشدة على ما في جوفه
 **رمح**: mızrak / mızrakla vurmak
   - EtymArab: ... / spear, lance, to lance / to gallop, beat the ground with two hoofs together
+  - Mekâyîs: (رَمَحَ) الرَّاءُ وَالْمِيمُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ، ثُمَّ يُصَرَّفُ مِنْهَا.
   - Cebel: الطعن من بعيد كعمل الرمح من السلاح
 **رمد**: göz ağrısı / kül
   - EtymArab: dust, ashes, to become dusty, to become ashes, to become grey / to be famished, to perish, to become poor / eye disease
-  - Mekâyîs: وَالْأَصْلُ الثَّالِثُ: الِارْمِدَادُ: شِدَّةُ الْعَدْوِ.
+  - Mekâyîs: (رَمَدَ) الرَّاءُ وَالْمِيمُ وَالدَّالُ ثَلَاثَةُ أُصُولٍ: أَحَدُهَا مَرَضٌ مِنَ الْأَمْرَاضِ، وَالْآخَرُ لَوْنٌ مِنَ الْأَلْوَانِ، وَالثَّالِثُ جِنْسٌ مِنَ السَّعْيِ.
   - Cebel: انتبار ظاهر الشيء وهياجه لغلظ أو حِدّة في باطنه - كعِظَم البطن للحمل ووَرَم الضَرْع والحياء للبن وقرب الولادة، وكانتفاخ العين (2/856) لمرض فيها
 **رمز**: işaret / ima / kapalı anlatım
   - EtymArab: ... / sign, signal, nod, wink, gesture, motion, to signal, gesticulate, move lips or eyes without uttering a sound / to move, quiver
@@ -2070,6 +2125,7 @@
   - Cebel: ضمّ غَضّ أو رِخْو (متغير أو متحول) في الأثناء (1)
 **رمن**: nar ağacı / nar
   - EtymArab: to mend, to patch up / animal halter / to decay, decayed remnants, rotten and decayed bones.
+  - Mekâyîs: (رَمَنَ) الرَّاءُ وَالْمِيمُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الرُّمَّانُ.
   - Cebel: تجمع حَبٍّ ذي ماء كالعنب في باطنٍ يضمه - مع سد خلل ما بين الحبات بنسيج نباتي كالشحم
 **رمي**: atmak / fırlatmak
   - EtymArab: to throw, cast / to throw, to cast, to cast away, to throw off / to shoot at, to hunt, target, aim, projectiles / to come in succession / to accuse, to defame / share, usury
@@ -2098,7 +2154,7 @@
   - Cebel: انبساطٌ أو اتساع وانتشار مع شمول ولطفٍ ما استواء أو نحوه: كالراحة (كف اليد) فهي تشمل، أي بها يُقْبَض على الأشياء، وكالأوعية المذكورة وهي غير عميقة (وكلها مستوية القاع تحوز)، واتساع ما بين صدور القدمين عن المألوف (وكأنما تحاصران شيئًا)، وكالراحة من الأرض، وراحة البيت
 **رود**: dolaşmak / ararlamak / istemek / irade
   - EtymArab: ... / scout, person scouting for pasture land, to scout, reconnoitre, search, seek / will, to want, covet / to soften up, dissuade, entice, tempt / handle, applicator
-  - Mekâyîs: وَقَالَ بَعْضُهُمْ: الْإِرَادَةُ أَصْلُهَا الْوَاوُ، وَحُجَّتُهُ أَنَّكَ تَقُولُ رَاوَدْتُهُ عَلَى كَذَا.
+  - Mekâyîs: (رَوَدَ) الرَّاءُ وَالْوَاوُ وَالدَّالُ مُعْظَمُ بَابِهِ [يَدُلُّ] عَلَى مَجِيءٍ وَذَهَابٍ مِنِ انْطِلَاقٍ فِي جِهَةٍ وَاحِدَةٍ.
   - Cebel: حركة انتقال أو تردد بخفّة وعدم ثبات واستقرار
 **روض**: bahçe / çimen
   - Mekâyîs: (رَوَضَ) الرَّاءُ وَالْوَاوُ وَالضَّادُ أَصْلَانِ مُتَقَارِبَانِ فِي الْقِيَاسِ، أَحَدُهُمَا يَدُلُّ عَلَى اتِّسَاعٍ، وَالْآخَرُ عَلَى تَلْيِينٍ وَتَسْهِيلٍ.
@@ -2113,6 +2169,7 @@
   - Cebel: تقلب وتحول أو تقليب وتحويل يُقْصَد به شُمول التغطي برخو متسيب
 **ريب**: şüphe / kuşku
   - EtymArab: ... / calamities / doubts, to suspect, entertain / to accuse, alarm
+  - Mekâyîs: (رَيَبَ) الرَّاءُ وَالْيَاءُ وَالْبَاءُ أُصَيْلٌ يَدُلُّ عَلَى شَكٍّ، أَوْ شَكٍّ وَخَوْفٍ، فَالرَّيْبُ: الشَّكُّ.
   - Cebel: [مع النظر إلى ما في روب أيضًا] هو أن ينزل بالقارّ الساكن ما يزعجه (= يثيره) ويسوءه: كحال الظبْي والأميرة الكريمة إذا أُريبا
 **ريش**: tüy / kuş tüyü
   - EtymArab: ... / feathers, plumage, to fix feathers to (e.g. arrows) / to be affluent, fine clothes and furnishings / to be hospitable / to bribe
@@ -2144,6 +2201,7 @@
   - Cebel: دفع الشيء ليتقدم داخلًا في شيء أو ليتداخل (1)
 **زجر**: azarlamak / kovmak
   - EtymArab: ... / to scold, rebuke / to forbid, restrain, prohibit / to drive away
+  - Mekâyîs: (زَجَرَ) الزَّاءُ وَالْجِيمُ وَالرَّاءُ كَلِمَةٌ تَدُلُّ عَلَى الِانْتِهَارِ.
   - Cebel: انفصال أو ابتعاد بعنف وقوة بين ما يفترض تداخله وتلاصقه: كما تنفصل الفِقْرة أو تتباعد عن أختها (الفِقَار تتماسك أشد التماسك فانكسارها لا يتم إلا بضغط وقوة شديدة
 **زجو**: itmek / sürmek
   - EtymArab: ... / to urge gently, assist along, drive forward, propel
@@ -2185,6 +2243,7 @@
   - Cebel: تحرك جَمْعِيّ في خفة (مع صوت ما) (1) كحركة الزُفة، ونمو الزِفّ بلطف حول كبير الريش، وهُبوب الريح وتحريكها الحشيش، وسرعة المشي مع تقارب الخطو تُدْرَك كأنها مشى كثير (جمعى)
 **زقم**: zakkum ağacı
   - EtymArab: ... / to swallow fast, drink too much milk / fresh butter with dates / plague / a certain foul-tasting, stinking tree said grow in the Arabian region of Tihlimah
+  - Mekâyîs: (زَقُمَ) الزَّاءُ وَالْقَافُ وَالْمِيمُ أُصَيْلٌ يَدُلُّ عَلَى جِنْسٍ مِنَ الْأَكْلِ.
   - Cebel: بَلْع (إلى الباطن) بغلظ وقوة كاللُقم الغليظة المبتلَعة بقوة، وكالإفراط في شرب اللبن
 **زكو**: temizlenmek / artmak / arınma / arınmak / zekat
   - EtymArab: to thrive / to grow, increase / to be pure in heart, be just, righteous, good / to be fit, suitable / alms tax, zakat (Isl.) / to grow, to flourish / to reach, to attain / to purify, to be purified / to be(come) clean, pure / moral purity / growth / brightness, sharpness, clarity / croître, grandir, prospérer, être pur, probe / gonfler en cuisant (couscous) / avoir soif / (être) propre, pur, clair, libre d / être pur / être clair, pur / pur / innocent, pur / rituellement pur / propre, pur / innocence / être innocent / innocence, victoire, règne / innocent, victorieux / être égorgé selon les règles (animal) / oblation (pour le péché) / être pur, sans tache / égorger, achever / grâce divine / aumône / pur, purifié / aumône légale, impôt / paraître, pousser, percer / être vif, perçant (esprit), être prompt à comprendre / brûler avec intensité, avec violence (feu), dégager une forte odeur / flamme / allumer, bouter le feu / envoyer / détacher (une troupe) / purity / alms tax / innocence, justification, merit, meritorious deed / to be innocent, be worth, give alms / to be worth, be worthy / to be(come) pure, innocent / croître, grandir, prospérer / être pur, probe
@@ -2194,6 +2253,7 @@
   - Cebel: انزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع
 **زلف**: yakınlık / makam / saç
   - EtymArab: ... / to approach, draw near, advance / to crawl / to ingratiate o.s., seek God
+  - Mekâyîs: (زَلُفَ) الزَّاءُ وَاللَّامُ وَالْفَاءُ يَدُلُّ عَلَى انْدِفَاعٍ وَتَقَدُّمٍ فِي قُرْبٍ إِلَى شَيْءٍ.
   - Cebel: انحدار ما حول المكان بكثافة منتقلًا إليه حتى يتجمع فيه ويمتلئ به (لهبوط المكان)
 **زلق**: kaymak / kayma
   - EtymArab: ... / to slip, slide, be slippery, be smooth
@@ -2253,6 +2313,7 @@
   - Cebel: تحرك الشيء انتقالًا عن موضعه بخفة - كزوال الشيء والشبح عن مكانه بخفة، وكتردد الرجل في المكان بخفة
 **زيت**: zeytin yağı / zeytin
   - EtymArab: (olive) oil, olive (tree), to anoint / oil, particularly olive oil, to anoint / olives, olive tree / (olive) oil / oil / olive (tree) / olive / olive, olivier / huile / huile d / craquer (chaussure) / malade possédé par un esprit / (?) olive oil
+  - Mekâyîs: (زَيَتَ) الزَّاءُ وَالْيَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الزَّيْتُ، مَعْرُوفٌ.
   - Cebel: دُهْنٌ ذو كثافة: كالزيت يُعتصر من الزيتون
 **زيد**: artmak / fazla olmak
   - EtymArab: ... / to increase, grow, multiply / increase, growth
@@ -2271,6 +2332,7 @@
   - Cebel: زيادة محببة تعلق بظاهر الشيء (ناشئة) عما يزخر به باطنه
 **سءل**: istemek / sormak / soran
   - EtymArab: to ask, question, demand, interrogate / to beg / asking, inquiring, requesting, quest
+  - Mekâyîs: (سَأَلَ) السِّينُ وَالْهَمْزَةُ وَاللَّامُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: استخراج ما في حوزة أخرى أي طَلَبُ تحصيله بَدفْع أو حثّ: كما تخرج الصدقة والدرهم من المسئول
 **سءم**: bıkkınlık / usanmak
   - EtymArab: ... / to be averse, to be weary, bored, to be fed up, to be disdainful / to tire
@@ -2315,6 +2377,7 @@
   - Cebel: أخذًا من ذلك كله: كثافة وامتداد
 **ستر**: örtmek / saklamak / perde
   - EtymArab: ... / to cover, conceal, hide / to take cover / veil, covering
+  - Mekâyîs: (سَتَرَ) السِّينُ وَالتَّاءُ وَالرَّاءُ كَلِمَةٌ تَدُلُّ عَلَى الْغِطَاءِ.
   - Cebel: تغطية الشيء ما وراءه (1): كالتُرْس والسِتْر
 **سجد**: yere kapanmak / eğilmek / secde etmek
   - EtymArab: prostrating with the forehead touching the ground / submission / adoration / worship
@@ -2322,6 +2385,7 @@
   - Cebel: انخفاض أعلى الشيء القائم أي المنتصب منثنيًا إلى أسفل (كأنما عن ضغط): كالنخلة يَحنيها ثقلُ حَمْلها
 **سجر**: alevlendirmek / yakmak
   - EtymArab: ... / to fill, flow, overflow / to stretch, elongate / to set on fire, fuel
+  - Mekâyîs: (سَجَرَ) السِّينُ وَالْجِيمُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ: الْمَلْءُ، وَالْمُخَالَطَةُ، وَالْإِيقَادُ.
   - Cebel: توالي انحدار المائع ونحوه إلى الحيّز حتى يتجمع فيه ويمتلئ الحيّز به - كما يملأ السيل الموضع، والمطرُ الثِمادَ (الثِمادُ حُفَر أو ركايا تحفر في الأماكن التي يمر بها ماء المطر ليتجمع فيها الماء ويتخزن)
 **سجل**: defter / kayıt
   - EtymArab: scroll / register / list, index / records, archives / to register, record / registrar, notary public / tape recorder / to rival, contend / to dispute, debate / to contest / bucket filled with water / hence: share, portion / gift, present / bountiful man / great udder / to pour out, spill (a liquid) / jeter ( bi qc) de haut en bas / to pour down ( bi a liquid) / to give a bucket-full, fill a vessel or watering-trough / to give much, make large (gifts) / to be rich / to set loose (cattle), set free, leave (a beast with its mother), leave alone, forsake / to leave (an affair, li to s.o.), make free\allowable (s.th. li to s.o.) / to make (the speech, language) unrestricted, speak absolutely / tearful (eye) / abundant (spring) / abounding in milk (she-goat) / stone of baked clay | pierre sur laquelle sera gravé le nom de l / flask-case | étui à flacon / ... / great buckets full to the brim with water, the amount of water contained in large buckets, large buckets at the mouth of a well / turn-taking in a duet and handling, in a relay / scroll, register, list, index, record, etc. / seal / sign, distinctive mark / to compete in the drawing of water, each bringing forth one / bucket filled with water, bucket-full / stone of baked clay / stone and clay / stone / clay / pierre d / to pour down / little bucket to pour down from / So when Our commandment came to pass We overthrew (that township) and rained upon it stones of clay, one after another / And We utterly confounded them, and We rained upon them stones of heated clay / Which pelted them with stones of baked clay / aigu, pointu / argile / id. / hell
@@ -2344,6 +2408,7 @@
   - Cebel: قَشْر ما هو شديد الالتصاق بسطح أو ظاهرٍ عنه بدقة، أو قليلًا قليلًا: كسحت الشحم عن اللحم، والشعر عن الرأس استئصالًا
 **سحر**: büyü / seher
   - EtymArab: ... / to be turned from one / magic
+  - Mekâyîs: (سَحَرَ) السِّينُ وَالْحَاءُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ مُتَبَايِنَةٌ: أَحَدُهَا عُضْوٌ مِنَ الْأَعْضَاءِ، وَالْآخَرُ خَدْعٌ وَشِبْهُهُ، وَالثَّالِثُ وَقْتٌ مِنَ الْأَوْقَاتِ.
   - Cebel: فراغ يتخلل باطن الشيء البادي التجسم والامتداد: كالفرس والرئة والعنز والأرض الموصوفات
 **سحق**: ezmek / ufalamak
   - EtymArab: ... / to grind into fine dust / to be far off, go very deeply
@@ -2351,7 +2416,7 @@
   - Cebel: ذهاب الغِلَظ الذي في عُمْق الشيء دقًّا وسهْكًا أو خروجًا بامتداد طولي: كدق الشيء أشدّ الدقّ، وكالنخلة والمرأة والحمار والفرس الموصوفات بالطول
 **سحل**: sürüklemek
   - EtymArab: ... / to scrape off, strip off, slice / to strike / shore of a sea or a great river / of the coast, Swahili / coast / to scrape off, smooth, plane
-  - Mekâyîs: وَأَصْلُ ذَلِكَ قَوْلُهُمْ سَحَلْتُ الْحَدِيدَةَ أَسْحَلُهَا.
+  - Mekâyîs: (سَحَلَ) السِّينُ وَالْحَاءُ وَاللَّامُ ثَلَاثَةُ أُصُولٍ: أَحَدُهَا كَشْطُ شَيْءٍ عَنْ شَيْءٍ، وَالْآخَرُ مِنَ الصَّوْتِ، وَالْآخَرُ تَسْهِيلُ شَيْءٍ وَتَعْجِيلُهُ.
   - Cebel: امتداد الشيء سهلًا مقشورًا مُجرّدًا من الغلظ
 **سخر**: alay etmek / emrine vermek
   - EtymArab: to scoff, mock, ridicule / masquerad / irony / to subject, make subservient, employ, utilize / forced labour, corvée / to have a good wind (ship) / kind of Hyoscyamus, narcotic, henbane / to force, to constrain, to be made subservient, to use as a subject of forced labour / to ridicule / henbane / to be(come) fearful, intimidated, stock-still / [1] to force, to constrain, to be made subservient, to use as a subject of forced labour / [2] to ridicule / to become dazed, still, numb with fear / to abate, subside / awesome stillness / deathly silence / devastation / in numbed silence / to confiscate, press into public service / to levy forced service, compel, impress / forced labour / to mock at, deride / to go around, travel about in / to go about as beggar, be beggar / to turn, surround / to return / to jeer, scoff / to subject, make subservient / making subservient / as though it makes the wind subservient, or submissive, to itself / as though it obeys and runs the wind / to become dazed, still, numb / to be soft, smooth / to have a good wind / to let o.s. be drawn smoothly, without resistance / lightness, ease / lightness / to jeer, scoff, mock / to value lightly, disdain, look down upon, (hence also) not to take seriously / to subject, make subservient (s.o. who is weak, does not show resistance / to mock, ridicule
@@ -2396,8 +2461,7 @@
   - EtymArab: large tent, canopy, pavilion / ... / tent and awning
 **سرر**: sevinç / mutluluk / yatak / taht / gizlemek
   - EtymArab: umbilical cord / navel / centre, heart / secret, to hide / concubine / joy, happiness, to make glad / bed, throne / line (of the palm or forehead), feature / last night (of the lunar month) / holed, concave (piece of zand wood used as a touchwood)¬ / worn-out [and hence hollowed] (fire steel) / galled in the breast (camel) / to apply a piece of flammable wood (like tinder) to the zand touchwood, which is slightly hollowed / hollowness (of a spear-shaft etc.) / bundle of scented herbs / [perhaps as being a cause of pleasure] the extremities of sweet-smelling plants / complimenter qn en lui présentant des herbes odoriférantes / best/choice part of a race, (bottom) of a valley / middle of the valley / good, excellent (soil, terrain) / 1 the inside, base (e.g., of the head or the navel), innermost part of an object / secrecy, secrets / 2 seat, bed / 3 pleasure, to please, delight ▪ The assumption, made by BAH2008, of three basic values in the root seems to be correct in principle, although perhaps not going far enough: probably, all the above values are dependent on only one or two: WSem (or CSem?) * šurr- *‘navel string / vertebral column, backbone / lier, serrer / navel (string) / to bind, weave / thread, string / to line up / sinew, fibre / navel string / navel, umbilical cord / umbilicus / nombril / navel string, navel / fil de chaîne du métier à tisser / fil horizontal (trame) / fibre de bois\viande / fil de trame, fin pour le tissage des djellabas ou des burnous / to be covered (female animal), be attacked / base de la tête, endroit où elle est jointe au cou / dos / milieu / vertebra, spinal cord, sinew / vertebrae / fin of a fish / rib of the animal / sunset / to set, sink, hide / navel, navel string / cavity / hollowness / (facial) features / worn-out, galled / centre / the part where the head rests upon the neck / neck-rest > bed / middle (of the lunar month) / first, or last, night / best/choice part of s.th. / middle or bottom / good soil, excellent terrain / marrow / secret / hidden / pudenda / fornication / marriage / the secret habit / masturbation / happiness, joy / inside, base (e.g., of the head or the navel), innermost part of an object / pleasure, delight / base of the head / neck-rest > place to rest > bed / navel, centre, innermost part, essence / woman whom a man may let see his “secret parts”, i.e., his pudenda / woman at whose vulva a man is allowed to look / woman whose existence a man conceals from his wife / secrecy, intimacy / to experience joy on account of being let into a secret / … being shown the navel/pudenda / joy, happiness, tranquility of the mind / affluence, ease / joy / line of the forehead, facial feature / emotion recognizable from facial expression / joy, happiness / pleasure, tranquility of the mind / throne / dominion, sovereignty, rule, authority | dignité royale, royauté / ease, comfort, affluence | bien-être / déchu de son bien-être / bier, before the corpse is carried upon it / ease, happiness, peace of mind / neck > neck-rest > place to rest > bed / middle (of a valley) / base of the head, neck / centre, innermost part / instrument made of the ribs of a cow and used for leveling the floor / behind / hollow, cavity / navel (cavity it in the belly) / commencement\first night of the lunar month / middle / the middle of the month / the night / navel (> centre, innermost part) / sunset, dawn / at the setting of the Sun / to go away, leave, disappear / holed, concave / navel (cavity in the belly) / best/choice part of s.th., also of a race / navel > centre, middle / cavity, bottom / middle/bottom of a valley / comfort, richness, ease, happiness
-  - Mekâyîs: وَالْأَصْلُ فِي ذَلِكَ كُلِّهِ وَاحِدٌ، قَالَ الْأَعْشَى:
-فَانْظُرْ إِلَى كَفٍّ وَأَسْرَارِهَا .
+  - Mekâyîs: (سَرَّ) السِّينُ وَالرَّاءُ يَجْمَعُ فُرُوعَهُ إِخْفَاءُ الشَّيْءِ.
   - Cebel: غئور إلى العمق بامتداد ودقة (1): كأسرار الكف
 **سرع**: hız / çabuk
   - EtymArab: ... / speed, to hasten, fast, quick
@@ -2455,6 +2519,7 @@
   - Cebel: لصوق ما له حدّة أو كثافة على ظاهر الشيء: كذلك السواد في صفحة حجارة الأثافيّ من أثر النار (وكذلك ما هو من أثر الشمس والسَموم)، وكالسواد في الخد والوجه بجوار البياض
 **سفك**: dökmek / akıtmak
   - EtymArab: ... / to shed tears or blood, to cause to flow
+  - Mekâyîs: (سَفَكَ) السِّينُ وَالْفَاءُ وَالْكَافُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: إراقة المائع المحتبس في البدن بحدّة أو قوة: كسفك الدم والدمع
 **سفل**: alçak / aşağı / sâfil
   - EtymArab: lower/lowest part of s.th., bottom / to be low, to go low / to be base, to be vile
@@ -2462,8 +2527,7 @@
   - Cebel: كون الشيء تحت غيره أو دونه متميزًا بذلك: كالقوائم من الجسم، وكالمقعدة، وكالنصف الأسفل من الرمح كانوا يجعلون الزجّ (قاعدة الرمح) إلى أسفل {جَعَلْنَا عَالِيَهَا سَافِلَهَا} [هود: 82]، {وَالرَّكْبُ أَسْفَلَ مِنْكُمْ} [الأنفال: 42]
 **سفن**: gemi / kazımak / oymak
   - EtymArab: to peel off, to bare / ship, ark, boat
-  - Mekâyîs: (سَفَنَ) السِّينُ وَالْفَاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَنْحِيَةِ الشَّيْءِ
-عَنْ وَجْهِ الشَّيْءِ، كَالْقَشْرِ، قَالَ ابْنُ دُرَيْدٍ: السَّفِينَةُ فَعَيْلَةٌ بِمَعْنَى فَاعِلَةٍ، لِأَنَّهَا تَسْفِنُ الْمَاءَ، كَأَنَّهَا تَقْشِرُهُ.
+  - Mekâyîs: (سَفَنَ) السِّينُ وَالْفَاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى تَنْحِيَةِ الشَّيْءِ عَنْ وَجْهِ الشَّيْءِ، كَالْقَشْرِ، قَالَ ابْنُ دُرَيْدٍ: السَّفِينَةُ فَعَيْلَةٌ بِمَعْنَى فَاعِلَةٍ، لِأَنَّهَا تَسْفِنُ الْمَاءَ، كَأَنَّهَا تَقْشِرُهُ.
   - Cebel: النحت من ظاهر الشيء باتجاه باطنه للتسوية، أو لصنع فجوة في ذلك الظاهر: كنحت القدوم جِرْمَ الخشب، وتسوية ظاهر القِدْح بالسفَن (: السنفرة) وكشفِ التراب عن وجه الأرض
 **سفه**: akılsızlık / cahillik / sefîh
   - EtymArab: ... / to be ignorant, foolish, impulsive, weak in the mind / to be base
@@ -2492,6 +2556,7 @@
   - Cebel: جريان المائع أو الرِخو في مجرى دقيق بيسر وانضباط إلى مقره: كالسَكْبة تحمل الماء وتنقله إلى الدِبار، وجلدة المولود تجمع جسمه وتُزْلقه، وكذلك الإسكابة تجمع المُنْصَبّ وتجعله دقيقًا إلى مَصَبّه
 **سكت**: susmak
   - EtymArab: being silent, becoming silent, silence, to stop talking, to stop moving / to abate
+  - Mekâyîs: (سَكَتَ) السِّينُ وَالْكَافُ وَالتَّاءُ يَدُلُّ عَلَى خِلَافِ الْكَلَامِ.
   - Cebel: توقُّف ما يجري في الأثناء أو منها سكونًا أو انقطاعًا: كسكوت الحر وركود الريح (كما قالوا سَكَرت الريح: سَكَنت بعد الهبوب، من السَكْر، (كما يقال: الجو مكتوم، وكانقطاع النفس والكلام)
 **سكر**: sarhoşluk / sarhoş
   - Mekâyîs: (سَكِرَ) السِّينُ وَالْكَافُ وَالرَّاءُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى حَيْرَةٍ.
@@ -2506,6 +2571,7 @@
   - Cebel: نزع بقوة لما يعلق ممتدًّا بحيّز آخر، ويلزمه تجرد الحيز الآخر: كسلْب القِرْن ما علق به ممتدًّا (لأنه ملكه) وهو في وضع المقهور، وكالتجريد من اللحاء وهو ممتد تصنع منه الحبال
 **سلح**: silah
   - EtymArab: to void excrement, drop dung / arm(s), weapon(s) / apostle ( Chr. ) / arms, arming, fortifications / (of camels) to become fleshy / excreting / to draw out or off / to draw out slowly
+  - Mekâyîs: (سَلَحَ) السِّينُ وَاللَّامُ وَالْحَاءُ السِّلَاحُ، وَهُوَ مَا يُقَاتَلُ بِهِ، وَكَانَ أَبُو عُبَيْدَةَ يُفَرِّقُ بَيْنَ السِّلَاحِ وَالْجُنَّةِ، فَيَقُولُ: السِّلَاحُ مَا قُوتِلَ بِهِ، وَالْجُنَّةُ مَا اتُّقِيَ بِهِ، وَيَحْتَجُّ بِقَوْلِهِ: حَيْثُ تَرَى الْخَيْلَ بِالْأَبْطَالِ عَابِسَةً .
   - Cebel: نفاذ بحدّة وامتداد: كالسيف يُنفَذ به في بدن العدو بامتداد
 **سلخ**: derisini yüzmek / sülh
   - EtymArab: to skin, flay, throw off the slough / to undress / to strip off the hide, or skin, of an animal, to pull off / to bone, to extricate / (of months) to pass away, to depart / to draw out or off / to draw out slowly
@@ -2524,6 +2590,7 @@
   - Cebel: شيء يتقدم أو يسبق نوعَه بلطف: كسلافة الخمر تسبق (2/1058) ما يُعْتَصر، واللطف فيها أنها تسيل بلا عصر
 **سلق**: haşlamak / kaynatmak
   - EtymArab: to lacerate the skin ( h of s.o. / with a whip) / to remove (hair, etc.) with boiling water / to boil, cook in boiling water / to scald (plants / said of excessive heat) / to hurt (with one / vicious tongue, violent language, violence of language / eloquent (speaker) / sharp / to ascend, mount, climb, scale / Ascension (of Christ) / a variety of chard / dish made of grain cooked with sugar, cinnamon and fennel (SyrAr) / geschälte Gerste u. Speise daraus / inborn disposition, instinct / red lead, minium / saluki, greyhound, hunting dog / to prostrate s.o. on the back of his neck, throw s.o. down / to push, repell / to pierce (with a spear) / to leave prints (on the soil: foot) / marks made by the feet of men and by the hoofs of horses or the like on the road (and to these the marks made by the [plaited thongs called] ʔansāʕ upon the belly of the camel are likened) / to cultivate, plough, till / sillon (où se trouve déjà la semence du ṭaʕām ) / cultivation, tillage / to oil, grease (a leathern water-skin, etc.), to smear (a camel all over with tar) / ( al-ǧuwāliqᵃ ) to insert one of the two loops of the sack called ǧ. into the other / ( al-ʕūd fī / to call out, cry out, shout vehemently (esp. after the death of a person or at a calamity) / to slap and scratch one / weeping loudly (woman), slapping her face / long-tongued and vehemently clamorous, foul, evil, lewd / to run / quick, swift (she-camel) / to collect herbs / to be(come) restless, agitated, in a state of commotion, fret (from grief, anxiety, pain) / red garden-beet / wolf / she-wolf / female lizard / female locust, when she has laid her eggs / water-course, channel in which water flows, between two tracts of elevated, or elevated and rugged, ground / even plain, smooth, even, tract, of good soil, depressed, even plain in which are no trees / low tract, or portion, of land, that produces herbage, meadow / pimples, pustules that come forth upon the root \ on the tip of the tongue (Lane) / Lösung d Zahnfleischs (Wahrmund1887) / lippitude of the eyelids (Hava) | 1 Tumeur qui se forme sur les bords des paupières et fait tomber les cils / 2 déchaussement des dents, maladie des gencives, qui fait que les dents n / what is next to the lahawāt [pl. used as sg., meaning the ‘uvula / the mouths broke out with pimples, or small pustules / […] / to be(come) affected with what is termed sulāq / what falls off from trees (leaves, etc.) / honey which the bees build up along the length of their hive, or habitation / pot herbs | Kücherkräuter / side of a road / (a sort of) coat of mail / sitting-place of the rubbān [or captain] of a ship, sitting-place of a pilot / natte de folioles de palmier / ruines / natural, untaught, incorrect (speech) / natural, or untaught (speech) / (speech whereof) the desinential syntax is not much attended to, but which is chaste and eloquent respect of what has been heard, though often tripping, or stumbling, in respect of grammar / speech which the dweller in the desert utters according to his nature and his proper dialect, though his other speech be nobler and better / dialect in which the speaker thereof proceeds loosely, or freely, according to his nature, without paying much attention to desinential syntax, and without avoiding incorrectness / to throw on the back / to flay with a whip / to insult / to scald / to lacerate the skin / boiling, cooking lightly by boiling / intrinsic nature / to cook, broil, boil / to ascend, climb / to be\grow high / to skin, flay / skin, hide / to shout, shriek / to writhe about / to draw out or off / to skin, flay, throw off the slough / to peel off (flesh) from (the bone) / to cut open, split / to grind fine, crush, peel, husk / to cut, crush, peel off / to boil, cook / to skin, flay, etc. / to peel of the skin, loosen flesh from the bones / to roast / to roast, broil, fry / to burn, be exposed to the blaze of s.th. / to roast, fry, cook / to burn / to hurt (s.o., with one / to lacerate the skin (with a whip) / to hurt / to attack (a tribe) / to smite s.o. (sun) / to strike / to joke, scoff at, deride, mock, ridicule, etc.) as cognate (via metathesis) to NWSem *QLS (Hbr qilles ‘to jeer at / do. / to ascend / to grow high, rise, ascend / to grow / high, inaccessible / Sicily / the Sicilian (vegetable) / dish made of grain cooked with sugar, cinnamon and fennel / to lacerate, skin / to remove (hair, etc.) with boiling water / through boiling in water / what remains, or comes out, after “skinning” or “peeling off” the outer layers of s.th. / bright red / the Syrian (mineral), the (red) substance from Syria / greyhound, hunting dog, saluki / to strike s.o. ( bi with a stick) / (Gk) die Feinde schlachten, sie töten / marks made by the feet/hoofs on the road / scratchings, carvings / to lacerate, skin, peel off / semer / sillon / to make furrows in the soil, “scratch, lacerate” the earth / even plain / to grease (a skin) / to insert one of the two loops of the sack called ǧuwāliq into the other / shriek of distress / pot herbs / peeled, scratched off / to gather, collect / to gather / the Sicilian (plant) / turnip, rape / the mangy one / the howling one / to call out, cry out, shout vehemently / locust / kind of locust / to swallow, consume, devour / to swallow, destroy / furrow carved in the earth\soil (by the running water) / even plain, low tract that produces herbage, meadow / even, plain, smooth, even tract of good soil, depressed land, meadow / to leave (foot\hoof) prints (on the soil) / tract of land from which most vegetation on the surface has been “scraped off”, “lacerated” region / tumor/swelling/pustule on the edges of the eyelids or on the gum, causing eyelashes or teeth to fall out / falling out / falling off (of leaves, etc.) from trees / to lacerate the skin, peel off, etc. / what has been scratched off (from a tree) (and left it bare, like lacerated skin) / falling off eyelids, teeth, etc. / to lacerate the skin, (Ehret1989: to loosen the flesh from the bones) / what is (going to be) cooked in hot water / the bare (slopes) along a road / even plain, low tract, depressed land, meadow / the one from † Salūq / sitting-place of the captain\pilot / incorrectness in the use of language, solecism / to draw out slowly / to purify butter, press sesame oil / to take from with violence, rob, plunder, steal / to draw one thing from another / to drop excrement / undress / to split, cleave / to harrow, level, plane, make even, prepare for sowing (land) / to cut / to grind fine / husk, shell, hull / griller de façon que la viande ne soit ni crue ni à point, mais entre les deux / donner au pain une caisson légère / to be burned / to simmer / to roast (meat) / to burn (intr.), be exposed to the blaze ( bi of / to broil, roast / cuire rapidement / to cook by boiling, bake / id. / to fry, roast / braten, rösten auf dem brennenden Feuer / Fleisch auf heißen Steinen gebraten / Feuerbrand / campfire for roasting meat / to grill, toast, roast / to fry / affumigarsi, arruginirsi, ossidarsi / sharp (tongue) / verhöhnen / shouting, derision / to jeer at / to joke, scoff at, deride, mock, ridicule, make fun of, make fun of one another / to abuse, insult / to kindle, burn / to make a fire, burn / to cause to go up (in flame), offer sacrifice / to go up / Sicilian / boiled food / what is cooked with hot water (herbs, leguminous plants, and the like / to leave prints (on the soil / foot, hoof) / natural (music) / gold-coloured / Syrian / from Syria / to prostrate, throw down / to find / to make to be found (lying on earth). – 13 prob. dependent on #1 ‘to lacerate the skin (with a whip) / marks made by feet\hoofs on the road / mark\scar (of a gall, a thong), sore, on the skin of a camel / the scratched ones / even plain, smooth, even tract, of good soil, etc. / to make smooth, trim / to be smooth / to raise one / to scream in child-birth / swift, quick (she-camel) / the climbing one / turnip / rape / water-course / the carved\carving one, leaving a furrow in the soil / the running one, the quick, swift one / even plain, low tract, meadow / even plain, low land, depression, meadow / to lacerate the skin, loosen the flesh from the bones / falling out, loosening / falling off / arms cache / to hide (arms) in a cache / to loosen the flesh from the bones / burning / to hurt (s.o., bi-lisānih with one / hurting (tongue) / cognates / to abuse / to travel, go along / to creep, crawl, trudge, amble / to creep / to slink / snake / to slide away / to crawl along / to advance with effort (to creep, to crawl, to climb etc.) / to scald, burn / ascending / chard / Rumex , sour-dock / Potamogeton , pond-weed / millet bruised and dressed by being cooked with milk / a preparation of dried curd with which are mixed certain plants / inborn disposition, instinct, natural trait / marks made by the feet of men and by the hoofs of horses or the like on the road (or marks made by thongs upon the belly of a camel etc.) / to lacerate, flay, skin / saluki / to lie, or sleep prostrate on one / marks made by the feet of men and by the hoofs of horses or the like on the road / marks / traces / to peel off (flesh from the bone), remove its hair or fur (with hot water, leaving the traces thereof remaining [!]) / mark\scar (of a gall), sore, on the back of a camel, when it has healed, and the place thereof has become white / mark made by the [plaited thong called] nisʕ upon the side of the camel, or upon its belly, from which the fur becomes worn off / marks left on the road / to make furrows in the soil / the carving\scratching one / even, smooth / to climb / stark laufende (eigentl. ‘steigende Kamelin / mark\scar, sore, on the back of a camel, when it has healed / mark left on the skin by a thong making the fur looking worn off / more clamorous than a she-wolf / shouting, howling / proverbial / clamorous (woman), shouting vehemently, long-tongued, foul, evil, lewd / furrow carved in the earth\soil by flowing water / to leave prints (on the soil\road: foot, hoof) / to run ( † ¹² salaqa ) / even plain, smooth, even tract of good soil, in which are no trees / low tract, depressed land that produces herbage, meadow / thin bread / slice of roasted meat / mark\scar, sore, on the back of a camel, mark made by a thong upon the skin where the fur becomes worn off / kinship / 1 tumeur qui se forme sur les bords des paupières et fait tomber les cils (tumor that forms on the edges of the eyelids and causes the eyelashes to fall out / Hava1899: lippitude of the eyelids) / loosening / what is going to be cooked in hot water / to go up, ascend / to come up / to ascend, mount, climb / place left free ( † salūqiyyaẗ – obviously a f. nisba formation from salūq – does not seem to allow such an interpretation. Thus it looks as if † salūqiyyaẗ is based on the same town name † salūq from which ¹ salūqī ‘greyhound, hunting dog, saluki / natural, untaught, uninflected (speech) / use of desinential inflection, thereby producing correct, clear, sound Arabic / hammock / gross grammatical error / a small blunder in speech / any absurdity or incongruity, a violation of the conventional rules of society / mistake in speaking or writing / a speaking (Greek) incorrectly / speaking incorrectly, using provincialisms / awkward or rude in manners / speaking like the people of Soloi
+  - Mekâyîs: (سَلَقَ) السِّينُ وَاللَّامُ وَالْقَافُ فِيهِ كَلِمَاتٌ مُتَبَايِنَةٌ لَا تَكَادُ تُجْمَعُ مِنْهَا كَلِمَتَانِ فِي قِيَاسٍ وَاحِدٍ ; وَرَبُّكَ جَلَّ ثَنَاؤُهُ يَفْعَلُ مَا يَشَاءُ، وَيُنْطِقُ خَلْقَهُ كَيْفَ أَرَادَ.
   - Cebel: تأثُّر باطن الشيء بحدة تنال ظاهره فتذهب صلادَتَه ويلين: كالمطمئن بين الربوتين كان مستويًا فنَحَره السيل مثلًا حتى وصل إلى عمقه وتمهّد
 **سلك**: yol tutmak / sıra / iplik
   - Mekâyîs: (سَلَكَ) السِّينُ وَاللَّامُ وَالْكَافُ أَصْلٌ يَدُلُّ عَلَى نُفُوذِ شَيْءٍ فِي شَيْءٍ.
@@ -2534,6 +2601,7 @@
   - Cebel: انسحاب الشيء من أثناءٍ، أو فيها، بطول ورفق أو لطف (1)
 **سلم**: esenlik / barış / teslim olmak / kurtulmak
   - EtymArab: (to be/come/remain) safe and sound, unharmed, unimpaired, intact, safe, secure / to escape (a danger) / to preserve / (to be/come) free (from failure), flawless / to hand over, deliver ( sallama , vb. II) / to receive, have s.th. handed over or delivered ( tasallama , vb. V) / to approve, consent, accept / peace / to keep/make peace / to reconcile ( sālama , vb. III) / to make peace, become reconciled with one another ( tasālama , vb. VI) ↗ salām , ↗ silm , ↗ salm ▪ SLM_6 ‘to greet, salute / to leave, give up, abandon / to surrender, commit o.s., resign o.s. (esp. to the will of God, i.e., become a Muslim, embrace Islam) ↗ ʔaslama ▪ SLM_8 ‘to surrender, capitulate / to give way, submit, yield, abandon o.s. / forward buying, payment in advance ( Isl. Law ) / a variety of acacia / reception room, sitting room, parlor / phalanx, digital bone (of the hand or foot) / Solomon (n.prop.) / salmon / mercury chloride / Istanbul / ladder / stairs, staircase / scale / prisoner / to make s.o. a captive / captivity / to bite (s.o. / said of a snake): † salama u ( salm ) ▪ † SLM_20 ‘mimosa flava, used as tan / spring / to tan (o. / (land) abounding with the tree called salam / a bitter tree / a kind of tree (resembling the myrtle, grows in the sands and the deserts): † salāmān ▪ † SLM_23 ‘leathern bucket with a handle / to finish (making a leathern bucket, dalw , [Wahrmund:] from the bark of a tree called salam ) / (hard) stone(s) / to wipe, or strike, the salimaẗ , i. e. the stone (the Black Stone of the Kaʕbah) / tender in the fingers (woman) / (man) soft, or tender, in his feet / south(ern) wind called ǧanūb / leaves of the Theban palm ( dawm ) / vena salvatella (a certain vein in the hand, between the little finger and the finger next to this) / 1 peace, safety, tranquillity (cf. SLM_1, 5, 6). – 2 completeness (cf. SLM_24). – 3 being free from obstacles (cf. SLM_2). – 4 to submit to, become resigned to (cf. SLM_7, 8). – 5 to hand over (cf. SLM_3). – 6 ladder, staircase (cf. SLM_16). – 7 to receive (cf. SLM_3), to stroke (cf. † SLM_25), finger bones (cf. SLM_12) / to be whole, sound (Huehnergard2011), to be completed, be/remain whole, intact, sound and safe / to be untroubled/safe, be at ease / to stay quietly, be at rest / to forget, think no more / consolation, comfort, distraction / being, or remaining, whole, intact / safety / escape (sc. into safety, unharmed) / freedom (from failure, vice, defect), flawlessness / peace, reconciliation / to wish peace upon s.o. / to greet, salute / selamlik, reception room / surrenders / unharmed, safe, intact / committing, or resigning, o.s. to the will of God / becoming a Muslim, embracing Islam / to approve of s.th., consent to, accept / to find sound, intact, whole (salīm) / to hand over, deliver / delivering / forward buying, payment in advance / safety guarantee / ensurance / to make healthy, unharmed / to protect from damage / to deliver safely / to deliver / to be whole, sound / said of a snake) / safe and sound, healthy / leathern bucket with a handle / to finish (making a leathern bucket, dalw ) / completion, wholeness, etc. / id. / Solomon / ladder, stairs / phalanx, digital bone (of hand or foot) / digital bone / entire / entire, whole, intact, all, every / sound / whole, entire / every, all, all kind of, any / whole, entire, complete / safe, unhurt, well, sound / health, soundness / alive, living / sound, healthy / complete, entire / intact / in good condition, healthy / naked / to lay bare / to receive / finger bones / to stroke / sacrifice for alliance or friendship, “peace offering” / fish of Solomon / to wipe, or strike / the Black Stone (of the Kaʕbah) / finger bone / soft, or tender, in his feet (man) / phalanx, finger bones / a wind touching one (as tenderly as) a finger
+  - Mekâyîs: (سَلِمَ) السِّينُ وَاللَّامُ وَالْمِيمُ مُعْظَمُ بَابِهِ مِنَ الصِّحَّةِ وَالْعَافِيَةِ ; وَيَكُونُ فِيهِ مَا يَشِذُّ، وَالشَّاذُّ عَنْهُ قَلِيلٌ، فَالسَّلَامَةُ: أَنْ يَسْلَمَ الْإِنْسَانُ مِنَ الْعَاهَةِ وَالْأَذَى.
   - Cebel: صحة جِرْم الشيء والتئامُ (ظاهره) في ذاته أي عدم تصدعه أو تفرع غيره منه: كعيدان السَلَم الموصوفة، وكالحجارة العريضة الصلبة، وكعظام الأصابع كل منها ملتئم في ذاته غير متصل بغيره، وكظاهر حَجَر الحافر المستوى
 **سلو**: rahatlık / teselli
   - EtymArab: ... / consolation, solace / quail
@@ -2588,11 +2656,11 @@
   - Cebel: خروج ما احتبس في باطن إلى الظاهر أو إلى أعلى بلطف أو شيئًا بعد شيء
 **سهر**: uyanık kalmak / gece uyanıklığı
   - EtymArab: sāhiraẗ (a name of Hell? seat of the Last Judgment?, surface of the earth? – Q 79:14) / staying up at night, insomnia / the earth
+  - Mekâyîs: (سَهَِرَ) السِّينُ وَالْهَاءُ وَالرَّاءُ مُعْظَمُ بَابِهِ الْأَرَقُ، وَهُوَ ذَهَابُ النَّوْمِ.
   - Cebel: استمرار عمل الشيء أو ما يتأتى منه بالنشاط المعتاد لحدّته: كجريان الماء من العين، واللبن من الناقة، والماء والدم من عِرْقَيْ الحمار
 **سهل**: kolay / düz / kolaylık
   - EtymArab: ... / to be level, smooth, easy, convenient / amiable
-  - Mekâyîs: (سَهُلَ) السِّينُ وَالْهَاءُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى لِينٍ وَخِلَافِ
-حُزُونَةٍ.
+  - Mekâyîs: (سَهُلَ) السِّينُ وَالْهَاءُ وَاللَّامُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى لِينٍ وَخِلَافِ حُزُونَةٍ.
   - Cebel: تسيُّب جسم الشيء ذرات وتميزُه عن غيره بذلك مع عدم تراكمه مرتفعًا (فلا هو صلب متماسك ولا هو متراكم): كذلك التراب، وتميزه أنه خلاف المعتاد؛ لأن مثله يتماسك
 **سهم**: ok / hisse / pay
   - EtymArab: ... / share, luck / arrow / area of land, drawing lots, haggardness of face
@@ -2600,12 +2668,14 @@
   - Cebel: ضمور الشيء ممتدًّا شديدًا (ذهبت رطوبته): كجائز البيت، وكالسهم، والضامر
 **سهو**: unutkanlık / dalgınlık
   - EtymArab: ... / to be inattentive, absent-minded, distracted / well-disposed
+  - Mekâyîs: (سَهُوَ) السِّينُ وَالْهَاءُ وَالْوَاوُ مُعْظَمُ الْبَابِ [يَدُلُّ] عَلَى الْغَفْلَةِ وَالسُّكُونِ.
   - Cebel: فراغ نافذ بين أشياء أو أثناء (1): كالكُوَّة بين الدارين
 **سوء**: kötülük / kötü
   - EtymArab: ... / to be(come) bad, evil, wicked / to deteriorate / to afflict, hurt, vex, torment, trouble, make sorry / to be(come) evil, devastated, empty / devastation, calamity
   - Cebel: عيب أو نقص (قبح أو فساد أو مرض) يخالط ظاهر الشيء أو باطنه: كالبَرَص والمرَض، وفسادِ الخياطة والعمل
 **سوح**: gezmek / yürümek
   - EtymArab: ... / courtyard, open square
+  - Mekâyîs: (سَوَحَ) السِّينُ وَالْوَاوُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ.
 **سود**: siyahlık / siyah
   - EtymArab: blackness, black, to blacken / dark, darkness / master/lady, being a master/lady
   - Mekâyîs: (سَوُدَ) السِّينُ وَالْوَاوُ وَالدَّالُ أَصْلٌ وَاحِدٌ، وَهُوَ خِلَافُ الْبَيَاضِ فِي اللَّوْنِ، ثُمَّ يُحْمَلُ عَلَيْهِ وَيُشْتَقُّ مِنْهُ.
@@ -2620,6 +2690,7 @@
   - Cebel: غوصٌ - أو مخالطة غليظة - من الممتد القوي المستدق في شيء: كالسوط الذي يُجْلَد به - وقد عللت تسميته بأنه "يَسُوط، أي يَخْلِط اللحمَ بالدم إذا سيط به إنسان أو دابة " [تاج] ويحدث هذا إذا غار طَرف السوط في اللحم، وكالطريق بين الشرفين وهو بهذا غائر بينهما
 **سوع**: süre / zaman / yol / yön ifadesi
   - EtymArab: to spread out, (of animals) to go grazing / to give room to, to leave alone / a portion, a period or an expanse of time, a time-section of the day
+  - Mekâyîs: (سَوَعَ) السِّينُ وَالْوَاوُ وَالْعَيْنُ يَدُلُّ عَلَى اسْتِمْرَارِ الشَّيْءِ وَمُضِيِّهِ.
 **سوغ**: uygun görmek / uygun
   - EtymArab: ... / to swallow easily, go down the throat pleasantly, be easy and agreeable to swallow / to travel at large / to follow one another in birth
   - Mekâyîs: (سَوُغَ) السِّينُ وَالْوَاوُ وَالْغَيْنُ أَصْلٌ يَدُلُّ عَلَى سُهُولَةِ الشَّيْءِ وَاسْتِمْرَارِهِ فِي الْحَلْقِ خَاصَّةً، ثُمَّ يُحْمَلُ عَلَى ذَلِكَ.
@@ -2704,6 +2775,7 @@
   - Cebel: سَحْب الماء أو اللطيف إلى الجوف أي مصّه وإنفاذه إلى الأثناء بقوة (من منفذ علوى)
 **شرح**: açıklamak / genişletmek / açıklama
   - EtymArab: to slice, to cut into thin pieces / to dilate / to expound / to manifest, to reveal, to lay open, to display
+  - Mekâyîs: (شَرَحَ) الشِّينُ وَالرَّاءُ وَالْحَاءُ أُصَيْلٌ يَدُلُّ عَلَى الْفَتْحِ وَالْبَيَانِ.
   - Cebel: شق ما هو كتلة متجمعة ثخينة أو تشقيقه حتى تصير كل قطعة منه رقيقة تكاد تَشٍفّ، نحو البَضْعة من اللحم الموصوفة
 **شرد**: dağılmış / perişan / dağıtmak
   - EtymArab: ... / to bolt, break loose / to roam, go astray / to disperse, scatter / to be absent-minded
@@ -2762,6 +2834,7 @@
   - Cebel: أن ينتشر في الشيء أو منه ما هو حادّ الموقع مع لطف جِرْمٍ أو خفة في الانتشار
 **شغف**: aşk / tutku
   - EtymArab: ... / the membrane enclosing the heart (the pericardium) / the centre / to smite, pierce / to infatuate, be smitten with love, ardent love, passion
+  - Mekâyîs: (شَغَفَ) الشِّينُ وَالْغَيْنُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّغَافُ، وَهُوَ غِلَافُ الْقَلْبِ.
   - Cebel: إحاطة بالشئ من ظاهره: كشَغَاف القلب، والمتصور من غلاف الشجر المذكور
 **شغل**: meşgul olmak / iş
   - EtymArab: to occupy, to employ, to make busy, engagement, toil, occupation, concern / to divert / to occupy (a place)
@@ -2783,6 +2856,7 @@
   - Cebel: يغبّر التركيب عن حافَة الشيء، أي منقطَع جِرمه أو أغلظه: كَشفا الحُفْرة حيثُ منقَطَعُ جِرم الأرض الأعلى، وكحافة القمر والشمس الباقية بعد غياب جرمهما {وَكُنْتُمْ عَلَى شَفَا حُفْرَةٍ مِنَ النَّارِ فَأَنْقَذَكُمْ مِنْهَا} [آل عمران: 103] {أَفَمَنْ أَسَّسَ بُنْيَانَهُ عَلَى تَقْوَى مِنَ اللَّهِ وَرِضْوَانٍ خَيْرٌ أَمْ مَنْ أَسَّسَ بُنْيَانَهُ عَلَى شَفَا جُرُفٍ هَارٍ فَانْهَارَ بِهِ} [التوبة: 109]
 **شفي**: iyileşme / şifa
   - EtymArab: to restore to good health, to cure / to satisfy one
+  - Mekâyîs: (شَفِيَ) الشِّينُ وَالْفَاءُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى الْإِشْرَافِ عَلَى الشَّيْءِ ; يُقَالُ أَشَفَى عَلَى الشَّيْءِ إِذَا أَشْرَفَ عَلَيْهِ.
   - Cebel: يغبّر التركيب عن حافَة الشيء، أي منقطَع جِرمه أو أغلظه: كَشفا الحُفْرة حيثُ منقَطَعُ جِرم الأرض الأعلى، وكحافة القمر والشمس الباقية بعد غياب جرمهما {وَكُنْتُمْ عَلَى شَفَا حُفْرَةٍ مِنَ النَّارِ فَأَنْقَذَكُمْ مِنْهَا} [آل عمران: 103] {أَفَمَنْ أَسَّسَ بُنْيَانَهُ عَلَى تَقْوَى مِنَ اللَّهِ وَرِضْوَانٍ خَيْرٌ أَمْ مَنْ أَسَّسَ بُنْيَانَهُ عَلَى شَفَا جُرُفٍ هَارٍ فَانْهَارَ بِهِ} [التوبة: 109]
 **شقق**: yarmak / bölmek / şakk
   - EtymArab: ... / to split, cleave, slit, rent, rip / fissure, crack / to come forth / to effect disunion, act contrarily, dispute / hardship, difficulty, distress, to burden
@@ -2794,7 +2868,7 @@
   - Cebel: التعب البدنيّ المستدعِى لأقصى الطاقة مشيًا أو مصارعة ومغالبة بَدَنية، أو ترويضًا لذي قوة وعنف -كما في الاستعمالات التي ذكرناها
 **شكر**: nimeti tanıyıp teşekkür etmek / şükretmek
   - EtymArab: to become bountiful, (of camels) to be fattened on good pasture / to thank, to praise, to commend, gratitude, acknowledgement of favours / shoots growing on the base of a tree, to put forth branches
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: الِامْتِلَاءُ وَالْغُزْرُ فِي الشَّيْءِ.
+  - Mekâyîs: (شَكَرَ) الشِّينُ وَالْكَافُ وَالرَّاءُ أُصُولٌ أَرْبَعَةٌ مُتَبَايِنَةٌ بَعِيدَةُ الْقِيَاسِ.
   - Cebel: امتلاء جوف الشيء برخو طيب وظهورُه عليه ولو كان رافده قليلًا: كما تسمن الدابة بالعلف القليل، والضَرّة الشَكْرى باللبن، وكالشكير حَوْل الشجرة من أصلها، والخُوص حول السعف، والزغب والشعر الخفيف
 **شكس**: huysuz / kaba / kötü huy
   - EtymArab: ... / to be stubborn in disputing, be perverse, ill-natured, cross and quarrelsome
@@ -2805,7 +2879,7 @@
   - Cebel: انتظام (أكثر من) شيء معًا خَزقًا (1) ونفاذًا فيها بما يُشْبه جَمْعَها إلصاقًا -كما ينتظم الرمحُ والسهمُ أكثَر من شيء، وكما يدخل الشاكّ في درعه ومِغْفره، وكما تدخل عيدان الهودج بعضها في بعض، وكذلك حلقات الدرع بعضها في بعض، وكذلك المرأة في ثيابها
 **شكل**: biçim / şekil / benzerlik
   - EtymArab: ... / to bind / to shape, fashion, sculpt / to be similar, be homogeneous, likeness, resemblance, similitude
-  - Mekâyîs: وَمِمَّا شَذَّ عَنْ هَذَا الْأَصْلِ: شَاكِلُ الدَّابَّةِ وَشَاكِلَتُهُ، وَهُوَ مَا عَلَا الطِّفْطِفَةَ مِنْهُ.
+  - Mekâyîs: (شَكُِلَ) الشِّينُ وَالْكَافُ وَاللَّامُ مُعْظَمُ بَابِهِ الْمُمَاثَلَةُ.
   - Cebel: اجتماع شيئين مختلفين أو ارتباطهما معًا بتميز: كارتباط بعض القوائم إلى بعضها بشكل متميز (يدٌ مع رجل - لا يدان ولا رجلان)، والحمرة بالبياض أو السواد معًا وحزام المصدر بحزام الحقو)
 **شكو**: yakınmak / şikâyet
   - EtymArab: to grieve, to show, or reveal, one
@@ -2852,6 +2926,7 @@
   - Cebel: نفاذ الشيء مجتمعًا بحدّة إلى عمق خال: كهواء
 **شهو**: arzu / istek
   - EtymArab: ... / to desire, long for, lust after / to resemble
+  - Mekâyîs: (شَهَوَ) الشِّينُ وَالْهَاءُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّهْوَةُ.
   - Cebel: رغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]
 **شوب**: karışmak / karıştırmak
   - EtymArab: ... / (of drinks) to mix, mingle, adulterate / a trace / to avoid, stay away from / insincerity, guile, deceit
@@ -2863,6 +2938,7 @@
   - Cebel: استخراج ما يحتويه الشيء من طيب أو مناسب قوي الأثر
 **شوظ**: alev / nadir / yalnız
   - EtymArab: smokeless fire, a tongue of pure fire / ... / (this word, which occurs once in the Qur
+  - Mekâyîs: (شَوَظَ) الشِّينُ وَالْوَاوُ وَالظَّاءُ كَلِمَةٌ وَاحِدَةٌ صَحِيحَةٌ، فَالشُّوَاظُ: شُوَاظُ اللَّهَبِ مِنَ النَّارِ لَا دُخَانَ مَعَهُ.
   - Cebel: لهب نار ممتد معه أو ليس معه دخان
 **شوك**: diken / ihtişam
   - EtymArab: thorn, spike, point, to pierce, to prick / arms, armoury, power, force
@@ -2870,15 +2946,18 @@
   - Cebel: نفاذ دقيق حادٍّ في ما ناله: كالشوك والأنياب
 **شوي**: kavurmak / pişirmek
   - EtymArab: ... / to roast, scald, fry (meat), boil water / exterior of the scalp, or of skin in general, limbs, extremities
-  - Mekâyîs: قِيلَ لَهُ: نَحْنُ نُعَلِّلُ مَا يَقُولُهُ الْعَرَبُ حَتَّى نَرُدَّهُ إِلَى أَصْلٍ مُطَّرِدٍ مُتَّفَقٍ عَلَيْهِ، فَأَمَّا مَا سِوَى ذَلِكَ فَلَيْسَ لَنَا مَا نَفْعَلُهُ.
+  - Mekâyîs: (شَوِيَ) الشِّينُ وَالْوَاوُ وَالْيَاءُ يَدُلُّ عَلَى الْأَمْرِ الْهَيِّنِ.
 **شيء**: şey / nesne / bir şey / dilemek / irade
   - EtymArab: ... / to will, wish, desire, willing, wanting / thing, s.th., anything
+  - Mekâyîs: (شَيَأَ) الشِّينُ وَالْيَاءُ وَالْهَمْزَةُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: نتوء متميزٍ صُلْب في ظاهر الشيءِ: كأُبَن العُود تَنْشأ منه منتبرة على ظاهره صُلبة
 **شيب**: ihtiyarlık / ak saç / yaşlı
   - EtymArab: to become white-haired, greyness or whiteness of hair
+  - Mekâyîs: (شَيِبَ) الشِّينُ وَالْيَاءُ وَالْبَاءُ.
   - Cebel: تحول سواد شعر الرأس إلى بياض تأثرًا بضعف الشيخوخة
 **شيخ**: yaşlı / bilgin
   - EtymArab: ... / to become old, advance in years, an old or elderly man / to grow, grow up, grow old / old man, chief / to grow old
+  - Mekâyîs: (شَيَخَ) الشِّينُ وَالْيَاءُ وَالْخَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّيْخُ.
   - Cebel: في ضوء ما في تركيب (شخخ) يمكن أن يكون معنى هذا التركيب: جفاف البدن وذبول نضارته؛ لذهاب طَراءة الشباب وغَضاضته من أثنائه: كحال الشيخ {ثُمَّ لِتَكُونُوا شُيُوخًا} وليس في القرآن من هذا التركيب إلا (شيخ) و (شيوخ)
 **شيد**: sağlamca yapmak / sağlam yapı
   - EtymArab: ... / plaster, gypsum, to plaster (a wall) with gypsum or the like / to erect a building, or raise a building, high, tall constructions / to strengthen, acclaim, proclaim
@@ -2901,10 +2980,7 @@
   - Cebel: ضوء أو بياض ينتشر بقوة فيغلب ما يصادفه من ظلام أو سواد
 **صبر**: dayanmak / katlanmak / sabretmek
   - EtymArab: confinement, restraint, killing by detention / patience, endurance
-  - Mekâyîs: وَقَالَ:
-فَمَلَأْتُهَا عَلَقًا إِلَى أَصْبَارِهَا
-وَأَمَّا الْأَصْلُ الثَّالِثُ فَالصُّبْرَةُ مِنَ الْحِجَارَةِ: مَا اشْتَدَّ وَغَلُظَ، وَالْجَمْعُ: صِبَارٌ، وَفِي كِتَابِ ابْنِ دُرَيْدٍ: &quot; الصُّبَارَةُ: قِطْعَةٌ مِنْ حَدِيدٍ أَوْ حَجَرٍ &quot; فِي قَوْلِ الْأَعْشَى:
-مَنْ مُبْلِغٍ عَمْرًا بِأَنَّ الْ .
+  - Mekâyîs: (صَبَرَ) الصَّادُ وَالْبَاءُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ، الْأَوَّلُ الْحَبْسُ، وَالثَّانِي أَعَالِي الشَّيْءِ، وَالثَّالِثُ جِنْسٌ مِنَ الْحِجَارَةِ.
   - Cebel: تراكم الشيء أو تكدسه مع تزايده أو دوامه على حالته
 **صبع**: parmak / esbu
   - EtymArab: finger / toe / finger, toe, to point to / good influence
@@ -2931,10 +3007,11 @@
   - Cebel: دخول الشيء الحادّ في جِرْم الشيء الملتحم الرخو بشدة وحدة (1) كدخول المنقار في دَبَرة البعير
 **صخر**: kaya / taş / çöl
   - EtymArab: ... / (no verbal root) [generic noun occurring once] rock, rocks
+  - Mekâyîs: (صَخَرَ) الصَّادُ وَالْخَاءُ وَالرَّاءُ كَلِمَةٌ صَحِيحَةٌ، وَهِيَ الصَّخْرَةُ: الْحَجَرَةُ الْعَظِيمَةُ.
   - Cebel: صلابة بالغة مع جفافٍ وحدة خشونة (من نفاذ الطراءة من الشيء) كالصخر والخزف وهو ما عُمل من الطين وشُوى بالنار فصار فخّارًا (وشَيُّه بالنار يُذْهِب ماءه وطراءته) {وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ} [الفجر: 9] (صَدَعوه ونحتوا منه بيوتًا وخزانات مياه ونحو ذلك) ومنه (صخرة في [آية الرأس، وفي الكهف: 63])
 **صدد**: engel olmak / yüz çevirmek / engel
   - EtymArab: ... / (of a road) to take a side turn / to turn away from, to shun, to be averse to / to cause s.o. to turn away from, to go back, to reject / blockage, hindrance, aversion / clapping with the hands
-  - Mekâyîs: وَهَذِهِ الْكَلِمَاتُ الَّتِي ذَكَرْتُهَا فَلَيْسَتْ عِنْدِي أَصْلًا ; لِبُعْدِهَا عَنِ الْقِيَاسِ، وَإِنْ صَحَّتْ فَهِيَ مَحْمُولَةٌ عَلَى الْأَصْلِ.
+  - Mekâyîs: (صَدَّ) الصَّادُ وَالدَّالُ مُعْظَمُ بَابِهِ يَئُولُ إِلَى إِعْرَاضٍ وَعُدُولٍ.
   - Cebel: اعتراض بقَوِىٍّ أو كثيف يَرُدُّ المقبل أو يمنعه (1) كالجبل
 **صدر**: göğüs / hareket / çıkış
   - EtymArab: breast, front piece, that which fronts or faces one / initial part / to place in the front or on the highest place / to return, or go back / to issue forth, to proceed
@@ -2960,23 +3037,24 @@
   - Cebel: انكشاف الشيء وظهوره قويًّا واضحًا لخلوصه مما يغشاه كالصرح الموصوف لا تحجبه أبنية حوله لطوله في السماء، واللبن الذاهب الرغوة
 **صرخ**: bağırmak / feryat
   - EtymArab: to scream, shriek, to call for help, yell, loud cry
+  - Mekâyîs: (صَرَخَ) الصَّادُ وَالرَّاءُ وَالْخَاءُ أُصَيْلٌ يَدُلُّ عَلَى صَوْتٍ رَفِيعٍ.
   - Cebel: صياح حادّ نافذ كذلك الصوت الذي يكاد يخرق الأذن
 **صرر**: sıkıntı / zarar / gizli
   - EtymArab: ... / freezing cold, frost / (sound) screeching, grating, creaking / (of a buzzard) to cry / to tie up, to purse, to constrict / to persist / to be(come) narrow, restricted, distressed, to bind, tie
-  - Mekâyîs: وَالْأَصْلُ فِي هَذَا: الصِّرَارِ، وَهِيَ أَمَاكِنُ مُرْتَفِعَةٌ لَا يَكَادُ الْمَاءُ يَعْلُوهَا.
+  - Mekâyîs: (صَرَّ) الصَّادُ وَالرَّاءُ أُصُولٌ: الْأَوَّلُ قَوْلُهُمْ صَرَّ الدَّرَاهِمَ يَصُرُّهَا صَرًّا.
   - Cebel: تضامٌّ والتئامٌ أو تداخلٌ شديدٌ يمنع الانتشار (1)
 **صرصر**: şiddetli rüzgâr
   - EtymArab: ... / screeching, or creaking, sound of a cricket, cricket / to be vehemently noisy / to be extremely frosty
   - Cebel: تضامٌّ والتئامٌ أو تداخلٌ شديدٌ يمنع الانتشار (1)
 **صرط**: yol / doğru yol / sırat
-  - Mekâyîs: [وَأَمَّا الْمَنْحُوتُ] فَقَوْلُهُمْ (الصَّعْنَبُ) الصَّغِيرُ الرَّأْسِ، فَهَذَا مِمَّا زِيدَتْ فِيهِ الْبَاءُ، وَأَصْلُهُ الصَّادُ وَالْعَيْنُ وَالنُّونُ، وَقَدْ قُلْنَاهُ فِي الصِّعْوَنِّ، وَمَضَى تَفْسِيرُهُ.
+  - Mekâyîs: (صَرَطَ) الصَّادُ وَالرَّاءُ وَالطَّاءُ وَهُوَ مِنْ بَابِ الْإِبْدَالِ، وَقَدْ ذُكِرَ فِي السِّينِ، وَهُوَ الطَّرِيقُ.
 **صرع**: yere sermek / yıkmak
   - EtymArab: ... / to knock down, to wrestle / epilepsy
   - Mekâyîs: (صَرَعَ) الصَّادُ وَالرَّاءُ وَالْعَيْنُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى سُقُوطِ شَيْءٍ إِلَى الْأَرْضِ عَنْ مِرَاسِ اثْنَيْنِ، ثُمَّ يُحْمَلُ عَلَى ذَلِكَ وَيُشْتَقُّ مِنْهُ.
   - Cebel: تمدد الشيء إزاء شيء آخر أو تفرعًا منه (مع استرخاء أو ضعف) كالقوة من قُوَى الحبل، وجماعةِ الإبل إزاء الأخرى، والقضيب الساقط إزاء سائر القضبان
 **صرف**: çevirmek / harcamak / tasarruf
   - EtymArab: to divert the direction, to avert, to repel / to cause to turn, or to shift, from one state to another, to dissuade / to dismiss / to creak, to grate / to exchange / refined, silver / to refine
-  - Mekâyîs: وَمِمَّا أَحْسَبُهُ شَاذًّا عَنْ هَذَا الْأَصْلِ: الصَّرَفَانُ، وَهُوَ الرَّصَاصُ.
+  - Mekâyîs: (صَرَفَ) الصَّادُ وَالرَّاءُ وَالْفَاءُ مُعْظَمُ بَابِهِ يَدُلُّ عَلَى رَجْعِ الشَّيْءِ.
   - Cebel: تحول مع حدة
 **صرم**: kesmek / ayırmak
   - EtymArab: ... / to cut off, to sever, to separate, plucking off / to forsake / to pass away / the first and last parts of the night, the night / sharp, decisive
@@ -3010,8 +3088,7 @@
   - Cebel: شَدُّ أشياءَ ممتدة وضمُّها بعضِها إلى بعضِ بقوة
 **صفر**: sıfır / boşluk / sarı
   - EtymArab: to whistle (bird, person), hiss (snake), chirp, stridulate (cricket), scream (siren) / yellow / pale, pallid, wan / brass / jaundice / bile, gall / golden oriole ( zool. ) / empty, void, devoid (of), free (from) / zero, naught, nothing / empty-handed / Ṣafar, name of the second month of the Mohammedan year / sapphire (precious stone) / [ 1 ] whistle, to whistle, to utter a whistle-like sound / [ 2 ] to become yellow, (of plants) to wither away to the point of becoming yellow / [ 3 ] to become empty, void or vacant / emptiness / empty, void, vacant / zero / circle made around an emptiness / whistling, high tone / sound produced by blowing into a hollow (= empty) reed / colour of the face of s.o. who is hungry (= has an empty stomach), or has a certain disease (called ṣafar ) in the belly that renders the face yellow / (birds other than birds of prey) / bird / sparrow / (kind of small) bird / bronze / yellowness / yellow, pale / early morning, daybreak, dawn / sumach / yellow metal: copper, bronze / paleness / fading colour, emptiness of colour / yellow-green / leaf / ash-colored / voidness, emptiness / morning / copper, brass / gold / bronze, copper (?) / a bird, probably the sparrow / pájaro / bird, fowl / bird, winged creature / special bird, sparrow / fowl, bird / fowl, esp. a small bird / small bird, sparrow / small bird / espèce de petit oiseau de la famille des passereaux / tout oiseau qui n / sandpiper / oiseau / pale, yellow / (color) flavus, fulvus / copper / brass, yellow, green / copper, brass, gold / guinea fowl / passerau / tout petit oiseau / sauterelle / leer sein / (1) zero, (2) digit / empty / to be(come) empty, vacant / hence: cipher, dot / Safar
-  - Mekâyîs: (صَفَرَ) الصَّادُ وَالْفَاءُ وَالرَّاءُ سِتَّةُ أَوْجُهٍ:
-فَالْأَصْلُ الْأَوَّلُ: لَوْنٌ مِنَ الْأَلْوَانِ.
+  - Mekâyîs: (صَفَرَ) الصَّادُ وَالْفَاءُ وَالرَّاءُ سِتَّةُ أَوْجُهٍ: فَالْأَصْلُ الْأَوَّلُ: لَوْنٌ مِنَ الْأَلْوَانِ.
   - Cebel: خلو باطن الشيء
 **صفصف**: düz / geniş çöl
   - EtymArab: ... / to be empty, deserted or vacant / a level tract of land with no herbage or water
@@ -3074,6 +3151,7 @@
   - Cebel: جَمْع أو تحصيل في هيأة جديدة (أو تعظيم نَفْسِ الهيأة) بتدبير واحتيال أو إحكام
 **صنم**: put / heykel
   - EtymArab: idol, to shape or form or picture an idol for worship
+  - Mekâyîs: (صَنَمَ) الصَّادُ وَالنُّونُ وَالْمِيمُ كَلِمَةٌ وَاحِدَةٌ لَا فَرْعَ لَهَا، وَهِيَ الصَّنَمُ.
   - Cebel: جمع الشيء أو أخذه أمورًا دقاقًا أو خفية -مع استواء الظاهر- كقصبة الريش حولها جناحان من الشعر، وكاللبن الموصوف تمتد منه رائحته الخبيثة ويذاق فيه طعمه الخبيث وهما خفيان، والظاهر مستو
 **صنو**: kardeş / benzeri / aynı kökten
   - EtymArab: one of two, twin brother / ashes / to be stained with ashes ( ṣan an ) (cook) (se dit d / peer, equal, similar to / a full brother / two saplings growing together from the root of one tree / two / forming a group of two (or more: trees, mountains, people, …), resembling each other, belonging together, not standing alone / potash / saltwort / to be stained with ashes ( ṣan an ) (said of a cook who touches the cooking-pot) / to wash one
@@ -3092,6 +3170,7 @@
   - Cebel: امتداد الشيء قويًّا مستقيمًا لصدوره بضغط أو وقوع ضفط عليه -كما تفعل المطرقة في الحديد والذهب: مَمُدُّه شَريحةَ دقيقة السُمك مستقيمة، وذلك قبل تشكيله
 **صور**: boru / biçim
   - EtymArab: to cause to incline or lean towards, to incline to / to shape, form, fashion, to represent / sculpture, picture / to imagine, conceive / to cut into pieces / to disperse / to prepare / trumpet / side of the neck / bank of a river / neck
+  - Mekâyîs: (صَوَرَ) الصَّادُ وَالْوَاوُ وَالرَّاءُ كَلِمَاتٌ كَثِيرَةٌ مُتَبَايِنَةُ الْأُصُولِ.
   - Cebel: حدودٌ تبين هيئة الشيء بالانعطاف عليه وضمه وتمييزه عن غيره كشطّي النهر وكجانبي الفم
 **صوع**: ölçü kabı / kap
   - EtymArab: ... / to gather together, collect / to measure, estimate, a dry measure / to drive / to prepare / to dry up / to disperse
@@ -3125,6 +3204,7 @@
   - Cebel: عدول الشيء عن الوجه المفترض جريانه عليه اطرادًا -أي تحوله عن ذلك الوجه
 **ضءن**: koyun / koyun sürüsü
   - EtymArab: ... / sheep, to have plenty of sheep / weak, spineless male
+  - Mekâyîs: (ضَأَنَ) الضَّادُ وَالْهَمْزَةُ وَالنُّونُ أُصَيْلٌ صَحِيحٌ، وَهُوَ بَعْضُ الْأَنْعَامِ.
   - Cebel: تكاثف رخو يمتد في باطن الشيء: كالضأن حيث تشتهر بكثرة الشحم في أبدانها {مِنَ الضَّأْنِ اثْنَيْنِ} وكتلك الرملة البيضاء العريضة التي يُشبه بياضها الشحم
 **ضبح**: nefes almak / hayvanların soluğu
   - EtymArab: ... / cinder, ashes, lightly roasted meat, to scorch / calls of foxes, owls and rabbits, panting of horses as they run
@@ -3136,18 +3216,20 @@
   - Cebel: استلقاء أو انطراح بثقل (يُريح)
 **ضحك**: gülmek / gülen
   - EtymArab: ... / laughing matter, object of scorn / to laugh, ridicule, jeer / (of the earth) to bring forth plants and flowers / to laugh
+  - Mekâyîs: (ضَحِكَ) الضَّادُ وَالْحَاءُ وَالْكَافُ قَرِيبٌ مِنَ الْبَابِ الَّذِي قَبْلَهُ، وَهُوَ دَلِيلُ الِانْكِشَافِ وَالْبُرُوزِ.
   - Cebel: بروز الشيء أبيض واضحًا من بين ما يكتنفه ملتئمًا عليه: كالطريق الواضح يبرز قويًّا من بين ما حوله، وكالأسنان من بين الشفتين، وكالعسل الأبيض في بيته، والحجر الأبيض من الجبل، والطلْع والنور من النخل والنبات (والبياض والبريق قويّا الوقع على الحسّ)
 **ضحو**: kuşluk vakti
   - EtymArab: ... / the breaking of day, daylight, the brief time of mid-morning, to enter at the time of mid-morning, to expose o.s. to the sun / to appear, to appear conspicuously / suburb and surroundings / sacrificial animal, to sacrifice / to be(come) bright, dazzling
 **ضدد**: zıt / karşıt
   - EtymArab: ... / opposition, adversary, to oppose / peer / to meet one
+  - Mekâyîs: (ضَدَّ) الضَّادُ وَالدَّالُ كَلِمَتَانِ مُتَبَايِنَتَانِ فِي الْقِيَاسِ.
   - Cebel: امتلاء جوف الشيء أشدّ امتلاء (1) -كما وُصِفَ
 **ضرب**: vurmak / misal vermek / örnek
   - Mekâyîs: (ضَرَبَ) الضَّادُ وَالرَّاءُ وَالْبَاءُ أَصْلٌ وَاحِدٌ، ثُمَّ يُسْتَعَارُ وَيُحْمَلُ عَلَيْهِ.
   - Cebel: غلظ يخالط الشيء الرخو أو يداخله مداخلة قوية (فيتماسك أو يشتد): كالجليد والعسل الموصوف، وكالشجر في الوادي (الذي يشغل عادة بالعشب والحشيش - وهذه هشاشة) وكدَرْج الصوف وشَدّه
 **ضرر**: zarar / zor durum
   - EtymArab: to do harm, damage, hurt, cause a loss, bring pressure to bear / to force, compel / necessity, need, constraint / second wife / udder / blind / affliction, shortage of money, having no children / blindness / to harm, to impair, to disadvantage / to compel / to afflict one / hostility, rivalry / causing harm / rival-wife / being compelled / being forced / emergency / necessity, constraint / to bind, tie up, restrict / to be hostile / foe / to hurt, afflict / enemy / to shew hostility toward, vex / adversary, foe / to strike / to wage war / war / Feldzug / to become an enemy, be hostile, stir up trouble, start a fight\war / to quarrel, be enemies ḍrr , Tña ṣär , Amh ṭäro ‘enemy / to bind, tie up, be restricted, narrow, scant, cramped / to bind, tie up / (adj.) narrow, tight / (n.) straits, distress / bundle, parcel, pouch, bag / vexer, rival-wife / to make [a woman] a rival-wife / hostility, rivalry, etc. / hostility, rivalry, causing harm, injury / Protestant / enemy of Mary
-  - Mekâyîs: وَأَمَّا الْأَصْلُ الثَّانِي فَضَرَّةُ الضَّرْعِ: لَحْمَتُهُ.
+  - Mekâyîs: (ضَرَّ) الضَّادُ وَالرَّاءُ ثَلَاثَةُ أُصُولٍ: الْأَوَّلُ خِلَافَ النَّفْعِ، وَالثَّانِي: اجْتِمَاعُ الشَّيْءِ، وَالثَّالِثُ الْقُوَّةُ.
   - Cebel: زَحْمٌ ودفع للمتلئ برخو (1): يلزمه التضييق أو النقص
 **ضرع**: boyun eğmek / alçakgönüllülük
   - EtymArab: ... / udder, teat, stream of milk from an udder / to worship, humble o.s., call for help / similarity, to be similar, to approach / the present time
@@ -3196,6 +3278,7 @@
   - Cebel: أشعةٌ تنفُذ من شيء وتنتشرُ فتزيلُ كثافة الظلام والإعتام
 **ضير**: zarar / ziyan
   - EtymArab: ... / to harm, injure / to inconvenience
+  - Mekâyîs: (ضَيَرَ) الضَّادُ وَالْيَاءُ وَالرَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ مِنَ الضَّيْرِ وَالْمَضَرَّةِ.
   - Cebel: فرغ جوف الشيء الغَضّ: كجوع الأحياء المذكورة وغيرها ويلزمُه النقص وصغر الجرم
 **ضيز**: haksızlık / eşitsizlik
   - EtymArab: ... / deviation, to be twisted, to be crooked / unfairness, to be unjust
@@ -3209,6 +3292,7 @@
   - Mekâyîs: (ضَيَفَ) الضَّادُ وَالْيَاءُ وَالْفَاءُ أَصْلٌ وَاحِدٌ صَحِيحٌ، يَدُلُّ عَلَى مَيْلِ الشَّيْءِ إِلَى الشَّيْءِ.
 **ضيق**: dar / sıkıntı
   - EtymArab: ... / to be narrow, cramped, confined, straitened, be anguished, poverty / to be in poverty
+  - Mekâyîs: (ضَيَقَ) الضَّادُ وَالْيَاءُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى خِلَافِ السَّعَةِ، وَذَلِكَ هُوَ الضِّيقُ وَالضَِّيقَةُ: الْفَقْرُ.
   - Cebel: نقصُ فراغ الحيز من تضّام جوانبِ محيطِه أي تقاربها بعضها إلى بعض (1): كما في ضيق الدار والثوب والمكان على ما فيهن
 **طبع**: yaratılış / huy / basmak
   - EtymArab: seal, stamp / to (leave an) imprint, impress / (to be) dirty, rusted / to stain, soil / rust, dirtiness / dirty, rusty / vicious / filthy, greasy / 1 to slap the back of the neck with the whole palm / 2 to impress shapes in the mud, fashion articles out of mud or iron, etc. / 3 to seal / to sink / to (leave an) imprint, seal, mould / signet ring, seal / s / avancer, pousser, bourrer / être sale / crasseux / boue / sale / faire une empreinte, imprimer / forger, fabriquer / monnayage / cachet, empreinte / forme, façon, moule / bague à cachet, anneau / naturel, caractère / caractère, habitude, coutume / marque au fer rouge / manières / nature, essence / brique / boire à la source, boire trop / être prêt, résolu, déterminé, dur / être fier / cruel / multicolore, bigarré / signet-ring, seal / signet-ring / to seal / finger
@@ -3236,7 +3320,7 @@
   - Cebel: النهاية أو التجرد للشيء الممتد مع دقته
 **طرق**: yol / vurmak
   - EtymArab: ... / road, way, method / to strike, knock, to divine (by knocking stones or shells together) / to arrive at night / to happen / mating of cattle
-  - Mekâyîs: وَذُكِرَ أَنَّ ذَلِكَ يُقَالُ بِالنَّهَارِ أَيْضًا، وَالْأَصْلُ اللَّيْلُ.
+  - Mekâyîs: (طَرَقَ) الطَّاءُ وَالرَّاءُ وَالْقَافُ أَرْبَعَةُ أُصُولٍ، أَحَدُهَا: الْإِتْيَانُ مَسَاءً، وَالثَّانِي: الضَّرْبُ، وَالثَّالِثُ: جِنْسٌ مِنِ اسْتِرْخَاءِ الشَّيْءِ، وَالرَّابِعُ: خَصْفُ شَيْءٍ عَلَى شَيْءٍ.
   - Cebel: امتداد الشيء الغض الأثناء طولًا بقوة داخلية أو ضغط خارجي: كالنخلة وطرائق اللحم والشحم والسبيل والنسيجة والصَنِفَة (الطُرّة) والحاشية والرمل والخط المذكورات: الطريق بضغط الوطء المستمر الذي يكوّنه، وما بين السكتين بالحَصْر، وكالنسيجة الموصوفة والملزق
 **طرو**: yeni / taze
   - EtymArab: to be or become fresh, succulent, moist, tender, soft, mild ↗ ṭaruwa / ṭariya ▪ ṬRW/Y_2 ‘to praise (highly), extol, laud, lavish praise (on s.o.) / vermicelli / to come, arrive from afar / to run up to / to come, pass near ( ʔilà ) / to have the belly swollen, suffer from indigestion / être surnaturel | spiritual being / création, créature qui par leur nombre immense échappent le calcul | numberless | the sorts of created things whereof the number cannot be reckoned / all that is on the face of the Earth, all of creation / to come from far away / to be soft, tender, fresh, succulent / to praise / to be fresh, raw / to be fresh / to freshen up (by seasoning), add spices, etc. / id. / in Öl gebackene Pfannekuchen aus Mehl und Honig (Gemoll1965) | name of a cake, made from sesame and honey (usually pl. / Beekes2016) / to mention, remind / to remember / to arrive / supernatural\spiritual being / innumerable created things / frais, récent / être frais, nouveau / être mouillé, humide, frais / frais / cru, frais / cru / cru, non mûr, graine / grain, viande fraîche / venir, arriver / donner, négocier / don / acquérir, posséder / amasser de l / biens, possessions / mentionner, rappeler / se rappeler / fait de mentionner qn, de parler de lui / toit, plafond / fresh food / fresh / recens / fresh, juicy, moist / raw, crude / raw, fresh / raw / to get wet, damp / to be damp, fresh / to give, negotiate / gift / to possess, make possession, purchase, obtain, acquire / to acquire, gain possession / wealth, possession / to amass money / accumulation of property / to be wealthy / to extract, press out liquid / to ooze / moist earth
@@ -3255,9 +3339,11 @@
   - Cebel: خُمُودُ النار بانقطاع ما يَخْرج منها من لهب وحرارة {كُلَّمَا أَوْقَدُوا نَارًا لِلْحَرْبِ أَطْفَأَهَا اللَّهُ} [المائدة: 64]
 **طفف**: eksik tartmak / hile
   - EtymArab: ... / a small measure, trivial matter / to be deficient / to be miserly / to become near, become due
+  - Mekâyîs: (طَفَّ) الطَّاءُ وَالْفَاءُ يَدُلُّ عَلَى قِلَّةِ الشَّيْءِ.
   - Cebel: زيادة محدودة القدْر ارتفاعية أو امتدادية جانبية يصل بها الشيء إلى كماله ونهايته (1): كأصبار المكيال (وهي ما زاد فوقه بعد مسح
 **طفق**: başlamak / yapmaya koyulmak
   - EtymArab: ... / to imitate / to commence, continue doing s.th. / to seize
+  - Mekâyîs: (طَفِقَ) الطَّاءُ وَالْفَاءُ وَالْقَافُ كَلِمَةٌ صَحِيحَةٌ.
 **طفل**: çocuk / çocukluk
   - EtymArab: infant, baby, child / tender, soft / clay, argil, loam / uninvited guest, intruder, sponger, hanger-on, parasite / time before sunset / to be about to rise or set (sun) / 1 infant, baby, child, the young of animals in general / 2 to be of a tender age, be tender, soft / 3 to be with child / 4 (of the sun) to be about to rise or set / to scorn, treat scornfully, with disrespect / dirt, soil, mud, dust / softness, tenderness, smoothness / soil, mud, dust / to treat scornfully / insulter, mépriser, traiter sans respect, insulter / enduire de / frotter de / salir / être endommagé par la poussière (plante) / argile, boue / cavité / enfants / enfants en bas âge / être pique-assiette / pique-assiette‘. ▪ ṬFL_1 ṭifl ‘infant, baby, child / the tiny, soft, tender one / the soft thing / soft / dry mud / to be(come) soiled by dust (herbage, plant) / turbid water remaining in a watering-trough, in the bottom of a tank / spit, spittle, saliva / ill-smelling, malodorous / fibrous vegetable sediment, dregs / dregs, lees, sediment / uninvited guest, parasite / time before sunset or sunrise / period of the soft light / intrusion / 1 to intrude at a feast / 2 to come on (night) / to be near setting (sun)
   - Mekâyîs: (طَفَلَ) الطَّاءُ وَالْفَاءُ وَاللَّامُ أَصْلٌ صَحِيحٌ مُطَّرِدٌ، ثُمَّ يُقَاسُ عَلَيْهِ، وَالْأَصْلُ: الْمَوْلُودُ الصَّغِيرُ ; يُقَالُ: هُوَ طِفْلٌ، وَالْأُنْثَى طِفْلَةٌ.
@@ -3280,6 +3366,7 @@
   - Cebel: تسيب ما كان محبوسًا في حوزة (أو جوف) مندفعًا منها بقوة ابتعادًا أو انبساطًا
 **طلل**: kalıntı / harabe / yükseklik
   - EtymArab: ... / (King) Saul / drizzle, dew / to moisten, to sprinkle / to come into view, to look down upon / good living / ruins
+  - Mekâyîs: (طَلَّ) الطَّاءُ وَاللَّامُ يَدُلُّ عَلَى أُصُولٍ ثَلَاثَةٍ: أَحَدُهَا: غَضَاضَةُ الشَّيْءِ وَغَضَارَتُهُ، وَالْآخَرُ: الْإِشْرَافُ، وَالثَّالِثُ: إِبْطَالُ الشَّيْءِ.
   - Cebel: إشراف الشيء مع لطف وملازمة أو امتداد لمخالطة ما هو دونه (1) كالطّل (من أعلى وينزل فيرسخ) {فَإِنْ لَمْ يُصِبْهَا وَابِلٌ فَطَلٌّ}،
 **طمءن**: sükûnet / yatışmak
   - EtymArab: lowland / to calm, to soothe, to rest, to be peacefully quiet, tranquillity / to stoop
@@ -3340,6 +3427,7 @@
   - Cebel: انتشار الشيء من مقره مرتفعًا في الهواء بخفة بالغة إلى غير محدد
 **طين**: çamur / toprak
   - EtymArab: clay, argil / soil / mud / slime / (pl.) farm lands, fields, estates / Linula viscosa (bot.) / mud, clay, to be muddy, to coat with mud / nature, disposition / specific character / clay, mud / glaise, argile, boue / enduire de boue / s / selle, charge, fardeau / to be filled with sand / clay, mud, etc.
+  - Mekâyîs: (طَيَنَ) الطَّاءُ وَالْيَاءُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الطِّينُ، وَهُوَ مَعْرُوفٌ.
   - Cebel: الطين/ تراب يخالط أثناءَه ماءٌ أو نَدًى فيجعله كتلة لينة تتلاصق وتتماسك
 **ظعن**: göç etmek / yolculuk
   - EtymArab: to move away, leave, depart / to leave, depart, migrate, move around in search of pasture / camel litters in which women travel, howdaj / women travelling in the company of men / loading (an animal), decamping, hitting the road, etc. / charger / plier une tente / porter, charger / charge / charger, porter / porter / chargé (chameau) / se mettre en route, partir / faire route / se déplacer, changer de position, décamper / se disperser, gagner une nouvelle résidence / se mettre en route / charger une bête de somme
@@ -3362,9 +3450,7 @@
   - Cebel: ذهاب الرطوبة والندى من باطن الشيء واضطمامه على هذا الجفاف (1)
 **ظنن**: sanmak / tahmin etmek
   - EtymArab: ... / assumption, supposition, conjecture, guessing / opinion, belief, to realise, to know / doubt, to have a low opinion of, to think ill of, to be suspicious, to accuse. Contexts in which derivatives of this root occur vary greatly as regards the degree of doubt/certainty associated with them, and therefore cause interpretational problems
-  - Mekâyîs: قَالَ النَّابِغَةُ:
-فَإِنَّ مَظِنَّةَ الْجَهْلِ الشَّبَابُ
-وَالْأَصْلُ الْآخَرُ: الشَّكُّ، يُقَالُ: ظَنَنْتُ الشَّيْءَ، إِذَا لَمْ تَتَيَقَّنْهُ، وَمِنْ ذَلِكَ الظِّنَّةُ: التُّهْمَةَ.
+  - Mekâyîs: (ظَنَّ) الظَّاءُ وَالنُّونُ أُصَيْلٌ صَحِيحٌ يَدُلُّ عَلَى مَعْنَيَيْنِ مُخْتَلِفَيْنِ: يَقِينٍ وَشَكٍّ.
   - Cebel: توقع وجود شي مهم (في باطنٍ) لأمارة قوية على
 **ظهر**: görünmek / sırt / zâhir / zahir
   - EtymArab: back, rear part / upper part, top / to endorse, support, help, assist / noon, midday / to appear, seem, become visible, evident / cast iron / Dhahran / back, rear / backer, to back up / to neglect, to turn one / dos / dos, dessus, steppe / dos, sommet / toit / dos, dessus, surface d / sur le dos de, sur / dos, dos de chameau / sur / servir d / porter / entretenir, pourvoir aux besoins de ses parents / porter sur le dos ou sur la tête, pourvoir au besoins de qn (particulièrement de ses parents) / midi / paraître, apparaître / manifester, rendre évident, divulguer / proclamer, témoigner hautement / annonce publique, proclamation / attester, certifier / document, acte / apparaître
@@ -3388,8 +3474,7 @@
   - Cebel: انتقال أو انتشار من حَيِّز إلى آخر (مقابله) بقوة ولطف
 **عبس**: kaşlarını çatmak / asık yüz
   - EtymArab: ... / dung, to be soiled, to be dismal / to frown, to look stern, to be austere
-  - Mekâyîs: (عَبَسَ) الْعَيْنُ وَالْبَاءُ وَالسِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَكَرُّهٍ
-فِي شَيْءٍ.
+  - Mekâyîs: (عَبَسَ) الْعَيْنُ وَالْبَاءُ وَالسِّينُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَكَرُّهٍ فِي شَيْءٍ.
   - Cebel: جهامة في الوجه تملأ النفْس وحشة كوجه الأسد
 **عبقر**: güzel / üstün / büyük
   - EtymArab: (a kind of) rich carpet / ... / This root is said to originate from the word ʕAbqar, the name of the place which the ancient Arabs believed to be the home of the wondrous jinn. It is said also to be a name of a town, either in the Yemen or in al-Ǧazīra, where cloth of great beauty is made. Some scholars, however, suggest that the word came into Ar from Pers long before the revelation of the Qur / genius, talent, poetical inspiration, rich floral types of carpet
@@ -3439,6 +3524,7 @@
   - Cebel: سَبْق بتحصيل الشيء قبل وقته - كالمقصود بتلك العجاجيل ومثلها "الإِعْجَالة: ما يُعَجِّله الراعي من اللبن قَبْل الحلب "
 **عجم**: yabancı / Arap olmayan / konuşamayan
   - EtymArab: stone, kernel, pit, pip, seed (of fruit) / to try, test, put to the test / to provide (a letter) with a diacriticaI point (with diacritical points) / dotted, provided with diacritical points / dictionary, lexicon / dumb, speechless / speaking incorrect Arabic, barbarian, non-Arab, foreigner, alien / Persian / (dumb) beast / barbarians, non-Arabs / Persians / young camels (up to a certain age) / camels that bite, or chew, the [trees called] ʕiḍāh and the tragacanths and [other] thorny trees, and satisfy themselves therewith so as to be in no need of [plants called] ḥamḍ / hard rocks protruding (lit. growing forth) in a valley / such as is accumulated, or congested, of sand, or abundance thereof, sand rising above what is around it, or the last portion of sand / tract of sand without trees / root\base of the tail / large bat, or swallow / locked / fruit stones (particularly those of dates), seed, solid / to test by biting on / to be dumb / beast / those who cannot speak Arabic, obscurity / to bite on s.th. hard (a stone, kernel, etc.) to test its quality / to put to the test / s.th. protruding, making it discernible from the surrounding / camels biting\chewing (certain types of thorny trees) / to provide (a letter) with diacritical points / to provide (s.th., e.g., letters) with little “stones” or other “protruding” elements to make it discernable from others, or from the surrounding / speaking incorrect Arabic / barbarian, non-Arab, foreigner, alien / babbling / non-Greek > barbaric / dumbness, muteness / to be angry, grieved, vexed / mute / narrow pass\passageway / virgin / to block, dam / dumbness, speechlessness / (diacritical) dotting, making distinguishable / camels that bite\chew (certain types of) thorny trees / to bite on s.th. hard (to test it) / dumbness / distinguishable, discernable / sand rising above what is around it / s.th. protruding / the (very) mute one, the mute “bird” / to be angry ( CAD ), grieved, vexed / to groan, moan / to be grieved, sad, gloomy, depressed / to be grieved, sad, sorry / grief, sadness, sorrow / to be sad / to be grieved / narrow passageway / to be mute / narrow pass / quick snake / to block, be mute / to be angry, grieved, sad / to be locked, be mute, dumb / to stammer / tartamudear / stammering / stammerer / to be dumb, have impaired or stammering speech / dumb, tongue-tied, stammered / tout barbare / non arabe, qui ne pas musulman / rustique dans ses manières / non-Arabs, esp. Persians
+  - Mekâyîs: (عَجَمَ) الْعَيْنُ وَالْجِيمُ وَالْمِيمُ ثَلَاثَةُ أُصُولٍ: أَحَدُهَا يَدُلُّ عَلَى سُكُوتٍ وَصَمْتٍ، وَالْآخَرُ عَلَى صَلَابَةٍ وَشِدَّةٍ، وَالْآخَرُ عَلَى عَضٍّ وَمَذَاقَةٍ.
   - Cebel: امتساك الشيء في ذاته -أو بين غيره- متداخلًا منضغطًا شديدًا
 **عدد**: sayı / sayılma
   - EtymArab: ... / gear / group, number, to count, to number, to reckon, to enumerate, an appointed time / plenty of / to be reckoned with / to get ready, readiness
@@ -3446,6 +3532,7 @@
   - Cebel: توالي جنس الشيء متصلًا (منضبطًا) فيكثر (1) كما في الماء العدّ
 **عدس**: mercimek
   - EtymArab: ... / a cry used in urging on a mule, to walk with vigour, to travel far and wide / lentils
+  - Mekâyîs: (عَدَسَ) الْعَيْنُ وَالدَّالُ وَالسِّينُ لَيْسَ فِيهِ مِنَ اللُّغَةِ شَيْءٌ، لَكِنَّهُمْ يُسَمُّونَ الْحَبَّ الْمَعْرُوفَ عَدَسًا.
   - Cebel: احتواء الأثناء على دقاق صُلبة: كحبوب العدس دقيقة وصلبة في غُلُفِها، وكالبثر في البدن وهو دقيق، ولكن له أثر في البدن قاتل
 **عدل**: adalet / eşit olmak
   - EtymArab: one side of a camel litter / to be equal to, justice, to be straight, to be upright, to be temperate, the happy medium, to be of impeccable character / to change one
@@ -3465,21 +3552,22 @@
   - Cebel: نفاذ كثافةِ الشيء أو حِدَّتِه المُنْبَثَّة فيه إلى ظاهره أو طرفه (ويلزم ذلك أن يخلو من تلك الكثافة أو الحدة)
 **عذر**: bahane / mazeret
   - EtymArab: ... / courtyard / a refuse dump / faeces / to cleanse / to excuse, justification / to forgive / virginity, modesty / hair growing on the cheeks / to become difficult / landmark / to help / God (is) my help / help / God / God has helped / he has helped / to help ( ʔel ‘God / his help (is) Baal / his help / his / Baal
+  - Mekâyîs: (عَذَرَ) الْعَيْنُ وَالذَّالُ وَالرَّاءُ بِنَاءٌ صَحِيحٌ لَهُ فُرُوعٌ كَثِيرَةٌ، مَا جَعَلَ اللَّهُ - تَعَالَى - فِيهِ وَجْهَ قِيَاسٍ بَتَّةَ، بَلْ كُلُّ كَلِمَةٍ مِنْهَا عَلَى نَحْوِهَا وَجِهَتِهَا مُفْرَدَةٌ.
   - Cebel: اعتراض ما يحول دون المعتاد من نفاذٍ (أو سير أو رؤية إلخ) كالعذار بمعانيه، وجانبا اللحية يعرضان بعد مرحلة كون الفتى أمرد، فيحجبان بَشَرة الخدين أي يغطيانها
 **عرب**: Arap / cümle yapısı
   - EtymArab: Arab(ic) / (D-stem) to make Arabic, Arabicize, translate into Arabic / (*Š-stem) to use desinential inflection / to express / to give earnest money, make a down payment / godfather, sponsor / swift river / carriage, wagon, cart, coach / abundance (of water) / (well, river) containing/yielding much water, abundance of water / soul, mind / (a sort of) lizard / loving, pleasing, of matching age / matrimonium iniit cum femina ʕarūb appellata / être bon pour / (an old, pre-Isl name for) Friday / ¹to incite with lust, arouse (a partner / to have sex / [F] appetivit marem (vacca), [L] to desire the bull (said of a cow) / foul speech, obscene talk / to eat (much), devour / être glouton, grand mangeur / dévorateur, qui dévore, qui a la fringale / bad, corrupt, disordered (stomach) / to be(come) disordered (stomach) / to become disordered in the stomach by indegestion (s.o.) / to become swollen and purulent, break up again after it had healed (wound) / [L] to become swollen and purulent (a camel / inguinal region, groin / turgor of lymph node / aîne / bubon / (to be/make) clear, limpid, clean (water, a palmtree, a horse / abundant water, such as is clear, or limpid / to prune (a palm-tree) / to make an incision in the bottom of the horse / to scarify (a horse) (to make clear that it is a good horse) / [F] puram et a vitiis immunem protulit ( loquelam ) [= overlapping with ʕRB_1 in ↗ ʔiʕrāb ] / to reproach, upbraid s.o. [i.e., point out clearly the faults in s.o. / distinctam, manifestam effecit ( rem ) / noble horse / nobilitas generis (in equis) / boum species glabra / Arabic / Arabici nobilesque equi / Arabica et vitiis immunis fuit ( loquela ), † (ʕarab) ʕaribaẗ / -āt / ʕāribaẗ ‘[F] (Arabum) gens pura / [L] the pure, or genuine Arabs / white/excellent (barley) / dried buhmà plant / ordre, arrangement, convenance, résultat / 1 quarter tone / 2 device for adjusting the tone of the strings of the ↗ qānūn ( mus. ) / fruit of the ḫazam tree / bag with which the udder of a sheep, or goat, is covered / one who makes ʕarābāt / (a name of) The Seventh Heaven / tetragonal stones / somebody / the Arabah / 1 [≙ ʕRB_1] the Arabs, the Ar language / 2 [≙ ʕRB_2] to speak out, express one / west / to set (sun) / willow / rush, reed / raven, craw / carriage, cart / dried buhmà plant (a species of barley-grass) / quarter tone / device for adjusting the tone of the strings of the qānūn / to enter / to enter, enter in the presence (of a god, king, etc.), come in (said of taxes), come (said of months), invade, penetrate / to return, arrive, come, go home / to penetrate / to enter, go in / dto. / to penetrate, copulate, have sex / “enter” a woman / those who have entered [, sc. ] into the service of a divinity and remain his slaves or his property / to set, go down (sun), evening , west / sunset / to become evening / to get dark / (sun)set, evening / to set, go down / to set / place of sunset, west / Friday / the eve, day of preparation, esp. the eve of the Sabbath, Friday / evening / day of Venus / sunset, evening, west / affection / to enter > to set > setting sun > evening > evening star, Venus > like Venus / pledge , to step in , stand surety or bail for, give guarantee \ earnest money / to enter, stand surety or bail for, guarantee / stepping in for s.o. / to mix / to step in for s.o., stand surety or bail for s.o., give (o.s. or s.th.) as guarantee, in pledge, etc. / to take on pledge, give in pledge, go surety for / to barter, exchange / pledge, security / guarantor, surety / pledge / to vouch for, go surety for / bondsman, surety / to promise solemnly, be surety, give security, pledge o.s. / (with b- , l- , ʕal- ) esp. to stand sponsor (at baptism) / surety sponsor, god-parent / security, bail / godfather / suretyship / pledge, surety / to give earnest money / give guarantee, stand surety\bail for / to give in pledge / to offer as sacrifice / thing exchanged, pledge, token / pledge, token / those who have entered into the service of a divinity and remain his slaves or his property / mixture > confusion / mixture, confusion / the mixed people / riffraff / vehemence / mixture / to mix, mingle / to mix up, confound, disturb / mingling, suit of followers / mixture, mixed company / swarm (non-Israelites / foreign parts of the Egyptian population, the ethnic melting pot of Babel, foreigners in the land of Juda / swarm of wild bees or flies—the forth plague of Egypt / swarm of vermin and insect / mixed multitude, riff-raff, rabble / confusion (of words) / harmful animals / locust / woof / mixed, interwoven, with warp / to cause to whirl / to confuse / mixing machine / whirlpool, vortex, eddy / mixer (of concrete) / to sift / sieve, to sift / stepping in / vehemence (passion, vitality, agility, outburst, expression, excess, abundance, abundance of passion, exuberance, affection) / corrupt, disordered / swelling / become swollen and purulent / break up again / leaving a scar / lymphoma, turgor of lymph node / loving, pleasing / Venus / the Affectionate, Loving / Deity of the Evening Star / to set, go down † ʕarūb ‘loving, pleasing / to incite with lust, arouse (a partner / expression / clarity , purity / nobility / vehemence > abundance > abundance of water > abundance of clear water > clear water > clear / abundance / clear, pure / clarity, purity / [F] Multa aqua pura / [BK] grande quantité d / to make clear, limpid, clean / to make an incision in the bottom of the horse, to scarify (a horse) [to make clear that it is a good one] / to express clearly / to speak correctly, without mistakes / purity / purity of race / noble Arabian (horses) / genuine / white/excellent / kind of vermin, worm / sauterelle / foule, essaim / (kind of) lizard / swarm / pleasant, sweet / pleasing / to be well mixed, be duly arranged / frivolous, indecent, unseemly / large bowl, vessel / [Sch] Trog / [PS] large wooden bowl, vessel, washtub, kneading-trough / cup, measure / olive-press / boat / Wasserschlauch / Brunneneimer / Trinkgefäss aus Silber / vetch, chick-pea / water-wheel, mill / sheep, ram / id. / male sheep, ram / (a waterfowl) / (a garment) / (a part of the neck) / neck / Arabs / to enter in the presence (of a god, king, etc.) / giving s.th. or o.s. as guarantee, standing surety or bail, stepping in for s.o. / mixing / mixed company / purity and nobility / vehemence, excess / Hebrews / the nomads, those who traverse, cross, wander around / those who come from, or inhabit, the other side of the river, the region beyond / to make Arabic, Arabicize, translate into Arabic / Arabicity / pronouncing the final accents of a word, using desinential inflection (i.e., the ↗ ʔiʕrāb ) / to make (one / (clear) expression / purity, clarity / ex pression / letting flow, giving way / outburst, eruption / breaking up / clarity / stepping in (for s.o.) / to speak out ( ʕan on behalf of s.o.) / letting out, releasing / earnest money, down payment / to give earnest money, give a handsel, make a down payment / to stand surety or bail for, guarantee / to speak out ( ʕan on behalf of) / clear / contract, treaty / to change, barter / to make a contract / godmother / river that flows with a vehement, strong current / briskness, liveliness, vehemence / alacer, lubens fuit / lacerta agilis / release, setting free, outburst / ballista [stone-throwing machine], military siege weapon / gun, mobile gun, carriage carrying a gun / wagon, cart / voiture, char / roue / char de combat ou de course / char tire par un cheval / [F L H] abundant water, such as is clear, or limpid / to abound with water (well), to swell (river) / [F] profundum (flumen), [H] swollen, overflowing (river) / [F] multa aqua / [F] multa aqua pura / viel und süßes reines Wasser trinken / outburst, gushing out / (to be/make) clear, limpid, clean / to become swollen and purulent, break up again after heal (wound) / corrupt, disordered (and therefore swollen) / river / mind / swiftness, agility / [F] locusta marina, [̄L] a species of fish resembling worms / lizard / [F] matrimonium iniit cum femina ʕarūb appellata / well pleasing / of equal age / to be sweet, pleasing / sweet, pleasing / who manifests love to her husband and is obedient to him / who loves him passionately , or excessively , or who manifests love to him, evincing passionate, or excessive, desire / who uses amorous gesture or behaviour, and coquettish boldness , with feigned coyness or opposition , or who makes a show of, or act with, lasciviousnes or passionately loving / rebellis contra maritum / vehemence (passion, emotion, affect, etc.) / [F] libidine accendit (taurus vaccam), [W] brünstig machen (der Stier die Kuh) [to incite with lust] / [F] inivit feminam / to have sex, [ vulg. ] to fuck / coition / arousing the partner / to speak out, express / pledge, to stand in for s.o. / [F] indicavit oblique verbis huius rei desiderium (feminae), [H] to afford [ bi- clear arguments], [L] to plead one / evening, sunset / the manifest and magnified / he made clear, plain / mercy / to enter, set (sun) / the evening (before Saturday) / evening before Sabbath / loving, pleasing, affectionate (woman) / the loving, affectionate one / (clear expression of) emotion, affect ▪ ʕRB_12 † ʕarraba ‘to incite with lust, arouse (a partner / to copulate, have sex / to desire the bull (said of a cow) / ( vulg. ) to fuck / to show one / to make (a partner) behave as a ʕarūb , i.e., as s.o. who shows (passionate) affection / [F] turpia dixit ( in aliquem ) / [W] zotig, gemein reden, gemeine Rede brauchen ( ʕalà gegen) / [F] turpia esse dixit ( verba vel facta ) / [W] (jd-s Worte/Taten) für gemein erklären / [H] to point out ( ʕalà to s.o.) the unseemliness of s.th. / turpiter et obscoene locutus fuit / (to be) corrupt, disordered (stomach) / to swollen and purulent (wound), pus / stinking like pus / foul, obscene / abundance of water / excess / to eat too much/fast, devour / eruption of what had been kept closed inside (emotions, etc.) / excess(iveness) / (clear expression of) intense desire / to be very hungry, voracious / to desire intensely / to be hungry / to desire, crave for / to be hungry, starve / to go mad for, desire intensely / corruption, disorder (of the stomach, due to indigestion, etc.) / to be disordered (stomach) / [F] aegrotum reddidit aliquem ( stomachi corruptio ), [L] to treat medically, remove the disease of s.o. whose stomach is in a corrupt, disordered state / mixture, confusion, turbulence / disorder, corruption / expression, (vehement) release of what had been locked inside / to swell and suppurate / to be raised / sky / to ascend, mount, rise / to shoot up, grow / to build, erect a trellis / to roof over / [F] multa aqua pura / [L] abundant water, such as is clear, or limpid / clear ʕRB_7 ) and the ‘swift river / outburst / clearing / to separate, put by, put aside / to take out, remove / pruning palm-trees / scarifying horses / expressing s.th./o.s. clearly / speaking correctly, without mistakes / using the ↗ ʔiʕrāb / reproaching, upbraiding s.o. (i.e., pointing out clearly the faults in s.o. / Arabness / genuine Arabs = Arabs of pure descent / noble horses / noble Arabian horses / to express o.s. clearly / to use pure and correct Arabic / to make one / white/excellent barley, [F] Hordeum praestantissimum, album, cuius grana duplicem seriem formant / pure / white/excellent barley / aridity / matching (age) / four / quarter / arâba maker / (a poetical name for) heaven, (Talm) Araboth, name of the seventh heaven (in which dwell Righteousness, Justice etc.) / to build with tetragonal stones / Quaderstein / there is nobody at home / the river with a strong current / river with abundant water / The Sea of the ʕArabah” (e.g., Deuteronomy 3:17, Joshua 3:16). Unfortunately, the Hbr etymology is as uncertain as the Ar but perh. related to [Hbr] ʕarabah ‘willow / desert-plateau, steppe / desert-plain, desert, wilderness, steppe / to be arid, sterile / steppe-dwellers / part of N Mesopotamia between Tigris and Nisibis and around Edessa / to be naked / naked / empty / empty-handed, destitute / to be naked, empty / to be destroyed / to be naked, bare / to lay bare / to be naked, nude, bare / he placed his deposit / he ejected his excrement, or ordure / catapult, kind of sieging engine / wild ass / a mechanical device / a part of the battering ram / cold, ice-cold / corruptio stomachi / (s.o.) having the stomach in a bad, or corrupt, state / to uncork, pull out an eye / to remove, lift up, lay aside / (vn. ʕard ) to throw or fling far / (vn. ʕarad ) to flee, take to flight / to throw to the ground / to tear out violently / to offer, present, show itself, happen, occur, come to meet, show, bring to mind, give or take in exchange / to depart, set out / to come up to, approach, visit, occur, happen, befall, strike, afflict / eruv / to depart
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ: الْمَرْأَةُ الْعَرُوبُ: الضَّحَّاكَةُ الطَّيِّبَةُ النَّفْسِ، وَهُنَّ الْعُرُبُ.
+  - Mekâyîs: (عَرَبَ) الْعَيْنُ وَالرَّاءُ وَالْبَاءُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا الْإِنَابَةُ وَالْإِفْصَاحُ، وَالْآخَرُ النَّشَاطُ وَطِيبُ النَّفْسِ، وَالثَّالِثُ فَسَادٌ فِي جِسْمٍ أَوْ عُضْوٍ.
   - Cebel: نشاط وانطلاق بحِدَّةٍ ذاتية للخلوص مما يحبس
 **عرج**: aksaklık / yükselmek
   - EtymArab: ... / to be lame, to walk with a limp / to ascend, flight of steps / zigzagging road, to zigzag / to call upon
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ مِنَ الْإِبِلِ، قَالَ قَوْمٌ: ثَمَانُونَ إِلَى تِسْعِينَ، فَإِذَا بَلَغَتِ الْمِائَةَ فَهِيَ هُنَيْدَةٌ، وَالْجَمْعُ عُرُوجٌ وَأَعْرَاجٌ.
+  - Mekâyîs: (عَرَجَ) الْعَيْنُ وَالرَّاءُ وَالْجِيمُ ثَلَاثَةُ أُصُولٍ: الْأَوَّلُ يَدُلُّ عَلَى مَيْلٍ وَمَيَلٍ، وَالْآخَرُ عَلَى عَدَدٍ، وَالْآخَرُ عَلَى سُمُوٍّ وَارْتِقَاءٍ.
   - Cebel: نشوزٌ أو عِوَجٌ عن الاستواء في الاطراد إلى الأعلى أو الجانب، كما يبدو في مشي الأعرج وفي الصعود في الدرجة - وكلاهما إلى أعلى، وكانعراج الطريق والوادي والبناء وكلها إلى جانب، وفي الجميع خروج عن الاطراد
 **عرجن**: eski hurma dalı / salkım
   - EtymArab: ... / type of truffle / date-palm stalk, dry date-palm stalks
   - Cebel: ما يتدلى من النخل تتفرع منه عثاكيل تحمل ثمره - كالعرجون الموصوف
 **عرر**: ısırmak / ısrar
   - EtymArab: ... / scabies / dirt, dung / shame, to disgrace, to be exposed / to be of bad character / to harm / needy, to seek hospitality, to seek alms
-  - Mekâyîs: قَالَ: وَأَصْلُ الْمَعَرَّةِ مَوْضِعُ الْعَرِّ، يَعْنِي الْجَرَبَ.
+  - Mekâyîs: (عَرَّ) الْعَيْنُ وَالرَّاءُ أُصُولٌ صَحِيحَةٌ أَرْبَعَةٌ.
   - Cebel: نقصٌ أو جَرْدٌ من ظاهر الشيء أو عن ظاهره فيبرز (1)
 **عرش**: taht / egemenlik / kubbe
   - EtymArab: throne / trellis / arbour, pergola / trellis, to erect a trellis, roof, thatching / couch, dais, throne / mechanism on the top of a well for drawing water / a group of stars
@@ -3508,7 +3596,7 @@
   - Cebel: ابتعاد عن المقر الأصلي إلى مستقر بعيد دون انقطاع عنه كالكلأ البعيد وكالمال البعيد عن الحي لا يروح
 **عزر**: destek / yardım / ceza
   - EtymArab: to help / ... / to censure, to apply corporal punishment / to support / to be tough / to be bad tempered / to honour
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ التَّعْزِيرُ، وَهُوَ الضَّرْبُ دُونَ الْحَدِّ.
+  - Mekâyîs: (عَزَرَ) الْعَيْنُ وَالزَّاءُ وَالرَّاءُ كَلِمَتَانِ: إِحْدَاهُمَا التَّعْظِيمُ وَالنَّصْرُ، وَالْكَلِمَةُ الْأُخْرَى جِنْسٌ مِنَ الضَّرْبِ.
   - Cebel: شدة أو متانةٌ مسترسلة (امتدادًا أو دوامًا) تمنع الفناء أو تحفظ البقاء: كالأَكَمة (لا تزول عادة)، وبقايا الشجر الموصوفة (بقيت لم تَزُل كسائره)، والمحالة التي تُديم الإمداد بالماء
 **عزز**: güç / üstünlük / değer / güçlü
   - EtymArab: power, might, downpour, to be impregnable, to be hard, to be rough (e.g. land) / to overcome / to support, to be near to one / to be(come) strong / God has been strong
@@ -3551,7 +3639,7 @@
   - Cebel: شَدّ أشياءَ أو أثناءِ شيءٍ معًا بمُمْتدٍّ مَتين
 **عصر**: zaman / çağ / sıkmak
   - EtymArab: time, age, era, period, the afternoon / to be a contemporary / to be of age / to squeeze, to wring / hurricane, whirlwind, cyclone, rain clouds
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي الْعُصَارَةُ: مَا تَحَلَّبَ مِنْ شَيْءٍ تَعْصِرُهُ.
+  - Mekâyîs: (عَصَرَ) الْعَيْنُ وَالصَّادُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ صَحِيحَةٌ: فَالْأَوَّلُ دَهْرٌ وَحِينٌ، وَالثَّانِي ضَغْطُ شَيْءٍ حَتَّى يَتَحَلَّبَ، وَالثَّالِثُ تَعَلُّقٌ بِشَيْءٍ وَامْتِسَاكٌ بِهِ.
   - Cebel: ضغط بثقل بالغ يُسِيلُ أو يُنْفِذُ ما في الأثناء من مائع ونحوه
 **عصف**: rüzgâr / fırtına / sert rüzgâr
   - EtymArab: chaff, straw, dried herbage, ears of corn / to ripen / storm, to storm, to blow away, (of wind) to blow
@@ -3677,6 +3765,7 @@
   - Mekâyîs: (عَمِيَ) الْعَيْنُ وَالْمِيمُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى سَتْرٍ وَتَغْطِيَةٍ.
 **عنب**: üzüm
   - EtymArab: grapes, vine, wine
+  - Mekâyîs: (عِنَبٌ) الْعَيْنُ وَالنُّونُ وَالْبَابُ أُصَيْلٌ يَدُلُّ عَلَى ثَمَرٍ مَعْرُوفٍ، وَكَلِمَةٍ غَيْرِ ذَلِكَ.
   - Cebel: صفاء الممتلئ المستدير مع امتداد ما: كالجبيل والنَبَكة الموصوفين - وصفاؤهما تجرُّدهما من النبات، وكالعنب في امتلائه بالماء وصفائه وحبّ أكثره فيه امتداد يقل أو يزيد، والأنف الضخم مستدير؛ ولذا عُدَّ سَمْجا
 **عنت**: zorluk / sıkıntı / inatçı
   - EtymArab: ... / a mountain which is difficult to climb, hardship, to cause hardship / corruption, sinning / to be overbearing, to be fastidious, to be finicky
@@ -3747,6 +3836,7 @@
   - Cebel: الحياة الحيوانية بما تقتضيه من اغتذاء ونمو وحركة وسعي - كاللبن وسائر مواد الإعاشة المذكورة
 **عيل**: yoksulluk / geçimsizlik
   - EtymArab: ... / children, family, to have many children / to be underfed, to be dependent, to be poor / to deviate / to be conceited, to walk with a conceited gait / to have many children
+  - Mekâyîs: (عَيَلَ) الْعَيْنُ وَالْيَاءُ وَاللَّامُ، لَيْسَ فِيهِ إِلَّا مَا هُوَ مُنْقَلِبٌ عَنْ وَاوٍ.
   - Cebel: رَفْعُ الثِقْل إلى أعلَى بنَوْع من التلطف أو الاحتيال/ كالظُلّة والنَعامة
 **عين**: göz / pınar / zat
   - EtymArab: eye / fountain, clear flowing water / eye, eyesight, to see, to have beautiful eyes, to injure the eye, to give the evil eye, to spy, to ascertain, notables / water spring / group of brothers
@@ -3760,6 +3850,7 @@
   - Cebel: بقاءُ مادّة دقيقة أو قَليلةٍ من الشيءِ أو ظهورُها بعد ذهاب مُعْظمه أو غِيَابه: كالرَهَج الثائر، وما بقي ظاهرًا من خَمَر الأرض، وكبقية الماء واللبن والدم ومِدّة الجرح
 **غبن**: aldanmak / zarar
   - EtymArab: ... / to forget, to be lacking in judgement / to weaken, to deceive
+  - Mekâyîs: (غَبَنَ) الْغَيْنُ وَالْبَاءُ وَالنُّونُ كَلِمَةٌ تَدُلُّ عَلَى ضَعْفٍ وَاهْتِضَامٍ.
   - Cebel: غئور: (نقص وفراغ) مستتر يمتد في جرم الشيء: (3/1553) كغئور الإبط الخ
 **غثو**: köpük / süprüntü / boğmak / örtmek
   - EtymArab: ... / debris, scum, dry vegetation, wanting to vomit
@@ -3782,8 +3873,7 @@
   - Cebel: الانصباب (= الانحدار) إلى مقر أو مَغار عَبْرَ مسافة ما بِثقَلٍ أو قُوَّةٍ: كما تنصبّ الدلو الموصوفة في بئر السانية بقوة لعِظَمها أو كما ينصب الماء فيها بقوة لعظمها أيضًا، وكما تنحدر غوارب الإبل، ورأس الموج، وكانحدار غُرَابَيْ الوَرِكين وقَذَال الرأس، ونفاذِ حد الفأس والسيف في ما يُضرَب بها، ودخول الغِزْلان في كُنُسها
 **غرر**: aldatma / risk / parlak
   - EtymArab: ... / white spot on a horse
-  - Mekâyîs: وَأَصْلُ
-هَذَا الْغَرُّ، وَهُوَ الْكَسْرُ فِي الثَّوْبِ.
+  - Mekâyîs: (غَرَّ) الْغَيْنُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ صَحِيحَةٌ: الْأَوَّلُ الْمِثَالُ، وَالثَّانِي النُّقْصَانُ، وَالثَّالِثُ الْعِتْقُ وَالْبَيَاضُ وَالْكَرَمُ.
   - Cebel: غئورٌ (عارض) بدقة وامتداد مع غضوضةٍ ما (1):
 **غرف**: oda / kat
   - EtymArab: to ladle, spoon, scoop / (upstairs) room, chamber, compartment, cabinet / to cut off s.th / to clip (the hair) / to be cut off, broken off, become bent / hair clipped upon the forehead / cut, clipped / lock of hair / plant for tanning leather / to tan (a skin) / to have a complaint in the belly from eating ġarf (camels) / bed of reeds or canes / dense thicket of trees / thicket / swift (she-camel) / wide-stepping (horse) / sole, sandal / sole, worn-out sandal / piece of leather, ornamented and with notches / rope put on a camel / to put a rope (upon a camel / to take s.th. altogether / to be deceived, fail to see clearly / unclear, confused, obscure / to cut off / (upstairs) room / separate, private room/compartment / cutting off, clipping / bed, or dense thicket, of reeds etc. / having/bringing much water (river), copious (rain) / ladling, scooping (water) / sole, worn out sandal / piece of leather, ornamented antard with notches / to cut off, clip / to bring water / to scoop / large spoon / well from which one draws water / well / to draw water / coconut half used as spoon / spoon / cup / to drink or eat with a spoon / to drink from a spoon / handle of a plough, plough / handle of a plough / room on the ground floor / room / rooms (pl.) / the ġarf plant / much water, copious rain / verwickelt, nicht klar / seeing all together / en l / embrassé dans son ensemble / jug
@@ -3803,6 +3893,7 @@
   - Cebel: لصوق مع رخاوة ما واسترسال: كالغِراء والطلاء ولصوق الشحم على القلب والصاق الريش بالسهم
 **غزل**: iplik eğirmek / şiir
   - EtymArab: to spin (yarn, thread) / to court, woo, flirt / elegy of love / the erotico-elegic genre / gazelle / (rising) sun, disk of the sun / pommel of the camel saddle / spindle, yarn, to spin / courtship / to spin / to spin (yarn or thread) / ghazal poetry, erotic elegy ▪ [v3] : From protSem * ġ˅zāl- ‘gazelle / to fold / to die / to almost die / thread / net / tissue / cotton / cotton plant / spindle / to flirt / to nod / to lift the hair and rearrange it (woman) / to joke with s.o. / bélier / grand chevreau / bouc / id. / to distance o.s. from the herd (some animals) / large group of sheep / hut covered with twigs
+  - Mekâyîs: (غَزَلَ) الْغَيْنُ وَالزَّاءُ وَاللَّامُ ثَلَاثُ كَلِمَاتٍ مُتَبَايِنَاتٍ، لَا تُقَاسِ مِنْهَا وَاحِدَةٌ بِأُخْرَى.
   - Cebel: تَحَوُّل الهشّ إلى شيء ممتد متين متميز: كالخيط المغزول من القطن والصوف والكَتّان إلخ، وكقضيب العشبة المذكورة مع أنها من السُطَّاح الذي ينفرش على الأرض
 **غزو**: savaş / akın
   - EtymArab: ... / to intend, seek s.th., strive / to invade a territory, carry out a military offensive / sense, signification / to strive, make a raid / war expedition, foray, attack / raid, military attack / to undertake a ġazwa
@@ -3824,6 +3915,7 @@
   - Cebel: نَزْع للشيء من منبته أو مقره بغلظ وقوة أو قهر (أي بلا مهيِّئ للنزع): كنزع الشعر والوبر الموصوف، ومنه "الغَصْب: أخذ الشيء (المملوك للآخرين) ظُلمًا: {يَأْخُذُ كُلَّ سَفِينَةٍ غَصْبًا} و "غصبه منه
 **غصص**: boğazda kalmak / sıkıntı
   - EtymArab: ... / choking, to choke, to be crowded
+  - Mekâyîs: (غَصَّ) الْغَيْنُ وَالصَّادُ لَيْسَ فِيهِ إِلَّا الْغَصَصُ بِالطَّعَامِ، وَيُقَالُ رَجُلٌ غَصَّانُ.
   - Cebel: نشوب الشيء في مَنْفذه لغِلَظه أو ضيق مَمرّه فيتعسر أو يتعذر مروره في المنفذ (1): {وَطَعَامًا ذَا غُصَّةٍ}
 **غضب**: öfke / kızgınlık / gazap / kızmak
   - EtymArab: protruding rock / to be angry, to frown / to have a severe eruption of small pox / (of the eyes) to swell
@@ -3835,13 +3927,14 @@
   - Cebel: رخاوة الشيء الكثيف (الثخين) وطراءتُه (من حداثته وقلة نضجه) (1): كما هو واضح في الاستعمالات المذكورة
 **غطش**: karanlık / belirsiz
   - EtymArab: ... / weak eye sight / (of night) to be dark, cause to be dark / to be difficult / to travel through the land
-  - Mekâyîs: (غَطَشَ) الْغَيْنُ وَالطَّاءُ وَالشِّينُ أَصْلٌ وَاحِدٌ صَحِيحٌ، يَدُلُّ عَلَى ظُلْمَةٍ
-وَمَا أَشْبَهَهَا.
+  - Mekâyîs: (غَطَشَ) الْغَيْنُ وَالطَّاءُ وَالشِّينُ أَصْلٌ وَاحِدٌ صَحِيحٌ، يَدُلُّ عَلَى ظُلْمَةٍ وَمَا أَشْبَهَهَا.
   - Cebel: كثافة واسعة تحجب الرؤية: كظلمة الليل في الأفق، والعمش في العين
 **غطو**: örtmek / kapatmak / örtü
+  - Mekâyîs: (غَطَوَ) الْغَيْنُ وَالطَّاءُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى الْغِشَاءِ وَالسَّتْرِ.
   - Cebel: ستر بما ما هو كالغشاء الكثيف عريضًا: كالغطاء، والأغصان الكثيرة للكرمة
 **غفر**: bağışlama / çok bağışlayan / bağışlamak
   - EtymArab: ... / to cover, hide / helmet, cloak / large crowd of people / to pardon, forgiveness / large increase in wealth
+  - Mekâyîs: (غَفَرَ) الْغَيْنُ وَالْفَاءُ وَالرَّاءُ عُظْمُ بَابِهِ السَّتْرُ، ثُمَّ يَشِذُّ عَنْهُ مَا يُذْكَرُ.
   - Cebel: تغطية أو سَتْر يقصد به الحماية وما إليها: كالغِفارة التي تقي الخمار من الدهن، والجلدة التي تحمي القوس والوتر، والمِغفر الذي يحمي العنق
 **غفل**: dikkatsizlik / unutkanlık
   - EtymArab: ... / to neglect, overlook, forget, be distracted / to be simple, be unmarked / to be anonymous, be of low birth
@@ -3856,14 +3949,14 @@
   - Cebel: عِظَم الجِرم وتجسمه مع صلابة، ويلزمه الشدة والقوة، والحدّة (هذه تؤخذ من الصلابة): كغَلْظ الأرض، والثوب الغليظ، والسنبل الذىِ فيه الحب
 **غلف**: kılıf / örtü / kılıfla kapamak
   - EtymArab: ... / to cover, wrap, seal / to be uncircumcised / to be covered with vegetation
+  - Mekâyîs: (غَلَفَ) الْغَيْنُ وَاللَّامُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ صَحِيحَةٌ، تَدُلُّ عَلَى غِشَاوَةٍ وَغِشْيَانِ شَيْءٍ لِشَيْءٍ.
   - Cebel: تَغطِّي الشيء بغطاء (نافذ منه) يحجبه ويحجب عنه ما حوله: كالأغلف، والأرض الغلفاء الخ
 **غلق**: kilitlemek / kapatmak / kilit / kapamak
   - Mekâyîs: (غَلَقَ) الْغَيْنُ وَاللَّامُ وَالْقَافُ أَصْلٌ وَاحِدٌ صَحِيحٌ يَدُلُّ عَلَى نُشُوبِ شَيْءٍ فِي شَيْءٍ.
   - Cebel: منع الاقتحام والمخالطة لحدّة ظاهرة: كما تمنع الحِدّة التي تحتوي عليها تلك الشجرة مخالطتها إلا بتَوقٍّ، وكظهر البعير الغَلِق يبدو كجُلْبَتَىْ نُحاس
 **غلل**: kin / gizli düşmanlık / ganimet
   - EtymArab: to insert, enter, penetrate / iron collar / manacles, handcuffs / chains, shackles, fetters / produce, crops / revenue, returns / grain, cereals, corn / fruits / to rake in, gain, win, obtain, reap / to derive advantage or profit from, capitalize on s.th. / to exploit / burning thirst / rancor, hatred, spite, malice / fine, diaphanous, cape, mantilla, veil / shirtlike garment, gown / to perfume (the beard, bi with balm) | enduire, parfumer (de musc, † ġāliyaẗ 1 ) / water flowing amid trees / couler, pénétrer, entrer ( bayn au milieu de / se dit de l / qui circule entre les arbres, dans une avenue plantée d / filtre pour coler, clarifier un liquide (= miṣfāẗ ) | strainer / mêler, mélanger l / couvrir / certaine maladie des moutons / avoir la maladie ġalal / oter la peau de l / ... / extreme thirst / to bar from drinking / shackles, to shackle / treachery, animosity, hatred / to confiscate / to purloin, to yield, to produce, to earn / Galia : parfum de couleur noire composé de musc, d / certain disease that attacks sheep, or goats, in the orifice of the teat, occasioned by the milker / to insert / to immerse / to insert, enter / passing through/between/beneath / entering / yoke, collar / einsperren, festhalten | ( CAD ) to detain, keep waiting / to tie up / yoke / s.th. into which hands, feet, etc. are inserted / fruit / grapes / gleanings (of grapes and olives) / to repeat, do s.th. a second time / what is brought in, ingathering, increase, harvest, crop, fruit, yield, produce / enter / to bring, put, carry in, introduce / […] to bring in ( ʕallᵊlātâ the harvest) / to insert, thrust in / to put in, thrust in / to be thirsty / thirsty one / grudge, anger, hatred, to hate / to act fraudulently against s.o., ( H -stem:) to damage s.o. / to inject (anger) / garment that is worn next the body, beneath the other garment, and likewise beneath the coat of mail / to perfume o.s. / huiler, pommader abondamment les cheveux, de manière que l / mist / filter, strainer / device through which water is running / inserting / certain disease that attacks sheep, or goats / inserting, entering / water having no current, only appearing a little upon the surface of the earth, disappearing at one time and appearing at another / certain disease… in the orifice of the teat, occasioned by the milker / to enter / to ascend, land, enter / to enter a town, a house, come in / to come in to a woman / to attack, invade / to bind / to substitute, put instead / to bring in ( ʕallᵊlātâ the harvest) / crop, harvest / récolte qu / récolte abondante / prodotto della terra annuale / fruit(s) / cucurbitacées et tomates / fruits, récolte / to do (a second time) / to enter, insert, bring in / to be angry ( deity ), be filled with hatred, wrath | exercer (de la haine) / von Haß, Groll erfüllt sein / to separate, set aside a place, excommunicate, grant someone a fief / anger, hate, wrath / Groll, Haß, Bosheit | hidden enmity, grudge / to fraudulently appropriate, withhold / to be unfaithful in respect of a thing privily, defraud / to act unfaithfully, become unfaithful / schädigen / Verlust bescheren | to damage | endommager / to water one / to separate, consecrate, excommunicate / cloud
-  - Mekâyîs: (غَلَّ) الْغَيْنُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَخَلُّلِ شَيْءٍ، وَثَبَاتِ
-شَيْءٍ، كَالشَّيْءِ يُغْرَزُ.
+  - Mekâyîs: (غَلَّ) الْغَيْنُ وَاللَّامُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَخَلُّلِ شَيْءٍ، وَثَبَاتِ شَيْءٍ، كَالشَّيْءِ يُغْرَزُ.
   - Cebel: - تخلُّل بحدة أو قوةٍ مع إحاطة أو تقييد (1): كتخلل
 **غلم**: erkek çocuk / genç
   - EtymArab: youth, boy, to be young, beautiful women / lust, to be lustful / to exceed the boundaries / to be in a rage
@@ -3899,6 +3992,7 @@
   - Mekâyîs: (غَنِيَ) الْغَيْنُ وَالنُّونُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا يَدُلُّ عَلَى الْكِفَايَةِ، وَالْآخَرُ صَوْتٌ.
 **غوث**: yardım / imdat / yardım istemek
   - EtymArab: ... / to go to the aid of, call for assistance, cry for assistance
+  - Mekâyîs: (غَوَثَ) الْغَيْنُ وَالْوَاوُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْغَوْثُ مِنَ الْإِغَاثَةِ، وَهِيَ الْإِغَاثَةُ وَالنُّصْرَةُ عِنْدَ الشِّدَّةِ.
   - Cebel: الصياح طلبًا لتفريج شدة نازلة: كما هو واضح في الاستعمالات المذكورة
 **غور**: derinlik / dip
   - EtymArab: ... / depth, bottom, valley, lowlands, cave / to reach the bottom, sink, disappear, (of the moon and stars) to set / to raid / to be jealous / to go in haste / cave / powder of the cave
@@ -3933,9 +4027,11 @@
   - Cebel: تحوُّلُ الشيء لحدَة تخالطه تحولا تامًّا أو أو كالتامّ
 **غيض**: azalmak / kuruyup gitmek
   - EtymArab: ... / den, thicket, bush, to disappear (by water into the soil), recede, dwindle, abate, diminish
+  - Mekâyîs: (غَيَضَ) الْغَيْنُ وَالْيَاءُ وَالضَّادُ أُصَيْلٌ يَدُلُّ عَلَى نُقْصَانٍ فِي شَيْءٍ، وَغُمُوضٍ وَقِلَّةٍ.
   - Cebel: غئور المائع ونحوه في باطن - بكثافة (حتى يَنْفَد ما على الظاهر منه أو ينقص): كما في الغَيْضة وسائر الاستعمالات المذكورة {وَغِيضَ الْمَاءُ}، {وَمَا تَغِيضُ الْأَرْحَامُ وَمَا تَزْدَادُ} [الرعد: 8] في [قر 9/ 286]: ما تُسْقِط قبل التسعة أشهر، وما يزيد عن التسعة أشهر
 **غيظ**: öfke / kızgınlık
   - EtymArab: ... / to anger, infuriate, enrage, vex, gall / wrath, rage, ire, fury
+  - Mekâyîs: (غَيَظَ) الْغَيْنُ وَالْيَاءُ وَالظَّاءُ أُصَيْلٌ فِيهِ كَلِمَةٌ وَاحِدَةٌ، يَدُلُّ عَلَى كَرْبٍ يَلْحَقُ الْإِنْسَانَ مِنْ غَيْرِهِ.
   - Cebel: حَمْى وحِدّة شديدة تمتد في جَوْفٍ أي تعمه: كحَمْى الهاجرة وحَرِّها
 **فءد**: kalp / gönül
   - EtymArab: heart / mind / oven, to roast meat, to bake on an open fire or in an oven, raging core of an oven / throbbing of the heart
@@ -3978,9 +4074,11 @@
   - Cebel: انبثاق المائع المحتبس باندفاع وغزارة فاتحًا فُرْجَة في محبسه - كالماء من مفاجره تلك: {فَتُفَجِّرَ الْأَنْهَارَ خِلَالَهَا تَفْجِيرًا} [الإسراء: 91]، {فَانْفَجَرَتْ مِنْهُ اثْنَتَا عَشْرَةَ عَيْنًا} [البقرة: 60]
 **فجو**: açıklık / boşluk
   - EtymArab: ... / clear hole in a wall, (in a cave) open space, gap / to make a hole
+  - Mekâyîs: (فَجَوَ) الْفَاءُ وَالْجِيمُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى اتِّسَاعٍ فِي شَيْءٍ.
   - Cebel: فُرْجة أو فَتْحة واسعة داخلة في جرم الشيء المعترض: {وَهُمْ فِي فَجْوَةٍ مِنْهُ} من الكهف
 **فحش**: çirkin söz / kötü davranış
   - EtymArab: ... / to be excessive, immoderate or beyond measure / to be foul, be obscene, act in an indecent way, be shameless, use obscene language / adultery, to commit adultery
+  - Mekâyîs: (فَحَشَ) الْفَاءُ وَالْحَاءُ وَالشِّينُ كَلِمَةٌ تَدُلُّ عَلَى قُبْحٍ فِي شَيْءٍ وَشَنَاعَةٍ.
   - Cebel: صدور ما يفشو استقباحُه أو حِدّةُ وَقْعِه على الحسّ من قول أو فعل: كالبذاء المتعمَّد المتزيّد، وكدم البراغيث المنتشر، وكالصورة المستقبحة للشيء
 **فخر**: övünme / övünen
   - EtymArab: to despise, disdain / to be proud, boast, brag ( bi of s.th.) / (fired) clay / earthenware, crockery, pottery ↗ faḫḫār Other values, now obsolete, include (Hava1899): ▪ † FḪR_3 ‘aromatic plant / marjoram / to be proud, be boastful, self-glorify / earthenware / to be proud, boast, brag of s.th. / to boast, brag / to invite, challenge / to assemble, collect / potter / id. / to judge (DO s.o.) to surpass ( ʕalà another) in excellence / auffordern, anbieten | to challenge | mettre au défi (DO or bʿbr s.o.) / Aufforderung, Angebot / to gather / to gather, assemble (intr.), (people, city, land / goods, silver) accumulate, (smoke, sweat) ‘collect / to bring together, assemble / assembly, gathering / in assembly, together / assembled / collector / total, sum, entirety / (a temple collection?) / assembly (of supplicants) / assembly, company / assembly / banquet / mess, assembly, company / to boast / boasting / to boast of s.o. / to harden (clay in the sun) / to crack / to be formed (as by a potter) / to get broken, cracked / to puff o.s. up (to show off) / potter(y) / aufgeblasen sein / assembly, gathering (> banquet) / to show off in front of a gathering / auffordern, anbieten | to challenge | mettre au défi / inviting / challenging / to judge (s.o.) to surpass ( ʕalà another) in excellence / to gather, assemble
@@ -3988,12 +4086,14 @@
   - Cebel: عِظَمُ جرم الشيء أو غِلَظُه مع خُلوه -أحيانًا- مما يناسب عِظَم جرمه عادة أو توقعًا: كالبُسْر الذي لا نَوًى فيه، والضرع القليل اللبن، والفخار الذي كان طينا ثقيلًا فأصبح صُلبا خفيفا، وكالنخلة الموصوفة التي لم يُذْكَر لها ثمر، والغرمول خالي الجوف وقد يصلب وربما لا
 **فدي**: kurtuluş bedeli / kurtarmak
   - EtymArab: to ransom, to redeem / to redeem, ransom
-  - Mekâyîs: وَالْأَصْلُ فِي هَذِهِ الْكَلِمَةِ مَا ذَكَرْنَاهُ، وَهُوَ التَّفَادِي: أَنْ يَتَّقِيَ النَّاسُ بَعْضُهُمْ بِبَعْضٍ، كَأَنَّهُ يَجْعَلُ صَاحِبَهُ فِدَاءَ نَفْسِهِ.
+  - Mekâyîs: (فَدَيَ) الْفَاءُ وَالدَّالُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَتَانِ مُتَبَايِنَتَانِ جِدًّا.
 **فرت**: tek / eşsiz / tekil
   - EtymArab: Euphrates / to become weak in o. / to act vitiously, or unrighteously / to commit adultery, fornication / fornicatress, adultress, female slave / son of the female slave that is a fornicatrice / low, ignoble, mean, sordid / space measured by the extension of the thumb and forefinger / 1 sweet-tasting water / 2 to be weak-minded / 3 to violate religious norms
+  - Mekâyîs: (فَرَتَ) الْفَاءُ وَالرَّاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْمَاءُ الْفُرَاتُ، وَهُوَ الْعَذْبُ.
   - Cebel: خُلوص الماء من المِلْح مع صَفائه من الكُدُورة (أي خلوصه من الغِلَظ بنوعيه الملح والكدورة): كالماء الفرات الموصوف، وهو خال من الكدر والشوائب أيضًا: {هَذَا عَذْبٌ فُرَاتٌ} [الفرقان: 53، فاطر: 12، ومثلها ما في المرسلات: 27]
 **فرث**: dış kirli barsak
   - EtymArab: ... / dung / emptying out the contents of a sack or a belly / to inform on s.o
+  - Mekâyîs: (فَرَثَ) الْفَاءُ وَالرَّاءُ وَالثَّاءُ أُصَيْلٌ يَدُلُّ عَلَى شَيْءٍ مُتَفَتَّتٍ.
   - Cebel: تسيّب الدِقَاق المجتمعة، مع جفاف أو غلظ فيها: كالثريد مع الجفاف، وكالتمر الذي كان فيَ جُلّةِ ونُثِرَ، وسَرقين الكَرِش دِقَاقٌ (3/1651) مجتمعة، وغِلَظُها التقزُّز منها: {مِنْ بَيْنِ فَرْثٍ وَدَمٍ}
 **فرج**: rahatlık / sevinç
   - EtymArab: that which is between the legs of a human and the hind legs of an animal, opening, cleavage, euphemesim for the sexual organs of the two sexes / hole / to open, to split, to cleave a way / to relieve / to set free / finitive fortative / to cut (a piece from) / to be single, isolated, be unique / to separate, set apart, secrete, select / to break the neck, tear the prey into pieces / to spread on the floor, spread out / to straddle, stand with one / chance, auspicious moment / holiday / cut / notch, incision, opening / to beat off, stripp off (fruits) / to prune a tree / to split, separate / to cut small, hash / to cut, cleave, sever / to flee, run away / to escape inadvertedly, slip, get lost / to split, cleave, break apart / to break the fast
@@ -4009,7 +4109,7 @@
   - Cebel: توحُّد الشيء بذاته منقطعًا ومنعزلًا عما يشاكله
 **فرر**: kaçmak / kaçış
   - EtymArab: to flee, to escape, to take refuge, place of refuge / to be in a hurry / to shake o.s / cutting, separating, dividing / to put asunder, separate, split / to be single, isolated, be unique / to separate, set apart, secrete, select / to break the neck, tear the prey into pieces / to spread on the floor, spread out / to straddle, stand with one / chance, auspicious moment / holiday / cut / notch, incision, opening / to beat off, stripp off (fruits) / to prune a tree / to split, separate / to cut small, hash / to cut, cleave, sever / to escape inadvertedly, slip, get lost / to split, cleave, break apart / to break the fast
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: الْفَرِيرُ: وَلَدُ الْبَقَرَةِ.
+  - Mekâyîs: (فَرَّ) الْفَاءُ وَالرَّاءُ أُصُولٌ ثَلَاثَةٌ: فَالْأَوَّلُ الِانْكِشَافُ وَمَا يُقَارِبُهُ مِنَ الْكَشْفِ عَنِ الشَّيْءِ، وَالثَّانِي جِنْسٌ مِنَ الْحَيَوَانِ، وَالثَّالِثُ دَالٌّ عَلَى خِفَّةٍ وَطَيْشٍ.
   - Cebel: مباعدة بخفة مع استرسالٍ تكرارٍ أو دوام (1): كالفصل
 **فرش**: döşemek / yaymak / döşek
   - EtymArab: beating of wings, spreading of wings, butterfly / to spread, to lay out / bedding, nest, bed / wife, husband / to make distinct, to separate / venitive / to cut (a piece from) / to put asunder, separate, split / to be single, isolated, be unique / to separate, set apart, secrete, select / to break the neck, tear the prey into pieces / to straddle, stand with one / chance, auspicious moment / holiday / cut / notch, incision, opening / to beat off, stripp off (fruits) / to prune a tree / to split, separate / to cut small, hash / to cut, cleave, sever / to flee, run away / to escape inadvertedly, slip, get lost / to split, cleave, break apart / to break the fast / separate, separated / to separate / to spread
@@ -4033,17 +4133,17 @@
   - Cebel: خلاء الظروف ونحوها مما يشغلها من مائع ونحوه: كالأرض المجدبة والأنية، والأودية
 **فرق**: ayrılmak / ayırmak / furkân
   - EtymArab: discrimination / to scatter, to disperse, to spread over a period of time / to separate, to distinguish, to cause to be distinct / to split / to discriminate / opening between the front teeth / group, faction / intensive (effect) / to cut (a piece from) / to put asunder, separate, split / to be single, isolated, be unique / to separate, set apart, secrete, select / to break the neck, tear the prey into pieces / to spread on the floor, spread out / to straddle, stand with one / chance, auspicious moment / holiday / cut / notch, incision, opening / to beat off, stripp off (fruits) / to prune a tree / to cut small, hash / to cut, cleave, sever / to flee, run away / to escape inadvertedly, slip, get lost / to split, cleave, break apart / to break the fast
-  - Mekâyîs: قَالَ:
-يُضِيءُ لَنَا شَحْمُ الْفَرُوقَةِ وَالْكُلَى
-وَالْفَرُوقُ: مَوْضِعٌ، كُلُّ ذَلِكَ شَاذٌّ عَنِ الْأَصْلِ الَّذِي ذَكَرْنَاهُ.
+  - Mekâyîs: (فَرَقَ) الْفَاءُ وَالرَّاءُ وَالْقَافُ أُصَيْلٌ صَحِيحٌ يَدُلُّ عَلَى تَمْيِيزٍ وَتَزْيِيلٍ بَيْنَ شَيْئَيْنِ.
   - Cebel: فصل بعض شيء أو أشياء من بعضها الآخر فصلًا واصلًا إلى العمق: كالفرق بين النخلتين، والعرفين، والشعر وهو واصل إلى المنبت
 **فره**: sevinç / neşe / sevinçli
   - EtymArab: ... / to be good-looking, be accomplished, be active
+  - Mekâyîs: (فَرِهَ) الْفَاءُ وَالرَّاءُ وَالْهَاءُ كَلِمَةٌ تَدُلُّ عَلَى أَشَرٍ وَحِذْقٍ.
   - Cebel: كمال طاقة الحي في ما يراد منه أو يراد هو له: كنشاط الدابة في السير مع القوة عليه، وحُسن الجارية (الأمة)، والحِذْق بالشيء والنشاط والأشر للرجل
 **فري**: yırtmak / kesmek / iftirâ
   - EtymArab: to cut, to chop, to tear up / to acquire riches / to fabricate, to feign, to forge, to invent / inchoative (> tr.) / to cut (a piece from) / to put asunder, separate, split / to be single, isolated, be unique / to separate, set apart, secrete, select / to break the neck, tear the prey into pieces / to spread on the floor, spread out / to straddle, stand with one / chance, auspicious moment / holiday / cut / notch, incision, opening / to beat off, stripp off (fruits) / to prune a tree / to split, separate / to cut small, hash / to cut, cleave, sever / to flee, run away / to escape inadvertedly, slip, get lost / to split, cleave, break apart / to break the fast
 **فزز**: korkmak / ürpermek
   - EtymArab: ... / to unsettle, dislodge, frighten, disturb / to overcome / to ooze
+  - Mekâyîs: (فَزَّ) الْفَاءُ وَالزَّاءُ أُصَيْلٌ يَدُلُّ عَلَى خِفَّةٍ وَمَا قَارَبَهَا.
   - Cebel: نهوض أو انبعاث بضغط أو إثارة وخفة (1): كنهود الثدي بضغط قُوَى البدن، وكانبعاث الظبي بفَزَع وخفة، وشأن الفَزّ كذلك، وكانبعاث الشخص عن موضعه بإزعاج
 **فزع**: korku / dehşet / korkmuş
   - EtymArab: ... / to be frightened, be afraid, take fright
@@ -4051,24 +4151,30 @@
   - Cebel: ثَوَرَانُ البدن بجملته فَجأَة مُفَارِقًا المكانَ الذي ينبسط عليه (لِشَيْءٍ أثاره): كالذي يهبّ من نومه فَجْأة أو مَذْعورًا
 **فسح**: genişletmek / genişlik
   - EtymArab: to be wide, to be spacious, to be roomy, to make room, clear open space / to pass over
+  - Mekâyîs: (فَسَحَ) الْفَاءُ وَالسِّينُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى سَعَةٍ وَاتِّسَاعٍ.
   - Cebel: اتساع في أثناء مكان مشغول أو يُشْغَل: كالأماكن المذكورة
 **فسد**: bozulmak / kötüleşmek / bozgunculuk
   - EtymArab: ... / to corrupt, spoil, decay, fall into disorder, be perverted, be wicked / to make trouble
+  - Mekâyîs: (فَسَدَ) الْفَاءُ وَالسِّينُ وَالدَّالُ كَلِمَةٌ وَاحِدَةٌ، فَسَدَ الشَّيْءُ يَفْسُدُ فَسَادًا وَفُسُودًا، وَهُوَ فَاسِدٌ وَفَسِيدٌ.
   - Cebel: ذهابُ نفع الشيء المقصود منه (أي تلفه وهلاكه) لحِدَّة ضارّة تَسْري في أثنائه؛ كالجدْب في الأرض (الأرض الجدبة: الصُلْبة التي لا نبات فيها)، وكذا إفساد المال بإنفاقه في ما لا نفع منه، وكذا إذهاب قوة الصبي بالغِيلة كما جاء في الحديث عن الغَيل "إنه لَيُدرك الفارس فيدعثرُهُ "أي يَصْرَعُه لوَهَنه وارْتخاء قُوَّته [انظر ل دعثر]
 **فسر**: açıklamak / açıklama
   - EtymArab: explanation, interpretation / to explain, to interpret, to explicate, to elucidate
+  - Mekâyîs: (فَسِرَ) الْفَاءُ وَالسِّينُ وَالرَّاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى بَيَانِ شَيْءٍ وَإِيضَاحِهِ.
   - Cebel: كشف ما في أثناء الشيء بصفائه وشَفِّه عما فيه: ككشف الأشياء العالقة في أثناء البول ومعرفة حال صاحبه بذلك
 **فسق**: itaatten çıkmak / günah işlemek / sapıtmak / fasıklık
   - EtymArab: ... / the old expression fasaqat il-ruṭabaẗu ‘the fresh, ripe-soft date emerged out of its skin / disobedience / breaking away from social norms / deserting the community
+  - Mekâyîs: (فَسَقَ) الْفَاءُ وَالسِّينُ وَالْقَافُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْفِسْقُ، وَهُوَ الْخُرُوجُ عَنِ الطَّاعَةِ.
   - Cebel: خروج الشيء عن غلافه (حَدِّه) أو حَيّزه لحدّةٍ أو فساد: كحال تلك الفَواسق في طبائعها وما يصدر عنها: الفأرُ يفسد المأكولات ويَقْرِض غيرها، والغراب يَنْهَشُ ظَهْرَ البعير الدبِر، والحُدَيَّا تَخطَف وربا تفعل كالغراب، والكلب يعقر، والعقرب يلدغ بسُمه
 **فشل**: başarısızlık / bozgun
   - EtymArab: ... / to be weak, be lazy / to be faint-hearted, be cowardly / to fail
+  - Mekâyîs: (فَشَلَ) الْفَاءُ وَالشِّينُ وَاللَّامُ.
   - Cebel: اتساعٌ أو انتفاشٌ ظاهري مع فراغ أو نحوه وراءه: كالسِتْر باطنه هواء أو كالهواء، والفيشلة تنتفخ ولا صلابة في داخلها، وكذا المُكسِل يسترخي، والذي يتزوج في الغرائب يتسع ويمتد إلى هناك وليس لوجوده حساب أو قيمة لدي (نساء) قومه، كذلك الأمر في المُكْسل إلخ
 **فصح**: açık konuşma / açık
   - EtymArab: to be clear, good, pure (Arabic) / to be eloquent / Passover / Easter / milk divested of the froth / breaking of the dawn light / 1 breaking of the dawn light / 2 to be eloquent, express o.s. clearly / clarity, purity / eloquence / to pass over, spring over / walk, promenade, stroll, ride, drive, outing, excursion / to appear in all its splendour (dawn) / to be divested of the froth (milk) / to use clear language, be eloquent / purity
   - Mekâyîs: (فَصَحَ) الْفَاءُ وَالصَّادُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى خُلُوصٍ فِي شَيْءٍ وَنَقَاءٍ مِنَ الشَّوْبِ.
   - Cebel: خلوص الشيء واضحًا أو صافيًا في أحكم حالاته لذهاب ما يغشاه: كاللبن الموصوف بعد اللِبأ، والبول بعد العَكر
 **فصل**: ayırmak / bölmek / hüküm verme / fasıl
+  - Mekâyîs: (فَصَلَ) الْفَاءُ وَالصَّادُ وَاللَّامُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى تَمْيِيزِ الشَّيْءِ مِنَ الشَّيْءِ وَإِبَانَتِهِ عَنْهُ.
   - Cebel: تميّز الشيء عن غيره مع تمامٍ أو ما هو من بابه: كتميّز كلٍّ من عُضْويَ المَفْصِل، وكلٍّ من أعضاء الجَزور، وفي تَفْصِل الخَرَزة بين اللؤلؤتين
 **فصم**: kırmak / koparmak
   - EtymArab: to crack, to subside, to split without completely separating, (of a house) to collapse / (of rain) to abate, (of a favour) to be withdrawn
@@ -4076,6 +4182,7 @@
   - Cebel: تفكك باطن الشيء مع بقاء التئام ظاهره: كالبيت المنهدم ذهب اشتداده وانتصابه مع بقاء الجلود أو نحوها مما بني به، وكالدرة المنصدعة مع بقاء تماسكها ظاهرًا
 **فضح**: rezil etmek / ayıplamak
   - EtymArab: ... / to expose, uncover, subject to shame, scandalise, give a bad name to, defame
+  - Mekâyîs: (فَضَحَ) الْفَاءُ وَالضَّادُ وَالْحَاءُ كَلِمَتَانِ مُتَقَارِبَتَانِ تَدُلُّ إِحْدَاهُمَا عَلَى انْكِشَافِ شَيْءٍ، وَلَا يَكَادُ يُقَالُ إِلَّا فِي قَبِيحٍ، وَالْأُخْرَى عَلَى لَوْنٍ غَيْرِ حَسَنٍ أَيْضًا.
   - Cebel: انكشافٌ عامٌّ أو واسع بسبب اللون السافر اللافت: كضوء الصبح يكشف الأشياء، والألوان المذكورة تكشف الحال وتُعرف وتُميز
 **فضض**: gümüş / dağıtmak
   - EtymArab: ... / layers of rock lying one on top of another / to separate, break open, scatter, rock breakage / silver (said to be broken from rocks) / to disperse / to give generously / (of water) gushing
@@ -4094,6 +4201,7 @@
   - Cebel: خروج الشيء أو نفاذه أول أمره شاقًّا ما فوقه بضغط أو بما له معناه: كطلوع الناب، وبدء البئر، والبثور، والعنب، والكمأة، ونبات الوسمي، وكلها فيه الشق وقيد الأَوّلية
 **فظظ**: kaba / katı
   - EtymArab: ... / thick, tarnished matter taken from a camel
+  - Mekâyîs: (فَظَّ) الْفَاءُ وَالظَّاءُ كَلِمَةٌ تَدُلُّ عَلَى كَرَاهَةٍ وَتَكَرُّهٍ.
   - Cebel: نفاذ بضيق وغلظ وكراهة (1): كذلك الماء بالاعتصار وهو كريه، وكذلك البول وماء الفحل، وكذلك الخيط يُدخَل في خُرْت الإبرة بمشقة ومحاولات
 **فعل**: iş yapmak / eylem / fi'il / yapmak / fiil
   - EtymArab: ... / to act, do, work, labour, toil
@@ -4101,6 +4209,7 @@
   - Cebel: نفاذ أو مخالطة مادّية عنيفة أو جادّة (قَطْع أو فك أو حَمْل ثقل أو تحريك
 **فقد**: kaybetmek / yitirmek
   - EtymArab: to fail to find, lose, be deprived / to mislay / to miss / to seek, look for, search s.th. / to examine, study, inspect, investigate / to lose, loss / to seek, to search, to research / to inspect
+  - Mekâyîs: (فَقَدَ) الْفَاءُ وَالْقَافُ وَالدَّالُّ أُصَيْلٌ يَدُلُّ عَلَى ذَهَابِ شَيْءٍ وَضَيَاعِهِ.
   - Cebel: غياب شيء خطير القَدْر من جوف أو حوزة: كالعقل من الرأس في حالة السكر عن الفَقَد، وكغياب الولد أو الزوج من الحوزة: {قَالُوا وَأَقْبَلُوا عَلَيْهِمْ مَاذَا تَفْقِدُونَ (71) قَالُوا نَفْقِدُ صُوَاعَ الْمَلِكِ} [يوسف: 71، 72]
 **فقر**: yoksulluk / yoksul
   - EtymArab: ... / vertebra / breaking of vertebra / calamity / want, lack s.th., poverty, the poor, needy / to long for / (1) needy person, pauper, poor, (2) begging dervish, Sufi / to be or become needy
@@ -4108,6 +4217,7 @@
   - Cebel: فراغ نافذ في العمق يسترسل امتدادًا أو دوامًا: كفِقار الظهر فهي عظمة لكن تخترقها قناة من أولها إلى آخرها، وكتلك الآبار النافذ بعضها إلى بعض، والقناة التي في باطن الأرض، وكفَتْحة الرأس في القميص ينفذ منها الرأس ليخترق البدنُ سائرَ القميص، وكثُقْب الخَرَزَة وهما دائمان
 **فقع**: kabarcık / kabarmış
   - EtymArab: ... / truffle / brightness of white or yellow / to pop, explode, bubbles / devastating calamity / poverty / to split, cleave, open / to burst
+  - Mekâyîs: (فَقَعَ) الْفَاءُ وَالْقَافُ وَالْعَيْنُ.
   - Cebel: رِقّة ظاهر الشيء المتكور أو لمَعانُه مع خلو جوفه أو رخاوته التي تشبه الخلو: كالكمأة المذكورة (رخاوة الجوف من باب الفراغ)، وكالفقاقيع
 **فقه**: bilgi / anlayış / âlim / anlamak / fıkıh
   - EtymArab: to understand, to learn, to acquire knowledge / comprehension
@@ -4115,6 +4225,7 @@
   - Cebel: وصول إلى حقيقة باطن الشيء: كما يعرف الفحل حال باطن الناقة
 **فكر**: düşünce / düşünme / düşünmek
   - EtymArab: ... / thought, reflection, idea, to think, reflect
+  - Mekâyîs: (فَكَرَ) الْفَاءُ وَالْكَافُ وَالرَّاءُ تَرَدُّدُ الْقَلْبِ فِي الشَّيْءِ.
   - Cebel: ترتيب المعاني الذهنية (الجزئية) وتقليبها للوصول إلى ما تؤدي إليه: فهذا معى عبارة أبي هلال وهي أوضحها وأقربها إلى معنى الفكر
 **فكك**: çözmek / kurtarmak / çözülme
   - Mekâyîs: (فَكٌّ) الْفَاءُ وَالْكَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَفَتُّحٍ وَانْفِرَاجٍ.
@@ -4137,11 +4248,11 @@
   - Cebel: ارتفاعٌ أو نُتُوء مع صلابة واستدارة: كفَلْكَةِ المِغْزَل، والأرض، وكالنتوء المحيط بالزور، وتَفْليك ثدي الجارية
 **فلن**: falan / şu kişi / ön ad
   - EtymArab: ... / The forms fulān , f. fulānaẗ , and the abbreviations fulu and fulā are derived from this (what should be described as) hypothetical root
+  - Mekâyîs: (فَلَنَ) الْفَاءُ وَاللَّامُ وَالنُّونُ كِنَايَةٌ عَنْ كُلِّ أَحَدٍ.
   - Cebel: لفظ يستعمل كناية عامَّة عن اسم فرد من الناس أو غيرهم {لَيْتَنِي لَمْ أَتَّخِذْ فُلَانًا خَلِيلًا} [الفرقان: 28]
 **فند**: akıl kusuru / boş söz
   - EtymArab: ... / branch, branch out, faction / to be weak of mind or body, become senile / to lie / to refute, dispute / to err / to fall into factions, take refuge
-  - Mekâyîs: (فَنَدَ) الْفَاءُ وَالنُّونُ وَالدَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ثِقَلٍ وَشِدَّةٍ،
-وَيُقَالُ بَعْضُهُ عَلَى بَعْضٍ.
+  - Mekâyîs: (فَنَدَ) الْفَاءُ وَالنُّونُ وَالدَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ثِقَلٍ وَشِدَّةٍ، وَيُقَالُ بَعْضُهُ عَلَى بَعْضٍ.
   - Cebel: نفاذ بعض قوام الجرم منه، ويلزم ذلك ضعفه: كفِنْد الجبل منه، وكالغصن من الشجرة
 **فنن**: sanat / türlü / sanatlar
   - EtymArab: ... / branches of a tree, locks of hair / variety, type, variation on a theme, types of expression, people of various backgrounds
@@ -4149,20 +4260,26 @@
   - Cebel: امتداد تشعبي أو متزايد (فَرْع عن فَرْع) مع دقة أو رِقّة (1): كالفَنَن يمتد من الغصن الذي يمتد من ساق الشجرة وكلٌّ أدَقُّ مما قبله، وكالغصن والشعر الموصوفين وامتدادهما إلى رقة: {ذَوَاتَا أَفْنَانٍ} فهذا في شجر الجنتين
 **فني**: yok olmak / sona ermek
   - EtymArab: ... / to perish, expire, pass away, come to an end / large, open courtyard
+  - Mekâyîs: (فَنَيَ) الْفَاءُ وَالنُّونُ وَالْحَرْفُ الْمُعْتَلُّ.
 **فهم**: anlamak / kavramak
   - EtymArab: ... / to understand, comprehend
+  - Mekâyîs: (فَهَمَ) الْفَاءُ وَالْهَاءُ وَالْمِيمُ عِلْمُ الشَّيْءِ، كَذَا يَقُولُونَ أَهْلُ اللُّغَةِ.
   - Cebel: اضطمامُ القلب على معنى نفذ إليه من شيء خارجي كما في عملية الفهم (وفي [تاج] عدة تعريفات للفهم)
 **فوت**: kaçırmak / geçmek
   - EtymArab: ... / to bypass, miss, escape the notice of, ignore / to accuse falsely / to vary greatly, be flawed / to be inadequate
+  - Mekâyîs: (فَوَتَ) الْفَاءُ وَالْوَاوُ وَالتَّاءُ أُصَيْلٌ صَحِيحٌ يَدُلُّ عَلَى خِلَافِ إِدْرَاكِ الشَّيْءِ وَالْوُصُولِ إِلَيْهِ.
   - Cebel: انفصال أو تباعد بين ما هو ملتحم الأصل: كالإِصْبع من أختها
 **فوج**: grup / topluluk / kalabalık
   - EtymArab: ... / group of people / running fast / clearing between two heights / waft of fragrance / (of a she-camel) being fat
+  - Mekâyîs: (فَوَجَ) الْفَاءُ وَالْوَاوُ وَالْجِيمُ كَلِمَةٌ تَدُلُّ عَلَى تَجَمُّعٍ.
   - Cebel: تجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما
 **فور**: hemen / çabucak
   - EtymArab: ... / to boil over, gush out / to spread smells / to erupt with anger / (of heat) rising, to increase in intensity, swelling / immediacy
+  - Mekâyîs: (فَوَرَ) الْفَاءُ وَالْوَاوُ وَالرَّاءُ كَلِمَةٌ تَدُلُّ عَلَى غَلَيَانٍ، ثُمَّ يُقَاسُ عَلَيْهَا.
   - Cebel: جَيَشَانُ نَحو الماء (نافذًا مما يضمه) إلى أعلى بقوة واندفاع - كما هو واضح في فوران الماء والقِدْر {وَفَارَ التَّنُّورُ} [هود: 40، المؤمنون: 27]، {سَمِعُوا لَهَا شَهِيقًا وَهِيَ تَفُور} [الملك: 7]
 **فوز**: kurtuluş / başarı / kazanç
   - EtymArab: ... / perilous desert, a place of danger / to attain one
+  - Mekâyîs: (فَوَزَ) الْفَاءُ وَالْوَاوُ وَالزَّاءُ كَلِمَتَانِ مُتَضَادَّتَانِ.
   - Cebel: عبور مسافة قفر جَافّة بالغة الامتداد: فكذلك الفَلَاة (ويلحظ أن الاسم على صيغة اسم المكان فهي موضع ذلك كأن تأويل اسمها ما يقتضي العبور أي الاستعداد له
 **فوض**: bırakmak / teslim etmek
   - EtymArab: to submit to, to authorise / confusion, to be disorderly, anarchy / negotiation, exchange of ideas, consultation / also said to include: making clear the discourse
@@ -4193,7 +4310,7 @@
   - Cebel: انتبار الجرم أي نتوءه بلا صلابة في أثنائه: كلحم الورك وهو تجمع رخو، وكتجمع التراب، ولحظوا في الفيل ضخامته مع عدم افتراسه كالسباع
 **قبح**: çirkinlik / çirkin
   - EtymArab: ... / to be or become bad, evil, foul, ugly, unseemly / to chase away, repulse, curse
-  - Mekâyîs: وَمِمَّا شَذَّ عَنِ الْأَصْلِ وَأَحْسَبُهُ مِنَ الْكَلَامِ الَّذِي ذَهَبَ مَنْ كَانَ يُحْسِنُهُ، قَوْلُهُمْ كِسْرُ قَبِيحٍ، وَهُوَ عَظْمُ السَّاعِدِ، النِّصْفُ الَّذِي يَلِي الْمِرْفَقَ.
+  - Mekâyîs: (قَبَحَ) الْقَافُ وَالْبَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى خِلَافِ الْحُسْنِ، وَهُوَ الْقُبْحُ.
   - Cebel: نتوء شيء غليظ (الجِرم أو الوقع على النفس) يُفْقِدُ ظاهرَ الشيء استواءَه: كعَظْم القبيح، وكالبَثْر
 **قبر**: mezar / kubûr / kabir
   - EtymArab: to bury, inter, entomb / grave, tomb / capers ( bot. ) / lark ( zool. )
@@ -4260,7 +4377,7 @@
   - Cebel: وجود الشيء في الحيز متاحا مهيأً للتناول أو الوصول إليه
 **قرح**: yara / sıkıntı / yaralı
   - EtymArab: ... / wound, sore, ulcer, skin eruption, abscess / to invent, initiate, suggest / intellect, the innate disposition / pure
-  - Mekâyîs: وَالْأَصْلُ الثَّانِي: الْمَاءُ الْقَرَاحُ: الَّذِي لَا يَشُوبُهُ غَيْرُهُ.
+  - Mekâyîs: (قَرَحَ) الْقَافُ وَالرَّاءُ وَالْحَاءُ ثَلَاثَةُ أُصُولٍ صَحِيحَةٍ: أَحَدُهَا يَدُلُّ عَلَى أَلَمٍ بِجِرَاحٍ أَوْ مَا أَشْبَهَهَا، وَالْآخَرُ يَدُلُّ عَلَى شَيْءٍ مِنْ شَوْبٍ، وَالْآخَرُ عَلَى اسْتِنْبَاطِ شَيْءٍ.
   - Cebel: قَشْرٌ أو نحوه للظاهر الصحيح يخرج به ما استقر في باطن الشيء
 **قرد**: maymun
   - EtymArab: ... / balls of tangled wool, to coagulate / ticks, to remove ticks / to deceive / to subdue, humiliate / monkey / to earn one
@@ -4283,12 +4400,11 @@
   - Cebel: رَقٌّ ينبسط ممتدًّا يُخْرق بسهم أو يُؤَثَّر فيه بما يشبه ذلك وهو الكتابة بقلم له سن دقيق يرسم فيه
 **قرع**: vurmak / çalmak
   - EtymArab: ... / boldness / to knock, strike / to reproach / to fight / to cast a lot, calamity, disaster and adversity / pumpkin
-  - Mekâyîs: وَمِمَّا اتَّسَعُوا فِيهِ وَالْأَصْلُ مَا ذَكَرْنَاهُ: الْقَرِيعَةُ، وَهُوَ خَيْرُ بَيْتٍ فِي الرَّبْعِ، إِنْ كَانَ بَرْدٌ فَخِيَارُ كِنِّهِ، وَإِنْ كَانَ حَرٌّ فَخِيَارُ ظِلِّهِ.
+  - Mekâyîs: (قَرَعَ) الْقَافُ وَالرَّاءُ وَالْعَيْنُ مُعْظَمُ الْبَابِ ضَرْبُ الشَّيْءِ.
   - Cebel: تجرد ظاهر الشيء مما يكسوه عادة - مع صلابته: كالتُرْس (كان بعض أنواعه على الأقل جِلْدًا أي ذا شعر في الأصل)، وكساحة الدار لا بناء عليها، وأعلى الطريق منكشف، وكالأرض وجِلْد الرأس والكروش المذكورة لا نبات ولا شعر عليها، وكقاع البئر الذي لا ماء يغطيه
 **قرف**: iğrenç / kötü şey
   - EtymArab: ... / tree bark, to peel off the bark / to kill, eradicate / to earn, earnings / to commit a sin, commit a crime, slander, accuse / to be worthy of s.th. / to be loatsome
-  - Mekâyîs: (قَرَفَ) الْقَافُ وَالرَّاءُ وَالْفَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُخَالَطَةِ الشَّيْءِ
-وَالِالْتِبَاسِ بِهِ وَادِّرَاعِهِ.
+  - Mekâyîs: (قَرَفَ) الْقَافُ وَالرَّاءُ وَالْفَاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مُخَالَطَةِ الشَّيْءِ وَالِالْتِبَاسِ بِهِ وَادِّرَاعِهِ.
   - Cebel: قِشْر الشيء أو جلده أو غلافه اللاصق به: كلحاء الشجر والرُمّان، وقشرة الجرح، والمخاط اليابس
 **قرن**: boynuz / çağ / nesil
   - Mekâyîs: (قَرَنَ) الْقَافُ وَالرَّاءُ وَالنُّونُ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا يَدُلُّ عَلَى جَمْعِ شَيْءٍ إِلَى شَيْءٍ، وَالْآخَرُ شَيْءٌ يَنْتَأُ بِقُوَّةٍ وَشِدَّةٍ.
@@ -4299,9 +4415,11 @@
   - Cebel: تجمُّع ما شأنه الحركة - بكثافة في حَيّز محدد (الكثافة تكون كثرة وتكون اكتنازًا وتركّزًا): كتجمع الماء في مجتمَعه، والجِرّة في الشِدْق والناس والنمل في القارية والقَرْية
 **قسر**: zorlamak
   - EtymArab: ... / to compel, force / lion, hunter, archer, brave / first part of the night / sturdy camels. ▪ (BAH2008:) The word for ‘lion
+  - Mekâyîs: (قَسَرَ) الْقَافُ وَالسِّينُ وَالرَّاءُ يَدُلُّ عَلَى قَهْرٍ وَغَلَبَةٍ بِشِدَّةٍ.
   - Cebel: شدة مع عِظَم يلزمها الغَلَب والقهر - كالقيسريّ من الإبل الموصوف، والحمضة المذكورة تنجذب الإبل إلى رعيها انجذابًا قويًا إذا ملّت من رعي الخُلّة [يلحظ قوله "حراص عليه "وينظر ل حمض، حلل] ويشهد لقوة إقبال الإبل على هذه الحمضة قول جبيهاء الأشجعي يصف عِظَمَ سِمَنِ مِعْزًى: (لجاءت كأن القَسْوَرَ الجَوْنَ بَجَّها عساليجُه) فهذا الإقبال انجذاب عظيم من باب الإكراه - كما نقول: لا يقاوَم
 **قسس**: rahip / papaz
   - EtymArab: ... / priest / wise people / seasoned camel drivers / to seek s.th. in the dark, go after, enquire / to listen in, a learned person, a priest
+  - Mekâyîs: (قَسَّ) الْقَافُ وَالسِّينُ مُعْظَمُ بَابِهِ تَتَبُّعُ الشَّيْءِ، وَقَدْ يَشِذُّ عَنْهُ مَا يُقَارِبُهُ فِي اللَّفْظِ.
   - Cebel: تتبع أو متابعة بدأب واستقصاء (1) كما يتتبع الآكل
 **قسط**: adalet / hakkı yiyen
   - EtymArab: ... / justice, equity / justice, equity, to do justice, deny justice / balance, measure, share / instalment, to pay by instalments
@@ -4320,7 +4438,7 @@
   - EtymArab: ... / shudder, tremor, shiver / to tremble, shudder / (of earth) to dry and crack up, (of skin) to become rough and hard, become wrinkled / cucumber
   - Cebel: تقبُّضُ ظاهر الجلد مع جَفافه أو خشونته: كظاهر جلد القِثّاء والجِلد
 **قصد**: niyet / yönelme / amaçlar
-  - Mekâyîs: فَالْأَصْلُ: قَصَدْتُهُ قَصْدًا وَمَقْصَدًا.
+  - Mekâyîs: (قَصَدَ) الْقَافُ وَالصَّادُ وَالدَّالُ أُصُولٌ ثَلَاثَةٌ، يَدُلُّ أَحَدُهَا عَلَى إِتْيَانِ شَيْءٍ وَأَمِّهِ، وَالْآخَرُ عَلَى اكْتِنَازٍ فِي الشَّيْءِ.
   - Cebel: توسط الشيء في حاله أو توسطه بالأَمّ والاتجاه
 **قصر**: kısaltmak / köşk
   - Mekâyîs: (قَصَرَ) الْقَافُ وَالصَّادُ وَالرَّاءُ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا يَدُلُّ عَلَى أَلَّا يَبْلُغَ الشَّيْءُ مَدَاهُ وَنِهَايَتَهُ، وَالْآخَرُ عَلَى الْحَبْسِ.
@@ -4346,12 +4464,13 @@
   - Cebel: قطع شيء غَضّ لكنه ملتئم
 **قضض**: sert / kuru / kum
   - EtymArab: ... / to swoop down, descend, charge / to collapse, tumble / pebble, to be pebbled / to pierce, bore / to become dusty / to be rough
-  - Mekâyîs: وَأَصْلُهُ الْقِضَّةُ، وَهِيَ أَرْضٌ مُنْخَفِضَةٌ تُرَابُهَا رَمْلٌ، وَإِلَى جَانِبِهَا مَتْنٌ.
+  - Mekâyîs: (قَضَّ) الْقَافُ وَالضَّادُ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا هُوِيُّ الشَّيْءِ، وَالْآخَرُ خُشُونَةٌ فِي الشَّيْءِ، وَالْآخَرُ ثُقْبٌ فِي الشَّيْءِ.
   - Cebel: اختراقُ صُلْبٍ أو كَسْرُه تفتيتًا أو نحوه (1): كما هو
 **قضي**: hüküm vermek / bitirmek / kaza / hükmetmek / karar
   - Mekâyîs: (قَضِيَ) الْقَافُ وَالضَّادُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِحْكَامِ أَمْرٍ وَإِتْقَانِهِ وَإِنْفَاذِهِ لِجِهَتِهِ، قَالَ اللَّهُ تَعَالَى: {فَقَضَاهُنَّ سَبْعَ سَمَاوَاتٍ فِي يَوْمَيْنِ} [فصلت: 12] أَيْ أَحْكَمَ خَلْقَهُنَّ.
 **قطر**: damla / boru / katran
   - EtymArab: to fall or flow in drops, drip, dribble, trickle / drops ( hence also: † a little bit) / pipette / to filter, filtrate / to refine / to distill / file, train (of camels), caravan / (railroad) train / railroad / long series (e.g., of occurrences) / to line up (camels in single file and connect them with halters, form a train (of camels) / to couple (vehicles) / to tow (ship, trailer, glider) / to come in successive groups, crowd, throng, flock ( ʔilà or ʕalà to s.o., to a place) / region, quarter / district, section / tract of land / zone / country, land / diameter (of a circle) / diagonal / calibre, bore (of a tube) / Qatar (country in eastern Arabia) / aloes-wood / censer / tar, pitch / stocks (device for punishment) / Qattara (depression in the Eg W desert) / to overthrow violently\with vehemence, throw s.o. down on one of his sides / to sew (a garment, piece of cloth) / (H) to run away, (St) travel fast / to go away into the country, and hasten / enlever qc tout à coup et se sauver / je ne sais qui l / to begin to dry (plant), (BK) commencer à sécher sur pied / to be(come) angry (s.o.) / to be in foal (she-camel) and show this by raising the tail and the head (she-camel) / se sauver, s / (molten) brass, copper / in a lump, in bulk / striped stuff / sailing-boat / blackish and poisonous\venomous snake / calamint (plant) / mule / whore, hooker / savage\vicious dog / 1 to drip, dribble, trickle / 2 to travel around / 3 molten copper / 4 gum from a certain tree / 5 tar / 6 to come in successive groups, crowd, flock / 7 train of camels, caravan / 8 quarter, district, region, land / to drip, drop, trickle / to tie together, line up in a row / smoke, to fumigate / side, flank, region, zone / diameter / to run away, hasten / to drip , drop , trickle / lining up in a row, one after the other / to fall in drops / resin (of a certain tree), incense / resin (of a certain tree) / viscous, dripping substance / to come in successive groups, crowd, throng, flock / dropping in / to tie together / side, flank, region, etc. / fabriquée à Qaṭar, endroit d / dripping like pitch / dripping / to tie together , line up in a row / smoke / to tie / trailer / smoke , to fumigate / to drip / dust / aroma, smell (of s.th. fried or cooked) / smoke, fumigation / dripping, dropping / incense / fumigation / distillation / Qaṭar / sorte d / (molten) copper, brass / side , flank , region , zone / side, flank / region, section, zone / centre (of a circle) / to run away , hasten / to volatilise, dissolve like smoke / into the country / feet / sur pied / to begin to dry (plant) / motorboat / to tie together, tow (a ship) / the towed one / resinous oil from the juniper, savin, pine, or cedar tree / to filter, refine, distill / dropping, dripping, trickling / file, train, row / to line up (camels), tow (ships, etc.) / drops / a little bit / trifle, paltry things, objects of little or no value / dropping behind/after ( ʕan ) s.o. / lagging behind / dropping on ( ʕalà ) s.o. / to drop in, appear unexpectedly / he pours in for me with the pipette / he / to be stingy / snake the poison of which drips from its mouth through its excessive quantity / Qatar / Qattara (depression) / to flow down, fall down, sink / to swoop, rush down / cedar, juniper / cedar-oil / pitch / to drip, exude liquid / sap, pitch / causing s.th. to drip, drop / to line up (camels in single file and connect them with halters), to tow (a ship, etc.) / to drip, trickle, fall in drops / to tie, bind together / knot, joint, chain / id. / train / stock (for punishment) / to sew together / to track s.o. / to tie, knot / to gather / gathering, forming / to tie, bind together (and thus form groups) / to drop, come in drops / side / to walk side by side / region, zone / diameter, diagonal / to fumigate / emphatic / aroma, smell of s.th. fried or cooked / smoke, to emit smoke / to emit smoke\fume / to emit fume, burn incense / to fumigate, emit fume / gathering / forming groups / binding together / tar / the (viscous) dripping substance / resin, resinous oil / resinous juice of the dragon / stocks / tool to tie together (and line up in a row) / to drop / anything that drops or flows / to run away / the towed one (boat) / (boat) with many ropes / dto. / donkey / to throw down vehemently / “Bring me lumps of iron!” Then, when he had made even the space between the two sides of the mountain, he said [to them], “Blow!”, till when he made it a fire, he said, “Bring me molten copper to pour over it!” / And unto Solomon (We gave) the wind, whereof the morning course was a month / Hadn / striped stuff, (BK) sorte d / lac, gum / glue, resin / cement, mastic cement / mastic / birch sap / beestings / to shut in, enclose / knot, joint / difficult problem / chain / compulsion, force / by force / to tie, harness / to tie the halters of camels to dispose them in a file / to bind / to tie, tow / to bring in harvest / to reap, harvest / to tie the sheaves / to tie, bind together, join / to assemble, gather (troops, animals, goods), compose (a literary work), organize (work, protection, a battle) / to cluster, concentrate, be\make compact, consolidate / to gather, form (clouds, smoke) / to bind, bind up, bind together, tie up, knot, enclose / ( fig. ) to ensnare, contrive, conspire / knot / tas de fumier / to make (s.th.) smoke, burn (incense etc.), fumigate (with incense) / to make a sacrifice smoke, send s.th. up in smoke / to exhale a scent / to smoke / aloe-wood with which one fumigates / incense-altar / fumigant / ? / smell of cooked meat \ of aloes wood / incense, fumigation / smoke, thick fog / to rise, billow / to burn incense, let the incense rise / to burn on the altar / to perfume (clothes) with the smoke of burning aloeswood / smoke\odour of burning sacrifice, incense / incense altar / fragrance, spice / to bath in steam or in incense smoke / drop / gum / wood tar / oleum picinum / mastic (a gum) / box tree / birch / bitumen / molten brass / to force to do s.th. / ( fig. ) a little, a bit / trifle, paltry thing, (BK) objet de nulle valeur / what has poured thee ( lit. , made you drop / came dripping with you) upon us? / to lag behind / to arrive in drops , i.e., dribs and drabs, after s.o. / (H) to run away, (BK) enlever qc tout à coup et se sauver, (St) travel fast / to be(come) angry / to be in foal (she-camel) and show this by raising the tail and the head / dripping\dropping substances / resin, resinous juice made by cooking wood from the cedar, juniper, savin, pine or dragon blood tree / the viscous drops from Mecca / smoky / cedar resin / resin / Qaṭṭāraẗ / aromatic resin (*dripping sap) used for fumigation and sacrifices / sap, resin / cedar / aromatic resin / to burn aromatic resin (to offer a sacrifice) / smoke emitted by burnt resin (incense etc.) / aromatic resin (*dripping sap) / sirup / resin (of certain trees) / tractor, tractor truck / locomotive, engine / to tie (camels, mules, etc.) in a file, to make (beasts) march in a row / to tow / To tow, tie, bind together / to tie together, tow / train, file, row / many drops/animals / to tie, bind, etc. / the tracking one / subway car / rail car, diesel / the attached one / chains, stocks / to trail / Did anyone follow you? / to hitch, couple / to tie, bind, knot / walking side by side / district, section, part / either side of a man / climate, region / zone, region / celestial sphere / side, region, zone / tar, resin / to fumigate\perfume ( ṯawbahū one / turbidity, muddiness (of liquids, etc.) / lump of earth, earth whirled up, dust / resin, dragon / what exudes from the tree called ʔabhal [or juniper, or the species of juniper called savin (Juniperus Sabina), both of which have this name in the present day] and from the ʔarz [or pine-tree], and the like, when cooked, used for smearing [mangy] camels / processed resin, wood tar or pitch / viscous substance, originally processed by distillation / red-hot brass / confusion entre le /ʕ/ et le /q/ lors de l / resin, resinous juice (of various trees) / wood tar, pitch / to smear (a camel) with qaṭirān , tar (St: pitch) / place where pitch is boiled / perfume / sweet-smelling, aromatic / my luck is rotten ( lit. , dust\mud and tar) / she / produced pitch / to throw s.o. down on one of his sides ( said of a horse etc. ) / he thrusted\pierced him (with his spear) and threw\dashed him down on one of his sides / to fall on the side / to throw o.s. down from an elevated place / to throw ( bi‑ s.o.) on his side / on one of his sides / region, country, land / running away / taking away / I do not know who has taken it \ run away with it / he took the rest in a lump / a buying in bulk by guess or estimation / head held high / their raiment of pitch / their raiment of copper\brass in the utmost state of heat, or in a state of fusion / fabriquée à Qaṭar / Yemeni clothes / small to medium-sized vessel […], [h]istorically […] a smallish single-masted, decked sailcraft designed for speed rather than capacity / to begin to dry from below (plant) / holding his head high, with the penis dripping due to sexual arousal / muleteer
+  - Mekâyîs: (قَطَرَ) الْقَافُ وَالطَّاءُ وَالرَّاءُ هَذَا بَابٌ غَيْرُ مَوْضُوعٍ عَلَى قِيَاسٍ، وَكَلِمُهُ مُتَبَايِنَةُ الْأُصُولِ، وَقَدْ كَتَبْنَاهَا.
   - Cebel: نزول المائع أو انفصاله مبتعدًا عن مصدره نقطة بعد نقطة بتوال أي في أجزاء دقيقة مسترسلة
 **قطط**: kedi / keten
   - EtymArab: to cut, carve, trim, nib, sharpen / (n)ever / cat / to snip, clip, rip / edge of a cliff, rim of a hoof / to abate / enough, share, lot / written record / drizzle / to cut / to cut off, clip
@@ -4407,7 +4526,7 @@
   - EtymArab: to fry, bake, roast / alkali, base, lye ( chem. ) / taqliya, sauce made of garlic, coriander and melted butter / to hate, loathe, detest / to dislike, to hate, to shun, to desert, to boycott / to roast / to toss about / to climb / to burn, roast / to be hot, to burn / to burn, fry, roast
 **قمح**: buğday
   - EtymArab: to twist the neck / to be humbled, debased or forced into submission / (said of animals) to refuse to drink, to drink one
-  - Mekâyîs: وَمِمَّا شَذَّ عَنْ هَذَا الْأَصْلِ الْقَمْحُ، وَهُوَ الْبُرُّ.
+  - Mekâyîs: (قَمَحَ) الْقَافُ وَالْمِيمُ وَالْحَاءُ أُصَيْلٌ يَدُلُّ عَلَى صِفَةٍ تَكُونُ عِنْدَ شُرْبِ الْمَاءِ مِنَ الشَّارِبِ، وَهُوَ رَفْعُهُ رَأْسَهُ.
   - Cebel: اكتناز الشيء بما يضم في باطنه حتى يرتفع امتلاء
 **قمر**: ay
   - EtymArab: moon, moonlight / whiteness, greyness / to hunt / to win in gambling, to stake / to deceive
@@ -4422,16 +4541,18 @@
   - Cebel: تجمع الشيء في وعاء أو حيّز على غِلَظ وكَثَافة
 **قمع**: bastırmak / engellemek
   - EtymArab: to subdue, vanquish, tame, bridle / to abate / earlobes, heads / sty on the eye / dust storm / curved iron rod
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ، وَقَدْ يُمْكِنُ أَنْ يُجْمَعَ بَيْنَهُ وَبَيْنَ الْأَوَّلِ بِمَعْنًى لَطِيفٍ، وَذَلِكَ قَوْلُهُمْ: قَمَعْتُهُ: أَذْلَلْتُهُ.
+  - Mekâyîs: (قَمَعَ) الْقَافُ وَالْمِيمُ وَالْعَيْنُ أُصُولٌ ثَلَاثَةٌ صَحِيحَةٌ: أَحَدُهَا نُزُولُ شَيْءٍ مَائِعٍ فِي أَدَاةٍ تُعْمَلُ لَهُ، وَالْآخَرُ إِذْلَالٌ وَقَهْرٌ، وَالثَّالِثُ جِنْسٌ مِنَ الْحَيَوَانِ.
   - Cebel: ضَبْطٌ في حيز ومنعٌ عن الانتشار منه
 **قمل**: bit
   - EtymArab: ... / lice, to become louse-infested, dirty, (of people, plants and animals) become blackened / to increase in population / to be insignificant / grasshopper
+  - Mekâyîs: (قَمَلَ) الْقَافُ وَالْمِيمُ وَاللَّامُ كَلِمَاتٌ تَدُلُّ عَلَى حَقَارَةٍ وَقَمَاءَةٍ.
   - Cebel: شيء ممتص يَعْلَق
 **قنت**: boyun eğmek / dua / itaatkâr
   - Mekâyîs: (قَنَتَ) الْقَافُ وَالنُّونُ وَالتَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى طَاعَةٍ وَخَيْرٍ فِي دِينٍ، لَا يَعْدُو هَذَا الْبَابَ.
   - Cebel: احتواء باطن الشيء على رخاوة متمكنة فيه لا تفارقه - كحال السقاء الذي لا يتسرب منه الماء، وبذا يظل رِخوًا، والانقياد يكون من لين الباطن وعدم جساوته
 **قنط**: ümitsizlik / umudunu kesmek
   - EtymArab: ... / to stop talking / to be obedient, submissive, humble (before God), devoutness, piety, to ask God in prayer, pray
+  - Mekâyîs: (قَنَطَ) الْقَافُ وَالنُّونُ وَالطَّاءُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى الْيَأْسِ مِنَ الشَّيْءِ.
   - Cebel: احتواء (النفس) في باطنها على غلظ لاصق شديد لا منفذ فيه
 **قنطر**: köprü / kemer
   - EtymArab: arched bridge, arch, vault, arcade, viaduct, dam / kantar, weight of 100 raṭl / tremendous riches / centaury (Erythrea centauricum / bot. ) / 1 to tie together, arch / 2 to leave the desert and live in urbanized areas / 3 large amounts of money, sums and/or weights of various measures / 4 cunning person
@@ -4447,7 +4568,7 @@
   - EtymArab: to acquire, appropriate / hooked, acquiline (nose) / deep(-red), blood(-red)
 **قهر**: yenmek / zorlamak / kahhâr
   - EtymArab: ... / to conquer, subjugate, compel, subdue / to be scanty / to conquer, vanquish / the conquering one
-  - Mekâyîs: وَلَيْسَ يَبْعُدُ عَنِ الْأَصْلِ الَّذِي بُنِيَ عَلَيْهِ الْبَابُ.
+  - Mekâyîs: (قَهَرَ) الْقَافُ وَالْهَاءُ وَالرَّاءُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى غَلَبَةٍ وَعُلُوٍّ.
   - Cebel: إذابة قِوَام غضاضة الشيء ومرونته أو إذهابه بالتعريض لأقصى الحِدّة: كإسالة ماء اللحم بالتعريض للنار على ما وُصِفَ
 **قوب**: bir yerden çıkmak / gövde / kalça
   - EtymArab: ... / to dig, hollow out, uproot, break open, peel off / short span, a distance, to be quite near, imminent
@@ -4492,6 +4613,7 @@
   - Cebel: قلب الشيء على وجهه، ويلزمه انصباب محتواه متجمعا (1) بمرة (لا ينتقل أو يُنقل)
 **كبت**: alçaltmak / yıkmak / bastırmak
   - EtymArab: ... / knocking down, to crush, to humiliate, to supress
+  - Mekâyîs: (كَبَتَ) الْكَافُ وَالْبَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ مِنَ الْإِذْلَالِ وَالصَّرْفِ عَنِ الشَّيْءِ.
   - Cebel: قلبٌ أو صدٌّ تام - بصدْم ورَغْم - عن الوجهة الطبيعية أو المرادة كما في الكبت الحسيّ - وهو صدْم الوجه والأنف بالرغام، وكذلك الكبت المعنويّ المذكورين {أَوْ يَكْبِتَهُمْ} أي يخزيهم/ يهزمهم [ينظر بحر 3/ 48، 55] {إِنَّ الَّذِينَ يُحَادُّونَ اللَّهَ وَرَسُولَهُ كُبِتُوا كَمَا كُبِتَ الَّذِينَ مِنْ قَبْلِهِمْ} [المجادلة: 5] أُخْزُوا/ رُدُّوا مخذولين [نفسه 8/ 233]
 **كبد**: ciğer / zahmet / ağır yük
   - EtymArab: liver, the interior, heart, centre, the zenith / content / the earth / liver
@@ -4548,8 +4670,7 @@
   - Cebel: تراكمُ الشيء مُتلازبًا طبقاتٍ حتى يعلو
 **كرم**: cömertlik / şeref / cömert
   - EtymArab: vine(yard), grapes / (to be) noble, generous / to be generous, to be hiġ-minded, to be noble-hearted, to honour, to do favours, to treat with hospitality, obliging, beneficent, precious / (of land) to be fertile / thoroughbred, noble / vine and grapes / season of rain / be generous / is noble / generously / head of thigh bone (femur) turning in the hip bone / vine(yard) / nobleness, generosity / flexion des bras / relâchement, détente / tête de l / vertèbre / cou, nuque / maillon d / coude / vignoble / vigneron / tailler / cep de vigne / terre plantée en vignes, en pistachiers ou en figuiers (qui n / vigne / figuiers / vigne, jardin, avec des arbres, des fleurs, des légumes / verger, vignoble / jardin, kʔm ʔrry ‘vigne / rivaliser de générosité / être noble, généreux / donner beaucoup d / banquet offert par un groupe pour remercier et honorer un de ses membres ayant accompli un acte louable / être généreux envers / aumônes / saison des pluies / saison pluvieuse / être froid / alimentation, ration / interrompre, séparer, disperser / diviser un animal abattu / spend the rainy season, spend the winter, be of the preceeding year (wine) / be generous > yield rain / pluviam profundit (nubes) / beneficus, generosus fuit / yield rain / rainy season / spring (of water)
-  - Mekâyîs: (كَرَمَ) الْكَافُ وَالرَّاءُ وَالْمِيمُ أَصْلٌ صَحِيحٌ لَهُ بَابَانِ: أَحَدُهُمَا شَرَفٌ
-فِي الشَّيْءِ فِي نَفْسِهِ أَوْ شَرَفٌ فِي خُلُقٍ مِنَ الْأَخْلَاقِ.
+  - Mekâyîs: (كَرَمَ) الْكَافُ وَالرَّاءُ وَالْمِيمُ أَصْلٌ صَحِيحٌ لَهُ بَابَانِ: أَحَدُهُمَا شَرَفٌ فِي الشَّيْءِ فِي نَفْسِهِ أَوْ شَرَفٌ فِي خُلُقٍ مِنَ الْأَخْلَاقِ.
   - Cebel: رِقّة الشيء المتجمِّع ونقاؤه أو صفاؤه، مع قبول النفس له
 **كره**: hoşlanmamak / zorlama / zorluk
   - EtymArab: to be disgusted, detest, abhor, hate, dislike / to be repugnant, offensive, hateful, odious, detestable / to force, compel, coerce / vigour, boldness / hardship / to dislike, loathe, antipathy / to force / calamity / force / to be ill, be ill-tempered / to dislike, hate, be angered / to be distressed, be in depression / to sleep, be asleep, slumber / to be angry\embittered / être malade / avoir du dégoût / aversion / laid, vilain / haïr / aversion | compulsion, constraint, aversion / refuser | to decline / empêcher / to keep back / contraindre, forcer | to compel, constrain, force / être fier / haut du creux au bas de l / disprove, dislike / dislike / to hate / hatred / to anger / daze, depression, stupor / be in depression, be in a stupor / was distressed / suffering / be sad\displeased\annoyed, grieve / betrübt sein / be angry / Zorn, Ärger, Betrübnis / zornig sein, sich betrüben, traurig werden / anger / hassen, ablehnen, nicht wollen / be ill, be ill-tempered / be short / be proud / dislike, hate, be angered / be distressed, be in depression / be angry\embittered
@@ -4573,6 +4694,7 @@
 **كسو**: elbise / örtü
   - Cebel: سَتْر الشيء وتغطيته شمولًا بما هو كالغشاء
 **كشط**: sıyırmak / soymak
+  - Mekâyîs: (كَشَطَ) الْكَافُ وَالشِّينُ وَالطَّاءُ كَلِمَةٌ تَدُلُّ عَلَى تَنْحِيَةِ الشَّيْءِ وَكَشْفِهِ.
   - Cebel: نَزْعُ الغطاء الذي ينتشر على الشيء لازقًا به، أو كَشْفُه: كما يُكشَط الجِلْد عن المسلوخ والجُلُّ عن ظهر الفرس
 **كشف**: açmak / ortaya çıkarmak
   - EtymArab: to peel away, peel off, flay, scratch off
@@ -4623,7 +4745,7 @@
   - Cebel: عُرُوّ كثيفٍ غريبٍ ظاهرَ الشيء لازمًا له، ككَلَف اللون (4/1921) الموصوف
 **كلل**: yorgunluk / bitkinlik / yorgun düştü
   - EtymArab: to fatigue / the blunt side of a knife / to be childless, to die without leaving children to inherit / to be a burden on s.o. / head gear, crown, to surround
-  - Mekâyîs: (كَمْ) الْكَافُ وَالْمِيمُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى غِشَاءٍ وَغِطَاءٍ.
+  - Mekâyîs: (كَلَّ) الْكَافُ وَاللَّامُ أُصُولٌ ثَلَاثَةٌ صِحَاحٌ.
   - Cebel: تجمُّع الشيء على ذاته فيكثف بلا حِدّةِ حَدٍّ أو طرف دقيق (1) منه: كالسيف الموصوف، وقفا السكين والسيف، وكالقصير الغليظ
 **كلم**: söz / kelime
   - EtymArab: wound, cut, slash / to speak, talk / word, speech, saying / disputation / (Isl.) theology / kilim, carpet, rug / whenever / km / kilometer / 1 to cut, wound / 2 speech, utterance, word, to speak, conversation / to wound / speech, to speak / to speak, speech / (to) wound / montrer, indiquer / to show, point out, reveal (s.th. hidden) / to advise, instigate, teach / commentary / legal document / display (of the body before burial) / orders, instructions / offerings / food offering / importuner (une femme), insulter par des propos / faire honte / to insult, humiliate / avoir honte de / injure, outrage / faire honte, humilier / blesser / blessure / tool ( ʔadāẗ ) that indicates the repetition of an event in the past / word / parler à, adresser la parole à / mot, parole / discours, langage / mot, discours, message / discours, voix / to speak to or with / word, speech, message, utterance / language / to wound, humiliate / to show, point out, indicate, produce evidence / to expose, reveal, exhibit / to humiliate, wound / to show, indicate / to humiliate / to put forward, show, indicate, produce evidence / to show, point out, expose, reveal, exhibit / to speak (i.e., to show, reveal verbally) / to humiliate (by words, improper speech) / to wound (in general) / to humiliate, wound (by pointing to s.th.) / to make a humiliating utterance / to utter, express / to speak
@@ -4640,6 +4762,7 @@
   - Cebel: تغليف الشيء بما يضُمّه محيطًا به (1) كوعاء الطَلْع والظروف والأغطية المذكورة
 **كمه**: kör / görmeyen
   - EtymArab: ... / blindness from birth, to come into darkness, be born blind / to become mad, dust covering the sun
+  - Mekâyîs: (كَمَهَ) الْكَافُ وَالْمِيمُ وَالْهَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهُوَ الْكَمَهُ، وَهُوَ الْعَمَى يُولَدُ بِهِ الْإِنْسَانُ، وَقَدْ يَكُونُ مِنْ عَرَضٍ يَعْرِضُ.
   - Cebel: ذهابُ قوة ما يضمُّه الشيءُ
 **كند**: yavaşlık / ağır hareket
   - EtymArab: ... / barren land, to deny assistance to others / to beat one
@@ -4647,6 +4770,7 @@
   - Cebel: حبس الشيء ما في باطنه؛ لا يبرُز منه: كالأرض والمرأة المذكورتين الأرض لا تخرج نباتًا كالمعتاد من كل أرض، والمرأة الموصوفة
 **كنز**: define / hazine
   - EtymArab: treasure, buried valuables / to fill up a water skin, to amass, to hoard
+  - Mekâyîs: (كَنَزَ) الْكَافُ وَالنُّونُ وَالزَّاءُ أُصَيْلٌ صَحِيحٌ يَدُلُّ عَلَى تَجَمُّعٍ فِي شَيْءٍ.
   - Cebel: حِفْظُ الشيء في باطن يُمسكه ويستُره، ويلزمه امتلاء الباطن: {وَالَّذِينَ يَكْنِزُونَ الذَّهَبَ وَالْفِضَّةَ وَلَا يُنْفِقُونَهَا فِي سَبِيلِ اللَّهِ} [التوبة: 34]
 **كنس**: süpürmek / süpüren
   - EtymArab: den, lair, (of a deer) to hide in its shelter, a deer in its shelter / receding stars / to sweep / church, synagogue
@@ -4658,6 +4782,7 @@
   - Cebel: السَتْر في تجوُّف متينٍ يستُر أو يَحْمى (1): كالكِنانة والغِيران، وما تحت الأغطية والبيوت
 **كهف**: mağara
   - EtymArab: cave, cavern, hollow, refuge, helpful person
+  - Mekâyîs: (كَهَفَ) الْكَافُ وَالْهَاءُ وَالْفَاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ غَارٌ فِي جَبَلٍ، وَجَمْعُهُ كُهُوفٌ.
   - Cebel: تجوُّفٌ واسعٌ - في جِرْم شديد - مع فراغ: كالكهف الموصوف {فَأْوُوا إِلَى الْكَهْفِ يَنْشُرْ لَكُمْ رَبُّكُمْ مِنْ رَحْمَتِهِ} [الكهف: 16]
 **كهل**: orta yaşlı kişi
   - EtymArab: ... / the back of the torso, the base of the neck / to burden, a person supporting the family / to be at the height of one
@@ -4665,12 +4790,15 @@
   - Cebel: بلوغ الحيِّ أقصى طوله وقُوّته بخروج مَذْخورِ طاقته نُمُوًّا: كالنبت الموصوف
 **كهن**: fal bakan / falcılık
   - EtymArab: ... / to predict the future, to prophesy, divination, soothsaying, fortune-telling, priesthood, priest
+  - Mekâyîs: (كَهَنَ) الْكَافُ وَالْهَاءُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: إبراز لطيفٍ مُستكنٍّ في الباطن أو الغيب: كالكلام الليِّن اللطيف الذي يقال في المحاباة - والإخبار بالمغيَّبات تكلُّمٌ عن لطيفٍ أي خَفِيًّ {وَلَا بِقَوْلِ كَاهِنٍ قَلِيلًا مَا تَذَكَّرُونَ} [الحاقة: 42] والعامة تصف العجوز الفاني والخِرْقة البالية بأن كُلًّا منهما "كُهْنة "، وهذا من الأصل، إذ في كل منهما ذَهابُ قوةِ التماسك - وهي خفيّة - من بين أثنائه، إذا فرغ ما بين أثناء الثوب (فنخل) ويَليَ
 **كوب**: çömlek / bardak
   - EtymArab: goblet, cup / ... / cup, goblet without a handle or spout, to drink from such a cup / to be large of head but slender of neck / dice / drums
+  - Mekâyîs: (كَوَبَ) الْكَافُ وَالْوَاوُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: انبعاج الشيء المجوّف مستديرًا أو مُكوَّرًا: كالقَدَح والكوب، {يُطَافُ عَلَيْهِمْ بِصِحَافٍ مِنْ ذَهَبٍ وَأَكْوَابٍ} [الزخرف: 71]، وكالطَبْل
 **كود**: çalışmak / emek / kazanç
   - EtymArab: ... / to be on the point of doing, almost do s.th. / to pile up
+  - Mekâyîs: (كَوَدَ) الْكَافُ وَالْوَاوُ وَالدَّالُ كَلِمَةٌ كَأَنَّهَا تَدُلُّ عَلَى الْتِمَاسِ شَيْءٍ بِبَعْضِ الْعَنَاءِ.
   - Cebel: التدرج في جمع ما هو دقيق الجِرْم منتشرُه قليلًا قليلًا حتى يكون كُثَبًا
 **كور**: sarmak / dürmek / yuvarlamak
   - EtymArab: ... / travel gear / bellows / to twist a turban around the head, roll up / to harvest, gather / succession of day and night / township
@@ -4691,27 +4819,30 @@
   - Cebel: نفاذ ما طال تجمُّعه واحتباسه في أثناءٍ منها بجهد وعناء وغِلَظِ وَقْع - كالدم والقيء والنَعيق فهي تخرج بعناء شديدةَ الوَقْع علي الحِسّ، (4/1875) وكانت محتبسةً في البدن مُمتَسكة فيه طَبْعًا
 **كيف**: nasıl
   - EtymArab: ... / to cut / manner, mode, fashion, state / hashish / state of intoxication owed to hashish, hashish / state, condition, frame of mind
+  - Mekâyîs: (كَيَفَ) الْكَافُ وَالْيَاءُ وَالْفَاءُ كَلِمَةٌ.
   - Cebel: كون الشيء على هيأة معينة ملتئمة استدارةً أو تجمعًا
 **كيل**: ölçmek / ölçü
   - EtymArab: ... / volume, measurement, to measure in volume, dry measure / to compare, evaluate, pay back in kind / to contain, hold, measure
+  - Mekâyîs: (كَيَلَ) الْكَافُ وَالْيَاءُ وَاللَّامُ ثَلَاثُ كَلِمَاتٍ لَا يُشْبِهُ بَعْضُهَا بَعْضًا.
   - Cebel: ضبط الشيء ما فيه - أي إمساكه ما فيه لا يخرجه
 **كين**: oluş / var olma / kin / düşmanlık
   - EtymArab: to become lowly, humble, miserable / to submit, yield, surrender, humble o.s. / to abandon o.s., give o.s. over. / the planet Saturn / clitoris / to be humbled, become abased, abase o.s. / s / malheur, adversité (qui abaisse) / vulve, petites lèvres / art, travail d / intention, volonté / art
-  - Mekâyîs: غَمْزَ الطَّبِيبِ نَغَانِغَ الْمَعْذُورِ
-فَأَمَّا الْكِينَةُ، فِي قَوْلِهِمْ: بَاتَ فُلَانٌ بِكِينَةِ سَوْءٍ، أَيْ بِحَالٍ سُوءٍ، فَأَصْلُهُ الْكَوْنُ فِعْلَةٌ مِنَ الْكَوْنِ.
+  - Mekâyîs: (كَيَنَ) الْكَافُ وَالْيَاءُ وَالنُّونُ شَيْءٌ يَقُولُونَ إِنَّهُ فِي عُضْوٍ مِنْ أَعْضَاءِ الْمَرْأَةِ يَضِيقُ بِهِ، وَالْجَمْعُ كُيُونٌ.
   - Cebel: ضعف ما في الباطن رقةً وحدّةَ إحساس: كلحم باطن العين، وباطن العضو المذكور
 **لءلء**: inci
   - EtymArab: pearls / ... / pearls, to shine, shimmer, glitter, radiate, (of fire) rage / (of animals, deer, in particular) to flash the tail
   - Cebel: تركُّز الصفاء وما إليه من اللمعان وانحصارُه في حيِّز (4/1941) بحيث يمتد منه أثرٌ قوى منتشر - كجِرْم اللؤلؤ في تركزه في صدفه مع انتشار بريقه إذا أُخْرج، وبريق النجم الخ {وَحُورٌ عِينٌ (22) كَأَمْثَالِ اللُّؤْلُؤِ الْمَكْنُونِ} [الواقعة: 22، 23]
 **لبب**: öz / akıl / en iyi özü
   - EtymArab: to remain, abide, stay (in a place) / kernel, core, innermost, essence, best part / heart, mind, intellect, reason / to be sensible, reasonable, intelligent / breast collar (of a horse / upper part of the chest, throat / golden necklace / lion / kernel, core, the edible inside of nuts and fruits / the essence / heart, mind, reason / veins in the heart said to be the source of kindness, amiable person, diligent person, upper part of the chest / heart
-  - Mekâyîs: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى لُزُومٍ وَثَبَاتٍ، وَعَلَى خُلُوصٍ وَجَوْدَةٍ.
+  - Mekâyîs: (لُبَّ) اللَّامُ وَالْبَاءُ.
   - Cebel: لزوم الشيء جوف شيء أو وسطه بتمكن (1) ويلزم من ذلك نقاؤه وخلوصه لكونه محوطًا محفوظًا
 **لبث**: beklemek / kalmak / yaşayan
   - EtymArab: to stay, remain / ... / to stay, be slow, tarry, be late in coming, abide, stopover, lingering / mixture
+  - Mekâyîs: (لَبِثَ) اللَّامُ وَالْبَاءُ وَالثَّاءُ حَرْفٌ يَدُلُّ عَلَى تَمَكُّثٍ.
   - Cebel: ملازمةٌ للمكان ممتدّة، وهي المكث في المكان: {وَلَبِثُوا فِي كَهْفِهِمْ ثَلَاثَ مِائَةٍ سِنِينَ وَازْدَادُوا تِسْعًا} [الكهف: 25] , {ثُمَّ سُئِلُوا الْفِتْنَةَ لَآتَوْهَا وَمَا تَلَبَّثُوا بِهَا إِلَّا يَسِيرًا} [الأحزاب: 14] (هذا بيان لعدم رسوخ الإيمان في (4/1949) قلوبهم حينذاك، إذ لا يثبتون عليه إلا قليلًا قبل أن يُفْتَنوا) {قَالَ بَلْ لَبِثْتَ مِائَةَ عَامٍ} [البقرة: 259]
 **لبد**: kıllı kumaş / yerleşmek
   - EtymArab: ... / mane / felt / ticks, locusts, crowd / to stay, accumulate, congregate / to patch up / to be stuck to the earth
+  - Mekâyîs: (لَبَدَ) اللَّامُ وَالْبَاءُ وَالدَّالُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى تَكَرُّسِ الشَّيْءِ بَعْضِهِ فَوْقَ بَعْضٍ.
   - Cebel: تكرُّس الدِقاق المرنة (من شعر ونحوه) بعضها فوق بعضٍ واحتباسها (انتشابها وامتساكها) معًا طبقةً كثيفة ثخينة
 **لبس**: giymek / elbise
   - EtymArab: to wear, to put on, to clothe, garment, clothes, armour, cover / to confuse / wife, husband / condition / to tarry or to remain in a place
@@ -4723,6 +4854,7 @@
   - Cebel: احتواءُ الباطن على لطيفٍ من شأنه أن يَخرج ثم يتمسك (يتخثر) أو يَظهر- كاحتواء الحيوانات على لبنها، وكذلك الشجر
 **لجء**: sığınmak / barınmak
   - EtymArab: refuge, shelter, retreat / to appeal to s.o. for help, to have recourse to / to compel
+  - Mekâyîs: (لَجَأَ) اللَّامُ وَالْجِيمُ وَالْهَمْزَةُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ اللَّجَأُ وَالْمَلْجَأُ: الْمَكَانُ يُلْتَجَأُ إِلَيْهِ.
   - Cebel: حيِّز قوي (حصين) يحفظ ويمسك ما يَلُوذ به ويدخُله
 **لجج**: ısrar etmek / azgınlaşmak / derin deniz
   - EtymArab: ... / depths of the sea, abyss / noise / to roar / to continue to argue or dispute obstinately / stammering / convoluted thick herbage
@@ -4746,7 +4878,7 @@
   - Cebel: التئام جِرْم كثيف غَضٍّ بين أثناء الشيء وحولَه فيكسوه: كذلك اللَحم واللِحام، واستلحام الزرع
 **لحن**: yanlışlık / melodi
   - EtymArab: to speak ungrammatical Arabic (interspersed with barbarisms) / air, tune, melody / intelligent, understanding, sensible / to incline / to drop\give a veiled hint, speak in code, allude to, hint at / to make insinuations / to intimate s.th. to s.o., to give s.o. to understand s.th. / 1 dialect, language / 2 to err in speaking or reading, deviate / 3 to speak in code, allude to, hint at / 4 tune, to read melodically / deviation, modification, modulation / tone / forefinger / (hence also:) the string struck with the forefinger, and its note / a vicious pronunciation / to be understanding, intelligent / to be closely related (to s.o.) / close relationship / to incline, lean towards / flexible, mobile, agile / clever, intelligent, perspicacious / cleverness, comprehension, perspicacity / abnormal way of speaking / eloquence / melody / talking in riddles full of hidden meanings\veiled hints\allusions\insinuations / delusive expression / grammatical mistake, blunder / deviation, modulation, modification / to incline to s.o. , lean towards s.o. , show affection to s.o. / to talk to s.o. in a way that only he understands (it remains unintellegible to others) / inclination / affection / abnormally / forefinger (etc.)
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ اللَّحَنُ، وَهِيَ الْفِطْنَةُ، يُقَالُ لَحِنَ يَلْحَنُ لَحْنًا، وَهُوَ لَحِنٌ وَلَاحِنٌ.
+  - Mekâyîs: (لَحَنَ) اللَّامُ وَالْحَاءُ وَالنُّونُ لَهُ بِنَاءَانِ يَدُلُّ أَحَدُهُمَا عَلَى إِمَالَةِ شَيْءٍ مِنْ جِهَتِهِ، وَيَدُلُّ الْآخَرُ عَلَى الْفِطْنَةِ وَالذَّكَاءِ.
   - Cebel: رِقةٌ ما (لِين أو لُطفٌ) في الكلام مع مدّ الصوت به (الرقة قد يعبَّر بها عن الضعف كما يقال: هو رقيق الدِين، واللِين رخاوة وعدم خشونة فهو منها، واللُطف دقة وخفاء، والدقة وجه آخر للرقة المادية، ويعبرون عن الصغير الجسم أو جزءٍ منه بأنه لطيفُه وخفيه): كالتطريب في الكلام فهو مَدّ للصوت به مع رقة ورخاوة فيه
 **لحي**: sakal / çene
   - Mekâyîs: (لَحِيَ) اللَّامُ وَالْحَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا عُضْوٌ مِنَ الْأَعْضَاءِ، وَالْآخَرُ قَِشْرُ شَيْءٍ.
@@ -4756,6 +4888,7 @@
   - Cebel: ضمُّ المتراكم أو المتجمع بين أثناء تحجزه؛ فلا يتفرَّق (1)
 **لدن**: yanında / katında
   - EtymArab: ... / to be soft, be pliant / to ponder, tarry, to stay / point in time / location / labdanum
+  - Mekâyîs: (لَدَنَ) اللَّامُ وَالدَّالُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: مرونة الجسم من لُطْف أو رِقّة تمتدّ في باطنه: كالقناة الليِّنة، وكالجسم- الممتلئ بالرطوبة
 **لذذ**: tat / haz
   - EtymArab: to be delicious / ... / pleasure, sweetness, to be delicious, enjoy / speed, to be nimble
@@ -4763,6 +4896,7 @@
   - Cebel: استطابةُ المُماسة للشئ ووَقعِه على الحس لمناسبته إياه - مع لُطْفه وخفته (1) كما يُستطاب الشراب مع لطفه ونعومته، أي سلاسة وَقْعه على الحس فلا يكون له حرارة أو حَرافة، وكمس الشيء الأملس، وكاستماع الكلام المحبَّب، والأكل والشرب لما هو هنيء مَرِئ، وكسير الدابة في السهولة بسلاسة ودون تعثُّر ودون ألم وَطء الحجارة
 **لزب**: yapışkan / bağlı
   - EtymArab: ... / to be narrow / to be scanty, famine, hardship / to adhere, stick together / to sting
+  - Mekâyîs: (لَزَبَ) اللَّامُ وَالزَّاءُ وَالْبَاءُ يَدُلُّ عَلَى ثُبُوتِ شَيْءٍ وَلُزُومِهِ.
   - Cebel: لصوق الشيء الغض بعضِه ببعض؛ فتتماسك أثناؤه - كالطين الموصوف {إِنَّا خَلَقْنَاهُمْ مِنْ طِينٍ لَازِبٍ} ومنه "لزَبَ الشيءُ لُزوبًا: دخل بعضُه في بعض
 **لزم**: zorunluluk / bağlanmak
   - EtymArab: to cling, to adhere / to accompany / to persist, to force, to impose as a duty, necessity, obligation, compulsory
@@ -4780,7 +4914,7 @@
   - EtymArab: ... / fire, raging fire, to burn brightly / to be mad with anger
 **لعب**: oyun / eğlence
   - EtymArab: to play, to jest, to trick / pastime, amusement / flirtatious, coquettish
-  - Mekâyîs: وَقِيلَ: إِنَّ أَصْلَ الْبَابِ هُوَ الذَّهَابُ عَلَى غَيْرِ اسْتِقَامَةٍ.
+  - Mekâyîs: (لَعِبَ) اللَّامُ وَالْعَيْنُ وَالْبَاءُ كَلِمَتَانِ مِنْهُمَا يَتَفَرَّعُ كَلِمَاتٌ.
   - Cebel: اضطرابٌ وتسيب في ما يصدر عن الشيء بسبب تجمع حيويته أو نشاطه
 **لعن**: uzaklaştırma / kovma
   - EtymArab: to curse, damn / ... / to drive away, eject, reject / to torture, imprecation / the devil / scarecrow
@@ -4796,13 +4930,15 @@
   - Cebel: أصوات كثيرة تنفُذ من أفواه الأحياء- كالكلام وتلك الأصوات
 **لفت**: çevirmek / döndürmek
   - EtymArab: to turn to one side, look back, divert, distract / gesture / left-handed / turnip / gruel made from the white colocynth / to turn to one side, to turn back, to look back, to divert / to distract, to dissuade / to twist / to take care / eesture / to touch lightly, grasp, affect, attack,… / to make touch, overthrow, defeat, destroy,… / to twist, clasp, turn, grasp with twisting motion / to twine around, cling to, clasp / strong-handed / to turn, roll about in the mouth / to fold / to turn from / he beat the camel or sheep or goats, not caring which of them he truck / s.o. who beats his camels etc., in this way / he sent forth, or uttered, words, without caring what might be the meaning 1 / half / side, edge / inclination towards / to stir s.th. about and over / to bark a tree, remove the peel/rind / damaged, soiled / damaged / anomalous / (handi)work, craft, creation (with ref. to human beings), touch (in the physical sense) / affliction, disease / (discoloured) spot / disease, work, craft / (he-goat) having crooked horn, having one of his horns twisted upon, or over the other (also lafat ) / (in the dial. of Qays) stupid, foolish, of little sense / of difficult or stubborn disposition (also: lafūt ) / (in the dial. of Tamīm) left-handed, who works with the left hand / (f. laftāʔᵘ ) (woman) having distorted eyes / (a vegetable) / vegetables eaten with bread / Hirschfeldia (a genus of plants) / salt turnip, pickled turnip / to touch, grasp, affect / to twist, turn / turning, twisting and overthrowing / to distract (attention), attract (the view) / to overthrow, destroy / side / to twist s.th., turn s.th. from one condition into another, or from one side to the other, or around it so that it sticks to it / twisted, anomalous / having a focus on the one/other side / having crooked horn / stupid, foolish / of difficult or stubborn disposition / having distorted eyes / twisted, distorted, anomalous / [a certain kind of gruel] made by straining water [or juice, or a decoction] of the white colocynth, then putting it into a stone cooking-pot, and cooking it until it has become thoroughly done and thickened, and then sprinkling flour upon it
+  - Mekâyîs: (لَفَتَ) اللَّامُ وَالْفَاءُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى اللَّيِّ وَصَرْفِ الشَّيْءِ عَنْ جِهَتِهِ الْمُسْتَقِيمَةِ.
   - Cebel: لَيّ الشيء أو تحويلُه عن حال أو وجه إلى آخر، أو حول شيء فيمتسك: كالقَرْن الألْفت التَوى عن استقامته مُمتسكًا على وضع مغاير، وكذلك عَصْد الدقيق بالسمن خَلْطه وجَعْله يتماسك بالعَجْن
 **لفح**: yanmak / sıcaklık
   - EtymArab: ... / heat of a fire, fire, glare of a fire / to scorch, burn, sear, tan / to strike lightly
-  - Mekâyîs: [وَأَمَّا] قَوْلُهُمْ: لَفَحَهُ بِالسَّيْفِ لَفْحَةً: ضَرَبَهُ ضَرْبَةً خَفِيفَةً، فَإِنَّ الْأَصْلَ فِيهِ النُّونُ، هُوَ نَفَحَهُ.
+  - Mekâyîs: (لَفَحَ) اللَّامُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه
 **لفظ**: söz / kelime
   - EtymArab: to spit out / to utter, speak / ... / to spit out, emit, cast out / to enunciate, utter, speak, utterance / to expire
+  - Mekâyîs: (لَفَظَ) اللَّامُ وَالْفَاءُ وَالظَّاءُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى طَرْحِ الشَّيْءِ ; وَغَالِبُ ذَلِكَ أَنْ يَكُونَ مِنَ الْفَمِ.
   - Cebel: قَذْفٌ بقوة من جوف أو حيِّز: كلفْظ الأرض الميتَ والنبات
 **لفف**: sarmak / dolamak
   - EtymArab: to wrap / ... / (of the thighs) to be fleshy / to gather together, wrap up / large crowd of a mixture of people, thicket of trees / to stutter
@@ -4813,6 +4949,7 @@
   - Cebel: وجود الشيء أو تيوحه على وجه الأرض أو في المتناوَل: كذلك التراب والقُمَاش على وجه الأرض
 **لقب**: nitelik / ad
   - EtymArab: surname, nickname / ... / surname, nickname, epithet, designation, title, to call names
+  - Mekâyîs: (لَقَبَ) اللَّامُ وَالْقَافُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: تحميل الشخص باسم يَلصَق به {وَلَا تَنَابَزُوا بِالْأَلْقَابِ}
 **لقح**: döllenmek / aşılamak
   - EtymArab: ... / seed, semen, pollen, to impregnate, pollinate, become pregnant
@@ -4831,13 +4968,14 @@
   - Cebel: ضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك)
 **لقي**: karşılaşmak / buluşmak
   - EtymArab: to meet, encounter / to find / to throw, cast / ... / to meet, encounter, reunion / to undergo, suffer, experience / to give, receive, accept / to lie down
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ اللِّقَاءُ: الْمُلَاقَاةُ وَتَوَافِي الِاثْنَيْنِ مُتَقَابِلَيْنِ، وَلَقِيتُهُ لَقْوَةً، أَيْ مَرَّةً وَاحِدَةً وَلِقَاءَةً.
+  - Mekâyîs: (لَقِيَ) اللَّامُ وَالْقَافُ وَالْحَرْفُ الْمُعْتَلُّ أُصُولٌ ثَلَاثَةٌ: أَحَدُهَا يَدُلُّ عَلَى عِوَجٍ، وَالْآخَرُ عَلَى تَوَافِي شَيْئَيْنِ، وَالْآخَرُ عَلَى طَرْحِ شَيْءٍ.
 **لمح**: göz ucuyla bakmak / göz açıp kapatmak
   - EtymArab: to glance, notice / ... / to glance, notice, look furtively, twinkle, look askance / looks, features / glow of light
   - Mekâyîs: (لَمَحَ) اللَّامُ وَالْمِيمُ وَالْحَاءُ أَصْلٌ يَدُلُّ عَلَى لَمْعِ شَيْءٍ.
   - Cebel: لُمَعٌ سطحية لطيفة تنتشر على ظاهر الشيء وتميّزه: كلمْح البرق، والملامح لَوَافتُ في الشيء كالنتوء والغئور وضخم الأنف والحواجب ولون البشرة ونِسَب القَسَمات
 **لمز**: ayıplamak / kusur bulmak
   - EtymArab: ... / to nudge / to poke fun at, defame, speak ill of s.o., slander, a slanderer
+  - Mekâyîs: (لَمَزَ) اللَّامُ وَالْمِيمُ وَالزَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ اللَّمْزُ، وَهُوَ الْعَيْبُ.
   - Cebel: الدفع في البدن بشدّة وحِدّة
 **لمس**: dokunmak
   - EtymArab: to touch / ... / to touch, probe / to look for, request / to become aware / to be in contact with, have sexual intercourse
@@ -4852,6 +4990,7 @@
   - Cebel: امتداد لطيف المادة نافذًا من أثناء بحدة أو قوة: كلهب النار، وكفراغ السَرَب، وما بين الجبلين {سَيَصْلَى نَارًا ذَاتَ لَهَبٍ} [المسد: 3] {لَا ظَلِيلٍ وَلَا يُغْنِي مِنَ اللَّهَبِ} [المرسلات: 31]
 **لهث**: soluk soluğa kalmak
   - EtymArab: ... / the physical sensation of thirst, panting with thirst, panting / to loll the tongue / fatigue
+  - Mekâyîs: (لَهَثَ) اللَّامُ وَالْهَاءُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ أَنْ يَدْلَعَ الْكَلْبُ لِسَانَهُ مِنَ الْعَطَشِ.
   - Cebel: اندفاع شيء مما في الباطن إلي الظاهر لحدّة أو شدة: كدُلوع اللسان من العطش والحر، وكالنقط الحُمْر من أثناء الجسم {فَمَثَلُهُ كَمَثَلِ الْكَلْبِ إِنْ تَحْمِلْ عَلَيهِ يَلْهَثْ أَوْ تَتْرُكْهُ يَلْهَثْ} [الأعراف: 176]
 **لهم**: esin / ilkeleme
   - EtymArab: ... / to inspire / gulping, glutton / inspiration, to inspire / notable person / fast horse / vast army
@@ -4862,6 +5001,7 @@
   - Mekâyîs: (لَهَوَ) اللَّامُ وَالْهَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ: أَحَدُهُمَا يَدُلُّ عَلَى شُغْلٍ عَنْ شَيْءٍ بِشَيْءٍ، وَالْآخَرُ عَلَى نَبْذِ شَيْءٍ مِنَ الْيَدِ.
   - Cebel: التدلِّي هُويًّا في فَراغ: كاللحمة الموصوفة، وما يُلقَى في فم الرَحى
 **لوت**: bükmek / eğmek
+  - Mekâyîs: (لَوَتَ) اللَّامُ وَالْوَاوُ وَالتَّاءُ لَسْتُ أَحُقُّ صِحَّتَهُ، وَلَيْسَ هُوَ مِنْ كَلَامِهِمْ عِنْدِي، لَكِنَّ نَاسًا زَعَمُوا أَنَّهُ يُقَالُ: لَاتَ يَلُوتُ، إِذَا أَخْبَرَ بِغَيْرِ مَا سُئِلَ عَنْهُ.
   - Cebel: نَقْصٌ أو رقة وضَعْف في الشيء الممتدّ - كلِيتَىْ العنق ولِيتِ الرمل (من عُظْمه)
 **لوح**: levha / tahta / parlak
   - EtymArab: to appear, come in sight, become visible / to shine, flash, glimmer, sparkle / to seem, appear / to wither, singe, parch, scorch / to tan / board, slate, tablet, slab, plate, pane, plank, panel / shoulder blade, scapula / plaque, surface, screen / poster / picture, painting / program, project / bill, motion / order, decree, edict, regulation, rule / air, atmosphere | espace entre le ciel et la terre / polishing agent for mirrors / the lure / owl used for decoy shooting / decoy (bird) / unfertilized eggs | œuf qui ayant été miré, est rebuté comme n / thirst / to be afraid ( min of s.o.), frightened, be on one / shoulder blade, board, a slap / to be emaciated / to be tanned, to be scorched black, to be thirsty / to glitter, to appear from a distance / to wave, to brandish / to insinuate / a glance, a blink / to whip / to become visible, flash / to scorch, singe, sear, burn, parch, desiccate, wither, lose weight, get thinner / board, tablet, plank / shoulder blade / breadth, evenness and dryness or compactness in s.th. / dryness / thirst, desiccation, withering / breadth / visibility / tout ce qui, par sa surface plate et polie, reflète la lumière / to shine etc. / to scorch, singe, sear, burn, parch, desiccate, wither, etc. / eggs found unsuitable for hatching after having “X-rayed” (i.e., candled) them by holding them against the sun-light / shining, light / desiccation, emaciation, shrinking (> infertility?) / to appear, be(come) visible / schön, herrlich, trefflich, nützlich sein | glorious, splendid / Sonnenglanz / Auge, besonders vom Auge der Sonne / board, plank > to be(come) visible, appear / to thirst / to be afraid, frightened, shrink back, blush / to appear, shine, flash / candled eggs / board, tablet, plank, etc. / id. / board, table, plank / having broad bones, shoulder blades, tall / the flashing one / becoming visible, appearing, flashing up / (*to let appear, let flash up >) to flourish, brandish, swing, wave, make a sign, signal / lure, decoy / s.th. flashing up, giving an idea of s.th., sketch, outline / flickering / to shine, sparkle, gleam, glisten, glitter, etc. / s.th. waved/signalled with ( lawwaḥa etc., as mentioned above, sub [v4]. ▪ † [v8] ‘unfertilized eggs | œuf qui ayant été miré, est rebuté comme n / unfertilized / rejected as unsuitable for hatching after having “X-rayed” (candled) [the eggs] by holding [them] against the sun-light / shining, light, etc. / desiccation, emaciation, etc. (> infertility?) / to scorch, burn, desiccate, cause to wither, lose weight, get thinner, etc. / being afraid, shrinking back, etc. / to be afraid / to wither, become thin, shrink, etc. / to be(come) [clearly] visible, appear, emerge, come into view / to shine brightly, flash, sparkle, glint, glow, gleam, glitter, glisten (celestial bodies, fire, lamp, mirage, cloud of dust / water, butter, a spider / to raise a stick (upon s.o.) / to feed a child (*waving with the food/drink) / outward appearance, feature / intensely, shining, glistening white / daybreak, dawn / wild bull / shining, glistening, flashing weapons / to make a sign, wave s.th. about / actively, busily waving / to carry s.th. away, go away with, take away / to “flash up”, take s.th. and disappear with it as quickly as one showed up / to scorch, singe, sear, burn, parch, desiccate, s.o. / to cause s.o. to wither, to lose weight, to get thinner / to disfigure, to pester, harass, plague, beset (sun, midday heat / hot, dry wind / cold / grey hair, the colour black / shame, disgrace, worries, troubles) (WKAS ii) / to thirst (Lane, Hava1899) / to make s.o. lean, lank, light of flesh, slender, lank in the belly (thirst, travel, cold, illness, grief, …), alter the complexion, parch, scorch, burn, blacken / to render s.o. hoary (age) / to ripen (grapes) / become sick, exhausted / to heat s.th. in the fire / soon thirsty / slender / a scorching, singeing, parching, desiccating / a thirsting, yearning (for water) / parched, desiccated, thirsty / scorching, singeing, burning / parched, desiccated, thirsty, emaciated / scorched, singed, burnt, parched, desiccated, withered, thin, lean, disfigured / to cause the loss of, destroy s.th. / apparent, visible, external parts of s.th. / airspace (above the Earth), air, ether, (blue) sky, vault of heaven / to see, espy, catch sight of / to appear, shine (star), flash (lightning) / paraître, briller / apparition d / to appear, shine, gleam, glitter, flash, sparkle / glänzen, funkeln / to please, be attractive / (wooden) board, writing board, document, sheet of precious metal, ingot / (Brief-)Tafel / letter, message / board / board, table, tablet, plank, plate, parchment / plank of wood, timber / to write / flamme, feu qui s / shine (briller) / briller / shine / light, bright / white / light / ray, beam / to shine
@@ -4872,27 +5012,33 @@
   - Mekâyîs: (لَوَذَ) اللَّامُ وَالْوَاوُ وَالذَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِطَاقَةِ الْإِنْسَانِ بِالشَّيْءِ مُسْتَعِيذًا بِهِ وَمُتَسَتِّرًا.
   - Cebel: فالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر
 **لوط**: 
+  - Mekâyîs: (لَوَطَ) اللَّامُ وَالْوَاوُ وَالطَّاءُ كَلِمَةٌ تَدُلُّ عَلَى اللُّصُوقِ.
 **لوم**: kınamak / kınayan
   - EtymArab: to blame / ... / to blame, censure, rebuke, be deserving of blame / to linger / need / hardship / person, silhouette
+  - Mekâyîs: (لَوَمَ) اللَّامُ وَالْوَاوُ وَالْمِيمُ كَلِمَتَانِ تَدُلُّ إِحْدَاهُمَا عَلَى الْعَتْبِ وَالْعَذْلِ، وَالْأُخْرَى عَلَى الْإِبْطَاءِ.
   - Cebel: تحيز مع اشتداد: كما يتحيَّز العسلُ في عيون القُرْص، والعسل يتمطّط وهذا مستوى من التماسك والاشتداد، وكما يتماسك الشديد من الأشياء
 **لون**: renk / renkler
   - EtymArab: colour, to colour / types, species / to be changeable, to be capricious / to be hypocritical
-  - Mekâyîs: وَاللِّينَةُ: النَّخْلَةُ، مِنْهُ، وَأَصْلُ الْيَاءِ فِيهَا وَاوٌ.
+  - Mekâyîs: (لَوَنَ) اللَّامُ وَالْوَاوُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ سَحْنَةُ الشَّيْءِ: مِنْ ذَلِكَ اللَّوْنُ: لَوْنُ الشَّيْءِ، كَالْحُمْرَةِ وَالسَّوَادِ، وَيُقَالُ: تَلَوَّنَ فُلَانٌ: اخْتَلَفَتْ أَخْلَاقُهُ.
   - Cebel: احتشاء الشيء بلطيف رِخْو أو كالرخو يظهر أو يظهر أثره (1): كالنخل ليس مصمت الجوف كبقية الشجر، وله ثمر حلو معروف (ثم هل عدّ العربي التمر الذي يثمره النخل خارجًا من حشاه ولذا خلا جوفه فلم
 **لوي**: bükmek / çevirmek
   - EtymArab: to twist, intertwine, bend / ... / to twist, intertwine, bend, coil up / to tarry / to wither away / to dispute hotly / banner / to wind, twist, circle, encircle
   - Mekâyîs: (لُوِيَ) اللَّامُ وَالْوَاوُ وَالْيَاءُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى إِمَالَةٍ لِلشَّيْءِ.
 **ليت**: keşke / gece
+  - Mekâyîs: (لَيَتَ) اللَّامُ وَالْيَاءُ وَالتَّاءُ كَلِمَتَانِ لَا تَنْقَاسَانِ: إِحْدَاهُمَا: اللِّيتُ: صَفْحَةُ الْعُنُقِ، وَهُمَا لِيَتَانِ.
   - Cebel: نَقْصٌ أو رقة وضَعْف في الشيء الممتدّ - كلِيتَىْ العنق ولِيتِ الرمل (من عُظْمه)
 **ليس**: değil
   - Cebel: التوقف أو اللزوق -ثِقَلَا- بالموضع وعدم البراح منه (الحوض ليس مُقامًا
 **ليل**: gece
   - EtymArab: night / night, night-time, one night, to enter night-time
+  - Mekâyîs: (لَيَلَ) اللَّامُ وَالْيَاءُ وَاللَّامُ كَلِمَةٌ، وَهِيَ اللَّيْلُ: خِلَافُ النَّهَارِ.
   - Cebel: حجاب لطيف (غير مجسَّم) لكنه كثيفٌ يلُفّ الأشياء متميِّزًا عنها عالقًا في الأفق
 **لين**: yumuşaklık / nezaket / yumuşak
   - EtymArab: to be soft, tender, mild / ... / to be soft, be tender, be mild / to be amiable, be lenient, relax, become at ease / to be affluent, ease of living / kind of palm tree
+  - Mekâyîs: (لَيَنَ) اللَّامُ وَالْيَاءُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ اللِّينُ: ضِدُّ الْخُشُونَةِ.
   - Cebel: احتشاء الشيء بلطيف رِخْو أو كالرخو يظهر أو يظهر أثره (1): كالنخل ليس مصمت الجوف كبقية الشجر، وله ثمر حلو معروف (ثم هل عدّ العربي التمر الذي يثمره النخل خارجًا من حشاه ولذا خلا جوفه فلم
 **مءي**: sığınak / barınak
+  - Mekâyîs: (مَأَيَ) الْمِيمُ وَالْهَمْزَةُ وَالْيَاءُ كَلِمَةٌ.
 **متع**: yararlanma / geçici nimet
   - EtymArab: ... / to be(come) strong, be forceful / to advance (said of daytime), attain or to be granted longevity / to be extremely good, benefit s.o., to enjoy / commodities, provisions, livelihood / household equipment / memento / modest living / pmyose
   - Mekâyîs: (مَتَعَ) الْمِيمُ وَالتَّاءُ وَالْعَيْنُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَنْفَعَةٍ وَامْتِدَادِ مُدَّةٍ فِي خَيْرٍ.
@@ -4911,12 +5057,14 @@
   - Cebel: امتلاء الجسم (بلطيف) له قوة وحدةُ أثَرٍ في ما يصلحه ويراد له: كامتلاء البطون المذكورة بالطعام، واحتفال المرخ والعَفَار بالمادة المساعدة على الاشتعال
 **مجس**: dokunma / yoklama
   - EtymArab: Zoroastrians, Magians
+  - Mekâyîs: (مَجَسَ) الْمِيمُ وَالْجِيمُ وَالسِّينُ كَلِمَةٌ مَا نَعْرِفُ لَهَا قِيَاسًا، وَأَظُنُّهَا فَارِسِيَّةٌ، وَهِيَ قَوْلُنَا هَؤُلَاءِ الْمَجُوسُ.
 **محص**: temizlemek / arındırmak
   - EtymArab: ... / sifting, purifying, smelting / to examine closely / to come into the open / to be tightly twisted / to afflict
   - Mekâyîs: (مَحَصَ) الْمِيمُ وَالْحَاءُ وَالصَّادُ أَصْلٌ وَاحِدٌ صَحِيحٌ يَدُلُّ عَلَى تَخْلِيصِ شَيْءٍ وَتَنْقِيَتِهِ.
   - Cebel: خلوص الشيء من الغليظ المختلط به فلا يبقى إلا (4/2036) صُلْبه وحقيقته: كما يبقى صُلْب القوائم بعد ذهاب الرَهَل، وكما يبقى صُلْب الحبل بعد ذهاب الزِئبِر (الأطراف الخشنة لشعر الحبل) وكذلك الذَهَب
 **محق**: yok etmek / silmek
   - EtymArab: ... / waning of the moon, moonless nights / to diminish, blot out, eradicate / to uproot, annihilate / sharp blade
+  - Mekâyîs: (مَحَقَ) الْمِيمُ وَالْحَاءُ وَالْقَافُ كَلِمَاتٌ تَدُلُّ عَلَى نُقْصَانٍ.
   - Cebel: فَقْد الشيء حقيقته أو أصلَه وصُلْبه: كفقد القمر ضوءه، والنخلِ ثمرَه، والإبلِ نسلَها، والقرنِ حَدَّه وهو سِنه أو حَرفُه الناتئ من جوفه
 **محل**: yer / makam / imkânsız
   - EtymArab: ... / vertebra / might, to struggle / drought, hardship / to defend, be antagonistic, carry out intrigues, plot / to shift from one situation to another
@@ -4924,6 +5072,7 @@
   - Cebel: جفافُ أثناء الشيء وخلوها من اللين والبلال -مع امتداد جِرْمه: كالمحل الجَدْب، وكالجوع للخلو من لين الغذاء وبَلاله، وكالطويل من الرجال والإبل على غير امتلاء أو تَرارة، وكالفلاة الممتدة وهي قَفْر يابسة
 **محن**: sınama / imtihan
   - EtymArab: ... / experience, to try, put to the test, afflict / to smelt, purify / to whip, wear out / to be hardened
+  - Mekâyîs: (مَحَنَ) الْمِيمُ وَالْحَاءُ وَالنُّونُ كَلِمَاتٌ ثَلَاثٌ عَلَى غَيْرِ قِيَاسٍ.
   - Cebel: شدّة تكشف حقيقة الشيء بإزالة ما يشوبها ويغطيها: كخلوص الذهب والفضة من شوائبهما بإذابتهما بالنار، وكخلوص ماء البئر من العَكَر والنَتْن بنزحهما منها (انظر: رجس)، وكما تنكشف خيوط نسيج الثوب بإخلاقه، ومن ذلك: "المحنة -بالكسر: الخِبرة (معرفة حقيقة الشيء بكثرة معالجته) وامتَحن القولَ: نَظَر فيه ودَبره نظر ما يصير إليه صيورُه (كشف غموضَ حاله وتبين ما يصفو منه)
 **محو**: silmek / yok etmek
   - EtymArab: ... / to wipe out, eradicate, disappear completely, be effaced, be featureless / (of land) to be covered with rain water / to annul
@@ -4942,9 +5091,11 @@
   - Cebel: استطالة جِرم الشيء في نفسه أو باتصاله بغيره، فيزيده طولًا واستمرارًا، أو قَدْرًا (1): كامتداد القامة والمِسَاكين في جانبي الثوب
 **مدن**: şehir / medeniyet
   - EtymArab: city, fortress, to settle in a place
+  - Mekâyîs: (مَدَنَ) الْمِيمُ وَالدَّالُ وَالنُّونُ لَيْسَ فِيهِ إِلَّا مَدِينَةٌ، إِنْ كَانَتْ عَلَى فَعِيلَةٍ، وَيَجْمَعُونَهَا مُدُنًا.
   - Cebel: المِصْر الجامع المحصَّن- وتعريف المدينة بالحصن = يذكّرنا باتخاذ القدماء قِلاعًا ونحوها مبالغةً في الامتناع والتحصن من الأعداء، وفيه الفرق بينها وبين القرية التي هي تجمُّع لبيوت لم يُلحظ فيه التحصن
 **مرء**: güzel / hoş / görülen
   - EtymArab: man / woman / be wholesome, healthful, healthy / esophagus, gullet / (of food) to be wholesome and palatable, to be digestible, food passage / a human being, man, woman, wife, one person / “chivalrous” character, generosity of nature, to be humane, humanity / man, male
+  - Mekâyîs: (مَرَأَ) الْمِيمُ وَالرَّاءُ وَالْهَمْزَةُ.
   - Cebel: مرورٌ خِلال المضايق بلطف مع نفع وحسن عاقبة
 **مرج**: karışmak / serbest bırakmak
   - Mekâyîs: (مَرَجَ) الْمِيمُ وَالرَّاءُ وَالْجِيمُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى مَجِيءٍ وَذَهَابٍ وَاضْطِرَابٍ.
@@ -4988,6 +5139,7 @@
   - Cebel: انبساط باستواء ظاهر أي خلو من النتوء كأنما عن ضغط بعرض
 **مسخ**: şekil değiştirmek / bozmak
   - EtymArab: ... / to distort, transmute, transform into an ugly shape or ugly character, disfigure / tasteless food, a plain person / to wear an animal thin by too much work
+  - Mekâyîs: (مَسَخَ) الْمِيمُ وَالسِّينُ وَالْخَاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْمَسْخُ، وَهُوَ يَدُلُّ عَلَى تَشْوِيهٍ وَقِلَّةِ طَعْمِ الشَّيْءِ، وَمَسَخَهُ اللَّهُ: شَوَّهَ خَلْقَهُ مِنْ صُورَةٍ حَسَنَةٍ إِلَى قَبِيحَةٍ.
   - Cebel: اختلالُ (= انتقاص) ما به قِوام هيأة الشيء أو طبيعته منه - كخُلُوّ الطعام من الملح الخ، وكذلك لحم الكفل فيلصق جلده بعظمه فيفقد هيئته، وكذهاب الشحم من الجسم
 **مسد**: lif / sicim
   - EtymArab: ... / palm tree fibres, rope, twisted from palm tree leaves or fibres, rope, made of wool or from animal hides, to twist very tightly / good figure / to persist in travelling by night
@@ -5036,12 +5188,15 @@
   - EtymArab: ... / intestine / soft ripening date, soft food / (of troubles or disturbance) to spread out
 **مقت**: öfke / nefret / nefret edilen
   - EtymArab: ... / guardian / to detest, loathe, abhor, hatred, detestation / marrying the widow or divorcee of one
+  - Mekâyîs: (مَقَتَ) الْمِيمُ وَالْقَافُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ تَدَلُّ عَلَى شَنَاءَةٍ وَقُبْحٍ.
   - Cebel: اختزان مشاعر غليظة في القلب
 **مكث**: durmak / oturmak / kalmak
   - EtymArab: ... / to remain, wait, bide one
+  - Mekâyîs: (مَكَثَ) الْمِيمُ وَالْكَافُ وَالثَّاءُ كَلِمَةٌ تَدُلُّ عَلَى تَوَقُّفٍ وَانْتِظَارٍ.
   - Cebel: اللُبْث والتلبث في المكان زَمَنًا كالمقيم الثابت {فَمَكَثَ غَيرَ بَعِيدٍ} [النمل: 22]
 **مكر**: hile / tuzak kurmak
   - EtymArab: ... / plotting, conniving, cunning, to deceive / to irrigate hard, dry land, (of trees) to be of strong, straight stem
+  - Mekâyîs: (مَكَرَ) الْمِيمُ وَالْكَافُ وَالرَّاءُ كَلِمَتَانِ مُتَبَايِنَتَانِ: إِحْدَاهُمَا الْمَكْرُ: الِاحْتِيَالُ وَالْخِدَاعُ.
   - Cebel: اختزانُ رقيقٍ أو لطيفٍ في الأثناء فتكتنز به ولا يبرز متميزًا
 **مكك**: 
   - EtymArab: ... / to suck the mother
@@ -5049,6 +5204,7 @@
   - Cebel: جذب المائع إلى الجوف -أو منه- بقوة واستقصاء (4/2099) وتمكن (1)
 **مكن**: yer / konum / yerleştirme
   - EtymArab: ... / lizard and locust eggs / bird
+  - Mekâyîs: (مَكَنَ) الْمِيمُ وَالْكَافُ وَالنُّونُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: رسوخ الشيء متجمعًا (من دقاق) في باطن يلتئم عليه
 **مكو**: yalan / hile / ıslık çalmak
   - EtymArab: ... / to whistle, a certain bird with a long whistling sound / buttocks / animal furrows, to wash, (of a horse) to sweat
@@ -5066,8 +5222,7 @@
   - Cebel: ملاسة ظاهر الشيء واستواؤه لتجرده من الغلظ أو ذهابه منه (مع صلابة الباطن أو شدة تماسكه) - كالأرض المستوية والجِلْد الأملس والصخور المَلْسَاء
 **ملك**: egemenlik / sahiplik / kral / malik olmak / sahip olmak
   - EtymArab: to own / property / king / angel / Malik (the angel who has charge over Hell) / to own, to acquire, owner, ownership, property / to rule, to reign, to control, kingdom, sovereignty, king / slave / foundations, essence, the heart / to marry, marriage ceremony / middle of the road, middle of the valley / angels / heavenly / to rule, dominate, possess, own / messenger / to send / Moloch / bodyguard of the Egyptian sultans, (white) slave / owned (one) / to own, possess
-  - Mekâyîs: (مَلَكَ) الْمِيمُ وَاللَّامُ وَالْكَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قُوَّةٍ فِي الشَّيْءِ
-وَصِحَّةٍ.
+  - Mekâyîs: (مَلَكَ) الْمِيمُ وَاللَّامُ وَالْكَافُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى قُوَّةٍ فِي الشَّيْءِ وَصِحَّةٍ.
   - Cebel: إمساك أو امتساكٌ بشدة أو قوة مع شمول؛ كتَصْلِيب النَبْعة في ذاتها أو في شدة لصوق لحائها المحيط بها، بأن يصير كأنه من صميم جرمها، وقوائمُ الدابة تحملها وتنصبها كلها فهي قِوام بدنها
 **ملل**: din / millet / sıkıntı
   - EtymArab: hot ashes, heat of the fire, food cooked in hot ashes / to become bored, to be restless, to loathe / to dictate, to sketch / creed, religion, faith
@@ -5089,6 +5244,7 @@
   - Mekâyîs: (مَنِيَ) الْمِيمُ وَالنُّونُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلٌ وَاحِدٌ صَحِيحٌ، يَدُلُّ عَلَى تَقْدِيرِ شَيْءٍ وَنَفَاذِ الْقَضَاءِ بِهِ.
 **مهد**: beşik / döşemek / hazırlamak
   - EtymArab: ... / sleeping place, resting place, cradle, to prepare, pave, straighten things up, make level or even / to facilitate, introduce
+  - Mekâyîs: (مَهَدَ) الْمِيمُ وَالْهَاءُ وَالدَّالُ كَلِمَةٌ تَدُلُّ عَلَى تَوْطِئَةٍ وَتَسْهِيلٍ لِلشَّيْءِ.
   - Cebel: ليونة أو رقة في أثناء الشيء المتجمع فلا يكون وَعْرًا ولا جافًّا- كرِقّة الزُبْد وكالأرض السهلة وكانبساط السنام مع ما لَه من ليونة وكتجميع الثياب ونحوها للطفل في المهد مع ليونته ورخاوته {تُكَلِّمُ النَّاسَ فِي الْمَهْدِ وَكَهْلًا} [المائدة: 110]، ومنه المهاد: الفراش
 **مهل**: süre / mühlet
   - EtymArab: ... / molten copper, a generic name for all metals, tar, heated dirty oil / ease of manner, self recollection, to act or proceed in a deliberate manner, tarry, give respite / to collapse, avalanche / oil dregs
@@ -5111,8 +5267,10 @@
   - Mekâyîs: (مَوَرَ) الْمِيمُ وَالْوَاوُ وَالرَّاءُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى تَرَدُّدٍ.
   - Cebel: تردُّد المادة المجتمعة في مكانها بتسيبها- كتردد الداغصة والدِماء، وانتتاف الصوف والشعر وانتساله [في [تاح]: مُرْتُ الوبرَ فانمار أي نتفته فانتتف، والمُورة والمُوارة: ما نسل من عقيقة الجحْش وصوف الشاة حية أو ميتة] فهو تسيب
 **موس**: 
+  - Mekâyîs: (مَوَسَ) الْمِيمُ وَالْوَاوُ وَالسِّينُ: يَقُولُونَ: الْمَوْسُ: حَلْقُ الرَّأْسِ.
 **مول**: efendi / yardımcı / mâl
   - EtymArab: ... / property, possessions, wealth, gold and silver, (specifically) camels (for Arabs), to become wealthy, finance
+  - Mekâyîs: (مَوَلَ) الْمِيمُ وَالْوَاوُ وَاللَّامُ كَلِمَةٌ وَاحِدَةٌ، هِيَ تَمَوَّلَ الرَّجُلُ: اتَّخَذَ مَالًا، وَمَالَ يَمَالُ: كَثُرَ مَالُهُ ; وَيَقُولُونَ فِي قَوْلِ الْقَائِلِ: مَلْأَى مِنَ الْمَاءِ كَعَيْنِ الْمُولَهْ إِنَّ الْمُولَةَ: الْعَنْكَبُوتُ، وَفِيهِ نَظَرٌ.
   - Cebel: مادة الأثمان والنفقة التي تتيح الشراء وتتحصل من البيع أو الإرث أو أجر العمل (1): كالإبل وسائر المال المملوك، وكل ما في القرآن من التركيب هو (المال) المملوك وجمعه (الأموال)
 **موه**: su / şey / malzeme
   - EtymArab: water, a well, to strike water, (of a boat) to spring a leak, to quench one
@@ -5132,11 +5290,14 @@
   - Cebel: افتراقُ ما هو متجمعٌ أو تباعدُ بعضه عنه
 **ميل**: eğilim / sapma
   - EtymArab: ... / to incline, lean towards, tilt, bend, lean over, take sides, deviate / to attack / to be crooked / to swagger / to waver, be in doubt, win s.o. over
+  - Mekâyîs: (مَيَلَ) الْمِيمُ وَالْيَاءُ وَاللَّامُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى انْحِرَافٍ فِي الشَّيْءِ إِلَى جَانِبٍ مِنْهُ.
   - Cebel: انحراف الشيء في قيامه إلى أعلى أو مُقامه مع غيره عن الاعتدال الطبيعي المتوقع
 **نءي**: uzaklaşmak / ayrılmak
   - EtymArab: ... / small ditch encircling a tent to keep sewage away, go a long distance, walk away, shun, be far removed, keep away, remove
+  - Mekâyîs: (نَأَيَ) النُّونُ وَالْهَمْزَةُ وَالْيَاءُ كَلِمَتَانِ: النُّؤْيُ وَالنَّأْيُ.
 **نبء**: haber / peygamber
   - EtymArab: to be high, tower over, … / to speak in a low voice, utter a low sound / to announce / to turn away, withdraw, be repelled, disgusted, shocked / to wander around / protrusion, to rise / to overpower / to leave one / unexpected appearance, accompanied by a hiddenness / to be high, tower over / (to be) high / to grow / to name, proclaim / to call by name / to name, give a name / no(ː)m-n(-) / * ‘n̥m-n(-) ‘name / nimʔ˅‑ ‘name / to turn away / to move away, withdraw / to bounce off / to disagree, be in conflict with / to be repugnant / 1 protrusion, to rise / 2 news item, to ask for news, to inform / prophecy, to predict, foretell, prophesy / to claim to be a prophet / 3 to leave o. / sudden/unexpected appearance or occurrence of s.th., preceded or accompanied by some secrecy/hiddenness ( ẓuhūr ʔaw ṭurūʔ, musbaq ʔaw maknūf bi-ḫafāʔ in mā ) / elevation, protrusion / news / clear path / prophet / called/informed / informing / elevated place / to be high, raised up / height, mound / high ground / to make a noise / to proclaim, announce, call by name / barking of dogs / to utter a low voice, or sound (esp. of dog) / to acquaint, inform / information, announcement, intelligence / to call, proclaim, name / to speak / spokesman, speaker, prophet / prophecy / superiority, victory, success / being high, superiority / high point / bossed, convex / height / rising ground / strongly-bent bow / to be high, tower over, come upon from above, conquer, surpass / to rise, become high / to be haughty / to germinate, sprout, grow / to raise, elevate, thrive, grow / to be on the point of sprouting / to fly off / to surpass in any skill / to awake / to be high / plant / to grow, rise / to raise / carrying pole / to name, proclaim, summon / faint noise / to bark / to growl / to call, name / to proclaim / to prophesy / to scream, yell, roar / to whisper / to say yes / to say / to call, cry / to bleat from rut / to bark, bellow, hiss / to shout to, drive away by cries or shouts / to give one a nickname, revile / to call / to nominate / to read, count / name / ex alia regione veniens (aquae fluxus, homo), crossing a country (man, stream) / migrans de locu in locum, wanderer, wayfarer / well-traced road / to traverse / to swim / to bear fruit / fruit / fruit, produce / to utter a prophecy, speak as a prophet / utterance / to make a speech, utter, give an address
+  - Mekâyîs: (نَبَأَ) النُّونُ وَالْبَاءُ وَالْهَمْزَةُ قِيَاسُهُ الْإِتْيَانُ مِنْ مَكَانٍ إِلَى مَكَانٍ.
   - Cebel: ظهور أو طروء مسبوق أو مكنوف بخفاءٍ ما
 **نبت**: bitki / bitmek
   - EtymArab: ... / plant, vegetation, seedling, to sprout, germinate, (of plants) to shoot out, grow, bring forth, plant, cultivate, cause to grow / the young, to breed, raise, to become of age
@@ -5151,9 +5312,11 @@
   - Cebel: عُرُوّ خشنٍ ظاهرَ الشيء (ناشئًا عنه) -كقشر النخلة الأعلى وأصل السعف ذاك
 **نبط**: su çıkarmak / kaynak
   - EtymArab: ... / first water obtained from a newly dug well / to elicit, deduce / to well out, issue / the innermost part / Nabateans, to live like, or to claim to be, a Nabatean
+  - Mekâyîs: (نَبَطَ) النُّونُ وَالْبَاءُ وَالطَّاءُ كَلِمَةٌ تَدُلُّ عَلَى اسْتِخْرَاجِ شَيْءٍ.
   - Cebel: نبع لطيف نافع من باطن شيء وأثنائه بجهد: كالماء الذي يَخْرج من باطن البئر بالحفر، وكذا الذي يخرج من أعراض الصخر رشْحًا يوحي بعسر خروجه
 **نبع**: kaynamak / fışkırmak
   - EtymArab: (to) well, well out, gush forth / spring of water, brook, creek / to flow, to gush out, to issue, to originate / well / to weep, cry
+  - Mekâyîs: (نَبَعَ) النُّونُ وَالْبَاءُ وَالْعَيْنُ كَلِمَتَانِ: إِحْدَاهُمَا نُبُوعُ الْمَاءِ، وَالْمَوْضِعُ الَّذِي يَنْبُعُ مِنْهُ يَنْبُوعٌ.
   - Cebel: انبثاق رقيق الجرم أو خَالِصه من باطن متجمعًا بلا جهد: كالماء من الأرض {حَتَّى تَفْجُرَ لَنَا مِنَ الْأَرْضِ يَنْبُوعًا} [الإسراء: 90]، (4/2152) وكشجر النزاع وهو من أكرم الأشجار خشبًا "وكلُّ القِسِي إذا ضُمَّت إلى قَوْس النَبْع كَرَمَتْها قَوْسُ النبع (أي فاقتها في الكرم) لأنها أَجْمَع القِسِي للأَرْز -أي الشدة واللّين، ولا يكون العودُ كريمًا حتى يكون كذلك [ل 223]
 **نتق**: sallamak / kaldırmak
   - EtymArab: ... / to shake / to raise, lift up, overturn, pour out by overturning / (of a camel
@@ -5185,9 +5348,11 @@
   - Cebel: استفراغ أقوى المَذْخُور من طاقةٍ أو جُهْد أو شَيء في أَمْرٍ تعمله
 **نحت**: oymak / yontmak
   - EtymArab: ... / to hew, carve, quarry, chisel, hollow, splinters / disposition, character
+  - Mekâyîs: (نَحَتَ) النُّونُ وَالْحَاءُ وَالتَّاءُ كَلِمَةٌ تَدُلُّ عَلَى نَجْرِ شَيْءٍ وَتَسْوِيَتِهِ بِحَدِيدَةٍ.
   - Cebel: اقتطاعٌ من ظاهر الجرم الجافّ (باتجاه باطنه) بدقة نحو البَرْي
 **نحر**: boğaz / kurban kesmek
   - EtymArab: upper part of chest, throat / to slaughter / to hit, kill / to master one / first part, beginning / to perform the prayer in the first part of its time / to become opposite, to face, confront / to pour down heavily / chest, the upper part of the chest, the throat, to slaughter / to strive / 1. chest, the upper part of the chest, the throat, to slaughter / 2. to strive / 3. to pour down heavily / to stab, stuck (a camel) / to be so experienced as s.o. who when slaughtering a camel, hits it exactly where it ought to be hit / upper part (of body) / beginning (of s.th.) / exactness / to become abreast of
+  - Mekâyîs: (نَحَرَ) النُّونُ وَالْحَاءُ وَالرَّاءُ.
   - Cebel: شق نافذ إلى باطن الجِرم المستعرض يخرج به مائعُه المذخورُ بغزارة
 **نحس**: uğursuzluk / kötü talih
   - EtymArab: hardship, bad luck / dusty wind, severe cold / copper
@@ -5195,6 +5360,7 @@
   - Cebel: حدَّةٌ ودقّة تنبثّ مع فَراغ أثناءٍ
 **نحل**: arı / hediye
   - EtymArab: honey bees / free gift / to become emaciated / to purport to be, to claim s.th. false for o.s. (such as a name, a virtue, an excuse)
+  - Mekâyîs: (نَحَلَ) النُّونُ وَالْحَاءُ وَاللَّامُ كَلِمَاتٌ ثَلَاثٌ: الْأُولَى تَدُلُّ عَلَى دِقَّةٍ وَهُزَالٍ، وَالْأُخْرَى عَلَى عَطَاءٍ، وَالثَّالِثَةُ عَلَى ادِّعَاءٍ.
   - Cebel: قويٌّ أو طيبٌ يَحُوزُه الباطن يُفْرَزُ أو يُبْذل إلى حوزة أخرى -كما يُخْرِجُ النَحْلُ عسله فيحاز (ومنه ما في آية التركيب)، والعطية تُخْرَج فتُحَاز
 **نخر**: kemiklerin çürümesi / kırılgan / kötü koku
   - EtymArab: ... / nostril, to snort / decay, decaying
@@ -5202,6 +5368,7 @@
   - Cebel: فرغ يمتد في أثناء شيء (شديد) مع رخاوة وضعف فيه
 **نخل**: hurma ağacı / bal arısı
   - EtymArab: ... / palm trees, date palms / the select / the dregs, to sieve out, sift
+  - Mekâyîs: (نَخَلَ) النُّونُ وَالْخَاءُ وَاللَّامُ: كَلِمَةٌ تَدُلُّ عَلَى انْتِقَاءِ الشَّيْءِ وَاخْتِيَارِهِ.
   - Cebel: ذهاب غليظ الشيء من أثنائه فيرق -مع تماسكه أو بقاء أصله
 **ندد**: benzer / eş / rakip
   - EtymArab: ... / an equal, peer / antagonist / to stand in opposition, slander, bolt, wander, scatter / sandalwood
@@ -5209,11 +5376,13 @@
   - Cebel: تباعُدُ بَعْضِ الشيءِ من بَعْضِه (امتدادًا إلى أعلى أو) تفرّقًا (1) - كتباعد رأس التلِّ من أصله، وتفرق الإبل الشاردة، والناس
 **ندم**: pişmanlık / nâdim
   - EtymArab: ... / remorse, repentance, regret, to be regretful / a drinking partner, an intimate companion
+  - Mekâyîs: (نَدَمَ) النُّونُ وَالدَّالُ وَالْمِيمُ كَلِمَةٌ تَدُلُّ عَلَى تَفَكُّنٍ لِشَيْءٍ قَدْ كَانَ.
   - Cebel: فَوْتُ جُلِّ الشيء ومُعْظَمِه بحيث لا يبقى إلا أثرٌ يسير منه كما في الاستعمالين الأخيرين
 **ندي**: çağrı / seslenme / cömert / toplantı
-  - Mekâyîs: وَالْأَصْلُ الْآخَرُ النَّدَى مِنَ الْبَلَلِ، مَعْرُوفٌ.
+  - Mekâyîs: (نَدِيَ) النُّونُ وَالدَّالُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى تَجَمُّعٍ، وَقَدْ يَدُلُّ عَلَى بَلَلٍ فِي الشَّيْءِ.
 **نذر**: adamak / uyarıcı / uyarmak / korkutmak
   - EtymArab: ... / vow, to pledge to God, pledge, consecrate, votive offering / to warn, threaten, admonish, denote / harbinger, herald / to vow, consecrate
+  - Mekâyîs: (نَذَرَ) النُّونُ وَالذَّالُ وَالرَّاءُ كَلِمَةٌ تَدُلُّ عَلَى تَخْوِيفٍ أَوْ تَخَوُّفٍ.
   - Cebel: تَبِعة تُلْتَزَم أو يُخْشَى من لزومها
 **نزع**: çekip çıkarmak / ayrılık
   - EtymArab: ... / to pull out, strip off, pull at / an archer / to incline, take after (a parent) / to walk briskly, strive / to desire / to exchange, dispute, controversy
@@ -5221,6 +5390,7 @@
   - Cebel: اقتلاع بجَذْب قوي للشيء مما يلتحم به أو ينغمس هو فيه لاصقًا به
 **نزغ**: kötülük / fitne / kışkırtma
   - EtymArab: ... / jab, nudge, poke s.o. (with a finger or a spear) / to sow dissension, incite hatred, insinuate, defame
+  - Mekâyîs: (نَزَغَ) النُّونُ وَالزَّاءُ وَالْغَيْنُ كَلِمَةٌ تَدُلُّ عَلَى إِفْسَادٍ بَيْنَ اثْنَيْنِ.
   - Cebel: نَخْس حِسّي (في البدن) أو معنوي للتحريك والإثارة
 **نزف**: kan akıtmak / boşalmak
   - EtymArab: haemorrhage, to bleed / to drain, to exhaust / (of drinks and arguments) to run out / to be intoxicated
@@ -5228,12 +5398,14 @@
   - Cebel: ذهاب عُظم ما في الباطن والأثناء -أو كلِّه- من مائع وبَلال يمسكها أو يملؤها: كذهاب الماء من الوعاء، والبدن، والبئر، ونفاد شراب القوم، والدم من البدن
 **نزل**: inmek / konaklamak / indirmek
   - EtymArab: dwelling, habitat, to take up residence / hospitality, food offered to guests, provisions / to come down, to disembark, to bring down / flood, rain, stage, rank / combat, duel, to engage in combat / calamity / an attack of ill health, seizure
+  - Mekâyîs: (نَزَلَ) النُّونُ وَالزَّاءُ وَاللَّامُ كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى هُبُوطِ شَيْءٍ وَوُقُوعِهِ.
   - Cebel: انحدارٌ أو انفصال وخلوص إلى مقر أو حيّز يوجد فيه بقوة
 **نسء**: ertelemek / geciktirmek
   - EtymArab: ... / stick, staff, to chide, drive hard (an animal), longevity, postponement, to protract, allow time to pay a debt / strongly intoxicating drink, to cause to forget
   - Cebel: دَفْع الشيء (المُقْبِل) عن مَحْضَرِه تأخيرًا إلى أثناء يجتمع فيها
 **نسب**: soy / akrabalık
   - EtymArab: kinship, lineage, relationship through marriage, relative / to be equal, to be suitable, to match / a clearly-marked straight road
+  - Mekâyîs: (نَسَبَ) النُّونُ وَالسِّينُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ قِيَاسُهَا اتِّصَالُ شَيْءٍ بِشَيْءٍ.
   - Cebel: اتصالٌ بلطف (دقة) وامتداد كسِرْب النمل الموصوف وكالطريق الموصوف بين ما حوله من أرض
 **نسخ**: kaldırmak / kopya
   - EtymArab: to abrogate, to revoke, to remove, to invalidate, to substitute one thing for another / to copy, a copy, to seek to copy.
@@ -5263,8 +5435,7 @@
   - Mekâyîs: (نَسِيَ) النُّونُ وَالسِّينُ وَالْيَاءُ أَصْلَانِ صَحِيحَانِ: يَدُلُّ أَحَدُهُمَا عَلَى إِغْفَالِ الشَّيْءِ، وَالثَّانِي عَلَى تَرْكِ شَيْءٍ.
 **نشء**: doğmak / büyümek / yeni
   - EtymArab: to rise, emerge, come into being / to grow / to raise / the young, youth, young plants and animals, the young generations, the first hours of the night / to rise, to grow, to emerge, to come into being, to create, to initiate, to cause to grow, to raise from the dead / to glean information / to rise, grow, raise / to move upwards
-  - Mekâyîs: (نَشَأَ) النُّونُ وَالشِّينُ وَالْهَمْزَةُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ارْتِفَاعٍ فِي شَيْءٍ
-وَسُمُوٍّ.
+  - Mekâyîs: (نَشَأَ) النُّونُ وَالشِّينُ وَالْهَمْزَةُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ارْتِفَاعٍ فِي شَيْءٍ وَسُمُوٍّ.
   - Cebel: حدوث الشيء من جنسه مبتدَأ صغيرًا آخذًا في الاستغلاظ
 **نشر**: yaymak / dağıtmak / canlanmak / diriltmek
   - EtymArab: ... / scent, to waft / to sprout, unfold, come into leaf, multiply / to announce, publicise / to raise, revive / to saw apart
@@ -5284,6 +5455,7 @@
   - Cebel: إقامة الشيء إلى أعلى قويًّا متماسكًا أو شديدًا على وضع مستقيم دائم: كلي يقيم النصابُ السكين فتقف إلى أعلى أو على استقامتها دون أن تتدلى، والمِنصبُ القِدرَ، والساريةُ الخيمة
 **نصت**: susmak / sessizlik
   - EtymArab: ... / to listen, lend an ear to, accept advice / to be silent, silence
+  - Mekâyîs: (نَصَتَ) النُّونُ وَالصَّادُ وَالتَّاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى السُّكُوتِ.
   - Cebel: السكوت استماعًا كما هو مصرّح
 **نصح**: öğüt vermek / öğütleyen
   - EtymArab: a needle, to patch up, to stitch up / rain falling on arid land, to quench the thirst of animals or land / purity, sincerity, sincere advisor / advice, counsel, to be good-hearted, to act in good faith
@@ -5305,6 +5477,7 @@
   - Cebel: رخاوة نسيج ما كان شديد المادة تأثرا بالحرارة (وطيبُه للأكل): كما يَنْضَج اللحمُ والبسرُ وسائر الثَمَر
 **نضخ**: fışkırtmak / akıtmak
   - EtymArab: ... / a drizzle, a gushing spring, a cascading spring, to spout water copiously
+  - Mekâyîs: (نَضَخَ) النُّونُ وَالضَّادُ وَالْخَاءُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ، إِلَّا أَنَّهُ أَكْثَرُ مِنْهُ.
   - Cebel: فَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق
 **نضد**: üst üste koymak / sıralamak
   - EtymArab: ... / pile of things, bunches of fruit growing in rows over one another, layers of clouds, stack of stones / the family elders
@@ -5336,12 +5509,15 @@
   - Cebel: بين الجِرم الثخين وطراءته لرقة كثيرة تخالطه: كالأرض السهلة المذكورة، وكالسمين
 **نعس**: uyuklamak / hafif uyku
   - EtymArab: ... / slumber, dozing off, drowsiness, to doze off / to beget lazy children
+  - Mekâyîs: (نَعَسَ) النُّونُ وَالْعَيْنُ وَالسِّينُ أُصَيْلٌ يَدُلُّ عَلَى وَسَنٍ.
   - Cebel: ثقل أو فتور في الجسم للينة وامتلائه بالرخاوة
 **نعق**: bağırmak / çağırmak
   - EtymArab: ... / entrance to desert rat
+  - Mekâyîs: (نَعَقَ) النُّونُ وَالْعَيْنُ وَالْقَافُ كَلِمَةٌ تَدُلُّ عَلَى صَوْتٍ.
   - Cebel: نفاذ صوتٍ غليظِ حادٍّ ممتد عن حي كدعاء الراعي ونعيق الغراب
 **نعل**: ayakkabı / nalın
   - EtymArab: ... / footwear, horseshoe, camelshoe, to have thick hard feet, have hooves, travel on foot, hard and stony piece of barren land / calamities
+  - Mekâyîs: (نَعَلَ) النُّونُ وَالْعَيْنُ وَاللَّامُ أُصَيْلٌ يَدُلُّ عَلَى اطْمِئْنَانٍ فِي الشَّيْءِ وَتَسَفُّلٍ.
   - Cebel: حفظ الشيء بلزوم مناسبِ له يقيه الخشونة والتآكل ونحوهما: كالنعل التي تلبس ونعل الحافر والجراب
 **نعم**: iyilik / lütuf / en'âm / nimet / nimet vermek
   - EtymArab: ... / cattle, ostrich / bounty, blessings, grace, good living, to enjoy life, to bestow favours / to flourish, become verdant / to be soft and smooth / to be(come) pleasant, agreeable / my delight / delight, delightfulness / to be(come) pleasant, delightful / wind / the pleasant one / pleasantness
@@ -5385,6 +5561,7 @@
   - Cebel: تخفيف كثافة الشيء بتفريق بعضه عن بعض جَذْبًا أو نَشرًا فيتسع حَجْمه
 **نفع**: yarar / fayda / menfaat
   - EtymArab: ... / benefit, use, advantage, be useful, make use of / walking stick, dealers in walking sticks
+  - Mekâyîs: (نَفَعَ) النُّونُ وَالْفَاءُ وَالْعَيْنُ: كَلِمَةٌ تَدُلُّ عَلَى خِلَافِ الضَّرِّ.
   - Cebel: فائدة تُنَال من الشيء أو جدوى تعود منه
 **نفق**: tükenmek / sona ermek / tünel / münafıklık
   - EtymArab: a desert rat
@@ -5411,11 +5588,11 @@
   - Cebel: ندور جزء دقيق من ظاهر جسم صُلب بحادٍّ يقلعه فيدوم أثره: كالاستعمالات السابقة، ويلحظ فيها كلها دوام الأثر
 **نقص**: eksiklik / eksik / eksilmek
   - EtymArab: ... / to decrease, diminish, loss / to disparage / weakness in the mind, shortcomings, faults
+  - Mekâyîs: (نَقَصَ) النُّونُ وَالْقَافُ وَالصَّادُ كَلِمَةٌ وَاحِدَةٌ، هِيَ النَّقْصُ: خِلَافُ الزِّيَادَةِ.
   - Cebel: ذهابُ جُزء أو اختلاله من جرم الشيء المتجمع بحيث يقِلُّ جِرْمُه أو يَخِفّ بعد ذهابه- كالماء يَخْلُو من المِلْح والعَكَر (كما يقال عذب، فرات)، والرُطَبُ يذهب ماؤُه وبعض عسله {وَلَا تَنْقُصُوا الْمِكْيَال وَالْمِيزَانَ} [هود: 84]
 **نقض**: bozmak / sözü bozmak
   - EtymArab: ... / to annul, dismantle, revoke, violate, dispute with / contrary / opposite / to overburden / to weaken
-  - Mekâyîs: (نَقَضَ) النُّونُ وَالْقَافُ وَالضَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى نَكْثِ شَيْءٍ،
-وَرُبَّمَا دَلَّ عَلَى مَعَنًى مِنَ الْمَعَانِي عَلَى جِنْسٍ مِنَ الصَّوْتِ.
+  - Mekâyîs: (نَقَضَ) النُّونُ وَالْقَافُ وَالضَّادُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى نَكْثِ شَيْءٍ، وَرُبَّمَا دَلَّ عَلَى مَعَنًى مِنَ الْمَعَانِي عَلَى جِنْسٍ مِنَ الصَّوْتِ.
   - Cebel: تفكُّك ما قوى ارتباط أجزائه الباطنة لضغط شديد أو نحوه- كانتقاض البناء والعَقْد والحَبْل والغَزْل ونحوهن {كَالَّتِي نَقَضَتْ غَزْلَهَا مِنْ بَعْدِ قُوَّةٍ أَنْكَاثًا} [النحل: 92] هذا نقض غَزل الأخبية الذي وُصِف ونَقْضا الأذنين ينكسران عن الامتداد في اتجاههما
 **نقع**: su birikintisi / ıslak
   - EtymArab: ... / stagnant water, swamp, quagmire, (of water) to collect, soak, quench one
@@ -5423,7 +5600,7 @@
   - Cebel: تشبُّع الشيء بالمائع حتى يرشح من أثنائه ويتجمع فوقه - كالماء من قاع البئر ومن الأرض
 **نقم**: öç / öfke / intikam
   - EtymArab: ... / punishment, denial, resentment, hatred, vengeance, to punish, deny, dislike, reproach, loathe, take revenge
-  - Mekâyîs: وَقَوْلُهُمْ لِلنَّفْسِ نَقِيمَةٌ، وَهُوَ مَيْمُونُ النَّقِيمَةِ، إِنَّمَا هِيَ مِنَ الْإِبْدَالِ، وَالْأَصْلُ نَقِيبَةٌ.
+  - Mekâyîs: (نَقَمَ) النُّونُ وَالْقَافُ وَالْمِيمُ أُصَيْلٌ يَدُلُّ عَلَى إِنْكَارِ شَيْءٍ وَعَيْبِهِ.
   - Cebel: ضَمُّ القلب على كراهة بالغة ورَفْضِ بشيء
 **نكب**: musibet / felâket
   - EtymArab: ... / wind that brings no rain, disastrous wind, to be afflicted by disaster / the shoulder joint, disease that afflicts the joint, to veer off, turn away from
@@ -5439,6 +5616,7 @@
   - Cebel: الغَلَب على ظاهر الشيء -مع التغلغل في باطنه: كما يغلب المطر على الأرض دوامًا وغُزْرًا فيعمُّها ويتغلغل فيها ماؤه، وكما تغطى الأجفان العين من تغلغل النعاس فيها
 **نكد**: hastalık / sıkıntı / hayırsız
   - EtymArab: ... / bad luck, strained circumstances / to be niggardly, deny assistance / (of she-camels) to fail to give birth to living young / (of land) to fail to grow plants
+  - Mekâyîs: (نَكَدَ) النُّونُ وَالْكَافُ وَالدَّالُ أُصَيْلٌ يَدُلُّ عَلَى خُرُوجِ الشَّيْءِ إِلَى طَالِبِهِ بِشِدَّةٍ.
   - Cebel: قلة الخير الذي يأتي من الشيء بسبب شدة أثناء الشيء وتماسكه: كالركيّة القليلة الماء من شدة أرضها حقيقةً أو تصورًا، وكالناقة التي تبقى منفردة لا تنمو لعدم الأولاد
 **نكر**: bilmemek / reddetmek / bilinmeyen / inkar etmek
   - EtymArab: not to know, be ignorant / to deny / hardship, serious matters / cunning / to be discerning / denial, to disown / to dispute with, fighting / to be ignorant of s.th., to fail to recognise, to refuse to acknowledge / to seek to clarify / to censure, to blame / detestable, abominable, loathsome
@@ -5450,6 +5628,7 @@
   - Cebel: انقلاب الشيء أو ارتداده عن مُطّرِدِ حاله واتجاهِه: كالسهم المذكور
 **نكص**: geri dönmek / kaçmak
   - EtymArab: ... / to withdraw, reverse, show reluctance, recoil, lose heart
+  - Mekâyîs: (نَكَصَ) النُّونُ وَالْكَافُ وَالصَّادُ كَلِمَةٌ.
   - Cebel: الرجوع القهقري بقوة إلى الخلف
 **نكف**: kaçınmak / yüz çevirmek
   - EtymArab: ... / to wipe tears from the cheek with one
@@ -5462,7 +5641,7 @@
   - Cebel: اضطمام شيء على ما يدخل جوفه فيحشوه ويوطئه كالنمرقة
 **نمل**: karınca / karıncalar
   - EtymArab: ... / ants / tips of the fingers / to invisibly mend a garment / to tell lies / to be restless, active person
-  - Mekâyîs: وَهَذِهِ مِمَّا زِيدَتْ فِيهِ النُّونُ، وَالْأَصْلُ هَاءٌ وَبَاءٌ وَلَامٌ.
+  - Mekâyîs: (نَمَلَ) النُّونُ وَالْمِيمُ وَاللَّامُ كَلِمَاتُهُ تَدُلُّ عَلَى تَجَمُّعٍ فِي شَيْءٍ وَصِغَرٍ وَخِفَّةٍ.
   - Cebel: حركة أو امتداد بخفة ولُطف
 **نمم**: çekiştirmek / gammazlamak
   - EtymArab: louse / slight, gentle sound / to show through, (of scent) to waft about / to disclose or betray a confidence, to spread malicious rumours, to slander, to sow dissension, slanderer, calumny
@@ -5483,6 +5662,7 @@
   - Cebel: انجذاب الشيء إلى أسفل بضَغْطٍ من ثِقَله كالنجم والعجيزة
 **نوب**: sıra / nöbet
   - EtymArab: affliction, a seizure, calamity / to visit, to deputise / to take turns, a shift / to go back, to revert, to repent / to represent, act as deputy
+  - Mekâyîs: (نَوَبَ) النُّونُ وَالْوَاوُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى اعْتِيَادِ مَكَانٍ وَرُجُوعٍ إِلَيْهِ.
   - Cebel: عَوْدٌ إلى الشيءِ ومُضَامَّةٌ له مَرَّة بعد أخرى
 **نور**: ışık / aydınlık / nur
   - EtymArab: light, to light, to shed light, to illuminate / to clarify, to become clear / guidance, to guide, to seek guidance, to enlighten, to gain insight / lantern, landmark / fire, to light fire / blossoms, to blossom, to bring forth flowers / to shine, be(come) bright / lighthouse / fire / light
@@ -5516,18 +5696,22 @@
 **هات**: gel / getir
 **هبط**: inmek / aşağı düşmek
   - EtymArab: ... / to descend, climb down / to come to a new place, settle down in a new place / to cave in, collapse / to abate, decrease, depreciate / to be humiliated
+  - Mekâyîs: (هَبَطَ) الْهَاءُ وَالْبَاءُ وَالطَّاءُ: كَلِمَةٌ تَدُلُّ عَلَى انْحِدَارٍ.
   - Cebel: غُنُور أو نَقْصٌ في جِرمِ الشيء عن معتاد الحال لضغط عليه أو انتقاص منه
 **هبو**: toz / savrulan toz
   - EtymArab: ... / dust floating in the air, dust particles visible in sunlight, mote, dust cloud / to swagger, walk with conceit / to dissolve into nothing, vanish into nothing, vain effort
+  - Mekâyîs: (هَبَوَ) الْهَاءُ وَالْبَاءُ وَالْحَرْفُ الْمُعْتَلُّ: كَلِمَةٌ تَدُلُّ عَلَى غَبَرَةٍ وَرِقَّةٍ فِيهَا.
   - Cebel: مفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23]
 **هجد**: uyumak / gece ibadeti
   - EtymArab: ... / to sleep in the night or in the latter part of the night / to stay awake at night / (of a camel) to rest the fore part of the neck upon the ground
+  - Mekâyîs: (هَجَدَ) الْهَاءُ وَالْجِيمُ وَالدَّالُ أُصَيْلٌ يَدُلُّ عَلَى رُكُودٍ فِي مَكَانٍ.
   - Cebel: التركيب يعبر عن النوم وهو تمدد مع همود وسكون (بعد تعب وإرهاق) -كما يشهد له طلب النوم بعد الكَلَل من السُرَى في البيت الثاني)، وكمَدّ العنق مع الاعتماد عليه -والاعتماد ضغط وشدة- أو مع ملحظ أن هذا لا يكون إلا بسبب التعب والإعياء وهو شدة سلبية
 **هجر**: terk etmek / göç etmek
   - EtymArab: to emigrate, relinquish, leave / hottest time of the day / obscene language / to talk nonsense, talk through one / custom, habit / speech, language / excellent, distinguished / lofty (palm-tree) / better, nobler / longer, thicker / bow-string / rope for tying a camel / agricultural settlement of the Wahabi Ikhwān in Nejd / to empty, clean a ditch / sufficiency / he is not adequate to the work / large watering-trough / large cup / durra of minor quality / 1 to give up, part company with, abandon / to emigrate, migrate / 2 summer midday heat / 3 bad or obscene language / to slander, insult / 4 custom, habit / rompre avec, s / rupture, séparation / départ, émigration / endroit isolé, lieu dont il n / détester / émigrer / marcher / s / aller, partir, marcher / milieu du jour, le plus fort de la chaleur / heure de la sieste / faire chaud à midi / midi / langage indécent / délirer, radoter / parler haut / être pur, sans mélange / excellent, noble et distingué (homme) / coutume, manière / devenir musulman / musulman / corde de l / lier les pieds de devant d / entraver et forcer à s / vol (en particulier de vaches ou de chameaux) / mettre l / faire violemment, avec excès / enclave protégée / ville / ville, village, province, pays / ville, citadins / région habitée, cité, village / terre, pays / chemin, rue très fréquentée, animée / dieu de la terre / terre, terrain, pays / endroit, place / id. / vider, nettoyer une fosse / creuser un trou / manquer, attendre / vermillon, couleur rouge / teindre en rouge / sorte de durra de qualité inférieure / acheter de la nourriture pour sa famille / departing, leaving behind / ruins of an old city/village / city-dweller / departing / removal from the desert to the towns or villages / departure / town, village / to talk nonsense, obscene language / because people [then] shelter themselves in their tents or houses, as though they forsook one another ( tahāǧarū ) / ruins of an old city / to depart / to leave desert life and settle in an area of agriculture / territoire irrigué / champ / field, field in cultivation / piece of land retained and enclosed by its proprietor for sowing and planting trees, (WehrCowan1979:) small vegetable garden / field / Hegira
   - Mekâyîs: (هَجَرَ) الْهَاءُ وَالْجِيمُ وَالرَّاءُ أَصْلَانِ يَدُلُّ أَحَدُهُمَا عَلَى قَطِيعَةٍ وَقَطْعٍ، وَالْآخَرُ عَلَى شَدِّ شَيْءٍ وَرَبْطِهِ.
   - Cebel: حدة أو يبس في أثناء الشيء يظهرُ أثرُها أو يمتد: كيبس الحمض وهو نبات أخضر
 **هجع**: uyumak / geceleyin uyku
+  - Mekâyîs: (هَجَعَ) الْهَاءُ وَالْجِيمُ وَالْعَيْنُ: كَلِمَةٌ تَدُلُّ عَلَى نَوْمٍ.
   - Cebel: سكونُ حِدة الشيء أو انكسارها لرقة أو ضعف يخالطه: كذهاب حدّة الجوع بالأكل واليقظة بالنوم {كَانُوا قَلِيلًا مِنَ اللَّيلِ مَا يَهْجَعُونَ (17)}
 **هدد**: korkutmak / tehdit etmek
   - EtymArab: ... / to pull down, demolish / thud, thundering sound, devastating event / to frighten, threaten
@@ -5545,6 +5729,7 @@
   - Mekâyîs: (هَدَيَ) الْهَاءُ وَالدَّالُ وَالْحَرْفُ الْمُعْتَلُّ: أَصْلَانِ [أَحَدُهُمَا] التَّقَدُّمُ لِلْإِرْشَادِ، وَالْآخَرُ بَعْثَةُ لَطَفٍ.
 **هرب**: kaçmak / uzaklaşmak
   - EtymArab: to flee, escape, desert / (D-stem) to traffic, smuggle / harp / 1 to escape, flee, desert / to seek refuge / refuge / fugitive / to disappear from sight / 2 to become feeble / to flee / D-stem: to smuggle / cry, noise / tumulte, bruit / fuir, s / mettre en fuite / faire passer en contrebande / cacher / s / craindre de faire qc / avare, chiche / trop porté sur la nourriture / citerne / trou dans le sol couvert de broussaille servant de piège / sol glissant ou qui s / prostituée / être vieux, décrépit / to escape, flee, / to become feeble / to be old, decrepit
+  - Mekâyîs: (هَرَبَ) الْهَاءُ وَالرَّاءُ وَالْبَاءُ كَلِمَةٌ وَاحِدَةٌ، هِيَ هَرَبَ، إِذَا فَرَّ.
   - Cebel: غياب من الحيز بقوة اندفاعًا أو إسراعًا إلى مُسْتَتَر: كالوتد في الأرض، وكالهارب
 **هرع**: koşmak / acele etmek
   - EtymArab: ... / to go in haste, hurry, haste, hasty, walk briskly / to flow / a weak person
@@ -5552,6 +5737,7 @@
   - Cebel: سرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة
 **هزء**: alay etmek
   - EtymArab: ... / to mock, scorn, ridicule, sneer at, derision / to break / to perish, cause death of cattle by allowing them to get too cold
+  - Mekâyîs: (هَزَأَ) الْهَاءُ وَالزَّاءُ وَالْهَمْزَةُ كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: تحركٌ وتحريكٌ قويٌّ بسبب الخفة؛ كما في تحريك الراحلة والإسراع
 **هزز**: sallamak / sarsmak
   - EtymArab: ... / shaking, vibrating, to swing / to walk briskly, (of God) to bring forth plants, (of barren land) to become alive / rumbling, quivering, trembling, commotion, movement
@@ -5559,6 +5745,7 @@
   - Cebel: تحرك جِرْم الشيء حَرَكةً خفيفة مضطربة أو مترددة (1) كغَلَيان القِدْر واهتزاز الماءِ والقناة
 **هزل**: şaka / alay
   - EtymArab: to be(come) emaciated, lean, skinny / to joke, talk lightly, jokingly / ... / to mock, joke, jest, take lightly / to be thin, be emaciated / to lose one / emaciation > weakness > miserableness > ridiculousness > to mock / beast of burden / to be reduced to misery / to excite (a beast: rider) / to move, agitate, shake, jolt, shook, convulse, upset / to shake, jolt, rock / to run swiftly (ostrich) / quick, swift] / to put to flight, rout, defeat / confusion of sounds, uninterrupted speech / to hurry, be quick / † to break, smash / to carry away (wind) / to be lively, brisk / to riot, raise a disturbance / to be quick / being agitated, etc. / to be emaciated / to scoff, jeer, sneer, laugh at, make fun of, deride, ridicule, mock / to laugh / † to defame, banish / jesting / être maigre, exténué / maigre, émacié / bête de somme / amaigrir / faiblesse / plaisanter / se moquer / plaisanterie / c
+  - Mekâyîs: (هَزَلَ) الْهَاءُ وَالزَّاءُ وَاللَّامُ كَلِمَتَانِ فِي قِيَاسٍ وَاحِدٍ، يَدُلَّانِ عَلَى ضَعْفٍ.
   - Cebel: نَقْصُ بَدَن الحي لذهاب سِمَنِه وما به امتلاؤه، ويلزمه الخفة
 **هزم**: yenilgi / bozguna uğratmak / yenmek
   - EtymArab: ... / lowland / crevice, dent, groove, crack / to defeat, vanquish, rob s.o. of his rights / roll of thunder / disaster, to kill / emaciated animals
@@ -5578,12 +5765,15 @@
   - Cebel: نَهْك الغليظ وتذويبه وإذهاب غِلَظه - كهَضم الطَّعام، والأهضم الكشحين نُهِك ما بجوفه من غَلِيظٍ فدقَّ، كما يوصف الكشح بالدقة
 **هطع**: hızla koşmak / başını eğmek
   - EtymArab: ... / to come rushing in fear, stretch the neck and head in agitation, transfix the eyes in horror, cower in fear / a wide road
+  - Mekâyîs: (هَطَعَ) الْهَاءُ وَالطَّاءُ وَالْعَيْنُ: أُصَيْلٌ يَدُلُّ عَلَى إِقْبَالٍ عَلَى الشَّيْءِ وَانْقِيَادٍ.
   - Cebel: خضوعٌ وانبساطٌ بعد غلظ وارتفاع (من ضغط) - كالطريق الموصوف فإنه لا يتسع إلَّا بكثرة الوطء وعِرَضِ مواضعه فتذهب وُعُورته، وعنق البعير إذا صُوَّب كان ضغطًا شديدًا وقع عليه فصوَّبه لأن المعتاد تَصَعُّده
 **هلع**: korku / endişe
   - EtymArab: ... / to be restless, be anxious, be fearful / to be mean, be greedy, become hungry / a cowardly person, dread, anxiety, fear / impatience / a fast-running she-camel
+  - Mekâyîs: (هَلَعَ) الْهَاءُ وَاللَّامُ وَالْعَيْنُ: يَدُلُّ عَلَى سُرْعَةٍ وَحِدَّةٍ.
   - Cebel: فراغ الجوف من مصدر القوة- كالجائع جدًّا
 **هلك**: yok olmak / ölmek
   - EtymArab: to die, to perish, to expire / to ruin / to harm, to consume, to spend / to lose one
+  - Mekâyîs: (هَلَكَ) الْهَاءُ وَاللَّامُ وَالْكَافُ: يَدُلُّ عَلَى كَسْرٍ وَسُقُوطٍ.
   - Cebel: فراغ جوف الشيء مما هو حقيقته وجوهره - كفراغ الأرض من الخصوبة، والجِيفة من الرُوح، والمَهواة من الصَخر، والسحابة من (4/2314) المطر
 **هلل**: ay / hilal / çekilmek / tehlil
   - EtymArab: new moon, (of the moon) to appear for the first time / (of the month) to start / crescent, crescent-šaped / to come forth / to exalt God, to invoke God / to shout, boast / to praise / praise Yahweh / praise
@@ -5591,7 +5781,7 @@
   - Cebel: ذَهابُ وَسَط الشيء ومعظم أثنائه مع بَقاء سائره شاغلًا مكانه (1) كهلال السماء تَبقى بَعضُ حافته ولا يظهر وسطه، والجملُ المهزولُ ذاب شحمه وأثناؤه وبقى هيكلُه، والغبارُ يشغل حيزًا عظيمًا وأثناؤه فارغة
 **هلم**: gel / buraya gel
   - EtymArab: (interjection) / ... / gather / to intend, go for / come, come along / God could take to task [lit. knows] the hinderers among you, and those who say to their brothers, “Come, join us” / bring forward, produce / produce your witnesses who testify that God has forbidden this
-  - Mekâyîs: قَالُوا: وَأَصْلُهَا هَلْ أَؤُمُّ، كَلَامُ مَنْ يُرِيدُ إِتْيَانَ الطَّعَامِ، ثُمَّ كَثُرَتْ حَتَّى تَكَلَّمَ بِهَا الدَّاعِي، مِثْلَ قَوْلِهِمْ: تَعَالَ، أَيِ اعْلُ، ثُمَّ كَثُرَتْ حَتَّى قَالَهَا مَنْ كَانَ أَسْفَلَ لِمَنْ كَانَ فَوْقَ.
+  - Mekâyîs: (هَلَمَ) الْهَاءُ وَاللَّامُ وَالْمِيمُ لَيْسَ فِيهِ إِلَّا قَوْلُهُمْ هَلُمَّ: كَلِمَةُ دَعْوَةٍ إِلَى شَيْءٍ.
 **همد**: sönmek / durmak / sönüklük
   - EtymArab: ... / silence, death, to die away, die down, abate / (of land) to be barren, be lifeless, (of a garment) to fall to shreds
   - Mekâyîs: (هَمَدَ) الْهَاءُ وَالْمِيمُ وَالدَّالُ: أَصْلٌ يَدُلُّ عَلَى خُمُودِ شَيْءٍ.
@@ -5602,18 +5792,22 @@
   - Cebel: انصباب المتجمع من المائع من مجمعه بقوة: كالمطر والدمع
 **همز**: vurmak / kakmak / hemze harfi
   - EtymArab: ... / to prod, poke, push, prick, squeeze / to spur, goad on / to insinuate, inspire evil thoughts, set people against one another, backbite / to prick, urge on, prod
+  - Mekâyîs: (هَمَزَ) الْهَاءُ وَالْمِيمُ وَالزَّاءُ كَلِمَةٌ تَدُلُّ عَلَى ضَغْطٍ وَعَصْرٍ.
   - Cebel: دفع بقوة ودِقّة لما ينفذ في شيء
 **همس**: fısıldamak / gizlice konuşmak
   - EtymArab: to mumble, mutter, whisper / 1 to whisper, mumble, mutter / 2 to squeeze, move stealthily / imaginer / réfléchir / penser / se diriger vers / marmotter, parler bas / mastiquer sans ouvrir la bouche / son très léger, secret / toucher légèrement / chuchoter / chuchotement / instant / petit bois, branchages
+  - Mekâyîs: (هَمَسَ) الْهَاءُ وَالْمِيمُ وَالسِّينُ يَدُلُّ عَلَى خَفَاءِ صَوْتٍ وَحِسٍّ.
   - Cebel: إخفاء ما يجري في الفم: كمضغ الطعام مع ضم الفم، وكالعصر مع الضغط
 **همم**: istek / gayret / himmet
   - EtymArab: sorrow, anxiety, concern, to cause distress / importance, serious matter / errand, assignment / to go about one
   - Mekâyîs: (هَمَّ) الْهَاءُ وَالْمِيمُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى ذَوْبٍ وَجَرَيَانٍ وَدَبِيبٍ وَمَا أَشْبَهَ ذَلِكَ، ثُمَّ يُقَاسُ عَلَيْهِ.
   - Cebel: ذَوَبانُ الشَيءِ مُتَسَيِّبًا مما يجمعه لحرارة أو شدة (1)
 **همن**: egemen olmak / gözetmek
+  - Mekâyîs: (هَمَنَ) الْهَاءُ وَالْمِيمُ وَالنُّونُ لَيْسَ بِشَيْءٍ.
   - Cebel: ضبط أو حَوْز بشدة وتمكُّن "كالنفقة في الهميان، وكما تمسك التكة والمِنْطَقة السراويل والإزار
 **هنء**: hoş / kolay / rahat
   - EtymArab: ... / benefits coming with no toil / to be healthy, (of food) to be wholesome, feed, give generously, bring pleasure / to congratulate / (of animals) to graze well / to cover the skin of a camel with pitch
+  - Mekâyîs: (هَنَأَ) الْهَاءُ وَالنُّونُ وَالْهَمْزَةُ: يَدُلُّ عَلَى إِصَابَةِ خَيْرٍ مِنْ غَيْرِ مَشَقَّةٍ.
   - Cebel: نجوعُ ما يجري في أثناء البدن وطيب أثره: كالطعام السائغ إلى مقره فيغني من جوع {فَكُلُوهُ هَنِيئًا مَرِيئًا} [النساء: 4]، وكالقطران خلال مسام الجلد الأجرب فيريح الجلد ويبرّده، وكعِذْق النخلة يؤكل ما فيه حُلوًا سائغًا
 **هود**: peygamber adı / yahudi / dönmek
   - EtymArab: ... / the Jews / repentance, to mend one
@@ -5625,15 +5819,18 @@
   - Cebel: تَسيُّبُ مادة الشيء فيخِرّ مهيلا لتخلخل أثنائه كاتساع الهور، وتسيب اللَبَن من الناقة، وتسيب الرمل والبناء، وانهيار الجرُف {عَلَى شَفَا جُرُفٍ هَارٍ فَانْهَارَ بِهِ فِي نَارِ جَهَنَّمَ} [التوبة: 109]
 **هون**: alçaklık / kolaylık / kolay
   - EtymArab: ... / humiliation, disgrace / to ridicule, value lightly, be despicable / to be weak, be meek / to be easy / to be amiable / to be moderate / to be solemn, be gentle
+  - Mekâyîs: (هَوَنَ) الْهَاءُ وَالْوَاوُ وَالنُّونُ أُصَيْلٌ يَدُلُّ عَلَى سُكُونٍ أَوْ سَكِينَةٍ أَوْ ذُلٍّ.
   - Cebel: لين الشيء أو نعومته ورخاوته وضعفه أي عدم صلابته
 **هوي**: arzu / istek / çukur
   - EtymArab: the atmosphere between the earth and the sky, air, emptiness, void / to fall down, to swoop down, to cause to fall, to speed up / inclination, desire, love, altruistic motives / foolish person / temptation, to tempt, to seduce, to enchant / (bottomless) abyss / narrow opening between mountains / he sends down (the hosts of heaven) / to fall, happen, be / beloved of Yahweh / gift of Yahweh / Yahweh comforted / servant of Yahweh / my good (is) Yahweh / my light (is) Yahweh / my light / Yahweh has remembered / Yahweh has hidden, Yahweh has treasured / my strength (is) Yahweh / salvation of Yahweh / Yahweh has established / my God (is) Yahweh / Yahweh / Yahweh (is) father / Yahweh (is) God / Yahweh has been gracious / Yahweh has given / Yahweh has judged / he has judged / Joshua / Yahweh (is) lord / lord / salvation
   - Mekâyîs: (هَوِيَ) الْهَاءُ وَالْوَاوُ وَالْيَاءُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى خُلُوٍّ وَسُقُوطٍ.
 **هيء**: biçim / düzen / hazırlamak
   - EtymArab: form, shape, bearing, to be shapely, to be well-formed / to make ready, to prepare things, to facilitate, to assist / to yearn for, to desire
+  - Mekâyîs: (هَيَأَ) الْهَاءُ وَالْيَاءُ وَالْأَلِفُ كَلِمَةٌ تَأْتِي وَهَاؤُهَا زَائِدَةٌ.
   - Cebel: الاستعداد (أو اتخاذ وضع مناسب لأمر ما، وفيه معنى الانتظار والقبول أيضًا): كالناقة التي تحمل إذا قُرِعَتْ ولا تُخْلِف
 **هيت**: gel / hazırlan / ses / çağrı
   - EtymArab: /an interjection?)
+  - Mekâyîs: (هَيَتَ) الْهَاءُ وَالْيَاءُ وَالتَّاءُ كَلِمَةٌ تَدُلُّ عَلَى الصَّيْحَةِ.
   - Cebel: غئور شديد في ما شأنه الانبساط- كالهُوتَة المذكورة
 **هيج**: coşku / çalkalanma
   - EtymArab: ... / to get excited, be stirred up, be furious, be inflamed / war / to cause to dry up, wither away, shrivel, be thirsty
@@ -5641,21 +5838,27 @@
   - Cebel: جَفَافٌ وحِدَّةٌ في الباطن أو الأثناء
 **هيل**: yığın / dağınık kum
   - EtymArab: ... / to pour down, slide down, (of sand or earth in a pit) to trick.le down, heap up (sand or earth), cause to pour down, avalanching sand dunes, gang up / a halo
+  - Mekâyîs: (هَيَلَ) الْهَاءُ وَالْيَاءُ وَاللَّامُ كَلِمَةٌ وَاحِدَةٌ تَدُلُّ عَلَى دَفْعِ شَيْءٍ يُمَكِنُ كَيْلُهُ دَفْعًا مِنْ غَيْرِ كَيْلٍ.
   - Cebel: فراغ في أثناء الشيء مع تسيب وصورة من التجمع تراكمًا أو تعلقًا
 **هيم**: çöl / susuzluk / şaşkın
   - EtymArab: to roam, rove, wander about aimlessly / burning thirst / passionate love / quick-sand, drift-sand / waterless desert / starless / starless night / to take care of o.s. / mind thy own business! / to wander about aimlessly, be confused, be bewildered, be puzzled, be robbed of the senses / to be infatuated, be enchanted, be carried away / to be demented by thirst, a waterless desert / head / to doze off / (to wander about in) confusion, panic / confusion, panic / thirst / wandering about aimlessly / to be thirsty, be demented by thirst / to be(come) confused, robbed of one / to wander about aimlessly / mettre en déroute / affolement, panique / être hors de soi, se lamenter / persécution ( ? ) / errer comme un fou / aimer éperdument / avoir soif / amour passionné, soif ardente / fascination, exorcisme des démons / disparaître / spectre, fantôme / tête, sommet de la tête / chouette / secouer la tête en sommeillant / dormir / intérieur de la terre / vaste plaine / désert / sable mouvant / sombre (nuit) / démarche élégante / serpent / troupe d
+  - Mekâyîs: (هَيَمَ) الْهَاءُ وَالْيَاءُ وَالْمِيمُ كَلِمَةٌ تَدُلُّ عَلَى عَطَشٍ شَدِيدٍ.
   - Cebel: جفاف أثناء الشيء وخلوها التامّ من البلل ومادة التماسك
 **وءد**: diri diri gömmek
   - EtymArab: ... / loud thudding sound, sound of heavy steps on the ground / to be swallowed by the earth / to bury alive, particularly a newborn girl / to be deliberate, solemnity
+  - Mekâyîs: (وَأَدَ) الْوَاوُ وَالْهَمْزَةُ وَالدَّالُ: كَلِمَةٌ تَدُلُّ عَلَى إِثْقَالِ شَيْءٍ بِشَيْءٍ.
   - Cebel: الضغط إلى أسفل بِثقَل عظيم: كضَغط الإبل على الأرض في وَطنها مع ثِقَل جِسْمها وثقل أحْمالها، وكالحائط يسقط بِثقَله الذاتي وثقَل الهُوِى
 **وءل**: sığınak / kurtuluş
   - EtymArab: ... / place where floodwaters gather / close members of the family, protection / to run for one
+  - Mekâyîs: (وَأَلَ) الْوَاوُ وَالْهَمْزَةُ وَاللَّامُ: كَلِمَةٌ تَدُلُّ عَلَى تَجَمُّعٍ وَالْتِجَاءٍ.
   - Cebel: اللجوءُ أو المصيرُ إلى مَقَرٍّ حافظ آمن: كالذي في الاستعمالات، وكموئل ماء السيل حيث يستقر فيه
 **وبر**: yün / deve tüyü / tavşan
   - EtymArab: ... / hair of camels, goats, foxes or rabbits / Bedouin / to obliterate one
+  - Mekâyîs: (وَبَرَ) الْوَاوُ وَالْبَاءُ وَالرَّاءُ كَلِمَاتٌ لَا تَنْقَاسُ، بَلْ هِيَ مُنْفَرِدَةٌ.
   - Cebel: تغطَّى ظاهر الشيء بأجرام دقيقة ناعمة كالشعر تنفذ منه مسترسلة: كالوَبَر على الجلد {وَمِنْ أَصْوَافِهَا وَأَوْبَارِهَا وَأَشْعَارِهَا أَثَاثًا} [النحل: 80]
 **وبق**: helak / yok olmak
   - EtymArab: ... / shameful act, grave offence / to humiliate, destroy, end in ruin / to detain
+  - Mekâyîs: (وَبَقَ) الْوَاوُ وَالْبَاءُ وَالْقَافُ كَلِمَتَانِ.
   - Cebel: تورط أو توريط مُهلك: كنشوب الجمل في الطين والوَحَل (النشوب في الوحَل مُهلك للإبل خاصة؛ لأن أخفافها تزلق لنعومتها (4/2359) وعِرضها، فإذا غاصت في الطين عسُر تخلصها، والنشوب في الدين معناه العجز عن التخلص منه)
 **وبل**: sağanak yağmur / bol yağmur
   - EtymArab: ... / a large thick stick, a bundle of firewood / bad consequences / heavy rain / to be unhealthy, (of air) to be polluted, disasters / ram, ram / year of the ram
@@ -5663,19 +5866,23 @@
   - Cebel: هو: غلظ الجرم مع امتداد ما - أو غلظ ما يتعلق به: كالعصا الغليظة الضخمة، وخشبة القصار - وهي كذلك، وكطرف العضد والفخذ وهما ممتلئان مكتنزان - ويلزم ذلك المعنى الثقلُ الشديد
 **وتد**: çivi / kazık
   - EtymArab: ... / peg, pin, stake, tent peg, to fix firmly / to stay at home, be firmly established
+  - Mekâyîs: (وَتَدَ) الْوَاوُ وَالتَّاءُ وَالدَّالُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْوَتِدُ، يُقَالُ: وَتَدَهُ، وَتِدْ وَتِدَكَ.
   - Cebel: الثبات رسوخًا: كما هي وظيفة الوتد لتشدّ به الخيام ونحوها
 **وتر**: tek sayı / yay kirişi
   - EtymArab: string of a bow / tendon / tension / injustice / odd number, individual mode, fashion, method / to detract, to give less than is due / to follow in an uninterrupted manner, to be in a sequence, one at a time / to avenge o.s
+  - Mekâyîs: (وَتَرَ) الْوَاوُ وَالتَّاءُ وَالرَّاءُ: بَابٌ لَمْ تَجِئْ كَلِمُهُ عَلَى قِيَاسٍ وَاحِدٍ، بَلْ هِيَ مُفْرَدَاتٌ لَا تَتَشَابَهُ.
   - Cebel: هو: تجرد الشيء مما يحيط به أو انكشاف هذا عنه فيبقى دقيقًا ممتدًّا بين جاذبين: كوتر القوس بين السيتين
 **وتن**: tahta / kazık
   - EtymArab: ... / a feud / the main artery that feeds the body / to be firmly fixed / (of water) to be constant and flowing / (of women in particular) to have great literary ability
+  - Mekâyîs: (وَتَنَ) الْوَاوُ وَالتَّاءُ وَالنُّونُ: كَلِمَةٌ تَدُلُّ عَلَى ثَبَاتٍ وَمُلَازَمَةٍ.
   - Cebel: لزوم الشيء ظرفًا لزومًا دائمًا: كالإقامة بالمكان وكالماء الدائم، وإقامة القوم في دارهم طويلًا
 **وثق**: sağlamlık / güven / sağlam
   - EtymArab: shackles, bonds, to tie up, to secure / to be firm / to trust / to pledge, covenant, to give one
+  - Mekâyîs: (وَثَقَ) الْوَاوُ وَالثَّاءُ وَالْقَافُ كَلِمَةٌ تَدُلُّ عَلَى عَقْدٍ وَإِحْكَامٍ.
   - Cebel: هو: بقاء الشيء إلى الأمد المرجوّ، لكثافته واشتداد بعضه إلى بعض: كالكلأ الذي يكفي العام لكثافته، وكالماء والشجر الموصوفين
 **وثن**: put / tapılan şey
   - EtymArab: idol, graven image / staying firm, being constant, (of land) being rained on, having great wealth, (of women) being endowed with literary talent, being an idol, being an object of worship
-  - Mekâyîs: وَأَصْلُهَا قَوْلُهُمُ اسْتَوْثَنَ الشَّيْءُ: قَوِيَ.
+  - Mekâyîs: (وَثَنَ) الْوَاوُ وَالثَّاءُ وَالنُّونُ.
   - Cebel: هو: نمو الشيء كثرةً أو ضخامةً أو امتدادَ بقاء: كالسِمَن في البَدَن، وكالأولاد للإبل والنْحل معهما، وكالمقيم في المكان (يعمره أو يملؤه)
 **وجب**: gerekli olmak / zorunlu
   - EtymArab: ... / a loud thud, (of the heart) to beat strongly / to fall down, fall dead / to become due, (of the sun) to set, reach the appropriate time
@@ -5687,6 +5894,7 @@
   - Cebel: تحصل شيء ذي بال في حَوْزة كانت خالية منه
 **وجس**: korku / kaygı
   - EtymArab: ... / evil premonition, mysterious or suspicious sound, to hear a suspicious sound, fear, become apprehensive / to be weary, be suspicious
+  - Mekâyîs: (وَجَسَ) الْوَاوُ وَالْجِيمُ وَالسِّينُ: كَلِمَةٌ تَدُلُّ عَلَى إِحْسَاسٍ بِشَيْءٍ وَتَسَمُّعٍ لَهُ.
   - Cebel: تحصل شيء دقيق الوقع في أثناءٍ - كالصوت الخفي في السمع وقليلِ الطعام في الفم
 **وجف**: titremek / çarpmak
   - EtymArab: ... / fast-running, to move briskly, be agitated / (of the healt) to beat strongly / to be seized with love or fear
@@ -5704,12 +5912,14 @@
   - Cebel: انفراد الشيء فلا يكون معه مثله: {حَتَّى تُؤْمِنُوا بِاللَّهِ وَحْدَهُ} [الممتحنة: 4]، {وَلِأَبَوَيْهِ لِكُلِّ وَاحِدٍ مِنْهُمَا السُّدُسُ} [النساء: 11]، {ذَرْنِي وَمَنْ خَلَقْتُ وَحِيدًا} [المدثر: 11]
 **وحش**: yabani hayvan / vahşilik
   - EtymArab: ... / wild beasts / wild fruit / the wrong side / to be desolate, be homesick
+  - Mekâyîs: (وَحَشَ) الْوَاوُ وَالْحَاءُ وَالشِّينُ: كَلِمَةٌ تَدُلُّ عَلَى خِلَافِ الْإِنْسِ.
   - Cebel: خلو الجوف أو الحيز مع جفافٍ وجفاءٍ أي هو خلو لا يستحب ولا يريح النفس -كما في الجوع والمكان القفر ومنه "أوْحَش المكانُ من أهله وتوحش: خلا وذهب عنه الناس (والمكان ظرف كالجوف) والوَحْشة: الفَرَقُ من الخَلْوة (أي بسببها)
 **وحي**: bildirme / ilham / gizlice ulaştırma
   - EtymArab: inspiration / revelation ( theol. ) / to give a sign, to whisper, to send a secret message, to intimate / to write down, to record / to command / to call for assistance / to go in a hurry / to reveal, to inspire
   - Cebel: تحصيل شيء في الأثناء لطيف المادة حادّ الأثر أو قويه: كوجود النار في حجرها، ومعنى المكتوب في الحجر (أو في أي مادة شديدة)، وكالشعور باقتراب المطر بسماع صوت الرعد، وكالخبر المُحَصَّل بالتلطف أي بطريقة خفية غير مباشرة علنية
 **ودد**: sevmek / dostluk
   - EtymArab: to love / to want / love, affection, friendship / to desire, to wish for / to be amicable
+  - Mekâyîs: (وَدَّ) الْوَاوُ وَالدَّالُ: كَلِمَةٌ تَدُلُّ عَلَى مَحَبَّةٍ.
   - Cebel: التلازم والتماسك الممتد -مع رفق أو لين- للاحتواء على مادة ذلك: كما في الود: الحُبّ
 **ودع**: uğurlamak / ayrılmak
   - EtymArab: ... / a safe place, a depository / comfort, serenity, to place in good keeping / to bid farewell, see off, leave behind / to leave alone, cease hostility with, exchange pledges of mutual peace
@@ -5717,15 +5927,17 @@
   - Cebel: بقاء الشيء ساكنًا قارًّا في مقر أو مقام بلا حركة ولا استعمال: كالذي في جوف وَدعَ البحر، ومن في المقبرة
 **ودق**: yağmur / damla
   - EtymArab: ... / rain / war / midday heat / a barrier, to approach, offer hospitality / (of the stomach) to sag
+  - Mekâyîs: (وَدَقَ) الْوَاوُ وَالدَّالُ وَالْقَافُ: كَلِمَةٌ تَدُلُّ عَلَى إِتْيَانٍ وَأَنَسَةٍ.
   - Cebel: وجود حِدّة أو حادّ في باطنٍ أو حيزٍ (يبرز منه): كالبثرة في العين -وحدّتها أذاها وهي بارزة تُرى
 **ودي**: dost / sevgi / çukur
   - EtymArab: ... / a place where running water gathers, (of liquid) to run, a valley / a branch, palm tree saplings / blood money / death, to be taken by death / valley, ravine, river bed / to pay blood money / to cut off, kill
 **وذر**: vazgeçmek / bırakmak / zer
   - EtymArab: ... / a small boneless piece of flesh / to cut into small pieces / to leave alone, leave behind, forsake, cease
+  - Mekâyîs: (وَذَرَ) الْوَاوُ وَالذَّالُ وَالرَّاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْوَذَرَةُ، وَهِيَ الْفِدْرَةُ مِنَ اللَّحْمِ.
   - Cebel: تَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها "بغير طول "فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب
 **ورث**: miras almak / miras
   - EtymArab: heirloom, inheritance, legacy / an inheritor / to cause s.o. to acquire s.th. / (of rain) to bring life to the land
-  - Mekâyîs: وَالْمِيرَاثُ أَصْلُهُ الْوَاوُ.
+  - Mekâyîs: (وَرَثَ) الْوَاوُ وَالرَّاءُ وَالثَّاءُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْوِرْثُ.
   - Cebel: حوز الإنسان ما كان يملكه آخر بعد موت هذا الآخر (استحقاقًا بالشرع) -كما هو واضح
 **ورد**: gelmek / varmak / gül
   - EtymArab: rose(s), flowers / blossoms, flowers, to come out in flowers / tree with hanging branches / watering-place, drinking herd or flock, to drive (a flock) to drink (at a watering-hole) / daily task, assignment / turn / road, destination, to approach, to arrive / jugular vein / to appear, to supply
@@ -5743,22 +5955,27 @@
   - Cebel: حفظ الشيء بضمه وحَمْله واحتوائه في الأثناء: كما تضم الكارةُ الثياب لتحمل، وكالجبل يحمي من يأوي إليه
 **وزع**: dağıtmak / paylaştırmak
   - EtymArab: ... / to restrain, keep in line / to urge, encourage / one responsible for keeping the troops in line in battle, to marshall factions, groups / to distribute
+  - Mekâyîs: (وَزَعَ) الْوَاوُ وَالزَّاءُ وَالْعَيْنُ: بِنَاءٌ مَوْضُوعٌ عَلَى غَيْرِ قِيَاسٍ.
   - Cebel: الكف عن الانتشار تجاوزًا للجماعة أو تخطيًا ومفارقة
 **وزن**: tartmak / terazi
   - EtymArab: to weigh / weight / balance, scales / budget / balance, comparison / balance, equilibrium / weight, measure / scales / to weigh, weigh out, estimate, compare / justice / to be wise / to parallel with, be equal or equivalent to / to weigh, weight / plateaux (de balance) / poids / peser / plateau(x) (de balance), balance / pesée / balance / balance, plateaux / to be heavy, to weigh / schwer sein, lasten, gewichtig sein (Name, Ansehen), schwierig werden (Zustände) / heavy block of stone / entendre, écouter / oreille / oreilles / agit d‘emprunts de formes nominales dans lesquelles w initial est normalement non représenté ou représenté par un autre phonème / elles sont construites sur un radical MZN extrait de mizān ‘balance / peser avec toute autre balance que la romaine
-  - Mekâyîs: وَالزِّنَةُ قَدْرُ وَزْنِ الشَّيْءِ ; وَالْأَصْلُ وَزْنَةٌ.
+  - Mekâyîs: (وَزَنَ) الْوَاوُ وَالزَّاءُ وَالنُّونُ: بِنَاءٌ يَدُلُّ عَلَى تَعْدِيلٍ وَاسْتِقَامَةٍ: وَوَزَنْتُ الشَّيْءَ وَزْنًا.
   - Cebel: ثقل الشيء مع عدم انتشار أبعاده- كِفدْرة التمر الموصوفة- وكالأوزان الموصوفة، وكالمرأة القصير، فهي كتلة غير منتشرة طولًا
 **وسط**: orta / merkez
   - EtymArab: middle / mediator, agent / middle, centre / justice / heart, waist / inside / between / the choice, the select / to cause to be in the centre
+  - Mekâyîs: (وَسَطَ) الْوَاوُ وَالسِّينُ وَالطَّاءُ: بِنَاءٌ صَحِيحٌ يَدُلُّ عَلَى الْعَدْلِ وَالنِّصْفِ.
   - Cebel: كون الشيء مكتنفًا من حواليه أو آخذًا منهما بالتساوي امتدادًا أو قدرًا
 **وسع**: genişlik / imkân / yeterlik
   - EtymArab: ... / affluence, wealth / benefactor / capacity, ability / to be spacious, accommodate / to encompass / to assist
+  - Mekâyîs: (وَسَعَ) الْوَاوُ وَالسِّينُ وَالْعَيْنُ: كَلِمَةٌ تَدُلُّ عَلَى خِلَافِ الضِّيقِ وَالْعُسْرِ.
   - Cebel: انفساح وانبساط في جوف الشيء الملتحم ليضُم ما يوضع فيه
 **وسق**: yüklemek / toplamak
   - EtymArab: ... / a camel
+  - Mekâyîs: (وَسَقَ) الْوَاوُ وَالسِّينُ وَالْقَافُ: كَلِمَةٌ تَدُلُّ عَلَى حَمْلِ الشَّيْءِ.
   - Cebel: حمل الشيء كَمّا عظيما بحوز وثيق: كالوَسْق وما فيه، والعين بمائها، والحمل في الرحم المذكورات، {وَاللَّيْلِ وَمَا وَسَقَ}
 **وسل**: aracı / yol
   - EtymArab: ... / linkage, means, medium, device / rank, station / proximity / to ingratiate o.s. / to implore
+  - Mekâyîs: (وَسَلَ) الْوَاوُ وَالسِّينُ وَاللَّامُ: كَلِمَتَانِ مُتَبَايِنَتَانِ جِدَّا.
   - Cebel: شيء يُتَلطف (1) به للوصول إلى مطلوب أو القرب منه
 **وسم**: işaret / damga
   - EtymArab: ... / brand, sign, branding iron / to cauterise / good looks / seasons, returning occasions, spring rain / to see signs of certain traits in s.o., to gauge / to ornament / to be(come) fitting, suitable / season with winds favorable for seafaring / to mark, brand / to be(come) beautiful
@@ -5766,6 +5983,7 @@
   - Cebel: التأثير في ظاهر الشيء بأثر غائر لازم يدل على شيء
 **وسن**: uyku / hafif uyku
   - EtymArab: (to) sleep, slumber, to doze / slumber, napping, dozing, drowsiness / to be lazy
+  - Mekâyîs: (وَسَنَ) الْوَاوُ وَالسِّينُ وَالنُّونُ: كَلِمَتَانِ مُتَقَارِبَتَانِ.
   - Cebel: مخالطة خَدَرِ النوم الإنسانَ أو الحيَّ: كذلك النعاس
 **وسوس**: kuşku / içe düşen düşünce
   - EtymArab: ... / indistinct hidden sound, whisper / rustle, jingling of anklets / devilish insinuations / tempter / to insinuate bad thoughts, tempt / to be obsessed
@@ -5774,6 +5992,7 @@
   - EtymArab: ... / blotch of colour / to ornament / to speak in a sweet deceptive manner, gossip / to increase in wealth, prise out information gently
 **وصب**: hastalık / ağrı
   - EtymArab: ... / pain, illness, extreme fatigue / lasting, permanent / to nurse / to persist.
+  - Mekâyîs: (وَصَبَ) الْوَاوُ وَالصَّادُ وَالْبَاءُ: كَلِمَةٌ تَدُلُّ عَلَى دَوَامِ شَيْءٍ.
   - Cebel: دوام بقاء الحادّ الذي يحتويه الشيء فيه
 **وصد**: kapatmak / kilitlemek
   - EtymArab: ... / (This root overlaps with the root ↗ʔṢD because of the dialectal difference in pronouncing hamza as a pure vowel.) ‘courtyard, stone enclosure for animals / extreme midday heat / to shut, cover / to loom / to fix
@@ -5797,22 +6016,26 @@
   - Cebel: تَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات
 **وطء**: ayak basmak / çiğnemek
   - EtymArab: ... / low land / force, gravity, pressure, to tread underfoot, defeat, raid / to have sexual intercourse / to facililate, be approachable, agree with, match, synchronise
+  - Mekâyîs: (وَطَأَ) الْوَاوُ وَالطَّاءُ وَالْهَمْزَةُ.
   - Cebel: الدَوْس بثقل الحِمْل كله على الشيء ويلزم ذلك انخفاضه -كموضع القدم من ضَغْطِه، والوِطَاء منخفضةٌ كأنها ضغِطَت {وَأَرْضًا لَمْ تَطَئُوهَا} المفسرون على أن (أورثكم) هنا وعد، أي أنه تعالى قضى بذلك
 **وطر**: ihtiyaç / maksat
   - EtymArab: ... / purpose, goal, desire, want
   - Cebel: حاجة أو رَغْبة محدودة في شيء ما - كما يؤخذ من كلام الخليل {لِكَيْ لَا يَكُونَ عَلَى الْمُؤْمِنِينَ حَرَجٌ فِي أَزْوَاجِ أَدْعِيَائِهِمْ إِذَا قَضَوْا مِنْهُنَّ وَطَرًا} [الأحزاب: 37]
 **وطن**: yurt / memleket
   - EtymArab: to dwell, live, reside, stay / homeland, fatherland, home / habitat / a battlefield, a place where s.th. is done / to settle in, to reconcile o.s. to s.th. / séjourner, habiter / se domicilier, s / contrée, territoire, patrie / demeure, pays, théâtre d / but, fin / appliquer, habituer son esprit à qc / champ (?), champ de bataille, temple / commencer à vivre dans un nouveau lieu / to sit / to dwell, stay
+  - Mekâyîs: (وَطَنَ) الْوَاوُ وَالطَّاءُ وَالنُّونُ: كَلِمَةٌ صَحِيحَةٌ.
   - Cebel: مكان للحَيّ يخُصّه يستقر ويأوى إليه كالمنزل للإنسان،
 **وعد**: söz / vaat
   - EtymArab: to promise / promise, pledge, to promise / threat, to threaten / to make an appointment / to come to an understanding
+  - Mekâyîs: (وَعَدَ) الْوَاوُ وَالْعَيْنُ وَالدَّالُ: كَلِمَةٌ صَحِيحَةٌ تَدُلُّ عَلَى تَرْجِيَةٍ بِقَوْلٍ.
   - Cebel: الاحتواء على ما يوجد مستقبلًا زائدًا عن الحال
 **وعظ**: öğüt vermek / nasihat
   - EtymArab: ... / to admonish, exhort, advise, teach, learn by example / an example, to learn from
+  - Mekâyîs: (وَعَظَ) الْوَاوُ وَالْعَيْنُ وَالظَّاءُ: كَلِمَةٌ وَاحِدَةٌ.
   - Cebel: (كلام أو عمل) يُنَبَّه به الإنسانُ إلى عواقب ما يفعله أو ما هو مُقْدِم عليه (ليتوقَّفَ عنه): كما هو واضح في معنى الوعظ
 **وعي**: idrak / anlayış
   - EtymArab: vessel, container / awareness, comprehension / noise / to collect, to gather, to comprise / to comprehend, to be aware, to be alert / (of a wound) to secrete / to exhaust
-  - Mekâyîs: وَهُوَ عِنْدَنَا مِنْ بَابِ الْإِبْدَالِ، وَالْأَصْلُ الْغَيْنُ.
+  - Mekâyîs: (وَعَيَ) الْوَاوُ وَالْعَيْنُ وَالْيَاءُ: كَلِمَةٌ تَدُلُّ عَلَى ضَمِّ شَيْءٍ.
   - Cebel: حَوْزُ الشيء في جوفه ما يتجمع فيه حتى يمتلئ به كالشيء في وعائه، والمخ في العظم، والمِدَّة في الجرح، وكجبر الكسر، والبُرْء على عثم
 **وفد**: heyet / elçilik
   - EtymArab: ... / the fastest camel in a caravan / distinguished group of travellers, honoured group arriving at the residence of a high-ranking person, an envoy between high-ranking people / to arrive
@@ -5820,18 +6043,21 @@
   - Cebel: تجمع جزئي مع إشراف أي ارتفاع: كذروة حَبْل الرمل
 **وفر**: çokluk / bolluk
   - EtymArab: ... / abundance / to be plentiful, increase / to receive in full / to complete
+  - Mekâyîs: (وَفَرَ) الْوَاوُ وَالْفَاءُ وَالرَّاءُ: كَلِمَةٌ تَدُلُّ عَلَى كَثْرَةٍ وَتَمَامٍ.
   - Cebel: كمال الشيء حتى يزيد أو يكاد يزيد عن معتاد حاله أو مُسْتَحَقّه: كالسقاء الذي لم تُقطع من جلده الزيادة (بل أدخلت فيه)
 **وفض**: dağılmak / dağıtmak
   - EtymArab: ... / leather base for a grinding stone, place where water gathers, leather bag / mixture of people, rabble / to hurry, speed up, chase / to go separate ways
+  - Mekâyîs: (وَفَضَ) الْوَاوُ وَالْفَاءُ وَالضَّادُ: ثَلَاثُ كَلِمَاتٍ مُتَبَايِنَةٌ: الْأُولَى أَوْفَضَ إِيفَاضًا: أَسْرَعَ.
   - Cebel: احتواءٌ أو اجتماعٌ مؤقت لما شأنه الانتشار أو التفرق بقوة (اجتماع وانتشار معًا): كوَفْضَة السهام، ووِفاض الجَشِيش والطحين، ومِسَاك الماء، ووَضَم تقطيع اللحم - وكلها تتفرق أو تنتشر
 **وفق**: uygunluk / başarı
   - EtymArab: ... / to match, agree with, be in harmony with / to come upon by chance, occur at the time of s.th. / to succeed, be right / to be well-guided, inspire
+  - Mekâyîs: (وَفَقَ) الْوَاوُ وَالْفَاءُ وَالْقَافُ: كَلِمَةٌ تَدُلُّ عَلَى مُلَاءَمَةِ الشَّيْئَيْنِ.
   - Cebel: التئام شيئين أو أكثر بالتجمع والتداخل في حيز واحد مع الاتساق: كالشئين الملتئمين، وكالاصطفاف، وكالمصادفة في التلاقي بين اثنين في المكان، وكذلك موافقة التقاء الوصول إلى المكان بحين طلوع الهلال والشمس
 **وفي**: sözünde durmak / tam olarak ödemek
   - EtymArab: ... / death / goal / loyalty, fidelity, faithfulness / to show up / to carry out a promise / (of debts) to pay back in full, give full measure, complete / to come at an appointed time, be recalled / to increase
 **وقب**: çukur / oyuk
   - EtymArab: to be sunken, hollow (eye) / foolish / ventricle of a lamb / holes in the rock where rainwater collects / foolish person / heavy drinker / to sink in, subside / to disappear, darken / cavity / to bore, pierce, make a hole / to dig, excavate, hollow out […] / sea-shell / Foolishness / “hollow, void” speech, nonsense / ventricle of a lamb, (sheep) tripe / to hollow out / Kufe der Kelter, ὑπολήνιον, in die der ausgekelterte Most läuft / cavity, depression in a rock / to bore, pierce, perforate, breach, make a hole or breach, punch or drill a hole / to dig, dig up, dig out, excavate, hollow out […]
-  - Mekâyîs: وَأَمَّا قَوْلُهُمْ: إِنَّ الْوَقْبَ هُوَ الْأَحْمَقُ فَهُوَ مِنَ الْإِبْدَالِ، وَالْأَصْلُ وَغْبٌ، وَقَدْ ذَكَرْنَاهُ.
+  - Mekâyîs: (وَقَبَ) الْوَاوُ وَالْقَافُ وَالْبَاءُ: كَلِمَةٌ تَدُلُّ عَلَى غَيْبَةِ شَيْءٍ فِي مَغَابٍ.
   - Cebel: فَجْوَة عميقة في ظاهر جرم شديد التماسك: كالوقب والوقبة والكوة والنقر المذكورات
 **وقت**: zaman / belirli vakit
   - EtymArab: period of time, time span / moment, instant / time, period of time, timespan, to appoint a time or place, to specify an amount of time, an appointed time
@@ -5839,9 +6065,11 @@
   - Cebel: تحديد زمن معين دقيق لإيقاع الشيء: {إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا} [النساء: 103] (محدَّدَ زَمنِ الإيقاع) {إِنَّ يَوْمَ الْفَصْلِ كَانَ مِيقَاتًا} [النبأ: 17] مَوْعدًا محدَّدًا {وَإِذَا الرُّسُلُ أُقِّتَتْ} [المرسلات: 11] أي وُقَّتت " (فحُدَّد لكل رسول زَمَنٌ يظهر فيه، ويؤدي رسالته فيه)
 **وقد**: ateş yakmak / ateş
   - EtymArab: ... / firewood, fuel, extreme heat of day, burn, heat up, kindle / to shine, glimmer / to be agile, be alert, be quick
+  - Mekâyîs: (وَقَدَ) الْوَاوُ وَالْقَافُ وَالدَّالُ: كَلِمَةٌ تَدُلُّ عَلَى اشْتِعَالِ نَارٍ.
   - Cebel: مادة حياة النار أي اشْتعالها
 **وقذ**: vurmak / öldürmek
   - EtymArab: ... / an animal killed by striking with a stick, to strike violently, kill by striking / to be slow and dull / to be very ill / to be saddened
+  - Mekâyîs: (وَقَذَ) الْوَاوُ وَالْقَافُ وَالذَّالُ: كَلِمَةٌ تَدُلُّ عَلَى ضَرْبٍ بِخَشَبٍ.
   - Cebel: صدم بقوة يضغط المنتبر فيُرِقُّه
 **وقر**: ağırbaşlılık / ağırlık
   - EtymArab: to break, fracture, crack (esp. a bone) / cavity, hollow / heavy load, burden / grave, sedate, dignified / a load / solemnity, respect, dignity / to be heavily pregnant / to show respect / to be hard of hearing / to exact, to take / to settle down, to be inactive, to stay at home / valuable, precious, dear / heavy / rare, expensive, precious, valuable, dear / be heavy / honour / 1. valuable, precious, dear / 2. heavy
@@ -5849,8 +6077,7 @@
   - Cebel: تجمُّعٌ بثقل وتمكّن في أثناء بَدَن أو حَيّز: كالحَمْل الثقيل في الجوف، وكذلك السِمَن، والشحم، والحِمْل الثقيل
 **وقع**: olmak / düşmek / olay
   - EtymArab: ... / calamity, war, battle / to fall, befall, occur / to alight upon, guess, expect, gossip, come face-to-face with / (of rain) to fall sporadically / to fall / (the) falling (eagle) / falling
-  - Mekâyîs: (وَقَعَ) الْوَاوُ وَالْقَافُ وَالْعَيْنُ أَصْلٌ وَاحِدٌ يَرْجِعُ إِلَيْهِ فُرُوعُهُ، يَدُلُّ
-عَلَى سُقُوطِ شَيْءٍ.
+  - Mekâyîs: (وَقَعَ) الْوَاوُ وَالْقَافُ وَالْعَيْنُ أَصْلٌ وَاحِدٌ يَرْجِعُ إِلَيْهِ فُرُوعُهُ، يَدُلُّ عَلَى سُقُوطِ شَيْءٍ.
   - Cebel: هُوِيٌّ أو غُئُورٌ مع صدم أو غِلَظ وشِدَّة في جِرْمٍ عَريض أو عَلَيْه
 **وقف**: durmak / bağış
   - EtymArab: to stand, stand still / to stand up, rise / to stand, to erect / to stop / to acquaint o.s. with s.th., to inform, to let know / to become silent, to pause, to be reticent / to fall into dispute / to elucidate, to make clear / bracelet, anklet
@@ -5864,9 +6091,11 @@
   - Cebel: شدٌّ أو ضغط يمنع التسيب
 **وكد**: sağlamlaştırmak / pekiştirmek
   - EtymArab: ... / saddle straps, leather belt / intention / to tighten up / to be on target, give support
+  - Mekâyîs: (وَكَدَ) الْوَاوُ وَالْكَافُ وَالدَّالُ: كَلِمَةٌ تَدُلُّ عَلَى شَدٍّ وَإِحْكَامٍ.
   - Cebel: شدّ الشيء بشيء شدًّا متينًا يحقَّق به ارتباطهما فلا يتسيَّب كما يُفعَل بالوكائد
 **وكز**: itmek / vurmak
   - EtymArab: ... / to strike or poke with the fist, slap, thrust, spur / to break / (of a snake) to bite
+  - Mekâyîs: (وَكَزَ) الْوَاوُ وَالْكَافُ وَالزَّاءُ بِنَاءٌ صَحِيحٌ ; يُقَالُ وَكَزَهُ: طَعَنَهُ.
   - Cebel: إصابة البدن بصُلْب غليظ شديد دفعًا بقوة كالصدْم - كالطعن المذكور
 **وكل**: güvenmek / vekil bırakmak
   - EtymArab: trust, confidence / to depend on, to trust, to entrust, to take charge of / to be too lazy to do things for oneself / weakness / representative, proxy, guardian / my trusted one (is) the heir of Esharra / my trusted one / trust, object of trust / to trust
@@ -5874,6 +6103,7 @@
   - Cebel: ترك أمر أي تفويض القيام به إلى من فيه الكفاية للقيام به
 **ولج**: girmek / içeri girmek
   - EtymArab: ... / land depression, valley, cave / door, entrance, doorway / to enter, cause to enter / confidants, close friends, associates
+  - Mekâyîs: (وَلَجَ) الْوَاوُ وَاللَّامُ وَالْجِيمُ: كَلِمَةٌ تَدُلُّ عَلَى دُخُولِ شَيْءٍ.
   - Cebel: الدخول في فجوة كثيفة الإحاطة تُخْفِي وتَستُر: كالكهف، والكناس، والغامض من الأرض
 **ولد**: çocuk / doğum
   - EtymArab: to bear (a child), give birth / to beget, bring forth / descendent, child, son, boy / newly born baby, boy, child, offspring / mother, father, parents / to give birth, to assist in bringing forth a baby, midwife / to multiply in number / place or time of birth / playmates
@@ -5887,21 +6117,26 @@
   - EtymArab: ... / place of rest, relaxation / slackness, weakness / to delay / shortcoming, delaying / docks
 **وهب**: bağışlamak / çok bağışlayan
   - EtymArab: to give, donate / gift, donation, to give freely, to bestow / to last / to possess / small stream
+  - Mekâyîs: (وَهَبَ) الْوَاوُ وَالْهَاءُ وَالْبَاءُ: كَلِمَاتٌ لَا يَنْقَاسُ بَعْضُهَا عَلَى بَعْضٍ.
   - Cebel: حَوْز النافع بلا مقابل: كالماء في النقرة والسحابة، والحطبِ في الوادي
 **وهج**: parlaklık / sıcaklık
   - EtymArab: ... / intense midday heat / to burn brightly, blaze / to glitter, glimmer, twinkle, sparkle / (of scent) to waft about
+  - Mekâyîs: (وَهَجَ) الْوَاوُ وَالْهَاءُ وَالْجِيمُ: كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الْوَهَجُ: حَرُّ النَّارِ وَتَوَقُّدُهَا.
   - Cebel: احتواء الشيء أشعةَ أو شَذًى حادًّا يمتد منه: كالوهج والتوهج المذكورَين، وكما في وصف الشمس في آية التركيب
 **وهن**: zayıflık / gevşeklik
   - EtymArab: ... / to be weak, be feeble, be infirm, be languid, be lethargic / the last hours of the night
+  - Mekâyîs: (وَهَنَ) الْوَاوُ وَالْهَاءُ وَالنُّونُ: كَلِمَتَانِ تَدُلُّ إِحْدَاهُمَا عَلَى ضَعْفٍ، وَالْأُخْرَى عَلَى زَمَانٍ.
   - Cebel: ضعف تماسك البدن أو الشيء من اشتماله على رخاوة ولذهاب الصلابة منه
 **وهي**: çökmek / yıkılmak
   - EtymArab: ... / crack, weakness, to slacken, to collapse, to fall down, to become frayed / to act foolishly
+  - Mekâyîs: (وَهَيَ) الْوَاوُ وَالْهَاءُ وَالْحَرْفُ الْمُعْتَلُّ يَدُلُّ عَلَى اسْتِرْخَاءٍ فِي شَيْءٍ.
   - Cebel: تَفَزَّر مادة الشيء أو تخَرُّقها لذهاب غِلَظها ومَتَانتها - كالوَهْى في جِلْد القِربة وفي الثوب
 **ويل**: 
   - EtymArab: (interj.) / ...
   - Cebel: اللفظ بهذه الكلمة إعلانا باصطلاء عاقبة مهلكة لعمل أو تصرف: وعيدًا أو نُدبة واستغاثة أو تحذيرًا أو ما إلى ذلك
 **يءس**: umutsuzluk
   - EtymArab: ... / to despair, to give up all hope, desperation / to reach the age of infertility / to come to know
+  - Mekâyîs: (يَأَسَ) الْيَاءُ وَالْهَمْزَةُ وَالسِّينُ.
   - Cebel: تكوّن شعور= بمعنى في النفس دقيقٍ له حدّة: كاليأس، فإنه شعور حادٌّ بتمام استغلاق السبيل نحو خير معيّن يصحبه سخط ويتبعه إعراض تام عن المحاولة
 **يبس**: kuruyup gitmek
   - EtymArab: ... / dry land (as opposed to the sea), hard, arid / to be afflicted with famine / to keep silent, to be too drunk / to have unpleasant countenances
@@ -5909,6 +6144,7 @@
   - Cebel: جفاف الشيء بذهاب رطوبته ونَدَاه منه: كالحَطَب والبقول والأرض المذكورات
 **يتم**: babasız kalmış / yalnızlık
   - EtymArab: (to be, become) orphan / to be one of a kind, to be the best / to become detached / an orphan, weak / orphelin / être las, fatigué / to be detached / orphan / to be as alone and detached as an orphan / one of a kind / to be tired, unable to continue with s.th. / weakness / lassitude, fatigue
+  - Mekâyîs: (يَتَمَ) الْيَاءُ وَالتَّاءُ وَالْمِيمُ.
   - Cebel: هو: انفراد الشيء عن مجانسه مستقلًّا بذاته: كالواحدة من الرمال المذكورة مجتمعة في ذاتها ومنفصلة عن غيرها، وكالدرة اليتيمة المتفردة بقيمتها أو صفتها لا تشركها أخرى في هذه القيمة
 **يدي**: el / kudret / nimet
   - Cebel: امتداد من الشيء يمكّن من الإمساك به
@@ -5921,17 +6157,20 @@
   - Cebel: إثارة الساكن وتحريكه (1): كإيقاظ النائم تنبيهِه، وكإثارة التراب
 **يقن**: kesin bilgi / bilgi / yakîn kesinlik / kesin bilmek
   - EtymArab: icon / certainty, certitude / to be certain, to verify / conviction, unshakeable belief
+  - Mekâyîs: (يَقَنَ) الْيَاءُ وَالْقَافُ وَالنُّونُ: الْيَقَنُ وَالْيَقِينُ: زَوَالُ الشَّكِّ.
   - Cebel: ثبوت الشيء واستقراره في حيزه محفوظًا - كالجارية المصونة في خدرها وكالماء الساكن في مقرّه
 **يمم**: toprakla temizlenmek
   - EtymArab: open sea / pigeon / to turn, head towards, venture in
+  - Mekâyîs: (يَمَّ) الْيَاءُ وَالْمِيمُ: كَلِمَةٌ تَدُلُّ عَلَى قَصْدِ الشَّيْءِ وَتَعَمُّدِهِ وَقَصْدِهِ.
   - Cebel: تجمُّع لطيفٍ متصل المادة (أي متسعها) متراكمها: كاليم بتفسيراته المذكورة
 **يمن**: sağ taraf / yemin / bereket
   - EtymArab: right, right side, right hand / right hand, right side / oath / power / truth, generosity / to incline to the right / to be auspicious / to go towards Yemen
+  - Mekâyîs: (يَمَنَ) الْيَاءُ وَالْمِيمُ وَالنُّونُ: كَلِمَاتٌ مِنْ قِيَاسٍ وَاحِدٍ.
   - Cebel: أداة قوة وعَون أساسية علي كل عمل: كاليد اليمنى فإنها هي الأداة الأساسية التي يبادر بها كل الناس إلى التناوال، أو الإمساك بشيء، أو أداء عمل ما
 **ينع**: olgunlaşmak / meyve vermek
   - EtymArab: ... / to blossom, to ripen, to mellow, to reach the glory of maturity, (of fruit and vegetables) to reach t~e picking stage, (of a woman) to be rosy-cheeked
   - Cebel: صلاح الثمر (والمأكول) للتناول برخاوته أو رقته مع لون من باب الحمرة
 **يوم**: gün
   - EtymArab: day / today, the present / age, era, time / a certain occurrence, a significant happening, occasion / battle / the universe
-  - Mekâyîs: وَالْأَصْلُ فِي أَيَّامٍ أَيْوَامٌ، لَكِنَّهُ أُدْغِمَ.
+  - Mekâyîs: (يَوَمَ) الْيَاءُ وَالْوَاوُ وَالْمِيمُ: كَلِمَةٌ وَاحِدَةٌ، هِيَ الْيَوْمُ: الْوَاحِدُ مِنَ الْأَيَّامِ، ثُمَّ يَسْتَعِيرُونَهُ فِي الْأَمْرِ الْعَظِيمِ وَيَقُولُونَ نِعْمَ فُلَانٌ فِي الْيَوْمِ إِذَا نَزَلَ.
   - Cebel: مدة من الزمن ممتدة متصلة - كاليوم بتحديده المذكور
