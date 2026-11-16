@@ -29,11 +29,15 @@ function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=
   let t=a0;const tt=say(m)-1;m.turev.forEach((k2,j)=>{const p=(a1-a0)*say(k2)/tt;yer(k2,t,t+p,d+1,d==0?RR[j%8]:c,x,y);t+=p})})(n,-Math.PI,Math.PI,0,'#b8860b',cx,cy);
  return AGC[i]={L,T,rc,fs}}
 const MC={};
+function sar(t,n){const w=String(t).split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>n&&b){o.push(b);b=x}else b=(b+' '+x).trim()}if(b)o.push(b);return o}
+function lugatSatir(R,G){G.forEach(e=>{R.push(['le',e[0]+' — '+e[1]+(e[2]?' ('+e[2]+')':'')]);
+ e[3].forEach(n=>{sar((n[0]?n[0]+'. ':'')+(n[1]?n[1]+' ':'')+n[2],64).forEach(l=>R.push(['ln',l]));n[3].forEach(m=>sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),60).forEach(l=>R.push(['ls',l])))});
+ e[4].forEach(d=>{sar('◆ '+d[0]+': '+d[1],62).forEach(l=>R.push(['ld',l]));d[2].forEach(m=>sar('“'+m[0]+'”'+(m[1]?' — '+m[1]:''),60).forEach(l=>R.push(['ls',l])))})})}
 function mustakDuzen(k){if(MC[k])return MC[k];const D2=SA[k];if(!D2)return null;const S2=19,WC=440,R=[];
- D2.forEach(([b,K])=>{R.push(['b',b]);K.forEach(([t,L])=>{R.push(['t',t+' ('+L.length+')']);L.forEach(x=>R.push(['m',x]))})});
- const yuk=r=>r[0]=='b'?1.6:r[0]=='t'?1.2:1,top=R.reduce((a,r)=>a+yuk(r),0),C=Math.max(1,Math.round(Math.sqrt(top*S2/WC))),hed=top/C,O=[];let col=0,y=40,dol=0,mx=0,son='';
+ D2.forEach(([b,K])=>{R.push(['b',b]);K.forEach(([t,L])=>{R.push(['t',t+' ('+L.length+')']);L.forEach(x=>{R.push(['m',x]);if(x[3])lugatSatir(R,x[3])})})});
+ const yuk=r=>r[0]=='b'?1.6:r[0]=='t'?1.2:r[0][0]=='l'?0.78:1,top=R.reduce((a,r)=>a+yuk(r),0),C=Math.max(1,Math.round(Math.sqrt(top*S2/WC))),hed=top/C,O=[];let col=0,y=40,dol=0,mx=0,son='';
  R.forEach(r=>{if(dol+yuk(r)>hed*1.02&&col<C-1&&dol>0){mx=Math.max(mx,y);col++;y=40;dol=0;if(r[0]=='m'){O.push(['t',col*WC,y,son+' (devamı)']);y+=S2*0.9}}
-  dol+=yuk(r);const x=col*WC;if(r[0]=='b'){O.push(['b',x,y,r[1]]);y+=S2*1.6}else if(r[0]=='t'){son=r[1].replace(/ \(\d+\)$/,'');O.push(['t',x,y,r[1]]);y+=S2*0.9}else{O.push(['m',x,y,r[1][0],r[1][1],r[1][2]]);y+=S2}});
+  dol+=yuk(r);const x=col*WC;if(r[0]=='b'){O.push(['b',x,y,r[1]]);y+=S2*1.6}else if(r[0]=='t'){son=r[1].replace(/ \(\d+\)$/,'');O.push(['t',x,y,r[1]]);y+=S2*0.9}else if(r[0][0]=='l'){O.push([r[0],x,y,r[1]]);y+=S2*0.78}else{O.push(['m',x,y,r[1][0],r[1][1],r[1][2]]);y+=S2}});
  mx=Math.max(mx,y);return MC[k]={O,W:(col+1)*WC,H:mx}}
 function yukle(k){if(SA[k]!==undefined)return;SA[k]=null;const e=document.createElement('script');e.src='mustak_listesi/'+k+'.js';e.onload=()=>{kirli=true};document.head.appendChild(e)}
 function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('--ince');
@@ -54,6 +58,8 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
    M.O.forEach(o=>{if(o[1]+440<lx0||o[1]>lx1||o[2]+20<ly0||o[2]-20>ly1)return;
     if(o[0]=='b'){ctx.fillStyle='#2f6fb3';ctx.fillRect(o[1],o[2]+4,410,1.5);if(yazi){ctx.font='bold 15px Georgia';ctx.textAlign='left';ctx.fillText(o[3],o[1],o[2])}}
     else if(o[0]=='t'){ctx.fillStyle='#b3541e';if(yazi){ctx.font='bold 12.5px Georgia';ctx.textAlign='left';ctx.fillText(o[3],o[1]+4,o[2])}else ctx.fillRect(o[1]+4,o[2]-6,150,5)}
+    else if(o[0][0]=='l'){const st={le:['bold 11px Georgia','#2f6fb3',22],ln:['11px Georgia',yaz,26],ls:['italic 10.5px Georgia','#7a6a45',42],ld:['11px Georgia','#8a3fa0',26]}[o[0]];ctx.fillStyle=st[1];
+     if(yazi){ctx.font=st[0];ctx.textAlign='left';ctx.fillText(o[3],o[1]+st[2],o[2]+3)}else{ctx.globalAlpha=.35;ctx.fillRect(o[1]+st[2],o[2]-3,Math.min(380,o[3].length*5.4),5);ctx.globalAlpha=1}}
     else{ctx.fillStyle=inc;ctx.fillRect(o[1]+10,o[2],10,1);if(yazi){ctx.fillStyle=yaz;ctx.fillStyle=['#c0392b','#9a917a',yaz][o[5]];ctx.font='17px Amiri';ctx.textAlign='right';ctx.fillText(o[3],o[1]+110,o[2]+5);ctx.font='12.5px Georgia';ctx.textAlign='left';ctx.fillText('('+o[4]+')',o[1]+116,o[2]+4);ctx.globalAlpha=1}else{ctx.globalAlpha=.55;ctx.fillStyle=['#c0392b','#9a917a',yaz][o[5]];ctx.fillRect(o[1]+60,o[2]-4,50,7);ctx.fillRect(o[1]+116,o[2]-4,8*o[4].length,6);ctx.globalAlpha=1}}});
    ctx.restore()}}
   ctx.restore()});

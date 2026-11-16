@@ -11,7 +11,7 @@
       [0, "أَمْد", "ʾamd", "süre", "kontrol", ""],
       [1, "إِمْد", "ʾimd", "süre", "kontrol", ""],
       [2, "أُمْد", "ʾumd", "süre", "kontrol", ""],
-      [3, "أَمَد", "ʾamad", "süre", "kontrol", ""],
+      [3, "أَمَد", "ʾamad", "Gâyet ve müntehî ve encâm", "lugat", "Kamus"],
       [4, "إِمَد", "ʾimad", "süre", "kontrol", ""],
       [5, "أُمُد", "ʾumud", "süre", "kontrol", ""],
       [6, "أُمُود", "ʾumūd", "süre", "kontrol", ""],
@@ -39,7 +39,7 @@
       [28, "مَأْمِدَة", "maʾmida", "süre", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَأْمِيد", "taʾmīd", "çokça süre olma", "kontrol", ""],
+      [29, "تَأْمِيد", "taʾmīd", "Bir nesneye nihâyet-i müddet beyân ve tayîn eylemek", "lugat", "Kamus"],
       [30, "تَأْمِدَة", "taʾmida", "çokça süre olma", "kontrol", ""],
       [31, "إِمِّاد", "ʾimmād", "çokça süre olma", "kontrol", ""]
     ],
@@ -407,7 +407,7 @@
       [284, "أَمُدُون", "ʾamudūn", "her daim süre olanlar", "kontrol", ""],
       [285, "أَمُدِين", "ʾamudīn", "her daim süre olanlar", "kontrol", ""],
       [286, "أَمُدَات", "ʾamudāt", "her daim süre olanlar, müennes", "kontrol", ""],
-      [287, "أَمَد", "ʾamad", "her daim süre olan", "kontrol", ""],
+      [287, "أَمَد", "ʾamad", "Gâyet ve müntehî ve encâm", "lugat", "Kamus"],
       [288, "أَمَدَة", "ʾamada", "her daim süre olan, müennes", "kontrol", ""],
       [289, "أَمَدَان", "ʾamadān", "her daim süre olan, iki", "kontrol", ""],
       [290, "أَمَدَتَان", "ʾamadatān", "her daim süre olan, iki, müennes", "kontrol", ""],
@@ -567,7 +567,7 @@
       [435, "أَوْمَد", "ʾawmad", "süre olma türünden şey", "kontrol", ""],
       [437, "أَيْمَد", "ʾaymad", "süre olma türünden şey", "kontrol", ""],
       [439, "أَمْد", "ʾamd", "süre olma türünden şey", "kontrol", ""],
-      [441, "أَمَد", "ʾamad", "süre olma türünden şey", "kontrol", ""],
+      [441, "أَمَد", "ʾamad", "Gâyet ve müntehî ve encâm", "lugat", "Kamus"],
       [443, "إِمْد", "ʾimd", "süre olma türünden şey", "kontrol", ""],
       [445, "أُمْد", "ʾumd", "süre olma türünden şey", "kontrol", ""],
       [447, "أَمِيد", "ʾamīd", "süre olma türünden şey", "kontrol", ""],
@@ -603,7 +603,7 @@
       [466, "أَمَدَة", "ʾamada", "süre olmalar", "kontrol", ""],
       [467, "أُمَّاد", "ʾummād", "süre olmalar", "kontrol", ""],
       [468, "أَمَاد", "ʾamād", "süre olmalar", "kontrol", ""],
-      [469, "أَمَد", "ʾamad", "süre olmalar", "kontrol", ""],
+      [469, "أَمَد", "ʾamad", "Gâyet ve müntehî ve encâm", "lugat", "Kamus"],
       [470, "مَآمِد", "maʾāmid", "süre olmalar", "kontrol", ""],
       [471, "مَآمِيد", "maʾāmīd", "süre olmalar", "kontrol", ""],
       [472, "أَوَامِد", "ʾawāmid", "süre olmalar", "kontrol", ""],
@@ -1945,7 +1945,70 @@
         "k": "أمد",
         "yol": "kök"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَمَد": [
+        {
+          "eser": "Kamus",
+          "madde": "emed",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gâyet ve müntehî ve encâm manâsınadır ki son tabîr olunur; yukâlu: بَلَغَ الشَّيْءُ أَمَدَهُ أَيْ غَايَتَهُ وَمُنْتَهَاهُ ve yukâlu: أَمَدٌ مَأْمُودٌ أَيْ مُنْتَهًى إِلَيْهِ Şârihin beyânına göre مَأْمُودٌ [memûd] ضَرْبٌ [darb] vezninde أَمْدٌ [emd] lafzından mefûldür ki gâyete resîde olmak manâsınadır Ve أَمْدٌ [emd] Darılmak manâsınadır; yukâlu: أَمِدَ عَلَيْهِ أَمَدًا مِنَ الْبَابِ الرَّابِعِ إِذَا غَضِبَ عَلَيْهِ",
+              "misaller": [
+                ["بَلَغَ الشَّيْءُ أَمَدَهُ أَيْ غَايَتَهُ وَمُنْتَهَاهُ", ""],
+                ["أَمَدٌ مَأْمُودٌ أَيْ مُنْتَهًى إِلَيْهِ", ""],
+                ["أَمِدَ عَلَيْهِ أَمَدًا مِنَ الْبَابِ الرَّابِعِ إِذَا غَضِبَ عَلَيْهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَدُ",
+          "okunus": "el-emed",
+          "koken": "hemzenin ve mîmin fethiyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "emed",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Gâyet manâsınadır; مَدَى [medâ] gibi; yukâlu: مَا أَمَدُكَ أَيْ مُنْتَهَى عُمُرِكَ Ve أَمَدٌ [emed] Gazab manâsına da gelir; yukâlu: أَمِدَ عَلَيْهِ مِنَ الْبَابِ الرَّابِعِ مِثْلُ أَبِدَ عَلَيْهِ أَيْ غَضِبَ",
+              "misaller": [
+                ["مَا أَمَدُكَ أَيْ مُنْتَهَى عُمُرِكَ", ""],
+                ["أَمِدَ عَلَيْهِ مِنَ الْبَابِ الرَّابِعِ مِثْلُ أَبِدَ عَلَيْهِ أَيْ غَضِبَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَدُ",
+          "okunus": "el-emed",
+          "koken": "fethateynle"
+        }
+      ],
+      "تَأْمِيد": [
+        {
+          "eser": "Kamus",
+          "madde": "temid",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneye nihâyet-i müddet beyân ve tayîn eylemek manâsınadır; yukâlu: أَمَّدَ لَهُ تَأْمِيدًا إِذَا بَيَّنَ لَهُ الْأَمَدَ مِثْلَ أَجَّلَ تَأْجِيلاً",
+              "misaller": [
+                ["أَمَّدَ لَهُ تَأْمِيدًا إِذَا بَيَّنَ لَهُ الْأَمَدَ مِثْلَ أَجَّلَ تَأْجِيلاً", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّأْمِيدُ",
+          "okunus": "et-temîd",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 4,
   "kuranda_var": true,

@@ -8,13 +8,13 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "أَنْف", "ʾanf", "burun", "kontrol", ""],
+      [0, "أَنْف", "ʾanf", "Burun", "lugat", "Luggat"],
       [1, "إِنْف", "ʾinf", "burun", "kontrol", ""],
       [2, "أُنْف", "ʾunf", "burun", "kontrol", ""],
       [3, "أَنَف", "ʾanaf", "burun", "kontrol", ""],
       [4, "إِنَف", "ʾinaf", "burun", "kontrol", ""],
       [5, "أُنُف", "ʾunuf", "burun", "kontrol", ""],
-      [6, "أُنُوف", "ʾunūf", "burun", "kontrol", ""],
+      [6, "أُنُوف", "ʾunūf", "Kezâlik cemi", "lugat", "Vankulu"],
       [7, "إِنَاف", "ʾināf", "burun", "kontrol", ""],
       [8, "أُنَاف", "ʾunāf", "burun", "kontrol", ""],
       [9, "أَنَاف", "ʾanāf", "burun", "kontrol", ""],
@@ -421,7 +421,7 @@
       [291, "أَنَفُون", "ʾanafūn", "her daim burun olanlar", "kontrol", ""],
       [292, "أَنَفِين", "ʾanafīn", "her daim burun olanlar", "kontrol", ""],
       [293, "أَنَفَات", "ʾanafāt", "her daim burun olanlar, müennes", "kontrol", ""],
-      [294, "أَنْف", "ʾanf", "her daim burun olan", "kontrol", ""],
+      [294, "أَنْف", "ʾanf", "Burun", "lugat", "Luggat"],
       [295, "أَنْفَة", "ʾanfa", "her daim burun olan, müennes", "kontrol", ""],
       [296, "أَنْفَان", "ʾanfān", "her daim burun olan, iki", "kontrol", ""],
       [297, "أَنْفَتَان", "ʾanfatān", "her daim burun olan, iki, müennes", "kontrol", ""],
@@ -557,13 +557,13 @@
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [421, "أَنَاف", "ʾanāf", "burun olma", "kontrol", ""],
-      [422, "أُنُوف", "ʾunūf", "burun olma", "kontrol", ""],
+      [422, "أُنُوف", "ʾunūf", "Kezâlik cemi", "lugat", "Vankulu"],
       [423, "إِنَاف", "ʾināf", "burun olma", "kontrol", ""],
       [424, "أُنْف", "ʾunf", "burun olma", "kontrol", ""],
       [425, "أَنَافَة", "ʾanāfa", "burun olma", "kontrol", ""],
       [426, "إِنَافَة", "ʾināfa", "burun olma", "kontrol", ""],
       [427, "أُنُوفَة", "ʾunūfa", "burun olma", "kontrol", ""],
-      [428, "أَنْف", "ʾanf", "burun olma", "kontrol", ""],
+      [428, "أَنْف", "ʾanf", "Burun", "lugat", "Luggat"],
       [429, "إِنْف", "ʾinf", "burun olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -573,7 +573,7 @@
       [434, "أُونُوفَة", "ʾūnūfa", "burun olma türünden şey", "kontrol", ""],
       [435, "أَوْنَف", "ʾawnaf", "burun olma türünden şey", "kontrol", ""],
       [437, "أَيْنَف", "ʾaynaf", "burun olma türünden şey", "kontrol", ""],
-      [439, "أَنْف", "ʾanf", "burun olma türünden şey", "kontrol", ""],
+      [439, "أَنْف", "ʾanf", "Burun", "lugat", "Luggat"],
       [441, "أَنَف", "ʾanaf", "burun olma türünden şey", "kontrol", ""],
       [443, "إِنْف", "ʾinf", "burun olma türünden şey", "kontrol", ""],
       [445, "أُنْف", "ʾunf", "burun olma türünden şey", "kontrol", ""],
@@ -600,7 +600,7 @@
       [456, "آنِفَة", "ʾānifa", "burun olmalar", "kontrol", ""],
       [457, "أَآنِف", "ʾaʾānif", "burun olmalar", "kontrol", ""],
       [458, "أَآنِيف", "ʾaʾānīf", "burun olmalar", "kontrol", ""],
-      [459, "أُنُوف", "ʾunūf", "burun olmalar", "kontrol", ""],
+      [459, "أُنُوف", "ʾunūf", "Kezâlik cemi", "lugat", "Vankulu"],
       [460, "أُنُف", "ʾunuf", "burun olmalar", "kontrol", ""],
       [461, "إِنَاف", "ʾināf", "burun olmalar", "kontrol", ""],
       [462, "إِنَف", "ʾinaf", "burun olmalar", "kontrol", ""],
@@ -1455,7 +1455,189 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَنْف": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ENF",
+          "yazilis": "ﺍﻧﻒ",
+          "tur": "i.",
+          "koken": "Ar. enf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Burun",
+              "misaller": [
+                ["Varsam civâr-ı yâre zarâfetle Zihniyâ / Enf-i rakîb eder hasedinden fıkır fıkır", "Bayburtlu Zihni"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "mec.",
+              "tanim": "Gurur, kibir. ● Enfî ( ﺍﻧﻔﻰ ) sıf. (nispet eki -і ile) Buruna âit, burunla ilgili",
+              "misaller": [],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "enf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Malûmdur ki buruna denir. Cemi أُنُوفٌ [unûf] gelir hemzenin zammıyla ve آنَافٌ [ânâf] gelir medd ile ve آنُفٌ [ânuf] gelir, أَفْلُسٌ [eflus] vezninde.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "Arablar “Filân haktan irâz ve bâtıla meyl ve ikbâl eyledi” diyecek yerde جَعَلَ أَنْفَهُ فِي قَفَاهُ derler ve رَجُلٌ حَمِيُّ الْأَنْفِ derler, “Filân fî-zâtihi be-gâyet cenâblı ve âr ve hamiyyetli kimse olmakla katâ kendi tarafına itâle-i dest-i taarruz u taaddî olmak hâletlerini hazm ve tahammül eyleyemez” manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "يَتَتَبَّعَ أَنْفَهُ derler, râyihâyı kuvve-i şâmmesiyle teşemmüm ederek araştırsa ve أَضَاعَ مَطْلَبَ أَنْفِهِ derler; أَضَاعَ فَرْجَ أُمِّهِ manâsını murâd ederler ki makâm-ı izdirâ vü düşnâmda söylerler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَنْفُ",
+          "okunus": "el-enf",
+          "koken": "hemzenin fethi ve nûnun sükûnuyla"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "enf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Müellifin Basâirde beyânına göre أَنْفٌ [enf] ki câriha-i mahûdenin ismidir, badehu bit-teşbîh bir nesnenin ucuna ve eşref olan yerine ıtlâk eylediler; أَنْفُ الْجَبَلِ ve أَنْفُ اللِّحْيَةِ gibi.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "hamiyyet ve gazab ve izzet ve zillet, أَنْفٌ [enf]e nisbet olunur, zîrâ hâlât-ı mezkûrenin her birinde أَنْفٌ [enf]te keyfiyyet-i mahsûsa mütebeyyin olur. İntehâ.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "أَنْفٌ [enf] Bir kavmin seyyid ve ser-gerdesine ıtlâk olunur; yukâlu: هُوَ أَنْفُ قَوْمِهِ أَيْ سَيِّدُهُمْ Ve bir yokuş, belen ismidir.",
+              "misaller": [
+                ["هُوَ أَنْفُ قَوْمِهِ أَيْ سَيِّدُهُمْ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "her nesnenin evveline yâhûd eşeddine ıtlâk olunur; yukâlu: هَذَا أَنْفُ عَمَلِهِ أَيْ أَوَّلُهُ أَوْ أَشَدُّهُ Ve أَنْفُ الْأَرْضِ [enful-ard] Güneşe karşı gelen pek ve günü yerine ıtlâk olunur; yukâlu: قَعَدَ فِي أَنْفِ الْأَرْضِ أَيْ مَا اسَتْقَبَلَ الشَّمْسَ مِنَ الْجَلَدِ وَالضَّوَاحِي Ve أَنْفُ الرَّغِيفِ [enfur-ragîf] Ekmeğin kırığından ibârettir; tekûlu: أَكَلْتُ أَنْفَ الرَّغِيفِ أَيْ كِسْرَةً مِنْهُ Ve أَنْفُ النَّابِ [enfun-nâb] Azı dişinin henüz yarıp sövelen ucuna ıtlâk olunur.",
+              "misaller": [
+                ["هَذَا أَنْفُ عَمَلِهِ أَيْ أَوَّلُهُ أَوْ أَشَدُّهُ", ""],
+                ["قَعَدَ فِي أَنْفِ الْأَرْضِ أَيْ مَا اسَتْقَبَلَ الشَّمْسَ مِنَ الْجَلَدِ وَالضَّوَاحِي", ""]
+              ]
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "أَنْفُ اللِّحْيَةِ [enful-lihyet] Sakalın kıyısından ibârettir.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "أَنْفُ الْمَطَرِ [enful-matar] Yağmurun ilk evvel inbât eylediği olacaktır; yukâlu: نَبَتَ بِأَنْفِ الْمَطَرِ وَهُوَ أَوَّلُ مَا أَنْبَتَ Ve أَنْفُ خُفِّ الْبَعِيرِ [enfu huffil-baîr] Deve tabanından bakanakları ucuna ıtlâk olunur. el-Hâsıl her ne ki أَنْفٌ [enf]e şebeh ve münâsebeti ola, bil-izâfe ıtlâk olunur.",
+              "misaller": [
+                ["نَبَتَ بِأَنْفِ الْمَطَرِ وَهُوَ أَوَّلُ مَا أَنْبَتَ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "enf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Burun, bînîmanâsına gerek insânın gerek gayrının.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَنْفُ",
+          "okunus": "el-enf",
+          "koken": "hemzenin fethi ve nûnun sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "enf",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Burun",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "Enfun-Nâkat",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَنْفُ النَّاقَةِ [Enfun-Nâkat] Cafer b. Kuray nâm kimsenin lakabıdır ki Sad b. Menât kabîlesinden bir batn pederidir. Bir gün pederi bir nâka zebh edip etini hatunları beyninde taksîme mübâderet eylediğini Caferin vâlidesi istimâ eyledikte kendi hissesine âid olanı alıp getirmek için Caferi irsâl eyledi. O dahi gelip gördü ki etten nâm ve nişân kalmayıp hemân nâkanın kellesiyle boynu kalmış. Pederinden hisse istedikte “Ne yapayım sizin nasibinizde bu musîb oldu” dedi. Bil-âhere Cafer elini kellenin burnuna sokup sürüyerek vâlidesine götürmekle أَنْفُ النَّاقَةِ ile telkîb eylediler. Kendisi ve kavm ve tebârı lakab-ı mersûmdan be-gâyet infiâl ederler idi. Vaktâ ki Hutaye nâm şâir işbu: “قَوْمٌ هُمُ الْأَنْفُ وَالْأَذْنَابُ غَيْرُهُمْ || وَمَنْ يُسَوِّى بِأَنْفِ النَّاقَةِ الذَّنَبَاH beytiyle medh eyledikte lakab-ı mezbûr min-bad unvân-ı medîhaları oldu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "batn-ı mezbûre nisbette cüz-i sânî iskâtla أَنْفِيٌّ [Enfiyy] denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "أَنْفٌ lafzı masdar olur, buruna vurmak manâsına; yukâlu: أَنَفَهُ مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا ضَرَبَ أَنْفَهُ Ve içine girdiği su burnuna dek çıkıp erişmek manâsınadır; yukâlu: أَنَفَ الْمَاءُ فُلاَنًا إِذَا بَلَغَ أَنْفَهُ Ve davar otlanmamış merâya uğrayıp çiğnemek manâsınadır; yukâlu: أَنَفَتِ الْإِبِلُ إِذَا وَطِئَتْ كَلَأً أُنُفًا",
+              "misaller": [
+                ["أَنَفَهُ مِنَ الْبَابِ الثَّانِي وَالْأَوَّلِ إِذَا ضَرَبَ أَنْفَهُ", ""],
+                ["أَنَفَ الْمَاءُ فُلاَنًا إِذَا بَلَغَ أَنْفَهُ", ""],
+                ["أَنَفَتِ الْإِبِلُ إِذَا وَطِئَتْ كَلَأً أُنُفًا", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أُنُوف": [
+        {
+          "eser": "Vankulu",
+          "madde": "unuf",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik cemi.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأُنُوفُ",
+          "okunus": "el-unûf",
+          "koken": "zammeteynle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

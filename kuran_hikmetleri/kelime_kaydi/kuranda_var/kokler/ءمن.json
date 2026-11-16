@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "أَمْن", "ʾamn", "iman etme", "orta", ""],
+      [0, "أَمْن", "ʾamn", "Güven", "lugat", "Luggat"],
       [1, "إِمْن", "ʾimn", "iman etme", "orta", ""],
       [2, "أُمْن", "ʾumn", "iman etme", "orta", ""],
       [3, "أَمَن", "ʾaman", "iman etme", "orta", ""],
@@ -17,11 +17,18 @@
       [6, "أُمُون", "ʾumūn", "iman etme", "orta", ""],
       [7, "إِمَان", "ʾimān", "iman etme", "orta", ""],
       [8, "أُمَان", "ʾumān", "iman etme", "orta", "Vikisözlük: nominative plural of أُمْنِيَة (ʔumniya)"],
-      [9, "أَمَان", "ʾamān", "iman etme", "orta", "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I)"],
-      [10, "أَمَانَة", "ʾamāna", "iman etme", "orta", "Vikisözlük: masdar (bâb I): to be faithful, to be reliable"],
+      [9, "أَمَان", "ʾamān", "Aman dileme", "lugat", "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I) · Luggat"],
+      [
+        10,
+        "أَمَانَة",
+        "ʾamāna",
+        "Eminlik",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable · Luggat"
+      ],
       [11, "أُمُونَة", "ʾumūna", "iman etme", "orta", ""],
       [12, "إِمَانَة", "ʾimāna", "iman etme", "orta", ""],
-      [13, "أَمِين", "ʾamīn", "emin", "kuran", "Vikisözlük: a male given name, Ameen and Amin"],
+      [13, "أَمِين", "ʾamīn", "Güvenli", "lugat", "Vikisözlük: a male given name, Ameen and Amin · Luggat"],
       [14, "أَمُون", "ʾamūn", "iman etme", "orta", ""],
       [15, "أَمَنَان", "ʾamanān", "iman etme", "orta", ""],
       [16, "أُمْنَان", "ʾumnān", "iman etme", "orta", ""],
@@ -29,7 +36,7 @@
       [18, "أَمْنَى", "ʾamnā", "iman etme", "orta", ""],
       [19, "أُمْنَى", "ʾumnā", "iman etme", "orta", ""],
       [20, "إِمْنَى", "ʾimnā", "iman etme", "orta", ""],
-      [21, "أَمَنَة", "ʾamana", "güven", "kuran", "Kur'ân"],
+      [21, "أَمَنَة", "ʾamana", "bu dahi hıyânet mukâbilidir ki ismdir", "lugat", "Kur'ân · Kamus"],
       [22, "إِمَنَة", "ʾimana", "iman etme", "orta", ""],
       [23, "أَمْنُونَة", "ʾamnūna", "iman etme", "orta", ""],
       [24, "تُؤْمُون", "tuʾmūn", "iman etme", "orta", ""],
@@ -43,9 +50,9 @@
         29,
         "تَأْمِين",
         "taʾmīn",
-        "çokça iman etme",
-        "orta",
-        "Vikisözlük: verbal noun of أَمَّنَ (ʔammana, “to reassure, ensure, insure, secure”"
+        "Gerçekleştirme, sağlama",
+        "lugat",
+        "Vikisözlük: verbal noun of أَمَّنَ (ʔammana, “to reassure, ensure, insure, secure” · Luggat"
       ],
       [30, "تَأْمِنَة", "taʾmina", "çokça iman etme", "orta", ""],
       [31, "إِمِّان", "ʾimmān", "çokça iman etme", "orta", ""]
@@ -104,13 +111,13 @@
       [66, "مُؤَامَن", "muʾāman", "biriyle karşılıklı iman etme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِيمَان", "ʾīmān", "iman ettirme", "orta", "Vikisözlük: a female given name"]
+      [67, "إِيمَان", "ʾīmān", "İnanma", "lugat", "Vikisözlük: a female given name · Luggat"]
     ],
     "ism-i merre · bâb IV": [
       [68, "إِيمَانَة", "ʾīmāna", "bir kere iman ettirme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُؤْمِن", "muʾmin", "mümin, iman eden", "kuran", "Kur'ân"],
+      [69, "مُؤْمِن", "muʾmin", "İman eden", "lugat", "Kur'ân · Luggat"],
       [70, "مُؤْمِنَة", "muʾmina", "iman eden kadın", "kuran", "Kur'ân"],
       [71, "مُؤْمِنَان", "muʾminān", "iman ettiren, iki", "orta", ""],
       [72, "مُؤْمِنَتَان", "muʾminatān", "iman ettiren, iki, müennes", "orta", ""],
@@ -212,7 +219,14 @@
       [134, "مُنْأَمَن", "munʾaman", "iman edilme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VIII": [
-      [135, "اِئْتِمَان", "iʾtimān", "kendisi için iman etme", "orta", "Vikisözlük: masdar (bâb VIII): to trust"]
+      [
+        135,
+        "اِئْتِمَان",
+        "iʾtimān",
+        "Kezâlik bir kimseye bir nesneyi inanmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb VIII): to trust · Vankulu"
+      ]
     ],
     "masdar · bâb VIII (hemze idgamlı)": [
       [136, "اِتِّمَان", "ittimān", "kendisi için iman etme", "orta", ""]
@@ -329,7 +343,14 @@
       [219, "آمِنَات", "ʾāmināt", "iman edenler, müennes", "orta", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَأْمُون", "maʾmūn", "emin", "kuran", "Kur'ân"],
+      [
+        220,
+        "مَأْمُون",
+        "maʾmūn",
+        "Tehlikesi olmayan, korkusuz, emniyetli, emin, sağlam",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [221, "مَأْمُونَة", "maʾmūna", "iman edilen, müennes", "orta", ""],
       [222, "مَأْمُونَان", "maʾmūnān", "iman edilen, iki", "orta", ""],
       [223, "مَأْمُونَتَان", "maʾmūnatān", "iman edilen, iki, müennes", "orta", ""],
@@ -338,7 +359,14 @@
       [226, "مَأْمُونَات", "maʾmūnāt", "iman edilenler, müennes", "orta", ""]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَأْمَن", "maʾman", "güvenli yer", "kuran", "Kur'ân"],
+      [
+        227,
+        "مَأْمَن",
+        "maʾman",
+        "Sığınılacak, güven duyulacak, emin ve emniyetli yer, melce",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [228, "مَأْمَنَان", "maʾmanān", "iman etme yeri, vakti, iki", "orta", ""],
       [229, "مَأْمِن", "maʾmin", "iman etme yeri, vakti", "orta", ""],
       [230, "مَأْمِنَان", "maʾminān", "iman etme yeri, vakti, iki", "orta", ""],
@@ -374,7 +402,14 @@
       [252, "أُمَيْنَتَان", "ʾumaynatān", "azıcık iman etme, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَأْمَن", "maʾman", "güvenli yer", "kuran", "Kur'ân"],
+      [
+        253,
+        "مَأْمَن",
+        "maʾman",
+        "Sığınılacak, güven duyulacak, emin ve emniyetli yer, melce",
+        "lugat",
+        "Kur'ân · Kubbealtı"
+      ],
       [254, "مَأْمَنَان", "maʾmanān", "iman etme, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
@@ -386,7 +421,7 @@
       [258, "إِمْنَتَان", "ʾimnatān", "iman etme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "أَمِين", "ʾamīn", "emin", "kuran", "Vikisözlük: a male given name, Ameen and Amin"],
+      [259, "أَمِين", "ʾamīn", "Güvenli", "lugat", "Vikisözlük: a male given name, Ameen and Amin · Luggat"],
       [
         260,
         "أَمِينَة",
@@ -407,7 +442,7 @@
       [270, "أَمُونُون", "ʾamūnūn", "her daim iman edenler", "orta", ""],
       [271, "أَمُونِين", "ʾamūnīn", "her daim iman edenler", "orta", ""],
       [272, "أَمُونَات", "ʾamūnāt", "her daim iman edenler, müennes", "orta", ""],
-      [273, "أَمِن", "ʾamin", "her daim iman eden", "orta", ""],
+      [273, "أَمِن", "ʾamin", "Kalbinde havf ve endîşe olmayıp âsûde-dil olan adama denir", "lugat", "Kamus"],
       [274, "أَمِنَة", "ʾamina", "her daim iman eden, müennes", "orta", ""],
       [275, "أَمِنَان", "ʾaminān", "her daim iman eden, iki", "orta", ""],
       [276, "أَمِنَتَان", "ʾaminatān", "her daim iman eden, iki, müennes", "orta", ""],
@@ -422,13 +457,13 @@
       [285, "أَمُنِين", "ʾamunīn", "her daim iman edenler", "orta", ""],
       [286, "أَمُنَات", "ʾamunāt", "her daim iman edenler, müennes", "orta", ""],
       [287, "أَمَن", "ʾaman", "her daim iman eden", "orta", ""],
-      [288, "أَمَنَة", "ʾamana", "güven", "kuran", "Kur'ân"],
+      [288, "أَمَنَة", "ʾamana", "bu dahi hıyânet mukâbilidir ki ismdir", "lugat", "Kur'ân · Kamus"],
       [289, "أَمَنَان", "ʾamanān", "her daim iman eden, iki", "orta", ""],
       [290, "أَمَنَتَان", "ʾamanatān", "her daim iman eden, iki, müennes", "orta", ""],
       [291, "أَمَنُون", "ʾamanūn", "her daim iman edenler", "orta", ""],
       [292, "أَمَنِين", "ʾamanīn", "her daim iman edenler", "orta", ""],
       [293, "أَمَنَات", "ʾamanāt", "her daim iman edenler, müennes", "orta", ""],
-      [294, "أَمْن", "ʾamn", "her daim iman eden", "orta", ""],
+      [294, "أَمْن", "ʾamn", "Güven", "lugat", "Luggat"],
       [295, "أَمْنَة", "ʾamna", "her daim iman eden, müennes", "orta", ""],
       [296, "أَمْنَان", "ʾamnān", "her daim iman eden, iki", "orta", ""],
       [297, "أَمْنَتَان", "ʾamnatān", "her daim iman eden, iki, müennes", "orta", ""],
@@ -456,20 +491,27 @@
       [319, "أُمَانُون", "ʾumānūn", "her daim iman edenler", "orta", ""],
       [320, "أُمَانِين", "ʾumānīn", "her daim iman edenler", "orta", ""],
       [321, "أُمَانَات", "ʾumānāt", "her daim iman edenler, müennes", "orta", ""],
-      [322, "أَمَان", "ʾamān", "her daim iman eden", "orta", "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I)"],
+      [
+        322,
+        "أَمَان",
+        "ʾamān",
+        "Aman dileme",
+        "lugat",
+        "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I) · Luggat"
+      ],
       [
         323,
         "أَمَانَة",
         "ʾamāna",
-        "her daim iman eden, müennes",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable"
+        "Eminlik",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable · Luggat"
       ],
       [324, "أَمَانَان", "ʾamānān", "her daim iman eden, iki", "orta", ""],
       [325, "أَمَانَتَان", "ʾamānatān", "her daim iman eden, iki, müennes", "orta", ""],
       [326, "أَمَانُون", "ʾamānūn", "her daim iman edenler", "orta", ""],
       [327, "أَمَانِين", "ʾamānīn", "her daim iman edenler", "orta", ""],
-      [328, "أَمَانَات", "ʾamānāt", "her daim iman edenler, müennes", "orta", ""]
+      [328, "أَمَانَات", "ʾamānāt", "Kutsal emanetler", "lugat", "Luggat"]
     ],
     "mübalağa": [
       [
@@ -514,9 +556,9 @@
         360,
         "أُمَّان",
         "ʾummān",
-        "son derece iman eden",
-        "orta",
-        "Vikisözlük: nominative plural of أُمْنِيَة (ʔumniya)"
+        "Vasftır ki zikr olundu",
+        "lugat",
+        "Vikisözlük: nominative plural of أُمْنِيَة (ʔumniya) · Kamus"
       ],
       [361, "أُمَّانَة", "ʾummāna", "son derece iman eden, müennes", "orta", ""],
       [362, "أُمَّانَان", "ʾummānān", "son derece iman eden, iki", "orta", ""],
@@ -538,7 +580,7 @@
       [378, "مِئْمِينُون", "miʾmīnūn", "iman etmeye düşkünler", "orta", ""],
       [379, "مِئْمِينِين", "miʾmīnīn", "iman etmeye düşkünler", "orta", ""],
       [380, "مِئْمِينَات", "miʾmīnāt", "iman etmeye düşkünler, müennes", "orta", ""],
-      [381, "أَمِين", "ʾamīn", "emin", "kuran", "Vikisözlük: a male given name, Ameen and Amin"],
+      [381, "أَمِين", "ʾamīn", "Güvenli", "lugat", "Vikisözlük: a male given name, Ameen and Amin · Luggat"],
       [
         382,
         "أَمِينَة",
@@ -591,37 +633,51 @@
       [420, "اِئْتِمَانِيَّة", "iʾtimāniyya", "iman edenlik", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "أَمَان", "ʾamān", "iman etme", "orta", "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I)"],
+      [
+        421,
+        "أَمَان",
+        "ʾamān",
+        "Aman dileme",
+        "lugat",
+        "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I) · Luggat"
+      ],
       [422, "أُمُون", "ʾumūn", "iman etme", "orta", ""],
       [423, "إِمَان", "ʾimān", "iman etme", "orta", ""],
       [424, "أُمْن", "ʾumn", "iman etme", "orta", ""],
-      [425, "أَمَانَة", "ʾamāna", "iman etme", "orta", "Vikisözlük: masdar (bâb I): to be faithful, to be reliable"],
+      [
+        425,
+        "أَمَانَة",
+        "ʾamāna",
+        "Eminlik",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable · Luggat"
+      ],
       [426, "إِمَانَة", "ʾimāna", "iman etme", "orta", ""],
       [427, "أُمُونَة", "ʾumūna", "iman etme", "orta", ""],
-      [428, "أَمْن", "ʾamn", "iman etme", "orta", ""],
+      [428, "أَمْن", "ʾamn", "Güven", "lugat", "Luggat"],
       [429, "إِمْن", "ʾimn", "iman etme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "آمُون", "ʾāmūn", "iman etme türünden şey", "orta", ""],
-      [432, "أَمَنَة", "ʾamana", "güven", "kuran", "Kur'ân"],
+      [432, "أَمَنَة", "ʾamana", "bu dahi hıyânet mukâbilidir ki ismdir", "lugat", "Kur'ân · Kamus"],
       [433, "أُمَنَة", "ʾumana", "iman etme türünden şey", "orta", ""],
       [434, "أُومُونَة", "ʾūmūna", "iman etme türünden şey", "orta", ""],
       [435, "أَوْمَن", "ʾawman", "iman etme türünden şey", "orta", ""],
-      [437, "أَيْمَن", "ʾayman", "iman etme türünden şey", "orta", ""],
-      [439, "أَمْن", "ʾamn", "iman etme türünden şey", "orta", ""],
+      [437, "أَيْمَن", "ʾayman", "Çok (daha, en, pek) uğurlu, çok kutlu, pek mübârek", "lugat", "Kubbealtı"],
+      [439, "أَمْن", "ʾamn", "Güven", "lugat", "Luggat"],
       [441, "أَمَن", "ʾaman", "iman etme türünden şey", "orta", ""],
       [443, "إِمْن", "ʾimn", "iman etme türünden şey", "orta", ""],
       [445, "أُمْن", "ʾumn", "iman etme türünden şey", "orta", ""],
-      [447, "أَمِين", "ʾamīn", "emin", "kuran", "Vikisözlük: a male given name, Ameen and Amin"],
+      [447, "أَمِين", "ʾamīn", "Güvenli", "lugat", "Vikisözlük: a male given name, Ameen and Amin · Luggat"],
       [449, "إِمَن", "ʾiman", "iman etme türünden şey", "orta", ""],
       [451, "أُمُن", "ʾumun", "iman etme türünden şey", "orta", ""],
       [
         453,
         "أَمَان",
         "ʾamān",
-        "iman etme türünden şey",
-        "orta",
-        "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I)"
+        "Aman dileme",
+        "lugat",
+        "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I) · Luggat"
       ]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
@@ -629,7 +685,7 @@
       [436, "أَوْمَنَة", "ʾawmana", "iman etme türünden bir tane", "orta", ""],
       [438, "أَيْمَنَة", "ʾaymana", "iman etme türünden bir tane", "orta", ""],
       [440, "أَمْنَة", "ʾamna", "iman etme türünden bir tane", "orta", ""],
-      [442, "أَمَنَة", "ʾamana", "güven", "kuran", "Kur'ân"],
+      [442, "أَمَنَة", "ʾamana", "bu dahi hıyânet mukâbilidir ki ismdir", "lugat", "Kur'ân · Kamus"],
       [444, "إِمْنَة", "ʾimna", "iman etme türünden bir tane", "orta", ""],
       [446, "أُمْنَة", "ʾumna", "iman etme türünden bir tane", "orta", ""],
       [
@@ -646,9 +702,9 @@
         454,
         "أَمَانَة",
         "ʾamāna",
-        "iman etme türünden bir tane",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable"
+        "Eminlik",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to be faithful, to be reliable · Luggat"
       ]
     ],
     "cem‘-i mükesser (aday)": [
@@ -663,9 +719,23 @@
       [463, "إِمَنَة", "ʾimana", "iman etmeler", "orta", ""],
       [464, "أُمَن", "ʾuman", "iman etmeler", "orta", ""],
       [465, "أُمَناء", "ʾumanāʾ", "iman etmeler", "orta", ""],
-      [466, "أَمَنَة", "ʾamana", "güven", "kuran", "Kur'ân"],
-      [467, "أُمَّان", "ʾummān", "iman etmeler", "orta", "Vikisözlük: nominative plural of أُمْنِيَة (ʔumniya)"],
-      [468, "أَمَان", "ʾamān", "iman etmeler", "orta", "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I)"],
+      [466, "أَمَنَة", "ʾamana", "bu dahi hıyânet mukâbilidir ki ismdir", "lugat", "Kur'ân · Kamus"],
+      [
+        467,
+        "أُمَّان",
+        "ʾummān",
+        "Vasftır ki zikr olundu",
+        "lugat",
+        "Vikisözlük: nominative plural of أُمْنِيَة (ʔumniya) · Kamus"
+      ],
+      [
+        468,
+        "أَمَان",
+        "ʾamān",
+        "Aman dileme",
+        "lugat",
+        "Vikisözlük: verbal noun of أَمِنَ (ʔamina) (form I) · Luggat"
+      ],
       [469, "أَمَن", "ʾaman", "iman etmeler", "orta", ""],
       [470, "مَآمِن", "maʾāmin", "iman etmeler", "orta", ""],
       [471, "مَآمِين", "maʾāmīn", "iman etmeler", "orta", ""],
@@ -689,7 +759,7 @@
       [487, "أُمَناآت", "ʾumanāʾāt", "iman etmeler topluluğu", "orta", ""],
       [488, "أَمَنَات", "ʾamanāt", "iman etmeler topluluğu", "orta", ""],
       [489, "أُمَّانَات", "ʾummānāt", "iman etmeler topluluğu", "orta", ""],
-      [490, "أَمَانَات", "ʾamānāt", "iman etmeler topluluğu", "orta", ""],
+      [490, "أَمَانَات", "ʾamānāt", "Kutsal emanetler", "lugat", "Luggat"],
       [491, "أَمَنَات", "ʾamanāt", "iman etmeler topluluğu", "orta", ""],
       [492, "مَآمِنَات", "maʾāmināt", "iman etmeler topluluğu", "orta", ""],
       [493, "مَآمِينَات", "maʾāmīnāt", "iman etmeler topluluğu", "orta", ""],
@@ -4018,7 +4088,1316 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَمْن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMN",
+          "yazilis": "ﺍﻣﻦ",
+          "tur": "i.",
+          "koken": "Ar. emn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emniyet, korkusuzluk, güven, huzur [Daha çok eman ve âsâyiş kelimeleriyle birlikte kullanılır]",
+              "misaller": [
+                ["Taâm u emn ü âsâyiş gibi bir ni’metim vardır", "Fâizî’den"],
+                ["Hâmî-i din medâr-ı emn ü eman", "Fıtnat Hanım"],
+                ["Her yerde remz-i emn ü emân oldu tûğlar", "Yahyâ Kemal"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "emn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْآمِنُ [el-âmin] (صَاحِبٌ [sâhib] vezninde) İsmlerdir, korkusuzluğa denir ki derûnda havftan eser olmayıp sâkin ve âsûde olmasından ibârettir; yukâlu: هُوَ فِي أَمْنٍ مِنْهُ وَآمِنٍ وَهُوَ ضِدُّ الْخَوْفِ Zâhiren صَاحِبٌ [sâhib] vezninde آمِنٌ [âmin] كَاهِلٌ [kâhil] ve حَارِكٌ [hârik] gibi ismdir yâhûd mübâlagadır.",
+              "misaller": [
+                ["هُوَ فِي أَمْنٍ مِنْهُ وَآمِنٍ وَهُوَ ضِدُّ الْخَوْفِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَمْنٌ [emn] ve أَمَانٌ [emân] (سَلَامٌ [selâm] vezninde) ve أَمَنٌ [emen] (fethateynle) ve أَمَنَةٌ [emenet] (fetehâtla) ve إِمْنٌ [imn] (hemzenin kesriyle) Masdarlardır, korkusuz âsûde olmak manâsınadır; yukâlu: أَمِنَ الرَّجُلُ أَمْنًا وَأَمَانًا وَأَمَنًا وَأَمَنَةً وَإِمْنًا مِنَ الْبَابِ الرَّابِعِ ضِدُّ خَافَ",
+              "misaller": [
+                [
+                  "أَمِنَ الرَّجُلُ أَمْنًا وَأَمَانًا وَأَمَنًا وَأَمَنَةً وَإِمْنًا مِنَ الْبَابِ الرَّابِعِ ضِدُّ خَافَ",
+                  ""
+                ]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمْنُ",
+          "okunus": "el-emn",
+          "koken": "hemzenin fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "emn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Emîn olmak ki خَوْفٌ [havf]ın mukâbilidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَمْنٌ [emn] Bir kimseye bir nesneyi inanmağa dahi derler; yukâlu: أَمِنْتُهُ عَلَى كَذَا مِنَ الْبَابِ الرَّابِعِ Ve kurie kavluhu taâlâ: ﴿لَا تَأْمَنَّا عَلَى يُوسُفَ﴾ (يوسف، 11) بَيْنَ الْإِدْغَامِ وَالْإِظْهَارِ وَقَالَ الْأَخْفَشُ وَالْإِدْغَامُ أَحْسَنُ",
+              "misaller": [
+                ["أَمِنْتُهُ عَلَى كَذَا مِنَ الْبَابِ الرَّابِعِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمْنُ",
+          "okunus": "el-emn",
+          "koken": "hemzenin fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güven",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güvenlik, emniyet",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emn ü adâlet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emniyet ve adalet",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "eman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik emîn olmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَانُ",
+          "okunus": "el-emân",
+          "koken": "hemzenin fethiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Aman dileme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güven, af ve yardım dileme",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "AMAN – EMAN",
+          "yazilis": "ﺍﻣﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. emān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emin olma, korkusuzluk, güven, emniyet",
+              "misaller": [
+                ["Ravzana çün yüz süren bulur aman / El-aman ey fahr-i âlem el-aman", "Derviş Abdullah"],
+                [
+                  "Çünkü âdeme bir an ölümden aman olmadığı gibi hayat için ömr-i tabiî dahi bir hadd-i muayyen değildir",
+                  "Nâmık Kemal"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Emin kılma, bağışlayıp korkusuz kılma, emniyet içinde bulundurma",
+              "misaller": [
+                ["Ahvalleri arz olundukta pâdişâhın ihsânıyle mal ve canlarına aman ihsan olunup…", "Kâtip Çelebi’den Seç."]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "târih.",
+              "tanim": "Eskiden savaşta veya barışta düşmana emniyet içinde bulunduğunu sözle, yazıyla veya bir işâretle bildirme",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Kurtulmak",
+              "misaller": [
+                ["Biri endîşeden aman bulamaz / Biri endîşeye zaman bulamaz", "Abdülhak Hâmit"],
+                ["Fakat başını kılıçtan kurtarmak ecelden aman bulmak mıdır?", "Sâmiha Ayverdi"]
+              ],
+              "deyim": "Aman bulmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Boyun eğdirmek",
+              "misaller": [],
+              "deyim": "Aman dedirtmek – Amâna getirmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Sığınıp merhamet istemek, affedilmeyi dilemek. 2. (Bir savaşta) Canının bağışlanmasını dilemek, bu şartla teslim olmayı kabul etmek",
+              "misaller": [
+                ["Canlarını kurtarmak ümîdiyle aman dilediler", "Kâtip Çelebi’den Seç."],
+                ["Kılıcından adû aman diledi", "Şeyhülislâm Yahyâ"]
+              ],
+              "deyim": "Aman dilemek (istemek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. Kuvvetli ve gālip durumda iken mağlûp ve teslim olana canını bağışlamak, onu korumak husûsunda yazılı veya sözlü taahhütte bulunmak",
+              "misaller": [
+                ["Şâhın askeri kaleye girer, gûya halka aman vermişse de bu bir yalandan ibârettir", "Kâtip Çelebi’den Seç."],
+                ["Dedesiyle gelen Türkmenler kalenin içindekilere aman vermişlerdi", "Ömer Seyfeddin"]
+              ],
+              "deyim": "Aman vermek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Allah ecelden aman versin, o da vaadinde dursun (Eflâtun C. Güney)",
+              "misaller": [],
+              "deyim": "Bağışlamak, affetmek, insaf etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Sığınıp af istemek, merhamet dilemek",
+              "misaller": [
+                ["Bir işâret etsem amâna düşecek", "Ahmed Midhat Efendi"]
+              ],
+              "deyim": "Amâna düşmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Boyun eğmek, teslim olmak, bağışlanma dileğinde bulunmak",
+              "misaller": [
+                ["Dediler davranma, düştün kapana / Ya çek bıçağını ya gel amâna", "Kemâleddin Kamu"]
+              ],
+              "deyim": "Amâna gelmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Aman dedirtmek",
+              "misaller": [],
+              "deyim": "Amâna getirmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Himâyesinde bulunmak",
+              "misaller": [],
+              "deyim": "Amânında olmak"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "el-emân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güven, af ve aman dileme ta'bîri",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمَانَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMÂNET",
+          "yazilis": "ﺍﻣﺎﻧﺖ",
+          "tur": "i.",
+          "koken": "Ar. emānet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güvenilir bir kimseye saklaması veya birine teslim etmesi için bırakılan şey veya kimse, vedîa",
+              "misaller": [
+                ["Şemîm-i kâkülün almış nesîm gül-şende / Demiş ki sünbül sende emânet olsun bu", "Figānî"],
+                ["Kim etti emânete hiyânet", "Abdülhak Hâmit"],
+                ["Roma’da tabancasını devlet emânetidir diye Karabinari’ye teslim etmedi", "Rûşen E. Ünaydın"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "kısa.",
+              "tanim": "Bu eşyânın belli bir süre sonra alınmak üzere bırakıldığı yer",
+              "misaller": [
+                ["Bavullar emânette.", ""]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "teşmil.",
+              "tanim": "Allah’ın insanlara bir gün geri almak üzere verdiği can [Kelimenin bu anlamı deyim niteliğindeki bâzı söyleyişlerde meydana çıkmaktadır]",
+              "misaller": [
+                ["Allah’ın emânetini ne zaman alacağı belli olmaz.", ""],
+                ["Emâneti teslim etti.", ""]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "târih.",
+              "tanim": "Osmanlı Devleti’nde “emin” unvânını almış memurlar tarafından yönetilen devlet dâirelerine verilen isim",
+              "misaller": [
+                [" Şehremâneti: Belediye.", ""],
+                [" Rüsûmat emâneti: Vergi dâiresi.", ""],
+                [" Gümrük emâneti: Gümrükler dâiresi.", ""]
+              ],
+              "no": 4
+            },
+            {
+              "etiket": "",
+              "tanim": "Böyle bir dâirede emin olma işi, eminlik görevi",
+              "misaller": [
+                ["ve sâir bunun emsâli cihet tasarruf edenler…", "İsmâil H. Uzunçarşılı"]
+              ],
+              "no": 5
+            },
+            {
+              "etiket": "sıf.",
+              "tanim": "Geri alınmak üzere birine verilmiş olan",
+              "misaller": [
+                ["Emânet kitap.", ""]
+              ],
+              "no": 6
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Koruması için bırakmak, koruyuculuğuna vermek, tevdî etmek",
+              "misaller": [
+                ["Devlet bu kaleyi paşaya emânet etti", "Nâmık Kemal"],
+                [
+                  "Gıyâseddin Keyhüsrev, ağabeyisi Rükneddin Süleyman’ın kuvvetlerine dayanamayacağını anlayınca iki oğlunu Konyalılar’a emânet ederek bu şehirden kaçtı",
+                  "Ahmet H. Tanpınar"
+                ]
+              ],
+              "deyim": "Emânet etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Geri almak üzere vermek. -e Emânet",
+              "misaller": [
+                ["Oğlum sana emânet.", ""],
+                ["Malım iki oğluma emânet.", ""]
+              ],
+              "deyim": "Emânet vermek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Özellikle tren istasyonu vb. yerlerde eşyâlarını, belli bir süre sonra almak üzere bu iş için kurulmuş olan yerlere bırakmak. ● Emânetullah ( ﺍﻣﺎﻧﺔ ﺍﻟﻠّﻪ ) i. ( Allāh ismiyle emānetu’llāh ) “ Allah’ın emâneti”",
+              "misaller": [],
+              "deyim": "Emânete bırakmak (vermek)"
+            },
+            {
+              "etiket": "",
+              "tanim": "“Bu can bize emânetullahtır.” “Osmanlı Devleti’nde pâdişahlar halka emânetullah gözüyle bakarlardı.”",
+              "misaller": [],
+              "deyim": "İnsanın hak ölçülerinden ayrılmadan bakması gereken kimse veya kimseler"
+            }
+          ]
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMÂNETEN",
+          "yazilis": "ﺍﻣﺎﻧﺔً",
+          "tur": "zf.",
+          "koken": "Ar. emāne t ’in tenvinli şekli emāne t en",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emânet olarak",
+              "misaller": [
+                ["Temelli vermiyorum, emâneten bırakıyorum.", ""]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "İhâle sûretiyle değil hükûmet tarafından, hükûmet memurları eliyle",
+              "misaller": [
+                ["Bu rıhtım emâneten yapıldı.", ""],
+                ["Bu sene âşar emâneten idâre edildi", "Muallim Nâci"]
+              ],
+              "no": 2
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "el-emânet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adam emîn ve mutemed olmak manâsınadır; yukâlu: أَمُنَ الرَّجُلُ أَمَانَةً مِنَ الْبَابِ الْخَامِسِ إِذَا كَانَ أَمِينًا Ve أَمَانَةٌ [emânet] bu manâda ism olur; yukâlu: هُوَ أَهْلُ الْأَمَانَةِ أَيْ لَيْسَ فِيهِ خِيَانَةٌ Ve emîn kimse uhdesine vedîa kılınan nesneye denir; yukâlu: أَدَّى أَمَانَتَهُ أَيْ وَدِيعَتَهُ Mütercim der ki Hidâye şerhi Nihâyede mestûrdur ki أَمَانَةٌ [emânet] وَدِيعَةٌ [vedîat]tan eammdır, zîrâ mâl-ı mudârebe ve âriye ve bidâa ve mâl-ı şeriket makûlesine أَمَانَةٌ [emânet] ıtlâk olunur, وَدِيعَةٌ [vedîat] ıtlâk olunmaz. İntehâ.",
+              "misaller": [
+                ["أَمُنَ الرَّجُلُ أَمَانَةً مِنَ الْبَابِ الْخَامِسِ إِذَا كَانَ أَمِينًا", ""],
+                ["هُوَ أَهْلُ الْأَمَانَةِ أَيْ لَيْسَ فِيهِ خِيَانَةٌ", ""],
+                ["أَدَّى أَمَانَتَهُ أَيْ وَدِيعَتَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kavluhu taâlâ: ﴿إِنَّا عَرَضْنَا الْأَمَانَةَ عَلَى السَّمَوَاتِ وَالْأَرْضِ﴾ اَلْآيَة، أَيِ الْفَرَائِضَ الْمَفْرُوضَةَ أَوِ النِّيَّةَ الَّتِي يَعْتَقِدُهَا فِيمَا يُظْهِرُهُ بِاللِّسَانِ مِنَ الْإِيمَانِ وَيُؤَدِّيهِ مِنْ جَمِيعِ الْفَرَائِضِ فِي الظَّاهِرِ لِأَنَّ اللهَ تَعَالَى إِئْتَمَنَهُ عَلَيْهَا وَلَمْ يُظْهِرْهَا لِأَحَدٍ مِنْ خَلْقِهِ Pes bir kimse lisânla izhâr eylediği tevhîd ve tasdîki kalbinde dahi izmâr ve itikâd eylese emâneti edâ eylemiş olur.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "eger zâhirde tasdîk ve tevhîd edip bâtında tekzîble nifâk ederse emâneti hâmil olup edâ eylemez olur. Müellifin Basâirde beyânına göre bazılar emâneti kelime-i tevhîd ile ve bazılar adâlet ile ve bazılar hurûf-ı teheccî ile ve bazılar akl ile tefsîr eylediler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "kavl-i ahîr müreccahtır, zîrâ marifet-i tevhîd ve sâiri onunla mütehassıl olur.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "“ح،م،ل” mâddesinde müellif insândan murâd kâfirdir ve haml-i emânetten murâd hıyânettir diye dakîka beyân eylemişti.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "bazılar indinde tabîiyye ve ihtiyâriyyeye şâmil tâat-ı ilâhîdir, lâkin agleb olan akl ve teklîftir.",
+              "misaller": []
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "ibâ ve imtinâdan murâd ibâ-i tabîîdir ki adem-i liyâkat u kâbiliyyetlerinden ibârettir.",
+              "misaller": []
+            },
+            {
+              "no": 8,
+              "etiket": "",
+              "tanim": "haml-i insândan murâd nev-i insânın fıtratlarında merkûz olan kâbiliyyet ve istidâdlarıdır.",
+              "misaller": []
+            },
+            {
+              "no": 9,
+              "etiket": "",
+              "tanim": "zalûm ve cehûl olmaları kuvvet-i gazabiyye ve şeheviyyelerinin gâlib olmasına mebnîdir. Kâle lisânul-gayb: “Âsumân bâr-ı emânet ne-tuvânist keşîd” Kura-i ışk be-nâm-ı men-i dîvâne zedend” İntehâ.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَانَةُ",
+          "okunus": "el-emânet",
+          "koken": "سَلَامَةٌ [selâmet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-emânet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Emîn olmak.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَانَةُ",
+          "okunus": "el-emânet",
+          "koken": "hemzenin fethi ve mîmin tahfîfi ile"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emânet",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Eminlik. Emanet",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emânetdâr",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emanetçi",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emâneten",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emanet olarak",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمِين": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMİN",
+          "yazilis": "ﺍﻣﻴﻦ",
+          "tur": "sıf.",
+          "koken": "",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güvenilir, inanılır, îtimat edilir (kimse), inak",
+              "misaller": [
+                ["Emin bir memur.", ""],
+                ["Emin bir kaynak.", ""],
+                ["Emin eller.", ""],
+                ["Doğru sözlü, insaflı, doğuştan dindar ve emin", "Kâtip Çelebi’den Seç."]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Herhangi bir konuda tereddüt ve şüphesi olmayan, kesin olarak kanâat getirmiş bulunan (kimse)",
+              "misaller": [
+                ["Çünkü senin berâber geleceğinden emindim", "Nâmık Kemal"],
+                ["Ebû Ali şaşmadı, benim bunu yapacağıma o kadar emindi ki", "Refik H. Karay"],
+                ["Teşhîsinden emin bir doktor sükûnetiyle cevap verdim", "Peyâmi Safâ"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "sıf.",
+              "tanim": "Güvenlik içinde olan, tehlikeden uzak, emniyetli",
+              "misaller": [
+                [
+                  "Fikirlerine emin mahfazalar bulamayan bir medeniyetin tefekkür kābiliyetini kaybetmekte gecikmeyeceğinden hiç şüphe edilmemelidir",
+                  "Ahmet Hâşim"
+                ],
+                [
+                  "Ve dizimin acısını duymayarak yürüyorum, istikbâlimden başka bir yere çıkan, rahat ve emin bir yolda gider gibi yürüyorum",
+                  "Peyâmi Safâ"
+                ],
+                ["Kış geliyor, yelkenler emin bir yerde kışlar", "Ali M. Arolat"]
+              ],
+              "no": 3
+            },
+            {
+              "etiket": "i. târih.",
+              "tanim": "Osmanlı Devleti’nde bir işin başı ve sorumlusu durumunda olanlara verilen memûriyet unvânı",
+              "misaller": [
+                ["Binâ emîni.", ""],
+                ["Gümrük emîni.", ""],
+                ["Sürre emîni.", ""],
+                ["Bölük emîni.", ""],
+                ["Fetvâ emîni.", ""],
+                [
+                  "Cizyeler, evvelce mıntıka mıntıka biri emin ve biri kâtip olmak üzere kapıkulu süvârilerine verilerek bunlar vâsıtasıyle tahsil olunur ve bu işe memur olan emin ve kâtibine de hizmetlerine mukābil ücret verilirdi",
+                  "İsmâil H. Uzunçarşılı"
+                ]
+              ],
+              "no": 4
+            },
+            {
+              "etiket": "",
+              "tanim": "Hz. Muhammed’in lakabı",
+              "misaller": [
+                ["Altmış üç yaşa çü erdi ol emin", "Süleyman Çelebi"]
+              ],
+              "no": 5
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Emin olmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Emin olmasaydım gece yarısı çıkar mıydım (Ahmed Midhat Efendi). Seni daha şirin gösteriyor emin ol (Reşat N. Güntekin). Affedin Kenan Bey dedim, emin olunuz, bu şarkının sizi bu kadar müteessir edeceğini tahmin etmemiştim (Kerîme Nâdir). 2",
+              "misaller": [],
+              "deyim": "İnanmak, güvenmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Gönül ne Göksu’ya mâil ne Sarıyar’a gider / Sipâh-ı gamdan emîn olmağa Hisâr’a gider (Sultan IV. Mehmed’den). Reâyâlarından emin olan Osmanlılar’ın hepsi bir cuma günü câmiye toplanmıştı (Ömer Seyfeddin)",
+              "misaller": [],
+              "deyim": "Emniyet içinde olmak"
+            }
+          ]
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "emin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Emn üzere olucu. Kâlallâhu taâlâ: ﴿وَهَذَا الْبَلَدِ الْأَمِينِ﴾ (التين، 3) قَالَ الْأَخْفَشُ يُرِيدُ الْآمِنَ Yanî Ahfeş emîn, hâfız manâsınadır dedi, yanî kendiye dâhil olanı hıfz eder, zâyi etmez, emîn emâneti zâyi etmediği gibi, nitekim asl dahi budur.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bazılar أَمِينٌ [emîn] مَأْمُونٌ [memûn] manâsınadır yanî havâdisten ve gavâyilden mahfûz manâsınadır dediler.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمِينُ",
+          "okunus": "el-emîn",
+          "koken": "hemzenin fethi ve mîmin kesri ve meddiyle"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emin",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güvenli",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emîn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Güvenilir. Emniyetli",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمَنَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-emenet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "bu dahi hıyânet mukâbilidir ki ismdir; yukâlu: بِهِ أَمَنَةٌ أَيْ لَيْسَ فِيهِ خِيَانَةٌ",
+              "misaller": [
+                ["بِهِ أَمَنَةٌ أَيْ لَيْسَ فِيهِ خِيَانَةٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَنَةُ",
+          "okunus": "el-emenet",
+          "koken": "fetehâtla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-emenet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik emîn olmak; ve minhu kavluhu taâlâ: ﴿أَمَنَةً نُعَاسًا﴾ (آل عمران، 154) Ve نُعَاسٌ [nuâs] nûnun zammı ile uykuya derler.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَمَنَةٌ [emenet] Kezâlik şol kimseye derler ki herkese itimâd kıla.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمَنَةُ",
+          "okunus": "el-emenet",
+          "koken": "fethateynle"
+        }
+      ],
+      "تَأْمِين": [
+        {
+          "eser": "Kamus",
+          "madde": "temin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْإِئْتِمَانُ [el-itimân] (إِفْتِعَالٌ [iftiâl] vezninde) ve اَلْإِسْتِيمَانُ [el-istîmân] Bunlar da bir adamı bir nesne üzere emîn kılmak manâsınadır; yukâlu: أَمَّنَهُ عَلَى كَذَا وَائْتَمَنَهُ وَاسْتَأْمَنَهُ بِمَعْنَى أَمِنَهُ عَلَيْهِ Şârih der ki إِسْتِيمَانٌ [istîmân] emân taleb eylemek ve emâna dâhil olmak manâlarına da gelir. İntehâ.",
+              "misaller": [
+                ["أَمَّنَهُ عَلَى كَذَا وَائْتَمَنَهُ وَاسْتَأْمَنَهُ بِمَعْنَى أَمِنَهُ عَلَيْهِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "تَأْمِينٌ [temîn] Bir adamı emn ve emân üzere kılmak ve emân vermek manâsınadır; yukâlu: أَمَّنَهُ إِذَا جَعَلَ فِي الْأَمْنِ",
+              "misaller": [
+                ["أَمَّنَهُ إِذَا جَعَلَ فِي الْأَمْنِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّأْمِينُ",
+          "okunus": "et-temîn",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "temin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "آمِينَ [âmin] demektir; yukâlu: أَمَّنَ فُلَانٌ تَأْمِينًا أَيْ قَالَ آمِينَ",
+              "misaller": [
+                ["أَمَّنَ فُلَانٌ تَأْمِينًا أَيْ قَالَ آمِينَ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّأْمِينُ",
+          "okunus": "et-temîn",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "temîn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Gerçekleştirme, sağlama. Gerçekleştirilme, sağlanma. Emin kılma, güvence verme. Temîn edilmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kubbealtı",
+          "madde": "TEMİN – TE’MİN",
+          "yazilis": "ﺗﺄﻣﻴﻦ",
+          "tur": "i.",
+          "koken": "Ar. emn “emin olmak, güvenmek”ten te’mіn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Bir iş için gerekli olan şartları hazırlama, sağlama",
+              "misaller": [
+                ["Fakat vâsıtanın te’mîn-i muvaffakıyyete adem-i kifâyesi bu hayâli kuvvede bırakmıştı", "Cenap Şahâbeddin"],
+                [
+                  "Fakat kendini devlete değil devleti kendine harcamak yolunun hatâlı bir yolcusu olması ile bilgisinin, zekâ ve tecrübesinin semeresi memlekete gerekli faydayı teminden uzak bulunuyordu",
+                  "Sâmiha Ayverdi"
+                ]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Elde etme, ele geçirme, sâhip olma, edinme, tedârik etme",
+              "misaller": [
+                [
+                  "O devirde milletlere te’mîn-i refah ve ticâret için, ilim ve mârifet ihrâcat ve ithâlat için…",
+                  "Sâmipaşazâde Sezâî"
+                ],
+                [
+                  "Bu hâlet-i rûhiyyede kolayca temâyüz etmek, te’mîn-i şöhret ve ikbal eylemek hırs ve iptilâsıdır",
+                  "Fuat Köprülü"
+                ]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "",
+              "tanim": "Emin duruma getirme, korkusunu giderip emniyet verme, güvenlik hissi verme",
+              "misaller": [
+                [
+                  "Temin ve neşv ü nemâsı feth-i arâzi ve zabt-ı nüfûsa tevaffuk ettiğinden tevsî-i hudut ve teksîr-i tebaa arzuları her millet için tabiîdir",
+                  "Cenap Şahâbeddin"
+                ],
+                ["Onu temîne çalıştım; kurtulmak yüzde doksandı. O halde niçin bu kadar yeis diyordum", "Fahri Celâl"]
+              ],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Temin etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Erkek çalışır, âilenin rızkını temin eder (Burhan Felek). (…)in teşebbüsü ile Osmanlı hanedânının kadın âzâlarının Türkiye’ye dönebilmelerini temin eden bir kānunu önce D.P. Grubu, sonra T.B.M.M kabul etti (Ergun Göze). 2. Elde etmek, edinmek, sâhip olmak. 3",
+              "misaller": [],
+              "deyim": "Sağlamak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Sizi temin ederim ki şu lohusalık hâli geçsin, iyice iyileşiniz, bir daha benim yüzümü bile görmeyeceksiniz (Ahmed Midhat Efendi). Bana kimsenin fenâlık yapamayacağını temin ettikçe yalan söylediğini unutur, ne kadar sevinirdim (Ömer Seyfeddin). ● Te’mînen ( ﺗﺄﻣﻴﻨﺎً ) zf. ( te’mіn ’in tenvinli şekli) Temin sûretiyle, temin yoluyle",
+              "misaller": [
+                [
+                  "Bu şâyianın noktası noktasına hepsi doğru olduğunu bize yeminler ile te’mînen anlattı",
+                  "Hüseyin R. Gürpınar"
+                ]
+              ],
+              "deyim": "Doğruluğu husûsunda emniyet vermek, güvence vermek"
+            }
+          ]
+        }
+      ],
+      "إِيمَان": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ÎMAN",
+          "yazilis": "ﺍﻳﻤﺎﻥ",
+          "tur": "i.",
+          "koken": "Ar. emn “emin olmak, güvenmek”ten іmān",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Allah’a inanma, dînî inanç",
+              "misaller": [
+                ["Dîn ü îmânıma hayr eylemeyen / Hayr eder mi vatan u milletine", "Kâzım Paşa’dan"],
+                ["Bilir misin, bence vatan îman ile berâberdir", "Nâmık Kemal"],
+                ["Dili bir, gönlü bir, îmânı bir insan yığını / Görüyor varlığının bir yere toplandığını", "Yahyâ Kemal"]
+              ],
+              "no": 1
+            },
+            {
+              "etiket": "",
+              "tanim": "Kuvvetli inanç",
+              "misaller": [
+                ["İtalya medeniyeti bir çocuk gibi inanılmayacak şeylere îman ile başlıyor", "Cenap Şahâbeddin"],
+                ["Aynı zamanda güzelliğin kudretine îmanım kuvvetlendikçe kuvvetleşiyor", "Refik H. Karay"]
+              ],
+              "no": 2
+            },
+            {
+              "etiket": "din.",
+              "tanim": "Allah’ın birliğini, melekleri, mukaddes kitapları, peygamberleri, kıyâmet gününü, kaderi, ölümden sonra dirilmeyi kalp ile tasdik ve dil ile ikrar etme, kalben inanma ve dil ile söyleme",
+              "misaller": [],
+              "no": 3
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "1",
+              "misaller": [],
+              "deyim": "Îman etmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Allah içinizden îman edenleri yükseltsin (Kâtip Çelebi’den Seç.). 2",
+              "misaller": [],
+              "deyim": "Allah’a inanmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Makbuzun altında imzâ merhum Hürmüz Binnaz Hanım’ın imzâsı, buna ben de îman ettim (Hüseyin R. Gürpınar). Dünyâda uzun sürmeyen her şey tatlıdır Kenan!… Ben buna kanâat değil âdeta îman ettim (Kerîme Nâdir). Son zamanlarda bunun geçerli bir hakîkat olduğuna îman ettim (Burhan Felek)",
+              "misaller": [],
+              "deyim": "Kuvvetle inanmak"
+            },
+            {
+              "etiket": "",
+              "tanim": "halk ağzı",
+              "misaller": [],
+              "deyim": "Îman tahtası"
+            },
+            {
+              "etiket": "",
+              "tanim": "Oklarını aydın kardeşlerinin îman tahtasına saplıyor insafsızca (Cemil Meriç)",
+              "misaller": [],
+              "deyim": "Göğüs kafesi"
+            },
+            {
+              "etiket": "",
+              "tanim": "1. İslâmiyet’i kabul etmek. 2. teşmil",
+              "misaller": [],
+              "deyim": "Îmâna gelmek"
+            },
+            {
+              "etiket": "",
+              "tanim": "Ha şöyle, îmâna gel (Sait Fâik)",
+              "misaller": [],
+              "deyim": "Bir şeyi sonradan kabul edip uymak"
+            },
+            {
+              "etiket": "",
+              "tanim": "Tam ve sağlam îmanlı",
+              "misaller": [],
+              "deyim": "Îmânı bütün"
+            },
+            {
+              "etiket": "",
+              "tanim": "Çok yorulmak, çok sıkıntı çekmek",
+              "misaller": [
+                ["Zâhidin îmânı gevrer görse nâr-ı ruhların / Yele varır ser-be-ser zühd ü salâh u nâm u neng", "Zâtî"],
+                ["Ben bu devreyi geçirinceye kadar îmânım gevremiştir", "Sait Fâik"]
+              ],
+              "deyim": "Îmânı gevremek"
+            },
+            {
+              "etiket": "argo.",
+              "tanim": "“ Kardeşim, arkadaşım, azîzim” anlamında kullanılır [Bu anlamda i ve a kısa okunur]",
+              "misaller": [],
+              "deyim": "İmanım"
+            },
+            {
+              "etiket": "",
+              "tanim": "–Eyvallah imanım dedi, tedâvî bi’z-zehr… ihtiyarlık maskaralık… (Fahri Celâl). Yok be imanım. Karada kazâya uğradım (Refî C. Ulunay). Bir ben varım imanım, bir ben varım, bir tek ben (Enis B. Koryürek)",
+              "misaller": [],
+              "deyim": "Efendi"
+            },
+            {
+              "etiket": "argo.",
+              "tanim": "Tıka basa, ağzına kadar, alabildiği kadar. ● Îmânen ( ﺍﻳﻤﺎﻧﺎً ) zf. ( іmān ’ın tenvinli şekli) Îman bakımından, inanç yönünden",
+              "misaller": [
+                ["Amelen ve îmânen.", ""]
+              ],
+              "deyim": "İmanına kadar"
+            }
+          ]
+        },
+        {
+          "eser": "Kamus",
+          "madde": "iman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adamı söylediği sözde tasdîk eylemek manâsınadır ki inanmak tabîr olunur, gûyâ ki hilâftan muhâtabı emîn eder ve tasdîk-i şerîde kendi nefsini ikâbdan emîn eder; yukâlu: آمَنَ بِهِ إِيمَانًا إِذَا صَدَّقَهُ Ve vüsûk ve itimâd eylemek manâsınadır; yukâlu: آمَنَهُ إِذَا وَثِقَهُ Ve huzû ve meskenet izhâr eylemek manâsınadır; yukâlu: آمَنَ لَهُ إِذَا أَظْهَرَ لَهُ الْخُضُوعَ Ve şerîati kabûl eylemek manâsına müstameldir; yukâlu: آمَنَ فُلَانٌ إِذَا قَبِلَ الشَّرِيعَةَ Ve bir adamı emn ve emân üzere kılmak manâsınadır; yukâlu: آمَنَهُ بِمَعْنَى أَمَّنَهُ",
+              "misaller": [
+                ["آمَنَ بِهِ إِيمَانًا إِذَا صَدَّقَهُ", ""],
+                ["آمَنَهُ إِذَا وَثِقَهُ", ""],
+                ["آمَنَ لَهُ إِذَا أَظْهَرَ لَهُ الْخُضُوعَ", ""],
+                ["آمَنَ فُلَانٌ إِذَا قَبِلَ الشَّرِيعَةَ", ""],
+                ["آمَنَهُ بِمَعْنَى أَمَّنَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِيمَانُ",
+          "okunus": "el-îmân",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "iman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "(hemzenin kesri ve meddiyleYemene gelmek.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِيمَانُ",
+          "okunus": "el-îmân",
+          "koken": ""
+        },
+        {
+          "eser": "Luggat",
+          "madde": "îmân",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İnanma. İman etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "مُؤْمِن": [
+        {
+          "eser": "Luggat",
+          "madde": "mü'min",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İman eden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "mümin",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İnanan, iman eden",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "اِئْتِمَان": [
+        {
+          "eser": "Vankulu",
+          "madde": "itiman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik bir kimseye bir nesneyi inanmak; tekûlu: إِئْتَمَنْتُهُ عَلَى كَذَا وَتَقُولُ أُؤْتُمِنَ فُلَانٌ عَلَى مَا لَمْ يُسَمَّ فَاعِلُهُ Eger kelime-i mezbûre ile ibtidâ kılsan hemze-i sâniyeyi vâv kılarsın, zîrâ bir kelimenin ki evvelinde iki hemze cem ola ve sânî sâkin ola hemze-i sâniyeyi vâva kalb edersin eger mâ-kabli mazmûm olursa; ve yâya kalb edersin eger mâ-kabli meksûr olursa, nahvu: إِئْتَمَنَهُ ve elife kalb edersin mâ-kabli meftûh olursa, nahvu: آمَنَ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِئْتِمَانُ",
+          "okunus": "el-itimân",
+          "koken": "hemzenin ve tânın kesriyle"
+        }
+      ],
+      "مَأْمُون": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ME’MUN",
+          "yazilis": "ﻣﺄﻣﻮﻥ",
+          "tur": "sıf.",
+          "koken": "Ar. emn “emin, korkusuz olmak”tan me’mūn",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Tehlikesi olmayan, korkusuz, emniyetli, emin, sağlam",
+              "misaller": [
+                ["Sâbit-kadem ol merkez-i me’mûn-ı rızâda / Vâreste olup dâire-i havf ü recâdan", "Ziyâ Paşa’dan"],
+                ["Verip küreklere hâlâ olanca kuvvetimi / Yetişmek istiyorum bir kenâr-ı me’mûna", "Tevfik Fikret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Sonu emin, geleceği sağlam",
+              "misaller": [],
+              "deyim": "Me’mûnü’l-âkıbe"
+            }
+          ]
+        }
+      ],
+      "مَأْمَن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ME’MEN",
+          "yazilis": "ﻣﺄﻣﻦ",
+          "tur": "i.",
+          "koken": "Ar. emn “emin, korkusuz olmak”tan me’men",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Sığınılacak, güven duyulacak, emin ve emniyetli yer, melce",
+              "misaller": [
+                ["Ey cihânı himmetiyle cennetü’l-me’vâ eden / V’ey zamânı fikretiyle me’men ü melce’ eden", "Necâtî Bey"],
+                ["Kapanıp secde-i şükrâna Reşâd eyle duâ / Mülk-i İslâm’ı Hudâ eyleye dâim me’men", "Sultan Reşad’dan"],
+                ["Bakınırdım hazerle dört yanıma / Aranırım yakında bir me’men", "Tevfik Fikret"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَمِن": [
+        {
+          "eser": "Kamus",
+          "madde": "emin",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْأَمِينُ [el-emîn] (أَمِيرٌ [emîr] vezninde) Kalbinde havf ve endîşe olmayıp âsûde-dil olan adama denir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَمِينٌ [emîn] Gadr ve hıyânet nakîsasından memûn olan mevsûk ve mutemed adama denir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "kavî ve zûr-mend adama denir, kuvvetine itimâd olunduğu için; yukâlu: رَجُلٌ أَمِينٌ أَيْ قَوِيٌّ Ve مُؤْتَمِنٌ [mutemin] manâsınadır ki ism-i fâildir, bir nesneyi bir kimseye inanıp itimâd eden adama denir ki onun hakkında sâf-dil olur; yukâlu: رَجُلٌ أَمِينٌ أَيْ مُؤْتَمِنٌ Ve مُؤْتَمَنٌ [mutemen] manâsınadır ki ism-i mefûldür, mutemedün aleyh adama denir, bu sûrette zıdd olur; yukâlu: رَجُلٌ أَمِينٌ أَيْ مُؤْتَمَنٌ Ve أَمِينٌ [Emîn] Esmâ-i sıfât-ı ilâhiyyeden bir ism-i şerîftir. Şârih der ki ism-i ilâhî مُؤْمِنٌ [Mumin]dir, ibâdını zulmden ve evliyâ ve mutîlerini azâbdan emîn edici manâsınadır, meger ki burada أَمِينٌ [emîn] آمِنٌ [âmin] manâsına ola ki ism-i fâildir.",
+              "misaller": [
+                ["رَجُلٌ أَمِينٌ أَيْ قَوِيٌّ", ""],
+                ["رَجُلٌ أَمِينٌ أَيْ مُؤْتَمِنٌ", ""],
+                ["رَجُلٌ أَمِينٌ أَيْ مُؤْتَمَنٌ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْآمِنُ",
+          "okunus": "el-âmin",
+          "koken": "صَاحِبٌ [sâhib] vezninde"
+        }
+      ],
+      "أَمَانَات": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EMÂNAT",
+          "yazilis": "ﺍﻣﺎﻧﺎﺕ",
+          "tur": "i.",
+          "koken": "Ar. emāne t ’in çoğul eki -āt almış şekli emānāt",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Emânetler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": [
+            {
+              "etiket": "",
+              "tanim": "Hz. Peygamber’e, İslâm dini ve târihinin büyüklerinden bâzılarına âit olup beş asırdır Topkapı Sarayı’nda muhâfaza edilmekte olan mukaddes eşyâ",
+              "misaller": [
+                [
+                  "Yavuz Sultan Selim hilâfetin alâmâtı olan Hırka-i Şerif, Sened-i Şerif ve diğer emânât-ı mübârekeyi Mısır’dan İstanbul’a hatimler indirterek getirmiş; İstanbul’a vardığı gece sarayda yüksek bir mevkiye yerleştirmiş, mîmarbaşı ve ustalar asıl tevdî olunacak makāmı harıl harıl inşâ ederlerken sefer yorgunluğuna bakmaksızın sabâha kadar ayakta beklemiş",
+                  "Yahyâ Kemal"
+                ]
+              ],
+              "deyim": "Emânât-ı mukaddese (mübâreke, şerîfe)"
+            }
+          ]
+        },
+        {
+          "eser": "Luggat",
+          "madde": "emânât-ı mübâreke",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Kutsal emanetler",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أُمَّان": [
+        {
+          "eser": "Kamus",
+          "madde": "umman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Vasftır ki zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "ümmî manâsınadır ki yazı yazmayan ve yazı bilmeyen adama denir. Şârih der ki bu “أ،م،م” mâddesindendir, niteki mahallinde zikr olundu.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "أُمَّانٌ [ummân] Ekincilere denir, زُرَّاعٌ [zurrâ] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأُمَّانُ",
+          "okunus": "el-ummân",
+          "koken": "رُمَّانٌ [rummân] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "umman",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَمِينٌ [emîn] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأُمَّانُ",
+          "okunus": "el-ummân",
+          "koken": "hemzenin zammı ve mîmin teşdîdiyle"
+        }
+      ],
+      "أَيْمَن": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "EYMEN",
+          "yazilis": "ﺍﻳﻤﻦ",
+          "tur": "sıf.",
+          "koken": "Ar. yumn “uğurlu olmak, uğur”dan eymen",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çok (daha, en, pek) uğurlu, çok kutlu, pek mübârek. “ Vâdî-i Eymen",
+              "misaller": [
+                ["Mübârek vâdî", ""],
+                [
+                  "Mûsâ peygamberin Tur dağında Cenâb-ı Hakk’ın tecellîsine mazhar olduğu yer: Eymen-i evkatte taht-ı saltanata cülûs buyurdular",
+                  "Naîmâ’dan"
+                ],
+                ["Hitâb-ı yâr ile reşk-i kelîm-i eymen oldun sen", "Muallim Nâci"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eymen",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Sağ cânib.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَيْمَنُ",
+          "okunus": "el-eymen",
+          "koken": "hemzenin ve mîmin fethi ile"
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eymenul-yemîn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَيْمَنُ الْيَمِينِ [eymenul-yemîn] (أَضْمَنُ الضَّمِينِ [admenud-damîn] vezninde) Ziyâdesiyle yümn ve bereketli ve kuvvetli manâsınadır; fazl ve mübâlagayı mutazammındır; ve minhu yukâlu: قَدِمَ عَلَى أَيْمَنِ الْيَمِينِ أَيِ الْيُمْنِ",
+              "misaller": [
+                ["قَدِمَ عَلَى أَيْمَنِ الْيَمِينِ أَيِ الْيُمْنِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eymenullahi",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَيْمُنُ اللهِ [eymunullâhi] (hemzenin fethi ve mîmin ve nûnun zammıyla) ve أَيْمُ اللهِ [eymullâhi] (nûnun hazfiyle ve bunlarda hemzelerin kesriyle zebân-zededir) ve أَيْمَنُ اللهِ [eymenullâhi] (hemzenin ve mîmin fethiyle ve bazen hemzenin kesriyle) ve إِيمِ اللهِ [îmillâhi] (hemzenin ve mîmin kesriyle ve bazılar bunların hemzeleri hemze-i vasl olduğuna zâhib oldular) ve هَيْمُ اللهِ [heymullâhi] (hânın fethi ve mîmin zammıyla) ve أَمُ اللهِ [emullâhi] (hemzenin fethi ve mîmin harekât-ı selâsıyla) ve إِمُ اللهِ [imullâhi] (hemzenin kesri ve mîmin zammı ve fethiyle) ve مُنِ اللهِ [munillâhi] (mîmin zammı ve nûnun kesriyle) ve مُنُ اللهِ [munullâhi] (mîmin ve nûnun harekât-ı selâslarıyla) ve مُ اللهِ [mullâhi] (mîmin harekât-ı selâsıyla) ve لَيْمُنُ اللهِ [leymullâhi] (lâmın fethiyle ki ibtidâiyyedir) ve لَيْمُنُ اللهِ [leymunullâhi] (kezâlik lâm-ı meftûha ile) Bunların mecmûu kasem mevziine ismlerdir; أَيْمُنُ اللهِ قَسَمِي takdîrindedir, sâirleri ondan muhtasar ve muhaffeftir. Şârihin beyânına göre أَيْمُنٌ [eymun] kelimesinin hemzesi indel-Basriyyîn vasldır, bereket manâsına olan يُمْنٌ [yumn]den mehûzdur ve indel-Kûfiyyîn hemze-i katdır, zîrâ يَمِينٌ [yemîn]in cemidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eymenul-yemîn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَيْمَنُ الْيَمِينِ [eymenul-yemîn] (kelime-i ûlâda hemzenin ve mîmin fethi badehu mîmin kesri ve meddiyle) Mübârek manâsınadır; yukâlu: قَدِمَ فُلَانٌ عَلَى أَيْمَنِ الْيَمِينِ أَيْ عَلَى الْيُمْنِ Ve يَمِينٌ [yemîn] And içmeğe dahi derler, قَسَمٌ [kasem] manâsına.",
+              "misaller": [
+                ["قَدِمَ فُلَانٌ عَلَى أَيْمَنِ الْيَمِينِ أَيْ عَلَى الْيُمْنِ", ""]
+              ]
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 879,
   "kuranda_var": true,

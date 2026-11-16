@@ -3,7 +3,7 @@ madde ancak Arapça yazılışı müştakla aynıysa kabul edilir. Sonuç önbel
 import json, os, re, sys
 from concurrent.futures import ThreadPoolExecutor
 import osmanlica_lugat as O
-ONB = os.path.join(O.KOK, 'kaynak', 'lugat', 'mustak_osmanlica.jsonl')
+ONB = os.environ.get('MUSTAK_ONB') or os.path.join(O.KOK, 'kaynak', 'lugat', 'mustak_osmanlica.jsonl')
 UNSUZ = {'ب': 'b', 'ت': 't', 'ث': 's', 'ج': 'c', 'ح': 'h', 'خ': 'h', 'د': 'd', 'ذ': 'z', 'ر': 'r', 'ز': 'z', 'س': 's', 'ش': 'ş', 'ص': 's',
          'ض': 'z', 'ط': 't', 'ظ': 'z', 'غ': 'g', 'ف': 'f', 'ق': 'k', 'ك': 'k', 'ل': 'l', 'م': 'm', 'ن': 'n', 'ه': 'h'}
 def okunus(w, kip):

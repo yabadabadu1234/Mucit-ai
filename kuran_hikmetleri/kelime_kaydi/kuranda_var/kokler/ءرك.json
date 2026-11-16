@@ -21,7 +21,7 @@
       [10, "أَرَاكَة", "ʾarāka", "bir ağaç türü", "kontrol", ""],
       [11, "أُرُوكَة", "ʾurūka", "bir ağaç türü", "kontrol", ""],
       [12, "إِرَاكَة", "ʾirāka", "bir ağaç türü", "kontrol", ""],
-      [13, "أَرِيك", "ʾarīk", "bir ağaç türü", "kontrol", ""],
+      [13, "أَرِيك", "ʾarīk", "Bir dere adıdır", "lugat", "Kamus"],
       [14, "أَرُوك", "ʾarūk", "bir ağaç türü", "kontrol", ""],
       [15, "أَرَكَان", "ʾarakān", "bir ağaç türü", "kontrol", ""],
       [16, "أُرْكَان", "ʾurkān", "bir ağaç türü", "kontrol", ""],
@@ -393,8 +393,8 @@
       [258, "إِرْكَتَان", "ʾirkatān", "bir ağaç türü olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "أَرِيك", "ʾarīk", "her daim bir ağaç türü olan", "kontrol", ""],
-      [260, "أَرِيكَة", "ʾarīka", "her daim bir ağaç türü olan, müennes", "kontrol", ""],
+      [259, "أَرِيك", "ʾarīk", "Bir dere adıdır", "lugat", "Kamus"],
+      [260, "أَرِيكَة", "ʾarīka", "Taht", "lugat", "Luggat"],
       [261, "أَرِيكَان", "ʾarīkān", "her daim bir ağaç türü olan, iki", "kontrol", ""],
       [262, "أَرِيكَتَان", "ʾarīkatān", "her daim bir ağaç türü olan, iki, müennes", "kontrol", ""],
       [263, "أَرِيكُون", "ʾarīkūn", "her daim bir ağaç türü olanlar", "kontrol", ""],
@@ -517,8 +517,8 @@
       [378, "مِئْرِيكُون", "miʾrīkūn", "bir ağaç türü olmaya düşkünler", "kontrol", ""],
       [379, "مِئْرِيكِين", "miʾrīkīn", "bir ağaç türü olmaya düşkünler", "kontrol", ""],
       [380, "مِئْرِيكَات", "miʾrīkāt", "bir ağaç türü olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "أَرِيك", "ʾarīk", "çok bir ağaç türü olan", "kontrol", ""],
-      [382, "أَرِيكَة", "ʾarīka", "çok bir ağaç türü olan, müennes", "kontrol", ""],
+      [381, "أَرِيك", "ʾarīk", "Bir dere adıdır", "lugat", "Kamus"],
+      [382, "أَرِيكَة", "ʾarīka", "Taht", "lugat", "Luggat"],
       [383, "أَرِيكَان", "ʾarīkān", "çok bir ağaç türü olan, iki", "kontrol", ""],
       [384, "أَرِيكَتَان", "ʾarīkatān", "çok bir ağaç türü olan, iki, müennes", "kontrol", ""],
       [385, "أَرِيكُون", "ʾarīkūn", "çok bir ağaç türü olanlar", "kontrol", ""],
@@ -584,7 +584,7 @@
       [441, "أَرَك", "ʾarak", "bir ağaç türü olma türünden şey", "kontrol", ""],
       [443, "إِرْك", "ʾirk", "bir ağaç türü olma türünden şey", "kontrol", ""],
       [445, "أُرْك", "ʾurk", "bir ağaç türü olma türünden şey", "kontrol", ""],
-      [447, "أَرِيك", "ʾarīk", "bir ağaç türü olma türünden şey", "kontrol", ""],
+      [447, "أَرِيك", "ʾarīk", "Bir dere adıdır", "lugat", "Kamus"],
       [449, "إِرَك", "ʾirak", "bir ağaç türü olma türünden şey", "kontrol", ""],
       [451, "أُرُك", "ʾuruk", "bir ağaç türü olma türünden şey", "kontrol", ""],
       [453, "أَرَاك", "ʾarāk", "bir ağaç türü olma türünden şey", "kontrol", ""]
@@ -597,7 +597,7 @@
       [442, "أَرَكَة", "ʾaraka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
       [444, "إِرْكَة", "ʾirka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
       [446, "أُرْكَة", "ʾurka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
-      [448, "أَرِيكَة", "ʾarīka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
+      [448, "أَرِيكَة", "ʾarīka", "Taht", "lugat", "Luggat"],
       [450, "إِرَكَة", "ʾiraka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
       [452, "أُرُكَة", "ʾuruka", "bir ağaç türü olma türünden bir tane", "kontrol", ""],
       [454, "أَرَاكَة", "ʾarāka", "bir ağaç türü olma türünden bir tane", "kontrol", ""]
@@ -851,7 +851,143 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَرِيك": [
+        {
+          "eser": "Kamus",
+          "madde": "Erik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir dere adıdır.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "أَرِيكٌ",
+          "okunus": "Erîk",
+          "koken": "أَمِيرٌ [emîr] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "erik",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir derenin ismidir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَرِيكُ",
+          "okunus": "el-Erîk",
+          "koken": "hemzenin fethi ve rânın kesri ve meddiyle"
+        }
+      ],
+      "أَرِيكَة": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "ERÎKE",
+          "yazilis": "ﺍﺭﻳﻜﻪ",
+          "tur": "i.",
+          "koken": "Ar. erіke",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Taht",
+              "misaller": [
+                ["Titriyordu erîke-i şânı / Vatanın pîş-i ihtilâcında", "Süleyman Nazif"],
+                ["Yekser gazâ kılıncı kuşanmış bir ümmetin / Câlis budur erîke-i âlem-penâhına", "Yahyâ Kemal"],
+                ["● Erîke-ârâ", "-pîrâ"],
+                ["birl. i", "Fars. ārā ve pіra “süsleyen” ile"],
+                ["Hükümdar, pâdişah. ● Erîke-nişin", "ﺍﺭﻳﻜﻪ ﻧﺸﻴﻦ"],
+                ["birl. i", "Fars. nişіn “oturan” ile"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "erîke",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Taht",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "eriket",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Zifâf-hânede kurulan serîre denir. Yâhûd mutlakan ittikâ olunacak nesneye denir, serîr ve minassa ve firâş gibi. Yâhûd gelin için nasb olunan kubbe yâhûd çadır içre tertîb eyledikleri âlî ve müzeyyen tahta denir ve eger onda serîr olmaz ise ona حَجَلَةٌ [hacelet] denir; cemi أَرِيكٌ [erîk] gelir hâsız ve أَرَائِكُ [erâik gelir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu ikâmet manâsından mehûzdur; ve minhu yukâlu: هُمْ مُتَّكِؤُونَ عَلَى الْأَرَائِكِ مَعَ بِيْضٍ كَالتَّرَائِكِ فَالْأَرِيكَةُ سَرِيرٌ فِي حَجَلَةٍ أَوْ كُلُّ مَا يُتَّكَأُ عَلَيْهِ مِنْ سَرِيرٍ وَمِنَصَّةٍ وَفِرَاشٍ أَوْ سَرِيرٌ مُنَجَّدٌ مُزَيَّنٌ فِي قُبَّةٍ أَوْ بَيْتٍ فَإِذَا لَمْ يَكُنْ فِيهِ سَرِيرٌ فَهُوَ حَجَلَةٌ قَالَ الرَّاغِبُ اَلْأَرِيكَةُ حَجَلَةٌ عَلَى سَرِيرٍ Ve أَرِيكَةٌ [erîket] Yaranın dürüst olan etine ıtlâk olunur ki çirk ve hicrânı zâil olduktan sonra tâze kaynayıp zâhir olup hemân üzerinde deri bitmekten gayrı nesne kalmamış ola; yukâlu: ظَهَرَتْ أَرِيكَةُ الْجُرْحِ أَيْ ذَهَبَتْ غَثِيثُهُ وَظَهَرَ لَحْمُهُ الصَّحِيحُ الْأَحْمَرُ",
+              "misaller": [
+                [
+                  "هُمْ مُتَّكِؤُونَ عَلَى الْأَرَائِكِ مَعَ بِيْضٍ كَالتَّرَائِكِ فَالْأَرِيكَةُ سَرِيرٌ فِي حَجَلَةٍ أَوْ كُلُّ مَا يُتَّكَأُ عَلَيْهِ مِنْ سَرِيرٍ وَمِنَصَّةٍ وَفِرَاشٍ أَوْ سَرِيرٌ مُنَجَّدٌ مُزَيَّنٌ فِي قُبَّةٍ أَوْ بَيْتٍ فَإِذَا لَمْ يَكُنْ فِيهِ سَرِيرٌ فَهُوَ حَجَلَةٌ قَالَ الرَّاغِبُ اَلْأَرِيكَةُ حَجَلَةٌ عَلَى سَرِيرٍ",
+                  ""
+                ],
+                ["ظَهَرَتْ أَرِيكَةُ الْجُرْحِ أَيْ ذَهَبَتْ غَثِيثُهُ وَظَهَرَ لَحْمُهُ الصَّحِيحُ الْأَحْمَرُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَرِيكَةُ",
+          "okunus": "el-erîket",
+          "koken": "سَفِينَةٌ [sefînet] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-eriket",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Yaranın sahîh olan eti ki cirâhati zâil olduktan sonra zâhir olup üzerine deri bitmeden gayrı nesne kalmamış ola.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَرِيكَةٌ [erîket] Şol tahta dahi derler ki geline mahsûs olan ev içinde yâhûd gelin için kubbe şeklinde darb olunan çadır içinde ola.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "eger onda taht olmaz ise ona حَجَلَةٌ [hacelet] derler, أَرِيكَةٌ [erîket] demezler.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "bu kelâmdan حَجَلَةٌ [hacelet]te سَرِيرٌ [serîr]in ademi şart olmak lâzım gelmez, hattâ ki Cevherînin حَجَلَةٌ [hacelet] tefsîrinde بَيْتٌ يُزَيَّنُ بِالثِّيَابِ وَالْأَسِرَّةِ dediği kelâmıyla bu makâmda أَرِيكَةٌ [erîket] tefsîrinde zikr ettiği kelâmın beyninde tenâkuz lâzım ola, belki حَجَلَةٌ [hacelet]in eamm olması lâzım olur: فَتَدَبَّرْ أَلَّا يُرَى أَنَّهُ إِذَا قِيلَ كُلُّ ذِي رُوحٍ فِيهِ نُطْقٌ فَهُوَ إِنْسَانٌ وَإِذَا لَمْ يَكُنْ فِيهِ نُطْقٌ فَهُوَ حَيَوَانٌ لَا يَلْزَمُ اعْتِبَارَ عَدَمِ النُّطْقِ فِي مَفْهُومِ الْحَيَوَانِ مُطْلَقًا قِيلَ فِي حَوَاشِي الْكَشَّافِ مِنْ أَنَّ الْأَرِيكَةَ لَا يُقَالُ إِلَّا لِلسَّرِيرِ الَّذِي يَكُونُ فِي الْكُلَّةِ أَوْ شَيْءٌ يَكُونُ كَالْكُلَّةِ وَالْكُلَّةُ اَلشَّيْءُ الرَّقِيقُ يُخَاطُ كَالْبَيْتِ",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَرِيكَةُ",
+          "okunus": "el-erîket",
+          "koken": "hemzenin fethi ve rânın kesri ve meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 5,
   "kuranda_var": true,

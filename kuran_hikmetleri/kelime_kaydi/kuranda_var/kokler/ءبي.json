@@ -15,7 +15,14 @@
       [518, "إِبَى", "ʾibā", "reddetme", "orta", ""],
       [519, "أُبِيّ", "ʾubiyy", "reddetme", "orta", ""],
       [520, "أُبِيّ", "ʾubiyy", "reddetme", "orta", ""],
-      [521, "إِبَاء", "ʾibāʾ", "reddetme", "orta", "Vikisözlük: masdar (bâb I): to reject, to refuse"],
+      [
+        521,
+        "إِبَاء",
+        "ʾibāʾ",
+        "Çekinme, uzak durma, kaçınma",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to reject, to refuse · Luggat"
+      ],
       [522, "أُبَاء", "ʾubāʾ", "reddetme", "orta", ""],
       [523, "أَبَاء", "ʾabāʾ", "reddetme", "orta", ""],
       [524, "أَبَاة", "ʾabā", "reddetme", "orta", ""],
@@ -71,9 +78,9 @@
         552,
         "إِبَاء",
         "ʾibāʾ",
-        "biriyle karşılıklı reddetme",
-        "orta",
-        "Vikisözlük: masdar (bâb I): to reject, to refuse"
+        "Çekinme, uzak durma, kaçınma",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to reject, to refuse · Luggat"
       ]
     ],
     "ism-i merre · bâb III": [
@@ -81,9 +88,9 @@
         553,
         "إِبَاءَة",
         "ʾibāʾa",
-        "bir kere biriyle karşılıklı reddetme",
-        "orta",
-        "Vikisözlük: verbal noun of أَبَى (ʔabā) (form I)"
+        "Bir nesneyi şey-i âhere ircâ eylemek",
+        "lugat",
+        "Vikisözlük: verbal noun of أَبَى (ʔabā) (form I) · Kamus"
       ]
     ],
     "ism-i fâil · bâb III": [
@@ -538,7 +545,14 @@
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [833, "أَبَاء", "ʾabāʾ", "reddetme", "orta", ""],
       [834, "أُبِيّ", "ʾubiyy", "reddetme", "orta", ""],
-      [835, "إِبَاء", "ʾibāʾ", "reddetme", "orta", "Vikisözlük: masdar (bâb I): to reject, to refuse"],
+      [
+        835,
+        "إِبَاء",
+        "ʾibāʾ",
+        "Çekinme, uzak durma, kaçınma",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to reject, to refuse · Luggat"
+      ],
       [424, "أُبْي", "ʾuby", "reddetme", "orta", ""],
       [836, "أَبَاة", "ʾabā", "reddetme", "orta", ""],
       [837, "إِبَايَة", "ʾibāya", "reddetme", "orta", ""],
@@ -580,7 +594,14 @@
       [851, "أَآبِيّ", "ʾaʾābiyy", "reddetmeler", "orta", ""],
       [852, "أُبِيّ", "ʾubiyy", "reddetmeler", "orta", ""],
       [853, "أُبِيّ", "ʾubiyy", "reddetmeler", "orta", ""],
-      [854, "إِبَاء", "ʾibāʾ", "reddetmeler", "orta", "Vikisözlük: masdar (bâb I): to reject, to refuse"],
+      [
+        854,
+        "إِبَاء",
+        "ʾibāʾ",
+        "Çekinme, uzak durma, kaçınma",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to reject, to refuse · Luggat"
+      ],
       [855, "إِبَى", "ʾibā", "reddetmeler", "orta", ""],
       [856, "إِبَيَة", "ʾibaya", "reddetmeler", "orta", ""],
       [857, "أُبَى", "ʾubā", "reddetmeler", "orta", ""],
@@ -978,7 +999,105 @@
         "r": ["ʔūbī", "ʔāba"],
         "yol": "müştak"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "إِبَاء": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "İBÂ",
+          "yazilis": "ﺍﺑﺎﺀ",
+          "tur": "i.",
+          "koken": "Ar. ibā’",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çekinme, kaçınma, râzı olmama, içtinap ve imtinâ etme",
+              "misaller": [
+                ["Her biri bir eve vebâ-yı azîm / Farz u vâcibdir ol vebâdan ibâ", "Âlî Mustafa Efendi"],
+                ["Öyle bir çirkin işi işlemekten ibâ ederek yanlarındaki esirleri salıverdiler", "Cevdet Paşa"],
+                ["Şarap sunduklarında ibâ eyledik", "Fahri Celâl"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ibâ'",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Çekinme, uzak durma, kaçınma. İbâ' etmek",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "إِبَاءَة": [
+        {
+          "eser": "Kamus",
+          "madde": "el-ibâet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir nesneyi şey-i âhere ircâ eylemek manâsınadır; tekûlu: أَبَأْتُهُ إِلَيْهِ أَيْ أَرْجَعْتُهُ Ve kâtili kısâsen katl eylemekle kanı maktûlün kanına berâber tutulmak manâsınadır; yukâlu: أَبَاءَ فُلاَنًا بِفُلاَنٍ إِذَا قُتِلَ بِهِ فَقَاوَمَهُ Ve konağa kondurmak manâsınadır; yukâlu: أَبَاءَهُ فِي الْمَنْزِلِ أَيْ أَنْزَلَهُ فِيهِ ve tekûlul-Arab: فَلاَةٌ تُبِيءُ فِي فَلاَةٍ أَيْ تَذْهَبُ Bu kelâm beyâbânın fart-ı vüsatinden kinâyedir; yanî “O beyâbân bir derecede vüsatlidir ki gûyâ ekâbir-i beyâbân dahi zamîme olmakla sâlikini zamîme-i mezbûreye îsâl ve inzâl eder” demektir. تُبِيءُ [tubîu] kelimesi, إِبَاءَةٌ [ibâet]ten muzâridir, yoksa Mütercim-i Sihâhın vehmi gibi sülâsîden ve zehâb manâsına değildir ki hattâ vâviyye ve yâiyye olması cây-ı teemmül ola.",
+              "misaller": [
+                ["أَبَاءَ فُلاَنًا بِفُلاَنٍ إِذَا قُتِلَ بِهِ فَقَاوَمَهُ", ""],
+                ["أَبَاءَهُ فِي الْمَنْزِلِ أَيْ أَنْزَلَهُ فِيهِ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "إِبَاءَةٌ [ibâet] Konağa konup yerleşmek manâsınadır; yukâlu: أَبَاءَ بِالْمَكَانِ إِذَا حَلَّهُ وَأَقَامَ بِهِ Ve deveyi yatağına çevirmek manâsınadır; yukâlu: أَبَاءَ الإِبِلَ إِذَا رَدَّهَا إِلَى الْمَبْأَةِ Ve kaçmak manâsına istimâl olunur; yukâlu: أَبَاءَ مِنْهُ إِذَا فَرَّ Ve deriyi dibâgata yatırmak manâsınadır; yukâlu: أَبَاءَ الأَدِيمَ إِذَا جَعَلَهُ فِي الدِّبَاغِ",
+              "misaller": [
+                ["أَبَاءَ بِالْمَكَانِ إِذَا حَلَّهُ وَأَقَامَ بِهِ", ""],
+                ["أَبَاءَ الإِبِلَ إِذَا رَدَّهَا إِلَى الْمَبْأَةِ", ""],
+                ["أَبَاءَ مِنْهُ إِذَا فَرَّ", ""],
+                ["أَبَاءَ الأَدِيمَ إِذَا جَعَلَهُ فِي الدِّبَاغِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "الإِبَاءَةُ",
+          "okunus": "el-ibâet",
+          "koken": "hemzenin kesriyle"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "el-ibâet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Menzile göndermek; yukâlu: أَبَأْتُ الْإِبِلَ أَيْ رَدَدْتُهَا إِلَى مَنْزِلِهَا وَأَبَأْتُ عَلَى فُلَانٍ مَالَهُ إِذَا أَرَحْتَ إِبِلَهُ أَوْ غَنَمَهُ Ve إِرَاحَةٌ [irâhat] yatağa getirmektir.",
+              "misaller": [
+                [
+                  "أَبَأْتُ الْإِبِلَ أَيْ رَدَدْتُهَا إِلَى مَنْزِلِهَا وَأَبَأْتُ عَلَى فُلَانٍ مَالَهُ إِذَا أَرَحْتَ إِبِلَهُ أَوْ غَنَمَهُ",
+                  ""
+                ]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "kısâs etmek manâsına da gelir; yukâlu: أَبَأْتُ الْقَاتِلَ بِالْقَتِيلِ إِذَا قَتَلْتَهُ بِهِ",
+              "misaller": [
+                ["أَبَأْتُ الْقَاتِلَ بِالْقَتِيلِ إِذَا قَتَلْتَهُ بِهِ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبَاءَةُ",
+          "okunus": "el-ibâet",
+          "koken": "hemzenin kesri ve elifin meddiyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 13,
   "kuranda_var": true,

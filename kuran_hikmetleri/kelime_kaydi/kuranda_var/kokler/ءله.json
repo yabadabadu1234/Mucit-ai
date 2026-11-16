@@ -20,7 +20,7 @@
       [9, "أَلَاه", "ʾalāh", "tapma", "orta", ""],
       [10, "أَلَاهَة", "ʾalāha", "tapma", "orta", ""],
       [11, "أُلُوهَة", "ʾulūha", "tapma", "orta", ""],
-      [12, "إِلَاهَة", "ʾilāha", "tapma", "orta", ""],
+      [12, "إِلَاهَة", "ʾilāha", "Cezîrede bir mevziin ismidir", "lugat", "Vankulu"],
       [13, "أَلِيه", "ʾalīh", "tapma", "orta", ""],
       [14, "أَلُوه", "ʾalūh", "tapma", "orta", ""],
       [15, "أَلَهَان", "ʾalahān", "tapma", "orta", ""],
@@ -39,7 +39,14 @@
       [28, "مَأْلِهَة", "maʾliha", "tapma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَأْلِيه", "taʾlīh", "çokça tapma", "orta", "Vikisözlük: masdar (bâb II): to deify"],
+      [
+        29,
+        "تَأْلِيه",
+        "taʾlīh",
+        "İlâhlaştırma, tanrılaştırma",
+        "lugat",
+        "Vikisözlük: masdar (bâb II): to deify · Kubbealtı"
+      ],
       [30, "تَأْلِهَة", "taʾliha", "çokça tapma", "orta", ""],
       [31, "إِلِّاه", "ʾillāh", "çokça tapma", "orta", ""]
     ],
@@ -73,7 +80,7 @@
       [50, "إِلَاه", "ʾilāh", "biriyle karşılıklı tapma", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "إِلَاهَة", "ʾilāha", "bir kere biriyle karşılıklı tapma", "orta", ""]
+      [51, "إِلَاهَة", "ʾilāha", "Cezîrede bir mevziin ismidir", "lugat", "Vankulu"]
     ],
     "ism-i fâil · bâb III": [
       [52, "مُؤَالِه", "muʾālih", "biriyle karşılıklı tapan", "orta", ""],
@@ -554,7 +561,7 @@
       [423, "إِلَاه", "ʾilāh", "tapma", "orta", ""],
       [424, "أُلْه", "ʾulh", "tapma", "orta", ""],
       [425, "أَلَاهَة", "ʾalāha", "tapma", "orta", ""],
-      [426, "إِلَاهَة", "ʾilāha", "tapma", "orta", ""],
+      [426, "إِلَاهَة", "ʾilāha", "Cezîrede bir mevziin ismidir", "lugat", "Vankulu"],
       [427, "أُلُوهَة", "ʾulūha", "tapma", "orta", ""],
       [428, "أَلْه", "ʾalh", "tapma", "orta", ""],
       [429, "إِلْه", "ʾilh", "tapma", "orta", ""]
@@ -1806,7 +1813,119 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "إِلَاهَة": [
+        {
+          "eser": "Vankulu",
+          "madde": "ilahet",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Cezîrede bir mevziin ismidir.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "إِلَاهَةُ [ilâhet] Kezâlik güneşin ismidir, lâ-yansarıftır, elif lâm dâhil olmaksızın ve gâh olur elif lâm dâhil kılıp munsarıf ederler.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "ism-i marifeye gâh elif lâm dâhil olup gâh olmamak bu ismden gayrı niçe yerde vâki olmuştur, nitekim لَقِيتُهُ النَّدَرَى وَفِي نَدَرَى derler, günler arasında demek manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "لَقِيتُهُ الْفَيْنَةَ بَعْدَ الْفَيْنَةِ وَفَيْنَةً derler حِينًا بَعْدَ حِينٍ manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "kezâlik اَلنَّسْرُ yanî اَلنَّسْرُ ve نَسْرٌ derler bir sanemin ismi olmak üzere. Bu zikr olunan Cevherî kelâmıdır lâkin bundan akdem نَدَرَى ve فَيْنَة kelimelerinin vazan marife olduklarına işâret etmemiştir, tâ ki bu makâmda îrâd olunmalarına münâsebet zâhir ola.",
+              "misaller": []
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "şemse إِلَاهَةُ [ilâhet] diye tesmiye kılmaları şemse tazîm edip ona ibâdet ettiklerine binâendir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "إِلَاهَةٌ",
+          "okunus": "İlâhet",
+          "koken": "hemzenin kesriyle"
+        }
+      ],
+      "تَأْلِيه": [
+        {
+          "eser": "Kubbealtı",
+          "madde": "TE’LİH",
+          "yazilis": "ﺗﺄﻟﻴﻪ",
+          "tur": "i.",
+          "koken": "Ar. ilāh ’tan te’lіh",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "İlâhlaştırma, tanrılaştırma",
+              "misaller": [
+                [
+                  "Nazar-ı taabbüdleri gâh ıtr-ı ezhâra karışarak semâya, gâh nûr-ı şems ile birlikte zemîne mün’atıf kaldı. Cenâzeleri te’lîhe kadar vardılar",
+                  "Cenap Şahâbeddin"
+                ],
+                [
+                  "Bir başka dînin vâzıı mertebesine çıkarılarak te’lih edilen aizze gibi mütaassıp müritler bırakmıştı",
+                  "Hâlit Z. Uşaklıgil"
+                ],
+                ["Te’lih edilen timsâline medit bir hâtıra temîni idi", "Fuat Köprülü"]
+              ],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        },
+        {
+          "eser": "Kamus",
+          "madde": "telih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Bir adama kulluk ettirmek manâsınadır; yukâlu: أَلَّهَ فُلَانًا إِذَا عَبَّدَهُ",
+              "misaller": [
+                ["أَلَّهَ فُلَانًا إِذَا عَبَّدَهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّأْلِيهُ",
+          "okunus": "et-telîh",
+          "koken": "تَفْعِيلٌ [tefîl] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "telih",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "İbâdet kıldırmaktır, تَعْبِيدٌ [tabîd] manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلتَّأْلِيهُ",
+          "okunus": "et-telîh",
+          "koken": "alâ-vezni اَلتَّكْرِيم [et-tekrîm]"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2851,
   "kuranda_var": true,

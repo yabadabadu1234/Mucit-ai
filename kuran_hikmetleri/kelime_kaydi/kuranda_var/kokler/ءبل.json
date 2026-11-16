@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "أَبْل", "ʾabl", "deve", "kontrol", ""],
-      [1, "إِبْل", "ʾibl", "deve", "kontrol", "Vikisözlük: camels"],
+      [1, "إِبْل", "ʾibl", "Deve", "lugat", "Vikisözlük: camels · Luggat"],
       [2, "أُبْل", "ʾubl", "deve", "kontrol", ""],
       [3, "أَبَل", "ʾabal", "deve", "kontrol", ""],
       [4, "إِبَل", "ʾibal", "deve", "kontrol", "Vikisözlük: camels"],
@@ -21,7 +21,7 @@
       [10, "أَبَالَة", "ʾabāla", "deve", "kontrol", ""],
       [11, "أُبُولَة", "ʾubūla", "deve", "kontrol", ""],
       [12, "إِبَالَة", "ʾibāla", "deve", "kontrol", ""],
-      [13, "أَبِيل", "ʾabīl", "deve", "kontrol", ""],
+      [13, "أَبِيل", "ʾabīl", "Râhiblerin reis-i rüesâsı", "lugat", "Vankulu"],
       [14, "أَبُول", "ʾabūl", "deve", "kontrol", ""],
       [15, "أَبَلَان", "ʾabalān", "deve", "kontrol", ""],
       [16, "أُبْلَان", "ʾublān", "deve", "kontrol", ""],
@@ -379,7 +379,7 @@
       [258, "إِبْلَتَان", "ʾiblatān", "deve olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "أَبِيل", "ʾabīl", "her daim deve olan", "kontrol", ""],
+      [259, "أَبِيل", "ʾabīl", "Râhiblerin reis-i rüesâsı", "lugat", "Vankulu"],
       [260, "أَبِيلَة", "ʾabīla", "her daim deve olan, müennes", "kontrol", ""],
       [261, "أَبِيلَان", "ʾabīlān", "her daim deve olan, iki", "kontrol", ""],
       [262, "أَبِيلَتَان", "ʾabīlatān", "her daim deve olan, iki, müennes", "kontrol", ""],
@@ -503,7 +503,7 @@
       [378, "مِئْبِيلُون", "miʾbīlūn", "deve olmaya düşkünler", "kontrol", ""],
       [379, "مِئْبِيلِين", "miʾbīlīn", "deve olmaya düşkünler", "kontrol", ""],
       [380, "مِئْبِيلَات", "miʾbīlāt", "deve olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "أَبِيل", "ʾabīl", "çok deve olan", "kontrol", ""],
+      [381, "أَبِيل", "ʾabīl", "Râhiblerin reis-i rüesâsı", "lugat", "Vankulu"],
       [382, "أَبِيلَة", "ʾabīla", "çok deve olan, müennes", "kontrol", ""],
       [383, "أَبِيلَان", "ʾabīlān", "çok deve olan, iki", "kontrol", ""],
       [384, "أَبِيلَتَان", "ʾabīlatān", "çok deve olan, iki, müennes", "kontrol", ""],
@@ -557,7 +557,7 @@
       [426, "إِبَالَة", "ʾibāla", "deve olma", "kontrol", ""],
       [427, "أُبُولَة", "ʾubūla", "deve olma", "kontrol", ""],
       [428, "أَبْل", "ʾabl", "deve olma", "kontrol", ""],
-      [429, "إِبْل", "ʾibl", "deve olma", "kontrol", "Vikisözlük: camels"]
+      [429, "إِبْل", "ʾibl", "Deve", "lugat", "Vikisözlük: camels · Luggat"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "آبُول", "ʾābūl", "deve olma türünden şey", "kontrol", ""],
@@ -568,9 +568,9 @@
       [437, "أَيْبَل", "ʾaybal", "deve olma türünden şey", "kontrol", ""],
       [439, "أَبْل", "ʾabl", "deve olma türünden şey", "kontrol", ""],
       [441, "أَبَل", "ʾabal", "deve olma türünden şey", "kontrol", ""],
-      [443, "إِبْل", "ʾibl", "deve olma türünden şey", "kontrol", "Vikisözlük: camels"],
+      [443, "إِبْل", "ʾibl", "Deve", "lugat", "Vikisözlük: camels · Luggat"],
       [445, "أُبْل", "ʾubl", "deve olma türünden şey", "kontrol", ""],
-      [447, "أَبِيل", "ʾabīl", "deve olma türünden şey", "kontrol", ""],
+      [447, "أَبِيل", "ʾabīl", "Râhiblerin reis-i rüesâsı", "lugat", "Vankulu"],
       [449, "إِبَل", "ʾibal", "deve olma türünden şey", "kontrol", "Vikisözlük: camels"],
       [451, "أُبُل", "ʾubul", "deve olma türünden şey", "kontrol", ""],
       [453, "أَبَال", "ʾabāl", "deve olma türünden şey", "kontrol", ""]
@@ -1273,7 +1273,55 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "إِبْل": [
+        {
+          "eser": "Vankulu",
+          "madde": "ibl",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Kezâlik deve sürüsü demek olur, kesreteynle olan إِبِلٌ [ibil]den muhaffef olur.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِبْلُ",
+          "okunus": "el-ibl",
+          "koken": "hemzenin kesri ve bânın sükûnuyla"
+        },
+        {
+          "eser": "Luggat",
+          "madde": "ibl",
+          "manalar": [
+            {
+              "etiket": "",
+              "tanim": "Deve",
+              "misaller": [],
+              "no": 1
+            }
+          ],
+          "deyimler": []
+        }
+      ],
+      "أَبِيل": [
+        {
+          "eser": "Vankulu",
+          "madde": "ebîlîn",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "أَبِيلُ الْأَبِيلِينَ [ebîlul-ebîlîn] (alâ-veznil-mezkûri fîhima) Râhiblerin reis-i rüesâsı. Nasârâ tâifesinin Hazret-i Îsâya أَبِيلُ الْأَبِيلِينَ [ebîlul-ebîlîn] dedikleri bu manâdan ötürüdür.",
+              "misaller": []
+            }
+          ],
+          "deyimler": []
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,

@@ -393,7 +393,7 @@
       [270, "أَشُورُون", "ʾaşūrūn", "her daim şımaranlar", "orta", ""],
       [271, "أَشُورِين", "ʾaşūrīn", "her daim şımaranlar", "orta", ""],
       [272, "أَشُورَات", "ʾaşūrāt", "her daim şımaranlar, müennes", "orta", ""],
-      [273, "أَشِر", "ʾaşir", "şımarmış", "kuran", "Kur'ân"],
+      [273, "أَشِر", "ʾaşir", "ve ve Vefret üzere şâdân olan kişiye denir", "lugat", "Kur'ân · Kamus"],
       [274, "أَشِرَة", "ʾaşira", "her daim şımaran, müennes", "orta", ""],
       [275, "أَشِرَان", "ʾaşirān", "her daim şımaran, iki", "orta", ""],
       [276, "أَشِرَتَان", "ʾaşiratān", "her daim şımaran, iki, müennes", "orta", ""],
@@ -1152,7 +1152,43 @@
         ],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَشِر": [
+        {
+          "eser": "Kamus",
+          "madde": "eşir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "ve اَلْأَشُرُ [el-eşur] (نَدُسٌ [nedus] vezninde) ve اَلْأَشْرُ [el-eşr] (شَكْسٌ [şeks] vezninde ve fethateynle de lügattir ki vasf bil-masdar olur) ve اَلْأَشْرَانُ [el-eşrân] (سَكْرَانُ [sekrân] vezninde) Vefret üzere şâdân olan kişiye denir. Cemleri أَشِرُونَ [eşirûne] gelir şînin kesriyle ve أَشُرُونَ [eşurûne] gelir şînin zammıyla ve أُشُرٌ [uşur] gelir zammeteynle ve أَشْرَى [eşrâ] gelir, سَكْرَى [sekrâ] vezninde ve أَشَارَى [eşârâ] gelir, خَبَاطَى [habâtâ] vezninde ve أُشَارَى [uşârâ] gelir, سُكَارَى [sukârâ] vezninde.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَشِرُ",
+          "okunus": "el-eşir",
+          "koken": "كَتِفٌ [ketif] vezninde"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "eşir",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Harın manâsına.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَشِرُ",
+          "okunus": "el-eşir",
+          "koken": "hemzenin fethi ve şînin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 2,
   "kuranda_var": true,

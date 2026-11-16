@@ -8,7 +8,7 @@
   },
   "mustaklar": {
     "masdar · sülâsî mücerred": [
-      [0, "أَمْت", "ʾamt", "yok ettik", "kuran", "Kur'ân"],
+      [0, "أَمْت", "ʾamt", "takdîr", "lugat", "Kur'ân · Kamus"],
       [1, "إِمْت", "ʾimt", "ölüm", "kontrol", ""],
       [2, "أُمْت", "ʾumt", "ölüm", "kontrol", ""],
       [3, "أَمَت", "ʾamat", "ölüm", "kontrol", ""],
@@ -414,7 +414,7 @@
       [291, "أَمَتُون", "ʾamatūn", "her daim ölüm olanlar", "kontrol", ""],
       [292, "أَمَتِين", "ʾamatīn", "her daim ölüm olanlar", "kontrol", ""],
       [293, "أَمَتَات", "ʾamatāt", "her daim ölüm olanlar, müennes", "kontrol", ""],
-      [294, "أَمْت", "ʾamt", "yok ettik", "kuran", "Kur'ân"],
+      [294, "أَمْت", "ʾamt", "takdîr", "lugat", "Kur'ân · Kamus"],
       [295, "أَمْتَة", "ʾamta", "her daim ölüm olan, müennes", "kontrol", ""],
       [296, "أَمْتَان", "ʾamtān", "her daim ölüm olan, iki", "kontrol", ""],
       [297, "أَمْتَتَان", "ʾamtatān", "her daim ölüm olan, iki, müennes", "kontrol", ""],
@@ -556,7 +556,7 @@
       [425, "أَمَاتَة", "ʾamāta", "ölüm olma", "kontrol", ""],
       [426, "إِمَاتَة", "ʾimāta", "ölüm olma", "kontrol", ""],
       [427, "أُمُوتَة", "ʾumūta", "ölüm olma", "kontrol", ""],
-      [428, "أَمْت", "ʾamt", "yok ettik", "kuran", "Kur'ân"],
+      [428, "أَمْت", "ʾamt", "takdîr", "lugat", "Kur'ân · Kamus"],
       [429, "إِمْت", "ʾimt", "ölüm olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
@@ -566,7 +566,7 @@
       [434, "أُومُوتَة", "ʾūmūta", "ölüm olma türünden şey", "kontrol", ""],
       [435, "أَوْمَت", "ʾawmat", "ölüm olma türünden şey", "kontrol", ""],
       [437, "أَيْمَت", "ʾaymat", "ölüm olma türünden şey", "kontrol", ""],
-      [439, "أَمْت", "ʾamt", "yok ettik", "kuran", "Kur'ân"],
+      [439, "أَمْت", "ʾamt", "takdîr", "lugat", "Kur'ân · Kamus"],
       [441, "أَمَت", "ʾamat", "ölüm olma türünden şey", "kontrol", ""],
       [443, "إِمْت", "ʾimt", "ölüm olma türünden şey", "kontrol", ""],
       [445, "أُمْت", "ʾumt", "ölüm olma türünden şey", "kontrol", ""],
@@ -904,7 +904,97 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "أَمْت": [
+        {
+          "eser": "Kamus",
+          "madde": "emt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "حَزْرٌ [hazr] ve takdîr manâsınadır ki bir nesneyi imâle şürû eylemezden mukaddem tahmîn ve endâze eylemekten ibârettir, ölçünmek ve kesimlemek ve oranlamak tabîr olunur; yukâlu: أَمَتَ الشَّيْءَ أَمْتًا مِنَ الْبَابِ الثَّانِي إِذَا قَدَّرَهُ وَحَزَرَهُ Ve kasd eylemek manâsınadır; yukâlu: أَمَتَهُ إِذَا قَصَدَهُ Ve أَمْتٌ [emt] Mürtefi mahalle denir, cây-ı bülend manâsına.",
+              "misaller": [
+                ["أَمَتَ الشَّيْءَ أَمْتًا مِنَ الْبَابِ الثَّانِي إِذَا قَدَّرَهُ وَحَزَرَهُ", ""],
+                ["أَمَتَهُ إِذَا قَصَدَهُ", ""]
+              ]
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "küçük tepelere ve höyüklere denir, تِلاَلٌ صِغَارٌ manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "bazı yerde olan inişlik ve yokuşluk ve alçaklık ve yüksekliğe denir ki büğrü ve nâ-hemvâr olur; yukâlu: بِالْمَكَانِ أَمْتٌ أَيِ انْخِفَاضٌ وَارْتِفَاعٌ Ve mutlakan bir nesnenin zât ve halîkasında olan ihtilâfa denir ki bazı yeri bazına muhâlif olmaktan ibârettir, bazı yeri yüksek ve bazı yeri alçak yâhûd tûl ve kasr makûlesi ihtilâf gibi. Cemi إِمَاتٌ [imât] gelir hemzenin kesriyle ve أُمُوتٌ [umût] gelir hemzenin zammıyla.",
+              "misaller": [
+                ["بِالْمَكَانِ أَمْتٌ أَيِ انْخِفَاضٌ وَارْتِفَاعٌ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "أَمْتٌ [emt] Zaf ve vehn manâsınadır; tekûlu: سِرْنَا سَيْرًا لاَ أَمْتَ فِيهِ أَيْ لاَ ضْعَفَ وَلاَ وَهْنَ Ve tarîka-i hasene manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 5,
+              "etiket": "",
+              "tanim": "أَمْتٌ [emt] Bir nesnenin sûretinde olan eğrilik ve kaçıklık makûlesi ayb ve nakîsaya denir, gerek ağızda ve gerek sevb ve hacer makûlesi nesnelerde olsun; yukâlu: بِهِ أَمْتٌ أَيْ عِوَجٌ Ve أَمْتٌ [emt] Bir yerin bazı mahallinin toprağı kalın ve bazı yerinin yufka ve ince olması hâletine denir.",
+              "misaller": [
+                ["بِهِ أَمْتٌ أَيْ عِوَجٌ", ""]
+              ]
+            },
+            {
+              "no": 6,
+              "etiket": "",
+              "tanim": "أَمْتٌ [emt] Şekk ve şübhe manâsına istimâl olunur; yukâlu: اَلْخَمْرُ حَرُمَتْ لاَ أَمْتَ فِيهَا أَيْ لاَ شَكَّ فِي حُرْمَتِهَا Müellif misâl-i mezbûr ile işbu: “إِنَّ اللهَ حَرَّمَ الْخَمْرَ فَلاَ أَمْتَ فِيهَا” hadîsine telmîh eylemiştir.",
+              "misaller": [
+                ["اَلْخَمْرُ حَرُمَتْ لاَ أَمْتَ فِيهَا أَيْ لاَ شَكَّ فِي حُرْمَتِهَا", ""]
+              ]
+            },
+            {
+              "no": 7,
+              "etiket": "",
+              "tanim": "bu, manâ-yı evvel feridir.",
+              "misaller": []
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمْتُ",
+          "okunus": "el-emt",
+          "koken": "hemzenin fethi ve mîmin sükûnuyla"
+        },
+        {
+          "eser": "Vankulu",
+          "madde": "emt",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Mekân-ı mürtefi manâsına.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "أَمْتٌ [emt] Ufacık tepeciklere dahi derler; kâlallâhu taâlâ: ﴿لَا تَرٰى فِيهَا عِوَجًا وَلَا أَمْتًا﴾ (طه 107) Yanî “Onda iniş yokuş yoktur.” Ve yukâlu: إِمْتَلَأَ السِّقَاءُ فَمَا بِهِ أَمْتٌ Yanî “Kırba doludur, onun boş yeri ve nâ-hemvâr yeri yoktur.” Ve أَمْتٌ [emt] Kasd ve takdîr manâsına da gelir; yukâlu: أَمَتُّ الشَّيْءَ أَمْتًا أَيْ قَصَدْتُهُ وَقَدَّرْتُهُ",
+              "misaller": [
+                ["إِمْتَلَأَ السِّقَاءُ فَمَا بِهِ أَمْتٌ", ""],
+                ["أَمَتُّ الشَّيْءَ أَمْتًا أَيْ قَصَدْتُهُ وَقَدَّرْتُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْأَمْتُ",
+          "okunus": "el-emt",
+          "koken": "hemzenin fethi ve mîmin sükûnuyla"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,

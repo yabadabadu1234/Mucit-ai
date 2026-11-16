@@ -9,7 +9,7 @@
   "mustaklar": {
     "masdar · sülâsî mücerred": [
       [0, "أَصْر", "ʾaṣr", "yük bağlama", "orta", ""],
-      [1, "إِصْر", "ʾiṣr", "yük bağlama", "orta", ""],
+      [1, "إِصْر", "ʾiṣr", "Ahd ve peymân", "lugat", "Kamus"],
       [2, "أُصْر", "ʾuṣr", "yük bağlama", "orta", ""],
       [3, "أَصَر", "ʾaṣar", "yük bağlama", "orta", ""],
       [4, "إِصَر", "ʾiṣar", "yük bağlama", "orta", ""],
@@ -557,7 +557,7 @@
       [426, "إِصَارَة", "ʾiṣāra", "yük bağlama", "orta", ""],
       [427, "أُصُورَة", "ʾuṣūra", "yük bağlama", "orta", ""],
       [428, "أَصْر", "ʾaṣr", "yük bağlama", "orta", ""],
-      [429, "إِصْر", "ʾiṣr", "yük bağlama", "orta", ""]
+      [429, "إِصْر", "ʾiṣr", "Ahd ve peymân", "lugat", "Kamus"]
     ],
     "ism-i cins · ifrâdî (aday)": [
       [430, "آصُور", "ʾāṣūr", "yük bağlama türünden şey", "orta", ""],
@@ -568,7 +568,7 @@
       [437, "أَيْصَر", "ʾayṣar", "yük bağlama türünden şey", "orta", ""],
       [439, "أَصْر", "ʾaṣr", "yük bağlama türünden şey", "orta", ""],
       [441, "أَصَر", "ʾaṣar", "yük bağlama türünden şey", "orta", ""],
-      [443, "إِصْر", "ʾiṣr", "yük bağlama türünden şey", "orta", ""],
+      [443, "إِصْر", "ʾiṣr", "Ahd ve peymân", "lugat", "Kamus"],
       [445, "أُصْر", "ʾuṣr", "yük bağlama türünden şey", "orta", ""],
       [447, "أَصِير", "ʾaṣīr", "yük bağlama türünden şey", "orta", ""],
       [449, "إِصَر", "ʾiṣar", "yük bağlama türünden şey", "orta", ""],
@@ -1369,7 +1369,51 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "mustak_lugat": {
+      "إِصْر": [
+        {
+          "eser": "Kamus",
+          "madde": "isr",
+          "manalar": [
+            {
+              "no": 1,
+              "etiket": "",
+              "tanim": "Ahd ve peymân manâsınadır.",
+              "misaller": []
+            },
+            {
+              "no": 2,
+              "etiket": "",
+              "tanim": "bu habs manâsından mehûzdur ki bu mâddenin asl mevzûudur; kesr ve atf manâları dahi ondan mehûzdur, zîrâ her birinde habs manâsı mutasavverdir: Meselâ kesrde tûl ve dürüstlük hâletlerinden alıkomak ve atfta istikâmetten alıkomak melhûzdur ve ahd ve peymânda nâkızını sevâb ve hayrâttan alıkomak mutasavverdir.",
+              "misaller": []
+            },
+            {
+              "no": 3,
+              "etiket": "",
+              "tanim": "إِصْرٌ [isr]in cemi آصَارٌ [âsâr] gelir, tekûlu: لاَ إِصْرَ بَيْنِي وَبَيْنَهُ ve yukâlu: بَيْنَهُمْ آصَارٌ يَرْعَوْنَهَا أَيْ عُهُودٌ Ve إِصْرٌ [isr] Günâha ıtlâk olunur, mürtekibini cennetten alıkomak alâkasıyla; yukâlu: بِهِ إِصْرٌ أَيْ ذَنْبٌ Ve ağırlık, ثِقَلٌ [samp;ikal] manâsınadır; yukâlu: حَمَلَ عَنْهُمُ الْإِصْرَ أَيِ الثِّقَلَ Bu manâlarda hemzenin zammı ve fethiyle de câizdir.",
+              "misaller": [
+                ["بَيْنَهُمْ آصَارٌ يَرْعَوْنَهَا أَيْ عُهُودٌ", ""],
+                ["بِهِ إِصْرٌ أَيْ ذَنْبٌ", ""],
+                ["حَمَلَ عَنْهُمُ الْإِصْرَ أَيِ الثِّقَلَ", ""]
+              ]
+            },
+            {
+              "no": 4,
+              "etiket": "",
+              "tanim": "إِصْرٌ [isr] Bir adamı bir nesneye meyl ettiren şeye denir; yukâlu: هُوَ إِصْرُهُ عَلَيْهِ أَيْ مَا يَعْطِفُهُ Ve talâk yâhûd ıtk yâhûd nezr ile olan yemîne ıtlâk olunur, zîrâ bunlar eskal-i eymân olmakla keffâretle halâs mutasavver değildir. Kâle fin-Nihâye ve fil-hadîsi: “مَنْ حَلَفَ عَلَى يَمِينٍ فِيهَا إِصْرٌ فَلاَ كَفَّارَةَ لَهَا” وَهُوَ أَنْ يَحْلِفَ بِطَلاَقٍ أَوْ عَتَاقٍ أَوْ نَذْرٍ Ve إِصْرٌ [isr] Kulağın deliğine denir ki küpe geçirilir. Cemi آصَارٌ [âsâr] gelir hemzenin meddiyle ve إِصْرَانٌ [isrân] gelir hemzenin kesriyle.",
+              "misaller": [
+                ["هُوَ إِصْرُهُ عَلَيْهِ أَيْ مَا يَعْطِفُهُ", ""]
+              ]
+            }
+          ],
+          "deyimler": [],
+          "yazilis": "اَلْإِصْرُ",
+          "okunus": "el-isr",
+          "koken": "hemzenin kesriyle"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 3,
   "kuranda_var": true,
