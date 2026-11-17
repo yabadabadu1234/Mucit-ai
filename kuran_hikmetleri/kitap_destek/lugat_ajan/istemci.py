@@ -17,6 +17,7 @@ def _akis(model, mesajlar, max_tokens, sicaklik, parca):
                 parca.append((ch[0].get('delta') or {}).get('content') or '')
                 if ch[0].get('finish_reason'): return ch[0]['finish_reason']
     raise ConnectionError('akış yarıda kesildi')
+YEDEK = {'glm-5.3': 'deepseek-v4.1-flash', 'deepseek-v4.1-flash': 'qwen3.8-flash-next'}
 def sor(model, mesajlar, max_tokens=16000, deneme=30, sicaklik=0.2, devam=False, kayit=print):
     birikmis, son = '', None
     for d in range(deneme):
@@ -26,6 +27,8 @@ def sor(model, mesajlar, max_tokens=16000, deneme=30, sicaklik=0.2, devam=False,
             f = _akis(model, m, max_tokens, sicaklik, parca)
             return birikmis + ''.join(parca), f
         except urllib.error.HTTPError as e:
+            if e.code == 503 and model in YEDEK:
+                kayit(f'  {model} dolu, {YEDEK[model]} ile deneniyor'); model = YEDEK[model]; continue
             if e.code in (429, 503):
                 bek = float(e.headers.get('Retry-After') or 30)
                 kayit(f'  429 sınır ({e.read()[:120]!r}); {bek:.0f} sn bekleniyor')
