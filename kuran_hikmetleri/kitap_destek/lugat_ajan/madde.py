@@ -17,3 +17,15 @@ def maddeler(kok):
     for k in W:
         for r in I.get((k, n(kok)), [])[:3]: o.append({'eser': W[k], 'sayfa': r['page_start'], 'metin': r['text']})
     return o
+import sys as _s, os as _o
+_s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), '..', 'turetme_motoru'))
+@functools.lru_cache(1)
+def _cebel():
+    import cebel; return cebel.yukle()
+_eski = maddeler
+def maddeler(kok):
+    o = _eski(kok); C = _cebel()
+    for k in (kok, kok.replace('ي', 'ى'), kok.replace('ى', 'ي'), kok.replace('ا', 'ء')):
+        if k in C:
+            o.append({'eser': "المعجم الاشتقاقي المؤصل (محمد حسن جبل)", 'sayfa': None, 'metin': (C[k]['fasil_ozeti'] + '\n\n' if C[k]['fasil_ozeti'] else '') + C[k]['tam_metin']}); break
+    return o
