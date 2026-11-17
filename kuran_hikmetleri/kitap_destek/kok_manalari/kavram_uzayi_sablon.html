@@ -12,6 +12,10 @@ html,body{margin:0;height:100%;background:var(--zemin);color:var(--yazi);font-fa
 <script>
 const D=__VERI__,V=D.V,IDX={};for(const k in V)IDX[V[k][7]]=k;
 const MYER={},KBT={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
+(function(){const ft=ctx.fillText.bind(ctx),st=ctx.strokeText.bind(ctx),R=/([\d.]+)px/;
+ const yaz=(f,t,x,y)=>{const m=ctx.getTransform();if(Math.abs(m.b)>1e-9||Math.abs(m.c)>1e-9)return f(t,x,y);const f0=ctx.font,w0=ctx.lineWidth,px=Math.round(m.a*x+m.e),py=Math.round(m.d*y+m.f);
+  ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.font=f0.replace(R,(_,n)=>(parseFloat(n)*m.a)+'px');ctx.lineWidth=w0*m.a;f(t,px,py);ctx.restore()};
+ ctx.fillText=(t,x,y)=>yaz(ft,t,x,y);ctx.strokeText=(t,x,y)=>yaz(st,t,x,y)})();
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
 const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.93});
@@ -21,7 +25,7 @@ const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
 const BP=D.B.map(yolla),KP=D.K.map(k=>yolla(k[0]));
 const KUT=D.H.map(h=>{const a=h[0];let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;for(let j=0;j<a.length;j+=2){x0=Math.min(x0,a[j]);x1=Math.max(x1,a[j]);y0=Math.min(y0,a[j+1]);y1=Math.max(y1,a[j+1])}return [x0,y0,x1,y1]});
-function boyut(){const r=cv.getBoundingClientRect();dpr=window.devicePixelRatio||1;W=innerWidth;H=innerHeight-r.top;cv.style.height=H+'px';cv.width=W*dpr;cv.height=H*dpr;kirli=true}
+function boyut(){const r=cv.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=innerWidth;H=innerHeight-r.top;cv.style.height=H+'px';cv.width=W*dpr;cv.height=H*dpr;kirli=true}
 function sigdir(){const s=Math.min(W,H)/1800;S=s;TX=(W-1800*s)/2;TY=(H-1800*s)/2}
 const RR=['#b3541e','#2f6fb3','#3f7f3a','#8a3fa0','#b8860b','#2c8c7c','#a0304a','#5a6b2a'];
 function say(n){return 1+n.turev.reduce((a,c)=>a+say(c),0)}function derin(n){return n.turev.length?1+Math.max(...n.turev.map(derin)):0}
