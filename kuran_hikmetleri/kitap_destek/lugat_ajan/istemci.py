@@ -26,7 +26,7 @@ def sor(model, mesajlar, max_tokens=16000, deneme=30, sicaklik=0.2, devam=False,
             f = _akis(model, m, max_tokens, sicaklik, parca)
             return birikmis + ''.join(parca), f
         except urllib.error.HTTPError as e:
-            if e.code == 429:
+            if e.code in (429, 503):
                 bek = float(e.headers.get('Retry-After') or 30)
                 kayit(f'  429 sınır ({e.read()[:120]!r}); {bek:.0f} sn bekleniyor')
                 if devam: birikmis += ''.join(parca)
