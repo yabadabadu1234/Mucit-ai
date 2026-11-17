@@ -28,7 +28,7 @@ function say(n){return 1+n.turev.reduce((a,c)=>a+say(c),0)}function derin(n){ret
 function satir(t,m){const w=t.split(' '),o=[];let b='';for(const x of w){if((b+' '+x).trim().length>m&&b){o.push(b);b=x}else b=(b+' '+x).trim()}o.push(b);return o}
 const AGC={};
 const ACR={};function acikRenk(c){if(ACR[c])return ACR[c];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle;let r,g,b;if(h[0]==='#'){r=parseInt(h.slice(1,3),16);g=parseInt(h.slice(3,5),16);b=parseInt(h.slice(5,7),16)}else[r,g,b]=h.match(/\d+/g).map(Number);const m=(a,z)=>Math.round(a*.22+z*.78);return ACR[c]=`rgb(${m(r,251)},${m(g,248)},${m(b,239)})`}
-function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=v[0],cy=v[1],rc=RCK[i],dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=Math.min(r,RU)/22,L=[],T=[];
+function agac(i){if(AGC[i])return AGC[i];const k=IDX[i],v=V[k],n=v[9],r=v[8],cx=v[0],cy=v[1],rc=RCK[i],dm=Math.max(derin(n),1),adim=(r*0.95-rc)/dm,fs=RU/22,L=[],T=[];
  (function yer(m,a0,a1,d,c,px,py){const a=(a0+a1)/2,q=d?rc+d*adim:0,x=cx+q*Math.cos(a),y=cy+q*Math.sin(a);
   if(d){L.push([px,py,x,y,c]);const sag=Math.cos(a)>=0;satir(m.mana,24).forEach((l,j,A)=>T.push([x+(sag?1:-1)*fs*0.4,y+fs*0.35+(j-(A.length-1)/2)*fs*1.05,l,fs*(d==1?1:0.85),sag,c,x,y]))}
   let t=a0;const tt=say(m)-1;m.turev.forEach((k2,j)=>{const p=(a1-a0)*say(k2)/tt;yer(k2,t,t+p,d+1,d==0?RR[j%8]:c,x,y);t+=p})})(n,-Math.PI,Math.PI,0,'#b8860b',cx,cy);
@@ -43,7 +43,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  const gorunen=[];for(let i=0;i<HP.length;i++)if(gor(KUT[i]))gorunen.push(i);
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
- const g=R0*S,ST=S<10/KS('KOK')?0:(2*g>=Math.min(W,H)*0.92?2:1);
+ const g=R0*S,E=esik(),M=S<E.t?0:(S<E.z?1:(2*g>=Math.min(W,H)*0.92?3:2)),ST=M>=2?M-1:0;
  const icler=ST?gorunen.slice():[];
  icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
   ctx.lineWidth=1.5/S;A.L.forEach(l=>{ctx.strokeStyle=l[4];ctx.beginPath();ctx.moveTo(l[0],l[1]);ctx.lineTo(l[2],l[3]);ctx.stroke()});
@@ -56,15 +56,15 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
    ctx.restore()}}
   ctx.restore()});
  const ic=new Set(icler);
- ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';gorunen.forEach(i=>{if(ic.has(i))return;const v=V[IDX[i]],r=RCK[i];if(!r)return;const k=IDX[i];
+ ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';gorunen.forEach(i=>{if(M<1||ic.has(i))return;const v=V[IDX[i]],r=RCK[i];if(!r)return;const k=IDX[i];
   ctx.font='100px Amiri';const w=ctx.measureText(k).width/100;const fw=Math.min(1.8*r/w,1.2*r,KS('KOK'));ctx.font=fw+'px Amiri';ctx.fillText(k,v[0],v[1])});ctx.textBaseline='alphabetic'
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
- D.BL.forEach(b=>{const f=Math.min(b[6]*0.75,KS('BL'));if(!ST||b[0]>x1||b[0]+b[2]<x0||b[1]>y1||b[1]+b[3]<y0)return;ctx.fillStyle=zitRenk(D.R[b[5]]);ctx.font=f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';let t=b[4];while(t.length>3&&ctx.measureText(t).width>b[2]-4)t=t.slice(0,-2);ctx.fillText(t===b[4]?t:t+'…',b[0]+2,b[1]+b[6]/2);ctx.textBaseline='alphabetic'});
+ D.BL.forEach(b=>{const f=Math.min(b[6]*0.75,KS('BL'));if(M<1||b[0]>x1||b[0]+b[2]<x0||b[1]>y1||b[1]+b[3]<y0)return;ctx.fillStyle=zitRenk(D.R[b[5]]);ctx.font=f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';let t=b[4];while(t.length>3&&ctx.measureText(t).width>b[2]-4)t=t.slice(0,-2);ctx.fillText(t===b[4]?t:t+'…',b[0]+2,b[1]+b[6]/2);ctx.textBaseline='alphabetic'});
  kuranCiz(x0,y0,x1,y1,yaz);
- if(!ST){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.textAlign='center';
-  D.K.forEach(k=>{const [cx,cy,bw,bh]=k[2];if(cx+bw/2<x0||cx-bw/2>x1||cy+bh/2<y0||cy-bh/2>y1)return;
-   const L=kirp(k[1],bw,bh,KS('KB'));if(!L)return;ctx.font='bold '+L.f+'px Georgia';ctx.lineWidth=L.f/3.5;ctx.textBaseline='middle';
+ if(M<2){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.textAlign='center';
+  D.K.forEach(k=>{const [cx,cy,bw,bh]=M?k[3]:k[2];if(cx+bw/2<x0||cx-bw/2>x1||cy+bh/2<y0||cy-bh/2>y1)return;
+   const L=kirp(k[1],bw,bh,KS(M?'KB2':'KB'));if(!L)return;ctx.font='bold '+L.f+'px Georgia';ctx.lineWidth=L.f/3.5;ctx.textBaseline='middle';
    L.s.forEach((t,i)=>{const yy=cy+(i-(L.s.length-1)/2)*L.f*1.12;ctx.strokeText(t,cx,yy);ctx.fillText(t,cx,yy)});ctx.textBaseline='alphabetic'})}}
 const KIRP={};function kirpK(m){return KIRP[m]||(KIRP[m]=(()=>{ctx.font='bold 10px Georgia';const ks=m.split(' '),O=[];for(let n=1;n<=Math.min(4,ks.length);n++){let s=[],b='',hd=ks.join(' ').length/n;ks.forEach(x=>{if(b&&(b+' '+x).length>hd*1.15&&s.length<n-1){s.push(b);b=x}else b=(b?b+' ':'')+x});s.push(b);O.push([s,Math.max(...s.map(t=>ctx.measureText(t).width))/10])}return O})())}
 function kirp(m,w,h,kap){const K=kirpK(m);
@@ -78,8 +78,8 @@ function KS(n){if(KSC[n]!==undefined)return KSC[n];if(!YUK())return 1e9;let a;
  else if(n=='QW')a=D.QW.concat(D.QG).map(s=>Math.min(s[2]*.92/genis(s[3],'Amiri'),s[2]*.8));
  else if(n=='KOK'){a=[];D.H.forEach((h,i)=>{const k=IDX[i],r=RCK[i];if(r&&k)a.push(Math.min(1.8*r/genis(k,'Amiri'),1.2*r))})}
  else if(n=='BL')a=D.BL.map(b=>b[6]*.75);
- else if(n=='KB')a=D.K.map(k=>{const [,,bw,bh]=k[2];return Math.max(...kirpK(k[1]).map(([s,gw])=>Math.min(bw*.92/gw,bh*.9/(s.length*1.12))))});
- return KSC[n]=yuzde10(a,n=='QS'||n=='QK'||n=='KB'?.5:.1)}
+ else if(n=='KB'||n=='KB2')a=D.K.map(k=>{const [,,bw,bh]=n=='KB'?k[2]:k[3];return Math.max(...kirpK(k[1]).map(([s,gw])=>Math.min(bw*.92/gw,bh*.9/(s.length*1.12))))});
+ return KSC[n]=yuzde10(a,n=='QS'||n=='QK'||n=='KB'||n=='KB2'?.5:.1)}
 function kutuYaz(t,x,y,w,h,fn,b,sn){const g=genis(t,fn);const f=Math.min(w*0.92/g,h*0.8,sn?KS(sn):1e9);ctx.font=(b||'')+f+'px '+fn;ctx.fillText(t,x+w/2,y+h/2);return true}
 function kuranCiz(x0,y0,x1,y1,yaz){kuranIc(x0,y0,x1,y1,yaz,0,D.QW,'Kur\'ân uzayı · ilk geçen kelime');ctx.save();ctx.translate(DX,0);kuranIc(x0-DX,y0,x1-DX,y1,yaz,DX,D.QG,'Kur\'ân uzayı · ilk geçen kök');ctx.restore()}
 const DX=1860;
@@ -96,14 +96,14 @@ const EID={};function enIyiDuzen(k,r){const ck=k+'|'+r.toFixed(3)+'|'+MDurum.sur
 const OZC={};
 function sarW(t,w,font){ctx.font=font;const k=t.split(' '),o=[];let b='';for(const x of k){const d=b?b+' '+x:x;if(b&&ctx.measureText(d).width>w){o.push(b);b=x}else b=d}if(b)o.push(b);return o}
 let OUN=null;function ozetBirlik(){if(OUN!==null)return OUN;if(!YUK())return 1e9;const a=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v&&RCK[i]){const o=ozetDuzen(v,RCK[i],1e9,1);if(o)a.push(o.f)}});return OUN=yuzde10(a)}
-const OZ1={};
+const OZ1={};let ESK=null;function esik(){if(ESK)return ESK;const o=ozetBirlik();return ESK={t:6/KS('KOK'),z:6/Math.min(.85*RU/22,.9*o)}}
 function ozetDuzen(v,rc,tavan,ilk){const key=v[7],C=ilk?OZ1:OZC;if(C[key])return C[key];const k=IDX[key],fw=Math.min(1.8*rc/genis(k,'Amiri'),1.2*rc,KS('KOK')),y0=fw*0.62,av=rc*0.95-y0,gen=1.7*rc,T=(v[9].turev||[]).map(t=>t.mana);
  let en=null;for(let f=Math.min(rc*0.2,tavan===undefined?ozetBirlik():tavan);f>rc*0.01;f*=0.93){const L=[];sarW(v[4],gen,'bold '+1.15*f+'px Georgia').forEach(l=>L.push([l,1.15*f,'Georgia','bold ']));
   T.forEach(t=>sarW('· '+t,gen,0.9*f+'px Georgia').forEach(l=>L.push([l,0.9*f,'Georgia',''])));
   const h=L.reduce((s,l)=>s+l[1]*1.25,0);let ok=h<=av;if(ok)for(const l of L){ctx.font=l[3]+l[1]+'px '+l[2];if(ctx.measureText(l[0]).width>gen){ok=false;break}}
   if(ok){en={L,h,f,fw,k,y0};break}}
  return C[key]=en}
-function ozetCiz(v,rc,yaz,i){yukle(v[6]);if(!YUK())return;const M=mustakDuzen(v[6]),cx=v[0],cy=v[1],D=ozetDuzen(v,rc);ctx.textAlign='center';ctx.textBaseline='middle';
+function ozetCiz(v,rc,yaz,i){yukle(v[6]);if(SA[v[6]])enIyiDuzen(v[6],rc);const M=mustakDuzen(v[6]),cx=v[0],cy=v[1],D=ozetDuzen(v,rc);ctx.textAlign='center';ctx.textBaseline='middle';
  const k=IDX[i],fw=Math.min(1.8*rc/genis(k,'Amiri'),1.2*rc,KS('KOK'));ctx.fillStyle=yaz;ctx.font=fw+'px Amiri';ctx.fillText(k,cx,cy);
  if(D){let y=cy+D.y0;D.L.forEach(([t,f,fn,b])=>{ctx.fillStyle=b?yaz:'#4a3f28';ctx.font=b+f+'px '+fn;ctx.fillText(t,cx,y+f*0.6);y+=f*1.25})}
  ctx.textBaseline='alphabetic'}
@@ -134,7 +134,7 @@ cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h>6||PT.size)ret
 function temizle(){secK=null;document.getElementById('bil').style.display='none';kirli=true}
 function sec(k){secK=k;kirli=true;const v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k),b=document.getElementById('bil');b.style.display='block';
  b.innerHTML=`<span style="float:right;cursor:pointer;padding:0 4px" onclick="temizle()">✕</span><b style="font-family:Amiri;font-size:22px">${k}</b> ${v[4]}<br>${v[2]} › ${v[3]}<br><br>yakınları: ${v[5].join(' ')}<br>aynı kökün öbür asılları (kırmızı kesik): ${kard.join(' ')||'yok'}<br><a href="zihin_haritasi.html#${v[6]}">türeme ağacı</a>`}
-document.getElementById('sina').onclick=()=>{MDurum.sina=!MDurum.sina;MDurum.gor.clear();MDurum.surum++;document.getElementById('sina').textContent=MDurum.sina?'Sınamayı bitir':'Sına';kirli=true};addEventListener('resize',()=>{boyut()});boyut();sigdir();if(document.fonts)document.fonts.ready.then(()=>{[QG,KSC,KIRP,OZC,OZ1].forEach(o=>{for(const k in o)delete o[k]});OUN=null;kirli=true});requestAnimationFrame(dongu);
+document.getElementById('sina').onclick=()=>{MDurum.sina=!MDurum.sina;MDurum.gor.clear();MDurum.surum++;document.getElementById('sina').textContent=MDurum.sina?'Sınamayı bitir':'Sına';kirli=true};addEventListener('resize',()=>{boyut()});boyut();sigdir();if(document.fonts)document.fonts.ready.then(()=>{[QG,KSC,KIRP,OZC,OZ1].forEach(o=>{for(const k in o)delete o[k]});OUN=null;ESK=null;esik();D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)ozetDuzen(v,RCK[i])});kirli=true});requestAnimationFrame(dongu);
 </script><div id="kp" style="display:none;position:fixed;inset:6% 4%;background:#fffaf0;border:2px solid #c0392b;border-radius:10px;z-index:9;overflow:auto;padding:14px 18px;font-family:Georgia;color:#3b2f1e"></div>
 <script>function kirmiziAc(k){const M=mustakDuzen(k),d=document.getElementById('kp');let h='<button onclick="this.parentNode.style.display=\'none\'" style="float:right;font:inherit">kapat ✕</button><h3 style="color:#c0392b;margin:0 0 6px">'+k+' · kaideye aykırı kalıplar</h3><p style="color:#8a7f62;font-size:13px;margin:0 0 10px">Lügatte geçmeyen ve bâbın kıyâsına uymayan kalıplar.</p>';
 M.kirmizi.forEach(([b,X])=>{h+='<h4 style="color:#2f6fb3;margin:12px 0 4px">'+b+'</h4>';let ot=null;X.forEach(([t,x])=>{if(t!==ot){h+='<div style="color:#b3541e;font-weight:bold;margin-top:6px">'+t+'</div>';ot=t}h+='<div style="margin-left:12px"><span style="font-family:Amiri;font-size:20px;color:#c0392b">'+x[0]+'</span> ('+x[1]+')</div>'})});d.innerHTML=h;d.style.display='block'}</script>
