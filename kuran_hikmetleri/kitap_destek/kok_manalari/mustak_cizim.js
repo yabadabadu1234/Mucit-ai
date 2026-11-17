@@ -1,6 +1,9 @@
 /* Müştak listesi düzeni ve çizimi (kavram uzayı ve zihin haritası ortak).
    Usul: yer sabittir (asıl, mecaz, ıstılah, deyim hep aynı sırada); biçim manayı taşır; bir kapta en çok 4 mana;
    misal kendi manasının altında; sınama kipi manaları gizler, dokununca açar; süs yoktur. */
+const KAD = [6, 7, 8, 10, 12, 14, 17, 20, 24, 29, 35, 42, 50, 60, 72, 86, 104, 125];
+function kademe(p) { let o = 0; for (const k of KAD) if (k <= p) o = k; return o }
+function yz_(c, es, b, px, fn) { const f = kademe(px * es); if (!f) return false; c.font = b + (f / es) + 'px ' + fn; return true }
 const MC_ = {}, MDurum = {acik: new Set(), gor: new Set(), sina: false, surum: 0};
 const ZON = {
   A: {yaz: '#3b2f1e', acik: '#eadcbc', ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
@@ -137,22 +140,22 @@ function sekil_(c, z, x, y, w, h) {
 }
 function balon_(c, x, y, w, h) { c.beginPath(); c.roundRect(x, y, w, h, 7); c.moveTo(x + 14, y); c.lineTo(x + 8, y - 6); c.lineTo(x + 22, y) }
 function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
-  const yazi = 12.5 * es > 3.5, gizli = k => MDurum.sina && !MDurum.gor.has(k);
+  const yazi = kademe(10.5 * es) > 0, gizli = k => MDurum.sina && !MDurum.gor.has(k);
   for (const o of M.O) {
     const t = o[0], x = o[1], y = o[2];
     if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); if (yazi) { cerceve_(ctx, z, bx, by, bw, bh) } else { ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.stroke() } continue }
     if (t === 'bal') { if (x + o[3] < lx0 || x > lx1 || y + o[4] < ly0 || y > ly1) continue; balon_(ctx, x, y, o[3], o[4]); ctx.fillStyle = 'rgba(255,250,235,.85)'; ctx.fill(); ctx.strokeStyle = '#c9b27a'; ctx.lineWidth = .8; ctx.stroke(); continue }
     if (x + 460 < lx0 || x > lx1 || y + 20 < ly0 || y - 20 > ly1) continue;
-    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 7, o[4] || 430, 1.5); if (yazi) { ctx.font = 'bold 14px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
+    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 7, o[4] || 430, 1.5); if (yz_(ctx, es, 'bold ', 14, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yz_(ctx, es, 'bold ', 12.5, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
     else if (t === 'w') { const c = ['#c0392b', '#9a917a', R.yaz][o[5]]; if (yazi) semse_(ctx, x - 4, y - 3, 122, 24, c); ctx.fillStyle = c;
-      if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
+      if (yazi) { if (yz_(ctx, es, '', 18, 'Amiri')) { ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14) } if (yz_(ctx, es, '', 12.5, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) } }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
-    else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yazi) { ctx.font = 'bold 11px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 'zl') { motif_(ctx, o[4], x - 11, y - 4, 7); ctx.fillStyle = ZON[o[4]].kenar; if (yz_(ctx, es, 'bold ', 11, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
     else if (t === 'zt' || t === 'mt') { const gz = gizli(o[t === 'zt' ? 5 : 4]); ctx.fillStyle = t === 'mt' ? '#54431f' : ZON[o[6]].yaz;
-      if (yazi && !gz) { ctx.font = (t === 'mt' ? 'italic 10.5px' : '11.5px') + ' Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; ctx.font = '9px Georgia'; ctx.fillText('  ' + o[4], x + w, y) } }
+      if (yazi && !gz) { if (yz_(ctx, es, t === 'mt' ? 'italic ' : '', t === 'mt' ? 10.5 : 11.5, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(o[3], x, y); if (t === 'zt' && o[4]) { const w = ctx.measureText(o[3]).width; ctx.fillStyle = R.inc; if (yz_(ctx, es, '', 9, 'Georgia')) ctx.fillText('  ' + o[4], x + w, y) } } }
       else { ctx.globalAlpha = gz ? .18 : .3; ctx.fillRect(x, y - 7, Math.min(370, o[3].length * 5.6), 7); ctx.globalAlpha = 1 } }
-    else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; ctx.font = '10.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 'fold') { if (yazi) { ctx.fillStyle = '#2f6fb3'; if (yz_(ctx, es, '', 10.5, 'Georgia')) { ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } } }
   }
 }
 /* Motifler: açık kaynaktan resim almak yerine riyazî olarak çizilir (yıldız çokgenleri, rozet, şemse kartuşu).
