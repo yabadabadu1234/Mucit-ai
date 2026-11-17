@@ -103,46 +103,52 @@ def halka(g): return [round(c, 1) for xy in g.exterior.coords for c in xy]
 HUC = [[halka(hucre[i]), ust_i[N[i][3]], 0.3] for i in range(len(N))]
 KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9], [o[0] + o[2] / 2, o[1] + bas(o[2]) / 2 + 1, o[2] * 0.96, bas(o[2]) * 0.9]] for o in ODAS]
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
-EB = json.load(open(HERE / 'lugat_ebat.json', encoding='utf-8'))
-R0 = 0.93 * float(np.median(IC)); SJ = 0.92 * 414 / (2 * R0); C2 = 9 / (11.5 * SJ)
-def raf(oge, gen, ara):
-    x = y = sh = 0; yer = {}; mx = 0
-    for k, w, h in oge:
-        if x > 0 and x + w > gen: x = 0; y += sh + ara; sh = 0
-        yer[k] = (x, y); x += w + ara; sh = max(sh, h); mx = max(mx, x - ara)
-    return yer, mx, y + sh
-B2 = {}; HC = {}
-for i in range(len(N)):
-    r = 0.93 * IC[i]; e = EB.get(N[i][0]); pd = r * 0.12
-    w, h = (max(2 * r, e[1] * C2 + pd), max(2 * r, e[2] * C2 + pd)) if e else (2 * r, 2 * r)
-    HC[i] = (w, h, e[0] if e else 0)
-ARA = R0 * 0.5; BLK2 = []; ODA2 = []; P2 = {}
-oda_kut = {}
-for c in KODLAR:
-    bl = [b_ for b_ in range(len(BOL)) if BOL[b_]['kavram'] == c]; bk = []
-    for b_ in bl:
-        uy = sorted(BOL[b_]['uyeler'], key=lambda i: (-Z[i, 0])); top = sum(HC[i][0] * HC[i][1] for i in uy)
-        gen = max(max(HC[i][0] for i in uy), math.sqrt(top) * 1.3)
-        yer, bw, bh = raf([(i, HC[i][0], HC[i][1]) for i in uy], gen, ARA)
-        bt = R0 * 0.9; bk.append((b_, bw + 2 * ARA, bh + bt + 2 * ARA, yer, bt))
-    top = sum(w * h for _, w, h, _, _ in bk); gen = max(max(w for _, w, _, _, _ in bk), math.sqrt(top) * 1.2)
-    yer, rw, rh = raf([(b_, w, h) for b_, w, h, _, _ in bk], gen, ARA * 2)
-    tb = R0 * 2.2; oda_kut[c] = (rw + 4 * ARA, rh + tb + 4 * ARA, bk, yer, tb)
-SIRA = [c for _, L in KA.AGAC for c, _ in L]
-top = sum(oda_kut[c][0] * oda_kut[c][1] for c in SIRA); gen = max(max(oda_kut[c][0] for c in SIRA), math.sqrt(top) * 1.0)
-oyer, MW, MH = raf([(c, oda_kut[c][0], oda_kut[c][1]) for c in SIRA], gen, ARA * 6)
-K2 = []
-for c in SIRA:
-    ox, oy = oyer[c]; rw, rh, bk, yer, tb = oda_kut[c]; ODA2.append([round(ox, 1), round(oy, 1), round(rw, 1), round(rh, 1), ust_i[c], KA.KOD[c][1]])
-    K2.append([ox + rw / 2, oy + tb / 2, rw * 0.96, tb * 0.8])
-    for b_, bw, bh, cyer, bt in bk:
-        bx, by = yer[b_]; bx += ox + 2 * ARA; by += oy + tb + 2 * ARA
-        BLK2.append([round(bx, 1), round(by, 1), round(bw, 1), round(bh, 1), BOL[b_]['ad'], ust_i[c], round(bt, 1)])
-        for i, (cx, cy) in cyer.items():
-            w, h, wb = HC[i]; P2[i] = [round(bx + ARA + cx + w / 2, 1), round(by + bt + ARA + cy + h / 2, 1), round(w, 2), round(h, 2), wb]
-for i in range(len(N)): VER[ad(i)] += P2[i]
+KH = HERE.parent.parent
+def izgara(n, x, y, w, h, sag=False):
+    if n == 0: return []
+    best = None
+    for co in range(1, n + 1):
+        ro = math.ceil(n / co); cs = min(w / co, h / ro)
+        if best is None or cs > best[0]: best = (cs, co, ro)
+    cs, co, ro = best; ox = x + (w - co * cs) / 2; oy = y + (h - ro * cs) / 2
+    return [((ox + (co - 1 - j % co) * cs) if sag else (ox + (j % co) * cs), oy + (j // co) * cs, cs) for j in range(n)]
+KEL = json.load(open(KH / 'kaynak' / 'sozluk' / 'kelimeler.json', encoding='utf-8'))
+ILK = collections.defaultdict(list)
+for e in KEL:
+    if e.get('ilk'): ILK[e['ilk']].append(e['kelime'])
+SUR = []
+for s in range(1, 115):
+    d = next(KH.glob('sureler/%03d-*/sure.md' % s)); t = d.read_text(encoding='utf-8')
+    adi = re.search(r'^# S\d+ · (.*)$', t, re.M).group(1); na = len(json.load(open(KH / 'kaynak' / 'sure' / f'{s}.json', encoding='utf-8'))['verses'])
+    ks = [(a.strip(), int(b), int(c or b)) for a, b, c in re.findall(r'^- \*\*K\d+-\d+\*\* — (.*)\((\d+)(?:-(\d+))?\)\s*$', t, re.M)]
+    sah = [None] * (na + 1)
+    for j, (_, b, c) in enumerate(ks):
+        for a in range(b, min(c, na) + 1):
+            if sah[a] is None: sah[a] = j
+    KIS = []; a = 1
+    while a <= na:
+        j = sah[a]; b = a
+        while b + 1 <= na and sah[b + 1] == j: b += 1
+        KIS.append(((ks[j][0] if j is not None else 'Kısım dışı') + (' (%d)' % a if a == b else ' (%d-%d)' % (a, b)), list(range(a, b + 1)))); a = b + 1
+    SUR.append((s, adi, na, KIS))
+QX, QY, QW, QH = 1900, 40, 1720, 1720
+QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH)
+QS, QK, QA, QW_ = [], [], [], []
+for s, adi, na, KIS in SUR:
+    x, y, w, h = QR[s]; x += 3; y += 3; w -= 6; h -= 6; tb = min(30.0, max(3.0, min(w, h) * 0.12))
+    QS.append([round(x, 2), round(y, 2), round(w, 2), round(h, 2), '%d · %s' % (s, adi), round(tb, 2)])
+    KR = kare([(j, len(k[1])) for j, k in enumerate(KIS)], x + 1, y + tb, w - 2, h - tb - 1)
+    for j, (kad, ay) in enumerate(KIS):
+        kx, ky, kw, kh = KR[j]; kx += 0.8; ky += 0.8; kw -= 1.6; kh -= 1.6; kt = min(14.0, max(1.0, min(kw, kh) * 0.1))
+        QK.append([round(kx, 3), round(ky, 3), round(kw, 3), round(kh, 3), kad, round(kt, 3), s])
+        for (ax, ay_, cs), a in zip(izgara(len(ay), kx, ky + kt, kw, kh - kt, True), ay):
+            g = cs * 0.04; ax += g; ay_ += g; c2 = cs - 2 * g; at = c2 * 0.16
+            QA.append([round(ax, 3), round(ay_, 3), round(c2, 3), '%d:%d' % (s, a), round(at, 3)])
+            W_ = ILK.get('%d:%d' % (s, a), [])
+            for (wx, wy, wc), k in zip(izgara(len(W_), ax, ay_ + at, c2, c2 - at, True), W_):
+                QW_.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'O2': ODA2, 'BL2': BLK2, 'K2': K2, 'C2': C2}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
