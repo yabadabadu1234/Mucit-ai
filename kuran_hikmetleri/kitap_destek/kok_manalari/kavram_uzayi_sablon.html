@@ -15,6 +15,7 @@ const MYER={},KBT={};const cv=document.getElementById('c'),ctx=cv.getContext('2d
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
 const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.84});
+const R0=(()=>{const a=RCK.filter(x=>x).sort((x,y)=>x-y);return a[a.length>>1]})();
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
 const BP=D.B.map(yolla),KP=D.K.map(k=>yolla(k[0]));
@@ -41,13 +42,13 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  const gorunen=[];for(let i=0;i<HP.length;i++)if(gor(KUT[i]))gorunen.push(i);
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
- const icler=[];gorunen.forEach(i=>{const v=V[IDX[i]];if(v[8]*S>55)icler.push(i)});
- if(icler.length<=40)icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
+ const g=R0*S,ST=g<40?0:(g*2<Math.min(W,H)*1.35?1:2),icler=ST?gorunen.slice():[];
+ icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
   ctx.lineWidth=1.5/S;A.L.forEach(l=>{ctx.strokeStyle=l[4];ctx.beginPath();ctx.moveTo(l[0],l[1]);ctx.lineTo(l[2],l[3]);ctx.stroke()});
   const yaziVar=A.fs*S>4;A.T.forEach(t=>{ctx.fillStyle=t[5];ctx.beginPath();ctx.arc(t[6],t[7],A.fs*0.25,0,7);ctx.fill();if(yaziVar){ctx.fillStyle=yaz;ctx.font=t[3]+'px Georgia';ctx.textAlign=t[4]?'left':'right';ctx.fillText(t[2],t[0],t[1])}});
   ctx.restore();ctx.save();cekirdek(ctx,i,S);
-  if(A.rc*S>40&&A.rc*S*2<Math.min(W,H)*1.35){ozetCiz(v,A.rc,yaz,i)}
-  else if(A.rc*S>40){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const ri=halkaCiz(ctx,M,v[0],v[1],A.rc,S);
+  if(ST==1){ozetCiz(v,A.rc,yaz,i)}
+  else if(ST==2){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const ri=halkaCiz(ctx,M,v[0],v[1],A.rc,S);
    ctx.fillStyle=yaz;ctx.font=(ri*0.09)+'px Amiri';ctx.textAlign='center';ctx.fillText(v[6],v[0],v[1]-ri*0.86);
    const nk=M.kirmizi.reduce((a,b)=>a+b[1].length,0);if(nk){const bw=ri*0.62,bh=ri*0.09,bx=v[0]-bw/2,by=v[1]+ri*0.74;ctx.fillStyle='#fbeaea';ctx.strokeStyle='#c0392b';ctx.lineWidth=1/S;ctx.beginPath();ctx.roundRect(bx,by,bw,bh,bh/2);ctx.fill();ctx.stroke();ctx.fillStyle='#c0392b';ctx.font=(bh*0.55)+'px Georgia';ctx.textBaseline='middle';ctx.fillText('kaideye aykırılar ('+nk+') ▸',v[0],by+bh/2);ctx.textBaseline='alphabetic';KBT[v[7]]=[bx,by,bw,bh,v[6]]}
    if(!M.bos){const sc=2*ri*0.92/Math.hypot(M.W,M.H*1.3),ox=v[0]-M.W*sc/2,oy=v[1]-M.H*sc/2-ri*0.02;
@@ -56,7 +57,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
    ctx.restore()}}}
   ctx.restore()});
  const ic=new Set(icler);
- ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';gorunen.forEach(i=>{if(ic.has(i)&&icler.length<=40)return;const v=V[IDX[i]],r=RCK[i];if(!r)return;const k=IDX[i];
+ ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';gorunen.forEach(i=>{if(ic.has(i))return;const v=V[IDX[i]],r=RCK[i];if(!r)return;const k=IDX[i];
   ctx.font='100px Amiri';const w=ctx.measureText(k).width/100;const ist=Math.min(1.5*r/w,1.1*r)*S,ek=kademe(ist);if(ek<6)return;ctx.font=(ek/S)+'px Amiri';ctx.fillText(k,v[0],v[1])});ctx.textBaseline='alphabetic'
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
