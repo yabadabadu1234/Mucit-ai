@@ -1,5 +1,5 @@
 """Tek komut: python3 kavram_uzayi.py [--png]
-Voronoi kavram uzayı (galeri usulü 43). Her nokta bir kökün bir ASLIDIR; kavramı kategori/*.txt'den (elle) gelir.
+Kategori uzayı (F 3-I 380): her mevzu bir dikdörtgen oda, bölgeler oda içinde bloklar, çekirdekler blokta ızgara. Her nokta bir kökün bir ASLIDIR; kavramı kategori/*.txt'den (elle) gelir.
 Yakın kavramlar yan yana, kavram içinde manası yakın asıllar komşu. Hiyerarşi: üst kategori > kavram > bölge > asıl."""
 import json, math, re, sys, pathlib, collections
 import numpy as np
@@ -49,7 +49,47 @@ for ci, c in enumerate(KODLAR):
         uy = [ix[j] for j in range(len(ix)) if lab[j] == b]
         w = np.asarray(V[uy].sum(0)).ravel(); BOL.append({'kavram': c, 'ad': ', '.join(kel[np.argsort(-w)[:3]]), 'uyeler': uy})
         for i in uy: bolge[i] = len(BOL) - 1
-P = P - P.min(0); P = P / P.max() * 1600 + 100
+def kare(oge, x, y, w, h):
+    """Kareleştirilmiş ağaç haritası (squarified treemap): [(anahtar, alan)] -> {anahtar: (x, y, w, h)}"""
+    oge = [o for o in oge if o[1] > 0]; top = sum(a for _, a in oge); o = {}
+    oge = [(k, a * w * h / top) for k, a in oge]
+    def kotu(sira, kenar):
+        s_ = sum(a for _, a in sira); return max(max(kenar * kenar * a / s_ / s_, s_ * s_ / kenar / kenar / a) for _, a in sira)
+    while oge:
+        kenar = min(w, h); sira = [oge.pop(0)]
+        while oge and kotu(sira + [oge[0]], kenar) <= kotu(sira, kenar): sira.append(oge.pop(0))
+        s_ = sum(a for _, a in sira)
+        if w >= h:
+            ew = s_ / h; yy = y
+            for k, a_ in sira: o[k] = (x, yy, ew, a_ / ew); yy += a_ / ew
+            x += ew; w -= ew
+        else:
+            eh = s_ / w; xx = x
+            for k, a_ in sira: o[k] = (xx, y, a_ / eh, eh); xx += a_ / eh
+            y += eh; h -= eh
+    return o
+UST = [(u, sum(len(ix_of[c]) for c, _ in L)) for u, (_, L) in enumerate(KA.AGAC)]
+UR = kare(sorted(UST, key=lambda t: -t[1]), 40, 40, 1720, 1720)
+ODA = {}
+for u, (_, L) in enumerate(KA.AGAC):
+    x, y, w, h = UR[u]; ODA.update(kare(sorted([(c, len(ix_of[c])) for c, _ in L], key=lambda t: -t[1]), x + 4, y + 4, w - 8, h - 8))
+P = np.zeros((len(N), 2)); IC = [8.0] * len(N); hucre = [None] * len(N); BLK = []; ODAS = []
+bas = lambda w: min(26.0, max(10.0, w * 0.07))
+for c in KODLAR:
+    x, y, w, h = ODA[c]; x += 5; y += 5; w -= 10; h -= 10; ODAS.append([round(x, 1), round(y, 1), round(w, 1), round(h, 1), ust_i[c], KA.KOD[c][1]])
+    tb = bas(w); bl = [b_ for b_ in range(len(BOL)) if BOL[b_]['kavram'] == c]
+    BR = kare(sorted([(b_, len(BOL[b_]['uyeler'])) for b_ in bl], key=lambda t: -t[1]), x + 3, y + tb, w - 6, h - tb - 3)
+    for b_, (bx, by, bw, bh) in BR.items():
+        bx += 3; by += 3; bw -= 6; bh -= 6; bt = min(12.0, max(5.0, bw * 0.05)); BLK.append([round(bx, 1), round(by, 1), round(bw, 1), round(bh, 1), BOL[b_]['ad'], ust_i[c], round(bt, 1)])
+        uy = BOL[b_]['uyeler']; uy = sorted(uy, key=lambda i: (-Z[i, 0]))
+        n = len(uy); ih = bh - bt; best = None
+        for co in range(1, n + 1):
+            ro = math.ceil(n / co); cs = min(bw / co, ih / ro)
+            if best is None or cs > best[0]: best = (cs, co, ro)
+        cs, co, ro = best; ox = bx + (bw - co * cs) / 2; oy = by + bt + (ih - ro * cs) / 2
+        for j, i in enumerate(uy):
+            cx = ox + (j % co + 0.5) * cs; cy = oy + (j // co + 0.5) * cs
+            P[i] = (cx, cy); IC[i] = cs / 2; hucre[i] = box(cx - cs / 2, cy - cs / 2, cx + cs / 2, cy + cs / 2)
 sim = Z @ Z.T; np.fill_diagonal(sim, -1)
 ad = lambda i: N[i][0] + ('¹²³⁴⁵⁶'[N[i][1]] if N[i][5] > 1 else '')
 H = {}
@@ -59,50 +99,12 @@ json.dump({'hiyerarsi': H, 'asillar': {ad(i): {'kok': N[i][0], 'asil': N[i][2], 
            'xy': [round(float(P[i, 0]), 1), round(float(P[i, 1]), 1)], 'komsu': [ad(j) for j in np.argsort(-sim[i])[:4]]} for i in range(len(N))}},
           open(HERE / 'KAVRAM_UZAYI.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 RENK = ['#7a7a7a', '#5a7a2a', '#b3541e', '#2f6fb3', '#8a3fa0', '#a0304a', '#2c8c7c', '#b8860b', '#6b5a3a']
-cer = box(40, 40, 1760, 1760)
-Vo = Voronoi(np.vstack([P, [[-5000, -5000], [-5000, 7000], [7000, -5000], [7000, 7000]]]))
-from shapely.geometry import MultiPoint
-kab = MultiPoint([tuple(x) for x in P]).convex_hull.buffer(22)
-hucre = []
-for i in range(len(N)):
-    r = Vo.regions[Vo.point_region[i]]; poly = Polygon([Vo.vertices[v] for v in r]).intersection(cer)
-    hucre.append(poly.intersection(kab))
-def halka(g):
-    if g.geom_type != 'Polygon': g = max(getattr(g, 'geoms', [g]), key=lambda q: q.area)
-    return [round(c, 1) for xy in g.exterior.coords for c in xy]
-def halkalar(g):
-    return [[round(c, 1) for xy in q.exterior.coords for c in xy] for q in getattr(g, 'geoms', [g]) if q.geom_type == 'Polygon']
-from shapely.geometry import Point
-IC = [max(4.0, hucre[i].exterior.distance(Point(P[i, 0], P[i, 1]))) if hucre[i].geom_type == 'Polygon' else 8.0 for i in range(len(N))]
-HUC = [[halka(hucre[i]), ust_i[N[i][3]], round(0.15 + 0.22 * ((bolge[i] * 37) % 7) / 6, 2)] for i in range(len(N))]
-BOLS = [halkalar(unary_union([hucre[i] for i in b['uyeler']])) for b in BOL]
-def ic_kutu(g):
-    from shapely.ops import polylabel
-    if g.geom_type != 'Polygon':
-        g = max(g.geoms, key=lambda q: q.area)
-    g = g.buffer(-3)
-    if g.is_empty:
-        return [0, 0, 0, 0]
-    if g.geom_type != 'Polygon':
-        g = max(g.geoms, key=lambda q: q.area)
-    m = polylabel(g, 1)
-    en = None
-    for a in (1, 1.5, 2, 3, 4, 6, 9):
-        lo, hi = 0, 2000
-        for _ in range(22):
-            o = (lo + hi) / 2
-            if g.contains(box(m.x - a * o, m.y - o, m.x + a * o, m.y + o)): lo = o
-            else: hi = o
-        if en is None or (a * lo) * lo > en[2] * en[3] / 4:
-            en = [m.x, m.y, 2 * a * lo, 2 * lo]
-    return [round(float(x), 1) for x in en]
-KAVS = []
-for c in KODLAR:
-    gk = unary_union([hucre[i] for i in ix_of[c]])
-    KAVS.append([halkalar(gk), KA.KOD[c][1], ic_kutu(gk)])
+def halka(g): return [round(c, 1) for xy in g.exterior.coords for c in xy]
+HUC = [[halka(hucre[i]), ust_i[N[i][3]], 0.3] for i in range(len(N))]
+KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9]] for o in ODAS]
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': BOLS, 'K': KAVS, 'R': RENK}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
