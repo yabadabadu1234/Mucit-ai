@@ -15,10 +15,10 @@ function zonu(etiket, eser) {
   return 'A';
 }
 function sar_(t, n) { const w = String(t).split(' '), o = []; let b = ''; for (const x of w) { if ((b + ' ' + x).trim().length > n && b) { o.push(b); b = x } else b = (b + ' ' + x).trim() } if (b) o.push(b); return o }
-function kelimeBlok(x, ix, kok) {
-  const [ar, tr, sn, G] = x, key = kok + '|' + ar, S = 19, O = [], W = 430;
+function kelimeBlok(x, ix, kok, W) {
+  const [ar, tr, sn, G] = x, key = kok + '|' + ar, S = 19, O = [], n1 = Math.floor((W - 26) / 6.1), n2 = Math.floor((W - 40) / 5.6);
   let y = 0; const KES_ = [];
-  O.push(['w', 0, y, ar, tr, sn, key]); y += 26;
+  O.push(['w', 0, y, ar, tr, sn, key]); y += 20;
   if (!G) return {O, h: y, key};
   const Z = {A: [], M: [], I: [], D: []}, gor = new Set();
   G.forEach(e => {
@@ -28,38 +28,38 @@ function kelimeBlok(x, ix, kok) {
   const acik = MDurum.acik.has(key);
   for (const z of ['A', 'M', 'I', 'D']) {
     const L = Z[z]; if (!L.length) continue;
-    const y0 = y; y += 8; O.push(['zl', 34, y + 11, ZON[z].ad + ' (' + L.length + ')', z]); y += 22;
-    const goster = acik ? L : L.slice(0, 4);
+    const y0 = y; y += 2;
+    const goster = acik ? L : L.slice(0, 1);
     goster.forEach((s, i) => {
-      const satirlar = sar_((i + 1) + '. ' + (s.et ? '[' + s.et + '] ' : '') + s.t, 62);
-      satirlar.forEach((l, j) => { O.push(['zt', 32, y + 10, l, j === satirlar.length - 1 ? s.ky : '', key, z]); y += S });
-      (acik ? s.mis : s.mis.slice(0, 2)).forEach(m => {
-        const ml = sar_('“' + m[0] + '”' + (m[1] ? ' — ' + m[1] : ''), 58), b0 = y + 2;
-        ml.forEach(l => { O.push(['mt', 52, y + 15, l, key]); y += 17 });
-        O.push(['bal', 44, b0, W - 70, y - b0 + 8]); y += 12;
+      const satirlar = sar_((i === 0 ? ZON[z].ad + ': ' : (i + 1) + '. ') + (s.et ? '[' + s.et + '] ' : '') + s.t, n1);
+      satirlar.forEach((l, j) => { O.push(['zt', 18, y + 10, l, j === satirlar.length - 1 ? s.ky : '', key, z]); y += S });
+      (acik ? s.mis : []).forEach(m => {
+        const ml = sar_('“' + m[0] + '”' + (m[1] ? ' — ' + m[1] : ''), n2), b0 = y + 2;
+        ml.forEach(l => { O.push(['mt', 30, y + 14, l, key]); y += 15 });
+        O.push(['bal', 24, b0, W - 30, y - b0 + 4]); y += 6;
       });
     });
-    if (!acik && (L.length > 4 || L.some(s => s.mis.length > 2))) { O.push(['fold', 32, y + 10, '… ' + (L.length > 4 ? (L.length - 4) + ' mana daha' : 'misallerin hepsi') + ' (dokun)', key]); y += S }
-    if (acik && (L.length > 4 || L.some(s => s.mis.length > 2))) { O.push(['fold', 32, y + 10, '▲ topla (dokun)', key]); y += S }
-    O.push(['box', 14, y0, W - 24, y - y0 + 10, z]); y += 22; KES_.push(y);
+    
+    if (acik && (L.length > 1 || L.some(s => s.mis.length))) { O.push(['fold', 18, y + 10, '▲ topla (dokun)', key]); y += S }
+    O.push(['box', 4, y0, W - 6, y - y0 + 4, z]); y += 6; KES_.push(y);
   }
   return {O, h: y + 4, key, kes: KES_};
 }
 const BABAD = {II: "tef'îl", III: "mufâ'ale", IV: "if'âl", V: "tefe''ul", VI: "tefâ'ul", VII: "infi'âl", VIII: "ifti'âl", IX: "if'ilâl", X: "istif'âl", XI: "if'îlâl", XII: "if'î'âl", XIII: "if'ivvâl"};
 function babAdi(b) { return String(b).replace(/bâb (XIII|XII|XI|IX|X|VIII|VII|VI|IV|V|III|II)\b/, (m, r) => BABAD[r] + ' bâbı') }
 function o_bas() { return true }
-function mustakDuzen(k) {
-  const v = MDurum.surum; if (MC_[k] && MC_[k].v === v) return MC_[k];
+function mustakDuzen(k, W = 430, iw = 1, ih = 1) {
+  const v = MDurum.surum, ck = k + '|' + W + '|' + (iw / ih).toFixed(2); if (MC_[ck] && MC_[ck].v === v) return MC_[ck];
   const D2 = SA[k]; if (!D2) return null;
   const blok = [], halka = [], kirmizi = []; const lgor = new Set();
   D2.forEach(([b, K]) => {
     const bad = babAdi(b), lb = [], hb = [], kb = [];
-    K.forEach(([t, L]) => { L.forEach((x, i) => { if (x[2] === 0) { kb.push([t, x]); return } hb.push(x); if (x[3] && !lgor.has(JSON.stringify(x[3]))) { lgor.add(JSON.stringify(x[3])); const B = kelimeBlok(x, i, k); let a0 = 0; const kes = B.kes.filter(c => c < B.h - 2).concat([B.h]); kes.forEach((c, n) => { const pr = {tip: 'k', t: t, key: B.key, h: c - a0, O: B.O.filter(o => o[2] >= a0 - 1 && o[2] < c - 1).map(o => { const p = o.slice(); p[2] -= a0; return p })}; if (n && o_bas(pr)) pr.devam = 1; lb.push(pr); a0 = c }) } }) });
+    K.forEach(([t, L]) => { L.forEach((x, i) => { if (x[2] === 0) { kb.push([t, x]); return } hb.push(x); if (x[3] && !lgor.has(JSON.stringify(x[3]))) { lgor.add(JSON.stringify(x[3])); const B = kelimeBlok(x, i, k, W); let a0 = 0; const kes = B.kes.filter(c => c < B.h - 2).concat([B.h]); kes.forEach((c, n) => { const pr = {tip: 'k', t: t, key: B.key, h: c - a0, O: B.O.filter(o => o[2] >= a0 - 1 && o[2] < c - 1).map(o => { const p = o.slice(); p[2] -= a0; return p })}; if (n && o_bas(pr)) pr.devam = 1; lb.push(pr); a0 = c }) } }) });
     if (hb.length) halka.push([bad, hb]); if (kb.length) kirmizi.push([bad, kb]);
-    if (lb.length) { let bas = [['b', 0, 22, bad]], bh = 40, ot = null; lb.forEach(B => { if (B.t !== ot) { bas.push(['t', 0, bh + 18, B.t]); bh += 30; ot = B.t }
+    if (lb.length) { let bas = [['b', 0, 14, bad, W]], bh = 20, ot = null; lb.forEach(B => { if (B.t !== ot) { bas.push(['t', 0, bh + 13, B.t]); bh += 17; ot = B.t }
       if (bas.length) { B.O = bas.concat(B.O.map(o => { const p = o.slice(); p[2] += bh; return p })); B.h += bh; bas = []; bh = 0 } blok.push(B) }) }
   });
-  const WC = 520, top = blok.reduce((a, b) => a + b.h, 0);
+  const WC = W + 20, top = blok.reduce((a, b) => a + b.h, 0);
   let en = null;
   for (let C = 1; C <= 8; C++) {
     const hed = top / C, O = [], HIT = []; let col = 0, y = 30, mx = 0;
@@ -70,15 +70,15 @@ function mustakDuzen(k) {
       if (b.tip === 't') { O.push(['t', x, y + 18, b.t]); y += b.h; return }
       b.O.forEach(o => { const p = o.slice(); p[1] += x; p[2] += y; O.push(p) });
       HIT.push([x, y, WC - 40, 26, 'gor', b.key]);
-      b.O.forEach(o => { if (o[0] === 'fold') HIT.push([x + o[1], y + o[2] - 14, 300, 18, 'acik', o[4]]) });
+      HIT.push([x, y + 22, WC - 20, Math.max(0, b.h - 22), 'acik', b.key]);
       y += b.h;
     });
-    mx = Math.max(mx, y); const Wd = (col + 1) * WC - 60, sk = 1 / Math.max(Wd, mx * 1.15);
+    mx = Math.max(mx, y); const Wd = (col + 1) * WC - 20, sk = Math.min(iw / Wd, ih / mx);
     if (!en || sk > en.sk) en = {O, HIT, W: Wd, H: mx, sk};
   }
   const sira = {box: 0, bal: 1}; en.O.sort((a, b) => (sira[a[0]] ?? 2) - (sira[b[0]] ?? 2));
   en.halka = halka; en.kirmizi = kirmizi; en.v = v; en.bos = !blok.length;
-  return MC_[k] = en;
+  return MC_[ck] = en;
 }
 const HOLC = {};
 function halkaOlc(ctx, M) {
@@ -143,8 +143,8 @@ function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
     if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); if (yazi) { cerceve_(ctx, z, bx, by, bw, bh) } else { ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.stroke() } continue }
     if (t === 'bal') { if (x + o[3] < lx0 || x > lx1 || y + o[4] < ly0 || y > ly1) continue; balon_(ctx, x, y, o[3], o[4]); ctx.fillStyle = 'rgba(255,250,235,.85)'; ctx.fill(); ctx.strokeStyle = '#c9b27a'; ctx.lineWidth = .8; ctx.stroke(); continue }
     if (x + 460 < lx0 || x > lx1 || y + 20 < ly0 || y - 20 > ly1) continue;
-    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 7, 430, 1.5); if (yazi) { ctx.font = 'bold 19px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
-    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 15px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
+    if (t === 'b') { ctx.fillStyle = '#2f6fb3'; ctx.fillRect(x, y + 7, o[4] || 430, 1.5); if (yazi) { ctx.font = 'bold 14px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x, y) } }
+    else if (t === 't') { ctx.fillStyle = '#b3541e'; if (yazi) { ctx.font = 'bold 12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(o[3], x + 4, y) } else ctx.fillRect(x + 4, y - 6, 150, 5) }
     else if (t === 'w') { const c = ['#c0392b', '#9a917a', R.yaz][o[5]]; if (yazi) semse_(ctx, x - 4, y - 3, 122, 24, c); ctx.fillStyle = c;
       if (yazi) { ctx.font = '18px Amiri'; ctx.textAlign = 'right'; ctx.fillText(o[3], x + 110, y + 14); ctx.font = '12.5px Georgia'; ctx.textAlign = 'left'; ctx.fillText(gizli(o[6]) && o[5] === 2 ? '( ? dokun, hatırla )' : '(' + o[4] + ')', x + 118, y + 13) }
       else { ctx.globalAlpha = .55; ctx.fillRect(x + 60, y + 5, 50, 7); ctx.fillRect(x + 118, y + 5, 7 * String(o[4]).length, 6); ctx.globalAlpha = 1 } }
