@@ -49,8 +49,9 @@ for ci, c in enumerate(KODLAR):
         uy = [ix[j] for j in range(len(ix)) if lab[j] == b]
         w = np.asarray(V[uy].sum(0)).ravel(); BOL.append({'kavram': c, 'ad': ', '.join(kel[np.argsort(-w)[:3]]), 'uyeler': uy})
         for i in uy: bolge[i] = len(BOL) - 1
-def kare(oge, x, y, w, h):
+def kare(oge, x, y, w, h, sag=False):
     """Kareleştirilmiş ağaç haritası (squarified treemap): [(anahtar, alan)] -> {anahtar: (x, y, w, h)}"""
+    X0, W0 = x, w
     oge = [o for o in oge if o[1] > 0]; top = sum(a for _, a in oge); o = {}
     oge = [(k, a * w * h / top) for k, a in oge]
     def kotu(sira, kenar):
@@ -67,6 +68,7 @@ def kare(oge, x, y, w, h):
             eh = s_ / w; xx = x
             for k, a_ in sira: o[k] = (xx, y, a_ / eh, eh); xx += a_ / eh
             y += eh; h -= eh
+    if sag: o = {k: (2 * X0 + W0 - v[0] - v[2], v[1], v[2], v[3]) for k, v in o.items()}
     return o
 UST = [(u, sum(len(ix_of[c]) for c, _ in L)) for u, (_, L) in enumerate(KA.AGAC)]
 UR = kare(sorted(UST, key=lambda t: -t[1]), 40, 40, 1720, 1720)
@@ -129,12 +131,12 @@ for s in range(1, 115):
     assert sorted(a for _, L in KIS for a in L) == list(range(1, na + 1)), s
     SUR.append((s, adi, na, KIS))
 QX, QY, QW, QH = 1900, 40, 1720, 1720
-QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH)
+QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH, True)
 QS, QK, QA, QW_ = [], [], [], []
 for s, adi, na, KIS in SUR:
     x, y, w, h = QR[s]; x += 3; y += 3; w -= 6; h -= 6; tb = min(30.0, max(3.0, min(w, h) * 0.12))
     QS.append([round(x, 2), round(y, 2), round(w, 2), round(h, 2), '%d · %s' % (s, adi), round(tb, 2)])
-    KR = kare([(j, len(k[1])) for j, k in enumerate(KIS)], x + 1, y + tb, w - 2, h - tb - 1)
+    KR = kare([(j, len(k[1])) for j, k in enumerate(KIS)], x + 1, y + tb, w - 2, h - tb - 1, True)
     for j, (kad, ay) in enumerate(KIS):
         kx, ky, kw, kh = KR[j]; kx += 0.8; ky += 0.8; kw -= 1.6; kh -= 1.6; kt = min(14.0, max(1.0, min(kw, kh) * 0.1))
         QK.append([round(kx, 3), round(ky, 3), round(kw, 3), round(kh, 3), kad, round(kt, 3), s])
