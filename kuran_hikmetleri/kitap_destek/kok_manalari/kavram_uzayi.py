@@ -117,19 +117,16 @@ ILK = collections.defaultdict(list)
 for e in KEL:
     if e.get('ilk'): ILK[e['ilk']].append(e['kelime'])
 SUR = []
+BT = (KH / 'kaynak' / 'sure_bolumlemeleri' / 'sure_bolumlemeleri.md').read_text(encoding='utf-8')
+BK = {}
+for m in re.finditer(r'^## (\d+)\. .*?$(.*?)(?=^## \d+\. |\Z)', BT, re.M | re.S):
+    z = re.search(r'\*\*A\. Kitap verisi.*?\*\*(.*?)(?=\n\*\*B\.|\Z)', m.group(2), re.S)
+    BK[int(m.group(1))] = [(x.strip(), int(b), int(c or b)) for x, b, c in re.findall(r'^- (.*?) \(Âyet (\d+)(?:-(\d+))?\)\s*$', z.group(1), re.M)]
 for s in range(1, 115):
     d = next(KH.glob('sureler/%03d-*/sure.md' % s)); t = d.read_text(encoding='utf-8')
     adi = re.search(r'^# S\d+ · (.*)$', t, re.M).group(1); na = len(json.load(open(KH / 'kaynak' / 'sure' / f'{s}.json', encoding='utf-8'))['verses'])
-    ks = [(a.strip(), int(b), int(c or b)) for a, b, c in re.findall(r'^- \*\*K\d+-\d+\*\* — (.*)\((\d+)(?:-(\d+))?\)\s*$', t, re.M)]
-    sah = [None] * (na + 1)
-    for j, (_, b, c) in enumerate(ks):
-        for a in range(b, min(c, na) + 1):
-            if sah[a] is None: sah[a] = j
-    KIS = []; a = 1
-    while a <= na:
-        j = sah[a]; b = a
-        while b + 1 <= na and sah[b + 1] == j: b += 1
-        KIS.append(((ks[j][0] if j is not None else 'Kısım dışı') + (' (%d)' % a if a == b else ' (%d-%d)' % (a, b)), list(range(a, b + 1)))); a = b + 1
+    KIS = [(x + (' (%d)' % b if b == c else ' (%d-%d)' % (b, c)), list(range(b, c + 1))) for x, b, c in BK[s]]
+    assert sorted(a for _, L in KIS for a in L) == list(range(1, na + 1)), s
     SUR.append((s, adi, na, KIS))
 QX, QY, QW, QH = 1900, 40, 1720, 1720
 QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH)
