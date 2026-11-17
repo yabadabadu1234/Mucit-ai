@@ -39,6 +39,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle=zem;ctx.fillRect(0,0,W,H);
  ctx.setTransform(dpr*S,0,0,dpr*S,dpr*TX,dpr*TY);
  const x0=-TX/S,y0=-TY/S,x1=(W-TX)/S,y1=(H-TY)/S,gor=b=>b[2]>=x0&&b[0]<=x1&&b[3]>=y0&&b[1]<=y1;
+ {const g0=R0*S,S0=g0<40?0:(2*g0>=Math.min(W,H)*0.92?2:1);if((S0==2)!==(OST==2)){remap(OST,S0);OST=S0;kirli=true;return}OST=S0;if(S0==2){ciz2(zem,yaz,inc,x0,y0,x1,y1);return}}
  const gorunen=[];for(let i=0;i<HP.length;i++)if(gor(KUT[i]))gorunen.push(i);
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
@@ -67,7 +68,19 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
    L.s.forEach((t,i)=>{const yy=y+(i-(L.s.length-1)/2)*L.f*1.12;ctx.strokeText(t,x,yy);ctx.fillText(t,x,yy)});ctx.textBaseline='alphabetic'})}}
 const KIRP={};function kirp(m,w,h){const K=KIRP[m]||(KIRP[m]=(()=>{ctx.font='bold 10px Georgia';const ks=m.split(' '),O=[];for(let n=1;n<=Math.min(4,ks.length);n++){let s=[],b='',hd=ks.join(' ').length/n;ks.forEach(x=>{if(b&&(b+' '+x).length>hd*1.15&&s.length<n-1){s.push(b);b=x}else b=(b?b+' ':'')+x});s.push(b);O.push([s,Math.max(...s.map(t=>ctx.measureText(t).width))/10])}return O})());
  let en=null;K.forEach(([s,gw])=>{const f=kademe(Math.min(w*.92/gw,h*.9/(s.length*1.12),60));if(!en||f>en.f)en={f,s}});return en&&en.f>=8?en:null}
-const ZK=2.4;let ZEM=null;
+const ZK=2.4;let ZEM=null;let OST=0;
+function yerOf(v,geo){return geo==2?[v[10],v[11]]:[v[0],v[1]]}
+function remap(a,b){const sx=(W/2-TX)/S,sy=(H/2-TY)/S;let en=null,ed=1e18;for(const k in V){const p=yerOf(V[k],a),d=(p[0]-sx)**2+(p[1]-sy)**2;if(d<ed){ed=d;en=k}}if(!en)return;const pa=yerOf(V[en],a),pb=yerOf(V[en],b),qx=pa[0]*S+TX,qy=pa[1]*S+TY;TX=qx-pb[0]*S;TY=qy-pb[1]*S}
+function ciz2(zem,yaz,inc,x0,y0,x1,y1){const ic=(x,y,w,h)=>x+w>=x0&&x<=x1&&y+h>=y0&&y<=y1;
+ D.O2.forEach(o=>{if(!ic(o[0],o[1],o[2],o[3]))return;ctx.fillStyle=karis(D.R[o[4]],0.32);ctx.fillRect(o[0],o[1],o[2],o[3]);ctx.strokeStyle=karis(D.R[o[4]],0.8);ctx.lineWidth=1.4/S;ctx.strokeRect(o[0],o[1],o[2],o[3])});
+ D.BL2.forEach(b=>{if(!ic(b[0],b[1],b[2],b[3]))return;ctx.fillStyle=karis(D.R[b[5]],0.18);ctx.fillRect(b[0],b[1],b[2],b[3]);ctx.strokeStyle=karis(D.R[b[5]],0.55);ctx.lineWidth=0.8/S;ctx.strokeRect(b[0],b[1],b[2],b[3]);
+  const f=Math.min(b[6]*0.7,15/S);if(f*S>=7){ctx.fillStyle=zitRenk(D.R[b[5]]);ctx.font=f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(b[4],b[0]+f*0.4,b[1]+b[6]/2);ctx.textBaseline='alphabetic'}});
+ D.O2.forEach((o,j)=>{const k=D.K2[j];if(!ic(o[0],o[1],o[2],o[3]))return;const f=Math.min(k[3],22/S);ctx.fillStyle=zitRenk(D.R[o[4]]);ctx.font='bold '+f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(o[5],o[0]+f*0.5,k[1]);ctx.textBaseline='alphabetic'});
+ for(const k in V){const v=V[k],x=v[10],y=v[11],w=v[12],h=v[13];if(!ic(x-w/2,y-h/2,w,h))continue;const i=v[7];
+  ctx.beginPath();ctx.roundRect(x-w/2,y-h/2,w,h,R0*0.12);ctx.fillStyle=karis(D.R[D.H[i][1]],0.32);ctx.fill();ctx.strokeStyle=zitRenk(D.R[D.H[i][1]]);ctx.lineWidth=1.6/S;ctx.stroke();
+  yukle(v[6]);const M=v[14]&&SA[v[6]]?mustakDuzen(v[6],v[14],0.62,1):null;
+  if(M&&!M.bos){const sc=D.C2,ox=x-M.W*sc/2,oy=y-M.H*sc/2;ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);mustakCiz(ctx,M,(x0-ox)/sc,(y0-oy)/sc,(x1-ox)/sc,(y1-oy)/sc,S*sc,{yaz,inc});MYER[i]=[ox,oy,sc,v[6]];ctx.restore()}
+  else{ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';ctx.font=(Math.min(w,h)*0.35)+'px Amiri';ctx.fillText(v[6],x,y-h*0.12);ctx.font=(Math.min(w,h)*0.09)+'px Georgia';ctx.fillText(v[4],x,y+h*0.22);ctx.textBaseline='alphabetic'}}}
 const EID={};function enIyiDuzen(k,r){const ck=k+'|'+r.toFixed(3)+'|'+MDurum.surum;if(EID[ck])return EID[ck];if(!SA[k])return null;const iw=r*1.94,ih=r*1.94;let en=null;
  for(const Wb of [260,320,380,450,530,620,720,840]){const a=W/Math.max(1,H-60),M=mustakDuzen(k,Wb,a,1);if(!M||M.bos)continue;const sc=Math.min(a/M.W,1/M.H);if(!en||sc>en.sc)en={M,sc}}return EID[ck]=en}
 const KAD=[6,7,8,10,12,14,17,20,24,29,35,42,50,60,72,86,104,125];function kademe(p){let o=0;for(const k of KAD)if(k<=p)o=k;return o}
@@ -104,9 +117,9 @@ cv.addEventListener('pointermove',e=>{const o=PT.get(e.pointerId);if(!o)return;c
 function birak(e){PT.delete(e.pointerId);if(PT.size<2)ilkD=0}
 cv.addEventListener('pointercancel',birak);
 cv.addEventListener('pointerup',e=>{const h=hareket;birak(e);if(h>6||PT.size)return;const [x,y]=yer(e),wx=(x-TX)/S,wy=(y-TY)/S;let en=null,ed=1e18;
- for(const k in V){const v=V[k],d=(v[0]-wx)**2+(v[1]-wy)**2;if(d<ed){ed=d;en=k}}
+ for(const k in V){const p=yerOf(V[k],OST),d=(p[0]-wx)**2+(p[1]-wy)**2;if(d<ed){ed=d;en=k}}
  if(en){const kb=KBT[V[en][7]];if(kb&&wx>=kb[0]&&wx<=kb[0]+kb[2]&&wy>=kb[1]&&wy<=kb[1]+kb[3]){kirmiziAc(kb[4]);return}const my=MYER[V[en][7]];if(my){const M=mustakDuzen(my[3]);if(M&&mustakTikla(M,(wx-my[0])/my[2],(wy-my[1])/my[2])){kirli=true;return}}}
- if(en&&ctx.isPointInPath(HP[V[en][7]],wx,wy)&&en!==secK)sec(en);else temizle()});
+ if(OST!=2&&en&&ctx.isPointInPath(HP[V[en][7]],wx,wy)&&en!==secK)sec(en);else temizle()});
 function temizle(){secK=null;document.getElementById('bil').style.display='none';kirli=true}
 function sec(k){secK=k;kirli=true;const v=V[k],kard=Object.keys(V).filter(x=>V[x][6]==v[6]&&x!=k),b=document.getElementById('bil');b.style.display='block';
  b.innerHTML=`<span style="float:right;cursor:pointer;padding:0 4px" onclick="temizle()">✕</span><b style="font-family:Amiri;font-size:22px">${k}</b> ${v[4]}<br>${v[2]} › ${v[3]}<br><br>yakınları: ${v[5].join(' ')}<br>aynı kökün öbür asılları (kırmızı kesik): ${kard.join(' ')||'yok'}<br><a href="zihin_haritasi.html#${v[6]}">türeme ağacı</a>`}

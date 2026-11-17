@@ -103,8 +103,46 @@ def halka(g): return [round(c, 1) for xy in g.exterior.coords for c in xy]
 HUC = [[halka(hucre[i]), ust_i[N[i][3]], 0.3] for i in range(len(N))]
 KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9], [o[0] + o[2] / 2, o[1] + bas(o[2]) / 2 + 1, o[2] * 0.96, bas(o[2]) * 0.9]] for o in ODAS]
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
+EB = json.load(open(HERE / 'lugat_ebat.json', encoding='utf-8'))
+R0 = 0.93 * float(np.median(IC)); SJ = 0.92 * 414 / (2 * R0); C2 = 9 / (11.5 * SJ)
+def raf(oge, gen, ara):
+    x = y = sh = 0; yer = {}; mx = 0
+    for k, w, h in oge:
+        if x > 0 and x + w > gen: x = 0; y += sh + ara; sh = 0
+        yer[k] = (x, y); x += w + ara; sh = max(sh, h); mx = max(mx, x - ara)
+    return yer, mx, y + sh
+B2 = {}; HC = {}
+for i in range(len(N)):
+    r = 0.93 * IC[i]; e = EB.get(N[i][0]); pd = r * 0.12
+    w, h = (max(2 * r, e[1] * C2 + pd), max(2 * r, e[2] * C2 + pd)) if e else (2 * r, 2 * r)
+    HC[i] = (w, h, e[0] if e else 0)
+ARA = R0 * 0.5; BLK2 = []; ODA2 = []; P2 = {}
+oda_kut = {}
+for c in KODLAR:
+    bl = [b_ for b_ in range(len(BOL)) if BOL[b_]['kavram'] == c]; bk = []
+    for b_ in bl:
+        uy = sorted(BOL[b_]['uyeler'], key=lambda i: (-Z[i, 0])); top = sum(HC[i][0] * HC[i][1] for i in uy)
+        gen = max(max(HC[i][0] for i in uy), math.sqrt(top) * 1.3)
+        yer, bw, bh = raf([(i, HC[i][0], HC[i][1]) for i in uy], gen, ARA)
+        bt = R0 * 0.9; bk.append((b_, bw + 2 * ARA, bh + bt + 2 * ARA, yer, bt))
+    top = sum(w * h for _, w, h, _, _ in bk); gen = max(max(w for _, w, _, _, _ in bk), math.sqrt(top) * 1.2)
+    yer, rw, rh = raf([(b_, w, h) for b_, w, h, _, _ in bk], gen, ARA * 2)
+    tb = R0 * 2.2; oda_kut[c] = (rw + 4 * ARA, rh + tb + 4 * ARA, bk, yer, tb)
+SIRA = [c for _, L in KA.AGAC for c, _ in L]
+top = sum(oda_kut[c][0] * oda_kut[c][1] for c in SIRA); gen = max(max(oda_kut[c][0] for c in SIRA), math.sqrt(top) * 1.0)
+oyer, MW, MH = raf([(c, oda_kut[c][0], oda_kut[c][1]) for c in SIRA], gen, ARA * 6)
+K2 = []
+for c in SIRA:
+    ox, oy = oyer[c]; rw, rh, bk, yer, tb = oda_kut[c]; ODA2.append([round(ox, 1), round(oy, 1), round(rw, 1), round(rh, 1), ust_i[c], KA.KOD[c][1]])
+    K2.append([ox + rw / 2, oy + tb / 2, rw * 0.96, tb * 0.8])
+    for b_, bw, bh, cyer, bt in bk:
+        bx, by = yer[b_]; bx += ox + 2 * ARA; by += oy + tb + 2 * ARA
+        BLK2.append([round(bx, 1), round(by, 1), round(bw, 1), round(bh, 1), BOL[b_]['ad'], ust_i[c], round(bt, 1)])
+        for i, (cx, cy) in cyer.items():
+            w, h, wb = HC[i]; P2[i] = [round(bx + ARA + cx + w / 2, 1), round(by + bt + ARA + cy + h / 2, 1), round(w, 2), round(h, 2), wb]
+for i in range(len(N)): VER[ad(i)] += P2[i]
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'O2': ODA2, 'BL2': BLK2, 'K2': K2, 'C2': C2}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
