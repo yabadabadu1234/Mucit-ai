@@ -1,9 +1,7 @@
 /* Müştak listesi düzeni ve çizimi (kavram uzayı ve zihin haritası ortak).
    Usul: yer sabittir (asıl, mecaz, ıstılah, deyim hep aynı sırada); biçim manayı taşır; bir kapta en çok 4 mana;
    misal kendi manasının altında; sınama kipi manaları gizler, dokununca açar; süs yoktur. */
-const KAD = [6, 7, 8, 10, 12, 14, 17, 20, 24, 29, 35, 42, 50, 60, 72, 86, 104, 125];
-function kademe(p) { let o = 0; for (const k of KAD) if (k <= p) o = k; return o }
-function yz_(c, es, b, px, fn) { const f = kademe(px * es); if (!f) return false; c.font = b + (f / es) + 'px ' + fn; return true }
+function yz_(c, es, b, px, fn) { if (px * es < 6) return false; c.font = b + px + 'px ' + fn; return true }
 const MC_ = {}, MDurum = {acik: new Set(), gor: new Set(), sina: false, surum: 0};
 const ZON = {
   A: {yaz: '#3b2f1e', acik: '#eadcbc', ad: 'Asıl mana', isaret: '■', zemin: 'rgba(184,134,11,.10)', kenar: '#a8842a'},
@@ -140,7 +138,7 @@ function sekil_(c, z, x, y, w, h) {
 }
 function balon_(c, x, y, w, h) { c.beginPath(); c.roundRect(x, y, w, h, 7); c.moveTo(x + 14, y); c.lineTo(x + 8, y - 6); c.lineTo(x + 22, y) }
 function mustakCiz(ctx, M, lx0, ly0, lx1, ly1, es, R) {
-  const yazi = kademe(10.5 * es) > 0, gizli = k => MDurum.sina && !MDurum.gor.has(k);
+  const yazi = 10.5 * es >= 6, gizli = k => MDurum.sina && !MDurum.gor.has(k);
   for (const o of M.O) {
     const t = o[0], x = o[1], y = o[2];
     if (t === 'box') { const [, bx, by, bw, bh, z] = o; if (bx + bw < lx0 || bx > lx1 || by + bh < ly0 || by > ly1) continue; sekil_(ctx, z, bx, by, bw, bh); ctx.fillStyle = ZON[z].zemin; ctx.fill(); if (yazi) { cerceve_(ctx, z, bx, by, bw, bh) } else { ctx.strokeStyle = ZON[z].kenar; ctx.lineWidth = 1; ctx.stroke() } continue }
