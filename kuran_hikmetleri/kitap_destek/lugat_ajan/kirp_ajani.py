@@ -54,6 +54,11 @@ def isle(kok):
     json.dump({'kok': kok, 'model': MODEL, 'maddeler': [{'eser': m['eser'], 'sayfa': m['sayfa']} for m in M], 'kod': K, 'kirpma': S}, open(yol, 'w'), ensure_ascii=False, indent=1)
     return f"{len(S)} yer, {sum(1 for s in S if s.get('metin'))} kesildi"
 if __name__ == '__main__':
+    from concurrent.futures import ThreadPoolExecutor
     K = sys.argv[1:] or sorted(f[:-5] for f in os.listdir('/home/user/Mucit-ai/kuran_hikmetleri/kelime_kaydi/kuranda_var/kokler') if f.endswith('.json'))
-    for k in K:
-        t = time.time(); print(k, isle(k), round(time.time() - t), 's', flush=True)
+    K = [k for k in K if not os.path.exists(os.path.join(CIK, k + '.json'))]
+    def tek(k):
+        t = time.time()
+        try: print(k, isle(k), round(time.time() - t), 's', flush=True)
+        except Exception as e: print(k, 'HATA', e, flush=True)
+    with ThreadPoolExecutor(int(os.environ.get('KOL', '3'))) as ex: list(ex.map(tek, K))

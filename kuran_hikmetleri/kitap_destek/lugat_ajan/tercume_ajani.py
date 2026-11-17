@@ -29,8 +29,14 @@ def isle(kok):
     D['tamam'] = True; json.dump(D, open(yol, 'w'), ensure_ascii=False, indent=1)
     return sum(len(m['parcalar']) for m in D['maddeler'])
 if __name__ == '__main__':
+    from concurrent.futures import ThreadPoolExecutor
     K = sys.argv[1:] or sorted(f[:-5] for f in os.listdir('/home/user/Mucit-ai/kuran_hikmetleri/kelime_kaydi/kuranda_var/kokler') if f.endswith('.json'))
-    for k in K:
+    def bitti(k):
         y = os.path.join(CIK, k + '.json')
-        if os.path.exists(y) and json.load(open(y)).get('tamam'): continue
-        t = time.time(); print(k, isle(k), 'parça', round(time.time() - t), 's', flush=True)
+        return os.path.exists(y) and json.load(open(y)).get('tamam')
+    K = [k for k in K if not bitti(k)]
+    def tek(k):
+        t = time.time()
+        try: print(k, isle(k), 'parça', round(time.time() - t), 's', flush=True)
+        except Exception as e: print(k, 'HATA', e, flush=True)
+    with ThreadPoolExecutor(int(os.environ.get('KOL', '5'))) as ex: list(ex.map(tek, K))
