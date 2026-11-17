@@ -118,6 +118,13 @@ KEL = json.load(open(KH / 'kaynak' / 'sozluk' / 'kelimeler.json', encoding='utf-
 ILK = collections.defaultdict(list)
 for e in KEL:
     if e.get('ilk'): ILK[e['ilk']].append(e['kelime'])
+KOKILK = {}
+for e in KEL:
+    if e.get('ilk') and e.get('kok'):
+        sa = tuple(int(v) for v in e['ilk'].split(':'))
+        if e['kok'] not in KOKILK or sa < KOKILK[e['kok']]: KOKILK[e['kok']] = sa
+KOKA = collections.defaultdict(list)
+for k, (s_, a_) in KOKILK.items(): KOKA['%d:%d' % (s_, a_)].append(k)
 SUR = []
 BT = (KH / 'kaynak' / 'sure_bolumlemeleri' / 'sure_bolumlemeleri.md').read_text(encoding='utf-8')
 BK = {}
@@ -132,7 +139,7 @@ for s in range(1, 115):
     SUR.append((s, adi, na, KIS))
 QX, QY, QW, QH = 1900, 40, 1720, 1720
 QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH, True)
-QS, QK, QA, QW_ = [], [], [], []
+QS, QK, QA, QW_, QG = [], [], [], [], []
 for s, adi, na, KIS in SUR:
     x, y, w, h = QR[s]; x += 3; y += 3; w -= 6; h -= 6; tb = min(30.0, max(3.0, min(w, h) * 0.12))
     QS.append([round(x, 2), round(y, 2), round(w, 2), round(h, 2), '%d · %s' % (s, adi), round(tb, 2)])
@@ -146,8 +153,11 @@ for s, adi, na, KIS in SUR:
             W_ = ILK.get('%d:%d' % (s, a), [])
             for (wx, wy, wc), k in zip(izgara(len(W_), ax, ay_ + at, c2, c2 - at, True), W_):
                 QW_.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
+            R_ = KOKA.get('%d:%d' % (s, a), [])
+            for (wx, wy, wc), k in zip(izgara(len(R_), ax, ay_ + at, c2, c2 - at, True), R_):
+                QG.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'QG': QG}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:

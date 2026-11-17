@@ -69,12 +69,14 @@ const KIRP={};function kirp(m,w,h){const K=KIRP[m]||(KIRP[m]=(()=>{ctx.font='bol
  let en=null;K.forEach(([s,gw])=>{const f=kademe(Math.min(w*.92/gw,h*.9/(s.length*1.12),60));if(!en||f>en.f)en={f,s}});return en&&en.f>=8?en:null}
 const QG={};function genis(t,fn){const k=fn+t;if(QG[k]===undefined){ctx.font='100px '+fn;QG[k]=ctx.measureText(t).width/100}return QG[k]}
 function kutuYaz(t,x,y,w,h,fn,b,hiz){const g=genis(t,fn);const f=kademe(Math.min(w*S*0.92/g,h*S*0.8,hiz||60));if(f<7)return false;ctx.font=(b||'')+(f/S)+'px '+fn;ctx.fillText(t,x+w/2,y+h/2);return true}
-function kuranCiz(x0,y0,x1,y1,yaz){const gor=(x,y,w,h)=>x<=x1&&x+w>=x0&&y<=y1&&y+h>=y0;ctx.textAlign='center';ctx.textBaseline='middle';
+function kuranCiz(x0,y0,x1,y1,yaz){kuranIc(x0,y0,x1,y1,yaz,0,D.QW,'Kur\'ân uzayı · ilk geçen kelime');ctx.save();ctx.translate(DX,0);kuranIc(x0-DX,y0,x1-DX,y1,yaz,DX,D.QG,'Kur\'ân uzayı · ilk geçen kök');ctx.restore()}
+const DX=1860;
+function kuranIc(x0,y0,x1,y1,yaz,dx,KEL_,bas){const gor=(x,y,w,h)=>x<=x1&&x+w>=x0&&y<=y1&&y+h>=y0;ctx.textAlign='center';ctx.textBaseline='middle';
  D.QS.forEach(s=>{if(!gor(s[0],s[1],s[2],s[3]))return;ctx.fillStyle='#efe6cc';ctx.fillRect(s[0],s[1],s[2],s[3]);ctx.strokeStyle='#8a6d2b';ctx.lineWidth=1.4/S;ctx.strokeRect(s[0],s[1],s[2],s[3]);ctx.fillStyle='#5a3d0c';kutuYaz(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ')});
  D.QK.forEach(k=>{if(k[2]*S<3||!gor(k[0],k[1],k[2],k[3]))return;ctx.fillStyle='#f8f2e0';ctx.fillRect(k[0],k[1],k[2],k[3]);ctx.strokeStyle='#2f6fb3';ctx.lineWidth=0.9/S;ctx.strokeRect(k[0],k[1],k[2],k[3]);ctx.fillStyle='#1f4f86';kutuYaz(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ',17)});
  D.QA.forEach(a=>{if(a[2]*S<3||!gor(a[0],a[1],a[2],a[2]))return;ctx.fillStyle='#fffdf6';ctx.fillRect(a[0],a[1],a[2],a[2]);ctx.strokeStyle='#3f7f3a';ctx.lineWidth=0.7/S;ctx.strokeRect(a[0],a[1],a[2],a[2]);ctx.fillStyle='#2e5e2a';kutuYaz(a[3],a[0],a[1],a[2],a[4],'Georgia','',14)});
- D.QW.forEach(w=>{if(w[2]*S<6||!gor(w[0],w[1],w[2],w[2]))return;ctx.strokeStyle='#b8860b';ctx.lineWidth=0.5/S;ctx.strokeRect(w[0],w[1],w[2],w[2]);ctx.fillStyle=yaz;kutuYaz(w[3],w[0],w[1],w[2],w[2],'Amiri','',42)});
- ctx.textBaseline='alphabetic'}
+ KEL_.forEach(w=>{if(w[2]*S<6||!gor(w[0],w[1],w[2],w[2]))return;ctx.strokeStyle='#b8860b';ctx.lineWidth=0.5/S;ctx.strokeRect(w[0],w[1],w[2],w[2]);ctx.fillStyle=yaz;kutuYaz(w[3],w[0],w[1],w[2],w[2],'Amiri','',42)});
+ ctx.fillStyle='#5a3d0c';kutuYaz(bas,1900,8,1720,28,'Georgia','bold ',30);ctx.textBaseline='alphabetic'}
 const ZK=2.4;let ZEM=null;
 const EID={};function enIyiDuzen(k,r){const ck=k+'|'+r.toFixed(3)+'|'+MDurum.surum;if(EID[ck])return EID[ck];if(!SA[k])return null;const iw=r*1.94,ih=r*1.94;let en=null;
  for(const Wb of [260,320,380,450,530,620,720,840]){const M=mustakDuzen(k,Wb,iw,ih);if(!M||M.bos)continue;const sc=Math.min(iw/M.W,ih/M.H);if(!en||sc>en.sc)en={M,sc}}return EID[ck]=en}
@@ -100,7 +102,7 @@ function taban(c,lst,s,zem,yaz){D.O.forEach(o=>{c.fillStyle=karis(D.R[o[4]],0.32
 function zeminKur(zem,yaz){ZEM=document.createElement('canvas');ZEM.width=ZEM.height=Math.round(1800*ZK);ZEM.tema=zem;const c=ZEM.getContext('2d');c.setTransform(ZK,0,0,ZK,0,0);
  taban(c,HP.map((_,i)=>i),ZK/1.6,zem,yaz)}
 function dongu(){if(kirli)ciz();requestAnimationFrame(dongu)}
-function yakin(f,x,y){const en=Math.min(W/3700,H/1800)*0.85;if(S*f<en)f=en/S;const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
+function yakin(f,x,y){const en=Math.min(W/5500,H/1800)*0.85;if(S*f<en)f=en/S;const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
 const yer=e=>{const r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};
 cv.addEventListener('wheel',e=>{e.preventDefault();const [x,y]=yer(e);yakin(e.deltaY>0?0.87:1.15,x,y)},{passive:false});
 cv.addEventListener('dblclick',e=>{const [x,y]=yer(e);yakin(3,x,y)});
