@@ -42,8 +42,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  const gorunen=[];for(let i=0;i<HP.length;i++)if(gor(KUT[i]))gorunen.push(i);
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
- const g=R0*S;let ST=g<40?0:1;if(ST){let mk=null,md=1e18;const sx=(W/2-TX)/S,sy=(H/2-TY)/S;gorunen.forEach(i=>{const v=V[IDX[i]],d=(v[0]-sx)**2+(v[1]-sy)**2;if(d<md){md=d;mk=i}});
-  if(mk!=null){const v=V[IDX[mk]];yukle(v[6]);const L=enIyiDuzen(v[6],RCK[mk]);if(L&&L.sc*S*11.5>=8&&RCK[mk]*2*S<=Math.max(W,H)*1.05)ST=2;else if(L&&L.sc*S*11.5>=8)ST=2}}
+ const g=R0*S,ST=g<40?0:(2*g>=Math.min(W,H)*0.92?2:1);
  const icler=ST?gorunen.slice():[];
  icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
   ctx.lineWidth=1.5/S;A.L.forEach(l=>{ctx.strokeStyle=l[4];ctx.beginPath();ctx.moveTo(l[0],l[1]);ctx.lineTo(l[2],l[3]);ctx.stroke()});
