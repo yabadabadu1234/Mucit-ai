@@ -101,7 +101,7 @@ json.dump({'hiyerarsi': H, 'asillar': {ad(i): {'kok': N[i][0], 'asil': N[i][2], 
 RENK = ['#7a7a7a', '#5a7a2a', '#b3541e', '#2f6fb3', '#8a3fa0', '#a0304a', '#2c8c7c', '#b8860b', '#6b5a3a']
 def halka(g): return [round(c, 1) for xy in g.exterior.coords for c in xy]
 HUC = [[halka(hucre[i]), ust_i[N[i][3]], 0.3] for i in range(len(N))]
-KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9]] for o in ODAS]
+KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9], [o[0] + o[2] / 2, o[1] + bas(o[2]) / 2 + 1, o[2] * 0.96, bas(o[2]) * 0.9]] for o in ODAS]
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
 VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK}, ensure_ascii=False, separators=(',', ':'))
