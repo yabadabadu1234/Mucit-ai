@@ -3,6 +3,9 @@ name: Pages
 on:
   push:
     branches: [claude/kuran-hikmetleri]
+    paths-ignore:
+      - 'kuran_hikmetleri/kitap_destek/lugat_ajan/kirp/**'
+      - 'kuran_hikmetleri/kitap_destek/lugat_ajan/tercume/**'
   workflow_dispatch:
 
 permissions:
@@ -12,7 +15,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -83,17 +86,3 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-      - name: Dal yayınının bitmesini bekle (o biterse eski nüshayı üstüne yazar)
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for i in $(seq 1 60); do
-            b=$(gh api "repos/${GITHUB_REPOSITORY}/pages/builds/latest" --jq '.commit+" "+.status' 2>/dev/null || true)
-            echo "$b"
-            case "$b" in "${GITHUB_SHA} built"*|"${GITHUB_SHA} errored"*) break;; esac
-            sleep 10
-          done
-
-      - name: Yeniden yayınla (son sözü bu iş akışı söylesin)
-        uses: actions/deploy-pages@v4
