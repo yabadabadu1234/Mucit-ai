@@ -75,7 +75,7 @@ function kuranIc(x0,y0,x1,y1,yaz,dx,KEL_,bas){const gor=(x,y,w,h)=>x<=x1&&x+w>=x
  D.QS.forEach(s=>{if(!gor(s[0],s[1],s[2],s[3]))return;ctx.fillStyle='#efe6cc';ctx.fillRect(s[0],s[1],s[2],s[3]);ctx.strokeStyle='#8a6d2b';ctx.lineWidth=1.4/S;ctx.strokeRect(s[0],s[1],s[2],s[3]);ctx.fillStyle='#5a3d0c';kutuYaz(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ')});
  D.QK.forEach(k=>{if(k[2]*S<3||!gor(k[0],k[1],k[2],k[3]))return;ctx.fillStyle='#f8f2e0';ctx.fillRect(k[0],k[1],k[2],k[3]);ctx.strokeStyle='#2f6fb3';ctx.lineWidth=0.9/S;ctx.strokeRect(k[0],k[1],k[2],k[3]);ctx.fillStyle='#1f4f86';kutuYaz(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ',17)});
  D.QA.forEach(a=>{if(a[2]*S<3||!gor(a[0],a[1],a[2],a[2]))return;ctx.fillStyle='#fffdf6';ctx.fillRect(a[0],a[1],a[2],a[2]);ctx.strokeStyle='#3f7f3a';ctx.lineWidth=0.7/S;ctx.strokeRect(a[0],a[1],a[2],a[2]);ctx.fillStyle='#2e5e2a';kutuYaz(a[3],a[0],a[1],a[2],a[4],'Georgia','',14)});
- KEL_.forEach(w=>{if(w[2]*S<6||!gor(w[0],w[1],w[2],w[2]))return;ctx.strokeStyle='#b8860b';ctx.lineWidth=0.5/S;ctx.strokeRect(w[0],w[1],w[2],w[2]);ctx.fillStyle=yaz;kutuYaz(w[3],w[0],w[1],w[2],w[2],'Amiri','',42)});
+ KEL_.forEach(w=>{if(w[2]*S<6||!gor(w[0],w[1],w[2],w[2]))return;ctx.strokeStyle='#b8860b';ctx.lineWidth=0.5/S;ctx.strokeRect(w[0],w[1],w[2],w[2]);ctx.fillStyle=w[4]?'#1f4f86':yaz;kutuYaz(w[3],w[0],w[1],w[2],w[2],'Amiri','',42)});
  ctx.fillStyle='#5a3d0c';kutuYaz(bas,1900,8,1720,28,'Georgia','bold ',30);ctx.textBaseline='alphabetic'}
 const ZK=2.4;let ZEM=null;
 const EID={};function enIyiDuzen(k,r){const ck=k+'|'+r.toFixed(3)+'|'+MDurum.surum;if(EID[ck])return EID[ck];if(!SA[k])return null;const iw=r*1.94,ih=r*1.94;let en=null;

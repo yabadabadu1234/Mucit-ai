@@ -1,7 +1,7 @@
 """Tek komut: python3 kavram_uzayi.py [--png]
 Kategori uzayı (F 3-I 380): her mevzu bir dikdörtgen oda, bölgeler oda içinde bloklar, çekirdekler blokta ızgara. Her nokta bir kökün bir ASLIDIR; kavramı kategori/*.txt'den (elle) gelir.
 Yakın kavramlar yan yana, kavram içinde manası yakın asıllar komşu. Hiyerarşi: üst kategori > kavram > bölge > asıl."""
-import json, math, re, sys, pathlib, collections
+import json, math, re, sys, pathlib, collections, lzma
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
@@ -118,13 +118,30 @@ KEL = json.load(open(KH / 'kaynak' / 'sozluk' / 'kelimeler.json', encoding='utf-
 ILK = collections.defaultdict(list)
 for e in KEL:
     if e.get('ilk'): ILK[e['ilk']].append(e['kelime'])
+BW = {"'": 'ء', '|': 'آ', '>': 'أ', '&': 'ؤ', '<': 'إ', '}': 'ئ', 'A': 'ا', 'b': 'ب', 'p': 'ة', 't': 'ت', 'v': 'ث', 'j': 'ج', 'H': 'ح', 'x': 'خ', 'd': 'د', '*': 'ذ', 'r': 'ر', 'z': 'ز', 's': 'س', '$': 'ش', 'S': 'ص', 'D': 'ض', 'T': 'ط', 'Z': 'ظ', 'E': 'ع', 'g': 'غ', 'f': 'ف', 'q': 'ق', 'k': 'ك', 'l': 'ل', 'm': 'م', 'n': 'ن', 'h': 'ه', 'w': 'و', 'Y': 'ى', 'y': 'ي', '`': '\u0670', '{': 'ٱ'}
+def bw(s, kok):
+    o = ''
+    for c in s:
+        if kok: o += 'ء' if c in "A'><&}|" else BW.get(c, '')
+        else: o += BW.get(c, '')
+    return o
+def lugat_basligi(s):
+    s = bw(s, False)
+    s = re.sub('[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]', '', s)
+    return s.replace('ٱ', 'ا').replace('أ', 'ا').replace('إ', 'ا').replace('آ', 'ا').replace('ؤ', 'ء').replace('ئ', 'ء')
 KOKILK = {}
-for e in KEL:
-    if e.get('ilk') and e.get('kok'):
-        sa = tuple(int(v) for v in e['ilk'].split(':'))
-        if e['kok'] not in KOKILK or sa < KOKILK[e['kok']]: KOKILK[e['kok']] = sa
+with lzma.open(KH / 'kaynak' / 'lugat' / 'ham' / 'quranic_arabic_corpus_morphology_0.4.txt.xz', 'rt', encoding='utf-8') as f_:
+    for ln in f_:
+        if not ln.startswith('('): continue
+        loc, form, tag, ft = ln.rstrip('\n').split('\t')
+        if not ft.startswith('STEM'): continue
+        s_, a_, w_, m_ = (int(v) for v in loc.strip('()').split(':'))
+        F = {x.split(':')[0]: x.split(':', 1)[1] for x in ft.split('|') if ':' in x}
+        if 'ROOT' in F: k, fl = bw(F['ROOT'], True), 0
+        else: k, fl = lugat_basligi(F.get('LEM') or form), 1
+        if k and (k, fl) not in KOKILK: KOKILK[(k, fl)] = (s_, a_, w_, m_)
 KOKA = collections.defaultdict(list)
-for k, (s_, a_) in KOKILK.items(): KOKA['%d:%d' % (s_, a_)].append(k)
+for (k, fl), (s_, a_, w_, m_) in sorted(KOKILK.items(), key=lambda z: z[1]): KOKA['%d:%d' % (s_, a_)].append([k, fl])
 SUR = []
 BT = (KH / 'kaynak' / 'sure_bolumlemeleri' / 'sure_bolumlemeleri.md').read_text(encoding='utf-8')
 BK = {}
@@ -155,7 +172,7 @@ for s, adi, na, KIS in SUR:
                 QW_.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
             R_ = KOKA.get('%d:%d' % (s, a), [])
             for (wx, wy, wc), k in zip(izgara(len(R_), ax, ay_ + at, c2, c2 - at, True), R_):
-                QG.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
+                QG.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k[0], k[1]])
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
 VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'QG': QG}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
