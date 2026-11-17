@@ -43,13 +43,14 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  if(S*dpr<=ZK){if(!ZEM||ZEM.tema!==zem)zeminKur(zem,yaz);ctx.drawImage(ZEM,0,0,1800,1800)}
  else{taban(ctx,gorunen,S,zem,yaz)}
  const g=R0*S,ST=g<40?0:(2*g>=Math.min(W,H)*0.92?2:1);
- const icler=ST?gorunen.slice():[];
+ const icler=ST?gorunen.slice():[];{const sx=(W/2-TX)/S,sy=(H/2-TY)/S,dd=i=>{const v=V[IDX[i]];return (v[0]-sx)**2+(v[1]-sy)**2};icler.sort((a,b)=>dd(b)-dd(a))}
  icler.forEach(i=>{const k=IDX[i],v=V[k],A=agac(i);ctx.save();ctx.clip(HP[i]);
   ctx.lineWidth=1.5/S;A.L.forEach(l=>{ctx.strokeStyle=l[4];ctx.beginPath();ctx.moveTo(l[0],l[1]);ctx.lineTo(l[2],l[3]);ctx.stroke()});
   const yaziVar=A.fs*S>4;A.T.forEach(t=>{ctx.fillStyle=t[5];ctx.beginPath();ctx.arc(t[6],t[7],A.fs*0.25,0,7);ctx.fill();if(yaziVar){ctx.fillStyle=yaz;ctx.font=t[3]+'px Georgia';ctx.textAlign=t[4]?'left':'right';ctx.fillText(t[2],t[0],t[1])}});
   ctx.restore();ctx.save();cekirdek(ctx,i,S);
   if(ST==1){ozetCiz(v,A.rc,yaz,i)}
-  else if(ST==2){yukle(v[6]);const L=enIyiDuzen(v[6],A.rc);if(L){const M=L.M,sc=L.sc,ox=v[0]-M.W*sc/2,oy=v[1]-M.H*sc/2;
+  else if(ST==2){yukle(v[6]);const L=enIyiDuzen(v[6],A.rc);if(L){const M=L.M,S0=Math.min(W,H)*0.92/(2*R0),sc=9/(11.5*S0),cw=M.W*sc,chh=M.H*sc,pd=A.rc*0.06,ww=Math.max(2*A.rc,cw+2*pd),wh=Math.max(2*A.rc,chh+2*pd),ox=v[0]-cw/2,oy=v[1]-chh/2;
+   ctx.beginPath();ctx.roundRect(v[0]-ww/2,v[1]-wh/2,ww,wh,A.rc*0.12);ctx.fillStyle=karis(D.R[D.H[i][1]],0.32);ctx.fill();ctx.strokeStyle=zitRenk(D.R[D.H[i][1]]);ctx.lineWidth=1.6/S;ctx.stroke();
    ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);const lx0=(x0-ox)/sc,ly0=(y0-oy)/sc,lx1=(x1-ox)/sc,ly1=(y1-oy)/sc;
    mustakCiz(ctx,M,lx0,ly0,lx1,ly1,S*sc,{yaz,inc});MYER[v[7]]=[ox,oy,sc,v[6]];
    ctx.restore()}}
@@ -68,7 +69,7 @@ const KIRP={};function kirp(m,w,h){const K=KIRP[m]||(KIRP[m]=(()=>{ctx.font='bol
  let en=null;K.forEach(([s,gw])=>{const f=kademe(Math.min(w*.92/gw,h*.9/(s.length*1.12),60));if(!en||f>en.f)en={f,s}});return en&&en.f>=8?en:null}
 const ZK=2.4;let ZEM=null;
 const EID={};function enIyiDuzen(k,r){const ck=k+'|'+r.toFixed(3)+'|'+MDurum.surum;if(EID[ck])return EID[ck];if(!SA[k])return null;const iw=r*1.94,ih=r*1.94;let en=null;
- for(const Wb of [260,320,380,450,530,620,720,840]){const M=mustakDuzen(k,Wb,iw,ih);if(!M||M.bos)continue;const sc=Math.min(iw/M.W,ih/M.H);if(!en||sc>en.sc)en={M,sc}}return EID[ck]=en}
+ for(const Wb of [260,320,380,450,530,620,720,840]){const a=W/Math.max(1,H-60),M=mustakDuzen(k,Wb,a,1);if(!M||M.bos)continue;const sc=Math.min(a/M.W,1/M.H);if(!en||sc>en.sc)en={M,sc}}return EID[ck]=en}
 const KAD=[6,7,8,10,12,14,17,20,24,29,35,42,50,60,72,86,104,125];function kademe(p){let o=0;for(const k of KAD)if(k<=p)o=k;return o}
 
 const OZC={};
