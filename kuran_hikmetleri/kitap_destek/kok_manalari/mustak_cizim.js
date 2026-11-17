@@ -186,14 +186,14 @@ function cerceve_(c, z, x, y, w, h) {
 
 function KARA_(c){c=String(c).trim();const m=String(c).match(/\d+/g);let r,g,b;if(String(c)[0]==='#'){const h=c.slice(1);[r,g,b]=[0,2,4].map(i=>parseInt(h.length===3?h[i/2]+h[i/2]:h.slice(i,i+2),16))}else[r,g,b]=m.map(Number);return .299*r+.587*g+.114*b<128}
 
-function cerceveCiz(ctx, M, cx, cy, r, S) {
-  const L = halkaOlc(ctx, M), N = L.length, Lx = 2 * r * 0.97, x0 = cx - Lx / 2, y0 = cy - Lx / 2;
+function cerceveCiz(ctx, M, cx, cy, r, ri, S) {
+  const L = halkaOlc(ctx, M), N = L.length, Lx = 2 * r, t = r - ri, x0 = cx - Lx / 2, y0 = cy - Lx / 2;
   const ws = L.filter(x => !x.b).map(x => x.w).sort((a, b) => a - b), w0 = Math.max(60, ws[Math.floor(ws.length * .85)] || 60) + 10, h0 = 22;
   if (!M.cer) {
     let en = null;
-    for (let f = Lx * 0.2 / w0; f > Lx / w0 / 80; f *= 0.95) {
+    for (let f = t / w0; f > Lx / w0 / 200; f *= 0.95) {
       const cw = w0 * f, ch = h0 * f, per = Math.floor(Lx / cw);
-      for (let R = 1; R * ch < Lx * 0.16; R++) {
+      for (let R = 1; R * ch <= t; R++) {
         const yan = Math.floor((Lx - 2 * R * ch) / ch), cap = 2 * R * per + 2 * yan;
         if (cap >= N) { en = {f, R, per, yan, cw, ch}; break }
       }
@@ -201,7 +201,7 @@ function cerceveCiz(ctx, M, cx, cy, r, S) {
     }
     M.cer = en;
   }
-  const C = M.cer; if (!C) return [x0, y0, Lx, Lx];
+  const C = M.cer; if (!C) return [cx - ri, cy - ri, 2 * ri, 2 * ri];
   const {f, R, per, yan, cw, ch} = C, P = [], ofs = (Lx - per * cw) / 2;
   for (let r0 = 0; r0 < R; r0++) for (let j = 0; j < per; j++) P.push([x0 + ofs + (j + .5) * cw, y0 + (r0 + .5) * ch]);
   for (let j = 0; j < yan; j++) P.push([x0 + Lx - cw / 2, y0 + R * ch + (j + .5) * ch]);
@@ -218,5 +218,5 @@ function cerceveCiz(ctx, M, cx, cy, r, S) {
     else { const k = Math.min(1, (w0 - 16) / (it.w - 10)); ctx.scale(k, k); const xa = -(it.wa + it.wt + 3) / 2; ctx.fillStyle = it.sn === 1 ? '#7a7058' : '#3b2f1e'; ctx.font = '12px Amiri'; ctx.textAlign = 'left'; ctx.fillText(it.ar, xa, 0); ctx.font = '10px Georgia'; ctx.fillText(it.tr, xa + it.wa + 3, 0) }
     ctx.restore();
   });
-  return [x0 + cw + ch * 0.3, y0 + R * ch + ch * 0.3, Lx - 2 * cw - ch * 0.6, Lx - 2 * R * ch - ch * 0.6];
+  return [cx - ri * 0.96, cy - ri * 0.96, ri * 1.92, ri * 1.92];
 }

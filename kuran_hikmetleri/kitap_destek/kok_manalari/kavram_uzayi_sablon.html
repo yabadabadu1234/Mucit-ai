@@ -14,7 +14,7 @@ const D=__VERI__,V=D.V,IDX={};for(const k in V)IDX[V[k][7]]=k;
 const MYER={},KBT={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
-const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.93});
+const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.66});
 const R0=(()=>{const a=RCK.filter(x=>x).sort((x,y)=>x-y);return a[a.length>>1]})();
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
@@ -48,7 +48,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
   const yaziVar=A.fs*S>4;A.T.forEach(t=>{ctx.fillStyle=t[5];ctx.beginPath();ctx.arc(t[6],t[7],A.fs*0.25,0,7);ctx.fill();if(yaziVar){ctx.fillStyle=yaz;ctx.font=t[3]+'px Georgia';ctx.textAlign=t[4]?'left':'right';ctx.fillText(t[2],t[0],t[1])}});
   ctx.restore();ctx.save();cekirdek(ctx,i,S);
   if(ST==1){ozetCiz(v,A.rc,yaz,i)}
-  else if(ST==2){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const [ix,iy,iw,ih]=cerceveCiz(ctx,M,v[0],v[1],A.rc,S),th=ih*0.06;
+  else if(ST==2){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const [ix,iy,iw,ih]=cerceveCiz(ctx,M,v[0],v[1],v[8]*0.99,A.rc,S),th=ih*0.06;
    ctx.fillStyle=yaz;ctx.font=th+'px Amiri';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(v[6],v[0],iy+th*0.6);ctx.textBaseline='alphabetic';
    const nk=M.kirmizi.reduce((a,b)=>a+b[1].length,0),bh=ih*0.04;if(nk){const bw=iw*0.4,bx=v[0]-bw/2,by=iy+ih-bh;ctx.fillStyle='#fbeaea';ctx.strokeStyle='#c0392b';ctx.lineWidth=1/S;ctx.beginPath();ctx.roundRect(bx,by,bw,bh,bh/2);ctx.fill();ctx.stroke();ctx.fillStyle='#c0392b';ctx.font=(bh*0.6)+'px Georgia';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('kaideye aykırılar ('+nk+') ▸',v[0],by+bh/2);ctx.textBaseline='alphabetic';KBT[v[7]]=[bx,by,bw,bh,v[6]]}
    if(!M.bos){const py=iy+th*1.3,ph=ih-th*1.3-bh*1.3,sc=Math.min(iw/M.W,ph/M.H),ox=v[0]-M.W*sc/2,oy=py+(ph-M.H*sc)/2;
