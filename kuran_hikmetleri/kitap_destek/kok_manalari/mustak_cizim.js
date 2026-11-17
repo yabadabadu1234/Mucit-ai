@@ -73,7 +73,7 @@ function mustakDuzen(k) {
       b.O.forEach(o => { if (o[0] === 'fold') HIT.push([x + o[1], y + o[2] - 14, 300, 18, 'acik', o[4]]) });
       y += b.h;
     });
-    mx = Math.max(mx, y); const Wd = (col + 1) * WC - 60, sk = 1 / Math.hypot(Wd, mx * 1.3);
+    mx = Math.max(mx, y); const Wd = (col + 1) * WC - 60, sk = 1 / Math.max(Wd, mx * 1.15);
     if (!en || sk > en.sk) en = {O, HIT, W: Wd, H: mx, sk};
   }
   const sira = {box: 0, bal: 1}; en.O.sort((a, b) => (sira[a[0]] ?? 2) - (sira[b[0]] ?? 2));
@@ -185,3 +185,38 @@ function cerceve_(c, z, x, y, w, h) {
 }
 
 function KARA_(c){c=String(c).trim();const m=String(c).match(/\d+/g);let r,g,b;if(String(c)[0]==='#'){const h=c.slice(1);[r,g,b]=[0,2,4].map(i=>parseInt(h.length===3?h[i/2]+h[i/2]:h.slice(i,i+2),16))}else[r,g,b]=m.map(Number);return .299*r+.587*g+.114*b<128}
+
+function cerceveCiz(ctx, M, cx, cy, r, S) {
+  const L = halkaOlc(ctx, M), N = L.length, Lx = 2 * r * 0.97, x0 = cx - Lx / 2, y0 = cy - Lx / 2;
+  const ws = L.filter(x => !x.b).map(x => x.w).sort((a, b) => a - b), w0 = Math.max(60, ws[Math.floor(ws.length * .85)] || 60) + 10, h0 = 22;
+  if (!M.cer) {
+    let en = null;
+    for (let f = Lx * 0.2 / w0; f > Lx / w0 / 80; f *= 0.95) {
+      const cw = w0 * f, ch = h0 * f, per = Math.floor(Lx / cw);
+      for (let R = 1; R * ch < Lx * 0.16; R++) {
+        const yan = Math.floor((Lx - 2 * R * ch) / ch), cap = 2 * R * per + 2 * yan;
+        if (cap >= N) { en = {f, R, per, yan, cw, ch}; break }
+      }
+      if (en) break;
+    }
+    M.cer = en;
+  }
+  const C = M.cer; if (!C) return [x0, y0, Lx, Lx];
+  const {f, R, per, yan, cw, ch} = C, P = [], ofs = (Lx - per * cw) / 2;
+  for (let r0 = 0; r0 < R; r0++) for (let j = 0; j < per; j++) P.push([x0 + ofs + (j + .5) * cw, y0 + (r0 + .5) * ch]);
+  for (let j = 0; j < yan; j++) P.push([x0 + Lx - cw / 2, y0 + R * ch + (j + .5) * ch]);
+  for (let r0 = 0; r0 < R; r0++) for (let j = per - 1; j >= 0; j--) P.push([x0 + ofs + (j + .5) * cw, y0 + Lx - (r0 + .5) * ch]);
+  for (let j = yan - 1; j >= 0; j--) P.push([x0 + cw / 2, y0 + R * ch + (j + .5) * ch]);
+  const uzak = f * 12 * S < 3;
+  L.forEach((it, i) => {
+    const [x, y] = P[i], bw = (w0 - 8) * f, bh = (h0 - 5) * f;
+    ctx.beginPath(); ctx.roundRect(x - bw / 2, y - bh / 2, bw, bh, bh / 2);
+    ctx.fillStyle = it.b ? '#e6eef8' : it.sn === 1 ? '#f4f1e8' : '#f6ecd2'; ctx.fill(); ctx.lineWidth = f; ctx.strokeStyle = it.b ? '#2f6fb3' : it.sn === 1 ? '#bdb59e' : '#a8842a'; ctx.stroke();
+    if (uzak) return;
+    ctx.save(); ctx.translate(x, y); ctx.scale(f, f); ctx.textBaseline = 'middle';
+    if (it.b) { ctx.fillStyle = '#2f6fb3'; ctx.font = 'bold 10px Georgia'; ctx.textAlign = 'center'; const k = Math.min(1, (w0 - 16) / (it.w - 8)); ctx.scale(k, k); ctx.fillText(it.t.replace(/ ·$/, ''), 0, 0) }
+    else { const k = Math.min(1, (w0 - 16) / (it.w - 10)); ctx.scale(k, k); const xa = -(it.wa + it.wt + 3) / 2; ctx.fillStyle = it.sn === 1 ? '#7a7058' : '#3b2f1e'; ctx.font = '12px Amiri'; ctx.textAlign = 'left'; ctx.fillText(it.ar, xa, 0); ctx.font = '10px Georgia'; ctx.fillText(it.tr, xa + it.wa + 3, 0) }
+    ctx.restore();
+  });
+  return [x0 + cw + ch * 0.3, y0 + R * ch + ch * 0.3, Lx - 2 * cw - ch * 0.6, Lx - 2 * R * ch - ch * 0.6];
+}

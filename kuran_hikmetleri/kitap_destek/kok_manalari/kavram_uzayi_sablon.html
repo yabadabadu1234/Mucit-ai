@@ -14,7 +14,7 @@ const D=__VERI__,V=D.V,IDX={};for(const k in V)IDX[V[k][7]]=k;
 const MYER={},KBT={};const cv=document.getElementById('c'),ctx=cv.getContext('2d'),SA={};
 const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 let W=0,H=0,dpr=1,S=1,TX=0,TY=0,secK=null,kirli=true;
-const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.84});
+const RCK=[];D.H.forEach((h,i)=>{const v=V[IDX[i]];if(v)RCK[i]=v[8]*0.93});
 const R0=(()=>{const a=RCK.filter(x=>x).sort((x,y)=>x-y);return a[a.length>>1]})();
 const HP=D.H.map(h=>{const p=new Path2D(),a=h[0];p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath();return p});
 const yolla=L=>{const p=new Path2D();L.forEach(a=>{p.moveTo(a[0],a[1]);for(let j=2;j<a.length;j+=2)p.lineTo(a[j],a[j+1]);p.closePath()});return p};
@@ -48,17 +48,17 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
   const yaziVar=A.fs*S>4;A.T.forEach(t=>{ctx.fillStyle=t[5];ctx.beginPath();ctx.arc(t[6],t[7],A.fs*0.25,0,7);ctx.fill();if(yaziVar){ctx.fillStyle=yaz;ctx.font=t[3]+'px Georgia';ctx.textAlign=t[4]?'left':'right';ctx.fillText(t[2],t[0],t[1])}});
   ctx.restore();ctx.save();cekirdek(ctx,i,S);
   if(ST==1){ozetCiz(v,A.rc,yaz,i)}
-  else if(ST==2){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const ri=halkaCiz(ctx,M,v[0],v[1],A.rc,S);
-   ctx.fillStyle=yaz;ctx.font=(ri*0.09)+'px Amiri';ctx.textAlign='center';ctx.fillText(v[6],v[0],v[1]-ri*0.86);
-   const nk=M.kirmizi.reduce((a,b)=>a+b[1].length,0);if(nk){const bw=ri*0.62,bh=ri*0.09,bx=v[0]-bw/2,by=v[1]+ri*0.74;ctx.fillStyle='#fbeaea';ctx.strokeStyle='#c0392b';ctx.lineWidth=1/S;ctx.beginPath();ctx.roundRect(bx,by,bw,bh,bh/2);ctx.fill();ctx.stroke();ctx.fillStyle='#c0392b';ctx.font=(bh*0.55)+'px Georgia';ctx.textBaseline='middle';ctx.fillText('kaideye aykırılar ('+nk+') ▸',v[0],by+bh/2);ctx.textBaseline='alphabetic';KBT[v[7]]=[bx,by,bw,bh,v[6]]}
-   if(!M.bos){const sc=2*ri*0.92/Math.hypot(M.W,M.H*1.3),ox=v[0]-M.W*sc/2,oy=v[1]-M.H*sc/2-ri*0.02;
+  else if(ST==2){yukle(v[6]);const M=mustakDuzen(v[6]);if(M){const [ix,iy,iw,ih]=cerceveCiz(ctx,M,v[0],v[1],A.rc,S),th=ih*0.06;
+   ctx.fillStyle=yaz;ctx.font=th+'px Amiri';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(v[6],v[0],iy+th*0.6);ctx.textBaseline='alphabetic';
+   const nk=M.kirmizi.reduce((a,b)=>a+b[1].length,0),bh=ih*0.04;if(nk){const bw=iw*0.4,bx=v[0]-bw/2,by=iy+ih-bh;ctx.fillStyle='#fbeaea';ctx.strokeStyle='#c0392b';ctx.lineWidth=1/S;ctx.beginPath();ctx.roundRect(bx,by,bw,bh,bh/2);ctx.fill();ctx.stroke();ctx.fillStyle='#c0392b';ctx.font=(bh*0.6)+'px Georgia';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('kaideye aykırılar ('+nk+') ▸',v[0],by+bh/2);ctx.textBaseline='alphabetic';KBT[v[7]]=[bx,by,bw,bh,v[6]]}
+   if(!M.bos){const py=iy+th*1.3,ph=ih-th*1.3-bh*1.3,sc=Math.min(iw/M.W,ph/M.H),ox=v[0]-M.W*sc/2,oy=py+(ph-M.H*sc)/2;
    ctx.save();ctx.translate(ox,oy);ctx.scale(sc,sc);const lx0=(x0-ox)/sc,ly0=(y0-oy)/sc,lx1=(x1-ox)/sc,ly1=(y1-oy)/sc;
    mustakCiz(ctx,M,lx0,ly0,lx1,ly1,S*sc,{yaz,inc});MYER[v[7]]=[ox,oy,sc,v[6]];
    ctx.restore()}}}
   ctx.restore()});
  const ic=new Set(icler);
  ctx.fillStyle=yaz;ctx.textAlign='center';ctx.textBaseline='middle';gorunen.forEach(i=>{if(ic.has(i))return;const v=V[IDX[i]],r=RCK[i];if(!r)return;const k=IDX[i];
-  ctx.font='100px Amiri';const w=ctx.measureText(k).width/100;const ist=Math.min(1.5*r/w,1.1*r)*S,ek=kademe(ist);if(ek<6)return;ctx.font=(ek/S)+'px Amiri';ctx.fillText(k,v[0],v[1])});ctx.textBaseline='alphabetic'
+  ctx.font='100px Amiri';const w=ctx.measureText(k).width/100;const ist=Math.min(1.8*r/w,1.2*r)*S,ek=kademe(ist);if(ek<6)return;ctx.font=(ek/S)+'px Amiri';ctx.fillText(k,v[0],v[1])});ctx.textBaseline='alphabetic'
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
  D.BL.forEach(b=>{const f=kademe(Math.min(b[6]*0.75*S,17))/S;if(f*S<8||b[0]>x1||b[0]+b[2]<x0||b[1]>y1||b[1]+b[3]<y0)return;ctx.fillStyle=zitRenk(D.R[b[5]]);ctx.font=f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';let t=b[4];while(t.length>3&&ctx.measureText(t).width>b[2]-4)t=t.slice(0,-2);ctx.fillText(t===b[4]?t:t+'…',b[0]+2,b[1]+b[6]/2);ctx.textBaseline='alphabetic'});
@@ -88,7 +88,7 @@ function ozetCiz(v,rc,yaz,i){yukle(v[6]);const M=mustakDuzen(v[6]),cx=v[0],cy=v[
   ctx.fillStyle='#e6eef8';ctx.strokeStyle='#2f6fb3';ctx.lineWidth=fb*0.08;ctx.beginPath();ctx.roundRect(x-w/2,yy-fb*0.75,w,fb*1.5,fb*0.75);ctx.fill();ctx.stroke();ctx.fillStyle='#2f6fb3';ctx.fillText(t,x,yy)})}}
  ctx.textBaseline='alphabetic'}
 const ZR={};function zitRenk(c){if(ZR[c])return ZR[c];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle;let r=parseInt(h.slice(1,3),16)/255,g=parseInt(h.slice(3,5),16)/255,b=parseInt(h.slice(5,7),16)/255;const mx=Math.max(r,g,b),mn=Math.min(r,g,b);let hu=0;if(mx!==mn){const d=mx-mn;hu=mx===r?((g-b)/d)%6:mx===g?(b-r)/d+2:(r-g)/d+4}hu=(hu*60+180+360)%360;return ZR[c]=`hsl(${hu},70%,38%)`}
-function cekirdek(c,i,s){const v=V[IDX[i]];if(!v)return;c.globalAlpha=1;c.beginPath();c.arc(v[0],v[1],RCK[i],0,7);c.fillStyle=karis(D.R[D.H[i][1]],0.32);c.fill();c.strokeStyle=zitRenk(D.R[D.H[i][1]]);c.lineWidth=1.6/s;c.stroke()}
+function cekirdek(c,i,s){const v=V[IDX[i]];if(!v)return;c.globalAlpha=1;c.beginPath();c.roundRect(v[0]-RCK[i],v[1]-RCK[i],2*RCK[i],2*RCK[i],RCK[i]*0.12);c.fillStyle=karis(D.R[D.H[i][1]],0.32);c.fill();c.strokeStyle=zitRenk(D.R[D.H[i][1]]);c.lineWidth=1.6/s;c.stroke()}
 const KR={};function karis(c,a){const k=c+a;if(KR[k])return KR[k];const x=document.createElement('canvas').getContext('2d');x.fillStyle=c;const h=x.fillStyle,z=[251,248,239],m=[1,3,5].map((o,j)=>Math.round(parseInt(h.slice(o,o+2),16)*a+z[j]*(1-a)));return KR[k]=`rgb(${m})`}
 function taban(c,lst,s,zem,yaz){D.O.forEach(o=>{c.fillStyle=karis(D.R[o[4]],0.32);c.fillRect(o[0],o[1],o[2],o[3]);c.strokeStyle=karis(D.R[o[4]],0.8);c.lineWidth=1.4/s;c.strokeRect(o[0],o[1],o[2],o[3])});
  D.BL.forEach(b=>{c.fillStyle=karis(D.R[b[5]],0.18);c.fillRect(b[0],b[1],b[2],b[3]);c.strokeStyle=karis(D.R[b[5]],0.55);c.lineWidth=0.8/s;c.strokeRect(b[0],b[1],b[2],b[3])});
