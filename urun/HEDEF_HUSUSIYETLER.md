@@ -16,12 +16,23 @@ Bu dosyadaki her madde üç sütunla okunmalıdır: **hüsûsiyetin tarifi**, **
 
 ---
 
+## 1-B. GÜNCEL KARARLAR (2026-11-18, padişahın sözü)
+
+- Yapay zekâ **şimdilik düşünülmez**; Bölüm 3 yerinde durur, üzerinde durulmaz.
+- Pil ömrü hedefi **güncellenebilir** (24 saat değişmez bir hüküm değildir).
+- **Renkli ekran hedeftir.**
+- Kalem standardı **bağımlı değişkendir**, tek başına ehemmiyeti yoktur; işe yarasın yeter. **En düşük seviye kalem bile desteklenecek**, kendi kalemimiz maliyete göre tayin edilebilir.
+- Güneş paneli **mecburî değildir**; yerli ve verimi yüksek yeni modeller araştırılacaktır.
+- Sıra: evvelâ piyasa araştırması (bkz. `PIYASA_ARASTIRMASI.md`).
+
+---
+
 ## 2. İLK MODEL: ZORUNLU HÜSÛSİYETLER
 
 | No | Hüsûsiyet | Tarif | Taslak ölçü | Açık nokta |
 | :-- | :-- | :-- | :-- | :-- |
 | H1 | Dokunmatik ekran | Parmakla ve kalemle dokunma ile kullanım. | Çok noktalı (multi-touch) dokunmatik katman. | Dokunmatik teknolojisi (kapasitif veya kalemle birlikte çalışan EMR katmanı) H2 ile birlikte seçilecek. |
-| H2 | Dijital kaleme uygunluk | Cihaz, bir dijital kalem standardını destekleyecek. | En az bir yaygın standart (Wacom EMR, Microsoft MPP veya USI). | Hangi standart seçilecek? Kalem ayrı satılacak mı, cihazla gelecek mi? |
+| H2 | Dijital kaleme uygunluk | Cihaz, bir dijital kalem standardını destekleyecek. | En düşük seviye kalem bile çalışsın; standart maliyete göre seçilir, kendi kalemimiz de olabilir. | Standart bağımlı değişkendir; üretici ve maliyet belli olunca seçilecek. |
 | H3 | Parmakla yazılabilirlik | Kalem olmadan parmakla el yazısı yazılabilecek. | Parmakla yazı tanıma ve çizim, gecikmesi kabul edilebilir düzeyde. | Parmakla yazı ile kalem yazısı aynı kalitede olmayabilir; bu kabul edilecek mi? |
 | H4 | Geniş ekran | Ekranın boyutu, okuma ve yazma için yeterli olacak. | Taslak: 10 inç ve üzeri. | Kesin boyut ve en-boy oranı kararı bekliyor. Taşınabilirlik ile ekran büyüklüğü arasında denge kurulacak. |
 | H5 | Bileği ekrana yaslayabilirlik | Yazarken elin ekrana dayanması, cihazın istenmeyen dokunuşlar yapmaması. | Avuç içi reddi (palm rejection) yazılımı ve donanımı. | Avuç içi reddi hem kalem hem parmak girişinde çalışacak mı? |
@@ -29,8 +40,8 @@ Bu dosyadaki her madde üç sütunla okunmalıdır: **hüsûsiyetin tarifi**, **
 | H7 | Ayrı notlar açabilme | Birden çok bağımsız not dosyası oluşturulabilecek. | Sınırsız değil, ama pratikte yeterli sayıda not. | Bulut hesabı ile not senkronizasyonu isteniyor mu? (H14 ile bağlantılı.) |
 | H8 | Klasör sistemi | Notlar klasörlere ayrılabilecek, klasörün içinde klasör olabilecek. | İç içe klasör. | Derinlik sınırı var mı? |
 | H9 | PDF çıkarabilme | Not, çizim veya fotoğraflı sayfa PDF dosyası olarak dışa aktarılabilecek. | Tek sayfa ve çok sayfa PDF. | Dışa aktarılan PDF içinde el yazısı metin aranabilir olacak mı? |
-| H10 | Güneş paneli desteği | Cihaz, güneş enerjisi ile şarj edilebilecek. | Ekran veya arka yüzde panel bağlantısı veya kendi panel yuvası. | Güneş paneli cihaza entegre mi olacak, yoksa ayrı bir aksesuar mı? Güneş ile şarjın pil ömrüne katkısı ayrıca ölçülecek (bkz. Bölüm 6). |
-| H11 | 24 saat pil ömrü | Cihaz tek şarjla 24 saat kullanılabilecek. | 24 saat, tanımlı bir kullanım profili ile ölçülecek. | Kullanım profili tanımlanmadan ölçü anlamlı değildir. Ekran tipi ve işlemci gücü bu hedefi doğrudan etkiler (bkz. Bölüm 6). |
+| H10 | Güneş paneli desteği | Cihaz, güneş enerjisi ile şarj edilebilecek. | **Mecburî değil.** Yerli ve verimi yüksek yeni paneller araştırılacak. | Entegre mi, aksesuar mı, hiç olmasın mı: araştırma sonrası karar. |
+| H11 | 24 saat pil ömrü | Cihaz tek şarjla 24 saat kullanılabilecek. | Başlangıç hedefi 24 saat; **güncellenebilir** (renkli ekran ile birlikte yeniden tartılacak). | Kullanım profili tanımlanmadan ölçü anlamlı değildir. Rakiplerin pil süreleri araştırılacak. |
 | H12 | Telefona bağlanabilirlik | Cihaz, akıllı telefonla eşleşebilecek ve veri alışverişi yapabilecek. | Bluetooth veya Wi-Fi ile eşleşme ve dosya aktarımı. | Telefon uygulaması ayrı mı geliştirilecek? Hangi işletim sistemleri? |
 | H13 | Bilgisayara bağlanabilirlik | Cihaz, bilgisayarla kablosuz veya kablolu bağlanabilecek. | USB-C veya Wi-Fi ile dosya aktarımı ve gerekirse ekran yansıtma. | Hangi işletim sistemleri (Windows, macOS, Linux)? |
 | H14 | Yerel depolama ve bulut eşitleme | Notlar cihazda tutulacak ve isteğe bağlı olarak buluta yedeklenecek. | Yerel depolama zorunlu. Bulut isteğe bağlı. | Bulut sunucusunu kim işletecek? Veri gizliliği ve KVKK uyumu ayrıca değerlendirilecek. |
