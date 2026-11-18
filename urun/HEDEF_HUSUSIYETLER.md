@@ -24,6 +24,11 @@ Bu dosyadaki her madde üç sütunla okunmalıdır: **hüsûsiyetin tarifi**, **
 - Kalem standardı **bağımlı değişkendir**, tek başına ehemmiyeti yoktur; işe yarasın yeter. **En düşük seviye kalem bile desteklenecek**, kendi kalemimiz maliyete göre tayin edilebilir.
 - Güneş paneli **mecburî değildir**; yerli ve verimi yüksek yeni modeller araştırılacaktır.
 - **Pil ömrü için E-ink kullanılacak** (renkli hedef sürdüğü için renkli E-ink: Kaleido 3 veya benzeri). Piyasada renkli E-ink tabletlerin fiyatı 250 $ ve üstüdür (bkz. `PIYASA_ARASTIRMASI.md` 2.2); maliyet hedefi bu sınıfa göre yeniden tartılacak.
+- **Hedef kitle talebelerdir;** ne kadar ucuz olursa o kadar iyidir.
+- **İşletim sistemi çalıştıracak kadar gelişmiş işlemci gerekmez;** maliyeti kısacak olan budur (mikrodenetleyici yeter; bkz. `URETICILER.md` § 3).
+- **Montaj ya kendimiz yaparız ya da mutlaka yerli bir yerde yaptırılır.**
+- **Girişimci desteği bulunacaktır** (bkz. `URETICILER.md` § 5).
+- Piyasa araştırması **hazır üründen değil üretici sitelerinden** yapılır; mühim olan E-ink tabletin değil **E-ink ekranın** maliyetidir.
 - Sıra: evvelâ piyasa araştırması (bkz. `PIYASA_ARASTIRMASI.md`), güneş paneli (bkz. `GUNES_PANELI_ARASTIRMASI.md`), kalem standardı (bkz. `KALEM_STANDARDI_TEYIDI.md`).
 
 ---
