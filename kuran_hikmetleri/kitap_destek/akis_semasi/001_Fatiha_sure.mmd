@@ -1,0 +1,50 @@
+%% Fâtiha (1) -- SÛRENİN KENDİ LAFZIYLA ŞEMA. TEKLİF, mühürsüz (F 3-I 337). Düğüm = âyetin kendi parçası; yan söz yok; hikmet yerleşimde.
+flowchart RL
+  classDef ayet fill:#fffdf2,stroke:#8a6d1d,color:#111,stroke-width:1.5px
+  classDef bag fill:#eef5ff,stroke:#3b6ea8,color:#111
+  classDef kabul fill:#e8f6ea,stroke:#2e7d32,color:#111,stroke-width:1.5px
+  classDef red fill:#fde7e7,stroke:#c62828,color:#111,stroke-width:1.5px
+  classDef baslik fill:#ffffff,stroke:#999,color:#333,stroke-dasharray:4 3
+
+  subgraph M1["① المُعَرَّف · tarif edilen zât"]
+    B1["<big>ٱلْحَمْدُ لِلَّهِ</big><br/><small>hamd Allah'ındır</small>"]:::ayet
+    B2["<big>رَبِّ ٱلْعَـٰلَمِينَ</big><br/><small>âlemlerin Rabbi</small>"]:::ayet
+    B3["<big>ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</big><br/><small>Rahmân, Rahîm</small>"]:::ayet
+    B4["<big>مَـٰلِكِ يَوْمِ ٱلدِّينِ</big><br/><small>dîn gününün sahibi</small>"]:::ayet
+    R1(["<big>ٱلْحَمْدُ لِلَّهِ ـ رَبِّ ٱلْعَـٰلَمِينَ</big>"]):::bag
+    R2(["<big>ٱلْحَمْدُ لِلَّهِ ـ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</big>"]):::bag
+    R3(["<big>رَبِّ ٱلْعَـٰلَمِينَ ـ مَـٰلِكِ يَوْمِ ٱلدِّينِ</big>"]):::bag
+    B1 --> B2 --> B3 --> B4
+    B1 --- R1
+    B2 --- R1
+    B1 -.- R2
+    B3 -.- R2
+    B2 -.- R3
+    B4 -.- R3
+  end
+
+  subgraph M2["② الْمُصَدِّقُونَ · kitabı hak kabul edenler"]
+    N1["<big>إِيَّاكَ نَعْبُدُ</big><br/><small>yalnız Sana kulluk ederiz</small>"]:::kabul
+    N2["<big>وَإِيَّاكَ نَسْتَعِينُ</big><br/><small>yalnız Senden yardım dileriz</small>"]:::kabul
+    N3["<big>ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ</big><br/><small>bizi doğru yola ilet</small>"]:::kabul
+    N4["<big>صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ</big><br/><small>nimet verdiklerinin yolu</small>"]:::kabul
+    H1(["<big>إِيَّاكَ ـ إِيَّاكَ</big>"]):::bag
+    H2(["<big>ٱلصِّرَٰطَ ـ صِرَٰطَ</big>"]):::bag
+    N1 --> N2 --> N3 --> N4
+    N1 --- H1
+    N2 --- H1
+    N3 --- H2
+    N4 --- H2
+  end
+
+  subgraph M3["③ الْمُعَانِدُونَ · kitaba düşman olanlar"]
+    E1["<big>غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ</big><br/><small>gazaba uğrayanların değil</small>"]:::red
+    E2["<big>وَلَا ٱلضَّآلِّينَ</big><br/><small>sapıtanların da değil</small>"]:::red
+    E1 --> E2
+  end
+
+  B4 ==>|"لِلَّهِ ← كَ"| N1
+  N4 ==>|"عَلَيْهِمْ"| E1
+  style M1 fill:#fffaf0,stroke:#8a6d1d
+  style M2 fill:#f3fbf4,stroke:#2e7d32
+  style M3 fill:#fff5f5,stroke:#c62828
