@@ -23,7 +23,8 @@ Bu dosyadaki her madde üç sütunla okunmalıdır: **hüsûsiyetin tarifi**, **
 - **Renkli ekran hedeftir.**
 - Kalem standardı **bağımlı değişkendir**, tek başına ehemmiyeti yoktur; işe yarasın yeter. **En düşük seviye kalem bile desteklenecek**, kendi kalemimiz maliyete göre tayin edilebilir.
 - Güneş paneli **mecburî değildir**; yerli ve verimi yüksek yeni modeller araştırılacaktır.
-- Sıra: evvelâ piyasa araştırması (bkz. `PIYASA_ARASTIRMASI.md`).
+- **Pil ömrü için E-ink kullanılacak** (renkli hedef sürdüğü için renkli E-ink: Kaleido 3 veya benzeri). Piyasada renkli E-ink tabletlerin fiyatı 250 $ ve üstüdür (bkz. `PIYASA_ARASTIRMASI.md` 2.2); maliyet hedefi bu sınıfa göre yeniden tartılacak.
+- Sıra: evvelâ piyasa araştırması (bkz. `PIYASA_ARASTIRMASI.md`), güneş paneli (bkz. `GUNES_PANELI_ARASTIRMASI.md`), kalem standardı (bkz. `KALEM_STANDARDI_TEYIDI.md`).
 
 ---
 
