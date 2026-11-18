@@ -71,7 +71,7 @@ Not: Yapay zekâ hüsûsiyetleri ilk modelde yer almaz. İlk model, yapay zekâ 
 | Konu | Durum |
 | :-- | :-- |
 | Hedef | Cihazın, piyasadaki mevcut ürünlerden çok daha ucuza üretilip satılması. |
-| Rakam | Henüz belirlenmemiştir. Piyasa araştırmasından sonra, rakip ürünlerin fiyatlarına göre sayıyla yazılacaktır. |
+| Rakam | Padişahın hedefi 1.000 TL (≈ 20 €). Bulunan parça fiyatlarıyla bu hedef **kapanmıyor**; ayrıntı `MALIYET_ANALIZI.md`de. Gerçek seri fiyatı teklifle öğrenilecek. |
 | Rekabet kıyası | Mevcut dijital not cihazlarının fiyatları, piyasa araştırması aşamasında toplanacaktır. |
 
 ---

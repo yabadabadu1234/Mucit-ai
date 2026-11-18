@@ -5,6 +5,8 @@
 
 ---
 
+Padişahın verdiği ekran bağlantılarının tek tek denetimi (dokunmatik, fiyat, stok) `EKRAN_ADAYLARI.md`de; 1.000 TL hedefi ve ekranı kendimiz üretme sorusu `MALIYET_ANALIZI.md`de; gezinme aracı `araclar/` klasöründe.
+
 ## 1. E-INK EKRAN (ana maliyet kalemi)
 
 | Firma | Ülke / yer | Parça | Fiyat (kaynak) | Not | Temas |
