@@ -12,6 +12,8 @@ from shapely.geometry import Polygon, box
 from shapely.ops import unary_union
 from agac_oku import oku
 import kategori_agaci as KA
+from yerlesim import kare, izgara, sureler
+from olay_uzayi import olay
 HERE = pathlib.Path(__file__).resolve().parent
 A = oku(); KT = KA.oku()
 DUR = set('bir ve ile için gibi veya şey şeyin olmak etmek yapmak kılmak vermek'.split())
@@ -49,27 +51,6 @@ for ci, c in enumerate(KODLAR):
         uy = [ix[j] for j in range(len(ix)) if lab[j] == b]
         w = np.asarray(V[uy].sum(0)).ravel(); BOL.append({'kavram': c, 'ad': ', '.join(kel[np.argsort(-w)[:3]]), 'uyeler': uy})
         for i in uy: bolge[i] = len(BOL) - 1
-def kare(oge, x, y, w, h, sag=False):
-    """Kareleştirilmiş ağaç haritası (squarified treemap): [(anahtar, alan)] -> {anahtar: (x, y, w, h)}"""
-    X0, W0 = x, w
-    oge = [o for o in oge if o[1] > 0]; top = sum(a for _, a in oge); o = {}
-    oge = [(k, a * w * h / top) for k, a in oge]
-    def kotu(sira, kenar):
-        s_ = sum(a for _, a in sira); return max(max(kenar * kenar * a / s_ / s_, s_ * s_ / kenar / kenar / a) for _, a in sira)
-    while oge:
-        kenar = min(w, h); sira = [oge.pop(0)]
-        while oge and kotu(sira + [oge[0]], kenar) <= kotu(sira, kenar): sira.append(oge.pop(0))
-        s_ = sum(a for _, a in sira)
-        if w >= h:
-            ew = s_ / h; yy = y
-            for k, a_ in sira: o[k] = (x, yy, ew, a_ / ew); yy += a_ / ew
-            x += ew; w -= ew
-        else:
-            eh = s_ / w; xx = x
-            for k, a_ in sira: o[k] = (xx, y, a_ / eh, eh); xx += a_ / eh
-            y += eh; h -= eh
-    if sag: o = {k: (2 * X0 + W0 - v[0] - v[2], v[1], v[2], v[3]) for k, v in o.items()}
-    return o
 UST = [(u, sum(len(ix_of[c]) for c, _ in L)) for u, (_, L) in enumerate(KA.AGAC)]
 UR = kare(sorted(UST, key=lambda t: -t[1]), 40, 40, 1720, 1720)
 ODA = {}
@@ -106,14 +87,6 @@ HUC = [[halka(hucre[i]), ust_i[N[i][3]], 0.3] for i in range(len(N))]
 KAVS = [[[], o[5], [o[0] + o[2] / 2, o[1] + o[3] / 2, o[2] * 0.96, o[3] * 0.9], [o[0] + o[2] / 2, o[1] + bas(o[2]) / 2 + 1, o[2] * 0.96, bas(o[2]) * 0.9]] for o in ODAS]
 VER = {ad(i): [float(P[i, 0]), float(P[i, 1]), KA.KOD[N[i][3]][1], BOL[bolge[i]]['ad'], N[i][2], [ad(j) for j in np.argsort(-sim[i])[:4]], N[i][0], i, round(IC[i], 2), A[N[i][0]][N[i][1]]] for i in range(len(N))}
 KH = HERE.parent.parent
-def izgara(n, x, y, w, h, sag=False):
-    if n == 0: return []
-    best = None
-    for co in range(1, n + 1):
-        ro = math.ceil(n / co); cs = min(w / co, h / ro)
-        if best is None or cs > best[0]: best = (cs, co, ro)
-    cs, co, ro = best; ox = x + (w - co * cs) / 2; oy = y + (h - ro * cs) / 2
-    return [((ox + (co - 1 - j % co) * cs) if sag else (ox + (j % co) * cs), oy + (j // co) * cs, cs) for j in range(n)]
 KEL = json.load(open(KH / 'kaynak' / 'sozluk' / 'kelimeler.json', encoding='utf-8'))
 ILK = collections.defaultdict(list)
 for e in KEL:
@@ -142,18 +115,7 @@ with lzma.open(KH / 'kaynak' / 'lugat' / 'ham' / 'quranic_arabic_corpus_morpholo
         if k and (k, fl) not in KOKILK: KOKILK[(k, fl)] = (s_, a_, w_, m_)
 KOKA = collections.defaultdict(list)
 for (k, fl), (s_, a_, w_, m_) in sorted(KOKILK.items(), key=lambda z: z[1]): KOKA['%d:%d' % (s_, a_)].append([k, fl])
-SUR = []
-BT = (KH / 'kaynak' / 'sure_bolumlemeleri' / 'sure_bolumlemeleri.md').read_text(encoding='utf-8')
-BK = {}
-for m in re.finditer(r'^## (\d+)\. .*?$(.*?)(?=^## \d+\. |\Z)', BT, re.M | re.S):
-    z = re.search(r'\*\*A\. Kitap verisi.*?\*\*(.*?)(?=\n\*\*B\.|\Z)', m.group(2), re.S)
-    BK[int(m.group(1))] = [(x.strip(), int(b), int(c or b)) for x, b, c in re.findall(r'^- (.*?) \(Âyet (\d+)(?:-(\d+))?\)\s*$', z.group(1), re.M)]
-for s in range(1, 115):
-    d = next(KH.glob('sureler/%03d-*/sure.md' % s)); t = d.read_text(encoding='utf-8')
-    adi = re.search(r'^# S\d+ · (.*)$', t, re.M).group(1); na = len(json.load(open(KH / 'kaynak' / 'sure' / f'{s}.json', encoding='utf-8'))['verses'])
-    KIS = [(x + (' (%d)' % b if b == c else ' (%d-%d)' % (b, c)), list(range(b, c + 1))) for x, b, c in BK[s]]
-    assert sorted(a for _, L in KIS for a in L) == list(range(1, na + 1)), s
-    SUR.append((s, adi, na, KIS))
+SUR = sureler()
 QX, QY, QW, QH = 1900, 40, 1720, 1720
 QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH, True)
 QS, QK, QA, QW_, QG = [], [], [], [], []
@@ -174,7 +136,7 @@ for s, adi, na, KIS in SUR:
             for (wx, wy, wc), k in zip(izgara(len(R_), ax, ay_ + at, c2, c2 - at, True), R_):
                 QG.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k[0], k[1]])
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'QG': QG}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'QG': QG, 'OO': olay(QX + 2 * 1860, QY, QW, QH)}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:

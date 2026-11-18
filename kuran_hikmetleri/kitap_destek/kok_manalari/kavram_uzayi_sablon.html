@@ -61,7 +61,7 @@ function ciz(){kirli=false;const zem=css('--zemin'),yaz=css('--yazi'),inc=css('-
  if(secK){const v=V[secK];ctx.lineWidth=1.5/S;ctx.strokeStyle='#b8860b';v[5].forEach(n=>{ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[n][0],V[n][1]);ctx.stroke()});
   ctx.strokeStyle='#a0304a';ctx.setLineDash([4/S,3/S]);Object.keys(V).forEach(x=>{if(V[x][6]==v[6]&&x!=secK){ctx.beginPath();ctx.moveTo(v[0],v[1]);ctx.lineTo(V[x][0],V[x][1]);ctx.stroke()}});ctx.setLineDash([])}
  D.BL.forEach(b=>{const f=Math.min(b[6]*0.75,KS('BL'));if(M<1||b[0]>x1||b[0]+b[2]<x0||b[1]>y1||b[1]+b[3]<y0)return;ctx.fillStyle=zitRenk(D.R[b[5]]);ctx.font=f+'px Georgia';ctx.textAlign='left';ctx.textBaseline='middle';let t=b[4];while(t.length>3&&ctx.measureText(t).width>b[2]-4)t=t.slice(0,-2);ctx.fillText(t===b[4]?t:t+'…',b[0]+2,b[1]+b[6]/2);ctx.textBaseline='alphabetic'});
- kuranCiz(x0,y0,x1,y1,yaz);
+ kuranCiz(x0,y0,x1,y1,yaz);olayCiz(x0,y0,x1,y1,yaz);
  if(M<2){ctx.fillStyle=yaz;ctx.strokeStyle=zem;ctx.textAlign='center';
   D.K.forEach(k=>{const [cx,cy,bw,bh]=M?k[3]:k[2];if(cx+bw/2<x0||cx-bw/2>x1||cy+bh/2<y0||cy-bh/2>y1)return;
    const L=kirp(k[1],bw,bh,KS(M?'KB2':'KB'));if(!L)return;ctx.font='bold '+L.f+'px Georgia';ctx.lineWidth=L.f/3.5;ctx.textBaseline='middle';
@@ -78,11 +78,22 @@ function KS(n){if(KSC[n]!==undefined)return KSC[n];if(!YUK())return 1e9;let a;
  else if(n=='QW')a=D.QW.concat(D.QG).map(s=>Math.min(s[2]*.92/genis(s[3],'Amiri'),s[2]*.8));
  else if(n=='KOK'){a=[];D.H.forEach((h,i)=>{const k=IDX[i],r=RCK[i];if(r&&k)a.push(Math.min(1.8*r/genis(k,'Amiri'),1.2*r))})}
  else if(n=='BL')a=D.BL.map(b=>b[6]*.75);
+ else if(n=='OD')a=D.OO.odalar.map(o=>Math.max(...kirpK(o.ad).map(([s,gw])=>Math.min(o.lab[2]*.92/gw,o.lab[3]*.9/(s.length*1.12)))));
+ else if(n=='OS')a=D.OO.S.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
+ else if(n=='OK')a=D.OO.K.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
+ else if(n=='OA')a=D.OO.A.map(s=>Math.min(s[2]*.92/genis(s[3],'Georgia'),s[4]*.8));
  else if(n=='KB'||n=='KB2')a=D.K.map(k=>{const [,,bw,bh]=n=='KB'?k[2]:k[3];return Math.max(...kirpK(k[1]).map(([s,gw])=>Math.min(bw*.92/gw,bh*.9/(s.length*1.12))))});
- return KSC[n]=yuzde10(a,n=='QS'||n=='QK'||n=='KB'||n=='KB2'?.5:.1)}
+ return KSC[n]=yuzde10(a,n=='QS'||n=='QK'||n=='KB'||n=='KB2'||n=='OD'||n=='OS'||n=='OK'?.5:.1)}
 function kutuYaz(t,x,y,w,h,fn,b,sn){const g=genis(t,fn);const f=Math.min(w*0.92/g,h*0.8,sn?KS(sn):1e9);ctx.font=(b||'')+f+'px '+fn;ctx.fillText(t,x+w/2,y+h/2);return true}
 function kuranCiz(x0,y0,x1,y1,yaz){kuranIc(x0,y0,x1,y1,yaz,0,D.QW,'Kur\'ân uzayı · ilk geçen kelime');ctx.save();ctx.translate(DX,0);kuranIc(x0-DX,y0,x1-DX,y1,yaz,DX,D.QG,'Kur\'ân uzayı · ilk geçen kök');ctx.restore()}
 const DX=1860;
+function olayCiz(x0,y0,x1,y1,yaz){const O=D.OO,OL=S<6/KS('OS')?1:(S<6/KS('OK')?2:3),gor=(x,y,w,h)=>x<=x1&&x+w>=x0&&y<=y1&&y+h>=y0,ton=i=>(i*137.5)%360;ctx.textAlign='center';ctx.textBaseline='middle';
+ O.odalar.forEach((o,i)=>{const xs=o.poly.map(p=>p[0]),ys=o.poly.map(p=>p[1]);if(!gor(Math.min(...xs),Math.min(...ys),Math.max(...xs)-Math.min(...xs),Math.max(...ys)-Math.min(...ys)))return;ctx.beginPath();o.poly.forEach((p,j)=>j?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.fillStyle='hsl('+ton(i)+',38%,87%)';ctx.fill();ctx.strokeStyle='#5a3d0c';ctx.lineWidth=3;ctx.stroke()});
+ O.S.forEach(s=>{if(!gor(s[0],s[1],s[2],s[3]))return;ctx.fillStyle='hsla('+ton(s[6])+',45%,95%,.8)';ctx.fillRect(s[0],s[1],s[2],s[3]);ctx.strokeStyle='#8a6d2b';ctx.lineWidth=1.1;ctx.strokeRect(s[0],s[1],s[2],s[3]);ctx.fillStyle='#5a3d0c';if(OL==2)kutuYaz(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ','OS')});
+ if(OL>=2)O.K.forEach(k=>{if(k[2]*S<3||!gor(k[0],k[1],k[2],k[3]))return;ctx.fillStyle='#f8f2e0';ctx.fillRect(k[0],k[1],k[2],k[3]);ctx.strokeStyle='#2f6fb3';ctx.lineWidth=0.9/S;ctx.strokeRect(k[0],k[1],k[2],k[3]);ctx.fillStyle='#1f4f86';if(OL==3)kutuYaz(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ','OK')});
+ if(OL==3)O.A.forEach(a=>{if(a[2]*S<3||!gor(a[0],a[1],a[2],a[2]))return;ctx.fillStyle='#fffdf6';ctx.fillRect(a[0],a[1],a[2],a[2]);ctx.strokeStyle='#3f7f3a';ctx.lineWidth=0.7/S;ctx.strokeRect(a[0],a[1],a[2],a[2]);ctx.fillStyle='#2e5e2a';kutuYaz(a[3],a[0],a[1],a[2],a[4],'Georgia','','OA')});
+ if(OL==1){ctx.fillStyle='#3b2605';ctx.strokeStyle='#fbf8ef';O.odalar.forEach(o=>{const [lx,ly,lw,lh]=o.lab;if(!gor(lx,ly,lw,lh))return;const L=kirp(o.ad,lw,lh,KS('OD'));if(!L)return;ctx.font='bold '+L.f+'px Georgia';ctx.lineWidth=L.f/3.5;L.s.forEach((t,j)=>{const yy=ly+lh/2+(j-(L.s.length-1)/2)*L.f*1.12;ctx.strokeText(t,lx+lw/2,yy);ctx.fillText(t,lx+lw/2,yy)})})}
+ ctx.fillStyle='#5a3d0c';kutuYaz('Olay örgüsü uzayı · '+O.durum.split(':')[0],5620+20,8,1680,28,'Georgia','bold ');ctx.textBaseline='alphabetic'}
 function kuranIc(x0,y0,x1,y1,yaz,dx,KEL_,bas){const QL=S<6/KS('QK')?1:(S<6/KS('QW')?2:3);const gor=(x,y,w,h)=>x<=x1&&x+w>=x0&&y<=y1&&y+h>=y0;ctx.textAlign='center';ctx.textBaseline='middle';
  D.QS.forEach(s=>{if(!gor(s[0],s[1],s[2],s[3]))return;ctx.fillStyle='#efe6cc';ctx.fillRect(s[0],s[1],s[2],s[3]);ctx.strokeStyle='#8a6d2b';ctx.lineWidth=1.4/S;ctx.strokeRect(s[0],s[1],s[2],s[3]);ctx.fillStyle='#5a3d0c';if(QL==1)kutuYaz(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ','QS')});
  D.QK.forEach(k=>{if(k[2]*S<3||!gor(k[0],k[1],k[2],k[3]))return;ctx.fillStyle='#f8f2e0';ctx.fillRect(k[0],k[1],k[2],k[3]);ctx.strokeStyle='#2f6fb3';ctx.lineWidth=0.9/S;ctx.strokeRect(k[0],k[1],k[2],k[3]);ctx.fillStyle='#1f4f86';if(QL==2)kutuYaz(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ','QK')});
@@ -116,7 +127,7 @@ function taban(c,lst,s,zem,yaz){D.O.forEach(o=>{c.fillStyle=karis(D.R[o[4]],0.32
 function zeminKur(zem,yaz){ZEM=document.createElement('canvas');ZEM.width=ZEM.height=Math.round(1800*ZK);ZEM.tema=zem;const c=ZEM.getContext('2d');c.setTransform(ZK,0,0,ZK,0,0);
  taban(c,HP.map((_,i)=>i),ZK/1.6,zem,yaz)}
 function dongu(){if(kirli)ciz();requestAnimationFrame(dongu)}
-function yakin(f,x,y){const en=Math.min(W/5500,H/1800)*0.85;if(S*f<en)f=en/S;const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
+function yakin(f,x,y){const en=Math.min(W/7500,H/1800)*0.85;if(S*f<en)f=en/S;const ns=S*f;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;kirli=true}
 const yer=e=>{const r=cv.getBoundingClientRect();return [e.clientX-r.left,e.clientY-r.top]};
 cv.addEventListener('wheel',e=>{e.preventDefault();const [x,y]=yer(e);yakin(e.deltaY>0?0.87:1.15,x,y)},{passive:false});
 cv.addEventListener('dblclick',e=>{const [x,y]=yer(e);yakin(3,x,y)});
