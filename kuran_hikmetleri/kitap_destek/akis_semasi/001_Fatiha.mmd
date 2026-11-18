@@ -1,0 +1,25 @@
+%% Fâtiha (1) -- akış şeması. TEKLİF, mühürsüz (F 3-I 337). Her düğüm bir âyettir; her ok bir "niçin bundan sonra bu" sebebidir.
+flowchart TD
+  A1["1 · بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ<br/>İş, Allah'ın adıyla başlar (Rahmân, Rahîm)"]
+  A2["2 · ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَـٰلَمِينَ<br/>Bütün hamd Allah'ındır; O âlemlerin Rabbi"]
+  A3["3 · ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ<br/>Rabliğin mahiyeti: rahmet"]
+  A4["4 · مَـٰلِكِ يَوْمِ ٱلدِّينِ<br/>Hesap gününün sahibi"]
+  G["Hitabın dönüşü: anlatan dil (O) → doğrudan hitap (Sen)"]
+  A5["5 · إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ<br/>Yalnız Sana kulluk, yalnız Sen'den yardım"]
+  A6["6 · ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ<br/>Tek dilek: doğru yola ilet"]
+  A7a["7a · صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ<br/>Doğru yol: nimet verilenlerin yolu"]
+  A7b["7b · غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ<br/>Gazaba uğrayanların yolu değil"]
+  A7c["7c · وَلَا ٱلضَّآلِّينَ<br/>Sapanların yolu da değil"]
+
+  A1 -->|"başlanan iş, hamdin kapısı"| A2
+  A2 -->|"Rab ismi açılır: neye dayanıyor?"| A3
+  A3 -->|"rahmetin yanında hesap: karşılığı sahibi"| A4
+  A4 -->|"hamd, rahmet, hesap sıralandı; anlatıcı Muhatap'a döner"| G
+  G -->|"Muhatap hazır: kime kulluk, kimden yardım?"| A5
+  A5 -->|"kulluk ve yardım bildirildi; en çok yardım gereken şey"| A6
+  A6 -->|"doğru yol ne? tarif istenir"| A7a
+  A7a -->|"tarifin ikinci yüzü: kaçınılacak"| A7b
+  A7b --> A7c
+  A1 -.->|"Rahmân, Rahîm adı tekrar eder"| A3
+  A2 -.->|"Rab: yol gösteren de O"| A6
+  A4 -.->|"hesap günü: yolun sonu"| A7b
