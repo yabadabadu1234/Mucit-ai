@@ -1,0 +1,205 @@
+%% Fâtiha (1) -- HİKMET ŞEMASI. TEKLİF, mühürsüz (F 3-I 337). Sual → şıklar → hüküm. Atıf yoklanmadıysa düğümde "yoklanmadı" yazılıdır.
+flowchart TB
+  classDef sual fill:#fff4cc,stroke:#b8860b,color:#222
+  classDef cevap fill:#eef5ff,stroke:#3b6ea8,color:#222
+  classDef hikmet fill:#e2f6e5,stroke:#2e7d32,color:#111,stroke-width:2px
+  classDef itiraz fill:#fde7e7,stroke:#c62828,color:#222
+  classDef tenkit fill:#ffe9d6,stroke:#e65100,color:#222
+  classDef acik fill:#eeeeee,stroke:#616161,color:#222,stroke-dasharray:4 3
+
+  subgraph H1["1 · HAMD: NİÇİN ALLAH'A MAHSUS? (âyet 2-3)"]
+    S1{"Hamd niçin O'na mahsus?<br/>Rahmân-Rahîm olduğu için mi,<br/>âlemlerin Rabbi olduğu için mi?"}:::sual
+    F1["Hamd ile medih ayrıdır<br/>Medih: iradesiz güzelliği de över (elmas, bülbül)<br/>Hamd: ihtiyarla yapılan ihsana ve kemale karşı övgü"]:::cevap
+    C1["Rabb: ihsanın kaynağı<br/>(yoktan var eden, kemale yetiştiren)"]:::cevap
+    C2["Rahmân-Rahîm: ihsanın niyeti<br/>(zorunluluk değil, karşılıksız rahmet)"]:::cevap
+    C3["Rabb tek başına kahrı da taşır<br/>(mâlik, terbiye eden güç)<br/>Hamd sevgi ve tazim ister"]:::cevap
+    K1(["HİKMET: iki sebep ayrı ayrı yetmez, birlikte hamdi doğurur<br/>Rabb = nimeti veren kudret · Rahmân-Rahîm = onu rahmetle veren irade<br/>Usta ve saat birer perdedir; övgü asıl faile döner"]):::hikmet
+    S1 --> F1
+    F1 --> C1
+    F1 --> C2
+    C1 --> C3
+    C3 -->|"Rahmet kahrı dengeler, hamd mümkün olur"| C2
+    C1 --> K1
+    C2 --> K1
+  end
+
+  subgraph H2["2 · MÂLİK-İ YEVMİ'D-DÎN: RABB ZATEN ŞÜMULLÜYDÜ (âyet 4)"]
+    S2{"Âlemlerin Rabbi en geniş ifadeyse<br/>hesap günü sahipliği neden ayrıca?"}:::sual
+    M1["Perde kalkar<br/>Dünyada sebepler, hâkimler, unvanlar araya girer<br/>O gün 'mülk kimindir?' sualine tek cevap: Allah'ındır<br/>(Gâfir 40:16 · İnfitâr 82:19, yoklanmadı)"]:::cevap
+    M2["Denge: ümit ve korku<br/>Rahmetin peşine hesap konmasa nefis<br/>'nasılsa merhametli' deyip azabdan emin olur"]:::cevap
+    M3["Tahsis: bütünden mühim parçayı ayırmak<br/>(Cebrâîl ve Mîkâîl'in meleklerden ayrıca anılması gibi, Bakara 2:98)"]:::cevap
+    M4["Zaman ekseni<br/>Rabb, Rahmân, Rahîm: şimdinin nimeti<br/>Mâlik-i Yevmi'd-dîn: ileride karşılığı"]:::cevap
+    K2(["HİKMET: hamdin sebepleri şimdi yaşanan nimetten gelir<br/>Dördüncü sıfat kulu geleceğe bağlar: nimetin hesabı vardır"]):::hikmet
+    S2 --> M1
+    S2 --> M2
+    S2 --> M3
+    S2 --> M4
+    M1 --> K2
+    M2 --> K2
+    M4 --> K2
+  end
+
+  subgraph H3["3 · DÎN: YOL MU, HESAP MI? (âyet 4)"]
+    S3{"Dîn 'yol' demekse<br/>'yol günü' garip değil mi?<br/>Hesap manası nereden?"}:::sual
+    D1["د-ي-ن kökü<br/>1) boyun eğmek, itaat<br/>(dâne lehû: ona boyun eğdi)"]:::cevap
+    D2["2) borçlanmak (deyn)<br/>borç alan alacaklıya boyun eğer"]:::cevap
+    D3["3) karşılık vermek<br/>kemâ tedînü tüdân: nasıl muamele edersen öyle karşılık görürsün<br/>(darb-ı mesel, yoklanmadı)"]:::cevap
+    K3(["HİKMET: dîn = boyun eğilen nizam (yol) ve o nizamın karşılığı (hesap)<br/>Aynı kelimenin iki yüzü: manalar sapmadı, aynı kökten zincirlendi"]):::hikmet
+    K3b["Fâtiha'da iki yüz birlikte<br/>Âyet 4: dîn günü (karşılık yüzü)<br/>Âyet 6: sırât (yol yüzü)"]:::cevap
+    S3 --> D1
+    D1 --> D2
+    D2 --> D3
+    D1 --> K3
+    D3 --> K3
+    K3 --> K3b
+  end
+
+  subgraph H4["4 · TARİF TAMAM MI? DUAYA GEÇİŞ (âyet 2-5)"]
+    S4{"Tarif tamama erdi mi ki<br/>dua başlıyor?"}:::sual
+    T1["Kime dua ediyorum?<br/>Âlemlerin Rabbi (âyet 2): kudret"]:::cevap
+    T2["Beni reddeder mi?<br/>Rahmân-Rahîm (âyet 3): rahmet"]:::cevap
+    T3["İstediğimin sonu nerede?<br/>Mâlik-i Yevmi'd-dîn (âyet 4): akıbet"]:::cevap
+    G1["Hitap değişir<br/>anlatan dil 'O' → doğrudan 'Sen' (iltifat)"]:::cevap
+    TN["Tenkit: 'tam' kelimesi duaya gereken asgariyi söyler<br/>Allah'ın bütün sıfatlarını saymaz (ilim, kelâm vb. yok)<br/>Tamlık iddiası: dua için üç suale cevap, daha fazlası değil"]:::tenkit
+    K4(["HİKMET: marifet duanın şartıdır<br/>Tanıyan kul üçüncü şahıstan çıkıp huzura durur"]):::hikmet
+    S4 --> T1
+    T1 --> T2
+    T2 --> T3
+    T3 --> TN
+    TN --> G1
+    G1 --> K4
+  end
+
+  subgraph H5["5 · ÇOĞUL SİGA (âyet 5)"]
+    S5{"Tek başına kılan da neden<br/>'ederiz' diyor?"}:::sual
+    CG1["Kusurlu ibadet cemaatin içinde sunulur<br/>(kervana karışmak)"]:::cevap
+    CG2["'Ben' zamiri öne çıkmaz: riya ve ucuba karşı"]:::cevap
+    CG3["Müminler adına şahitlik ve duada ortaklık"]:::cevap
+    CG4["Cemaatle namazda imamın sözü safın ortak beyanı"]:::cevap
+    K5(["HİKMET (ihtimaller, hükümsüz): ibadet benlik değil bir cemaatin işidir<br/>Kul tek kalsa da yalnız konuşmaz"]):::hikmet
+    S5 --> CG1
+    S5 --> CG2
+    S5 --> CG3
+    S5 --> CG4
+    CG1 --> K5
+    CG2 --> K5
+    CG3 --> K5
+    CG4 --> K5
+  end
+
+  subgraph H6["6 · 'YALNIZ SENDEN YARDIM' VE İNSANLARDAN YARDIM / TEŞEKKÜR (âyet 5)"]
+    S6{"İnsana teşekkür ediyoruz, insandan yardım istiyoruz<br/>'Yalnız Senden' sözü gerçek mi?"}:::sual
+    IT["İtiraz: kulda olmayan hali varmış gibi söylüyor<br/>Günlük hayatta zihnen Allah'a yönelmek mümkün değil<br/>Ya boş övgü ya gerçek olmayan söz"]:::itiraz
+    V1["Vasıta ile hakiki fail<br/>Teşekkür kapıya, hamd kapıyı açana<br/>'İnsana teşekkür etmeyen Allah'a şükretmez'<br/>(hadis, yoklanmadı)"]:::cevap
+    V2["Sebebe müracaat serbest, sebebe tesir atfetmek yasak<br/>Zülkarneyn: 'bana güçle yardım edin' (Kehf 18:95)<br/>'İyilik ve takvada yardımlaşın' (Mâide 5:2)"]:::cevap
+    V3["İfade iddia değil ahit ve talimdir<br/>Her namazda kalbi merkeze çeker, 'olmuş bitmişlik' bildirmez"]:::cevap
+    V4["Gündelikte iki mühür<br/>Başlangıç: 'kapı bu, açan Sen' (teveccüh)<br/>Netice: yardım gelmeyince husumet doğuyorsa güven kuldaydı;<br/>'başka kapı açar' diyorsan kalp Allah'a yaslanmıştır"]:::cevap
+    TN2["Tenkit: gelen metindeki 'Mûsâ kavminden yardım istedi' örneği doğru değil<br/>Kasas 28:15'te yardım isteyen İsrâilli, Mûsâ yardım edendir<br/>Yerine Kehf 18:95 ve Mâide 5:2 konuldu"]:::tenkit
+    K6(["HİKMET: yasak olan sebebe başvurmak değil sebebe bel bağlamaktır<br/>Ölçü: yardım gelmediğinde kalpte ne doğuyor"]):::hikmet
+    S6 --> IT
+    IT --> V1
+    IT --> V3
+    V1 --> V2
+    V2 --> TN2
+    V3 --> V4
+    V2 --> K6
+    V4 --> K6
+  end
+
+  subgraph H7["7 · GAZAB VE DALÂLET (âyet 7)"]
+    S7{"Gazaba uğrayan niye Yahudi, sapan niye Hristiyan?<br/>Dünyevileşmek de sapmak değil mi?<br/>Ruhanileşmek de gazabı gerektirmez mi?"}:::sual
+    GZ["Gazap: bilerek, hak bilindikten sonra terk<br/>(ilim + kasıt)"]:::cevap
+    DL["Dalâlet: yolu şaşırmak, ölçüsüzlük<br/>(ilimsizlik, kasıtsız ifrat)"]:::cevap
+    YH["Tipik örnek: Yahudiler<br/>hakkı bilip gizlemek (Bakara 2:146, 2:42)"]:::cevap
+    HR["Tipik örnek: Hristiyanlar<br/>sevgide aşırılık (Nisâ 4:171, Mâide 5:77)"]:::cevap
+    RV["Rivayet: Adî b. Hâtim, Tirmizî<br/>(yoklanmadı)"]:::cevap
+    AX["Ayırıcı eksen dünyevî-ruhanî değil<br/>ilim ve kasıttır"]:::hikmet
+    X1["Dünyevileşme<br/>bile bile: gazap · bilmeden: dalâlet"]:::cevap
+    X2["Ruhanileşme (gulüv)<br/>bile bile: gazap · bilmeden: dalâlet"]:::cevap
+    SF["Fâtiha isim vermez, sıfat verir<br/>iki uçurum her ümmette tekrar edilebilir"]:::cevap
+    K7(["HİKMET: 'dünyevî mi ruhanî mi' sualinin yanlışlığı<br/>Bilip uymamak da, bilmeyip şaşmak da yoldan düşürür<br/>Sırât: ilim ve amelin beraberliği"]):::hikmet
+    S7 --> GZ
+    S7 --> DL
+    GZ --> YH
+    DL --> HR
+    YH --> RV
+    HR --> RV
+    GZ --> AX
+    DL --> AX
+    AX --> X1
+    AX --> X2
+    X1 --> K7
+    X2 --> K7
+    RV --> SF
+    SF --> K7
+  end
+
+  subgraph H8["8 · KÂİNAT KİTABININ GİRİŞİNDE NEDEN DUA, DELİL DEĞİL?"]
+    S8{"Neden çarpıcı delil değil de<br/>Müslümanın duası?"}:::sual
+    N1["İstifade talebe bağlıdır<br/>Bakara 2:2 'takva sahipleri için hidayet'<br/>niyetsiz göze güneş fayda vermez"]:::cevap
+    N2["Dua delili dışlamaz: âyet 2-4 zaten kâinat sıfatlarını<br/>delil olarak taşır (kudret, rahmet, hesap)"]:::cevap
+    N3["Fihrist: tevhid · kulluk ve yardım · vaad ve vaîd<br/>Bütün kitabın üç ekseni yedi âyette"]:::cevap
+    N4["Muhatap kul olunca ses 'ben'e değil 'biz'e<br/>Okuyan kendi meselesi yapar"]:::cevap
+    N5["Kitabın usulü: Kur'ân bu ispatta öncül olamaz (F 3-I 187)<br/>Fâtiha burada delil değil tahlil nesnesi"]:::tenkit
+    K8(["HİKMET: Kur'ân delili önce niyete, sonra akla arzeder<br/>Dua kapıyı açar, deliller içeride sıralanır"]):::hikmet
+    S8 --> N1
+    S8 --> N2
+    N1 --> N3
+    N2 --> N3
+    N3 --> N4
+    N3 --> N5
+    N4 --> K8
+    N5 --> K8
+  end
+
+  subgraph H9["9 · ATEİST, DEİST, MATERYALİST, NATÜRALİST NEREDE?"]
+    S9{"Fâtiha'nın tasnifi<br/>bunları kapsıyor mu?"}:::sual
+    A1["Ayırıcı: hakikatin delili ulaştı mı ve kasıt var mı<br/>İsim değil kalp ve akıl durumu"]:::cevap
+    A2["Delil ulaştı, kibirle inkâr<br/>→ mağdûb<br/>(Neml 27:14: yakîn ettiler, zulüm ve kibirle inkâr ettiler)"]:::cevap
+    A3["Deist: Rabb'i kabul, vahiy ve hesabı reddediyor<br/>âyet 4 ve 6'yı düşürüyor → dâllîn (tipik)"]:::cevap
+    A4["Natüralist: sanat eserine bakıp sanatkâr yerine<br/>'tabiat' diyor, sebebi ilahlaştırıyor → dâllîn (tipik)"]:::cevap
+    A5["Delil ulaşmadı, ölçüsüz → dâllîn"]:::cevap
+    AC["Açık sual (hasr deliği)<br/>İlim ve amel ikili ayrımı dört hücre verir:<br/>ilimli+amelli (nimet) · ilimli+amelsiz (gazap) · ilimsiz+amelsiz (dalâl)<br/>İlimsiz ama doğruya uyan kimse hangi hücre?<br/>Ehl-i fetret ve delili ulaşmayanın hükmü"]:::acik
+    K9(["HİKMET: iki ana teşhis bütün izmlerin kökünü sorar<br/>İnatla mı koptu, şaşarak mı kaybetti"]):::hikmet
+    S9 --> A1
+    A1 --> A2
+    A1 --> A3
+    A1 --> A4
+    A1 --> A5
+    A2 --> AC
+    A5 --> AC
+    A2 --> K9
+    A3 --> K9
+    A4 --> K9
+    A5 --> K9
+  end
+
+  subgraph H10["10 · ÂMÎN"]
+    S10{"Âmîn nedir, sureden mi?<br/>Hristiyanlar da 'amen' diyor"}:::sual
+    AM1["İsm-i fiil: 'kabul buyur'<br/>kök أ-م-ن: emniyet, sağlamlık, sadakat"]:::cevap
+    AM2["Sûrenin parçası değil<br/>Allah'ın öğrettiği sözün peşinde kulun tasdiki"]:::cevap
+    AM3["Sâmî kök ortak<br/>İbrânîce ve Arâmîce 'âmên' (emûnâ: sadakat)<br/>Ortak dil mirasını gösterir, tek başına<br/>vahyin ortak kaynağının delili değildir"]:::cevap
+    AM4["Cemaat: herkes tek kelimeyle imamın duasına ortak<br/>Meleklerle denk gelme müjdesi (Buhârî, Müslim, yoklanmadı)"]:::cevap
+    AM5["Fıkıh farkı<br/>Şâfiî ve Hanbelî: cehrî · Hanefî: hafî<br/>Mâlikî: imam hakkında ayrı kavil (yoklanmadı)"]:::acik
+    AM6["Tenkit: 'Âmîn Allah'ın ismidir' (İbn Abbas'a atfen) ve<br/>'Âmîn mührüdür' sözlerinin ravi ve sened durumu yoklanmadı<br/>Hüküm olarak yazılmaz"]:::tenkit
+    K10(["HİKMET: dua Allah'ın sözü, onay kulun sözüdür<br/>İki ses ayrı kalır, tek hâl olur"]):::hikmet
+    S10 --> AM1
+    S10 --> AM2
+    S10 --> AM3
+    AM2 --> AM4
+    AM4 --> AM5
+    AM1 --> AM6
+    AM1 --> K10
+    AM4 --> K10
+    AM3 --> K10
+  end
+
+  H1 --> H2
+  H2 --> H3
+  H3 --> H4
+  H4 --> H5
+  H5 --> H6
+  H6 --> H7
+  H7 --> H8
+  H8 --> H9
+  H9 --> H10
