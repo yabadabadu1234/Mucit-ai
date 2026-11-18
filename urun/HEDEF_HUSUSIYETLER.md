@@ -24,6 +24,7 @@ Bu dosyadaki her madde üç sütunla okunmalıdır: **hüsûsiyetin tarifi**, **
 - Kalem standardı **bağımlı değişkendir**, tek başına ehemmiyeti yoktur; işe yarasın yeter. **En düşük seviye kalem bile desteklenecek**, kendi kalemimiz maliyete göre tayin edilebilir.
 - Güneş paneli **mecburî değildir**; yerli ve verimi yüksek yeni modeller araştırılacaktır.
 - **Pil ömrü için E-ink kullanılacak** (renkli hedef sürdüğü için renkli E-ink: Kaleido 3 veya benzeri). Piyasada renkli E-ink tabletlerin fiyatı 250 $ ve üstüdür (bkz. `PIYASA_ARASTIRMASI.md` 2.2); maliyet hedefi bu sınıfa göre yeniden tartılacak.
+- **NAKZ (E-ink kararı):** E-ink ekran sürdürülebilir bir tercih değil, **sonraki modellere ertelendi.** İlk model, 7 inça yakın en ucuz cihazdır (bkz. `ILK_MODEL_LCD_MALIYET.md`). Yukarıdaki "pil için E-ink" ve "renkli E-ink" satırları ikinci model içindir; ilk modelde 24 saatlik pil hedefi LCD ile tutmaz.
 - **Hedef kitle talebelerdir;** ne kadar ucuz olursa o kadar iyidir.
 - **İşletim sistemi çalıştıracak kadar gelişmiş işlemci gerekmez;** maliyeti kısacak olan budur (mikrodenetleyici yeter; bkz. `URETICILER.md` § 3).
 - **Montaj ya kendimiz yaparız ya da mutlaka yerli bir yerde yaptırılır.**
