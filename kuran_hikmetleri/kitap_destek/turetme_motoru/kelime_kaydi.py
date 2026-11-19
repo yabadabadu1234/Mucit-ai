@@ -88,8 +88,11 @@ def kaikki_yukle(yol):
     return liste
 
 
+KISA_HAREKE = re.compile('[\u064b-\u0650\u0652\u0670]')
+
+
 def sade_ad(x):
-    return I.normala(wikt.harekesiz(x).replace('\u0640', ''))
+    return KISA_HAREKE.sub('', re.sub(r'\d+$', '', x.strip())).replace('\u0640', '')
 
 
 def kaikki_kok(e):
