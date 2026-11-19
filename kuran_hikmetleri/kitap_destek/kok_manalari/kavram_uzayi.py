@@ -97,6 +97,7 @@ KL = kokler(); NO = {(k, fl): n for n, (k, fl, _) in enumerate(KL)}
 KOKA = collections.defaultdict(list)
 for k, fl, (s_, a_, w_, m_) in sorted(KL, key=lambda z: z[2]): KOKA['%d:%d' % (s_, a_)].append([k, fl])
 SAYFA = json.load(open(HERE / 'SAYFA.json')) if (HERE / 'SAYFA.json').exists() else {}
+KAPAK = json.load(open(HERE / 'KAPAK.json')) if (HERE / 'KAPAK.json').exists() else {}
 SUR = sureler()
 QX, QY, QW, QH = 1900, 40, 1720, 1720
 QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH, True)
@@ -114,7 +115,7 @@ for s, adi, na, KIS in SUR:
             W_ = ILK.get('%d:%d' % (s, a), [])
             for (wx, wy, wc), k in zip(izgara(len(W_), ax, ay_ + at, c2, c2 - at, True), W_):
                 QW_.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
-GS, GK, GA, GP = yerlesim(SUR, KOKA, NO, SAYFA, QX, QY, QW, QH)
+GS, GK, GA, GP = yerlesim(SUR, KOKA, NO, SAYFA, KAPAK, QX, QY, QW, QH)
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
 VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'GS': GS, 'GK': GK, 'GA': GA, 'GP': GP, 'OO': olay(QX + 2 * 1860, QY, QW, QH)}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])

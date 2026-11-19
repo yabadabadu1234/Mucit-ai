@@ -1,16 +1,37 @@
-"""Kur'ân kök haritasının yerleşimi (F 3-I 382). Yalnız yeni kök gelen âyetler uzayda yer alır; kök gelmemiş âyet, boş kısım ve boş sûre uzaydan atılır.
-Her kök hücresi lügat sayfasının (A5, 148×210) görüntüsünü taşır; hücre sayfa oranında dikdörtgendir."""
+"""Kur'ân kök haritasının yerleşimi (F 3-I 382, 389). Yalnız yeni kök gelen âyetler uzayda yer alır; her oda içindeki hücrelere TAM sığar (boş oda yoktur).
+Hücre = kökün kapak sayfası, A5 oranında dikdörtgen; âyet odası = kök hücrelerinin ızgarası; kısım odası = âyet odaları; sûre odası = kısım odaları (sırayla, sağdan sola, yukarıdan aşağı)."""
 import math
-from yerlesim import kare
-ORAN = 148 / 210
-def izgara_dik(n, x, y, w, h):
-    en = None
-    for co in range(1, n + 1):
-        ro = math.ceil(n / co); cw = min(w / co, h / ro * ORAN)
-        if en is None or cw > en[0]: en = (cw, co, ro)
-    cw, co, ro = en; ch = cw / ORAN; ox = x + (w - co * cw) / 2; oy = y + (h - ro * ch) / 2
-    return [(ox + (co - 1 - j % co) * cw, oy + (j // co) * ch, cw, ch) for j in range(n)]
-def yerlesim(SUR, KOKA, NO, SAYFA, X, Y, W, H):
+ORAN = 148 / 210; HU = 1 / ORAN
+PAD, AHDR, KHDR, SHDR, GAP = 0.03, 0.22, 0.34, 0.48, 0.03
+def raf(secimler, en):
+    satir, cur, cw = [], [], 0.0
+    for i, (w, h, _) in enumerate(secimler):
+        if cur and cw + GAP + w > en: satir.append(cur); cur = []; cw = 0.0
+        cw += (GAP if cur else 0) + w; cur.append(i)
+    satir.append(cur); pos = [None] * len(secimler); y = 0.0; ws = [sum(secimler[i][0] for i in r) + GAP * (len(r) - 1) for r in satir]; Wm = max(ws)
+    for r in satir:
+        x = Wm; rh = max(secimler[i][1] for i in r)
+        for i in r: x -= secimler[i][0]; pos[i] = (x, y); x -= GAP
+        y += rh + GAP
+    return pos, Wm, y - GAP
+def adaylar(opts, hedef=None, top=False, say=10):
+    """opts: her öğe için [(w,h,veri)...]. Sıra korunur. Satır yüksekliği T ve en Wcap taranır; her biçim oranı kovasında en küçük alanlı paket döner: [(W,H,[(seçim,pos)...])]"""
+    Hs = sorted({o[1] for os_ in opts for o in os_}); Ts = Hs[::max(1, len(Hs) // 24)] + [Hs[-1]]
+    lo = max(min(o[0] for o in os_) for os_ in opts); hi = sum(min(o[0] for o in os_) for os_ in opts) + GAP * len(opts); K = {}
+    for T in Ts:
+        ch = []
+        for os_ in opts:
+            ok = [o for o in os_ if o[1] <= T]; ch.append(max(ok, key=lambda o: (o[1], -o[0])) if ok else min(os_, key=lambda o: o[1]))
+        for i in range(25):
+            pos, Wm, Ht = raf(ch, lo * (hi / lo) ** (i / 24)); sk = Wm * Ht
+            kova = round(math.log2(Wm / Ht) * 2) if not top else 0
+            if not top and abs(kova) > 2: continue
+            if top: sk = max(Wm, Ht * hedef) ** 2
+            if kova not in K or sk < K[kova][0]: K[kova] = (sk, Wm, Ht, list(zip(ch, pos)))
+    return [(v[1], v[2], v[3]) for v in sorted(K.values(), key=lambda v: v[0])[:say]] or [(v[1], v[2], v[3]) for v in sorted(K.values(), key=lambda v: abs(math.log(v[1] / v[2])))[:1]]
+def ayet_secenek(n):
+    return [(c + 2 * PAD, AHDR + r * HU + 2 * PAD, (c, r)) for r in range(1, min(n, 14) + 1) for c in [math.ceil(n / r)]]
+def yerlesim(SUR, KOKA, NO, SAYFA, KAPAK, X, Y, W, H):
     S_ = []
     for s, adi, na, KIS in SUR:
         ks = []
@@ -18,20 +39,26 @@ def yerlesim(SUR, KOKA, NO, SAYFA, X, Y, W, H):
             a2 = [(a, KOKA.get('%d:%d' % (s, a), [])) for a in ay]; a2 = [(a, r) for a, r in a2 if r]
             if a2: ks.append((kad, a2))
         if ks: S_.append((s, adi, ks))
-    ag = lambda ay: sum(len(r) for _, r in ay)
-    SR = kare([(s, sum(ag(ay) for _, ay in ks)) for s, adi, ks in S_], X, Y, W, H, True)
-    GS, GK, GA, GP = [], [], [], []
+    SO = []
     for s, adi, ks in S_:
-        x, y, w, h = SR[s]; x += 3; y += 3; w -= 6; h -= 6; tb = min(30.0, max(3.0, min(w, h) * 0.12))
-        GS.append([round(x, 2), round(y, 2), round(w, 2), round(h, 2), '%d · %s' % (s, adi), round(tb, 2)])
-        KR = kare([(j, ag(ay)) for j, (_, ay) in enumerate(ks)], x + 1, y + tb, w - 2, h - tb - 1, True)
-        for j, (kad, ay) in enumerate(ks):
-            kx, ky, kw, kh = KR[j]; kx += 0.8; ky += 0.8; kw -= 1.6; kh -= 1.6; kt = min(14.0, max(1.0, min(kw, kh) * 0.1))
-            GK.append([round(kx, 3), round(ky, 3), round(kw, 3), round(kh, 3), kad, round(kt, 3), s])
-            AR = kare([(i, len(r)) for i, (_, r) in enumerate(ay)], kx, ky + kt, kw, kh - kt, True)
-            for i, (a, r) in enumerate(ay):
-                ax, ay_, aw, ah = AR[i]; g = min(aw, ah) * 0.03; ax += g; ay_ += g; aw -= 2 * g; ah -= 2 * g; at = min(aw, ah) * 0.14
-                GA.append([round(ax, 3), round(ay_, 3), round(aw, 3), round(ah, 3), '%d:%d' % (s, a), round(at, 3)])
-                for (cx, cy, cw, ch), (k, fl) in zip(izgara_dik(len(r), ax, ay_ + at, aw, ah - at), r):
-                    no = NO[(k, fl)]; GP.append([round(cx + cw * 0.02, 3), round(cy + ch * 0.02, 3), round(cw * 0.96, 3), round(ch * 0.96, 3), no, SAYFA.get(str(no), 0), k, fl])
+        KO = []
+        for kad, ay in ks:
+            A_ = adaylar([ayet_secenek(len(r)) for a, r in ay])
+            KO.append({'kad': kad, 'ay': ay, 'opts': [(Wi + 2 * GAP, KHDR + Hi + 2 * GAP, (Wi, Hi, dz)) for Wi, Hi, dz in A_]})
+        B_ = adaylar([k['opts'] for k in KO])
+        SO.append({'s': s, 'adi': adi, 'KO': KO, 'opts': [(Wi + 2 * GAP, SHDR + Hi + 2 * GAP, (Wi, Hi, dz)) for Wi, Hi, dz in B_]})
+    T_ = adaylar([o['opts'] for o in SO], W / H, True, 1); Wt, Ht, dz = T_[0]; sc = min(W / Wt, H / Ht); ox = X + W - Wt * sc; oy = Y
+    GS, GK, GA, GP = [], [], [], []
+    for o, (sec, (sx_, sy_)) in zip(SO, dz):
+        sx = ox + sx_ * sc; sy = oy + sy_ * sc; sw, sh, (_, _, kdz) = sec
+        GS.append([round(sx, 3), round(sy, 3), round(sw * sc, 3), round(sh * sc, 3), '%d · %s' % (o['s'], o['adi']), round(SHDR * sc, 3)])
+        for k, (ksec, (kx_, ky_)) in zip(o['KO'], kdz):
+            kx = sx + (GAP + kx_) * sc; ky = sy + (SHDR + GAP + ky_) * sc; kw, kh, (_, _, adz) = ksec
+            GK.append([round(kx, 3), round(ky, 3), round(kw * sc, 3), round(kh * sc, 3), k['kad'], round(KHDR * sc, 3), o['s']])
+            for (a, r), (asec, (ax_, ay_)) in zip(k['ay'], adz):
+                ax = kx + (GAP + ax_) * sc; ay = ky + (KHDR + GAP + ay_) * sc; aw_, ah_, (c, rr) = asec
+                GA.append([round(ax, 3), round(ay, 3), round(aw_ * sc, 3), round(ah_ * sc, 3), '%d:%d' % (o['s'], a), round(AHDR * sc, 3)])
+                for j, (kk, fl) in enumerate(r):
+                    no = NO[(kk, fl)]; cx = ax + (PAD + (c - 1 - j % c)) * sc; cy = ay + (AHDR + PAD + (j // c) * HU) * sc; nc = KAPAK.get(str(no), 0)
+                    GP.append([round(cx + sc * 0.02, 3), round(cy + sc * 0.02, 3), round(sc * 0.96, 3), round(sc * HU * 0.96, 3), no, nc + SAYFA.get(str(no), 0), kk, fl, nc])
     return GS, GK, GA, GP
