@@ -100,6 +100,7 @@ SAYFA = json.load(open(HERE / 'SAYFA.json')) if (HERE / 'SAYFA.json').exists() e
 KAPAK = json.load(open(HERE / 'KAPAK.json')) if (HERE / 'KAPAK.json').exists() else {}
 SUR = sureler()
 QX, QY, QW, QH = 1900, 40, 1720, 1720
+KRW = 5200; KY = 100; OX = QX + 1860 + KRW + 160
 QR = kare([(s[0], s[2] + 8) for s in SUR], QX, QY, QW, QH, True)
 QS, QK, QA, QW_ = [], [], [], []
 for s, adi, na, KIS in SUR:
@@ -115,9 +116,11 @@ for s, adi, na, KIS in SUR:
             W_ = ILK.get('%d:%d' % (s, a), [])
             for (wx, wy, wc), k in zip(izgara(len(W_), ax, ay_ + at, c2, c2 - at, True), W_):
                 QW_.append([round(wx + wc * 0.05, 4), round(wy + wc * 0.05, 4), round(wc * 0.9, 4), k])
-GS, GK, GA, GP = yerlesim(SUR, KOKA, NO, SAYFA, KAPAK, QX, QY, QW, QH)
+GS, GK, GA, GP = yerlesim(SUR, KOKA, NO, SAYFA, KAPAK, QX, KY, KRW, KRW)
+from lugat_atlas import uret as atlas_uret
+ATL = atlas_uret([p[4] for p in GP], [p[8] for p in GP])
 lej = ''.join(f'<span><i style="background:{RENK[u]}"></i>{a}</span>' for u, (a, _) in enumerate(KA.AGAC))
-VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'GS': GS, 'GK': GK, 'GA': GA, 'GP': GP, 'OO': olay(QX + 2 * 1860, QY, QW, QH)}, ensure_ascii=False, separators=(',', ':'))
+VERI = json.dumps({'V': VER, 'H': HUC, 'B': [], 'K': KAVS, 'R': RENK, 'O': ODAS, 'BL': BLK, 'QS': QS, 'QK': QK, 'QA': QA, 'QW': QW_, 'GS': GS, 'GK': GK, 'GA': GA, 'GP': GP, 'OO': olay(OX, QY, QW, QH), 'OX': OX, 'KW': KRW, 'ATL': ATL}, ensure_ascii=False, separators=(',', ':'))
 HTML = (HERE / 'kavram_uzayi_sablon.html').read_text(encoding='utf-8').replace('__LEJ__', lej).replace('__VERI__', VERI).replace('__V__', __import__('hashlib').md5((HERE/'mustak_cizim.js').read_bytes()).hexdigest()[:8])
 (HERE / 'kavram_uzayi.html').write_text(HTML, encoding='utf-8')
 if '--png' in sys.argv:
