@@ -96,8 +96,8 @@ from kuran_kokleri import kokler
 KL = kokler(); NO = {(k, fl): n for n, (k, fl, _) in enumerate(KL)}
 KOKA = collections.defaultdict(list)
 for k, fl, (s_, a_, w_, m_) in sorted(KL, key=lambda z: z[2]): KOKA['%d:%d' % (s_, a_)].append([k, fl])
-SAYFA = json.load(open(HERE / 'SAYFA.json')) if (HERE / 'SAYFA.json').exists() else {}
-KAPAK = json.load(open(HERE / 'KAPAK.json')) if (HERE / 'KAPAK.json').exists() else {}
+SAYFA = json.load(open(HERE / 'SAYFA2.json')) if (HERE / 'SAYFA2.json').exists() else {}
+KAPAK = json.load(open(HERE / 'KAPAK2.json')) if (HERE / 'KAPAK2.json').exists() else {}
 SUR = sureler()
 QX, QY, QW, QH = 1900, 40, 1720, 1720
 KRW = 5200; KY = 100; OX = QX + 1860 + KRW + 160

@@ -80,7 +80,8 @@ function KS(n){if(KSC[n]!==undefined)return KSC[n];if(!YUK())return 1e9;let a;
  else if(n=='GS')a=D.GS.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
  else if(n=='GK')a=D.GK.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
  else if(n=='GA')a=D.GA.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
- else if(n=='GR')a=D.GP.map(p=>p[2]*0.095);
+ else if(n=='K1')a=D.GP.map(p=>Math.min(p[2]*.8/genis(p[6],'Amiri'),p[3]*.45));
+ else if(n=='GR')a=D.GP.map(p=>p[2]*0.13);
  else if(n=='BL')a=D.BL.map(b=>b[6]*.75);
  else if(n=='OD')a=D.OO.odalar.map(o=>Math.max(...kirpK(o.ad).map(([s,gw])=>Math.min(o.lab[2]*.92/gw,o.lab[3]*.9/(s.length*1.12)))));
  else if(n=='OS')a=D.OO.S.map(s=>Math.min(s[2]*.92/genis(s[4],'Georgia'),s[5]*.8));
@@ -94,27 +95,28 @@ const IMG={},KUY=[];let AKT=0;
 const ON=[];function kuyruk(){while(AKT<8&&KUY.length){const r=KUY.pop();AKT++;r.im.src=r.src}while(AKT<2&&!KUY.length&&ON.length){const k=ON.shift();if(!IMG[k]){yuk(k,1)}}}
 function yuk(k,on){let r=IMG[k];if(r)return r.ok?r.im:null;r=IMG[k]={ok:false,im:new Image(),src:k};const bit=()=>{AKT--;kirli=true;kuyruk()};r.im.onload=()=>{(r.im.decode?r.im.decode():Promise.resolve()).catch(()=>{}).then(()=>{r.ok=true;bit()})};r.im.onerror=()=>{r.hata=true;bit()};if(on){AKT++;r.im.src=r.src}else{KUY.push(r);kuyruk()}return null}
 const ATL=D.ATL;
-function atl(m,i){return yuk('lugat_atlas/a'+m+'_'+Math.floor(i/(ATL.M[m].c*ATL.M[m].r))+'.webp')}
+function atl(m,i){return yuk('lugat_atlas_2/a'+m+'_'+Math.floor(i/(ATL.M[m].c*ATL.M[m].r))+'.webp')}
 function atlCiz(m,i,p){const im=atl(m,i);if(!im)return false;const q=ATL.M[m],j=i%(q.c*q.r);ctx.drawImage(im,(j%q.c)*q.w,Math.floor(j/q.c)*q.h,q.w,q.h,p[0],p[1],p[2],p[3]);return true}
 const GI=new Map();D.GP.forEach((p,i)=>GI.set(p,i));
 function hucre(p,i){if(!p[8])return false;const ek=p[2]*S*dpr;
- if(ek>=330){const t=yuk('lugat_kapak/'+p[4]+'_1.webp');if(t){ctx.drawImage(t,p[0],p[1],p[2],p[3]);return true}}
+ if(ek>=330){const t=yuk('lugat_kapak_2/'+p[4]+'_1.webp');if(t){ctx.drawImage(t,p[0],p[1],p[2],p[3]);return true}}
  if(ek>=120&&atlCiz(1,i,p))return true;
  if(atlCiz(0,i,p))return true;
  return ek>=120&&atlCiz(1,i,p)}
-function onYukle(){const a=ATL.M[0],n=a.c*a.r,mx=(W/2-TX)/S-DX,my=(H/2-TY)/S,sira=[];for(let k=0;k<a.n;k++)sira.push(k);sira.sort((u,v)=>{const f=k=>{const p=D.GP[Math.min(k*n+(n>>1),D.GP.length-1)];return Math.hypot(p[0]-mx,p[1]-my)};return f(u)-f(v)});sira.forEach(k=>ON.push('lugat_atlas/a0_'+k+'.webp'));kuyruk()}
+function onYukle(){const a=ATL.M[0],n=a.c*a.r,mx=(W/2-TX)/S-DX,my=(H/2-TY)/S,sira=[];for(let k=0;k<a.n;k++)sira.push(k);sira.sort((u,v)=>{const f=k=>{const p=D.GP[Math.min(k*n+(n>>1),D.GP.length-1)];return Math.hypot(p[0]-mx,p[1]-my)};return f(u)-f(v)});sira.forEach(k=>ON.push('lugat_atlas_2/a0_'+k+'.webp'));kuyruk()}
 function gLevel(){return S<6/KS('GR')?1:2}
-function hazirOran(){const x0=-TX/S-DX,y0=-TY/S,x1=(W-TX)/S-DX,y1=(H-TY)/S;let n=0,h=0;D.GP.forEach((p,i)=>{if(!p[8]||p[0]>x1||p[0]+p[2]<x0||p[1]>y1||p[1]+p[3]<y0)return;n++;const q=ATL.M[0],j=i%(q.c*q.r),im=IMG['lugat_atlas/a0_'+Math.floor(i/(q.c*q.r))+'.webp'];if(im&&im.ok)h++});return n?h/n:1}
+function hazirOran(){const x0=-TX/S-DX,y0=-TY/S,x1=(W-TX)/S-DX,y1=(H-TY)/S;let n=0,h=0;D.GP.forEach((p,i)=>{if(!p[8]||p[0]>x1||p[0]+p[2]<x0||p[1]>y1||p[1]+p[3]<y0)return;n++;const q=ATL.M[0],j=i%(q.c*q.r),im=IMG['lugat_atlas_2/a0_'+Math.floor(i/(q.c*q.r))+'.webp'];if(im&&im.ok)h++});return n?h/n:1}
 function kokCiz(x0,y0,x1,y1,yaz){const GL=gLevel(),gor=(x,y,w,h)=>x<=x1&&x+w>=x0&&y<=y1&&y+h>=y0;ctx.textAlign='center';ctx.textBaseline='middle';
  D.GS.forEach(s=>{if(!gor(s[0],s[1],s[2],s[3]))return;ctx.fillStyle='#efe6cc';ctx.fillRect(s[0],s[1],s[2],s[3]);ctx.strokeStyle='#8a6d2b';ctx.lineWidth=1.4/S;ctx.strokeRect(s[0],s[1],s[2],s[3]);ctx.fillStyle='#5a3d0c';kutuYaz(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ','GS')});
  D.GK.forEach(k=>{if(k[2]*S<3||!gor(k[0],k[1],k[2],k[3]))return;ctx.fillStyle='#f8f2e0';ctx.fillRect(k[0],k[1],k[2],k[3]);ctx.strokeStyle='#2f6fb3';ctx.lineWidth=0.9/S;ctx.strokeRect(k[0],k[1],k[2],k[3]);ctx.fillStyle='#1f4f86';if(GL==2)kutuYaz(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ','GK')});
  D.GA.forEach(a=>{if(Math.min(a[2],a[3])*S<3||!gor(a[0],a[1],a[2],a[3]))return;ctx.fillStyle='#fffdf6';ctx.fillRect(a[0],a[1],a[2],a[3]);ctx.strokeStyle='#3f7f3a';ctx.lineWidth=0.7/S;ctx.strokeRect(a[0],a[1],a[2],a[3]);ctx.fillStyle='#2e5e2a';if(GL==2)kutuYaz(a[4],a[0],a[1],a[2],a[5],'Georgia','','GA')});
  if(GL==1)D.GP.forEach(p=>{if(!gor(p[0],p[1],p[2],p[3]))return;ctx.fillStyle=p[7]?'#e6eef7':'#fbf3d8';ctx.fillRect(p[0],p[1],p[2],p[3]);ctx.strokeStyle=p[7]?'#2f6fb3':'#b8860b';ctx.lineWidth=0.6/S;ctx.strokeRect(p[0],p[1],p[2],p[3])});
+ if(GL==1&&S*KS('K1')>=6.9){ctx.fillStyle='#5a3d0c';ctx.font=KS('K1')+'px Amiri';D.GP.forEach(p=>{if(gor(p[0],p[1],p[2],p[3]))ctx.fillText(p[6],p[0]+p[2]/2,p[1]+p[3]/2)})}
  if(GL==2)D.GP.forEach(p=>{if(!gor(p[0],p[1],p[2],p[3]))return;ctx.fillStyle='#fffdf6';ctx.fillRect(p[0],p[1],p[2],p[3]);if(!hucre(p,GI.get(p))){ctx.fillStyle='#5a3d0c';ctx.font=p[2]*0.45+'px Amiri';ctx.fillText(p[6],p[0]+p[2]/2,p[1]+p[3]*0.3)}
   ctx.strokeStyle=p[7]?'#2f6fb3':'#b8860b';ctx.lineWidth=0.6/S;ctx.strokeRect(p[0],p[1],p[2],p[3]);
   if(p[5]>1){const r=p[2]*0.08;ctx.fillStyle='#c0392b';ctx.beginPath();ctx.roundRect(p[0]+p[2]-r*2.6,p[1]+p[3]-r*1.6,r*2.4,r*1.4,r*0.3);ctx.fill();ctx.fillStyle='#fff';ctx.font='bold '+r*0.95+'px Georgia';ctx.fillText(p[5]+' sf',p[0]+p[2]-r*1.4,p[1]+p[3]-r*0.9)}});
  ctx.fillStyle='#5a3d0c';kutuYaz('Kur\'ân uzayı · ilk geçen kök (yalnız yeni kök gelen âyetler)',1900,8,D.KW,80,'Georgia','bold ');ctx.textBaseline='alphabetic'}
-function galeriAc(p){const g=document.getElementById('gal'),s=document.getElementById('gals'),nc=p[8],nl=p[5]-nc;document.getElementById('galb').textContent=p[6]+' · '+p[5]+' sayfa (kapak '+nc+', lügat '+nl+')';s.innerHTML='';const ekle=u=>{const im=document.createElement('img');im.src=u;im.style.cssText='height:84vh;width:auto;background:#fffdf6;border-radius:4px;box-shadow:0 2px 12px #0008';s.appendChild(im)};for(let i=1;i<=nc;i++)ekle('lugat_kapak/'+p[4]+'_'+i+'.webp');for(let i=1;i<=nl;i++)ekle('lugat_sayfalari/'+p[4]+'_'+i+'.webp');g.style.display='block'}
+function galeriAc(p){const g=document.getElementById('gal'),s=document.getElementById('gals'),nc=p[8],nl=p[5]-nc;document.getElementById('galb').textContent=p[6]+' · '+p[5]+' sayfa (kapak '+nc+', lügat '+nl+')';s.innerHTML='';const ekle=u=>{const im=document.createElement('img');im.src=u;im.style.cssText='height:84vh;width:auto;background:#fffdf6;border-radius:4px;box-shadow:0 2px 12px #0008';s.appendChild(im)};for(let i=1;i<=nc;i++)ekle('lugat_kapak_2/'+p[4]+'_'+i+'.webp');for(let i=1;i<=nl;i++)ekle('lugat_sayfalari_2/'+p[4]+'_'+i+'.webp');g.style.display='block'}
 function galeriKapat(){document.getElementById('gal').style.display='none'}
 addEventListener('keydown',e=>{if(e.key==='Escape')galeriKapat()});
 const DX=1860;

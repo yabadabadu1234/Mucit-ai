@@ -6,19 +6,19 @@ from concurrent.futures import ProcessPoolExecutor
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from lugat_sayfa import temiz, KR, YAZI, DPI, hepsi
-CIKTI = HERE / 'lugat_kapak'
+CIKTI = HERE / 'lugat_kapak_2'
 CSS = '''
 @font-face{font-family:Amiri;src:url("file://%(y)s/Amiri-Regular.ttf");font-weight:400}
 @font-face{font-family:Amiri;src:url("file://%(y)s/Amiri-Bold.ttf");font-weight:700}
 @page{size:148mm 210mm;margin:8mm 8mm 8mm 8mm;background:#fffdf6}
 html{background:#fffdf6}body{margin:0;font:19pt/1.3 FreeSerif,"DejaVu Serif",serif;color:#2b2410}
-.kok{font-family:Amiri,serif;font-weight:700;font-size:100pt;line-height:2.0;text-align:center;direction:rtl;color:#5a3d0c}
-.alt{text-align:center;font-size:15pt;color:#6b5a3a;margin:0 0 4mm}
-h2{font:700 18pt FreeSerif,serif;color:#fff;background:#8a6d1d;margin:4mm 0 2mm;padding:1.2mm 3mm;border-radius:1.4mm;break-after:avoid}
-.an{font-weight:700;font-size:40pt;line-height:1.18;margin:0 0 2mm}
-.mana{margin:0 0 2.4mm;break-inside:avoid}.mana b{font-size:28pt}.tur{margin:.4mm 0 0 6mm;font-size:22pt;color:#4a3f28}.tur2{margin-left:12mm;font-size:18pt;color:#5a4f38}
+.kok{font-family:Amiri,serif;font-weight:700;font-size:110pt;line-height:1.9;text-align:center;direction:rtl;color:#5a3d0c}
+.alt{text-align:center;font-size:17pt;color:#6b5a3a;margin:0 0 4mm}
+h2{font:700 20pt FreeSerif,serif;color:#fff;background:#8a6d1d;margin:4mm 0 2mm;padding:1.2mm 3mm;border-radius:1.4mm;break-after:avoid}
+.an{font-weight:700;font-size:56pt;line-height:1.14;margin:0 0 2mm}
+.mana{margin:0 0 2.4mm;break-inside:avoid}.mana b{font-size:38pt}.tur{margin:.4mm 0 0 6mm;font-size:30pt;color:#4a3f28}.tur2{margin-left:12mm;font-size:25pt;color:#5a4f38}
 .kelime{display:flex;justify-content:space-between;gap:4mm;border-bottom:.3mm solid #d9ceaa;padding:1.4mm 0;break-inside:avoid}
-.kelime .ar{font-family:Amiri,serif;direction:rtl;font-size:38pt;flex:none;line-height:1.5}.kelime div{flex:1}.kelime b{font-size:26pt}.kelime .k{font-size:17pt;color:#6b5a3a}
+.kelime .ar{font-family:Amiri,serif;direction:rtl;font-size:46pt;flex:none;line-height:1.5}.kelime div{flex:1}.kelime b{font-size:34pt}.kelime .k{font-size:22pt;color:#6b5a3a}
 '''
 def belge(g): return '<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>%s</style></head><body>%s</body></html>' % (CSS % {'y': YAZI}, g)
 
@@ -77,7 +77,7 @@ def uret(P, KSZ):
 def kos(a): return uret(*a)
 
 if __name__ == '__main__':
-    CIKTI.mkdir(exist_ok=True); L, KSZ = hepsi(); SJ = HERE / 'KAPAK.json'
+    CIKTI.mkdir(exist_ok=True); L, KSZ = hepsi(); SJ = HERE / 'KAPAK2.json'
     sayfa = json.load(open(SJ)) if SJ.exists() and '--yeniden' not in sys.argv else {}
     for f in ([] if '--yeniden' in sys.argv else CIKTI.glob('*.webp')):
         a, b_ = f.stem.split('_')[:2]

@@ -4,7 +4,7 @@ Mertebe 0: 112×159 px, atlas başına 256 hücre (16×16) · Mertebe 1: 224×31
 import json, hashlib, pathlib
 from concurrent.futures import ProcessPoolExecutor
 HERE = pathlib.Path(__file__).resolve().parent
-KAPAK = HERE / 'lugat_kapak'; CIKTI = HERE / 'lugat_atlas'
+KAPAK = HERE / 'lugat_kapak_2'; CIKTI = HERE / 'lugat_atlas_2'
 M = [dict(w=112, h=159, c=16, r=16, q=58), dict(w=224, h=318, c=8, r=8, q=62)]
 def bir(a):
     from PIL import Image

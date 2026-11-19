@@ -6,7 +6,7 @@ from multiprocessing import Pool
 HERE = pathlib.Path(__file__).resolve().parent
 KH = HERE.parent.parent
 KR = KH / 'kelime_kaydi' / 'kuranda_var'
-CIKTI = HERE / 'lugat_sayfalari'
+CIKTI = HERE / 'lugat_sayfalari_2'
 YAZI = HERE / 'yazi'
 DPI = 110
 
@@ -25,10 +25,33 @@ h2{font:700 10.5pt FreeSerif,serif;color:#fff;background:#8a6d1d;margin:4mm 0 1.
 h2 small{font-weight:400;font-size:8pt;opacity:.9}
 .mana{margin:0 0 1.4mm;break-inside:avoid}.mana b{font-size:10.4pt}.tur{margin:.3mm 0 0 5mm;font-size:9pt;color:#4a3f28}
 .mak .ar{font-size:13.5pt}.mak p{margin:0 0 1.5mm}
+.osm{font-size:9pt;line-height:1.38;margin:0 0 1.4mm;text-align:justify}.osm b{color:#5a3d0c}
 .en{font-size:8.2pt;line-height:1.38;color:#3a3220;text-align:justify;hyphens:auto}
 .kelime{display:flex;justify-content:space-between;gap:3mm;border-bottom:.2mm solid #d9ceaa;padding:1mm 0;break-inside:avoid}
 .kelime .ar{font-size:15pt;flex:none}.kelime div{flex:1}
 '''
+
+
+def osm_bolum(s):
+    """Türkçe okunabilen lügat maddeleri: mustak_lugat (yapılı) ve osmanlica_lugatler (madde metni); yer tutucu satırlar ve aynı metin tekrarı atılır."""
+    gor = set(); b = {}
+    def ekle(eser, bas, govde):
+        g = temiz(govde)
+        if not g or g in gor or 'maddesi. Sayfa:' in g: return
+        gor.add(g); b.setdefault(eser, []).append((temiz(bas), g))
+    for w, L in (s.get('mustak_lugat') or {}).items():
+        for m in L:
+            for mn in m.get('manalar') or []:
+                ekle(m['eser'].replace('Kubbealtı', 'Kubbealtı Lügati'), '%s%s' % (m.get('madde', ''), (' · ' + m['tur']) if m.get('tur') else ''), ('%s' % (m.get('koken', '') + ' — ' if m.get('koken') else '')) + mn.get('tanim', ''))
+    for w, v in (s.get('osmanlica_lugatler') or {}).items():
+        for m in v.get('maddeler') or []:
+            ekle({'Kubbe Altı': 'Kubbealtı Lügati'}.get(m['eser'], m['eser']), m.get('madde', ''), m.get('mana', ''))
+    o = []
+    for eser in ['Kubbealtı Lügati', 'Kamus', 'Vankulu', 'Luggat', 'Lugat-ı Remzi', 'Kamus-u Türki'] + sorted(set(b) - {'Kubbealtı Lügati', 'Kamus', 'Vankulu', 'Luggat', 'Lugat-ı Remzi', 'Kamus-u Türki'}):
+        if eser not in b: continue
+        o.append('<h2>%s <small>(Osmanlıca lügat · %d madde)</small></h2>' % (temiz(eser), len(b[eser])))
+        for bas, g in b[eser]: o.append('<div class="osm"><b>%s</b> — %s</div>' % (bas, g))
+    return ''.join(o)
 
 def kok_sayfa(k):
     if not (KR / 'kokler' / (k + '.json')).exists():
@@ -53,6 +76,9 @@ def kok_sayfa(k):
     o.append('<h2>Kökün manası <small>(asıllar ve türeme)</small></h2>')
     for i, n in enumerate(_A[k]):
         o.append('<div class="mana"><b>%d. %s</b>%s</div>' % (i + 1, temiz(n['mana']), ''.join('<div class="tur">· %s%s</div>' % (temiz(t['mana']), ''.join('<div class="tur" style="margin-left:5mm">– %s</div>' % temiz(u['mana']) for u in t['turev'])) for t in n['turev'])))
+    o.append(osm_bolum(s))
+    et = d['sozlukler'].get('etimoloji')
+    if et: o.append('<h2>Etimoloji notu</h2><div class="osm">%s</div>' % paragraf(et if isinstance(et, str) else ''))
     for m in s.get('mekayis') or []:
         o.append('<h2>Mekâyîs <small>(İbn Fâris) · %s</small></h2><div class="mak"><div class="ar">%s</div></div>' % (temiz(m.get('baslik', '')), paragraf(m.get('metin', ''))))
     cm = s.get('cebel_mihveri')
@@ -106,7 +132,7 @@ def is_(a):
     return no, (kok_sayfa(ad) if fl == 0 else koksuz_sayfa(ad, KSZ.get(ad, [])))
 
 if __name__ == '__main__':
-    CIKTI.mkdir(exist_ok=True); L, KSZ = hepsi(); SJ = HERE / 'SAYFA.json'
+    CIKTI.mkdir(exist_ok=True); L, KSZ = hepsi(); SJ = HERE / 'SAYFA2.json'
     sayfa = json.load(open(SJ)) if SJ.exists() else {}
     for f in CIKTI.glob('*.webp'):
         a, b = f.stem.split('_')[:2]
