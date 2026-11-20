@@ -4,6 +4,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 
 KOKLER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi', 'kuranda_var', 'kokler')
 OPENCODE = os.path.expanduser('~/.opencode/bin/opencode')
@@ -45,6 +46,10 @@ def cagir(metinler, model):
     istem = ISTEM + json.dumps(metinler, ensure_ascii=False)
     r = subprocess.run([OPENCODE, 'run', '-m', model, istem], capture_output=True, text=True, timeout=400, cwd='/tmp')
     cikti = r.stdout
+    while 'usage limit' in cikti.lower():
+        time.sleep(900)
+        r = subprocess.run([OPENCODE, 'run', '-m', model, istem], capture_output=True, text=True, timeout=400, cwd='/tmp')
+        cikti = r.stdout
     m = re.search(r'\[.*\]', cikti, re.S)
     if not m:
         return None
