@@ -1,4 +1,0 @@
-* UA741 (TI SLOS094H typical values; one-pole macromodel on LTspice level2)
-.subckt UA741 1 2 3 4 5 params: Avol=200k GBW=1Meg Slew=500k Ilimit=80m Rail=2 Vos=0 Rin=540Gig
-X1 1 2 3 4 5 level2 Avol={Avol} GBW={GBW} Slew={Slew} Ilimit={Ilimit} Rail={Rail} Vos={Vos} Rin={Rin}
-.ends
