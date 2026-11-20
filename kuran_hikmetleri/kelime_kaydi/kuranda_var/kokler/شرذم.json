@@ -8,7 +8,11 @@
   },
   "mustaklar": {},
   "reddedilen": [
-    ["kök", "شرذم", "üç harfli değil"]
+    [
+      "kök",
+      "شرذم",
+      "üç harfli değil"
+    ]
   ],
   "sozlukler": {
     "kok_anlamlari": {
@@ -18,7 +22,9 @@
     },
     "osmanlica_lugatler": {
       "شِرْذِمَة": {
-        "sorgular": ["şirzimae"],
+        "sorgular": [
+          "şirzimae"
+        ],
         "maddeler": []
       }
     },
@@ -55,9 +61,15 @@
         "p": "verb",
         "h": "ar-verb",
         "e": "تَشَرْذَمَ • (tašarḏama) IIq (non-past يَتَشَرْذَمُ (yatašarḏamu), verbal noun تَشَرْذُم (tašarḏum))",
-        "g": ["to be indented or jagged, to splinter into factions or groups"],
-        "r": ["tašarḏama"],
-        "ipa": ["/ta.ʃar.ða.ma/"],
+        "g": [
+          "to be indented or jagged, to splinter into factions or groups"
+        ],
+        "r": [
+          "tašarḏama"
+        ],
+        "ipa": [
+          "/ta.ʃar.ða.ma/"
+        ],
         "k": "شرذم",
         "yol": "kök"
       }
@@ -211,7 +223,33 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "tercume": {
+      "cebel_mihveri": {
+        "mihveri": "Bir şeyin, eskimiş ve yıpranmış bir şeyden ayrılmış münferid yahut dağılmış bir parça olmasıdır; zikri geçen elbise ve nalın misalindeki gibi. Bundan dolayı \"Şirzime (الشرذمة): İnsanlardan az bir cemaat\" denilmiştir. Eskiyip yıpranmaktan dolayı parça parça olmuş elbise (\"es-sevbü'ş-şerâzim\") hakkındaki ifadeden istidlâl ile, kendileri hakkında bu tabiri istimal edenler indinde o kimselerin bu vasıfla birlikte zaaf (zayıflık) ile tavsif edilmeleri de muktezîdir. Lâkin hiddet ve şiddet manası, mu'cem faslında yer alan \"(şerr)\" kökünden ahz olunarak bu terkibin manasında asîldir; nitekim şu âyet-i kerîme bunu te'kid eder: {وَإِنَّهُمْ لَنَا لَغَائِظُونَ} [الشعراء: 55] (Şu'arâ, 55: \"Ve muhakkak ki onlar bizi pek ziyade öfkelendirmektedirler\"). Kur'ân-ı Kerîm'de bu terkibden vârid olan husus, Firavun'un veya elçilerinin, Hazret-i Mûsâ (aleyhi ve alâ nebiyyinâ ve alâ cemî'i'l-enbiyâi's-salâtü ve's-selâm) ile beraberinde iman edenler hakkındaki şu kavlidir: {إِنَّ هَؤُلَاءِ لَشِرْذِمَةٌ قَلِيلُونَ (54) وَإِنَّهُمْ لَنَا لَغَائِظُونَ} (Şu'arâ, 54-55: \"Muhakkak ki bunlar pek az bir topluluktur ve şüphesiz onlar bizi öfkelendirmektedirler\")."
+      },
+      "kaikki_vikisozluk": [
+        {
+          "g": [
+            "dişli veya girintili çıkıntılı olmak; fırkalara, cemaatlere veya zümrelere ayrılıp bölünmek"
+          ]
+        }
+      ],
+      "arabic_ontology": [
+        {
+          "tanim": "Neseb ve kan bağının cem' ettiği insan topluluğu",
+          "misal": "Müsabaka vaktini sual eden bir _ gördüm"
+        },
+        {
+          "tanim": "Bir maksat için aynı mekânda ve aynı vakitte ictima eden büyük insan zümresi",
+          "misal": "Belde ahalisinden bir _ ile Beytülahm'e bir seyahate gittik"
+        },
+        {
+          "tanim": "Tek bir mekânda müctemi' bulunan bir mikdar insan için kullanılan isim",
+          "misal": "Zâbıta memuru, müsâfirlerin _'sine su takdim etti"
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,
@@ -221,7 +259,14 @@
     "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
     "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
     "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+    "satir_alanlari": [
+      "kalip",
+      "arapca",
+      "latin",
+      "turkce",
+      "guven",
+      "tanik"
+    ]
   },
   "tasnif": {
     "fasil": "شر",
