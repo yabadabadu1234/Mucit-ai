@@ -8,7 +8,11 @@
   },
   "mustaklar": {},
   "reddedilen": [
-    ["kök", "درهم", "üç harfli değil"]
+    [
+      "kök",
+      "درهم",
+      "üç harfli değil"
+    ]
   ],
   "sozlukler": {
     "kok_anlamlari": {
@@ -17,7 +21,9 @@
     },
     "osmanlica_lugatler": {
       "دَراهِم": {
-        "sorgular": ["darahim"],
+        "sorgular": [
+          "darahim"
+        ],
         "maddeler": []
       }
     },
@@ -53,7 +59,9 @@
     "arabic_ontology": [
       {
         "id": "51306",
-        "arapca": ["دِرْهَمٌ"],
+        "arapca": [
+          "دِرْهَمٌ"
+        ],
         "ingilizce": [],
         "tanim": "وحدة نقدية معدنية ذات قيمة شرائية محددة ومتفق عليها وتختلف قيمتها باختلاف المكان المتدأولة فيه",
         "misal": "يستخدم ال_ كعملة نقدية في بلدان عربية متعددة منها اليمن والمغرب والخليج العربي",
@@ -61,7 +69,18 @@
         "ust": [],
         "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
       }
-    ]
+    ],
+    "tercume": {
+      "cebel_mihveri": {
+        "mihveri": "Zahiri baki kalmakla beraber şeyin içinden kuvvetini sağlayan şeyin gitmesidir: ihtiyardan giden kuvvet ve şiddet ile görme kuvveti ve keskinliğinin gitmesi gibi. 'Ed-dirhem (hicra', zibric ve birsâm vezinlerinde)' olan o gümüş sikkeye gelince; en benzeri, kelimenin Yunanca dirham veya Farsçadan mu'arreb (Arapçalaştırılmış) olmasıdır (1). Yahut bu kelime kadim Arapçadan acemîleştirilmiş de vechi gizli kalmıştır."
+      },
+      "arabic_ontology": [
+        {
+          "tanim": "Üzerinde ittifak edilmiş mahdut satın alma kıymetine sahip madenî para birimi olup kıymeti tedavül ettiği mekânın ihtilafına göre değişir (dirhem).",
+          "misal": "Dirhem Yemen, Mağrip ve Arap Körfezi dahil olmak üzere müteaddit Arap memleketlerinde nakdî para birimi olarak kullanılır."
+        }
+      ]
+    }
   },
   "kuran_gecisleri": 1,
   "kuranda_var": true,
@@ -71,7 +90,14 @@
     "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
     "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
     "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
+    "satir_alanlari": [
+      "kalip",
+      "arapca",
+      "latin",
+      "turkce",
+      "guven",
+      "tanik"
+    ]
   },
   "tasnif": {
     "fasil": "در",
@@ -102,7 +128,9 @@
   "prototip_yayilim_tasnif": {
     "durum": "prototip veya mecaz kolu yok"
   },
-  "kolekzifikasyon_kavramlari": ["standard.n.01"],
+  "kolekzifikasyon_kavramlari": [
+    "standard.n.01"
+  ],
   "muhassas_tasnif": {
     "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
