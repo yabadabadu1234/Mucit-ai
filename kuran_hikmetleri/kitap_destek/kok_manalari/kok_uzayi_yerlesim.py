@@ -11,7 +11,9 @@ FA = 1.0             # âyet yazısı punto (birim: yazı puntosu)
 SATIR = 1.85         # âyet satır aralığı (punto katı)
 ADIM = 1.0           # ızgara adımı: bütün oda ebatları buna oturur
 AG = 0.15            # oda içi boşluk
-KB = 2.0; SB = 3.2   # kısım ve sûre başlık payı
+KB = 2.6; SB = 4.2   # kısım ve sûre başlık payı
+BOS_A = 0.6; BOS_K = 1.4; BOS_S = 3.0   # kardeş odalar arası boşluk (âyet, kısım, sûre)
+IC_K = 0.5; IC_S = 1.0                  # kısım ve sûre oda içi dolgu
 CELL = 5.0           # hücre eni (yazı puntosu cinsinden)
 _F = ImageFont.truetype(str(HERE / 'yazi' / 'Amiri-Regular.ttf'), 100)
 def gen(t): return _F.getlength(t) / 100.0
@@ -46,26 +48,26 @@ def ayet_sekilleri(s, a, n, c):
         if h < eh - 1e-9: out.append((w, h, sp)); eh = h
     return out
 
-def shelf(olc, Wmax, bas):
-    x = 0.0; y = bas + AG; sh = 0.0; used = 0.0; pos = []
+def shelf(olc, Wmax, bas, ic, bos):
+    x = 0.0; y = bas + ic; sh = 0.0; used = 0.0; pos = []
     for w, h in olc:
-        if x > 0 and x + w > Wmax - 2 * AG + 1e-9: y += sh; sh = 0.0; x = 0.0
-        pos.append((x, y)); x += w; used = max(used, x); sh = max(sh, h)
+        W_, H_ = w + bos, h + bos
+        if x > 0 and x + W_ > Wmax - 2 * ic + 1e-9: y += sh; sh = 0.0; x = 0.0
+        pos.append((x + bos / 2, y + bos / 2)); x += W_; used = max(used, x); sh = max(sh, H_)
     y += sh
-    return pos, used + 2 * AG, snap(y + AG)
+    return pos, used + 2 * ic, snap(y + ic)
 
-def paketle(cs, bas, tut=70):
-    """Çocukların şekil listelerinden ebeveynin şekil listesi: hedef satır boyu Hr ve en W taranır; satır içi üst hizalı, sağdan sola."""
+def paketle(cs, bas, ic, bos, tut=70):
     ah = sorted({round(h, 3) for L in cs for (w, h, _) in L}); Hs = ah[::max(1, len(ah) // 30)] + [ah[-1]]; best = {}
     for Hr in Hs:
         pick = []
         for L in cs:
             ok = [(i, z) for i, z in enumerate(L) if z[1] <= Hr + 1e-9]
             pick.append(min(ok, key=lambda q: q[1][0]) if ok else min(enumerate(L), key=lambda q: q[1][1]))
-        ws = [z[0] for i, z in pick]; mx = max(ws); top = sum(ws); n_ = min(40, int(top - mx) + 1)
-        Wc = sorted({int(math.ceil(mx + 2 * AG)) + int(round(k)) for k in [j * (top - mx) / max(n_ - 1, 1) for j in range(n_)]})
+        ws = [z[0] + bos for i, z in pick]; mx = max(ws); top = sum(ws); n_ = min(40, int(top - mx) + 1)
+        Wc = sorted({int(math.ceil(mx + 2 * ic)) + int(round(k)) for k in [j * (top - mx) / max(n_ - 1, 1) for j in range(n_)]})
         for W in Wc:
-            pos, w, h = shelf([(z[0], z[1]) for i, z in pick], W, bas)
+            pos, w, h = shelf([(z[0], z[1]) for i, z in pick], W, bas, ic, bos)
             if h not in best or w < best[h][0]: best[h] = (w, [(ci, i, x, y) for ci, ((i, z), (x, y)) in enumerate(zip(pick, pos))])
     out = []; eh = 1e18
     for h, (w, lay) in sorted(best.items(), key=lambda kv: kv[1][0]):
@@ -83,9 +85,9 @@ def kur(SUR, KOKA, NO, SAYFA, KAPAK):
             for a in ay:
                 r = KOKA.get('%d:%d' % (s, a), [])
                 if r: ao.append(dict(tip='a', kok=r, sek=ayet_sekilleri(s, a, len(r), CELL), kids=[]))
-            if ao: kis.append(dict(tip='k', ad=kad, s=s, kids=ao, sek=paketle([x['sek'] for x in ao], KB)))
-        if kis: surler.append(dict(tip='s', s=s, ad='%d · %s' % (s, adi), kids=kis, sek=paketle([k['sek'] for k in kis], SB)))
-    kok_ = paketle([S['sek'] for S in surler], 0, 120)
+            if ao: kis.append(dict(tip='k', ad=kad, s=s, kids=ao, sek=paketle([x['sek'] for x in ao], KB, IC_K, BOS_A)))
+        if kis: surler.append(dict(tip='s', s=s, ad='%d · %s' % (s, adi), kids=kis, sek=paketle([k['sek'] for k in kis], SB, IC_S, BOS_K)))
+    kok_ = paketle([S['sek'] for S in surler], 0, 1.0, BOS_S, 120)
     sk = lambda z: z[0] * z[1] * (1 + 0.5 * abs(math.log(z[0] / z[1] / 1.65)))
     w, h, lay = min(kok_, key=sk)
     SU, KI, AY, GP = [], [], [], []
@@ -98,9 +100,9 @@ def kur(SUR, KOKA, NO, SAYFA, KAPAK):
         for K, ksub, kw, kh, KX, KY in yer(S['kids'], sub, SX, SY, sw):
             KI.append([round(KX, 3), round(KY, 3), round(kw, 3), round(kh, 3), K['ad'], round(KB, 3), S['s']])
             for A, sp, aw, ah, AX, AYY in yer(K['kids'], ksub, KX, KY, kw):
-                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), list(sp['L'])])
+                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), list(sp['L']), len(A['kok'])])
                 kk = sp['k']; cc = sp['c']; r0 = AYY + sp['bh'] + AG
                 for j, (kok, fl) in enumerate(A['kok']):
                     ri, ci = divmod(j, kk); no = NO[(kok, fl)]; nc = KAPAK.get(str(no), 0)
-                    GP.append([round(AX + aw - AG - (ci + 1) * cc, 3), round(r0 + ri * cc * CH, 3), cc, round(cc * CH, 4), no, nc + SAYFA.get(str(no), 0), kok, fl, nc])
+                    GP.append([round(AX + aw - AG - (ci + 1) * cc, 3), round(r0 + ri * cc * CH, 3), cc, round(cc * CH, 4), no, nc + SAYFA.get(str(no), 0), kok, fl, nc, '%d:%d' % (sp['s'], sp['a'])])
     return dict(SU=SU, KI=KI, AY=AY, GP=GP, W=round(w, 3), H=round(h, 3), FA=FA, SATIR=SATIR, CELL=CELL)
