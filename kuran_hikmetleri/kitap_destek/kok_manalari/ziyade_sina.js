@@ -60,7 +60,7 @@ T(52,'arama önerileri (datalist 98)',()=>E(`()=>document.querySelectorAll('#sl 
 T(53,'/ kısayolu aramaya odaklanır',async()=>{await pg.click('#c',{position:{x:5,y:5}});await pg.keyboard.press('/');return (await E(`()=>document.activeElement.id`))==='ara'});
 T(54,'hash derin bağ',async()=>{await E(`()=>KOK.ayGit(KOK.D.AY[300][4])`);await pg.waitForTimeout(500);const k=await E(`()=>KOK.D.AY[300][4]`);return (await E(`()=>location.hash`)).includes('a='+k)});
 T(55,'hash açılışta okunur',async()=>{const p2=await b.newPage({viewport:{width:1600,height:900}});await p2.goto(URL+'#a=2:255');await p2.waitForTimeout(2500);const v=await p2.evaluate('(()=>KOK.state().secA!==null)()');await p2.close();return v});
-T(56,'hashchange senkron',async()=>{await pg.evaluate(`()=>{location.hash='a='+KOK.D.AY[500][4]}`);await pg.waitForTimeout(1200);const i=await E(`()=>KOK.state().secA`);const k=await E(`()=>KOK.D.AY[500][4]`);return i!==null&&(await E(`()=>KOK.D.AY[KOK.state().secA][4]`))===k});
+T(56,'hashchange senkron',async()=>{await E(`()=>{location.hash='a='+KOK.D.AY[500][4]}`);await pg.waitForTimeout(1200);const i=await E(`()=>KOK.state().secA`);const k=await E(`()=>KOK.D.AY[500][4]`);return i!==null&&(await E(`()=>KOK.D.AY[KOK.state().secA][4]`))===k});
 T(57,'atalet (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('function atalet')`));
 T(58,'pinch zoom (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('ilkD')`));
 T(59,'tekerlek ctrl duyarlılığı (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('e.ctrlKey?0.012')`));
