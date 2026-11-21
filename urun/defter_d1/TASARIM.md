@@ -4,6 +4,8 @@
 **Durum:** Tasarım ve donanım kodları yazıldı; **fiziksel kart üretilmedi, hiçbir kod gerçek donanımda koşmadı.** Testler sanal bilgisayarda, cihaz benzetimleriyle yapıldı.
 **İşaretler:** [K] kaynaktan okundu · [H] hesap · [T] tahmin, yoklanmadı.
 
+> **DONDURULDU (2026-11-21, padişahın tecrübesine dayanarak):** Bu tasarımın eksikleri çok ve benzetim ile gerçek arasındaki fark hayal kırıklığı doğurabilir; § 8'deki doğrulanmamışlar bunu zaten gösteriyor. İthal parça gerektirdiği için de (yongalar, panel, şarj entegreleri) gümrük işi çıkarıyor. **Kart üretilmeyecek.** Yerine, gerçek donanımda ölçerek ilerleyen ve yalnız Türkiye'de satılan parçalarla yapılan prototip yolu: `../defter_d0/GERCEK_PROTOTIP.md`. Buradaki çekirdek kodlar (avuç reddi, sayfa, PDF) taşınabilir kaldı ve oraya aktarılacak.
+
 ## 1. Şartlar ve nasıl okundu
 
 | Şart | Okuma | Sonuç |
