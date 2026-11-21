@@ -17,24 +17,29 @@ _HARF = {'أ': 'ا', 'إ': 'ا', 'آ': 'ا', 'ٱ': 'ا', 'ى': 'ي', 'ة': 'ه'}
 def iskelet(w):
     s = ''.join(_HARF.get(c, c) for c in w if ('ء' <= c <= 'ي' and c != 'ـ') or c == 'ٱ')
     return s
-def atif(w):   # başta "وَ" veya "فَ" (fetha) bağlacı mı
-    return len(w) > 1 and w[0] in 'وف' and w[1] == 'َ'
+def atif(w):   # başta "وَ" veya "فَ" (fetha) bağlacı mı; hançer elifli (وَٰ) kelime başı bağlaç değildir
+    return len(w) > 2 and w[0] in 'وف' and w[1] == '\u064e' and w[2] != '\u0670'
 def cekirdek(w):
     s = iskelet(w)
     return s[1:] if atif(w) and len(s) > 2 else s
 def fa_cevap(w): return len(w) > 3 and w[0] == 'ف' and w[1] == '\u064e' and w[2] != 'ا' and w[3] != '\u0652'
 
-SART = ('اذا', 'لو', 'لولا', 'كلما', 'لين')
+SART = ('اذا', 'لو', 'لولا', 'كلما', 'لين', 'اينما', 'حيثما')
 SART_ZAYIF = ('ما', 'من')   # şart anlamı bağlama bağlı: yalnız yakında bir cevap fâsı varsa
-NAKIL_FIIL = ('قل', 'قال', 'قالوا', 'قالت', 'قلنا', 'قلت', 'قالا', 'يقول', 'يقولون', 'تقول', 'تقولون', 'تقولوا', 'تقولن', 'نقول', 'اقول', 'قيل')
+NAKIL_FIIL = ('قل', 'قال', 'قالا', 'قالوا', 'قالت', 'قلن', 'قلت', 'قلتم', 'قلنا', 'قلتما', 'يقول', 'يقولان', 'يقولون', 'تقول', 'تقولون', 'تقولوا', 'تقولن', 'يقولوا', 'يقل', 'تقل', 'نقول', 'اقول', 'قولوا', 'قيل')
 NIDA = ('يايها', 'ياايها', 'يايتها', 'يابني', 'ياقوم', 'ياعبادي', 'ياابت', 'يااهل', 'يابت', 'يابنيء')
 ZIT = ('بل', 'لكن')
 
 def sart_mi(w):
     c = cekirdek(w)
     if c in SART: return True
+    if c == 'اما' and w.lstrip('وف\u064e')[:1] == 'إ': return True
     g = w[2:] if atif(w) else w
     return c == 'ان' and g[:1] == 'إ' and '\u0651' not in w
+
+def nida_imla(w):   # nidâ edatı Uthmânî imlâda daima yâ + fetha + tatweel + hançer elif (يَـٰ) yazılır
+    g = w[2:] if atif(w) else w
+    return g[:4] == 'يَـٰ'
 
 def kurallari_uygula(T, kurallar=KURALLAR):
     n = len(T); isr = [isaret(t) for t in T]
@@ -58,7 +63,7 @@ def kurallari_uygula(T, kurallar=KURALLAR):
     if 'ISTISNA' in kurallar:
         for i in range(n):
             if not isr[i] and iskelet(T[i]) in ('الا', 'والا', 'فالا') and T[i].lstrip('وفَ')[:1] == 'إ':
-                for k in range(i, durak_son(i) + 1): side[k] = 'L'; depth[k] += 1
+                for k in range(i, durak_son(i) + 1): side[k] = 'M'
                 kir(i)
     if 'CEVAP' in kurallar:
         sartlar = [i for i in range(n) if not isr[i] and (sart_mi(T[i]) or cekirdek(T[i]) in SART_ZAYIF)]
@@ -76,12 +81,12 @@ def kurallari_uygula(T, kurallar=KURALLAR):
                 kir(i, 1)
     if 'HITAP' in kurallar:
         for i in range(n):
-            if isr[i] or iskelet(T[i]) not in NIDA: continue
+            if isr[i] or not nida_imla(T[i]): continue
             c = iskelet(T[i]); j = i
-            if c in ('يايها', 'ياايها', 'يايتها'):
+            if c.lstrip('و').startswith(('يايها', 'ياايها', 'يايتها')):
                 j = sonraki(i)
                 if j < n and cekirdek(T[j]) in ('الذين', 'اللذين'): j = sonraki(j)
-            elif c == 'يااهل': j = sonraki(i)
+            elif c.lstrip('و') == 'يااهل': j = sonraki(i)
             gap[i] = 2; brk[i] = True; k = sonraki(j)
             if k < n: kir(k, 2)
             else: sondaki[0] = 2
@@ -121,7 +126,7 @@ def yerles(arapca, sayi, W, kurallar=KURALLAR):
     T = tuple(arapca.split()); (segs, son) = kes(T, kurallar); satirlar = []; y = 0.0; ilk = True
     SON = ' \ufd3f' + ''.join(chr(0x660 + int(c)) for c in str(sayi)) + '\ufd3e'
     for si, (d, sd, g, idx, hgs) in enumerate(segs):
-        inset = 0.0 if sd == 'C' else d * INS
+        inset = d * INS if sd == 'R' else (INS if sd == 'M' else 0.0)
         avail = W - 2 * AG - inset
         if g and (not ilk or g == 2): y += (GAP1 if g == 1 else GAP2)
         ilk = False
