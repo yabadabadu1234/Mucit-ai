@@ -79,10 +79,12 @@ def kok_sayfa(k):
     o.append(osm_bolum(s))
     et = d['sozlukler'].get('etimoloji')
     if et: o.append('<h2>Etimoloji notu</h2><div class="osm">%s</div>' % paragraf(et if isinstance(et, str) else ''))
-    for m in s.get('mekayis') or []:
-        o.append('<h2>Mekâyîs <small>(İbn Fâris) · %s</small></h2><div class="mak"><div class="ar">%s</div></div>' % (temiz(m.get('baslik', '')), paragraf(m.get('metin', ''))))
-    cm = s.get('cebel_mihveri')
-    if cm: o.append('<h2>Cebel <small>(el-Mu\'cemü\'l-İştikâkî) · mihver</small></h2><div class="mak ar" style="font-size:12.6pt">%s</div>' % paragraf(cm.get('mihveri', '')))
+    tc = s.get('tercume') or {}
+    for m in tc.get('mekayis') or []:
+        o.append('<h2>Mekâyîs <small>(İbn Fâris) · %s</small></h2><div class="osm">%s</div>' % (temiz(m.get('baslik', '')), paragraf(m.get('metin', ''))))
+    cm = tc.get('cebel_mihveri')
+    cm = cm.get('mihveri', '') if isinstance(cm, dict) else (cm or '')
+    if cm: o.append('<h2>Cebel <small>(el-Mu\'cemü\'l-İştikâkî) · mihver</small></h2><div class="osm">%s</div>' % paragraf(cm))
     ea = s.get('etymarab') or {}
     if ea.get('dolu'):
         t = re.sub(r'^Back to library EtymArab\s+\S+\s+\S+\s+BP – • HDAL • © SG \| 15Feb2021\s*', '', ea.get('kok_maddesi', ''))
@@ -117,6 +119,9 @@ def uret(isler):
             pngs = sorted(T.glob('p%d-*.png' % no)); assert len(pngs) == n, (no, n, len(pngs))
             for sf, pg in enumerate(pngs, 1):
                 Image.open(pg).convert('RGB').save(CIKTI / ('%d_%d.webp' % (no, sf)), 'WEBP', quality=62, method=6); pg.unlink()
+            for eski in CIKTI.glob('%d_*.webp' % no):
+                x = eski.stem.split('_')
+                if len(x) == 2 and x[1].isdigit() and int(x[1]) > n: eski.unlink()
             sonuc[no] = n; pdf.unlink(); h.unlink()
         b.close()
     return sonuc
@@ -140,6 +145,7 @@ if __name__ == '__main__':
         sayfa[a] = max(sayfa.get(a, 0), int(b))
     if '--dene' in sys.argv:
         ad = sys.argv[sys.argv.index('--dene') + 1:]; sec = [(n, a, f) for n, a, f in L if a in ad]
+    elif '--yenile' in sys.argv: sec = list(L); sayfa = {}
     else: sec = [(n, a, f) for n, a, f in L if str(n) not in sayfa]
     isci = int(sys.argv[sys.argv.index('--isci') + 1]) if '--isci' in sys.argv else 4
     parca = [[(n, ad, fl) for n, ad, fl in sec[i::isci]] for i in range(isci)]
