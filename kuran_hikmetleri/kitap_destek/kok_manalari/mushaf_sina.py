@@ -101,7 +101,7 @@ def cozucu(arapca, sayi, kurallar):
                 cur.append(i)
         if cur: its.append(cur)
         z = r + 1
-        while its and z < n and L[z][3] == 'R' and L[z][2] > L[q][2] and L[q][3] == 'R':
+        while its and z < n and ((L[z][3] == 'R' and L[z][2] > L[q][2] and L[q][3] == 'R') or (L[z][3] == 'L' and L[z][2] >= 1 and L[q][3] == 'R')):
             its[-1] = its[-1] + list(L[z][5]); z += 1
         if len(its) >= 2:
             for it in its: B.append(('PARALEL', it))
@@ -142,7 +142,7 @@ if __name__ == '__main__':
         for k in AN[sys.argv[2].lower()]:
             ar, a = ayet(k); print('### PASAJ %d' % list(AN[sys.argv[2].lower()]).index(k)); print(sanat(ar, a, M.KURALLAR)[0]); print()
     elif c == 'oto':
-        for kume in ('dev', 'test'):
+        for kume in ('dev', 'test', 'test2'):
             print('==', kume)
             for ad, kur in [('düz (kuralsız)', ()), ('7 kural', M.KURALLAR)] + [('-%s' % x, tuple(y for y in M.KURALLAR if y != x)) for x in M.KURALLAR] + [('yalnız %s' % x, (x,)) for x in M.KURALLAR]:
                 r = olc(kume, kur)
@@ -167,7 +167,7 @@ if __name__ == '__main__':
             o = subprocess.run([sys.executable, '-I', str(HERE / 'mushaf_sina.py'), 'ozet'], capture_output=True, text=True, cwd='/').stdout; h.append(hashlib.sha256(o.encode()).hexdigest())
         print(h, 'ÖRTÜŞTÜ' if h[0] == h[1] else 'ÖRTÜŞMEDİ')
     elif c == 'ozet':
-        for kume in ('dev', 'test'):
+        for kume in ('dev', 'test', 'test2'):
             for k in AN[kume]:
                 ar, a = ayet(k)
                 for W in (18.0, 26.0, 40.0): print(k, W, M.yerles(ar, a, W, M.KURALLAR))

@@ -22,9 +22,10 @@ def atif(w):   # başta "وَ" veya "فَ" (fetha) bağlacı mı
 def cekirdek(w):
     s = iskelet(w)
     return s[1:] if atif(w) and len(s) > 2 else s
-def fa_cevap(w): return len(w) > 3 and w[0] == 'ف' and w[1] == '\u064e' and w[3] != '\u0652'
+def fa_cevap(w): return len(w) > 3 and w[0] == 'ف' and w[1] == '\u064e' and w[2] != 'ا' and w[3] != '\u0652'
 
 SART = ('اذا', 'لو', 'لولا', 'كلما', 'لين')
+SART_ZAYIF = ('ما', 'من')   # şart anlamı bağlama bağlı: yalnız yakında bir cevap fâsı varsa
 NAKIL_FIIL = ('قل', 'قال', 'قالوا', 'قالت', 'قلنا', 'قلت', 'قالا', 'يقول', 'يقولون', 'تقول', 'تقولون', 'تقولوا', 'تقولن', 'نقول', 'اقول', 'قيل')
 NIDA = ('يايها', 'ياايها', 'يايتها', 'يابني', 'ياقوم', 'ياعبادي', 'ياابت', 'يااهل', 'يابت', 'يابنيء')
 ZIT = ('بل', 'لكن')
@@ -60,11 +61,12 @@ def kurallari_uygula(T, kurallar=KURALLAR):
                 for k in range(i, durak_son(i) + 1): side[k] = 'L'; depth[k] += 1
                 kir(i)
     if 'CEVAP' in kurallar:
-        sartlar = [i for i in range(n) if not isr[i] and sart_mi(T[i])]
+        sartlar = [i for i in range(n) if not isr[i] and (sart_mi(T[i]) or cekirdek(T[i]) in SART_ZAYIF)]
         for si, i in enumerate(sartlar):
             lim = sartlar[si + 1] if si + 1 < len(sartlar) else n
+            if cekirdek(T[i]) in SART_ZAYIF and not sart_mi(T[i]): lim = min(lim, i + 9)
             j = next((k for k in range(i + 2, lim) if not isr[k] and fa_cevap(T[k])), None)
-            if j is None: continue
+            if j is None or any(isr[q] and T[q][0] in DURAK for q in range(i, j)): continue
             kir(i)
             for k in range(j, min(durak_son(j), lim - 1) + 1): side[k] = 'L'
             kir(j)
@@ -88,11 +90,12 @@ def kurallari_uygula(T, kurallar=KURALLAR):
             if not isr[i] and cekirdek(T[i]) in NAKIL_FIIL:
                 k = sonraki(i)
                 if k >= n: continue
-                for q in range(k, durak_son(k) + 1): depth[q] += 1
+                son_ = min([durak_son(k)] + [q - 1 for q in range(k + 1, n) if not isr[q] and cekirdek(T[q]) in NAKIL_FIIL])
+                for q in range(k, son_ + 1): depth[q] += 1
                 kir(k)
     if 'PARALEL' in kurallar:
         for i in range(1, n):
-            if not isr[i] and atif(T[i]) and T[i][0] == 'و':
+            if not isr[i] and ((atif(T[i]) and T[i][0] == 'و') or (isr[i - 1] and T[i - 1][0] in DURAK)):
                 hg[i] = 1
     for i in range(1, n):
         if not isr[i] and (depth[i] != depth[i - 1] or side[i] != side[i - 1]): brk[i] = True

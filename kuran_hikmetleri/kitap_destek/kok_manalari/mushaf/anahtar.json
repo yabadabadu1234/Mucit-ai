@@ -436,7 +436,7 @@
    [
     "HITAP",
     0,
-    2
+    1
    ],
    [
     "PARALEL",
@@ -470,5 +470,275 @@
    ]
   ]
  },
- "_not2": "test2: kural defteri DONDURULDUKTAN SONRA, kural kodu bu âyetlere hiç koşturulmadan yazıldı. PARALEL sözleşmesi: atıf vâvıyla bağlı her kalem (sığ, tek seviye); hal/kasem/istînâf vâvı sayılmaz."
+ "_not2": "test2: kural defteri DONDURULDUKTAN SONRA, kural kodu bu âyetlere hiç koşturulmadan yazıldı. PARALEL sözleşmesi: atıf vâvıyla bağlı her kalem (sığ, tek seviye); hal/kasem/istînâf vâvı sayılmaz.",
+ "_tashih": "test2/4:1 HITAP [0,2]→[0,1]: anahtar hatası (ياأيها الناس; 2. kelime emirdir), sonuçtan bağımsız düzeltildi.",
+ "test3": {
+  "2:1": [],
+  "2:21": [
+   [
+    "HITAP",
+    0,
+    1
+   ],
+   [
+    "PARALEL",
+    2,
+    5
+   ],
+   [
+    "PARALEL",
+    6,
+    8
+   ]
+  ],
+  "17:23": [
+   [
+    "ISTISNA",
+    5,
+    6
+   ],
+   [
+    "PARALEL",
+    1,
+    6
+   ],
+   [
+    "PARALEL",
+    7,
+    8
+   ],
+   [
+    "CEVAP",
+    17,
+    26
+   ],
+   [
+    "PARALEL",
+    17,
+    20
+   ],
+   [
+    "PARALEL",
+    21,
+    22
+   ],
+   [
+    "PARALEL",
+    23,
+    26
+   ],
+   [
+    "NAKIL",
+    20,
+    20
+   ],
+   [
+    "NAKIL",
+    24,
+    26
+   ]
+  ],
+  "19:4": [
+   [
+    "NAKIL",
+    1,
+    13
+   ],
+   [
+    "HITAP",
+    1,
+    1
+   ],
+   [
+    "HITAP",
+    12,
+    12
+   ],
+   [
+    "PARALEL",
+    2,
+    5
+   ],
+   [
+    "PARALEL",
+    6,
+    8
+   ],
+   [
+    "PARALEL",
+    9,
+    13
+   ]
+  ],
+  "20:25": [
+   [
+    "NAKIL",
+    1,
+    4
+   ],
+   [
+    "HITAP",
+    1,
+    1
+   ]
+  ],
+  "24:2": [
+   [
+    "PARALEL",
+    0,
+    0
+   ],
+   [
+    "PARALEL",
+    1,
+    8
+   ],
+   [
+    "PARALEL",
+    9,
+    19
+   ],
+   [
+    "PARALEL",
+    20,
+    22
+   ],
+   [
+    "PARALEL",
+    23,
+    27
+   ]
+  ],
+  "31:13": [
+   [
+    "NAKIL",
+    6,
+    14
+   ],
+   [
+    "HITAP",
+    6,
+    6
+   ]
+  ],
+  "38:75": [
+   [
+    "NAKIL",
+    1,
+    14
+   ],
+   [
+    "HITAP",
+    1,
+    1
+   ]
+  ],
+  "57:3": [
+   [
+    "PARALEL",
+    0,
+    1
+   ],
+   [
+    "PARALEL",
+    2,
+    2
+   ],
+   [
+    "PARALEL",
+    3,
+    3
+   ],
+   [
+    "PARALEL",
+    4,
+    4
+   ],
+   [
+    "PARALEL",
+    6,
+    9
+   ]
+  ],
+  "2:222": [
+   [
+    "NAKIL",
+    5,
+    6
+   ],
+   [
+    "CEVAP",
+    19,
+    23
+   ],
+   [
+    "PARALEL",
+    27,
+    28
+   ],
+   [
+    "PARALEL",
+    29,
+    30
+   ]
+  ],
+  "4:36": [
+   [
+    "PARALEL",
+    1,
+    2
+   ],
+   [
+    "PARALEL",
+    3,
+    6
+   ],
+   [
+    "PARALEL",
+    8,
+    9
+   ],
+   [
+    "PARALEL",
+    10,
+    11
+   ],
+   [
+    "PARALEL",
+    12,
+    12
+   ],
+   [
+    "PARALEL",
+    13,
+    13
+   ],
+   [
+    "PARALEL",
+    14,
+    16
+   ],
+   [
+    "PARALEL",
+    17,
+    18
+   ],
+   [
+    "PARALEL",
+    19,
+    20
+   ],
+   [
+    "PARALEL",
+    21,
+    22
+   ],
+   [
+    "PARALEL",
+    23,
+    25
+   ]
+  ]
+ },
+ "_not3": "test3: kural defteri test2'den sonra yeniden DONDURULDU (yalnız 6 küçük düzeltme: hançer-elifli vâv, fâ+elif, ما/من zayıf şart, nakil sonu, durak sonrası kalem sınırı, kalem kapsamı); anahtar kural kodu bu âyetlere koşturulmadan yazıldı. İçinde kural sözlüğünün karşılamadığı kasıtlı zor hâller var (nidâ yâsız, 'تقل', 'إِمَّا', 'ياإبليس')."
 }
