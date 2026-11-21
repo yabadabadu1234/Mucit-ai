@@ -1,0 +1,49 @@
+{
+  "mcu": {"parca": "STM32F429ZIT6", "gpio_toplam": 114, "gpio_isareti": "T", "gpio_pay_birakma": 0.10},
+  "raylar": {
+    "VUSB": {"v_min": 4.4, "v_max": 5.25, "max_ma": 1500, "kaynak": "USB-C veya güneş (Schottky ile VEYA)"},
+    "VBAT": {"v_min": 3.0, "v_max": 4.2, "kaynak": "Aspilsan INR18650A28"},
+    "V3V3": {"v_min": 3.2, "v_max": 3.4, "max_ma": 1500, "kaynak": "yükselt-alçalt dönüştürücü", "besleme": "VBAT"},
+    "V2V8": {"v_min": 2.7, "v_max": 2.9, "max_ma": 300, "kaynak": "düşük düşüm regülatörü", "besleme": "V3V3"},
+    "V1V3": {"v_min": 1.25, "v_max": 1.35, "max_ma": 300, "kaynak": "düşük düşüm regülatörü", "besleme": "V3V3"},
+    "VLED": {"v_min": 18.0, "v_max": 22.0, "max_ma": 40, "kaynak": "arka ışık yükseltici", "besleme": "VBAT"}
+  },
+  "yukler": [
+    {"blok": "MCU", "ray": "V3V3", "ma_tip": 95, "ma_maks": 150, "vmin": 1.8, "vmax": 3.6},
+    {"blok": "SDRAM", "ray": "V3V3", "ma_tip": 45, "ma_maks": 90, "vmin": 3.0, "vmax": 3.6},
+    {"blok": "PANEL_MANTIK", "ray": "V3V3", "ma_tip": 30, "ma_maks": 60, "vmin": 3.0, "vmax": 3.6},
+    {"blok": "DOKUNMA_GT911", "ray": "V3V3", "ma_tip": 8, "ma_maks": 15, "vmin": 2.6, "vmax": 3.6},
+    {"blok": "MICROSD", "ray": "V3V3", "ma_tip": 40, "ma_maks": 200, "vmin": 2.7, "vmax": 3.6},
+    {"blok": "USB_ARAYUZ", "ray": "V3V3", "ma_tip": 10, "ma_maks": 20, "vmin": 3.0, "vmax": 3.6},
+    {"blok": "KAMERA_GIRIS_CIKIS", "ray": "V2V8", "ma_tip": 10, "ma_maks": 20, "vmin": 1.7, "vmax": 3.3, "mcu_ile_arayuz": true},
+    {"blok": "SEVIYE_CEVIRICI", "ray": "V3V3", "ma_tip": 3, "ma_maks": 10, "vmin": 1.65, "vmax": 3.6},
+    {"blok": "KAMERA_ANALOG", "ray": "V2V8", "ma_tip": 30, "ma_maks": 60, "vmin": 2.6, "vmax": 3.0},
+    {"blok": "KAMERA_CEKIRDEK", "ray": "V1V3", "ma_tip": 20, "ma_maks": 50, "vmin": 1.2, "vmax": 1.4},
+    {"blok": "ARKA_ISIK_LED", "ray": "VLED", "ma_tip": 20, "ma_maks": 30, "vmin": 15.0, "vmax": 25.0}
+  ],
+  "arayuzler": [
+    {"ad": "LTDC_RGB565", "pin": 20, "aciklama": "16 veri + HSYNC + VSYNC + DE + saat"},
+    {"ad": "FMC_SDRAM_16BIT", "pin": 38, "aciklama": "16 veri + 12 adres + 2 banka + 2 bayt maskesi + 6 denetim"},
+    {"ad": "DCMI_KAMERA", "pin": 12, "aciklama": "8 veri + piksel saati + 2 eşzamanlama + 24 MHz çıkış saati"},
+    {"ad": "KAMERA_DENETIM", "pin": 2, "aciklama": "PWDN ve RESET"},
+    {"ad": "I2C1_ORTAK", "pin": 2, "aciklama": "dokunma ve kamera SCCB"},
+    {"ad": "DOKUNMA_INT_RST", "pin": 2, "aciklama": "kesme ve sıfırlama"},
+    {"ad": "SD_SPI", "pin": 5, "aciklama": "SCK, MISO, MOSI, CS, kart algılama"},
+    {"ad": "USB_OTG_FS", "pin": 3, "aciklama": "DM, DP, VBUS algılama"},
+    {"ad": "SWD", "pin": 2, "aciklama": "hata ayıklama"},
+    {"ad": "TUSLAR", "pin": 4, "aciklama": "dört tuş"},
+    {"ad": "ARKA_ISIK", "pin": 2, "aciklama": "PWM ve açma"},
+    {"ad": "SARJ_DURUM", "pin": 2, "aciklama": "CHG ve PGOOD"},
+    {"ad": "ADC_OLCUM", "pin": 2, "aciklama": "pil ve güneş gerilimi"}
+  ],
+  "i2c_adresleri": {
+    "I2C1": [
+      {"ad": "GT911", "adres": "0x5D"},
+      {"ad": "OV2640_SCCB", "adres": "0x30"}
+    ]
+  },
+  "seviye_cevirici": ["KAMERA_GIRIS_CIKIS"],
+  "usb": {"cc1_rd_kohm": 5.1, "cc2_rd_kohm": 5.1, "esd_korumasi": true},
+  "pil_ve_sarj": {"koruma_devresi": true, "sarj_entegresi": "BQ24074", "gunes_girisi_diyodu": true, "ilim_direnci": true},
+  "bellek": {"sdram_bayt": 8388608, "cerceve_tamponu_adet": 2, "genislik": 800, "yukseklik": 480, "bit_derinligi": 16}
+}

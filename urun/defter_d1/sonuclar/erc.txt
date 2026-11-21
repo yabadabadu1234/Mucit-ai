@@ -1,0 +1,27 @@
+TAMAM VUSB: en kötü yük 0 mA, sınır (yüzde 80) 1200 mA
+TAMAM V3V3: en kötü yük 675 mA, sınır (yüzde 80) 1200 mA
+TAMAM V2V8: en kötü yük 80 mA, sınır (yüzde 80) 240 mA
+TAMAM V1V3: en kötü yük 50 mA, sınır (yüzde 80) 240 mA
+TAMAM VLED: en kötü yük 30 mA, sınır (yüzde 80) 32 mA
+TAMAM MCU: ray 3.2–3.4 V, blok 1.8–3.6 V
+TAMAM SDRAM: ray 3.2–3.4 V, blok 3.0–3.6 V
+TAMAM PANEL_MANTIK: ray 3.2–3.4 V, blok 3.0–3.6 V
+TAMAM DOKUNMA_GT911: ray 3.2–3.4 V, blok 2.6–3.6 V
+TAMAM MICROSD: ray 3.2–3.4 V, blok 2.7–3.6 V
+TAMAM USB_ARAYUZ: ray 3.2–3.4 V, blok 3.0–3.6 V
+TAMAM KAMERA_GIRIS_CIKIS: ray 2.7–2.9 V, blok 1.7–3.3 V
+TAMAM SEVIYE_CEVIRICI: ray 3.2–3.4 V, blok 1.65–3.6 V
+TAMAM KAMERA_ANALOG: ray 2.7–2.9 V, blok 2.6–3.0 V
+TAMAM KAMERA_CEKIRDEK: ray 1.25–1.35 V, blok 1.2–1.4 V
+TAMAM ARKA_ISIK_LED: ray 18.0–22.0 V, blok 15.0–25.0 V
+TAMAM KAMERA_GIRIS_CIKIS: ray 2.90 V, MCU 3.40 V; seviye çevirici var
+TAMAM ihtiyaç 96 pin, sınır 102.6 pin (toplam 114, pay 10%)
+TAMAM I2C1 adresleri: 0x5D, 0x30
+TAMAM CC1 5.1 kΩ, CC2 5.1 kΩ (alıcı için 5,1 kΩ gerekir)
+TAMAM USB hatlarında ESD koruması
+TAMAM pil koruma devresi (aşırı şarj, aşırı deşarj, kısa devre)
+TAMAM güneş girişinde ters akım diyodu
+TAMAM şarj akımı sınırlama direnci
+TAMAM çerçeve tamponları 1536000 bayt, SDRAM 8388608 bayt
+
+Toplam kontrol: 25, reddedilen: 0
