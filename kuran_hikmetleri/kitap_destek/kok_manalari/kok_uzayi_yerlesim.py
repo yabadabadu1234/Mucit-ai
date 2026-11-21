@@ -42,10 +42,10 @@ def ayet_sekilleri(s, a, n, c):
     ar = _AYET_HAM(s, a); ch = c * CH; S = {}
     for kk in range(1, min(n, 14) + 1):
         for Wt in sorted({float(snap(kk * c + 2 * AG)), *[float(x) for x in range(4, 61, 3)]}):
-            w0 = max(snap(kk * c + 2 * AG), Wt); L, hl = MD.yerles(ar, a, w0)
+            w0 = max(snap(kk * c + 2 * AG), Wt); L, hl = MD.yerles(ar, a, w0, ())
             use = max(ins + sum(MD.gen(t) for t in tk) * 1.0 + (len(tk) - 1) * MD.gen(' ') + sum(fl) * MD.HG for tk, fl, ins, sd, y, ix in L) + 2 * AG
             w = max(w0, snap(use))
-            if w != w0: L, hl = MD.yerles(ar, a, w)
+            if w != w0: L, hl = MD.yerles(ar, a, w, ())
             bh = hl * FA * SATIR + 0.3; r = math.ceil(n / kk); h = snap(bh + r * ch + 2 * AG)
             if h not in S or w < S[h][0]: S[h] = (w, h, dict(k=kk, L=L, bh=bh, c=c, s=s, a=a, n=n))
     out = []; eh = 1e18
