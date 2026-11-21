@@ -15,7 +15,7 @@ button{cursor:pointer}button:hover{border-color:var(--vurgu)}button:focus-visibl
 #alt{position:fixed;left:8px;bottom:6px;font-size:12px;color:var(--ince);background:var(--kart)e0;padding:3px 8px;border-radius:5px;border:1px solid var(--cizgi);pointer-events:none;max-width:60vw}
 #olc{display:inline-block;height:5px;border:1px solid var(--ince);border-top:none;vertical-align:middle;margin-left:6px}
 #mini{position:fixed;right:8px;bottom:8px;border:1px solid var(--ince);background:var(--kart);border-radius:4px;opacity:.94;cursor:pointer}
-#lej{position:fixed;right:8px;top:48px;background:var(--kart);border:1px solid var(--cizgi);border-radius:6px;padding:6px 8px;font-size:12px;max-width:230px;z-index:3}
+#lej{position:fixed;right:8px;top:48px;background:var(--kart);border:1px solid var(--cizgi);border-radius:6px;padding:4px 8px;font-size:12px;max-width:230px;z-index:3}#lej summary{cursor:pointer;font-weight:bold}
 #lej div{display:flex;align-items:center;gap:6px;padding:1px 3px;cursor:pointer;border-radius:3px}#lej div:hover{background:var(--cizgi)}#lej div.sec{outline:1px solid var(--vurgu)}
 #lej i{display:inline-block;width:12px;height:12px;border-radius:3px;border:1px solid #0003;flex:none}
 #icin{position:fixed;left:0;top:44px;bottom:0;width:250px;background:var(--kart);border-right:1px solid var(--cizgi);overflow:auto;font-size:12.5px;display:none;z-index:4;padding:4px 0}
@@ -164,7 +164,7 @@ let sonYol='';
 function yol(){const cx=(W/2-TX)/S,cy=(H/2-TY)/S;const si=bul(GS_,D.SU,cx,cy),ki=bul(GK_,D.KI,cx,cy),ai=bul(GA_,D.AY,cx,cy);let t=[];if(si>=0)t.push(D.SU[si][4]);if(ki>=0)t.push(D.KI[ki][4]);if(ai>=0)t.push(D.AY[ai][4]);const s=t.join(' › ')||'—';if(s!==sonYol){sonYol=s;$('yol').textContent=s;$('ozet').textContent='Görünümün merkezi: '+s}}
 function bilgi(){const bp=D.GP[0][2]*S;$('alt').innerHTML=D.IS+' · yakınlık %'+Math.round(S/S0*100)+'<span id="olc" style="width:'+Math.round(Math.min(120,bp))+'px" title="bir hücre"></span>';yol()}
 /* --- legend, içindekiler, arama --- */
-$('lej').innerHTML='<b>Mevzu kümeleri</b>'+D.KU.map((k,i)=>`<div data-k="${i}"><i style="background:${k[1]}"></i>${k[0]} <span style="color:var(--ince)">${k[2]}</span></div>`).join('');
+$('lej').innerHTML='<details><summary>Mevzu kümeleri</summary>'+D.KU.map((k,i)=>`<div data-k="${i}"><i style="background:${k[1]}"></i>${k[0]} <span style="color:var(--ince)">${k[2]}</span></div>`).join('')+'</details>';
 $('lej').onclick=e=>{const d=e.target.closest('[data-k]');if(!d)return;const k=+d.dataset.k;odak=odak===k?null:k;[...$('lej').querySelectorAll('div[data-k]')].forEach(x=>x.classList.toggle('sec',odak!==null&&+x.dataset.k===odak));kirli=true};
 (function(){let h='';D.SU.forEach(s=>{const n=parseInt(s[4]);h+=`<div class="s" data-s="${n}"><i style="background:${s[6]}"></i>${s[4]}</div>`;D.KI.filter(k=>k[6]===n).forEach(k=>h+=`<div class="k" data-k="${D.KI.indexOf(k)}">${k[4]}</div>`)});$('icin').innerHTML=h;
  $('icin').onclick=e=>{const s=e.target.closest('[data-s]'),k=e.target.closest('[data-k]');if(s)surGit(+s.dataset.s);else if(k){const r=D.KI[+k.dataset.k];git(r[0],r[1],r[2],r[3])}};

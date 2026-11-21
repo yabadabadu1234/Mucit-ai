@@ -129,9 +129,9 @@ function sinir(){const m=0.08,cx=(W/2-TX)/S,cy=(H/2-TY)/S,ax=m*W/S,ay=m*H/S;cons
 const SMAX=()=>900/D.GP[0][2];
 function yakin(f,x,y){let ns=Math.max(S0*0.9,Math.min(SMAX(),S*f));f=ns/S;TX=x-(x-TX)*f;TY=y-(y-TY)*f;S=ns;sinir();kirli=true}
 let ANIM=null;
-function git(x,y,w,h,kayit=true){if(kayit)HIST.push([S,TX,TY]);if(HIST.length>60)HIST.shift();const m=0.9,ns=Math.max(S0*0.9,Math.min(SMAX(),Math.min(W*m/w,H*m/h))),tx=W/2-(x+w/2)*ns,ty=H/2-(y+h/2)*ns,s1=S,x1=TX,y1=TY,t0=performance.now();
+function git(x,y,w,h,kayit=true,m=0.9){if(kayit)HIST.push([S,TX,TY]);if(HIST.length>60)HIST.shift();const ns=Math.max(S0*0.9,Math.min(SMAX(),Math.min(W*m/w,H*m/h))),tx=W/2-(x+w/2)*ns,ty=H/2-(y+h/2)*ns,s1=S,x1=TX,y1=TY,t0=performance.now();
  ANIM=()=>{const t=Math.min(1,(performance.now()-t0)/420),e=1-Math.pow(1-t,3);S=s1+(ns-s1)*e;TX=x1+(tx-x1)*e;TY=y1+(ty-y1)*e;sinir();kirli=true;if(t>=1)ANIM=null}}
-function sigdir(){git(0,0,D.W,D.H)}
+function sigdir(){git(0,0,D.W,D.H,true,1)}
 function geri(){const v=HIST.pop();if(!v)return;ANIM=null;S=v[0];TX=v[1];TY=v[2];sinir();kirli=true}
 const surGit=n=>{const s=D.SU[SUI[n]];if(s)git(s[0],s[1],s[2],s[3]);seçSure(n)};
 const ayGit=k=>{const i=AYI[k];if(i===undefined)return;const a=D.AY[i];git(a[0],a[1],a[2],a[3]);sec(i)};
@@ -150,6 +150,7 @@ function galeriAc(p,i){const g=$('gal'),s=$('gals'),nc=p[8],nl=p[5]-nc;$('galb')
  const ekle=(u,et)=>{const f=document.createElement('figure'),im=document.createElement('img');im.src=u;im.alt=et;im.onclick=()=>im.classList.toggle('b');f.appendChild(im);const c=document.createElement('div');c.textContent=et;f.appendChild(c);s.appendChild(f);ilk=ilk||u};
  for(let k=1;k<=nc;k++)ekle('lugat_kapak_2/'+p[4]+'_'+k+'.webp','Kapak '+k+'/'+nc);for(let k=1;k<=nl;k++)ekle('lugat_sayfalari_2/'+p[4]+'_'+k+'.webp','Lügat '+k+'/'+nl);
  $('gald').href=ilk||'#';$('galn').textContent=(nc+nl)+' sayfa · ← → ile gez · sayfaya tıkla: büyüt';g.style.display='block';document.body.style.overflow='hidden';g.focus()}
+document.addEventListener('pointerdown',e=>{const g=$('gal');if(g.style.display==='block'&&!g.contains(e.target))galeriKapat()});
 function galeriKapat(){$('gal').style.display='none';document.body.style.overflow='hidden'}
 $('gal').addEventListener('click',e=>{if(e.target===$('gal'))galeriKapat()});
 /* --- hover ipucu --- */

@@ -49,13 +49,13 @@ def ayet_sekilleri(s, a, n, c):
     return out
 
 def shelf(olc, Wmax, bas, ic, bos):
-    x = 0.0; y = bas + ic; sh = 0.0; used = 0.0; pos = []
+    x = ic; y = bas + ic; sh = 0.0; used = ic; pos = []
     for w, h in olc:
         W_, H_ = w + bos, h + bos
-        if x > 0 and x + W_ > Wmax - 2 * ic + 1e-9: y += sh; sh = 0.0; x = 0.0
+        if x > ic and x + W_ > Wmax - ic + 1e-9: y += sh; sh = 0.0; x = ic
         pos.append((x + bos / 2, y + bos / 2)); x += W_; used = max(used, x); sh = max(sh, H_)
     y += sh
-    return pos, used + 2 * ic, snap(y + ic)
+    return pos, used + ic, snap(y + ic)
 
 def paketle(cs, bas, ic, bos, tut=70):
     ah = sorted({round(h, 3) for L in cs for (w, h, _) in L}); Hs = ah[::max(1, len(ah) // 30)] + [ah[-1]]; best = {}

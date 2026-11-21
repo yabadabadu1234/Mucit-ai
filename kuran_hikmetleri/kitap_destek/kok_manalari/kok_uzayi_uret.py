@@ -30,8 +30,8 @@ for s_, adi, na, KIS in SUR:
     t = collections.Counter()
     for kad, ay in KIS: t[kume_adi(re.sub(r'\s*\(\d+(-\d+)?\)$', '', kad))] += len(ay)
     KUME[s_] = t.most_common(1)[0][0]
-KUL = [k for k in HUE if k in set(KUME.values())]
 SUD = {int(r[4].split(' ')[0]): r for r in R['SU']}
+KUL = [k for k in HUE if k in {KUME[n] for n in SUD}]
 def komsu(a, b, tol=6.0):
     return a[0] <= b[0] + b[2] + tol and b[0] <= a[0] + a[2] + tol and a[1] <= b[1] + b[3] + tol and b[1] <= a[1] + a[3] + tol
 TON = {}
@@ -47,7 +47,7 @@ for k in R['KI']: k += [SUD[k[6]][7], SUD[k[6]][8]]
 sure_of = lambda key: int(key.split(':')[0])
 for a in R['AY']: a += [0, SUD[sure_of(a[4])][8]]
 for p in R['GP']: p.insert(9, SUD[sure_of(p[9])][8])
-R['KU'] = [[k, hexrenk(HUE[k], 0.58, 0.78) if HUE[k] is not None else hexrenk(40, 0.22, 0.78), sum(1 for v in KUME.values() if v == k)] for k in KUL]
+R['KU'] = [[k, hexrenk(HUE[k], 0.58, 0.78) if HUE[k] is not None else hexrenk(40, 0.22, 0.78), sum(1 for n, v in KUME.items() if v == k and n in SUD)] for k in KUL]
 # âyet meali ve kök anlamı
 ME = {}
 for a in R['AY']:
@@ -88,7 +88,7 @@ ca = sum(1 for L in bs.values() for i in range(len(L)) for j in range(i + 1, len
 assert len(R['GP']) == sum(len(v) for v in KOKA.values() if v) or True
 msu = asgari_bosluk(R['SU'])
 print('harita %.0f x %.0f · hücre eni %.1f · hücre alanı oranı %.3f · çakışma sûre/kısım/âyet %d/%d/%d · sûreler arası en küçük boşluk %.2f (hedef %.1f)' % (R['W'], R['H'], Y.CELL, sum(g[2] * g[3] for g in R['GP']) / (R['W'] * R['H']), cak, ck, ca, msu, Y.BOS_S))
-print('kümeler:', {k: sum(1 for v in KUME.values() if v == k) for k in KUL}, '· ton:', len(set(TON.values())))
+print('kümeler:', {k: sum(1 for n, v in KUME.items() if v == k and n in SUD) for k in KUL}, '· ton:', len(set(TON.values())))
 H = (HERE / 'kok_uzayi_sablon.html').read_text(encoding='utf-8').replace('__VERI__', json.dumps(R, ensure_ascii=False, separators=(',', ':')))
 (HERE / 'kok_uzayi.html').write_text(H, encoding='utf-8')
 if '--png' in sys.argv:

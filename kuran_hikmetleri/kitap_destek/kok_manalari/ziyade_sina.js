@@ -1,9 +1,9 @@
 // Kök uzayı 100 ziyade sınaması: node ziyade_sina.js  (her madde ayrı sınanır; sayı en sonda yazılır)
 const {chromium}=require('playwright');const path=require('path');
 (async()=>{const b=await chromium.launch();const pg=await b.newPage({viewport:{width:1600,height:900}});const hata=[];pg.on('pageerror',e=>hata.push(String(e)));
-await pg.goto('file://'+path.resolve(__dirname,'kok_uzayi.html'));await pg.waitForTimeout(2500);
+const URL='http://localhost:8765/kitap_destek/kok_manalari/kok_uzayi.html';await pg.goto(URL);await pg.waitForTimeout(2500);
 const R=[];const T=(n,ad,f)=>R.push([n,ad,f]);
-const E=(f,...a)=>pg.evaluate(f,...a);
+const E=(f)=>pg.evaluate('('+f+')()');
 const mesafe=`(a,b)=>{const dx=Math.max(a[0]-(b[0]+b[2]),b[0]-(a[0]+a[2]),0),dy=Math.max(a[1]-(b[1]+b[3]),b[1]-(a[1]+a[3]),0);return Math.hypot(dx,dy)}`;
 T(1,'sûre odaları arası boşluk ≥3',()=>E(`()=>{const m=${mesafe},L=KOK.D.SU;let k=1e9;for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++)k=Math.min(k,m(L[i],L[j]));return k>=2.99}`));
 T(2,'kısım odaları arası boşluk ≥1.4',()=>E(`()=>{const m=${mesafe},L=KOK.D.KI;let k=1e9;for(let i=0;i<L.length;i++)for(let j=i+1;j<L.length;j++)if(L[i][6]===L[j][6])k=Math.min(k,m(L[i],L[j]));return k>=1.39}`));
@@ -58,9 +58,9 @@ T(50,'arama: 2:255',async()=>{await pg.fill('#ara','2:255');await pg.press('#ara
 T(51,'arama: Arapça kök',async()=>{await pg.fill('#ara','كرس');await pg.press('#ara','Enter');await pg.waitForTimeout(800);return (await E(`()=>KOK.state().secK`))!==null});
 T(52,'arama önerileri (datalist 98)',()=>E(`()=>document.querySelectorAll('#sl option').length===98`));
 T(53,'/ kısayolu aramaya odaklanır',async()=>{await pg.click('#c',{position:{x:5,y:5}});await pg.keyboard.press('/');return (await E(`()=>document.activeElement.id`))==='ara'});
-T(54,'hash derin bağ',async()=>{await E(`()=>KOK.ayGit('3:5')`);await pg.waitForTimeout(500);return (await E(`()=>location.hash`)).includes('a=3:5')});
-T(55,'hash açılışta okunur',async()=>{const p2=await b.newPage({viewport:{width:1600,height:900}});await p2.goto('file://'+path.resolve(__dirname,'kok_uzayi.html')+'#a=2:255');await p2.waitForTimeout(2500);const v=await p2.evaluate(`()=>KOK.state().secA!==null`);await p2.close();return v});
-T(56,'hashchange senkron',async()=>{await pg.evaluate(`()=>{location.hash='a=4:10'}`);await pg.waitForTimeout(1200);const i=await E(`()=>KOK.state().secA`);return i!==null&&(await E(`()=>KOK.D.AY[KOK.state().secA][4]`))==='4:10'});
+T(54,'hash derin bağ',async()=>{await E(`()=>KOK.ayGit(KOK.D.AY[300][4])`);await pg.waitForTimeout(500);const k=await E(`()=>KOK.D.AY[300][4]`);return (await E(`()=>location.hash`)).includes('a='+k)});
+T(55,'hash açılışta okunur',async()=>{const p2=await b.newPage({viewport:{width:1600,height:900}});await p2.goto(URL+'#a=2:255');await p2.waitForTimeout(2500);const v=await p2.evaluate('(()=>KOK.state().secA!==null)()');await p2.close();return v});
+T(56,'hashchange senkron',async()=>{await pg.evaluate(`()=>{location.hash='a='+KOK.D.AY[500][4]}`);await pg.waitForTimeout(1200);const i=await E(`()=>KOK.state().secA`);const k=await E(`()=>KOK.D.AY[500][4]`);return i!==null&&(await E(`()=>KOK.D.AY[KOK.state().secA][4]`))===k});
 T(57,'atalet (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('function atalet')`));
 T(58,'pinch zoom (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('ilkD')`));
 T(59,'tekerlek ctrl duyarlılığı (kod)',()=>E(`()=>document.documentElement.innerHTML.includes('e.ctrlKey?0.012')`));
