@@ -15,7 +15,10 @@ for k, fl, (s_, a_, w_, m_) in sorted(KL, key=lambda z: z[2]): KOKA['%d:%d' % (s
 SAYFA = json.load(open(HERE / 'SAYFA2.json')); KAPAK = json.load(open(HERE / 'KAPAK2.json'))
 if '--hucre' in sys.argv: Y.CELL = float(sys.argv[sys.argv.index('--hucre') + 1])
 SUR = sureler()
-R = Y.kur(SUR, KOKA, NO, SAYFA, KAPAK)
+OB = HERE / 'yerlesim_onbellek.json'
+if OB.exists() and '--yerlesimi-yeniden' not in sys.argv: R = json.load(open(OB, encoding='utf-8'))
+else:
+    R = Y.kur(SUR, KOKA, NO, SAYFA, KAPAK); json.dump(R, open(OB, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 R['ATL'] = atlas_uret([p[4] for p in R['GP']], [p[8] for p in R['GP']])
 HUE = {'Hamd, dua ve doğru yol': 228, 'Kıyamet, ahiret ve cezâ-mükâfât': 275, 'Müşrikler, inkârcılar ve münafıklar': 355,
        'Peygamber kıssaları ve kavimler': 30, 'Savaş, gazve ve Medine dönemi': 10, "Peygamberlik, vahiy ve Kur'ân": 56,
