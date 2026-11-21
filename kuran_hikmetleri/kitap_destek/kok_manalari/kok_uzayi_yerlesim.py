@@ -12,7 +12,7 @@ SATIR = 1.85         # âyet satır aralığı (punto katı)
 ADIM = 1.0           # ızgara adımı: bütün oda ebatları buna oturur
 AG = 0.15            # oda içi boşluk
 KB = 2.0; SB = 3.2   # kısım ve sûre başlık payı
-CELL = 3.0           # hücre eni (yazı puntosu cinsinden)
+CELL = 5.0           # hücre eni (yazı puntosu cinsinden)
 _F = ImageFont.truetype(str(HERE / 'yazi' / 'Amiri-Regular.ttf'), 100)
 def gen(t): return _F.getlength(t) / 100.0
 def snap(v, s=ADIM): return math.ceil(v / s - 1e-9) * s
