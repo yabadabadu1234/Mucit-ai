@@ -1,0 +1,28 @@
+===== 5:1-2
+T0 makam okuma 9 / 9 | gaye ailesi IoU 0.6 | beklenen 4 çözülen 4
+T5 hazif: çözülen oyuklar (x,y) [(0.46, 0.37)] | beklenen yarık x [0.5]
+T1 izdüşümler: (x,θ) makam doğru 9 | (x,θ) gaye ağacı: okunamaz (z yok) | (x,z)-zarfı yerel çukurlar [3.35, 6.74] | (y,z): derinlik+yükseklik, sıra yok
+T2 eksen ablasyonu: gaye IoU tam 0.6 | y atılırsa 0.167 | x atılırsa 0.25 | θ atılırsa makam şans=1/5
+T3 süreklilik: eşik 0.18 | noktaların bulunduğu bağlı bileşen sayısı 1 (1 olmalı)
+T4 tekrar ihram-av ( c1 b2 ) aynı konu, z farkı 0.192 | makam yasak ruhsat | gaye G1 G2 | z eşit değil? True
+T6 yer değiştirme: 36 çift takasın 31'inde şekil değişti (illet-tersinmesi görünen: 20; gaye ağacı değişen: aşağıda)
+   gaye ailesi takas sonrası değişen çift: 29 / 36
+T7 determinizm True | tek ilişki değişince y değişti True
+===== 88:17-21
+T0 makam okuma 5 / 5 | gaye ailesi IoU 1.0 | beklenen 2 çözülen 2
+T5 hazif: çözülen oyuklar (x,y) [(3.52, 1.5)] | beklenen yarık x [3.5]
+T1 izdüşümler: (x,θ) makam doğru 5 | (x,θ) gaye ağacı: okunamaz (z yok) | (x,z)-zarfı yerel çukurlar [3.69] | (y,z): derinlik+yükseklik, sıra yok
+T2 eksen ablasyonu: gaye IoU tam 1.0 | y atılırsa 0.5 | x atılırsa 0.5 | θ atılırsa makam şans=1/5
+T3 süreklilik: eşik 0.47 | noktaların bulunduğu bağlı bileşen sayısı 1 (1 olmalı)
+T6 yer değiştirme: 10 çift takasın 9'inde şekil değişti (illet-tersinmesi görünen: 7; gaye ağacı değişen: aşağıda)
+   gaye ailesi takas sonrası değişen çift: 6 / 10
+T7 determinizm True | tek ilişki değişince y değişti True
+===== 2:189-190
+T0 makam okuma 5 / 5 | gaye ailesi IoU 1.0 | beklenen 3 çözülen 3
+T5 hazif: çözülen oyuklar (x,y) [(2.49, 1.62)] | beklenen yarık x [2.5]
+T1 izdüşümler: (x,θ) makam doğru 5 | (x,θ) gaye ağacı: okunamaz (z yok) | (x,z)-zarfı yerel çukurlar [2.59] | (y,z): derinlik+yükseklik, sıra yok
+T2 eksen ablasyonu: gaye IoU tam 1.0 | y atılırsa 0.25 | x atılırsa 0.333 | θ atılırsa makam şans=1/5
+T3 süreklilik: eşik 0.45 | noktaların bulunduğu bağlı bileşen sayısı 1 (1 olmalı)
+T6 yer değiştirme: 10 çift takasın 10'inde şekil değişti (illet-tersinmesi görünen: 9; gaye ağacı değişen: aşağıda)
+   gaye ailesi takas sonrası değişen çift: 8 / 10
+T7 determinizm True | tek ilişki değişince y değişti True

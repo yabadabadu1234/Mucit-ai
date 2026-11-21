@@ -1,0 +1,9 @@
+Bir metin parçası n birimden oluşur (sıra x = 0,1,2,...). Her birim bir noktadır. Şeklin her noktası şu formüllerle üretilmiştir (elle konmuş koordinat yok):
+x  = birimin sırası (0'dan başlar, soldan sağa).
+y  = illet derinliği = o birimin dayandığı birimlerden en derin olanın y'si + 1 (hiçbir şeye dayanmayan birimin y'si 0).
+θ  = 2π·k/5 ; k ∈ {0,1,2,3,4} makam sınıfı (renk halkası: k=0 kırmızı, 1 sarı-yeşil, 2 yeşil/camgöbeği, 3 mavi, 4 mor/menekşe; yani sıra renk sırasıdır).
+z(x,y) = Σ_g A_g·exp(−½[((x−μx_g)/σx_g)²+((y−μy_g)/σy_g)²]) − Σ_h B_h·exp(−½[((x−ν_h)/s)²+((y−κ_h)/0.35)²]),
+  g: gaye kubbeleri (kubbe, kapsadığı birimlerin merkezinde; en dıştaki bütün birimleri örter; iç içe gaye kubbenin yüksekliğini artırır),
+  h: hazif oyukları (iki komşu birim arasında, söylenmesi beklenen ama söylenmeyen şeyin yerinde çukur).
+Dört panel: sol-üst 3B yüzey (x,y,z; noktalar tek çizgiyle sıralı bağlı), sağ-üst (x,θ) akış, sol-alt (y,z), sağ-alt (x, z'nin y üzerinden zarfı).
+Görev: yalnız bu resimlerden ve bu formülden her şekil için şunları oku: (1) birim sayısı; (2) her birimin (sıra) makam sınıfı k; (3) her birimin illet derinliği y; (4) kaç gaye kubbesi (yaprak) var ve hangi birimleri kapsıyor (sıra numaralarıyla); (5) hazif oyuğu hangi iki birim arasında; (6) dış kubbe altında bağlantı kopukluğu var mı.

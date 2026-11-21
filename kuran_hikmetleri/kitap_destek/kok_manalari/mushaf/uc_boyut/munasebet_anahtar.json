@@ -1,0 +1,46 @@
+{
+ "_not": "Münâsebet kaydı VERİDİR (F 3-I 409). Her satır bir HİKMET İHTİMALİDİR, müfessire atıf değildir. Koordinat yoktur. Bu dosya şekil çizilmeden evvel yazıldı.",
+ "makam": ["emir", "ruhsat", "yasak", "gerekce", "ilke"],
+ "pasajlar": {
+  "5:1-2": {
+   "birimler": [
+    {"id": "a1", "makam": "emir",    "illet": [],           "gaye": "G0", "konu": "ahid"},
+    {"id": "b1", "makam": "ruhsat",  "illet": ["a1"],       "gaye": "G1", "konu": "hayvan"},
+    {"id": "c1", "makam": "yasak",   "illet": ["a1"],       "gaye": "G1", "konu": "ihram-av"},
+    {"id": "d1", "makam": "gerekce", "illet": ["a1"],       "gaye": "G1", "konu": "hukum"},
+    {"id": "a2", "makam": "yasak",   "illet": ["a1"],       "gaye": "G2", "konu": "siar"},
+    {"id": "b2", "makam": "ruhsat",  "illet": ["c1"],       "gaye": "G2", "konu": "ihram-av"},
+    {"id": "c2", "makam": "yasak",   "illet": ["a2"],       "gaye": "G2", "konu": "kin"},
+    {"id": "d2", "makam": "ilke",    "illet": ["a2"],       "gaye": "G3", "konu": "yardimlasma"},
+    {"id": "e2", "makam": "gerekce", "illet": ["a1"],       "gaye": "G3", "konu": "takva"}
+   ],
+   "gayeler": [["G0", null], ["G1", "G0"], ["G2", "G0"], ["G3", "G0"]],
+   "hazif": [{"sonra": "a1", "gaye": "G0", "not": "ahdin içeriği sayılmadı; sonraki unsurlar örnek"}],
+   "tekrar": [["c1", "b2"]]
+  },
+  "88:17-21": {
+   "birimler": [
+    {"id": "a", "makam": "emir",    "illet": [],                       "gaye": "G1", "konu": "deve"},
+    {"id": "b", "makam": "emir",    "illet": ["a"],                    "gaye": "G1", "konu": "gok"},
+    {"id": "c", "makam": "emir",    "illet": ["a"],                    "gaye": "G1", "konu": "dag"},
+    {"id": "d", "makam": "emir",    "illet": ["a"],                    "gaye": "G1", "konu": "yer"},
+    {"id": "e", "makam": "ilke",    "illet": ["a", "b", "c", "d"],     "gaye": "G2", "konu": "tezkir"}
+   ],
+   "gayeler": [["G0", null], ["G1", "G0"], ["G2", "G0"]],
+   "hazif": [{"sonra": "d", "gaye": "G0", "not": "sonucun öncülü (hesap) anılmadan öğüde geçilir"}],
+   "tekrar": []
+  },
+  "2:189-190": {
+   "birimler": [
+    {"id": "a", "makam": "ruhsat",  "illet": [],        "gaye": "G1", "konu": "hilal"},
+    {"id": "b", "makam": "yasak",   "illet": ["a"],     "gaye": "G1", "konu": "arkadan-girmek"},
+    {"id": "c", "makam": "emir",    "illet": ["b"],     "gaye": "G1", "konu": "takva"},
+    {"id": "d", "makam": "emir",    "illet": ["a"],     "gaye": "G2", "konu": "savas"},
+    {"id": "e", "makam": "yasak",   "illet": ["d"],     "gaye": "G2", "konu": "asiri"}
+   ],
+   "gayeler": [["G0", null], ["G1", "G0"], ["G2", "G0"]],
+   "hazif": [{"sonra": "c", "gaye": "G0", "not": "savaşa geçişin sebebi sayılmadı"}],
+   "tekrar": []
+  }
+ }
+}
