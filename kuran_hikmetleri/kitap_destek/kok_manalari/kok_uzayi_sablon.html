@@ -40,7 +40,7 @@ button{cursor:pointer}button:hover{border-color:var(--vurgu)}button:focus-visibl
 <button id="bPng" title="Görünümü PNG kaydet">⤓</button><button id="bTema" title="Tema (D)">☾</button><button id="bYar" title="Yardım (?)">?</button><span id="yol"></span></div>
 <canvas id="c" role="img" aria-label="Kur'ân kök uzayı haritası"></canvas><canvas id="mini"></canvas>
 <div id="lej"></div><div id="icin"></div><div id="panel"></div><div id="tip"></div><div id="alt"></div><div id="ozet" aria-live="polite"></div>
-<div id="yar"><b>Kısayollar</b><br>Sürükle: kaydır · Tekerlek / ＋ −: yakınlaş · 0 / Home: tümünü sığdır · Oklar: kaydır · T: içindekiler · D: tema · /: ara · Backspace / Esc: geri · çift tık: odaya sığdır · tek tık: seç · hücreye tık: kapak ve lügat sayfaları<br><br><button onclick="yar.style.display='none'">kapat</button></div>
+<div id="yar"><b>Dizgi kodları</b> (âyet metni değişmez; yalnız satır, girinti ve boşluk)<br>Sağdan girintili satır: söz aktarımı (nakil) · iki kademe girinti: ara cümle · sola yaslı: şartın cevabı · soldan girintili: istisna · üstte ve altta geniş boşlukla ayrılmış satır: hitap · üstte tek boşluk: karşıt yüz (bel/lâkin) · kelimeler arasında geniş boşluk: atıf kalemleri<br><b>Kısayollar</b><br>Sürükle: kaydır · Tekerlek / ＋ −: yakınlaş · 0 / Home: tümünü sığdır · Oklar: kaydır · T: içindekiler · D: tema · /: ara · Backspace / Esc: geri · çift tık: odaya sığdır · tek tık: seç · hücreye tık: kapak ve lügat sayfaları<br><br><button onclick="yar.style.display='none'">kapat</button></div>
 <div id="gal"><div style="display:flex;justify-content:space-between;font-family:Georgia"><b id="galb"></b><span><a id="gald" download style="color:#fff;margin-right:12px">⤓ indir</a><button onclick="galeriKapat()">kapat ✕</button></span></div><div id="gals"></div><div id="galn" style="text-align:center;margin-top:6px"></div></div>
 <script>
 const D=__VERI__;
@@ -66,7 +66,12 @@ const AYI={};D.AY.forEach((a,i)=>AYI[a[4]]=i);
 const KUMEY=D.KU.reduce((o,k,i)=>(o[k[0]]=i,o),{});
 /* --- yazı ölçü --- */
 const GEN={};function genis(t,fn){const k=fn+'|'+t;if(GEN[k]!==undefined)return GEN[k];ctx.font='100px '+fn;return GEN[k]=ctx.measureText(t).width/100}
-const AF={};function ayetFont(i){if(AF[i]!==undefined)return AF[i];const a=D.AY[i];let m=0;for(const l of a[6])m=Math.max(m,genis(l,'AmiriK')*FA);return AF[i]=Math.min(FA,FA*(a[2]-2*AG)/Math.max(m,1e-6))}
+const HGW=0.75,AGC=0.15;
+function metinGen(l){let w=0;l[0].forEach((t,k)=>{w+=genis(t,'AmiriK')+(k?genis(' ','AmiriK'):0)+(l[1][k]?HGW:0)});return w}
+const AF={};function ayetFont(i){if(AF[i]!==undefined)return AF[i];const a=D.AY[i];let m=0;for(const l of a[6])m=Math.max(m,metinGen(l)+(l[3]==='R'||l[3]==='M'?l[2]:0));return AF[i]=Math.min(FA,FA*(a[2]-2*AG)/Math.max(m,1e-6))}
+function ayetYaz(g,a,f){g.direction='rtl';g.textAlign='right';g.textBaseline='middle';const sp=genis(' ','AmiriK')*f;
+ a[6].forEach(l=>{const wt=metinGen(l)*f,ins=l[2]*f;let xr=l[3]==='R'?a[0]+a[2]-AG-ins:a[0]+AG+(l[3]==='M'?ins:0)+wt;const y=a[1]+AG+(l[4]+0.55)*f*SATIR;
+  l[0].forEach((t,k)=>{if(k)xr-=sp;if(l[1][k])xr-=HGW*f;g.fillText(t,xr,y);xr-=genis(t,'AmiriK')*f})});g.direction='ltr';g.textAlign='center'}
 function baslik(t,x,y,w,h,fn,b,esik=4){const f=Math.min(w*0.92/genis(t,fn),h*0.78);if(f*S<esik)return;ctx.font=(b||'')+f+'px '+fn;ctx.fillText(t,x+w/2,y+h/2)}
 /* --- görüntü yükleme (LRU) --- */
 const IMG=new Map(),KUY=[];let AKT=0;
@@ -87,7 +92,7 @@ function katman(){if(CK&&CKT===koyu)return CK;CKT=koyu;const w=Math.round(D.W*CK
  D.SU.forEach(s=>ciz0(s,ren(s[6]),kenar(s[6]),0.35,0.8));D.KI.forEach(k=>ciz0(k,ren(k[7]),kenar(k[7]),0.18,0.5));
  D.AY.forEach((a,i)=>{ciz0(a,ren(kar(D.SU[SUI[parseInt(a[4])]][7],'#ffffff',0.55)),kenar(D.SU[SUI[parseInt(a[4])]][6]),0.1,0.3)});
  c.fillStyle=YZ();c.textAlign='center';c.textBaseline='middle';
- D.AY.forEach((a,i)=>{const f=ayetFont(i);c.font=f+'px AmiriK';c.direction='rtl';a[6].forEach((l,j)=>c.fillText(l,a[0]+a[2]/2,a[1]+AG+(j+0.55)*f*SATIR));c.direction='ltr'});
+ D.AY.forEach((a,i)=>{const f=ayetFont(i);c.font=f+'px AmiriK';ayetYaz(c,a,f)});
  D.GP.forEach(p=>{c.fillStyle=p[7]?(koyu?'#2a3340':'#e6eef7'):(koyu?'#3a3320':'#fbf3d8');c.beginPath();c.roundRect(p[0]+p[2]*.03,p[1]+p[3]*.03,p[2]*.94,p[3]*.94,p[2]*.08);c.fill()});
  D.SU.forEach(s=>{c.fillStyle=YZ();c.font='bold 2.2px Georgia';const f=Math.min(s[2]*0.92/genis(s[4],'Georgia'),s[5]*0.78);c.font='bold '+f+'px Georgia';c.fillText(s[4],s[0]+s[2]/2,s[1]+s[5]/2)});
  return CK}
@@ -102,7 +107,7 @@ function ciz(){kirli=false;const zem=getComputedStyle(document.documentElement).
   D.SU.forEach((s,i)=>{if(!gor(s))return;const sol=odak!==null&&s[8]!==odak;ctx.globalAlpha=sol?0.28:1;ctx.fillStyle=ren(s[6]);ctx.beginPath();ctx.roundRect(s[0],s[1],s[2],s[3],Math.min(1,s[2]/20));ctx.fill();ctx.strokeStyle=kenar(s[6]);ctx.lineWidth=Math.max(1.4/S,0.2);ctx.stroke();ctx.fillStyle=YZ();baslik(s[4],s[0],s[1],s[2],s[5],'Georgia','bold ');ctx.globalAlpha=1});
   D.KI.forEach(k=>{if(!gor(k)||k[2]*S<3)return;const sol=odak!==null&&k[8]!==odak;ctx.globalAlpha=sol?0.28:1;ctx.fillStyle=ren(k[7]);ctx.beginPath();ctx.roundRect(k[0],k[1],k[2],k[3],0.5);ctx.fill();ctx.strokeStyle=kenar(k[7]);ctx.lineWidth=Math.max(0.9/S,0.08);ctx.stroke();ctx.fillStyle=koyu?'#d7e3f5':'#1f4f86';baslik(k[4],k[0],k[1],k[2],k[5],'Georgia','bold ');ctx.globalAlpha=1});
   D.AY.forEach((a,i)=>{if(!gor(a)||Math.min(a[2],a[3])*S<2)return;const sol=odak!==null&&a[9]!==odak;ctx.globalAlpha=sol?0.28:1;const su=D.SU[SUI[parseInt(a[4])]];ctx.fillStyle=ren(kar(su[7],'#ffffff',0.6));ctx.beginPath();ctx.roundRect(a[0],a[1],a[2],a[3],0.35);ctx.fill();ctx.strokeStyle=secA===i?'#c0392b':kenar(su[6]);ctx.lineWidth=secA===i?Math.max(2.2/S,0.2):Math.max(0.7/S,0.04);ctx.stroke();
-   const f=ayetFont(i);if(f*S>=1.2){ctx.fillStyle=YZ();ctx.font=f+'px AmiriK';ctx.direction='rtl';a[6].forEach((l,j)=>ctx.fillText(l,a[0]+a[2]/2,a[1]+AG+(j+0.55)*f*SATIR));ctx.direction='ltr'}
+   const f=ayetFont(i);if(f*S>=1.2){ctx.fillStyle=YZ();ctx.font=f+'px AmiriK';ayetYaz(ctx,a,f)}
    if(a[3]*S>40){const r=Math.min(1.1,a[2]/6);ctx.fillStyle=kenar(su[6]);ctx.beginPath();ctx.arc(a[0]+r*1.1,a[1]+a[2]*0+r*1.1,r,0,7);ctx.fill();ctx.fillStyle='#fff';ctx.font='bold '+r*0.95+'px Georgia';ctx.fillText(a[4].split(':')[1],a[0]+r*1.1,a[1]+r*1.15)}
    ctx.globalAlpha=1});
   D.GP.forEach((p,i)=>{if(!gor(p))return;const sol=odak!==null&&p[9]!==odak;ctx.globalAlpha=sol?0.28:1;const gx=p[2]*0.035;ctx.fillStyle=koyu?'#26211a':'#fffdf6';ctx.fillRect(p[0]+gx,p[1]+gx,p[2]-2*gx,p[3]-2*gx);
@@ -140,7 +145,7 @@ const ME=D.ME,KA=D.KA;
 function sec(i){secA=i;secK=null;const a=D.AY[i],[s,ay]=a[4].split(':').map(Number),su=D.SU[SUI[s]];location.hash='a='+a[4];
  const kok=D.GP.map((p,j)=>[p,j]).filter(([p])=>p[10]===a[4]);
  const sid=String(s).padStart(3,'0'),aid=String(ay).padStart(3,'0');
- $('panel').style.display='block';$('panel').innerHTML=`<span style="float:right;cursor:pointer" onclick="temizle()">✕</span><b>${su[4]}</b> › ${a[4]}<br><span style="color:var(--ince);font-size:12px">${su[9]}</span><div class="ar">${a[6].join(' ')}</div><div>${ME[a[4]]||''}</div><div style="margin-top:6px">${kok.map(([p,j])=>`<span class="kk" title="${(KA[p[6]]||'').replace(/"/g,'')}" onclick="kokGit(${j})">${p[6]}</span>`).join('')}</div>
+ $('panel').style.display='block';$('panel').innerHTML=`<span style="float:right;cursor:pointer" onclick="temizle()">✕</span><b>${su[4]}</b> › ${a[4]}<br><span style="color:var(--ince);font-size:12px">${su[9]}</span><div class="ar">${a[6].map(l=>l[0].join(' ')).join(' ')}</div><div>${ME[a[4]]||''}</div><div style="margin-top:6px">${kok.map(([p,j])=>`<span class="kk" title="${(KA[p[6]]||'').replace(/"/g,'')}" onclick="kokGit(${j})">${p[6]}</span>`).join('')}</div>
  <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><button onclick="ayGit('${s}:${ay-1}')">‹ önceki</button><button onclick="ayGit('${s}:${ay+1}')">sonraki ›</button><button onclick="git(${a[0]},${a[1]},${a[2]},${a[3]})">sığdır</button><a href="https://raw.githubusercontent.com/kurancilar/json/refs/heads/main/audio/maher/${sid}/${aid}.mp3" target="_blank" rel="noopener" style="align-self:center">♪ dinle</a></div>`;kirli=true}
 function seçSure(n){const s=D.SU[SUI[n]],sm=D.SM[n];$('panel').style.display='block';$('panel').innerHTML=`<span style="float:right;cursor:pointer" onclick="temizle()">✕</span><b>${s[4]}</b><br>mevzu kümesi: ${s[9]}<br>${sm[0]} âyet (yeni kök gelen: ${sm[1]}) · ${sm[2]} kısım · ${sm[3]} kök hücresi`;secA=null}
 function temizle(){secA=null;secK=null;$('panel').style.display='none';history.replaceState(null,'',location.pathname);kirli=true}
@@ -170,7 +175,7 @@ $('lej').onclick=e=>{const d=e.target.closest('[data-k]');if(!d)return;const k=+
 (function(){let h='';D.SU.forEach(s=>{const n=parseInt(s[4]);h+=`<div class="s" data-s="${n}"><i style="background:${s[6]}"></i>${s[4]}</div>`;D.KI.filter(k=>k[6]===n).forEach(k=>h+=`<div class="k" data-k="${D.KI.indexOf(k)}">${k[4]}</div>`)});$('icin').innerHTML=h;
  $('icin').onclick=e=>{const s=e.target.closest('[data-s]'),k=e.target.closest('[data-k]');if(s)surGit(+s.dataset.s);else if(k){const r=D.KI[+k.dataset.k];git(r[0],r[1],r[2],r[3])}};
  $('sl').innerHTML=D.SU.map(s=>`<option value="${s[4].replace(/"/g,'')}">`).join('')})();
-const katla=s=>s.toLowerCase().replace(/[âáà]/g,'a').replace(/[îí]/g,'i').replace(/[ûú]/g,'u').replace(/ı/g,'i').replace(/ş/g,'s').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ö/g,'o').replace(/ü/g,'u').replace(/[’'ʿʾ]/g,'');
+const katla=s=>s.toLowerCase().replace(/[âáà]/g,'a').replace(/[îí]/g,'i').replace(/[ûú]/g,'u').replace(/ı/g,'i').replace(/ş/g,'s').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ö/g,'o').replace(/ü/g,'u').replace(/[’'ʿʾ\-\s]/g,'');
 const arNorm=s=>s.replace(/[ً-ٰٟ]/g,'').replace(/[أإآٱ]/g,'ا');
 function ara(q){q=q.trim();if(!q)return;let m;if(m=q.match(/^(\d+):(\d+)$/)){ayGit(q);return}if(/^\d+$/.test(q)){if(SUI[+q]!==undefined)surGit(+q);return}
  if(/[؀-ۿ]/.test(q)){const n=arNorm(q);let j=D.GP.findIndex(p=>arNorm(p[6])===n);if(j<0)j=D.GP.findIndex(p=>arNorm(p[6]).includes(n));if(j>=0){const a=D.AY[AYI[D.GP[j][10]]];if(a)sec(AYI[D.GP[j][10]]);kokGit(j)}return}

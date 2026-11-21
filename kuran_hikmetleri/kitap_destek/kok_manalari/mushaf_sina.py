@@ -28,23 +28,28 @@ def iskelet(arapca, sayi, kurallar):
     son = round(h - (sat[-1][4] + 1.0), 2)
     return out, (1 if 0.3 <= son < 1.0 else (3 if son >= 1.0 else 0))
 
-def sanat(arapca, sayi, kurallar):
-    rows = []; no = 0; ara = lambda fl: ' ' * (1 + (round(M.HG * SUT) if fl else 0))
+def sanat(arapca, sayi, kurallar, numara=True):
+    rows = []; no = 0; ara = lambda fl: (' ' + '·' * round(M.HG * SUT)) if fl else ' '
     L_, son_ = iskelet(arapca, sayi, kurallar)
     for kut, fl, kad, sd, bos, idx in L_:
         for _ in range(bos): rows.append('   |' + ' ' * COLS + '|')
-        no += 1; ters = ''
-        # sağdan sola: ilk belirteç en sağda
-        parcalar = []
+        no += 1; parcalar = []; pos = {}; cur = 0
         for q in range(len(kut) - 1, -1, -1):
-            parcalar.append(kut[q])
-            if q > 0: parcalar.append(ara(fl[q]))
+            pos[q] = cur; parcalar.append(kut[q]); cur += len(kut[q])
+            if q > 0: g = ara(fl[q]); parcalar.append(g); cur += len(g)
         ters = ''.join(parcalar); pad = COLS - len(ters)
         bas = round(M.HG * SUT) if fl[0] else 0
-        if sd == 'R': s = ' ' * max(0, pad - kad * 6 - bas) + ters + ' ' * (kad * 6 + bas)
-        elif sd in ('L', 'M'): s = ' ' * (kad * 6 + bas) + ters + ' ' * max(0, pad - kad * 6 - bas)
-        else: s = ' ' * (pad // 2) + ters + ' ' * (pad - pad // 2)
-        rows.append('%02d |%s|' % (no, s[:COLS].ljust(COLS)))
+        pay = '·' * bas
+        if sd == 'R': off = max(0, pad - kad * 6 - bas); s = ' ' * off + ters + pay + ' ' * (kad * 6)
+        else: off = kad * 6; s = ' ' * off + ters + pay + ' ' * max(0, pad - kad * 6 - bas)
+        rows.append('%02d |%s| (%d kutu)' % (no, s[:COLS].ljust(COLS), len(kut)))
+        if numara:
+            nr = [' '] * COLS
+            for q in pos:
+                t = str(q + 1); st = off + pos[q] + max(0, (len(kut[q]) - len(t)) // 2)
+                for z, ch in enumerate(t):
+                    if st + z < COLS: nr[st + z] = ch
+            rows.append('   |%s|' % ''.join(nr))
     for _ in range(son_): rows.append('   |' + ' ' * COLS + '|')
     return '\n'.join(rows), len(rows)
 
@@ -142,7 +147,7 @@ if __name__ == '__main__':
         for k in AN[sys.argv[2].lower()]:
             ar, a = ayet(k); print('### PASAJ %d' % list(AN[sys.argv[2].lower()]).index(k)); print(sanat(ar, a, M.KURALLAR)[0]); print()
     elif c == 'oto':
-        for kume in ('dev', 'test', 'test2', 'test3'):
+        for kume in ('dev', 'test', 'test2', 'test3', 'test4'):
             print('==', kume)
             for ad, kur in [('düz (kuralsız)', ()), ('7 kural', M.KURALLAR)] + [('-%s' % x, tuple(y for y in M.KURALLAR if y != x)) for x in M.KURALLAR] + [('yalnız %s' % x, (x,)) for x in M.KURALLAR]:
                 r = olc(kume, kur)
@@ -151,12 +156,22 @@ if __name__ == '__main__':
             for k, (h, t, o) in r['ayr'].items(): print('   ', k, 'isabet %d/%d, okunan %d' % (h, t, o))
     elif c == 'puan':
         ok = json.load(open(sys.argv[2], encoding='utf-8')); kume = sys.argv[3].lower(); ks = list(AN[kume])
+        haric = {int(x) for x in sys.argv[4:]}
+        for hx in haric: ks_ = ks[hx]; AN[kume][ks_] = []
         okuyucu = {}
         for i, k in enumerate(ks):
-            ar, a = ayet(k); It = iskelet(ar, a, M.KURALLAR)
+            ar, a = ayet(k); It, _s = iskelet(ar, a, M.KURALLAR)
             okuyucu[k] = []
             for b in ok.get(str(i), []):
-                satirlar = range(b['a'] - 1, b['b']); idx = sorted({j for q in satirlar if 0 <= q < len(It) for j in It[q][4]})
+                if b.get('k1') and b.get('k2') and b['a'] == b['b'] and b['k1'] > b['k2']: b = dict(b, k1=b['k2'], k2=b['k1'])
+                satirlar = range(b['a'] - 1, b['b']); idx = []
+                for q in satirlar:
+                    if 0 <= q < len(It):
+                        li = list(It[q][5])
+                        if q == b['a'] - 1 and b.get('k1'): li = li[b['k1'] - 1:]
+                        if q == b['b'] - 1 and b.get('k2'): li = li[:b['k2']] if q != b['a'] - 1 or not b.get('k1') else li[:max(0, b['k2'] - b['k1'] + 1)]
+                        idx += li
+                idx = sorted(set(idx))
                 okuyucu[k].append((b['tip'], isaretsiz(ar, idx)))
         r = olc(kume, M.KURALLAR, okuyucu)
         print('isabet=%d/%d (%%%.1f) kesinlik=%%%.1f alan×%.2f V=%.3f' % (r['hit'], r['tot'], 100 * r['recall'], 100 * r['prec'], r['alan'], V(r, 7)))
@@ -167,7 +182,7 @@ if __name__ == '__main__':
             o = subprocess.run([sys.executable, '-I', str(HERE / 'mushaf_sina.py'), 'ozet'], capture_output=True, text=True, cwd='/').stdout; h.append(hashlib.sha256(o.encode()).hexdigest())
         print(h, 'ÖRTÜŞTÜ' if h[0] == h[1] else 'ÖRTÜŞMEDİ')
     elif c == 'ozet':
-        for kume in ('dev', 'test', 'test2', 'test3'):
+        for kume in ('dev', 'test', 'test2', 'test3', 'test4'):
             for k in AN[kume]:
                 ar, a = ayet(k)
                 for W in (18.0, 26.0, 40.0): print(k, W, M.yerles(ar, a, W, M.KURALLAR))

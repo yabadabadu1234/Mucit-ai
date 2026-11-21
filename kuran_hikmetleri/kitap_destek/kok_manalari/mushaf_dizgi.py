@@ -7,6 +7,7 @@ HERE = pathlib.Path(__file__).resolve().parent
 FA = 1.0; AG = 0.15; INS = 1.4; GAP1 = 0.5; GAP2 = 1.6; HG = 0.75
 KURALLAR = ('ARA', 'ISTISNA', 'CEVAP', 'ZITLIK', 'HITAP', 'NAKIL', 'PARALEL')
 _F = ImageFont.truetype(str(HERE / 'yazi' / 'Amiri-Regular.ttf'), 100)
+@functools.lru_cache(maxsize=None)
 def gen(t): return _F.getlength(t) / 100.0
 
 DURAK = ('ۖ', 'ۗ', 'ۘ', 'ۚ')   # sılâ, kıylâ, lâzım, câiz: durulması beklenen işaretler
@@ -81,12 +82,15 @@ def kurallari_uygula(T, kurallar=KURALLAR):
                 kir(i, 1)
     if 'HITAP' in kurallar:
         for i in range(n):
-            if isr[i] or not nida_imla(T[i]): continue
-            c = iskelet(T[i]); j = i
-            if c.lstrip('و').startswith(('يايها', 'ياايها', 'يايتها')):
-                j = sonraki(i)
-                if j < n and cekirdek(T[j]) in ('الذين', 'اللذين'): j = sonraki(j)
-            elif c.lstrip('و') == 'يااهل': j = sonraki(i)
+            if isr[i]: continue
+            if nida_imla(T[i]):
+                c = iskelet(T[i]); j = i
+                if c.lstrip('و').startswith(('يايها', 'ياايها', 'يايتها')):
+                    j = sonraki(i)
+                    if j < n and cekirdek(T[j]) in ('الذين', 'اللذين'): j = sonraki(j)
+                elif c.lstrip('و') == 'يااهل': j = sonraki(i)
+            elif iskelet(T[i]) == 'رب' and len(T[i]) <= 5 and '\u0650' in T[i] and '\u0651' in T[i] and not (sonraki(i) < n and cekirdek(T[sonraki(i)]).startswith('ال')): j = i   # yâsız nidâ: "Rabbi!"; belirli isme muzâf ise (رَبِّ ٱلْعَـٰلَمِينَ) nidâ değil
+            else: continue
             gap[i] = 2; brk[i] = True; k = sonraki(j)
             if k < n: kir(k, 2)
             else: sondaki[0] = 2

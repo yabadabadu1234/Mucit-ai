@@ -2,8 +2,10 @@
 Her âyet odasının başlığı TAM âyettir; başlık payı âyetin uzunluğuna göre oluşur. Odalar satırda ve sütunda hizalıdır
 (hepsi hücre ızgarasına oturur), sıra sağdan sola, satır sonunda yine sağdan sola; kapalı dikdörtgen şartı yoktur, kenar girintili olabilir.
 Birim: hücre eni = 1. Hücre boyu = A5 oranı."""
-import math, json, pathlib, functools
+import math, json, pathlib, functools, sys
 from PIL import ImageFont
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import mushaf_dizgi as MD
 HERE = pathlib.Path(__file__).resolve().parent
 KH = HERE.parent.parent
 CH = 210 / 148; ORAN = 148 / 210
@@ -36,17 +38,24 @@ def sar(metin, genislik):
     return tuple(o)
 
 def ayet_sekilleri(s, a, n, c):
-    """Âyet odasının olası şekilleri (Pareto): (en, boy, özellik)."""
-    t = ayet_metin(s, a); ch = c * CH; S = {}
+    """Âyet odasının olası şekilleri (Pareto): (en, boy, özellik). Dizgi mushaf_dizgi'nin 7 sabit kuralıyla (F 3-I 406)."""
+    ar = _AYET_HAM(s, a); ch = c * CH; S = {}
     for kk in range(1, min(n, 14) + 1):
         for Wt in sorted({float(snap(kk * c + 2 * AG)), *[float(x) for x in range(4, 61, 3)]}):
-            w = max(snap(kk * c + 2 * AG), Wt); L = sar(t, w)
-            bh = len(L) * FA * SATIR + 0.3; r = math.ceil(n / kk); h = snap(bh + r * ch + 2 * AG)
+            w0 = max(snap(kk * c + 2 * AG), Wt); L, hl = MD.yerles(ar, a, w0)
+            use = max(ins + sum(MD.gen(t) for t in tk) * 1.0 + (len(tk) - 1) * MD.gen(' ') + sum(fl) * MD.HG for tk, fl, ins, sd, y, ix in L) + 2 * AG
+            w = max(w0, snap(use))
+            if w != w0: L, hl = MD.yerles(ar, a, w)
+            bh = hl * FA * SATIR + 0.3; r = math.ceil(n / kk); h = snap(bh + r * ch + 2 * AG)
             if h not in S or w < S[h][0]: S[h] = (w, h, dict(k=kk, L=L, bh=bh, c=c, s=s, a=a, n=n))
     out = []; eh = 1e18
     for w, h, sp in sorted(S.values(), key=lambda z: z[0]):
         if h < eh - 1e-9: out.append((w, h, sp)); eh = h
     return out
+
+def _AYET_HAM(s, a):
+    if s not in _AYET: _AYET[s] = json.load(open(KH / 'kaynak' / 'sure' / ('%d.json' % s), encoding='utf-8'))['verses']
+    return _AYET[s][a - 1]['arabic'].strip()
 
 def shelf(olc, Wmax, bas, ic, bos):
     x = ic; y = bas + ic; sh = 0.0; used = ic; pos = []
@@ -100,7 +109,7 @@ def kur(SUR, KOKA, NO, SAYFA, KAPAK):
         for K, ksub, kw, kh, KX, KY in yer(S['kids'], sub, SX, SY, sw):
             KI.append([round(KX, 3), round(KY, 3), round(kw, 3), round(kh, 3), K['ad'], round(KB, 3), S['s']])
             for A, sp, aw, ah, AX, AYY in yer(K['kids'], ksub, KX, KY, kw):
-                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), list(sp['L']), len(A['kok'])])
+                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), [[list(tk), list(fl), round(ins, 3), sd, round(y, 3)] for tk, fl, ins, sd, y, ix in sp['L']], len(A['kok'])])
                 kk = sp['k']; cc = sp['c']; r0 = AYY + sp['bh'] + AG
                 for j, (kok, fl) in enumerate(A['kok']):
                     ri, ci = divmod(j, kk); no = NO[(kok, fl)]; nc = KAPAK.get(str(no), 0)
