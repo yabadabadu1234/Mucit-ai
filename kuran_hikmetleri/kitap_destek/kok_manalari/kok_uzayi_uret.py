@@ -4,7 +4,8 @@ import json, sys, collections, pathlib, colorsys, re, datetime
 HERE = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE.parent.parent))
 from yerlesim import sureler
-from kuran_kokleri import kokler
+from kuran_kokleri import kokler, tum, ilkler
+import mushaf_dizgi as MD
 import kok_uzayi_yerlesim as Y
 from lugat_atlas import uret as atlas_uret
 from mevzu_kumeleri import kume_adi
@@ -45,15 +46,26 @@ for n, r in SUD.items():
     r += [hexrenk(h, sat, 0.78 + LT[TON[n]]), hexrenk(h, sat * 0.8, 0.925 + LT[TON[n]] * 0.3), KIX[KUME[n]], KUME[n]]
 for k in R['KI']: k += [SUD[k[6]][7], SUD[k[6]][8]]
 sure_of = lambda key: int(key.split(':')[0])
-for a in R['AY']: a += [0, SUD[sure_of(a[4])][8]]
+for a in R['AY']: a += [SUD[sure_of(a[4])][8]]
 for p in R['GP']: p.insert(9, SUD[sure_of(p[9])][8])
 R['KU'] = [[k, hexrenk(HUE[k], 0.58, 0.78) if HUE[k] is not None else hexrenk(40, 0.22, 0.78), sum(1 for n, v in KUME.items() if v == k and n in SUD)] for k in KUL]
-# âyet meali ve kök anlamı
-ME = {}
-for a in R['AY']:
-    s_, ay = a[4].split(':'); v = json.load(open(KH / 'kaynak' / 'sure' / ('%s.json' % s_), encoding='utf-8'))['verses'][int(ay) - 1]
-    ME[a[4]] = (v.get('turkish') or {}).get('diyanet_vakfi', '')
-R['ME'] = ME
+# âyet meali (Hayrat Neşriyat; oda içinde de durur), bütün âyetlerin kök kayıtları, kelime durumları
+AYK, KEL, SAY, ILKT = tum(); ILKL = ilkler()
+ME = {}; AK = {}; DS = {}
+for s_, adi, na, KIS in SUR:
+    V_ = json.load(open(KH / 'kaynak' / 'sure' / ('%d.json' % s_), encoding='utf-8'))['verses']
+    for ay in range(1, na + 1):
+        key = '%d:%d' % (s_, ay); ME[key] = Y.meal(s_, ay)
+        AK[key] = [[k, fl, yn, key if yn else ILKT[(k, fl)]] for k, fl, yn in AYK[key]]
+        T = V_[ay - 1]['arabic'].split(); idx = [i for i, t in enumerate(T) if not MD.isaret(t)]; kw = KEL.get(key, {}); nw = max(kw) if kw else 0
+        if len(idx) == nw:
+            d = ['0'] * len(T)
+            for j, i in enumerate(idx, 1):
+                it = kw.get(j, [])
+                d[i] = '1' if any(ILKL.get(x) and ILKL[x][:3] == (s_, ay, j) for x in it) else ('2' if any(x[1] == 0 for x in it) else ('3' if it else '0'))
+            DS[key] = ''.join(d)
+R['ME'] = ME; R['AK'] = AK; R['DS'] = DS
+R['KF'] = {(k if fl == 0 else k + '·'): v for (k, fl), v in SAY.items()}
 KA = {}
 for p in R['GP']:
     f = KH / 'kelime_kaydi' / 'kuranda_var' / 'kokler' / (p[6] + '.json')
@@ -64,9 +76,9 @@ R['KA'] = KA
 SM = {}
 for s_, adi, na, KIS in SUR:
     ao = [a for a in R['AY'] if sure_of(a[4]) == s_]
-    SM[s_] = [na, len(ao), sum(1 for k in R['KI'] if k[6] == s_), sum(a[7] for a in ao)]
+    SM[s_] = [na, sum(1 for a in ao if a[7]), sum(1 for k in R['KI'] if k[6] == s_), sum(a[7] for a in ao)]
 R['SM'] = SM
-R['IS'] = '%d sûre · %d kısım · %d âyet · %d kök hücresi' % (len(R['SU']), len(R['KI']), len(R['AY']), len(R['GP']))
+R['IS'] = '%d sûre · %d kısım · %d âyet (%d yeni kök getiren) · %d kök hücresi' % (len(R['SU']), len(R['KI']), len(R['AY']), sum(1 for a in R['AY'] if a[7]), len(R['GP']))
 # ölçüler: çakışma ve boşluk (F 3-B 26)
 def kes(a, b): return a[0] < b[0] + b[2] - 1e-6 and b[0] < a[0] + a[2] - 1e-6 and a[1] < b[1] + b[3] - 1e-6 and b[1] < a[1] + a[3] - 1e-6
 def asgari_bosluk(L):

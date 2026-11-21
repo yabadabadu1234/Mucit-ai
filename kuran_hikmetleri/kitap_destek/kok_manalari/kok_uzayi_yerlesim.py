@@ -17,6 +17,7 @@ KB = 2.6; SB = 4.2   # kısım ve sûre başlık payı
 BOS_A = 0.6; BOS_K = 1.4; BOS_S = 3.0   # kardeş odalar arası boşluk (âyet, kısım, sûre)
 IC_K = 0.5; IC_S = 1.0                  # kısım ve sûre oda içi dolgu
 CELL = 5.0           # hücre eni (yazı puntosu cinsinden)
+FM = 0.5; MS = 1.34  # meal yazı puntosu ve satır aralığı (âyet puntosunun katı); meal Amiri ile ölçülür, tarayıcıda aynı yazı kullanılır
 _F = ImageFont.truetype(str(HERE / 'yazi' / 'Amiri-Regular.ttf'), 100)
 def gen(t): return _F.getlength(t) / 100.0
 def snap(v, s=ADIM): return math.ceil(v / s - 1e-9) * s
@@ -38,20 +39,37 @@ def sar(metin, genislik):
     return tuple(o)
 
 def ayet_sekilleri(s, a, n, c):
-    """Âyet odasının olası şekilleri (Pareto): (en, boy, özellik). Dizgi mushaf_dizgi'nin 7 sabit kuralıyla (F 3-I 406)."""
+    """Âyet odasının olası şekilleri (Pareto): (en, boy, özellik). Dizgi mushaf_dizgi'nin 7 sabit kuralıyla (F 3-I 406); oda: Arapça, hemen altında meal, onun altında yeni kök hücreleri (n = 0 ise hücre yok)."""
     ar = _AYET_HAM(s, a); ch = c * CH; S = {}
-    for kk in range(1, min(n, 14) + 1):
-        for Wt in sorted({float(snap(kk * c + 2 * AG)), *[float(x) for x in range(4, 61, 3)]}):
+    for kk in (range(1, min(n, 14) + 1) if n else [0]):
+        for Wt in sorted({float(snap(kk * c + 2 * AG)), *[float(x) for x in range(4 if kk else 8, 61, 3)]}):
             w0 = max(snap(kk * c + 2 * AG), Wt); L, hl = MD.yerles(ar, a, w0, ())
             use = max(ins + sum(MD.gen(t) for t in tk) * 1.0 + (len(tk) - 1) * MD.gen(' ') + sum(fl) * MD.HG for tk, fl, ins, sd, y, ix in L) + 2 * AG
             w = max(w0, snap(use))
             if w != w0: L, hl = MD.yerles(ar, a, w, ())
-            bh = hl * FA * SATIR + 0.3; r = math.ceil(n / kk); h = snap(bh + r * ch + 2 * AG)
-            if h not in S or w < S[h][0]: S[h] = (w, h, dict(k=kk, L=L, bh=bh, c=c, s=s, a=a, n=n))
+            ML = meal_satirlari(s, a, w); mh = len(ML) * FM * MS + 0.3
+            bh = hl * FA * SATIR + 0.3; r = math.ceil(n / kk) if kk else 0; h = snap(bh + mh + r * ch + 2 * AG)
+            if h not in S or w < S[h][0]: S[h] = (w, h, dict(k=kk, L=L, bh=bh, mh=mh, ML=ML, c=c, s=s, a=a, n=n))
     out = []; eh = 1e18
     for w, h, sp in sorted(S.values(), key=lambda z: z[0]):
         if h < eh - 1e-9: out.append((w, h, sp)); eh = h
     return out
+
+@functools.lru_cache(maxsize=None)
+def meal(s, a):
+    if s not in _AYET: _AYET[s] = json.load(open(KH / 'kaynak' / 'sure' / ('%d.json' % s), encoding='utf-8'))['verses']
+    t = (_AYET[s][a - 1].get('turkce') or _AYET[s][a - 1].get('turkish') or {}).get('hayrat_nesriyat') or ''
+    return ' '.join(t.replace('`', '\u2019').split())
+
+@functools.lru_cache(maxsize=None)
+def meal_satirlari(s, a, genislik):
+    W = (genislik - 2 * AG - 0.3) / FM / 1.04; o = []; b = ''
+    for w in meal(s, a).split():
+        d = (b + ' ' + w) if b else w
+        if b and gen(d) > W: o.append(b); b = w
+        else: b = d
+    if b: o.append(b)
+    return tuple(o)
 
 def _AYET_HAM(s, a):
     if s not in _AYET: _AYET[s] = json.load(open(KH / 'kaynak' / 'sure' / ('%d.json' % s), encoding='utf-8'))['verses']
@@ -93,7 +111,7 @@ def kur(SUR, KOKA, NO, SAYFA, KAPAK):
             ao = []
             for a in ay:
                 r = KOKA.get('%d:%d' % (s, a), [])
-                if r: ao.append(dict(tip='a', kok=r, sek=ayet_sekilleri(s, a, len(r), CELL), kids=[]))
+                ao.append(dict(tip='a', kok=r, sek=ayet_sekilleri(s, a, len(r), CELL), kids=[]))
             if ao: kis.append(dict(tip='k', ad=kad, s=s, kids=ao, sek=paketle([x['sek'] for x in ao], KB, IC_K, BOS_A)))
         if kis: surler.append(dict(tip='s', s=s, ad='%d · %s' % (s, adi), kids=kis, sek=paketle([k['sek'] for k in kis], SB, IC_S, BOS_K)))
     kok_ = paketle([S['sek'] for S in surler], 0, 1.0, BOS_S, 120)
@@ -109,9 +127,9 @@ def kur(SUR, KOKA, NO, SAYFA, KAPAK):
         for K, ksub, kw, kh, KX, KY in yer(S['kids'], sub, SX, SY, sw):
             KI.append([round(KX, 3), round(KY, 3), round(kw, 3), round(kh, 3), K['ad'], round(KB, 3), S['s']])
             for A, sp, aw, ah, AX, AYY in yer(K['kids'], ksub, KX, KY, kw):
-                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), [[list(tk), list(fl), round(ins, 3), sd, round(y, 3)] for tk, fl, ins, sd, y, ix in sp['L']], len(A['kok'])])
-                kk = sp['k']; cc = sp['c']; r0 = AYY + sp['bh'] + AG
+                AY.append([round(AX, 3), round(AYY, 3), round(aw, 3), round(ah, 3), '%d:%d' % (sp['s'], sp['a']), round(sp['bh'], 3), [[list(tk), list(fl), round(ins, 3), sd, round(y, 3), list(ix)] for tk, fl, ins, sd, y, ix in sp['L']], len(A['kok']), round(sp['mh'], 3), list(sp['ML'])])
+                kk = sp['k']; cc = sp['c']; r0 = AYY + sp['bh'] + sp['mh'] + AG
                 for j, (kok, fl) in enumerate(A['kok']):
                     ri, ci = divmod(j, kk); no = NO[(kok, fl)]; nc = KAPAK.get(str(no), 0)
                     GP.append([round(AX + aw - AG - (ci + 1) * cc, 3), round(r0 + ri * cc * CH, 3), cc, round(cc * CH, 4), no, nc + SAYFA.get(str(no), 0), kok, fl, nc, '%d:%d' % (sp['s'], sp['a'])])
-    return dict(SU=SU, KI=KI, AY=AY, GP=GP, W=round(w, 3), H=round(h, 3), FA=FA, SATIR=SATIR, CELL=CELL)
+    return dict(SU=SU, KI=KI, AY=AY, GP=GP, W=round(w, 3), H=round(h, 3), FA=FA, SATIR=SATIR, CELL=CELL, FM=FM, MS=MS)

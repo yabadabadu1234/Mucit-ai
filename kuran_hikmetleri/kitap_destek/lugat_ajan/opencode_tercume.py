@@ -45,11 +45,11 @@ def topla(j):
 def cagir(metinler, model):
     istem = ISTEM + json.dumps(metinler, ensure_ascii=False)
     r = subprocess.run([OPENCODE, 'run', '-m', model, istem], capture_output=True, text=True, timeout=400, cwd='/tmp')
-    cikti = r.stdout
+    cikti = r.stdout + r.stderr
     while 'usage limit' in cikti.lower():
         time.sleep(900)
         r = subprocess.run([OPENCODE, 'run', '-m', model, istem], capture_output=True, text=True, timeout=400, cwd='/tmp')
-        cikti = r.stdout
+        cikti = r.stdout + r.stderr
     m = re.search(r'\[.*\]', cikti, re.S)
     if not m:
         return None

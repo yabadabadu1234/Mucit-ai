@@ -104,3 +104,37 @@ Her satır `ziyade_sina.js` içinde ayrı bir sınamayla doğrulanır (`node ziy
 | 98 | PNG dışa aktarma | davranış |
 | 99 | odak halkası ve mobil büyük düğme (stil) | davranış |
 | 100 | legend daraltılabilir (details) | davranış |
+
+# Kök uzayı · yeni kök getirmeyen âyetler ve meal ziyadeleri (F 3-I 412)
+
+Bütün 6236 âyet haritadadır: 1122 âyet yeni kök getirir, 5114 âyet getirmez. Meal Hayrat Neşriyat'tandır (grav ayraç ’ ile yazılır; Arapça metne dokunulmaz). Sınama: `node ziyade2_sina.js` (27/27 geçti; eski `ziyade_sina.js` 100/100 geçti, 98 sûre sayıları 114'e çevrildi). Her madde, sayılan âyetten değil **niteliğinden** ayrı bir ziyadedir.
+
+| # | Ziyade (vasıf) | Sınama |
+| :-- | :-- | :-- |
+| 1 | Yeni kök getirmeyen âyetler de oda olarak haritada (6236 = 1122 + 5114) | ölçü |
+| 2 | Tür ayrımı: dolgu rengi farklı (getiren koyu, getirmeyen soluk) | davranış (piksel) |
+| 3 | Getirmeyen oda kesik çizgili, getiren oda düz ve kalın çizgili | kod |
+| 4 | Getirmeyen oda taramalı (çapraz çizgi); uzak katmanda da | kod |
+| 5 | Meal her âyet odasının içinde, Arapçanın altında | ölçü |
+| 6 | Meal bloğu odaya sığar; yükseklik formülle eşit | ölçü |
+| 7 | Rozet: getirende +N, getirmeyende ∅ | kod |
+| 8 | Tür süzgeci (hepsi · yeni kök · kök yok), K tuşu | davranış |
+| 9 | Efsane: iki tür ve sayıları (1122 · 5114) | davranış |
+| 10 | Sûre paneli: yeni kök getiren ve getirmeyen âyet sayısı | davranış |
+| 11 | Kısım başlığında yeni/toplam oranı; toplamlar 1122 ve 6236 | ölçü |
+| 12 | Getirmeyen âyet paneli: ○ kök çipleri ve ilk geçişe bağ | davranış |
+| 13 | Getiren âyet paneli: ● çip sayısı yeni kök sayısına eşit | davranış |
+| 14 | Kök hazinesi ilerlemesi (kaç/1830, yüzde, çubuk); son âyette 1830 | ölçü |
+| 15 | N tuşu: sonraki yeni kök getiren âyet | davranış |
+| 16 | P tuşu: önceki yeni kök getiren âyet | davranış |
+| 17 | Panelde önceki ve sonraki yeni kök âyeti, mesafesiyle | davranış |
+| 18 | Fare ipucu: âyetin türü ve yeni kökleri | davranış |
+| 19 | Alt şerit: görünen âyetlerden kaçı getiren, kaçı getirmeyen | davranış |
+| 20 | Meal araması (mealde geçen kelimeyle âyet bulma) | davranış |
+| 21 | Bağ (hash) süzgeci taşır: `#f=yeni&a=2:30` | davranış |
+| 22 | Kök hazinesi eğrisi (âyet sırasıyla kök edinimi); tıkla, oraya git | davranış |
+| 23 | Kök ipucu: Kur'ân'da kaç âyette, kaç geçiş | davranış |
+| 24 | Âyet metninde yeni kök kelimesi altın ve kalın | davranış |
+| 25 | Canlı özet (ekran okuyucu) âyetin türünü bildirir | davranış |
+| 26 | Kelime–kök hizası: âyetlerin ≥ %96'sında kelime başına kök durumu | ölçü |
+| 27 | Eğri imleci: seçili âyetin yeri kırmızı çizgiyle | kod |
