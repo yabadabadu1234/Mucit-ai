@@ -6,7 +6,7 @@ import subprocess
 import sys
 import time
 
-KOKLER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi', 'kuranda_var', 'kokler')
+KOKLER = os.environ.get('KOKLER_DIZIN') or os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'kelime_kaydi', 'kuranda_var', 'kokler')
 OPENCODE = os.path.expanduser('~/.opencode/bin/opencode')
 MODEL = 'opencode/deepseek-v4.1-flash-free'
 YEDEK = 'opencode/big-pickle'
