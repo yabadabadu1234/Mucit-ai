@@ -1,0 +1,146 @@
+{
+  "sema": "ekran_turleri.v1",
+  "tarih": "2026-11-23",
+  "isaretler": {
+    "K": "Wikipedia sayfasından baştan sona okundu (okuma defteri aşağıda)",
+    "S": "WebSearch özetinden; sayfa tam okunmadı",
+    "D": "depodaki önceki defterden (MALIYET_ANALIZI.md, ILK_MODEL_LCD_MALIYET.md); orada kendi kaynağı yazılı",
+    "?": "kaynak bulunamadı; rakam yazılmadı"
+  },
+  "okuma_defteri": {
+    "okundu_bastan_sona": ["Liquid-crystal_display","Thin-film-transistor_liquid-crystal_display","Twisted_nematic_field_effect","IPS_panel","Backlight","LCD_manufacturing","OLED","AMOLED","MicroLED","Quantum_dot_display","Mini_LED","Liquid_crystal","Polarizer","Electronic_paper","Electrowetting","Cholesteric_liquid_crystal","Interferometric_modulator_display","Electrochromic_devices","Display_device","Vacuum_fluorescent_display","Seven-segment_display","Plasma_display","Cathode-ray_tube","Liquid_crystal_on_silicon","Digital_Light_Processing","Capacitive_sensing","Touchscreen","Resistive_touchscreen","Indium_tin_oxide"],
+    "okunmadi": ["Gorilla_Glass (inmedi)","Memory_in_pixel (sayfa boş döndü)","Microdisplay (sayfa boş döndü)","EMR/aktif kalem sayfası (aranmadı)"],
+    "uyari": "Wikipedia üretim sürecini ve masrafı yüzeysel verir; masraf rakamı çoğunlukla Wikipedia'da yoktur ve aşağıda S/D/? ile ayrıca işaretlidir."
+  },
+  "urun_baglantilari": [
+    {"ad":"Kitantik DGUS 8\" (2. el)","durum":"sayfa 403, okunamadı","not":"kaydedildi, içerik yok"},
+    {"ad":"Elecbee GT911 7\" kapasitif dokunmatik LCD","ozellik":"800×480, 24 bit paralel RGB, görüntü alanı 154,08×85,92 mm","fiyat":"2.135,10 TL","not":"sayfada 'üretimi durduruldu' yazıyor","kaynak":"kullanıcı bağlantısı, önceki turda okundu"},
+    {"ad":"Direnc 7\" kapasitif overlay (LattePanda, FIT0478)","ozellik":"164×96 mm; EKRAN DEĞİL, yalnız dokunmatik katman","fiyat":"1.609,09 TL KDV dahil","kaynak":"kullanıcı bağlantısı, önceki turda okundu"}
+  ],
+  "parca_katalogu": {
+    "cam_alttas": {"gorev":"bütün katmanların taşıyıcısı","uretim":"cam üretimi; plazma panelde yüksek-gerinim camı gerekir, Panasonic sıradan pencere camıyla süreç geliştirdi [K Plasma]; CRT camı en pahalı kalemi enerjiyle eritme [K CRT]","masraf":"LCD'de TFT/cam payı %35–40 (satıcı blogu, kaynaksız tahmin) [S]"},
+    "ito_seffaf_elektrot": {"gorev":"saydam iletken (LCD, OLED anodu, dokunmatik)","malzeme":"%74 In, %8 Sn, %18 O (ağırlıkça); direnç ~10⁻⁴ Ω·cm; geçirgenlik >%80","uretim":"PVD: elektron ışını buharlaştırma veya püskürtme (vakum, enerji yoğun) [K ITO]; ITO ince desenle aşındırılabilir, AZO aşırı aşınır [K]","masraf":"ITO alüminyum esaslı AZO'dan birkaç kat pahalı, fakat hücre başına malzeme azdır, fark küçük kalır [K ITO]; indiyum kıt ve pahalı, alternatifler AZO, gümüş tel, grafen, iletken polimer"},
+    "tft_arka_duzlem": {"gorev":"her piksele anahtar","cesit":"a-Si, LTPS, oksit (IGZO vb.)","uretim":"fotolitografi, PECVD, püskürtme, ITO; çok maskeli tekrar [K TFT LCD]; AMOLED'de piksel başına en az 2 TFT ve 1 depolama kondansatörü [K AMOLED]; 150 °C altı süreçle plastik tabana yapılabilir [K]","masraf":"fab sermayesi baskın kalem; aşağıda fab_olcegi"},
+    "renk_suzgeci": {"gorev":"beyaz ışıktan RGB","uretim":"siyah matris + RGB rezist, fotolitografi [K LCD manufacturing]; CRT'de benzer siyah matris PVA fotorezist ile yapılmıştı [K CRT]","masraf":"Omdia/IHS maliyet modelinde ayrı kalem; yüzdesi ücretli rapor içinde [S]"},
+    "hizalama_katmani_ve_sivi_kristal": {"gorev":"sıvı kristali yönlendirmek","uretim":"cam üstüne polimid kaplanır, tek yönde ovulur; moleküller ovma yönüne dizilir; alternatif foto-hizalama [K Liquid crystal]; hücre kalınlığı tipik ~4 µm [K]; karışım nematik bileşiklerin karıştırılmasıyla ayarlanır [K]","masraf":"sıvı kristal ayrı kalem, yüzdesi ücretli rapor içinde [S]"},
+    "hucre_birlestirme": {"gorev":"iki camı aralıklı mühürlemek, sıvı kristali doldurmak","uretim":"ara parça (spacer), sızdırma maddesi, ODF/UV damlatıp bastırma [D/K LCD manufacturing]"},
+    "polarizer": {"gorev":"LCD'nin ışık valfi; OLED'de dairesel polarizer yansımayı keser","malzeme":"PVA film iyotla katkılı, üretimde gerilerek zincirler hizalanır (H-sheet) [K Polarizer]; verim ~%38 [K]; dairesel için doğrusal polarizer + çeyrek dalga plakası [K]","masraf":"polarizer ~%9,5 modülde (kaynaksız tahmin) [D]; sıradan polarizer diğer türlerden çok ucuz [K Polarizer]; LCD'de iki adet gerekir"},
+    "arka_isik": {"gorev":"LCD ışık kaynağı","parcalar":["LED şeridi","ışık kılavuz plakası (PMMA/cam)","difüzör","prizma levhaları","parlaklık artırıcı film (DBEF)","yansıtıcı"],"uretim":"enjeksiyon/kesim/baskı ile optik filmler; LED montajı [K Backlight]","masraf":"%18–25 (satıcı blogu) [S]; 2007 WitsView 'en pahalı kalem' diyor, kaynaklar çelişir [S]"},
+    "surucu_ic_ve_baglanti": {"gorev":"satır/sütun sürmek","uretim":"COG/TAB/ACF ile cama veya esnek bantlara bağlanır; FPC [K LCD manufacturing]","masraf":"%10–15 [S]"},
+    "dokunmatik_katman": {"cesitler":{
+        "yansitmali_kapasitif_PCT":"ITO/gümüş/bakır ızgara; karşılıklı kapasitans çoklu dokunuş; cam üst katman; 12×16 ızgarada 192 kapasitör örneği [K Capacitive sensing, Touchscreen]; denetleyici CMOS ASIC+DSP [K]",
+        "direncli":"iki ITO katlı membran, arada hava aralığı/mikro nokta; basınçla temas; dört telli analog; düşük maliyet, daha çok yansıma, 2010'da kapasitif gelir olarak, 2011'de adet olarak geçti [K Resistive]",
+        "EMR_aktif_kalem":"sayfa okunmadı [?]",
+        "kizilotesi_izgara":"kenarda LED+fotodiyot dizisi, desen gerekmez, kirden etkilenir [K Touchscreen]",
+        "SAW_akustik":"cam üstünde ultrasonik dalga, kirden bozulur [K]",
+        "optik_goruntuleme":"köşede iki kamera [K]"},
+      "masraf":"modülde %10–15 (satıcı blogu) [S]; kapasitif eskiden dirençliden pahalıydı [K Capacitive sensing]; in-cell (Super AMOLED) katmanı eler [K AMOLED]"},
+    "kapak_cami": {"masraf":"%10–15 (satıcı blogu) [S]","not":"Gorilla Glass sayfası okunmadı [?]"}
+  },
+  "turler": [
+    {
+      "ad":"LCD TN / STN (pasif/aktif)","aile":"LCD, aydınlatma geçirgen, yansıtıcı veya geçirgen-yansıtıcı","isik":"arka ışık (veya ortam ışığı yansıtıcıda)",
+      "parcalar":["ön cam+ITO","hizalama polimidi","sıvı kristal (bükümlü nematik)","arka cam+ITO veya TFT","iki çapraz polarizer","yansıtıcı veya arka ışık"],
+      "mekanizma":"Gerilimsizken kristal ışığın kutuplanmasını 90° döndürür, ikinci polarizerden geçer (saydam). Gerilimle moleküller alana dizilir, bükülme kalkar, ışık ikinci polarizerde sönülür. Fréedericksz eşiği temel [K Liquid crystal, TN]",
+      "uretim":["ITO camın desenlenmesi (litografi, aşındırma)","polimid kaplama ve ovma","ara parça ve mühür","sıvı kristal doldurma","iki polarizer yapıştırma","sürücü bağlama (COG)"],
+      "masraf":"pasif küçük hatlar çok ucuz: STN hattı ~22 milyon $ [D]; LCM (modül) hattı 2–8 milyon $ [D]; yazı tahtası LCD'ler 14,99–29,99 $, markasız 5,69 $ [D]",
+      "guc":"kendi gücü azdır; arka ışık baskın"
+    },
+    {
+      "ad":"LCD IPS/FFS, VA/MVA/PVA, PLS","aile":"LCD, aktif matris TFT","isik":"arka ışık",
+      "parcalar":["TFT arka düzlem","renk süzgeci","sıvı kristal","hizalama","iki polarizer","arka ışık","sürücü IC"],
+      "mekanizma":"IPS'te moleküller düzlem içinde döner (geniş görüş açısı, 'IPS parlaması'); VA'da dikey hizalı, gerilimle yatar (derin siyah) [K IPS, LCD]",
+      "uretim":["TFT dizisi (çok maskeli litografi, PECVD, püskürtme)","renk süzgeci","hücre birleştirme","modül: polarizer, COG/TAB, FPC, arka ışık"],
+      "masraf":"modül payları (satıcı blogu, orta sınıf telefon): TFT/cam %35–40, arka ışık %20–25, kapak cam %10–15, dokunmatik %10–15, sürücü IC %10–12, lamine/montaj %5–8 [S]; Omdia 65\" Gen10.5 TV açık hücre maliyeti 185,9 $ (2025) → 198,7 $ (2027, tahmin) [S]; 7\" 1024×600 IPS dokunmatik 12–18 $ (100–1000+ adet) [D]; 7\" 800×480 GT911 9–15 $ [D]"
+    },
+    {
+      "ad":"Yansıtıcı LCD / hafızalı LCD (Sharp MiP, ZBD, bistabil)","aile":"LCD, e-kâğıda yakın","isik":"ortam ışığı",
+      "mekanizma":"arka ışık yerine yansıtıcı yüzey [K Electronic paper]; ZBD (zenithal bistable) görüntüyü güçsüz tutar, ESL'lerde kullanılır [K]; Pebble saati Sharp hafızalı LCD kullandı [K]",
+      "uretim":"LCD hattı üstünde; arka ışık yok","masraf":"Memory_in_pixel sayfası boş geldi [?]",
+      "not":"kolesterik: aşağıya bakın"
+    },
+    {
+      "ad":"OLED (PMOLED, AMOLED, WOLED, QD-OLED, esnek)","aile":"kendinden ışıklı","isik":"organik tabaka",
+      "parcalar":["TFT arka düzlem (LTPS/oksit)","anot (ITO)","delik enjeksiyon/taşıma katmanları","ışıma katmanı (R, G, B)","elektron taşıma","katot","ince film kapsülleme (TFE: mürekkep püskürtme+ALD)","dairesel polarizer","dokunmatik (in-cell/on-cell)"],
+      "mekanizma":"Elektron ve delikler ışıma katmanında birleşip eksiton oluşturur; ışıma. Aktif matriste iki TFT ve bir kondansatör akımı sabit tutar [K OLED, AMOLED]; siyah piksel kapalıdır; yanma/renk kayması ömür sorunu (mavi en kısa) [K AMOLED]",
+      "uretim":["TFT dizisi","ince metal maske (FMM) ile vakum buharlaştırma ~300 °C, ~10⁻⁵ Pa; veya mürekkep püskürtme","kapsülleme","lazer ile cam ayırma (LLO) esnekte","dairesel polarizer"],
+      "masraf":"AMOLED verimi (yield) IPS'ten düşük, maliyet yüksek [K AMOLED]; fab: Samsung 8.6G LCD→AMOLED dönüşümü 3,1 milyar $ [S]; BOE Chengdu esnek 8.7G 63 milyar yuan (>8,8 milyar $), 32.000 alt-tabaka/ay [S]; Samsung Display 2040'a kadar 67 trilyon won (~46,5 milyar $) [S]; Samsung yılda ~500 milyon AMOLED panel [K AMOLED]"
+    },
+    {
+      "ad":"microLED","aile":"kendinden ışıklı, inorganik","isik":"mikroskobik LED dizisi",
+      "mekanizma":"her piksel ayrı inorganik LED (örn. InGaN); PWM sürüş renk kaymasını önler; ~5 µm LED [K MicroLED]",
+      "uretim":["LED'ler safir üstünde büyütülür","kütle aktarımı (pick-and-place/elastomer damga)","CMOS veya TFT'ye bağlama","her LED'i test, bozuğu lazerle çıkarıp değiştirme"],
+      "masraf":"akıllı telefon camı için yalnız kütle aktarımı 18 güne çıkabiliyor; test+onarım saatler sürüyor; Apple milyarlarca $ harcayıp saat için vazgeçti [K MicroLED]; 'üretimi hâlâ çok pahalı' [K]"
+    },
+    {
+      "ad":"mini-LED arka ışık ve QD (QDEF/QDCC/QNED/EL-QLED)","aile":"LCD iyileştirmesi / renk katmanı","isik":"bölgeli arka ışık + kuantum nokta",
+      "mekanizma":"yerel kısmalı mini-LED arka ışık kontrastı artırır; kuantum nokta filmi mavi ışığı saf kırmızı/yeşile çevirir [K Mini LED, QD]",
+      "uretim":"LED dizisi montajı; QD film kaplama/baskı","masraf":"ayrı rakam okunmadı [?]"
+    },
+    {
+      "ad":"E-kâğıt — elektroforetik (E Ink kapsül, Microcup, AMEPD)","aile":"yansıtmalı bistabil","isik":"ortam ışığı (ön ışık eklenebilir)",
+      "parcalar":["ön yüz filmi (FPL): şeffaf elektrot + ~40 µm kapsül tabakası (TiO₂ beyaz parçacıklar, koyu yağ)","TFT arka düzlem","sürücü IC","kenar mühür","ön ışık/dokunmatik isteğe bağlı"],
+      "mekanizma":"Yüklü beyaz TiO₂ parçacıkları yüzeye giderse beyaz, alta giderse boya rengi (siyah). Gerilim ters çevrilince yön değişir. Görüntü güçsüz kalır, yalnız yenilemede enerji [K Electronic paper]. Renk: üç-renkli süzgeç veya Spectra çok pigment; renkli panel çok daha pahalı ve yenileme saniyelerce [K, D]",
+      "uretim":["FPL ayrı yapılır: kapsül yağı kaplanır (rulodan ruloya)","film istenen ölçüye kesilir","arka düzleme hassas laminasyonla yapıştırılır","kenar mühür, sürücü bağlama (COG/COF)"],
+      "masraf":"7,5\" siyah-beyaz çıplak modül 20–35 $ (min 10 adet) [D]; 10,3\" siyah-beyaz 143–150 $ [D]; 10,3\" dokunmatik+ön ışık 148,90 $ [D]; 13,3\" Spectra 6 = 449 $ + sürücü 200 $ [D]; satıcı sitesi: 10\" E Ink 100–180 $ vs LCD 8–15 $ (düşük güven) [S]; pazar raporu özeti: film %30–40, TFT %20–30, sürücü+kart %10–15, montaj+test %10–15 [D, zayıf]; FPL–TFT yüzde oranı için kaynak BULUNAMADI [S]; E Ink patent ve kapsül kimyası tek kaynak (E Ink) [D]"
+    },
+    {
+      "ad":"E-kâğıt — kolesterik LCD (ChLCD)","aile":"yansıtmalı bistabil",
+      "mekanizma":"kiral nematik sıvı kristal sarmal yapıda; sarmal adımı Bragg yansımasıyla belli dalga boyunu yansıtır; kutuplanma gerekmez [K Cholesteric]",
+      "uretim":"LCD hücre üretimine yakın, sıvı kristale kiral katkı eklenir","masraf":"rakam yok [?]"
+    },
+    {
+      "ad":"E-kâğıt — elektroislanma (electrowetting, electrofluidic)","aile":"yansıtmalı",
+      "mekanizma":"su/yağ arayüzü gerilimle şekil değiştirir; renkli yağ ya yayılır ya kenara çekilir; sıvı CMY yığınıyla polarizersiz parlak renk [K Electrowetting, Electronic paper]; floropolimer kaplı elektrot (Teflon AF, CYTOP) [K]",
+      "uretim":"hidrofobik yalıtkan kaplama, piksel duvarları, yağ doldurma","masraf":"rakam yok; ticarî ölçek sınırlı [?]"
+    },
+    {
+      "ad":"E-kâğıt — IMOD / Mirasol","aile":"yansıtmalı MEMS",
+      "mekanizma":"hava boşluğu aralığı rengi belirleyen Fabry-Pérot boşluğu; gerilim zarı yapıştırınca siyah [K IMOD]; renkler soluk, ana akıma girmedi [K]",
+      "uretim":"MEMS+TFT hatları; LCD sürücüleri kullanılır","masraf":"rakam yok [?]"
+    },
+    {
+      "ad":"Elektrokromik","aile":"yansıtmalı/geçirgen",
+      "mekanizma":"WO₃ gibi katmanlarda redoks ile renk değişimi; iki EC katmanı arası elektrolit [K Electrochromic]; yanıt süresi on saniyeler (tip III) [K]",
+      "uretim":"beş katmanlı yığın, ITO, solid veya jel elektrolit","masraf":"rakam yok [?]"
+    },
+    {
+      "ad":"Gyricon, plazmonik, retina e-kâğıt (araştırma)","aile":"araştırma","mekanizma":"Janus küreler; plazmonik metayüzey; Uppsala 2025 WO₃ nano diskler >25.000 ppi, ~%80 yansıtma [K Electronic paper]","masraf":"yok"
+    },
+    {
+      "ad":"Eski/diğer: plazma, CRT, VFD, 7 segment, LCoS, DLP","aile":"kendinden ışıklı veya projeksiyon",
+      "ozet":{
+        "plazma":"hücrede gaz plazması UV üretir, fosfor RGB ışır; ~300 V, ~500 torr; pahalı, 2014–16'da üretimi bitti [K Plasma]",
+        "CRT":"elektron tabancası+ıskalama+fosfor; ağır cam, kurşun, vakum fırınlama 375–475 °C; üretim 2015'e kadar [K CRT]",
+        "VFD":"sıcak katot, ızgara, fosforlu anot, vakum; 640 cd/m²; ~50 V; küçük sabit göstergeler, ömür 1.500–30.000 saat [K VFD]",
+        "yedi_segment":"7/14/16 segment LED, LCD, VFD; çoğullama pin sayısını azaltır [K Seven-segment]",
+        "LCoS":"CMOS çipi üstünde yansıtıcı alüminyum elektrot+sıvı kristal; küçük mikro ekran [K LCoS]",
+        "DLP":"mikroayna dizisi (DMD), TI; renk çarkı veya LED/lazer [K DLP]"
+      },
+      "masraf":"hiçbiri ürünümüze uygun değil; kayıt için"
+    }
+  ],
+  "fab_olcegi": {
+    "esas_bulgu":"Ekran üretimi bir parça tasarımı değil, bir fab (yarı iletken+vakum+cam) işidir. Sermaye ölçeği: LCM modül hattı 2–8 milyon $ [D]; STN hattı ~22 milyon $ [D]; Gen 6 ~3,54 milyar $, Gen 8.5 ~5,35 milyar $ [D, eski turda aramadan, kaynağı burada yoktur]; Samsung 8.6G LCD→AMOLED dönüşümü 3,1 milyar $ [S]; BOE 8.7G esnek AMOLED 8,8 milyar $+ [S]",
+    "ulasilabilir_basamak":"Yalnız arka-uç (modül/LCM: sürücü bağlama, polarizer, arka ışık, dokunmatik lamine, kasa) milyon dolar mertebesinde; hücre (ITO+TFT+sıvı kristal) milyar dolar mertebesinde.",
+    "dikkat":"Gen 6/8.5 rakamları bu oturumda kaynağa bağlanamadı; kullanmadan önce yoklanmalı."
+  },
+  "bilinmeyenler": [
+    "Gen 6/8.5 sermaye rakamlarının kaynağı",
+    "Parça başına masraf yüzdeleri için yalnız satıcı blogu ve ücretli raporlar var",
+    "EMR kalem katmanı mekanizma ve masrafı",
+    "Kolesterik, elektroislanma, IMOD, elektrokromik masrafları",
+    "Gorilla Glass / kapak camı mekanizma ve üretimi",
+    "FPL'nin TFT'ye göre gerçek maliyet payı"
+  ],
+  "kaynaklar_arama": [
+    "https://oled-info.com/samsung-display-invest-31-billion-convert-lcd-fab-it-85-gen-amoled-line",
+    "https://www.oled-info.com/archive/202311",
+    "https://counterpointresearch.com/default.htm/insights/oled-lifts-display-equipment-capex-boe-samsung",
+    "https://mophoneparts.com/?p=3213",
+    "https://omdia.tech.informa.com/blogs/2026/oct/lcd-tv-open-cell-cash-cost-increase-by-more-than-7percent-in-2026-and-continue-to-rise-in-2027",
+    "https://digitimes.com/news/a20070928PR202.html",
+    "https://www.marketresearch.com/Prof-Research-v4036/paper-TFT-Backplane-Global-Insights-43318932",
+    "https://www.kiosketagscreen.com/info/how-much-does-an-e-ink-display-cost-103309447.html"
+  ]
+}
