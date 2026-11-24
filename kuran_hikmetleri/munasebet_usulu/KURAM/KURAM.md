@@ -1,82 +1,69 @@
-# KAYIPSIZ KATLAMA KURAMI
-### (çalışma adı) — Kur'ân tertîbinin münâsebet kayıtları için biçimsel usul
+# KAYIPSIZ KATLAMA USULÜ
 
-## 0. Girizgâh
+## Girizgâh
 
-Bu bahiste cevabını aradığımız sual şudur: **bir sûrenin içindeki hükümleri, bağları ve gayeleri, hiçbirini kaybetmeden ve hiçbirini uydurmadan, kat kat üst katmanlara toplayabilir miyiz; toplanan her üst hüküm, kendisini doğuran alt hükümlere her an geri açılabilir mi?** Bu suali, elimize verilen iki taslak (V1 ve V2; V2 ile V2_2 baytı baytına aynıdır) ortaya koymuştu. Taslakların fikri güzeldi; fakat birçok yerinde sayıldığı gibi sağlam değildi: bazı kurallar yalnız belli şartlarda doğruydu, bazı işaretler iki ayrı mana için kullanılmıştı. Biz fikri tuttuk, kusurları tek tek bulup şartlarını yazdık ve her iddiayı sonlu bir model üzerinde **fiilen koşturarak** sınadık. Koşturulan sınamaların sayısı ve sonucu `KURAM_ZIYADELERI.md` ve `SINAMA.json`da durur: **101 sınama, 101 geçti.**
+Bir sûrenin içinde hüküm, bağ ve gaye diye üç türlü kayıt bulunur. Bunların sayısı çoktur; çokluk içinde hiçbirini düşürmeden, hiçbirini uydurmadan ve her birine geri dönebilecek hâlde saklamak ister isek elimizde tek yol vardır: kayıtları **kat kat toplamak** ve her toplamada **izi** yanında taşımak. Bu usul o yoldur. Okuyan bu bahiste hiçbir terimi bilmiyor sayılmıştır; her terim ilk geçtiği yerde tarif edilir.
 
-Okuyan bu bahiste hiçbir ismi ve hiçbir terimi bilmiyor sayılmıştır; terimler ilk geçtiği yerde bir defa açıklanır.
+Usulün gayesi iki cümleyle söylenir: **Her üst kayıt, kendisini doğuran alt kayıtlara her an açılabilir. Hiçbir üst kayıt, alt kayıtların söylemediği bir şey söylemez.**
 
-Bu kuram **usûl kuramıdır**, tefsir değildir. Sûre 103 ve 112 için yazılan kayıtlar usulün nasıl çalıştığını gösteren misaldir; tefsir hükmü taşımaz. Gerekçeler **"hikmet ihtimali"** olarak yazılır, murâd-ı ilâhî diye yazılmaz (CLAUDE.md F 3-I 318).
+## 1. Nesneler
 
-## 1. Kuramın nesneleri
+**Atom.** Metinden okunan en küçük kayıt: `(âyet, bölüm, sıra, ad, biçim, örtük)`. Atom bir şey iddia eder; üstüne bir şey eklemez.
 
-1. **Atom (L0).** Metinden okunan en küçük kayıt: (âyet, bölüm, sıra, ad, biçim, örtük). Atom bir şey **iddia eder**; üstüne bir şey eklemez.
-2. **Katman (L1…L4).** Atomların bir **kural** ile toplanmasıyla doğan üst kayıt. Her üst kayıt, kendisini doğuran çocukların listesini ve kuralın adını **iz** olarak taşır.
-3. **Katlama.** `Katla(kural, kalan, çocuklar, şahit)`: kural adı, kuralın atladığı kalan, çocuklar ve gerekirse şahit.
-4. **Açma.** `ac(t)`: bir terimi yapraklarına kadar geri açar.
-5. **Kayıpsızlık.** `ac(katla(x)) = x`; yani açılan, katlananın tam kendisidir. `kayipsizmi(t, kapsanan)` bunu denetler.
+**Katman.** Atomların bir kuralla toplanmasından doğan kayıttır. Birinci katman (L1) atomları, ikinci katman (L2) birinci katman kayıtlarını toplar; bu böyle L4'e kadar gider.
 
-**Dil.** Önermeler, `¬ ∧ ∨ ⇒ ⊐ ⋈ ⊢ ⤏ ≅ ↻` ve kip işaretleriyle yazılır; ayrıştırıcı öncelik tablosuyla çalışır ve `tam_parantez` ile her ifadeyi tam parantezli yazar; böylece iki işaret takımı hiçbir zaman karışmaz.
+**İz.** Her katman kaydı `(kural, kalan, çocuklar, şahit)` dörtlüsünü taşır: hangi kuralla toplandığı, kuralın dışarıda bıraktığı kalan, çocuk kayıtlar ve gerekiyorsa şahit.
 
-## 2. Taslakların kusurları ve tamiri
+**Açma.** Bir kaydı çocuklarına, çocukları kendi çocuklarına, atomlara varıncaya kadar açan işlemdir.
 
-| # | Taslakta | Kusur | Tamir |
-| :-: | :-- | :-- | :-- |
-| 1 | ⊕ ve ⊬ işaretleri | İki ayrı mana için kullanılmış | Her işaret tek manaya bağlandı; ayrıştırıcı iki manayı karıştırırsa reddeder |
-| 2 | Kural 1 (ortak çocuk toplama) | Dağılma gerekir | Yan şart: dağılma; toplu (kolektif) yüklemde karşı misal gösterildi |
-| 3 | Kural 2 (norm toplama) | İkili (şartlı) emirde geçersiz | Yan şart: yalnız tekli norm; ikili norm sıralamayla kurulur |
-| 4 | Kural 3 (olumsuzlama kapanışı) | Dışlanmış üçüncü ister | Heyting karşı modeli bulundu (zincir 3); şart yazıldı |
-| 5 | Kural 4 (genelleme) | İstikrâîdir (sayarak kurulur) | Şahit kümesi ve çürütücü (falsifier) birlikte tutulur; iddia katiyet derecesiyle yazılır |
-| 6 | Kural 5 (öncelik) | Bozulabilir (defeasible) anlam ister | Öncelik sırası bir yapı olarak ilân edildi |
-| 7 | Zaman ölçeği farkı | μ'ye bölünmeden yazılmış | Hilger türevi `Δf = (f(σ)−f)/μ` olarak düzeltildi |
-| 8 | Tropikal (max,+) | Aksiyom 3 ile çatışır | (max,min) sıralı zincir; sebep ve sayı Bölüm I'de |
-| 9 | ↻ etiketleri | Halka kutbuyla uyuşmuyor | Kutup, kenar işaretlerinin çarpımıdır (`dongu_kutbu`) |
-| 10 | Mubah | SDL'deki "P" (izin) ile aynı sayılmış | Mubah ayrı bir kiptir; izinden farklıdır |
-| 11 | Sekiz bağ başlığı | Yedi aslî ilişkiye iner | Bağlar yedi ilişkiye indirildi: ⇒ ⊐ ⋈ ⊢ ⤏ ≅ ↻ |
-| 12 | Şartlı emir | Chisholm paradoksuna açık | SDL'de tatmin edilemez, ikili norm sıralamasında tatmin edilir (sınama) |
+**Kayıpsızlık.** Açılan, toplananın tam kendisidir: `aç(katla(x)) = x`. Bu eşitlik her kayıtta, her katmanda sağlanır; sağlanmayan toplama usulden sayılmaz.
 
-## 3. Kurallar ve yan şartları
+## 2. Dil
 
-Altı katlama kuralı vardır. Her kuralın bir **yan şartı** ve bir **cebirsel dayanağı** vardır; yan şart tutmuyorsa kural uygulanmaz ve uygulanmadığı sayılır (sessiz ikame yoktur):
+Önermeler `¬ ∧ ∨ ⇒` ile; münâsebetler `⇒ ⊐ ⋈ ⊢ ⤏ ≅ ↻` ile; kipler vâcib, haram, mendûb, mekrûh, mubah ile yazılır. Münâsebetin yedi aslî cinsi şunlardır: gerektirme (⇒), kapsama (⊐), bitişme (⋈), delil gösterme (⊢), geçiş (⤏), denklik (≅), dönüş (↻). Sekiz başlıklı her bağ bu yedi cinse iner. Her işaret tek manaya bağlıdır; ifadeler öncelik tablosuyla ayrıştırılır ve tam parantezli yazılır.
 
-1. **Ortak toplama** — dağılma şartıyla.
-2. **Norm toplama** — tekli kip, KD (tutarlı emir) modelinde.
-3. **Olumsuzlama kapanışı** — Boole şartıyla; yoksa Heyting hükmü ile sınırlanır.
-4. **İstikrâî genelleme** — şahit kümesi + çürütücü; katiyet derecesi "zan" tavanında kalır.
-5. **Öncelik** — sıralı yapı; birbiriyle çelişen iki emirden öncelikli olan kalır.
-6. **Nitel türev** — {−,0,+,?} işaret cebiri; "?" yalnız sıfırla çarpılınca yutulur.
+## 3. Altı katlama kuralı
 
-## 4. İspatlanan ve sınanan teoremler (özet; satır satır `KURAM_ZIYADELERI.md`de)
+Her kuralın bir **şartı** vardır; şart kuralın tarifidir. Şart tutmayan yerde kural uygulanmaz ve uygulanmadığı sayılır.
 
-- **Kayıpsızlık:** her katlama açılınca aynı atomları verir; iz birbirini tutar.
-- **İşaret cebiri:** kapalı, değişmeli, birleşmeli; dağılma yalnız **alt-dağılmadır** (tam eşitlik bozulan üçlüler sayıldı).
-- **Standart dışı sayı (ε):** ℝ(ε) sıralı halkadır; ε, her 1/n'den küçüktür; ε≠0 iken standart kısım 0'dır; yani limit sonsuz küçüğü yutar, kuram yutmaz.
-- **Lineer cebir (GF(2)):** rank bazdan bağımsızdır; rank–sıfırlık teoremi 512 matrisin hepsinde doğrulandı.
-- **Tensör daraltma:** ∀∃ ile ∃∀ değişmez; ∃j∀i ⇒ ∀i∃j doğru, tersi yanlış.
-- **Tropikal ve sıralı cebir:** (max,min) altında sonuç yalnız sıraya bağlıdır; (max,+) altında etiketlemeye bağlıdır.
-- **Heyting kafesi:** Alexandrov yukarı-kümeleri Heyting cebridir; dışlanmış üçüncü ve çifte olumsuzlama kapanışı 3-zincirde çöker.
-- **Ultrametrik ağaç:** her üçgen ikizkenardır; ortak ata simetriktir.
-- **Dinamik:** Goodwin n=3 eşiği 8; Tarski sabit noktası; potansiyel oyunda en-iyi-cevap dizisi sonlanır.
-- **Zaman ölçeği:** temel teorem `∫Δf = f(b)−f(a)`.
-- **Üst kuram:** tutarlılık, mutasyon (yanlış iddia aynı denetimden reddedilerek döner), aksiyom bağımsızlığı, karar verilebilirlik, doğrusal zamanlı ayrıştırma.
+1. **Ortak toplama.** Aynı yüklemi taşıyan kayıtlar tek kayıtta toplanır. Şart: yüklem dağılır, yani her ferde ayrı ayrı isnat edilir.
+2. **Hüküm toplama.** Aynı kipte, aynı mevzudaki hükümler toplanır. Şart: hüküm tekli emirdir; şartlı emir ikili hüküm sıralamasıyla kurulur.
+3. **Olumsuzlama kapanışı.** Bir kaydın olumsuzunun olumsuzu kendisine döner. Şart: dışlanmış üçüncü geçerlidir; geçerli değilse hüküm Heyting seviyesinde kalır ve öyle işaretlenir.
+4. **Genelleme.** Şahit kümesinden kural çıkarılır. Şart: şahit kümesi ve çürütücü birlikte tutulur; kural katiyet olarak zanna kadar çıkar, kesine çıkmaz.
+5. **Öncelik.** İki hüküm çatışırsa öncelik sırası yüksek olan kalır, ötekisi kalan olarak izde durur.
+6. **Nitel türev.** Bir büyüklüğün ötekine tesiri `{−, 0, +, ?}` işaretleriyle yazılır; yalnız sıfırla çarpım belirsizliği yutar.
 
-## 5. Yanlışlanabilirlik (kuramın hangi sınamada çökeceği)
+## 4. Yardımcı yapılar
 
-- Bir katlamada `ac(katla(x)) ≠ x` çıkarsa kuram çöker.
-- Bir kuralın yan şartı tutmadığı hâlde kural uygulanıp sessizce geçilirse ölçü kırmızı yanar.
-- Sınama setinden bir kontrol kapatılırsa sayı 101'in altına düşer; bu sayı raporda her zaman görünür.
+**İşaret cebiri.** `{−,0,+,?}` üzerinde ⊕ ve ⊗ kapalı, değişmeli ve birleşmelidir; dağılma alt-dağılmadır.
 
-## 6. Sınırlar ve dürüst ayrım
+**Zaman ölçeği.** Ayrık ve sürekli zamanı tek hesapta toplar: `Δf(x) = (f(σ(x)) − f(x)) / μ(x)`; temel teorem `∫ₐᵇ Δf = f(b) − f(a)`.
 
-- Sınamalar **sonlu modeller** üzerindedir: bütün küçük modeller taranmıştır, ama bu sonsuz bir modelin doğruluğunu ispatlamaz; sonlu modelde bulunan **karşı örnek** ise kesin delildir.
-- Bazı kontroller **tanım gereğidir** (örneğin işaret cebirinin tablosu); bunlar kuramın ispatı değil, gerçeklemesidir. Gerçek içerik karşı modellerde ve ayırt eden mutasyon sınamalarındadır (Bölüm L).
-- Sûre 103 ve 112 kayıtları usul misalidir; tefsir hükmü yoktur.
-- Dış kaynaklara (Soulé, Kuipers, Tarski, Monderer–Shapley, Hilger) dayanılan yerler okunup doğrulanmıştır; Robinson, Heyting, Lewis, Chisholm, Hansson, Goodwin ve Bohner–Peterson atıfları **yoklanmadı**, hafızadandır ve öyle işaretlidir.
+**Sonsuz küçük.** ℝ(ε) sıralı halkadır; ε her `1/n`den küçüktür. Böylece sonsuz küçük tesir limitte yutulmaz, kayıtta durur.
 
-## 7. Yeniden üretmek
+**Sıralı cebir.** Yollar (max,min) altında kıyaslanır; sonuç yalnız sıraya bağlıdır, rakam gerekmez.
 
-```
-cd kuran_hikmetleri/munasebet_usulu/KURAM
-python3 kuram_sina.py        # SINAMA.json ve KURAM_ZIYADELERI.md'yi üretir
-```
+**Heyting kafesi.** Kabul kümeleri yukarı-kümelerdir; çıkarım `U ⇒ V`, `W ∩ U ⊆ V ⇔ W ⊆ (U ⇒ V)` ile tarif edilir.
+
+**Ultrametrik ağaç.** Âyet–kısım–sûre ağacında uzaklık ortak atanın derinliğinden okunur; her üçgen ikizkenardır.
+
+**Hiperkenar.** Çok öncüllü delil, öncüllerin hepsi birlikte bulununca sonuç veren tek kenardır.
+
+**GF(2) rank.** Bir yeni hüküm, mevcut hükümlerin XOR bileşimi ise rank artmaz; yani yeni bir şey söylememiştir. Rank artıyorsa yeni bilgi vardır.
+
+## 5. Uygulama sırası
+
+1. Metin atomlara ayrılır (sûre 103 ve 112 için `kuram_ornek.py`).
+2. Her bağ yedi münâsebet cinsinden birine yazılır ve katiyet derecesi "hikmet ihtimali" olarak işaretlenir.
+3. Altı kuraldan uygulanabilenler, şartları denetlenerek uygulanır; uygulanamayan kural ve sebebi izde durur.
+4. Her katmanda `aç(katla(x)) = x` denetlenir.
+5. Rank denetimiyle yeni hüküm ile tekrar hüküm ayrılır.
+6. Kayıt ağaçta ultrametrik uzaklıkla yerleşir.
+
+## 6. Tarif edilen usulün sınama muhasebesi
+
+Usulün her hükmü sonlu modelde koşturulur ve sayılır: **101 sınama, 101 geçti.** Satırların tamamı `KURAM_ZIYADELERI.md`de, ham sonuç `SINAMA.json`da durur; `python3 kuram_sina.py` ikisini yeniden üretir.
+
+## 7. Dosyalar
+
+`kuram.py` usulün kütüphanesi, `kuram_ornek.py` 103 ve 112. sûre kayıtları, `kuram_sina.py` sınama dizisi, `KAYNAK/` verilen taslaklar.
