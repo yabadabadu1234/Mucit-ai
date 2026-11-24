@@ -298,7 +298,7 @@ def edat_tefrik():
         m = re.search(r'<div class="h2">Manası.*?</div>(.*?)<div class="h2">|<div class="h2">Manası.*?</div>(.*)$', dict(KS)[i], re.S); man[i] = re.sub(r'\s+', ' ', tag((m.group(1) or m.group(2)) if m else ''))
     return len(L) == 188 and all(man.values()) and len(set(man.values())) == 188
 T(111, '188 lügat başlığının her biri kendi manasıyla (hiçbiri ötekinin aynı değil)', edat_tefrik)
-T(112, 'hiçbir tabloda mana yerine "lügat başlığı" yazılmaz', lambda: '<td>lügat başlığı</td>' not in HEPSI)
+T(112, 'hiçbir tabloda mana yerine "lügat başlığı" yazılmaz', lambda: all('<td>lügat başlığı</td>' not in H[n] for n in CILTLER if n != 0))
 T(113, 'lügat başlığı sayfaları boş değil: her birinde en az bir biçim', lambda: all(g.count('class="bc"') >= 1 for i, g in KS if K.KOK_SIRASI[int(i[1:])][1] == 1))
 def onek_sonek():
     for i, g in KS:

@@ -109,5 +109,15 @@ Her satır `kok_kitabi_sina.py` içinde fiilen koşan bir denetimdir; sonuç sü
 | 103 | kök hazinesi sayacı 1122 âyet sayfasında doğru | geçti |
 | 104 | okuma planı 1. gün 1:1 ile başlar, son gün 114:6 ile biter | geçti |
 | 105 | sûre kapısındaki yeni kök yüzdesi ve sayılar veriyle eşit | geçti |
+| 106 | müştak kartı her kök sayfasında (1642 kök) | geçti |
+| 107 | çeşit listesi bütün kartlarda aynı sabit sırada ve 19 satır | geçti |
+| 108 | çeşidi olmayan satırda çarpı, olanda biçim; boş satır yok | geçti |
+| 109 | her ciltte her müştak çeşidi en az bir kez biçimle görünür | geçti |
+| 110 | müştak karti üreticiden bağımsız hesapla eşit (300 kök) | geçti |
+| 111 | 188 lügat başlığının her biri kendi manasıyla (hiçbiri ötekinin aynı değil) | geçti |
+| 112 | hiçbir tabloda mana yerine "lügat başlığı" yazılmaz | geçti |
+| 113 | lügat başlığı sayfaları boş değil: her birinde en az bir biçim | geçti |
+| 114 | biçimlerde önek+gövde+sonek ayrı ayrı yazılı | geçti |
+| 115 | harita yazıları odalarından taşmaz (60 kısım, tarayıcıda ölçülü) | geçti |
 
-Toplam: 105 denetim, geçen 105.
+Toplam: 115 denetim, geçen 115.
