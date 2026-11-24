@@ -1,6 +1,6 @@
 # Kur'ân-ı Kerîm İçin Üstten Bakış Lisanı: Biçimsel Mantık, İleri Matematik ve Kayıpsız Denklem Usûlü
 
-Bu belge, Kur'ân-ı Kerîm'in metnini mevzu özetlerine indirmek yerine **kayıpsız, geri-açılabilir, tümevarımsal bir biçimsel mantık ve denklem sistemine** dönüştüren lisanın eksiksiz şartnamesidir. Lisan iki katmandan ve bir ifade kabiliyetleri cetvelinden kurulur: **Katman I (Mantık Çekirdeği)** önermesel, yüklem, deontik, modal ve zamansal mantıkla metni kayıpsız yazar; **Katman II (İleri Matematiksel Modelleme)** yalnızca Katman I'in ifade edemediği dinamik, boyut, eşik ve dönüşümler metinde mevcutsa çağrılır; **Bölüm 15'teki yüz ifade kabiliyeti** lisanın söyleyebildiklerini genişletir. Amaç, tek bir âyetin tek bir işlevsel unsurunu dahi dışarıda bırakmadan atomik denklemler kurmak ve bunları cebirsel/mantıksal faktörleme kurallarıyla üst denklemlere yükseltmektir; üstten bakan, istediği basamakta durur ve istediği âyete iner.
+Bu belge, Kur'ân-ı Kerîm'in metnini mevzu özetlerine indirmek yerine **kayıpsız, geri-açılabilir, tümevarımsal bir biçimsel mantık ve denklem sistemine** dönüştüren lisanın eksiksiz şartnamesidir. Lisan iki katmandan ve bir ifade kabiliyetleri cetvelinden kurulur: **Katman I (Mantık Çekirdeği)** önermesel, yüklem, deontik, modal ve zamansal mantıkla metni kayıpsız yazar; **Katman II (İleri Matematiksel Modelleme)** yalnızca Katman I'in ifade edemediği dinamik, boyut, eşik ve dönüşümler metinde mevcutsa çağrılır; **Bölüm 15'teki beş çekirdek kural ve yirmi beş işlem ziyadesi** lisana indirgeme ve çıkarım gücü kazandırır. Amaç, tek bir âyetin tek bir işlevsel unsurunu dahi dışarıda bırakmadan atomik denklemler kurmak ve bunları cebirsel/mantıksal faktörleme kurallarıyla üst denklemlere yükseltmektir; üstten bakan, istediği basamakta durur ve istediği âyete iner.
 
 ---
 
@@ -433,151 +433,79 @@ Katman II araçları, Bölüm 6.3'teki 5 katmanlı mimariye ($L_0 \to L_4$) şu 
 
 ---
 
-## 15. Yüz İfade Kabiliyeti
+## 15. İşlem ve İndirgeme Ziyadeleri
 
-Aşağıdaki kabiliyetler lisanın söyleyebildiği şeyleri genişletir. Hepsi **yapısal**dır: tikel bir âyete, kavrama veya vakaya bağlı değildir; her biri herhangi bir metin parçasında karşılaşılabilecek genel bir durumu söyler. Bir kabiliyet ancak metinde karşılığı varsa kullanılır; karşılığı olmayan yerde yazılmaz (Occam Testi).
+Bu bölümdeki her madde bir **kural, operatör veya karar adımıdır**; adlandırma yoktur. Bir madde ya iki denklemi bir denkleme indirger, ya bir çıkarım yolunu belirler, ya katlamanın doğruluğunu şarta bağlar. Yazım oku `⟼` tek yönlüdür; her yazım adımı iz taşır (15.2, madde 5).
 
-### 15.A Söyleyen ve Muhatap (1–10)
+### 15.1 Beş Çekirdek Kural
 
-| # | Kabiliyet | Şablon | İfade Ettiği |
+**Ç1. Nakil Kapsamı.** `Aktar[s](φ)`, `s` söyleyenin sözünü bir doğruluk katmanı içine alan **kapsam operatörüdür**.
+* Sızmama: `Aktar[s](φ) ⊬ φ` (kapsam içindeki önerme dışarıda hüküm olarak okunmaz).
+* Çıkarım: `Aktar[s](φ) ⊢ Söz_s(φ)`; `s` ilâhî söyleyen değilse ayrıca `B_s(φ)`.
+* Onay: `Aktar[s](φ) ∧ Takrîr(Allah, φ) ⟼ φ ⊳ onay` (söyleyenin sözü ilâhî takrîrle kapsamdan çıkar).
+* İç içelik: `Aktar[s₁](Aktar[s₂](φ))` derinliği 2'dir; doğruluk katmanı her kapsamda bir basamak iner ve hiçbir basamak onaysız dışarı çıkmaz.
+
+**Ç2. Ara Cümle Parantezi `⟦ψ⟧`.** `A ⟦ψ⟧ ⇒ B` ifadesi `(A ⇒ B) ∧ ψ` olarak yazılır; yazım şartı: `ψ` zincirin öncülleri arasına girmez.
+`Zincir(A ⟦ψ⟧ B) = Zincir(A B) ⊎ {ψ}`.
+Aç: `ψ` aynı konumuna geri konur.
+
+**Ç3. Halka ve Ayna Katlaması.** `⌘[A B B′ A′]`; `σ` bir eşleme olmak üzere `σ(A) = A′`, `σ(B) = B′` şartıyla:
+`A · B · B′ · A′ ⟼ Ayna(σ; Eksen(B, B′); A) ⊳ sıra`.
+Halka için: `A · … · A′ ⟼ Çerçeve(σ; İç)`. Aç: iz, dört parçayı ilk sırasıyla geri verir.
+
+**Ç4. Sebep–Şart–Mâni.**
+`H(φ) ⟺ Sbb ∧ Şrt ∧ ¬Mni` ve `O(φ | Sbb ∧ Şrt ∧ ¬Mni)`.
+Mâni varsa hüküm **doğmaz** (`Mni ⇒ ¬H`); ruhsatta hüküm doğar fakat ağırlığı kalkar (`⊘(φ | γ)`). Mâni ile ruhsat birbirine yazılmaz.
+
+**Ç5. Tahsîs ve Takyîd İndirgemesi.**
+* Âmm–Hâss: `P(K) ∧ ¬P(K′)` ve `K′ ⊂ K` ⟼ `P(K ∖ K′) ⊳ tahsîs`.
+* Mutlak–Mukayyed: `H(x) ∧ H(x | k)` ve sebep ile hüküm aynı ⟼ `H(x | k) ⊳ takyîd`. Sebep veya hüküm farklıysa indirgeme **yapılmaz**, iki denklem ayrı kalır.
+
+### 15.2 Yeniden Yazım Cebiri (1–8)
+
+| # | Ziyade | Şekil | Şart ve Etkisi |
 | :-- | :-- | :-- | :-- |
-| 1 | Söyleyen etiketi | `Söz[s](E)` | Cümleyi kimin söylediği: Allah, peygamber, melek, bir kişi veya topluluk |
-| 2 | Nakil katmanı | `Aktar[s₁→s₂](E)` | Söyleyenin başkasının sözünü aktarması |
-| 3 | İç içe nakil derinliği | `Aktar^n(E)` | Nakil içinde nakil; kaç basamak içeride konuşulduğu |
-| 4 | Muhatap tayini | `Muh(E) = M` | Sözün kime yöneldiği; `M` bir tiptir |
-| 5 | Muhatap kapsamı kayması | `Muh(E₁) ⊂ Muh(E₂)` | Hitabın dar muhatabdan geniş muhataba (veya tersine) kayması |
-| 6 | Hitap cinsi | `Hitap[doğrudan/genel/gıyâbî]` | Karşıya, herkese veya bir yokluğa konuşulduğu |
-| 7 | İltifat sebebi | `Hitap(k₁ ⇢ k₂) ∵ C` | Hitap kaymasının hangi sebeple yapıldığı |
-| 8 | Belirsiz söyleyen | `Söz[?](E)` | Söyleyenin metinde açık olmadığı hâl; çıkarım `⟨…⟩` ile ayrı yazılır |
-| 9 | Dinleyen şahit | `Şahit(E) = d` | Hitap edilmeyen ama sözü duyan ikinci taraf |
-| 10 | Dönüşlü söz | `Söz[s→s](E)` | Söyleyenin kendine yönelttiği söz (tefekkür, nefs muhasebesi) |
+| 1 | Yazım kuralı biçimi | `L ⟼[ad; şart] R ⊳ iz` | Her indirgeme bu biçimdedir; şartsız ve izsiz yazım yoktur |
+| 2 | Sonlanma ölçüsü | `μ(E) = (atom sayısı, derinlik)` sözlük sırasıyla | Her yazım `μ`yi azaltır veya aynı bırakıp izi uzatır; sonsuz yazım yok |
+| 3 | Birleşme testi | `E ⟼ E₁`, `E ⟼ E₂` ⇒ `E₁ ⟼* F`, `E₂ ⟼* F` | Kritik çiftler taranır; birleşmeyen kural çifti reddedilir |
+| 4 | Normal biçim | `NB(E)` | `F(φ) ⟼ O(¬φ)`; `P(φ) ⟼ ¬O(¬φ)`; olumsuzlama içeri; ∧ ve ∨ sıralı; niceleyici başa |
+| 5 | İz monoidi | `iz(E ⟼ E′) = r·iz(E)` | İz, kural adlarının kelimesidir; kelime tersinir olmak zorundadır |
+| 6 | Ters yazım | `R ⟻[ad] L` | Aç işlemi; kural, iz ile enjektif olmalıdır, aksi hâlde yazım yasaktır |
+| 7 | Bağlama bağlı yazım | `L ⟼_θ R` | Yazım yalnız `θ ∈ Θ(kural)` içinde yürür; dışında kural uygulanmaz |
+| 8 | Yazım bileşkesi | `(⟼₁ ; ⟼₂)` | İki adım tek adım sayılır; iz iki izin bitişiğidir; bileşke de tersinirdir |
 
-### 15.B Nazm ve Metin Yapısı (11–22)
+### 15.3 Zâhirî Çelişki Çözümleme Protokolü (9–15)
 
-| # | Kabiliyet | Şablon | İfade Ettiği |
+İki denklem ilk bakışta çatışırsa (`O(φ) ∧ F(φ)` veya `H₁ ∧ H₂ ⊢ ⊥`) çözüm **şu sırayla** yürür; her adım ya çatışmayı kaldırır ya sonrakine geçer:
+
+| # | Adım | Test | Sonuç |
 | :-- | :-- | :-- | :-- |
-| 11 | Fâsıla sınıfı | `Fasıla(Eᵢ) = f` | Âyet sonunun ses/vezin sınıfı |
-| 12 | Fâsıla kayması | `Fasıla(Eᵢ) ⇥ Fasıla(Eᵢ₊₁)` | Sonun sınıf değiştirmesi |
-| 13 | Çerçeve (halka) yapısı | `Çerçeve(E_a … E_b)` | Baş ile sonun karşılıklı kapanması |
-| 14 | Ayna (kiazm) yapısı | `⌘[A B B′ A′]` | Ögelerin ortaya göre ters simetrik dizilmesi |
-| 15 | Nakarat | `Nakarat(E) × n` | Aynı ifadenin bölümler boyunca dönmesi ve sayısı |
-| 16 | Tekrarda fark | `Tekrar(E₁, E₂; Δ)` | Aynı ifadenin iki yerinde bağlam ve eklerin farkı |
-| 17 | Bölüm evresi | `Bölüm[açılış/gelişme/kapanış]` | Bir bölümün yapısal rolü |
-| 18 | Açılış harfleri | `Açılış[h₁ … hₖ]` | Sûre başındaki, lafzı okunan harf dizisi ve sayısı |
-| 19 | Ara cümle | `⟦E⟧` | Akışı kesen itirâz cümlesi; ana akış `⟦ ⟧`ın dışından okunur |
-| 20 | Konu geçişi | `Geçiş(Bᵢ ⇒ Bᵢ₊₁; sinyal)` | Konu değişirken kullanılan işaret |
-| 21 | Hacim | `Hacim(B) = (âyet, kelime)` | Bölümün yapısal ölçüsü; ağırlık değil sayımdır |
-| 22 | Süreklilik | `Süreklilik(Eᵢ, Eᵢ₊₁) ∈ {devam, kesinti, dönüş}` | Konunun sürmesi, kesilmesi veya geri dönmesi |
+| 9 | Çatışma tanımı | `Çat(E₁, E₂)` := aynı mevzuda ve aynı bağlamda `H₁ ∧ H₂ ⊢ ⊥` | Mevzuları veya bağlamları ayrıysa çatışma zâhirîdir, gerçek değildir |
+| 10 | Tahsîs | Ç5 Âmm–Hâss indirgemesi uygulanabilir mi? | Evetse tek denkleme iner |
+| 11 | Takyîd | Ç5 Mutlak–Mukayyed indirgemesi uygulanabilir mi? | Evetse tek denkleme iner |
+| 12 | Bağlam | `θ₁ ≠ θ₂` ve `Θ₁ ∩ Θ₂ = ∅` mi? | Evetse iki denklem ayrı bağlamda geçerli, çatışma kalkar |
+| 13 | Zaman | `τ₁ ≠ τ₂` mi? | Evetse iki denklem ardışıktır, çatışma kalkar |
+| 14 | Nesh | `H₂ ▷ H₁` ve H₂ H₁'i kaldırdığını söylüyor mu? | Evetse `H₂ ⤏[nesh] H₁` |
+| 15 | Tevakkuf | Hiçbir adım çözmedi | `Çat*(E₁, E₂)` işaretlenir, iki denklem de **silinmeden** durur |
 
-### 15.C Anlam ve Delâlet (23–34)
+`Çöz(E₁, E₂) ∈ {tahsîs, takyîd, bağlam, zaman, nesh, tevakkuf}` toplam ve belirlidir; adım sırası değişmez.
 
-| # | Kabiliyet | Şablon | İfade Ettiği |
+### 15.4 Kesin Katlama Grameri (16–21)
+
+| # | Ziyade | Biçim |
+| :-- | :-- | :-- |
+| 16 | Düğüm grameri | `Düğüm ::= Atom ∣ (kural, çocuklar, kalan, iz)` ve `çocuklar ::= Düğüm⁺` |
+| 17 | Tek kural şartı | Bir düğümde bir kural; iki kuralın kaynaşması yasaktır |
+| 18 | Kalan cebiri | `x = üst ⊎ kalan`; kuralın bırakıkları **yazılır**, `Aç(Katla(x)) = x` kalan dahil sağlanır |
+| 19 | Katman sınırı | `L_k` düğümünün çocukları yalnız `L_{k−1}`dendir; atlama atlama kaydıyla yazılır |
+| 20 | Yorum yasağı | `Atom(üst) ⊆ ⋃ Atom(çocuk)`; yeni sembol yalnız `:=` tanım katlamasıyla girer |
+| 21 | Katlama tekliği | Aynı atom kümesinin iki katlama ağacı aynı normal biçime inmelidir; inmiyorsa fark yazılır |
+
+### 15.5 Çapraz Âyet ve Hiperkenar İndirgemesi (22–25)
+
+| # | Ziyade | Şekil | Etkisi |
 | :-- | :-- | :-- | :-- |
-| 23 | Delâlet yolu | `Del(E) ∈ {ibâre, işâret, delâlet, iktizâ}` | Hükmün metinden hangi yolla alındığı |
-| 24 | Açıklık derecesi | `Açıklık(E): zâhir ≺ nass ≺ müfesser ≺ muhkem` | Metnin tek manaya yakınlığı |
-| 25 | Kapalılık derecesi | `Kapalılık(E): hafî ≺ müşkil ≺ mücmel ≺ müteşâbih` | Manayı kapatan sebebin derecesi |
-| 26 | Hakîkat–mecâz | `Mana[hakîkî/mecâzî](e)` | Kelimenin asıl mı aktarılmış manada mı olduğu |
-| 27 | Mecâz alâkası | `Mecâz(e; alâka)` | Aktarmayı sağlayan bağ: cüz-küll, sebep-müsebbep, mekân-hâl, benzerlik |
-| 28 | Kinâye | `Kin(E) ⇒ Asıl` | Lâzımın söylenip melzûmun kastedilmesi |
-| 29 | İstiâre | `İst(Müşebbeh → Müşebbehün-bih; vecih)` | Benzetilenin benzetene devredilmesi |
-| 30 | Teşbih | `Teş(X ~ Y; vecih; edat)` | Benzetme ve benzetme yönü |
-| 31 | Müşterek kelime | `Müşterek(e) = {m₁ … mₖ}`, `Seç(e) = mᵢ ∵ C` | Çok manalı kelimede seçilen mana ve gerekçesi |
-| 32 | Âmm–hâss | `Âmm(E) ⊃ Hâss(E′)` | Genel lafız ve onun sınırlı dilimi |
-| 33 | Mutlak–mukayyed | `Mutlak(E)`, `Mukayyed(E; kayıt)` | Kayıtsız hüküm ve kayıtla daralmış hâli |
-| 34 | Mefhûm | `Mef[muvâfık/muhâlif](E) = E′` | Söylenmeyip metnin delâlet ettiği hüküm |
-
-### 15.D Kip, Haber ve İnşâ (35–44)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 35 | Haber–inşâ | `Cümle[haber/inşâ]` | Doğru–yanlışla ölçülen cümle ile talep cümlesi ayrımı |
-| 36 | Haber derecesi | `Haber[ibtidâî/talebî/inkârî]` | Muhatabın tereddüdüne göre pekiştirme derecesi |
-| 37 | İnşâ türü | `İnşâ[emir/nehiy/istifham/temennî/nidâ]` | Talep cümlesinin cinsi |
-| 38 | Emir sigasının manası | `Siga(E) ⇒ {vücûb, nedb, ibâha, tehdit, ta'cîz}` | Emir kalıbının hangi hükmü taşıdığı |
-| 39 | İstifhamın manası | `İstif(E) ⇒ {inkâr, takrîr, tevbîh, taaccüb, tehdit}` | Soru kalıbının asıl maksadı |
-| 40 | Nidânın maksadı | `Nidâ(k; maksat)` | Seslenmenin tenbih, tazim, şefkat veya azar oluşu |
-| 41 | Temennî ve terecci | `Temennî(φ)`, `Terecci(φ)` | Olması istenen ihtimalsiz şey ile umulan ihtimalli şey |
-| 42 | Tehdit | `Tehdit(x ⇒ Akıbet)` | Kötü akıbetin ihtarı |
-| 43 | Kasr çeşidi | `Kasr[sıfat/mevsûf; hakîkî/izâfî]` | Hasrın nesneye mi sıfata mı, mutlak mı göreli mi olduğu |
-| 44 | Fasıl–vasl | `Vasl(Eᵢ, Eᵢ₊₁)` / `Fasıl(Eᵢ, Eᵢ₊₁)` | İki cümle arasında bağlaç olması ve olmaması |
-
-### 15.E Zaman, Mekân ve Sayı (45–54)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 45 | Kip–zaman kayması | `τ(E) ⇢ τ′` | Fiil kalıbının zamanının bağlamdan farklı okunması |
-| 46 | Anlık hâl | `Anlık(E)` | Zamanı genişlemeyen, o anda biten olay |
-| 47 | Mekân etiketi | `Mek(E) = m` | Olayın veya hükmün yeri |
-| 48 | Zaman–mekân koordinatı | `Yer(E) = (τ, m)` | Olayın tam konumu |
-| 49 | Metindeki sayı | `#(x) = n` | Metnin açıkça verdiği sabit sayı |
-| 50 | Sayı kullanımı | `#[hakîkî/çokluk](x)` | Sayının kesin mi, çokluk işareti mi olduğu |
-| 51 | Süre | `Süre(e) = d` | Metnin söylediği süre |
-| 52 | Eşzamanlılık | `e₁ ∥ e₂` | İki olayın aynı anda geçmesi (`▷`nın tamamlayıcısı) |
-| 53 | Fiil hâli | `Hâl[ânî/sürekli/tekrarlı](e)` | Olayın bir defa mı, sürerek mi, tekrarlanarak mı olduğu |
-| 54 | Zamandan bağımsızlık | `τ_Ø(E)` | Hükmün hiçbir zaman dilimine bağlı olmaması |
-
-### 15.F İlişki ve Bağ Ağı (55–66)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 55 | Bağ yönü | `Eᵢ →[B] Eⱼ` | Bağın hangi âyetten hangisine aktığı |
-| 56 | Bağ uzaklığı | `d(Eᵢ, Eⱼ)` | İki âyetin ağaçtaki ultrametrik uzaklığı |
-| 57 | Çoklu bağ | `Eᵢ ⇉ {Eⱼ, Eₖ}` | Bir âyetin birden çok âyetle kurduğu tek hiperkenar |
-| 58 | Çapraz sûre bağı | `S₁:a ∼ S₂:b` | İki sûre arasındaki âyet bağı |
-| 59 | Karşılıklı atıf | `Eᵢ ⇄ Eⱼ` | İki âyetin birbirine atıf yapması |
-| 60 | Bağ derecesi | `Bağ[zayıf ≺ orta ≺ güçlü]` | Bağın nitel gücü; sayıya çevrilmez |
-| 61 | Bağ yokluğu | `Bağ[∅](Eᵢ, Eᵢ₊₁)` | Bağın bulunmadığının açıkça yazılması |
-| 62 | Bağ gerekçesi | `Bağ ∵ C` | İki parçanın neden yan yana durduğu |
-| 63 | Kavram zinciri | `Zincir(k) = (Eᵢ, Eⱼ, …)` | Bir kavramın metinde geçtiği yerlerin zinciri |
-| 64 | Kavram sayımı | `İz(k) = n` | Kavramın metindeki geçiş sayısı |
-| 65 | Kavram yakınlığı | `Yakın(k₁, k₂)` | İki kavramın ortak bağlam ağı |
-| 66 | Zıt çifti | `Zıt(k₁, k₂)` | Metinde karşılıklı konan iki kavram |
-
-### 15.G Hüküm İncelikleri (67–78)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 67 | Hüküm kapsamı | `Kap(H) = (kim, ne zaman, nerede)` | Hükmün geçerli olduğu üç boyut |
-| 68 | Şart ve mâni | `Şart(H)`, `Mâni(H)` | Hükmün doğması için gereken ve engelleyen durum |
-| 69 | Sebep–şart–mâni | `(Sbb, Şrt, Mni)(H)` | Üçlü bir arada |
-| 70 | Hüküm illeti | `H ∵ İllet`, `İllet-Alan(H)` | Hükmün sebebi ve sebebin yayıldığı alan |
-| 71 | Tedrîc | `H₁ ▷ H₂ ▷ H₃` | Hükmün aşama aşama konması |
-| 72 | Nesih | `H₂ ⤏[nesh] H₁` | Sonraki hükmün öncekini kaldırması |
-| 73 | İkame | `H ⇝ İkame` | Yapılamayan hüküm yerine konan hüküm |
-| 74 | Hak ilişkisi | `Hak(x ↦ y)` | Bir tarafın ötekinde sahip olduğu hak |
-| 75 | Mükellef şartı | `Mük(x)` | Hükmün muhatabında aranan şartlar (akıl, bülûğ) |
-| 76 | Hüküm genişliği | `Dar ≺ Geniş` | Hükmün kapsayıcılık derecesi |
-| 77 | Hafifletme | `Hafif(H; sebep)` | Ağırlığın indirilmesi |
-| 78 | Yaptırım türü | `Yaptırım[dünyevî/uhrevî](H)` | Hükmün karşılığının dünyada veya âhirette olması |
-
-### 15.H Kıssa, Mesel ve İlke (79–86)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 79 | Kıssa rolü | `Rol(x) ∈ {resûl, hasım, tâbi, şahit}` | Kıssadaki kişinin yeri |
-| 80 | Kıssa evresi | `Evre[davet/inkâr/ihtâr/akıbet]` | Kıssanın hangi aşamada olduğu |
-| 81 | Kıssa tekrarı | `Kıssaₙ(x) ≠ Kıssaₘ(x)` | Aynı kıssanın iki yerde farklı kesiti |
-| 82 | Akıbet çifti | `Akıbet(G) ∈ {kurtuluş, helak}` | Topluluğun sonu |
-| 83 | Mesel yapısı | `Mesel(K → H; Eşleme)` | Kaynak ile hedefin eşleştirilmesi |
-| 84 | Eşleme tamlığı | `Eşleme[tam/kısmî]` | Benzetmenin hangi ölçüde taşındığı |
-| 85 | İlke şahitleri | `Şahit(İlke) = K` | İlkeyi doğrulayan kıssalar |
-| 86 | İlke alanı | `İlke ∈ Alan` | İlkenin itikat, ahlâk, hüküm veya tarih alanında olması |
-
-### 15.I Üst Bakış (87–100)
-
-| # | Kabiliyet | Şablon | İfade Ettiği |
-| :-- | :-- | :-- | :-- |
-| 87 | Sûre omurgası | `Omurga(S)` | Sûreyi taşıyan tek bağ hattı |
-| 88 | Sûre mihveri | `Mihver(S) = İlke` | Sûrenin etrafında döndüğü esas |
-| 89 | Sûre çerçevesi | `Çerçeve(S)` | Sûre başı ile sonunun karşılıklı kapanması |
-| 90 | Açılış–kapanış zıtlığı | `Açılış(S) ⋈ Kapanış(S)` | Başın ve sonun karşılıklı kutuplaşması |
-| 91 | Bölüm sırası | `Sıra(S) = (B₁ … Bₙ)` | Bölümlerin dizilişi |
-| 92 | Bölüm geçişi | `Geç(Bᵢ, Bᵢ₊₁)` | Bölümler arası geçişin türü |
-| 93 | Sûre ailesi | `Aile(S₁ … Sₖ) ⊢ Yapı` | Ortak yapıyı paylaşan sûreler |
-| 94 | Sûre çifti | `Eş(S₁, S₂)` | İki sûrenin benzer veya zıt yapıda olması |
-| 95 | Mushaf tertibi | `M(Sᵢ ▷ Sᵢ₊₁)` | Sûrelerin mushaftaki sırası |
-| 96 | Metin dışı bilgi | `⟨dış: …⟩` | İniş sırası gibi metnin kendisinden alınmayan bilgi |
-| 97 | Okuma yolu | `Yol(E_a → E_b)` | Üst bakıştan inişte izlenen basamak dizisi |
-| 98 | Yakınlaştırma düzeyi | `Yak(n)` | Okuyucunun bulunduğu basamak (0–4) |
-| 99 | Sûre hazfı | `Hazf(S; konu)` | Beklenen konunun sûrede bulunmaması |
-| 100 | Sûre kapanışı | `Tam(S)` | Her âyetin ağaca bağlı olduğunun işareti |
+| 22 | Terim birleştirme | `σ = mgu(t₁, t₂)` | İki âyetin ortak mevzulu terimleri en genel eşleyiciyle birleşir; bileşik denklem `σ`yla kurulur |
+| 23 | α-denklik | `E ≡_α E′` | Bağlı değişken adı değişse de denklem aynı sayılır; kanonik sözlükle yazılır |
+| 24 | Hiperkenar daraltma | `{E₁ … Eₙ} ⇉ F` | Tüm öncüller sağlanırsa tek düğüme iner; bir öncül eksikse daraltma yapılmaz |
+| 25 | Asgarî destek | `Destek(F) = min {S ⊆ Atom : S ⊢ F}` | Üst denklemin hangi en küçük atom kümesinden türediği izde yazılır |
