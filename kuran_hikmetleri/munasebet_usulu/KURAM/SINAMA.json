@@ -1,0 +1,814 @@
+{
+ "toplam": 101,
+ "gecen": 101,
+ "sonuclar": [
+  {
+   "no": 1,
+   "ad": "Dil bilgisi (EBNF karşılığı ayrıştırıcı) belgelerdeki 25 notasyon örneğini ayrıştırır",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "ayrıştırıcı koşturuldu",
+   "ok": true,
+   "detay": "25"
+  },
+  {
+   "no": 2,
+   "ad": "Bozuk ifadeler (10 örnek) reddedilir; ayırt eden ayrıştırıcı",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "SyntaxError beklendi",
+   "ok": true,
+   "detay": "10"
+  },
+  {
+   "no": 3,
+   "ad": "Yaz→ayrıştır gidiş dönüşü özdeş (25 örnek)",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "AST eşitliği",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 4,
+   "ad": "Öncelik tablosu tek ayrıştırma verir: ayrıştır(yaz(ağaç)) = ağaç, derinlik-2 bütün ağaçlar",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "bütün ağaçlar sayıldı",
+   "ok": true,
+   "detay": "2906"
+  },
+  {
+   "no": 5,
+   "ad": "Belgelerde ⊕ üç ayrı manada kullanılmış (dışlayıcı veya · açılım toplamı · tropikal max); onarılmış tabloda her sembolün tek manası var",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "kaynak metin okundu, onarım tablosu denetlendi",
+   "ok": true,
+   "detay": "çatışma kaynakta var: [True, True, True]"
+  },
+  {
+   "no": 6,
+   "ad": "⊬ işareti belgede karşı-olgusal şart (Lewis) için kullanılmış, matematikte \"türetilemez\" demektir; □→ ile değiştirildi ve ayrıştırıcıda ikilidir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "kaynak metin okundu, ayrıştırıcı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 7,
+   "ad": "Dualler: F(φ)=O(¬φ), P(φ)=¬O(¬φ) bütün seri çerçevelerde (3 dünya) ve bütün değerlemelerde",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "KD modelleri sayıldı",
+   "ok": true,
+   "detay": "8232"
+  },
+  {
+   "no": 8,
+   "ad": "D aksiyomu (O→P) seri çerçevede geçerli, seri olmayan çerçevede çürür",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "KD modelleri sayıldı",
+   "ok": true,
+   "detay": "1536"
+  },
+  {
+   "no": 9,
+   "ad": "Ahkâm-ı hamse (farz, mendup, mübah, mekruh, haram) mütebâyin ve hâsır: 5 hüküm, her geçerli üçlü tek hükme düşer",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "üçlüler sayıldı",
+   "ok": true,
+   "detay": "{'haram': 3, 'farz': 3, 'mendup': 1, 'mekruh': 1, 'mubah': 1}"
+  },
+  {
+   "no": 10,
+   "ad": "Mübah ile SDL'nin P'si ayrı kavramdır: farz olan eylem P(φ) olduğu hâlde mübah değildir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "bir model",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 11,
+   "ad": "Chisholm dörtlüsü SDL'de tatmin edilemez, ikili (tercihli) deontikte tatmin edilir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "sonlu modeller tarandı",
+   "ok": true,
+   "detay": "SDL tatmin=False, ikili=True"
+  },
+  {
+   "no": 12,
+   "ad": "Düz semantikte \"O(φ) ve ruhsat\" çelişir; öncelikli (özel kaide genele galip) semantikte tatmin edilir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "bağlamlar sayıldı",
+   "ok": true,
+   "detay": "([True, False], ['ruhsat', 'farz'])"
+  },
+  {
+   "no": 13,
+   "ad": "Şart–istisna kapalı formu (Kural 5) öncelikli semantikle eşit: O_tam(φ|¬γ ; φ'|γ) her bağlamda",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "bağlamlar sayıldı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 14,
+   "ad": "İç içe istisna (üç öncelik) kapalı formu: en özel hüküm kazanır, eşit öncelikte çelişki bildirilir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "bağlamlar sayıldı",
+   "ok": true,
+   "detay": "['farz', 'farz', 'ruhsat', 'farz_tekrar']"
+  },
+  {
+   "no": 15,
+   "ad": "Epistemik: K_x reflektif (T geçerli, bütün denklik çerçeveleri), B_x için T çürür (KD45 karşı modeli)",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "çerçeveler sayıldı",
+   "ok": true,
+   "detay": "B φ ∧ ¬φ modeli var"
+  },
+  {
+   "no": 16,
+   "ad": "Katman saflığı denetçisi: B_Hasım(φ) öncülünden φ sonucu reddedilir, K_Allah(φ)'den kabul edilir",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "denetçi iki yönde koşuldu",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 17,
+   "ad": "□ (sünnetullah): K ve T aksiyomları yansımalı çerçevelerde geçerli; ◇ = ¬□¬",
+   "bolum": "A. Dil ve Katman I",
+   "usul": "çerçeveler sayıldı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 18,
+   "ad": "Açılım∘Katlama = kimlik: altı kuralın hepsi, 1–5 çocuk, iç içe katlama dâhil",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bütün kural ve boylar sayıldı",
+   "ok": true,
+   "detay": "30"
+  },
+  {
+   "no": 19,
+   "ad": "Katlama birebirdir: 6 atomun bütün 63 boş olmayan alt kümesi 63 ayrı katlamaya gider ve geri açılır",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bütün alt kümeler",
+   "ok": true,
+   "detay": "63"
+  },
+  {
+   "no": 20,
+   "ad": "Kural 1 (ortak terim): dağıtıcı yüklemde katlama eşdeğerdir (16 yüklem × 15 alt küme); toplu yüklemde (Cemaat) eşdeğer DEĞİLDİR, bu yüzden yan şart gerekir",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bütün yüklemler",
+   "ok": true,
+   "detay": "toplu yüklem karşı misali var"
+  },
+  {
+   "no": 21,
+   "ad": "Kural 2 (iz koruyan zincir): A→[B]→C ≡ (A→B)∧(B→C); (A→C)'yi gerektirir; (A→C) ile eşdeğer değildir (iz kaybı)",
+   "bolum": "B. Katlama kuramı",
+   "usul": "8 değerleme",
+   "ok": true,
+   "detay": "zincir⊨A→C, eşdeğer değil"
+  },
+  {
+   "no": 22,
+   "ad": "Kural 2 ikili (şartlı) yükümlülükte GEÇERSİZDİR: O(B|A) ve O(C|B) varken O(C|A) çürüyebilir; kural yalnız ta'lîl şartlısına tahsis edilir",
+   "bolum": "B. Katlama kuramı",
+   "usul": "sıralamalar tarandı (3^8)",
+   "ok": true,
+   "detay": "karşı model bulundu"
+  },
+  {
+   "no": 23,
+   "ad": "Kural 3 (bölünme): klasik mantıkta R1∨R2'yi gerektirir; sezgisel (Heyting) mantıkta gerektirmez (iki noktalı Kripke karşı modeli): kural dışlanmış üçüncü şartına bağlanır",
+   "bolum": "B. Katlama kuramı",
+   "usul": "tam Heyting hesabı",
+   "ok": true,
+   "detay": "sezgiselde gerekmez"
+  },
+  {
+   "no": 24,
+   "ad": "Kural 4 (fonktörel yasa) tümdengelim DEĞİL istikrâîdir: sonlu şahitlerin hepsi doğruyken evrensel yasa yanlış olabilir; durum yalnız {boş, istikrâî, reddedilmiş}, \"burhan\" asla",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bütün alanlar",
+   "ok": true,
+   "detay": "{'reddedilmis', 'istikrai'}"
+  },
+  {
+   "no": 25,
+   "ad": "Kural 5 muhafazakârdır: ruhsat şartı dışında kapalı form ana hükme düşer (kapsam dışına tesir yok)",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bağlamlar",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 26,
+   "ad": "Kural 6 (tanım katlaması): X := v1∧v2∧v3 tanımıyla \"X→R\" ile \"v1∧v2∧v3→R\" (ayrıştırıcı ve ölçerle) eşdeğer; tanımsız serbest X ile eşdeğer değildir",
+   "bolum": "B. Katlama kuramı",
+   "usul": "32 değerleme, ayrıştırılmış ifadeler",
+   "ok": true,
+   "detay": "serbest X farkı var"
+  },
+  {
+   "no": 27,
+   "ad": "Birleşme (confluence): 6 atomun 203 bölüntüsünün hepsinde, katlama sırası ne olursa açılım aynı çoklu kümedir",
+   "bolum": "B. Katlama kuramı",
+   "usul": "Bell(6) bölüntü",
+   "ok": true,
+   "detay": "203"
+  },
+  {
+   "no": 28,
+   "ad": "Sonlanma: her katlama adımı üst düzey terim sayısını (n−1) azaltır; N atomdan en çok N−1 adım",
+   "bolum": "B. Katlama kuramı",
+   "usul": "bütün bölüntüler",
+   "ok": true,
+   "detay": "4"
+  },
+  {
+   "no": 29,
+   "ad": "L0→L4 yükseltmesi: beş kat iç içe katlamada her kat bir önceki katın çoklu kümesini aynen verir",
+   "bolum": "B. Katlama kuramı",
+   "usul": "beş kat",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 30,
+   "ad": "Kayıpsızlık denetçisi: bir atom düşürülen 8 katlama reddedilir, sağlam katlama kabul edilir (ayırt eden ölçü)",
+   "bolum": "B. Katlama kuramı",
+   "usul": "mutasyon",
+   "ok": true,
+   "detay": "8"
+  },
+  {
+   "no": 31,
+   "ad": "Temsil hesabı (gerçek derlem, 103. sûre): v1…v4 R6 ile katlanınca üst düzey terim 7→4, açılımdaki atom sayısı 7 kalır",
+   "bolum": "B. Katlama kuramı",
+   "usul": "derlem sayımı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 32,
+   "ad": "Zincir izi: A→[B1…Bk]→C açılınca k+1 gerektirme verir ve (A,[B…],C) tek türlü geri okunur (k=0…5)",
+   "bolum": "B. Katlama kuramı",
+   "usul": "k taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 33,
+   "ad": "Sekiz başlık yedi aslî ilişkiye iner: Ta’lîl, Tefrî‘in tersi; Tafsîl/İcmâl tek ilişkinin iki yönü; ad→(ilişki, yön) birebir",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "tablo denetlendi",
+   "ok": true,
+   "detay": "(9, 7)"
+  },
+  {
+   "no": 34,
+   "ad": "Bağ ilişkilerinin özellikleri tutar: Tefrî‘ geçişli ve yansımasız (kısmî sıra), Mukâbele simetrik ve geçişsiz, Temsîl denklik (yansımalı, simetrik, geçişli) — 5 elemanlı örnek modellerde",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "özellik taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 35,
+   "ad": "Kapsama ve süreklilik (örnek derlem, 103 ve 112): her ardışık âyet çiftine sekiz bağdan biri atanmış; bir bağ silinince denetçi yakalar",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "derlem + mutasyon",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 36,
+   "ad": "Hiperkenar ikili bağdan kuvvetlidir: üç kuyruklu hiperkenar d'ye ancak üçü de erişilmişse götürür; aynı kenarı üç ikili oka açmak a'dan tek başına d'ye götürür (yanlış)",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "erişim hesabı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 37,
+   "ad": "İkili bağ hiperkenarın özel hâlidir: zincir erişimi iki temsilde aynı (sonlu zincirler 1…6)",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "zincir taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 38,
+   "ad": "Bağ derecesi hep \"hikmet ihtimali\"dir; derlemde murâd-ı ilâhî iddiası içeren bağ yok (lint)",
+   "bolum": "C. Âyetten âyete bağlar",
+   "usul": "derlem lint",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 39,
+   "ad": "Delta türevi (f(σ)−f)/μ; belgedeki f(t_{k+1})−f(t_k) yalnız μ=1 hâlidir: f=t², μ=2 noktasında 2 yerine 4 verir",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "iki ölçek",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 40,
+   "ad": "İşaret değişmezliği: işaret(f^Δ) = işaret(ileri fark) bütün zaman ölçeklerinde (nitel iddialar ölçeğe bağlı değildir)",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "ölçek ve fonksiyon sayımı",
+   "ok": true,
+   "detay": "17199"
+  },
+  {
+   "no": 41,
+   "ad": "İkinci mertebe: eğim farkıyla tanımlanır; düzgün ölçekte ham ikinci farkla işareti eşit, düzgün olmayan ölçekte ayrışır (0,1,3: ham fark 0, gerçek ivme eksi)",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "sayım",
+   "ok": true,
+   "detay": "(Fraction(0, 1), Fraction(-1, 2))"
+  },
+  {
+   "no": 42,
+   "ad": "Çarpım kuralı (fg)^Δ = f^Δ g + f^σ g^Δ doğrulanır (6 ölçek × 3 polinom çifti, tam rasyonel)",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "özdeşlik taraması",
+   "ok": true,
+   "detay": "54"
+  },
+  {
+   "no": 43,
+   "ad": "Analizin temel teoremi ∫_a^b f^Δ Δt = f(b)−f(a) (Hilger toplamı) bütün a<b noktalarında",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "özdeşlik taraması",
+   "ok": true,
+   "detay": "15"
+  },
+  {
+   "no": 44,
+   "ad": "Sürekli sınır: çok ince düzgün ölçekte f=t² için f^Δ(t)−2t tam olarak h (adım) kadardır, yani sürekli türeve yaklaşır",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "tam rasyonel",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 45,
+   "ad": "Geçerlilik ağırlığı W∈{0,1}: W=0 olan aralıkta φ≠0 olsa da birikim sıfırdır; W≡0 ise toplam sıfırdır",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "toplam denetimi",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 46,
+   "ad": "Nitel integral (işaret toplamı): hep artı → artı; artı+eksi → \"?\"; sıfırlayıcı ağırlıkla çarpılmış terimler hesaba girmez",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "durum taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 47,
+   "ad": "Geçmiş dönüştürme operatörleri: T_sil idempotent (T∘T=T), T_çevir involüsyon (T∘T=kimlik), ikisi birbirine eşit değil",
+   "bolum": "D. Zaman ölçekleri",
+   "usul": "bütün dizilerde",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 48,
+   "ad": "İşaret cebiri kapalı ve değişmeli: ⊕ ve ⊗, {−,0,+,?} üzerinde 16 çiftin hepsinde",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "tam tablo",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 49,
+   "ad": "İşaret cebiri birleşmelidir: ⊕ ve ⊗ için 64 üçlünün hepsinde",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "tam tablo",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 50,
+   "ad": "Dağılma yalnız alt-dağılmadır: a⊗(b⊕c) ⊑ (a⊗b)⊕(a⊗c) 64 üçlüde; tam eşitlik bozulduğu üçlü sayısı yazılır",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "tam tablo",
+   "ok": true,
+   "detay": "tam eşitliğin bozulduğu üçlü: 0 / 64"
+  },
+  {
+   "no": 51,
+   "ad": "Soyutlama sağlamdır: gerçek sayılar için işaret(x+y), işaret(x)⊕işaret(y)'nin kapsadığı kümededir; işaret(xy) = işaret(x)⊗işaret(y)",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "gerçek sayı örnekleri",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 52,
+   "ad": "Belirsizlik yayılır: \"?\" ile sıfırdan farklı bir işaretin toplamı daima \"?\"; \"?\"⊗0 = 0 (yalnız sıfır belirsizliği yutar)",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "tam tablo",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 53,
+   "ad": "Bileşik monoton fonksiyonun işareti çarpımdır: afin eğimler a,b ∈ {−2…2} için işaret(g∘f) = işaret(a)⊗işaret(b)",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "eğim taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 54,
+   "ad": "Kısmî türev işareti: x+0·z için ∂/∂z = 0 (etkisizlik yakalanır), ∂/∂x = +; x·z için z∈{−1,0,1}'de ∂/∂x = \"?\" (bağlama göre işaret değişir)",
+   "bolum": "E. İşaret cebiri ve kısmî türev",
+   "usul": "sonlu alan taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 55,
+   "ad": "ε>0 ve her n için ε<1/n (n=1…20000, tam rasyonel); ε²<ε: Arşimet özelliği çiğnenir",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "sıralı halka ℝ(ε)",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 56,
+   "ad": "Sıra toplamdır (üçleme): 15 elemanlı kümede her çift için tam biri <, =, >",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "çift taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 57,
+   "ad": "Φ(dα)≠0: Φ(x)=x³ için Φ(ε)≠0, oysa klasik limit standart kısımda 0 verir; yani sonsuz küçük kayıpsız tutulur, limit onu yutardı",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "hesap",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 58,
+   "ad": "Aktarım örneği: ∀x>0 ∃y (0<y<x) hiperreellerde de geçerli (y=x/2; x=ε için ε/2)",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "örnekler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 59,
+   "ad": "Arşimet'ten ayrılış: 100000·ε < 1 hâlâ doğru; klasik ℝ'de ise 1/ε'ye karşılık gelen bir n bulunurdu",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "hesap",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 60,
+   "ad": "Standart kısım st: sonlu hiperreellerde toplama ve çarpmaya uyar, st(3+2ε)=3, sonsuz büyükte tanımsız (reddeder)",
+   "bolum": "F. Hiperreel sonsuz küçük",
+   "usul": "örnek taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 61,
+   "ad": "Rank testi (GF(2)): yeni denklem mevcut bazların XOR bileşimiyse rank artmaz; bağımsız yeni eksense 1 artar",
+   "bolum": "G. Lineer cebir",
+   "usul": "rank hesabı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 62,
+   "ad": "Rank bazdan bağımsızdır: 5 satırın bütün 120 permütasyonunda ve satır toplamı eklemelerinde aynı",
+   "bolum": "G. Lineer cebir",
+   "usul": "permütasyon taraması",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 63,
+   "ad": "Dikgenlik = ayrık dayanak: dayanakları ayrık sıfırdan farklı iki vektörde rank toplanır; ortak dayanakta toplanmayabilir (ikame edilemezlik ölçüsü)",
+   "bolum": "G. Lineer cebir",
+   "usul": "bütün çiftler (6 bit)",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 64,
+   "ad": "Özdeğer işareti: aynı operatör T farklı öznelerde +1 ve −1 verir; numpy özdeğerleri (+1,−1) ve özvektörler tutar",
+   "bolum": "G. Lineer cebir",
+   "usul": "sayısal",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 65,
+   "ad": "Rank–sıfırlık teoremi GF(2) üzerinde: 3×3'lük 512 matrisin hepsinde rank + boyut(çekirdek) = 3 (çekirdek brute-force sayıldı)",
+   "bolum": "G. Lineer cebir",
+   "usul": "bütün matrisler",
+   "ok": true,
+   "detay": "512"
+  },
+  {
+   "no": 66,
+   "ad": "Dik izdüşüm: P=U(UᵀU)⁻¹Uᵀ idempotent ve simetrik (4 altuzay), asıl vektör bozulmaz: v = Pv + (I−P)v dik toplamı",
+   "bolum": "G. Lineer cebir",
+   "usul": "sayısal",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 67,
+   "ad": "Çekirdek–görüntü bölüşümü: kabul operatörü T (GF(2) üzerinde 3×3, 512 tane) için |ker|·|Im| = 8; geçersizleşenler ve geçerli sonuç üretenler vektör uzayını tam böler",
+   "bolum": "G. Lineer cebir",
+   "usul": "bütün matrisler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 68,
+   "ad": "Daraltma derecesi bir azaltır: ∀-daraltma (p,q)-tensörün boyutunu 3'ten 2'ye indirir, her eksen için",
+   "bolum": "H. Tensör",
+   "usul": "şekil denetimi",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 69,
+   "ad": "∀∀ ve ∃∃ daraltmaları farklı eksenlerde değişmelidir: 256 tensörün hepsi, iki sırayla",
+   "bolum": "H. Tensör",
+   "usul": "bütün tensörler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 70,
+   "ad": "∀∃ ile ∃∀ değişmez: 2×2 tensörlerde (∃j ∀i) ⇒ (∀i ∃j) hep doğru, tersi yanlış (karşı örnek: [[1,0],[0,1]])",
+   "bolum": "H. Tensör",
+   "usul": "bütün 16 tensör",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 71,
+   "ad": "Kesit ve daralma farklı eksenlerde değişir: önce 0. eksende 0'ı seç sonra 2. ekseni ∀-daralt = önce daralt sonra seç (256 tensör)",
+   "bolum": "H. Tensör",
+   "usul": "bütün tensörler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 72,
+   "ad": "Evrensel değişmez her kesite iner (sağlamlık): ∀-daraltılmış eksen sabitlenince hüküm her kesitte doğru (256 tensör)",
+   "bolum": "H. Tensör",
+   "usul": "bütün tensörler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 73,
+   "ad": "Daraltma birebir değildir (256 tensör → en çok 16 görüntü), bu yüzden kayıpsız daraltma kesitleri saklar: kesitlerden asıl tensör yeniden kurulur (256/256)",
+   "bolum": "H. Tensör",
+   "usul": "bütün tensörler",
+   "ok": true,
+   "detay": "16"
+  },
+  {
+   "no": 74,
+   "ad": "(max,+) yarı halka aksiyomları {−∞,0,1,2,3,4} üzerinde (birleşme, değişme, birim, dağılma, ⊕ idempotent)",
+   "bolum": "I. Tropikal ve sıralı cebir",
+   "usul": "bütün üçlüler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 75,
+   "ad": "(max,min) sıralı yarı halka (zincir 0…4) aksiyomları ve çift dağılma; bu cebirde rakam gerekmez, yalnız sıra",
+   "bolum": "I. Tropikal ve sıralı cebir",
+   "usul": "bütün üçlüler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 76,
+   "ad": "Aksiyom 3 ile çatışma: iki yolun puanı sıra-izomorfik yeniden etiketlemede (max,+) ile DEĞİŞİR, (max,min) ile DEĞİŞMEZ",
+   "bolum": "I. Tropikal ve sıralı cebir",
+   "usul": "bütün artan etiketlemeler",
+   "ok": true,
+   "detay": "(max,+) kararları [False, True]; (max,min) kararları [False]"
+  },
+  {
+   "no": 77,
+   "ad": "Alexandrov yukarı-kümeleri Heyting cebridir: W∩U ⊆ V ⇔ W ⊆ (U⇒V), bütün üçlülerde",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün üçlüler (zincir 3)",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 78,
+   "ad": "Dışlanmış üçüncü Heyting'te çöker: zincir 3'te U ∪ ¬U ≠ tüm uzay olan açık küme vardır (karşı model)",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "karşı model",
+   "ok": true,
+   "detay": "ihlâl eden açık küme sayısı: 2"
+  },
+  {
+   "no": 79,
+   "ad": "Çifte olumsuzlama: U ⊆ ¬¬U hep, ¬¬U = U her U için değil (Heyting'e özgü)",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "karşı model",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 80,
+   "ad": "∅ ⇒ V = tüm uzay (boş öncül her şeyi gerektirir) ve U ⇒ U = tüm uzay",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün açıklar",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 81,
+   "ad": "Ağaç ultrametriktir: d(x,z) ≤ max(d(x,y),d(y,z)), 15 düğümde 3375 üçlü",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün üçlüler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 82,
+   "ad": "Ultrametrikte her üçgen ikizkenardır (en büyük iki kenar eşit)",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün üçlüler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 83,
+   "ad": "Ortak ata simetriktir ve ortak_ata(x,x)=x: 225 çift",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün çiftler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 84,
+   "ad": "Basit döngüler: üç düğümlü halka tek döngü verir; ters kenar eklemek döngü sayısını artırır; DAG'ta sıfırdır",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "sayım",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 85,
+   "ad": "Erişilebilirlik geçişlidir: 6 düğümlü yönlü çizgede R(x,y) ∧ R(y,z) ⇒ R(x,z) bütün üçlülerde",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "bütün üçlüler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 86,
+   "ad": "Hiperkenar VE anlamındadır: (üç öncül → sonuç) kenarda tek öncül eksilince sonuç erişilmez; ikili kenar bunu söyleyemez",
+   "bolum": "J. Heyting kafesi, ağaç ve çizge",
+   "usul": "örnek",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 87,
+   "ad": "Goodwin eşiği (n=3 negatif halka): (s+1)³+g=0 köklerinde g=7,9 kararlı, g=8,1 kararsız (eşik 8)",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "sayısal kökler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 88,
+   "ad": "Pozitif halka: (s+1)³−g kökleri; g>1 reel pozitif kök (çoklu denge), g<1 hepsi kararlı",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "sayısal kökler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 89,
+   "ad": "Tarski: sonlu kafeste monoton fonksiyonların sabit noktası vardır (100 sabit tohumlu monoton fonksiyon, 3 elemanlı alt küme kafesi)",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "örnekler",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 90,
+   "ad": "Potansiyel oyun özdeşliği (Monderer–Shapley): bütün tek-taraflı sapmalarda Δu_i = ΔΦ, 24 sapma",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "tam tarama",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 91,
+   "ad": "Potansiyel oyunda en iyi-cevap dinamiği 8 başlangıçtan da Nash'e erer (20 adımda durur)",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "tam tarama",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 92,
+   "ad": "Zaman ölçeğinde Δ(x²) = σ(x)+x = 2x+1 (tamsayı ölçek) ve düzensiz ölçekte formül μ ile ayarlanır",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "tam tarama",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 93,
+   "ad": "Temel teorem: ∫ₐᵇ Δf = f(b) − f(a), düzensiz ölçekte 5 işlev",
+   "bolum": "K. Dinamik ve oyun",
+   "usul": "tam tarama",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 94,
+   "ad": "Tutarlılık: bütün yan şartların aynı anda sağlandığı modeller var — KD modelleri, 3-zincir Heyting, işaret cebiri, ZamanOlcegi",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "model varlığı",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 95,
+   "ad": "Mutasyon: Kural 3'ten \"dışlanmış üçüncü\" şartını silince Heyting karşı modeli ihlâli yakalar (ölçü ayırt eder)",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "mutasyon",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 96,
+   "ad": "Mutasyon: sahte ⊕ (a?b:a) yazılırsa değişme ölçüsü kırmızı yanar; gerçek ⊕ geçer",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "yanlış iddia reddi",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 97,
+   "ad": "Bağımsızlık: işaret cebirinde \"?\" aksiyomu gerekir; {+,−,0} üzerinde + ⊕ − kapalı değil",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "karşı model",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 98,
+   "ad": "Bağımsızlık: Boole şartı (¬¬U=U) 2 elemanlı ayrık (antichain) modelde geçerli, 3-zincirde geçersiz — ayrı aksiyomdur",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "iki model",
+   "ok": true,
+   "detay": ""
+  },
+  {
+   "no": 99,
+   "ad": "Karar verilebilirlik: işaret ifadeleri 4 işaretli 5 değişkende 1024 atamanın hepsinde sonlu sürede kapanır",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "tam tarama",
+   "ok": true,
+   "detay": "1024"
+  },
+  {
+   "no": 100,
+   "ad": "Doğrusal zaman: ayrıştırma süresi terim sayısıyla en çok doğrusal-artı-sabit büyür (200→1600 terim, oran ≤ 32)",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "ölçüm",
+   "ok": true,
+   "detay": "oran=9.2 (terim 8 kat)"
+  },
+  {
+   "no": 101,
+   "ad": "Occam: kural sayısı altıdır (KURALLAR kaydı), her biri farklı yapıya dayanır",
+   "bolum": "L. Üst kuram: tutarlılık, mutasyon, bağımsızlık",
+   "usul": "sayım",
+   "ok": true,
+   "detay": ""
+  }
+ ]
+}
