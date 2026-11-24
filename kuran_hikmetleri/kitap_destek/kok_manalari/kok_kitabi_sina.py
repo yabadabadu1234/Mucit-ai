@@ -57,7 +57,7 @@ T(9, 'sûre kapısı: 114 sûre', lambda: len([i for i, g in SF if re.match(r'^S
 T(10, 'kısım haritası: her kısmın ilk parçası var (454)', lambda: len([i for i, g in SF if re.match(r'^KS\d+_\d+_1$', i)]) == len(K.R['KI']))
 T(11, 'kısım parçaları okunur ölçekte (≤ 122/0.95 birim)', lambda: all(pc[2] <= 122 / 0.95 + 1e-6 for s in K.KI for k in K.KI[s] for pc in K.kisim_parcalari(k)))
 T(12, 'âyet sayfası: 1122 yeni kök getiren âyet', lambda: len(SAYFA_AYET) == 1122 and set(SAYFA_AYET) == {'A' + k.replace(':', '_') for k in YENI_AYET})
-T(13, 'her âyet sayfasında âyetin haritadaki odası şekli', lambda: all('class="oda"' in g for g in SAYFA_AYET.values()))
+T(13, 'her âyet sayfasında âyetin haritadaki odası şekli', lambda: all('class="oda2"' in g for g in SAYFA_AYET.values()))
 T(14, 'kök sayfaları: 1830, biri bir kez', lambda: len(KS) == 1830 and len({i for i, g in KS}) == 1830)
 def sira_dogru():
     for n in CILTLER:
@@ -264,6 +264,55 @@ def sure_yuzde():
             if not m or int(m.group(2)) != yn or int(m.group(3)) != len(ay): return False
     return True
 T(105, 'sûre kapısındaki yeni kök yüzdesi ve sayılar veriyle eşit', sure_yuzde)
+
+# ---------------- E. müştak, lügat başlığı, taşma (F 3-I 413)
+MT = [(i, re.findall(r'<table class="mt">(.*?)</table>', g, re.S)) for i, g in KS if int(i[1:]) < len(K.KOK_SIRASI) and K.KOK_SIRASI[int(i[1:])][1] == 0]
+SATIR = {i: re.findall(r'<tr class="(yok)?"><td class="mn">(\d+)</td><td class="ma">([^<]*)</td><td>(.*?)</td></tr>', t[0], re.S) for i, t in MT if t}
+T(106, 'müştak kartı her kök sayfasında (1642 kök)', lambda: len(MT) == sum(1 for x in K.KOK_SIRASI if x[1] == 0) and all(len(t) == 1 for i, t in MT))
+T(107, 'çeşit listesi bütün kartlarda aynı sabit sırada ve %d satır' % len(K.CESIT_AD), lambda: all([html.unescape(r[2]) for r in v] == K.CESIT_AD for v in SATIR.values()))
+T(108, 'çeşidi olmayan satırda çarpı, olanda biçim; boş satır yok', lambda: all(((r[0] == 'yok') == ('✗' in r[3])) and (r[0] == 'yok' or 'class="mb"' in r[3]) for v in SATIR.values() for r in v))
+def cesit_her_ciltte():
+    eksik = []
+    for n in CILTLER:
+        if n in (0, max(CILTLER)): continue
+        gor = set()
+        for i, g in bol(H[n], 'ks'):
+            for r in SATIR.get(i, []):
+                if r[0] != 'yok': gor.add(html.unescape(r[2]))
+        eksik += [(n, c) for c in K.CESIT_AD if c not in gor]
+    print('   cilt başına görünmeyen çeşit:', eksik)
+    return not eksik
+T(109, 'her ciltte her müştak çeşidi en az bir kez biçimle görünür', cesit_her_ciltte)
+def cesit_hesap():
+    hata = 0
+    for i in random.Random(5).sample(sorted(SATIR), 300):
+        k = K.KOK_SIRASI[int(i[1:])][0]; sat = K.mustak_satirlari(k)
+        if [bool(L) for L in sat] != [r[0] != 'yok' for r in SATIR[i]]: hata += 1
+    return hata == 0
+T(110, 'müştak karti üreticiden bağımsız hesapla eşit (300 kök)', cesit_hesap)
+def edat_tefrik():
+    L = [i for i, g in KS if K.KOK_SIRASI[int(i[1:])][1] == 1]
+    man = {}
+    for i in L:
+        g = SFID.get(i) or dict(KS)[i]
+        m = re.search(r'<div class="h2">Manası.*?</div>(.*?)<div class="h2">|<div class="h2">Manası.*?</div>(.*)$', dict(KS)[i], re.S); man[i] = re.sub(r'\s+', ' ', tag((m.group(1) or m.group(2)) if m else ''))
+    return len(L) == 188 and all(man.values()) and len(set(man.values())) == 188
+T(111, '188 lügat başlığının her biri kendi manasıyla (hiçbiri ötekinin aynı değil)', edat_tefrik)
+T(112, 'hiçbir tabloda mana yerine "lügat başlığı" yazılmaz', lambda: '<td>lügat başlığı</td>' not in HEPSI)
+T(113, 'lügat başlığı sayfaları boş değil: her birinde en az bir biçim', lambda: all(g.count('class="bc"') >= 1 for i, g in KS if K.KOK_SIRASI[int(i[1:])][1] == 1))
+def onek_sonek():
+    for i, g in KS:
+        if K.KOK_SIRASI[int(i[1:])][1] == 1 and 'class="bp"' in g and ' + ' not in g and g.count('class="bc"') > 5: return False
+    return True
+T(114, 'biçimlerde önek+gövde+sonek ayrı ayrı yazılı', onek_sonek)
+def tasma():
+    import kok_kitabi_tasma as TS, random as r_
+    ks = [(s, i) for s in range(1, 115) for i in range(len(K.KI[s]))]; r_.Random(11).shuffle(ks); Hh = []
+    for s, i in ks[:60]:
+        k = K.KI[s][i]
+        for pc in K.kisim_parcalari(k)[:2]: Hh.append(K.harita_kisim(k, pc))
+    n_, t_, ex = TS.olc(Hh); print('   taşan yazı %d / %d' % (n_, t_)); return n_ == 0
+T(115, 'harita yazıları odalarından taşmaz (60 kısım, tarayıcıda ölçülü)', tasma)
 
 g = sum(1 for n, a, v in SONUC if v)
 print('GEÇEN', g, '/', len(SONUC)); print('KALAN', [(n, a) for n, a, v in SONUC if not v])
