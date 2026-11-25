@@ -9382,5 +9382,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beden",
+    "ayrim": "uyu",
+    "acilim": "رقد := Beden(ayrım: uyu)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beden",
+    "kelimeler": [
+      {
+        "lemma": "رُقُود",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fu'ūl ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fu'ûl (vudû') ; masdar · sülâsî mücerred · fa'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مَرْقَد",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      }
+    ]
+  }
 }

@@ -10452,5 +10452,99 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 5,
+      "isim": 7
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "korkut",
+    "acilim": "رهب := Yönelim(ayrım: korkut)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "يَرْهَبُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir", "Muzâri"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "رُهْبان",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "masdar · sülâsî mücerred · fa'alān ; masdar · sülâsî mücerred · fi'lān ; masdar · sülâsî mücerred · fu'lān (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "اسْتَرْهَبُ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "تُرْهِبُ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "رَهَب",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "رَهْب",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "رَهْبانِيَّة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "رَهْبَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

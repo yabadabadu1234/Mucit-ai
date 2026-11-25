@@ -3365,5 +3365,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 4,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "ısrar et",
+    "acilim": "صرر := Yönelim(ayrım: ısrar et)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "أَصَرُّ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 4,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "صِرّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu'al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "صَرَّة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

@@ -4206,5 +4206,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 3,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Mücadele",
+    "ayrim": "kov",
+    "acilim": "طرد := Mücadele(ayrım: kov)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Mücadele",
+    "kelimeler": [
+      {
+        "lemma": "طَرَد",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "طارِد",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      }
+    ]
+  }
 }

@@ -3025,5 +3025,45 @@
       },
       "kok_durumu": "kök (Arapça asıllı ad; lügat usulüyle, kayıt ihtilaflı olabilir)"
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "engelle",
+    "acilim": "عوق := Kapı(ayrım: engelle)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "مُعَوِّق",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IX (illet harfi izhar) · muf'all ; ism-i mef‘ûl · bâb II · mufa''al"
+      },
+      {
+        "lemma": "يَعُوق",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      }
+    ]
+  }
 }

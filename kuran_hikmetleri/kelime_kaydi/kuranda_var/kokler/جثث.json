@@ -1912,5 +1912,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 0
+    },
+    "lugat_fiil": false
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "ceset ol",
+    "acilim": "جثث := Kılma(ayrım: ceset ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "اجْتُثَّتْ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      }
+    ]
+  }
 }

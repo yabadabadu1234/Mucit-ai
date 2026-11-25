@@ -4087,5 +4087,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 30
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "iyi ol",
+    "acilim": "برر := Kılma(ayrım: iyi ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "بَرّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 22,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu'al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "بِرّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu'al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "تَبَرُّ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      }
+    ]
+  }
 }

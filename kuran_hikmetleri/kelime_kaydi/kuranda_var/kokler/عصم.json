@@ -9477,5 +9477,72 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 9,
+      "isim": 4
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "korun",
+    "acilim": "عصم := Kapı(ayrım: korun)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "اعْتَصَمُ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 5,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "يَعْصِمُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "عاصِم",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "اسْتَعْصَمَ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "عِصَم",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

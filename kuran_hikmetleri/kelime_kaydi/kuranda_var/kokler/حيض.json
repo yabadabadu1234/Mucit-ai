@@ -1635,5 +1635,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 3
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Oluş",
+    "ayrim": "âdet gör",
+    "acilim": "حيض := Oluş(ayrım: âdet gör)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Oluş",
+    "kelimeler": [
+      {
+        "lemma": "مَحِيض",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX (illet harfi izhar) · muf'all"
+      },
+      {
+        "lemma": "يَحِضْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      }
+    ]
+  }
 }

@@ -3773,5 +3773,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 23,
+      "isim": 37
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "sına",
+    "acilim": "فتن := İdrâk(ayrım: sına)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "فِتْنَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 34,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "فَتَنُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 22,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "فُتُون",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fu'ūl ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fu'ûl (vudû') ; masdar · sülâsî mücerred · fa'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "فاتِن",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "مَفْتُون",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i mef‘ûl · sülâsî · maf'ûl"
+      }
+    ]
+  }
 }

@@ -9971,5 +9971,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 53,
+      "isim": 14
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "gönder",
+    "acilim": "بعث := Aktarım(ayrım: gönder)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "بَعَثَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 50,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "مَبْعُوث",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "ism-i mef‘ûl · sülâsî · maf'ûl"
+      },
+      {
+        "lemma": "بَعْث",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "انبِعاث",
+        "hal": "isim",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb VII · infi'āl"
+      },
+      {
+        "lemma": "انۢبَعَثَ",
+        "hal": "fiil",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VII (infe'ale): infiâl: kendiliğinden oluş"
+      }
+    ]
+  }
 }

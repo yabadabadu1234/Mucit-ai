@@ -10782,5 +10782,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 11
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "don",
+    "acilim": "جلد := Kılma(ayrım: don)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "جُلُود",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "cem‘-i mükesser (aday) · fu'ūl ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fu'ûl (vudû') ; masdar · sülâsî mücerred · fa'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "اجْلِدُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir"],
+        "adet": 2,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "جَلْدَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

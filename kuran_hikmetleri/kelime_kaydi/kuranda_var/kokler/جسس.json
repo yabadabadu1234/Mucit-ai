@@ -2160,5 +2160,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 0
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "araştır",
+    "acilim": "جسس := İdrâk(ayrım: araştır)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "تَجَسَّسُ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      }
+    ]
+  }
 }

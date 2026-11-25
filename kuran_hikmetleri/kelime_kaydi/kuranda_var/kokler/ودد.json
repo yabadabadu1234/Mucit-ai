@@ -3584,5 +3584,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 17,
+      "isim": 12
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "sev",
+    "acilim": "ودد := Yönelim(ayrım: sev)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "وَدَّ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 16,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "مَوَدَّة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "ism-i fâil · bâb IV · muf'il + müennes ; ism-i mef‘ûl · bâb IV · muf'al + müennes ; mekân/zaman · sülâsî · maf'ale"
+      },
+      {
+        "lemma": "وَدُود",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fu'ūl ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fu'ûl (vudû') ; masdar · sülâsî mücerred · fa'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "وُدّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu'al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "وَدَّ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "وَدّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu'al (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

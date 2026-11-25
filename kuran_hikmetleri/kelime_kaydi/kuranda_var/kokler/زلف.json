@@ -2861,5 +2861,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 4,
+      "isim": 6
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Oluş",
+    "ayrim": "yakın ol",
+    "acilim": "زلف := Oluş(ayrım: yakın ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Oluş",
+    "kelimeler": [
+      {
+        "lemma": "أُزْلِفَتْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Mâzî"],
+        "adet": 4,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "زُلْفَى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "mensûb · fa'al + iyy ; mensûb · fa'l + iyy ; mensûb · fi'l + iyy"
+      },
+      {
+        "lemma": "زُلْفَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

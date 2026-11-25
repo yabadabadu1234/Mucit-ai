@@ -2598,5 +2598,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 131
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "yakınlaş",
+    "acilim": "دنو := Aktarım(ayrım: yakınlaş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "دُنْيا",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 115,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "أَدْنَى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 12,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "دانِيَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes ; masdar-ı sınâî · fâ'il + iyye"
+      },
+      {
+        "lemma": "دَنا",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "دَنا",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "دان",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      }
+    ]
+  }
 }

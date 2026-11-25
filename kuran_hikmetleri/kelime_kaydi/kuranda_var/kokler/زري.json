@@ -1779,5 +1779,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 0
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "hor gör",
+    "acilim": "زري := Yönelim(ayrım: hor gör)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "تَزْدَرِي",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      }
+    ]
+  }
 }

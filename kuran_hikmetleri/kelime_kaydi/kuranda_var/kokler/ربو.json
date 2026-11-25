@@ -3303,5 +3303,99 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 8,
+      "isim": 12
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Değiştirme",
+    "ayrim": "art",
+    "acilim": "ربو := Değiştirme(ayrım: art)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Değiştirme",
+    "kelimeler": [
+      {
+        "lemma": "رِبا",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 7,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "رَبَتْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 4,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "رَبْوَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "أَرْبَى",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 2,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "رَبَّيَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 2,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "رابِي",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; mensûb · fâ'il + iyy"
+      },
+      {
+        "lemma": "رِب",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "رابِيَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes ; masdar-ı sınâî · fâ'il + iyye"
+      }
+    ]
+  }
 }

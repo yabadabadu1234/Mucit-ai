@@ -11300,5 +11300,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 20
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "hata yap",
+    "acilim": "خطء := İdrâk(ayrım: hata yap)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "خَطِيئَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 10,
+        "nasil": "masdar-ı sınâî · fa'al + iyye ; masdar-ı sınâî · fa'l + iyye ; masdar-ı sınâî · fi'l + iyye"
+      },
+      {
+        "lemma": "خاطِئ",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "أَخْطَأْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Mâzî"],
+        "adet": 2,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "خَطَأ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl ; tafdîl (müennes) · sülâsî · fa'lâ'"
+      },
+      {
+        "lemma": "خاطِئَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
+      },
+      {
+        "lemma": "خِطْء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i cins · ifrâdî (aday) · fa'l ; ism-i cins · ifrâdî (aday) · fi'l ; ism-i cins · ifrâdî (aday) · fu'l (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

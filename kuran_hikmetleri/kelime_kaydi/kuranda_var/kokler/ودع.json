@@ -4010,5 +4010,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beyân",
+    "ayrim": "uğurla",
+    "acilim": "ودع := Beyân(ayrım: uğurla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beyân",
+    "kelimeler": [
+      {
+        "lemma": "مُسْتَوْدَع",
+        "hal": "isim",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · bâb X · mustaf'il ; ism-i mef‘ûl · bâb X · mustaf'al ; mekân/zaman/masdar-ı mîmî · bâb X · mustaf'al"
+      },
+      {
+        "lemma": "دَعْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "وَدَّعَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      }
+    ]
+  }
 }

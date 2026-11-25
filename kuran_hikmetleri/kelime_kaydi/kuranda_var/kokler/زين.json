@@ -3226,5 +3226,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 27,
+      "isim": 19
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "güzelleştir",
+    "acilim": "زين := Kılma(ayrım: güzelleştir)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "زَيَّنَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Mâzî"],
+        "adet": 25,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "زِينَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 19,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib) + müennes"
+      },
+      {
+        "lemma": "ازَّيَّنَتْ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      }
+    ]
+  }
 }

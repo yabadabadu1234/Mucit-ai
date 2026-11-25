@@ -6680,5 +6680,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 39,
+      "isim": 44
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "yasakla",
+    "acilim": "حرم := Kapı(ayrım: yasakla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "حَرَّمَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 39,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "حَرام",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 33,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "مُحَرَّم",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      },
+      {
+        "lemma": "مَحْرُوم",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "ism-i mef‘ûl · sülâsî · maf'ûl"
+      },
+      {
+        "lemma": "حُرُمَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُحَرَّمَة",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX · muf'all + müennes"
+      }
+    ]
+  }
 }

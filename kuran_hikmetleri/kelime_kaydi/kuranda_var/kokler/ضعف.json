@@ -12270,5 +12270,126 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 19,
+      "isim": 33
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Değiştirme",
+    "ayrim": "ikiye katla",
+    "acilim": "ضعف := Değiştirme(ayrım: ikiye katla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Değiştirme",
+    "kelimeler": [
+      {
+        "lemma": "ضِعْف",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 11,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "يُضاعِفُ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Muzâri"],
+        "adet": 9,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "ضَعِيف",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "اسْتَضْعَفُ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 8,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "مُسْتَضْعَف",
+        "hal": "isim",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "ism-i fâil · bâb X · mustaf'il ; ism-i mef‘ûl · bâb X · mustaf'al ; mekân/zaman/masdar-ı mîmî · bâb X · mustaf'al"
+      },
+      {
+        "lemma": "ضَعْف",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "ضَعُفَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Mâzî"],
+        "adet": 2,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "أَضْعَف",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "مُضاعَفَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb III · mufā'il + müennes ; ism-i mef‘ûl · bâb III · mufā'al + müennes ; masdar · bâb III · mufā'ale"
+      },
+      {
+        "lemma": "ضِعاف",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "مُضْعِف",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      }
+    ]
+  }
 }

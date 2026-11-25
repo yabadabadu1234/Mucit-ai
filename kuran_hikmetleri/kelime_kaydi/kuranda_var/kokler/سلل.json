@@ -3700,5 +3700,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "çekip çıkar",
+    "acilim": "سلل := Aktarım(ayrım: çekip çıkar)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "سُلالَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'âl + tâ (tekili) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fa'âle (belâğa) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fi'âle (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "يَتَسَلَّلُ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      }
+    ]
+  }
 }

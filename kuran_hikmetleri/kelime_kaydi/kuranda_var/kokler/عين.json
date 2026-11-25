@@ -4475,5 +4475,54 @@
         "eyupipler": "göz, kaynak"
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 65
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Hükmetme",
+    "ayrim": "tayin et",
+    "acilim": "عين := Hükmetme(ayrım: tayin et)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Hükmetme",
+    "kelimeler": [
+      {
+        "lemma": "عَيْن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 57,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      },
+      {
+        "lemma": "مَعِين",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX (illet harfi izhar) · muf'all"
+      },
+      {
+        "lemma": "عِين",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      }
+    ]
+  }
 }

@@ -7764,5 +7764,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 8
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "kendini bir yere ver",
+    "acilim": "عكف := Yönelim(ayrım: kendini bir yere ver)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "عاكِف",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 7,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "يَعْكُفُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "مَعْكُوف",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i mef‘ûl · sülâsî · maf'ûl"
+      }
+    ]
+  }
 }

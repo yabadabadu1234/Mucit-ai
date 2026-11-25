@@ -4903,5 +4903,90 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 24
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "aşağıla",
+    "acilim": "هون := Yönelim(ayrım: aşağıla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "مُهِين",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 14,
+        "nasil": "ism-i fâil · bâb IV · muf'il ; mekân/zaman · sülâsî · maf'il"
+      },
+      {
+        "lemma": "هُون",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'al ; cem‘-i mükesser (aday) · fu'ul (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "هَيِّن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      },
+      {
+        "lemma": "أَهانَ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 2,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "هَوْن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'al ; cem‘-i mükesser (aday) · fu'ul (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُهان",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i mef‘ûl · bâb IV · muf'al ; masdar-ı mîmî · sülâsî · maf'al ; mekân/zaman · sülâsî · maf'al"
+      },
+      {
+        "lemma": "أَهْوَن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "tafdîl · sülâsî · af'al"
+      }
+    ]
+  }
 }

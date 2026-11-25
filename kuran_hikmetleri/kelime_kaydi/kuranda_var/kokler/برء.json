@@ -5336,5 +5336,117 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 10,
+      "isim": 21
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "VarEtme",
+    "ayrim": "yarat",
+    "acilim": "برء := VarEtme(ayrım: yarat)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: VarEtme",
+    "kelimeler": [
+      {
+        "lemma": "بَرِيء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 12,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "تَبَرَّأَ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 5,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "بارِئ",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "تُبْرِئُ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "بَراءَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "بَرَّأَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 2,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "بَرِيَّة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "sıfat-ı müşebbehe · fa'il + müennes (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُبَرَّء",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "بَراء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl ; tafdîl (müennes) · sülâsî · fa'lâ'"
+      },
+      {
+        "lemma": "نَبْرَأَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      }
+    ]
+  }
 }

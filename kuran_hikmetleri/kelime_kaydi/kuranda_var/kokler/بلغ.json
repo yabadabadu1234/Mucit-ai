@@ -4945,5 +4945,108 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 51,
+      "isim": 26
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "ulaş",
+    "acilim": "بلغ := Aktarım(ayrım: ulaş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "بَلَغَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 39,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "بَلاغ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 15,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "بَلَّغْ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 6,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "بالِغ",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 6,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "أَبْلَغُ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Mâzî"],
+        "adet": 5,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "بالِغَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
+      },
+      {
+        "lemma": "بَلِيغ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "مَبْلَغ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      }
+    ]
+  }
 }

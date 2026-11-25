@@ -8050,4 +8050,63 @@
       }
     }
   ]
+,
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 3,
+      "isim": 10
+    },
+    "lugat_fiil": false
+  },
+  "baz_fiil": {
+    "ad": "Değiştirme",
+    "ayrim": "kalınlaş",
+    "acilim": "غلظ := Değiştirme(ayrım: kalınlaş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Değiştirme",
+    "kelimeler": [
+      {
+        "lemma": "غَلِيظ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "اغْلُظْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir"],
+        "adet": 2,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "غِلْظَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "اسْتَغْلَظَ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      }
+    ]
+  }
 }

@@ -10843,5 +10843,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 10
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "kapsa",
+    "acilim": "شمل := Kapı(ayrım: kapsa)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "شِمال",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "اشْتَمَلَتْ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 2,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "شَمائِل",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fe'âil (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

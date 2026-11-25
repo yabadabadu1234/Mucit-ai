@@ -9439,5 +9439,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 3,
+      "isim": 9
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "ağar",
+    "acilim": "بيض := Kılma(ayrım: ağar)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "أَبْيَض",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "ابْيَضَّتْ",
+        "hal": "fiil",
+        "bab": "if'alle",
+        "bab_no": "IX",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb IX (if'alle): if'ilâl: renk ve ayıp hâli"
+      },
+      {
+        "lemma": "بَيْض",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      }
+    ]
+  }
 }

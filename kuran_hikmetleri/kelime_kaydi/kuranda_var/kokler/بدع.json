@@ -4520,5 +4520,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 3
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "VarEtme",
+    "ayrim": "yeni ol",
+    "acilim": "بدع := VarEtme(ayrım: yeni ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: VarEtme",
+    "kelimeler": [
+      {
+        "lemma": "بَدِيع",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "بِدْع",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "ابْتَدَعُ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      }
+    ]
+  }
 }

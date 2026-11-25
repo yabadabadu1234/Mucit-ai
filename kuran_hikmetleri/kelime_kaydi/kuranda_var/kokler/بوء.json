@@ -2232,5 +2232,72 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 16,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "yerleştir",
+    "acilim": "بوء := Kapı(ayrım: yerleştir)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "باءَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 6,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "بَوَّأَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 4,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "يَتَبَوَّأُ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Emir", "Muzâri"],
+        "adet": 4,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "مُبَوَّأ",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb IX (illet harfi izhar) · muf'all ; ism-i fâil · bâb XI (illet harfi izhar) · muf'āll ; ism-i mef‘ûl · bâb II · mufa''al"
+      }
+    ]
+  }
 }

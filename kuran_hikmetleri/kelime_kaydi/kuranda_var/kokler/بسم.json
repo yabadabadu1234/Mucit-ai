@@ -8661,5 +8661,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 0
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beyân",
+    "ayrim": "allah'ın adıyla başla",
+    "acilim": "بسم := Beyân(ayrım: allah'ın adıyla başla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beyân",
+    "kelimeler": [
+      {
+        "lemma": "تَبَسَّمَ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      }
+    ]
+  }
 }

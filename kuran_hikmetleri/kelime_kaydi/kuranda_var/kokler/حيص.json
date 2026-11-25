@@ -7307,5 +7307,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 5
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "kaç",
+    "acilim": "حيص := Aktarım(ayrım: kaç)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "مَحِيص",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX (illet harfi izhar) · muf'all"
+      }
+    ]
+  }
 }

@@ -4922,5 +4922,90 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 50,
+      "isim": 33
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "dengelen",
+    "acilim": "سوي := Kılma(ayrım: dengelen)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "اسْتَوَى",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 35,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "سَواء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 27,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "سَوَّى",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 13,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "سَوِيّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "تُسَوَّى",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "ساوَى",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "سُوًى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      }
+    ]
+  }
 }

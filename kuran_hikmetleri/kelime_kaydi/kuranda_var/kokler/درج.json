@@ -5379,5 +5379,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 2,
+      "isim": 18
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "basa",
+    "acilim": "درج := Aktarım(ayrım: basa)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "دَرَجَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 18,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "نَسْتَدْرِجُ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      }
+    ]
+  }
 }

@@ -11237,5 +11237,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 6,
+      "isim": 4
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Temas",
+    "ayrim": "it",
+    "acilim": "دفع := Temas(ayrım: it)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Temas",
+    "kelimeler": [
+      {
+        "lemma": "دَفَعْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir", "Mâzî"],
+        "adet": 5,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "دَفْع",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "دافِع",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · sülâsî · fâ'il"
+      },
+      {
+        "lemma": "يُدافِعُ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      }
+    ]
+  }
 }

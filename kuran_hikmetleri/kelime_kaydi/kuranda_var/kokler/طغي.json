@@ -2513,5 +2513,99 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 13,
+      "isim": 26
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "haddi aş",
+    "acilim": "طغي := Yönelim(ayrım: haddi aş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "طَغَى",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 12,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "طُغْيان",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "tasğîr · sülâsî · fu'ayl + tesniye"
+      },
+      {
+        "lemma": "طاغُوت",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 8,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "طاغي",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 6,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; mensûb · fâ'il + iyy"
+      },
+      {
+        "lemma": "أَطْغَيْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "أَطْغَى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "طاغِيَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes ; masdar-ı sınâî · fâ'il + iyye"
+      },
+      {
+        "lemma": "طَغْوَى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "mensûb · fa'al + iyy"
+      }
+    ]
+  }
 }

@@ -8489,5 +8489,72 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 5
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beyân",
+    "ayrim": "azarla",
+    "acilim": "زجر := Beyân(ayrım: azarla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beyân",
+    "kelimeler": [
+      {
+        "lemma": "زَجْرَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "زاجِرَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
+      },
+      {
+        "lemma": "زَجْر",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُزْدَجَر",
+        "hal": "isim",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb VIII · muftaʿil ; ism-i mef‘ûl · bâb VIII · muftaʿal ; mekân/zaman/masdar-ı mîmî · bâb VIII · muftaʿal"
+      },
+      {
+        "lemma": "ازْدُجِرَ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      }
+    ]
+  }
 }

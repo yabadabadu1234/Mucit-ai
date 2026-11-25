@@ -1329,5 +1329,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 0
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "gel ol",
+    "acilim": "هلم := Aktarım(ayrım: gel ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "هَلُمّ",
+        "hal": "fiil",
+        "bab": "",
+        "bab_no": "",
+        "zaman": ["Emir"],
+        "adet": 2,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      }
+    ]
+  }
 }

@@ -4829,5 +4829,99 @@
         "arapca": "مسك"
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 22,
+      "isim": 5
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kapı",
+    "ayrim": "tut",
+    "acilim": "مسك := Kapı(ayrım: tut)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kapı",
+    "kelimeler": [
+      {
+        "lemma": "أَمْسَكَ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 18,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "اسْتَمْسَكَ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Emir", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "إِمْساك",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb IV · if'āl"
+      },
+      {
+        "lemma": "يُمَسِّكُ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "مُمْسِك",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      },
+      {
+        "lemma": "مُمْسِكَة",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX · muf'all + müennes"
+      },
+      {
+        "lemma": "مُسْتَمْسِك",
+        "hal": "isim",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb X · mustaf'il ; ism-i mef‘ûl · bâb X · mustaf'al ; mekân/zaman/masdar-ı mîmî · bâb X · mustaf'al"
+      },
+      {
+        "lemma": "مِسْك",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

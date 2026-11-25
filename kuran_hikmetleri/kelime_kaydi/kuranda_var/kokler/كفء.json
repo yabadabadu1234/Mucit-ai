@@ -2775,5 +2775,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "zayıf",
+    "dayanak": ["claude-hukmu"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "denk ol",
+    "acilim": "كفء := Kılma(ayrım: denk ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "كُفُو",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fu'ul ; cem‘-i mükesser (aday) · fu'ūl ; ism-i cins · ifrâdî (aday) · fu'ul (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

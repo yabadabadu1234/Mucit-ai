@@ -5290,5 +5290,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 24,
+      "isim": 226
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Oluş",
+    "ayrim": "gecik",
+    "acilim": "ءخر := Oluş(ayrım: gecik)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Oluş",
+    "kelimeler": [
+      {
+        "lemma": "آخِر",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 155,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "آخَر",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 70,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "أَخَّرَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 15,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "يَسْتَأْخِرُ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Muzâri"],
+        "adet": 6,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "تَأَخَّرَ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "مُسْتَأْخِر",
+        "hal": "isim",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb X · mustaf'il ; ism-i mef‘ûl · bâb X · mustaf'al ; mekân/zaman/masdar-ı mîmî · bâb X · mustaf'al"
+      }
+    ]
+  }
 }

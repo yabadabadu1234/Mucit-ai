@@ -2528,5 +2528,72 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 3,
+      "isim": 13
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "sabahleyin git",
+    "acilim": "غدو := Aktarım(ayrım: sabahleyin git)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "غُدُوّ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'ul ; cem‘-i mükesser (aday) · fu'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "غَد",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "غَدَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Emir", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "غَداة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'âl + tâ (tekili) ; ism-i cins · ifrâdî (aday) · fa'ala (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "غَداء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      }
+    ]
+  }
 }

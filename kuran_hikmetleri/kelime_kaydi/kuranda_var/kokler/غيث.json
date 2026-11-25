@@ -7266,4 +7266,45 @@
       }
     }
   ]
+,
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 3
+    },
+    "lugat_fiil": false
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "yağmur ol",
+    "acilim": "غيث := Aktarım(ayrım: yağmur ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "غَيْث",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      },
+      {
+        "lemma": "يُغاثُ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      }
+    ]
+  }
 }

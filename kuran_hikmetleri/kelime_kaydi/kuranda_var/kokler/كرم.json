@@ -5593,5 +5593,99 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 6,
+      "isim": 41
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "cömert ol",
+    "acilim": "كرم := Kılma(ayrım: cömert ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "كَرِيم",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 30,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "مُكْرَم",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      },
+      {
+        "lemma": "أَكْرَمَ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 4,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "كَرَّمْ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Mâzî"],
+        "adet": 2,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "أَكْرَم",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "إِكْرام",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "masdar · bâb IV · if'āl"
+      },
+      {
+        "lemma": "مُكْرِم",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      },
+      {
+        "lemma": "مُكَرَّمَة",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX · muf'all + müennes"
+      }
+    ]
+  }
 }

@@ -4757,5 +4757,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 6
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "kasten yap",
+    "acilim": "عمد := Yönelim(ayrım: kasten yap)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "عَمَد",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُتَعَمِّد",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · bâb V · mutafa''il ; ism-i mef‘ûl · bâb V · mutafa''al ; mekân/zaman/masdar-ı mîmî · bâb V · mutafa''al"
+      },
+      {
+        "lemma": "تَعَمَّدَتْ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "عِماد",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      }
+    ]
+  }
 }

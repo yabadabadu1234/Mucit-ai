@@ -2173,5 +2173,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Değiştirme",
+    "ayrim": "kayna",
+    "acilim": "نبع := Değiştirme(ayrım: kayna)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Değiştirme",
+    "kelimeler": [
+      {
+        "lemma": "يَنبُوع",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      }
+    ]
+  }
 }

@@ -2870,5 +2870,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 8
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Oluş",
+    "ayrim": "yaşa",
+    "acilim": "عيش := Oluş(ayrım: yaşa)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Oluş",
+    "kelimeler": [
+      {
+        "lemma": "مَعِيشَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX (illet harfi izhar) · muf'all + müennes"
+      },
+      {
+        "lemma": "مَعايِش",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · bâb III · mufā'il ; ism-i mef‘ûl · bâb III · mufā'al ; mekân/zaman/masdar-ı mîmî · bâb III · mufā'al"
+      },
+      {
+        "lemma": "عِيشَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib) + müennes"
+      },
+      {
+        "lemma": "مَعاش",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i mef‘ûl · bâb IV · muf'al ; masdar-ı mîmî · sülâsî · maf'al ; mekân/zaman · sülâsî · maf'al"
+      }
+    ]
+  }
 }

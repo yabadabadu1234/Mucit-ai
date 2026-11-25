@@ -4448,5 +4448,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 4,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Temas",
+    "ayrim": "bağla",
+    "acilim": "ربط := Temas(ayrım: bağla)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Temas",
+    "kelimeler": [
+      {
+        "lemma": "رَبَطْ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "رابِطُ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Emir"],
+        "adet": 1,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "رِباط",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      }
+    ]
+  }
 }

@@ -8863,5 +8863,171 @@
         "eyupipler": "İman etti"
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 558,
+      "isim": 321
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "iman et",
+    "acilim": "ءمن := Yönelim(ayrım: iman et)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "آمَنَ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 533,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "مُؤْمِن",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 202,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i fâil · bâb IX · muf'all"
+      },
+      {
+        "lemma": "إِيمان",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 45,
+        "nasil": "masdar · bâb IV · if'āl"
+      },
+      {
+        "lemma": "مُؤْمِنَة",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 28,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX · muf'all + müennes"
+      },
+      {
+        "lemma": "أَمِنَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 20,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "آمِن",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 16,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "أَمِين",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 14,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "أَمْن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 4,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "أَمانَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'âl + tâ (tekili) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fa'âle (belâğa) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fi'âle (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "أَمانَت",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "أَمَنَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
+      },
+      {
+        "lemma": "اؤْتُمِنَ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "مَأْمَن",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar-ı mîmî · sülâsî · maf'al ; mekân/zaman · sülâsî · maf'al ; mekân/zaman · sülâsî · maf'il"
+      },
+      {
+        "lemma": "آمِنَة",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
+      },
+      {
+        "lemma": "مَأْمُون",
+        "hal": "isim",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i mef‘ûl · sülâsî · maf'ûl"
+      }
+    ]
+  }
 }

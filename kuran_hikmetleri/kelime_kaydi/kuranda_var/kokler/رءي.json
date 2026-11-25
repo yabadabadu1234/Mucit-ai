@@ -5396,5 +5396,117 @@
         "eyupipler": "gördü"
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 315,
+      "isim": 13
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "gör",
+    "acilim": "رءي := İdrâk(ayrım: gör)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "رَأَى",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 268,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "أَرَيْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 35,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "رُءْيا",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 7,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 5,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "رِئاء",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "ن",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "رَأْى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; ism-i cins · ifrâdî (aday) · fa'al ; ism-i cins · ifrâdî (aday) · fa'l (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "يُراءُ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "تَراءَتِ",
+        "hal": "fiil",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 2,
+        "nasil": "bâb VI (tefâale): tefâul: karşılıklılık, yapar görünme"
+      },
+      {
+        "lemma": "رِءْي",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      }
+    ]
+  }
 }

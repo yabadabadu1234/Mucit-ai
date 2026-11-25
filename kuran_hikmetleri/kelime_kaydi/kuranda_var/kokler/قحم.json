@@ -1888,5 +1888,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Temas",
+    "ayrim": "ateşe at",
+    "acilim": "قحم := Temas(ayrım: ateşe at)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Temas",
+    "kelimeler": [
+      {
+        "lemma": "مُقْتَحِم",
+        "hal": "isim",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb VIII · muftaʿil ; ism-i mef‘ûl · bâb VIII · muftaʿal ; mekân/zaman/masdar-ı mîmî · bâb VIII · muftaʿal"
+      },
+      {
+        "lemma": "اقْتَحَمَ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      }
+    ]
+  }
 }

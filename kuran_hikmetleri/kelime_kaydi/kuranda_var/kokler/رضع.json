@@ -8920,5 +8920,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 7,
+      "isim": 4
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beden",
+    "ayrim": "emzir",
+    "acilim": "رضع := Beden(ayrım: emzir)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beden",
+    "kelimeler": [
+      {
+        "lemma": "أَرْضَعَتْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 5,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "رَضاعَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'âl + tâ (tekili) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fa'âle (belâğa) ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fi'âle (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "يُرْضِعْ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "تَسْتَرْضِعُ",
+        "hal": "fiil",
+        "bab": "istef'ale",
+        "bab_no": "X",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb X (istef'ale): istif'âl: talep etme, o hâle girmiş sayma, o hâle dönüşme"
+      },
+      {
+        "lemma": "مُرْضِعَة",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i fâil · bâb IX · muf'all + müennes"
+      },
+      {
+        "lemma": "مَراضِع",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb III · mufā'il ; ism-i mef‘ûl · bâb III · mufā'al ; mekân/zaman/masdar-ı mîmî · bâb III · mufā'al"
+      }
+    ]
+  }
 }

@@ -2615,5 +2615,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 0
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Beyân",
+    "ayrim": "lakap tak",
+    "acilim": "نبز := Beyân(ayrım: lakap tak)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Beyân",
+    "kelimeler": [
+      {
+        "lemma": "تَنابَزُ",
+        "hal": "fiil",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb VI (tefâale): tefâul: karşılıklılık, yapar görünme"
+      }
+    ]
+  }
 }

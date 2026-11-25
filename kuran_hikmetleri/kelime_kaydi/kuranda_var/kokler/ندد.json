@@ -2707,5 +2707,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "zayıf",
+    "dayanak": ["claude-hukmu"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 6
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "karşı çık",
+    "acilim": "ندد := Yönelim(ayrım: karşı çık)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "أَنداد",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 6,
+        "nasil": "masdar · bâb IV · if'āl"
+      }
+    ]
+  }
 }

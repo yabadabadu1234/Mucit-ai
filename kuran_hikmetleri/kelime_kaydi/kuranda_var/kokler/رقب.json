@@ -4016,5 +4016,81 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 9,
+      "isim": 15
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "gözetle",
+    "acilim": "رقب := İdrâk(ayrım: gözetle)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "رَقَبَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale ; ism-i cins · cem‘î ve tekili (+tâ) · fa'al + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "رَقِيب",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "tasğîr · sülâsî · fu'ayl"
+      },
+      {
+        "lemma": "ارْتَقِبْ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Emir"],
+        "adet": 4,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "يَرْقُبُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "يَتَرَقَّبُ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri"],
+        "adet": 2,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "مُرْتَقِب",
+        "hal": "isim",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb VIII · muftaʿil ; ism-i mef‘ûl · bâb VIII · muftaʿal ; mekân/zaman/masdar-ı mîmî · bâb VIII · muftaʿal"
+      }
+    ]
+  }
 }

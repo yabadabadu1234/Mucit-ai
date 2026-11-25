@@ -5163,5 +5163,171 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 105,
+      "isim": 41
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "karşılaş",
+    "acilim": "لقي := Aktarım(ayrım: karşılaş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "أَلْقَى",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 71,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "لِقاء",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 24,
+        "nasil": "masdar · bâb II · fi''āl ; masdar · bâb III · fi'āl"
+      },
+      {
+        "lemma": "لَقُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 14,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "الْتَقَى",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 7,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "لَقَّى",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 6,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "تَلَقَّى",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 4,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "مُلاقُوا",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "تِلْقاء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "مُلْقي",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · bâb II · mufa''il ; ism-i fâil · bâb IV · muf'il ; ism-i mef‘ûl · bâb II · mufa''al"
+      },
+      {
+        "lemma": "يُلاقُ",
+        "hal": "fiil",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": ["Muzâri"],
+        "adet": 3,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "مُلاقِي",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · bâb III · mufā'il ; ism-i mef‘ûl · bâb III · mufā'al ; mekân/zaman/masdar-ı mîmî · bâb III · mufā'al"
+      },
+      {
+        "lemma": "لاقِي",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · sülâsî · fâ'il ; mensûb · fâ'il + iyy"
+      },
+      {
+        "lemma": "تَلاق",
+        "hal": "isim",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "bâb VI (tefâale): tefâul: karşılıklılık, yapar görünme"
+      },
+      {
+        "lemma": "مُتَلَقِّيان",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb V · mutafa''il + tesniye ; ism-i mef‘ûl · bâb V · mutafa''al + tesniye"
+      },
+      {
+        "lemma": "مُلاق",
+        "hal": "isim",
+        "bab": "fâale",
+        "bab_no": "III",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "bâb III (fâale): müfâale: karşılıklılık, birine yönelme, çaba"
+      },
+      {
+        "lemma": "مُلْقِيَة",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb II · mufa''il + müennes ; ism-i fâil · bâb IV · muf'il + müennes ; ism-i mef‘ûl · sülâsî · maf'ûl + müennes"
+      }
+    ]
+  }
 }

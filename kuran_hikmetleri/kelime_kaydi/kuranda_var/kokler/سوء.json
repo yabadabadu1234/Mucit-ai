@@ -4867,5 +4867,117 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 35,
+      "isim": 132
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "kötü ol",
+    "acilim": "سوء := Kılma(ayrım: kötü ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "سَيِّئَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 58,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib) + müennes"
+      },
+      {
+        "lemma": "سُوء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 50,
+        "nasil": "ism-i cins · ifrâdî (aday) · fa'l ; ism-i cins · ifrâdî (aday) · fu'l ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fa'l (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "ساءَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 30,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "سَوْء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 9,
+        "nasil": "ism-i cins · ifrâdî (aday) · fa'l ; ism-i cins · ifrâdî (aday) · fu'l ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fa'l (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "سَوْءَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 7,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "أَساءَ",
+        "hal": "fiil",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": ["Mâzî"],
+        "adet": 5,
+        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
+      },
+      {
+        "lemma": "سَيِّئ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "sıfat-ı müşebbehe · fay'il (ecvef: seyyid, meyyit, tayyib)"
+      },
+      {
+        "lemma": "أَسْوَأ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "tafdîl · sülâsî · af'al"
+      },
+      {
+        "lemma": "سُوٓأَى",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "tafdîl (müennes) · sülâsî · fu'lâ"
+      },
+      {
+        "lemma": "مُسِيء",
+        "hal": "isim",
+        "bab": "af'ale",
+        "bab_no": "IV",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb IV · muf'il ; mekân/zaman · sülâsî · maf'il"
+      }
+    ]
+  }
 }

@@ -2768,5 +2768,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 3,
+      "isim": 2
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "kaçır",
+    "acilim": "فوت := Aktarım(ayrım: kaçır)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "فاتَ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Mâzî"],
+        "adet": 3,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "فَوْت",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'al ; cem‘-i mükesser (aday) · fu'ul (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "تَفاوُت",
+        "hal": "isim",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb VI · tafā'ul"
+      }
+    ]
+  }
 }

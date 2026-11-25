@@ -10858,5 +10858,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 5,
+      "isim": 7
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "benzeş",
+    "acilim": "شبه := Kılma(ayrım: benzeş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "مُتَشابِه",
+        "hal": "isim",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": [],
+        "adet": 6,
+        "nasil": "ism-i fâil · bâb VI · mutafā'il ; ism-i mef‘ûl · bâb VI · mutafā'al ; mekân/zaman/masdar-ı mîmî · bâb VI · mutafā'al"
+      },
+      {
+        "lemma": "تَشابَهَ",
+        "hal": "fiil",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": ["Mâzî"],
+        "adet": 4,
+        "nasil": "bâb VI (tefâale): tefâul: karşılıklılık, yapar görünme"
+      },
+      {
+        "lemma": "شُبِّهَ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "مُشْتَبِه",
+        "hal": "isim",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb VIII · muftaʿil ; ism-i mef‘ûl · bâb VIII · muftaʿal ; mekân/zaman/masdar-ı mîmî · bâb VIII · muftaʿal"
+      }
+    ]
+  }
 }

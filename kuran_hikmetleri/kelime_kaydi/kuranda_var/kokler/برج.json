@@ -8608,5 +8608,63 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 6
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Kılma",
+    "ayrim": "kale ol",
+    "acilim": "برج := Kılma(ayrım: kale ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Kılma",
+    "kelimeler": [
+      {
+        "lemma": "بُرُوج",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 4,
+        "nasil": "cem‘-i mükesser (aday) · fu'ūl ; ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı) · fu'ûl (vudû') ; masdar · sülâsî mücerred · fa'ūl (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "مُتَبَرِّجَة",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb V · mutafa''il + müennes ; ism-i mef‘ûl · bâb V · mutafa''al + müennes"
+      },
+      {
+        "lemma": "تَبَرَّجْ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "تَبَرُّج",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb V · tafa''ul"
+      }
+    ]
+  }
 }

@@ -8361,4 +8361,36 @@
       }
     }
   ]
+,
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "aldan",
+    "acilim": "غبن := İdrâk(ayrım: aldan)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "تَغابُن",
+        "hal": "isim",
+        "bab": "tefâale",
+        "bab_no": "VI",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb VI · tafā'ul"
+      }
+    ]
+  }
 }

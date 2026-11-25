@@ -611,5 +611,39 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "isim",
+    "guven": "zayıf",
+    "dayanak": ["claude-hukmu"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 4
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": null,
+  "turetim": {
+    "asil": "isim kökü: Kantara: köprü",
+    "kelimeler": [
+      {
+        "lemma": "قِنطار",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "kök isim: fiil kalıbıyla türemedi"
+      },
+      {
+        "lemma": "مُقَنطَرَة",
+        "hal": "isim",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      }
+    ]
+  }
 }

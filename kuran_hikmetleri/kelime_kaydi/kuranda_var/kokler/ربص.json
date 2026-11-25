@@ -7260,5 +7260,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 13,
+      "isim": 4
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "İdrâk",
+    "ayrim": "bekleyip gözetle",
+    "acilim": "ربص := İdrâk(ayrım: bekleyip gözetle)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: İdrâk",
+    "kelimeler": [
+      {
+        "lemma": "تَرَبَّصْ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Emir", "Muzâri", "Mâzî"],
+        "adet": 13,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "مُتَرَبِّص",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · bâb V · mutafa''il ; ism-i mef‘ûl · bâb V · mutafa''al ; mekân/zaman/masdar-ı mîmî · bâb V · mutafa''al"
+      },
+      {
+        "lemma": "تَرَبُّص",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "masdar · bâb V · tafa''ul"
+      }
+    ]
+  }
 }

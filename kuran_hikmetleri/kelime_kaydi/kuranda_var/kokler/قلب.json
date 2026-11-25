@@ -6010,5 +6010,108 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 25,
+      "isim": 143
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "çevir",
+    "acilim": "قلب := Aktarım(ayrım: çevir)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "قَلْب",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 132,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "انقَلَبَ",
+        "hal": "fiil",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 17,
+        "nasil": "bâb VII (infe'ale): infiâl: kendiliğinden oluş"
+      },
+      {
+        "lemma": "قَلَّبُ",
+        "hal": "fiil",
+        "bab": "fe''ale",
+        "bab_no": "II",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 6,
+        "nasil": "bâb II (fe''ale): tef'îl: çoklama, yoğunlaştırma, geçişli kılma"
+      },
+      {
+        "lemma": "تَقَلُّب",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 5,
+        "nasil": "masdar · bâb V · tafa''ul"
+      },
+      {
+        "lemma": "مُنقَلِب",
+        "hal": "isim",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i fâil · bâb VII · munfa'il"
+      },
+      {
+        "lemma": "مُنقَلَب",
+        "hal": "isim",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i fâil · bâb VII · munfa'il"
+      },
+      {
+        "lemma": "تَتَقَلَّبُ",
+        "hal": "fiil",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb V (tefe''ale): tefa''ul: tef'îlin kendiliğinden hâli, dönüşlülük, zamanla edinme"
+      },
+      {
+        "lemma": "تُقْلَبُ",
+        "hal": "fiil",
+        "bab": "fe'ale",
+        "bab_no": "I",
+        "zaman": ["Muzâri"],
+        "adet": 1,
+        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+      },
+      {
+        "lemma": "مُتَقَلَّب",
+        "hal": "isim",
+        "bab": "tefe''ale",
+        "bab_no": "V",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "ism-i fâil · bâb V · mutafa''il ; ism-i mef‘ûl · bâb V · mutafa''al ; mekân/zaman/masdar-ı mîmî · bâb V · mutafa''al"
+      }
+    ]
+  }
 }

@@ -2401,5 +2401,45 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 1,
+      "isim": 1
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Aktarım",
+    "ayrim": "düş",
+    "acilim": "هور := Aktarım(ayrım: düş)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Aktarım",
+    "kelimeler": [
+      {
+        "lemma": "هار",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 1,
+        "nasil": "cem‘-i mükesser (aday) · fa'al ; ism-i cins · ifrâdî (aday) · fa'al ; masdar · sülâsî mücerred · fa'al (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "انْهارَ",
+        "hal": "fiil",
+        "bab": "infe'ale",
+        "bab_no": "VII",
+        "zaman": ["Mâzî"],
+        "adet": 1,
+        "nasil": "bâb VII (infe'ale): infiâl: kendiliğinden oluş"
+      }
+    ]
+  }
 }

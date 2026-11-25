@@ -2172,5 +2172,36 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 3
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Bağ",
+    "ayrim": "bölün",
+    "acilim": "جزء := Bağ(ayrım: bölün)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Bağ",
+    "kelimeler": [
+      {
+        "lemma": "جُزْء",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i cins · ifrâdî (aday) · fa'l ; ism-i cins · ifrâdî (aday) · fi'l ; ism-i cins · ifrâdî (aday) · fu'l (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

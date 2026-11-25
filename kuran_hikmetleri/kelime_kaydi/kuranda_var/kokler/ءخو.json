@@ -2853,5 +2853,54 @@
         "eyupipler": "Kardeş"
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "orta",
+    "dayanak": ["lugat-fiil"],
+    "kuran": {
+      "fiil": 0,
+      "isim": 96
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Bağ",
+    "ayrim": "kardeş ol",
+    "acilim": "ءخو := Bağ(ayrım: kardeş ol)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Bağ",
+    "kelimeler": [
+      {
+        "lemma": "أَخ",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 75,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "أُخْت",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 14,
+        "nasil": "lügat kalıbıyla eşleşmedi"
+      },
+      {
+        "lemma": "إِخْوَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 7,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }

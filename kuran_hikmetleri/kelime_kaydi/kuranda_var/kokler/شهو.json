@@ -2050,5 +2050,54 @@
         "eyupipler": ""
       }
     }
-  ]
+  ],
+  "kok_turu": {
+    "tur": "fiil",
+    "guven": "kesin",
+    "dayanak": ["kuran-fiil"],
+    "kuran": {
+      "fiil": 8,
+      "isim": 5
+    },
+    "lugat_fiil": true
+  },
+  "baz_fiil": {
+    "ad": "Yönelim",
+    "ayrim": "iste",
+    "acilim": "شهو := Yönelim(ayrım: iste)",
+    "guven": "orta",
+    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
+  },
+  "turetim": {
+    "asil": "baz fiil: Yönelim",
+    "kelimeler": [
+      {
+        "lemma": "اشْتَهَتْ",
+        "hal": "fiil",
+        "bab": "ifte'ale",
+        "bab_no": "VIII",
+        "zaman": ["Muzâri", "Mâzî"],
+        "adet": 8,
+        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+      },
+      {
+        "lemma": "شَهَوَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 3,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
+      },
+      {
+        "lemma": "شَهْوَة",
+        "hal": "isim",
+        "bab": "",
+        "bab_no": "",
+        "zaman": [],
+        "adet": 2,
+        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
+      }
+    ]
+  }
 }
