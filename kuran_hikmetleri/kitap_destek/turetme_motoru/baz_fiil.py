@@ -1,13 +1,5 @@
-import json
-import os
-import re
-import glob
 import collections
-import sys
-
-K = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..')
-B = os.path.join(K, 'kelime_kaydi', 'kuranda_var')
-YAZ = '--yaz' in sys.argv
+import re
 
 BAZ = {
     'VAR': ('VarEtme', 'Yoktan var etme, yaratma, doğurma, ortaya çıkarma, kurma ve yapma', ['verb.creation'], 'VarEtme'),
@@ -91,24 +83,6 @@ def norm(s):
     return s.replace('ى', 'ي').replace('ئ', 'ي').replace('ؤ', 'و').replace('ء', '')
 
 
-def okunur(o, g=0, en=110):
-    ic = '  ' * (g + 1)
-    dis = '  ' * g
-    if isinstance(o, dict):
-        if not o:
-            return '{}'
-        return '{\n' + ',\n'.join('%s%s: %s' % (ic, json.dumps(k, ensure_ascii=False), okunur(v, g + 1, en)) for k, v in o.items()) + '\n' + dis + '}'
-    if isinstance(o, (list, tuple)):
-        if not o:
-            return '[]'
-        if all(not isinstance(x, (dict, list, tuple)) for x in o):
-            satir = '[' + ', '.join(json.dumps(x, ensure_ascii=False) for x in o) + ']'
-            if len(satir) <= en:
-                return satir
-        return '[\n' + ',\n'.join(ic + okunur(x, g + 1, en) for x in o) + '\n' + dis + ']'
-    return json.dumps(o, ensure_ascii=False)
-
-
 def korpus(d):
     kcs = d['sozlukler'].get('kuran_korpusu') or []
     if isinstance(kcs, dict):
@@ -155,102 +129,3 @@ def baz_fiil(d, kt):
         return {'ad': None, 'ayrim': sap, 'acilim': None, 'guven': 'yok', 'dayanak': 'haritada yok'}
     ad = BAZ[b][0]
     return {'ad': ad, 'ayrim': sap, 'acilim': '%s := %s(ayrım: %s)' % (d['kok'], ad, sap), 'guven': 'orta', 'dayanak': 'Türkçe fiil sapı ve kök manası okunarak Claude hükmü'}
-
-
-def turetim(d, kt, bz):
-    satir = collections.defaultdict(lambda: {'adet': 0, 'zaman': set()})
-    for w in d['kelimeler']:
-        hal = 'fiil' if w.get('zaman') else 'isim'
-        k = (w['lemma'], hal, w.get('bab') or '')
-        satir[k]['adet'] += w.get('adet') or 0
-        if w.get('zaman'):
-            satir[k]['zaman'].add(w['zaman'])
-    ind = collections.defaultdict(list)
-    for g, rows in d['mustaklar'].items():
-        for r in rows:
-            kal = d['kaliplar'].get(str(r[0]), [None, '', ''])
-            ind[norm(r[1])].append((g, kal[1], 'aday' in (kal[2] or '')))
-    out = []
-    for (lemma, hal, bab), v in sorted(satir.items(), key=lambda x: -x[1]['adet']):
-        bn, bm = BABLAR.get(bab, ('', ''))
-        es = ind.get(norm(lemma)) if hal == 'isim' else None
-        if es and kt['tur'] == 'isim':
-            es = [e for e in es if e[0].startswith('cem') or 'mensûb' in e[0] or 'tasğîr' in e[0]] or None
-        if es:
-            kesin = [e for e in es if not e[2]]
-            sec = kesin or es
-            nasil = ' ; '.join(sorted({'%s · %s' % (g, z) for g, z, _ in sec})[:3]) + ('' if kesin else ' (yalnız aday eşleşme)')
-        elif bn:
-            nasil = 'bâb %s (%s): %s' % (bn, bab, bm)
-        elif kt['tur'] == 'isim':
-            nasil = 'kök isim: fiil kalıbıyla türemedi'
-        else:
-            nasil = 'lügat kalıbıyla eşleşmedi'
-        out.append({'lemma': lemma, 'hal': hal, 'bab': bab, 'bab_no': bn, 'zaman': sorted(v['zaman']), 'adet': v['adet'], 'nasil': nasil})
-    asil = ('baz fiil: %s' % bz['ad']) if bz and bz['ad'] else ('isim kökü: ' + ((d['sozlukler'].get('kok_anlamlari') or {}).get('turkce') or '').split(';')[0])
-    return {'asil': asil, 'kelimeler': out}
-
-
-def metin(d):
-    kt = kok_turu(d)
-    bz = baz_fiil(d, kt)
-    return {'kok_turu': kt, 'baz_fiil': bz, 'turetim': turetim(d, kt, bz)}
-
-
-ANAHTARLAR = ('kok_turu', 'baz_fiil', 'turetim')
-
-
-def uygula(yol):
-    t = open(yol, encoding='utf-8').read()
-    i = t.find(',\n  "kok_turu":')
-    if i >= 0:
-        t = t[:i] + '\n}'
-    d = json.loads(t)
-    ek = metin(d)
-    yeni = t[:-2] + ''.join(',\n  %s: %s' % (json.dumps(k), okunur(ek[k], 1)) for k in ANAHTARLAR) + '\n}'
-    json.loads(yeni)
-    return d, ek, yeni
-
-
-def fihrist(sayac, babsay):
-    yol = os.path.join(B, 'FIHRIST.json')
-    t = open(yol, encoding='utf-8').read()
-    i = t.find(',\n  "baz_fiiller":')
-    if i >= 0:
-        t = t[:i] + '\n}'
-    ek = {
-        'baz_fiiller': {k: {'ad': v[0], 'kusattigi_eksen': v[1], 'wordnet_karsiligi': v[2], 'v7_karsiligi': v[3], 'kok_sayisi': babsay.get(v[0], 0)} for k, v in BAZ.items()},
-        'bab_turetme': {k: {'bab_no': v[0], 'nasil': v[1]} for k, v in BABLAR.items()},
-        'kok_turu_dayanaklari': DAYANAK,
-        'kok_turu_sayilari': sayac,
-    }
-    yeni = t[:-2] + ''.join(',\n  %s: %s' % (json.dumps(k), okunur(v, 1)) for k, v in ek.items()) + '\n}'
-    json.loads(yeni)
-    return yol, yeni
-
-
-def calis():
-    sayac = collections.Counter()
-    babsay = collections.Counter()
-    yazilacak = []
-    for yol in sorted(glob.glob(os.path.join(B, 'kokler', '*.json'))):
-        d, ek, yeni = uygula(yol)
-        kt = ek['kok_turu']
-        sayac['%s/%s' % (kt['tur'], kt['guven'])] += 1
-        if ek['baz_fiil']:
-            babsay[ek['baz_fiil']['ad']] += 1
-        yazilacak.append((yol, yeni))
-    fy, ft = fihrist(dict(sorted(sayac.items())), babsay)
-    if YAZ:
-        for yol, yeni in yazilacak:
-            with open(yol, 'w', encoding='utf-8') as f:
-                f.write(yeni)
-        with open(fy, 'w', encoding='utf-8') as f:
-            f.write(ft)
-    return sayac, babsay
-
-
-if __name__ == '__main__':
-    s, b = calis()
-    print(sum(s.values()), dict(s))
-    print(dict(b))

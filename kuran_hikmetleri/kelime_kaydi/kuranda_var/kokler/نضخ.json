@@ -1,1203 +1,2204 @@
 {
   "kok": "نضخ",
+  "tur": "fiil",
+  "tur_guven": "orta",
+  "tur_dayanak": ["lugat-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Aktarım",
+  "baz_ayrim": "fışkırt",
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "fışkırt",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "fışkırt",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "نَضْخ", "naḍḫ", "fışkırtma", "orta", ""],
-      [1, "نِضْخ", "niḍḫ", "fışkırtma", "orta", ""],
-      [2, "نُضْخ", "nuḍḫ", "fışkırtma", "orta", ""],
-      [3, "نَضَخ", "naḍaḫ", "fışkırtma", "orta", ""],
-      [4, "نِضَخ", "niḍaḫ", "fışkırtma", "orta", ""],
-      [5, "نُضُخ", "nuḍuḫ", "fışkırtma", "orta", ""],
-      [6, "نُضُوخ", "nuḍūḫ", "fışkırtma", "orta", ""],
-      [7, "نِضَاخ", "niḍāḫ", "fışkırtma", "orta", ""],
-      [8, "نُضَاخ", "nuḍāḫ", "fışkırtma", "orta", ""],
-      [9, "نَضَاخ", "naḍāḫ", "fışkırtma", "orta", ""],
-      [10, "نَضَاخَة", "naḍāḫa", "fışkırtma", "orta", ""],
-      [11, "نُضُوخَة", "nuḍūḫa", "fışkırtma", "orta", ""],
-      [12, "نِضَاخَة", "niḍāḫa", "fışkırtma", "orta", ""],
-      [13, "نَضِيخ", "naḍīḫ", "fışkırtma", "orta", ""],
-      [14, "نَضُوخ", "naḍūḫ", "fışkırtma", "orta", ""],
-      [15, "نَضَخَان", "naḍaḫān", "fışkırtma", "orta", ""],
-      [16, "نُضْخَان", "nuḍḫān", "fışkırtma", "orta", ""],
-      [17, "نِضْخَان", "niḍḫān", "fışkırtma", "orta", ""],
-      [18, "نَضْخَى", "naḍḫā", "fışkırtma", "orta", ""],
-      [19, "نُضْخَى", "nuḍḫā", "fışkırtma", "orta", ""],
-      [20, "نِضْخَى", "niḍḫā", "fışkırtma", "orta", ""],
-      [21, "نَضَخَة", "naḍaḫa", "fışkırtma", "orta", ""],
-      [22, "نِضَخَة", "niḍaḫa", "fışkırtma", "orta", ""],
-      [23, "نَضْخُوخَة", "naḍḫūḫa", "fışkırtma", "orta", ""],
-      [24, "تُنْضُوخ", "tunḍūḫ", "fışkırtma", "orta", ""],
-      [25, "تَنْضِخَة", "tanḍiḫa", "fışkırtma", "orta", ""],
-      [26, "تَنْضَخَة", "tanḍaḫa", "fışkırtma", "orta", ""],
-      [27, "مَنْضُخَة", "manḍuḫa", "fışkırtma", "orta", ""],
-      [28, "مَنْضِخَة", "manḍiḫa", "fışkırtma", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَنْضِيخ", "tanḍīḫ", "çokça fışkırtma", "orta", ""],
-      [30, "تَنْضِخَة", "tanḍiḫa", "çokça fışkırtma", "orta", ""],
-      [31, "نِضِّاخ", "niḍḍāḫ", "çokça fışkırtma", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَنْضِيخَة", "tanḍīḫa", "bir kere çokça fışkırtma", "orta", ""],
-      [33, "نِضِّاخَة", "niḍḍāḫa", "bir kere çokça fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُنَضِّخ", "munaḍḍiḫ", "çokça fışkırtan", "orta", ""],
-      [35, "مُنَضِّخَة", "munaḍḍiḫa", "çokça fışkırtan, müennes", "orta", ""],
-      [36, "مُنَضِّخَان", "munaḍḍiḫān", "çokça fışkırtan, iki", "orta", ""],
-      [37, "مُنَضِّخَتَان", "munaḍḍiḫatān", "çokça fışkırtan, iki, müennes", "orta", ""],
-      [38, "مُنَضِّخُون", "munaḍḍiḫūn", "çokça fışkırtanlar", "orta", ""],
-      [39, "مُنَضِّخِين", "munaḍḍiḫīn", "çokça fışkırtanlar", "orta", ""],
-      [40, "مُنَضِّخَات", "munaḍḍiḫāt", "çokça fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُنَضَّخ", "munaḍḍaḫ", "çokça fışkırtılan", "orta", ""],
-      [42, "مُنَضَّخَة", "munaḍḍaḫa", "çokça fışkırtılan, müennes", "orta", ""],
-      [43, "مُنَضَّخَان", "munaḍḍaḫān", "çokça fışkırtılan, iki", "orta", ""],
-      [44, "مُنَضَّخَتَان", "munaḍḍaḫatān", "çokça fışkırtılan, iki, müennes", "orta", ""],
-      [45, "مُنَضَّخُون", "munaḍḍaḫūn", "çokça fışkırtılanlar", "orta", ""],
-      [46, "مُنَضَّخِين", "munaḍḍaḫīn", "çokça fışkırtılanlar", "orta", ""],
-      [47, "مُنَضَّخَات", "munaḍḍaḫāt", "çokça fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُنَضَّخ", "munaḍḍaḫ", "çokça fışkırtma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُنَاضَخَة", "munāḍaḫa", "biriyle karşılıklı fışkırtma", "orta", ""],
-      [50, "نِضَاخ", "niḍāḫ", "biriyle karşılıklı fışkırtma", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "نِضَاخَة", "niḍāḫa", "bir kere biriyle karşılıklı fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُنَاضِخ", "munāḍiḫ", "biriyle karşılıklı fışkırtan", "orta", ""],
-      [53, "مُنَاضِخَة", "munāḍiḫa", "biriyle karşılıklı fışkırtan, müennes", "orta", ""],
-      [54, "مُنَاضِخَان", "munāḍiḫān", "biriyle karşılıklı fışkırtan, iki", "orta", ""],
-      [55, "مُنَاضِخَتَان", "munāḍiḫatān", "biriyle karşılıklı fışkırtan, iki, müennes", "orta", ""],
-      [56, "مُنَاضِخُون", "munāḍiḫūn", "biriyle karşılıklı fışkırtanlar", "orta", ""],
-      [57, "مُنَاضِخِين", "munāḍiḫīn", "biriyle karşılıklı fışkırtanlar", "orta", ""],
-      [58, "مُنَاضِخَات", "munāḍiḫāt", "biriyle karşılıklı fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُنَاضَخ", "munāḍaḫ", "biriyle karşılıklı fışkırtılan", "orta", ""],
-      [60, "مُنَاضَخَة", "munāḍaḫa", "biriyle karşılıklı fışkırtılan, müennes", "orta", ""],
-      [61, "مُنَاضَخَان", "munāḍaḫān", "biriyle karşılıklı fışkırtılan, iki", "orta", ""],
-      [62, "مُنَاضَخَتَان", "munāḍaḫatān", "biriyle karşılıklı fışkırtılan, iki, müennes", "orta", ""],
-      [63, "مُنَاضَخُون", "munāḍaḫūn", "biriyle karşılıklı fışkırtılanlar", "orta", ""],
-      [64, "مُنَاضَخِين", "munāḍaḫīn", "biriyle karşılıklı fışkırtılanlar", "orta", ""],
-      [65, "مُنَاضَخَات", "munāḍaḫāt", "biriyle karşılıklı fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُنَاضَخ", "munāḍaḫ", "biriyle karşılıklı fışkırtma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِنْضَاخ", "ʾinḍāḫ", "fışkırttırma", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِنْضَاخَة", "ʾinḍāḫa", "bir kere fışkırttırma", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُنْضِخ", "munḍiḫ", "fışkırttıran", "orta", ""],
-      [70, "مُنْضِخَة", "munḍiḫa", "fışkırttıran, müennes", "orta", ""],
-      [71, "مُنْضِخَان", "munḍiḫān", "fışkırttıran, iki", "orta", ""],
-      [72, "مُنْضِخَتَان", "munḍiḫatān", "fışkırttıran, iki, müennes", "orta", ""],
-      [73, "مُنْضِخُون", "munḍiḫūn", "fışkırttıranlar", "orta", ""],
-      [74, "مُنْضِخِين", "munḍiḫīn", "fışkırttıranlar", "orta", ""],
-      [75, "مُنْضِخَات", "munḍiḫāt", "fışkırttıranlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُنْضَخ", "munḍaḫ", "fışkırttırılan", "orta", ""],
-      [77, "مُنْضَخَة", "munḍaḫa", "fışkırttırılan, müennes", "orta", ""],
-      [78, "مُنْضَخَان", "munḍaḫān", "fışkırttırılan, iki", "orta", ""],
-      [79, "مُنْضَخَتَان", "munḍaḫatān", "fışkırttırılan, iki, müennes", "orta", ""],
-      [80, "مُنْضَخُون", "munḍaḫūn", "fışkırttırılanlar", "orta", ""],
-      [81, "مُنْضَخِين", "munḍaḫīn", "fışkırttırılanlar", "orta", ""],
-      [82, "مُنْضَخَات", "munḍaḫāt", "fışkırttırılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُنْضَخ", "munḍaḫ", "fışkırttırma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَنَضُّخ", "tanaḍḍuḫ", "kendini zorlayarak fışkırtma", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَنَضُّخَة", "tanaḍḍuḫa", "bir kere kendini zorlayarak fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَنَضِّخ", "mutanaḍḍiḫ", "kendini zorlayarak fışkırtan", "orta", ""],
-      [87, "مُتَنَضِّخَة", "mutanaḍḍiḫa", "kendini zorlayarak fışkırtan, müennes", "orta", ""],
-      [88, "مُتَنَضِّخَان", "mutanaḍḍiḫān", "kendini zorlayarak fışkırtan, iki", "orta", ""],
-      [89, "مُتَنَضِّخَتَان", "mutanaḍḍiḫatān", "kendini zorlayarak fışkırtan, iki, müennes", "orta", ""],
-      [90, "مُتَنَضِّخُون", "mutanaḍḍiḫūn", "kendini zorlayarak fışkırtanlar", "orta", ""],
-      [91, "مُتَنَضِّخِين", "mutanaḍḍiḫīn", "kendini zorlayarak fışkırtanlar", "orta", ""],
-      [92, "مُتَنَضِّخَات", "mutanaḍḍiḫāt", "kendini zorlayarak fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَنَضَّخ", "mutanaḍḍaḫ", "kendini zorlayarak fışkırtılan", "orta", ""],
-      [94, "مُتَنَضَّخَة", "mutanaḍḍaḫa", "kendini zorlayarak fışkırtılan, müennes", "orta", ""],
-      [95, "مُتَنَضَّخَان", "mutanaḍḍaḫān", "kendini zorlayarak fışkırtılan, iki", "orta", ""],
-      [96, "مُتَنَضَّخَتَان", "mutanaḍḍaḫatān", "kendini zorlayarak fışkırtılan, iki, müennes", "orta", ""],
-      [97, "مُتَنَضَّخُون", "mutanaḍḍaḫūn", "kendini zorlayarak fışkırtılanlar", "orta", ""],
-      [98, "مُتَنَضَّخِين", "mutanaḍḍaḫīn", "kendini zorlayarak fışkırtılanlar", "orta", ""],
-      [99, "مُتَنَضَّخَات", "mutanaḍḍaḫāt", "kendini zorlayarak fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَنَضَّخ", "mutanaḍḍaḫ", "kendini zorlayarak fışkırtma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَنَاضُخ", "tanāḍuḫ", "birbirine fışkırtma", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَنَاضُخَة", "tanāḍuḫa", "bir kere birbirine fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَنَاضِخ", "mutanāḍiḫ", "birbirine fışkırtan", "orta", ""],
-      [104, "مُتَنَاضِخَة", "mutanāḍiḫa", "birbirine fışkırtan, müennes", "orta", ""],
-      [105, "مُتَنَاضِخَان", "mutanāḍiḫān", "birbirine fışkırtan, iki", "orta", ""],
-      [106, "مُتَنَاضِخَتَان", "mutanāḍiḫatān", "birbirine fışkırtan, iki, müennes", "orta", ""],
-      [107, "مُتَنَاضِخُون", "mutanāḍiḫūn", "birbirine fışkırtanlar", "orta", ""],
-      [108, "مُتَنَاضِخِين", "mutanāḍiḫīn", "birbirine fışkırtanlar", "orta", ""],
-      [109, "مُتَنَاضِخَات", "mutanāḍiḫāt", "birbirine fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَنَاضَخ", "mutanāḍaḫ", "birbirine fışkırtılan", "orta", ""],
-      [111, "مُتَنَاضَخَة", "mutanāḍaḫa", "birbirine fışkırtılan, müennes", "orta", ""],
-      [112, "مُتَنَاضَخَان", "mutanāḍaḫān", "birbirine fışkırtılan, iki", "orta", ""],
-      [113, "مُتَنَاضَخَتَان", "mutanāḍaḫatān", "birbirine fışkırtılan, iki, müennes", "orta", ""],
-      [114, "مُتَنَاضَخُون", "mutanāḍaḫūn", "birbirine fışkırtılanlar", "orta", ""],
-      [115, "مُتَنَاضَخِين", "mutanāḍaḫīn", "birbirine fışkırtılanlar", "orta", ""],
-      [116, "مُتَنَاضَخَات", "mutanāḍaḫāt", "birbirine fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَنَاضَخ", "mutanāḍaḫ", "birbirine fışkırtma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْنِضَاخ", "inniḍāḫ", "fışkırtılma", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْنِضَاخَة", "inniḍāḫa", "bir kere fışkırtılma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْنَضِخ", "munnaḍiḫ", "fışkırtılan", "orta", ""],
-      [121, "مُنْنَضِخَة", "munnaḍiḫa", "fışkırtılan, müennes", "orta", ""],
-      [122, "مُنْنَضِخَان", "munnaḍiḫān", "fışkırtılan, iki", "orta", ""],
-      [123, "مُنْنَضِخَتَان", "munnaḍiḫatān", "fışkırtılan, iki, müennes", "orta", ""],
-      [124, "مُنْنَضِخُون", "munnaḍiḫūn", "fışkırtılanlar", "orta", ""],
-      [125, "مُنْنَضِخِين", "munnaḍiḫīn", "fışkırtılanlar", "orta", ""],
-      [126, "مُنْنَضِخَات", "munnaḍiḫāt", "fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْنَضَخ", "munnaḍaḫ", "fışkırtılan", "orta", ""],
-      [128, "مُنْنَضَخَة", "munnaḍaḫa", "fışkırtılan, müennes", "orta", ""],
-      [129, "مُنْنَضَخَان", "munnaḍaḫān", "fışkırtılan, iki", "orta", ""],
-      [130, "مُنْنَضَخَتَان", "munnaḍaḫatān", "fışkırtılan, iki, müennes", "orta", ""],
-      [131, "مُنْنَضَخُون", "munnaḍaḫūn", "fışkırtılanlar", "orta", ""],
-      [132, "مُنْنَضَخِين", "munnaḍaḫīn", "fışkırtılanlar", "orta", ""],
-      [133, "مُنْنَضَخَات", "munnaḍaḫāt", "fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْنَضَخ", "munnaḍaḫ", "fışkırtılma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِنْتِضَاخ", "intiḍāḫ", "kendisi için fışkırtma", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِنْتِضَاخَة", "intiḍāḫa", "bir kere kendisi için fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُنْتَضِخ", "muntaḍiḫ", "kendisi için fışkırtan", "orta", ""],
-      [139, "مُنْتَضِخَة", "muntaḍiḫa", "kendisi için fışkırtan, müennes", "orta", ""],
-      [140, "مُنْتَضِخَان", "muntaḍiḫān", "kendisi için fışkırtan, iki", "orta", ""],
-      [141, "مُنْتَضِخَتَان", "muntaḍiḫatān", "kendisi için fışkırtan, iki, müennes", "orta", ""],
-      [142, "مُنْتَضِخُون", "muntaḍiḫūn", "kendisi için fışkırtanlar", "orta", ""],
-      [143, "مُنْتَضِخِين", "muntaḍiḫīn", "kendisi için fışkırtanlar", "orta", ""],
-      [144, "مُنْتَضِخَات", "muntaḍiḫāt", "kendisi için fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُنْتَضَخ", "muntaḍaḫ", "kendisi için fışkırtılan", "orta", ""],
-      [146, "مُنْتَضَخَة", "muntaḍaḫa", "kendisi için fışkırtılan, müennes", "orta", ""],
-      [147, "مُنْتَضَخَان", "muntaḍaḫān", "kendisi için fışkırtılan, iki", "orta", ""],
-      [148, "مُنْتَضَخَتَان", "muntaḍaḫatān", "kendisi için fışkırtılan, iki, müennes", "orta", ""],
-      [149, "مُنْتَضَخُون", "muntaḍaḫūn", "kendisi için fışkırtılanlar", "orta", ""],
-      [150, "مُنْتَضَخِين", "muntaḍaḫīn", "kendisi için fışkırtılanlar", "orta", ""],
-      [151, "مُنْتَضَخَات", "muntaḍaḫāt", "kendisi için fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُنْتَضَخ", "muntaḍaḫ", "kendisi için fışkırtma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX": [
-      [499, "اِنْضِخَاخ", "inḍiḫāḫ", "iyiden iyiye fışkırtma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX": [
-      [500, "مُنْضَخّ", "munḍaḫḫ", "iyiden iyiye fışkırtan", "kontrol", ""],
-      [501, "مُنْضَخَّة", "munḍaḫḫa", "iyiden iyiye fışkırtan, müennes", "kontrol", ""],
-      [502, "مُنْضَخَّان", "munḍaḫḫān", "iyiden iyiye fışkırtan, iki", "kontrol", ""],
-      [503, "مُنْضَخَّتَان", "munḍaḫḫatān", "iyiden iyiye fışkırtan, iki, müennes", "kontrol", ""],
-      [504, "مُنْضَخُّون", "munḍaḫḫūn", "iyiden iyiye fışkırtanlar", "kontrol", ""],
-      [505, "مُنْضَخِّين", "munḍaḫḫīn", "iyiden iyiye fışkırtanlar", "kontrol", ""],
-      [506, "مُنْضَخَّات", "munḍaḫḫāt", "iyiden iyiye fışkırtanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِنْضَاخ", "istinḍāḫ", "fışkırtmayı isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِنْضَاخَة", "istinḍāḫa", "bir kere fışkırtmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَنْضِخ", "mustanḍiḫ", "fışkırtmayı isteyen", "orta", ""],
-      [179, "مُسْتَنْضِخَة", "mustanḍiḫa", "fışkırtmayı isteyen, müennes", "orta", ""],
-      [180, "مُسْتَنْضِخَان", "mustanḍiḫān", "fışkırtmayı isteyen, iki", "orta", ""],
-      [181, "مُسْتَنْضِخَتَان", "mustanḍiḫatān", "fışkırtmayı isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَنْضِخُون", "mustanḍiḫūn", "fışkırtmayı isteyenler", "orta", ""],
-      [183, "مُسْتَنْضِخِين", "mustanḍiḫīn", "fışkırtmayı isteyenler", "orta", ""],
-      [184, "مُسْتَنْضِخَات", "mustanḍiḫāt", "fışkırtmayı isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَنْضَخ", "mustanḍaḫ", "fışkırtması istenen", "orta", ""],
-      [186, "مُسْتَنْضَخَة", "mustanḍaḫa", "fışkırtması istenen, müennes", "orta", ""],
-      [187, "مُسْتَنْضَخَان", "mustanḍaḫān", "fışkırtması istenen, iki", "orta", ""],
-      [188, "مُسْتَنْضَخَتَان", "mustanḍaḫatān", "fışkırtması istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَنْضَخُون", "mustanḍaḫūn", "fışkırtması istenenler", "orta", ""],
-      [190, "مُسْتَنْضَخِين", "mustanḍaḫīn", "fışkırtması istenenler", "orta", ""],
-      [191, "مُسْتَنْضَخَات", "mustanḍaḫāt", "fışkırtması istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَنْضَخ", "mustanḍaḫ", "fışkırtmayı isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI": [
-      [507, "اِنْضِيخَاخ", "inḍīḫāḫ", "büsbütün fışkırtma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI": [
-      [508, "مُنْضَاخّ", "munḍāḫḫ", "büsbütün fışkırtan", "kontrol", ""],
-      [509, "مُنْضَاخَّة", "munḍāḫḫa", "büsbütün fışkırtan, müennes", "kontrol", ""],
-      [510, "مُنْضَاخَّان", "munḍāḫḫān", "büsbütün fışkırtan, iki", "kontrol", ""],
-      [511, "مُنْضَاخَّتَان", "munḍāḫḫatān", "büsbütün fışkırtan, iki, müennes", "kontrol", ""],
-      [512, "مُنْضَاخُّون", "munḍāḫḫūn", "büsbütün fışkırtanlar", "kontrol", ""],
-      [513, "مُنْضَاخِّين", "munḍāḫḫīn", "büsbütün fışkırtanlar", "kontrol", ""],
-      [514, "مُنْضَاخَّات", "munḍāḫḫāt", "büsbütün fışkırtanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII": [
-      [515, "اِنْضِوْضَاخ", "inḍiwḍāḫ", "aşırı fışkırtma", "orta", ""]
-    ],
-    "masdar · bâb XIII": [
-      [516, "اِنْضِوَّاخ", "inḍiwwāḫ", "aşırı fışkırtma", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "نَاضِخ", "nāḍiḫ", "fışkırtan", "orta", ""],
-      [214, "نَاضِخَة", "nāḍiḫa", "fışkırtan, müennes", "orta", ""],
-      [215, "نَاضِخَان", "nāḍiḫān", "fışkırtan, iki", "orta", ""],
-      [216, "نَاضِخَتَان", "nāḍiḫatān", "fışkırtan, iki, müennes", "orta", ""],
-      [217, "نَاضِخُون", "nāḍiḫūn", "fışkırtanlar", "orta", ""],
-      [218, "نَاضِخِين", "nāḍiḫīn", "fışkırtanlar", "orta", ""],
-      [219, "نَاضِخَات", "nāḍiḫāt", "fışkırtanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَنْضُوخ", "manḍūḫ", "fışkırtılan", "orta", ""],
-      [221, "مَنْضُوخَة", "manḍūḫa", "fışkırtılan, müennes", "orta", ""],
-      [222, "مَنْضُوخَان", "manḍūḫān", "fışkırtılan, iki", "orta", ""],
-      [223, "مَنْضُوخَتَان", "manḍūḫatān", "fışkırtılan, iki, müennes", "orta", ""],
-      [224, "مَنْضُوخُون", "manḍūḫūn", "fışkırtılanlar", "orta", ""],
-      [225, "مَنْضُوخِين", "manḍūḫīn", "fışkırtılanlar", "orta", ""],
-      [226, "مَنْضُوخَات", "manḍūḫāt", "fışkırtılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَنْضَخ", "manḍaḫ", "fışkırtma yeri, vakti", "orta", ""],
-      [228, "مَنْضَخَان", "manḍaḫān", "fışkırtma yeri, vakti, iki", "orta", ""],
-      [229, "مَنْضِخ", "manḍiḫ", "fışkırtma yeri, vakti", "orta", ""],
-      [230, "مَنْضِخَان", "manḍiḫān", "fışkırtma yeri, vakti, iki", "orta", ""],
-      [231, "مَنْضَخَة", "manḍaḫa", "fışkırtmanın bol olduğu yer", "orta", ""],
-      [232, "مَنْضَخَتَان", "manḍaḫatān", "fışkırtmanın bol olduğu yer, iki", "orta", ""],
-      [233, "مَنْضِخَة", "manḍiḫa", "fışkırtmanın bol olduğu yer", "orta", ""],
-      [234, "مَنْضِخَتَان", "manḍiḫatān", "fışkırtmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَنْضُخَة", "manḍuḫa", "fışkırtma yeri, vakti", "orta", ""],
-      [248, "مَنْضُخَتَان", "manḍuḫatān", "fışkırtma yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِنْضَخ", "minḍaḫ", "fışkırtma âleti", "orta", ""],
-      [236, "مِنْضَخَان", "minḍaḫān", "fışkırtma âleti, iki", "orta", ""],
-      [237, "مِنْضَاخ", "minḍāḫ", "fışkırtma âleti", "orta", ""],
-      [238, "مِنْضَاخَان", "minḍāḫān", "fışkırtma âleti, iki", "orta", ""],
-      [239, "مِنْضَخَة", "minḍaḫa", "fışkırtma âleti", "orta", ""],
-      [240, "مِنْضَخَتَان", "minḍaḫatān", "fışkırtma âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَنْضَخ", "ʾanḍaḫ", "daha çok fışkırtan", "orta", ""],
-      [242, "أَنْضَخَان", "ʾanḍaḫān", "daha çok fışkırtan, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "نُضْخَى", "nuḍḫā", "daha çok fışkırtan", "orta", ""],
-      [244, "نُضْخَيَان", "nuḍḫayān", "daha çok fışkırtan, iki", "orta", ""],
-      [245, "نَضْخَاء", "naḍḫāʾ", "daha çok fışkırtan", "orta", ""],
-      [246, "نَضْخَاآن", "naḍḫāʾān", "daha çok fışkırtan, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "نُضَيْخ", "nuḍayḫ", "azıcık fışkırtma", "orta", ""],
-      [250, "نُضَيْخَان", "nuḍayḫān", "azıcık fışkırtma, iki", "orta", ""],
-      [251, "نُضَيْخَة", "nuḍayḫa", "azıcık fışkırtma", "orta", ""],
-      [252, "نُضَيْخَتَان", "nuḍayḫatān", "azıcık fışkırtma, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَنْضَخ", "manḍaḫ", "fışkırtma", "orta", ""],
-      [254, "مَنْضَخَان", "manḍaḫān", "fışkırtma, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "نَضْخَة", "naḍḫa", "bir kere fışkırtma", "orta", ""],
-      [256, "نَضْخَتَان", "naḍḫatān", "bir kere fışkırtma, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "نِضْخَة", "niḍḫa", "fışkırtma tarzı", "orta", ""],
-      [258, "نِضْخَتَان", "niḍḫatān", "fışkırtma tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "نَضِيخ", "naḍīḫ", "her daim fışkırtan", "orta", ""],
-      [260, "نَضِيخَة", "naḍīḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [261, "نَضِيخَان", "naḍīḫān", "her daim fışkırtan, iki", "orta", ""],
-      [262, "نَضِيخَتَان", "naḍīḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [263, "نَضِيخُون", "naḍīḫūn", "her daim fışkırtanlar", "orta", ""],
-      [264, "نَضِيخِين", "naḍīḫīn", "her daim fışkırtanlar", "orta", ""],
-      [265, "نَضِيخَات", "naḍīḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [266, "نَضُوخ", "naḍūḫ", "her daim fışkırtan", "orta", ""],
-      [267, "نَضُوخَة", "naḍūḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [268, "نَضُوخَان", "naḍūḫān", "her daim fışkırtan, iki", "orta", ""],
-      [269, "نَضُوخَتَان", "naḍūḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [270, "نَضُوخُون", "naḍūḫūn", "her daim fışkırtanlar", "orta", ""],
-      [271, "نَضُوخِين", "naḍūḫīn", "her daim fışkırtanlar", "orta", ""],
-      [272, "نَضُوخَات", "naḍūḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [273, "نَضِخ", "naḍiḫ", "her daim fışkırtan", "orta", ""],
-      [274, "نَضِخَة", "naḍiḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [275, "نَضِخَان", "naḍiḫān", "her daim fışkırtan, iki", "orta", ""],
-      [276, "نَضِخَتَان", "naḍiḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [277, "نَضِخُون", "naḍiḫūn", "her daim fışkırtanlar", "orta", ""],
-      [278, "نَضِخِين", "naḍiḫīn", "her daim fışkırtanlar", "orta", ""],
-      [279, "نَضِخَات", "naḍiḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [280, "نَضُخ", "naḍuḫ", "her daim fışkırtan", "orta", ""],
-      [281, "نَضُخَة", "naḍuḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [282, "نَضُخَان", "naḍuḫān", "her daim fışkırtan, iki", "orta", ""],
-      [283, "نَضُخَتَان", "naḍuḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [284, "نَضُخُون", "naḍuḫūn", "her daim fışkırtanlar", "orta", ""],
-      [285, "نَضُخِين", "naḍuḫīn", "her daim fışkırtanlar", "orta", ""],
-      [286, "نَضُخَات", "naḍuḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [287, "نَضَخ", "naḍaḫ", "her daim fışkırtan", "orta", ""],
-      [288, "نَضَخَة", "naḍaḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [289, "نَضَخَان", "naḍaḫān", "her daim fışkırtan, iki", "orta", ""],
-      [290, "نَضَخَتَان", "naḍaḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [291, "نَضَخُون", "naḍaḫūn", "her daim fışkırtanlar", "orta", ""],
-      [292, "نَضَخِين", "naḍaḫīn", "her daim fışkırtanlar", "orta", ""],
-      [293, "نَضَخَات", "naḍaḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [294, "نَضْخ", "naḍḫ", "her daim fışkırtan", "orta", ""],
-      [295, "نَضْخَة", "naḍḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [296, "نَضْخَان", "naḍḫān", "her daim fışkırtan, iki", "orta", ""],
-      [297, "نَضْخَتَان", "naḍḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [298, "نَضْخُون", "naḍḫūn", "her daim fışkırtanlar", "orta", ""],
-      [299, "نَضْخِين", "naḍḫīn", "her daim fışkırtanlar", "orta", ""],
-      [300, "نَضْخَات", "naḍḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [301, "نُضُخ", "nuḍuḫ", "her daim fışkırtan", "orta", ""],
-      [302, "نُضُخَة", "nuḍuḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [303, "نُضُخَان", "nuḍuḫān", "her daim fışkırtan, iki", "orta", ""],
-      [304, "نُضُخَتَان", "nuḍuḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [305, "نُضُخُون", "nuḍuḫūn", "her daim fışkırtanlar", "orta", ""],
-      [306, "نُضُخِين", "nuḍuḫīn", "her daim fışkırtanlar", "orta", ""],
-      [307, "نُضُخَات", "nuḍuḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [308, "نَضْخَان", "naḍḫān", "her daim fışkırtan", "orta", ""],
-      [309, "نَضْخَانَة", "naḍḫāna", "her daim fışkırtan, müennes", "orta", ""],
-      [310, "نَضْخَانَان", "naḍḫānān", "her daim fışkırtan, iki", "orta", ""],
-      [311, "نَضْخَانَتَان", "naḍḫānatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [312, "نَضْخَانُون", "naḍḫānūn", "her daim fışkırtanlar", "orta", ""],
-      [313, "نَضْخَانِين", "naḍḫānīn", "her daim fışkırtanlar", "orta", ""],
-      [314, "نَضْخَانَات", "naḍḫānāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [315, "نُضَاخ", "nuḍāḫ", "her daim fışkırtan", "orta", ""],
-      [316, "نُضَاخَة", "nuḍāḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [317, "نُضَاخَان", "nuḍāḫān", "her daim fışkırtan, iki", "orta", ""],
-      [318, "نُضَاخَتَان", "nuḍāḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [319, "نُضَاخُون", "nuḍāḫūn", "her daim fışkırtanlar", "orta", ""],
-      [320, "نُضَاخِين", "nuḍāḫīn", "her daim fışkırtanlar", "orta", ""],
-      [321, "نُضَاخَات", "nuḍāḫāt", "her daim fışkırtanlar, müennes", "orta", ""],
-      [322, "نَضَاخ", "naḍāḫ", "her daim fışkırtan", "orta", ""],
-      [323, "نَضَاخَة", "naḍāḫa", "her daim fışkırtan, müennes", "orta", ""],
-      [324, "نَضَاخَان", "naḍāḫān", "her daim fışkırtan, iki", "orta", ""],
-      [325, "نَضَاخَتَان", "naḍāḫatān", "her daim fışkırtan, iki, müennes", "orta", ""],
-      [326, "نَضَاخُون", "naḍāḫūn", "her daim fışkırtanlar", "orta", ""],
-      [327, "نَضَاخِين", "naḍāḫīn", "her daim fışkırtanlar", "orta", ""],
-      [328, "نَضَاخَات", "naḍāḫāt", "her daim fışkırtanlar, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "نَضَّاخ", "naḍḍāḫ", "işi fışkırtma olan", "orta", ""],
-      [330, "نَضَّاخَة", "naḍḍāḫa", "işi fışkırtma olan, müennes", "orta", ""],
-      [331, "نَضَّاخَان", "naḍḍāḫān", "işi fışkırtma olan, iki", "orta", ""],
-      [332, "نَضَّاخَتَان", "naḍḍāḫatān", "işi fışkırtma olan, iki, müennes", "orta", ""],
-      [333, "نَضَّاخُون", "naḍḍāḫūn", "işi fışkırtma olanlar", "orta", ""],
-      [334, "نَضَّاخِين", "naḍḍāḫīn", "işi fışkırtma olanlar", "orta", ""],
-      [335, "نَضَّاخَات", "naḍḍāḫāt", "işi fışkırtma olanlar, müennes", "orta", ""],
-      [336, "نَضَّاخَة", "naḍḍāḫa", "pek çok fışkırtan", "orta", ""],
-      [337, "نَضَّاخَتَان", "naḍḍāḫatān", "pek çok fışkırtan, iki", "orta", ""],
-      [338, "نَضَّاخَات", "naḍḍāḫāt", "pek çok fışkırtanlar, müennes", "orta", ""],
-      [339, "نَضُوخ", "naḍūḫ", "çok fışkırtan", "orta", ""],
-      [340, "نَضُوخَة", "naḍūḫa", "çok fışkırtan, müennes", "orta", ""],
-      [341, "نَضُوخَان", "naḍūḫān", "çok fışkırtan, iki", "orta", ""],
-      [342, "نَضُوخَتَان", "naḍūḫatān", "çok fışkırtan, iki, müennes", "orta", ""],
-      [343, "نَضُوخُون", "naḍūḫūn", "çok fışkırtanlar", "orta", ""],
-      [344, "نَضُوخِين", "naḍūḫīn", "çok fışkırtanlar", "orta", ""],
-      [345, "نَضُوخَات", "naḍūḫāt", "çok fışkırtanlar, müennes", "orta", ""],
-      [346, "نَضُّوخ", "naḍḍūḫ", "pek çok fışkırtan", "orta", ""],
-      [347, "نَضُّوخَة", "naḍḍūḫa", "pek çok fışkırtan, müennes", "orta", ""],
-      [348, "نَضُّوخَان", "naḍḍūḫān", "pek çok fışkırtan, iki", "orta", ""],
-      [349, "نَضُّوخَتَان", "naḍḍūḫatān", "pek çok fışkırtan, iki, müennes", "orta", ""],
-      [350, "نَضُّوخُون", "naḍḍūḫūn", "pek çok fışkırtanlar", "orta", ""],
-      [351, "نَضُّوخِين", "naḍḍūḫīn", "pek çok fışkırtanlar", "orta", ""],
-      [352, "نَضُّوخَات", "naḍḍūḫāt", "pek çok fışkırtanlar, müennes", "orta", ""],
-      [353, "نِضِّيخ", "niḍḍīḫ", "fışkırtmada aşırı giden", "orta", ""],
-      [354, "نِضِّيخَة", "niḍḍīḫa", "fışkırtmada aşırı giden, müennes", "orta", ""],
-      [355, "نِضِّيخَان", "niḍḍīḫān", "fışkırtmada aşırı giden, iki", "orta", ""],
-      [356, "نِضِّيخَتَان", "niḍḍīḫatān", "fışkırtmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "نِضِّيخُون", "niḍḍīḫūn", "fışkırtmada aşırı gidenler", "orta", ""],
-      [358, "نِضِّيخِين", "niḍḍīḫīn", "fışkırtmada aşırı gidenler", "orta", ""],
-      [359, "نِضِّيخَات", "niḍḍīḫāt", "fışkırtmada aşırı gidenler, müennes", "orta", ""],
-      [360, "نُضَّاخ", "nuḍḍāḫ", "son derece fışkırtan", "orta", ""],
-      [361, "نُضَّاخَة", "nuḍḍāḫa", "son derece fışkırtan, müennes", "orta", ""],
-      [362, "نُضَّاخَان", "nuḍḍāḫān", "son derece fışkırtan, iki", "orta", ""],
-      [363, "نُضَّاخَتَان", "nuḍḍāḫatān", "son derece fışkırtan, iki, müennes", "orta", ""],
-      [364, "نُضَّاخُون", "nuḍḍāḫūn", "son derece fışkırtanlar", "orta", ""],
-      [365, "نُضَّاخِين", "nuḍḍāḫīn", "son derece fışkırtanlar", "orta", ""],
-      [366, "نُضَّاخَات", "nuḍḍāḫāt", "son derece fışkırtanlar, müennes", "orta", ""],
-      [367, "مِنْضَاخ", "minḍāḫ", "fışkırtmayı âdet edinmiş", "orta", ""],
-      [368, "مِنْضَاخَة", "minḍāḫa", "fışkırtmayı âdet edinmiş, müennes", "orta", ""],
-      [369, "مِنْضَاخَان", "minḍāḫān", "fışkırtmayı âdet edinmiş, iki", "orta", ""],
-      [370, "مِنْضَاخَتَان", "minḍāḫatān", "fışkırtmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِنْضَاخُون", "minḍāḫūn", "fışkırtmayı âdet edinmişler", "orta", ""],
-      [372, "مِنْضَاخِين", "minḍāḫīn", "fışkırtmayı âdet edinmişler", "orta", ""],
-      [373, "مِنْضَاخَات", "minḍāḫāt", "fışkırtmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِنْضِيخ", "minḍīḫ", "fışkırtmaya düşkün", "orta", ""],
-      [375, "مِنْضِيخَة", "minḍīḫa", "fışkırtmaya düşkün, müennes", "orta", ""],
-      [376, "مِنْضِيخَان", "minḍīḫān", "fışkırtmaya düşkün, iki", "orta", ""],
-      [377, "مِنْضِيخَتَان", "minḍīḫatān", "fışkırtmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِنْضِيخُون", "minḍīḫūn", "fışkırtmaya düşkünler", "orta", ""],
-      [379, "مِنْضِيخِين", "minḍīḫīn", "fışkırtmaya düşkünler", "orta", ""],
-      [380, "مِنْضِيخَات", "minḍīḫāt", "fışkırtmaya düşkünler, müennes", "orta", ""],
-      [381, "نَضِيخ", "naḍīḫ", "çok fışkırtan", "orta", ""],
-      [382, "نَضِيخَة", "naḍīḫa", "çok fışkırtan, müennes", "orta", ""],
-      [383, "نَضِيخَان", "naḍīḫān", "çok fışkırtan, iki", "orta", ""],
-      [384, "نَضِيخَتَان", "naḍīḫatān", "çok fışkırtan, iki, müennes", "orta", ""],
-      [385, "نَضِيخُون", "naḍīḫūn", "çok fışkırtanlar", "orta", ""],
-      [386, "نَضِيخِين", "naḍīḫīn", "çok fışkırtanlar", "orta", ""],
-      [387, "نَضِيخَات", "naḍīḫāt", "çok fışkırtanlar, müennes", "orta", ""],
-      [388, "نَضَّخ", "naḍḍaḫ", "çok fışkırtan", "orta", ""],
-      [389, "نَضَّخَة", "naḍḍaḫa", "çok fışkırtan, müennes", "orta", ""],
-      [390, "نَضَّخَان", "naḍḍaḫān", "çok fışkırtan, iki", "orta", ""],
-      [391, "نَضَّخَتَان", "naḍḍaḫatān", "çok fışkırtan, iki, müennes", "orta", ""],
-      [392, "نَضَّخُون", "naḍḍaḫūn", "çok fışkırtanlar", "orta", ""],
-      [393, "نَضَّخِين", "naḍḍaḫīn", "çok fışkırtanlar", "orta", ""],
-      [394, "نَضَّخَات", "naḍḍaḫāt", "çok fışkırtanlar, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "نَضْخِيّ", "naḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [397, "نَضَخِيّ", "naḍaḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [399, "نِضْخِيّ", "niḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [401, "نُضْخِيّ", "nuḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [403, "نِضَاخِيّ", "niḍāḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [405, "نَاضِخِيّ", "nāḍiḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [407, "مَنْضُوخِيّ", "manḍūḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [409, "نَضِيخِيّ", "naḍīḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [411, "مَنْضَخِيّ", "manḍaḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [413, "تَنْضِيخِيّ", "tanḍīḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [415, "تَنَاضُخِيّ", "tanāḍuḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [417, "إِنْضَاخِيّ", "ʾinḍāḫiyy", "fışkırtma ile ilgili", "orta", ""],
-      [419, "اِنْتِضَاخِيّ", "intiḍāḫiyy", "fışkırtma ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "نَضْخِيَّة", "naḍḫiyya", "fışkırtanlık", "orta", ""],
-      [398, "نَضَخِيَّة", "naḍaḫiyya", "fışkırtanlık", "orta", ""],
-      [400, "نِضْخِيَّة", "niḍḫiyya", "fışkırtanlık", "orta", ""],
-      [402, "نُضْخِيَّة", "nuḍḫiyya", "fışkırtanlık", "orta", ""],
-      [404, "نِضَاخِيَّة", "niḍāḫiyya", "fışkırtanlık", "orta", ""],
-      [406, "نَاضِخِيَّة", "nāḍiḫiyya", "fışkırtanlık", "orta", ""],
-      [408, "مَنْضُوخِيَّة", "manḍūḫiyya", "fışkırtanlık", "orta", ""],
-      [410, "نَضِيخِيَّة", "naḍīḫiyya", "fışkırtanlık", "orta", ""],
-      [412, "مَنْضَخِيَّة", "manḍaḫiyya", "fışkırtanlık", "orta", ""],
-      [414, "تَنْضِيخِيَّة", "tanḍīḫiyya", "fışkırtanlık", "orta", ""],
-      [416, "تَنَاضُخِيَّة", "tanāḍuḫiyya", "fışkırtanlık", "orta", ""],
-      [418, "إِنْضَاخِيَّة", "ʾinḍāḫiyya", "fışkırtanlık", "orta", ""],
-      [420, "اِنْتِضَاخِيَّة", "intiḍāḫiyya", "fışkırtanlık", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "نَضَاخ", "naḍāḫ", "fışkırtma", "orta", ""],
-      [422, "نُضُوخ", "nuḍūḫ", "fışkırtma", "orta", ""],
-      [423, "نِضَاخ", "niḍāḫ", "fışkırtma", "orta", ""],
-      [424, "نُضْخ", "nuḍḫ", "fışkırtma", "orta", ""],
-      [425, "نَضَاخَة", "naḍāḫa", "fışkırtma", "orta", ""],
-      [426, "نِضَاخَة", "niḍāḫa", "fışkırtma", "orta", ""],
-      [427, "نُضُوخَة", "nuḍūḫa", "fışkırtma", "orta", ""],
-      [428, "نَضْخ", "naḍḫ", "fışkırtma", "orta", ""],
-      [429, "نِضْخ", "niḍḫ", "fışkırtma", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "نَاضُوخ", "nāḍūḫ", "fışkırtma türünden şey", "orta", ""],
-      [432, "نَضَخَة", "naḍaḫa", "fışkırtma türünden şey", "orta", ""],
-      [433, "نُضَخَة", "nuḍaḫa", "fışkırtma türünden şey", "orta", ""],
-      [434, "أُنْضُوخَة", "ʾunḍūḫa", "fışkırtma türünden şey", "orta", ""],
-      [435, "نَوْضَخ", "nawḍaḫ", "fışkırtma türünden şey", "orta", ""],
-      [437, "نَيْضَخ", "nayḍaḫ", "fışkırtma türünden şey", "orta", ""],
-      [439, "نَضْخ", "naḍḫ", "fışkırtma türünden şey", "orta", ""],
-      [441, "نَضَخ", "naḍaḫ", "fışkırtma türünden şey", "orta", ""],
-      [443, "نِضْخ", "niḍḫ", "fışkırtma türünden şey", "orta", ""],
-      [445, "نُضْخ", "nuḍḫ", "fışkırtma türünden şey", "orta", ""],
-      [447, "نَضِيخ", "naḍīḫ", "fışkırtma türünden şey", "orta", ""],
-      [449, "نِضَخ", "niḍaḫ", "fışkırtma türünden şey", "orta", ""],
-      [451, "نُضُخ", "nuḍuḫ", "fışkırtma türünden şey", "orta", ""],
-      [453, "نَضَاخ", "naḍāḫ", "fışkırtma türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "نَاضُوخَة", "nāḍūḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [436, "نَوْضَخَة", "nawḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [438, "نَيْضَخَة", "nayḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [440, "نَضْخَة", "naḍḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [442, "نَضَخَة", "naḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [444, "نِضْخَة", "niḍḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [446, "نُضْخَة", "nuḍḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [448, "نَضِيخَة", "naḍīḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [450, "نِضَخَة", "niḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [452, "نُضُخَة", "nuḍuḫa", "fışkırtma türünden bir tane", "orta", ""],
-      [454, "نَضَاخَة", "naḍāḫa", "fışkırtma türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَنْضَاخ", "ʾanḍāḫ", "fışkırtmalar", "orta", ""],
-      [456, "أَنْضِخَة", "ʾanḍiḫa", "fışkırtmalar", "orta", ""],
-      [457, "أَنَاضِخ", "ʾanāḍiḫ", "fışkırtmalar", "orta", ""],
-      [458, "أَنَاضِيخ", "ʾanāḍīḫ", "fışkırtmalar", "orta", ""],
-      [459, "نُضُوخ", "nuḍūḫ", "fışkırtmalar", "orta", ""],
-      [460, "نُضُخ", "nuḍuḫ", "fışkırtmalar", "orta", ""],
-      [461, "نِضَاخ", "niḍāḫ", "fışkırtmalar", "orta", ""],
-      [462, "نِضَخ", "niḍaḫ", "fışkırtmalar", "orta", ""],
-      [463, "نِضَخَة", "niḍaḫa", "fışkırtmalar", "orta", ""],
-      [464, "نُضَخ", "nuḍaḫ", "fışkırtmalar", "orta", ""],
-      [465, "نُضَخاء", "nuḍaḫāʾ", "fışkırtmalar", "orta", ""],
-      [466, "نَضَخَة", "naḍaḫa", "fışkırtmalar", "orta", ""],
-      [467, "نُضَّاخ", "nuḍḍāḫ", "fışkırtmalar", "orta", ""],
-      [468, "نَضَاخ", "naḍāḫ", "fışkırtmalar", "orta", ""],
-      [469, "نَضَخ", "naḍaḫ", "fışkırtmalar", "orta", ""],
-      [470, "مَنَاضِخ", "manāḍiḫ", "fışkırtmalar", "orta", ""],
-      [471, "مَنَاضِيخ", "manāḍīḫ", "fışkırtmalar", "orta", ""],
-      [472, "نَوَاضِخ", "nawāḍiḫ", "fışkırtmalar", "orta", ""],
-      [473, "أَنْضُخ", "ʾanḍuḫ", "fışkırtmalar", "orta", ""],
-      [474, "نُضَّخ", "nuḍḍaḫ", "fışkırtmalar", "orta", ""],
-      [475, "نَضَائِخ", "naḍāʾiḫ", "fışkırtmalar", "orta", ""],
-      [476, "نُضَيْخ", "nuḍayḫ", "fışkırtmalar", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَنْضَاخَات", "ʾanḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [478, "أَنْضِخَات", "ʾanḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [479, "أَنَاضِخَات", "ʾanāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [480, "أَنَاضِيخَات", "ʾanāḍīḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [481, "نُضُوخَات", "nuḍūḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [482, "نُضُخَات", "nuḍuḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [483, "نِضَاخَات", "niḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [484, "نِضَخَات", "niḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [485, "نِضَخَات", "niḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [486, "نُضَخَات", "nuḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [487, "نُضَخاآت", "nuḍaḫāʾāt", "fışkırtmalar topluluğu", "orta", ""],
-      [488, "نَضَخَات", "naḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [489, "نُضَّاخَات", "nuḍḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [490, "نَضَاخَات", "naḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [491, "نَضَخَات", "naḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [492, "مَنَاضِخَات", "manāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [493, "مَنَاضِيخَات", "manāḍīḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [494, "نَوَاضِخَات", "nawāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [495, "أَنْضُخَات", "ʾanḍuḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [496, "نُضَّخَات", "nuḍḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [497, "نَضَائِخَات", "naḍāʾiḫāt", "fışkırtmalar topluluğu", "orta", ""],
-      [498, "نُضَيْخَات", "nuḍayḫāt", "fışkırtmalar topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "نضخ",
-      "turkce": "Nadh: fışkırtmak, akıtmak"
-    },
-    "osmanlica_lugatler": {
-      "نَضّاخَتان": {
-        "sorgular": ["nazzahatan"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "نَضَخَ",
-        "metin": "(نَضَخَ) النُّونُ وَالضَّادُ وَالْخَاءُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ، إِلَّا أَنَّهُ أَكْثَرُ مِنْهُ. يَقُولُونَ: النَّضْخُ كَاللَّطْخِ مِنَ الشَّيْءِ يُبْقَى لَهُ أَثَرٌ. وَنَضَخَ ثَوْبَهُ بِالطِّيبِ. وَغَيْثٌ نَضَّاخٌ: غَزِيرٌ. وَعَيْنٌ نَضَّاخَةٌ: كَثِيرَةُ الْمَاءِ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "النون والضاد",
-      "baslik": "نضخ",
-      "mihveri": "فَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح. (4/2213)",
-      "sesler": "",
-      "tam_metin": "{فِيهِمَا عَينَانِ نَضَّاخَتَانِ (66)} [الرحمن: 66]\n\"النَضْخُ: شدَّة فور الماء في جَيَشانه وانفجارِه من يَنْبُوعه. وعَينٌ نَضّاخه: كثيرةُ الماء فوَّارة تجيش بالماء. قال: ما كان من سُفْلٍ إلى عُلْو فهو نَضْخ \".\n° المعنى المحوري\nفَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح.\n(4/2213)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (نض) : نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعًا إلى أعلى أو إلى الظاهر -كرشح الماء من الحجر والحِسي- في (نضض)، ونفاذ غضاضة النيوء من اللحم أو نفاذ حرارة الإنضاج إليه- في (نضج)، ونفاذ الماء من الينبوع- في نضخ، وارتفاع السحاب بعضه فوق بعض- في (نضد)، ونفاذ الطحلب من أثناء الماء إلى أعلاه مع غرابة محببة- في (نضر)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "55:66:3:1",
-      "tur": {
-        "ADJ": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "نَضَّاخَتَان": 1
-      },
-      "bicimler": {
-        "نَضَّاخَتَانِ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "NḌḪ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab NḌḪ نضخ BP – • HDAL • © SG | 17May2023 √NḌḪ “root” ▪ NḌḪ_1 ‘...’ ↗ ... ▪ NḌḪ_2 ‘...’ ↗ ... ▪ NḌḪ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘a drizzle, a gushing spring, a cascading spring, to spout water copiously’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "نضخ",
-        "u": "نضخ",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "نَضَخَ • (naḍaḵa) I (non-past يَنْضَخُ (yanḍaḵu), verbal noun نَضْخ (naḍḵ))",
-        "t": "Apparently a variant of ن ض ح (n ḍ ḥ).",
-        "s": [
-          ["ar-root", "ن ض ح (n ḍ ḥ)"]
-        ],
-        "g": ["to sprinkle; to throw, to emit", "to pump"],
-        "r": ["naḍaḵa"],
-        "el": [
-          ["ن ض ح", "Appendix:Arabic roots/ن ض ح"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "نضخ",
-        "u": "نضخ",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "نَضْخ • (naḍḵ) m",
-        "t": "Apparently a variant of ن ض ح (n ḍ ḥ).",
-        "s": [
-          ["ar-root", "ن ض ح (n ḍ ḥ)"]
-        ],
-        "g": ["verbal noun of نَضَخَ (naḍaḵa) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["نَضَخَ"],
-        "r": ["naḍḵ"],
-        "el": [
-          ["ن ض ح", "Appendix:Arabic roots/ن ض ح"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "نضخ",
-        "u": "نضخ",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "نضخ (form I)\n# نَضُخُّ (naḍuḵḵu) /na.dˤux.xu/: first-person plural non-past active indicative of ضَخَّ (ḍaḵḵa)\n# نُضَخُّ (nuḍaḵḵu) /nu.dˤax.xu/: first-person plural non-past passive indicative of ضَخَّ (ḍaḵḵa)\n# نَضُخَّ (naḍuḵḵa) /na.dˤux.xa/: first-person plural non-past active subjunctive/jussive of ضَخَّ (ḍaḵḵa)\n# نُضَخَّ (nuḍaḵḵa) /nu.dˤax.xa/: first-person plural non-past passive subjunctive/",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍuḵḵu", "ḍaḵḵa", "nuḍaḵḵu"],
-        "yol": "müştak"
-      },
-      {
-        "w": "نضخنا",
-        "u": "نضخنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضخنا (form I)\n# نَضَخْنَا (naḍaḵnā) /na.dˤax.naː/: first-person plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْنَا (nuḍiḵnā) /nu.dˤix.naː/: first-person plural past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵnā", "naḍaḵa", "nuḍiḵnā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضخت",
-        "u": "نضخت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضخت (form I)\n# نَضَخْتُ (naḍaḵtu) /na.dˤax.tu/: first-person singular past active of نَضَخَ (naḍaḵa)\n# نَضَخْتَ (naḍaḵta) /na.dˤax.ta/: second-person masculine singular past active of نَضَخَ (naḍaḵa)\n# نَضَخْتِ (naḍaḵti) /na.dˤax.ti/: second-person feminine singular past active of نَضَخَ (naḍaḵa)\n# نَضَخَتْ (naḍaḵat) /na.dˤa.xat/: third-person feminine singular past active of نَضَخَ (naḍaḵa)\n# نُ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵtu", "naḍaḵa", "naḍaḵta"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضختما",
-        "u": "نضختما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضختما (form I)\n# نَضَخْتُمَا (naḍaḵtumā) /na.dˤax.tu.maː/: second-person dual past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُمَا (nuḍiḵtumā) /nu.dˤix.tu.maː/: second-person dual past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵtumā", "naḍaḵa", "nuḍiḵtumā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضختم",
-        "u": "نضختم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضختم (form I)\n# نَضَخْتُمْ (naḍaḵtum) /na.dˤax.tum/: second-person masculine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُمْ (nuḍiḵtum) /nu.dˤix.tum/: second-person masculine plural past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵtum", "naḍaḵa", "nuḍiḵtum"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضختن",
-        "u": "نضختن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضختن (form I)\n# نَضَخْتُنَّ (naḍaḵtunna) /na.dˤax.tun.na/: second-person feminine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُنَّ (nuḍiḵtunna) /nu.dˤix.tun.na/: second-person feminine plural past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵtunna", "naḍaḵa", "nuḍiḵtunna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضختا",
-        "u": "نضختا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضختا (form I)\n# نَضَخَتَا (naḍaḵatā) /na.dˤa.xa.taː/: third-person feminine dual past active of نَضَخَ (naḍaḵa)\n# نُضِخَتَا (nuḍiḵatā) /nu.dˤi.xa.taː/: third-person feminine dual past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵatā", "naḍaḵa", "nuḍiḵatā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضخا",
-        "u": "نضخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضخا (form I)\n# نَضَخَا (naḍaḵā) /na.dˤa.xaː/: third-person masculine dual past active of نَضَخَ (naḍaḵa)\n# نُضِخَا (nuḍiḵā) /nu.dˤi.xaː/: third-person masculine dual past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵā", "naḍaḵa", "nuḍiḵā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضخوا",
-        "u": "نضخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضخوا (form I)\n# نَضَخُوا (naḍaḵū) /na.dˤa.xuː/: third-person masculine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخُوا (nuḍiḵū) /nu.dˤi.xuː/: third-person masculine plural past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵū", "naḍaḵa", "nuḍiḵū"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "أنضخ",
-        "u": "أنضخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أنضخ (form I)\n# أَنْضَخُ (ʔanḍaḵu) /ʔan.dˤa.xu/: first-person singular non-past active indicative of نَضَخَ (naḍaḵa)\n# أُنْضَخُ (ʔunḍaḵu) /ʔun.dˤa.xu/: first-person singular non-past passive indicative of نَضَخَ (naḍaḵa)\n# أَنْضَخَ (ʔanḍaḵa) /ʔan.dˤa.xa/: first-person singular non-past active subjunctive of نَضَخَ (naḍaḵa)\n# أُنْضَخَ (ʔunḍaḵa) /ʔun.dˤa.xa/: first-person singular non-past passive s",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔanḍaḵu", "naḍaḵa", "ʔunḍaḵu"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخين",
-        "u": "تنضخين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخين (form I)\n# تَنْضَخِينَ (tanḍaḵīna) /tan.dˤa.xiː.na/: second-person feminine singular non-past active indicative of نَضَخَ (naḍaḵa)\n# تُنْضَخِينَ (tunḍaḵīna) /tun.dˤa.xiː.na/: second-person feminine singular non-past passive indicative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵīna", "naḍaḵa", "tunḍaḵīna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "نضخن",
-        "u": "نضخن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نضخن (form I)\n# نَضَخْنَ (naḍaḵna) /na.dˤax.na/: third-person feminine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْنَ (nuḍiḵna) /nu.dˤix.na/: third-person feminine plural past passive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["naḍaḵna", "naḍaḵa", "nuḍiḵna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخ",
-        "u": "تنضخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخ (form I)\n# تَنْضَخُ (tanḍaḵu) /tan.dˤa.xu/: inflection of نَضَخَ (naḍaḵa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْضَخُ (tunḍaḵu) /tun.dˤa.xu/: inflection of نَضَخَ (naḍaḵa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵu", "naḍaḵa", "tunḍaḵu"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخان",
-        "u": "تنضخان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخان (form I)\n# تَنْضَخَانِ (tanḍaḵāni) /tan.dˤa.xaː.ni/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْضَخَانِ (tunḍaḵāni) /tun.dˤa.xaː.ni/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵāni", "naḍaḵa", "tunḍaḵāni"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخ",
-        "u": "ينضخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخ (form I)\n# يَنْضَخُ (yanḍaḵu) /jan.dˤa.xu/: third-person masculine singular non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخُ (yunḍaḵu) /jun.dˤa.xu/: third-person masculine singular non-past passive indicative of نَضَخَ (naḍaḵa)\n# يَنْضَخَ (yanḍaḵa) /jan.dˤa.xa/: third-person masculine singular non-past active subjunctive of نَضَخَ (naḍaḵa)\n# يُنْضَخَ (yunḍaḵa) /jun.dˤa.xa/: third-pers",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵu", "naḍaḵa", "yunḍaḵu"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ننضخ",
-        "u": "ننضخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ننضخ (form I)\n# نَنْضَخُ (nanḍaḵu) /nan.dˤa.xu/: first-person plural non-past active indicative of نَضَخَ (naḍaḵa)\n# نُنْضَخُ (nunḍaḵu) /nun.dˤa.xu/: first-person plural non-past passive indicative of نَضَخَ (naḍaḵa)\n# نَنْضَخَ (nanḍaḵa) /nan.dˤa.xa/: first-person plural non-past active subjunctive of نَضَخَ (naḍaḵa)\n# نُنْضَخَ (nunḍaḵa) /nun.dˤa.xa/: first-person plural non-past passive subjuncti",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nanḍaḵu", "naḍaḵa", "nunḍaḵu"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخان",
-        "u": "ينضخان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخان (form I)\n# يَنْضَخَانِ (yanḍaḵāni) /jan.dˤa.xaː.ni/: third-person masculine dual non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخَانِ (yunḍaḵāni) /jun.dˤa.xaː.ni/: third-person masculine dual non-past passive indicative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵāni", "naḍaḵa", "yunḍaḵāni"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخن",
-        "u": "تنضخن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخن (form I)\n# تَنْضَخْنَ (tanḍaḵna) /tan.dˤax.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخْنَ (tunḍaḵna) /tun.dˤax.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵna", "naḍaḵa", "tunḍaḵna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخون",
-        "u": "تنضخون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخون (form I)\n# تَنْضَخُونَ (tanḍaḵūna) /tan.dˤa.xuː.na/: second-person masculine plural non-past active indicative of نَضَخَ (naḍaḵa)\n# تُنْضَخُونَ (tunḍaḵūna) /tun.dˤa.xuː.na/: second-person masculine plural non-past passive indicative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵūna", "naḍaḵa", "tunḍaḵūna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخا",
-        "u": "ينضخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخا (form I)\n# يَنْضَخَا (yanḍaḵā) /jan.dˤa.xaː/: third-person masculine dual non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخَا (yunḍaḵā) /jun.dˤa.xaː/: third-person masculine dual non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵā", "naḍaḵa", "yunḍaḵā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخي",
-        "u": "تنضخي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخي (form I)\n# تَنْضَخِي (tanḍaḵī) /tan.dˤa.xiː/: second-person feminine singular non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخِي (tunḍaḵī) /tun.dˤa.xiː/: second-person feminine singular non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵī", "naḍaḵa", "tunḍaḵī"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخون",
-        "u": "ينضخون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخون (form I)\n# يَنْضَخُونَ (yanḍaḵūna) /jan.dˤa.xuː.na/: third-person masculine plural non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخُونَ (yunḍaḵūna) /jun.dˤa.xuː.na/: third-person masculine plural non-past passive indicative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵūna", "naḍaḵa", "yunḍaḵūna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخن",
-        "u": "ينضخن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخن (form I)\n# يَنْضَخْنَ (yanḍaḵna) /jan.dˤax.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخْنَ (yunḍaḵna) /jun.dˤax.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵna", "naḍaḵa", "yunḍaḵna"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخا",
-        "u": "تنضخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخا (form I)\n# تَنْضَخَا (tanḍaḵā) /tan.dˤa.xaː/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْضَخَا (tunḍaḵā) /tun.dˤa.xaː/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵā", "naḍaḵa", "tunḍaḵā"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "ينضخوا",
-        "u": "ينضخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ينضخوا (form I)\n# يَنْضَخُوا (yanḍaḵū) /jan.dˤa.xuː/: third-person masculine plural non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخُوا (yunḍaḵū) /jun.dˤa.xuː/: third-person masculine plural non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yanḍaḵū", "naḍaḵa", "yunḍaḵū"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "تنضخوا",
-        "u": "تنضخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تنضخوا (form I)\n# تَنْضَخُوا (tanḍaḵū) /tan.dˤa.xuː/: second-person masculine plural non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخُوا (tunḍaḵū) /tun.dˤa.xuː/: second-person masculine plural non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tanḍaḵū", "naḍaḵa", "tunḍaḵū"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "انضخا",
-        "u": "انضخا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْضَخَا • (inḍaḵā) (form I) /in.dˤa.xaː/\n# second-person dual imperative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inḍaḵā", "naḍaḵa"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "انضخوا",
-        "u": "انضخوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْضَخُوا • (inḍaḵū) (form I) /in.dˤa.xuː/\n# second-person masculine plural imperative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inḍaḵū", "naḍaḵa"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "انضخن",
-        "u": "انضخن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْضَخْنَ • (inḍaḵna) (form I) /in.dˤax.na/\n# second-person feminine plural imperative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inḍaḵna", "naḍaḵa"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "انضخ",
-        "u": "انضخ",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْضَخْ • (inḍaḵ) (form I) /in.dˤax/\n# second-person masculine singular imperative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inḍaḵ", "naḍaḵa"],
-        "k": "نضخ",
-        "yol": "kök"
-      },
-      {
-        "w": "انضخي",
-        "u": "انضخي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِنْضَخِي • (inḍaḵī) (form I) /in.dˤa.xiː/\n# second-person feminine singular imperative of نَضَخَ (naḍaḵa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["inḍaḵī", "naḍaḵa"],
-        "k": "نضخ",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "نضاختان": "fışkıran iki"
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Nadaha (نَضَخَ)",
-          "metin": "(نَضَخَ) Nûn, dâd ve hâ, kendisinden evvelki kelimeye yakındır; ancak ondan daha çoktur. «En-Nadh» lekelemek gibidir; bir şeyin eseri kalır. «Nedaha sevbehû bi't-tîb»: elbisesini ıtırla serpti. «Gaysün neddâh»: bol yağmur. «Aynün neddâha»: suyu çok olan pınar."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Suyun ve benzeri şeylerin (kan, sirke ve safran gibi) içerden kaynaması ve kuvvetle dışarı fışkırması: {Onlarda fışkıran iki pınar vardır} (fîhimâ aynâni neddâhatân): cennet ehlinin gözleri ve nefisleri için su ile kaynarlar; bugün sokaklarda ve bahçelerde kurulan fıskiyeler gibi. Mühmel hâ ile «nadh» ise bundan pek azdır, çünkü sızmaya benzer. (4/2213)"
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab NḌḪ نضخ | BP – • HDAL • © SG | 17 Mayıs 2023 | √NḌḪ «kök» ▪ NḌḪ_1 «…» ↗ … ▪ NḌḪ_2 «…» ↗ … ▪ NḌḪ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «çisenti, fışkıran pınar, çağlayan pınar, suyu bol bol fışkırtmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["serpmek; atmak, saçmak", "pompalamak"]
-        },
-        {
-          "g": ["نَضَخَ (nedaha) fiilinin (birinci bâb) masdarı"]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "نض",
+  "ses": {
     "harf": "ن",
+    "fasil": "نض",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "anlam": "Nadh: fışkırtmak, akıtmak",
+  "esas_manalar": "fışkırmak, kaynamak",
+  "mekayis": [
+    {
+      "baslik": "نَضَخَ",
+      "metin": "(نَضَخَ) النُّونُ وَالضَّادُ وَالْخَاءُ قَرِيبٌ مِنَ الَّذِي قَبْلَهُ، إِلَّا أَنَّهُ أَكْثَرُ مِنْهُ. يَقُولُونَ: النَّضْخُ كَاللَّطْخِ مِنَ الشَّيْءِ يُبْقَى لَهُ أَثَرٌ. وَنَضَخَ ثَوْبَهُ بِالطِّيبِ. وَغَيْثٌ نَضَّاخٌ: غَزِيرٌ. وَعَيْنٌ نَضَّاخَةٌ: كَثِيرَةُ الْمَاءِ.",
+      "baslik_tr": "Nadaha (نَضَخَ)",
+      "metin_tr": "(نَضَخَ) Nûn, dâd ve hâ, kendisinden evvelki kelimeye yakındır; ancak ondan daha çoktur. «En-Nadh» lekelemek gibidir; bir şeyin eseri kalır. «Nedaha sevbehû bi't-tîb»: elbisesini ıtırla serpti. «Gaysün neddâh»: bol yağmur. «Aynün neddâha»: suyu çok olan pınar."
+    }
+  ],
+  "cebel": {
+    "fasil": "النون والضاد",
+    "baslik": "نضخ",
+    "mihveri": "فَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح. (4/2213)",
+    "tam_metin": "{فِيهِمَا عَينَانِ نَضَّاخَتَانِ (66)} [الرحمن: 66]\n\"النَضْخُ: شدَّة فور الماء في جَيَشانه وانفجارِه من يَنْبُوعه. وعَينٌ نَضّاخه: كثيرةُ الماء فوَّارة تجيش بالماء. قال: ما كان من سُفْلٍ إلى عُلْو فهو نَضْخ \".\n° المعنى المحوري\nفَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح.\n(4/2213)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (نض) : نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعًا إلى أعلى أو إلى الظاهر -كرشح الماء من الحجر والحِسي- في (نضض)، ونفاذ غضاضة النيوء من اللحم أو نفاذ حرارة الإنضاج إليه- في (نضج)، ونفاذ الماء من الينبوع- في نضخ، وارتفاع السحاب بعضه فوق بعض- في (نضد)، ونفاذ الطحلب من أثناء الماء إلى أعلاه مع غرابة محببة- في (نضر).",
+    "mihveri_tr": "Suyun ve benzeri şeylerin (kan, sirke ve safran gibi) içerden kaynaması ve kuvvetle dışarı fışkırması: {Onlarda fışkıran iki pınar vardır} (fîhimâ aynâni neddâhatân): cennet ehlinin gözleri ve nefisleri için su ile kaynarlar; bugün sokaklarda ve bahçelerde kurulan fıskiyeler gibi. Mühmel hâ ile «nadh» ise bundan pek azdır, çünkü sızmaya benzer. (4/2213)"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نضخ",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "نَضَخَ • (naḍaḵa) I (non-past يَنْضَخُ (yanḍaḵu), verbal noun نَضْخ (naḍḵ))",
+      "etim_sablon": [
+        ["ar-root", "ن ض ح (n ḍ ḥ)"]
+      ],
+      "anlam": ["to sprinkle; to throw, to emit", "to pump"],
+      "okunus": ["naḍaḵa"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["serpmek; atmak, saçmak", "pompalamak"]
+    },
+    {
+      "madde": "نضخ",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "نَضْخ • (naḍḵ) m",
+      "etim_sablon": [
+        ["ar-root", "ن ض ح (n ḍ ḥ)"]
+      ],
+      "anlam": ["verbal noun of نَضَخَ (naḍaḵa) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["نَضَخَ"],
+      "okunus": ["naḍḵ"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["نَضَخَ (nedaha) fiilinin (birinci bâb) masdarı"]
+    },
+    {
+      "madde": "نضخ",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "نضخ (form I)\n# نَضُخُّ (naḍuḵḵu) /na.dˤux.xu/: first-person plural non-past active indicative of ضَخَّ (ḍaḵḵa)\n# نُضَخُّ (nuḍaḵḵu) /nu.dˤax.xu/: first-person plural non-past passive indicative of ضَخَّ (ḍaḵḵa)\n# نَضُخَّ (naḍuḵḵa) /na.dˤux.xa/: first-person plural non-past active subjunctive/jussive of ضَخَّ (ḍaḵḵa)\n# نُضَخَّ (nuḍaḵḵa) /nu.dˤax.xa/: first-person plural non-past passive subjunctive/",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍuḵḵu", "ḍaḵḵa", "nuḍaḵḵu"],
+      "bag": "müştak"
+    },
+    {
+      "madde": "نضخنا",
+      "tur": "verb",
+      "baslik": "نضخنا (form I)\n# نَضَخْنَا (naḍaḵnā) /na.dˤax.naː/: first-person plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْنَا (nuḍiḵnā) /nu.dˤix.naː/: first-person plural past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵnā", "naḍaḵa", "nuḍiḵnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضخت",
+      "tur": "verb",
+      "baslik": "نضخت (form I)\n# نَضَخْتُ (naḍaḵtu) /na.dˤax.tu/: first-person singular past active of نَضَخَ (naḍaḵa)\n# نَضَخْتَ (naḍaḵta) /na.dˤax.ta/: second-person masculine singular past active of نَضَخَ (naḍaḵa)\n# نَضَخْتِ (naḍaḵti) /na.dˤax.ti/: second-person feminine singular past active of نَضَخَ (naḍaḵa)\n# نَضَخَتْ (naḍaḵat) /na.dˤa.xat/: third-person feminine singular past active of نَضَخَ (naḍaḵa)\n# نُ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵtu", "naḍaḵa", "naḍaḵta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضختما",
+      "tur": "verb",
+      "baslik": "نضختما (form I)\n# نَضَخْتُمَا (naḍaḵtumā) /na.dˤax.tu.maː/: second-person dual past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُمَا (nuḍiḵtumā) /nu.dˤix.tu.maː/: second-person dual past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵtumā", "naḍaḵa", "nuḍiḵtumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضختم",
+      "tur": "verb",
+      "baslik": "نضختم (form I)\n# نَضَخْتُمْ (naḍaḵtum) /na.dˤax.tum/: second-person masculine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُمْ (nuḍiḵtum) /nu.dˤix.tum/: second-person masculine plural past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵtum", "naḍaḵa", "nuḍiḵtum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضختن",
+      "tur": "verb",
+      "baslik": "نضختن (form I)\n# نَضَخْتُنَّ (naḍaḵtunna) /na.dˤax.tun.na/: second-person feminine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْتُنَّ (nuḍiḵtunna) /nu.dˤix.tun.na/: second-person feminine plural past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵtunna", "naḍaḵa", "nuḍiḵtunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضختا",
+      "tur": "verb",
+      "baslik": "نضختا (form I)\n# نَضَخَتَا (naḍaḵatā) /na.dˤa.xa.taː/: third-person feminine dual past active of نَضَخَ (naḍaḵa)\n# نُضِخَتَا (nuḍiḵatā) /nu.dˤi.xa.taː/: third-person feminine dual past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵatā", "naḍaḵa", "nuḍiḵatā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضخا",
+      "tur": "verb",
+      "baslik": "نضخا (form I)\n# نَضَخَا (naḍaḵā) /na.dˤa.xaː/: third-person masculine dual past active of نَضَخَ (naḍaḵa)\n# نُضِخَا (nuḍiḵā) /nu.dˤi.xaː/: third-person masculine dual past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵā", "naḍaḵa", "nuḍiḵā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضخوا",
+      "tur": "verb",
+      "baslik": "نضخوا (form I)\n# نَضَخُوا (naḍaḵū) /na.dˤa.xuː/: third-person masculine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخُوا (nuḍiḵū) /nu.dˤi.xuː/: third-person masculine plural past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵū", "naḍaḵa", "nuḍiḵū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أنضخ",
+      "tur": "verb",
+      "baslik": "أنضخ (form I)\n# أَنْضَخُ (ʔanḍaḵu) /ʔan.dˤa.xu/: first-person singular non-past active indicative of نَضَخَ (naḍaḵa)\n# أُنْضَخُ (ʔunḍaḵu) /ʔun.dˤa.xu/: first-person singular non-past passive indicative of نَضَخَ (naḍaḵa)\n# أَنْضَخَ (ʔanḍaḵa) /ʔan.dˤa.xa/: first-person singular non-past active subjunctive of نَضَخَ (naḍaḵa)\n# أُنْضَخَ (ʔunḍaḵa) /ʔun.dˤa.xa/: first-person singular non-past passive s",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔanḍaḵu", "naḍaḵa", "ʔunḍaḵu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخين",
+      "tur": "verb",
+      "baslik": "تنضخين (form I)\n# تَنْضَخِينَ (tanḍaḵīna) /tan.dˤa.xiː.na/: second-person feminine singular non-past active indicative of نَضَخَ (naḍaḵa)\n# تُنْضَخِينَ (tunḍaḵīna) /tun.dˤa.xiː.na/: second-person feminine singular non-past passive indicative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵīna", "naḍaḵa", "tunḍaḵīna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نضخن",
+      "tur": "verb",
+      "baslik": "نضخن (form I)\n# نَضَخْنَ (naḍaḵna) /na.dˤax.na/: third-person feminine plural past active of نَضَخَ (naḍaḵa)\n# نُضِخْنَ (nuḍiḵna) /nu.dˤix.na/: third-person feminine plural past passive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["naḍaḵna", "naḍaḵa", "nuḍiḵna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخ",
+      "tur": "verb",
+      "baslik": "تنضخ (form I)\n# تَنْضَخُ (tanḍaḵu) /tan.dˤa.xu/: inflection of نَضَخَ (naḍaḵa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُنْضَخُ (tunḍaḵu) /tun.dˤa.xu/: inflection of نَضَخَ (naḍaḵa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵu", "naḍaḵa", "tunḍaḵu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخان",
+      "tur": "verb",
+      "baslik": "تنضخان (form I)\n# تَنْضَخَانِ (tanḍaḵāni) /tan.dˤa.xaː.ni/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُنْضَخَانِ (tunḍaḵāni) /tun.dˤa.xaː.ni/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵāni", "naḍaḵa", "tunḍaḵāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخ",
+      "tur": "verb",
+      "baslik": "ينضخ (form I)\n# يَنْضَخُ (yanḍaḵu) /jan.dˤa.xu/: third-person masculine singular non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخُ (yunḍaḵu) /jun.dˤa.xu/: third-person masculine singular non-past passive indicative of نَضَخَ (naḍaḵa)\n# يَنْضَخَ (yanḍaḵa) /jan.dˤa.xa/: third-person masculine singular non-past active subjunctive of نَضَخَ (naḍaḵa)\n# يُنْضَخَ (yunḍaḵa) /jun.dˤa.xa/: third-pers",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵu", "naḍaḵa", "yunḍaḵu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ننضخ",
+      "tur": "verb",
+      "baslik": "ننضخ (form I)\n# نَنْضَخُ (nanḍaḵu) /nan.dˤa.xu/: first-person plural non-past active indicative of نَضَخَ (naḍaḵa)\n# نُنْضَخُ (nunḍaḵu) /nun.dˤa.xu/: first-person plural non-past passive indicative of نَضَخَ (naḍaḵa)\n# نَنْضَخَ (nanḍaḵa) /nan.dˤa.xa/: first-person plural non-past active subjunctive of نَضَخَ (naḍaḵa)\n# نُنْضَخَ (nunḍaḵa) /nun.dˤa.xa/: first-person plural non-past passive subjuncti",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nanḍaḵu", "naḍaḵa", "nunḍaḵu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخان",
+      "tur": "verb",
+      "baslik": "ينضخان (form I)\n# يَنْضَخَانِ (yanḍaḵāni) /jan.dˤa.xaː.ni/: third-person masculine dual non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخَانِ (yunḍaḵāni) /jun.dˤa.xaː.ni/: third-person masculine dual non-past passive indicative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵāni", "naḍaḵa", "yunḍaḵāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخن",
+      "tur": "verb",
+      "baslik": "تنضخن (form I)\n# تَنْضَخْنَ (tanḍaḵna) /tan.dˤax.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخْنَ (tunḍaḵna) /tun.dˤax.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵna", "naḍaḵa", "tunḍaḵna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخون",
+      "tur": "verb",
+      "baslik": "تنضخون (form I)\n# تَنْضَخُونَ (tanḍaḵūna) /tan.dˤa.xuː.na/: second-person masculine plural non-past active indicative of نَضَخَ (naḍaḵa)\n# تُنْضَخُونَ (tunḍaḵūna) /tun.dˤa.xuː.na/: second-person masculine plural non-past passive indicative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵūna", "naḍaḵa", "tunḍaḵūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخا",
+      "tur": "verb",
+      "baslik": "ينضخا (form I)\n# يَنْضَخَا (yanḍaḵā) /jan.dˤa.xaː/: third-person masculine dual non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخَا (yunḍaḵā) /jun.dˤa.xaː/: third-person masculine dual non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵā", "naḍaḵa", "yunḍaḵā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخي",
+      "tur": "verb",
+      "baslik": "تنضخي (form I)\n# تَنْضَخِي (tanḍaḵī) /tan.dˤa.xiː/: second-person feminine singular non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخِي (tunḍaḵī) /tun.dˤa.xiː/: second-person feminine singular non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵī", "naḍaḵa", "tunḍaḵī"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخون",
+      "tur": "verb",
+      "baslik": "ينضخون (form I)\n# يَنْضَخُونَ (yanḍaḵūna) /jan.dˤa.xuː.na/: third-person masculine plural non-past active indicative of نَضَخَ (naḍaḵa)\n# يُنْضَخُونَ (yunḍaḵūna) /jun.dˤa.xuː.na/: third-person masculine plural non-past passive indicative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵūna", "naḍaḵa", "yunḍaḵūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخن",
+      "tur": "verb",
+      "baslik": "ينضخن (form I)\n# يَنْضَخْنَ (yanḍaḵna) /jan.dˤax.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخْنَ (yunḍaḵna) /jun.dˤax.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵna", "naḍaḵa", "yunḍaḵna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخا",
+      "tur": "verb",
+      "baslik": "تنضخا (form I)\n# تَنْضَخَا (tanḍaḵā) /tan.dˤa.xaː/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُنْضَخَا (tunḍaḵā) /tun.dˤa.xaː/: inflection of نَضَخَ (naḍaḵa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵā", "naḍaḵa", "tunḍaḵā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ينضخوا",
+      "tur": "verb",
+      "baslik": "ينضخوا (form I)\n# يَنْضَخُوا (yanḍaḵū) /jan.dˤa.xuː/: third-person masculine plural non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# يُنْضَخُوا (yunḍaḵū) /jun.dˤa.xuː/: third-person masculine plural non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yanḍaḵū", "naḍaḵa", "yunḍaḵū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تنضخوا",
+      "tur": "verb",
+      "baslik": "تنضخوا (form I)\n# تَنْضَخُوا (tanḍaḵū) /tan.dˤa.xuː/: second-person masculine plural non-past active subjunctive/jussive of نَضَخَ (naḍaḵa)\n# تُنْضَخُوا (tunḍaḵū) /tun.dˤa.xuː/: second-person masculine plural non-past passive subjunctive/jussive of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tanḍaḵū", "naḍaḵa", "tunḍaḵū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "انضخا",
+      "tur": "verb",
+      "baslik": "اِنْضَخَا • (inḍaḵā) (form I) /in.dˤa.xaː/\n# second-person dual imperative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inḍaḵā", "naḍaḵa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "انضخوا",
+      "tur": "verb",
+      "baslik": "اِنْضَخُوا • (inḍaḵū) (form I) /in.dˤa.xuː/\n# second-person masculine plural imperative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inḍaḵū", "naḍaḵa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "انضخن",
+      "tur": "verb",
+      "baslik": "اِنْضَخْنَ • (inḍaḵna) (form I) /in.dˤax.na/\n# second-person feminine plural imperative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inḍaḵna", "naḍaḵa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "انضخ",
+      "tur": "verb",
+      "baslik": "اِنْضَخْ • (inḍaḵ) (form I) /in.dˤax/\n# second-person masculine singular imperative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inḍaḵ", "naḍaḵa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "انضخي",
+      "tur": "verb",
+      "baslik": "اِنْضَخِي • (inḍaḵī) (form I) /in.dˤa.xiː/\n# second-person feminine singular imperative of نَضَخَ (naḍaḵa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["inḍaḵī", "naḍaḵa"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Apparently a variant of ن ض ح (n ḍ ḥ).",
+      "kognatlar": [
+        ["ن ض ح", "Appendix:Arabic roots/ن ض ح"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "NḌḪ",
+    "kok_maddesi": "Back to library EtymArab NḌḪ نضخ BP – • HDAL • © SG | 17May2023 √NḌḪ “root” ▪ NḌḪ_1 ‘...’ ↗ ... ▪ NḌḪ_2 ‘...’ ↗ ... ▪ NḌḪ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘a drizzle, a gushing spring, a cascading spring, to spout water copiously’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab NḌḪ نضخ | BP – • HDAL • © SG | 17 Mayıs 2023 | √NḌḪ «kök» ▪ NḌḪ_1 «…» ↗ … ▪ NḌḪ_2 «…» ↗ … ▪ NḌḪ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «çisenti, fışkıran pınar, çağlayan pınar, suyu bol bol fışkırtmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "55:66:3:1",
+    "tur": {
+      "ADJ": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "نَضَّاخَتَان": 1
+    },
+    "bicimler": {
+      "نَضَّاخَتَانِ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "نَضّاخَتان",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "نَضَّاخَتَانِ",
+          "ilk": "55:66",
+          "adet": 1,
+          "tr": "fışkıran iki"
+        }
+      ],
+      "tr": "fışkıran iki",
+      "nasil": "mübalağa · fa''āl + müennes tesniye ; mübalağa · fa''āle + tesniye ; mübalağa · fu''āl + müennes tesniye (yalnız aday eşleşme)",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "نَضْخ", "naḍḫ", "fışkırtma", "orta", ""],
+      ["fi'l", "semâî aday", "نِضْخ", "niḍḫ", "fışkırtma", "orta", ""],
+      ["fu'l", "semâî aday", "نُضْخ", "nuḍḫ", "fışkırtma", "orta", ""],
+      ["fa'al", "semâî aday", "نَضَخ", "naḍaḫ", "fışkırtma", "orta", ""],
+      ["fi'al", "semâî aday", "نِضَخ", "niḍaḫ", "fışkırtma", "orta", ""],
+      ["fu'ul", "semâî aday", "نُضُخ", "nuḍuḫ", "fışkırtma", "orta", ""],
+      ["fu'ūl", "semâî aday", "نُضُوخ", "nuḍūḫ", "fışkırtma", "orta", ""],
+      ["fi'āl", "semâî aday", "نِضَاخ", "niḍāḫ", "fışkırtma", "orta", ""],
+      ["fu'āl", "semâî aday", "نُضَاخ", "nuḍāḫ", "fışkırtma", "orta", ""],
+      ["fa'āl", "semâî aday", "نَضَاخ", "naḍāḫ", "fışkırtma", "orta", ""],
+      ["fa'āle", "semâî aday", "نَضَاخَة", "naḍāḫa", "fışkırtma", "orta", ""],
+      ["fu'ūle", "semâî aday", "نُضُوخَة", "nuḍūḫa", "fışkırtma", "orta", ""],
+      ["fi'āle", "semâî aday", "نِضَاخَة", "niḍāḫa", "fışkırtma", "orta", ""],
+      ["fa'īl", "semâî aday", "نَضِيخ", "naḍīḫ", "fışkırtma", "orta", ""],
+      ["fa'ūl", "semâî aday", "نَضُوخ", "naḍūḫ", "fışkırtma", "orta", ""],
+      ["fa'alān", "semâî aday", "نَضَخَان", "naḍaḫān", "fışkırtma", "orta", ""],
+      ["fu'lān", "semâî aday", "نُضْخَان", "nuḍḫān", "fışkırtma", "orta", ""],
+      ["fi'lān", "semâî aday", "نِضْخَان", "niḍḫān", "fışkırtma", "orta", ""],
+      ["fa'lā", "semâî aday", "نَضْخَى", "naḍḫā", "fışkırtma", "orta", ""],
+      ["fu'lā", "semâî aday", "نُضْخَى", "nuḍḫā", "fışkırtma", "orta", ""],
+      ["fi'lā", "semâî aday", "نِضْخَى", "niḍḫā", "fışkırtma", "orta", ""],
+      ["fa'ale", "semâî aday", "نَضَخَة", "naḍaḫa", "fışkırtma", "orta", ""],
+      ["fi'ale", "semâî aday", "نِضَخَة", "niḍaḫa", "fışkırtma", "orta", ""],
+      ["fa'lūla", "semâî aday", "نَضْخُوخَة", "naḍḫūḫa", "fışkırtma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُنْضُوخ", "tunḍūḫ", "fışkırtma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَنْضِخَة", "tanḍiḫa", "fışkırtma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَنْضَخَة", "tanḍaḫa", "fışkırtma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَنْضُخَة", "manḍuḫa", "fışkırtma", "orta", ""],
+      ["maf'ila", "semâî aday", "مَنْضِخَة", "manḍiḫa", "fışkırtma", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَنْضِيخ", "tanḍīḫ", "çokça fışkırtma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَنْضِخَة", "tanḍiḫa", "çokça fışkırtma", "orta", ""],
+      ["fi''āl", "kıyâsî", "نِضِّاخ", "niḍḍāḫ", "çokça fışkırtma", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَنْضِيخَة", "tanḍīḫa", "bir kere çokça fışkırtma", "orta", ""],
+      ["fi''āl + tâ", "aday", "نِضِّاخَة", "niḍḍāḫa", "bir kere çokça fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُنَضِّخ", "munaḍḍiḫ", "çokça fışkırtan", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُنَضِّخَة", "munaḍḍiḫa", "çokça fışkırtan, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُنَضِّخَان", "munaḍḍiḫān", "çokça fışkırtan, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُنَضِّخَتَان",
+        "munaḍḍiḫatān",
+        "çokça fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنَضِّخُون",
+        "munaḍḍiḫūn",
+        "çokça fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنَضِّخِين",
+        "munaḍḍiḫīn",
+        "çokça fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنَضِّخَات",
+        "munaḍḍiḫāt",
+        "çokça fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُنَضَّخ", "munaḍḍaḫ", "çokça fışkırtılan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُنَضَّخَة", "munaḍḍaḫa", "çokça fışkırtılan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُنَضَّخَان", "munaḍḍaḫān", "çokça fışkırtılan, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُنَضَّخَتَان",
+        "munaḍḍaḫatān",
+        "çokça fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنَضَّخُون",
+        "munaḍḍaḫūn",
+        "çokça fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنَضَّخِين",
+        "munaḍḍaḫīn",
+        "çokça fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنَضَّخَات",
+        "munaḍḍaḫāt",
+        "çokça fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُنَضَّخ", "munaḍḍaḫ", "çokça fışkırtma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُنَاضَخَة", "munāḍaḫa", "biriyle karşılıklı fışkırtma", "orta", ""],
+      ["fi'āl", "kıyâsî", "نِضَاخ", "niḍāḫ", "biriyle karşılıklı fışkırtma", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "نِضَاخَة", "niḍāḫa", "bir kere biriyle karşılıklı fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُنَاضِخ", "munāḍiḫ", "biriyle karşılıklı fışkırtan", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُنَاضِخَة", "munāḍiḫa", "biriyle karşılıklı fışkırtan, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُنَاضِخَان", "munāḍiḫān", "biriyle karşılıklı fışkırtan, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُنَاضِخَتَان",
+        "munāḍiḫatān",
+        "biriyle karşılıklı fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنَاضِخُون",
+        "munāḍiḫūn",
+        "biriyle karşılıklı fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنَاضِخِين",
+        "munāḍiḫīn",
+        "biriyle karşılıklı fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنَاضِخَات",
+        "munāḍiḫāt",
+        "biriyle karşılıklı fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُنَاضَخ", "munāḍaḫ", "biriyle karşılıklı fışkırtılan", "orta", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُنَاضَخَة",
+        "munāḍaḫa",
+        "biriyle karşılıklı fışkırtılan, müennes",
+        "orta",
+        ""
+      ],
+      ["mufā'al + tesniye", "kıyâsî", "مُنَاضَخَان", "munāḍaḫān", "biriyle karşılıklı fışkırtılan, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُنَاضَخَتَان",
+        "munāḍaḫatān",
+        "biriyle karşılıklı fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنَاضَخُون",
+        "munāḍaḫūn",
+        "biriyle karşılıklı fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنَاضَخِين",
+        "munāḍaḫīn",
+        "biriyle karşılıklı fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنَاضَخَات",
+        "munāḍaḫāt",
+        "biriyle karşılıklı fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُنَاضَخ", "munāḍaḫ", "biriyle karşılıklı fışkırtma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِنْضَاخ", "ʾinḍāḫ", "fışkırttırma", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِنْضَاخَة", "ʾinḍāḫa", "bir kere fışkırttırma", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُنْضِخ", "munḍiḫ", "fışkırttıran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُنْضِخَة", "munḍiḫa", "fışkırttıran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُنْضِخَان", "munḍiḫān", "fışkırttıran, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُنْضِخَتَان", "munḍiḫatān", "fışkırttıran, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُنْضِخُون", "munḍiḫūn", "fışkırttıranlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُنْضِخِين", "munḍiḫīn", "fışkırttıranlar", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْضِخَات",
+        "munḍiḫāt",
+        "fışkırttıranlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُنْضَخ", "munḍaḫ", "fışkırttırılan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُنْضَخَة", "munḍaḫa", "fışkırttırılan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُنْضَخَان", "munḍaḫān", "fışkırttırılan, iki", "orta", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî",
+        "مُنْضَخَتَان",
+        "munḍaḫatān",
+        "fışkırttırılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُنْضَخُون", "munḍaḫūn", "fışkırttırılanlar", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُنْضَخِين", "munḍaḫīn", "fışkırttırılanlar", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْضَخَات",
+        "munḍaḫāt",
+        "fışkırttırılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُنْضَخ", "munḍaḫ", "fışkırttırma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَنَضُّخ", "tanaḍḍuḫ", "kendini zorlayarak fışkırtma", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَنَضُّخَة", "tanaḍḍuḫa", "bir kere kendini zorlayarak fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَنَضِّخ", "mutanaḍḍiḫ", "kendini zorlayarak fışkırtan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَنَضِّخَة",
+        "mutanaḍḍiḫa",
+        "kendini zorlayarak fışkırtan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَنَضِّخَان",
+        "mutanaḍḍiḫān",
+        "kendini zorlayarak fışkırtan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَنَضِّخَتَان",
+        "mutanaḍḍiḫatān",
+        "kendini zorlayarak fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَنَضِّخُون",
+        "mutanaḍḍiḫūn",
+        "kendini zorlayarak fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَنَضِّخِين",
+        "mutanaḍḍiḫīn",
+        "kendini zorlayarak fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَنَضِّخَات",
+        "mutanaḍḍiḫāt",
+        "kendini zorlayarak fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَنَضَّخ", "mutanaḍḍaḫ", "kendini zorlayarak fışkırtılan", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَنَضَّخَة",
+        "mutanaḍḍaḫa",
+        "kendini zorlayarak fışkırtılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَنَضَّخَان",
+        "mutanaḍḍaḫān",
+        "kendini zorlayarak fışkırtılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَنَضَّخَتَان",
+        "mutanaḍḍaḫatān",
+        "kendini zorlayarak fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَنَضَّخُون",
+        "mutanaḍḍaḫūn",
+        "kendini zorlayarak fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَنَضَّخِين",
+        "mutanaḍḍaḫīn",
+        "kendini zorlayarak fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَنَضَّخَات",
+        "mutanaḍḍaḫāt",
+        "kendini zorlayarak fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَنَضَّخ", "mutanaḍḍaḫ", "kendini zorlayarak fışkırtma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَنَاضُخ", "tanāḍuḫ", "birbirine fışkırtma", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَنَاضُخَة", "tanāḍuḫa", "bir kere birbirine fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَنَاضِخ", "mutanāḍiḫ", "birbirine fışkırtan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَنَاضِخَة", "mutanāḍiḫa", "birbirine fışkırtan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَنَاضِخَان", "mutanāḍiḫān", "birbirine fışkırtan, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَنَاضِخَتَان",
+        "mutanāḍiḫatān",
+        "birbirine fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَنَاضِخُون",
+        "mutanāḍiḫūn",
+        "birbirine fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَنَاضِخِين",
+        "mutanāḍiḫīn",
+        "birbirine fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَنَاضِخَات",
+        "mutanāḍiḫāt",
+        "birbirine fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَنَاضَخ", "mutanāḍaḫ", "birbirine fışkırtılan", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَنَاضَخَة", "mutanāḍaḫa", "birbirine fışkırtılan, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَنَاضَخَان", "mutanāḍaḫān", "birbirine fışkırtılan, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَنَاضَخَتَان",
+        "mutanāḍaḫatān",
+        "birbirine fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَنَاضَخُون",
+        "mutanāḍaḫūn",
+        "birbirine fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَنَاضَخِين",
+        "mutanāḍaḫīn",
+        "birbirine fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَنَاضَخَات",
+        "mutanāḍaḫāt",
+        "birbirine fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَنَاضَخ", "mutanāḍaḫ", "birbirine fışkırtma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْنِضَاخ", "inniḍāḫ", "fışkırtılma", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْنِضَاخَة", "inniḍāḫa", "bir kere fışkırtılma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْنَضِخ", "munnaḍiḫ", "fışkırtılan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْنَضِخَة", "munnaḍiḫa", "fışkırtılan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْنَضِخَان", "munnaḍiḫān", "fışkırtılan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْنَضِخَتَان",
+        "munnaḍiḫatān",
+        "fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْنَضِخُون",
+        "munnaḍiḫūn",
+        "fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْنَضِخِين",
+        "munnaḍiḫīn",
+        "fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْنَضِخَات",
+        "munnaḍiḫāt",
+        "fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخ",
+        "munnaḍaḫ",
+        "fışkırtılan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخَة",
+        "munnaḍaḫa",
+        "fışkırtılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخَان",
+        "munnaḍaḫān",
+        "fışkırtılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخَتَان",
+        "munnaḍaḫatān",
+        "fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخُون",
+        "munnaḍaḫūn",
+        "fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخِين",
+        "munnaḍaḫīn",
+        "fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخَات",
+        "munnaḍaḫāt",
+        "fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْنَضَخ",
+        "munnaḍaḫ",
+        "fışkırtılma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِنْتِضَاخ", "intiḍāḫ", "kendisi için fışkırtma", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِنْتِضَاخَة", "intiḍāḫa", "bir kere kendisi için fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُنْتَضِخ", "muntaḍiḫ", "kendisi için fışkırtan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُنْتَضِخَة", "muntaḍiḫa", "kendisi için fışkırtan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُنْتَضِخَان", "muntaḍiḫān", "kendisi için fışkırtan, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُنْتَضِخَتَان",
+        "muntaḍiḫatān",
+        "kendisi için fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْتَضِخُون",
+        "muntaḍiḫūn",
+        "kendisi için fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْتَضِخِين",
+        "muntaḍiḫīn",
+        "kendisi için fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْتَضِخَات",
+        "muntaḍiḫāt",
+        "kendisi için fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُنْتَضَخ", "muntaḍaḫ", "kendisi için fışkırtılan", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُنْتَضَخَة", "muntaḍaḫa", "kendisi için fışkırtılan, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُنْتَضَخَان", "muntaḍaḫān", "kendisi için fışkırtılan, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُنْتَضَخَتَان",
+        "muntaḍaḫatān",
+        "kendisi için fışkırtılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْتَضَخُون",
+        "muntaḍaḫūn",
+        "kendisi için fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْتَضَخِين",
+        "muntaḍaḫīn",
+        "kendisi için fışkırtılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْتَضَخَات",
+        "muntaḍaḫāt",
+        "kendisi için fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُنْتَضَخ", "muntaḍaḫ", "kendisi için fışkırtma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX": [
+      ["if'ilāl", "kıyâsî", "اِنْضِخَاخ", "inḍiḫāḫ", "iyiden iyiye fışkırtma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُنْضَخّ", "munḍaḫḫ", "iyiden iyiye fışkırtan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُنْضَخَّة", "munḍaḫḫa", "iyiden iyiye fışkırtan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُنْضَخَّان", "munḍaḫḫān", "iyiden iyiye fışkırtan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُنْضَخَّتَان",
+        "munḍaḫḫatān",
+        "iyiden iyiye fışkırtan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْضَخُّون",
+        "munḍaḫḫūn",
+        "iyiden iyiye fışkırtanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْضَخِّين",
+        "munḍaḫḫīn",
+        "iyiden iyiye fışkırtanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْضَخَّات",
+        "munḍaḫḫāt",
+        "iyiden iyiye fışkırtanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِنْضَاخ", "istinḍāḫ", "fışkırtmayı isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِنْضَاخَة", "istinḍāḫa", "bir kere fışkırtmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَنْضِخ", "mustanḍiḫ", "fışkırtmayı isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَنْضِخَة", "mustanḍiḫa", "fışkırtmayı isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَنْضِخَان", "mustanḍiḫān", "fışkırtmayı isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَنْضِخَتَان",
+        "mustanḍiḫatān",
+        "fışkırtmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَنْضِخُون",
+        "mustanḍiḫūn",
+        "fışkırtmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَنْضِخِين",
+        "mustanḍiḫīn",
+        "fışkırtmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَنْضِخَات",
+        "mustanḍiḫāt",
+        "fışkırtmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَنْضَخ", "mustanḍaḫ", "fışkırtması istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَنْضَخَة", "mustanḍaḫa", "fışkırtması istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَنْضَخَان", "mustanḍaḫān", "fışkırtması istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَنْضَخَتَان",
+        "mustanḍaḫatān",
+        "fışkırtması istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَنْضَخُون",
+        "mustanḍaḫūn",
+        "fışkırtması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَنْضَخِين",
+        "mustanḍaḫīn",
+        "fışkırtması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَنْضَخَات",
+        "mustanḍaḫāt",
+        "fışkırtması istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَنْضَخ", "mustanḍaḫ", "fışkırtmayı isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI": [
+      ["if'īlāl", "kıyâsî", "اِنْضِيخَاخ", "inḍīḫāḫ", "büsbütün fışkırtma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُنْضَاخّ", "munḍāḫḫ", "büsbütün fışkırtan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُنْضَاخَّة", "munḍāḫḫa", "büsbütün fışkırtan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُنْضَاخَّان", "munḍāḫḫān", "büsbütün fışkırtan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُنْضَاخَّتَان",
+        "munḍāḫḫatān",
+        "büsbütün fışkırtan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْضَاخُّون",
+        "munḍāḫḫūn",
+        "büsbütün fışkırtanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْضَاخِّين",
+        "munḍāḫḫīn",
+        "büsbütün fışkırtanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْضَاخَّات",
+        "munḍāḫḫāt",
+        "büsbütün fışkırtanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII": [
+      ["if'iv'āl", "kıyâsî", "اِنْضِوْضَاخ", "inḍiwḍāḫ", "aşırı fışkırtma", "orta", ""]
+    ],
+    "masdar · bâb XIII": [
+      ["if'ivvāl", "kıyâsî", "اِنْضِوَّاخ", "inḍiwwāḫ", "aşırı fışkırtma", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "نَاضِخ", "nāḍiḫ", "fışkırtan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "نَاضِخَة", "nāḍiḫa", "fışkırtan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "نَاضِخَان", "nāḍiḫān", "fışkırtan, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "نَاضِخَتَان", "nāḍiḫatān", "fışkırtan, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "نَاضِخُون", "nāḍiḫūn", "fışkırtanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "نَاضِخِين", "nāḍiḫīn", "fışkırtanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "نَاضِخَات", "nāḍiḫāt", "fışkırtanlar, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَنْضُوخ", "manḍūḫ", "fışkırtılan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَنْضُوخَة", "manḍūḫa", "fışkırtılan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَنْضُوخَان", "manḍūḫān", "fışkırtılan, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَنْضُوخَتَان", "manḍūḫatān", "fışkırtılan, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَنْضُوخُون", "manḍūḫūn", "fışkırtılanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَنْضُوخِين", "manḍūḫīn", "fışkırtılanlar", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَنْضُوخَات",
+        "manḍūḫāt",
+        "fışkırtılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَنْضَخ", "manḍaḫ", "fışkırtma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَنْضَخَان", "manḍaḫān", "fışkırtma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَنْضِخ", "manḍiḫ", "fışkırtma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَنْضِخَان", "manḍiḫān", "fışkırtma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَنْضَخَة", "manḍaḫa", "fışkırtmanın bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَنْضَخَتَان", "manḍaḫatān", "fışkırtmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَنْضِخَة", "manḍiḫa", "fışkırtmanın bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَنْضِخَتَان", "manḍiḫatān", "fışkırtmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَنْضُخَة", "manḍuḫa", "fışkırtma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَنْضُخَتَان", "manḍuḫatān", "fışkırtma yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِنْضَخ", "minḍaḫ", "fışkırtma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِنْضَخَان", "minḍaḫān", "fışkırtma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِنْضَاخ", "minḍāḫ", "fışkırtma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِنْضَاخَان", "minḍāḫān", "fışkırtma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِنْضَخَة", "minḍaḫa", "fışkırtma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِنْضَخَتَان", "minḍaḫatān", "fışkırtma âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَنْضَخ", "ʾanḍaḫ", "daha çok fışkırtan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَنْضَخَان", "ʾanḍaḫān", "daha çok fışkırtan, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "نُضْخَى", "nuḍḫā", "daha çok fışkırtan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "نُضْخَيَان", "nuḍḫayān", "daha çok fışkırtan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "نَضْخَاء", "naḍḫāʾ", "daha çok fışkırtan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "نَضْخَاآن", "naḍḫāʾān", "daha çok fışkırtan, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "نُضَيْخ", "nuḍayḫ", "azıcık fışkırtma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "نُضَيْخَان", "nuḍayḫān", "azıcık fışkırtma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "نُضَيْخَة", "nuḍayḫa", "azıcık fışkırtma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "نُضَيْخَتَان", "nuḍayḫatān", "azıcık fışkırtma, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَنْضَخ", "manḍaḫ", "fışkırtma", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَنْضَخَان", "manḍaḫān", "fışkırtma, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "نَضْخَة", "naḍḫa", "bir kere fışkırtma", "orta", ""],
+      ["fa'le + tesniye", "aday", "نَضْخَتَان", "naḍḫatān", "bir kere fışkırtma, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "نِضْخَة", "niḍḫa", "fışkırtma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "نِضْخَتَان", "niḍḫatān", "fışkırtma tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "نَضِيخ", "naḍīḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "نَضِيخَة", "naḍīḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "نَضِيخَان", "naḍīḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "نَضِيخَتَان",
+        "naḍīḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضِيخُون",
+        "naḍīḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضِيخِين",
+        "naḍīḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضِيخَات",
+        "naḍīḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "نَضُوخ", "naḍūḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "نَضُوخَة", "naḍūḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "نَضُوخَان", "naḍūḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "نَضُوخَتَان",
+        "naḍūḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضُوخُون",
+        "naḍūḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضُوخِين",
+        "naḍūḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضُوخَات",
+        "naḍūḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "نَضِخ", "naḍiḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "نَضِخَة", "naḍiḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "نَضِخَان", "naḍiḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "نَضِخَتَان",
+        "naḍiḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضِخُون",
+        "naḍiḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضِخِين",
+        "naḍiḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضِخَات",
+        "naḍiḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "نَضُخ", "naḍuḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "نَضُخَة", "naḍuḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "نَضُخَان", "naḍuḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "نَضُخَتَان",
+        "naḍuḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضُخُون",
+        "naḍuḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضُخِين",
+        "naḍuḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضُخَات",
+        "naḍuḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "نَضَخ", "naḍaḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "نَضَخَة", "naḍaḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "نَضَخَان", "naḍaḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "نَضَخَتَان",
+        "naḍaḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضَخُون",
+        "naḍaḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضَخِين",
+        "naḍaḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضَخَات",
+        "naḍaḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "نَضْخ", "naḍḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "نَضْخَة", "naḍḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "نَضْخَان", "naḍḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "نَضْخَتَان",
+        "naḍḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضْخُون",
+        "naḍḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضْخِين",
+        "naḍḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضْخَات",
+        "naḍḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "نُضُخ", "nuḍuḫ", "her daim fışkırtan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "نُضُخَة", "nuḍuḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "نُضُخَان", "nuḍuḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "نُضُخَتَان",
+        "nuḍuḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نُضُخُون",
+        "nuḍuḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نُضُخِين",
+        "nuḍuḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نُضُخَات",
+        "nuḍuḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "نَضْخَان", "naḍḫān", "her daim fışkırtan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "نَضْخَانَة", "naḍḫāna", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "نَضْخَانَان", "naḍḫānān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "نَضْخَانَتَان",
+        "naḍḫānatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضْخَانُون",
+        "naḍḫānūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضْخَانِين",
+        "naḍḫānīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضْخَانَات",
+        "naḍḫānāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "نُضَاخ", "nuḍāḫ", "her daim fışkırtan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "نُضَاخَة", "nuḍāḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "نُضَاخَان", "nuḍāḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "نُضَاخَتَان",
+        "nuḍāḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نُضَاخُون",
+        "nuḍāḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نُضَاخِين",
+        "nuḍāḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نُضَاخَات",
+        "nuḍāḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "نَضَاخ", "naḍāḫ", "her daim fışkırtan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "نَضَاخَة", "naḍāḫa", "her daim fışkırtan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "نَضَاخَان", "naḍāḫān", "her daim fışkırtan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "نَضَاخَتَان",
+        "naḍāḫatān",
+        "her daim fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضَاخُون",
+        "naḍāḫūn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضَاخِين",
+        "naḍāḫīn",
+        "her daim fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضَاخَات",
+        "naḍāḫāt",
+        "her daim fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "نَضَّاخ", "naḍḍāḫ", "işi fışkırtma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "نَضَّاخَة", "naḍḍāḫa", "işi fışkırtma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "نَضَّاخَان", "naḍḍāḫān", "işi fışkırtma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "نَضَّاخَتَان",
+        "naḍḍāḫatān",
+        "işi fışkırtma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضَّاخُون",
+        "naḍḍāḫūn",
+        "işi fışkırtma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضَّاخِين",
+        "naḍḍāḫīn",
+        "işi fışkırtma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضَّاخَات",
+        "naḍḍāḫāt",
+        "işi fışkırtma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "نَضَّاخَة", "naḍḍāḫa", "pek çok fışkırtan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "نَضَّاخَتَان", "naḍḍāḫatān", "pek çok fışkırtan, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضَّاخَات",
+        "naḍḍāḫāt",
+        "pek çok fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "نَضُوخ", "naḍūḫ", "çok fışkırtan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "نَضُوخَة", "naḍūḫa", "çok fışkırtan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "نَضُوخَان", "naḍūḫān", "çok fışkırtan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "نَضُوخَتَان",
+        "naḍūḫatān",
+        "çok fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "نَضُوخُون", "naḍūḫūn", "çok fışkırtanlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "نَضُوخِين", "naḍūḫīn", "çok fışkırtanlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضُوخَات",
+        "naḍūḫāt",
+        "çok fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "نَضُّوخ", "naḍḍūḫ", "pek çok fışkırtan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "نَضُّوخَة", "naḍḍūḫa", "pek çok fışkırtan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "نَضُّوخَان", "naḍḍūḫān", "pek çok fışkırtan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "نَضُّوخَتَان",
+        "naḍḍūḫatān",
+        "pek çok fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضُّوخُون",
+        "naḍḍūḫūn",
+        "pek çok fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضُّوخِين",
+        "naḍḍūḫīn",
+        "pek çok fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضُّوخَات",
+        "naḍḍūḫāt",
+        "pek çok fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "نِضِّيخ", "niḍḍīḫ", "fışkırtmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "نِضِّيخَة", "niḍḍīḫa", "fışkırtmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "نِضِّيخَان", "niḍḍīḫān", "fışkırtmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "نِضِّيخَتَان",
+        "niḍḍīḫatān",
+        "fışkırtmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نِضِّيخُون",
+        "niḍḍīḫūn",
+        "fışkırtmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نِضِّيخِين",
+        "niḍḍīḫīn",
+        "fışkırtmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نِضِّيخَات",
+        "niḍḍīḫāt",
+        "fışkırtmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "نُضَّاخ", "nuḍḍāḫ", "son derece fışkırtan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "نُضَّاخَة", "nuḍḍāḫa", "son derece fışkırtan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "نُضَّاخَان", "nuḍḍāḫān", "son derece fışkırtan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "نُضَّاخَتَان",
+        "nuḍḍāḫatān",
+        "son derece fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نُضَّاخُون",
+        "nuḍḍāḫūn",
+        "son derece fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نُضَّاخِين",
+        "nuḍḍāḫīn",
+        "son derece fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نُضَّاخَات",
+        "nuḍḍāḫāt",
+        "son derece fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِنْضَاخ", "minḍāḫ", "fışkırtmayı âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِنْضَاخَة", "minḍāḫa", "fışkırtmayı âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِنْضَاخَان", "minḍāḫān", "fışkırtmayı âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِنْضَاخَتَان",
+        "minḍāḫatān",
+        "fışkırtmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِنْضَاخُون",
+        "minḍāḫūn",
+        "fışkırtmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِنْضَاخِين",
+        "minḍāḫīn",
+        "fışkırtmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِنْضَاخَات",
+        "minḍāḫāt",
+        "fışkırtmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِنْضِيخ", "minḍīḫ", "fışkırtmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِنْضِيخَة", "minḍīḫa", "fışkırtmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِنْضِيخَان", "minḍīḫān", "fışkırtmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِنْضِيخَتَان",
+        "minḍīḫatān",
+        "fışkırtmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِنْضِيخُون",
+        "minḍīḫūn",
+        "fışkırtmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِنْضِيخِين",
+        "minḍīḫīn",
+        "fışkırtmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِنْضِيخَات",
+        "minḍīḫāt",
+        "fışkırtmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "نَضِيخ", "naḍīḫ", "çok fışkırtan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "نَضِيخَة", "naḍīḫa", "çok fışkırtan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "نَضِيخَان", "naḍīḫān", "çok fışkırtan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "نَضِيخَتَان",
+        "naḍīḫatān",
+        "çok fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "نَضِيخُون", "naḍīḫūn", "çok fışkırtanlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "نَضِيخِين", "naḍīḫīn", "çok fışkırtanlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضِيخَات",
+        "naḍīḫāt",
+        "çok fışkırtanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "نَضَّخ", "naḍḍaḫ", "çok fışkırtan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "نَضَّخَة", "naḍḍaḫa", "çok fışkırtan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "نَضَّخَان", "naḍḍaḫān", "çok fışkırtan, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "نَضَّخَتَان",
+        "naḍḍaḫatān",
+        "çok fışkırtan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "نَضَّخُون",
+        "naḍḍaḫūn",
+        "çok fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "نَضَّخِين",
+        "naḍḍaḫīn",
+        "çok fışkırtanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "نَضَّخَات",
+        "naḍḍaḫāt",
+        "çok fışkırtanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "نَضْخِيّ", "naḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "نَضَخِيّ", "naḍaḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "نِضْخِيّ", "niḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "نُضْخِيّ", "nuḍḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "نِضَاخِيّ", "niḍāḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "نَاضِخِيّ", "nāḍiḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَنْضُوخِيّ", "manḍūḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "نَضِيخِيّ", "naḍīḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَنْضَخِيّ", "manḍaḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَنْضِيخِيّ", "tanḍīḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَنَاضُخِيّ", "tanāḍuḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِنْضَاخِيّ", "ʾinḍāḫiyy", "fışkırtma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِنْتِضَاخِيّ", "intiḍāḫiyy", "fışkırtma ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "نَضْخِيَّة", "naḍḫiyya", "fışkırtanlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "نَضَخِيَّة", "naḍaḫiyya", "fışkırtanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "نِضْخِيَّة", "niḍḫiyya", "fışkırtanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "نُضْخِيَّة", "nuḍḫiyya", "fışkırtanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "نِضَاخِيَّة", "niḍāḫiyya", "fışkırtanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "نَاضِخِيَّة", "nāḍiḫiyya", "fışkırtanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَنْضُوخِيَّة", "manḍūḫiyya", "fışkırtanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "نَضِيخِيَّة", "naḍīḫiyya", "fışkırtanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَنْضَخِيَّة", "manḍaḫiyya", "fışkırtanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَنْضِيخِيَّة", "tanḍīḫiyya", "fışkırtanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَنَاضُخِيَّة", "tanāḍuḫiyya", "fışkırtanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِنْضَاخِيَّة", "ʾinḍāḫiyya", "fışkırtanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِنْتِضَاخِيَّة", "intiḍāḫiyya", "fışkırtanlık", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "نَضَاخ", "naḍāḫ", "fışkırtma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "نُضُوخ", "nuḍūḫ", "fışkırtma", "orta", ""],
+      ["fi'âl", "semâî aday", "نِضَاخ", "niḍāḫ", "fışkırtma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "نُضْخ", "nuḍḫ", "fışkırtma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "نَضَاخَة", "naḍāḫa", "fışkırtma", "orta", ""],
+      ["fi'âle", "semâî aday", "نِضَاخَة", "niḍāḫa", "fışkırtma", "orta", ""],
+      ["fu'ûle", "semâî aday", "نُضُوخَة", "nuḍūḫa", "fışkırtma", "orta", ""],
+      ["fa'l", "semâî aday", "نَضْخ", "naḍḫ", "fışkırtma", "orta", ""],
+      ["fi'l", "semâî aday", "نِضْخ", "niḍḫ", "fışkırtma", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "نَاضُوخ", "nāḍūḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "نَضَخَة", "naḍaḫa", "fışkırtma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "نُضَخَة", "nuḍaḫa", "fışkırtma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُنْضُوخَة", "ʾunḍūḫa", "fışkırtma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "نَوْضَخ", "nawḍaḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "نَيْضَخ", "nayḍaḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "نَضْخ", "naḍḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fa'al", "semâî aday", "نَضَخ", "naḍaḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "نِضْخ", "niḍḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "نُضْخ", "nuḍḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "نَضِيخ", "naḍīḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "نِضَخ", "niḍaḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "نُضُخ", "nuḍuḫ", "fışkırtma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "نَضَاخ", "naḍāḫ", "fışkırtma türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "نَاضُوخَة", "nāḍūḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "نَوْضَخَة", "nawḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "نَيْضَخَة", "nayḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "نَضْخَة", "naḍḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "نَضَخَة", "naḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "نِضْخَة", "niḍḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "نُضْخَة", "nuḍḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "نَضِيخَة", "naḍīḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "نِضَخَة", "niḍaḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "نُضُخَة", "nuḍuḫa", "fışkırtma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "نَضَاخَة", "naḍāḫa", "fışkırtma türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَنْضَاخ", "ʾanḍāḫ", "fışkırtmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَنْضِخَة", "ʾanḍiḫa", "fışkırtmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَنَاضِخ", "ʾanāḍiḫ", "fışkırtmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَنَاضِيخ", "ʾanāḍīḫ", "fışkırtmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "نُضُوخ", "nuḍūḫ", "fışkırtmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "نُضُخ", "nuḍuḫ", "fışkırtmalar", "orta", ""],
+      ["fi'āl", "semâî aday", "نِضَاخ", "niḍāḫ", "fışkırtmalar", "orta", ""],
+      ["fi'al", "semâî aday", "نِضَخ", "niḍaḫ", "fışkırtmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "نِضَخَة", "niḍaḫa", "fışkırtmalar", "orta", ""],
+      ["fu'al", "semâî aday", "نُضَخ", "nuḍaḫ", "fışkırtmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "نُضَخاء", "nuḍaḫāʾ", "fışkırtmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "نَضَخَة", "naḍaḫa", "fışkırtmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "نُضَّاخ", "nuḍḍāḫ", "fışkırtmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "نَضَاخ", "naḍāḫ", "fışkırtmalar", "orta", ""],
+      ["fa'al", "semâî aday", "نَضَخ", "naḍaḫ", "fışkırtmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَنَاضِخ", "manāḍiḫ", "fışkırtmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَنَاضِيخ", "manāḍīḫ", "fışkırtmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "نَوَاضِخ", "nawāḍiḫ", "fışkırtmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَنْضُخ", "ʾanḍuḫ", "fışkırtmalar", "orta", ""],
+      ["fu''al", "semâî aday", "نُضَّخ", "nuḍḍaḫ", "fışkırtmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "نَضَائِخ", "naḍāʾiḫ", "fışkırtmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "نُضَيْخ", "nuḍayḫ", "fışkırtmalar", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَنْضَاخَات", "ʾanḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَنْضِخَات", "ʾanḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَنَاضِخَات", "ʾanāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَنَاضِيخَات", "ʾanāḍīḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "نُضُوخَات", "nuḍūḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "نُضُخَات", "nuḍuḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "نِضَاخَات", "niḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "نِضَخَات", "niḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "نِضَخَات", "niḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "نُضَخَات", "nuḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "نُضَخاآت", "nuḍaḫāʾāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "نَضَخَات", "naḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "نُضَّاخَات", "nuḍḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "نَضَاخَات", "naḍāḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "نَضَخَات", "naḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَنَاضِخَات", "manāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَنَاضِيخَات", "manāḍīḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "نَوَاضِخَات", "nawāḍiḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَنْضُخَات", "ʾanḍuḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "نُضَّخَات", "nuḍḍaḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "نَضَائِخَات", "naḍāʾiḫāt", "fışkırtmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "نُضَيْخَات", "nuḍayḫāt", "fışkırtmalar topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "scatter.v.03",
     "orta": "verb.contact",
     "ust": "fiil ve hadise",
@@ -1205,30 +2206,8 @@
     "dayanak_tanim": "distribute loosely",
     "dayanak_karsilik": "sprinkle"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "النون والضاد",
-    "mihveri": "فَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح. (4/2213)",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (نض) : نفاذ الشيء (بنحو الرشح) من أثناء ما هو فيه اندفاعًا إلى أعلى أو إلى الظاهر -كرشح الماء من الحجر والحِسي- في (نضض)، ونفاذ غضاضة النيوء من اللحم أو نفاذ حرارة الإنضاج إليه- في (نضج)، ونفاذ الماء من الينبوع- في نضخ، وارتفاع السحاب بعضه فوق بعض- في (نضد)، ونفاذ الطحلب من أثناء الماء إلى أعلاه مع غرابة محببة- في (نضر).",
-    "tam_metin": "{فِيهِمَا عَينَانِ نَضَّاخَتَانِ (66)} [الرحمن: 66]\n\"النَضْخُ: شدَّة فور الماء في جَيَشانه وانفجارِه من يَنْبُوعه. وعَينٌ نَضّاخه: كثيرةُ الماء فوَّارة تجيش بالماء. قال: ما كان من سُفْلٍ إلى عُلْو فهو نَضْخ \".\n° المعنى المحوري\nفَوَران الماء ونحوه (كالدم والخلّ والزَغفران) من جوفٍ واندفاعُه خارجًا بقوة: {فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ}: تفوران بالماء متاعا لعيون أهل الجنة ونفوسهم -كما تقام النوافير الآن في الشوارع والحدائق. والنضح بالحاء المهملة أقل من ذلك كثيرا لأنه كالرشح.\n(4/2213)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "النخل",
-    "bab": "العود",
-    "kok_gecis": 6.0,
-    "kitapta_gecis": 3.0,
-    "zenginlesme": 2.83
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 2,
       "merkez_kok": "حنج",
@@ -1248,563 +2227,14 @@
       "boy": 46
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
+  "muhassas": {
+    "kitap": "النخل",
+    "bab": "العود",
+    "kok_gecis": 6.0,
+    "kitapta_gecis": 3.0,
+    "zenginlesme": 2.83
   },
-  "kelimeler": [
-    {
-      "kelime": "نَضَّاخَتَانِ",
-      "kok": "نضخ",
-      "lemma": "نَضّاخَتان",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "55:66",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "fışkıran iki",
-        "lemma": "fışkıran iki",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "orta",
-    "dayanak": ["lugat-fiil"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Aktarım",
-    "ayrim": "fışkırt",
-    "acilim": "نضخ := Aktarım(ayrım: fışkırt)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Aktarım",
-    "kelimeler": [
-      {
-        "lemma": "نَضّاخَتان",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "mübalağa · fa''āl + müennes tesniye ; mübalağa · fa''āle + tesniye ; mübalağa · fu''āl + müennes tesniye (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

@@ -28,8 +28,11 @@ def topla():
         d0 = os.path.join(KD, ad, 'kokler')
         for fn in sorted(os.listdir(d0)):
             d = json.load(open(os.path.join(d0, fn), encoding='utf-8'))
-            d.setdefault('kelimeler', [])
-            tur = BF.kok_turu(d)['tur']
+            if 'tur' in d:
+                tur = d['tur']
+            else:
+                d.setdefault('kelimeler', [])
+                tur = BF.kok_turu(d)['tur']
             k = temiz(d['kok'])
             if k not in sonuc or ad == 'kuranda_var':
                 sonuc[k] = tur

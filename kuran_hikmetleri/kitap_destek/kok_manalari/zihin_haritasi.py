@@ -11,12 +11,17 @@ import mesmu as MS
 SIN = {'mesmu': 2, 'kiyasi': 1, 'aykiri': 0}
 BAB = ['sülâsî mücerred', 'sülâsî'] + ['bâb ' + r for r in 'II III IV V VI VII VIII IX X XI XII XIII'.split()]
 for k in A:
-    dk = json.load(open(KOK / f'{k}.json', encoding='utf-8')); m = dk.get('mustaklar') or {}; SN = MS.siniflar(dk)
-    LUG = {a: [[e['eser'], e['madde'], ' · '.join(x for x in (e.get('tur', ''), e.get('koken', '')) if x), [[n.get('no', ''), n.get('etiket', ''), n['tanim'], n['misaller']] for n in e['manalar']], [[n['deyim'], n['tanim'], n['misaller']] for n in e['deyimler']]] for e in v] for a, v in ((dk.get('sozlukler') or {}).get('mustak_lugat') or {}).items()}
+    dk = json.load(open(KOK / f'{k}.json', encoding='utf-8')); m = dk.get('mustak') or {}; SN = MS.siniflar(dk)
+    LUG = {}
+    for eser, L in (dk.get('lugat') or {}).items():
+        for e in L:
+            if 'manalar' not in e: continue
+            satir = [eser, e['madde'], ' · '.join(x for x in (e.get('tur', ''), e.get('koken', '')) if x), [[n.get('no', ''), n.get('etiket', ''), n['tanim'], n.get('misaller', [])] for n in e['manalar']], [[n['deyim'], n['tanim'], n.get('misaller', [])] for n in e.get('deyimler', [])]]
+            for w in e['kelime']: LUG.setdefault(w, []).append(satir)
     T = {}
     for g, L in m.items():
         kat, _, bab = g.partition(' · '); bab = bab or 'bâbsız'
-        T.setdefault(bab, {}).setdefault(kat, [[x[1], x[3], SIN[SN[(g, j)]]] + ([LUG[x[1]]] if x[1] in LUG and SN[(g, j)] == 'mesmu' else []) for j, x in enumerate(L)])
+        T.setdefault(bab, {}).setdefault(kat, [[x[2], x[4], SIN[SN[(g, j)]]] + ([LUG[x[2]]] if x[2] in LUG and SN[(g, j)] == 'mesmu' else []) for j, x in enumerate(L)])
     sira = sorted(T, key=lambda b: BAB.index(b) if b in BAB else 99)
     (SA / f'{k}.js').write_text('SA[' + json.dumps(k) + ']=' + json.dumps([[b, list(T[b].items())] for b in sira], ensure_ascii=False, separators=(',', ':')) + ';', encoding='utf-8')
 HTML = r"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

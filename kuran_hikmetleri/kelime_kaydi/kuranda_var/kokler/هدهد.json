@@ -1,462 +1,337 @@
 {
   "kok": "هدهد",
+  "tur": "isim",
+  "tur_guven": "orta",
+  "tur_dayanak": ["isimden-fiil"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "ağaçkakan ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "ağaçkakan ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هدهد", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "هدهد",
-      "turkce": "Hüdhüd: ağaçkakan, hüdhüd kuşu"
-    },
-    "osmanlica_lugatler": {
-      "هُدْهُد": {
-        "sorgular": ["hudhud", "hudhut"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "hudhud",
-            "arapca": [],
-            "mana": "خُدْخُدٌ [hudhud] (هُدْهُدٌ [hudhud] vezninde) ve خُدَخِدٌ [hadhad] (عُلَبِطٌ [ulebit] vezninde) Bir böcek adıdır.",
-            "id": 685884,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus",
-            "madde": "hudhud",
-            "arapca": [],
-            "mana": "اَلْحُضْحُضُ [el-hudhud] (قُنْفُذٌ [kunfuz] vezninde) Bir nebât adıdır.",
-            "id": 685885,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus",
-            "madde": "hudhud",
-            "arapca": [],
-            "mana": "اَلْهُدْهُدُ [el-hudhud] (hâların zammıyla) Mutlakan karkara eden yanî elhân ve nagamâtla öten kuşa denir. Ve hâssaten marûf kuşun ismidir ki çavuş kuşu ve ibik tabîr ettikleridir; هَدْهَدَةٌ [hedhedet]ten mehûzdur, ke-mâ se-yuzkeru. Ve ona هُدَهِدٌ [hudehid] dahi denir, عُلَبِطٌ [ulebit] vezninde ve هُدَاهِدُ [hudâhid] denir, عُلاَبِطٌ [ulâbit] vezninde. Ve هُدْهُدٌ [hudhud] Kesîrül-hedhede olan güvercin kuşuna denir. Bunların cemi هَدَاهِدُ [hedâhid] ve هَدَاهِيدُ [hedâhîd] gelir hâların fethiyle.",
-            "id": 685887,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus",
-            "madde": "hudhud",
-            "arapca": [],
-            "mana": "اَلْخُضَاخِضَةُ [el-hudâhidat] (hâyla) ve اَلْخُضْخُضُ [el-hudhud] (هُدْهُدٌ [hudhud] vezninde) ve اَلْخُضَخِضُ [el-hudahid] (عُلَبِطٌ [ulebit] vezninde) Bunlar da karnı büyük semiz adama ve deveye denir.",
-            "id": 685888,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "hudhud",
-            "arapca": [],
-            "mana": "اَلْهُدْهُدُ [el-hudhud] (hâların zammı ve dâlın sükûnuyla) Bir marûf kuşun adıdır.",
-            "id": 685886,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          }
-        ]
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الهاء والدال",
-      "baslik": "هدد- هدهد",
-      "mihveri": "تهيّر القائم الصُلب وتسيُّبه سقوطا بقوة (1) ككسر الحائط، وكالانحدار من الأكمة الصعبة بتسيب. ولحظ في الأرض الهدود أنها سهلة متسيبة ففعول هنا بمعنى مفعول {وَتَخِرُّ الْجِبَالُ هَدًّا} هذا كما قال تعالى: {وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ (5)} [القارعة: 5] ومن هذا \"الهدّ من الرجال- بالفتح: الضَعِيف، والأَهَدَ: الجبَان (خوّار) والهدّ من الرجال- بالفتح: الجوادُ الكريم (سهل غير مُمسك). أما \"الهديد: الرجل الطويل \"فالتسيب فيه امتداد جرمه. ومن هذا الأصل \"مررت برجل هَدّكَ من رجل: أي حَسبُك \" (هو كاف في صفات",
-      "sesler": "الهاء لاستفراغ ما في الجوف أو خروجه، والدال تعبر عن ضغط واحتباس، ويعبر الفصل منهما عن تسيب أثناء المتجمع وكأن الفراغ غلب التماسك والاحتباس أو انصبّ على ما هو متماسك محتبس وفي (هدى) تزيد الياء معنى الامتداد والاتصال، ويعبر التركيب عن امتداد الشيء المتصل من مقدمة شيء كالهادي عنق الفرس. وفي (هود) تعبر الواو عن الاشتمال، ويعبر التركيب عن الاشتمال على لين ورخاوة متجمعة كقَحَدة السنام. وفي (هدم) تعبر الميم عن الاستواء الظاهري (تماسك)، ويعبر التركيب عن تسيب المتماسك القائم في موضعه حتى يستوي بأصله. كما في الهدْم.",
-      "tam_metin": "{وَتَخِرُّ الْجِبَالُ هَدًّا} [مريم: 90]\n\"الهَدُود: الأرضُ السهلة اللينة [تاج]. وأَكَمَة هَدُود: صبة المُنْحَدَر. هَدّ البناءَ: كسره وضعْضعَهُ. الهَدُّ: الهَدْمُ الشديد / الكسرُ كحائط يُهَدّ بمرة \".\n° المعنى المحوري\nتهيّر القائم الصُلب وتسيُّبه سقوطا بقوة (1) ككسر الحائط، وكالانحدار من الأكمة الصعبة بتسيب. ولحظ في الأرض الهدود أنها سهلة متسيبة ففعول هنا بمعنى مفعول {وَتَخِرُّ الْجِبَالُ هَدًّا} هذا كما قال تعالى: {وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ (5)} [القارعة: 5] ومن هذا \"الهدّ من الرجال- بالفتح: الضَعِيف، والأَهَدَ: الجبَان (خوّار) والهدّ من الرجال- بالفتح: الجوادُ الكريم (سهل غير مُمسك). أما \"الهديد: الرجل الطويل \"فالتسيب فيه امتداد جرمه. ومن هذا الأصل \"مررت برجل هَدّكَ من رجل: أي حَسبُك \" (هو كاف في صفات\n__________\n(1) (صوتيًّا): الهاء لاستفراغ ما في الجوف أو خروجه، والدال تعبر عن ضغط واحتباس، ويعبر الفصل منهما عن تسيب أثناء المتجمع وكأن الفراغ غلب التماسك والاحتباس أو انصبّ على ما هو متماسك محتبس وفي (هدى) تزيد الياء معنى الامتداد والاتصال، ويعبر التركيب عن امتداد الشيء المتصل من مقدمة شيء كالهادي عنق الفرس. وفي (هود) تعبر الواو عن الاشتمال، ويعبر التركيب عن الاشتمال على لين ورخاوة متجمعة كقَحَدة السنام. وفي (هدم) تعبر الميم عن الاستواء الظاهري (تماسك)، ويعبر التركيب عن تسيب المتماسك القائم في موضعه حتى يستوي بأصله. كما في الهدْم.\n(4/2292)\nالخير والخير رخاوة من باب التسبب، أو معناه. ليس عندك ما يعيبه).\nومن هذا الأصل \"التهديد وهو وعيد وتخويف \"يقصد به إرعاب الخصم حتى يتسبب وينهار.\nوقولهم \"هَدُّ البعير: هديرُه، وهَدْهد الطائر: قَرْقر. والهُداهد- كتماضر: الكثير الهدير من الحمام. وفحل هُدَاهد: كثير الهدهدة يهدر في الإبل ولا يقرعها \". (فهو حكاية صوتية، وقد يكون أنه صوت عظيم عال أو كثير ثم هو فارغ لا شيء وراءه -أي من لازم التهور وهو السهولة / الفراغ). وسمي \"الهدهد. {فَقَال مَا لِيَ لَا أَرَى الْهُدْهُدَ} [النمل: 20] لأن صوته قريب من (هُدُو هدو) فهي تسمية له بصوته كما سمي الغراب (غاق) بصوته.\nومن الأصل \"هَدْهَد الصبيَّ في المهد ونحوه: حرّكه فيه \" (فالتحريك تسيب وليونة وعدم ثبات أو جمود. ومع وثارة المهد تكون الحركة رفيقة لينة تناسب التسيب في الأصل).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (هد): تفكك القائم المنتصب وتضعضعه أو تسيبه كما في هدّ الحائط: كسره وتهويره- في (هدد)، وكما في تسيب الهادي: أي نفاذه ممتدًا من البدن إلى الإمام وكذلك امتداد النصل من السهم- في (هدى). وكما في لين أصل السنام ومجتمعه وكذلك تهويد الثراب الشاربَ: تفتيره وإنامته إياه (وهذا يناسب النسيب) في (هود)، وكما في الهدم قلع المدر أي فك امتساكه بعضه ببعض- في (هدم)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "27:20:8:2",
-      "tur": {
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "هُدْهُد": 1
-      },
-      "bicimler": {
-        "هُدْهُدَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "HDHD",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab HDHD هدهد BP – • HDAL • © SG | 20May2023 √HDHD “root” ▪ HDHD_1 ‘...’ ↗ ... ▪ HDHD_2 ‘...’ ↗ ... ▪ HDHD_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to coo, murmur, gently pat a baby to sleep; hoopoe’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "هدهدت",
-        "u": "هدهدت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدت (form Iq)\n# هَدْهَدْتُ (hadhadtu) /had.had.tu/: first-person singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدْتَ (hadhadta) /had.had.ta/: second-person masculine singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدْتِ (hadhadti) /had.had.ti/: second-person feminine singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدَتْ (hadhadat) /had.ha.dat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadtu", "hadhada", "hadhadta"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدتا",
-        "u": "هدهدتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدتا (form Iq)\n# هَدْهَدَتَا (hadhadatā) /had.ha.da.taː/: third-person feminine dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدَتَا (hudhidatā) /hud.hi.da.taː/: third-person feminine dual past passive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadatā", "hadhada", "hudhidatā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدا",
-        "u": "هدهدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدا (form Iq)\n# هَدْهَدَا (hadhadā) /had.ha.daː/: third-person masculine dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدَا (hudhidā) /hud.hi.daː/: third-person masculine dual past passive of هَدْهَدَ (hadhada)\n# هَدْهِدَا (hadhidā) /had.hi.daː/: second-person dual imperative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadā", "hadhada", "hudhidā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدتما",
-        "u": "هدهدتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدتما (form Iq)\n# هَدْهَدْتُمَا (hadhadtumā) /had.had.tu.maː/: second-person dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُمَا (hudhidtumā) /hud.hid.tu.maː/: second-person dual past passive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadtumā", "hadhada", "hudhidtumā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدنا",
-        "u": "هدهدنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدنا (form Iq)\n# هَدْهَدْنَا (hadhadnā) /had.had.naː/: first-person plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْنَا (hudhidnā) /hud.hid.naː/: first-person plural past passive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadnā", "hadhada", "hudhidnā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدوا",
-        "u": "هدهدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدوا (form Iq)\n# هَدْهَدُوا (hadhadū) /had.ha.duː/: third-person masculine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدُوا (hudhidū) /hud.hi.duː/: third-person masculine plural past passive of هَدْهَدَ (hadhada)\n# هَدْهِدُوا (hadhidū) /had.hi.duː/: second-person masculine plural imperative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadū", "hadhada", "hudhidū"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدتم",
-        "u": "هدهدتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدتم (form Iq)\n# هَدْهَدْتُمْ (hadhadtum) /had.had.tum/: second-person masculine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُمْ (hudhidtum) /hud.hid.tum/: second-person masculine plural past passive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadtum", "hadhada", "hudhidtum"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدتن",
-        "u": "هدهدتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدتن (form Iq)\n# هَدْهَدْتُنَّ (hadhadtunna) /had.had.tun.na/: second-person feminine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُنَّ (hudhidtunna) /hud.hid.tun.na/: second-person feminine plural past passive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadtunna", "hadhada", "hudhidtunna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهد",
-        "u": "يهدهد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهد (form Iq)\n# يُهَدْهِدُ (yuhadhidu) /ju.had.hi.du/: third-person masculine singular non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدُ (yuhadhadu) /ju.had.ha.du/: third-person masculine singular non-past passive indicative of هَدْهَدَ (hadhada)\n# يُهَدْهِدَ (yuhadhida) /ju.had.hi.da/: third-person masculine singular non-past active subjunctive of هَدْهَدَ (hadhada)\n# يُهَدْهَدَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidu", "hadhada", "yuhadhadu"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدن",
-        "u": "هدهدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هدهدن (form Iq)\n# هَدْهَدْنَ (hadhadna) /had.had.na/: third-person feminine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْنَ (hudhidna) /hud.hid.na/: third-person feminine plural past passive of هَدْهَدَ (hadhada)\n# هَدْهِدْنَ (hadhidna) /had.hid.na/: second-person feminine plural imperative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhadna", "hadhada", "hudhidna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدين",
-        "u": "تهدهدين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدين (form Iq)\n# تُهَدْهِدِينَ (tuhadhidīna) /tu.had.hi.diː.na/: second-person feminine singular non-past active indicative of هَدْهَدَ (hadhada)\n# تُهَدْهَدِينَ (tuhadhadīna) /tu.had.ha.diː.na/: second-person feminine singular non-past passive indicative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidīna", "hadhada", "tuhadhadīna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهدان",
-        "u": "يهدهدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهدان (form Iq)\n# يُهَدْهِدَانِ (yuhadhidāni) /ju.had.hi.daː.ni/: third-person masculine dual non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدَانِ (yuhadhadāni) /ju.had.ha.daː.ni/: third-person masculine dual non-past passive indicative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidāni", "hadhada", "yuhadhadāni"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهد",
-        "u": "تهدهد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهد (form Iq)\n# تُهَدْهِدُ (tuhadhidu) /tu.had.hi.du/: inflection of هَدْهَدَ (hadhada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَدْهَدُ (tuhadhadu) /tu.had.ha.du/: inflection of هَدْهَدَ (hadhada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidu", "hadhada", "tuhadhadu"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "أهدهد",
-        "u": "أهدهد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهدهد (form Iq)\n# أُهَدْهِدُ (ʔuhadhidu) /ʔu.had.hi.du/: first-person singular non-past active indicative of هَدْهَدَ (hadhada)\n# أُهَدْهَدُ (ʔuhadhadu) /ʔu.had.ha.du/: first-person singular non-past passive indicative of هَدْهَدَ (hadhada)\n# أُهَدْهِدَ (ʔuhadhida) /ʔu.had.hi.da/: first-person singular non-past active subjunctive of هَدْهَدَ (hadhada)\n# أُهَدْهَدَ (ʔuhadhada) /ʔu.had.ha.da/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuhadhidu", "hadhada", "ʔuhadhadu"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "نهدهد",
-        "u": "نهدهد",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهدهد (form Iq)\n# نُهَدْهِدُ (nuhadhidu) /nu.had.hi.du/: first-person plural non-past active indicative of هَدْهَدَ (hadhada)\n# نُهَدْهَدُ (nuhadhadu) /nu.had.ha.du/: first-person plural non-past passive indicative of هَدْهَدَ (hadhada)\n# نُهَدْهِدَ (nuhadhida) /nu.had.hi.da/: first-person plural non-past active subjunctive of هَدْهَدَ (hadhada)\n# نُهَدْهَدَ (nuhadhada) /nu.had.ha.da/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuhadhidu", "hadhada", "nuhadhadu"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهدون",
-        "u": "يهدهدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهدون (form Iq)\n# يُهَدْهِدُونَ (yuhadhidūna) /ju.had.hi.duː.na/: third-person masculine plural non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدُونَ (yuhadhadūna) /ju.had.ha.duː.na/: third-person masculine plural non-past passive indicative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidūna", "hadhada", "yuhadhadūna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدان",
-        "u": "تهدهدان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدان (form Iq)\n# تُهَدْهِدَانِ (tuhadhidāni) /tu.had.hi.daː.ni/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَدْهَدَانِ (tuhadhadāni) /tu.had.ha.daː.ni/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidāni", "hadhada", "tuhadhadāni"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدون",
-        "u": "تهدهدون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدون (form Iq)\n# تُهَدْهِدُونَ (tuhadhidūna) /tu.had.hi.duː.na/: second-person masculine plural non-past active indicative of هَدْهَدَ (hadhada)\n# تُهَدْهَدُونَ (tuhadhadūna) /tu.had.ha.duː.na/: second-person masculine plural non-past passive indicative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidūna", "hadhada", "tuhadhadūna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدن",
-        "u": "تهدهدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدن (form Iq)\n# تُهَدْهِدْنَ (tuhadhidna) /tu.had.hid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدْنَ (tuhadhadna) /tu.had.had.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidna", "hadhada", "tuhadhadna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهدا",
-        "u": "يهدهدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهدا (form Iq)\n# يُهَدْهِدَا (yuhadhidā) /ju.had.hi.daː/: third-person masculine dual non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدَا (yuhadhadā) /ju.had.ha.daː/: third-person masculine dual non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidā", "hadhada", "yuhadhadā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهدن",
-        "u": "يهدهدن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهدن (form Iq)\n# يُهَدْهِدْنَ (yuhadhidna) /ju.had.hid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدْنَ (yuhadhadna) /ju.had.had.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidna", "hadhada", "yuhadhadna"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "يهدهدوا",
-        "u": "يهدهدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهدهدوا (form Iq)\n# يُهَدْهِدُوا (yuhadhidū) /ju.had.hi.duː/: third-person masculine plural non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدُوا (yuhadhadū) /ju.had.ha.duː/: third-person masculine plural non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuhadhidū", "hadhada", "yuhadhadū"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدوا",
-        "u": "تهدهدوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدوا (form Iq)\n# تُهَدْهِدُوا (tuhadhidū) /tu.had.hi.duː/: second-person masculine plural non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدُوا (tuhadhadū) /tu.had.ha.duː/: second-person masculine plural non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidū", "hadhada", "tuhadhadū"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "هدهدي",
-        "u": "هدهدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هَدْهِدِي • (hadhidī) (form Iq) /had.hi.diː/\n# second-person feminine singular imperative of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["hadhidī", "hadhada"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدا",
-        "u": "تهدهدا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدا (form Iq)\n# تُهَدْهِدَا (tuhadhidā) /tu.had.hi.daː/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَدْهَدَا (tuhadhadā) /tu.had.ha.daː/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidā", "hadhada", "tuhadhadā"],
-        "k": "هدهد",
-        "yol": "kök"
-      },
-      {
-        "w": "تهدهدي",
-        "u": "تهدهدي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهدهدي (form Iq)\n# تُهَدْهِدِي (tuhadhidī) /tu.had.hi.diː/: second-person feminine singular non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدِي (tuhadhadī) /tu.had.ha.diː/: second-person feminine singular non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuhadhidī", "hadhada", "tuhadhadī"],
-        "k": "هدهد",
-        "yol": "kök"
-      }
-    ],
-    "tercume": {
-      "cebel_mihveri": {
-        "mihveri": "Sağlam, ayakta duran şeyin yıkılması ve şiddetle düşerek dağılması (1): duvarın yıkılması gibi, sarp bir tepeden gevşekçe inmek gibi. «Hudûd» arazide, gevşek ve yumuşak olduğu için ihtimâm edilmiştir; «fe'ûl» burada «mef'ûl» mânâsınadır {ve dağlar yıkılıp parçalanarak çöker} (ve tahırru'l-cibâlü heddan); bu, Allah Teâlâ'nın şu buyruğu gibidir: {Dağlar atılmış renkli yün gibi olur} [Kâri'a: 5]. Bundandır «el-Hedd mine'r-ricâl» (fetha ile): zayıf; «el-ehedd»: korkak (gevşek). «El-Hedd mine'r-ricâl» (fetha ile): cömert, kerîm (yumuşak, tutucu olmayan). «El-Hedîd» ise uzun boylu adamdır; onda gevşeklik cismin uzamasıdır. Bu asıldan «merertü bi-racülin heddeke min racül»: yânî sana kâfidir (sıfatlarda kâfidir). \n__________\n(1) (Sesce): Hâ, içindekinin boşaltılmasını yahut çıkışını; dâl, baskı ve habsi ifâde eder; ikisinden fasıl, toplanmışın ara yerlerinin salınmasını ifâde eder, sanki boşluk temâsüke ve habse galebe etmiş yahut tutunmuş, hapsedilmiş olana dökülmüş gibi. (Hdy)'de yâ, uzanma ve ittisâl mânâsını artırır; terkîb, bir şeyin önünden bitişik olan uzanmayı ifâde eder; hâdî: atın boynu gibi. (Hvd)'de vâv iştimâli ifâde eder; terkîb, toplanmış yumuşaklık ve gevşekliği ihtivâyı ifâde eder; hörgücün kahdesi gibi. (Hdm)'de mîm, zâhirî düzlüğü (temâsük) ifâde eder; terkîb, yerinde kâim olan tutunmuşun, aslıyla düzleşinceye kadar salınmasını ifâde eder; hedm (yıkım) gibi.\n(4/2292)\nhayır ve hayır, gevşekliktir, tesebbüb bâbından yahut onun mânâsından. Onu ayıplayacak sende bir şey yok).\nVe bu asıldan «et-tehdîd: tehdit ve korkutma» ki rakibi korkutmak kasdedilir, ta ki salınıp çökene kadar.\nVe onların «heddü'l-be'îr: onun hadîri (böğürmesi), ve hedhede't-tayr: guruldadı. Ve'l-hudâhid — tümâzır vezninde: güvercinden çok guruldayan. Ve fahl hudâhid: çok hedhede eden, develer içinde böğürür ve onlara çarpmaz». (Bu bir ses hikâyesidir; belki yüksek yahut çok büyük bir sestir, sonra boştur, arkasında bir şey yoktur — yânî tehevvürün lâzımından, o da kolaylık / boşluktur.) Ve «hüdhüd» adlandırıldı {Neden hüdhüdü görmüyorum} [Neml: 20] çünkü sesi (hüdû hüdû)'ya yakındır; bu, sesiyle onun adlandırılmasıdır; nitekim karga (gâk) sesiyle adlandırıldı.\nVe asıldan «hedhede's-sabiyye fi'l-mehd ve nahvihî: onu içinde hareket ettirdi» (hareket ettirme gevşeklik, yumuşaklık ve sebâtsızlık yahut donukluğun olmayışıdır. Ve beşiğin yumuşaklığıyla hareket, asıldaki gevşekliğe uygun, rıfk ve yumuşaklıkla olur).",
-        "sesler": "Hâ, iç boşluğun boşalması yahut çıkması için; dâl, sıkışma ve hapsi ifade eder; ikisinin faslı, toplanmış şeyin içinde bir gevşemeyi gösterir; sanki boşluk, tutunmaya ve hapse galebe etmiş yahut tutunan ve hapsedilen şeyin üzerine dökülmüştür. «Hedâ»da yâ uzanma ve ittisâl mânâsını artırır; terkîb, bir şeyin önünden uzanan bitişik parçayı ifade eder; atın boynunun hâdîsi (öncüsü) gibi. «Hûd»da vâv iştimâli ifade eder; terkîb, toplanmış yumuşaklık ve gevşekliği içine alma mânâsını verir; hörgücün kahdesi gibi. «Hedm»de mîm, zâhirî düzlüğü (tutunmayı) ifade eder; terkîb, yerinde duran sağlam şeyin gevşeyip aslıyla düz olmasını ifade eder; «hedm» gibi."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab HDHD هدهد | BP – • HDAL • © SG | 20 Mayıs 2023 | √HDHD «kök» ▪ HDHD_1 «…» ↗ … ▪ HDHD_2 «…» ↗ … ▪ HDHD_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «güvercin gibi guruldamak, mırıldanmak, bebeği hafifçe sıvazlayarak uyutmak; hüdhüd (ibibik)» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      }
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هد",
+  "ses": {
     "harf": "ه",
+    "fasil": "هد",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
+  "anlam": "Hüdhüd: ağaçkakan, hüdhüd kuşu",
+  "esas_manalar": "hüdhüd kuşu",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "hudhud",
+        "metin": "خُدْخُدٌ [hudhud] (هُدْهُدٌ [hudhud] vezninde) ve خُدَخِدٌ [hadhad] (عُلَبِطٌ [ulebit] vezninde) Bir böcek adıdır.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هُدْهُد"]
+      },
+      {
+        "madde": "hudhud",
+        "metin": "اَلْحُضْحُضُ [el-hudhud] (قُنْفُذٌ [kunfuz] vezninde) Bir nebât adıdır.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هُدْهُد"]
+      },
+      {
+        "madde": "hudhud",
+        "metin": "اَلْهُدْهُدُ [el-hudhud] (hâların zammıyla) Mutlakan karkara eden yanî elhân ve nagamâtla öten kuşa denir. Ve hâssaten marûf kuşun ismidir ki çavuş kuşu ve ibik tabîr ettikleridir; هَدْهَدَةٌ [hedhedet]ten mehûzdur, ke-mâ se-yuzkeru. Ve ona هُدَهِدٌ [hudehid] dahi denir, عُلَبِطٌ [ulebit] vezninde ve هُدَاهِدُ [hudâhid] denir, عُلاَبِطٌ [ulâbit] vezninde. Ve هُدْهُدٌ [hudhud] Kesîrül-hedhede olan güvercin kuşuna denir. Bunların cemi هَدَاهِدُ [hedâhid] ve هَدَاهِيدُ [hedâhîd] gelir hâların fethiyle.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هُدْهُد"]
+      },
+      {
+        "madde": "hudhud",
+        "metin": "اَلْخُضَاخِضَةُ [el-hudâhidat] (hâyla) ve اَلْخُضْخُضُ [el-hudhud] (هُدْهُدٌ [hudhud] vezninde) ve اَلْخُضَخِضُ [el-hudahid] (عُلَبِطٌ [ulebit] vezninde) Bunlar da karnı büyük semiz adama ve deveye denir.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هُدْهُد"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "hudhud",
+        "metin": "اَلْهُدْهُدُ [el-hudhud] (hâların zammı ve dâlın sükûnuyla) Bir marûf kuşun adıdır.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هُدْهُد"]
+      }
+    ]
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الهاء والدال",
+    "baslik": "هدد- هدهد",
     "mihveri": "تهيّر القائم الصُلب وتسيُّبه سقوطا بقوة (1) ككسر الحائط، وكالانحدار من الأكمة الصعبة بتسيب. ولحظ في الأرض الهدود أنها سهلة متسيبة ففعول هنا بمعنى مفعول {وَتَخِرُّ الْجِبَالُ هَدًّا} هذا كما قال تعالى: {وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ (5)} [القارعة: 5] ومن هذا \"الهدّ من الرجال- بالفتح: الضَعِيف، والأَهَدَ: الجبَان (خوّار) والهدّ من الرجال- بالفتح: الجوادُ الكريم (سهل غير مُمسك). أما \"الهديد: الرجل الطويل \"فالتسيب فيه امتداد جرمه. ومن هذا الأصل \"مررت برجل هَدّكَ من رجل: أي حَسبُك \" (هو كاف في صفات",
     "sesler": "الهاء لاستفراغ ما في الجوف أو خروجه، والدال تعبر عن ضغط واحتباس، ويعبر الفصل منهما عن تسيب أثناء المتجمع وكأن الفراغ غلب التماسك والاحتباس أو انصبّ على ما هو متماسك محتبس وفي (هدى) تزيد الياء معنى الامتداد والاتصال، ويعبر التركيب عن امتداد الشيء المتصل من مقدمة شيء كالهادي عنق الفرس. وفي (هود) تعبر الواو عن الاشتمال، ويعبر التركيب عن الاشتمال على لين ورخاوة متجمعة كقَحَدة السنام. وفي (هدم) تعبر الميم عن الاستواء الظاهري (تماسك)، ويعبر التركيب عن تسيب المتماسك القائم في موضعه حتى يستوي بأصله. كما في الهدْم.",
+    "tam_metin": "{وَتَخِرُّ الْجِبَالُ هَدًّا} [مريم: 90]\n\"الهَدُود: الأرضُ السهلة اللينة [تاج]. وأَكَمَة هَدُود: صبة المُنْحَدَر. هَدّ البناءَ: كسره وضعْضعَهُ. الهَدُّ: الهَدْمُ الشديد / الكسرُ كحائط يُهَدّ بمرة \".\n° المعنى المحوري\nتهيّر القائم الصُلب وتسيُّبه سقوطا بقوة (1) ككسر الحائط، وكالانحدار من الأكمة الصعبة بتسيب. ولحظ في الأرض الهدود أنها سهلة متسيبة ففعول هنا بمعنى مفعول {وَتَخِرُّ الْجِبَالُ هَدًّا} هذا كما قال تعالى: {وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ (5)} [القارعة: 5] ومن هذا \"الهدّ من الرجال- بالفتح: الضَعِيف، والأَهَدَ: الجبَان (خوّار) والهدّ من الرجال- بالفتح: الجوادُ الكريم (سهل غير مُمسك). أما \"الهديد: الرجل الطويل \"فالتسيب فيه امتداد جرمه. ومن هذا الأصل \"مررت برجل هَدّكَ من رجل: أي حَسبُك \" (هو كاف في صفات\n__________\n(1) (صوتيًّا): الهاء لاستفراغ ما في الجوف أو خروجه، والدال تعبر عن ضغط واحتباس، ويعبر الفصل منهما عن تسيب أثناء المتجمع وكأن الفراغ غلب التماسك والاحتباس أو انصبّ على ما هو متماسك محتبس وفي (هدى) تزيد الياء معنى الامتداد والاتصال، ويعبر التركيب عن امتداد الشيء المتصل من مقدمة شيء كالهادي عنق الفرس. وفي (هود) تعبر الواو عن الاشتمال، ويعبر التركيب عن الاشتمال على لين ورخاوة متجمعة كقَحَدة السنام. وفي (هدم) تعبر الميم عن الاستواء الظاهري (تماسك)، ويعبر التركيب عن تسيب المتماسك القائم في موضعه حتى يستوي بأصله. كما في الهدْم.\n(4/2292)\nالخير والخير رخاوة من باب التسبب، أو معناه. ليس عندك ما يعيبه).\nومن هذا الأصل \"التهديد وهو وعيد وتخويف \"يقصد به إرعاب الخصم حتى يتسبب وينهار.\nوقولهم \"هَدُّ البعير: هديرُه، وهَدْهد الطائر: قَرْقر. والهُداهد- كتماضر: الكثير الهدير من الحمام. وفحل هُدَاهد: كثير الهدهدة يهدر في الإبل ولا يقرعها \". (فهو حكاية صوتية، وقد يكون أنه صوت عظيم عال أو كثير ثم هو فارغ لا شيء وراءه -أي من لازم التهور وهو السهولة / الفراغ). وسمي \"الهدهد. {فَقَال مَا لِيَ لَا أَرَى الْهُدْهُدَ} [النمل: 20] لأن صوته قريب من (هُدُو هدو) فهي تسمية له بصوته كما سمي الغراب (غاق) بصوته.\nومن الأصل \"هَدْهَد الصبيَّ في المهد ونحوه: حرّكه فيه \" (فالتحريك تسيب وليونة وعدم ثبات أو جمود. ومع وثارة المهد تكون الحركة رفيقة لينة تناسب التسيب في الأصل).",
     "fasil_ozeti": "° معنى الفصل المعجمي (هد): تفكك القائم المنتصب وتضعضعه أو تسيبه كما في هدّ الحائط: كسره وتهويره- في (هدد)، وكما في تسيب الهادي: أي نفاذه ممتدًا من البدن إلى الإمام وكذلك امتداد النصل من السهم- في (هدى). وكما في لين أصل السنام ومجتمعه وكذلك تهويد الثراب الشاربَ: تفتيره وإنامته إياه (وهذا يناسب النسيب) في (هود)، وكما في الهدم قلع المدر أي فك امتساكه بعضه ببعض- في (هدم).",
-    "tam_metin": "{وَتَخِرُّ الْجِبَالُ هَدًّا} [مريم: 90]\n\"الهَدُود: الأرضُ السهلة اللينة [تاج]. وأَكَمَة هَدُود: صبة المُنْحَدَر. هَدّ البناءَ: كسره وضعْضعَهُ. الهَدُّ: الهَدْمُ الشديد / الكسرُ كحائط يُهَدّ بمرة \".\n° المعنى المحوري\nتهيّر القائم الصُلب وتسيُّبه سقوطا بقوة (1) ككسر الحائط، وكالانحدار من الأكمة الصعبة بتسيب. ولحظ في الأرض الهدود أنها سهلة متسيبة ففعول هنا بمعنى مفعول {وَتَخِرُّ الْجِبَالُ هَدًّا} هذا كما قال تعالى: {وَتَكُونُ الْجِبَالُ كَالْعِهْنِ الْمَنْفُوشِ (5)} [القارعة: 5] ومن هذا \"الهدّ من الرجال- بالفتح: الضَعِيف، والأَهَدَ: الجبَان (خوّار) والهدّ من الرجال- بالفتح: الجوادُ الكريم (سهل غير مُمسك). أما \"الهديد: الرجل الطويل \"فالتسيب فيه امتداد جرمه. ومن هذا الأصل \"مررت برجل هَدّكَ من رجل: أي حَسبُك \" (هو كاف في صفات\n__________\n(1) (صوتيًّا): الهاء لاستفراغ ما في الجوف أو خروجه، والدال تعبر عن ضغط واحتباس، ويعبر الفصل منهما عن تسيب أثناء المتجمع وكأن الفراغ غلب التماسك والاحتباس أو انصبّ على ما هو متماسك محتبس وفي (هدى) تزيد الياء معنى الامتداد والاتصال، ويعبر التركيب عن امتداد الشيء المتصل من مقدمة شيء كالهادي عنق الفرس. وفي (هود) تعبر الواو عن الاشتمال، ويعبر التركيب عن الاشتمال على لين ورخاوة متجمعة كقَحَدة السنام. وفي (هدم) تعبر الميم عن الاستواء الظاهري (تماسك)، ويعبر التركيب عن تسيب المتماسك القائم في موضعه حتى يستوي بأصله. كما في الهدْم.\n(4/2292)\nالخير والخير رخاوة من باب التسبب، أو معناه. ليس عندك ما يعيبه).\nومن هذا الأصل \"التهديد وهو وعيد وتخويف \"يقصد به إرعاب الخصم حتى يتسبب وينهار.\nوقولهم \"هَدُّ البعير: هديرُه، وهَدْهد الطائر: قَرْقر. والهُداهد- كتماضر: الكثير الهدير من الحمام. وفحل هُدَاهد: كثير الهدهدة يهدر في الإبل ولا يقرعها \". (فهو حكاية صوتية، وقد يكون أنه صوت عظيم عال أو كثير ثم هو فارغ لا شيء وراءه -أي من لازم التهور وهو السهولة / الفراغ). وسمي \"الهدهد. {فَقَال مَا لِيَ لَا أَرَى الْهُدْهُدَ} [النمل: 20] لأن صوته قريب من (هُدُو هدو) فهي تسمية له بصوته كما سمي الغراب (غاق) بصوته.\nومن الأصل \"هَدْهَد الصبيَّ في المهد ونحوه: حرّكه فيه \" (فالتحريك تسيب وليونة وعدم ثبات أو جمود. ومع وثارة المهد تكون الحركة رفيقة لينة تناسب التسيب في الأصل)."
+    "mihveri_tr": "Sağlam, ayakta duran şeyin yıkılması ve şiddetle düşerek dağılması (1): duvarın yıkılması gibi, sarp bir tepeden gevşekçe inmek gibi. «Hudûd» arazide, gevşek ve yumuşak olduğu için ihtimâm edilmiştir; «fe'ûl» burada «mef'ûl» mânâsınadır {ve dağlar yıkılıp parçalanarak çöker} (ve tahırru'l-cibâlü heddan); bu, Allah Teâlâ'nın şu buyruğu gibidir: {Dağlar atılmış renkli yün gibi olur} [Kâri'a: 5]. Bundandır «el-Hedd mine'r-ricâl» (fetha ile): zayıf; «el-ehedd»: korkak (gevşek). «El-Hedd mine'r-ricâl» (fetha ile): cömert, kerîm (yumuşak, tutucu olmayan). «El-Hedîd» ise uzun boylu adamdır; onda gevşeklik cismin uzamasıdır. Bu asıldan «merertü bi-racülin heddeke min racül»: yânî sana kâfidir (sıfatlarda kâfidir). \n__________\n(1) (Sesce): Hâ, içindekinin boşaltılmasını yahut çıkışını; dâl, baskı ve habsi ifâde eder; ikisinden fasıl, toplanmışın ara yerlerinin salınmasını ifâde eder, sanki boşluk temâsüke ve habse galebe etmiş yahut tutunmuş, hapsedilmiş olana dökülmüş gibi. (Hdy)'de yâ, uzanma ve ittisâl mânâsını artırır; terkîb, bir şeyin önünden bitişik olan uzanmayı ifâde eder; hâdî: atın boynu gibi. (Hvd)'de vâv iştimâli ifâde eder; terkîb, toplanmış yumuşaklık ve gevşekliği ihtivâyı ifâde eder; hörgücün kahdesi gibi. (Hdm)'de mîm, zâhirî düzlüğü (temâsük) ifâde eder; terkîb, yerinde kâim olan tutunmuşun, aslıyla düzleşinceye kadar salınmasını ifâde eder; hedm (yıkım) gibi.\n(4/2292)\nhayır ve hayır, gevşekliktir, tesebbüb bâbından yahut onun mânâsından. Onu ayıplayacak sende bir şey yok).\nVe bu asıldan «et-tehdîd: tehdit ve korkutma» ki rakibi korkutmak kasdedilir, ta ki salınıp çökene kadar.\nVe onların «heddü'l-be'îr: onun hadîri (böğürmesi), ve hedhede't-tayr: guruldadı. Ve'l-hudâhid — tümâzır vezninde: güvercinden çok guruldayan. Ve fahl hudâhid: çok hedhede eden, develer içinde böğürür ve onlara çarpmaz». (Bu bir ses hikâyesidir; belki yüksek yahut çok büyük bir sestir, sonra boştur, arkasında bir şey yoktur — yânî tehevvürün lâzımından, o da kolaylık / boşluktur.) Ve «hüdhüd» adlandırıldı {Neden hüdhüdü görmüyorum} [Neml: 20] çünkü sesi (hüdû hüdû)'ya yakındır; bu, sesiyle onun adlandırılmasıdır; nitekim karga (gâk) sesiyle adlandırıldı.\nVe asıldan «hedhede's-sabiyye fi'l-mehd ve nahvihî: onu içinde hareket ettirdi» (hareket ettirme gevşeklik, yumuşaklık ve sebâtsızlık yahut donukluğun olmayışıdır. Ve beşiğin yumuşaklığıyla hareket, asıldaki gevşekliğe uygun, rıfk ve yumuşaklıkla olur).",
+    "sesler_tr": "Hâ, iç boşluğun boşalması yahut çıkması için; dâl, sıkışma ve hapsi ifade eder; ikisinin faslı, toplanmış şeyin içinde bir gevşemeyi gösterir; sanki boşluk, tutunmaya ve hapse galebe etmiş yahut tutunan ve hapsedilen şeyin üzerine dökülmüştür. «Hedâ»da yâ uzanma ve ittisâl mânâsını artırır; terkîb, bir şeyin önünden uzanan bitişik parçayı ifade eder; atın boynunun hâdîsi (öncüsü) gibi. «Hûd»da vâv iştimâli ifade eder; terkîb, toplanmış yumuşaklık ve gevşekliği içine alma mânâsını verir; hörgücün kahdesi gibi. «Hedm»de mîm, zâhirî düzlüğü (tutunmayı) ifade eder; terkîb, yerinde duran sağlam şeyin gevşeyip aslıyla düz olmasını ifade eder; «hedm» gibi."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "vikisozluk": [
+    {
+      "madde": "هدهدت",
+      "tur": "verb",
+      "baslik": "هدهدت (form Iq)\n# هَدْهَدْتُ (hadhadtu) /had.had.tu/: first-person singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدْتَ (hadhadta) /had.had.ta/: second-person masculine singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدْتِ (hadhadti) /had.had.ti/: second-person feminine singular past active of هَدْهَدَ (hadhada)\n# هَدْهَدَتْ (hadhadat) /had.ha.dat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadtu", "hadhada", "hadhadta"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدتا",
+      "tur": "verb",
+      "baslik": "هدهدتا (form Iq)\n# هَدْهَدَتَا (hadhadatā) /had.ha.da.taː/: third-person feminine dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدَتَا (hudhidatā) /hud.hi.da.taː/: third-person feminine dual past passive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadatā", "hadhada", "hudhidatā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدا",
+      "tur": "verb",
+      "baslik": "هدهدا (form Iq)\n# هَدْهَدَا (hadhadā) /had.ha.daː/: third-person masculine dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدَا (hudhidā) /hud.hi.daː/: third-person masculine dual past passive of هَدْهَدَ (hadhada)\n# هَدْهِدَا (hadhidā) /had.hi.daː/: second-person dual imperative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadā", "hadhada", "hudhidā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدتما",
+      "tur": "verb",
+      "baslik": "هدهدتما (form Iq)\n# هَدْهَدْتُمَا (hadhadtumā) /had.had.tu.maː/: second-person dual past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُمَا (hudhidtumā) /hud.hid.tu.maː/: second-person dual past passive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadtumā", "hadhada", "hudhidtumā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدنا",
+      "tur": "verb",
+      "baslik": "هدهدنا (form Iq)\n# هَدْهَدْنَا (hadhadnā) /had.had.naː/: first-person plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْنَا (hudhidnā) /hud.hid.naː/: first-person plural past passive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadnā", "hadhada", "hudhidnā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدوا",
+      "tur": "verb",
+      "baslik": "هدهدوا (form Iq)\n# هَدْهَدُوا (hadhadū) /had.ha.duː/: third-person masculine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدُوا (hudhidū) /hud.hi.duː/: third-person masculine plural past passive of هَدْهَدَ (hadhada)\n# هَدْهِدُوا (hadhidū) /had.hi.duː/: second-person masculine plural imperative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadū", "hadhada", "hudhidū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدتم",
+      "tur": "verb",
+      "baslik": "هدهدتم (form Iq)\n# هَدْهَدْتُمْ (hadhadtum) /had.had.tum/: second-person masculine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُمْ (hudhidtum) /hud.hid.tum/: second-person masculine plural past passive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadtum", "hadhada", "hudhidtum"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدتن",
+      "tur": "verb",
+      "baslik": "هدهدتن (form Iq)\n# هَدْهَدْتُنَّ (hadhadtunna) /had.had.tun.na/: second-person feminine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْتُنَّ (hudhidtunna) /hud.hid.tun.na/: second-person feminine plural past passive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadtunna", "hadhada", "hudhidtunna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهد",
+      "tur": "verb",
+      "baslik": "يهدهد (form Iq)\n# يُهَدْهِدُ (yuhadhidu) /ju.had.hi.du/: third-person masculine singular non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدُ (yuhadhadu) /ju.had.ha.du/: third-person masculine singular non-past passive indicative of هَدْهَدَ (hadhada)\n# يُهَدْهِدَ (yuhadhida) /ju.had.hi.da/: third-person masculine singular non-past active subjunctive of هَدْهَدَ (hadhada)\n# يُهَدْهَدَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidu", "hadhada", "yuhadhadu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدن",
+      "tur": "verb",
+      "baslik": "هدهدن (form Iq)\n# هَدْهَدْنَ (hadhadna) /had.had.na/: third-person feminine plural past active of هَدْهَدَ (hadhada)\n# هُدْهِدْنَ (hudhidna) /hud.hid.na/: third-person feminine plural past passive of هَدْهَدَ (hadhada)\n# هَدْهِدْنَ (hadhidna) /had.hid.na/: second-person feminine plural imperative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhadna", "hadhada", "hudhidna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدين",
+      "tur": "verb",
+      "baslik": "تهدهدين (form Iq)\n# تُهَدْهِدِينَ (tuhadhidīna) /tu.had.hi.diː.na/: second-person feminine singular non-past active indicative of هَدْهَدَ (hadhada)\n# تُهَدْهَدِينَ (tuhadhadīna) /tu.had.ha.diː.na/: second-person feminine singular non-past passive indicative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidīna", "hadhada", "tuhadhadīna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهدان",
+      "tur": "verb",
+      "baslik": "يهدهدان (form Iq)\n# يُهَدْهِدَانِ (yuhadhidāni) /ju.had.hi.daː.ni/: third-person masculine dual non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدَانِ (yuhadhadāni) /ju.had.ha.daː.ni/: third-person masculine dual non-past passive indicative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidāni", "hadhada", "yuhadhadāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهد",
+      "tur": "verb",
+      "baslik": "تهدهد (form Iq)\n# تُهَدْهِدُ (tuhadhidu) /tu.had.hi.du/: inflection of هَدْهَدَ (hadhada):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهَدْهَدُ (tuhadhadu) /tu.had.ha.du/: inflection of هَدْهَدَ (hadhada):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidu", "hadhada", "tuhadhadu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "أهدهد",
+      "tur": "verb",
+      "baslik": "أهدهد (form Iq)\n# أُهَدْهِدُ (ʔuhadhidu) /ʔu.had.hi.du/: first-person singular non-past active indicative of هَدْهَدَ (hadhada)\n# أُهَدْهَدُ (ʔuhadhadu) /ʔu.had.ha.du/: first-person singular non-past passive indicative of هَدْهَدَ (hadhada)\n# أُهَدْهِدَ (ʔuhadhida) /ʔu.had.hi.da/: first-person singular non-past active subjunctive of هَدْهَدَ (hadhada)\n# أُهَدْهَدَ (ʔuhadhada) /ʔu.had.ha.da/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuhadhidu", "hadhada", "ʔuhadhadu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "نهدهد",
+      "tur": "verb",
+      "baslik": "نهدهد (form Iq)\n# نُهَدْهِدُ (nuhadhidu) /nu.had.hi.du/: first-person plural non-past active indicative of هَدْهَدَ (hadhada)\n# نُهَدْهَدُ (nuhadhadu) /nu.had.ha.du/: first-person plural non-past passive indicative of هَدْهَدَ (hadhada)\n# نُهَدْهِدَ (nuhadhida) /nu.had.hi.da/: first-person plural non-past active subjunctive of هَدْهَدَ (hadhada)\n# نُهَدْهَدَ (nuhadhada) /nu.had.ha.da/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuhadhidu", "hadhada", "nuhadhadu"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهدون",
+      "tur": "verb",
+      "baslik": "يهدهدون (form Iq)\n# يُهَدْهِدُونَ (yuhadhidūna) /ju.had.hi.duː.na/: third-person masculine plural non-past active indicative of هَدْهَدَ (hadhada)\n# يُهَدْهَدُونَ (yuhadhadūna) /ju.had.ha.duː.na/: third-person masculine plural non-past passive indicative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidūna", "hadhada", "yuhadhadūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدان",
+      "tur": "verb",
+      "baslik": "تهدهدان (form Iq)\n# تُهَدْهِدَانِ (tuhadhidāni) /tu.had.hi.daː.ni/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهَدْهَدَانِ (tuhadhadāni) /tu.had.ha.daː.ni/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidāni", "hadhada", "tuhadhadāni"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدون",
+      "tur": "verb",
+      "baslik": "تهدهدون (form Iq)\n# تُهَدْهِدُونَ (tuhadhidūna) /tu.had.hi.duː.na/: second-person masculine plural non-past active indicative of هَدْهَدَ (hadhada)\n# تُهَدْهَدُونَ (tuhadhadūna) /tu.had.ha.duː.na/: second-person masculine plural non-past passive indicative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidūna", "hadhada", "tuhadhadūna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدن",
+      "tur": "verb",
+      "baslik": "تهدهدن (form Iq)\n# تُهَدْهِدْنَ (tuhadhidna) /tu.had.hid.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدْنَ (tuhadhadna) /tu.had.had.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidna", "hadhada", "tuhadhadna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهدا",
+      "tur": "verb",
+      "baslik": "يهدهدا (form Iq)\n# يُهَدْهِدَا (yuhadhidā) /ju.had.hi.daː/: third-person masculine dual non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدَا (yuhadhadā) /ju.had.ha.daː/: third-person masculine dual non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidā", "hadhada", "yuhadhadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهدن",
+      "tur": "verb",
+      "baslik": "يهدهدن (form Iq)\n# يُهَدْهِدْنَ (yuhadhidna) /ju.had.hid.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدْنَ (yuhadhadna) /ju.had.had.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidna", "hadhada", "yuhadhadna"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "يهدهدوا",
+      "tur": "verb",
+      "baslik": "يهدهدوا (form Iq)\n# يُهَدْهِدُوا (yuhadhidū) /ju.had.hi.duː/: third-person masculine plural non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# يُهَدْهَدُوا (yuhadhadū) /ju.had.ha.duː/: third-person masculine plural non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuhadhidū", "hadhada", "yuhadhadū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدوا",
+      "tur": "verb",
+      "baslik": "تهدهدوا (form Iq)\n# تُهَدْهِدُوا (tuhadhidū) /tu.had.hi.duː/: second-person masculine plural non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدُوا (tuhadhadū) /tu.had.ha.duː/: second-person masculine plural non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidū", "hadhada", "tuhadhadū"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "هدهدي",
+      "tur": "verb",
+      "baslik": "هَدْهِدِي • (hadhidī) (form Iq) /had.hi.diː/\n# second-person feminine singular imperative of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["hadhidī", "hadhada"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدا",
+      "tur": "verb",
+      "baslik": "تهدهدا (form Iq)\n# تُهَدْهِدَا (tuhadhidā) /tu.had.hi.daː/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهَدْهَدَا (tuhadhadā) /tu.had.ha.daː/: inflection of هَدْهَدَ (hadhada):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidā", "hadhada", "tuhadhadā"],
+      "etimoloji": 0
+    },
+    {
+      "madde": "تهدهدي",
+      "tur": "verb",
+      "baslik": "تهدهدي (form Iq)\n# تُهَدْهِدِي (tuhadhidī) /tu.had.hi.diː/: second-person feminine singular non-past active subjunctive/jussive of هَدْهَدَ (hadhada)\n# تُهَدْهَدِي (tuhadhadī) /tu.had.ha.diː/: second-person feminine singular non-past passive subjunctive/jussive of هَدْهَدَ (hadhada)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuhadhidī", "hadhada", "tuhadhadī"],
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "HDHD",
+    "kok_maddesi": "Back to library EtymArab HDHD هدهد BP – • HDAL • © SG | 20May2023 √HDHD “root” ▪ HDHD_1 ‘...’ ↗ ... ▪ HDHD_2 ‘...’ ↗ ... ▪ HDHD_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to coo, murmur, gently pat a baby to sleep; hoopoe’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab HDHD هدهد | BP – • HDAL • © SG | 20 Mayıs 2023 | √HDHD «kök» ▪ HDHD_1 «…» ↗ … ▪ HDHD_2 «…» ↗ … ▪ HDHD_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «güvercin gibi guruldamak, mırıldanmak, bebeği hafifçe sıvazlayarak uyutmak; hüdhüd (ibibik)» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "kuran": {
+    "gecis": 1,
+    "ilk": "27:20:8:2",
+    "tur": {
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "هُدْهُد": 1
+    },
+    "bicimler": {
+      "هُدْهُدَ": 1
+    },
+    "morfoloji_gecis": 1
   },
-  "mana_tasnif_gomme": {
+  "kelimeler": [
+    {
+      "lemma": "هُدْهُد",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "ٱلْهُدْهُدَ",
+          "ilk": "27:20",
+          "adet": 1,
+          "tr": "ağaçkakan"
+        }
+      ],
+      "tr": "ağaçkakan",
+      "nasil": "kök isim: fiil kalıbıyla türemedi",
+      "adet": 1
+    }
+  ],
+  "reddedilen": [
+    ["kök", "هدهد", "r6"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -476,48 +351,10 @@
       "boy": 57
     }
   },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "ٱلْهُدْهُدَ",
-      "kok": "هدهد",
-      "lemma": "هُدْهُد",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "27:20",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "ağaçkakan",
-        "lemma": "ağaçkakan",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "orta",
-    "dayanak": ["isimden-fiil"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": true
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Hüdhüd: ağaçkakan, hüdhüd kuşu",
-    "kelimeler": [
-      {
-        "lemma": "هُدْهُد",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "kök isim: fiil kalıbıyla türemedi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

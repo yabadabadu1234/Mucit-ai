@@ -22,22 +22,18 @@ h2{font:700 20pt FreeSerif,serif;color:#fff;background:#8a6d1d;margin:4mm 0 2mm;
 '''
 def belge(g): return '<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>%s</style></head><body>%s</body></html>' % (CSS % {'y': YAZI}, g)
 
-def ko_birles(ko):
-    if isinstance(ko, list): return {'gecis': sum(x.get('gecis', 0) for x in ko), 'ilk_yer': min((x['ilk_yer'] for x in ko if x.get('ilk_yer')), key=lambda z: [int(v) for v in z.split(':')], default='')}
-    return ko or {}
-
 def kok_govde(k, A):
     f = KR / 'kokler' / (k + '.json')
     if not f.exists():
         return '<div class="kok">%s</div><div class="alt">Kur\'ân morfolojisinde geçen kök</div><h2>Kayıt durumu</h2><div class="mana"><b>Bu kök için kök defterinde dosya yok.</b></div><div class="tur">Eşleştirme yapılmadı.</div>' % temiz(k)
-    d = json.load(open(f, encoding='utf-8')); s = d['sozlukler']; ko = ko_birles(s.get('kuran_korpusu')); ka = s.get('kok_anlamlari') or {}; tf = d.get('turkce_fiil') or {}
+    d = json.load(open(f, encoding='utf-8')); ko = d.get('kuran') or {}
     o = ['<div class="kok">%s</div>' % temiz(k)]
     meta = []
     if ko.get('gecis'): meta.append("Kur'ân'da %d geçiş" % ko['gecis'])
-    if ko.get('ilk_yer'): meta.append('ilk yer %s' % ':'.join(ko['ilk_yer'].split(':')[:2]))
-    if tf.get('sap'): meta.append('fiil: %s' % tf['sap'])
+    if ko.get('ilk'): meta.append('ilk yer %s' % ':'.join(ko['ilk'].split(':')[:2]))
+    if d.get('fiil'): meta.append('fiil: %s' % d['fiil'])
     o.append('<div class="alt">%s</div>' % temiz(' · '.join(meta)))
-    if ka.get('turkce'): o.append('<h2>Kök anlamı</h2><div class="an">%s</div>' % temiz(ka['turkce']))
+    if d.get('anlam'): o.append('<h2>Kök anlamı</h2><div class="an">%s</div>' % temiz(d['anlam']))
     o.append('<h2>Kökün manası</h2>')
     for i, n in enumerate(A[k]):
         o.append('<div class="mana"><b>%d. %s</b>%s</div>' % (i + 1, temiz(n['mana']), ''.join('<div class="tur">· %s%s</div>' % (temiz(t['mana']), ''.join('<div class="tur2">– %s</div>' % temiz(u['mana']) for u in t['turev'])) for t in n['turev'])))

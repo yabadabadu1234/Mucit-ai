@@ -1,101 +1,97 @@
 {
   "kok": "هات",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+  "lugat_fiil": false,
+  "baz_fiil": "Aktarım",
+  "baz_ayrim": "gel ol",
+  "tur_kuran": {
+    "fiil": 4,
+    "isim": 0
+  },
+  "fiil": "gel ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "gel ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "هات", "kök harfi elif veya elif-i maksûre"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "هات",
-      "turkce": "Hât: gel, getir"
-    },
-    "osmanlica_lugatler": {
-      "هاتُ": {
-        "sorgular": ["hatu"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "hatu",
-            "arapca": [],
-            "mana": "اَلْخَتِعُ [el-hati] (كَتِفٌ [ketif] vezninde) ve اَلْخَتُوعُ [el-hatû] (صَبُورٌ [sabûr] vezninde) ve اَلْخَوْتَعُ [el-havta] (جَوْهَرٌ [cevher] vezninde) Bunlar da uz ve üstâd kılavuza denir. Ve خَوْتَعٌ [havta] Bir nev gökçül sineğe denir ki otluklar içre olur. Ve tavşan yavrusuna denir. Ve hırs ve tama manâsınadır.",
-            "id": 663225,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          }
-        ]
-      }
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 4,
-      "ilk_yer": "2:111:14:1",
-      "tur": {
-        "V": 4
-      },
-      "bab": {},
-      "zaman_kip": {
-        "IMPV": 4
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "هَاتُ": 4
-      },
-      "bicimler": {
-        "هَاتُ": 4
-      }
-    },
-    "tercume": {},
-    "arabic_ontology": [
-      {
-        "id": "48538",
-        "arapca": ["هَاتِ1"],
-        "ingilizce": [],
-        "tanim": "إجلب لي",
-        "misal": "_ الكتاب عن المكتب",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 4,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هت",
+  "ses": {
     "harf": "ه",
+    "fasil": "هت",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
+  "anlam": "Hât: gel, getir",
+  "esas_manalar": "getir, ver",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "hatu",
+        "metin": "اَلْخَتِعُ [el-hati] (كَتِفٌ [ketif] vezninde) ve اَلْخَتُوعُ [el-hatû] (صَبُورٌ [sabûr] vezninde) ve اَلْخَوْتَعُ [el-havta] (جَوْهَرٌ [cevher] vezninde) Bunlar da uz ve üstâd kılavuza denir. Ve خَوْتَعٌ [havta] Bir nev gökçül sineğe denir ki otluklar içre olur. Ve tavşan yavrusuna denir. Ve hırs ve tama manâsınadır.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هاتُ"]
+      }
+    ]
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "ontoloji": [
+    {
+      "id": "48538",
+      "arapca": ["هَاتِ1"],
+      "ingilizce": [],
+      "tanim": "إجلب لي",
+      "misal": "_ الكتاب عن المكتب",
+      "veri_kaynagi": "43",
+      "ust": []
+    }
+  ],
+  "kuran": {
+    "gecis": 4,
+    "ilk": "2:111:14:1",
+    "tur": {
+      "V": 4
+    },
+    "bab": {},
+    "zaman_kip": {
+      "IMPV": 4
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "هَاتُ": 4
+    },
+    "bicimler": {
+      "هَاتُ": 4
+    },
+    "morfoloji_gecis": 4
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
+  "kelimeler": [
+    {
+      "lemma": "هاتُ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "هَاتُوا۟",
+          "zaman": "Emir",
+          "ilk": "2:111",
+          "adet": 4,
+          "tr": "getir"
+        }
+      ],
+      "tr": "getir",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 4
+    }
+  ],
+  "reddedilen": [
+    ["kök", "هات", "r7"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 8,
       "merkez_kok": "سير",
@@ -115,54 +111,10 @@
       "boy": 15
     }
   },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "هَاتُوا۟",
-      "kok": "هات",
-      "lemma": "هاتُ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "2:111",
-      "adet": 4,
-      "turkce": {
-        "yuzey": "getir",
-        "lemma": "getir",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
-    "kuran": {
-      "fiil": 4,
-      "isim": 0
-    },
-    "lugat_fiil": false
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "baz_fiil": {
-    "ad": "Aktarım",
-    "ayrim": "gel ol",
-    "acilim": "هات := Aktarım(ayrım: gel ol)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Aktarım",
-    "kelimeler": [
-      {
-        "lemma": "هاتُ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Emir"],
-        "adet": 4,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

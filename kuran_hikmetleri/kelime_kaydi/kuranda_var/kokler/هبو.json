@@ -1,548 +1,2187 @@
 {
   "kok": "هبو",
-  "sinif": "nâkıs",
-  "turkce_fiil": {
-    "sap": "toz ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
+  "tur": "isim",
+  "tur_guven": "orta",
+  "tur_dayanak": ["isimden-fiil"],
+  "lugat_fiil": true,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 2
   },
-  "mustaklar": {
+  "fiil": "toz ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
+  "sinif": "nâkıs",
+  "ses": {
+    "harf": "ه",
+    "fasil": "هب",
+    "mahrec": "halkiyye",
+    "bolge": "halk"
+  },
+  "anlam": "Hebv: toz, savrulan toz",
+  "esas_manalar": "incelikle toz{havada uçuşan toz zerresi{hiç olup dağılmak{boşa giden emek}}}",
+  "lugat": {
+    "Kubbealtı Lügati": [
+      {
+        "madde": "HEBÂ",
+        "tur": "i.",
+        "koken": "Ar. hebā’ “toz”dan",
+        "yazilis": "ﻫﺒﺎ – ﻫﺒﺎﺀ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Boşa gitme, ziyan olma"
+          },
+          {
+            "no": 2,
+            "etiket": "tasavvuf.",
+            "tanim": "İçinde âlemdeki bütün sûretlerin, şekillerin meydana geldiği, fakat aslı îtibâriyle kendisi yok olan şey, madde, cevher",
+            "misaller": [
+              [
+                "Hebâ akl-ı evvelden, nefs-i küllîden ve küllî tabiattan sonra varlığın dördüncü mertebesinde yer alır. Hebâ-sûret ilişkisini ancak beyazlık – beyaz şeklinde anlamak mümkün olur; beyaz olmadan beyazlık anlaşılmadığı gibi sûret olmadan hebâyı kavramak da mümkün değildir",
+                "Süleyman Uludağ"
+              ]
+            ]
+          }
+        ],
+        "deyimler": [
+          {
+            "deyim": "Hebâ etmek",
+            "tanim": "Ziyan etmek, boşa harcamak",
+            "misaller": [
+              ["Kimi insan derbeder / Ömrünü hebâ edip gider", "Câhit S. Tarancı"]
+            ]
+          },
+          {
+            "deyim": "Hebâ olmak",
+            "tanim": "Ziyan olmak, boşa harcanmak",
+            "misaller": [
+              ["Gafletle bunca subh u mesâ oldu âh kim / Ömr-i azîz geçti hebâ oldu âh kim", "Fıtnat Hanım"],
+              ["Sen gel beni dinle, günlerimiz hebâ olmasın", "Câhit S. Tarancı"],
+              ["● Hebâen mensûrâ", "ﻫﺒﺎﺀً ﻣﻨﺜﻮﺭﺍ"],
+              ["dağılmış, saçılmış", ""]
+            ]
+          }
+        ],
+        "kelime": ["هَبَاء"]
+      }
+    ],
+    "Kamus": [
+      {
+        "madde": "heba",
+        "koken": "سَمَاءٌ [semâ] vezninde",
+        "yazilis": "اَلْهَبَاءُ",
+        "okunus": "el-hebâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Toza denir, alâ-kavlin tütün gibi havâya ağan toza denir; yukâlu: صَارَ هَبَاءً أَيْ غُبَارًا أَوْ هُوَ مَا يُشْبِهُ الدُّخَانَ Ve havâya ağıp ve yeryüzüne dağılmış hurde toprağa denir. Müellifin Basâirde beyânına göre bu şuâ-ı şemsle ev içinde merî olan hurde hurde toz olacaktır ki bacaya ve pencereye doğru çekilir, âmme ona zerre tabîr ederler.",
+            "misaller": [
+              ["صَارَ هَبَاءً أَيْ غُبَارًا أَوْ هُوَ مَا يُشْبِهُ الدُّخَانَ", ""]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "هَبَاءٌ [hebâ] Kalîlül-akl adamlara ıtlâk olunur;vâhidi هَبَاءَةٌ [hebâet]tir,cemi أَهْبَاءٌ [ehbâ] gelir."
+          }
+        ],
+        "kelime": ["هَبَاء"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "heba",
+        "koken": "hânın fethi ve elifin meddiyle",
+        "yazilis": "اَلْهَبَاءُ",
+        "okunus": "el-hebâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Şol müteferrik nesnedir ki toz misâlinde şuâ-i şemsle ev içinde görünür ki âmme ona zerre derler."
+          },
+          {
+            "no": 2,
+            "tanim": "هَبَاءٌ [hebâ] Kezâlik toprağın hurdesine derler, دُقَاقُ التُّرَابِ manâsına."
+          }
+        ],
+        "kelime": ["هَبَاء"]
+      }
+    ],
+    "Lugat-ı Remzi": [
+      {
+        "madde": "Habâ",
+        "sayfa": 425,
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["هَباء"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "هَبَوَ",
+      "metin": "(هَبَوَ) الْهَاءُ وَالْبَاءُ وَالْحَرْفُ الْمُعْتَلُّ: كَلِمَةٌ تَدُلُّ عَلَى غَبَرَةٍ وَرِقَّةٍ فِيهَا. .\nمِنْهُ الْهَبْوَةُ: الْغَبَرَةُ. وَهَبَا الْغُبَارُ يَهْبُو فَهُوَ هَابٍ: سَطَعَ. وَالْهَبَاءُ: دُقَاقُ التُّرَابِ. قَالَ:\nتَزَوَّدَ مِنَّا بَيْنَ أُذْنَاهُ ضَرْبَةً ... دَعَتْهُ إِلَى هَابِي التُّرَابِ عَقِيمُ\nوَهَبَا الرَّمَادُ: اخْتَلَطَ بِالتُّرَابِ وَهَمَدَ. وَالشَّيْءُ الْمُنْبَثُّ الَّذِي تَرَاهُ فِي ضَوْءِ الشَّمْسِ: هَبَاءٌ.\n[بَابُ الْهَاءِ وَالتَّاءِ وَمَا يَثْلِثُهُمَا]",
+      "baslik_tr": "Hebeve (هَبَوَ)",
+      "metin_tr": "(هَبَوَ) Hâ, bâ ve harf-i illet: bir tozlanmaya ve içindeki inceliğe delâlet eden kelimedir.\nBundandır «el-Hebve»: toz. «Hebâ'l-gubâru yehbû fe-hüve hâbin»: toz yükseldi. «El-Hebâ'»: toprağın ince zerreleridir. Şâir dedi:\nتَزَوَّدَ مِنَّا بَيْنَ أُذْنَاهُ ضَرْبَةً ... دَعَتْهُ إِلَى هَابِي التُّرَابِ عَقِيمُ\n(Bizden iki kulağı arasına bir darbe yedi; onu tozlu toprağa, kısır bir yere çağırdı.)\n«Hebâ'r-remâd»: kül toprağa karıştı ve söndü. Güneş ışığında gördüğün dağılmış şeye «hebâ'» denir.\n[Hâ ve tâ ile ve ikisinden sonra gelenlerle ilgili bâb]"
+    }
+  ],
+  "cebel": {
+    "fasil": "الهاء والباء",
+    "baslik": "هبو",
+    "mihveri": "مفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23]. ومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \".",
+    "tam_metin": "{فَكَانَتْ هَبَاءً مُنْبَثًّا} [الواقعة: 6]\n\"الهَبَاء: دُقاقُ التراب الذي تُطِيرُه الريحُ أو يرتفع من تحت سنابك الخيل / غُبارٌ شبهُ الدخان ساطعٌ في الهواء / يَعْلو الوجوهَ والجلودَ والثياب. والهَبْوة - بالفتح: الغَبَرة \".\n° المعنى المحوري\nمفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23].\nومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (هب) : مفارقة المَقَرّ باندفاع وقوة -مع شيء من التجمع- كما يتمثل ذلك في هبوب الريح مع جمعها التراب- في (هبب)، وكما في الهاء الغبار شبه الدخان الذي تطيره الريح أو يرتفع من تحت سنابك الخيل- في (هبو)، وكما يتمثل في الهِبة والاندفاع فيها صدورها بلا مقابل وفي الموهبة النقرة في الصخرة يستنقع فيها الماء غير راشح من الأرض فيؤخذ فهو كالهبة- في (وهب)، وكما يتمثل في اندفاع الهابط والهَبوط- في (هبط).",
+    "mihveri_tr": "Toprağın (ve ince yahut hafif benzerlerinin) karar yerinden yükselerek ve yayılarak ayrılması: bu terkib âyetindeki toz gibi ve {Onların işledikleri her ameli ele alıp onu savrulmuş toz zerreleri hâline getirdik} [Furkân: 23] gibi. Mânevî kullanımından, hebâ'nın bozulmasını gözeterek: «hebâ: öldü, kaçtı»."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "46216",
+      "arapca": [
+        "قَتَمَةٌ",
+        "قَتَامٌ",
+        "عِثْيَرٌ",
+        "رَهْجٌ",
+        "قَتَّ",
+        "نَقْعٌ2",
+        "غُبَارٌ",
+        "غَبَرَةٌ",
+        "غُبْرَةٌ",
+        "قَتْرَةٌ",
+        "قَتَرَةٌ",
+        "قَتَمٌ",
+        "هَبَاءَةٌ",
+        "هَبَاءٌ",
+        "هَبْوَةٌ",
+        "تُرْبَةٌ",
+        "ثَرَىً",
+        "ذَرٌّ",
+        "تُرَابٌ",
+        "مَوْرٌ",
+        "عَفَاءٌ",
+        "عَفَرٌ",
+        "عَجَاجٌ",
+        "رَغَامٌ"
+      ],
+      "ingilizce": [],
+      "tanim": "مادة التُّرابُ الذي تُطيره الريحُ ويلتصقَ بالأَشياء ويكون خفيف الوزن ومتّسخ تتعلق جزيئاته بذرات الهواء فيلوث الجو",
+      "misal": "كان الجوّ مليئاً بِ_ عندما اشتدّت الريح",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Rüzgârın uçurup eşyaya yapışan, hafif ağırlıklı ve kirli toprak maddesi; zerreleri havanın zerrelerine tutunarak havayı kirletir",
+      "misal_tr": "Rüzgâr şiddetlenince hava _ ile doluydu."
+    },
+    {
+      "id": "46728",
+      "arapca": ["هَبَاءٌ", "سُدَىً"],
+      "ingilizce": [],
+      "tanim": "وصف للشيء عديم الفائدة الذي لا ناتج يرتجى منه",
+      "misal": "ذهبت جهودهم _ لأنهم لم يدرسو العواقب الممكنة الحدوث",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Fâidesiz, kendisinden netice beklenmeyen şeyin vasfı",
+      "misal_tr": "Zarar verebilecek akıbetleri düşünmedikleri için gayretleri _ gitti."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "تهبي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تهبي (form I)\n# تَهُبِّي (tahubbī) /ta.hub.biː/: second-person feminine singular non-past active subjunctive/jussive of هَبَّ (habba)\n# تَهِبِّي (tahibbī) /ta.hib.biː/: second-person feminine singular non-past active subjunctive/jussive of هَبَّ (habba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahubbī", "habba", "tahibbī"],
+      "bag": "müştak",
+      "etimoloji": 0
+    },
+    {
+      "madde": "هباء",
+      "tur": "noun",
+      "baslik": "هَبَاء • (habāʔ) m (plural أَهْبَاء (ʔahbāʔ))",
+      "anlam": ["fine dust, particulate matter"],
+      "okunus": ["habāʔ"],
+      "ipa": ["/ha.baːʔ/"],
+      "anlam_tr": ["ince toz, zerreli madde"]
+    },
+    {
+      "madde": "هبا",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "هبا (form I)\n# هَبَّا (habbā) /hab.baː/: third-person masculine dual past active of هَبَّ (habba)\n# هُبَّا (hubbā) /hub.baː/: second-person dual imperative of هَبَّ (habba)\n# هِبَّا (hibbā) /hib.baː/: second-person dual imperative of هَبَّ (habba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["habbā", "habba", "hubbā"],
+      "bag": "müştak",
+      "etimoloji": 0
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "HBW",
+    "kok_maddesi": "Back to library EtymArab HBW هبو BP – • HDAL • © SG | 20May2023 √HBW “root” ▪ HBW_1 ‘...’ ↗ ... ▪ HBW_2 ‘...’ ↗ ... ▪ HBW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘dust floating in the air, dust particles visible in sunlight, mote, dust cloud; to swagger, walk with conceit; to dissolve into nothing, vanish into nothing, vain effort’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab HBW هبو | BP – • HDAL • © SG | 20 Mayıs 2023 | √HBW «kök» ▪ HBW_1 «…» ↗ … ▪ HBW_2 «…» ↗ … ▪ HBW_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «havada uçuşan toz, güneş ışığında görülen toz zerreleri, zerre, toz bulutu; kibirle yürümek, çalımla yürümek; yok olmak, hiçliğe karışmak, boşa giden gayret» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 2,
+    "ilk": "25:23:8:1",
+    "tur": {
+      "N": 2
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "هَبَآء": 2
+    },
+    "bicimler": {
+      "هَبَآءً": 2
+    },
+    "morfoloji_gecis": 2
+  },
+  "kelimeler": [
+    {
+      "lemma": "هَباء",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "هَبَآءً",
+          "ilk": "25:23",
+          "adet": 2,
+          "tr": "toz"
+        }
+      ],
+      "tr": "toz",
+      "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fa'āl ; cem‘-i mükesser (aday) · fi'āl (yalnız aday eşleşme)",
+      "adet": 2
+    }
+  ],
+  "mustak": {
     "masdar · sülâsî mücerred": [
-      [0, "هَبْو", "habw", "toz", "kontrol", ""],
-      [1, "هِبْو", "hibw", "toz", "kontrol", ""],
-      [2, "هُبْو", "hubw", "toz", "kontrol", ""],
-      [517, "هَبَا", "habā", "toz", "kontrol", ""],
-      [518, "هِبَى", "hibā", "toz", "kontrol", ""],
-      [519, "هُبُوّ", "hubuww", "toz", "kontrol", ""],
-      [520, "هُبُوّ", "hubuww", "toz", "kontrol", ""],
-      [521, "هِبَاء", "hibāʾ", "toz", "kontrol", ""],
-      [522, "هُبَاء", "hubāʾ", "toz", "kontrol", ""],
+      ["fa'l", "semâî aday", "هَبْو", "habw", "toz", "kontrol", ""],
+      ["fi'l", "semâî aday", "هِبْو", "hibw", "toz", "kontrol", ""],
+      ["fu'l", "semâî aday", "هُبْو", "hubw", "toz", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "هَبَا", "habā", "toz", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "هِبَى", "hibā", "toz", "kontrol", ""],
+      ["fu'ul", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz", "kontrol", ""],
+      ["fu'ūl", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz", "kontrol", ""],
+      ["fi'āl", "semâî aday · ilal", "هِبَاء", "hibāʾ", "toz", "kontrol", ""],
+      ["fu'āl", "semâî aday · ilal", "هُبَاء", "hubāʾ", "toz", "kontrol", ""],
       [
-        523,
+        "fa'āl",
+        "semâî aday · ilal",
         "هَبَاء",
         "habāʾ",
         "Boşa gitme, ziyan olma",
         "lugat",
         "Vikisözlük: fine dust, particulate matter · Kubbealtı"
       ],
-      [524, "هَبَاة", "habā", "toz", "kontrol", ""],
-      [525, "هُبُوَّة", "hubuwwa", "toz", "kontrol", ""],
-      [526, "هِبَايَة", "hibāya", "toz", "kontrol", ""],
-      [527, "هَبِيّ", "habiyy", "toz", "kontrol", ""],
-      [528, "هَبُوّ", "habuww", "toz", "kontrol", ""],
-      [15, "هَبَوَان", "habawān", "toz", "kontrol", ""],
-      [16, "هُبْوَان", "hubwān", "toz", "kontrol", ""],
-      [17, "هِبْوَان", "hibwān", "toz", "kontrol", ""],
-      [18, "هَبْوَى", "habwā", "toz", "kontrol", ""],
-      [529, "هُبْيَى", "hubyā", "toz", "kontrol", ""],
-      [20, "هِبْوَى", "hibwā", "toz", "kontrol", ""],
-      [530, "هَبَاة", "habā", "toz", "kontrol", ""],
-      [531, "هِبَيَة", "hibaya", "toz", "kontrol", ""],
-      [23, "هَبْوُووَة", "habwūwa", "toz", "kontrol", ""],
-      [24, "تُهْبُوو", "tuhbūw", "toz", "kontrol", ""],
-      [532, "تَهْبِيَة", "tahbiya", "toz", "kontrol", ""],
-      [26, "تَهْبَوَة", "tahbawa", "toz", "kontrol", ""],
-      [27, "مَهْبُوَة", "mahbuwa", "toz", "kontrol", ""],
-      [533, "مَهْبِيَة", "mahbiya", "toz", "kontrol", ""]
+      ["fa'āle", "semâî aday · ilal", "هَبَاة", "habā", "toz", "kontrol", ""],
+      ["fu'ūle", "semâî aday · ilal", "هُبُوَّة", "hubuwwa", "toz", "kontrol", ""],
+      ["fi'āle", "semâî aday · ilal", "هِبَايَة", "hibāya", "toz", "kontrol", ""],
+      ["fa'īl", "semâî aday · ilal", "هَبِيّ", "habiyy", "toz", "kontrol", ""],
+      ["fa'ūl", "semâî aday · ilal", "هَبُوّ", "habuww", "toz", "kontrol", ""],
+      ["fa'alān", "semâî aday", "هَبَوَان", "habawān", "toz", "kontrol", ""],
+      ["fu'lān", "semâî aday", "هُبْوَان", "hubwān", "toz", "kontrol", ""],
+      ["fi'lān", "semâî aday", "هِبْوَان", "hibwān", "toz", "kontrol", ""],
+      ["fa'lā", "semâî aday", "هَبْوَى", "habwā", "toz", "kontrol", ""],
+      ["fu'lā", "semâî aday · ilal", "هُبْيَى", "hubyā", "toz", "kontrol", ""],
+      ["fi'lā", "semâî aday", "هِبْوَى", "hibwā", "toz", "kontrol", ""],
+      ["fa'ale", "semâî aday · ilal", "هَبَاة", "habā", "toz", "kontrol", ""],
+      ["fi'ale", "semâî aday · ilal", "هِبَيَة", "hibaya", "toz", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "هَبْوُووَة", "habwūwa", "toz", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُهْبُوو", "tuhbūw", "toz", "kontrol", ""],
+      ["taf'ila", "semâî aday · ilal", "تَهْبِيَة", "tahbiya", "toz", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَهْبَوَة", "tahbawa", "toz", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَهْبُوَة", "mahbuwa", "toz", "kontrol", ""],
+      ["maf'ila", "semâî aday · ilal", "مَهْبِيَة", "mahbiya", "toz", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [534, "تَهْبِيَة", "tahbiya", "çokça toz olma", "kontrol", ""],
-      [535, "تَهْبِيَة", "tahbiya", "çokça toz olma", "kontrol", ""],
-      [536, "هِبِّاء", "hibbāʾ", "çokça toz olma", "kontrol", ""]
+      ["taf'īl", "kıyâsî · ilal", "تَهْبِيَة", "tahbiya", "çokça toz olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî · ilal", "تَهْبِيَة", "tahbiya", "çokça toz olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî · ilal", "هِبِّاء", "hibbāʾ", "çokça toz olma", "kontrol", ""]
     ],
     "ism-i merre · bâb II": [
-      [537, "هِبِّاءَة", "hibbāʾa", "bir kere çokça toz olma", "kontrol", ""]
+      ["fi''āl + tâ", "aday · ilal", "هِبِّاءَة", "hibbāʾa", "bir kere çokça toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb II": [
-      [538, "مُهَبِّي", "muhabbī", "çokça toz olan", "kontrol", ""],
-      [539, "مُهَبِّيَة", "muhabbiya", "çokça toz olan, müennes", "kontrol", ""],
-      [540, "مُهَبِّيَان", "muhabbiyān", "çokça toz olan, iki", "kontrol", ""],
-      [541, "مُهَبِّيَتَان", "muhabbiyatān", "çokça toz olan, iki, müennes", "kontrol", ""],
-      [542, "مُهَبُّون", "muhabbūn", "çokça toz olanlar", "kontrol", ""],
-      [543, "مُهَبِّين", "muhabbīn", "çokça toz olanlar", "kontrol", ""],
-      [544, "مُهَبِّيَات", "muhabbiyāt", "çokça toz olanlar, müennes", "kontrol", ""]
+      ["mufa''il", "kıyâsî · ilal", "مُهَبِّي", "muhabbī", "çokça toz olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî · ilal", "مُهَبِّيَة", "muhabbiya", "çokça toz olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî · ilal", "مُهَبِّيَان", "muhabbiyān", "çokça toz olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهَبِّيَتَان",
+        "muhabbiyatān",
+        "çokça toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهَبُّون",
+        "muhabbūn",
+        "çokça toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهَبِّين",
+        "muhabbīn",
+        "çokça toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهَبِّيَات",
+        "muhabbiyāt",
+        "çokça toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [545, "مُهَبَّى", "muhabbā", "çokça toz olunan", "kontrol", ""],
-      [546, "مُهَبَّيَان", "muhabbayān", "çokça toz olunan, iki", "kontrol", ""],
-      [547, "مُهَبَّوْن", "muhabbawn", "çokça toz olunanlar", "kontrol", ""],
-      [548, "مُهَبَّيْن", "muhabbayn", "çokça toz olunanlar", "kontrol", ""],
-      [549, "مُهَبَّيَات", "muhabbayāt", "çokça toz olunanlar, müennes", "kontrol", ""]
+      ["mufa''al", "kıyâsî · ilal", "مُهَبَّى", "muhabbā", "çokça toz olunan", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî · ilal", "مُهَبَّيَان", "muhabbayān", "çokça toz olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهَبَّوْن",
+        "muhabbawn",
+        "çokça toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهَبَّيْن",
+        "muhabbayn",
+        "çokça toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهَبَّيَات",
+        "muhabbayāt",
+        "çokça toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [550, "مُهَبَّى", "muhabbā", "çokça toz olma yeri, vakti", "kontrol", ""]
+      ["mufa''al", "kıyâsî · ilal", "مُهَبَّى", "muhabbā", "çokça toz olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb III": [
-      [551, "مُهَابَاة", "muhābā", "biriyle karşılıklı toz olma", "kontrol", ""],
-      [552, "هِبَاء", "hibāʾ", "biriyle karşılıklı toz olma", "kontrol", ""]
+      ["mufā'ale", "kıyâsî · ilal", "مُهَابَاة", "muhābā", "biriyle karşılıklı toz olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî · ilal", "هِبَاء", "hibāʾ", "biriyle karşılıklı toz olma", "kontrol", ""]
     ],
     "ism-i merre · bâb III": [
-      [553, "هِبَاءَة", "hibāʾa", "bir kere biriyle karşılıklı toz olma", "kontrol", ""]
+      ["fi'āl + tâ", "aday · ilal", "هِبَاءَة", "hibāʾa", "bir kere biriyle karşılıklı toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb III": [
-      [554, "مُهَابِي", "muhābī", "biriyle karşılıklı toz olan", "kontrol", ""],
-      [555, "مُهَابِيَة", "muhābiya", "biriyle karşılıklı toz olan, müennes", "kontrol", ""],
-      [556, "مُهَابِيَان", "muhābiyān", "biriyle karşılıklı toz olan, iki", "kontrol", ""],
-      [557, "مُهَابِيَتَان", "muhābiyatān", "biriyle karşılıklı toz olan, iki, müennes", "kontrol", ""],
-      [558, "مُهَابُون", "muhābūn", "biriyle karşılıklı toz olanlar", "kontrol", ""],
-      [559, "مُهَابِين", "muhābīn", "biriyle karşılıklı toz olanlar", "kontrol", ""],
-      [560, "مُهَابِيَات", "muhābiyāt", "biriyle karşılıklı toz olanlar, müennes", "kontrol", ""]
+      ["mufā'il", "kıyâsî · ilal", "مُهَابِي", "muhābī", "biriyle karşılıklı toz olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî · ilal",
+        "مُهَابِيَة",
+        "muhābiya",
+        "biriyle karşılıklı toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُهَابِيَان",
+        "muhābiyān",
+        "biriyle karşılıklı toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهَابِيَتَان",
+        "muhābiyatān",
+        "biriyle karşılıklı toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهَابُون",
+        "muhābūn",
+        "biriyle karşılıklı toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهَابِين",
+        "muhābīn",
+        "biriyle karşılıklı toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهَابِيَات",
+        "muhābiyāt",
+        "biriyle karşılıklı toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [561, "مُهَابَى", "muhābā", "biriyle karşılıklı toz olunan", "kontrol", ""],
-      [562, "مُهَابَيَان", "muhābayān", "biriyle karşılıklı toz olunan, iki", "kontrol", ""],
-      [563, "مُهَابَوْن", "muhābawn", "biriyle karşılıklı toz olunanlar", "kontrol", ""],
-      [564, "مُهَابَيْن", "muhābayn", "biriyle karşılıklı toz olunanlar", "kontrol", ""],
-      [565, "مُهَابَيَات", "muhābayāt", "biriyle karşılıklı toz olunanlar, müennes", "kontrol", ""]
+      ["mufā'al", "kıyâsî · ilal", "مُهَابَى", "muhābā", "biriyle karşılıklı toz olunan", "kontrol", ""],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُهَابَيَان",
+        "muhābayān",
+        "biriyle karşılıklı toz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهَابَوْن",
+        "muhābawn",
+        "biriyle karşılıklı toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهَابَيْن",
+        "muhābayn",
+        "biriyle karşılıklı toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهَابَيَات",
+        "muhābayāt",
+        "biriyle karşılıklı toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [566, "مُهَابَى", "muhābā", "biriyle karşılıklı toz olma yeri, vakti", "kontrol", ""]
+      ["mufā'al", "kıyâsî · ilal", "مُهَابَى", "muhābā", "biriyle karşılıklı toz olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِهْبَاء", "ʾihbāʾ", "tozlaştırma", "kontrol", ""]
+      ["if'āl", "kıyâsî · ilal", "إِهْبَاء", "ʾihbāʾ", "tozlaştırma", "kontrol", ""]
     ],
     "ism-i merre · bâb IV": [
-      [568, "إِهْبَاءَة", "ʾihbāʾa", "bir kere tozlaştırma", "kontrol", ""]
+      ["if'āl + tâ", "aday · ilal", "إِهْبَاءَة", "ʾihbāʾa", "bir kere tozlaştırma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [569, "مُهْبِي", "muhbī", "tozlaştıran", "kontrol", ""],
-      [570, "مُهْبِيَة", "muhbiya", "tozlaştıran, müennes", "kontrol", ""],
-      [571, "مُهْبِيَان", "muhbiyān", "tozlaştıran, iki", "kontrol", ""],
-      [572, "مُهْبِيَتَان", "muhbiyatān", "tozlaştıran, iki, müennes", "kontrol", ""],
-      [573, "مُهْبُون", "muhbūn", "tozlaştıranlar", "kontrol", ""],
-      [574, "مُهْبِين", "muhbīn", "tozlaştıranlar", "kontrol", ""],
-      [575, "مُهْبِيَات", "muhbiyāt", "tozlaştıranlar, müennes", "kontrol", ""]
+      ["muf'il", "kıyâsî · ilal", "مُهْبِي", "muhbī", "tozlaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُهْبِيَة", "muhbiya", "tozlaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُهْبِيَان", "muhbiyān", "tozlaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهْبِيَتَان",
+        "muhbiyatān",
+        "tozlaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْبُون",
+        "muhbūn",
+        "tozlaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْبِين",
+        "muhbīn",
+        "tozlaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْبِيَات",
+        "muhbiyāt",
+        "tozlaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [576, "مُهْبَى", "muhbā", "tozlaştırılan", "kontrol", ""],
-      [577, "مُهْبَيَان", "muhbayān", "tozlaştırılan, iki", "kontrol", ""],
-      [578, "مُهْبَوْن", "muhbawn", "tozlaştırılanlar", "kontrol", ""],
-      [579, "مُهْبَيْن", "muhbayn", "tozlaştırılanlar", "kontrol", ""],
-      [580, "مُهْبَيَات", "muhbayāt", "tozlaştırılanlar, müennes", "kontrol", ""]
+      ["muf'al", "kıyâsî · ilal", "مُهْبَى", "muhbā", "tozlaştırılan", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُهْبَيَان", "muhbayān", "tozlaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْبَوْن",
+        "muhbawn",
+        "tozlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْبَيْن",
+        "muhbayn",
+        "tozlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْبَيَات",
+        "muhbayāt",
+        "tozlaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُهْبَى", "muhbā", "tozlaştırma yeri, vakti", "kontrol", ""]
+      ["muf'al", "kıyâsî · ilal", "مُهْبَى", "muhbā", "tozlaştırma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb V": [
-      [582, "تَهَبِّي", "tahabbī", "kendini zorlayarak toz olma", "kontrol", ""]
+      ["tafa''ul", "kıyâsî · ilal", "تَهَبِّي", "tahabbī", "kendini zorlayarak toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb V": [
-      [583, "مُتَهَبِّي", "mutahabbī", "kendini zorlayarak toz olan", "kontrol", ""],
-      [584, "مُتَهَبِّيَة", "mutahabbiya", "kendini zorlayarak toz olan, müennes", "kontrol", ""],
-      [585, "مُتَهَبِّيَان", "mutahabbiyān", "kendini zorlayarak toz olan, iki", "kontrol", ""],
-      [586, "مُتَهَبِّيَتَان", "mutahabbiyatān", "kendini zorlayarak toz olan, iki, müennes", "kontrol", ""],
-      [587, "مُتَهَبُّون", "mutahabbūn", "kendini zorlayarak toz olanlar", "kontrol", ""],
-      [588, "مُتَهَبِّين", "mutahabbīn", "kendini zorlayarak toz olanlar", "kontrol", ""],
-      [589, "مُتَهَبِّيَات", "mutahabbiyāt", "kendini zorlayarak toz olanlar, müennes", "kontrol", ""]
+      ["mutafa''il", "kıyâsî · ilal", "مُتَهَبِّي", "mutahabbī", "kendini zorlayarak toz olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî · ilal",
+        "مُتَهَبِّيَة",
+        "mutahabbiya",
+        "kendini zorlayarak toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَبِّيَان",
+        "mutahabbiyān",
+        "kendini zorlayarak toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَبِّيَتَان",
+        "mutahabbiyatān",
+        "kendini zorlayarak toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَهَبُّون",
+        "mutahabbūn",
+        "kendini zorlayarak toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَهَبِّين",
+        "mutahabbīn",
+        "kendini zorlayarak toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَهَبِّيَات",
+        "mutahabbiyāt",
+        "kendini zorlayarak toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [590, "مُتَهَبَّى", "mutahabbā", "kendini zorlayarak toz olunan", "kontrol", ""],
-      [591, "مُتَهَبَّيَان", "mutahabbayān", "kendini zorlayarak toz olunan, iki", "kontrol", ""],
-      [592, "مُتَهَبَّوْن", "mutahabbawn", "kendini zorlayarak toz olunanlar", "kontrol", ""],
-      [593, "مُتَهَبَّيْن", "mutahabbayn", "kendini zorlayarak toz olunanlar", "kontrol", ""],
-      [594, "مُتَهَبَّيَات", "mutahabbayāt", "kendini zorlayarak toz olunanlar, müennes", "kontrol", ""]
+      ["mutafa''al", "kıyâsî · ilal", "مُتَهَبَّى", "mutahabbā", "kendini zorlayarak toz olunan", "kontrol", ""],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَبَّيَان",
+        "mutahabbayān",
+        "kendini zorlayarak toz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَهَبَّوْن",
+        "mutahabbawn",
+        "kendini zorlayarak toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَهَبَّيْن",
+        "mutahabbayn",
+        "kendini zorlayarak toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَهَبَّيَات",
+        "mutahabbayāt",
+        "kendini zorlayarak toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [595, "مُتَهَبَّى", "mutahabbā", "kendini zorlayarak toz olma yeri, vakti", "kontrol", ""]
+      [
+        "mutafa''al",
+        "kıyâsî · ilal",
+        "مُتَهَبَّى",
+        "mutahabbā",
+        "kendini zorlayarak toz olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb VI": [
-      [596, "تَهَابِي", "tahābī", "birbirine toz olma", "kontrol", ""]
+      ["tafā'ul", "kıyâsî · ilal", "تَهَابِي", "tahābī", "birbirine toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [597, "مُتَهَابِي", "mutahābī", "birbirine toz olan", "kontrol", ""],
-      [598, "مُتَهَابِيَة", "mutahābiya", "birbirine toz olan, müennes", "kontrol", ""],
-      [599, "مُتَهَابِيَان", "mutahābiyān", "birbirine toz olan, iki", "kontrol", ""],
-      [600, "مُتَهَابِيَتَان", "mutahābiyatān", "birbirine toz olan, iki, müennes", "kontrol", ""],
-      [601, "مُتَهَابُون", "mutahābūn", "birbirine toz olanlar", "kontrol", ""],
-      [602, "مُتَهَابِين", "mutahābīn", "birbirine toz olanlar", "kontrol", ""],
-      [603, "مُتَهَابِيَات", "mutahābiyāt", "birbirine toz olanlar, müennes", "kontrol", ""]
+      ["mutafā'il", "kıyâsî · ilal", "مُتَهَابِي", "mutahābī", "birbirine toz olan", "kontrol", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî · ilal",
+        "مُتَهَابِيَة",
+        "mutahābiya",
+        "birbirine toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَابِيَان",
+        "mutahābiyān",
+        "birbirine toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَابِيَتَان",
+        "mutahābiyatān",
+        "birbirine toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَهَابُون",
+        "mutahābūn",
+        "birbirine toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَهَابِين",
+        "mutahābīn",
+        "birbirine toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَهَابِيَات",
+        "mutahābiyāt",
+        "birbirine toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [604, "مُتَهَابَى", "mutahābā", "birbirine toz olunan", "kontrol", ""],
-      [605, "مُتَهَابَيَان", "mutahābayān", "birbirine toz olunan, iki", "kontrol", ""],
-      [606, "مُتَهَابَوْن", "mutahābawn", "birbirine toz olunanlar", "kontrol", ""],
-      [607, "مُتَهَابَيْن", "mutahābayn", "birbirine toz olunanlar", "kontrol", ""],
-      [608, "مُتَهَابَيَات", "mutahābayāt", "birbirine toz olunanlar, müennes", "kontrol", ""]
+      ["mutafā'al", "kıyâsî · ilal", "مُتَهَابَى", "mutahābā", "birbirine toz olunan", "kontrol", ""],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَهَابَيَان",
+        "mutahābayān",
+        "birbirine toz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَهَابَوْن",
+        "mutahābawn",
+        "birbirine toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَهَابَيْن",
+        "mutahābayn",
+        "birbirine toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَهَابَيَات",
+        "mutahābayāt",
+        "birbirine toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [609, "مُتَهَابَى", "mutahābā", "birbirine toz olma yeri, vakti", "kontrol", ""]
+      ["mutafā'al", "kıyâsî · ilal", "مُتَهَابَى", "mutahābā", "birbirine toz olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VII": [
-      [610, "اِنْهِبَاء", "inhibāʾ", "toz olunma", "kontrol", ""]
+      ["infi'āl", "kıyâsî · ilal", "اِنْهِبَاء", "inhibāʾ", "toz olunma", "kontrol", ""]
     ],
     "ism-i merre · bâb VII": [
-      [611, "اِنْهِبَاءَة", "inhibāʾa", "bir kere toz olunma", "kontrol", ""]
+      ["infi'āl + tâ", "aday · ilal", "اِنْهِبَاءَة", "inhibāʾa", "bir kere toz olunma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [612, "مُنْهَبِي", "munhabī", "toz olunan", "kontrol", ""],
-      [613, "مُنْهَبِيَة", "munhabiya", "toz olunan, müennes", "kontrol", ""],
-      [614, "مُنْهَبِيَان", "munhabiyān", "toz olunan, iki", "kontrol", ""],
-      [615, "مُنْهَبِيَتَان", "munhabiyatān", "toz olunan, iki, müennes", "kontrol", ""],
-      [616, "مُنْهَبُون", "munhabūn", "toz olunanlar", "kontrol", ""],
-      [617, "مُنْهَبِين", "munhabīn", "toz olunanlar", "kontrol", ""],
-      [618, "مُنْهَبِيَات", "munhabiyāt", "toz olunanlar, müennes", "kontrol", ""]
+      ["munfa'il", "kıyâsî · ilal", "مُنْهَبِي", "munhabī", "toz olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْهَبِيَة", "munhabiya", "toz olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْهَبِيَان", "munhabiyān", "toz olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْهَبِيَتَان",
+        "munhabiyatān",
+        "toz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْهَبُون",
+        "munhabūn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْهَبِين",
+        "munhabīn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْهَبِيَات",
+        "munhabiyāt",
+        "toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْهَبَى", "munhabā", "toz olunan", "kontrol", ""],
-      [620, "مُنْهَبَيَان", "munhabayān", "toz olunan, iki", "kontrol", ""],
-      [621, "مُنْهَبَوْن", "munhabawn", "toz olunanlar", "kontrol", ""],
-      [622, "مُنْهَبَيْن", "munhabayn", "toz olunanlar", "kontrol", ""],
-      [623, "مُنْهَبَيَات", "munhabayāt", "toz olunanlar, müennes", "kontrol", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَى",
+        "munhabā",
+        "toz olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَيَان",
+        "munhabayān",
+        "toz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَوْن",
+        "munhabawn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَيْن",
+        "munhabayn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَيَات",
+        "munhabayāt",
+        "toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْهَبَى", "munhabā", "toz olunma yeri, vakti", "kontrol", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْهَبَى",
+        "munhabā",
+        "toz olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb VIII": [
-      [625, "اِهْتِبَاء", "ihtibāʾ", "kendisi için toz olma", "kontrol", ""]
+      ["ifti'āl", "kıyâsî · ilal", "اِهْتِبَاء", "ihtibāʾ", "kendisi için toz olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [627, "اِهْتِبَاءَة", "ihtibāʾa", "bir kere kendisi için toz olma", "kontrol", ""]
+      ["ifti'āl + tâ", "aday · ilal", "اِهْتِبَاءَة", "ihtibāʾa", "bir kere kendisi için toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [628, "مُهْتَبِي", "muhtabī", "kendisi için toz olan", "kontrol", ""],
-      [629, "مُهْتَبِيَة", "muhtabiya", "kendisi için toz olan, müennes", "kontrol", ""],
-      [630, "مُهْتَبِيَان", "muhtabiyān", "kendisi için toz olan, iki", "kontrol", ""],
-      [631, "مُهْتَبِيَتَان", "muhtabiyatān", "kendisi için toz olan, iki, müennes", "kontrol", ""],
-      [632, "مُهْتَبُون", "muhtabūn", "kendisi için toz olanlar", "kontrol", ""],
-      [633, "مُهْتَبِين", "muhtabīn", "kendisi için toz olanlar", "kontrol", ""],
-      [634, "مُهْتَبِيَات", "muhtabiyāt", "kendisi için toz olanlar, müennes", "kontrol", ""]
+      ["muftaʿil", "kıyâsî · ilal", "مُهْتَبِي", "muhtabī", "kendisi için toz olan", "kontrol", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî · ilal",
+        "مُهْتَبِيَة",
+        "muhtabiya",
+        "kendisi için toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + tesniye",
+        "kıyâsî · ilal",
+        "مُهْتَبِيَان",
+        "muhtabiyān",
+        "kendisi için toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهْتَبِيَتَان",
+        "muhtabiyatān",
+        "kendisi için toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْتَبُون",
+        "muhtabūn",
+        "kendisi için toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْتَبِين",
+        "muhtabīn",
+        "kendisi için toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْتَبِيَات",
+        "muhtabiyāt",
+        "kendisi için toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُهْتَبَى", "muhtabā", "kendisi için toz olunan", "kontrol", ""],
-      [636, "مُهْتَبَيَان", "muhtabayān", "kendisi için toz olunan, iki", "kontrol", ""],
-      [637, "مُهْتَبَوْن", "muhtabawn", "kendisi için toz olunanlar", "kontrol", ""],
-      [638, "مُهْتَبَيْن", "muhtabayn", "kendisi için toz olunanlar", "kontrol", ""],
-      [639, "مُهْتَبَيَات", "muhtabayāt", "kendisi için toz olunanlar, müennes", "kontrol", ""]
+      ["muftaʿal", "kıyâsî · ilal", "مُهْتَبَى", "muhtabā", "kendisi için toz olunan", "kontrol", ""],
+      [
+        "muftaʿal + tesniye",
+        "kıyâsî · ilal",
+        "مُهْتَبَيَان",
+        "muhtabayān",
+        "kendisi için toz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْتَبَوْن",
+        "muhtabawn",
+        "kendisi için toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْتَبَيْن",
+        "muhtabayn",
+        "kendisi için toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْتَبَيَات",
+        "muhtabayāt",
+        "kendisi için toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُهْتَبَى", "muhtabā", "kendisi için toz olma yeri, vakti", "kontrol", ""]
+      ["muftaʿal", "kıyâsî · ilal", "مُهْتَبَى", "muhtabā", "kendisi için toz olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [654, "اِهْبِوَاء", "ihbiwāʾ", "iyiden iyiye toz olma", "kontrol", ""]
+      ["if'ilāl", "semâî aday · ilal", "اِهْبِوَاء", "ihbiwāʾ", "iyiden iyiye toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [655, "مُهْبَوِي", "muhbawī", "iyiden iyiye toz olan", "kontrol", ""],
-      [656, "مُهْبَوِيَة", "muhbawiya", "iyiden iyiye toz olan, müennes", "kontrol", ""],
-      [657, "مُهْبَوِيَان", "muhbawiyān", "iyiden iyiye toz olan, iki", "kontrol", ""],
-      [658, "مُهْبَوِيَتَان", "muhbawiyatān", "iyiden iyiye toz olan, iki, müennes", "kontrol", ""],
-      [659, "مُهْبَوُون", "muhbawūn", "iyiden iyiye toz olanlar", "kontrol", ""],
-      [660, "مُهْبَوِين", "muhbawīn", "iyiden iyiye toz olanlar", "kontrol", ""],
-      [661, "مُهْبَوِيَات", "muhbawiyāt", "iyiden iyiye toz olanlar, müennes", "kontrol", ""]
+      ["muf'all", "kıyâsî · ilal", "مُهْبَوِي", "muhbawī", "iyiden iyiye toz olan", "kontrol", ""],
+      [
+        "muf'all + müennes",
+        "kıyâsî · ilal",
+        "مُهْبَوِيَة",
+        "muhbawiya",
+        "iyiden iyiye toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + tesniye",
+        "kıyâsî · ilal",
+        "مُهْبَوِيَان",
+        "muhbawiyān",
+        "iyiden iyiye toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهْبَوِيَتَان",
+        "muhbawiyatān",
+        "iyiden iyiye toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْبَوُون",
+        "muhbawūn",
+        "iyiden iyiye toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْبَوِين",
+        "muhbawīn",
+        "iyiden iyiye toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْبَوِيَات",
+        "muhbawiyāt",
+        "iyiden iyiye toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb X": [
-      [662, "اِسْتِهْبَاء", "istihbāʾ", "toz olmayı isteme", "kontrol", ""]
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِهْبَاء", "istihbāʾ", "toz olmayı isteme", "kontrol", ""]
     ],
     "ism-i merre · bâb X": [
-      [663, "اِسْتِهْبَاءَة", "istihbāʾa", "bir kere toz olmayı isteme", "kontrol", ""]
+      ["istif'āl + tâ", "aday · ilal", "اِسْتِهْبَاءَة", "istihbāʾa", "bir kere toz olmayı isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb X": [
-      [664, "مُسْتَهْبِي", "mustahbī", "toz olmayı isteyen", "kontrol", ""],
-      [665, "مُسْتَهْبِيَة", "mustahbiya", "toz olmayı isteyen, müennes", "kontrol", ""],
-      [666, "مُسْتَهْبِيَان", "mustahbiyān", "toz olmayı isteyen, iki", "kontrol", ""],
-      [667, "مُسْتَهْبِيَتَان", "mustahbiyatān", "toz olmayı isteyen, iki, müennes", "kontrol", ""],
-      [668, "مُسْتَهْبُون", "mustahbūn", "toz olmayı isteyenler", "kontrol", ""],
-      [669, "مُسْتَهْبِين", "mustahbīn", "toz olmayı isteyenler", "kontrol", ""],
-      [670, "مُسْتَهْبِيَات", "mustahbiyāt", "toz olmayı isteyenler, müennes", "kontrol", ""]
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَهْبِي", "mustahbī", "toz olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَهْبِيَة",
+        "mustahbiya",
+        "toz olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَهْبِيَان",
+        "mustahbiyān",
+        "toz olmayı isteyen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَهْبِيَتَان",
+        "mustahbiyatān",
+        "toz olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبُون",
+        "mustahbūn",
+        "toz olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبِين",
+        "mustahbīn",
+        "toz olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبِيَات",
+        "mustahbiyāt",
+        "toz olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَهْبَى", "mustahbā", "toz olması istenen", "kontrol", ""],
-      [672, "مُسْتَهْبَيَان", "mustahbayān", "toz olması istenen, iki", "kontrol", ""],
-      [673, "مُسْتَهْبَوْن", "mustahbawn", "toz olması istenenler", "kontrol", ""],
-      [674, "مُسْتَهْبَيْن", "mustahbayn", "toz olması istenenler", "kontrol", ""],
-      [675, "مُسْتَهْبَيَات", "mustahbayāt", "toz olması istenenler, müennes", "kontrol", ""]
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَهْبَى", "mustahbā", "toz olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَهْبَيَان",
+        "mustahbayān",
+        "toz olması istenen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبَوْن",
+        "mustahbawn",
+        "toz olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبَيْن",
+        "mustahbayn",
+        "toz olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَهْبَيَات",
+        "mustahbayāt",
+        "toz olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَهْبَى", "mustahbā", "toz olmayı isteme yeri, vakti", "kontrol", ""]
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَهْبَى", "mustahbā", "toz olmayı isteme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [677, "اِهْبِيوَاء", "ihbīwāʾ", "büsbütün toz olma", "kontrol", ""]
+      ["if'īlāl", "semâî aday · ilal", "اِهْبِيوَاء", "ihbīwāʾ", "büsbütün toz olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [678, "مُهْبَاوِي", "muhbāwī", "büsbütün toz olan", "kontrol", ""],
-      [679, "مُهْبَاوِيَة", "muhbāwiya", "büsbütün toz olan, müennes", "kontrol", ""],
-      [680, "مُهْبَاوِيَان", "muhbāwiyān", "büsbütün toz olan, iki", "kontrol", ""],
-      [681, "مُهْبَاوِيَتَان", "muhbāwiyatān", "büsbütün toz olan, iki, müennes", "kontrol", ""],
-      [682, "مُهْبَاوُون", "muhbāwūn", "büsbütün toz olanlar", "kontrol", ""],
-      [683, "مُهْبَاوِين", "muhbāwīn", "büsbütün toz olanlar", "kontrol", ""],
-      [684, "مُهْبَاوِيَات", "muhbāwiyāt", "büsbütün toz olanlar, müennes", "kontrol", ""]
+      ["muf'āll", "kıyâsî · ilal", "مُهْبَاوِي", "muhbāwī", "büsbütün toz olan", "kontrol", ""],
+      [
+        "muf'āll + müennes",
+        "kıyâsî · ilal",
+        "مُهْبَاوِيَة",
+        "muhbāwiya",
+        "büsbütün toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muf'āll + tesniye", "kıyâsî · ilal", "مُهْبَاوِيَان", "muhbāwiyān", "büsbütün toz olan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُهْبَاوِيَتَان",
+        "muhbāwiyatān",
+        "büsbütün toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُهْبَاوُون",
+        "muhbāwūn",
+        "büsbütün toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُهْبَاوِين",
+        "muhbāwīn",
+        "büsbütün toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُهْبَاوِيَات",
+        "muhbāwiyāt",
+        "büsbütün toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
-      [685, "اِهْبِوْبَاء", "ihbiwbāʾ", "aşırı toz olma", "kontrol", ""]
+      ["if'iv'āl", "semâî aday · ilal", "اِهْبِوْبَاء", "ihbiwbāʾ", "aşırı toz olma", "kontrol", ""]
     ],
     "masdar · bâb XIII (illet harfi izhar)": [
-      [686, "اِهْبِوَّاء", "ihbiwwāʾ", "aşırı toz olma", "kontrol", ""]
+      ["if'ivvāl", "semâî aday · ilal", "اِهْبِوَّاء", "ihbiwwāʾ", "aşırı toz olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [687, "هَابِي", "hābī", "toz olan", "kontrol", ""],
-      [688, "هَابِيَة", "hābiya", "toz olan, müennes", "kontrol", ""],
-      [689, "هَابِيَان", "hābiyān", "toz olan, iki", "kontrol", ""],
-      [690, "هَابِيَتَان", "hābiyatān", "toz olan, iki, müennes", "kontrol", ""],
-      [691, "هَابُون", "hābūn", "toz olanlar", "kontrol", ""],
-      [692, "هَابِين", "hābīn", "toz olanlar", "kontrol", ""],
-      [693, "هَابِيَات", "hābiyāt", "toz olanlar, müennes", "kontrol", ""]
+      ["fâ'il", "kıyâsî · ilal", "هَابِي", "hābī", "toz olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "هَابِيَة", "hābiya", "toz olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "هَابِيَان", "hābiyān", "toz olan, iki", "kontrol", ""],
+      [
+        "fâ'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "هَابِيَتَان",
+        "hābiyatān",
+        "toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "هَابُون", "hābūn", "toz olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "هَابِين", "hābīn", "toz olanlar", "kontrol", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "هَابِيَات",
+        "hābiyāt",
+        "toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [694, "مَهْبُوّ", "mahbuww", "toz olunan", "kontrol", ""],
-      [695, "مَهْبُوَّة", "mahbuwwa", "toz olunan, müennes", "kontrol", ""],
-      [696, "مَهْبُوَّان", "mahbuwwān", "toz olunan, iki", "kontrol", ""],
-      [697, "مَهْبُوَّتَان", "mahbuwwatān", "toz olunan, iki, müennes", "kontrol", ""],
-      [698, "مَهْبُوُّون", "mahbuwwūn", "toz olunanlar", "kontrol", ""],
-      [699, "مَهْبُوِّين", "mahbuwwīn", "toz olunanlar", "kontrol", ""],
-      [700, "مَهْبُوَّات", "mahbuwwāt", "toz olunanlar, müennes", "kontrol", ""]
+      ["maf'ûl", "kıyâsî · ilal", "مَهْبُوّ", "mahbuww", "toz olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَهْبُوَّة", "mahbuwwa", "toz olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَهْبُوَّان", "mahbuwwān", "toz olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَهْبُوَّتَان",
+        "mahbuwwatān",
+        "toz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مَهْبُوُّون",
+        "mahbuwwūn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مَهْبُوِّين",
+        "mahbuwwīn",
+        "toz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَهْبُوَّات",
+        "mahbuwwāt",
+        "toz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman · sülâsî": [
-      [701, "مَهْبَى", "mahbā", "toz olma yeri, vakti", "kontrol", ""],
-      [702, "مَهْبَيَان", "mahbayān", "toz olma yeri, vakti, iki", "kontrol", ""],
-      [703, "مَهْبِي", "mahbī", "toz olma yeri, vakti", "kontrol", ""],
-      [704, "مَهْبِيَان", "mahbiyān", "toz olma yeri, vakti, iki", "kontrol", ""],
-      [705, "مَهْبَاة", "mahbā", "toz olmanın bol olduğu yer", "kontrol", ""],
-      [706, "مَهْبَاتَان", "mahbātān", "toz olmanın bol olduğu yer, iki", "kontrol", ""],
-      [707, "مَهْبِيَة", "mahbiya", "toz olmanın bol olduğu yer", "kontrol", ""],
-      [708, "مَهْبِيَتَان", "mahbiyatān", "toz olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَهْبُوَة", "mahbuwa", "toz olma yeri, vakti", "kontrol", ""],
-      [248, "مَهْبُوَتَان", "mahbuwatān", "toz olma yeri, vakti, iki", "kontrol", ""]
+      ["maf'al", "kıyâsî · ilal", "مَهْبَى", "mahbā", "toz olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَهْبَيَان", "mahbayān", "toz olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî · ilal", "مَهْبِي", "mahbī", "toz olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَهْبِيَان", "mahbiyān", "toz olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَهْبَاة", "mahbā", "toz olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
+        "مَهْبَاتَان",
+        "mahbātān",
+        "toz olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî · ilal", "مَهْبِيَة", "mahbiya", "toz olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَهْبِيَتَان",
+        "mahbiyatān",
+        "toz olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَهْبُوَة", "mahbuwa", "toz olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَهْبُوَتَان", "mahbuwatān", "toz olma yeri, vakti, iki", "kontrol", ""]
     ],
     "âlet · sülâsî": [
-      [709, "مِهْبَى", "mihbā", "toz olma âleti", "kontrol", ""],
-      [710, "مِهْبَيَان", "mihbayān", "toz olma âleti, iki", "kontrol", ""],
-      [711, "مِهْبَاء", "mihbāʾ", "toz olma âleti", "kontrol", ""],
-      [712, "مِهْبَاآن", "mihbāʾān", "toz olma âleti, iki", "kontrol", ""],
-      [713, "مِهْبَاة", "mihbā", "toz olma âleti", "kontrol", ""],
-      [714, "مِهْبَاتَان", "mihbātān", "toz olma âleti, iki", "kontrol", ""]
+      ["mif'al", "kıyâsî · ilal", "مِهْبَى", "mihbā", "toz olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî · ilal", "مِهْبَيَان", "mihbayān", "toz olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî · ilal", "مِهْبَاء", "mihbāʾ", "toz olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî · ilal", "مِهْبَاآن", "mihbāʾān", "toz olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî · ilal", "مِهْبَاة", "mihbā", "toz olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî · ilal", "مِهْبَاتَان", "mihbātān", "toz olma âleti, iki", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
-      [715, "أَهْبَى", "ʾahbā", "daha çok toz olan", "kontrol", ""],
-      [716, "أَهْبَيَان", "ʾahbayān", "daha çok toz olan, iki", "kontrol", ""]
+      ["af'al", "kıyâsî · ilal", "أَهْبَى", "ʾahbā", "daha çok toz olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî · ilal", "أَهْبَيَان", "ʾahbayān", "daha çok toz olan, iki", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [717, "هُبْيَى", "hubyā", "daha çok toz olan", "kontrol", ""],
-      [718, "هُبْيَيَان", "hubyayān", "daha çok toz olan, iki", "kontrol", ""],
-      [245, "هَبْوَاء", "habwāʾ", "daha çok toz olan", "kontrol", ""],
-      [246, "هَبْوَاآن", "habwāʾān", "daha çok toz olan, iki", "kontrol", ""]
+      ["fu'lâ", "kıyâsî · ilal", "هُبْيَى", "hubyā", "daha çok toz olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî · ilal", "هُبْيَيَان", "hubyayān", "daha çok toz olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "هَبْوَاء", "habwāʾ", "daha çok toz olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "هَبْوَاآن", "habwāʾān", "daha çok toz olan, iki", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
-      [719, "هُبَيّ", "hubayy", "azıcık toz olma", "kontrol", ""],
-      [720, "هُبَيَّان", "hubayyān", "azıcık toz olma, iki", "kontrol", ""],
-      [721, "هُبَيَّة", "hubayya", "azıcık toz olma", "kontrol", ""],
-      [722, "هُبَيَّتَان", "hubayyatān", "azıcık toz olma, iki", "kontrol", ""]
+      ["fu'ayl", "kıyâsî · ilal", "هُبَيّ", "hubayy", "azıcık toz olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî · ilal", "هُبَيَّان", "hubayyān", "azıcık toz olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî · ilal", "هُبَيَّة", "hubayya", "azıcık toz olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî · ilal", "هُبَيَّتَان", "hubayyatān", "azıcık toz olma, iki", "kontrol", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [723, "مَهْبَى", "mahbā", "toz olma", "kontrol", ""],
-      [724, "مَهْبَيَان", "mahbayān", "toz olma, iki", "kontrol", ""]
+      ["maf'al", "kıyâsî · ilal", "مَهْبَى", "mahbā", "toz olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَهْبَيَان", "mahbayān", "toz olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "هَبْوَة", "habwa", "bir kere toz olma", "kontrol", ""],
-      [256, "هَبْوَتَان", "habwatān", "bir kere toz olma, iki", "kontrol", ""]
+      ["fa'le", "aday", "هَبْوَة", "habwa", "bir kere toz olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "هَبْوَتَان", "habwatān", "bir kere toz olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "هِبْوَة", "hibwa", "toz olma tarzı", "kontrol", ""],
-      [258, "هِبْوَتَان", "hibwatān", "toz olma tarzı, iki", "kontrol", ""]
+      ["fi'le", "aday", "هِبْوَة", "hibwa", "toz olma tarzı", "kontrol", ""],
+      ["fi'le + tesniye", "aday", "هِبْوَتَان", "hibwatān", "toz olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [725, "هَبِيّ", "habiyy", "her daim toz olan", "kontrol", ""],
-      [726, "هَبِيَّة", "habiyya", "her daim toz olan, müennes", "kontrol", ""],
-      [727, "هَبِيَّان", "habiyyān", "her daim toz olan, iki", "kontrol", ""],
-      [728, "هَبِيَّتَان", "habiyyatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [729, "هَبِيُّون", "habiyyūn", "her daim toz olanlar", "kontrol", ""],
-      [730, "هَبِيِّين", "habiyyīn", "her daim toz olanlar", "kontrol", ""],
-      [731, "هَبِيَّات", "habiyyāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [732, "هَبُوّ", "habuww", "her daim toz olan", "kontrol", ""],
-      [733, "هَبُوَّة", "habuwwa", "her daim toz olan, müennes", "kontrol", ""],
-      [734, "هَبُوَّان", "habuwwān", "her daim toz olan, iki", "kontrol", ""],
-      [735, "هَبُوَّتَان", "habuwwatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [736, "هَبُوُّون", "habuwwūn", "her daim toz olanlar", "kontrol", ""],
-      [737, "هَبُوِّين", "habuwwīn", "her daim toz olanlar", "kontrol", ""],
-      [738, "هَبُوَّات", "habuwwāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [739, "هَبِي", "habī", "her daim toz olan", "kontrol", ""],
-      [740, "هَبِيَة", "habiya", "her daim toz olan, müennes", "kontrol", ""],
-      [741, "هَبِيَان", "habiyān", "her daim toz olan, iki", "kontrol", ""],
-      [742, "هَبِيَتَان", "habiyatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [743, "هَبُون", "habūn", "her daim toz olanlar", "kontrol", ""],
-      [744, "هَبِين", "habīn", "her daim toz olanlar", "kontrol", ""],
-      [745, "هَبِيَات", "habiyāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [746, "هَبُوّ", "habuww", "her daim toz olan", "kontrol", ""],
-      [747, "هَبُوَّة", "habuwwa", "her daim toz olan, müennes", "kontrol", ""],
-      [748, "هَبُوَّان", "habuwwān", "her daim toz olan, iki", "kontrol", ""],
-      [749, "هَبُوَّتَان", "habuwwatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [750, "هَبُوُّون", "habuwwūn", "her daim toz olanlar", "kontrol", ""],
-      [751, "هَبُوِّين", "habuwwīn", "her daim toz olanlar", "kontrol", ""],
-      [752, "هَبُوَّات", "habuwwāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [753, "هَبَا", "habā", "her daim toz olan", "kontrol", ""],
-      [754, "هَبَوَان", "habawān", "her daim toz olan, iki", "kontrol", ""],
-      [755, "هَبَوَات", "habawāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [294, "هَبْو", "habw", "her daim toz olan", "kontrol", ""],
-      [295, "هَبْوَة", "habwa", "her daim toz olan, müennes", "kontrol", ""],
-      [296, "هَبْوَان", "habwān", "her daim toz olan, iki", "kontrol", ""],
-      [297, "هَبْوَتَان", "habwatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [298, "هَبْوُون", "habwūn", "her daim toz olanlar", "kontrol", ""],
-      [299, "هَبْوِين", "habwīn", "her daim toz olanlar", "kontrol", ""],
-      [300, "هَبْوَات", "habwāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [756, "هُبُوّ", "hubuww", "her daim toz olan", "kontrol", ""],
-      [757, "هُبُوَّة", "hubuwwa", "her daim toz olan, müennes", "kontrol", ""],
-      [758, "هُبُوَّان", "hubuwwān", "her daim toz olan, iki", "kontrol", ""],
-      [759, "هُبُوَّتَان", "hubuwwatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [760, "هُبُوُّون", "hubuwwūn", "her daim toz olanlar", "kontrol", ""],
-      [761, "هُبُوِّين", "hubuwwīn", "her daim toz olanlar", "kontrol", ""],
-      [762, "هُبُوَّات", "hubuwwāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [308, "هَبْوَان", "habwān", "her daim toz olan", "kontrol", ""],
-      [309, "هَبْوَانَة", "habwāna", "her daim toz olan, müennes", "kontrol", ""],
-      [310, "هَبْوَانَان", "habwānān", "her daim toz olan, iki", "kontrol", ""],
-      [311, "هَبْوَانَتَان", "habwānatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [312, "هَبْوَانُون", "habwānūn", "her daim toz olanlar", "kontrol", ""],
-      [313, "هَبْوَانِين", "habwānīn", "her daim toz olanlar", "kontrol", ""],
-      [314, "هَبْوَانَات", "habwānāt", "her daim toz olanlar, müennes", "kontrol", ""],
-      [763, "هُبَاء", "hubāʾ", "her daim toz olan", "kontrol", ""],
-      [764, "هُبَاءَة", "hubāʾa", "her daim toz olan, müennes", "kontrol", ""],
-      [765, "هُبَاآن", "hubāʾān", "her daim toz olan, iki", "kontrol", ""],
-      [766, "هُبَاءَتَان", "hubāʾatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [767, "هُبَاؤُون", "hubāʾūn", "her daim toz olanlar", "kontrol", ""],
-      [768, "هُبَائِين", "hubāʾīn", "her daim toz olanlar", "kontrol", ""],
-      [769, "هُبَاآت", "hubāʾāt", "her daim toz olanlar, müennes", "kontrol", ""],
+      ["fa'īl", "semâî aday · ilal", "هَبِيّ", "habiyy", "her daim toz olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "هَبِيَّة", "habiyya", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "هَبِيَّان", "habiyyān", "her daim toz olan, iki", "kontrol", ""],
       [
-        770,
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبِيَّتَان",
+        "habiyyatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبِيُّون",
+        "habiyyūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبِيِّين",
+        "habiyyīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبِيَّات",
+        "habiyyāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "هَبُوّ", "habuww", "her daim toz olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "هَبُوَّة", "habuwwa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "هَبُوَّان", "habuwwān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبُوَّتَان",
+        "habuwwatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبُوُّون",
+        "habuwwūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبُوِّين",
+        "habuwwīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبُوَّات",
+        "habuwwāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday · ilal", "هَبِي", "habī", "her daim toz olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday · ilal", "هَبِيَة", "habiya", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday · ilal", "هَبِيَان", "habiyān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبِيَتَان",
+        "habiyatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبُون",
+        "habūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبِين",
+        "habīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبِيَات",
+        "habiyāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday · ilal", "هَبُوّ", "habuww", "her daim toz olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday · ilal", "هَبُوَّة", "habuwwa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday · ilal", "هَبُوَّان", "habuwwān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبُوَّتَان",
+        "habuwwatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبُوُّون",
+        "habuwwūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبُوِّين",
+        "habuwwīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبُوَّات",
+        "habuwwāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "هَبَا", "habā", "her daim toz olan", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "هَبَوَان", "habawān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبَوَات",
+        "habawāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'l", "semâî aday", "هَبْو", "habw", "her daim toz olan", "kontrol", ""],
+      ["fa'l + müennes", "semâî aday", "هَبْوَة", "habwa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "هَبْوَان", "habwān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "هَبْوَتَان",
+        "habwatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَبْوُون",
+        "habwūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَبْوِين",
+        "habwīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَبْوَات",
+        "habwāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday · ilal", "هُبُوّ", "hubuww", "her daim toz olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday · ilal", "هُبُوَّة", "hubuwwa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday · ilal", "هُبُوَّان", "hubuwwān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "هُبُوَّتَان",
+        "hubuwwatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هُبُوُّون",
+        "hubuwwūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هُبُوِّين",
+        "hubuwwīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هُبُوَّات",
+        "hubuwwāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "هَبْوَان", "habwān", "her daim toz olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "هَبْوَانَة", "habwāna", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "هَبْوَانَان", "habwānān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "هَبْوَانَتَان",
+        "habwānatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَبْوَانُون",
+        "habwānūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَبْوَانِين",
+        "habwānīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَبْوَانَات",
+        "habwānāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday · ilal", "هُبَاء", "hubāʾ", "her daim toz olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday · ilal", "هُبَاءَة", "hubāʾa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday · ilal", "هُبَاآن", "hubāʾān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "هُبَاءَتَان",
+        "hubāʾatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هُبَاؤُون",
+        "hubāʾūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هُبَائِين",
+        "hubāʾīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هُبَاآت",
+        "hubāʾāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl",
+        "semâî aday · ilal",
         "هَبَاء",
         "habāʾ",
         "Boşa gitme, ziyan olma",
         "lugat",
         "Vikisözlük: fine dust, particulate matter · Kubbealtı"
       ],
-      [771, "هَبَاءَة", "habāʾa", "her daim toz olan, müennes", "kontrol", ""],
-      [772, "هَبَاآن", "habāʾān", "her daim toz olan, iki", "kontrol", ""],
-      [773, "هَبَاءَتَان", "habāʾatān", "her daim toz olan, iki, müennes", "kontrol", ""],
-      [774, "هَبَاؤُون", "habāʾūn", "her daim toz olanlar", "kontrol", ""],
-      [775, "هَبَائِين", "habāʾīn", "her daim toz olanlar", "kontrol", ""],
-      [776, "هَبَاآت", "habāʾāt", "her daim toz olanlar, müennes", "kontrol", ""]
+      ["fa'āl + müennes", "semâî aday · ilal", "هَبَاءَة", "habāʾa", "her daim toz olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday · ilal", "هَبَاآن", "habāʾān", "her daim toz olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبَاءَتَان",
+        "habāʾatān",
+        "her daim toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبَاؤُون",
+        "habāʾūn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبَائِين",
+        "habāʾīn",
+        "her daim toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبَاآت",
+        "habāʾāt",
+        "her daim toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mübalağa": [
-      [777, "هَبَّاء", "habbāʾ", "işi toz olma olan", "kontrol", ""],
-      [778, "هَبَّاءَة", "habbāʾa", "işi toz olma olan, müennes", "kontrol", ""],
-      [779, "هَبَّاآن", "habbāʾān", "işi toz olma olan, iki", "kontrol", ""],
-      [780, "هَبَّاءَتَان", "habbāʾatān", "işi toz olma olan, iki, müennes", "kontrol", ""],
-      [781, "هَبَّاؤُون", "habbāʾūn", "işi toz olma olanlar", "kontrol", ""],
-      [782, "هَبَّائِين", "habbāʾīn", "işi toz olma olanlar", "kontrol", ""],
-      [783, "هَبَّاآت", "habbāʾāt", "işi toz olma olanlar, müennes", "kontrol", ""],
-      [784, "هَبَّايَة", "habbāya", "pek çok toz olan", "kontrol", ""],
-      [785, "هَبَّايَتَان", "habbāyatān", "pek çok toz olan, iki", "kontrol", ""],
-      [786, "هَبَّايَات", "habbāyāt", "pek çok toz olanlar, müennes", "kontrol", ""],
-      [787, "هَبُوّ", "habuww", "çok toz olan", "kontrol", ""],
-      [788, "هَبُوَّة", "habuwwa", "çok toz olan, müennes", "kontrol", ""],
-      [789, "هَبُوَّان", "habuwwān", "çok toz olan, iki", "kontrol", ""],
-      [790, "هَبُوَّتَان", "habuwwatān", "çok toz olan, iki, müennes", "kontrol", ""],
-      [791, "هَبُوُّون", "habuwwūn", "çok toz olanlar", "kontrol", ""],
-      [792, "هَبُوِّين", "habuwwīn", "çok toz olanlar", "kontrol", ""],
-      [793, "هَبُوَّات", "habuwwāt", "çok toz olanlar, müennes", "kontrol", ""],
-      [346, "هَبُّوو", "habbūw", "pek çok toz olan", "kontrol", ""],
-      [347, "هَبُّووَة", "habbūwa", "pek çok toz olan, müennes", "kontrol", ""],
-      [348, "هَبُّووَان", "habbūwān", "pek çok toz olan, iki", "kontrol", ""],
-      [349, "هَبُّووَتَان", "habbūwatān", "pek çok toz olan, iki, müennes", "kontrol", ""],
-      [350, "هَبُّووُون", "habbūwūn", "pek çok toz olanlar", "kontrol", ""],
-      [351, "هَبُّووِين", "habbūwīn", "pek çok toz olanlar", "kontrol", ""],
-      [352, "هَبُّووَات", "habbūwāt", "pek çok toz olanlar, müennes", "kontrol", ""],
-      [353, "هِبِّيو", "hibbīw", "toz olmada aşırı giden", "kontrol", ""],
-      [354, "هِبِّيوَة", "hibbīwa", "toz olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "هِبِّيوَان", "hibbīwān", "toz olmada aşırı giden, iki", "kontrol", ""],
-      [356, "هِبِّيوَتَان", "hibbīwatān", "toz olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "هِبِّيوُون", "hibbīwūn", "toz olmada aşırı gidenler", "kontrol", ""],
-      [358, "هِبِّيوِين", "hibbīwīn", "toz olmada aşırı gidenler", "kontrol", ""],
-      [359, "هِبِّيوَات", "hibbīwāt", "toz olmada aşırı gidenler, müennes", "kontrol", ""],
-      [794, "هُبَّاء", "hubbāʾ", "son derece toz olan", "kontrol", ""],
-      [795, "هُبَّاءَة", "hubbāʾa", "son derece toz olan, müennes", "kontrol", ""],
-      [796, "هُبَّاآن", "hubbāʾān", "son derece toz olan, iki", "kontrol", ""],
-      [797, "هُبَّاءَتَان", "hubbāʾatān", "son derece toz olan, iki, müennes", "kontrol", ""],
-      [798, "هُبَّاؤُون", "hubbāʾūn", "son derece toz olanlar", "kontrol", ""],
-      [799, "هُبَّائِين", "hubbāʾīn", "son derece toz olanlar", "kontrol", ""],
-      [800, "هُبَّاآت", "hubbāʾāt", "son derece toz olanlar, müennes", "kontrol", ""],
-      [801, "مِهْبَاء", "mihbāʾ", "toz olmayı âdet edinmiş", "kontrol", ""],
-      [802, "مِهْبَاءَة", "mihbāʾa", "toz olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [803, "مِهْبَاآن", "mihbāʾān", "toz olmayı âdet edinmiş, iki", "kontrol", ""],
-      [804, "مِهْبَاءَتَان", "mihbāʾatān", "toz olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [805, "مِهْبَاؤُون", "mihbāʾūn", "toz olmayı âdet edinmişler", "kontrol", ""],
-      [806, "مِهْبَائِين", "mihbāʾīn", "toz olmayı âdet edinmişler", "kontrol", ""],
-      [807, "مِهْبَاآت", "mihbāʾāt", "toz olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِهْبِيو", "mihbīw", "toz olmaya düşkün", "kontrol", ""],
-      [375, "مِهْبِيوَة", "mihbīwa", "toz olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِهْبِيوَان", "mihbīwān", "toz olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِهْبِيوَتَان", "mihbīwatān", "toz olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِهْبِيوُون", "mihbīwūn", "toz olmaya düşkünler", "kontrol", ""],
-      [379, "مِهْبِيوِين", "mihbīwīn", "toz olmaya düşkünler", "kontrol", ""],
-      [380, "مِهْبِيوَات", "mihbīwāt", "toz olmaya düşkünler, müennes", "kontrol", ""],
-      [808, "هَبِيّ", "habiyy", "çok toz olan", "kontrol", ""],
-      [809, "هَبِيَّة", "habiyya", "çok toz olan, müennes", "kontrol", ""],
-      [810, "هَبِيَّان", "habiyyān", "çok toz olan, iki", "kontrol", ""],
-      [811, "هَبِيَّتَان", "habiyyatān", "çok toz olan, iki, müennes", "kontrol", ""],
-      [812, "هَبِيُّون", "habiyyūn", "çok toz olanlar", "kontrol", ""],
-      [813, "هَبِيِّين", "habiyyīn", "çok toz olanlar", "kontrol", ""],
-      [814, "هَبِيَّات", "habiyyāt", "çok toz olanlar, müennes", "kontrol", ""],
-      [388, "هَبَّو", "habbaw", "çok toz olan", "kontrol", ""],
-      [389, "هَبَّوَة", "habbawa", "çok toz olan, müennes", "kontrol", ""],
-      [390, "هَبَّوَان", "habbawān", "çok toz olan, iki", "kontrol", ""],
-      [391, "هَبَّوَتَان", "habbawatān", "çok toz olan, iki, müennes", "kontrol", ""],
-      [392, "هَبَّوُون", "habbawūn", "çok toz olanlar", "kontrol", ""],
-      [393, "هَبَّوِين", "habbawīn", "çok toz olanlar", "kontrol", ""],
-      [394, "هَبَّوَات", "habbawāt", "çok toz olanlar, müennes", "kontrol", ""]
+      ["fa''āl", "semâî aday · ilal", "هَبَّاء", "habbāʾ", "işi toz olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday · ilal", "هَبَّاءَة", "habbāʾa", "işi toz olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday · ilal", "هَبَّاآن", "habbāʾān", "işi toz olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبَّاءَتَان",
+        "habbāʾatān",
+        "işi toz olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبَّاؤُون",
+        "habbāʾūn",
+        "işi toz olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبَّائِين",
+        "habbāʾīn",
+        "işi toz olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبَّاآت",
+        "habbāʾāt",
+        "işi toz olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday · ilal", "هَبَّايَة", "habbāya", "pek çok toz olan", "kontrol", ""],
+      [
+        "fa''āle + tesniye",
+        "semâî aday · ilal",
+        "هَبَّايَتَان",
+        "habbāyatān",
+        "pek çok toz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبَّايَات",
+        "habbāyāt",
+        "pek çok toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "هَبُوّ", "habuww", "çok toz olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "هَبُوَّة", "habuwwa", "çok toz olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "هَبُوَّان", "habuwwān", "çok toz olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبُوَّتَان",
+        "habuwwatān",
+        "çok toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبُوُّون",
+        "habuwwūn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبُوِّين",
+        "habuwwīn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبُوَّات",
+        "habuwwāt",
+        "çok toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "هَبُّوو", "habbūw", "pek çok toz olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "هَبُّووَة", "habbūwa", "pek çok toz olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "هَبُّووَان", "habbūwān", "pek çok toz olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "هَبُّووَتَان",
+        "habbūwatān",
+        "pek çok toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَبُّووُون",
+        "habbūwūn",
+        "pek çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَبُّووِين",
+        "habbūwīn",
+        "pek çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَبُّووَات",
+        "habbūwāt",
+        "pek çok toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "هِبِّيو", "hibbīw", "toz olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "هِبِّيوَة", "hibbīwa", "toz olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "هِبِّيوَان", "hibbīwān", "toz olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "هِبِّيوَتَان",
+        "hibbīwatān",
+        "toz olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هِبِّيوُون",
+        "hibbīwūn",
+        "toz olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هِبِّيوِين",
+        "hibbīwīn",
+        "toz olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هِبِّيوَات",
+        "hibbīwāt",
+        "toz olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday · ilal", "هُبَّاء", "hubbāʾ", "son derece toz olan", "kontrol", ""],
+      [
+        "fu''āl + müennes",
+        "semâî aday · ilal",
+        "هُبَّاءَة",
+        "hubbāʾa",
+        "son derece toz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl + tesniye", "semâî aday · ilal", "هُبَّاآن", "hubbāʾān", "son derece toz olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "هُبَّاءَتَان",
+        "hubbāʾatān",
+        "son derece toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هُبَّاؤُون",
+        "hubbāʾūn",
+        "son derece toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هُبَّائِين",
+        "hubbāʾīn",
+        "son derece toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هُبَّاآت",
+        "hubbāʾāt",
+        "son derece toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday · ilal", "مِهْبَاء", "mihbāʾ", "toz olmayı âdet edinmiş", "kontrol", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday · ilal",
+        "مِهْبَاءَة",
+        "mihbāʾa",
+        "toz olmayı âdet edinmiş, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + tesniye",
+        "semâî aday · ilal",
+        "مِهْبَاآن",
+        "mihbāʾān",
+        "toz olmayı âdet edinmiş, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مِهْبَاءَتَان",
+        "mihbāʾatān",
+        "toz olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مِهْبَاؤُون",
+        "mihbāʾūn",
+        "toz olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مِهْبَائِين",
+        "mihbāʾīn",
+        "toz olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مِهْبَاآت",
+        "mihbāʾāt",
+        "toz olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِهْبِيو", "mihbīw", "toz olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِهْبِيوَة", "mihbīwa", "toz olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِهْبِيوَان", "mihbīwān", "toz olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِهْبِيوَتَان",
+        "mihbīwatān",
+        "toz olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِهْبِيوُون",
+        "mihbīwūn",
+        "toz olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِهْبِيوِين",
+        "mihbīwīn",
+        "toz olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِهْبِيوَات",
+        "mihbīwāt",
+        "toz olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday · ilal", "هَبِيّ", "habiyy", "çok toz olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "هَبِيَّة", "habiyya", "çok toz olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "هَبِيَّان", "habiyyān", "çok toz olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "هَبِيَّتَان",
+        "habiyyatān",
+        "çok toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "هَبِيُّون",
+        "habiyyūn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "هَبِيِّين",
+        "habiyyīn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "هَبِيَّات",
+        "habiyyāt",
+        "çok toz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "هَبَّو", "habbaw", "çok toz olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "هَبَّوَة", "habbawa", "çok toz olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "هَبَّوَان", "habbawān", "çok toz olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "هَبَّوَتَان",
+        "habbawatān",
+        "çok toz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَبَّوُون",
+        "habbawūn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَبَّوِين",
+        "habbawīn",
+        "çok toz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَبَّوَات",
+        "habbawāt",
+        "çok toz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mensûb": [
-      [395, "هَبْوِيّ", "habwiyy", "toz olma ile ilgili", "kontrol", ""],
-      [399, "هِبْوِيّ", "hibwiyy", "toz olma ile ilgili", "kontrol", ""],
-      [401, "هُبْوِيّ", "hubwiyy", "toz olma ile ilgili", "kontrol", ""],
-      [815, "هِبَائِيّ", "hibāʾiyy", "toz olma ile ilgili", "kontrol", ""],
-      [817, "هَابِيّ", "hābiyy", "toz olma ile ilgili", "kontrol", ""],
-      [819, "مَهْبُوِّيّ", "mahbuwwiyy", "toz olma ile ilgili", "kontrol", ""],
-      [821, "هَبِيِّيّ", "habiyyiyy", "toz olma ile ilgili", "kontrol", ""],
-      [823, "مَهْبَوِيّ", "mahbawiyy", "toz olma ile ilgili", "kontrol", ""],
-      [825, "تَهْبِيِيّ", "tahbiyiyy", "toz olma ile ilgili", "kontrol", ""],
-      [827, "تَهَابِيّ", "tahābiyy", "toz olma ile ilgili", "kontrol", ""],
-      [829, "إِهْبَائِيّ", "ʾihbāʾiyy", "toz olma ile ilgili", "kontrol", ""],
-      [831, "اِهْتِبَائِيّ", "ihtibāʾiyy", "toz olma ile ilgili", "kontrol", ""]
+      ["fa'l + iyy", "kıyâsî", "هَبْوِيّ", "habwiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "هِبْوِيّ", "hibwiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "هُبْوِيّ", "hubwiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "هِبَائِيّ", "hibāʾiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "هَابِيّ", "hābiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَهْبُوِّيّ", "mahbuwwiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî · ilal", "هَبِيِّيّ", "habiyyiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَهْبَوِيّ", "mahbawiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî · ilal", "تَهْبِيِيّ", "tahbiyiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî · ilal", "تَهَابِيّ", "tahābiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِهْبَائِيّ", "ʾihbāʾiyy", "toz olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِهْتِبَائِيّ", "ihtibāʾiyy", "toz olma ile ilgili", "kontrol", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "هَبْوِيَّة", "habwiyya", "toz olanlık", "kontrol", ""],
-      [400, "هِبْوِيَّة", "hibwiyya", "toz olanlık", "kontrol", ""],
-      [402, "هُبْوِيَّة", "hubwiyya", "toz olanlık", "kontrol", ""],
-      [816, "هِبَائِيَّة", "hibāʾiyya", "toz olanlık", "kontrol", ""],
-      [818, "هَابِيَّة", "hābiyya", "toz olanlık", "kontrol", ""],
-      [820, "مَهْبُوِّيَّة", "mahbuwwiyya", "toz olanlık", "kontrol", ""],
-      [822, "هَبِيِّيَّة", "habiyyiyya", "toz olanlık", "kontrol", ""],
-      [824, "مَهْبَوِيَّة", "mahbawiyya", "toz olanlık", "kontrol", ""],
-      [826, "تَهْبِيِيَّة", "tahbiyiyya", "toz olanlık", "kontrol", ""],
-      [828, "تَهَابِيَّة", "tahābiyya", "toz olanlık", "kontrol", ""],
-      [830, "إِهْبَائِيَّة", "ʾihbāʾiyya", "toz olanlık", "kontrol", ""],
-      [832, "اِهْتِبَائِيَّة", "ihtibāʾiyya", "toz olanlık", "kontrol", ""]
+      ["fa'l + iyye", "kıyâsî", "هَبْوِيَّة", "habwiyya", "toz olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "هِبْوِيَّة", "hibwiyya", "toz olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "هُبْوِيَّة", "hubwiyya", "toz olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "هِبَائِيَّة", "hibāʾiyya", "toz olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "هَابِيَّة", "hābiyya", "toz olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَهْبُوِّيَّة", "mahbuwwiyya", "toz olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî · ilal", "هَبِيِّيَّة", "habiyyiyya", "toz olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَهْبَوِيَّة", "mahbawiyya", "toz olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî · ilal", "تَهْبِيِيَّة", "tahbiyiyya", "toz olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî · ilal", "تَهَابِيَّة", "tahābiyya", "toz olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِهْبَائِيَّة", "ʾihbāʾiyya", "toz olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِهْتِبَائِيَّة", "ihtibāʾiyya", "toz olanlık", "kontrol", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
       [
-        833,
+        "fa'âl (kelâm, selâm)",
+        "semâî aday · ilal",
         "هَبَاء",
         "habāʾ",
         "Boşa gitme, ziyan olma",
         "lugat",
         "Vikisözlük: fine dust, particulate matter · Kubbealtı"
       ],
-      [834, "هُبُوّ", "hubuww", "toz olma", "kontrol", ""],
-      [835, "هِبَاء", "hibāʾ", "toz olma", "kontrol", ""],
-      [424, "هُبْو", "hubw", "toz olma", "kontrol", ""],
-      [836, "هَبَاة", "habā", "toz olma", "kontrol", ""],
-      [837, "هِبَايَة", "hibāya", "toz olma", "kontrol", ""],
-      [838, "هُبُوَّة", "hubuwwa", "toz olma", "kontrol", ""],
-      [428, "هَبْو", "habw", "toz olma", "kontrol", ""],
-      [429, "هِبْو", "hibw", "toz olma", "kontrol", ""]
+      ["fu'ûl (vudû')", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz olma", "kontrol", ""],
+      ["fi'âl", "semâî aday · ilal", "هِبَاء", "hibāʾ", "toz olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday", "هُبْو", "hubw", "toz olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday · ilal", "هَبَاة", "habā", "toz olma", "kontrol", ""],
+      ["fi'âle", "semâî aday · ilal", "هِبَايَة", "hibāya", "toz olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday · ilal", "هُبُوَّة", "hubuwwa", "toz olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "هَبْو", "habw", "toz olma", "kontrol", ""],
+      ["fi'l", "semâî aday", "هِبْو", "hibw", "toz olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "هَابُوو", "hābūw", "toz olma türünden şey", "kontrol", ""],
-      [839, "هَبَاة", "habā", "toz olma türünden şey", "kontrol", ""],
-      [433, "هُبَوَة", "hubawa", "toz olma türünden şey", "kontrol", ""],
-      [434, "أُهْبُووَة", "ʾuhbūwa", "toz olma türünden şey", "kontrol", ""],
-      [435, "هَوْبَو", "hawbaw", "toz olma türünden şey", "kontrol", ""],
-      [437, "هَيْبَو", "haybaw", "toz olma türünden şey", "kontrol", ""],
-      [439, "هَبْو", "habw", "toz olma türünden şey", "kontrol", ""],
-      [840, "هَبَا", "habā", "toz olma türünden şey", "kontrol", ""],
-      [443, "هِبْو", "hibw", "toz olma türünden şey", "kontrol", ""],
-      [445, "هُبْو", "hubw", "toz olma türünden şey", "kontrol", ""],
-      [841, "هَبِيّ", "habiyy", "toz olma türünden şey", "kontrol", ""],
-      [843, "هِبَى", "hibā", "toz olma türünden şey", "kontrol", ""],
-      [844, "هُبُوّ", "hubuww", "toz olma türünden şey", "kontrol", ""],
+      ["fâ'ûl", "semâî aday", "هَابُوو", "hābūw", "toz olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday · ilal", "هَبَاة", "habā", "toz olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "هُبَوَة", "hubawa", "toz olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُهْبُووَة", "ʾuhbūwa", "toz olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "هَوْبَو", "hawbaw", "toz olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "هَيْبَو", "haybaw", "toz olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "هَبْو", "habw", "toz olma türünden şey", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "هَبَا", "habā", "toz olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "هِبْو", "hibw", "toz olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday", "هُبْو", "hubw", "toz olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday · ilal", "هَبِيّ", "habiyy", "toz olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "هِبَى", "hibā", "toz olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz olma türünden şey", "kontrol", ""],
       [
-        846,
+        "fa'âl",
+        "semâî aday · ilal",
         "هَبَاء",
         "habāʾ",
         "Boşa gitme, ziyan olma",
@@ -551,475 +2190,127 @@
       ]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "هَابُووَة", "hābūwa", "toz olma türünden bir tane", "kontrol", ""],
-      [436, "هَوْبَوَة", "hawbawa", "toz olma türünden bir tane", "kontrol", ""],
-      [438, "هَيْبَوَة", "haybawa", "toz olma türünden bir tane", "kontrol", ""],
-      [440, "هَبْوَة", "habwa", "toz olma türünden bir tane", "kontrol", ""],
-      [444, "هِبْوَة", "hibwa", "toz olma türünden bir tane", "kontrol", ""],
-      [446, "هُبْوَة", "hubwa", "toz olma türünden bir tane", "kontrol", ""],
-      [842, "هَبِيَّة", "habiyya", "toz olma türünden bir tane", "kontrol", ""],
-      [845, "هُبُوَّة", "hubuwwa", "toz olma türünden bir tane", "kontrol", ""],
-      [847, "هَبَاءَة", "habāʾa", "toz olma türünden bir tane", "kontrol", ""]
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "هَابُووَة", "hābūwa", "toz olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "هَوْبَوَة", "hawbawa", "toz olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "هَيْبَوَة", "haybawa", "toz olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "هَبْوَة", "habwa", "toz olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "هِبْوَة", "hibwa", "toz olma türünden bir tane", "kontrol", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "هُبْوَة", "hubwa", "toz olma türünden bir tane", "kontrol", ""],
+      [
+        "fa'îl + tâ (tekili)",
+        "semâî aday · ilal",
+        "هَبِيَّة",
+        "habiyya",
+        "toz olma türünden bir tane",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + tâ (tekili)",
+        "semâî aday · ilal",
+        "هُبُوَّة",
+        "hubuwwa",
+        "toz olma türünden bir tane",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'âl + tâ (tekili)",
+        "semâî aday · ilal",
+        "هَبَاءَة",
+        "habāʾa",
+        "toz olma türünden bir tane",
+        "kontrol",
+        ""
+      ]
     ],
     "cem‘-i mükesser (aday)": [
-      [848, "أَهْبَاء", "ʾahbāʾ", "toz olmalar", "kontrol", ""],
-      [849, "أَهْبِيَة", "ʾahbiya", "toz olmalar", "kontrol", ""],
-      [850, "أَهَابِي", "ʾahābī", "toz olmalar", "kontrol", ""],
-      [851, "أَهَابِيّ", "ʾahābiyy", "toz olmalar", "kontrol", ""],
-      [852, "هُبُوّ", "hubuww", "toz olmalar", "kontrol", ""],
-      [853, "هُبُوّ", "hubuww", "toz olmalar", "kontrol", ""],
-      [854, "هِبَاء", "hibāʾ", "toz olmalar", "kontrol", ""],
-      [855, "هِبَى", "hibā", "toz olmalar", "kontrol", ""],
-      [856, "هِبَيَة", "hibaya", "toz olmalar", "kontrol", ""],
-      [857, "هُبَى", "hubā", "toz olmalar", "kontrol", ""],
-      [858, "هَبَاة", "habā", "toz olmalar", "kontrol", ""],
-      [859, "هُبَّاء", "hubbāʾ", "toz olmalar", "kontrol", ""],
+      ["ef'āl", "semâî aday · ilal", "أَهْبَاء", "ʾahbāʾ", "toz olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday · ilal", "أَهْبِيَة", "ʾahbiya", "toz olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday · ilal", "أَهَابِي", "ʾahābī", "toz olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday · ilal", "أَهَابِيّ", "ʾahābiyy", "toz olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday · ilal", "هُبُوّ", "hubuww", "toz olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday · ilal", "هِبَاء", "hibāʾ", "toz olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "هِبَى", "hibā", "toz olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday · ilal", "هِبَيَة", "hibaya", "toz olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday · ilal", "هُبَى", "hubā", "toz olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday · ilal", "هَبَاة", "habā", "toz olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday · ilal", "هُبَّاء", "hubbāʾ", "toz olmalar", "kontrol", ""],
       [
-        860,
+        "fa'āl",
+        "semâî aday · ilal",
         "هَبَاء",
         "habāʾ",
         "Boşa gitme, ziyan olma",
         "lugat",
         "Vikisözlük: fine dust, particulate matter · Kubbealtı"
       ],
-      [861, "هَبَا", "habā", "toz olmalar", "kontrol", ""],
-      [862, "مَهَابِي", "mahābī", "toz olmalar", "kontrol", ""],
-      [863, "مَهَابِيّ", "mahābiyy", "toz olmalar", "kontrol", ""],
-      [864, "هَوَابِي", "hawābī", "toz olmalar", "kontrol", ""],
-      [473, "أَهْبُو", "ʾahbuw", "toz olmalar", "kontrol", ""],
-      [474, "هُبَّو", "hubbaw", "toz olmalar", "kontrol", ""],
-      [865, "هُبَيّ", "hubayy", "toz olmalar", "kontrol", ""]
+      ["fa'al", "semâî aday · ilal", "هَبَا", "habā", "toz olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday · ilal", "مَهَابِي", "mahābī", "toz olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday · ilal", "مَهَابِيّ", "mahābiyy", "toz olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday · ilal", "هَوَابِي", "hawābī", "toz olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَهْبُو", "ʾahbuw", "toz olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "هُبَّو", "hubbaw", "toz olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday · ilal", "هُبَيّ", "hubayy", "toz olmalar", "kontrol", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [866, "أَهْبَاآت", "ʾahbāʾāt", "toz olmalar topluluğu", "kontrol", ""],
-      [867, "أَهْبِيَات", "ʾahbiyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [868, "أَهَابِيَات", "ʾahābiyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [869, "أَهَابِيَّات", "ʾahābiyyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [870, "هُبُوَّات", "hubuwwāt", "toz olmalar topluluğu", "kontrol", ""],
-      [871, "هُبُوَّات", "hubuwwāt", "toz olmalar topluluğu", "kontrol", ""],
-      [872, "هِبَاآت", "hibāʾāt", "toz olmalar topluluğu", "kontrol", ""],
-      [873, "هِبَيَات", "hibayāt", "toz olmalar topluluğu", "kontrol", ""],
-      [874, "هِبَيَات", "hibayāt", "toz olmalar topluluğu", "kontrol", ""],
-      [875, "هُبَيَات", "hubayāt", "toz olmalar topluluğu", "kontrol", ""],
-      [876, "هَبَاات", "habāāt", "toz olmalar topluluğu", "kontrol", ""],
-      [877, "هُبَّاآت", "hubbāʾāt", "toz olmalar topluluğu", "kontrol", ""],
-      [878, "هَبَاآت", "habāʾāt", "toz olmalar topluluğu", "kontrol", ""],
-      [879, "هَبَوَات", "habawāt", "toz olmalar topluluğu", "kontrol", ""],
-      [880, "مَهَابِيَات", "mahābiyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [881, "مَهَابِيَّات", "mahābiyyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [882, "هَوَابِيَات", "hawābiyāt", "toz olmalar topluluğu", "kontrol", ""],
-      [495, "أَهْبُوَات", "ʾahbuwāt", "toz olmalar topluluğu", "kontrol", ""],
-      [496, "هُبَّوَات", "hubbawāt", "toz olmalar topluluğu", "kontrol", ""],
-      [883, "هُبَيَّات", "hubayyāt", "toz olmalar topluluğu", "kontrol", ""]
+      ["ef'āl + ât", "semâî aday · ilal", "أَهْبَاآت", "ʾahbāʾāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday · ilal", "أَهْبِيَات", "ʾahbiyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday · ilal", "أَهَابِيَات", "ʾahābiyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday · ilal", "أَهَابِيَّات", "ʾahābiyyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday · ilal", "هُبُوَّات", "hubuwwāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday · ilal", "هُبُوَّات", "hubuwwāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "هِبَاآت", "hibāʾāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday · ilal", "هِبَيَات", "hibayāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday · ilal", "هِبَيَات", "hibayāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday · ilal", "هُبَيَات", "hubayāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday · ilal", "هَبَاات", "habāāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday · ilal", "هُبَّاآت", "hubbāʾāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday · ilal", "هَبَاآت", "habāʾāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday · ilal", "هَبَوَات", "habawāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday · ilal", "مَهَابِيَات", "mahābiyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday · ilal", "مَهَابِيَّات", "mahābiyyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday · ilal", "هَوَابِيَات", "hawābiyāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَهْبُوَات", "ʾahbuwāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "هُبَّوَات", "hubbawāt", "toz olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday · ilal", "هُبَيَّات", "hubayyāt", "toz olmalar topluluğu", "kontrol", ""]
     ]
   },
   "reddedilen": [
-    ["ism-i merre · bâb II", "taf'īl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["ism-i merre · bâb V", "tafa''ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i merre · bâb VI", "tafā'ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["sıfat-ı müşebbehe", "fa'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mensûb", "fa'al + iyy", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["masdar-ı sınâî", "fa'al + iyye", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["cem‘-i mükesser (aday)", "fu'alā'", "bu kök sınıfında bu kalıp yok"],
-    ["cem‘-i mükesser (aday)", "fe'âil", "bu kök sınıfında bu kalıp yok"]
+    ["ism-i merre · bâb II", "taf'īl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "r3"],
+    ["ism-i merre · bâb V", "tafa''ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "r3"],
+    ["ism-i merre · bâb VI", "tafā'ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VII", "munfa'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["sıfat-ı müşebbehe", "fa'al + müennes", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mensûb", "fa'al + iyy", "r3"],
+    ["masdar-ı sınâî", "fa'al + iyye", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "r3"],
+    ["cem‘-i mükesser (aday)", "fu'alā'", "r5"],
+    ["cem‘-i mükesser (aday)", "fe'âil", "r5"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "هبو",
-      "turkce": "Hebv: toz, savrulan toz"
-    },
-    "osmanlica_lugatler": {
-      "هَباء": {
-        "sorgular": ["haba"],
-        "maddeler": [
-          {
-            "eser": "Lugat-ı Remzi",
-            "madde": "Habâ",
-            "arapca": [],
-            "mana": "حباء Lugat-i Remzi حباء maddesi. Sayfa:425",
-            "id": 128463,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          }
-        ]
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "هَبَوَ",
-        "metin": "(هَبَوَ) الْهَاءُ وَالْبَاءُ وَالْحَرْفُ الْمُعْتَلُّ: كَلِمَةٌ تَدُلُّ عَلَى غَبَرَةٍ وَرِقَّةٍ فِيهَا. .\nمِنْهُ الْهَبْوَةُ: الْغَبَرَةُ. وَهَبَا الْغُبَارُ يَهْبُو فَهُوَ هَابٍ: سَطَعَ. وَالْهَبَاءُ: دُقَاقُ التُّرَابِ. قَالَ:\nتَزَوَّدَ مِنَّا بَيْنَ أُذْنَاهُ ضَرْبَةً ... دَعَتْهُ إِلَى هَابِي التُّرَابِ عَقِيمُ\nوَهَبَا الرَّمَادُ: اخْتَلَطَ بِالتُّرَابِ وَهَمَدَ. وَالشَّيْءُ الْمُنْبَثُّ الَّذِي تَرَاهُ فِي ضَوْءِ الشَّمْسِ: هَبَاءٌ.\n[بَابُ الْهَاءِ وَالتَّاءِ وَمَا يَثْلِثُهُمَا]"
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الهاء والباء",
-      "baslik": "هبو",
-      "mihveri": "مفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23]. ومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \".",
-      "sesler": "",
-      "tam_metin": "{فَكَانَتْ هَبَاءً مُنْبَثًّا} [الواقعة: 6]\n\"الهَبَاء: دُقاقُ التراب الذي تُطِيرُه الريحُ أو يرتفع من تحت سنابك الخيل / غُبارٌ شبهُ الدخان ساطعٌ في الهواء / يَعْلو الوجوهَ والجلودَ والثياب. والهَبْوة - بالفتح: الغَبَرة \".\n° المعنى المحوري\nمفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23].\nومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (هب) : مفارقة المَقَرّ باندفاع وقوة -مع شيء من التجمع- كما يتمثل ذلك في هبوب الريح مع جمعها التراب- في (هبب)، وكما في الهاء الغبار شبه الدخان الذي تطيره الريح أو يرتفع من تحت سنابك الخيل- في (هبو)، وكما يتمثل في الهِبة والاندفاع فيها صدورها بلا مقابل وفي الموهبة النقرة في الصخرة يستنقع فيها الماء غير راشح من الأرض فيؤخذ فهو كالهبة- في (وهب)، وكما يتمثل في اندفاع الهابط والهَبوط- في (هبط)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 2,
-      "ilk_yer": "25:23:8:1",
-      "tur": {
-        "N": 2
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "هَبَآء": 2
-      },
-      "bicimler": {
-        "هَبَآءً": 2
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "HBW",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab HBW هبو BP – • HDAL • © SG | 20May2023 √HBW “root” ▪ HBW_1 ‘...’ ↗ ... ▪ HBW_2 ‘...’ ↗ ... ▪ HBW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘dust floating in the air, dust particles visible in sunlight, mote, dust cloud; to swagger, walk with conceit; to dissolve into nothing, vanish into nothing, vain effort’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تهبي",
-        "u": "تهبي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تهبي (form I)\n# تَهُبِّي (tahubbī) /ta.hub.biː/: second-person feminine singular non-past active subjunctive/jussive of هَبَّ (habba)\n# تَهِبِّي (tahibbī) /ta.hib.biː/: second-person feminine singular non-past active subjunctive/jussive of هَبَّ (habba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahubbī", "habba", "tahibbī"],
-        "yol": "müştak"
-      },
-      {
-        "w": "هباء",
-        "u": "هباء",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "هَبَاء • (habāʔ) m (plural أَهْبَاء (ʔahbāʔ))",
-        "g": ["fine dust, particulate matter"],
-        "r": ["habāʔ"],
-        "ipa": ["/ha.baːʔ/"],
-        "k": "هبو",
-        "yol": "kök"
-      },
-      {
-        "w": "هبا",
-        "u": "هبا",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "هبا (form I)\n# هَبَّا (habbā) /hab.baː/: third-person masculine dual past active of هَبَّ (habba)\n# هُبَّا (hubbā) /hub.baː/: second-person dual imperative of هَبَّ (habba)\n# هِبَّا (hibbā) /hib.baː/: second-person dual imperative of هَبَّ (habba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["habbā", "habba", "hubbā"],
-        "yol": "müştak"
-      }
-    ],
-    "renk_sozluk": {
-      "هباء": "toz"
-    },
-    "arabic_ontology": [
-      {
-        "id": "46216",
-        "arapca": [
-          "قَتَمَةٌ",
-          "قَتَامٌ",
-          "عِثْيَرٌ",
-          "رَهْجٌ",
-          "قَتَّ",
-          "نَقْعٌ2",
-          "غُبَارٌ",
-          "غَبَرَةٌ",
-          "غُبْرَةٌ",
-          "قَتْرَةٌ",
-          "قَتَرَةٌ",
-          "قَتَمٌ",
-          "هَبَاءَةٌ",
-          "هَبَاءٌ",
-          "هَبْوَةٌ",
-          "تُرْبَةٌ",
-          "ثَرَىً",
-          "ذَرٌّ",
-          "تُرَابٌ",
-          "مَوْرٌ",
-          "عَفَاءٌ",
-          "عَفَرٌ",
-          "عَجَاجٌ",
-          "رَغَامٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "مادة التُّرابُ الذي تُطيره الريحُ ويلتصقَ بالأَشياء ويكون خفيف الوزن ومتّسخ تتعلق جزيئاته بذرات الهواء فيلوث الجو",
-        "misal": "كان الجوّ مليئاً بِ_ عندما اشتدّت الريح",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46728",
-        "arapca": ["هَبَاءٌ", "سُدَىً"],
-        "ingilizce": [],
-        "tanim": "وصف للشيء عديم الفائدة الذي لا ناتج يرتجى منه",
-        "misal": "ذهبت جهودهم _ لأنهم لم يدرسو العواقب الممكنة الحدوث",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "هَبَاء": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "HEBÂ",
-          "yazilis": "ﻫﺒﺎ – ﻫﺒﺎﺀ",
-          "tur": "i.",
-          "koken": "Ar. hebā’ “toz”dan",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Boşa gitme, ziyan olma",
-              "misaller": [],
-              "no": 1
-            },
-            {
-              "etiket": "tasavvuf.",
-              "tanim": "İçinde âlemdeki bütün sûretlerin, şekillerin meydana geldiği, fakat aslı îtibâriyle kendisi yok olan şey, madde, cevher",
-              "misaller": [
-                [
-                  "Hebâ akl-ı evvelden, nefs-i küllîden ve küllî tabiattan sonra varlığın dördüncü mertebesinde yer alır. Hebâ-sûret ilişkisini ancak beyazlık – beyaz şeklinde anlamak mümkün olur; beyaz olmadan beyazlık anlaşılmadığı gibi sûret olmadan hebâyı kavramak da mümkün değildir",
-                  "Süleyman Uludağ"
-                ]
-              ],
-              "no": 2
-            }
-          ],
-          "deyimler": [
-            {
-              "etiket": "",
-              "tanim": "Ziyan etmek, boşa harcamak",
-              "misaller": [
-                ["Kimi insan derbeder / Ömrünü hebâ edip gider", "Câhit S. Tarancı"]
-              ],
-              "deyim": "Hebâ etmek"
-            },
-            {
-              "etiket": "",
-              "tanim": "Ziyan olmak, boşa harcanmak",
-              "misaller": [
-                ["Gafletle bunca subh u mesâ oldu âh kim / Ömr-i azîz geçti hebâ oldu âh kim", "Fıtnat Hanım"],
-                ["Sen gel beni dinle, günlerimiz hebâ olmasın", "Câhit S. Tarancı"],
-                ["● Hebâen mensûrâ", "ﻫﺒﺎﺀً ﻣﻨﺜﻮﺭﺍ"],
-                ["dağılmış, saçılmış", ""]
-              ],
-              "deyim": "Hebâ olmak"
-            }
-          ]
-        },
-        {
-          "eser": "Kamus",
-          "madde": "heba",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Toza denir, alâ-kavlin tütün gibi havâya ağan toza denir; yukâlu: صَارَ هَبَاءً أَيْ غُبَارًا أَوْ هُوَ مَا يُشْبِهُ الدُّخَانَ Ve havâya ağıp ve yeryüzüne dağılmış hurde toprağa denir. Müellifin Basâirde beyânına göre bu şuâ-ı şemsle ev içinde merî olan hurde hurde toz olacaktır ki bacaya ve pencereye doğru çekilir, âmme ona zerre tabîr ederler.",
-              "misaller": [
-                ["صَارَ هَبَاءً أَيْ غُبَارًا أَوْ هُوَ مَا يُشْبِهُ الدُّخَانَ", ""]
-              ]
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "هَبَاءٌ [hebâ] Kalîlül-akl adamlara ıtlâk olunur;vâhidi هَبَاءَةٌ [hebâet]tir,cemi أَهْبَاءٌ [ehbâ] gelir.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْهَبَاءُ",
-          "okunus": "el-hebâ",
-          "koken": "سَمَاءٌ [semâ] vezninde"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "heba",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Şol müteferrik nesnedir ki toz misâlinde şuâ-i şemsle ev içinde görünür ki âmme ona zerre derler.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "هَبَاءٌ [hebâ] Kezâlik toprağın hurdesine derler, دُقَاقُ التُّرَابِ manâsına.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْهَبَاءُ",
-          "okunus": "el-hebâ",
-          "koken": "hânın fethi ve elifin meddiyle"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Hebeve (هَبَوَ)",
-          "metin": "(هَبَوَ) Hâ, bâ ve harf-i illet: bir tozlanmaya ve içindeki inceliğe delâlet eden kelimedir.\nBundandır «el-Hebve»: toz. «Hebâ'l-gubâru yehbû fe-hüve hâbin»: toz yükseldi. «El-Hebâ'»: toprağın ince zerreleridir. Şâir dedi:\nتَزَوَّدَ مِنَّا بَيْنَ أُذْنَاهُ ضَرْبَةً ... دَعَتْهُ إِلَى هَابِي التُّرَابِ عَقِيمُ\n(Bizden iki kulağı arasına bir darbe yedi; onu tozlu toprağa, kısır bir yere çağırdı.)\n«Hebâ'r-remâd»: kül toprağa karıştı ve söndü. Güneş ışığında gördüğün dağılmış şeye «hebâ'» denir.\n[Hâ ve tâ ile ve ikisinden sonra gelenlerle ilgili bâb]"
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Toprağın (ve ince yahut hafif benzerlerinin) karar yerinden yükselerek ve yayılarak ayrılması: bu terkib âyetindeki toz gibi ve {Onların işledikleri her ameli ele alıp onu savrulmuş toz zerreleri hâline getirdik} [Furkân: 23] gibi. Mânevî kullanımından, hebâ'nın bozulmasını gözeterek: «hebâ: öldü, kaçtı»."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Rüzgârın uçurup eşyaya yapışan, hafif ağırlıklı ve kirli toprak maddesi; zerreleri havanın zerrelerine tutunarak havayı kirletir",
-          "misal": "Rüzgâr şiddetlenince hava _ ile doluydu."
-        },
-        {
-          "tanim": "Fâidesiz, kendisinden netice beklenmeyen şeyin vasfı",
-          "misal": "Zarar verebilecek akıbetleri düşünmedikleri için gayretleri _ gitti."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab HBW هبو | BP – • HDAL • © SG | 20 Mayıs 2023 | √HBW «kök» ▪ HBW_1 «…» ↗ … ▪ HBW_2 «…» ↗ … ▪ HBW_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «havada uçuşan toz, güneş ışığında görülen toz zerreleri, zerre, toz bulutu; kibirle yürümek, çalımla yürümek; yok olmak, hiçliğe karışmak, boşa giden gayret» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {},
-        {
-          "g": ["ince toz, zerreli madde"]
-        },
-        {}
-      ]
-    }
-  },
-  "kuran_gecisleri": 2,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هب",
-    "harf": "ه",
-    "mahrec": "halkiyye",
-    "bolge": "halk"
-  },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "mana": {
     "ince": "part.n.01",
     "orta": "noun.substance",
     "ust": "tabiat",
@@ -1027,30 +2318,8 @@
     "dayanak_tanim": "fine powdery material such as dry earth or pollen that can be blown about in the air",
     "dayanak_karsilik": "fine dust"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الهاء والباء",
-    "mihveri": "مفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23]. ومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \".",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (هب) : مفارقة المَقَرّ باندفاع وقوة -مع شيء من التجمع- كما يتمثل ذلك في هبوب الريح مع جمعها التراب- في (هبب)، وكما في الهاء الغبار شبه الدخان الذي تطيره الريح أو يرتفع من تحت سنابك الخيل- في (هبو)، وكما يتمثل في الهِبة والاندفاع فيها صدورها بلا مقابل وفي الموهبة النقرة في الصخرة يستنقع فيها الماء غير راشح من الأرض فيؤخذ فهو كالهبة- في (وهب)، وكما يتمثل في اندفاع الهابط والهَبوط- في (هبط).",
-    "tam_metin": "{فَكَانَتْ هَبَاءً مُنْبَثًّا} [الواقعة: 6]\n\"الهَبَاء: دُقاقُ التراب الذي تُطِيرُه الريحُ أو يرتفع من تحت سنابك الخيل / غُبارٌ شبهُ الدخان ساطعٌ في الهواء / يَعْلو الوجوهَ والجلودَ والثياب. والهَبْوة - بالفتح: الغَبَرة \".\n° المعنى المحوري\nمفارقةُ التراب (ونحوه مما هو دقيقٌ أو خفيفٌ) مقرَّه بسطوع وانتشار: كالغبار كما في آية التركيب، وكما في {وَقَدِمْنَا إِلَى مَا عَمِلُوا مِنْ عَمَلٍ فَجَعَلْنَاهُ هَبَاءً مَنْثُورًا} [الفرقان: 23].\nومن معنويه مع لحظ اختلال الهباء: \"هَبَا: مَاتَ، فرَّ \"."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الدهور والأزمنة والأهوية والرياح",
-    "bab": "الغبار",
-    "kok_gecis": 37.8,
-    "kitapta_gecis": 12.5,
-    "zenginlesme": 2.67
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -1070,526 +2339,14 @@
       "boy": 11
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "519": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday · ilal", ""],
-    "520": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "522": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday · ilal", ""],
-    "523": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday · ilal", ""],
-    "524": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday · ilal", ""],
-    "525": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "527": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday · ilal", ""],
-    "528": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday · ilal", ""],
-    "529": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday · ilal", ""],
-    "530": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday · ilal", ""],
-    "531": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday · ilal", ""],
-    "532": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "534": ["masdar · bâb II", "taf'īl", "kıyâsî · ilal", "II"],
-    "535": ["masdar · bâb II", "taf'ila", "kıyâsî · ilal", "II"],
-    "536": ["masdar · bâb II", "fi''āl", "kıyâsî · ilal", "II"],
-    "537": ["ism-i merre · bâb II", "fi''āl + tâ", "aday · ilal", "II"],
-    "538": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî · ilal", "II"],
-    "539": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî · ilal", "II"],
-    "540": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî · ilal", "II"],
-    "541": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî · ilal", "II"],
-    "542": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "543": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "544": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "545": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "546": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî · ilal", "II"],
-    "547": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "548": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "549": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "550": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "551": ["masdar · bâb III", "mufā'ale", "kıyâsî · ilal", "III"],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "554": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî · ilal", "III"],
-    "555": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî · ilal", "III"],
-    "556": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî · ilal", "III"],
-    "557": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî · ilal", "III"],
-    "558": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "559": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "560": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "561": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "562": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî · ilal", "III"],
-    "563": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "564": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "565": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "566": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "568": ["ism-i merre · bâb IV", "if'āl + tâ", "aday · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "582": ["masdar · bâb V", "tafa''ul", "kıyâsî · ilal", "V"],
-    "583": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî · ilal", "V"],
-    "584": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî · ilal", "V"],
-    "585": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî · ilal", "V"],
-    "586": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî · ilal", "V"],
-    "587": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "588": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "589": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "590": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "591": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî · ilal", "V"],
-    "592": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "593": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "594": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "595": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "596": ["masdar · bâb VI", "tafā'ul", "kıyâsî · ilal", "VI"],
-    "597": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî · ilal", "VI"],
-    "598": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî · ilal", "VI"],
-    "599": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî · ilal", "VI"],
-    "600": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî · ilal", "VI"],
-    "601": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "602": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "603": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "604": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "605": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî · ilal", "VI"],
-    "606": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "607": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "608": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "609": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "654": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday · ilal", "IX"],
-    "655": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî · ilal", "IX"],
-    "656": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî · ilal", "IX"],
-    "657": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî · ilal", "IX"],
-    "658": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî · ilal", "IX"],
-    "659": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IX"],
-    "660": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IX"],
-    "661": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IX"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "663": ["ism-i merre · bâb X", "istif'āl + tâ", "aday · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "677": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday · ilal", "XI"],
-    "678": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî · ilal", "XI"],
-    "679": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî · ilal", "XI"],
-    "680": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî · ilal", "XI"],
-    "681": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî · ilal", "XI"],
-    "682": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "XI"],
-    "683": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "XI"],
-    "684": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "XI"],
-    "685": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday · ilal", "XII"],
-    "686": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday · ilal", "XIII"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "709": ["âlet · sülâsî", "mif'al", "kıyâsî · ilal", ""],
-    "710": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî · ilal", ""],
-    "711": ["âlet · sülâsî", "mif'âl", "kıyâsî · ilal", ""],
-    "712": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî · ilal", ""],
-    "713": ["âlet · sülâsî", "mif'ale", "kıyâsî · ilal", ""],
-    "714": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî · ilal", ""],
-    "715": ["tafdîl · sülâsî", "af'al", "kıyâsî · ilal", ""],
-    "716": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî · ilal", ""],
-    "717": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî · ilal", ""],
-    "718": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî · ilal", ""],
-    "719": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî · ilal", ""],
-    "720": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî · ilal", ""],
-    "721": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî · ilal", ""],
-    "722": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "725": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday · ilal", ""],
-    "726": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "727": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "728": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "729": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "730": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "731": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "732": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday · ilal", ""],
-    "733": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "734": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "735": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "736": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "737": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "738": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "739": ["sıfat-ı müşebbehe", "fa'il", "semâî aday · ilal", ""],
-    "740": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday · ilal", ""],
-    "741": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday · ilal", ""],
-    "742": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday · ilal", ""],
-    "743": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "744": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "745": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "746": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday · ilal", ""],
-    "747": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday · ilal", ""],
-    "748": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday · ilal", ""],
-    "749": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "750": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "751": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "752": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "756": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday · ilal", ""],
-    "757": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday · ilal", ""],
-    "758": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday · ilal", ""],
-    "759": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "760": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "761": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "762": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "763": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday · ilal", ""],
-    "764": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday · ilal", ""],
-    "765": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday · ilal", ""],
-    "766": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "767": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "768": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "769": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "770": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday · ilal", ""],
-    "771": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday · ilal", ""],
-    "772": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday · ilal", ""],
-    "773": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "774": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "775": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "776": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "777": ["mübalağa", "fa''āl", "semâî aday · ilal", ""],
-    "778": ["mübalağa", "fa''āl + müennes", "semâî aday · ilal", ""],
-    "779": ["mübalağa", "fa''āl + tesniye", "semâî aday · ilal", ""],
-    "780": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "781": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "782": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "783": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "784": ["mübalağa", "fa''āle", "semâî aday · ilal", ""],
-    "785": ["mübalağa", "fa''āle + tesniye", "semâî aday · ilal", ""],
-    "786": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "787": ["mübalağa", "fa'ūl", "semâî aday · ilal", ""],
-    "788": ["mübalağa", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "789": ["mübalağa", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "790": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "791": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "792": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "793": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "794": ["mübalağa", "fu''āl", "semâî aday · ilal", ""],
-    "795": ["mübalağa", "fu''āl + müennes", "semâî aday · ilal", ""],
-    "796": ["mübalağa", "fu''āl + tesniye", "semâî aday · ilal", ""],
-    "797": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "798": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "799": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "800": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "801": ["mübalağa", "mif'āl", "semâî aday · ilal", ""],
-    "802": ["mübalağa", "mif'āl + müennes", "semâî aday · ilal", ""],
-    "803": ["mübalağa", "mif'āl + tesniye", "semâî aday · ilal", ""],
-    "804": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "805": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "806": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "807": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "808": ["mübalağa", "fa'īl", "semâî aday · ilal", ""],
-    "809": ["mübalağa", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "810": ["mübalağa", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "811": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "812": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "813": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "814": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "821": ["mensûb", "fa'īl + iyy", "kıyâsî · ilal", ""],
-    "822": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "825": ["mensûb", "taf'īl + iyy", "kıyâsî · ilal", ""],
-    "826": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî · ilal", ""],
-    "827": ["mensûb", "tafā'ul + iyy", "kıyâsî · ilal", ""],
-    "828": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "833": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "834": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "836": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "838": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday · ilal", ""],
-    "839": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "841": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday · ilal", ""],
-    "842": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "844": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "845": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday · ilal", ""],
-    "846": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday · ilal", ""],
-    "847": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday · ilal", ""],
-    "848": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday · ilal", ""],
-    "849": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday · ilal", ""],
-    "850": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday · ilal", ""],
-    "851": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday · ilal", ""],
-    "852": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday · ilal", ""],
-    "853": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "856": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday · ilal", ""],
-    "857": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday · ilal", ""],
-    "858": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday · ilal", ""],
-    "859": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday · ilal", ""],
-    "860": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "862": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday · ilal", ""],
-    "863": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday · ilal", ""],
-    "864": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday · ilal", ""],
-    "865": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday · ilal", ""],
-    "866": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday · ilal", ""],
-    "867": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday · ilal", ""],
-    "868": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday · ilal", ""],
-    "869": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday · ilal", ""],
-    "870": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday · ilal", ""],
-    "871": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "874": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday · ilal", ""],
-    "875": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday · ilal", ""],
-    "876": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday · ilal", ""],
-    "877": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday · ilal", ""],
-    "878": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "880": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday · ilal", ""],
-    "881": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday · ilal", ""],
-    "882": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday · ilal", ""],
-    "883": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday · ilal", ""]
+  "muhassas": {
+    "kitap": "الدهور والأزمنة والأهوية والرياح",
+    "bab": "الغبار",
+    "kok_gecis": 37.8,
+    "kitapta_gecis": 12.5,
+    "zenginlesme": 2.67
   },
-  "kelimeler": [
-    {
-      "kelime": "هَبَآءً",
-      "kok": "هبو",
-      "lemma": "هَباء",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "25:23",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "toz",
-        "lemma": "toz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "orta",
-    "dayanak": ["isimden-fiil"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 2
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Hebv: toz, savrulan toz",
-    "kelimeler": [
-      {
-        "lemma": "هَباء",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 2,
-        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fa'āl ; cem‘-i mükesser (aday) · fi'āl (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

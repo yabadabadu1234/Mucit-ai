@@ -1,1232 +1,1990 @@
 {
   "kok": "هرع",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Aktarım",
+  "baz_ayrim": "koş",
+  "tur_kuran": {
+    "fiil": 2,
+    "isim": 0
+  },
+  "fiil": "koş",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "koş",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "هَرْع", "harʿ", "koşma", "orta", ""],
-      [1, "هِرْع", "hirʿ", "koşma", "orta", ""],
-      [2, "هُرْع", "hurʿ", "koşma", "orta", ""],
-      [3, "هَرَع", "haraʿ", "koşma", "orta", ""],
-      [4, "هِرَع", "hiraʿ", "koşma", "orta", ""],
-      [5, "هُرُع", "huruʿ", "koşma", "orta", ""],
-      [6, "هُرُوع", "hurūʿ", "koşma", "orta", ""],
-      [7, "هِرَاع", "hirāʿ", "koşma", "orta", ""],
-      [8, "هُرَاع", "hurāʿ", "koşma", "orta", ""],
-      [9, "هَرَاع", "harāʿ", "koşma", "orta", ""],
-      [10, "هَرَاعَة", "harāʿa", "koşma", "orta", ""],
-      [11, "هُرُوعَة", "hurūʿa", "koşma", "orta", ""],
-      [12, "هِرَاعَة", "hirāʿa", "koşma", "orta", ""],
-      [13, "هَرِيع", "harīʿ", "koşma", "orta", ""],
-      [14, "هَرُوع", "harūʿ", "koşma", "orta", ""],
-      [15, "هَرَعَان", "haraʿān", "koşma", "orta", ""],
-      [16, "هُرْعَان", "hurʿān", "koşma", "orta", ""],
-      [17, "هِرْعَان", "hirʿān", "koşma", "orta", ""],
-      [18, "هَرْعَى", "harʿā", "koşma", "orta", ""],
-      [19, "هُرْعَى", "hurʿā", "koşma", "orta", ""],
-      [20, "هِرْعَى", "hirʿā", "koşma", "orta", ""],
-      [21, "هَرَعَة", "haraʿa", "koşma", "orta", ""],
-      [22, "هِرَعَة", "hiraʿa", "koşma", "orta", ""],
-      [23, "هَرْعُوعَة", "harʿūʿa", "koşma", "orta", ""],
-      [24, "تُهْرُوع", "tuhrūʿ", "koşma", "orta", ""],
-      [25, "تَهْرِعَة", "tahriʿa", "koşma", "orta", ""],
-      [26, "تَهْرَعَة", "tahraʿa", "koşma", "orta", ""],
-      [27, "مَهْرُعَة", "mahruʿa", "koşma", "orta", ""],
-      [28, "مَهْرِعَة", "mahriʿa", "koşma", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَهْرِيع", "tahrīʿ", "koşturma", "orta", ""],
-      [30, "تَهْرِعَة", "tahriʿa", "koşturma", "orta", ""],
-      [31, "هِرِّاع", "hirrāʿ", "koşturma", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَهْرِيعَة", "tahrīʿa", "bir kere koşturma", "orta", ""],
-      [33, "هِرِّاعَة", "hirrāʿa", "bir kere koşturma", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُهَرِّع", "muharriʿ", "koşturan", "orta", ""],
-      [35, "مُهَرِّعَة", "muharriʿa", "koşturan, müennes", "orta", ""],
-      [36, "مُهَرِّعَان", "muharriʿān", "koşturan, iki", "orta", ""],
-      [37, "مُهَرِّعَتَان", "muharriʿatān", "koşturan, iki, müennes", "orta", ""],
-      [38, "مُهَرِّعُون", "muharriʿūn", "koşturanlar", "orta", ""],
-      [39, "مُهَرِّعِين", "muharriʿīn", "koşturanlar", "orta", ""],
-      [40, "مُهَرِّعَات", "muharriʿāt", "koşturanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُهَرَّع", "muharraʿ", "koşturulan", "orta", ""],
-      [42, "مُهَرَّعَة", "muharraʿa", "koşturulan, müennes", "orta", ""],
-      [43, "مُهَرَّعَان", "muharraʿān", "koşturulan, iki", "orta", ""],
-      [44, "مُهَرَّعَتَان", "muharraʿatān", "koşturulan, iki, müennes", "orta", ""],
-      [45, "مُهَرَّعُون", "muharraʿūn", "koşturulanlar", "orta", ""],
-      [46, "مُهَرَّعِين", "muharraʿīn", "koşturulanlar", "orta", ""],
-      [47, "مُهَرَّعَات", "muharraʿāt", "koşturulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُهَرَّع", "muharraʿ", "koşturma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُهَارَعَة", "muhāraʿa", "biriyle karşılıklı koşma", "orta", ""],
-      [50, "هِرَاع", "hirāʿ", "biriyle karşılıklı koşma", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "هِرَاعَة", "hirāʿa", "bir kere biriyle karşılıklı koşma", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُهَارِع", "muhāriʿ", "biriyle karşılıklı koşan", "orta", ""],
-      [53, "مُهَارِعَة", "muhāriʿa", "biriyle karşılıklı koşan, müennes", "orta", ""],
-      [54, "مُهَارِعَان", "muhāriʿān", "biriyle karşılıklı koşan, iki", "orta", ""],
-      [55, "مُهَارِعَتَان", "muhāriʿatān", "biriyle karşılıklı koşan, iki, müennes", "orta", ""],
-      [56, "مُهَارِعُون", "muhāriʿūn", "biriyle karşılıklı koşanlar", "orta", ""],
-      [57, "مُهَارِعِين", "muhāriʿīn", "biriyle karşılıklı koşanlar", "orta", ""],
-      [58, "مُهَارِعَات", "muhāriʿāt", "biriyle karşılıklı koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُهَارَع", "muhāraʿ", "biriyle karşılıklı koşulan", "orta", ""],
-      [60, "مُهَارَعَة", "muhāraʿa", "biriyle karşılıklı koşulan, müennes", "orta", ""],
-      [61, "مُهَارَعَان", "muhāraʿān", "biriyle karşılıklı koşulan, iki", "orta", ""],
-      [62, "مُهَارَعَتَان", "muhāraʿatān", "biriyle karşılıklı koşulan, iki, müennes", "orta", ""],
-      [63, "مُهَارَعُون", "muhāraʿūn", "biriyle karşılıklı koşulanlar", "orta", ""],
-      [64, "مُهَارَعِين", "muhāraʿīn", "biriyle karşılıklı koşulanlar", "orta", ""],
-      [65, "مُهَارَعَات", "muhāraʿāt", "biriyle karşılıklı koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُهَارَع", "muhāraʿ", "biriyle karşılıklı koşma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِهْرَاع", "ʾihrāʿ", "koşturma", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِهْرَاعَة", "ʾihrāʿa", "bir kere koşturma", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُهْرِع", "muhriʿ", "koşturan", "orta", ""],
-      [70, "مُهْرِعَة", "muhriʿa", "koşturan, müennes", "orta", ""],
-      [71, "مُهْرِعَان", "muhriʿān", "koşturan, iki", "orta", ""],
-      [72, "مُهْرِعَتَان", "muhriʿatān", "koşturan, iki, müennes", "orta", ""],
-      [73, "مُهْرِعُون", "muhriʿūn", "koşturanlar", "orta", ""],
-      [74, "مُهْرِعِين", "muhriʿīn", "koşturanlar", "orta", ""],
-      [75, "مُهْرِعَات", "muhriʿāt", "koşturanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُهْرَع", "muhraʿ", "koşturulan", "orta", ""],
-      [77, "مُهْرَعَة", "muhraʿa", "koşturulan, müennes", "orta", ""],
-      [78, "مُهْرَعَان", "muhraʿān", "koşturulan, iki", "orta", ""],
-      [79, "مُهْرَعَتَان", "muhraʿatān", "koşturulan, iki, müennes", "orta", ""],
-      [80, "مُهْرَعُون", "muhraʿūn", "koşturulanlar", "orta", ""],
-      [81, "مُهْرَعِين", "muhraʿīn", "koşturulanlar", "orta", ""],
-      [82, "مُهْرَعَات", "muhraʿāt", "koşturulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُهْرَع", "muhraʿ", "koşturma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَهَرُّع", "taharruʿ", "kendini zorlayarak koşma", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَهَرُّعَة", "taharruʿa", "bir kere kendini zorlayarak koşma", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَهَرِّع", "mutaharriʿ", "kendini zorlayarak koşan", "orta", ""],
-      [87, "مُتَهَرِّعَة", "mutaharriʿa", "kendini zorlayarak koşan, müennes", "orta", ""],
-      [88, "مُتَهَرِّعَان", "mutaharriʿān", "kendini zorlayarak koşan, iki", "orta", ""],
-      [89, "مُتَهَرِّعَتَان", "mutaharriʿatān", "kendini zorlayarak koşan, iki, müennes", "orta", ""],
-      [90, "مُتَهَرِّعُون", "mutaharriʿūn", "kendini zorlayarak koşanlar", "orta", ""],
-      [91, "مُتَهَرِّعِين", "mutaharriʿīn", "kendini zorlayarak koşanlar", "orta", ""],
-      [92, "مُتَهَرِّعَات", "mutaharriʿāt", "kendini zorlayarak koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَهَرَّع", "mutaharraʿ", "kendini zorlayarak koşulan", "orta", ""],
-      [94, "مُتَهَرَّعَة", "mutaharraʿa", "kendini zorlayarak koşulan, müennes", "orta", ""],
-      [95, "مُتَهَرَّعَان", "mutaharraʿān", "kendini zorlayarak koşulan, iki", "orta", ""],
-      [96, "مُتَهَرَّعَتَان", "mutaharraʿatān", "kendini zorlayarak koşulan, iki, müennes", "orta", ""],
-      [97, "مُتَهَرَّعُون", "mutaharraʿūn", "kendini zorlayarak koşulanlar", "orta", ""],
-      [98, "مُتَهَرَّعِين", "mutaharraʿīn", "kendini zorlayarak koşulanlar", "orta", ""],
-      [99, "مُتَهَرَّعَات", "mutaharraʿāt", "kendini zorlayarak koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَهَرَّع", "mutaharraʿ", "kendini zorlayarak koşma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَهَارُع", "tahāruʿ", "hep birlikte koşma", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَهَارُعَة", "tahāruʿa", "bir kere hep birlikte koşma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَهَارِع", "mutahāriʿ", "hep birlikte koşan", "orta", ""],
-      [104, "مُتَهَارِعَة", "mutahāriʿa", "hep birlikte koşan, müennes", "orta", ""],
-      [105, "مُتَهَارِعَان", "mutahāriʿān", "hep birlikte koşan, iki", "orta", ""],
-      [106, "مُتَهَارِعَتَان", "mutahāriʿatān", "hep birlikte koşan, iki, müennes", "orta", ""],
-      [107, "مُتَهَارِعُون", "mutahāriʿūn", "hep birlikte koşanlar", "orta", ""],
-      [108, "مُتَهَارِعِين", "mutahāriʿīn", "hep birlikte koşanlar", "orta", ""],
-      [109, "مُتَهَارِعَات", "mutahāriʿāt", "hep birlikte koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَهَارَع", "mutahāraʿ", "hep birlikte koşulan", "orta", ""],
-      [111, "مُتَهَارَعَة", "mutahāraʿa", "hep birlikte koşulan, müennes", "orta", ""],
-      [112, "مُتَهَارَعَان", "mutahāraʿān", "hep birlikte koşulan, iki", "orta", ""],
-      [113, "مُتَهَارَعَتَان", "mutahāraʿatān", "hep birlikte koşulan, iki, müennes", "orta", ""],
-      [114, "مُتَهَارَعُون", "mutahāraʿūn", "hep birlikte koşulanlar", "orta", ""],
-      [115, "مُتَهَارَعِين", "mutahāraʿīn", "hep birlikte koşulanlar", "orta", ""],
-      [116, "مُتَهَارَعَات", "mutahāraʿāt", "hep birlikte koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَهَارَع", "mutahāraʿ", "hep birlikte koşma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْهِرَاع", "inhirāʿ", "kendiliğinden koşma", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْهِرَاعَة", "inhirāʿa", "bir kere kendiliğinden koşma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْهَرِع", "munhariʿ", "kendiliğinden koşan", "orta", ""],
-      [121, "مُنْهَرِعَة", "munhariʿa", "kendiliğinden koşan, müennes", "orta", ""],
-      [122, "مُنْهَرِعَان", "munhariʿān", "kendiliğinden koşan, iki", "orta", ""],
-      [123, "مُنْهَرِعَتَان", "munhariʿatān", "kendiliğinden koşan, iki, müennes", "orta", ""],
-      [124, "مُنْهَرِعُون", "munhariʿūn", "kendiliğinden koşanlar", "orta", ""],
-      [125, "مُنْهَرِعِين", "munhariʿīn", "kendiliğinden koşanlar", "orta", ""],
-      [126, "مُنْهَرِعَات", "munhariʿāt", "kendiliğinden koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْهَرَع", "munharaʿ", "kendiliğinden koşulan", "orta", ""],
-      [128, "مُنْهَرَعَة", "munharaʿa", "kendiliğinden koşulan, müennes", "orta", ""],
-      [129, "مُنْهَرَعَان", "munharaʿān", "kendiliğinden koşulan, iki", "orta", ""],
-      [130, "مُنْهَرَعَتَان", "munharaʿatān", "kendiliğinden koşulan, iki, müennes", "orta", ""],
-      [131, "مُنْهَرَعُون", "munharaʿūn", "kendiliğinden koşulanlar", "orta", ""],
-      [132, "مُنْهَرَعِين", "munharaʿīn", "kendiliğinden koşulanlar", "orta", ""],
-      [133, "مُنْهَرَعَات", "munharaʿāt", "kendiliğinden koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْهَرَع", "munharaʿ", "kendiliğinden koşma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِهْتِرَاع", "ihtirāʿ", "kendisi için koşma", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِهْتِرَاعَة", "ihtirāʿa", "bir kere kendisi için koşma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُهْتَرِع", "muhtariʿ", "kendisi için koşan", "orta", ""],
-      [139, "مُهْتَرِعَة", "muhtariʿa", "kendisi için koşan, müennes", "orta", ""],
-      [140, "مُهْتَرِعَان", "muhtariʿān", "kendisi için koşan, iki", "orta", ""],
-      [141, "مُهْتَرِعَتَان", "muhtariʿatān", "kendisi için koşan, iki, müennes", "orta", ""],
-      [142, "مُهْتَرِعُون", "muhtariʿūn", "kendisi için koşanlar", "orta", ""],
-      [143, "مُهْتَرِعِين", "muhtariʿīn", "kendisi için koşanlar", "orta", ""],
-      [144, "مُهْتَرِعَات", "muhtariʿāt", "kendisi için koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُهْتَرَع", "muhtaraʿ", "kendisi için koşulan", "orta", ""],
-      [146, "مُهْتَرَعَة", "muhtaraʿa", "kendisi için koşulan, müennes", "orta", ""],
-      [147, "مُهْتَرَعَان", "muhtaraʿān", "kendisi için koşulan, iki", "orta", ""],
-      [148, "مُهْتَرَعَتَان", "muhtaraʿatān", "kendisi için koşulan, iki, müennes", "orta", ""],
-      [149, "مُهْتَرَعُون", "muhtaraʿūn", "kendisi için koşulanlar", "orta", ""],
-      [150, "مُهْتَرَعِين", "muhtaraʿīn", "kendisi için koşulanlar", "orta", ""],
-      [151, "مُهْتَرَعَات", "muhtaraʿāt", "kendisi için koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُهْتَرَع", "muhtaraʿ", "kendisi için koşma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX": [
-      [499, "اِهْرِعَاع", "ihriʿāʿ", "iyiden iyiye koşma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX": [
-      [500, "مُهْرَعّ", "muhraʿʿ", "iyiden iyiye koşan", "kontrol", ""],
-      [501, "مُهْرَعَّة", "muhraʿʿa", "iyiden iyiye koşan, müennes", "kontrol", ""],
-      [502, "مُهْرَعَّان", "muhraʿʿān", "iyiden iyiye koşan, iki", "kontrol", ""],
-      [503, "مُهْرَعَّتَان", "muhraʿʿatān", "iyiden iyiye koşan, iki, müennes", "kontrol", ""],
-      [504, "مُهْرَعُّون", "muhraʿʿūn", "iyiden iyiye koşanlar", "kontrol", ""],
-      [505, "مُهْرَعِّين", "muhraʿʿīn", "iyiden iyiye koşanlar", "kontrol", ""],
-      [506, "مُهْرَعَّات", "muhraʿʿāt", "iyiden iyiye koşanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِهْرَاع", "istihrāʿ", "koşmayı isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِهْرَاعَة", "istihrāʿa", "bir kere koşmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَهْرِع", "mustahriʿ", "koşmayı isteyen", "orta", ""],
-      [179, "مُسْتَهْرِعَة", "mustahriʿa", "koşmayı isteyen, müennes", "orta", ""],
-      [180, "مُسْتَهْرِعَان", "mustahriʿān", "koşmayı isteyen, iki", "orta", ""],
-      [181, "مُسْتَهْرِعَتَان", "mustahriʿatān", "koşmayı isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَهْرِعُون", "mustahriʿūn", "koşmayı isteyenler", "orta", ""],
-      [183, "مُسْتَهْرِعِين", "mustahriʿīn", "koşmayı isteyenler", "orta", ""],
-      [184, "مُسْتَهْرِعَات", "mustahriʿāt", "koşmayı isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَهْرَع", "mustahraʿ", "koşması istenen", "orta", ""],
-      [186, "مُسْتَهْرَعَة", "mustahraʿa", "koşması istenen, müennes", "orta", ""],
-      [187, "مُسْتَهْرَعَان", "mustahraʿān", "koşması istenen, iki", "orta", ""],
-      [188, "مُسْتَهْرَعَتَان", "mustahraʿatān", "koşması istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَهْرَعُون", "mustahraʿūn", "koşması istenenler", "orta", ""],
-      [190, "مُسْتَهْرَعِين", "mustahraʿīn", "koşması istenenler", "orta", ""],
-      [191, "مُسْتَهْرَعَات", "mustahraʿāt", "koşması istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَهْرَع", "mustahraʿ", "koşmayı isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI": [
-      [507, "اِهْرِيعَاع", "ihrīʿāʿ", "büsbütün koşma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI": [
-      [508, "مُهْرَاعّ", "muhrāʿʿ", "büsbütün koşan", "kontrol", ""],
-      [509, "مُهْرَاعَّة", "muhrāʿʿa", "büsbütün koşan, müennes", "kontrol", ""],
-      [510, "مُهْرَاعَّان", "muhrāʿʿān", "büsbütün koşan, iki", "kontrol", ""],
-      [511, "مُهْرَاعَّتَان", "muhrāʿʿatān", "büsbütün koşan, iki, müennes", "kontrol", ""],
-      [512, "مُهْرَاعُّون", "muhrāʿʿūn", "büsbütün koşanlar", "kontrol", ""],
-      [513, "مُهْرَاعِّين", "muhrāʿʿīn", "büsbütün koşanlar", "kontrol", ""],
-      [514, "مُهْرَاعَّات", "muhrāʿʿāt", "büsbütün koşanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII": [
-      [515, "اِهْرِوْرَاع", "ihriwrāʿ", "aşırı koşma", "orta", ""]
-    ],
-    "masdar · bâb XIII": [
-      [516, "اِهْرِوَّاع", "ihriwwāʿ", "aşırı koşma", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "هَارِع", "hāriʿ", "koşan", "orta", ""],
-      [214, "هَارِعَة", "hāriʿa", "koşan, müennes", "orta", ""],
-      [215, "هَارِعَان", "hāriʿān", "koşan, iki", "orta", ""],
-      [216, "هَارِعَتَان", "hāriʿatān", "koşan, iki, müennes", "orta", ""],
-      [217, "هَارِعُون", "hāriʿūn", "koşanlar", "orta", ""],
-      [218, "هَارِعِين", "hāriʿīn", "koşanlar", "orta", ""],
-      [219, "هَارِعَات", "hāriʿāt", "koşanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَهْرُوع", "mahrūʿ", "koşulan", "orta", ""],
-      [221, "مَهْرُوعَة", "mahrūʿa", "koşulan, müennes", "orta", ""],
-      [222, "مَهْرُوعَان", "mahrūʿān", "koşulan, iki", "orta", ""],
-      [223, "مَهْرُوعَتَان", "mahrūʿatān", "koşulan, iki, müennes", "orta", ""],
-      [224, "مَهْرُوعُون", "mahrūʿūn", "koşulanlar", "orta", ""],
-      [225, "مَهْرُوعِين", "mahrūʿīn", "koşulanlar", "orta", ""],
-      [226, "مَهْرُوعَات", "mahrūʿāt", "koşulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَهْرَع", "mahraʿ", "koşma yeri, vakti", "orta", ""],
-      [228, "مَهْرَعَان", "mahraʿān", "koşma yeri, vakti, iki", "orta", ""],
-      [229, "مَهْرِع", "mahriʿ", "koşma yeri, vakti", "orta", ""],
-      [230, "مَهْرِعَان", "mahriʿān", "koşma yeri, vakti, iki", "orta", ""],
-      [231, "مَهْرَعَة", "mahraʿa", "koşmanın bol olduğu yer", "orta", ""],
-      [232, "مَهْرَعَتَان", "mahraʿatān", "koşmanın bol olduğu yer, iki", "orta", ""],
-      [233, "مَهْرِعَة", "mahriʿa", "koşmanın bol olduğu yer", "orta", ""],
-      [234, "مَهْرِعَتَان", "mahriʿatān", "koşmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَهْرُعَة", "mahruʿa", "koşma yeri, vakti", "orta", ""],
-      [248, "مَهْرُعَتَان", "mahruʿatān", "koşma yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِهْرَع", "mihraʿ", "koşma âleti", "orta", ""],
-      [236, "مِهْرَعَان", "mihraʿān", "koşma âleti, iki", "orta", ""],
-      [237, "مِهْرَاع", "mihrāʿ", "koşma âleti", "orta", ""],
-      [238, "مِهْرَاعَان", "mihrāʿān", "koşma âleti, iki", "orta", ""],
-      [239, "مِهْرَعَة", "mihraʿa", "koşma âleti", "orta", ""],
-      [240, "مِهْرَعَتَان", "mihraʿatān", "koşma âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَهْرَع", "ʾahraʿ", "daha çok koşan", "orta", ""],
-      [242, "أَهْرَعَان", "ʾahraʿān", "daha çok koşan, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "هُرْعَى", "hurʿā", "daha çok koşan", "orta", ""],
-      [244, "هُرْعَيَان", "hurʿayān", "daha çok koşan, iki", "orta", ""],
-      [245, "هَرْعَاء", "harʿāʾ", "daha çok koşan", "orta", ""],
-      [246, "هَرْعَاآن", "harʿāʾān", "daha çok koşan, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "هُرَيْع", "hurayʿ", "azıcık koşma", "orta", ""],
-      [250, "هُرَيْعَان", "hurayʿān", "azıcık koşma, iki", "orta", ""],
-      [251, "هُرَيْعَة", "hurayʿa", "azıcık koşma", "orta", ""],
-      [252, "هُرَيْعَتَان", "hurayʿatān", "azıcık koşma, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَهْرَع", "mahraʿ", "koşma", "orta", ""],
-      [254, "مَهْرَعَان", "mahraʿān", "koşma, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "هَرْعَة", "harʿa", "bir kere koşma", "orta", ""],
-      [256, "هَرْعَتَان", "harʿatān", "bir kere koşma, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "هِرْعَة", "hirʿa", "koşma tarzı", "orta", ""],
-      [258, "هِرْعَتَان", "hirʿatān", "koşma tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "هَرِيع", "harīʿ", "her daim koşan", "orta", ""],
-      [260, "هَرِيعَة", "harīʿa", "her daim koşan, müennes", "orta", ""],
-      [261, "هَرِيعَان", "harīʿān", "her daim koşan, iki", "orta", ""],
-      [262, "هَرِيعَتَان", "harīʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [263, "هَرِيعُون", "harīʿūn", "her daim koşanlar", "orta", ""],
-      [264, "هَرِيعِين", "harīʿīn", "her daim koşanlar", "orta", ""],
-      [265, "هَرِيعَات", "harīʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [266, "هَرُوع", "harūʿ", "her daim koşan", "orta", ""],
-      [267, "هَرُوعَة", "harūʿa", "her daim koşan, müennes", "orta", ""],
-      [268, "هَرُوعَان", "harūʿān", "her daim koşan, iki", "orta", ""],
-      [269, "هَرُوعَتَان", "harūʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [270, "هَرُوعُون", "harūʿūn", "her daim koşanlar", "orta", ""],
-      [271, "هَرُوعِين", "harūʿīn", "her daim koşanlar", "orta", ""],
-      [272, "هَرُوعَات", "harūʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [273, "هَرِع", "hariʿ", "her daim koşan", "orta", ""],
-      [274, "هَرِعَة", "hariʿa", "her daim koşan, müennes", "orta", ""],
-      [275, "هَرِعَان", "hariʿān", "her daim koşan, iki", "orta", ""],
-      [276, "هَرِعَتَان", "hariʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [277, "هَرِعُون", "hariʿūn", "her daim koşanlar", "orta", ""],
-      [278, "هَرِعِين", "hariʿīn", "her daim koşanlar", "orta", ""],
-      [279, "هَرِعَات", "hariʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [280, "هَرُع", "haruʿ", "her daim koşan", "orta", ""],
-      [281, "هَرُعَة", "haruʿa", "her daim koşan, müennes", "orta", ""],
-      [282, "هَرُعَان", "haruʿān", "her daim koşan, iki", "orta", ""],
-      [283, "هَرُعَتَان", "haruʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [284, "هَرُعُون", "haruʿūn", "her daim koşanlar", "orta", ""],
-      [285, "هَرُعِين", "haruʿīn", "her daim koşanlar", "orta", ""],
-      [286, "هَرُعَات", "haruʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [287, "هَرَع", "haraʿ", "her daim koşan", "orta", ""],
-      [288, "هَرَعَة", "haraʿa", "her daim koşan, müennes", "orta", ""],
-      [289, "هَرَعَان", "haraʿān", "her daim koşan, iki", "orta", ""],
-      [290, "هَرَعَتَان", "haraʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [291, "هَرَعُون", "haraʿūn", "her daim koşanlar", "orta", ""],
-      [292, "هَرَعِين", "haraʿīn", "her daim koşanlar", "orta", ""],
-      [293, "هَرَعَات", "haraʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [294, "هَرْع", "harʿ", "her daim koşan", "orta", ""],
-      [295, "هَرْعَة", "harʿa", "her daim koşan, müennes", "orta", ""],
-      [296, "هَرْعَان", "harʿān", "her daim koşan, iki", "orta", ""],
-      [297, "هَرْعَتَان", "harʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [298, "هَرْعُون", "harʿūn", "her daim koşanlar", "orta", ""],
-      [299, "هَرْعِين", "harʿīn", "her daim koşanlar", "orta", ""],
-      [300, "هَرْعَات", "harʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [301, "هُرُع", "huruʿ", "her daim koşan", "orta", ""],
-      [302, "هُرُعَة", "huruʿa", "her daim koşan, müennes", "orta", ""],
-      [303, "هُرُعَان", "huruʿān", "her daim koşan, iki", "orta", ""],
-      [304, "هُرُعَتَان", "huruʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [305, "هُرُعُون", "huruʿūn", "her daim koşanlar", "orta", ""],
-      [306, "هُرُعِين", "huruʿīn", "her daim koşanlar", "orta", ""],
-      [307, "هُرُعَات", "huruʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [308, "هَرْعَان", "harʿān", "her daim koşan", "orta", ""],
-      [309, "هَرْعَانَة", "harʿāna", "her daim koşan, müennes", "orta", ""],
-      [310, "هَرْعَانَان", "harʿānān", "her daim koşan, iki", "orta", ""],
-      [311, "هَرْعَانَتَان", "harʿānatān", "her daim koşan, iki, müennes", "orta", ""],
-      [312, "هَرْعَانُون", "harʿānūn", "her daim koşanlar", "orta", ""],
-      [313, "هَرْعَانِين", "harʿānīn", "her daim koşanlar", "orta", ""],
-      [314, "هَرْعَانَات", "harʿānāt", "her daim koşanlar, müennes", "orta", ""],
-      [315, "هُرَاع", "hurāʿ", "her daim koşan", "orta", ""],
-      [316, "هُرَاعَة", "hurāʿa", "her daim koşan, müennes", "orta", ""],
-      [317, "هُرَاعَان", "hurāʿān", "her daim koşan, iki", "orta", ""],
-      [318, "هُرَاعَتَان", "hurāʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [319, "هُرَاعُون", "hurāʿūn", "her daim koşanlar", "orta", ""],
-      [320, "هُرَاعِين", "hurāʿīn", "her daim koşanlar", "orta", ""],
-      [321, "هُرَاعَات", "hurāʿāt", "her daim koşanlar, müennes", "orta", ""],
-      [322, "هَرَاع", "harāʿ", "her daim koşan", "orta", ""],
-      [323, "هَرَاعَة", "harāʿa", "her daim koşan, müennes", "orta", ""],
-      [324, "هَرَاعَان", "harāʿān", "her daim koşan, iki", "orta", ""],
-      [325, "هَرَاعَتَان", "harāʿatān", "her daim koşan, iki, müennes", "orta", ""],
-      [326, "هَرَاعُون", "harāʿūn", "her daim koşanlar", "orta", ""],
-      [327, "هَرَاعِين", "harāʿīn", "her daim koşanlar", "orta", ""],
-      [328, "هَرَاعَات", "harāʿāt", "her daim koşanlar, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "هَرَّاع", "harrāʿ", "işi koşma olan", "orta", ""],
-      [330, "هَرَّاعَة", "harrāʿa", "işi koşma olan, müennes", "orta", ""],
-      [331, "هَرَّاعَان", "harrāʿān", "işi koşma olan, iki", "orta", ""],
-      [332, "هَرَّاعَتَان", "harrāʿatān", "işi koşma olan, iki, müennes", "orta", ""],
-      [333, "هَرَّاعُون", "harrāʿūn", "işi koşma olanlar", "orta", ""],
-      [334, "هَرَّاعِين", "harrāʿīn", "işi koşma olanlar", "orta", ""],
-      [335, "هَرَّاعَات", "harrāʿāt", "işi koşma olanlar, müennes", "orta", ""],
-      [336, "هَرَّاعَة", "harrāʿa", "pek çok koşan", "orta", ""],
-      [337, "هَرَّاعَتَان", "harrāʿatān", "pek çok koşan, iki", "orta", ""],
-      [338, "هَرَّاعَات", "harrāʿāt", "pek çok koşanlar, müennes", "orta", ""],
-      [339, "هَرُوع", "harūʿ", "çok koşan", "orta", ""],
-      [340, "هَرُوعَة", "harūʿa", "çok koşan, müennes", "orta", ""],
-      [341, "هَرُوعَان", "harūʿān", "çok koşan, iki", "orta", ""],
-      [342, "هَرُوعَتَان", "harūʿatān", "çok koşan, iki, müennes", "orta", ""],
-      [343, "هَرُوعُون", "harūʿūn", "çok koşanlar", "orta", ""],
-      [344, "هَرُوعِين", "harūʿīn", "çok koşanlar", "orta", ""],
-      [345, "هَرُوعَات", "harūʿāt", "çok koşanlar, müennes", "orta", ""],
-      [346, "هَرُّوع", "harrūʿ", "pek çok koşan", "orta", ""],
-      [347, "هَرُّوعَة", "harrūʿa", "pek çok koşan, müennes", "orta", ""],
-      [348, "هَرُّوعَان", "harrūʿān", "pek çok koşan, iki", "orta", ""],
-      [349, "هَرُّوعَتَان", "harrūʿatān", "pek çok koşan, iki, müennes", "orta", ""],
-      [350, "هَرُّوعُون", "harrūʿūn", "pek çok koşanlar", "orta", ""],
-      [351, "هَرُّوعِين", "harrūʿīn", "pek çok koşanlar", "orta", ""],
-      [352, "هَرُّوعَات", "harrūʿāt", "pek çok koşanlar, müennes", "orta", ""],
-      [353, "هِرِّيع", "hirrīʿ", "koşmada aşırı giden", "orta", ""],
-      [354, "هِرِّيعَة", "hirrīʿa", "koşmada aşırı giden, müennes", "orta", ""],
-      [355, "هِرِّيعَان", "hirrīʿān", "koşmada aşırı giden, iki", "orta", ""],
-      [356, "هِرِّيعَتَان", "hirrīʿatān", "koşmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "هِرِّيعُون", "hirrīʿūn", "koşmada aşırı gidenler", "orta", ""],
-      [358, "هِرِّيعِين", "hirrīʿīn", "koşmada aşırı gidenler", "orta", ""],
-      [359, "هِرِّيعَات", "hirrīʿāt", "koşmada aşırı gidenler, müennes", "orta", ""],
-      [360, "هُرَّاع", "hurrāʿ", "son derece koşan", "orta", ""],
-      [361, "هُرَّاعَة", "hurrāʿa", "son derece koşan, müennes", "orta", ""],
-      [362, "هُرَّاعَان", "hurrāʿān", "son derece koşan, iki", "orta", ""],
-      [363, "هُرَّاعَتَان", "hurrāʿatān", "son derece koşan, iki, müennes", "orta", ""],
-      [364, "هُرَّاعُون", "hurrāʿūn", "son derece koşanlar", "orta", ""],
-      [365, "هُرَّاعِين", "hurrāʿīn", "son derece koşanlar", "orta", ""],
-      [366, "هُرَّاعَات", "hurrāʿāt", "son derece koşanlar, müennes", "orta", ""],
-      [367, "مِهْرَاع", "mihrāʿ", "koşmayı âdet edinmiş", "orta", ""],
-      [368, "مِهْرَاعَة", "mihrāʿa", "koşmayı âdet edinmiş, müennes", "orta", ""],
-      [369, "مِهْرَاعَان", "mihrāʿān", "koşmayı âdet edinmiş, iki", "orta", ""],
-      [370, "مِهْرَاعَتَان", "mihrāʿatān", "koşmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِهْرَاعُون", "mihrāʿūn", "koşmayı âdet edinmişler", "orta", ""],
-      [372, "مِهْرَاعِين", "mihrāʿīn", "koşmayı âdet edinmişler", "orta", ""],
-      [373, "مِهْرَاعَات", "mihrāʿāt", "koşmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِهْرِيع", "mihrīʿ", "koşmaya düşkün", "orta", ""],
-      [375, "مِهْرِيعَة", "mihrīʿa", "koşmaya düşkün, müennes", "orta", ""],
-      [376, "مِهْرِيعَان", "mihrīʿān", "koşmaya düşkün, iki", "orta", ""],
-      [377, "مِهْرِيعَتَان", "mihrīʿatān", "koşmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِهْرِيعُون", "mihrīʿūn", "koşmaya düşkünler", "orta", ""],
-      [379, "مِهْرِيعِين", "mihrīʿīn", "koşmaya düşkünler", "orta", ""],
-      [380, "مِهْرِيعَات", "mihrīʿāt", "koşmaya düşkünler, müennes", "orta", ""],
-      [381, "هَرِيع", "harīʿ", "çok koşan", "orta", ""],
-      [382, "هَرِيعَة", "harīʿa", "çok koşan, müennes", "orta", ""],
-      [383, "هَرِيعَان", "harīʿān", "çok koşan, iki", "orta", ""],
-      [384, "هَرِيعَتَان", "harīʿatān", "çok koşan, iki, müennes", "orta", ""],
-      [385, "هَرِيعُون", "harīʿūn", "çok koşanlar", "orta", ""],
-      [386, "هَرِيعِين", "harīʿīn", "çok koşanlar", "orta", ""],
-      [387, "هَرِيعَات", "harīʿāt", "çok koşanlar, müennes", "orta", ""],
-      [388, "هَرَّع", "harraʿ", "çok koşan", "orta", ""],
-      [389, "هَرَّعَة", "harraʿa", "çok koşan, müennes", "orta", ""],
-      [390, "هَرَّعَان", "harraʿān", "çok koşan, iki", "orta", ""],
-      [391, "هَرَّعَتَان", "harraʿatān", "çok koşan, iki, müennes", "orta", ""],
-      [392, "هَرَّعُون", "harraʿūn", "çok koşanlar", "orta", ""],
-      [393, "هَرَّعِين", "harraʿīn", "çok koşanlar", "orta", ""],
-      [394, "هَرَّعَات", "harraʿāt", "çok koşanlar, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "هَرْعِيّ", "harʿiyy", "koşma ile ilgili", "orta", ""],
-      [397, "هَرَعِيّ", "haraʿiyy", "koşma ile ilgili", "orta", ""],
-      [399, "هِرْعِيّ", "hirʿiyy", "koşma ile ilgili", "orta", ""],
-      [401, "هُرْعِيّ", "hurʿiyy", "koşma ile ilgili", "orta", ""],
-      [403, "هِرَاعِيّ", "hirāʿiyy", "koşma ile ilgili", "orta", ""],
-      [405, "هَارِعِيّ", "hāriʿiyy", "koşma ile ilgili", "orta", ""],
-      [407, "مَهْرُوعِيّ", "mahrūʿiyy", "koşma ile ilgili", "orta", ""],
-      [409, "هَرِيعِيّ", "harīʿiyy", "koşma ile ilgili", "orta", ""],
-      [411, "مَهْرَعِيّ", "mahraʿiyy", "koşma ile ilgili", "orta", ""],
-      [413, "تَهْرِيعِيّ", "tahrīʿiyy", "koşma ile ilgili", "orta", ""],
-      [415, "تَهَارُعِيّ", "tahāruʿiyy", "koşma ile ilgili", "orta", ""],
-      [417, "إِهْرَاعِيّ", "ʾihrāʿiyy", "koşma ile ilgili", "orta", ""],
-      [419, "اِهْتِرَاعِيّ", "ihtirāʿiyy", "koşma ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "هَرْعِيَّة", "harʿiyya", "koşanlık", "orta", ""],
-      [398, "هَرَعِيَّة", "haraʿiyya", "koşanlık", "orta", ""],
-      [400, "هِرْعِيَّة", "hirʿiyya", "koşanlık", "orta", ""],
-      [402, "هُرْعِيَّة", "hurʿiyya", "koşanlık", "orta", ""],
-      [404, "هِرَاعِيَّة", "hirāʿiyya", "koşanlık", "orta", ""],
-      [406, "هَارِعِيَّة", "hāriʿiyya", "koşanlık", "orta", ""],
-      [408, "مَهْرُوعِيَّة", "mahrūʿiyya", "koşanlık", "orta", ""],
-      [410, "هَرِيعِيَّة", "harīʿiyya", "koşanlık", "orta", ""],
-      [412, "مَهْرَعِيَّة", "mahraʿiyya", "koşanlık", "orta", ""],
-      [414, "تَهْرِيعِيَّة", "tahrīʿiyya", "koşanlık", "orta", ""],
-      [416, "تَهَارُعِيَّة", "tahāruʿiyya", "koşanlık", "orta", ""],
-      [418, "إِهْرَاعِيَّة", "ʾihrāʿiyya", "koşanlık", "orta", ""],
-      [420, "اِهْتِرَاعِيَّة", "ihtirāʿiyya", "koşanlık", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "هَرَاع", "harāʿ", "koşma", "orta", ""],
-      [422, "هُرُوع", "hurūʿ", "koşma", "orta", ""],
-      [423, "هِرَاع", "hirāʿ", "koşma", "orta", ""],
-      [424, "هُرْع", "hurʿ", "koşma", "orta", ""],
-      [425, "هَرَاعَة", "harāʿa", "koşma", "orta", ""],
-      [426, "هِرَاعَة", "hirāʿa", "koşma", "orta", ""],
-      [427, "هُرُوعَة", "hurūʿa", "koşma", "orta", ""],
-      [428, "هَرْع", "harʿ", "koşma", "orta", ""],
-      [429, "هِرْع", "hirʿ", "koşma", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "هَارُوع", "hārūʿ", "koşma türünden şey", "orta", ""],
-      [432, "هَرَعَة", "haraʿa", "koşma türünden şey", "orta", ""],
-      [433, "هُرَعَة", "huraʿa", "koşma türünden şey", "orta", ""],
-      [434, "أُهْرُوعَة", "ʾuhrūʿa", "koşma türünden şey", "orta", ""],
-      [435, "هَوْرَع", "hawraʿ", "koşma türünden şey", "orta", ""],
-      [437, "هَيْرَع", "hayraʿ", "koşma türünden şey", "orta", ""],
-      [439, "هَرْع", "harʿ", "koşma türünden şey", "orta", ""],
-      [441, "هَرَع", "haraʿ", "koşma türünden şey", "orta", ""],
-      [443, "هِرْع", "hirʿ", "koşma türünden şey", "orta", ""],
-      [445, "هُرْع", "hurʿ", "koşma türünden şey", "orta", ""],
-      [447, "هَرِيع", "harīʿ", "koşma türünden şey", "orta", ""],
-      [449, "هِرَع", "hiraʿ", "koşma türünden şey", "orta", ""],
-      [451, "هُرُع", "huruʿ", "koşma türünden şey", "orta", ""],
-      [453, "هَرَاع", "harāʿ", "koşma türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "هَارُوعَة", "hārūʿa", "koşma türünden bir tane", "orta", ""],
-      [436, "هَوْرَعَة", "hawraʿa", "koşma türünden bir tane", "orta", ""],
-      [438, "هَيْرَعَة", "hayraʿa", "koşma türünden bir tane", "orta", ""],
-      [440, "هَرْعَة", "harʿa", "koşma türünden bir tane", "orta", ""],
-      [442, "هَرَعَة", "haraʿa", "koşma türünden bir tane", "orta", ""],
-      [444, "هِرْعَة", "hirʿa", "koşma türünden bir tane", "orta", ""],
-      [446, "هُرْعَة", "hurʿa", "koşma türünden bir tane", "orta", ""],
-      [448, "هَرِيعَة", "harīʿa", "koşma türünden bir tane", "orta", ""],
-      [450, "هِرَعَة", "hiraʿa", "koşma türünden bir tane", "orta", ""],
-      [452, "هُرُعَة", "huruʿa", "koşma türünden bir tane", "orta", ""],
-      [454, "هَرَاعَة", "harāʿa", "koşma türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَهْرَاع", "ʾahrāʿ", "koşmalar", "orta", ""],
-      [456, "أَهْرِعَة", "ʾahriʿa", "koşmalar", "orta", ""],
-      [457, "أَهَارِع", "ʾahāriʿ", "koşmalar", "orta", ""],
-      [458, "أَهَارِيع", "ʾahārīʿ", "koşmalar", "orta", ""],
-      [459, "هُرُوع", "hurūʿ", "koşmalar", "orta", ""],
-      [460, "هُرُع", "huruʿ", "koşmalar", "orta", ""],
-      [461, "هِرَاع", "hirāʿ", "koşmalar", "orta", ""],
-      [462, "هِرَع", "hiraʿ", "koşmalar", "orta", ""],
-      [463, "هِرَعَة", "hiraʿa", "koşmalar", "orta", ""],
-      [464, "هُرَع", "huraʿ", "koşmalar", "orta", ""],
-      [465, "هُرَعاء", "huraʿāʾ", "koşmalar", "orta", ""],
-      [466, "هَرَعَة", "haraʿa", "koşmalar", "orta", ""],
-      [467, "هُرَّاع", "hurrāʿ", "koşmalar", "orta", ""],
-      [468, "هَرَاع", "harāʿ", "koşmalar", "orta", ""],
-      [469, "هَرَع", "haraʿ", "koşmalar", "orta", ""],
-      [470, "مَهَارِع", "mahāriʿ", "koşmalar", "orta", ""],
-      [471, "مَهَارِيع", "mahārīʿ", "koşmalar", "orta", ""],
-      [472, "هَوَارِع", "hawāriʿ", "koşmalar", "orta", ""],
-      [473, "أَهْرُع", "ʾahruʿ", "koşmalar", "orta", ""],
-      [474, "هُرَّع", "hurraʿ", "koşmalar", "orta", ""],
-      [475, "هَرَائِع", "harāʾiʿ", "koşmalar", "orta", ""],
-      [476, "هُرَيْع", "hurayʿ", "koşmalar", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَهْرَاعَات", "ʾahrāʿāt", "koşmalar topluluğu", "orta", ""],
-      [478, "أَهْرِعَات", "ʾahriʿāt", "koşmalar topluluğu", "orta", ""],
-      [479, "أَهَارِعَات", "ʾahāriʿāt", "koşmalar topluluğu", "orta", ""],
-      [480, "أَهَارِيعَات", "ʾahārīʿāt", "koşmalar topluluğu", "orta", ""],
-      [481, "هُرُوعَات", "hurūʿāt", "koşmalar topluluğu", "orta", ""],
-      [482, "هُرُعَات", "huruʿāt", "koşmalar topluluğu", "orta", ""],
-      [483, "هِرَاعَات", "hirāʿāt", "koşmalar topluluğu", "orta", ""],
-      [484, "هِرَعَات", "hiraʿāt", "koşmalar topluluğu", "orta", ""],
-      [485, "هِرَعَات", "hiraʿāt", "koşmalar topluluğu", "orta", ""],
-      [486, "هُرَعَات", "huraʿāt", "koşmalar topluluğu", "orta", ""],
-      [487, "هُرَعاآت", "huraʿāʾāt", "koşmalar topluluğu", "orta", ""],
-      [488, "هَرَعَات", "haraʿāt", "koşmalar topluluğu", "orta", ""],
-      [489, "هُرَّاعَات", "hurrāʿāt", "koşmalar topluluğu", "orta", ""],
-      [490, "هَرَاعَات", "harāʿāt", "koşmalar topluluğu", "orta", ""],
-      [491, "هَرَعَات", "haraʿāt", "koşmalar topluluğu", "orta", ""],
-      [492, "مَهَارِعَات", "mahāriʿāt", "koşmalar topluluğu", "orta", ""],
-      [493, "مَهَارِيعَات", "mahārīʿāt", "koşmalar topluluğu", "orta", ""],
-      [494, "هَوَارِعَات", "hawāriʿāt", "koşmalar topluluğu", "orta", ""],
-      [495, "أَهْرُعَات", "ʾahruʿāt", "koşmalar topluluğu", "orta", ""],
-      [496, "هُرَّعَات", "hurraʿāt", "koşmalar topluluğu", "orta", ""],
-      [497, "هَرَائِعَات", "harāʾiʿāt", "koşmalar topluluğu", "orta", ""],
-      [498, "هُرَيْعَات", "hurayʿāt", "koşmalar topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "هرع",
-      "turkce": "Herra': koşmak, acele etmek"
-    },
-    "osmanlica_lugatler": {
-      "يُهْرَعُ": {
-        "sorgular": ["yuhrau"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "هَرَعَ",
-        "metin": "(هَرَعَ) الْهَاءُ وَالرَّاءُ وَالْعَيْنُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى حَرَكَةٍ وَاضْطِرَابٍ. وَأُهْرِعَ الرَّجُلُ: ارْتَعَدَ فَرَقًا. وَسُمِّيَ الْأَحْمَقُ هَيْرَعًا لِاضْطِرَابِ رَائِهِ. وَيُمْكِنُ أَنَّ الْهَاءَ فِيهِ زَائِدَةٌ، فَيَكُونُ مِنْ بَابِ يَرَعَ. وَيُقَالُ الْهِرْيَاعُ: سَفِيرُ الشَّجَرِ، لِأَنَّهُ مُضْطَرِبٌ تَحْمِلُهُ الرِّيحُ مِنْ مَوْضِعٍ إِلَى مَوْضِعٍ.\nوَمِنَ الْبَابِ: الْهَرِعُ: الدَّمْعُ أَوِ الدَّمُ الْجَارِي. وَتَهَرَّعَتِ الرِّمَاحُ: أَقْبَلَتْ شَوَارِعَ. وَهُمْ يُهْرَعُونَ إِلَيْهِ، أَيْ يُسَاقُونَ.\nوَمِمَّا لَيْسَ مِنَ الْبَابِ الْهَرْعَةُ: دُوَيْبَةٌ. يُقَالُ لَهَا هَرِيعٌ وَهُرْيُعٌ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الهاء والراء",
-      "baslik": "هرع",
-      "mihveri": "سرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا). ومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم). (4/2300)",
-      "sesler": "",
-      "tam_metin": "{فَهُمْ عَلَى آثَارِهِمْ يُهْرَعُونَ (70)} [الصافات: 70]\n\"رجل هَرِع -ككتف: سريعُ البكاء. ودم هَرِعٌ: جارٍ بَيِّنُ الهَرَع. والهَرِعُ الجاري. والهَيْرَعَة- بالفتح: القَصَبة التي يَزْمُر فيها الراعي. هَرِعَ الشيء (فرح): سال / تتابع في سيلانه \".\n° المعنى المحوري\nسرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا).\nومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم).\n(4/2300)\n° \nمعنى الفصل المعجمي (هو)\n: تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (هو) : تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 2,
-      "ilk_yer": "11:78:3:1",
-      "tur": {
-        "V": 2
-      },
-      "bab": {},
-      "zaman_kip": {
-        "IMPF": 2
-      },
-      "fiil_ismi_ozellikleri": {
-        "PASS": 2
-      },
-      "lemmalar": {
-        "يُهْرَعُ": 2
-      },
-      "bicimler": {
-        "يُهْرَعُ": 2
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "HRʕ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab HRʕ هرع BP – • HDAL • © SG | 20May2023 √HRʕ “root” ▪ HRʕ_1 ‘...’ ↗ ... ▪ HRʕ_2 ‘...’ ↗ ... ▪ HRʕ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to go in haste, hurry, haste, hasty, walk briskly; to flow; a weak person’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "هيرع",
-        "u": "هيرع",
-        "p": "adj",
-        "h": "ar-adj",
-        "e": "هَيْرَع • (hayraʕ)",
-        "g": ["alternative form of هَيْلَع (haylaʕ)"],
-        "tag": ["alt-of", "alternative"],
-        "r": ["hayraʕ"],
-        "yol": "müştak"
-      },
-      {
-        "w": "هرع",
-        "u": "هرع",
-        "p": "verb",
-        "n": "1.1",
-        "h": "ar-verb",
-        "e": "هَرِعَ • (hariʕa) I (non-past يَهْرَعُ (yahraʕu), verbal noun هَرَع (haraʕ))",
-        "g": ["to hurry, to hasten, to rush"],
-        "r": ["hariʕa"],
-        "ipa": ["/ha.ri.ʕa/"],
-        "yol": "müştak"
-      },
-      {
-        "w": "هرع",
-        "u": "هرع",
-        "p": "noun",
-        "n": "1.2",
-        "h": "ar-noun",
-        "e": "هَرَع • (haraʕ) m",
-        "g": ["verbal noun of هَرِعَ (hariʕa)", "hysteria"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["هَرِعَ"],
-        "r": ["haraʕ"],
-        "ipa": ["/ha.raʕ/"],
-        "yol": "müştak"
-      },
-      {
-        "w": "يهرع",
-        "u": "يهرع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرع (form I)\n# يَهْرَعُ (yahraʕu) /jah.ra.ʕu/: third-person masculine singular non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعُ (yuhraʕu) /juh.ra.ʕu/: third-person masculine singular non-past passive indicative of هَرِعَ (hariʕa)\n# يَهْرَعَ (yahraʕa) /jah.ra.ʕa/: third-person masculine singular non-past active subjunctive of هَرِعَ (hariʕa)\n# يُهْرَعَ (yuhraʕa) /juh.ra.ʕa/: third-person m",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕu", "hariʕa", "yuhraʕu"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعت",
-        "u": "هرعت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعت (form I)\n# هَرِعْتُ (hariʕtu) /ha.riʕ.tu/: first-person singular past active of هَرِعَ (hariʕa)\n# هَرِعْتَ (hariʕta) /ha.riʕ.ta/: second-person masculine singular past active of هَرِعَ (hariʕa)\n# هَرِعْتِ (hariʕti) /ha.riʕ.ti/: second-person feminine singular past active of هَرِعَ (hariʕa)\n# هَرِعَتْ (hariʕat) /ha.ri.ʕat/: third-person feminine singular past active of هَرِعَ (hariʕa)\n# هُرِعْ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕtu", "hariʕa", "hariʕta"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعتما",
-        "u": "هرعتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعتما (form I)\n# هَرِعْتُمَا (hariʕtumā) /ha.riʕ.tu.maː/: second-person dual past active of هَرِعَ (hariʕa)\n# هُرِعْتُمَا (huriʕtumā) /hu.riʕ.tu.maː/: second-person dual past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕtumā", "hariʕa", "huriʕtumā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعا",
-        "u": "هرعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعا (form I)\n# هَرِعَا (hariʕā) /ha.ri.ʕaː/: third-person masculine dual past active of هَرِعَ (hariʕa)\n# هُرِعَا (huriʕā) /hu.ri.ʕaː/: third-person masculine dual past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕā", "hariʕa", "huriʕā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعتم",
-        "u": "هرعتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعتم (form I)\n# هَرِعْتُمْ (hariʕtum) /ha.riʕ.tum/: second-person masculine plural past active of هَرِعَ (hariʕa)\n# هُرِعْتُمْ (huriʕtum) /hu.riʕ.tum/: second-person masculine plural past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕtum", "hariʕa", "huriʕtum"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعتا",
-        "u": "هرعتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعتا (form I)\n# هَرِعَتَا (hariʕatā) /ha.ri.ʕa.taː/: third-person feminine dual past active of هَرِعَ (hariʕa)\n# هُرِعَتَا (huriʕatā) /hu.ri.ʕa.taː/: third-person feminine dual past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕatā", "hariʕa", "huriʕatā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعنا",
-        "u": "هرعنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعنا (form I)\n# هَرِعْنَا (hariʕnā) /ha.riʕ.naː/: first-person plural past active of هَرِعَ (hariʕa)\n# هُرِعْنَا (huriʕnā) /hu.riʕ.naː/: first-person plural past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕnā", "hariʕa", "huriʕnā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعتن",
-        "u": "هرعتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعتن (form I)\n# هَرِعْتُنَّ (hariʕtunna) /ha.riʕ.tun.na/: second-person feminine plural past active of هَرِعَ (hariʕa)\n# هُرِعْتُنَّ (huriʕtunna) /hu.riʕ.tun.na/: second-person feminine plural past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕtunna", "hariʕa", "huriʕtunna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعن",
-        "u": "هرعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعن (form I)\n# هَرِعْنَ (hariʕna) /ha.riʕ.na/: third-person feminine plural past active of هَرِعَ (hariʕa)\n# هُرِعْنَ (huriʕna) /hu.riʕ.na/: third-person feminine plural past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕna", "hariʕa", "huriʕna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعان",
-        "u": "تهرعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعان (form I)\n# تَهْرَعَانِ (tahraʕāni) /tah.ra.ʕaː.ni/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْرَعَانِ (tuhraʕāni) /tuh.ra.ʕaː.ni/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕāni", "hariʕa", "tuhraʕāni"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرع",
-        "u": "تهرع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرع (form I)\n# تَهْرَعُ (tahraʕu) /tah.ra.ʕu/: inflection of هَرِعَ (hariʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْرَعُ (tuhraʕu) /tuh.ra.ʕu/: inflection of هَرِعَ (hariʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَهْ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕu", "hariʕa", "tuhraʕu"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرعان",
-        "u": "يهرعان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرعان (form I)\n# يَهْرَعَانِ (yahraʕāni) /jah.ra.ʕaː.ni/: third-person masculine dual non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعَانِ (yuhraʕāni) /juh.ra.ʕaː.ni/: third-person masculine dual non-past passive indicative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕāni", "hariʕa", "yuhraʕāni"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "أهرع",
-        "u": "أهرع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أهرع (form I)\n# أَهْرَعُ (ʔahraʕu) /ʔah.ra.ʕu/: first-person singular non-past active indicative of هَرِعَ (hariʕa)\n# أُهْرَعُ (ʔuhraʕu) /ʔuh.ra.ʕu/: first-person singular non-past passive indicative of هَرِعَ (hariʕa)\n# أَهْرَعَ (ʔahraʕa) /ʔah.ra.ʕa/: first-person singular non-past active subjunctive of هَرِعَ (hariʕa)\n# أُهْرَعَ (ʔuhraʕa) /ʔuh.ra.ʕa/: first-person singular non-past passive subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔahraʕu", "hariʕa", "ʔuhraʕu"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعين",
-        "u": "تهرعين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعين (form I)\n# تَهْرَعِينَ (tahraʕīna) /tah.ra.ʕiː.na/: second-person feminine singular non-past active indicative of هَرِعَ (hariʕa)\n# تُهْرَعِينَ (tuhraʕīna) /tuh.ra.ʕiː.na/: second-person feminine singular non-past passive indicative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕīna", "hariʕa", "tuhraʕīna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعون",
-        "u": "تهرعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعون (form I)\n# تَهْرَعُونَ (tahraʕūna) /tah.ra.ʕuː.na/: second-person masculine plural non-past active indicative of هَرِعَ (hariʕa)\n# تُهْرَعُونَ (tuhraʕūna) /tuh.ra.ʕuː.na/: second-person masculine plural non-past passive indicative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕūna", "hariʕa", "tuhraʕūna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعن",
-        "u": "تهرعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعن (form I)\n# تَهْرَعْنَ (tahraʕna) /tah.raʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعْنَ (tuhraʕna) /tuh.raʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕna", "hariʕa", "tuhraʕna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرعون",
-        "u": "يهرعون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرعون (form I)\n# يَهْرَعُونَ (yahraʕūna) /jah.ra.ʕuː.na/: third-person masculine plural non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعُونَ (yuhraʕūna) /juh.ra.ʕuː.na/: third-person masculine plural non-past passive indicative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕūna", "hariʕa", "yuhraʕūna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرعن",
-        "u": "يهرعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرعن (form I)\n# يَهْرَعْنَ (yahraʕna) /jah.raʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعْنَ (yuhraʕna) /juh.raʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕna", "hariʕa", "yuhraʕna"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعا",
-        "u": "تهرعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعا (form I)\n# تَهْرَعَا (tahraʕā) /tah.ra.ʕaː/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْرَعَا (tuhraʕā) /tuh.ra.ʕaː/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕā", "hariʕa", "tuhraʕā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعي",
-        "u": "تهرعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعي (form I)\n# تَهْرَعِي (tahraʕī) /tah.ra.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعِي (tuhraʕī) /tuh.ra.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕī", "hariʕa", "tuhraʕī"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "هرعوا",
-        "u": "هرعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "هرعوا (form I)\n# هَرِعُوا (hariʕū) /ha.ri.ʕuː/: third-person masculine plural past active of هَرِعَ (hariʕa)\n# هُرِعُوا (huriʕū) /hu.ri.ʕuː/: third-person masculine plural past passive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["hariʕū", "hariʕa", "huriʕū"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرعا",
-        "u": "يهرعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرعا (form I)\n# يَهْرَعَا (yahraʕā) /jah.ra.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعَا (yuhraʕā) /juh.ra.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕā", "hariʕa", "yuhraʕā"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "يهرعوا",
-        "u": "يهرعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يهرعوا (form I)\n# يَهْرَعُوا (yahraʕū) /jah.ra.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعُوا (yuhraʕū) /juh.ra.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yahraʕū", "hariʕa", "yuhraʕū"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "تهرعوا",
-        "u": "تهرعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تهرعوا (form I)\n# تَهْرَعُوا (tahraʕū) /tah.ra.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعُوا (tuhraʕū) /tuh.ra.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tahraʕū", "hariʕa", "tuhraʕū"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "اهرع",
-        "u": "اهرع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْرَعْ • (ihraʕ) (form I) /ih.raʕ/\n# second-person masculine singular imperative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ihraʕ", "hariʕa"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "اهرعا",
-        "u": "اهرعا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْرَعَا • (ihraʕā) (form I) /ih.ra.ʕaː/\n# second-person dual imperative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ihraʕā", "hariʕa"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "نهرع",
-        "u": "نهرع",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نهرع (form I)\n# نَهْرَعُ (nahraʕu) /nah.ra.ʕu/: first-person plural non-past active indicative of هَرِعَ (hariʕa)\n# نُهْرَعُ (nuhraʕu) /nuh.ra.ʕu/: first-person plural non-past passive indicative of هَرِعَ (hariʕa)\n# نَهْرَعَ (nahraʕa) /nah.ra.ʕa/: first-person plural non-past active subjunctive of هَرِعَ (hariʕa)\n# نُهْرَعَ (nuhraʕa) /nuh.ra.ʕa/: first-person plural non-past passive subjunctive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nahraʕu", "hariʕa", "nuhraʕu"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "اهرعن",
-        "u": "اهرعن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْرَعْنَ • (ihraʕna) (form I) /ih.raʕ.na/\n# second-person feminine plural imperative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ihraʕna", "hariʕa"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "اهرعوا",
-        "u": "اهرعوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْرَعُوا • (ihraʕū) (form I) /ih.ra.ʕuː/\n# second-person masculine plural imperative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ihraʕū", "hariʕa"],
-        "k": "هرع",
-        "yol": "kök"
-      },
-      {
-        "w": "اهرعي",
-        "u": "اهرعي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِهْرَعِي • (ihraʕī) (form I) /ih.ra.ʕiː/\n# second-person feminine singular imperative of هَرِعَ (hariʕa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ihraʕī", "hariʕa"],
-        "k": "هرع",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "يهرعون": "koşarak gelir"
-    },
-    "arabic_ontology": [
-      {
-        "id": "46255",
-        "arapca": [
-          "وَسْوَسَةٌ",
-          "اِخْتِبَالٌ",
-          "اخْتِلَاطٌ",
-          "خَبَلَ",
-          "وَسْوَاسٌ",
-          "وِسْوَاسٌ",
-          "خَبَالٌ",
-          "خَبَلٌ",
-          "فِتْنَةٌ",
-          "لَوْثَةٌ",
-          "هَرَعٌ",
-          "هِسْتِيرْيَا",
-          "هَوَسٌ",
-          "جِنَّةٌ1",
-          "جُنُونٌ",
-          "مَسٌّ"
-        ],
-        "ingilizce": [],
-        "tanim": "زوال العَقْل أَو فسادٌ فيه فيعيق عن التفكير وهو مَرَضٌ عَصَبِيٌّ يُفْقِدُ الْمَرْءَ القُدْرَةَ عَلَى التَّحَكُّمِ فِي حَرَكَاتِهِ وَحَوَّاسِهِ",
-        "misal": "يعاني زيدٌ من ال_ لذا لا يؤاخذه أحد بما يفعل",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Hera'a (هَرَعَ)",
-          "metin": "(هَرَعَ) Hâ, râ ve ayn: harekete ve çalkantıya delâlet eden sahîh bir asıldır. «Uhria'r-racül»: adam korkudan titredi. Ahmağa «heyra'» denir; râsının çalkantısı sebebiyle. Hâsının zâid olması da mümkündür; o zaman «yera'» bâbından olur. «El-Hırya'»: ağacın kuru yaprağı, denir; çünkü çalkantılıdır ve rüzgâr onu bir yerden bir yere taşır.\nBu bâbdan: «el-Heri'»: akan gözyaşı yahut kan. «Teherra'ati'r-rimâh»: mızraklar uzatılmış olarak ilerledi. «Hüm yuhra'ûne ileyhi»: yânî sürülürler.\nBu bâbdan olmayanlardan: «el-Hera'a»: küçük bir hayvandır; ona «herî'» ve «hurya'» da denir."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Sıvının ve benzerinin içten çabucak dağılması: ağlamanın ve kanın çabukluğu gibi, boş kamıştan ses gibi. Bundandır: «el-Heria mine'n-nisâ'» (ferihe vezninde): erkek ona yaklaşmadan evvel boşalan kadın; «el-mehrû'»: sara tutan deli (aklı giden), yorgunluktan sarsılan (kuvveti giden). «El-Heyra'» (fetha ile): korkak, zayıf, sabırsız (gevşek, tutunamayan); «el-Heyra'» (fetha ile) tutunamayan; «rîhün heyra'»: çabuk esen / kırıcı / toprak savuran rüzgâr. «Racülün heria» (ferih vezninde): çabuk yürüyen adam. «El-Her'a» (fetha ile): küçük, çabuk bit; «el-hırya'» (kesre ile): ağaç yaprağının kurusu (ağaçtan çokça düşer ve rüzgâr onu uzağa iter). Asıldan: «Uhria'r-racül» (meçhul): adam hafifledi, hız yahut korku yahut hırs yahut gazap yahut hummâ sebebiyle titredi. «El-İhrâ'»: titremeyle hızlanmaktır {Kavmi ona koşarak geldi} (yuhra'ûne ileyhi) [Hûd: 78]: aklî hafiflikleri sebebiyle acele edip koşarlar. (4/2300)"
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Aklın gitmesi yahut onda bozukluk olması, bunun düşünmeyi engellemesi; kişiye hareketlerini ve duyularını idare etme kudretini kaybettiren bir sinir hastalığı",
-          "misal": "Zeyd _ ye muzdariptir; bu yüzden yaptığından dolayı kimse onu muâheze etmez."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab HRʕ هرع | BP – • HDAL • © SG | 20 Mayıs 2023 | √HRʕ «kök» ▪ HRʕ_1 «…» ↗ … ▪ HRʕ_2 «…» ↗ … ▪ HRʕ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «aceleyle gitmek, koşmak, acele, aceleci, tez yürümek; akmak; zayıf kimse» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["هَيْلَع (heyle'a) kelimesinin başka şekli"]
-        },
-        {
-          "g": ["acele etmek, koşmak, atılmak"]
-        },
-        {
-          "g": ["هَرِعَ (heria) fiilinin masdarı", "isterî"]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  },
-  "kuran_gecisleri": 2,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "هر",
+  "ses": {
     "harf": "ه",
+    "fasil": "هر",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "anlam": "Herra': koşmak, acele etmek",
+  "esas_manalar": "hareket ve çalkantı{koşturmak, acele etmek}",
+  "mekayis": [
+    {
+      "baslik": "هَرَعَ",
+      "metin": "(هَرَعَ) الْهَاءُ وَالرَّاءُ وَالْعَيْنُ: أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى حَرَكَةٍ وَاضْطِرَابٍ. وَأُهْرِعَ الرَّجُلُ: ارْتَعَدَ فَرَقًا. وَسُمِّيَ الْأَحْمَقُ هَيْرَعًا لِاضْطِرَابِ رَائِهِ. وَيُمْكِنُ أَنَّ الْهَاءَ فِيهِ زَائِدَةٌ، فَيَكُونُ مِنْ بَابِ يَرَعَ. وَيُقَالُ الْهِرْيَاعُ: سَفِيرُ الشَّجَرِ، لِأَنَّهُ مُضْطَرِبٌ تَحْمِلُهُ الرِّيحُ مِنْ مَوْضِعٍ إِلَى مَوْضِعٍ.\nوَمِنَ الْبَابِ: الْهَرِعُ: الدَّمْعُ أَوِ الدَّمُ الْجَارِي. وَتَهَرَّعَتِ الرِّمَاحُ: أَقْبَلَتْ شَوَارِعَ. وَهُمْ يُهْرَعُونَ إِلَيْهِ، أَيْ يُسَاقُونَ.\nوَمِمَّا لَيْسَ مِنَ الْبَابِ الْهَرْعَةُ: دُوَيْبَةٌ. يُقَالُ لَهَا هَرِيعٌ وَهُرْيُعٌ.",
+      "baslik_tr": "Hera'a (هَرَعَ)",
+      "metin_tr": "(هَرَعَ) Hâ, râ ve ayn: harekete ve çalkantıya delâlet eden sahîh bir asıldır. «Uhria'r-racül»: adam korkudan titredi. Ahmağa «heyra'» denir; râsının çalkantısı sebebiyle. Hâsının zâid olması da mümkündür; o zaman «yera'» bâbından olur. «El-Hırya'»: ağacın kuru yaprağı, denir; çünkü çalkantılıdır ve rüzgâr onu bir yerden bir yere taşır.\nBu bâbdan: «el-Heri'»: akan gözyaşı yahut kan. «Teherra'ati'r-rimâh»: mızraklar uzatılmış olarak ilerledi. «Hüm yuhra'ûne ileyhi»: yânî sürülürler.\nBu bâbdan olmayanlardan: «el-Hera'a»: küçük bir hayvandır; ona «herî'» ve «hurya'» da denir."
+    }
+  ],
+  "cebel": {
+    "fasil": "الهاء والراء",
+    "baslik": "هرع",
+    "mihveri": "سرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا). ومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم). (4/2300)",
+    "tam_metin": "{فَهُمْ عَلَى آثَارِهِمْ يُهْرَعُونَ (70)} [الصافات: 70]\n\"رجل هَرِع -ككتف: سريعُ البكاء. ودم هَرِعٌ: جارٍ بَيِّنُ الهَرَع. والهَرِعُ الجاري. والهَيْرَعَة- بالفتح: القَصَبة التي يَزْمُر فيها الراعي. هَرِعَ الشيء (فرح): سال / تتابع في سيلانه \".\n° المعنى المحوري\nسرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا).\nومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم).\n(4/2300)\n° \nمعنى الفصل المعجمي (هو)\n: تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (هو) : تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع).",
+    "mihveri_tr": "Sıvının ve benzerinin içten çabucak dağılması: ağlamanın ve kanın çabukluğu gibi, boş kamıştan ses gibi. Bundandır: «el-Heria mine'n-nisâ'» (ferihe vezninde): erkek ona yaklaşmadan evvel boşalan kadın; «el-mehrû'»: sara tutan deli (aklı giden), yorgunluktan sarsılan (kuvveti giden). «El-Heyra'» (fetha ile): korkak, zayıf, sabırsız (gevşek, tutunamayan); «el-Heyra'» (fetha ile) tutunamayan; «rîhün heyra'»: çabuk esen / kırıcı / toprak savuran rüzgâr. «Racülün heria» (ferih vezninde): çabuk yürüyen adam. «El-Her'a» (fetha ile): küçük, çabuk bit; «el-hırya'» (kesre ile): ağaç yaprağının kurusu (ağaçtan çokça düşer ve rüzgâr onu uzağa iter). Asıldan: «Uhria'r-racül» (meçhul): adam hafifledi, hız yahut korku yahut hırs yahut gazap yahut hummâ sebebiyle titredi. «El-İhrâ'»: titremeyle hızlanmaktır {Kavmi ona koşarak geldi} (yuhra'ûne ileyhi) [Hûd: 78]: aklî hafiflikleri sebebiyle acele edip koşarlar. (4/2300)"
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "46255",
+      "arapca": [
+        "وَسْوَسَةٌ",
+        "اِخْتِبَالٌ",
+        "اخْتِلَاطٌ",
+        "خَبَلَ",
+        "وَسْوَاسٌ",
+        "وِسْوَاسٌ",
+        "خَبَالٌ",
+        "خَبَلٌ",
+        "فِتْنَةٌ",
+        "لَوْثَةٌ",
+        "هَرَعٌ",
+        "هِسْتِيرْيَا",
+        "هَوَسٌ",
+        "جِنَّةٌ1",
+        "جُنُونٌ",
+        "مَسٌّ"
+      ],
+      "ingilizce": [],
+      "tanim": "زوال العَقْل أَو فسادٌ فيه فيعيق عن التفكير وهو مَرَضٌ عَصَبِيٌّ يُفْقِدُ الْمَرْءَ القُدْرَةَ عَلَى التَّحَكُّمِ فِي حَرَكَاتِهِ وَحَوَّاسِهِ",
+      "misal": "يعاني زيدٌ من ال_ لذا لا يؤاخذه أحد بما يفعل",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Aklın gitmesi yahut onda bozukluk olması, bunun düşünmeyi engellemesi; kişiye hareketlerini ve duyularını idare etme kudretini kaybettiren bir sinir hastalığı",
+      "misal_tr": "Zeyd _ ye muzdariptir; bu yüzden yaptığından dolayı kimse onu muâheze etmez."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "هيرع",
+      "tur": "adj",
+      "baslik": "هَيْرَع • (hayraʕ)",
+      "anlam": ["alternative form of هَيْلَع (haylaʕ)"],
+      "etiket": ["alt-of", "alternative"],
+      "okunus": ["hayraʕ"],
+      "bag": "müştak",
+      "anlam_tr": ["هَيْلَع (heyle'a) kelimesinin başka şekli"]
+    },
+    {
+      "madde": "هرع",
+      "tur": "verb",
+      "etim_no": "1.1",
+      "baslik": "هَرِعَ • (hariʕa) I (non-past يَهْرَعُ (yahraʕu), verbal noun هَرَع (haraʕ))",
+      "anlam": ["to hurry, to hasten, to rush"],
+      "okunus": ["hariʕa"],
+      "ipa": ["/ha.ri.ʕa/"],
+      "bag": "müştak",
+      "anlam_tr": ["acele etmek, koşmak, atılmak"]
+    },
+    {
+      "madde": "هرع",
+      "tur": "noun",
+      "etim_no": "1.2",
+      "baslik": "هَرَع • (haraʕ) m",
+      "anlam": ["verbal noun of هَرِعَ (hariʕa)", "hysteria"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["هَرِعَ"],
+      "okunus": ["haraʕ"],
+      "ipa": ["/ha.raʕ/"],
+      "bag": "müştak",
+      "anlam_tr": ["هَرِعَ (heria) fiilinin masdarı", "isterî"]
+    },
+    {
+      "madde": "يهرع",
+      "tur": "verb",
+      "baslik": "يهرع (form I)\n# يَهْرَعُ (yahraʕu) /jah.ra.ʕu/: third-person masculine singular non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعُ (yuhraʕu) /juh.ra.ʕu/: third-person masculine singular non-past passive indicative of هَرِعَ (hariʕa)\n# يَهْرَعَ (yahraʕa) /jah.ra.ʕa/: third-person masculine singular non-past active subjunctive of هَرِعَ (hariʕa)\n# يُهْرَعَ (yuhraʕa) /juh.ra.ʕa/: third-person m",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕu", "hariʕa", "yuhraʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعت",
+      "tur": "verb",
+      "baslik": "هرعت (form I)\n# هَرِعْتُ (hariʕtu) /ha.riʕ.tu/: first-person singular past active of هَرِعَ (hariʕa)\n# هَرِعْتَ (hariʕta) /ha.riʕ.ta/: second-person masculine singular past active of هَرِعَ (hariʕa)\n# هَرِعْتِ (hariʕti) /ha.riʕ.ti/: second-person feminine singular past active of هَرِعَ (hariʕa)\n# هَرِعَتْ (hariʕat) /ha.ri.ʕat/: third-person feminine singular past active of هَرِعَ (hariʕa)\n# هُرِعْ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕtu", "hariʕa", "hariʕta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعتما",
+      "tur": "verb",
+      "baslik": "هرعتما (form I)\n# هَرِعْتُمَا (hariʕtumā) /ha.riʕ.tu.maː/: second-person dual past active of هَرِعَ (hariʕa)\n# هُرِعْتُمَا (huriʕtumā) /hu.riʕ.tu.maː/: second-person dual past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕtumā", "hariʕa", "huriʕtumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعا",
+      "tur": "verb",
+      "baslik": "هرعا (form I)\n# هَرِعَا (hariʕā) /ha.ri.ʕaː/: third-person masculine dual past active of هَرِعَ (hariʕa)\n# هُرِعَا (huriʕā) /hu.ri.ʕaː/: third-person masculine dual past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕā", "hariʕa", "huriʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعتم",
+      "tur": "verb",
+      "baslik": "هرعتم (form I)\n# هَرِعْتُمْ (hariʕtum) /ha.riʕ.tum/: second-person masculine plural past active of هَرِعَ (hariʕa)\n# هُرِعْتُمْ (huriʕtum) /hu.riʕ.tum/: second-person masculine plural past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕtum", "hariʕa", "huriʕtum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعتا",
+      "tur": "verb",
+      "baslik": "هرعتا (form I)\n# هَرِعَتَا (hariʕatā) /ha.ri.ʕa.taː/: third-person feminine dual past active of هَرِعَ (hariʕa)\n# هُرِعَتَا (huriʕatā) /hu.ri.ʕa.taː/: third-person feminine dual past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕatā", "hariʕa", "huriʕatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعنا",
+      "tur": "verb",
+      "baslik": "هرعنا (form I)\n# هَرِعْنَا (hariʕnā) /ha.riʕ.naː/: first-person plural past active of هَرِعَ (hariʕa)\n# هُرِعْنَا (huriʕnā) /hu.riʕ.naː/: first-person plural past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕnā", "hariʕa", "huriʕnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعتن",
+      "tur": "verb",
+      "baslik": "هرعتن (form I)\n# هَرِعْتُنَّ (hariʕtunna) /ha.riʕ.tun.na/: second-person feminine plural past active of هَرِعَ (hariʕa)\n# هُرِعْتُنَّ (huriʕtunna) /hu.riʕ.tun.na/: second-person feminine plural past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕtunna", "hariʕa", "huriʕtunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعن",
+      "tur": "verb",
+      "baslik": "هرعن (form I)\n# هَرِعْنَ (hariʕna) /ha.riʕ.na/: third-person feminine plural past active of هَرِعَ (hariʕa)\n# هُرِعْنَ (huriʕna) /hu.riʕ.na/: third-person feminine plural past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕna", "hariʕa", "huriʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعان",
+      "tur": "verb",
+      "baslik": "تهرعان (form I)\n# تَهْرَعَانِ (tahraʕāni) /tah.ra.ʕaː.ni/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُهْرَعَانِ (tuhraʕāni) /tuh.ra.ʕaː.ni/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕāni", "hariʕa", "tuhraʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرع",
+      "tur": "verb",
+      "baslik": "تهرع (form I)\n# تَهْرَعُ (tahraʕu) /tah.ra.ʕu/: inflection of هَرِعَ (hariʕa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُهْرَعُ (tuhraʕu) /tuh.ra.ʕu/: inflection of هَرِعَ (hariʕa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَهْ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕu", "hariʕa", "tuhraʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرعان",
+      "tur": "verb",
+      "baslik": "يهرعان (form I)\n# يَهْرَعَانِ (yahraʕāni) /jah.ra.ʕaː.ni/: third-person masculine dual non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعَانِ (yuhraʕāni) /juh.ra.ʕaː.ni/: third-person masculine dual non-past passive indicative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕāni", "hariʕa", "yuhraʕāni"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "أهرع",
+      "tur": "verb",
+      "baslik": "أهرع (form I)\n# أَهْرَعُ (ʔahraʕu) /ʔah.ra.ʕu/: first-person singular non-past active indicative of هَرِعَ (hariʕa)\n# أُهْرَعُ (ʔuhraʕu) /ʔuh.ra.ʕu/: first-person singular non-past passive indicative of هَرِعَ (hariʕa)\n# أَهْرَعَ (ʔahraʕa) /ʔah.ra.ʕa/: first-person singular non-past active subjunctive of هَرِعَ (hariʕa)\n# أُهْرَعَ (ʔuhraʕa) /ʔuh.ra.ʕa/: first-person singular non-past passive subju",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔahraʕu", "hariʕa", "ʔuhraʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعين",
+      "tur": "verb",
+      "baslik": "تهرعين (form I)\n# تَهْرَعِينَ (tahraʕīna) /tah.ra.ʕiː.na/: second-person feminine singular non-past active indicative of هَرِعَ (hariʕa)\n# تُهْرَعِينَ (tuhraʕīna) /tuh.ra.ʕiː.na/: second-person feminine singular non-past passive indicative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕīna", "hariʕa", "tuhraʕīna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعون",
+      "tur": "verb",
+      "baslik": "تهرعون (form I)\n# تَهْرَعُونَ (tahraʕūna) /tah.ra.ʕuː.na/: second-person masculine plural non-past active indicative of هَرِعَ (hariʕa)\n# تُهْرَعُونَ (tuhraʕūna) /tuh.ra.ʕuː.na/: second-person masculine plural non-past passive indicative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕūna", "hariʕa", "tuhraʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعن",
+      "tur": "verb",
+      "baslik": "تهرعن (form I)\n# تَهْرَعْنَ (tahraʕna) /tah.raʕ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعْنَ (tuhraʕna) /tuh.raʕ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕna", "hariʕa", "tuhraʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرعون",
+      "tur": "verb",
+      "baslik": "يهرعون (form I)\n# يَهْرَعُونَ (yahraʕūna) /jah.ra.ʕuː.na/: third-person masculine plural non-past active indicative of هَرِعَ (hariʕa)\n# يُهْرَعُونَ (yuhraʕūna) /juh.ra.ʕuː.na/: third-person masculine plural non-past passive indicative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕūna", "hariʕa", "yuhraʕūna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرعن",
+      "tur": "verb",
+      "baslik": "يهرعن (form I)\n# يَهْرَعْنَ (yahraʕna) /jah.raʕ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعْنَ (yuhraʕna) /juh.raʕ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕna", "hariʕa", "yuhraʕna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعا",
+      "tur": "verb",
+      "baslik": "تهرعا (form I)\n# تَهْرَعَا (tahraʕā) /tah.ra.ʕaː/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُهْرَعَا (tuhraʕā) /tuh.ra.ʕaː/: inflection of هَرِعَ (hariʕa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕā", "hariʕa", "tuhraʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعي",
+      "tur": "verb",
+      "baslik": "تهرعي (form I)\n# تَهْرَعِي (tahraʕī) /tah.ra.ʕiː/: second-person feminine singular non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعِي (tuhraʕī) /tuh.ra.ʕiː/: second-person feminine singular non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕī", "hariʕa", "tuhraʕī"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "هرعوا",
+      "tur": "verb",
+      "baslik": "هرعوا (form I)\n# هَرِعُوا (hariʕū) /ha.ri.ʕuː/: third-person masculine plural past active of هَرِعَ (hariʕa)\n# هُرِعُوا (huriʕū) /hu.ri.ʕuː/: third-person masculine plural past passive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["hariʕū", "hariʕa", "huriʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرعا",
+      "tur": "verb",
+      "baslik": "يهرعا (form I)\n# يَهْرَعَا (yahraʕā) /jah.ra.ʕaː/: third-person masculine dual non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعَا (yuhraʕā) /juh.ra.ʕaː/: third-person masculine dual non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕā", "hariʕa", "yuhraʕā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يهرعوا",
+      "tur": "verb",
+      "baslik": "يهرعوا (form I)\n# يَهْرَعُوا (yahraʕū) /jah.ra.ʕuː/: third-person masculine plural non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# يُهْرَعُوا (yuhraʕū) /juh.ra.ʕuː/: third-person masculine plural non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yahraʕū", "hariʕa", "yuhraʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تهرعوا",
+      "tur": "verb",
+      "baslik": "تهرعوا (form I)\n# تَهْرَعُوا (tahraʕū) /tah.ra.ʕuː/: second-person masculine plural non-past active subjunctive/jussive of هَرِعَ (hariʕa)\n# تُهْرَعُوا (tuhraʕū) /tuh.ra.ʕuː/: second-person masculine plural non-past passive subjunctive/jussive of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tahraʕū", "hariʕa", "tuhraʕū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اهرع",
+      "tur": "verb",
+      "baslik": "اِهْرَعْ • (ihraʕ) (form I) /ih.raʕ/\n# second-person masculine singular imperative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihraʕ", "hariʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اهرعا",
+      "tur": "verb",
+      "baslik": "اِهْرَعَا • (ihraʕā) (form I) /ih.ra.ʕaː/\n# second-person dual imperative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihraʕā", "hariʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "نهرع",
+      "tur": "verb",
+      "baslik": "نهرع (form I)\n# نَهْرَعُ (nahraʕu) /nah.ra.ʕu/: first-person plural non-past active indicative of هَرِعَ (hariʕa)\n# نُهْرَعُ (nuhraʕu) /nuh.ra.ʕu/: first-person plural non-past passive indicative of هَرِعَ (hariʕa)\n# نَهْرَعَ (nahraʕa) /nah.ra.ʕa/: first-person plural non-past active subjunctive of هَرِعَ (hariʕa)\n# نُهْرَعَ (nuhraʕa) /nuh.ra.ʕa/: first-person plural non-past passive subjunctive o",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nahraʕu", "hariʕa", "nuhraʕu"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اهرعن",
+      "tur": "verb",
+      "baslik": "اِهْرَعْنَ • (ihraʕna) (form I) /ih.raʕ.na/\n# second-person feminine plural imperative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihraʕna", "hariʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اهرعوا",
+      "tur": "verb",
+      "baslik": "اِهْرَعُوا • (ihraʕū) (form I) /ih.ra.ʕuː/\n# second-person masculine plural imperative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihraʕū", "hariʕa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "اهرعي",
+      "tur": "verb",
+      "baslik": "اِهْرَعِي • (ihraʕī) (form I) /ih.ra.ʕiː/\n# second-person feminine singular imperative of هَرِعَ (hariʕa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ihraʕī", "hariʕa"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "HRʕ",
+    "kok_maddesi": "Back to library EtymArab HRʕ هرع BP – • HDAL • © SG | 20May2023 √HRʕ “root” ▪ HRʕ_1 ‘...’ ↗ ... ▪ HRʕ_2 ‘...’ ↗ ... ▪ HRʕ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to go in haste, hurry, haste, hasty, walk briskly; to flow; a weak person’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab HRʕ هرع | BP – • HDAL • © SG | 20 Mayıs 2023 | √HRʕ «kök» ▪ HRʕ_1 «…» ↗ … ▪ HRʕ_2 «…» ↗ … ▪ HRʕ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «aceleyle gitmek, koşmak, acele, aceleci, tez yürümek; akmak; zayıf kimse» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 2,
+    "ilk": "11:78:3:1",
+    "tur": {
+      "V": 2
+    },
+    "bab": {},
+    "zaman_kip": {
+      "IMPF": 2
+    },
+    "fiil_ismi_ozellikleri": {
+      "PASS": 2
+    },
+    "lemmalar": {
+      "يُهْرَعُ": 2
+    },
+    "bicimler": {
+      "يُهْرَعُ": 2
+    },
+    "morfoloji_gecis": 2
+  },
+  "kelimeler": [
+    {
+      "lemma": "يُهْرَعُ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "يُهْرَعُونَ",
+          "zaman": "Muzâri",
+          "ilk": "11:78",
+          "adet": 2,
+          "tr": "koşarak gelir"
+        }
+      ],
+      "tr": "koşarak gelir",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 2
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "هَرْع", "harʿ", "koşma", "orta", ""],
+      ["fi'l", "semâî aday", "هِرْع", "hirʿ", "koşma", "orta", ""],
+      ["fu'l", "semâî aday", "هُرْع", "hurʿ", "koşma", "orta", ""],
+      ["fa'al", "semâî aday", "هَرَع", "haraʿ", "koşma", "orta", ""],
+      ["fi'al", "semâî aday", "هِرَع", "hiraʿ", "koşma", "orta", ""],
+      ["fu'ul", "semâî aday", "هُرُع", "huruʿ", "koşma", "orta", ""],
+      ["fu'ūl", "semâî aday", "هُرُوع", "hurūʿ", "koşma", "orta", ""],
+      ["fi'āl", "semâî aday", "هِرَاع", "hirāʿ", "koşma", "orta", ""],
+      ["fu'āl", "semâî aday", "هُرَاع", "hurāʿ", "koşma", "orta", ""],
+      ["fa'āl", "semâî aday", "هَرَاع", "harāʿ", "koşma", "orta", ""],
+      ["fa'āle", "semâî aday", "هَرَاعَة", "harāʿa", "koşma", "orta", ""],
+      ["fu'ūle", "semâî aday", "هُرُوعَة", "hurūʿa", "koşma", "orta", ""],
+      ["fi'āle", "semâî aday", "هِرَاعَة", "hirāʿa", "koşma", "orta", ""],
+      ["fa'īl", "semâî aday", "هَرِيع", "harīʿ", "koşma", "orta", ""],
+      ["fa'ūl", "semâî aday", "هَرُوع", "harūʿ", "koşma", "orta", ""],
+      ["fa'alān", "semâî aday", "هَرَعَان", "haraʿān", "koşma", "orta", ""],
+      ["fu'lān", "semâî aday", "هُرْعَان", "hurʿān", "koşma", "orta", ""],
+      ["fi'lān", "semâî aday", "هِرْعَان", "hirʿān", "koşma", "orta", ""],
+      ["fa'lā", "semâî aday", "هَرْعَى", "harʿā", "koşma", "orta", ""],
+      ["fu'lā", "semâî aday", "هُرْعَى", "hurʿā", "koşma", "orta", ""],
+      ["fi'lā", "semâî aday", "هِرْعَى", "hirʿā", "koşma", "orta", ""],
+      ["fa'ale", "semâî aday", "هَرَعَة", "haraʿa", "koşma", "orta", ""],
+      ["fi'ale", "semâî aday", "هِرَعَة", "hiraʿa", "koşma", "orta", ""],
+      ["fa'lūla", "semâî aday", "هَرْعُوعَة", "harʿūʿa", "koşma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُهْرُوع", "tuhrūʿ", "koşma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَهْرِعَة", "tahriʿa", "koşma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَهْرَعَة", "tahraʿa", "koşma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَهْرُعَة", "mahruʿa", "koşma", "orta", ""],
+      ["maf'ila", "semâî aday", "مَهْرِعَة", "mahriʿa", "koşma", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَهْرِيع", "tahrīʿ", "koşturma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَهْرِعَة", "tahriʿa", "koşturma", "orta", ""],
+      ["fi''āl", "kıyâsî", "هِرِّاع", "hirrāʿ", "koşturma", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَهْرِيعَة", "tahrīʿa", "bir kere koşturma", "orta", ""],
+      ["fi''āl + tâ", "aday", "هِرِّاعَة", "hirrāʿa", "bir kere koşturma", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُهَرِّع", "muharriʿ", "koşturan", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُهَرِّعَة", "muharriʿa", "koşturan, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُهَرِّعَان", "muharriʿān", "koşturan, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُهَرِّعَتَان",
+        "muharriʿatān",
+        "koşturan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُهَرِّعُون", "muharriʿūn", "koşturanlar", "orta", ""],
+      ["mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُهَرِّعِين", "muharriʿīn", "koşturanlar", "orta", ""],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهَرِّعَات",
+        "muharriʿāt",
+        "koşturanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُهَرَّع", "muharraʿ", "koşturulan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُهَرَّعَة", "muharraʿa", "koşturulan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُهَرَّعَان", "muharraʿān", "koşturulan, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُهَرَّعَتَان",
+        "muharraʿatān",
+        "koşturulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُهَرَّعُون", "muharraʿūn", "koşturulanlar", "orta", ""],
+      ["mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُهَرَّعِين", "muharraʿīn", "koşturulanlar", "orta", ""],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهَرَّعَات",
+        "muharraʿāt",
+        "koşturulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُهَرَّع", "muharraʿ", "koşturma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُهَارَعَة", "muhāraʿa", "biriyle karşılıklı koşma", "orta", ""],
+      ["fi'āl", "kıyâsî", "هِرَاع", "hirāʿ", "biriyle karşılıklı koşma", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "هِرَاعَة", "hirāʿa", "bir kere biriyle karşılıklı koşma", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُهَارِع", "muhāriʿ", "biriyle karşılıklı koşan", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُهَارِعَة", "muhāriʿa", "biriyle karşılıklı koşan, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُهَارِعَان", "muhāriʿān", "biriyle karşılıklı koşan, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُهَارِعَتَان",
+        "muhāriʿatān",
+        "biriyle karşılıklı koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهَارِعُون",
+        "muhāriʿūn",
+        "biriyle karşılıklı koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهَارِعِين",
+        "muhāriʿīn",
+        "biriyle karşılıklı koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهَارِعَات",
+        "muhāriʿāt",
+        "biriyle karşılıklı koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُهَارَع", "muhāraʿ", "biriyle karşılıklı koşulan", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُهَارَعَة", "muhāraʿa", "biriyle karşılıklı koşulan, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُهَارَعَان", "muhāraʿān", "biriyle karşılıklı koşulan, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُهَارَعَتَان",
+        "muhāraʿatān",
+        "biriyle karşılıklı koşulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهَارَعُون",
+        "muhāraʿūn",
+        "biriyle karşılıklı koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهَارَعِين",
+        "muhāraʿīn",
+        "biriyle karşılıklı koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهَارَعَات",
+        "muhāraʿāt",
+        "biriyle karşılıklı koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُهَارَع", "muhāraʿ", "biriyle karşılıklı koşma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِهْرَاع", "ʾihrāʿ", "koşturma", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِهْرَاعَة", "ʾihrāʿa", "bir kere koşturma", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُهْرِع", "muhriʿ", "koşturan", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُهْرِعَة", "muhriʿa", "koşturan, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُهْرِعَان", "muhriʿān", "koşturan, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُهْرِعَتَان", "muhriʿatān", "koşturan, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُهْرِعُون", "muhriʿūn", "koşturanlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُهْرِعِين", "muhriʿīn", "koşturanlar", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْرِعَات",
+        "muhriʿāt",
+        "koşturanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُهْرَع", "muhraʿ", "koşturulan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُهْرَعَة", "muhraʿa", "koşturulan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُهْرَعَان", "muhraʿān", "koşturulan, iki", "orta", ""],
+      ["muf'al + müennes tesniye", "kıyâsî", "مُهْرَعَتَان", "muhraʿatān", "koşturulan, iki, müennes", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُهْرَعُون", "muhraʿūn", "koşturulanlar", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُهْرَعِين", "muhraʿīn", "koşturulanlar", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْرَعَات",
+        "muhraʿāt",
+        "koşturulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُهْرَع", "muhraʿ", "koşturma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَهَرُّع", "taharruʿ", "kendini zorlayarak koşma", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَهَرُّعَة", "taharruʿa", "bir kere kendini zorlayarak koşma", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَهَرِّع", "mutaharriʿ", "kendini zorlayarak koşan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَهَرِّعَة",
+        "mutaharriʿa",
+        "kendini zorlayarak koşan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَهَرِّعَان",
+        "mutaharriʿān",
+        "kendini zorlayarak koşan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَهَرِّعَتَان",
+        "mutaharriʿatān",
+        "kendini zorlayarak koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَهَرِّعُون",
+        "mutaharriʿūn",
+        "kendini zorlayarak koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَهَرِّعِين",
+        "mutaharriʿīn",
+        "kendini zorlayarak koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَهَرِّعَات",
+        "mutaharriʿāt",
+        "kendini zorlayarak koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَهَرَّع", "mutaharraʿ", "kendini zorlayarak koşulan", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَهَرَّعَة",
+        "mutaharraʿa",
+        "kendini zorlayarak koşulan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَهَرَّعَان",
+        "mutaharraʿān",
+        "kendini zorlayarak koşulan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَهَرَّعَتَان",
+        "mutaharraʿatān",
+        "kendini zorlayarak koşulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَهَرَّعُون",
+        "mutaharraʿūn",
+        "kendini zorlayarak koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَهَرَّعِين",
+        "mutaharraʿīn",
+        "kendini zorlayarak koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَهَرَّعَات",
+        "mutaharraʿāt",
+        "kendini zorlayarak koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَهَرَّع", "mutaharraʿ", "kendini zorlayarak koşma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَهَارُع", "tahāruʿ", "hep birlikte koşma", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَهَارُعَة", "tahāruʿa", "bir kere hep birlikte koşma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَهَارِع", "mutahāriʿ", "hep birlikte koşan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَهَارِعَة", "mutahāriʿa", "hep birlikte koşan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَهَارِعَان", "mutahāriʿān", "hep birlikte koşan, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَهَارِعَتَان",
+        "mutahāriʿatān",
+        "hep birlikte koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَهَارِعُون",
+        "mutahāriʿūn",
+        "hep birlikte koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَهَارِعِين",
+        "mutahāriʿīn",
+        "hep birlikte koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَهَارِعَات",
+        "mutahāriʿāt",
+        "hep birlikte koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَهَارَع", "mutahāraʿ", "hep birlikte koşulan", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَهَارَعَة", "mutahāraʿa", "hep birlikte koşulan, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَهَارَعَان", "mutahāraʿān", "hep birlikte koşulan, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَهَارَعَتَان",
+        "mutahāraʿatān",
+        "hep birlikte koşulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَهَارَعُون",
+        "mutahāraʿūn",
+        "hep birlikte koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَهَارَعِين",
+        "mutahāraʿīn",
+        "hep birlikte koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَهَارَعَات",
+        "mutahāraʿāt",
+        "hep birlikte koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَهَارَع", "mutahāraʿ", "hep birlikte koşma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْهِرَاع", "inhirāʿ", "kendiliğinden koşma", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْهِرَاعَة", "inhirāʿa", "bir kere kendiliğinden koşma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْهَرِع", "munhariʿ", "kendiliğinden koşan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْهَرِعَة", "munhariʿa", "kendiliğinden koşan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْهَرِعَان", "munhariʿān", "kendiliğinden koşan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْهَرِعَتَان",
+        "munhariʿatān",
+        "kendiliğinden koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْهَرِعُون",
+        "munhariʿūn",
+        "kendiliğinden koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْهَرِعِين",
+        "munhariʿīn",
+        "kendiliğinden koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْهَرِعَات",
+        "munhariʿāt",
+        "kendiliğinden koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَع",
+        "munharaʿ",
+        "kendiliğinden koşulan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعَة",
+        "munharaʿa",
+        "kendiliğinden koşulan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعَان",
+        "munharaʿān",
+        "kendiliğinden koşulan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعَتَان",
+        "munharaʿatān",
+        "kendiliğinden koşulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعُون",
+        "munharaʿūn",
+        "kendiliğinden koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعِين",
+        "munharaʿīn",
+        "kendiliğinden koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَعَات",
+        "munharaʿāt",
+        "kendiliğinden koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْهَرَع",
+        "munharaʿ",
+        "kendiliğinden koşma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِهْتِرَاع", "ihtirāʿ", "kendisi için koşma", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِهْتِرَاعَة", "ihtirāʿa", "bir kere kendisi için koşma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُهْتَرِع", "muhtariʿ", "kendisi için koşan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُهْتَرِعَة", "muhtariʿa", "kendisi için koşan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُهْتَرِعَان", "muhtariʿān", "kendisi için koşan, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُهْتَرِعَتَان",
+        "muhtariʿatān",
+        "kendisi için koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهْتَرِعُون",
+        "muhtariʿūn",
+        "kendisi için koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهْتَرِعِين",
+        "muhtariʿīn",
+        "kendisi için koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْتَرِعَات",
+        "muhtariʿāt",
+        "kendisi için koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُهْتَرَع", "muhtaraʿ", "kendisi için koşulan", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُهْتَرَعَة", "muhtaraʿa", "kendisi için koşulan, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُهْتَرَعَان", "muhtaraʿān", "kendisi için koşulan, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُهْتَرَعَتَان",
+        "muhtaraʿatān",
+        "kendisi için koşulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهْتَرَعُون",
+        "muhtaraʿūn",
+        "kendisi için koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهْتَرَعِين",
+        "muhtaraʿīn",
+        "kendisi için koşulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْتَرَعَات",
+        "muhtaraʿāt",
+        "kendisi için koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُهْتَرَع", "muhtaraʿ", "kendisi için koşma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX": [
+      ["if'ilāl", "kıyâsî", "اِهْرِعَاع", "ihriʿāʿ", "iyiden iyiye koşma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُهْرَعّ", "muhraʿʿ", "iyiden iyiye koşan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُهْرَعَّة", "muhraʿʿa", "iyiden iyiye koşan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُهْرَعَّان", "muhraʿʿān", "iyiden iyiye koşan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُهْرَعَّتَان",
+        "muhraʿʿatān",
+        "iyiden iyiye koşan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهْرَعُّون",
+        "muhraʿʿūn",
+        "iyiden iyiye koşanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهْرَعِّين",
+        "muhraʿʿīn",
+        "iyiden iyiye koşanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْرَعَّات",
+        "muhraʿʿāt",
+        "iyiden iyiye koşanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِهْرَاع", "istihrāʿ", "koşmayı isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِهْرَاعَة", "istihrāʿa", "bir kere koşmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَهْرِع", "mustahriʿ", "koşmayı isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَهْرِعَة", "mustahriʿa", "koşmayı isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَهْرِعَان", "mustahriʿān", "koşmayı isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَهْرِعَتَان",
+        "mustahriʿatān",
+        "koşmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَهْرِعُون",
+        "mustahriʿūn",
+        "koşmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَهْرِعِين",
+        "mustahriʿīn",
+        "koşmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَهْرِعَات",
+        "mustahriʿāt",
+        "koşmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَهْرَع", "mustahraʿ", "koşması istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَهْرَعَة", "mustahraʿa", "koşması istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَهْرَعَان", "mustahraʿān", "koşması istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَهْرَعَتَان",
+        "mustahraʿatān",
+        "koşması istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَهْرَعُون",
+        "mustahraʿūn",
+        "koşması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَهْرَعِين",
+        "mustahraʿīn",
+        "koşması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَهْرَعَات",
+        "mustahraʿāt",
+        "koşması istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَهْرَع", "mustahraʿ", "koşmayı isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI": [
+      ["if'īlāl", "kıyâsî", "اِهْرِيعَاع", "ihrīʿāʿ", "büsbütün koşma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُهْرَاعّ", "muhrāʿʿ", "büsbütün koşan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُهْرَاعَّة", "muhrāʿʿa", "büsbütün koşan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُهْرَاعَّان", "muhrāʿʿān", "büsbütün koşan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُهْرَاعَّتَان",
+        "muhrāʿʿatān",
+        "büsbütün koşan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُهْرَاعُّون",
+        "muhrāʿʿūn",
+        "büsbütün koşanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُهْرَاعِّين",
+        "muhrāʿʿīn",
+        "büsbütün koşanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُهْرَاعَّات",
+        "muhrāʿʿāt",
+        "büsbütün koşanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII": [
+      ["if'iv'āl", "kıyâsî", "اِهْرِوْرَاع", "ihriwrāʿ", "aşırı koşma", "orta", ""]
+    ],
+    "masdar · bâb XIII": [
+      ["if'ivvāl", "kıyâsî", "اِهْرِوَّاع", "ihriwwāʿ", "aşırı koşma", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "هَارِع", "hāriʿ", "koşan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "هَارِعَة", "hāriʿa", "koşan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "هَارِعَان", "hāriʿān", "koşan, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "هَارِعَتَان", "hāriʿatān", "koşan, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "هَارِعُون", "hāriʿūn", "koşanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "هَارِعِين", "hāriʿīn", "koşanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "هَارِعَات", "hāriʿāt", "koşanlar, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَهْرُوع", "mahrūʿ", "koşulan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَهْرُوعَة", "mahrūʿa", "koşulan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَهْرُوعَان", "mahrūʿān", "koşulan, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَهْرُوعَتَان", "mahrūʿatān", "koşulan, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَهْرُوعُون", "mahrūʿūn", "koşulanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَهْرُوعِين", "mahrūʿīn", "koşulanlar", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَهْرُوعَات",
+        "mahrūʿāt",
+        "koşulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَهْرَع", "mahraʿ", "koşma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَهْرَعَان", "mahraʿān", "koşma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَهْرِع", "mahriʿ", "koşma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَهْرِعَان", "mahriʿān", "koşma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَهْرَعَة", "mahraʿa", "koşmanın bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَهْرَعَتَان", "mahraʿatān", "koşmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَهْرِعَة", "mahriʿa", "koşmanın bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَهْرِعَتَان", "mahriʿatān", "koşmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَهْرُعَة", "mahruʿa", "koşma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَهْرُعَتَان", "mahruʿatān", "koşma yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِهْرَع", "mihraʿ", "koşma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِهْرَعَان", "mihraʿān", "koşma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِهْرَاع", "mihrāʿ", "koşma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِهْرَاعَان", "mihrāʿān", "koşma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِهْرَعَة", "mihraʿa", "koşma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِهْرَعَتَان", "mihraʿatān", "koşma âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَهْرَع", "ʾahraʿ", "daha çok koşan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَهْرَعَان", "ʾahraʿān", "daha çok koşan, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "هُرْعَى", "hurʿā", "daha çok koşan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "هُرْعَيَان", "hurʿayān", "daha çok koşan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "هَرْعَاء", "harʿāʾ", "daha çok koşan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "هَرْعَاآن", "harʿāʾān", "daha çok koşan, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "هُرَيْع", "hurayʿ", "azıcık koşma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "هُرَيْعَان", "hurayʿān", "azıcık koşma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "هُرَيْعَة", "hurayʿa", "azıcık koşma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "هُرَيْعَتَان", "hurayʿatān", "azıcık koşma, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَهْرَع", "mahraʿ", "koşma", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَهْرَعَان", "mahraʿān", "koşma, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "هَرْعَة", "harʿa", "bir kere koşma", "orta", ""],
+      ["fa'le + tesniye", "aday", "هَرْعَتَان", "harʿatān", "bir kere koşma, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "هِرْعَة", "hirʿa", "koşma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "هِرْعَتَان", "hirʿatān", "koşma tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "هَرِيع", "harīʿ", "her daim koşan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "هَرِيعَة", "harīʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "هَرِيعَان", "harīʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "هَرِيعَتَان",
+        "harīʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرِيعُون", "harīʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرِيعِين", "harīʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرِيعَات",
+        "harīʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "هَرُوع", "harūʿ", "her daim koşan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "هَرُوعَة", "harūʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "هَرُوعَان", "harūʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "هَرُوعَتَان",
+        "harūʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرُوعُون", "harūʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرُوعِين", "harūʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرُوعَات",
+        "harūʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "هَرِع", "hariʿ", "her daim koşan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "هَرِعَة", "hariʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "هَرِعَان", "hariʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "هَرِعَتَان",
+        "hariʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرِعُون", "hariʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرِعِين", "hariʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرِعَات",
+        "hariʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "هَرُع", "haruʿ", "her daim koşan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "هَرُعَة", "haruʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "هَرُعَان", "haruʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "هَرُعَتَان",
+        "haruʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرُعُون", "haruʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرُعِين", "haruʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرُعَات",
+        "haruʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "هَرَع", "haraʿ", "her daim koşan", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "هَرَعَة", "haraʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "هَرَعَان", "haraʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "هَرَعَتَان",
+        "haraʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرَعُون", "haraʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرَعِين", "haraʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرَعَات",
+        "haraʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "هَرْع", "harʿ", "her daim koşan", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "هَرْعَة", "harʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "هَرْعَان", "harʿān", "her daim koşan, iki", "orta", ""],
+      ["fa'l + müennes tesniye", "semâî aday", "هَرْعَتَان", "harʿatān", "her daim koşan, iki, müennes", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرْعُون", "harʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرْعِين", "harʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرْعَات",
+        "harʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "هُرُع", "huruʿ", "her daim koşan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "هُرُعَة", "huruʿa", "her daim koşan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "هُرُعَان", "huruʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "هُرُعَتَان",
+        "huruʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هُرُعُون", "huruʿūn", "her daim koşanlar", "orta", ""],
+      ["fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "هُرُعِين", "huruʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هُرُعَات",
+        "huruʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "هَرْعَان", "harʿān", "her daim koşan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "هَرْعَانَة", "harʿāna", "her daim koşan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "هَرْعَانَان", "harʿānān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "هَرْعَانَتَان",
+        "harʿānatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَرْعَانُون",
+        "harʿānūn",
+        "her daim koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَرْعَانِين",
+        "harʿānīn",
+        "her daim koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرْعَانَات",
+        "harʿānāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "هُرَاع", "hurāʿ", "her daim koşan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "هُرَاعَة", "hurāʿa", "her daim koşan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "هُرَاعَان", "hurāʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "هُرَاعَتَان",
+        "hurāʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هُرَاعُون", "hurāʿūn", "her daim koşanlar", "orta", ""],
+      ["fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هُرَاعِين", "hurāʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هُرَاعَات",
+        "hurāʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "هَرَاع", "harāʿ", "her daim koşan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "هَرَاعَة", "harāʿa", "her daim koşan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "هَرَاعَان", "harāʿān", "her daim koşan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "هَرَاعَتَان",
+        "harāʿatān",
+        "her daim koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرَاعُون", "harāʿūn", "her daim koşanlar", "orta", ""],
+      ["fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرَاعِين", "harāʿīn", "her daim koşanlar", "orta", ""],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرَاعَات",
+        "harāʿāt",
+        "her daim koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "هَرَّاع", "harrāʿ", "işi koşma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "هَرَّاعَة", "harrāʿa", "işi koşma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "هَرَّاعَان", "harrāʿān", "işi koşma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "هَرَّاعَتَان",
+        "harrāʿatān",
+        "işi koşma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَرَّاعُون",
+        "harrāʿūn",
+        "işi koşma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَرَّاعِين",
+        "harrāʿīn",
+        "işi koşma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرَّاعَات",
+        "harrāʿāt",
+        "işi koşma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "هَرَّاعَة", "harrāʿa", "pek çok koşan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "هَرَّاعَتَان", "harrāʿatān", "pek çok koşan, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرَّاعَات",
+        "harrāʿāt",
+        "pek çok koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "هَرُوع", "harūʿ", "çok koşan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "هَرُوعَة", "harūʿa", "çok koşan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "هَرُوعَان", "harūʿān", "çok koşan, iki", "orta", ""],
+      ["fa'ūl + müennes tesniye", "semâî aday", "هَرُوعَتَان", "harūʿatān", "çok koşan, iki, müennes", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرُوعُون", "harūʿūn", "çok koşanlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرُوعِين", "harūʿīn", "çok koşanlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرُوعَات",
+        "harūʿāt",
+        "çok koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "هَرُّوع", "harrūʿ", "pek çok koşan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "هَرُّوعَة", "harrūʿa", "pek çok koşan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "هَرُّوعَان", "harrūʿān", "pek çok koşan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "هَرُّوعَتَان",
+        "harrūʿatān",
+        "pek çok koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هَرُّوعُون",
+        "harrūʿūn",
+        "pek çok koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هَرُّوعِين",
+        "harrūʿīn",
+        "pek çok koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرُّوعَات",
+        "harrūʿāt",
+        "pek çok koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "هِرِّيع", "hirrīʿ", "koşmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "هِرِّيعَة", "hirrīʿa", "koşmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "هِرِّيعَان", "hirrīʿān", "koşmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "هِرِّيعَتَان",
+        "hirrīʿatān",
+        "koşmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هِرِّيعُون",
+        "hirrīʿūn",
+        "koşmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هِرِّيعِين",
+        "hirrīʿīn",
+        "koşmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هِرِّيعَات",
+        "hirrīʿāt",
+        "koşmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "هُرَّاع", "hurrāʿ", "son derece koşan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "هُرَّاعَة", "hurrāʿa", "son derece koşan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "هُرَّاعَان", "hurrāʿān", "son derece koşan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "هُرَّاعَتَان",
+        "hurrāʿatān",
+        "son derece koşan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "هُرَّاعُون",
+        "hurrāʿūn",
+        "son derece koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "هُرَّاعِين",
+        "hurrāʿīn",
+        "son derece koşanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هُرَّاعَات",
+        "hurrāʿāt",
+        "son derece koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِهْرَاع", "mihrāʿ", "koşmayı âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِهْرَاعَة", "mihrāʿa", "koşmayı âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِهْرَاعَان", "mihrāʿān", "koşmayı âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِهْرَاعَتَان",
+        "mihrāʿatān",
+        "koşmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِهْرَاعُون",
+        "mihrāʿūn",
+        "koşmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِهْرَاعِين",
+        "mihrāʿīn",
+        "koşmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِهْرَاعَات",
+        "mihrāʿāt",
+        "koşmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِهْرِيع", "mihrīʿ", "koşmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِهْرِيعَة", "mihrīʿa", "koşmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِهْرِيعَان", "mihrīʿān", "koşmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِهْرِيعَتَان",
+        "mihrīʿatān",
+        "koşmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِهْرِيعُون",
+        "mihrīʿūn",
+        "koşmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِهْرِيعِين",
+        "mihrīʿīn",
+        "koşmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِهْرِيعَات",
+        "mihrīʿāt",
+        "koşmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "هَرِيع", "harīʿ", "çok koşan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "هَرِيعَة", "harīʿa", "çok koşan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "هَرِيعَان", "harīʿān", "çok koşan, iki", "orta", ""],
+      ["fa'īl + müennes tesniye", "semâî aday", "هَرِيعَتَان", "harīʿatān", "çok koşan, iki, müennes", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرِيعُون", "harīʿūn", "çok koşanlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرِيعِين", "harīʿīn", "çok koşanlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرِيعَات",
+        "harīʿāt",
+        "çok koşanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "هَرَّع", "harraʿ", "çok koşan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "هَرَّعَة", "harraʿa", "çok koşan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "هَرَّعَان", "harraʿān", "çok koşan, iki", "orta", ""],
+      ["fa''al + müennes tesniye", "semâî aday", "هَرَّعَتَان", "harraʿatān", "çok koşan, iki, müennes", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "هَرَّعُون", "harraʿūn", "çok koşanlar", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "هَرَّعِين", "harraʿīn", "çok koşanlar", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "هَرَّعَات",
+        "harraʿāt",
+        "çok koşanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "هَرْعِيّ", "harʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "هَرَعِيّ", "haraʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "هِرْعِيّ", "hirʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "هُرْعِيّ", "hurʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "هِرَاعِيّ", "hirāʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "هَارِعِيّ", "hāriʿiyy", "koşma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَهْرُوعِيّ", "mahrūʿiyy", "koşma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "هَرِيعِيّ", "harīʿiyy", "koşma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَهْرَعِيّ", "mahraʿiyy", "koşma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَهْرِيعِيّ", "tahrīʿiyy", "koşma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَهَارُعِيّ", "tahāruʿiyy", "koşma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِهْرَاعِيّ", "ʾihrāʿiyy", "koşma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِهْتِرَاعِيّ", "ihtirāʿiyy", "koşma ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "هَرْعِيَّة", "harʿiyya", "koşanlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "هَرَعِيَّة", "haraʿiyya", "koşanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "هِرْعِيَّة", "hirʿiyya", "koşanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "هُرْعِيَّة", "hurʿiyya", "koşanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "هِرَاعِيَّة", "hirāʿiyya", "koşanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "هَارِعِيَّة", "hāriʿiyya", "koşanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَهْرُوعِيَّة", "mahrūʿiyya", "koşanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "هَرِيعِيَّة", "harīʿiyya", "koşanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَهْرَعِيَّة", "mahraʿiyya", "koşanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَهْرِيعِيَّة", "tahrīʿiyya", "koşanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَهَارُعِيَّة", "tahāruʿiyya", "koşanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِهْرَاعِيَّة", "ʾihrāʿiyya", "koşanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِهْتِرَاعِيَّة", "ihtirāʿiyya", "koşanlık", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "هَرَاع", "harāʿ", "koşma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "هُرُوع", "hurūʿ", "koşma", "orta", ""],
+      ["fi'âl", "semâî aday", "هِرَاع", "hirāʿ", "koşma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "هُرْع", "hurʿ", "koşma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "هَرَاعَة", "harāʿa", "koşma", "orta", ""],
+      ["fi'âle", "semâî aday", "هِرَاعَة", "hirāʿa", "koşma", "orta", ""],
+      ["fu'ûle", "semâî aday", "هُرُوعَة", "hurūʿa", "koşma", "orta", ""],
+      ["fa'l", "semâî aday", "هَرْع", "harʿ", "koşma", "orta", ""],
+      ["fi'l", "semâî aday", "هِرْع", "hirʿ", "koşma", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "هَارُوع", "hārūʿ", "koşma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "هَرَعَة", "haraʿa", "koşma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "هُرَعَة", "huraʿa", "koşma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُهْرُوعَة", "ʾuhrūʿa", "koşma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "هَوْرَع", "hawraʿ", "koşma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "هَيْرَع", "hayraʿ", "koşma türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "هَرْع", "harʿ", "koşma türünden şey", "orta", ""],
+      ["fa'al", "semâî aday", "هَرَع", "haraʿ", "koşma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "هِرْع", "hirʿ", "koşma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "هُرْع", "hurʿ", "koşma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "هَرِيع", "harīʿ", "koşma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "هِرَع", "hiraʿ", "koşma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "هُرُع", "huruʿ", "koşma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "هَرَاع", "harāʿ", "koşma türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "هَارُوعَة", "hārūʿa", "koşma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "هَوْرَعَة", "hawraʿa", "koşma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "هَيْرَعَة", "hayraʿa", "koşma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "هَرْعَة", "harʿa", "koşma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "هَرَعَة", "haraʿa", "koşma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "هِرْعَة", "hirʿa", "koşma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "هُرْعَة", "hurʿa", "koşma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "هَرِيعَة", "harīʿa", "koşma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "هِرَعَة", "hiraʿa", "koşma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "هُرُعَة", "huruʿa", "koşma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "هَرَاعَة", "harāʿa", "koşma türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَهْرَاع", "ʾahrāʿ", "koşmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَهْرِعَة", "ʾahriʿa", "koşmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَهَارِع", "ʾahāriʿ", "koşmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَهَارِيع", "ʾahārīʿ", "koşmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "هُرُوع", "hurūʿ", "koşmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "هُرُع", "huruʿ", "koşmalar", "orta", ""],
+      ["fi'āl", "semâî aday", "هِرَاع", "hirāʿ", "koşmalar", "orta", ""],
+      ["fi'al", "semâî aday", "هِرَع", "hiraʿ", "koşmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "هِرَعَة", "hiraʿa", "koşmalar", "orta", ""],
+      ["fu'al", "semâî aday", "هُرَع", "huraʿ", "koşmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "هُرَعاء", "huraʿāʾ", "koşmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "هَرَعَة", "haraʿa", "koşmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "هُرَّاع", "hurrāʿ", "koşmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "هَرَاع", "harāʿ", "koşmalar", "orta", ""],
+      ["fa'al", "semâî aday", "هَرَع", "haraʿ", "koşmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَهَارِع", "mahāriʿ", "koşmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَهَارِيع", "mahārīʿ", "koşmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "هَوَارِع", "hawāriʿ", "koşmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَهْرُع", "ʾahruʿ", "koşmalar", "orta", ""],
+      ["fu''al", "semâî aday", "هُرَّع", "hurraʿ", "koşmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "هَرَائِع", "harāʾiʿ", "koşmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "هُرَيْع", "hurayʿ", "koşmalar", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَهْرَاعَات", "ʾahrāʿāt", "koşmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَهْرِعَات", "ʾahriʿāt", "koşmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَهَارِعَات", "ʾahāriʿāt", "koşmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَهَارِيعَات", "ʾahārīʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "هُرُوعَات", "hurūʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "هُرُعَات", "huruʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "هِرَاعَات", "hirāʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "هِرَعَات", "hiraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "هِرَعَات", "hiraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "هُرَعَات", "huraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "هُرَعاآت", "huraʿāʾāt", "koşmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "هَرَعَات", "haraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "هُرَّاعَات", "hurrāʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "هَرَاعَات", "harāʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "هَرَعَات", "haraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَهَارِعَات", "mahāriʿāt", "koşmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَهَارِيعَات", "mahārīʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "هَوَارِعَات", "hawāriʿāt", "koşmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَهْرُعَات", "ʾahruʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "هُرَّعَات", "hurraʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "هَرَائِعَات", "harāʾiʿāt", "koşmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "هُرَيْعَات", "hurayʿāt", "koşmalar topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "travel_rapidly.v.01",
     "orta": "verb.motion",
     "ust": "fiil ve hadise",
@@ -1234,30 +1992,8 @@
     "dayanak_tanim": "move very fast",
     "dayanak_karsilik": "hurry"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الهاء والراء",
-    "mihveri": "سرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا). ومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم). (4/2300)",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (هو) : تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع).",
-    "tam_metin": "{فَهُمْ عَلَى آثَارِهِمْ يُهْرَعُونَ (70)} [الصافات: 70]\n\"رجل هَرِع -ككتف: سريعُ البكاء. ودم هَرِعٌ: جارٍ بَيِّنُ الهَرَع. والهَرِعُ الجاري. والهَيْرَعَة- بالفتح: القَصَبة التي يَزْمُر فيها الراعي. هَرِعَ الشيء (فرح): سال / تتابع في سيلانه \".\n° المعنى المحوري\nسرعة تَسَيّب المائع ونحوه من الأثناء: كسرعة البكاء والدم وكالصوت من القصبة الفارغة. ومنه: \"الهرِعَة من النساء - كفرحة: التي تُنْزل حين يخالطها الرجلُ قبلَه، والمَهْرُوع: المجنون الذي يُصْرَع (يذهب عقله)، والمصروع من الجَهد (ذهبت قوته). والهَيْرَع -بالفتح: الجبان الضعيف الجَزوع (خوار لا يتماسك) والهًيْرَع- بالفتح الذي لا يتماسك، وريح هَيرَع: سريعةٌ الهبوب / قَصِفَةٌ / تَسْفِي التراب. ورجل هَرع - كفرح: سَرِيع المشي. والهرْعة بالفتح: القَمْلة الصغيرة (سريعة) والِهرْيَع- بالكسر: سَفِيرُ وَرَق الشجر \" (يتسبب من الشجر بكثرة وتدفعه الريح بعيدا).\nومن الأصل: \"أُهْرِعَ الرجل- للمفعول: خَفَّ وأُرْعِدَ من سُرعةٍ أو خَوْف أو حِرْصٍ أو غَضَب أو حُمَّى. والإهراع إسراع في رِعْدة \" {وَجَاءَهُ قَوْمُهُ يُهْرَعُونَ إِلَيهِ} [هود: 78] يَسْعَوْن عِجالًا (من خفة حلومهم).\n(4/2300)\n° \nمعنى الفصل المعجمي (هو)\n: تسيب بالغ لرقة - كالهُرار: استطلاق بطون الإبل - في (هرر)، وكالهَوْر: البُحيرة التي تتسع - واليَهيرة الناقة الموصوفتين - في (هور وهير)، وكالذي يهرب مبعدًا - في (هرب). وكالذي يُهرع: يَجري، ويَهْرَع: يتابع سيلانه - في (هرع)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الغرائز",
-    "bab": "الخبرة",
-    "kok_gecis": 23.0,
-    "kitapta_gecis": 6.0,
-    "zenginlesme": 5.43
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -1277,563 +2013,14 @@
       "boy": 20
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
+  "muhassas": {
+    "kitap": "الغرائز",
+    "bab": "الخبرة",
+    "kok_gecis": 23.0,
+    "kitapta_gecis": 6.0,
+    "zenginlesme": 5.43
   },
-  "kelimeler": [
-    {
-      "kelime": "يُهْرَعُونَ",
-      "kok": "هرع",
-      "lemma": "يُهْرَعُ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "11:78",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "koşarak gelir",
-        "lemma": "koşarak gelir",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 2,
-      "isim": 0
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Aktarım",
-    "ayrim": "koş",
-    "acilim": "هرع := Aktarım(ayrım: koş)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Aktarım",
-    "kelimeler": [
-      {
-        "lemma": "يُهْرَعُ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Muzâri"],
-        "adet": 2,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

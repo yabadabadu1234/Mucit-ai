@@ -398,14 +398,14 @@ def kok_json(k):
 
 def mustak_satirlari(k):
     """Sabit sıralı çeşit listesi: her çeşit için [(biçim, ‘●’ Kur’ân’da | ‘○’ kıyâsî, Türkçe, ilk yer)]; olmayan çeşit boş liste."""
-    d = kok_json(k); G = d['mustaklar'] if d else {}
+    d = kok_json(k); G = d['mustak'] if d and d.get('mustak') else {}
     G = sorted(G.items(), key=lambda kv: ('bâb' in kv[0] or 'Rubâ' in kv[0], list(G).index(kv[0])))      # sülâsî önce
     kur = KOK_ISIM.get(k, {}); sat = [[] for _ in CESIT_AD]
     motor = collections.defaultdict(list)                       # iskelet -> [(çeşit indeksi, biçim, Türkçe)]
     for g, L in G:
         for ci, (ad, f) in enumerate(CESIT):
             if f(g):
-                for row in L: motor[MF.iskelet(row[1])].append((ci, row[1], row[3]))
+                for row in L: motor[MF.iskelet(row[2])].append((ci, row[2], row[4]))
     ek = []
     for (lem, c), (n, ilk) in kur.items():
         yer = '%s · %d geçiş' % (ilk, n); kayit = None

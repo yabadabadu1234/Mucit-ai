@@ -1,317 +1,133 @@
 {
   "kok": "جدث",
-  "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "mezar ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 3
   },
-  "mustaklar": {
+  "fiil": "mezar ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
+  "sinif": "sâlim",
+  "ses": {
+    "harf": "ج",
+    "fasil": "جد",
+    "mahrec": "şeceriyye",
+    "bolge": "dil"
+  },
+  "anlam": "Cades: mezar; ecdes: mezar taşı",
+  "esas_manalar": "kabir, mezar",
+  "mekayis": [
+    {
+      "baslik": "جَدَثَ",
+      "metin": "(جَدَثَ) الْجِيمُ وَالدَّالُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ: الْجَدَثُ الْقَبْرُ، وَجَمْعُهُ أَجْدَاثٌ.",
+      "baslik_tr": "جَدَثَ",
+      "metin_tr": "(جَدَثَ) Cim, dal ve se harfleri tek bir kelimedir: 'Cedes' (الْجَدَث) kabirdir; cem'i 'ecdâs'tır (أَجْدَاث)."
+    }
+  ],
+  "cebel": {
+    "fasil": "الجيم والدال",
+    "baslik": "جدث",
+    "mihveri": "نَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51].",
+    "tam_metin": "{يَخْرُجُونَ مِنَ الْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُنْتَشِرٌ} [القمر: 7].\n\"الجَدَث - محركة: القبر \".\n° المعنى المحوري\nنَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51].",
+    "fasil_ozeti": "° معنى الفصل المعجمي (جد): الكثافة صلابةً أو عِظمًا مع الامتداد والاستواء - كما يتمثل في الجَدَد من الأرض - في (جدد)، وفي قوة المطر الواقع (ووقوعه امتداد ونفاذ) - في (جود)، وكما في الشيء المتحصل - في (وجد)، وكما في الأرض التي تُحفر جدثًا - في (جدث)، وفي جسم الجِدار وبَثر الجُدَرِيّ والعياذ بالله - في (جدر)، وكما في جسم الجَدالة والحبل الذي يفتل - في (جدل).",
+    "mihveri_tr": "Yerden genişçe bir parçadan toprağı kuvvetle eşeleyip çıkarmaktır (kabrin kazıldığı gibi) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [Yâsîn: 51]."
+  },
+  "zemahseri": {
+    "hakikat": "غيّبوه في الجدث أي في القبر. وتقول: شرد الأحداث، نزول الأجداث.",
+    "mecaz_var": false
+  },
+  "etymarab": {
+    "latin": "ǦDṮ",
+    "kok_maddesi": "Back to library EtymArab ǦDṮ جدث BP – • HDAL • © SG | 5Mar2023 √ǦDṮ “root” ▪ ǦDṮ_1 ‘...’ ↗ ... ▪ ǦDṮ_2 ‘...’ ↗ ... ▪ ǦDṮ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘(a doubtful verbal root) a grave, to make or prepare a grave’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön EtymArab ǦDṮ جدث BP – • HDAL • © SG | 5Mart2023 √ǦDṮ “kök” ▪ ǦDṮ_1 ‘...’ ↗ ... ▪ ǦDṮ_2 ‘...’ ↗ ... ▪ ǦDṮ_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘(meşkûk bir fiil kökü) bir kabir, kabir yapmak veya hazırlamak’ ▪ … – . . – – Kaynaklar ; meta ; gram ; ingl ; mefh ; tarh ; akr ; tart ; batı ; türv ;"
+  },
+  "kuran": {
+    "gecis": 3,
+    "ilk": "36:51:7:2",
+    "tur": {
+      "N": 3
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "أَجْدَاث": 3
+    },
+    "bicimler": {
+      "أَجْدَاثِ": 3
+    },
+    "morfoloji_gecis": 3
+  },
+  "kelimeler": [
+    {
+      "lemma": "أَجْداث",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "ٱلْأَجْدَاثِ",
+          "ilk": "36:51",
+          "adet": 3,
+          "tr": "mezarlar"
+        }
+      ],
+      "tr": "mezarlar",
+      "nasil": "cem‘-i mükesser (aday) · ef'āl (yalnız aday eşleşme)",
+      "adet": 3
+    }
+  ],
+  "mustak": {
     "masdar · sülâsî mücerred": [
-      [
-        0,
-        "جَدْث",
-        "cadṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        1,
-        "جِدْث",
-        "cidṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        2,
-        "جُدْث",
-        "cudṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        3,
-        "جَدَث",
-        "cadaṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        4,
-        "جِدَث",
-        "cidaṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        5,
-        "جُدُث",
-        "cuduṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        6,
-        "جُدُوث",
-        "cudūṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        7,
-        "جِدَاث",
-        "cidāṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        8,
-        "جُدَاث",
-        "cudāṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        9,
-        "جَدَاث",
-        "cadāṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        10,
-        "جَدَاثَة",
-        "cadāṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        11,
-        "جُدُوثَة",
-        "cudūṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        12,
-        "جِدَاثَة",
-        "cidāṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        13,
-        "جَدِيث",
-        "cadīṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        14,
-        "جَدُوث",
-        "cadūṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        15,
-        "جَدَثَان",
-        "cadaṯān",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        16,
-        "جُدْثَان",
-        "cudṯān",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        17,
-        "جِدْثَان",
-        "cidṯān",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        18,
-        "جَدْثَى",
-        "cadṯā",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        19,
-        "جُدْثَى",
-        "cudṯā",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        20,
-        "جِدْثَى",
-        "cidṯā",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        21,
-        "جَدَثَة",
-        "cadaṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        22,
-        "جِدَثَة",
-        "cidaṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        23,
-        "جَدْثُوثَة",
-        "cadṯūṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        24,
-        "تُجْدُوث",
-        "tucdūṯ",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        25,
-        "تَجْدِثَة",
-        "tacdiṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        26,
-        "تَجْدَثَة",
-        "tacdaṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        27,
-        "مَجْدُثَة",
-        "macduṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ],
-      [
-        28,
-        "مَجْدِثَة",
-        "macdiṯa",
-        "mezar",
-        "kontrol",
-        ""
-      ]
+      ["fa'l", "semâî aday", "جَدْث", "cadṯ", "mezar", "kontrol", ""],
+      ["fi'l", "semâî aday", "جِدْث", "cidṯ", "mezar", "kontrol", ""],
+      ["fu'l", "semâî aday", "جُدْث", "cudṯ", "mezar", "kontrol", ""],
+      ["fa'al", "semâî aday", "جَدَث", "cadaṯ", "mezar", "kontrol", ""],
+      ["fi'al", "semâî aday", "جِدَث", "cidaṯ", "mezar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "جُدُث", "cuduṯ", "mezar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "جُدُوث", "cudūṯ", "mezar", "kontrol", ""],
+      ["fi'āl", "semâî aday", "جِدَاث", "cidāṯ", "mezar", "kontrol", ""],
+      ["fu'āl", "semâî aday", "جُدَاث", "cudāṯ", "mezar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "جَدَاث", "cadāṯ", "mezar", "kontrol", ""],
+      ["fa'āle", "semâî aday", "جَدَاثَة", "cadāṯa", "mezar", "kontrol", ""],
+      ["fu'ūle", "semâî aday", "جُدُوثَة", "cudūṯa", "mezar", "kontrol", ""],
+      ["fi'āle", "semâî aday", "جِدَاثَة", "cidāṯa", "mezar", "kontrol", ""],
+      ["fa'īl", "semâî aday", "جَدِيث", "cadīṯ", "mezar", "kontrol", ""],
+      ["fa'ūl", "semâî aday", "جَدُوث", "cadūṯ", "mezar", "kontrol", ""],
+      ["fa'alān", "semâî aday", "جَدَثَان", "cadaṯān", "mezar", "kontrol", ""],
+      ["fu'lān", "semâî aday", "جُدْثَان", "cudṯān", "mezar", "kontrol", ""],
+      ["fi'lān", "semâî aday", "جِدْثَان", "cidṯān", "mezar", "kontrol", ""],
+      ["fa'lā", "semâî aday", "جَدْثَى", "cadṯā", "mezar", "kontrol", ""],
+      ["fu'lā", "semâî aday", "جُدْثَى", "cudṯā", "mezar", "kontrol", ""],
+      ["fi'lā", "semâî aday", "جِدْثَى", "cidṯā", "mezar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "جَدَثَة", "cadaṯa", "mezar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "جِدَثَة", "cidaṯa", "mezar", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "جَدْثُوثَة", "cadṯūṯa", "mezar", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُجْدُوث", "tucdūṯ", "mezar", "kontrol", ""],
+      ["taf'ila", "semâî aday", "تَجْدِثَة", "tacdiṯa", "mezar", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَجْدَثَة", "tacdaṯa", "mezar", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَجْدُثَة", "macduṯa", "mezar", "kontrol", ""],
+      ["maf'ila", "semâî aday", "مَجْدِثَة", "macdiṯa", "mezar", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [
-        29,
-        "تَجْدِيث",
-        "tacdīṯ",
-        "çokça mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        30,
-        "تَجْدِثَة",
-        "tacdiṯa",
-        "çokça mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        31,
-        "جِدِّاث",
-        "ciddāṯ",
-        "çokça mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["taf'īl", "kıyâsî", "تَجْدِيث", "tacdīṯ", "çokça mezar olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî", "تَجْدِثَة", "tacdiṯa", "çokça mezar olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî", "جِدِّاث", "ciddāṯ", "çokça mezar olma", "kontrol", ""]
     ],
     "ism-i merre · bâb II": [
-      [
-        32,
-        "تَجْدِيثَة",
-        "tacdīṯa",
-        "bir kere çokça mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        33,
-        "جِدِّاثَة",
-        "ciddāṯa",
-        "bir kere çokça mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["taf'īl + tâ", "aday", "تَجْدِيثَة", "tacdīṯa", "bir kere çokça mezar olma", "kontrol", ""],
+      ["fi''āl + tâ", "aday", "جِدِّاثَة", "ciddāṯa", "bir kere çokça mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُجَدِّث", "mucaddiṯ", "çokça mezar olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُجَدِّثَة", "mucaddiṯa", "çokça mezar olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُجَدِّثَان", "mucaddiṯān", "çokça mezar olan, iki", "kontrol", ""],
       [
-        34,
-        "مُجَدِّث",
-        "mucaddiṯ",
-        "çokça mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        35,
-        "مُجَدِّثَة",
-        "mucaddiṯa",
-        "çokça mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        36,
-        "مُجَدِّثَان",
-        "mucaddiṯān",
-        "çokça mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        37,
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
         "مُجَدِّثَتَان",
         "mucaddiṯatān",
         "çokça mezar olan, iki, müennes",
@@ -319,7 +135,8 @@
         ""
       ],
       [
-        38,
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَدِّثُون",
         "mucaddiṯūn",
         "çokça mezar olanlar",
@@ -327,7 +144,8 @@
         ""
       ],
       [
-        39,
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَدِّثِين",
         "mucaddiṯīn",
         "çokça mezar olanlar",
@@ -335,7 +153,8 @@
         ""
       ],
       [
-        40,
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَدِّثَات",
         "mucaddiṯāt",
         "çokça mezar olanlar, müennes",
@@ -344,32 +163,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُجَدَّث", "mucaddaṯ", "çokça mezar olunan", "kontrol", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُجَدَّثَة", "mucaddaṯa", "çokça mezar olunan, müennes", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُجَدَّثَان", "mucaddaṯān", "çokça mezar olunan, iki", "kontrol", ""],
       [
-        41,
-        "مُجَدَّث",
-        "mucaddaṯ",
-        "çokça mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        42,
-        "مُجَدَّثَة",
-        "mucaddaṯa",
-        "çokça mezar olunan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        43,
-        "مُجَدَّثَان",
-        "mucaddaṯān",
-        "çokça mezar olunan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        44,
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
         "مُجَدَّثَتَان",
         "mucaddaṯatān",
         "çokça mezar olunan, iki, müennes",
@@ -377,7 +176,8 @@
         ""
       ],
       [
-        45,
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَدَّثُون",
         "mucaddaṯūn",
         "çokça mezar olunanlar",
@@ -385,7 +185,8 @@
         ""
       ],
       [
-        46,
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَدَّثِين",
         "mucaddaṯīn",
         "çokça mezar olunanlar",
@@ -393,7 +194,8 @@
         ""
       ],
       [
-        47,
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَدَّثَات",
         "mucaddaṯāt",
         "çokça mezar olunanlar, müennes",
@@ -402,54 +204,20 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [
-        48,
-        "مُجَدَّث",
-        "mucaddaṯ",
-        "çokça mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["mufa''al", "kıyâsî", "مُجَدَّث", "mucaddaṯ", "çokça mezar olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb III": [
-      [
-        49,
-        "مُجَادَثَة",
-        "mucādaṯa",
-        "biriyle karşılıklı mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        50,
-        "جِدَاث",
-        "cidāṯ",
-        "biriyle karşılıklı mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["mufā'ale", "kıyâsî", "مُجَادَثَة", "mucādaṯa", "biriyle karşılıklı mezar olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî", "جِدَاث", "cidāṯ", "biriyle karşılıklı mezar olma", "kontrol", ""]
     ],
     "ism-i merre · bâb III": [
-      [
-        51,
-        "جِدَاثَة",
-        "cidāṯa",
-        "bir kere biriyle karşılıklı mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["fi'āl + tâ", "aday", "جِدَاثَة", "cidāṯa", "bir kere biriyle karşılıklı mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُجَادِث", "mucādiṯ", "biriyle karşılıklı mezar olan", "kontrol", ""],
       [
-        52,
-        "مُجَادِث",
-        "mucādiṯ",
-        "biriyle karşılıklı mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        53,
+        "mufā'il + müennes",
+        "kıyâsî",
         "مُجَادِثَة",
         "mucādiṯa",
         "biriyle karşılıklı mezar olan, müennes",
@@ -457,7 +225,8 @@
         ""
       ],
       [
-        54,
+        "mufā'il + tesniye",
+        "kıyâsî",
         "مُجَادِثَان",
         "mucādiṯān",
         "biriyle karşılıklı mezar olan, iki",
@@ -465,7 +234,8 @@
         ""
       ],
       [
-        55,
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
         "مُجَادِثَتَان",
         "mucādiṯatān",
         "biriyle karşılıklı mezar olan, iki, müennes",
@@ -473,7 +243,8 @@
         ""
       ],
       [
-        56,
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَادِثُون",
         "mucādiṯūn",
         "biriyle karşılıklı mezar olanlar",
@@ -481,7 +252,8 @@
         ""
       ],
       [
-        57,
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَادِثِين",
         "mucādiṯīn",
         "biriyle karşılıklı mezar olanlar",
@@ -489,7 +261,8 @@
         ""
       ],
       [
-        58,
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَادِثَات",
         "mucādiṯāt",
         "biriyle karşılıklı mezar olanlar, müennes",
@@ -498,16 +271,10 @@
       ]
     ],
     "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُجَادَث", "mucādaṯ", "biriyle karşılıklı mezar olunan", "kontrol", ""],
       [
-        59,
-        "مُجَادَث",
-        "mucādaṯ",
-        "biriyle karşılıklı mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        60,
+        "mufā'al + müennes",
+        "kıyâsî",
         "مُجَادَثَة",
         "mucādaṯa",
         "biriyle karşılıklı mezar olunan, müennes",
@@ -515,7 +282,8 @@
         ""
       ],
       [
-        61,
+        "mufā'al + tesniye",
+        "kıyâsî",
         "مُجَادَثَان",
         "mucādaṯān",
         "biriyle karşılıklı mezar olunan, iki",
@@ -523,7 +291,8 @@
         ""
       ],
       [
-        62,
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
         "مُجَادَثَتَان",
         "mucādaṯatān",
         "biriyle karşılıklı mezar olunan, iki, müennes",
@@ -531,7 +300,8 @@
         ""
       ],
       [
-        63,
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَادَثُون",
         "mucādaṯūn",
         "biriyle karşılıklı mezar olunanlar",
@@ -539,7 +309,8 @@
         ""
       ],
       [
-        64,
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَادَثِين",
         "mucādaṯīn",
         "biriyle karşılıklı mezar olunanlar",
@@ -547,7 +318,8 @@
         ""
       ],
       [
-        65,
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَادَثَات",
         "mucādaṯāt",
         "biriyle karşılıklı mezar olunanlar, müennes",
@@ -556,62 +328,21 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [
-        66,
-        "مُجَادَث",
-        "mucādaṯ",
-        "biriyle karşılıklı mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["mufā'al", "kıyâsî", "مُجَادَث", "mucādaṯ", "biriyle karşılıklı mezar olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IV": [
-      [
-        67,
-        "إِجْدَاث",
-        "ʾicdāṯ",
-        "mezarlaştırma",
-        "kontrol",
-        ""
-      ]
+      ["if'āl", "kıyâsî", "إِجْدَاث", "ʾicdāṯ", "mezarlaştırma", "kontrol", ""]
     ],
     "ism-i merre · bâb IV": [
-      [
-        68,
-        "إِجْدَاثَة",
-        "ʾicdāṯa",
-        "bir kere mezarlaştırma",
-        "kontrol",
-        ""
-      ]
+      ["if'āl + tâ", "aday", "إِجْدَاثَة", "ʾicdāṯa", "bir kere mezarlaştırma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُجْدِث", "mucdiṯ", "mezarlaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî", "مُجْدِثَة", "mucdiṯa", "mezarlaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُجْدِثَان", "mucdiṯān", "mezarlaştıran, iki", "kontrol", ""],
       [
-        69,
-        "مُجْدِث",
-        "mucdiṯ",
-        "mezarlaştıran",
-        "kontrol",
-        ""
-      ],
-      [
-        70,
-        "مُجْدِثَة",
-        "mucdiṯa",
-        "mezarlaştıran, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        71,
-        "مُجْدِثَان",
-        "mucdiṯān",
-        "mezarlaştıran, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        72,
+        "muf'il + müennes tesniye",
+        "kıyâsî",
         "مُجْدِثَتَان",
         "mucdiṯatān",
         "mezarlaştıran, iki, müennes",
@@ -619,7 +350,8 @@
         ""
       ],
       [
-        73,
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْدِثُون",
         "mucdiṯūn",
         "mezarlaştıranlar",
@@ -627,7 +359,8 @@
         ""
       ],
       [
-        74,
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْدِثِين",
         "mucdiṯīn",
         "mezarlaştıranlar",
@@ -635,7 +368,8 @@
         ""
       ],
       [
-        75,
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْدِثَات",
         "mucdiṯāt",
         "mezarlaştıranlar, müennes",
@@ -644,32 +378,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُجْدَث", "mucdaṯ", "mezarlaştırılan", "kontrol", ""],
+      ["muf'al + müennes", "kıyâsî", "مُجْدَثَة", "mucdaṯa", "mezarlaştırılan, müennes", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُجْدَثَان", "mucdaṯān", "mezarlaştırılan, iki", "kontrol", ""],
       [
-        76,
-        "مُجْدَث",
-        "mucdaṯ",
-        "mezarlaştırılan",
-        "kontrol",
-        ""
-      ],
-      [
-        77,
-        "مُجْدَثَة",
-        "mucdaṯa",
-        "mezarlaştırılan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        78,
-        "مُجْدَثَان",
-        "mucdaṯān",
-        "mezarlaştırılan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        79,
+        "muf'al + müennes tesniye",
+        "kıyâsî",
         "مُجْدَثَتَان",
         "mucdaṯatān",
         "mezarlaştırılan, iki, müennes",
@@ -677,7 +391,8 @@
         ""
       ],
       [
-        80,
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْدَثُون",
         "mucdaṯūn",
         "mezarlaştırılanlar",
@@ -685,7 +400,8 @@
         ""
       ],
       [
-        81,
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْدَثِين",
         "mucdaṯīn",
         "mezarlaştırılanlar",
@@ -693,7 +409,8 @@
         ""
       ],
       [
-        82,
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْدَثَات",
         "mucdaṯāt",
         "mezarlaştırılanlar, müennes",
@@ -702,46 +419,19 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [
-        83,
-        "مُجْدَث",
-        "mucdaṯ",
-        "mezarlaştırma yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["muf'al", "kıyâsî", "مُجْدَث", "mucdaṯ", "mezarlaştırma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb V": [
-      [
-        84,
-        "تَجَدُّث",
-        "tacadduṯ",
-        "kendini zorlayarak mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["tafa''ul", "kıyâsî", "تَجَدُّث", "tacadduṯ", "kendini zorlayarak mezar olma", "kontrol", ""]
     ],
     "ism-i merre · bâb V": [
-      [
-        85,
-        "تَجَدُّثَة",
-        "tacadduṯa",
-        "bir kere kendini zorlayarak mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["tafa''ul + tâ", "aday", "تَجَدُّثَة", "tacadduṯa", "bir kere kendini zorlayarak mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَجَدِّث", "mutacaddiṯ", "kendini zorlayarak mezar olan", "kontrol", ""],
       [
-        86,
-        "مُتَجَدِّث",
-        "mutacaddiṯ",
-        "kendini zorlayarak mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        87,
+        "mutafa''il + müennes",
+        "kıyâsî",
         "مُتَجَدِّثَة",
         "mutacaddiṯa",
         "kendini zorlayarak mezar olan, müennes",
@@ -749,7 +439,8 @@
         ""
       ],
       [
-        88,
+        "mutafa''il + tesniye",
+        "kıyâsî",
         "مُتَجَدِّثَان",
         "mutacaddiṯān",
         "kendini zorlayarak mezar olan, iki",
@@ -757,7 +448,8 @@
         ""
       ],
       [
-        89,
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
         "مُتَجَدِّثَتَان",
         "mutacaddiṯatān",
         "kendini zorlayarak mezar olan, iki, müennes",
@@ -765,7 +457,8 @@
         ""
       ],
       [
-        90,
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَدِّثُون",
         "mutacaddiṯūn",
         "kendini zorlayarak mezar olanlar",
@@ -773,7 +466,8 @@
         ""
       ],
       [
-        91,
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَدِّثِين",
         "mutacaddiṯīn",
         "kendini zorlayarak mezar olanlar",
@@ -781,7 +475,8 @@
         ""
       ],
       [
-        92,
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَدِّثَات",
         "mutacaddiṯāt",
         "kendini zorlayarak mezar olanlar, müennes",
@@ -790,16 +485,10 @@
       ]
     ],
     "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَجَدَّث", "mutacaddaṯ", "kendini zorlayarak mezar olunan", "kontrol", ""],
       [
-        93,
-        "مُتَجَدَّث",
-        "mutacaddaṯ",
-        "kendini zorlayarak mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        94,
+        "mutafa''al + müennes",
+        "kıyâsî",
         "مُتَجَدَّثَة",
         "mutacaddaṯa",
         "kendini zorlayarak mezar olunan, müennes",
@@ -807,7 +496,8 @@
         ""
       ],
       [
-        95,
+        "mutafa''al + tesniye",
+        "kıyâsî",
         "مُتَجَدَّثَان",
         "mutacaddaṯān",
         "kendini zorlayarak mezar olunan, iki",
@@ -815,7 +505,8 @@
         ""
       ],
       [
-        96,
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
         "مُتَجَدَّثَتَان",
         "mutacaddaṯatān",
         "kendini zorlayarak mezar olunan, iki, müennes",
@@ -823,7 +514,8 @@
         ""
       ],
       [
-        97,
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَدَّثُون",
         "mutacaddaṯūn",
         "kendini zorlayarak mezar olunanlar",
@@ -831,7 +523,8 @@
         ""
       ],
       [
-        98,
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَدَّثِين",
         "mutacaddaṯīn",
         "kendini zorlayarak mezar olunanlar",
@@ -839,7 +532,8 @@
         ""
       ],
       [
-        99,
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَدَّثَات",
         "mutacaddaṯāt",
         "kendini zorlayarak mezar olunanlar, müennes",
@@ -849,7 +543,8 @@
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
       [
-        100,
+        "mutafa''al",
+        "kıyâsî",
         "مُتَجَدَّث",
         "mutacaddaṯ",
         "kendini zorlayarak mezar olma yeri, vakti",
@@ -858,52 +553,26 @@
       ]
     ],
     "masdar · bâb VI": [
-      [
-        101,
-        "تَجَادُث",
-        "tacāduṯ",
-        "birbirine mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["tafā'ul", "kıyâsî", "تَجَادُث", "tacāduṯ", "birbirine mezar olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VI": [
-      [
-        102,
-        "تَجَادُثَة",
-        "tacāduṯa",
-        "bir kere birbirine mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["tafā'ul + tâ", "aday", "تَجَادُثَة", "tacāduṯa", "bir kere birbirine mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَجَادِث", "mutacādiṯ", "birbirine mezar olan", "kontrol", ""],
       [
-        103,
-        "مُتَجَادِث",
-        "mutacādiṯ",
-        "birbirine mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        104,
+        "mutafā'il + müennes",
+        "kıyâsî",
         "مُتَجَادِثَة",
         "mutacādiṯa",
         "birbirine mezar olan, müennes",
         "kontrol",
         ""
       ],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَجَادِثَان", "mutacādiṯān", "birbirine mezar olan, iki", "kontrol", ""],
       [
-        105,
-        "مُتَجَادِثَان",
-        "mutacādiṯān",
-        "birbirine mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        106,
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
         "مُتَجَادِثَتَان",
         "mutacādiṯatān",
         "birbirine mezar olan, iki, müennes",
@@ -911,7 +580,8 @@
         ""
       ],
       [
-        107,
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَادِثُون",
         "mutacādiṯūn",
         "birbirine mezar olanlar",
@@ -919,7 +589,8 @@
         ""
       ],
       [
-        108,
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَادِثِين",
         "mutacādiṯīn",
         "birbirine mezar olanlar",
@@ -927,7 +598,8 @@
         ""
       ],
       [
-        109,
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَادِثَات",
         "mutacādiṯāt",
         "birbirine mezar olanlar, müennes",
@@ -936,16 +608,10 @@
       ]
     ],
     "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَجَادَث", "mutacādaṯ", "birbirine mezar olunan", "kontrol", ""],
       [
-        110,
-        "مُتَجَادَث",
-        "mutacādaṯ",
-        "birbirine mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        111,
+        "mutafā'al + müennes",
+        "kıyâsî",
         "مُتَجَادَثَة",
         "mutacādaṯa",
         "birbirine mezar olunan, müennes",
@@ -953,7 +619,8 @@
         ""
       ],
       [
-        112,
+        "mutafā'al + tesniye",
+        "kıyâsî",
         "مُتَجَادَثَان",
         "mutacādaṯān",
         "birbirine mezar olunan, iki",
@@ -961,7 +628,8 @@
         ""
       ],
       [
-        113,
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
         "مُتَجَادَثَتَان",
         "mutacādaṯatān",
         "birbirine mezar olunan, iki, müennes",
@@ -969,7 +637,8 @@
         ""
       ],
       [
-        114,
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَادَثُون",
         "mutacādaṯūn",
         "birbirine mezar olunanlar",
@@ -977,7 +646,8 @@
         ""
       ],
       [
-        115,
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَادَثِين",
         "mutacādaṯīn",
         "birbirine mezar olunanlar",
@@ -985,7 +655,8 @@
         ""
       ],
       [
-        116,
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَادَثَات",
         "mutacādaṯāt",
         "birbirine mezar olunanlar, müennes",
@@ -994,62 +665,21 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [
-        117,
-        "مُتَجَادَث",
-        "mutacādaṯ",
-        "birbirine mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["mutafā'al", "kıyâsî", "مُتَجَادَث", "mutacādaṯ", "birbirine mezar olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VII": [
-      [
-        118,
-        "اِنْجِدَاث",
-        "incidāṯ",
-        "mezar olunma",
-        "kontrol",
-        ""
-      ]
+      ["infi'āl", "kıyâsî", "اِنْجِدَاث", "incidāṯ", "mezar olunma", "kontrol", ""]
     ],
     "ism-i merre · bâb VII": [
-      [
-        119,
-        "اِنْجِدَاثَة",
-        "incidāṯa",
-        "bir kere mezar olunma",
-        "kontrol",
-        ""
-      ]
+      ["infi'āl + tâ", "aday", "اِنْجِدَاثَة", "incidāṯa", "bir kere mezar olunma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْجَدِث", "muncadiṯ", "mezar olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْجَدِثَة", "muncadiṯa", "mezar olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْجَدِثَان", "muncadiṯān", "mezar olunan, iki", "kontrol", ""],
       [
-        120,
-        "مُنْجَدِث",
-        "muncadiṯ",
-        "mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        121,
-        "مُنْجَدِثَة",
-        "muncadiṯa",
-        "mezar olunan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        122,
-        "مُنْجَدِثَان",
-        "muncadiṯān",
-        "mezar olunan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        123,
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
         "مُنْجَدِثَتَان",
         "muncadiṯatān",
         "mezar olunan, iki, müennes",
@@ -1057,7 +687,8 @@
         ""
       ],
       [
-        124,
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُنْجَدِثُون",
         "muncadiṯūn",
         "mezar olunanlar",
@@ -1065,7 +696,8 @@
         ""
       ],
       [
-        125,
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُنْجَدِثِين",
         "muncadiṯīn",
         "mezar olunanlar",
@@ -1073,7 +705,8 @@
         ""
       ],
       [
-        126,
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُنْجَدِثَات",
         "muncadiṯāt",
         "mezar olunanlar, müennes",
@@ -1083,7 +716,8 @@
     ],
     "ism-i mef‘ûl · bâb VII": [
       [
-        127,
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَث",
         "muncadaṯ",
         "mezar olunan",
@@ -1091,7 +725,8 @@
         ""
       ],
       [
-        128,
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثَة",
         "muncadaṯa",
         "mezar olunan, müennes",
@@ -1099,7 +734,8 @@
         ""
       ],
       [
-        129,
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثَان",
         "muncadaṯān",
         "mezar olunan, iki",
@@ -1107,7 +743,8 @@
         ""
       ],
       [
-        130,
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثَتَان",
         "muncadaṯatān",
         "mezar olunan, iki, müennes",
@@ -1115,7 +752,8 @@
         ""
       ],
       [
-        131,
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثُون",
         "muncadaṯūn",
         "mezar olunanlar",
@@ -1123,7 +761,8 @@
         ""
       ],
       [
-        132,
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثِين",
         "muncadaṯīn",
         "mezar olunanlar",
@@ -1131,7 +770,8 @@
         ""
       ],
       [
-        133,
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَثَات",
         "muncadaṯāt",
         "mezar olunanlar, müennes",
@@ -1141,7 +781,8 @@
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
       [
-        134,
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
         "مُنْجَدَث",
         "muncadaṯ",
         "mezar olunma yeri, vakti",
@@ -1150,52 +791,26 @@
       ]
     ],
     "masdar · bâb VIII": [
-      [
-        135,
-        "اِجْتِدَاث",
-        "ictidāṯ",
-        "kendisi için mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["ifti'āl", "kıyâsî", "اِجْتِدَاث", "ictidāṯ", "kendisi için mezar olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [
-        137,
-        "اِجْتِدَاثَة",
-        "ictidāṯa",
-        "bir kere kendisi için mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["ifti'āl + tâ", "aday", "اِجْتِدَاثَة", "ictidāṯa", "bir kere kendisi için mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُجْتَدِث", "muctadiṯ", "kendisi için mezar olan", "kontrol", ""],
       [
-        138,
-        "مُجْتَدِث",
-        "muctadiṯ",
-        "kendisi için mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        139,
+        "muftaʿil + müennes",
+        "kıyâsî",
         "مُجْتَدِثَة",
         "muctadiṯa",
         "kendisi için mezar olan, müennes",
         "kontrol",
         ""
       ],
+      ["muftaʿil + tesniye", "kıyâsî", "مُجْتَدِثَان", "muctadiṯān", "kendisi için mezar olan, iki", "kontrol", ""],
       [
-        140,
-        "مُجْتَدِثَان",
-        "muctadiṯān",
-        "kendisi için mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        141,
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
         "مُجْتَدِثَتَان",
         "muctadiṯatān",
         "kendisi için mezar olan, iki, müennes",
@@ -1203,7 +818,8 @@
         ""
       ],
       [
-        142,
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْتَدِثُون",
         "muctadiṯūn",
         "kendisi için mezar olanlar",
@@ -1211,7 +827,8 @@
         ""
       ],
       [
-        143,
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْتَدِثِين",
         "muctadiṯīn",
         "kendisi için mezar olanlar",
@@ -1219,7 +836,8 @@
         ""
       ],
       [
-        144,
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْتَدِثَات",
         "muctadiṯāt",
         "kendisi için mezar olanlar, müennes",
@@ -1228,16 +846,10 @@
       ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُجْتَدَث", "muctadaṯ", "kendisi için mezar olunan", "kontrol", ""],
       [
-        145,
-        "مُجْتَدَث",
-        "muctadaṯ",
-        "kendisi için mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        146,
+        "muftaʿal + müennes",
+        "kıyâsî",
         "مُجْتَدَثَة",
         "muctadaṯa",
         "kendisi için mezar olunan, müennes",
@@ -1245,7 +857,8 @@
         ""
       ],
       [
-        147,
+        "muftaʿal + tesniye",
+        "kıyâsî",
         "مُجْتَدَثَان",
         "muctadaṯān",
         "kendisi için mezar olunan, iki",
@@ -1253,7 +866,8 @@
         ""
       ],
       [
-        148,
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
         "مُجْتَدَثَتَان",
         "muctadaṯatān",
         "kendisi için mezar olunan, iki, müennes",
@@ -1261,7 +875,8 @@
         ""
       ],
       [
-        149,
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْتَدَثُون",
         "muctadaṯūn",
         "kendisi için mezar olunanlar",
@@ -1269,7 +884,8 @@
         ""
       ],
       [
-        150,
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْتَدَثِين",
         "muctadaṯīn",
         "kendisi için mezar olunanlar",
@@ -1277,7 +893,8 @@
         ""
       ],
       [
-        151,
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْتَدَثَات",
         "muctadaṯāt",
         "kendisi için mezar olunanlar, müennes",
@@ -1286,52 +903,18 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [
-        152,
-        "مُجْتَدَث",
-        "muctadaṯ",
-        "kendisi için mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["muftaʿal", "kıyâsî", "مُجْتَدَث", "muctadaṯ", "kendisi için mezar olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IX": [
-      [
-        499,
-        "اِجْدِثَاث",
-        "icdiṯāṯ",
-        "iyiden iyiye mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["if'ilāl", "kıyâsî", "اِجْدِثَاث", "icdiṯāṯ", "iyiden iyiye mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُجْدَثّ", "mucdaṯṯ", "iyiden iyiye mezar olan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُجْدَثَّة", "mucdaṯṯa", "iyiden iyiye mezar olan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُجْدَثَّان", "mucdaṯṯān", "iyiden iyiye mezar olan, iki", "kontrol", ""],
       [
-        500,
-        "مُجْدَثّ",
-        "mucdaṯṯ",
-        "iyiden iyiye mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        501,
-        "مُجْدَثَّة",
-        "mucdaṯṯa",
-        "iyiden iyiye mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        502,
-        "مُجْدَثَّان",
-        "mucdaṯṯān",
-        "iyiden iyiye mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        503,
+        "muf'all + müennes tesniye",
+        "kıyâsî",
         "مُجْدَثَّتَان",
         "mucdaṯṯatān",
         "iyiden iyiye mezar olan, iki, müennes",
@@ -1339,7 +922,8 @@
         ""
       ],
       [
-        504,
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْدَثُّون",
         "mucdaṯṯūn",
         "iyiden iyiye mezar olanlar",
@@ -1347,7 +931,8 @@
         ""
       ],
       [
-        505,
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْدَثِّين",
         "mucdaṯṯīn",
         "iyiden iyiye mezar olanlar",
@@ -1355,7 +940,8 @@
         ""
       ],
       [
-        506,
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْدَثَّات",
         "mucdaṯṯāt",
         "iyiden iyiye mezar olanlar, müennes",
@@ -1364,52 +950,26 @@
       ]
     ],
     "masdar · bâb X": [
-      [
-        176,
-        "اِسْتِجْدَاث",
-        "isticdāṯ",
-        "mezar olmayı isteme",
-        "kontrol",
-        ""
-      ]
+      ["istif'āl", "kıyâsî", "اِسْتِجْدَاث", "isticdāṯ", "mezar olmayı isteme", "kontrol", ""]
     ],
     "ism-i merre · bâb X": [
-      [
-        177,
-        "اِسْتِجْدَاثَة",
-        "isticdāṯa",
-        "bir kere mezar olmayı isteme",
-        "kontrol",
-        ""
-      ]
+      ["istif'āl + tâ", "aday", "اِسْتِجْدَاثَة", "isticdāṯa", "bir kere mezar olmayı isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَجْدِث", "mustacdiṯ", "mezar olmayı isteyen", "kontrol", ""],
       [
-        178,
-        "مُسْتَجْدِث",
-        "mustacdiṯ",
-        "mezar olmayı isteyen",
-        "kontrol",
-        ""
-      ],
-      [
-        179,
+        "mustaf'il + müennes",
+        "kıyâsî",
         "مُسْتَجْدِثَة",
         "mustacdiṯa",
         "mezar olmayı isteyen, müennes",
         "kontrol",
         ""
       ],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَجْدِثَان", "mustacdiṯān", "mezar olmayı isteyen, iki", "kontrol", ""],
       [
-        180,
-        "مُسْتَجْدِثَان",
-        "mustacdiṯān",
-        "mezar olmayı isteyen, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        181,
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
         "مُسْتَجْدِثَتَان",
         "mustacdiṯatān",
         "mezar olmayı isteyen, iki, müennes",
@@ -1417,7 +977,8 @@
         ""
       ],
       [
-        182,
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُسْتَجْدِثُون",
         "mustacdiṯūn",
         "mezar olmayı isteyenler",
@@ -1425,7 +986,8 @@
         ""
       ],
       [
-        183,
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُسْتَجْدِثِين",
         "mustacdiṯīn",
         "mezar olmayı isteyenler",
@@ -1433,7 +995,8 @@
         ""
       ],
       [
-        184,
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُسْتَجْدِثَات",
         "mustacdiṯāt",
         "mezar olmayı isteyenler, müennes",
@@ -1442,32 +1005,20 @@
       ]
     ],
     "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَجْدَث", "mustacdaṯ", "mezar olması istenen", "kontrol", ""],
       [
-        185,
-        "مُسْتَجْدَث",
-        "mustacdaṯ",
-        "mezar olması istenen",
-        "kontrol",
-        ""
-      ],
-      [
-        186,
+        "mustaf'al + müennes",
+        "kıyâsî",
         "مُسْتَجْدَثَة",
         "mustacdaṯa",
         "mezar olması istenen, müennes",
         "kontrol",
         ""
       ],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَجْدَثَان", "mustacdaṯān", "mezar olması istenen, iki", "kontrol", ""],
       [
-        187,
-        "مُسْتَجْدَثَان",
-        "mustacdaṯān",
-        "mezar olması istenen, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        188,
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
         "مُسْتَجْدَثَتَان",
         "mustacdaṯatān",
         "mezar olması istenen, iki, müennes",
@@ -1475,7 +1026,8 @@
         ""
       ],
       [
-        189,
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُسْتَجْدَثُون",
         "mustacdaṯūn",
         "mezar olması istenenler",
@@ -1483,7 +1035,8 @@
         ""
       ],
       [
-        190,
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُسْتَجْدَثِين",
         "mustacdaṯīn",
         "mezar olması istenenler",
@@ -1491,7 +1044,8 @@
         ""
       ],
       [
-        191,
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُسْتَجْدَثَات",
         "mustacdaṯāt",
         "mezar olması istenenler, müennes",
@@ -1500,52 +1054,18 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [
-        192,
-        "مُسْتَجْدَث",
-        "mustacdaṯ",
-        "mezar olmayı isteme yeri, vakti",
-        "kontrol",
-        ""
-      ]
+      ["mustaf'al", "kıyâsî", "مُسْتَجْدَث", "mustacdaṯ", "mezar olmayı isteme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb XI": [
-      [
-        507,
-        "اِجْدِيثَاث",
-        "icdīṯāṯ",
-        "büsbütün mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["if'īlāl", "kıyâsî", "اِجْدِيثَاث", "icdīṯāṯ", "büsbütün mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُجْدَاثّ", "mucdāṯṯ", "büsbütün mezar olan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُجْدَاثَّة", "mucdāṯṯa", "büsbütün mezar olan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُجْدَاثَّان", "mucdāṯṯān", "büsbütün mezar olan, iki", "kontrol", ""],
       [
-        508,
-        "مُجْدَاثّ",
-        "mucdāṯṯ",
-        "büsbütün mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        509,
-        "مُجْدَاثَّة",
-        "mucdāṯṯa",
-        "büsbütün mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        510,
-        "مُجْدَاثَّان",
-        "mucdāṯṯān",
-        "büsbütün mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        511,
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
         "مُجْدَاثَّتَان",
         "mucdāṯṯatān",
         "büsbütün mezar olan, iki, müennes",
@@ -1553,7 +1073,8 @@
         ""
       ],
       [
-        512,
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْدَاثُّون",
         "mucdāṯṯūn",
         "büsbütün mezar olanlar",
@@ -1561,7 +1082,8 @@
         ""
       ],
       [
-        513,
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْدَاثِّين",
         "mucdāṯṯīn",
         "büsbütün mezar olanlar",
@@ -1569,7 +1091,8 @@
         ""
       ],
       [
-        514,
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْدَاثَّات",
         "mucdāṯṯāt",
         "büsbütün mezar olanlar, müennes",
@@ -1578,76 +1101,21 @@
       ]
     ],
     "masdar · bâb XII": [
-      [
-        515,
-        "اِجْدِوْدَاث",
-        "icdiwdāṯ",
-        "aşırı mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["if'iv'āl", "kıyâsî", "اِجْدِوْدَاث", "icdiwdāṯ", "aşırı mezar olma", "kontrol", ""]
     ],
     "masdar · bâb XIII": [
-      [
-        516,
-        "اِجْدِوَّاث",
-        "icdiwwāṯ",
-        "aşırı mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["if'ivvāl", "kıyâsî", "اِجْدِوَّاث", "icdiwwāṯ", "aşırı mezar olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "جَادِث", "cādiṯ", "mezar olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî", "جَادِثَة", "cādiṯa", "mezar olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî", "جَادِثَان", "cādiṯān", "mezar olan, iki", "kontrol", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "جَادِثَتَان", "cādiṯatān", "mezar olan, iki, müennes", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "جَادِثُون", "cādiṯūn", "mezar olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "جَادِثِين", "cādiṯīn", "mezar olanlar", "kontrol", ""],
       [
-        213,
-        "جَادِث",
-        "cādiṯ",
-        "mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        214,
-        "جَادِثَة",
-        "cādiṯa",
-        "mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        215,
-        "جَادِثَان",
-        "cādiṯān",
-        "mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        216,
-        "جَادِثَتَان",
-        "cādiṯatān",
-        "mezar olan, iki, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        217,
-        "جَادِثُون",
-        "cādiṯūn",
-        "mezar olanlar",
-        "kontrol",
-        ""
-      ],
-      [
-        218,
-        "جَادِثِين",
-        "cādiṯīn",
-        "mezar olanlar",
-        "kontrol",
-        ""
-      ],
-      [
-        219,
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "جَادِثَات",
         "cādiṯāt",
         "mezar olanlar, müennes",
@@ -1656,32 +1124,12 @@
       ]
     ],
     "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَجْدُوث", "macdūṯ", "mezar olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَجْدُوثَة", "macdūṯa", "mezar olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَجْدُوثَان", "macdūṯān", "mezar olunan, iki", "kontrol", ""],
       [
-        220,
-        "مَجْدُوث",
-        "macdūṯ",
-        "mezar olunan",
-        "kontrol",
-        ""
-      ],
-      [
-        221,
-        "مَجْدُوثَة",
-        "macdūṯa",
-        "mezar olunan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        222,
-        "مَجْدُوثَان",
-        "macdūṯān",
-        "mezar olunan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        223,
+        "maf'ûl + müennes tesniye",
+        "kıyâsî",
         "مَجْدُوثَتَان",
         "macdūṯatān",
         "mezar olunan, iki, müennes",
@@ -1689,7 +1137,8 @@
         ""
       ],
       [
-        224,
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مَجْدُوثُون",
         "macdūṯūn",
         "mezar olunanlar",
@@ -1697,7 +1146,8 @@
         ""
       ],
       [
-        225,
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مَجْدُوثِين",
         "macdūṯīn",
         "mezar olunanlar",
@@ -1705,7 +1155,8 @@
         ""
       ],
       [
-        226,
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مَجْدُوثَات",
         "macdūṯāt",
         "mezar olunanlar, müennes",
@@ -1714,304 +1165,76 @@
       ]
     ],
     "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَجْدَث", "macdaṯ", "mezar olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَجْدَثَان", "macdaṯān", "mezar olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî", "مَجْدِث", "macdiṯ", "mezar olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَجْدِثَان", "macdiṯān", "mezar olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî", "مَجْدَثَة", "macdaṯa", "mezar olmanın bol olduğu yer", "kontrol", ""],
       [
-        227,
-        "مَجْدَث",
-        "macdaṯ",
-        "mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ],
-      [
-        228,
-        "مَجْدَثَان",
-        "macdaṯān",
-        "mezar olma yeri, vakti, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        229,
-        "مَجْدِث",
-        "macdiṯ",
-        "mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ],
-      [
-        230,
-        "مَجْدِثَان",
-        "macdiṯān",
-        "mezar olma yeri, vakti, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        231,
-        "مَجْدَثَة",
-        "macdaṯa",
-        "mezar olmanın bol olduğu yer",
-        "kontrol",
-        ""
-      ],
-      [
-        232,
+        "maf'ale + tesniye",
+        "kıyâsî",
         "مَجْدَثَتَان",
         "macdaṯatān",
         "mezar olmanın bol olduğu yer, iki",
         "kontrol",
         ""
       ],
+      ["maf'ile", "kıyâsî", "مَجْدِثَة", "macdiṯa", "mezar olmanın bol olduğu yer", "kontrol", ""],
       [
-        233,
-        "مَجْدِثَة",
-        "macdiṯa",
-        "mezar olmanın bol olduğu yer",
-        "kontrol",
-        ""
-      ],
-      [
-        234,
+        "maf'ile + tesniye",
+        "kıyâsî",
         "مَجْدِثَتَان",
         "macdiṯatān",
         "mezar olmanın bol olduğu yer, iki",
         "kontrol",
         ""
       ],
-      [
-        247,
-        "مَجْدُثَة",
-        "macduṯa",
-        "mezar olma yeri, vakti",
-        "kontrol",
-        ""
-      ],
-      [
-        248,
-        "مَجْدُثَتَان",
-        "macduṯatān",
-        "mezar olma yeri, vakti, iki",
-        "kontrol",
-        ""
-      ]
+      ["maf'ula", "kıyâsî", "مَجْدُثَة", "macduṯa", "mezar olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَجْدُثَتَان", "macduṯatān", "mezar olma yeri, vakti, iki", "kontrol", ""]
     ],
     "âlet · sülâsî": [
-      [
-        235,
-        "مِجْدَث",
-        "micdaṯ",
-        "mezar olma âleti",
-        "kontrol",
-        ""
-      ],
-      [
-        236,
-        "مِجْدَثَان",
-        "micdaṯān",
-        "mezar olma âleti, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        237,
-        "مِجْدَاث",
-        "micdāṯ",
-        "mezar olma âleti",
-        "kontrol",
-        ""
-      ],
-      [
-        238,
-        "مِجْدَاثَان",
-        "micdāṯān",
-        "mezar olma âleti, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        239,
-        "مِجْدَثَة",
-        "micdaṯa",
-        "mezar olma âleti",
-        "kontrol",
-        ""
-      ],
-      [
-        240,
-        "مِجْدَثَتَان",
-        "micdaṯatān",
-        "mezar olma âleti, iki",
-        "kontrol",
-        ""
-      ]
+      ["mif'al", "kıyâsî", "مِجْدَث", "micdaṯ", "mezar olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِجْدَثَان", "micdaṯān", "mezar olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî", "مِجْدَاث", "micdāṯ", "mezar olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِجْدَاثَان", "micdāṯān", "mezar olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî", "مِجْدَثَة", "micdaṯa", "mezar olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِجْدَثَتَان", "micdaṯatān", "mezar olma âleti, iki", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
-      [
-        241,
-        "أَجْدَث",
-        "ʾacdaṯ",
-        "daha çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        242,
-        "أَجْدَثَان",
-        "ʾacdaṯān",
-        "daha çok mezar olan, iki",
-        "kontrol",
-        ""
-      ]
+      ["af'al", "kıyâsî", "أَجْدَث", "ʾacdaṯ", "daha çok mezar olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî", "أَجْدَثَان", "ʾacdaṯān", "daha çok mezar olan, iki", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [
-        243,
-        "جُدْثَى",
-        "cudṯā",
-        "daha çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        244,
-        "جُدْثَيَان",
-        "cudṯayān",
-        "daha çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        245,
-        "جَدْثَاء",
-        "cadṯāʾ",
-        "daha çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        246,
-        "جَدْثَاآن",
-        "cadṯāʾān",
-        "daha çok mezar olan, iki",
-        "kontrol",
-        ""
-      ]
+      ["fu'lâ", "kıyâsî", "جُدْثَى", "cudṯā", "daha çok mezar olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "جُدْثَيَان", "cudṯayān", "daha çok mezar olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "جَدْثَاء", "cadṯāʾ", "daha çok mezar olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "جَدْثَاآن", "cadṯāʾān", "daha çok mezar olan, iki", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
-      [
-        249,
-        "جُدَيْث",
-        "cudayṯ",
-        "azıcık mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        250,
-        "جُدَيْثَان",
-        "cudayṯān",
-        "azıcık mezar olma, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        251,
-        "جُدَيْثَة",
-        "cudayṯa",
-        "azıcık mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        252,
-        "جُدَيْثَتَان",
-        "cudayṯatān",
-        "azıcık mezar olma, iki",
-        "kontrol",
-        ""
-      ]
+      ["fu'ayl", "kıyâsî", "جُدَيْث", "cudayṯ", "azıcık mezar olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "جُدَيْثَان", "cudayṯān", "azıcık mezar olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî", "جُدَيْثَة", "cudayṯa", "azıcık mezar olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "جُدَيْثَتَان", "cudayṯatān", "azıcık mezar olma, iki", "kontrol", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [
-        253,
-        "مَجْدَث",
-        "macdaṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        254,
-        "مَجْدَثَان",
-        "macdaṯān",
-        "mezar olma, iki",
-        "kontrol",
-        ""
-      ]
+      ["maf'al", "kıyâsî", "مَجْدَث", "macdaṯ", "mezar olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَجْدَثَان", "macdaṯān", "mezar olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [
-        255,
-        "جَدْثَة",
-        "cadṯa",
-        "bir kere mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        256,
-        "جَدْثَتَان",
-        "cadṯatān",
-        "bir kere mezar olma, iki",
-        "kontrol",
-        ""
-      ]
+      ["fa'le", "aday", "جَدْثَة", "cadṯa", "bir kere mezar olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "جَدْثَتَان", "cadṯatān", "bir kere mezar olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [
-        257,
-        "جِدْثَة",
-        "cidṯa",
-        "mezar olma tarzı",
-        "kontrol",
-        ""
-      ],
-      [
-        258,
-        "جِدْثَتَان",
-        "cidṯatān",
-        "mezar olma tarzı, iki",
-        "kontrol",
-        ""
-      ]
+      ["fi'le", "aday", "جِدْثَة", "cidṯa", "mezar olma tarzı", "kontrol", ""],
+      ["fi'le + tesniye", "aday", "جِدْثَتَان", "cidṯatān", "mezar olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "جَدِيث", "cadīṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "جَدِيثَة", "cadīṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "جَدِيثَان", "cadīṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        259,
-        "جَدِيث",
-        "cadīṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        260,
-        "جَدِيثَة",
-        "cadīṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        261,
-        "جَدِيثَان",
-        "cadīṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        262,
+        "fa'īl + müennes tesniye",
+        "semâî aday",
         "جَدِيثَتَان",
         "cadīṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2019,7 +1242,8 @@
         ""
       ],
       [
-        263,
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدِيثُون",
         "cadīṯūn",
         "her daim mezar olanlar",
@@ -2027,7 +1251,8 @@
         ""
       ],
       [
-        264,
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدِيثِين",
         "cadīṯīn",
         "her daim mezar olanlar",
@@ -2035,39 +1260,20 @@
         ""
       ],
       [
-        265,
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدِيثَات",
         "cadīṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'ūl", "semâî aday", "جَدُوث", "cadūṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "جَدُوثَة", "cadūṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "جَدُوثَان", "cadūṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        266,
-        "جَدُوث",
-        "cadūṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        267,
-        "جَدُوثَة",
-        "cadūṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        268,
-        "جَدُوثَان",
-        "cadūṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        269,
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
         "جَدُوثَتَان",
         "cadūṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2075,7 +1281,8 @@
         ""
       ],
       [
-        270,
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدُوثُون",
         "cadūṯūn",
         "her daim mezar olanlar",
@@ -2083,7 +1290,8 @@
         ""
       ],
       [
-        271,
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدُوثِين",
         "cadūṯīn",
         "her daim mezar olanlar",
@@ -2091,39 +1299,20 @@
         ""
       ],
       [
-        272,
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدُوثَات",
         "cadūṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'il", "semâî aday", "جَدِث", "cadiṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday", "جَدِثَة", "cadiṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday", "جَدِثَان", "cadiṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        273,
-        "جَدِث",
-        "cadiṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        274,
-        "جَدِثَة",
-        "cadiṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        275,
-        "جَدِثَان",
-        "cadiṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        276,
+        "fa'il + müennes tesniye",
+        "semâî aday",
         "جَدِثَتَان",
         "cadiṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2131,7 +1320,8 @@
         ""
       ],
       [
-        277,
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدِثُون",
         "cadiṯūn",
         "her daim mezar olanlar",
@@ -2139,7 +1329,8 @@
         ""
       ],
       [
-        278,
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدِثِين",
         "cadiṯīn",
         "her daim mezar olanlar",
@@ -2147,39 +1338,20 @@
         ""
       ],
       [
-        279,
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدِثَات",
         "cadiṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'ul", "semâî aday", "جَدُث", "caduṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday", "جَدُثَة", "caduṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday", "جَدُثَان", "caduṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        280,
-        "جَدُث",
-        "caduṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        281,
-        "جَدُثَة",
-        "caduṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        282,
-        "جَدُثَان",
-        "caduṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        283,
+        "fa'ul + müennes tesniye",
+        "semâî aday",
         "جَدُثَتَان",
         "caduṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2187,7 +1359,8 @@
         ""
       ],
       [
-        284,
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدُثُون",
         "caduṯūn",
         "her daim mezar olanlar",
@@ -2195,7 +1368,8 @@
         ""
       ],
       [
-        285,
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدُثِين",
         "caduṯīn",
         "her daim mezar olanlar",
@@ -2203,39 +1377,20 @@
         ""
       ],
       [
-        286,
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدُثَات",
         "caduṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'al", "semâî aday", "جَدَث", "cadaṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'al + müennes", "semâî aday", "جَدَثَة", "cadaṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday", "جَدَثَان", "cadaṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        287,
-        "جَدَث",
-        "cadaṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        288,
-        "جَدَثَة",
-        "cadaṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        289,
-        "جَدَثَان",
-        "cadaṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        290,
+        "fa'al + müennes tesniye",
+        "semâî aday",
         "جَدَثَتَان",
         "cadaṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2243,7 +1398,8 @@
         ""
       ],
       [
-        291,
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدَثُون",
         "cadaṯūn",
         "her daim mezar olanlar",
@@ -2251,7 +1407,8 @@
         ""
       ],
       [
-        292,
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدَثِين",
         "cadaṯīn",
         "her daim mezar olanlar",
@@ -2259,39 +1416,20 @@
         ""
       ],
       [
-        293,
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدَثَات",
         "cadaṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'l", "semâî aday", "جَدْث", "cadṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'l + müennes", "semâî aday", "جَدْثَة", "cadṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "جَدْثَان", "cadṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        294,
-        "جَدْث",
-        "cadṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        295,
-        "جَدْثَة",
-        "cadṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        296,
-        "جَدْثَان",
-        "cadṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        297,
+        "fa'l + müennes tesniye",
+        "semâî aday",
         "جَدْثَتَان",
         "cadṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2299,7 +1437,8 @@
         ""
       ],
       [
-        298,
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدْثُون",
         "cadṯūn",
         "her daim mezar olanlar",
@@ -2307,7 +1446,8 @@
         ""
       ],
       [
-        299,
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدْثِين",
         "cadṯīn",
         "her daim mezar olanlar",
@@ -2315,39 +1455,20 @@
         ""
       ],
       [
-        300,
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدْثَات",
         "cadṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fu'ul", "semâî aday", "جُدُث", "cuduṯ", "her daim mezar olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday", "جُدُثَة", "cuduṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday", "جُدُثَان", "cuduṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        301,
-        "جُدُث",
-        "cuduṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        302,
-        "جُدُثَة",
-        "cuduṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        303,
-        "جُدُثَان",
-        "cuduṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        304,
+        "fu'ul + müennes tesniye",
+        "semâî aday",
         "جُدُثَتَان",
         "cuduṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2355,7 +1476,8 @@
         ""
       ],
       [
-        305,
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُدُثُون",
         "cuduṯūn",
         "her daim mezar olanlar",
@@ -2363,7 +1485,8 @@
         ""
       ],
       [
-        306,
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُدُثِين",
         "cuduṯīn",
         "her daim mezar olanlar",
@@ -2371,39 +1494,20 @@
         ""
       ],
       [
-        307,
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُدُثَات",
         "cuduṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'lān", "semâî aday", "جَدْثَان", "cadṯān", "her daim mezar olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "جَدْثَانَة", "cadṯāna", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "جَدْثَانَان", "cadṯānān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        308,
-        "جَدْثَان",
-        "cadṯān",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        309,
-        "جَدْثَانَة",
-        "cadṯāna",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        310,
-        "جَدْثَانَان",
-        "cadṯānān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        311,
+        "fa'lān + müennes tesniye",
+        "semâî aday",
         "جَدْثَانَتَان",
         "cadṯānatān",
         "her daim mezar olan, iki, müennes",
@@ -2411,7 +1515,8 @@
         ""
       ],
       [
-        312,
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدْثَانُون",
         "cadṯānūn",
         "her daim mezar olanlar",
@@ -2419,7 +1524,8 @@
         ""
       ],
       [
-        313,
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدْثَانِين",
         "cadṯānīn",
         "her daim mezar olanlar",
@@ -2427,39 +1533,20 @@
         ""
       ],
       [
-        314,
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدْثَانَات",
         "cadṯānāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fu'āl", "semâî aday", "جُدَاث", "cudāṯ", "her daim mezar olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday", "جُدَاثَة", "cudāṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday", "جُدَاثَان", "cudāṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        315,
-        "جُدَاث",
-        "cudāṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        316,
-        "جُدَاثَة",
-        "cudāṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        317,
-        "جُدَاثَان",
-        "cudāṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        318,
+        "fu'āl + müennes tesniye",
+        "semâî aday",
         "جُدَاثَتَان",
         "cudāṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2467,7 +1554,8 @@
         ""
       ],
       [
-        319,
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُدَاثُون",
         "cudāṯūn",
         "her daim mezar olanlar",
@@ -2475,7 +1563,8 @@
         ""
       ],
       [
-        320,
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُدَاثِين",
         "cudāṯīn",
         "her daim mezar olanlar",
@@ -2483,39 +1572,20 @@
         ""
       ],
       [
-        321,
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُدَاثَات",
         "cudāṯāt",
         "her daim mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'āl", "semâî aday", "جَدَاث", "cadāṯ", "her daim mezar olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday", "جَدَاثَة", "cadāṯa", "her daim mezar olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday", "جَدَاثَان", "cadāṯān", "her daim mezar olan, iki", "kontrol", ""],
       [
-        322,
-        "جَدَاث",
-        "cadāṯ",
-        "her daim mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        323,
-        "جَدَاثَة",
-        "cadāṯa",
-        "her daim mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        324,
-        "جَدَاثَان",
-        "cadāṯān",
-        "her daim mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        325,
+        "fa'āl + müennes tesniye",
+        "semâî aday",
         "جَدَاثَتَان",
         "cadāṯatān",
         "her daim mezar olan, iki, müennes",
@@ -2523,7 +1593,8 @@
         ""
       ],
       [
-        326,
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدَاثُون",
         "cadāṯūn",
         "her daim mezar olanlar",
@@ -2531,7 +1602,8 @@
         ""
       ],
       [
-        327,
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدَاثِين",
         "cadāṯīn",
         "her daim mezar olanlar",
@@ -2539,7 +1611,8 @@
         ""
       ],
       [
-        328,
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدَاثَات",
         "cadāṯāt",
         "her daim mezar olanlar, müennes",
@@ -2548,32 +1621,12 @@
       ]
     ],
     "mübalağa": [
+      ["fa''āl", "semâî aday", "جَدَّاث", "caddāṯ", "işi mezar olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday", "جَدَّاثَة", "caddāṯa", "işi mezar olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday", "جَدَّاثَان", "caddāṯān", "işi mezar olma olan, iki", "kontrol", ""],
       [
-        329,
-        "جَدَّاث",
-        "caddāṯ",
-        "işi mezar olma olan",
-        "kontrol",
-        ""
-      ],
-      [
-        330,
-        "جَدَّاثَة",
-        "caddāṯa",
-        "işi mezar olma olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        331,
-        "جَدَّاثَان",
-        "caddāṯān",
-        "işi mezar olma olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        332,
+        "fa''āl + müennes tesniye",
+        "semâî aday",
         "جَدَّاثَتَان",
         "caddāṯatān",
         "işi mezar olma olan, iki, müennes",
@@ -2581,7 +1634,8 @@
         ""
       ],
       [
-        333,
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدَّاثُون",
         "caddāṯūn",
         "işi mezar olma olanlar",
@@ -2589,7 +1643,8 @@
         ""
       ],
       [
-        334,
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدَّاثِين",
         "caddāṯīn",
         "işi mezar olma olanlar",
@@ -2597,63 +1652,31 @@
         ""
       ],
       [
-        335,
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدَّاثَات",
         "caddāṯāt",
         "işi mezar olma olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa''āle", "semâî aday", "جَدَّاثَة", "caddāṯa", "pek çok mezar olan", "kontrol", ""],
+      ["fa''āle + tesniye", "semâî aday", "جَدَّاثَتَان", "caddāṯatān", "pek çok mezar olan, iki", "kontrol", ""],
       [
-        336,
-        "جَدَّاثَة",
-        "caddāṯa",
-        "pek çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        337,
-        "جَدَّاثَتَان",
-        "caddāṯatān",
-        "pek çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        338,
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدَّاثَات",
         "caddāṯāt",
         "pek çok mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa'ūl", "semâî aday", "جَدُوث", "cadūṯ", "çok mezar olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "جَدُوثَة", "cadūṯa", "çok mezar olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "جَدُوثَان", "cadūṯān", "çok mezar olan, iki", "kontrol", ""],
       [
-        339,
-        "جَدُوث",
-        "cadūṯ",
-        "çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        340,
-        "جَدُوثَة",
-        "cadūṯa",
-        "çok mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        341,
-        "جَدُوثَان",
-        "cadūṯān",
-        "çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        342,
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
         "جَدُوثَتَان",
         "cadūṯatān",
         "çok mezar olan, iki, müennes",
@@ -2661,7 +1684,8 @@
         ""
       ],
       [
-        343,
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدُوثُون",
         "cadūṯūn",
         "çok mezar olanlar",
@@ -2669,7 +1693,8 @@
         ""
       ],
       [
-        344,
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدُوثِين",
         "cadūṯīn",
         "çok mezar olanlar",
@@ -2677,39 +1702,20 @@
         ""
       ],
       [
-        345,
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدُوثَات",
         "cadūṯāt",
         "çok mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa''ūl", "semâî aday", "جَدُّوث", "caddūṯ", "pek çok mezar olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "جَدُّوثَة", "caddūṯa", "pek çok mezar olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "جَدُّوثَان", "caddūṯān", "pek çok mezar olan, iki", "kontrol", ""],
       [
-        346,
-        "جَدُّوث",
-        "caddūṯ",
-        "pek çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        347,
-        "جَدُّوثَة",
-        "caddūṯa",
-        "pek çok mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        348,
-        "جَدُّوثَان",
-        "caddūṯān",
-        "pek çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        349,
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
         "جَدُّوثَتَان",
         "caddūṯatān",
         "pek çok mezar olan, iki, müennes",
@@ -2717,7 +1723,8 @@
         ""
       ],
       [
-        350,
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدُّوثُون",
         "caddūṯūn",
         "pek çok mezar olanlar",
@@ -2725,7 +1732,8 @@
         ""
       ],
       [
-        351,
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدُّوثِين",
         "caddūṯīn",
         "pek çok mezar olanlar",
@@ -2733,39 +1741,20 @@
         ""
       ],
       [
-        352,
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدُّوثَات",
         "caddūṯāt",
         "pek çok mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fi''īl", "semâî aday", "جِدِّيث", "ciddīṯ", "mezar olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "جِدِّيثَة", "ciddīṯa", "mezar olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "جِدِّيثَان", "ciddīṯān", "mezar olmada aşırı giden, iki", "kontrol", ""],
       [
-        353,
-        "جِدِّيث",
-        "ciddīṯ",
-        "mezar olmada aşırı giden",
-        "kontrol",
-        ""
-      ],
-      [
-        354,
-        "جِدِّيثَة",
-        "ciddīṯa",
-        "mezar olmada aşırı giden, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        355,
-        "جِدِّيثَان",
-        "ciddīṯān",
-        "mezar olmada aşırı giden, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        356,
+        "fi''īl + müennes tesniye",
+        "semâî aday",
         "جِدِّيثَتَان",
         "ciddīṯatān",
         "mezar olmada aşırı giden, iki, müennes",
@@ -2773,7 +1762,8 @@
         ""
       ],
       [
-        357,
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جِدِّيثُون",
         "ciddīṯūn",
         "mezar olmada aşırı gidenler",
@@ -2781,7 +1771,8 @@
         ""
       ],
       [
-        358,
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جِدِّيثِين",
         "ciddīṯīn",
         "mezar olmada aşırı gidenler",
@@ -2789,39 +1780,20 @@
         ""
       ],
       [
-        359,
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جِدِّيثَات",
         "ciddīṯāt",
         "mezar olmada aşırı gidenler, müennes",
         "kontrol",
         ""
       ],
+      ["fu''āl", "semâî aday", "جُدَّاث", "cuddāṯ", "son derece mezar olan", "kontrol", ""],
+      ["fu''āl + müennes", "semâî aday", "جُدَّاثَة", "cuddāṯa", "son derece mezar olan, müennes", "kontrol", ""],
+      ["fu''āl + tesniye", "semâî aday", "جُدَّاثَان", "cuddāṯān", "son derece mezar olan, iki", "kontrol", ""],
       [
-        360,
-        "جُدَّاث",
-        "cuddāṯ",
-        "son derece mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        361,
-        "جُدَّاثَة",
-        "cuddāṯa",
-        "son derece mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        362,
-        "جُدَّاثَان",
-        "cuddāṯān",
-        "son derece mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        363,
+        "fu''āl + müennes tesniye",
+        "semâî aday",
         "جُدَّاثَتَان",
         "cuddāṯatān",
         "son derece mezar olan, iki, müennes",
@@ -2829,7 +1801,8 @@
         ""
       ],
       [
-        364,
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُدَّاثُون",
         "cuddāṯūn",
         "son derece mezar olanlar",
@@ -2837,7 +1810,8 @@
         ""
       ],
       [
-        365,
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُدَّاثِين",
         "cuddāṯīn",
         "son derece mezar olanlar",
@@ -2845,39 +1819,28 @@
         ""
       ],
       [
-        366,
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُدَّاثَات",
         "cuddāṯāt",
         "son derece mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["mif'āl", "semâî aday", "مِجْدَاث", "micdāṯ", "mezar olmayı âdet edinmiş", "kontrol", ""],
       [
-        367,
-        "مِجْدَاث",
-        "micdāṯ",
-        "mezar olmayı âdet edinmiş",
-        "kontrol",
-        ""
-      ],
-      [
-        368,
+        "mif'āl + müennes",
+        "semâî aday",
         "مِجْدَاثَة",
         "micdāṯa",
         "mezar olmayı âdet edinmiş, müennes",
         "kontrol",
         ""
       ],
+      ["mif'āl + tesniye", "semâî aday", "مِجْدَاثَان", "micdāṯān", "mezar olmayı âdet edinmiş, iki", "kontrol", ""],
       [
-        369,
-        "مِجْدَاثَان",
-        "micdāṯān",
-        "mezar olmayı âdet edinmiş, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        370,
+        "mif'āl + müennes tesniye",
+        "semâî aday",
         "مِجْدَاثَتَان",
         "micdāṯatān",
         "mezar olmayı âdet edinmiş, iki, müennes",
@@ -2885,7 +1848,8 @@
         ""
       ],
       [
-        371,
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "مِجْدَاثُون",
         "micdāṯūn",
         "mezar olmayı âdet edinmişler",
@@ -2893,7 +1857,8 @@
         ""
       ],
       [
-        372,
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "مِجْدَاثِين",
         "micdāṯīn",
         "mezar olmayı âdet edinmişler",
@@ -2901,39 +1866,20 @@
         ""
       ],
       [
-        373,
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "مِجْدَاثَات",
         "micdāṯāt",
         "mezar olmayı âdet edinmişler, müennes",
         "kontrol",
         ""
       ],
+      ["mif'īl", "semâî aday", "مِجْدِيث", "micdīṯ", "mezar olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِجْدِيثَة", "micdīṯa", "mezar olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِجْدِيثَان", "micdīṯān", "mezar olmaya düşkün, iki", "kontrol", ""],
       [
-        374,
-        "مِجْدِيث",
-        "micdīṯ",
-        "mezar olmaya düşkün",
-        "kontrol",
-        ""
-      ],
-      [
-        375,
-        "مِجْدِيثَة",
-        "micdīṯa",
-        "mezar olmaya düşkün, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        376,
-        "مِجْدِيثَان",
-        "micdīṯān",
-        "mezar olmaya düşkün, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        377,
+        "mif'īl + müennes tesniye",
+        "semâî aday",
         "مِجْدِيثَتَان",
         "micdīṯatān",
         "mezar olmaya düşkün, iki, müennes",
@@ -2941,7 +1887,8 @@
         ""
       ],
       [
-        378,
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "مِجْدِيثُون",
         "micdīṯūn",
         "mezar olmaya düşkünler",
@@ -2949,7 +1896,8 @@
         ""
       ],
       [
-        379,
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "مِجْدِيثِين",
         "micdīṯīn",
         "mezar olmaya düşkünler",
@@ -2957,39 +1905,20 @@
         ""
       ],
       [
-        380,
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "مِجْدِيثَات",
         "micdīṯāt",
         "mezar olmaya düşkünler, müennes",
         "kontrol",
         ""
       ],
+      ["fa'īl", "semâî aday", "جَدِيث", "cadīṯ", "çok mezar olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "جَدِيثَة", "cadīṯa", "çok mezar olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "جَدِيثَان", "cadīṯān", "çok mezar olan, iki", "kontrol", ""],
       [
-        381,
-        "جَدِيث",
-        "cadīṯ",
-        "çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        382,
-        "جَدِيثَة",
-        "cadīṯa",
-        "çok mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        383,
-        "جَدِيثَان",
-        "cadīṯān",
-        "çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        384,
+        "fa'īl + müennes tesniye",
+        "semâî aday",
         "جَدِيثَتَان",
         "cadīṯatān",
         "çok mezar olan, iki, müennes",
@@ -2997,7 +1926,8 @@
         ""
       ],
       [
-        385,
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدِيثُون",
         "cadīṯūn",
         "çok mezar olanlar",
@@ -3005,7 +1935,8 @@
         ""
       ],
       [
-        386,
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدِيثِين",
         "cadīṯīn",
         "çok mezar olanlar",
@@ -3013,39 +1944,20 @@
         ""
       ],
       [
-        387,
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدِيثَات",
         "cadīṯāt",
         "çok mezar olanlar, müennes",
         "kontrol",
         ""
       ],
+      ["fa''al", "semâî aday", "جَدَّث", "caddaṯ", "çok mezar olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "جَدَّثَة", "caddaṯa", "çok mezar olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "جَدَّثَان", "caddaṯān", "çok mezar olan, iki", "kontrol", ""],
       [
-        388,
-        "جَدَّث",
-        "caddaṯ",
-        "çok mezar olan",
-        "kontrol",
-        ""
-      ],
-      [
-        389,
-        "جَدَّثَة",
-        "caddaṯa",
-        "çok mezar olan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        390,
-        "جَدَّثَان",
-        "caddaṯān",
-        "çok mezar olan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        391,
+        "fa''al + müennes tesniye",
+        "semâî aday",
         "جَدَّثَتَان",
         "caddaṯatān",
         "çok mezar olan, iki, müennes",
@@ -3053,7 +1965,8 @@
         ""
       ],
       [
-        392,
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَدَّثُون",
         "caddaṯūn",
         "çok mezar olanlar",
@@ -3061,7 +1974,8 @@
         ""
       ],
       [
-        393,
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَدَّثِين",
         "caddaṯīn",
         "çok mezar olanlar",
@@ -3069,7 +1983,8 @@
         ""
       ],
       [
-        394,
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَدَّثَات",
         "caddaṯāt",
         "çok mezar olanlar, müennes",
@@ -3078,1030 +1993,141 @@
       ]
     ],
     "mensûb": [
-      [
-        395,
-        "جَدْثِيّ",
-        "cadṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        397,
-        "جَدَثِيّ",
-        "cadaṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        399,
-        "جِدْثِيّ",
-        "cidṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        401,
-        "جُدْثِيّ",
-        "cudṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        403,
-        "جِدَاثِيّ",
-        "cidāṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        405,
-        "جَادِثِيّ",
-        "cādiṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        407,
-        "مَجْدُوثِيّ",
-        "macdūṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        409,
-        "جَدِيثِيّ",
-        "cadīṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        411,
-        "مَجْدَثِيّ",
-        "macdaṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        413,
-        "تَجْدِيثِيّ",
-        "tacdīṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        415,
-        "تَجَادُثِيّ",
-        "tacāduṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        417,
-        "إِجْدَاثِيّ",
-        "ʾicdāṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ],
-      [
-        419,
-        "اِجْتِدَاثِيّ",
-        "ictidāṯiyy",
-        "mezar olma ile ilgili",
-        "kontrol",
-        ""
-      ]
+      ["fa'l + iyy", "kıyâsî", "جَدْثِيّ", "cadṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî", "جَدَثِيّ", "cadaṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "جِدْثِيّ", "cidṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "جُدْثِيّ", "cudṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî", "جِدَاثِيّ", "cidāṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî", "جَادِثِيّ", "cādiṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَجْدُوثِيّ", "macdūṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî", "جَدِيثِيّ", "cadīṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî", "مَجْدَثِيّ", "macdaṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَجْدِيثِيّ", "tacdīṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَجَادُثِيّ", "tacāduṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî", "إِجْدَاثِيّ", "ʾicdāṯiyy", "mezar olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِجْتِدَاثِيّ", "ictidāṯiyy", "mezar olma ile ilgili", "kontrol", ""]
     ],
     "masdar-ı sınâî": [
-      [
-        396,
-        "جَدْثِيَّة",
-        "cadṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        398,
-        "جَدَثِيَّة",
-        "cadaṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        400,
-        "جِدْثِيَّة",
-        "cidṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        402,
-        "جُدْثِيَّة",
-        "cudṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        404,
-        "جِدَاثِيَّة",
-        "cidāṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        406,
-        "جَادِثِيَّة",
-        "cādiṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        408,
-        "مَجْدُوثِيَّة",
-        "macdūṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        410,
-        "جَدِيثِيَّة",
-        "cadīṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        412,
-        "مَجْدَثِيَّة",
-        "macdaṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        414,
-        "تَجْدِيثِيَّة",
-        "tacdīṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        416,
-        "تَجَادُثِيَّة",
-        "tacāduṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        418,
-        "إِجْدَاثِيَّة",
-        "ʾicdāṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ],
-      [
-        420,
-        "اِجْتِدَاثِيَّة",
-        "ictidāṯiyya",
-        "mezar olanlık",
-        "kontrol",
-        ""
-      ]
+      ["fa'l + iyye", "kıyâsî", "جَدْثِيَّة", "cadṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî", "جَدَثِيَّة", "cadaṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "جِدْثِيَّة", "cidṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "جُدْثِيَّة", "cudṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî", "جِدَاثِيَّة", "cidāṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî", "جَادِثِيَّة", "cādiṯiyya", "mezar olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَجْدُوثِيَّة", "macdūṯiyya", "mezar olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî", "جَدِيثِيَّة", "cadīṯiyya", "mezar olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî", "مَجْدَثِيَّة", "macdaṯiyya", "mezar olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَجْدِيثِيَّة", "tacdīṯiyya", "mezar olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَجَادُثِيَّة", "tacāduṯiyya", "mezar olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî", "إِجْدَاثِيَّة", "ʾicdāṯiyya", "mezar olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِجْتِدَاثِيَّة", "ictidāṯiyya", "mezar olanlık", "kontrol", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [
-        421,
-        "جَدَاث",
-        "cadāṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        422,
-        "جُدُوث",
-        "cudūṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        423,
-        "جِدَاث",
-        "cidāṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        424,
-        "جُدْث",
-        "cudṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        425,
-        "جَدَاثَة",
-        "cadāṯa",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        426,
-        "جِدَاثَة",
-        "cidāṯa",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        427,
-        "جُدُوثَة",
-        "cudūṯa",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        428,
-        "جَدْث",
-        "cadṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ],
-      [
-        429,
-        "جِدْث",
-        "cidṯ",
-        "mezar olma",
-        "kontrol",
-        ""
-      ]
+      ["fa'âl (kelâm, selâm)", "semâî aday", "جَدَاث", "cadāṯ", "mezar olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday", "جُدُوث", "cudūṯ", "mezar olma", "kontrol", ""],
+      ["fi'âl", "semâî aday", "جِدَاث", "cidāṯ", "mezar olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday", "جُدْث", "cudṯ", "mezar olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday", "جَدَاثَة", "cadāṯa", "mezar olma", "kontrol", ""],
+      ["fi'âle", "semâî aday", "جِدَاثَة", "cidāṯa", "mezar olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday", "جُدُوثَة", "cudūṯa", "mezar olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "جَدْث", "cadṯ", "mezar olma", "kontrol", ""],
+      ["fi'l", "semâî aday", "جِدْث", "cidṯ", "mezar olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [
-        430,
-        "جَادُوث",
-        "cādūṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        432,
-        "جَدَثَة",
-        "cadaṯa",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        433,
-        "جُدَثَة",
-        "cudaṯa",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        434,
-        "أُجْدُوثَة",
-        "ʾucdūṯa",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        435,
-        "جَوْدَث",
-        "cawdaṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        437,
-        "جَيْدَث",
-        "caydaṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        439,
-        "جَدْث",
-        "cadṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        441,
-        "جَدَث",
-        "cadaṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        443,
-        "جِدْث",
-        "cidṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        445,
-        "جُدْث",
-        "cudṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        447,
-        "جَدِيث",
-        "cadīṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        449,
-        "جِدَث",
-        "cidaṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        451,
-        "جُدُث",
-        "cuduṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ],
-      [
-        453,
-        "جَدَاث",
-        "cadāṯ",
-        "mezar olma türünden şey",
-        "kontrol",
-        ""
-      ]
+      ["fâ'ûl", "semâî aday", "جَادُوث", "cādūṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday", "جَدَثَة", "cadaṯa", "mezar olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "جُدَثَة", "cudaṯa", "mezar olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُجْدُوثَة", "ʾucdūṯa", "mezar olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "جَوْدَث", "cawdaṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "جَيْدَث", "caydaṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "جَدْث", "cadṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fa'al", "semâî aday", "جَدَث", "cadaṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "جِدْث", "cidṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday", "جُدْث", "cudṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday", "جَدِيث", "cadīṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday", "جِدَث", "cidaṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday", "جُدُث", "cuduṯ", "mezar olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday", "جَدَاث", "cadāṯ", "mezar olma türünden şey", "kontrol", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [
-        431,
-        "جَادُوثَة",
-        "cādūṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        436,
-        "جَوْدَثَة",
-        "cawdaṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        438,
-        "جَيْدَثَة",
-        "caydaṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        440,
-        "جَدْثَة",
-        "cadṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        442,
-        "جَدَثَة",
-        "cadaṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        444,
-        "جِدْثَة",
-        "cidṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        446,
-        "جُدْثَة",
-        "cudṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        448,
-        "جَدِيثَة",
-        "cadīṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        450,
-        "جِدَثَة",
-        "cidaṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        452,
-        "جُدُثَة",
-        "cuduṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ],
-      [
-        454,
-        "جَدَاثَة",
-        "cadāṯa",
-        "mezar olma türünden bir tane",
-        "kontrol",
-        ""
-      ]
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "جَادُوثَة", "cādūṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "جَوْدَثَة", "cawdaṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "جَيْدَثَة", "caydaṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "جَدْثَة", "cadṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "جَدَثَة", "cadaṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "جِدْثَة", "cidṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "جُدْثَة", "cudṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "جَدِيثَة", "cadīṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "جِدَثَة", "cidaṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "جُدُثَة", "cuduṯa", "mezar olma türünden bir tane", "kontrol", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "جَدَاثَة", "cadāṯa", "mezar olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [
-        455,
-        "أَجْدَاث",
-        "ʾacdāṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        456,
-        "أَجْدِثَة",
-        "ʾacdiṯa",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        457,
-        "أَجَادِث",
-        "ʾacādiṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        458,
-        "أَجَادِيث",
-        "ʾacādīṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        459,
-        "جُدُوث",
-        "cudūṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        460,
-        "جُدُث",
-        "cuduṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        461,
-        "جِدَاث",
-        "cidāṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        462,
-        "جِدَث",
-        "cidaṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        463,
-        "جِدَثَة",
-        "cidaṯa",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        464,
-        "جُدَث",
-        "cudaṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        465,
-        "جُدَثاء",
-        "cudaṯāʾ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        466,
-        "جَدَثَة",
-        "cadaṯa",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        467,
-        "جُدَّاث",
-        "cuddāṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        468,
-        "جَدَاث",
-        "cadāṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        469,
-        "جَدَث",
-        "cadaṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        470,
-        "مَجَادِث",
-        "macādiṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        471,
-        "مَجَادِيث",
-        "macādīṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        472,
-        "جَوَادِث",
-        "cawādiṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        473,
-        "أَجْدُث",
-        "ʾacduṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        474,
-        "جُدَّث",
-        "cuddaṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        475,
-        "جَدَائِث",
-        "cadāʾiṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ],
-      [
-        476,
-        "جُدَيْث",
-        "cudayṯ",
-        "mezar olmalar",
-        "kontrol",
-        ""
-      ]
+      ["ef'āl", "semâî aday", "أَجْدَاث", "ʾacdāṯ", "mezar olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday", "أَجْدِثَة", "ʾacdiṯa", "mezar olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday", "أَجَادِث", "ʾacādiṯ", "mezar olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday", "أَجَادِيث", "ʾacādīṯ", "mezar olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "جُدُوث", "cudūṯ", "mezar olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "جُدُث", "cuduṯ", "mezar olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday", "جِدَاث", "cidāṯ", "mezar olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday", "جِدَث", "cidaṯ", "mezar olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "جِدَثَة", "cidaṯa", "mezar olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday", "جُدَث", "cudaṯ", "mezar olmalar", "kontrol", ""],
+      ["fu'alā'", "semâî aday", "جُدَثاء", "cudaṯāʾ", "mezar olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "جَدَثَة", "cadaṯa", "mezar olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday", "جُدَّاث", "cuddāṯ", "mezar olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "جَدَاث", "cadāṯ", "mezar olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday", "جَدَث", "cadaṯ", "mezar olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday", "مَجَادِث", "macādiṯ", "mezar olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday", "مَجَادِيث", "macādīṯ", "mezar olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday", "جَوَادِث", "cawādiṯ", "mezar olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَجْدُث", "ʾacduṯ", "mezar olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "جُدَّث", "cuddaṯ", "mezar olmalar", "kontrol", ""],
+      ["fe'âil", "semâî aday", "جَدَائِث", "cadāʾiṯ", "mezar olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday", "جُدَيْث", "cudayṯ", "mezar olmalar", "kontrol", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [
-        477,
-        "أَجْدَاثَات",
-        "ʾacdāṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        478,
-        "أَجْدِثَات",
-        "ʾacdiṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        479,
-        "أَجَادِثَات",
-        "ʾacādiṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        480,
-        "أَجَادِيثَات",
-        "ʾacādīṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        481,
-        "جُدُوثَات",
-        "cudūṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        482,
-        "جُدُثَات",
-        "cuduṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        483,
-        "جِدَاثَات",
-        "cidāṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        484,
-        "جِدَثَات",
-        "cidaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        485,
-        "جِدَثَات",
-        "cidaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        486,
-        "جُدَثَات",
-        "cudaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        487,
-        "جُدَثاآت",
-        "cudaṯāʾāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        488,
-        "جَدَثَات",
-        "cadaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        489,
-        "جُدَّاثَات",
-        "cuddāṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        490,
-        "جَدَاثَات",
-        "cadāṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        491,
-        "جَدَثَات",
-        "cadaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        492,
-        "مَجَادِثَات",
-        "macādiṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        493,
-        "مَجَادِيثَات",
-        "macādīṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        494,
-        "جَوَادِثَات",
-        "cawādiṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        495,
-        "أَجْدُثَات",
-        "ʾacduṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        496,
-        "جُدَّثَات",
-        "cuddaṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        497,
-        "جَدَائِثَات",
-        "cadāʾiṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ],
-      [
-        498,
-        "جُدَيْثَات",
-        "cudayṯāt",
-        "mezar olmalar topluluğu",
-        "kontrol",
-        ""
-      ]
+      ["ef'āl + ât", "semâî aday", "أَجْدَاثَات", "ʾacdāṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday", "أَجْدِثَات", "ʾacdiṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday", "أَجَادِثَات", "ʾacādiṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday", "أَجَادِيثَات", "ʾacādīṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday", "جُدُوثَات", "cudūṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday", "جُدُثَات", "cuduṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday", "جِدَاثَات", "cidāṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday", "جِدَثَات", "cidaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday", "جِدَثَات", "cidaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday", "جُدَثَات", "cudaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu'alā' + ât", "semâî aday", "جُدَثاآت", "cudaṯāʾāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday", "جَدَثَات", "cadaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday", "جُدَّاثَات", "cuddāṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday", "جَدَاثَات", "cadāṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday", "جَدَثَات", "cadaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday", "مَجَادِثَات", "macādiṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَجَادِيثَات", "macādīṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday", "جَوَادِثَات", "cawādiṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَجْدُثَات", "ʾacduṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "جُدَّثَات", "cuddaṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fe'âil + ât", "semâî aday", "جَدَائِثَات", "cadāʾiṯāt", "mezar olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "جُدَيْثَات", "cudayṯāt", "mezar olmalar topluluğu", "kontrol", ""]
     ]
   },
   "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "rubâ‘î",
-      "dört harfli bâblar",
-      "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "جدث",
-      "turkce": "Cades: mezar; ecdes: mezar taşı"
-    },
-    "osmanlica_lugatler": {
-      "أَجْداث": {
-        "sorgular": [
-          "acdas"
-        ],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "جَدَثَ",
-        "metin": "(جَدَثَ) الْجِيمُ وَالدَّالُ وَالثَّاءُ كَلِمَةٌ وَاحِدَةٌ: الْجَدَثُ الْقَبْرُ، وَجَمْعُهُ أَجْدَاثٌ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الجيم والدال",
-      "baslik": "جدث",
-      "mihveri": "نَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51].",
-      "sesler": "",
-      "tam_metin": "{يَخْرُجُونَ مِنَ الْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُنْتَشِرٌ} [القمر: 7].\n\"الجَدَث - محركة: القبر \".\n° المعنى المحوري\nنَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51].",
-      "fasil_ozeti": "° معنى الفصل المعجمي (جد): الكثافة صلابةً أو عِظمًا مع الامتداد والاستواء - كما يتمثل في الجَدَد من الأرض - في (جدد)، وفي قوة المطر الواقع (ووقوعه امتداد ونفاذ) - في (جود)، وكما في الشيء المتحصل - في (وجد)، وكما في الأرض التي تُحفر جدثًا - في (جدث)، وفي جسم الجِدار وبَثر الجُدَرِيّ والعياذ بالله - في (جدر)، وكما في جسم الجَدالة والحبل الذي يفتل - في (جدل)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 3,
-      "ilk_yer": "36:51:7:2",
-      "tur": {
-        "N": 3
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "أَجْدَاث": 3
-      },
-      "bicimler": {
-        "أَجْدَاثِ": 3
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ǦDṮ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ǦDṮ جدث BP – • HDAL • © SG | 5Mar2023 √ǦDṮ “root” ▪ ǦDṮ_1 ‘...’ ↗ ... ▪ ǦDṮ_2 ‘...’ ↗ ... ▪ ǦDṮ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘(a doubtful verbal root) a grave, to make or prepare a grave’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "جَدَثَ",
-          "metin": "(جَدَثَ) Cim, dal ve se harfleri tek bir kelimedir: 'Cedes' (الْجَدَث) kabirdir; cem'i 'ecdâs'tır (أَجْدَاث)."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Yerden genişçe bir parçadan toprağı kuvvetle eşeleyip çıkarmaktır (kabrin kazıldığı gibi) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [Yâsîn: 51]."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön EtymArab ǦDṮ جدث BP – • HDAL • © SG | 5Mart2023 √ǦDṮ “kök” ▪ ǦDṮ_1 ‘...’ ↗ ... ▪ ǦDṮ_2 ‘...’ ↗ ... ▪ ǦDṮ_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘(meşkûk bir fiil kökü) bir kabir, kabir yapmak veya hazırlamak’ ▪ … – . . – – Kaynaklar ; meta ; gram ; ingl ; mefh ; tarh ; akr ; tart ; batı ; türv ;"
-      }
-    }
-  },
-  "kuran_gecisleri": 3,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": [
-      "kalip",
-      "arapca",
-      "latin",
-      "turkce",
-      "guven",
-      "tanik"
-    ]
-  },
-  "tasnif": {
-    "fasil": "جد",
-    "harf": "ج",
-    "mahrec": "şeceriyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
+  "mana": {
     "durum": "Arabic WordNet v2 kaydı yok"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الجيم والدال",
-    "mihveri": "نَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51].",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (جد): الكثافة صلابةً أو عِظمًا مع الامتداد والاستواء - كما يتمثل في الجَدَد من الأرض - في (جدد)، وفي قوة المطر الواقع (ووقوعه امتداد ونفاذ) - في (جود)، وكما في الشيء المتحصل - في (وجد)، وكما في الأرض التي تُحفر جدثًا - في (جدث)، وفي جسم الجِدار وبَثر الجُدَرِيّ والعياذ بالله - في (جدر)، وكما في جسم الجَدالة والحبل الذي يفتل - في (جدل).",
-    "tam_metin": "{يَخْرُجُونَ مِنَ الْأَجْدَاثِ كَأَنَّهُمْ جَرَادٌ مُنْتَشِرٌ} [القمر: 7].\n\"الجَدَث - محركة: القبر \".\n° المعنى المحوري\nنَبْث التراب وإخراجه بقوة من قطعة عريضة من الأرض (كما يحتفر القبر) {وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الْأَجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ} [يس: 51]."
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "غيّبوه في الجدث أي في القبر. وتقول: شرد الأحداث، نزول الأجداث.",
-    "mecaz": "",
-    "kinaye": "",
-    "mecaz_var": false
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "السلاح",
-    "bab": "",
-    "kok_gecis": 8.0,
-    "kitapta_gecis": 3.0,
-    "zenginlesme": 7.67
-  },
-  "mana_tasnif_gomme": {
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -4121,2887 +2147,13 @@
       "boy": 9
     }
   },
-  "kaliplar": {
-    "0": [
-      "masdar · sülâsî mücerred",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "1": [
-      "masdar · sülâsî mücerred",
-      "fi'l",
-      "semâî aday",
-      ""
-    ],
-    "2": [
-      "masdar · sülâsî mücerred",
-      "fu'l",
-      "semâî aday",
-      ""
-    ],
-    "3": [
-      "masdar · sülâsî mücerred",
-      "fa'al",
-      "semâî aday",
-      ""
-    ],
-    "4": [
-      "masdar · sülâsî mücerred",
-      "fi'al",
-      "semâî aday",
-      ""
-    ],
-    "5": [
-      "masdar · sülâsî mücerred",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "6": [
-      "masdar · sülâsî mücerred",
-      "fu'ūl",
-      "semâî aday",
-      ""
-    ],
-    "7": [
-      "masdar · sülâsî mücerred",
-      "fi'āl",
-      "semâî aday",
-      ""
-    ],
-    "8": [
-      "masdar · sülâsî mücerred",
-      "fu'āl",
-      "semâî aday",
-      ""
-    ],
-    "9": [
-      "masdar · sülâsî mücerred",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "10": [
-      "masdar · sülâsî mücerred",
-      "fa'āle",
-      "semâî aday",
-      ""
-    ],
-    "11": [
-      "masdar · sülâsî mücerred",
-      "fu'ūle",
-      "semâî aday",
-      ""
-    ],
-    "12": [
-      "masdar · sülâsî mücerred",
-      "fi'āle",
-      "semâî aday",
-      ""
-    ],
-    "13": [
-      "masdar · sülâsî mücerred",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "14": [
-      "masdar · sülâsî mücerred",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "15": [
-      "masdar · sülâsî mücerred",
-      "fa'alān",
-      "semâî aday",
-      ""
-    ],
-    "16": [
-      "masdar · sülâsî mücerred",
-      "fu'lān",
-      "semâî aday",
-      ""
-    ],
-    "17": [
-      "masdar · sülâsî mücerred",
-      "fi'lān",
-      "semâî aday",
-      ""
-    ],
-    "18": [
-      "masdar · sülâsî mücerred",
-      "fa'lā",
-      "semâî aday",
-      ""
-    ],
-    "19": [
-      "masdar · sülâsî mücerred",
-      "fu'lā",
-      "semâî aday",
-      ""
-    ],
-    "20": [
-      "masdar · sülâsî mücerred",
-      "fi'lā",
-      "semâî aday",
-      ""
-    ],
-    "21": [
-      "masdar · sülâsî mücerred",
-      "fa'ale",
-      "semâî aday",
-      ""
-    ],
-    "22": [
-      "masdar · sülâsî mücerred",
-      "fi'ale",
-      "semâî aday",
-      ""
-    ],
-    "23": [
-      "masdar · sülâsî mücerred",
-      "fa'lūla",
-      "semâî aday",
-      ""
-    ],
-    "24": [
-      "masdar · sülâsî mücerred",
-      "tuf'ūl",
-      "semâî aday",
-      ""
-    ],
-    "25": [
-      "masdar · sülâsî mücerred",
-      "taf'ila",
-      "semâî aday",
-      ""
-    ],
-    "26": [
-      "masdar · sülâsî mücerred",
-      "taf'ala",
-      "semâî aday",
-      ""
-    ],
-    "27": [
-      "masdar · sülâsî mücerred",
-      "maf'ula",
-      "semâî aday",
-      ""
-    ],
-    "28": [
-      "masdar · sülâsî mücerred",
-      "maf'ila",
-      "semâî aday",
-      ""
-    ],
-    "29": [
-      "masdar · bâb II",
-      "taf'īl",
-      "kıyâsî",
-      "II"
-    ],
-    "30": [
-      "masdar · bâb II",
-      "taf'ila",
-      "kıyâsî",
-      "II"
-    ],
-    "31": [
-      "masdar · bâb II",
-      "fi''āl",
-      "kıyâsî",
-      "II"
-    ],
-    "32": [
-      "ism-i merre · bâb II",
-      "taf'īl + tâ",
-      "aday",
-      "II"
-    ],
-    "33": [
-      "ism-i merre · bâb II",
-      "fi''āl + tâ",
-      "aday",
-      "II"
-    ],
-    "34": [
-      "ism-i fâil · bâb II",
-      "mufa''il",
-      "kıyâsî",
-      "II"
-    ],
-    "35": [
-      "ism-i fâil · bâb II",
-      "mufa''il + müennes",
-      "kıyâsî",
-      "II"
-    ],
-    "36": [
-      "ism-i fâil · bâb II",
-      "mufa''il + tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "37": [
-      "ism-i fâil · bâb II",
-      "mufa''il + müennes tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "38": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "II"
-    ],
-    "39": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "II"
-    ],
-    "40": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "II"
-    ],
-    "41": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al",
-      "kıyâsî",
-      "II"
-    ],
-    "42": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "kıyâsî",
-      "II"
-    ],
-    "43": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "44": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "45": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "II"
-    ],
-    "46": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "II"
-    ],
-    "47": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "II"
-    ],
-    "48": [
-      "mekân/zaman/masdar-ı mîmî · bâb II",
-      "mufa''al",
-      "kıyâsî",
-      "II"
-    ],
-    "49": [
-      "masdar · bâb III",
-      "mufā'ale",
-      "kıyâsî",
-      "III"
-    ],
-    "50": [
-      "masdar · bâb III",
-      "fi'āl",
-      "kıyâsî",
-      "III"
-    ],
-    "51": [
-      "ism-i merre · bâb III",
-      "fi'āl + tâ",
-      "aday",
-      "III"
-    ],
-    "52": [
-      "ism-i fâil · bâb III",
-      "mufā'il",
-      "kıyâsî",
-      "III"
-    ],
-    "53": [
-      "ism-i fâil · bâb III",
-      "mufā'il + müennes",
-      "kıyâsî",
-      "III"
-    ],
-    "54": [
-      "ism-i fâil · bâb III",
-      "mufā'il + tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "55": [
-      "ism-i fâil · bâb III",
-      "mufā'il + müennes tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "56": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "III"
-    ],
-    "57": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "III"
-    ],
-    "58": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "III"
-    ],
-    "59": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al",
-      "kıyâsî",
-      "III"
-    ],
-    "60": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "kıyâsî",
-      "III"
-    ],
-    "61": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "62": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "63": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "III"
-    ],
-    "64": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "III"
-    ],
-    "65": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "III"
-    ],
-    "66": [
-      "mekân/zaman/masdar-ı mîmî · bâb III",
-      "mufā'al",
-      "kıyâsî",
-      "III"
-    ],
-    "67": [
-      "masdar · bâb IV",
-      "if'āl",
-      "kıyâsî",
-      "IV"
-    ],
-    "68": [
-      "ism-i merre · bâb IV",
-      "if'āl + tâ",
-      "aday",
-      "IV"
-    ],
-    "69": [
-      "ism-i fâil · bâb IV",
-      "muf'il",
-      "kıyâsî",
-      "IV"
-    ],
-    "70": [
-      "ism-i fâil · bâb IV",
-      "muf'il + müennes",
-      "kıyâsî",
-      "IV"
-    ],
-    "71": [
-      "ism-i fâil · bâb IV",
-      "muf'il + tesniye",
-      "kıyâsî",
-      "IV"
-    ],
-    "72": [
-      "ism-i fâil · bâb IV",
-      "muf'il + müennes tesniye",
-      "kıyâsî",
-      "IV"
-    ],
-    "73": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "IV"
-    ],
-    "74": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "IV"
-    ],
-    "75": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "IV"
-    ],
-    "76": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al",
-      "kıyâsî",
-      "IV"
-    ],
-    "77": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + müennes",
-      "kıyâsî",
-      "IV"
-    ],
-    "78": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + tesniye",
-      "kıyâsî",
-      "IV"
-    ],
-    "79": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + müennes tesniye",
-      "kıyâsî",
-      "IV"
-    ],
-    "80": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "IV"
-    ],
-    "81": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "IV"
-    ],
-    "82": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "IV"
-    ],
-    "83": [
-      "mekân/zaman/masdar-ı mîmî · bâb IV",
-      "muf'al",
-      "kıyâsî",
-      "IV"
-    ],
-    "84": [
-      "masdar · bâb V",
-      "tafa''ul",
-      "kıyâsî",
-      "V"
-    ],
-    "85": [
-      "ism-i merre · bâb V",
-      "tafa''ul + tâ",
-      "aday",
-      "V"
-    ],
-    "86": [
-      "ism-i fâil · bâb V",
-      "mutafa''il",
-      "kıyâsî",
-      "V"
-    ],
-    "87": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + müennes",
-      "kıyâsî",
-      "V"
-    ],
-    "88": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "89": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + müennes tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "90": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "V"
-    ],
-    "91": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "V"
-    ],
-    "92": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "V"
-    ],
-    "93": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al",
-      "kıyâsî",
-      "V"
-    ],
-    "94": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "kıyâsî",
-      "V"
-    ],
-    "95": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "96": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "97": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "V"
-    ],
-    "98": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "V"
-    ],
-    "99": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "V"
-    ],
-    "100": [
-      "mekân/zaman/masdar-ı mîmî · bâb V",
-      "mutafa''al",
-      "kıyâsî",
-      "V"
-    ],
-    "101": [
-      "masdar · bâb VI",
-      "tafā'ul",
-      "kıyâsî",
-      "VI"
-    ],
-    "102": [
-      "ism-i merre · bâb VI",
-      "tafā'ul + tâ",
-      "aday",
-      "VI"
-    ],
-    "103": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il",
-      "kıyâsî",
-      "VI"
-    ],
-    "104": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + müennes",
-      "kıyâsî",
-      "VI"
-    ],
-    "105": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "106": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + müennes tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "107": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VI"
-    ],
-    "108": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VI"
-    ],
-    "109": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VI"
-    ],
-    "110": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al",
-      "kıyâsî",
-      "VI"
-    ],
-    "111": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "kıyâsî",
-      "VI"
-    ],
-    "112": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "113": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "114": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VI"
-    ],
-    "115": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VI"
-    ],
-    "116": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VI"
-    ],
-    "117": [
-      "mekân/zaman/masdar-ı mîmî · bâb VI",
-      "mutafā'al",
-      "kıyâsî",
-      "VI"
-    ],
-    "118": [
-      "masdar · bâb VII",
-      "infi'āl",
-      "kıyâsî",
-      "VII"
-    ],
-    "119": [
-      "ism-i merre · bâb VII",
-      "infi'āl + tâ",
-      "aday",
-      "VII"
-    ],
-    "120": [
-      "ism-i fâil · bâb VII",
-      "munfa'il",
-      "kıyâsî",
-      "VII"
-    ],
-    "121": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + müennes",
-      "kıyâsî",
-      "VII"
-    ],
-    "122": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + tesniye",
-      "kıyâsî",
-      "VII"
-    ],
-    "123": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + müennes tesniye",
-      "kıyâsî",
-      "VII"
-    ],
-    "124": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VII"
-    ],
-    "125": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VII"
-    ],
-    "126": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VII"
-    ],
-    "127": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": [
-      "masdar · bâb VIII",
-      "ifti'āl",
-      "kıyâsî",
-      "VIII"
-    ],
-    "137": [
-      "ism-i merre · bâb VIII",
-      "ifti'āl + tâ",
-      "aday",
-      "VIII"
-    ],
-    "138": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil",
-      "kıyâsî",
-      "VIII"
-    ],
-    "139": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + müennes",
-      "kıyâsî",
-      "VIII"
-    ],
-    "140": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + tesniye",
-      "kıyâsî",
-      "VIII"
-    ],
-    "141": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + müennes tesniye",
-      "kıyâsî",
-      "VIII"
-    ],
-    "142": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "143": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "144": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "145": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal",
-      "kıyâsî",
-      "VIII"
-    ],
-    "146": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "kıyâsî",
-      "VIII"
-    ],
-    "147": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + tesniye",
-      "kıyâsî",
-      "VIII"
-    ],
-    "148": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes tesniye",
-      "kıyâsî",
-      "VIII"
-    ],
-    "149": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "150": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "151": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VIII"
-    ],
-    "152": [
-      "mekân/zaman/masdar-ı mîmî · bâb VIII",
-      "muftaʿal",
-      "kıyâsî",
-      "VIII"
-    ],
-    "176": [
-      "masdar · bâb X",
-      "istif'āl",
-      "kıyâsî",
-      "X"
-    ],
-    "177": [
-      "ism-i merre · bâb X",
-      "istif'āl + tâ",
-      "aday",
-      "X"
-    ],
-    "178": [
-      "ism-i fâil · bâb X",
-      "mustaf'il",
-      "kıyâsî",
-      "X"
-    ],
-    "179": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + müennes",
-      "kıyâsî",
-      "X"
-    ],
-    "180": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + tesniye",
-      "kıyâsî",
-      "X"
-    ],
-    "181": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + müennes tesniye",
-      "kıyâsî",
-      "X"
-    ],
-    "182": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "X"
-    ],
-    "183": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "X"
-    ],
-    "184": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "X"
-    ],
-    "185": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al",
-      "kıyâsî",
-      "X"
-    ],
-    "186": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "kıyâsî",
-      "X"
-    ],
-    "187": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + tesniye",
-      "kıyâsî",
-      "X"
-    ],
-    "188": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes tesniye",
-      "kıyâsî",
-      "X"
-    ],
-    "189": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "X"
-    ],
-    "190": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "X"
-    ],
-    "191": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "X"
-    ],
-    "192": [
-      "mekân/zaman/masdar-ı mîmî · bâb X",
-      "mustaf'al",
-      "kıyâsî",
-      "X"
-    ],
-    "213": [
-      "ism-i fâil · sülâsî",
-      "fâ'il",
-      "kıyâsî",
-      ""
-    ],
-    "214": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + müennes",
-      "kıyâsî",
-      ""
-    ],
-    "215": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "216": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + müennes tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "217": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      ""
-    ],
-    "218": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      ""
-    ],
-    "219": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      ""
-    ],
-    "220": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl",
-      "kıyâsî",
-      ""
-    ],
-    "221": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + müennes",
-      "kıyâsî",
-      ""
-    ],
-    "222": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "223": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + müennes tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "224": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      ""
-    ],
-    "225": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      ""
-    ],
-    "226": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      ""
-    ],
-    "227": [
-      "mekân/zaman · sülâsî",
-      "maf'al",
-      "kıyâsî",
-      ""
-    ],
-    "228": [
-      "mekân/zaman · sülâsî",
-      "maf'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "229": [
-      "mekân/zaman · sülâsî",
-      "maf'il",
-      "kıyâsî",
-      ""
-    ],
-    "230": [
-      "mekân/zaman · sülâsî",
-      "maf'il + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "231": [
-      "mekân/zaman · sülâsî",
-      "maf'ale",
-      "kıyâsî",
-      ""
-    ],
-    "232": [
-      "mekân/zaman · sülâsî",
-      "maf'ale + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "233": [
-      "mekân/zaman · sülâsî",
-      "maf'ile",
-      "kıyâsî",
-      ""
-    ],
-    "234": [
-      "mekân/zaman · sülâsî",
-      "maf'ile + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "235": [
-      "âlet · sülâsî",
-      "mif'al",
-      "kıyâsî",
-      ""
-    ],
-    "236": [
-      "âlet · sülâsî",
-      "mif'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "237": [
-      "âlet · sülâsî",
-      "mif'âl",
-      "kıyâsî",
-      ""
-    ],
-    "238": [
-      "âlet · sülâsî",
-      "mif'âl + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "239": [
-      "âlet · sülâsî",
-      "mif'ale",
-      "kıyâsî",
-      ""
-    ],
-    "240": [
-      "âlet · sülâsî",
-      "mif'ale + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "241": [
-      "tafdîl · sülâsî",
-      "af'al",
-      "kıyâsî",
-      ""
-    ],
-    "242": [
-      "tafdîl · sülâsî",
-      "af'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "243": [
-      "tafdîl (müennes) · sülâsî",
-      "fu'lâ",
-      "kıyâsî",
-      ""
-    ],
-    "244": [
-      "tafdîl (müennes) · sülâsî",
-      "fu'lâ + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "245": [
-      "tafdîl (müennes) · sülâsî",
-      "fa'lâ'",
-      "kıyâsî",
-      ""
-    ],
-    "246": [
-      "tafdîl (müennes) · sülâsî",
-      "fa'lâ' + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "247": [
-      "mekân/zaman · sülâsî",
-      "maf'ula",
-      "kıyâsî",
-      ""
-    ],
-    "248": [
-      "mekân/zaman · sülâsî",
-      "maf'ula + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "249": [
-      "tasğîr · sülâsî",
-      "fu'ayl",
-      "kıyâsî",
-      ""
-    ],
-    "250": [
-      "tasğîr · sülâsî",
-      "fu'ayl + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "251": [
-      "tasğîr · sülâsî",
-      "fu'ayle",
-      "kıyâsî",
-      ""
-    ],
-    "252": [
-      "tasğîr · sülâsî",
-      "fu'ayle + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "253": [
-      "masdar-ı mîmî · sülâsî",
-      "maf'al",
-      "kıyâsî",
-      ""
-    ],
-    "254": [
-      "masdar-ı mîmî · sülâsî",
-      "maf'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "255": [
-      "ism-i merre · sülâsî",
-      "fa'le",
-      "aday",
-      ""
-    ],
-    "256": [
-      "ism-i merre · sülâsî",
-      "fa'le + tesniye",
-      "aday",
-      ""
-    ],
-    "257": [
-      "ism-i hey'et · sülâsî",
-      "fi'le",
-      "aday",
-      ""
-    ],
-    "258": [
-      "ism-i hey'et · sülâsî",
-      "fi'le + tesniye",
-      "aday",
-      ""
-    ],
-    "259": [
-      "sıfat-ı müşebbehe",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "260": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "261": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "262": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "263": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "264": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "265": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "266": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "267": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "268": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "269": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "270": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "271": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "272": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "273": [
-      "sıfat-ı müşebbehe",
-      "fa'il",
-      "semâî aday",
-      ""
-    ],
-    "274": [
-      "sıfat-ı müşebbehe",
-      "fa'il + müennes",
-      "semâî aday",
-      ""
-    ],
-    "275": [
-      "sıfat-ı müşebbehe",
-      "fa'il + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "276": [
-      "sıfat-ı müşebbehe",
-      "fa'il + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "277": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "278": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "279": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "280": [
-      "sıfat-ı müşebbehe",
-      "fa'ul",
-      "semâî aday",
-      ""
-    ],
-    "281": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + müennes",
-      "semâî aday",
-      ""
-    ],
-    "282": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "283": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "284": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "285": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "286": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "287": [
-      "sıfat-ı müşebbehe",
-      "fa'al",
-      "semâî aday",
-      ""
-    ],
-    "288": [
-      "sıfat-ı müşebbehe",
-      "fa'al + müennes",
-      "semâî aday",
-      ""
-    ],
-    "289": [
-      "sıfat-ı müşebbehe",
-      "fa'al + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "290": [
-      "sıfat-ı müşebbehe",
-      "fa'al + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "291": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "292": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "293": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "294": [
-      "sıfat-ı müşebbehe",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "295": [
-      "sıfat-ı müşebbehe",
-      "fa'l + müennes",
-      "semâî aday",
-      ""
-    ],
-    "296": [
-      "sıfat-ı müşebbehe",
-      "fa'l + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "297": [
-      "sıfat-ı müşebbehe",
-      "fa'l + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "298": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "299": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "300": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "301": [
-      "sıfat-ı müşebbehe",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "302": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + müennes",
-      "semâî aday",
-      ""
-    ],
-    "303": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "304": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "305": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "306": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "307": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "308": [
-      "sıfat-ı müşebbehe",
-      "fa'lān",
-      "semâî aday",
-      ""
-    ],
-    "309": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + müennes",
-      "semâî aday",
-      ""
-    ],
-    "310": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "311": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "312": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "313": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "314": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "315": [
-      "sıfat-ı müşebbehe",
-      "fu'āl",
-      "semâî aday",
-      ""
-    ],
-    "316": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "317": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "318": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "319": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "320": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "321": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "322": [
-      "sıfat-ı müşebbehe",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "323": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "324": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "325": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "326": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "327": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "328": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "329": [
-      "mübalağa",
-      "fa''āl",
-      "semâî aday",
-      ""
-    ],
-    "330": [
-      "mübalağa",
-      "fa''āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "331": [
-      "mübalağa",
-      "fa''āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "332": [
-      "mübalağa",
-      "fa''āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "333": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "334": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "335": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "336": [
-      "mübalağa",
-      "fa''āle",
-      "semâî aday",
-      ""
-    ],
-    "337": [
-      "mübalağa",
-      "fa''āle + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "338": [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "339": [
-      "mübalağa",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "340": [
-      "mübalağa",
-      "fa'ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "341": [
-      "mübalağa",
-      "fa'ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "342": [
-      "mübalağa",
-      "fa'ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "343": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "344": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "345": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "346": [
-      "mübalağa",
-      "fa''ūl",
-      "semâî aday",
-      ""
-    ],
-    "347": [
-      "mübalağa",
-      "fa''ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "348": [
-      "mübalağa",
-      "fa''ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "349": [
-      "mübalağa",
-      "fa''ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "350": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "351": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "352": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "353": [
-      "mübalağa",
-      "fi''īl",
-      "semâî aday",
-      ""
-    ],
-    "354": [
-      "mübalağa",
-      "fi''īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "355": [
-      "mübalağa",
-      "fi''īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "356": [
-      "mübalağa",
-      "fi''īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "357": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "358": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "359": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "360": [
-      "mübalağa",
-      "fu''āl",
-      "semâî aday",
-      ""
-    ],
-    "361": [
-      "mübalağa",
-      "fu''āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "362": [
-      "mübalağa",
-      "fu''āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "363": [
-      "mübalağa",
-      "fu''āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "364": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "365": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "366": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "367": [
-      "mübalağa",
-      "mif'āl",
-      "semâî aday",
-      ""
-    ],
-    "368": [
-      "mübalağa",
-      "mif'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "369": [
-      "mübalağa",
-      "mif'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "370": [
-      "mübalağa",
-      "mif'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "371": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "372": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "373": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "374": [
-      "mübalağa",
-      "mif'īl",
-      "semâî aday",
-      ""
-    ],
-    "375": [
-      "mübalağa",
-      "mif'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "376": [
-      "mübalağa",
-      "mif'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "377": [
-      "mübalağa",
-      "mif'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "378": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "379": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "380": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "381": [
-      "mübalağa",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "382": [
-      "mübalağa",
-      "fa'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "383": [
-      "mübalağa",
-      "fa'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "384": [
-      "mübalağa",
-      "fa'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "385": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "386": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "387": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "388": [
-      "mübalağa",
-      "fa''al",
-      "semâî aday",
-      ""
-    ],
-    "389": [
-      "mübalağa",
-      "fa''al + müennes",
-      "semâî aday",
-      ""
-    ],
-    "390": [
-      "mübalağa",
-      "fa''al + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "391": [
-      "mübalağa",
-      "fa''al + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "392": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "393": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "394": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "395": [
-      "mensûb",
-      "fa'l + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "396": [
-      "masdar-ı sınâî",
-      "fa'l + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "397": [
-      "mensûb",
-      "fa'al + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "398": [
-      "masdar-ı sınâî",
-      "fa'al + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "399": [
-      "mensûb",
-      "fi'l + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "400": [
-      "masdar-ı sınâî",
-      "fi'l + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "401": [
-      "mensûb",
-      "fu'l + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "402": [
-      "masdar-ı sınâî",
-      "fu'l + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "403": [
-      "mensûb",
-      "fi'āl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "404": [
-      "masdar-ı sınâî",
-      "fi'āl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "405": [
-      "mensûb",
-      "fâ'il + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "406": [
-      "masdar-ı sınâî",
-      "fâ'il + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "407": [
-      "mensûb",
-      "maf'ûl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "408": [
-      "masdar-ı sınâî",
-      "maf'ûl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "409": [
-      "mensûb",
-      "fa'īl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "410": [
-      "masdar-ı sınâî",
-      "fa'īl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "411": [
-      "mensûb",
-      "maf'al + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "412": [
-      "masdar-ı sınâî",
-      "maf'al + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "413": [
-      "mensûb",
-      "taf'īl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "414": [
-      "masdar-ı sınâî",
-      "taf'īl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "415": [
-      "mensûb",
-      "tafā'ul + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "416": [
-      "masdar-ı sınâî",
-      "tafā'ul + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "417": [
-      "mensûb",
-      "if'āl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "418": [
-      "masdar-ı sınâî",
-      "if'āl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "419": [
-      "mensûb",
-      "ifti'āl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "420": [
-      "masdar-ı sınâî",
-      "ifti'āl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "421": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday",
-      ""
-    ],
-    "422": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'ûl (vudû')",
-      "semâî aday",
-      ""
-    ],
-    "423": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'âl",
-      "semâî aday",
-      ""
-    ],
-    "424": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'l (şükr)",
-      "semâî aday",
-      ""
-    ],
-    "425": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âle (belâğa)",
-      "semâî aday",
-      ""
-    ],
-    "426": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'âle",
-      "semâî aday",
-      ""
-    ],
-    "427": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'ûle",
-      "semâî aday",
-      ""
-    ],
-    "428": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "429": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'l",
-      "semâî aday",
-      ""
-    ],
-    "430": [
-      "ism-i cins · ifrâdî (aday)",
-      "fâ'ûl",
-      "semâî aday",
-      ""
-    ],
-    "431": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fâ'ûl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "432": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'ala",
-      "semâî aday",
-      ""
-    ],
-    "433": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'ala",
-      "semâî aday",
-      ""
-    ],
-    "434": [
-      "ism-i cins · ifrâdî (aday)",
-      "uf'ûla",
-      "semâî aday",
-      ""
-    ],
-    "435": [
-      "ism-i cins · ifrâdî (aday)",
-      "faw'al",
-      "semâî aday",
-      ""
-    ],
-    "436": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "faw'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "437": [
-      "ism-i cins · ifrâdî (aday)",
-      "fay'al",
-      "semâî aday",
-      ""
-    ],
-    "438": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fay'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "439": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "440": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'l + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "441": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'al",
-      "semâî aday",
-      ""
-    ],
-    "442": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "443": [
-      "ism-i cins · ifrâdî (aday)",
-      "fi'l",
-      "semâî aday",
-      ""
-    ],
-    "444": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'l + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "445": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'l",
-      "semâî aday",
-      ""
-    ],
-    "446": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'l + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "447": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'îl",
-      "semâî aday",
-      ""
-    ],
-    "448": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'îl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "449": [
-      "ism-i cins · ifrâdî (aday)",
-      "fi'al",
-      "semâî aday",
-      ""
-    ],
-    "450": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "451": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "452": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ul + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "453": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'âl",
-      "semâî aday",
-      ""
-    ],
-    "454": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'âl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "455": [
-      "cem‘-i mükesser (aday)",
-      "ef'āl",
-      "semâî aday",
-      ""
-    ],
-    "456": [
-      "cem‘-i mükesser (aday)",
-      "ef'ile",
-      "semâî aday",
-      ""
-    ],
-    "457": [
-      "cem‘-i mükesser (aday)",
-      "efâ'il",
-      "semâî aday",
-      ""
-    ],
-    "458": [
-      "cem‘-i mükesser (aday)",
-      "efâ'îl",
-      "semâî aday",
-      ""
-    ],
-    "459": [
-      "cem‘-i mükesser (aday)",
-      "fu'ūl",
-      "semâî aday",
-      ""
-    ],
-    "460": [
-      "cem‘-i mükesser (aday)",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "461": [
-      "cem‘-i mükesser (aday)",
-      "fi'āl",
-      "semâî aday",
-      ""
-    ],
-    "462": [
-      "cem‘-i mükesser (aday)",
-      "fi'al",
-      "semâî aday",
-      ""
-    ],
-    "463": [
-      "cem‘-i mükesser (aday)",
-      "fi'ale",
-      "semâî aday",
-      ""
-    ],
-    "464": [
-      "cem‘-i mükesser (aday)",
-      "fu'al",
-      "semâî aday",
-      ""
-    ],
-    "465": [
-      "cem‘-i mükesser (aday)",
-      "fu'alā'",
-      "semâî aday",
-      ""
-    ],
-    "466": [
-      "cem‘-i mükesser (aday)",
-      "fa'ale",
-      "semâî aday",
-      ""
-    ],
-    "467": [
-      "cem‘-i mükesser (aday)",
-      "fu''āl",
-      "semâî aday",
-      ""
-    ],
-    "468": [
-      "cem‘-i mükesser (aday)",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "469": [
-      "cem‘-i mükesser (aday)",
-      "fa'al",
-      "semâî aday",
-      ""
-    ],
-    "470": [
-      "cem‘-i mükesser (aday)",
-      "mefâ'il",
-      "semâî aday",
-      ""
-    ],
-    "471": [
-      "cem‘-i mükesser (aday)",
-      "mefâ'îl",
-      "semâî aday",
-      ""
-    ],
-    "472": [
-      "cem‘-i mükesser (aday)",
-      "fevâ'il",
-      "semâî aday",
-      ""
-    ],
-    "473": [
-      "cem‘-i mükesser (aday)",
-      "af'ul",
-      "semâî aday",
-      ""
-    ],
-    "474": [
-      "cem‘-i mükesser (aday)",
-      "fu''al",
-      "semâî aday",
-      ""
-    ],
-    "475": [
-      "cem‘-i mükesser (aday)",
-      "fe'âil",
-      "semâî aday",
-      ""
-    ],
-    "476": [
-      "cem‘-i mükesser (aday)",
-      "fu'ayl(cem')",
-      "semâî aday",
-      ""
-    ],
-    "477": [
-      "cem‘u’l-cem‘ (aday)",
-      "ef'āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "478": [
-      "cem‘u’l-cem‘ (aday)",
-      "ef'ile + ât",
-      "semâî aday",
-      ""
-    ],
-    "479": [
-      "cem‘u’l-cem‘ (aday)",
-      "efâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "480": [
-      "cem‘u’l-cem‘ (aday)",
-      "efâ'îl + ât",
-      "semâî aday",
-      ""
-    ],
-    "481": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ūl + ât",
-      "semâî aday",
-      ""
-    ],
-    "482": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ul + ât",
-      "semâî aday",
-      ""
-    ],
-    "483": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "484": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'al + ât",
-      "semâî aday",
-      ""
-    ],
-    "485": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'ale + ât",
-      "semâî aday",
-      ""
-    ],
-    "486": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'al + ât",
-      "semâî aday",
-      ""
-    ],
-    "487": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'alā' + ât",
-      "semâî aday",
-      ""
-    ],
-    "488": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'ale + ât",
-      "semâî aday",
-      ""
-    ],
-    "489": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu''āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "490": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "491": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'al + ât",
-      "semâî aday",
-      ""
-    ],
-    "492": [
-      "cem‘u’l-cem‘ (aday)",
-      "mefâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "493": [
-      "cem‘u’l-cem‘ (aday)",
-      "mefâ'îl + ât",
-      "semâî aday",
-      ""
-    ],
-    "494": [
-      "cem‘u’l-cem‘ (aday)",
-      "fevâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "495": [
-      "cem‘u’l-cem‘ (aday)",
-      "af'ul + ât",
-      "semâî aday",
-      ""
-    ],
-    "496": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu''al + ât",
-      "semâî aday",
-      ""
-    ],
-    "497": [
-      "cem‘u’l-cem‘ (aday)",
-      "fe'âil + ât",
-      "semâî aday",
-      ""
-    ],
-    "498": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ayl(cem') + ât",
-      "semâî aday",
-      ""
-    ],
-    "499": [
-      "masdar · bâb IX",
-      "if'ilāl",
-      "kıyâsî",
-      "IX"
-    ],
-    "500": [
-      "ism-i fâil · bâb IX",
-      "muf'all",
-      "kıyâsî",
-      "IX"
-    ],
-    "501": [
-      "ism-i fâil · bâb IX",
-      "muf'all + müennes",
-      "kıyâsî",
-      "IX"
-    ],
-    "502": [
-      "ism-i fâil · bâb IX",
-      "muf'all + tesniye",
-      "kıyâsî",
-      "IX"
-    ],
-    "503": [
-      "ism-i fâil · bâb IX",
-      "muf'all + müennes tesniye",
-      "kıyâsî",
-      "IX"
-    ],
-    "504": [
-      "ism-i fâil · bâb IX",
-      "muf'all + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "IX"
-    ],
-    "505": [
-      "ism-i fâil · bâb IX",
-      "muf'all + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "IX"
-    ],
-    "506": [
-      "ism-i fâil · bâb IX",
-      "muf'all + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "IX"
-    ],
-    "507": [
-      "masdar · bâb XI",
-      "if'īlāl",
-      "kıyâsî",
-      "XI"
-    ],
-    "508": [
-      "ism-i fâil · bâb XI",
-      "muf'āll",
-      "kıyâsî",
-      "XI"
-    ],
-    "509": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + müennes",
-      "kıyâsî",
-      "XI"
-    ],
-    "510": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + tesniye",
-      "kıyâsî",
-      "XI"
-    ],
-    "511": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + müennes tesniye",
-      "kıyâsî",
-      "XI"
-    ],
-    "512": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "XI"
-    ],
-    "513": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "XI"
-    ],
-    "514": [
-      "ism-i fâil · bâb XI",
-      "muf'āll + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "XI"
-    ],
-    "515": [
-      "masdar · bâb XII",
-      "if'iv'āl",
-      "kıyâsî",
-      "XII"
-    ],
-    "516": [
-      "masdar · bâb XIII",
-      "if'ivvāl",
-      "kıyâsî",
-      "XIII"
-    ]
+  "muhassas": {
+    "kitap": "السلاح",
+    "kok_gecis": 8.0,
+    "kitapta_gecis": 3.0,
+    "zenginlesme": 7.67
   },
-  "kelimeler": [
-    {
-      "kelime": "ٱلْأَجْدَاثِ",
-      "kok": "جدث",
-      "lemma": "أَجْداث",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "36:51",
-      "adet": 3,
-      "turkce": {
-        "yuzey": "mezarlar",
-        "lemma": "mezarlar",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 3
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Cades: mezar",
-    "kelimeler": [
-      {
-        "lemma": "أَجْداث",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 3,
-        "nasil": "cem‘-i mükesser (aday) · ef'āl (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

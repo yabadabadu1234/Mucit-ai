@@ -70,6 +70,19 @@ def yollar(d, prototip_esik):
     return y
 
 
+def gorunum(d):
+    if 'sozlukler' in d:
+        return d
+    kel = [{'lemma': g['lemma'], 'kelime': b['kelime'], 'turkce': {'yuzey': b.get('tr', '')}, 'adet': b.get('adet', 0)} for g in d.get('kelimeler', []) for b in g.get('bicimler', [])]
+    kuran = d.get('kuran') or {}
+    return {'kok': d['kok'], 'kuranda_var': True, 'tasnif': d.get('ses') or {}, 'mana_tasnif': d.get('mana') or {}, 'mana_tasnif_gomme': d.get('gomme') or {},
+            'muhassas_tasnif': d.get('muhassas') or {}, 'ses_mana_tasnif': {'fasil': (d.get('cebel') or {}).get('fasil')}, 'hakikat_mecaz_tasnif': d.get('zemahseri') or {},
+            'prototip_yayilim_tasnif': d.get('prototip') or {}, 'kelimeler': kel,
+            'sozlukler': {'kuran_korpusu': {k: v for k, v in kuran.items() if k in ('tur', 'bab', 'gecis')} if kuran else None, 'kok_anlamlari': {'turkce': d.get('anlam', '')},
+                          'etymarab': {'dolu': not d['etymarab'].get('yer_tutucu')} if d.get('etymarab') else None, 'arabic_ontology': d.get('ontoloji'),
+                          'kaikki_vikisozluk': [{'u': e.get('madde', ''), 'p': e.get('tur'), 'g': e.get('anlam', []), 'e': e.get('baslik', '')} for e in d.get('vikisozluk', [])]}}
+
+
 def yukle():
     onbellek = os.environ.get('KY_ONBELLEK')
     if onbellek and os.path.exists(onbellek):
@@ -79,7 +92,7 @@ def yukle():
     import awn_tasnif as AW
     kok_syn, lem_syn = AW.yukle()
     for f in sorted(glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json'))):
-        d = json.load(open(f, encoding='utf-8'))
+        d = gorunum(json.load(open(f, encoding='utf-8')))
         d['_syn'] = AW.synset_adlari(d, kok_syn, lem_syn)
         p = d.get('prototip_yayilim_tasnif') or {}
         ham.append((d, p.get('ortalama_benzerlik')))
@@ -102,7 +115,7 @@ def ek_bilgi(dugumler):
     ceviri = SB.ceviri_yukle()
     ek = {}
     for dosya in glob.glob(os.path.join(KOK, 'kelime_kaydi', 'kuranda_*', 'kokler', '*.json')):
-        d = json.load(open(dosya, encoding='utf-8'))
+        d = gorunum(json.load(open(dosya, encoding='utf-8')))
         kw = []
         for k in d.get('kelimeler', []):
             tr = (k.get('turkce') or {}).get('yuzey', '')

@@ -1,1362 +1,2692 @@
 {
   "kok": "لحي",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "sakal ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "nâkıs",
-  "turkce_fiil": {
-    "sap": "sakal ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [
-        0,
-        "لَحْي",
-        "laḥy",
-        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
-        "lugat",
-        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
-      ],
-      [1, "لِحْي", "liḥy", "sakal", "kontrol", ""],
-      [2, "لُحْي", "luḥy", "sakal", "kontrol", ""],
-      [517, "لَحَى", "laḥā", "sakal", "kontrol", ""],
-      [518, "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
-      [519, "لُحِيّ", "luḥiyy", "sakal", "kontrol", ""],
-      [520, "لُحِيّ", "luḥiyy", "sakal", "kontrol", ""],
-      [521, "لِحَاء", "liḥāʾ", "Ağacın kabuğuna denir", "lugat", "Vikisözlük: bark, rind; bast · Kamus"],
-      [522, "لُحَاء", "luḥāʾ", "sakal", "kontrol", ""],
-      [523, "لَحَاء", "laḥāʾ", "sakal", "kontrol", ""],
-      [524, "لَحَاة", "laḥā", "sakal", "kontrol", ""],
-      [525, "لُحِيَّة", "luḥiyya", "sakal", "kontrol", ""],
-      [526, "لِحَايَة", "liḥāya", "sakal", "kontrol", ""],
-      [527, "لَحِيّ", "laḥiyy", "sakal", "kontrol", ""],
-      [528, "لَحُوّ", "laḥuww", "sakal", "kontrol", ""],
-      [15, "لَحَيَان", "laḥayān", "sakal", "kontrol", ""],
-      [16, "لُحْيَان", "luḥyān", "sakal", "kontrol", ""],
-      [17, "لِحْيَان", "liḥyān", "sakal", "kontrol", ""],
-      [18, "لَحْيَى", "laḥyā", "sakal", "kontrol", ""],
-      [529, "لُحْيَى", "luḥyā", "sakal", "kontrol", ""],
-      [20, "لِحْيَى", "liḥyā", "sakal", "kontrol", ""],
-      [530, "لَحَاة", "laḥā", "sakal", "kontrol", ""],
-      [531, "لِحَيَة", "liḥaya", "sakal", "kontrol", ""],
-      [23, "لَحْيُويَة", "laḥyūya", "sakal", "kontrol", ""],
-      [24, "تُلْحُوي", "tulḥūy", "sakal", "kontrol", ""],
-      [532, "تَلْحِيَة", "talḥiya", "sakal", "kontrol", ""],
-      [26, "تَلْحَيَة", "talḥaya", "sakal", "kontrol", ""],
-      [27, "مَلْحُيَة", "malḥuya", "sakal", "kontrol", ""],
-      [533, "مَلْحِيَة", "malḥiya", "sakal", "kontrol", ""]
-    ],
-    "masdar · bâb II": [
-      [534, "تَلْحِيَة", "talḥiya", "çokça sakal olma", "kontrol", ""],
-      [535, "تَلْحِيَة", "talḥiya", "çokça sakal olma", "kontrol", ""],
-      [536, "لِحِّاء", "liḥḥāʾ", "çokça sakal olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [537, "لِحِّاءَة", "liḥḥāʾa", "bir kere çokça sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [538, "مُلَحِّي", "mulaḥḥī", "çokça sakal olan", "kontrol", ""],
-      [539, "مُلَحِّيَة", "mulaḥḥiya", "çokça sakal olan, müennes", "kontrol", ""],
-      [540, "مُلَحِّيَان", "mulaḥḥiyān", "çokça sakal olan, iki", "kontrol", ""],
-      [541, "مُلَحِّيَتَان", "mulaḥḥiyatān", "çokça sakal olan, iki, müennes", "kontrol", ""],
-      [542, "مُلَحُّون", "mulaḥḥūn", "çokça sakal olanlar", "kontrol", ""],
-      [543, "مُلَحِّين", "mulaḥḥīn", "çokça sakal olanlar", "kontrol", ""],
-      [544, "مُلَحِّيَات", "mulaḥḥiyāt", "çokça sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [545, "مُلَحَّى", "mulaḥḥā", "çokça sakal olunan", "kontrol", ""],
-      [546, "مُلَحَّيَان", "mulaḥḥayān", "çokça sakal olunan, iki", "kontrol", ""],
-      [547, "مُلَحَّوْن", "mulaḥḥawn", "çokça sakal olunanlar", "kontrol", ""],
-      [548, "مُلَحَّيْن", "mulaḥḥayn", "çokça sakal olunanlar", "kontrol", ""],
-      [549, "مُلَحَّيَات", "mulaḥḥayāt", "çokça sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [550, "مُلَحَّى", "mulaḥḥā", "çokça sakal olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb III": [
-      [551, "مُلَاحَاة", "mulāḥā", "biriyle karşılıklı sakal olma", "kontrol", ""],
-      [552, "لِحَاء", "liḥāʾ", "Ağacın kabuğuna denir", "lugat", "Vikisözlük: bark, rind; bast · Kamus"]
-    ],
-    "ism-i merre · bâb III": [
-      [553, "لِحَاءَة", "liḥāʾa", "bir kere biriyle karşılıklı sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [554, "مُلَاحِي", "mulāḥī", "biriyle karşılıklı sakal olan", "kontrol", ""],
-      [555, "مُلَاحِيَة", "mulāḥiya", "biriyle karşılıklı sakal olan, müennes", "kontrol", ""],
-      [556, "مُلَاحِيَان", "mulāḥiyān", "biriyle karşılıklı sakal olan, iki", "kontrol", ""],
-      [557, "مُلَاحِيَتَان", "mulāḥiyatān", "biriyle karşılıklı sakal olan, iki, müennes", "kontrol", ""],
-      [558, "مُلَاحُون", "mulāḥūn", "biriyle karşılıklı sakal olanlar", "kontrol", ""],
-      [559, "مُلَاحِين", "mulāḥīn", "biriyle karşılıklı sakal olanlar", "kontrol", ""],
-      [560, "مُلَاحِيَات", "mulāḥiyāt", "biriyle karşılıklı sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [561, "مُلَاحَى", "mulāḥā", "biriyle karşılıklı sakal olunan", "kontrol", ""],
-      [562, "مُلَاحَيَان", "mulāḥayān", "biriyle karşılıklı sakal olunan, iki", "kontrol", ""],
-      [563, "مُلَاحَوْن", "mulāḥawn", "biriyle karşılıklı sakal olunanlar", "kontrol", ""],
-      [564, "مُلَاحَيْن", "mulāḥayn", "biriyle karşılıklı sakal olunanlar", "kontrol", ""],
-      [565, "مُلَاحَيَات", "mulāḥayāt", "biriyle karşılıklı sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [566, "مُلَاحَى", "mulāḥā", "biriyle karşılıklı sakal olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IV": [
-      [567, "إِلْحَاء", "ʾilḥāʾ", "sakallaştırma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [568, "إِلْحَاءَة", "ʾilḥāʾa", "bir kere sakallaştırma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [569, "مُلْحِي", "mulḥī", "sakallaştıran", "kontrol", ""],
-      [570, "مُلْحِيَة", "mulḥiya", "sakallaştıran, müennes", "kontrol", ""],
-      [571, "مُلْحِيَان", "mulḥiyān", "sakallaştıran, iki", "kontrol", ""],
-      [572, "مُلْحِيَتَان", "mulḥiyatān", "sakallaştıran, iki, müennes", "kontrol", ""],
-      [573, "مُلْحُون", "mulḥūn", "sakallaştıranlar", "kontrol", ""],
-      [574, "مُلْحِين", "mulḥīn", "sakallaştıranlar", "kontrol", ""],
-      [575, "مُلْحِيَات", "mulḥiyāt", "sakallaştıranlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [576, "مُلْحَى", "mulḥā", "sakallaştırılan", "kontrol", ""],
-      [577, "مُلْحَيَان", "mulḥayān", "sakallaştırılan, iki", "kontrol", ""],
-      [578, "مُلْحَوْن", "mulḥawn", "sakallaştırılanlar", "kontrol", ""],
-      [579, "مُلْحَيْن", "mulḥayn", "sakallaştırılanlar", "kontrol", ""],
-      [580, "مُلْحَيَات", "mulḥayāt", "sakallaştırılanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُلْحَى", "mulḥā", "sakallaştırma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb V": [
-      [582, "تَلَحِّي", "talaḥḥī", "kendini zorlayarak sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [583, "مُتَلَحِّي", "mutalaḥḥī", "kendini zorlayarak sakal olan", "kontrol", ""],
-      [584, "مُتَلَحِّيَة", "mutalaḥḥiya", "kendini zorlayarak sakal olan, müennes", "kontrol", ""],
-      [585, "مُتَلَحِّيَان", "mutalaḥḥiyān", "kendini zorlayarak sakal olan, iki", "kontrol", ""],
-      [586, "مُتَلَحِّيَتَان", "mutalaḥḥiyatān", "kendini zorlayarak sakal olan, iki, müennes", "kontrol", ""],
-      [587, "مُتَلَحُّون", "mutalaḥḥūn", "kendini zorlayarak sakal olanlar", "kontrol", ""],
-      [588, "مُتَلَحِّين", "mutalaḥḥīn", "kendini zorlayarak sakal olanlar", "kontrol", ""],
-      [589, "مُتَلَحِّيَات", "mutalaḥḥiyāt", "kendini zorlayarak sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [590, "مُتَلَحَّى", "mutalaḥḥā", "kendini zorlayarak sakal olunan", "kontrol", ""],
-      [591, "مُتَلَحَّيَان", "mutalaḥḥayān", "kendini zorlayarak sakal olunan, iki", "kontrol", ""],
-      [592, "مُتَلَحَّوْن", "mutalaḥḥawn", "kendini zorlayarak sakal olunanlar", "kontrol", ""],
-      [593, "مُتَلَحَّيْن", "mutalaḥḥayn", "kendini zorlayarak sakal olunanlar", "kontrol", ""],
-      [594, "مُتَلَحَّيَات", "mutalaḥḥayāt", "kendini zorlayarak sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [595, "مُتَلَحَّى", "mutalaḥḥā", "kendini zorlayarak sakal olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VI": [
-      [596, "تَلَاحِي", "talāḥī", "birbirine sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [597, "مُتَلَاحِي", "mutalāḥī", "birbirine sakal olan", "kontrol", ""],
-      [598, "مُتَلَاحِيَة", "mutalāḥiya", "birbirine sakal olan, müennes", "kontrol", ""],
-      [599, "مُتَلَاحِيَان", "mutalāḥiyān", "birbirine sakal olan, iki", "kontrol", ""],
-      [600, "مُتَلَاحِيَتَان", "mutalāḥiyatān", "birbirine sakal olan, iki, müennes", "kontrol", ""],
-      [601, "مُتَلَاحُون", "mutalāḥūn", "birbirine sakal olanlar", "kontrol", ""],
-      [602, "مُتَلَاحِين", "mutalāḥīn", "birbirine sakal olanlar", "kontrol", ""],
-      [603, "مُتَلَاحِيَات", "mutalāḥiyāt", "birbirine sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [604, "مُتَلَاحَى", "mutalāḥā", "birbirine sakal olunan", "kontrol", ""],
-      [605, "مُتَلَاحَيَان", "mutalāḥayān", "birbirine sakal olunan, iki", "kontrol", ""],
-      [606, "مُتَلَاحَوْن", "mutalāḥawn", "birbirine sakal olunanlar", "kontrol", ""],
-      [607, "مُتَلَاحَيْن", "mutalāḥayn", "birbirine sakal olunanlar", "kontrol", ""],
-      [608, "مُتَلَاحَيَات", "mutalāḥayāt", "birbirine sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [609, "مُتَلَاحَى", "mutalāḥā", "birbirine sakal olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VII": [
-      [610, "اِنْلِحَاء", "inliḥāʾ", "sakal olunma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [611, "اِنْلِحَاءَة", "inliḥāʾa", "bir kere sakal olunma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [612, "مُنْلَحِي", "munlaḥī", "sakal olunan", "kontrol", ""],
-      [613, "مُنْلَحِيَة", "munlaḥiya", "sakal olunan, müennes", "kontrol", ""],
-      [614, "مُنْلَحِيَان", "munlaḥiyān", "sakal olunan, iki", "kontrol", ""],
-      [615, "مُنْلَحِيَتَان", "munlaḥiyatān", "sakal olunan, iki, müennes", "kontrol", ""],
-      [616, "مُنْلَحُون", "munlaḥūn", "sakal olunanlar", "kontrol", ""],
-      [617, "مُنْلَحِين", "munlaḥīn", "sakal olunanlar", "kontrol", ""],
-      [618, "مُنْلَحِيَات", "munlaḥiyāt", "sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْلَحَى", "munlaḥā", "sakal olunan", "kontrol", ""],
-      [620, "مُنْلَحَيَان", "munlaḥayān", "sakal olunan, iki", "kontrol", ""],
-      [621, "مُنْلَحَوْن", "munlaḥawn", "sakal olunanlar", "kontrol", ""],
-      [622, "مُنْلَحَيْن", "munlaḥayn", "sakal olunanlar", "kontrol", ""],
-      [623, "مُنْلَحَيَات", "munlaḥayāt", "sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْلَحَى", "munlaḥā", "sakal olunma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VIII": [
-      [625, "اِلْتِحَاء", "iltiḥāʾ", "kendisi için sakal olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [627, "اِلْتِحَاءَة", "iltiḥāʾa", "bir kere kendisi için sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [628, "مُلْتَحِي", "multaḥī", "kendisi için sakal olan", "kontrol", ""],
-      [629, "مُلْتَحِيَة", "multaḥiya", "kendisi için sakal olan, müennes", "kontrol", ""],
-      [630, "مُلْتَحِيَان", "multaḥiyān", "kendisi için sakal olan, iki", "kontrol", ""],
-      [631, "مُلْتَحِيَتَان", "multaḥiyatān", "kendisi için sakal olan, iki, müennes", "kontrol", ""],
-      [632, "مُلْتَحُون", "multaḥūn", "kendisi için sakal olanlar", "kontrol", ""],
-      [633, "مُلْتَحِين", "multaḥīn", "kendisi için sakal olanlar", "kontrol", ""],
-      [634, "مُلْتَحِيَات", "multaḥiyāt", "kendisi için sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُلْتَحَى", "multaḥā", "kendisi için sakal olunan", "kontrol", ""],
-      [636, "مُلْتَحَيَان", "multaḥayān", "kendisi için sakal olunan, iki", "kontrol", ""],
-      [637, "مُلْتَحَوْن", "multaḥawn", "kendisi için sakal olunanlar", "kontrol", ""],
-      [638, "مُلْتَحَيْن", "multaḥayn", "kendisi için sakal olunanlar", "kontrol", ""],
-      [639, "مُلْتَحَيَات", "multaḥayāt", "kendisi için sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُلْتَحَى", "multaḥā", "kendisi için sakal olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [654, "اِلْحِيَاء", "ilḥiyāʾ", "iyiden iyiye sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [655, "مُلْحَيِي", "mulḥayī", "iyiden iyiye sakal olan", "kontrol", ""],
-      [656, "مُلْحَيِيَة", "mulḥayiya", "iyiden iyiye sakal olan, müennes", "kontrol", ""],
-      [657, "مُلْحَيِيَان", "mulḥayiyān", "iyiden iyiye sakal olan, iki", "kontrol", ""],
-      [658, "مُلْحَيِيَتَان", "mulḥayiyatān", "iyiden iyiye sakal olan, iki, müennes", "kontrol", ""],
-      [659, "مُلْحَيُون", "mulḥayūn", "iyiden iyiye sakal olanlar", "kontrol", ""],
-      [660, "مُلْحَيِين", "mulḥayīn", "iyiden iyiye sakal olanlar", "kontrol", ""],
-      [661, "مُلْحَيِيَات", "mulḥayiyāt", "iyiden iyiye sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [662, "اِسْتِلْحَاء", "istilḥāʾ", "sakal olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [663, "اِسْتِلْحَاءَة", "istilḥāʾa", "bir kere sakal olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [664, "مُسْتَلْحِي", "mustalḥī", "sakal olmayı isteyen", "kontrol", ""],
-      [665, "مُسْتَلْحِيَة", "mustalḥiya", "sakal olmayı isteyen, müennes", "kontrol", ""],
-      [666, "مُسْتَلْحِيَان", "mustalḥiyān", "sakal olmayı isteyen, iki", "kontrol", ""],
-      [667, "مُسْتَلْحِيَتَان", "mustalḥiyatān", "sakal olmayı isteyen, iki, müennes", "kontrol", ""],
-      [668, "مُسْتَلْحُون", "mustalḥūn", "sakal olmayı isteyenler", "kontrol", ""],
-      [669, "مُسْتَلْحِين", "mustalḥīn", "sakal olmayı isteyenler", "kontrol", ""],
-      [670, "مُسْتَلْحِيَات", "mustalḥiyāt", "sakal olmayı isteyenler, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَلْحَى", "mustalḥā", "sakal olması istenen", "kontrol", ""],
-      [672, "مُسْتَلْحَيَان", "mustalḥayān", "sakal olması istenen, iki", "kontrol", ""],
-      [673, "مُسْتَلْحَوْن", "mustalḥawn", "sakal olması istenenler", "kontrol", ""],
-      [674, "مُسْتَلْحَيْن", "mustalḥayn", "sakal olması istenenler", "kontrol", ""],
-      [675, "مُسْتَلْحَيَات", "mustalḥayāt", "sakal olması istenenler, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَلْحَى", "mustalḥā", "sakal olmayı isteme yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [677, "اِلْحِييَاء", "ilḥīyāʾ", "büsbütün sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [678, "مُلْحَايِي", "mulḥāyī", "büsbütün sakal olan", "kontrol", ""],
-      [679, "مُلْحَايِيَة", "mulḥāyiya", "büsbütün sakal olan, müennes", "kontrol", ""],
-      [680, "مُلْحَايِيَان", "mulḥāyiyān", "büsbütün sakal olan, iki", "kontrol", ""],
-      [681, "مُلْحَايِيَتَان", "mulḥāyiyatān", "büsbütün sakal olan, iki, müennes", "kontrol", ""],
-      [682, "مُلْحَايُون", "mulḥāyūn", "büsbütün sakal olanlar", "kontrol", ""],
-      [683, "مُلْحَايِين", "mulḥāyīn", "büsbütün sakal olanlar", "kontrol", ""],
-      [684, "مُلْحَايِيَات", "mulḥāyiyāt", "büsbütün sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [685, "اِلْحِوْحَاء", "ilḥiwḥāʾ", "aşırı sakal olma", "kontrol", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [686, "اِلْحِوَّاء", "ilḥiwwāʾ", "aşırı sakal olma", "kontrol", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [687, "لَاحِي", "lāḥī", "sakal olan", "kontrol", ""],
-      [688, "لَاحِيَة", "lāḥiya", "sakal olan, müennes", "kontrol", ""],
-      [689, "لَاحِيَان", "lāḥiyān", "sakal olan, iki", "kontrol", ""],
-      [690, "لَاحِيَتَان", "lāḥiyatān", "sakal olan, iki, müennes", "kontrol", ""],
-      [691, "لَاحُون", "lāḥūn", "sakal olanlar", "kontrol", ""],
-      [692, "لَاحِين", "lāḥīn", "sakal olanlar", "kontrol", ""],
-      [693, "لَاحِيَات", "lāḥiyāt", "sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [694, "مَلْحِيّ", "malḥiyy", "sakal olunan", "kontrol", ""],
-      [695, "مَلْحِيَّة", "malḥiyya", "sakal olunan, müennes", "kontrol", ""],
-      [696, "مَلْحِيَّان", "malḥiyyān", "sakal olunan, iki", "kontrol", ""],
-      [697, "مَلْحِيَّتَان", "malḥiyyatān", "sakal olunan, iki, müennes", "kontrol", ""],
-      [698, "مَلْحِيُّون", "malḥiyyūn", "sakal olunanlar", "kontrol", ""],
-      [699, "مَلْحِيِّين", "malḥiyyīn", "sakal olunanlar", "kontrol", ""],
-      [700, "مَلْحِيَّات", "malḥiyyāt", "sakal olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [701, "مَلْحَى", "malḥā", "sakal olma yeri, vakti", "kontrol", ""],
-      [702, "مَلْحَيَان", "malḥayān", "sakal olma yeri, vakti, iki", "kontrol", ""],
-      [703, "مَلْحِي", "malḥī", "sakal olma yeri, vakti", "kontrol", ""],
-      [704, "مَلْحِيَان", "malḥiyān", "sakal olma yeri, vakti, iki", "kontrol", ""],
-      [705, "مَلْحَاة", "malḥā", "sakal olmanın bol olduğu yer", "kontrol", ""],
-      [706, "مَلْحَاتَان", "malḥātān", "sakal olmanın bol olduğu yer, iki", "kontrol", ""],
-      [707, "مَلْحِيَة", "malḥiya", "sakal olmanın bol olduğu yer", "kontrol", ""],
-      [708, "مَلْحِيَتَان", "malḥiyatān", "sakal olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَلْحُيَة", "malḥuya", "sakal olma yeri, vakti", "kontrol", ""],
-      [248, "مَلْحُيَتَان", "malḥuyatān", "sakal olma yeri, vakti, iki", "kontrol", ""]
-    ],
-    "âlet · sülâsî": [
-      [709, "مِلْحَى", "milḥā", "sakal olma âleti", "kontrol", ""],
-      [710, "مِلْحَيَان", "milḥayān", "sakal olma âleti, iki", "kontrol", ""],
-      [711, "مِلْحَاء", "milḥāʾ", "sakal olma âleti", "kontrol", ""],
-      [712, "مِلْحَاآن", "milḥāʾān", "sakal olma âleti, iki", "kontrol", ""],
-      [713, "مِلْحَاة", "milḥā", "sakal olma âleti", "kontrol", ""],
-      [714, "مِلْحَاتَان", "milḥātān", "sakal olma âleti, iki", "kontrol", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [715, "أَلْحَى", "ʾalḥā", "daha çok sakal olan", "kontrol", "Vikisözlük: long-bearded"],
-      [716, "أَلْحَيَان", "ʾalḥayān", "daha çok sakal olan, iki", "kontrol", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [717, "لُحْيَى", "luḥyā", "daha çok sakal olan", "kontrol", ""],
-      [718, "لُحْيَيَان", "luḥyayān", "daha çok sakal olan, iki", "kontrol", ""],
-      [245, "لَحْيَاء", "laḥyāʾ", "daha çok sakal olan", "kontrol", ""],
-      [246, "لَحْيَاآن", "laḥyāʾān", "daha çok sakal olan, iki", "kontrol", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [719, "لُحَيّ", "luḥayy", "azıcık sakal olma", "kontrol", ""],
-      [720, "لُحَيَّان", "luḥayyān", "azıcık sakal olma, iki", "kontrol", ""],
-      [721, "لُحَيَّة", "luḥayya", "azıcık sakal olma", "kontrol", ""],
-      [722, "لُحَيَّتَان", "luḥayyatān", "azıcık sakal olma, iki", "kontrol", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [723, "مَلْحَى", "malḥā", "sakal olma", "kontrol", ""],
-      [724, "مَلْحَيَان", "malḥayān", "sakal olma, iki", "kontrol", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "لَحْيَة", "laḥya", "bir kere sakal olma", "kontrol", ""],
-      [256, "لَحْيَتَان", "laḥyatān", "bir kere sakal olma, iki", "kontrol", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "لِحْيَة", "liḥya", "Sakal", "lugat", "Vikisözlük: beard · Luggat"],
-      [258, "لِحْيَتَان", "liḥyatān", "sakal olma tarzı, iki", "kontrol", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [725, "لَحِيّ", "laḥiyy", "her daim sakal olan", "kontrol", ""],
-      [726, "لَحِيَّة", "laḥiyya", "her daim sakal olan, müennes", "kontrol", ""],
-      [727, "لَحِيَّان", "laḥiyyān", "her daim sakal olan, iki", "kontrol", ""],
-      [728, "لَحِيَّتَان", "laḥiyyatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [729, "لَحِيُّون", "laḥiyyūn", "her daim sakal olanlar", "kontrol", ""],
-      [730, "لَحِيِّين", "laḥiyyīn", "her daim sakal olanlar", "kontrol", ""],
-      [731, "لَحِيَّات", "laḥiyyāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [732, "لَحُوّ", "laḥuww", "her daim sakal olan", "kontrol", ""],
-      [733, "لَحُوَّة", "laḥuwwa", "her daim sakal olan, müennes", "kontrol", ""],
-      [734, "لَحُوَّان", "laḥuwwān", "her daim sakal olan, iki", "kontrol", ""],
-      [735, "لَحُوَّتَان", "laḥuwwatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [736, "لَحُوُّون", "laḥuwwūn", "her daim sakal olanlar", "kontrol", ""],
-      [737, "لَحُوِّين", "laḥuwwīn", "her daim sakal olanlar", "kontrol", ""],
-      [738, "لَحُوَّات", "laḥuwwāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [739, "لَحِي", "laḥī", "her daim sakal olan", "kontrol", ""],
-      [740, "لَحِيَة", "laḥiya", "her daim sakal olan, müennes", "kontrol", ""],
-      [741, "لَحِيَان", "laḥiyān", "her daim sakal olan, iki", "kontrol", ""],
-      [742, "لَحِيَتَان", "laḥiyatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [743, "لَحُون", "laḥūn", "her daim sakal olanlar", "kontrol", ""],
-      [744, "لَحِين", "laḥīn", "her daim sakal olanlar", "kontrol", ""],
-      [745, "لَحِيَات", "laḥiyāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [746, "لَحُوّ", "laḥuww", "her daim sakal olan", "kontrol", ""],
-      [747, "لَحُوَّة", "laḥuwwa", "her daim sakal olan, müennes", "kontrol", ""],
-      [748, "لَحُوَّان", "laḥuwwān", "her daim sakal olan, iki", "kontrol", ""],
-      [749, "لَحُوَّتَان", "laḥuwwatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [750, "لَحُوُّون", "laḥuwwūn", "her daim sakal olanlar", "kontrol", ""],
-      [751, "لَحُوِّين", "laḥuwwīn", "her daim sakal olanlar", "kontrol", ""],
-      [752, "لَحُوَّات", "laḥuwwāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [753, "لَحَى", "laḥā", "her daim sakal olan", "kontrol", ""],
-      [754, "لَحَيَان", "laḥayān", "her daim sakal olan, iki", "kontrol", ""],
-      [884, "لَحَوْن", "laḥawn", "her daim sakal olanlar", "kontrol", ""],
-      [885, "لَحَيْن", "laḥayn", "her daim sakal olanlar", "kontrol", ""],
-      [755, "لَحَيَات", "laḥayāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [
-        294,
-        "لَحْي",
-        "laḥy",
-        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
-        "lugat",
-        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
-      ],
-      [295, "لَحْيَة", "laḥya", "her daim sakal olan, müennes", "kontrol", ""],
-      [296, "لَحْيَان", "laḥyān", "her daim sakal olan, iki", "kontrol", ""],
-      [297, "لَحْيَتَان", "laḥyatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [298, "لَحْيُون", "laḥyūn", "her daim sakal olanlar", "kontrol", ""],
-      [299, "لَحْيِين", "laḥyīn", "her daim sakal olanlar", "kontrol", ""],
-      [300, "لَحْيَات", "laḥyāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [756, "لُحِيّ", "luḥiyy", "her daim sakal olan", "kontrol", ""],
-      [757, "لُحِيَّة", "luḥiyya", "her daim sakal olan, müennes", "kontrol", ""],
-      [758, "لُحِيَّان", "luḥiyyān", "her daim sakal olan, iki", "kontrol", ""],
-      [759, "لُحِيَّتَان", "luḥiyyatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [760, "لُحِيُّون", "luḥiyyūn", "her daim sakal olanlar", "kontrol", ""],
-      [761, "لُحِيِّين", "luḥiyyīn", "her daim sakal olanlar", "kontrol", ""],
-      [762, "لُحِيَّات", "luḥiyyāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [308, "لَحْيَان", "laḥyān", "her daim sakal olan", "kontrol", ""],
-      [309, "لَحْيَانَة", "laḥyāna", "her daim sakal olan, müennes", "kontrol", ""],
-      [310, "لَحْيَانَان", "laḥyānān", "her daim sakal olan, iki", "kontrol", ""],
-      [311, "لَحْيَانَتَان", "laḥyānatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [312, "لَحْيَانُون", "laḥyānūn", "her daim sakal olanlar", "kontrol", ""],
-      [313, "لَحْيَانِين", "laḥyānīn", "her daim sakal olanlar", "kontrol", ""],
-      [314, "لَحْيَانَات", "laḥyānāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [763, "لُحَاء", "luḥāʾ", "her daim sakal olan", "kontrol", ""],
-      [764, "لُحَاءَة", "luḥāʾa", "her daim sakal olan, müennes", "kontrol", ""],
-      [765, "لُحَاآن", "luḥāʾān", "her daim sakal olan, iki", "kontrol", ""],
-      [766, "لُحَاءَتَان", "luḥāʾatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [767, "لُحَاؤُون", "luḥāʾūn", "her daim sakal olanlar", "kontrol", ""],
-      [768, "لُحَائِين", "luḥāʾīn", "her daim sakal olanlar", "kontrol", ""],
-      [769, "لُحَاآت", "luḥāʾāt", "her daim sakal olanlar, müennes", "kontrol", ""],
-      [770, "لَحَاء", "laḥāʾ", "her daim sakal olan", "kontrol", ""],
-      [771, "لَحَاءَة", "laḥāʾa", "her daim sakal olan, müennes", "kontrol", ""],
-      [772, "لَحَاآن", "laḥāʾān", "her daim sakal olan, iki", "kontrol", ""],
-      [773, "لَحَاءَتَان", "laḥāʾatān", "her daim sakal olan, iki, müennes", "kontrol", ""],
-      [774, "لَحَاؤُون", "laḥāʾūn", "her daim sakal olanlar", "kontrol", ""],
-      [775, "لَحَائِين", "laḥāʾīn", "her daim sakal olanlar", "kontrol", ""],
-      [776, "لَحَاآت", "laḥāʾāt", "her daim sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "mübalağa": [
-      [777, "لَحَّاء", "laḥḥāʾ", "işi sakal olma olan", "kontrol", ""],
-      [778, "لَحَّاءَة", "laḥḥāʾa", "işi sakal olma olan, müennes", "kontrol", ""],
-      [779, "لَحَّاآن", "laḥḥāʾān", "işi sakal olma olan, iki", "kontrol", ""],
-      [780, "لَحَّاءَتَان", "laḥḥāʾatān", "işi sakal olma olan, iki, müennes", "kontrol", ""],
-      [781, "لَحَّاؤُون", "laḥḥāʾūn", "işi sakal olma olanlar", "kontrol", ""],
-      [782, "لَحَّائِين", "laḥḥāʾīn", "işi sakal olma olanlar", "kontrol", ""],
-      [783, "لَحَّاآت", "laḥḥāʾāt", "işi sakal olma olanlar, müennes", "kontrol", ""],
-      [784, "لَحَّايَة", "laḥḥāya", "pek çok sakal olan", "kontrol", ""],
-      [785, "لَحَّايَتَان", "laḥḥāyatān", "pek çok sakal olan, iki", "kontrol", ""],
-      [786, "لَحَّايَات", "laḥḥāyāt", "pek çok sakal olanlar, müennes", "kontrol", ""],
-      [787, "لَحُوّ", "laḥuww", "çok sakal olan", "kontrol", ""],
-      [788, "لَحُوَّة", "laḥuwwa", "çok sakal olan, müennes", "kontrol", ""],
-      [789, "لَحُوَّان", "laḥuwwān", "çok sakal olan, iki", "kontrol", ""],
-      [790, "لَحُوَّتَان", "laḥuwwatān", "çok sakal olan, iki, müennes", "kontrol", ""],
-      [791, "لَحُوُّون", "laḥuwwūn", "çok sakal olanlar", "kontrol", ""],
-      [792, "لَحُوِّين", "laḥuwwīn", "çok sakal olanlar", "kontrol", ""],
-      [793, "لَحُوَّات", "laḥuwwāt", "çok sakal olanlar, müennes", "kontrol", ""],
-      [346, "لَحُّوي", "laḥḥūy", "pek çok sakal olan", "kontrol", ""],
-      [347, "لَحُّويَة", "laḥḥūya", "pek çok sakal olan, müennes", "kontrol", ""],
-      [348, "لَحُّويَان", "laḥḥūyān", "pek çok sakal olan, iki", "kontrol", ""],
-      [349, "لَحُّويَتَان", "laḥḥūyatān", "pek çok sakal olan, iki, müennes", "kontrol", ""],
-      [350, "لَحُّويُون", "laḥḥūyūn", "pek çok sakal olanlar", "kontrol", ""],
-      [351, "لَحُّويِين", "laḥḥūyīn", "pek çok sakal olanlar", "kontrol", ""],
-      [352, "لَحُّويَات", "laḥḥūyāt", "pek çok sakal olanlar, müennes", "kontrol", ""],
-      [353, "لِحِّيي", "liḥḥīy", "sakal olmada aşırı giden", "kontrol", ""],
-      [354, "لِحِّييَة", "liḥḥīya", "sakal olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "لِحِّييَان", "liḥḥīyān", "sakal olmada aşırı giden, iki", "kontrol", ""],
-      [356, "لِحِّييَتَان", "liḥḥīyatān", "sakal olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "لِحِّييُون", "liḥḥīyūn", "sakal olmada aşırı gidenler", "kontrol", ""],
-      [358, "لِحِّييِين", "liḥḥīyīn", "sakal olmada aşırı gidenler", "kontrol", ""],
-      [359, "لِحِّييَات", "liḥḥīyāt", "sakal olmada aşırı gidenler, müennes", "kontrol", ""],
-      [794, "لُحَّاء", "luḥḥāʾ", "son derece sakal olan", "kontrol", ""],
-      [795, "لُحَّاءَة", "luḥḥāʾa", "son derece sakal olan, müennes", "kontrol", ""],
-      [796, "لُحَّاآن", "luḥḥāʾān", "son derece sakal olan, iki", "kontrol", ""],
-      [797, "لُحَّاءَتَان", "luḥḥāʾatān", "son derece sakal olan, iki, müennes", "kontrol", ""],
-      [798, "لُحَّاؤُون", "luḥḥāʾūn", "son derece sakal olanlar", "kontrol", ""],
-      [799, "لُحَّائِين", "luḥḥāʾīn", "son derece sakal olanlar", "kontrol", ""],
-      [800, "لُحَّاآت", "luḥḥāʾāt", "son derece sakal olanlar, müennes", "kontrol", ""],
-      [801, "مِلْحَاء", "milḥāʾ", "sakal olmayı âdet edinmiş", "kontrol", ""],
-      [802, "مِلْحَاءَة", "milḥāʾa", "sakal olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [803, "مِلْحَاآن", "milḥāʾān", "sakal olmayı âdet edinmiş, iki", "kontrol", ""],
-      [804, "مِلْحَاءَتَان", "milḥāʾatān", "sakal olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [805, "مِلْحَاؤُون", "milḥāʾūn", "sakal olmayı âdet edinmişler", "kontrol", ""],
-      [806, "مِلْحَائِين", "milḥāʾīn", "sakal olmayı âdet edinmişler", "kontrol", ""],
-      [807, "مِلْحَاآت", "milḥāʾāt", "sakal olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِلْحِيي", "milḥīy", "sakal olmaya düşkün", "kontrol", ""],
-      [375, "مِلْحِييَة", "milḥīya", "sakal olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِلْحِييَان", "milḥīyān", "sakal olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِلْحِييَتَان", "milḥīyatān", "sakal olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِلْحِييُون", "milḥīyūn", "sakal olmaya düşkünler", "kontrol", ""],
-      [379, "مِلْحِييِين", "milḥīyīn", "sakal olmaya düşkünler", "kontrol", ""],
-      [380, "مِلْحِييَات", "milḥīyāt", "sakal olmaya düşkünler, müennes", "kontrol", ""],
-      [808, "لَحِيّ", "laḥiyy", "çok sakal olan", "kontrol", ""],
-      [809, "لَحِيَّة", "laḥiyya", "çok sakal olan, müennes", "kontrol", ""],
-      [810, "لَحِيَّان", "laḥiyyān", "çok sakal olan, iki", "kontrol", ""],
-      [811, "لَحِيَّتَان", "laḥiyyatān", "çok sakal olan, iki, müennes", "kontrol", ""],
-      [812, "لَحِيُّون", "laḥiyyūn", "çok sakal olanlar", "kontrol", ""],
-      [813, "لَحِيِّين", "laḥiyyīn", "çok sakal olanlar", "kontrol", ""],
-      [814, "لَحِيَّات", "laḥiyyāt", "çok sakal olanlar, müennes", "kontrol", ""],
-      [388, "لَحَّي", "laḥḥay", "çok sakal olan", "kontrol", ""],
-      [389, "لَحَّيَة", "laḥḥaya", "çok sakal olan, müennes", "kontrol", ""],
-      [390, "لَحَّيَان", "laḥḥayān", "çok sakal olan, iki", "kontrol", ""],
-      [391, "لَحَّيَتَان", "laḥḥayatān", "çok sakal olan, iki, müennes", "kontrol", ""],
-      [392, "لَحَّيُون", "laḥḥayūn", "çok sakal olanlar", "kontrol", ""],
-      [393, "لَحَّيِين", "laḥḥayīn", "çok sakal olanlar", "kontrol", ""],
-      [394, "لَحَّيَات", "laḥḥayāt", "çok sakal olanlar, müennes", "kontrol", ""]
-    ],
-    "mensûb": [
-      [395, "لَحْيِيّ", "laḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [886, "لَحَوِيّ", "laḥawiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [399, "لِحْيِيّ", "liḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [401, "لُحْيِيّ", "luḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [815, "لِحَائِيّ", "liḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [817, "لَاحِيّ", "lāḥiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [819, "مَلْحِيِّيّ", "malḥiyyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [821, "لَحِيِّيّ", "laḥiyyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [823, "مَلْحَوِيّ", "malḥawiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [825, "تَلْحِيِيّ", "talḥiyiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [827, "تَلَاحِيّ", "talāḥiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [829, "إِلْحَائِيّ", "ʾilḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""],
-      [831, "اِلْتِحَائِيّ", "iltiḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "لَحْيِيَّة", "laḥyiyya", "sakal olanlık", "kontrol", ""],
-      [887, "لَحَوِيَّة", "laḥawiyya", "sakal olanlık", "kontrol", ""],
-      [400, "لِحْيِيَّة", "liḥyiyya", "sakal olanlık", "kontrol", ""],
-      [402, "لُحْيِيَّة", "luḥyiyya", "sakal olanlık", "kontrol", ""],
-      [816, "لِحَائِيَّة", "liḥāʾiyya", "sakal olanlık", "kontrol", ""],
-      [818, "لَاحِيَّة", "lāḥiyya", "sakal olanlık", "kontrol", ""],
-      [820, "مَلْحِيِّيَّة", "malḥiyyiyya", "sakal olanlık", "kontrol", ""],
-      [822, "لَحِيِّيَّة", "laḥiyyiyya", "sakal olanlık", "kontrol", ""],
-      [824, "مَلْحَوِيَّة", "malḥawiyya", "sakal olanlık", "kontrol", ""],
-      [826, "تَلْحِيِيَّة", "talḥiyiyya", "sakal olanlık", "kontrol", ""],
-      [828, "تَلَاحِيَّة", "talāḥiyya", "sakal olanlık", "kontrol", ""],
-      [830, "إِلْحَائِيَّة", "ʾilḥāʾiyya", "sakal olanlık", "kontrol", ""],
-      [832, "اِلْتِحَائِيَّة", "iltiḥāʾiyya", "sakal olanlık", "kontrol", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [833, "لَحَاء", "laḥāʾ", "sakal olma", "kontrol", ""],
-      [834, "لُحِيّ", "luḥiyy", "sakal olma", "kontrol", ""],
-      [835, "لِحَاء", "liḥāʾ", "Ağacın kabuğuna denir", "lugat", "Vikisözlük: bark, rind; bast · Kamus"],
-      [424, "لُحْي", "luḥy", "sakal olma", "kontrol", ""],
-      [836, "لَحَاة", "laḥā", "sakal olma", "kontrol", ""],
-      [837, "لِحَايَة", "liḥāya", "sakal olma", "kontrol", ""],
-      [838, "لُحِيَّة", "luḥiyya", "sakal olma", "kontrol", ""],
-      [
-        428,
-        "لَحْي",
-        "laḥy",
-        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
-        "lugat",
-        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
-      ],
-      [429, "لِحْي", "liḥy", "sakal olma", "kontrol", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "لَاحُوي", "lāḥūy", "sakal olma türünden şey", "kontrol", ""],
-      [839, "لَحَاة", "laḥā", "sakal olma türünden şey", "kontrol", ""],
-      [433, "لُحَيَة", "luḥaya", "sakal olma türünden şey", "kontrol", ""],
-      [434, "أُلْحُويَة", "ʾulḥūya", "sakal olma türünden şey", "kontrol", ""],
-      [435, "لَوْحَي", "lawḥay", "sakal olma türünden şey", "kontrol", ""],
-      [437, "لَيْحَي", "layḥay", "sakal olma türünden şey", "kontrol", ""],
-      [
-        439,
-        "لَحْي",
-        "laḥy",
-        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
-        "lugat",
-        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
-      ],
-      [840, "لَحَى", "laḥā", "sakal olma türünden şey", "kontrol", ""],
-      [443, "لِحْي", "liḥy", "sakal olma türünden şey", "kontrol", ""],
-      [445, "لُحْي", "luḥy", "sakal olma türünden şey", "kontrol", ""],
-      [841, "لَحِيّ", "laḥiyy", "sakal olma türünden şey", "kontrol", ""],
-      [843, "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
-      [844, "لُحِيّ", "luḥiyy", "sakal olma türünden şey", "kontrol", ""],
-      [846, "لَحَاء", "laḥāʾ", "sakal olma türünden şey", "kontrol", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "لَاحُويَة", "lāḥūya", "sakal olma türünden bir tane", "kontrol", ""],
-      [436, "لَوْحَيَة", "lawḥaya", "sakal olma türünden bir tane", "kontrol", ""],
-      [438, "لَيْحَيَة", "layḥaya", "sakal olma türünden bir tane", "kontrol", ""],
-      [440, "لَحْيَة", "laḥya", "sakal olma türünden bir tane", "kontrol", ""],
-      [444, "لِحْيَة", "liḥya", "Sakal", "lugat", "Vikisözlük: beard · Luggat"],
-      [446, "لُحْيَة", "luḥya", "sakal olma türünden bir tane", "kontrol", ""],
-      [842, "لَحِيَّة", "laḥiyya", "sakal olma türünden bir tane", "kontrol", ""],
-      [845, "لُحِيَّة", "luḥiyya", "sakal olma türünden bir tane", "kontrol", ""],
-      [847, "لَحَاءَة", "laḥāʾa", "sakal olma türünden bir tane", "kontrol", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [848, "أَلْحَاء", "ʾalḥāʾ", "sakal olmalar", "kontrol", ""],
-      [849, "أَلْحِيَة", "ʾalḥiya", "sakal olmalar", "kontrol", ""],
-      [850, "أَلَاحِي", "ʾalāḥī", "sakal olmalar", "kontrol", ""],
-      [851, "أَلَاحِيّ", "ʾalāḥiyy", "sakal olmalar", "kontrol", ""],
-      [852, "لُحِيّ", "luḥiyy", "sakal olmalar", "kontrol", ""],
-      [853, "لُحِيّ", "luḥiyy", "sakal olmalar", "kontrol", ""],
-      [854, "لِحَاء", "liḥāʾ", "Ağacın kabuğuna denir", "lugat", "Vikisözlük: bark, rind; bast · Kamus"],
-      [855, "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
-      [856, "لِحَيَة", "liḥaya", "sakal olmalar", "kontrol", ""],
-      [857, "لُحَى", "luḥā", "sakal olmalar", "kontrol", ""],
-      [858, "لَحَاة", "laḥā", "sakal olmalar", "kontrol", ""],
-      [859, "لُحَّاء", "luḥḥāʾ", "sakal olmalar", "kontrol", ""],
-      [860, "لَحَاء", "laḥāʾ", "sakal olmalar", "kontrol", ""],
-      [861, "لَحَى", "laḥā", "sakal olmalar", "kontrol", ""],
-      [862, "مَلَاحِي", "malāḥī", "sakal olmalar", "kontrol", ""],
-      [863, "مَلَاحِيّ", "malāḥiyy", "sakal olmalar", "kontrol", ""],
-      [864, "لَوَاحِي", "lawāḥī", "sakal olmalar", "kontrol", ""],
-      [473, "أَلْحُي", "ʾalḥuy", "sakal olmalar", "kontrol", ""],
-      [474, "لُحَّي", "luḥḥay", "sakal olmalar", "kontrol", ""],
-      [865, "لُحَيّ", "luḥayy", "sakal olmalar", "kontrol", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [866, "أَلْحَاآت", "ʾalḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [867, "أَلْحِيَات", "ʾalḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [868, "أَلَاحِيَات", "ʾalāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [869, "أَلَاحِيَّات", "ʾalāḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [870, "لُحِيَّات", "luḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [871, "لُحِيَّات", "luḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [872, "لِحَاآت", "liḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [873, "لِحَيَات", "liḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [874, "لِحَيَات", "liḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [875, "لُحَيَات", "luḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [876, "لَحَاات", "laḥāāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [877, "لُحَّاآت", "luḥḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [878, "لَحَاآت", "laḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [879, "لَحَيَات", "laḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [880, "مَلَاحِيَات", "malāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [881, "مَلَاحِيَّات", "malāḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [882, "لَوَاحِيَات", "lawāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [495, "أَلْحُيَات", "ʾalḥuyāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [496, "لُحَّيَات", "luḥḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
-      [883, "لُحَيَّات", "luḥayyāt", "sakal olmalar topluluğu", "kontrol", ""]
-    ]
-  },
-  "reddedilen": [
-    ["ism-i merre · bâb II", "taf'īl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["ism-i merre · bâb V", "tafa''ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i merre · bâb VI", "tafā'ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["sıfat-ı müşebbehe", "fa'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["cem‘-i mükesser (aday)", "fu'alā'", "bu kök sınıfında bu kalıp yok"],
-    ["cem‘-i mükesser (aday)", "fe'âil", "bu kök sınıfında bu kalıp yok"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "لحي",
-      "turkce": "Lihye: sakal, çene"
-    },
-    "osmanlica_lugatler": {
-      "لِحْيَت": {
-        "sorgular": ["lihyat"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "لَحِيَ",
-        "metin": "(لَحِيَ) اللَّامُ وَالْحَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا عُضْوٌ مِنَ الْأَعْضَاءِ، وَالْآخَرُ قَِشْرُ شَيْءٍ.\nفَالْأُولَى اللَّحْيُ: الْعَظْمُ الَّذِي تَنْبُتُ عَلَيْهِ اللِّحْيَةُ مِنَ الْإِنْسَانِ وَغَيْرِهِ، وَالنِّسْبَةُ إِلَيْهِ لَحَوِىٌّ. وَاللِّحْيَةُ: الشِّعْرُ، وَجَمْعُهَا لِحًى، وَجَمْعُ اللَّحْيِ أَلْحٍ.\nوَالْأَصْلُ الْآخَرُ اللِّحَاءُ، وَهُوَ قِشْرُ الشَّجَرَةِ، يُقَالُ لَحَيْتُ الْعَصَا، إِذَا قَشَرْتَ لِحَاءَهَا، وَلَحَوْتُهَا. فَأَمَّا فِي اللَّوْمِ فَلَحَّيْتُ. وَهُوَ قِيَاسُ ذَاكَ، كَأَنَّهُ يُرِيدُ قِشْرَهُ. وَالْمُلَاحَمَةُ كَالْمُشَاتَمَةِ. قَالَ أَوْسٌ فِي لَحَيْتُ الْعَصَا:\nلَحَيْنَهُمْ لَحْيَ الْعَصَا فَطَرَدْنَهُمْ ... إِلَى سَنَةٍ قِرْدَانُهَا لَمْ تَحَلَّمِ."
-      }
-    ],
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "20:94:5:2",
-      "tur": {
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "لِحْيَت": 1
-      },
-      "bicimler": {
-        "لِحْيَتِ": 1
-      }
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "لحية",
-        "u": "لحية",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لِحْيَة • (liḥya) f (plural لِحًى (liḥan, construct state لِحَى (liḥā)))",
-        "g": ["beard"],
-        "r": ["liḥya"],
-        "ipa": ["/liħ.ja/"],
-        "ds": [
-          ["mt", "leħja", ""]
-        ],
-        "k": "لحي",
-        "yol": "kök"
-      },
-      {
-        "w": "لحاء",
-        "u": "لحاء",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لِحَاء • (liḥāʔ) m",
-        "g": ["bark, rind; bast"],
-        "r": ["liḥāʔ"],
-        "ipa": ["/li.ħaːʔ/"],
-        "k": "لحي",
-        "yol": "kök"
-      },
-      {
-        "w": "لحى",
-        "u": "لحى",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "لِحًى or لُحًى • (liḥan or luḥan) pl",
-        "g": ["plural of لِحْيَة (liḥya)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["لِحْيَة"],
-        "r": ["liḥan", "luḥan"],
-        "k": "لحي",
-        "yol": "kök"
-      },
-      {
-        "w": "لحي",
-        "u": "لحي",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لَحْي • (laḥy) m",
-        "g": ["verbal noun of لَحَى (laḥā) (form I)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["لَحَى"],
-        "r": ["laḥy"],
-        "ipa": ["/laħj/"],
-        "k": "لحي",
-        "yol": "kök"
-      },
-      {
-        "w": "ألحى",
-        "u": "ألحى",
-        "p": "adj",
-        "n": "1",
-        "h": "ar-adj",
-        "e": "أَلْحَى • (ʔalḥā)",
-        "t": "Color or defect adjective from the root ل ح ي (l ḥ y).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-color/defect adjective", "Color or defect adjective"],
-          ["ar-root", "ل ح ي (l ḥ y)"]
-        ],
-        "g": ["long-bearded"],
-        "r": ["ʔalḥā"],
-        "ipa": ["/ʔal.ħaː/"],
-        "el": [
-          ["ل ح ي", "Appendix:Arabic roots/ل ح ي"]
-        ],
-        "k": "لحي",
-        "yol": "kök"
-      }
-    ],
-    "mustak_lugat": {
-      "لَحْي": [
-        {
-          "eser": "Kamus",
-          "madde": "lahy",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi لَحْيَانِ [lahyân]dır ve cem-i killeti أَلْحِي [elhî] gelir hemzenin fethi ve hânın kesriyle ve cem-i kesreti لُحِيٌّ [luhiyy] gelir lâmın zammı ve hânın kesriyle; yukâlu: هُمَا لَحْيَانِ وَثَلَاثَةٍ أَلْحٍ وَالْكَثِيرُ لُحِيٌّ",
-              "misaller": [
-                ["هُمَا لَحْيَانِ وَثَلَاثَةٍ أَلْحٍ وَالْكَثِيرُ لُحِيٌّ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّحْيُ",
-          "okunus": "el-lahy",
-          "koken": "lâmın fethi ve hânın sükûnuyla"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "lahy",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "İnsânın çenesi ki sakal bittiği yerdir.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "gayrın çenesine dahi ıtlâk olunur.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّحْيُ",
-          "okunus": "el-lahy",
-          "koken": "lâmın fethi ve hânın sükûnuyla"
-        },
-        {
-          "eser": "Kamus",
-          "madde": "Lahyu Cemel",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "لَحْيُ جَمَلٍ [Lahyu Cemel] (lâmın fethiyle) Beynel-Haremeyn bir mevzidir, Medîneye akrebdir. Kezâlik Medîne ile Feyd beyninde bir mevzidir.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "Necrân ile Tesamp;lîsamp; beyninde bir mevzidir.",
-              "misaller": []
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "لِحَى": [
-        {
-          "eser": "Vankulu",
-          "madde": "liha",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Cemi, sakallar manâsına.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللِّحَى",
-          "okunus": "el-lihâ",
-          "koken": "lâmın kesri ve elifin kasrıyla"
-        }
-      ],
-      "لِحَاء": [
-        {
-          "eser": "Kamus",
-          "madde": "liha",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Ağacın kabuğuna denir; yukâlu: لِحَاءُ الشَّجَرِ أَيْ قِشْرُهُ",
-              "misaller": [
-                ["لِحَاءُ الشَّجَرِ أَيْ قِشْرُهُ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللِّحَاءُ",
-          "okunus": "el-lihâ",
-          "koken": "كِسَاءٌ [kisâ] vezninde"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "liha",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Ağaç kabı, kışr-ı şecer manâsına.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "fil-meseli: “لَا تَدْخُلْ بَيْنَ الْعَصَا وَلِحَائِهَا” Ve لِحَاءٌ [lihâ] Nizâ etmeğe dahi derler, alâ-mâ se-yecîu.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللِّحَاءُ",
-          "okunus": "el-lihâ",
-          "koken": "lâmın kesri ve elifin meddiyle"
-        }
-      ],
-      "لِحْيَة": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "LİHYE",
-          "yazilis": "ﻟﺤﻴﻪ",
-          "tur": "i.",
-          "koken": "Ar. liḥye",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Sakal",
-              "misaller": [
-                ["Ola mes’ûd u mübârek bula ömr-i bisyâr / Ede hem-reng benim lihyem ile vâhib-i sun’", "Nâbî"],
-                ["Mümtelî ümmü’l-habâis ile ebü’l-vakti görün / Sakf-ı bâb-ı dâr-ı sekre lihyesi cârûbdur", "Bayburtlu Zihni"],
-                [
-                  "Kükrer, bağırır, dağlara çarpar da sadâsı / Bî-fâide eylerdi bütün kendine avdet / Ablak yüzünün lihye-i cârûb-nümâsı / Enzâr-ı temâşâya verip sıklet ü vahşet",
-                  "Tevfik Fikret"
-                ]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": [
-            {
-              "etiket": "",
-              "tanim": "Hz. Muhammed’in sakalından kesilmiş olup iç içe bohçalara sarılarak saklanan, kandil ve özellikle Kadir gecelerinde salavât-ı şerîfe ile açılarak halka ziyâret ettirilen sakal kılları, sakal-ı şerif. ● Lihye-dar ( ﻟﺤﻴﻪ ﺩﺍﺭ ) birl. sıf. (Fars. dār “sâhip ve mâlik olan” ile) Sakallı",
-              "misaller": [],
-              "deyim": "Lihye-i şerif (şerîfe)"
-            }
-          ]
-        },
-        {
-          "eser": "Luggat",
-          "madde": "lihye",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Sakal",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "el-lihyet",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Sakala denir ki hilye-i çehre-i insânîdir; cemi لِحَى [lihâ] gelir lâmın kesriyle ve elifin kasrıyla ve لُحَى [luhâ] gelir lâmın zammıyla, ذِرْوَةٌ [zirvet] ve ذُرَى [zurâ] gibi.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "nisbetinde لَحَوِيٌّ [lehaviyy] denir lâmın kesri ve hânın fethiyle; ve minhu kavluhum: “مَنْ طَالَتْ لِحْيَتُهُ قَصُرَتْ فِطْنَتُهُ” وَهِيَ شَعْرُ الْخَدَّيْنِ وَالذَّقَنِ Mütercim der ki bu لِحَاءٌ [lihâ] manâsından ki kabuğa denir mehûzdur, zîrâ çehrenin kabuğu menzilindedir.",
-              "misaller": [
-                ["", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللِّحْيَةُ",
-          "okunus": "el-lihyet",
-          "koken": "lâmın kesriyle"
-        },
-        {
-          "eser": "Kamus",
-          "madde": "lihyetut-teys",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "لِحْيَةُ التَّيْسِ [lihyetut-teys] Teke sakalı dedikleri nebâttır.",
-              "misaller": []
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "el-lihyet",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Sakal ki marûftur.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللِّحْيَةُ",
-          "okunus": "el-lihyet",
-          "koken": "lâmın kesri ve hânın sükûnuyla"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Lehiye (لَحِيَ)",
-          "metin": "(لَحِيَ) Lâm, hâ ve harf-i illet iki sahîh asıldır: biri âzâdan bir âzâ, öbürü bir şeyin kabuğudur.\nBirincisi «lahy»dir: insanın ve başkasının çene kemiğidir ki sakal onun üzerinde biter; ona nisbet «lahevî»dir. «Lihye» ise tüydür (sakaldır); cem'i «lihâ»dır, «lahy»in cem'i «elhın»dir.\nÖbür asıl «lihâ»dır ki ağacın kabuğudur; «lehaytü'l-asâ» denir, asâyı soyup kabuğunu çıkardım demektir; «lehavtühâ» da denir. Levm (kınama) mânâsında ise «lahheytü» denir; bu da o kıyastandır, sanki o kimsenin kabuğunu soymak ister. «Mülâhame» ise söğüşmek gibidir. Evs, «lehaytü'l-asâ» hakkında şöyle dedi:\nلَحَيْنَهُمْ لَحْيَ الْعَصَا فَطَرَدْنَهُمْ ... إِلَى سَنَةٍ قِرْدَانُهَا لَمْ تَحَلَّمِ.\n(Onları asâ soyar gibi soyduk da kovduk; kenelerinin henüz yumuşamadığı bir seneye doğru.)"
-        }
-      ],
-      "kaikki_vikisozluk": [
-        {
-          "g": ["sakal"]
-        },
-        {
-          "g": ["kabuk, kavuk; ağaç kabuğunun iç tabakası"]
-        },
-        {
-          "g": ["لِحْيَة (lihye) kelimesinin cem'i"]
-        },
-        {
-          "g": ["لَحَى (lahâ) fiilinin (birinci bâb) masdarı"]
-        },
-        {
-          "g": ["uzun sakallı"]
-        }
-      ]
-    },
-    "arabic_ontology": [
-      {
-        "id": "45871",
-        "arapca": [
-          "رَجَمَ",
-          "رَجَمَ ب",
-          "نَمَّ",
-          "نَمَّ عن",
-          "قَذَعَ",
-          "شَنَّرَ",
-          "لَحَى",
-          "ثَلَبَ",
-          "ذَمَّ",
-          "زَرَى",
-          "زَرَى ب",
-          "لَحَا",
-          "لَذَعَ",
-          "لَطَّخَ",
-          "لَعَنَ",
-          "لَمَزَ",
-          "غَمَزَ",
-          "غَمَزَ ب",
-          "غَمَزَ على",
-          "اِغْتَابَ",
-          "أَفْحَشَ",
-          "سَبَّ",
-          "سَفَّهَ",
-          "شَتَمَ",
-          "شَنَّعَ",
-          "شَنَّعَ ب",
-          "شَنَّعَ على",
-          "شَابَ1",
-          "نَبَزَ",
-          "نَدَّدَ",
-          "نَدَّدَ بِ",
-          "اِنْتَقَدَ",
-          "اِنْتَقَصَ",
-          "اِنْتَقَصَ من",
-          "نَقَمَ على",
-          "نَقَمَ من",
-          "قَبُحَ",
-          "قَبَّحَ",
-          "قَدَحَ",
-          "قَدَحَ في",
-          "قَذَفَ",
-          "قَذَفَ ب",
-          "قَرَصَ",
-          "قَرَّعَ",
-          "هَجَّنَ",
-          "هجا",
-          "هَمَزَ",
-          "أَهانَ",
-          "شَانَ",
-          "حَقَدَ على",
-          "مَزَقَ",
-          "أَنَّبَ",
-          "عَذَلَ",
-          "عَابَ",
-          "عَيَّرَ",
-          "وَبَّخَ",
-          "شاهَ",
-          "رَمَى",
-          "رَمَى إلى",
-          "رَمَى ب",
-          "عَرَّضَ",
-          "عَرَّضَ ب",
-          "عَرَّضَ ل",
-          "عَنَّفَ",
-          "عَنُفَ ب",
-          "عَنُفَ على",
-          "طَعَنَ",
-          "طَعَنَ على",
-          "طَعَنَ في",
-          "جَرَحَ",
-          "شَهَّرَ ب",
-          "آخَذَ",
-          "بَكَّتَ"
-        ],
-        "ingilizce": [],
-        "tanim": "ذكر شخص بصورة سيئة، وتكلم عن عيوبٍ فيه سواء أكانت موجودة حقا فيه أم تجنّى عليه بها",
-        "misal": "_ زيد عمراً لخيانته له",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "45991",
-        "arapca": [
-          "لَحَى",
-          "ثَلَبَ",
-          "ذَمَّ",
-          "زَجَرَ",
-          "لامَ",
-          "اِغْتَابَ",
-          "سَبَّ",
-          "سَفَّهَ",
-          "شَنَّعَ",
-          "شَنَّعَ ب",
-          "شَنَّعَ على",
-          "نَدَّدَ",
-          "نَدَّدَ بِ",
-          "اِنْتَقَدَ",
-          "اِنْتَقَصَ",
-          "اِنْتَقَصَ من",
-          "اِسْتَقْبَحَ",
-          "قَبُحَ",
-          "قَبَّحَ",
-          "قَدَحَ",
-          "قَدَحَ في",
-          "قَرَّعَ",
-          "شَانَ",
-          "سَوَّأَ",
-          "أَنَّبَ",
-          "عَاتَبَ",
-          "عَذَلَ",
-          "عَابَ",
-          "عَيَّرَ",
-          "وَبَّخَ",
-          "أَنْكَرَ",
-          "رَمَى",
-          "رَمَى إلى",
-          "رَمَى ب",
-          "عَنَّفَ",
-          "نَهَرَ",
-          "طَعَنَ",
-          "طَعَنَ على",
-          "طَعَنَ في",
-          "خَطَّأَ",
-          "أَخَذَ",
-          "أَخَذَ ب",
-          "أَخَذَ على",
-          "آخَذَ",
-          "عَزَرَ",
-          "فَنَّدَ",
-          "بَكَّتَ"
-        ],
-        "ingilizce": [],
-        "tanim": "خاطبه بلهجة شديدة ولامه على فعلة سيئة.",
-        "misal": "_ الأستاذ الطالب لقيامه بضرب زميله",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46032",
-        "arapca": [
-          "لَحَى",
-          "ثَلَبَ",
-          "زَجَرَ",
-          "لامَ",
-          "اِنْتَقَدَ",
-          "اِنْتَقَصَ",
-          "اِنْتَقَصَ من",
-          "قَدَحَ",
-          "قَدَحَ في",
-          "قَرَّعَ",
-          "شَانَ",
-          "أَنَّبَ",
-          "عَاتَبَ",
-          "عَذَلَ",
-          "عَابَ",
-          "عَيَّرَ",
-          "وَبَّخَ",
-          "عَنَّفَ",
-          "نَهَرَ",
-          "طَعَنَ",
-          "طَعَنَ على",
-          "طَعَنَ في",
-          "خَطَّأَ",
-          "آخَذَ",
-          "عَزَرَ",
-          "فَنَّدَ",
-          "بَكَّتَ"
-        ],
-        "ingilizce": [],
-        "tanim": "خاطب بإدلال موبخباً أو ناصحاً بقصد الحب وطلب تعديل السلوك وليس الأذيّة",
-        "misal": "_ زيدٌ عمراً على فعلته",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46217",
-        "arapca": [
-          "رَجَمَ",
-          "رَجَمَ ب",
-          "نَمَّ",
-          "نَمَّ عن",
-          "قَذَعَ",
-          "شَنَّرَ",
-          "لَحَى",
-          "ثَلَبَ",
-          "ذَمَّ",
-          "زَرَى",
-          "زَرَى ب",
-          "اِزْدَرَى",
-          "اِزْدَرَى ب",
-          "لَحَا",
-          "لَذَعَ",
-          "لَعَنَ",
-          "لَمَزَ",
-          "لامَ",
-          "غَمَزَ",
-          "غَمَزَ ب",
-          "غَمَزَ على",
-          "أَفْحَشَ",
-          "سَبَّ",
-          "سَخِرَ ب",
-          "سَخِرَ من",
-          "سَفَّهَ",
-          "شَتَمَ",
-          "شَنَّعَ",
-          "شَنَّعَ ب",
-          "شَنَّعَ على",
-          "شَابَ1",
-          "نَبَزَ",
-          "نَدَّدَ",
-          "نَدَّدَ بِ",
-          "نَزَغَ",
-          "اِنْتَقَدَ",
-          "تَنَقَّصَ",
-          "اِنْتَقَصَ",
-          "اِنْتَقَصَ من",
-          "قَبُحَ",
-          "قَبَّحَ",
-          "قَدَحَ",
-          "قَدَحَ في",
-          "قَذَفَ",
-          "قَذَفَ ب",
-          "قَرَصَ",
-          "قَرَّعَ",
-          "هَجَّنَ",
-          "هجا",
-          "هَزِئَ ب",
-          "هَزِئَ من",
-          "اِسْتَهْزَأَ ب",
-          "تَهَكَّمَ",
-          "تَهَكَّمَ ب",
-          "تَهَكَّمَ على",
-          "هَمَزَ",
-          "أَهانَ",
-          "شَانَ",
-          "مَزَقَ",
-          "أَنَّبَ",
-          "عَابَ",
-          "عَيَّرَ",
-          "وَبَّخَ",
-          "رَمَى",
-          "رَمَى إلى",
-          "رَمَى ب",
-          "عَرَّضَ",
-          "عَرَّضَ ب",
-          "عَرَّضَ ل",
-          "عَنَّفَ",
-          "طَعَنَ",
-          "طَعَنَ على",
-          "طَعَنَ في",
-          "شَهَّرَ ب",
-          "هَزَأَ ب",
-          "هَزَأَ من"
-        ],
-        "ingilizce": [],
-        "tanim": "تكلمّ بسوء أو نسب فعل لشخص ما دون تدبر أو دليل",
-        "misal": "_ خالدٌ صديقه بسبب خلافٍ حصَلَ بينهم",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لح",
+  "ses": {
     "harf": "ل",
+    "fasil": "لح",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Lihye: sakal, çene",
+  "esas_manalar": "bir uzuv: çene, sakal|bir şeyin kabuğunu soymak",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "lahy",
+        "koken": "lâmın fethi ve hânın sükûnuyla",
+        "yazilis": "اَللَّحْيُ",
+        "okunus": "el-lahy",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi لَحْيَانِ [lahyân]dır ve cem-i killeti أَلْحِي [elhî] gelir hemzenin fethi ve hânın kesriyle ve cem-i kesreti لُحِيٌّ [luhiyy] gelir lâmın zammı ve hânın kesriyle; yukâlu: هُمَا لَحْيَانِ وَثَلَاثَةٍ أَلْحٍ وَالْكَثِيرُ لُحِيٌّ",
+            "misaller": [
+              ["هُمَا لَحْيَانِ وَثَلَاثَةٍ أَلْحٍ وَالْكَثِيرُ لُحِيٌّ", ""]
+            ]
+          }
+        ],
+        "kelime": ["لَحْي"]
+      },
+      {
+        "madde": "Lahyu Cemel",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "لَحْيُ جَمَلٍ [Lahyu Cemel] (lâmın fethiyle) Beynel-Haremeyn bir mevzidir, Medîneye akrebdir. Kezâlik Medîne ile Feyd beyninde bir mevzidir."
+          },
+          {
+            "no": 2,
+            "tanim": "Necrân ile Tesamp;lîsamp; beyninde bir mevzidir."
+          }
+        ],
+        "kelime": ["لَحْي"]
+      },
+      {
+        "madde": "liha",
+        "koken": "كِسَاءٌ [kisâ] vezninde",
+        "yazilis": "اَللِّحَاءُ",
+        "okunus": "el-lihâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Ağacın kabuğuna denir; yukâlu: لِحَاءُ الشَّجَرِ أَيْ قِشْرُهُ",
+            "misaller": [
+              ["لِحَاءُ الشَّجَرِ أَيْ قِشْرُهُ", ""]
+            ]
+          }
+        ],
+        "kelime": ["لِحَاء"]
+      },
+      {
+        "madde": "el-lihyet",
+        "koken": "lâmın kesriyle",
+        "yazilis": "اَللِّحْيَةُ",
+        "okunus": "el-lihyet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Sakala denir ki hilye-i çehre-i insânîdir; cemi لِحَى [lihâ] gelir lâmın kesriyle ve elifin kasrıyla ve لُحَى [luhâ] gelir lâmın zammıyla, ذِرْوَةٌ [zirvet] ve ذُرَى [zurâ] gibi."
+          },
+          {
+            "no": 2,
+            "tanim": "nisbetinde لَحَوِيٌّ [lehaviyy] denir lâmın kesri ve hânın fethiyle; ve minhu kavluhum: “مَنْ طَالَتْ لِحْيَتُهُ قَصُرَتْ فِطْنَتُهُ” وَهِيَ شَعْرُ الْخَدَّيْنِ وَالذَّقَنِ Mütercim der ki bu لِحَاءٌ [lihâ] manâsından ki kabuğa denir mehûzdur, zîrâ çehrenin kabuğu menzilindedir.",
+            "misaller": [
+              ["", ""]
+            ]
+          }
+        ],
+        "kelime": ["لِحْيَة"]
+      },
+      {
+        "madde": "lihyetut-teys",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "لِحْيَةُ التَّيْسِ [lihyetut-teys] Teke sakalı dedikleri nebâttır."
+          }
+        ],
+        "kelime": ["لِحْيَة"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "lahy",
+        "koken": "lâmın fethi ve hânın sükûnuyla",
+        "yazilis": "اَللَّحْيُ",
+        "okunus": "el-lahy",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "İnsânın çenesi ki sakal bittiği yerdir."
+          },
+          {
+            "no": 2,
+            "tanim": "gayrın çenesine dahi ıtlâk olunur."
+          }
+        ],
+        "kelime": ["لَحْي"]
+      },
+      {
+        "madde": "liha",
+        "koken": "lâmın kesri ve elifin kasrıyla",
+        "yazilis": "اَللِّحَى",
+        "okunus": "el-lihâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Cemi, sakallar manâsına."
+          }
+        ],
+        "kelime": ["لِحَى"]
+      },
+      {
+        "madde": "liha",
+        "koken": "lâmın kesri ve elifin meddiyle",
+        "yazilis": "اَللِّحَاءُ",
+        "okunus": "el-lihâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Ağaç kabı, kışr-ı şecer manâsına."
+          },
+          {
+            "no": 2,
+            "tanim": "fil-meseli: “لَا تَدْخُلْ بَيْنَ الْعَصَا وَلِحَائِهَا” Ve لِحَاءٌ [lihâ] Nizâ etmeğe dahi derler, alâ-mâ se-yecîu."
+          }
+        ],
+        "kelime": ["لِحَاء"]
+      },
+      {
+        "madde": "el-lihyet",
+        "koken": "lâmın kesri ve hânın sükûnuyla",
+        "yazilis": "اَللِّحْيَةُ",
+        "okunus": "el-lihyet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Sakal ki marûftur."
+          }
+        ],
+        "kelime": ["لِحْيَة"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "LİHYE",
+        "tur": "i.",
+        "koken": "Ar. liḥye",
+        "yazilis": "ﻟﺤﻴﻪ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Sakal",
+            "misaller": [
+              ["Ola mes’ûd u mübârek bula ömr-i bisyâr / Ede hem-reng benim lihyem ile vâhib-i sun’", "Nâbî"],
+              ["Mümtelî ümmü’l-habâis ile ebü’l-vakti görün / Sakf-ı bâb-ı dâr-ı sekre lihyesi cârûbdur", "Bayburtlu Zihni"],
+              [
+                "Kükrer, bağırır, dağlara çarpar da sadâsı / Bî-fâide eylerdi bütün kendine avdet / Ablak yüzünün lihye-i cârûb-nümâsı / Enzâr-ı temâşâya verip sıklet ü vahşet",
+                "Tevfik Fikret"
+              ]
+            ]
+          }
+        ],
+        "deyimler": [
+          {
+            "deyim": "Lihye-i şerif (şerîfe)",
+            "tanim": "Hz. Muhammed’in sakalından kesilmiş olup iç içe bohçalara sarılarak saklanan, kandil ve özellikle Kadir gecelerinde salavât-ı şerîfe ile açılarak halka ziyâret ettirilen sakal kılları, sakal-ı şerif. ● Lihye-dar ( ﻟﺤﻴﻪ ﺩﺍﺭ ) birl. sıf. (Fars. dār “sâhip ve mâlik olan” ile) Sakallı"
+          }
+        ],
+        "kelime": ["لِحْيَة"]
+      }
+    ],
+    "Luggat": [
+      {
+        "madde": "lihye",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Sakal"
+          }
+        ],
+        "kelime": ["لِحْيَة"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "لَحِيَ",
+      "metin": "(لَحِيَ) اللَّامُ وَالْحَاءُ وَالْحَرْفُ الْمُعْتَلُّ أَصْلَانِ صَحِيحَانِ، أَحَدُهُمَا عُضْوٌ مِنَ الْأَعْضَاءِ، وَالْآخَرُ قَِشْرُ شَيْءٍ.\nفَالْأُولَى اللَّحْيُ: الْعَظْمُ الَّذِي تَنْبُتُ عَلَيْهِ اللِّحْيَةُ مِنَ الْإِنْسَانِ وَغَيْرِهِ، وَالنِّسْبَةُ إِلَيْهِ لَحَوِىٌّ. وَاللِّحْيَةُ: الشِّعْرُ، وَجَمْعُهَا لِحًى، وَجَمْعُ اللَّحْيِ أَلْحٍ.\nوَالْأَصْلُ الْآخَرُ اللِّحَاءُ، وَهُوَ قِشْرُ الشَّجَرَةِ، يُقَالُ لَحَيْتُ الْعَصَا، إِذَا قَشَرْتَ لِحَاءَهَا، وَلَحَوْتُهَا. فَأَمَّا فِي اللَّوْمِ فَلَحَّيْتُ. وَهُوَ قِيَاسُ ذَاكَ، كَأَنَّهُ يُرِيدُ قِشْرَهُ. وَالْمُلَاحَمَةُ كَالْمُشَاتَمَةِ. قَالَ أَوْسٌ فِي لَحَيْتُ الْعَصَا:\nلَحَيْنَهُمْ لَحْيَ الْعَصَا فَطَرَدْنَهُمْ ... إِلَى سَنَةٍ قِرْدَانُهَا لَمْ تَحَلَّمِ.",
+      "baslik_tr": "Lehiye (لَحِيَ)",
+      "metin_tr": "(لَحِيَ) Lâm, hâ ve harf-i illet iki sahîh asıldır: biri âzâdan bir âzâ, öbürü bir şeyin kabuğudur.\nBirincisi «lahy»dir: insanın ve başkasının çene kemiğidir ki sakal onun üzerinde biter; ona nisbet «lahevî»dir. «Lihye» ise tüydür (sakaldır); cem'i «lihâ»dır, «lahy»in cem'i «elhın»dir.\nÖbür asıl «lihâ»dır ki ağacın kabuğudur; «lehaytü'l-asâ» denir, asâyı soyup kabuğunu çıkardım demektir; «lehavtühâ» da denir. Levm (kınama) mânâsında ise «lahheytü» denir; bu da o kıyastandır, sanki o kimsenin kabuğunu soymak ister. «Mülâhame» ise söğüşmek gibidir. Evs, «lehaytü'l-asâ» hakkında şöyle dedi:\nلَحَيْنَهُمْ لَحْيَ الْعَصَا فَطَرَدْنَهُمْ ... إِلَى سَنَةٍ قِرْدَانُهَا لَمْ تَحَلَّمِ.\n(Onları asâ soyar gibi soyduk da kovduk; kenelerinin henüz yumuşamadığı bir seneye doğru.)"
+    }
+  ],
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "45871",
+      "arapca": [
+        "رَجَمَ",
+        "رَجَمَ ب",
+        "نَمَّ",
+        "نَمَّ عن",
+        "قَذَعَ",
+        "شَنَّرَ",
+        "لَحَى",
+        "ثَلَبَ",
+        "ذَمَّ",
+        "زَرَى",
+        "زَرَى ب",
+        "لَحَا",
+        "لَذَعَ",
+        "لَطَّخَ",
+        "لَعَنَ",
+        "لَمَزَ",
+        "غَمَزَ",
+        "غَمَزَ ب",
+        "غَمَزَ على",
+        "اِغْتَابَ",
+        "أَفْحَشَ",
+        "سَبَّ",
+        "سَفَّهَ",
+        "شَتَمَ",
+        "شَنَّعَ",
+        "شَنَّعَ ب",
+        "شَنَّعَ على",
+        "شَابَ1",
+        "نَبَزَ",
+        "نَدَّدَ",
+        "نَدَّدَ بِ",
+        "اِنْتَقَدَ",
+        "اِنْتَقَصَ",
+        "اِنْتَقَصَ من",
+        "نَقَمَ على",
+        "نَقَمَ من",
+        "قَبُحَ",
+        "قَبَّحَ",
+        "قَدَحَ",
+        "قَدَحَ في",
+        "قَذَفَ",
+        "قَذَفَ ب",
+        "قَرَصَ",
+        "قَرَّعَ",
+        "هَجَّنَ",
+        "هجا",
+        "هَمَزَ",
+        "أَهانَ",
+        "شَانَ",
+        "حَقَدَ على",
+        "مَزَقَ",
+        "أَنَّبَ",
+        "عَذَلَ",
+        "عَابَ",
+        "عَيَّرَ",
+        "وَبَّخَ",
+        "شاهَ",
+        "رَمَى",
+        "رَمَى إلى",
+        "رَمَى ب",
+        "عَرَّضَ",
+        "عَرَّضَ ب",
+        "عَرَّضَ ل",
+        "عَنَّفَ",
+        "عَنُفَ ب",
+        "عَنُفَ على",
+        "طَعَنَ",
+        "طَعَنَ على",
+        "طَعَنَ في",
+        "جَرَحَ",
+        "شَهَّرَ ب",
+        "آخَذَ",
+        "بَكَّتَ"
+      ],
+      "ingilizce": [],
+      "tanim": "ذكر شخص بصورة سيئة، وتكلم عن عيوبٍ فيه سواء أكانت موجودة حقا فيه أم تجنّى عليه بها",
+      "misal": "_ زيد عمراً لخيانته له",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "45991",
+      "arapca": [
+        "لَحَى",
+        "ثَلَبَ",
+        "ذَمَّ",
+        "زَجَرَ",
+        "لامَ",
+        "اِغْتَابَ",
+        "سَبَّ",
+        "سَفَّهَ",
+        "شَنَّعَ",
+        "شَنَّعَ ب",
+        "شَنَّعَ على",
+        "نَدَّدَ",
+        "نَدَّدَ بِ",
+        "اِنْتَقَدَ",
+        "اِنْتَقَصَ",
+        "اِنْتَقَصَ من",
+        "اِسْتَقْبَحَ",
+        "قَبُحَ",
+        "قَبَّحَ",
+        "قَدَحَ",
+        "قَدَحَ في",
+        "قَرَّعَ",
+        "شَانَ",
+        "سَوَّأَ",
+        "أَنَّبَ",
+        "عَاتَبَ",
+        "عَذَلَ",
+        "عَابَ",
+        "عَيَّرَ",
+        "وَبَّخَ",
+        "أَنْكَرَ",
+        "رَمَى",
+        "رَمَى إلى",
+        "رَمَى ب",
+        "عَنَّفَ",
+        "نَهَرَ",
+        "طَعَنَ",
+        "طَعَنَ على",
+        "طَعَنَ في",
+        "خَطَّأَ",
+        "أَخَذَ",
+        "أَخَذَ ب",
+        "أَخَذَ على",
+        "آخَذَ",
+        "عَزَرَ",
+        "فَنَّدَ",
+        "بَكَّتَ"
+      ],
+      "ingilizce": [],
+      "tanim": "خاطبه بلهجة شديدة ولامه على فعلة سيئة.",
+      "misal": "_ الأستاذ الطالب لقيامه بضرب زميله",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46032",
+      "arapca": [
+        "لَحَى",
+        "ثَلَبَ",
+        "زَجَرَ",
+        "لامَ",
+        "اِنْتَقَدَ",
+        "اِنْتَقَصَ",
+        "اِنْتَقَصَ من",
+        "قَدَحَ",
+        "قَدَحَ في",
+        "قَرَّعَ",
+        "شَانَ",
+        "أَنَّبَ",
+        "عَاتَبَ",
+        "عَذَلَ",
+        "عَابَ",
+        "عَيَّرَ",
+        "وَبَّخَ",
+        "عَنَّفَ",
+        "نَهَرَ",
+        "طَعَنَ",
+        "طَعَنَ على",
+        "طَعَنَ في",
+        "خَطَّأَ",
+        "آخَذَ",
+        "عَزَرَ",
+        "فَنَّدَ",
+        "بَكَّتَ"
+      ],
+      "ingilizce": [],
+      "tanim": "خاطب بإدلال موبخباً أو ناصحاً بقصد الحب وطلب تعديل السلوك وليس الأذيّة",
+      "misal": "_ زيدٌ عمراً على فعلته",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46217",
+      "arapca": [
+        "رَجَمَ",
+        "رَجَمَ ب",
+        "نَمَّ",
+        "نَمَّ عن",
+        "قَذَعَ",
+        "شَنَّرَ",
+        "لَحَى",
+        "ثَلَبَ",
+        "ذَمَّ",
+        "زَرَى",
+        "زَرَى ب",
+        "اِزْدَرَى",
+        "اِزْدَرَى ب",
+        "لَحَا",
+        "لَذَعَ",
+        "لَعَنَ",
+        "لَمَزَ",
+        "لامَ",
+        "غَمَزَ",
+        "غَمَزَ ب",
+        "غَمَزَ على",
+        "أَفْحَشَ",
+        "سَبَّ",
+        "سَخِرَ ب",
+        "سَخِرَ من",
+        "سَفَّهَ",
+        "شَتَمَ",
+        "شَنَّعَ",
+        "شَنَّعَ ب",
+        "شَنَّعَ على",
+        "شَابَ1",
+        "نَبَزَ",
+        "نَدَّدَ",
+        "نَدَّدَ بِ",
+        "نَزَغَ",
+        "اِنْتَقَدَ",
+        "تَنَقَّصَ",
+        "اِنْتَقَصَ",
+        "اِنْتَقَصَ من",
+        "قَبُحَ",
+        "قَبَّحَ",
+        "قَدَحَ",
+        "قَدَحَ في",
+        "قَذَفَ",
+        "قَذَفَ ب",
+        "قَرَصَ",
+        "قَرَّعَ",
+        "هَجَّنَ",
+        "هجا",
+        "هَزِئَ ب",
+        "هَزِئَ من",
+        "اِسْتَهْزَأَ ب",
+        "تَهَكَّمَ",
+        "تَهَكَّمَ ب",
+        "تَهَكَّمَ على",
+        "هَمَزَ",
+        "أَهانَ",
+        "شَانَ",
+        "مَزَقَ",
+        "أَنَّبَ",
+        "عَابَ",
+        "عَيَّرَ",
+        "وَبَّخَ",
+        "رَمَى",
+        "رَمَى إلى",
+        "رَمَى ب",
+        "عَرَّضَ",
+        "عَرَّضَ ب",
+        "عَرَّضَ ل",
+        "عَنَّفَ",
+        "طَعَنَ",
+        "طَعَنَ على",
+        "طَعَنَ في",
+        "شَهَّرَ ب",
+        "هَزَأَ ب",
+        "هَزَأَ من"
+      ],
+      "ingilizce": [],
+      "tanim": "تكلمّ بسوء أو نسب فعل لشخص ما دون تدبر أو دليل",
+      "misal": "_ خالدٌ صديقه بسبب خلافٍ حصَلَ بينهم",
+      "veri_kaynagi": "43",
+      "ust": []
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "لحية",
+      "tur": "noun",
+      "baslik": "لِحْيَة • (liḥya) f (plural لِحًى (liḥan, construct state لِحَى (liḥā)))",
+      "anlam": ["beard"],
+      "okunus": ["liḥya"],
+      "ipa": ["/liħ.ja/"],
+      "torunlar": [
+        ["mt", "leħja", ""]
+      ],
+      "anlam_tr": ["sakal"]
+    },
+    {
+      "madde": "لحاء",
+      "tur": "noun",
+      "baslik": "لِحَاء • (liḥāʔ) m",
+      "anlam": ["bark, rind; bast"],
+      "okunus": ["liḥāʔ"],
+      "ipa": ["/li.ħaːʔ/"],
+      "anlam_tr": ["kabuk, kavuk; ağaç kabuğunun iç tabakası"]
+    },
+    {
+      "madde": "لحى",
+      "tur": "noun",
+      "baslik": "لِحًى or لُحًى • (liḥan or luḥan) pl",
+      "anlam": ["plural of لِحْيَة (liḥya)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["لِحْيَة"],
+      "okunus": ["liḥan", "luḥan"],
+      "anlam_tr": ["لِحْيَة (lihye) kelimesinin cem'i"]
+    },
+    {
+      "madde": "لحي",
+      "tur": "noun",
+      "baslik": "لَحْي • (laḥy) m",
+      "anlam": ["verbal noun of لَحَى (laḥā) (form I)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["لَحَى"],
+      "okunus": ["laḥy"],
+      "ipa": ["/laħj/"],
+      "anlam_tr": ["لَحَى (lahâ) fiilinin (birinci bâb) masdarı"]
+    },
+    {
+      "madde": "ألحى",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "أَلْحَى • (ʔalḥā)",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["ar-color/defect adjective", "Color or defect adjective"],
+        ["ar-root", "ل ح ي (l ḥ y)"]
+      ],
+      "anlam": ["long-bearded"],
+      "okunus": ["ʔalḥā"],
+      "ipa": ["/ʔal.ħaː/"],
+      "etimoloji": 1,
+      "anlam_tr": ["uzun sakallı"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Color or defect adjective from the root ل ح ي (l ḥ y).",
+      "kognatlar": [
+        ["ل ح ي", "Appendix:Arabic roots/ل ح ي"]
+      ]
+    }
+  ],
+  "kuran": {
+    "gecis": 1,
+    "ilk": "20:94:5:2",
+    "tur": {
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "لِحْيَت": 1
+    },
+    "bicimler": {
+      "لِحْيَتِ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "لِحْيَت",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "بِلِحْيَتِى",
+          "ilk": "20:94",
+          "adet": 1,
+          "tr": "sakal"
+        }
+      ],
+      "tr": "sakal",
+      "nasil": "kök isim: fiil kalıbıyla türemedi",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      [
+        "fa'l",
+        "semâî aday",
+        "لَحْي",
+        "laḥy",
+        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
+        "lugat",
+        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
+      ],
+      ["fi'l", "semâî aday", "لِحْي", "liḥy", "sakal", "kontrol", ""],
+      ["fu'l", "semâî aday", "لُحْي", "luḥy", "sakal", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "لَحَى", "laḥā", "sakal", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
+      ["fu'ul", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal", "kontrol", ""],
+      ["fu'ūl", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal", "kontrol", ""],
+      [
+        "fi'āl",
+        "semâî aday · ilal",
+        "لِحَاء",
+        "liḥāʾ",
+        "Ağacın kabuğuna denir",
+        "lugat",
+        "Vikisözlük: bark, rind; bast · Kamus"
+      ],
+      ["fu'āl", "semâî aday · ilal", "لُحَاء", "luḥāʾ", "sakal", "kontrol", ""],
+      ["fa'āl", "semâî aday · ilal", "لَحَاء", "laḥāʾ", "sakal", "kontrol", ""],
+      ["fa'āle", "semâî aday · ilal", "لَحَاة", "laḥā", "sakal", "kontrol", ""],
+      ["fu'ūle", "semâî aday · ilal", "لُحِيَّة", "luḥiyya", "sakal", "kontrol", ""],
+      ["fi'āle", "semâî aday · ilal", "لِحَايَة", "liḥāya", "sakal", "kontrol", ""],
+      ["fa'īl", "semâî aday · ilal", "لَحِيّ", "laḥiyy", "sakal", "kontrol", ""],
+      ["fa'ūl", "semâî aday · ilal", "لَحُوّ", "laḥuww", "sakal", "kontrol", ""],
+      ["fa'alān", "semâî aday", "لَحَيَان", "laḥayān", "sakal", "kontrol", ""],
+      ["fu'lān", "semâî aday", "لُحْيَان", "luḥyān", "sakal", "kontrol", ""],
+      ["fi'lān", "semâî aday", "لِحْيَان", "liḥyān", "sakal", "kontrol", ""],
+      ["fa'lā", "semâî aday", "لَحْيَى", "laḥyā", "sakal", "kontrol", ""],
+      ["fu'lā", "semâî aday · ilal", "لُحْيَى", "luḥyā", "sakal", "kontrol", ""],
+      ["fi'lā", "semâî aday", "لِحْيَى", "liḥyā", "sakal", "kontrol", ""],
+      ["fa'ale", "semâî aday · ilal", "لَحَاة", "laḥā", "sakal", "kontrol", ""],
+      ["fi'ale", "semâî aday · ilal", "لِحَيَة", "liḥaya", "sakal", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "لَحْيُويَة", "laḥyūya", "sakal", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُلْحُوي", "tulḥūy", "sakal", "kontrol", ""],
+      ["taf'ila", "semâî aday · ilal", "تَلْحِيَة", "talḥiya", "sakal", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَلْحَيَة", "talḥaya", "sakal", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَلْحُيَة", "malḥuya", "sakal", "kontrol", ""],
+      ["maf'ila", "semâî aday · ilal", "مَلْحِيَة", "malḥiya", "sakal", "kontrol", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî · ilal", "تَلْحِيَة", "talḥiya", "çokça sakal olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî · ilal", "تَلْحِيَة", "talḥiya", "çokça sakal olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî · ilal", "لِحِّاء", "liḥḥāʾ", "çokça sakal olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["fi''āl + tâ", "aday · ilal", "لِحِّاءَة", "liḥḥāʾa", "bir kere çokça sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî · ilal", "مُلَحِّي", "mulaḥḥī", "çokça sakal olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî · ilal", "مُلَحِّيَة", "mulaḥḥiya", "çokça sakal olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî · ilal", "مُلَحِّيَان", "mulaḥḥiyān", "çokça sakal olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلَحِّيَتَان",
+        "mulaḥḥiyatān",
+        "çokça sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلَحُّون",
+        "mulaḥḥūn",
+        "çokça sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلَحِّين",
+        "mulaḥḥīn",
+        "çokça sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلَحِّيَات",
+        "mulaḥḥiyāt",
+        "çokça sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî · ilal", "مُلَحَّى", "mulaḥḥā", "çokça sakal olunan", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî · ilal", "مُلَحَّيَان", "mulaḥḥayān", "çokça sakal olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلَحَّوْن",
+        "mulaḥḥawn",
+        "çokça sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلَحَّيْن",
+        "mulaḥḥayn",
+        "çokça sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلَحَّيَات",
+        "mulaḥḥayāt",
+        "çokça sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî · ilal", "مُلَحَّى", "mulaḥḥā", "çokça sakal olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî · ilal", "مُلَاحَاة", "mulāḥā", "biriyle karşılıklı sakal olma", "kontrol", ""],
+      [
+        "fi'āl",
+        "kıyâsî · ilal",
+        "لِحَاء",
+        "liḥāʾ",
+        "Ağacın kabuğuna denir",
+        "lugat",
+        "Vikisözlük: bark, rind; bast · Kamus"
+      ]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday · ilal", "لِحَاءَة", "liḥāʾa", "bir kere biriyle karşılıklı sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî · ilal", "مُلَاحِي", "mulāḥī", "biriyle karşılıklı sakal olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî · ilal",
+        "مُلَاحِيَة",
+        "mulāḥiya",
+        "biriyle karşılıklı sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُلَاحِيَان",
+        "mulāḥiyān",
+        "biriyle karşılıklı sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلَاحِيَتَان",
+        "mulāḥiyatān",
+        "biriyle karşılıklı sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلَاحُون",
+        "mulāḥūn",
+        "biriyle karşılıklı sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلَاحِين",
+        "mulāḥīn",
+        "biriyle karşılıklı sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلَاحِيَات",
+        "mulāḥiyāt",
+        "biriyle karşılıklı sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî · ilal", "مُلَاحَى", "mulāḥā", "biriyle karşılıklı sakal olunan", "kontrol", ""],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُلَاحَيَان",
+        "mulāḥayān",
+        "biriyle karşılıklı sakal olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلَاحَوْن",
+        "mulāḥawn",
+        "biriyle karşılıklı sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلَاحَيْن",
+        "mulāḥayn",
+        "biriyle karşılıklı sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلَاحَيَات",
+        "mulāḥayāt",
+        "biriyle karşılıklı sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî · ilal", "مُلَاحَى", "mulāḥā", "biriyle karşılıklı sakal olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî · ilal", "إِلْحَاء", "ʾilḥāʾ", "sakallaştırma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday · ilal", "إِلْحَاءَة", "ʾilḥāʾa", "bir kere sakallaştırma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî · ilal", "مُلْحِي", "mulḥī", "sakallaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُلْحِيَة", "mulḥiya", "sakallaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُلْحِيَان", "mulḥiyān", "sakallaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْحِيَتَان",
+        "mulḥiyatān",
+        "sakallaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْحُون",
+        "mulḥūn",
+        "sakallaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْحِين",
+        "mulḥīn",
+        "sakallaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْحِيَات",
+        "mulḥiyāt",
+        "sakallaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُلْحَى", "mulḥā", "sakallaştırılan", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُلْحَيَان", "mulḥayān", "sakallaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْحَوْن",
+        "mulḥawn",
+        "sakallaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْحَيْن",
+        "mulḥayn",
+        "sakallaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْحَيَات",
+        "mulḥayāt",
+        "sakallaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُلْحَى", "mulḥā", "sakallaştırma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî · ilal", "تَلَحِّي", "talaḥḥī", "kendini zorlayarak sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî · ilal", "مُتَلَحِّي", "mutalaḥḥī", "kendini zorlayarak sakal olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî · ilal",
+        "مُتَلَحِّيَة",
+        "mutalaḥḥiya",
+        "kendini zorlayarak sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَحِّيَان",
+        "mutalaḥḥiyān",
+        "kendini zorlayarak sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَحِّيَتَان",
+        "mutalaḥḥiyatān",
+        "kendini zorlayarak sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَلَحُّون",
+        "mutalaḥḥūn",
+        "kendini zorlayarak sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَلَحِّين",
+        "mutalaḥḥīn",
+        "kendini zorlayarak sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَلَحِّيَات",
+        "mutalaḥḥiyāt",
+        "kendini zorlayarak sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî · ilal", "مُتَلَحَّى", "mutalaḥḥā", "kendini zorlayarak sakal olunan", "kontrol", ""],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَحَّيَان",
+        "mutalaḥḥayān",
+        "kendini zorlayarak sakal olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَلَحَّوْن",
+        "mutalaḥḥawn",
+        "kendini zorlayarak sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَلَحَّيْن",
+        "mutalaḥḥayn",
+        "kendini zorlayarak sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَلَحَّيَات",
+        "mutalaḥḥayāt",
+        "kendini zorlayarak sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî · ilal",
+        "مُتَلَحَّى",
+        "mutalaḥḥā",
+        "kendini zorlayarak sakal olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî · ilal", "تَلَاحِي", "talāḥī", "birbirine sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî · ilal", "مُتَلَاحِي", "mutalāḥī", "birbirine sakal olan", "kontrol", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî · ilal",
+        "مُتَلَاحِيَة",
+        "mutalāḥiya",
+        "birbirine sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَاحِيَان",
+        "mutalāḥiyān",
+        "birbirine sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَاحِيَتَان",
+        "mutalāḥiyatān",
+        "birbirine sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَلَاحُون",
+        "mutalāḥūn",
+        "birbirine sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَلَاحِين",
+        "mutalāḥīn",
+        "birbirine sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَلَاحِيَات",
+        "mutalāḥiyāt",
+        "birbirine sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî · ilal", "مُتَلَاحَى", "mutalāḥā", "birbirine sakal olunan", "kontrol", ""],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَلَاحَيَان",
+        "mutalāḥayān",
+        "birbirine sakal olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَلَاحَوْن",
+        "mutalāḥawn",
+        "birbirine sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَلَاحَيْن",
+        "mutalāḥayn",
+        "birbirine sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَلَاحَيَات",
+        "mutalāḥayāt",
+        "birbirine sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî · ilal", "مُتَلَاحَى", "mutalāḥā", "birbirine sakal olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî · ilal", "اِنْلِحَاء", "inliḥāʾ", "sakal olunma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday · ilal", "اِنْلِحَاءَة", "inliḥāʾa", "bir kere sakal olunma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî · ilal", "مُنْلَحِي", "munlaḥī", "sakal olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْلَحِيَة", "munlaḥiya", "sakal olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْلَحِيَان", "munlaḥiyān", "sakal olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْلَحِيَتَان",
+        "munlaḥiyatān",
+        "sakal olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْلَحُون",
+        "munlaḥūn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْلَحِين",
+        "munlaḥīn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْلَحِيَات",
+        "munlaḥiyāt",
+        "sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَى",
+        "munlaḥā",
+        "sakal olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَيَان",
+        "munlaḥayān",
+        "sakal olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَوْن",
+        "munlaḥawn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَيْن",
+        "munlaḥayn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَيَات",
+        "munlaḥayāt",
+        "sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَحَى",
+        "munlaḥā",
+        "sakal olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî · ilal", "اِلْتِحَاء", "iltiḥāʾ", "kendisi için sakal olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday · ilal", "اِلْتِحَاءَة", "iltiḥāʾa", "bir kere kendisi için sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî · ilal", "مُلْتَحِي", "multaḥī", "kendisi için sakal olan", "kontrol", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî · ilal",
+        "مُلْتَحِيَة",
+        "multaḥiya",
+        "kendisi için sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + tesniye",
+        "kıyâsî · ilal",
+        "مُلْتَحِيَان",
+        "multaḥiyān",
+        "kendisi için sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْتَحِيَتَان",
+        "multaḥiyatān",
+        "kendisi için sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْتَحُون",
+        "multaḥūn",
+        "kendisi için sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْتَحِين",
+        "multaḥīn",
+        "kendisi için sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْتَحِيَات",
+        "multaḥiyāt",
+        "kendisi için sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُلْتَحَى", "multaḥā", "kendisi için sakal olunan", "kontrol", ""],
+      [
+        "muftaʿal + tesniye",
+        "kıyâsî · ilal",
+        "مُلْتَحَيَان",
+        "multaḥayān",
+        "kendisi için sakal olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْتَحَوْن",
+        "multaḥawn",
+        "kendisi için sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْتَحَيْن",
+        "multaḥayn",
+        "kendisi için sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْتَحَيَات",
+        "multaḥayāt",
+        "kendisi için sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُلْتَحَى", "multaḥā", "kendisi için sakal olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday · ilal", "اِلْحِيَاء", "ilḥiyāʾ", "iyiden iyiye sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî · ilal", "مُلْحَيِي", "mulḥayī", "iyiden iyiye sakal olan", "kontrol", ""],
+      [
+        "muf'all + müennes",
+        "kıyâsî · ilal",
+        "مُلْحَيِيَة",
+        "mulḥayiya",
+        "iyiden iyiye sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + tesniye",
+        "kıyâsî · ilal",
+        "مُلْحَيِيَان",
+        "mulḥayiyān",
+        "iyiden iyiye sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْحَيِيَتَان",
+        "mulḥayiyatān",
+        "iyiden iyiye sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْحَيُون",
+        "mulḥayūn",
+        "iyiden iyiye sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْحَيِين",
+        "mulḥayīn",
+        "iyiden iyiye sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْحَيِيَات",
+        "mulḥayiyāt",
+        "iyiden iyiye sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِلْحَاء", "istilḥāʾ", "sakal olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday · ilal", "اِسْتِلْحَاءَة", "istilḥāʾa", "bir kere sakal olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَلْحِي", "mustalḥī", "sakal olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَلْحِيَة",
+        "mustalḥiya",
+        "sakal olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَلْحِيَان",
+        "mustalḥiyān",
+        "sakal olmayı isteyen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَلْحِيَتَان",
+        "mustalḥiyatān",
+        "sakal olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحُون",
+        "mustalḥūn",
+        "sakal olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحِين",
+        "mustalḥīn",
+        "sakal olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحِيَات",
+        "mustalḥiyāt",
+        "sakal olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَلْحَى", "mustalḥā", "sakal olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَلْحَيَان",
+        "mustalḥayān",
+        "sakal olması istenen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحَوْن",
+        "mustalḥawn",
+        "sakal olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحَيْن",
+        "mustalḥayn",
+        "sakal olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَلْحَيَات",
+        "mustalḥayāt",
+        "sakal olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَلْحَى", "mustalḥā", "sakal olmayı isteme yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday · ilal", "اِلْحِييَاء", "ilḥīyāʾ", "büsbütün sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî · ilal", "مُلْحَايِي", "mulḥāyī", "büsbütün sakal olan", "kontrol", ""],
+      [
+        "muf'āll + müennes",
+        "kıyâsî · ilal",
+        "مُلْحَايِيَة",
+        "mulḥāyiya",
+        "büsbütün sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + tesniye",
+        "kıyâsî · ilal",
+        "مُلْحَايِيَان",
+        "mulḥāyiyān",
+        "büsbütün sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْحَايِيَتَان",
+        "mulḥāyiyatān",
+        "büsbütün sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْحَايُون",
+        "mulḥāyūn",
+        "büsbütün sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْحَايِين",
+        "mulḥāyīn",
+        "büsbütün sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْحَايِيَات",
+        "mulḥāyiyāt",
+        "büsbütün sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday · ilal", "اِلْحِوْحَاء", "ilḥiwḥāʾ", "aşırı sakal olma", "kontrol", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday · ilal", "اِلْحِوَّاء", "ilḥiwwāʾ", "aşırı sakal olma", "kontrol", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî · ilal", "لَاحِي", "lāḥī", "sakal olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "لَاحِيَة", "lāḥiya", "sakal olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "لَاحِيَان", "lāḥiyān", "sakal olan, iki", "kontrol", ""],
+      [
+        "fâ'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "لَاحِيَتَان",
+        "lāḥiyatān",
+        "sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "لَاحُون", "lāḥūn", "sakal olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "لَاحِين", "lāḥīn", "sakal olanlar", "kontrol", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "لَاحِيَات",
+        "lāḥiyāt",
+        "sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî · ilal", "مَلْحِيّ", "malḥiyy", "sakal olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَلْحِيَّة", "malḥiyya", "sakal olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَلْحِيَّان", "malḥiyyān", "sakal olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَلْحِيَّتَان",
+        "malḥiyyatān",
+        "sakal olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مَلْحِيُّون",
+        "malḥiyyūn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مَلْحِيِّين",
+        "malḥiyyīn",
+        "sakal olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَلْحِيَّات",
+        "malḥiyyāt",
+        "sakal olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَلْحَى", "malḥā", "sakal olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَلْحَيَان", "malḥayān", "sakal olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî · ilal", "مَلْحِي", "malḥī", "sakal olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَلْحِيَان", "malḥiyān", "sakal olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَلْحَاة", "malḥā", "sakal olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
+        "مَلْحَاتَان",
+        "malḥātān",
+        "sakal olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî · ilal", "مَلْحِيَة", "malḥiya", "sakal olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَلْحِيَتَان",
+        "malḥiyatān",
+        "sakal olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَلْحُيَة", "malḥuya", "sakal olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَلْحُيَتَان", "malḥuyatān", "sakal olma yeri, vakti, iki", "kontrol", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî · ilal", "مِلْحَى", "milḥā", "sakal olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî · ilal", "مِلْحَيَان", "milḥayān", "sakal olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî · ilal", "مِلْحَاء", "milḥāʾ", "sakal olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî · ilal", "مِلْحَاآن", "milḥāʾān", "sakal olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî · ilal", "مِلْحَاة", "milḥā", "sakal olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî · ilal", "مِلْحَاتَان", "milḥātān", "sakal olma âleti, iki", "kontrol", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî · ilal", "أَلْحَى", "ʾalḥā", "daha çok sakal olan", "kontrol", "Vikisözlük: long-bearded"],
+      ["af'al + tesniye", "kıyâsî · ilal", "أَلْحَيَان", "ʾalḥayān", "daha çok sakal olan, iki", "kontrol", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî · ilal", "لُحْيَى", "luḥyā", "daha çok sakal olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî · ilal", "لُحْيَيَان", "luḥyayān", "daha çok sakal olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "لَحْيَاء", "laḥyāʾ", "daha çok sakal olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "لَحْيَاآن", "laḥyāʾān", "daha çok sakal olan, iki", "kontrol", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî · ilal", "لُحَيّ", "luḥayy", "azıcık sakal olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî · ilal", "لُحَيَّان", "luḥayyān", "azıcık sakal olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî · ilal", "لُحَيَّة", "luḥayya", "azıcık sakal olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî · ilal", "لُحَيَّتَان", "luḥayyatān", "azıcık sakal olma, iki", "kontrol", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَلْحَى", "malḥā", "sakal olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَلْحَيَان", "malḥayān", "sakal olma, iki", "kontrol", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "لَحْيَة", "laḥya", "bir kere sakal olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "لَحْيَتَان", "laḥyatān", "bir kere sakal olma, iki", "kontrol", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "لِحْيَة", "liḥya", "Sakal", "lugat", "Vikisözlük: beard · Luggat"],
+      ["fi'le + tesniye", "aday", "لِحْيَتَان", "liḥyatān", "sakal olma tarzı, iki", "kontrol", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday · ilal", "لَحِيّ", "laḥiyy", "her daim sakal olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "لَحِيَّة", "laḥiyya", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "لَحِيَّان", "laḥiyyān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحِيَّتَان",
+        "laḥiyyatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحِيُّون",
+        "laḥiyyūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحِيِّين",
+        "laḥiyyīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحِيَّات",
+        "laḥiyyāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "لَحُوّ", "laḥuww", "her daim sakal olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "لَحُوَّة", "laḥuwwa", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "لَحُوَّان", "laḥuwwān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحُوَّتَان",
+        "laḥuwwatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحُوُّون",
+        "laḥuwwūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحُوِّين",
+        "laḥuwwīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحُوَّات",
+        "laḥuwwāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday · ilal", "لَحِي", "laḥī", "her daim sakal olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday · ilal", "لَحِيَة", "laḥiya", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday · ilal", "لَحِيَان", "laḥiyān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحِيَتَان",
+        "laḥiyatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحُون",
+        "laḥūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحِين",
+        "laḥīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحِيَات",
+        "laḥiyāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday · ilal", "لَحُوّ", "laḥuww", "her daim sakal olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday · ilal", "لَحُوَّة", "laḥuwwa", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday · ilal", "لَحُوَّان", "laḥuwwān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحُوَّتَان",
+        "laḥuwwatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحُوُّون",
+        "laḥuwwūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحُوِّين",
+        "laḥuwwīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحُوَّات",
+        "laḥuwwāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "لَحَى", "laḥā", "her daim sakal olan", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "لَحَيَان", "laḥayān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحَوْن",
+        "laḥawn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحَيْن",
+        "laḥayn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحَيَات",
+        "laḥayāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَحْي",
+        "laḥy",
+        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
+        "lugat",
+        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
+      ],
+      ["fa'l + müennes", "semâî aday", "لَحْيَة", "laḥya", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "لَحْيَان", "laḥyān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "لَحْيَتَان",
+        "laḥyatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَحْيُون",
+        "laḥyūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَحْيِين",
+        "laḥyīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَحْيَات",
+        "laḥyāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "her daim sakal olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday · ilal", "لُحِيَّة", "luḥiyya", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday · ilal", "لُحِيَّان", "luḥiyyān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "لُحِيَّتَان",
+        "luḥiyyatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لُحِيُّون",
+        "luḥiyyūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لُحِيِّين",
+        "luḥiyyīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لُحِيَّات",
+        "luḥiyyāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "لَحْيَان", "laḥyān", "her daim sakal olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "لَحْيَانَة", "laḥyāna", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "لَحْيَانَان", "laḥyānān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "لَحْيَانَتَان",
+        "laḥyānatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَحْيَانُون",
+        "laḥyānūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَحْيَانِين",
+        "laḥyānīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَحْيَانَات",
+        "laḥyānāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday · ilal", "لُحَاء", "luḥāʾ", "her daim sakal olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday · ilal", "لُحَاءَة", "luḥāʾa", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday · ilal", "لُحَاآن", "luḥāʾān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "لُحَاءَتَان",
+        "luḥāʾatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لُحَاؤُون",
+        "luḥāʾūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لُحَائِين",
+        "luḥāʾīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لُحَاآت",
+        "luḥāʾāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'āl", "semâî aday · ilal", "لَحَاء", "laḥāʾ", "her daim sakal olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday · ilal", "لَحَاءَة", "laḥāʾa", "her daim sakal olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday · ilal", "لَحَاآن", "laḥāʾān", "her daim sakal olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحَاءَتَان",
+        "laḥāʾatān",
+        "her daim sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحَاؤُون",
+        "laḥāʾūn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحَائِين",
+        "laḥāʾīn",
+        "her daim sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحَاآت",
+        "laḥāʾāt",
+        "her daim sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday · ilal", "لَحَّاء", "laḥḥāʾ", "işi sakal olma olan", "kontrol", ""],
+      [
+        "fa''āl + müennes",
+        "semâî aday · ilal",
+        "لَحَّاءَة",
+        "laḥḥāʾa",
+        "işi sakal olma olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āl + tesniye", "semâî aday · ilal", "لَحَّاآن", "laḥḥāʾān", "işi sakal olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحَّاءَتَان",
+        "laḥḥāʾatān",
+        "işi sakal olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحَّاؤُون",
+        "laḥḥāʾūn",
+        "işi sakal olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحَّائِين",
+        "laḥḥāʾīn",
+        "işi sakal olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحَّاآت",
+        "laḥḥāʾāt",
+        "işi sakal olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday · ilal", "لَحَّايَة", "laḥḥāya", "pek çok sakal olan", "kontrol", ""],
+      [
+        "fa''āle + tesniye",
+        "semâî aday · ilal",
+        "لَحَّايَتَان",
+        "laḥḥāyatān",
+        "pek çok sakal olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحَّايَات",
+        "laḥḥāyāt",
+        "pek çok sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "لَحُوّ", "laḥuww", "çok sakal olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "لَحُوَّة", "laḥuwwa", "çok sakal olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "لَحُوَّان", "laḥuwwān", "çok sakal olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحُوَّتَان",
+        "laḥuwwatān",
+        "çok sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحُوُّون",
+        "laḥuwwūn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحُوِّين",
+        "laḥuwwīn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحُوَّات",
+        "laḥuwwāt",
+        "çok sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "لَحُّوي", "laḥḥūy", "pek çok sakal olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "لَحُّويَة", "laḥḥūya", "pek çok sakal olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "لَحُّويَان", "laḥḥūyān", "pek çok sakal olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "لَحُّويَتَان",
+        "laḥḥūyatān",
+        "pek çok sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَحُّويُون",
+        "laḥḥūyūn",
+        "pek çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَحُّويِين",
+        "laḥḥūyīn",
+        "pek çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَحُّويَات",
+        "laḥḥūyāt",
+        "pek çok sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "لِحِّيي", "liḥḥīy", "sakal olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "لِحِّييَة", "liḥḥīya", "sakal olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "لِحِّييَان", "liḥḥīyān", "sakal olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "لِحِّييَتَان",
+        "liḥḥīyatān",
+        "sakal olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لِحِّييُون",
+        "liḥḥīyūn",
+        "sakal olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لِحِّييِين",
+        "liḥḥīyīn",
+        "sakal olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لِحِّييَات",
+        "liḥḥīyāt",
+        "sakal olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday · ilal", "لُحَّاء", "luḥḥāʾ", "son derece sakal olan", "kontrol", ""],
+      [
+        "fu''āl + müennes",
+        "semâî aday · ilal",
+        "لُحَّاءَة",
+        "luḥḥāʾa",
+        "son derece sakal olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl + tesniye", "semâî aday · ilal", "لُحَّاآن", "luḥḥāʾān", "son derece sakal olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "لُحَّاءَتَان",
+        "luḥḥāʾatān",
+        "son derece sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لُحَّاؤُون",
+        "luḥḥāʾūn",
+        "son derece sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لُحَّائِين",
+        "luḥḥāʾīn",
+        "son derece sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لُحَّاآت",
+        "luḥḥāʾāt",
+        "son derece sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday · ilal", "مِلْحَاء", "milḥāʾ", "sakal olmayı âdet edinmiş", "kontrol", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday · ilal",
+        "مِلْحَاءَة",
+        "milḥāʾa",
+        "sakal olmayı âdet edinmiş, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + tesniye",
+        "semâî aday · ilal",
+        "مِلْحَاآن",
+        "milḥāʾān",
+        "sakal olmayı âdet edinmiş, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مِلْحَاءَتَان",
+        "milḥāʾatān",
+        "sakal olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مِلْحَاؤُون",
+        "milḥāʾūn",
+        "sakal olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مِلْحَائِين",
+        "milḥāʾīn",
+        "sakal olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مِلْحَاآت",
+        "milḥāʾāt",
+        "sakal olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِلْحِيي", "milḥīy", "sakal olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِلْحِييَة", "milḥīya", "sakal olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِلْحِييَان", "milḥīyān", "sakal olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِلْحِييَتَان",
+        "milḥīyatān",
+        "sakal olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْحِييُون",
+        "milḥīyūn",
+        "sakal olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْحِييِين",
+        "milḥīyīn",
+        "sakal olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْحِييَات",
+        "milḥīyāt",
+        "sakal olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday · ilal", "لَحِيّ", "laḥiyy", "çok sakal olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "لَحِيَّة", "laḥiyya", "çok sakal olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "لَحِيَّان", "laḥiyyān", "çok sakal olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "لَحِيَّتَان",
+        "laḥiyyatān",
+        "çok sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَحِيُّون",
+        "laḥiyyūn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَحِيِّين",
+        "laḥiyyīn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَحِيَّات",
+        "laḥiyyāt",
+        "çok sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "لَحَّي", "laḥḥay", "çok sakal olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "لَحَّيَة", "laḥḥaya", "çok sakal olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "لَحَّيَان", "laḥḥayān", "çok sakal olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "لَحَّيَتَان",
+        "laḥḥayatān",
+        "çok sakal olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَحَّيُون",
+        "laḥḥayūn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَحَّيِين",
+        "laḥḥayīn",
+        "çok sakal olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَحَّيَات",
+        "laḥḥayāt",
+        "çok sakal olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "لَحْيِيّ", "laḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî · ilal", "لَحَوِيّ", "laḥawiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "لِحْيِيّ", "liḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "لُحْيِيّ", "luḥyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "لِحَائِيّ", "liḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "لَاحِيّ", "lāḥiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَلْحِيِّيّ", "malḥiyyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî · ilal", "لَحِيِّيّ", "laḥiyyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَلْحَوِيّ", "malḥawiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî · ilal", "تَلْحِيِيّ", "talḥiyiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî · ilal", "تَلَاحِيّ", "talāḥiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِلْحَائِيّ", "ʾilḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِلْتِحَائِيّ", "iltiḥāʾiyy", "sakal olma ile ilgili", "kontrol", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "لَحْيِيَّة", "laḥyiyya", "sakal olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî · ilal", "لَحَوِيَّة", "laḥawiyya", "sakal olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "لِحْيِيَّة", "liḥyiyya", "sakal olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "لُحْيِيَّة", "luḥyiyya", "sakal olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "لِحَائِيَّة", "liḥāʾiyya", "sakal olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "لَاحِيَّة", "lāḥiyya", "sakal olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَلْحِيِّيَّة", "malḥiyyiyya", "sakal olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî · ilal", "لَحِيِّيَّة", "laḥiyyiyya", "sakal olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَلْحَوِيَّة", "malḥawiyya", "sakal olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî · ilal", "تَلْحِيِيَّة", "talḥiyiyya", "sakal olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî · ilal", "تَلَاحِيَّة", "talāḥiyya", "sakal olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِلْحَائِيَّة", "ʾilḥāʾiyya", "sakal olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِلْتِحَائِيَّة", "iltiḥāʾiyya", "sakal olanlık", "kontrol", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday · ilal", "لَحَاء", "laḥāʾ", "sakal olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal olma", "kontrol", ""],
+      [
+        "fi'âl",
+        "semâî aday · ilal",
+        "لِحَاء",
+        "liḥāʾ",
+        "Ağacın kabuğuna denir",
+        "lugat",
+        "Vikisözlük: bark, rind; bast · Kamus"
+      ],
+      ["fu'l (şükr)", "semâî aday", "لُحْي", "luḥy", "sakal olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday · ilal", "لَحَاة", "laḥā", "sakal olma", "kontrol", ""],
+      ["fi'âle", "semâî aday · ilal", "لِحَايَة", "liḥāya", "sakal olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday · ilal", "لُحِيَّة", "luḥiyya", "sakal olma", "kontrol", ""],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَحْي",
+        "laḥy",
+        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
+        "lugat",
+        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
+      ],
+      ["fi'l", "semâî aday", "لِحْي", "liḥy", "sakal olma", "kontrol", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "لَاحُوي", "lāḥūy", "sakal olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday · ilal", "لَحَاة", "laḥā", "sakal olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "لُحَيَة", "luḥaya", "sakal olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُلْحُويَة", "ʾulḥūya", "sakal olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "لَوْحَي", "lawḥay", "sakal olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "لَيْحَي", "layḥay", "sakal olma türünden şey", "kontrol", ""],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَحْي",
+        "laḥy",
+        "Çene kemiğine denir ki sakal biten mevzidir, tesniyesi dır ve cem-i killeti…",
+        "lugat",
+        "Vikisözlük: verbal noun of لَحَى (laḥā) (form I) · Kamus"
+      ],
+      ["fa'al", "semâî aday · ilal", "لَحَى", "laḥā", "sakal olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "لِحْي", "liḥy", "sakal olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday", "لُحْي", "luḥy", "sakal olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday · ilal", "لَحِيّ", "laḥiyy", "sakal olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
+      ["fu'ul", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday · ilal", "لَحَاء", "laḥāʾ", "sakal olma türünden şey", "kontrol", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "لَاحُويَة", "lāḥūya", "sakal olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "لَوْحَيَة", "lawḥaya", "sakal olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "لَيْحَيَة", "layḥaya", "sakal olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "لَحْيَة", "laḥya", "sakal olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "لِحْيَة", "liḥya", "Sakal", "lugat", "Vikisözlük: beard · Luggat"],
+      ["fu'l + tâ (tekili)", "semâî aday", "لُحْيَة", "luḥya", "sakal olma türünden bir tane", "kontrol", ""],
+      [
+        "fa'îl + tâ (tekili)",
+        "semâî aday · ilal",
+        "لَحِيَّة",
+        "laḥiyya",
+        "sakal olma türünden bir tane",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + tâ (tekili)",
+        "semâî aday · ilal",
+        "لُحِيَّة",
+        "luḥiyya",
+        "sakal olma türünden bir tane",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'âl + tâ (tekili)",
+        "semâî aday · ilal",
+        "لَحَاءَة",
+        "laḥāʾa",
+        "sakal olma türünden bir tane",
+        "kontrol",
+        ""
+      ]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday · ilal", "أَلْحَاء", "ʾalḥāʾ", "sakal olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday · ilal", "أَلْحِيَة", "ʾalḥiya", "sakal olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday · ilal", "أَلَاحِي", "ʾalāḥī", "sakal olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday · ilal", "أَلَاحِيّ", "ʾalāḥiyy", "sakal olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday · ilal", "لُحِيّ", "luḥiyy", "sakal olmalar", "kontrol", ""],
+      [
+        "fi'āl",
+        "semâî aday · ilal",
+        "لِحَاء",
+        "liḥāʾ",
+        "Ağacın kabuğuna denir",
+        "lugat",
+        "Vikisözlük: bark, rind; bast · Kamus"
+      ],
+      ["fi'al", "semâî aday · ilal", "لِحَى", "liḥā", "Cemi, sakallar", "lugat", "Vankulu"],
+      ["fi'ale", "semâî aday · ilal", "لِحَيَة", "liḥaya", "sakal olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday · ilal", "لُحَى", "luḥā", "sakal olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday · ilal", "لَحَاة", "laḥā", "sakal olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday · ilal", "لُحَّاء", "luḥḥāʾ", "sakal olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday · ilal", "لَحَاء", "laḥāʾ", "sakal olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "لَحَى", "laḥā", "sakal olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday · ilal", "مَلَاحِي", "malāḥī", "sakal olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday · ilal", "مَلَاحِيّ", "malāḥiyy", "sakal olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday · ilal", "لَوَاحِي", "lawāḥī", "sakal olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَلْحُي", "ʾalḥuy", "sakal olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "لُحَّي", "luḥḥay", "sakal olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday · ilal", "لُحَيّ", "luḥayy", "sakal olmalar", "kontrol", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday · ilal", "أَلْحَاآت", "ʾalḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday · ilal", "أَلْحِيَات", "ʾalḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday · ilal", "أَلَاحِيَات", "ʾalāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday · ilal", "أَلَاحِيَّات", "ʾalāḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday · ilal", "لُحِيَّات", "luḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday · ilal", "لُحِيَّات", "luḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "لِحَاآت", "liḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday · ilal", "لِحَيَات", "liḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday · ilal", "لِحَيَات", "liḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday · ilal", "لُحَيَات", "luḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday · ilal", "لَحَاات", "laḥāāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday · ilal", "لُحَّاآت", "luḥḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday · ilal", "لَحَاآت", "laḥāʾāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday · ilal", "لَحَيَات", "laḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday · ilal", "مَلَاحِيَات", "malāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday · ilal", "مَلَاحِيَّات", "malāḥiyyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday · ilal", "لَوَاحِيَات", "lawāḥiyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَلْحُيَات", "ʾalḥuyāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "لُحَّيَات", "luḥḥayāt", "sakal olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday · ilal", "لُحَيَّات", "luḥayyāt", "sakal olmalar topluluğu", "kontrol", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i merre · bâb II", "taf'īl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "r3"],
+    ["ism-i merre · bâb V", "tafa''ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "r3"],
+    ["ism-i merre · bâb VI", "tafā'ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VII", "munfa'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["sıfat-ı müşebbehe", "fa'al + müennes", "r3"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "r3"],
+    ["cem‘-i mükesser (aday)", "fu'alā'", "r5"],
+    ["cem‘-i mükesser (aday)", "fe'âil", "r5"]
+  ],
+  "mana": {
     "ince": "whole.n.02",
     "orta": "noun.animal",
     "ust": "canlı ve beden",
@@ -1364,25 +2694,8 @@
     "dayanak_tanim": "body covering of a living animal",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "durum": "Cebel mu'cemlerinde kök yok"
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["natural_object.n.01"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "المثنيات",
-    "bab": "ما جاء مجموعا وإنما هو اثنان أو واحد في الأصل",
-    "kok_gecis": 92.3,
-    "kitapta_gecis": 4.8,
-    "zenginlesme": 4.24
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -1402,530 +2715,15 @@
       "boy": 33
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "519": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday · ilal", ""],
-    "520": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "522": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday · ilal", ""],
-    "523": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday · ilal", ""],
-    "524": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday · ilal", ""],
-    "525": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "527": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday · ilal", ""],
-    "528": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday · ilal", ""],
-    "529": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday · ilal", ""],
-    "530": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday · ilal", ""],
-    "531": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday · ilal", ""],
-    "532": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "534": ["masdar · bâb II", "taf'īl", "kıyâsî · ilal", "II"],
-    "535": ["masdar · bâb II", "taf'ila", "kıyâsî · ilal", "II"],
-    "536": ["masdar · bâb II", "fi''āl", "kıyâsî · ilal", "II"],
-    "537": ["ism-i merre · bâb II", "fi''āl + tâ", "aday · ilal", "II"],
-    "538": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî · ilal", "II"],
-    "539": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî · ilal", "II"],
-    "540": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî · ilal", "II"],
-    "541": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî · ilal", "II"],
-    "542": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "543": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "544": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "545": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "546": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî · ilal", "II"],
-    "547": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "548": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "549": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "550": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "551": ["masdar · bâb III", "mufā'ale", "kıyâsî · ilal", "III"],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "554": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî · ilal", "III"],
-    "555": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî · ilal", "III"],
-    "556": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî · ilal", "III"],
-    "557": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî · ilal", "III"],
-    "558": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "559": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "560": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "561": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "562": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî · ilal", "III"],
-    "563": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "564": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "565": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "566": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "568": ["ism-i merre · bâb IV", "if'āl + tâ", "aday · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "582": ["masdar · bâb V", "tafa''ul", "kıyâsî · ilal", "V"],
-    "583": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî · ilal", "V"],
-    "584": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî · ilal", "V"],
-    "585": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî · ilal", "V"],
-    "586": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî · ilal", "V"],
-    "587": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "588": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "589": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "590": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "591": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî · ilal", "V"],
-    "592": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "593": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "594": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "595": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "596": ["masdar · bâb VI", "tafā'ul", "kıyâsî · ilal", "VI"],
-    "597": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî · ilal", "VI"],
-    "598": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî · ilal", "VI"],
-    "599": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî · ilal", "VI"],
-    "600": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî · ilal", "VI"],
-    "601": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "602": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "603": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "604": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "605": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî · ilal", "VI"],
-    "606": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "607": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "608": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "609": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "654": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday · ilal", "IX"],
-    "655": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî · ilal", "IX"],
-    "656": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî · ilal", "IX"],
-    "657": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî · ilal", "IX"],
-    "658": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî · ilal", "IX"],
-    "659": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IX"],
-    "660": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IX"],
-    "661": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IX"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "663": ["ism-i merre · bâb X", "istif'āl + tâ", "aday · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "677": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday · ilal", "XI"],
-    "678": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî · ilal", "XI"],
-    "679": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî · ilal", "XI"],
-    "680": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî · ilal", "XI"],
-    "681": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî · ilal", "XI"],
-    "682": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "XI"],
-    "683": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "XI"],
-    "684": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "XI"],
-    "685": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday · ilal", "XII"],
-    "686": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday · ilal", "XIII"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "709": ["âlet · sülâsî", "mif'al", "kıyâsî · ilal", ""],
-    "710": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî · ilal", ""],
-    "711": ["âlet · sülâsî", "mif'âl", "kıyâsî · ilal", ""],
-    "712": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî · ilal", ""],
-    "713": ["âlet · sülâsî", "mif'ale", "kıyâsî · ilal", ""],
-    "714": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî · ilal", ""],
-    "715": ["tafdîl · sülâsî", "af'al", "kıyâsî · ilal", ""],
-    "716": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî · ilal", ""],
-    "717": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî · ilal", ""],
-    "718": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî · ilal", ""],
-    "719": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî · ilal", ""],
-    "720": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî · ilal", ""],
-    "721": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî · ilal", ""],
-    "722": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "725": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday · ilal", ""],
-    "726": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "727": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "728": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "729": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "730": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "731": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "732": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday · ilal", ""],
-    "733": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "734": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "735": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "736": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "737": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "738": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "739": ["sıfat-ı müşebbehe", "fa'il", "semâî aday · ilal", ""],
-    "740": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday · ilal", ""],
-    "741": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday · ilal", ""],
-    "742": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday · ilal", ""],
-    "743": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "744": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "745": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "746": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday · ilal", ""],
-    "747": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday · ilal", ""],
-    "748": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday · ilal", ""],
-    "749": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "750": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "751": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "752": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "756": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday · ilal", ""],
-    "757": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday · ilal", ""],
-    "758": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday · ilal", ""],
-    "759": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "760": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "761": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "762": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "763": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday · ilal", ""],
-    "764": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday · ilal", ""],
-    "765": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday · ilal", ""],
-    "766": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "767": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "768": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "769": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "770": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday · ilal", ""],
-    "771": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday · ilal", ""],
-    "772": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday · ilal", ""],
-    "773": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "774": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "775": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "776": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "777": ["mübalağa", "fa''āl", "semâî aday · ilal", ""],
-    "778": ["mübalağa", "fa''āl + müennes", "semâî aday · ilal", ""],
-    "779": ["mübalağa", "fa''āl + tesniye", "semâî aday · ilal", ""],
-    "780": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "781": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "782": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "783": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "784": ["mübalağa", "fa''āle", "semâî aday · ilal", ""],
-    "785": ["mübalağa", "fa''āle + tesniye", "semâî aday · ilal", ""],
-    "786": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "787": ["mübalağa", "fa'ūl", "semâî aday · ilal", ""],
-    "788": ["mübalağa", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "789": ["mübalağa", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "790": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "791": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "792": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "793": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "794": ["mübalağa", "fu''āl", "semâî aday · ilal", ""],
-    "795": ["mübalağa", "fu''āl + müennes", "semâî aday · ilal", ""],
-    "796": ["mübalağa", "fu''āl + tesniye", "semâî aday · ilal", ""],
-    "797": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "798": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "799": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "800": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "801": ["mübalağa", "mif'āl", "semâî aday · ilal", ""],
-    "802": ["mübalağa", "mif'āl + müennes", "semâî aday · ilal", ""],
-    "803": ["mübalağa", "mif'āl + tesniye", "semâî aday · ilal", ""],
-    "804": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "805": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "806": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "807": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "808": ["mübalağa", "fa'īl", "semâî aday · ilal", ""],
-    "809": ["mübalağa", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "810": ["mübalağa", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "811": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "812": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "813": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "814": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "821": ["mensûb", "fa'īl + iyy", "kıyâsî · ilal", ""],
-    "822": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "825": ["mensûb", "taf'īl + iyy", "kıyâsî · ilal", ""],
-    "826": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî · ilal", ""],
-    "827": ["mensûb", "tafā'ul + iyy", "kıyâsî · ilal", ""],
-    "828": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "833": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "834": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "836": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "838": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday · ilal", ""],
-    "839": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "841": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday · ilal", ""],
-    "842": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "844": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "845": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday · ilal", ""],
-    "846": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday · ilal", ""],
-    "847": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday · ilal", ""],
-    "848": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday · ilal", ""],
-    "849": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday · ilal", ""],
-    "850": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday · ilal", ""],
-    "851": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday · ilal", ""],
-    "852": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday · ilal", ""],
-    "853": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "856": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday · ilal", ""],
-    "857": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday · ilal", ""],
-    "858": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday · ilal", ""],
-    "859": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday · ilal", ""],
-    "860": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "862": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday · ilal", ""],
-    "863": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday · ilal", ""],
-    "864": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday · ilal", ""],
-    "865": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday · ilal", ""],
-    "866": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday · ilal", ""],
-    "867": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday · ilal", ""],
-    "868": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday · ilal", ""],
-    "869": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday · ilal", ""],
-    "870": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday · ilal", ""],
-    "871": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "874": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday · ilal", ""],
-    "875": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday · ilal", ""],
-    "876": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday · ilal", ""],
-    "877": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday · ilal", ""],
-    "878": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "880": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday · ilal", ""],
-    "881": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday · ilal", ""],
-    "882": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday · ilal", ""],
-    "883": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday · ilal", ""],
-    "884": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "885": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "886": ["mensûb", "fa'al + iyy", "kıyâsî · ilal", ""],
-    "887": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî · ilal", ""]
+  "wordnet": ["natural_object.n.01"],
+  "muhassas": {
+    "kitap": "المثنيات",
+    "bab": "ما جاء مجموعا وإنما هو اثنان أو واحد في الأصل",
+    "kok_gecis": 92.3,
+    "kitapta_gecis": 4.8,
+    "zenginlesme": 4.24
   },
-  "kelimeler": [
-    {
-      "kelime": "بِلِحْيَتِى",
-      "kok": "لحي",
-      "lemma": "لِحْيَت",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "20:94",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "sakal",
-        "lemma": "sakal",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Lihye: sakal, çene",
-    "kelimeler": [
-      {
-        "lemma": "لِحْيَت",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "kök isim: fiil kalıbıyla türemedi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

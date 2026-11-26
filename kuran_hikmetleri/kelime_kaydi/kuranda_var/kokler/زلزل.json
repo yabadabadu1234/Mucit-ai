@@ -1,766 +1,623 @@
 {
   "kok": "زلزل",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Aktarım",
+  "baz_ayrim": "sars",
+  "tur_kuran": {
+    "fiil": 3,
+    "isim": 3
+  },
+  "fiil": "sars",
+  "fiil_kaynak": "elle",
+  "fiil_guven": "orta",
   "sinif": "reddedildi",
-  "turkce_fiil": {
-    "sap": "sars",
-    "kaynak": "elle",
-    "guven": "orta"
-  },
-  "mustaklar": {},
-  "reddedilen": [
-    ["kök", "زلزل", "üç harfli değil"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "زلزل",
-      "turkce": "Zelzele: sarsıntı, deprem",
-      "fiil": "sars"
-    },
-    "osmanlica_lugatler": {
-      "زَلْزَلَة": {
-        "sorgular": ["zalzalae"],
-        "maddeler": []
-      },
-      "زُلْزِلُ": {
-        "sorgular": ["zulzilu"],
-        "maddeler": []
-      },
-      "زِلْزال": {
-        "sorgular": ["zilzal"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "zilzal",
-            "arapca": [],
-            "mana": "اَلزَّلْزَلَةُ [ez-zelzelet] (قَلْقَلَةٌ [kalkalet] vezninde) ve اَلزِّلْزَالُ [ez-zilzâl] (zâyın harekât-ı selâsıyla) Bir nesneyi ırgalamak manâsınadır; yukâlu: زَلْزَلَ الشَّيْءَ زَلْزَلَةً وَزِلْزَالًا مُثَلَّثَةً إِذَا حَرَّكَهُ Şârihin beyânına göre bunlardan ism زَلْزَالٌ [zelzâl]dir zâyın fethiyle.",
-            "id": 1179655,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "zilzal",
-            "arapca": [],
-            "mana": "اَلزِّلْزَالُ [ez-zilzâl] (zânın kesri ve lâmın sükûnuyla) Kezâlik yeri depretmek.",
-            "id": 1179659,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus-u Türki",
-            "madde": "zilzal",
-            "arapca": [],
-            "mana": "زلزال Kamus turkide زلزال maddesi. Sayfa:686",
-            "id": 1179648,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Lugat-ı Remzi",
-            "madde": "Zilzâl",
-            "arapca": [],
-            "mana": "زلزال Lugat-i Remzi زلزال maddesi. Sayfa:624",
-            "id": 311925,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kubbe Altı",
-            "madde": "ZELZAL – ZİLZAL",
-            "arapca": ["زلزال"],
-            "mana": "[ l ince] ( ﺯﻟﺰﺍﻝ ) i. (Ar. zelzele “şiddetle sallamak”tan zelzāl – zilzāl ) Deprem, zelzele: Dem-i vegāda çü pây-i semendi deprense / Sipihre lerze düşer arza erişir zelzâl (Bâkî). Nice bâr eyleseler zıllini hâke tahmil / Üstühânına düşer gâv-ı zemînin zelzâl (Nâilî).",
-            "id": 308839,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          }
-        ]
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الزاي واللام",
-      "baslik": "زلل - زلزل",
-      "mihveri": "انزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة",
-      "sesler": "الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.",
-      "tam_metin": "{إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]\n\"الزِلَّة - بالكسر: الحجارة المُلْس، والمَزَلّة - بفتح الميم والزاي: المكان الدَحْض. وزُحْلُوفة زُلّ - بالضم: زَلَق. زَلّ السهمُ عن الدرع، والإنسانُ عن الصخرة: زَلِق. وزلّت قدمه. (المضارع بالفتح والكسر).\n° المعنى المحوري\nانزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة\n__________\n(1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.\n(2/910)\nللمستقيم الحال يقع في شر عظيم. لأن القدم إذا زلّت نقلت الإنسان من حال خير إلى حال شر [قر 10/ 172]. ويقال زلّ في رأيه ومنطقه أخطأ \" (كما يقال سَقْطَةٌ) {فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا} [البقرة: 36] فسرت في [طب 1/ 524 وقر 1/ 311] أخذا من الزَلَّة: الخطيئة. لكن هذا يحوج إلى التأويل في وضع \"عنها \"هنا. فالدقيق تفسيرها بأنه أزلقهما وأبعدهما عن كلمة الله فلم يقدرا على الثبات على قوله: {وَلَا تَقْرَبَا هَذِهِ الشَّجَرَةَ} [البقرة: 35] يقال زَلَّ عن مكانه: تنحَّى عنه. قال امرؤ القيس: (يزِلّ الغلامُ الخِفُّ عن صَهَواته)\nوقال (....... يزِل اللِّبْدُ عن حاله متنه)\n{فَإِنْ زَلَلْتُمْ مِنْ بَعْدِ مَا جَاءَتْكُمُ الْبَيِّنَاتُ} [البقرة: 209] (سقطتم أو ضَلَلتم). {إِنَّمَا اسْتَزَلَّهُمُ الشَّيْطَانُ بِبَعْضِ مَا كَسَبُوا} [آل عمران: 155]. (أمكنته ذنوبهم من استغوائهم وإزلاقهم). ومن معنوى هذا \"زلّ عُمرُه: مضى وذهب، وزَلَّتْ منه إلى فلان نِعَم: وصلت منه إليه \".\nومن المعنى الأصلي \"زلزل الشيء: حرّكه شديدًا (كأنما كرر إزلاقه للأمام فللخلف مثلًا) {إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]، {إِنَّ زَلْزَلَةَ السَّاعَةِ شَيْءٌ عَظِيمٌ} [الحج: 1]، {وَزُلْزِلُوا حَتَّى يَقُولَ الرَّسُولُ ....} [البقرة: 214]: خُوِّفُو وحُرِّكوا .. من الزلزلة: شدة التحريك تكون في الأشخاص والأحوال [قر 3/ 34]. وفي الأثر \"لا دَقَّ ولا زَلْزَلة في الكيل \"أي لا يُحَرّك ما فيه ويُهَزّ لينضم ويسع أكثر مما يسع عادة \".\nوالانزلاق مرور بخفة وسلاسة، ومن هذا \"الماء الزُلال والزليل: السريع النزول والمَرِّ في الحلق/ العذبُ/ الصافي الخالص \" (كل هذا يجعله سَلِس المرور في\n(2/911)\nالحلق سريعَه) وقريب من هذا الباب قولهم \"الزَلَزِل - بفتحتين فكسرة: أثاث البيت ومتاعه/ قماش البيت \" (فهذا من كثرة الحركة نقلًا أو تبديلًا - كما نقول اليوم منقولات).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (زل): الانزلاق أي التحرك السهل عن مستوٍ يتيح هذا - كما يُنْزَلَق عن الزِلّة - فى (زلل)، وكما في زوال الشمس عن كبد السماء - في (زول)، وفي بعد الشيء عما يتصل به بحيث يتميزان، وزَيْل الضأن عن المعزى - في (زيل)، وكما في انحدار الماء إلى المصنعة - في (زلف)، وكما فى تحرك الجنين من عمق مقره في البطن في حالة إسقاطه - في (زلق)، وكما في استواء ظاهر الزلم كهيئة الإصبع الدقيقة مع ملاسته ومع النظر إلى سرعة انطلاقه بذلك إذا رمى به - في (زلم)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 6,
-      "ilk_yer": "2:214:16:2",
-      "tur": {
-        "V": 3,
-        "N": 3
-      },
-      "bab": {},
-      "zaman_kip": {
-        "PERF": 3
-      },
-      "fiil_ismi_ozellikleri": {
-        "PASS": 3
-      },
-      "lemmalar": {
-        "زُلْزِلُ": 3,
-        "زِلْزَال": 2,
-        "زَلْزَلَة": 1
-      },
-      "bicimler": {
-        "زُلْزِلُ": 2,
-        "زَلْزَلَةَ": 1,
-        "زِلْزَالًا": 1,
-        "زُلْزِلَتِ": 1,
-        "زِلْزَالَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ZLZL",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ZLZL زلزل BP – • HDAL • © SG | 15Feb2021 √ZLZL “root” ▪ ZLZL_1 ‘to shake, rock, convulse, (cause to) tremble; earthquake’ ↗ zalzala ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to shake violently, to rock, to tremble, earthquake, to agitate’ ▪ Out of the 7 values listed by DRS for the root ZLZL in Sem, only 1 is represented in Ar. ▪ The root is obviously a reduplication of (= ints. formation from) the bi-consonantal element * ‑zl‑ which also appears in combination with third (and forth) consonants, cf. e.g. ↗ zāla ‘to go away, depart, pass away, shift’, ↗ zalla ‘to slip, slide off, move away’, ↗ zalaǧa ‘to slip, slide, glide along’, ↗ zalaqa ‘to glide, slide, slip’. Like zalzala , these roots have in common the notion of »‘rapidité, agilité’, souvaint liée à celle de ‘glisser’ (et conjointement de ‘lisse, poli, brillant’« – DRS 8 (1999)#-ZL-, cf. also ↗*-ZL-. – ▪ DRS 8 (1999)#ZLZL- 1 Syr ʔzdanzal ‘être secoué, trembler’, zunzālā ‘tremblement, turpitude, honte’, Ar zalzala ‘faire trembler, secouer, agiter’, zalzāl ‘tremblement (des membres)’, zalzalaẗ , EAr zanzale , HispAr zérzel , MġrAr zəlzla , zənzla , Ḥrs zəlzāl , EJib zelzelt ‘tremblement de terre’. ? Tña zälzäl bälä ‘ballotter (chose accrochée)’. - 2 Hbr zalzallīm (pl.) ‘pousses de vigne’. - 3 TalmAram zīlzūlā ‘mépris, dédain’, zalzīlā ‘débauché, prodigue’, zalzəlānā ‘glouton, vorace’. - 4 Te zärzärä , Tña zälzälä , Amh Arg zäläzzälä , Gur zəläzälä ‘découper la viande en lanières’. - 5 Te zəlzale ‘abeille’. - 6 zälzal ‘gonflé, bouffant, trop ample’, ? Amh ʔažäläžžälä ‘être immense, innombrable’. - 7 Gur zəläzälä ‘faire du petit commerce’. ▪ DRS 8 (1999)#ZLZL-1: »Quelques formes présentent une dissimilation l > n (occasionnellement r ) […]. – La base est ZLZL (et avec dissimilation ZNZL), formation à redoublement sur ZL, avec divers phénomènes de dissimilation; v. aussi s. ZLL.« ▪ For the 2-cons. basis of which ZLZL is a reduplication, cf. above, section CONC. ▪ »The semantic field of zlzl seems to be vibration. If the meaning ‘twig’ or ‘thin branch’ [of nEg ḏ3nḏ3nrt , ḏ3n3ḏ3n3 , ḏ3nḏ3r(t) , etc.] derives from this root, then possibly the semantic development is from the notion of ‘shaking a (pliant) stick’« – Hoch1994. – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "زلزال",
-        "u": "زلزال",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "زَلْزَال • (zalzāl) m (plural زَلَازِل (zalāzil))",
-        "s": [
-          ["ar-rootbox", ""]
-        ],
-        "g": ["earthquake, seism"],
-        "r": ["zalzāl"],
-        "ipa": ["/zal.zaːl/"],
-        "ds": [
-          ["fa", "زلزال", "zelzâl, zalzâl"]
-        ],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزال",
-        "u": "زلزال",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "زِلْزَال • (zilzāl) m (plural زَلَازِل (zalāzil))",
-        "g": ["verbal noun of زَلْزَلَ (zalzala) (form Iq)", "earthquake"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["زَلْزَلَ"],
-        "r": ["zilzāl"],
-        "ipa": ["/zil.zaːl/"],
-        "rl": ["زَلْزَلَة"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زلزل",
-        "u": "زلزل",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "زَلْزَلَ • (zalzala) Iq (non-past يُزَلْزِلُ (yuzalzilu), verbal noun زَلْزَلَة (zalzala) or زِلْزَال (zilzāl))",
-        "t": "From the reduplicated root ز ل ز ل (z l z l).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["glossary", "reduplicated"],
-          ["ar-reduplicated", "reduplicated"],
-          ["ar-root", "ز ل ز ل (z l z l)"]
-        ],
-        "g": ["to shake (transitive)", "to convulse, to tremble"],
-        "r": ["zalzala"],
-        "ipa": ["/zal.za.la/"],
-        "el": [
-          ["ز ل ز ل", "Appendix:Arabic roots/ز ل ز ل"]
-        ],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلازل",
-        "u": "زلازل",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "زَلَازِل • (zalāzil) m pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of زِلْزَال (zilzāl)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["زِلْزَال"],
-        "r": ["zalāzil"],
-        "ipa": ["/za.laː.zil/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زلازل",
-        "u": "زلازل",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "زَلَازِل • (zalāzil) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of زَلْزَلَة (zalzala)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["زَلْزَلَة"],
-        "r": ["zalāzil"],
-        "ipa": ["/za.laː.zil/"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "زلزلة",
-        "u": "زلزلة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "زَلْزَلَة • (zalzala) f (plural زَلَازِل (zalāzil))",
-        "s": [
-          ["etymon", ""]
-        ],
-        "synonyms": ["اِهْتِزَاز", "زِلْزَال", "هَزَّة أَرْضِيَّة"],
-        "g": ["verbal noun of زَلْزَلَ (zalzala) (form Iq)", "shaking", "earthquake, seism", "calamities"],
-        "tag": ["form-of", "in-plural", "noun-from-verb"],
-        "fo": ["زَلْزَلَ"],
-        "r": ["zalzala"],
-        "ipa": ["/zal.za.la/"],
-        "ds": [
-          ["mt", "żilżla", ""],
-          ["mt", "żinżla", ""],
-          ["fa-cls", "زِلْزِلَه", "zilzila"],
-          ["fa-cls", "زَلْزَلَه", "zalzala"],
-          ["lad", "zenzlá", ""],
-          ["lad", "zinzelá", ""],
-          ["trk-oat", "زَلْزَلَه", "zelzele"],
-          ["sw", "zilizala", ""]
-        ],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزل",
-        "u": "يزلزل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزل (form Iq)\n# يُزَلْزِلُ (yuzalzilu) /ju.zal.zi.lu/: third-person masculine singular non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلُ (yuzalzalu) /ju.zal.za.lu/: third-person masculine singular non-past passive indicative of زَلْزَلَ (zalzala)\n# يُزَلْزِلَ (yuzalzila) /ju.zal.zi.la/: third-person masculine singular non-past active subjunctive of زَلْزَلَ (zalzala)\n# يُزَلْزَلَ (yu",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilu", "zalzala", "yuzalzalu"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزل",
-        "u": "تزلزل",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb",
-        "e": "تَزَلْزَلَ • (tazalzala) IIq (non-past يَتَزَلْزَلُ (yatazalzalu), verbal noun تَزَلْزُل (tazalzul))",
-        "t": "From the reduplicated root ز ل ز ل (z l z l).",
-        "s": [
-          ["ar-root", "ز ل ز ل (z l z l)"]
-        ],
-        "g": ["to shake (intransitive)"],
-        "r": ["tazalzala"],
-        "el": [
-          ["ز ل ز ل", "Appendix:Arabic roots/ز ل ز ل"]
-        ],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزل",
-        "u": "تزلزل",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "تَزَلْزُل • (tazalzul) m",
-        "g": ["verbal noun of تَزَلْزَلَ (tazalzala) (form IIq)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["تَزَلْزَلَ"],
-        "r": ["tazalzul"],
-        "yol": "asıl madde"
-      },
-      {
-        "w": "تزلزل",
-        "u": "تزلزل",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تزلزل (form Iq)\n# تُزَلْزِلُ (tuzalzilu) /tu.zal.zi.lu/: inflection of زَلْزَلَ (zalzala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَلْزَلُ (tuzalzalu) /tu.zal.za.lu/: inflection of زَلْزَلَ (zalzala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilu", "zalzala", "tuzalzalu"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلت",
-        "u": "زلزلت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلت (form Iq)\n# زَلْزَلْتُ (zalzaltu) /zal.zal.tu/: first-person singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلْتَ (zalzalta) /zal.zal.ta/: second-person masculine singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلْتِ (zalzalti) /zal.zal.ti/: second-person feminine singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلَتْ (zalzalat) /zal.za.lat/: third-person feminine singular past active ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzaltu", "zalzala", "zalzalta"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلي",
-        "u": "تزلزلي",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزلزلي (form Iq)\n# تُزَلْزِلِي (tuzalzilī) /tu.zal.zi.liː/: second-person feminine singular non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلِي (tuzalzalī) /tu.zal.za.liː/: second-person feminine singular non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilī", "zalzala", "tuzalzalī"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلين",
-        "u": "تزلزلين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزلزلين (form Iq)\n# تُزَلْزِلِينَ (tuzalzilīna) /tu.zal.zi.liː.na/: second-person feminine singular non-past active indicative of زَلْزَلَ (zalzala)\n# تُزَلْزَلِينَ (tuzalzalīna) /tu.zal.za.liː.na/: second-person feminine singular non-past passive indicative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilīna", "zalzala", "tuzalzalīna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلي",
-        "u": "زلزلي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زَلْزِلِي • (zalzilī) (form Iq) /zal.zi.liː/\n# second-person feminine singular imperative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzilī", "zalzala"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "أزلزل",
-        "u": "أزلزل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "أزلزل (form Iq)\n# أُزَلْزِلُ (ʔuzalzilu) /ʔu.zal.zi.lu/: first-person singular non-past active indicative of زَلْزَلَ (zalzala)\n# أُزَلْزَلُ (ʔuzalzalu) /ʔu.zal.za.lu/: first-person singular non-past passive indicative of زَلْزَلَ (zalzala)\n# أُزَلْزِلَ (ʔuzalzila) /ʔu.zal.zi.la/: first-person singular non-past active subjunctive of زَلْزَلَ (zalzala)\n# أُزَلْزَلَ (ʔuzalzala) /ʔu.zal.za.la/: first",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["ʔuzalzilu", "zalzala", "ʔuzalzalu"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلنا",
-        "u": "زلزلنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلنا (form Iq)\n# زَلْزَلْنَا (zalzalnā) /zal.zal.naː/: first-person plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْنَا (zulzilnā) /zul.zil.naː/: first-person plural past passive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzalnā", "zalzala", "zulzilnā"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "نزلزل",
-        "u": "نزلزل",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نزلزل (form Iq)\n# نُزَلْزِلُ (nuzalzilu) /nu.zal.zi.lu/: first-person plural non-past active indicative of زَلْزَلَ (zalzala)\n# نُزَلْزَلُ (nuzalzalu) /nu.zal.za.lu/: first-person plural non-past passive indicative of زَلْزَلَ (zalzala)\n# نُزَلْزِلَ (nuzalzila) /nu.zal.zi.la/: first-person plural non-past active subjunctive of زَلْزَلَ (zalzala)\n# نُزَلْزَلَ (nuzalzala) /nu.zal.za.la/: first-perso",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["nuzalzilu", "zalzala", "nuzalzalu"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلتم",
-        "u": "زلزلتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلتم (form Iq)\n# زَلْزَلْتُمْ (zalzaltum) /zal.zal.tum/: second-person masculine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُمْ (zulziltum) /zul.zil.tum/: second-person masculine plural past passive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzaltum", "zalzala", "zulziltum"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلون",
-        "u": "تزلزلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزلزلون (form Iq)\n# تُزَلْزِلُونَ (tuzalzilūna) /tu.zal.zi.luː.na/: second-person masculine plural non-past active indicative of زَلْزَلَ (zalzala)\n# تُزَلْزَلُونَ (tuzalzalūna) /tu.zal.za.luː.na/: second-person masculine plural non-past passive indicative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilūna", "zalzala", "tuzalzalūna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلوا",
-        "u": "تزلزلوا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزلزلوا (form Iq)\n# تُزَلْزِلُوا (tuzalzilū) /tu.zal.zi.luː/: second-person masculine plural non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلُوا (tuzalzalū) /tu.zal.za.luː/: second-person masculine plural non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilū", "zalzala", "tuzalzalū"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلوا",
-        "u": "زلزلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلوا (form Iq)\n# زَلْزَلُوا (zalzalū) /zal.za.luː/: third-person masculine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلُوا (zulzilū) /zul.zi.luː/: third-person masculine plural past passive of زَلْزَلَ (zalzala)\n# زَلْزِلُوا (zalzilū) /zal.zi.luː/: second-person masculine plural imperative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzalū", "zalzala", "zulzilū"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزلون",
-        "u": "يزلزلون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزلون (form Iq)\n# يُزَلْزِلُونَ (yuzalzilūna) /ju.zal.zi.luː.na/: third-person masculine plural non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلُونَ (yuzalzalūna) /ju.zal.za.luː.na/: third-person masculine plural non-past passive indicative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilūna", "zalzala", "yuzalzalūna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزلوا",
-        "u": "يزلزلوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزلوا (form Iq)\n# يُزَلْزِلُوا (yuzalzilū) /ju.zal.zi.luː/: third-person masculine plural non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلُوا (yuzalzalū) /ju.zal.za.luː/: third-person masculine plural non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilū", "zalzala", "yuzalzalū"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلن",
-        "u": "تزلزلن",
-        "p": "verb",
-        "n": "1",
-        "h": "ar-verb form",
-        "e": "تزلزلن (form Iq)\n# تُزَلْزِلْنَ (tuzalzilna) /tu.zal.zil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلْنَ (tuzalzalna) /tu.zal.zal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilna", "zalzala", "tuzalzalna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلتن",
-        "u": "زلزلتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلتن (form Iq)\n# زَلْزَلْتُنَّ (zalzaltunna) /zal.zal.tun.na/: second-person feminine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُنَّ (zulziltunna) /zul.zil.tun.na/: second-person feminine plural past passive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzaltunna", "zalzala", "zulziltunna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلن",
-        "u": "زلزلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلن (form Iq)\n# زَلْزَلْنَ (zalzalna) /zal.zal.na/: third-person feminine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْنَ (zulzilna) /zul.zil.na/: third-person feminine plural past passive of زَلْزَلَ (zalzala)\n# زَلْزِلْنَ (zalzilna) /zal.zil.na/: second-person feminine plural imperative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzalna", "zalzala", "zulzilna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزلن",
-        "u": "يزلزلن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزلن (form Iq)\n# يُزَلْزِلْنَ (yuzalzilna) /ju.zal.zil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلْنَ (yuzalzalna) /ju.zal.zal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilna", "zalzala", "yuzalzalna"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلا",
-        "u": "تزلزلا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تزلزلا (form Iq)\n# تُزَلْزِلَا (tuzalzilā) /tu.zal.zi.laː/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَلْزَلَا (tuzalzalā) /tu.zal.za.laː/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilā", "zalzala", "tuzalzalā"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلتما",
-        "u": "زلزلتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلتما (form Iq)\n# زَلْزَلْتُمَا (zalzaltumā) /zal.zal.tu.maː/: second-person dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُمَا (zulziltumā) /zul.zil.tu.maː/: second-person dual past passive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzaltumā", "zalzala", "zulziltumā"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلتا",
-        "u": "زلزلتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلتا (form Iq)\n# زَلْزَلَتَا (zalzalatā) /zal.za.la.taː/: third-person feminine dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلَتَا (zulzilatā) /zul.zi.la.taː/: third-person feminine dual past passive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzalatā", "zalzala", "zulzilatā"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "زلزلا",
-        "u": "زلزلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "زلزلا (form Iq)\n# زَلْزَلَا (zalzalā) /zal.za.laː/: third-person masculine dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلَا (zulzilā) /zul.zi.laː/: third-person masculine dual past passive of زَلْزَلَ (zalzala)\n# زَلْزِلَا (zalzilā) /zal.zi.laː/: second-person dual imperative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["zalzalā", "zalzala", "zulzilā"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "تزلزلان",
-        "u": "تزلزلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تزلزلان (form Iq)\n# تُزَلْزِلَانِ (tuzalzilāni) /tu.zal.zi.laː.ni/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَلْزَلَانِ (tuzalzalāni) /tu.zal.za.laː.ni/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["tuzalzilāni", "zalzala", "tuzalzalāni"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزلان",
-        "u": "يزلزلان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزلان (form Iq)\n# يُزَلْزِلَانِ (yuzalzilāni) /ju.zal.zi.laː.ni/: third-person masculine dual non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلَانِ (yuzalzalāni) /ju.zal.za.laː.ni/: third-person masculine dual non-past passive indicative of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilāni", "zalzala", "yuzalzalāni"],
-        "k": "زلزل",
-        "yol": "kök"
-      },
-      {
-        "w": "يزلزلا",
-        "u": "يزلزلا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يزلزلا (form Iq)\n# يُزَلْزِلَا (yuzalzilā) /ju.zal.zi.laː/: third-person masculine dual non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلَا (yuzalzalā) /ju.zal.za.laː/: third-person masculine dual non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-iq", "no-gloss"],
-        "r": ["yuzalzilā", "zalzala", "yuzalzalā"],
-        "k": "زلزل",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "زلزلة": "sarsıntı",
-      "زلزالا": "depremi",
-      "زلزلت": "sarsıldı",
-      "زلزالها": "depremi"
-    },
-    "arabic_ontology": [
-      {
-        "id": "46841",
-        "arapca": [
-          "اِرْتَجَفَ",
-          "رَجْرَجَ",
-          "تَرَجَّحَ",
-          "تَرَجَّحَ ب",
-          "تَأَرْجَحَ",
-          "تَأَرْجَحَ على",
-          "اِرْتَجَّ",
-          "رَجَّ1",
-          "تَلْتَلَ",
-          "ذَبْذَبَ",
-          "زَلْزَلَ",
-          "طَرَقَ",
-          "طَرَقَ ب",
-          "طَرَقَ على",
-          "طَرَقَ في",
-          "اِضْطَرَبَ",
-          "اِضْطَرَبَ في",
-          "صَفَّقَ ب",
-          "اِصْطَفَقَ",
-          "خَضْخَضَ",
-          "خَضَّ",
-          "خَفَقَ1",
-          "اِخْتَلَجَ",
-          "اِخْتَلَجَ في",
-          "نَخَعَ",
-          "اِنْتَفَضَ",
-          "اِنْتَفَضَ من",
-          "اِرْتَعَشَ",
-          "رَفْرَفَ",
-          "رَفْرَفَ ب",
-          "رَاوَحَ",
-          "قَلْقَلَ",
-          "تَقَلْقَلَ",
-          "هَزَّ1",
-          "هَزَّ ب",
-          "اِهْتَزَّ",
-          "اِهْتَزَّ في",
-          "اِهْتَزَّ ل",
-          "هَيَّجَ",
-          "تَهَيَّجَ",
-          "رَجَّحَ",
-          "حَرَّكَ",
-          "تَذَبْذَبَ",
-          "تَرَاوَحَ",
-          "تَحَرَّكَ",
-          "مادَ",
-          "مادَ ب"
-        ],
-        "ingilizce": [],
-        "tanim": "حرَّكَهُ بِقُوَّةٍ واضطراب ذهاباً وإياباً",
-        "misal": "_ البيت عند حدوث الزلزال",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "48173",
-        "arapca": ["هَزَّةٌ", "زَلْزَلَةٌ", "اِرْتِجَافٌ", "رَجَّةٌ", "رَجْفَةٌ"],
-        "ingilizce": [],
-        "tanim": "هو حركة شديدة تؤدِّي إلى اهتزازا الشيء بشدّة نتيجة أمرٍ ما",
-        "misal": "أحسَّ بِ_ في جسدِهِ بسبب البرد",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "49239",
-        "arapca": ["زِلْزَالٌ", "رَجْفَةٌ"],
-        "ingilizce": ["earthquake"],
-        "tanim": "اهْتِزاز قَويّ يُصيبُ بَعض المَواقع من الأَرض بتَأْثير بَعض العَوامل الطَّبيعيَّة في جَوْفها",
-        "misal": "وقع _ في جزر الباهاماس",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "tercume": {
-      "cebel_mihveri": {
-        "mihveri": "Tam bir pürüzsüzlükle beraber müstevî (düz) olmasından dolayı mevziinden kaymaktır (inzilâk) (1): Nitekim düz taşlardan, kaygan mekândan, kaydıraktan ve zırhtan kayıldığı gibi. Sırf istivâ (düzlük) manasından olarak: «الزَلّاء: الرسحاء» (kalçaları düz olup sırtıyla bir hizada bulunan kadın) tabiri istimal olunur (kalçalarının sırtı ile müstevî olması hasebiyle). Sırf inzilâk (kayma) manasından olarak: «زل في الطين» (Çamurda kaydı) denilir. «أزلّه واستزلّه: أزلقه» (Onu kaydırdı) kavli de böyledir. Bunun kinaye ve mecazlarından biri de şu kavildir: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [Nahl: 94] (Sonra sağlamca sabit olmuş bir ayak kayıverir) yani Allah Teâlâ'yı marifetten sonra imandan kayıp ayrılmak demektir. Ve bu bir istiaredir. \n__________\n(1) (Sesce): Zây iktinâz ve izdihâmı; lâm istiklâli ifâde eder; ikisinden fasıl, bütün cismi (istiklâl) beraberinde alan sınırlı bir kaymayı (sanki dürtme ve sıkıştırmadan) ifâde eder. Ve (zvl)'de vâv iştimâli ifâde eder ve terkîb, hafif irâdî bir hareketi ifâde eder (ve irâdîlik iştimâlin mukâbilidir; çünkü irâde zâilde olandır) ve (zyl)'de yâ ittisâli ifâde eder ve terkîb, bir cihetten ittisâlle birlikte parçaların birbirinden uzaklaşma hareketini, zeyel gibi ifâde eder ve (zlf)'de fâ kuvvetle ib'âd yahut tardı ifâde eder ve terkîb, bir toplanma yerine inişte hareket kuvvetini, zelfe gibi: su sarnıcı ifâde eder. Ve (zlk)'da kâf derinlikte düğümlenmeyi ifâde eder ve terkîb, hareket edenin şeyin derinliğinde ve cevfinde kuvvetle asılı iken, mizlâk at gibi ifâde eder. Ve (zlm)'de mîm cirmin zâhirinin düzlüğünü ifâde etti ve terkîb, hareket edenin zâhiri düz, lütufla yumuşatılmış olduğunu, ok gibi ifâde eder.\n(2/910)\nistikâmetli hâl sâhibi için büyük bir şerre düşer. Çünkü ayak kaydığında insanı hayır hâlinden şer hâline nakleder [Kur 10/172]. Ve denir: «zalle fî re'yihî ve mantıkıhî: hata etti» (sakıta denildiği gibi) {Böylece şeytan onları ondan kaydırdı (feezellehümâ eş-şeytânu anhâ)} [Bakara: 36] [Taberî 1/524 ve Kur 1/311]'de zelle: hatâ'dan alınarak tefsîr edildi. Fakat bu, buradaki «anhâ»nın yerinde te'vîle muhtaç kılar. Dakîk olan, onu şeytanın ikisini kaydırıp Allah'ın kelimesinden uzaklaştırması, böylece O'nun {Ve bu ağaca yaklaşmayın} [Bakara: 35] kavli üzerinde sebât etmeye güç yetirememeleri diye tefsîr etmektir. Denir: «zalle an mekânihî: ondan çekildi». İmruülkays dedi: (Hafif delikanlı eğerinden kayar)\nVe dedi: (...... Lebd, hâlinden sırtından kayar)\n{Size beyyineler geldikten sonra kayarsanız (zelelteüm)} [Bakara: 209] (düştünüz yahut saptınız). {Şüphesiz şeytan onları, kazandıklarının bir kısmı sebebiyle kaydırdı (istezellehüm)} [Âl-i İmrân: 155]. (Günâhları, onu onları azdırması ve kaydırması için temkîn etti). Ve bunun mânevîsinden «zalle umruhû: geçti gitti, ve zellet minhü ilâ fülânin ni'amün: ondan ona nimetler ulaştı».\nVe aslî mânâdan «zelzele'ş-şey': onu şiddetle hareket ettirdi» (sanki kaydırmasını önceye sonra geriye mesela tekrarladı) {Arz şiddetli sarsılışıyla sarsıldığında (izâ zulzileti'l-ardu zilzâlehâ)} [Zilzâl: 1], {Şüphesiz kıyâmetin zelzelesi büyük bir şeydir} [Hac: 1], {Ve sarsıldılar ta ki Resûl ... diyene kadar} [Bakara: 214]: korkutuldular ve hareket ettirildiler.. zelzeleden: şiddetli hareket, şahıslarda ve hâllerde olur [Kur 3/34]. Ve eserde «lâ dakka ve lâ zelzele fi'l-keyl» yânî içindeki şey hareket ettirilip sallanmaz ki toplanıp âdetinde aldığından fazlasını alsın.\nVe kayma, hafiflik ve kolaylıkla geçiştir, bundan «el-mâü'z-zulâl ve'z-zelîl: boğazda hızlı inen ve geçen / tatlı / saf halis» (bunun hepsi onu boğazda kolay geçer kılar\n(2/911)\nve hızlı) ve bu bâba yakın onların «ez-zelezil — iki fetha ve bir kesreyle: evin eşyası ve metâ'ı / evin kumaşı» sözü (bu, nakil yahut değişimle hareketin çokluğundan; bugün menkûlât dediğimiz gibi)."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye Dönüş EtymArab ZLZL زلزل BP – • HDAL • © SG | 15Feb2021 √ZLZL “kök” ▪ ZLZL_1 ‘sarsmak, sallamak, ihtizâza getirmek, titretmek/titremek; zelzele’ ↗ zalzala ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘şiddetle sarsmak, sallamak, titremek, zelzele, ıztıraba düşürmek’ ▪ DRS tarafından Sâmî dillerde ZLZL kökü için zikredilen 7 manadan yalnızca 1'i Arapçada temsil edilmektedir. ▪ Bu kök, aşikâr bir surette iki sâmitli * ‑zl‑ unsurunun tekerrüründen (= mübalağa/teksîr sîgasından) müteşekkildir; mezkûr unsur üçüncü (ve dördüncü) sâmitlerle terkip halinde de zuhur eder, krş. mesela ↗ zāla ‘gitmek, ayrılmak, zâil olmak, yer değiştirmek’, ↗ zalla ‘kaymak, sürçmek, uzaklaşmak’, ↗ zalaǧa ‘kaymak, sürçmek, süzülüp gitmek’, ↗ zalaqa ‘kaymak, inzilâk etmek, sürçmek’. zalzala gibi, bu köklerin müşterek mefhumu »‘sürat, çeviklik’ olup ekseriya ‘kaymak’ (ve bununla müştereken ‘düz, cilalı, parlak’) manasıyla alâkadardır« – DRS 8 (1999)#-ZL-, krş. ayrıca ↗*-ZL-. – ▪ DRS 8 (1999)#ZLZL- 1 Süryanice ʔzdanzal ‘sarsılmak, titremek’, zunzālā ‘titreme, rezalet, ar’, Arapça zalzala ‘titretmek, sarsmak, çalkalamak’, zalzāl ‘titreme (azaların titremesi)’, zalzalaẗ , Mısır Arapçası zanzale , Endülüs Arapçası zérzel , Mağrib Arapçası zəlzla , zənzla , Harsûsîce zəlzāl , Doğu Cibâlîcesi zelzelt ‘zelzele, yer sarsıntısı’. ? Tigrinyaca zälzäl bälä ‘sallanmak, bir yana bir yana savrulmak (asılı şey)’. - 2 İbranice zalzallīm (cem') ‘asma filizleri’. - 3 Talmud Aramicesi zīlzūlā ‘istihfaf, tahkir’, zalzīlā ‘sefih, müsrif’, zalzəlānā ‘obur, açgözlü’. - 4 Tigrece zärzärä , Tigrinyaca zälzälä , Amharca Argobbaca zäläzzälä , Guragece zəläzälä ‘eti şeritler halinde kesmek’. - 5 Tigrece zəlzale ‘arı’. - 6 zälzal ‘şişmiş, kabarık, pek geniş’, ? Amharca ʔažäläžžälä ‘azîm olmak, sayılamayacak kadar çok olmak’. - 7 Guragece zəläzälä ‘küçük ticaret yapmak’. ▪ DRS 8 (1999)#ZLZL-1: »Bazı şekillerde l > n (bazen de r) dissimilasyonu görülür […]. – Asıl kök ZLZL (ve dissimilasyon ile ZNZL) olup ZL üzerine tekerrür suretiyle teşekkül etmiştir ve muhtelif dissimilasyon hadiseleri arz eder; krş. ayrıca ZLL maddesi.« ▪ ZLZL kökünün kendisinden tekerrür ettiği iki sâmitli asıl için bkz. yukarıda CONC bahsi. ▪ »zlzl kökünün semantik sahası ihtizâz gibi görünmektedir. Şayet [Yeni Mısırca ḏ3nḏ3nrt , ḏ3n3ḏ3n3 , ḏ3nḏ3r(t) vb. kelimelerin] ‘ince dal’ veya ‘filiz’ manası bu kökten müştak ise, bu takdirde semantik tekâmül muhtemelen ‘(esnek) bir değneği sallamak’ mefhumundan neşet etmiştir« – Hoch1994. – – Kaynaklar ; meta ; gramer ; ing ; mefhum ; tarih ; müşterek kökler ; münakaşa ; garp ; iştikak ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["zelzele, yer sarsıntısı"]
-        },
-        {
-          "g": ["زَلْزَلَ (zalzala) fiilinin masdarı (I. rubâî bâb)", "zelzele, yer sarsıntısı"]
-        },
-        {
-          "g": ["sarsmak, sallamak (müteaddî)", "ihtizâza getirmek, titretmek"]
-        },
-        {
-          "g": ["زِلْزَال (zilzāl) kelimesinin cem'i"]
-        },
-        {
-          "g": ["زَلْزَلَة (zalzala) kelimesinin cem'i"]
-        },
-        {
-          "g": [
-            "زَلْزَلَ (zalzala) fiilinin masdarı (I. rubâî bâb)",
-            "sarsma, sallama",
-            "zelzele, yer sarsıntısı",
-            "belâlar, musibetler"
-          ]
-        },
-        {},
-        {
-          "g": ["sarsılmak, sallanmak (lâzım)"]
-        },
-        {
-          "g": ["تَزَلْزَلَ (tazalzala) fiilinin masdarı (II. rubâî bâb)"]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ],
-      "arabic_ontology": [
-        {
-          "tanim": "Bir şeyi ileri geri, kuvvet ve ıztırap ile şiddetle hareket ettirmek, sarsmak.",
-          "misal": "Zelzele vukuunda ev _ (sarsıldı)."
-        },
-        {
-          "tanim": "Bir emrin neticesinde şeyin şiddetle ihtizâz etmesine sebebiyet veren şiddetli bir harekettir.",
-          "misal": "Soğuk sebebiyle cesedinde bir _ (titreme) hissetti."
-        },
-        {
-          "tanim": "Arzın cevfindeki bazı tabiî âmillerin tesiriyle yeryüzünün bazı mevzilerine isabet eden kuvvetli bir ihtizâzdır.",
-          "misal": "Bahama Adaları'nda bir _ (zelzele) vuku buldu."
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 6,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زل",
+  "ses": {
     "harf": "ز",
+    "fasil": "زل",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Zelzele: sarsıntı, deprem",
+  "esas_manalar": "sarsmak, şiddetle titretmek{deprem, sarsıntı}",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "zilzal",
+        "metin": "اَلزَّلْزَلَةُ [ez-zelzelet] (قَلْقَلَةٌ [kalkalet] vezninde) ve اَلزِّلْزَالُ [ez-zilzâl] (zâyın harekât-ı selâsıyla) Bir nesneyi ırgalamak manâsınadır; yukâlu: زَلْزَلَ الشَّيْءَ زَلْزَلَةً وَزِلْزَالًا مُثَلَّثَةً إِذَا حَرَّكَهُ Şârihin beyânına göre bunlardan ism زَلْزَالٌ [zelzâl]dir zâyın fethiyle.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["زِلْزال"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "zilzal",
+        "metin": "اَلزِّلْزَالُ [ez-zilzâl] (zânın kesri ve lâmın sükûnuyla) Kezâlik yeri depretmek.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["زِلْزال"]
+      }
+    ],
+    "Kamus-u Türki": [
+      {
+        "madde": "zilzal",
+        "sayfa": 686,
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["زِلْزال"]
+      }
+    ],
+    "Lugat-ı Remzi": [
+      {
+        "madde": "Zilzâl",
+        "sayfa": 624,
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["زِلْزال"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "ZELZAL – ZİLZAL",
+        "metin": "[ l ince] ( ﺯﻟﺰﺍﻝ ) i. (Ar. zelzele “şiddetle sallamak”tan zelzāl – zilzāl ) Deprem, zelzele: Dem-i vegāda çü pây-i semendi deprense / Sipihre lerze düşer arza erişir zelzâl (Bâkî). Nice bâr eyleseler zıllini hâke tahmil / Üstühânına düşer gâv-ı zemînin zelzâl (Nâilî).",
+        "arapca": ["زلزال"],
+        "eslesme": "arapça yazılış kökle uyuştu",
+        "kelime": ["زِلْزال"]
+      }
+    ]
+  },
+  "cebel": {
+    "fasil": "الزاي واللام",
+    "baslik": "زلل - زلزل",
+    "mihveri": "انزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة",
+    "sesler": "الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.",
+    "tam_metin": "{إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]\n\"الزِلَّة - بالكسر: الحجارة المُلْس، والمَزَلّة - بفتح الميم والزاي: المكان الدَحْض. وزُحْلُوفة زُلّ - بالضم: زَلَق. زَلّ السهمُ عن الدرع، والإنسانُ عن الصخرة: زَلِق. وزلّت قدمه. (المضارع بالفتح والكسر).\n° المعنى المحوري\nانزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة\n__________\n(1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.\n(2/910)\nللمستقيم الحال يقع في شر عظيم. لأن القدم إذا زلّت نقلت الإنسان من حال خير إلى حال شر [قر 10/ 172]. ويقال زلّ في رأيه ومنطقه أخطأ \" (كما يقال سَقْطَةٌ) {فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا} [البقرة: 36] فسرت في [طب 1/ 524 وقر 1/ 311] أخذا من الزَلَّة: الخطيئة. لكن هذا يحوج إلى التأويل في وضع \"عنها \"هنا. فالدقيق تفسيرها بأنه أزلقهما وأبعدهما عن كلمة الله فلم يقدرا على الثبات على قوله: {وَلَا تَقْرَبَا هَذِهِ الشَّجَرَةَ} [البقرة: 35] يقال زَلَّ عن مكانه: تنحَّى عنه. قال امرؤ القيس: (يزِلّ الغلامُ الخِفُّ عن صَهَواته)\nوقال (....... يزِل اللِّبْدُ عن حاله متنه)\n{فَإِنْ زَلَلْتُمْ مِنْ بَعْدِ مَا جَاءَتْكُمُ الْبَيِّنَاتُ} [البقرة: 209] (سقطتم أو ضَلَلتم). {إِنَّمَا اسْتَزَلَّهُمُ الشَّيْطَانُ بِبَعْضِ مَا كَسَبُوا} [آل عمران: 155]. (أمكنته ذنوبهم من استغوائهم وإزلاقهم). ومن معنوى هذا \"زلّ عُمرُه: مضى وذهب، وزَلَّتْ منه إلى فلان نِعَم: وصلت منه إليه \".\nومن المعنى الأصلي \"زلزل الشيء: حرّكه شديدًا (كأنما كرر إزلاقه للأمام فللخلف مثلًا) {إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]، {إِنَّ زَلْزَلَةَ السَّاعَةِ شَيْءٌ عَظِيمٌ} [الحج: 1]، {وَزُلْزِلُوا حَتَّى يَقُولَ الرَّسُولُ ....} [البقرة: 214]: خُوِّفُو وحُرِّكوا .. من الزلزلة: شدة التحريك تكون في الأشخاص والأحوال [قر 3/ 34]. وفي الأثر \"لا دَقَّ ولا زَلْزَلة في الكيل \"أي لا يُحَرّك ما فيه ويُهَزّ لينضم ويسع أكثر مما يسع عادة \".\nوالانزلاق مرور بخفة وسلاسة، ومن هذا \"الماء الزُلال والزليل: السريع النزول والمَرِّ في الحلق/ العذبُ/ الصافي الخالص \" (كل هذا يجعله سَلِس المرور في\n(2/911)\nالحلق سريعَه) وقريب من هذا الباب قولهم \"الزَلَزِل - بفتحتين فكسرة: أثاث البيت ومتاعه/ قماش البيت \" (فهذا من كثرة الحركة نقلًا أو تبديلًا - كما نقول اليوم منقولات).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (زل): الانزلاق أي التحرك السهل عن مستوٍ يتيح هذا - كما يُنْزَلَق عن الزِلّة - فى (زلل)، وكما في زوال الشمس عن كبد السماء - في (زول)، وفي بعد الشيء عما يتصل به بحيث يتميزان، وزَيْل الضأن عن المعزى - في (زيل)، وكما في انحدار الماء إلى المصنعة - في (زلف)، وكما فى تحرك الجنين من عمق مقره في البطن في حالة إسقاطه - في (زلق)، وكما في استواء ظاهر الزلم كهيئة الإصبع الدقيقة مع ملاسته ومع النظر إلى سرعة انطلاقه بذلك إذا رمى به - في (زلم).",
+    "mihveri_tr": "Tam bir pürüzsüzlükle beraber müstevî (düz) olmasından dolayı mevziinden kaymaktır (inzilâk) (1): Nitekim düz taşlardan, kaygan mekândan, kaydıraktan ve zırhtan kayıldığı gibi. Sırf istivâ (düzlük) manasından olarak: «الزَلّاء: الرسحاء» (kalçaları düz olup sırtıyla bir hizada bulunan kadın) tabiri istimal olunur (kalçalarının sırtı ile müstevî olması hasebiyle). Sırf inzilâk (kayma) manasından olarak: «زل في الطين» (Çamurda kaydı) denilir. «أزلّه واستزلّه: أزلقه» (Onu kaydırdı) kavli de böyledir. Bunun kinaye ve mecazlarından biri de şu kavildir: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [Nahl: 94] (Sonra sağlamca sabit olmuş bir ayak kayıverir) yani Allah Teâlâ'yı marifetten sonra imandan kayıp ayrılmak demektir. Ve bu bir istiaredir. \n__________\n(1) (Sesce): Zây iktinâz ve izdihâmı; lâm istiklâli ifâde eder; ikisinden fasıl, bütün cismi (istiklâl) beraberinde alan sınırlı bir kaymayı (sanki dürtme ve sıkıştırmadan) ifâde eder. Ve (zvl)'de vâv iştimâli ifâde eder ve terkîb, hafif irâdî bir hareketi ifâde eder (ve irâdîlik iştimâlin mukâbilidir; çünkü irâde zâilde olandır) ve (zyl)'de yâ ittisâli ifâde eder ve terkîb, bir cihetten ittisâlle birlikte parçaların birbirinden uzaklaşma hareketini, zeyel gibi ifâde eder ve (zlf)'de fâ kuvvetle ib'âd yahut tardı ifâde eder ve terkîb, bir toplanma yerine inişte hareket kuvvetini, zelfe gibi: su sarnıcı ifâde eder. Ve (zlk)'da kâf derinlikte düğümlenmeyi ifâde eder ve terkîb, hareket edenin şeyin derinliğinde ve cevfinde kuvvetle asılı iken, mizlâk at gibi ifâde eder. Ve (zlm)'de mîm cirmin zâhirinin düzlüğünü ifâde etti ve terkîb, hareket edenin zâhiri düz, lütufla yumuşatılmış olduğunu, ok gibi ifâde eder.\n(2/910)\nistikâmetli hâl sâhibi için büyük bir şerre düşer. Çünkü ayak kaydığında insanı hayır hâlinden şer hâline nakleder [Kur 10/172]. Ve denir: «zalle fî re'yihî ve mantıkıhî: hata etti» (sakıta denildiği gibi) {Böylece şeytan onları ondan kaydırdı (feezellehümâ eş-şeytânu anhâ)} [Bakara: 36] [Taberî 1/524 ve Kur 1/311]'de zelle: hatâ'dan alınarak tefsîr edildi. Fakat bu, buradaki «anhâ»nın yerinde te'vîle muhtaç kılar. Dakîk olan, onu şeytanın ikisini kaydırıp Allah'ın kelimesinden uzaklaştırması, böylece O'nun {Ve bu ağaca yaklaşmayın} [Bakara: 35] kavli üzerinde sebât etmeye güç yetirememeleri diye tefsîr etmektir. Denir: «zalle an mekânihî: ondan çekildi». İmruülkays dedi: (Hafif delikanlı eğerinden kayar)\nVe dedi: (...... Lebd, hâlinden sırtından kayar)\n{Size beyyineler geldikten sonra kayarsanız (zelelteüm)} [Bakara: 209] (düştünüz yahut saptınız). {Şüphesiz şeytan onları, kazandıklarının bir kısmı sebebiyle kaydırdı (istezellehüm)} [Âl-i İmrân: 155]. (Günâhları, onu onları azdırması ve kaydırması için temkîn etti). Ve bunun mânevîsinden «zalle umruhû: geçti gitti, ve zellet minhü ilâ fülânin ni'amün: ondan ona nimetler ulaştı».\nVe aslî mânâdan «zelzele'ş-şey': onu şiddetle hareket ettirdi» (sanki kaydırmasını önceye sonra geriye mesela tekrarladı) {Arz şiddetli sarsılışıyla sarsıldığında (izâ zulzileti'l-ardu zilzâlehâ)} [Zilzâl: 1], {Şüphesiz kıyâmetin zelzelesi büyük bir şeydir} [Hac: 1], {Ve sarsıldılar ta ki Resûl ... diyene kadar} [Bakara: 214]: korkutuldular ve hareket ettirildiler.. zelzeleden: şiddetli hareket, şahıslarda ve hâllerde olur [Kur 3/34]. Ve eserde «lâ dakka ve lâ zelzele fi'l-keyl» yânî içindeki şey hareket ettirilip sallanmaz ki toplanıp âdetinde aldığından fazlasını alsın.\nVe kayma, hafiflik ve kolaylıkla geçiştir, bundan «el-mâü'z-zulâl ve'z-zelîl: boğazda hızlı inen ve geçen / tatlı / saf halis» (bunun hepsi onu boğazda kolay geçer kılar\n(2/911)\nve hızlı) ve bu bâba yakın onların «ez-zelezil — iki fetha ve bir kesreyle: evin eşyası ve metâ'ı / evin kumaşı» sözü (bu, nakil yahut değişimle hareketin çokluğundan; bugün menkûlât dediğimiz gibi)."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "46841",
+      "arapca": [
+        "اِرْتَجَفَ",
+        "رَجْرَجَ",
+        "تَرَجَّحَ",
+        "تَرَجَّحَ ب",
+        "تَأَرْجَحَ",
+        "تَأَرْجَحَ على",
+        "اِرْتَجَّ",
+        "رَجَّ1",
+        "تَلْتَلَ",
+        "ذَبْذَبَ",
+        "زَلْزَلَ",
+        "طَرَقَ",
+        "طَرَقَ ب",
+        "طَرَقَ على",
+        "طَرَقَ في",
+        "اِضْطَرَبَ",
+        "اِضْطَرَبَ في",
+        "صَفَّقَ ب",
+        "اِصْطَفَقَ",
+        "خَضْخَضَ",
+        "خَضَّ",
+        "خَفَقَ1",
+        "اِخْتَلَجَ",
+        "اِخْتَلَجَ في",
+        "نَخَعَ",
+        "اِنْتَفَضَ",
+        "اِنْتَفَضَ من",
+        "اِرْتَعَشَ",
+        "رَفْرَفَ",
+        "رَفْرَفَ ب",
+        "رَاوَحَ",
+        "قَلْقَلَ",
+        "تَقَلْقَلَ",
+        "هَزَّ1",
+        "هَزَّ ب",
+        "اِهْتَزَّ",
+        "اِهْتَزَّ في",
+        "اِهْتَزَّ ل",
+        "هَيَّجَ",
+        "تَهَيَّجَ",
+        "رَجَّحَ",
+        "حَرَّكَ",
+        "تَذَبْذَبَ",
+        "تَرَاوَحَ",
+        "تَحَرَّكَ",
+        "مادَ",
+        "مادَ ب"
+      ],
+      "ingilizce": [],
+      "tanim": "حرَّكَهُ بِقُوَّةٍ واضطراب ذهاباً وإياباً",
+      "misal": "_ البيت عند حدوث الزلزال",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir şeyi ileri geri, kuvvet ve ıztırap ile şiddetle hareket ettirmek, sarsmak.",
+      "misal_tr": "Zelzele vukuunda ev _ (sarsıldı)."
+    },
+    {
+      "id": "48173",
+      "arapca": ["هَزَّةٌ", "زَلْزَلَةٌ", "اِرْتِجَافٌ", "رَجَّةٌ", "رَجْفَةٌ"],
+      "ingilizce": [],
+      "tanim": "هو حركة شديدة تؤدِّي إلى اهتزازا الشيء بشدّة نتيجة أمرٍ ما",
+      "misal": "أحسَّ بِ_ في جسدِهِ بسبب البرد",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir emrin neticesinde şeyin şiddetle ihtizâz etmesine sebebiyet veren şiddetli bir harekettir.",
+      "misal_tr": "Soğuk sebebiyle cesedinde bir _ (titreme) hissetti."
+    },
+    {
+      "id": "49239",
+      "arapca": ["زِلْزَالٌ", "رَجْفَةٌ"],
+      "ingilizce": ["earthquake"],
+      "tanim": "اهْتِزاز قَويّ يُصيبُ بَعض المَواقع من الأَرض بتَأْثير بَعض العَوامل الطَّبيعيَّة في جَوْفها",
+      "misal": "وقع _ في جزر الباهاماس",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Arzın cevfindeki bazı tabiî âmillerin tesiriyle yeryüzünün bazı mevzilerine isabet eden kuvvetli bir ihtizâzdır.",
+      "misal_tr": "Bahama Adaları'nda bir _ (zelzele) vuku buldu."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "زلزال",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "زَلْزَال • (zalzāl) m (plural زَلَازِل (zalāzil))",
+      "etim_sablon": [
+        ["ar-rootbox", ""]
+      ],
+      "anlam": ["earthquake, seism"],
+      "okunus": ["zalzāl"],
+      "ipa": ["/zal.zaːl/"],
+      "torunlar": [
+        ["fa", "زلزال", "zelzâl, zalzâl"]
+      ],
+      "anlam_tr": ["zelzele, yer sarsıntısı"]
+    },
+    {
+      "madde": "زلزال",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "زِلْزَال • (zilzāl) m (plural زَلَازِل (zalāzil))",
+      "anlam": ["verbal noun of زَلْزَلَ (zalzala) (form Iq)", "earthquake"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["زَلْزَلَ"],
+      "okunus": ["zilzāl"],
+      "ipa": ["/zil.zaːl/"],
+      "rl": ["زَلْزَلَة"],
+      "bag": "asıl madde",
+      "anlam_tr": ["زَلْزَلَ (zalzala) fiilinin masdarı (I. rubâî bâb)", "zelzele, yer sarsıntısı"]
+    },
+    {
+      "madde": "زلزل",
+      "tur": "verb",
+      "baslik": "زَلْزَلَ • (zalzala) Iq (non-past يُزَلْزِلُ (yuzalzilu), verbal noun زَلْزَلَة (zalzala) or زِلْزَال (zilzāl))",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["glossary", "reduplicated"],
+        ["ar-reduplicated", "reduplicated"],
+        ["ar-root", "ز ل ز ل (z l z l)"]
+      ],
+      "anlam": ["to shake (transitive)", "to convulse, to tremble"],
+      "okunus": ["zalzala"],
+      "ipa": ["/zal.za.la/"],
+      "etimoloji": 1,
+      "anlam_tr": ["sarsmak, sallamak (müteaddî)", "ihtizâza getirmek, titretmek"]
+    },
+    {
+      "madde": "زلازل",
+      "tur": "noun",
+      "baslik": "زَلَازِل • (zalāzil) m pl",
+      "anlam": ["plural of زِلْزَال (zilzāl)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["زِلْزَال"],
+      "okunus": ["zalāzil"],
+      "ipa": ["/za.laː.zil/"],
+      "bag": "asıl madde",
+      "etimoloji": 2,
+      "anlam_tr": ["زِلْزَال (zilzāl) kelimesinin cem'i"]
+    },
+    {
+      "madde": "زلازل",
+      "tur": "noun",
+      "baslik": "زَلَازِل • (zalāzil) f pl",
+      "anlam": ["plural of زَلْزَلَة (zalzala)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["زَلْزَلَة"],
+      "okunus": ["zalāzil"],
+      "ipa": ["/za.laː.zil/"],
+      "bag": "asıl madde",
+      "etimoloji": 2,
+      "anlam_tr": ["زَلْزَلَة (zalzala) kelimesinin cem'i"]
+    },
+    {
+      "madde": "زلزلة",
+      "tur": "noun",
+      "baslik": "زَلْزَلَة • (zalzala) f (plural زَلَازِل (zalāzil))",
+      "etim_sablon": [
+        ["etymon", ""]
+      ],
+      "esanlamli": ["اِهْتِزَاز", "زِلْزَال", "هَزَّة أَرْضِيَّة"],
+      "anlam": ["verbal noun of زَلْزَلَ (zalzala) (form Iq)", "shaking", "earthquake, seism", "calamities"],
+      "etiket": ["form-of", "in-plural", "noun-from-verb"],
+      "form_of": ["زَلْزَلَ"],
+      "okunus": ["zalzala"],
+      "ipa": ["/zal.za.la/"],
+      "torunlar": [
+        ["mt", "żilżla", ""],
+        ["mt", "żinżla", ""],
+        ["fa-cls", "زِلْزِلَه", "zilzila"],
+        ["fa-cls", "زَلْزَلَه", "zalzala"],
+        ["lad", "zenzlá", ""],
+        ["lad", "zinzelá", ""],
+        ["trk-oat", "زَلْزَلَه", "zelzele"],
+        ["sw", "zilizala", ""]
+      ],
+      "anlam_tr": [
+        "زَلْزَلَ (zalzala) fiilinin masdarı (I. rubâî bâb)",
+        "sarsma, sallama",
+        "zelzele, yer sarsıntısı",
+        "belâlar, musibetler"
+      ]
+    },
+    {
+      "madde": "يزلزل",
+      "tur": "verb",
+      "baslik": "يزلزل (form Iq)\n# يُزَلْزِلُ (yuzalzilu) /ju.zal.zi.lu/: third-person masculine singular non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلُ (yuzalzalu) /ju.zal.za.lu/: third-person masculine singular non-past passive indicative of زَلْزَلَ (zalzala)\n# يُزَلْزِلَ (yuzalzila) /ju.zal.zi.la/: third-person masculine singular non-past active subjunctive of زَلْزَلَ (zalzala)\n# يُزَلْزَلَ (yu",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilu", "zalzala", "yuzalzalu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزل",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تَزَلْزَلَ • (tazalzala) IIq (non-past يَتَزَلْزَلُ (yatazalzalu), verbal noun تَزَلْزُل (tazalzul))",
+      "etim_sablon": [
+        ["ar-root", "ز ل ز ل (z l z l)"]
+      ],
+      "anlam": ["to shake (intransitive)"],
+      "okunus": ["tazalzala"],
+      "etimoloji": 1,
+      "anlam_tr": ["sarsılmak, sallanmak (lâzım)"]
+    },
+    {
+      "madde": "تزلزل",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "تَزَلْزُل • (tazalzul) m",
+      "anlam": ["verbal noun of تَزَلْزَلَ (tazalzala) (form IIq)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["تَزَلْزَلَ"],
+      "okunus": ["tazalzul"],
+      "bag": "asıl madde",
+      "anlam_tr": ["تَزَلْزَلَ (tazalzala) fiilinin masdarı (II. rubâî bâb)"]
+    },
+    {
+      "madde": "تزلزل",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تزلزل (form Iq)\n# تُزَلْزِلُ (tuzalzilu) /tu.zal.zi.lu/: inflection of زَلْزَلَ (zalzala):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُزَلْزَلُ (tuzalzalu) /tu.zal.za.lu/: inflection of زَلْزَلَ (zalzala):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past pas",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilu", "zalzala", "tuzalzalu"]
+    },
+    {
+      "madde": "زلزلت",
+      "tur": "verb",
+      "baslik": "زلزلت (form Iq)\n# زَلْزَلْتُ (zalzaltu) /zal.zal.tu/: first-person singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلْتَ (zalzalta) /zal.zal.ta/: second-person masculine singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلْتِ (zalzalti) /zal.zal.ti/: second-person feminine singular past active of زَلْزَلَ (zalzala)\n# زَلْزَلَتْ (zalzalat) /zal.za.lat/: third-person feminine singular past active ",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzaltu", "zalzala", "zalzalta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلي",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزلزلي (form Iq)\n# تُزَلْزِلِي (tuzalzilī) /tu.zal.zi.liː/: second-person feminine singular non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلِي (tuzalzalī) /tu.zal.za.liː/: second-person feminine singular non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilī", "zalzala", "tuzalzalī"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلين",
+      "tur": "verb",
+      "baslik": "تزلزلين (form Iq)\n# تُزَلْزِلِينَ (tuzalzilīna) /tu.zal.zi.liː.na/: second-person feminine singular non-past active indicative of زَلْزَلَ (zalzala)\n# تُزَلْزَلِينَ (tuzalzalīna) /tu.zal.za.liː.na/: second-person feminine singular non-past passive indicative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilīna", "zalzala", "tuzalzalīna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلي",
+      "tur": "verb",
+      "baslik": "زَلْزِلِي • (zalzilī) (form Iq) /zal.zi.liː/\n# second-person feminine singular imperative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzilī", "zalzala"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "أزلزل",
+      "tur": "verb",
+      "baslik": "أزلزل (form Iq)\n# أُزَلْزِلُ (ʔuzalzilu) /ʔu.zal.zi.lu/: first-person singular non-past active indicative of زَلْزَلَ (zalzala)\n# أُزَلْزَلُ (ʔuzalzalu) /ʔu.zal.za.lu/: first-person singular non-past passive indicative of زَلْزَلَ (zalzala)\n# أُزَلْزِلَ (ʔuzalzila) /ʔu.zal.zi.la/: first-person singular non-past active subjunctive of زَلْزَلَ (zalzala)\n# أُزَلْزَلَ (ʔuzalzala) /ʔu.zal.za.la/: first",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["ʔuzalzilu", "zalzala", "ʔuzalzalu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلنا",
+      "tur": "verb",
+      "baslik": "زلزلنا (form Iq)\n# زَلْزَلْنَا (zalzalnā) /zal.zal.naː/: first-person plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْنَا (zulzilnā) /zul.zil.naː/: first-person plural past passive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzalnā", "zalzala", "zulzilnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نزلزل",
+      "tur": "verb",
+      "baslik": "نزلزل (form Iq)\n# نُزَلْزِلُ (nuzalzilu) /nu.zal.zi.lu/: first-person plural non-past active indicative of زَلْزَلَ (zalzala)\n# نُزَلْزَلُ (nuzalzalu) /nu.zal.za.lu/: first-person plural non-past passive indicative of زَلْزَلَ (zalzala)\n# نُزَلْزِلَ (nuzalzila) /nu.zal.zi.la/: first-person plural non-past active subjunctive of زَلْزَلَ (zalzala)\n# نُزَلْزَلَ (nuzalzala) /nu.zal.za.la/: first-perso",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["nuzalzilu", "zalzala", "nuzalzalu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلتم",
+      "tur": "verb",
+      "baslik": "زلزلتم (form Iq)\n# زَلْزَلْتُمْ (zalzaltum) /zal.zal.tum/: second-person masculine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُمْ (zulziltum) /zul.zil.tum/: second-person masculine plural past passive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzaltum", "zalzala", "zulziltum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلون",
+      "tur": "verb",
+      "baslik": "تزلزلون (form Iq)\n# تُزَلْزِلُونَ (tuzalzilūna) /tu.zal.zi.luː.na/: second-person masculine plural non-past active indicative of زَلْزَلَ (zalzala)\n# تُزَلْزَلُونَ (tuzalzalūna) /tu.zal.za.luː.na/: second-person masculine plural non-past passive indicative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilūna", "zalzala", "tuzalzalūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلوا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزلزلوا (form Iq)\n# تُزَلْزِلُوا (tuzalzilū) /tu.zal.zi.luː/: second-person masculine plural non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلُوا (tuzalzalū) /tu.zal.za.luː/: second-person masculine plural non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilū", "zalzala", "tuzalzalū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلوا",
+      "tur": "verb",
+      "baslik": "زلزلوا (form Iq)\n# زَلْزَلُوا (zalzalū) /zal.za.luː/: third-person masculine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلُوا (zulzilū) /zul.zi.luː/: third-person masculine plural past passive of زَلْزَلَ (zalzala)\n# زَلْزِلُوا (zalzilū) /zal.zi.luː/: second-person masculine plural imperative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzalū", "zalzala", "zulzilū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يزلزلون",
+      "tur": "verb",
+      "baslik": "يزلزلون (form Iq)\n# يُزَلْزِلُونَ (yuzalzilūna) /ju.zal.zi.luː.na/: third-person masculine plural non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلُونَ (yuzalzalūna) /ju.zal.za.luː.na/: third-person masculine plural non-past passive indicative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilūna", "zalzala", "yuzalzalūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يزلزلوا",
+      "tur": "verb",
+      "baslik": "يزلزلوا (form Iq)\n# يُزَلْزِلُوا (yuzalzilū) /ju.zal.zi.luː/: third-person masculine plural non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلُوا (yuzalzalū) /ju.zal.za.luː/: third-person masculine plural non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilū", "zalzala", "yuzalzalū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلن",
+      "tur": "verb",
+      "etim_no": "1",
+      "baslik": "تزلزلن (form Iq)\n# تُزَلْزِلْنَ (tuzalzilna) /tu.zal.zil.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of زَلْزَلَ (zalzala)\n# تُزَلْزَلْنَ (tuzalzalna) /tu.zal.zal.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilna", "zalzala", "tuzalzalna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلتن",
+      "tur": "verb",
+      "baslik": "زلزلتن (form Iq)\n# زَلْزَلْتُنَّ (zalzaltunna) /zal.zal.tun.na/: second-person feminine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُنَّ (zulziltunna) /zul.zil.tun.na/: second-person feminine plural past passive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzaltunna", "zalzala", "zulziltunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلن",
+      "tur": "verb",
+      "baslik": "زلزلن (form Iq)\n# زَلْزَلْنَ (zalzalna) /zal.zal.na/: third-person feminine plural past active of زَلْزَلَ (zalzala)\n# زُلْزِلْنَ (zulzilna) /zul.zil.na/: third-person feminine plural past passive of زَلْزَلَ (zalzala)\n# زَلْزِلْنَ (zalzilna) /zal.zil.na/: second-person feminine plural imperative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzalna", "zalzala", "zulzilna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يزلزلن",
+      "tur": "verb",
+      "baslik": "يزلزلن (form Iq)\n# يُزَلْزِلْنَ (yuzalzilna) /ju.zal.zil.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلْنَ (yuzalzalna) /ju.zal.zal.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilna", "zalzala", "yuzalzalna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تزلزلا (form Iq)\n# تُزَلْزِلَا (tuzalzilā) /tu.zal.zi.laː/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُزَلْزَلَا (tuzalzalā) /tu.zal.za.laː/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilā", "zalzala", "tuzalzalā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلتما",
+      "tur": "verb",
+      "baslik": "زلزلتما (form Iq)\n# زَلْزَلْتُمَا (zalzaltumā) /zal.zal.tu.maː/: second-person dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلْتُمَا (zulziltumā) /zul.zil.tu.maː/: second-person dual past passive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzaltumā", "zalzala", "zulziltumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلتا",
+      "tur": "verb",
+      "baslik": "زلزلتا (form Iq)\n# زَلْزَلَتَا (zalzalatā) /zal.za.la.taː/: third-person feminine dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلَتَا (zulzilatā) /zul.zi.la.taː/: third-person feminine dual past passive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzalatā", "zalzala", "zulzilatā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "زلزلا",
+      "tur": "verb",
+      "baslik": "زلزلا (form Iq)\n# زَلْزَلَا (zalzalā) /zal.za.laː/: third-person masculine dual past active of زَلْزَلَ (zalzala)\n# زُلْزِلَا (zulzilā) /zul.zi.laː/: third-person masculine dual past passive of زَلْزَلَ (zalzala)\n# زَلْزِلَا (zalzilā) /zal.zi.laː/: second-person dual imperative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["zalzalā", "zalzala", "zulzilā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تزلزلان",
+      "tur": "verb",
+      "baslik": "تزلزلان (form Iq)\n# تُزَلْزِلَانِ (tuzalzilāni) /tu.zal.zi.laː.ni/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُزَلْزَلَانِ (tuzalzalāni) /tu.zal.za.laː.ni/: inflection of زَلْزَلَ (zalzala):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["tuzalzilāni", "zalzala", "tuzalzalāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يزلزلان",
+      "tur": "verb",
+      "baslik": "يزلزلان (form Iq)\n# يُزَلْزِلَانِ (yuzalzilāni) /ju.zal.zi.laː.ni/: third-person masculine dual non-past active indicative of زَلْزَلَ (zalzala)\n# يُزَلْزَلَانِ (yuzalzalāni) /ju.zal.za.laː.ni/: third-person masculine dual non-past passive indicative of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilāni", "zalzala", "yuzalzalāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يزلزلا",
+      "tur": "verb",
+      "baslik": "يزلزلا (form Iq)\n# يُزَلْزِلَا (yuzalzilā) /ju.zal.zi.laː/: third-person masculine dual non-past active subjunctive/jussive of زَلْزَلَ (zalzala)\n# يُزَلْزَلَا (yuzalzalā) /ju.zal.za.laː/: third-person masculine dual non-past passive subjunctive/jussive of زَلْزَلَ (zalzala)",
+      "etiket": ["form-iq", "no-gloss"],
+      "okunus": ["yuzalzilā", "zalzala", "yuzalzalā"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "From the reduplicated root ز ل ز ل (z l z l).",
+      "kognatlar": [
+        ["ز ل ز ل", "Appendix:Arabic roots/ز ل ز ل"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ZLZL",
+    "kok_maddesi": "Back to library EtymArab ZLZL زلزل BP – • HDAL • © SG | 15Feb2021 √ZLZL “root” ▪ ZLZL_1 ‘to shake, rock, convulse, (cause to) tremble; earthquake’ ↗ zalzala ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to shake violently, to rock, to tremble, earthquake, to agitate’ ▪ Out of the 7 values listed by DRS for the root ZLZL in Sem, only 1 is represented in Ar. ▪ The root is obviously a reduplication of (= ints. formation from) the bi-consonantal element * ‑zl‑ which also appears in combination with third (and forth) consonants, cf. e.g. ↗ zāla ‘to go away, depart, pass away, shift’, ↗ zalla ‘to slip, slide off, move away’, ↗ zalaǧa ‘to slip, slide, glide along’, ↗ zalaqa ‘to glide, slide, slip’. Like zalzala , these roots have in common the notion of »‘rapidité, agilité’, souvaint liée à celle de ‘glisser’ (et conjointement de ‘lisse, poli, brillant’« – DRS 8 (1999)#-ZL-, cf. also ↗*-ZL-. – ▪ DRS 8 (1999)#ZLZL- 1 Syr ʔzdanzal ‘être secoué, trembler’, zunzālā ‘tremblement, turpitude, honte’, Ar zalzala ‘faire trembler, secouer, agiter’, zalzāl ‘tremblement (des membres)’, zalzalaẗ , EAr zanzale , HispAr zérzel , MġrAr zəlzla , zənzla , Ḥrs zəlzāl , EJib zelzelt ‘tremblement de terre’. ? Tña zälzäl bälä ‘ballotter (chose accrochée)’. - 2 Hbr zalzallīm (pl.) ‘pousses de vigne’. - 3 TalmAram zīlzūlā ‘mépris, dédain’, zalzīlā ‘débauché, prodigue’, zalzəlānā ‘glouton, vorace’. - 4 Te zärzärä , Tña zälzälä , Amh Arg zäläzzälä , Gur zəläzälä ‘découper la viande en lanières’. - 5 Te zəlzale ‘abeille’. - 6 zälzal ‘gonflé, bouffant, trop ample’, ? Amh ʔažäläžžälä ‘être immense, innombrable’. - 7 Gur zəläzälä ‘faire du petit commerce’. ▪ DRS 8 (1999)#ZLZL-1: »Quelques formes présentent une dissimilation l > n (occasionnellement r ) […]. – La base est ZLZL (et avec dissimilation ZNZL), formation à redoublement sur ZL, avec divers phénomènes de dissimilation; v. aussi s. ZLL.« ▪ For the 2-cons. basis of which ZLZL is a reduplication, cf. above, section CONC. ▪ »The semantic field of zlzl seems to be vibration. If the meaning ‘twig’ or ‘thin branch’ [of nEg ḏ3nḏ3nrt , ḏ3n3ḏ3n3 , ḏ3nḏ3r(t) , etc.] derives from this root, then possibly the semantic development is from the notion of ‘shaking a (pliant) stick’« – Hoch1994. – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye Dönüş EtymArab ZLZL زلزل BP – • HDAL • © SG | 15Feb2021 √ZLZL “kök” ▪ ZLZL_1 ‘sarsmak, sallamak, ihtizâza getirmek, titretmek/titremek; zelzele’ ↗ zalzala ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘şiddetle sarsmak, sallamak, titremek, zelzele, ıztıraba düşürmek’ ▪ DRS tarafından Sâmî dillerde ZLZL kökü için zikredilen 7 manadan yalnızca 1'i Arapçada temsil edilmektedir. ▪ Bu kök, aşikâr bir surette iki sâmitli * ‑zl‑ unsurunun tekerrüründen (= mübalağa/teksîr sîgasından) müteşekkildir; mezkûr unsur üçüncü (ve dördüncü) sâmitlerle terkip halinde de zuhur eder, krş. mesela ↗ zāla ‘gitmek, ayrılmak, zâil olmak, yer değiştirmek’, ↗ zalla ‘kaymak, sürçmek, uzaklaşmak’, ↗ zalaǧa ‘kaymak, sürçmek, süzülüp gitmek’, ↗ zalaqa ‘kaymak, inzilâk etmek, sürçmek’. zalzala gibi, bu köklerin müşterek mefhumu »‘sürat, çeviklik’ olup ekseriya ‘kaymak’ (ve bununla müştereken ‘düz, cilalı, parlak’) manasıyla alâkadardır« – DRS 8 (1999)#-ZL-, krş. ayrıca ↗*-ZL-. – ▪ DRS 8 (1999)#ZLZL- 1 Süryanice ʔzdanzal ‘sarsılmak, titremek’, zunzālā ‘titreme, rezalet, ar’, Arapça zalzala ‘titretmek, sarsmak, çalkalamak’, zalzāl ‘titreme (azaların titremesi)’, zalzalaẗ , Mısır Arapçası zanzale , Endülüs Arapçası zérzel , Mağrib Arapçası zəlzla , zənzla , Harsûsîce zəlzāl , Doğu Cibâlîcesi zelzelt ‘zelzele, yer sarsıntısı’. ? Tigrinyaca zälzäl bälä ‘sallanmak, bir yana bir yana savrulmak (asılı şey)’. - 2 İbranice zalzallīm (cem') ‘asma filizleri’. - 3 Talmud Aramicesi zīlzūlā ‘istihfaf, tahkir’, zalzīlā ‘sefih, müsrif’, zalzəlānā ‘obur, açgözlü’. - 4 Tigrece zärzärä , Tigrinyaca zälzälä , Amharca Argobbaca zäläzzälä , Guragece zəläzälä ‘eti şeritler halinde kesmek’. - 5 Tigrece zəlzale ‘arı’. - 6 zälzal ‘şişmiş, kabarık, pek geniş’, ? Amharca ʔažäläžžälä ‘azîm olmak, sayılamayacak kadar çok olmak’. - 7 Guragece zəläzälä ‘küçük ticaret yapmak’. ▪ DRS 8 (1999)#ZLZL-1: »Bazı şekillerde l > n (bazen de r) dissimilasyonu görülür […]. – Asıl kök ZLZL (ve dissimilasyon ile ZNZL) olup ZL üzerine tekerrür suretiyle teşekkül etmiştir ve muhtelif dissimilasyon hadiseleri arz eder; krş. ayrıca ZLL maddesi.« ▪ ZLZL kökünün kendisinden tekerrür ettiği iki sâmitli asıl için bkz. yukarıda CONC bahsi. ▪ »zlzl kökünün semantik sahası ihtizâz gibi görünmektedir. Şayet [Yeni Mısırca ḏ3nḏ3nrt , ḏ3n3ḏ3n3 , ḏ3nḏ3r(t) vb. kelimelerin] ‘ince dal’ veya ‘filiz’ manası bu kökten müştak ise, bu takdirde semantik tekâmül muhtemelen ‘(esnek) bir değneği sallamak’ mefhumundan neşet etmiştir« – Hoch1994. – – Kaynaklar ; meta ; gramer ; ing ; mefhum ; tarih ; müşterek kökler ; münakaşa ; garp ; iştikak ;"
+  },
+  "kuran": {
+    "gecis": 6,
+    "ilk": "2:214:16:2",
+    "tur": {
+      "V": 3,
+      "N": 3
+    },
+    "bab": {},
+    "zaman_kip": {
+      "PERF": 3
+    },
+    "fiil_ismi_ozellikleri": {
+      "PASS": 3
+    },
+    "lemmalar": {
+      "زُلْزِلُ": 3,
+      "زِلْزَال": 2,
+      "زَلْزَلَة": 1
+    },
+    "bicimler": {
+      "زُلْزِلُ": 2,
+      "زَلْزَلَةَ": 1,
+      "زِلْزَالًا": 1,
+      "زُلْزِلَتِ": 1,
+      "زِلْزَالَ": 1
+    },
+    "morfoloji_gecis": 6
+  },
+  "kelimeler": [
+    {
+      "lemma": "زُلْزِلُ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "وَزُلْزِلُوا۟",
+          "zaman": "Mâzî",
+          "ilk": "2:214",
+          "adet": 2,
+          "tr": "sarsıldı"
+        },
+        {
+          "kelime": "زُلْزِلَتِ",
+          "zaman": "Mâzî",
+          "ilk": "99:1",
+          "adet": 1,
+          "tr": "sarsıldı"
+        }
+      ],
+      "tr": "sarsıldı",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 3
+    },
+    {
+      "lemma": "زِلْزال",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "زِلْزَالًا",
+          "ilk": "33:11",
+          "adet": 1,
+          "tr": "depremi"
+        },
+        {
+          "kelime": "زِلْزَالَهَا",
+          "ilk": "99:1",
+          "adet": 1,
+          "tr": "depremi"
+        }
+      ],
+      "tr": "depremi",
+      "nasil": "lügat kalıbıyla eşleşmedi",
+      "adet": 2
+    },
+    {
+      "lemma": "زَلْزَلَة",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "زَلْزَلَةَ",
+          "ilk": "22:1",
+          "adet": 1,
+          "tr": "sarsıntı"
+        }
+      ],
+      "tr": "sarsıntı",
+      "nasil": "lügat kalıbıyla eşleşmedi",
+      "adet": 1
+    }
+  ],
+  "reddedilen": [
+    ["kök", "زلزل", "r6"]
+  ],
+  "mana": {
     "ince": "event.n.01",
     "orta": "noun.event",
     "ust": "fiil ve hadise",
@@ -768,25 +625,8 @@
     "dayanak_tanim": "any violent blow",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الزاي واللام",
-    "mihveri": "انزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة",
-    "sesler": "الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.",
-    "fasil_ozeti": "° معنى الفصل المعجمي (زل): الانزلاق أي التحرك السهل عن مستوٍ يتيح هذا - كما يُنْزَلَق عن الزِلّة - فى (زلل)، وكما في زوال الشمس عن كبد السماء - في (زول)، وفي بعد الشيء عما يتصل به بحيث يتميزان، وزَيْل الضأن عن المعزى - في (زيل)، وكما في انحدار الماء إلى المصنعة - في (زلف)، وكما فى تحرك الجنين من عمق مقره في البطن في حالة إسقاطه - في (زلق)، وكما في استواء ظاهر الزلم كهيئة الإصبع الدقيقة مع ملاسته ومع النظر إلى سرعة انطلاقه بذلك إذا رمى به - في (زلم).",
-    "tam_metin": "{إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]\n\"الزِلَّة - بالكسر: الحجارة المُلْس، والمَزَلّة - بفتح الميم والزاي: المكان الدَحْض. وزُحْلُوفة زُلّ - بالضم: زَلَق. زَلّ السهمُ عن الدرع، والإنسانُ عن الصخرة: زَلِق. وزلّت قدمه. (المضارع بالفتح والكسر).\n° المعنى المحوري\nانزلاقٌ عن الموضع لاستوائه مع ملاسته التامة (1): كما يُزْلَق عن الحجارة المُلْس والمكان الدَحْض والزحلوفة والدرع. ومن الاستواء وحده: \"الزَلّاء: الرسحاء \" (لاستواء أرادفها مع ظهرها). ومن الانزلاق وحده: \"زل في الطين \". يقال: \"أزلّه واستزلّه: أزلقه \". ومن كنائي ذلك ومجازه: {فَتَزِلَّ قَدَمٌ بَعْدَ ثُبُوتِهَا} [النحل: 94] أي عن الإيمان بعد المعرفة بالله. وهذه استعارة\n__________\n(1) (صوتيًّا): الزاي تعبر عن اكتناز وازدحام، واللام عن استقلال، والفصل منهما يعبر عن انزلاق محدود (كأنما عن دفع وزحم) يأخذ معه الجسم كله (استقلال). وفي (زول) تعبر الواو عن اشتمال، ويعبر التركيب عن تحرك إرادي خفيف (والإرادية مقابل الاشتمال لأن الإرادة في الزائل)، وفي (زيل) تعبر الياء عن الاتصال ويعبر التركيب عن حركة تباعد الأبعاض مع اتصال من ناحية كالزَّيَل، وفي (زلف) تعبر الفاء عن إبعاد بقوة أو طرد، ويعبر التركيب عن قوة التحرك انحدارًا إلى مَجْمع كالزَّلَفة: مصنعة الماء. وفي (زلق) تعبر القاف عن تعقد في عمق، ويعبر التركيب عن أن المتحرك كان عالقًا بقوة في عمق الشيء وجوفه كالفَرَس المزلاق. وفي (زلم) عبرت الميم عن استواء ظاهر الجرم، ويعبر التركيب عن أن المتحرك مستوى الظاهر ملطف كالسهم.\n(2/910)\nللمستقيم الحال يقع في شر عظيم. لأن القدم إذا زلّت نقلت الإنسان من حال خير إلى حال شر [قر 10/ 172]. ويقال زلّ في رأيه ومنطقه أخطأ \" (كما يقال سَقْطَةٌ) {فَأَزَلَّهُمَا الشَّيْطَانُ عَنْهَا} [البقرة: 36] فسرت في [طب 1/ 524 وقر 1/ 311] أخذا من الزَلَّة: الخطيئة. لكن هذا يحوج إلى التأويل في وضع \"عنها \"هنا. فالدقيق تفسيرها بأنه أزلقهما وأبعدهما عن كلمة الله فلم يقدرا على الثبات على قوله: {وَلَا تَقْرَبَا هَذِهِ الشَّجَرَةَ} [البقرة: 35] يقال زَلَّ عن مكانه: تنحَّى عنه. قال امرؤ القيس: (يزِلّ الغلامُ الخِفُّ عن صَهَواته)\nوقال (....... يزِل اللِّبْدُ عن حاله متنه)\n{فَإِنْ زَلَلْتُمْ مِنْ بَعْدِ مَا جَاءَتْكُمُ الْبَيِّنَاتُ} [البقرة: 209] (سقطتم أو ضَلَلتم). {إِنَّمَا اسْتَزَلَّهُمُ الشَّيْطَانُ بِبَعْضِ مَا كَسَبُوا} [آل عمران: 155]. (أمكنته ذنوبهم من استغوائهم وإزلاقهم). ومن معنوى هذا \"زلّ عُمرُه: مضى وذهب، وزَلَّتْ منه إلى فلان نِعَم: وصلت منه إليه \".\nومن المعنى الأصلي \"زلزل الشيء: حرّكه شديدًا (كأنما كرر إزلاقه للأمام فللخلف مثلًا) {إِذَا زُلْزِلَتِ الْأَرْضُ زِلْزَالَهَا} [الزلزلة: 1]، {إِنَّ زَلْزَلَةَ السَّاعَةِ شَيْءٌ عَظِيمٌ} [الحج: 1]، {وَزُلْزِلُوا حَتَّى يَقُولَ الرَّسُولُ ....} [البقرة: 214]: خُوِّفُو وحُرِّكوا .. من الزلزلة: شدة التحريك تكون في الأشخاص والأحوال [قر 3/ 34]. وفي الأثر \"لا دَقَّ ولا زَلْزَلة في الكيل \"أي لا يُحَرّك ما فيه ويُهَزّ لينضم ويسع أكثر مما يسع عادة \".\nوالانزلاق مرور بخفة وسلاسة، ومن هذا \"الماء الزُلال والزليل: السريع النزول والمَرِّ في الحلق/ العذبُ/ الصافي الخالص \" (كل هذا يجعله سَلِس المرور في\n(2/911)\nالحلق سريعَه) وقريب من هذا الباب قولهم \"الزَلَزِل - بفتحتين فكسرة: أثاث البيت ومتاعه/ قماش البيت \" (فهذا من كثرة الحركة نقلًا أو تبديلًا - كما نقول اليوم منقولات)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["happening.n.01"],
-  "muhassas_tasnif": {
-    "durum": "el-Muhassas metninde yeterince geçmiyor"
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -806,136 +646,11 @@
       "boy": 20
     }
   },
-  "kaliplar": {},
-  "kelimeler": [
-    {
-      "kelime": "وَزُلْزِلُوا۟",
-      "kok": "زلزل",
-      "lemma": "زُلْزِلُ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "2:214",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "sarsıldı",
-        "lemma": "sarsıldı",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "زَلْزَلَةَ",
-      "kok": "زلزل",
-      "lemma": "زَلْزَلَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "22:1",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "sarsıntı",
-        "lemma": "sarsıntı",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "زِلْزَالًا",
-      "kok": "زلزل",
-      "lemma": "زِلْزال",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "33:11",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "depremi",
-        "lemma": "depremi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "زُلْزِلَتِ",
-      "kok": "زلزل",
-      "lemma": "زُلْزِلُ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "99:1",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "sarsıldı",
-        "lemma": "sarsıldı",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "زِلْزَالَهَا",
-      "kok": "زلزل",
-      "lemma": "زِلْزال",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "99:1",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "depremi",
-        "lemma": "depremi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 3,
-      "isim": 3
-    },
-    "lugat_fiil": true
+  "wordnet": ["happening.n.01"],
+  "muhassas": {
+    "durum": "el-Muhassas metninde yeterince geçmiyor"
   },
-  "baz_fiil": {
-    "ad": "Aktarım",
-    "ayrim": "sars",
-    "acilim": "زلزل := Aktarım(ayrım: sars)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Aktarım",
-    "kelimeler": [
-      {
-        "lemma": "زُلْزِلُ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Mâzî"],
-        "adet": 3,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      },
-      {
-        "lemma": "زِلْزال",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 2,
-        "nasil": "lügat kalıbıyla eşleşmedi"
-      },
-      {
-        "lemma": "زَلْزَلَة",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "lügat kalıbıyla eşleşmedi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

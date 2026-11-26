@@ -1,1259 +1,2610 @@
 {
   "kok": "تسع",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 7
+  },
+  "fiil": "dokuz ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "dokuz ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "تَسْع", "tasʿ", "dokuz", "kontrol", ""],
-      [1, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
-      [2, "تُسْع", "tusʿ", "dokuz", "kontrol", ""],
-      [3, "تَسَع", "tasaʿ", "dokuz", "kontrol", ""],
-      [4, "تِسَع", "tisaʿ", "dokuz", "kontrol", ""],
-      [5, "تُسُع", "tusuʿ", "dokuz", "kontrol", ""],
-      [6, "تُسُوع", "tusūʿ", "dokuz", "kontrol", ""],
-      [7, "تِسَاع", "tisāʿ", "dokuz", "kontrol", ""],
-      [8, "تُسَاع", "tusāʿ", "dokuz", "kontrol", ""],
-      [9, "تَسَاع", "tasāʿ", "dokuz", "kontrol", ""],
-      [10, "تَسَاعَة", "tasāʿa", "dokuz", "kontrol", ""],
-      [11, "تُسُوعَة", "tusūʿa", "dokuz", "kontrol", ""],
-      [12, "تِسَاعَة", "tisāʿa", "dokuz", "kontrol", ""],
-      [13, "تَسِيع", "tasīʿ", "dokuz", "kontrol", ""],
-      [14, "تَسُوع", "tasūʿ", "dokuz", "kontrol", ""],
-      [15, "تَسَعَان", "tasaʿān", "dokuz", "kontrol", ""],
-      [16, "تُسْعَان", "tusʿān", "dokuz", "kontrol", ""],
-      [17, "تِسْعَان", "tisʿān", "dokuz", "kontrol", ""],
-      [18, "تَسْعَى", "tasʿā", "dokuz", "kontrol", ""],
-      [19, "تُسْعَى", "tusʿā", "dokuz", "kontrol", ""],
-      [20, "تِسْعَى", "tisʿā", "dokuz", "kontrol", ""],
-      [21, "تَسَعَة", "tasaʿa", "dokuz", "kontrol", ""],
-      [22, "تِسَعَة", "tisaʿa", "dokuz", "kontrol", ""],
-      [23, "تَسْعُوعَة", "tasʿūʿa", "dokuz", "kontrol", ""],
-      [24, "تُتْسُوع", "tutsūʿ", "dokuz", "kontrol", ""],
-      [25, "تَتْسِعَة", "tatsiʿa", "dokuz", "kontrol", ""],
-      [26, "تَتْسَعَة", "tatsaʿa", "dokuz", "kontrol", ""],
-      [27, "مَتْسُعَة", "matsuʿa", "dokuz", "kontrol", ""],
-      [28, "مَتْسِعَة", "matsiʿa", "dokuz", "kontrol", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَتْسِيع", "tatsīʿ", "çokça dokuz olma", "kontrol", ""],
-      [30, "تَتْسِعَة", "tatsiʿa", "çokça dokuz olma", "kontrol", ""],
-      [31, "تِسِّاع", "tissāʿ", "çokça dokuz olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَتْسِيعَة", "tatsīʿa", "bir kere çokça dokuz olma", "kontrol", ""],
-      [33, "تِسِّاعَة", "tissāʿa", "bir kere çokça dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُتَسِّع", "mutassiʿ", "çokça dokuz olan", "kontrol", ""],
-      [35, "مُتَسِّعَة", "mutassiʿa", "çokça dokuz olan, müennes", "kontrol", ""],
-      [36, "مُتَسِّعَان", "mutassiʿān", "çokça dokuz olan, iki", "kontrol", ""],
-      [37, "مُتَسِّعَتَان", "mutassiʿatān", "çokça dokuz olan, iki, müennes", "kontrol", ""],
-      [38, "مُتَسِّعُون", "mutassiʿūn", "çokça dokuz olanlar", "kontrol", ""],
-      [39, "مُتَسِّعِين", "mutassiʿīn", "çokça dokuz olanlar", "kontrol", ""],
-      [40, "مُتَسِّعَات", "mutassiʿāt", "çokça dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُتَسَّع", "mutassaʿ", "çokça dokuz olunan", "kontrol", ""],
-      [42, "مُتَسَّعَة", "mutassaʿa", "çokça dokuz olunan, müennes", "kontrol", ""],
-      [43, "مُتَسَّعَان", "mutassaʿān", "çokça dokuz olunan, iki", "kontrol", ""],
-      [44, "مُتَسَّعَتَان", "mutassaʿatān", "çokça dokuz olunan, iki, müennes", "kontrol", ""],
-      [45, "مُتَسَّعُون", "mutassaʿūn", "çokça dokuz olunanlar", "kontrol", ""],
-      [46, "مُتَسَّعِين", "mutassaʿīn", "çokça dokuz olunanlar", "kontrol", ""],
-      [47, "مُتَسَّعَات", "mutassaʿāt", "çokça dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُتَسَّع", "mutassaʿ", "çokça dokuz olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُتَاسَعَة", "mutāsaʿa", "biriyle karşılıklı dokuz olma", "kontrol", ""],
-      [50, "تِسَاع", "tisāʿ", "biriyle karşılıklı dokuz olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "تِسَاعَة", "tisāʿa", "bir kere biriyle karşılıklı dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُتَاسِع", "mutāsiʿ", "biriyle karşılıklı dokuz olan", "kontrol", ""],
-      [53, "مُتَاسِعَة", "mutāsiʿa", "biriyle karşılıklı dokuz olan, müennes", "kontrol", ""],
-      [54, "مُتَاسِعَان", "mutāsiʿān", "biriyle karşılıklı dokuz olan, iki", "kontrol", ""],
-      [55, "مُتَاسِعَتَان", "mutāsiʿatān", "biriyle karşılıklı dokuz olan, iki, müennes", "kontrol", ""],
-      [56, "مُتَاسِعُون", "mutāsiʿūn", "biriyle karşılıklı dokuz olanlar", "kontrol", ""],
-      [57, "مُتَاسِعِين", "mutāsiʿīn", "biriyle karşılıklı dokuz olanlar", "kontrol", ""],
-      [58, "مُتَاسِعَات", "mutāsiʿāt", "biriyle karşılıklı dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُتَاسَع", "mutāsaʿ", "biriyle karşılıklı dokuz olunan", "kontrol", ""],
-      [60, "مُتَاسَعَة", "mutāsaʿa", "biriyle karşılıklı dokuz olunan, müennes", "kontrol", ""],
-      [61, "مُتَاسَعَان", "mutāsaʿān", "biriyle karşılıklı dokuz olunan, iki", "kontrol", ""],
-      [62, "مُتَاسَعَتَان", "mutāsaʿatān", "biriyle karşılıklı dokuz olunan, iki, müennes", "kontrol", ""],
-      [63, "مُتَاسَعُون", "mutāsaʿūn", "biriyle karşılıklı dokuz olunanlar", "kontrol", ""],
-      [64, "مُتَاسَعِين", "mutāsaʿīn", "biriyle karşılıklı dokuz olunanlar", "kontrol", ""],
-      [65, "مُتَاسَعَات", "mutāsaʿāt", "biriyle karşılıklı dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُتَاسَع", "mutāsaʿ", "biriyle karşılıklı dokuz olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِتْسَاع", "ʾitsāʿ", "dokuzlaştırma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِتْسَاعَة", "ʾitsāʿa", "bir kere dokuzlaştırma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُتْسِع", "mutsiʿ", "dokuzlaştıran", "kontrol", ""],
-      [70, "مُتْسِعَة", "mutsiʿa", "dokuzlaştıran, müennes", "kontrol", ""],
-      [71, "مُتْسِعَان", "mutsiʿān", "dokuzlaştıran, iki", "kontrol", ""],
-      [72, "مُتْسِعَتَان", "mutsiʿatān", "dokuzlaştıran, iki, müennes", "kontrol", ""],
-      [73, "مُتْسِعُون", "mutsiʿūn", "dokuzlaştıranlar", "kontrol", ""],
-      [74, "مُتْسِعِين", "mutsiʿīn", "dokuzlaştıranlar", "kontrol", ""],
-      [75, "مُتْسِعَات", "mutsiʿāt", "dokuzlaştıranlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُتْسَع", "mutsaʿ", "dokuzlaştırılan", "kontrol", ""],
-      [77, "مُتْسَعَة", "mutsaʿa", "dokuzlaştırılan, müennes", "kontrol", ""],
-      [78, "مُتْسَعَان", "mutsaʿān", "dokuzlaştırılan, iki", "kontrol", ""],
-      [79, "مُتْسَعَتَان", "mutsaʿatān", "dokuzlaştırılan, iki, müennes", "kontrol", ""],
-      [80, "مُتْسَعُون", "mutsaʿūn", "dokuzlaştırılanlar", "kontrol", ""],
-      [81, "مُتْسَعِين", "mutsaʿīn", "dokuzlaştırılanlar", "kontrol", ""],
-      [82, "مُتْسَعَات", "mutsaʿāt", "dokuzlaştırılanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُتْسَع", "mutsaʿ", "dokuzlaştırma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَتَسُّع", "tatassuʿ", "kendini zorlayarak dokuz olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَتَسُّعَة", "tatassuʿa", "bir kere kendini zorlayarak dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَتَسِّع", "mutatassiʿ", "kendini zorlayarak dokuz olan", "kontrol", ""],
-      [87, "مُتَتَسِّعَة", "mutatassiʿa", "kendini zorlayarak dokuz olan, müennes", "kontrol", ""],
-      [88, "مُتَتَسِّعَان", "mutatassiʿān", "kendini zorlayarak dokuz olan, iki", "kontrol", ""],
-      [89, "مُتَتَسِّعَتَان", "mutatassiʿatān", "kendini zorlayarak dokuz olan, iki, müennes", "kontrol", ""],
-      [90, "مُتَتَسِّعُون", "mutatassiʿūn", "kendini zorlayarak dokuz olanlar", "kontrol", ""],
-      [91, "مُتَتَسِّعِين", "mutatassiʿīn", "kendini zorlayarak dokuz olanlar", "kontrol", ""],
-      [92, "مُتَتَسِّعَات", "mutatassiʿāt", "kendini zorlayarak dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَتَسَّع", "mutatassaʿ", "kendini zorlayarak dokuz olunan", "kontrol", ""],
-      [94, "مُتَتَسَّعَة", "mutatassaʿa", "kendini zorlayarak dokuz olunan, müennes", "kontrol", ""],
-      [95, "مُتَتَسَّعَان", "mutatassaʿān", "kendini zorlayarak dokuz olunan, iki", "kontrol", ""],
-      [96, "مُتَتَسَّعَتَان", "mutatassaʿatān", "kendini zorlayarak dokuz olunan, iki, müennes", "kontrol", ""],
-      [97, "مُتَتَسَّعُون", "mutatassaʿūn", "kendini zorlayarak dokuz olunanlar", "kontrol", ""],
-      [98, "مُتَتَسَّعِين", "mutatassaʿīn", "kendini zorlayarak dokuz olunanlar", "kontrol", ""],
-      [99, "مُتَتَسَّعَات", "mutatassaʿāt", "kendini zorlayarak dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَتَسَّع", "mutatassaʿ", "kendini zorlayarak dokuz olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَتَاسُع", "tatāsuʿ", "birbirine dokuz olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَتَاسُعَة", "tatāsuʿa", "bir kere birbirine dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَتَاسِع", "mutatāsiʿ", "birbirine dokuz olan", "kontrol", ""],
-      [104, "مُتَتَاسِعَة", "mutatāsiʿa", "birbirine dokuz olan, müennes", "kontrol", ""],
-      [105, "مُتَتَاسِعَان", "mutatāsiʿān", "birbirine dokuz olan, iki", "kontrol", ""],
-      [106, "مُتَتَاسِعَتَان", "mutatāsiʿatān", "birbirine dokuz olan, iki, müennes", "kontrol", ""],
-      [107, "مُتَتَاسِعُون", "mutatāsiʿūn", "birbirine dokuz olanlar", "kontrol", ""],
-      [108, "مُتَتَاسِعِين", "mutatāsiʿīn", "birbirine dokuz olanlar", "kontrol", ""],
-      [109, "مُتَتَاسِعَات", "mutatāsiʿāt", "birbirine dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَتَاسَع", "mutatāsaʿ", "birbirine dokuz olunan", "kontrol", ""],
-      [111, "مُتَتَاسَعَة", "mutatāsaʿa", "birbirine dokuz olunan, müennes", "kontrol", ""],
-      [112, "مُتَتَاسَعَان", "mutatāsaʿān", "birbirine dokuz olunan, iki", "kontrol", ""],
-      [113, "مُتَتَاسَعَتَان", "mutatāsaʿatān", "birbirine dokuz olunan, iki, müennes", "kontrol", ""],
-      [114, "مُتَتَاسَعُون", "mutatāsaʿūn", "birbirine dokuz olunanlar", "kontrol", ""],
-      [115, "مُتَتَاسَعِين", "mutatāsaʿīn", "birbirine dokuz olunanlar", "kontrol", ""],
-      [116, "مُتَتَاسَعَات", "mutatāsaʿāt", "birbirine dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَتَاسَع", "mutatāsaʿ", "birbirine dokuz olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْتِسَاع", "intisāʿ", "dokuz olunma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْتِسَاعَة", "intisāʿa", "bir kere dokuz olunma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْتَسِع", "muntasiʿ", "dokuz olunan", "kontrol", ""],
-      [121, "مُنْتَسِعَة", "muntasiʿa", "dokuz olunan, müennes", "kontrol", ""],
-      [122, "مُنْتَسِعَان", "muntasiʿān", "dokuz olunan, iki", "kontrol", ""],
-      [123, "مُنْتَسِعَتَان", "muntasiʿatān", "dokuz olunan, iki, müennes", "kontrol", ""],
-      [124, "مُنْتَسِعُون", "muntasiʿūn", "dokuz olunanlar", "kontrol", ""],
-      [125, "مُنْتَسِعِين", "muntasiʿīn", "dokuz olunanlar", "kontrol", ""],
-      [126, "مُنْتَسِعَات", "muntasiʿāt", "dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْتَسَع", "muntasaʿ", "dokuz olunan", "kontrol", ""],
-      [128, "مُنْتَسَعَة", "muntasaʿa", "dokuz olunan, müennes", "kontrol", ""],
-      [129, "مُنْتَسَعَان", "muntasaʿān", "dokuz olunan, iki", "kontrol", ""],
-      [130, "مُنْتَسَعَتَان", "muntasaʿatān", "dokuz olunan, iki, müennes", "kontrol", ""],
-      [131, "مُنْتَسَعُون", "muntasaʿūn", "dokuz olunanlar", "kontrol", ""],
-      [132, "مُنْتَسَعِين", "muntasaʿīn", "dokuz olunanlar", "kontrol", ""],
-      [133, "مُنْتَسَعَات", "muntasaʿāt", "dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْتَسَع", "muntasaʿ", "dokuz olunma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِتِّسَاع", "ittisāʿ", "kendisi için dokuz olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِتِّسَاعَة", "ittisāʿa", "bir kere kendisi için dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُتَّسِع", "muttasiʿ", "kendisi için dokuz olan", "kontrol", ""],
-      [139, "مُتَّسِعَة", "muttasiʿa", "kendisi için dokuz olan, müennes", "kontrol", ""],
-      [140, "مُتَّسِعَان", "muttasiʿān", "kendisi için dokuz olan, iki", "kontrol", ""],
-      [141, "مُتَّسِعَتَان", "muttasiʿatān", "kendisi için dokuz olan, iki, müennes", "kontrol", ""],
-      [142, "مُتَّسِعُون", "muttasiʿūn", "kendisi için dokuz olanlar", "kontrol", ""],
-      [143, "مُتَّسِعِين", "muttasiʿīn", "kendisi için dokuz olanlar", "kontrol", ""],
-      [144, "مُتَّسِعَات", "muttasiʿāt", "kendisi için dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُتَّسَع", "muttasaʿ", "kendisi için dokuz olunan", "kontrol", ""],
-      [146, "مُتَّسَعَة", "muttasaʿa", "kendisi için dokuz olunan, müennes", "kontrol", ""],
-      [147, "مُتَّسَعَان", "muttasaʿān", "kendisi için dokuz olunan, iki", "kontrol", ""],
-      [148, "مُتَّسَعَتَان", "muttasaʿatān", "kendisi için dokuz olunan, iki, müennes", "kontrol", ""],
-      [149, "مُتَّسَعُون", "muttasaʿūn", "kendisi için dokuz olunanlar", "kontrol", ""],
-      [150, "مُتَّسَعِين", "muttasaʿīn", "kendisi için dokuz olunanlar", "kontrol", ""],
-      [151, "مُتَّسَعَات", "muttasaʿāt", "kendisi için dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُتَّسَع", "muttasaʿ", "kendisi için dokuz olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IX": [
-      [499, "اِتْسِعَاع", "itsiʿāʿ", "iyiden iyiye dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX": [
-      [500, "مُتْسَعّ", "mutsaʿʿ", "iyiden iyiye dokuz olan", "kontrol", ""],
-      [501, "مُتْسَعَّة", "mutsaʿʿa", "iyiden iyiye dokuz olan, müennes", "kontrol", ""],
-      [502, "مُتْسَعَّان", "mutsaʿʿān", "iyiden iyiye dokuz olan, iki", "kontrol", ""],
-      [503, "مُتْسَعَّتَان", "mutsaʿʿatān", "iyiden iyiye dokuz olan, iki, müennes", "kontrol", ""],
-      [504, "مُتْسَعُّون", "mutsaʿʿūn", "iyiden iyiye dokuz olanlar", "kontrol", ""],
-      [505, "مُتْسَعِّين", "mutsaʿʿīn", "iyiden iyiye dokuz olanlar", "kontrol", ""],
-      [506, "مُتْسَعَّات", "mutsaʿʿāt", "iyiden iyiye dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِتْسَاع", "istitsāʿ", "dokuz olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِتْسَاعَة", "istitsāʿa", "bir kere dokuz olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَتْسِع", "mustatsiʿ", "dokuz olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَتْسِعَة", "mustatsiʿa", "dokuz olmayı isteyen, müennes", "kontrol", ""],
-      [180, "مُسْتَتْسِعَان", "mustatsiʿān", "dokuz olmayı isteyen, iki", "kontrol", ""],
-      [181, "مُسْتَتْسِعَتَان", "mustatsiʿatān", "dokuz olmayı isteyen, iki, müennes", "kontrol", ""],
-      [182, "مُسْتَتْسِعُون", "mustatsiʿūn", "dokuz olmayı isteyenler", "kontrol", ""],
-      [183, "مُسْتَتْسِعِين", "mustatsiʿīn", "dokuz olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَتْسِعَات", "mustatsiʿāt", "dokuz olmayı isteyenler, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَتْسَع", "mustatsaʿ", "dokuz olması istenen", "kontrol", ""],
-      [186, "مُسْتَتْسَعَة", "mustatsaʿa", "dokuz olması istenen, müennes", "kontrol", ""],
-      [187, "مُسْتَتْسَعَان", "mustatsaʿān", "dokuz olması istenen, iki", "kontrol", ""],
-      [188, "مُسْتَتْسَعَتَان", "mustatsaʿatān", "dokuz olması istenen, iki, müennes", "kontrol", ""],
-      [189, "مُسْتَتْسَعُون", "mustatsaʿūn", "dokuz olması istenenler", "kontrol", ""],
-      [190, "مُسْتَتْسَعِين", "mustatsaʿīn", "dokuz olması istenenler", "kontrol", ""],
-      [191, "مُسْتَتْسَعَات", "mustatsaʿāt", "dokuz olması istenenler, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَتْسَع", "mustatsaʿ", "dokuz olmayı isteme yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb XI": [
-      [507, "اِتْسِيعَاع", "itsīʿāʿ", "büsbütün dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI": [
-      [508, "مُتْسَاعّ", "mutsāʿʿ", "büsbütün dokuz olan", "kontrol", ""],
-      [509, "مُتْسَاعَّة", "mutsāʿʿa", "büsbütün dokuz olan, müennes", "kontrol", ""],
-      [510, "مُتْسَاعَّان", "mutsāʿʿān", "büsbütün dokuz olan, iki", "kontrol", ""],
-      [511, "مُتْسَاعَّتَان", "mutsāʿʿatān", "büsbütün dokuz olan, iki, müennes", "kontrol", ""],
-      [512, "مُتْسَاعُّون", "mutsāʿʿūn", "büsbütün dokuz olanlar", "kontrol", ""],
-      [513, "مُتْسَاعِّين", "mutsāʿʿīn", "büsbütün dokuz olanlar", "kontrol", ""],
-      [514, "مُتْسَاعَّات", "mutsāʿʿāt", "büsbütün dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII": [
-      [515, "اِتْسِوْسَاع", "itsiwsāʿ", "aşırı dokuz olma", "kontrol", ""]
-    ],
-    "masdar · bâb XIII": [
-      [516, "اِتْسِوَّاع", "itsiwwāʿ", "aşırı dokuz olma", "kontrol", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "تَاسِع", "tāsiʿ", "Dokuzuncu", "lugat", "Vikisözlük: ninth · Luggat"],
-      [214, "تَاسِعَة", "tāsiʿa", "târih", "lugat", "Kubbealtı"],
-      [215, "تَاسِعَان", "tāsiʿān", "dokuz olan, iki", "kontrol", ""],
-      [216, "تَاسِعَتَان", "tāsiʿatān", "dokuz olan, iki, müennes", "kontrol", ""],
-      [217, "تَاسِعُون", "tāsiʿūn", "dokuz olanlar", "kontrol", ""],
-      [218, "تَاسِعِين", "tāsiʿīn", "dokuz olanlar", "kontrol", ""],
-      [219, "تَاسِعَات", "tāsiʿāt", "dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَتْسُوع", "matsūʿ", "dokuz olunan", "kontrol", ""],
-      [221, "مَتْسُوعَة", "matsūʿa", "dokuz olunan, müennes", "kontrol", ""],
-      [222, "مَتْسُوعَان", "matsūʿān", "dokuz olunan, iki", "kontrol", ""],
-      [223, "مَتْسُوعَتَان", "matsūʿatān", "dokuz olunan, iki, müennes", "kontrol", ""],
-      [224, "مَتْسُوعُون", "matsūʿūn", "dokuz olunanlar", "kontrol", ""],
-      [225, "مَتْسُوعِين", "matsūʿīn", "dokuz olunanlar", "kontrol", ""],
-      [226, "مَتْسُوعَات", "matsūʿāt", "dokuz olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَتْسَع", "matsaʿ", "dokuz olma yeri, vakti", "kontrol", ""],
-      [228, "مَتْسَعَان", "matsaʿān", "dokuz olma yeri, vakti, iki", "kontrol", ""],
-      [229, "مَتْسِع", "matsiʿ", "dokuz olma yeri, vakti", "kontrol", ""],
-      [230, "مَتْسِعَان", "matsiʿān", "dokuz olma yeri, vakti, iki", "kontrol", ""],
-      [231, "مَتْسَعَة", "matsaʿa", "dokuz olmanın bol olduğu yer", "kontrol", ""],
-      [232, "مَتْسَعَتَان", "matsaʿatān", "dokuz olmanın bol olduğu yer, iki", "kontrol", ""],
-      [233, "مَتْسِعَة", "matsiʿa", "dokuz olmanın bol olduğu yer", "kontrol", ""],
-      [234, "مَتْسِعَتَان", "matsiʿatān", "dokuz olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَتْسُعَة", "matsuʿa", "dokuz olma yeri, vakti", "kontrol", ""],
-      [248, "مَتْسُعَتَان", "matsuʿatān", "dokuz olma yeri, vakti, iki", "kontrol", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِتْسَع", "mitsaʿ", "dokuz olma âleti", "kontrol", ""],
-      [236, "مِتْسَعَان", "mitsaʿān", "dokuz olma âleti, iki", "kontrol", ""],
-      [237, "مِتْسَاع", "mitsāʿ", "dokuz olma âleti", "kontrol", ""],
-      [238, "مِتْسَاعَان", "mitsāʿān", "dokuz olma âleti, iki", "kontrol", ""],
-      [239, "مِتْسَعَة", "mitsaʿa", "dokuz olma âleti", "kontrol", ""],
-      [240, "مِتْسَعَتَان", "mitsaʿatān", "dokuz olma âleti, iki", "kontrol", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَتْسَع", "ʾatsaʿ", "daha çok dokuz olan", "kontrol", ""],
-      [242, "أَتْسَعَان", "ʾatsaʿān", "daha çok dokuz olan, iki", "kontrol", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "تُسْعَى", "tusʿā", "daha çok dokuz olan", "kontrol", ""],
-      [244, "تُسْعَيَان", "tusʿayān", "daha çok dokuz olan, iki", "kontrol", ""],
-      [245, "تَسْعَاء", "tasʿāʾ", "daha çok dokuz olan", "kontrol", ""],
-      [246, "تَسْعَاآن", "tasʿāʾān", "daha çok dokuz olan, iki", "kontrol", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "تُسَيْع", "tusayʿ", "azıcık dokuz olma", "kontrol", ""],
-      [250, "تُسَيْعَان", "tusayʿān", "azıcık dokuz olma, iki", "kontrol", ""],
-      [251, "تُسَيْعَة", "tusayʿa", "azıcık dokuz olma", "kontrol", ""],
-      [252, "تُسَيْعَتَان", "tusayʿatān", "azıcık dokuz olma, iki", "kontrol", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَتْسَع", "matsaʿ", "dokuz olma", "kontrol", ""],
-      [254, "مَتْسَعَان", "matsaʿān", "dokuz olma, iki", "kontrol", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "تَسْعَة", "tasʿa", "bir kere dokuz olma", "kontrol", ""],
-      [256, "تَسْعَتَان", "tasʿatān", "bir kere dokuz olma, iki", "kontrol", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
-      [258, "تِسْعَتَان", "tisʿatān", "dokuz olma tarzı, iki", "kontrol", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "تَسِيع", "tasīʿ", "her daim dokuz olan", "kontrol", ""],
-      [260, "تَسِيعَة", "tasīʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [261, "تَسِيعَان", "tasīʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [262, "تَسِيعَتَان", "tasīʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [263, "تَسِيعُون", "tasīʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [264, "تَسِيعِين", "tasīʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [265, "تَسِيعَات", "tasīʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [266, "تَسُوع", "tasūʿ", "her daim dokuz olan", "kontrol", ""],
-      [267, "تَسُوعَة", "tasūʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [268, "تَسُوعَان", "tasūʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [269, "تَسُوعَتَان", "tasūʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [270, "تَسُوعُون", "tasūʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [271, "تَسُوعِين", "tasūʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [272, "تَسُوعَات", "tasūʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [273, "تَسِع", "tasiʿ", "her daim dokuz olan", "kontrol", ""],
-      [274, "تَسِعَة", "tasiʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [275, "تَسِعَان", "tasiʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [276, "تَسِعَتَان", "tasiʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [277, "تَسِعُون", "tasiʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [278, "تَسِعِين", "tasiʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [279, "تَسِعَات", "tasiʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [280, "تَسُع", "tasuʿ", "her daim dokuz olan", "kontrol", ""],
-      [281, "تَسُعَة", "tasuʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [282, "تَسُعَان", "tasuʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [283, "تَسُعَتَان", "tasuʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [284, "تَسُعُون", "tasuʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [285, "تَسُعِين", "tasuʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [286, "تَسُعَات", "tasuʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [287, "تَسَع", "tasaʿ", "her daim dokuz olan", "kontrol", ""],
-      [288, "تَسَعَة", "tasaʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [289, "تَسَعَان", "tasaʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [290, "تَسَعَتَان", "tasaʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [291, "تَسَعُون", "tasaʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [292, "تَسَعِين", "tasaʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [293, "تَسَعَات", "tasaʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [294, "تَسْع", "tasʿ", "her daim dokuz olan", "kontrol", ""],
-      [295, "تَسْعَة", "tasʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [296, "تَسْعَان", "tasʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [297, "تَسْعَتَان", "tasʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [298, "تَسْعُون", "tasʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [299, "تَسْعِين", "tasʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [300, "تَسْعَات", "tasʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [301, "تُسُع", "tusuʿ", "her daim dokuz olan", "kontrol", ""],
-      [302, "تُسُعَة", "tusuʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [303, "تُسُعَان", "tusuʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [304, "تُسُعَتَان", "tusuʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [305, "تُسُعُون", "tusuʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [306, "تُسُعِين", "tusuʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [307, "تُسُعَات", "tusuʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [308, "تَسْعَان", "tasʿān", "her daim dokuz olan", "kontrol", ""],
-      [309, "تَسْعَانَة", "tasʿāna", "her daim dokuz olan, müennes", "kontrol", ""],
-      [310, "تَسْعَانَان", "tasʿānān", "her daim dokuz olan, iki", "kontrol", ""],
-      [311, "تَسْعَانَتَان", "tasʿānatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [312, "تَسْعَانُون", "tasʿānūn", "her daim dokuz olanlar", "kontrol", ""],
-      [313, "تَسْعَانِين", "tasʿānīn", "her daim dokuz olanlar", "kontrol", ""],
-      [314, "تَسْعَانَات", "tasʿānāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [315, "تُسَاع", "tusāʿ", "her daim dokuz olan", "kontrol", ""],
-      [316, "تُسَاعَة", "tusāʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [317, "تُسَاعَان", "tusāʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [318, "تُسَاعَتَان", "tusāʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [319, "تُسَاعُون", "tusāʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [320, "تُسَاعِين", "tusāʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [321, "تُسَاعَات", "tusāʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""],
-      [322, "تَسَاع", "tasāʿ", "her daim dokuz olan", "kontrol", ""],
-      [323, "تَسَاعَة", "tasāʿa", "her daim dokuz olan, müennes", "kontrol", ""],
-      [324, "تَسَاعَان", "tasāʿān", "her daim dokuz olan, iki", "kontrol", ""],
-      [325, "تَسَاعَتَان", "tasāʿatān", "her daim dokuz olan, iki, müennes", "kontrol", ""],
-      [326, "تَسَاعُون", "tasāʿūn", "her daim dokuz olanlar", "kontrol", ""],
-      [327, "تَسَاعِين", "tasāʿīn", "her daim dokuz olanlar", "kontrol", ""],
-      [328, "تَسَاعَات", "tasāʿāt", "her daim dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "mübalağa": [
-      [329, "تَسَّاع", "tassāʿ", "işi dokuz olma olan", "kontrol", ""],
-      [330, "تَسَّاعَة", "tassāʿa", "işi dokuz olma olan, müennes", "kontrol", ""],
-      [331, "تَسَّاعَان", "tassāʿān", "işi dokuz olma olan, iki", "kontrol", ""],
-      [332, "تَسَّاعَتَان", "tassāʿatān", "işi dokuz olma olan, iki, müennes", "kontrol", ""],
-      [333, "تَسَّاعُون", "tassāʿūn", "işi dokuz olma olanlar", "kontrol", ""],
-      [334, "تَسَّاعِين", "tassāʿīn", "işi dokuz olma olanlar", "kontrol", ""],
-      [335, "تَسَّاعَات", "tassāʿāt", "işi dokuz olma olanlar, müennes", "kontrol", ""],
-      [336, "تَسَّاعَة", "tassāʿa", "pek çok dokuz olan", "kontrol", ""],
-      [337, "تَسَّاعَتَان", "tassāʿatān", "pek çok dokuz olan, iki", "kontrol", ""],
-      [338, "تَسَّاعَات", "tassāʿāt", "pek çok dokuz olanlar, müennes", "kontrol", ""],
-      [339, "تَسُوع", "tasūʿ", "çok dokuz olan", "kontrol", ""],
-      [340, "تَسُوعَة", "tasūʿa", "çok dokuz olan, müennes", "kontrol", ""],
-      [341, "تَسُوعَان", "tasūʿān", "çok dokuz olan, iki", "kontrol", ""],
-      [342, "تَسُوعَتَان", "tasūʿatān", "çok dokuz olan, iki, müennes", "kontrol", ""],
-      [343, "تَسُوعُون", "tasūʿūn", "çok dokuz olanlar", "kontrol", ""],
-      [344, "تَسُوعِين", "tasūʿīn", "çok dokuz olanlar", "kontrol", ""],
-      [345, "تَسُوعَات", "tasūʿāt", "çok dokuz olanlar, müennes", "kontrol", ""],
-      [346, "تَسُّوع", "tassūʿ", "pek çok dokuz olan", "kontrol", ""],
-      [347, "تَسُّوعَة", "tassūʿa", "pek çok dokuz olan, müennes", "kontrol", ""],
-      [348, "تَسُّوعَان", "tassūʿān", "pek çok dokuz olan, iki", "kontrol", ""],
-      [349, "تَسُّوعَتَان", "tassūʿatān", "pek çok dokuz olan, iki, müennes", "kontrol", ""],
-      [350, "تَسُّوعُون", "tassūʿūn", "pek çok dokuz olanlar", "kontrol", ""],
-      [351, "تَسُّوعِين", "tassūʿīn", "pek çok dokuz olanlar", "kontrol", ""],
-      [352, "تَسُّوعَات", "tassūʿāt", "pek çok dokuz olanlar, müennes", "kontrol", ""],
-      [353, "تِسِّيع", "tissīʿ", "dokuz olmada aşırı giden", "kontrol", ""],
-      [354, "تِسِّيعَة", "tissīʿa", "dokuz olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "تِسِّيعَان", "tissīʿān", "dokuz olmada aşırı giden, iki", "kontrol", ""],
-      [356, "تِسِّيعَتَان", "tissīʿatān", "dokuz olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "تِسِّيعُون", "tissīʿūn", "dokuz olmada aşırı gidenler", "kontrol", ""],
-      [358, "تِسِّيعِين", "tissīʿīn", "dokuz olmada aşırı gidenler", "kontrol", ""],
-      [359, "تِسِّيعَات", "tissīʿāt", "dokuz olmada aşırı gidenler, müennes", "kontrol", ""],
-      [360, "تُسَّاع", "tussāʿ", "son derece dokuz olan", "kontrol", ""],
-      [361, "تُسَّاعَة", "tussāʿa", "son derece dokuz olan, müennes", "kontrol", ""],
-      [362, "تُسَّاعَان", "tussāʿān", "son derece dokuz olan, iki", "kontrol", ""],
-      [363, "تُسَّاعَتَان", "tussāʿatān", "son derece dokuz olan, iki, müennes", "kontrol", ""],
-      [364, "تُسَّاعُون", "tussāʿūn", "son derece dokuz olanlar", "kontrol", ""],
-      [365, "تُسَّاعِين", "tussāʿīn", "son derece dokuz olanlar", "kontrol", ""],
-      [366, "تُسَّاعَات", "tussāʿāt", "son derece dokuz olanlar, müennes", "kontrol", ""],
-      [367, "مِتْسَاع", "mitsāʿ", "dokuz olmayı âdet edinmiş", "kontrol", ""],
-      [368, "مِتْسَاعَة", "mitsāʿa", "dokuz olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [369, "مِتْسَاعَان", "mitsāʿān", "dokuz olmayı âdet edinmiş, iki", "kontrol", ""],
-      [370, "مِتْسَاعَتَان", "mitsāʿatān", "dokuz olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [371, "مِتْسَاعُون", "mitsāʿūn", "dokuz olmayı âdet edinmişler", "kontrol", ""],
-      [372, "مِتْسَاعِين", "mitsāʿīn", "dokuz olmayı âdet edinmişler", "kontrol", ""],
-      [373, "مِتْسَاعَات", "mitsāʿāt", "dokuz olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِتْسِيع", "mitsīʿ", "dokuz olmaya düşkün", "kontrol", ""],
-      [375, "مِتْسِيعَة", "mitsīʿa", "dokuz olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِتْسِيعَان", "mitsīʿān", "dokuz olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِتْسِيعَتَان", "mitsīʿatān", "dokuz olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِتْسِيعُون", "mitsīʿūn", "dokuz olmaya düşkünler", "kontrol", ""],
-      [379, "مِتْسِيعِين", "mitsīʿīn", "dokuz olmaya düşkünler", "kontrol", ""],
-      [380, "مِتْسِيعَات", "mitsīʿāt", "dokuz olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "تَسِيع", "tasīʿ", "çok dokuz olan", "kontrol", ""],
-      [382, "تَسِيعَة", "tasīʿa", "çok dokuz olan, müennes", "kontrol", ""],
-      [383, "تَسِيعَان", "tasīʿān", "çok dokuz olan, iki", "kontrol", ""],
-      [384, "تَسِيعَتَان", "tasīʿatān", "çok dokuz olan, iki, müennes", "kontrol", ""],
-      [385, "تَسِيعُون", "tasīʿūn", "çok dokuz olanlar", "kontrol", ""],
-      [386, "تَسِيعِين", "tasīʿīn", "çok dokuz olanlar", "kontrol", ""],
-      [387, "تَسِيعَات", "tasīʿāt", "çok dokuz olanlar, müennes", "kontrol", ""],
-      [388, "تَسَّع", "tassaʿ", "çok dokuz olan", "kontrol", ""],
-      [389, "تَسَّعَة", "tassaʿa", "çok dokuz olan, müennes", "kontrol", ""],
-      [390, "تَسَّعَان", "tassaʿān", "çok dokuz olan, iki", "kontrol", ""],
-      [391, "تَسَّعَتَان", "tassaʿatān", "çok dokuz olan, iki, müennes", "kontrol", ""],
-      [392, "تَسَّعُون", "tassaʿūn", "çok dokuz olanlar", "kontrol", ""],
-      [393, "تَسَّعِين", "tassaʿīn", "çok dokuz olanlar", "kontrol", ""],
-      [394, "تَسَّعَات", "tassaʿāt", "çok dokuz olanlar, müennes", "kontrol", ""]
-    ],
-    "mensûb": [
-      [395, "تَسْعِيّ", "tasʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [397, "تَسَعِيّ", "tasaʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [399, "تِسْعِيّ", "tisʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [401, "تُسْعِيّ", "tusʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [403, "تِسَاعِيّ", "tisāʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [405, "تَاسِعِيّ", "tāsiʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [407, "مَتْسُوعِيّ", "matsūʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [409, "تَسِيعِيّ", "tasīʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [411, "مَتْسَعِيّ", "matsaʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [413, "تَتْسِيعِيّ", "tatsīʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [415, "تَتَاسُعِيّ", "tatāsuʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [417, "إِتْسَاعِيّ", "ʾitsāʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
-      [419, "اِتِّسَاعِيّ", "ittisāʿiyy", "dokuz olma ile ilgili", "kontrol", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "تَسْعِيَّة", "tasʿiyya", "dokuz olanlık", "kontrol", ""],
-      [398, "تَسَعِيَّة", "tasaʿiyya", "dokuz olanlık", "kontrol", ""],
-      [400, "تِسْعِيَّة", "tisʿiyya", "dokuz olanlık", "kontrol", ""],
-      [402, "تُسْعِيَّة", "tusʿiyya", "dokuz olanlık", "kontrol", ""],
-      [404, "تِسَاعِيَّة", "tisāʿiyya", "dokuz olanlık", "kontrol", ""],
-      [406, "تَاسِعِيَّة", "tāsiʿiyya", "dokuz olanlık", "kontrol", ""],
-      [408, "مَتْسُوعِيَّة", "matsūʿiyya", "dokuz olanlık", "kontrol", ""],
-      [410, "تَسِيعِيَّة", "tasīʿiyya", "dokuz olanlık", "kontrol", ""],
-      [412, "مَتْسَعِيَّة", "matsaʿiyya", "dokuz olanlık", "kontrol", ""],
-      [414, "تَتْسِيعِيَّة", "tatsīʿiyya", "dokuz olanlık", "kontrol", ""],
-      [416, "تَتَاسُعِيَّة", "tatāsuʿiyya", "dokuz olanlık", "kontrol", ""],
-      [418, "إِتْسَاعِيَّة", "ʾitsāʿiyya", "dokuz olanlık", "kontrol", ""],
-      [420, "اِتِّسَاعِيَّة", "ittisāʿiyya", "dokuz olanlık", "kontrol", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "تَسَاع", "tasāʿ", "dokuz olma", "kontrol", ""],
-      [422, "تُسُوع", "tusūʿ", "dokuz olma", "kontrol", ""],
-      [423, "تِسَاع", "tisāʿ", "dokuz olma", "kontrol", ""],
-      [424, "تُسْع", "tusʿ", "dokuz olma", "kontrol", ""],
-      [425, "تَسَاعَة", "tasāʿa", "dokuz olma", "kontrol", ""],
-      [426, "تِسَاعَة", "tisāʿa", "dokuz olma", "kontrol", ""],
-      [427, "تُسُوعَة", "tusūʿa", "dokuz olma", "kontrol", ""],
-      [428, "تَسْع", "tasʿ", "dokuz olma", "kontrol", ""],
-      [429, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "تَاسُوع", "tāsūʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [432, "تَسَعَة", "tasaʿa", "dokuz olma türünden şey", "kontrol", ""],
-      [433, "تُسَعَة", "tusaʿa", "dokuz olma türünden şey", "kontrol", ""],
-      [434, "أُتْسُوعَة", "ʾutsūʿa", "dokuz olma türünden şey", "kontrol", ""],
-      [435, "تَوْسَع", "tawsaʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [437, "تَيْسَع", "taysaʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [439, "تَسْع", "tasʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [441, "تَسَع", "tasaʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [443, "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
-      [445, "تُسْع", "tusʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [447, "تَسِيع", "tasīʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [449, "تِسَع", "tisaʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [451, "تُسُع", "tusuʿ", "dokuz olma türünden şey", "kontrol", ""],
-      [453, "تَسَاع", "tasāʿ", "dokuz olma türünden şey", "kontrol", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "تَاسُوعَة", "tāsūʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [436, "تَوْسَعَة", "tawsaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [438, "تَيْسَعَة", "taysaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [440, "تَسْعَة", "tasʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [442, "تَسَعَة", "tasaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [444, "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
-      [446, "تُسْعَة", "tusʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [448, "تَسِيعَة", "tasīʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [450, "تِسَعَة", "tisaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [452, "تُسُعَة", "tusuʿa", "dokuz olma türünden bir tane", "kontrol", ""],
-      [454, "تَسَاعَة", "tasāʿa", "dokuz olma türünden bir tane", "kontrol", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَتْسَاع", "ʾatsāʿ", "dokuz olmalar", "kontrol", ""],
-      [456, "أَتْسِعَة", "ʾatsiʿa", "dokuz olmalar", "kontrol", ""],
-      [457, "أَتَاسِع", "ʾatāsiʿ", "dokuz olmalar", "kontrol", ""],
-      [458, "أَتَاسِيع", "ʾatāsīʿ", "dokuz olmalar", "kontrol", ""],
-      [459, "تُسُوع", "tusūʿ", "dokuz olmalar", "kontrol", ""],
-      [460, "تُسُع", "tusuʿ", "dokuz olmalar", "kontrol", ""],
-      [461, "تِسَاع", "tisāʿ", "dokuz olmalar", "kontrol", ""],
-      [462, "تِسَع", "tisaʿ", "dokuz olmalar", "kontrol", ""],
-      [463, "تِسَعَة", "tisaʿa", "dokuz olmalar", "kontrol", ""],
-      [464, "تُسَع", "tusaʿ", "dokuz olmalar", "kontrol", ""],
-      [465, "تُسَعاء", "tusaʿāʾ", "dokuz olmalar", "kontrol", ""],
-      [466, "تَسَعَة", "tasaʿa", "dokuz olmalar", "kontrol", ""],
-      [467, "تُسَّاع", "tussāʿ", "dokuz olmalar", "kontrol", ""],
-      [468, "تَسَاع", "tasāʿ", "dokuz olmalar", "kontrol", ""],
-      [469, "تَسَع", "tasaʿ", "dokuz olmalar", "kontrol", ""],
-      [470, "مَتَاسِع", "matāsiʿ", "dokuz olmalar", "kontrol", ""],
-      [471, "مَتَاسِيع", "matāsīʿ", "dokuz olmalar", "kontrol", ""],
-      [472, "تَوَاسِع", "tawāsiʿ", "dokuz olmalar", "kontrol", ""],
-      [473, "أَتْسُع", "ʾatsuʿ", "dokuz olmalar", "kontrol", ""],
-      [474, "تُسَّع", "tussaʿ", "dokuz olmalar", "kontrol", ""],
-      [475, "تَسَائِع", "tasāʾiʿ", "dokuz olmalar", "kontrol", ""],
-      [476, "تُسَيْع", "tusayʿ", "dokuz olmalar", "kontrol", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَتْسَاعَات", "ʾatsāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [478, "أَتْسِعَات", "ʾatsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [479, "أَتَاسِعَات", "ʾatāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [480, "أَتَاسِيعَات", "ʾatāsīʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [481, "تُسُوعَات", "tusūʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [482, "تُسُعَات", "tusuʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [483, "تِسَاعَات", "tisāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [484, "تِسَعَات", "tisaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [485, "تِسَعَات", "tisaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [486, "تُسَعَات", "tusaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [487, "تُسَعاآت", "tusaʿāʾāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [488, "تَسَعَات", "tasaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [489, "تُسَّاعَات", "tussāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [490, "تَسَاعَات", "tasāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [491, "تَسَعَات", "tasaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [492, "مَتَاسِعَات", "matāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [493, "مَتَاسِيعَات", "matāsīʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [494, "تَوَاسِعَات", "tawāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [495, "أَتْسُعَات", "ʾatsuʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [496, "تُسَّعَات", "tussaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [497, "تَسَائِعَات", "tasāʾiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
-      [498, "تُسَيْعَات", "tusayʿāt", "dokuz olmalar topluluğu", "kontrol", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "تسع",
-      "turkce": "Tis'a: dokuz"
-    },
-    "osmanlica_lugatler": {
-      "تِسْع": {
-        "sorgular": ["tis"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "tis",
-            "arapca": [],
-            "mana": "اَلتِّسْعَةُ [et-tisat] (tânın kesriyle) Dokuz adede denir. Kâide üzere aded müzekkerdir, müennesinde تِسْعٌ denir; yukâlu: تِسْعَةُ رِجَالٍ ve تِسْعُ نِسْوَةٍ ve minhu kavluhu taâlâ: ﴿وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ﴾ Müellif işbu beytte o dokuz âyâtı cem eylemiştir: “عَصًا سَنَةٌ بَحْرٌ جَرَادٌ وَقُمَّلٌ || دَمٌ وَيَدٌ بَعْدَ الضَّفَادِعِ طُوفَانُ” Ve تِسْعٌ [tis] Devenin susuz kalıp suvardıkları günden bir günün adıdır ki dokuzuncu gün suya götürmektir.",
-            "id": 1104858,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "tis",
-            "arapca": [],
-            "mana": "اَلتِّسْعُ [et-tis] (kezâlik kesri ile) Müennesi. Ve تِسْعٌ [tis] Kezâlik deve suvarma günlerinden bir gündür.",
-            "id": 1104860,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kubbe Altı",
-            "madde": "TİS’A",
-            "arapca": ["تسعه"],
-            "mana": "( ﺗﺴﻌﻪ ) i. ve sıf. (Ar. tis‘a ) Dokuz, dokuzuncu: Dedenden rif’atin olsun hümâyun / Ki tis’a seb’adan efzundur efzun (Necâtî Bey).",
-            "id": 293964,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          },
-          {
-            "eser": "Kubbe Altı",
-            "madde": "TİS’İN – TİS’UN",
-            "arapca": [" تسعون", "تسعين"],
-            "mana": "( ﺗﺴﻌﻮﻥ – ﺗﺴﻌﻴﻦ ) i. ve sıf. (Ar. tis‘ “dokuz”dan çoğul eki -іn <> -ūn ile tis‘іn <> tis‘ūn ) Doksan, doksanıncı [Bilhassa vakfiyelerde geçer].",
-            "id": 293965,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          }
-        ]
-      },
-      "تِسْعَة": {
-        "sorgular": ["tisae"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "تِسْعٌ",
-        "metin": "(تِسْعٌ) التَّاءُ وَالسِّينُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التِّسْعَةُ فِي الْعَدَدِ. تَقُولُ تَسَعْتُ الْقَوْمَ، أَيْ صِرْتُ تَاسِعَهُمْ. وَأَتْسَعْتُ الشَّيْءَ إِذَا كَانَ ثَمَانِيَةً فَأَتْمَمْتُهُ تِسْعَةً. وَالتِّسْعُ ثَلَاثُ لَيَالٍ مِنَ الشَّهْرِ آخَرُ لَيْلَةٍ مِنْهَا اللَّيْلَةُ التَّاسِعَةُ. وَتَسَعْتُ الْقَوْمَ أَتْسَعُهُمْ إِذَا أَخَذْتَ تُسْعَ أَمْوَالِهِمْ.\n[بَابُ التَّاءِ وَالشِّينِ وَمَا يُثَلِّثُهُمَا]\nمُهْمَلٌ.\n[بَابُ التَّاءِ وَالْعَيْنِ وَمَا يُثَلِّثُهُمَا]"
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "التاء والسين",
-      "baslik": "تسع",
-      "mihveri": "",
-      "sesler": "",
-      "tam_metin": "{إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً وَلِيَ نَعْجَةٌ وَاحِدَةٌ} [ص: 23].\nالتِسْع والتِسْعة من العدد: معروف، وهذه هي دلالتها، إذ لا يوجد في التركيب أي استعمال آخر {إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً} وأرجح أن يكون هذا اللفظ مأخوذًا من السَعة (1).",
-      "fasil_ozeti": ""
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 7,
-      "ilk_yer": "17:101:4:1",
-      "tur": {
-        "N": 7
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "تِسْع": 5,
-        "تِسْعَة": 2
-      },
-      "bicimler": {
-        "تِسْعَ": 1,
-        "تِسْعًا": 1,
-        "تِسْعِ": 1,
-        "تِسْعَةُ": 1,
-        "تِسْعٌ": 1,
-        "تِسْعُونَ": 1,
-        "تِسْعَةَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "TSʕ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab TSʕ تسع BP … • HDAL • © SG | 15Feb2021 √TSʕ “root” ▪ TSʕ_1 ‘nine’ ↗ tisʕat ▪ TSʕ_2 ‘…’ ↗ … ▪ TSʕ_3 ‘…’ ↗ … ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘this root revolves around the number nine’ ▪ … ▪ … ▪ … ▪ … … … … Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "تسعة",
-        "u": "تسعة",
-        "p": "num",
-        "h": "ar-numeral",
-        "e": "تِسْعَة • (tisʕa) f (masculine تِسْع (tisʕ))",
-        "t": "Etymology tree\nProto-Afroasiatic?\nProto-Semitic *tišʕatum\nArabic تسعة\nInherited from Proto-Semitic *tišʕatum.",
-        "g": ["nine"],
-        "r": ["tisʕa"],
-        "ipa": ["/tis.ʕa/"],
-        "ds": [
-          ["arz", "تسعة", "tisʕa"],
-          ["mt", "disgħa", ""],
-          ["ary", "تسعة", "tisʕa"],
-          ["ary", "تسعود", "tisʕūd"],
-          ["sw", "tisa", ""]
-        ],
-        "el": [
-          ["*tišʕatum", "Reconstruction:Proto-Semitic/tišʕ-"],
-          ["*tišʕatum", "Reconstruction:Proto-Semitic/tišʕ-"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "تسعة عشر",
-        "u": "تسعة عشر",
-        "p": "num",
-        "h": "ar-numeral",
-        "e": "تِسْعَةَ عَشَرَ • (tisʕata ʕašara) m (feminine تِسْعَ عَشْرَةَ (tisʕa ʕašrata))",
-        "t": "From تِسْعَة (tisʕa) and عَشَرَة (ʕašara).",
-        "g": ["nineteen"],
-        "r": ["tisʕata ʕašara"],
-        "ipa": ["/tis.ʕa.ta ʕa.ʃa.ra/"],
-        "el": [
-          ["تِسْعَة", "تسعة#Arabic"],
-          ["عَشَرَة", "عشرة#Arabic"]
-        ],
-        "k": "تسع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسعون",
-        "u": "تسعون",
-        "p": "num",
-        "n": "1",
-        "h": "ar-numeral",
-        "e": "تِسْعُون • (tisʕūn) m or f (oblique تِسْعِين (tisʕīn))",
-        "t": "From تِسْع (tisʕ, “nine”) + ـُون (-ūn).",
-        "s": [
-          ["number box", ""],
-          ["af", "تِسْع (tisʕ, “nine”) + ـُون (-ūn)"]
-        ],
-        "g": ["ninety"],
-        "r": ["tisʕūn"],
-        "ipa": ["/tis.ʕuːn/"],
-        "el": [
-          ["تِسْع", "تسع#Arabic"],
-          ["nine", "nine"],
-          ["ـُون", "ون#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "تاسع",
-        "u": "تاسع",
-        "p": "adj",
-        "h": "ar-adj",
-        "e": "تَاسِع • (tāsiʕ) (feminine تَاسِعَة (tāsiʕa))",
-        "g": ["ninth"],
-        "r": ["tāsiʕ"],
-        "ipa": ["/taː.siʕ/"],
-        "k": "تسع",
-        "yol": "kök"
-      },
-      {
-        "w": "تسع",
-        "u": "تسع",
-        "p": "num",
-        "n": "1",
-        "h": "ar-numeral",
-        "e": "تِسْع • (tisʕ) m (feminine تِسْعَة (tisʕa))",
-        "t": "Inherited from Proto-Semitic *tišʕum.",
-        "g": ["masculine of تِسْعَة (tisʕa, “nine”)"],
-        "tag": ["form-of", "masculine"],
-        "fo": ["تِسْعَة"],
-        "r": ["tisʕ"],
-        "ipa": ["/tisʕ/"],
-        "el": [
-          ["*tišʕum", "Reconstruction:Proto-Semitic/tišʕ-"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "تسع",
-        "u": "تسع",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "تُسُع or تُسْع • (tusuʕ or tusʕ) m (plural أَتْسَاع (ʔatsāʕ))",
-        "s": [
-          ["number box", ""]
-        ],
-        "g": ["one ninth"],
-        "r": ["tusuʕ", "tusʕ"],
-        "ipa": ["/tu.suʕ/", "/tusʕ/"],
-        "yol": "müştak"
-      },
-      {
-        "w": "تاسع عشر",
-        "u": "تاسع عشر",
-        "p": "adj",
-        "h": "ar-adj",
-        "e": "تَاسِعَ عَشَرَ • (tāsiʕa ʕašara) (feminine تَاسِعَةَ عَشْرَةَ (tāsiʕata ʕašrata))",
-        "g": ["nineteenth"],
-        "r": ["tāsiʕa ʕašara"],
-        "k": "تسع",
-        "yol": "kök"
-      },
-      {
-        "w": "توسعة",
-        "u": "توسعة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "تَوْسِعَة • (tawsiʕa) f",
-        "t": "Verbal noun of وَسَّعَ (wassaʕa).",
-        "s": [
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "g": ["development, expansion, extension"],
-        "r": ["tawsiʕa"],
-        "ipa": ["/taw.si.ʕa/"],
-        "ds": [
-          ["fa", "توسعه", ""],
-          ["ota", "توسعه", ""]
-        ],
-        "el": [
-          ["وَسَّعَ", "وسع#Arabic"]
-        ],
-        "yol": "müştak"
-      }
-    ],
-    "renk_sozluk": {
-      "تسع": "dokuz",
-      "تسعا": "dokuz",
-      "تسعي": "çaba gösterdi",
-      "تسعة": "dokuz",
-      "وتسعون": "dokuz"
-    },
-    "arabic_ontology": [
-      {
-        "id": "51779",
-        "arapca": ["مُتَّسَعٌ"],
-        "ingilizce": [],
-        "tanim": "صفة الشكل الذي له تسعة أضلاع",
-        "misal": "صمم النجار طأولة /على شكل _",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "293169",
-        "arapca": ["تِسْعَةٌ"],
-        "ingilizce": ["9", "nine", "IX"],
-        "tanim": "عَدَد طَبيعي مُرَكَّب يَدُلُّ عَلى قِيمَة مَجْموع ثَمانِيَة وَواحِد، وَهُوَ أَصْغَر مِنْ العَدَد عَشْرَة",
-        "misal": "العَدَد تِسْعَة هُوَ عَدَد فَرْدي",
-        "veri_kaynagi": "200",
-        "ust": [
-          ["alt_tur_of", "293248", "Composite Number"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "تِسْع": [
-        {
-          "eser": "Vankulu",
-          "madde": "tis",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Müennesi.",
-              "misaller": []
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "تِسْعٌ [tis] Kezâlik deve suvarma günlerinden bir gündür.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلتِّسْعُ",
-          "okunus": "et-tis",
-          "koken": "kezâlik kesri ile"
-        }
-      ],
-      "تَاسِع": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "TÂSİ",
-          "yazilis": "ﺗﺎﺳﻊ",
-          "tur": "sıf.",
-          "koken": "Ar. tis‘a “dokuz”dan tāsi‘",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Dokuzuncu",
-              "misaller": [
-                ["Fasl-ı tâsi.", ""],
-                ["Bab-ı tâsi.", ""],
-                ["Yükselir bunda duâ-yı müstecâb-ı mü’minin / Cilve-gâh eyler verâ-yı asumân-ı tâsii", "Emirî"],
-                ["● Tâsia", "ﺗﺎﺳﻌﻪ"],
-                ["Derece-i tâsia.", ""],
-                ["Bk. TÂSİA ● Tâsian", "ﺗﺎﺳﻌﺎً"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "tasi",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Dokuzuncu demektir; yukâlu: هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
-              "misaller": [
-                [
-                  "هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
-                  ""
-                ]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلتَّاسِعُ",
-          "okunus": "et-tâsi",
-          "koken": ""
-        },
-        {
-          "eser": "Luggat",
-          "madde": "tâsi'",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Dokuzuncu",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "تَاسِعَة": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "TÂSİA",
-          "yazilis": "ﺗﺎﺳﻌﻪ",
-          "tur": "i.",
-          "koken": "Ar. tāsi‘ “dokuzuncu”dan tāsi‘a",
-          "manalar": [
-            {
-              "etiket": "târih.",
-              "tanim": "Osmanlılar’da kadılara verilen bir rütbe",
-              "misaller": [
-                ["derecelerine kadar çıkardı", "İsmâil H. Uzunçarşılı"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "تِسْعَة": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "TİS’A",
-          "yazilis": "ﺗﺴﻌﻪ",
-          "tur": "i.",
-          "koken": "",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "ve sıf. (Ar. tis‘a ) Dokuz, dokuzuncu",
-              "misaller": [
-                ["Dedenden rif’atin olsun hümâyun / Ki tis’a seb’adan efzundur efzun", "Necâtî Bey"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Luggat",
-          "madde": "tis'a",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Dokuz",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "et-tisat",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Dokuz adede denir. Kâide üzere aded müzekkerdir, müennesinde تِسْعٌ denir; yukâlu: تِسْعَةُ رِجَالٍ ve تِسْعُ نِسْوَةٍ ve minhu kavluhu taâlâ: ﴿وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ﴾ Müellif işbu beytte o dokuz âyâtı cem eylemiştir: “عَصًا سَنَةٌ بَحْرٌ جَرَادٌ وَقُمَّلٌ || دَمٌ وَيَدٌ بَعْدَ الضَّفَادِعِ طُوفَانُ” Ve تِسْعٌ [tis] Devenin susuz kalıp suvardıkları günden bir günün adıdır ki dokuzuncu gün suya götürmektir.",
-              "misaller": [
-                ["تِسْعَةُ رِجَالٍ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلتِّسْعَةُ",
-          "okunus": "et-tisat",
-          "koken": "tânın kesriyle"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "et-tisat",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Aded-i müzekkerdir.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلتِّسْعَةُ",
-          "okunus": "et-tisat",
-          "koken": "tânın kesri ve sînin sükûnuyla"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "تِسْعٌ (Tis'un)",
-          "metin": "(تِسْعٌ) Tâ, sîn ve ayn harfleri tek bir kelimedir ve sayıdaki dokuzdur (et-tis'a). 'Tesa'tü'l-kavme' yani onların dokuzuncusu oldum dersin. Sekiz olan bir şeyi dokuza tamamladığında 'etsa'tü'ş-şey'e' dersin. et-Tis', ayın son gecesi dokuzuncu gece olan üç gecedir. 'Tesa'tü'l-kavme etseuhüm' ise mallarının dokuzda birini aldığında söylenir.\n[Tâ'nın Şîn ile ve Üçüncüsü Olan Harflerin Babı]\nMühmeldir.\n[Tâ'nın Ayn ile ve Üçüncüsü Olan Harflerin Babı]"
-        }
-      ],
-      "cebel_mihveri": "",
-      "arabic_ontology": [
-        {
-          "tanim": "Çoğu cihetiyle genişleyerek muayyen bir şey veya iş hakkında bakışını ve tefekkürünü uzattı.",
-          "misal": "Zeyd kaside üzerindeki nazarını _ (genişletti/uzattı)."
-        },
-        {
-          "tanim": "Bir işte haddi aştı.",
-          "misal": "Azgınlıkta haddi _ (aştı/genişletti)."
-        },
-        {
-          "tanim": "Mesahası evvelkinden daha büyük ve daha iri hale geldi.",
-          "misal": "Sular çekildikten sonra sahil _ (genişledi)."
-        },
-        {
-          "tanim": "Mesahası büyük olan mekan veya şeyin sıfatı.",
-          "misal": "Tabiatta ve _ (geniş) bir mekanda gününü geçirmek ne güzeldir!"
-        },
-        {
-          "tanim": "Bir işte uzatmak ve mübalağa etmek.",
-          "misal": "Fâris işinde o kadar _ (ileri gitti/uzattı) ki boyun ağrılarından muzdarip hale geldi."
-        },
-        {
-          "tanim": "Bir şeyin uçsuz bucaksız ve büyük mesahalı olması...",
-          "misal": "Mekanın _ (genişliği) karşısında hayrete düştüm; zira düğün açık havada, düz bir sahada idi."
-        },
-        {
-          "tanim": "Boyunu uzattı ve yaydı.",
-          "misal": "Kasabamdaki uzak mıntıkalarda imar ve binalar _ (yayıldı/genişledi)."
-        },
-        {
-          "tanim": "Mesahasının büyüklüğü ve taraflarının uzanmasıyla temayüz eden bir mekanın hassası.",
-          "misal": "İçinde merasimi düzenlediğim mekanın _ (genişliği) beni hayrete düşürdü."
-        },
-        {
-          "tanim": "İzin verilen azamî haddi aşacak şekilde şeyi artırma ve büyütme ameliyesi.",
-          "misal": "Dünya nüfusu mütemadi bir _ (artış/genişleme) içindedir."
-        },
-        {
-          "tanim": "Bir şeyin kemiyet veya mesahasının makul haddin fevkinde artması.",
-          "misal": "Son ilan, satışların _ (genişlemesine/artmasına) katkıda bulundu."
-        },
-        {
-          "tanim": "Maddî mevcudun ölçüsünün dikey olarak artması ameliyesi.",
-          "misal": "Hararet elektrik tellerinin _ (uzamasına/genişlemesine) sebep olur."
-        },
-        {
-          "tanim": "Şeyin veya mekanın mesahasını ve hacmini artırma fiili.",
-          "misal": "Bitişik araziyi de ona kattıklarında bahçe _ (genişledi)."
-        },
-        {
-          "tanim": "Genişlik, şümul ve yayılma sahibi olan şey.",
-          "misal": "Dağın bir ucundan zirvesine kadar _ (genişliğini) gördüm."
-        },
-        {
-          "tanim": "Şeyin kemiyet veya hacminde evvelki haline yahut lazım olan hadde göre ziyadeleşme.",
-          "misal": "Tabip hastadaki kan pompalamasının zayıflığının kalp kasında _ (genişlemeye/büyümeye) yol açtığını söyledi."
-        },
-        {
-          "tanim": "Cismin sathının, hacminin, mesahasının veya boyunun artması.",
-          "misal": "Evin çatısını _ (genişletme) işini yaptı."
-        },
-        {
-          "tanim": "Şeyin kemiyet veya hacminde evvelki haline yahut lazım olan hadde göre ziyadeleşme.",
-          "misal": "Tabip hastadaki kan pompalamasının zayıflığının kalp kasında _ (büyümeye) yol açtığını söyledi."
-        },
-        {
-          "tanim": "Mekan genişledi ve tarafları yayıldı.",
-          "misal": "Âmir iki yeni oda ilave edince ev _ (genişledi)."
-        },
-        {
-          "tanim": "Şu an olduğundan daha büyük hale gelmesi için imkanı vardır.",
-          "misal": "Evinin önünde topraktan bir _ (genişlik/meydan) vardır."
-        },
-        {
-          "tanim": "Birbirine bitişik olmayan kum kayalarındaki parçacıkların, aralarındaki boşlukların hacmi mümkün olan en büyük hale gelecek şekilde dizilimini iade etme ameliyesi ki bununla bizzat kayanın hacmi artar.",
-          "misal": "Araştırmacı kayalarda vuku bulan _ (genleşme/dilatasyon) hadisesini izah etti."
-        },
-        {
-          "tanim": "Dokuz kenarı olan şeklin sıfatı (dokuzgen/mütessa').",
-          "misal": "Marangoz _ (dokuzgen) şeklinde bir masa tasarladı."
-        },
-        {
-          "tanim": "Tarafları uzanmış ve menzili geniş maddî mevcudun sıfatı.",
-          "misal": "_ (geniş) bir yerde oturuyordu."
-        },
-        {
-          "tanim": "İçinde eşyanın veya şahısların yer aldığı tahdit edilmiş coğrafî mesaha.",
-          "misal": "Ömer otobüsteki boş _ (yere/genişliğe) oturması için arkadaşını çağırdı."
-        },
-        {
-          "tanim": "Şeyin büyütülmeye ve genişletilmeye istidatlı olmasıdır.",
-          "misal": "Naylon _ (genişleyebilir/esnek) maddelerden addedilir."
-        },
-        {
-          "tanim": "Sekiz ile birin toplamı kıymetine delalet eden mürekkep tabii sayı olup on sayısından küçüktür (dokuz).",
-          "misal": "Dokuz sayısı tek sayıdır."
-        }
-      ],
-      "etymarab": "√TSʕ kökü: TSʕ_1 'dokuz' (↗ tisʕat). BAH2008'e göre Klasik Arapçada mana yelpazesi: 'bu kök dokuz sayısı etrafında döner'.",
-      "kaikki_vikisozluk": [
-        {
-          "g": ["dokuz"]
-        },
-        {
-          "g": ["on dokuz"]
-        },
-        {
-          "g": ["doksan"]
-        },
-        {
-          "g": ["dokuzuncu"]
-        },
-        {
-          "g": ["تِسْعَة (tis'a, 'dokuz') kelimesinin müzekkeri"]
-        },
-        {
-          "g": ["dokuzda bir"]
-        },
-        {
-          "g": ["on dokuzuncu"]
-        },
-        {
-          "g": ["geliştirme, genişletme, tevsi"]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 7,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "تس",
+  "ses": {
     "harf": "ت",
+    "fasil": "تس",
     "mahrec": "nit‘iyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "anlam": "Tis'a: dokuz",
+  "esas_manalar": "dokuz",
+  "lugat": {
+    "Vankulu": [
+      {
+        "madde": "tis",
+        "koken": "kezâlik kesri ile",
+        "yazilis": "اَلتِّسْعُ",
+        "okunus": "et-tis",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Müennesi."
+          },
+          {
+            "no": 2,
+            "tanim": "تِسْعٌ [tis] Kezâlik deve suvarma günlerinden bir gündür."
+          }
+        ],
+        "kelime": ["تِسْع"]
+      },
+      {
+        "madde": "et-tisat",
+        "koken": "tânın kesri ve sînin sükûnuyla",
+        "yazilis": "اَلتِّسْعَةُ",
+        "okunus": "et-tisat",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Aded-i müzekkerdir."
+          }
+        ],
+        "kelime": ["تِسْعَة"]
+      },
+      {
+        "madde": "tis",
+        "metin": "اَلتِّسْعُ [et-tis] (kezâlik kesri ile) Müennesi. Ve تِسْعٌ [tis] Kezâlik deve suvarma günlerinden bir gündür.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["تِسْع"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "TÂSİ",
+        "tur": "sıf.",
+        "koken": "Ar. tis‘a “dokuz”dan tāsi‘",
+        "yazilis": "ﺗﺎﺳﻊ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Dokuzuncu",
+            "misaller": [
+              ["Fasl-ı tâsi.", ""],
+              ["Bab-ı tâsi.", ""],
+              ["Yükselir bunda duâ-yı müstecâb-ı mü’minin / Cilve-gâh eyler verâ-yı asumân-ı tâsii", "Emirî"],
+              ["● Tâsia", "ﺗﺎﺳﻌﻪ"],
+              ["Derece-i tâsia.", ""],
+              ["Bk. TÂSİA ● Tâsian", "ﺗﺎﺳﻌﺎً"]
+            ]
+          }
+        ],
+        "kelime": ["تَاسِع"]
+      },
+      {
+        "madde": "TÂSİA",
+        "tur": "i.",
+        "koken": "Ar. tāsi‘ “dokuzuncu”dan tāsi‘a",
+        "yazilis": "ﺗﺎﺳﻌﻪ",
+        "manalar": [
+          {
+            "no": 1,
+            "etiket": "târih.",
+            "tanim": "Osmanlılar’da kadılara verilen bir rütbe",
+            "misaller": [
+              ["derecelerine kadar çıkardı", "İsmâil H. Uzunçarşılı"]
+            ]
+          }
+        ],
+        "kelime": ["تَاسِعَة"]
+      },
+      {
+        "madde": "TİS’A",
+        "tur": "i.",
+        "yazilis": "ﺗﺴﻌﻪ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve sıf. (Ar. tis‘a ) Dokuz, dokuzuncu",
+            "misaller": [
+              ["Dedenden rif’atin olsun hümâyun / Ki tis’a seb’adan efzundur efzun", "Necâtî Bey"]
+            ]
+          }
+        ],
+        "kelime": ["تِسْعَة"]
+      },
+      {
+        "madde": "TİS’A",
+        "metin": "( ﺗﺴﻌﻪ ) i. ve sıf. (Ar. tis‘a ) Dokuz, dokuzuncu: Dedenden rif’atin olsun hümâyun / Ki tis’a seb’adan efzundur efzun (Necâtî Bey).",
+        "arapca": ["تسعه"],
+        "eslesme": "arapça yazılış kökle uyuştu",
+        "kelime": ["تِسْع"]
+      },
+      {
+        "madde": "TİS’İN – TİS’UN",
+        "metin": "( ﺗﺴﻌﻮﻥ – ﺗﺴﻌﻴﻦ ) i. ve sıf. (Ar. tis‘ “dokuz”dan çoğul eki -іn <> -ūn ile tis‘іn <> tis‘ūn ) Doksan, doksanıncı [Bilhassa vakfiyelerde geçer].",
+        "arapca": [" تسعون", "تسعين"],
+        "eslesme": "arapça yazılış kökle uyuştu",
+        "kelime": ["تِسْع"]
+      }
+    ],
+    "Kamus": [
+      {
+        "madde": "tasi",
+        "yazilis": "اَلتَّاسِعُ",
+        "okunus": "et-tâsi",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Dokuzuncu demektir; yukâlu: هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
+            "misaller": [
+              [
+                "هُوَ تَاسِعُ تِسْعَةٍ وَتَاسِعُ ثَمَانِيَةٍ بِالْإِضَافَةِ وَلاَ يَجُوزُ تَاسِعٌ تِسْعَةً بِرَفْعِ التَّاسِعِ وَنَصْبِ التِّسْعَةِ",
+                ""
+              ]
+            ]
+          }
+        ],
+        "kelime": ["تَاسِع"]
+      },
+      {
+        "madde": "et-tisat",
+        "koken": "tânın kesriyle",
+        "yazilis": "اَلتِّسْعَةُ",
+        "okunus": "et-tisat",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Dokuz adede denir. Kâide üzere aded müzekkerdir, müennesinde تِسْعٌ denir; yukâlu: تِسْعَةُ رِجَالٍ ve تِسْعُ نِسْوَةٍ ve minhu kavluhu taâlâ: ﴿وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ﴾ Müellif işbu beytte o dokuz âyâtı cem eylemiştir: “عَصًا سَنَةٌ بَحْرٌ جَرَادٌ وَقُمَّلٌ || دَمٌ وَيَدٌ بَعْدَ الضَّفَادِعِ طُوفَانُ” Ve تِسْعٌ [tis] Devenin susuz kalıp suvardıkları günden bir günün adıdır ki dokuzuncu gün suya götürmektir.",
+            "misaller": [
+              ["تِسْعَةُ رِجَالٍ", ""]
+            ]
+          }
+        ],
+        "kelime": ["تِسْعَة"]
+      },
+      {
+        "madde": "tis",
+        "metin": "اَلتِّسْعَةُ [et-tisat] (tânın kesriyle) Dokuz adede denir. Kâide üzere aded müzekkerdir, müennesinde تِسْعٌ denir; yukâlu: تِسْعَةُ رِجَالٍ ve تِسْعُ نِسْوَةٍ ve minhu kavluhu taâlâ: ﴿وَلَقَدْ آتَيْنَا مُوسَى تِسْعَ آيَاتٍ﴾ Müellif işbu beytte o dokuz âyâtı cem eylemiştir: “عَصًا سَنَةٌ بَحْرٌ جَرَادٌ وَقُمَّلٌ || دَمٌ وَيَدٌ بَعْدَ الضَّفَادِعِ طُوفَانُ” Ve تِسْعٌ [tis] Devenin susuz kalıp suvardıkları günden bir günün adıdır ki dokuzuncu gün suya götürmektir.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["تِسْع"]
+      }
+    ],
+    "Luggat": [
+      {
+        "madde": "tâsi'",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Dokuzuncu"
+          }
+        ],
+        "kelime": ["تَاسِع"]
+      },
+      {
+        "madde": "tis'a",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Dokuz"
+          }
+        ],
+        "kelime": ["تِسْعَة"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "تِسْعٌ",
+      "metin": "(تِسْعٌ) التَّاءُ وَالسِّينُ وَالْعَيْنُ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ التِّسْعَةُ فِي الْعَدَدِ. تَقُولُ تَسَعْتُ الْقَوْمَ، أَيْ صِرْتُ تَاسِعَهُمْ. وَأَتْسَعْتُ الشَّيْءَ إِذَا كَانَ ثَمَانِيَةً فَأَتْمَمْتُهُ تِسْعَةً. وَالتِّسْعُ ثَلَاثُ لَيَالٍ مِنَ الشَّهْرِ آخَرُ لَيْلَةٍ مِنْهَا اللَّيْلَةُ التَّاسِعَةُ. وَتَسَعْتُ الْقَوْمَ أَتْسَعُهُمْ إِذَا أَخَذْتَ تُسْعَ أَمْوَالِهِمْ.\n[بَابُ التَّاءِ وَالشِّينِ وَمَا يُثَلِّثُهُمَا]\nمُهْمَلٌ.\n[بَابُ التَّاءِ وَالْعَيْنِ وَمَا يُثَلِّثُهُمَا]",
+      "baslik_tr": "تِسْعٌ (Tis'un)",
+      "metin_tr": "(تِسْعٌ) Tâ, sîn ve ayn harfleri tek bir kelimedir ve sayıdaki dokuzdur (et-tis'a). 'Tesa'tü'l-kavme' yani onların dokuzuncusu oldum dersin. Sekiz olan bir şeyi dokuza tamamladığında 'etsa'tü'ş-şey'e' dersin. et-Tis', ayın son gecesi dokuzuncu gece olan üç gecedir. 'Tesa'tü'l-kavme etseuhüm' ise mallarının dokuzda birini aldığında söylenir.\n[Tâ'nın Şîn ile ve Üçüncüsü Olan Harflerin Babı]\nMühmeldir.\n[Tâ'nın Ayn ile ve Üçüncüsü Olan Harflerin Babı]"
+    }
+  ],
+  "cebel": {
+    "fasil": "التاء والسين",
+    "baslik": "تسع",
+    "mihveri": "",
+    "tam_metin": "{إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً وَلِيَ نَعْجَةٌ وَاحِدَةٌ} [ص: 23].\nالتِسْع والتِسْعة من العدد: معروف، وهذه هي دلالتها، إذ لا يوجد في التركيب أي استعمال آخر {إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً} وأرجح أن يكون هذا اللفظ مأخوذًا من السَعة (1).",
+    "fasil_ozeti": "",
+    "mihveri_tr": ""
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "51779",
+      "arapca": ["مُتَّسَعٌ"],
+      "ingilizce": [],
+      "tanim": "صفة الشكل الذي له تسعة أضلاع",
+      "misal": "صمم النجار طأولة /على شكل _",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "293169",
+      "arapca": ["تِسْعَةٌ"],
+      "ingilizce": ["9", "nine", "IX"],
+      "tanim": "عَدَد طَبيعي مُرَكَّب يَدُلُّ عَلى قِيمَة مَجْموع ثَمانِيَة وَواحِد، وَهُوَ أَصْغَر مِنْ العَدَد عَشْرَة",
+      "misal": "العَدَد تِسْعَة هُوَ عَدَد فَرْدي",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "293248", "Composite Number"]
+      ]
+    }
+  ],
+  "ontoloji_tr": [
+    {
+      "tanim": "Çoğu cihetiyle genişleyerek muayyen bir şey veya iş hakkında bakışını ve tefekkürünü uzattı.",
+      "misal": "Zeyd kaside üzerindeki nazarını _ (genişletti/uzattı)."
+    },
+    {
+      "tanim": "Bir işte haddi aştı.",
+      "misal": "Azgınlıkta haddi _ (aştı/genişletti)."
+    },
+    {
+      "tanim": "Mesahası evvelkinden daha büyük ve daha iri hale geldi.",
+      "misal": "Sular çekildikten sonra sahil _ (genişledi)."
+    },
+    {
+      "tanim": "Mesahası büyük olan mekan veya şeyin sıfatı.",
+      "misal": "Tabiatta ve _ (geniş) bir mekanda gününü geçirmek ne güzeldir!"
+    },
+    {
+      "tanim": "Bir işte uzatmak ve mübalağa etmek.",
+      "misal": "Fâris işinde o kadar _ (ileri gitti/uzattı) ki boyun ağrılarından muzdarip hale geldi."
+    },
+    {
+      "tanim": "Bir şeyin uçsuz bucaksız ve büyük mesahalı olması...",
+      "misal": "Mekanın _ (genişliği) karşısında hayrete düştüm; zira düğün açık havada, düz bir sahada idi."
+    },
+    {
+      "tanim": "Boyunu uzattı ve yaydı.",
+      "misal": "Kasabamdaki uzak mıntıkalarda imar ve binalar _ (yayıldı/genişledi)."
+    },
+    {
+      "tanim": "Mesahasının büyüklüğü ve taraflarının uzanmasıyla temayüz eden bir mekanın hassası.",
+      "misal": "İçinde merasimi düzenlediğim mekanın _ (genişliği) beni hayrete düşürdü."
+    },
+    {
+      "tanim": "İzin verilen azamî haddi aşacak şekilde şeyi artırma ve büyütme ameliyesi.",
+      "misal": "Dünya nüfusu mütemadi bir _ (artış/genişleme) içindedir."
+    },
+    {
+      "tanim": "Bir şeyin kemiyet veya mesahasının makul haddin fevkinde artması.",
+      "misal": "Son ilan, satışların _ (genişlemesine/artmasına) katkıda bulundu."
+    },
+    {
+      "tanim": "Maddî mevcudun ölçüsünün dikey olarak artması ameliyesi.",
+      "misal": "Hararet elektrik tellerinin _ (uzamasına/genişlemesine) sebep olur."
+    },
+    {
+      "tanim": "Şeyin veya mekanın mesahasını ve hacmini artırma fiili.",
+      "misal": "Bitişik araziyi de ona kattıklarında bahçe _ (genişledi)."
+    },
+    {
+      "tanim": "Genişlik, şümul ve yayılma sahibi olan şey.",
+      "misal": "Dağın bir ucundan zirvesine kadar _ (genişliğini) gördüm."
+    },
+    {
+      "tanim": "Şeyin kemiyet veya hacminde evvelki haline yahut lazım olan hadde göre ziyadeleşme.",
+      "misal": "Tabip hastadaki kan pompalamasının zayıflığının kalp kasında _ (genişlemeye/büyümeye) yol açtığını söyledi."
+    },
+    {
+      "tanim": "Cismin sathının, hacminin, mesahasının veya boyunun artması.",
+      "misal": "Evin çatısını _ (genişletme) işini yaptı."
+    },
+    {
+      "tanim": "Şeyin kemiyet veya hacminde evvelki haline yahut lazım olan hadde göre ziyadeleşme.",
+      "misal": "Tabip hastadaki kan pompalamasının zayıflığının kalp kasında _ (büyümeye) yol açtığını söyledi."
+    },
+    {
+      "tanim": "Mekan genişledi ve tarafları yayıldı.",
+      "misal": "Âmir iki yeni oda ilave edince ev _ (genişledi)."
+    },
+    {
+      "tanim": "Şu an olduğundan daha büyük hale gelmesi için imkanı vardır.",
+      "misal": "Evinin önünde topraktan bir _ (genişlik/meydan) vardır."
+    },
+    {
+      "tanim": "Birbirine bitişik olmayan kum kayalarındaki parçacıkların, aralarındaki boşlukların hacmi mümkün olan en büyük hale gelecek şekilde dizilimini iade etme ameliyesi ki bununla bizzat kayanın hacmi artar.",
+      "misal": "Araştırmacı kayalarda vuku bulan _ (genleşme/dilatasyon) hadisesini izah etti."
+    },
+    {
+      "tanim": "Dokuz kenarı olan şeklin sıfatı (dokuzgen/mütessa').",
+      "misal": "Marangoz _ (dokuzgen) şeklinde bir masa tasarladı."
+    },
+    {
+      "tanim": "Tarafları uzanmış ve menzili geniş maddî mevcudun sıfatı.",
+      "misal": "_ (geniş) bir yerde oturuyordu."
+    },
+    {
+      "tanim": "İçinde eşyanın veya şahısların yer aldığı tahdit edilmiş coğrafî mesaha.",
+      "misal": "Ömer otobüsteki boş _ (yere/genişliğe) oturması için arkadaşını çağırdı."
+    },
+    {
+      "tanim": "Şeyin büyütülmeye ve genişletilmeye istidatlı olmasıdır.",
+      "misal": "Naylon _ (genişleyebilir/esnek) maddelerden addedilir."
+    },
+    {
+      "tanim": "Sekiz ile birin toplamı kıymetine delalet eden mürekkep tabii sayı olup on sayısından küçüktür (dokuz).",
+      "misal": "Dokuz sayısı tek sayıdır."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "تسعة",
+      "tur": "num",
+      "baslik": "تِسْعَة • (tisʕa) f (masculine تِسْع (tisʕ))",
+      "anlam": ["nine"],
+      "okunus": ["tisʕa"],
+      "ipa": ["/tis.ʕa/"],
+      "torunlar": [
+        ["arz", "تسعة", "tisʕa"],
+        ["mt", "disgħa", ""],
+        ["ary", "تسعة", "tisʕa"],
+        ["ary", "تسعود", "tisʕūd"],
+        ["sw", "tisa", ""]
+      ],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["dokuz"]
+    },
+    {
+      "madde": "تسعة عشر",
+      "tur": "num",
+      "baslik": "تِسْعَةَ عَشَرَ • (tisʕata ʕašara) m (feminine تِسْعَ عَشْرَةَ (tisʕa ʕašrata))",
+      "anlam": ["nineteen"],
+      "okunus": ["tisʕata ʕašara"],
+      "ipa": ["/tis.ʕa.ta ʕa.ʃa.ra/"],
+      "etimoloji": 1,
+      "anlam_tr": ["on dokuz"]
+    },
+    {
+      "madde": "تسعون",
+      "tur": "num",
+      "etim_no": "1",
+      "baslik": "تِسْعُون • (tisʕūn) m or f (oblique تِسْعِين (tisʕīn))",
+      "etim_sablon": [
+        ["number box", ""],
+        ["af", "تِسْع (tisʕ, “nine”) + ـُون (-ūn)"]
+      ],
+      "anlam": ["ninety"],
+      "okunus": ["tisʕūn"],
+      "ipa": ["/tis.ʕuːn/"],
+      "bag": "müştak",
+      "etimoloji": 2,
+      "anlam_tr": ["doksan"]
+    },
+    {
+      "madde": "تاسع",
+      "tur": "adj",
+      "baslik": "تَاسِع • (tāsiʕ) (feminine تَاسِعَة (tāsiʕa))",
+      "anlam": ["ninth"],
+      "okunus": ["tāsiʕ"],
+      "ipa": ["/taː.siʕ/"],
+      "anlam_tr": ["dokuzuncu"]
+    },
+    {
+      "madde": "تسع",
+      "tur": "num",
+      "etim_no": "1",
+      "baslik": "تِسْع • (tisʕ) m (feminine تِسْعَة (tisʕa))",
+      "anlam": ["masculine of تِسْعَة (tisʕa, “nine”)"],
+      "etiket": ["form-of", "masculine"],
+      "form_of": ["تِسْعَة"],
+      "okunus": ["tisʕ"],
+      "ipa": ["/tisʕ/"],
+      "bag": "müştak",
+      "etimoloji": 4,
+      "anlam_tr": ["تِسْعَة (tis'a, 'dokuz') kelimesinin müzekkeri"]
+    },
+    {
+      "madde": "تسع",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "تُسُع or تُسْع • (tusuʕ or tusʕ) m (plural أَتْسَاع (ʔatsāʕ))",
+      "etim_sablon": [
+        ["number box", ""]
+      ],
+      "anlam": ["one ninth"],
+      "okunus": ["tusuʕ", "tusʕ"],
+      "ipa": ["/tu.suʕ/", "/tusʕ/"],
+      "bag": "müştak",
+      "anlam_tr": ["dokuzda bir"]
+    },
+    {
+      "madde": "تاسع عشر",
+      "tur": "adj",
+      "baslik": "تَاسِعَ عَشَرَ • (tāsiʕa ʕašara) (feminine تَاسِعَةَ عَشْرَةَ (tāsiʕata ʕašrata))",
+      "anlam": ["nineteenth"],
+      "okunus": ["tāsiʕa ʕašara"],
+      "anlam_tr": ["on dokuzuncu"]
+    },
+    {
+      "madde": "توسعة",
+      "tur": "noun",
+      "baslik": "تَوْسِعَة • (tawsiʕa) f",
+      "etim_sablon": [
+        ["ar-verbal noun", "Verbal noun"]
+      ],
+      "anlam": ["development, expansion, extension"],
+      "okunus": ["tawsiʕa"],
+      "ipa": ["/taw.si.ʕa/"],
+      "torunlar": [
+        ["fa", "توسعه", ""],
+        ["ota", "توسعه", ""]
+      ],
+      "bag": "müştak",
+      "etimoloji": 5,
+      "anlam_tr": ["geliştirme, genişletme, tevsi"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Etymology tree\nProto-Afroasiatic?\nProto-Semitic *tišʕatum\nArabic تسعة\nInherited from Proto-Semitic *tišʕatum.",
+      "kognatlar": [
+        ["*tišʕatum", "Reconstruction:Proto-Semitic/tišʕ-"],
+        ["*tišʕatum", "Reconstruction:Proto-Semitic/tišʕ-"]
+      ]
+    },
+    {
+      "metin": "From تِسْعَة (tisʕa) and عَشَرَة (ʕašara).",
+      "kognatlar": [
+        ["تِسْعَة", "تسعة#Arabic"],
+        ["عَشَرَة", "عشرة#Arabic"]
+      ]
+    },
+    {
+      "metin": "From تِسْع (tisʕ, “nine”) + ـُون (-ūn).",
+      "kognatlar": [
+        ["تِسْع", "تسع#Arabic"],
+        ["nine", "nine"],
+        ["ـُون", "ون#Arabic"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Inherited from Proto-Semitic *tišʕum.",
+      "kognatlar": [
+        ["*tišʕum", "Reconstruction:Proto-Semitic/tišʕ-"]
+      ]
+    },
+    {
+      "metin": "Verbal noun of وَسَّعَ (wassaʕa).",
+      "kognatlar": [
+        ["وَسَّعَ", "وسع#Arabic"]
+      ]
+    }
+  ],
+  "etymarab": {
+    "latin": "TSʕ",
+    "kok_maddesi": "Back to library EtymArab TSʕ تسع BP … • HDAL • © SG | 15Feb2021 √TSʕ “root” ▪ TSʕ_1 ‘nine’ ↗ tisʕat ▪ TSʕ_2 ‘…’ ↗ … ▪ TSʕ_3 ‘…’ ↗ … ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘this root revolves around the number nine’ ▪ … ▪ … ▪ … ▪ … … … … Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "√TSʕ kökü: TSʕ_1 'dokuz' (↗ tisʕat). BAH2008'e göre Klasik Arapçada mana yelpazesi: 'bu kök dokuz sayısı etrafında döner'."
+  },
+  "kuran": {
+    "gecis": 7,
+    "ilk": "17:101:4:1",
+    "tur": {
+      "N": 7
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "تِسْع": 5,
+      "تِسْعَة": 2
+    },
+    "bicimler": {
+      "تِسْعَ": 1,
+      "تِسْعًا": 1,
+      "تِسْعِ": 1,
+      "تِسْعَةُ": 1,
+      "تِسْعٌ": 1,
+      "تِسْعُونَ": 1,
+      "تِسْعَةَ": 1
+    },
+    "morfoloji_gecis": 7
+  },
+  "kelimeler": [
+    {
+      "lemma": "تِسْع",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "تِسْعَ",
+          "ilk": "17:101",
+          "adet": 1,
+          "tr": "dokuz"
+        },
+        {
+          "kelime": "تِسْعًا",
+          "ilk": "18:25",
+          "adet": 1,
+          "tr": "dokuz"
+        },
+        {
+          "kelime": "تِسْعِ",
+          "ilk": "27:12",
+          "adet": 1,
+          "tr": "dokuz"
+        },
+        {
+          "kelime": "تِسْعٌ",
+          "ilk": "38:23",
+          "adet": 1,
+          "tr": "dokuz"
+        },
+        {
+          "kelime": "وَتِسْعُونَ",
+          "ilk": "38:23",
+          "adet": 1,
+          "tr": "dokuz"
+        }
+      ],
+      "tr": "dokuz",
+      "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)",
+      "adet": 5
+    },
+    {
+      "lemma": "تِسْعَة",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "تِسْعَةُ",
+          "ilk": "27:48",
+          "adet": 1,
+          "tr": "dokuz"
+        },
+        {
+          "kelime": "تِسْعَةَ",
+          "ilk": "74:30",
+          "adet": 1,
+          "tr": "dokuz"
+        }
+      ],
+      "tr": "dokuz",
+      "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale (yalnız aday eşleşme)",
+      "adet": 2
+    }
+  ],
+  "tr_ek": {
+    "تسعي": "çaba gösterdi"
+  },
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "تَسْع", "tasʿ", "dokuz", "kontrol", ""],
+      ["fi'l", "semâî aday", "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
+      ["fu'l", "semâî aday", "تُسْع", "tusʿ", "dokuz", "kontrol", ""],
+      ["fa'al", "semâî aday", "تَسَع", "tasaʿ", "dokuz", "kontrol", ""],
+      ["fi'al", "semâî aday", "تِسَع", "tisaʿ", "dokuz", "kontrol", ""],
+      ["fu'ul", "semâî aday", "تُسُع", "tusuʿ", "dokuz", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "تُسُوع", "tusūʿ", "dokuz", "kontrol", ""],
+      ["fi'āl", "semâî aday", "تِسَاع", "tisāʿ", "dokuz", "kontrol", ""],
+      ["fu'āl", "semâî aday", "تُسَاع", "tusāʿ", "dokuz", "kontrol", ""],
+      ["fa'āl", "semâî aday", "تَسَاع", "tasāʿ", "dokuz", "kontrol", ""],
+      ["fa'āle", "semâî aday", "تَسَاعَة", "tasāʿa", "dokuz", "kontrol", ""],
+      ["fu'ūle", "semâî aday", "تُسُوعَة", "tusūʿa", "dokuz", "kontrol", ""],
+      ["fi'āle", "semâî aday", "تِسَاعَة", "tisāʿa", "dokuz", "kontrol", ""],
+      ["fa'īl", "semâî aday", "تَسِيع", "tasīʿ", "dokuz", "kontrol", ""],
+      ["fa'ūl", "semâî aday", "تَسُوع", "tasūʿ", "dokuz", "kontrol", ""],
+      ["fa'alān", "semâî aday", "تَسَعَان", "tasaʿān", "dokuz", "kontrol", ""],
+      ["fu'lān", "semâî aday", "تُسْعَان", "tusʿān", "dokuz", "kontrol", ""],
+      ["fi'lān", "semâî aday", "تِسْعَان", "tisʿān", "dokuz", "kontrol", ""],
+      ["fa'lā", "semâî aday", "تَسْعَى", "tasʿā", "dokuz", "kontrol", ""],
+      ["fu'lā", "semâî aday", "تُسْعَى", "tusʿā", "dokuz", "kontrol", ""],
+      ["fi'lā", "semâî aday", "تِسْعَى", "tisʿā", "dokuz", "kontrol", ""],
+      ["fa'ale", "semâî aday", "تَسَعَة", "tasaʿa", "dokuz", "kontrol", ""],
+      ["fi'ale", "semâî aday", "تِسَعَة", "tisaʿa", "dokuz", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "تَسْعُوعَة", "tasʿūʿa", "dokuz", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُتْسُوع", "tutsūʿ", "dokuz", "kontrol", ""],
+      ["taf'ila", "semâî aday", "تَتْسِعَة", "tatsiʿa", "dokuz", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَتْسَعَة", "tatsaʿa", "dokuz", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَتْسُعَة", "matsuʿa", "dokuz", "kontrol", ""],
+      ["maf'ila", "semâî aday", "مَتْسِعَة", "matsiʿa", "dokuz", "kontrol", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَتْسِيع", "tatsīʿ", "çokça dokuz olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî", "تَتْسِعَة", "tatsiʿa", "çokça dokuz olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî", "تِسِّاع", "tissāʿ", "çokça dokuz olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَتْسِيعَة", "tatsīʿa", "bir kere çokça dokuz olma", "kontrol", ""],
+      ["fi''āl + tâ", "aday", "تِسِّاعَة", "tissāʿa", "bir kere çokça dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُتَسِّع", "mutassiʿ", "çokça dokuz olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُتَسِّعَة", "mutassiʿa", "çokça dokuz olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُتَسِّعَان", "mutassiʿān", "çokça dokuz olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَسِّعَتَان",
+        "mutassiʿatān",
+        "çokça dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَسِّعُون",
+        "mutassiʿūn",
+        "çokça dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَسِّعِين",
+        "mutassiʿīn",
+        "çokça dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَسِّعَات",
+        "mutassiʿāt",
+        "çokça dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُتَسَّع", "mutassaʿ", "çokça dokuz olunan", "kontrol", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُتَسَّعَة", "mutassaʿa", "çokça dokuz olunan, müennes", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُتَسَّعَان", "mutassaʿān", "çokça dokuz olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَسَّعَتَان",
+        "mutassaʿatān",
+        "çokça dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَسَّعُون",
+        "mutassaʿūn",
+        "çokça dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَسَّعِين",
+        "mutassaʿīn",
+        "çokça dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَسَّعَات",
+        "mutassaʿāt",
+        "çokça dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُتَسَّع", "mutassaʿ", "çokça dokuz olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُتَاسَعَة", "mutāsaʿa", "biriyle karşılıklı dokuz olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî", "تِسَاع", "tisāʿ", "biriyle karşılıklı dokuz olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "تِسَاعَة", "tisāʿa", "bir kere biriyle karşılıklı dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُتَاسِع", "mutāsiʿ", "biriyle karşılıklı dokuz olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî",
+        "مُتَاسِعَة",
+        "mutāsiʿa",
+        "biriyle karşılıklı dokuz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî",
+        "مُتَاسِعَان",
+        "mutāsiʿān",
+        "biriyle karşılıklı dokuz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَاسِعَتَان",
+        "mutāsiʿatān",
+        "biriyle karşılıklı dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَاسِعُون",
+        "mutāsiʿūn",
+        "biriyle karşılıklı dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَاسِعِين",
+        "mutāsiʿīn",
+        "biriyle karşılıklı dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَاسِعَات",
+        "mutāsiʿāt",
+        "biriyle karşılıklı dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُتَاسَع", "mutāsaʿ", "biriyle karşılıklı dokuz olunan", "kontrol", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُتَاسَعَة",
+        "mutāsaʿa",
+        "biriyle karşılıklı dokuz olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî",
+        "مُتَاسَعَان",
+        "mutāsaʿān",
+        "biriyle karşılıklı dokuz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَاسَعَتَان",
+        "mutāsaʿatān",
+        "biriyle karşılıklı dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَاسَعُون",
+        "mutāsaʿūn",
+        "biriyle karşılıklı dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَاسَعِين",
+        "mutāsaʿīn",
+        "biriyle karşılıklı dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَاسَعَات",
+        "mutāsaʿāt",
+        "biriyle karşılıklı dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُتَاسَع", "mutāsaʿ", "biriyle karşılıklı dokuz olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِتْسَاع", "ʾitsāʿ", "dokuzlaştırma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِتْسَاعَة", "ʾitsāʿa", "bir kere dokuzlaştırma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُتْسِع", "mutsiʿ", "dokuzlaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî", "مُتْسِعَة", "mutsiʿa", "dokuzlaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُتْسِعَان", "mutsiʿān", "dokuzlaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî",
+        "مُتْسِعَتَان",
+        "mutsiʿatān",
+        "dokuzlaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتْسِعُون",
+        "mutsiʿūn",
+        "dokuzlaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتْسِعِين",
+        "mutsiʿīn",
+        "dokuzlaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتْسِعَات",
+        "mutsiʿāt",
+        "dokuzlaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُتْسَع", "mutsaʿ", "dokuzlaştırılan", "kontrol", ""],
+      ["muf'al + müennes", "kıyâsî", "مُتْسَعَة", "mutsaʿa", "dokuzlaştırılan, müennes", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُتْسَعَان", "mutsaʿān", "dokuzlaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî",
+        "مُتْسَعَتَان",
+        "mutsaʿatān",
+        "dokuzlaştırılan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتْسَعُون",
+        "mutsaʿūn",
+        "dokuzlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتْسَعِين",
+        "mutsaʿīn",
+        "dokuzlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتْسَعَات",
+        "mutsaʿāt",
+        "dokuzlaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُتْسَع", "mutsaʿ", "dokuzlaştırma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَتَسُّع", "tatassuʿ", "kendini zorlayarak dokuz olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَتَسُّعَة", "tatassuʿa", "bir kere kendini zorlayarak dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَتَسِّع", "mutatassiʿ", "kendini zorlayarak dokuz olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَتَسِّعَة",
+        "mutatassiʿa",
+        "kendini zorlayarak dokuz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَتَسِّعَان",
+        "mutatassiʿān",
+        "kendini zorlayarak dokuz olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَتَسِّعَتَان",
+        "mutatassiʿatān",
+        "kendini zorlayarak dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَتَسِّعُون",
+        "mutatassiʿūn",
+        "kendini zorlayarak dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَتَسِّعِين",
+        "mutatassiʿīn",
+        "kendini zorlayarak dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَتَسِّعَات",
+        "mutatassiʿāt",
+        "kendini zorlayarak dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَتَسَّع", "mutatassaʿ", "kendini zorlayarak dokuz olunan", "kontrol", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَتَسَّعَة",
+        "mutatassaʿa",
+        "kendini zorlayarak dokuz olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَتَسَّعَان",
+        "mutatassaʿān",
+        "kendini zorlayarak dokuz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَتَسَّعَتَان",
+        "mutatassaʿatān",
+        "kendini zorlayarak dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَتَسَّعُون",
+        "mutatassaʿūn",
+        "kendini zorlayarak dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَتَسَّعِين",
+        "mutatassaʿīn",
+        "kendini zorlayarak dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَتَسَّعَات",
+        "mutatassaʿāt",
+        "kendini zorlayarak dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî",
+        "مُتَتَسَّع",
+        "mutatassaʿ",
+        "kendini zorlayarak dokuz olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَتَاسُع", "tatāsuʿ", "birbirine dokuz olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَتَاسُعَة", "tatāsuʿa", "bir kere birbirine dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَتَاسِع", "mutatāsiʿ", "birbirine dokuz olan", "kontrol", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî",
+        "مُتَتَاسِعَة",
+        "mutatāsiʿa",
+        "birbirine dokuz olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَتَاسِعَان", "mutatāsiʿān", "birbirine dokuz olan, iki", "kontrol", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَتَاسِعَتَان",
+        "mutatāsiʿatān",
+        "birbirine dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَتَاسِعُون",
+        "mutatāsiʿūn",
+        "birbirine dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَتَاسِعِين",
+        "mutatāsiʿīn",
+        "birbirine dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَتَاسِعَات",
+        "mutatāsiʿāt",
+        "birbirine dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَتَاسَع", "mutatāsaʿ", "birbirine dokuz olunan", "kontrol", ""],
+      [
+        "mutafā'al + müennes",
+        "kıyâsî",
+        "مُتَتَاسَعَة",
+        "mutatāsaʿa",
+        "birbirine dokuz olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî",
+        "مُتَتَاسَعَان",
+        "mutatāsaʿān",
+        "birbirine dokuz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَتَاسَعَتَان",
+        "mutatāsaʿatān",
+        "birbirine dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَتَاسَعُون",
+        "mutatāsaʿūn",
+        "birbirine dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَتَاسَعِين",
+        "mutatāsaʿīn",
+        "birbirine dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَتَاسَعَات",
+        "mutatāsaʿāt",
+        "birbirine dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَتَاسَع", "mutatāsaʿ", "birbirine dokuz olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْتِسَاع", "intisāʿ", "dokuz olunma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْتِسَاعَة", "intisāʿa", "bir kere dokuz olunma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْتَسِع", "muntasiʿ", "dokuz olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْتَسِعَة", "muntasiʿa", "dokuz olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْتَسِعَان", "muntasiʿān", "dokuz olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْتَسِعَتَان",
+        "muntasiʿatān",
+        "dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْتَسِعُون",
+        "muntasiʿūn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْتَسِعِين",
+        "muntasiʿīn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْتَسِعَات",
+        "muntasiʿāt",
+        "dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَع",
+        "muntasaʿ",
+        "dokuz olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعَة",
+        "muntasaʿa",
+        "dokuz olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعَان",
+        "muntasaʿān",
+        "dokuz olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعَتَان",
+        "muntasaʿatān",
+        "dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعُون",
+        "muntasaʿūn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعِين",
+        "muntasaʿīn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَعَات",
+        "muntasaʿāt",
+        "dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْتَسَع",
+        "muntasaʿ",
+        "dokuz olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِتِّسَاع", "ittisāʿ", "kendisi için dokuz olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِتِّسَاعَة", "ittisāʿa", "bir kere kendisi için dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُتَّسِع", "muttasiʿ", "kendisi için dokuz olan", "kontrol", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُتَّسِعَة", "muttasiʿa", "kendisi için dokuz olan, müennes", "kontrol", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُتَّسِعَان", "muttasiʿān", "kendisi için dokuz olan, iki", "kontrol", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُتَّسِعَتَان",
+        "muttasiʿatān",
+        "kendisi için dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّسِعُون",
+        "muttasiʿūn",
+        "kendisi için dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّسِعِين",
+        "muttasiʿīn",
+        "kendisi için dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّسِعَات",
+        "muttasiʿāt",
+        "kendisi için dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّسَع", "muttasaʿ", "kendisi için dokuz olunan", "kontrol", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî",
+        "مُتَّسَعَة",
+        "muttasaʿa",
+        "kendisi için dokuz olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muftaʿal + tesniye", "kıyâsî", "مُتَّسَعَان", "muttasaʿān", "kendisi için dokuz olunan, iki", "kontrol", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُتَّسَعَتَان",
+        "muttasaʿatān",
+        "kendisi için dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّسَعُون",
+        "muttasaʿūn",
+        "kendisi için dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّسَعِين",
+        "muttasaʿīn",
+        "kendisi için dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّسَعَات",
+        "muttasaʿāt",
+        "kendisi için dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّسَع", "muttasaʿ", "kendisi için dokuz olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IX": [
+      ["if'ilāl", "kıyâsî", "اِتْسِعَاع", "itsiʿāʿ", "iyiden iyiye dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُتْسَعّ", "mutsaʿʿ", "iyiden iyiye dokuz olan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُتْسَعَّة", "mutsaʿʿa", "iyiden iyiye dokuz olan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُتْسَعَّان", "mutsaʿʿān", "iyiden iyiye dokuz olan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُتْسَعَّتَان",
+        "mutsaʿʿatān",
+        "iyiden iyiye dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتْسَعُّون",
+        "mutsaʿʿūn",
+        "iyiden iyiye dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتْسَعِّين",
+        "mutsaʿʿīn",
+        "iyiden iyiye dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتْسَعَّات",
+        "mutsaʿʿāt",
+        "iyiden iyiye dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِتْسَاع", "istitsāʿ", "dokuz olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِتْسَاعَة", "istitsāʿa", "bir kere dokuz olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَتْسِع", "mustatsiʿ", "dokuz olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî",
+        "مُسْتَتْسِعَة",
+        "mustatsiʿa",
+        "dokuz olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَتْسِعَان", "mustatsiʿān", "dokuz olmayı isteyen, iki", "kontrol", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَتْسِعَتَان",
+        "mustatsiʿatān",
+        "dokuz olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَتْسِعُون",
+        "mustatsiʿūn",
+        "dokuz olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَتْسِعِين",
+        "mustatsiʿīn",
+        "dokuz olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَتْسِعَات",
+        "mustatsiʿāt",
+        "dokuz olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَتْسَع", "mustatsaʿ", "dokuz olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî",
+        "مُسْتَتْسَعَة",
+        "mustatsaʿa",
+        "dokuz olması istenen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَتْسَعَان", "mustatsaʿān", "dokuz olması istenen, iki", "kontrol", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَتْسَعَتَان",
+        "mustatsaʿatān",
+        "dokuz olması istenen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَتْسَعُون",
+        "mustatsaʿūn",
+        "dokuz olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَتْسَعِين",
+        "mustatsaʿīn",
+        "dokuz olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَتْسَعَات",
+        "mustatsaʿāt",
+        "dokuz olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَتْسَع", "mustatsaʿ", "dokuz olmayı isteme yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb XI": [
+      ["if'īlāl", "kıyâsî", "اِتْسِيعَاع", "itsīʿāʿ", "büsbütün dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُتْسَاعّ", "mutsāʿʿ", "büsbütün dokuz olan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُتْسَاعَّة", "mutsāʿʿa", "büsbütün dokuz olan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُتْسَاعَّان", "mutsāʿʿān", "büsbütün dokuz olan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُتْسَاعَّتَان",
+        "mutsāʿʿatān",
+        "büsbütün dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتْسَاعُّون",
+        "mutsāʿʿūn",
+        "büsbütün dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتْسَاعِّين",
+        "mutsāʿʿīn",
+        "büsbütün dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتْسَاعَّات",
+        "mutsāʿʿāt",
+        "büsbütün dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII": [
+      ["if'iv'āl", "kıyâsî", "اِتْسِوْسَاع", "itsiwsāʿ", "aşırı dokuz olma", "kontrol", ""]
+    ],
+    "masdar · bâb XIII": [
+      ["if'ivvāl", "kıyâsî", "اِتْسِوَّاع", "itsiwwāʿ", "aşırı dokuz olma", "kontrol", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "تَاسِع", "tāsiʿ", "Dokuzuncu", "lugat", "Vikisözlük: ninth · Luggat"],
+      ["fâ'il + müennes", "kıyâsî", "تَاسِعَة", "tāsiʿa", "târih", "lugat", "Kubbealtı"],
+      ["fâ'il + tesniye", "kıyâsî", "تَاسِعَان", "tāsiʿān", "dokuz olan, iki", "kontrol", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "تَاسِعَتَان", "tāsiʿatān", "dokuz olan, iki, müennes", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "تَاسِعُون", "tāsiʿūn", "dokuz olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "تَاسِعِين", "tāsiʿīn", "dokuz olanlar", "kontrol", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "تَاسِعَات",
+        "tāsiʿāt",
+        "dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَتْسُوع", "matsūʿ", "dokuz olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَتْسُوعَة", "matsūʿa", "dokuz olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَتْسُوعَان", "matsūʿān", "dokuz olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî",
+        "مَتْسُوعَتَان",
+        "matsūʿatān",
+        "dokuz olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مَتْسُوعُون",
+        "matsūʿūn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مَتْسُوعِين",
+        "matsūʿīn",
+        "dokuz olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَتْسُوعَات",
+        "matsūʿāt",
+        "dokuz olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَتْسَع", "matsaʿ", "dokuz olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَتْسَعَان", "matsaʿān", "dokuz olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî", "مَتْسِع", "matsiʿ", "dokuz olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَتْسِعَان", "matsiʿān", "dokuz olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî", "مَتْسَعَة", "matsaʿa", "dokuz olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî",
+        "مَتْسَعَتَان",
+        "matsaʿatān",
+        "dokuz olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî", "مَتْسِعَة", "matsiʿa", "dokuz olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî",
+        "مَتْسِعَتَان",
+        "matsiʿatān",
+        "dokuz olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَتْسُعَة", "matsuʿa", "dokuz olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَتْسُعَتَان", "matsuʿatān", "dokuz olma yeri, vakti, iki", "kontrol", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِتْسَع", "mitsaʿ", "dokuz olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِتْسَعَان", "mitsaʿān", "dokuz olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî", "مِتْسَاع", "mitsāʿ", "dokuz olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِتْسَاعَان", "mitsāʿān", "dokuz olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî", "مِتْسَعَة", "mitsaʿa", "dokuz olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِتْسَعَتَان", "mitsaʿatān", "dokuz olma âleti, iki", "kontrol", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَتْسَع", "ʾatsaʿ", "daha çok dokuz olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî", "أَتْسَعَان", "ʾatsaʿān", "daha çok dokuz olan, iki", "kontrol", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "تُسْعَى", "tusʿā", "daha çok dokuz olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "تُسْعَيَان", "tusʿayān", "daha çok dokuz olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "تَسْعَاء", "tasʿāʾ", "daha çok dokuz olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "تَسْعَاآن", "tasʿāʾān", "daha çok dokuz olan, iki", "kontrol", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "تُسَيْع", "tusayʿ", "azıcık dokuz olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "تُسَيْعَان", "tusayʿān", "azıcık dokuz olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî", "تُسَيْعَة", "tusayʿa", "azıcık dokuz olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "تُسَيْعَتَان", "tusayʿatān", "azıcık dokuz olma, iki", "kontrol", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَتْسَع", "matsaʿ", "dokuz olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَتْسَعَان", "matsaʿān", "dokuz olma, iki", "kontrol", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "تَسْعَة", "tasʿa", "bir kere dokuz olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "تَسْعَتَان", "tasʿatān", "bir kere dokuz olma, iki", "kontrol", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
+      ["fi'le + tesniye", "aday", "تِسْعَتَان", "tisʿatān", "dokuz olma tarzı, iki", "kontrol", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "تَسِيع", "tasīʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "تَسِيعَة", "tasīʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "تَسِيعَان", "tasīʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "تَسِيعَتَان",
+        "tasīʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسِيعُون",
+        "tasīʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسِيعِين",
+        "tasīʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسِيعَات",
+        "tasīʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "تَسُوع", "tasūʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "تَسُوعَة", "tasūʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "تَسُوعَان", "tasūʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "تَسُوعَتَان",
+        "tasūʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسُوعُون",
+        "tasūʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسُوعِين",
+        "tasūʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسُوعَات",
+        "tasūʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday", "تَسِع", "tasiʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday", "تَسِعَة", "tasiʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday", "تَسِعَان", "tasiʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "تَسِعَتَان",
+        "tasiʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسِعُون",
+        "tasiʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسِعِين",
+        "tasiʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسِعَات",
+        "tasiʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "تَسُع", "tasuʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday", "تَسُعَة", "tasuʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday", "تَسُعَان", "tasuʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "تَسُعَتَان",
+        "tasuʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسُعُون",
+        "tasuʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسُعِين",
+        "tasuʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسُعَات",
+        "tasuʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday", "تَسَع", "tasaʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'al + müennes", "semâî aday", "تَسَعَة", "tasaʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday", "تَسَعَان", "tasaʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "تَسَعَتَان",
+        "tasaʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسَعُون",
+        "tasaʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسَعِين",
+        "tasaʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسَعَات",
+        "tasaʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'l", "semâî aday", "تَسْع", "tasʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'l + müennes", "semâî aday", "تَسْعَة", "tasʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "تَسْعَان", "tasʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "تَسْعَتَان",
+        "tasʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسْعُون",
+        "tasʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسْعِين",
+        "tasʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسْعَات",
+        "tasʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "تُسُع", "tusuʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday", "تُسُعَة", "tusuʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday", "تُسُعَان", "tusuʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "تُسُعَتَان",
+        "tusuʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تُسُعُون",
+        "tusuʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تُسُعِين",
+        "tusuʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تُسُعَات",
+        "tusuʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "تَسْعَان", "tasʿān", "her daim dokuz olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "تَسْعَانَة", "tasʿāna", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "تَسْعَانَان", "tasʿānān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "تَسْعَانَتَان",
+        "tasʿānatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسْعَانُون",
+        "tasʿānūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسْعَانِين",
+        "tasʿānīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسْعَانَات",
+        "tasʿānāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "تُسَاع", "tusāʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday", "تُسَاعَة", "tusāʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday", "تُسَاعَان", "tusāʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "تُسَاعَتَان",
+        "tusāʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تُسَاعُون",
+        "tusāʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تُسَاعِين",
+        "tusāʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تُسَاعَات",
+        "tusāʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "تَسَاع", "tasāʿ", "her daim dokuz olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday", "تَسَاعَة", "tasāʿa", "her daim dokuz olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday", "تَسَاعَان", "tasāʿān", "her daim dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "تَسَاعَتَان",
+        "tasāʿatān",
+        "her daim dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسَاعُون",
+        "tasāʿūn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسَاعِين",
+        "tasāʿīn",
+        "her daim dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسَاعَات",
+        "tasāʿāt",
+        "her daim dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "تَسَّاع", "tassāʿ", "işi dokuz olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday", "تَسَّاعَة", "tassāʿa", "işi dokuz olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday", "تَسَّاعَان", "tassāʿān", "işi dokuz olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "تَسَّاعَتَان",
+        "tassāʿatān",
+        "işi dokuz olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسَّاعُون",
+        "tassāʿūn",
+        "işi dokuz olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسَّاعِين",
+        "tassāʿīn",
+        "işi dokuz olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسَّاعَات",
+        "tassāʿāt",
+        "işi dokuz olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "تَسَّاعَة", "tassāʿa", "pek çok dokuz olan", "kontrol", ""],
+      ["fa''āle + tesniye", "semâî aday", "تَسَّاعَتَان", "tassāʿatān", "pek çok dokuz olan, iki", "kontrol", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسَّاعَات",
+        "tassāʿāt",
+        "pek çok dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "تَسُوع", "tasūʿ", "çok dokuz olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "تَسُوعَة", "tasūʿa", "çok dokuz olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "تَسُوعَان", "tasūʿān", "çok dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "تَسُوعَتَان",
+        "tasūʿatān",
+        "çok dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسُوعُون",
+        "tasūʿūn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسُوعِين",
+        "tasūʿīn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسُوعَات",
+        "tasūʿāt",
+        "çok dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "تَسُّوع", "tassūʿ", "pek çok dokuz olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "تَسُّوعَة", "tassūʿa", "pek çok dokuz olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "تَسُّوعَان", "tassūʿān", "pek çok dokuz olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "تَسُّوعَتَان",
+        "tassūʿatān",
+        "pek çok dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسُّوعُون",
+        "tassūʿūn",
+        "pek çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسُّوعِين",
+        "tassūʿīn",
+        "pek çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسُّوعَات",
+        "tassūʿāt",
+        "pek çok dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "تِسِّيع", "tissīʿ", "dokuz olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "تِسِّيعَة", "tissīʿa", "dokuz olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "تِسِّيعَان", "tissīʿān", "dokuz olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "تِسِّيعَتَان",
+        "tissīʿatān",
+        "dokuz olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تِسِّيعُون",
+        "tissīʿūn",
+        "dokuz olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تِسِّيعِين",
+        "tissīʿīn",
+        "dokuz olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تِسِّيعَات",
+        "tissīʿāt",
+        "dokuz olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "تُسَّاع", "tussāʿ", "son derece dokuz olan", "kontrol", ""],
+      ["fu''āl + müennes", "semâî aday", "تُسَّاعَة", "tussāʿa", "son derece dokuz olan, müennes", "kontrol", ""],
+      ["fu''āl + tesniye", "semâî aday", "تُسَّاعَان", "tussāʿān", "son derece dokuz olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "تُسَّاعَتَان",
+        "tussāʿatān",
+        "son derece dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تُسَّاعُون",
+        "tussāʿūn",
+        "son derece dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تُسَّاعِين",
+        "tussāʿīn",
+        "son derece dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تُسَّاعَات",
+        "tussāʿāt",
+        "son derece dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِتْسَاع", "mitsāʿ", "dokuz olmayı âdet edinmiş", "kontrol", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday",
+        "مِتْسَاعَة",
+        "mitsāʿa",
+        "dokuz olmayı âdet edinmiş, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl + tesniye", "semâî aday", "مِتْسَاعَان", "mitsāʿān", "dokuz olmayı âdet edinmiş, iki", "kontrol", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِتْسَاعَتَان",
+        "mitsāʿatān",
+        "dokuz olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِتْسَاعُون",
+        "mitsāʿūn",
+        "dokuz olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِتْسَاعِين",
+        "mitsāʿīn",
+        "dokuz olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِتْسَاعَات",
+        "mitsāʿāt",
+        "dokuz olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِتْسِيع", "mitsīʿ", "dokuz olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِتْسِيعَة", "mitsīʿa", "dokuz olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِتْسِيعَان", "mitsīʿān", "dokuz olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِتْسِيعَتَان",
+        "mitsīʿatān",
+        "dokuz olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِتْسِيعُون",
+        "mitsīʿūn",
+        "dokuz olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِتْسِيعِين",
+        "mitsīʿīn",
+        "dokuz olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِتْسِيعَات",
+        "mitsīʿāt",
+        "dokuz olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "تَسِيع", "tasīʿ", "çok dokuz olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "تَسِيعَة", "tasīʿa", "çok dokuz olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "تَسِيعَان", "tasīʿān", "çok dokuz olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "تَسِيعَتَان",
+        "tasīʿatān",
+        "çok dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسِيعُون",
+        "tasīʿūn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسِيعِين",
+        "tasīʿīn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسِيعَات",
+        "tasīʿāt",
+        "çok dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "تَسَّع", "tassaʿ", "çok dokuz olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "تَسَّعَة", "tassaʿa", "çok dokuz olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "تَسَّعَان", "tassaʿān", "çok dokuz olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "تَسَّعَتَان",
+        "tassaʿatān",
+        "çok dokuz olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "تَسَّعُون",
+        "tassaʿūn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "تَسَّعِين",
+        "tassaʿīn",
+        "çok dokuz olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "تَسَّعَات",
+        "tassaʿāt",
+        "çok dokuz olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "تَسْعِيّ", "tasʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî", "تَسَعِيّ", "tasaʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "تِسْعِيّ", "tisʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "تُسْعِيّ", "tusʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî", "تِسَاعِيّ", "tisāʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî", "تَاسِعِيّ", "tāsiʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَتْسُوعِيّ", "matsūʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî", "تَسِيعِيّ", "tasīʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî", "مَتْسَعِيّ", "matsaʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَتْسِيعِيّ", "tatsīʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَتَاسُعِيّ", "tatāsuʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî", "إِتْسَاعِيّ", "ʾitsāʿiyy", "dokuz olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِتِّسَاعِيّ", "ittisāʿiyy", "dokuz olma ile ilgili", "kontrol", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "تَسْعِيَّة", "tasʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî", "تَسَعِيَّة", "tasaʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "تِسْعِيَّة", "tisʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "تُسْعِيَّة", "tusʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî", "تِسَاعِيَّة", "tisāʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî", "تَاسِعِيَّة", "tāsiʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَتْسُوعِيَّة", "matsūʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî", "تَسِيعِيَّة", "tasīʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî", "مَتْسَعِيَّة", "matsaʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَتْسِيعِيَّة", "tatsīʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَتَاسُعِيَّة", "tatāsuʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî", "إِتْسَاعِيَّة", "ʾitsāʿiyya", "dokuz olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِتِّسَاعِيَّة", "ittisāʿiyya", "dokuz olanlık", "kontrol", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "تَسَاع", "tasāʿ", "dokuz olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday", "تُسُوع", "tusūʿ", "dokuz olma", "kontrol", ""],
+      ["fi'âl", "semâî aday", "تِسَاع", "tisāʿ", "dokuz olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday", "تُسْع", "tusʿ", "dokuz olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday", "تَسَاعَة", "tasāʿa", "dokuz olma", "kontrol", ""],
+      ["fi'âle", "semâî aday", "تِسَاعَة", "tisāʿa", "dokuz olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday", "تُسُوعَة", "tusūʿa", "dokuz olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "تَسْع", "tasʿ", "dokuz olma", "kontrol", ""],
+      ["fi'l", "semâî aday", "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "تَاسُوع", "tāsūʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday", "تَسَعَة", "tasaʿa", "dokuz olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "تُسَعَة", "tusaʿa", "dokuz olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُتْسُوعَة", "ʾutsūʿa", "dokuz olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "تَوْسَع", "tawsaʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "تَيْسَع", "taysaʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "تَسْع", "tasʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fa'al", "semâî aday", "تَسَع", "tasaʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "تِسْع", "tisʿ", "Müennesi", "lugat", "Kur'ân · Vankulu"],
+      ["fu'l", "semâî aday", "تُسْع", "tusʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday", "تَسِيع", "tasīʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday", "تِسَع", "tisaʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday", "تُسُع", "tusuʿ", "dokuz olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday", "تَسَاع", "tasāʿ", "dokuz olma türünden şey", "kontrol", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "تَاسُوعَة", "tāsūʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "تَوْسَعَة", "tawsaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "تَيْسَعَة", "taysaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "تَسْعَة", "tasʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "تَسَعَة", "tasaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "تِسْعَة", "tisʿa", "Dokuz", "lugat", "Kur'ân · Luggat"],
+      ["fu'l + tâ (tekili)", "semâî aday", "تُسْعَة", "tusʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "تَسِيعَة", "tasīʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "تِسَعَة", "tisaʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "تُسُعَة", "tusuʿa", "dokuz olma türünden bir tane", "kontrol", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "تَسَاعَة", "tasāʿa", "dokuz olma türünden bir tane", "kontrol", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَتْسَاع", "ʾatsāʿ", "dokuz olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday", "أَتْسِعَة", "ʾatsiʿa", "dokuz olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday", "أَتَاسِع", "ʾatāsiʿ", "dokuz olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday", "أَتَاسِيع", "ʾatāsīʿ", "dokuz olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "تُسُوع", "tusūʿ", "dokuz olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "تُسُع", "tusuʿ", "dokuz olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday", "تِسَاع", "tisāʿ", "dokuz olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday", "تِسَع", "tisaʿ", "dokuz olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "تِسَعَة", "tisaʿa", "dokuz olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday", "تُسَع", "tusaʿ", "dokuz olmalar", "kontrol", ""],
+      ["fu'alā'", "semâî aday", "تُسَعاء", "tusaʿāʾ", "dokuz olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "تَسَعَة", "tasaʿa", "dokuz olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday", "تُسَّاع", "tussāʿ", "dokuz olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "تَسَاع", "tasāʿ", "dokuz olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday", "تَسَع", "tasaʿ", "dokuz olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday", "مَتَاسِع", "matāsiʿ", "dokuz olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday", "مَتَاسِيع", "matāsīʿ", "dokuz olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday", "تَوَاسِع", "tawāsiʿ", "dokuz olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَتْسُع", "ʾatsuʿ", "dokuz olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "تُسَّع", "tussaʿ", "dokuz olmalar", "kontrol", ""],
+      ["fe'âil", "semâî aday", "تَسَائِع", "tasāʾiʿ", "dokuz olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday", "تُسَيْع", "tusayʿ", "dokuz olmalar", "kontrol", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَتْسَاعَات", "ʾatsāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday", "أَتْسِعَات", "ʾatsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday", "أَتَاسِعَات", "ʾatāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday", "أَتَاسِيعَات", "ʾatāsīʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday", "تُسُوعَات", "tusūʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday", "تُسُعَات", "tusuʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday", "تِسَاعَات", "tisāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday", "تِسَعَات", "tisaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday", "تِسَعَات", "tisaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday", "تُسَعَات", "tusaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu'alā' + ât", "semâî aday", "تُسَعاآت", "tusaʿāʾāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday", "تَسَعَات", "tasaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday", "تُسَّاعَات", "tussāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday", "تَسَاعَات", "tasāʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday", "تَسَعَات", "tasaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday", "مَتَاسِعَات", "matāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَتَاسِيعَات", "matāsīʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday", "تَوَاسِعَات", "tawāsiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَتْسُعَات", "ʾatsuʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "تُسَّعَات", "tussaʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fe'âil + ât", "semâî aday", "تَسَائِعَات", "tasāʾiʿāt", "dokuz olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "تُسَيْعَات", "tusayʿāt", "dokuz olmalar topluluğu", "kontrol", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "definite_quantity.n.01",
     "orta": "noun.quantity",
     "ust": "ölçü, mekân ve zaman",
@@ -1261,30 +2612,8 @@
     "dayanak_tanim": "the cardinal number that is the sum of eight and one",
     "dayanak_karsilik": "9"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "التاء والسين",
-    "mihveri": "",
-    "sesler": "",
-    "fasil_ozeti": "",
-    "tam_metin": "{إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً وَلِيَ نَعْجَةٌ وَاحِدَةٌ} [ص: 23].\nالتِسْع والتِسْعة من العدد: معروف، وهذه هي دلالتها، إذ لا يوجد في التركيب أي استعمال آخر {إِنَّ هَذَا أَخِي لَهُ تِسْعٌ وَتِسْعُونَ نَعْجَةً} وأرجح أن يكون هذا اللفظ مأخوذًا من السَعة (1)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الأنواء",
-    "bab": "ذكر السماء والفلك",
-    "kok_gecis": 102.0,
-    "kitapta_gecis": 6.0,
-    "zenginlesme": 3.24
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -1304,662 +2633,14 @@
       "boy": 19
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
+  "muhassas": {
+    "kitap": "الأنواء",
+    "bab": "ذكر السماء والفلك",
+    "kok_gecis": 102.0,
+    "kitapta_gecis": 6.0,
+    "zenginlesme": 3.24
   },
-  "kelimeler": [
-    {
-      "kelime": "تِسْعَ",
-      "kok": "تسع",
-      "lemma": "تِسْع",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "17:101",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تِسْعًا",
-      "kok": "تسع",
-      "lemma": "تِسْع",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "18:25",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تِسْعِ",
-      "kok": "تسع",
-      "lemma": "تِسْع",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "27:12",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تِسْعَةُ",
-      "kok": "تسع",
-      "lemma": "تِسْعَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "27:48",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تِسْعٌ",
-      "kok": "تسع",
-      "lemma": "تِسْع",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "38:23",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَتِسْعُونَ",
-      "kok": "تسع",
-      "lemma": "تِسْع",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "38:23",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تِسْعَةَ",
-      "kok": "تسع",
-      "lemma": "تِسْعَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "74:30",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dokuz",
-        "lemma": "dokuz",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 7
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Tis'a: dokuz",
-    "kelimeler": [
-      {
-        "lemma": "تِسْع",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 5,
-        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
-      },
-      {
-        "lemma": "تِسْعَة",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 2,
-        "nasil": "cem‘-i mükesser (aday) · fa'ale ; cem‘-i mükesser (aday) · fi'ale (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

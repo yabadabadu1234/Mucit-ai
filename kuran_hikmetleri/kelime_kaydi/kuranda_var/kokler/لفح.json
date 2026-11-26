@@ -1,1362 +1,2122 @@
 {
   "kok": "لفح",
-  "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "yan",
-    "kaynak": "fiil",
-    "guven": "kural"
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Temas",
+  "baz_ayrim": "yan",
+  "tur_kuran": {
+    "fiil": 1,
+    "isim": 0
   },
-  "mustaklar": {
+  "fiil": "yan",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "kural",
+  "sinif": "sâlim",
+  "ses": {
+    "harf": "ل",
+    "fasil": "لف",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "anlam": "Lefh: yanmak, sıcaklık",
+  "esas_manalar": "ateşin yüzü yakması, kavurmak",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "lefh",
+        "koken": "سَفْحٌ [sefh] vezninde",
+        "yazilis": "اَللَّفْحُ",
+        "okunus": "el-lefh",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Kılıçla vurmak manâsınadır; yukâlu: لَفَحَهُ بِالسَّيْفِ لَفْحًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِهِ Şârihin beyânına göre kılıçla yapça vurmağa mahsûstur.",
+            "misaller": [
+              ["لَفَحَهُ بِالسَّيْفِ لَفْحًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِهِ", ""]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "لَفْحٌ [lefh] ve لَفْحَانُ [lefehân] (fetehâtla) Âteşin ıssılığı çalıp yakmak manâsınadır; yukâlu: لَفَحَتْهُ النَّارُ بِحَرِّهَا لَفْحًا وَلَفَحَانًا إِذَا أَحْرَقَتْ Müellifin Basâirde beyânına göre manâ-yı evvel bundan müsteârdır.",
+            "misaller": [
+              ["لَفَحَتْهُ النَّارُ بِحَرِّهَا لَفْحًا وَلَفَحَانًا إِذَا أَحْرَقَتْ", ""]
+            ]
+          }
+        ],
+        "kelime": ["لَفْح"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "lefh",
+        "koken": "lâmın fethi ve fânın sükûnuyla",
+        "yazilis": "اَللَّفْحُ",
+        "okunus": "el-lefh",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Yakmak, إِحْرَاقٌ [ihrâk] manâsına; yukâlu: لَفَحَتْهُ النَّارُ وَالسَّمُومُ بِحَرِّهَا أَيْ أَحْرَقَتْهُ Asmaî eyitti: Her hangisin ki لَفْحٌ [lefh]la sıfatlayalar, o حَرٌّ [harr]dır ve her hangisin ki نَفْحٌ [nefh]le sıfatlayalar, o بَرْدٌ [berd]dir.",
+            "misaller": [
+              ["لَفَحَتْهُ النَّارُ وَالسَّمُومُ بِحَرِّهَا أَيْ أَحْرَقَتْهُ", ""]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "لَفْحٌ [lefh] Kılıçla vurmağa derler, kaçan hiffetle vurulsa; tekûlu: لَفَحْتُهُ بِالسَّيْفِ لَفْحَةً إِذَا ضَرَبْتَهُ ضَرْبَةً خَفِيفَةً"
+          }
+        ],
+        "kelime": ["لَفْح"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "لَفَحَ",
+      "metin": "(لَفَحَ) اللَّامُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لَفَحَتْهُ النَّارُ بِحَرِّهَا، وَالسَّمُومُ إِذَا أَصَابَهُ حَرُّهَا فَتَغَيَّرَ وَجْهُهُ. [وَأَمَّا] قَوْلُهُمْ: لَفَحَهُ بِالسَّيْفِ لَفْحَةً: ضَرَبَهُ ضَرْبَةً خَفِيفَةً، فَإِنَّ الْأَصْلَ فِيهِ النُّونُ، هُوَ نَفَحَهُ.",
+      "baslik_tr": "Lefeha (لَفَحَ)",
+      "metin_tr": "(لَفَحَ) Lâm, fâ ve hâ tek bir kelimedir. «Lefehathü'n-nâru bi-harrihâ»: ateş hararetiyle ona dokundu; «es-semûm» (kavurucu rüzgâr) da hararetiyle isabet edip yüzü değişince böyle denir. [Fakat] «lefehahû bi's-seyf lefhaten» sözleri, ona hafif bir darbe vurdu mânâsınadır; bunun aslı nûn iledir: «nefehahû»."
+    }
+  ],
+  "cebel": {
+    "fasil": "اللام والفاء",
+    "baslik": "لفح",
+    "mihveri": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
+    "tam_metin": "{تَلْفَحُ وُجُوهَهُمُ النَّارُ وَهُمْ فِيهَا كَالِحُونَ} [المؤمنون: 104]\n\"لَفَحَتْه النارُ والسَمومُ بحرِّها: أصابه حرها فتغيَّر وجهُه \" [المقاييس].\n° المعنى المحوري\nحِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (لف): التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة ما على ذلك الظاهر كما يتمثل في الِلفافة: ما يُلَف على الرِجْل وغيرها - في (لفف)، وفي اللَفَاء- كسحاب: ما على وجه الأرض من التراب والقماش - في (لفو)، وكما في الألفة بين الناس وأوالف الحمام التي تألف البيوت من تجمع مع ارتباطٍ ما - في (ألف)، وكما في اعوجاج القرون والتوائها - في (لفت)، وكما في لفح النار والسموم الوجه فيتغير لونه - في (لفح)، وكما في اخراج ما كان بالداخل إلى الظاهر كلفظ الكلام من الفم، والميت من الأرض، ولفظ البحر ما في جوفه - في (لفظ).",
+    "mihveri_tr": "Bir şeyden fışkıran şiddet; karşısına çıkanın dışına (zâhirine) isabet eder: yüze ateşin lefhi gibi. Terkîb âyetindeki de budur. «Lefehahû bi's-seyf»: ona kılıçla vurdu (yalnız zâhir derisini yaralayan hafif bir darbe)."
+  },
+  "zemahseri": {
+    "hakikat": "لفحته النار: أخرقت بشرته، ولفحته السموم، وأصابه من الحر لفح، ومن البرد نفح. ورأيت معهم التّفاح واللّقّاح، وهو شيء أصفر أصغر من التفاح طيّب الريح.\nل\nف\nظ\nلفظ النوى. وكأنها لفظ العجم ولفيظه: ما لفظ منه. ولفظ اللقمة من فيه. ورمى باللفاظة وهي ما يلفظ.",
+    "mecaz": "لفظ القول ولفظ به، \" ما يلفظ من قول \"، ويقال: ما يلفظ بشيء إلا حفظ عليه. ولفظ نفسه: مات، كما يقال: قاء نفسه. وفلان لافظ فائظ. قال:\nوقلت له إن تلفظ النفس كارهاً ... أدعك ولا أدفنك حين تنبل\nأي تموت. ولفظت الرحم ماء الفحل. ولفظت\nالرحى بالدقيق. ولفظت الحيّة سمها. ولفظت إلينا البلاد أهلها. ولفظت آسادها الأجم. وقال ذو الرمة:\nتروحن فاعصوصبن حتى وردنه ... ولم يلفظ الغرثى الخداريّة الوكر\nوالبحر يلفظ بالشيء إلى الساحل. والدنيا لافظة بالناس إلى الآخرة، والأرض تلفظ الموتى. وجاء وقد لفظ لجامه وهو مجهود من العطش والإعياء. وما بق إلا فضاضة ولعاعة ولفاظة: بقيّة يسيرة.",
+    "mecaz_var": true
+  },
+  "ontoloji": [
+    {
+      "id": "46430",
+      "arapca": [
+        "مُحْتَرِقٌ",
+        "مُتَوَهِّجٌ",
+        "مُسْتَعِرٌ",
+        "وَهَّاجٌ",
+        "مُتَوَقِّدٌ",
+        "مُتَّقِدٌ",
+        "لَافِحٌ",
+        "مُحْتَدِمٌ",
+        "مُتَأَجِّجٌ",
+        "سَاطِعٌ",
+        "مُضْطَرِمٌ",
+        "مُشْتَعِلٌ",
+        "سُخْنٌ",
+        "سَاخِنٌ",
+        "قَائِظٌ",
+        "مُلْتَهِبٌ",
+        "حَمِيمٌ",
+        "صَائِفٌ",
+        "حَارٌّ",
+        "سَخِينٌ",
+        "مُسَعِّرٌ",
+        "مُسَعِّرَةٌ"
+      ],
+      "ingilizce": [],
+      "tanim": "ارتفاع درجة حرارة الشيء",
+      "misal": "كان نبعُ الماء _",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir şeyin hararet derecesinin yükselmesi",
+      "misal_tr": "Pınarın suyu _ idi."
+    },
+    {
+      "id": "47214",
+      "arapca": [
+        "أَجَّجَ",
+        "أَذْكَى2",
+        "أَضْرَمَ",
+        "لَظَّى",
+        "لَفَحَ",
+        "أَلْهَبَ",
+        "أَسْعَرَ",
+        "سَفَعَ",
+        "سَفَعَ ب",
+        "أَوْقَدَ",
+        "أَحْرَقَ",
+        "حَرَقَ",
+        "كَوَى",
+        "أَشْعَلَ"
+      ],
+      "ingilizce": [],
+      "tanim": "بدأ وجود النّار في الموجود المادي",
+      "misal": "_ النار في الموقد ليتدفَّأ",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Maddî varlıkta ateşin baş göstermesi",
+      "misal_tr": "Ocakta ateş _ ısınsın diye."
+    },
+    {
+      "id": "52391",
+      "arapca": ["لَفَحَ", "سَفَعَ", "سَفَعَ ب", "شَاطَ1", "شَاطَ1 ب", "شَاطَ1 في"],
+      "ingilizce": [],
+      "tanim": "قارَب الاحتراق كلُّه أو بعضُه",
+      "misal": "_تْ وجهه النار",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bütünüyle yahut kısmen yanmaya yaklaşma",
+      "misal_tr": "Ateş yüzünü _ ti."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "لفاح",
+      "tur": "noun",
+      "baslik": "لُفَّاح or لُفَاح • (luffāḥ or lufāḥ) m",
+      "esanlamli": ["يَبْرُوح", "تُفَّاح الْجِنّ", "تُفَّاح الْمَجَانِين", "بَيْض الْجِنّ"],
+      "anlam": ["mandrake (Mandragora gen. et spp.)"],
+      "okunus": ["luffāḥ", "lufāḥ"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["mandrağora (Mandragora cinsi ve türleri)"]
+    },
+    {
+      "madde": "لفح",
+      "tur": "verb",
+      "baslik": "لَفَحَ • (lafaḥa) I (non-past يَلْفَحُ (yalfaḥu), verbal noun لَفْح (lafḥ) or لَفَحَان (lafaḥān))",
+      "anlam": ["to blast, to blow, to sear, to graze, to stroke"],
+      "okunus": ["lafaḥa"],
+      "anlam_tr": ["kavurmak, esip geçmek, sıyırmak, hafifçe değmek, okşamak"]
+    },
+    {
+      "madde": "لفحتما",
+      "tur": "verb",
+      "baslik": "لفحتما (form I)\n# لَفَحْتُمَا (lafaḥtumā) /la.faħ.tu.maː/: second-person dual past active of لَفَحَ (lafaḥa)\n# لُفِحْتُمَا (lufiḥtumā) /lu.fiħ.tu.maː/: second-person dual past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥtumā", "lafaḥa", "lufiḥtumā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحتم",
+      "tur": "verb",
+      "baslik": "لفحتم (form I)\n# لَفَحْتُمْ (lafaḥtum) /la.faħ.tum/: second-person masculine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْتُمْ (lufiḥtum) /lu.fiħ.tum/: second-person masculine plural past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥtum", "lafaḥa", "lufiḥtum"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحنا",
+      "tur": "verb",
+      "baslik": "لفحنا (form I)\n# لَفَحْنَا (lafaḥnā) /la.faħ.naː/: first-person plural past active of لَفَحَ (lafaḥa)\n# لُفِحْنَا (lufiḥnā) /lu.fiħ.naː/: first-person plural past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥnā", "lafaḥa", "lufiḥnā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحا",
+      "tur": "verb",
+      "baslik": "لفحا (form I)\n# لَفَحَا (lafaḥā) /la.fa.ħaː/: third-person masculine dual past active of لَفَحَ (lafaḥa)\n# لُفِحَا (lufiḥā) /lu.fi.ħaː/: third-person masculine dual past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥā", "lafaḥa", "lufiḥā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحتن",
+      "tur": "verb",
+      "baslik": "لفحتن (form I)\n# لَفَحْتُنَّ (lafaḥtunna) /la.faħ.tun.na/: second-person feminine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْتُنَّ (lufiḥtunna) /lu.fiħ.tun.na/: second-person feminine plural past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥtunna", "lafaḥa", "lufiḥtunna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحتا",
+      "tur": "verb",
+      "baslik": "لفحتا (form I)\n# لَفَحَتَا (lafaḥatā) /la.fa.ħa.taː/: third-person feminine dual past active of لَفَحَ (lafaḥa)\n# لُفِحَتَا (lufiḥatā) /lu.fi.ħa.taː/: third-person feminine dual past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥatā", "lafaḥa", "lufiḥatā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحت",
+      "tur": "verb",
+      "baslik": "لفحت (form I)\n# لَفَحْتُ (lafaḥtu) /la.faħ.tu/: first-person singular past active of لَفَحَ (lafaḥa)\n# لَفَحْتَ (lafaḥta) /la.faħ.ta/: second-person masculine singular past active of لَفَحَ (lafaḥa)\n# لَفَحْتِ (lafaḥti) /la.faħ.ti/: second-person feminine singular past active of لَفَحَ (lafaḥa)\n# لَفَحَتْ (lafaḥat) /la.fa.ħat/: third-person feminine singular past active of لَفَحَ (lafaḥa)\n# لُفِحْ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥtu", "lafaḥa", "lafaḥta"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "ألفح",
+      "tur": "verb",
+      "baslik": "ألفح (form I)\n# أَلْفَحُ (ʔalfaḥu) /ʔal.fa.ħu/: first-person singular non-past active indicative of لَفَحَ (lafaḥa)\n# أُلْفَحُ (ʔulfaḥu) /ʔul.fa.ħu/: first-person singular non-past passive indicative of لَفَحَ (lafaḥa)\n# أَلْفَحَ (ʔalfaḥa) /ʔal.fa.ħa/: first-person singular non-past active subjunctive of لَفَحَ (lafaḥa)\n# أُلْفَحَ (ʔulfaḥa) /ʔul.fa.ħa/: first-person singular non-past passive subju",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔalfaḥu", "lafaḥa", "ʔulfaḥu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفح",
+      "tur": "verb",
+      "baslik": "تلفح (form I)\n# تَلْفَحُ (talfaḥu) /tal.fa.ħu/: inflection of لَفَحَ (lafaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْفَحُ (tulfaḥu) /tul.fa.ħu/: inflection of لَفَحَ (lafaḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَلْ",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥu", "lafaḥa", "tulfaḥu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحوا",
+      "tur": "verb",
+      "baslik": "لفحوا (form I)\n# لَفَحُوا (lafaḥū) /la.fa.ħuː/: third-person masculine plural past active of لَفَحَ (lafaḥa)\n# لُفِحُوا (lufiḥū) /lu.fi.ħuː/: third-person masculine plural past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥū", "lafaḥa", "lufiḥū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحين",
+      "tur": "verb",
+      "baslik": "تلفحين (form I)\n# تَلْفَحِينَ (talfaḥīna) /tal.fa.ħiː.na/: second-person feminine singular non-past active indicative of لَفَحَ (lafaḥa)\n# تُلْفَحِينَ (tulfaḥīna) /tul.fa.ħiː.na/: second-person feminine singular non-past passive indicative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥīna", "lafaḥa", "tulfaḥīna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "لفحن",
+      "tur": "verb",
+      "baslik": "لفحن (form I)\n# لَفَحْنَ (lafaḥna) /la.faħ.na/: third-person feminine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْنَ (lufiḥna) /lu.fiħ.na/: third-person feminine plural past passive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["lafaḥna", "lafaḥa", "lufiḥna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفحان",
+      "tur": "verb",
+      "baslik": "يلفحان (form I)\n# يَلْفَحَانِ (yalfaḥāni) /jal.fa.ħaː.ni/: third-person masculine dual non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحَانِ (yulfaḥāni) /jul.fa.ħaː.ni/: third-person masculine dual non-past passive indicative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥāni", "lafaḥa", "yulfaḥāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفح",
+      "tur": "verb",
+      "baslik": "يلفح (form I)\n# يَلْفَحُ (yalfaḥu) /jal.fa.ħu/: third-person masculine singular non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحُ (yulfaḥu) /jul.fa.ħu/: third-person masculine singular non-past passive indicative of لَفَحَ (lafaḥa)\n# يَلْفَحَ (yalfaḥa) /jal.fa.ħa/: third-person masculine singular non-past active subjunctive of لَفَحَ (lafaḥa)\n# يُلْفَحَ (yulfaḥa) /jul.fa.ħa/: third-person m",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥu", "lafaḥa", "yulfaḥu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "نلفح",
+      "tur": "verb",
+      "baslik": "نلفح (form I)\n# نَلْفَحُ (nalfaḥu) /nal.fa.ħu/: first-person plural non-past active indicative of لَفَحَ (lafaḥa)\n# نُلْفَحُ (nulfaḥu) /nul.fa.ħu/: first-person plural non-past passive indicative of لَفَحَ (lafaḥa)\n# نَلْفَحَ (nalfaḥa) /nal.fa.ħa/: first-person plural non-past active subjunctive of لَفَحَ (lafaḥa)\n# نُلْفَحَ (nulfaḥa) /nul.fa.ħa/: first-person plural non-past passive subjunctive o",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["nalfaḥu", "lafaḥa", "nulfaḥu"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفحن",
+      "tur": "verb",
+      "baslik": "يلفحن (form I)\n# يَلْفَحْنَ (yalfaḥna) /jal.faħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحْنَ (yulfaḥna) /jul.faħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥna", "lafaḥa", "yulfaḥna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحان",
+      "tur": "verb",
+      "baslik": "تلفحان (form I)\n# تَلْفَحَانِ (talfaḥāni) /tal.fa.ħaː.ni/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْفَحَانِ (tulfaḥāni) /tul.fa.ħaː.ni/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥāni", "lafaḥa", "tulfaḥāni"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحون",
+      "tur": "verb",
+      "baslik": "تلفحون (form I)\n# تَلْفَحُونَ (talfaḥūna) /tal.fa.ħuː.na/: second-person masculine plural non-past active indicative of لَفَحَ (lafaḥa)\n# تُلْفَحُونَ (tulfaḥūna) /tul.fa.ħuː.na/: second-person masculine plural non-past passive indicative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥūna", "lafaḥa", "tulfaḥūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحا",
+      "tur": "verb",
+      "baslik": "تلفحا (form I)\n# تَلْفَحَا (talfaḥā) /tal.fa.ħaː/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْفَحَا (tulfaḥā) /tul.fa.ħaː/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥā", "lafaḥa", "tulfaḥā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفحا",
+      "tur": "verb",
+      "baslik": "يلفحا (form I)\n# يَلْفَحَا (yalfaḥā) /jal.fa.ħaː/: third-person masculine dual non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحَا (yulfaḥā) /jul.fa.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥā", "lafaḥa", "yulfaḥā"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحن",
+      "tur": "verb",
+      "baslik": "تلفحن (form I)\n# تَلْفَحْنَ (talfaḥna) /tal.faħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحْنَ (tulfaḥna) /tul.faħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥna", "lafaḥa", "tulfaḥna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحي",
+      "tur": "verb",
+      "baslik": "تلفحي (form I)\n# تَلْفَحِي (talfaḥī) /tal.fa.ħiː/: second-person feminine singular non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحِي (tulfaḥī) /tul.fa.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥī", "lafaḥa", "tulfaḥī"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفحون",
+      "tur": "verb",
+      "baslik": "يلفحون (form I)\n# يَلْفَحُونَ (yalfaḥūna) /jal.fa.ħuː.na/: third-person masculine plural non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحُونَ (yulfaḥūna) /jul.fa.ħuː.na/: third-person masculine plural non-past passive indicative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥūna", "lafaḥa", "yulfaḥūna"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "يلفحوا",
+      "tur": "verb",
+      "baslik": "يلفحوا (form I)\n# يَلْفَحُوا (yalfaḥū) /jal.fa.ħuː/: third-person masculine plural non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحُوا (yulfaḥū) /jul.fa.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yalfaḥū", "lafaḥa", "yulfaḥū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "الفحا",
+      "tur": "verb",
+      "baslik": "اِلْفَحَا • (ilfaḥā) (form I) /il.fa.ħaː/\n# second-person dual imperative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ilfaḥā", "lafaḥa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "الفح",
+      "tur": "verb",
+      "baslik": "اِلْفَحْ • (ilfaḥ) (form I) /il.faħ/\n# second-person masculine singular imperative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ilfaḥ", "lafaḥa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "الفحوا",
+      "tur": "verb",
+      "baslik": "اِلْفَحُوا • (ilfaḥū) (form I) /il.fa.ħuː/\n# second-person masculine plural imperative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ilfaḥū", "lafaḥa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "الفحن",
+      "tur": "verb",
+      "baslik": "اِلْفَحْنَ • (ilfaḥna) (form I) /il.faħ.na/\n# second-person feminine plural imperative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ilfaḥna", "lafaḥa"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "تلفحوا",
+      "tur": "verb",
+      "baslik": "تلفحوا (form I)\n# تَلْفَحُوا (talfaḥū) /tal.fa.ħuː/: second-person masculine plural non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحُوا (tulfaḥū) /tul.fa.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["talfaḥū", "lafaḥa", "tulfaḥū"],
+      "etimoloji": 2
+    },
+    {
+      "madde": "الفحي",
+      "tur": "verb",
+      "baslik": "اِلْفَحِي • (ilfaḥī) (form I) /il.fa.ħiː/\n# second-person feminine singular imperative of لَفَحَ (lafaḥa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ilfaḥī", "lafaḥa"],
+      "etimoloji": 2
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Blend of لُوف (lūf) + تُفَّاح (tuffāḥ).",
+      "kognatlar": [
+        ["لُوف", "لوف#Arabic"],
+        ["تُفَّاح", "تفاح#Arabic"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "LFḤ",
+    "kok_maddesi": "Back to library EtymArab LFḤ لفح BP – • HDAL • © SG | 9May2023 √LFḤ “root” ▪ LFḤ_1 ‘...’ ↗ ... ▪ LFḤ_2 ‘...’ ↗ ... ▪ LFḤ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘heat of a fire, fire, glare of a fire; to scorch, burn, sear, tan; to strike lightly’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab LFḤ لفح | BP – • HDAL • © SG | 9 Mayıs 2023 | √LFḤ «kök» ▪ LFḤ_1 «…» ↗ … ▪ LFḤ_2 «…» ↗ … ▪ LFḤ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «ateşin hararetı, ateş, ateşin parıltısı; kavurmak, yakmak, yüzü yakıp esmerleştirmek; hafifçe vurmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "23:104:1:1",
+    "tur": {
+      "V": 1
+    },
+    "bab": {},
+    "zaman_kip": {
+      "IMPF": 1
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "تَلْفَحُ": 1
+    },
+    "bicimler": {
+      "تَلْفَحُ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "تَلْفَحُ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "تَلْفَحُ",
+          "zaman": "Muzâri",
+          "ilk": "23:104",
+          "adet": 1,
+          "tr": "yakar"
+        }
+      ],
+      "tr": "yakar",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 1
+    }
+  ],
+  "mustak": {
     "masdar · sülâsî mücerred": [
       [
-        0,
+        "fa'l",
+        "semâî aday",
         "لَفْح",
         "lafḥ",
         "Kılıçla vurmak",
         "lugat",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke · Kamus"
       ],
-      [1, "لِفْح", "lifḥ", "yanma", "orta", ""],
-      [2, "لُفْح", "lufḥ", "yanma", "orta", ""],
-      [3, "لَفَح", "lafaḥ", "yanma", "orta", ""],
-      [4, "لِفَح", "lifaḥ", "yanma", "orta", ""],
-      [5, "لُفُح", "lufuḥ", "yanma", "orta", ""],
-      [6, "لُفُوح", "lufūḥ", "yanma", "orta", ""],
-      [7, "لِفَاح", "lifāḥ", "yanma", "orta", ""],
-      [8, "لُفَاح", "lufāḥ", "yanma", "orta", ""],
-      [9, "لَفَاح", "lafāḥ", "yanma", "orta", ""],
-      [10, "لَفَاحَة", "lafāḥa", "yanma", "orta", ""],
-      [11, "لُفُوحَة", "lufūḥa", "yanma", "orta", ""],
-      [12, "لِفَاحَة", "lifāḥa", "yanma", "orta", ""],
-      [13, "لَفِيح", "lafīḥ", "yanma", "orta", ""],
-      [14, "لَفُوح", "lafūḥ", "yanma", "orta", ""],
+      ["fi'l", "semâî aday", "لِفْح", "lifḥ", "yanma", "orta", ""],
+      ["fu'l", "semâî aday", "لُفْح", "lufḥ", "yanma", "orta", ""],
+      ["fa'al", "semâî aday", "لَفَح", "lafaḥ", "yanma", "orta", ""],
+      ["fi'al", "semâî aday", "لِفَح", "lifaḥ", "yanma", "orta", ""],
+      ["fu'ul", "semâî aday", "لُفُح", "lufuḥ", "yanma", "orta", ""],
+      ["fu'ūl", "semâî aday", "لُفُوح", "lufūḥ", "yanma", "orta", ""],
+      ["fi'āl", "semâî aday", "لِفَاح", "lifāḥ", "yanma", "orta", ""],
+      ["fu'āl", "semâî aday", "لُفَاح", "lufāḥ", "yanma", "orta", ""],
+      ["fa'āl", "semâî aday", "لَفَاح", "lafāḥ", "yanma", "orta", ""],
+      ["fa'āle", "semâî aday", "لَفَاحَة", "lafāḥa", "yanma", "orta", ""],
+      ["fu'ūle", "semâî aday", "لُفُوحَة", "lufūḥa", "yanma", "orta", ""],
+      ["fi'āle", "semâî aday", "لِفَاحَة", "lifāḥa", "yanma", "orta", ""],
+      ["fa'īl", "semâî aday", "لَفِيح", "lafīḥ", "yanma", "orta", ""],
+      ["fa'ūl", "semâî aday", "لَفُوح", "lafūḥ", "yanma", "orta", ""],
       [
-        15,
+        "fa'alān",
+        "semâî aday",
         "لَفَحَان",
         "lafaḥān",
         "yanma",
         "orta",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke"
       ],
-      [16, "لُفْحَان", "lufḥān", "yanma", "orta", ""],
-      [17, "لِفْحَان", "lifḥān", "yanma", "orta", ""],
-      [18, "لَفْحَى", "lafḥā", "yanma", "orta", ""],
-      [19, "لُفْحَى", "lufḥā", "yanma", "orta", ""],
-      [20, "لِفْحَى", "lifḥā", "yanma", "orta", ""],
-      [21, "لَفَحَة", "lafaḥa", "yanma", "orta", ""],
-      [22, "لِفَحَة", "lifaḥa", "yanma", "orta", ""],
-      [23, "لَفْحُوحَة", "lafḥūḥa", "yanma", "orta", ""],
-      [24, "تُلْفُوح", "tulfūḥ", "yanma", "orta", ""],
-      [25, "تَلْفِحَة", "talfiḥa", "yanma", "orta", ""],
-      [26, "تَلْفَحَة", "talfaḥa", "yanma", "orta", ""],
-      [27, "مَلْفُحَة", "malfuḥa", "yanma", "orta", ""],
-      [28, "مَلْفِحَة", "malfiḥa", "yanma", "orta", ""]
+      ["fu'lān", "semâî aday", "لُفْحَان", "lufḥān", "yanma", "orta", ""],
+      ["fi'lān", "semâî aday", "لِفْحَان", "lifḥān", "yanma", "orta", ""],
+      ["fa'lā", "semâî aday", "لَفْحَى", "lafḥā", "yanma", "orta", ""],
+      ["fu'lā", "semâî aday", "لُفْحَى", "lufḥā", "yanma", "orta", ""],
+      ["fi'lā", "semâî aday", "لِفْحَى", "lifḥā", "yanma", "orta", ""],
+      ["fa'ale", "semâî aday", "لَفَحَة", "lafaḥa", "yanma", "orta", ""],
+      ["fi'ale", "semâî aday", "لِفَحَة", "lifaḥa", "yanma", "orta", ""],
+      ["fa'lūla", "semâî aday", "لَفْحُوحَة", "lafḥūḥa", "yanma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُلْفُوح", "tulfūḥ", "yanma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَلْفِحَة", "talfiḥa", "yanma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَلْفَحَة", "talfaḥa", "yanma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَلْفُحَة", "malfuḥa", "yanma", "orta", ""],
+      ["maf'ila", "semâî aday", "مَلْفِحَة", "malfiḥa", "yanma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَلْفِيح", "talfīḥ", "yandırma", "orta", ""],
-      [30, "تَلْفِحَة", "talfiḥa", "yandırma", "orta", ""],
-      [31, "لِفِّاح", "liffāḥ", "yandırma", "orta", ""]
+      ["taf'īl", "kıyâsî", "تَلْفِيح", "talfīḥ", "yandırma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَلْفِحَة", "talfiḥa", "yandırma", "orta", ""],
+      ["fi''āl", "kıyâsî", "لِفِّاح", "liffāḥ", "yandırma", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَلْفِيحَة", "talfīḥa", "bir kere yandırma", "orta", ""],
-      [33, "لِفِّاحَة", "liffāḥa", "bir kere yandırma", "orta", ""]
+      ["taf'īl + tâ", "aday", "تَلْفِيحَة", "talfīḥa", "bir kere yandırma", "orta", ""],
+      ["fi''āl + tâ", "aday", "لِفِّاحَة", "liffāḥa", "bir kere yandırma", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [34, "مُلَفِّح", "mulaffiḥ", "yandıran", "orta", ""],
-      [35, "مُلَفِّحَة", "mulaffiḥa", "yandıran, müennes", "orta", ""],
-      [36, "مُلَفِّحَان", "mulaffiḥān", "yandıran, iki", "orta", ""],
-      [37, "مُلَفِّحَتَان", "mulaffiḥatān", "yandıran, iki, müennes", "orta", ""],
-      [38, "مُلَفِّحُون", "mulaffiḥūn", "yandıranlar", "orta", ""],
-      [39, "مُلَفِّحِين", "mulaffiḥīn", "yandıranlar", "orta", ""],
-      [40, "مُلَفِّحَات", "mulaffiḥāt", "yandıranlar, müennes", "orta", ""]
+      ["mufa''il", "kıyâsî", "مُلَفِّح", "mulaffiḥ", "yandıran", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُلَفِّحَة", "mulaffiḥa", "yandıran, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُلَفِّحَان", "mulaffiḥān", "yandıran, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُلَفِّحَتَان",
+        "mulaffiḥatān",
+        "yandıran, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُلَفِّحُون", "mulaffiḥūn", "yandıranlar", "orta", ""],
+      ["mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُلَفِّحِين", "mulaffiḥīn", "yandıranlar", "orta", ""],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَفِّحَات",
+        "mulaffiḥāt",
+        "yandıranlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [41, "مُلَفَّح", "mulaffaḥ", "yandırılan", "orta", ""],
-      [42, "مُلَفَّحَة", "mulaffaḥa", "yandırılan, müennes", "orta", ""],
-      [43, "مُلَفَّحَان", "mulaffaḥān", "yandırılan, iki", "orta", ""],
-      [44, "مُلَفَّحَتَان", "mulaffaḥatān", "yandırılan, iki, müennes", "orta", ""],
-      [45, "مُلَفَّحُون", "mulaffaḥūn", "yandırılanlar", "orta", ""],
-      [46, "مُلَفَّحِين", "mulaffaḥīn", "yandırılanlar", "orta", ""],
-      [47, "مُلَفَّحَات", "mulaffaḥāt", "yandırılanlar, müennes", "orta", ""]
+      ["mufa''al", "kıyâsî", "مُلَفَّح", "mulaffaḥ", "yandırılan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُلَفَّحَة", "mulaffaḥa", "yandırılan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُلَفَّحَان", "mulaffaḥān", "yandırılan, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُلَفَّحَتَان",
+        "mulaffaḥatān",
+        "yandırılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُلَفَّحُون", "mulaffaḥūn", "yandırılanlar", "orta", ""],
+      ["mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُلَفَّحِين", "mulaffaḥīn", "yandırılanlar", "orta", ""],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَفَّحَات",
+        "mulaffaḥāt",
+        "yandırılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُلَفَّح", "mulaffaḥ", "yandırma yeri, vakti", "orta", ""]
+      ["mufa''al", "kıyâsî", "مُلَفَّح", "mulaffaḥ", "yandırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [49, "مُلَافَحَة", "mulāfaḥa", "biriyle karşılıklı yanma", "orta", ""],
-      [50, "لِفَاح", "lifāḥ", "biriyle karşılıklı yanma", "orta", ""]
+      ["mufā'ale", "kıyâsî", "مُلَافَحَة", "mulāfaḥa", "biriyle karşılıklı yanma", "orta", ""],
+      ["fi'āl", "kıyâsî", "لِفَاح", "lifāḥ", "biriyle karşılıklı yanma", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "لِفَاحَة", "lifāḥa", "bir kere biriyle karşılıklı yanma", "orta", ""]
+      ["fi'āl + tâ", "aday", "لِفَاحَة", "lifāḥa", "bir kere biriyle karşılıklı yanma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُلَافِح", "mulāfiḥ", "biriyle karşılıklı yanan", "orta", ""],
-      [53, "مُلَافِحَة", "mulāfiḥa", "biriyle karşılıklı yanan, müennes", "orta", ""],
-      [54, "مُلَافِحَان", "mulāfiḥān", "biriyle karşılıklı yanan, iki", "orta", ""],
-      [55, "مُلَافِحَتَان", "mulāfiḥatān", "biriyle karşılıklı yanan, iki, müennes", "orta", ""],
-      [56, "مُلَافِحُون", "mulāfiḥūn", "biriyle karşılıklı yananlar", "orta", ""],
-      [57, "مُلَافِحِين", "mulāfiḥīn", "biriyle karşılıklı yananlar", "orta", ""],
-      [58, "مُلَافِحَات", "mulāfiḥāt", "biriyle karşılıklı yananlar, müennes", "orta", ""]
+      ["mufā'il", "kıyâsî", "مُلَافِح", "mulāfiḥ", "biriyle karşılıklı yanan", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُلَافِحَة", "mulāfiḥa", "biriyle karşılıklı yanan, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُلَافِحَان", "mulāfiḥān", "biriyle karşılıklı yanan, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُلَافِحَتَان",
+        "mulāfiḥatān",
+        "biriyle karşılıklı yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَافِحُون",
+        "mulāfiḥūn",
+        "biriyle karşılıklı yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَافِحِين",
+        "mulāfiḥīn",
+        "biriyle karşılıklı yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَافِحَات",
+        "mulāfiḥāt",
+        "biriyle karşılıklı yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُلَافَح", "mulāfaḥ", "biriyle karşılıklı yanılan", "orta", ""],
-      [60, "مُلَافَحَة", "mulāfaḥa", "biriyle karşılıklı yanılan, müennes", "orta", ""],
-      [61, "مُلَافَحَان", "mulāfaḥān", "biriyle karşılıklı yanılan, iki", "orta", ""],
-      [62, "مُلَافَحَتَان", "mulāfaḥatān", "biriyle karşılıklı yanılan, iki, müennes", "orta", ""],
-      [63, "مُلَافَحُون", "mulāfaḥūn", "biriyle karşılıklı yanılanlar", "orta", ""],
-      [64, "مُلَافَحِين", "mulāfaḥīn", "biriyle karşılıklı yanılanlar", "orta", ""],
-      [65, "مُلَافَحَات", "mulāfaḥāt", "biriyle karşılıklı yanılanlar, müennes", "orta", ""]
+      ["mufā'al", "kıyâsî", "مُلَافَح", "mulāfaḥ", "biriyle karşılıklı yanılan", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُلَافَحَة", "mulāfaḥa", "biriyle karşılıklı yanılan, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُلَافَحَان", "mulāfaḥān", "biriyle karşılıklı yanılan, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُلَافَحَتَان",
+        "mulāfaḥatān",
+        "biriyle karşılıklı yanılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَافَحُون",
+        "mulāfaḥūn",
+        "biriyle karşılıklı yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَافَحِين",
+        "mulāfaḥīn",
+        "biriyle karşılıklı yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَافَحَات",
+        "mulāfaḥāt",
+        "biriyle karşılıklı yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُلَافَح", "mulāfaḥ", "biriyle karşılıklı yanma yeri, vakti", "orta", ""]
+      ["mufā'al", "kıyâsî", "مُلَافَح", "mulāfaḥ", "biriyle karşılıklı yanma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِلْفَاح", "ʾilfāḥ", "yandırma", "orta", ""]
+      ["if'āl", "kıyâsî", "إِلْفَاح", "ʾilfāḥ", "yandırma", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِلْفَاحَة", "ʾilfāḥa", "bir kere yandırma", "orta", ""]
+      ["if'āl + tâ", "aday", "إِلْفَاحَة", "ʾilfāḥa", "bir kere yandırma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُلْفِح", "mulfiḥ", "yandıran", "orta", ""],
-      [70, "مُلْفِحَة", "mulfiḥa", "yandıran, müennes", "orta", ""],
-      [71, "مُلْفِحَان", "mulfiḥān", "yandıran, iki", "orta", ""],
-      [72, "مُلْفِحَتَان", "mulfiḥatān", "yandıran, iki, müennes", "orta", ""],
-      [73, "مُلْفِحُون", "mulfiḥūn", "yandıranlar", "orta", ""],
-      [74, "مُلْفِحِين", "mulfiḥīn", "yandıranlar", "orta", ""],
-      [75, "مُلْفِحَات", "mulfiḥāt", "yandıranlar, müennes", "orta", ""]
+      ["muf'il", "kıyâsî", "مُلْفِح", "mulfiḥ", "yandıran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُلْفِحَة", "mulfiḥa", "yandıran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُلْفِحَان", "mulfiḥān", "yandıran, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُلْفِحَتَان", "mulfiḥatān", "yandıran, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُلْفِحُون", "mulfiḥūn", "yandıranlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُلْفِحِين", "mulfiḥīn", "yandıranlar", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْفِحَات",
+        "mulfiḥāt",
+        "yandıranlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُلْفَح", "mulfaḥ", "yandırılan", "orta", ""],
-      [77, "مُلْفَحَة", "mulfaḥa", "yandırılan, müennes", "orta", ""],
-      [78, "مُلْفَحَان", "mulfaḥān", "yandırılan, iki", "orta", ""],
-      [79, "مُلْفَحَتَان", "mulfaḥatān", "yandırılan, iki, müennes", "orta", ""],
-      [80, "مُلْفَحُون", "mulfaḥūn", "yandırılanlar", "orta", ""],
-      [81, "مُلْفَحِين", "mulfaḥīn", "yandırılanlar", "orta", ""],
-      [82, "مُلْفَحَات", "mulfaḥāt", "yandırılanlar, müennes", "orta", ""]
+      ["muf'al", "kıyâsî", "مُلْفَح", "mulfaḥ", "yandırılan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُلْفَحَة", "mulfaḥa", "yandırılan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُلْفَحَان", "mulfaḥān", "yandırılan, iki", "orta", ""],
+      ["muf'al + müennes tesniye", "kıyâsî", "مُلْفَحَتَان", "mulfaḥatān", "yandırılan, iki, müennes", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُلْفَحُون", "mulfaḥūn", "yandırılanlar", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُلْفَحِين", "mulfaḥīn", "yandırılanlar", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْفَحَات",
+        "mulfaḥāt",
+        "yandırılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُلْفَح", "mulfaḥ", "yandırma yeri, vakti", "orta", ""]
+      ["muf'al", "kıyâsî", "مُلْفَح", "mulfaḥ", "yandırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَلَفُّح", "talaffuḥ", "kendini zorlayarak yanma", "orta", ""]
+      ["tafa''ul", "kıyâsî", "تَلَفُّح", "talaffuḥ", "kendini zorlayarak yanma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَلَفُّحَة", "talaffuḥa", "bir kere kendini zorlayarak yanma", "orta", ""]
+      ["tafa''ul + tâ", "aday", "تَلَفُّحَة", "talaffuḥa", "bir kere kendini zorlayarak yanma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَلَفِّح", "mutalaffiḥ", "kendini zorlayarak yanan", "orta", ""],
-      [87, "مُتَلَفِّحَة", "mutalaffiḥa", "kendini zorlayarak yanan, müennes", "orta", ""],
-      [88, "مُتَلَفِّحَان", "mutalaffiḥān", "kendini zorlayarak yanan, iki", "orta", ""],
-      [89, "مُتَلَفِّحَتَان", "mutalaffiḥatān", "kendini zorlayarak yanan, iki, müennes", "orta", ""],
-      [90, "مُتَلَفِّحُون", "mutalaffiḥūn", "kendini zorlayarak yananlar", "orta", ""],
-      [91, "مُتَلَفِّحِين", "mutalaffiḥīn", "kendini zorlayarak yananlar", "orta", ""],
-      [92, "مُتَلَفِّحَات", "mutalaffiḥāt", "kendini zorlayarak yananlar, müennes", "orta", ""]
+      ["mutafa''il", "kıyâsî", "مُتَلَفِّح", "mutalaffiḥ", "kendini zorlayarak yanan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَلَفِّحَة",
+        "mutalaffiḥa",
+        "kendini zorlayarak yanan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَلَفِّحَان",
+        "mutalaffiḥān",
+        "kendini zorlayarak yanan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَفِّحَتَان",
+        "mutalaffiḥatān",
+        "kendini zorlayarak yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَفِّحُون",
+        "mutalaffiḥūn",
+        "kendini zorlayarak yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَفِّحِين",
+        "mutalaffiḥīn",
+        "kendini zorlayarak yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَفِّحَات",
+        "mutalaffiḥāt",
+        "kendini zorlayarak yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَلَفَّح", "mutalaffaḥ", "kendini zorlayarak yanılan", "orta", ""],
-      [94, "مُتَلَفَّحَة", "mutalaffaḥa", "kendini zorlayarak yanılan, müennes", "orta", ""],
-      [95, "مُتَلَفَّحَان", "mutalaffaḥān", "kendini zorlayarak yanılan, iki", "orta", ""],
-      [96, "مُتَلَفَّحَتَان", "mutalaffaḥatān", "kendini zorlayarak yanılan, iki, müennes", "orta", ""],
-      [97, "مُتَلَفَّحُون", "mutalaffaḥūn", "kendini zorlayarak yanılanlar", "orta", ""],
-      [98, "مُتَلَفَّحِين", "mutalaffaḥīn", "kendini zorlayarak yanılanlar", "orta", ""],
-      [99, "مُتَلَفَّحَات", "mutalaffaḥāt", "kendini zorlayarak yanılanlar, müennes", "orta", ""]
+      ["mutafa''al", "kıyâsî", "مُتَلَفَّح", "mutalaffaḥ", "kendini zorlayarak yanılan", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَلَفَّحَة",
+        "mutalaffaḥa",
+        "kendini zorlayarak yanılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَلَفَّحَان",
+        "mutalaffaḥān",
+        "kendini zorlayarak yanılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَفَّحَتَان",
+        "mutalaffaḥatān",
+        "kendini zorlayarak yanılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَفَّحُون",
+        "mutalaffaḥūn",
+        "kendini zorlayarak yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَفَّحِين",
+        "mutalaffaḥīn",
+        "kendini zorlayarak yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَفَّحَات",
+        "mutalaffaḥāt",
+        "kendini zorlayarak yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَلَفَّح", "mutalaffaḥ", "kendini zorlayarak yanma yeri, vakti", "orta", ""]
+      ["mutafa''al", "kıyâsî", "مُتَلَفَّح", "mutalaffaḥ", "kendini zorlayarak yanma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [101, "تَلَافُح", "talāfuḥ", "hep birlikte yanma", "orta", ""]
+      ["tafā'ul", "kıyâsî", "تَلَافُح", "talāfuḥ", "hep birlikte yanma", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَلَافُحَة", "talāfuḥa", "bir kere hep birlikte yanma", "orta", ""]
+      ["tafā'ul + tâ", "aday", "تَلَافُحَة", "talāfuḥa", "bir kere hep birlikte yanma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَلَافِح", "mutalāfiḥ", "hep birlikte yanan", "orta", ""],
-      [104, "مُتَلَافِحَة", "mutalāfiḥa", "hep birlikte yanan, müennes", "orta", ""],
-      [105, "مُتَلَافِحَان", "mutalāfiḥān", "hep birlikte yanan, iki", "orta", ""],
-      [106, "مُتَلَافِحَتَان", "mutalāfiḥatān", "hep birlikte yanan, iki, müennes", "orta", ""],
-      [107, "مُتَلَافِحُون", "mutalāfiḥūn", "hep birlikte yananlar", "orta", ""],
-      [108, "مُتَلَافِحِين", "mutalāfiḥīn", "hep birlikte yananlar", "orta", ""],
-      [109, "مُتَلَافِحَات", "mutalāfiḥāt", "hep birlikte yananlar, müennes", "orta", ""]
+      ["mutafā'il", "kıyâsî", "مُتَلَافِح", "mutalāfiḥ", "hep birlikte yanan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَلَافِحَة", "mutalāfiḥa", "hep birlikte yanan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَلَافِحَان", "mutalāfiḥān", "hep birlikte yanan, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَافِحَتَان",
+        "mutalāfiḥatān",
+        "hep birlikte yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَافِحُون",
+        "mutalāfiḥūn",
+        "hep birlikte yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَافِحِين",
+        "mutalāfiḥīn",
+        "hep birlikte yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَافِحَات",
+        "mutalāfiḥāt",
+        "hep birlikte yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَلَافَح", "mutalāfaḥ", "hep birlikte yanılan", "orta", ""],
-      [111, "مُتَلَافَحَة", "mutalāfaḥa", "hep birlikte yanılan, müennes", "orta", ""],
-      [112, "مُتَلَافَحَان", "mutalāfaḥān", "hep birlikte yanılan, iki", "orta", ""],
-      [113, "مُتَلَافَحَتَان", "mutalāfaḥatān", "hep birlikte yanılan, iki, müennes", "orta", ""],
-      [114, "مُتَلَافَحُون", "mutalāfaḥūn", "hep birlikte yanılanlar", "orta", ""],
-      [115, "مُتَلَافَحِين", "mutalāfaḥīn", "hep birlikte yanılanlar", "orta", ""],
-      [116, "مُتَلَافَحَات", "mutalāfaḥāt", "hep birlikte yanılanlar, müennes", "orta", ""]
+      ["mutafā'al", "kıyâsî", "مُتَلَافَح", "mutalāfaḥ", "hep birlikte yanılan", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَلَافَحَة", "mutalāfaḥa", "hep birlikte yanılan, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَلَافَحَان", "mutalāfaḥān", "hep birlikte yanılan, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَافَحَتَان",
+        "mutalāfaḥatān",
+        "hep birlikte yanılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَافَحُون",
+        "mutalāfaḥūn",
+        "hep birlikte yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَافَحِين",
+        "mutalāfaḥīn",
+        "hep birlikte yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَافَحَات",
+        "mutalāfaḥāt",
+        "hep birlikte yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَلَافَح", "mutalāfaḥ", "hep birlikte yanma yeri, vakti", "orta", ""]
+      ["mutafā'al", "kıyâsî", "مُتَلَافَح", "mutalāfaḥ", "hep birlikte yanma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْلِفَاح", "inlifāḥ", "kendiliğinden yanma", "orta", ""]
+      ["infi'āl", "kıyâsî", "اِنْلِفَاح", "inlifāḥ", "kendiliğinden yanma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْلِفَاحَة", "inlifāḥa", "bir kere kendiliğinden yanma", "orta", ""]
+      ["infi'āl + tâ", "aday", "اِنْلِفَاحَة", "inlifāḥa", "bir kere kendiliğinden yanma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْلَفِح", "munlafiḥ", "kendiliğinden yanan", "orta", ""],
-      [121, "مُنْلَفِحَة", "munlafiḥa", "kendiliğinden yanan, müennes", "orta", ""],
-      [122, "مُنْلَفِحَان", "munlafiḥān", "kendiliğinden yanan, iki", "orta", ""],
-      [123, "مُنْلَفِحَتَان", "munlafiḥatān", "kendiliğinden yanan, iki, müennes", "orta", ""],
-      [124, "مُنْلَفِحُون", "munlafiḥūn", "kendiliğinden yananlar", "orta", ""],
-      [125, "مُنْلَفِحِين", "munlafiḥīn", "kendiliğinden yananlar", "orta", ""],
-      [126, "مُنْلَفِحَات", "munlafiḥāt", "kendiliğinden yananlar, müennes", "orta", ""]
+      ["munfa'il", "kıyâsî", "مُنْلَفِح", "munlafiḥ", "kendiliğinden yanan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْلَفِحَة", "munlafiḥa", "kendiliğinden yanan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْلَفِحَان", "munlafiḥān", "kendiliğinden yanan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْلَفِحَتَان",
+        "munlafiḥatān",
+        "kendiliğinden yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْلَفِحُون",
+        "munlafiḥūn",
+        "kendiliğinden yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْلَفِحِين",
+        "munlafiḥīn",
+        "kendiliğinden yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْلَفِحَات",
+        "munlafiḥāt",
+        "kendiliğinden yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْلَفَح", "munlafaḥ", "kendiliğinden yanılan", "orta", ""],
-      [128, "مُنْلَفَحَة", "munlafaḥa", "kendiliğinden yanılan, müennes", "orta", ""],
-      [129, "مُنْلَفَحَان", "munlafaḥān", "kendiliğinden yanılan, iki", "orta", ""],
-      [130, "مُنْلَفَحَتَان", "munlafaḥatān", "kendiliğinden yanılan, iki, müennes", "orta", ""],
-      [131, "مُنْلَفَحُون", "munlafaḥūn", "kendiliğinden yanılanlar", "orta", ""],
-      [132, "مُنْلَفَحِين", "munlafaḥīn", "kendiliğinden yanılanlar", "orta", ""],
-      [133, "مُنْلَفَحَات", "munlafaḥāt", "kendiliğinden yanılanlar, müennes", "orta", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَح",
+        "munlafaḥ",
+        "kendiliğinden yanılan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحَة",
+        "munlafaḥa",
+        "kendiliğinden yanılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحَان",
+        "munlafaḥān",
+        "kendiliğinden yanılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحَتَان",
+        "munlafaḥatān",
+        "kendiliğinden yanılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحُون",
+        "munlafaḥūn",
+        "kendiliğinden yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحِين",
+        "munlafaḥīn",
+        "kendiliğinden yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَحَات",
+        "munlafaḥāt",
+        "kendiliğinden yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْلَفَح", "munlafaḥ", "kendiliğinden yanma yeri, vakti", "orta", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَفَح",
+        "munlafaḥ",
+        "kendiliğinden yanma yeri, vakti",
+        "orta",
+        ""
+      ]
     ],
     "masdar · bâb VIII": [
-      [135, "اِلْتِفَاح", "iltifāḥ", "kendisi için yanma", "orta", ""]
+      ["ifti'āl", "kıyâsî", "اِلْتِفَاح", "iltifāḥ", "kendisi için yanma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِلْتِفَاحَة", "iltifāḥa", "bir kere kendisi için yanma", "orta", ""]
+      ["ifti'āl + tâ", "aday", "اِلْتِفَاحَة", "iltifāḥa", "bir kere kendisi için yanma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُلْتَفِح", "multafiḥ", "kendisi için yanan", "orta", ""],
-      [139, "مُلْتَفِحَة", "multafiḥa", "kendisi için yanan, müennes", "orta", ""],
-      [140, "مُلْتَفِحَان", "multafiḥān", "kendisi için yanan, iki", "orta", ""],
-      [141, "مُلْتَفِحَتَان", "multafiḥatān", "kendisi için yanan, iki, müennes", "orta", ""],
-      [142, "مُلْتَفِحُون", "multafiḥūn", "kendisi için yananlar", "orta", ""],
-      [143, "مُلْتَفِحِين", "multafiḥīn", "kendisi için yananlar", "orta", ""],
-      [144, "مُلْتَفِحَات", "multafiḥāt", "kendisi için yananlar, müennes", "orta", ""]
+      ["muftaʿil", "kıyâsî", "مُلْتَفِح", "multafiḥ", "kendisi için yanan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُلْتَفِحَة", "multafiḥa", "kendisi için yanan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُلْتَفِحَان", "multafiḥān", "kendisi için yanan, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُلْتَفِحَتَان",
+        "multafiḥatān",
+        "kendisi için yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْتَفِحُون",
+        "multafiḥūn",
+        "kendisi için yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْتَفِحِين",
+        "multafiḥīn",
+        "kendisi için yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْتَفِحَات",
+        "multafiḥāt",
+        "kendisi için yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُلْتَفَح", "multafaḥ", "kendisi için yanılan", "orta", ""],
-      [146, "مُلْتَفَحَة", "multafaḥa", "kendisi için yanılan, müennes", "orta", ""],
-      [147, "مُلْتَفَحَان", "multafaḥān", "kendisi için yanılan, iki", "orta", ""],
-      [148, "مُلْتَفَحَتَان", "multafaḥatān", "kendisi için yanılan, iki, müennes", "orta", ""],
-      [149, "مُلْتَفَحُون", "multafaḥūn", "kendisi için yanılanlar", "orta", ""],
-      [150, "مُلْتَفَحِين", "multafaḥīn", "kendisi için yanılanlar", "orta", ""],
-      [151, "مُلْتَفَحَات", "multafaḥāt", "kendisi için yanılanlar, müennes", "orta", ""]
+      ["muftaʿal", "kıyâsî", "مُلْتَفَح", "multafaḥ", "kendisi için yanılan", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُلْتَفَحَة", "multafaḥa", "kendisi için yanılan, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُلْتَفَحَان", "multafaḥān", "kendisi için yanılan, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُلْتَفَحَتَان",
+        "multafaḥatān",
+        "kendisi için yanılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْتَفَحُون",
+        "multafaḥūn",
+        "kendisi için yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْتَفَحِين",
+        "multafaḥīn",
+        "kendisi için yanılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْتَفَحَات",
+        "multafaḥāt",
+        "kendisi için yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُلْتَفَح", "multafaḥ", "kendisi için yanma yeri, vakti", "orta", ""]
+      ["muftaʿal", "kıyâsî", "مُلْتَفَح", "multafaḥ", "kendisi için yanma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِلْفِحَاح", "ilfiḥāḥ", "iyiden iyiye yanma", "kontrol", ""]
+      ["if'ilāl", "kıyâsî", "اِلْفِحَاح", "ilfiḥāḥ", "iyiden iyiye yanma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُلْفَحّ", "mulfaḥḥ", "iyiden iyiye yanan", "kontrol", ""],
-      [501, "مُلْفَحَّة", "mulfaḥḥa", "iyiden iyiye yanan, müennes", "kontrol", ""],
-      [502, "مُلْفَحَّان", "mulfaḥḥān", "iyiden iyiye yanan, iki", "kontrol", ""],
-      [503, "مُلْفَحَّتَان", "mulfaḥḥatān", "iyiden iyiye yanan, iki, müennes", "kontrol", ""],
-      [504, "مُلْفَحُّون", "mulfaḥḥūn", "iyiden iyiye yananlar", "kontrol", ""],
-      [505, "مُلْفَحِّين", "mulfaḥḥīn", "iyiden iyiye yananlar", "kontrol", ""],
-      [506, "مُلْفَحَّات", "mulfaḥḥāt", "iyiden iyiye yananlar, müennes", "kontrol", ""]
+      ["muf'all", "kıyâsî", "مُلْفَحّ", "mulfaḥḥ", "iyiden iyiye yanan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُلْفَحَّة", "mulfaḥḥa", "iyiden iyiye yanan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُلْفَحَّان", "mulfaḥḥān", "iyiden iyiye yanan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُلْفَحَّتَان",
+        "mulfaḥḥatān",
+        "iyiden iyiye yanan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْفَحُّون",
+        "mulfaḥḥūn",
+        "iyiden iyiye yananlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْفَحِّين",
+        "mulfaḥḥīn",
+        "iyiden iyiye yananlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْفَحَّات",
+        "mulfaḥḥāt",
+        "iyiden iyiye yananlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb X": [
-      [176, "اِسْتِلْفَاح", "istilfāḥ", "yanmayı isteme", "orta", ""]
+      ["istif'āl", "kıyâsî", "اِسْتِلْفَاح", "istilfāḥ", "yanmayı isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِلْفَاحَة", "istilfāḥa", "bir kere yanmayı isteme", "orta", ""]
+      ["istif'āl + tâ", "aday", "اِسْتِلْفَاحَة", "istilfāḥa", "bir kere yanmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
-      [178, "مُسْتَلْفِح", "mustalfiḥ", "yanmayı isteyen", "orta", ""],
-      [179, "مُسْتَلْفِحَة", "mustalfiḥa", "yanmayı isteyen, müennes", "orta", ""],
-      [180, "مُسْتَلْفِحَان", "mustalfiḥān", "yanmayı isteyen, iki", "orta", ""],
-      [181, "مُسْتَلْفِحَتَان", "mustalfiḥatān", "yanmayı isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَلْفِحُون", "mustalfiḥūn", "yanmayı isteyenler", "orta", ""],
-      [183, "مُسْتَلْفِحِين", "mustalfiḥīn", "yanmayı isteyenler", "orta", ""],
-      [184, "مُسْتَلْفِحَات", "mustalfiḥāt", "yanmayı isteyenler, müennes", "orta", ""]
+      ["mustaf'il", "kıyâsî", "مُسْتَلْفِح", "mustalfiḥ", "yanmayı isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَلْفِحَة", "mustalfiḥa", "yanmayı isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَلْفِحَان", "mustalfiḥān", "yanmayı isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَلْفِحَتَان",
+        "mustalfiḥatān",
+        "yanmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَلْفِحُون",
+        "mustalfiḥūn",
+        "yanmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَلْفِحِين",
+        "mustalfiḥīn",
+        "yanmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَلْفِحَات",
+        "mustalfiḥāt",
+        "yanmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَلْفَح", "mustalfaḥ", "yanması istenen", "orta", ""],
-      [186, "مُسْتَلْفَحَة", "mustalfaḥa", "yanması istenen, müennes", "orta", ""],
-      [187, "مُسْتَلْفَحَان", "mustalfaḥān", "yanması istenen, iki", "orta", ""],
-      [188, "مُسْتَلْفَحَتَان", "mustalfaḥatān", "yanması istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَلْفَحُون", "mustalfaḥūn", "yanması istenenler", "orta", ""],
-      [190, "مُسْتَلْفَحِين", "mustalfaḥīn", "yanması istenenler", "orta", ""],
-      [191, "مُسْتَلْفَحَات", "mustalfaḥāt", "yanması istenenler, müennes", "orta", ""]
+      ["mustaf'al", "kıyâsî", "مُسْتَلْفَح", "mustalfaḥ", "yanması istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَلْفَحَة", "mustalfaḥa", "yanması istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَلْفَحَان", "mustalfaḥān", "yanması istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَلْفَحَتَان",
+        "mustalfaḥatān",
+        "yanması istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَلْفَحُون",
+        "mustalfaḥūn",
+        "yanması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَلْفَحِين",
+        "mustalfaḥīn",
+        "yanması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَلْفَحَات",
+        "mustalfaḥāt",
+        "yanması istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَلْفَح", "mustalfaḥ", "yanmayı isteme yeri, vakti", "orta", ""]
+      ["mustaf'al", "kıyâsî", "مُسْتَلْفَح", "mustalfaḥ", "yanmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِلْفِيحَاح", "ilfīḥāḥ", "büsbütün yanma", "kontrol", ""]
+      ["if'īlāl", "kıyâsî", "اِلْفِيحَاح", "ilfīḥāḥ", "büsbütün yanma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُلْفَاحّ", "mulfāḥḥ", "büsbütün yanan", "kontrol", ""],
-      [509, "مُلْفَاحَّة", "mulfāḥḥa", "büsbütün yanan, müennes", "kontrol", ""],
-      [510, "مُلْفَاحَّان", "mulfāḥḥān", "büsbütün yanan, iki", "kontrol", ""],
-      [511, "مُلْفَاحَّتَان", "mulfāḥḥatān", "büsbütün yanan, iki, müennes", "kontrol", ""],
-      [512, "مُلْفَاحُّون", "mulfāḥḥūn", "büsbütün yananlar", "kontrol", ""],
-      [513, "مُلْفَاحِّين", "mulfāḥḥīn", "büsbütün yananlar", "kontrol", ""],
-      [514, "مُلْفَاحَّات", "mulfāḥḥāt", "büsbütün yananlar, müennes", "kontrol", ""]
+      ["muf'āll", "kıyâsî", "مُلْفَاحّ", "mulfāḥḥ", "büsbütün yanan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُلْفَاحَّة", "mulfāḥḥa", "büsbütün yanan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُلْفَاحَّان", "mulfāḥḥān", "büsbütün yanan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُلْفَاحَّتَان",
+        "mulfāḥḥatān",
+        "büsbütün yanan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْفَاحُّون",
+        "mulfāḥḥūn",
+        "büsbütün yananlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْفَاحِّين",
+        "mulfāḥḥīn",
+        "büsbütün yananlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْفَاحَّات",
+        "mulfāḥḥāt",
+        "büsbütün yananlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb XII": [
-      [515, "اِلْفِوْفَاح", "ilfiwfāḥ", "aşırı yanma", "orta", ""]
+      ["if'iv'āl", "kıyâsî", "اِلْفِوْفَاح", "ilfiwfāḥ", "aşırı yanma", "orta", ""]
     ],
     "masdar · bâb XIII": [
-      [516, "اِلْفِوَّاح", "ilfiwwāḥ", "aşırı yanma", "orta", ""]
+      ["if'ivvāl", "kıyâsî", "اِلْفِوَّاح", "ilfiwwāḥ", "aşırı yanma", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "لَافِح", "lāfiḥ", "yanan", "kural", ""],
-      [214, "لَافِحَة", "lāfiḥa", "yanan, müennes", "kural", ""],
-      [215, "لَافِحَان", "lāfiḥān", "yanan, iki", "kural", ""],
-      [216, "لَافِحَتَان", "lāfiḥatān", "yanan, iki, müennes", "kural", ""],
-      [217, "لَافِحُون", "lāfiḥūn", "yananlar", "kural", ""],
-      [218, "لَافِحِين", "lāfiḥīn", "yananlar", "kural", ""],
-      [219, "لَافِحَات", "lāfiḥāt", "yananlar, müennes", "kural", ""]
+      ["fâ'il", "kıyâsî", "لَافِح", "lāfiḥ", "yanan", "kural", ""],
+      ["fâ'il + müennes", "kıyâsî", "لَافِحَة", "lāfiḥa", "yanan, müennes", "kural", ""],
+      ["fâ'il + tesniye", "kıyâsî", "لَافِحَان", "lāfiḥān", "yanan, iki", "kural", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "لَافِحَتَان", "lāfiḥatān", "yanan, iki, müennes", "kural", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "لَافِحُون", "lāfiḥūn", "yananlar", "kural", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "لَافِحِين", "lāfiḥīn", "yananlar", "kural", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "لَافِحَات", "lāfiḥāt", "yananlar, müennes", "kural", ""]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَلْفُوح", "malfūḥ", "yanılan", "orta", ""],
-      [221, "مَلْفُوحَة", "malfūḥa", "yanılan, müennes", "orta", ""],
-      [222, "مَلْفُوحَان", "malfūḥān", "yanılan, iki", "orta", ""],
-      [223, "مَلْفُوحَتَان", "malfūḥatān", "yanılan, iki, müennes", "orta", ""],
-      [224, "مَلْفُوحُون", "malfūḥūn", "yanılanlar", "orta", ""],
-      [225, "مَلْفُوحِين", "malfūḥīn", "yanılanlar", "orta", ""],
-      [226, "مَلْفُوحَات", "malfūḥāt", "yanılanlar, müennes", "orta", ""]
+      ["maf'ûl", "kıyâsî", "مَلْفُوح", "malfūḥ", "yanılan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَلْفُوحَة", "malfūḥa", "yanılan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَلْفُوحَان", "malfūḥān", "yanılan, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَلْفُوحَتَان", "malfūḥatān", "yanılan, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَلْفُوحُون", "malfūḥūn", "yanılanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَلْفُوحِين", "malfūḥīn", "yanılanlar", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَلْفُوحَات",
+        "malfūḥāt",
+        "yanılanlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَلْفَح", "malfaḥ", "yanma yeri, vakti", "orta", ""],
-      [228, "مَلْفَحَان", "malfaḥān", "yanma yeri, vakti, iki", "orta", ""],
-      [229, "مَلْفِح", "malfiḥ", "yanma yeri, vakti", "orta", ""],
-      [230, "مَلْفِحَان", "malfiḥān", "yanma yeri, vakti, iki", "orta", ""],
-      [231, "مَلْفَحَة", "malfaḥa", "yanmanın bol olduğu yer", "orta", ""],
-      [232, "مَلْفَحَتَان", "malfaḥatān", "yanmanın bol olduğu yer, iki", "orta", ""],
-      [233, "مَلْفِحَة", "malfiḥa", "yanmanın bol olduğu yer", "orta", ""],
-      [234, "مَلْفِحَتَان", "malfiḥatān", "yanmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَلْفُحَة", "malfuḥa", "yanma yeri, vakti", "orta", ""],
-      [248, "مَلْفُحَتَان", "malfuḥatān", "yanma yeri, vakti, iki", "orta", ""]
+      ["maf'al", "kıyâsî", "مَلْفَح", "malfaḥ", "yanma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَلْفَحَان", "malfaḥān", "yanma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَلْفِح", "malfiḥ", "yanma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَلْفِحَان", "malfiḥān", "yanma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَلْفَحَة", "malfaḥa", "yanmanın bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَلْفَحَتَان", "malfaḥatān", "yanmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَلْفِحَة", "malfiḥa", "yanmanın bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَلْفِحَتَان", "malfiḥatān", "yanmanın bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَلْفُحَة", "malfuḥa", "yanma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَلْفُحَتَان", "malfuḥatān", "yanma yeri, vakti, iki", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِلْفَح", "milfaḥ", "yanma âleti", "orta", ""],
-      [236, "مِلْفَحَان", "milfaḥān", "yanma âleti, iki", "orta", ""],
-      [237, "مِلْفَاح", "milfāḥ", "yanma âleti", "orta", ""],
-      [238, "مِلْفَاحَان", "milfāḥān", "yanma âleti, iki", "orta", ""],
-      [239, "مِلْفَحَة", "milfaḥa", "yanma âleti", "orta", ""],
-      [240, "مِلْفَحَتَان", "milfaḥatān", "yanma âleti, iki", "orta", ""]
+      ["mif'al", "kıyâsî", "مِلْفَح", "milfaḥ", "yanma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِلْفَحَان", "milfaḥān", "yanma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِلْفَاح", "milfāḥ", "yanma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِلْفَاحَان", "milfāḥān", "yanma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِلْفَحَة", "milfaḥa", "yanma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِلْفَحَتَان", "milfaḥatān", "yanma âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَلْفَح", "ʾalfaḥ", "daha çok yanan", "orta", ""],
-      [242, "أَلْفَحَان", "ʾalfaḥān", "daha çok yanan, iki", "orta", ""]
+      ["af'al", "kıyâsî", "أَلْفَح", "ʾalfaḥ", "daha çok yanan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَلْفَحَان", "ʾalfaḥān", "daha çok yanan, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [243, "لُفْحَى", "lufḥā", "daha çok yanan", "orta", ""],
-      [244, "لُفْحَيَان", "lufḥayān", "daha çok yanan, iki", "orta", ""],
-      [245, "لَفْحَاء", "lafḥāʾ", "daha çok yanan", "orta", ""],
-      [246, "لَفْحَاآن", "lafḥāʾān", "daha çok yanan, iki", "orta", ""]
+      ["fu'lâ", "kıyâsî", "لُفْحَى", "lufḥā", "daha çok yanan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "لُفْحَيَان", "lufḥayān", "daha çok yanan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "لَفْحَاء", "lafḥāʾ", "daha çok yanan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "لَفْحَاآن", "lafḥāʾān", "daha çok yanan, iki", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "لُفَيْح", "lufayḥ", "azıcık yanma", "orta", ""],
-      [250, "لُفَيْحَان", "lufayḥān", "azıcık yanma, iki", "orta", ""],
-      [251, "لُفَيْحَة", "lufayḥa", "azıcık yanma", "orta", ""],
-      [252, "لُفَيْحَتَان", "lufayḥatān", "azıcık yanma, iki", "orta", ""]
+      ["fu'ayl", "kıyâsî", "لُفَيْح", "lufayḥ", "azıcık yanma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "لُفَيْحَان", "lufayḥān", "azıcık yanma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "لُفَيْحَة", "lufayḥa", "azıcık yanma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "لُفَيْحَتَان", "lufayḥatān", "azıcık yanma, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَلْفَح", "malfaḥ", "yanma", "kural", ""],
-      [254, "مَلْفَحَان", "malfaḥān", "yanma, iki", "kural", ""]
+      ["maf'al", "kıyâsî", "مَلْفَح", "malfaḥ", "yanma", "kural", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَلْفَحَان", "malfaḥān", "yanma, iki", "kural", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "لَفْحَة", "lafḥa", "bir kere yanma", "orta", ""],
-      [256, "لَفْحَتَان", "lafḥatān", "bir kere yanma, iki", "orta", ""]
+      ["fa'le", "aday", "لَفْحَة", "lafḥa", "bir kere yanma", "orta", ""],
+      ["fa'le + tesniye", "aday", "لَفْحَتَان", "lafḥatān", "bir kere yanma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "لِفْحَة", "lifḥa", "yanma tarzı", "orta", ""],
-      [258, "لِفْحَتَان", "lifḥatān", "yanma tarzı, iki", "orta", ""]
+      ["fi'le", "aday", "لِفْحَة", "lifḥa", "yanma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "لِفْحَتَان", "lifḥatān", "yanma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "لَفِيح", "lafīḥ", "her daim yanan", "orta", ""],
-      [260, "لَفِيحَة", "lafīḥa", "her daim yanan, müennes", "orta", ""],
-      [261, "لَفِيحَان", "lafīḥān", "her daim yanan, iki", "orta", ""],
-      [262, "لَفِيحَتَان", "lafīḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [263, "لَفِيحُون", "lafīḥūn", "her daim yananlar", "orta", ""],
-      [264, "لَفِيحِين", "lafīḥīn", "her daim yananlar", "orta", ""],
-      [265, "لَفِيحَات", "lafīḥāt", "her daim yananlar, müennes", "orta", ""],
-      [266, "لَفُوح", "lafūḥ", "her daim yanan", "orta", ""],
-      [267, "لَفُوحَة", "lafūḥa", "her daim yanan, müennes", "orta", ""],
-      [268, "لَفُوحَان", "lafūḥān", "her daim yanan, iki", "orta", ""],
-      [269, "لَفُوحَتَان", "lafūḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [270, "لَفُوحُون", "lafūḥūn", "her daim yananlar", "orta", ""],
-      [271, "لَفُوحِين", "lafūḥīn", "her daim yananlar", "orta", ""],
-      [272, "لَفُوحَات", "lafūḥāt", "her daim yananlar, müennes", "orta", ""],
-      [273, "لَفِح", "lafiḥ", "her daim yanan", "orta", ""],
-      [274, "لَفِحَة", "lafiḥa", "her daim yanan, müennes", "orta", ""],
-      [275, "لَفِحَان", "lafiḥān", "her daim yanan, iki", "orta", ""],
-      [276, "لَفِحَتَان", "lafiḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [277, "لَفِحُون", "lafiḥūn", "her daim yananlar", "orta", ""],
-      [278, "لَفِحِين", "lafiḥīn", "her daim yananlar", "orta", ""],
-      [279, "لَفِحَات", "lafiḥāt", "her daim yananlar, müennes", "orta", ""],
-      [280, "لَفُح", "lafuḥ", "her daim yanan", "orta", ""],
-      [281, "لَفُحَة", "lafuḥa", "her daim yanan, müennes", "orta", ""],
-      [282, "لَفُحَان", "lafuḥān", "her daim yanan, iki", "orta", ""],
-      [283, "لَفُحَتَان", "lafuḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [284, "لَفُحُون", "lafuḥūn", "her daim yananlar", "orta", ""],
-      [285, "لَفُحِين", "lafuḥīn", "her daim yananlar", "orta", ""],
-      [286, "لَفُحَات", "lafuḥāt", "her daim yananlar, müennes", "orta", ""],
-      [287, "لَفَح", "lafaḥ", "her daim yanan", "orta", ""],
-      [288, "لَفَحَة", "lafaḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'īl", "semâî aday", "لَفِيح", "lafīḥ", "her daim yanan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "لَفِيحَة", "lafīḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَفِيحَان", "lafīḥān", "her daim yanan, iki", "orta", ""],
       [
-        289,
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "لَفِيحَتَان",
+        "lafīḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفِيحُون", "lafīḥūn", "her daim yananlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفِيحِين", "lafīḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفِيحَات",
+        "lafīḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَفُوح", "lafūḥ", "her daim yanan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَفُوحَة", "lafūḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَفُوحَان", "lafūḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "لَفُوحَتَان",
+        "lafūḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفُوحُون", "lafūḥūn", "her daim yananlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفُوحِين", "lafūḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفُوحَات",
+        "lafūḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "لَفِح", "lafiḥ", "her daim yanan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "لَفِحَة", "lafiḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "لَفِحَان", "lafiḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "لَفِحَتَان",
+        "lafiḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفِحُون", "lafiḥūn", "her daim yananlar", "orta", ""],
+      ["fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفِحِين", "lafiḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفِحَات",
+        "lafiḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "لَفُح", "lafuḥ", "her daim yanan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "لَفُحَة", "lafuḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "لَفُحَان", "lafuḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "لَفُحَتَان",
+        "lafuḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفُحُون", "lafuḥūn", "her daim yananlar", "orta", ""],
+      ["fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفُحِين", "lafuḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفُحَات",
+        "lafuḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "لَفَح", "lafaḥ", "her daim yanan", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "لَفَحَة", "lafaḥa", "her daim yanan, müennes", "orta", ""],
+      [
+        "fa'al + tesniye",
+        "semâî aday",
         "لَفَحَان",
         "lafaḥān",
         "her daim yanan, iki",
         "orta",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke"
       ],
-      [290, "لَفَحَتَان", "lafaḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [291, "لَفَحُون", "lafaḥūn", "her daim yananlar", "orta", ""],
-      [292, "لَفَحِين", "lafaḥīn", "her daim yananlar", "orta", ""],
-      [293, "لَفَحَات", "lafaḥāt", "her daim yananlar, müennes", "orta", ""],
       [
-        294,
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "لَفَحَتَان",
+        "lafaḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفَحُون", "lafaḥūn", "her daim yananlar", "orta", ""],
+      ["fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفَحِين", "lafaḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفَحَات",
+        "lafaḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l",
+        "semâî aday",
         "لَفْح",
         "lafḥ",
         "Kılıçla vurmak",
         "lugat",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke · Kamus"
       ],
-      [295, "لَفْحَة", "lafḥa", "her daim yanan, müennes", "orta", ""],
-      [296, "لَفْحَان", "lafḥān", "her daim yanan, iki", "orta", ""],
-      [297, "لَفْحَتَان", "lafḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [298, "لَفْحُون", "lafḥūn", "her daim yananlar", "orta", ""],
-      [299, "لَفْحِين", "lafḥīn", "her daim yananlar", "orta", ""],
-      [300, "لَفْحَات", "lafḥāt", "her daim yananlar, müennes", "orta", ""],
-      [301, "لُفُح", "lufuḥ", "her daim yanan", "orta", ""],
-      [302, "لُفُحَة", "lufuḥa", "her daim yanan, müennes", "orta", ""],
-      [303, "لُفُحَان", "lufuḥān", "her daim yanan, iki", "orta", ""],
-      [304, "لُفُحَتَان", "lufuḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [305, "لُفُحُون", "lufuḥūn", "her daim yananlar", "orta", ""],
-      [306, "لُفُحِين", "lufuḥīn", "her daim yananlar", "orta", ""],
-      [307, "لُفُحَات", "lufuḥāt", "her daim yananlar, müennes", "orta", ""],
-      [308, "لَفْحَان", "lafḥān", "her daim yanan", "orta", ""],
-      [309, "لَفْحَانَة", "lafḥāna", "her daim yanan, müennes", "orta", ""],
-      [310, "لَفْحَانَان", "lafḥānān", "her daim yanan, iki", "orta", ""],
-      [311, "لَفْحَانَتَان", "lafḥānatān", "her daim yanan, iki, müennes", "orta", ""],
-      [312, "لَفْحَانُون", "lafḥānūn", "her daim yananlar", "orta", ""],
-      [313, "لَفْحَانِين", "lafḥānīn", "her daim yananlar", "orta", ""],
-      [314, "لَفْحَانَات", "lafḥānāt", "her daim yananlar, müennes", "orta", ""],
-      [315, "لُفَاح", "lufāḥ", "her daim yanan", "orta", ""],
-      [316, "لُفَاحَة", "lufāḥa", "her daim yanan, müennes", "orta", ""],
-      [317, "لُفَاحَان", "lufāḥān", "her daim yanan, iki", "orta", ""],
-      [318, "لُفَاحَتَان", "lufāḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [319, "لُفَاحُون", "lufāḥūn", "her daim yananlar", "orta", ""],
-      [320, "لُفَاحِين", "lufāḥīn", "her daim yananlar", "orta", ""],
-      [321, "لُفَاحَات", "lufāḥāt", "her daim yananlar, müennes", "orta", ""],
-      [322, "لَفَاح", "lafāḥ", "her daim yanan", "orta", ""],
-      [323, "لَفَاحَة", "lafāḥa", "her daim yanan, müennes", "orta", ""],
-      [324, "لَفَاحَان", "lafāḥān", "her daim yanan, iki", "orta", ""],
-      [325, "لَفَاحَتَان", "lafāḥatān", "her daim yanan, iki, müennes", "orta", ""],
-      [326, "لَفَاحُون", "lafāḥūn", "her daim yananlar", "orta", ""],
-      [327, "لَفَاحِين", "lafāḥīn", "her daim yananlar", "orta", ""],
-      [328, "لَفَاحَات", "lafāḥāt", "her daim yananlar, müennes", "orta", ""]
+      ["fa'l + müennes", "semâî aday", "لَفْحَة", "lafḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "لَفْحَان", "lafḥān", "her daim yanan, iki", "orta", ""],
+      ["fa'l + müennes tesniye", "semâî aday", "لَفْحَتَان", "lafḥatān", "her daim yanan, iki, müennes", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفْحُون", "lafḥūn", "her daim yananlar", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفْحِين", "lafḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفْحَات",
+        "lafḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "لُفُح", "lufuḥ", "her daim yanan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "لُفُحَة", "lufuḥa", "her daim yanan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "لُفُحَان", "lufuḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "لُفُحَتَان",
+        "lufuḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لُفُحُون", "lufuḥūn", "her daim yananlar", "orta", ""],
+      ["fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "لُفُحِين", "lufuḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُفُحَات",
+        "lufuḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "لَفْحَان", "lafḥān", "her daim yanan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "لَفْحَانَة", "lafḥāna", "her daim yanan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "لَفْحَانَان", "lafḥānān", "her daim yanan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "لَفْحَانَتَان",
+        "lafḥānatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَفْحَانُون",
+        "lafḥānūn",
+        "her daim yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَفْحَانِين",
+        "lafḥānīn",
+        "her daim yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفْحَانَات",
+        "lafḥānāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "لُفَاح", "lufāḥ", "her daim yanan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "لُفَاحَة", "lufāḥa", "her daim yanan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "لُفَاحَان", "lufāḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "لُفَاحَتَان",
+        "lufāḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لُفَاحُون", "lufāḥūn", "her daim yananlar", "orta", ""],
+      ["fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لُفَاحِين", "lufāḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُفَاحَات",
+        "lufāḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "لَفَاح", "lafāḥ", "her daim yanan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "لَفَاحَة", "lafāḥa", "her daim yanan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "لَفَاحَان", "lafāḥān", "her daim yanan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "لَفَاحَتَان",
+        "lafāḥatān",
+        "her daim yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفَاحُون", "lafāḥūn", "her daim yananlar", "orta", ""],
+      ["fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفَاحِين", "lafāḥīn", "her daim yananlar", "orta", ""],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفَاحَات",
+        "lafāḥāt",
+        "her daim yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mübalağa": [
-      [329, "لَفَّاح", "laffāḥ", "işi yanma olan", "orta", ""],
-      [330, "لَفَّاحَة", "laffāḥa", "işi yanma olan, müennes", "orta", ""],
-      [331, "لَفَّاحَان", "laffāḥān", "işi yanma olan, iki", "orta", ""],
-      [332, "لَفَّاحَتَان", "laffāḥatān", "işi yanma olan, iki, müennes", "orta", ""],
-      [333, "لَفَّاحُون", "laffāḥūn", "işi yanma olanlar", "orta", ""],
-      [334, "لَفَّاحِين", "laffāḥīn", "işi yanma olanlar", "orta", ""],
-      [335, "لَفَّاحَات", "laffāḥāt", "işi yanma olanlar, müennes", "orta", ""],
-      [336, "لَفَّاحَة", "laffāḥa", "pek çok yanan", "orta", ""],
-      [337, "لَفَّاحَتَان", "laffāḥatān", "pek çok yanan, iki", "orta", ""],
-      [338, "لَفَّاحَات", "laffāḥāt", "pek çok yananlar, müennes", "orta", ""],
-      [339, "لَفُوح", "lafūḥ", "çok yanan", "orta", ""],
-      [340, "لَفُوحَة", "lafūḥa", "çok yanan, müennes", "orta", ""],
-      [341, "لَفُوحَان", "lafūḥān", "çok yanan, iki", "orta", ""],
-      [342, "لَفُوحَتَان", "lafūḥatān", "çok yanan, iki, müennes", "orta", ""],
-      [343, "لَفُوحُون", "lafūḥūn", "çok yananlar", "orta", ""],
-      [344, "لَفُوحِين", "lafūḥīn", "çok yananlar", "orta", ""],
-      [345, "لَفُوحَات", "lafūḥāt", "çok yananlar, müennes", "orta", ""],
-      [346, "لَفُّوح", "laffūḥ", "pek çok yanan", "orta", ""],
-      [347, "لَفُّوحَة", "laffūḥa", "pek çok yanan, müennes", "orta", ""],
-      [348, "لَفُّوحَان", "laffūḥān", "pek çok yanan, iki", "orta", ""],
-      [349, "لَفُّوحَتَان", "laffūḥatān", "pek çok yanan, iki, müennes", "orta", ""],
-      [350, "لَفُّوحُون", "laffūḥūn", "pek çok yananlar", "orta", ""],
-      [351, "لَفُّوحِين", "laffūḥīn", "pek çok yananlar", "orta", ""],
-      [352, "لَفُّوحَات", "laffūḥāt", "pek çok yananlar, müennes", "orta", ""],
-      [353, "لِفِّيح", "liffīḥ", "yanmada aşırı giden", "orta", ""],
-      [354, "لِفِّيحَة", "liffīḥa", "yanmada aşırı giden, müennes", "orta", ""],
-      [355, "لِفِّيحَان", "liffīḥān", "yanmada aşırı giden, iki", "orta", ""],
-      [356, "لِفِّيحَتَان", "liffīḥatān", "yanmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "لِفِّيحُون", "liffīḥūn", "yanmada aşırı gidenler", "orta", ""],
-      [358, "لِفِّيحِين", "liffīḥīn", "yanmada aşırı gidenler", "orta", ""],
-      [359, "لِفِّيحَات", "liffīḥāt", "yanmada aşırı gidenler, müennes", "orta", ""],
-      [360, "لُفَّاح", "luffāḥ", "son derece yanan", "orta", ""],
-      [361, "لُفَّاحَة", "luffāḥa", "son derece yanan, müennes", "orta", ""],
-      [362, "لُفَّاحَان", "luffāḥān", "son derece yanan, iki", "orta", ""],
-      [363, "لُفَّاحَتَان", "luffāḥatān", "son derece yanan, iki, müennes", "orta", ""],
-      [364, "لُفَّاحُون", "luffāḥūn", "son derece yananlar", "orta", ""],
-      [365, "لُفَّاحِين", "luffāḥīn", "son derece yananlar", "orta", ""],
-      [366, "لُفَّاحَات", "luffāḥāt", "son derece yananlar, müennes", "orta", ""],
-      [367, "مِلْفَاح", "milfāḥ", "yanmayı âdet edinmiş", "orta", ""],
-      [368, "مِلْفَاحَة", "milfāḥa", "yanmayı âdet edinmiş, müennes", "orta", ""],
-      [369, "مِلْفَاحَان", "milfāḥān", "yanmayı âdet edinmiş, iki", "orta", ""],
-      [370, "مِلْفَاحَتَان", "milfāḥatān", "yanmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِلْفَاحُون", "milfāḥūn", "yanmayı âdet edinmişler", "orta", ""],
-      [372, "مِلْفَاحِين", "milfāḥīn", "yanmayı âdet edinmişler", "orta", ""],
-      [373, "مِلْفَاحَات", "milfāḥāt", "yanmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِلْفِيح", "milfīḥ", "yanmaya düşkün", "orta", ""],
-      [375, "مِلْفِيحَة", "milfīḥa", "yanmaya düşkün, müennes", "orta", ""],
-      [376, "مِلْفِيحَان", "milfīḥān", "yanmaya düşkün, iki", "orta", ""],
-      [377, "مِلْفِيحَتَان", "milfīḥatān", "yanmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِلْفِيحُون", "milfīḥūn", "yanmaya düşkünler", "orta", ""],
-      [379, "مِلْفِيحِين", "milfīḥīn", "yanmaya düşkünler", "orta", ""],
-      [380, "مِلْفِيحَات", "milfīḥāt", "yanmaya düşkünler, müennes", "orta", ""],
-      [381, "لَفِيح", "lafīḥ", "çok yanan", "orta", ""],
-      [382, "لَفِيحَة", "lafīḥa", "çok yanan, müennes", "orta", ""],
-      [383, "لَفِيحَان", "lafīḥān", "çok yanan, iki", "orta", ""],
-      [384, "لَفِيحَتَان", "lafīḥatān", "çok yanan, iki, müennes", "orta", ""],
-      [385, "لَفِيحُون", "lafīḥūn", "çok yananlar", "orta", ""],
-      [386, "لَفِيحِين", "lafīḥīn", "çok yananlar", "orta", ""],
-      [387, "لَفِيحَات", "lafīḥāt", "çok yananlar, müennes", "orta", ""],
-      [388, "لَفَّح", "laffaḥ", "çok yanan", "orta", ""],
-      [389, "لَفَّحَة", "laffaḥa", "çok yanan, müennes", "orta", ""],
-      [390, "لَفَّحَان", "laffaḥān", "çok yanan, iki", "orta", ""],
-      [391, "لَفَّحَتَان", "laffaḥatān", "çok yanan, iki, müennes", "orta", ""],
-      [392, "لَفَّحُون", "laffaḥūn", "çok yananlar", "orta", ""],
-      [393, "لَفَّحِين", "laffaḥīn", "çok yananlar", "orta", ""],
-      [394, "لَفَّحَات", "laffaḥāt", "çok yananlar, müennes", "orta", ""]
+      ["fa''āl", "semâî aday", "لَفَّاح", "laffāḥ", "işi yanma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "لَفَّاحَة", "laffāḥa", "işi yanma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "لَفَّاحَان", "laffāḥān", "işi yanma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "لَفَّاحَتَان",
+        "laffāḥatān",
+        "işi yanma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَفَّاحُون",
+        "laffāḥūn",
+        "işi yanma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَفَّاحِين",
+        "laffāḥīn",
+        "işi yanma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفَّاحَات",
+        "laffāḥāt",
+        "işi yanma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "لَفَّاحَة", "laffāḥa", "pek çok yanan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "لَفَّاحَتَان", "laffāḥatān", "pek çok yanan, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفَّاحَات",
+        "laffāḥāt",
+        "pek çok yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَفُوح", "lafūḥ", "çok yanan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَفُوحَة", "lafūḥa", "çok yanan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَفُوحَان", "lafūḥān", "çok yanan, iki", "orta", ""],
+      ["fa'ūl + müennes tesniye", "semâî aday", "لَفُوحَتَان", "lafūḥatān", "çok yanan, iki, müennes", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفُوحُون", "lafūḥūn", "çok yananlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفُوحِين", "lafūḥīn", "çok yananlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفُوحَات",
+        "lafūḥāt",
+        "çok yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "لَفُّوح", "laffūḥ", "pek çok yanan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "لَفُّوحَة", "laffūḥa", "pek çok yanan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "لَفُّوحَان", "laffūḥān", "pek çok yanan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "لَفُّوحَتَان",
+        "laffūḥatān",
+        "pek çok yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَفُّوحُون",
+        "laffūḥūn",
+        "pek çok yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَفُّوحِين",
+        "laffūḥīn",
+        "pek çok yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفُّوحَات",
+        "laffūḥāt",
+        "pek çok yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "لِفِّيح", "liffīḥ", "yanmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "لِفِّيحَة", "liffīḥa", "yanmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "لِفِّيحَان", "liffīḥān", "yanmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "لِفِّيحَتَان",
+        "liffīḥatān",
+        "yanmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لِفِّيحُون",
+        "liffīḥūn",
+        "yanmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لِفِّيحِين",
+        "liffīḥīn",
+        "yanmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لِفِّيحَات",
+        "liffīḥāt",
+        "yanmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "لُفَّاح", "luffāḥ", "son derece yanan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "لُفَّاحَة", "luffāḥa", "son derece yanan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "لُفَّاحَان", "luffāḥān", "son derece yanan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "لُفَّاحَتَان",
+        "luffāḥatān",
+        "son derece yanan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُفَّاحُون",
+        "luffāḥūn",
+        "son derece yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُفَّاحِين",
+        "luffāḥīn",
+        "son derece yananlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُفَّاحَات",
+        "luffāḥāt",
+        "son derece yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِلْفَاح", "milfāḥ", "yanmayı âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِلْفَاحَة", "milfāḥa", "yanmayı âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِلْفَاحَان", "milfāḥān", "yanmayı âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِلْفَاحَتَان",
+        "milfāḥatān",
+        "yanmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْفَاحُون",
+        "milfāḥūn",
+        "yanmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْفَاحِين",
+        "milfāḥīn",
+        "yanmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْفَاحَات",
+        "milfāḥāt",
+        "yanmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِلْفِيح", "milfīḥ", "yanmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِلْفِيحَة", "milfīḥa", "yanmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِلْفِيحَان", "milfīḥān", "yanmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِلْفِيحَتَان",
+        "milfīḥatān",
+        "yanmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْفِيحُون",
+        "milfīḥūn",
+        "yanmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْفِيحِين",
+        "milfīḥīn",
+        "yanmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْفِيحَات",
+        "milfīḥāt",
+        "yanmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "لَفِيح", "lafīḥ", "çok yanan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "لَفِيحَة", "lafīḥa", "çok yanan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَفِيحَان", "lafīḥān", "çok yanan, iki", "orta", ""],
+      ["fa'īl + müennes tesniye", "semâî aday", "لَفِيحَتَان", "lafīḥatān", "çok yanan, iki, müennes", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفِيحُون", "lafīḥūn", "çok yananlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفِيحِين", "lafīḥīn", "çok yananlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفِيحَات",
+        "lafīḥāt",
+        "çok yananlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "لَفَّح", "laffaḥ", "çok yanan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "لَفَّحَة", "laffaḥa", "çok yanan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "لَفَّحَان", "laffaḥān", "çok yanan, iki", "orta", ""],
+      ["fa''al + müennes tesniye", "semâî aday", "لَفَّحَتَان", "laffaḥatān", "çok yanan, iki, müennes", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَفَّحُون", "laffaḥūn", "çok yananlar", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَفَّحِين", "laffaḥīn", "çok yananlar", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَفَّحَات",
+        "laffaḥāt",
+        "çok yananlar, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mensûb": [
-      [395, "لَفْحِيّ", "lafḥiyy", "yanma ile ilgili", "orta", ""],
-      [397, "لَفَحِيّ", "lafaḥiyy", "yanma ile ilgili", "orta", ""],
-      [399, "لِفْحِيّ", "lifḥiyy", "yanma ile ilgili", "orta", ""],
-      [401, "لُفْحِيّ", "lufḥiyy", "yanma ile ilgili", "orta", ""],
-      [403, "لِفَاحِيّ", "lifāḥiyy", "yanma ile ilgili", "orta", ""],
-      [405, "لَافِحِيّ", "lāfiḥiyy", "yanma ile ilgili", "orta", ""],
-      [407, "مَلْفُوحِيّ", "malfūḥiyy", "yanma ile ilgili", "orta", ""],
-      [409, "لَفِيحِيّ", "lafīḥiyy", "yanma ile ilgili", "orta", ""],
-      [411, "مَلْفَحِيّ", "malfaḥiyy", "yanma ile ilgili", "orta", ""],
-      [413, "تَلْفِيحِيّ", "talfīḥiyy", "yanma ile ilgili", "orta", ""],
-      [415, "تَلَافُحِيّ", "talāfuḥiyy", "yanma ile ilgili", "orta", ""],
-      [417, "إِلْفَاحِيّ", "ʾilfāḥiyy", "yanma ile ilgili", "orta", ""],
-      [419, "اِلْتِفَاحِيّ", "iltifāḥiyy", "yanma ile ilgili", "orta", ""]
+      ["fa'l + iyy", "kıyâsî", "لَفْحِيّ", "lafḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "لَفَحِيّ", "lafaḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "لِفْحِيّ", "lifḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "لُفْحِيّ", "lufḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "لِفَاحِيّ", "lifāḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "لَافِحِيّ", "lāfiḥiyy", "yanma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَلْفُوحِيّ", "malfūḥiyy", "yanma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "لَفِيحِيّ", "lafīḥiyy", "yanma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَلْفَحِيّ", "malfaḥiyy", "yanma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَلْفِيحِيّ", "talfīḥiyy", "yanma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَلَافُحِيّ", "talāfuḥiyy", "yanma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِلْفَاحِيّ", "ʾilfāḥiyy", "yanma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِلْتِفَاحِيّ", "iltifāḥiyy", "yanma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "لَفْحِيَّة", "lafḥiyya", "yananlık", "orta", ""],
-      [398, "لَفَحِيَّة", "lafaḥiyya", "yananlık", "orta", ""],
-      [400, "لِفْحِيَّة", "lifḥiyya", "yananlık", "orta", ""],
-      [402, "لُفْحِيَّة", "lufḥiyya", "yananlık", "orta", ""],
-      [404, "لِفَاحِيَّة", "lifāḥiyya", "yananlık", "orta", ""],
-      [406, "لَافِحِيَّة", "lāfiḥiyya", "yananlık", "orta", ""],
-      [408, "مَلْفُوحِيَّة", "malfūḥiyya", "yananlık", "orta", ""],
-      [410, "لَفِيحِيَّة", "lafīḥiyya", "yananlık", "orta", ""],
-      [412, "مَلْفَحِيَّة", "malfaḥiyya", "yananlık", "orta", ""],
-      [414, "تَلْفِيحِيَّة", "talfīḥiyya", "yananlık", "orta", ""],
-      [416, "تَلَافُحِيَّة", "talāfuḥiyya", "yananlık", "orta", ""],
-      [418, "إِلْفَاحِيَّة", "ʾilfāḥiyya", "yananlık", "orta", ""],
-      [420, "اِلْتِفَاحِيَّة", "iltifāḥiyya", "yananlık", "orta", ""]
+      ["fa'l + iyye", "kıyâsî", "لَفْحِيَّة", "lafḥiyya", "yananlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "لَفَحِيَّة", "lafaḥiyya", "yananlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "لِفْحِيَّة", "lifḥiyya", "yananlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "لُفْحِيَّة", "lufḥiyya", "yananlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "لِفَاحِيَّة", "lifāḥiyya", "yananlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "لَافِحِيَّة", "lāfiḥiyya", "yananlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَلْفُوحِيَّة", "malfūḥiyya", "yananlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "لَفِيحِيَّة", "lafīḥiyya", "yananlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَلْفَحِيَّة", "malfaḥiyya", "yananlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَلْفِيحِيَّة", "talfīḥiyya", "yananlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَلَافُحِيَّة", "talāfuḥiyya", "yananlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِلْفَاحِيَّة", "ʾilfāḥiyya", "yananlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِلْتِفَاحِيَّة", "iltifāḥiyya", "yananlık", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "لَفَاح", "lafāḥ", "yanma", "orta", ""],
-      [422, "لُفُوح", "lufūḥ", "yanma", "orta", ""],
-      [423, "لِفَاح", "lifāḥ", "yanma", "orta", ""],
-      [424, "لُفْح", "lufḥ", "yanma", "orta", ""],
-      [425, "لَفَاحَة", "lafāḥa", "yanma", "orta", ""],
-      [426, "لِفَاحَة", "lifāḥa", "yanma", "orta", ""],
-      [427, "لُفُوحَة", "lufūḥa", "yanma", "orta", ""],
+      ["fa'âl (kelâm, selâm)", "semâî aday", "لَفَاح", "lafāḥ", "yanma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "لُفُوح", "lufūḥ", "yanma", "orta", ""],
+      ["fi'âl", "semâî aday", "لِفَاح", "lifāḥ", "yanma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "لُفْح", "lufḥ", "yanma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "لَفَاحَة", "lafāḥa", "yanma", "orta", ""],
+      ["fi'âle", "semâî aday", "لِفَاحَة", "lifāḥa", "yanma", "orta", ""],
+      ["fu'ûle", "semâî aday", "لُفُوحَة", "lufūḥa", "yanma", "orta", ""],
       [
-        428,
+        "fa'l",
+        "semâî aday",
         "لَفْح",
         "lafḥ",
         "Kılıçla vurmak",
         "lugat",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke · Kamus"
       ],
-      [429, "لِفْح", "lifḥ", "yanma", "orta", ""]
+      ["fi'l", "semâî aday", "لِفْح", "lifḥ", "yanma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "لَافُوح", "lāfūḥ", "yanma türünden şey", "orta", ""],
-      [432, "لَفَحَة", "lafaḥa", "yanma türünden şey", "orta", ""],
-      [433, "لُفَحَة", "lufaḥa", "yanma türünden şey", "orta", ""],
-      [434, "أُلْفُوحَة", "ʾulfūḥa", "yanma türünden şey", "orta", ""],
-      [435, "لَوْفَح", "lawfaḥ", "yanma türünden şey", "orta", ""],
-      [437, "لَيْفَح", "layfaḥ", "yanma türünden şey", "orta", ""],
+      ["fâ'ûl", "semâî aday", "لَافُوح", "lāfūḥ", "yanma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "لَفَحَة", "lafaḥa", "yanma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "لُفَحَة", "lufaḥa", "yanma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُلْفُوحَة", "ʾulfūḥa", "yanma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "لَوْفَح", "lawfaḥ", "yanma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "لَيْفَح", "layfaḥ", "yanma türünden şey", "orta", ""],
       [
-        439,
+        "fa'l",
+        "semâî aday",
         "لَفْح",
         "lafḥ",
         "Kılıçla vurmak",
         "lugat",
         "Vikisözlük: masdar (bâb I): to blast, to blow, to sear, to graze, to stroke · Kamus"
       ],
-      [441, "لَفَح", "lafaḥ", "yanma türünden şey", "orta", ""],
-      [443, "لِفْح", "lifḥ", "yanma türünden şey", "orta", ""],
-      [445, "لُفْح", "lufḥ", "yanma türünden şey", "orta", ""],
-      [447, "لَفِيح", "lafīḥ", "yanma türünden şey", "orta", ""],
-      [449, "لِفَح", "lifaḥ", "yanma türünden şey", "orta", ""],
-      [451, "لُفُح", "lufuḥ", "yanma türünden şey", "orta", ""],
-      [453, "لَفَاح", "lafāḥ", "yanma türünden şey", "orta", ""]
+      ["fa'al", "semâî aday", "لَفَح", "lafaḥ", "yanma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "لِفْح", "lifḥ", "yanma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "لُفْح", "lufḥ", "yanma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "لَفِيح", "lafīḥ", "yanma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "لِفَح", "lifaḥ", "yanma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "لُفُح", "lufuḥ", "yanma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "لَفَاح", "lafāḥ", "yanma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "لَافُوحَة", "lāfūḥa", "yanma türünden bir tane", "orta", ""],
-      [436, "لَوْفَحَة", "lawfaḥa", "yanma türünden bir tane", "orta", ""],
-      [438, "لَيْفَحَة", "layfaḥa", "yanma türünden bir tane", "orta", ""],
-      [440, "لَفْحَة", "lafḥa", "yanma türünden bir tane", "orta", ""],
-      [442, "لَفَحَة", "lafaḥa", "yanma türünden bir tane", "orta", ""],
-      [444, "لِفْحَة", "lifḥa", "yanma türünden bir tane", "orta", ""],
-      [446, "لُفْحَة", "lufḥa", "yanma türünden bir tane", "orta", ""],
-      [448, "لَفِيحَة", "lafīḥa", "yanma türünden bir tane", "orta", ""],
-      [450, "لِفَحَة", "lifaḥa", "yanma türünden bir tane", "orta", ""],
-      [452, "لُفُحَة", "lufuḥa", "yanma türünden bir tane", "orta", ""],
-      [454, "لَفَاحَة", "lafāḥa", "yanma türünden bir tane", "orta", ""]
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "لَافُوحَة", "lāfūḥa", "yanma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "لَوْفَحَة", "lawfaḥa", "yanma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "لَيْفَحَة", "layfaḥa", "yanma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "لَفْحَة", "lafḥa", "yanma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "لَفَحَة", "lafaḥa", "yanma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "لِفْحَة", "lifḥa", "yanma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "لُفْحَة", "lufḥa", "yanma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "لَفِيحَة", "lafīḥa", "yanma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "لِفَحَة", "lifaḥa", "yanma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "لُفُحَة", "lufuḥa", "yanma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "لَفَاحَة", "lafāḥa", "yanma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَلْفَاح", "ʾalfāḥ", "yanmalar", "orta", ""],
-      [456, "أَلْفِحَة", "ʾalfiḥa", "yanmalar", "orta", ""],
-      [457, "أَلَافِح", "ʾalāfiḥ", "yanmalar", "orta", ""],
-      [458, "أَلَافِيح", "ʾalāfīḥ", "yanmalar", "orta", ""],
-      [459, "لُفُوح", "lufūḥ", "yanmalar", "orta", ""],
-      [460, "لُفُح", "lufuḥ", "yanmalar", "orta", ""],
-      [461, "لِفَاح", "lifāḥ", "yanmalar", "orta", ""],
-      [462, "لِفَح", "lifaḥ", "yanmalar", "orta", ""],
-      [463, "لِفَحَة", "lifaḥa", "yanmalar", "orta", ""],
-      [464, "لُفَح", "lufaḥ", "yanmalar", "orta", ""],
-      [465, "لُفَحاء", "lufaḥāʾ", "yanmalar", "orta", ""],
-      [466, "لَفَحَة", "lafaḥa", "yanmalar", "orta", ""],
-      [467, "لُفَّاح", "luffāḥ", "yanmalar", "orta", ""],
-      [468, "لَفَاح", "lafāḥ", "yanmalar", "orta", ""],
-      [469, "لَفَح", "lafaḥ", "yanmalar", "orta", ""],
-      [470, "مَلَافِح", "malāfiḥ", "yanmalar", "orta", ""],
-      [471, "مَلَافِيح", "malāfīḥ", "yanmalar", "orta", ""],
-      [472, "لَوَافِح", "lawāfiḥ", "yanmalar", "orta", ""],
-      [473, "أَلْفُح", "ʾalfuḥ", "yanmalar", "orta", ""],
-      [474, "لُفَّح", "luffaḥ", "yanmalar", "orta", ""],
-      [475, "لَفَائِح", "lafāʾiḥ", "yanmalar", "orta", ""],
-      [476, "لُفَيْح", "lufayḥ", "yanmalar", "orta", ""]
+      ["ef'āl", "semâî aday", "أَلْفَاح", "ʾalfāḥ", "yanmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَلْفِحَة", "ʾalfiḥa", "yanmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَلَافِح", "ʾalāfiḥ", "yanmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَلَافِيح", "ʾalāfīḥ", "yanmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "لُفُوح", "lufūḥ", "yanmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "لُفُح", "lufuḥ", "yanmalar", "orta", ""],
+      ["fi'āl", "semâî aday", "لِفَاح", "lifāḥ", "yanmalar", "orta", ""],
+      ["fi'al", "semâî aday", "لِفَح", "lifaḥ", "yanmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "لِفَحَة", "lifaḥa", "yanmalar", "orta", ""],
+      ["fu'al", "semâî aday", "لُفَح", "lufaḥ", "yanmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "لُفَحاء", "lufaḥāʾ", "yanmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "لَفَحَة", "lafaḥa", "yanmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "لُفَّاح", "luffāḥ", "yanmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "لَفَاح", "lafāḥ", "yanmalar", "orta", ""],
+      ["fa'al", "semâî aday", "لَفَح", "lafaḥ", "yanmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَلَافِح", "malāfiḥ", "yanmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَلَافِيح", "malāfīḥ", "yanmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "لَوَافِح", "lawāfiḥ", "yanmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَلْفُح", "ʾalfuḥ", "yanmalar", "orta", ""],
+      ["fu''al", "semâî aday", "لُفَّح", "luffaḥ", "yanmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "لَفَائِح", "lafāʾiḥ", "yanmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "لُفَيْح", "lufayḥ", "yanmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَلْفَاحَات", "ʾalfāḥāt", "yanmalar topluluğu", "orta", ""],
-      [478, "أَلْفِحَات", "ʾalfiḥāt", "yanmalar topluluğu", "orta", ""],
-      [479, "أَلَافِحَات", "ʾalāfiḥāt", "yanmalar topluluğu", "orta", ""],
-      [480, "أَلَافِيحَات", "ʾalāfīḥāt", "yanmalar topluluğu", "orta", ""],
-      [481, "لُفُوحَات", "lufūḥāt", "yanmalar topluluğu", "orta", ""],
-      [482, "لُفُحَات", "lufuḥāt", "yanmalar topluluğu", "orta", ""],
-      [483, "لِفَاحَات", "lifāḥāt", "yanmalar topluluğu", "orta", ""],
-      [484, "لِفَحَات", "lifaḥāt", "yanmalar topluluğu", "orta", ""],
-      [485, "لِفَحَات", "lifaḥāt", "yanmalar topluluğu", "orta", ""],
-      [486, "لُفَحَات", "lufaḥāt", "yanmalar topluluğu", "orta", ""],
-      [487, "لُفَحاآت", "lufaḥāʾāt", "yanmalar topluluğu", "orta", ""],
-      [488, "لَفَحَات", "lafaḥāt", "yanmalar topluluğu", "orta", ""],
-      [489, "لُفَّاحَات", "luffāḥāt", "yanmalar topluluğu", "orta", ""],
-      [490, "لَفَاحَات", "lafāḥāt", "yanmalar topluluğu", "orta", ""],
-      [491, "لَفَحَات", "lafaḥāt", "yanmalar topluluğu", "orta", ""],
-      [492, "مَلَافِحَات", "malāfiḥāt", "yanmalar topluluğu", "orta", ""],
-      [493, "مَلَافِيحَات", "malāfīḥāt", "yanmalar topluluğu", "orta", ""],
-      [494, "لَوَافِحَات", "lawāfiḥāt", "yanmalar topluluğu", "orta", ""],
-      [495, "أَلْفُحَات", "ʾalfuḥāt", "yanmalar topluluğu", "orta", ""],
-      [496, "لُفَّحَات", "luffaḥāt", "yanmalar topluluğu", "orta", ""],
-      [497, "لَفَائِحَات", "lafāʾiḥāt", "yanmalar topluluğu", "orta", ""],
-      [498, "لُفَيْحَات", "lufayḥāt", "yanmalar topluluğu", "orta", ""]
+      ["ef'āl + ât", "semâî aday", "أَلْفَاحَات", "ʾalfāḥāt", "yanmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَلْفِحَات", "ʾalfiḥāt", "yanmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَلَافِحَات", "ʾalāfiḥāt", "yanmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَلَافِيحَات", "ʾalāfīḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "لُفُوحَات", "lufūḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "لُفُحَات", "lufuḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "لِفَاحَات", "lifāḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "لِفَحَات", "lifaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "لِفَحَات", "lifaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "لُفَحَات", "lufaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "لُفَحاآت", "lufaḥāʾāt", "yanmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "لَفَحَات", "lafaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "لُفَّاحَات", "luffāḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "لَفَاحَات", "lafāḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "لَفَحَات", "lafaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَلَافِحَات", "malāfiḥāt", "yanmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَلَافِيحَات", "malāfīḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "لَوَافِحَات", "lawāfiḥāt", "yanmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَلْفُحَات", "ʾalfuḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "لُفَّحَات", "luffaḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "لَفَائِحَات", "lafāʾiḥāt", "yanmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "لُفَيْحَات", "lufayḥāt", "yanmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "لفح",
-      "turkce": "Lefh: yanmak, sıcaklık"
-    },
-    "osmanlica_lugatler": {
-      "تَلْفَحُ": {
-        "sorgular": ["talfahu"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "لَفَحَ",
-        "metin": "(لَفَحَ) اللَّامُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لَفَحَتْهُ النَّارُ بِحَرِّهَا، وَالسَّمُومُ إِذَا أَصَابَهُ حَرُّهَا فَتَغَيَّرَ وَجْهُهُ. [وَأَمَّا] قَوْلُهُمْ: لَفَحَهُ بِالسَّيْفِ لَفْحَةً: ضَرَبَهُ ضَرْبَةً خَفِيفَةً، فَإِنَّ الْأَصْلَ فِيهِ النُّونُ، هُوَ نَفَحَهُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "اللام والفاء",
-      "baslik": "لفح",
-      "mihveri": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
-      "sesler": "",
-      "tam_metin": "{تَلْفَحُ وُجُوهَهُمُ النَّارُ وَهُمْ فِيهَا كَالِحُونَ} [المؤمنون: 104]\n\"لَفَحَتْه النارُ والسَمومُ بحرِّها: أصابه حرها فتغيَّر وجهُه \" [المقاييس].\n° المعنى المحوري\nحِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (لف): التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة ما على ذلك الظاهر كما يتمثل في الِلفافة: ما يُلَف على الرِجْل وغيرها - في (لفف)، وفي اللَفَاء- كسحاب: ما على وجه الأرض من التراب والقماش - في (لفو)، وكما في الألفة بين الناس وأوالف الحمام التي تألف البيوت من تجمع مع ارتباطٍ ما - في (ألف)، وكما في اعوجاج القرون والتوائها - في (لفت)، وكما في لفح النار والسموم الوجه فيتغير لونه - في (لفح)، وكما في اخراج ما كان بالداخل إلى الظاهر كلفظ الكلام من الفم، والميت من الأرض، ولفظ البحر ما في جوفه - في (لفظ)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "23:104:1:1",
-      "tur": {
-        "V": 1
-      },
-      "bab": {},
-      "zaman_kip": {
-        "IMPF": 1
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "تَلْفَحُ": 1
-      },
-      "bicimler": {
-        "تَلْفَحُ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "LFḤ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab LFḤ لفح BP – • HDAL • © SG | 9May2023 √LFḤ “root” ▪ LFḤ_1 ‘...’ ↗ ... ▪ LFḤ_2 ‘...’ ↗ ... ▪ LFḤ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘heat of a fire, fire, glare of a fire; to scorch, burn, sear, tan; to strike lightly’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "لفاح",
-        "u": "لفاح",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لُفَّاح or لُفَاح • (luffāḥ or lufāḥ) m",
-        "t": "Blend of لُوف (lūf) + تُفَّاح (tuffāḥ).",
-        "synonyms": ["يَبْرُوح", "تُفَّاح الْجِنّ", "تُفَّاح الْمَجَانِين", "بَيْض الْجِنّ"],
-        "g": ["mandrake (Mandragora gen. et spp.)"],
-        "r": ["luffāḥ", "lufāḥ"],
-        "el": [
-          ["لُوف", "لوف#Arabic"],
-          ["تُفَّاح", "تفاح#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "لفح",
-        "u": "لفح",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "لَفَحَ • (lafaḥa) I (non-past يَلْفَحُ (yalfaḥu), verbal noun لَفْح (lafḥ) or لَفَحَان (lafaḥān))",
-        "g": ["to blast, to blow, to sear, to graze, to stroke"],
-        "r": ["lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحتما",
-        "u": "لفحتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحتما (form I)\n# لَفَحْتُمَا (lafaḥtumā) /la.faħ.tu.maː/: second-person dual past active of لَفَحَ (lafaḥa)\n# لُفِحْتُمَا (lufiḥtumā) /lu.fiħ.tu.maː/: second-person dual past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥtumā", "lafaḥa", "lufiḥtumā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحتم",
-        "u": "لفحتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحتم (form I)\n# لَفَحْتُمْ (lafaḥtum) /la.faħ.tum/: second-person masculine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْتُمْ (lufiḥtum) /lu.fiħ.tum/: second-person masculine plural past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥtum", "lafaḥa", "lufiḥtum"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحنا",
-        "u": "لفحنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحنا (form I)\n# لَفَحْنَا (lafaḥnā) /la.faħ.naː/: first-person plural past active of لَفَحَ (lafaḥa)\n# لُفِحْنَا (lufiḥnā) /lu.fiħ.naː/: first-person plural past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥnā", "lafaḥa", "lufiḥnā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحا",
-        "u": "لفحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحا (form I)\n# لَفَحَا (lafaḥā) /la.fa.ħaː/: third-person masculine dual past active of لَفَحَ (lafaḥa)\n# لُفِحَا (lufiḥā) /lu.fi.ħaː/: third-person masculine dual past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥā", "lafaḥa", "lufiḥā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحتن",
-        "u": "لفحتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحتن (form I)\n# لَفَحْتُنَّ (lafaḥtunna) /la.faħ.tun.na/: second-person feminine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْتُنَّ (lufiḥtunna) /lu.fiħ.tun.na/: second-person feminine plural past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥtunna", "lafaḥa", "lufiḥtunna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحتا",
-        "u": "لفحتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحتا (form I)\n# لَفَحَتَا (lafaḥatā) /la.fa.ħa.taː/: third-person feminine dual past active of لَفَحَ (lafaḥa)\n# لُفِحَتَا (lufiḥatā) /lu.fi.ħa.taː/: third-person feminine dual past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥatā", "lafaḥa", "lufiḥatā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحت",
-        "u": "لفحت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحت (form I)\n# لَفَحْتُ (lafaḥtu) /la.faħ.tu/: first-person singular past active of لَفَحَ (lafaḥa)\n# لَفَحْتَ (lafaḥta) /la.faħ.ta/: second-person masculine singular past active of لَفَحَ (lafaḥa)\n# لَفَحْتِ (lafaḥti) /la.faħ.ti/: second-person feminine singular past active of لَفَحَ (lafaḥa)\n# لَفَحَتْ (lafaḥat) /la.fa.ħat/: third-person feminine singular past active of لَفَحَ (lafaḥa)\n# لُفِحْ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥtu", "lafaḥa", "lafaḥta"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "ألفح",
-        "u": "ألفح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "ألفح (form I)\n# أَلْفَحُ (ʔalfaḥu) /ʔal.fa.ħu/: first-person singular non-past active indicative of لَفَحَ (lafaḥa)\n# أُلْفَحُ (ʔulfaḥu) /ʔul.fa.ħu/: first-person singular non-past passive indicative of لَفَحَ (lafaḥa)\n# أَلْفَحَ (ʔalfaḥa) /ʔal.fa.ħa/: first-person singular non-past active subjunctive of لَفَحَ (lafaḥa)\n# أُلْفَحَ (ʔulfaḥa) /ʔul.fa.ħa/: first-person singular non-past passive subju",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔalfaḥu", "lafaḥa", "ʔulfaḥu"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفح",
-        "u": "تلفح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفح (form I)\n# تَلْفَحُ (talfaḥu) /tal.fa.ħu/: inflection of لَفَحَ (lafaḥa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تُلْفَحُ (tulfaḥu) /tul.fa.ħu/: inflection of لَفَحَ (lafaḥa):\n## second-person masculine singular non-past passive indicative\n## third-person feminine singular non-past passive indicative\n# تَلْ",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥu", "lafaḥa", "tulfaḥu"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحوا",
-        "u": "لفحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحوا (form I)\n# لَفَحُوا (lafaḥū) /la.fa.ħuː/: third-person masculine plural past active of لَفَحَ (lafaḥa)\n# لُفِحُوا (lufiḥū) /lu.fi.ħuː/: third-person masculine plural past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥū", "lafaḥa", "lufiḥū"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحين",
-        "u": "تلفحين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحين (form I)\n# تَلْفَحِينَ (talfaḥīna) /tal.fa.ħiː.na/: second-person feminine singular non-past active indicative of لَفَحَ (lafaḥa)\n# تُلْفَحِينَ (tulfaḥīna) /tul.fa.ħiː.na/: second-person feminine singular non-past passive indicative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥīna", "lafaḥa", "tulfaḥīna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "لفحن",
-        "u": "لفحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "لفحن (form I)\n# لَفَحْنَ (lafaḥna) /la.faħ.na/: third-person feminine plural past active of لَفَحَ (lafaḥa)\n# لُفِحْنَ (lufiḥna) /lu.fiħ.na/: third-person feminine plural past passive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["lafaḥna", "lafaḥa", "lufiḥna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفحان",
-        "u": "يلفحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفحان (form I)\n# يَلْفَحَانِ (yalfaḥāni) /jal.fa.ħaː.ni/: third-person masculine dual non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحَانِ (yulfaḥāni) /jul.fa.ħaː.ni/: third-person masculine dual non-past passive indicative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥāni", "lafaḥa", "yulfaḥāni"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفح",
-        "u": "يلفح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفح (form I)\n# يَلْفَحُ (yalfaḥu) /jal.fa.ħu/: third-person masculine singular non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحُ (yulfaḥu) /jul.fa.ħu/: third-person masculine singular non-past passive indicative of لَفَحَ (lafaḥa)\n# يَلْفَحَ (yalfaḥa) /jal.fa.ħa/: third-person masculine singular non-past active subjunctive of لَفَحَ (lafaḥa)\n# يُلْفَحَ (yulfaḥa) /jul.fa.ħa/: third-person m",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥu", "lafaḥa", "yulfaḥu"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "نلفح",
-        "u": "نلفح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "نلفح (form I)\n# نَلْفَحُ (nalfaḥu) /nal.fa.ħu/: first-person plural non-past active indicative of لَفَحَ (lafaḥa)\n# نُلْفَحُ (nulfaḥu) /nul.fa.ħu/: first-person plural non-past passive indicative of لَفَحَ (lafaḥa)\n# نَلْفَحَ (nalfaḥa) /nal.fa.ħa/: first-person plural non-past active subjunctive of لَفَحَ (lafaḥa)\n# نُلْفَحَ (nulfaḥa) /nul.fa.ħa/: first-person plural non-past passive subjunctive o",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["nalfaḥu", "lafaḥa", "nulfaḥu"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفحن",
-        "u": "يلفحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفحن (form I)\n# يَلْفَحْنَ (yalfaḥna) /jal.faħ.na/: third-person feminine plural non-past active indicative/subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحْنَ (yulfaḥna) /jul.faħ.na/: third-person feminine plural non-past passive indicative/subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥna", "lafaḥa", "yulfaḥna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحان",
-        "u": "تلفحان",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحان (form I)\n# تَلْفَحَانِ (talfaḥāni) /tal.fa.ħaː.ni/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative\n# تُلْفَحَانِ (tulfaḥāni) /tul.fa.ħaː.ni/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past passive indicative\n## third-person feminine dual non-past passive indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥāni", "lafaḥa", "tulfaḥāni"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحون",
-        "u": "تلفحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحون (form I)\n# تَلْفَحُونَ (talfaḥūna) /tal.fa.ħuː.na/: second-person masculine plural non-past active indicative of لَفَحَ (lafaḥa)\n# تُلْفَحُونَ (tulfaḥūna) /tul.fa.ħuː.na/: second-person masculine plural non-past passive indicative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥūna", "lafaḥa", "tulfaḥūna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحا",
-        "u": "تلفحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحا (form I)\n# تَلْفَحَا (talfaḥā) /tal.fa.ħaː/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive\n# تُلْفَحَا (tulfaḥā) /tul.fa.ħaː/: inflection of لَفَحَ (lafaḥa):\n## second-person dual non-past passive subjunctive/jussive\n## third-person feminine dual non-past passive subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥā", "lafaḥa", "tulfaḥā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفحا",
-        "u": "يلفحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفحا (form I)\n# يَلْفَحَا (yalfaḥā) /jal.fa.ħaː/: third-person masculine dual non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحَا (yulfaḥā) /jul.fa.ħaː/: third-person masculine dual non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥā", "lafaḥa", "yulfaḥā"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحن",
-        "u": "تلفحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحن (form I)\n# تَلْفَحْنَ (talfaḥna) /tal.faħ.na/: second-person feminine plural non-past active indicative/subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحْنَ (tulfaḥna) /tul.faħ.na/: second-person feminine plural non-past passive indicative/subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥna", "lafaḥa", "tulfaḥna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحي",
-        "u": "تلفحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحي (form I)\n# تَلْفَحِي (talfaḥī) /tal.fa.ħiː/: second-person feminine singular non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحِي (tulfaḥī) /tul.fa.ħiː/: second-person feminine singular non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥī", "lafaḥa", "tulfaḥī"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفحون",
-        "u": "يلفحون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفحون (form I)\n# يَلْفَحُونَ (yalfaḥūna) /jal.fa.ħuː.na/: third-person masculine plural non-past active indicative of لَفَحَ (lafaḥa)\n# يُلْفَحُونَ (yulfaḥūna) /jul.fa.ħuː.na/: third-person masculine plural non-past passive indicative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥūna", "lafaḥa", "yulfaḥūna"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "يلفحوا",
-        "u": "يلفحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "يلفحوا (form I)\n# يَلْفَحُوا (yalfaḥū) /jal.fa.ħuː/: third-person masculine plural non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# يُلْفَحُوا (yulfaḥū) /jul.fa.ħuː/: third-person masculine plural non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yalfaḥū", "lafaḥa", "yulfaḥū"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "الفحا",
-        "u": "الفحا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِلْفَحَا • (ilfaḥā) (form I) /il.fa.ħaː/\n# second-person dual imperative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ilfaḥā", "lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "الفح",
-        "u": "الفح",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِلْفَحْ • (ilfaḥ) (form I) /il.faħ/\n# second-person masculine singular imperative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ilfaḥ", "lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "الفحوا",
-        "u": "الفحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِلْفَحُوا • (ilfaḥū) (form I) /il.fa.ħuː/\n# second-person masculine plural imperative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ilfaḥū", "lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "الفحن",
-        "u": "الفحن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِلْفَحْنَ • (ilfaḥna) (form I) /il.faħ.na/\n# second-person feminine plural imperative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ilfaḥna", "lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "تلفحوا",
-        "u": "تلفحوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تلفحوا (form I)\n# تَلْفَحُوا (talfaḥū) /tal.fa.ħuː/: second-person masculine plural non-past active subjunctive/jussive of لَفَحَ (lafaḥa)\n# تُلْفَحُوا (tulfaḥū) /tul.fa.ħuː/: second-person masculine plural non-past passive subjunctive/jussive of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["talfaḥū", "lafaḥa", "tulfaḥū"],
-        "k": "لفح",
-        "yol": "kök"
-      },
-      {
-        "w": "الفحي",
-        "u": "الفحي",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "اِلْفَحِي • (ilfaḥī) (form I) /il.fa.ħiː/\n# second-person feminine singular imperative of لَفَحَ (lafaḥa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ilfaḥī", "lafaḥa"],
-        "k": "لفح",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "تلفح": "yakar"
-    },
-    "arabic_ontology": [
-      {
-        "id": "46430",
-        "arapca": [
-          "مُحْتَرِقٌ",
-          "مُتَوَهِّجٌ",
-          "مُسْتَعِرٌ",
-          "وَهَّاجٌ",
-          "مُتَوَقِّدٌ",
-          "مُتَّقِدٌ",
-          "لَافِحٌ",
-          "مُحْتَدِمٌ",
-          "مُتَأَجِّجٌ",
-          "سَاطِعٌ",
-          "مُضْطَرِمٌ",
-          "مُشْتَعِلٌ",
-          "سُخْنٌ",
-          "سَاخِنٌ",
-          "قَائِظٌ",
-          "مُلْتَهِبٌ",
-          "حَمِيمٌ",
-          "صَائِفٌ",
-          "حَارٌّ",
-          "سَخِينٌ",
-          "مُسَعِّرٌ",
-          "مُسَعِّرَةٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "ارتفاع درجة حرارة الشيء",
-        "misal": "كان نبعُ الماء _",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47214",
-        "arapca": [
-          "أَجَّجَ",
-          "أَذْكَى2",
-          "أَضْرَمَ",
-          "لَظَّى",
-          "لَفَحَ",
-          "أَلْهَبَ",
-          "أَسْعَرَ",
-          "سَفَعَ",
-          "سَفَعَ ب",
-          "أَوْقَدَ",
-          "أَحْرَقَ",
-          "حَرَقَ",
-          "كَوَى",
-          "أَشْعَلَ"
-        ],
-        "ingilizce": [],
-        "tanim": "بدأ وجود النّار في الموجود المادي",
-        "misal": "_ النار في الموقد ليتدفَّأ",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "52391",
-        "arapca": ["لَفَحَ", "سَفَعَ", "سَفَعَ ب", "شَاطَ1", "شَاطَ1 ب", "شَاطَ1 في"],
-        "ingilizce": [],
-        "tanim": "قارَب الاحتراق كلُّه أو بعضُه",
-        "misal": "_تْ وجهه النار",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "لَفْح": [
-        {
-          "eser": "Kamus",
-          "madde": "lefh",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Kılıçla vurmak manâsınadır; yukâlu: لَفَحَهُ بِالسَّيْفِ لَفْحًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِهِ Şârihin beyânına göre kılıçla yapça vurmağa mahsûstur.",
-              "misaller": [
-                ["لَفَحَهُ بِالسَّيْفِ لَفْحًا مِنَ الْبَابِ الثَّالِثِ إِذَا ضَرَبَهُ بِهِ", ""]
-              ]
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "لَفْحٌ [lefh] ve لَفْحَانُ [lefehân] (fetehâtla) Âteşin ıssılığı çalıp yakmak manâsınadır; yukâlu: لَفَحَتْهُ النَّارُ بِحَرِّهَا لَفْحًا وَلَفَحَانًا إِذَا أَحْرَقَتْ Müellifin Basâirde beyânına göre manâ-yı evvel bundan müsteârdır.",
-              "misaller": [
-                ["لَفَحَتْهُ النَّارُ بِحَرِّهَا لَفْحًا وَلَفَحَانًا إِذَا أَحْرَقَتْ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّفْحُ",
-          "okunus": "el-lefh",
-          "koken": "سَفْحٌ [sefh] vezninde"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "lefh",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Yakmak, إِحْرَاقٌ [ihrâk] manâsına; yukâlu: لَفَحَتْهُ النَّارُ وَالسَّمُومُ بِحَرِّهَا أَيْ أَحْرَقَتْهُ Asmaî eyitti: Her hangisin ki لَفْحٌ [lefh]la sıfatlayalar, o حَرٌّ [harr]dır ve her hangisin ki نَفْحٌ [nefh]le sıfatlayalar, o بَرْدٌ [berd]dir.",
-              "misaller": [
-                ["لَفَحَتْهُ النَّارُ وَالسَّمُومُ بِحَرِّهَا أَيْ أَحْرَقَتْهُ", ""]
-              ]
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "لَفْحٌ [lefh] Kılıçla vurmağa derler, kaçan hiffetle vurulsa; tekûlu: لَفَحْتُهُ بِالسَّيْفِ لَفْحَةً إِذَا ضَرَبْتَهُ ضَرْبَةً خَفِيفَةً",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّفْحُ",
-          "okunus": "el-lefh",
-          "koken": "lâmın fethi ve fânın sükûnuyla"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Lefeha (لَفَحَ)",
-          "metin": "(لَفَحَ) Lâm, fâ ve hâ tek bir kelimedir. «Lefehathü'n-nâru bi-harrihâ»: ateş hararetiyle ona dokundu; «es-semûm» (kavurucu rüzgâr) da hararetiyle isabet edip yüzü değişince böyle denir. [Fakat] «lefehahû bi's-seyf lefhaten» sözleri, ona hafif bir darbe vurdu mânâsınadır; bunun aslı nûn iledir: «nefehahû»."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Bir şeyden fışkıran şiddet; karşısına çıkanın dışına (zâhirine) isabet eder: yüze ateşin lefhi gibi. Terkîb âyetindeki de budur. «Lefehahû bi's-seyf»: ona kılıçla vurdu (yalnız zâhir derisini yaralayan hafif bir darbe)."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Bir şeyin hararet derecesinin yükselmesi",
-          "misal": "Pınarın suyu _ idi."
-        },
-        {
-          "tanim": "Maddî varlıkta ateşin baş göstermesi",
-          "misal": "Ocakta ateş _ ısınsın diye."
-        },
-        {
-          "tanim": "Bütünüyle yahut kısmen yanmaya yaklaşma",
-          "misal": "Ateş yüzünü _ ti."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab LFḤ لفح | BP – • HDAL • © SG | 9 Mayıs 2023 | √LFḤ «kök» ▪ LFḤ_1 «…» ↗ … ▪ LFḤ_2 «…» ↗ … ▪ LFḤ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «ateşin hararetı, ateş, ateşin parıltısı; kavurmak, yakmak, yüzü yakıp esmerleştirmek; hafifçe vurmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["mandrağora (Mandragora cinsi ve türleri)"]
-        },
-        {
-          "g": ["kavurmak, esip geçmek, sıyırmak, hafifçe değmek, okşamak"]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لف",
-    "harf": "ل",
-    "mahrec": "zelakiyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mana": {
     "ince": "parch.v.01",
     "orta": "verb.change",
     "ust": "fiil ve hadise",
@@ -1364,37 +2124,36 @@
     "dayanak_tanim": "cause to wither or parch from exposure to heat",
     "synset_sayisi": 1
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "اللام والفاء",
-    "mihveri": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (لف): التلوي على ظاهر الشيء وما يلزمه من الوجود بكثافة ما على ذلك الظاهر كما يتمثل في الِلفافة: ما يُلَف على الرِجْل وغيرها - في (لفف)، وفي اللَفَاء- كسحاب: ما على وجه الأرض من التراب والقماش - في (لفو)، وكما في الألفة بين الناس وأوالف الحمام التي تألف البيوت من تجمع مع ارتباطٍ ما - في (ألف)، وكما في اعوجاج القرون والتوائها - في (لفت)، وكما في لفح النار والسموم الوجه فيتغير لونه - في (لفح)، وكما في اخراج ما كان بالداخل إلى الظاهر كلفظ الكلام من الفم، والميت من الأرض، ولفظ البحر ما في جوفه - في (لفظ).",
-    "tam_metin": "{تَلْفَحُ وُجُوهَهُمُ النَّارُ وَهُمْ فِيهَا كَالِحُونَ} [المؤمنون: 104]\n\"لَفَحَتْه النارُ والسَمومُ بحرِّها: أصابه حرها فتغيَّر وجهُه \" [المقاييس].\n° المعنى المحوري\nحِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط)."
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 9,
+      "merkez_kok": "سفك",
+      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
+      "boy": 622
+    },
+    "orta": {
+      "kume": 41,
+      "merkez_kok": "وقد",
+      "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
+      "boy": 58
+    },
+    "ince": {
+      "kume": 272,
+      "merkez_kok": "لهب",
+      "merkez_mana": "Lehb: alev, ateş",
+      "boy": 28
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "لفحته النار: أخرقت بشرته، ولفحته السموم، وأصابه من الحر لفح، ومن البرد نفح. ورأيت معهم التّفاح واللّقّاح، وهو شيء أصفر أصغر من التفاح طيّب الريح.\nل\nف\nظ\nلفظ النوى. وكأنها لفظ العجم ولفيظه: ما لفظ منه. ولفظ اللقمة من فيه. ورمى باللفاظة وهي ما يلفظ.",
-    "mecaz": "لفظ القول ولفظ به، \" ما يلفظ من قول \"، ويقال: ما يلفظ بشيء إلا حفظ عليه. ولفظ نفسه: مات، كما يقال: قاء نفسه. وفلان لافظ فائظ. قال:\nوقلت له إن تلفظ النفس كارهاً ... أدعك ولا أدفنك حين تنبل\nأي تموت. ولفظت الرحم ماء الفحل. ولفظت\nالرحى بالدقيق. ولفظت الحيّة سمها. ولفظت إلينا البلاد أهلها. ولفظت آسادها الأجم. وقال ذو الرمة:\nتروحن فاعصوصبن حتى وردنه ... ولم يلفظ الغرثى الخداريّة الوكر\nوالبحر يلفظ بالشيء إلى الساحل. والدنيا لافظة بالناس إلى الآخرة، والأرض تلفظ الموتى. وجاء وقد لفظ لجامه وهو مجهود من العطش والإعياء. وما بق إلا فضاضة ولعاعة ولفاظة: بقيّة يسيرة.",
-    "kinaye": "",
-    "mecaz_var": true
+  "wordnet": ["parch.v.01"],
+  "muhassas": {
+    "kitap": "النخل",
+    "bab": "أشجار الجبال",
+    "kok_gecis": 19.0,
+    "kitapta_gecis": 12.0,
+    "zenginlesme": 3.58
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "حِدَّة تندفع من شيء؛ فتُصيب (ظاهر) ما يَعرِض لها: كلفح النار في الوجه. ومنه ما في آية التركيب. ومنه \"لَفَحَه بالسف: ضربه به ضربةً خفيفة \" (تجرح جِلده الظاهرَ فقط)."
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "لفحته النار: أخرقت بشرته، ولفحته السموم، وأصابه من الحر لفح، ومن البرد نفح. ورأيت معهم التّفاح واللّقّاح، وهو شيء أصفر أصغر من التفاح طيّب الريح.\nل\nف\nظ\nلفظ النوى. وكأنها لفظ العجم ولفيظه: ما لفظ منه. ولفظ اللقمة من فيه. ورمى باللفاظة وهي ما يلفظ."
-      },
-      {
-        "kaynak": "Mekâyîs: لَفَحَ",
-        "metin": "(لَفَحَ) اللَّامُ وَالْفَاءُ وَالْحَاءُ كَلِمَةٌ وَاحِدَةٌ. يُقَالُ: لَفَحَتْهُ النَّارُ بِحَرِّهَا، وَالسَّمُومُ إِذَا أَصَابَهُ حَرُّهَا فَتَغَيَّرَ وَجْهُهُ. [وَأَمَّا] قَوْلُهُمْ: لَفَحَهُ بِالسَّيْفِ لَفْحَةً: ضَرَبَهُ ضَرْبَةً خَفِيفَةً، فَإِنَّ الْأَصْلَ فِيهِ النُّونُ، هُوَ نَفَحَهُ."
-      }
-    ],
+  "prototip": {
     "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
@@ -1434,595 +2193,6 @@
         "halka": "yakın"
       }
     ],
-    "ortalama_benzerlik": 0.455,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": ["parch.v.01"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "النخل",
-    "bab": "أشجار الجبال",
-    "kok_gecis": 19.0,
-    "kitapta_gecis": 12.0,
-    "zenginlesme": 3.58
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 9,
-      "merkez_kok": "سفك",
-      "merkez_mana": "Safk: dökmek, akıtmak (kan)",
-      "boy": 622
-    },
-    "orta": {
-      "kume": 41,
-      "merkez_kok": "وقد",
-      "merkez_mana": "Vakd: ateş yakmak; vakîd: ateş",
-      "boy": 58
-    },
-    "ince": {
-      "kume": 272,
-      "merkez_kok": "لهب",
-      "merkez_mana": "Lehb: alev, ateş",
-      "boy": 28
-    }
-  },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
-  },
-  "kelimeler": [
-    {
-      "kelime": "تَلْفَحُ",
-      "kok": "لفح",
-      "lemma": "تَلْفَحُ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "23:104",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "yakar",
-        "lemma": "yakar",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 1,
-      "isim": 0
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Temas",
-    "ayrim": "yan",
-    "acilim": "لفح := Temas(ayrım: yan)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Temas",
-    "kelimeler": [
-      {
-        "lemma": "تَلْفَحُ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Muzâri"],
-        "adet": 1,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      }
-    ]
+    "ortalama_benzerlik": 0.455
   }
 }

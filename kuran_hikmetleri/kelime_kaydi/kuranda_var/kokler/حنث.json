@@ -1,850 +1,2127 @@
 {
   "kok": "حنث",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": false,
+  "baz_fiil": "Beyân",
+  "baz_ayrim": "yemini boz",
+  "tur_kuran": {
+    "fiil": 1,
+    "isim": 1
+  },
+  "fiil": "yemini boz",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "yemini boz",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "حَنْث", "ḥanṯ", "yemini bozma", "orta", ""],
-      [1, "حِنْث", "ḥinṯ", "yemini bozma", "orta", ""],
-      [2, "حُنْث", "ḥunṯ", "yemini bozma", "orta", ""],
-      [3, "حَنَث", "ḥanaṯ", "yemini bozma", "orta", ""],
-      [4, "حِنَث", "ḥinaṯ", "yemini bozma", "orta", ""],
-      [5, "حُنُث", "ḥunuṯ", "yemini bozma", "orta", ""],
-      [6, "حُنُوث", "ḥunūṯ", "yemini bozma", "orta", ""],
-      [7, "حِنَاث", "ḥināṯ", "yemini bozma", "orta", ""],
-      [8, "حُنَاث", "ḥunāṯ", "yemini bozma", "orta", ""],
-      [9, "حَنَاث", "ḥanāṯ", "yemini bozma", "orta", ""],
-      [10, "حَنَاثَة", "ḥanāṯa", "yemini bozma", "orta", ""],
-      [11, "حُنُوثَة", "ḥunūṯa", "yemini bozma", "orta", ""],
-      [12, "حِنَاثَة", "ḥināṯa", "yemini bozma", "orta", ""],
-      [13, "حَنِيث", "ḥanīṯ", "yemini bozma", "orta", ""],
-      [14, "حَنُوث", "ḥanūṯ", "yemini bozma", "orta", ""],
-      [15, "حَنَثَان", "ḥanaṯān", "yemini bozma", "orta", ""],
-      [16, "حُنْثَان", "ḥunṯān", "yemini bozma", "orta", ""],
-      [17, "حِنْثَان", "ḥinṯān", "yemini bozma", "orta", ""],
-      [18, "حَنْثَى", "ḥanṯā", "yemini bozma", "orta", ""],
-      [19, "حُنْثَى", "ḥunṯā", "yemini bozma", "orta", ""],
-      [20, "حِنْثَى", "ḥinṯā", "yemini bozma", "orta", ""],
-      [21, "حَنَثَة", "ḥanaṯa", "yemini bozma", "orta", ""],
-      [22, "حِنَثَة", "ḥinaṯa", "yemini bozma", "orta", ""],
-      [23, "حَنْثُوثَة", "ḥanṯūṯa", "yemini bozma", "orta", ""],
-      [24, "تُحْنُوث", "tuḥnūṯ", "yemini bozma", "orta", ""],
-      [25, "تَحْنِثَة", "taḥniṯa", "yemini bozma", "orta", ""],
-      [26, "تَحْنَثَة", "taḥnaṯa", "yemini bozma", "orta", ""],
-      [27, "مَحْنُثَة", "maḥnuṯa", "yemini bozma", "orta", ""],
-      [28, "مَحْنِثَة", "maḥniṯa", "yemini bozma", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَحْنِيث", "taḥnīṯ", "çokça yemini bozma", "orta", ""],
-      [30, "تَحْنِثَة", "taḥniṯa", "çokça yemini bozma", "orta", ""],
-      [31, "حِنِّاث", "ḥinnāṯ", "çokça yemini bozma", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَحْنِيثَة", "taḥnīṯa", "bir kere çokça yemini bozma", "orta", ""],
-      [33, "حِنِّاثَة", "ḥinnāṯa", "bir kere çokça yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُحَنِّث", "muḥanniṯ", "çokça yemini bozan", "orta", ""],
-      [35, "مُحَنِّثَة", "muḥanniṯa", "çokça yemini bozan, müennes", "orta", ""],
-      [36, "مُحَنِّثَان", "muḥanniṯān", "çokça yemini bozan, iki", "orta", ""],
-      [37, "مُحَنِّثَتَان", "muḥanniṯatān", "çokça yemini bozan, iki, müennes", "orta", ""],
-      [38, "مُحَنِّثُون", "muḥanniṯūn", "çokça yemini bozanlar", "orta", ""],
-      [39, "مُحَنِّثِين", "muḥanniṯīn", "çokça yemini bozanlar", "orta", ""],
-      [40, "مُحَنِّثَات", "muḥanniṯāt", "çokça yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُحَنَّث", "muḥannaṯ", "çokça yemini bozulan", "orta", ""],
-      [42, "مُحَنَّثَة", "muḥannaṯa", "çokça yemini bozulan, müennes", "orta", ""],
-      [43, "مُحَنَّثَان", "muḥannaṯān", "çokça yemini bozulan, iki", "orta", ""],
-      [44, "مُحَنَّثَتَان", "muḥannaṯatān", "çokça yemini bozulan, iki, müennes", "orta", ""],
-      [45, "مُحَنَّثُون", "muḥannaṯūn", "çokça yemini bozulanlar", "orta", ""],
-      [46, "مُحَنَّثِين", "muḥannaṯīn", "çokça yemini bozulanlar", "orta", ""],
-      [47, "مُحَنَّثَات", "muḥannaṯāt", "çokça yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُحَنَّث", "muḥannaṯ", "çokça yemini bozma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُحَانَثَة", "muḥānaṯa", "biriyle karşılıklı yemini bozma", "orta", ""],
-      [50, "حِنَاث", "ḥināṯ", "biriyle karşılıklı yemini bozma", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "حِنَاثَة", "ḥināṯa", "bir kere biriyle karşılıklı yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُحَانِث", "muḥāniṯ", "biriyle karşılıklı yemini bozan", "orta", ""],
-      [53, "مُحَانِثَة", "muḥāniṯa", "biriyle karşılıklı yemini bozan, müennes", "orta", ""],
-      [54, "مُحَانِثَان", "muḥāniṯān", "biriyle karşılıklı yemini bozan, iki", "orta", ""],
-      [55, "مُحَانِثَتَان", "muḥāniṯatān", "biriyle karşılıklı yemini bozan, iki, müennes", "orta", ""],
-      [56, "مُحَانِثُون", "muḥāniṯūn", "biriyle karşılıklı yemini bozanlar", "orta", ""],
-      [57, "مُحَانِثِين", "muḥāniṯīn", "biriyle karşılıklı yemini bozanlar", "orta", ""],
-      [58, "مُحَانِثَات", "muḥāniṯāt", "biriyle karşılıklı yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُحَانَث", "muḥānaṯ", "biriyle karşılıklı yemini bozulan", "orta", ""],
-      [60, "مُحَانَثَة", "muḥānaṯa", "biriyle karşılıklı yemini bozulan, müennes", "orta", ""],
-      [61, "مُحَانَثَان", "muḥānaṯān", "biriyle karşılıklı yemini bozulan, iki", "orta", ""],
-      [62, "مُحَانَثَتَان", "muḥānaṯatān", "biriyle karşılıklı yemini bozulan, iki, müennes", "orta", ""],
-      [63, "مُحَانَثُون", "muḥānaṯūn", "biriyle karşılıklı yemini bozulanlar", "orta", ""],
-      [64, "مُحَانَثِين", "muḥānaṯīn", "biriyle karşılıklı yemini bozulanlar", "orta", ""],
-      [65, "مُحَانَثَات", "muḥānaṯāt", "biriyle karşılıklı yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُحَانَث", "muḥānaṯ", "biriyle karşılıklı yemini bozma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِحْنَاث", "ʾiḥnāṯ", "yemini bozdurma", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِحْنَاثَة", "ʾiḥnāṯa", "bir kere yemini bozdurma", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُحْنِث", "muḥniṯ", "yemini bozduran", "orta", ""],
-      [70, "مُحْنِثَة", "muḥniṯa", "yemini bozduran, müennes", "orta", ""],
-      [71, "مُحْنِثَان", "muḥniṯān", "yemini bozduran, iki", "orta", ""],
-      [72, "مُحْنِثَتَان", "muḥniṯatān", "yemini bozduran, iki, müennes", "orta", ""],
-      [73, "مُحْنِثُون", "muḥniṯūn", "yemini bozduranlar", "orta", ""],
-      [74, "مُحْنِثِين", "muḥniṯīn", "yemini bozduranlar", "orta", ""],
-      [75, "مُحْنِثَات", "muḥniṯāt", "yemini bozduranlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُحْنَث", "muḥnaṯ", "yemini bozdurulan", "orta", ""],
-      [77, "مُحْنَثَة", "muḥnaṯa", "yemini bozdurulan, müennes", "orta", ""],
-      [78, "مُحْنَثَان", "muḥnaṯān", "yemini bozdurulan, iki", "orta", ""],
-      [79, "مُحْنَثَتَان", "muḥnaṯatān", "yemini bozdurulan, iki, müennes", "orta", ""],
-      [80, "مُحْنَثُون", "muḥnaṯūn", "yemini bozdurulanlar", "orta", ""],
-      [81, "مُحْنَثِين", "muḥnaṯīn", "yemini bozdurulanlar", "orta", ""],
-      [82, "مُحْنَثَات", "muḥnaṯāt", "yemini bozdurulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُحْنَث", "muḥnaṯ", "yemini bozdurma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَحَنُّث", "taḥannuṯ", "kendini zorlayarak yemini bozma", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَحَنُّثَة", "taḥannuṯa", "bir kere kendini zorlayarak yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَحَنِّث", "mutaḥanniṯ", "kendini zorlayarak yemini bozan", "orta", ""],
-      [87, "مُتَحَنِّثَة", "mutaḥanniṯa", "kendini zorlayarak yemini bozan, müennes", "orta", ""],
-      [88, "مُتَحَنِّثَان", "mutaḥanniṯān", "kendini zorlayarak yemini bozan, iki", "orta", ""],
-      [89, "مُتَحَنِّثَتَان", "mutaḥanniṯatān", "kendini zorlayarak yemini bozan, iki, müennes", "orta", ""],
-      [90, "مُتَحَنِّثُون", "mutaḥanniṯūn", "kendini zorlayarak yemini bozanlar", "orta", ""],
-      [91, "مُتَحَنِّثِين", "mutaḥanniṯīn", "kendini zorlayarak yemini bozanlar", "orta", ""],
-      [92, "مُتَحَنِّثَات", "mutaḥanniṯāt", "kendini zorlayarak yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَحَنَّث", "mutaḥannaṯ", "kendini zorlayarak yemini bozulan", "orta", ""],
-      [94, "مُتَحَنَّثَة", "mutaḥannaṯa", "kendini zorlayarak yemini bozulan, müennes", "orta", ""],
-      [95, "مُتَحَنَّثَان", "mutaḥannaṯān", "kendini zorlayarak yemini bozulan, iki", "orta", ""],
-      [96, "مُتَحَنَّثَتَان", "mutaḥannaṯatān", "kendini zorlayarak yemini bozulan, iki, müennes", "orta", ""],
-      [97, "مُتَحَنَّثُون", "mutaḥannaṯūn", "kendini zorlayarak yemini bozulanlar", "orta", ""],
-      [98, "مُتَحَنَّثِين", "mutaḥannaṯīn", "kendini zorlayarak yemini bozulanlar", "orta", ""],
-      [99, "مُتَحَنَّثَات", "mutaḥannaṯāt", "kendini zorlayarak yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَحَنَّث", "mutaḥannaṯ", "kendini zorlayarak yemini bozma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَحَانُث", "taḥānuṯ", "birbirine yemini bozma", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَحَانُثَة", "taḥānuṯa", "bir kere birbirine yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَحَانِث", "mutaḥāniṯ", "birbirine yemini bozan", "orta", ""],
-      [104, "مُتَحَانِثَة", "mutaḥāniṯa", "birbirine yemini bozan, müennes", "orta", ""],
-      [105, "مُتَحَانِثَان", "mutaḥāniṯān", "birbirine yemini bozan, iki", "orta", ""],
-      [106, "مُتَحَانِثَتَان", "mutaḥāniṯatān", "birbirine yemini bozan, iki, müennes", "orta", ""],
-      [107, "مُتَحَانِثُون", "mutaḥāniṯūn", "birbirine yemini bozanlar", "orta", ""],
-      [108, "مُتَحَانِثِين", "mutaḥāniṯīn", "birbirine yemini bozanlar", "orta", ""],
-      [109, "مُتَحَانِثَات", "mutaḥāniṯāt", "birbirine yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَحَانَث", "mutaḥānaṯ", "birbirine yemini bozulan", "orta", ""],
-      [111, "مُتَحَانَثَة", "mutaḥānaṯa", "birbirine yemini bozulan, müennes", "orta", ""],
-      [112, "مُتَحَانَثَان", "mutaḥānaṯān", "birbirine yemini bozulan, iki", "orta", ""],
-      [113, "مُتَحَانَثَتَان", "mutaḥānaṯatān", "birbirine yemini bozulan, iki, müennes", "orta", ""],
-      [114, "مُتَحَانَثُون", "mutaḥānaṯūn", "birbirine yemini bozulanlar", "orta", ""],
-      [115, "مُتَحَانَثِين", "mutaḥānaṯīn", "birbirine yemini bozulanlar", "orta", ""],
-      [116, "مُتَحَانَثَات", "mutaḥānaṯāt", "birbirine yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَحَانَث", "mutaḥānaṯ", "birbirine yemini bozma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْحِنَاث", "inḥināṯ", "yemini bozulma", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْحِنَاثَة", "inḥināṯa", "bir kere yemini bozulma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْحَنِث", "munḥaniṯ", "yemini bozulan", "orta", ""],
-      [121, "مُنْحَنِثَة", "munḥaniṯa", "yemini bozulan, müennes", "orta", ""],
-      [122, "مُنْحَنِثَان", "munḥaniṯān", "yemini bozulan, iki", "orta", ""],
-      [123, "مُنْحَنِثَتَان", "munḥaniṯatān", "yemini bozulan, iki, müennes", "orta", ""],
-      [124, "مُنْحَنِثُون", "munḥaniṯūn", "yemini bozulanlar", "orta", ""],
-      [125, "مُنْحَنِثِين", "munḥaniṯīn", "yemini bozulanlar", "orta", ""],
-      [126, "مُنْحَنِثَات", "munḥaniṯāt", "yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْحَنَث", "munḥanaṯ", "yemini bozulan", "orta", ""],
-      [128, "مُنْحَنَثَة", "munḥanaṯa", "yemini bozulan, müennes", "orta", ""],
-      [129, "مُنْحَنَثَان", "munḥanaṯān", "yemini bozulan, iki", "orta", ""],
-      [130, "مُنْحَنَثَتَان", "munḥanaṯatān", "yemini bozulan, iki, müennes", "orta", ""],
-      [131, "مُنْحَنَثُون", "munḥanaṯūn", "yemini bozulanlar", "orta", ""],
-      [132, "مُنْحَنَثِين", "munḥanaṯīn", "yemini bozulanlar", "orta", ""],
-      [133, "مُنْحَنَثَات", "munḥanaṯāt", "yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْحَنَث", "munḥanaṯ", "yemini bozulma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِحْتِنَاث", "iḥtināṯ", "kendisi için yemini bozma", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِحْتِنَاثَة", "iḥtināṯa", "bir kere kendisi için yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُحْتَنِث", "muḥtaniṯ", "kendisi için yemini bozan", "orta", ""],
-      [139, "مُحْتَنِثَة", "muḥtaniṯa", "kendisi için yemini bozan, müennes", "orta", ""],
-      [140, "مُحْتَنِثَان", "muḥtaniṯān", "kendisi için yemini bozan, iki", "orta", ""],
-      [141, "مُحْتَنِثَتَان", "muḥtaniṯatān", "kendisi için yemini bozan, iki, müennes", "orta", ""],
-      [142, "مُحْتَنِثُون", "muḥtaniṯūn", "kendisi için yemini bozanlar", "orta", ""],
-      [143, "مُحْتَنِثِين", "muḥtaniṯīn", "kendisi için yemini bozanlar", "orta", ""],
-      [144, "مُحْتَنِثَات", "muḥtaniṯāt", "kendisi için yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُحْتَنَث", "muḥtanaṯ", "kendisi için yemini bozulan", "orta", ""],
-      [146, "مُحْتَنَثَة", "muḥtanaṯa", "kendisi için yemini bozulan, müennes", "orta", ""],
-      [147, "مُحْتَنَثَان", "muḥtanaṯān", "kendisi için yemini bozulan, iki", "orta", ""],
-      [148, "مُحْتَنَثَتَان", "muḥtanaṯatān", "kendisi için yemini bozulan, iki, müennes", "orta", ""],
-      [149, "مُحْتَنَثُون", "muḥtanaṯūn", "kendisi için yemini bozulanlar", "orta", ""],
-      [150, "مُحْتَنَثِين", "muḥtanaṯīn", "kendisi için yemini bozulanlar", "orta", ""],
-      [151, "مُحْتَنَثَات", "muḥtanaṯāt", "kendisi için yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُحْتَنَث", "muḥtanaṯ", "kendisi için yemini bozma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX": [
-      [499, "اِحْنِثَاث", "iḥniṯāṯ", "iyiden iyiye yemini bozma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX": [
-      [500, "مُحْنَثّ", "muḥnaṯṯ", "iyiden iyiye yemini bozan", "kontrol", ""],
-      [501, "مُحْنَثَّة", "muḥnaṯṯa", "iyiden iyiye yemini bozan, müennes", "kontrol", ""],
-      [502, "مُحْنَثَّان", "muḥnaṯṯān", "iyiden iyiye yemini bozan, iki", "kontrol", ""],
-      [503, "مُحْنَثَّتَان", "muḥnaṯṯatān", "iyiden iyiye yemini bozan, iki, müennes", "kontrol", ""],
-      [504, "مُحْنَثُّون", "muḥnaṯṯūn", "iyiden iyiye yemini bozanlar", "kontrol", ""],
-      [505, "مُحْنَثِّين", "muḥnaṯṯīn", "iyiden iyiye yemini bozanlar", "kontrol", ""],
-      [506, "مُحْنَثَّات", "muḥnaṯṯāt", "iyiden iyiye yemini bozanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِحْنَاث", "istiḥnāṯ", "yemini bozmayı isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِحْنَاثَة", "istiḥnāṯa", "bir kere yemini bozmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَحْنِث", "mustaḥniṯ", "yemini bozmayı isteyen", "orta", ""],
-      [179, "مُسْتَحْنِثَة", "mustaḥniṯa", "yemini bozmayı isteyen, müennes", "orta", ""],
-      [180, "مُسْتَحْنِثَان", "mustaḥniṯān", "yemini bozmayı isteyen, iki", "orta", ""],
-      [181, "مُسْتَحْنِثَتَان", "mustaḥniṯatān", "yemini bozmayı isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَحْنِثُون", "mustaḥniṯūn", "yemini bozmayı isteyenler", "orta", ""],
-      [183, "مُسْتَحْنِثِين", "mustaḥniṯīn", "yemini bozmayı isteyenler", "orta", ""],
-      [184, "مُسْتَحْنِثَات", "mustaḥniṯāt", "yemini bozmayı isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَحْنَث", "mustaḥnaṯ", "yemini bozması istenen", "orta", ""],
-      [186, "مُسْتَحْنَثَة", "mustaḥnaṯa", "yemini bozması istenen, müennes", "orta", ""],
-      [187, "مُسْتَحْنَثَان", "mustaḥnaṯān", "yemini bozması istenen, iki", "orta", ""],
-      [188, "مُسْتَحْنَثَتَان", "mustaḥnaṯatān", "yemini bozması istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَحْنَثُون", "mustaḥnaṯūn", "yemini bozması istenenler", "orta", ""],
-      [190, "مُسْتَحْنَثِين", "mustaḥnaṯīn", "yemini bozması istenenler", "orta", ""],
-      [191, "مُسْتَحْنَثَات", "mustaḥnaṯāt", "yemini bozması istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَحْنَث", "mustaḥnaṯ", "yemini bozmayı isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI": [
-      [507, "اِحْنِيثَاث", "iḥnīṯāṯ", "büsbütün yemini bozma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI": [
-      [508, "مُحْنَاثّ", "muḥnāṯṯ", "büsbütün yemini bozan", "kontrol", ""],
-      [509, "مُحْنَاثَّة", "muḥnāṯṯa", "büsbütün yemini bozan, müennes", "kontrol", ""],
-      [510, "مُحْنَاثَّان", "muḥnāṯṯān", "büsbütün yemini bozan, iki", "kontrol", ""],
-      [511, "مُحْنَاثَّتَان", "muḥnāṯṯatān", "büsbütün yemini bozan, iki, müennes", "kontrol", ""],
-      [512, "مُحْنَاثُّون", "muḥnāṯṯūn", "büsbütün yemini bozanlar", "kontrol", ""],
-      [513, "مُحْنَاثِّين", "muḥnāṯṯīn", "büsbütün yemini bozanlar", "kontrol", ""],
-      [514, "مُحْنَاثَّات", "muḥnāṯṯāt", "büsbütün yemini bozanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII": [
-      [515, "اِحْنِوْنَاث", "iḥniwnāṯ", "aşırı yemini bozma", "orta", ""]
-    ],
-    "masdar · bâb XIII": [
-      [516, "اِحْنِوَّاث", "iḥniwwāṯ", "aşırı yemini bozma", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "حَانِث", "ḥāniṯ", "yemini bozan", "orta", ""],
-      [214, "حَانِثَة", "ḥāniṯa", "yemini bozan, müennes", "orta", ""],
-      [215, "حَانِثَان", "ḥāniṯān", "yemini bozan, iki", "orta", ""],
-      [216, "حَانِثَتَان", "ḥāniṯatān", "yemini bozan, iki, müennes", "orta", ""],
-      [217, "حَانِثُون", "ḥāniṯūn", "yemini bozanlar", "orta", ""],
-      [218, "حَانِثِين", "ḥāniṯīn", "yemini bozanlar", "orta", ""],
-      [219, "حَانِثَات", "ḥāniṯāt", "yemini bozanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَحْنُوث", "maḥnūṯ", "yemini bozulan", "orta", ""],
-      [221, "مَحْنُوثَة", "maḥnūṯa", "yemini bozulan, müennes", "orta", ""],
-      [222, "مَحْنُوثَان", "maḥnūṯān", "yemini bozulan, iki", "orta", ""],
-      [223, "مَحْنُوثَتَان", "maḥnūṯatān", "yemini bozulan, iki, müennes", "orta", ""],
-      [224, "مَحْنُوثُون", "maḥnūṯūn", "yemini bozulanlar", "orta", ""],
-      [225, "مَحْنُوثِين", "maḥnūṯīn", "yemini bozulanlar", "orta", ""],
-      [226, "مَحْنُوثَات", "maḥnūṯāt", "yemini bozulanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَحْنَث", "maḥnaṯ", "yemini bozma yeri, vakti", "orta", ""],
-      [228, "مَحْنَثَان", "maḥnaṯān", "yemini bozma yeri, vakti, iki", "orta", ""],
-      [229, "مَحْنِث", "maḥniṯ", "yemini bozma yeri, vakti", "orta", ""],
-      [230, "مَحْنِثَان", "maḥniṯān", "yemini bozma yeri, vakti, iki", "orta", ""],
-      [231, "مَحْنَثَة", "maḥnaṯa", "yemini bozmanın bol olduğu yer", "orta", ""],
-      [232, "مَحْنَثَتَان", "maḥnaṯatān", "yemini bozmanın bol olduğu yer, iki", "orta", ""],
-      [233, "مَحْنِثَة", "maḥniṯa", "yemini bozmanın bol olduğu yer", "orta", ""],
-      [234, "مَحْنِثَتَان", "maḥniṯatān", "yemini bozmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَحْنُثَة", "maḥnuṯa", "yemini bozma yeri, vakti", "orta", ""],
-      [248, "مَحْنُثَتَان", "maḥnuṯatān", "yemini bozma yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِحْنَث", "miḥnaṯ", "yemini bozma âleti", "orta", ""],
-      [236, "مِحْنَثَان", "miḥnaṯān", "yemini bozma âleti, iki", "orta", ""],
-      [237, "مِحْنَاث", "miḥnāṯ", "yemini bozma âleti", "orta", ""],
-      [238, "مِحْنَاثَان", "miḥnāṯān", "yemini bozma âleti, iki", "orta", ""],
-      [239, "مِحْنَثَة", "miḥnaṯa", "yemini bozma âleti", "orta", ""],
-      [240, "مِحْنَثَتَان", "miḥnaṯatān", "yemini bozma âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَحْنَث", "ʾaḥnaṯ", "daha çok yemini bozan", "orta", ""],
-      [242, "أَحْنَثَان", "ʾaḥnaṯān", "daha çok yemini bozan, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "حُنْثَى", "ḥunṯā", "daha çok yemini bozan", "orta", ""],
-      [244, "حُنْثَيَان", "ḥunṯayān", "daha çok yemini bozan, iki", "orta", ""],
-      [245, "حَنْثَاء", "ḥanṯāʾ", "daha çok yemini bozan", "orta", ""],
-      [246, "حَنْثَاآن", "ḥanṯāʾān", "daha çok yemini bozan, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "حُنَيْث", "ḥunayṯ", "azıcık yemini bozma", "orta", ""],
-      [250, "حُنَيْثَان", "ḥunayṯān", "azıcık yemini bozma, iki", "orta", ""],
-      [251, "حُنَيْثَة", "ḥunayṯa", "azıcık yemini bozma", "orta", ""],
-      [252, "حُنَيْثَتَان", "ḥunayṯatān", "azıcık yemini bozma, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَحْنَث", "maḥnaṯ", "yemini bozma", "orta", ""],
-      [254, "مَحْنَثَان", "maḥnaṯān", "yemini bozma, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "حَنْثَة", "ḥanṯa", "bir kere yemini bozma", "orta", ""],
-      [256, "حَنْثَتَان", "ḥanṯatān", "bir kere yemini bozma, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "حِنْثَة", "ḥinṯa", "yemini bozma tarzı", "orta", ""],
-      [258, "حِنْثَتَان", "ḥinṯatān", "yemini bozma tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "حَنِيث", "ḥanīṯ", "her daim yemini bozan", "orta", ""],
-      [260, "حَنِيثَة", "ḥanīṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [261, "حَنِيثَان", "ḥanīṯān", "her daim yemini bozan, iki", "orta", ""],
-      [262, "حَنِيثَتَان", "ḥanīṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [263, "حَنِيثُون", "ḥanīṯūn", "her daim yemini bozanlar", "orta", ""],
-      [264, "حَنِيثِين", "ḥanīṯīn", "her daim yemini bozanlar", "orta", ""],
-      [265, "حَنِيثَات", "ḥanīṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [266, "حَنُوث", "ḥanūṯ", "her daim yemini bozan", "orta", ""],
-      [267, "حَنُوثَة", "ḥanūṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [268, "حَنُوثَان", "ḥanūṯān", "her daim yemini bozan, iki", "orta", ""],
-      [269, "حَنُوثَتَان", "ḥanūṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [270, "حَنُوثُون", "ḥanūṯūn", "her daim yemini bozanlar", "orta", ""],
-      [271, "حَنُوثِين", "ḥanūṯīn", "her daim yemini bozanlar", "orta", ""],
-      [272, "حَنُوثَات", "ḥanūṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [273, "حَنِث", "ḥaniṯ", "her daim yemini bozan", "orta", ""],
-      [274, "حَنِثَة", "ḥaniṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [275, "حَنِثَان", "ḥaniṯān", "her daim yemini bozan, iki", "orta", ""],
-      [276, "حَنِثَتَان", "ḥaniṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [277, "حَنِثُون", "ḥaniṯūn", "her daim yemini bozanlar", "orta", ""],
-      [278, "حَنِثِين", "ḥaniṯīn", "her daim yemini bozanlar", "orta", ""],
-      [279, "حَنِثَات", "ḥaniṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [280, "حَنُث", "ḥanuṯ", "her daim yemini bozan", "orta", ""],
-      [281, "حَنُثَة", "ḥanuṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [282, "حَنُثَان", "ḥanuṯān", "her daim yemini bozan, iki", "orta", ""],
-      [283, "حَنُثَتَان", "ḥanuṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [284, "حَنُثُون", "ḥanuṯūn", "her daim yemini bozanlar", "orta", ""],
-      [285, "حَنُثِين", "ḥanuṯīn", "her daim yemini bozanlar", "orta", ""],
-      [286, "حَنُثَات", "ḥanuṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [287, "حَنَث", "ḥanaṯ", "her daim yemini bozan", "orta", ""],
-      [288, "حَنَثَة", "ḥanaṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [289, "حَنَثَان", "ḥanaṯān", "her daim yemini bozan, iki", "orta", ""],
-      [290, "حَنَثَتَان", "ḥanaṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [291, "حَنَثُون", "ḥanaṯūn", "her daim yemini bozanlar", "orta", ""],
-      [292, "حَنَثِين", "ḥanaṯīn", "her daim yemini bozanlar", "orta", ""],
-      [293, "حَنَثَات", "ḥanaṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [294, "حَنْث", "ḥanṯ", "her daim yemini bozan", "orta", ""],
-      [295, "حَنْثَة", "ḥanṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [296, "حَنْثَان", "ḥanṯān", "her daim yemini bozan, iki", "orta", ""],
-      [297, "حَنْثَتَان", "ḥanṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [298, "حَنْثُون", "ḥanṯūn", "her daim yemini bozanlar", "orta", ""],
-      [299, "حَنْثِين", "ḥanṯīn", "her daim yemini bozanlar", "orta", ""],
-      [300, "حَنْثَات", "ḥanṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [301, "حُنُث", "ḥunuṯ", "her daim yemini bozan", "orta", ""],
-      [302, "حُنُثَة", "ḥunuṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [303, "حُنُثَان", "ḥunuṯān", "her daim yemini bozan, iki", "orta", ""],
-      [304, "حُنُثَتَان", "ḥunuṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [305, "حُنُثُون", "ḥunuṯūn", "her daim yemini bozanlar", "orta", ""],
-      [306, "حُنُثِين", "ḥunuṯīn", "her daim yemini bozanlar", "orta", ""],
-      [307, "حُنُثَات", "ḥunuṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [308, "حَنْثَان", "ḥanṯān", "her daim yemini bozan", "orta", ""],
-      [309, "حَنْثَانَة", "ḥanṯāna", "her daim yemini bozan, müennes", "orta", ""],
-      [310, "حَنْثَانَان", "ḥanṯānān", "her daim yemini bozan, iki", "orta", ""],
-      [311, "حَنْثَانَتَان", "ḥanṯānatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [312, "حَنْثَانُون", "ḥanṯānūn", "her daim yemini bozanlar", "orta", ""],
-      [313, "حَنْثَانِين", "ḥanṯānīn", "her daim yemini bozanlar", "orta", ""],
-      [314, "حَنْثَانَات", "ḥanṯānāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [315, "حُنَاث", "ḥunāṯ", "her daim yemini bozan", "orta", ""],
-      [316, "حُنَاثَة", "ḥunāṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [317, "حُنَاثَان", "ḥunāṯān", "her daim yemini bozan, iki", "orta", ""],
-      [318, "حُنَاثَتَان", "ḥunāṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [319, "حُنَاثُون", "ḥunāṯūn", "her daim yemini bozanlar", "orta", ""],
-      [320, "حُنَاثِين", "ḥunāṯīn", "her daim yemini bozanlar", "orta", ""],
-      [321, "حُنَاثَات", "ḥunāṯāt", "her daim yemini bozanlar, müennes", "orta", ""],
-      [322, "حَنَاث", "ḥanāṯ", "her daim yemini bozan", "orta", ""],
-      [323, "حَنَاثَة", "ḥanāṯa", "her daim yemini bozan, müennes", "orta", ""],
-      [324, "حَنَاثَان", "ḥanāṯān", "her daim yemini bozan, iki", "orta", ""],
-      [325, "حَنَاثَتَان", "ḥanāṯatān", "her daim yemini bozan, iki, müennes", "orta", ""],
-      [326, "حَنَاثُون", "ḥanāṯūn", "her daim yemini bozanlar", "orta", ""],
-      [327, "حَنَاثِين", "ḥanāṯīn", "her daim yemini bozanlar", "orta", ""],
-      [328, "حَنَاثَات", "ḥanāṯāt", "her daim yemini bozanlar, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "حَنَّاث", "ḥannāṯ", "işi yemini bozma olan", "orta", ""],
-      [330, "حَنَّاثَة", "ḥannāṯa", "işi yemini bozma olan, müennes", "orta", ""],
-      [331, "حَنَّاثَان", "ḥannāṯān", "işi yemini bozma olan, iki", "orta", ""],
-      [332, "حَنَّاثَتَان", "ḥannāṯatān", "işi yemini bozma olan, iki, müennes", "orta", ""],
-      [333, "حَنَّاثُون", "ḥannāṯūn", "işi yemini bozma olanlar", "orta", ""],
-      [334, "حَنَّاثِين", "ḥannāṯīn", "işi yemini bozma olanlar", "orta", ""],
-      [335, "حَنَّاثَات", "ḥannāṯāt", "işi yemini bozma olanlar, müennes", "orta", ""],
-      [336, "حَنَّاثَة", "ḥannāṯa", "pek çok yemini bozan", "orta", ""],
-      [337, "حَنَّاثَتَان", "ḥannāṯatān", "pek çok yemini bozan, iki", "orta", ""],
-      [338, "حَنَّاثَات", "ḥannāṯāt", "pek çok yemini bozanlar, müennes", "orta", ""],
-      [339, "حَنُوث", "ḥanūṯ", "çok yemini bozan", "orta", ""],
-      [340, "حَنُوثَة", "ḥanūṯa", "çok yemini bozan, müennes", "orta", ""],
-      [341, "حَنُوثَان", "ḥanūṯān", "çok yemini bozan, iki", "orta", ""],
-      [342, "حَنُوثَتَان", "ḥanūṯatān", "çok yemini bozan, iki, müennes", "orta", ""],
-      [343, "حَنُوثُون", "ḥanūṯūn", "çok yemini bozanlar", "orta", ""],
-      [344, "حَنُوثِين", "ḥanūṯīn", "çok yemini bozanlar", "orta", ""],
-      [345, "حَنُوثَات", "ḥanūṯāt", "çok yemini bozanlar, müennes", "orta", ""],
-      [346, "حَنُّوث", "ḥannūṯ", "pek çok yemini bozan", "orta", ""],
-      [347, "حَنُّوثَة", "ḥannūṯa", "pek çok yemini bozan, müennes", "orta", ""],
-      [348, "حَنُّوثَان", "ḥannūṯān", "pek çok yemini bozan, iki", "orta", ""],
-      [349, "حَنُّوثَتَان", "ḥannūṯatān", "pek çok yemini bozan, iki, müennes", "orta", ""],
-      [350, "حَنُّوثُون", "ḥannūṯūn", "pek çok yemini bozanlar", "orta", ""],
-      [351, "حَنُّوثِين", "ḥannūṯīn", "pek çok yemini bozanlar", "orta", ""],
-      [352, "حَنُّوثَات", "ḥannūṯāt", "pek çok yemini bozanlar, müennes", "orta", ""],
-      [353, "حِنِّيث", "ḥinnīṯ", "yemini bozmada aşırı giden", "orta", ""],
-      [354, "حِنِّيثَة", "ḥinnīṯa", "yemini bozmada aşırı giden, müennes", "orta", ""],
-      [355, "حِنِّيثَان", "ḥinnīṯān", "yemini bozmada aşırı giden, iki", "orta", ""],
-      [356, "حِنِّيثَتَان", "ḥinnīṯatān", "yemini bozmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "حِنِّيثُون", "ḥinnīṯūn", "yemini bozmada aşırı gidenler", "orta", ""],
-      [358, "حِنِّيثِين", "ḥinnīṯīn", "yemini bozmada aşırı gidenler", "orta", ""],
-      [359, "حِنِّيثَات", "ḥinnīṯāt", "yemini bozmada aşırı gidenler, müennes", "orta", ""],
-      [360, "حُنَّاث", "ḥunnāṯ", "son derece yemini bozan", "orta", ""],
-      [361, "حُنَّاثَة", "ḥunnāṯa", "son derece yemini bozan, müennes", "orta", ""],
-      [362, "حُنَّاثَان", "ḥunnāṯān", "son derece yemini bozan, iki", "orta", ""],
-      [363, "حُنَّاثَتَان", "ḥunnāṯatān", "son derece yemini bozan, iki, müennes", "orta", ""],
-      [364, "حُنَّاثُون", "ḥunnāṯūn", "son derece yemini bozanlar", "orta", ""],
-      [365, "حُنَّاثِين", "ḥunnāṯīn", "son derece yemini bozanlar", "orta", ""],
-      [366, "حُنَّاثَات", "ḥunnāṯāt", "son derece yemini bozanlar, müennes", "orta", ""],
-      [367, "مِحْنَاث", "miḥnāṯ", "yemini bozmayı âdet edinmiş", "orta", ""],
-      [368, "مِحْنَاثَة", "miḥnāṯa", "yemini bozmayı âdet edinmiş, müennes", "orta", ""],
-      [369, "مِحْنَاثَان", "miḥnāṯān", "yemini bozmayı âdet edinmiş, iki", "orta", ""],
-      [370, "مِحْنَاثَتَان", "miḥnāṯatān", "yemini bozmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِحْنَاثُون", "miḥnāṯūn", "yemini bozmayı âdet edinmişler", "orta", ""],
-      [372, "مِحْنَاثِين", "miḥnāṯīn", "yemini bozmayı âdet edinmişler", "orta", ""],
-      [373, "مِحْنَاثَات", "miḥnāṯāt", "yemini bozmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِحْنِيث", "miḥnīṯ", "yemini bozmaya düşkün", "orta", ""],
-      [375, "مِحْنِيثَة", "miḥnīṯa", "yemini bozmaya düşkün, müennes", "orta", ""],
-      [376, "مِحْنِيثَان", "miḥnīṯān", "yemini bozmaya düşkün, iki", "orta", ""],
-      [377, "مِحْنِيثَتَان", "miḥnīṯatān", "yemini bozmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِحْنِيثُون", "miḥnīṯūn", "yemini bozmaya düşkünler", "orta", ""],
-      [379, "مِحْنِيثِين", "miḥnīṯīn", "yemini bozmaya düşkünler", "orta", ""],
-      [380, "مِحْنِيثَات", "miḥnīṯāt", "yemini bozmaya düşkünler, müennes", "orta", ""],
-      [381, "حَنِيث", "ḥanīṯ", "çok yemini bozan", "orta", ""],
-      [382, "حَنِيثَة", "ḥanīṯa", "çok yemini bozan, müennes", "orta", ""],
-      [383, "حَنِيثَان", "ḥanīṯān", "çok yemini bozan, iki", "orta", ""],
-      [384, "حَنِيثَتَان", "ḥanīṯatān", "çok yemini bozan, iki, müennes", "orta", ""],
-      [385, "حَنِيثُون", "ḥanīṯūn", "çok yemini bozanlar", "orta", ""],
-      [386, "حَنِيثِين", "ḥanīṯīn", "çok yemini bozanlar", "orta", ""],
-      [387, "حَنِيثَات", "ḥanīṯāt", "çok yemini bozanlar, müennes", "orta", ""],
-      [388, "حَنَّث", "ḥannaṯ", "çok yemini bozan", "orta", ""],
-      [389, "حَنَّثَة", "ḥannaṯa", "çok yemini bozan, müennes", "orta", ""],
-      [390, "حَنَّثَان", "ḥannaṯān", "çok yemini bozan, iki", "orta", ""],
-      [391, "حَنَّثَتَان", "ḥannaṯatān", "çok yemini bozan, iki, müennes", "orta", ""],
-      [392, "حَنَّثُون", "ḥannaṯūn", "çok yemini bozanlar", "orta", ""],
-      [393, "حَنَّثِين", "ḥannaṯīn", "çok yemini bozanlar", "orta", ""],
-      [394, "حَنَّثَات", "ḥannaṯāt", "çok yemini bozanlar, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "حَنْثِيّ", "ḥanṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [397, "حَنَثِيّ", "ḥanaṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [399, "حِنْثِيّ", "ḥinṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [401, "حُنْثِيّ", "ḥunṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [403, "حِنَاثِيّ", "ḥināṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [405, "حَانِثِيّ", "ḥāniṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [407, "مَحْنُوثِيّ", "maḥnūṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [409, "حَنِيثِيّ", "ḥanīṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [411, "مَحْنَثِيّ", "maḥnaṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [413, "تَحْنِيثِيّ", "taḥnīṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [415, "تَحَانُثِيّ", "taḥānuṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [417, "إِحْنَاثِيّ", "ʾiḥnāṯiyy", "yemini bozma ile ilgili", "orta", ""],
-      [419, "اِحْتِنَاثِيّ", "iḥtināṯiyy", "yemini bozma ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "حَنْثِيَّة", "ḥanṯiyya", "yemini bozanlık", "orta", ""],
-      [398, "حَنَثِيَّة", "ḥanaṯiyya", "yemini bozanlık", "orta", ""],
-      [400, "حِنْثِيَّة", "ḥinṯiyya", "yemini bozanlık", "orta", ""],
-      [402, "حُنْثِيَّة", "ḥunṯiyya", "yemini bozanlık", "orta", ""],
-      [404, "حِنَاثِيَّة", "ḥināṯiyya", "yemini bozanlık", "orta", ""],
-      [406, "حَانِثِيَّة", "ḥāniṯiyya", "yemini bozanlık", "orta", ""],
-      [408, "مَحْنُوثِيَّة", "maḥnūṯiyya", "yemini bozanlık", "orta", ""],
-      [410, "حَنِيثِيَّة", "ḥanīṯiyya", "yemini bozanlık", "orta", ""],
-      [412, "مَحْنَثِيَّة", "maḥnaṯiyya", "yemini bozanlık", "orta", ""],
-      [414, "تَحْنِيثِيَّة", "taḥnīṯiyya", "yemini bozanlık", "orta", ""],
-      [416, "تَحَانُثِيَّة", "taḥānuṯiyya", "yemini bozanlık", "orta", ""],
-      [418, "إِحْنَاثِيَّة", "ʾiḥnāṯiyya", "yemini bozanlık", "orta", ""],
-      [420, "اِحْتِنَاثِيَّة", "iḥtināṯiyya", "yemini bozanlık", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "حَنَاث", "ḥanāṯ", "yemini bozma", "orta", ""],
-      [422, "حُنُوث", "ḥunūṯ", "yemini bozma", "orta", ""],
-      [423, "حِنَاث", "ḥināṯ", "yemini bozma", "orta", ""],
-      [424, "حُنْث", "ḥunṯ", "yemini bozma", "orta", ""],
-      [425, "حَنَاثَة", "ḥanāṯa", "yemini bozma", "orta", ""],
-      [426, "حِنَاثَة", "ḥināṯa", "yemini bozma", "orta", ""],
-      [427, "حُنُوثَة", "ḥunūṯa", "yemini bozma", "orta", ""],
-      [428, "حَنْث", "ḥanṯ", "yemini bozma", "orta", ""],
-      [429, "حِنْث", "ḥinṯ", "yemini bozma", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "حَانُوث", "ḥānūṯ", "yemini bozma türünden şey", "orta", ""],
-      [432, "حَنَثَة", "ḥanaṯa", "yemini bozma türünden şey", "orta", ""],
-      [433, "حُنَثَة", "ḥunaṯa", "yemini bozma türünden şey", "orta", ""],
-      [434, "أُحْنُوثَة", "ʾuḥnūṯa", "yemini bozma türünden şey", "orta", ""],
-      [435, "حَوْنَث", "ḥawnaṯ", "yemini bozma türünden şey", "orta", ""],
-      [437, "حَيْنَث", "ḥaynaṯ", "yemini bozma türünden şey", "orta", ""],
-      [439, "حَنْث", "ḥanṯ", "yemini bozma türünden şey", "orta", ""],
-      [441, "حَنَث", "ḥanaṯ", "yemini bozma türünden şey", "orta", ""],
-      [443, "حِنْث", "ḥinṯ", "yemini bozma türünden şey", "orta", ""],
-      [445, "حُنْث", "ḥunṯ", "yemini bozma türünden şey", "orta", ""],
-      [447, "حَنِيث", "ḥanīṯ", "yemini bozma türünden şey", "orta", ""],
-      [449, "حِنَث", "ḥinaṯ", "yemini bozma türünden şey", "orta", ""],
-      [451, "حُنُث", "ḥunuṯ", "yemini bozma türünden şey", "orta", ""],
-      [453, "حَنَاث", "ḥanāṯ", "yemini bozma türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "حَانُوثَة", "ḥānūṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [436, "حَوْنَثَة", "ḥawnaṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [438, "حَيْنَثَة", "ḥaynaṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [440, "حَنْثَة", "ḥanṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [442, "حَنَثَة", "ḥanaṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [444, "حِنْثَة", "ḥinṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [446, "حُنْثَة", "ḥunṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [448, "حَنِيثَة", "ḥanīṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [450, "حِنَثَة", "ḥinaṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [452, "حُنُثَة", "ḥunuṯa", "yemini bozma türünden bir tane", "orta", ""],
-      [454, "حَنَاثَة", "ḥanāṯa", "yemini bozma türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَحْنَاث", "ʾaḥnāṯ", "yemini bozmalar", "orta", ""],
-      [456, "أَحْنِثَة", "ʾaḥniṯa", "yemini bozmalar", "orta", ""],
-      [457, "أَحَانِث", "ʾaḥāniṯ", "yemini bozmalar", "orta", ""],
-      [458, "أَحَانِيث", "ʾaḥānīṯ", "yemini bozmalar", "orta", ""],
-      [459, "حُنُوث", "ḥunūṯ", "yemini bozmalar", "orta", ""],
-      [460, "حُنُث", "ḥunuṯ", "yemini bozmalar", "orta", ""],
-      [461, "حِنَاث", "ḥināṯ", "yemini bozmalar", "orta", ""],
-      [462, "حِنَث", "ḥinaṯ", "yemini bozmalar", "orta", ""],
-      [463, "حِنَثَة", "ḥinaṯa", "yemini bozmalar", "orta", ""],
-      [464, "حُنَث", "ḥunaṯ", "yemini bozmalar", "orta", ""],
-      [465, "حُنَثاء", "ḥunaṯāʾ", "yemini bozmalar", "orta", ""],
-      [466, "حَنَثَة", "ḥanaṯa", "yemini bozmalar", "orta", ""],
-      [467, "حُنَّاث", "ḥunnāṯ", "yemini bozmalar", "orta", ""],
-      [468, "حَنَاث", "ḥanāṯ", "yemini bozmalar", "orta", ""],
-      [469, "حَنَث", "ḥanaṯ", "yemini bozmalar", "orta", ""],
-      [470, "مَحَانِث", "maḥāniṯ", "yemini bozmalar", "orta", ""],
-      [471, "مَحَانِيث", "maḥānīṯ", "yemini bozmalar", "orta", ""],
-      [472, "حَوَانِث", "ḥawāniṯ", "yemini bozmalar", "orta", ""],
-      [473, "أَحْنُث", "ʾaḥnuṯ", "yemini bozmalar", "orta", ""],
-      [474, "حُنَّث", "ḥunnaṯ", "yemini bozmalar", "orta", ""],
-      [475, "حَنَائِث", "ḥanāʾiṯ", "yemini bozmalar", "orta", ""],
-      [476, "حُنَيْث", "ḥunayṯ", "yemini bozmalar", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَحْنَاثَات", "ʾaḥnāṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [478, "أَحْنِثَات", "ʾaḥniṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [479, "أَحَانِثَات", "ʾaḥāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [480, "أَحَانِيثَات", "ʾaḥānīṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [481, "حُنُوثَات", "ḥunūṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [482, "حُنُثَات", "ḥunuṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [483, "حِنَاثَات", "ḥināṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [484, "حِنَثَات", "ḥinaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [485, "حِنَثَات", "ḥinaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [486, "حُنَثَات", "ḥunaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [487, "حُنَثاآت", "ḥunaṯāʾāt", "yemini bozmalar topluluğu", "orta", ""],
-      [488, "حَنَثَات", "ḥanaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [489, "حُنَّاثَات", "ḥunnāṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [490, "حَنَاثَات", "ḥanāṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [491, "حَنَثَات", "ḥanaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [492, "مَحَانِثَات", "maḥāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [493, "مَحَانِيثَات", "maḥānīṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [494, "حَوَانِثَات", "ḥawāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [495, "أَحْنُثَات", "ʾaḥnuṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [496, "حُنَّثَات", "ḥunnaṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [497, "حَنَائِثَات", "ḥanāʾiṯāt", "yemini bozmalar topluluğu", "orta", ""],
-      [498, "حُنَيْثَات", "ḥunayṯāt", "yemini bozmalar topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "حنث",
-      "turkce": "Hinş: yemini bozmak, söz bozmak"
-    },
-    "osmanlica_lugatler": {
-      "تَحْنَثْ": {
-        "sorgular": ["tahnas"],
-        "maddeler": []
-      },
-      "حِنث": {
-        "sorgular": ["hins"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "hins",
-            "arapca": [],
-            "mana": "اَلْخِنْثُ [el-hinsamp;] (hânın kesriyle) Cemâat-i müteferrikaya denir; tekûlu: رَأَيْتُ خِنْثًا مِنَ النَّاسِ أَيْ جَمَاعَةً مُتَفَرِّقِينَ Ve azı dişlerine mücâvir olan avurdun yukarılı aşağılı iç yüzüne denir ki büklüm yeridir.",
-            "id": 681157,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kamus",
-            "madde": "hins",
-            "arapca": [],
-            "mana": "اَلْحِنْثُ [el-hinsamp;] (hânın kesriyle) Günâha denir, إِثْمٌ [isamp;m] manâsına; manâ-yı mevzûu budur; yukâlu: وَقَعَ فِي الْحِنْثِ أَيِ اْلإِثْمِ Ve hulf-i yemîn manâsınadır ki bir kimse eylediği yemînin uhdesinden hurûc eylemeyip onda giriftâr kalmaktan ibârettir; yukâlu: حَنِثَ فِي يَمِينِهِ حِنْثًا مِنَ الْبَابِ الرَّابِعِ إِذَا لَمْ يَفِ بِمُوجَبِهَا Bunun hilâfına بِرٌّ [birr] ıtlâk olunur ve o kimselere حَانِثٌ [hânisamp;] ve بَارٌّ [bârr] denir. Ve bâtıldan hakka kezâlik haktan bâtıla meyl eylemek manâsınadır; yukâlu: حَنِثَ الرَّجُلُ إِذَا مَالَ مِنْ بَاطِلٍ إِلَى حَقٍّ وَعَكْسُهُ",
-            "id": 681159,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Vankulu",
-            "madde": "hins",
-            "arapca": [],
-            "mana": "اَلْحِنْثُ [el-hinsamp;] (hânın kesriyle ve nûnun sükûnuyla) Günâh, إِثْمٌ [isamp;m] manâsına. Ve oğlan musîbet ve tâat kesb edecek vakte ermek; yukâlu: بَلَغَ الْغُلَامُ الْحِنْثَ أَيِ الْمَعْصِيَةَ وَالطَّاعَةَ Ve حِنْثٌ [hinsamp;] Yemînde hilf etmeğe dahi derler.",
-            "id": 681160,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Lugat-ı Remzi",
-            "madde": "Hins",
-            "arapca": [],
-            "mana": "حنث Lugat-i Remzi حنث maddesi. Sayfa:466",
-            "id": 134377,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          }
-        ]
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "حَنِثَ",
-        "metin": "(حَنِثَ) الْحَاءُ وَالنُّونُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ الْإِثْمُ وَالْحَرَجُ. يُقَالُ حَنِثَ فُلَانٌ فِي كَذَا، أَيْ أَثِمَ. وَمِنْ ذَلِكَ قَوْلُهُمْ: بَلَغَ الْغُلَامُ الْحِنْثَ، أَيْ بَلَغَ مَبْلَغًا جَرَى عَلَيْهِ الْقَلَمُ بِالطَّاعَةِ وَالْمَعْصِيَةِ، وَأُثْبِتَتْ عَلَيْهِ ذُنُوبُهُ. وَمِنْ ذَلِكَ الْحِنْثُ\nفِي الْيَمِينِ، وَهُوَ الْخُلْفُ فِيهِ. فَهَذَا وَجْهُ الْإِثْمِ. وَأَمَّا قَوْلُهُمْ فُلَانٌ يَتَحَنَّثُ مِنْ كَذَا، فَمَعْنَاهُ يَتَأَثَّمُ. وَالْفَرْقُ بَيْنَ أَثِمَ وَتَأَثَّمَ، أَنَّ التَّأَثُّمَ التَّنَحِّي عَنِ الْإِثْمِ، كَمَا يُقَالُ حَرِجَ وَتَحَرَّجَ ; فَحَرِجَ وَقَعَ فِي الْحَرَجِ، وَتَحَرَّجَ تَنَحَّى عَنِ الْحَرَجِ. وَهَذَا فِي كَلِمَاتٍ مَعْلُومَةٍ قِيَاسُهَا وَاحِدٌ.\nوَمِنْ ذَلِكَ التَّحَنُّثُ وَهُوَ التَّعَبُّدُ. وَمِنْهُ الْحَدِيثُ: &quot; «أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ كَانَ يَأْتِي غَارَ حِرَاءٍ فَيَتَحَنَّثُ فِيهِ اللَّيَالِي ذَوَاتِ الْعَدَدِ &quot;.»"
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الحاء والنون",
-      "baslik": "حنث",
-      "mihveri": "ثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه). ومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث. ومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}. (1/509) وفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال: وقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها مع",
-      "sesler": "",
-      "tam_metin": "{وَخُذْ بِيَدِكَ ضِغْثًا فَاضْرِبْ بِهِ وَلَا تَحْنَثْ} [ص: 44]\nسئل أعرابي فصيح عن الحِنْث فقال \"هو العِدْل الثقيل. قال والأحناث عندنا: الأعدال الثقال \" [غريب الحديث للخطابي 1/ 539] العِدْل هو الحِمْل الذي يكون في أحد جانبي البعير ونحوه معادِلًا ومثاقِلًا لحِمل في الجانب الآخر).\n° المعنى المحوري\nثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه).\nومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث.\nومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}.\n(1/509)\nوفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال:\nوقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها معنى الاجتهاد، وصورته هنا مقاومة الِحنْث أي مقاومة الوقوع فيه بالتعبد ونحوه. وذلك كما قالوا مَرّضه. فالتمريض ليس سلب المرض وإنما مقاومته والتعامل معه.\nهذا وقد فسر بعض اللغويين الخث بأنه الميل من باطل إلى حق وعكسه أي الميل من حق إلى باطل، وأنه يقال حنثتَ مع هواك على الحق أو مع الحق على هواك \"وأقول إن تفسر الحنث بالميل متأت لأن الميل يكون من الثقل كالهُوِىّ، كذلك تفسيره بالميل مع الهَوَى ضد الحق متأت بل هو من جنس المعنى المحوري. أما كون الحنث ميلًا مع الحق فلا يتأتى إلا بشاهد صريح أصيل. فإذا ثبت كان من تعميم الميل.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (حن): تتعلق معاني التركيب بجوف الشيء القوي أو أثنائه -كما يتمثل في امتداد الصوت اللطيف من الناقة والقوس -في (حنن)، وفي جفاف ندى الحب الذي في الأثناء -في (حين)، وفي الثقل المترتب على اكتناز الأثناء بثقيل -في (حنث)، وفي التفاف الحبل والتواء الشيء فيكون له تجوف في موضع الانثناء -في (حنج)، وبزداد ذلك التجوف حتى يصير كالقناة الواسعة -في (حنجر)، ويتمثل كذلك في إخراج الغضوضة والطراءة التي في أثناء المحنوذ -في (حنذ)، وفي انصباب الانحراف عن الاتجاه على الخارج من الأثناء -في (حنف)، وفي كون الصلابة منصبة على التجوف الذي في باطن الحنك -في (حنك)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 2,
-      "ilk_yer": "38:44:7:1",
-      "tur": {
-        "V": 1,
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {
-        "IMPF": 1
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "تَحْنَثْ": 1,
-        "حِنث": 1
-      },
-      "bicimler": {
-        "تَحْنَثْ": 1,
-        "حِنثِ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ḤNṮ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ḤNṮ حنث BP – • HDAL • © SG | 5Sep2022 √ḤNṮ “root” ▪ ḤNṮ_1 ‘to break one’s oath; perjury, sin’ ↗ ḥaniṯa ▪ ḤNṮ_2 (EgAr) ‘opportunist, sharp operator’: ĭbn ḥint ↗ ḥaniṯa ▪ ḤNṮ_ ‘…’ ↗ ḥnṯ ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘manhood, maturity; sin, blasphemy, denial of God, wickedness; breaking an oath, perjury; to purify oneself, to worship, responsibility’ ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "renk_sozluk": {
-      "تحنث": "yemin bozma",
-      "الحنث": "günah"
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "حَنِثَ",
-          "metin": "(حَنِثَ) Ha, nun ve se harfleri tek bir asıldır; o da günah (ism) ve darlık/vebaldir (harec). \"Hanise fulânün fî kezâ\" yani şu hususta günaha girdi denir. \"Beleğa'l-ğulâmü'l-hinse\" sözleri de bundandır; yani çocuk, itaat ve masiyetle üzerine kalemin cereyan ettiği ve günahlarının yazıldığı çağa ulaştı demektir. Yeminde \"el-hins\" de bundandır ki yeminde muhalefet etmek (yemini bozmak)tir. İşte günah vechesi budur. \"Fulânün yetehannesü min kezâ\" sözlerine gelince; bunun mânâsı \"yeteessemü\"dür (günahtan sakınır). \"Esime\" ile \"teeseme\" arasındaki fark şudur ki, \"teesüm\" günahtan uzaklaşıp çekilmektir; tıpkı \"harice\" ve \"teharrace\" dendiği gibi: \"harice\" günah ve darlığa düştü, \"teharrace\" ise darlıktan uzaklaştı demektir. Bu, kıyası bir olan mâlum kelimelerde böyledir.\nİbadet etmek demek olan \"et-tehannüs\" de bundandır. Hadîs-i şerifteki: \"Resûlullah sallallahu aleyhi ve âlihî ve sellem Hırâ mağarasına gelir ve orada sayılı geceler boyunca tehannüs (ibadet) ederdi\" sözü de bundandır."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Şeyin pek ağır olmasıdır (bu ise ancak kalın, iri, kuru ve ağır bir şey ihtiva etmesi sebebiyle olur). Tıpkı ağır diye vasıflandırılan denk (ıdl) gibi (her ne kadar ıdl, diğer taraftaki bir şeye denk gelip ağırlık yaptığı için böyle isimlendirilmişse de bizzat kendisi ağırdır). Bundandır: \"Beleğa'l-ğulâmü'l-hinse: yani idrak ve bülûğa / ihtilâm çağına ulaştı\"; yakînen bilinen odur ki mânâsı erkekler mertebesine ulaştı demektir. Şu hâlde tabir kinayedir: ya ondan sadır olan bir tavra, söze veya tasarrufa itibar edilmesi hasebiyle erkekliğin ağırlığından dolayı —ki bundan önceki hâlinin hafifliğiyle mukayese edilir— yahut kendisinde dölleme maddesinin teşekkül etmesinden dolayıdır ki onun ağırlığı eserinin büyüklüğüdür. Lügatçilerin \"bülûğ-i hins\" tefsirine göre erkekliğe ermeyi günah işlemeye bağlamaya bir zaruret görmüyorum. Bundandır: \"Hanise fî yemînihî (taibe vezninde): Yeminine sadık kalmadı (yani yalan yere yemin etti). El-Hinsü: Yeminde muhalefet / onu bozmak / ahdi nakzetmek\"; bütün bunların meâli geride kalmaya (hulf) çıkar. Hulf ise edâdan geri kalmak ve ağırlık göstermekdir: {Onunla vur da yeminini bozma (ve lâ tahnes)}. (1/509) Allah Teâlâ'nın {Ve büyük günah (el-hinsi'l-azîm) üzerinde ısrar ediyorlardı} [Vâkıa: 46] kavli hakkında [Kur 17/213]'te şöyle denmiştir: \"yani kendisinden tevbe etmedikleri büyük şirk üzerinde ikamet ediyorlardı.\" Günahlar ağırlıklar ve yüklerdir: {Elbette kendi ağırlıklarını ve ağırlıklarıyla beraber başka ağırlıkları da yükleneceklerdir} [Ankebût: 13]. Tıpkı onlara \"âsâm\" (günahlar/ağırlıklar) adını verdikleri gibi [bakınız: e-s-m]. Şirk ise ağırlıkların en ağırıdır. \"İbadet etti ve putlardan uzaklaştı mânâsında tehannese\" sözlerine gelince; İbn Sîde şöyle dedi: \"Bu bana göre selb (nefy) üzeredir; sanki bununla kendisinden günah olan hinsi nefyetmektedir. Tıpkı Allah Teâlâ'nın {Gecenin bir kısmında da sana mahsus bir nafile olarak onunla teheccüd kıl (fe-tehecced)} [İsrâ: 79] kavli gibi; yani uykuyu (hucûdu) gözünden at demektir. Bunun benzeri teeseme ve tehavvebe fiilleridir.\" Ben ise sîganın kendisi için vaz' olunduğu şeyi nefyetmek üzere gelmesini teslim etmiyorum; zira bu asla aykırıdır. Bu sîgalar tekellüf ve mühlet içinde tekrarlanan amel için gelir; dolayısıyla bunlarda... ictihâd mânâsı vardır; sûreti burada hinse düşmeye mukavemettir, yânî ibâdet ve benzeriyle ona düşmeye mukavemet. Bu, «merrada» demelerine benzer: temrîz hastalığı gidermek değil, ona mukavemet ve onunla uğraşmaktır.\nBununla beraber bazı lügatçiler hinsi, bâtıldan hakka meyl ve aksi, yânî haktan bâtıla meyl ile tefsîr ettiler ve «hanistü ma'a hevâke alâ'l-hakk yahut ma'a'l-hakk alâ hevâke» dendiğini söylediler. Ben derim: hinsin meyl ile tefsîri câizdir, çünkü meyl ağırlıktan olur, hüvâ (düşme) gibi; keza onun hakka karşı hevâ ile meyl olarak tefsîri de câizdir, hatta mânâ-yı mihverîden cinstir. Hinsin hak ile meyl olması ise ancak sarîh ve asîl bir şâhidle câiz olur. Sâbit olursa meylin tamîmindendir."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön EtymArab ḤNṮ حنث BP – • HDAL • © SG | 5Eyl2022 √ḤNṮ “kök” ▪ ḤNṮ_1 ‘yeminini bozmak; yalan yere yemin, günah’ ↗ ḥaniṯa ▪ ḤNṮ_2 (Mısır Ar.) ‘fırsatçı, açıkgöz’: ĭbn ḥint ↗ ḥaniṯa ▪ ḤNṮ_ ‘…’ ↗ ḥnṯ ♦ Klâsik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘erkeklik, olgunluk; günah, küfür, Allah'ı inkâr, kötülük; yemini bozma, yalan yere yemin; kendini temizlemek, ibadet etmek, mesuliyet’. ▪ … ▪ … ▪ … ▪ … – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      }
-    }
-  },
-  "kuran_gecisleri": 2,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "حن",
+  "ses": {
     "harf": "ح",
+    "fasil": "حن",
     "mahrec": "halkiyye",
     "bolge": "halk"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
+  "anlam": "Hinş: yemini bozmak, söz bozmak",
+  "esas_manalar": "günah ve vebal{yemini bozmak, söz bozmak;günahtan arınmak, ibadet etmek{mükellefiyet};erginlik}",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "hins",
+        "metin": "اَلْخِنْثُ [el-hinsamp;] (hânın kesriyle) Cemâat-i müteferrikaya denir; tekûlu: رَأَيْتُ خِنْثًا مِنَ النَّاسِ أَيْ جَمَاعَةً مُتَفَرِّقِينَ Ve azı dişlerine mücâvir olan avurdun yukarılı aşağılı iç yüzüne denir ki büklüm yeridir.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["حِنث"]
+      },
+      {
+        "madde": "hins",
+        "metin": "اَلْحِنْثُ [el-hinsamp;] (hânın kesriyle) Günâha denir, إِثْمٌ [isamp;m] manâsına; manâ-yı mevzûu budur; yukâlu: وَقَعَ فِي الْحِنْثِ أَيِ اْلإِثْمِ Ve hulf-i yemîn manâsınadır ki bir kimse eylediği yemînin uhdesinden hurûc eylemeyip onda giriftâr kalmaktan ibârettir; yukâlu: حَنِثَ فِي يَمِينِهِ حِنْثًا مِنَ الْبَابِ الرَّابِعِ إِذَا لَمْ يَفِ بِمُوجَبِهَا Bunun hilâfına بِرٌّ [birr] ıtlâk olunur ve o kimselere حَانِثٌ [hânisamp;] ve بَارٌّ [bârr] denir. Ve bâtıldan hakka kezâlik haktan bâtıla meyl eylemek manâsınadır; yukâlu: حَنِثَ الرَّجُلُ إِذَا مَالَ مِنْ بَاطِلٍ إِلَى حَقٍّ وَعَكْسُهُ",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["حِنث"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "hins",
+        "metin": "اَلْحِنْثُ [el-hinsamp;] (hânın kesriyle ve nûnun sükûnuyla) Günâh, إِثْمٌ [isamp;m] manâsına. Ve oğlan musîbet ve tâat kesb edecek vakte ermek; yukâlu: بَلَغَ الْغُلَامُ الْحِنْثَ أَيِ الْمَعْصِيَةَ وَالطَّاعَةَ Ve حِنْثٌ [hinsamp;] Yemînde hilf etmeğe dahi derler.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["حِنث"]
+      }
+    ],
+    "Lugat-ı Remzi": [
+      {
+        "madde": "Hins",
+        "sayfa": 466,
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["حِنث"]
+      }
+    ]
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "mekayis": [
+    {
+      "baslik": "حَنِثَ",
+      "metin": "(حَنِثَ) الْحَاءُ وَالنُّونُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ الْإِثْمُ وَالْحَرَجُ. يُقَالُ حَنِثَ فُلَانٌ فِي كَذَا، أَيْ أَثِمَ. وَمِنْ ذَلِكَ قَوْلُهُمْ: بَلَغَ الْغُلَامُ الْحِنْثَ، أَيْ بَلَغَ مَبْلَغًا جَرَى عَلَيْهِ الْقَلَمُ بِالطَّاعَةِ وَالْمَعْصِيَةِ، وَأُثْبِتَتْ عَلَيْهِ ذُنُوبُهُ. وَمِنْ ذَلِكَ الْحِنْثُ\nفِي الْيَمِينِ، وَهُوَ الْخُلْفُ فِيهِ. فَهَذَا وَجْهُ الْإِثْمِ. وَأَمَّا قَوْلُهُمْ فُلَانٌ يَتَحَنَّثُ مِنْ كَذَا، فَمَعْنَاهُ يَتَأَثَّمُ. وَالْفَرْقُ بَيْنَ أَثِمَ وَتَأَثَّمَ، أَنَّ التَّأَثُّمَ التَّنَحِّي عَنِ الْإِثْمِ، كَمَا يُقَالُ حَرِجَ وَتَحَرَّجَ ; فَحَرِجَ وَقَعَ فِي الْحَرَجِ، وَتَحَرَّجَ تَنَحَّى عَنِ الْحَرَجِ. وَهَذَا فِي كَلِمَاتٍ مَعْلُومَةٍ قِيَاسُهَا وَاحِدٌ.\nوَمِنْ ذَلِكَ التَّحَنُّثُ وَهُوَ التَّعَبُّدُ. وَمِنْهُ الْحَدِيثُ: &quot; «أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ كَانَ يَأْتِي غَارَ حِرَاءٍ فَيَتَحَنَّثُ فِيهِ اللَّيَالِي ذَوَاتِ الْعَدَدِ &quot;.»",
+      "baslik_tr": "حَنِثَ",
+      "metin_tr": "(حَنِثَ) Ha, nun ve se harfleri tek bir asıldır; o da günah (ism) ve darlık/vebaldir (harec). \"Hanise fulânün fî kezâ\" yani şu hususta günaha girdi denir. \"Beleğa'l-ğulâmü'l-hinse\" sözleri de bundandır; yani çocuk, itaat ve masiyetle üzerine kalemin cereyan ettiği ve günahlarının yazıldığı çağa ulaştı demektir. Yeminde \"el-hins\" de bundandır ki yeminde muhalefet etmek (yemini bozmak)tir. İşte günah vechesi budur. \"Fulânün yetehannesü min kezâ\" sözlerine gelince; bunun mânâsı \"yeteessemü\"dür (günahtan sakınır). \"Esime\" ile \"teeseme\" arasındaki fark şudur ki, \"teesüm\" günahtan uzaklaşıp çekilmektir; tıpkı \"harice\" ve \"teharrace\" dendiği gibi: \"harice\" günah ve darlığa düştü, \"teharrace\" ise darlıktan uzaklaştı demektir. Bu, kıyası bir olan mâlum kelimelerde böyledir.\nİbadet etmek demek olan \"et-tehannüs\" de bundandır. Hadîs-i şerifteki: \"Resûlullah sallallahu aleyhi ve âlihî ve sellem Hırâ mağarasına gelir ve orada sayılı geceler boyunca tehannüs (ibadet) ederdi\" sözü de bundandır."
+    }
+  ],
+  "cebel": {
     "fasil": "الحاء والنون",
+    "baslik": "حنث",
     "mihveri": "ثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه). ومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث. ومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}. (1/509) وفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال: وقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها مع",
-    "sesler": "",
+    "tam_metin": "{وَخُذْ بِيَدِكَ ضِغْثًا فَاضْرِبْ بِهِ وَلَا تَحْنَثْ} [ص: 44]\nسئل أعرابي فصيح عن الحِنْث فقال \"هو العِدْل الثقيل. قال والأحناث عندنا: الأعدال الثقال \" [غريب الحديث للخطابي 1/ 539] العِدْل هو الحِمْل الذي يكون في أحد جانبي البعير ونحوه معادِلًا ومثاقِلًا لحِمل في الجانب الآخر).\n° المعنى المحوري\nثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه).\nومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث.\nومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}.\n(1/509)\nوفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال:\nوقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها معنى الاجتهاد، وصورته هنا مقاومة الِحنْث أي مقاومة الوقوع فيه بالتعبد ونحوه. وذلك كما قالوا مَرّضه. فالتمريض ليس سلب المرض وإنما مقاومته والتعامل معه.\nهذا وقد فسر بعض اللغويين الخث بأنه الميل من باطل إلى حق وعكسه أي الميل من حق إلى باطل، وأنه يقال حنثتَ مع هواك على الحق أو مع الحق على هواك \"وأقول إن تفسر الحنث بالميل متأت لأن الميل يكون من الثقل كالهُوِىّ، كذلك تفسيره بالميل مع الهَوَى ضد الحق متأت بل هو من جنس المعنى المحوري. أما كون الحنث ميلًا مع الحق فلا يتأتى إلا بشاهد صريح أصيل. فإذا ثبت كان من تعميم الميل.",
     "fasil_ozeti": "° معنى الفصل المعجمي (حن): تتعلق معاني التركيب بجوف الشيء القوي أو أثنائه -كما يتمثل في امتداد الصوت اللطيف من الناقة والقوس -في (حنن)، وفي جفاف ندى الحب الذي في الأثناء -في (حين)، وفي الثقل المترتب على اكتناز الأثناء بثقيل -في (حنث)، وفي التفاف الحبل والتواء الشيء فيكون له تجوف في موضع الانثناء -في (حنج)، وبزداد ذلك التجوف حتى يصير كالقناة الواسعة -في (حنجر)، ويتمثل كذلك في إخراج الغضوضة والطراءة التي في أثناء المحنوذ -في (حنذ)، وفي انصباب الانحراف عن الاتجاه على الخارج من الأثناء -في (حنف)، وفي كون الصلابة منصبة على التجوف الذي في باطن الحنك -في (حنك).",
-    "tam_metin": "{وَخُذْ بِيَدِكَ ضِغْثًا فَاضْرِبْ بِهِ وَلَا تَحْنَثْ} [ص: 44]\nسئل أعرابي فصيح عن الحِنْث فقال \"هو العِدْل الثقيل. قال والأحناث عندنا: الأعدال الثقال \" [غريب الحديث للخطابي 1/ 539] العِدْل هو الحِمْل الذي يكون في أحد جانبي البعير ونحوه معادِلًا ومثاقِلًا لحِمل في الجانب الآخر).\n° المعنى المحوري\nثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه).\nومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث.\nومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}.\n(1/509)\nوفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال:\nوقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها معنى الاجتهاد، وصورته هنا مقاومة الِحنْث أي مقاومة الوقوع فيه بالتعبد ونحوه. وذلك كما قالوا مَرّضه. فالتمريض ليس سلب المرض وإنما مقاومته والتعامل معه.\nهذا وقد فسر بعض اللغويين الخث بأنه الميل من باطل إلى حق وعكسه أي الميل من حق إلى باطل، وأنه يقال حنثتَ مع هواك على الحق أو مع الحق على هواك \"وأقول إن تفسر الحنث بالميل متأت لأن الميل يكون من الثقل كالهُوِىّ، كذلك تفسيره بالميل مع الهَوَى ضد الحق متأت بل هو من جنس المعنى المحوري. أما كون الحنث ميلًا مع الحق فلا يتأتى إلا بشاهد صريح أصيل. فإذا ثبت كان من تعميم الميل."
+    "mihveri_tr": "Şeyin pek ağır olmasıdır (bu ise ancak kalın, iri, kuru ve ağır bir şey ihtiva etmesi sebebiyle olur). Tıpkı ağır diye vasıflandırılan denk (ıdl) gibi (her ne kadar ıdl, diğer taraftaki bir şeye denk gelip ağırlık yaptığı için böyle isimlendirilmişse de bizzat kendisi ağırdır). Bundandır: \"Beleğa'l-ğulâmü'l-hinse: yani idrak ve bülûğa / ihtilâm çağına ulaştı\"; yakînen bilinen odur ki mânâsı erkekler mertebesine ulaştı demektir. Şu hâlde tabir kinayedir: ya ondan sadır olan bir tavra, söze veya tasarrufa itibar edilmesi hasebiyle erkekliğin ağırlığından dolayı —ki bundan önceki hâlinin hafifliğiyle mukayese edilir— yahut kendisinde dölleme maddesinin teşekkül etmesinden dolayıdır ki onun ağırlığı eserinin büyüklüğüdür. Lügatçilerin \"bülûğ-i hins\" tefsirine göre erkekliğe ermeyi günah işlemeye bağlamaya bir zaruret görmüyorum. Bundandır: \"Hanise fî yemînihî (taibe vezninde): Yeminine sadık kalmadı (yani yalan yere yemin etti). El-Hinsü: Yeminde muhalefet / onu bozmak / ahdi nakzetmek\"; bütün bunların meâli geride kalmaya (hulf) çıkar. Hulf ise edâdan geri kalmak ve ağırlık göstermekdir: {Onunla vur da yeminini bozma (ve lâ tahnes)}. (1/509) Allah Teâlâ'nın {Ve büyük günah (el-hinsi'l-azîm) üzerinde ısrar ediyorlardı} [Vâkıa: 46] kavli hakkında [Kur 17/213]'te şöyle denmiştir: \"yani kendisinden tevbe etmedikleri büyük şirk üzerinde ikamet ediyorlardı.\" Günahlar ağırlıklar ve yüklerdir: {Elbette kendi ağırlıklarını ve ağırlıklarıyla beraber başka ağırlıkları da yükleneceklerdir} [Ankebût: 13]. Tıpkı onlara \"âsâm\" (günahlar/ağırlıklar) adını verdikleri gibi [bakınız: e-s-m]. Şirk ise ağırlıkların en ağırıdır. \"İbadet etti ve putlardan uzaklaştı mânâsında tehannese\" sözlerine gelince; İbn Sîde şöyle dedi: \"Bu bana göre selb (nefy) üzeredir; sanki bununla kendisinden günah olan hinsi nefyetmektedir. Tıpkı Allah Teâlâ'nın {Gecenin bir kısmında da sana mahsus bir nafile olarak onunla teheccüd kıl (fe-tehecced)} [İsrâ: 79] kavli gibi; yani uykuyu (hucûdu) gözünden at demektir. Bunun benzeri teeseme ve tehavvebe fiilleridir.\" Ben ise sîganın kendisi için vaz' olunduğu şeyi nefyetmek üzere gelmesini teslim etmiyorum; zira bu asla aykırıdır. Bu sîgalar tekellüf ve mühlet içinde tekrarlanan amel için gelir; dolayısıyla bunlarda... ictihâd mânâsı vardır; sûreti burada hinse düşmeye mukavemettir, yânî ibâdet ve benzeriyle ona düşmeye mukavemet. Bu, «merrada» demelerine benzer: temrîz hastalığı gidermek değil, ona mukavemet ve onunla uğraşmaktır.\nBununla beraber bazı lügatçiler hinsi, bâtıldan hakka meyl ve aksi, yânî haktan bâtıla meyl ile tefsîr ettiler ve «hanistü ma'a hevâke alâ'l-hakk yahut ma'a'l-hakk alâ hevâke» dendiğini söylediler. Ben derim: hinsin meyl ile tefsîri câizdir, çünkü meyl ağırlıktan olur, hüvâ (düşme) gibi; keza onun hakka karşı hevâ ile meyl olarak tefsîri de câizdir, hatta mânâ-yı mihverîden cinstir. Hinsin hak ile meyl olması ise ancak sarîh ve asîl bir şâhidle câiz olur. Sâbit olursa meylin tamîmindendir."
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "حنث في يمينه حنثاً: وقع في الحنث.",
     "mecaz": "بلغ الغلام الحنث \" وكانوا يصرون على الحنث العظيم \" وهو الذنب، استعير من حنث الحانث الذي هو نقيض بره. وهو يتحنث من القبيح: يتحرج ويتأثم \" وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يتحنث بحراء \" أي يتعبد ويتأثم. وقالوا: تحنث بصلتك وبرك ويجوز أن تعاقب الثاء الفاء من التحنف.",
-    "kinaye": "",
     "mecaz_var": true
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "ثِقَلُ الشيء ثقلًا بالغًا (ولا يكون ذلك إلا بسبب احتوائه على غليظ جَسِيم جاف ثقيل). كالعِدْل الموصوف بأنه ثقيل (مع أن العِدل سمي كذلك لأنه يثاقل شيئًا في الجانب الآخر فهو ثقيل في نفسه). ومن ذلك \"بلغ الغلام الحِنْث أي الإدراك والبلوغ/ الحُلُم \"المستيقن أن المعنى أنه بلغ مبلغ الرجال. فالتعبير كناية. إما لثقل الرجولة من حيث الاعتداد بما يصدر عنه موقفًا أو كلامًا أو تصرفًا مقارنة بخفة أمره قبل ذلك، وإما لتكوّن مادة الإلقاح فيه، وثقلُها عظم أثرها. ولا أرى ضرورة لربط بلوغ الرجولة بارتكاب إثم حسب تفسير اللغويين لبلوغ الحنث. ومن ذلك \"حَنِثَ في يمينه - (تعب): لم يَبَرّ فيه (أي حلف على كذب). الحِنْثُ: الخُلْف في اليمين/ نقضُها/ النَكْث فيها \"ومآل كل ذلك إلى الخُلْف. والخُلْف تخلّف وثقل عن الأداء {فَاضْرِبْ بِهِ وَلَا تَحْنَثْ}. (1/509) وفي قوله تعالى: {وَكَانُوا يُصِرُّونَ عَلَى الْحِنْثِ الْعَظِيمِ} [الواقعة: 46] قال في [قر 17/ 213] أي يقيمون على الشرك العظيم الذي لا يتوبون منه اه. والذنوب أثقال وأوزار {وَلَيَحْمِلُنَّ أَثْقَالَهُمْ وَأَثْقَالًا مَعَ أَثْقَالِهِمْ} [العنكبوت: 13]. وذلك كما سموها آثامًا [ينظر أثم]. والشرك أثقل الأثقال: وقولهم: \"تحنث بمعنى تعبد واعتزل الأصنام \"قال ابن سيده \"هذا عندي على السلب كأنه ينفي بذلك الحنث الذي هو الإثم عن نفسه. كقوله تعالى: {وَمِنَ اللَّيْلِ فَتَهَجَّدْ بِهِ نَافِلَةً لَكَ} [الإسراء: 79]، أي ألق الهجود عن عينك. ونظيره تأثم وتحوب \"اه. وأنا لا أسلم بمجيء الصيغة لنفي ما وُضعت له، فهذا خلاف الأصل. وهذه الصيغ تأتي للتكلف وللعمل المتكرر في مهلة ففيها مع"
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "حنث في يمينه حنثاً: وقع في الحنث."
-      },
-      {
-        "kaynak": "Mekâyîs: حَنِثَ",
-        "metin": "(حَنِثَ) الْحَاءُ وَالنُّونُ وَالثَّاءُ أَصْلٌ وَاحِدٌ، وَهُوَ الْإِثْمُ وَالْحَرَجُ. يُقَالُ حَنِثَ فُلَانٌ فِي كَذَا، أَيْ أَثِمَ. وَمِنْ ذَلِكَ قَوْلُهُمْ: بَلَغَ الْغُلَامُ الْحِنْثَ، أَيْ بَلَغَ مَبْلَغًا جَرَى عَلَيْهِ الْقَلَمُ بِالطَّاعَةِ وَالْمَعْصِيَةِ، وَأُثْبِتَتْ عَلَيْهِ ذُنُوبُهُ. وَمِنْ ذَلِكَ الْحِنْثُ\nفِي الْيَمِينِ، وَهُوَ الْخُلْفُ فِيهِ. فَهَذَا وَجْهُ الْإِثْمِ. وَأَمَّا قَوْلُهُمْ فُلَانٌ يَتَحَنَّثُ مِنْ كَذَا، فَمَعْنَاهُ يَتَأَثَّمُ. وَالْفَرْقُ بَيْنَ أَثِمَ وَتَأَثَّمَ، أَنَّ التَّأَثُّمَ التَّنَحِّي عَنِ الْإِثْمِ، كَمَا يُقَالُ حَرِجَ وَتَحَرَّجَ ; فَحَرِجَ وَقَعَ فِي الْحَرَجِ، وَتَحَرَّجَ تَنَحَّى عَنِ الْحَرَجِ. وَهَذَا فِي كَلِمَاتٍ مَعْلُومَةٍ قِيَاسُهَا وَاحِدٌ.\nوَمِنْ ذَلِكَ التَّحَنُّثُ وَهُوَ التَّعَبُّدُ. وَمِنْهُ الْحَدِيثُ: &quot; «أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ كَانَ يَأْتِي غَارَ حِرَاءٍ فَيَتَحَنَّثُ فِيهِ اللَّيَالِي ذَوَاتِ الْعَدَدِ &quot;.»"
-      }
-    ],
-    "karsilastirma_prototipi": "Cebel mihverî mana",
-    "yayilim": [
-      {
-        "kaynak": "Zemahşerî mecaz kolu",
-        "metin": "بلغ الغلام الحنث \" وكانوا يصرون على الحنث العظيم \" وهو الذنب، استعير من حنث الحانث الذي هو نقيض بره. وهو يتحنث من القبيح: يتحرج ويتأثم \" وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يتحنث بحراء \" أي يتعبد ويتأثم. وقالوا: تحنث بصلتك وبرك ويجوز أن تعاقب الثاء الفاء من التحنف.",
-        "prototipe_benzerlik": 0.816,
-        "halka": "yakın"
-      }
-    ],
-    "ortalama_benzerlik": 0.816,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
+  "etymarab": {
+    "latin": "ḤNṮ",
+    "kok_maddesi": "Back to library EtymArab ḤNṮ حنث BP – • HDAL • © SG | 5Sep2022 √ḤNṮ “root” ▪ ḤNṮ_1 ‘to break one’s oath; perjury, sin’ ↗ ḥaniṯa ▪ ḤNṮ_2 (EgAr) ‘opportunist, sharp operator’: ĭbn ḥint ↗ ḥaniṯa ▪ ḤNṮ_ ‘…’ ↗ ḥnṯ ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘manhood, maturity; sin, blasphemy, denial of God, wickedness; breaking an oath, perjury; to purify oneself, to worship, responsibility’ ▪ … ▪ … ▪ … ▪ … – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön EtymArab ḤNṮ حنث BP – • HDAL • © SG | 5Eyl2022 √ḤNṮ “kök” ▪ ḤNṮ_1 ‘yeminini bozmak; yalan yere yemin, günah’ ↗ ḥaniṯa ▪ ḤNṮ_2 (Mısır Ar.) ‘fırsatçı, açıkgöz’: ĭbn ḥint ↗ ḥaniṯa ▪ ḤNṮ_ ‘…’ ↗ ḥnṯ ♦ Klâsik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘erkeklik, olgunluk; günah, küfür, Allah'ı inkâr, kötülük; yemini bozma, yalan yere yemin; kendini temizlemek, ibadet etmek, mesuliyet’. ▪ … ▪ … ▪ … ▪ … – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "النخل",
-    "bab": "الزيادة",
-    "kok_gecis": 6.0,
-    "kitapta_gecis": 5.0,
-    "zenginlesme": 4.72
+  "kuran": {
+    "gecis": 2,
+    "ilk": "38:44:7:1",
+    "tur": {
+      "V": 1,
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {
+      "IMPF": 1
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "تَحْنَثْ": 1,
+      "حِنث": 1
+    },
+    "bicimler": {
+      "تَحْنَثْ": 1,
+      "حِنثِ": 1
+    },
+    "morfoloji_gecis": 2
   },
-  "mana_tasnif_gomme": {
+  "kelimeler": [
+    {
+      "lemma": "تَحْنَثْ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "تَحْنَثْ",
+          "zaman": "Muzâri",
+          "ilk": "38:44",
+          "adet": 1,
+          "tr": "yemin bozma"
+        }
+      ],
+      "tr": "yemin bozma",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 1
+    },
+    {
+      "lemma": "حِنث",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "ٱلْحِنثِ",
+          "ilk": "56:46",
+          "adet": 1,
+          "tr": "günah"
+        }
+      ],
+      "tr": "günah",
+      "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "حَنْث", "ḥanṯ", "yemini bozma", "orta", ""],
+      ["fi'l", "semâî aday", "حِنْث", "ḥinṯ", "yemini bozma", "orta", ""],
+      ["fu'l", "semâî aday", "حُنْث", "ḥunṯ", "yemini bozma", "orta", ""],
+      ["fa'al", "semâî aday", "حَنَث", "ḥanaṯ", "yemini bozma", "orta", ""],
+      ["fi'al", "semâî aday", "حِنَث", "ḥinaṯ", "yemini bozma", "orta", ""],
+      ["fu'ul", "semâî aday", "حُنُث", "ḥunuṯ", "yemini bozma", "orta", ""],
+      ["fu'ūl", "semâî aday", "حُنُوث", "ḥunūṯ", "yemini bozma", "orta", ""],
+      ["fi'āl", "semâî aday", "حِنَاث", "ḥināṯ", "yemini bozma", "orta", ""],
+      ["fu'āl", "semâî aday", "حُنَاث", "ḥunāṯ", "yemini bozma", "orta", ""],
+      ["fa'āl", "semâî aday", "حَنَاث", "ḥanāṯ", "yemini bozma", "orta", ""],
+      ["fa'āle", "semâî aday", "حَنَاثَة", "ḥanāṯa", "yemini bozma", "orta", ""],
+      ["fu'ūle", "semâî aday", "حُنُوثَة", "ḥunūṯa", "yemini bozma", "orta", ""],
+      ["fi'āle", "semâî aday", "حِنَاثَة", "ḥināṯa", "yemini bozma", "orta", ""],
+      ["fa'īl", "semâî aday", "حَنِيث", "ḥanīṯ", "yemini bozma", "orta", ""],
+      ["fa'ūl", "semâî aday", "حَنُوث", "ḥanūṯ", "yemini bozma", "orta", ""],
+      ["fa'alān", "semâî aday", "حَنَثَان", "ḥanaṯān", "yemini bozma", "orta", ""],
+      ["fu'lān", "semâî aday", "حُنْثَان", "ḥunṯān", "yemini bozma", "orta", ""],
+      ["fi'lān", "semâî aday", "حِنْثَان", "ḥinṯān", "yemini bozma", "orta", ""],
+      ["fa'lā", "semâî aday", "حَنْثَى", "ḥanṯā", "yemini bozma", "orta", ""],
+      ["fu'lā", "semâî aday", "حُنْثَى", "ḥunṯā", "yemini bozma", "orta", ""],
+      ["fi'lā", "semâî aday", "حِنْثَى", "ḥinṯā", "yemini bozma", "orta", ""],
+      ["fa'ale", "semâî aday", "حَنَثَة", "ḥanaṯa", "yemini bozma", "orta", ""],
+      ["fi'ale", "semâî aday", "حِنَثَة", "ḥinaṯa", "yemini bozma", "orta", ""],
+      ["fa'lūla", "semâî aday", "حَنْثُوثَة", "ḥanṯūṯa", "yemini bozma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُحْنُوث", "tuḥnūṯ", "yemini bozma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَحْنِثَة", "taḥniṯa", "yemini bozma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَحْنَثَة", "taḥnaṯa", "yemini bozma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَحْنُثَة", "maḥnuṯa", "yemini bozma", "orta", ""],
+      ["maf'ila", "semâî aday", "مَحْنِثَة", "maḥniṯa", "yemini bozma", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَحْنِيث", "taḥnīṯ", "çokça yemini bozma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَحْنِثَة", "taḥniṯa", "çokça yemini bozma", "orta", ""],
+      ["fi''āl", "kıyâsî", "حِنِّاث", "ḥinnāṯ", "çokça yemini bozma", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَحْنِيثَة", "taḥnīṯa", "bir kere çokça yemini bozma", "orta", ""],
+      ["fi''āl + tâ", "aday", "حِنِّاثَة", "ḥinnāṯa", "bir kere çokça yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُحَنِّث", "muḥanniṯ", "çokça yemini bozan", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُحَنِّثَة", "muḥanniṯa", "çokça yemini bozan, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُحَنِّثَان", "muḥanniṯān", "çokça yemini bozan, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُحَنِّثَتَان",
+        "muḥanniṯatān",
+        "çokça yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحَنِّثُون",
+        "muḥanniṯūn",
+        "çokça yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحَنِّثِين",
+        "muḥanniṯīn",
+        "çokça yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحَنِّثَات",
+        "muḥanniṯāt",
+        "çokça yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُحَنَّث", "muḥannaṯ", "çokça yemini bozulan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُحَنَّثَة", "muḥannaṯa", "çokça yemini bozulan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُحَنَّثَان", "muḥannaṯān", "çokça yemini bozulan, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُحَنَّثَتَان",
+        "muḥannaṯatān",
+        "çokça yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحَنَّثُون",
+        "muḥannaṯūn",
+        "çokça yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحَنَّثِين",
+        "muḥannaṯīn",
+        "çokça yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحَنَّثَات",
+        "muḥannaṯāt",
+        "çokça yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُحَنَّث", "muḥannaṯ", "çokça yemini bozma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُحَانَثَة", "muḥānaṯa", "biriyle karşılıklı yemini bozma", "orta", ""],
+      ["fi'āl", "kıyâsî", "حِنَاث", "ḥināṯ", "biriyle karşılıklı yemini bozma", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "حِنَاثَة", "ḥināṯa", "bir kere biriyle karşılıklı yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُحَانِث", "muḥāniṯ", "biriyle karşılıklı yemini bozan", "orta", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî",
+        "مُحَانِثَة",
+        "muḥāniṯa",
+        "biriyle karşılıklı yemini bozan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî",
+        "مُحَانِثَان",
+        "muḥāniṯān",
+        "biriyle karşılıklı yemini bozan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُحَانِثَتَان",
+        "muḥāniṯatān",
+        "biriyle karşılıklı yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحَانِثُون",
+        "muḥāniṯūn",
+        "biriyle karşılıklı yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحَانِثِين",
+        "muḥāniṯīn",
+        "biriyle karşılıklı yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحَانِثَات",
+        "muḥāniṯāt",
+        "biriyle karşılıklı yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُحَانَث", "muḥānaṯ", "biriyle karşılıklı yemini bozulan", "orta", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُحَانَثَة",
+        "muḥānaṯa",
+        "biriyle karşılıklı yemini bozulan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî",
+        "مُحَانَثَان",
+        "muḥānaṯān",
+        "biriyle karşılıklı yemini bozulan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُحَانَثَتَان",
+        "muḥānaṯatān",
+        "biriyle karşılıklı yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحَانَثُون",
+        "muḥānaṯūn",
+        "biriyle karşılıklı yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحَانَثِين",
+        "muḥānaṯīn",
+        "biriyle karşılıklı yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحَانَثَات",
+        "muḥānaṯāt",
+        "biriyle karşılıklı yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُحَانَث", "muḥānaṯ", "biriyle karşılıklı yemini bozma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِحْنَاث", "ʾiḥnāṯ", "yemini bozdurma", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِحْنَاثَة", "ʾiḥnāṯa", "bir kere yemini bozdurma", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُحْنِث", "muḥniṯ", "yemini bozduran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُحْنِثَة", "muḥniṯa", "yemini bozduran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُحْنِثَان", "muḥniṯān", "yemini bozduran, iki", "orta", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî",
+        "مُحْنِثَتَان",
+        "muḥniṯatān",
+        "yemini bozduran, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُحْنِثُون", "muḥniṯūn", "yemini bozduranlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُحْنِثِين", "muḥniṯīn", "yemini bozduranlar", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْنِثَات",
+        "muḥniṯāt",
+        "yemini bozduranlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُحْنَث", "muḥnaṯ", "yemini bozdurulan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُحْنَثَة", "muḥnaṯa", "yemini bozdurulan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُحْنَثَان", "muḥnaṯān", "yemini bozdurulan, iki", "orta", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî",
+        "مُحْنَثَتَان",
+        "muḥnaṯatān",
+        "yemini bozdurulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحْنَثُون",
+        "muḥnaṯūn",
+        "yemini bozdurulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحْنَثِين",
+        "muḥnaṯīn",
+        "yemini bozdurulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْنَثَات",
+        "muḥnaṯāt",
+        "yemini bozdurulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُحْنَث", "muḥnaṯ", "yemini bozdurma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَحَنُّث", "taḥannuṯ", "kendini zorlayarak yemini bozma", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَحَنُّثَة", "taḥannuṯa", "bir kere kendini zorlayarak yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَحَنِّث", "mutaḥanniṯ", "kendini zorlayarak yemini bozan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَحَنِّثَة",
+        "mutaḥanniṯa",
+        "kendini zorlayarak yemini bozan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَحَنِّثَان",
+        "mutaḥanniṯān",
+        "kendini zorlayarak yemini bozan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَحَنِّثَتَان",
+        "mutaḥanniṯatān",
+        "kendini zorlayarak yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَحَنِّثُون",
+        "mutaḥanniṯūn",
+        "kendini zorlayarak yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَحَنِّثِين",
+        "mutaḥanniṯīn",
+        "kendini zorlayarak yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَحَنِّثَات",
+        "mutaḥanniṯāt",
+        "kendini zorlayarak yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَحَنَّث", "mutaḥannaṯ", "kendini zorlayarak yemini bozulan", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَحَنَّثَة",
+        "mutaḥannaṯa",
+        "kendini zorlayarak yemini bozulan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَحَنَّثَان",
+        "mutaḥannaṯān",
+        "kendini zorlayarak yemini bozulan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَحَنَّثَتَان",
+        "mutaḥannaṯatān",
+        "kendini zorlayarak yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَحَنَّثُون",
+        "mutaḥannaṯūn",
+        "kendini zorlayarak yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَحَنَّثِين",
+        "mutaḥannaṯīn",
+        "kendini zorlayarak yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَحَنَّثَات",
+        "mutaḥannaṯāt",
+        "kendini zorlayarak yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî",
+        "مُتَحَنَّث",
+        "mutaḥannaṯ",
+        "kendini zorlayarak yemini bozma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَحَانُث", "taḥānuṯ", "birbirine yemini bozma", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَحَانُثَة", "taḥānuṯa", "bir kere birbirine yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَحَانِث", "mutaḥāniṯ", "birbirine yemini bozan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَحَانِثَة", "mutaḥāniṯa", "birbirine yemini bozan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَحَانِثَان", "mutaḥāniṯān", "birbirine yemini bozan, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَحَانِثَتَان",
+        "mutaḥāniṯatān",
+        "birbirine yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَحَانِثُون",
+        "mutaḥāniṯūn",
+        "birbirine yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَحَانِثِين",
+        "mutaḥāniṯīn",
+        "birbirine yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَحَانِثَات",
+        "mutaḥāniṯāt",
+        "birbirine yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَحَانَث", "mutaḥānaṯ", "birbirine yemini bozulan", "orta", ""],
+      [
+        "mutafā'al + müennes",
+        "kıyâsî",
+        "مُتَحَانَثَة",
+        "mutaḥānaṯa",
+        "birbirine yemini bozulan, müennes",
+        "orta",
+        ""
+      ],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَحَانَثَان", "mutaḥānaṯān", "birbirine yemini bozulan, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَحَانَثَتَان",
+        "mutaḥānaṯatān",
+        "birbirine yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَحَانَثُون",
+        "mutaḥānaṯūn",
+        "birbirine yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَحَانَثِين",
+        "mutaḥānaṯīn",
+        "birbirine yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَحَانَثَات",
+        "mutaḥānaṯāt",
+        "birbirine yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَحَانَث", "mutaḥānaṯ", "birbirine yemini bozma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْحِنَاث", "inḥināṯ", "yemini bozulma", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْحِنَاثَة", "inḥināṯa", "bir kere yemini bozulma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْحَنِث", "munḥaniṯ", "yemini bozulan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْحَنِثَة", "munḥaniṯa", "yemini bozulan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْحَنِثَان", "munḥaniṯān", "yemini bozulan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْحَنِثَتَان",
+        "munḥaniṯatān",
+        "yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْحَنِثُون",
+        "munḥaniṯūn",
+        "yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْحَنِثِين",
+        "munḥaniṯīn",
+        "yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْحَنِثَات",
+        "munḥaniṯāt",
+        "yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَث",
+        "munḥanaṯ",
+        "yemini bozulan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثَة",
+        "munḥanaṯa",
+        "yemini bozulan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثَان",
+        "munḥanaṯān",
+        "yemini bozulan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثَتَان",
+        "munḥanaṯatān",
+        "yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثُون",
+        "munḥanaṯūn",
+        "yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثِين",
+        "munḥanaṯīn",
+        "yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَثَات",
+        "munḥanaṯāt",
+        "yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْحَنَث",
+        "munḥanaṯ",
+        "yemini bozulma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِحْتِنَاث", "iḥtināṯ", "kendisi için yemini bozma", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِحْتِنَاثَة", "iḥtināṯa", "bir kere kendisi için yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُحْتَنِث", "muḥtaniṯ", "kendisi için yemini bozan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُحْتَنِثَة", "muḥtaniṯa", "kendisi için yemini bozan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُحْتَنِثَان", "muḥtaniṯān", "kendisi için yemini bozan, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُحْتَنِثَتَان",
+        "muḥtaniṯatān",
+        "kendisi için yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحْتَنِثُون",
+        "muḥtaniṯūn",
+        "kendisi için yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحْتَنِثِين",
+        "muḥtaniṯīn",
+        "kendisi için yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْتَنِثَات",
+        "muḥtaniṯāt",
+        "kendisi için yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُحْتَنَث", "muḥtanaṯ", "kendisi için yemini bozulan", "orta", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî",
+        "مُحْتَنَثَة",
+        "muḥtanaṯa",
+        "kendisi için yemini bozulan, müennes",
+        "orta",
+        ""
+      ],
+      ["muftaʿal + tesniye", "kıyâsî", "مُحْتَنَثَان", "muḥtanaṯān", "kendisi için yemini bozulan, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُحْتَنَثَتَان",
+        "muḥtanaṯatān",
+        "kendisi için yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحْتَنَثُون",
+        "muḥtanaṯūn",
+        "kendisi için yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحْتَنَثِين",
+        "muḥtanaṯīn",
+        "kendisi için yemini bozulanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْتَنَثَات",
+        "muḥtanaṯāt",
+        "kendisi için yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُحْتَنَث", "muḥtanaṯ", "kendisi için yemini bozma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX": [
+      ["if'ilāl", "kıyâsî", "اِحْنِثَاث", "iḥniṯāṯ", "iyiden iyiye yemini bozma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُحْنَثّ", "muḥnaṯṯ", "iyiden iyiye yemini bozan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُحْنَثَّة", "muḥnaṯṯa", "iyiden iyiye yemini bozan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُحْنَثَّان", "muḥnaṯṯān", "iyiden iyiye yemini bozan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُحْنَثَّتَان",
+        "muḥnaṯṯatān",
+        "iyiden iyiye yemini bozan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحْنَثُّون",
+        "muḥnaṯṯūn",
+        "iyiden iyiye yemini bozanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحْنَثِّين",
+        "muḥnaṯṯīn",
+        "iyiden iyiye yemini bozanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْنَثَّات",
+        "muḥnaṯṯāt",
+        "iyiden iyiye yemini bozanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِحْنَاث", "istiḥnāṯ", "yemini bozmayı isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِحْنَاثَة", "istiḥnāṯa", "bir kere yemini bozmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَحْنِث", "mustaḥniṯ", "yemini bozmayı isteyen", "orta", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî",
+        "مُسْتَحْنِثَة",
+        "mustaḥniṯa",
+        "yemini bozmayı isteyen, müennes",
+        "orta",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَحْنِثَان", "mustaḥniṯān", "yemini bozmayı isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَحْنِثَتَان",
+        "mustaḥniṯatān",
+        "yemini bozmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَحْنِثُون",
+        "mustaḥniṯūn",
+        "yemini bozmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَحْنِثِين",
+        "mustaḥniṯīn",
+        "yemini bozmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَحْنِثَات",
+        "mustaḥniṯāt",
+        "yemini bozmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَحْنَث", "mustaḥnaṯ", "yemini bozması istenen", "orta", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî",
+        "مُسْتَحْنَثَة",
+        "mustaḥnaṯa",
+        "yemini bozması istenen, müennes",
+        "orta",
+        ""
+      ],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَحْنَثَان", "mustaḥnaṯān", "yemini bozması istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَحْنَثَتَان",
+        "mustaḥnaṯatān",
+        "yemini bozması istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَحْنَثُون",
+        "mustaḥnaṯūn",
+        "yemini bozması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَحْنَثِين",
+        "mustaḥnaṯīn",
+        "yemini bozması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَحْنَثَات",
+        "mustaḥnaṯāt",
+        "yemini bozması istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَحْنَث", "mustaḥnaṯ", "yemini bozmayı isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI": [
+      ["if'īlāl", "kıyâsî", "اِحْنِيثَاث", "iḥnīṯāṯ", "büsbütün yemini bozma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُحْنَاثّ", "muḥnāṯṯ", "büsbütün yemini bozan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُحْنَاثَّة", "muḥnāṯṯa", "büsbütün yemini bozan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُحْنَاثَّان", "muḥnāṯṯān", "büsbütün yemini bozan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُحْنَاثَّتَان",
+        "muḥnāṯṯatān",
+        "büsbütün yemini bozan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُحْنَاثُّون",
+        "muḥnāṯṯūn",
+        "büsbütün yemini bozanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُحْنَاثِّين",
+        "muḥnāṯṯīn",
+        "büsbütün yemini bozanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُحْنَاثَّات",
+        "muḥnāṯṯāt",
+        "büsbütün yemini bozanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII": [
+      ["if'iv'āl", "kıyâsî", "اِحْنِوْنَاث", "iḥniwnāṯ", "aşırı yemini bozma", "orta", ""]
+    ],
+    "masdar · bâb XIII": [
+      ["if'ivvāl", "kıyâsî", "اِحْنِوَّاث", "iḥniwwāṯ", "aşırı yemini bozma", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "حَانِث", "ḥāniṯ", "yemini bozan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "حَانِثَة", "ḥāniṯa", "yemini bozan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "حَانِثَان", "ḥāniṯān", "yemini bozan, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "حَانِثَتَان", "ḥāniṯatān", "yemini bozan, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "حَانِثُون", "ḥāniṯūn", "yemini bozanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "حَانِثِين", "ḥāniṯīn", "yemini bozanlar", "orta", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "حَانِثَات",
+        "ḥāniṯāt",
+        "yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَحْنُوث", "maḥnūṯ", "yemini bozulan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَحْنُوثَة", "maḥnūṯa", "yemini bozulan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَحْنُوثَان", "maḥnūṯān", "yemini bozulan, iki", "orta", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî",
+        "مَحْنُوثَتَان",
+        "maḥnūṯatān",
+        "yemini bozulan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَحْنُوثُون", "maḥnūṯūn", "yemini bozulanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَحْنُوثِين", "maḥnūṯīn", "yemini bozulanlar", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَحْنُوثَات",
+        "maḥnūṯāt",
+        "yemini bozulanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَحْنَث", "maḥnaṯ", "yemini bozma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَحْنَثَان", "maḥnaṯān", "yemini bozma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَحْنِث", "maḥniṯ", "yemini bozma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَحْنِثَان", "maḥniṯān", "yemini bozma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَحْنَثَة", "maḥnaṯa", "yemini bozmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî",
+        "مَحْنَثَتَان",
+        "maḥnaṯatān",
+        "yemini bozmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ile", "kıyâsî", "مَحْنِثَة", "maḥniṯa", "yemini bozmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî",
+        "مَحْنِثَتَان",
+        "maḥniṯatān",
+        "yemini bozmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَحْنُثَة", "maḥnuṯa", "yemini bozma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَحْنُثَتَان", "maḥnuṯatān", "yemini bozma yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِحْنَث", "miḥnaṯ", "yemini bozma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِحْنَثَان", "miḥnaṯān", "yemini bozma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِحْنَاث", "miḥnāṯ", "yemini bozma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِحْنَاثَان", "miḥnāṯān", "yemini bozma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِحْنَثَة", "miḥnaṯa", "yemini bozma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِحْنَثَتَان", "miḥnaṯatān", "yemini bozma âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَحْنَث", "ʾaḥnaṯ", "daha çok yemini bozan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَحْنَثَان", "ʾaḥnaṯān", "daha çok yemini bozan, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "حُنْثَى", "ḥunṯā", "daha çok yemini bozan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "حُنْثَيَان", "ḥunṯayān", "daha çok yemini bozan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "حَنْثَاء", "ḥanṯāʾ", "daha çok yemini bozan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "حَنْثَاآن", "ḥanṯāʾān", "daha çok yemini bozan, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "حُنَيْث", "ḥunayṯ", "azıcık yemini bozma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "حُنَيْثَان", "ḥunayṯān", "azıcık yemini bozma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "حُنَيْثَة", "ḥunayṯa", "azıcık yemini bozma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "حُنَيْثَتَان", "ḥunayṯatān", "azıcık yemini bozma, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَحْنَث", "maḥnaṯ", "yemini bozma", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَحْنَثَان", "maḥnaṯān", "yemini bozma, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "حَنْثَة", "ḥanṯa", "bir kere yemini bozma", "orta", ""],
+      ["fa'le + tesniye", "aday", "حَنْثَتَان", "ḥanṯatān", "bir kere yemini bozma, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "حِنْثَة", "ḥinṯa", "yemini bozma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "حِنْثَتَان", "ḥinṯatān", "yemini bozma tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "حَنِيث", "ḥanīṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "حَنِيثَة", "ḥanīṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "حَنِيثَان", "ḥanīṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "حَنِيثَتَان",
+        "ḥanīṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنِيثُون",
+        "ḥanīṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنِيثِين",
+        "ḥanīṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنِيثَات",
+        "ḥanīṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "حَنُوث", "ḥanūṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "حَنُوثَة", "ḥanūṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "حَنُوثَان", "ḥanūṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "حَنُوثَتَان",
+        "ḥanūṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنُوثُون",
+        "ḥanūṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنُوثِين",
+        "ḥanūṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنُوثَات",
+        "ḥanūṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "حَنِث", "ḥaniṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "حَنِثَة", "ḥaniṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "حَنِثَان", "ḥaniṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "حَنِثَتَان",
+        "ḥaniṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنِثُون",
+        "ḥaniṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنِثِين",
+        "ḥaniṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنِثَات",
+        "ḥaniṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "حَنُث", "ḥanuṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "حَنُثَة", "ḥanuṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "حَنُثَان", "ḥanuṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "حَنُثَتَان",
+        "ḥanuṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنُثُون",
+        "ḥanuṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنُثِين",
+        "ḥanuṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنُثَات",
+        "ḥanuṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "حَنَث", "ḥanaṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "حَنَثَة", "ḥanaṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "حَنَثَان", "ḥanaṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "حَنَثَتَان",
+        "ḥanaṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنَثُون",
+        "ḥanaṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنَثِين",
+        "ḥanaṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنَثَات",
+        "ḥanaṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "حَنْث", "ḥanṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "حَنْثَة", "ḥanṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "حَنْثَان", "ḥanṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "حَنْثَتَان",
+        "ḥanṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنْثُون",
+        "ḥanṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنْثِين",
+        "ḥanṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنْثَات",
+        "ḥanṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "حُنُث", "ḥunuṯ", "her daim yemini bozan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "حُنُثَة", "ḥunuṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "حُنُثَان", "ḥunuṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "حُنُثَتَان",
+        "ḥunuṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حُنُثُون",
+        "ḥunuṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حُنُثِين",
+        "ḥunuṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حُنُثَات",
+        "ḥunuṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "حَنْثَان", "ḥanṯān", "her daim yemini bozan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "حَنْثَانَة", "ḥanṯāna", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "حَنْثَانَان", "ḥanṯānān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "حَنْثَانَتَان",
+        "ḥanṯānatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنْثَانُون",
+        "ḥanṯānūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنْثَانِين",
+        "ḥanṯānīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنْثَانَات",
+        "ḥanṯānāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "حُنَاث", "ḥunāṯ", "her daim yemini bozan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "حُنَاثَة", "ḥunāṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "حُنَاثَان", "ḥunāṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "حُنَاثَتَان",
+        "ḥunāṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حُنَاثُون",
+        "ḥunāṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حُنَاثِين",
+        "ḥunāṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حُنَاثَات",
+        "ḥunāṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "حَنَاث", "ḥanāṯ", "her daim yemini bozan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "حَنَاثَة", "ḥanāṯa", "her daim yemini bozan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "حَنَاثَان", "ḥanāṯān", "her daim yemini bozan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "حَنَاثَتَان",
+        "ḥanāṯatān",
+        "her daim yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنَاثُون",
+        "ḥanāṯūn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنَاثِين",
+        "ḥanāṯīn",
+        "her daim yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنَاثَات",
+        "ḥanāṯāt",
+        "her daim yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "حَنَّاث", "ḥannāṯ", "işi yemini bozma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "حَنَّاثَة", "ḥannāṯa", "işi yemini bozma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "حَنَّاثَان", "ḥannāṯān", "işi yemini bozma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "حَنَّاثَتَان",
+        "ḥannāṯatān",
+        "işi yemini bozma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنَّاثُون",
+        "ḥannāṯūn",
+        "işi yemini bozma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنَّاثِين",
+        "ḥannāṯīn",
+        "işi yemini bozma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنَّاثَات",
+        "ḥannāṯāt",
+        "işi yemini bozma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "حَنَّاثَة", "ḥannāṯa", "pek çok yemini bozan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "حَنَّاثَتَان", "ḥannāṯatān", "pek çok yemini bozan, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنَّاثَات",
+        "ḥannāṯāt",
+        "pek çok yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "حَنُوث", "ḥanūṯ", "çok yemini bozan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "حَنُوثَة", "ḥanūṯa", "çok yemini bozan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "حَنُوثَان", "ḥanūṯān", "çok yemini bozan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "حَنُوثَتَان",
+        "ḥanūṯatān",
+        "çok yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنُوثُون",
+        "ḥanūṯūn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنُوثِين",
+        "ḥanūṯīn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنُوثَات",
+        "ḥanūṯāt",
+        "çok yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "حَنُّوث", "ḥannūṯ", "pek çok yemini bozan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "حَنُّوثَة", "ḥannūṯa", "pek çok yemini bozan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "حَنُّوثَان", "ḥannūṯān", "pek çok yemini bozan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "حَنُّوثَتَان",
+        "ḥannūṯatān",
+        "pek çok yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنُّوثُون",
+        "ḥannūṯūn",
+        "pek çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنُّوثِين",
+        "ḥannūṯīn",
+        "pek çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنُّوثَات",
+        "ḥannūṯāt",
+        "pek çok yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "حِنِّيث", "ḥinnīṯ", "yemini bozmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "حِنِّيثَة", "ḥinnīṯa", "yemini bozmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "حِنِّيثَان", "ḥinnīṯān", "yemini bozmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "حِنِّيثَتَان",
+        "ḥinnīṯatān",
+        "yemini bozmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حِنِّيثُون",
+        "ḥinnīṯūn",
+        "yemini bozmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حِنِّيثِين",
+        "ḥinnīṯīn",
+        "yemini bozmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حِنِّيثَات",
+        "ḥinnīṯāt",
+        "yemini bozmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "حُنَّاث", "ḥunnāṯ", "son derece yemini bozan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "حُنَّاثَة", "ḥunnāṯa", "son derece yemini bozan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "حُنَّاثَان", "ḥunnāṯān", "son derece yemini bozan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "حُنَّاثَتَان",
+        "ḥunnāṯatān",
+        "son derece yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حُنَّاثُون",
+        "ḥunnāṯūn",
+        "son derece yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حُنَّاثِين",
+        "ḥunnāṯīn",
+        "son derece yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حُنَّاثَات",
+        "ḥunnāṯāt",
+        "son derece yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِحْنَاث", "miḥnāṯ", "yemini bozmayı âdet edinmiş", "orta", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday",
+        "مِحْنَاثَة",
+        "miḥnāṯa",
+        "yemini bozmayı âdet edinmiş, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl + tesniye", "semâî aday", "مِحْنَاثَان", "miḥnāṯān", "yemini bozmayı âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِحْنَاثَتَان",
+        "miḥnāṯatān",
+        "yemini bozmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِحْنَاثُون",
+        "miḥnāṯūn",
+        "yemini bozmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِحْنَاثِين",
+        "miḥnāṯīn",
+        "yemini bozmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِحْنَاثَات",
+        "miḥnāṯāt",
+        "yemini bozmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِحْنِيث", "miḥnīṯ", "yemini bozmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِحْنِيثَة", "miḥnīṯa", "yemini bozmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِحْنِيثَان", "miḥnīṯān", "yemini bozmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِحْنِيثَتَان",
+        "miḥnīṯatān",
+        "yemini bozmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِحْنِيثُون",
+        "miḥnīṯūn",
+        "yemini bozmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِحْنِيثِين",
+        "miḥnīṯīn",
+        "yemini bozmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِحْنِيثَات",
+        "miḥnīṯāt",
+        "yemini bozmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "حَنِيث", "ḥanīṯ", "çok yemini bozan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "حَنِيثَة", "ḥanīṯa", "çok yemini bozan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "حَنِيثَان", "ḥanīṯān", "çok yemini bozan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "حَنِيثَتَان",
+        "ḥanīṯatān",
+        "çok yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنِيثُون",
+        "ḥanīṯūn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنِيثِين",
+        "ḥanīṯīn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنِيثَات",
+        "ḥanīṯāt",
+        "çok yemini bozanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "حَنَّث", "ḥannaṯ", "çok yemini bozan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "حَنَّثَة", "ḥannaṯa", "çok yemini bozan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "حَنَّثَان", "ḥannaṯān", "çok yemini bozan, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "حَنَّثَتَان",
+        "ḥannaṯatān",
+        "çok yemini bozan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "حَنَّثُون",
+        "ḥannaṯūn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "حَنَّثِين",
+        "ḥannaṯīn",
+        "çok yemini bozanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "حَنَّثَات",
+        "ḥannaṯāt",
+        "çok yemini bozanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "حَنْثِيّ", "ḥanṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "حَنَثِيّ", "ḥanaṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "حِنْثِيّ", "ḥinṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "حُنْثِيّ", "ḥunṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "حِنَاثِيّ", "ḥināṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "حَانِثِيّ", "ḥāniṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَحْنُوثِيّ", "maḥnūṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "حَنِيثِيّ", "ḥanīṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَحْنَثِيّ", "maḥnaṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَحْنِيثِيّ", "taḥnīṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَحَانُثِيّ", "taḥānuṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِحْنَاثِيّ", "ʾiḥnāṯiyy", "yemini bozma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِحْتِنَاثِيّ", "iḥtināṯiyy", "yemini bozma ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "حَنْثِيَّة", "ḥanṯiyya", "yemini bozanlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "حَنَثِيَّة", "ḥanaṯiyya", "yemini bozanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "حِنْثِيَّة", "ḥinṯiyya", "yemini bozanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "حُنْثِيَّة", "ḥunṯiyya", "yemini bozanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "حِنَاثِيَّة", "ḥināṯiyya", "yemini bozanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "حَانِثِيَّة", "ḥāniṯiyya", "yemini bozanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَحْنُوثِيَّة", "maḥnūṯiyya", "yemini bozanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "حَنِيثِيَّة", "ḥanīṯiyya", "yemini bozanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَحْنَثِيَّة", "maḥnaṯiyya", "yemini bozanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَحْنِيثِيَّة", "taḥnīṯiyya", "yemini bozanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَحَانُثِيَّة", "taḥānuṯiyya", "yemini bozanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِحْنَاثِيَّة", "ʾiḥnāṯiyya", "yemini bozanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِحْتِنَاثِيَّة", "iḥtināṯiyya", "yemini bozanlık", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "حَنَاث", "ḥanāṯ", "yemini bozma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "حُنُوث", "ḥunūṯ", "yemini bozma", "orta", ""],
+      ["fi'âl", "semâî aday", "حِنَاث", "ḥināṯ", "yemini bozma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "حُنْث", "ḥunṯ", "yemini bozma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "حَنَاثَة", "ḥanāṯa", "yemini bozma", "orta", ""],
+      ["fi'âle", "semâî aday", "حِنَاثَة", "ḥināṯa", "yemini bozma", "orta", ""],
+      ["fu'ûle", "semâî aday", "حُنُوثَة", "ḥunūṯa", "yemini bozma", "orta", ""],
+      ["fa'l", "semâî aday", "حَنْث", "ḥanṯ", "yemini bozma", "orta", ""],
+      ["fi'l", "semâî aday", "حِنْث", "ḥinṯ", "yemini bozma", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "حَانُوث", "ḥānūṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "حَنَثَة", "ḥanaṯa", "yemini bozma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "حُنَثَة", "ḥunaṯa", "yemini bozma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُحْنُوثَة", "ʾuḥnūṯa", "yemini bozma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "حَوْنَث", "ḥawnaṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "حَيْنَث", "ḥaynaṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "حَنْث", "ḥanṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fa'al", "semâî aday", "حَنَث", "ḥanaṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "حِنْث", "ḥinṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "حُنْث", "ḥunṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "حَنِيث", "ḥanīṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "حِنَث", "ḥinaṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "حُنُث", "ḥunuṯ", "yemini bozma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "حَنَاث", "ḥanāṯ", "yemini bozma türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "حَانُوثَة", "ḥānūṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "حَوْنَثَة", "ḥawnaṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "حَيْنَثَة", "ḥaynaṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "حَنْثَة", "ḥanṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "حَنَثَة", "ḥanaṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "حِنْثَة", "ḥinṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "حُنْثَة", "ḥunṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "حَنِيثَة", "ḥanīṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "حِنَثَة", "ḥinaṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "حُنُثَة", "ḥunuṯa", "yemini bozma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "حَنَاثَة", "ḥanāṯa", "yemini bozma türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَحْنَاث", "ʾaḥnāṯ", "yemini bozmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَحْنِثَة", "ʾaḥniṯa", "yemini bozmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَحَانِث", "ʾaḥāniṯ", "yemini bozmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَحَانِيث", "ʾaḥānīṯ", "yemini bozmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "حُنُوث", "ḥunūṯ", "yemini bozmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "حُنُث", "ḥunuṯ", "yemini bozmalar", "orta", ""],
+      ["fi'āl", "semâî aday", "حِنَاث", "ḥināṯ", "yemini bozmalar", "orta", ""],
+      ["fi'al", "semâî aday", "حِنَث", "ḥinaṯ", "yemini bozmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "حِنَثَة", "ḥinaṯa", "yemini bozmalar", "orta", ""],
+      ["fu'al", "semâî aday", "حُنَث", "ḥunaṯ", "yemini bozmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "حُنَثاء", "ḥunaṯāʾ", "yemini bozmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "حَنَثَة", "ḥanaṯa", "yemini bozmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "حُنَّاث", "ḥunnāṯ", "yemini bozmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "حَنَاث", "ḥanāṯ", "yemini bozmalar", "orta", ""],
+      ["fa'al", "semâî aday", "حَنَث", "ḥanaṯ", "yemini bozmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَحَانِث", "maḥāniṯ", "yemini bozmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَحَانِيث", "maḥānīṯ", "yemini bozmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "حَوَانِث", "ḥawāniṯ", "yemini bozmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَحْنُث", "ʾaḥnuṯ", "yemini bozmalar", "orta", ""],
+      ["fu''al", "semâî aday", "حُنَّث", "ḥunnaṯ", "yemini bozmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "حَنَائِث", "ḥanāʾiṯ", "yemini bozmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "حُنَيْث", "ḥunayṯ", "yemini bozmalar", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَحْنَاثَات", "ʾaḥnāṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَحْنِثَات", "ʾaḥniṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَحَانِثَات", "ʾaḥāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَحَانِيثَات", "ʾaḥānīṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "حُنُوثَات", "ḥunūṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "حُنُثَات", "ḥunuṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "حِنَاثَات", "ḥināṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "حِنَثَات", "ḥinaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "حِنَثَات", "ḥinaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "حُنَثَات", "ḥunaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "حُنَثاآت", "ḥunaṯāʾāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "حَنَثَات", "ḥanaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "حُنَّاثَات", "ḥunnāṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "حَنَاثَات", "ḥanāṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "حَنَثَات", "ḥanaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَحَانِثَات", "maḥāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَحَانِيثَات", "maḥānīṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "حَوَانِثَات", "ḥawāniṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَحْنُثَات", "ʾaḥnuṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "حُنَّثَات", "ḥunnaṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "حَنَائِثَات", "ḥanāʾiṯāt", "yemini bozmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "حُنَيْثَات", "ḥunayṯāt", "yemini bozmalar topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -864,588 +2141,23 @@
       "boy": 57
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
+  "muhassas": {
+    "kitap": "النخل",
+    "bab": "الزيادة",
+    "kok_gecis": 6.0,
+    "kitapta_gecis": 5.0,
+    "zenginlesme": 4.72
   },
-  "kelimeler": [
-    {
-      "kelime": "تَحْنَثْ",
-      "kok": "حنث",
-      "lemma": "تَحْنَثْ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "38:44",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "yemin bozma",
-        "lemma": "yemin bozma",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ٱلْحِنثِ",
-      "kok": "حنث",
-      "lemma": "حِنث",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "56:46",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "günah",
-        "lemma": "günah",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 1,
-      "isim": 1
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": {
-    "ad": "Beyân",
-    "ayrim": "yemini boz",
-    "acilim": "حنث := Beyân(ayrım: yemini boz)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Beyân",
-    "kelimeler": [
+  "prototip": {
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
       {
-        "lemma": "تَحْنَثْ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Muzâri"],
-        "adet": 1,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      },
-      {
-        "lemma": "حِنث",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fi'al ; cem‘-i mükesser (aday) · fu''al (yalnız aday eşleşme)"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "بلغ الغلام الحنث \" وكانوا يصرون على الحنث العظيم \" وهو الذنب، استعير من حنث الحانث الذي هو نقيض بره. وهو يتحنث من القبيح: يتحرج ويتأثم \" وكان رسول الله صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يتحنث بحراء \" أي يتعبد ويتأثم. وقالوا: تحنث بصلتك وبرك ويجوز أن تعاقب الثاء الفاء من التحنف.",
+        "prototipe_benzerlik": 0.816,
+        "halka": "yakın"
       }
-    ]
+    ],
+    "ortalama_benzerlik": 0.816
   }
 }

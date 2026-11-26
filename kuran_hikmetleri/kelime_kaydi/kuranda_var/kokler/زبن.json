@@ -1,813 +1,1708 @@
 {
   "kok": "زبن",
+  "tur": "fiil",
+  "tur_guven": "orta",
+  "tur_dayanak": ["lugat-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Temas",
+  "baz_ayrim": "it",
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "it",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "it",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "زَبْن", "zabn", "itme", "orta", ""],
-      [1, "زِبْن", "zibn", "itme", "orta", ""],
-      [2, "زُبْن", "zubn", "itme", "orta", ""],
-      [3, "زَبَن", "zaban", "itme", "orta", ""],
-      [4, "زِبَن", "ziban", "itme", "orta", ""],
-      [5, "زُبُن", "zubun", "itme", "orta", ""],
-      [6, "زُبُون", "zubūn", "itme", "orta", ""],
-      [7, "زِبَان", "zibān", "itme", "orta", ""],
-      [8, "زُبَان", "zubān", "itme", "orta", ""],
-      [9, "زَبَان", "zabān", "itme", "orta", ""],
-      [10, "زَبَانَة", "zabāna", "itme", "orta", ""],
-      [11, "زُبُونَة", "zubūna", "itme", "orta", ""],
-      [12, "زِبَانَة", "zibāna", "itme", "orta", ""],
-      [13, "زَبِين", "zabīn", "itme", "orta", ""],
-      [14, "زَبُون", "zabūn", "itme", "orta", ""],
-      [15, "زَبَنَان", "zabanān", "itme", "orta", ""],
-      [16, "زُبْنَان", "zubnān", "itme", "orta", ""],
-      [17, "زِبْنَان", "zibnān", "itme", "orta", ""],
-      [18, "زَبْنَى", "zabnā", "itme", "orta", ""],
-      [19, "زُبْنَى", "zubnā", "itme", "orta", ""],
-      [20, "زِبْنَى", "zibnā", "itme", "orta", ""],
-      [21, "زَبَنَة", "zabana", "itme", "orta", ""],
-      [22, "زِبَنَة", "zibana", "itme", "orta", ""],
-      [23, "زَبْنُونَة", "zabnūna", "itme", "orta", ""],
-      [24, "تُزْبُون", "tuzbūn", "itme", "orta", ""],
-      [25, "تَزْبِنَة", "tazbina", "itme", "orta", ""],
-      [26, "تَزْبَنَة", "tazbana", "itme", "orta", ""],
-      [27, "مَزْبُنَة", "mazbuna", "itme", "orta", ""],
-      [28, "مَزْبِنَة", "mazbina", "itme", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَزْبِين", "tazbīn", "çokça itme", "orta", ""],
-      [30, "تَزْبِنَة", "tazbina", "çokça itme", "orta", ""],
-      [31, "زِبِّان", "zibbān", "çokça itme", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَزْبِينَة", "tazbīna", "bir kere çokça itme", "orta", ""],
-      [33, "زِبِّانَة", "zibbāna", "bir kere çokça itme", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُزَبِّن", "muzabbin", "çokça iten", "orta", ""],
-      [35, "مُزَبِّنَة", "muzabbina", "çokça iten, müennes", "orta", ""],
-      [36, "مُزَبِّنَان", "muzabbinān", "çokça iten, iki", "orta", ""],
-      [37, "مُزَبِّنَتَان", "muzabbinatān", "çokça iten, iki, müennes", "orta", ""],
-      [38, "مُزَبِّنُون", "muzabbinūn", "çokça itenler", "orta", ""],
-      [39, "مُزَبِّنِين", "muzabbinīn", "çokça itenler", "orta", ""],
-      [40, "مُزَبِّنَات", "muzabbināt", "çokça itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُزَبَّن", "muzabban", "çokça itilen", "orta", ""],
-      [42, "مُزَبَّنَة", "muzabbana", "çokça itilen, müennes", "orta", ""],
-      [43, "مُزَبَّنَان", "muzabbanān", "çokça itilen, iki", "orta", ""],
-      [44, "مُزَبَّنَتَان", "muzabbanatān", "çokça itilen, iki, müennes", "orta", ""],
-      [45, "مُزَبَّنُون", "muzabbanūn", "çokça itilenler", "orta", ""],
-      [46, "مُزَبَّنِين", "muzabbanīn", "çokça itilenler", "orta", ""],
-      [47, "مُزَبَّنَات", "muzabbanāt", "çokça itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُزَبَّن", "muzabban", "çokça itme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُزَابَنَة", "muzābana", "biriyle karşılıklı itme", "orta", ""],
-      [50, "زِبَان", "zibān", "biriyle karşılıklı itme", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "زِبَانَة", "zibāna", "bir kere biriyle karşılıklı itme", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُزَابِن", "muzābin", "biriyle karşılıklı iten", "orta", ""],
-      [53, "مُزَابِنَة", "muzābina", "biriyle karşılıklı iten, müennes", "orta", ""],
-      [54, "مُزَابِنَان", "muzābinān", "biriyle karşılıklı iten, iki", "orta", ""],
-      [55, "مُزَابِنَتَان", "muzābinatān", "biriyle karşılıklı iten, iki, müennes", "orta", ""],
-      [56, "مُزَابِنُون", "muzābinūn", "biriyle karşılıklı itenler", "orta", ""],
-      [57, "مُزَابِنِين", "muzābinīn", "biriyle karşılıklı itenler", "orta", ""],
-      [58, "مُزَابِنَات", "muzābināt", "biriyle karşılıklı itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُزَابَن", "muzāban", "biriyle karşılıklı itilen", "orta", ""],
-      [60, "مُزَابَنَة", "muzābana", "biriyle karşılıklı itilen, müennes", "orta", ""],
-      [61, "مُزَابَنَان", "muzābanān", "biriyle karşılıklı itilen, iki", "orta", ""],
-      [62, "مُزَابَنَتَان", "muzābanatān", "biriyle karşılıklı itilen, iki, müennes", "orta", ""],
-      [63, "مُزَابَنُون", "muzābanūn", "biriyle karşılıklı itilenler", "orta", ""],
-      [64, "مُزَابَنِين", "muzābanīn", "biriyle karşılıklı itilenler", "orta", ""],
-      [65, "مُزَابَنَات", "muzābanāt", "biriyle karşılıklı itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُزَابَن", "muzāban", "biriyle karşılıklı itme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِزْبَان", "ʾizbān", "ittirme", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِزْبَانَة", "ʾizbāna", "bir kere ittirme", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُزْبِن", "muzbin", "ittiren", "orta", ""],
-      [70, "مُزْبِنَة", "muzbina", "ittiren, müennes", "orta", ""],
-      [71, "مُزْبِنَان", "muzbinān", "ittiren, iki", "orta", ""],
-      [72, "مُزْبِنَتَان", "muzbinatān", "ittiren, iki, müennes", "orta", ""],
-      [73, "مُزْبِنُون", "muzbinūn", "ittirenler", "orta", ""],
-      [74, "مُزْبِنِين", "muzbinīn", "ittirenler", "orta", ""],
-      [75, "مُزْبِنَات", "muzbināt", "ittirenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُزْبَن", "muzban", "ittirilen", "orta", ""],
-      [77, "مُزْبَنَة", "muzbana", "ittirilen, müennes", "orta", ""],
-      [78, "مُزْبَنَان", "muzbanān", "ittirilen, iki", "orta", ""],
-      [79, "مُزْبَنَتَان", "muzbanatān", "ittirilen, iki, müennes", "orta", ""],
-      [80, "مُزْبَنُون", "muzbanūn", "ittirilenler", "orta", ""],
-      [81, "مُزْبَنِين", "muzbanīn", "ittirilenler", "orta", ""],
-      [82, "مُزْبَنَات", "muzbanāt", "ittirilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُزْبَن", "muzban", "ittirme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَزَبُّن", "tazabbun", "kendini zorlayarak itme", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَزَبُّنَة", "tazabbuna", "bir kere kendini zorlayarak itme", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَزَبِّن", "mutazabbin", "kendini zorlayarak iten", "orta", ""],
-      [87, "مُتَزَبِّنَة", "mutazabbina", "kendini zorlayarak iten, müennes", "orta", ""],
-      [88, "مُتَزَبِّنَان", "mutazabbinān", "kendini zorlayarak iten, iki", "orta", ""],
-      [89, "مُتَزَبِّنَتَان", "mutazabbinatān", "kendini zorlayarak iten, iki, müennes", "orta", ""],
-      [90, "مُتَزَبِّنُون", "mutazabbinūn", "kendini zorlayarak itenler", "orta", ""],
-      [91, "مُتَزَبِّنِين", "mutazabbinīn", "kendini zorlayarak itenler", "orta", ""],
-      [92, "مُتَزَبِّنَات", "mutazabbināt", "kendini zorlayarak itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَزَبَّن", "mutazabban", "kendini zorlayarak itilen", "orta", ""],
-      [94, "مُتَزَبَّنَة", "mutazabbana", "kendini zorlayarak itilen, müennes", "orta", ""],
-      [95, "مُتَزَبَّنَان", "mutazabbanān", "kendini zorlayarak itilen, iki", "orta", ""],
-      [96, "مُتَزَبَّنَتَان", "mutazabbanatān", "kendini zorlayarak itilen, iki, müennes", "orta", ""],
-      [97, "مُتَزَبَّنُون", "mutazabbanūn", "kendini zorlayarak itilenler", "orta", ""],
-      [98, "مُتَزَبَّنِين", "mutazabbanīn", "kendini zorlayarak itilenler", "orta", ""],
-      [99, "مُتَزَبَّنَات", "mutazabbanāt", "kendini zorlayarak itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَزَبَّن", "mutazabban", "kendini zorlayarak itme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَزَابُن", "tazābun", "birbirine itme", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَزَابُنَة", "tazābuna", "bir kere birbirine itme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَزَابِن", "mutazābin", "birbirine iten", "orta", ""],
-      [104, "مُتَزَابِنَة", "mutazābina", "birbirine iten, müennes", "orta", ""],
-      [105, "مُتَزَابِنَان", "mutazābinān", "birbirine iten, iki", "orta", ""],
-      [106, "مُتَزَابِنَتَان", "mutazābinatān", "birbirine iten, iki, müennes", "orta", ""],
-      [107, "مُتَزَابِنُون", "mutazābinūn", "birbirine itenler", "orta", ""],
-      [108, "مُتَزَابِنِين", "mutazābinīn", "birbirine itenler", "orta", ""],
-      [109, "مُتَزَابِنَات", "mutazābināt", "birbirine itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَزَابَن", "mutazāban", "birbirine itilen", "orta", ""],
-      [111, "مُتَزَابَنَة", "mutazābana", "birbirine itilen, müennes", "orta", ""],
-      [112, "مُتَزَابَنَان", "mutazābanān", "birbirine itilen, iki", "orta", ""],
-      [113, "مُتَزَابَنَتَان", "mutazābanatān", "birbirine itilen, iki, müennes", "orta", ""],
-      [114, "مُتَزَابَنُون", "mutazābanūn", "birbirine itilenler", "orta", ""],
-      [115, "مُتَزَابَنِين", "mutazābanīn", "birbirine itilenler", "orta", ""],
-      [116, "مُتَزَابَنَات", "mutazābanāt", "birbirine itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَزَابَن", "mutazāban", "birbirine itme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْزِبَان", "inzibān", "itilme", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْزِبَانَة", "inzibāna", "bir kere itilme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْزَبِن", "munzabin", "itilen", "orta", ""],
-      [121, "مُنْزَبِنَة", "munzabina", "itilen, müennes", "orta", ""],
-      [122, "مُنْزَبِنَان", "munzabinān", "itilen, iki", "orta", ""],
-      [123, "مُنْزَبِنَتَان", "munzabinatān", "itilen, iki, müennes", "orta", ""],
-      [124, "مُنْزَبِنُون", "munzabinūn", "itilenler", "orta", ""],
-      [125, "مُنْزَبِنِين", "munzabinīn", "itilenler", "orta", ""],
-      [126, "مُنْزَبِنَات", "munzabināt", "itilenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْزَبَن", "munzaban", "itilen", "orta", ""],
-      [128, "مُنْزَبَنَة", "munzabana", "itilen, müennes", "orta", ""],
-      [129, "مُنْزَبَنَان", "munzabanān", "itilen, iki", "orta", ""],
-      [130, "مُنْزَبَنَتَان", "munzabanatān", "itilen, iki, müennes", "orta", ""],
-      [131, "مُنْزَبَنُون", "munzabanūn", "itilenler", "orta", ""],
-      [132, "مُنْزَبَنِين", "munzabanīn", "itilenler", "orta", ""],
-      [133, "مُنْزَبَنَات", "munzabanāt", "itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْزَبَن", "munzaban", "itilme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِزْدِبَان", "izdibān", "kendisi için itme", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِزْدِبَانَة", "izdibāna", "bir kere kendisi için itme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُزْدَبِن", "muzdabin", "kendisi için iten", "orta", ""],
-      [139, "مُزْدَبِنَة", "muzdabina", "kendisi için iten, müennes", "orta", ""],
-      [140, "مُزْدَبِنَان", "muzdabinān", "kendisi için iten, iki", "orta", ""],
-      [141, "مُزْدَبِنَتَان", "muzdabinatān", "kendisi için iten, iki, müennes", "orta", ""],
-      [142, "مُزْدَبِنُون", "muzdabinūn", "kendisi için itenler", "orta", ""],
-      [143, "مُزْدَبِنِين", "muzdabinīn", "kendisi için itenler", "orta", ""],
-      [144, "مُزْدَبِنَات", "muzdabināt", "kendisi için itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُزْدَبَن", "muzdaban", "kendisi için itilen", "orta", ""],
-      [146, "مُزْدَبَنَة", "muzdabana", "kendisi için itilen, müennes", "orta", ""],
-      [147, "مُزْدَبَنَان", "muzdabanān", "kendisi için itilen, iki", "orta", ""],
-      [148, "مُزْدَبَنَتَان", "muzdabanatān", "kendisi için itilen, iki, müennes", "orta", ""],
-      [149, "مُزْدَبَنُون", "muzdabanūn", "kendisi için itilenler", "orta", ""],
-      [150, "مُزْدَبَنِين", "muzdabanīn", "kendisi için itilenler", "orta", ""],
-      [151, "مُزْدَبَنَات", "muzdabanāt", "kendisi için itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُزْدَبَن", "muzdaban", "kendisi için itme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX": [
-      [499, "اِزْبِنَان", "izbinān", "iyiden iyiye itme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX": [
-      [500, "مُزْبَنّ", "muzbann", "iyiden iyiye iten", "kontrol", ""],
-      [501, "مُزْبَنَّة", "muzbanna", "iyiden iyiye iten, müennes", "kontrol", ""],
-      [502, "مُزْبَنَّان", "muzbannān", "iyiden iyiye iten, iki", "kontrol", ""],
-      [503, "مُزْبَنَّتَان", "muzbannatān", "iyiden iyiye iten, iki, müennes", "kontrol", ""],
-      [504, "مُزْبَنُّون", "muzbannūn", "iyiden iyiye itenler", "kontrol", ""],
-      [505, "مُزْبَنِّين", "muzbannīn", "iyiden iyiye itenler", "kontrol", ""],
-      [506, "مُزْبَنَّات", "muzbannāt", "iyiden iyiye itenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِزْبَان", "istizbān", "itmeyi isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِزْبَانَة", "istizbāna", "bir kere itmeyi isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَزْبِن", "mustazbin", "itmeyi isteyen", "orta", ""],
-      [179, "مُسْتَزْبِنَة", "mustazbina", "itmeyi isteyen, müennes", "orta", ""],
-      [180, "مُسْتَزْبِنَان", "mustazbinān", "itmeyi isteyen, iki", "orta", ""],
-      [181, "مُسْتَزْبِنَتَان", "mustazbinatān", "itmeyi isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَزْبِنُون", "mustazbinūn", "itmeyi isteyenler", "orta", ""],
-      [183, "مُسْتَزْبِنِين", "mustazbinīn", "itmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَزْبِنَات", "mustazbināt", "itmeyi isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَزْبَن", "mustazban", "itmesi istenen", "orta", ""],
-      [186, "مُسْتَزْبَنَة", "mustazbana", "itmesi istenen, müennes", "orta", ""],
-      [187, "مُسْتَزْبَنَان", "mustazbanān", "itmesi istenen, iki", "orta", ""],
-      [188, "مُسْتَزْبَنَتَان", "mustazbanatān", "itmesi istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَزْبَنُون", "mustazbanūn", "itmesi istenenler", "orta", ""],
-      [190, "مُسْتَزْبَنِين", "mustazbanīn", "itmesi istenenler", "orta", ""],
-      [191, "مُسْتَزْبَنَات", "mustazbanāt", "itmesi istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَزْبَن", "mustazban", "itmeyi isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI": [
-      [507, "اِزْبِينَان", "izbīnān", "büsbütün itme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI": [
-      [508, "مُزْبَانّ", "muzbānn", "büsbütün iten", "kontrol", ""],
-      [509, "مُزْبَانَّة", "muzbānna", "büsbütün iten, müennes", "kontrol", ""],
-      [510, "مُزْبَانَّان", "muzbānnān", "büsbütün iten, iki", "kontrol", ""],
-      [511, "مُزْبَانَّتَان", "muzbānnatān", "büsbütün iten, iki, müennes", "kontrol", ""],
-      [512, "مُزْبَانُّون", "muzbānnūn", "büsbütün itenler", "kontrol", ""],
-      [513, "مُزْبَانِّين", "muzbānnīn", "büsbütün itenler", "kontrol", ""],
-      [514, "مُزْبَانَّات", "muzbānnāt", "büsbütün itenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII": [
-      [515, "اِزْبِوْبَان", "izbiwbān", "aşırı itme", "orta", ""]
-    ],
-    "masdar · bâb XIII": [
-      [516, "اِزْبِوَّان", "izbiwwān", "aşırı itme", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "زَابِن", "zābin", "iten", "orta", ""],
-      [214, "زَابِنَة", "zābina", "iten, müennes", "orta", ""],
-      [215, "زَابِنَان", "zābinān", "iten, iki", "orta", ""],
-      [216, "زَابِنَتَان", "zābinatān", "iten, iki, müennes", "orta", ""],
-      [217, "زَابِنُون", "zābinūn", "itenler", "orta", ""],
-      [218, "زَابِنِين", "zābinīn", "itenler", "orta", ""],
-      [219, "زَابِنَات", "zābināt", "itenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَزْبُون", "mazbūn", "itilen", "orta", ""],
-      [221, "مَزْبُونَة", "mazbūna", "itilen, müennes", "orta", ""],
-      [222, "مَزْبُونَان", "mazbūnān", "itilen, iki", "orta", ""],
-      [223, "مَزْبُونَتَان", "mazbūnatān", "itilen, iki, müennes", "orta", ""],
-      [224, "مَزْبُونُون", "mazbūnūn", "itilenler", "orta", ""],
-      [225, "مَزْبُونِين", "mazbūnīn", "itilenler", "orta", ""],
-      [226, "مَزْبُونَات", "mazbūnāt", "itilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَزْبَن", "mazban", "itme yeri, vakti", "orta", ""],
-      [228, "مَزْبَنَان", "mazbanān", "itme yeri, vakti, iki", "orta", ""],
-      [229, "مَزْبِن", "mazbin", "itme yeri, vakti", "orta", ""],
-      [230, "مَزْبِنَان", "mazbinān", "itme yeri, vakti, iki", "orta", ""],
-      [231, "مَزْبَنَة", "mazbana", "itmenin bol olduğu yer", "orta", ""],
-      [232, "مَزْبَنَتَان", "mazbanatān", "itmenin bol olduğu yer, iki", "orta", ""],
-      [233, "مَزْبِنَة", "mazbina", "itmenin bol olduğu yer", "orta", ""],
-      [234, "مَزْبِنَتَان", "mazbinatān", "itmenin bol olduğu yer, iki", "orta", ""],
-      [247, "مَزْبُنَة", "mazbuna", "itme yeri, vakti", "orta", ""],
-      [248, "مَزْبُنَتَان", "mazbunatān", "itme yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِزْبَن", "mizban", "itme âleti", "orta", ""],
-      [236, "مِزْبَنَان", "mizbanān", "itme âleti, iki", "orta", ""],
-      [237, "مِزْبَان", "mizbān", "itme âleti", "orta", ""],
-      [238, "مِزْبَانَان", "mizbānān", "itme âleti, iki", "orta", ""],
-      [239, "مِزْبَنَة", "mizbana", "itme âleti", "orta", ""],
-      [240, "مِزْبَنَتَان", "mizbanatān", "itme âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَزْبَن", "ʾazban", "daha çok iten", "orta", ""],
-      [242, "أَزْبَنَان", "ʾazbanān", "daha çok iten, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "زُبْنَى", "zubnā", "daha çok iten", "orta", ""],
-      [244, "زُبْنَيَان", "zubnayān", "daha çok iten, iki", "orta", ""],
-      [245, "زَبْنَاء", "zabnāʾ", "daha çok iten", "orta", ""],
-      [246, "زَبْنَاآن", "zabnāʾān", "daha çok iten, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "زُبَيْن", "zubayn", "azıcık itme", "orta", ""],
-      [250, "زُبَيْنَان", "zubaynān", "azıcık itme, iki", "orta", ""],
-      [251, "زُبَيْنَة", "zubayna", "azıcık itme", "orta", ""],
-      [252, "زُبَيْنَتَان", "zubaynatān", "azıcık itme, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَزْبَن", "mazban", "itme", "orta", ""],
-      [254, "مَزْبَنَان", "mazbanān", "itme, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "زَبْنَة", "zabna", "bir kere itme", "orta", ""],
-      [256, "زَبْنَتَان", "zabnatān", "bir kere itme, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "زِبْنَة", "zibna", "itme tarzı", "orta", ""],
-      [258, "زِبْنَتَان", "zibnatān", "itme tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "زَبِين", "zabīn", "her daim iten", "orta", ""],
-      [260, "زَبِينَة", "zabīna", "her daim iten, müennes", "orta", ""],
-      [261, "زَبِينَان", "zabīnān", "her daim iten, iki", "orta", ""],
-      [262, "زَبِينَتَان", "zabīnatān", "her daim iten, iki, müennes", "orta", ""],
-      [263, "زَبِينُون", "zabīnūn", "her daim itenler", "orta", ""],
-      [264, "زَبِينِين", "zabīnīn", "her daim itenler", "orta", ""],
-      [265, "زَبِينَات", "zabīnāt", "her daim itenler, müennes", "orta", ""],
-      [266, "زَبُون", "zabūn", "her daim iten", "orta", ""],
-      [267, "زَبُونَة", "zabūna", "her daim iten, müennes", "orta", ""],
-      [268, "زَبُونَان", "zabūnān", "her daim iten, iki", "orta", ""],
-      [269, "زَبُونَتَان", "zabūnatān", "her daim iten, iki, müennes", "orta", ""],
-      [270, "زَبُونُون", "zabūnūn", "her daim itenler", "orta", ""],
-      [271, "زَبُونِين", "zabūnīn", "her daim itenler", "orta", ""],
-      [272, "زَبُونَات", "zabūnāt", "her daim itenler, müennes", "orta", ""],
-      [273, "زَبِن", "zabin", "her daim iten", "orta", ""],
-      [274, "زَبِنَة", "zabina", "her daim iten, müennes", "orta", ""],
-      [275, "زَبِنَان", "zabinān", "her daim iten, iki", "orta", ""],
-      [276, "زَبِنَتَان", "zabinatān", "her daim iten, iki, müennes", "orta", ""],
-      [277, "زَبِنُون", "zabinūn", "her daim itenler", "orta", ""],
-      [278, "زَبِنِين", "zabinīn", "her daim itenler", "orta", ""],
-      [279, "زَبِنَات", "zabināt", "her daim itenler, müennes", "orta", ""],
-      [280, "زَبُن", "zabun", "her daim iten", "orta", ""],
-      [281, "زَبُنَة", "zabuna", "her daim iten, müennes", "orta", ""],
-      [282, "زَبُنَان", "zabunān", "her daim iten, iki", "orta", ""],
-      [283, "زَبُنَتَان", "zabunatān", "her daim iten, iki, müennes", "orta", ""],
-      [284, "زَبُنُون", "zabunūn", "her daim itenler", "orta", ""],
-      [285, "زَبُنِين", "zabunīn", "her daim itenler", "orta", ""],
-      [286, "زَبُنَات", "zabunāt", "her daim itenler, müennes", "orta", ""],
-      [287, "زَبَن", "zaban", "her daim iten", "orta", ""],
-      [288, "زَبَنَة", "zabana", "her daim iten, müennes", "orta", ""],
-      [289, "زَبَنَان", "zabanān", "her daim iten, iki", "orta", ""],
-      [290, "زَبَنَتَان", "zabanatān", "her daim iten, iki, müennes", "orta", ""],
-      [291, "زَبَنُون", "zabanūn", "her daim itenler", "orta", ""],
-      [292, "زَبَنِين", "zabanīn", "her daim itenler", "orta", ""],
-      [293, "زَبَنَات", "zabanāt", "her daim itenler, müennes", "orta", ""],
-      [294, "زَبْن", "zabn", "her daim iten", "orta", ""],
-      [295, "زَبْنَة", "zabna", "her daim iten, müennes", "orta", ""],
-      [296, "زَبْنَان", "zabnān", "her daim iten, iki", "orta", ""],
-      [297, "زَبْنَتَان", "zabnatān", "her daim iten, iki, müennes", "orta", ""],
-      [298, "زَبْنُون", "zabnūn", "her daim itenler", "orta", ""],
-      [299, "زَبْنِين", "zabnīn", "her daim itenler", "orta", ""],
-      [300, "زَبْنَات", "zabnāt", "her daim itenler, müennes", "orta", ""],
-      [301, "زُبُن", "zubun", "her daim iten", "orta", ""],
-      [302, "زُبُنَة", "zubuna", "her daim iten, müennes", "orta", ""],
-      [303, "زُبُنَان", "zubunān", "her daim iten, iki", "orta", ""],
-      [304, "زُبُنَتَان", "zubunatān", "her daim iten, iki, müennes", "orta", ""],
-      [305, "زُبُنُون", "zubunūn", "her daim itenler", "orta", ""],
-      [306, "زُبُنِين", "zubunīn", "her daim itenler", "orta", ""],
-      [307, "زُبُنَات", "zubunāt", "her daim itenler, müennes", "orta", ""],
-      [308, "زَبْنَان", "zabnān", "her daim iten", "orta", ""],
-      [309, "زَبْنَانَة", "zabnāna", "her daim iten, müennes", "orta", ""],
-      [310, "زَبْنَانَان", "zabnānān", "her daim iten, iki", "orta", ""],
-      [311, "زَبْنَانَتَان", "zabnānatān", "her daim iten, iki, müennes", "orta", ""],
-      [312, "زَبْنَانُون", "zabnānūn", "her daim itenler", "orta", ""],
-      [313, "زَبْنَانِين", "zabnānīn", "her daim itenler", "orta", ""],
-      [314, "زَبْنَانَات", "zabnānāt", "her daim itenler, müennes", "orta", ""],
-      [315, "زُبَان", "zubān", "her daim iten", "orta", ""],
-      [316, "زُبَانَة", "zubāna", "her daim iten, müennes", "orta", ""],
-      [317, "زُبَانَان", "zubānān", "her daim iten, iki", "orta", ""],
-      [318, "زُبَانَتَان", "zubānatān", "her daim iten, iki, müennes", "orta", ""],
-      [319, "زُبَانُون", "zubānūn", "her daim itenler", "orta", ""],
-      [320, "زُبَانِين", "zubānīn", "her daim itenler", "orta", ""],
-      [321, "زُبَانَات", "zubānāt", "her daim itenler, müennes", "orta", ""],
-      [322, "زَبَان", "zabān", "her daim iten", "orta", ""],
-      [323, "زَبَانَة", "zabāna", "her daim iten, müennes", "orta", ""],
-      [324, "زَبَانَان", "zabānān", "her daim iten, iki", "orta", ""],
-      [325, "زَبَانَتَان", "zabānatān", "her daim iten, iki, müennes", "orta", ""],
-      [326, "زَبَانُون", "zabānūn", "her daim itenler", "orta", ""],
-      [327, "زَبَانِين", "zabānīn", "her daim itenler", "orta", ""],
-      [328, "زَبَانَات", "zabānāt", "her daim itenler, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "زَبَّان", "zabbān", "işi itme olan", "orta", ""],
-      [330, "زَبَّانَة", "zabbāna", "işi itme olan, müennes", "orta", ""],
-      [331, "زَبَّانَان", "zabbānān", "işi itme olan, iki", "orta", ""],
-      [332, "زَبَّانَتَان", "zabbānatān", "işi itme olan, iki, müennes", "orta", ""],
-      [333, "زَبَّانُون", "zabbānūn", "işi itme olanlar", "orta", ""],
-      [334, "زَبَّانِين", "zabbānīn", "işi itme olanlar", "orta", ""],
-      [335, "زَبَّانَات", "zabbānāt", "işi itme olanlar, müennes", "orta", ""],
-      [336, "زَبَّانَة", "zabbāna", "pek çok iten", "orta", ""],
-      [337, "زَبَّانَتَان", "zabbānatān", "pek çok iten, iki", "orta", ""],
-      [338, "زَبَّانَات", "zabbānāt", "pek çok itenler, müennes", "orta", ""],
-      [339, "زَبُون", "zabūn", "çok iten", "orta", ""],
-      [340, "زَبُونَة", "zabūna", "çok iten, müennes", "orta", ""],
-      [341, "زَبُونَان", "zabūnān", "çok iten, iki", "orta", ""],
-      [342, "زَبُونَتَان", "zabūnatān", "çok iten, iki, müennes", "orta", ""],
-      [343, "زَبُونُون", "zabūnūn", "çok itenler", "orta", ""],
-      [344, "زَبُونِين", "zabūnīn", "çok itenler", "orta", ""],
-      [345, "زَبُونَات", "zabūnāt", "çok itenler, müennes", "orta", ""],
-      [346, "زَبُّون", "zabbūn", "pek çok iten", "orta", ""],
-      [347, "زَبُّونَة", "zabbūna", "pek çok iten, müennes", "orta", ""],
-      [348, "زَبُّونَان", "zabbūnān", "pek çok iten, iki", "orta", ""],
-      [349, "زَبُّونَتَان", "zabbūnatān", "pek çok iten, iki, müennes", "orta", ""],
-      [350, "زَبُّونُون", "zabbūnūn", "pek çok itenler", "orta", ""],
-      [351, "زَبُّونِين", "zabbūnīn", "pek çok itenler", "orta", ""],
-      [352, "زَبُّونَات", "zabbūnāt", "pek çok itenler, müennes", "orta", ""],
-      [353, "زِبِّين", "zibbīn", "itmede aşırı giden", "orta", ""],
-      [354, "زِبِّينَة", "zibbīna", "itmede aşırı giden, müennes", "orta", ""],
-      [355, "زِبِّينَان", "zibbīnān", "itmede aşırı giden, iki", "orta", ""],
-      [356, "زِبِّينَتَان", "zibbīnatān", "itmede aşırı giden, iki, müennes", "orta", ""],
-      [357, "زِبِّينُون", "zibbīnūn", "itmede aşırı gidenler", "orta", ""],
-      [358, "زِبِّينِين", "zibbīnīn", "itmede aşırı gidenler", "orta", ""],
-      [359, "زِبِّينَات", "zibbīnāt", "itmede aşırı gidenler, müennes", "orta", ""],
-      [360, "زُبَّان", "zubbān", "son derece iten", "orta", ""],
-      [361, "زُبَّانَة", "zubbāna", "son derece iten, müennes", "orta", ""],
-      [362, "زُبَّانَان", "zubbānān", "son derece iten, iki", "orta", ""],
-      [363, "زُبَّانَتَان", "zubbānatān", "son derece iten, iki, müennes", "orta", ""],
-      [364, "زُبَّانُون", "zubbānūn", "son derece itenler", "orta", ""],
-      [365, "زُبَّانِين", "zubbānīn", "son derece itenler", "orta", ""],
-      [366, "زُبَّانَات", "zubbānāt", "son derece itenler, müennes", "orta", ""],
-      [367, "مِزْبَان", "mizbān", "itmeyi âdet edinmiş", "orta", ""],
-      [368, "مِزْبَانَة", "mizbāna", "itmeyi âdet edinmiş, müennes", "orta", ""],
-      [369, "مِزْبَانَان", "mizbānān", "itmeyi âdet edinmiş, iki", "orta", ""],
-      [370, "مِزْبَانَتَان", "mizbānatān", "itmeyi âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِزْبَانُون", "mizbānūn", "itmeyi âdet edinmişler", "orta", ""],
-      [372, "مِزْبَانِين", "mizbānīn", "itmeyi âdet edinmişler", "orta", ""],
-      [373, "مِزْبَانَات", "mizbānāt", "itmeyi âdet edinmişler, müennes", "orta", ""],
-      [374, "مِزْبِين", "mizbīn", "itmeye düşkün", "orta", ""],
-      [375, "مِزْبِينَة", "mizbīna", "itmeye düşkün, müennes", "orta", ""],
-      [376, "مِزْبِينَان", "mizbīnān", "itmeye düşkün, iki", "orta", ""],
-      [377, "مِزْبِينَتَان", "mizbīnatān", "itmeye düşkün, iki, müennes", "orta", ""],
-      [378, "مِزْبِينُون", "mizbīnūn", "itmeye düşkünler", "orta", ""],
-      [379, "مِزْبِينِين", "mizbīnīn", "itmeye düşkünler", "orta", ""],
-      [380, "مِزْبِينَات", "mizbīnāt", "itmeye düşkünler, müennes", "orta", ""],
-      [381, "زَبِين", "zabīn", "çok iten", "orta", ""],
-      [382, "زَبِينَة", "zabīna", "çok iten, müennes", "orta", ""],
-      [383, "زَبِينَان", "zabīnān", "çok iten, iki", "orta", ""],
-      [384, "زَبِينَتَان", "zabīnatān", "çok iten, iki, müennes", "orta", ""],
-      [385, "زَبِينُون", "zabīnūn", "çok itenler", "orta", ""],
-      [386, "زَبِينِين", "zabīnīn", "çok itenler", "orta", ""],
-      [387, "زَبِينَات", "zabīnāt", "çok itenler, müennes", "orta", ""],
-      [388, "زَبَّن", "zabban", "çok iten", "orta", ""],
-      [389, "زَبَّنَة", "zabbana", "çok iten, müennes", "orta", ""],
-      [390, "زَبَّنَان", "zabbanān", "çok iten, iki", "orta", ""],
-      [391, "زَبَّنَتَان", "zabbanatān", "çok iten, iki, müennes", "orta", ""],
-      [392, "زَبَّنُون", "zabbanūn", "çok itenler", "orta", ""],
-      [393, "زَبَّنِين", "zabbanīn", "çok itenler", "orta", ""],
-      [394, "زَبَّنَات", "zabbanāt", "çok itenler, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "زَبْنِيّ", "zabniyy", "itme ile ilgili", "orta", ""],
-      [397, "زَبَنِيّ", "zabaniyy", "itme ile ilgili", "orta", ""],
-      [399, "زِبْنِيّ", "zibniyy", "itme ile ilgili", "orta", ""],
-      [401, "زُبْنِيّ", "zubniyy", "itme ile ilgili", "orta", ""],
-      [403, "زِبَانِيّ", "zibāniyy", "itme ile ilgili", "orta", ""],
-      [405, "زَابِنِيّ", "zābiniyy", "itme ile ilgili", "orta", ""],
-      [407, "مَزْبُونِيّ", "mazbūniyy", "itme ile ilgili", "orta", ""],
-      [409, "زَبِينِيّ", "zabīniyy", "itme ile ilgili", "orta", ""],
-      [411, "مَزْبَنِيّ", "mazbaniyy", "itme ile ilgili", "orta", ""],
-      [413, "تَزْبِينِيّ", "tazbīniyy", "itme ile ilgili", "orta", ""],
-      [415, "تَزَابُنِيّ", "tazābuniyy", "itme ile ilgili", "orta", ""],
-      [417, "إِزْبَانِيّ", "ʾizbāniyy", "itme ile ilgili", "orta", ""],
-      [419, "اِزْدِبَانِيّ", "izdibāniyy", "itme ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "زَبْنِيَّة", "zabniyya", "itenlik", "orta", ""],
-      [398, "زَبَنِيَّة", "zabaniyya", "itenlik", "orta", ""],
-      [400, "زِبْنِيَّة", "zibniyya", "itenlik", "orta", ""],
-      [402, "زُبْنِيَّة", "zubniyya", "itenlik", "orta", ""],
-      [404, "زِبَانِيَّة", "zibāniyya", "itenlik", "orta", ""],
-      [406, "زَابِنِيَّة", "zābiniyya", "itenlik", "orta", ""],
-      [408, "مَزْبُونِيَّة", "mazbūniyya", "itenlik", "orta", ""],
-      [410, "زَبِينِيَّة", "zabīniyya", "itenlik", "orta", ""],
-      [412, "مَزْبَنِيَّة", "mazbaniyya", "itenlik", "orta", ""],
-      [414, "تَزْبِينِيَّة", "tazbīniyya", "itenlik", "orta", ""],
-      [416, "تَزَابُنِيَّة", "tazābuniyya", "itenlik", "orta", ""],
-      [418, "إِزْبَانِيَّة", "ʾizbāniyya", "itenlik", "orta", ""],
-      [420, "اِزْدِبَانِيَّة", "izdibāniyya", "itenlik", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "زَبَان", "zabān", "itme", "orta", ""],
-      [422, "زُبُون", "zubūn", "itme", "orta", ""],
-      [423, "زِبَان", "zibān", "itme", "orta", ""],
-      [424, "زُبْن", "zubn", "itme", "orta", ""],
-      [425, "زَبَانَة", "zabāna", "itme", "orta", ""],
-      [426, "زِبَانَة", "zibāna", "itme", "orta", ""],
-      [427, "زُبُونَة", "zubūna", "itme", "orta", ""],
-      [428, "زَبْن", "zabn", "itme", "orta", ""],
-      [429, "زِبْن", "zibn", "itme", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "زَابُون", "zābūn", "itme türünden şey", "orta", ""],
-      [432, "زَبَنَة", "zabana", "itme türünden şey", "orta", ""],
-      [433, "زُبَنَة", "zubana", "itme türünden şey", "orta", ""],
-      [434, "أُزْبُونَة", "ʾuzbūna", "itme türünden şey", "orta", ""],
-      [435, "زَوْبَن", "zawban", "itme türünden şey", "orta", ""],
-      [437, "زَيْبَن", "zayban", "itme türünden şey", "orta", ""],
-      [439, "زَبْن", "zabn", "itme türünden şey", "orta", ""],
-      [441, "زَبَن", "zaban", "itme türünden şey", "orta", ""],
-      [443, "زِبْن", "zibn", "itme türünden şey", "orta", ""],
-      [445, "زُبْن", "zubn", "itme türünden şey", "orta", ""],
-      [447, "زَبِين", "zabīn", "itme türünden şey", "orta", ""],
-      [449, "زِبَن", "ziban", "itme türünden şey", "orta", ""],
-      [451, "زُبُن", "zubun", "itme türünden şey", "orta", ""],
-      [453, "زَبَان", "zabān", "itme türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "زَابُونَة", "zābūna", "itme türünden bir tane", "orta", ""],
-      [436, "زَوْبَنَة", "zawbana", "itme türünden bir tane", "orta", ""],
-      [438, "زَيْبَنَة", "zaybana", "itme türünden bir tane", "orta", ""],
-      [440, "زَبْنَة", "zabna", "itme türünden bir tane", "orta", ""],
-      [442, "زَبَنَة", "zabana", "itme türünden bir tane", "orta", ""],
-      [444, "زِبْنَة", "zibna", "itme türünden bir tane", "orta", ""],
-      [446, "زُبْنَة", "zubna", "itme türünden bir tane", "orta", ""],
-      [448, "زَبِينَة", "zabīna", "itme türünden bir tane", "orta", ""],
-      [450, "زِبَنَة", "zibana", "itme türünden bir tane", "orta", ""],
-      [452, "زُبُنَة", "zubuna", "itme türünden bir tane", "orta", ""],
-      [454, "زَبَانَة", "zabāna", "itme türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَزْبَان", "ʾazbān", "itmeler", "orta", ""],
-      [456, "أَزْبِنَة", "ʾazbina", "itmeler", "orta", ""],
-      [457, "أَزَابِن", "ʾazābin", "itmeler", "orta", ""],
-      [458, "أَزَابِين", "ʾazābīn", "itmeler", "orta", ""],
-      [459, "زُبُون", "zubūn", "itmeler", "orta", ""],
-      [460, "زُبُن", "zubun", "itmeler", "orta", ""],
-      [461, "زِبَان", "zibān", "itmeler", "orta", ""],
-      [462, "زِبَن", "ziban", "itmeler", "orta", ""],
-      [463, "زِبَنَة", "zibana", "itmeler", "orta", ""],
-      [464, "زُبَن", "zuban", "itmeler", "orta", ""],
-      [465, "زُبَناء", "zubanāʾ", "itmeler", "orta", ""],
-      [466, "زَبَنَة", "zabana", "itmeler", "orta", ""],
-      [467, "زُبَّان", "zubbān", "itmeler", "orta", ""],
-      [468, "زَبَان", "zabān", "itmeler", "orta", ""],
-      [469, "زَبَن", "zaban", "itmeler", "orta", ""],
-      [470, "مَزَابِن", "mazābin", "itmeler", "orta", ""],
-      [471, "مَزَابِين", "mazābīn", "itmeler", "orta", ""],
-      [472, "زَوَابِن", "zawābin", "itmeler", "orta", ""],
-      [473, "أَزْبُن", "ʾazbun", "itmeler", "orta", ""],
-      [474, "زُبَّن", "zubban", "itmeler", "orta", ""],
-      [475, "زَبَائِن", "zabāʾin", "itmeler", "orta", ""],
-      [476, "زُبَيْن", "zubayn", "itmeler", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَزْبَانَات", "ʾazbānāt", "itmeler topluluğu", "orta", ""],
-      [478, "أَزْبِنَات", "ʾazbināt", "itmeler topluluğu", "orta", ""],
-      [479, "أَزَابِنَات", "ʾazābināt", "itmeler topluluğu", "orta", ""],
-      [480, "أَزَابِينَات", "ʾazābīnāt", "itmeler topluluğu", "orta", ""],
-      [481, "زُبُونَات", "zubūnāt", "itmeler topluluğu", "orta", ""],
-      [482, "زُبُنَات", "zubunāt", "itmeler topluluğu", "orta", ""],
-      [483, "زِبَانَات", "zibānāt", "itmeler topluluğu", "orta", ""],
-      [484, "زِبَنَات", "zibanāt", "itmeler topluluğu", "orta", ""],
-      [485, "زِبَنَات", "zibanāt", "itmeler topluluğu", "orta", ""],
-      [486, "زُبَنَات", "zubanāt", "itmeler topluluğu", "orta", ""],
-      [487, "زُبَناآت", "zubanāʾāt", "itmeler topluluğu", "orta", ""],
-      [488, "زَبَنَات", "zabanāt", "itmeler topluluğu", "orta", ""],
-      [489, "زُبَّانَات", "zubbānāt", "itmeler topluluğu", "orta", ""],
-      [490, "زَبَانَات", "zabānāt", "itmeler topluluğu", "orta", ""],
-      [491, "زَبَنَات", "zabanāt", "itmeler topluluğu", "orta", ""],
-      [492, "مَزَابِنَات", "mazābināt", "itmeler topluluğu", "orta", ""],
-      [493, "مَزَابِينَات", "mazābīnāt", "itmeler topluluğu", "orta", ""],
-      [494, "زَوَابِنَات", "zawābināt", "itmeler topluluğu", "orta", ""],
-      [495, "أَزْبُنَات", "ʾazbunāt", "itmeler topluluğu", "orta", ""],
-      [496, "زُبَّنَات", "zubbanāt", "itmeler topluluğu", "orta", ""],
-      [497, "زَبَائِنَات", "zabāʾināt", "itmeler topluluğu", "orta", ""],
-      [498, "زُبَيْنَات", "zubaynāt", "itmeler topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "زبن",
-      "turkce": "Zebn: itmek, kovmak; zebâniye: cehennem bekçileri"
-    },
-    "osmanlica_lugatler": {
-      "زَبانِيَة": {
-        "sorgular": ["zabaniae"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "زَبِنَ",
-        "metin": "(زَبِنَ) الزَّاءُ وَالْبَاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الدَّفْعِ. يُقَالُ نَاقَةٌ زَبُونٌ، إِذَا زَبَنَتْ حَالِبَهَا. وَالْحَرْبُ تَزْبِنُ النَّاسَ، إِذَا صَدَمَتْهُمْ. وَحَرْبٌ زَبُونٌ. وَرَجُلٌ ذُو زَبُّونَةٍ، إِذَا كَانَ مَانِعًا لِجَانِبِهِ دَفُوعًا عَنْ نَفْسِهِ. قَالَ:\nبِذَبِّي الذَّمَّ عَنْ حَسْبِي بِمَالِي ... وَزَبُّونَاتِ أَشْوَسَ تَيَّحَانِ\nوَيُقَالُ فِيهِ زَبُّونَةٌ، أَيْ كِبْرٌ، وَلَا يَكُونُ كَذَا إِلَّا وَهُوَ دَافِعٌ عَنْ نَفْسِهِ. وَالزَّبَانِيَةُ سُمُّوا بِذَلِكَ، لِأَنَّهُمْ يَدْفَعُونَ أَهْلَ النَّارِ إِلَى النَّارِ. فَأَمَّا الْمُزَابَنَةُ فَبَيْعُ الثَّمَرِ فِي رُءُوسِ النَّخْلِ، وَهُوَ الَّذِي جَاءَ الْحَدِيثُ بِالنَّهْيِ عَنْهُ. وَقَالَ أَهْلُ الْعِلْمِ: إِنَّهُ مِمَّا يَكُونُ بَعْدَ ذَلِكَ مِنَ النِّزَاعِ وَالْمُدَافَعَةِ. وَيَقُولُونَ إِنَّ الزَّبْنَ الْبُعْدُ. وَأَمَّا زُبَانَى الْعَقْرَبِ فَيَجُوزُ أَنْ يَكُونَ مِنْ هَذَا أَيْضًا، كَأَنَّهَا تَدْفَعُ عَنْ نَفْسِهَا بِهِ، وَيَجُوزُ أَنْ يَكُونَ شَاذًّا."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الزاي والباء",
-      "baslik": "زبن",
-      "mihveri": "اندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها. ومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].",
-      "sesler": "",
-      "tam_metin": "{سَنَدْعُ الزَّبَانِيَةَ} [العلق: 17]\n\"زُبَاني العقرب: قَرْنُها وقيل طرَف قَرْنها. والزَبُّونة كسَبُّورة - ويضم أوله أيضًا: العُنُق. والزابنة: الأكَمة التي شَرَعت في الوادي وانعرج عنها \".\n° المعنى المحوري\nاندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها.\nومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].\n° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن).\n(2/873)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "96:18:2:2",
-      "tur": {
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "زَّبَانِيَة": 1
-      },
-      "bicimler": {
-        "زَّبَانِيَةَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ZBN",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ZBN زبن BP – • HDAL • © SG | 24Mar2023 √ZBN “root” ▪ ZBN_1 ‘...’ ↗ ... ▪ ZBN_2 ‘...’ ↗ ... ▪ ZBN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to push, kick; to sell dates on the tree by estimating their quantity; to divert, keep good things away’. ▪ zabāniyaẗ is considered by some as a borrowing from either Akk or Syr – BAH2008 ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "زبانية",
-        "u": "زبانية",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "زَبَانِيَة • (zabāniya) m pl",
-        "g": ["Zabaniyah (Angels of Hell)"],
-        "r": ["zabāniya"],
-        "ipa": ["/za.baː.ni.ja/"],
-        "ds": [
-          ["en", "Zabaniyah", ""],
-          ["ms", "Zabaniah", ""],
-          ["ota", "زبانی", "zebani"]
-        ],
-        "k": "زبن",
-        "yol": "kök"
-      },
-      {
-        "w": "تزبين",
-        "u": "تزبين",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزَبِّينَ • (tazabbīna) (form I) /ta.zab.biː.na/\n# second-person feminine singular non-past active indicative of زَبَّ (zabba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazabbīna", "zabba"],
-        "yol": "müştak"
-      },
-      {
-        "w": "تزبون",
-        "u": "تزبون",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "تَزَبُّونَ • (tazabbūna) (form I) /ta.zab.buː.na/\n# second-person masculine plural non-past active indicative of زَبَّ (zabba)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tazabbūna", "zabba"],
-        "yol": "müştak"
-      }
-    ],
-    "renk_sozluk": {
-      "الزبانية": "azap melekleri"
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Zebine (زَبِنَ)",
-          "metin": "(زَبِنَ – Zebine) Zây, bâ ve nûn harfleri bir asıl teşkil edip defetmeye (itip uzaklaştırmaya) delâlet eder. Sağıcısını tepip iten dişi deve hakkında «نَاقَةٌ زَبُونٌ» (nâkatün zebûnün) tabiri istimal olunur. Harb insanları çarpıp sarstığında «الْحَرْبُ تَزْبِنُ النَّاسَ» denir; buradan hareketle çetin ve sarsıcı harbe «حَرْبٌ زَبُونٌ» (harbün zebûnün) adı verilir. Keza kendi tarafını muhafaza edip nefsini müdafaa ve düşmanı defeden kimse hakkında «رَجُلٌ ذُو زَبُّونَةٍ» (racülün zû zebbûnetin) tabiri kullanılır. Şair şöyle demiştir:\n«بِذَبِّي الذَّمَّ عَنْ حَسْبِي بِمَالِي ... وَزَبُّونَاتِ أَشْوَسَ تَيَّحَانِ»\n(Malımla şeref ve hasebime yönelecek yerilme ve ayıpları defetmemle ve başı dik, atılgan bir kimsenin şiddetli müdafaalarıyla...)\nYine bir kimsede «زَبُّونَةٌ» (zebbûne), yani kibir ve azamet bulunduğu söylenir; zira böyle bir kimse ancak nefsini (başkalarının müdahalesinden) defedici bir hâl üzere bulunur. Cehennem bekçileri olan «الزَّبَانِيَةُ» (Zebânîler) dahi bu isimle tesmiye olunmuşlardır; zira onlar cehennem ehlini ateşe doğru itip sürerler. «الْمُزَابَنَةُ» (müzâbene) ise hurma ağaçlarının başındaki (olgunlaşmamış) meyveyi satmak olup hadîs-i şerîfte kendisinden nehyedilen (yasaklanan) muamele budur. Ehl-i ilim bu isimlendirmenin sebebini, bu satışın ardından taraflar arasında vuku bulacak niza (çekişme) ve müdâfaaya (karşılıklı itişip kakışmaya) bağlamışlardır. Ayrıca «الزَّبْنُ» (zebn) kelimesinin bu'd (uzaklık) manasına geldiğini de söylerler. Akrebin kıskacına/boynuzuna verilen «زُبَانَى الْعَقْرَبِ» (zübânâ'l-akreb) tabirine gelince; bunun da bu asıldan gelmesi caizdir, sanki akrep onunla nefsini müdafaa ve düşmanı defeder; bununla birlikte şâz (kural dışı) bir kullanım olması da muhtemeldir."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Bir şeyin, başka bir şeyin içinden (veya içine doğru) şiddetle ve çıkıntı yapacak surette fırlayıp itilmesi/atılması; tıpkı vadide vasıflandırılan tepe (ekeme) gibi ki, onun şiddeti kalınlığı ve iriliği olup vadiyi istikametinden itip saptırmasıdır. Akrebin boynuzu/iğnesi gibi ki, hem kendisi hem de zehri bedene şiddetle nüfuz eder (ve bir arı bir kimseyi soktuğunda, o kimse arının soktuğu yerde bırakıp girdiği iğnesini, yani «زُبَاناها» (zübânâ) denilen uzvunu çıkaracak birini arar). Keza bedendeki boyun (unuk) gibi. Bu asıldan olarak: «زَبَنَتْ الناقةُ وَلَدها وحالبها» (ضرب – darabe babından): Dişi deve yavrusunu ve sağıcısını sefinâtı ile (sefinât: devenin çöktüğü vakit yere değen nasırlı kısımlarıdır; burada maksat dizidir) memesinden itip defetti. Harekelî olarak «الزَبَن» (ez-zeben): Gerdek/çadır perdesi (hacele) gibi ev/çadır biçiminde dikilmiş bir örtü/elbise (ki dışarıyı defeder ve perdeler) ve [Tâcü'l-Arûs'a göre] kenar, cihet, nahiye (kendisine doğru çekilinen, yani itilip yönelinen taraf) manasındadır. «الزبانيةُ» (Zebânîler): İnsanları itip sürenler, yani onları cehenneme doğru şiddetle defedenlerdir; müfredi «زِبْنِيَةٌ» (zibniye) veya «زِبْنِيّ» (zibnî) gelir. {سَنَدْعُ الزَّبَانِيَةَ} [Alak, 96/18] (\"Biz de zebanileri çağıracağız!\") ayet-i kerimesinde cehennem ehlini oraya itip atan melekler kastedilmiştir. Manevî istimalden olarak: «حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم» (Zebûn harb: İnsanları tepip çarpan, yani onlara toslayıp kendilerini iten çetin savaş) [Tâcü'l-Arûs]."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye Dönüş EtymArab ZBN زبن BP – • HDAL • © SG | 24Mar2023 √ZBN “kök” ▪ ZBN_1 ‘...’ ↗ ... ▪ ZBN_2 ‘...’ ↗ ... ▪ ZBN_3 ‘...’ ↗ ... ♦ Klasik Arapçada (BAH2008'e göre) semantik değer tayfı: ‘itmek, defetmek, tekmelemek; hurmayı ağaç üzerinde miktarını tahmin ederek satmak; yüz çevirmek, hayır ve iyilikleri uzak tutmak’. ▪ zabāniyaẗ (zebânîye) lafzı bazılarınca Akadca veya Süryaniceden müstear (ödünç alınmış) bir kelime olarak telakki olunur – BAH2008 ▪ … – . . – – Kaynaklar ; meta ; gramer ; İngilizce ; mefhum ; tarih ; kökendeşler ; münakaşa ; garp ; iştikaklar ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["Zebânîler (Cehennem Melekleri)"]
-        },
-        {},
-        {}
-      ]
-    },
-    "arabic_ontology": [
-      {
-        "id": "51277",
-        "arapca": ["زَبُونٌ", "عَمِيلٌ"],
-        "ingilizce": [],
-        "tanim": "شخص أو منظمة تشتري منتجات أو خدمات من محل أو مصنع مُعيَّن دونَ غيره وترتاده دائماً",
-        "misal": "عليكَ مُعاملة ال_ باحترام",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "زب",
+  "ses": {
     "harf": "ز",
+    "fasil": "زب",
     "mahrec": "esaliyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Zebn: itmek, kovmak; zebâniye: cehennem bekçileri",
+  "esas_manalar": "itmek{kovmak;Zebânî (cehennem bekçileri)}",
+  "mekayis": [
+    {
+      "baslik": "زَبِنَ",
+      "metin": "(زَبِنَ) الزَّاءُ وَالْبَاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الدَّفْعِ. يُقَالُ نَاقَةٌ زَبُونٌ، إِذَا زَبَنَتْ حَالِبَهَا. وَالْحَرْبُ تَزْبِنُ النَّاسَ، إِذَا صَدَمَتْهُمْ. وَحَرْبٌ زَبُونٌ. وَرَجُلٌ ذُو زَبُّونَةٍ، إِذَا كَانَ مَانِعًا لِجَانِبِهِ دَفُوعًا عَنْ نَفْسِهِ. قَالَ:\nبِذَبِّي الذَّمَّ عَنْ حَسْبِي بِمَالِي ... وَزَبُّونَاتِ أَشْوَسَ تَيَّحَانِ\nوَيُقَالُ فِيهِ زَبُّونَةٌ، أَيْ كِبْرٌ، وَلَا يَكُونُ كَذَا إِلَّا وَهُوَ دَافِعٌ عَنْ نَفْسِهِ. وَالزَّبَانِيَةُ سُمُّوا بِذَلِكَ، لِأَنَّهُمْ يَدْفَعُونَ أَهْلَ النَّارِ إِلَى النَّارِ. فَأَمَّا الْمُزَابَنَةُ فَبَيْعُ الثَّمَرِ فِي رُءُوسِ النَّخْلِ، وَهُوَ الَّذِي جَاءَ الْحَدِيثُ بِالنَّهْيِ عَنْهُ. وَقَالَ أَهْلُ الْعِلْمِ: إِنَّهُ مِمَّا يَكُونُ بَعْدَ ذَلِكَ مِنَ النِّزَاعِ وَالْمُدَافَعَةِ. وَيَقُولُونَ إِنَّ الزَّبْنَ الْبُعْدُ. وَأَمَّا زُبَانَى الْعَقْرَبِ فَيَجُوزُ أَنْ يَكُونَ مِنْ هَذَا أَيْضًا، كَأَنَّهَا تَدْفَعُ عَنْ نَفْسِهَا بِهِ، وَيَجُوزُ أَنْ يَكُونَ شَاذًّا.",
+      "baslik_tr": "Zebine (زَبِنَ)",
+      "metin_tr": "(زَبِنَ – Zebine) Zây, bâ ve nûn harfleri bir asıl teşkil edip defetmeye (itip uzaklaştırmaya) delâlet eder. Sağıcısını tepip iten dişi deve hakkında «نَاقَةٌ زَبُونٌ» (nâkatün zebûnün) tabiri istimal olunur. Harb insanları çarpıp sarstığında «الْحَرْبُ تَزْبِنُ النَّاسَ» denir; buradan hareketle çetin ve sarsıcı harbe «حَرْبٌ زَبُونٌ» (harbün zebûnün) adı verilir. Keza kendi tarafını muhafaza edip nefsini müdafaa ve düşmanı defeden kimse hakkında «رَجُلٌ ذُو زَبُّونَةٍ» (racülün zû zebbûnetin) tabiri kullanılır. Şair şöyle demiştir:\n«بِذَبِّي الذَّمَّ عَنْ حَسْبِي بِمَالِي ... وَزَبُّونَاتِ أَشْوَسَ تَيَّحَانِ»\n(Malımla şeref ve hasebime yönelecek yerilme ve ayıpları defetmemle ve başı dik, atılgan bir kimsenin şiddetli müdafaalarıyla...)\nYine bir kimsede «زَبُّونَةٌ» (zebbûne), yani kibir ve azamet bulunduğu söylenir; zira böyle bir kimse ancak nefsini (başkalarının müdahalesinden) defedici bir hâl üzere bulunur. Cehennem bekçileri olan «الزَّبَانِيَةُ» (Zebânîler) dahi bu isimle tesmiye olunmuşlardır; zira onlar cehennem ehlini ateşe doğru itip sürerler. «الْمُزَابَنَةُ» (müzâbene) ise hurma ağaçlarının başındaki (olgunlaşmamış) meyveyi satmak olup hadîs-i şerîfte kendisinden nehyedilen (yasaklanan) muamele budur. Ehl-i ilim bu isimlendirmenin sebebini, bu satışın ardından taraflar arasında vuku bulacak niza (çekişme) ve müdâfaaya (karşılıklı itişip kakışmaya) bağlamışlardır. Ayrıca «الزَّبْنُ» (zebn) kelimesinin bu'd (uzaklık) manasına geldiğini de söylerler. Akrebin kıskacına/boynuzuna verilen «زُبَانَى الْعَقْرَبِ» (zübânâ'l-akreb) tabirine gelince; bunun da bu asıldan gelmesi caizdir, sanki akrep onunla nefsini müdafaa ve düşmanı defeder; bununla birlikte şâz (kural dışı) bir kullanım olması da muhtemeldir."
+    }
+  ],
+  "cebel": {
+    "fasil": "الزاي والباء",
+    "baslik": "زبن",
+    "mihveri": "اندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها. ومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].",
+    "tam_metin": "{سَنَدْعُ الزَّبَانِيَةَ} [العلق: 17]\n\"زُبَاني العقرب: قَرْنُها وقيل طرَف قَرْنها. والزَبُّونة كسَبُّورة - ويضم أوله أيضًا: العُنُق. والزابنة: الأكَمة التي شَرَعت في الوادي وانعرج عنها \".\n° المعنى المحوري\nاندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها.\nومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].\n° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن).\n(2/873)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن).",
+    "mihveri_tr": "Bir şeyin, başka bir şeyin içinden (veya içine doğru) şiddetle ve çıkıntı yapacak surette fırlayıp itilmesi/atılması; tıpkı vadide vasıflandırılan tepe (ekeme) gibi ki, onun şiddeti kalınlığı ve iriliği olup vadiyi istikametinden itip saptırmasıdır. Akrebin boynuzu/iğnesi gibi ki, hem kendisi hem de zehri bedene şiddetle nüfuz eder (ve bir arı bir kimseyi soktuğunda, o kimse arının soktuğu yerde bırakıp girdiği iğnesini, yani «زُبَاناها» (zübânâ) denilen uzvunu çıkaracak birini arar). Keza bedendeki boyun (unuk) gibi. Bu asıldan olarak: «زَبَنَتْ الناقةُ وَلَدها وحالبها» (ضرب – darabe babından): Dişi deve yavrusunu ve sağıcısını sefinâtı ile (sefinât: devenin çöktüğü vakit yere değen nasırlı kısımlarıdır; burada maksat dizidir) memesinden itip defetti. Harekelî olarak «الزَبَن» (ez-zeben): Gerdek/çadır perdesi (hacele) gibi ev/çadır biçiminde dikilmiş bir örtü/elbise (ki dışarıyı defeder ve perdeler) ve [Tâcü'l-Arûs'a göre] kenar, cihet, nahiye (kendisine doğru çekilinen, yani itilip yönelinen taraf) manasındadır. «الزبانيةُ» (Zebânîler): İnsanları itip sürenler, yani onları cehenneme doğru şiddetle defedenlerdir; müfredi «زِبْنِيَةٌ» (zibniye) veya «زِبْنِيّ» (zibnî) gelir. {سَنَدْعُ الزَّبَانِيَةَ} [Alak, 96/18] (\"Biz de zebanileri çağıracağız!\") ayet-i kerimesinde cehennem ehlini oraya itip atan melekler kastedilmiştir. Manevî istimalden olarak: «حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم» (Zebûn harb: İnsanları tepip çarpan, yani onlara toslayıp kendilerini iten çetin savaş) [Tâcü'l-Arûs]."
+  },
+  "zemahseri": {
+    "hakikat": "أراد حاجة فزبنه عنها فلان: دفعه. والناقة\nتزبن ولدها عن ضرعها، وتزبن حالبها وناقة زبون. وزابنه: دافعة مزابنة وتزابنوا تدافعوا. ونهي عن المزابنة وهي بيع ما في رأس النخلة بالتمر لأنها تؤدّي إلى المدارأة والخصام. ووقع في أيد الزبانية وهم الشرط لزبنهم الناس وبهم سميت زبانية النار لدعهم أهلها إليها. ورجل ذو زبونة: مانع جانبه بالدفع عنه، وذو زبونات. قال:\nوجدتم القوم ذوي زبونه ... وجئتم باللؤم تنقلونه\nحرمتم المجد فلا ترجونه ... وحال أقوام وكرام دونه\nوقال سوار بن مضرب:\nبذبي الذم عن حسبي بمالي ... وزبونات أشوس تيحان\nوضربته العقرب بزباناها وهي ما تزبن به من طرف ذنبها. قال مرار بن منقذ:\nزباني عقرب لم تعط سلما ... وأعيت أن تجيب رقي لراقي\nوعن الأصمعي زبانياها: قرناها.",
+    "mecaz": "حرب زبون: صعبة كالناقة الزبون في صعوبتها. قال أوس:\nومستعجب مما يرى من أناتنا ... ولو زبنته الحرب لم يترمرم\nوقال النمر:\nزبنتك أركان العدوذ فأصبحت ... أجأ وجبة من قرار ديارها\nالضمير لحبيبته جمرة. وتحته جمل يزبن المطي بمنكبيه إذا تقدمها وسبقها. وزبنت عنا هديتك ومعروفك إذا زواها وكفها. وأزبنوا بيوتكم عن الطريق: نحوها. وفلان زبون: لمن يزبن كثيراً ويغبن وهو من باب ضبوث وحلوب في أن الفعل مسند إلى السبب مجازاً. كقوله:\nإذا ردّ عافي القدر من يستعيرها\nواستزبنه، وسمعتهم يقولون: تزبنه. وأراد فلان أن يتزبّنني فغلبته.",
+    "mecaz_var": true
+  },
+  "ontoloji": [
+    {
+      "id": "51277",
+      "arapca": ["زَبُونٌ", "عَمِيلٌ"],
+      "ingilizce": [],
+      "tanim": "شخص أو منظمة تشتري منتجات أو خدمات من محل أو مصنع مُعيَّن دونَ غيره وترتاده دائماً",
+      "misal": "عليكَ مُعاملة ال_ باحترام",
+      "veri_kaynagi": "43",
+      "ust": []
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "زبانية",
+      "tur": "name",
+      "baslik": "زَبَانِيَة • (zabāniya) m pl",
+      "anlam": ["Zabaniyah (Angels of Hell)"],
+      "okunus": ["zabāniya"],
+      "ipa": ["/za.baː.ni.ja/"],
+      "torunlar": [
+        ["en", "Zabaniyah", ""],
+        ["ms", "Zabaniah", ""],
+        ["ota", "زبانی", "zebani"]
+      ],
+      "anlam_tr": ["Zebânîler (Cehennem Melekleri)"]
+    },
+    {
+      "madde": "تزبين",
+      "tur": "verb",
+      "baslik": "تَزَبِّينَ • (tazabbīna) (form I) /ta.zab.biː.na/\n# second-person feminine singular non-past active indicative of زَبَّ (zabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazabbīna", "zabba"],
+      "bag": "müştak",
+      "etimoloji": 1
+    },
+    {
+      "madde": "تزبون",
+      "tur": "verb",
+      "baslik": "تَزَبُّونَ • (tazabbūna) (form I) /ta.zab.buː.na/\n# second-person masculine plural non-past active indicative of زَبَّ (zabba)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tazabbūna", "zabba"],
+      "bag": "müştak",
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ZBN",
+    "kok_maddesi": "Back to library EtymArab ZBN زبن BP – • HDAL • © SG | 24Mar2023 √ZBN “root” ▪ ZBN_1 ‘...’ ↗ ... ▪ ZBN_2 ‘...’ ↗ ... ▪ ZBN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to push, kick; to sell dates on the tree by estimating their quantity; to divert, keep good things away’. ▪ zabāniyaẗ is considered by some as a borrowing from either Akk or Syr – BAH2008 ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye Dönüş EtymArab ZBN زبن BP – • HDAL • © SG | 24Mar2023 √ZBN “kök” ▪ ZBN_1 ‘...’ ↗ ... ▪ ZBN_2 ‘...’ ↗ ... ▪ ZBN_3 ‘...’ ↗ ... ♦ Klasik Arapçada (BAH2008'e göre) semantik değer tayfı: ‘itmek, defetmek, tekmelemek; hurmayı ağaç üzerinde miktarını tahmin ederek satmak; yüz çevirmek, hayır ve iyilikleri uzak tutmak’. ▪ zabāniyaẗ (zebânîye) lafzı bazılarınca Akadca veya Süryaniceden müstear (ödünç alınmış) bir kelime olarak telakki olunur – BAH2008 ▪ … – . . – – Kaynaklar ; meta ; gramer ; İngilizce ; mefhum ; tarih ; kökendeşler ; münakaşa ; garp ; iştikaklar ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "96:18:2:2",
+    "tur": {
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "زَّبَانِيَة": 1
+    },
+    "bicimler": {
+      "زَّبَانِيَةَ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "زَبانِيَة",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "ٱلزَّبَانِيَةَ",
+          "ilk": "96:18",
+          "adet": 1,
+          "tr": "azap melekleri",
+          "jeffery": {
+            "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
+            "translit": "Zabānā",
+            "ayet_atiflari": "xcvi, 18",
+            "ilk_baslik_dilleri": [],
+            "metin": "xcvi, 18. The guardians of Hell. They are said to be strong and mighty angels, and the name is to push, thrust (Bagh. on the passage). We usually derived from see from Zam., however, that the philologers have some difficulty in explaining the form. Vollers, ZDMG, li, 324, suggested a connection with Akk. zibânîtu meaning balances, and Addai Sher, 77, wants to derive it from Pers. blaze, tongue of fire, from Phlv. zūbān, a tongue.1 It seems, however, as Andrae, Ursprung, 154, points out, to be connected with the Syr. )_!, the ductores who, as Ephraem Syrus tells us,2 lead the departed souls to judgment. < (<< 01j",
+            "arapca": "زبانية"
+          }
+        }
+      ],
+      "tr": "azap melekleri",
+      "nasil": "masdar-ı sınâî · fi'āl + iyye",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "زَبْن", "zabn", "itme", "orta", ""],
+      ["fi'l", "semâî aday", "زِبْن", "zibn", "itme", "orta", ""],
+      ["fu'l", "semâî aday", "زُبْن", "zubn", "itme", "orta", ""],
+      ["fa'al", "semâî aday", "زَبَن", "zaban", "itme", "orta", ""],
+      ["fi'al", "semâî aday", "زِبَن", "ziban", "itme", "orta", ""],
+      ["fu'ul", "semâî aday", "زُبُن", "zubun", "itme", "orta", ""],
+      ["fu'ūl", "semâî aday", "زُبُون", "zubūn", "itme", "orta", ""],
+      ["fi'āl", "semâî aday", "زِبَان", "zibān", "itme", "orta", ""],
+      ["fu'āl", "semâî aday", "زُبَان", "zubān", "itme", "orta", ""],
+      ["fa'āl", "semâî aday", "زَبَان", "zabān", "itme", "orta", ""],
+      ["fa'āle", "semâî aday", "زَبَانَة", "zabāna", "itme", "orta", ""],
+      ["fu'ūle", "semâî aday", "زُبُونَة", "zubūna", "itme", "orta", ""],
+      ["fi'āle", "semâî aday", "زِبَانَة", "zibāna", "itme", "orta", ""],
+      ["fa'īl", "semâî aday", "زَبِين", "zabīn", "itme", "orta", ""],
+      ["fa'ūl", "semâî aday", "زَبُون", "zabūn", "itme", "orta", ""],
+      ["fa'alān", "semâî aday", "زَبَنَان", "zabanān", "itme", "orta", ""],
+      ["fu'lān", "semâî aday", "زُبْنَان", "zubnān", "itme", "orta", ""],
+      ["fi'lān", "semâî aday", "زِبْنَان", "zibnān", "itme", "orta", ""],
+      ["fa'lā", "semâî aday", "زَبْنَى", "zabnā", "itme", "orta", ""],
+      ["fu'lā", "semâî aday", "زُبْنَى", "zubnā", "itme", "orta", ""],
+      ["fi'lā", "semâî aday", "زِبْنَى", "zibnā", "itme", "orta", ""],
+      ["fa'ale", "semâî aday", "زَبَنَة", "zabana", "itme", "orta", ""],
+      ["fi'ale", "semâî aday", "زِبَنَة", "zibana", "itme", "orta", ""],
+      ["fa'lūla", "semâî aday", "زَبْنُونَة", "zabnūna", "itme", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُزْبُون", "tuzbūn", "itme", "orta", ""],
+      ["taf'ila", "semâî aday", "تَزْبِنَة", "tazbina", "itme", "orta", ""],
+      ["taf'ala", "semâî aday", "تَزْبَنَة", "tazbana", "itme", "orta", ""],
+      ["maf'ula", "semâî aday", "مَزْبُنَة", "mazbuna", "itme", "orta", ""],
+      ["maf'ila", "semâî aday", "مَزْبِنَة", "mazbina", "itme", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَزْبِين", "tazbīn", "çokça itme", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَزْبِنَة", "tazbina", "çokça itme", "orta", ""],
+      ["fi''āl", "kıyâsî", "زِبِّان", "zibbān", "çokça itme", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَزْبِينَة", "tazbīna", "bir kere çokça itme", "orta", ""],
+      ["fi''āl + tâ", "aday", "زِبِّانَة", "zibbāna", "bir kere çokça itme", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُزَبِّن", "muzabbin", "çokça iten", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُزَبِّنَة", "muzabbina", "çokça iten, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُزَبِّنَان", "muzabbinān", "çokça iten, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُزَبِّنَتَان",
+        "muzabbinatān",
+        "çokça iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُزَبِّنُون", "muzabbinūn", "çokça itenler", "orta", ""],
+      ["mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُزَبِّنِين", "muzabbinīn", "çokça itenler", "orta", ""],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزَبِّنَات",
+        "muzabbināt",
+        "çokça itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُزَبَّن", "muzabban", "çokça itilen", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُزَبَّنَة", "muzabbana", "çokça itilen, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُزَبَّنَان", "muzabbanān", "çokça itilen, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُزَبَّنَتَان",
+        "muzabbanatān",
+        "çokça itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزَبَّنُون",
+        "muzabbanūn",
+        "çokça itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزَبَّنِين",
+        "muzabbanīn",
+        "çokça itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزَبَّنَات",
+        "muzabbanāt",
+        "çokça itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُزَبَّن", "muzabban", "çokça itme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُزَابَنَة", "muzābana", "biriyle karşılıklı itme", "orta", ""],
+      ["fi'āl", "kıyâsî", "زِبَان", "zibān", "biriyle karşılıklı itme", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "زِبَانَة", "zibāna", "bir kere biriyle karşılıklı itme", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُزَابِن", "muzābin", "biriyle karşılıklı iten", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُزَابِنَة", "muzābina", "biriyle karşılıklı iten, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُزَابِنَان", "muzābinān", "biriyle karşılıklı iten, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُزَابِنَتَان",
+        "muzābinatān",
+        "biriyle karşılıklı iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزَابِنُون",
+        "muzābinūn",
+        "biriyle karşılıklı itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزَابِنِين",
+        "muzābinīn",
+        "biriyle karşılıklı itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزَابِنَات",
+        "muzābināt",
+        "biriyle karşılıklı itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُزَابَن", "muzāban", "biriyle karşılıklı itilen", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُزَابَنَة", "muzābana", "biriyle karşılıklı itilen, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُزَابَنَان", "muzābanān", "biriyle karşılıklı itilen, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُزَابَنَتَان",
+        "muzābanatān",
+        "biriyle karşılıklı itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزَابَنُون",
+        "muzābanūn",
+        "biriyle karşılıklı itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزَابَنِين",
+        "muzābanīn",
+        "biriyle karşılıklı itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزَابَنَات",
+        "muzābanāt",
+        "biriyle karşılıklı itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُزَابَن", "muzāban", "biriyle karşılıklı itme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِزْبَان", "ʾizbān", "ittirme", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِزْبَانَة", "ʾizbāna", "bir kere ittirme", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُزْبِن", "muzbin", "ittiren", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُزْبِنَة", "muzbina", "ittiren, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُزْبِنَان", "muzbinān", "ittiren, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُزْبِنَتَان", "muzbinatān", "ittiren, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُزْبِنُون", "muzbinūn", "ittirenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُزْبِنِين", "muzbinīn", "ittirenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "مُزْبِنَات", "muzbināt", "ittirenler, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُزْبَن", "muzban", "ittirilen", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُزْبَنَة", "muzbana", "ittirilen, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُزْبَنَان", "muzbanān", "ittirilen, iki", "orta", ""],
+      ["muf'al + müennes tesniye", "kıyâsî", "مُزْبَنَتَان", "muzbanatān", "ittirilen, iki, müennes", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُزْبَنُون", "muzbanūn", "ittirilenler", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُزْبَنِين", "muzbanīn", "ittirilenler", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزْبَنَات",
+        "muzbanāt",
+        "ittirilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُزْبَن", "muzban", "ittirme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَزَبُّن", "tazabbun", "kendini zorlayarak itme", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَزَبُّنَة", "tazabbuna", "bir kere kendini zorlayarak itme", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَزَبِّن", "mutazabbin", "kendini zorlayarak iten", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَزَبِّنَة",
+        "mutazabbina",
+        "kendini zorlayarak iten, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَزَبِّنَان",
+        "mutazabbinān",
+        "kendini zorlayarak iten, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَزَبِّنَتَان",
+        "mutazabbinatān",
+        "kendini zorlayarak iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَزَبِّنُون",
+        "mutazabbinūn",
+        "kendini zorlayarak itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَزَبِّنِين",
+        "mutazabbinīn",
+        "kendini zorlayarak itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَزَبِّنَات",
+        "mutazabbināt",
+        "kendini zorlayarak itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَزَبَّن", "mutazabban", "kendini zorlayarak itilen", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَزَبَّنَة",
+        "mutazabbana",
+        "kendini zorlayarak itilen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَزَبَّنَان",
+        "mutazabbanān",
+        "kendini zorlayarak itilen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَزَبَّنَتَان",
+        "mutazabbanatān",
+        "kendini zorlayarak itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَزَبَّنُون",
+        "mutazabbanūn",
+        "kendini zorlayarak itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَزَبَّنِين",
+        "mutazabbanīn",
+        "kendini zorlayarak itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَزَبَّنَات",
+        "mutazabbanāt",
+        "kendini zorlayarak itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَزَبَّن", "mutazabban", "kendini zorlayarak itme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَزَابُن", "tazābun", "birbirine itme", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَزَابُنَة", "tazābuna", "bir kere birbirine itme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَزَابِن", "mutazābin", "birbirine iten", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَزَابِنَة", "mutazābina", "birbirine iten, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَزَابِنَان", "mutazābinān", "birbirine iten, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَزَابِنَتَان",
+        "mutazābinatān",
+        "birbirine iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَزَابِنُون",
+        "mutazābinūn",
+        "birbirine itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَزَابِنِين",
+        "mutazābinīn",
+        "birbirine itenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَزَابِنَات",
+        "mutazābināt",
+        "birbirine itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَزَابَن", "mutazāban", "birbirine itilen", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَزَابَنَة", "mutazābana", "birbirine itilen, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَزَابَنَان", "mutazābanān", "birbirine itilen, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَزَابَنَتَان",
+        "mutazābanatān",
+        "birbirine itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَزَابَنُون",
+        "mutazābanūn",
+        "birbirine itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَزَابَنِين",
+        "mutazābanīn",
+        "birbirine itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَزَابَنَات",
+        "mutazābanāt",
+        "birbirine itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَزَابَن", "mutazāban", "birbirine itme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْزِبَان", "inzibān", "itilme", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْزِبَانَة", "inzibāna", "bir kere itilme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْزَبِن", "munzabin", "itilen", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْزَبِنَة", "munzabina", "itilen, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْزَبِنَان", "munzabinān", "itilen, iki", "orta", ""],
+      ["munfa'il + müennes tesniye", "kıyâsî", "مُنْزَبِنَتَان", "munzabinatān", "itilen, iki, müennes", "orta", ""],
+      ["munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُنْزَبِنُون", "munzabinūn", "itilenler", "orta", ""],
+      ["munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُنْزَبِنِين", "munzabinīn", "itilenler", "orta", ""],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْزَبِنَات",
+        "munzabināt",
+        "itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَن",
+        "munzaban",
+        "itilen",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنَة",
+        "munzabana",
+        "itilen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنَان",
+        "munzabanān",
+        "itilen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنَتَان",
+        "munzabanatān",
+        "itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنُون",
+        "munzabanūn",
+        "itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنِين",
+        "munzabanīn",
+        "itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَنَات",
+        "munzabanāt",
+        "itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْزَبَن",
+        "munzaban",
+        "itilme yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِزْدِبَان", "izdibān", "kendisi için itme", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِزْدِبَانَة", "izdibāna", "bir kere kendisi için itme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُزْدَبِن", "muzdabin", "kendisi için iten", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُزْدَبِنَة", "muzdabina", "kendisi için iten, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُزْدَبِنَان", "muzdabinān", "kendisi için iten, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُزْدَبِنَتَان",
+        "muzdabinatān",
+        "kendisi için iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزْدَبِنُون",
+        "muzdabinūn",
+        "kendisi için itenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزْدَبِنِين",
+        "muzdabinīn",
+        "kendisi için itenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزْدَبِنَات",
+        "muzdabināt",
+        "kendisi için itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُزْدَبَن", "muzdaban", "kendisi için itilen", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُزْدَبَنَة", "muzdabana", "kendisi için itilen, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُزْدَبَنَان", "muzdabanān", "kendisi için itilen, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُزْدَبَنَتَان",
+        "muzdabanatān",
+        "kendisi için itilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزْدَبَنُون",
+        "muzdabanūn",
+        "kendisi için itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزْدَبَنِين",
+        "muzdabanīn",
+        "kendisi için itilenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزْدَبَنَات",
+        "muzdabanāt",
+        "kendisi için itilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُزْدَبَن", "muzdaban", "kendisi için itme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX": [
+      ["if'ilāl", "kıyâsî", "اِزْبِنَان", "izbinān", "iyiden iyiye itme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX": [
+      ["muf'all", "kıyâsî", "مُزْبَنّ", "muzbann", "iyiden iyiye iten", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُزْبَنَّة", "muzbanna", "iyiden iyiye iten, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُزْبَنَّان", "muzbannān", "iyiden iyiye iten, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُزْبَنَّتَان",
+        "muzbannatān",
+        "iyiden iyiye iten, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزْبَنُّون",
+        "muzbannūn",
+        "iyiden iyiye itenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزْبَنِّين",
+        "muzbannīn",
+        "iyiden iyiye itenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزْبَنَّات",
+        "muzbannāt",
+        "iyiden iyiye itenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِزْبَان", "istizbān", "itmeyi isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِزْبَانَة", "istizbāna", "bir kere itmeyi isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَزْبِن", "mustazbin", "itmeyi isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَزْبِنَة", "mustazbina", "itmeyi isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَزْبِنَان", "mustazbinān", "itmeyi isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَزْبِنَتَان",
+        "mustazbinatān",
+        "itmeyi isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَزْبِنُون",
+        "mustazbinūn",
+        "itmeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَزْبِنِين",
+        "mustazbinīn",
+        "itmeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَزْبِنَات",
+        "mustazbināt",
+        "itmeyi isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَزْبَن", "mustazban", "itmesi istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَزْبَنَة", "mustazbana", "itmesi istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَزْبَنَان", "mustazbanān", "itmesi istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَزْبَنَتَان",
+        "mustazbanatān",
+        "itmesi istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَزْبَنُون",
+        "mustazbanūn",
+        "itmesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَزْبَنِين",
+        "mustazbanīn",
+        "itmesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَزْبَنَات",
+        "mustazbanāt",
+        "itmesi istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَزْبَن", "mustazban", "itmeyi isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI": [
+      ["if'īlāl", "kıyâsî", "اِزْبِينَان", "izbīnān", "büsbütün itme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI": [
+      ["muf'āll", "kıyâsî", "مُزْبَانّ", "muzbānn", "büsbütün iten", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُزْبَانَّة", "muzbānna", "büsbütün iten, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُزْبَانَّان", "muzbānnān", "büsbütün iten, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُزْبَانَّتَان",
+        "muzbānnatān",
+        "büsbütün iten, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُزْبَانُّون",
+        "muzbānnūn",
+        "büsbütün itenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُزْبَانِّين",
+        "muzbānnīn",
+        "büsbütün itenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُزْبَانَّات",
+        "muzbānnāt",
+        "büsbütün itenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII": [
+      ["if'iv'āl", "kıyâsî", "اِزْبِوْبَان", "izbiwbān", "aşırı itme", "orta", ""]
+    ],
+    "masdar · bâb XIII": [
+      ["if'ivvāl", "kıyâsî", "اِزْبِوَّان", "izbiwwān", "aşırı itme", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "زَابِن", "zābin", "iten", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "زَابِنَة", "zābina", "iten, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "زَابِنَان", "zābinān", "iten, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "زَابِنَتَان", "zābinatān", "iten, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "زَابِنُون", "zābinūn", "itenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "زَابِنِين", "zābinīn", "itenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "زَابِنَات", "zābināt", "itenler, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَزْبُون", "mazbūn", "itilen", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَزْبُونَة", "mazbūna", "itilen, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَزْبُونَان", "mazbūnān", "itilen, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَزْبُونَتَان", "mazbūnatān", "itilen, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَزْبُونُون", "mazbūnūn", "itilenler", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَزْبُونِين", "mazbūnīn", "itilenler", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", "مَزْبُونَات", "mazbūnāt", "itilenler, müennes", "orta", ""]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَزْبَن", "mazban", "itme yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَزْبَنَان", "mazbanān", "itme yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَزْبِن", "mazbin", "itme yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَزْبِنَان", "mazbinān", "itme yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَزْبَنَة", "mazbana", "itmenin bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَزْبَنَتَان", "mazbanatān", "itmenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَزْبِنَة", "mazbina", "itmenin bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَزْبِنَتَان", "mazbinatān", "itmenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَزْبُنَة", "mazbuna", "itme yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَزْبُنَتَان", "mazbunatān", "itme yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِزْبَن", "mizban", "itme âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِزْبَنَان", "mizbanān", "itme âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِزْبَان", "mizbān", "itme âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِزْبَانَان", "mizbānān", "itme âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِزْبَنَة", "mizbana", "itme âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِزْبَنَتَان", "mizbanatān", "itme âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَزْبَن", "ʾazban", "daha çok iten", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَزْبَنَان", "ʾazbanān", "daha çok iten, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "زُبْنَى", "zubnā", "daha çok iten", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "زُبْنَيَان", "zubnayān", "daha çok iten, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "زَبْنَاء", "zabnāʾ", "daha çok iten", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "زَبْنَاآن", "zabnāʾān", "daha çok iten, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "زُبَيْن", "zubayn", "azıcık itme", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "زُبَيْنَان", "zubaynān", "azıcık itme, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "زُبَيْنَة", "zubayna", "azıcık itme", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "زُبَيْنَتَان", "zubaynatān", "azıcık itme, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَزْبَن", "mazban", "itme", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَزْبَنَان", "mazbanān", "itme, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "زَبْنَة", "zabna", "bir kere itme", "orta", ""],
+      ["fa'le + tesniye", "aday", "زَبْنَتَان", "zabnatān", "bir kere itme, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "زِبْنَة", "zibna", "itme tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "زِبْنَتَان", "zibnatān", "itme tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "زَبِين", "zabīn", "her daim iten", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "زَبِينَة", "zabīna", "her daim iten, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "زَبِينَان", "zabīnān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "زَبِينَتَان",
+        "zabīnatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبِينُون", "zabīnūn", "her daim itenler", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبِينِين", "zabīnīn", "her daim itenler", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبِينَات",
+        "zabīnāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "زَبُون", "zabūn", "her daim iten", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "زَبُونَة", "zabūna", "her daim iten, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "زَبُونَان", "zabūnān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "زَبُونَتَان",
+        "zabūnatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبُونُون", "zabūnūn", "her daim itenler", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبُونِين", "zabūnīn", "her daim itenler", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبُونَات",
+        "zabūnāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "زَبِن", "zabin", "her daim iten", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "زَبِنَة", "zabina", "her daim iten, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "زَبِنَان", "zabinān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "زَبِنَتَان",
+        "zabinatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبِنُون", "zabinūn", "her daim itenler", "orta", ""],
+      ["fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبِنِين", "zabinīn", "her daim itenler", "orta", ""],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبِنَات",
+        "zabināt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "زَبُن", "zabun", "her daim iten", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "زَبُنَة", "zabuna", "her daim iten, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "زَبُنَان", "zabunān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "زَبُنَتَان",
+        "zabunatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبُنُون", "zabunūn", "her daim itenler", "orta", ""],
+      ["fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبُنِين", "zabunīn", "her daim itenler", "orta", ""],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبُنَات",
+        "zabunāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "زَبَن", "zaban", "her daim iten", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "زَبَنَة", "zabana", "her daim iten, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "زَبَنَان", "zabanān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "زَبَنَتَان",
+        "zabanatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبَنُون", "zabanūn", "her daim itenler", "orta", ""],
+      ["fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبَنِين", "zabanīn", "her daim itenler", "orta", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبَنَات",
+        "zabanāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "زَبْن", "zabn", "her daim iten", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "زَبْنَة", "zabna", "her daim iten, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "زَبْنَان", "zabnān", "her daim iten, iki", "orta", ""],
+      ["fa'l + müennes tesniye", "semâî aday", "زَبْنَتَان", "zabnatān", "her daim iten, iki, müennes", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبْنُون", "zabnūn", "her daim itenler", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبْنِين", "zabnīn", "her daim itenler", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبْنَات",
+        "zabnāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "زُبُن", "zubun", "her daim iten", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "زُبُنَة", "zubuna", "her daim iten, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "زُبُنَان", "zubunān", "her daim iten, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "زُبُنَتَان",
+        "zubunatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زُبُنُون", "zubunūn", "her daim itenler", "orta", ""],
+      ["fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", "زُبُنِين", "zubunīn", "her daim itenler", "orta", ""],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زُبُنَات",
+        "zubunāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "زَبْنَان", "zabnān", "her daim iten", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "زَبْنَانَة", "zabnāna", "her daim iten, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "زَبْنَانَان", "zabnānān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "زَبْنَانَتَان",
+        "zabnānatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "زَبْنَانُون",
+        "zabnānūn",
+        "her daim itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "زَبْنَانِين",
+        "zabnānīn",
+        "her daim itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبْنَانَات",
+        "zabnānāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "زُبَان", "zubān", "her daim iten", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "زُبَانَة", "zubāna", "her daim iten, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "زُبَانَان", "zubānān", "her daim iten, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "زُبَانَتَان",
+        "zubānatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زُبَانُون", "zubānūn", "her daim itenler", "orta", ""],
+      ["fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زُبَانِين", "zubānīn", "her daim itenler", "orta", ""],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زُبَانَات",
+        "zubānāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "زَبَان", "zabān", "her daim iten", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "زَبَانَة", "zabāna", "her daim iten, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "زَبَانَان", "zabānān", "her daim iten, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "زَبَانَتَان",
+        "zabānatān",
+        "her daim iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبَانُون", "zabānūn", "her daim itenler", "orta", ""],
+      ["fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبَانِين", "zabānīn", "her daim itenler", "orta", ""],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبَانَات",
+        "zabānāt",
+        "her daim itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "زَبَّان", "zabbān", "işi itme olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "زَبَّانَة", "zabbāna", "işi itme olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "زَبَّانَان", "zabbānān", "işi itme olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "زَبَّانَتَان",
+        "zabbānatān",
+        "işi itme olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "زَبَّانُون",
+        "zabbānūn",
+        "işi itme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "زَبَّانِين",
+        "zabbānīn",
+        "işi itme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبَّانَات",
+        "zabbānāt",
+        "işi itme olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "زَبَّانَة", "zabbāna", "pek çok iten", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "زَبَّانَتَان", "zabbānatān", "pek çok iten, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبَّانَات",
+        "zabbānāt",
+        "pek çok itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "زَبُون", "zabūn", "çok iten", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "زَبُونَة", "zabūna", "çok iten, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "زَبُونَان", "zabūnān", "çok iten, iki", "orta", ""],
+      ["fa'ūl + müennes tesniye", "semâî aday", "زَبُونَتَان", "zabūnatān", "çok iten, iki, müennes", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبُونُون", "zabūnūn", "çok itenler", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبُونِين", "zabūnīn", "çok itenler", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبُونَات",
+        "zabūnāt",
+        "çok itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "زَبُّون", "zabbūn", "pek çok iten", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "زَبُّونَة", "zabbūna", "pek çok iten, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "زَبُّونَان", "zabbūnān", "pek çok iten, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "زَبُّونَتَان",
+        "zabbūnatān",
+        "pek çok iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "زَبُّونُون",
+        "zabbūnūn",
+        "pek çok itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "زَبُّونِين",
+        "zabbūnīn",
+        "pek çok itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبُّونَات",
+        "zabbūnāt",
+        "pek çok itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "زِبِّين", "zibbīn", "itmede aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "زِبِّينَة", "zibbīna", "itmede aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "زِبِّينَان", "zibbīnān", "itmede aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "زِبِّينَتَان",
+        "zibbīnatān",
+        "itmede aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "زِبِّينُون",
+        "zibbīnūn",
+        "itmede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "زِبِّينِين",
+        "zibbīnīn",
+        "itmede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زِبِّينَات",
+        "zibbīnāt",
+        "itmede aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "زُبَّان", "zubbān", "son derece iten", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "زُبَّانَة", "zubbāna", "son derece iten, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "زُبَّانَان", "zubbānān", "son derece iten, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "زُبَّانَتَان",
+        "zubbānatān",
+        "son derece iten, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "زُبَّانُون",
+        "zubbānūn",
+        "son derece itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "زُبَّانِين",
+        "zubbānīn",
+        "son derece itenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زُبَّانَات",
+        "zubbānāt",
+        "son derece itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِزْبَان", "mizbān", "itmeyi âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِزْبَانَة", "mizbāna", "itmeyi âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِزْبَانَان", "mizbānān", "itmeyi âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِزْبَانَتَان",
+        "mizbānatān",
+        "itmeyi âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِزْبَانُون",
+        "mizbānūn",
+        "itmeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِزْبَانِين",
+        "mizbānīn",
+        "itmeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِزْبَانَات",
+        "mizbānāt",
+        "itmeyi âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِزْبِين", "mizbīn", "itmeye düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِزْبِينَة", "mizbīna", "itmeye düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِزْبِينَان", "mizbīnān", "itmeye düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِزْبِينَتَان",
+        "mizbīnatān",
+        "itmeye düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِزْبِينُون",
+        "mizbīnūn",
+        "itmeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِزْبِينِين",
+        "mizbīnīn",
+        "itmeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِزْبِينَات",
+        "mizbīnāt",
+        "itmeye düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "زَبِين", "zabīn", "çok iten", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "زَبِينَة", "zabīna", "çok iten, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "زَبِينَان", "zabīnān", "çok iten, iki", "orta", ""],
+      ["fa'īl + müennes tesniye", "semâî aday", "زَبِينَتَان", "zabīnatān", "çok iten, iki, müennes", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبِينُون", "zabīnūn", "çok itenler", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبِينِين", "zabīnīn", "çok itenler", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبِينَات",
+        "zabīnāt",
+        "çok itenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "زَبَّن", "zabban", "çok iten", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "زَبَّنَة", "zabbana", "çok iten, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "زَبَّنَان", "zabbanān", "çok iten, iki", "orta", ""],
+      ["fa''al + müennes tesniye", "semâî aday", "زَبَّنَتَان", "zabbanatān", "çok iten, iki, müennes", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "زَبَّنُون", "zabbanūn", "çok itenler", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "زَبَّنِين", "zabbanīn", "çok itenler", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "زَبَّنَات",
+        "zabbanāt",
+        "çok itenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "زَبْنِيّ", "zabniyy", "itme ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "زَبَنِيّ", "zabaniyy", "itme ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "زِبْنِيّ", "zibniyy", "itme ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "زُبْنِيّ", "zubniyy", "itme ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "زِبَانِيّ", "zibāniyy", "itme ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "زَابِنِيّ", "zābiniyy", "itme ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَزْبُونِيّ", "mazbūniyy", "itme ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "زَبِينِيّ", "zabīniyy", "itme ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَزْبَنِيّ", "mazbaniyy", "itme ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَزْبِينِيّ", "tazbīniyy", "itme ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَزَابُنِيّ", "tazābuniyy", "itme ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِزْبَانِيّ", "ʾizbāniyy", "itme ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِزْدِبَانِيّ", "izdibāniyy", "itme ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "زَبْنِيَّة", "zabniyya", "itenlik", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "زَبَنِيَّة", "zabaniyya", "itenlik", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "زِبْنِيَّة", "zibniyya", "itenlik", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "زُبْنِيَّة", "zubniyya", "itenlik", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "زِبَانِيَّة", "zibāniyya", "itenlik", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "زَابِنِيَّة", "zābiniyya", "itenlik", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَزْبُونِيَّة", "mazbūniyya", "itenlik", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "زَبِينِيَّة", "zabīniyya", "itenlik", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَزْبَنِيَّة", "mazbaniyya", "itenlik", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَزْبِينِيَّة", "tazbīniyya", "itenlik", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَزَابُنِيَّة", "tazābuniyya", "itenlik", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِزْبَانِيَّة", "ʾizbāniyya", "itenlik", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِزْدِبَانِيَّة", "izdibāniyya", "itenlik", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "زَبَان", "zabān", "itme", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "زُبُون", "zubūn", "itme", "orta", ""],
+      ["fi'âl", "semâî aday", "زِبَان", "zibān", "itme", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "زُبْن", "zubn", "itme", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "زَبَانَة", "zabāna", "itme", "orta", ""],
+      ["fi'âle", "semâî aday", "زِبَانَة", "zibāna", "itme", "orta", ""],
+      ["fu'ûle", "semâî aday", "زُبُونَة", "zubūna", "itme", "orta", ""],
+      ["fa'l", "semâî aday", "زَبْن", "zabn", "itme", "orta", ""],
+      ["fi'l", "semâî aday", "زِبْن", "zibn", "itme", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "زَابُون", "zābūn", "itme türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "زَبَنَة", "zabana", "itme türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "زُبَنَة", "zubana", "itme türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُزْبُونَة", "ʾuzbūna", "itme türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "زَوْبَن", "zawban", "itme türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "زَيْبَن", "zayban", "itme türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "زَبْن", "zabn", "itme türünden şey", "orta", ""],
+      ["fa'al", "semâî aday", "زَبَن", "zaban", "itme türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "زِبْن", "zibn", "itme türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "زُبْن", "zubn", "itme türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "زَبِين", "zabīn", "itme türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "زِبَن", "ziban", "itme türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "زُبُن", "zubun", "itme türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "زَبَان", "zabān", "itme türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "زَابُونَة", "zābūna", "itme türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "زَوْبَنَة", "zawbana", "itme türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "زَيْبَنَة", "zaybana", "itme türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "زَبْنَة", "zabna", "itme türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "زَبَنَة", "zabana", "itme türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "زِبْنَة", "zibna", "itme türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "زُبْنَة", "zubna", "itme türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "زَبِينَة", "zabīna", "itme türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "زِبَنَة", "zibana", "itme türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "زُبُنَة", "zubuna", "itme türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "زَبَانَة", "zabāna", "itme türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَزْبَان", "ʾazbān", "itmeler", "orta", ""],
+      ["ef'ile", "semâî aday", "أَزْبِنَة", "ʾazbina", "itmeler", "orta", ""],
+      ["efâ'il", "semâî aday", "أَزَابِن", "ʾazābin", "itmeler", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَزَابِين", "ʾazābīn", "itmeler", "orta", ""],
+      ["fu'ūl", "semâî aday", "زُبُون", "zubūn", "itmeler", "orta", ""],
+      ["fu'ul", "semâî aday", "زُبُن", "zubun", "itmeler", "orta", ""],
+      ["fi'āl", "semâî aday", "زِبَان", "zibān", "itmeler", "orta", ""],
+      ["fi'al", "semâî aday", "زِبَن", "ziban", "itmeler", "orta", ""],
+      ["fi'ale", "semâî aday", "زِبَنَة", "zibana", "itmeler", "orta", ""],
+      ["fu'al", "semâî aday", "زُبَن", "zuban", "itmeler", "orta", ""],
+      ["fu'alā'", "semâî aday", "زُبَناء", "zubanāʾ", "itmeler", "orta", ""],
+      ["fa'ale", "semâî aday", "زَبَنَة", "zabana", "itmeler", "orta", ""],
+      ["fu''āl", "semâî aday", "زُبَّان", "zubbān", "itmeler", "orta", ""],
+      ["fa'āl", "semâî aday", "زَبَان", "zabān", "itmeler", "orta", ""],
+      ["fa'al", "semâî aday", "زَبَن", "zaban", "itmeler", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَزَابِن", "mazābin", "itmeler", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَزَابِين", "mazābīn", "itmeler", "orta", ""],
+      ["fevâ'il", "semâî aday", "زَوَابِن", "zawābin", "itmeler", "orta", ""],
+      ["af'ul", "semâî aday", "أَزْبُن", "ʾazbun", "itmeler", "orta", ""],
+      ["fu''al", "semâî aday", "زُبَّن", "zubban", "itmeler", "orta", ""],
+      ["fe'âil", "semâî aday", "زَبَائِن", "zabāʾin", "itmeler", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "زُبَيْن", "zubayn", "itmeler", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَزْبَانَات", "ʾazbānāt", "itmeler topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَزْبِنَات", "ʾazbināt", "itmeler topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَزَابِنَات", "ʾazābināt", "itmeler topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَزَابِينَات", "ʾazābīnāt", "itmeler topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "زُبُونَات", "zubūnāt", "itmeler topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "زُبُنَات", "zubunāt", "itmeler topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "زِبَانَات", "zibānāt", "itmeler topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "زِبَنَات", "zibanāt", "itmeler topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "زِبَنَات", "zibanāt", "itmeler topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "زُبَنَات", "zubanāt", "itmeler topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "زُبَناآت", "zubanāʾāt", "itmeler topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "زَبَنَات", "zabanāt", "itmeler topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "زُبَّانَات", "zubbānāt", "itmeler topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "زَبَانَات", "zabānāt", "itmeler topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "زَبَنَات", "zabanāt", "itmeler topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَزَابِنَات", "mazābināt", "itmeler topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَزَابِينَات", "mazābīnāt", "itmeler topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "زَوَابِنَات", "zawābināt", "itmeler topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَزْبُنَات", "ʾazbunāt", "itmeler topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "زُبَّنَات", "zubbanāt", "itmeler topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "زَبَائِنَات", "zabāʾināt", "itmeler topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "زُبَيْنَات", "zubaynāt", "itmeler topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "person.n.01",
     "orta": "noun.person",
     "ust": "insan ve toplum",
@@ -815,37 +1710,36 @@
     "dayanak_tanim": "a regular customer",
     "synset_sayisi": 5
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الزاي والباء",
-    "mihveri": "اندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها. ومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن).",
-    "tam_metin": "{سَنَدْعُ الزَّبَانِيَةَ} [العلق: 17]\n\"زُبَاني العقرب: قَرْنُها وقيل طرَف قَرْنها. والزَبُّونة كسَبُّورة - ويضم أوله أيضًا: العُنُق. والزابنة: الأكَمة التي شَرَعت في الوادي وانعرج عنها \".\n° المعنى المحوري\nاندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها.\nومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج].\n° معنى الفصل المعجمي (زب): الاكتناز أو أثره في الانتصاب أو النضح - كما يتمثل في زَبِّ القربة: مَلئها إلى رأسها - في (زبب)، وفي تجمع الزُبْد والزَبَد - في (زبد) والتجمع من باب الامتلاء، وكما في صدّ الطين جدار البئر، وصدّ السندان أثر الدقّ - في (زبر)، وفي انتصاب الأَكَمة الشارعة في الوادي وكذا انتصاب العنق مع تجمعها - في (زبن).\n(2/873)"
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 2,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 452
+    },
+    "orta": {
+      "kume": 4,
+      "merkez_kok": "حنج",
+      "merkez_mana": "",
+      "boy": 393
+    },
+    "ince": {
+      "kume": 26,
+      "merkez_kok": "غرب",
+      "merkez_mana": "Garb: batı; garîb: yabancı",
+      "boy": 33
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "أراد حاجة فزبنه عنها فلان: دفعه. والناقة\nتزبن ولدها عن ضرعها، وتزبن حالبها وناقة زبون. وزابنه: دافعة مزابنة وتزابنوا تدافعوا. ونهي عن المزابنة وهي بيع ما في رأس النخلة بالتمر لأنها تؤدّي إلى المدارأة والخصام. ووقع في أيد الزبانية وهم الشرط لزبنهم الناس وبهم سميت زبانية النار لدعهم أهلها إليها. ورجل ذو زبونة: مانع جانبه بالدفع عنه، وذو زبونات. قال:\nوجدتم القوم ذوي زبونه ... وجئتم باللؤم تنقلونه\nحرمتم المجد فلا ترجونه ... وحال أقوام وكرام دونه\nوقال سوار بن مضرب:\nبذبي الذم عن حسبي بمالي ... وزبونات أشوس تيحان\nوضربته العقرب بزباناها وهي ما تزبن به من طرف ذنبها. قال مرار بن منقذ:\nزباني عقرب لم تعط سلما ... وأعيت أن تجيب رقي لراقي\nوعن الأصمعي زبانياها: قرناها.",
-    "mecaz": "حرب زبون: صعبة كالناقة الزبون في صعوبتها. قال أوس:\nومستعجب مما يرى من أناتنا ... ولو زبنته الحرب لم يترمرم\nوقال النمر:\nزبنتك أركان العدوذ فأصبحت ... أجأ وجبة من قرار ديارها\nالضمير لحبيبته جمرة. وتحته جمل يزبن المطي بمنكبيه إذا تقدمها وسبقها. وزبنت عنا هديتك ومعروفك إذا زواها وكفها. وأزبنوا بيوتكم عن الطريق: نحوها. وفلان زبون: لمن يزبن كثيراً ويغبن وهو من باب ضبوث وحلوب في أن الفعل مسند إلى السبب مجازاً. كقوله:\nإذا ردّ عافي القدر من يستعيرها\nواستزبنه، وسمعتهم يقولون: تزبنه. وأراد فلان أن يتزبّنني فغلبته.",
-    "kinaye": "",
-    "mecaz_var": true
+  "wordnet": ["act.n.02", "clientele.n.01", "user.n.01"],
+  "muhassas": {
+    "kitap": "المثنيات",
+    "bab": "ما جاء مجموعا وإنما هو اثنان أو واحد في الأصل",
+    "kok_gecis": 37.2,
+    "kitapta_gecis": 10.0,
+    "zenginlesme": 21.79
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "اندفاع الشيء ناتئًا شديدًا في (أو/ مِنْ) جَوْف الشيء كالأكمة الموصوفة في الوادي. وشدّتُها غِلَظُها، وأنها تدفع الوادي عن استقامته. وكقَرْن العقرب (ينفذ هو وسَمُّه شديدًا في الجسم) (وإذا لسعت نحلة أحدًا فإنه يطلب من يُخرج زُبَاناها أي إبرتها التي أدخلتها وتركتها في موضع اللسعة) وكالعنق من البدن. ومنه \"زَبَنَتْ الناقةُ وَلَدها وحالبها (ضرب): دَفَعَتْه عَنْ ضَرْعها بِثَفِنَاتها (ثفناتها: ما ولى الأرض منها عند بروكها. والمراد هنا ركبتها) والزَبَن - محركة: ثوب على تقطيع البيت كالحَجَلة (تدفع وتحجب)، والناحية [تاجِ] (يُتَنَحَّى إليها أي يُنْدَفع). والزبانيةُ: الذين يَزْبِنون الناس: يدفعونَهم في جهنم واحدهم زِبْنِيَةٌ أو زِبْنِيّ {سَنَدْعُ الزَّبَانِيَةَ} ملائكة يدفعون أهل النار فيها. ومن المعنوي \"حرب زَبون: تزبن الناس أي تصدمهم وتدفعهم \" [تاج]."
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "أراد حاجة فزبنه عنها فلان: دفعه. والناقة\nتزبن ولدها عن ضرعها، وتزبن حالبها وناقة زبون. وزابنه: دافعة مزابنة وتزابنوا تدافعوا. ونهي عن المزابنة وهي بيع ما في رأس النخلة بالتمر لأنها تؤدّي إلى المدارأة والخصام. ووقع في أيد الزبانية وهم الشرط لزبنهم الناس وبهم سميت زبانية النار لدعهم أهلها إليها. ورجل ذو زبونة: مانع جانبه بالدفع عنه، وذو زبونات. قال:\nوجدتم القوم ذوي زبونه ... وجئتم باللؤم تنقلونه\nحرمتم المجد فلا ترجونه ... وحال أقوام وكرام دونه\nوقال سوار بن مضرب:\nبذبي الذم عن حسبي بمالي ... وزبونات أشوس تيحان\nوضربته العقرب بزباناها وهي ما تزبن به من طرف ذنبها. قال مرار بن منقذ:\nزباني عقرب لم تعط سلما ... وأعيت أن تجيب رقي لراقي\nوعن الأصمعي زبانياها: قرناها."
-      },
-      {
-        "kaynak": "Mekâyîs: زَبِنَ",
-        "metin": "(زَبِنَ) الزَّاءُ وَالْبَاءُ وَالنُّونُ أَصْلٌ وَاحِدٌ يَدُلُّ عَلَى الدَّفْعِ. يُقَالُ نَاقَةٌ زَبُونٌ، إِذَا زَبَنَتْ حَالِبَهَا. وَالْحَرْبُ تَزْبِنُ النَّاسَ، إِذَا صَدَمَتْهُمْ. وَحَرْبٌ زَبُونٌ. وَرَجُلٌ ذُو زَبُّونَةٍ، إِذَا كَانَ مَانِعًا لِجَانِبِهِ دَفُوعًا عَنْ نَفْسِهِ. قَالَ:\nبِذَبِّي الذَّمَّ عَنْ حَسْبِي بِمَالِي ... وَزَبُّونَاتِ أَشْوَسَ تَيَّحَانِ\nوَيُقَالُ فِيهِ زَبُّونَةٌ، أَيْ كِبْرٌ، وَلَا يَكُونُ كَذَا إِلَّا وَهُوَ دَافِعٌ عَنْ نَفْسِهِ. وَالزَّبَانِيَةُ سُمُّوا بِذَلِكَ، لِأَنَّهُمْ يَدْفَعُونَ أَهْلَ النَّارِ إِلَى النَّارِ. فَأَمَّا الْمُزَابَنَةُ فَبَيْعُ الثَّمَرِ فِي رُءُوسِ النَّخْلِ، وَهُوَ الَّذِي جَاءَ الْحَدِيثُ بِالنَّهْيِ عَنْهُ. وَقَالَ أَهْلُ الْعِلْمِ: إِنَّهُ مِمَّا يَكُونُ بَعْدَ ذَلِكَ مِنَ النِّزَاعِ وَالْمُدَافَعَةِ. وَيَقُولُونَ إِنَّ الزَّبْنَ الْبُعْدُ. وَأَمَّا زُبَانَى الْعَقْرَبِ فَيَجُوزُ أَنْ يَكُونَ مِنْ هَذَا أَيْضًا، كَأَنَّهَا تَدْفَعُ عَنْ نَفْسِهَا بِهِ، وَيَجُوزُ أَنْ يَكُونَ شَاذًّا."
-      }
-    ],
+  "prototip": {
     "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
@@ -891,603 +1785,6 @@
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.531,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": ["act.n.02", "clientele.n.01", "user.n.01"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "المثنيات",
-    "bab": "ما جاء مجموعا وإنما هو اثنان أو واحد في الأصل",
-    "kok_gecis": 37.2,
-    "kitapta_gecis": 10.0,
-    "zenginlesme": 21.79
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 2,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 452
-    },
-    "orta": {
-      "kume": 4,
-      "merkez_kok": "حنج",
-      "merkez_mana": "",
-      "boy": 393
-    },
-    "ince": {
-      "kume": 26,
-      "merkez_kok": "غرب",
-      "merkez_mana": "Garb: batı; garîb: yabancı",
-      "boy": 33
-    }
-  },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
-  },
-  "kelimeler": [
-    {
-      "kelime": "ٱلزَّبَانِيَةَ",
-      "kok": "زبن",
-      "lemma": "زَبانِيَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "96:18",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "azap melekleri",
-        "lemma": "azap melekleri",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      },
-      "jeffery": {
-        "kaynak": "Arthur Jeffery, The Foreign Vocabulary of the Qur'ān (Baroda 1938; Brill yeniden basımı, yazıya geçirilmiş metin; Arapça yazılar yazı tipi bozuk olduğundan alınmadı)",
-        "translit": "Zabānā",
-        "ayet_atiflari": "xcvi, 18",
-        "ilk_baslik_dilleri": [],
-        "metin": "xcvi, 18. The guardians of Hell. They are said to be strong and mighty angels, and the name is to push, thrust (Bagh. on the passage). We usually derived from see from Zam., however, that the philologers have some difficulty in explaining the form. Vollers, ZDMG, li, 324, suggested a connection with Akk. zibânîtu meaning balances, and Addai Sher, 77, wants to derive it from Pers. blaze, tongue of fire, from Phlv. zūbān, a tongue.1 It seems, however, as Andrae, Ursprung, 154, points out, to be connected with the Syr. )_!, the ductores who, as Ephraem Syrus tells us,2 lead the departed souls to judgment. < (<< 01j",
-        "arapca": "زبانية"
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "orta",
-    "dayanak": ["lugat-fiil"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Temas",
-    "ayrim": "it",
-    "acilim": "زبن := Temas(ayrım: it)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Temas",
-    "kelimeler": [
-      {
-        "lemma": "زَبانِيَة",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "masdar-ı sınâî · fi'āl + iyye"
-      }
-    ]
+    "ortalama_benzerlik": 0.531
   }
 }

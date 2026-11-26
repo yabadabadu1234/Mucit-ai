@@ -28,20 +28,19 @@ def mekayis_asil(L):
     return ''
 VT = {}
 for f in sorted(glob.glob(str(KOK / '*.json'))):
-    d = json.load(open(f, encoding='utf-8')); s = d.get('sozlukler', {}); k = d['kok']
+    d = json.load(open(f, encoding='utf-8')); k = d['kok']
     tr = []
-    ka = s.get('kok_anlamlari') or {}
-    for p in parca(ka.get('turkce', '')): ekle(tr, p)
-    for p in ka.get('ihtimaller', []) or []:
+    for p in parca(d.get('anlam', '')): ekle(tr, p)
+    for p in d.get('anlam_ihtimal', []) or []:
         for q in parca(p): ekle(tr, q)
-    if s.get('eyupipler_kok_anlami'):
-        for q in parca(str(s['eyupipler_kok_anlami'])): ekle(tr, q)
+    if d.get('anlam_eyup'):
+        for q in parca(str(d['anlam_eyup'])): ekle(tr, q)
     en = []
-    for q in etym(s.get('etymarab') or {}):
+    for q in etym(d.get('etymarab') or {}):
         for p in re.split(r';', q):
             ekle(en, p)
-    VT[k] = {'turkce': tr, 'ingilizce_etymarab': en, 'mekayis_asil': mekayis_asil(s.get('mekayis')),
-             'cebel_mihver': ((s.get('cebel_mihveri') or {}).get('mihveri') or '').split('.')[0].strip()}
+    VT[k] = {'turkce': tr, 'ingilizce_etymarab': en, 'mekayis_asil': mekayis_asil(d.get('mekayis')),
+             'cebel_mihver': ((d.get('cebel') or {}).get('mihveri') or '').split('.')[0].strip()}
 TER = {}
 for f in sorted((HERE / 'tercume').glob('*.json')): TER.update(json.loads(f.read_text(encoding='utf-8')))
 for f in sorted((HERE / 'tercume_ek').glob('*.json')):

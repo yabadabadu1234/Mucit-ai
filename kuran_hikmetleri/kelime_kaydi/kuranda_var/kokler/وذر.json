@@ -1,849 +1,2105 @@
 {
   "kok": "وذر",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": false,
+  "baz_fiil": "Yönelim",
+  "baz_ayrim": "vazgeç",
+  "tur_kuran": {
+    "fiil": 45,
+    "isim": 0
+  },
+  "fiil": "vazgeç",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "misâl",
-  "turkce_fiil": {
-    "sap": "vazgeç",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "وَذْر", "waẕr", "vazgeçme", "orta", ""],
-      [1, "وِذْر", "wiẕr", "vazgeçme", "orta", ""],
-      [2, "وُذْر", "wuẕr", "vazgeçme", "orta", ""],
-      [3, "وَذَر", "waẕar", "vazgeçme", "orta", ""],
-      [4, "وِذَر", "wiẕar", "vazgeçme", "orta", ""],
-      [5, "وُذُر", "wuẕur", "vazgeçme", "orta", ""],
-      [6, "وُذُور", "wuẕūr", "vazgeçme", "orta", ""],
-      [7, "وِذَار", "wiẕār", "vazgeçme", "orta", ""],
-      [8, "وُذَار", "wuẕār", "vazgeçme", "orta", ""],
-      [9, "وَذَار", "waẕār", "vazgeçme", "orta", ""],
-      [10, "وَذَارَة", "waẕāra", "vazgeçme", "orta", ""],
-      [11, "وُذُورَة", "wuẕūra", "vazgeçme", "orta", ""],
-      [12, "وِذَارَة", "wiẕāra", "vazgeçme", "orta", ""],
-      [13, "وَذِير", "waẕīr", "vazgeçme", "orta", ""],
-      [14, "وَذُور", "waẕūr", "vazgeçme", "orta", ""],
-      [15, "وَذَرَان", "waẕarān", "vazgeçme", "orta", ""],
-      [16, "وُذْرَان", "wuẕrān", "vazgeçme", "orta", ""],
-      [17, "وِذْرَان", "wiẕrān", "vazgeçme", "orta", ""],
-      [18, "وَذْرَى", "waẕrā", "vazgeçme", "orta", ""],
-      [19, "وُذْرَى", "wuẕrā", "vazgeçme", "orta", ""],
-      [20, "وِذْرَى", "wiẕrā", "vazgeçme", "orta", ""],
-      [21, "وَذَرَة", "waẕara", "vazgeçme", "orta", ""],
-      [22, "وِذَرَة", "wiẕara", "vazgeçme", "orta", ""],
-      [23, "وَذْرُورَة", "waẕrūra", "vazgeçme", "orta", ""],
-      [24, "تُوذُور", "tūẕūr", "vazgeçme", "orta", ""],
-      [25, "تَوْذِرَة", "tawẕira", "vazgeçme", "orta", ""],
-      [26, "تَوْذَرَة", "tawẕara", "vazgeçme", "orta", ""],
-      [27, "مَوْذُرَة", "mawẕura", "vazgeçme", "orta", ""],
-      [28, "مَوْذِرَة", "mawẕira", "vazgeçme", "orta", ""],
-      [926, "ذِرَة", "ẕira", "vazgeçme", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَوْذِير", "tawẕīr", "çokça vazgeçme", "orta", ""],
-      [30, "تَوْذِرَة", "tawẕira", "çokça vazgeçme", "orta", ""],
-      [31, "وِذِّار", "wiẕẕār", "çokça vazgeçme", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَوْذِيرَة", "tawẕīra", "bir kere çokça vazgeçme", "orta", ""],
-      [33, "وِذِّارَة", "wiẕẕāra", "bir kere çokça vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُوَذِّر", "muwaẕẕir", "çokça vazgeçen", "orta", ""],
-      [35, "مُوَذِّرَة", "muwaẕẕira", "çokça vazgeçen, müennes", "orta", ""],
-      [36, "مُوَذِّرَان", "muwaẕẕirān", "çokça vazgeçen, iki", "orta", ""],
-      [37, "مُوَذِّرَتَان", "muwaẕẕiratān", "çokça vazgeçen, iki, müennes", "orta", ""],
-      [38, "مُوَذِّرُون", "muwaẕẕirūn", "çokça vazgeçenler", "orta", ""],
-      [39, "مُوَذِّرِين", "muwaẕẕirīn", "çokça vazgeçenler", "orta", ""],
-      [40, "مُوَذِّرَات", "muwaẕẕirāt", "çokça vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُوَذَّر", "muwaẕẕar", "çokça vazgeçilen", "orta", ""],
-      [42, "مُوَذَّرَة", "muwaẕẕara", "çokça vazgeçilen, müennes", "orta", ""],
-      [43, "مُوَذَّرَان", "muwaẕẕarān", "çokça vazgeçilen, iki", "orta", ""],
-      [44, "مُوَذَّرَتَان", "muwaẕẕaratān", "çokça vazgeçilen, iki, müennes", "orta", ""],
-      [45, "مُوَذَّرُون", "muwaẕẕarūn", "çokça vazgeçilenler", "orta", ""],
-      [46, "مُوَذَّرِين", "muwaẕẕarīn", "çokça vazgeçilenler", "orta", ""],
-      [47, "مُوَذَّرَات", "muwaẕẕarāt", "çokça vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُوَذَّر", "muwaẕẕar", "çokça vazgeçme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُوَاذَرَة", "muwāẕara", "biriyle karşılıklı vazgeçme", "orta", ""],
-      [50, "وِذَار", "wiẕār", "biriyle karşılıklı vazgeçme", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "وِذَارَة", "wiẕāra", "bir kere biriyle karşılıklı vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُوَاذِر", "muwāẕir", "biriyle karşılıklı vazgeçen", "orta", ""],
-      [53, "مُوَاذِرَة", "muwāẕira", "biriyle karşılıklı vazgeçen, müennes", "orta", ""],
-      [54, "مُوَاذِرَان", "muwāẕirān", "biriyle karşılıklı vazgeçen, iki", "orta", ""],
-      [55, "مُوَاذِرَتَان", "muwāẕiratān", "biriyle karşılıklı vazgeçen, iki, müennes", "orta", ""],
-      [56, "مُوَاذِرُون", "muwāẕirūn", "biriyle karşılıklı vazgeçenler", "orta", ""],
-      [57, "مُوَاذِرِين", "muwāẕirīn", "biriyle karşılıklı vazgeçenler", "orta", ""],
-      [58, "مُوَاذِرَات", "muwāẕirāt", "biriyle karşılıklı vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُوَاذَر", "muwāẕar", "biriyle karşılıklı vazgeçilen", "orta", ""],
-      [60, "مُوَاذَرَة", "muwāẕara", "biriyle karşılıklı vazgeçilen, müennes", "orta", ""],
-      [61, "مُوَاذَرَان", "muwāẕarān", "biriyle karşılıklı vazgeçilen, iki", "orta", ""],
-      [62, "مُوَاذَرَتَان", "muwāẕaratān", "biriyle karşılıklı vazgeçilen, iki, müennes", "orta", ""],
-      [63, "مُوَاذَرُون", "muwāẕarūn", "biriyle karşılıklı vazgeçilenler", "orta", ""],
-      [64, "مُوَاذَرِين", "muwāẕarīn", "biriyle karşılıklı vazgeçilenler", "orta", ""],
-      [65, "مُوَاذَرَات", "muwāẕarāt", "biriyle karşılıklı vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُوَاذَر", "muwāẕar", "biriyle karşılıklı vazgeçme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِيذَار", "ʾīẕār", "vazgeçtirme", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِيذَارَة", "ʾīẕāra", "bir kere vazgeçtirme", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُوذِر", "mūẕir", "vazgeçtiren", "orta", ""],
-      [70, "مُوذِرَة", "mūẕira", "vazgeçtiren, müennes", "orta", ""],
-      [71, "مُوذِرَان", "mūẕirān", "vazgeçtiren, iki", "orta", ""],
-      [72, "مُوذِرَتَان", "mūẕiratān", "vazgeçtiren, iki, müennes", "orta", ""],
-      [73, "مُوذِرُون", "mūẕirūn", "vazgeçtirenler", "orta", ""],
-      [74, "مُوذِرِين", "mūẕirīn", "vazgeçtirenler", "orta", ""],
-      [75, "مُوذِرَات", "mūẕirāt", "vazgeçtirenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُوذَر", "mūẕar", "vazgeçtirilen", "orta", ""],
-      [77, "مُوذَرَة", "mūẕara", "vazgeçtirilen, müennes", "orta", ""],
-      [78, "مُوذَرَان", "mūẕarān", "vazgeçtirilen, iki", "orta", ""],
-      [79, "مُوذَرَتَان", "mūẕaratān", "vazgeçtirilen, iki, müennes", "orta", ""],
-      [80, "مُوذَرُون", "mūẕarūn", "vazgeçtirilenler", "orta", ""],
-      [81, "مُوذَرِين", "mūẕarīn", "vazgeçtirilenler", "orta", ""],
-      [82, "مُوذَرَات", "mūẕarāt", "vazgeçtirilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُوذَر", "mūẕar", "vazgeçtirme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَوَذُّر", "tawaẕẕur", "kendini zorlayarak vazgeçme", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَوَذُّرَة", "tawaẕẕura", "bir kere kendini zorlayarak vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَوَذِّر", "mutawaẕẕir", "kendini zorlayarak vazgeçen", "orta", ""],
-      [87, "مُتَوَذِّرَة", "mutawaẕẕira", "kendini zorlayarak vazgeçen, müennes", "orta", ""],
-      [88, "مُتَوَذِّرَان", "mutawaẕẕirān", "kendini zorlayarak vazgeçen, iki", "orta", ""],
-      [89, "مُتَوَذِّرَتَان", "mutawaẕẕiratān", "kendini zorlayarak vazgeçen, iki, müennes", "orta", ""],
-      [90, "مُتَوَذِّرُون", "mutawaẕẕirūn", "kendini zorlayarak vazgeçenler", "orta", ""],
-      [91, "مُتَوَذِّرِين", "mutawaẕẕirīn", "kendini zorlayarak vazgeçenler", "orta", ""],
-      [92, "مُتَوَذِّرَات", "mutawaẕẕirāt", "kendini zorlayarak vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَوَذَّر", "mutawaẕẕar", "kendini zorlayarak vazgeçilen", "orta", ""],
-      [94, "مُتَوَذَّرَة", "mutawaẕẕara", "kendini zorlayarak vazgeçilen, müennes", "orta", ""],
-      [95, "مُتَوَذَّرَان", "mutawaẕẕarān", "kendini zorlayarak vazgeçilen, iki", "orta", ""],
-      [96, "مُتَوَذَّرَتَان", "mutawaẕẕaratān", "kendini zorlayarak vazgeçilen, iki, müennes", "orta", ""],
-      [97, "مُتَوَذَّرُون", "mutawaẕẕarūn", "kendini zorlayarak vazgeçilenler", "orta", ""],
-      [98, "مُتَوَذَّرِين", "mutawaẕẕarīn", "kendini zorlayarak vazgeçilenler", "orta", ""],
-      [99, "مُتَوَذَّرَات", "mutawaẕẕarāt", "kendini zorlayarak vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَوَذَّر", "mutawaẕẕar", "kendini zorlayarak vazgeçme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَوَاذُر", "tawāẕur", "birbirine vazgeçme", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَوَاذُرَة", "tawāẕura", "bir kere birbirine vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَوَاذِر", "mutawāẕir", "birbirine vazgeçen", "orta", ""],
-      [104, "مُتَوَاذِرَة", "mutawāẕira", "birbirine vazgeçen, müennes", "orta", ""],
-      [105, "مُتَوَاذِرَان", "mutawāẕirān", "birbirine vazgeçen, iki", "orta", ""],
-      [106, "مُتَوَاذِرَتَان", "mutawāẕiratān", "birbirine vazgeçen, iki, müennes", "orta", ""],
-      [107, "مُتَوَاذِرُون", "mutawāẕirūn", "birbirine vazgeçenler", "orta", ""],
-      [108, "مُتَوَاذِرِين", "mutawāẕirīn", "birbirine vazgeçenler", "orta", ""],
-      [109, "مُتَوَاذِرَات", "mutawāẕirāt", "birbirine vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَوَاذَر", "mutawāẕar", "birbirine vazgeçilen", "orta", ""],
-      [111, "مُتَوَاذَرَة", "mutawāẕara", "birbirine vazgeçilen, müennes", "orta", ""],
-      [112, "مُتَوَاذَرَان", "mutawāẕarān", "birbirine vazgeçilen, iki", "orta", ""],
-      [113, "مُتَوَاذَرَتَان", "mutawāẕaratān", "birbirine vazgeçilen, iki, müennes", "orta", ""],
-      [114, "مُتَوَاذَرُون", "mutawāẕarūn", "birbirine vazgeçilenler", "orta", ""],
-      [115, "مُتَوَاذَرِين", "mutawāẕarīn", "birbirine vazgeçilenler", "orta", ""],
-      [116, "مُتَوَاذَرَات", "mutawāẕarāt", "birbirine vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَوَاذَر", "mutawāẕar", "birbirine vazgeçme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْوِذَار", "inwiẕār", "vazgeçilme", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْوِذَارَة", "inwiẕāra", "bir kere vazgeçilme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْوَذِر", "munwaẕir", "vazgeçilen", "orta", ""],
-      [121, "مُنْوَذِرَة", "munwaẕira", "vazgeçilen, müennes", "orta", ""],
-      [122, "مُنْوَذِرَان", "munwaẕirān", "vazgeçilen, iki", "orta", ""],
-      [123, "مُنْوَذِرَتَان", "munwaẕiratān", "vazgeçilen, iki, müennes", "orta", ""],
-      [124, "مُنْوَذِرُون", "munwaẕirūn", "vazgeçilenler", "orta", ""],
-      [125, "مُنْوَذِرِين", "munwaẕirīn", "vazgeçilenler", "orta", ""],
-      [126, "مُنْوَذِرَات", "munwaẕirāt", "vazgeçilenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْوَذَر", "munwaẕar", "vazgeçilen", "orta", ""],
-      [128, "مُنْوَذَرَة", "munwaẕara", "vazgeçilen, müennes", "orta", ""],
-      [129, "مُنْوَذَرَان", "munwaẕarān", "vazgeçilen, iki", "orta", ""],
-      [130, "مُنْوَذَرَتَان", "munwaẕaratān", "vazgeçilen, iki, müennes", "orta", ""],
-      [131, "مُنْوَذَرُون", "munwaẕarūn", "vazgeçilenler", "orta", ""],
-      [132, "مُنْوَذَرِين", "munwaẕarīn", "vazgeçilenler", "orta", ""],
-      [133, "مُنْوَذَرَات", "munwaẕarāt", "vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْوَذَر", "munwaẕar", "vazgeçilme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِتِّذَار", "ittiẕār", "kendisi için vazgeçme", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِتِّذَارَة", "ittiẕāra", "bir kere kendisi için vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُتَّذِر", "muttaẕir", "kendisi için vazgeçen", "orta", ""],
-      [139, "مُتَّذِرَة", "muttaẕira", "kendisi için vazgeçen, müennes", "orta", ""],
-      [140, "مُتَّذِرَان", "muttaẕirān", "kendisi için vazgeçen, iki", "orta", ""],
-      [141, "مُتَّذِرَتَان", "muttaẕiratān", "kendisi için vazgeçen, iki, müennes", "orta", ""],
-      [142, "مُتَّذِرُون", "muttaẕirūn", "kendisi için vazgeçenler", "orta", ""],
-      [143, "مُتَّذِرِين", "muttaẕirīn", "kendisi için vazgeçenler", "orta", ""],
-      [144, "مُتَّذِرَات", "muttaẕirāt", "kendisi için vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُتَّذَر", "muttaẕar", "kendisi için vazgeçilen", "orta", ""],
-      [146, "مُتَّذَرَة", "muttaẕara", "kendisi için vazgeçilen, müennes", "orta", ""],
-      [147, "مُتَّذَرَان", "muttaẕarān", "kendisi için vazgeçilen, iki", "orta", ""],
-      [148, "مُتَّذَرَتَان", "muttaẕaratān", "kendisi için vazgeçilen, iki, müennes", "orta", ""],
-      [149, "مُتَّذَرُون", "muttaẕarūn", "kendisi için vazgeçilenler", "orta", ""],
-      [150, "مُتَّذَرِين", "muttaẕarīn", "kendisi için vazgeçilenler", "orta", ""],
-      [151, "مُتَّذَرَات", "muttaẕarāt", "kendisi için vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُتَّذَر", "muttaẕar", "kendisi için vazgeçme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِيذِرَار", "īẕirār", "iyiden iyiye vazgeçme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُوذَرّ", "mūẕarr", "iyiden iyiye vazgeçen", "kontrol", ""],
-      [170, "مُوذَرَّة", "mūẕarra", "iyiden iyiye vazgeçen, müennes", "kontrol", ""],
-      [171, "مُوذَرَّان", "mūẕarrān", "iyiden iyiye vazgeçen, iki", "kontrol", ""],
-      [172, "مُوذَرَّتَان", "mūẕarratān", "iyiden iyiye vazgeçen, iki, müennes", "kontrol", ""],
-      [173, "مُوذَرُّون", "mūẕarrūn", "iyiden iyiye vazgeçenler", "kontrol", ""],
-      [174, "مُوذَرِّين", "mūẕarrīn", "iyiden iyiye vazgeçenler", "kontrol", ""],
-      [175, "مُوذَرَّات", "mūẕarrāt", "iyiden iyiye vazgeçenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِيذَار", "istīẕār", "vazgeçmeyi isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِيذَارَة", "istīẕāra", "bir kere vazgeçmeyi isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَوْذِر", "mustawẕir", "vazgeçmeyi isteyen", "orta", ""],
-      [179, "مُسْتَوْذِرَة", "mustawẕira", "vazgeçmeyi isteyen, müennes", "orta", ""],
-      [180, "مُسْتَوْذِرَان", "mustawẕirān", "vazgeçmeyi isteyen, iki", "orta", ""],
-      [181, "مُسْتَوْذِرَتَان", "mustawẕiratān", "vazgeçmeyi isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَوْذِرُون", "mustawẕirūn", "vazgeçmeyi isteyenler", "orta", ""],
-      [183, "مُسْتَوْذِرِين", "mustawẕirīn", "vazgeçmeyi isteyenler", "orta", ""],
-      [184, "مُسْتَوْذِرَات", "mustawẕirāt", "vazgeçmeyi isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَوْذَر", "mustawẕar", "vazgeçmesi istenen", "orta", ""],
-      [186, "مُسْتَوْذَرَة", "mustawẕara", "vazgeçmesi istenen, müennes", "orta", ""],
-      [187, "مُسْتَوْذَرَان", "mustawẕarān", "vazgeçmesi istenen, iki", "orta", ""],
-      [188, "مُسْتَوْذَرَتَان", "mustawẕaratān", "vazgeçmesi istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَوْذَرُون", "mustawẕarūn", "vazgeçmesi istenenler", "orta", ""],
-      [190, "مُسْتَوْذَرِين", "mustawẕarīn", "vazgeçmesi istenenler", "orta", ""],
-      [191, "مُسْتَوْذَرَات", "mustawẕarāt", "vazgeçmesi istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَوْذَر", "mustawẕar", "vazgeçmeyi isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِيذِيرَار", "īẕīrār", "büsbütün vazgeçme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُوذَارّ", "mūẕārr", "büsbütün vazgeçen", "kontrol", ""],
-      [195, "مُوذَارَّة", "mūẕārra", "büsbütün vazgeçen, müennes", "kontrol", ""],
-      [196, "مُوذَارَّان", "mūẕārrān", "büsbütün vazgeçen, iki", "kontrol", ""],
-      [197, "مُوذَارَّتَان", "mūẕārratān", "büsbütün vazgeçen, iki, müennes", "kontrol", ""],
-      [198, "مُوذَارُّون", "mūẕārrūn", "büsbütün vazgeçenler", "kontrol", ""],
-      [199, "مُوذَارِّين", "mūẕārrīn", "büsbütün vazgeçenler", "kontrol", ""],
-      [200, "مُوذَارَّات", "mūẕārrāt", "büsbütün vazgeçenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِيذِوْذَار", "īẕiwẕār", "aşırı vazgeçme", "orta", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِيذِوَّار", "īẕiwwār", "aşırı vazgeçme", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "وَاذِر", "wāẕir", "vazgeçen", "orta", ""],
-      [214, "وَاذِرَة", "wāẕira", "vazgeçen, müennes", "orta", ""],
-      [215, "وَاذِرَان", "wāẕirān", "vazgeçen, iki", "orta", ""],
-      [216, "وَاذِرَتَان", "wāẕiratān", "vazgeçen, iki, müennes", "orta", ""],
-      [217, "وَاذِرُون", "wāẕirūn", "vazgeçenler", "orta", ""],
-      [218, "وَاذِرِين", "wāẕirīn", "vazgeçenler", "orta", ""],
-      [219, "وَاذِرَات", "wāẕirāt", "vazgeçenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَوْذُور", "mawẕūr", "vazgeçilen", "orta", ""],
-      [221, "مَوْذُورَة", "mawẕūra", "vazgeçilen, müennes", "orta", ""],
-      [222, "مَوْذُورَان", "mawẕūrān", "vazgeçilen, iki", "orta", ""],
-      [223, "مَوْذُورَتَان", "mawẕūratān", "vazgeçilen, iki, müennes", "orta", ""],
-      [224, "مَوْذُورُون", "mawẕūrūn", "vazgeçilenler", "orta", ""],
-      [225, "مَوْذُورِين", "mawẕūrīn", "vazgeçilenler", "orta", ""],
-      [226, "مَوْذُورَات", "mawẕūrāt", "vazgeçilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَوْذَر", "mawẕar", "vazgeçme yeri, vakti", "orta", ""],
-      [228, "مَوْذَرَان", "mawẕarān", "vazgeçme yeri, vakti, iki", "orta", ""],
-      [229, "مَوْذِر", "mawẕir", "vazgeçme yeri, vakti", "orta", ""],
-      [230, "مَوْذِرَان", "mawẕirān", "vazgeçme yeri, vakti, iki", "orta", ""],
-      [231, "مَوْذَرَة", "mawẕara", "vazgeçmenin bol olduğu yer", "orta", ""],
-      [232, "مَوْذَرَتَان", "mawẕaratān", "vazgeçmenin bol olduğu yer, iki", "orta", ""],
-      [233, "مَوْذِرَة", "mawẕira", "vazgeçmenin bol olduğu yer", "orta", ""],
-      [234, "مَوْذِرَتَان", "mawẕiratān", "vazgeçmenin bol olduğu yer, iki", "orta", ""],
-      [247, "مَوْذُرَة", "mawẕura", "vazgeçme yeri, vakti", "orta", ""],
-      [248, "مَوْذُرَتَان", "mawẕuratān", "vazgeçme yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِيذَر", "mīẕar", "vazgeçme âleti", "orta", ""],
-      [236, "مِيذَرَان", "mīẕarān", "vazgeçme âleti, iki", "orta", ""],
-      [237, "مِيذَار", "mīẕār", "vazgeçme âleti", "orta", ""],
-      [238, "مِيذَارَان", "mīẕārān", "vazgeçme âleti, iki", "orta", ""],
-      [239, "مِيذَرَة", "mīẕara", "vazgeçme âleti", "orta", ""],
-      [240, "مِيذَرَتَان", "mīẕaratān", "vazgeçme âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَوْذَر", "ʾawẕar", "daha çok vazgeçen", "orta", ""],
-      [242, "أَوْذَرَان", "ʾawẕarān", "daha çok vazgeçen, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "وُذْرَى", "wuẕrā", "daha çok vazgeçen", "orta", ""],
-      [244, "وُذْرَيَان", "wuẕrayān", "daha çok vazgeçen, iki", "orta", ""],
-      [245, "وَذْرَاء", "waẕrāʾ", "daha çok vazgeçen", "orta", ""],
-      [246, "وَذْرَاآن", "waẕrāʾān", "daha çok vazgeçen, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "وُذَيْر", "wuẕayr", "azıcık vazgeçme", "orta", ""],
-      [250, "وُذَيْرَان", "wuẕayrān", "azıcık vazgeçme, iki", "orta", ""],
-      [251, "وُذَيْرَة", "wuẕayra", "azıcık vazgeçme", "orta", ""],
-      [252, "وُذَيْرَتَان", "wuẕayratān", "azıcık vazgeçme, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَوْذَر", "mawẕar", "vazgeçme", "orta", ""],
-      [254, "مَوْذَرَان", "mawẕarān", "vazgeçme, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "وَذْرَة", "waẕra", "bir kere vazgeçme", "orta", ""],
-      [256, "وَذْرَتَان", "waẕratān", "bir kere vazgeçme, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "وِذْرَة", "wiẕra", "vazgeçme tarzı", "orta", ""],
-      [258, "وِذْرَتَان", "wiẕratān", "vazgeçme tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "وَذِير", "waẕīr", "her daim vazgeçen", "orta", ""],
-      [260, "وَذِيرَة", "waẕīra", "her daim vazgeçen, müennes", "orta", ""],
-      [261, "وَذِيرَان", "waẕīrān", "her daim vazgeçen, iki", "orta", ""],
-      [262, "وَذِيرَتَان", "waẕīratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [263, "وَذِيرُون", "waẕīrūn", "her daim vazgeçenler", "orta", ""],
-      [264, "وَذِيرِين", "waẕīrīn", "her daim vazgeçenler", "orta", ""],
-      [265, "وَذِيرَات", "waẕīrāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [266, "وَذُور", "waẕūr", "her daim vazgeçen", "orta", ""],
-      [267, "وَذُورَة", "waẕūra", "her daim vazgeçen, müennes", "orta", ""],
-      [268, "وَذُورَان", "waẕūrān", "her daim vazgeçen, iki", "orta", ""],
-      [269, "وَذُورَتَان", "waẕūratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [270, "وَذُورُون", "waẕūrūn", "her daim vazgeçenler", "orta", ""],
-      [271, "وَذُورِين", "waẕūrīn", "her daim vazgeçenler", "orta", ""],
-      [272, "وَذُورَات", "waẕūrāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [273, "وَذِر", "waẕir", "her daim vazgeçen", "orta", ""],
-      [274, "وَذِرَة", "waẕira", "her daim vazgeçen, müennes", "orta", ""],
-      [275, "وَذِرَان", "waẕirān", "her daim vazgeçen, iki", "orta", ""],
-      [276, "وَذِرَتَان", "waẕiratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [277, "وَذِرُون", "waẕirūn", "her daim vazgeçenler", "orta", ""],
-      [278, "وَذِرِين", "waẕirīn", "her daim vazgeçenler", "orta", ""],
-      [279, "وَذِرَات", "waẕirāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [280, "وَذُر", "waẕur", "her daim vazgeçen", "orta", ""],
-      [281, "وَذُرَة", "waẕura", "her daim vazgeçen, müennes", "orta", ""],
-      [282, "وَذُرَان", "waẕurān", "her daim vazgeçen, iki", "orta", ""],
-      [283, "وَذُرَتَان", "waẕuratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [284, "وَذُرُون", "waẕurūn", "her daim vazgeçenler", "orta", ""],
-      [285, "وَذُرِين", "waẕurīn", "her daim vazgeçenler", "orta", ""],
-      [286, "وَذُرَات", "waẕurāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [287, "وَذَر", "waẕar", "her daim vazgeçen", "orta", ""],
-      [288, "وَذَرَة", "waẕara", "her daim vazgeçen, müennes", "orta", ""],
-      [289, "وَذَرَان", "waẕarān", "her daim vazgeçen, iki", "orta", ""],
-      [290, "وَذَرَتَان", "waẕaratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [291, "وَذَرُون", "waẕarūn", "her daim vazgeçenler", "orta", ""],
-      [292, "وَذَرِين", "waẕarīn", "her daim vazgeçenler", "orta", ""],
-      [293, "وَذَرَات", "waẕarāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [294, "وَذْر", "waẕr", "her daim vazgeçen", "orta", ""],
-      [295, "وَذْرَة", "waẕra", "her daim vazgeçen, müennes", "orta", ""],
-      [296, "وَذْرَان", "waẕrān", "her daim vazgeçen, iki", "orta", ""],
-      [297, "وَذْرَتَان", "waẕratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [298, "وَذْرُون", "waẕrūn", "her daim vazgeçenler", "orta", ""],
-      [299, "وَذْرِين", "waẕrīn", "her daim vazgeçenler", "orta", ""],
-      [300, "وَذْرَات", "waẕrāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [301, "وُذُر", "wuẕur", "her daim vazgeçen", "orta", ""],
-      [302, "وُذُرَة", "wuẕura", "her daim vazgeçen, müennes", "orta", ""],
-      [303, "وُذُرَان", "wuẕurān", "her daim vazgeçen, iki", "orta", ""],
-      [304, "وُذُرَتَان", "wuẕuratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [305, "وُذُرُون", "wuẕurūn", "her daim vazgeçenler", "orta", ""],
-      [306, "وُذُرِين", "wuẕurīn", "her daim vazgeçenler", "orta", ""],
-      [307, "وُذُرَات", "wuẕurāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [308, "وَذْرَان", "waẕrān", "her daim vazgeçen", "orta", ""],
-      [309, "وَذْرَانَة", "waẕrāna", "her daim vazgeçen, müennes", "orta", ""],
-      [310, "وَذْرَانَان", "waẕrānān", "her daim vazgeçen, iki", "orta", ""],
-      [311, "وَذْرَانَتَان", "waẕrānatān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [312, "وَذْرَانُون", "waẕrānūn", "her daim vazgeçenler", "orta", ""],
-      [313, "وَذْرَانِين", "waẕrānīn", "her daim vazgeçenler", "orta", ""],
-      [314, "وَذْرَانَات", "waẕrānāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [315, "وُذَار", "wuẕār", "her daim vazgeçen", "orta", ""],
-      [316, "وُذَارَة", "wuẕāra", "her daim vazgeçen, müennes", "orta", ""],
-      [317, "وُذَارَان", "wuẕārān", "her daim vazgeçen, iki", "orta", ""],
-      [318, "وُذَارَتَان", "wuẕāratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [319, "وُذَارُون", "wuẕārūn", "her daim vazgeçenler", "orta", ""],
-      [320, "وُذَارِين", "wuẕārīn", "her daim vazgeçenler", "orta", ""],
-      [321, "وُذَارَات", "wuẕārāt", "her daim vazgeçenler, müennes", "orta", ""],
-      [322, "وَذَار", "waẕār", "her daim vazgeçen", "orta", ""],
-      [323, "وَذَارَة", "waẕāra", "her daim vazgeçen, müennes", "orta", ""],
-      [324, "وَذَارَان", "waẕārān", "her daim vazgeçen, iki", "orta", ""],
-      [325, "وَذَارَتَان", "waẕāratān", "her daim vazgeçen, iki, müennes", "orta", ""],
-      [326, "وَذَارُون", "waẕārūn", "her daim vazgeçenler", "orta", ""],
-      [327, "وَذَارِين", "waẕārīn", "her daim vazgeçenler", "orta", ""],
-      [328, "وَذَارَات", "waẕārāt", "her daim vazgeçenler, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "وَذَّار", "waẕẕār", "işi vazgeçme olan", "orta", ""],
-      [330, "وَذَّارَة", "waẕẕāra", "işi vazgeçme olan, müennes", "orta", ""],
-      [331, "وَذَّارَان", "waẕẕārān", "işi vazgeçme olan, iki", "orta", ""],
-      [332, "وَذَّارَتَان", "waẕẕāratān", "işi vazgeçme olan, iki, müennes", "orta", ""],
-      [333, "وَذَّارُون", "waẕẕārūn", "işi vazgeçme olanlar", "orta", ""],
-      [334, "وَذَّارِين", "waẕẕārīn", "işi vazgeçme olanlar", "orta", ""],
-      [335, "وَذَّارَات", "waẕẕārāt", "işi vazgeçme olanlar, müennes", "orta", ""],
-      [336, "وَذَّارَة", "waẕẕāra", "pek çok vazgeçen", "orta", ""],
-      [337, "وَذَّارَتَان", "waẕẕāratān", "pek çok vazgeçen, iki", "orta", ""],
-      [338, "وَذَّارَات", "waẕẕārāt", "pek çok vazgeçenler, müennes", "orta", ""],
-      [339, "وَذُور", "waẕūr", "çok vazgeçen", "orta", ""],
-      [340, "وَذُورَة", "waẕūra", "çok vazgeçen, müennes", "orta", ""],
-      [341, "وَذُورَان", "waẕūrān", "çok vazgeçen, iki", "orta", ""],
-      [342, "وَذُورَتَان", "waẕūratān", "çok vazgeçen, iki, müennes", "orta", ""],
-      [343, "وَذُورُون", "waẕūrūn", "çok vazgeçenler", "orta", ""],
-      [344, "وَذُورِين", "waẕūrīn", "çok vazgeçenler", "orta", ""],
-      [345, "وَذُورَات", "waẕūrāt", "çok vazgeçenler, müennes", "orta", ""],
-      [346, "وَذُّور", "waẕẕūr", "pek çok vazgeçen", "orta", ""],
-      [347, "وَذُّورَة", "waẕẕūra", "pek çok vazgeçen, müennes", "orta", ""],
-      [348, "وَذُّورَان", "waẕẕūrān", "pek çok vazgeçen, iki", "orta", ""],
-      [349, "وَذُّورَتَان", "waẕẕūratān", "pek çok vazgeçen, iki, müennes", "orta", ""],
-      [350, "وَذُّورُون", "waẕẕūrūn", "pek çok vazgeçenler", "orta", ""],
-      [351, "وَذُّورِين", "waẕẕūrīn", "pek çok vazgeçenler", "orta", ""],
-      [352, "وَذُّورَات", "waẕẕūrāt", "pek çok vazgeçenler, müennes", "orta", ""],
-      [353, "وِذِّير", "wiẕẕīr", "vazgeçmede aşırı giden", "orta", ""],
-      [354, "وِذِّيرَة", "wiẕẕīra", "vazgeçmede aşırı giden, müennes", "orta", ""],
-      [355, "وِذِّيرَان", "wiẕẕīrān", "vazgeçmede aşırı giden, iki", "orta", ""],
-      [356, "وِذِّيرَتَان", "wiẕẕīratān", "vazgeçmede aşırı giden, iki, müennes", "orta", ""],
-      [357, "وِذِّيرُون", "wiẕẕīrūn", "vazgeçmede aşırı gidenler", "orta", ""],
-      [358, "وِذِّيرِين", "wiẕẕīrīn", "vazgeçmede aşırı gidenler", "orta", ""],
-      [359, "وِذِّيرَات", "wiẕẕīrāt", "vazgeçmede aşırı gidenler, müennes", "orta", ""],
-      [360, "وُذَّار", "wuẕẕār", "son derece vazgeçen", "orta", ""],
-      [361, "وُذَّارَة", "wuẕẕāra", "son derece vazgeçen, müennes", "orta", ""],
-      [362, "وُذَّارَان", "wuẕẕārān", "son derece vazgeçen, iki", "orta", ""],
-      [363, "وُذَّارَتَان", "wuẕẕāratān", "son derece vazgeçen, iki, müennes", "orta", ""],
-      [364, "وُذَّارُون", "wuẕẕārūn", "son derece vazgeçenler", "orta", ""],
-      [365, "وُذَّارِين", "wuẕẕārīn", "son derece vazgeçenler", "orta", ""],
-      [366, "وُذَّارَات", "wuẕẕārāt", "son derece vazgeçenler, müennes", "orta", ""],
-      [367, "مِيذَار", "mīẕār", "vazgeçmeyi âdet edinmiş", "orta", ""],
-      [368, "مِيذَارَة", "mīẕāra", "vazgeçmeyi âdet edinmiş, müennes", "orta", ""],
-      [369, "مِيذَارَان", "mīẕārān", "vazgeçmeyi âdet edinmiş, iki", "orta", ""],
-      [370, "مِيذَارَتَان", "mīẕāratān", "vazgeçmeyi âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِيذَارُون", "mīẕārūn", "vazgeçmeyi âdet edinmişler", "orta", ""],
-      [372, "مِيذَارِين", "mīẕārīn", "vazgeçmeyi âdet edinmişler", "orta", ""],
-      [373, "مِيذَارَات", "mīẕārāt", "vazgeçmeyi âdet edinmişler, müennes", "orta", ""],
-      [374, "مِيذِير", "mīẕīr", "vazgeçmeye düşkün", "orta", ""],
-      [375, "مِيذِيرَة", "mīẕīra", "vazgeçmeye düşkün, müennes", "orta", ""],
-      [376, "مِيذِيرَان", "mīẕīrān", "vazgeçmeye düşkün, iki", "orta", ""],
-      [377, "مِيذِيرَتَان", "mīẕīratān", "vazgeçmeye düşkün, iki, müennes", "orta", ""],
-      [378, "مِيذِيرُون", "mīẕīrūn", "vazgeçmeye düşkünler", "orta", ""],
-      [379, "مِيذِيرِين", "mīẕīrīn", "vazgeçmeye düşkünler", "orta", ""],
-      [380, "مِيذِيرَات", "mīẕīrāt", "vazgeçmeye düşkünler, müennes", "orta", ""],
-      [381, "وَذِير", "waẕīr", "çok vazgeçen", "orta", ""],
-      [382, "وَذِيرَة", "waẕīra", "çok vazgeçen, müennes", "orta", ""],
-      [383, "وَذِيرَان", "waẕīrān", "çok vazgeçen, iki", "orta", ""],
-      [384, "وَذِيرَتَان", "waẕīratān", "çok vazgeçen, iki, müennes", "orta", ""],
-      [385, "وَذِيرُون", "waẕīrūn", "çok vazgeçenler", "orta", ""],
-      [386, "وَذِيرِين", "waẕīrīn", "çok vazgeçenler", "orta", ""],
-      [387, "وَذِيرَات", "waẕīrāt", "çok vazgeçenler, müennes", "orta", ""],
-      [388, "وَذَّر", "waẕẕar", "çok vazgeçen", "orta", ""],
-      [389, "وَذَّرَة", "waẕẕara", "çok vazgeçen, müennes", "orta", ""],
-      [390, "وَذَّرَان", "waẕẕarān", "çok vazgeçen, iki", "orta", ""],
-      [391, "وَذَّرَتَان", "waẕẕaratān", "çok vazgeçen, iki, müennes", "orta", ""],
-      [392, "وَذَّرُون", "waẕẕarūn", "çok vazgeçenler", "orta", ""],
-      [393, "وَذَّرِين", "waẕẕarīn", "çok vazgeçenler", "orta", ""],
-      [394, "وَذَّرَات", "waẕẕarāt", "çok vazgeçenler, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "وَذْرِيّ", "waẕriyy", "vazgeçme ile ilgili", "orta", ""],
-      [397, "وَذَرِيّ", "waẕariyy", "vazgeçme ile ilgili", "orta", ""],
-      [399, "وِذْرِيّ", "wiẕriyy", "vazgeçme ile ilgili", "orta", ""],
-      [401, "وُذْرِيّ", "wuẕriyy", "vazgeçme ile ilgili", "orta", ""],
-      [403, "وِذَارِيّ", "wiẕāriyy", "vazgeçme ile ilgili", "orta", ""],
-      [405, "وَاذِرِيّ", "wāẕiriyy", "vazgeçme ile ilgili", "orta", ""],
-      [407, "مَوْذُورِيّ", "mawẕūriyy", "vazgeçme ile ilgili", "orta", ""],
-      [409, "وَذِيرِيّ", "waẕīriyy", "vazgeçme ile ilgili", "orta", ""],
-      [411, "مَوْذَرِيّ", "mawẕariyy", "vazgeçme ile ilgili", "orta", ""],
-      [413, "تَوْذِيرِيّ", "tawẕīriyy", "vazgeçme ile ilgili", "orta", ""],
-      [415, "تَوَاذُرِيّ", "tawāẕuriyy", "vazgeçme ile ilgili", "orta", ""],
-      [417, "إِيذَارِيّ", "ʾīẕāriyy", "vazgeçme ile ilgili", "orta", ""],
-      [419, "اِتِّذَارِيّ", "ittiẕāriyy", "vazgeçme ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "وَذْرِيَّة", "waẕriyya", "vazgeçenlik", "orta", ""],
-      [398, "وَذَرِيَّة", "waẕariyya", "vazgeçenlik", "orta", ""],
-      [400, "وِذْرِيَّة", "wiẕriyya", "vazgeçenlik", "orta", ""],
-      [402, "وُذْرِيَّة", "wuẕriyya", "vazgeçenlik", "orta", ""],
-      [404, "وِذَارِيَّة", "wiẕāriyya", "vazgeçenlik", "orta", ""],
-      [406, "وَاذِرِيَّة", "wāẕiriyya", "vazgeçenlik", "orta", ""],
-      [408, "مَوْذُورِيَّة", "mawẕūriyya", "vazgeçenlik", "orta", ""],
-      [410, "وَذِيرِيَّة", "waẕīriyya", "vazgeçenlik", "orta", ""],
-      [412, "مَوْذَرِيَّة", "mawẕariyya", "vazgeçenlik", "orta", ""],
-      [414, "تَوْذِيرِيَّة", "tawẕīriyya", "vazgeçenlik", "orta", ""],
-      [416, "تَوَاذُرِيَّة", "tawāẕuriyya", "vazgeçenlik", "orta", ""],
-      [418, "إِيذَارِيَّة", "ʾīẕāriyya", "vazgeçenlik", "orta", ""],
-      [420, "اِتِّذَارِيَّة", "ittiẕāriyya", "vazgeçenlik", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "وَذَار", "waẕār", "vazgeçme", "orta", ""],
-      [422, "وُذُور", "wuẕūr", "vazgeçme", "orta", ""],
-      [423, "وِذَار", "wiẕār", "vazgeçme", "orta", ""],
-      [424, "وُذْر", "wuẕr", "vazgeçme", "orta", ""],
-      [425, "وَذَارَة", "waẕāra", "vazgeçme", "orta", ""],
-      [426, "وِذَارَة", "wiẕāra", "vazgeçme", "orta", ""],
-      [427, "وُذُورَة", "wuẕūra", "vazgeçme", "orta", ""],
-      [428, "وَذْر", "waẕr", "vazgeçme", "orta", ""],
-      [429, "وِذْر", "wiẕr", "vazgeçme", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "وَاذُور", "wāẕūr", "vazgeçme türünden şey", "orta", ""],
-      [432, "وَذَرَة", "waẕara", "vazgeçme türünden şey", "orta", ""],
-      [433, "وُذَرَة", "wuẕara", "vazgeçme türünden şey", "orta", ""],
-      [434, "أُوذُورَة", "ʾūẕūra", "vazgeçme türünden şey", "orta", ""],
-      [435, "وَوْذَر", "wawẕar", "vazgeçme türünden şey", "orta", ""],
-      [437, "وَيْذَر", "wayẕar", "vazgeçme türünden şey", "orta", ""],
-      [439, "وَذْر", "waẕr", "vazgeçme türünden şey", "orta", ""],
-      [441, "وَذَر", "waẕar", "vazgeçme türünden şey", "orta", ""],
-      [443, "وِذْر", "wiẕr", "vazgeçme türünden şey", "orta", ""],
-      [445, "وُذْر", "wuẕr", "vazgeçme türünden şey", "orta", ""],
-      [447, "وَذِير", "waẕīr", "vazgeçme türünden şey", "orta", ""],
-      [449, "وِذَر", "wiẕar", "vazgeçme türünden şey", "orta", ""],
-      [451, "وُذُر", "wuẕur", "vazgeçme türünden şey", "orta", ""],
-      [453, "وَذَار", "waẕār", "vazgeçme türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "وَاذُورَة", "wāẕūra", "vazgeçme türünden bir tane", "orta", ""],
-      [436, "وَوْذَرَة", "wawẕara", "vazgeçme türünden bir tane", "orta", ""],
-      [438, "وَيْذَرَة", "wayẕara", "vazgeçme türünden bir tane", "orta", ""],
-      [440, "وَذْرَة", "waẕra", "vazgeçme türünden bir tane", "orta", ""],
-      [442, "وَذَرَة", "waẕara", "vazgeçme türünden bir tane", "orta", ""],
-      [444, "وِذْرَة", "wiẕra", "vazgeçme türünden bir tane", "orta", ""],
-      [446, "وُذْرَة", "wuẕra", "vazgeçme türünden bir tane", "orta", ""],
-      [448, "وَذِيرَة", "waẕīra", "vazgeçme türünden bir tane", "orta", ""],
-      [450, "وِذَرَة", "wiẕara", "vazgeçme türünden bir tane", "orta", ""],
-      [452, "وُذُرَة", "wuẕura", "vazgeçme türünden bir tane", "orta", ""],
-      [454, "وَذَارَة", "waẕāra", "vazgeçme türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَوْذَار", "ʾawẕār", "vazgeçmeler", "orta", ""],
-      [456, "أَوْذِرَة", "ʾawẕira", "vazgeçmeler", "orta", ""],
-      [457, "أَوَاذِر", "ʾawāẕir", "vazgeçmeler", "orta", ""],
-      [458, "أَوَاذِير", "ʾawāẕīr", "vazgeçmeler", "orta", ""],
-      [459, "وُذُور", "wuẕūr", "vazgeçmeler", "orta", ""],
-      [460, "وُذُر", "wuẕur", "vazgeçmeler", "orta", ""],
-      [461, "وِذَار", "wiẕār", "vazgeçmeler", "orta", ""],
-      [462, "وِذَر", "wiẕar", "vazgeçmeler", "orta", ""],
-      [463, "وِذَرَة", "wiẕara", "vazgeçmeler", "orta", ""],
-      [464, "وُذَر", "wuẕar", "vazgeçmeler", "orta", ""],
-      [465, "وُذَراء", "wuẕarāʾ", "vazgeçmeler", "orta", ""],
-      [466, "وَذَرَة", "waẕara", "vazgeçmeler", "orta", ""],
-      [467, "وُذَّار", "wuẕẕār", "vazgeçmeler", "orta", ""],
-      [468, "وَذَار", "waẕār", "vazgeçmeler", "orta", ""],
-      [469, "وَذَر", "waẕar", "vazgeçmeler", "orta", ""],
-      [470, "مَوَاذِر", "mawāẕir", "vazgeçmeler", "orta", ""],
-      [471, "مَوَاذِير", "mawāẕīr", "vazgeçmeler", "orta", ""],
-      [472, "وَوَاذِر", "wawāẕir", "vazgeçmeler", "orta", ""],
-      [473, "أَوْذُر", "ʾawẕur", "vazgeçmeler", "orta", ""],
-      [474, "وُذَّر", "wuẕẕar", "vazgeçmeler", "orta", ""],
-      [475, "وَذَائِر", "waẕāʾir", "vazgeçmeler", "orta", ""],
-      [476, "وُذَيْر", "wuẕayr", "vazgeçmeler", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَوْذَارَات", "ʾawẕārāt", "vazgeçmeler topluluğu", "orta", ""],
-      [478, "أَوْذِرَات", "ʾawẕirāt", "vazgeçmeler topluluğu", "orta", ""],
-      [479, "أَوَاذِرَات", "ʾawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
-      [480, "أَوَاذِيرَات", "ʾawāẕīrāt", "vazgeçmeler topluluğu", "orta", ""],
-      [481, "وُذُورَات", "wuẕūrāt", "vazgeçmeler topluluğu", "orta", ""],
-      [482, "وُذُرَات", "wuẕurāt", "vazgeçmeler topluluğu", "orta", ""],
-      [483, "وِذَارَات", "wiẕārāt", "vazgeçmeler topluluğu", "orta", ""],
-      [484, "وِذَرَات", "wiẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [485, "وِذَرَات", "wiẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [486, "وُذَرَات", "wuẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [487, "وُذَراآت", "wuẕarāʾāt", "vazgeçmeler topluluğu", "orta", ""],
-      [488, "وَذَرَات", "waẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [489, "وُذَّارَات", "wuẕẕārāt", "vazgeçmeler topluluğu", "orta", ""],
-      [490, "وَذَارَات", "waẕārāt", "vazgeçmeler topluluğu", "orta", ""],
-      [491, "وَذَرَات", "waẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [492, "مَوَاذِرَات", "mawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
-      [493, "مَوَاذِيرَات", "mawāẕīrāt", "vazgeçmeler topluluğu", "orta", ""],
-      [494, "وَوَاذِرَات", "wawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
-      [495, "أَوْذُرَات", "ʾawẕurāt", "vazgeçmeler topluluğu", "orta", ""],
-      [496, "وُذَّرَات", "wuẕẕarāt", "vazgeçmeler topluluğu", "orta", ""],
-      [497, "وَذَائِرَات", "waẕāʾirāt", "vazgeçmeler topluluğu", "orta", ""],
-      [498, "وُذَيْرَات", "wuẕayrāt", "vazgeçmeler topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "وذر",
-      "turkce": "Vezr: vazgeçmek, bırakmak; 'zer'"
-    },
-    "osmanlica_lugatler": {
-      "يَذَرَ": {
-        "sorgular": ["yazara"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "وَذَرَ",
-        "metin": "(وَذَرَ) الْوَاوُ وَالذَّالُ وَالرَّاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْوَذَرَةُ، وَهِيَ الْفِدْرَةُ مِنَ اللَّحْمِ. وَالتَّوْذِيرُ: أَنْ يُشْرَطَ الْجُرْحُ فَيُقَالُ: وَذَّرْتُهُ. وَفِي الْحَدِيثِ أَنَّ رَجُلًا قَالَ لِآخَرَ: &quot; يَا ابْنَ شَامَّةِ الْوَذَرِ &quot; فَحُدَّ، كَأَنَّهُ عَرَّضَ لَهَا بِأَعْضَاءِ الرِّجَالِ.\nوَالْأُخْرَى قَوْلُهُمْ: ذَرْذَا. قَالَ أَهْلُ اللُّغَةِ: أَمَاتَتِ الْعَرَبُ الْفِعْلَ مِنْ ذَرَّ فِي الْمَاضِي، فَلَا يَقُولُونَ وَذَرْتُهُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الذال والراء",
-      "baslik": "وذر",
-      "mihveri": "تَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب. ومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات].",
-      "sesler": "",
-      "tam_metin": "{رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89]\n\"الوَذَرة -بالفتح- من اللحم: القِطْعة الصغيرة لا عظمَ فيها/ ما قُطِع من\n(2/708)\nاللحم مجتمعًا بغير طول. عَضُدٌ وَذِرَة -كفرحة: كثيرة الوذر (عُجَر العَصَب). وقد وَذَر اللحمَ (كوعد): بَضَعه، ووَذّره -ض: قطّعه، والجُرْحَ: شَرَطه. والوُذَارة -كرُخَامة: قُوَّارة الخيّاط. والوَذَرَتان: الشفتان \".\n° المعنى المحوري\nتَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب.\nومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات].",
-      "fasil_ozeti": "° معنى الفصل المعجمي (ذر): النفاذ بامتداد او استرسال مع دقة -كما يتمثل ذلك في رّ الملح المسحوق على الطعام وذرّ الدقيق على ماء القِدْر -في (ذرر)، وفي نتوء ذروة الرأس والسنام وحبوب الذرة على كوزها -في (ذرو- ذرى)، وفي نثر البذر في الأرض -في (ذرأ)، وفي تفرق قطع اللحم الدقيقة نسيبًا -في (وذر)، وفي امتداد الذراع من الساعد والقائمة من البدن مع الدقة النسبية -في (ذرع)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 45,
-      "ilk_yer": "2:234:4:2",
-      "tur": {
-        "V": 45
-      },
-      "bab": {},
-      "zaman_kip": {
-        "IMPF": 23,
-        "IMPV": 22
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "يَذَرَ": 45
-      },
-      "bicimler": {
-        "ذَرْ": 12,
-        "ذَرُ": 9,
-        "تَذَرُ": 9,
-        "يَذَرُ": 5,
-        "نَذَرُ": 3,
-        "تَذَرْ": 3,
-        "يَذَرَ": 2,
-        "ذَرِ": 1,
-        "نَذَرَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "WḎR",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab WḎR وذر BP – • HDAL • © SG | 21May2023 √WḎR “root” ▪ WḎR_1 ‘...’ ↗ ... ▪ WḎR_2 ‘...’ ↗ ... ▪ WḎR_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘a small boneless piece of flesh; to cut into small pieces; to leave alone, leave behind, forsake, cease’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "renk_sozluk": {
-      "ويذرون": "bırakır",
-      "ليذر": "bırakır",
-      "فتذروها": "bırakır",
-      "وذر": "bırakır",
-      "ذرهم": "bırakır",
-      "ونذرهم": "bırakır",
-      "فذرهم": "bırakır",
-      "فذروها": "bırakır",
-      "ويذرك": "bırakır",
-      "ويذرهم": "bırakır",
-      "ذرنا": "bırakır",
-      "فنذر": "bırakır",
-      "فذروه": "bırakır",
-      "فيذرها": "bırakır",
-      "وتذرون": "bırakır",
-      "ذرونا": "bırakır",
-      "تذر": "bırakır",
-      "تذرن": "nun harfi",
-      "تذرهم": "bırakır"
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Vezer (وَذَرَ)",
-          "metin": "(وَذَرَ) Vâv, zel ve râ harfleri iki kelimedir: Biri «vezere»dir; o, etten bir parçadır (fidre). «Tevzîr» ise yaranın yarılmasıdır; «vezzertühû» denir. Hadiste bir adam diğerine «Ey vezere oğlu!» dedi de had cezasına çarptırıldı; güya onu erkeklerin uzuvlarıyla kinaye etmişti. Diğeri ise onların «zerzâ» sözüdür. Dil ehli dedi ki: Araplar «zerre» fiilini mâzîde öldürmüşlerdir; artık «vezerthü» demezler."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Eti (yahut herhangi bir şeyi) mahdut hacimde parçalara ayırmak — zikrolunan vasıf üzere eti doğramak gibi (kemiksiz oluşu, binâenaleyh kalınlığı bulunmayışı ve «uzunluğu olmayışı» cihetiyle dilim olmadığı melhuzdur); terzinin yanındaki bez kırpıntıları gibi ki onlarda en ve kıymet yoktur; yarılmış yaranın ağızları ve dudaklar da bir yandan kesilmiş et parçaları gibi görünür. Bundan, yani tebazzu' ve tekattû'dan dolayı bu terkib ile terketme manasına tabir olunmuştur; zira terketmek, şeyden ayrılmak, ondan infisâl yahut ondan hulüvv üzere olmaktır. {Sizden vefat edip de zevceler bırakanlar} [Bakara 234]; {Bu, size bir âyet olarak Allah'ın devesidir; bırakın onu, Allah'ın arzında otlasın} [A'râf 73] — yani ondan vazgeçin, ona kötülükle dokunmayın; {Allah'tan korkun ve ribâdan bâkî kalanı bırakın} [Bakara 278] (terkedin); {Rabbim, beni tek başıma bırakma; sen vârislerin hayırlısısın} [Enbiyâ 89] (beni o hâl üzere bırakma); {Artık beni ve bu sözü yalanlayanı bırak} [Kalem 44] — onu bana havale et, kalbini onunla meşgul etme; zira ben ondan intikam alacağım [l] (yani benimle onun arasını açık bırak); {Bırak onları ve uydurduklarını} [En'âm 112] — vaîd ve tehdidi tazammun eder. Kur'ân'da bu terkibin bulunduğu her yer (terk) manasındadır; İmam Râgıb'ın tahdid ettiği aslı bu gibi âyete tatbik etmesi ise mümkün olmaz; zira o demiştir: «Yezeru'ş-şey'e: onu, kendisine itimadı az olduğundan atar.» [Müfredât'ta (v-z-r) maddesine bak.]"
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dönüş · EtymArab · V-Z-R (وذر) · BP – • HDAL • © SG | 21 Mayıs 2023 · √V-Z-R «kök» ▪ V-Z-R_1 '...' ↗ ... ▪ V-Z-R_2 '...' ↗ ... ▪ V-Z-R_3 '...' ↗ ... ♦ Klasik Arapçada mana yelpazesi (BAH2008'e göre): 'kemiksiz küçük bir et parçası; küçük parçalara doğramak; yalnız bırakmak, geride bırakmak, terketmek, vazgeçmek' ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; eşdizim ; tarih ; soydaş ; söylem ; batı ; türev ;"
-      }
-    },
-    "arabic_ontology": [
-      {
-        "id": "51153",
-        "arapca": ["ذُرَةٌ"],
-        "ingilizce": [],
-        "tanim": "نباتٌ زراعيّ ، حَبّيٌّ ، عُشبيّ تُؤْكَلُ حُبُوبُهُ مَسْلوقَةً أوْ مَشْوِيَّةً ، وَتُطْحَنُ فَيُتَّخَذُ مِنْها الخُبْزُ أوْ غَيْرَهُ . أهَمُّ أنْواعِها البَيْضاءُ والصَّفْراءُ",
-        "misal": "يحب باسم أكل ال_ مشوية",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ]
-  },
-  "kuran_gecisleri": 45,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ذر",
+  "ses": {
     "harf": "و",
+    "fasil": "ذر",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "anlam": "Vezr: vazgeçmek, bırakmak; 'zer'",
+  "esas_manalar": "bırakmak, terk etmek|bir parça et",
+  "mekayis": [
+    {
+      "baslik": "وَذَرَ",
+      "metin": "(وَذَرَ) الْوَاوُ وَالذَّالُ وَالرَّاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْوَذَرَةُ، وَهِيَ الْفِدْرَةُ مِنَ اللَّحْمِ. وَالتَّوْذِيرُ: أَنْ يُشْرَطَ الْجُرْحُ فَيُقَالُ: وَذَّرْتُهُ. وَفِي الْحَدِيثِ أَنَّ رَجُلًا قَالَ لِآخَرَ: &quot; يَا ابْنَ شَامَّةِ الْوَذَرِ &quot; فَحُدَّ، كَأَنَّهُ عَرَّضَ لَهَا بِأَعْضَاءِ الرِّجَالِ.\nوَالْأُخْرَى قَوْلُهُمْ: ذَرْذَا. قَالَ أَهْلُ اللُّغَةِ: أَمَاتَتِ الْعَرَبُ الْفِعْلَ مِنْ ذَرَّ فِي الْمَاضِي، فَلَا يَقُولُونَ وَذَرْتُهُ.",
+      "baslik_tr": "Vezer (وَذَرَ)",
+      "metin_tr": "(وَذَرَ) Vâv, zel ve râ harfleri iki kelimedir: Biri «vezere»dir; o, etten bir parçadır (fidre). «Tevzîr» ise yaranın yarılmasıdır; «vezzertühû» denir. Hadiste bir adam diğerine «Ey vezere oğlu!» dedi de had cezasına çarptırıldı; güya onu erkeklerin uzuvlarıyla kinaye etmişti. Diğeri ise onların «zerzâ» sözüdür. Dil ehli dedi ki: Araplar «zerre» fiilini mâzîde öldürmüşlerdir; artık «vezerthü» demezler."
+    }
+  ],
+  "cebel": {
     "fasil": "الذال والراء",
+    "baslik": "وذر",
     "mihveri": "تَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب. ومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات].",
-    "sesler": "",
+    "tam_metin": "{رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89]\n\"الوَذَرة -بالفتح- من اللحم: القِطْعة الصغيرة لا عظمَ فيها/ ما قُطِع من\n(2/708)\nاللحم مجتمعًا بغير طول. عَضُدٌ وَذِرَة -كفرحة: كثيرة الوذر (عُجَر العَصَب). وقد وَذَر اللحمَ (كوعد): بَضَعه، ووَذّره -ض: قطّعه، والجُرْحَ: شَرَطه. والوُذَارة -كرُخَامة: قُوَّارة الخيّاط. والوَذَرَتان: الشفتان \".\n° المعنى المحوري\nتَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب.\nومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات].",
     "fasil_ozeti": "° معنى الفصل المعجمي (ذر): النفاذ بامتداد او استرسال مع دقة -كما يتمثل ذلك في رّ الملح المسحوق على الطعام وذرّ الدقيق على ماء القِدْر -في (ذرر)، وفي نتوء ذروة الرأس والسنام وحبوب الذرة على كوزها -في (ذرو- ذرى)، وفي نثر البذر في الأرض -في (ذرأ)، وفي تفرق قطع اللحم الدقيقة نسيبًا -في (وذر)، وفي امتداد الذراع من الساعد والقائمة من البدن مع الدقة النسبية -في (ذرع).",
-    "tam_metin": "{رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89]\n\"الوَذَرة -بالفتح- من اللحم: القِطْعة الصغيرة لا عظمَ فيها/ ما قُطِع من\n(2/708)\nاللحم مجتمعًا بغير طول. عَضُدٌ وَذِرَة -كفرحة: كثيرة الوذر (عُجَر العَصَب). وقد وَذَر اللحمَ (كوعد): بَضَعه، ووَذّره -ض: قطّعه، والجُرْحَ: شَرَطه. والوُذَارة -كرُخَامة: قُوَّارة الخيّاط. والوَذَرَتان: الشفتان \".\n° المعنى المحوري\nتَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب.\nومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات]."
+    "mihveri_tr": "Eti (yahut herhangi bir şeyi) mahdut hacimde parçalara ayırmak — zikrolunan vasıf üzere eti doğramak gibi (kemiksiz oluşu, binâenaleyh kalınlığı bulunmayışı ve «uzunluğu olmayışı» cihetiyle dilim olmadığı melhuzdur); terzinin yanındaki bez kırpıntıları gibi ki onlarda en ve kıymet yoktur; yarılmış yaranın ağızları ve dudaklar da bir yandan kesilmiş et parçaları gibi görünür. Bundan, yani tebazzu' ve tekattû'dan dolayı bu terkib ile terketme manasına tabir olunmuştur; zira terketmek, şeyden ayrılmak, ondan infisâl yahut ondan hulüvv üzere olmaktır. {Sizden vefat edip de zevceler bırakanlar} [Bakara 234]; {Bu, size bir âyet olarak Allah'ın devesidir; bırakın onu, Allah'ın arzında otlasın} [A'râf 73] — yani ondan vazgeçin, ona kötülükle dokunmayın; {Allah'tan korkun ve ribâdan bâkî kalanı bırakın} [Bakara 278] (terkedin); {Rabbim, beni tek başıma bırakma; sen vârislerin hayırlısısın} [Enbiyâ 89] (beni o hâl üzere bırakma); {Artık beni ve bu sözü yalanlayanı bırak} [Kalem 44] — onu bana havale et, kalbini onunla meşgul etme; zira ben ondan intikam alacağım [l] (yani benimle onun arasını açık bırak); {Bırak onları ve uydurduklarını} [En'âm 112] — vaîd ve tehdidi tazammun eder. Kur'ân'da bu terkibin bulunduğu her yer (terk) manasındadır; İmam Râgıb'ın tahdid ettiği aslı bu gibi âyete tatbik etmesi ise mümkün olmaz; zira o demiştir: «Yezeru'ş-şey'e: onu, kendisine itimadı az olduğundan atar.» [Müfredât'ta (v-z-r) maddesine bak.]"
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "ذره، واحذره. والعرب أماتت المصدر منه فيقولون: ذر تركاً، وإذا قيل لهم ذروه قالوا قد وذرناه. وعندي وذرة من لحم: قطعة بلا عظم.",
     "mecaz": "قولهم في الشتم: يا ابن شامّة الوذر: يريدون الزانية، والوذر كناية عن المذاكير. وعن عثمان رضي الله عنه: أنه رفع إليه من قاله فحدّه. وامرأة لمياء الوذرتين وهما الشفتان.",
-    "kinaye": "",
     "mecaz_var": true
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "تَبَضُّع اللحم (أو الشيء) قِطعًا محدُودة الحجْم -كقطع اللحم بالصفة المذكورة (يلحظ كونها بغير عَظْم فلا غِلَظ لها، وأنها \"بغير طول \"فليست شرائح)، وكقصاصات الثياب عند الخياط فهي بلا عِرَض ولا قيمة، وأشفارُ الجُرح المشقوق والشفتان تبدو كفِلْذات مقطوعة من جانب. ومن ذلك التبضّع والتقطع عُبّر بالتركيب عن معنى الترك إذ هو مفارقة للشيء وانفصال أو تخل عنه {وَالَّذِينَ يُتَوَفَّوْنَ مِنْكُمْ وَيَذَرُونَ أَزْوَاجًا} [البقرة 234]، {هَذِهِ نَاقَةُ اللَّهِ لَكُمْ آيَةً فَذَرُوهَا تَأْكُلْ فِي أَرْضِ اللَّهِ} [الأعراف: 73]: أي خلُّوا عنها لا تمسوها بسوء {اتَّقُوا اللَّهَ وَذَرُوا مَا بَقِيَ مِنَ الرِّبَا} [البقرة: 278] (اتركوه)، {رَبِّ لَا تَذَرْنِي فَرْدًا وَأَنْتَ خَيْرُ الْوَارِثِينَ} [الأنبياء: 89] (لا تتركني على تلك الحال)، {فَذَرْنِي وَمَنْ يُكَذِّبُ بِهَذَا الْحَدِيثِ} [القلم: 44]. كِلْهُ إليّ ولا تشغَل قلبك به فإني أجازيه [ل] (أي خَلّ بيني وبينه). {فَذَرْهُمْ وَمَا يَفْتَرُونَ} [الأنعام 112] يتضمن الوعيد والتهديد، وكل ما في القرآن من التركيب فهو بمعنى (الترك)، ولا يتأتى أن يطبق الإمام الراغب الأصل الذي حدده على مثل هذه الآية حيث قال: يَذَرُ الشيء: يقذفه لقلة اعتداده به. [انظر (وذر) في المفردات]."
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "ذره، واحذره. والعرب أماتت المصدر منه فيقولون: ذر تركاً، وإذا قيل لهم ذروه قالوا قد وذرناه. وعندي وذرة من لحم: قطعة بلا عظم."
-      },
-      {
-        "kaynak": "Mekâyîs: وَذَرَ",
-        "metin": "(وَذَرَ) الْوَاوُ وَالذَّالُ وَالرَّاءُ كَلِمَتَانِ: إِحْدَاهُمَا الْوَذَرَةُ، وَهِيَ الْفِدْرَةُ مِنَ اللَّحْمِ. وَالتَّوْذِيرُ: أَنْ يُشْرَطَ الْجُرْحُ فَيُقَالُ: وَذَّرْتُهُ. وَفِي الْحَدِيثِ أَنَّ رَجُلًا قَالَ لِآخَرَ: &quot; يَا ابْنَ شَامَّةِ الْوَذَرِ &quot; فَحُدَّ، كَأَنَّهُ عَرَّضَ لَهَا بِأَعْضَاءِ الرِّجَالِ.\nوَالْأُخْرَى قَوْلُهُمْ: ذَرْذَا. قَالَ أَهْلُ اللُّغَةِ: أَمَاتَتِ الْعَرَبُ الْفِعْلَ مِنْ ذَرَّ فِي الْمَاضِي، فَلَا يَقُولُونَ وَذَرْتُهُ."
-      }
-    ],
-    "karsilastirma_prototipi": "Cebel mihverî mana",
-    "yayilim": [
-      {
-        "kaynak": "Zemahşerî mecaz kolu",
-        "metin": "قولهم في الشتم: يا ابن شامّة الوذر: يريدون الزانية، والوذر كناية عن المذاكير. وعن عثمان رضي الله عنه: أنه رفع إليه من قاله فحدّه. وامرأة لمياء الوذرتين وهما الشفتان.",
-        "prototipe_benzerlik": 0.754,
-        "halka": "yakın"
-      }
-    ],
-    "ortalama_benzerlik": 0.754,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
+  "ontoloji": [
+    {
+      "id": "51153",
+      "arapca": ["ذُرَةٌ"],
+      "ingilizce": [],
+      "tanim": "نباتٌ زراعيّ ، حَبّيٌّ ، عُشبيّ تُؤْكَلُ حُبُوبُهُ مَسْلوقَةً أوْ مَشْوِيَّةً ، وَتُطْحَنُ فَيُتَّخَذُ مِنْها الخُبْزُ أوْ غَيْرَهُ . أهَمُّ أنْواعِها البَيْضاءُ والصَّفْراءُ",
+      "misal": "يحب باسم أكل ال_ مشوية",
+      "veri_kaynagi": "43",
+      "ust": []
+    }
+  ],
+  "etymarab": {
+    "latin": "WḎR",
+    "kok_maddesi": "Back to library EtymArab WḎR وذر BP – • HDAL • © SG | 21May2023 √WḎR “root” ▪ WḎR_1 ‘...’ ↗ ... ▪ WḎR_2 ‘...’ ↗ ... ▪ WḎR_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘a small boneless piece of flesh; to cut into small pieces; to leave alone, leave behind, forsake, cease’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dönüş · EtymArab · V-Z-R (وذر) · BP – • HDAL • © SG | 21 Mayıs 2023 · √V-Z-R «kök» ▪ V-Z-R_1 '...' ↗ ... ▪ V-Z-R_2 '...' ↗ ... ▪ V-Z-R_3 '...' ↗ ... ♦ Klasik Arapçada mana yelpazesi (BAH2008'e göre): 'kemiksiz küçük bir et parçası; küçük parçalara doğramak; yalnız bırakmak, geride bırakmak, terketmek, vazgeçmek' ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; eşdizim ; tarih ; soydaş ; söylem ; batı ; türev ;"
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الحشرات",
-    "bab": "",
-    "kok_gecis": 24.5,
-    "kitapta_gecis": 1.5,
-    "zenginlesme": 6.36
+  "kuran": {
+    "gecis": 45,
+    "ilk": "2:234:4:2",
+    "tur": {
+      "V": 45
+    },
+    "bab": {},
+    "zaman_kip": {
+      "IMPF": 23,
+      "IMPV": 22
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "يَذَرَ": 45
+    },
+    "bicimler": {
+      "ذَرْ": 12,
+      "ذَرُ": 9,
+      "تَذَرُ": 9,
+      "يَذَرُ": 5,
+      "نَذَرُ": 3,
+      "تَذَرْ": 3,
+      "يَذَرَ": 2,
+      "ذَرِ": 1,
+      "نَذَرَ": 1
+    },
+    "morfoloji_gecis": 45
   },
-  "mana_tasnif_gomme": {
+  "kelimeler": [
+    {
+      "lemma": "يَذَرَ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "وَيَذَرُونَ",
+          "zaman": "Muzâri",
+          "ilk": "2:234",
+          "adet": 3,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَذَرُوا۟",
+          "zaman": "Emir",
+          "ilk": "2:278",
+          "adet": 4,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "لِيَذَرَ",
+          "zaman": "Muzâri",
+          "ilk": "3:179",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَتَذَرُوهَا",
+          "zaman": "Muzâri",
+          "ilk": "4:129",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَذَرِ",
+          "zaman": "Emir",
+          "ilk": "6:70",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "ذَرْهُمْ",
+          "zaman": "Emir",
+          "ilk": "6:91",
+          "adet": 2,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَنَذَرُهُمْ",
+          "zaman": "Muzâri",
+          "ilk": "6:110",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَذَرْهُمْ",
+          "zaman": "Emir",
+          "ilk": "6:112",
+          "adet": 6,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَنَذَرَ",
+          "zaman": "Muzâri",
+          "ilk": "7:70",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَذَرُوهَا",
+          "zaman": "Emir",
+          "ilk": "7:73",
+          "adet": 2,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "أَتَذَرُ",
+          "zaman": "Muzâri",
+          "ilk": "7:127",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَيَذَرَكَ",
+          "zaman": "Muzâri",
+          "ilk": "7:127",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَيَذَرُهُمْ",
+          "zaman": "Muzâri",
+          "ilk": "7:186",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "ذَرْنَا",
+          "zaman": "Emir",
+          "ilk": "9:86",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَنَذَرُ",
+          "zaman": "Muzâri",
+          "ilk": "10:11",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَذَرُوهُ",
+          "zaman": "Emir",
+          "ilk": "12:47",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَّنَذَرُ",
+          "zaman": "Muzâri",
+          "ilk": "19:72",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَيَذَرُهَا",
+          "zaman": "Muzâri",
+          "ilk": "20:106",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "تَذَرْنِى",
+          "zaman": "Muzâri",
+          "ilk": "21:89",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَتَذَرُونَ",
+          "zaman": "Muzâri",
+          "ilk": "26:166",
+          "adet": 3,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "ذَرُونِىٓ",
+          "zaman": "Emir",
+          "ilk": "40:26",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "ذَرُونَا",
+          "zaman": "Emir",
+          "ilk": "48:15",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "تَذَرُ",
+          "zaman": "Muzâri",
+          "ilk": "51:42",
+          "adet": 2,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "فَذَرْنِى",
+          "zaman": "Emir",
+          "ilk": "68:44",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "تَذَرْ",
+          "zaman": "Muzâri",
+          "ilk": "71:26",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "تَذَرْهُمْ",
+          "zaman": "Muzâri",
+          "ilk": "71:27",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "وَذَرْنِى",
+          "zaman": "Emir",
+          "ilk": "73:11",
+          "adet": 1,
+          "tr": "bırakır"
+        },
+        {
+          "kelime": "ذَرْنِى",
+          "zaman": "Emir",
+          "ilk": "74:11",
+          "adet": 1,
+          "tr": "bırakır"
+        }
+      ],
+      "tr": "bırakır",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 43
+    },
+    {
+      "lemma": "ن",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "تَذَرُنَّ",
+          "zaman": "Muzâri",
+          "ilk": "71:23",
+          "adet": 2,
+          "tr": "nun harfi"
+        }
+      ],
+      "tr": "nun harfi",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 2
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "وَذْر", "waẕr", "vazgeçme", "orta", ""],
+      ["fi'l", "semâî aday", "وِذْر", "wiẕr", "vazgeçme", "orta", ""],
+      ["fu'l", "semâî aday", "وُذْر", "wuẕr", "vazgeçme", "orta", ""],
+      ["fa'al", "semâî aday", "وَذَر", "waẕar", "vazgeçme", "orta", ""],
+      ["fi'al", "semâî aday", "وِذَر", "wiẕar", "vazgeçme", "orta", ""],
+      ["fu'ul", "semâî aday", "وُذُر", "wuẕur", "vazgeçme", "orta", ""],
+      ["fu'ūl", "semâî aday", "وُذُور", "wuẕūr", "vazgeçme", "orta", ""],
+      ["fi'āl", "semâî aday", "وِذَار", "wiẕār", "vazgeçme", "orta", ""],
+      ["fu'āl", "semâî aday", "وُذَار", "wuẕār", "vazgeçme", "orta", ""],
+      ["fa'āl", "semâî aday", "وَذَار", "waẕār", "vazgeçme", "orta", ""],
+      ["fa'āle", "semâî aday", "وَذَارَة", "waẕāra", "vazgeçme", "orta", ""],
+      ["fu'ūle", "semâî aday", "وُذُورَة", "wuẕūra", "vazgeçme", "orta", ""],
+      ["fi'āle", "semâî aday", "وِذَارَة", "wiẕāra", "vazgeçme", "orta", ""],
+      ["fa'īl", "semâî aday", "وَذِير", "waẕīr", "vazgeçme", "orta", ""],
+      ["fa'ūl", "semâî aday", "وَذُور", "waẕūr", "vazgeçme", "orta", ""],
+      ["fa'alān", "semâî aday", "وَذَرَان", "waẕarān", "vazgeçme", "orta", ""],
+      ["fu'lān", "semâî aday", "وُذْرَان", "wuẕrān", "vazgeçme", "orta", ""],
+      ["fi'lān", "semâî aday", "وِذْرَان", "wiẕrān", "vazgeçme", "orta", ""],
+      ["fa'lā", "semâî aday", "وَذْرَى", "waẕrā", "vazgeçme", "orta", ""],
+      ["fu'lā", "semâî aday", "وُذْرَى", "wuẕrā", "vazgeçme", "orta", ""],
+      ["fi'lā", "semâî aday", "وِذْرَى", "wiẕrā", "vazgeçme", "orta", ""],
+      ["fa'ale", "semâî aday", "وَذَرَة", "waẕara", "vazgeçme", "orta", ""],
+      ["fi'ale", "semâî aday", "وِذَرَة", "wiẕara", "vazgeçme", "orta", ""],
+      ["fa'lūla", "semâî aday", "وَذْرُورَة", "waẕrūra", "vazgeçme", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُوذُور", "tūẕūr", "vazgeçme", "orta", ""],
+      ["taf'ila", "semâî aday", "تَوْذِرَة", "tawẕira", "vazgeçme", "orta", ""],
+      ["taf'ala", "semâî aday", "تَوْذَرَة", "tawẕara", "vazgeçme", "orta", ""],
+      ["maf'ula", "semâî aday", "مَوْذُرَة", "mawẕura", "vazgeçme", "orta", ""],
+      ["maf'ila", "semâî aday", "مَوْذِرَة", "mawẕira", "vazgeçme", "orta", ""],
+      ["fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", "ذِرَة", "ẕira", "vazgeçme", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَوْذِير", "tawẕīr", "çokça vazgeçme", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَوْذِرَة", "tawẕira", "çokça vazgeçme", "orta", ""],
+      ["fi''āl", "kıyâsî", "وِذِّار", "wiẕẕār", "çokça vazgeçme", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَوْذِيرَة", "tawẕīra", "bir kere çokça vazgeçme", "orta", ""],
+      ["fi''āl + tâ", "aday", "وِذِّارَة", "wiẕẕāra", "bir kere çokça vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُوَذِّر", "muwaẕẕir", "çokça vazgeçen", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُوَذِّرَة", "muwaẕẕira", "çokça vazgeçen, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُوَذِّرَان", "muwaẕẕirān", "çokça vazgeçen, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُوَذِّرَتَان",
+        "muwaẕẕiratān",
+        "çokça vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَذِّرُون",
+        "muwaẕẕirūn",
+        "çokça vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَذِّرِين",
+        "muwaẕẕirīn",
+        "çokça vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَذِّرَات",
+        "muwaẕẕirāt",
+        "çokça vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَذَّر", "muwaẕẕar", "çokça vazgeçilen", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُوَذَّرَة", "muwaẕẕara", "çokça vazgeçilen, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُوَذَّرَان", "muwaẕẕarān", "çokça vazgeçilen, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُوَذَّرَتَان",
+        "muwaẕẕaratān",
+        "çokça vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَذَّرُون",
+        "muwaẕẕarūn",
+        "çokça vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَذَّرِين",
+        "muwaẕẕarīn",
+        "çokça vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَذَّرَات",
+        "muwaẕẕarāt",
+        "çokça vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَذَّر", "muwaẕẕar", "çokça vazgeçme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُوَاذَرَة", "muwāẕara", "biriyle karşılıklı vazgeçme", "orta", ""],
+      ["fi'āl", "kıyâsî", "وِذَار", "wiẕār", "biriyle karşılıklı vazgeçme", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "وِذَارَة", "wiẕāra", "bir kere biriyle karşılıklı vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُوَاذِر", "muwāẕir", "biriyle karşılıklı vazgeçen", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُوَاذِرَة", "muwāẕira", "biriyle karşılıklı vazgeçen, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُوَاذِرَان", "muwāẕirān", "biriyle karşılıklı vazgeçen, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُوَاذِرَتَان",
+        "muwāẕiratān",
+        "biriyle karşılıklı vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاذِرُون",
+        "muwāẕirūn",
+        "biriyle karşılıklı vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاذِرِين",
+        "muwāẕirīn",
+        "biriyle karşılıklı vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاذِرَات",
+        "muwāẕirāt",
+        "biriyle karşılıklı vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاذَر", "muwāẕar", "biriyle karşılıklı vazgeçilen", "orta", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُوَاذَرَة",
+        "muwāẕara",
+        "biriyle karşılıklı vazgeçilen, müennes",
+        "orta",
+        ""
+      ],
+      ["mufā'al + tesniye", "kıyâsî", "مُوَاذَرَان", "muwāẕarān", "biriyle karşılıklı vazgeçilen, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُوَاذَرَتَان",
+        "muwāẕaratān",
+        "biriyle karşılıklı vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاذَرُون",
+        "muwāẕarūn",
+        "biriyle karşılıklı vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاذَرِين",
+        "muwāẕarīn",
+        "biriyle karşılıklı vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاذَرَات",
+        "muwāẕarāt",
+        "biriyle karşılıklı vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاذَر", "muwāẕar", "biriyle karşılıklı vazgeçme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِيذَار", "ʾīẕār", "vazgeçtirme", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِيذَارَة", "ʾīẕāra", "bir kere vazgeçtirme", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُوذِر", "mūẕir", "vazgeçtiren", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُوذِرَة", "mūẕira", "vazgeçtiren, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُوذِرَان", "mūẕirān", "vazgeçtiren, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُوذِرَتَان", "mūẕiratān", "vazgeçtiren, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوذِرُون", "mūẕirūn", "vazgeçtirenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوذِرِين", "mūẕirīn", "vazgeçtirenler", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوذِرَات",
+        "mūẕirāt",
+        "vazgeçtirenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوذَر", "mūẕar", "vazgeçtirilen", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُوذَرَة", "mūẕara", "vazgeçtirilen, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُوذَرَان", "mūẕarān", "vazgeçtirilen, iki", "orta", ""],
+      ["muf'al + müennes tesniye", "kıyâsî", "مُوذَرَتَان", "mūẕaratān", "vazgeçtirilen, iki, müennes", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوذَرُون", "mūẕarūn", "vazgeçtirilenler", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوذَرِين", "mūẕarīn", "vazgeçtirilenler", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوذَرَات",
+        "mūẕarāt",
+        "vazgeçtirilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوذَر", "mūẕar", "vazgeçtirme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَوَذُّر", "tawaẕẕur", "kendini zorlayarak vazgeçme", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَوَذُّرَة", "tawaẕẕura", "bir kere kendini zorlayarak vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَوَذِّر", "mutawaẕẕir", "kendini zorlayarak vazgeçen", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَوَذِّرَة",
+        "mutawaẕẕira",
+        "kendini zorlayarak vazgeçen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَوَذِّرَان",
+        "mutawaẕẕirān",
+        "kendini zorlayarak vazgeçen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَذِّرَتَان",
+        "mutawaẕẕiratān",
+        "kendini zorlayarak vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَذِّرُون",
+        "mutawaẕẕirūn",
+        "kendini zorlayarak vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَذِّرِين",
+        "mutawaẕẕirīn",
+        "kendini zorlayarak vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَذِّرَات",
+        "mutawaẕẕirāt",
+        "kendini zorlayarak vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَوَذَّر", "mutawaẕẕar", "kendini zorlayarak vazgeçilen", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَوَذَّرَة",
+        "mutawaẕẕara",
+        "kendini zorlayarak vazgeçilen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَوَذَّرَان",
+        "mutawaẕẕarān",
+        "kendini zorlayarak vazgeçilen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَذَّرَتَان",
+        "mutawaẕẕaratān",
+        "kendini zorlayarak vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَذَّرُون",
+        "mutawaẕẕarūn",
+        "kendini zorlayarak vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَذَّرِين",
+        "mutawaẕẕarīn",
+        "kendini zorlayarak vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَذَّرَات",
+        "mutawaẕẕarāt",
+        "kendini zorlayarak vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَوَذَّر", "mutawaẕẕar", "kendini zorlayarak vazgeçme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَوَاذُر", "tawāẕur", "birbirine vazgeçme", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَوَاذُرَة", "tawāẕura", "bir kere birbirine vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَوَاذِر", "mutawāẕir", "birbirine vazgeçen", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَوَاذِرَة", "mutawāẕira", "birbirine vazgeçen, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَوَاذِرَان", "mutawāẕirān", "birbirine vazgeçen, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاذِرَتَان",
+        "mutawāẕiratān",
+        "birbirine vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاذِرُون",
+        "mutawāẕirūn",
+        "birbirine vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاذِرِين",
+        "mutawāẕirīn",
+        "birbirine vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاذِرَات",
+        "mutawāẕirāt",
+        "birbirine vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاذَر", "mutawāẕar", "birbirine vazgeçilen", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَوَاذَرَة", "mutawāẕara", "birbirine vazgeçilen, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَوَاذَرَان", "mutawāẕarān", "birbirine vazgeçilen, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاذَرَتَان",
+        "mutawāẕaratān",
+        "birbirine vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاذَرُون",
+        "mutawāẕarūn",
+        "birbirine vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاذَرِين",
+        "mutawāẕarīn",
+        "birbirine vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاذَرَات",
+        "mutawāẕarāt",
+        "birbirine vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاذَر", "mutawāẕar", "birbirine vazgeçme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْوِذَار", "inwiẕār", "vazgeçilme", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْوِذَارَة", "inwiẕāra", "bir kere vazgeçilme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْوَذِر", "munwaẕir", "vazgeçilen", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْوَذِرَة", "munwaẕira", "vazgeçilen, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْوَذِرَان", "munwaẕirān", "vazgeçilen, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْوَذِرَتَان",
+        "munwaẕiratān",
+        "vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْوَذِرُون",
+        "munwaẕirūn",
+        "vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْوَذِرِين",
+        "munwaẕirīn",
+        "vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْوَذِرَات",
+        "munwaẕirāt",
+        "vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَر",
+        "munwaẕar",
+        "vazgeçilen",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرَة",
+        "munwaẕara",
+        "vazgeçilen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرَان",
+        "munwaẕarān",
+        "vazgeçilen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرَتَان",
+        "munwaẕaratān",
+        "vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرُون",
+        "munwaẕarūn",
+        "vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرِين",
+        "munwaẕarīn",
+        "vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَرَات",
+        "munwaẕarāt",
+        "vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَذَر",
+        "munwaẕar",
+        "vazgeçilme yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِتِّذَار", "ittiẕār", "kendisi için vazgeçme", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِتِّذَارَة", "ittiẕāra", "bir kere kendisi için vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُتَّذِر", "muttaẕir", "kendisi için vazgeçen", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُتَّذِرَة", "muttaẕira", "kendisi için vazgeçen, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُتَّذِرَان", "muttaẕirān", "kendisi için vazgeçen, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُتَّذِرَتَان",
+        "muttaẕiratān",
+        "kendisi için vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّذِرُون",
+        "muttaẕirūn",
+        "kendisi için vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّذِرِين",
+        "muttaẕirīn",
+        "kendisi için vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّذِرَات",
+        "muttaẕirāt",
+        "kendisi için vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّذَر", "muttaẕar", "kendisi için vazgeçilen", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُتَّذَرَة", "muttaẕara", "kendisi için vazgeçilen, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُتَّذَرَان", "muttaẕarān", "kendisi için vazgeçilen, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُتَّذَرَتَان",
+        "muttaẕaratān",
+        "kendisi için vazgeçilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّذَرُون",
+        "muttaẕarūn",
+        "kendisi için vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّذَرِين",
+        "muttaẕarīn",
+        "kendisi için vazgeçilenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّذَرَات",
+        "muttaẕarāt",
+        "kendisi için vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّذَر", "muttaẕar", "kendisi için vazgeçme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday", "اِيذِرَار", "īẕirār", "iyiden iyiye vazgeçme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُوذَرّ", "mūẕarr", "iyiden iyiye vazgeçen", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُوذَرَّة", "mūẕarra", "iyiden iyiye vazgeçen, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُوذَرَّان", "mūẕarrān", "iyiden iyiye vazgeçen, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُوذَرَّتَان",
+        "mūẕarratān",
+        "iyiden iyiye vazgeçen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوذَرُّون",
+        "mūẕarrūn",
+        "iyiden iyiye vazgeçenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوذَرِّين",
+        "mūẕarrīn",
+        "iyiden iyiye vazgeçenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوذَرَّات",
+        "mūẕarrāt",
+        "iyiden iyiye vazgeçenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِيذَار", "istīẕār", "vazgeçmeyi isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِيذَارَة", "istīẕāra", "bir kere vazgeçmeyi isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَوْذِر", "mustawẕir", "vazgeçmeyi isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَوْذِرَة", "mustawẕira", "vazgeçmeyi isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَوْذِرَان", "mustawẕirān", "vazgeçmeyi isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْذِرَتَان",
+        "mustawẕiratān",
+        "vazgeçmeyi isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْذِرُون",
+        "mustawẕirūn",
+        "vazgeçmeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْذِرِين",
+        "mustawẕirīn",
+        "vazgeçmeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْذِرَات",
+        "mustawẕirāt",
+        "vazgeçmeyi isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْذَر", "mustawẕar", "vazgeçmesi istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَوْذَرَة", "mustawẕara", "vazgeçmesi istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَوْذَرَان", "mustawẕarān", "vazgeçmesi istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْذَرَتَان",
+        "mustawẕaratān",
+        "vazgeçmesi istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْذَرُون",
+        "mustawẕarūn",
+        "vazgeçmesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْذَرِين",
+        "mustawẕarīn",
+        "vazgeçmesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْذَرَات",
+        "mustawẕarāt",
+        "vazgeçmesi istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْذَر", "mustawẕar", "vazgeçmeyi isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday", "اِيذِيرَار", "īẕīrār", "büsbütün vazgeçme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُوذَارّ", "mūẕārr", "büsbütün vazgeçen", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُوذَارَّة", "mūẕārra", "büsbütün vazgeçen, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُوذَارَّان", "mūẕārrān", "büsbütün vazgeçen, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُوذَارَّتَان",
+        "mūẕārratān",
+        "büsbütün vazgeçen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوذَارُّون",
+        "mūẕārrūn",
+        "büsbütün vazgeçenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوذَارِّين",
+        "mūẕārrīn",
+        "büsbütün vazgeçenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوذَارَّات",
+        "mūẕārrāt",
+        "büsbütün vazgeçenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday", "اِيذِوْذَار", "īẕiwẕār", "aşırı vazgeçme", "orta", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday", "اِيذِوَّار", "īẕiwwār", "aşırı vazgeçme", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "وَاذِر", "wāẕir", "vazgeçen", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "وَاذِرَة", "wāẕira", "vazgeçen, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "وَاذِرَان", "wāẕirān", "vazgeçen, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "وَاذِرَتَان", "wāẕiratān", "vazgeçen, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "وَاذِرُون", "wāẕirūn", "vazgeçenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "وَاذِرِين", "wāẕirīn", "vazgeçenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "وَاذِرَات", "wāẕirāt", "vazgeçenler, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَوْذُور", "mawẕūr", "vazgeçilen", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَوْذُورَة", "mawẕūra", "vazgeçilen, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَوْذُورَان", "mawẕūrān", "vazgeçilen, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَوْذُورَتَان", "mawẕūratān", "vazgeçilen, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَوْذُورُون", "mawẕūrūn", "vazgeçilenler", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَوْذُورِين", "mawẕūrīn", "vazgeçilenler", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَوْذُورَات",
+        "mawẕūrāt",
+        "vazgeçilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْذَر", "mawẕar", "vazgeçme yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْذَرَان", "mawẕarān", "vazgeçme yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَوْذِر", "mawẕir", "vazgeçme yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَوْذِرَان", "mawẕirān", "vazgeçme yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَوْذَرَة", "mawẕara", "vazgeçmenin bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَوْذَرَتَان", "mawẕaratān", "vazgeçmenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَوْذِرَة", "mawẕira", "vazgeçmenin bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَوْذِرَتَان", "mawẕiratān", "vazgeçmenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَوْذُرَة", "mawẕura", "vazgeçme yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَوْذُرَتَان", "mawẕuratān", "vazgeçme yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِيذَر", "mīẕar", "vazgeçme âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِيذَرَان", "mīẕarān", "vazgeçme âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِيذَار", "mīẕār", "vazgeçme âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِيذَارَان", "mīẕārān", "vazgeçme âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِيذَرَة", "mīẕara", "vazgeçme âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِيذَرَتَان", "mīẕaratān", "vazgeçme âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَوْذَر", "ʾawẕar", "daha çok vazgeçen", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَوْذَرَان", "ʾawẕarān", "daha çok vazgeçen, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "وُذْرَى", "wuẕrā", "daha çok vazgeçen", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "وُذْرَيَان", "wuẕrayān", "daha çok vazgeçen, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "وَذْرَاء", "waẕrāʾ", "daha çok vazgeçen", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "وَذْرَاآن", "waẕrāʾān", "daha çok vazgeçen, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "وُذَيْر", "wuẕayr", "azıcık vazgeçme", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "وُذَيْرَان", "wuẕayrān", "azıcık vazgeçme, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "وُذَيْرَة", "wuẕayra", "azıcık vazgeçme", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "وُذَيْرَتَان", "wuẕayratān", "azıcık vazgeçme, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْذَر", "mawẕar", "vazgeçme", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْذَرَان", "mawẕarān", "vazgeçme, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "وَذْرَة", "waẕra", "bir kere vazgeçme", "orta", ""],
+      ["fa'le + tesniye", "aday", "وَذْرَتَان", "waẕratān", "bir kere vazgeçme, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "وِذْرَة", "wiẕra", "vazgeçme tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "وِذْرَتَان", "wiẕratān", "vazgeçme tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "وَذِير", "waẕīr", "her daim vazgeçen", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "وَذِيرَة", "waẕīra", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَذِيرَان", "waẕīrān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَذِيرَتَان",
+        "waẕīratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذِيرُون",
+        "waẕīrūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذِيرِين",
+        "waẕīrīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذِيرَات",
+        "waẕīrāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَذُور", "waẕūr", "her daim vazgeçen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَذُورَة", "waẕūra", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَذُورَان", "waẕūrān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَذُورَتَان",
+        "waẕūratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذُورُون",
+        "waẕūrūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذُورِين",
+        "waẕūrīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذُورَات",
+        "waẕūrāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "وَذِر", "waẕir", "her daim vazgeçen", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "وَذِرَة", "waẕira", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "وَذِرَان", "waẕirān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "وَذِرَتَان",
+        "waẕiratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذِرُون",
+        "waẕirūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذِرِين",
+        "waẕirīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذِرَات",
+        "waẕirāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "وَذُر", "waẕur", "her daim vazgeçen", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "وَذُرَة", "waẕura", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "وَذُرَان", "waẕurān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "وَذُرَتَان",
+        "waẕuratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذُرُون",
+        "waẕurūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذُرِين",
+        "waẕurīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذُرَات",
+        "waẕurāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday", "وَذَر", "waẕar", "her daim vazgeçen", "orta", ""],
+      ["fa'al + müennes", "semâî aday", "وَذَرَة", "waẕara", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "وَذَرَان", "waẕarān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "وَذَرَتَان",
+        "waẕaratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذَرُون",
+        "waẕarūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذَرِين",
+        "waẕarīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذَرَات",
+        "waẕarāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "وَذْر", "waẕr", "her daim vazgeçen", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "وَذْرَة", "waẕra", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "وَذْرَان", "waẕrān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "وَذْرَتَان",
+        "waẕratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَذْرُون", "waẕrūn", "her daim vazgeçenler", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَذْرِين", "waẕrīn", "her daim vazgeçenler", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذْرَات",
+        "waẕrāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "وُذُر", "wuẕur", "her daim vazgeçen", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "وُذُرَة", "wuẕura", "her daim vazgeçen, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "وُذُرَان", "wuẕurān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "وُذُرَتَان",
+        "wuẕuratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُذُرُون",
+        "wuẕurūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُذُرِين",
+        "wuẕurīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُذُرَات",
+        "wuẕurāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "وَذْرَان", "waẕrān", "her daim vazgeçen", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "وَذْرَانَة", "waẕrāna", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "وَذْرَانَان", "waẕrānān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "وَذْرَانَتَان",
+        "waẕrānatān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذْرَانُون",
+        "waẕrānūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذْرَانِين",
+        "waẕrānīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذْرَانَات",
+        "waẕrānāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "وُذَار", "wuẕār", "her daim vazgeçen", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "وُذَارَة", "wuẕāra", "her daim vazgeçen, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "وُذَارَان", "wuẕārān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "وُذَارَتَان",
+        "wuẕāratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُذَارُون",
+        "wuẕārūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُذَارِين",
+        "wuẕārīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُذَارَات",
+        "wuẕārāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "وَذَار", "waẕār", "her daim vazgeçen", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "وَذَارَة", "waẕāra", "her daim vazgeçen, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "وَذَارَان", "waẕārān", "her daim vazgeçen, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "وَذَارَتَان",
+        "waẕāratān",
+        "her daim vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذَارُون",
+        "waẕārūn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذَارِين",
+        "waẕārīn",
+        "her daim vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذَارَات",
+        "waẕārāt",
+        "her daim vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "وَذَّار", "waẕẕār", "işi vazgeçme olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "وَذَّارَة", "waẕẕāra", "işi vazgeçme olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "وَذَّارَان", "waẕẕārān", "işi vazgeçme olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "وَذَّارَتَان",
+        "waẕẕāratān",
+        "işi vazgeçme olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذَّارُون",
+        "waẕẕārūn",
+        "işi vazgeçme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذَّارِين",
+        "waẕẕārīn",
+        "işi vazgeçme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذَّارَات",
+        "waẕẕārāt",
+        "işi vazgeçme olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "وَذَّارَة", "waẕẕāra", "pek çok vazgeçen", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "وَذَّارَتَان", "waẕẕāratān", "pek çok vazgeçen, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذَّارَات",
+        "waẕẕārāt",
+        "pek çok vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَذُور", "waẕūr", "çok vazgeçen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَذُورَة", "waẕūra", "çok vazgeçen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَذُورَان", "waẕūrān", "çok vazgeçen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَذُورَتَان",
+        "waẕūratān",
+        "çok vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَذُورُون", "waẕūrūn", "çok vazgeçenler", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَذُورِين", "waẕūrīn", "çok vazgeçenler", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذُورَات",
+        "waẕūrāt",
+        "çok vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "وَذُّور", "waẕẕūr", "pek çok vazgeçen", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "وَذُّورَة", "waẕẕūra", "pek çok vazgeçen, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "وَذُّورَان", "waẕẕūrān", "pek çok vazgeçen, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "وَذُّورَتَان",
+        "waẕẕūratān",
+        "pek çok vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَذُّورُون",
+        "waẕẕūrūn",
+        "pek çok vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَذُّورِين",
+        "waẕẕūrīn",
+        "pek çok vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذُّورَات",
+        "waẕẕūrāt",
+        "pek çok vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "وِذِّير", "wiẕẕīr", "vazgeçmede aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "وِذِّيرَة", "wiẕẕīra", "vazgeçmede aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "وِذِّيرَان", "wiẕẕīrān", "vazgeçmede aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "وِذِّيرَتَان",
+        "wiẕẕīratān",
+        "vazgeçmede aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وِذِّيرُون",
+        "wiẕẕīrūn",
+        "vazgeçmede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وِذِّيرِين",
+        "wiẕẕīrīn",
+        "vazgeçmede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وِذِّيرَات",
+        "wiẕẕīrāt",
+        "vazgeçmede aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "وُذَّار", "wuẕẕār", "son derece vazgeçen", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "وُذَّارَة", "wuẕẕāra", "son derece vazgeçen, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "وُذَّارَان", "wuẕẕārān", "son derece vazgeçen, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "وُذَّارَتَان",
+        "wuẕẕāratān",
+        "son derece vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُذَّارُون",
+        "wuẕẕārūn",
+        "son derece vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُذَّارِين",
+        "wuẕẕārīn",
+        "son derece vazgeçenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُذَّارَات",
+        "wuẕẕārāt",
+        "son derece vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِيذَار", "mīẕār", "vazgeçmeyi âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِيذَارَة", "mīẕāra", "vazgeçmeyi âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِيذَارَان", "mīẕārān", "vazgeçmeyi âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِيذَارَتَان",
+        "mīẕāratān",
+        "vazgeçmeyi âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيذَارُون",
+        "mīẕārūn",
+        "vazgeçmeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيذَارِين",
+        "mīẕārīn",
+        "vazgeçmeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيذَارَات",
+        "mīẕārāt",
+        "vazgeçmeyi âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِيذِير", "mīẕīr", "vazgeçmeye düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِيذِيرَة", "mīẕīra", "vazgeçmeye düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِيذِيرَان", "mīẕīrān", "vazgeçmeye düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِيذِيرَتَان",
+        "mīẕīratān",
+        "vazgeçmeye düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيذِيرُون",
+        "mīẕīrūn",
+        "vazgeçmeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيذِيرِين",
+        "mīẕīrīn",
+        "vazgeçmeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيذِيرَات",
+        "mīẕīrāt",
+        "vazgeçmeye düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "وَذِير", "waẕīr", "çok vazgeçen", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "وَذِيرَة", "waẕīra", "çok vazgeçen, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَذِيرَان", "waẕīrān", "çok vazgeçen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَذِيرَتَان",
+        "waẕīratān",
+        "çok vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَذِيرُون", "waẕīrūn", "çok vazgeçenler", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَذِيرِين", "waẕīrīn", "çok vazgeçenler", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذِيرَات",
+        "waẕīrāt",
+        "çok vazgeçenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "وَذَّر", "waẕẕar", "çok vazgeçen", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "وَذَّرَة", "waẕẕara", "çok vazgeçen, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "وَذَّرَان", "waẕẕarān", "çok vazgeçen, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "وَذَّرَتَان",
+        "waẕẕaratān",
+        "çok vazgeçen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَذَّرُون", "waẕẕarūn", "çok vazgeçenler", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَذَّرِين", "waẕẕarīn", "çok vazgeçenler", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَذَّرَات",
+        "waẕẕarāt",
+        "çok vazgeçenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "وَذْرِيّ", "waẕriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "وَذَرِيّ", "waẕariyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "وِذْرِيّ", "wiẕriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "وُذْرِيّ", "wuẕriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "وِذَارِيّ", "wiẕāriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "وَاذِرِيّ", "wāẕiriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَوْذُورِيّ", "mawẕūriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "وَذِيرِيّ", "waẕīriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَوْذَرِيّ", "mawẕariyy", "vazgeçme ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَوْذِيرِيّ", "tawẕīriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَوَاذُرِيّ", "tawāẕuriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِيذَارِيّ", "ʾīẕāriyy", "vazgeçme ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِتِّذَارِيّ", "ittiẕāriyy", "vazgeçme ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "وَذْرِيَّة", "waẕriyya", "vazgeçenlik", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "وَذَرِيَّة", "waẕariyya", "vazgeçenlik", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "وِذْرِيَّة", "wiẕriyya", "vazgeçenlik", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "وُذْرِيَّة", "wuẕriyya", "vazgeçenlik", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "وِذَارِيَّة", "wiẕāriyya", "vazgeçenlik", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "وَاذِرِيَّة", "wāẕiriyya", "vazgeçenlik", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَوْذُورِيَّة", "mawẕūriyya", "vazgeçenlik", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "وَذِيرِيَّة", "waẕīriyya", "vazgeçenlik", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَوْذَرِيَّة", "mawẕariyya", "vazgeçenlik", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَوْذِيرِيَّة", "tawẕīriyya", "vazgeçenlik", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَوَاذُرِيَّة", "tawāẕuriyya", "vazgeçenlik", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِيذَارِيَّة", "ʾīẕāriyya", "vazgeçenlik", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِتِّذَارِيَّة", "ittiẕāriyya", "vazgeçenlik", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "وَذَار", "waẕār", "vazgeçme", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "وُذُور", "wuẕūr", "vazgeçme", "orta", ""],
+      ["fi'âl", "semâî aday", "وِذَار", "wiẕār", "vazgeçme", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "وُذْر", "wuẕr", "vazgeçme", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "وَذَارَة", "waẕāra", "vazgeçme", "orta", ""],
+      ["fi'âle", "semâî aday", "وِذَارَة", "wiẕāra", "vazgeçme", "orta", ""],
+      ["fu'ûle", "semâî aday", "وُذُورَة", "wuẕūra", "vazgeçme", "orta", ""],
+      ["fa'l", "semâî aday", "وَذْر", "waẕr", "vazgeçme", "orta", ""],
+      ["fi'l", "semâî aday", "وِذْر", "wiẕr", "vazgeçme", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "وَاذُور", "wāẕūr", "vazgeçme türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "وَذَرَة", "waẕara", "vazgeçme türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "وُذَرَة", "wuẕara", "vazgeçme türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُوذُورَة", "ʾūẕūra", "vazgeçme türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "وَوْذَر", "wawẕar", "vazgeçme türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "وَيْذَر", "wayẕar", "vazgeçme türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "وَذْر", "waẕr", "vazgeçme türünden şey", "orta", ""],
+      ["fa'al", "semâî aday", "وَذَر", "waẕar", "vazgeçme türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "وِذْر", "wiẕr", "vazgeçme türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "وُذْر", "wuẕr", "vazgeçme türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "وَذِير", "waẕīr", "vazgeçme türünden şey", "orta", ""],
+      ["fi'al", "semâî aday", "وِذَر", "wiẕar", "vazgeçme türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "وُذُر", "wuẕur", "vazgeçme türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "وَذَار", "waẕār", "vazgeçme türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "وَاذُورَة", "wāẕūra", "vazgeçme türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "وَوْذَرَة", "wawẕara", "vazgeçme türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "وَيْذَرَة", "wayẕara", "vazgeçme türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "وَذْرَة", "waẕra", "vazgeçme türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "وَذَرَة", "waẕara", "vazgeçme türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "وِذْرَة", "wiẕra", "vazgeçme türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "وُذْرَة", "wuẕra", "vazgeçme türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "وَذِيرَة", "waẕīra", "vazgeçme türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "وِذَرَة", "wiẕara", "vazgeçme türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "وُذُرَة", "wuẕura", "vazgeçme türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "وَذَارَة", "waẕāra", "vazgeçme türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَوْذَار", "ʾawẕār", "vazgeçmeler", "orta", ""],
+      ["ef'ile", "semâî aday", "أَوْذِرَة", "ʾawẕira", "vazgeçmeler", "orta", ""],
+      ["efâ'il", "semâî aday", "أَوَاذِر", "ʾawāẕir", "vazgeçmeler", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَوَاذِير", "ʾawāẕīr", "vazgeçmeler", "orta", ""],
+      ["fu'ūl", "semâî aday", "وُذُور", "wuẕūr", "vazgeçmeler", "orta", ""],
+      ["fu'ul", "semâî aday", "وُذُر", "wuẕur", "vazgeçmeler", "orta", ""],
+      ["fi'āl", "semâî aday", "وِذَار", "wiẕār", "vazgeçmeler", "orta", ""],
+      ["fi'al", "semâî aday", "وِذَر", "wiẕar", "vazgeçmeler", "orta", ""],
+      ["fi'ale", "semâî aday", "وِذَرَة", "wiẕara", "vazgeçmeler", "orta", ""],
+      ["fu'al", "semâî aday", "وُذَر", "wuẕar", "vazgeçmeler", "orta", ""],
+      ["fu'alā'", "semâî aday", "وُذَراء", "wuẕarāʾ", "vazgeçmeler", "orta", ""],
+      ["fa'ale", "semâî aday", "وَذَرَة", "waẕara", "vazgeçmeler", "orta", ""],
+      ["fu''āl", "semâî aday", "وُذَّار", "wuẕẕār", "vazgeçmeler", "orta", ""],
+      ["fa'āl", "semâî aday", "وَذَار", "waẕār", "vazgeçmeler", "orta", ""],
+      ["fa'al", "semâî aday", "وَذَر", "waẕar", "vazgeçmeler", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَوَاذِر", "mawāẕir", "vazgeçmeler", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَوَاذِير", "mawāẕīr", "vazgeçmeler", "orta", ""],
+      ["fevâ'il", "semâî aday", "وَوَاذِر", "wawāẕir", "vazgeçmeler", "orta", ""],
+      ["af'ul", "semâî aday", "أَوْذُر", "ʾawẕur", "vazgeçmeler", "orta", ""],
+      ["fu''al", "semâî aday", "وُذَّر", "wuẕẕar", "vazgeçmeler", "orta", ""],
+      ["fe'âil", "semâî aday", "وَذَائِر", "waẕāʾir", "vazgeçmeler", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "وُذَيْر", "wuẕayr", "vazgeçmeler", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَوْذَارَات", "ʾawẕārāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَوْذِرَات", "ʾawẕirāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَوَاذِرَات", "ʾawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَوَاذِيرَات", "ʾawāẕīrāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "وُذُورَات", "wuẕūrāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "وُذُرَات", "wuẕurāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "وِذَارَات", "wiẕārāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "وِذَرَات", "wiẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "وِذَرَات", "wiẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "وُذَرَات", "wuẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "وُذَراآت", "wuẕarāʾāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "وَذَرَات", "waẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "وُذَّارَات", "wuẕẕārāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "وَذَارَات", "waẕārāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "وَذَرَات", "waẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَوَاذِرَات", "mawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَوَاذِيرَات", "mawāẕīrāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "وَوَاذِرَات", "wawāẕirāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَوْذُرَات", "ʾawẕurāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "وُذَّرَات", "wuẕẕarāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "وَذَائِرَات", "waẕāʾirāt", "vazgeçmeler topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "وُذَيْرَات", "wuẕayrāt", "vazgeçmeler topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -863,1021 +2119,22 @@
       "boy": 57
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "926": ["masdar · sülâsî mücerred", "fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", ""]
+  "muhassas": {
+    "kitap": "الحشرات",
+    "kok_gecis": 24.5,
+    "kitapta_gecis": 1.5,
+    "zenginlesme": 6.36
   },
-  "kelimeler": [
-    {
-      "kelime": "وَيَذَرُونَ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "2:234",
-      "adet": 3,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَذَرُوا۟",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "2:278",
-      "adet": 4,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "لِيَذَرَ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "3:179",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَتَذَرُوهَا",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "4:129",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَذَرِ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "6:70",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ذَرْهُمْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "6:91",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَنَذَرُهُمْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "6:110",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَذَرْهُمْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "6:112",
-      "adet": 6,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَنَذَرَ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "7:70",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَذَرُوهَا",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "7:73",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "أَتَذَرُ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "7:127",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَيَذَرَكَ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "7:127",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَيَذَرُهُمْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "7:186",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ذَرْنَا",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "9:86",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَنَذَرُ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "10:11",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَذَرُوهُ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "12:47",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَّنَذَرُ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "19:72",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَيَذَرُهَا",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "20:106",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَذَرْنِى",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "21:89",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَتَذَرُونَ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "26:166",
-      "adet": 3,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ذَرُونِىٓ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "40:26",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ذَرُونَا",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "48:15",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَذَرُ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "51:42",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَذَرْنِى",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "68:44",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَذَرُنَّ",
-      "kok": "وذر",
-      "lemma": "ن",
-      "tur": "Harf",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "71:23",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "nun harfi",
-        "lemma": "nun harfi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَذَرْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "Fiil",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "71:26",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَذَرْهُمْ",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "71:27",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَذَرْنِى",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "73:11",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ذَرْنِى",
-      "kok": "وذر",
-      "lemma": "يَذَرَ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Emir",
-      "ilk_gecis": "74:11",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bırakır",
-        "lemma": "bırakır",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 45,
-      "isim": 0
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": {
-    "ad": "Yönelim",
-    "ayrim": "vazgeç",
-    "acilim": "وذر := Yönelim(ayrım: vazgeç)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Yönelim",
-    "kelimeler": [
+  "prototip": {
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
       {
-        "lemma": "يَذَرَ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Emir", "Muzâri"],
-        "adet": 43,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      },
-      {
-        "lemma": "ن",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Muzâri"],
-        "adet": 2,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "قولهم في الشتم: يا ابن شامّة الوذر: يريدون الزانية، والوذر كناية عن المذاكير. وعن عثمان رضي الله عنه: أنه رفع إليه من قاله فحدّه. وامرأة لمياء الوذرتين وهما الشفتان.",
+        "prototipe_benzerlik": 0.754,
+        "halka": "yakın"
       }
-    ]
+    ],
+    "ortalama_benzerlik": 0.754
   }
 }

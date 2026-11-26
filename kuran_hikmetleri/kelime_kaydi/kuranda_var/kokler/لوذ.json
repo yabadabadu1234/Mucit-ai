@@ -1,1133 +1,2400 @@
 {
   "kok": "لوذ",
+  "tur": "fiil",
+  "tur_guven": "orta",
+  "tur_dayanak": ["lugat-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Kapı",
+  "baz_ayrim": "sığın",
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "sığın",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "ecvef",
-  "turkce_fiil": {
-    "sap": "sığın",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [
-        0,
-        "لَوْذ",
-        "lawẕ",
-        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
-        "lugat",
-        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
-      ],
-      [888, "لِيذ", "līẕ", "sığınma", "orta", ""],
-      [889, "لُوذ", "lūẕ", "sığınma", "orta", ""],
-      [517, "لَاذ", "lāẕ", "sığınma", "orta", ""],
-      [518, "لِيَذ", "liyaẕ", "sığınma", "orta", ""],
-      [5, "لُوُذ", "luwuẕ", "sığınma", "orta", ""],
-      [6, "لُوُوذ", "luwūẕ", "sığınma", "orta", ""],
-      [521, "لِيَاذ", "liyāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [8, "لُوَاذ", "luwāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [9, "لَوَاذ", "lawāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [10, "لَوَاذَة", "lawāẕa", "sığınma", "orta", ""],
-      [11, "لُوُوذَة", "luwūẕa", "sığınma", "orta", ""],
-      [526, "لِيَاذَة", "liyāẕa", "sığınma", "orta", ""],
-      [13, "لَوِيذ", "lawīẕ", "sığınma", "orta", ""],
-      [14, "لَوُوذ", "lawūẕ", "sığınma", "orta", ""],
-      [15, "لَوَذَان", "lawaẕān", "sığınma", "orta", ""],
-      [16, "لُوْذَان", "luwẕān", "sığınma", "orta", ""],
-      [17, "لِوْذَان", "liwẕān", "sığınma", "orta", ""],
-      [18, "لَوْذَى", "lawẕā", "sığınma", "orta", ""],
-      [19, "لُوْذَى", "luwẕā", "sığınma", "orta", ""],
-      [20, "لِوْذَى", "liwẕā", "sığınma", "orta", ""],
-      [21, "لَوَذَة", "lawaẕa", "sığınma", "orta", ""],
-      [22, "لِوَذَة", "liwaẕa", "sığınma", "orta", ""],
-      [23, "لَوْذُوذَة", "lawẕūẕa", "sığınma", "orta", ""],
-      [24, "تُلْوُوذ", "tulwūẕ", "sığınma", "orta", ""],
-      [25, "تَلْوِذَة", "talwiẕa", "sığınma", "orta", ""],
-      [26, "تَلْوَذَة", "talwaẕa", "sığınma", "orta", ""],
-      [27, "مَلْوُذَة", "malwuẕa", "sığınma", "orta", ""],
-      [533, "مَلِيذَة", "malīẕa", "sığınma", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَلْوِيذ", "talwīẕ", "çokça sığınma", "orta", ""],
-      [30, "تَلْوِذَة", "talwiẕa", "çokça sığınma", "orta", ""],
-      [31, "لِوِّاذ", "liwwāẕ", "çokça sığınma", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَلْوِيذَة", "talwīẕa", "bir kere çokça sığınma", "orta", ""],
-      [33, "لِوِّاذَة", "liwwāẕa", "bir kere çokça sığınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُلَوِّذ", "mulawwiẕ", "çokça sığınan", "orta", ""],
-      [35, "مُلَوِّذَة", "mulawwiẕa", "çokça sığınan, müennes", "orta", ""],
-      [36, "مُلَوِّذَان", "mulawwiẕān", "çokça sığınan, iki", "orta", ""],
-      [37, "مُلَوِّذَتَان", "mulawwiẕatān", "çokça sığınan, iki, müennes", "orta", ""],
-      [38, "مُلَوِّذُون", "mulawwiẕūn", "çokça sığınanlar", "orta", ""],
-      [39, "مُلَوِّذِين", "mulawwiẕīn", "çokça sığınanlar", "orta", ""],
-      [40, "مُلَوِّذَات", "mulawwiẕāt", "çokça sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُلَوَّذ", "mulawwaẕ", "çokça sığınılan", "orta", ""],
-      [42, "مُلَوَّذَة", "mulawwaẕa", "çokça sığınılan, müennes", "orta", ""],
-      [43, "مُلَوَّذَان", "mulawwaẕān", "çokça sığınılan, iki", "orta", ""],
-      [44, "مُلَوَّذَتَان", "mulawwaẕatān", "çokça sığınılan, iki, müennes", "orta", ""],
-      [45, "مُلَوَّذُون", "mulawwaẕūn", "çokça sığınılanlar", "orta", ""],
-      [46, "مُلَوَّذِين", "mulawwaẕīn", "çokça sığınılanlar", "orta", ""],
-      [47, "مُلَوَّذَات", "mulawwaẕāt", "çokça sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُلَوَّذ", "mulawwaẕ", "çokça sığınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُلَاوَذَة", "mulāwaẕa", "biriyle karşılıklı sığınma", "orta", ""],
-      [552, "لِيَاذ", "liyāẕ", "biriyle karşılıklı sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"]
-    ],
-    "ism-i merre · bâb III": [
-      [553, "لِيَاذَة", "liyāẕa", "bir kere biriyle karşılıklı sığınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُلَاوِذ", "mulāwiẕ", "biriyle karşılıklı sığınan", "orta", ""],
-      [53, "مُلَاوِذَة", "mulāwiẕa", "biriyle karşılıklı sığınan, müennes", "orta", ""],
-      [54, "مُلَاوِذَان", "mulāwiẕān", "biriyle karşılıklı sığınan, iki", "orta", ""],
-      [55, "مُلَاوِذَتَان", "mulāwiẕatān", "biriyle karşılıklı sığınan, iki, müennes", "orta", ""],
-      [56, "مُلَاوِذُون", "mulāwiẕūn", "biriyle karşılıklı sığınanlar", "orta", ""],
-      [57, "مُلَاوِذِين", "mulāwiẕīn", "biriyle karşılıklı sığınanlar", "orta", ""],
-      [58, "مُلَاوِذَات", "mulāwiẕāt", "biriyle karşılıklı sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُلَاوَذ", "mulāwaẕ", "biriyle karşılıklı sığınılan", "orta", ""],
-      [60, "مُلَاوَذَة", "mulāwaẕa", "biriyle karşılıklı sığınılan, müennes", "orta", ""],
-      [61, "مُلَاوَذَان", "mulāwaẕān", "biriyle karşılıklı sığınılan, iki", "orta", ""],
-      [62, "مُلَاوَذَتَان", "mulāwaẕatān", "biriyle karşılıklı sığınılan, iki, müennes", "orta", ""],
-      [63, "مُلَاوَذُون", "mulāwaẕūn", "biriyle karşılıklı sığınılanlar", "orta", ""],
-      [64, "مُلَاوَذِين", "mulāwaẕīn", "biriyle karşılıklı sığınılanlar", "orta", ""],
-      [65, "مُلَاوَذَات", "mulāwaẕāt", "biriyle karşılıklı sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُلَاوَذ", "mulāwaẕ", "biriyle karşılıklı sığınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [567, "إِلَاذَة", "ʾilāẕa", "sığındırma", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [569, "مُلِيذ", "mulīẕ", "sığındıran", "orta", ""],
-      [570, "مُلِيذَة", "mulīẕa", "sığındıran, müennes", "orta", ""],
-      [571, "مُلِيذَان", "mulīẕān", "sığındıran, iki", "orta", ""],
-      [572, "مُلِيذَتَان", "mulīẕatān", "sığındıran, iki, müennes", "orta", ""],
-      [573, "مُلِيذُون", "mulīẕūn", "sığındıranlar", "orta", ""],
-      [574, "مُلِيذِين", "mulīẕīn", "sığındıranlar", "orta", ""],
-      [575, "مُلِيذَات", "mulīẕāt", "sığındıranlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [576, "مُلَاذ", "mulāẕ", "sığındırılan", "orta", ""],
-      [890, "مُلَاذَة", "mulāẕa", "sığındırılan, müennes", "orta", ""],
-      [577, "مُلَاذَان", "mulāẕān", "sığındırılan, iki", "orta", ""],
-      [891, "مُلَاذَتَان", "mulāẕatān", "sığındırılan, iki, müennes", "orta", ""],
-      [578, "مُلَاذُون", "mulāẕūn", "sığındırılanlar", "orta", ""],
-      [579, "مُلَاذِين", "mulāẕīn", "sığındırılanlar", "orta", ""],
-      [580, "مُلَاذَات", "mulāẕāt", "sığındırılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُلَاذ", "mulāẕ", "sığındırma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَلَوُّذ", "talawwuẕ", "kendini zorlayarak sığınma", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَلَوُّذَة", "talawwuẕa", "bir kere kendini zorlayarak sığınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَلَوِّذ", "mutalawwiẕ", "kendini zorlayarak sığınan", "orta", ""],
-      [87, "مُتَلَوِّذَة", "mutalawwiẕa", "kendini zorlayarak sığınan, müennes", "orta", ""],
-      [88, "مُتَلَوِّذَان", "mutalawwiẕān", "kendini zorlayarak sığınan, iki", "orta", ""],
-      [89, "مُتَلَوِّذَتَان", "mutalawwiẕatān", "kendini zorlayarak sığınan, iki, müennes", "orta", ""],
-      [90, "مُتَلَوِّذُون", "mutalawwiẕūn", "kendini zorlayarak sığınanlar", "orta", ""],
-      [91, "مُتَلَوِّذِين", "mutalawwiẕīn", "kendini zorlayarak sığınanlar", "orta", ""],
-      [92, "مُتَلَوِّذَات", "mutalawwiẕāt", "kendini zorlayarak sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَلَوَّذ", "mutalawwaẕ", "kendini zorlayarak sığınılan", "orta", ""],
-      [94, "مُتَلَوَّذَة", "mutalawwaẕa", "kendini zorlayarak sığınılan, müennes", "orta", ""],
-      [95, "مُتَلَوَّذَان", "mutalawwaẕān", "kendini zorlayarak sığınılan, iki", "orta", ""],
-      [96, "مُتَلَوَّذَتَان", "mutalawwaẕatān", "kendini zorlayarak sığınılan, iki, müennes", "orta", ""],
-      [97, "مُتَلَوَّذُون", "mutalawwaẕūn", "kendini zorlayarak sığınılanlar", "orta", ""],
-      [98, "مُتَلَوَّذِين", "mutalawwaẕīn", "kendini zorlayarak sığınılanlar", "orta", ""],
-      [99, "مُتَلَوَّذَات", "mutalawwaẕāt", "kendini zorlayarak sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَلَوَّذ", "mutalawwaẕ", "kendini zorlayarak sığınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَلَاوُذ", "talāwuẕ", "birbirine sığınma", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَلَاوُذَة", "talāwuẕa", "bir kere birbirine sığınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَلَاوِذ", "mutalāwiẕ", "birbirine sığınan", "orta", ""],
-      [104, "مُتَلَاوِذَة", "mutalāwiẕa", "birbirine sığınan, müennes", "orta", ""],
-      [105, "مُتَلَاوِذَان", "mutalāwiẕān", "birbirine sığınan, iki", "orta", ""],
-      [106, "مُتَلَاوِذَتَان", "mutalāwiẕatān", "birbirine sığınan, iki, müennes", "orta", ""],
-      [107, "مُتَلَاوِذُون", "mutalāwiẕūn", "birbirine sığınanlar", "orta", ""],
-      [108, "مُتَلَاوِذِين", "mutalāwiẕīn", "birbirine sığınanlar", "orta", ""],
-      [109, "مُتَلَاوِذَات", "mutalāwiẕāt", "birbirine sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَلَاوَذ", "mutalāwaẕ", "birbirine sığınılan", "orta", ""],
-      [111, "مُتَلَاوَذَة", "mutalāwaẕa", "birbirine sığınılan, müennes", "orta", ""],
-      [112, "مُتَلَاوَذَان", "mutalāwaẕān", "birbirine sığınılan, iki", "orta", ""],
-      [113, "مُتَلَاوَذَتَان", "mutalāwaẕatān", "birbirine sığınılan, iki, müennes", "orta", ""],
-      [114, "مُتَلَاوَذُون", "mutalāwaẕūn", "birbirine sığınılanlar", "orta", ""],
-      [115, "مُتَلَاوَذِين", "mutalāwaẕīn", "birbirine sığınılanlar", "orta", ""],
-      [116, "مُتَلَاوَذَات", "mutalāwaẕāt", "birbirine sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَلَاوَذ", "mutalāwaẕ", "birbirine sığınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [610, "اِنْلِيَاذ", "inliyāẕ", "sığınılma", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [611, "اِنْلِيَاذَة", "inliyāẕa", "bir kere sığınılma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [612, "مُنْلَاذ", "munlāẕ", "sığınılan", "orta", ""],
-      [613, "مُنْلَاذَة", "munlāẕa", "sığınılan, müennes", "orta", ""],
-      [614, "مُنْلَاذَان", "munlāẕān", "sığınılan, iki", "orta", ""],
-      [615, "مُنْلَاذَتَان", "munlāẕatān", "sığınılan, iki, müennes", "orta", ""],
-      [616, "مُنْلَاذُون", "munlāẕūn", "sığınılanlar", "orta", ""],
-      [617, "مُنْلَاذِين", "munlāẕīn", "sığınılanlar", "orta", ""],
-      [618, "مُنْلَاذَات", "munlāẕāt", "sığınılanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْلَاذ", "munlāẕ", "sığınılan", "orta", ""],
-      [892, "مُنْلَاذَة", "munlāẕa", "sığınılan, müennes", "orta", ""],
-      [620, "مُنْلَاذَان", "munlāẕān", "sığınılan, iki", "orta", ""],
-      [893, "مُنْلَاذَتَان", "munlāẕatān", "sığınılan, iki, müennes", "orta", ""],
-      [621, "مُنْلَاذُون", "munlāẕūn", "sığınılanlar", "orta", ""],
-      [622, "مُنْلَاذِين", "munlāẕīn", "sığınılanlar", "orta", ""],
-      [623, "مُنْلَاذَات", "munlāẕāt", "sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْلَاذ", "munlāẕ", "sığınılma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [625, "اِلْتِيَاذ", "iltiyāẕ", "kendisi için sığınma", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [627, "اِلْتِيَاذَة", "iltiyāẕa", "bir kere kendisi için sığınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [628, "مُلْتَاذ", "multāẕ", "kendisi için sığınan", "orta", ""],
-      [629, "مُلْتَاذَة", "multāẕa", "kendisi için sığınan, müennes", "orta", ""],
-      [630, "مُلْتَاذَان", "multāẕān", "kendisi için sığınan, iki", "orta", ""],
-      [631, "مُلْتَاذَتَان", "multāẕatān", "kendisi için sığınan, iki, müennes", "orta", ""],
-      [632, "مُلْتَاذُون", "multāẕūn", "kendisi için sığınanlar", "orta", ""],
-      [633, "مُلْتَاذِين", "multāẕīn", "kendisi için sığınanlar", "orta", ""],
-      [634, "مُلْتَاذَات", "multāẕāt", "kendisi için sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُلْتَاذ", "multāẕ", "kendisi için sığınılan", "orta", ""],
-      [894, "مُلْتَاذَة", "multāẕa", "kendisi için sığınılan, müennes", "orta", ""],
-      [636, "مُلْتَاذَان", "multāẕān", "kendisi için sığınılan, iki", "orta", ""],
-      [895, "مُلْتَاذَتَان", "multāẕatān", "kendisi için sığınılan, iki, müennes", "orta", ""],
-      [637, "مُلْتَاذُون", "multāẕūn", "kendisi için sığınılanlar", "orta", ""],
-      [638, "مُلْتَاذِين", "multāẕīn", "kendisi için sığınılanlar", "orta", ""],
-      [639, "مُلْتَاذَات", "multāẕāt", "kendisi için sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُلْتَاذ", "multāẕ", "kendisi için sığınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِلْوِذَاذ", "ilwiẕāẕ", "iyiden iyiye sığınma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُلْوَذّ", "mulwaẕẕ", "iyiden iyiye sığınan", "kontrol", ""],
-      [170, "مُلْوَذَّة", "mulwaẕẕa", "iyiden iyiye sığınan, müennes", "kontrol", ""],
-      [171, "مُلْوَذَّان", "mulwaẕẕān", "iyiden iyiye sığınan, iki", "kontrol", ""],
-      [172, "مُلْوَذَّتَان", "mulwaẕẕatān", "iyiden iyiye sığınan, iki, müennes", "kontrol", ""],
-      [173, "مُلْوَذُّون", "mulwaẕẕūn", "iyiden iyiye sığınanlar", "kontrol", ""],
-      [174, "مُلْوَذِّين", "mulwaẕẕīn", "iyiden iyiye sığınanlar", "kontrol", ""],
-      [175, "مُلْوَذَّات", "mulwaẕẕāt", "iyiden iyiye sığınanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [662, "اِسْتِلَاذَة", "istilāẕa", "sığınmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [664, "مُسْتَلِيذ", "mustalīẕ", "sığınmayı isteyen", "orta", ""],
-      [665, "مُسْتَلِيذَة", "mustalīẕa", "sığınmayı isteyen, müennes", "orta", ""],
-      [666, "مُسْتَلِيذَان", "mustalīẕān", "sığınmayı isteyen, iki", "orta", ""],
-      [667, "مُسْتَلِيذَتَان", "mustalīẕatān", "sığınmayı isteyen, iki, müennes", "orta", ""],
-      [668, "مُسْتَلِيذُون", "mustalīẕūn", "sığınmayı isteyenler", "orta", ""],
-      [669, "مُسْتَلِيذِين", "mustalīẕīn", "sığınmayı isteyenler", "orta", ""],
-      [670, "مُسْتَلِيذَات", "mustalīẕāt", "sığınmayı isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَلَاذ", "mustalāẕ", "sığınması istenen", "orta", ""],
-      [898, "مُسْتَلَاذَة", "mustalāẕa", "sığınması istenen, müennes", "orta", ""],
-      [672, "مُسْتَلَاذَان", "mustalāẕān", "sığınması istenen, iki", "orta", ""],
-      [899, "مُسْتَلَاذَتَان", "mustalāẕatān", "sığınması istenen, iki, müennes", "orta", ""],
-      [673, "مُسْتَلَاذُون", "mustalāẕūn", "sığınması istenenler", "orta", ""],
-      [674, "مُسْتَلَاذِين", "mustalāẕīn", "sığınması istenenler", "orta", ""],
-      [675, "مُسْتَلَاذَات", "mustalāẕāt", "sığınması istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَلَاذ", "mustalāẕ", "sığınmayı isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [900, "اِسْتِلْوَاذ", "istilwāẕ", "sığınmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [901, "مُسْتَلْوِذ", "mustalwiẕ", "sığınmayı isteyen", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [902, "مُسْتَلْوَذ", "mustalwaẕ", "sığınması istenen", "orta", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِلْوِيذَاذ", "ilwīẕāẕ", "büsbütün sığınma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُلْوَاذّ", "mulwāẕẕ", "büsbütün sığınan", "kontrol", ""],
-      [195, "مُلْوَاذَّة", "mulwāẕẕa", "büsbütün sığınan, müennes", "kontrol", ""],
-      [196, "مُلْوَاذَّان", "mulwāẕẕān", "büsbütün sığınan, iki", "kontrol", ""],
-      [197, "مُلْوَاذَّتَان", "mulwāẕẕatān", "büsbütün sığınan, iki, müennes", "kontrol", ""],
-      [198, "مُلْوَاذُّون", "mulwāẕẕūn", "büsbütün sığınanlar", "kontrol", ""],
-      [199, "مُلْوَاذِّين", "mulwāẕẕīn", "büsbütün sığınanlar", "kontrol", ""],
-      [200, "مُلْوَاذَّات", "mulwāẕẕāt", "büsbütün sığınanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِلْوِوْوَاذ", "ilwiwwāẕ", "aşırı sığınma", "orta", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِلْوِوَّاذ", "ilwiwwāẕ", "aşırı sığınma", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [687, "لَائِذ", "lāʾiẕ", "sığınan", "orta", ""],
-      [688, "لَائِذَة", "lāʾiẕa", "sığınan, müennes", "orta", ""],
-      [689, "لَائِذَان", "lāʾiẕān", "sığınan, iki", "orta", ""],
-      [690, "لَائِذَتَان", "lāʾiẕatān", "sığınan, iki, müennes", "orta", ""],
-      [691, "لَائِذُون", "lāʾiẕūn", "sığınanlar", "orta", ""],
-      [692, "لَائِذِين", "lāʾiẕīn", "sığınanlar", "orta", ""],
-      [693, "لَائِذَات", "lāʾiẕāt", "sığınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [694, "مَلُوذ", "malūẕ", "sığınılan", "orta", ""],
-      [695, "مَلُوذَة", "malūẕa", "sığınılan, müennes", "orta", ""],
-      [696, "مَلُوذَان", "malūẕān", "sığınılan, iki", "orta", ""],
-      [697, "مَلُوذَتَان", "malūẕatān", "sığınılan, iki, müennes", "orta", ""],
-      [698, "مَلُوذُون", "malūẕūn", "sığınılanlar", "orta", ""],
-      [699, "مَلُوذِين", "malūẕīn", "sığınılanlar", "orta", ""],
-      [700, "مَلُوذَات", "malūẕāt", "sığınılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [
-        701,
-        "مَلَاذ",
-        "malāẕ",
-        "Sığınacak yer, sığınak, melce, penah",
-        "lugat",
-        "Vikisözlük: refuge, shelter · Kubbealtı"
-      ],
-      [702, "مَلَاذَان", "malāẕān", "sığınma yeri, vakti, iki", "orta", ""],
-      [703, "مَلِيذ", "malīẕ", "sığınma yeri, vakti", "orta", ""],
-      [704, "مَلِيذَان", "malīẕān", "sığınma yeri, vakti, iki", "orta", ""],
-      [705, "مَلَاذَة", "malāẕa", "sığınmanın bol olduğu yer", "orta", ""],
-      [706, "مَلَاذَتَان", "malāẕatān", "sığınmanın bol olduğu yer, iki", "orta", ""],
-      [707, "مَلِيذَة", "malīẕa", "sığınmanın bol olduğu yer", "orta", ""],
-      [708, "مَلِيذَتَان", "malīẕatān", "sığınmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَلْوُذَة", "malwuẕa", "sığınma yeri, vakti", "orta", ""],
-      [248, "مَلْوُذَتَان", "malwuẕatān", "sığınma yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِلْوَذ", "milwaẕ", "sığınma âleti", "orta", ""],
-      [236, "مِلْوَذَان", "milwaẕān", "sığınma âleti, iki", "orta", ""],
-      [237, "مِلْوَاذ", "milwāẕ", "sığınma âleti", "orta", ""],
-      [238, "مِلْوَاذَان", "milwāẕān", "sığınma âleti, iki", "orta", ""],
-      [239, "مِلْوَذَة", "milwaẕa", "sığınma âleti", "orta", ""],
-      [240, "مِلْوَذَتَان", "milwaẕatān", "sığınma âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَلْوَذ", "ʾalwaẕ", "daha çok sığınan", "orta", ""],
-      [242, "أَلْوَذَان", "ʾalwaẕān", "daha çok sığınan, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "لُوْذَى", "luwẕā", "daha çok sığınan", "orta", ""],
-      [244, "لُوْذَيَان", "luwẕayān", "daha çok sığınan, iki", "orta", ""],
-      [245, "لَوْذَاء", "lawẕāʾ", "daha çok sığınan", "orta", ""],
-      [246, "لَوْذَاآن", "lawẕāʾān", "daha çok sığınan, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "لُوَيْذ", "luwayẕ", "azıcık sığınma", "orta", ""],
-      [250, "لُوَيْذَان", "luwayẕān", "azıcık sığınma, iki", "orta", ""],
-      [251, "لُوَيْذَة", "luwayẕa", "azıcık sığınma", "orta", ""],
-      [252, "لُوَيْذَتَان", "luwayẕatān", "azıcık sığınma, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [
-        723,
-        "مَلَاذ",
-        "malāẕ",
-        "Sığınacak yer, sığınak, melce, penah",
-        "lugat",
-        "Vikisözlük: refuge, shelter · Kubbealtı"
-      ],
-      [724, "مَلَاذَان", "malāẕān", "sığınma, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "لَوْذَة", "lawẕa", "bir kere sığınma", "orta", ""],
-      [256, "لَوْذَتَان", "lawẕatān", "bir kere sığınma, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [903, "لِيذَة", "līẕa", "sığınma tarzı", "orta", ""],
-      [904, "لِيذَتَان", "līẕatān", "sığınma tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "لَوِيذ", "lawīẕ", "her daim sığınan", "orta", ""],
-      [260, "لَوِيذَة", "lawīẕa", "her daim sığınan, müennes", "orta", ""],
-      [261, "لَوِيذَان", "lawīẕān", "her daim sığınan, iki", "orta", ""],
-      [262, "لَوِيذَتَان", "lawīẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [263, "لَوِيذُون", "lawīẕūn", "her daim sığınanlar", "orta", ""],
-      [264, "لَوِيذِين", "lawīẕīn", "her daim sığınanlar", "orta", ""],
-      [265, "لَوِيذَات", "lawīẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [266, "لَوُوذ", "lawūẕ", "her daim sığınan", "orta", ""],
-      [267, "لَوُوذَة", "lawūẕa", "her daim sığınan, müennes", "orta", ""],
-      [268, "لَوُوذَان", "lawūẕān", "her daim sığınan, iki", "orta", ""],
-      [269, "لَوُوذَتَان", "lawūẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [270, "لَوُوذُون", "lawūẕūn", "her daim sığınanlar", "orta", ""],
-      [271, "لَوُوذِين", "lawūẕīn", "her daim sığınanlar", "orta", ""],
-      [272, "لَوُوذَات", "lawūẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [273, "لَوِذ", "lawiẕ", "her daim sığınan", "orta", ""],
-      [274, "لَوِذَة", "lawiẕa", "her daim sığınan, müennes", "orta", ""],
-      [275, "لَوِذَان", "lawiẕān", "her daim sığınan, iki", "orta", ""],
-      [276, "لَوِذَتَان", "lawiẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [277, "لَوِذُون", "lawiẕūn", "her daim sığınanlar", "orta", ""],
-      [278, "لَوِذِين", "lawiẕīn", "her daim sığınanlar", "orta", ""],
-      [279, "لَوِذَات", "lawiẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [280, "لَوُذ", "lawuẕ", "her daim sığınan", "orta", ""],
-      [281, "لَوُذَة", "lawuẕa", "her daim sığınan, müennes", "orta", ""],
-      [282, "لَوُذَان", "lawuẕān", "her daim sığınan, iki", "orta", ""],
-      [283, "لَوُذَتَان", "lawuẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [284, "لَوُذُون", "lawuẕūn", "her daim sığınanlar", "orta", ""],
-      [285, "لَوُذِين", "lawuẕīn", "her daim sığınanlar", "orta", ""],
-      [286, "لَوُذَات", "lawuẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [753, "لَاذ", "lāẕ", "her daim sığınan", "orta", ""],
-      [905, "لَاذَة", "lāẕa", "her daim sığınan, müennes", "orta", ""],
-      [754, "لَاذَان", "lāẕān", "her daim sığınan, iki", "orta", ""],
-      [906, "لَاذَتَان", "lāẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [884, "لَاذُون", "lāẕūn", "her daim sığınanlar", "orta", ""],
-      [885, "لَاذِين", "lāẕīn", "her daim sığınanlar", "orta", ""],
-      [755, "لَاذَات", "lāẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [
-        294,
-        "لَوْذ",
-        "lawẕ",
-        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
-        "lugat",
-        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
-      ],
-      [295, "لَوْذَة", "lawẕa", "her daim sığınan, müennes", "orta", ""],
-      [296, "لَوْذَان", "lawẕān", "her daim sığınan, iki", "orta", ""],
-      [297, "لَوْذَتَان", "lawẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [298, "لَوْذُون", "lawẕūn", "her daim sığınanlar", "orta", ""],
-      [299, "لَوْذِين", "lawẕīn", "her daim sığınanlar", "orta", ""],
-      [300, "لَوْذَات", "lawẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [301, "لُوُذ", "luwuẕ", "her daim sığınan", "orta", ""],
-      [302, "لُوُذَة", "luwuẕa", "her daim sığınan, müennes", "orta", ""],
-      [303, "لُوُذَان", "luwuẕān", "her daim sığınan, iki", "orta", ""],
-      [304, "لُوُذَتَان", "luwuẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [305, "لُوُذُون", "luwuẕūn", "her daim sığınanlar", "orta", ""],
-      [306, "لُوُذِين", "luwuẕīn", "her daim sığınanlar", "orta", ""],
-      [307, "لُوُذَات", "luwuẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [308, "لَوْذَان", "lawẕān", "her daim sığınan", "orta", ""],
-      [309, "لَوْذَانَة", "lawẕāna", "her daim sığınan, müennes", "orta", ""],
-      [310, "لَوْذَانَان", "lawẕānān", "her daim sığınan, iki", "orta", ""],
-      [311, "لَوْذَانَتَان", "lawẕānatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [312, "لَوْذَانُون", "lawẕānūn", "her daim sığınanlar", "orta", ""],
-      [313, "لَوْذَانِين", "lawẕānīn", "her daim sığınanlar", "orta", ""],
-      [314, "لَوْذَانَات", "lawẕānāt", "her daim sığınanlar, müennes", "orta", ""],
-      [315, "لُوَاذ", "luwāẕ", "her daim sığınan", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [316, "لُوَاذَة", "luwāẕa", "her daim sığınan, müennes", "orta", ""],
-      [317, "لُوَاذَان", "luwāẕān", "her daim sığınan, iki", "orta", ""],
-      [318, "لُوَاذَتَان", "luwāẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [319, "لُوَاذُون", "luwāẕūn", "her daim sığınanlar", "orta", ""],
-      [320, "لُوَاذِين", "luwāẕīn", "her daim sığınanlar", "orta", ""],
-      [321, "لُوَاذَات", "luwāẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [322, "لَوَاذ", "lawāẕ", "her daim sığınan", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [323, "لَوَاذَة", "lawāẕa", "her daim sığınan, müennes", "orta", ""],
-      [324, "لَوَاذَان", "lawāẕān", "her daim sığınan, iki", "orta", ""],
-      [325, "لَوَاذَتَان", "lawāẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [326, "لَوَاذُون", "lawāẕūn", "her daim sığınanlar", "orta", ""],
-      [327, "لَوَاذِين", "lawāẕīn", "her daim sığınanlar", "orta", ""],
-      [328, "لَوَاذَات", "lawāẕāt", "her daim sığınanlar, müennes", "orta", ""],
-      [907, "لَيِّذ", "layyiẕ", "her daim sığınan", "orta", ""],
-      [908, "لَيِّذَة", "layyiẕa", "her daim sığınan, müennes", "orta", ""],
-      [909, "لَيِّذَان", "layyiẕān", "her daim sığınan, iki", "orta", ""],
-      [910, "لَيِّذَتَان", "layyiẕatān", "her daim sığınan, iki, müennes", "orta", ""],
-      [911, "لَيِّذُون", "layyiẕūn", "her daim sığınanlar", "orta", ""],
-      [912, "لَيِّذِين", "layyiẕīn", "her daim sığınanlar", "orta", ""],
-      [913, "لَيِّذَات", "layyiẕāt", "her daim sığınanlar, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "لَوَّاذ", "lawwāẕ", "işi sığınma olan", "orta", ""],
-      [330, "لَوَّاذَة", "lawwāẕa", "işi sığınma olan, müennes", "orta", ""],
-      [331, "لَوَّاذَان", "lawwāẕān", "işi sığınma olan, iki", "orta", ""],
-      [332, "لَوَّاذَتَان", "lawwāẕatān", "işi sığınma olan, iki, müennes", "orta", ""],
-      [333, "لَوَّاذُون", "lawwāẕūn", "işi sığınma olanlar", "orta", ""],
-      [334, "لَوَّاذِين", "lawwāẕīn", "işi sığınma olanlar", "orta", ""],
-      [335, "لَوَّاذَات", "lawwāẕāt", "işi sığınma olanlar, müennes", "orta", ""],
-      [336, "لَوَّاذَة", "lawwāẕa", "pek çok sığınan", "orta", ""],
-      [337, "لَوَّاذَتَان", "lawwāẕatān", "pek çok sığınan, iki", "orta", ""],
-      [338, "لَوَّاذَات", "lawwāẕāt", "pek çok sığınanlar, müennes", "orta", ""],
-      [339, "لَوُوذ", "lawūẕ", "çok sığınan", "orta", ""],
-      [340, "لَوُوذَة", "lawūẕa", "çok sığınan, müennes", "orta", ""],
-      [341, "لَوُوذَان", "lawūẕān", "çok sığınan, iki", "orta", ""],
-      [342, "لَوُوذَتَان", "lawūẕatān", "çok sığınan, iki, müennes", "orta", ""],
-      [343, "لَوُوذُون", "lawūẕūn", "çok sığınanlar", "orta", ""],
-      [344, "لَوُوذِين", "lawūẕīn", "çok sığınanlar", "orta", ""],
-      [345, "لَوُوذَات", "lawūẕāt", "çok sığınanlar, müennes", "orta", ""],
-      [346, "لَوُّوذ", "lawwūẕ", "pek çok sığınan", "orta", ""],
-      [347, "لَوُّوذَة", "lawwūẕa", "pek çok sığınan, müennes", "orta", ""],
-      [348, "لَوُّوذَان", "lawwūẕān", "pek çok sığınan, iki", "orta", ""],
-      [349, "لَوُّوذَتَان", "lawwūẕatān", "pek çok sığınan, iki, müennes", "orta", ""],
-      [350, "لَوُّوذُون", "lawwūẕūn", "pek çok sığınanlar", "orta", ""],
-      [351, "لَوُّوذِين", "lawwūẕīn", "pek çok sığınanlar", "orta", ""],
-      [352, "لَوُّوذَات", "lawwūẕāt", "pek çok sığınanlar, müennes", "orta", ""],
-      [353, "لِوِّيذ", "liwwīẕ", "sığınmada aşırı giden", "orta", ""],
-      [354, "لِوِّيذَة", "liwwīẕa", "sığınmada aşırı giden, müennes", "orta", ""],
-      [355, "لِوِّيذَان", "liwwīẕān", "sığınmada aşırı giden, iki", "orta", ""],
-      [356, "لِوِّيذَتَان", "liwwīẕatān", "sığınmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "لِوِّيذُون", "liwwīẕūn", "sığınmada aşırı gidenler", "orta", ""],
-      [358, "لِوِّيذِين", "liwwīẕīn", "sığınmada aşırı gidenler", "orta", ""],
-      [359, "لِوِّيذَات", "liwwīẕāt", "sığınmada aşırı gidenler, müennes", "orta", ""],
-      [360, "لُوَّاذ", "luwwāẕ", "son derece sığınan", "orta", ""],
-      [361, "لُوَّاذَة", "luwwāẕa", "son derece sığınan, müennes", "orta", ""],
-      [362, "لُوَّاذَان", "luwwāẕān", "son derece sığınan, iki", "orta", ""],
-      [363, "لُوَّاذَتَان", "luwwāẕatān", "son derece sığınan, iki, müennes", "orta", ""],
-      [364, "لُوَّاذُون", "luwwāẕūn", "son derece sığınanlar", "orta", ""],
-      [365, "لُوَّاذِين", "luwwāẕīn", "son derece sığınanlar", "orta", ""],
-      [366, "لُوَّاذَات", "luwwāẕāt", "son derece sığınanlar, müennes", "orta", ""],
-      [367, "مِلْوَاذ", "milwāẕ", "sığınmayı âdet edinmiş", "orta", ""],
-      [368, "مِلْوَاذَة", "milwāẕa", "sığınmayı âdet edinmiş, müennes", "orta", ""],
-      [369, "مِلْوَاذَان", "milwāẕān", "sığınmayı âdet edinmiş, iki", "orta", ""],
-      [370, "مِلْوَاذَتَان", "milwāẕatān", "sığınmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِلْوَاذُون", "milwāẕūn", "sığınmayı âdet edinmişler", "orta", ""],
-      [372, "مِلْوَاذِين", "milwāẕīn", "sığınmayı âdet edinmişler", "orta", ""],
-      [373, "مِلْوَاذَات", "milwāẕāt", "sığınmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِلْوِيذ", "milwīẕ", "sığınmaya düşkün", "orta", ""],
-      [375, "مِلْوِيذَة", "milwīẕa", "sığınmaya düşkün, müennes", "orta", ""],
-      [376, "مِلْوِيذَان", "milwīẕān", "sığınmaya düşkün, iki", "orta", ""],
-      [377, "مِلْوِيذَتَان", "milwīẕatān", "sığınmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِلْوِيذُون", "milwīẕūn", "sığınmaya düşkünler", "orta", ""],
-      [379, "مِلْوِيذِين", "milwīẕīn", "sığınmaya düşkünler", "orta", ""],
-      [380, "مِلْوِيذَات", "milwīẕāt", "sığınmaya düşkünler, müennes", "orta", ""],
-      [381, "لَوِيذ", "lawīẕ", "çok sığınan", "orta", ""],
-      [382, "لَوِيذَة", "lawīẕa", "çok sığınan, müennes", "orta", ""],
-      [383, "لَوِيذَان", "lawīẕān", "çok sığınan, iki", "orta", ""],
-      [384, "لَوِيذَتَان", "lawīẕatān", "çok sığınan, iki, müennes", "orta", ""],
-      [385, "لَوِيذُون", "lawīẕūn", "çok sığınanlar", "orta", ""],
-      [386, "لَوِيذِين", "lawīẕīn", "çok sığınanlar", "orta", ""],
-      [387, "لَوِيذَات", "lawīẕāt", "çok sığınanlar, müennes", "orta", ""],
-      [388, "لَوَّذ", "lawwaẕ", "çok sığınan", "orta", ""],
-      [389, "لَوَّذَة", "lawwaẕa", "çok sığınan, müennes", "orta", ""],
-      [390, "لَوَّذَان", "lawwaẕān", "çok sığınan, iki", "orta", ""],
-      [391, "لَوَّذَتَان", "lawwaẕatān", "çok sığınan, iki, müennes", "orta", ""],
-      [392, "لَوَّذُون", "lawwaẕūn", "çok sığınanlar", "orta", ""],
-      [393, "لَوَّذِين", "lawwaẕīn", "çok sığınanlar", "orta", ""],
-      [394, "لَوَّذَات", "lawwaẕāt", "çok sığınanlar, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "لَوْذِيّ", "lawẕiyy", "sığınma ile ilgili", "orta", ""],
-      [886, "لَاذِيّ", "lāẕiyy", "sığınma ile ilgili", "orta", ""],
-      [914, "لِيذِيّ", "līẕiyy", "sığınma ile ilgili", "orta", ""],
-      [916, "لُوذِيّ", "lūẕiyy", "sığınma ile ilgili", "orta", ""],
-      [815, "لِيَاذِيّ", "liyāẕiyy", "sığınma ile ilgili", "orta", ""],
-      [817, "لَائِذِيّ", "lāʾiẕiyy", "sığınma ile ilgili", "orta", ""],
-      [819, "مَلُوذِيّ", "malūẕiyy", "sığınma ile ilgili", "orta", ""],
-      [409, "لَوِيذِيّ", "lawīẕiyy", "sığınma ile ilgili", "orta", ""],
-      [823, "مَلَاذِيّ", "malāẕiyy", "sığınma ile ilgili", "orta", ""],
-      [413, "تَلْوِيذِيّ", "talwīẕiyy", "sığınma ile ilgili", "orta", ""],
-      [415, "تَلَاوُذِيّ", "talāwuẕiyy", "sığınma ile ilgili", "orta", ""],
-      [829, "إِلَاذِيّ", "ʾilāẕiyy", "sığınma ile ilgili", "orta", ""],
-      [831, "اِلْتِيَاذِيّ", "iltiyāẕiyy", "sığınma ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "لَوْذِيَّة", "lawẕiyya", "sığınanlık", "orta", ""],
-      [887, "لَاذِيَّة", "lāẕiyya", "sığınanlık", "orta", ""],
-      [915, "لِيذِيَّة", "līẕiyya", "sığınanlık", "orta", ""],
-      [917, "لُوذِيَّة", "lūẕiyya", "sığınanlık", "orta", ""],
-      [816, "لِيَاذِيَّة", "liyāẕiyya", "sığınanlık", "orta", ""],
-      [818, "لَائِذِيَّة", "lāʾiẕiyya", "sığınanlık", "orta", ""],
-      [820, "مَلُوذِيَّة", "malūẕiyya", "sığınanlık", "orta", ""],
-      [410, "لَوِيذِيَّة", "lawīẕiyya", "sığınanlık", "orta", ""],
-      [824, "مَلَاذِيَّة", "malāẕiyya", "sığınanlık", "orta", ""],
-      [414, "تَلْوِيذِيَّة", "talwīẕiyya", "sığınanlık", "orta", ""],
-      [416, "تَلَاوُذِيَّة", "talāwuẕiyya", "sığınanlık", "orta", ""],
-      [830, "إِلَاذِيَّة", "ʾilāẕiyya", "sığınanlık", "orta", ""],
-      [832, "اِلْتِيَاذِيَّة", "iltiyāẕiyya", "sığınanlık", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "لَوَاذ", "lawāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [422, "لُوُوذ", "luwūẕ", "sığınma", "orta", ""],
-      [835, "لِيَاذ", "liyāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [918, "لُوذ", "lūẕ", "sığınma", "orta", ""],
-      [425, "لَوَاذَة", "lawāẕa", "sığınma", "orta", ""],
-      [837, "لِيَاذَة", "liyāẕa", "sığınma", "orta", ""],
-      [427, "لُوُوذَة", "luwūẕa", "sığınma", "orta", ""],
-      [
-        428,
-        "لَوْذ",
-        "lawẕ",
-        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
-        "lugat",
-        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
-      ],
-      [919, "لِيذ", "līẕ", "sığınma", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "لَاوُوذ", "lāwūẕ", "sığınma türünden şey", "orta", ""],
-      [432, "لَوَذَة", "lawaẕa", "sığınma türünden şey", "orta", ""],
-      [433, "لُوَذَة", "luwaẕa", "sığınma türünden şey", "orta", ""],
-      [434, "أُلْوُوذَة", "ʾulwūẕa", "sığınma türünden şey", "orta", ""],
-      [435, "لَوْوَذ", "lawwaẕ", "sığınma türünden şey", "orta", ""],
-      [437, "لَيْوَذ", "laywaẕ", "sığınma türünden şey", "orta", ""],
-      [
-        439,
-        "لَوْذ",
-        "lawẕ",
-        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
-        "lugat",
-        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
-      ],
-      [840, "لَاذ", "lāẕ", "sığınma türünden şey", "orta", ""],
-      [921, "لِيذ", "līẕ", "sığınma türünden şey", "orta", ""],
-      [923, "لُوذ", "lūẕ", "sığınma türünden şey", "orta", ""],
-      [447, "لَوِيذ", "lawīẕ", "sığınma türünden şey", "orta", ""],
-      [843, "لِيَذ", "liyaẕ", "sığınma türünden şey", "orta", ""],
-      [451, "لُوُذ", "luwuẕ", "sığınma türünden şey", "orta", ""],
-      [453, "لَوَاذ", "lawāẕ", "sığınma türünden şey", "orta", "Vikisözlük: masdar (bâb I): to take refuge"]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "لَاوُوذَة", "lāwūẕa", "sığınma türünden bir tane", "orta", ""],
-      [436, "لَوْوَذَة", "lawwaẕa", "sığınma türünden bir tane", "orta", ""],
-      [438, "لَيْوَذَة", "laywaẕa", "sığınma türünden bir tane", "orta", ""],
-      [440, "لَوْذَة", "lawẕa", "sığınma türünden bir tane", "orta", ""],
-      [920, "لَاذَة", "lāẕa", "sığınma türünden bir tane", "orta", ""],
-      [922, "لِيذَة", "līẕa", "sığınma türünden bir tane", "orta", ""],
-      [924, "لُوذَة", "lūẕa", "sığınma türünden bir tane", "orta", ""],
-      [448, "لَوِيذَة", "lawīẕa", "sığınma türünden bir tane", "orta", ""],
-      [925, "لِيَذَة", "liyaẕa", "sığınma türünden bir tane", "orta", ""],
-      [452, "لُوُذَة", "luwuẕa", "sığınma türünden bir tane", "orta", ""],
-      [454, "لَوَاذَة", "lawāẕa", "sığınma türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَلْوَاذ", "ʾalwāẕ", "sığınmalar", "orta", ""],
-      [456, "أَلْوِذَة", "ʾalwiẕa", "sığınmalar", "orta", ""],
-      [457, "أَلَاوِذ", "ʾalāwiẕ", "sığınmalar", "orta", ""],
-      [458, "أَلَاوِيذ", "ʾalāwīẕ", "sığınmalar", "orta", ""],
-      [459, "لُوُوذ", "luwūẕ", "sığınmalar", "orta", ""],
-      [460, "لُوُذ", "luwuẕ", "sığınmalar", "orta", ""],
-      [854, "لِيَاذ", "liyāẕ", "sığınmalar", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [855, "لِيَذ", "liyaẕ", "sığınmalar", "orta", ""],
-      [463, "لِوَذَة", "liwaẕa", "sığınmalar", "orta", ""],
-      [464, "لُوَذ", "luwaẕ", "sığınmalar", "orta", ""],
-      [465, "لُوَذاء", "luwaẕāʾ", "sığınmalar", "orta", ""],
-      [466, "لَوَذَة", "lawaẕa", "sığınmalar", "orta", ""],
-      [467, "لُوَّاذ", "luwwāẕ", "sığınmalar", "orta", ""],
-      [468, "لَوَاذ", "lawāẕ", "sığınmalar", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
-      [861, "لَاذ", "lāẕ", "sığınmalar", "orta", ""],
-      [470, "مَلَاوِذ", "malāwiẕ", "sığınmalar", "orta", ""],
-      [471, "مَلَاوِيذ", "malāwīẕ", "sığınmalar", "orta", ""],
-      [472, "لَوَاوِذ", "lawāwiẕ", "sığınmalar", "orta", ""],
-      [473, "أَلْوُذ", "ʾalwuẕ", "sığınmalar", "orta", ""],
-      [474, "لُوَّذ", "luwwaẕ", "sığınmalar", "orta", ""],
-      [475, "لَوَائِذ", "lawāʾiẕ", "sığınmalar", "orta", ""],
-      [476, "لُوَيْذ", "luwayẕ", "sığınmalar", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَلْوَاذَات", "ʾalwāẕāt", "sığınmalar topluluğu", "orta", ""],
-      [478, "أَلْوِذَات", "ʾalwiẕāt", "sığınmalar topluluğu", "orta", ""],
-      [479, "أَلَاوِذَات", "ʾalāwiẕāt", "sığınmalar topluluğu", "orta", ""],
-      [480, "أَلَاوِيذَات", "ʾalāwīẕāt", "sığınmalar topluluğu", "orta", ""],
-      [481, "لُوُوذَات", "luwūẕāt", "sığınmalar topluluğu", "orta", ""],
-      [482, "لُوُذَات", "luwuẕāt", "sığınmalar topluluğu", "orta", ""],
-      [872, "لِيَاذَات", "liyāẕāt", "sığınmalar topluluğu", "orta", ""],
-      [873, "لِيَذَات", "liyaẕāt", "sığınmalar topluluğu", "orta", ""],
-      [485, "لِوَذَات", "liwaẕāt", "sığınmalar topluluğu", "orta", ""],
-      [486, "لُوَذَات", "luwaẕāt", "sığınmalar topluluğu", "orta", ""],
-      [487, "لُوَذاآت", "luwaẕāʾāt", "sığınmalar topluluğu", "orta", ""],
-      [488, "لَوَذَات", "lawaẕāt", "sığınmalar topluluğu", "orta", ""],
-      [489, "لُوَّاذَات", "luwwāẕāt", "sığınmalar topluluğu", "orta", ""],
-      [490, "لَوَاذَات", "lawāẕāt", "sığınmalar topluluğu", "orta", ""],
-      [879, "لَاذَات", "lāẕāt", "sığınmalar topluluğu", "orta", ""],
-      [492, "مَلَاوِذَات", "malāwiẕāt", "sığınmalar topluluğu", "orta", ""],
-      [493, "مَلَاوِيذَات", "malāwīẕāt", "sığınmalar topluluğu", "orta", ""],
-      [494, "لَوَاوِذَات", "lawāwiẕāt", "sığınmalar topluluğu", "orta", ""],
-      [495, "أَلْوُذَات", "ʾalwuẕāt", "sığınmalar topluluğu", "orta", ""],
-      [496, "لُوَّذَات", "luwwaẕāt", "sığınmalar topluluğu", "orta", ""],
-      [497, "لَوَائِذَات", "lawāʾiẕāt", "sığınmalar topluluğu", "orta", ""],
-      [498, "لُوَيْذَات", "luwayẕāt", "sığınmalar topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    ["ism-i merre · bâb IV", "if'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    ["ism-i merre · bâb X", "istif'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "لوذ",
-      "turkce": "Lüzûz: sığınmak, bağlanmak"
-    },
-    "osmanlica_lugatler": {
-      "لِواذ": {
-        "sorgular": ["liuaz"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "لَوَذَ",
-        "metin": "(لَوَذَ) اللَّامُ وَالْوَاوُ وَالذَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِطَاقَةِ الْإِنْسَانِ بِالشَّيْءِ مُسْتَعِيذًا بِهِ وَمُتَسَتِّرًا. يُقَالُ: لَاذَ بِهِ يَلُوذُ لَوْذًا وَلَاذَ لِيَاذًا، وَذَلِكَ إِذَا عَاذَ بِهِ مِنْ خَوْفٍ أَوْ طَمَعٍ وَلَاوَذَ لِوَاذًا قَالَ اللَّهُ تَعَالَى: {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63] وَكَانَ الْمُنَافِقُونَ إِذَا أَرَادَ الْوَاحِدُ مِنْهُمْ مُفَارَقَةَ مَجْلِسِ رَسُولِ اللَّهِ،\nصَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، لَاذَ بِغَيْرِهِ مُتَسَتِّرًا ثُمَّ نَهَضَ. وَإِنَّمَا قَالَ لِوَاذًا لِأَنَّهُ مَنْ لَاوَذَ وَجَعَلَ مَصْدَرُهُ صَحِيحًا، وَلَوْ كَانَ مِنْ لَاذَ لَقَالَ لِيَاذًا، وَاللَّوْذُ: مَا يُطِيفُ بِالْجَبَلِ، وَالْجَمْعُ أَلْوَاذٌ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "اللام والذال",
-      "baslik": "لوذ",
-      "mihveri": "فالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).",
-      "sesler": "",
-      "tam_metin": "{قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63]\n\"لَوْذ الوادي -بالفتح: مُنعَطَفه، ولَؤذ الجبل: حِضنه وجانبه وما يُطيف به. والمَلاوِذ: المآزِر. والمَلاذُ والمَلْوَذة: الحِصْن. ولاذ الطريقُ بالدار وألاذ، والطريق يُليذ بها: إذا أحاط بها \".\n(4/1970)\n° المعنى المحوري\nفالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).\n° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "24:63:15:1",
-      "tur": {
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "لِوَاذ": 1
-      },
-      "bicimler": {
-        "لِوَاذًا": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "LWḎ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab LWḎ لوذ BP – • HDAL • © SG | 12May2023 √LWḎ “root” ▪ LWḎ_1 ‘to take refuge, resort to’ ↗ lāḏa (bi ) ▪ LWḎ_2 ‘...’ ↗ ... ▪ LWḎ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to take refuge, resort to, keep close to, fortress; to evade, move furtively; to approximate’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "لاذ",
-        "u": "لاذ",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "لَاذَ • (lāḏa) I (non-past يَلُوذُ (yalūḏu), verbal noun لَوْذ (lawḏ) or لَوَاذ (lawāḏ) or لِوَاذ (liwāḏ) or لِيَاذ (liyāḏ) or لُوَاذ (luwāḏ))",
-        "synonyms": ["اِلْتَزَمَ"],
-        "g": ["to take refuge", "to observe, to adhere, to stick to, to keep to (+ بِ (bi))"],
-        "r": ["lāḏa"],
-        "ipa": ["/laː.ða/"],
-        "k": "لوذ",
-        "yol": "kök"
-      },
-      {
-        "w": "ملاذ",
-        "u": "ملاذ",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "مَلَاذ • (malāḏ) m (plural مَلَاذَات (malāḏāt) or مَلَاوِذ (malāwiḏ))",
-        "t": "Noun of place from the root ل و ذ (l w ḏ).",
-        "s": [
-          ["ar-noun of place", "Noun of place"],
-          ["ar-root", "ل و ذ (l w ḏ)"]
-        ],
-        "synonyms": ["مَلْجَأ", "مَأْوًى", "مَلَاذ", "مُلْتَحَد", "مَفْزَع"],
-        "g": ["refuge, shelter"],
-        "r": ["malāḏ"],
-        "ipa": ["/ma.laːð/"],
-        "el": [
-          ["ل و ذ", "Appendix:Arabic roots/ل و ذ"]
-        ],
-        "k": "لوذ",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "لواذا": "gizlice kaçış"
-    },
-    "arabic_ontology": [
-      {
-        "id": "45936",
-        "arapca": [
-          "اِسْتَجَارَ",
-          "اِسْتَجَارَ ب",
-          "لَجَأَ إلى",
-          "لَاذَ",
-          "لَاذَ إلى",
-          "لَاذَ ب",
-          "تَقَوَّى",
-          "تَقَوَّى ب",
-          "تَحَصَّنَ",
-          "تَحَصَّنَ ب",
-          "اِحْتَمى ب",
-          "اِحْتَمى عن",
-          "اِحْتَمى في",
-          "اِحْتَمى من",
-          "تَمَنَّعَ",
-          "تَمَنَّعَ ب",
-          "تَمَنَّعَ عن",
-          "أَوَى",
-          "أَوَى إلى",
-          "اِعْتَصَمَ ب",
-          "اِعْتَصَمَ في",
-          "عَاذَ بِ",
-          "اِسْتَعَاذَ ب",
-          "اِمْتَنَعَ إلى",
-          "اِمْتَنَعَ ب",
-          "اِمْتَنَعَ عن"
-        ],
-        "ingilizce": [],
-        "tanim": "استمدّ القوة الجسدية والمعنوية من شيء ما عند التعرض لمحنة أو الشعور بالخطر في موقف ليؤمن نفسه",
-        "misal": "_ أبو جمال للشرطة لمنع المخربين من تدمير محصوله. حيث انه تم تدمير قسم من محاصيله الشهر الماضي",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46150",
-        "arapca": [
-          "مُعْتَصِمٌ",
-          "مَهْرَبٌ",
-          "مَخْبَأٌ",
-          "مَلَاذٌ",
-          "كَنْفٌ",
-          "كَهْفٌ",
-          "مُعْتَمَدٌ",
-          "مَجْمَعٌ",
-          "مَلْجَأٌ",
-          "مُلْتَحَدٌ",
-          "مَرْجِعٌ",
-          "مَعْقِلٌ",
-          "مَقْصِدٌ",
-          "مَآلٌ",
-          "حِرْزٌ",
-          "حِصْنٌ",
-          "مَوْئِلٌ",
-          "مَعَاذٌ",
-          "مَعَادٌ2",
-          "مَأْوَىً",
-          "مَنَاصٌ",
-          "مَنْجَىً",
-          "مَفْزَعٌ",
-          "مَثَابَةٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "مكان يلجأ له الناس للاحتماء عند وقوع خطر",
-        "misal": "عند سماع القذائف والصواريخ يذهب السكان الى ال_ للاحتماء",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47472",
-        "arapca": [
-          "اِسْتَظْهَرَ",
-          "اِسْتَظْهَرَ ب",
-          "اِسْتَظْهَرَ على",
-          "اِسْتَجَارَ",
-          "اِسْتَجَارَ ب",
-          "اِسْتَصْرَخَ",
-          "لَجَأَ إلى",
-          "لَاذَ",
-          "لَاذَ إلى",
-          "لَاذَ ب",
-          "اِسْتَغاثَ",
-          "اِسْتَغاثَ ب",
-          "اِسْتَنْجَدَ",
-          "اِسْتَنْجَدَ ب",
-          "اِسْتَنْصَرَ",
-          "اِسْتَنْصَرَ ب",
-          "اِسْتَرْفَدَ",
-          "تَقَوَّى",
-          "تَقَوَّى ب",
-          "تَحَصَّنَ",
-          "تَحَصَّنَ ب",
-          "اِحْتَمى ب",
-          "اِحْتَمى عن",
-          "اِحْتَمى في",
-          "اِحْتَمى من",
-          "اِسْتَمْنَحَ",
-          "تَمَنَّعَ",
-          "تَمَنَّعَ ب",
-          "تَمَنَّعَ عن",
-          "أَوَى",
-          "أَوَى إلى",
-          "اِعْتَصَمَ ب",
-          "اِعْتَصَمَ في",
-          "عَاذَ بِ",
-          "اِسْتَعَاذَ ب",
-          "اِسْتَعَانَ",
-          "اِسْتَعَانَ ب",
-          "اِمْتَنَعَ إلى",
-          "اِمْتَنَعَ ب",
-          "اِمْتَنَعَ عن"
-        ],
-        "ingilizce": [],
-        "tanim": "طَلَبَ الْمُساعَدَةَ وَالْعَونَ المستعجل وقت الحاجة والمصيبة",
-        "misal": "_ الجنود بالقلعة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "48520",
-        "arapca": ["مُعْتَصِمٌ", "لَائِذٌ", "لَاجِئٌ", "عَائِذٌ", "مُعْتَصَمٌ"],
-        "ingilizce": [],
-        "tanim": "م بغير وطنه فِرارًا من اضطهاد أَو حرب أَو مجاعة",
-        "misal": "أصبَح الشعب السوريّ _اً خارج وطنه",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "293218",
-        "arapca": ["مَخْبَأٌ", "مَلَاذٌ", "مَلْجَأٌ", "مَعْقِلٌ"],
-        "ingilizce": ["Refuge", "Asylum", "Sanctuary"],
-        "tanim": "منزل يأْوِي إليه الناس للإختباء أو الحماية من الخطر أو الضرر",
-        "misal": "",
-        "veri_kaynagi": "200",
-        "ust": [
-          ["alt_tur_of", "52661", "housing"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "لَوْذ": [
-        {
-          "eser": "Kamus",
-          "madde": "levz",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "ve اَللَّوَاذُ [el-levâz] (lâmın harekât-ı selâsıyla) ve اَللِّيَاذُ [el-liyâz] (kesre-i lâm mücâveretinden vâvı yâya ibdâlle) Bir nesneye penâh getirip duldalanmak ve ardında saklanmak manâsınadır ki sığınmak olacaktır; yukâlu: لاَذَ بِالشَّيْءِ يَلُوذُ لَوْذًا وَلِوَاذًا مُثَلَّثَةً وَلِيَاذًا إِذَا اسْتَتَرَ بِهِ وَاحْتَصَنَ Ve bir şeyin her tarafını kaplamak, ihâta manâsınadır; yukâlu: لاَذَ الطَّرِيقُ بِالدَّارِ إِذَا أَحَاطَ بِهَا Ve لَوْذٌ [levz] Dağın bir cânibine ıtlâk olunur, tesmiye bil-masdardır; yukâlu: إِعْتَصَمَ بِلَوْذِ الْجَبَلِ أَيْ بِجَانِبِهِ Ve dağın dâiren-mâ-dâr çevresine ıtlâk olunur.",
-              "misaller": [
-                ["لاَذَ بِالشَّيْءِ يَلُوذُ لَوْذًا وَلِوَاذًا مُثَلَّثَةً وَلِيَاذًا إِذَا اسْتَتَرَ بِهِ وَاحْتَصَنَ", ""],
-                ["لاَذَ الطَّرِيقُ بِالدَّارِ إِذَا أَحَاطَ بِهَا", ""],
-                ["إِعْتَصَمَ بِلَوْذِ الْجَبَلِ أَيْ بِجَانِبِهِ", ""]
-              ]
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "derenin burgaç yerine denir; tekûlu: نَزَلْنَا فِي لَوْذِ الْوَادِي أَيْ مُنْعَطَفِهِ Cemi أَلْوَاذٌ [elvâz] gelir.",
-              "misaller": []
-            },
-            {
-              "no": 3,
-              "etiket": "",
-              "tanim": "لَوْذٌ [Levz] Yemende bir dağın adıdır.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّوْذُ",
-          "okunus": "el-levz",
-          "koken": "lâmın fethi ve vâvın sükûnuyla"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "levz",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "ve اَللِّيَاذُ [el-liyâz] (lâmın kesriyle) Sığınmak; yukâlu: لَاذَ بِهِ لَوْذًا وَلِيَاذًا مِنَ الْبَابِ الْأَوَّلِ إِذَا لَجَأَ إِلَيْهِ وَعَاذَ بِهِ Ve لَوْذٌ [levz] Dağın bir cânibine derler, cânib-i cebel manâsına.",
-              "misaller": [
-                ["لَاذَ بِهِ لَوْذًا وَلِيَاذًا مِنَ الْبَابِ الْأَوَّلِ إِذَا لَجَأَ إِلَيْهِ وَعَاذَ بِهِ", ""]
-              ]
-            },
-            {
-              "no": 2,
-              "etiket": "",
-              "tanim": "dağın etrâfına da derler.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّوْذُ",
-          "okunus": "el-levz",
-          "koken": "lâmın fethi ve vâvın sükûnuyla"
-        },
-        {
-          "eser": "Kamus",
-          "madde": "Levzul-Hasâ",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "لَوْذُ الْحَصَى [Levzul-Hasâ] (lâmın fethiyle) Bir mevzi adıdır.",
-              "misaller": []
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "مَلَاذ": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "MELÂZ",
-          "yazilis": "ﻣﻼﺫ",
-          "tur": "i.",
-          "koken": "Ar. levẕ – livāẕ “sığınmak”tan melāẕ",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Sığınacak yer, sığınak, melce, penah",
-              "misaller": [
-                ["Derd senin derman senindir şübhe yok / Derdli kullara yine sensin melâz", "Niyâzî-i Mısrî"],
-                ["Kûy-i yâr ü gonce-femdir âşıka zîbâ melâz / Gülsitânı eyler elbet âşık-ı şeydâ melâz", "Bayburtlu Zihni"],
-                ["Vâlidenin âgūşu evlât için her felâkete karşı bir siper, bir melce, bir melâzdır", "Ahmed Midhat Efendi"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "melaz",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "ve اَلْمِلْوَذَةُ [el-milvezet] Mîmin kesriyle ki âlet menziline tenzîl olunmuştur, حِصْنٌ [hisn] ve مَعْقِلٌ [makil]e ıtlâk olunur ki ilticâ olunacak mahall-i metînden ibârettir, kala ve hisâr ve sarp cibâl gibi.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْمَلاَذُ",
-          "okunus": "el-melâz",
-          "koken": "مَكَانٌ [mekân] vezninde"
-        }
-      ],
-      "مَلَاوِذ": [
-        {
-          "eser": "Kamus",
-          "madde": "melaviz",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "مَآزِرُ [meâzir] manâsına müstameldir ki مِئْزَرٌ [mizer]in cemidir; fûtaya ve peştemâla denir. Pes مَلاَوِذُ [melâviz] مِلْوَذٌ [milvez]in cemidir, مِشْوَذٌ [mişvez] ve مَشَاوِذُ [meşâviz] gibi.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْمَلاَوِذُ",
-          "okunus": "el-melâviz",
-          "koken": "mîmin fethiyle"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Levaze (لَوَذَ)",
-          "metin": "(لَوَذَ) Lâm, vâv ve zâl sahîh bir asıldır; insanın bir şeye, ona sığınarak ve onunla örtünerek yönelmesine delâlet eder. «Lâze bihî yelûzü levzen ve lâze liyâzen» denir; korkudan yahut tamahtan ona sığındığında. «Lâvaze livâzen»: Allah Teâlâ buyurdu: {Allah, sizden gizlice sıvışanları bilir} [Nûr: 63]. Münâfıklardan biri Resûlullah'ın —salla'llâhu aleyhi ve âlihî ve sellem— meclisinden ayrılmak istediği zaman, başkasına sığınarak örtünür, sonra kalkardı. «Livâzen» demesi, «lâvaze»den olduğu ve masdarını sahîh kıldığı içindir; «lâze»den olsaydı «liyâzen» derdi. «El-Levz»: dağı çevreleyen şeydir; cem'i «elvâz»dır."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Asıl, bir şeyin kucağındakine eğilip onu tutması, yânî korumasıdır ve tahkîm etmesidir: vâdinin ve dağın lûzu gibi, hisar gibi ve izârlar gibi. Bundandır «lâze bihî (kâle) levzen ve levâzen» (seher ve kitâb vezninde): ona sığındı ve ona yöneldi … ve ona katıldı (sanki onun dönemecine girmiş gibi); «lâvaze»: gizlendi {Allah, sizden gizlice sıvışanları bilir} (yolların dönemeçlerine ve insanların toplanma yerlerine sığınırlar)."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Vatanından başka bir yerde, zulümden yahut harpten yahut kıtlıktan kaçarak bulunma hâli",
-          "misal": "Suriye halkı vatanı dışında _ oldu."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab LWḎ لوذ | BP – • HDAL • © SG | 12 Mayıs 2023 | √LWḎ «kök» ▪ LWḎ_1 «sığınmak, başvurmak» ↗ lāḏa (bi ) ▪ LWḎ_2 «…» ↗ … ▪ LWḎ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «sığınmak, başvurmak, yakın durmak, kale; kaçınmak, gizlice hareket etmek; yaklaşmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["sığınmak", "riâyet etmek, bağlı kalmak, yapışmak, uymak (+ بِ (bi))"]
-        },
-        {
-          "g": ["sığınak, barınak"]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لذ",
+  "ses": {
     "harf": "ل",
+    "fasil": "لذ",
     "mahrec": "zelakiyye",
     "bolge": "dil"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Lüzûz: sığınmak, bağlanmak",
+  "esas_manalar": "bir şeye sığınıp örtünmek{gizlice sıvışmak}",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "levz",
+        "koken": "lâmın fethi ve vâvın sükûnuyla",
+        "yazilis": "اَللَّوْذُ",
+        "okunus": "el-levz",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve اَللَّوَاذُ [el-levâz] (lâmın harekât-ı selâsıyla) ve اَللِّيَاذُ [el-liyâz] (kesre-i lâm mücâveretinden vâvı yâya ibdâlle) Bir nesneye penâh getirip duldalanmak ve ardında saklanmak manâsınadır ki sığınmak olacaktır; yukâlu: لاَذَ بِالشَّيْءِ يَلُوذُ لَوْذًا وَلِوَاذًا مُثَلَّثَةً وَلِيَاذًا إِذَا اسْتَتَرَ بِهِ وَاحْتَصَنَ Ve bir şeyin her tarafını kaplamak, ihâta manâsınadır; yukâlu: لاَذَ الطَّرِيقُ بِالدَّارِ إِذَا أَحَاطَ بِهَا Ve لَوْذٌ [levz] Dağın bir cânibine ıtlâk olunur, tesmiye bil-masdardır; yukâlu: إِعْتَصَمَ بِلَوْذِ الْجَبَلِ أَيْ بِجَانِبِهِ Ve dağın dâiren-mâ-dâr çevresine ıtlâk olunur.",
+            "misaller": [
+              ["لاَذَ بِالشَّيْءِ يَلُوذُ لَوْذًا وَلِوَاذًا مُثَلَّثَةً وَلِيَاذًا إِذَا اسْتَتَرَ بِهِ وَاحْتَصَنَ", ""],
+              ["لاَذَ الطَّرِيقُ بِالدَّارِ إِذَا أَحَاطَ بِهَا", ""],
+              ["إِعْتَصَمَ بِلَوْذِ الْجَبَلِ أَيْ بِجَانِبِهِ", ""]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "derenin burgaç yerine denir; tekûlu: نَزَلْنَا فِي لَوْذِ الْوَادِي أَيْ مُنْعَطَفِهِ Cemi أَلْوَاذٌ [elvâz] gelir."
+          },
+          {
+            "no": 3,
+            "tanim": "لَوْذٌ [Levz] Yemende bir dağın adıdır."
+          }
+        ],
+        "kelime": ["لَوْذ"]
+      },
+      {
+        "madde": "Levzul-Hasâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "لَوْذُ الْحَصَى [Levzul-Hasâ] (lâmın fethiyle) Bir mevzi adıdır."
+          }
+        ],
+        "kelime": ["لَوْذ"]
+      },
+      {
+        "madde": "melaz",
+        "koken": "مَكَانٌ [mekân] vezninde",
+        "yazilis": "اَلْمَلاَذُ",
+        "okunus": "el-melâz",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve اَلْمِلْوَذَةُ [el-milvezet] Mîmin kesriyle ki âlet menziline tenzîl olunmuştur, حِصْنٌ [hisn] ve مَعْقِلٌ [makil]e ıtlâk olunur ki ilticâ olunacak mahall-i metînden ibârettir, kala ve hisâr ve sarp cibâl gibi."
+          }
+        ],
+        "kelime": ["مَلَاذ"]
+      },
+      {
+        "madde": "melaviz",
+        "koken": "mîmin fethiyle",
+        "yazilis": "اَلْمَلاَوِذُ",
+        "okunus": "el-melâviz",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "مَآزِرُ [meâzir] manâsına müstameldir ki مِئْزَرٌ [mizer]in cemidir; fûtaya ve peştemâla denir. Pes مَلاَوِذُ [melâviz] مِلْوَذٌ [milvez]in cemidir, مِشْوَذٌ [mişvez] ve مَشَاوِذُ [meşâviz] gibi."
+          }
+        ],
+        "kelime": ["مَلَاوِذ"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "levz",
+        "koken": "lâmın fethi ve vâvın sükûnuyla",
+        "yazilis": "اَللَّوْذُ",
+        "okunus": "el-levz",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve اَللِّيَاذُ [el-liyâz] (lâmın kesriyle) Sığınmak; yukâlu: لَاذَ بِهِ لَوْذًا وَلِيَاذًا مِنَ الْبَابِ الْأَوَّلِ إِذَا لَجَأَ إِلَيْهِ وَعَاذَ بِهِ Ve لَوْذٌ [levz] Dağın bir cânibine derler, cânib-i cebel manâsına.",
+            "misaller": [
+              ["لَاذَ بِهِ لَوْذًا وَلِيَاذًا مِنَ الْبَابِ الْأَوَّلِ إِذَا لَجَأَ إِلَيْهِ وَعَاذَ بِهِ", ""]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "dağın etrâfına da derler."
+          }
+        ],
+        "kelime": ["لَوْذ"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "MELÂZ",
+        "tur": "i.",
+        "koken": "Ar. levẕ – livāẕ “sığınmak”tan melāẕ",
+        "yazilis": "ﻣﻼﺫ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Sığınacak yer, sığınak, melce, penah",
+            "misaller": [
+              ["Derd senin derman senindir şübhe yok / Derdli kullara yine sensin melâz", "Niyâzî-i Mısrî"],
+              ["Kûy-i yâr ü gonce-femdir âşıka zîbâ melâz / Gülsitânı eyler elbet âşık-ı şeydâ melâz", "Bayburtlu Zihni"],
+              ["Vâlidenin âgūşu evlât için her felâkete karşı bir siper, bir melce, bir melâzdır", "Ahmed Midhat Efendi"]
+            ]
+          }
+        ],
+        "kelime": ["مَلَاذ"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "لَوَذَ",
+      "metin": "(لَوَذَ) اللَّامُ وَالْوَاوُ وَالذَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِطَاقَةِ الْإِنْسَانِ بِالشَّيْءِ مُسْتَعِيذًا بِهِ وَمُتَسَتِّرًا. يُقَالُ: لَاذَ بِهِ يَلُوذُ لَوْذًا وَلَاذَ لِيَاذًا، وَذَلِكَ إِذَا عَاذَ بِهِ مِنْ خَوْفٍ أَوْ طَمَعٍ وَلَاوَذَ لِوَاذًا قَالَ اللَّهُ تَعَالَى: {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63] وَكَانَ الْمُنَافِقُونَ إِذَا أَرَادَ الْوَاحِدُ مِنْهُمْ مُفَارَقَةَ مَجْلِسِ رَسُولِ اللَّهِ،\nصَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، لَاذَ بِغَيْرِهِ مُتَسَتِّرًا ثُمَّ نَهَضَ. وَإِنَّمَا قَالَ لِوَاذًا لِأَنَّهُ مَنْ لَاوَذَ وَجَعَلَ مَصْدَرُهُ صَحِيحًا، وَلَوْ كَانَ مِنْ لَاذَ لَقَالَ لِيَاذًا، وَاللَّوْذُ: مَا يُطِيفُ بِالْجَبَلِ، وَالْجَمْعُ أَلْوَاذٌ.",
+      "baslik_tr": "Levaze (لَوَذَ)",
+      "metin_tr": "(لَوَذَ) Lâm, vâv ve zâl sahîh bir asıldır; insanın bir şeye, ona sığınarak ve onunla örtünerek yönelmesine delâlet eder. «Lâze bihî yelûzü levzen ve lâze liyâzen» denir; korkudan yahut tamahtan ona sığındığında. «Lâvaze livâzen»: Allah Teâlâ buyurdu: {Allah, sizden gizlice sıvışanları bilir} [Nûr: 63]. Münâfıklardan biri Resûlullah'ın —salla'llâhu aleyhi ve âlihî ve sellem— meclisinden ayrılmak istediği zaman, başkasına sığınarak örtünür, sonra kalkardı. «Livâzen» demesi, «lâvaze»den olduğu ve masdarını sahîh kıldığı içindir; «lâze»den olsaydı «liyâzen» derdi. «El-Levz»: dağı çevreleyen şeydir; cem'i «elvâz»dır."
+    }
+  ],
+  "cebel": {
+    "fasil": "اللام والذال",
+    "baslik": "لوذ",
+    "mihveri": "فالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).",
+    "tam_metin": "{قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63]\n\"لَوْذ الوادي -بالفتح: مُنعَطَفه، ولَؤذ الجبل: حِضنه وجانبه وما يُطيف به. والمَلاوِذ: المآزِر. والمَلاذُ والمَلْوَذة: الحِصْن. ولاذ الطريقُ بالدار وألاذ، والطريق يُليذ بها: إذا أحاط بها \".\n(4/1970)\n° المعنى المحوري\nفالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).\n° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ).",
+    "mihveri_tr": "Asıl, bir şeyin kucağındakine eğilip onu tutması, yânî korumasıdır ve tahkîm etmesidir: vâdinin ve dağın lûzu gibi, hisar gibi ve izârlar gibi. Bundandır «lâze bihî (kâle) levzen ve levâzen» (seher ve kitâb vezninde): ona sığındı ve ona yöneldi … ve ona katıldı (sanki onun dönemecine girmiş gibi); «lâvaze»: gizlendi {Allah, sizden gizlice sıvışanları bilir} (yolların dönemeçlerine ve insanların toplanma yerlerine sığınırlar)."
+  },
+  "zemahseri": {
+    "hakikat": "لاذ به لياذاً، ولاوذ به لواذاً. قال الطرّماح:\nيلاوذن من حرّ يكاد أواراه ... يذيب دماغ الضب وهو خدوع\nوألاذ به غيره. واعتصم بلوذ الجبل: بجانبه وبألواذه. وهو يطوف في ألواذ البلاد: في نواحيها. ونزلوا بلوذ الوادي وبألواذه. قال الهذلي:\nوقطّع ألواذ داويّة ... صحارى غلان طلح وضال\nوقال ابن القمقام:\nتسري الصّبا فتبيت في ألواذه ... ويظلّ فيه من الجنوب نسيم",
+    "mecaz": "خير فلان ملاوذ: مراوغ لا يأتي إلا بعد كدّ. قال القطاميّ:\nوما ضرّها إن لم تكن رعت الحمى ... ولم تطلب الخير الملاوذ من بشر\nوألاذت الناقة الظلّ بخفّها إذا قامت الظهيرة.",
+    "mecaz_var": true
+  },
+  "ontoloji": [
+    {
+      "id": "45936",
+      "arapca": [
+        "اِسْتَجَارَ",
+        "اِسْتَجَارَ ب",
+        "لَجَأَ إلى",
+        "لَاذَ",
+        "لَاذَ إلى",
+        "لَاذَ ب",
+        "تَقَوَّى",
+        "تَقَوَّى ب",
+        "تَحَصَّنَ",
+        "تَحَصَّنَ ب",
+        "اِحْتَمى ب",
+        "اِحْتَمى عن",
+        "اِحْتَمى في",
+        "اِحْتَمى من",
+        "تَمَنَّعَ",
+        "تَمَنَّعَ ب",
+        "تَمَنَّعَ عن",
+        "أَوَى",
+        "أَوَى إلى",
+        "اِعْتَصَمَ ب",
+        "اِعْتَصَمَ في",
+        "عَاذَ بِ",
+        "اِسْتَعَاذَ ب",
+        "اِمْتَنَعَ إلى",
+        "اِمْتَنَعَ ب",
+        "اِمْتَنَعَ عن"
+      ],
+      "ingilizce": [],
+      "tanim": "استمدّ القوة الجسدية والمعنوية من شيء ما عند التعرض لمحنة أو الشعور بالخطر في موقف ليؤمن نفسه",
+      "misal": "_ أبو جمال للشرطة لمنع المخربين من تدمير محصوله. حيث انه تم تدمير قسم من محاصيله الشهر الماضي",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46150",
+      "arapca": [
+        "مُعْتَصِمٌ",
+        "مَهْرَبٌ",
+        "مَخْبَأٌ",
+        "مَلَاذٌ",
+        "كَنْفٌ",
+        "كَهْفٌ",
+        "مُعْتَمَدٌ",
+        "مَجْمَعٌ",
+        "مَلْجَأٌ",
+        "مُلْتَحَدٌ",
+        "مَرْجِعٌ",
+        "مَعْقِلٌ",
+        "مَقْصِدٌ",
+        "مَآلٌ",
+        "حِرْزٌ",
+        "حِصْنٌ",
+        "مَوْئِلٌ",
+        "مَعَاذٌ",
+        "مَعَادٌ2",
+        "مَأْوَىً",
+        "مَنَاصٌ",
+        "مَنْجَىً",
+        "مَفْزَعٌ",
+        "مَثَابَةٌ"
+      ],
+      "ingilizce": [],
+      "tanim": "مكان يلجأ له الناس للاحتماء عند وقوع خطر",
+      "misal": "عند سماع القذائف والصواريخ يذهب السكان الى ال_ للاحتماء",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "47472",
+      "arapca": [
+        "اِسْتَظْهَرَ",
+        "اِسْتَظْهَرَ ب",
+        "اِسْتَظْهَرَ على",
+        "اِسْتَجَارَ",
+        "اِسْتَجَارَ ب",
+        "اِسْتَصْرَخَ",
+        "لَجَأَ إلى",
+        "لَاذَ",
+        "لَاذَ إلى",
+        "لَاذَ ب",
+        "اِسْتَغاثَ",
+        "اِسْتَغاثَ ب",
+        "اِسْتَنْجَدَ",
+        "اِسْتَنْجَدَ ب",
+        "اِسْتَنْصَرَ",
+        "اِسْتَنْصَرَ ب",
+        "اِسْتَرْفَدَ",
+        "تَقَوَّى",
+        "تَقَوَّى ب",
+        "تَحَصَّنَ",
+        "تَحَصَّنَ ب",
+        "اِحْتَمى ب",
+        "اِحْتَمى عن",
+        "اِحْتَمى في",
+        "اِحْتَمى من",
+        "اِسْتَمْنَحَ",
+        "تَمَنَّعَ",
+        "تَمَنَّعَ ب",
+        "تَمَنَّعَ عن",
+        "أَوَى",
+        "أَوَى إلى",
+        "اِعْتَصَمَ ب",
+        "اِعْتَصَمَ في",
+        "عَاذَ بِ",
+        "اِسْتَعَاذَ ب",
+        "اِسْتَعَانَ",
+        "اِسْتَعَانَ ب",
+        "اِمْتَنَعَ إلى",
+        "اِمْتَنَعَ ب",
+        "اِمْتَنَعَ عن"
+      ],
+      "ingilizce": [],
+      "tanim": "طَلَبَ الْمُساعَدَةَ وَالْعَونَ المستعجل وقت الحاجة والمصيبة",
+      "misal": "_ الجنود بالقلعة",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "48520",
+      "arapca": ["مُعْتَصِمٌ", "لَائِذٌ", "لَاجِئٌ", "عَائِذٌ", "مُعْتَصَمٌ"],
+      "ingilizce": [],
+      "tanim": "م بغير وطنه فِرارًا من اضطهاد أَو حرب أَو مجاعة",
+      "misal": "أصبَح الشعب السوريّ _اً خارج وطنه",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "293218",
+      "arapca": ["مَخْبَأٌ", "مَلَاذٌ", "مَلْجَأٌ", "مَعْقِلٌ"],
+      "ingilizce": ["Refuge", "Asylum", "Sanctuary"],
+      "tanim": "منزل يأْوِي إليه الناس للإختباء أو الحماية من الخطر أو الضرر",
+      "misal": "",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "52661", "housing"]
+      ]
+    }
+  ],
+  "ontoloji_tr": [
+    {
+      "tanim": "Vatanından başka bir yerde, zulümden yahut harpten yahut kıtlıktan kaçarak bulunma hâli",
+      "misal": "Suriye halkı vatanı dışında _ oldu."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "لاذ",
+      "tur": "verb",
+      "baslik": "لَاذَ • (lāḏa) I (non-past يَلُوذُ (yalūḏu), verbal noun لَوْذ (lawḏ) or لَوَاذ (lawāḏ) or لِوَاذ (liwāḏ) or لِيَاذ (liyāḏ) or لُوَاذ (luwāḏ))",
+      "esanlamli": ["اِلْتَزَمَ"],
+      "anlam": ["to take refuge", "to observe, to adhere, to stick to, to keep to (+ بِ (bi))"],
+      "okunus": ["lāḏa"],
+      "ipa": ["/laː.ða/"],
+      "anlam_tr": ["sığınmak", "riâyet etmek, bağlı kalmak, yapışmak, uymak (+ بِ (bi))"]
+    },
+    {
+      "madde": "ملاذ",
+      "tur": "noun",
+      "baslik": "مَلَاذ • (malāḏ) m (plural مَلَاذَات (malāḏāt) or مَلَاوِذ (malāwiḏ))",
+      "etim_sablon": [
+        ["ar-noun of place", "Noun of place"],
+        ["ar-root", "ل و ذ (l w ḏ)"]
+      ],
+      "esanlamli": ["مَلْجَأ", "مَأْوًى", "مَلَاذ", "مُلْتَحَد", "مَفْزَع"],
+      "anlam": ["refuge, shelter"],
+      "okunus": ["malāḏ"],
+      "ipa": ["/ma.laːð/"],
+      "etimoloji": 1,
+      "anlam_tr": ["sığınak, barınak"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Noun of place from the root ل و ذ (l w ḏ).",
+      "kognatlar": [
+        ["ل و ذ", "Appendix:Arabic roots/ل و ذ"]
+      ]
+    }
+  ],
+  "etymarab": {
+    "latin": "LWḎ",
+    "kok_maddesi": "Back to library EtymArab LWḎ لوذ BP – • HDAL • © SG | 12May2023 √LWḎ “root” ▪ LWḎ_1 ‘to take refuge, resort to’ ↗ lāḏa (bi ) ▪ LWḎ_2 ‘...’ ↗ ... ▪ LWḎ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to take refuge, resort to, keep close to, fortress; to evade, move furtively; to approximate’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab LWḎ لوذ | BP – • HDAL • © SG | 12 Mayıs 2023 | √LWḎ «kök» ▪ LWḎ_1 «sığınmak, başvurmak» ↗ lāḏa (bi ) ▪ LWḎ_2 «…» ↗ … ▪ LWḎ_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «sığınmak, başvurmak, yakın durmak, kale; kaçınmak, gizlice hareket etmek; yaklaşmak» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "24:63:15:1",
+    "tur": {
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "لِوَاذ": 1
+    },
+    "bicimler": {
+      "لِوَاذًا": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "لِواذ",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "لِوَاذًا",
+          "ilk": "24:63",
+          "adet": 1,
+          "tr": "gizlice kaçış"
+        }
+      ],
+      "tr": "gizlice kaçış",
+      "nasil": "masdar · bâb II · fi''āl",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      [
+        "fa'l",
+        "semâî aday",
+        "لَوْذ",
+        "lawẕ",
+        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
+      ],
+      ["fi'l", "semâî aday · ilal", "لِيذ", "līẕ", "sığınma", "orta", ""],
+      ["fu'l", "semâî aday · ilal", "لُوذ", "lūẕ", "sığınma", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "لَاذ", "lāẕ", "sığınma", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "لِيَذ", "liyaẕ", "sığınma", "orta", ""],
+      ["fu'ul", "semâî aday", "لُوُذ", "luwuẕ", "sığınma", "orta", ""],
+      ["fu'ūl", "semâî aday", "لُوُوذ", "luwūẕ", "sığınma", "orta", ""],
+      [
+        "fi'āl",
+        "semâî aday · ilal",
+        "لِيَاذ",
+        "liyāẕ",
+        "sığınma",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fu'āl", "semâî aday", "لُوَاذ", "luwāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
+      ["fa'āl", "semâî aday", "لَوَاذ", "lawāẕ", "sığınma", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
+      ["fa'āle", "semâî aday", "لَوَاذَة", "lawāẕa", "sığınma", "orta", ""],
+      ["fu'ūle", "semâî aday", "لُوُوذَة", "luwūẕa", "sığınma", "orta", ""],
+      ["fi'āle", "semâî aday · ilal", "لِيَاذَة", "liyāẕa", "sığınma", "orta", ""],
+      ["fa'īl", "semâî aday", "لَوِيذ", "lawīẕ", "sığınma", "orta", ""],
+      ["fa'ūl", "semâî aday", "لَوُوذ", "lawūẕ", "sığınma", "orta", ""],
+      ["fa'alān", "semâî aday", "لَوَذَان", "lawaẕān", "sığınma", "orta", ""],
+      ["fu'lān", "semâî aday", "لُوْذَان", "luwẕān", "sığınma", "orta", ""],
+      ["fi'lān", "semâî aday", "لِوْذَان", "liwẕān", "sığınma", "orta", ""],
+      ["fa'lā", "semâî aday", "لَوْذَى", "lawẕā", "sığınma", "orta", ""],
+      ["fu'lā", "semâî aday", "لُوْذَى", "luwẕā", "sığınma", "orta", ""],
+      ["fi'lā", "semâî aday", "لِوْذَى", "liwẕā", "sığınma", "orta", ""],
+      ["fa'ale", "semâî aday", "لَوَذَة", "lawaẕa", "sığınma", "orta", ""],
+      ["fi'ale", "semâî aday", "لِوَذَة", "liwaẕa", "sığınma", "orta", ""],
+      ["fa'lūla", "semâî aday", "لَوْذُوذَة", "lawẕūẕa", "sığınma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُلْوُوذ", "tulwūẕ", "sığınma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَلْوِذَة", "talwiẕa", "sığınma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَلْوَذَة", "talwaẕa", "sığınma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَلْوُذَة", "malwuẕa", "sığınma", "orta", ""],
+      ["maf'ila", "semâî aday · ilal", "مَلِيذَة", "malīẕa", "sığınma", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَلْوِيذ", "talwīẕ", "çokça sığınma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَلْوِذَة", "talwiẕa", "çokça sığınma", "orta", ""],
+      ["fi''āl", "kıyâsî", "لِوِّاذ", "liwwāẕ", "çokça sığınma", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَلْوِيذَة", "talwīẕa", "bir kere çokça sığınma", "orta", ""],
+      ["fi''āl + tâ", "aday", "لِوِّاذَة", "liwwāẕa", "bir kere çokça sığınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُلَوِّذ", "mulawwiẕ", "çokça sığınan", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُلَوِّذَة", "mulawwiẕa", "çokça sığınan, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُلَوِّذَان", "mulawwiẕān", "çokça sığınan, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُلَوِّذَتَان",
+        "mulawwiẕatān",
+        "çokça sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَوِّذُون",
+        "mulawwiẕūn",
+        "çokça sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَوِّذِين",
+        "mulawwiẕīn",
+        "çokça sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَوِّذَات",
+        "mulawwiẕāt",
+        "çokça sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُلَوَّذ", "mulawwaẕ", "çokça sığınılan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُلَوَّذَة", "mulawwaẕa", "çokça sığınılan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُلَوَّذَان", "mulawwaẕān", "çokça sığınılan, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُلَوَّذَتَان",
+        "mulawwaẕatān",
+        "çokça sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَوَّذُون",
+        "mulawwaẕūn",
+        "çokça sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَوَّذِين",
+        "mulawwaẕīn",
+        "çokça sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَوَّذَات",
+        "mulawwaẕāt",
+        "çokça sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُلَوَّذ", "mulawwaẕ", "çokça sığınma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُلَاوَذَة", "mulāwaẕa", "biriyle karşılıklı sığınma", "orta", ""],
+      [
+        "fi'āl",
+        "kıyâsî · ilal",
+        "لِيَاذ",
+        "liyāẕ",
+        "biriyle karşılıklı sığınma",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday · ilal", "لِيَاذَة", "liyāẕa", "bir kere biriyle karşılıklı sığınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُلَاوِذ", "mulāwiẕ", "biriyle karşılıklı sığınan", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُلَاوِذَة", "mulāwiẕa", "biriyle karşılıklı sığınan, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُلَاوِذَان", "mulāwiẕān", "biriyle karşılıklı sığınan, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُلَاوِذَتَان",
+        "mulāwiẕatān",
+        "biriyle karşılıklı sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَاوِذُون",
+        "mulāwiẕūn",
+        "biriyle karşılıklı sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَاوِذِين",
+        "mulāwiẕīn",
+        "biriyle karşılıklı sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَاوِذَات",
+        "mulāwiẕāt",
+        "biriyle karşılıklı sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُلَاوَذ", "mulāwaẕ", "biriyle karşılıklı sığınılan", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُلَاوَذَة", "mulāwaẕa", "biriyle karşılıklı sığınılan, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُلَاوَذَان", "mulāwaẕān", "biriyle karşılıklı sığınılan, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُلَاوَذَتَان",
+        "mulāwaẕatān",
+        "biriyle karşılıklı sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَاوَذُون",
+        "mulāwaẕūn",
+        "biriyle karşılıklı sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَاوَذِين",
+        "mulāwaẕīn",
+        "biriyle karşılıklı sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَاوَذَات",
+        "mulāwaẕāt",
+        "biriyle karşılıklı sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُلَاوَذ", "mulāwaẕ", "biriyle karşılıklı sığınma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî · ilal", "إِلَاذَة", "ʾilāẕa", "sığındırma", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî · ilal", "مُلِيذ", "mulīẕ", "sığındıran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُلِيذَة", "mulīẕa", "sığındıran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُلِيذَان", "mulīẕān", "sığındıran, iki", "orta", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلِيذَتَان",
+        "mulīẕatān",
+        "sığındıran, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مُلِيذُون", "mulīẕūn", "sığındıranlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مُلِيذِين", "mulīẕīn", "sığındıranlar", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلِيذَات",
+        "mulīẕāt",
+        "sığındıranlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُلَاذ", "mulāẕ", "sığındırılan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî · ilal", "مُلَاذَة", "mulāẕa", "sığındırılan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُلَاذَان", "mulāẕān", "sığındırılan, iki", "orta", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلَاذَتَان",
+        "mulāẕatān",
+        "sığındırılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلَاذُون",
+        "mulāẕūn",
+        "sığındırılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلَاذِين",
+        "mulāẕīn",
+        "sığındırılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلَاذَات",
+        "mulāẕāt",
+        "sığındırılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُلَاذ", "mulāẕ", "sığındırma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَلَوُّذ", "talawwuẕ", "kendini zorlayarak sığınma", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَلَوُّذَة", "talawwuẕa", "bir kere kendini zorlayarak sığınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَلَوِّذ", "mutalawwiẕ", "kendini zorlayarak sığınan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَلَوِّذَة",
+        "mutalawwiẕa",
+        "kendini zorlayarak sığınan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَلَوِّذَان",
+        "mutalawwiẕān",
+        "kendini zorlayarak sığınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَوِّذَتَان",
+        "mutalawwiẕatān",
+        "kendini zorlayarak sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَوِّذُون",
+        "mutalawwiẕūn",
+        "kendini zorlayarak sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَوِّذِين",
+        "mutalawwiẕīn",
+        "kendini zorlayarak sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَوِّذَات",
+        "mutalawwiẕāt",
+        "kendini zorlayarak sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَلَوَّذ", "mutalawwaẕ", "kendini zorlayarak sığınılan", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَلَوَّذَة",
+        "mutalawwaẕa",
+        "kendini zorlayarak sığınılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَلَوَّذَان",
+        "mutalawwaẕān",
+        "kendini zorlayarak sığınılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَوَّذَتَان",
+        "mutalawwaẕatān",
+        "kendini zorlayarak sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَوَّذُون",
+        "mutalawwaẕūn",
+        "kendini zorlayarak sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَوَّذِين",
+        "mutalawwaẕīn",
+        "kendini zorlayarak sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَوَّذَات",
+        "mutalawwaẕāt",
+        "kendini zorlayarak sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَلَوَّذ", "mutalawwaẕ", "kendini zorlayarak sığınma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَلَاوُذ", "talāwuẕ", "birbirine sığınma", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَلَاوُذَة", "talāwuẕa", "bir kere birbirine sığınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَلَاوِذ", "mutalāwiẕ", "birbirine sığınan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَلَاوِذَة", "mutalāwiẕa", "birbirine sığınan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَلَاوِذَان", "mutalāwiẕān", "birbirine sığınan, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَاوِذَتَان",
+        "mutalāwiẕatān",
+        "birbirine sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَاوِذُون",
+        "mutalāwiẕūn",
+        "birbirine sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَاوِذِين",
+        "mutalāwiẕīn",
+        "birbirine sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَاوِذَات",
+        "mutalāwiẕāt",
+        "birbirine sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَلَاوَذ", "mutalāwaẕ", "birbirine sığınılan", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَلَاوَذَة", "mutalāwaẕa", "birbirine sığınılan, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَلَاوَذَان", "mutalāwaẕān", "birbirine sığınılan, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَاوَذَتَان",
+        "mutalāwaẕatān",
+        "birbirine sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَاوَذُون",
+        "mutalāwaẕūn",
+        "birbirine sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَاوَذِين",
+        "mutalāwaẕīn",
+        "birbirine sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَاوَذَات",
+        "mutalāwaẕāt",
+        "birbirine sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَلَاوَذ", "mutalāwaẕ", "birbirine sığınma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî · ilal", "اِنْلِيَاذ", "inliyāẕ", "sığınılma", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday · ilal", "اِنْلِيَاذَة", "inliyāẕa", "bir kere sığınılma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî · ilal", "مُنْلَاذ", "munlāẕ", "sığınılan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْلَاذَة", "munlāẕa", "sığınılan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْلَاذَان", "munlāẕān", "sığınılan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْلَاذَتَان",
+        "munlāẕatān",
+        "sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْلَاذُون",
+        "munlāẕūn",
+        "sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْلَاذِين",
+        "munlāẕīn",
+        "sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْلَاذَات",
+        "munlāẕāt",
+        "sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذ",
+        "munlāẕ",
+        "sığınılan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذَة",
+        "munlāẕa",
+        "sığınılan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذَان",
+        "munlāẕān",
+        "sığınılan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذَتَان",
+        "munlāẕatān",
+        "sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذُون",
+        "munlāẕūn",
+        "sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذِين",
+        "munlāẕīn",
+        "sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذَات",
+        "munlāẕāt",
+        "sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْلَاذ",
+        "munlāẕ",
+        "sığınılma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî · ilal", "اِلْتِيَاذ", "iltiyāẕ", "kendisi için sığınma", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday · ilal", "اِلْتِيَاذَة", "iltiyāẕa", "bir kere kendisi için sığınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî · ilal", "مُلْتَاذ", "multāẕ", "kendisi için sığınan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî · ilal", "مُلْتَاذَة", "multāẕa", "kendisi için sığınan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî · ilal", "مُلْتَاذَان", "multāẕān", "kendisi için sığınan, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْتَاذَتَان",
+        "multāẕatān",
+        "kendisi için sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْتَاذُون",
+        "multāẕūn",
+        "kendisi için sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْتَاذِين",
+        "multāẕīn",
+        "kendisi için sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْتَاذَات",
+        "multāẕāt",
+        "kendisi için sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُلْتَاذ", "multāẕ", "kendisi için sığınılan", "orta", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî · ilal",
+        "مُلْتَاذَة",
+        "multāẕa",
+        "kendisi için sığınılan, müennes",
+        "orta",
+        ""
+      ],
+      ["muftaʿal + tesniye", "kıyâsî · ilal", "مُلْتَاذَان", "multāẕān", "kendisi için sığınılan, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُلْتَاذَتَان",
+        "multāẕatān",
+        "kendisi için sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُلْتَاذُون",
+        "multāẕūn",
+        "kendisi için sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُلْتَاذِين",
+        "multāẕīn",
+        "kendisi için sığınılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُلْتَاذَات",
+        "multāẕāt",
+        "kendisi için sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُلْتَاذ", "multāẕ", "kendisi için sığınma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday", "اِلْوِذَاذ", "ilwiẕāẕ", "iyiden iyiye sığınma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُلْوَذّ", "mulwaẕẕ", "iyiden iyiye sığınan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُلْوَذَّة", "mulwaẕẕa", "iyiden iyiye sığınan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُلْوَذَّان", "mulwaẕẕān", "iyiden iyiye sığınan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُلْوَذَّتَان",
+        "mulwaẕẕatān",
+        "iyiden iyiye sığınan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْوَذُّون",
+        "mulwaẕẕūn",
+        "iyiden iyiye sığınanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْوَذِّين",
+        "mulwaẕẕīn",
+        "iyiden iyiye sığınanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْوَذَّات",
+        "mulwaẕẕāt",
+        "iyiden iyiye sığınanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِلَاذَة", "istilāẕa", "sığınmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَلِيذ", "mustalīẕ", "sığınmayı isteyen", "orta", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَلِيذَة",
+        "mustalīẕa",
+        "sığınmayı isteyen, müennes",
+        "orta",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî · ilal", "مُسْتَلِيذَان", "mustalīẕān", "sığınmayı isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَلِيذَتَان",
+        "mustalīẕatān",
+        "sığınmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَلِيذُون",
+        "mustalīẕūn",
+        "sığınmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَلِيذِين",
+        "mustalīẕīn",
+        "sığınmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَلِيذَات",
+        "mustalīẕāt",
+        "sığınmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَلَاذ", "mustalāẕ", "sığınması istenen", "orta", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَلَاذَة",
+        "mustalāẕa",
+        "sığınması istenen, müennes",
+        "orta",
+        ""
+      ],
+      ["mustaf'al + tesniye", "kıyâsî · ilal", "مُسْتَلَاذَان", "mustalāẕān", "sığınması istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَلَاذَتَان",
+        "mustalāẕatān",
+        "sığınması istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَلَاذُون",
+        "mustalāẕūn",
+        "sığınması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَلَاذِين",
+        "mustalāẕīn",
+        "sığınması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَلَاذَات",
+        "mustalāẕāt",
+        "sığınması istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَلَاذ", "mustalāẕ", "sığınmayı isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["istif'āl", "semâî aday", "اِسْتِلْوَاذ", "istilwāẕ", "sığınmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["mustaf'il", "semâî aday", "مُسْتَلْوِذ", "mustalwiẕ", "sığınmayı isteyen", "orta", ""]
+    ],
+    "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["mustaf'al", "semâî aday", "مُسْتَلْوَذ", "mustalwaẕ", "sığınması istenen", "orta", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday", "اِلْوِيذَاذ", "ilwīẕāẕ", "büsbütün sığınma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُلْوَاذّ", "mulwāẕẕ", "büsbütün sığınan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُلْوَاذَّة", "mulwāẕẕa", "büsbütün sığınan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُلْوَاذَّان", "mulwāẕẕān", "büsbütün sığınan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُلْوَاذَّتَان",
+        "mulwāẕẕatān",
+        "büsbütün sığınan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْوَاذُّون",
+        "mulwāẕẕūn",
+        "büsbütün sığınanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْوَاذِّين",
+        "mulwāẕẕīn",
+        "büsbütün sığınanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْوَاذَّات",
+        "mulwāẕẕāt",
+        "büsbütün sığınanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday", "اِلْوِوْوَاذ", "ilwiwwāẕ", "aşırı sığınma", "orta", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday", "اِلْوِوَّاذ", "ilwiwwāẕ", "aşırı sığınma", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî · ilal", "لَائِذ", "lāʾiẕ", "sığınan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "لَائِذَة", "lāʾiẕa", "sığınan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "لَائِذَان", "lāʾiẕān", "sığınan, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî · ilal", "لَائِذَتَان", "lāʾiẕatān", "sığınan, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "لَائِذُون", "lāʾiẕūn", "sığınanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "لَائِذِين", "lāʾiẕīn", "sığınanlar", "orta", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "لَائِذَات",
+        "lāʾiẕāt",
+        "sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî · ilal", "مَلُوذ", "malūẕ", "sığınılan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَلُوذَة", "malūẕa", "sığınılan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَلُوذَان", "malūẕān", "sığınılan, iki", "orta", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَلُوذَتَان",
+        "malūẕatān",
+        "sığınılan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مَلُوذُون", "malūẕūn", "sığınılanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مَلُوذِين", "malūẕīn", "sığınılanlar", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَلُوذَات",
+        "malūẕāt",
+        "sığınılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      [
+        "maf'al",
+        "kıyâsî · ilal",
+        "مَلَاذ",
+        "malāẕ",
+        "Sığınacak yer, sığınak, melce, penah",
+        "lugat",
+        "Vikisözlük: refuge, shelter · Kubbealtı"
+      ],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَلَاذَان", "malāẕān", "sığınma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî · ilal", "مَلِيذ", "malīẕ", "sığınma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَلِيذَان", "malīẕān", "sığınma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَلَاذَة", "malāẕa", "sığınmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
+        "مَلَاذَتَان",
+        "malāẕatān",
+        "sığınmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ile", "kıyâsî · ilal", "مَلِيذَة", "malīẕa", "sığınmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَلِيذَتَان",
+        "malīẕatān",
+        "sığınmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَلْوُذَة", "malwuẕa", "sığınma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَلْوُذَتَان", "malwuẕatān", "sığınma yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِلْوَذ", "milwaẕ", "sığınma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِلْوَذَان", "milwaẕān", "sığınma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِلْوَاذ", "milwāẕ", "sığınma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِلْوَاذَان", "milwāẕān", "sığınma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِلْوَذَة", "milwaẕa", "sığınma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِلْوَذَتَان", "milwaẕatān", "sığınma âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَلْوَذ", "ʾalwaẕ", "daha çok sığınan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَلْوَذَان", "ʾalwaẕān", "daha çok sığınan, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "لُوْذَى", "luwẕā", "daha çok sığınan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "لُوْذَيَان", "luwẕayān", "daha çok sığınan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "لَوْذَاء", "lawẕāʾ", "daha çok sığınan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "لَوْذَاآن", "lawẕāʾān", "daha çok sığınan, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "لُوَيْذ", "luwayẕ", "azıcık sığınma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "لُوَيْذَان", "luwayẕān", "azıcık sığınma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "لُوَيْذَة", "luwayẕa", "azıcık sığınma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "لُوَيْذَتَان", "luwayẕatān", "azıcık sığınma, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      [
+        "maf'al",
+        "kıyâsî · ilal",
+        "مَلَاذ",
+        "malāẕ",
+        "Sığınacak yer, sığınak, melce, penah",
+        "lugat",
+        "Vikisözlük: refuge, shelter · Kubbealtı"
+      ],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَلَاذَان", "malāẕān", "sığınma, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "لَوْذَة", "lawẕa", "bir kere sığınma", "orta", ""],
+      ["fa'le + tesniye", "aday", "لَوْذَتَان", "lawẕatān", "bir kere sığınma, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday · ilal", "لِيذَة", "līẕa", "sığınma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday · ilal", "لِيذَتَان", "līẕatān", "sığınma tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "لَوِيذ", "lawīẕ", "her daim sığınan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "لَوِيذَة", "lawīẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَوِيذَان", "lawīẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "لَوِيذَتَان",
+        "lawīẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوِيذُون",
+        "lawīẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوِيذِين",
+        "lawīẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوِيذَات",
+        "lawīẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَوُوذ", "lawūẕ", "her daim sığınan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَوُوذَة", "lawūẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَوُوذَان", "lawūẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "لَوُوذَتَان",
+        "lawūẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوُوذُون",
+        "lawūẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوُوذِين",
+        "lawūẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوُوذَات",
+        "lawūẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "لَوِذ", "lawiẕ", "her daim sığınan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "لَوِذَة", "lawiẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "لَوِذَان", "lawiẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "لَوِذَتَان",
+        "lawiẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوِذُون",
+        "lawiẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوِذِين",
+        "lawiẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوِذَات",
+        "lawiẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "لَوُذ", "lawuẕ", "her daim sığınan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "لَوُذَة", "lawuẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "لَوُذَان", "lawuẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "لَوُذَتَان",
+        "lawuẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوُذُون",
+        "lawuẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوُذِين",
+        "lawuẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوُذَات",
+        "lawuẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "لَاذ", "lāẕ", "her daim sığınan", "orta", ""],
+      ["fa'al + müennes", "semâî aday · ilal", "لَاذَة", "lāẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "لَاذَان", "lāẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday · ilal",
+        "لَاذَتَان",
+        "lāẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "لَاذُون",
+        "lāẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "لَاذِين",
+        "lāẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "لَاذَات",
+        "lāẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَوْذ",
+        "lawẕ",
+        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
+      ],
+      ["fa'l + müennes", "semâî aday", "لَوْذَة", "lawẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "لَوْذَان", "lawẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "لَوْذَتَان",
+        "lawẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَوْذُون", "lawẕūn", "her daim sığınanlar", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَوْذِين", "lawẕīn", "her daim sığınanlar", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوْذَات",
+        "lawẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "لُوُذ", "luwuẕ", "her daim sığınan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "لُوُذَة", "luwuẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "لُوُذَان", "luwuẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "لُوُذَتَان",
+        "luwuẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُوُذُون",
+        "luwuẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُوُذِين",
+        "luwuẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُوُذَات",
+        "luwuẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "لَوْذَان", "lawẕān", "her daim sığınan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "لَوْذَانَة", "lawẕāna", "her daim sığınan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "لَوْذَانَان", "lawẕānān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "لَوْذَانَتَان",
+        "lawẕānatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوْذَانُون",
+        "lawẕānūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوْذَانِين",
+        "lawẕānīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوْذَانَات",
+        "lawẕānāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl",
+        "semâî aday",
+        "لُوَاذ",
+        "luwāẕ",
+        "her daim sığınan",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fu'āl + müennes", "semâî aday", "لُوَاذَة", "luwāẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "لُوَاذَان", "luwāẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "لُوَاذَتَان",
+        "luwāẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُوَاذُون",
+        "luwāẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُوَاذِين",
+        "luwāẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُوَاذَات",
+        "luwāẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl",
+        "semâî aday",
+        "لَوَاذ",
+        "lawāẕ",
+        "her daim sığınan",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fa'āl + müennes", "semâî aday", "لَوَاذَة", "lawāẕa", "her daim sığınan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "لَوَاذَان", "lawāẕān", "her daim sığınan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "لَوَاذَتَان",
+        "lawāẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوَاذُون",
+        "lawāẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوَاذِين",
+        "lawāẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوَاذَات",
+        "lawāẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fay'il (ecvef: seyyid, meyyit, tayyib)", "ecvef kıyâsı", "لَيِّذ", "layyiẕ", "her daim sığınan", "orta", ""],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes",
+        "ecvef kıyâsı",
+        "لَيِّذَة",
+        "layyiẕa",
+        "her daim sığınan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye",
+        "ecvef kıyâsı",
+        "لَيِّذَان",
+        "layyiẕān",
+        "her daim sığınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye",
+        "ecvef kıyâsı",
+        "لَيِّذَتَان",
+        "layyiẕatān",
+        "her daim sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
+        "ecvef kıyâsı",
+        "لَيِّذُون",
+        "layyiẕūn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
+        "ecvef kıyâsı",
+        "لَيِّذِين",
+        "layyiẕīn",
+        "her daim sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
+        "ecvef kıyâsı",
+        "لَيِّذَات",
+        "layyiẕāt",
+        "her daim sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "لَوَّاذ", "lawwāẕ", "işi sığınma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "لَوَّاذَة", "lawwāẕa", "işi sığınma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "لَوَّاذَان", "lawwāẕān", "işi sığınma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "لَوَّاذَتَان",
+        "lawwāẕatān",
+        "işi sığınma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوَّاذُون",
+        "lawwāẕūn",
+        "işi sığınma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوَّاذِين",
+        "lawwāẕīn",
+        "işi sığınma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوَّاذَات",
+        "lawwāẕāt",
+        "işi sığınma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "لَوَّاذَة", "lawwāẕa", "pek çok sığınan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "لَوَّاذَتَان", "lawwāẕatān", "pek çok sığınan, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوَّاذَات",
+        "lawwāẕāt",
+        "pek çok sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَوُوذ", "lawūẕ", "çok sığınan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَوُوذَة", "lawūẕa", "çok sığınan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَوُوذَان", "lawūẕān", "çok sığınan, iki", "orta", ""],
+      ["fa'ūl + müennes tesniye", "semâî aday", "لَوُوذَتَان", "lawūẕatān", "çok sığınan, iki, müennes", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَوُوذُون", "lawūẕūn", "çok sığınanlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَوُوذِين", "lawūẕīn", "çok sığınanlar", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوُوذَات",
+        "lawūẕāt",
+        "çok sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "لَوُّوذ", "lawwūẕ", "pek çok sığınan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "لَوُّوذَة", "lawwūẕa", "pek çok sığınan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "لَوُّوذَان", "lawwūẕān", "pek çok sığınan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "لَوُّوذَتَان",
+        "lawwūẕatān",
+        "pek çok sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَوُّوذُون",
+        "lawwūẕūn",
+        "pek çok sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَوُّوذِين",
+        "lawwūẕīn",
+        "pek çok sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوُّوذَات",
+        "lawwūẕāt",
+        "pek çok sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "لِوِّيذ", "liwwīẕ", "sığınmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "لِوِّيذَة", "liwwīẕa", "sığınmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "لِوِّيذَان", "liwwīẕān", "sığınmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "لِوِّيذَتَان",
+        "liwwīẕatān",
+        "sığınmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لِوِّيذُون",
+        "liwwīẕūn",
+        "sığınmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لِوِّيذِين",
+        "liwwīẕīn",
+        "sığınmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لِوِّيذَات",
+        "liwwīẕāt",
+        "sığınmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "لُوَّاذ", "luwwāẕ", "son derece sığınan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "لُوَّاذَة", "luwwāẕa", "son derece sığınan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "لُوَّاذَان", "luwwāẕān", "son derece sığınan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "لُوَّاذَتَان",
+        "luwwāẕatān",
+        "son derece sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُوَّاذُون",
+        "luwwāẕūn",
+        "son derece sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُوَّاذِين",
+        "luwwāẕīn",
+        "son derece sığınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُوَّاذَات",
+        "luwwāẕāt",
+        "son derece sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِلْوَاذ", "milwāẕ", "sığınmayı âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِلْوَاذَة", "milwāẕa", "sığınmayı âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِلْوَاذَان", "milwāẕān", "sığınmayı âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِلْوَاذَتَان",
+        "milwāẕatān",
+        "sığınmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْوَاذُون",
+        "milwāẕūn",
+        "sığınmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْوَاذِين",
+        "milwāẕīn",
+        "sığınmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْوَاذَات",
+        "milwāẕāt",
+        "sığınmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِلْوِيذ", "milwīẕ", "sığınmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِلْوِيذَة", "milwīẕa", "sığınmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِلْوِيذَان", "milwīẕān", "sığınmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِلْوِيذَتَان",
+        "milwīẕatān",
+        "sığınmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْوِيذُون",
+        "milwīẕūn",
+        "sığınmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْوِيذِين",
+        "milwīẕīn",
+        "sığınmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْوِيذَات",
+        "milwīẕāt",
+        "sığınmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "لَوِيذ", "lawīẕ", "çok sığınan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "لَوِيذَة", "lawīẕa", "çok sığınan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَوِيذَان", "lawīẕān", "çok sığınan, iki", "orta", ""],
+      ["fa'īl + müennes tesniye", "semâî aday", "لَوِيذَتَان", "lawīẕatān", "çok sığınan, iki, müennes", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَوِيذُون", "lawīẕūn", "çok sığınanlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَوِيذِين", "lawīẕīn", "çok sığınanlar", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوِيذَات",
+        "lawīẕāt",
+        "çok sığınanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "لَوَّذ", "lawwaẕ", "çok sığınan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "لَوَّذَة", "lawwaẕa", "çok sığınan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "لَوَّذَان", "lawwaẕān", "çok sığınan, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "لَوَّذَتَان",
+        "lawwaẕatān",
+        "çok sığınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "لَوَّذُون", "lawwaẕūn", "çok sığınanlar", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "لَوَّذِين", "lawwaẕīn", "çok sığınanlar", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَوَّذَات",
+        "lawwaẕāt",
+        "çok sığınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "لَوْذِيّ", "lawẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî · ilal", "لَاذِيّ", "lāẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî · ilal", "لِيذِيّ", "līẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî · ilal", "لُوذِيّ", "lūẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "لِيَاذِيّ", "liyāẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "لَائِذِيّ", "lāʾiẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَلُوذِيّ", "malūẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "لَوِيذِيّ", "lawīẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَلَاذِيّ", "malāẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَلْوِيذِيّ", "talwīẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَلَاوُذِيّ", "talāwuẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِلَاذِيّ", "ʾilāẕiyy", "sığınma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِلْتِيَاذِيّ", "iltiyāẕiyy", "sığınma ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "لَوْذِيَّة", "lawẕiyya", "sığınanlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî · ilal", "لَاذِيَّة", "lāẕiyya", "sığınanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî · ilal", "لِيذِيَّة", "līẕiyya", "sığınanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî · ilal", "لُوذِيَّة", "lūẕiyya", "sığınanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "لِيَاذِيَّة", "liyāẕiyya", "sığınanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "لَائِذِيَّة", "lāʾiẕiyya", "sığınanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَلُوذِيَّة", "malūẕiyya", "sığınanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "لَوِيذِيَّة", "lawīẕiyya", "sığınanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَلَاذِيَّة", "malāẕiyya", "sığınanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَلْوِيذِيَّة", "talwīẕiyya", "sığınanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَلَاوُذِيَّة", "talāwuẕiyya", "sığınanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِلَاذِيَّة", "ʾilāẕiyya", "sığınanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِلْتِيَاذِيَّة", "iltiyāẕiyya", "sığınanlık", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      [
+        "fa'âl (kelâm, selâm)",
+        "semâî aday",
+        "لَوَاذ",
+        "lawāẕ",
+        "sığınma",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fu'ûl (vudû')", "semâî aday", "لُوُوذ", "luwūẕ", "sığınma", "orta", ""],
+      [
+        "fi'âl",
+        "semâî aday · ilal",
+        "لِيَاذ",
+        "liyāẕ",
+        "sığınma",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fu'l (şükr)", "semâî aday · ilal", "لُوذ", "lūẕ", "sığınma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "لَوَاذَة", "lawāẕa", "sığınma", "orta", ""],
+      ["fi'âle", "semâî aday · ilal", "لِيَاذَة", "liyāẕa", "sığınma", "orta", ""],
+      ["fu'ûle", "semâî aday", "لُوُوذَة", "luwūẕa", "sığınma", "orta", ""],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَوْذ",
+        "lawẕ",
+        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
+      ],
+      ["fi'l", "semâî aday · ilal", "لِيذ", "līẕ", "sığınma", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "لَاوُوذ", "lāwūẕ", "sığınma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "لَوَذَة", "lawaẕa", "sığınma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "لُوَذَة", "luwaẕa", "sığınma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُلْوُوذَة", "ʾulwūẕa", "sığınma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "لَوْوَذ", "lawwaẕ", "sığınma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "لَيْوَذ", "laywaẕ", "sığınma türünden şey", "orta", ""],
+      [
+        "fa'l",
+        "semâî aday",
+        "لَوْذ",
+        "lawẕ",
+        "ve Bir nesneye penâh getirip duldalanmak ve ardında saklanmak",
+        "lugat",
+        "Vikisözlük: masdar (bâb I): to take refuge · Kamus"
+      ],
+      ["fa'al", "semâî aday · ilal", "لَاذ", "lāẕ", "sığınma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday · ilal", "لِيذ", "līẕ", "sığınma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday · ilal", "لُوذ", "lūẕ", "sığınma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "لَوِيذ", "lawīẕ", "sığınma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "لِيَذ", "liyaẕ", "sığınma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "لُوُذ", "luwuẕ", "sığınma türünden şey", "orta", ""],
+      [
+        "fa'âl",
+        "semâî aday",
+        "لَوَاذ",
+        "lawāẕ",
+        "sığınma türünden şey",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "لَاوُوذَة", "lāwūẕa", "sığınma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "لَوْوَذَة", "lawwaẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "لَيْوَذَة", "laywaẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "لَوْذَة", "lawẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday · ilal", "لَاذَة", "lāẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday · ilal", "لِيذَة", "līẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday · ilal", "لُوذَة", "lūẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "لَوِيذَة", "lawīẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday · ilal", "لِيَذَة", "liyaẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "لُوُذَة", "luwuẕa", "sığınma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "لَوَاذَة", "lawāẕa", "sığınma türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَلْوَاذ", "ʾalwāẕ", "sığınmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَلْوِذَة", "ʾalwiẕa", "sığınmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَلَاوِذ", "ʾalāwiẕ", "sığınmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَلَاوِيذ", "ʾalāwīẕ", "sığınmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "لُوُوذ", "luwūẕ", "sığınmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "لُوُذ", "luwuẕ", "sığınmalar", "orta", ""],
+      [
+        "fi'āl",
+        "semâî aday · ilal",
+        "لِيَاذ",
+        "liyāẕ",
+        "sığınmalar",
+        "orta",
+        "Vikisözlük: masdar (bâb I): to take refuge"
+      ],
+      ["fi'al", "semâî aday · ilal", "لِيَذ", "liyaẕ", "sığınmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "لِوَذَة", "liwaẕa", "sığınmalar", "orta", ""],
+      ["fu'al", "semâî aday", "لُوَذ", "luwaẕ", "sığınmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "لُوَذاء", "luwaẕāʾ", "sığınmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "لَوَذَة", "lawaẕa", "sığınmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "لُوَّاذ", "luwwāẕ", "sığınmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "لَوَاذ", "lawāẕ", "sığınmalar", "orta", "Vikisözlük: masdar (bâb I): to take refuge"],
+      ["fa'al", "semâî aday · ilal", "لَاذ", "lāẕ", "sığınmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَلَاوِذ", "malāwiẕ", "sığınmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَلَاوِيذ", "malāwīẕ", "sığınmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "لَوَاوِذ", "lawāwiẕ", "sığınmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَلْوُذ", "ʾalwuẕ", "sığınmalar", "orta", ""],
+      ["fu''al", "semâî aday", "لُوَّذ", "luwwaẕ", "sığınmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "لَوَائِذ", "lawāʾiẕ", "sığınmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "لُوَيْذ", "luwayẕ", "sığınmalar", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَلْوَاذَات", "ʾalwāẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَلْوِذَات", "ʾalwiẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَلَاوِذَات", "ʾalāwiẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَلَاوِيذَات", "ʾalāwīẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "لُوُوذَات", "luwūẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "لُوُذَات", "luwuẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "لِيَاذَات", "liyāẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday · ilal", "لِيَذَات", "liyaẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "لِوَذَات", "liwaẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "لُوَذَات", "luwaẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "لُوَذاآت", "luwaẕāʾāt", "sığınmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "لَوَذَات", "lawaẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "لُوَّاذَات", "luwwāẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "لَوَاذَات", "lawāẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday · ilal", "لَاذَات", "lāẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَلَاوِذَات", "malāwiẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَلَاوِيذَات", "malāwīẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "لَوَاوِذَات", "lawāwiẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَلْوُذَات", "ʾalwuẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "لُوَّذَات", "luwwaẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "لَوَائِذَات", "lawāʾiẕāt", "sığınmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "لُوَيْذَات", "luwayẕāt", "sığınmalar topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i merre · bâb IV", "if'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i merre · bâb X", "istif'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "location.n.01",
     "orta": "noun.location",
     "ust": "ölçü, mekân ve zaman",
@@ -1135,37 +2402,36 @@
     "dayanak_tanim": "a frequently visited place",
     "synset_sayisi": 2
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "اللام والذال",
-    "mihveri": "فالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ).",
-    "tam_metin": "{قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63]\n\"لَوْذ الوادي -بالفتح: مُنعَطَفه، ولَؤذ الجبل: حِضنه وجانبه وما يُطيف به. والمَلاوِذ: المآزِر. والمَلاذُ والمَلْوَذة: الحِصْن. ولاذ الطريقُ بالدار وألاذ، والطريق يُليذ بها: إذا أحاط بها \".\n(4/1970)\n° المعنى المحوري\nفالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس).\n° معنى الفصل المعجمي (لذ): مماسة مستطابة كما يتمثل في الشراب اللّذ وسائر ما يُستلذ مسه- في (لذذ)، وفي لَوذ الجبل حضنه وكذلك كل ما يحيط فيحمي ويحفظ- في (لوذ)."
+  "mana_yontem": "m1",
+  "gomme": {
+    "ust": {
+      "kume": 5,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 566
+    },
+    "orta": {
+      "kume": 16,
+      "merkez_kok": "خون",
+      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
+      "boy": 311
+    },
+    "ince": {
+      "kume": 99,
+      "merkez_kok": "سجن",
+      "merkez_mana": "Sicn: hapis, bağlama; sicil",
+      "boy": 18
+    }
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "لاذ به لياذاً، ولاوذ به لواذاً. قال الطرّماح:\nيلاوذن من حرّ يكاد أواراه ... يذيب دماغ الضب وهو خدوع\nوألاذ به غيره. واعتصم بلوذ الجبل: بجانبه وبألواذه. وهو يطوف في ألواذ البلاد: في نواحيها. ونزلوا بلوذ الوادي وبألواذه. قال الهذلي:\nوقطّع ألواذ داويّة ... صحارى غلان طلح وضال\nوقال ابن القمقام:\nتسري الصّبا فتبيت في ألواذه ... ويظلّ فيه من الجنوب نسيم",
-    "mecaz": "خير فلان ملاوذ: مراوغ لا يأتي إلا بعد كدّ. قال القطاميّ:\nوما ضرّها إن لم تكن رعت الحمى ... ولم تطلب الخير الملاوذ من بشر\nوألاذت الناقة الظلّ بخفّها إذا قامت الظهيرة.",
-    "kinaye": "",
-    "mecaz_var": true
+  "wordnet": ["anchor.v.02", "region.n.03"],
+  "muhassas": {
+    "kitap": "اللباس",
+    "bab": "المخطط من الثياب",
+    "kok_gecis": 18.5,
+    "kitapta_gecis": 1.5,
+    "zenginlesme": 5.37
   },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "فالأصل انعطافُ الشيء على ما في حِضنه فيُمسكه أي يحميه ويحصِّنه كلوذ الوادي والجبل وكالحِصن وكالمآزر. ومنه \"لاذ به (قال) لَوذًا ولَوَاذًا- كسَحاب وكِتاب: لجَأ إليه وعاذ به .. وانضم إليه (كأنما دخل في منعطَفه) ولاوذ: استَتَرَ {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} (يلوذون بمُنعَطَفات الطرق وتجمُّعات الناس)."
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "لاذ به لياذاً، ولاوذ به لواذاً. قال الطرّماح:\nيلاوذن من حرّ يكاد أواراه ... يذيب دماغ الضب وهو خدوع\nوألاذ به غيره. واعتصم بلوذ الجبل: بجانبه وبألواذه. وهو يطوف في ألواذ البلاد: في نواحيها. ونزلوا بلوذ الوادي وبألواذه. قال الهذلي:\nوقطّع ألواذ داويّة ... صحارى غلان طلح وضال\nوقال ابن القمقام:\nتسري الصّبا فتبيت في ألواذه ... ويظلّ فيه من الجنوب نسيم"
-      },
-      {
-        "kaynak": "Mekâyîs: لَوَذَ",
-        "metin": "(لَوَذَ) اللَّامُ وَالْوَاوُ وَالذَّالُ أَصْلٌ صَحِيحٌ يَدُلُّ عَلَى إِطَاقَةِ الْإِنْسَانِ بِالشَّيْءِ مُسْتَعِيذًا بِهِ وَمُتَسَتِّرًا. يُقَالُ: لَاذَ بِهِ يَلُوذُ لَوْذًا وَلَاذَ لِيَاذًا، وَذَلِكَ إِذَا عَاذَ بِهِ مِنْ خَوْفٍ أَوْ طَمَعٍ وَلَاوَذَ لِوَاذًا قَالَ اللَّهُ تَعَالَى: {قَدْ يَعْلَمُ اللَّهُ الَّذِينَ يَتَسَلَّلُونَ مِنْكُمْ لِوَاذًا} [النور: 63] وَكَانَ الْمُنَافِقُونَ إِذَا أَرَادَ الْوَاحِدُ مِنْهُمْ مُفَارَقَةَ مَجْلِسِ رَسُولِ اللَّهِ،\nصَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، لَاذَ بِغَيْرِهِ مُتَسَتِّرًا ثُمَّ نَهَضَ. وَإِنَّمَا قَالَ لِوَاذًا لِأَنَّهُ مَنْ لَاوَذَ وَجَعَلَ مَصْدَرُهُ صَحِيحًا، وَلَوْ كَانَ مِنْ لَاذَ لَقَالَ لِيَاذًا، وَاللَّوْذُ: مَا يُطِيفُ بِالْجَبَلِ، وَالْجَمْعُ أَلْوَاذٌ."
-      }
-    ],
+  "prototip": {
     "karsilastirma_prototipi": "Cebel mihverî mana",
     "yayilim": [
       {
@@ -1187,623 +2453,6 @@
         "halka": "uzak"
       }
     ],
-    "ortalama_benzerlik": 0.443,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": ["anchor.v.02", "region.n.03"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "اللباس",
-    "bab": "المخطط من الثياب",
-    "kok_gecis": 18.5,
-    "kitapta_gecis": 1.5,
-    "zenginlesme": 5.37
-  },
-  "mana_tasnif_gomme": {
-    "ust": {
-      "kume": 5,
-      "merkez_kok": "خون",
-      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 566
-    },
-    "orta": {
-      "kume": 16,
-      "merkez_kok": "خون",
-      "merkez_mana": "Hıyânet: ihanet etmek; hâin: hain",
-      "boy": 311
-    },
-    "ince": {
-      "kume": 99,
-      "merkez_kok": "سجن",
-      "merkez_mana": "Sicn: hapis, bağlama; sicil",
-      "boy": 18
-    }
-  },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "884": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "885": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "886": ["mensûb", "fa'al + iyy", "kıyâsî · ilal", ""],
-    "887": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî · ilal", ""],
-    "888": ["masdar · sülâsî mücerred", "fi'l", "semâî aday · ilal", ""],
-    "889": ["masdar · sülâsî mücerred", "fu'l", "semâî aday · ilal", ""],
-    "890": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî · ilal", "IV"],
-    "891": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "892": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "893": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "894": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî · ilal", "VIII"],
-    "895": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "898": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî · ilal", "X"],
-    "899": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî · ilal", "X"],
-    "900": ["masdar · bâb X (vâvı muhafaza: semâî istisnâ)", "istif'āl", "semâî aday", "X"],
-    "901": ["ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'il", "semâî aday", "X"],
-    "902": ["ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'al", "semâî aday", "X"],
-    "903": ["ism-i hey'et · sülâsî", "fi'le", "aday · ilal", ""],
-    "904": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday · ilal", ""],
-    "905": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday · ilal", ""],
-    "906": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday · ilal", ""],
-    "907": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib)", "ecvef kıyâsı", ""],
-    "908": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes", "ecvef kıyâsı", ""],
-    "909": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye", "ecvef kıyâsı", ""],
-    "910": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye", "ecvef kıyâsı", ""],
-    "911": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "912": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "913": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "914": ["mensûb", "fi'l + iyy", "kıyâsî · ilal", ""],
-    "915": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî · ilal", ""],
-    "916": ["mensûb", "fu'l + iyy", "kıyâsî · ilal", ""],
-    "917": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî · ilal", ""],
-    "918": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday · ilal", ""],
-    "919": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday · ilal", ""],
-    "920": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday · ilal", ""],
-    "921": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday · ilal", ""],
-    "922": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "923": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday · ilal", ""],
-    "924": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "925": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday · ilal", ""]
-  },
-  "kelimeler": [
-    {
-      "kelime": "لِوَاذًا",
-      "kok": "لوذ",
-      "lemma": "لِواذ",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "24:63",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "gizlice kaçış",
-        "lemma": "gizlice kaçış",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "orta",
-    "dayanak": ["lugat-fiil"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Kapı",
-    "ayrim": "sığın",
-    "acilim": "لوذ := Kapı(ayrım: sığın)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Kapı",
-    "kelimeler": [
-      {
-        "lemma": "لِواذ",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "masdar · bâb II · fi''āl"
-      }
-    ]
+    "ortalama_benzerlik": 0.443
   }
 }

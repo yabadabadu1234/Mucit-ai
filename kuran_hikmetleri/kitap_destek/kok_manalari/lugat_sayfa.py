@@ -32,20 +32,20 @@ h2 small{font-weight:400;font-size:8pt;opacity:.9}
 '''
 
 
-def osm_bolum(s):
-    """Türkçe okunabilen lügat maddeleri: mustak_lugat (yapılı) ve osmanlica_lugatler (madde metni); yer tutucu satırlar ve aynı metin tekrarı atılır."""
+def osm_bolum(L):
+    """Türkçe okunabilen lügat maddeleri: kök dosyasındaki lugat bölümü (eser adına göre); yer tutucu satırlar atılır."""
     gor = set(); b = {}
     def ekle(eser, bas, govde):
         g = temiz(govde)
-        if not g or g in gor or 'maddesi. Sayfa:' in g: return
+        if not g or g in gor: return
         gor.add(g); b.setdefault(eser, []).append((temiz(bas), g))
-    for w, L in (s.get('mustak_lugat') or {}).items():
-        for m in L:
-            for mn in m.get('manalar') or []:
-                ekle(m['eser'].replace('Kubbealtı', 'Kubbealtı Lügati'), '%s%s' % (m.get('madde', ''), (' · ' + m['tur']) if m.get('tur') else ''), ('%s' % (m.get('koken', '') + ' — ' if m.get('koken') else '')) + mn.get('tanim', ''))
-    for w, v in (s.get('osmanlica_lugatler') or {}).items():
-        for m in v.get('maddeler') or []:
-            ekle({'Kubbe Altı': 'Kubbealtı Lügati'}.get(m['eser'], m['eser']), m.get('madde', ''), m.get('mana', ''))
+    for eser, maddeler in (L or {}).items():
+        for m in maddeler:
+            if 'manalar' in m:
+                for mn in m['manalar']:
+                    ekle(eser, '%s%s' % (m.get('madde', ''), (' · ' + m['tur']) if m.get('tur') else ''), ('%s' % (m.get('koken', '') + ' — ' if m.get('koken') else '')) + mn.get('tanim', ''))
+            elif m.get('metin'):
+                ekle(eser, m.get('madde', ''), m['metin'])
     o = []
     for eser in ['Kubbealtı Lügati', 'Kamus', 'Vankulu', 'Luggat', 'Lugat-ı Remzi', 'Kamus-u Türki'] + sorted(set(b) - {'Kubbealtı Lügati', 'Kamus', 'Vankulu', 'Luggat', 'Lugat-ı Remzi', 'Kamus-u Türki'}):
         if eser not in b: continue
@@ -57,9 +57,7 @@ def kok_sayfa(k):
     if not (KR / 'kokler' / (k + '.json')).exists():
         return '<div class="kok">%s</div><div class="alt">Kur\'ân morfolojisinde (Quranic Arabic Corpus) geçen kök</div><h2>Kayıt durumu</h2><div class="mana"><b>Bu kök için kök defterinde (kelime_kaydi) dosya yok.</b></div><div class="tur">Kök ile aynı yazılışta bir lügat maddesi bulunmadı; muhtemelen defterde başka bir yazılışla (hemze, vâv ve yâ farkı) duruyor. Eşleştirme yapılmadı, tahmin yazılmadı.</div>' % temiz(k)
     d = json.load(open(KR / 'kokler' / (k + '.json'), encoding='utf-8'))
-    s = d['sozlukler']; ko = s.get('kuran_korpusu') or {}
-    if isinstance(ko, list): ko = {'gecis': sum(x.get('gecis', 0) for x in ko), 'ilk_yer': min((x['ilk_yer'] for x in ko if x.get('ilk_yer')), key=lambda z: [int(v) for v in z.split(':')], default='')}
-    ka = s.get('kok_anlamlari') or {}; tf = d.get('turkce_fiil') or {}
+    ko = d.get('kuran') or {}
     sys.path.insert(0, str(HERE))
     from agac_oku import oku
     global _A
@@ -68,25 +66,23 @@ def kok_sayfa(k):
     o = ['<div class="kok">%s</div>' % temiz(k)]
     meta = []
     if ko.get('gecis'): meta.append('Kur\'ân\'da %d geçiş' % ko['gecis'])
-    if ko.get('ilk_yer'): meta.append('ilk yer %s' % ':'.join(ko['ilk_yer'].split(':')[:2]))
+    if ko.get('ilk'): meta.append('ilk yer %s' % ':'.join(ko['ilk'].split(':')[:2]))
     if d.get('sinif'): meta.append('kök sınıfı: %s' % d['sinif'])
-    if tf.get('sap'): meta.append('fiil: %s' % tf['sap'])
+    if d.get('fiil'): meta.append('fiil: %s' % d['fiil'])
     o.append('<div class="alt">%s</div>' % temiz(' · '.join(meta)))
-    if ka.get('turkce'): o.append('<h2>Kök anlamı <small>(kök sözlüğü)</small></h2><div class="mana"><b>%s</b></div>' % temiz(ka['turkce']))
+    if d.get('anlam'): o.append('<h2>Kök anlamı <small>(kök sözlüğü)</small></h2><div class="mana"><b>%s</b></div>' % temiz(d['anlam']))
     o.append('<h2>Kökün manası <small>(asıllar ve türeme)</small></h2>')
     for i, n in enumerate(_A[k]):
         o.append('<div class="mana"><b>%d. %s</b>%s</div>' % (i + 1, temiz(n['mana']), ''.join('<div class="tur">· %s%s</div>' % (temiz(t['mana']), ''.join('<div class="tur" style="margin-left:5mm">– %s</div>' % temiz(u['mana']) for u in t['turev'])) for t in n['turev'])))
-    o.append(osm_bolum(s))
-    et = d['sozlukler'].get('etimoloji')
+    o.append(osm_bolum(d.get('lugat')))
+    et = d.get('etimoloji')
     if et: o.append('<h2>Etimoloji notu</h2><div class="osm">%s</div>' % paragraf(et if isinstance(et, str) else ''))
-    tc = s.get('tercume') or {}
-    for m in tc.get('mekayis') or []:
-        o.append('<h2>Mekâyîs <small>(İbn Fâris) · %s</small></h2><div class="osm">%s</div>' % (temiz(m.get('baslik', '')), paragraf(m.get('metin', ''))))
-    cm = tc.get('cebel_mihveri')
-    cm = cm.get('mihveri', '') if isinstance(cm, dict) else (cm or '')
+    for m in d.get('mekayis') or []:
+        o.append('<h2>Mekâyîs <small>(İbn Fâris) · %s</small></h2><div class="osm">%s</div>' % (temiz(m.get('baslik_tr', '')), paragraf(m.get('metin_tr', ''))))
+    cm = (d.get('cebel') or {}).get('mihveri_tr', '')
     if cm: o.append('<h2>Cebel <small>(el-Mu\'cemü\'l-İştikâkî) · mihver</small></h2><div class="osm">%s</div>' % paragraf(cm))
-    ea = s.get('etymarab') or {}
-    if ea.get('dolu'):
+    ea = d.get('etymarab') or {}
+    if ea.get('kok_maddesi') and not ea.get('yer_tutucu'):
         t = re.sub(r'^Back to library EtymArab\s+\S+\s+\S+\s+BP – • HDAL • © SG \| 15Feb2021\s*', '', ea.get('kok_maddesi', ''))
         t = re.sub(r'(?:▪ …\s*|[–-]\s*){2,}', ' ', t); t = re.sub(r'\s+', ' ', t)
         o.append('<h2>EtymArab <small>(Oslo Üniversitesi)</small></h2><div class="en">%s</div>' % temiz(t))

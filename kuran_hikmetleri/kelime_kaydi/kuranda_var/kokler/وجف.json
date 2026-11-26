@@ -1,1218 +1,2182 @@
 {
   "kok": "وجف",
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Beden",
+  "baz_ayrim": "titre",
+  "tur_kuran": {
+    "fiil": 1,
+    "isim": 1
+  },
+  "fiil": "titre",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "misâl",
-  "turkce_fiil": {
-    "sap": "titre",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "وَجْف", "wacf", "titreme", "orta", ""],
-      [1, "وِجْف", "wicf", "titreme", "orta", ""],
-      [2, "وُجْف", "wucf", "titreme", "orta", ""],
-      [3, "وَجَف", "wacaf", "titreme", "orta", "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"],
-      [4, "وِجَف", "wicaf", "titreme", "orta", ""],
-      [5, "وُجُف", "wucuf", "titreme", "orta", ""],
-      [6, "وُجُوف", "wucūf", "titreme", "orta", ""],
-      [7, "وِجَاف", "wicāf", "titreme", "orta", ""],
-      [8, "وُجَاف", "wucāf", "titreme", "orta", ""],
-      [9, "وَجَاف", "wacāf", "titreme", "orta", ""],
-      [10, "وَجَافَة", "wacāfa", "titreme", "orta", ""],
-      [11, "وُجُوفَة", "wucūfa", "titreme", "orta", ""],
-      [12, "وِجَافَة", "wicāfa", "titreme", "orta", ""],
-      [13, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
-      [14, "وَجُوف", "wacūf", "titreme", "orta", ""],
-      [15, "وَجَفَان", "wacafān", "titreme", "orta", ""],
-      [16, "وُجْفَان", "wucfān", "titreme", "orta", ""],
-      [17, "وِجْفَان", "wicfān", "titreme", "orta", ""],
-      [18, "وَجْفَى", "wacfā", "titreme", "orta", ""],
-      [19, "وُجْفَى", "wucfā", "titreme", "orta", ""],
-      [20, "وِجْفَى", "wicfā", "titreme", "orta", ""],
-      [21, "وَجَفَة", "wacafa", "titreme", "orta", ""],
-      [22, "وِجَفَة", "wicafa", "titreme", "orta", ""],
-      [23, "وَجْفُوفَة", "wacfūfa", "titreme", "orta", ""],
-      [24, "تُوجُوف", "tūcūf", "titreme", "orta", ""],
-      [25, "تَوْجِفَة", "tawcifa", "titreme", "orta", ""],
-      [26, "تَوْجَفَة", "tawcafa", "titreme", "orta", ""],
-      [27, "مَوْجُفَة", "mawcufa", "titreme", "orta", ""],
-      [28, "مَوْجِفَة", "mawcifa", "titreme", "orta", ""],
-      [926, "جِفَة", "cifa", "titreme", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَوْجِيف", "tawcīf", "titretme", "orta", ""],
-      [30, "تَوْجِفَة", "tawcifa", "titretme", "orta", ""],
-      [31, "وِجِّاف", "wiccāf", "titretme", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَوْجِيفَة", "tawcīfa", "bir kere titretme", "orta", ""],
-      [33, "وِجِّافَة", "wiccāfa", "bir kere titretme", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُوَجِّف", "muwaccif", "titreten", "orta", ""],
-      [35, "مُوَجِّفَة", "muwaccifa", "titreten, müennes", "orta", ""],
-      [36, "مُوَجِّفَان", "muwaccifān", "titreten, iki", "orta", ""],
-      [37, "مُوَجِّفَتَان", "muwaccifatān", "titreten, iki, müennes", "orta", ""],
-      [38, "مُوَجِّفُون", "muwaccifūn", "titretenler", "orta", ""],
-      [39, "مُوَجِّفِين", "muwaccifīn", "titretenler", "orta", ""],
-      [40, "مُوَجِّفَات", "muwaccifāt", "titretenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُوَجَّف", "muwaccaf", "titretilen", "orta", ""],
-      [42, "مُوَجَّفَة", "muwaccafa", "titretilen, müennes", "orta", ""],
-      [43, "مُوَجَّفَان", "muwaccafān", "titretilen, iki", "orta", ""],
-      [44, "مُوَجَّفَتَان", "muwaccafatān", "titretilen, iki, müennes", "orta", ""],
-      [45, "مُوَجَّفُون", "muwaccafūn", "titretilenler", "orta", ""],
-      [46, "مُوَجَّفِين", "muwaccafīn", "titretilenler", "orta", ""],
-      [47, "مُوَجَّفَات", "muwaccafāt", "titretilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُوَجَّف", "muwaccaf", "titretme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُوَاجَفَة", "muwācafa", "biriyle karşılıklı titreme", "orta", ""],
-      [50, "وِجَاف", "wicāf", "biriyle karşılıklı titreme", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "وِجَافَة", "wicāfa", "bir kere biriyle karşılıklı titreme", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُوَاجِف", "muwācif", "biriyle karşılıklı titreyen", "orta", ""],
-      [53, "مُوَاجِفَة", "muwācifa", "biriyle karşılıklı titreyen, müennes", "orta", ""],
-      [54, "مُوَاجِفَان", "muwācifān", "biriyle karşılıklı titreyen, iki", "orta", ""],
-      [55, "مُوَاجِفَتَان", "muwācifatān", "biriyle karşılıklı titreyen, iki, müennes", "orta", ""],
-      [56, "مُوَاجِفُون", "muwācifūn", "biriyle karşılıklı titreyenler", "orta", ""],
-      [57, "مُوَاجِفِين", "muwācifīn", "biriyle karşılıklı titreyenler", "orta", ""],
-      [58, "مُوَاجِفَات", "muwācifāt", "biriyle karşılıklı titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُوَاجَف", "muwācaf", "biriyle karşılıklı titrenen", "orta", ""],
-      [60, "مُوَاجَفَة", "muwācafa", "biriyle karşılıklı titrenen, müennes", "orta", ""],
-      [61, "مُوَاجَفَان", "muwācafān", "biriyle karşılıklı titrenen, iki", "orta", ""],
-      [62, "مُوَاجَفَتَان", "muwācafatān", "biriyle karşılıklı titrenen, iki, müennes", "orta", ""],
-      [63, "مُوَاجَفُون", "muwācafūn", "biriyle karşılıklı titrenenler", "orta", ""],
-      [64, "مُوَاجَفِين", "muwācafīn", "biriyle karşılıklı titrenenler", "orta", ""],
-      [65, "مُوَاجَفَات", "muwācafāt", "biriyle karşılıklı titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُوَاجَف", "muwācaf", "biriyle karşılıklı titreme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِيجَاف", "ʾīcāf", "titretme", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِيجَافَة", "ʾīcāfa", "bir kere titretme", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُوجِف", "mūcif", "titreten", "orta", ""],
-      [70, "مُوجِفَة", "mūcifa", "titreten, müennes", "orta", ""],
-      [71, "مُوجِفَان", "mūcifān", "titreten, iki", "orta", ""],
-      [72, "مُوجِفَتَان", "mūcifatān", "titreten, iki, müennes", "orta", ""],
-      [73, "مُوجِفُون", "mūcifūn", "titretenler", "orta", ""],
-      [74, "مُوجِفِين", "mūcifīn", "titretenler", "orta", ""],
-      [75, "مُوجِفَات", "mūcifāt", "titretenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُوجَف", "mūcaf", "titretilen", "orta", ""],
-      [77, "مُوجَفَة", "mūcafa", "titretilen, müennes", "orta", ""],
-      [78, "مُوجَفَان", "mūcafān", "titretilen, iki", "orta", ""],
-      [79, "مُوجَفَتَان", "mūcafatān", "titretilen, iki, müennes", "orta", ""],
-      [80, "مُوجَفُون", "mūcafūn", "titretilenler", "orta", ""],
-      [81, "مُوجَفِين", "mūcafīn", "titretilenler", "orta", ""],
-      [82, "مُوجَفَات", "mūcafāt", "titretilenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُوجَف", "mūcaf", "titretme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَوَجُّف", "tawaccuf", "kendini zorlayarak titreme", "orta", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَوَجُّفَة", "tawaccufa", "bir kere kendini zorlayarak titreme", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَوَجِّف", "mutawaccif", "kendini zorlayarak titreyen", "orta", ""],
-      [87, "مُتَوَجِّفَة", "mutawaccifa", "kendini zorlayarak titreyen, müennes", "orta", ""],
-      [88, "مُتَوَجِّفَان", "mutawaccifān", "kendini zorlayarak titreyen, iki", "orta", ""],
-      [89, "مُتَوَجِّفَتَان", "mutawaccifatān", "kendini zorlayarak titreyen, iki, müennes", "orta", ""],
-      [90, "مُتَوَجِّفُون", "mutawaccifūn", "kendini zorlayarak titreyenler", "orta", ""],
-      [91, "مُتَوَجِّفِين", "mutawaccifīn", "kendini zorlayarak titreyenler", "orta", ""],
-      [92, "مُتَوَجِّفَات", "mutawaccifāt", "kendini zorlayarak titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَوَجَّف", "mutawaccaf", "kendini zorlayarak titrenen", "orta", ""],
-      [94, "مُتَوَجَّفَة", "mutawaccafa", "kendini zorlayarak titrenen, müennes", "orta", ""],
-      [95, "مُتَوَجَّفَان", "mutawaccafān", "kendini zorlayarak titrenen, iki", "orta", ""],
-      [96, "مُتَوَجَّفَتَان", "mutawaccafatān", "kendini zorlayarak titrenen, iki, müennes", "orta", ""],
-      [97, "مُتَوَجَّفُون", "mutawaccafūn", "kendini zorlayarak titrenenler", "orta", ""],
-      [98, "مُتَوَجَّفِين", "mutawaccafīn", "kendini zorlayarak titrenenler", "orta", ""],
-      [99, "مُتَوَجَّفَات", "mutawaccafāt", "kendini zorlayarak titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَوَجَّف", "mutawaccaf", "kendini zorlayarak titreme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَوَاجُف", "tawācuf", "hep birlikte titreme", "orta", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَوَاجُفَة", "tawācufa", "bir kere hep birlikte titreme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَوَاجِف", "mutawācif", "hep birlikte titreyen", "orta", ""],
-      [104, "مُتَوَاجِفَة", "mutawācifa", "hep birlikte titreyen, müennes", "orta", ""],
-      [105, "مُتَوَاجِفَان", "mutawācifān", "hep birlikte titreyen, iki", "orta", ""],
-      [106, "مُتَوَاجِفَتَان", "mutawācifatān", "hep birlikte titreyen, iki, müennes", "orta", ""],
-      [107, "مُتَوَاجِفُون", "mutawācifūn", "hep birlikte titreyenler", "orta", ""],
-      [108, "مُتَوَاجِفِين", "mutawācifīn", "hep birlikte titreyenler", "orta", ""],
-      [109, "مُتَوَاجِفَات", "mutawācifāt", "hep birlikte titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَوَاجَف", "mutawācaf", "hep birlikte titrenen", "orta", ""],
-      [111, "مُتَوَاجَفَة", "mutawācafa", "hep birlikte titrenen, müennes", "orta", ""],
-      [112, "مُتَوَاجَفَان", "mutawācafān", "hep birlikte titrenen, iki", "orta", ""],
-      [113, "مُتَوَاجَفَتَان", "mutawācafatān", "hep birlikte titrenen, iki, müennes", "orta", ""],
-      [114, "مُتَوَاجَفُون", "mutawācafūn", "hep birlikte titrenenler", "orta", ""],
-      [115, "مُتَوَاجَفِين", "mutawācafīn", "hep birlikte titrenenler", "orta", ""],
-      [116, "مُتَوَاجَفَات", "mutawācafāt", "hep birlikte titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَوَاجَف", "mutawācaf", "hep birlikte titreme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْوِجَاف", "inwicāf", "kendiliğinden titreme", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْوِجَافَة", "inwicāfa", "bir kere kendiliğinden titreme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْوَجِف", "munwacif", "kendiliğinden titreyen", "orta", ""],
-      [121, "مُنْوَجِفَة", "munwacifa", "kendiliğinden titreyen, müennes", "orta", ""],
-      [122, "مُنْوَجِفَان", "munwacifān", "kendiliğinden titreyen, iki", "orta", ""],
-      [123, "مُنْوَجِفَتَان", "munwacifatān", "kendiliğinden titreyen, iki, müennes", "orta", ""],
-      [124, "مُنْوَجِفُون", "munwacifūn", "kendiliğinden titreyenler", "orta", ""],
-      [125, "مُنْوَجِفِين", "munwacifīn", "kendiliğinden titreyenler", "orta", ""],
-      [126, "مُنْوَجِفَات", "munwacifāt", "kendiliğinden titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْوَجَف", "munwacaf", "kendiliğinden titrenen", "orta", ""],
-      [128, "مُنْوَجَفَة", "munwacafa", "kendiliğinden titrenen, müennes", "orta", ""],
-      [129, "مُنْوَجَفَان", "munwacafān", "kendiliğinden titrenen, iki", "orta", ""],
-      [130, "مُنْوَجَفَتَان", "munwacafatān", "kendiliğinden titrenen, iki, müennes", "orta", ""],
-      [131, "مُنْوَجَفُون", "munwacafūn", "kendiliğinden titrenenler", "orta", ""],
-      [132, "مُنْوَجَفِين", "munwacafīn", "kendiliğinden titrenenler", "orta", ""],
-      [133, "مُنْوَجَفَات", "munwacafāt", "kendiliğinden titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْوَجَف", "munwacaf", "kendiliğinden titreme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِتِّجَاف", "itticāf", "kendisi için titreme", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِتِّجَافَة", "itticāfa", "bir kere kendisi için titreme", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُتَّجِف", "muttacif", "kendisi için titreyen", "orta", ""],
-      [139, "مُتَّجِفَة", "muttacifa", "kendisi için titreyen, müennes", "orta", ""],
-      [140, "مُتَّجِفَان", "muttacifān", "kendisi için titreyen, iki", "orta", ""],
-      [141, "مُتَّجِفَتَان", "muttacifatān", "kendisi için titreyen, iki, müennes", "orta", ""],
-      [142, "مُتَّجِفُون", "muttacifūn", "kendisi için titreyenler", "orta", ""],
-      [143, "مُتَّجِفِين", "muttacifīn", "kendisi için titreyenler", "orta", ""],
-      [144, "مُتَّجِفَات", "muttacifāt", "kendisi için titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُتَّجَف", "muttacaf", "kendisi için titrenen", "orta", ""],
-      [146, "مُتَّجَفَة", "muttacafa", "kendisi için titrenen, müennes", "orta", ""],
-      [147, "مُتَّجَفَان", "muttacafān", "kendisi için titrenen, iki", "orta", ""],
-      [148, "مُتَّجَفَتَان", "muttacafatān", "kendisi için titrenen, iki, müennes", "orta", ""],
-      [149, "مُتَّجَفُون", "muttacafūn", "kendisi için titrenenler", "orta", ""],
-      [150, "مُتَّجَفِين", "muttacafīn", "kendisi için titrenenler", "orta", ""],
-      [151, "مُتَّجَفَات", "muttacafāt", "kendisi için titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُتَّجَف", "muttacaf", "kendisi için titreme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِيجِفَاف", "īcifāf", "iyiden iyiye titreme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُوجَفّ", "mūcaff", "iyiden iyiye titreyen", "kontrol", ""],
-      [170, "مُوجَفَّة", "mūcaffa", "iyiden iyiye titreyen, müennes", "kontrol", ""],
-      [171, "مُوجَفَّان", "mūcaffān", "iyiden iyiye titreyen, iki", "kontrol", ""],
-      [172, "مُوجَفَّتَان", "mūcaffatān", "iyiden iyiye titreyen, iki, müennes", "kontrol", ""],
-      [173, "مُوجَفُّون", "mūcaffūn", "iyiden iyiye titreyenler", "kontrol", ""],
-      [174, "مُوجَفِّين", "mūcaffīn", "iyiden iyiye titreyenler", "kontrol", ""],
-      [175, "مُوجَفَّات", "mūcaffāt", "iyiden iyiye titreyenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِيجَاف", "istīcāf", "titremeyi isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِيجَافَة", "istīcāfa", "bir kere titremeyi isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَوْجِف", "mustawcif", "titremeyi isteyen", "orta", ""],
-      [179, "مُسْتَوْجِفَة", "mustawcifa", "titremeyi isteyen, müennes", "orta", ""],
-      [180, "مُسْتَوْجِفَان", "mustawcifān", "titremeyi isteyen, iki", "orta", ""],
-      [181, "مُسْتَوْجِفَتَان", "mustawcifatān", "titremeyi isteyen, iki, müennes", "orta", ""],
-      [182, "مُسْتَوْجِفُون", "mustawcifūn", "titremeyi isteyenler", "orta", ""],
-      [183, "مُسْتَوْجِفِين", "mustawcifīn", "titremeyi isteyenler", "orta", ""],
-      [184, "مُسْتَوْجِفَات", "mustawcifāt", "titremeyi isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَوْجَف", "mustawcaf", "titremesi istenen", "orta", ""],
-      [186, "مُسْتَوْجَفَة", "mustawcafa", "titremesi istenen, müennes", "orta", ""],
-      [187, "مُسْتَوْجَفَان", "mustawcafān", "titremesi istenen, iki", "orta", ""],
-      [188, "مُسْتَوْجَفَتَان", "mustawcafatān", "titremesi istenen, iki, müennes", "orta", ""],
-      [189, "مُسْتَوْجَفُون", "mustawcafūn", "titremesi istenenler", "orta", ""],
-      [190, "مُسْتَوْجَفِين", "mustawcafīn", "titremesi istenenler", "orta", ""],
-      [191, "مُسْتَوْجَفَات", "mustawcafāt", "titremesi istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَوْجَف", "mustawcaf", "titremeyi isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِيجِيفَاف", "īcīfāf", "büsbütün titreme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُوجَافّ", "mūcāff", "büsbütün titreyen", "kontrol", ""],
-      [195, "مُوجَافَّة", "mūcāffa", "büsbütün titreyen, müennes", "kontrol", ""],
-      [196, "مُوجَافَّان", "mūcāffān", "büsbütün titreyen, iki", "kontrol", ""],
-      [197, "مُوجَافَّتَان", "mūcāffatān", "büsbütün titreyen, iki, müennes", "kontrol", ""],
-      [198, "مُوجَافُّون", "mūcāffūn", "büsbütün titreyenler", "kontrol", ""],
-      [199, "مُوجَافِّين", "mūcāffīn", "büsbütün titreyenler", "kontrol", ""],
-      [200, "مُوجَافَّات", "mūcāffāt", "büsbütün titreyenler, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِيجِوْجَاف", "īciwcāf", "aşırı titreme", "orta", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِيجِوَّاف", "īciwwāf", "aşırı titreme", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "وَاجِف", "wācif", "titreyen", "orta", ""],
-      [214, "وَاجِفَة", "wācifa", "titreyen, müennes", "orta", ""],
-      [215, "وَاجِفَان", "wācifān", "titreyen, iki", "orta", ""],
-      [216, "وَاجِفَتَان", "wācifatān", "titreyen, iki, müennes", "orta", ""],
-      [217, "وَاجِفُون", "wācifūn", "titreyenler", "orta", ""],
-      [218, "وَاجِفِين", "wācifīn", "titreyenler", "orta", ""],
-      [219, "وَاجِفَات", "wācifāt", "titreyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَوْجُوف", "mawcūf", "titrenen", "orta", ""],
-      [221, "مَوْجُوفَة", "mawcūfa", "titrenen, müennes", "orta", ""],
-      [222, "مَوْجُوفَان", "mawcūfān", "titrenen, iki", "orta", ""],
-      [223, "مَوْجُوفَتَان", "mawcūfatān", "titrenen, iki, müennes", "orta", ""],
-      [224, "مَوْجُوفُون", "mawcūfūn", "titrenenler", "orta", ""],
-      [225, "مَوْجُوفِين", "mawcūfīn", "titrenenler", "orta", ""],
-      [226, "مَوْجُوفَات", "mawcūfāt", "titrenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَوْجَف", "mawcaf", "titreme yeri, vakti", "orta", ""],
-      [228, "مَوْجَفَان", "mawcafān", "titreme yeri, vakti, iki", "orta", ""],
-      [229, "مَوْجِف", "mawcif", "titreme yeri, vakti", "orta", ""],
-      [230, "مَوْجِفَان", "mawcifān", "titreme yeri, vakti, iki", "orta", ""],
-      [231, "مَوْجَفَة", "mawcafa", "titremenin bol olduğu yer", "orta", ""],
-      [232, "مَوْجَفَتَان", "mawcafatān", "titremenin bol olduğu yer, iki", "orta", ""],
-      [233, "مَوْجِفَة", "mawcifa", "titremenin bol olduğu yer", "orta", ""],
-      [234, "مَوْجِفَتَان", "mawcifatān", "titremenin bol olduğu yer, iki", "orta", ""],
-      [247, "مَوْجُفَة", "mawcufa", "titreme yeri, vakti", "orta", ""],
-      [248, "مَوْجُفَتَان", "mawcufatān", "titreme yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِيجَف", "mīcaf", "titreme âleti", "orta", ""],
-      [236, "مِيجَفَان", "mīcafān", "titreme âleti, iki", "orta", ""],
-      [237, "مِيجَاف", "mīcāf", "titreme âleti", "orta", ""],
-      [238, "مِيجَافَان", "mīcāfān", "titreme âleti, iki", "orta", ""],
-      [239, "مِيجَفَة", "mīcafa", "titreme âleti", "orta", ""],
-      [240, "مِيجَفَتَان", "mīcafatān", "titreme âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَوْجَف", "ʾawcaf", "daha çok titreyen", "orta", ""],
-      [242, "أَوْجَفَان", "ʾawcafān", "daha çok titreyen, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "وُجْفَى", "wucfā", "daha çok titreyen", "orta", ""],
-      [244, "وُجْفَيَان", "wucfayān", "daha çok titreyen, iki", "orta", ""],
-      [245, "وَجْفَاء", "wacfāʾ", "daha çok titreyen", "orta", ""],
-      [246, "وَجْفَاآن", "wacfāʾān", "daha çok titreyen, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "وُجَيْف", "wucayf", "azıcık titreme", "orta", ""],
-      [250, "وُجَيْفَان", "wucayfān", "azıcık titreme, iki", "orta", ""],
-      [251, "وُجَيْفَة", "wucayfa", "azıcık titreme", "orta", ""],
-      [252, "وُجَيْفَتَان", "wucayfatān", "azıcık titreme, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَوْجَف", "mawcaf", "titreme", "orta", ""],
-      [254, "مَوْجَفَان", "mawcafān", "titreme, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "وَجْفَة", "wacfa", "bir kere titreme", "orta", ""],
-      [256, "وَجْفَتَان", "wacfatān", "bir kere titreme, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "وِجْفَة", "wicfa", "titreme tarzı", "orta", ""],
-      [258, "وِجْفَتَان", "wicfatān", "titreme tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
-      [260, "وَجِيفَة", "wacīfa", "her daim titreyen, müennes", "orta", ""],
-      [261, "وَجِيفَان", "wacīfān", "her daim titreyen, iki", "orta", ""],
-      [262, "وَجِيفَتَان", "wacīfatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [263, "وَجِيفُون", "wacīfūn", "her daim titreyenler", "orta", ""],
-      [264, "وَجِيفِين", "wacīfīn", "her daim titreyenler", "orta", ""],
-      [265, "وَجِيفَات", "wacīfāt", "her daim titreyenler, müennes", "orta", ""],
-      [266, "وَجُوف", "wacūf", "her daim titreyen", "orta", ""],
-      [267, "وَجُوفَة", "wacūfa", "her daim titreyen, müennes", "orta", ""],
-      [268, "وَجُوفَان", "wacūfān", "her daim titreyen, iki", "orta", ""],
-      [269, "وَجُوفَتَان", "wacūfatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [270, "وَجُوفُون", "wacūfūn", "her daim titreyenler", "orta", ""],
-      [271, "وَجُوفِين", "wacūfīn", "her daim titreyenler", "orta", ""],
-      [272, "وَجُوفَات", "wacūfāt", "her daim titreyenler, müennes", "orta", ""],
-      [273, "وَجِف", "wacif", "her daim titreyen", "orta", ""],
-      [274, "وَجِفَة", "wacifa", "her daim titreyen, müennes", "orta", ""],
-      [275, "وَجِفَان", "wacifān", "her daim titreyen, iki", "orta", ""],
-      [276, "وَجِفَتَان", "wacifatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [277, "وَجِفُون", "wacifūn", "her daim titreyenler", "orta", ""],
-      [278, "وَجِفِين", "wacifīn", "her daim titreyenler", "orta", ""],
-      [279, "وَجِفَات", "wacifāt", "her daim titreyenler, müennes", "orta", ""],
-      [280, "وَجُف", "wacuf", "her daim titreyen", "orta", ""],
-      [281, "وَجُفَة", "wacufa", "her daim titreyen, müennes", "orta", ""],
-      [282, "وَجُفَان", "wacufān", "her daim titreyen, iki", "orta", ""],
-      [283, "وَجُفَتَان", "wacufatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [284, "وَجُفُون", "wacufūn", "her daim titreyenler", "orta", ""],
-      [285, "وَجُفِين", "wacufīn", "her daim titreyenler", "orta", ""],
-      [286, "وَجُفَات", "wacufāt", "her daim titreyenler, müennes", "orta", ""],
-      [287, "وَجَف", "wacaf", "her daim titreyen", "orta", "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"],
-      [288, "وَجَفَة", "wacafa", "her daim titreyen, müennes", "orta", ""],
-      [289, "وَجَفَان", "wacafān", "her daim titreyen, iki", "orta", ""],
-      [290, "وَجَفَتَان", "wacafatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [291, "وَجَفُون", "wacafūn", "her daim titreyenler", "orta", ""],
-      [292, "وَجَفِين", "wacafīn", "her daim titreyenler", "orta", ""],
-      [293, "وَجَفَات", "wacafāt", "her daim titreyenler, müennes", "orta", ""],
-      [294, "وَجْف", "wacf", "her daim titreyen", "orta", ""],
-      [295, "وَجْفَة", "wacfa", "her daim titreyen, müennes", "orta", ""],
-      [296, "وَجْفَان", "wacfān", "her daim titreyen, iki", "orta", ""],
-      [297, "وَجْفَتَان", "wacfatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [298, "وَجْفُون", "wacfūn", "her daim titreyenler", "orta", ""],
-      [299, "وَجْفِين", "wacfīn", "her daim titreyenler", "orta", ""],
-      [300, "وَجْفَات", "wacfāt", "her daim titreyenler, müennes", "orta", ""],
-      [301, "وُجُف", "wucuf", "her daim titreyen", "orta", ""],
-      [302, "وُجُفَة", "wucufa", "her daim titreyen, müennes", "orta", ""],
-      [303, "وُجُفَان", "wucufān", "her daim titreyen, iki", "orta", ""],
-      [304, "وُجُفَتَان", "wucufatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [305, "وُجُفُون", "wucufūn", "her daim titreyenler", "orta", ""],
-      [306, "وُجُفِين", "wucufīn", "her daim titreyenler", "orta", ""],
-      [307, "وُجُفَات", "wucufāt", "her daim titreyenler, müennes", "orta", ""],
-      [308, "وَجْفَان", "wacfān", "her daim titreyen", "orta", ""],
-      [309, "وَجْفَانَة", "wacfāna", "her daim titreyen, müennes", "orta", ""],
-      [310, "وَجْفَانَان", "wacfānān", "her daim titreyen, iki", "orta", ""],
-      [311, "وَجْفَانَتَان", "wacfānatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [312, "وَجْفَانُون", "wacfānūn", "her daim titreyenler", "orta", ""],
-      [313, "وَجْفَانِين", "wacfānīn", "her daim titreyenler", "orta", ""],
-      [314, "وَجْفَانَات", "wacfānāt", "her daim titreyenler, müennes", "orta", ""],
-      [315, "وُجَاف", "wucāf", "her daim titreyen", "orta", ""],
-      [316, "وُجَافَة", "wucāfa", "her daim titreyen, müennes", "orta", ""],
-      [317, "وُجَافَان", "wucāfān", "her daim titreyen, iki", "orta", ""],
-      [318, "وُجَافَتَان", "wucāfatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [319, "وُجَافُون", "wucāfūn", "her daim titreyenler", "orta", ""],
-      [320, "وُجَافِين", "wucāfīn", "her daim titreyenler", "orta", ""],
-      [321, "وُجَافَات", "wucāfāt", "her daim titreyenler, müennes", "orta", ""],
-      [322, "وَجَاف", "wacāf", "her daim titreyen", "orta", ""],
-      [323, "وَجَافَة", "wacāfa", "her daim titreyen, müennes", "orta", ""],
-      [324, "وَجَافَان", "wacāfān", "her daim titreyen, iki", "orta", ""],
-      [325, "وَجَافَتَان", "wacāfatān", "her daim titreyen, iki, müennes", "orta", ""],
-      [326, "وَجَافُون", "wacāfūn", "her daim titreyenler", "orta", ""],
-      [327, "وَجَافِين", "wacāfīn", "her daim titreyenler", "orta", ""],
-      [328, "وَجَافَات", "wacāfāt", "her daim titreyenler, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [329, "وَجَّاف", "waccāf", "işi titreme olan", "orta", ""],
-      [330, "وَجَّافَة", "waccāfa", "işi titreme olan, müennes", "orta", ""],
-      [331, "وَجَّافَان", "waccāfān", "işi titreme olan, iki", "orta", ""],
-      [332, "وَجَّافَتَان", "waccāfatān", "işi titreme olan, iki, müennes", "orta", ""],
-      [333, "وَجَّافُون", "waccāfūn", "işi titreme olanlar", "orta", ""],
-      [334, "وَجَّافِين", "waccāfīn", "işi titreme olanlar", "orta", ""],
-      [335, "وَجَّافَات", "waccāfāt", "işi titreme olanlar, müennes", "orta", ""],
-      [336, "وَجَّافَة", "waccāfa", "pek çok titreyen", "orta", ""],
-      [337, "وَجَّافَتَان", "waccāfatān", "pek çok titreyen, iki", "orta", ""],
-      [338, "وَجَّافَات", "waccāfāt", "pek çok titreyenler, müennes", "orta", ""],
-      [339, "وَجُوف", "wacūf", "çok titreyen", "orta", ""],
-      [340, "وَجُوفَة", "wacūfa", "çok titreyen, müennes", "orta", ""],
-      [341, "وَجُوفَان", "wacūfān", "çok titreyen, iki", "orta", ""],
-      [342, "وَجُوفَتَان", "wacūfatān", "çok titreyen, iki, müennes", "orta", ""],
-      [343, "وَجُوفُون", "wacūfūn", "çok titreyenler", "orta", ""],
-      [344, "وَجُوفِين", "wacūfīn", "çok titreyenler", "orta", ""],
-      [345, "وَجُوفَات", "wacūfāt", "çok titreyenler, müennes", "orta", ""],
-      [346, "وَجُّوف", "waccūf", "pek çok titreyen", "orta", ""],
-      [347, "وَجُّوفَة", "waccūfa", "pek çok titreyen, müennes", "orta", ""],
-      [348, "وَجُّوفَان", "waccūfān", "pek çok titreyen, iki", "orta", ""],
-      [349, "وَجُّوفَتَان", "waccūfatān", "pek çok titreyen, iki, müennes", "orta", ""],
-      [350, "وَجُّوفُون", "waccūfūn", "pek çok titreyenler", "orta", ""],
-      [351, "وَجُّوفِين", "waccūfīn", "pek çok titreyenler", "orta", ""],
-      [352, "وَجُّوفَات", "waccūfāt", "pek çok titreyenler, müennes", "orta", ""],
-      [353, "وِجِّيف", "wiccīf", "titremede aşırı giden", "orta", ""],
-      [354, "وِجِّيفَة", "wiccīfa", "titremede aşırı giden, müennes", "orta", ""],
-      [355, "وِجِّيفَان", "wiccīfān", "titremede aşırı giden, iki", "orta", ""],
-      [356, "وِجِّيفَتَان", "wiccīfatān", "titremede aşırı giden, iki, müennes", "orta", ""],
-      [357, "وِجِّيفُون", "wiccīfūn", "titremede aşırı gidenler", "orta", ""],
-      [358, "وِجِّيفِين", "wiccīfīn", "titremede aşırı gidenler", "orta", ""],
-      [359, "وِجِّيفَات", "wiccīfāt", "titremede aşırı gidenler, müennes", "orta", ""],
-      [360, "وُجَّاف", "wuccāf", "son derece titreyen", "orta", ""],
-      [361, "وُجَّافَة", "wuccāfa", "son derece titreyen, müennes", "orta", ""],
-      [362, "وُجَّافَان", "wuccāfān", "son derece titreyen, iki", "orta", ""],
-      [363, "وُجَّافَتَان", "wuccāfatān", "son derece titreyen, iki, müennes", "orta", ""],
-      [364, "وُجَّافُون", "wuccāfūn", "son derece titreyenler", "orta", ""],
-      [365, "وُجَّافِين", "wuccāfīn", "son derece titreyenler", "orta", ""],
-      [366, "وُجَّافَات", "wuccāfāt", "son derece titreyenler, müennes", "orta", ""],
-      [367, "مِيجَاف", "mīcāf", "titremeyi âdet edinmiş", "orta", ""],
-      [368, "مِيجَافَة", "mīcāfa", "titremeyi âdet edinmiş, müennes", "orta", ""],
-      [369, "مِيجَافَان", "mīcāfān", "titremeyi âdet edinmiş, iki", "orta", ""],
-      [370, "مِيجَافَتَان", "mīcāfatān", "titremeyi âdet edinmiş, iki, müennes", "orta", ""],
-      [371, "مِيجَافُون", "mīcāfūn", "titremeyi âdet edinmişler", "orta", ""],
-      [372, "مِيجَافِين", "mīcāfīn", "titremeyi âdet edinmişler", "orta", ""],
-      [373, "مِيجَافَات", "mīcāfāt", "titremeyi âdet edinmişler, müennes", "orta", ""],
-      [374, "مِيجِيف", "mīcīf", "titremeye düşkün", "orta", ""],
-      [375, "مِيجِيفَة", "mīcīfa", "titremeye düşkün, müennes", "orta", ""],
-      [376, "مِيجِيفَان", "mīcīfān", "titremeye düşkün, iki", "orta", ""],
-      [377, "مِيجِيفَتَان", "mīcīfatān", "titremeye düşkün, iki, müennes", "orta", ""],
-      [378, "مِيجِيفُون", "mīcīfūn", "titremeye düşkünler", "orta", ""],
-      [379, "مِيجِيفِين", "mīcīfīn", "titremeye düşkünler", "orta", ""],
-      [380, "مِيجِيفَات", "mīcīfāt", "titremeye düşkünler, müennes", "orta", ""],
-      [381, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
-      [382, "وَجِيفَة", "wacīfa", "çok titreyen, müennes", "orta", ""],
-      [383, "وَجِيفَان", "wacīfān", "çok titreyen, iki", "orta", ""],
-      [384, "وَجِيفَتَان", "wacīfatān", "çok titreyen, iki, müennes", "orta", ""],
-      [385, "وَجِيفُون", "wacīfūn", "çok titreyenler", "orta", ""],
-      [386, "وَجِيفِين", "wacīfīn", "çok titreyenler", "orta", ""],
-      [387, "وَجِيفَات", "wacīfāt", "çok titreyenler, müennes", "orta", ""],
-      [388, "وَجَّف", "waccaf", "çok titreyen", "orta", ""],
-      [389, "وَجَّفَة", "waccafa", "çok titreyen, müennes", "orta", ""],
-      [390, "وَجَّفَان", "waccafān", "çok titreyen, iki", "orta", ""],
-      [391, "وَجَّفَتَان", "waccafatān", "çok titreyen, iki, müennes", "orta", ""],
-      [392, "وَجَّفُون", "waccafūn", "çok titreyenler", "orta", ""],
-      [393, "وَجَّفِين", "waccafīn", "çok titreyenler", "orta", ""],
-      [394, "وَجَّفَات", "waccafāt", "çok titreyenler, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "وَجْفِيّ", "wacfiyy", "titreme ile ilgili", "orta", ""],
-      [397, "وَجَفِيّ", "wacafiyy", "titreme ile ilgili", "orta", ""],
-      [399, "وِجْفِيّ", "wicfiyy", "titreme ile ilgili", "orta", ""],
-      [401, "وُجْفِيّ", "wucfiyy", "titreme ile ilgili", "orta", ""],
-      [403, "وِجَافِيّ", "wicāfiyy", "titreme ile ilgili", "orta", ""],
-      [405, "وَاجِفِيّ", "wācifiyy", "titreme ile ilgili", "orta", ""],
-      [407, "مَوْجُوفِيّ", "mawcūfiyy", "titreme ile ilgili", "orta", ""],
-      [409, "وَجِيفِيّ", "wacīfiyy", "titreme ile ilgili", "orta", ""],
-      [411, "مَوْجَفِيّ", "mawcafiyy", "titreme ile ilgili", "orta", ""],
-      [413, "تَوْجِيفِيّ", "tawcīfiyy", "titreme ile ilgili", "orta", ""],
-      [415, "تَوَاجُفِيّ", "tawācufiyy", "titreme ile ilgili", "orta", ""],
-      [417, "إِيجَافِيّ", "ʾīcāfiyy", "titreme ile ilgili", "orta", ""],
-      [419, "اِتِّجَافِيّ", "itticāfiyy", "titreme ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "وَجْفِيَّة", "wacfiyya", "titreyenlik", "orta", ""],
-      [398, "وَجَفِيَّة", "wacafiyya", "titreyenlik", "orta", ""],
-      [400, "وِجْفِيَّة", "wicfiyya", "titreyenlik", "orta", ""],
-      [402, "وُجْفِيَّة", "wucfiyya", "titreyenlik", "orta", ""],
-      [404, "وِجَافِيَّة", "wicāfiyya", "titreyenlik", "orta", ""],
-      [406, "وَاجِفِيَّة", "wācifiyya", "titreyenlik", "orta", ""],
-      [408, "مَوْجُوفِيَّة", "mawcūfiyya", "titreyenlik", "orta", ""],
-      [410, "وَجِيفِيَّة", "wacīfiyya", "titreyenlik", "orta", ""],
-      [412, "مَوْجَفِيَّة", "mawcafiyya", "titreyenlik", "orta", ""],
-      [414, "تَوْجِيفِيَّة", "tawcīfiyya", "titreyenlik", "orta", ""],
-      [416, "تَوَاجُفِيَّة", "tawācufiyya", "titreyenlik", "orta", ""],
-      [418, "إِيجَافِيَّة", "ʾīcāfiyya", "titreyenlik", "orta", ""],
-      [420, "اِتِّجَافِيَّة", "itticāfiyya", "titreyenlik", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "وَجَاف", "wacāf", "titreme", "orta", ""],
-      [422, "وُجُوف", "wucūf", "titreme", "orta", ""],
-      [423, "وِجَاف", "wicāf", "titreme", "orta", ""],
-      [424, "وُجْف", "wucf", "titreme", "orta", ""],
-      [425, "وَجَافَة", "wacāfa", "titreme", "orta", ""],
-      [426, "وِجَافَة", "wicāfa", "titreme", "orta", ""],
-      [427, "وُجُوفَة", "wucūfa", "titreme", "orta", ""],
-      [428, "وَجْف", "wacf", "titreme", "orta", ""],
-      [429, "وِجْف", "wicf", "titreme", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "وَاجُوف", "wācūf", "titreme türünden şey", "orta", ""],
-      [432, "وَجَفَة", "wacafa", "titreme türünden şey", "orta", ""],
-      [433, "وُجَفَة", "wucafa", "titreme türünden şey", "orta", ""],
-      [434, "أُوجُوفَة", "ʾūcūfa", "titreme türünden şey", "orta", ""],
-      [435, "وَوْجَف", "wawcaf", "titreme türünden şey", "orta", ""],
-      [437, "وَيْجَف", "waycaf", "titreme türünden şey", "orta", ""],
-      [439, "وَجْف", "wacf", "titreme türünden şey", "orta", ""],
-      [441, "وَجَف", "wacaf", "titreme türünden şey", "orta", "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"],
-      [443, "وِجْف", "wicf", "titreme türünden şey", "orta", ""],
-      [445, "وُجْف", "wucf", "titreme türünden şey", "orta", ""],
-      [447, "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
-      [449, "وِجَف", "wicaf", "titreme türünden şey", "orta", ""],
-      [451, "وُجُف", "wucuf", "titreme türünden şey", "orta", ""],
-      [453, "وَجَاف", "wacāf", "titreme türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "وَاجُوفَة", "wācūfa", "titreme türünden bir tane", "orta", ""],
-      [436, "وَوْجَفَة", "wawcafa", "titreme türünden bir tane", "orta", ""],
-      [438, "وَيْجَفَة", "waycafa", "titreme türünden bir tane", "orta", ""],
-      [440, "وَجْفَة", "wacfa", "titreme türünden bir tane", "orta", ""],
-      [442, "وَجَفَة", "wacafa", "titreme türünden bir tane", "orta", ""],
-      [444, "وِجْفَة", "wicfa", "titreme türünden bir tane", "orta", ""],
-      [446, "وُجْفَة", "wucfa", "titreme türünden bir tane", "orta", ""],
-      [448, "وَجِيفَة", "wacīfa", "titreme türünden bir tane", "orta", ""],
-      [450, "وِجَفَة", "wicafa", "titreme türünden bir tane", "orta", ""],
-      [452, "وُجُفَة", "wucufa", "titreme türünden bir tane", "orta", ""],
-      [454, "وَجَافَة", "wacāfa", "titreme türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَوْجَاف", "ʾawcāf", "titremeler", "orta", ""],
-      [456, "أَوْجِفَة", "ʾawcifa", "titremeler", "orta", ""],
-      [457, "أَوَاجِف", "ʾawācif", "titremeler", "orta", ""],
-      [458, "أَوَاجِيف", "ʾawācīf", "titremeler", "orta", ""],
-      [459, "وُجُوف", "wucūf", "titremeler", "orta", ""],
-      [460, "وُجُف", "wucuf", "titremeler", "orta", ""],
-      [461, "وِجَاف", "wicāf", "titremeler", "orta", ""],
-      [462, "وِجَف", "wicaf", "titremeler", "orta", ""],
-      [463, "وِجَفَة", "wicafa", "titremeler", "orta", ""],
-      [464, "وُجَف", "wucaf", "titremeler", "orta", ""],
-      [465, "وُجَفاء", "wucafāʾ", "titremeler", "orta", ""],
-      [466, "وَجَفَة", "wacafa", "titremeler", "orta", ""],
-      [467, "وُجَّاف", "wuccāf", "titremeler", "orta", ""],
-      [468, "وَجَاف", "wacāf", "titremeler", "orta", ""],
-      [469, "وَجَف", "wacaf", "titremeler", "orta", "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"],
-      [470, "مَوَاجِف", "mawācif", "titremeler", "orta", ""],
-      [471, "مَوَاجِيف", "mawācīf", "titremeler", "orta", ""],
-      [472, "وَوَاجِف", "wawācif", "titremeler", "orta", ""],
-      [473, "أَوْجُف", "ʾawcuf", "titremeler", "orta", ""],
-      [474, "وُجَّف", "wuccaf", "titremeler", "orta", ""],
-      [475, "وَجَائِف", "wacāʾif", "titremeler", "orta", ""],
-      [476, "وُجَيْف", "wucayf", "titremeler", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَوْجَافَات", "ʾawcāfāt", "titremeler topluluğu", "orta", ""],
-      [478, "أَوْجِفَات", "ʾawcifāt", "titremeler topluluğu", "orta", ""],
-      [479, "أَوَاجِفَات", "ʾawācifāt", "titremeler topluluğu", "orta", ""],
-      [480, "أَوَاجِيفَات", "ʾawācīfāt", "titremeler topluluğu", "orta", ""],
-      [481, "وُجُوفَات", "wucūfāt", "titremeler topluluğu", "orta", ""],
-      [482, "وُجُفَات", "wucufāt", "titremeler topluluğu", "orta", ""],
-      [483, "وِجَافَات", "wicāfāt", "titremeler topluluğu", "orta", ""],
-      [484, "وِجَفَات", "wicafāt", "titremeler topluluğu", "orta", ""],
-      [485, "وِجَفَات", "wicafāt", "titremeler topluluğu", "orta", ""],
-      [486, "وُجَفَات", "wucafāt", "titremeler topluluğu", "orta", ""],
-      [487, "وُجَفاآت", "wucafāʾāt", "titremeler topluluğu", "orta", ""],
-      [488, "وَجَفَات", "wacafāt", "titremeler topluluğu", "orta", ""],
-      [489, "وُجَّافَات", "wuccāfāt", "titremeler topluluğu", "orta", ""],
-      [490, "وَجَافَات", "wacāfāt", "titremeler topluluğu", "orta", ""],
-      [491, "وَجَفَات", "wacafāt", "titremeler topluluğu", "orta", ""],
-      [492, "مَوَاجِفَات", "mawācifāt", "titremeler topluluğu", "orta", ""],
-      [493, "مَوَاجِيفَات", "mawācīfāt", "titremeler topluluğu", "orta", ""],
-      [494, "وَوَاجِفَات", "wawācifāt", "titremeler topluluğu", "orta", ""],
-      [495, "أَوْجُفَات", "ʾawcufāt", "titremeler topluluğu", "orta", ""],
-      [496, "وُجَّفَات", "wuccafāt", "titremeler topluluğu", "orta", ""],
-      [497, "وَجَائِفَات", "wacāʾifāt", "titremeler topluluğu", "orta", ""],
-      [498, "وُجَيْفَات", "wucayfāt", "titremeler topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "وجف",
-      "turkce": "Vecf: titremek, çarpmak"
-    },
-    "osmanlica_lugatler": {
-      "أَوْجَفْ": {
-        "sorgular": ["aucaf"],
-        "maddeler": []
-      },
-      "واجِفَة": {
-        "sorgular": ["vacifae"],
-        "maddeler": []
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الجيم والفاء",
-      "baslik": "وجف",
-      "mihveri": "خفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \". ومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل]. ومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \". \"جفن \": {يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13] \"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".",
-      "sesler": "",
-      "tam_metin": "{فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} [الحشر: 6]\n\"وَجَفَ البعيرُ والفرس - كوعد: أسرع في السير، والقلبُ: خاف/ خَفَق من الخوف. وأوجف الذِكْرَ بلسانه: حَرَّكه \".\n° المعنى المحوري\nخفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \".\nومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل].\nومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \".\n\"جفن \":\n{يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13]\n\"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".\n° المعنى المحوري\nغلاف للشيء العظيم أو المهم يسعه ويغطيه أو يحفظه. كجَفْن السيف والعين لهما. ومنه الجَفنة - بالفتح: أعظم ما يكون من القصاع (تضم الطعام في بطنها مع انكشاف وجهها) {وَجِفَانٍ كَالْجَوَابِ} أي تشبه الحياض الضخمة. ومنه \"الجَفْن: ورق العنب، لتغطيته ما تحته. وجَفْنا الرغيف: وَجْهاه \" (كالغلاف للتجوف الذي بينهما) ومن ذلك \"جَفَن نفسه عن الشيء:\n(1/320)\nمَنَعها وظَلَفَها \" (حَجَبها وغَلّفها).\n° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 2,
-      "ilk_yer": "59:6:8:1",
-      "tur": {
-        "V": 1,
-        "ADJ": 1
-      },
-      "bab": {
-        "IV": 1
-      },
-      "zaman_kip": {
-        "PERF": 1
-      },
-      "fiil_ismi_ozellikleri": {
-        "ACT": 1,
-        "PCPL": 1
-      },
-      "lemmalar": {
-        "أَوْجَفْ": 1,
-        "وَاجِفَة": 1
-      },
-      "bicimler": {
-        "أَوْجَفْ": 1,
-        "وَاجِفَةٌ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "WǦF",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab WǦF وجف BP – • HDAL • © SG | 21May2023 √WǦF “root” ▪ WǦF_1 ‘...’ ↗ ... ▪ WǦF_2 ‘...’ ↗ ... ▪ WǦF_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘fast-running, to move briskly, be agitated; (of the healt) to beat strongly; to be seized with love or fear’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "نجف",
-        "u": "نجف",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "نجف (form I)\n# نَجِفُ (najifu) /na.d͡ʒi.fu/: first-person plural non-past active indicative of وَجَفَ (wajafa)\n# نَجِفَ (najifa) /na.d͡ʒi.fa/: first-person plural non-past active subjunctive of وَجَفَ (wajafa)\n# نَجِفْ (najif) /na.d͡ʒif/: first-person plural non-past active jussive of وَجَفَ (wajafa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["najifu", "wajafa", "najifa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفن",
-        "u": "جفن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جِفْنَ • (jifna) (form I) /d͡ʒif.na/\n# second-person feminine plural imperative of وَجَفَ (wajafa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jifna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفا",
-        "u": "جفا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جِفَا • (jifā) (form I) /d͡ʒi.faː/\n# second-person dual imperative of وَجَفَ (wajafa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jifā", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "أجف",
-        "u": "أجف",
-        "p": "verb",
-        "n": "6",
-        "h": "ar-verb form",
-        "e": "أجف (form I)\n# أَجِفُ (ʔajifu) /ʔa.d͡ʒi.fu/: first-person singular non-past active indicative of وَجَفَ (wajafa)\n# أَجِفَ (ʔajifa) /ʔa.d͡ʒi.fa/: first-person singular non-past active subjunctive of وَجَفَ (wajafa)\n# أَجِفْ (ʔajif) /ʔa.d͡ʒif/: first-person singular non-past active jussive of وَجَفَ (wajafa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["ʔajifu", "wajafa", "ʔajifa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "جف",
-        "u": "جف",
-        "p": "verb",
-        "n": "4",
-        "h": "ar-verb form",
-        "e": "جِفْ • (jif) (form I) /d͡ʒif/\n# second-person masculine singular imperative of وَجَفَ (wajafa)",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jif", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجف",
-        "u": "وجف",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "وَجَفَ • (wajafa) I (non-past يَجِفُ (yajifu), verbal noun وَجَف (wajaf) or وَجِيف (wajīf))",
-        "g": ["to be agitated", "to beat", "to start running at a faster pace", "to shake"],
-        "r": ["wajafa"],
-        "yol": "müştak"
-      },
-      {
-        "w": "وجف",
-        "u": "وجف",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "وَجَف • (wajaf) m",
-        "synonyms": ["وَجِيف", "خَفَقَان"],
-        "g": ["verbal noun of وَجَفَ (wajafa) (form I)", "heartbeat"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["وَجَفَ"],
-        "r": ["wajaf"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفن",
-        "u": "تجفن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجِفْنَ • (tajifna) (form I) /ta.d͡ʒif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفن",
-        "u": "يجفن",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَجِفْنَ • (yajifna) (form I) /ja.d͡ʒif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجف",
-        "u": "تجف",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "تجف (form I)\n# تَجِفُ (tajifu) /ta.d͡ʒi.fu/: inflection of وَجَفَ (wajafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجِفَ (tajifa) /ta.d͡ʒi.fa/: inflection of وَجَفَ (wajafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# تَجِفْ (t",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifu", "wajafa", "tajifa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجف",
-        "u": "يجف",
-        "p": "verb",
-        "n": "5",
-        "h": "ar-verb form",
-        "e": "يجف (form I)\n# يَجِفُ (yajifu) /ja.d͡ʒi.fu/: third-person masculine singular non-past active indicative of وَجَفَ (wajafa)\n# يَجِفَ (yajifa) /ja.d͡ʒi.fa/: third-person masculine singular non-past active subjunctive of وَجَفَ (wajafa)\n# يَجِفْ (yajif) /ja.d͡ʒif/: third-person masculine singular non-past active jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifu", "wajafa", "yajifa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفوا",
-        "u": "جفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جِفُوا • (jifū) (form I) /d͡ʒi.fuː/\n# second-person masculine plural imperative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jifū", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفين",
-        "u": "تجفين",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجِفِينَ • (tajifīna) (form I) /ta.d͡ʒi.fiː.na/\n# second-person feminine singular non-past active indicative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifīna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفان",
-        "u": "يجفان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَجِفَانِ • (yajifāni) (form I) /ja.d͡ʒi.faː.ni/\n# third-person masculine dual non-past active indicative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifāni", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفون",
-        "u": "تجفون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجِفُونَ • (tajifūna) (form I) /ta.d͡ʒi.fuː.na/\n# second-person masculine plural non-past active indicative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifūna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفان",
-        "u": "تجفان",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجِفَانِ • (tajifāni) (form I) /ta.d͡ʒi.faː.ni/\n# inflection of وَجَفَ (wajafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifāni", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفون",
-        "u": "يجفون",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَجِفُونَ • (yajifūna) (form I) /ja.d͡ʒi.fuː.na/\n# third-person masculine plural non-past active indicative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifūna", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفا",
-        "u": "تجفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "تَجِفَا • (tajifā) (form I) /ta.d͡ʒi.faː/\n# inflection of وَجَفَ (wajafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifā", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفي",
-        "u": "تجفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجِفِي • (tajifī) (form I) /ta.d͡ʒi.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifī", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "تجفوا",
-        "u": "تجفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "تَجِفُوا • (tajifū) (form I) /ta.d͡ʒi.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["tajifū", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفا",
-        "u": "يجفا",
-        "p": "verb",
-        "n": "2",
-        "h": "ar-verb form",
-        "e": "يَجِفَا • (yajifā) (form I) /ja.d͡ʒi.faː/\n# third-person masculine dual non-past active subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifā", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "يجفوا",
-        "u": "يجفوا",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "يَجِفُوا • (yajifū) (form I) /ja.d͡ʒi.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["yajifū", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "جفي",
-        "u": "جفي",
-        "p": "verb",
-        "n": "3",
-        "h": "ar-verb form",
-        "e": "جِفِي • (jifī) (form I) /d͡ʒi.fiː/\n# second-person feminine singular imperative of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["jifī", "wajafa"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفتما",
-        "u": "وجفتما",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفتما (form I)\n# وَجَفْتُمَا (wajaftumā) /wa.d͡ʒaf.tu.maː/: second-person dual past active of وَجَفَ (wajafa)\n# وُجِفْتُمَا (wujiftumā) /wu.d͡ʒif.tu.maː/: second-person dual past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajaftumā", "wajafa", "wujiftumā"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفت",
-        "u": "وجفت",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفت (form I)\n# وَجَفْتُ (wajaftu) /wa.d͡ʒaf.tu/: first-person singular past active of وَجَفَ (wajafa)\n# وَجَفْتَ (wajafta) /wa.d͡ʒaf.ta/: second-person masculine singular past active of وَجَفَ (wajafa)\n# وَجَفْتِ (wajafti) /wa.d͡ʒaf.ti/: second-person feminine singular past active of وَجَفَ (wajafa)\n# وَجَفَتْ (wajafat) /wa.d͡ʒa.fat/: third-person feminine singular past active of وَجَفَ (wajafa)\n",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajaftu", "wajafa", "wajafta"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفتا",
-        "u": "وجفتا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفتا (form I)\n# وَجَفَتَا (wajafatā) /wa.d͡ʒa.fa.taː/: third-person feminine dual past active of وَجَفَ (wajafa)\n# وُجِفَتَا (wujifatā) /wu.d͡ʒi.fa.taː/: third-person feminine dual past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajafatā", "wajafa", "wujifatā"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفا",
-        "u": "وجفا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفا (form I)\n# وَجَفَا (wajafā) /wa.d͡ʒa.faː/: third-person masculine dual past active of وَجَفَ (wajafa)\n# وُجِفَا (wujifā) /wu.d͡ʒi.faː/: third-person masculine dual past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajafā", "wajafa", "wujifā"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفتم",
-        "u": "وجفتم",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفتم (form I)\n# وَجَفْتُمْ (wajaftum) /wa.d͡ʒaf.tum/: second-person masculine plural past active of وَجَفَ (wajafa)\n# وُجِفْتُمْ (wujiftum) /wu.d͡ʒif.tum/: second-person masculine plural past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajaftum", "wajafa", "wujiftum"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفوا",
-        "u": "وجفوا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفوا (form I)\n# وَجَفُوا (wajafū) /wa.d͡ʒa.fuː/: third-person masculine plural past active of وَجَفَ (wajafa)\n# وُجِفُوا (wujifū) /wu.d͡ʒi.fuː/: third-person masculine plural past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajafū", "wajafa", "wujifū"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفنا",
-        "u": "وجفنا",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفنا (form I)\n# وَجَفْنَا (wajafnā) /wa.d͡ʒaf.naː/: first-person plural past active of وَجَفَ (wajafa)\n# وُجِفْنَا (wujifnā) /wu.d͡ʒif.naː/: first-person plural past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajafnā", "wajafa", "wujifnā"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفتن",
-        "u": "وجفتن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفتن (form I)\n# وَجَفْتُنَّ (wajaftunna) /wa.d͡ʒaf.tun.na/: second-person feminine plural past active of وَجَفَ (wajafa)\n# وُجِفْتُنَّ (wujiftunna) /wu.d͡ʒif.tun.na/: second-person feminine plural past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajaftunna", "wajafa", "wujiftunna"],
-        "k": "وجف",
-        "yol": "kök"
-      },
-      {
-        "w": "وجفن",
-        "u": "وجفن",
-        "p": "verb",
-        "h": "ar-verb form",
-        "e": "وجفن (form I)\n# وَجَفْنَ (wajafna) /wa.d͡ʒaf.na/: third-person feminine plural past active of وَجَفَ (wajafa)\n# وُجِفْنَ (wujifna) /wu.d͡ʒif.na/: third-person feminine plural past passive of وَجَفَ (wajafa)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "tag": ["form-i", "no-gloss"],
-        "r": ["wajafna", "wajafa", "wujifna"],
-        "k": "وجف",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "واجفة": "korkan"
-    },
-    "mustak_lugat": {
-      "وَجِيف": [
-        {
-          "eser": "Vankulu",
-          "madde": "vecif",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Bir nesne deprenip muztarib olmak; yukâlu: وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ Ve وَجِيفٌ [vecîf] Devenin ve atın bir cins yürümesi.",
-              "misaller": [
-                ["وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْوَجِيفُ",
-          "okunus": "el-vecîf",
-          "koken": "vâvın fethi ve cîmin kesri ve meddiyle"
-        }
-      ]
-    },
-    "tercume": {
-      "cebel_mihveri": {
-        "mihveri": "Bir şeyin hareketindeki hafiflik ve onun kendi makarrından (karargâhından) uzaklaşmasıdır. (İhtiva ettiği şeyin hafifliği sebebiyle) dilin, zikr ile makarrından hafifçe yükselmesi, atın ve sâirinin süratlenirken yerden yükselmesi gibi. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} yani onu tahsil etmek için ne at işlettiniz ne râkib (binek) yordunuz; tâ ki onda sizin bir hisseniz ola. Bu hareket hafifliğindendir: «وَجَفَ القلبُ: korkudan çarptı» {قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [Nâziât: 8]. Zeccâc dedi: şiddetli ıztırap içinde. Bir hâlin ortasından uzak bir yere iterek çıkma mülâhazasından «جَفَأَ البقلَ: sebzeyi kökünden söktü» dediler. «جفن»: {يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [Sebe': 13]. «الجَفْن — feth ile: gözün üstten ve alttan örtüsü, ve kılıcın kını»."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dönüş — EtymArab — WǦF وجف — BP – • HDAL • © SG | 21 Mayıs 2023 — √WǦF «kök» ▪ WǦF_1 '...' ↗ ... ▪ WǦF_2 '...' ↗ ... ▪ WǦF_3 '...' ↗ ... ♦ Klasik Arapçada mana tayfı (BAH2008'e göre): 'süratle koşan, çevik hareket eden, ıztıraba düşen; (kalbi) kuvvetle çarpan; aşka yahut korkuya tutulan' ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; konkordans ; tarih ; soydaş diller ; söylem ; batı ; türev ;"
-      },
-      "kaikki_vikisozluk": [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {
-          "g": ["ıztıraba düşmek, çalkalanmak", "çarpmak", "süratini artırıp koşuya koyulmak", "sarsmak, titretmek"]
-        },
-        {
-          "g": ["وَجَفَ (vecefe) fiilinin (birinci bâb) masdarı", "kalp çarpıntısı"]
-        },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {}
-      ]
-    }
-  },
-  "kuran_gecisleri": 2,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "جف",
+  "ses": {
     "harf": "و",
+    "fasil": "جف",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Vecf: titremek, çarpmak",
+  "esas_manalar": "hızla koşmak{kalbin çarpması, titremek}",
+  "lugat": {
+    "Vankulu": [
+      {
+        "madde": "vecif",
+        "koken": "vâvın fethi ve cîmin kesri ve meddiyle",
+        "yazilis": "اَلْوَجِيفُ",
+        "okunus": "el-vecîf",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Bir nesne deprenip muztarib olmak; yukâlu: وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ Ve وَجِيفٌ [vecîf] Devenin ve atın bir cins yürümesi.",
+            "misaller": [
+              ["وَجَفَ الشَّيْءُ إِذَا اضْطَرَبَ", ""]
+            ]
+          }
+        ],
+        "kelime": ["وَجِيف"]
+      }
+    ]
+  },
+  "cebel": {
+    "fasil": "الجيم والفاء",
+    "baslik": "وجف",
+    "mihveri": "خفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \". ومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل]. ومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \". \"جفن \": {يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13] \"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".",
+    "tam_metin": "{فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} [الحشر: 6]\n\"وَجَفَ البعيرُ والفرس - كوعد: أسرع في السير، والقلبُ: خاف/ خَفَق من الخوف. وأوجف الذِكْرَ بلسانه: حَرَّكه \".\n° المعنى المحوري\nخفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \".\nومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل].\nومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \".\n\"جفن \":\n{يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13]\n\"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".\n° المعنى المحوري\nغلاف للشيء العظيم أو المهم يسعه ويغطيه أو يحفظه. كجَفْن السيف والعين لهما. ومنه الجَفنة - بالفتح: أعظم ما يكون من القصاع (تضم الطعام في بطنها مع انكشاف وجهها) {وَجِفَانٍ كَالْجَوَابِ} أي تشبه الحياض الضخمة. ومنه \"الجَفْن: ورق العنب، لتغطيته ما تحته. وجَفْنا الرغيف: وَجْهاه \" (كالغلاف للتجوف الذي بينهما) ومن ذلك \"جَفَن نفسه عن الشيء:\n(1/320)\nمَنَعها وظَلَفَها \" (حَجَبها وغَلّفها).\n° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن).",
+    "mihveri_tr": "Bir şeyin hareketindeki hafiflik ve onun kendi makarrından (karargâhından) uzaklaşmasıdır. (İhtiva ettiği şeyin hafifliği sebebiyle) dilin, zikr ile makarrından hafifçe yükselmesi, atın ve sâirinin süratlenirken yerden yükselmesi gibi. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} yani onu tahsil etmek için ne at işlettiniz ne râkib (binek) yordunuz; tâ ki onda sizin bir hisseniz ola. Bu hareket hafifliğindendir: «وَجَفَ القلبُ: korkudan çarptı» {قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [Nâziât: 8]. Zeccâc dedi: şiddetli ıztırap içinde. Bir hâlin ortasından uzak bir yere iterek çıkma mülâhazasından «جَفَأَ البقلَ: sebzeyi kökünden söktü» dediler. «جفن»: {يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [Sebe': 13]. «الجَفْن — feth ile: gözün üstten ve alttan örtüsü, ve kılıcın kını»."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "vikisozluk": [
+    {
+      "madde": "نجف",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "نجف (form I)\n# نَجِفُ (najifu) /na.d͡ʒi.fu/: first-person plural non-past active indicative of وَجَفَ (wajafa)\n# نَجِفَ (najifa) /na.d͡ʒi.fa/: first-person plural non-past active subjunctive of وَجَفَ (wajafa)\n# نَجِفْ (najif) /na.d͡ʒif/: first-person plural non-past active jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["najifu", "wajafa", "najifa"]
+    },
+    {
+      "madde": "جفن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جِفْنَ • (jifna) (form I) /d͡ʒif.na/\n# second-person feminine plural imperative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jifna", "wajafa"]
+    },
+    {
+      "madde": "جفا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جِفَا • (jifā) (form I) /d͡ʒi.faː/\n# second-person dual imperative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jifā", "wajafa"]
+    },
+    {
+      "madde": "أجف",
+      "tur": "verb",
+      "etim_no": "6",
+      "baslik": "أجف (form I)\n# أَجِفُ (ʔajifu) /ʔa.d͡ʒi.fu/: first-person singular non-past active indicative of وَجَفَ (wajafa)\n# أَجِفَ (ʔajifa) /ʔa.d͡ʒi.fa/: first-person singular non-past active subjunctive of وَجَفَ (wajafa)\n# أَجِفْ (ʔajif) /ʔa.d͡ʒif/: first-person singular non-past active jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["ʔajifu", "wajafa", "ʔajifa"]
+    },
+    {
+      "madde": "جف",
+      "tur": "verb",
+      "etim_no": "4",
+      "baslik": "جِفْ • (jif) (form I) /d͡ʒif/\n# second-person masculine singular imperative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jif", "wajafa"]
+    },
+    {
+      "madde": "وجف",
+      "tur": "verb",
+      "baslik": "وَجَفَ • (wajafa) I (non-past يَجِفُ (yajifu), verbal noun وَجَف (wajaf) or وَجِيف (wajīf))",
+      "anlam": ["to be agitated", "to beat", "to start running at a faster pace", "to shake"],
+      "okunus": ["wajafa"],
+      "bag": "müştak",
+      "anlam_tr": ["ıztıraba düşmek, çalkalanmak", "çarpmak", "süratini artırıp koşuya koyulmak", "sarsmak, titretmek"]
+    },
+    {
+      "madde": "وجف",
+      "tur": "noun",
+      "baslik": "وَجَف • (wajaf) m",
+      "esanlamli": ["وَجِيف", "خَفَقَان"],
+      "anlam": ["verbal noun of وَجَفَ (wajafa) (form I)", "heartbeat"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["وَجَفَ"],
+      "okunus": ["wajaf"],
+      "anlam_tr": ["وَجَفَ (vecefe) fiilinin (birinci bâb) masdarı", "kalp çarpıntısı"]
+    },
+    {
+      "madde": "تجفن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجِفْنَ • (tajifna) (form I) /ta.d͡ʒif.na/\n# second-person feminine plural non-past active indicative/subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifna", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفن",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَجِفْنَ • (yajifna) (form I) /ja.d͡ʒif.na/\n# third-person feminine plural non-past active indicative/subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifna", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجف",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "تجف (form I)\n# تَجِفُ (tajifu) /ta.d͡ʒi.fu/: inflection of وَجَفَ (wajafa):\n## second-person masculine singular non-past active indicative\n## third-person feminine singular non-past active indicative\n# تَجِفَ (tajifa) /ta.d͡ʒi.fa/: inflection of وَجَفَ (wajafa):\n## second-person masculine singular non-past active subjunctive\n## third-person feminine singular non-past active subjunctive\n# تَجِفْ (t",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifu", "wajafa", "tajifa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجف",
+      "tur": "verb",
+      "etim_no": "5",
+      "baslik": "يجف (form I)\n# يَجِفُ (yajifu) /ja.d͡ʒi.fu/: third-person masculine singular non-past active indicative of وَجَفَ (wajafa)\n# يَجِفَ (yajifa) /ja.d͡ʒi.fa/: third-person masculine singular non-past active subjunctive of وَجَفَ (wajafa)\n# يَجِفْ (yajif) /ja.d͡ʒif/: third-person masculine singular non-past active jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifu", "wajafa", "yajifa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جِفُوا • (jifū) (form I) /d͡ʒi.fuː/\n# second-person masculine plural imperative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jifū", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفين",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجِفِينَ • (tajifīna) (form I) /ta.d͡ʒi.fiː.na/\n# second-person feminine singular non-past active indicative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifīna", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَجِفَانِ • (yajifāni) (form I) /ja.d͡ʒi.faː.ni/\n# third-person masculine dual non-past active indicative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifāni", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجِفُونَ • (tajifūna) (form I) /ta.d͡ʒi.fuː.na/\n# second-person masculine plural non-past active indicative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifūna", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفان",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجِفَانِ • (tajifāni) (form I) /ta.d͡ʒi.faː.ni/\n# inflection of وَجَفَ (wajafa):\n## second-person dual non-past active indicative\n## third-person feminine dual non-past active indicative",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifāni", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفون",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَجِفُونَ • (yajifūna) (form I) /ja.d͡ʒi.fuː.na/\n# third-person masculine plural non-past active indicative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifūna", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "تَجِفَا • (tajifā) (form I) /ta.d͡ʒi.faː/\n# inflection of وَجَفَ (wajafa):\n## second-person dual non-past active subjunctive/jussive\n## third-person feminine dual non-past active subjunctive/jussive",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifā", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجِفِي • (tajifī) (form I) /ta.d͡ʒi.fiː/\n# second-person feminine singular non-past active subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifī", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "تجفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "تَجِفُوا • (tajifū) (form I) /ta.d͡ʒi.fuː/\n# second-person masculine plural non-past active subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["tajifū", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفا",
+      "tur": "verb",
+      "etim_no": "2",
+      "baslik": "يَجِفَا • (yajifā) (form I) /ja.d͡ʒi.faː/\n# third-person masculine dual non-past active subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifā", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "يجفوا",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "يَجِفُوا • (yajifū) (form I) /ja.d͡ʒi.fuː/\n# third-person masculine plural non-past active subjunctive/jussive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["yajifū", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "جفي",
+      "tur": "verb",
+      "etim_no": "3",
+      "baslik": "جِفِي • (jifī) (form I) /d͡ʒi.fiː/\n# second-person feminine singular imperative of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["jifī", "wajafa"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفتما",
+      "tur": "verb",
+      "baslik": "وجفتما (form I)\n# وَجَفْتُمَا (wajaftumā) /wa.d͡ʒaf.tu.maː/: second-person dual past active of وَجَفَ (wajafa)\n# وُجِفْتُمَا (wujiftumā) /wu.d͡ʒif.tu.maː/: second-person dual past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajaftumā", "wajafa", "wujiftumā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفت",
+      "tur": "verb",
+      "baslik": "وجفت (form I)\n# وَجَفْتُ (wajaftu) /wa.d͡ʒaf.tu/: first-person singular past active of وَجَفَ (wajafa)\n# وَجَفْتَ (wajafta) /wa.d͡ʒaf.ta/: second-person masculine singular past active of وَجَفَ (wajafa)\n# وَجَفْتِ (wajafti) /wa.d͡ʒaf.ti/: second-person feminine singular past active of وَجَفَ (wajafa)\n# وَجَفَتْ (wajafat) /wa.d͡ʒa.fat/: third-person feminine singular past active of وَجَفَ (wajafa)\n",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajaftu", "wajafa", "wajafta"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفتا",
+      "tur": "verb",
+      "baslik": "وجفتا (form I)\n# وَجَفَتَا (wajafatā) /wa.d͡ʒa.fa.taː/: third-person feminine dual past active of وَجَفَ (wajafa)\n# وُجِفَتَا (wujifatā) /wu.d͡ʒi.fa.taː/: third-person feminine dual past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajafatā", "wajafa", "wujifatā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفا",
+      "tur": "verb",
+      "baslik": "وجفا (form I)\n# وَجَفَا (wajafā) /wa.d͡ʒa.faː/: third-person masculine dual past active of وَجَفَ (wajafa)\n# وُجِفَا (wujifā) /wu.d͡ʒi.faː/: third-person masculine dual past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajafā", "wajafa", "wujifā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفتم",
+      "tur": "verb",
+      "baslik": "وجفتم (form I)\n# وَجَفْتُمْ (wajaftum) /wa.d͡ʒaf.tum/: second-person masculine plural past active of وَجَفَ (wajafa)\n# وُجِفْتُمْ (wujiftum) /wu.d͡ʒif.tum/: second-person masculine plural past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajaftum", "wajafa", "wujiftum"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفوا",
+      "tur": "verb",
+      "baslik": "وجفوا (form I)\n# وَجَفُوا (wajafū) /wa.d͡ʒa.fuː/: third-person masculine plural past active of وَجَفَ (wajafa)\n# وُجِفُوا (wujifū) /wu.d͡ʒi.fuː/: third-person masculine plural past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajafū", "wajafa", "wujifū"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفنا",
+      "tur": "verb",
+      "baslik": "وجفنا (form I)\n# وَجَفْنَا (wajafnā) /wa.d͡ʒaf.naː/: first-person plural past active of وَجَفَ (wajafa)\n# وُجِفْنَا (wujifnā) /wu.d͡ʒif.naː/: first-person plural past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajafnā", "wajafa", "wujifnā"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفتن",
+      "tur": "verb",
+      "baslik": "وجفتن (form I)\n# وَجَفْتُنَّ (wajaftunna) /wa.d͡ʒaf.tun.na/: second-person feminine plural past active of وَجَفَ (wajafa)\n# وُجِفْتُنَّ (wujiftunna) /wu.d͡ʒif.tun.na/: second-person feminine plural past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajaftunna", "wajafa", "wujiftunna"],
+      "etimoloji": 1
+    },
+    {
+      "madde": "وجفن",
+      "tur": "verb",
+      "baslik": "وجفن (form I)\n# وَجَفْنَ (wajafna) /wa.d͡ʒaf.na/: third-person feminine plural past active of وَجَفَ (wajafa)\n# وُجِفْنَ (wujifna) /wu.d͡ʒif.na/: third-person feminine plural past passive of وَجَفَ (wajafa)",
+      "etiket": ["form-i", "no-gloss"],
+      "okunus": ["wajafna", "wajafa", "wujifna"],
+      "etimoloji": 1
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "WǦF",
+    "kok_maddesi": "Back to library EtymArab WǦF وجف BP – • HDAL • © SG | 21May2023 √WǦF “root” ▪ WǦF_1 ‘...’ ↗ ... ▪ WǦF_2 ‘...’ ↗ ... ▪ WǦF_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘fast-running, to move briskly, be agitated; (of the healt) to beat strongly; to be seized with love or fear’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dönüş — EtymArab — WǦF وجف — BP – • HDAL • © SG | 21 Mayıs 2023 — √WǦF «kök» ▪ WǦF_1 '...' ↗ ... ▪ WǦF_2 '...' ↗ ... ▪ WǦF_3 '...' ↗ ... ♦ Klasik Arapçada mana tayfı (BAH2008'e göre): 'süratle koşan, çevik hareket eden, ıztıraba düşen; (kalbi) kuvvetle çarpan; aşka yahut korkuya tutulan' ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; konkordans ; tarih ; soydaş diller ; söylem ; batı ; türev ;"
+  },
+  "kuran": {
+    "gecis": 2,
+    "ilk": "59:6:8:1",
+    "tur": {
+      "V": 1,
+      "ADJ": 1
+    },
+    "bab": {
+      "IV": 1
+    },
+    "zaman_kip": {
+      "PERF": 1
+    },
+    "fiil_ismi_ozellikleri": {
+      "ACT": 1,
+      "PCPL": 1
+    },
+    "lemmalar": {
+      "أَوْجَفْ": 1,
+      "وَاجِفَة": 1
+    },
+    "bicimler": {
+      "أَوْجَفْ": 1,
+      "وَاجِفَةٌ": 1
+    },
+    "morfoloji_gecis": 2
+  },
+  "kelimeler": [
+    {
+      "lemma": "أَوْجَفْ",
+      "hal": "fiil",
+      "bab": "af'ale",
+      "bicimler": [
+        {
+          "kelime": "أَوْجَفْتُمْ",
+          "zaman": "Mâzî",
+          "ilk": "59:6",
+          "adet": 1,
+          "tr": "sürdün"
+        }
+      ],
+      "tr": "sürdün",
+      "bab_no": "IV",
+      "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma",
+      "adet": 1
+    },
+    {
+      "lemma": "واجِفَة",
+      "hal": "isim",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "وَاجِفَةٌ",
+          "ilk": "79:8",
+          "adet": 1,
+          "tr": "korkan"
+        }
+      ],
+      "tr": "korkan",
+      "bab_no": "I",
+      "nasil": "ism-i fâil · sülâsî · fâ'il + müennes",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "وَجْف", "wacf", "titreme", "orta", ""],
+      ["fi'l", "semâî aday", "وِجْف", "wicf", "titreme", "orta", ""],
+      ["fu'l", "semâî aday", "وُجْف", "wucf", "titreme", "orta", ""],
+      [
+        "fa'al",
+        "semâî aday",
+        "وَجَف",
+        "wacaf",
+        "titreme",
+        "orta",
+        "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"
+      ],
+      ["fi'al", "semâî aday", "وِجَف", "wicaf", "titreme", "orta", ""],
+      ["fu'ul", "semâî aday", "وُجُف", "wucuf", "titreme", "orta", ""],
+      ["fu'ūl", "semâî aday", "وُجُوف", "wucūf", "titreme", "orta", ""],
+      ["fi'āl", "semâî aday", "وِجَاف", "wicāf", "titreme", "orta", ""],
+      ["fu'āl", "semâî aday", "وُجَاف", "wucāf", "titreme", "orta", ""],
+      ["fa'āl", "semâî aday", "وَجَاف", "wacāf", "titreme", "orta", ""],
+      ["fa'āle", "semâî aday", "وَجَافَة", "wacāfa", "titreme", "orta", ""],
+      ["fu'ūle", "semâî aday", "وُجُوفَة", "wucūfa", "titreme", "orta", ""],
+      ["fi'āle", "semâî aday", "وِجَافَة", "wicāfa", "titreme", "orta", ""],
+      ["fa'īl", "semâî aday", "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
+      ["fa'ūl", "semâî aday", "وَجُوف", "wacūf", "titreme", "orta", ""],
+      ["fa'alān", "semâî aday", "وَجَفَان", "wacafān", "titreme", "orta", ""],
+      ["fu'lān", "semâî aday", "وُجْفَان", "wucfān", "titreme", "orta", ""],
+      ["fi'lān", "semâî aday", "وِجْفَان", "wicfān", "titreme", "orta", ""],
+      ["fa'lā", "semâî aday", "وَجْفَى", "wacfā", "titreme", "orta", ""],
+      ["fu'lā", "semâî aday", "وُجْفَى", "wucfā", "titreme", "orta", ""],
+      ["fi'lā", "semâî aday", "وِجْفَى", "wicfā", "titreme", "orta", ""],
+      ["fa'ale", "semâî aday", "وَجَفَة", "wacafa", "titreme", "orta", ""],
+      ["fi'ale", "semâî aday", "وِجَفَة", "wicafa", "titreme", "orta", ""],
+      ["fa'lūla", "semâî aday", "وَجْفُوفَة", "wacfūfa", "titreme", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُوجُوف", "tūcūf", "titreme", "orta", ""],
+      ["taf'ila", "semâî aday", "تَوْجِفَة", "tawcifa", "titreme", "orta", ""],
+      ["taf'ala", "semâî aday", "تَوْجَفَة", "tawcafa", "titreme", "orta", ""],
+      ["maf'ula", "semâî aday", "مَوْجُفَة", "mawcufa", "titreme", "orta", ""],
+      ["maf'ila", "semâî aday", "مَوْجِفَة", "mawcifa", "titreme", "orta", ""],
+      ["fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", "جِفَة", "cifa", "titreme", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَوْجِيف", "tawcīf", "titretme", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَوْجِفَة", "tawcifa", "titretme", "orta", ""],
+      ["fi''āl", "kıyâsî", "وِجِّاف", "wiccāf", "titretme", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَوْجِيفَة", "tawcīfa", "bir kere titretme", "orta", ""],
+      ["fi''āl + tâ", "aday", "وِجِّافَة", "wiccāfa", "bir kere titretme", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُوَجِّف", "muwaccif", "titreten", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُوَجِّفَة", "muwaccifa", "titreten, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُوَجِّفَان", "muwaccifān", "titreten, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُوَجِّفَتَان",
+        "muwaccifatān",
+        "titreten, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوَجِّفُون", "muwaccifūn", "titretenler", "orta", ""],
+      ["mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوَجِّفِين", "muwaccifīn", "titretenler", "orta", ""],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَجِّفَات",
+        "muwaccifāt",
+        "titretenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَجَّف", "muwaccaf", "titretilen", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُوَجَّفَة", "muwaccafa", "titretilen, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُوَجَّفَان", "muwaccafān", "titretilen, iki", "orta", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُوَجَّفَتَان",
+        "muwaccafatān",
+        "titretilen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوَجَّفُون", "muwaccafūn", "titretilenler", "orta", ""],
+      ["mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوَجَّفِين", "muwaccafīn", "titretilenler", "orta", ""],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَجَّفَات",
+        "muwaccafāt",
+        "titretilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَجَّف", "muwaccaf", "titretme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُوَاجَفَة", "muwācafa", "biriyle karşılıklı titreme", "orta", ""],
+      ["fi'āl", "kıyâsî", "وِجَاف", "wicāf", "biriyle karşılıklı titreme", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "وِجَافَة", "wicāfa", "bir kere biriyle karşılıklı titreme", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُوَاجِف", "muwācif", "biriyle karşılıklı titreyen", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُوَاجِفَة", "muwācifa", "biriyle karşılıklı titreyen, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُوَاجِفَان", "muwācifān", "biriyle karşılıklı titreyen, iki", "orta", ""],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُوَاجِفَتَان",
+        "muwācifatān",
+        "biriyle karşılıklı titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاجِفُون",
+        "muwācifūn",
+        "biriyle karşılıklı titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاجِفِين",
+        "muwācifīn",
+        "biriyle karşılıklı titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاجِفَات",
+        "muwācifāt",
+        "biriyle karşılıklı titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاجَف", "muwācaf", "biriyle karşılıklı titrenen", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُوَاجَفَة", "muwācafa", "biriyle karşılıklı titrenen, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُوَاجَفَان", "muwācafān", "biriyle karşılıklı titrenen, iki", "orta", ""],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُوَاجَفَتَان",
+        "muwācafatān",
+        "biriyle karşılıklı titrenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاجَفُون",
+        "muwācafūn",
+        "biriyle karşılıklı titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاجَفِين",
+        "muwācafīn",
+        "biriyle karşılıklı titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاجَفَات",
+        "muwācafāt",
+        "biriyle karşılıklı titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاجَف", "muwācaf", "biriyle karşılıklı titreme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِيجَاف", "ʾīcāf", "titretme", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِيجَافَة", "ʾīcāfa", "bir kere titretme", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُوجِف", "mūcif", "titreten", "orta", ""],
+      ["muf'il + müennes", "kıyâsî", "مُوجِفَة", "mūcifa", "titreten, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُوجِفَان", "mūcifān", "titreten, iki", "orta", ""],
+      ["muf'il + müennes tesniye", "kıyâsî", "مُوجِفَتَان", "mūcifatān", "titreten, iki, müennes", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوجِفُون", "mūcifūn", "titretenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوجِفِين", "mūcifīn", "titretenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "مُوجِفَات", "mūcifāt", "titretenler, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوجَف", "mūcaf", "titretilen", "orta", ""],
+      ["muf'al + müennes", "kıyâsî", "مُوجَفَة", "mūcafa", "titretilen, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُوجَفَان", "mūcafān", "titretilen, iki", "orta", ""],
+      ["muf'al + müennes tesniye", "kıyâsî", "مُوجَفَتَان", "mūcafatān", "titretilen, iki, müennes", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوجَفُون", "mūcafūn", "titretilenler", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوجَفِين", "mūcafīn", "titretilenler", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوجَفَات",
+        "mūcafāt",
+        "titretilenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوجَف", "mūcaf", "titretme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَوَجُّف", "tawaccuf", "kendini zorlayarak titreme", "orta", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَوَجُّفَة", "tawaccufa", "bir kere kendini zorlayarak titreme", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَوَجِّف", "mutawaccif", "kendini zorlayarak titreyen", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَوَجِّفَة",
+        "mutawaccifa",
+        "kendini zorlayarak titreyen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَوَجِّفَان",
+        "mutawaccifān",
+        "kendini zorlayarak titreyen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَجِّفَتَان",
+        "mutawaccifatān",
+        "kendini zorlayarak titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَجِّفُون",
+        "mutawaccifūn",
+        "kendini zorlayarak titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَجِّفِين",
+        "mutawaccifīn",
+        "kendini zorlayarak titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَجِّفَات",
+        "mutawaccifāt",
+        "kendini zorlayarak titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَوَجَّف", "mutawaccaf", "kendini zorlayarak titrenen", "orta", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَوَجَّفَة",
+        "mutawaccafa",
+        "kendini zorlayarak titrenen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَوَجَّفَان",
+        "mutawaccafān",
+        "kendini zorlayarak titrenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَجَّفَتَان",
+        "mutawaccafatān",
+        "kendini zorlayarak titrenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَجَّفُون",
+        "mutawaccafūn",
+        "kendini zorlayarak titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَجَّفِين",
+        "mutawaccafīn",
+        "kendini zorlayarak titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَجَّفَات",
+        "mutawaccafāt",
+        "kendini zorlayarak titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَوَجَّف", "mutawaccaf", "kendini zorlayarak titreme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَوَاجُف", "tawācuf", "hep birlikte titreme", "orta", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَوَاجُفَة", "tawācufa", "bir kere hep birlikte titreme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَوَاجِف", "mutawācif", "hep birlikte titreyen", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَوَاجِفَة", "mutawācifa", "hep birlikte titreyen, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَوَاجِفَان", "mutawācifān", "hep birlikte titreyen, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاجِفَتَان",
+        "mutawācifatān",
+        "hep birlikte titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاجِفُون",
+        "mutawācifūn",
+        "hep birlikte titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاجِفِين",
+        "mutawācifīn",
+        "hep birlikte titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاجِفَات",
+        "mutawācifāt",
+        "hep birlikte titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاجَف", "mutawācaf", "hep birlikte titrenen", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَوَاجَفَة", "mutawācafa", "hep birlikte titrenen, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَوَاجَفَان", "mutawācafān", "hep birlikte titrenen, iki", "orta", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاجَفَتَان",
+        "mutawācafatān",
+        "hep birlikte titrenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاجَفُون",
+        "mutawācafūn",
+        "hep birlikte titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاجَفِين",
+        "mutawācafīn",
+        "hep birlikte titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاجَفَات",
+        "mutawācafāt",
+        "hep birlikte titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاجَف", "mutawācaf", "hep birlikte titreme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْوِجَاف", "inwicāf", "kendiliğinden titreme", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْوِجَافَة", "inwicāfa", "bir kere kendiliğinden titreme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْوَجِف", "munwacif", "kendiliğinden titreyen", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْوَجِفَة", "munwacifa", "kendiliğinden titreyen, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْوَجِفَان", "munwacifān", "kendiliğinden titreyen, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْوَجِفَتَان",
+        "munwacifatān",
+        "kendiliğinden titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْوَجِفُون",
+        "munwacifūn",
+        "kendiliğinden titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْوَجِفِين",
+        "munwacifīn",
+        "kendiliğinden titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْوَجِفَات",
+        "munwacifāt",
+        "kendiliğinden titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَف",
+        "munwacaf",
+        "kendiliğinden titrenen",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفَة",
+        "munwacafa",
+        "kendiliğinden titrenen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفَان",
+        "munwacafān",
+        "kendiliğinden titrenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفَتَان",
+        "munwacafatān",
+        "kendiliğinden titrenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفُون",
+        "munwacafūn",
+        "kendiliğinden titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفِين",
+        "munwacafīn",
+        "kendiliğinden titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَفَات",
+        "munwacafāt",
+        "kendiliğinden titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَجَف",
+        "munwacaf",
+        "kendiliğinden titreme yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِتِّجَاف", "itticāf", "kendisi için titreme", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِتِّجَافَة", "itticāfa", "bir kere kendisi için titreme", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُتَّجِف", "muttacif", "kendisi için titreyen", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُتَّجِفَة", "muttacifa", "kendisi için titreyen, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُتَّجِفَان", "muttacifān", "kendisi için titreyen, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُتَّجِفَتَان",
+        "muttacifatān",
+        "kendisi için titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّجِفُون",
+        "muttacifūn",
+        "kendisi için titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّجِفِين",
+        "muttacifīn",
+        "kendisi için titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّجِفَات",
+        "muttacifāt",
+        "kendisi için titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّجَف", "muttacaf", "kendisi için titrenen", "orta", ""],
+      ["muftaʿal + müennes", "kıyâsî", "مُتَّجَفَة", "muttacafa", "kendisi için titrenen, müennes", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî", "مُتَّجَفَان", "muttacafān", "kendisi için titrenen, iki", "orta", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُتَّجَفَتَان",
+        "muttacafatān",
+        "kendisi için titrenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّجَفُون",
+        "muttacafūn",
+        "kendisi için titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّجَفِين",
+        "muttacafīn",
+        "kendisi için titrenenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّجَفَات",
+        "muttacafāt",
+        "kendisi için titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّجَف", "muttacaf", "kendisi için titreme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday", "اِيجِفَاف", "īcifāf", "iyiden iyiye titreme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُوجَفّ", "mūcaff", "iyiden iyiye titreyen", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُوجَفَّة", "mūcaffa", "iyiden iyiye titreyen, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُوجَفَّان", "mūcaffān", "iyiden iyiye titreyen, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُوجَفَّتَان",
+        "mūcaffatān",
+        "iyiden iyiye titreyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوجَفُّون",
+        "mūcaffūn",
+        "iyiden iyiye titreyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوجَفِّين",
+        "mūcaffīn",
+        "iyiden iyiye titreyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوجَفَّات",
+        "mūcaffāt",
+        "iyiden iyiye titreyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِيجَاف", "istīcāf", "titremeyi isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِيجَافَة", "istīcāfa", "bir kere titremeyi isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَوْجِف", "mustawcif", "titremeyi isteyen", "orta", ""],
+      ["mustaf'il + müennes", "kıyâsî", "مُسْتَوْجِفَة", "mustawcifa", "titremeyi isteyen, müennes", "orta", ""],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَوْجِفَان", "mustawcifān", "titremeyi isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْجِفَتَان",
+        "mustawcifatān",
+        "titremeyi isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْجِفُون",
+        "mustawcifūn",
+        "titremeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْجِفِين",
+        "mustawcifīn",
+        "titremeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْجِفَات",
+        "mustawcifāt",
+        "titremeyi isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْجَف", "mustawcaf", "titremesi istenen", "orta", ""],
+      ["mustaf'al + müennes", "kıyâsî", "مُسْتَوْجَفَة", "mustawcafa", "titremesi istenen, müennes", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَوْجَفَان", "mustawcafān", "titremesi istenen, iki", "orta", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْجَفَتَان",
+        "mustawcafatān",
+        "titremesi istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْجَفُون",
+        "mustawcafūn",
+        "titremesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْجَفِين",
+        "mustawcafīn",
+        "titremesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْجَفَات",
+        "mustawcafāt",
+        "titremesi istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْجَف", "mustawcaf", "titremeyi isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday", "اِيجِيفَاف", "īcīfāf", "büsbütün titreme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُوجَافّ", "mūcāff", "büsbütün titreyen", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُوجَافَّة", "mūcāffa", "büsbütün titreyen, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُوجَافَّان", "mūcāffān", "büsbütün titreyen, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُوجَافَّتَان",
+        "mūcāffatān",
+        "büsbütün titreyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوجَافُّون",
+        "mūcāffūn",
+        "büsbütün titreyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوجَافِّين",
+        "mūcāffīn",
+        "büsbütün titreyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوجَافَّات",
+        "mūcāffāt",
+        "büsbütün titreyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday", "اِيجِوْجَاف", "īciwcāf", "aşırı titreme", "orta", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday", "اِيجِوَّاف", "īciwwāf", "aşırı titreme", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "وَاجِف", "wācif", "titreyen", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî", "وَاجِفَة", "wācifa", "titreyen, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî", "وَاجِفَان", "wācifān", "titreyen, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "وَاجِفَتَان", "wācifatān", "titreyen, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "وَاجِفُون", "wācifūn", "titreyenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "وَاجِفِين", "wācifīn", "titreyenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "وَاجِفَات", "wācifāt", "titreyenler, müennes", "orta", ""]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَوْجُوف", "mawcūf", "titrenen", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَوْجُوفَة", "mawcūfa", "titrenen, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَوْجُوفَان", "mawcūfān", "titrenen, iki", "orta", ""],
+      ["maf'ûl + müennes tesniye", "kıyâsî", "مَوْجُوفَتَان", "mawcūfatān", "titrenen, iki, müennes", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مَوْجُوفُون", "mawcūfūn", "titrenenler", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مَوْجُوفِين", "mawcūfīn", "titrenenler", "orta", ""],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَوْجُوفَات",
+        "mawcūfāt",
+        "titrenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْجَف", "mawcaf", "titreme yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْجَفَان", "mawcafān", "titreme yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî", "مَوْجِف", "mawcif", "titreme yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَوْجِفَان", "mawcifān", "titreme yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî", "مَوْجَفَة", "mawcafa", "titremenin bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî", "مَوْجَفَتَان", "mawcafatān", "titremenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî", "مَوْجِفَة", "mawcifa", "titremenin bol olduğu yer", "orta", ""],
+      ["maf'ile + tesniye", "kıyâsî", "مَوْجِفَتَان", "mawcifatān", "titremenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ula", "kıyâsî", "مَوْجُفَة", "mawcufa", "titreme yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَوْجُفَتَان", "mawcufatān", "titreme yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِيجَف", "mīcaf", "titreme âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِيجَفَان", "mīcafān", "titreme âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِيجَاف", "mīcāf", "titreme âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِيجَافَان", "mīcāfān", "titreme âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِيجَفَة", "mīcafa", "titreme âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِيجَفَتَان", "mīcafatān", "titreme âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَوْجَف", "ʾawcaf", "daha çok titreyen", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَوْجَفَان", "ʾawcafān", "daha çok titreyen, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "وُجْفَى", "wucfā", "daha çok titreyen", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "وُجْفَيَان", "wucfayān", "daha çok titreyen, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "وَجْفَاء", "wacfāʾ", "daha çok titreyen", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "وَجْفَاآن", "wacfāʾān", "daha çok titreyen, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "وُجَيْف", "wucayf", "azıcık titreme", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "وُجَيْفَان", "wucayfān", "azıcık titreme, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "وُجَيْفَة", "wucayfa", "azıcık titreme", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "وُجَيْفَتَان", "wucayfatān", "azıcık titreme, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْجَف", "mawcaf", "titreme", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْجَفَان", "mawcafān", "titreme, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "وَجْفَة", "wacfa", "bir kere titreme", "orta", ""],
+      ["fa'le + tesniye", "aday", "وَجْفَتَان", "wacfatān", "bir kere titreme, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "وِجْفَة", "wicfa", "titreme tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "وِجْفَتَان", "wicfatān", "titreme tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
+      ["fa'īl + müennes", "semâî aday", "وَجِيفَة", "wacīfa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَجِيفَان", "wacīfān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَجِيفَتَان",
+        "wacīfatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجِيفُون",
+        "wacīfūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجِيفِين",
+        "wacīfīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجِيفَات",
+        "wacīfāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَجُوف", "wacūf", "her daim titreyen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَجُوفَة", "wacūfa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَجُوفَان", "wacūfān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَجُوفَتَان",
+        "wacūfatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجُوفُون",
+        "wacūfūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجُوفِين",
+        "wacūfīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجُوفَات",
+        "wacūfāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday", "وَجِف", "wacif", "her daim titreyen", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "وَجِفَة", "wacifa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "وَجِفَان", "wacifān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "وَجِفَتَان",
+        "wacifatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجِفُون",
+        "wacifūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجِفِين",
+        "wacifīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجِفَات",
+        "wacifāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "وَجُف", "wacuf", "her daim titreyen", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "وَجُفَة", "wacufa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "وَجُفَان", "wacufān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "وَجُفَتَان",
+        "wacufatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجُفُون",
+        "wacufūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجُفِين",
+        "wacufīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجُفَات",
+        "wacufāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al",
+        "semâî aday",
+        "وَجَف",
+        "wacaf",
+        "her daim titreyen",
+        "orta",
+        "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"
+      ],
+      ["fa'al + müennes", "semâî aday", "وَجَفَة", "wacafa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday", "وَجَفَان", "wacafān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "وَجَفَتَان",
+        "wacafatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجَفُون",
+        "wacafūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجَفِين",
+        "wacafīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجَفَات",
+        "wacafāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "وَجْف", "wacf", "her daim titreyen", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "وَجْفَة", "wacfa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "وَجْفَان", "wacfān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "وَجْفَتَان",
+        "wacfatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَجْفُون", "wacfūn", "her daim titreyenler", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَجْفِين", "wacfīn", "her daim titreyenler", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجْفَات",
+        "wacfāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "وُجُف", "wucuf", "her daim titreyen", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "وُجُفَة", "wucufa", "her daim titreyen, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "وُجُفَان", "wucufān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "وُجُفَتَان",
+        "wucufatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُجُفُون",
+        "wucufūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُجُفِين",
+        "wucufīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُجُفَات",
+        "wucufāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "وَجْفَان", "wacfān", "her daim titreyen", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "وَجْفَانَة", "wacfāna", "her daim titreyen, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "وَجْفَانَان", "wacfānān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "وَجْفَانَتَان",
+        "wacfānatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجْفَانُون",
+        "wacfānūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجْفَانِين",
+        "wacfānīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجْفَانَات",
+        "wacfānāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "وُجَاف", "wucāf", "her daim titreyen", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "وُجَافَة", "wucāfa", "her daim titreyen, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "وُجَافَان", "wucāfān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "وُجَافَتَان",
+        "wucāfatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُجَافُون",
+        "wucāfūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُجَافِين",
+        "wucāfīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُجَافَات",
+        "wucāfāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "وَجَاف", "wacāf", "her daim titreyen", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "وَجَافَة", "wacāfa", "her daim titreyen, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "وَجَافَان", "wacāfān", "her daim titreyen, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "وَجَافَتَان",
+        "wacāfatān",
+        "her daim titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجَافُون",
+        "wacāfūn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجَافِين",
+        "wacāfīn",
+        "her daim titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجَافَات",
+        "wacāfāt",
+        "her daim titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "وَجَّاف", "waccāf", "işi titreme olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "وَجَّافَة", "waccāfa", "işi titreme olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "وَجَّافَان", "waccāfān", "işi titreme olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "وَجَّافَتَان",
+        "waccāfatān",
+        "işi titreme olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجَّافُون",
+        "waccāfūn",
+        "işi titreme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجَّافِين",
+        "waccāfīn",
+        "işi titreme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجَّافَات",
+        "waccāfāt",
+        "işi titreme olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "وَجَّافَة", "waccāfa", "pek çok titreyen", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "وَجَّافَتَان", "waccāfatān", "pek çok titreyen, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجَّافَات",
+        "waccāfāt",
+        "pek çok titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَجُوف", "wacūf", "çok titreyen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَجُوفَة", "wacūfa", "çok titreyen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَجُوفَان", "wacūfān", "çok titreyen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَجُوفَتَان",
+        "wacūfatān",
+        "çok titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَجُوفُون", "wacūfūn", "çok titreyenler", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَجُوفِين", "wacūfīn", "çok titreyenler", "orta", ""],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجُوفَات",
+        "wacūfāt",
+        "çok titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "وَجُّوف", "waccūf", "pek çok titreyen", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "وَجُّوفَة", "waccūfa", "pek çok titreyen, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "وَجُّوفَان", "waccūfān", "pek çok titreyen, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "وَجُّوفَتَان",
+        "waccūfatān",
+        "pek çok titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَجُّوفُون",
+        "waccūfūn",
+        "pek çok titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَجُّوفِين",
+        "waccūfīn",
+        "pek çok titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجُّوفَات",
+        "waccūfāt",
+        "pek çok titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "وِجِّيف", "wiccīf", "titremede aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "وِجِّيفَة", "wiccīfa", "titremede aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "وِجِّيفَان", "wiccīfān", "titremede aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "وِجِّيفَتَان",
+        "wiccīfatān",
+        "titremede aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وِجِّيفُون",
+        "wiccīfūn",
+        "titremede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وِجِّيفِين",
+        "wiccīfīn",
+        "titremede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وِجِّيفَات",
+        "wiccīfāt",
+        "titremede aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "وُجَّاف", "wuccāf", "son derece titreyen", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "وُجَّافَة", "wuccāfa", "son derece titreyen, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "وُجَّافَان", "wuccāfān", "son derece titreyen, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "وُجَّافَتَان",
+        "wuccāfatān",
+        "son derece titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُجَّافُون",
+        "wuccāfūn",
+        "son derece titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُجَّافِين",
+        "wuccāfīn",
+        "son derece titreyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُجَّافَات",
+        "wuccāfāt",
+        "son derece titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِيجَاف", "mīcāf", "titremeyi âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِيجَافَة", "mīcāfa", "titremeyi âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِيجَافَان", "mīcāfān", "titremeyi âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِيجَافَتَان",
+        "mīcāfatān",
+        "titremeyi âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيجَافُون",
+        "mīcāfūn",
+        "titremeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيجَافِين",
+        "mīcāfīn",
+        "titremeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيجَافَات",
+        "mīcāfāt",
+        "titremeyi âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِيجِيف", "mīcīf", "titremeye düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِيجِيفَة", "mīcīfa", "titremeye düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِيجِيفَان", "mīcīfān", "titremeye düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِيجِيفَتَان",
+        "mīcīfatān",
+        "titremeye düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيجِيفُون",
+        "mīcīfūn",
+        "titremeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيجِيفِين",
+        "mīcīfīn",
+        "titremeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيجِيفَات",
+        "mīcīfāt",
+        "titremeye düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
+      ["fa'īl + müennes", "semâî aday", "وَجِيفَة", "wacīfa", "çok titreyen, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَجِيفَان", "wacīfān", "çok titreyen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَجِيفَتَان",
+        "wacīfatān",
+        "çok titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَجِيفُون", "wacīfūn", "çok titreyenler", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَجِيفِين", "wacīfīn", "çok titreyenler", "orta", ""],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجِيفَات",
+        "wacīfāt",
+        "çok titreyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "وَجَّف", "waccaf", "çok titreyen", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "وَجَّفَة", "waccafa", "çok titreyen, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "وَجَّفَان", "waccafān", "çok titreyen, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "وَجَّفَتَان",
+        "waccafatān",
+        "çok titreyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "وَجَّفُون", "waccafūn", "çok titreyenler", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "وَجَّفِين", "waccafīn", "çok titreyenler", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَجَّفَات",
+        "waccafāt",
+        "çok titreyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "وَجْفِيّ", "wacfiyy", "titreme ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî", "وَجَفِيّ", "wacafiyy", "titreme ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "وِجْفِيّ", "wicfiyy", "titreme ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "وُجْفِيّ", "wucfiyy", "titreme ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî", "وِجَافِيّ", "wicāfiyy", "titreme ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî", "وَاجِفِيّ", "wācifiyy", "titreme ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَوْجُوفِيّ", "mawcūfiyy", "titreme ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî", "وَجِيفِيّ", "wacīfiyy", "titreme ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî", "مَوْجَفِيّ", "mawcafiyy", "titreme ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَوْجِيفِيّ", "tawcīfiyy", "titreme ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَوَاجُفِيّ", "tawācufiyy", "titreme ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî", "إِيجَافِيّ", "ʾīcāfiyy", "titreme ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِتِّجَافِيّ", "itticāfiyy", "titreme ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "وَجْفِيَّة", "wacfiyya", "titreyenlik", "orta", ""],
+      ["fa'al + iyye", "kıyâsî", "وَجَفِيَّة", "wacafiyya", "titreyenlik", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "وِجْفِيَّة", "wicfiyya", "titreyenlik", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "وُجْفِيَّة", "wucfiyya", "titreyenlik", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî", "وِجَافِيَّة", "wicāfiyya", "titreyenlik", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî", "وَاجِفِيَّة", "wācifiyya", "titreyenlik", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَوْجُوفِيَّة", "mawcūfiyya", "titreyenlik", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "وَجِيفِيَّة", "wacīfiyya", "titreyenlik", "orta", ""],
+      ["maf'al + iyye", "kıyâsî", "مَوْجَفِيَّة", "mawcafiyya", "titreyenlik", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَوْجِيفِيَّة", "tawcīfiyya", "titreyenlik", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَوَاجُفِيَّة", "tawācufiyya", "titreyenlik", "orta", ""],
+      ["if'āl + iyye", "kıyâsî", "إِيجَافِيَّة", "ʾīcāfiyya", "titreyenlik", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِتِّجَافِيَّة", "itticāfiyya", "titreyenlik", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "وَجَاف", "wacāf", "titreme", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "وُجُوف", "wucūf", "titreme", "orta", ""],
+      ["fi'âl", "semâî aday", "وِجَاف", "wicāf", "titreme", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "وُجْف", "wucf", "titreme", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "وَجَافَة", "wacāfa", "titreme", "orta", ""],
+      ["fi'âle", "semâî aday", "وِجَافَة", "wicāfa", "titreme", "orta", ""],
+      ["fu'ûle", "semâî aday", "وُجُوفَة", "wucūfa", "titreme", "orta", ""],
+      ["fa'l", "semâî aday", "وَجْف", "wacf", "titreme", "orta", ""],
+      ["fi'l", "semâî aday", "وِجْف", "wicf", "titreme", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "وَاجُوف", "wācūf", "titreme türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "وَجَفَة", "wacafa", "titreme türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "وُجَفَة", "wucafa", "titreme türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُوجُوفَة", "ʾūcūfa", "titreme türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "وَوْجَف", "wawcaf", "titreme türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "وَيْجَف", "waycaf", "titreme türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "وَجْف", "wacf", "titreme türünden şey", "orta", ""],
+      [
+        "fa'al",
+        "semâî aday",
+        "وَجَف",
+        "wacaf",
+        "titreme türünden şey",
+        "orta",
+        "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"
+      ],
+      ["fi'l", "semâî aday", "وِجْف", "wicf", "titreme türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "وُجْف", "wucf", "titreme türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "وَجِيف", "wacīf", "Bir nesne deprenip muztarib olmak", "lugat", "Vankulu"],
+      ["fi'al", "semâî aday", "وِجَف", "wicaf", "titreme türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "وُجُف", "wucuf", "titreme türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "وَجَاف", "wacāf", "titreme türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "وَاجُوفَة", "wācūfa", "titreme türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "وَوْجَفَة", "wawcafa", "titreme türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "وَيْجَفَة", "waycafa", "titreme türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "وَجْفَة", "wacfa", "titreme türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "وَجَفَة", "wacafa", "titreme türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "وِجْفَة", "wicfa", "titreme türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "وُجْفَة", "wucfa", "titreme türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "وَجِيفَة", "wacīfa", "titreme türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "وِجَفَة", "wicafa", "titreme türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "وُجُفَة", "wucufa", "titreme türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "وَجَافَة", "wacāfa", "titreme türünden bir tane", "orta", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَوْجَاف", "ʾawcāf", "titremeler", "orta", ""],
+      ["ef'ile", "semâî aday", "أَوْجِفَة", "ʾawcifa", "titremeler", "orta", ""],
+      ["efâ'il", "semâî aday", "أَوَاجِف", "ʾawācif", "titremeler", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَوَاجِيف", "ʾawācīf", "titremeler", "orta", ""],
+      ["fu'ūl", "semâî aday", "وُجُوف", "wucūf", "titremeler", "orta", ""],
+      ["fu'ul", "semâî aday", "وُجُف", "wucuf", "titremeler", "orta", ""],
+      ["fi'āl", "semâî aday", "وِجَاف", "wicāf", "titremeler", "orta", ""],
+      ["fi'al", "semâî aday", "وِجَف", "wicaf", "titremeler", "orta", ""],
+      ["fi'ale", "semâî aday", "وِجَفَة", "wicafa", "titremeler", "orta", ""],
+      ["fu'al", "semâî aday", "وُجَف", "wucaf", "titremeler", "orta", ""],
+      ["fu'alā'", "semâî aday", "وُجَفاء", "wucafāʾ", "titremeler", "orta", ""],
+      ["fa'ale", "semâî aday", "وَجَفَة", "wacafa", "titremeler", "orta", ""],
+      ["fu''āl", "semâî aday", "وُجَّاف", "wuccāf", "titremeler", "orta", ""],
+      ["fa'āl", "semâî aday", "وَجَاف", "wacāf", "titremeler", "orta", ""],
+      [
+        "fa'al",
+        "semâî aday",
+        "وَجَف",
+        "wacaf",
+        "titremeler",
+        "orta",
+        "Vikisözlük: verbal noun of وَجَفَ (wajafa) (form I)"
+      ],
+      ["mefâ'il", "semâî aday", "مَوَاجِف", "mawācif", "titremeler", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَوَاجِيف", "mawācīf", "titremeler", "orta", ""],
+      ["fevâ'il", "semâî aday", "وَوَاجِف", "wawācif", "titremeler", "orta", ""],
+      ["af'ul", "semâî aday", "أَوْجُف", "ʾawcuf", "titremeler", "orta", ""],
+      ["fu''al", "semâî aday", "وُجَّف", "wuccaf", "titremeler", "orta", ""],
+      ["fe'âil", "semâî aday", "وَجَائِف", "wacāʾif", "titremeler", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "وُجَيْف", "wucayf", "titremeler", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَوْجَافَات", "ʾawcāfāt", "titremeler topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَوْجِفَات", "ʾawcifāt", "titremeler topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَوَاجِفَات", "ʾawācifāt", "titremeler topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَوَاجِيفَات", "ʾawācīfāt", "titremeler topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "وُجُوفَات", "wucūfāt", "titremeler topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "وُجُفَات", "wucufāt", "titremeler topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday", "وِجَافَات", "wicāfāt", "titremeler topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday", "وِجَفَات", "wicafāt", "titremeler topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "وِجَفَات", "wicafāt", "titremeler topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "وُجَفَات", "wucafāt", "titremeler topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "وُجَفاآت", "wucafāʾāt", "titremeler topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "وَجَفَات", "wacafāt", "titremeler topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "وُجَّافَات", "wuccāfāt", "titremeler topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "وَجَافَات", "wacāfāt", "titremeler topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday", "وَجَفَات", "wacafāt", "titremeler topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَوَاجِفَات", "mawācifāt", "titremeler topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَوَاجِيفَات", "mawācīfāt", "titremeler topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "وَوَاجِفَات", "wawācifāt", "titremeler topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَوْجُفَات", "ʾawcufāt", "titremeler topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "وُجَّفَات", "wuccafāt", "titremeler topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "وَجَائِفَات", "wacāʾifāt", "titremeler topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "وُجَيْفَات", "wucayfāt", "titremeler topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "season.v.01",
     "orta": "verb.perception",
     "ust": "zihin ve ilim",
@@ -1220,30 +2184,8 @@
     "dayanak_tanim": "lend flavor to",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الجيم والفاء",
-    "mihveri": "خفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \". ومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل]. ومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \". \"جفن \": {يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13] \"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن).",
-    "tam_metin": "{فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} [الحشر: 6]\n\"وَجَفَ البعيرُ والفرس - كوعد: أسرع في السير، والقلبُ: خاف/ خَفَق من الخوف. وأوجف الذِكْرَ بلسانه: حَرَّكه \".\n° المعنى المحوري\nخفة حركة الشيء ومباعدته مقره. (بسبب خفة ما يحتويه) كارتفاع اللسان عن مَقَرّه بالذكْر بخفَّة، وارتفاع الفرس وغيره عن الأرض عند الإسراع. {فَمَا أَوْجَفْتُمْ عَلَيْهِ مِنْ خَيْلٍ وَلَا رِكَابٍ} أي ما أعملتم وما أجهدتم خيلًا ولا ركابًا من أجل تحصيله فيكونَ لكم سهم فيه \".\nومن خفة الحركة تلك \"وَجَفَ القلبُ: خفق من الخوف {{قُلُوبٌ يَوْمَئِذٍ وَاجِفَةٌ} [النازعات: 8] قال الزجاج: شديدةُ الاضطراب [ل].\nومن ملحظ الخروج من أثناء إلى بعيد بدفع قالوا \"جَفَأَ البقلَ: قلعه من أصله \".\n\"جفن \":\n{يَعْمَلُونَ لَهُ مَا يَشَاءُ مِنْ مَحَارِيبَ وَتَمَاثِيلَ وَجِفَانٍ كَالْجَوَابِ} [سبأ: 13]\n\"الجَفْن - بالفتح: غِطاء العين من أعلى وأسفل، وغِمْدُ السيف \".\n° المعنى المحوري\nغلاف للشيء العظيم أو المهم يسعه ويغطيه أو يحفظه. كجَفْن السيف والعين لهما. ومنه الجَفنة - بالفتح: أعظم ما يكون من القصاع (تضم الطعام في بطنها مع انكشاف وجهها) {وَجِفَانٍ كَالْجَوَابِ} أي تشبه الحياض الضخمة. ومنه \"الجَفْن: ورق العنب، لتغطيته ما تحته. وجَفْنا الرغيف: وَجْهاه \" (كالغلاف للتجوف الذي بينهما) ومن ذلك \"جَفَن نفسه عن الشيء:\n(1/320)\nمَنَعها وظَلَفَها \" (حَجَبها وغَلّفها).\n° معنى الفصل المعجمي (جف): يبس الشيء المحيط بغريب عنه أو مباعدته إياه كما في جُفّ الطلعة وجُف ماء السماء - في (جفف) وهما غليظان بالنسبة للرقيق الذي يحيطان به (وهذا الاختلاف في طبيعتهما مباعدة)، وكما في تباعد العضدين عن الجنبين والسرج عن ظهر الفرس - في (جفو)، وكما في فراغ جوف الشيء أو رقته بالنسبة لمحيطه - في (جوف/ جيف)، وكما في الحركة السريعة (وهي انتقال عن الحيز وإفراغ له) في (وجف)، وكما في دفع الشيء بعيدًا - في (جفأ)، وكما في غطاء العين لها وهو جِلد غريب عنها - في (جفن)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["dry.v.02", "enfeeble.v.01", "season.v.01"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الإبل",
-    "bab": "",
-    "kok_gecis": 21.5,
-    "kitapta_gecis": 4.0,
-    "zenginlesme": 2.86
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -1263,589 +2205,14 @@
       "boy": 18
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "926": ["masdar · sülâsî mücerred", "fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", ""]
+  "wordnet": ["dry.v.02", "enfeeble.v.01", "season.v.01"],
+  "muhassas": {
+    "kitap": "الإبل",
+    "kok_gecis": 21.5,
+    "kitapta_gecis": 4.0,
+    "zenginlesme": 2.86
   },
-  "kelimeler": [
-    {
-      "kelime": "أَوْجَفْتُمْ",
-      "kok": "وجف",
-      "lemma": "أَوْجَفْ",
-      "tur": "İsim",
-      "bab": "af'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "59:6",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "sürdün",
-        "lemma": "sürdün",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "وَاجِفَةٌ",
-      "kok": "وجف",
-      "lemma": "واجِفَة",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "",
-      "ilk_gecis": "79:8",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "korkan",
-        "lemma": "korkan",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 1,
-      "isim": 1
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Beden",
-    "ayrim": "titre",
-    "acilim": "وجف := Beden(ayrım: titre)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Beden",
-    "kelimeler": [
-      {
-        "lemma": "أَوْجَفْ",
-        "hal": "fiil",
-        "bab": "af'ale",
-        "bab_no": "IV",
-        "zaman": ["Mâzî"],
-        "adet": 1,
-        "nasil": "bâb IV (af'ale): if'âl: geçişli kılma, bir hâle sokma"
-      },
-      {
-        "lemma": "واجِفَة",
-        "hal": "isim",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "ism-i fâil · sülâsî · fâ'il + müennes"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

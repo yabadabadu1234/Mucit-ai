@@ -70,8 +70,8 @@ KA = {}
 for p in R['GP']:
     f = KH / 'kelime_kaydi' / 'kuranda_var' / 'kokler' / (p[6] + '.json')
     if f.exists():
-        d = json.load(open(f, encoding='utf-8'))['sozlukler'].get('kok_anlamlari') or {}
-        if d.get('turkce'): KA[p[6]] = d['turkce']
+        d = json.load(open(f, encoding='utf-8'))
+        if d.get('anlam'): KA[p[6]] = d['anlam']
 R['KA'] = KA
 SM = {}
 for s_, adi, na, KIS in SUR:

@@ -1,1061 +1,2525 @@
 {
   "kok": "فوج",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 5
+  },
+  "fiil": "grup ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "ecvef",
-  "turkce_fiil": {
-    "sap": "grup ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
-      [888, "فِيج", "fīc", "grup", "kontrol", ""],
-      [889, "فُوج", "fūc", "grup", "kontrol", ""],
-      [517, "فَاج", "fāc", "grup", "kontrol", ""],
-      [518, "فِيَج", "fiyac", "grup", "kontrol", ""],
-      [5, "فُوُج", "fuwuc", "grup", "kontrol", ""],
-      [6, "فُوُوج", "fuwūc", "grup", "kontrol", ""],
-      [521, "فِيَاج", "fiyāc", "grup", "kontrol", ""],
-      [8, "فُوَاج", "fuwāc", "grup", "kontrol", ""],
-      [9, "فَوَاج", "fawāc", "grup", "kontrol", ""],
-      [10, "فَوَاجَة", "fawāca", "grup", "kontrol", ""],
-      [11, "فُوُوجَة", "fuwūca", "grup", "kontrol", ""],
-      [526, "فِيَاجَة", "fiyāca", "grup", "kontrol", ""],
-      [13, "فَوِيج", "fawīc", "grup", "kontrol", ""],
-      [14, "فَوُوج", "fawūc", "grup", "kontrol", ""],
-      [15, "فَوَجَان", "fawacān", "grup", "kontrol", ""],
-      [16, "فُوْجَان", "fuwcān", "grup", "kontrol", ""],
-      [17, "فِوْجَان", "fiwcān", "grup", "kontrol", ""],
-      [18, "فَوْجَى", "fawcā", "grup", "kontrol", ""],
-      [19, "فُوْجَى", "fuwcā", "grup", "kontrol", ""],
-      [20, "فِوْجَى", "fiwcā", "grup", "kontrol", ""],
-      [21, "فَوَجَة", "fawaca", "grup", "kontrol", ""],
-      [22, "فِوَجَة", "fiwaca", "grup", "kontrol", ""],
-      [23, "فَوْجُوجَة", "fawcūca", "grup", "kontrol", ""],
-      [24, "تُفْوُوج", "tufwūc", "grup", "kontrol", ""],
-      [25, "تَفْوِجَة", "tafwica", "grup", "kontrol", ""],
-      [26, "تَفْوَجَة", "tafwaca", "grup", "kontrol", ""],
-      [27, "مَفْوُجَة", "mafwuca", "grup", "kontrol", ""],
-      [533, "مَفِيجَة", "mafīca", "grup", "kontrol", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَفْوِيج", "tafwīc", "çokça grup olma", "kontrol", ""],
-      [30, "تَفْوِجَة", "tafwica", "çokça grup olma", "kontrol", ""],
-      [31, "فِوِّاج", "fiwwāc", "çokça grup olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَفْوِيجَة", "tafwīca", "bir kere çokça grup olma", "kontrol", ""],
-      [33, "فِوِّاجَة", "fiwwāca", "bir kere çokça grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُفَوِّج", "mufawwic", "çokça grup olan", "kontrol", ""],
-      [35, "مُفَوِّجَة", "mufawwica", "çokça grup olan, müennes", "kontrol", ""],
-      [36, "مُفَوِّجَان", "mufawwicān", "çokça grup olan, iki", "kontrol", ""],
-      [37, "مُفَوِّجَتَان", "mufawwicatān", "çokça grup olan, iki, müennes", "kontrol", ""],
-      [38, "مُفَوِّجُون", "mufawwicūn", "çokça grup olanlar", "kontrol", ""],
-      [39, "مُفَوِّجِين", "mufawwicīn", "çokça grup olanlar", "kontrol", ""],
-      [40, "مُفَوِّجَات", "mufawwicāt", "çokça grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُفَوَّج", "mufawwac", "çokça grup olunan", "kontrol", ""],
-      [42, "مُفَوَّجَة", "mufawwaca", "çokça grup olunan, müennes", "kontrol", ""],
-      [43, "مُفَوَّجَان", "mufawwacān", "çokça grup olunan, iki", "kontrol", ""],
-      [44, "مُفَوَّجَتَان", "mufawwacatān", "çokça grup olunan, iki, müennes", "kontrol", ""],
-      [45, "مُفَوَّجُون", "mufawwacūn", "çokça grup olunanlar", "kontrol", ""],
-      [46, "مُفَوَّجِين", "mufawwacīn", "çokça grup olunanlar", "kontrol", ""],
-      [47, "مُفَوَّجَات", "mufawwacāt", "çokça grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُفَوَّج", "mufawwac", "çokça grup olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُفَاوَجَة", "mufāwaca", "biriyle karşılıklı grup olma", "kontrol", ""],
-      [552, "فِيَاج", "fiyāc", "biriyle karşılıklı grup olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [553, "فِيَاجَة", "fiyāca", "bir kere biriyle karşılıklı grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُفَاوِج", "mufāwic", "biriyle karşılıklı grup olan", "kontrol", ""],
-      [53, "مُفَاوِجَة", "mufāwica", "biriyle karşılıklı grup olan, müennes", "kontrol", ""],
-      [54, "مُفَاوِجَان", "mufāwicān", "biriyle karşılıklı grup olan, iki", "kontrol", ""],
-      [55, "مُفَاوِجَتَان", "mufāwicatān", "biriyle karşılıklı grup olan, iki, müennes", "kontrol", ""],
-      [56, "مُفَاوِجُون", "mufāwicūn", "biriyle karşılıklı grup olanlar", "kontrol", ""],
-      [57, "مُفَاوِجِين", "mufāwicīn", "biriyle karşılıklı grup olanlar", "kontrol", ""],
-      [58, "مُفَاوِجَات", "mufāwicāt", "biriyle karşılıklı grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُفَاوَج", "mufāwac", "biriyle karşılıklı grup olunan", "kontrol", ""],
-      [60, "مُفَاوَجَة", "mufāwaca", "biriyle karşılıklı grup olunan, müennes", "kontrol", ""],
-      [61, "مُفَاوَجَان", "mufāwacān", "biriyle karşılıklı grup olunan, iki", "kontrol", ""],
-      [62, "مُفَاوَجَتَان", "mufāwacatān", "biriyle karşılıklı grup olunan, iki, müennes", "kontrol", ""],
-      [63, "مُفَاوَجُون", "mufāwacūn", "biriyle karşılıklı grup olunanlar", "kontrol", ""],
-      [64, "مُفَاوَجِين", "mufāwacīn", "biriyle karşılıklı grup olunanlar", "kontrol", ""],
-      [65, "مُفَاوَجَات", "mufāwacāt", "biriyle karşılıklı grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُفَاوَج", "mufāwac", "biriyle karşılıklı grup olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IV": [
-      [567, "إِفَاجَة", "ʾifāca", "gruplaştırma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [569, "مُفِيج", "mufīc", "gruplaştıran", "kontrol", ""],
-      [570, "مُفِيجَة", "mufīca", "gruplaştıran, müennes", "kontrol", ""],
-      [571, "مُفِيجَان", "mufīcān", "gruplaştıran, iki", "kontrol", ""],
-      [572, "مُفِيجَتَان", "mufīcatān", "gruplaştıran, iki, müennes", "kontrol", ""],
-      [573, "مُفِيجُون", "mufīcūn", "gruplaştıranlar", "kontrol", ""],
-      [574, "مُفِيجِين", "mufīcīn", "gruplaştıranlar", "kontrol", ""],
-      [575, "مُفِيجَات", "mufīcāt", "gruplaştıranlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [576, "مُفَاج", "mufāc", "gruplaştırılan", "kontrol", ""],
-      [890, "مُفَاجَة", "mufāca", "gruplaştırılan, müennes", "kontrol", ""],
-      [577, "مُفَاجَان", "mufācān", "gruplaştırılan, iki", "kontrol", ""],
-      [891, "مُفَاجَتَان", "mufācatān", "gruplaştırılan, iki, müennes", "kontrol", ""],
-      [578, "مُفَاجُون", "mufācūn", "gruplaştırılanlar", "kontrol", ""],
-      [579, "مُفَاجِين", "mufācīn", "gruplaştırılanlar", "kontrol", ""],
-      [580, "مُفَاجَات", "mufācāt", "gruplaştırılanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُفَاج", "mufāc", "gruplaştırma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَفَوُّج", "tafawwuc", "kendini zorlayarak grup olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَفَوُّجَة", "tafawwuca", "bir kere kendini zorlayarak grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَفَوِّج", "mutafawwic", "kendini zorlayarak grup olan", "kontrol", ""],
-      [87, "مُتَفَوِّجَة", "mutafawwica", "kendini zorlayarak grup olan, müennes", "kontrol", ""],
-      [88, "مُتَفَوِّجَان", "mutafawwicān", "kendini zorlayarak grup olan, iki", "kontrol", ""],
-      [89, "مُتَفَوِّجَتَان", "mutafawwicatān", "kendini zorlayarak grup olan, iki, müennes", "kontrol", ""],
-      [90, "مُتَفَوِّجُون", "mutafawwicūn", "kendini zorlayarak grup olanlar", "kontrol", ""],
-      [91, "مُتَفَوِّجِين", "mutafawwicīn", "kendini zorlayarak grup olanlar", "kontrol", ""],
-      [92, "مُتَفَوِّجَات", "mutafawwicāt", "kendini zorlayarak grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَفَوَّج", "mutafawwac", "kendini zorlayarak grup olunan", "kontrol", ""],
-      [94, "مُتَفَوَّجَة", "mutafawwaca", "kendini zorlayarak grup olunan, müennes", "kontrol", ""],
-      [95, "مُتَفَوَّجَان", "mutafawwacān", "kendini zorlayarak grup olunan, iki", "kontrol", ""],
-      [96, "مُتَفَوَّجَتَان", "mutafawwacatān", "kendini zorlayarak grup olunan, iki, müennes", "kontrol", ""],
-      [97, "مُتَفَوَّجُون", "mutafawwacūn", "kendini zorlayarak grup olunanlar", "kontrol", ""],
-      [98, "مُتَفَوَّجِين", "mutafawwacīn", "kendini zorlayarak grup olunanlar", "kontrol", ""],
-      [99, "مُتَفَوَّجَات", "mutafawwacāt", "kendini zorlayarak grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَفَوَّج", "mutafawwac", "kendini zorlayarak grup olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَفَاوُج", "tafāwuc", "birbirine grup olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَفَاوُجَة", "tafāwuca", "bir kere birbirine grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَفَاوِج", "mutafāwic", "birbirine grup olan", "kontrol", ""],
-      [104, "مُتَفَاوِجَة", "mutafāwica", "birbirine grup olan, müennes", "kontrol", ""],
-      [105, "مُتَفَاوِجَان", "mutafāwicān", "birbirine grup olan, iki", "kontrol", ""],
-      [106, "مُتَفَاوِجَتَان", "mutafāwicatān", "birbirine grup olan, iki, müennes", "kontrol", ""],
-      [107, "مُتَفَاوِجُون", "mutafāwicūn", "birbirine grup olanlar", "kontrol", ""],
-      [108, "مُتَفَاوِجِين", "mutafāwicīn", "birbirine grup olanlar", "kontrol", ""],
-      [109, "مُتَفَاوِجَات", "mutafāwicāt", "birbirine grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَفَاوَج", "mutafāwac", "birbirine grup olunan", "kontrol", ""],
-      [111, "مُتَفَاوَجَة", "mutafāwaca", "birbirine grup olunan, müennes", "kontrol", ""],
-      [112, "مُتَفَاوَجَان", "mutafāwacān", "birbirine grup olunan, iki", "kontrol", ""],
-      [113, "مُتَفَاوَجَتَان", "mutafāwacatān", "birbirine grup olunan, iki, müennes", "kontrol", ""],
-      [114, "مُتَفَاوَجُون", "mutafāwacūn", "birbirine grup olunanlar", "kontrol", ""],
-      [115, "مُتَفَاوَجِين", "mutafāwacīn", "birbirine grup olunanlar", "kontrol", ""],
-      [116, "مُتَفَاوَجَات", "mutafāwacāt", "birbirine grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَفَاوَج", "mutafāwac", "birbirine grup olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VII": [
-      [610, "اِنْفِيَاج", "infiyāc", "grup olunma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [611, "اِنْفِيَاجَة", "infiyāca", "bir kere grup olunma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [612, "مُنْفَاج", "munfāc", "grup olunan", "kontrol", ""],
-      [613, "مُنْفَاجَة", "munfāca", "grup olunan, müennes", "kontrol", ""],
-      [614, "مُنْفَاجَان", "munfācān", "grup olunan, iki", "kontrol", ""],
-      [615, "مُنْفَاجَتَان", "munfācatān", "grup olunan, iki, müennes", "kontrol", ""],
-      [616, "مُنْفَاجُون", "munfācūn", "grup olunanlar", "kontrol", ""],
-      [617, "مُنْفَاجِين", "munfācīn", "grup olunanlar", "kontrol", ""],
-      [618, "مُنْفَاجَات", "munfācāt", "grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْفَاج", "munfāc", "grup olunan", "kontrol", ""],
-      [892, "مُنْفَاجَة", "munfāca", "grup olunan, müennes", "kontrol", ""],
-      [620, "مُنْفَاجَان", "munfācān", "grup olunan, iki", "kontrol", ""],
-      [893, "مُنْفَاجَتَان", "munfācatān", "grup olunan, iki, müennes", "kontrol", ""],
-      [621, "مُنْفَاجُون", "munfācūn", "grup olunanlar", "kontrol", ""],
-      [622, "مُنْفَاجِين", "munfācīn", "grup olunanlar", "kontrol", ""],
-      [623, "مُنْفَاجَات", "munfācāt", "grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْفَاج", "munfāc", "grup olunma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VIII": [
-      [625, "اِفْتِيَاج", "iftiyāc", "kendisi için grup olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [627, "اِفْتِيَاجَة", "iftiyāca", "bir kere kendisi için grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [628, "مُفْتَاج", "muftāc", "kendisi için grup olan", "kontrol", ""],
-      [629, "مُفْتَاجَة", "muftāca", "kendisi için grup olan, müennes", "kontrol", ""],
-      [630, "مُفْتَاجَان", "muftācān", "kendisi için grup olan, iki", "kontrol", ""],
-      [631, "مُفْتَاجَتَان", "muftācatān", "kendisi için grup olan, iki, müennes", "kontrol", ""],
-      [632, "مُفْتَاجُون", "muftācūn", "kendisi için grup olanlar", "kontrol", ""],
-      [633, "مُفْتَاجِين", "muftācīn", "kendisi için grup olanlar", "kontrol", ""],
-      [634, "مُفْتَاجَات", "muftācāt", "kendisi için grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُفْتَاج", "muftāc", "kendisi için grup olunan", "kontrol", ""],
-      [894, "مُفْتَاجَة", "muftāca", "kendisi için grup olunan, müennes", "kontrol", ""],
-      [636, "مُفْتَاجَان", "muftācān", "kendisi için grup olunan, iki", "kontrol", ""],
-      [895, "مُفْتَاجَتَان", "muftācatān", "kendisi için grup olunan, iki, müennes", "kontrol", ""],
-      [637, "مُفْتَاجُون", "muftācūn", "kendisi için grup olunanlar", "kontrol", ""],
-      [638, "مُفْتَاجِين", "muftācīn", "kendisi için grup olunanlar", "kontrol", ""],
-      [639, "مُفْتَاجَات", "muftācāt", "kendisi için grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُفْتَاج", "muftāc", "kendisi için grup olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِفْوِجَاج", "ifwicāc", "iyiden iyiye grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُفْوَجّ", "mufwacc", "iyiden iyiye grup olan", "kontrol", ""],
-      [170, "مُفْوَجَّة", "mufwacca", "iyiden iyiye grup olan, müennes", "kontrol", ""],
-      [171, "مُفْوَجَّان", "mufwaccān", "iyiden iyiye grup olan, iki", "kontrol", ""],
-      [172, "مُفْوَجَّتَان", "mufwaccatān", "iyiden iyiye grup olan, iki, müennes", "kontrol", ""],
-      [173, "مُفْوَجُّون", "mufwaccūn", "iyiden iyiye grup olanlar", "kontrol", ""],
-      [174, "مُفْوَجِّين", "mufwaccīn", "iyiden iyiye grup olanlar", "kontrol", ""],
-      [175, "مُفْوَجَّات", "mufwaccāt", "iyiden iyiye grup olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [662, "اِسْتِفَاجَة", "istifāca", "grup olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [664, "مُسْتَفِيج", "mustafīc", "grup olmayı isteyen", "kontrol", ""],
-      [665, "مُسْتَفِيجَة", "mustafīca", "grup olmayı isteyen, müennes", "kontrol", ""],
-      [666, "مُسْتَفِيجَان", "mustafīcān", "grup olmayı isteyen, iki", "kontrol", ""],
-      [667, "مُسْتَفِيجَتَان", "mustafīcatān", "grup olmayı isteyen, iki, müennes", "kontrol", ""],
-      [668, "مُسْتَفِيجُون", "mustafīcūn", "grup olmayı isteyenler", "kontrol", ""],
-      [669, "مُسْتَفِيجِين", "mustafīcīn", "grup olmayı isteyenler", "kontrol", ""],
-      [670, "مُسْتَفِيجَات", "mustafīcāt", "grup olmayı isteyenler, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَفَاج", "mustafāc", "grup olması istenen", "kontrol", ""],
-      [898, "مُسْتَفَاجَة", "mustafāca", "grup olması istenen, müennes", "kontrol", ""],
-      [672, "مُسْتَفَاجَان", "mustafācān", "grup olması istenen, iki", "kontrol", ""],
-      [899, "مُسْتَفَاجَتَان", "mustafācatān", "grup olması istenen, iki, müennes", "kontrol", ""],
-      [673, "مُسْتَفَاجُون", "mustafācūn", "grup olması istenenler", "kontrol", ""],
-      [674, "مُسْتَفَاجِين", "mustafācīn", "grup olması istenenler", "kontrol", ""],
-      [675, "مُسْتَفَاجَات", "mustafācāt", "grup olması istenenler, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَفَاج", "mustafāc", "grup olmayı isteme yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [900, "اِسْتِفْوَاج", "istifwāc", "grup olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [901, "مُسْتَفْوِج", "mustafwic", "grup olmayı isteyen", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [902, "مُسْتَفْوَج", "mustafwac", "grup olması istenen", "kontrol", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِفْوِيجَاج", "ifwīcāc", "büsbütün grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُفْوَاجّ", "mufwācc", "büsbütün grup olan", "kontrol", ""],
-      [195, "مُفْوَاجَّة", "mufwācca", "büsbütün grup olan, müennes", "kontrol", ""],
-      [196, "مُفْوَاجَّان", "mufwāccān", "büsbütün grup olan, iki", "kontrol", ""],
-      [197, "مُفْوَاجَّتَان", "mufwāccatān", "büsbütün grup olan, iki, müennes", "kontrol", ""],
-      [198, "مُفْوَاجُّون", "mufwāccūn", "büsbütün grup olanlar", "kontrol", ""],
-      [199, "مُفْوَاجِّين", "mufwāccīn", "büsbütün grup olanlar", "kontrol", ""],
-      [200, "مُفْوَاجَّات", "mufwāccāt", "büsbütün grup olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِفْوِوْوَاج", "ifwiwwāc", "aşırı grup olma", "kontrol", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِفْوِوَّاج", "ifwiwwāc", "aşırı grup olma", "kontrol", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [687, "فَائِج", "fāʾic", "grup olan", "kontrol", ""],
-      [688, "فَائِجَة", "fāʾica", "grup olan, müennes", "kontrol", ""],
-      [689, "فَائِجَان", "fāʾicān", "grup olan, iki", "kontrol", ""],
-      [690, "فَائِجَتَان", "fāʾicatān", "grup olan, iki, müennes", "kontrol", ""],
-      [691, "فَائِجُون", "fāʾicūn", "grup olanlar", "kontrol", ""],
-      [692, "فَائِجِين", "fāʾicīn", "grup olanlar", "kontrol", ""],
-      [693, "فَائِجَات", "fāʾicāt", "grup olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [694, "مَفُوج", "mafūc", "grup olunan", "kontrol", ""],
-      [695, "مَفُوجَة", "mafūca", "grup olunan, müennes", "kontrol", ""],
-      [696, "مَفُوجَان", "mafūcān", "grup olunan, iki", "kontrol", ""],
-      [697, "مَفُوجَتَان", "mafūcatān", "grup olunan, iki, müennes", "kontrol", ""],
-      [698, "مَفُوجُون", "mafūcūn", "grup olunanlar", "kontrol", ""],
-      [699, "مَفُوجِين", "mafūcīn", "grup olunanlar", "kontrol", ""],
-      [700, "مَفُوجَات", "mafūcāt", "grup olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [701, "مَفَاج", "mafāc", "grup olma yeri, vakti", "kontrol", ""],
-      [702, "مَفَاجَان", "mafācān", "grup olma yeri, vakti, iki", "kontrol", ""],
-      [703, "مَفِيج", "mafīc", "grup olma yeri, vakti", "kontrol", ""],
-      [704, "مَفِيجَان", "mafīcān", "grup olma yeri, vakti, iki", "kontrol", ""],
-      [705, "مَفَاجَة", "mafāca", "grup olmanın bol olduğu yer", "kontrol", ""],
-      [706, "مَفَاجَتَان", "mafācatān", "grup olmanın bol olduğu yer, iki", "kontrol", ""],
-      [707, "مَفِيجَة", "mafīca", "grup olmanın bol olduğu yer", "kontrol", ""],
-      [708, "مَفِيجَتَان", "mafīcatān", "grup olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَفْوُجَة", "mafwuca", "grup olma yeri, vakti", "kontrol", ""],
-      [248, "مَفْوُجَتَان", "mafwucatān", "grup olma yeri, vakti, iki", "kontrol", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِفْوَج", "mifwac", "grup olma âleti", "kontrol", ""],
-      [236, "مِفْوَجَان", "mifwacān", "grup olma âleti, iki", "kontrol", ""],
-      [237, "مِفْوَاج", "mifwāc", "grup olma âleti", "kontrol", ""],
-      [238, "مِفْوَاجَان", "mifwācān", "grup olma âleti, iki", "kontrol", ""],
-      [239, "مِفْوَجَة", "mifwaca", "grup olma âleti", "kontrol", ""],
-      [240, "مِفْوَجَتَان", "mifwacatān", "grup olma âleti, iki", "kontrol", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَفْوَج", "ʾafwac", "daha çok grup olan", "kontrol", ""],
-      [242, "أَفْوَجَان", "ʾafwacān", "daha çok grup olan, iki", "kontrol", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "فُوْجَى", "fuwcā", "daha çok grup olan", "kontrol", ""],
-      [244, "فُوْجَيَان", "fuwcayān", "daha çok grup olan, iki", "kontrol", ""],
-      [245, "فَوْجَاء", "fawcāʾ", "daha çok grup olan", "kontrol", ""],
-      [246, "فَوْجَاآن", "fawcāʾān", "daha çok grup olan, iki", "kontrol", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "فُوَيْج", "fuwayc", "azıcık grup olma", "kontrol", ""],
-      [250, "فُوَيْجَان", "fuwaycān", "azıcık grup olma, iki", "kontrol", ""],
-      [251, "فُوَيْجَة", "fuwayca", "azıcık grup olma", "kontrol", ""],
-      [252, "فُوَيْجَتَان", "fuwaycatān", "azıcık grup olma, iki", "kontrol", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [723, "مَفَاج", "mafāc", "grup olma", "kontrol", ""],
-      [724, "مَفَاجَان", "mafācān", "grup olma, iki", "kontrol", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "فَوْجَة", "fawca", "bir kere grup olma", "kontrol", ""],
-      [256, "فَوْجَتَان", "fawcatān", "bir kere grup olma, iki", "kontrol", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [903, "فِيجَة", "fīca", "grup olma tarzı", "kontrol", ""],
-      [904, "فِيجَتَان", "fīcatān", "grup olma tarzı, iki", "kontrol", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "فَوِيج", "fawīc", "her daim grup olan", "kontrol", ""],
-      [260, "فَوِيجَة", "fawīca", "her daim grup olan, müennes", "kontrol", ""],
-      [261, "فَوِيجَان", "fawīcān", "her daim grup olan, iki", "kontrol", ""],
-      [262, "فَوِيجَتَان", "fawīcatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [263, "فَوِيجُون", "fawīcūn", "her daim grup olanlar", "kontrol", ""],
-      [264, "فَوِيجِين", "fawīcīn", "her daim grup olanlar", "kontrol", ""],
-      [265, "فَوِيجَات", "fawīcāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [266, "فَوُوج", "fawūc", "her daim grup olan", "kontrol", ""],
-      [267, "فَوُوجَة", "fawūca", "her daim grup olan, müennes", "kontrol", ""],
-      [268, "فَوُوجَان", "fawūcān", "her daim grup olan, iki", "kontrol", ""],
-      [269, "فَوُوجَتَان", "fawūcatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [270, "فَوُوجُون", "fawūcūn", "her daim grup olanlar", "kontrol", ""],
-      [271, "فَوُوجِين", "fawūcīn", "her daim grup olanlar", "kontrol", ""],
-      [272, "فَوُوجَات", "fawūcāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [273, "فَوِج", "fawic", "her daim grup olan", "kontrol", ""],
-      [274, "فَوِجَة", "fawica", "her daim grup olan, müennes", "kontrol", ""],
-      [275, "فَوِجَان", "fawicān", "her daim grup olan, iki", "kontrol", ""],
-      [276, "فَوِجَتَان", "fawicatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [277, "فَوِجُون", "fawicūn", "her daim grup olanlar", "kontrol", ""],
-      [278, "فَوِجِين", "fawicīn", "her daim grup olanlar", "kontrol", ""],
-      [279, "فَوِجَات", "fawicāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [280, "فَوُج", "fawuc", "her daim grup olan", "kontrol", ""],
-      [281, "فَوُجَة", "fawuca", "her daim grup olan, müennes", "kontrol", ""],
-      [282, "فَوُجَان", "fawucān", "her daim grup olan, iki", "kontrol", ""],
-      [283, "فَوُجَتَان", "fawucatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [284, "فَوُجُون", "fawucūn", "her daim grup olanlar", "kontrol", ""],
-      [285, "فَوُجِين", "fawucīn", "her daim grup olanlar", "kontrol", ""],
-      [286, "فَوُجَات", "fawucāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [753, "فَاج", "fāc", "her daim grup olan", "kontrol", ""],
-      [905, "فَاجَة", "fāca", "her daim grup olan, müennes", "kontrol", ""],
-      [754, "فَاجَان", "fācān", "her daim grup olan, iki", "kontrol", ""],
-      [906, "فَاجَتَان", "fācatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [884, "فَاجُون", "fācūn", "her daim grup olanlar", "kontrol", ""],
-      [885, "فَاجِين", "fācīn", "her daim grup olanlar", "kontrol", ""],
-      [755, "فَاجَات", "fācāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [294, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
-      [295, "فَوْجَة", "fawca", "her daim grup olan, müennes", "kontrol", ""],
-      [296, "فَوْجَان", "fawcān", "her daim grup olan, iki", "kontrol", ""],
-      [297, "فَوْجَتَان", "fawcatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [298, "فَوْجُون", "fawcūn", "her daim grup olanlar", "kontrol", ""],
-      [299, "فَوْجِين", "fawcīn", "her daim grup olanlar", "kontrol", ""],
-      [300, "فَوْجَات", "fawcāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [301, "فُوُج", "fuwuc", "her daim grup olan", "kontrol", ""],
-      [302, "فُوُجَة", "fuwuca", "her daim grup olan, müennes", "kontrol", ""],
-      [303, "فُوُجَان", "fuwucān", "her daim grup olan, iki", "kontrol", ""],
-      [304, "فُوُجَتَان", "fuwucatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [305, "فُوُجُون", "fuwucūn", "her daim grup olanlar", "kontrol", ""],
-      [306, "فُوُجِين", "fuwucīn", "her daim grup olanlar", "kontrol", ""],
-      [307, "فُوُجَات", "fuwucāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [308, "فَوْجَان", "fawcān", "her daim grup olan", "kontrol", ""],
-      [309, "فَوْجَانَة", "fawcāna", "her daim grup olan, müennes", "kontrol", ""],
-      [310, "فَوْجَانَان", "fawcānān", "her daim grup olan, iki", "kontrol", ""],
-      [311, "فَوْجَانَتَان", "fawcānatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [312, "فَوْجَانُون", "fawcānūn", "her daim grup olanlar", "kontrol", ""],
-      [313, "فَوْجَانِين", "fawcānīn", "her daim grup olanlar", "kontrol", ""],
-      [314, "فَوْجَانَات", "fawcānāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [315, "فُوَاج", "fuwāc", "her daim grup olan", "kontrol", ""],
-      [316, "فُوَاجَة", "fuwāca", "her daim grup olan, müennes", "kontrol", ""],
-      [317, "فُوَاجَان", "fuwācān", "her daim grup olan, iki", "kontrol", ""],
-      [318, "فُوَاجَتَان", "fuwācatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [319, "فُوَاجُون", "fuwācūn", "her daim grup olanlar", "kontrol", ""],
-      [320, "فُوَاجِين", "fuwācīn", "her daim grup olanlar", "kontrol", ""],
-      [321, "فُوَاجَات", "fuwācāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [322, "فَوَاج", "fawāc", "her daim grup olan", "kontrol", ""],
-      [323, "فَوَاجَة", "fawāca", "her daim grup olan, müennes", "kontrol", ""],
-      [324, "فَوَاجَان", "fawācān", "her daim grup olan, iki", "kontrol", ""],
-      [325, "فَوَاجَتَان", "fawācatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [326, "فَوَاجُون", "fawācūn", "her daim grup olanlar", "kontrol", ""],
-      [327, "فَوَاجِين", "fawācīn", "her daim grup olanlar", "kontrol", ""],
-      [328, "فَوَاجَات", "fawācāt", "her daim grup olanlar, müennes", "kontrol", ""],
-      [907, "فَيِّج", "fayyic", "her daim grup olan", "kontrol", ""],
-      [908, "فَيِّجَة", "fayyica", "her daim grup olan, müennes", "kontrol", ""],
-      [909, "فَيِّجَان", "fayyicān", "her daim grup olan, iki", "kontrol", ""],
-      [910, "فَيِّجَتَان", "fayyicatān", "her daim grup olan, iki, müennes", "kontrol", ""],
-      [911, "فَيِّجُون", "fayyicūn", "her daim grup olanlar", "kontrol", ""],
-      [912, "فَيِّجِين", "fayyicīn", "her daim grup olanlar", "kontrol", ""],
-      [913, "فَيِّجَات", "fayyicāt", "her daim grup olanlar, müennes", "kontrol", ""]
-    ],
-    "mübalağa": [
-      [329, "فَوَّاج", "fawwāc", "işi grup olma olan", "kontrol", ""],
-      [330, "فَوَّاجَة", "fawwāca", "işi grup olma olan, müennes", "kontrol", ""],
-      [331, "فَوَّاجَان", "fawwācān", "işi grup olma olan, iki", "kontrol", ""],
-      [332, "فَوَّاجَتَان", "fawwācatān", "işi grup olma olan, iki, müennes", "kontrol", ""],
-      [333, "فَوَّاجُون", "fawwācūn", "işi grup olma olanlar", "kontrol", ""],
-      [334, "فَوَّاجِين", "fawwācīn", "işi grup olma olanlar", "kontrol", ""],
-      [335, "فَوَّاجَات", "fawwācāt", "işi grup olma olanlar, müennes", "kontrol", ""],
-      [336, "فَوَّاجَة", "fawwāca", "pek çok grup olan", "kontrol", ""],
-      [337, "فَوَّاجَتَان", "fawwācatān", "pek çok grup olan, iki", "kontrol", ""],
-      [338, "فَوَّاجَات", "fawwācāt", "pek çok grup olanlar, müennes", "kontrol", ""],
-      [339, "فَوُوج", "fawūc", "çok grup olan", "kontrol", ""],
-      [340, "فَوُوجَة", "fawūca", "çok grup olan, müennes", "kontrol", ""],
-      [341, "فَوُوجَان", "fawūcān", "çok grup olan, iki", "kontrol", ""],
-      [342, "فَوُوجَتَان", "fawūcatān", "çok grup olan, iki, müennes", "kontrol", ""],
-      [343, "فَوُوجُون", "fawūcūn", "çok grup olanlar", "kontrol", ""],
-      [344, "فَوُوجِين", "fawūcīn", "çok grup olanlar", "kontrol", ""],
-      [345, "فَوُوجَات", "fawūcāt", "çok grup olanlar, müennes", "kontrol", ""],
-      [346, "فَوُّوج", "fawwūc", "pek çok grup olan", "kontrol", ""],
-      [347, "فَوُّوجَة", "fawwūca", "pek çok grup olan, müennes", "kontrol", ""],
-      [348, "فَوُّوجَان", "fawwūcān", "pek çok grup olan, iki", "kontrol", ""],
-      [349, "فَوُّوجَتَان", "fawwūcatān", "pek çok grup olan, iki, müennes", "kontrol", ""],
-      [350, "فَوُّوجُون", "fawwūcūn", "pek çok grup olanlar", "kontrol", ""],
-      [351, "فَوُّوجِين", "fawwūcīn", "pek çok grup olanlar", "kontrol", ""],
-      [352, "فَوُّوجَات", "fawwūcāt", "pek çok grup olanlar, müennes", "kontrol", ""],
-      [353, "فِوِّيج", "fiwwīc", "grup olmada aşırı giden", "kontrol", ""],
-      [354, "فِوِّيجَة", "fiwwīca", "grup olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "فِوِّيجَان", "fiwwīcān", "grup olmada aşırı giden, iki", "kontrol", ""],
-      [356, "فِوِّيجَتَان", "fiwwīcatān", "grup olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "فِوِّيجُون", "fiwwīcūn", "grup olmada aşırı gidenler", "kontrol", ""],
-      [358, "فِوِّيجِين", "fiwwīcīn", "grup olmada aşırı gidenler", "kontrol", ""],
-      [359, "فِوِّيجَات", "fiwwīcāt", "grup olmada aşırı gidenler, müennes", "kontrol", ""],
-      [360, "فُوَّاج", "fuwwāc", "son derece grup olan", "kontrol", ""],
-      [361, "فُوَّاجَة", "fuwwāca", "son derece grup olan, müennes", "kontrol", ""],
-      [362, "فُوَّاجَان", "fuwwācān", "son derece grup olan, iki", "kontrol", ""],
-      [363, "فُوَّاجَتَان", "fuwwācatān", "son derece grup olan, iki, müennes", "kontrol", ""],
-      [364, "فُوَّاجُون", "fuwwācūn", "son derece grup olanlar", "kontrol", ""],
-      [365, "فُوَّاجِين", "fuwwācīn", "son derece grup olanlar", "kontrol", ""],
-      [366, "فُوَّاجَات", "fuwwācāt", "son derece grup olanlar, müennes", "kontrol", ""],
-      [367, "مِفْوَاج", "mifwāc", "grup olmayı âdet edinmiş", "kontrol", ""],
-      [368, "مِفْوَاجَة", "mifwāca", "grup olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [369, "مِفْوَاجَان", "mifwācān", "grup olmayı âdet edinmiş, iki", "kontrol", ""],
-      [370, "مِفْوَاجَتَان", "mifwācatān", "grup olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [371, "مِفْوَاجُون", "mifwācūn", "grup olmayı âdet edinmişler", "kontrol", ""],
-      [372, "مِفْوَاجِين", "mifwācīn", "grup olmayı âdet edinmişler", "kontrol", ""],
-      [373, "مِفْوَاجَات", "mifwācāt", "grup olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِفْوِيج", "mifwīc", "grup olmaya düşkün", "kontrol", ""],
-      [375, "مِفْوِيجَة", "mifwīca", "grup olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِفْوِيجَان", "mifwīcān", "grup olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِفْوِيجَتَان", "mifwīcatān", "grup olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِفْوِيجُون", "mifwīcūn", "grup olmaya düşkünler", "kontrol", ""],
-      [379, "مِفْوِيجِين", "mifwīcīn", "grup olmaya düşkünler", "kontrol", ""],
-      [380, "مِفْوِيجَات", "mifwīcāt", "grup olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "فَوِيج", "fawīc", "çok grup olan", "kontrol", ""],
-      [382, "فَوِيجَة", "fawīca", "çok grup olan, müennes", "kontrol", ""],
-      [383, "فَوِيجَان", "fawīcān", "çok grup olan, iki", "kontrol", ""],
-      [384, "فَوِيجَتَان", "fawīcatān", "çok grup olan, iki, müennes", "kontrol", ""],
-      [385, "فَوِيجُون", "fawīcūn", "çok grup olanlar", "kontrol", ""],
-      [386, "فَوِيجِين", "fawīcīn", "çok grup olanlar", "kontrol", ""],
-      [387, "فَوِيجَات", "fawīcāt", "çok grup olanlar, müennes", "kontrol", ""],
-      [388, "فَوَّج", "fawwac", "çok grup olan", "kontrol", ""],
-      [389, "فَوَّجَة", "fawwaca", "çok grup olan, müennes", "kontrol", ""],
-      [390, "فَوَّجَان", "fawwacān", "çok grup olan, iki", "kontrol", ""],
-      [391, "فَوَّجَتَان", "fawwacatān", "çok grup olan, iki, müennes", "kontrol", ""],
-      [392, "فَوَّجُون", "fawwacūn", "çok grup olanlar", "kontrol", ""],
-      [393, "فَوَّجِين", "fawwacīn", "çok grup olanlar", "kontrol", ""],
-      [394, "فَوَّجَات", "fawwacāt", "çok grup olanlar, müennes", "kontrol", ""]
-    ],
-    "mensûb": [
-      [395, "فَوْجِيّ", "fawciyy", "grup olma ile ilgili", "kontrol", ""],
-      [886, "فَاجِيّ", "fāciyy", "grup olma ile ilgili", "kontrol", ""],
-      [914, "فِيجِيّ", "fīciyy", "grup olma ile ilgili", "kontrol", ""],
-      [916, "فُوجِيّ", "fūciyy", "grup olma ile ilgili", "kontrol", ""],
-      [815, "فِيَاجِيّ", "fiyāciyy", "grup olma ile ilgili", "kontrol", ""],
-      [817, "فَائِجِيّ", "fāʾiciyy", "grup olma ile ilgili", "kontrol", ""],
-      [819, "مَفُوجِيّ", "mafūciyy", "grup olma ile ilgili", "kontrol", ""],
-      [409, "فَوِيجِيّ", "fawīciyy", "grup olma ile ilgili", "kontrol", ""],
-      [823, "مَفَاجِيّ", "mafāciyy", "grup olma ile ilgili", "kontrol", ""],
-      [413, "تَفْوِيجِيّ", "tafwīciyy", "grup olma ile ilgili", "kontrol", ""],
-      [415, "تَفَاوُجِيّ", "tafāwuciyy", "grup olma ile ilgili", "kontrol", ""],
-      [829, "إِفَاجِيّ", "ʾifāciyy", "grup olma ile ilgili", "kontrol", ""],
-      [831, "اِفْتِيَاجِيّ", "iftiyāciyy", "grup olma ile ilgili", "kontrol", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "فَوْجِيَّة", "fawciyya", "grup olanlık", "kontrol", ""],
-      [887, "فَاجِيَّة", "fāciyya", "grup olanlık", "kontrol", ""],
-      [915, "فِيجِيَّة", "fīciyya", "grup olanlık", "kontrol", ""],
-      [917, "فُوجِيَّة", "fūciyya", "grup olanlık", "kontrol", ""],
-      [816, "فِيَاجِيَّة", "fiyāciyya", "grup olanlık", "kontrol", ""],
-      [818, "فَائِجِيَّة", "fāʾiciyya", "grup olanlık", "kontrol", ""],
-      [820, "مَفُوجِيَّة", "mafūciyya", "grup olanlık", "kontrol", ""],
-      [410, "فَوِيجِيَّة", "fawīciyya", "grup olanlık", "kontrol", ""],
-      [824, "مَفَاجِيَّة", "mafāciyya", "grup olanlık", "kontrol", ""],
-      [414, "تَفْوِيجِيَّة", "tafwīciyya", "grup olanlık", "kontrol", ""],
-      [416, "تَفَاوُجِيَّة", "tafāwuciyya", "grup olanlık", "kontrol", ""],
-      [830, "إِفَاجِيَّة", "ʾifāciyya", "grup olanlık", "kontrol", ""],
-      [832, "اِفْتِيَاجِيَّة", "iftiyāciyya", "grup olanlık", "kontrol", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "فَوَاج", "fawāc", "grup olma", "kontrol", ""],
-      [422, "فُوُوج", "fuwūc", "grup olma", "kontrol", ""],
-      [835, "فِيَاج", "fiyāc", "grup olma", "kontrol", ""],
-      [918, "فُوج", "fūc", "grup olma", "kontrol", ""],
-      [425, "فَوَاجَة", "fawāca", "grup olma", "kontrol", ""],
-      [837, "فِيَاجَة", "fiyāca", "grup olma", "kontrol", ""],
-      [427, "فُوُوجَة", "fuwūca", "grup olma", "kontrol", ""],
-      [428, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
-      [919, "فِيج", "fīc", "grup olma", "kontrol", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "فَاوُوج", "fāwūc", "grup olma türünden şey", "kontrol", ""],
-      [432, "فَوَجَة", "fawaca", "grup olma türünden şey", "kontrol", ""],
-      [433, "فُوَجَة", "fuwaca", "grup olma türünden şey", "kontrol", ""],
-      [434, "أُفْوُوجَة", "ʾufwūca", "grup olma türünden şey", "kontrol", ""],
-      [435, "فَوْوَج", "fawwac", "grup olma türünden şey", "kontrol", ""],
-      [437, "فَيْوَج", "faywac", "grup olma türünden şey", "kontrol", ""],
-      [439, "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
-      [840, "فَاج", "fāc", "grup olma türünden şey", "kontrol", ""],
-      [921, "فِيج", "fīc", "grup olma türünden şey", "kontrol", ""],
-      [923, "فُوج", "fūc", "grup olma türünden şey", "kontrol", ""],
-      [447, "فَوِيج", "fawīc", "grup olma türünden şey", "kontrol", ""],
-      [843, "فِيَج", "fiyac", "grup olma türünden şey", "kontrol", ""],
-      [451, "فُوُج", "fuwuc", "grup olma türünden şey", "kontrol", ""],
-      [453, "فَوَاج", "fawāc", "grup olma türünden şey", "kontrol", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "فَاوُوجَة", "fāwūca", "grup olma türünden bir tane", "kontrol", ""],
-      [436, "فَوْوَجَة", "fawwaca", "grup olma türünden bir tane", "kontrol", ""],
-      [438, "فَيْوَجَة", "faywaca", "grup olma türünden bir tane", "kontrol", ""],
-      [440, "فَوْجَة", "fawca", "grup olma türünden bir tane", "kontrol", ""],
-      [920, "فَاجَة", "fāca", "grup olma türünden bir tane", "kontrol", ""],
-      [922, "فِيجَة", "fīca", "grup olma türünden bir tane", "kontrol", ""],
-      [924, "فُوجَة", "fūca", "grup olma türünden bir tane", "kontrol", ""],
-      [448, "فَوِيجَة", "fawīca", "grup olma türünden bir tane", "kontrol", ""],
-      [925, "فِيَجَة", "fiyaca", "grup olma türünden bir tane", "kontrol", ""],
-      [452, "فُوُجَة", "fuwuca", "grup olma türünden bir tane", "kontrol", ""],
-      [454, "فَوَاجَة", "fawāca", "grup olma türünden bir tane", "kontrol", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَفْوَاج", "ʾafwāc", "grup olmalar", "kontrol", ""],
-      [456, "أَفْوِجَة", "ʾafwica", "grup olmalar", "kontrol", ""],
-      [457, "أَفَاوِج", "ʾafāwic", "grup olmalar", "kontrol", ""],
-      [458, "أَفَاوِيج", "ʾafāwīc", "grup olmalar", "kontrol", ""],
-      [459, "فُوُوج", "fuwūc", "grup olmalar", "kontrol", ""],
-      [460, "فُوُج", "fuwuc", "grup olmalar", "kontrol", ""],
-      [854, "فِيَاج", "fiyāc", "grup olmalar", "kontrol", ""],
-      [855, "فِيَج", "fiyac", "grup olmalar", "kontrol", ""],
-      [463, "فِوَجَة", "fiwaca", "grup olmalar", "kontrol", ""],
-      [464, "فُوَج", "fuwac", "grup olmalar", "kontrol", ""],
-      [465, "فُوَجاء", "fuwacāʾ", "grup olmalar", "kontrol", ""],
-      [466, "فَوَجَة", "fawaca", "grup olmalar", "kontrol", ""],
-      [467, "فُوَّاج", "fuwwāc", "grup olmalar", "kontrol", ""],
-      [468, "فَوَاج", "fawāc", "grup olmalar", "kontrol", ""],
-      [861, "فَاج", "fāc", "grup olmalar", "kontrol", ""],
-      [470, "مَفَاوِج", "mafāwic", "grup olmalar", "kontrol", ""],
-      [471, "مَفَاوِيج", "mafāwīc", "grup olmalar", "kontrol", ""],
-      [472, "فَوَاوِج", "fawāwic", "grup olmalar", "kontrol", ""],
-      [473, "أَفْوُج", "ʾafwuc", "grup olmalar", "kontrol", ""],
-      [474, "فُوَّج", "fuwwac", "grup olmalar", "kontrol", ""],
-      [475, "فَوَائِج", "fawāʾic", "grup olmalar", "kontrol", ""],
-      [476, "فُوَيْج", "fuwayc", "grup olmalar", "kontrol", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَفْوَاجَات", "ʾafwācāt", "grup olmalar topluluğu", "kontrol", ""],
-      [478, "أَفْوِجَات", "ʾafwicāt", "grup olmalar topluluğu", "kontrol", ""],
-      [479, "أَفَاوِجَات", "ʾafāwicāt", "grup olmalar topluluğu", "kontrol", ""],
-      [480, "أَفَاوِيجَات", "ʾafāwīcāt", "grup olmalar topluluğu", "kontrol", ""],
-      [481, "فُوُوجَات", "fuwūcāt", "grup olmalar topluluğu", "kontrol", ""],
-      [482, "فُوُجَات", "fuwucāt", "grup olmalar topluluğu", "kontrol", ""],
-      [872, "فِيَاجَات", "fiyācāt", "grup olmalar topluluğu", "kontrol", ""],
-      [873, "فِيَجَات", "fiyacāt", "grup olmalar topluluğu", "kontrol", ""],
-      [485, "فِوَجَات", "fiwacāt", "grup olmalar topluluğu", "kontrol", ""],
-      [486, "فُوَجَات", "fuwacāt", "grup olmalar topluluğu", "kontrol", ""],
-      [487, "فُوَجاآت", "fuwacāʾāt", "grup olmalar topluluğu", "kontrol", ""],
-      [488, "فَوَجَات", "fawacāt", "grup olmalar topluluğu", "kontrol", ""],
-      [489, "فُوَّاجَات", "fuwwācāt", "grup olmalar topluluğu", "kontrol", ""],
-      [490, "فَوَاجَات", "fawācāt", "grup olmalar topluluğu", "kontrol", ""],
-      [879, "فَاجَات", "fācāt", "grup olmalar topluluğu", "kontrol", ""],
-      [492, "مَفَاوِجَات", "mafāwicāt", "grup olmalar topluluğu", "kontrol", ""],
-      [493, "مَفَاوِيجَات", "mafāwīcāt", "grup olmalar topluluğu", "kontrol", ""],
-      [494, "فَوَاوِجَات", "fawāwicāt", "grup olmalar topluluğu", "kontrol", ""],
-      [495, "أَفْوُجَات", "ʾafwucāt", "grup olmalar topluluğu", "kontrol", ""],
-      [496, "فُوَّجَات", "fuwwacāt", "grup olmalar topluluğu", "kontrol", ""],
-      [497, "فَوَائِجَات", "fawāʾicāt", "grup olmalar topluluğu", "kontrol", ""],
-      [498, "فُوَيْجَات", "fuwaycāt", "grup olmalar topluluğu", "kontrol", ""]
-    ]
-  },
-  "reddedilen": [
-    ["ism-i merre · bâb IV", "if'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    ["ism-i merre · bâb X", "istif'āl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "فوج",
-      "turkce": "Fevc: grup, topluluk; fevc: kalabalık"
-    },
-    "osmanlica_lugatler": {
-      "فَوْج": {
-        "sorgular": ["fauc", "fauç"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "فَوَجَ",
-        "metin": "(فَوَجَ) الْفَاءُ وَالْوَاوُ وَالْجِيمُ كَلِمَةٌ تَدُلُّ عَلَى تَجَمُّعٍ. مِنْ ذَلِكَ الْفَوْجُ، الْجَمَاعَةُ مِنَ النَّاسِ، وَالْجَمْعُ أَفْوَاجٌ، وَجَمْعُ الْجَمْعِ أَفَاوِجُ وَأَفَاوِيجُ. وَأَمَّا أَفَاجَ الرَّجُلُ، إِذَا أَسْرَعَ، فَهُوَ مِنْ ذَوَاتِ الْيَاءِ، وَالْفَيْجُ مِنْهُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الفاء والجيم",
-      "baslik": "فوج - فيج",
-      "mihveri": "تجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى. ومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \".",
-      "sesler": "",
-      "tam_metin": "{وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} [النصر: 2]\n\"الفَوْج والفائج: القَطيع من الناس/ الجماعة من الناس. يقال أفاج: أَرْسَل الإبل على الحوض قِطْعة قِطْعة. ومرَّ بنا فائجُ وليمةِ فلان أي فوجٌ ممن كان في طعامه. والفائجة من الأرض: مُتَّسَع ما بين كل مرتفعين من غَلْظ أو رمل \".\n° المعنى المحوري\nتجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى.\nومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \".",
-      "fasil_ozeti": "° معنى الفصل المعجمي (فج) : هو انفتاح في الشيء بقوة مع عدم الالتزام بحدٍّ، كما يتمثل في الفجّ الشِعْب بين جبلين أو في الجبل أو بين حائطين (أي في صلب) في (فجج)، وكما في الفجوة المتَّسَع بين الشيئين -في (فجو)، وكما في انفصال كل فوج وتميزه عن الآخر -في (فوج)، وكما في منفجر الماء من الحوض -في (فجر). وكلها يقع بقوة كما بينا."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 5,
-      "ilk_yer": "27:83:6:1",
-      "tur": {
-        "N": 5
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "فَوْج": 5
-      },
-      "bicimler": {
-        "فَوْجٌ": 2,
-        "أَفْوَاجًا": 2,
-        "فَوْجًا": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "FWǦ",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab FWǦ فوج BP – • HDAL • © SG | 22Apr2023 √FWǦ “root” ▪ FWǦ_1 ‘...’ ↗ ... ▪ FWǦ_2 ‘...’ ↗ ... ▪ FWǦ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘group of people; running fast; clearing between two heights; waft of fragrance; (of a she-camel) being fat’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "فيجي",
-        "u": "فيجي",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "فِيجِي • (fījī) f",
-        "g": ["Fiji (a country and archipelago of over 300 islands in Melanesia in Oceania)"],
-        "r": ["fījī"],
-        "yol": "müştak"
-      }
-    ],
-    "renk_sozluk": {
-      "فوجا": "grup",
-      "فوج": "grup"
-    },
-    "arabic_ontology": [
-      {
-        "id": "46173",
-        "arapca": [
-          "صُبَّةٌ",
-          "فِئَامٌ",
-          "مَلأٌ",
-          "عَشِيرَةٌ",
-          "قَافِلَةٌ",
-          "قَوْمٌ",
-          "ثُلَّةٌ",
-          "زُمْرَةٌ",
-          "طَبَقٌ",
-          "جَمْهَرَةٌ",
-          "جُمْهُورٌ",
-          "لَفِيفٌ",
-          "طَائِفَةٌ",
-          "فِئَةٌ",
-          "فِرْقَةٌ",
-          "قَبِيلَةٌ",
-          "جَمَاعَةٌ",
-          "فَرِيقٌ",
-          "حِزْبٌ2",
-          "حَشْدٌ",
-          "مَجْمُوعَةٌ",
-          "أُسْرَةٌ",
-          "جَمْعٌ",
-          "مَوْكِبٌ",
-          "عَائِلَةٌ",
-          "عُصْبَةٌ",
-          "عِصَابَةٌ",
-          "مَعْشَرٌ",
-          "كَوْكَبَةٌ",
-          "رَهْطٌ",
-          "نَمَطٌ",
-          "نَفَرٌ2",
-          "شِرْذِمَةٌ",
-          "فَوْجٌ",
-          "فَصِيلَةٌ",
-          "فَصِيلٌ",
-          "قَبيلٌ",
-          "فَيْلَقٌ2"
-        ],
-        "ingilizce": [],
-        "tanim": "جماعة من الناس يجمعهم النسب والدم",
-        "misal": "رأيت _ يسألون عن وقت المباراة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46516",
-        "arapca": [
-          "عَرَمْرَمٌ",
-          "عَسْكَرٌ",
-          "سَرِيّةٌ",
-          "لِوَاءٌ",
-          "كَتِيبَةٌ",
-          "جَحْفَلٌ",
-          "جَرَّارٌ",
-          "جَوْفةٌ",
-          "خَمِيسٌ",
-          "فِرْقَةٌ",
-          "جَيْشٌ",
-          "جُنْدِيٌّ",
-          "سِرْبٌ",
-          "فَوْجٌ",
-          "فَيْلَقٌ2"
-        ],
-        "ingilizce": [],
-        "tanim": "جماعة المحاربين في الحرب بمعداتها وعناصرها الحربية",
-        "misal": "تقدَّمَ ال_ بقيادة موسى بن نصير لتحرير الأندلس",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47024",
-        "arapca": [
-          "طُغْمَةٌ",
-          "مَلأٌ",
-          "عَشِيرَةٌ",
-          "قَافِلَةٌ",
-          "قَوْمٌ",
-          "ثُلَّةٌ",
-          "زُمْرَةٌ",
-          "جَمْهَرَةٌ",
-          "جُمْهُورٌ",
-          "صُحْبةٌ1",
-          "لَفِيفٌ",
-          "طَائِفَةٌ",
-          "فِئَةٌ",
-          "فِرْقَةٌ",
-          "جَمَاعَةٌ",
-          "فَرِيقٌ",
-          "حِزْبٌ2",
-          "حَشَدٌ",
-          "حَشْدٌ",
-          "مَجْمُوعَةٌ",
-          "جَمْعٌ",
-          "مَوْكِبٌ",
-          "عُصْبَةٌ",
-          "عِصَابَةٌ",
-          "مَعْشَرٌ",
-          "كَوْكَبَةٌ",
-          "رَهْطٌ",
-          "رَكْبٌ 2",
-          "رِفْقَةٌ",
-          "رُفْقَةٌ",
-          "نَمَطٌ",
-          "شِرْذِمَةٌ",
-          "فَوْجٌ",
-          "فَصِيلَةٌ",
-          "فَصِيلٌ",
-          "فَيْلَقٌ2"
-        ],
-        "ingilizce": [],
-        "tanim": "مجموعة كبيرة من الناس الذين يجتمعون في مكان واحد وفي وقت واحد لهدف ما",
-        "misal": "ذهبنا في رحلة إلى بيت لحم مع _ من اهل البلدة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47277",
-        "arapca": ["طُغْمَةٌ", "جَوْقَةٌ", "جَمْعٌ", "كَوْكَبَةٌ", "فَوْجٌ"],
-        "ingilizce": [],
-        "tanim": "جَماعَةٌ مِنَ النَّاسِ",
-        "misal": "رأيت _ يتحلَّقون حول الحادث لإنقاذ المصابين",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "48028",
-        "arapca": [
-          "صُبَّةٌ",
-          "فِئَامٌ",
-          "طُغْمَةٌ",
-          "مَلأٌ",
-          "عَشِيرَةٌ",
-          "قَافِلَةٌ",
-          "رَتَلٌ",
-          "قَوْمٌ",
-          "ثُلَّةٌ",
-          "زُمْرَةٌ",
-          "طَابُورٌ",
-          "طَبَقٌ",
-          "جَمْهَرَةٌ",
-          "جُمْهُورٌ",
-          "لَفِيفٌ",
-          "طَائِفَةٌ",
-          "فِئَةٌ",
-          "فِرْقَةٌ",
-          "صَفٌّ",
-          "جَمَاعَةٌ",
-          "فَرِيقٌ",
-          "حِزْبٌ2",
-          "حَشْدٌ",
-          "مَجْمُوعَةٌ",
-          "جَمْعٌ",
-          "مَوْكِبٌ",
-          "عُصْبَةٌ",
-          "عِصَابَةٌ",
-          "مَعْشَرٌ",
-          "كَوْكَبَةٌ",
-          "رَهْطٌ",
-          "نَمَطٌ",
-          "نَفَرٌ2",
-          "شِرْذِمَةٌ",
-          "فَوْجٌ",
-          "فَصِيلَةٌ",
-          "قَبيلٌ",
-          "فَيْلَقٌ2"
-        ],
-        "ingilizce": [],
-        "tanim": "اسم لعدد من الناس مجتمعون في مكان واحد",
-        "misal": "قدم الشرطي الماء ل_ المسافرين",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "فَوْج": [
-        {
-          "eser": "Kamus",
-          "madde": "fevc",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Gürûh ve cemâat manâsınadır: Cemi فُوُوجٌ [fuvûc] gelir, fânın zammıyla ve أَفْوَاجٌ [efvâc] gelir ve cemül-cemi أَفَاوِجُ [efâvic] ve أَفَاوِيجُ [efâvîc] gelir; yukâlu: قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ Ve فَوْجٌ [fevc] Masdar olur, râiha-i tayyibe yayılıp kokmak manâsına, فَوْحٌ [favh] manâsında lügattir; yukâlu: فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ Ve gündüz soğuk yâhûd serin olmak manâsınadır; yukâlu: فَاجَ النَّهَارُ إِذَا بَرَدَ",
-              "misaller": [
-                ["قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ", ""],
-                ["فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ", ""],
-                ["فَاجَ النَّهَارُ إِذَا بَرَدَ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْفَوْجُ",
-          "okunus": "el-fevc",
-          "koken": "مَوْجٌ [mevc] vezninde"
-        },
-        {
-          "eser": "Luggat",
-          "madde": "fevc",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Grup, cemaat, zümre. Bölük, takım",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kubbealtı",
-          "madde": "FEVÇ – FEVC",
-          "yazilis": "ﻓﻮﺝ",
-          "tur": "i.",
-          "koken": "Ar. fevc",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Bölük, takım, insan kalabalığı",
-              "misaller": [
-                ["Bir damla gözümde en büyük mevc / Vermez bana korku böyle bin fevc", "Muallim Nâci"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": [
-            {
-              "etiket": "",
-              "tanim": "Akın akın, akan bir kalabalık hâlinde",
-              "misaller": [
-                ["toplanıyorlardı", "Musâhipzâde Celâl"],
-                [
-                  "Halk-ı Sâdâbad iki sâhil boyunca fevç fevç / Vâde-i teşrîfine alkış tutarken dûrdan / Cedvel-i Sîm’in kenârından bu âvâzın Kemâl / Koptu bir fevvâre-i zerrin gibi mâhûrdan",
-                  "Yahyâ Kemal"
-                ],
-                ["● Fevc-â-fevc", "ﻓﻮﺟﺎﻓﻮﺝ"],
-                ["birl. sıf", "Fars. pekiştirme elifi -ā ile"],
-                ["Akın akın, fevç fevç: Çiçekler, kuşlar etrâfında fevc-â-fevc ü rengârenk", "Tevfik Fikret"]
-              ],
-              "deyim": "Fevç fevç"
-            }
-          ]
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "فَوَجَ (Fevece)",
-          "metin": "(فَوَجَ) Fâ, vâv ve cîm harfleri toplanmaya delâlet eden bir kelimedir. İnsandan bir cemaat mânâsındaki fevc (الْفَوْجُ) bundandır; cem'i efvâc (أَفْوَاجٌ), cem'u'l-cem'i ise efâvic (أَفَاوِجُ) ve efâvîc (أَفَاوِيجُ) gelir. Adamın süratlenmesi mânâsındaki \"أَفَاجَ الرَّجُلُ\" tabirine gelince, bu yâ'lı (ecvef-i yâî) kelimelerdendir; feyc (الْفَيْجُ) de buradan gelir."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Bir topluluğun, başka bir topluluktan bir kuvvet ve yayılma ile ayrılmış hâli —insanlardan oluşan bölük (fevc) gibi—. Buradaki kuvvet, toplulukta bulunan iç içelik sebebiyle iki topluluğun birbirinden ayrılmasının her iki hususu da (kuvvet ve yayılmayı) iktiza etmesidir; toplanmaları cihetiyle iki yüksek yerin her birinde olduğu gibi. Kuvvet, her birinin diğerinden bir yoğunluk ve yükseklikle uzaklaşmasıdır: \"{وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} (İnsanların Allah'ın dinine bölük bölük girdiklerini gördüğün zaman)\", yani daha önce fert fert girerlerken artık kalabalık cemaatler hâlinde girdiklerini gördüğünde. \"{يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} (Sûr'a üfürüldüğü gün bölük bölük gelirsiniz)\" [Nebe: 18]; kabirlerden mahşer yerine her ümmet kendi imamıyla veya muhtelif cemaatler hâlinde gelir [Bahr, 8/404]. Kur'ân'da bu terkibden gelen kelimelerin tamamı bu mânâdaki fevc ve onun cem'i olan efvâcdır. Bir kuvvet ve yayılma ile ayrılma mânâsından olmak üzere şu kullanımlar da vardır: \"فاج المسكُ\" (misk etrafa yayıldı, kokusu burcu burcu dağıldı), \"أفاج\" (süratlendi) ve \"فاجت الناقة برجليها تفيج\" (dişi deve arka ayaklarıyla gerisindekini tepti/savurdu)."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Soy ve kan bağıyla bir araya gelen insan topluluğu.",
-          "misal": "Müsabakanın vaktini soran bir _ gördüm."
-        },
-        {
-          "tanim": "Harpte teçhizatı ve muharip unsurlarıyla birlikte bulunan muharipler topluluğu.",
-          "misal": "_ Endülüs'ü fethetmek üzere Mûsâ bin Nusayr kumandasında ilerledi."
-        },
-        {
-          "tanim": "Muayyen bir gaye için aynı yerde ve aynı vakitte toplanan büyük insan kalabalığı.",
-          "misal": "Belde ahalisinden bir _ ile birlikte Beytüllahim'e seyahate gittik."
-        },
-        {
-          "tanim": "İnsanlardan bir cemaat.",
-          "misal": "Yaralıları kurtarmak için hadisenin etrafında halka olan bir _ gördüm."
-        },
-        {
-          "tanim": "Bir yerde toplanmış bir miktar insana verilen isim.",
-          "misal": "Polis, yolcu _-ine su ikram etti."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön EtymArab FWǦ فوج BP – • HDAL • © SG | 22Nis2023 √FWǦ “kök” ▪ FWǦ_1 ‘...’ ↗ ... ▪ FWǦ_2 ‘...’ ↗ ... ▪ FWǦ_3 ‘...’ ↗ ... ♦ Klasik Arapçada mânâ yelpazesi (BAH2008'e göre): ‘insan topluluğu; hızlı koşma; iki yükselti arasındaki açıklık; güzel kokunun esintisi; (dişi deve için) semiz olma’ ▪ … – . . – – Kaynaklar ; üstveri ; gramer ; İngilizce ; bağlam ; tarihçe ; kökteşler ; münakaşa ; Batı dilleri ; türevler ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["Fiji (Okyanusya'da Melanezya bölgesinde 300'den fazla adadan müteşekkil bir ülke ve takımada)."]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 5,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "فج",
+  "ses": {
     "harf": "ف",
+    "fasil": "فج",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "anlam": "Fevc: grup, topluluk; fevc: kalabalık",
+  "esas_manalar": "toplanmak, bölük, alay{kalabalık}",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "fevc",
+        "koken": "مَوْجٌ [mevc] vezninde",
+        "yazilis": "اَلْفَوْجُ",
+        "okunus": "el-fevc",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Gürûh ve cemâat manâsınadır: Cemi فُوُوجٌ [fuvûc] gelir, fânın zammıyla ve أَفْوَاجٌ [efvâc] gelir ve cemül-cemi أَفَاوِجُ [efâvic] ve أَفَاوِيجُ [efâvîc] gelir; yukâlu: قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ Ve فَوْجٌ [fevc] Masdar olur, râiha-i tayyibe yayılıp kokmak manâsına, فَوْحٌ [favh] manâsında lügattir; yukâlu: فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ Ve gündüz soğuk yâhûd serin olmak manâsınadır; yukâlu: فَاجَ النَّهَارُ إِذَا بَرَدَ",
+            "misaller": [
+              ["قَدْ أَقْبَلَ فَوْجٌ مِنَ النَّاسِ أَيْ جَمَاعَةٌ", ""],
+              ["فَاجَ الْمِسْكُ يَفُوجُ فَوْجًا إِذَا فَاحَ أَيِ انْتَشَرَتْ رَائِحَتُهُ", ""],
+              ["فَاجَ النَّهَارُ إِذَا بَرَدَ", ""]
+            ]
+          }
+        ],
+        "kelime": ["فَوْج"]
+      }
+    ],
+    "Luggat": [
+      {
+        "madde": "fevc",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Grup, cemaat, zümre. Bölük, takım"
+          }
+        ],
+        "kelime": ["فَوْج"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "FEVÇ – FEVC",
+        "tur": "i.",
+        "koken": "Ar. fevc",
+        "yazilis": "ﻓﻮﺝ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Bölük, takım, insan kalabalığı",
+            "misaller": [
+              ["Bir damla gözümde en büyük mevc / Vermez bana korku böyle bin fevc", "Muallim Nâci"]
+            ]
+          }
+        ],
+        "deyimler": [
+          {
+            "deyim": "Fevç fevç",
+            "tanim": "Akın akın, akan bir kalabalık hâlinde",
+            "misaller": [
+              ["toplanıyorlardı", "Musâhipzâde Celâl"],
+              [
+                "Halk-ı Sâdâbad iki sâhil boyunca fevç fevç / Vâde-i teşrîfine alkış tutarken dûrdan / Cedvel-i Sîm’in kenârından bu âvâzın Kemâl / Koptu bir fevvâre-i zerrin gibi mâhûrdan",
+                "Yahyâ Kemal"
+              ],
+              ["● Fevc-â-fevc", "ﻓﻮﺟﺎﻓﻮﺝ"],
+              ["birl. sıf", "Fars. pekiştirme elifi -ā ile"],
+              ["Akın akın, fevç fevç: Çiçekler, kuşlar etrâfında fevc-â-fevc ü rengârenk", "Tevfik Fikret"]
+            ]
+          }
+        ],
+        "kelime": ["فَوْج"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "فَوَجَ",
+      "metin": "(فَوَجَ) الْفَاءُ وَالْوَاوُ وَالْجِيمُ كَلِمَةٌ تَدُلُّ عَلَى تَجَمُّعٍ. مِنْ ذَلِكَ الْفَوْجُ، الْجَمَاعَةُ مِنَ النَّاسِ، وَالْجَمْعُ أَفْوَاجٌ، وَجَمْعُ الْجَمْعِ أَفَاوِجُ وَأَفَاوِيجُ. وَأَمَّا أَفَاجَ الرَّجُلُ، إِذَا أَسْرَعَ، فَهُوَ مِنْ ذَوَاتِ الْيَاءِ، وَالْفَيْجُ مِنْهُ.",
+      "baslik_tr": "فَوَجَ (Fevece)",
+      "metin_tr": "(فَوَجَ) Fâ, vâv ve cîm harfleri toplanmaya delâlet eden bir kelimedir. İnsandan bir cemaat mânâsındaki fevc (الْفَوْجُ) bundandır; cem'i efvâc (أَفْوَاجٌ), cem'u'l-cem'i ise efâvic (أَفَاوِجُ) ve efâvîc (أَفَاوِيجُ) gelir. Adamın süratlenmesi mânâsındaki \"أَفَاجَ الرَّجُلُ\" tabirine gelince, bu yâ'lı (ecvef-i yâî) kelimelerdendir; feyc (الْفَيْجُ) de buradan gelir."
+    }
+  ],
+  "cebel": {
+    "fasil": "الفاء والجيم",
+    "baslik": "فوج - فيج",
+    "mihveri": "تجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى. ومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \".",
+    "tam_metin": "{وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} [النصر: 2]\n\"الفَوْج والفائج: القَطيع من الناس/ الجماعة من الناس. يقال أفاج: أَرْسَل الإبل على الحوض قِطْعة قِطْعة. ومرَّ بنا فائجُ وليمةِ فلان أي فوجٌ ممن كان في طعامه. والفائجة من الأرض: مُتَّسَع ما بين كل مرتفعين من غَلْظ أو رمل \".\n° المعنى المحوري\nتجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى.\nومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \".",
+    "fasil_ozeti": "° معنى الفصل المعجمي (فج) : هو انفتاح في الشيء بقوة مع عدم الالتزام بحدٍّ، كما يتمثل في الفجّ الشِعْب بين جبلين أو في الجبل أو بين حائطين (أي في صلب) في (فجج)، وكما في الفجوة المتَّسَع بين الشيئين -في (فجو)، وكما في انفصال كل فوج وتميزه عن الآخر -في (فوج)، وكما في منفجر الماء من الحوض -في (فجر). وكلها يقع بقوة كما بينا.",
+    "mihveri_tr": "Bir topluluğun, başka bir topluluktan bir kuvvet ve yayılma ile ayrılmış hâli —insanlardan oluşan bölük (fevc) gibi—. Buradaki kuvvet, toplulukta bulunan iç içelik sebebiyle iki topluluğun birbirinden ayrılmasının her iki hususu da (kuvvet ve yayılmayı) iktiza etmesidir; toplanmaları cihetiyle iki yüksek yerin her birinde olduğu gibi. Kuvvet, her birinin diğerinden bir yoğunluk ve yükseklikle uzaklaşmasıdır: \"{وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} (İnsanların Allah'ın dinine bölük bölük girdiklerini gördüğün zaman)\", yani daha önce fert fert girerlerken artık kalabalık cemaatler hâlinde girdiklerini gördüğünde. \"{يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} (Sûr'a üfürüldüğü gün bölük bölük gelirsiniz)\" [Nebe: 18]; kabirlerden mahşer yerine her ümmet kendi imamıyla veya muhtelif cemaatler hâlinde gelir [Bahr, 8/404]. Kur'ân'da bu terkibden gelen kelimelerin tamamı bu mânâdaki fevc ve onun cem'i olan efvâcdır. Bir kuvvet ve yayılma ile ayrılma mânâsından olmak üzere şu kullanımlar da vardır: \"فاج المسكُ\" (misk etrafa yayıldı, kokusu burcu burcu dağıldı), \"أفاج\" (süratlendi) ve \"فاجت الناقة برجليها تفيج\" (dişi deve arka ayaklarıyla gerisindekini tepti/savurdu)."
+  },
+  "zemahseri": {
+    "hakikat": "أقبلوا فوجاً فوجاً، يموج بهم الوادي موجاً.",
+    "mecaz_var": false
+  },
+  "ontoloji": [
+    {
+      "id": "46173",
+      "arapca": [
+        "صُبَّةٌ",
+        "فِئَامٌ",
+        "مَلأٌ",
+        "عَشِيرَةٌ",
+        "قَافِلَةٌ",
+        "قَوْمٌ",
+        "ثُلَّةٌ",
+        "زُمْرَةٌ",
+        "طَبَقٌ",
+        "جَمْهَرَةٌ",
+        "جُمْهُورٌ",
+        "لَفِيفٌ",
+        "طَائِفَةٌ",
+        "فِئَةٌ",
+        "فِرْقَةٌ",
+        "قَبِيلَةٌ",
+        "جَمَاعَةٌ",
+        "فَرِيقٌ",
+        "حِزْبٌ2",
+        "حَشْدٌ",
+        "مَجْمُوعَةٌ",
+        "أُسْرَةٌ",
+        "جَمْعٌ",
+        "مَوْكِبٌ",
+        "عَائِلَةٌ",
+        "عُصْبَةٌ",
+        "عِصَابَةٌ",
+        "مَعْشَرٌ",
+        "كَوْكَبَةٌ",
+        "رَهْطٌ",
+        "نَمَطٌ",
+        "نَفَرٌ2",
+        "شِرْذِمَةٌ",
+        "فَوْجٌ",
+        "فَصِيلَةٌ",
+        "فَصِيلٌ",
+        "قَبيلٌ",
+        "فَيْلَقٌ2"
+      ],
+      "ingilizce": [],
+      "tanim": "جماعة من الناس يجمعهم النسب والدم",
+      "misal": "رأيت _ يسألون عن وقت المباراة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Soy ve kan bağıyla bir araya gelen insan topluluğu.",
+      "misal_tr": "Müsabakanın vaktini soran bir _ gördüm."
+    },
+    {
+      "id": "46516",
+      "arapca": [
+        "عَرَمْرَمٌ",
+        "عَسْكَرٌ",
+        "سَرِيّةٌ",
+        "لِوَاءٌ",
+        "كَتِيبَةٌ",
+        "جَحْفَلٌ",
+        "جَرَّارٌ",
+        "جَوْفةٌ",
+        "خَمِيسٌ",
+        "فِرْقَةٌ",
+        "جَيْشٌ",
+        "جُنْدِيٌّ",
+        "سِرْبٌ",
+        "فَوْجٌ",
+        "فَيْلَقٌ2"
+      ],
+      "ingilizce": [],
+      "tanim": "جماعة المحاربين في الحرب بمعداتها وعناصرها الحربية",
+      "misal": "تقدَّمَ ال_ بقيادة موسى بن نصير لتحرير الأندلس",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Harpte teçhizatı ve muharip unsurlarıyla birlikte bulunan muharipler topluluğu.",
+      "misal_tr": "_ Endülüs'ü fethetmek üzere Mûsâ bin Nusayr kumandasında ilerledi."
+    },
+    {
+      "id": "47024",
+      "arapca": [
+        "طُغْمَةٌ",
+        "مَلأٌ",
+        "عَشِيرَةٌ",
+        "قَافِلَةٌ",
+        "قَوْمٌ",
+        "ثُلَّةٌ",
+        "زُمْرَةٌ",
+        "جَمْهَرَةٌ",
+        "جُمْهُورٌ",
+        "صُحْبةٌ1",
+        "لَفِيفٌ",
+        "طَائِفَةٌ",
+        "فِئَةٌ",
+        "فِرْقَةٌ",
+        "جَمَاعَةٌ",
+        "فَرِيقٌ",
+        "حِزْبٌ2",
+        "حَشَدٌ",
+        "حَشْدٌ",
+        "مَجْمُوعَةٌ",
+        "جَمْعٌ",
+        "مَوْكِبٌ",
+        "عُصْبَةٌ",
+        "عِصَابَةٌ",
+        "مَعْشَرٌ",
+        "كَوْكَبَةٌ",
+        "رَهْطٌ",
+        "رَكْبٌ 2",
+        "رِفْقَةٌ",
+        "رُفْقَةٌ",
+        "نَمَطٌ",
+        "شِرْذِمَةٌ",
+        "فَوْجٌ",
+        "فَصِيلَةٌ",
+        "فَصِيلٌ",
+        "فَيْلَقٌ2"
+      ],
+      "ingilizce": [],
+      "tanim": "مجموعة كبيرة من الناس الذين يجتمعون في مكان واحد وفي وقت واحد لهدف ما",
+      "misal": "ذهبنا في رحلة إلى بيت لحم مع _ من اهل البلدة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Muayyen bir gaye için aynı yerde ve aynı vakitte toplanan büyük insan kalabalığı.",
+      "misal_tr": "Belde ahalisinden bir _ ile birlikte Beytüllahim'e seyahate gittik."
+    },
+    {
+      "id": "47277",
+      "arapca": ["طُغْمَةٌ", "جَوْقَةٌ", "جَمْعٌ", "كَوْكَبَةٌ", "فَوْجٌ"],
+      "ingilizce": [],
+      "tanim": "جَماعَةٌ مِنَ النَّاسِ",
+      "misal": "رأيت _ يتحلَّقون حول الحادث لإنقاذ المصابين",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "İnsanlardan bir cemaat.",
+      "misal_tr": "Yaralıları kurtarmak için hadisenin etrafında halka olan bir _ gördüm."
+    },
+    {
+      "id": "48028",
+      "arapca": [
+        "صُبَّةٌ",
+        "فِئَامٌ",
+        "طُغْمَةٌ",
+        "مَلأٌ",
+        "عَشِيرَةٌ",
+        "قَافِلَةٌ",
+        "رَتَلٌ",
+        "قَوْمٌ",
+        "ثُلَّةٌ",
+        "زُمْرَةٌ",
+        "طَابُورٌ",
+        "طَبَقٌ",
+        "جَمْهَرَةٌ",
+        "جُمْهُورٌ",
+        "لَفِيفٌ",
+        "طَائِفَةٌ",
+        "فِئَةٌ",
+        "فِرْقَةٌ",
+        "صَفٌّ",
+        "جَمَاعَةٌ",
+        "فَرِيقٌ",
+        "حِزْبٌ2",
+        "حَشْدٌ",
+        "مَجْمُوعَةٌ",
+        "جَمْعٌ",
+        "مَوْكِبٌ",
+        "عُصْبَةٌ",
+        "عِصَابَةٌ",
+        "مَعْشَرٌ",
+        "كَوْكَبَةٌ",
+        "رَهْطٌ",
+        "نَمَطٌ",
+        "نَفَرٌ2",
+        "شِرْذِمَةٌ",
+        "فَوْجٌ",
+        "فَصِيلَةٌ",
+        "قَبيلٌ",
+        "فَيْلَقٌ2"
+      ],
+      "ingilizce": [],
+      "tanim": "اسم لعدد من الناس مجتمعون في مكان واحد",
+      "misal": "قدم الشرطي الماء ل_ المسافرين",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir yerde toplanmış bir miktar insana verilen isim.",
+      "misal_tr": "Polis, yolcu _-ine su ikram etti."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "فيجي",
+      "tur": "name",
+      "baslik": "فِيجِي • (fījī) f",
+      "anlam": ["Fiji (a country and archipelago of over 300 islands in Melanesia in Oceania)"],
+      "okunus": ["fījī"],
+      "bag": "müştak",
+      "anlam_tr": ["Fiji (Okyanusya'da Melanezya bölgesinde 300'den fazla adadan müteşekkil bir ülke ve takımada)."]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "FWǦ",
+    "kok_maddesi": "Back to library EtymArab FWǦ فوج BP – • HDAL • © SG | 22Apr2023 √FWǦ “root” ▪ FWǦ_1 ‘...’ ↗ ... ▪ FWǦ_2 ‘...’ ↗ ... ▪ FWǦ_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘group of people; running fast; clearing between two heights; waft of fragrance; (of a she-camel) being fat’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön EtymArab FWǦ فوج BP – • HDAL • © SG | 22Nis2023 √FWǦ “kök” ▪ FWǦ_1 ‘...’ ↗ ... ▪ FWǦ_2 ‘...’ ↗ ... ▪ FWǦ_3 ‘...’ ↗ ... ♦ Klasik Arapçada mânâ yelpazesi (BAH2008'e göre): ‘insan topluluğu; hızlı koşma; iki yükselti arasındaki açıklık; güzel kokunun esintisi; (dişi deve için) semiz olma’ ▪ … – . . – – Kaynaklar ; üstveri ; gramer ; İngilizce ; bağlam ; tarihçe ; kökteşler ; münakaşa ; Batı dilleri ; türevler ;"
+  },
+  "kuran": {
+    "gecis": 5,
+    "ilk": "27:83:6:1",
+    "tur": {
+      "N": 5
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "فَوْج": 5
+    },
+    "bicimler": {
+      "فَوْجٌ": 2,
+      "أَفْوَاجًا": 2,
+      "فَوْجًا": 1
+    },
+    "morfoloji_gecis": 5
+  },
+  "kelimeler": [
+    {
+      "lemma": "فَوْج",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "فَوْجًا",
+          "ilk": "27:83",
+          "adet": 1,
+          "tr": "grup"
+        },
+        {
+          "kelime": "فَوْجٌ",
+          "ilk": "38:59",
+          "adet": 2,
+          "tr": "grup"
+        },
+        {
+          "kelime": "أَفْوَاجًا",
+          "ilk": "78:18",
+          "adet": 2,
+          "tr": "grup"
+        }
+      ],
+      "tr": "grup",
+      "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'al ; cem‘-i mükesser (aday) · fu'ul (yalnız aday eşleşme)",
+      "adet": 5
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
+      ["fi'l", "semâî aday · ilal", "فِيج", "fīc", "grup", "kontrol", ""],
+      ["fu'l", "semâî aday · ilal", "فُوج", "fūc", "grup", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "فَاج", "fāc", "grup", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "فِيَج", "fiyac", "grup", "kontrol", ""],
+      ["fu'ul", "semâî aday", "فُوُج", "fuwuc", "grup", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "فُوُوج", "fuwūc", "grup", "kontrol", ""],
+      ["fi'āl", "semâî aday · ilal", "فِيَاج", "fiyāc", "grup", "kontrol", ""],
+      ["fu'āl", "semâî aday", "فُوَاج", "fuwāc", "grup", "kontrol", ""],
+      ["fa'āl", "semâî aday", "فَوَاج", "fawāc", "grup", "kontrol", ""],
+      ["fa'āle", "semâî aday", "فَوَاجَة", "fawāca", "grup", "kontrol", ""],
+      ["fu'ūle", "semâî aday", "فُوُوجَة", "fuwūca", "grup", "kontrol", ""],
+      ["fi'āle", "semâî aday · ilal", "فِيَاجَة", "fiyāca", "grup", "kontrol", ""],
+      ["fa'īl", "semâî aday", "فَوِيج", "fawīc", "grup", "kontrol", ""],
+      ["fa'ūl", "semâî aday", "فَوُوج", "fawūc", "grup", "kontrol", ""],
+      ["fa'alān", "semâî aday", "فَوَجَان", "fawacān", "grup", "kontrol", ""],
+      ["fu'lān", "semâî aday", "فُوْجَان", "fuwcān", "grup", "kontrol", ""],
+      ["fi'lān", "semâî aday", "فِوْجَان", "fiwcān", "grup", "kontrol", ""],
+      ["fa'lā", "semâî aday", "فَوْجَى", "fawcā", "grup", "kontrol", ""],
+      ["fu'lā", "semâî aday", "فُوْجَى", "fuwcā", "grup", "kontrol", ""],
+      ["fi'lā", "semâî aday", "فِوْجَى", "fiwcā", "grup", "kontrol", ""],
+      ["fa'ale", "semâî aday", "فَوَجَة", "fawaca", "grup", "kontrol", ""],
+      ["fi'ale", "semâî aday", "فِوَجَة", "fiwaca", "grup", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "فَوْجُوجَة", "fawcūca", "grup", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُفْوُوج", "tufwūc", "grup", "kontrol", ""],
+      ["taf'ila", "semâî aday", "تَفْوِجَة", "tafwica", "grup", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَفْوَجَة", "tafwaca", "grup", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَفْوُجَة", "mafwuca", "grup", "kontrol", ""],
+      ["maf'ila", "semâî aday · ilal", "مَفِيجَة", "mafīca", "grup", "kontrol", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَفْوِيج", "tafwīc", "çokça grup olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî", "تَفْوِجَة", "tafwica", "çokça grup olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî", "فِوِّاج", "fiwwāc", "çokça grup olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَفْوِيجَة", "tafwīca", "bir kere çokça grup olma", "kontrol", ""],
+      ["fi''āl + tâ", "aday", "فِوِّاجَة", "fiwwāca", "bir kere çokça grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُفَوِّج", "mufawwic", "çokça grup olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُفَوِّجَة", "mufawwica", "çokça grup olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُفَوِّجَان", "mufawwicān", "çokça grup olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُفَوِّجَتَان",
+        "mufawwicatān",
+        "çokça grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفَوِّجُون",
+        "mufawwicūn",
+        "çokça grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفَوِّجِين",
+        "mufawwicīn",
+        "çokça grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفَوِّجَات",
+        "mufawwicāt",
+        "çokça grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُفَوَّج", "mufawwac", "çokça grup olunan", "kontrol", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُفَوَّجَة", "mufawwaca", "çokça grup olunan, müennes", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُفَوَّجَان", "mufawwacān", "çokça grup olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُفَوَّجَتَان",
+        "mufawwacatān",
+        "çokça grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفَوَّجُون",
+        "mufawwacūn",
+        "çokça grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفَوَّجِين",
+        "mufawwacīn",
+        "çokça grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفَوَّجَات",
+        "mufawwacāt",
+        "çokça grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُفَوَّج", "mufawwac", "çokça grup olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُفَاوَجَة", "mufāwaca", "biriyle karşılıklı grup olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî · ilal", "فِيَاج", "fiyāc", "biriyle karşılıklı grup olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday · ilal", "فِيَاجَة", "fiyāca", "bir kere biriyle karşılıklı grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُفَاوِج", "mufāwic", "biriyle karşılıklı grup olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî",
+        "مُفَاوِجَة",
+        "mufāwica",
+        "biriyle karşılıklı grup olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî",
+        "مُفَاوِجَان",
+        "mufāwicān",
+        "biriyle karşılıklı grup olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُفَاوِجَتَان",
+        "mufāwicatān",
+        "biriyle karşılıklı grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفَاوِجُون",
+        "mufāwicūn",
+        "biriyle karşılıklı grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفَاوِجِين",
+        "mufāwicīn",
+        "biriyle karşılıklı grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفَاوِجَات",
+        "mufāwicāt",
+        "biriyle karşılıklı grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُفَاوَج", "mufāwac", "biriyle karşılıklı grup olunan", "kontrol", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُفَاوَجَة",
+        "mufāwaca",
+        "biriyle karşılıklı grup olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî",
+        "مُفَاوَجَان",
+        "mufāwacān",
+        "biriyle karşılıklı grup olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُفَاوَجَتَان",
+        "mufāwacatān",
+        "biriyle karşılıklı grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفَاوَجُون",
+        "mufāwacūn",
+        "biriyle karşılıklı grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفَاوَجِين",
+        "mufāwacīn",
+        "biriyle karşılıklı grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفَاوَجَات",
+        "mufāwacāt",
+        "biriyle karşılıklı grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُفَاوَج", "mufāwac", "biriyle karşılıklı grup olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî · ilal", "إِفَاجَة", "ʾifāca", "gruplaştırma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî · ilal", "مُفِيج", "mufīc", "gruplaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُفِيجَة", "mufīca", "gruplaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُفِيجَان", "mufīcān", "gruplaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُفِيجَتَان",
+        "mufīcatān",
+        "gruplaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُفِيجُون",
+        "mufīcūn",
+        "gruplaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُفِيجِين",
+        "mufīcīn",
+        "gruplaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُفِيجَات",
+        "mufīcāt",
+        "gruplaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُفَاج", "mufāc", "gruplaştırılan", "kontrol", ""],
+      ["muf'al + müennes", "kıyâsî · ilal", "مُفَاجَة", "mufāca", "gruplaştırılan, müennes", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُفَاجَان", "mufācān", "gruplaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُفَاجَتَان",
+        "mufācatān",
+        "gruplaştırılan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُفَاجُون",
+        "mufācūn",
+        "gruplaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُفَاجِين",
+        "mufācīn",
+        "gruplaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُفَاجَات",
+        "mufācāt",
+        "gruplaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُفَاج", "mufāc", "gruplaştırma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَفَوُّج", "tafawwuc", "kendini zorlayarak grup olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَفَوُّجَة", "tafawwuca", "bir kere kendini zorlayarak grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَفَوِّج", "mutafawwic", "kendini zorlayarak grup olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَفَوِّجَة",
+        "mutafawwica",
+        "kendini zorlayarak grup olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَفَوِّجَان",
+        "mutafawwicān",
+        "kendini zorlayarak grup olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَفَوِّجَتَان",
+        "mutafawwicatān",
+        "kendini zorlayarak grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَفَوِّجُون",
+        "mutafawwicūn",
+        "kendini zorlayarak grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَفَوِّجِين",
+        "mutafawwicīn",
+        "kendini zorlayarak grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَفَوِّجَات",
+        "mutafawwicāt",
+        "kendini zorlayarak grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَفَوَّج", "mutafawwac", "kendini zorlayarak grup olunan", "kontrol", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَفَوَّجَة",
+        "mutafawwaca",
+        "kendini zorlayarak grup olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَفَوَّجَان",
+        "mutafawwacān",
+        "kendini zorlayarak grup olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَفَوَّجَتَان",
+        "mutafawwacatān",
+        "kendini zorlayarak grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَفَوَّجُون",
+        "mutafawwacūn",
+        "kendini zorlayarak grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَفَوَّجِين",
+        "mutafawwacīn",
+        "kendini zorlayarak grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَفَوَّجَات",
+        "mutafawwacāt",
+        "kendini zorlayarak grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî",
+        "مُتَفَوَّج",
+        "mutafawwac",
+        "kendini zorlayarak grup olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَفَاوُج", "tafāwuc", "birbirine grup olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَفَاوُجَة", "tafāwuca", "bir kere birbirine grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَفَاوِج", "mutafāwic", "birbirine grup olan", "kontrol", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَفَاوِجَة", "mutafāwica", "birbirine grup olan, müennes", "kontrol", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَفَاوِجَان", "mutafāwicān", "birbirine grup olan, iki", "kontrol", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَفَاوِجَتَان",
+        "mutafāwicatān",
+        "birbirine grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَفَاوِجُون",
+        "mutafāwicūn",
+        "birbirine grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَفَاوِجِين",
+        "mutafāwicīn",
+        "birbirine grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَفَاوِجَات",
+        "mutafāwicāt",
+        "birbirine grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَفَاوَج", "mutafāwac", "birbirine grup olunan", "kontrol", ""],
+      [
+        "mutafā'al + müennes",
+        "kıyâsî",
+        "مُتَفَاوَجَة",
+        "mutafāwaca",
+        "birbirine grup olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَفَاوَجَان", "mutafāwacān", "birbirine grup olunan, iki", "kontrol", ""],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَفَاوَجَتَان",
+        "mutafāwacatān",
+        "birbirine grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَفَاوَجُون",
+        "mutafāwacūn",
+        "birbirine grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَفَاوَجِين",
+        "mutafāwacīn",
+        "birbirine grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَفَاوَجَات",
+        "mutafāwacāt",
+        "birbirine grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَفَاوَج", "mutafāwac", "birbirine grup olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî · ilal", "اِنْفِيَاج", "infiyāc", "grup olunma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday · ilal", "اِنْفِيَاجَة", "infiyāca", "bir kere grup olunma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî · ilal", "مُنْفَاج", "munfāc", "grup olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْفَاجَة", "munfāca", "grup olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْفَاجَان", "munfācān", "grup olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْفَاجَتَان",
+        "munfācatān",
+        "grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْفَاجُون",
+        "munfācūn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْفَاجِين",
+        "munfācīn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْفَاجَات",
+        "munfācāt",
+        "grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاج",
+        "munfāc",
+        "grup olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجَة",
+        "munfāca",
+        "grup olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجَان",
+        "munfācān",
+        "grup olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجَتَان",
+        "munfācatān",
+        "grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجُون",
+        "munfācūn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجِين",
+        "munfācīn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاجَات",
+        "munfācāt",
+        "grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْفَاج",
+        "munfāc",
+        "grup olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî · ilal", "اِفْتِيَاج", "iftiyāc", "kendisi için grup olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday · ilal", "اِفْتِيَاجَة", "iftiyāca", "bir kere kendisi için grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî · ilal", "مُفْتَاج", "muftāc", "kendisi için grup olan", "kontrol", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî · ilal",
+        "مُفْتَاجَة",
+        "muftāca",
+        "kendisi için grup olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + tesniye",
+        "kıyâsî · ilal",
+        "مُفْتَاجَان",
+        "muftācān",
+        "kendisi için grup olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُفْتَاجَتَان",
+        "muftācatān",
+        "kendisi için grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُفْتَاجُون",
+        "muftācūn",
+        "kendisi için grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُفْتَاجِين",
+        "muftācīn",
+        "kendisi için grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُفْتَاجَات",
+        "muftācāt",
+        "kendisi için grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُفْتَاج", "muftāc", "kendisi için grup olunan", "kontrol", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî · ilal",
+        "مُفْتَاجَة",
+        "muftāca",
+        "kendisi için grup olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + tesniye",
+        "kıyâsî · ilal",
+        "مُفْتَاجَان",
+        "muftācān",
+        "kendisi için grup olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُفْتَاجَتَان",
+        "muftācatān",
+        "kendisi için grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُفْتَاجُون",
+        "muftācūn",
+        "kendisi için grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُفْتَاجِين",
+        "muftācīn",
+        "kendisi için grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُفْتَاجَات",
+        "muftācāt",
+        "kendisi için grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُفْتَاج", "muftāc", "kendisi için grup olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday", "اِفْوِجَاج", "ifwicāc", "iyiden iyiye grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُفْوَجّ", "mufwacc", "iyiden iyiye grup olan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُفْوَجَّة", "mufwacca", "iyiden iyiye grup olan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُفْوَجَّان", "mufwaccān", "iyiden iyiye grup olan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُفْوَجَّتَان",
+        "mufwaccatān",
+        "iyiden iyiye grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفْوَجُّون",
+        "mufwaccūn",
+        "iyiden iyiye grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفْوَجِّين",
+        "mufwaccīn",
+        "iyiden iyiye grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفْوَجَّات",
+        "mufwaccāt",
+        "iyiden iyiye grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِفَاجَة", "istifāca", "grup olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَفِيج", "mustafīc", "grup olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجَة",
+        "mustafīca",
+        "grup olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجَان",
+        "mustafīcān",
+        "grup olmayı isteyen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجَتَان",
+        "mustafīcatān",
+        "grup olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجُون",
+        "mustafīcūn",
+        "grup olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجِين",
+        "mustafīcīn",
+        "grup olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَفِيجَات",
+        "mustafīcāt",
+        "grup olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَفَاج", "mustafāc", "grup olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجَة",
+        "mustafāca",
+        "grup olması istenen, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجَان",
+        "mustafācān",
+        "grup olması istenen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجَتَان",
+        "mustafācatān",
+        "grup olması istenen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجُون",
+        "mustafācūn",
+        "grup olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجِين",
+        "mustafācīn",
+        "grup olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَفَاجَات",
+        "mustafācāt",
+        "grup olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَفَاج", "mustafāc", "grup olmayı isteme yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["istif'āl", "semâî aday", "اِسْتِفْوَاج", "istifwāc", "grup olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["mustaf'il", "semâî aday", "مُسْتَفْوِج", "mustafwic", "grup olmayı isteyen", "kontrol", ""]
+    ],
+    "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
+      ["mustaf'al", "semâî aday", "مُسْتَفْوَج", "mustafwac", "grup olması istenen", "kontrol", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday", "اِفْوِيجَاج", "ifwīcāc", "büsbütün grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُفْوَاجّ", "mufwācc", "büsbütün grup olan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُفْوَاجَّة", "mufwācca", "büsbütün grup olan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُفْوَاجَّان", "mufwāccān", "büsbütün grup olan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُفْوَاجَّتَان",
+        "mufwāccatān",
+        "büsbütün grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُفْوَاجُّون",
+        "mufwāccūn",
+        "büsbütün grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُفْوَاجِّين",
+        "mufwāccīn",
+        "büsbütün grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُفْوَاجَّات",
+        "mufwāccāt",
+        "büsbütün grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday", "اِفْوِوْوَاج", "ifwiwwāc", "aşırı grup olma", "kontrol", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday", "اِفْوِوَّاج", "ifwiwwāc", "aşırı grup olma", "kontrol", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî · ilal", "فَائِج", "fāʾic", "grup olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "فَائِجَة", "fāʾica", "grup olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "فَائِجَان", "fāʾicān", "grup olan, iki", "kontrol", ""],
+      [
+        "fâ'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "فَائِجَتَان",
+        "fāʾicatān",
+        "grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fâ'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "فَائِجُون",
+        "fāʾicūn",
+        "grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fâ'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "فَائِجِين",
+        "fāʾicīn",
+        "grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "فَائِجَات",
+        "fāʾicāt",
+        "grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî · ilal", "مَفُوج", "mafūc", "grup olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَفُوجَة", "mafūca", "grup olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَفُوجَان", "mafūcān", "grup olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَفُوجَتَان",
+        "mafūcatān",
+        "grup olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مَفُوجُون",
+        "mafūcūn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مَفُوجِين",
+        "mafūcīn",
+        "grup olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَفُوجَات",
+        "mafūcāt",
+        "grup olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَفَاج", "mafāc", "grup olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَفَاجَان", "mafācān", "grup olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî · ilal", "مَفِيج", "mafīc", "grup olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَفِيجَان", "mafīcān", "grup olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَفَاجَة", "mafāca", "grup olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
+        "مَفَاجَتَان",
+        "mafācatān",
+        "grup olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî · ilal", "مَفِيجَة", "mafīca", "grup olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَفِيجَتَان",
+        "mafīcatān",
+        "grup olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَفْوُجَة", "mafwuca", "grup olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَفْوُجَتَان", "mafwucatān", "grup olma yeri, vakti, iki", "kontrol", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِفْوَج", "mifwac", "grup olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِفْوَجَان", "mifwacān", "grup olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî", "مِفْوَاج", "mifwāc", "grup olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِفْوَاجَان", "mifwācān", "grup olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî", "مِفْوَجَة", "mifwaca", "grup olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِفْوَجَتَان", "mifwacatān", "grup olma âleti, iki", "kontrol", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَفْوَج", "ʾafwac", "daha çok grup olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî", "أَفْوَجَان", "ʾafwacān", "daha çok grup olan, iki", "kontrol", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "فُوْجَى", "fuwcā", "daha çok grup olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "فُوْجَيَان", "fuwcayān", "daha çok grup olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "فَوْجَاء", "fawcāʾ", "daha çok grup olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "فَوْجَاآن", "fawcāʾān", "daha çok grup olan, iki", "kontrol", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "فُوَيْج", "fuwayc", "azıcık grup olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "فُوَيْجَان", "fuwaycān", "azıcık grup olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî", "فُوَيْجَة", "fuwayca", "azıcık grup olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "فُوَيْجَتَان", "fuwaycatān", "azıcık grup olma, iki", "kontrol", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَفَاج", "mafāc", "grup olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَفَاجَان", "mafācān", "grup olma, iki", "kontrol", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "فَوْجَة", "fawca", "bir kere grup olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "فَوْجَتَان", "fawcatān", "bir kere grup olma, iki", "kontrol", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday · ilal", "فِيجَة", "fīca", "grup olma tarzı", "kontrol", ""],
+      ["fi'le + tesniye", "aday · ilal", "فِيجَتَان", "fīcatān", "grup olma tarzı, iki", "kontrol", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "فَوِيج", "fawīc", "her daim grup olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "فَوِيجَة", "fawīca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "فَوِيجَان", "fawīcān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "فَوِيجَتَان",
+        "fawīcatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوِيجُون",
+        "fawīcūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوِيجِين",
+        "fawīcīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوِيجَات",
+        "fawīcāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "فَوُوج", "fawūc", "her daim grup olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "فَوُوجَة", "fawūca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "فَوُوجَان", "fawūcān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "فَوُوجَتَان",
+        "fawūcatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوُوجُون",
+        "fawūcūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوُوجِين",
+        "fawūcīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوُوجَات",
+        "fawūcāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday", "فَوِج", "fawic", "her daim grup olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday", "فَوِجَة", "fawica", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday", "فَوِجَان", "fawicān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "فَوِجَتَان",
+        "fawicatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوِجُون",
+        "fawicūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوِجِين",
+        "fawicīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوِجَات",
+        "fawicāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "فَوُج", "fawuc", "her daim grup olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday", "فَوُجَة", "fawuca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday", "فَوُجَان", "fawucān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "فَوُجَتَان",
+        "fawucatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوُجُون",
+        "fawucūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوُجِين",
+        "fawucīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوُجَات",
+        "fawucāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "فَاج", "fāc", "her daim grup olan", "kontrol", ""],
+      ["fa'al + müennes", "semâî aday · ilal", "فَاجَة", "fāca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "فَاجَان", "fācān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday · ilal",
+        "فَاجَتَان",
+        "fācatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "فَاجُون",
+        "fācūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "فَاجِين",
+        "fācīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "فَاجَات",
+        "fācāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'l", "semâî aday", "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
+      ["fa'l + müennes", "semâî aday", "فَوْجَة", "fawca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "فَوْجَان", "fawcān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "فَوْجَتَان",
+        "fawcatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوْجُون",
+        "fawcūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوْجِين",
+        "fawcīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوْجَات",
+        "fawcāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "فُوُج", "fuwuc", "her daim grup olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday", "فُوُجَة", "fuwuca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday", "فُوُجَان", "fuwucān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "فُوُجَتَان",
+        "fuwucatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فُوُجُون",
+        "fuwucūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فُوُجِين",
+        "fuwucīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فُوُجَات",
+        "fuwucāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "فَوْجَان", "fawcān", "her daim grup olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "فَوْجَانَة", "fawcāna", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "فَوْجَانَان", "fawcānān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "فَوْجَانَتَان",
+        "fawcānatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوْجَانُون",
+        "fawcānūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوْجَانِين",
+        "fawcānīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوْجَانَات",
+        "fawcānāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "فُوَاج", "fuwāc", "her daim grup olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday", "فُوَاجَة", "fuwāca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday", "فُوَاجَان", "fuwācān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "فُوَاجَتَان",
+        "fuwācatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فُوَاجُون",
+        "fuwācūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فُوَاجِين",
+        "fuwācīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فُوَاجَات",
+        "fuwācāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "فَوَاج", "fawāc", "her daim grup olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday", "فَوَاجَة", "fawāca", "her daim grup olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday", "فَوَاجَان", "fawācān", "her daim grup olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "فَوَاجَتَان",
+        "fawācatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوَاجُون",
+        "fawācūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوَاجِين",
+        "fawācīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوَاجَات",
+        "fawācāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib)",
+        "ecvef kıyâsı",
+        "فَيِّج",
+        "fayyic",
+        "her daim grup olan",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes",
+        "ecvef kıyâsı",
+        "فَيِّجَة",
+        "fayyica",
+        "her daim grup olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye",
+        "ecvef kıyâsı",
+        "فَيِّجَان",
+        "fayyicān",
+        "her daim grup olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye",
+        "ecvef kıyâsı",
+        "فَيِّجَتَان",
+        "fayyicatān",
+        "her daim grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
+        "ecvef kıyâsı",
+        "فَيِّجُون",
+        "fayyicūn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
+        "ecvef kıyâsı",
+        "فَيِّجِين",
+        "fayyicīn",
+        "her daim grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
+        "ecvef kıyâsı",
+        "فَيِّجَات",
+        "fayyicāt",
+        "her daim grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "فَوَّاج", "fawwāc", "işi grup olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday", "فَوَّاجَة", "fawwāca", "işi grup olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday", "فَوَّاجَان", "fawwācān", "işi grup olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "فَوَّاجَتَان",
+        "fawwācatān",
+        "işi grup olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوَّاجُون",
+        "fawwācūn",
+        "işi grup olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوَّاجِين",
+        "fawwācīn",
+        "işi grup olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوَّاجَات",
+        "fawwācāt",
+        "işi grup olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "فَوَّاجَة", "fawwāca", "pek çok grup olan", "kontrol", ""],
+      ["fa''āle + tesniye", "semâî aday", "فَوَّاجَتَان", "fawwācatān", "pek çok grup olan, iki", "kontrol", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوَّاجَات",
+        "fawwācāt",
+        "pek çok grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "فَوُوج", "fawūc", "çok grup olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "فَوُوجَة", "fawūca", "çok grup olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "فَوُوجَان", "fawūcān", "çok grup olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "فَوُوجَتَان",
+        "fawūcatān",
+        "çok grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوُوجُون",
+        "fawūcūn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوُوجِين",
+        "fawūcīn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوُوجَات",
+        "fawūcāt",
+        "çok grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "فَوُّوج", "fawwūc", "pek çok grup olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "فَوُّوجَة", "fawwūca", "pek çok grup olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "فَوُّوجَان", "fawwūcān", "pek çok grup olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "فَوُّوجَتَان",
+        "fawwūcatān",
+        "pek çok grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوُّوجُون",
+        "fawwūcūn",
+        "pek çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوُّوجِين",
+        "fawwūcīn",
+        "pek çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوُّوجَات",
+        "fawwūcāt",
+        "pek çok grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "فِوِّيج", "fiwwīc", "grup olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "فِوِّيجَة", "fiwwīca", "grup olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "فِوِّيجَان", "fiwwīcān", "grup olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "فِوِّيجَتَان",
+        "fiwwīcatān",
+        "grup olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فِوِّيجُون",
+        "fiwwīcūn",
+        "grup olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فِوِّيجِين",
+        "fiwwīcīn",
+        "grup olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فِوِّيجَات",
+        "fiwwīcāt",
+        "grup olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "فُوَّاج", "fuwwāc", "son derece grup olan", "kontrol", ""],
+      ["fu''āl + müennes", "semâî aday", "فُوَّاجَة", "fuwwāca", "son derece grup olan, müennes", "kontrol", ""],
+      ["fu''āl + tesniye", "semâî aday", "فُوَّاجَان", "fuwwācān", "son derece grup olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "فُوَّاجَتَان",
+        "fuwwācatān",
+        "son derece grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فُوَّاجُون",
+        "fuwwācūn",
+        "son derece grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فُوَّاجِين",
+        "fuwwācīn",
+        "son derece grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فُوَّاجَات",
+        "fuwwācāt",
+        "son derece grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِفْوَاج", "mifwāc", "grup olmayı âdet edinmiş", "kontrol", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday",
+        "مِفْوَاجَة",
+        "mifwāca",
+        "grup olmayı âdet edinmiş, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl + tesniye", "semâî aday", "مِفْوَاجَان", "mifwācān", "grup olmayı âdet edinmiş, iki", "kontrol", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِفْوَاجَتَان",
+        "mifwācatān",
+        "grup olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِفْوَاجُون",
+        "mifwācūn",
+        "grup olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِفْوَاجِين",
+        "mifwācīn",
+        "grup olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِفْوَاجَات",
+        "mifwācāt",
+        "grup olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِفْوِيج", "mifwīc", "grup olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِفْوِيجَة", "mifwīca", "grup olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِفْوِيجَان", "mifwīcān", "grup olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِفْوِيجَتَان",
+        "mifwīcatān",
+        "grup olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِفْوِيجُون",
+        "mifwīcūn",
+        "grup olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِفْوِيجِين",
+        "mifwīcīn",
+        "grup olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِفْوِيجَات",
+        "mifwīcāt",
+        "grup olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "فَوِيج", "fawīc", "çok grup olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "فَوِيجَة", "fawīca", "çok grup olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "فَوِيجَان", "fawīcān", "çok grup olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "فَوِيجَتَان",
+        "fawīcatān",
+        "çok grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوِيجُون",
+        "fawīcūn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوِيجِين",
+        "fawīcīn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوِيجَات",
+        "fawīcāt",
+        "çok grup olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "فَوَّج", "fawwac", "çok grup olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "فَوَّجَة", "fawwaca", "çok grup olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "فَوَّجَان", "fawwacān", "çok grup olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "فَوَّجَتَان",
+        "fawwacatān",
+        "çok grup olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "فَوَّجُون",
+        "fawwacūn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "فَوَّجِين",
+        "fawwacīn",
+        "çok grup olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "فَوَّجَات",
+        "fawwacāt",
+        "çok grup olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "فَوْجِيّ", "fawciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî · ilal", "فَاجِيّ", "fāciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî · ilal", "فِيجِيّ", "fīciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî · ilal", "فُوجِيّ", "fūciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "فِيَاجِيّ", "fiyāciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "فَائِجِيّ", "fāʾiciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَفُوجِيّ", "mafūciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî", "فَوِيجِيّ", "fawīciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَفَاجِيّ", "mafāciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَفْوِيجِيّ", "tafwīciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَفَاوُجِيّ", "tafāwuciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِفَاجِيّ", "ʾifāciyy", "grup olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِفْتِيَاجِيّ", "iftiyāciyy", "grup olma ile ilgili", "kontrol", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "فَوْجِيَّة", "fawciyya", "grup olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî · ilal", "فَاجِيَّة", "fāciyya", "grup olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî · ilal", "فِيجِيَّة", "fīciyya", "grup olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî · ilal", "فُوجِيَّة", "fūciyya", "grup olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "فِيَاجِيَّة", "fiyāciyya", "grup olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "فَائِجِيَّة", "fāʾiciyya", "grup olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَفُوجِيَّة", "mafūciyya", "grup olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî", "فَوِيجِيَّة", "fawīciyya", "grup olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَفَاجِيَّة", "mafāciyya", "grup olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَفْوِيجِيَّة", "tafwīciyya", "grup olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَفَاوُجِيَّة", "tafāwuciyya", "grup olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِفَاجِيَّة", "ʾifāciyya", "grup olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِفْتِيَاجِيَّة", "iftiyāciyya", "grup olanlık", "kontrol", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "فَوَاج", "fawāc", "grup olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday", "فُوُوج", "fuwūc", "grup olma", "kontrol", ""],
+      ["fi'âl", "semâî aday · ilal", "فِيَاج", "fiyāc", "grup olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday · ilal", "فُوج", "fūc", "grup olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday", "فَوَاجَة", "fawāca", "grup olma", "kontrol", ""],
+      ["fi'âle", "semâî aday · ilal", "فِيَاجَة", "fiyāca", "grup olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday", "فُوُوجَة", "fuwūca", "grup olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
+      ["fi'l", "semâî aday · ilal", "فِيج", "fīc", "grup olma", "kontrol", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "فَاوُوج", "fāwūc", "grup olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday", "فَوَجَة", "fawaca", "grup olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "فُوَجَة", "fuwaca", "grup olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُفْوُوجَة", "ʾufwūca", "grup olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "فَوْوَج", "fawwac", "grup olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "فَيْوَج", "faywac", "grup olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "فَوْج", "fawc", "Grup, cemaat, zümre", "lugat", "Kur'ân · Luggat"],
+      ["fa'al", "semâî aday · ilal", "فَاج", "fāc", "grup olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday · ilal", "فِيج", "fīc", "grup olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday · ilal", "فُوج", "fūc", "grup olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday", "فَوِيج", "fawīc", "grup olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "فِيَج", "fiyac", "grup olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday", "فُوُج", "fuwuc", "grup olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday", "فَوَاج", "fawāc", "grup olma türünden şey", "kontrol", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "فَاوُوجَة", "fāwūca", "grup olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "فَوْوَجَة", "fawwaca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "فَيْوَجَة", "faywaca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "فَوْجَة", "fawca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fa'al + tâ (tekili)", "semâî aday · ilal", "فَاجَة", "fāca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday · ilal", "فِيجَة", "fīca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fu'l + tâ (tekili)", "semâî aday · ilal", "فُوجَة", "fūca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "فَوِيجَة", "fawīca", "grup olma türünden bir tane", "kontrol", ""],
+      [
+        "fi'al + tâ (tekili)",
+        "semâî aday · ilal",
+        "فِيَجَة",
+        "fiyaca",
+        "grup olma türünden bir tane",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul + tâ (tekili)", "semâî aday", "فُوُجَة", "fuwuca", "grup olma türünden bir tane", "kontrol", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "فَوَاجَة", "fawāca", "grup olma türünden bir tane", "kontrol", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَفْوَاج", "ʾafwāc", "grup olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday", "أَفْوِجَة", "ʾafwica", "grup olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday", "أَفَاوِج", "ʾafāwic", "grup olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday", "أَفَاوِيج", "ʾafāwīc", "grup olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "فُوُوج", "fuwūc", "grup olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "فُوُج", "fuwuc", "grup olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday · ilal", "فِيَاج", "fiyāc", "grup olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday · ilal", "فِيَج", "fiyac", "grup olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "فِوَجَة", "fiwaca", "grup olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday", "فُوَج", "fuwac", "grup olmalar", "kontrol", ""],
+      ["fu'alā'", "semâî aday", "فُوَجاء", "fuwacāʾ", "grup olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "فَوَجَة", "fawaca", "grup olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday", "فُوَّاج", "fuwwāc", "grup olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "فَوَاج", "fawāc", "grup olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday · ilal", "فَاج", "fāc", "grup olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday", "مَفَاوِج", "mafāwic", "grup olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday", "مَفَاوِيج", "mafāwīc", "grup olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday", "فَوَاوِج", "fawāwic", "grup olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَفْوُج", "ʾafwuc", "grup olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "فُوَّج", "fuwwac", "grup olmalar", "kontrol", ""],
+      ["fe'âil", "semâî aday", "فَوَائِج", "fawāʾic", "grup olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday", "فُوَيْج", "fuwayc", "grup olmalar", "kontrol", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَفْوَاجَات", "ʾafwācāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday", "أَفْوِجَات", "ʾafwicāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday", "أَفَاوِجَات", "ʾafāwicāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday", "أَفَاوِيجَات", "ʾafāwīcāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday", "فُوُوجَات", "fuwūcāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday", "فُوُجَات", "fuwucāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "فِيَاجَات", "fiyācāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday · ilal", "فِيَجَات", "fiyacāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday", "فِوَجَات", "fiwacāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday", "فُوَجَات", "fuwacāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu'alā' + ât", "semâî aday", "فُوَجاآت", "fuwacāʾāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday", "فَوَجَات", "fawacāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday", "فُوَّاجَات", "fuwwācāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday", "فَوَاجَات", "fawācāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday · ilal", "فَاجَات", "fācāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday", "مَفَاوِجَات", "mafāwicāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَفَاوِيجَات", "mafāwīcāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday", "فَوَاوِجَات", "fawāwicāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَفْوُجَات", "ʾafwucāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "فُوَّجَات", "fuwwacāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fe'âil + ât", "semâî aday", "فَوَائِجَات", "fawāʾicāt", "grup olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "فُوَيْجَات", "fuwaycāt", "grup olmalar topluluğu", "kontrol", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i merre · bâb IV", "if'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i merre · bâb X", "istif'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
     "ince": "social_group.n.01",
     "orta": "noun.group",
     "ust": "insan ve toplum",
@@ -1063,34 +2527,8 @@
     "dayanak_tanim": "a unit of firefighters including their equipment",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الفاء والجيم",
-    "mihveri": "تجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى. ومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \".",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (فج) : هو انفتاح في الشيء بقوة مع عدم الالتزام بحدٍّ، كما يتمثل في الفجّ الشِعْب بين جبلين أو في الجبل أو بين حائطين (أي في صلب) في (فجج)، وكما في الفجوة المتَّسَع بين الشيئين -في (فجو)، وكما في انفصال كل فوج وتميزه عن الآخر -في (فوج)، وكما في منفجر الماء من الحوض -في (فجر). وكلها يقع بقوة كما بينا.",
-    "tam_metin": "{وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} [النصر: 2]\n\"الفَوْج والفائج: القَطيع من الناس/ الجماعة من الناس. يقال أفاج: أَرْسَل الإبل على الحوض قِطْعة قِطْعة. ومرَّ بنا فائجُ وليمةِ فلان أي فوجٌ ممن كان في طعامه. والفائجة من الأرض: مُتَّسَع ما بين كل مرتفعين من غَلْظ أو رمل \".\n° المعنى المحوري\nتجمع منفصل عن تجمع غيره بقوة وانتشار ما - كالفوج من الناس، والقوة أن انفصال التجمعين يلزمه الأمران (القوة والانتشار) لما يكون في التجمع من تداخل، وككل من المرتفعين بالنسبة لتجمعهما. والقوة أن كلا يبتعد عن الآخر بغلظ وارتفاع: {وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا} أي جماعات كثيرة بعد أن كانوا يدخلون أفرادًا. {يَوْمَ يُنْفَخُ فِي الصُّورِ فَتَأْتُونَ أَفْوَاجًا} [النبأ: 18]. من القبور إلى الموقف كل أمة بإمامها، أو جماعات مختلفة [بحر 8/ 404]. وكل ما جاء في القرآن من التركيب هو الفوج وجمعه أفواج بهذا المعنى.\nومن الانفصال بقوة وانتشارٍ ما: \"فاج المسكُ: سطع/ فاح، وأفاج: أسرع، وفاجت الناقة برجليها تفيج: نفحت بهما مَنْ خلفها \"."
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "أقبلوا فوجاً فوجاً، يموج بهم الوادي موجاً.",
-    "mecaz": "",
-    "kinaye": "",
-    "mecaz_var": false
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["organization.n.01", "region.n.03"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الغرائز",
-    "bab": "السر",
-    "kok_gecis": 11.2,
-    "kitapta_gecis": 5.8,
-    "zenginlesme": 10.88
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -1110,617 +2548,15 @@
       "boy": 12
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "884": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "885": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "886": ["mensûb", "fa'al + iyy", "kıyâsî · ilal", ""],
-    "887": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî · ilal", ""],
-    "888": ["masdar · sülâsî mücerred", "fi'l", "semâî aday · ilal", ""],
-    "889": ["masdar · sülâsî mücerred", "fu'l", "semâî aday · ilal", ""],
-    "890": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî · ilal", "IV"],
-    "891": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "892": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "893": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "894": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî · ilal", "VIII"],
-    "895": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "898": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî · ilal", "X"],
-    "899": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî · ilal", "X"],
-    "900": ["masdar · bâb X (vâvı muhafaza: semâî istisnâ)", "istif'āl", "semâî aday", "X"],
-    "901": ["ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'il", "semâî aday", "X"],
-    "902": ["ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)", "mustaf'al", "semâî aday", "X"],
-    "903": ["ism-i hey'et · sülâsî", "fi'le", "aday · ilal", ""],
-    "904": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday · ilal", ""],
-    "905": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday · ilal", ""],
-    "906": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday · ilal", ""],
-    "907": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib)", "ecvef kıyâsı", ""],
-    "908": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes", "ecvef kıyâsı", ""],
-    "909": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye", "ecvef kıyâsı", ""],
-    "910": ["sıfat-ı müşebbehe", "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye", "ecvef kıyâsı", ""],
-    "911": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "912": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "913": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "914": ["mensûb", "fi'l + iyy", "kıyâsî · ilal", ""],
-    "915": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî · ilal", ""],
-    "916": ["mensûb", "fu'l + iyy", "kıyâsî · ilal", ""],
-    "917": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî · ilal", ""],
-    "918": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday · ilal", ""],
-    "919": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday · ilal", ""],
-    "920": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday · ilal", ""],
-    "921": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday · ilal", ""],
-    "922": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "923": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday · ilal", ""],
-    "924": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday · ilal", ""],
-    "925": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday · ilal", ""]
+  "wordnet": ["organization.n.01", "region.n.03"],
+  "muhassas": {
+    "kitap": "الغرائز",
+    "bab": "السر",
+    "kok_gecis": 11.2,
+    "kitapta_gecis": 5.8,
+    "zenginlesme": 10.88
   },
-  "kelimeler": [
-    {
-      "kelime": "فَوْجًا",
-      "kok": "فوج",
-      "lemma": "فَوْج",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "27:83",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "grup",
-        "lemma": "grup",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "فَوْجٌ",
-      "kok": "فوج",
-      "lemma": "فَوْج",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "38:59",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "grup",
-        "lemma": "grup",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "أَفْوَاجًا",
-      "kok": "فوج",
-      "lemma": "فَوْج",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "78:18",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "grup",
-        "lemma": "grup",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 5
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: Fevc: grup, topluluk",
-    "kelimeler": [
-      {
-        "lemma": "فَوْج",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 5,
-        "nasil": "cem‘-i mükesser (aday) · fu''al ; cem‘-i mükesser (aday) · fu'al ; cem‘-i mükesser (aday) · fu'ul (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

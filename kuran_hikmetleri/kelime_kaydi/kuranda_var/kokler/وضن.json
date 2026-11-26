@@ -1,776 +1,2093 @@
 {
   "kok": "وضن",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "karın ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
   "sinif": "misâl",
-  "turkce_fiil": {
-    "sap": "karın ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "وَضْن", "waḍn", "karın", "kontrol", ""],
-      [1, "وِضْن", "wiḍn", "karın", "kontrol", ""],
-      [2, "وُضْن", "wuḍn", "karın", "kontrol", ""],
-      [3, "وَضَن", "waḍan", "karın", "kontrol", ""],
-      [4, "وِضَن", "wiḍan", "karın", "kontrol", ""],
-      [5, "وُضُن", "wuḍun", "karın", "kontrol", ""],
-      [6, "وُضُون", "wuḍūn", "karın", "kontrol", ""],
-      [7, "وِضَان", "wiḍān", "karın", "kontrol", ""],
-      [8, "وُضَان", "wuḍān", "karın", "kontrol", ""],
-      [9, "وَضَان", "waḍān", "karın", "kontrol", ""],
-      [10, "وَضَانَة", "waḍāna", "karın", "kontrol", ""],
-      [11, "وُضُونَة", "wuḍūna", "karın", "kontrol", ""],
-      [12, "وِضَانَة", "wiḍāna", "karın", "kontrol", ""],
-      [13, "وَضِين", "waḍīn", "karın", "kontrol", ""],
-      [14, "وَضُون", "waḍūn", "karın", "kontrol", ""],
-      [15, "وَضَنَان", "waḍanān", "karın", "kontrol", ""],
-      [16, "وُضْنَان", "wuḍnān", "karın", "kontrol", ""],
-      [17, "وِضْنَان", "wiḍnān", "karın", "kontrol", ""],
-      [18, "وَضْنَى", "waḍnā", "karın", "kontrol", ""],
-      [19, "وُضْنَى", "wuḍnā", "karın", "kontrol", ""],
-      [20, "وِضْنَى", "wiḍnā", "karın", "kontrol", ""],
-      [21, "وَضَنَة", "waḍana", "karın", "kontrol", ""],
-      [22, "وِضَنَة", "wiḍana", "karın", "kontrol", ""],
-      [23, "وَضْنُونَة", "waḍnūna", "karın", "kontrol", ""],
-      [24, "تُوضُون", "tūḍūn", "karın", "kontrol", ""],
-      [25, "تَوْضِنَة", "tawḍina", "karın", "kontrol", ""],
-      [26, "تَوْضَنَة", "tawḍana", "karın", "kontrol", ""],
-      [27, "مَوْضُنَة", "mawḍuna", "karın", "kontrol", ""],
-      [28, "مَوْضِنَة", "mawḍina", "karın", "kontrol", ""],
-      [926, "ضِنَة", "ḍina", "karın", "kontrol", ""]
-    ],
-    "masdar · bâb II": [
-      [29, "تَوْضِين", "tawḍīn", "çokça karın olma", "kontrol", ""],
-      [30, "تَوْضِنَة", "tawḍina", "çokça karın olma", "kontrol", ""],
-      [31, "وِضِّان", "wiḍḍān", "çokça karın olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [32, "تَوْضِينَة", "tawḍīna", "bir kere çokça karın olma", "kontrol", ""],
-      [33, "وِضِّانَة", "wiḍḍāna", "bir kere çokça karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [34, "مُوَضِّن", "muwaḍḍin", "çokça karın olan", "kontrol", ""],
-      [35, "مُوَضِّنَة", "muwaḍḍina", "çokça karın olan, müennes", "kontrol", ""],
-      [36, "مُوَضِّنَان", "muwaḍḍinān", "çokça karın olan, iki", "kontrol", ""],
-      [37, "مُوَضِّنَتَان", "muwaḍḍinatān", "çokça karın olan, iki, müennes", "kontrol", ""],
-      [38, "مُوَضِّنُون", "muwaḍḍinūn", "çokça karın olanlar", "kontrol", ""],
-      [39, "مُوَضِّنِين", "muwaḍḍinīn", "çokça karın olanlar", "kontrol", ""],
-      [40, "مُوَضِّنَات", "muwaḍḍināt", "çokça karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [41, "مُوَضَّن", "muwaḍḍan", "çokça karın olunan", "kontrol", ""],
-      [42, "مُوَضَّنَة", "muwaḍḍana", "çokça karın olunan, müennes", "kontrol", ""],
-      [43, "مُوَضَّنَان", "muwaḍḍanān", "çokça karın olunan, iki", "kontrol", ""],
-      [44, "مُوَضَّنَتَان", "muwaḍḍanatān", "çokça karın olunan, iki, müennes", "kontrol", ""],
-      [45, "مُوَضَّنُون", "muwaḍḍanūn", "çokça karın olunanlar", "kontrol", ""],
-      [46, "مُوَضَّنِين", "muwaḍḍanīn", "çokça karın olunanlar", "kontrol", ""],
-      [47, "مُوَضَّنَات", "muwaḍḍanāt", "çokça karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [48, "مُوَضَّن", "muwaḍḍan", "çokça karın olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb III": [
-      [49, "مُوَاضَنَة", "muwāḍana", "biriyle karşılıklı karın olma", "kontrol", ""],
-      [50, "وِضَان", "wiḍān", "biriyle karşılıklı karın olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [51, "وِضَانَة", "wiḍāna", "bir kere biriyle karşılıklı karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [52, "مُوَاضِن", "muwāḍin", "biriyle karşılıklı karın olan", "kontrol", ""],
-      [53, "مُوَاضِنَة", "muwāḍina", "biriyle karşılıklı karın olan, müennes", "kontrol", ""],
-      [54, "مُوَاضِنَان", "muwāḍinān", "biriyle karşılıklı karın olan, iki", "kontrol", ""],
-      [55, "مُوَاضِنَتَان", "muwāḍinatān", "biriyle karşılıklı karın olan, iki, müennes", "kontrol", ""],
-      [56, "مُوَاضِنُون", "muwāḍinūn", "biriyle karşılıklı karın olanlar", "kontrol", ""],
-      [57, "مُوَاضِنِين", "muwāḍinīn", "biriyle karşılıklı karın olanlar", "kontrol", ""],
-      [58, "مُوَاضِنَات", "muwāḍināt", "biriyle karşılıklı karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [59, "مُوَاضَن", "muwāḍan", "biriyle karşılıklı karın olunan", "kontrol", ""],
-      [60, "مُوَاضَنَة", "muwāḍana", "biriyle karşılıklı karın olunan, müennes", "kontrol", ""],
-      [61, "مُوَاضَنَان", "muwāḍanān", "biriyle karşılıklı karın olunan, iki", "kontrol", ""],
-      [62, "مُوَاضَنَتَان", "muwāḍanatān", "biriyle karşılıklı karın olunan, iki, müennes", "kontrol", ""],
-      [63, "مُوَاضَنُون", "muwāḍanūn", "biriyle karşılıklı karın olunanlar", "kontrol", ""],
-      [64, "مُوَاضَنِين", "muwāḍanīn", "biriyle karşılıklı karın olunanlar", "kontrol", ""],
-      [65, "مُوَاضَنَات", "muwāḍanāt", "biriyle karşılıklı karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُوَاضَن", "muwāḍan", "biriyle karşılıklı karın olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IV": [
-      [67, "إِيضَان", "ʾīḍān", "karınlaştırma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [68, "إِيضَانَة", "ʾīḍāna", "bir kere karınlaştırma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [69, "مُوضِن", "mūḍin", "karınlaştıran", "kontrol", ""],
-      [70, "مُوضِنَة", "mūḍina", "karınlaştıran, müennes", "kontrol", ""],
-      [71, "مُوضِنَان", "mūḍinān", "karınlaştıran, iki", "kontrol", ""],
-      [72, "مُوضِنَتَان", "mūḍinatān", "karınlaştıran, iki, müennes", "kontrol", ""],
-      [73, "مُوضِنُون", "mūḍinūn", "karınlaştıranlar", "kontrol", ""],
-      [74, "مُوضِنِين", "mūḍinīn", "karınlaştıranlar", "kontrol", ""],
-      [75, "مُوضِنَات", "mūḍināt", "karınlaştıranlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [76, "مُوضَن", "mūḍan", "karınlaştırılan", "kontrol", ""],
-      [77, "مُوضَنَة", "mūḍana", "karınlaştırılan, müennes", "kontrol", ""],
-      [78, "مُوضَنَان", "mūḍanān", "karınlaştırılan, iki", "kontrol", ""],
-      [79, "مُوضَنَتَان", "mūḍanatān", "karınlaştırılan, iki, müennes", "kontrol", ""],
-      [80, "مُوضَنُون", "mūḍanūn", "karınlaştırılanlar", "kontrol", ""],
-      [81, "مُوضَنِين", "mūḍanīn", "karınlaştırılanlar", "kontrol", ""],
-      [82, "مُوضَنَات", "mūḍanāt", "karınlaştırılanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُوضَن", "mūḍan", "karınlaştırma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb V": [
-      [84, "تَوَضُّن", "tawaḍḍun", "kendini zorlayarak karın olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb V": [
-      [85, "تَوَضُّنَة", "tawaḍḍuna", "bir kere kendini zorlayarak karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [86, "مُتَوَضِّن", "mutawaḍḍin", "kendini zorlayarak karın olan", "kontrol", ""],
-      [87, "مُتَوَضِّنَة", "mutawaḍḍina", "kendini zorlayarak karın olan, müennes", "kontrol", ""],
-      [88, "مُتَوَضِّنَان", "mutawaḍḍinān", "kendini zorlayarak karın olan, iki", "kontrol", ""],
-      [89, "مُتَوَضِّنَتَان", "mutawaḍḍinatān", "kendini zorlayarak karın olan, iki, müennes", "kontrol", ""],
-      [90, "مُتَوَضِّنُون", "mutawaḍḍinūn", "kendini zorlayarak karın olanlar", "kontrol", ""],
-      [91, "مُتَوَضِّنِين", "mutawaḍḍinīn", "kendini zorlayarak karın olanlar", "kontrol", ""],
-      [92, "مُتَوَضِّنَات", "mutawaḍḍināt", "kendini zorlayarak karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَوَضَّن", "mutawaḍḍan", "kendini zorlayarak karın olunan", "kontrol", ""],
-      [94, "مُتَوَضَّنَة", "mutawaḍḍana", "kendini zorlayarak karın olunan, müennes", "kontrol", ""],
-      [95, "مُتَوَضَّنَان", "mutawaḍḍanān", "kendini zorlayarak karın olunan, iki", "kontrol", ""],
-      [96, "مُتَوَضَّنَتَان", "mutawaḍḍanatān", "kendini zorlayarak karın olunan, iki, müennes", "kontrol", ""],
-      [97, "مُتَوَضَّنُون", "mutawaḍḍanūn", "kendini zorlayarak karın olunanlar", "kontrol", ""],
-      [98, "مُتَوَضَّنِين", "mutawaḍḍanīn", "kendini zorlayarak karın olunanlar", "kontrol", ""],
-      [99, "مُتَوَضَّنَات", "mutawaḍḍanāt", "kendini zorlayarak karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَوَضَّن", "mutawaḍḍan", "kendini zorlayarak karın olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VI": [
-      [101, "تَوَاضُن", "tawāḍun", "birbirine karın olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VI": [
-      [102, "تَوَاضُنَة", "tawāḍuna", "bir kere birbirine karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [103, "مُتَوَاضِن", "mutawāḍin", "birbirine karın olan", "kontrol", ""],
-      [104, "مُتَوَاضِنَة", "mutawāḍina", "birbirine karın olan, müennes", "kontrol", ""],
-      [105, "مُتَوَاضِنَان", "mutawāḍinān", "birbirine karın olan, iki", "kontrol", ""],
-      [106, "مُتَوَاضِنَتَان", "mutawāḍinatān", "birbirine karın olan, iki, müennes", "kontrol", ""],
-      [107, "مُتَوَاضِنُون", "mutawāḍinūn", "birbirine karın olanlar", "kontrol", ""],
-      [108, "مُتَوَاضِنِين", "mutawāḍinīn", "birbirine karın olanlar", "kontrol", ""],
-      [109, "مُتَوَاضِنَات", "mutawāḍināt", "birbirine karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَوَاضَن", "mutawāḍan", "birbirine karın olunan", "kontrol", ""],
-      [111, "مُتَوَاضَنَة", "mutawāḍana", "birbirine karın olunan, müennes", "kontrol", ""],
-      [112, "مُتَوَاضَنَان", "mutawāḍanān", "birbirine karın olunan, iki", "kontrol", ""],
-      [113, "مُتَوَاضَنَتَان", "mutawāḍanatān", "birbirine karın olunan, iki, müennes", "kontrol", ""],
-      [114, "مُتَوَاضَنُون", "mutawāḍanūn", "birbirine karın olunanlar", "kontrol", ""],
-      [115, "مُتَوَاضَنِين", "mutawāḍanīn", "birbirine karın olunanlar", "kontrol", ""],
-      [116, "مُتَوَاضَنَات", "mutawāḍanāt", "birbirine karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَوَاضَن", "mutawāḍan", "birbirine karın olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VII": [
-      [118, "اِنْوِضَان", "inwiḍān", "karın olunma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [119, "اِنْوِضَانَة", "inwiḍāna", "bir kere karın olunma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [120, "مُنْوَضِن", "munwaḍin", "karın olunan", "kontrol", ""],
-      [121, "مُنْوَضِنَة", "munwaḍina", "karın olunan, müennes", "kontrol", ""],
-      [122, "مُنْوَضِنَان", "munwaḍinān", "karın olunan, iki", "kontrol", ""],
-      [123, "مُنْوَضِنَتَان", "munwaḍinatān", "karın olunan, iki, müennes", "kontrol", ""],
-      [124, "مُنْوَضِنُون", "munwaḍinūn", "karın olunanlar", "kontrol", ""],
-      [125, "مُنْوَضِنِين", "munwaḍinīn", "karın olunanlar", "kontrol", ""],
-      [126, "مُنْوَضِنَات", "munwaḍināt", "karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْوَضَن", "munwaḍan", "karın olunan", "kontrol", ""],
-      [128, "مُنْوَضَنَة", "munwaḍana", "karın olunan, müennes", "kontrol", ""],
-      [129, "مُنْوَضَنَان", "munwaḍanān", "karın olunan, iki", "kontrol", ""],
-      [130, "مُنْوَضَنَتَان", "munwaḍanatān", "karın olunan, iki, müennes", "kontrol", ""],
-      [131, "مُنْوَضَنُون", "munwaḍanūn", "karın olunanlar", "kontrol", ""],
-      [132, "مُنْوَضَنِين", "munwaḍanīn", "karın olunanlar", "kontrol", ""],
-      [133, "مُنْوَضَنَات", "munwaḍanāt", "karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْوَضَن", "munwaḍan", "karın olunma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb VIII": [
-      [135, "اِتِّضَان", "ittiḍān", "kendisi için karın olma", "kontrol", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [137, "اِتِّضَانَة", "ittiḍāna", "bir kere kendisi için karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [138, "مُتَّضِن", "muttaḍin", "kendisi için karın olan", "kontrol", ""],
-      [139, "مُتَّضِنَة", "muttaḍina", "kendisi için karın olan, müennes", "kontrol", ""],
-      [140, "مُتَّضِنَان", "muttaḍinān", "kendisi için karın olan, iki", "kontrol", ""],
-      [141, "مُتَّضِنَتَان", "muttaḍinatān", "kendisi için karın olan, iki, müennes", "kontrol", ""],
-      [142, "مُتَّضِنُون", "muttaḍinūn", "kendisi için karın olanlar", "kontrol", ""],
-      [143, "مُتَّضِنِين", "muttaḍinīn", "kendisi için karın olanlar", "kontrol", ""],
-      [144, "مُتَّضِنَات", "muttaḍināt", "kendisi için karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُتَّضَن", "muttaḍan", "kendisi için karın olunan", "kontrol", ""],
-      [146, "مُتَّضَنَة", "muttaḍana", "kendisi için karın olunan, müennes", "kontrol", ""],
-      [147, "مُتَّضَنَان", "muttaḍanān", "kendisi için karın olunan, iki", "kontrol", ""],
-      [148, "مُتَّضَنَتَان", "muttaḍanatān", "kendisi için karın olunan, iki, müennes", "kontrol", ""],
-      [149, "مُتَّضَنُون", "muttaḍanūn", "kendisi için karın olunanlar", "kontrol", ""],
-      [150, "مُتَّضَنِين", "muttaḍanīn", "kendisi için karın olunanlar", "kontrol", ""],
-      [151, "مُتَّضَنَات", "muttaḍanāt", "kendisi için karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُتَّضَن", "muttaḍan", "kendisi için karın olma yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [168, "اِيضِنَان", "īḍinān", "iyiden iyiye karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [169, "مُوضَنّ", "mūḍann", "iyiden iyiye karın olan", "kontrol", ""],
-      [170, "مُوضَنَّة", "mūḍanna", "iyiden iyiye karın olan, müennes", "kontrol", ""],
-      [171, "مُوضَنَّان", "mūḍannān", "iyiden iyiye karın olan, iki", "kontrol", ""],
-      [172, "مُوضَنَّتَان", "mūḍannatān", "iyiden iyiye karın olan, iki, müennes", "kontrol", ""],
-      [173, "مُوضَنُّون", "mūḍannūn", "iyiden iyiye karın olanlar", "kontrol", ""],
-      [174, "مُوضَنِّين", "mūḍannīn", "iyiden iyiye karın olanlar", "kontrol", ""],
-      [175, "مُوضَنَّات", "mūḍannāt", "iyiden iyiye karın olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [176, "اِسْتِيضَان", "istīḍān", "karın olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [177, "اِسْتِيضَانَة", "istīḍāna", "bir kere karın olmayı isteme", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [178, "مُسْتَوْضِن", "mustawḍin", "karın olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَوْضِنَة", "mustawḍina", "karın olmayı isteyen, müennes", "kontrol", ""],
-      [180, "مُسْتَوْضِنَان", "mustawḍinān", "karın olmayı isteyen, iki", "kontrol", ""],
-      [181, "مُسْتَوْضِنَتَان", "mustawḍinatān", "karın olmayı isteyen, iki, müennes", "kontrol", ""],
-      [182, "مُسْتَوْضِنُون", "mustawḍinūn", "karın olmayı isteyenler", "kontrol", ""],
-      [183, "مُسْتَوْضِنِين", "mustawḍinīn", "karın olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَوْضِنَات", "mustawḍināt", "karın olmayı isteyenler, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَوْضَن", "mustawḍan", "karın olması istenen", "kontrol", ""],
-      [186, "مُسْتَوْضَنَة", "mustawḍana", "karın olması istenen, müennes", "kontrol", ""],
-      [187, "مُسْتَوْضَنَان", "mustawḍanān", "karın olması istenen, iki", "kontrol", ""],
-      [188, "مُسْتَوْضَنَتَان", "mustawḍanatān", "karın olması istenen, iki, müennes", "kontrol", ""],
-      [189, "مُسْتَوْضَنُون", "mustawḍanūn", "karın olması istenenler", "kontrol", ""],
-      [190, "مُسْتَوْضَنِين", "mustawḍanīn", "karın olması istenenler", "kontrol", ""],
-      [191, "مُسْتَوْضَنَات", "mustawḍanāt", "karın olması istenenler, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَوْضَن", "mustawḍan", "karın olmayı isteme yeri, vakti", "kontrol", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [193, "اِيضِينَان", "īḍīnān", "büsbütün karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [194, "مُوضَانّ", "mūḍānn", "büsbütün karın olan", "kontrol", ""],
-      [195, "مُوضَانَّة", "mūḍānna", "büsbütün karın olan, müennes", "kontrol", ""],
-      [196, "مُوضَانَّان", "mūḍānnān", "büsbütün karın olan, iki", "kontrol", ""],
-      [197, "مُوضَانَّتَان", "mūḍānnatān", "büsbütün karın olan, iki, müennes", "kontrol", ""],
-      [198, "مُوضَانُّون", "mūḍānnūn", "büsbütün karın olanlar", "kontrol", ""],
-      [199, "مُوضَانِّين", "mūḍānnīn", "büsbütün karın olanlar", "kontrol", ""],
-      [200, "مُوضَانَّات", "mūḍānnāt", "büsbütün karın olanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [201, "اِيضِوْضَان", "īḍiwḍān", "aşırı karın olma", "kontrol", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [202, "اِيضِوَّان", "īḍiwwān", "aşırı karın olma", "kontrol", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [213, "وَاضِن", "wāḍin", "karın olan", "kontrol", ""],
-      [214, "وَاضِنَة", "wāḍina", "karın olan, müennes", "kontrol", ""],
-      [215, "وَاضِنَان", "wāḍinān", "karın olan, iki", "kontrol", ""],
-      [216, "وَاضِنَتَان", "wāḍinatān", "karın olan, iki, müennes", "kontrol", ""],
-      [217, "وَاضِنُون", "wāḍinūn", "karın olanlar", "kontrol", ""],
-      [218, "وَاضِنِين", "wāḍinīn", "karın olanlar", "kontrol", ""],
-      [219, "وَاضِنَات", "wāḍināt", "karın olanlar, müennes", "kontrol", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [220, "مَوْضُون", "mawḍūn", "karın olunan", "kontrol", ""],
-      [221, "مَوْضُونَة", "mawḍūna", "bağlanmış", "kuran", "Kur'ân"],
-      [222, "مَوْضُونَان", "mawḍūnān", "karın olunan, iki", "kontrol", ""],
-      [223, "مَوْضُونَتَان", "mawḍūnatān", "karın olunan, iki, müennes", "kontrol", ""],
-      [224, "مَوْضُونُون", "mawḍūnūn", "karın olunanlar", "kontrol", ""],
-      [225, "مَوْضُونِين", "mawḍūnīn", "karın olunanlar", "kontrol", ""],
-      [226, "مَوْضُونَات", "mawḍūnāt", "karın olunanlar, müennes", "kontrol", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [227, "مَوْضَن", "mawḍan", "karın olma yeri, vakti", "kontrol", ""],
-      [228, "مَوْضَنَان", "mawḍanān", "karın olma yeri, vakti, iki", "kontrol", ""],
-      [229, "مَوْضِن", "mawḍin", "karın olma yeri, vakti", "kontrol", ""],
-      [230, "مَوْضِنَان", "mawḍinān", "karın olma yeri, vakti, iki", "kontrol", ""],
-      [231, "مَوْضَنَة", "mawḍana", "karın olmanın bol olduğu yer", "kontrol", ""],
-      [232, "مَوْضَنَتَان", "mawḍanatān", "karın olmanın bol olduğu yer, iki", "kontrol", ""],
-      [233, "مَوْضِنَة", "mawḍina", "karın olmanın bol olduğu yer", "kontrol", ""],
-      [234, "مَوْضِنَتَان", "mawḍinatān", "karın olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَوْضُنَة", "mawḍuna", "karın olma yeri, vakti", "kontrol", ""],
-      [248, "مَوْضُنَتَان", "mawḍunatān", "karın olma yeri, vakti, iki", "kontrol", ""]
-    ],
-    "âlet · sülâsî": [
-      [235, "مِيضَن", "mīḍan", "karın olma âleti", "kontrol", ""],
-      [236, "مِيضَنَان", "mīḍanān", "karın olma âleti, iki", "kontrol", ""],
-      [237, "مِيضَان", "mīḍān", "karın olma âleti", "kontrol", ""],
-      [238, "مِيضَانَان", "mīḍānān", "karın olma âleti, iki", "kontrol", ""],
-      [239, "مِيضَنَة", "mīḍana", "karın olma âleti", "kontrol", ""],
-      [240, "مِيضَنَتَان", "mīḍanatān", "karın olma âleti, iki", "kontrol", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [241, "أَوْضَن", "ʾawḍan", "daha çok karın olan", "kontrol", ""],
-      [242, "أَوْضَنَان", "ʾawḍanān", "daha çok karın olan, iki", "kontrol", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [243, "وُضْنَى", "wuḍnā", "daha çok karın olan", "kontrol", ""],
-      [244, "وُضْنَيَان", "wuḍnayān", "daha çok karın olan, iki", "kontrol", ""],
-      [245, "وَضْنَاء", "waḍnāʾ", "daha çok karın olan", "kontrol", ""],
-      [246, "وَضْنَاآن", "waḍnāʾān", "daha çok karın olan, iki", "kontrol", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [249, "وُضَيْن", "wuḍayn", "azıcık karın olma", "kontrol", ""],
-      [250, "وُضَيْنَان", "wuḍaynān", "azıcık karın olma, iki", "kontrol", ""],
-      [251, "وُضَيْنَة", "wuḍayna", "azıcık karın olma", "kontrol", ""],
-      [252, "وُضَيْنَتَان", "wuḍaynatān", "azıcık karın olma, iki", "kontrol", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [253, "مَوْضَن", "mawḍan", "karın olma", "kontrol", ""],
-      [254, "مَوْضَنَان", "mawḍanān", "karın olma, iki", "kontrol", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "وَضْنَة", "waḍna", "bir kere karın olma", "kontrol", ""],
-      [256, "وَضْنَتَان", "waḍnatān", "bir kere karın olma, iki", "kontrol", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "وِضْنَة", "wiḍna", "karın olma tarzı", "kontrol", ""],
-      [258, "وِضْنَتَان", "wiḍnatān", "karın olma tarzı, iki", "kontrol", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [259, "وَضِين", "waḍīn", "her daim karın olan", "kontrol", ""],
-      [260, "وَضِينَة", "waḍīna", "her daim karın olan, müennes", "kontrol", ""],
-      [261, "وَضِينَان", "waḍīnān", "her daim karın olan, iki", "kontrol", ""],
-      [262, "وَضِينَتَان", "waḍīnatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [263, "وَضِينُون", "waḍīnūn", "her daim karın olanlar", "kontrol", ""],
-      [264, "وَضِينِين", "waḍīnīn", "her daim karın olanlar", "kontrol", ""],
-      [265, "وَضِينَات", "waḍīnāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [266, "وَضُون", "waḍūn", "her daim karın olan", "kontrol", ""],
-      [267, "وَضُونَة", "waḍūna", "her daim karın olan, müennes", "kontrol", ""],
-      [268, "وَضُونَان", "waḍūnān", "her daim karın olan, iki", "kontrol", ""],
-      [269, "وَضُونَتَان", "waḍūnatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [270, "وَضُونُون", "waḍūnūn", "her daim karın olanlar", "kontrol", ""],
-      [271, "وَضُونِين", "waḍūnīn", "her daim karın olanlar", "kontrol", ""],
-      [272, "وَضُونَات", "waḍūnāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [273, "وَضِن", "waḍin", "her daim karın olan", "kontrol", ""],
-      [274, "وَضِنَة", "waḍina", "her daim karın olan, müennes", "kontrol", ""],
-      [275, "وَضِنَان", "waḍinān", "her daim karın olan, iki", "kontrol", ""],
-      [276, "وَضِنَتَان", "waḍinatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [277, "وَضِنُون", "waḍinūn", "her daim karın olanlar", "kontrol", ""],
-      [278, "وَضِنِين", "waḍinīn", "her daim karın olanlar", "kontrol", ""],
-      [279, "وَضِنَات", "waḍināt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [280, "وَضُن", "waḍun", "her daim karın olan", "kontrol", ""],
-      [281, "وَضُنَة", "waḍuna", "her daim karın olan, müennes", "kontrol", ""],
-      [282, "وَضُنَان", "waḍunān", "her daim karın olan, iki", "kontrol", ""],
-      [283, "وَضُنَتَان", "waḍunatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [284, "وَضُنُون", "waḍunūn", "her daim karın olanlar", "kontrol", ""],
-      [285, "وَضُنِين", "waḍunīn", "her daim karın olanlar", "kontrol", ""],
-      [286, "وَضُنَات", "waḍunāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [287, "وَضَن", "waḍan", "her daim karın olan", "kontrol", ""],
-      [288, "وَضَنَة", "waḍana", "her daim karın olan, müennes", "kontrol", ""],
-      [289, "وَضَنَان", "waḍanān", "her daim karın olan, iki", "kontrol", ""],
-      [290, "وَضَنَتَان", "waḍanatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [291, "وَضَنُون", "waḍanūn", "her daim karın olanlar", "kontrol", ""],
-      [292, "وَضَنِين", "waḍanīn", "her daim karın olanlar", "kontrol", ""],
-      [293, "وَضَنَات", "waḍanāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [294, "وَضْن", "waḍn", "her daim karın olan", "kontrol", ""],
-      [295, "وَضْنَة", "waḍna", "her daim karın olan, müennes", "kontrol", ""],
-      [296, "وَضْنَان", "waḍnān", "her daim karın olan, iki", "kontrol", ""],
-      [297, "وَضْنَتَان", "waḍnatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [298, "وَضْنُون", "waḍnūn", "her daim karın olanlar", "kontrol", ""],
-      [299, "وَضْنِين", "waḍnīn", "her daim karın olanlar", "kontrol", ""],
-      [300, "وَضْنَات", "waḍnāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [301, "وُضُن", "wuḍun", "her daim karın olan", "kontrol", ""],
-      [302, "وُضُنَة", "wuḍuna", "her daim karın olan, müennes", "kontrol", ""],
-      [303, "وُضُنَان", "wuḍunān", "her daim karın olan, iki", "kontrol", ""],
-      [304, "وُضُنَتَان", "wuḍunatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [305, "وُضُنُون", "wuḍunūn", "her daim karın olanlar", "kontrol", ""],
-      [306, "وُضُنِين", "wuḍunīn", "her daim karın olanlar", "kontrol", ""],
-      [307, "وُضُنَات", "wuḍunāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [308, "وَضْنَان", "waḍnān", "her daim karın olan", "kontrol", ""],
-      [309, "وَضْنَانَة", "waḍnāna", "her daim karın olan, müennes", "kontrol", ""],
-      [310, "وَضْنَانَان", "waḍnānān", "her daim karın olan, iki", "kontrol", ""],
-      [311, "وَضْنَانَتَان", "waḍnānatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [312, "وَضْنَانُون", "waḍnānūn", "her daim karın olanlar", "kontrol", ""],
-      [313, "وَضْنَانِين", "waḍnānīn", "her daim karın olanlar", "kontrol", ""],
-      [314, "وَضْنَانَات", "waḍnānāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [315, "وُضَان", "wuḍān", "her daim karın olan", "kontrol", ""],
-      [316, "وُضَانَة", "wuḍāna", "her daim karın olan, müennes", "kontrol", ""],
-      [317, "وُضَانَان", "wuḍānān", "her daim karın olan, iki", "kontrol", ""],
-      [318, "وُضَانَتَان", "wuḍānatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [319, "وُضَانُون", "wuḍānūn", "her daim karın olanlar", "kontrol", ""],
-      [320, "وُضَانِين", "wuḍānīn", "her daim karın olanlar", "kontrol", ""],
-      [321, "وُضَانَات", "wuḍānāt", "her daim karın olanlar, müennes", "kontrol", ""],
-      [322, "وَضَان", "waḍān", "her daim karın olan", "kontrol", ""],
-      [323, "وَضَانَة", "waḍāna", "her daim karın olan, müennes", "kontrol", ""],
-      [324, "وَضَانَان", "waḍānān", "her daim karın olan, iki", "kontrol", ""],
-      [325, "وَضَانَتَان", "waḍānatān", "her daim karın olan, iki, müennes", "kontrol", ""],
-      [326, "وَضَانُون", "waḍānūn", "her daim karın olanlar", "kontrol", ""],
-      [327, "وَضَانِين", "waḍānīn", "her daim karın olanlar", "kontrol", ""],
-      [328, "وَضَانَات", "waḍānāt", "her daim karın olanlar, müennes", "kontrol", ""]
-    ],
-    "mübalağa": [
-      [329, "وَضَّان", "waḍḍān", "işi karın olma olan", "kontrol", ""],
-      [330, "وَضَّانَة", "waḍḍāna", "işi karın olma olan, müennes", "kontrol", ""],
-      [331, "وَضَّانَان", "waḍḍānān", "işi karın olma olan, iki", "kontrol", ""],
-      [332, "وَضَّانَتَان", "waḍḍānatān", "işi karın olma olan, iki, müennes", "kontrol", ""],
-      [333, "وَضَّانُون", "waḍḍānūn", "işi karın olma olanlar", "kontrol", ""],
-      [334, "وَضَّانِين", "waḍḍānīn", "işi karın olma olanlar", "kontrol", ""],
-      [335, "وَضَّانَات", "waḍḍānāt", "işi karın olma olanlar, müennes", "kontrol", ""],
-      [336, "وَضَّانَة", "waḍḍāna", "pek çok karın olan", "kontrol", ""],
-      [337, "وَضَّانَتَان", "waḍḍānatān", "pek çok karın olan, iki", "kontrol", ""],
-      [338, "وَضَّانَات", "waḍḍānāt", "pek çok karın olanlar, müennes", "kontrol", ""],
-      [339, "وَضُون", "waḍūn", "çok karın olan", "kontrol", ""],
-      [340, "وَضُونَة", "waḍūna", "çok karın olan, müennes", "kontrol", ""],
-      [341, "وَضُونَان", "waḍūnān", "çok karın olan, iki", "kontrol", ""],
-      [342, "وَضُونَتَان", "waḍūnatān", "çok karın olan, iki, müennes", "kontrol", ""],
-      [343, "وَضُونُون", "waḍūnūn", "çok karın olanlar", "kontrol", ""],
-      [344, "وَضُونِين", "waḍūnīn", "çok karın olanlar", "kontrol", ""],
-      [345, "وَضُونَات", "waḍūnāt", "çok karın olanlar, müennes", "kontrol", ""],
-      [346, "وَضُّون", "waḍḍūn", "pek çok karın olan", "kontrol", ""],
-      [347, "وَضُّونَة", "waḍḍūna", "pek çok karın olan, müennes", "kontrol", ""],
-      [348, "وَضُّونَان", "waḍḍūnān", "pek çok karın olan, iki", "kontrol", ""],
-      [349, "وَضُّونَتَان", "waḍḍūnatān", "pek çok karın olan, iki, müennes", "kontrol", ""],
-      [350, "وَضُّونُون", "waḍḍūnūn", "pek çok karın olanlar", "kontrol", ""],
-      [351, "وَضُّونِين", "waḍḍūnīn", "pek çok karın olanlar", "kontrol", ""],
-      [352, "وَضُّونَات", "waḍḍūnāt", "pek çok karın olanlar, müennes", "kontrol", ""],
-      [353, "وِضِّين", "wiḍḍīn", "karın olmada aşırı giden", "kontrol", ""],
-      [354, "وِضِّينَة", "wiḍḍīna", "karın olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "وِضِّينَان", "wiḍḍīnān", "karın olmada aşırı giden, iki", "kontrol", ""],
-      [356, "وِضِّينَتَان", "wiḍḍīnatān", "karın olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "وِضِّينُون", "wiḍḍīnūn", "karın olmada aşırı gidenler", "kontrol", ""],
-      [358, "وِضِّينِين", "wiḍḍīnīn", "karın olmada aşırı gidenler", "kontrol", ""],
-      [359, "وِضِّينَات", "wiḍḍīnāt", "karın olmada aşırı gidenler, müennes", "kontrol", ""],
-      [360, "وُضَّان", "wuḍḍān", "son derece karın olan", "kontrol", ""],
-      [361, "وُضَّانَة", "wuḍḍāna", "son derece karın olan, müennes", "kontrol", ""],
-      [362, "وُضَّانَان", "wuḍḍānān", "son derece karın olan, iki", "kontrol", ""],
-      [363, "وُضَّانَتَان", "wuḍḍānatān", "son derece karın olan, iki, müennes", "kontrol", ""],
-      [364, "وُضَّانُون", "wuḍḍānūn", "son derece karın olanlar", "kontrol", ""],
-      [365, "وُضَّانِين", "wuḍḍānīn", "son derece karın olanlar", "kontrol", ""],
-      [366, "وُضَّانَات", "wuḍḍānāt", "son derece karın olanlar, müennes", "kontrol", ""],
-      [367, "مِيضَان", "mīḍān", "karın olmayı âdet edinmiş", "kontrol", ""],
-      [368, "مِيضَانَة", "mīḍāna", "karın olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [369, "مِيضَانَان", "mīḍānān", "karın olmayı âdet edinmiş, iki", "kontrol", ""],
-      [370, "مِيضَانَتَان", "mīḍānatān", "karın olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [371, "مِيضَانُون", "mīḍānūn", "karın olmayı âdet edinmişler", "kontrol", ""],
-      [372, "مِيضَانِين", "mīḍānīn", "karın olmayı âdet edinmişler", "kontrol", ""],
-      [373, "مِيضَانَات", "mīḍānāt", "karın olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِيضِين", "mīḍīn", "karın olmaya düşkün", "kontrol", ""],
-      [375, "مِيضِينَة", "mīḍīna", "karın olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِيضِينَان", "mīḍīnān", "karın olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِيضِينَتَان", "mīḍīnatān", "karın olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِيضِينُون", "mīḍīnūn", "karın olmaya düşkünler", "kontrol", ""],
-      [379, "مِيضِينِين", "mīḍīnīn", "karın olmaya düşkünler", "kontrol", ""],
-      [380, "مِيضِينَات", "mīḍīnāt", "karın olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "وَضِين", "waḍīn", "çok karın olan", "kontrol", ""],
-      [382, "وَضِينَة", "waḍīna", "çok karın olan, müennes", "kontrol", ""],
-      [383, "وَضِينَان", "waḍīnān", "çok karın olan, iki", "kontrol", ""],
-      [384, "وَضِينَتَان", "waḍīnatān", "çok karın olan, iki, müennes", "kontrol", ""],
-      [385, "وَضِينُون", "waḍīnūn", "çok karın olanlar", "kontrol", ""],
-      [386, "وَضِينِين", "waḍīnīn", "çok karın olanlar", "kontrol", ""],
-      [387, "وَضِينَات", "waḍīnāt", "çok karın olanlar, müennes", "kontrol", ""],
-      [388, "وَضَّن", "waḍḍan", "çok karın olan", "kontrol", ""],
-      [389, "وَضَّنَة", "waḍḍana", "çok karın olan, müennes", "kontrol", ""],
-      [390, "وَضَّنَان", "waḍḍanān", "çok karın olan, iki", "kontrol", ""],
-      [391, "وَضَّنَتَان", "waḍḍanatān", "çok karın olan, iki, müennes", "kontrol", ""],
-      [392, "وَضَّنُون", "waḍḍanūn", "çok karın olanlar", "kontrol", ""],
-      [393, "وَضَّنِين", "waḍḍanīn", "çok karın olanlar", "kontrol", ""],
-      [394, "وَضَّنَات", "waḍḍanāt", "çok karın olanlar, müennes", "kontrol", ""]
-    ],
-    "mensûb": [
-      [395, "وَضْنِيّ", "waḍniyy", "karın olma ile ilgili", "kontrol", ""],
-      [397, "وَضَنِيّ", "waḍaniyy", "karın olma ile ilgili", "kontrol", ""],
-      [399, "وِضْنِيّ", "wiḍniyy", "karın olma ile ilgili", "kontrol", ""],
-      [401, "وُضْنِيّ", "wuḍniyy", "karın olma ile ilgili", "kontrol", ""],
-      [403, "وِضَانِيّ", "wiḍāniyy", "karın olma ile ilgili", "kontrol", ""],
-      [405, "وَاضِنِيّ", "wāḍiniyy", "karın olma ile ilgili", "kontrol", ""],
-      [407, "مَوْضُونِيّ", "mawḍūniyy", "karın olma ile ilgili", "kontrol", ""],
-      [409, "وَضِينِيّ", "waḍīniyy", "karın olma ile ilgili", "kontrol", ""],
-      [411, "مَوْضَنِيّ", "mawḍaniyy", "karın olma ile ilgili", "kontrol", ""],
-      [413, "تَوْضِينِيّ", "tawḍīniyy", "karın olma ile ilgili", "kontrol", ""],
-      [415, "تَوَاضُنِيّ", "tawāḍuniyy", "karın olma ile ilgili", "kontrol", ""],
-      [417, "إِيضَانِيّ", "ʾīḍāniyy", "karın olma ile ilgili", "kontrol", ""],
-      [419, "اِتِّضَانِيّ", "ittiḍāniyy", "karın olma ile ilgili", "kontrol", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "وَضْنِيَّة", "waḍniyya", "karın olanlık", "kontrol", ""],
-      [398, "وَضَنِيَّة", "waḍaniyya", "karın olanlık", "kontrol", ""],
-      [400, "وِضْنِيَّة", "wiḍniyya", "karın olanlık", "kontrol", ""],
-      [402, "وُضْنِيَّة", "wuḍniyya", "karın olanlık", "kontrol", ""],
-      [404, "وِضَانِيَّة", "wiḍāniyya", "karın olanlık", "kontrol", ""],
-      [406, "وَاضِنِيَّة", "wāḍiniyya", "karın olanlık", "kontrol", ""],
-      [408, "مَوْضُونِيَّة", "mawḍūniyya", "karın olanlık", "kontrol", ""],
-      [410, "وَضِينِيَّة", "waḍīniyya", "karın olanlık", "kontrol", ""],
-      [412, "مَوْضَنِيَّة", "mawḍaniyya", "karın olanlık", "kontrol", ""],
-      [414, "تَوْضِينِيَّة", "tawḍīniyya", "karın olanlık", "kontrol", ""],
-      [416, "تَوَاضُنِيَّة", "tawāḍuniyya", "karın olanlık", "kontrol", ""],
-      [418, "إِيضَانِيَّة", "ʾīḍāniyya", "karın olanlık", "kontrol", ""],
-      [420, "اِتِّضَانِيَّة", "ittiḍāniyya", "karın olanlık", "kontrol", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "وَضَان", "waḍān", "karın olma", "kontrol", ""],
-      [422, "وُضُون", "wuḍūn", "karın olma", "kontrol", ""],
-      [423, "وِضَان", "wiḍān", "karın olma", "kontrol", ""],
-      [424, "وُضْن", "wuḍn", "karın olma", "kontrol", ""],
-      [425, "وَضَانَة", "waḍāna", "karın olma", "kontrol", ""],
-      [426, "وِضَانَة", "wiḍāna", "karın olma", "kontrol", ""],
-      [427, "وُضُونَة", "wuḍūna", "karın olma", "kontrol", ""],
-      [428, "وَضْن", "waḍn", "karın olma", "kontrol", ""],
-      [429, "وِضْن", "wiḍn", "karın olma", "kontrol", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "وَاضُون", "wāḍūn", "karın olma türünden şey", "kontrol", ""],
-      [432, "وَضَنَة", "waḍana", "karın olma türünden şey", "kontrol", ""],
-      [433, "وُضَنَة", "wuḍana", "karın olma türünden şey", "kontrol", ""],
-      [434, "أُوضُونَة", "ʾūḍūna", "karın olma türünden şey", "kontrol", ""],
-      [435, "وَوْضَن", "wawḍan", "karın olma türünden şey", "kontrol", ""],
-      [437, "وَيْضَن", "wayḍan", "karın olma türünden şey", "kontrol", ""],
-      [439, "وَضْن", "waḍn", "karın olma türünden şey", "kontrol", ""],
-      [441, "وَضَن", "waḍan", "karın olma türünden şey", "kontrol", ""],
-      [443, "وِضْن", "wiḍn", "karın olma türünden şey", "kontrol", ""],
-      [445, "وُضْن", "wuḍn", "karın olma türünden şey", "kontrol", ""],
-      [447, "وَضِين", "waḍīn", "karın olma türünden şey", "kontrol", ""],
-      [449, "وِضَن", "wiḍan", "karın olma türünden şey", "kontrol", ""],
-      [451, "وُضُن", "wuḍun", "karın olma türünden şey", "kontrol", ""],
-      [453, "وَضَان", "waḍān", "karın olma türünden şey", "kontrol", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "وَاضُونَة", "wāḍūna", "karın olma türünden bir tane", "kontrol", ""],
-      [436, "وَوْضَنَة", "wawḍana", "karın olma türünden bir tane", "kontrol", ""],
-      [438, "وَيْضَنَة", "wayḍana", "karın olma türünden bir tane", "kontrol", ""],
-      [440, "وَضْنَة", "waḍna", "karın olma türünden bir tane", "kontrol", ""],
-      [442, "وَضَنَة", "waḍana", "karın olma türünden bir tane", "kontrol", ""],
-      [444, "وِضْنَة", "wiḍna", "karın olma türünden bir tane", "kontrol", ""],
-      [446, "وُضْنَة", "wuḍna", "karın olma türünden bir tane", "kontrol", ""],
-      [448, "وَضِينَة", "waḍīna", "karın olma türünden bir tane", "kontrol", ""],
-      [450, "وِضَنَة", "wiḍana", "karın olma türünden bir tane", "kontrol", ""],
-      [452, "وُضُنَة", "wuḍuna", "karın olma türünden bir tane", "kontrol", ""],
-      [454, "وَضَانَة", "waḍāna", "karın olma türünden bir tane", "kontrol", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [455, "أَوْضَان", "ʾawḍān", "karın olmalar", "kontrol", ""],
-      [456, "أَوْضِنَة", "ʾawḍina", "karın olmalar", "kontrol", ""],
-      [457, "أَوَاضِن", "ʾawāḍin", "karın olmalar", "kontrol", ""],
-      [458, "أَوَاضِين", "ʾawāḍīn", "karın olmalar", "kontrol", ""],
-      [459, "وُضُون", "wuḍūn", "karın olmalar", "kontrol", ""],
-      [460, "وُضُن", "wuḍun", "karın olmalar", "kontrol", ""],
-      [461, "وِضَان", "wiḍān", "karın olmalar", "kontrol", ""],
-      [462, "وِضَن", "wiḍan", "karın olmalar", "kontrol", ""],
-      [463, "وِضَنَة", "wiḍana", "karın olmalar", "kontrol", ""],
-      [464, "وُضَن", "wuḍan", "karın olmalar", "kontrol", ""],
-      [465, "وُضَناء", "wuḍanāʾ", "karın olmalar", "kontrol", ""],
-      [466, "وَضَنَة", "waḍana", "karın olmalar", "kontrol", ""],
-      [467, "وُضَّان", "wuḍḍān", "karın olmalar", "kontrol", ""],
-      [468, "وَضَان", "waḍān", "karın olmalar", "kontrol", ""],
-      [469, "وَضَن", "waḍan", "karın olmalar", "kontrol", ""],
-      [470, "مَوَاضِن", "mawāḍin", "karın olmalar", "kontrol", ""],
-      [471, "مَوَاضِين", "mawāḍīn", "karın olmalar", "kontrol", ""],
-      [472, "وَوَاضِن", "wawāḍin", "karın olmalar", "kontrol", ""],
-      [473, "أَوْضُن", "ʾawḍun", "karın olmalar", "kontrol", ""],
-      [474, "وُضَّن", "wuḍḍan", "karın olmalar", "kontrol", ""],
-      [475, "وَضَائِن", "waḍāʾin", "karın olmalar", "kontrol", ""],
-      [476, "وُضَيْن", "wuḍayn", "karın olmalar", "kontrol", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [477, "أَوْضَانَات", "ʾawḍānāt", "karın olmalar topluluğu", "kontrol", ""],
-      [478, "أَوْضِنَات", "ʾawḍināt", "karın olmalar topluluğu", "kontrol", ""],
-      [479, "أَوَاضِنَات", "ʾawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
-      [480, "أَوَاضِينَات", "ʾawāḍīnāt", "karın olmalar topluluğu", "kontrol", ""],
-      [481, "وُضُونَات", "wuḍūnāt", "karın olmalar topluluğu", "kontrol", ""],
-      [482, "وُضُنَات", "wuḍunāt", "karın olmalar topluluğu", "kontrol", ""],
-      [483, "وِضَانَات", "wiḍānāt", "karın olmalar topluluğu", "kontrol", ""],
-      [484, "وِضَنَات", "wiḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [485, "وِضَنَات", "wiḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [486, "وُضَنَات", "wuḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [487, "وُضَناآت", "wuḍanāʾāt", "karın olmalar topluluğu", "kontrol", ""],
-      [488, "وَضَنَات", "waḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [489, "وُضَّانَات", "wuḍḍānāt", "karın olmalar topluluğu", "kontrol", ""],
-      [490, "وَضَانَات", "waḍānāt", "karın olmalar topluluğu", "kontrol", ""],
-      [491, "وَضَنَات", "waḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [492, "مَوَاضِنَات", "mawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
-      [493, "مَوَاضِينَات", "mawāḍīnāt", "karın olmalar topluluğu", "kontrol", ""],
-      [494, "وَوَاضِنَات", "wawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
-      [495, "أَوْضُنَات", "ʾawḍunāt", "karın olmalar topluluğu", "kontrol", ""],
-      [496, "وُضَّنَات", "wuḍḍanāt", "karın olmalar topluluğu", "kontrol", ""],
-      [497, "وَضَائِنَات", "waḍāʾināt", "karın olmalar topluluğu", "kontrol", ""],
-      [498, "وُضَيْنَات", "wuḍaynāt", "karın olmalar topluluğu", "kontrol", ""]
-    ]
-  },
-  "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "وضن",
-      "turkce": "vadn: karın, sırt / vadan: hayvan yeri (?)",
-      "ihtimaller": ["vadn: karın, sırt", "vadan: hayvan yeri (?)"],
-      "varlik": "varlığı meçhul"
-    },
-    "osmanlica_lugatler": {
-      "مَوْضُونَة": {
-        "sorgular": ["mauzunae"],
-        "maddeler": []
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الضاد والنون",
-      "baslik": "وضن",
-      "mihveri": "تَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات. ومنه \"وَضَنَ السَرير: نَسَجَه بالجَوْهر والثياب \".",
-      "sesler": "",
-      "tam_metin": "{عَلَى سُرُرٍ مَوْضُونَةٍ} [الواقعة: 15]\n\"الوَضِينُ: بِطانٌ (حزام تحت البطن) عريضٌ مَنْسُوجٌ من سيور أو شَعَر. . يُشَدّ به الهودجُ والرحلُ على البعير. والموضونةُ: الدِرع المَنْسُوجة نَسْجًا متقاربًا أو مضاعَفة النسْج. والوُضْنَة -بالضم: الكُرْسِيُّ المنسوج \". \"وَضَنَ الشيءَ: ثَنَى بعضه على بَعض وَضَاعفه. ووَضَنَ الرجلُ الحجرَ والآجُرَّ بعضَه على بَعْض: أَشْرَجه \" (أَشْرَجَ اللبِنَ: نَضَدَ بعضَه إلى بعض (أي مَعَ تداخل. يقال) تَشَرَّجَ اللحمُ بالشحم أي تداخلا \" (فوضْن اللبِن عند البناء: أن تكون نهاية كل لبنة عند وسط اللبنة التي تحتها والتي فوقها).\n° المعنى المحوري\nتَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات. ومنه \"وَضَنَ السَرير: نَسَجَه بالجَوْهر والثياب \".\n__________\n= سيور. وفي (ضأن) تتوسط الهمزة بالتعبير عن دفع كأنه يتمثل في دفع الصوف من أثناء بدن الغنم إلى ظاهر البدن تلك الكثافة الملحوظة. وفي (ضنك) تعبر الكاف عن ضغط غئوري دقيق، والتركيب بها يعبر عن اكتناز واشتداد في الأثناء كالضِّناك: المكتنز اللحم، وكما في الضُّنْكة: الزكام \".\n(3/1301)\n{عَلَى سُرُرٍ مَوْضُونَةٍ} قال [الزمخشري 3/ 194]: مَرْمُولة بالذهب مُشَبَّكة بالدُرِّ والياقوت قد دُوخِل بعضُها في بعض كما تُوضَنُ حِلَقُ الدِرْع \". .\nومن حسّيّ الأصل: \"المِيضَنَة: كالجُوَالق تُتَّخذ من خُوص \". (تحتوي ما يوعي فيها). ومن المعنوى: \"التَوَضُّن: التَحَبُّبُ، والتَذَلّل \" (محاولة دخول إلى الباطن بذلك).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (ضن) : هو لزوم الشيء حيّزه أي بقاؤه داخله لا يبرحه ككون القوم بضنانتهم أي لم يتفرقوا -في (ضنن)، وكالدرع الموضونة: المنسوجة نسجًا متقاربًا أو مضاعفة النسج (تداخل شديد) -في (وضن)، وكالشحم الذي تشتهر به الضأن حيث يتداخل في أثناء اللحم ورجحت أنه هو علة تسميتها -في (ضأن). وكانسداد الأنف الذي يشعر به المزكوم، والضِناك الموثق الخَلْق الشديد المكتنز اللحم (وكل هذا تداخل) -في (ضنك)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "56:15:3:1",
-      "tur": {
-        "ADJ": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {
-        "PASS": 1,
-        "PCPL": 1
-      },
-      "lemmalar": {
-        "مَّوْضُونَة": 1
-      },
-      "bicimler": {
-        "مَّوْضُونَةٍ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "WḌN",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab WḌN وضن BP – • HDAL • © SG | 22May2023 √WḌN “root” ▪ WḌN_1 ‘...’ ↗ ... ▪ WḌN_2 ‘...’ ↗ ... ▪ WḌN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to plait, braid, interweave, trim with gold and precious stones; to bring close together; to ingratiate o.s.’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "renk_sozluk": {
-      "موضونة": "bağlanmış"
-    },
-    "tercume": {
-      "cebel_mihveri": {
-        "mihveri": "Sıkı sıkıya birbirine girme yahut ihtivâ (kuşatıp içine alma): zikrolunan astar (bıtân), zırh, semer (kürsî) ve kerpiçlerin dokunuşu heyetinde. Bundan «sedyeyi vadn etti: onu cevher ve elbiselerle dokudu» sözü gelir. \n__________\n= kayışlar. (Dân')'da hemze ortalandığında, sanki koyunun bedeninin içinden yünün dış yüzüne itilmesi şeklinde temsil edilen bir itme ifâdesi vardır; gözlenen o kesâfet. (Danek)'te kâf, ince, çukurlaştırıcı bir baskıyı ifâde eder; onunla terkîb, içte sıkışıklık ve sertleşmeyi ifâde eder; dınâk: eti sıkı olan; ve dunke: nezle gibi.\n(3/1301)\n{Dokunmuş (mevdûne) tahtlar üzerinde} [Vâkıa: 15]: [Zemahşerî 3/194] dedi: «Altınla örülmüş, inci ve yâkutla birbirine geçirilmiş; zırhın halkaları nasıl dokunup birbirine geçirilirse öyle».\nAsıldaki hissî olandan: «El-mîdane: hurma yaprağından yapılan çuval gibi» (içine konanı muhafaza eder). Ma'nevîden: «Et-tevaddun: sevgi gösterme ve zillet» (bununla bâtına girmeye çalışma)."
-      },
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dönüş · EtymArab · WḌN وضن · BP – • HDAL • © SG | 22 Mayıs 2023 · √WḌN «kök» · ▪ WḌN_1 '...' ↗ ... ▪ WḌN_2 '...' ↗ ... ▪ WḌN_3 '...' ↗ ... ♦ Klasik Arapçada mana kıymet tayfı (BAH2008'e göre): «örmek, saç örgüsü yapmak, birbirine geçirmek, altın ve kıymetli taşla bezemek; birbirine yaklaştırmak; kendini sevdirerek sokulmak» ▪ … – . . – – Kaynaklar; üstveri; sarf; İngilizce; konkordans; tarih; soydaş; tartışma; batı; türev;"
-      }
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "ضن",
+  "ses": {
     "harf": "و",
+    "fasil": "ضن",
     "mahrec": "cevfiyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
-  },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "anlam": "vadn: karın, sırt / vadan: hayvan yeri (?)",
+  "anlam_ihtimal": ["vadn: karın, sırt", "vadan: hayvan yeri (?)"],
+  "anlam_varlik": "varlığı meçhul",
+  "esas_manalar": "örmek, dokumak, sık işlemek",
+  "cebel": {
     "fasil": "الضاد والنون",
+    "baslik": "وضن",
     "mihveri": "تَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات. ومنه \"وَضَنَ السَرير: نَسَجَه بالجَوْهر والثياب \".",
-    "sesler": "",
+    "tam_metin": "{عَلَى سُرُرٍ مَوْضُونَةٍ} [الواقعة: 15]\n\"الوَضِينُ: بِطانٌ (حزام تحت البطن) عريضٌ مَنْسُوجٌ من سيور أو شَعَر. . يُشَدّ به الهودجُ والرحلُ على البعير. والموضونةُ: الدِرع المَنْسُوجة نَسْجًا متقاربًا أو مضاعَفة النسْج. والوُضْنَة -بالضم: الكُرْسِيُّ المنسوج \". \"وَضَنَ الشيءَ: ثَنَى بعضه على بَعض وَضَاعفه. ووَضَنَ الرجلُ الحجرَ والآجُرَّ بعضَه على بَعْض: أَشْرَجه \" (أَشْرَجَ اللبِنَ: نَضَدَ بعضَه إلى بعض (أي مَعَ تداخل. يقال) تَشَرَّجَ اللحمُ بالشحم أي تداخلا \" (فوضْن اللبِن عند البناء: أن تكون نهاية كل لبنة عند وسط اللبنة التي تحتها والتي فوقها).\n° المعنى المحوري\nتَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات. ومنه \"وَضَنَ السَرير: نَسَجَه بالجَوْهر والثياب \".\n__________\n= سيور. وفي (ضأن) تتوسط الهمزة بالتعبير عن دفع كأنه يتمثل في دفع الصوف من أثناء بدن الغنم إلى ظاهر البدن تلك الكثافة الملحوظة. وفي (ضنك) تعبر الكاف عن ضغط غئوري دقيق، والتركيب بها يعبر عن اكتناز واشتداد في الأثناء كالضِّناك: المكتنز اللحم، وكما في الضُّنْكة: الزكام \".\n(3/1301)\n{عَلَى سُرُرٍ مَوْضُونَةٍ} قال [الزمخشري 3/ 194]: مَرْمُولة بالذهب مُشَبَّكة بالدُرِّ والياقوت قد دُوخِل بعضُها في بعض كما تُوضَنُ حِلَقُ الدِرْع \". .\nومن حسّيّ الأصل: \"المِيضَنَة: كالجُوَالق تُتَّخذ من خُوص \". (تحتوي ما يوعي فيها). ومن المعنوى: \"التَوَضُّن: التَحَبُّبُ، والتَذَلّل \" (محاولة دخول إلى الباطن بذلك).",
     "fasil_ozeti": "° معنى الفصل المعجمي (ضن) : هو لزوم الشيء حيّزه أي بقاؤه داخله لا يبرحه ككون القوم بضنانتهم أي لم يتفرقوا -في (ضنن)، وكالدرع الموضونة: المنسوجة نسجًا متقاربًا أو مضاعفة النسج (تداخل شديد) -في (وضن)، وكالشحم الذي تشتهر به الضأن حيث يتداخل في أثناء اللحم ورجحت أنه هو علة تسميتها -في (ضأن). وكانسداد الأنف الذي يشعر به المزكوم، والضِناك الموثق الخَلْق الشديد المكتنز اللحم (وكل هذا تداخل) -في (ضنك).",
-    "tam_metin": "{عَلَى سُرُرٍ مَوْضُونَةٍ} [الواقعة: 15]\n\"الوَضِينُ: بِطانٌ (حزام تحت البطن) عريضٌ مَنْسُوجٌ من سيور أو شَعَر. . يُشَدّ به الهودجُ والرحلُ على البعير. والموضونةُ: الدِرع المَنْسُوجة نَسْجًا متقاربًا أو مضاعَفة النسْج. والوُضْنَة -بالضم: الكُرْسِيُّ المنسوج \". \"وَضَنَ الشيءَ: ثَنَى بعضه على بَعض وَضَاعفه. ووَضَنَ الرجلُ الحجرَ والآجُرَّ بعضَه على بَعْض: أَشْرَجه \" (أَشْرَجَ اللبِنَ: نَضَدَ بعضَه إلى بعض (أي مَعَ تداخل. يقال) تَشَرَّجَ اللحمُ بالشحم أي تداخلا \" (فوضْن اللبِن عند البناء: أن تكون نهاية كل لبنة عند وسط اللبنة التي تحتها والتي فوقها).\n° المعنى المحوري\nتَدَاخُل بكثافة أو احتواء: كهيئة نَسْج البِطان والدِرْع والكُرْسِيّ واللبِن المذكورات. ومنه \"وَضَنَ السَرير: نَسَجَه بالجَوْهر والثياب \".\n__________\n= سيور. وفي (ضأن) تتوسط الهمزة بالتعبير عن دفع كأنه يتمثل في دفع الصوف من أثناء بدن الغنم إلى ظاهر البدن تلك الكثافة الملحوظة. وفي (ضنك) تعبر الكاف عن ضغط غئوري دقيق، والتركيب بها يعبر عن اكتناز واشتداد في الأثناء كالضِّناك: المكتنز اللحم، وكما في الضُّنْكة: الزكام \".\n(3/1301)\n{عَلَى سُرُرٍ مَوْضُونَةٍ} قال [الزمخشري 3/ 194]: مَرْمُولة بالذهب مُشَبَّكة بالدُرِّ والياقوت قد دُوخِل بعضُها في بعض كما تُوضَنُ حِلَقُ الدِرْع \". .\nومن حسّيّ الأصل: \"المِيضَنَة: كالجُوَالق تُتَّخذ من خُوص \". (تحتوي ما يوعي فيها). ومن المعنوى: \"التَوَضُّن: التَحَبُّبُ، والتَذَلّل \" (محاولة دخول إلى الباطن بذلك)."
+    "mihveri_tr": "Sıkı sıkıya birbirine girme yahut ihtivâ (kuşatıp içine alma): zikrolunan astar (bıtân), zırh, semer (kürsî) ve kerpiçlerin dokunuşu heyetinde. Bundan «sedyeyi vadn etti: onu cevher ve elbiselerle dokudu» sözü gelir. \n__________\n= kayışlar. (Dân')'da hemze ortalandığında, sanki koyunun bedeninin içinden yünün dış yüzüne itilmesi şeklinde temsil edilen bir itme ifâdesi vardır; gözlenen o kesâfet. (Danek)'te kâf, ince, çukurlaştırıcı bir baskıyı ifâde eder; onunla terkîb, içte sıkışıklık ve sertleşmeyi ifâde eder; dınâk: eti sıkı olan; ve dunke: nezle gibi.\n(3/1301)\n{Dokunmuş (mevdûne) tahtlar üzerinde} [Vâkıa: 15]: [Zemahşerî 3/194] dedi: «Altınla örülmüş, inci ve yâkutla birbirine geçirilmiş; zırhın halkaları nasıl dokunup birbirine geçirilirse öyle».\nAsıldaki hissî olandan: «El-mîdane: hurma yaprağından yapılan çuval gibi» (içine konanı muhafaza eder). Ma'nevîden: «Et-tevaddun: sevgi gösterme ve zillet» (bununla bâtına girmeye çalışma)."
   },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
+  "zemahseri": {
     "hakikat": "درع موضونة: منسوجة حلقتين حلقتين. ووضن النّسع، وقلق وضينها: بطانها من الهزال، وقلقت وضنها.",
-    "mecaz": "",
-    "kinaye": "",
     "mecaz_var": false
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "etymarab": {
+    "latin": "WḌN",
+    "kok_maddesi": "Back to library EtymArab WḌN وضن BP – • HDAL • © SG | 22May2023 √WḌN “root” ▪ WḌN_1 ‘...’ ↗ ... ▪ WḌN_2 ‘...’ ↗ ... ▪ WḌN_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to plait, braid, interweave, trim with gold and precious stones; to bring close together; to ingratiate o.s.’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dönüş · EtymArab · WḌN وضن · BP – • HDAL • © SG | 22 Mayıs 2023 · √WḌN «kök» · ▪ WḌN_1 '...' ↗ ... ▪ WḌN_2 '...' ↗ ... ▪ WḌN_3 '...' ↗ ... ♦ Klasik Arapçada mana kıymet tayfı (BAH2008'e göre): «örmek, saç örgüsü yapmak, birbirine geçirmek, altın ve kıymetli taşla bezemek; birbirine yaklaştırmak; kendini sevdirerek sokulmak» ▪ … – . . – – Kaynaklar; üstveri; sarf; İngilizce; konkordans; tarih; soydaş; tartışma; batı; türev;"
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الإبل",
-    "bab": "صفات العقب",
-    "kok_gecis": 16.0,
-    "kitapta_gecis": 4.0,
-    "zenginlesme": 3.84
+  "kuran": {
+    "gecis": 1,
+    "ilk": "56:15:3:1",
+    "tur": {
+      "ADJ": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {
+      "PASS": 1,
+      "PCPL": 1
+    },
+    "lemmalar": {
+      "مَّوْضُونَة": 1
+    },
+    "bicimler": {
+      "مَّوْضُونَةٍ": 1
+    },
+    "morfoloji_gecis": 1
   },
-  "mana_tasnif_gomme": {
+  "kelimeler": [
+    {
+      "lemma": "مَوْضُونَة",
+      "hal": "isim",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "مَّوْضُونَةٍ",
+          "ilk": "56:15",
+          "adet": 1,
+          "tr": "bağlanmış"
+        }
+      ],
+      "tr": "bağlanmış",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "وَضْن", "waḍn", "karın", "kontrol", ""],
+      ["fi'l", "semâî aday", "وِضْن", "wiḍn", "karın", "kontrol", ""],
+      ["fu'l", "semâî aday", "وُضْن", "wuḍn", "karın", "kontrol", ""],
+      ["fa'al", "semâî aday", "وَضَن", "waḍan", "karın", "kontrol", ""],
+      ["fi'al", "semâî aday", "وِضَن", "wiḍan", "karın", "kontrol", ""],
+      ["fu'ul", "semâî aday", "وُضُن", "wuḍun", "karın", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "وُضُون", "wuḍūn", "karın", "kontrol", ""],
+      ["fi'āl", "semâî aday", "وِضَان", "wiḍān", "karın", "kontrol", ""],
+      ["fu'āl", "semâî aday", "وُضَان", "wuḍān", "karın", "kontrol", ""],
+      ["fa'āl", "semâî aday", "وَضَان", "waḍān", "karın", "kontrol", ""],
+      ["fa'āle", "semâî aday", "وَضَانَة", "waḍāna", "karın", "kontrol", ""],
+      ["fu'ūle", "semâî aday", "وُضُونَة", "wuḍūna", "karın", "kontrol", ""],
+      ["fi'āle", "semâî aday", "وِضَانَة", "wiḍāna", "karın", "kontrol", ""],
+      ["fa'īl", "semâî aday", "وَضِين", "waḍīn", "karın", "kontrol", ""],
+      ["fa'ūl", "semâî aday", "وَضُون", "waḍūn", "karın", "kontrol", ""],
+      ["fa'alān", "semâî aday", "وَضَنَان", "waḍanān", "karın", "kontrol", ""],
+      ["fu'lān", "semâî aday", "وُضْنَان", "wuḍnān", "karın", "kontrol", ""],
+      ["fi'lān", "semâî aday", "وِضْنَان", "wiḍnān", "karın", "kontrol", ""],
+      ["fa'lā", "semâî aday", "وَضْنَى", "waḍnā", "karın", "kontrol", ""],
+      ["fu'lā", "semâî aday", "وُضْنَى", "wuḍnā", "karın", "kontrol", ""],
+      ["fi'lā", "semâî aday", "وِضْنَى", "wiḍnā", "karın", "kontrol", ""],
+      ["fa'ale", "semâî aday", "وَضَنَة", "waḍana", "karın", "kontrol", ""],
+      ["fi'ale", "semâî aday", "وِضَنَة", "wiḍana", "karın", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "وَضْنُونَة", "waḍnūna", "karın", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُوضُون", "tūḍūn", "karın", "kontrol", ""],
+      ["taf'ila", "semâî aday", "تَوْضِنَة", "tawḍina", "karın", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَوْضَنَة", "tawḍana", "karın", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَوْضُنَة", "mawḍuna", "karın", "kontrol", ""],
+      ["maf'ila", "semâî aday", "مَوْضِنَة", "mawḍina", "karın", "kontrol", ""],
+      ["fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", "ضِنَة", "ḍina", "karın", "kontrol", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî", "تَوْضِين", "tawḍīn", "çokça karın olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî", "تَوْضِنَة", "tawḍina", "çokça karın olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî", "وِضِّان", "wiḍḍān", "çokça karın olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["taf'īl + tâ", "aday", "تَوْضِينَة", "tawḍīna", "bir kere çokça karın olma", "kontrol", ""],
+      ["fi''āl + tâ", "aday", "وِضِّانَة", "wiḍḍāna", "bir kere çokça karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُوَضِّن", "muwaḍḍin", "çokça karın olan", "kontrol", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُوَضِّنَة", "muwaḍḍina", "çokça karın olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُوَضِّنَان", "muwaḍḍinān", "çokça karın olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُوَضِّنَتَان",
+        "muwaḍḍinatān",
+        "çokça karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَضِّنُون",
+        "muwaḍḍinūn",
+        "çokça karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَضِّنِين",
+        "muwaḍḍinīn",
+        "çokça karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَضِّنَات",
+        "muwaḍḍināt",
+        "çokça karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَضَّن", "muwaḍḍan", "çokça karın olunan", "kontrol", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُوَضَّنَة", "muwaḍḍana", "çokça karın olunan, müennes", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُوَضَّنَان", "muwaḍḍanān", "çokça karın olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُوَضَّنَتَان",
+        "muwaḍḍanatān",
+        "çokça karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَضَّنُون",
+        "muwaḍḍanūn",
+        "çokça karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَضَّنِين",
+        "muwaḍḍanīn",
+        "çokça karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَضَّنَات",
+        "muwaḍḍanāt",
+        "çokça karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî", "مُوَضَّن", "muwaḍḍan", "çokça karın olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî", "مُوَاضَنَة", "muwāḍana", "biriyle karşılıklı karın olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî", "وِضَان", "wiḍān", "biriyle karşılıklı karın olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday", "وِضَانَة", "wiḍāna", "bir kere biriyle karşılıklı karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُوَاضِن", "muwāḍin", "biriyle karşılıklı karın olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî",
+        "مُوَاضِنَة",
+        "muwāḍina",
+        "biriyle karşılıklı karın olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî",
+        "مُوَاضِنَان",
+        "muwāḍinān",
+        "biriyle karşılıklı karın olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُوَاضِنَتَان",
+        "muwāḍinatān",
+        "biriyle karşılıklı karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاضِنُون",
+        "muwāḍinūn",
+        "biriyle karşılıklı karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاضِنِين",
+        "muwāḍinīn",
+        "biriyle karşılıklı karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاضِنَات",
+        "muwāḍināt",
+        "biriyle karşılıklı karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاضَن", "muwāḍan", "biriyle karşılıklı karın olunan", "kontrol", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُوَاضَنَة",
+        "muwāḍana",
+        "biriyle karşılıklı karın olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî",
+        "مُوَاضَنَان",
+        "muwāḍanān",
+        "biriyle karşılıklı karın olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُوَاضَنَتَان",
+        "muwāḍanatān",
+        "biriyle karşılıklı karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوَاضَنُون",
+        "muwāḍanūn",
+        "biriyle karşılıklı karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوَاضَنِين",
+        "muwāḍanīn",
+        "biriyle karşılıklı karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوَاضَنَات",
+        "muwāḍanāt",
+        "biriyle karşılıklı karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî", "مُوَاضَن", "muwāḍan", "biriyle karşılıklı karın olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî", "إِيضَان", "ʾīḍān", "karınlaştırma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday", "إِيضَانَة", "ʾīḍāna", "bir kere karınlaştırma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî", "مُوضِن", "mūḍin", "karınlaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî", "مُوضِنَة", "mūḍina", "karınlaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُوضِنَان", "mūḍinān", "karınlaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî",
+        "مُوضِنَتَان",
+        "mūḍinatān",
+        "karınlaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُوضِنُون", "mūḍinūn", "karınlaştıranlar", "kontrol", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُوضِنِين", "mūḍinīn", "karınlaştıranlar", "kontrol", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوضِنَات",
+        "mūḍināt",
+        "karınlaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوضَن", "mūḍan", "karınlaştırılan", "kontrol", ""],
+      ["muf'al + müennes", "kıyâsî", "مُوضَنَة", "mūḍana", "karınlaştırılan, müennes", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُوضَنَان", "mūḍanān", "karınlaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî",
+        "مُوضَنَتَان",
+        "mūḍanatān",
+        "karınlaştırılan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوضَنُون",
+        "mūḍanūn",
+        "karınlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوضَنِين",
+        "mūḍanīn",
+        "karınlaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوضَنَات",
+        "mūḍanāt",
+        "karınlaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî", "مُوضَن", "mūḍan", "karınlaştırma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî", "تَوَضُّن", "tawaḍḍun", "kendini zorlayarak karın olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb V": [
+      ["tafa''ul + tâ", "aday", "تَوَضُّنَة", "tawaḍḍuna", "bir kere kendini zorlayarak karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَوَضِّن", "mutawaḍḍin", "kendini zorlayarak karın olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَوَضِّنَة",
+        "mutawaḍḍina",
+        "kendini zorlayarak karın olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَوَضِّنَان",
+        "mutawaḍḍinān",
+        "kendini zorlayarak karın olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَضِّنَتَان",
+        "mutawaḍḍinatān",
+        "kendini zorlayarak karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَضِّنُون",
+        "mutawaḍḍinūn",
+        "kendini zorlayarak karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَضِّنِين",
+        "mutawaḍḍinīn",
+        "kendini zorlayarak karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَضِّنَات",
+        "mutawaḍḍināt",
+        "kendini zorlayarak karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَوَضَّن", "mutawaḍḍan", "kendini zorlayarak karın olunan", "kontrol", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَوَضَّنَة",
+        "mutawaḍḍana",
+        "kendini zorlayarak karın olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَوَضَّنَان",
+        "mutawaḍḍanān",
+        "kendini zorlayarak karın olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَضَّنَتَان",
+        "mutawaḍḍanatān",
+        "kendini zorlayarak karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَضَّنُون",
+        "mutawaḍḍanūn",
+        "kendini zorlayarak karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَضَّنِين",
+        "mutawaḍḍanīn",
+        "kendini zorlayarak karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَضَّنَات",
+        "mutawaḍḍanāt",
+        "kendini zorlayarak karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî",
+        "مُتَوَضَّن",
+        "mutawaḍḍan",
+        "kendini zorlayarak karın olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî", "تَوَاضُن", "tawāḍun", "birbirine karın olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VI": [
+      ["tafā'ul + tâ", "aday", "تَوَاضُنَة", "tawāḍuna", "bir kere birbirine karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَوَاضِن", "mutawāḍin", "birbirine karın olan", "kontrol", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî",
+        "مُتَوَاضِنَة",
+        "mutawāḍina",
+        "birbirine karın olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَوَاضِنَان", "mutawāḍinān", "birbirine karın olan, iki", "kontrol", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاضِنَتَان",
+        "mutawāḍinatān",
+        "birbirine karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاضِنُون",
+        "mutawāḍinūn",
+        "birbirine karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاضِنِين",
+        "mutawāḍinīn",
+        "birbirine karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاضِنَات",
+        "mutawāḍināt",
+        "birbirine karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاضَن", "mutawāḍan", "birbirine karın olunan", "kontrol", ""],
+      [
+        "mutafā'al + müennes",
+        "kıyâsî",
+        "مُتَوَاضَنَة",
+        "mutawāḍana",
+        "birbirine karın olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî",
+        "مُتَوَاضَنَان",
+        "mutawāḍanān",
+        "birbirine karın olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَوَاضَنَتَان",
+        "mutawāḍanatān",
+        "birbirine karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَوَاضَنُون",
+        "mutawāḍanūn",
+        "birbirine karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَوَاضَنِين",
+        "mutawāḍanīn",
+        "birbirine karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَوَاضَنَات",
+        "mutawāḍanāt",
+        "birbirine karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَوَاضَن", "mutawāḍan", "birbirine karın olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî", "اِنْوِضَان", "inwiḍān", "karın olunma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday", "اِنْوِضَانَة", "inwiḍāna", "bir kere karın olunma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî", "مُنْوَضِن", "munwaḍin", "karın olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْوَضِنَة", "munwaḍina", "karın olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْوَضِنَان", "munwaḍinān", "karın olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْوَضِنَتَان",
+        "munwaḍinatān",
+        "karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْوَضِنُون",
+        "munwaḍinūn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْوَضِنِين",
+        "munwaḍinīn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْوَضِنَات",
+        "munwaḍināt",
+        "karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَن",
+        "munwaḍan",
+        "karın olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنَة",
+        "munwaḍana",
+        "karın olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنَان",
+        "munwaḍanān",
+        "karın olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنَتَان",
+        "munwaḍanatān",
+        "karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنُون",
+        "munwaḍanūn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنِين",
+        "munwaḍanīn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَنَات",
+        "munwaḍanāt",
+        "karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْوَضَن",
+        "munwaḍan",
+        "karın olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî", "اِتِّضَان", "ittiḍān", "kendisi için karın olma", "kontrol", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday", "اِتِّضَانَة", "ittiḍāna", "bir kere kendisi için karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî", "مُتَّضِن", "muttaḍin", "kendisi için karın olan", "kontrol", ""],
+      ["muftaʿil + müennes", "kıyâsî", "مُتَّضِنَة", "muttaḍina", "kendisi için karın olan, müennes", "kontrol", ""],
+      ["muftaʿil + tesniye", "kıyâsî", "مُتَّضِنَان", "muttaḍinān", "kendisi için karın olan, iki", "kontrol", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُتَّضِنَتَان",
+        "muttaḍinatān",
+        "kendisi için karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّضِنُون",
+        "muttaḍinūn",
+        "kendisi için karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّضِنِين",
+        "muttaḍinīn",
+        "kendisi için karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّضِنَات",
+        "muttaḍināt",
+        "kendisi için karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّضَن", "muttaḍan", "kendisi için karın olunan", "kontrol", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî",
+        "مُتَّضَنَة",
+        "muttaḍana",
+        "kendisi için karın olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muftaʿal + tesniye", "kıyâsî", "مُتَّضَنَان", "muttaḍanān", "kendisi için karın olunan, iki", "kontrol", ""],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُتَّضَنَتَان",
+        "muttaḍanatān",
+        "kendisi için karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَّضَنُون",
+        "muttaḍanūn",
+        "kendisi için karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَّضَنِين",
+        "muttaḍanīn",
+        "kendisi için karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَّضَنَات",
+        "muttaḍanāt",
+        "kendisi için karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî", "مُتَّضَن", "muttaḍan", "kendisi için karın olma yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday", "اِيضِنَان", "īḍinān", "iyiden iyiye karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُوضَنّ", "mūḍann", "iyiden iyiye karın olan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُوضَنَّة", "mūḍanna", "iyiden iyiye karın olan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُوضَنَّان", "mūḍannān", "iyiden iyiye karın olan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُوضَنَّتَان",
+        "mūḍannatān",
+        "iyiden iyiye karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوضَنُّون",
+        "mūḍannūn",
+        "iyiden iyiye karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوضَنِّين",
+        "mūḍannīn",
+        "iyiden iyiye karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوضَنَّات",
+        "mūḍannāt",
+        "iyiden iyiye karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî", "اِسْتِيضَان", "istīḍān", "karın olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday", "اِسْتِيضَانَة", "istīḍāna", "bir kere karın olmayı isteme", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî", "مُسْتَوْضِن", "mustawḍin", "karın olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî",
+        "مُسْتَوْضِنَة",
+        "mustawḍina",
+        "karın olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَوْضِنَان", "mustawḍinān", "karın olmayı isteyen, iki", "kontrol", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْضِنَتَان",
+        "mustawḍinatān",
+        "karın olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْضِنُون",
+        "mustawḍinūn",
+        "karın olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْضِنِين",
+        "mustawḍinīn",
+        "karın olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْضِنَات",
+        "mustawḍināt",
+        "karın olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْضَن", "mustawḍan", "karın olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî",
+        "مُسْتَوْضَنَة",
+        "mustawḍana",
+        "karın olması istenen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَوْضَنَان", "mustawḍanān", "karın olması istenen, iki", "kontrol", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَوْضَنَتَان",
+        "mustawḍanatān",
+        "karın olması istenen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَوْضَنُون",
+        "mustawḍanūn",
+        "karın olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَوْضَنِين",
+        "mustawḍanīn",
+        "karın olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَوْضَنَات",
+        "mustawḍanāt",
+        "karın olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî", "مُسْتَوْضَن", "mustawḍan", "karın olmayı isteme yeri, vakti", "kontrol", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday", "اِيضِينَان", "īḍīnān", "büsbütün karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُوضَانّ", "mūḍānn", "büsbütün karın olan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُوضَانَّة", "mūḍānna", "büsbütün karın olan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُوضَانَّان", "mūḍānnān", "büsbütün karın olan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُوضَانَّتَان",
+        "mūḍānnatān",
+        "büsbütün karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُوضَانُّون",
+        "mūḍānnūn",
+        "büsbütün karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُوضَانِّين",
+        "mūḍānnīn",
+        "büsbütün karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُوضَانَّات",
+        "mūḍānnāt",
+        "büsbütün karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday", "اِيضِوْضَان", "īḍiwḍān", "aşırı karın olma", "kontrol", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday", "اِيضِوَّان", "īḍiwwān", "aşırı karın olma", "kontrol", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî", "وَاضِن", "wāḍin", "karın olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî", "وَاضِنَة", "wāḍina", "karın olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî", "وَاضِنَان", "wāḍinān", "karın olan, iki", "kontrol", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "وَاضِنَتَان", "wāḍinatān", "karın olan, iki, müennes", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "وَاضِنُون", "wāḍinūn", "karın olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "وَاضِنِين", "wāḍinīn", "karın olanlar", "kontrol", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "وَاضِنَات",
+        "wāḍināt",
+        "karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî", "مَوْضُون", "mawḍūn", "karın olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَوْضُونَة", "mawḍūna", "bağlanmış", "kuran", "Kur'ân"],
+      ["maf'ûl + tesniye", "kıyâsî", "مَوْضُونَان", "mawḍūnān", "karın olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî",
+        "مَوْضُونَتَان",
+        "mawḍūnatān",
+        "karın olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مَوْضُونُون",
+        "mawḍūnūn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مَوْضُونِين",
+        "mawḍūnīn",
+        "karın olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَوْضُونَات",
+        "mawḍūnāt",
+        "karın olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْضَن", "mawḍan", "karın olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْضَنَان", "mawḍanān", "karın olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî", "مَوْضِن", "mawḍin", "karın olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَوْضِنَان", "mawḍinān", "karın olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî", "مَوْضَنَة", "mawḍana", "karın olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî",
+        "مَوْضَنَتَان",
+        "mawḍanatān",
+        "karın olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî", "مَوْضِنَة", "mawḍina", "karın olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî",
+        "مَوْضِنَتَان",
+        "mawḍinatān",
+        "karın olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَوْضُنَة", "mawḍuna", "karın olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَوْضُنَتَان", "mawḍunatān", "karın olma yeri, vakti, iki", "kontrol", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî", "مِيضَن", "mīḍan", "karın olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِيضَنَان", "mīḍanān", "karın olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî", "مِيضَان", "mīḍān", "karın olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِيضَانَان", "mīḍānān", "karın olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî", "مِيضَنَة", "mīḍana", "karın olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِيضَنَتَان", "mīḍanatān", "karın olma âleti, iki", "kontrol", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî", "أَوْضَن", "ʾawḍan", "daha çok karın olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî", "أَوْضَنَان", "ʾawḍanān", "daha çok karın olan, iki", "kontrol", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî", "وُضْنَى", "wuḍnā", "daha çok karın olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "وُضْنَيَان", "wuḍnayān", "daha çok karın olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "وَضْنَاء", "waḍnāʾ", "daha çok karın olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "وَضْنَاآن", "waḍnāʾān", "daha çok karın olan, iki", "kontrol", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî", "وُضَيْن", "wuḍayn", "azıcık karın olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "وُضَيْنَان", "wuḍaynān", "azıcık karın olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî", "وُضَيْنَة", "wuḍayna", "azıcık karın olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "وُضَيْنَتَان", "wuḍaynatān", "azıcık karın olma, iki", "kontrol", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî", "مَوْضَن", "mawḍan", "karın olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَوْضَنَان", "mawḍanān", "karın olma, iki", "kontrol", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "وَضْنَة", "waḍna", "bir kere karın olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "وَضْنَتَان", "waḍnatān", "bir kere karın olma, iki", "kontrol", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "وِضْنَة", "wiḍna", "karın olma tarzı", "kontrol", ""],
+      ["fi'le + tesniye", "aday", "وِضْنَتَان", "wiḍnatān", "karın olma tarzı, iki", "kontrol", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "وَضِين", "waḍīn", "her daim karın olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "وَضِينَة", "waḍīna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَضِينَان", "waḍīnān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَضِينَتَان",
+        "waḍīnatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضِينُون",
+        "waḍīnūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضِينِين",
+        "waḍīnīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضِينَات",
+        "waḍīnāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَضُون", "waḍūn", "her daim karın olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَضُونَة", "waḍūna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَضُونَان", "waḍūnān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَضُونَتَان",
+        "waḍūnatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضُونُون",
+        "waḍūnūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضُونِين",
+        "waḍūnīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضُونَات",
+        "waḍūnāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday", "وَضِن", "waḍin", "her daim karın olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday", "وَضِنَة", "waḍina", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday", "وَضِنَان", "waḍinān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "وَضِنَتَان",
+        "waḍinatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضِنُون",
+        "waḍinūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضِنِين",
+        "waḍinīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضِنَات",
+        "waḍināt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "وَضُن", "waḍun", "her daim karın olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday", "وَضُنَة", "waḍuna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday", "وَضُنَان", "waḍunān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "وَضُنَتَان",
+        "waḍunatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضُنُون",
+        "waḍunūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضُنِين",
+        "waḍunīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضُنَات",
+        "waḍunāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday", "وَضَن", "waḍan", "her daim karın olan", "kontrol", ""],
+      ["fa'al + müennes", "semâî aday", "وَضَنَة", "waḍana", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday", "وَضَنَان", "waḍanān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "وَضَنَتَان",
+        "waḍanatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضَنُون",
+        "waḍanūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضَنِين",
+        "waḍanīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضَنَات",
+        "waḍanāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'l", "semâî aday", "وَضْن", "waḍn", "her daim karın olan", "kontrol", ""],
+      ["fa'l + müennes", "semâî aday", "وَضْنَة", "waḍna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "وَضْنَان", "waḍnān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "وَضْنَتَان",
+        "waḍnatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضْنُون",
+        "waḍnūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضْنِين",
+        "waḍnīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضْنَات",
+        "waḍnāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "وُضُن", "wuḍun", "her daim karın olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday", "وُضُنَة", "wuḍuna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday", "وُضُنَان", "wuḍunān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "وُضُنَتَان",
+        "wuḍunatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُضُنُون",
+        "wuḍunūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُضُنِين",
+        "wuḍunīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُضُنَات",
+        "wuḍunāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "وَضْنَان", "waḍnān", "her daim karın olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "وَضْنَانَة", "waḍnāna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "وَضْنَانَان", "waḍnānān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "وَضْنَانَتَان",
+        "waḍnānatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضْنَانُون",
+        "waḍnānūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضْنَانِين",
+        "waḍnānīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضْنَانَات",
+        "waḍnānāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "وُضَان", "wuḍān", "her daim karın olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday", "وُضَانَة", "wuḍāna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday", "وُضَانَان", "wuḍānān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "وُضَانَتَان",
+        "wuḍānatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُضَانُون",
+        "wuḍānūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُضَانِين",
+        "wuḍānīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُضَانَات",
+        "wuḍānāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "وَضَان", "waḍān", "her daim karın olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday", "وَضَانَة", "waḍāna", "her daim karın olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday", "وَضَانَان", "waḍānān", "her daim karın olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "وَضَانَتَان",
+        "waḍānatān",
+        "her daim karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضَانُون",
+        "waḍānūn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضَانِين",
+        "waḍānīn",
+        "her daim karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضَانَات",
+        "waḍānāt",
+        "her daim karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday", "وَضَّان", "waḍḍān", "işi karın olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday", "وَضَّانَة", "waḍḍāna", "işi karın olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday", "وَضَّانَان", "waḍḍānān", "işi karın olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "وَضَّانَتَان",
+        "waḍḍānatān",
+        "işi karın olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضَّانُون",
+        "waḍḍānūn",
+        "işi karın olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضَّانِين",
+        "waḍḍānīn",
+        "işi karın olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضَّانَات",
+        "waḍḍānāt",
+        "işi karın olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "وَضَّانَة", "waḍḍāna", "pek çok karın olan", "kontrol", ""],
+      ["fa''āle + tesniye", "semâî aday", "وَضَّانَتَان", "waḍḍānatān", "pek çok karın olan, iki", "kontrol", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضَّانَات",
+        "waḍḍānāt",
+        "pek çok karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "وَضُون", "waḍūn", "çok karın olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "وَضُونَة", "waḍūna", "çok karın olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "وَضُونَان", "waḍūnān", "çok karın olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "وَضُونَتَان",
+        "waḍūnatān",
+        "çok karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضُونُون",
+        "waḍūnūn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضُونِين",
+        "waḍūnīn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضُونَات",
+        "waḍūnāt",
+        "çok karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "وَضُّون", "waḍḍūn", "pek çok karın olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "وَضُّونَة", "waḍḍūna", "pek çok karın olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "وَضُّونَان", "waḍḍūnān", "pek çok karın olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "وَضُّونَتَان",
+        "waḍḍūnatān",
+        "pek çok karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضُّونُون",
+        "waḍḍūnūn",
+        "pek çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضُّونِين",
+        "waḍḍūnīn",
+        "pek çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضُّونَات",
+        "waḍḍūnāt",
+        "pek çok karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "وِضِّين", "wiḍḍīn", "karın olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "وِضِّينَة", "wiḍḍīna", "karın olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "وِضِّينَان", "wiḍḍīnān", "karın olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "وِضِّينَتَان",
+        "wiḍḍīnatān",
+        "karın olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وِضِّينُون",
+        "wiḍḍīnūn",
+        "karın olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وِضِّينِين",
+        "wiḍḍīnīn",
+        "karın olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وِضِّينَات",
+        "wiḍḍīnāt",
+        "karın olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "وُضَّان", "wuḍḍān", "son derece karın olan", "kontrol", ""],
+      ["fu''āl + müennes", "semâî aday", "وُضَّانَة", "wuḍḍāna", "son derece karın olan, müennes", "kontrol", ""],
+      ["fu''āl + tesniye", "semâî aday", "وُضَّانَان", "wuḍḍānān", "son derece karın olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "وُضَّانَتَان",
+        "wuḍḍānatān",
+        "son derece karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وُضَّانُون",
+        "wuḍḍānūn",
+        "son derece karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وُضَّانِين",
+        "wuḍḍānīn",
+        "son derece karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وُضَّانَات",
+        "wuḍḍānāt",
+        "son derece karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِيضَان", "mīḍān", "karın olmayı âdet edinmiş", "kontrol", ""],
+      ["mif'āl + müennes", "semâî aday", "مِيضَانَة", "mīḍāna", "karın olmayı âdet edinmiş, müennes", "kontrol", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِيضَانَان", "mīḍānān", "karın olmayı âdet edinmiş, iki", "kontrol", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِيضَانَتَان",
+        "mīḍānatān",
+        "karın olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيضَانُون",
+        "mīḍānūn",
+        "karın olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيضَانِين",
+        "mīḍānīn",
+        "karın olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيضَانَات",
+        "mīḍānāt",
+        "karın olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِيضِين", "mīḍīn", "karın olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِيضِينَة", "mīḍīna", "karın olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِيضِينَان", "mīḍīnān", "karın olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِيضِينَتَان",
+        "mīḍīnatān",
+        "karın olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِيضِينُون",
+        "mīḍīnūn",
+        "karın olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِيضِينِين",
+        "mīḍīnīn",
+        "karın olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِيضِينَات",
+        "mīḍīnāt",
+        "karın olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "وَضِين", "waḍīn", "çok karın olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "وَضِينَة", "waḍīna", "çok karın olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "وَضِينَان", "waḍīnān", "çok karın olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "وَضِينَتَان",
+        "waḍīnatān",
+        "çok karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضِينُون",
+        "waḍīnūn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضِينِين",
+        "waḍīnīn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضِينَات",
+        "waḍīnāt",
+        "çok karın olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "وَضَّن", "waḍḍan", "çok karın olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "وَضَّنَة", "waḍḍana", "çok karın olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "وَضَّنَان", "waḍḍanān", "çok karın olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "وَضَّنَتَان",
+        "waḍḍanatān",
+        "çok karın olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "وَضَّنُون",
+        "waḍḍanūn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "وَضَّنِين",
+        "waḍḍanīn",
+        "çok karın olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "وَضَّنَات",
+        "waḍḍanāt",
+        "çok karın olanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "وَضْنِيّ", "waḍniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî", "وَضَنِيّ", "waḍaniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "وِضْنِيّ", "wiḍniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "وُضْنِيّ", "wuḍniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî", "وِضَانِيّ", "wiḍāniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî", "وَاضِنِيّ", "wāḍiniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَوْضُونِيّ", "mawḍūniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî", "وَضِينِيّ", "waḍīniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî", "مَوْضَنِيّ", "mawḍaniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَوْضِينِيّ", "tawḍīniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَوَاضُنِيّ", "tawāḍuniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî", "إِيضَانِيّ", "ʾīḍāniyy", "karın olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِتِّضَانِيّ", "ittiḍāniyy", "karın olma ile ilgili", "kontrol", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "وَضْنِيَّة", "waḍniyya", "karın olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî", "وَضَنِيَّة", "waḍaniyya", "karın olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "وِضْنِيَّة", "wiḍniyya", "karın olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "وُضْنِيَّة", "wuḍniyya", "karın olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî", "وِضَانِيَّة", "wiḍāniyya", "karın olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî", "وَاضِنِيَّة", "wāḍiniyya", "karın olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَوْضُونِيَّة", "mawḍūniyya", "karın olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî", "وَضِينِيَّة", "waḍīniyya", "karın olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî", "مَوْضَنِيَّة", "mawḍaniyya", "karın olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَوْضِينِيَّة", "tawḍīniyya", "karın olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَوَاضُنِيَّة", "tawāḍuniyya", "karın olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî", "إِيضَانِيَّة", "ʾīḍāniyya", "karın olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِتِّضَانِيَّة", "ittiḍāniyya", "karın olanlık", "kontrol", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday", "وَضَان", "waḍān", "karın olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday", "وُضُون", "wuḍūn", "karın olma", "kontrol", ""],
+      ["fi'âl", "semâî aday", "وِضَان", "wiḍān", "karın olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday", "وُضْن", "wuḍn", "karın olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday", "وَضَانَة", "waḍāna", "karın olma", "kontrol", ""],
+      ["fi'âle", "semâî aday", "وِضَانَة", "wiḍāna", "karın olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday", "وُضُونَة", "wuḍūna", "karın olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "وَضْن", "waḍn", "karın olma", "kontrol", ""],
+      ["fi'l", "semâî aday", "وِضْن", "wiḍn", "karın olma", "kontrol", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "وَاضُون", "wāḍūn", "karın olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday", "وَضَنَة", "waḍana", "karın olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "وُضَنَة", "wuḍana", "karın olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُوضُونَة", "ʾūḍūna", "karın olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "وَوْضَن", "wawḍan", "karın olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "وَيْضَن", "wayḍan", "karın olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "وَضْن", "waḍn", "karın olma türünden şey", "kontrol", ""],
+      ["fa'al", "semâî aday", "وَضَن", "waḍan", "karın olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "وِضْن", "wiḍn", "karın olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday", "وُضْن", "wuḍn", "karın olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday", "وَضِين", "waḍīn", "karın olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday", "وِضَن", "wiḍan", "karın olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday", "وُضُن", "wuḍun", "karın olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday", "وَضَان", "waḍān", "karın olma türünden şey", "kontrol", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "وَاضُونَة", "wāḍūna", "karın olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "وَوْضَنَة", "wawḍana", "karın olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "وَيْضَنَة", "wayḍana", "karın olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "وَضْنَة", "waḍna", "karın olma türünden bir tane", "kontrol", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "وَضَنَة", "waḍana", "karın olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "وِضْنَة", "wiḍna", "karın olma türünden bir tane", "kontrol", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "وُضْنَة", "wuḍna", "karın olma türünden bir tane", "kontrol", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "وَضِينَة", "waḍīna", "karın olma türünden bir tane", "kontrol", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "وِضَنَة", "wiḍana", "karın olma türünden bir tane", "kontrol", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "وُضُنَة", "wuḍuna", "karın olma türünden bir tane", "kontrol", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "وَضَانَة", "waḍāna", "karın olma türünden bir tane", "kontrol", ""]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday", "أَوْضَان", "ʾawḍān", "karın olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday", "أَوْضِنَة", "ʾawḍina", "karın olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday", "أَوَاضِن", "ʾawāḍin", "karın olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday", "أَوَاضِين", "ʾawāḍīn", "karın olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "وُضُون", "wuḍūn", "karın olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "وُضُن", "wuḍun", "karın olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday", "وِضَان", "wiḍān", "karın olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday", "وِضَن", "wiḍan", "karın olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "وِضَنَة", "wiḍana", "karın olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday", "وُضَن", "wuḍan", "karın olmalar", "kontrol", ""],
+      ["fu'alā'", "semâî aday", "وُضَناء", "wuḍanāʾ", "karın olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "وَضَنَة", "waḍana", "karın olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday", "وُضَّان", "wuḍḍān", "karın olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "وَضَان", "waḍān", "karın olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday", "وَضَن", "waḍan", "karın olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday", "مَوَاضِن", "mawāḍin", "karın olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday", "مَوَاضِين", "mawāḍīn", "karın olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday", "وَوَاضِن", "wawāḍin", "karın olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَوْضُن", "ʾawḍun", "karın olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "وُضَّن", "wuḍḍan", "karın olmalar", "kontrol", ""],
+      ["fe'âil", "semâî aday", "وَضَائِن", "waḍāʾin", "karın olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday", "وُضَيْن", "wuḍayn", "karın olmalar", "kontrol", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday", "أَوْضَانَات", "ʾawḍānāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday", "أَوْضِنَات", "ʾawḍināt", "karın olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday", "أَوَاضِنَات", "ʾawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday", "أَوَاضِينَات", "ʾawāḍīnāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday", "وُضُونَات", "wuḍūnāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday", "وُضُنَات", "wuḍunāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday", "وِضَانَات", "wiḍānāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday", "وِضَنَات", "wiḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday", "وِضَنَات", "wiḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday", "وُضَنَات", "wuḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu'alā' + ât", "semâî aday", "وُضَناآت", "wuḍanāʾāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday", "وَضَنَات", "waḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday", "وُضَّانَات", "wuḍḍānāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday", "وَضَانَات", "waḍānāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday", "وَضَنَات", "waḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday", "مَوَاضِنَات", "mawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَوَاضِينَات", "mawāḍīnāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday", "وَوَاضِنَات", "wawāḍināt", "karın olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَوْضُنَات", "ʾawḍunāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "وُضَّنَات", "wuḍḍanāt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fe'âil + ât", "semâî aday", "وَضَائِنَات", "waḍāʾināt", "karın olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "وُضَيْنَات", "wuḍaynāt", "karın olmalar topluluğu", "kontrol", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -790,558 +2107,14 @@
       "boy": 27
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "168": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday", "IX"],
-    "169": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî", "IX"],
-    "170": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî", "IX"],
-    "171": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî", "IX"],
-    "172": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "173": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "174": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "175": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "193": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday", "XI"],
-    "194": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî", "XI"],
-    "195": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî", "XI"],
-    "196": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "197": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "198": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "199": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "200": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "201": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday", "XII"],
-    "202": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday", "XIII"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "926": ["masdar · sülâsî mücerred", "fi'a (fâ hazfi: ‘ide, sıle)", "semâî aday", ""]
+  "muhassas": {
+    "kitap": "الإبل",
+    "bab": "صفات العقب",
+    "kok_gecis": 16.0,
+    "kitapta_gecis": 4.0,
+    "zenginlesme": 3.84
   },
-  "kelimeler": [
-    {
-      "kelime": "مَّوْضُونَةٍ",
-      "kok": "وضن",
-      "lemma": "مَوْضُونَة",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "",
-      "ilk_gecis": "56:15",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "bağlanmış",
-        "lemma": "bağlanmış",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: vadn: karın, sırt / vadan: hayvan yeri (?)",
-    "kelimeler": [
-      {
-        "lemma": "مَوْضُونَة",
-        "hal": "isim",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

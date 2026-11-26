@@ -1,341 +1,318 @@
 {
   "kok": "جوس",
-  "sinif": "ecvef",
-  "turkce_fiil": {
-    "sap": "dolaş",
-    "kaynak": "fiil",
-    "guven": "orta"
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": false,
+  "baz_fiil": "Aktarım",
+  "baz_ayrim": "dolaş",
+  "tur_kuran": {
+    "fiil": 1,
+    "isim": 0
   },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [
-        0,
-        "جَوْس",
-        "caws",
-        "dolaşma",
-        "orta",
-        ""
+  "fiil": "dolaş",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
+  "sinif": "ecvef",
+  "ses": {
+    "harf": "ج",
+    "fasil": "جس",
+    "mahrec": "şeceriyye",
+    "bolge": "dil"
+  },
+  "anlam": "Cevs: dolaşmak, gezmek",
+  "esas_manalar": "bir şeyin arasına girmek{dolaşıp aramak{yağmalamak}}",
+  "lugat": {
+    "Vankulu": [
+      {
+        "madde": "mecusiyy",
+        "koken": "mîmin fethiyle",
+        "yazilis": "اَلْمَجُوسِيُّ",
+        "okunus": "el-mecûsiyy",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Kezâlik Mecûsiyye tâifesine mensûb olan."
+          }
+        ],
+        "kelime": ["مَجُوسِيّ"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "CÂSUS",
+        "metin": "( ﺟﺎﺳﻮﺱ ) i. (Ar. cess “gizli bir şeyi görüp anlamak istemek”ten cāsūs ) 1. Bir devletin askerî, siyâsî ve ekonomik sırlarını başka bir devlet hesâbına gizlice öğrenmekle görevli kimse, ajan: Bu minval üzere emir getiren kimseyi mel’unlar zindana koyup câsustur diye muhkem bağladılar (Kâtip Çelebi’den Seç.). Câsus kullanmayı milletimizin şânına yakıştıramadım ki… (Nâmık Kemal). 2. Başkalarına âit sırları belli bir maksatla ve başkası hesâbına araştırıp öğrenen ve haber veren kimse: Deminden beri câsus gibi pencerenin altından sözlerini dinledim (Nâmık Kemal).",
+        "arapca": ["جاسوس"],
+        "eslesme": "arapça yazılış kökle uyuştu",
+        "kelime": ["جاسُ"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "جَوَسَ",
+      "metin": "(جَوَسَ) الْجِيمُ وَالْوَاوُ وَالسِّينُ أَصْلٌ وَاحِدٌ، وَهُوَ تَخَلُّلُ الشَّيْءِ. يُقَالُ: جَاسُوا خِلَالَ الدِّيَارِ يَجُوسُونَ. قَالَ اللَّهُ تَعَالَى: {فَجَاسُوا خِلَالَ الدِّيَارِ} [الإسراء: 5] . وَأَمَّا الْجُوسُ فَلَيْسَ أَصْلًا ; لِأَنَّهُ إِتْبَاعٌ لِلْجُوعِ ; يُقَالُ: جُوعًا لَهُ وَجُوسًا لَهُ.",
+      "baslik_tr": "Cevese (جَوَسَ)",
+      "metin_tr": "(Cevese) Cim, vav ve sin harfleri tek bir asıldır; o da bir şeyin aralarına girip dolaşmaktır. Nitekim 'câsû hilâle'd-diyâri yecûsûn' (diyarın/evlerin aralarına girip dolaştılar) denir. Allah Teâlâ şöyle buyurmuştur: {Evlerin aralarına girip dolaştılar (fe-câsû hilâle'd-diyâr)} [İsrâ: 5]. 'El-cûs' kelimesine gelince, bu bir asıl değildir; zira 'el-cû' (açlık) kelimesine itbâ'dır (uyum olsun diye peşinden getirilen sözdür). Nitekim 'cû'an lehû ve cûsan lehû' (ona açlık ve perişanlık olsun) denir."
+    }
+  ],
+  "cebel": {
+    "fasil": "الجيم والسين",
+    "baslik": "جوس",
+    "mihveri": "تخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق).",
+    "tam_metin": "{فَجَاسُوا خِلَالَ الدِّيَارِ} [الإسراء: 5].\n\"الجُوْسُ - بالضم: الجوع. وجاء يجوس الناسَ أي يتخطاهم \".\n° المعنى المحوري\nتخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق).",
+    "fasil_ozeti": "° معنى الفصل المعجمي (جس): الاختراق بحدّة كما يتمثل في جسّ الشخص بالعين - في (جسس)، والجوسِ خلال الديار - في (جوس)، ووصولِ الحسّ إلى النفس شعورًا خفيًّا - في (وجس)، وصلابة باطن الشيء وجفافه متماسكًا - في (جسد)، وتماسك الشيء شاخصًا ذا أبعاد - في (جسم).",
+    "mihveri_tr": "Bir şeyin arasına şiddetle girip nüfuz etmek ve delip geçmektir. Açlığın şiddetiyle birlikte için boşalması gibi; aradan geçip atlamak açıklık ve aralık yerlerde olur, şiddeti ise eziyet verir. Geceleyin dolaşmak manasındaki 'el-cevesân' bundandır. 'Cevsetü'n-nâziri'llezî lâ yehâr' (fetha ile): dönmeyen, gözünü ayırmayan bakıcının bakışının şiddeti ve kesintisizliği (şiddetle nüfuz etmesi). Fetha ile 'el-cevs': bir şeyi aralarında teftiş ve istiksa ile aramaktır. {Evlerin aralarına girip dolaştılar (fe-câsû hilâle'd-diyâr)} ayeti de bundandır: yani evlerin aralarına girip içindekileri aradılar —tıpkı adamın haberleri araştırması (yecûsü'l-ahbâr) gibi— yahut evlerinin arasında onları öldürdüler. 'El-cevs' ayrıca çiğnemek (ed-devs) demektir (ayağı kuvvetle basmak ki nüfuz eder)."
+  },
+  "zemahseri": {
+    "hakikat": "جاسوا خلال الديار: داروا فيها بالعيث والفساد. وجاء فلان يجوس الناس أي يتخطاهم.",
+    "mecaz_var": false
+  },
+  "ontoloji": [
+    {
+      "id": "46462",
+      "arapca": [
+        "تَرَحَّلَ",
+        "تَرَحَّلَ عن",
+        "اِرْتَحَلَ",
+        "اِرْتَحَلَ إلى",
+        "اِرْتَحَلَ عن",
+        "طَافَ2",
+        "طَافَ ب2",
+        "طَافَ على2",
+        "طَافَ في2",
+        "طَوَّفَ",
+        "طَوَّفَ ب",
+        "طَوَّفَ في",
+        "جَاسَ",
+        "جالَ",
+        "جالَ ب",
+        "جالَ في",
+        "جَوَّلَ",
+        "جَوَّلَ في",
+        "سَافَرَ",
+        "سَافَرَ إِلَى",
+        "ساحَ2",
+        "ساحَ في",
+        "تَنَقَّلَ",
+        "تَنَقَّلَ من",
+        "تَجَوَّلَ في",
+        "جَابَ1",
+        "جَابَ في"
       ],
-      [
-        888,
-        "جِيس",
-        "cīs",
-        "dolaşma",
-        "orta",
-        ""
+      "ingilizce": [],
+      "tanim": "الانتقال من مكانٍ إلى آخر",
+      "misal": "_ ابن بطوطة في الكثير من الدول للتعرُّف عليها",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir mekândan diğer bir mekâna intikal etmek",
+      "misal_tr": "İbn Battuta pek çok memleketi tanımak için oralarda _"
+    },
+    {
+      "id": "52528",
+      "arapca": [
+        "طَافَ2",
+        "طَافَ ب2",
+        "طَافَ على2",
+        "طَافَ في2",
+        "جَاسَ",
+        "جالَ",
+        "جالَ ب",
+        "جالَ في",
+        "ساحَ2",
+        "ساحَ في",
+        "تَنَقَّلَ",
+        "تَنَقَّلَ من",
+        "تَحَرَّكَ",
+        "تَجَوَّلَ في",
+        "جَابَ1",
+        "جَابَ في"
       ],
-      [
-        889,
-        "جُوس",
-        "cūs",
-        "dolaşma",
-        "orta",
-        ""
+      "ingilizce": [],
+      "tanim": "تَحَوَّلَ مِنْ مَكانٍ إلى آخَرَ",
+      "misal": "_ البدو الرحّل في الماضي من مكان إلى آخر طلباً للأكل والماء",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir mekândan bir başka mekâna geçip dolaşmak",
+      "misal_tr": "Göçebe bedeviler geçmişte yiyecek ve su talebiyle bir yerden bir yere _"
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "مجوس",
+      "tur": "noun",
+      "etim_sablon": [
+        ["bor", "Aramaic 𐡌𐡂𐡅𐡔 (mgwš)"],
+        ["der", "Old Persian 𐎶𐎦𐏁 (m-gu-š /⁠maguš⁠/)"]
       ],
-      [
-        517,
-        "جَاس",
-        "cās",
-        "dolaşma",
-        "orta",
-        ""
+      "anlam": ["Magians, (collective, historical) Zoroastrians", "Iranians", "Shi'as"],
+      "etiket": ["collective", "ethnic", "slur"],
+      "okunus": ["majūs"],
+      "ipa": ["/ma.d͡ʒuːs/"],
+      "torunlar": [
+        ["fa", "مَجوس", "majus"]
       ],
-      [
-        518,
-        "جِيَس",
-        "ciyas",
-        "dolaşma",
-        "orta",
-        ""
+      "dr": ["مَجَّسَ", "مَجُوسِيّ"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["Mecusiler, (cemiyet halinde, tarihi) Zerdüştîler", "İranlılar", "Şiiler"]
+    },
+    {
+      "madde": "مجوسي",
+      "tur": "adj",
+      "baslik": "مَجُوسِيّ • (majūsiyy)",
+      "anlam": ["a Zoroastrian, Magian"],
+      "okunus": ["majūsiyy"],
+      "ipa": ["/ma.d͡ʒuː.sijj/"],
+      "torunlar": [
+        ["az", "məcusi", ""],
+        ["ba", "мәжүси", "mäjüsiy"],
+        ["fa", "مجوسی", "majusi"],
+        ["ota", "مجوسی", "mecusi"],
+        ["id", "majusi", ""],
+        ["sw", "majusi", ""]
       ],
-      [
-        5,
-        "جُوُس",
-        "cuwus",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        6,
-        "جُوُوس",
-        "cuwūs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        521,
-        "جِيَاس",
-        "ciyās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        8,
-        "جُوَاس",
-        "cuwās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        9,
-        "جَوَاس",
-        "cawās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        10,
-        "جَوَاسَة",
-        "cawāsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        11,
-        "جُوُوسَة",
-        "cuwūsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        526,
-        "جِيَاسَة",
-        "ciyāsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        13,
-        "جَوِيس",
-        "cawīs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        14,
-        "جَوُوس",
-        "cawūs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        15,
-        "جَوَسَان",
-        "cawasān",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        16,
-        "جُوْسَان",
-        "cuwsān",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        17,
-        "جِوْسَان",
-        "ciwsān",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        18,
-        "جَوْسَى",
-        "cawsā",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        19,
-        "جُوْسَى",
-        "cuwsā",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        20,
-        "جِوْسَى",
-        "ciwsā",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        21,
-        "جَوَسَة",
-        "cawasa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        22,
-        "جِوَسَة",
-        "ciwasa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        23,
-        "جَوْسُوسَة",
-        "cawsūsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        24,
-        "تُجْوُوس",
-        "tucwūs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        25,
-        "تَجْوِسَة",
-        "tacwisa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        26,
-        "تَجْوَسَة",
-        "tacwasa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        27,
-        "مَجْوُسَة",
-        "macwusa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        533,
-        "مَجِيسَة",
-        "macīsa",
-        "dolaşma",
-        "orta",
-        ""
+      "bag": "müştak",
+      "etimoloji": 1,
+      "anlam_tr": ["bir Zerdüştî, Mecusi"]
+    },
+    {
+      "madde": "جيسي",
+      "tur": "name",
+      "baslik": "جِيسِي • (jīsī) f",
+      "anlam": ["a female given name, Jessie, from English"],
+      "okunus": ["jīsī"],
+      "ipa": ["/d͡ʒiː.siː/"],
+      "bag": "müştak",
+      "anlam_tr": ["kadın şahıs adı, Jessie, İngilizceden"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "From Aramaic 𐡌𐡂𐡅𐡔 (mgwš), from Old Persian 𐎶𐎦𐏁 (m-gu-š /⁠maguš⁠/).\nWas used by the Iraqi Baathist regime to refer to Iran during the Iran-Iraq War in the 1980s, and later developed into a broadly anti-Shi'a slur.",
+      "kognatlar": [
+        ["𐡌𐡂𐡅𐡔", "𐡌𐡂𐡅𐡔#Aramaic"],
+        ["𐎶𐎦𐏁", "𐎶𐎦𐏁#Old_Persian"]
       ]
+    },
+    {
+      "metin": "Etymology tree\nArabic مَجُوس (majūs)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic مجوسي\nFrom مَجُوس (majūs) + ـِيّ (-iyy).",
+      "kognatlar": [
+        ["مَجُوس", "مجوس#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"],
+        ["مَجُوس", "مجوس#Arabic"],
+        ["ـِيّ", "ي#Arabic:_nisba"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ǦWS",
+    "kok_maddesi": "Back to library EtymArab ǦWS جوس BP – • HDAL • © SG | 6Mar2023 √ǦWS “root” ▪ ǦWS_1 ‘...’ ↗ ... ▪ ǦWS_2 ‘...’ ↗ ... ▪ ǦWS_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to rummage, peer about, play havoc, overrun; to investigate, spy’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön EtymArab ǦWS جوس BP – • HDAL • © SG | 6Mar2023 √ǦWS “kök” ▪ ǦWS_1 ‘...’ ↗ ... ▪ ǦWS_2 ‘...’ ↗ ... ▪ ǦWS_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008’e göre): ‘araştırıp kurcalamak, etrafa göz gezdirmek, tahribat yapmak, istila etmek; tahkik etmek, casusluk yapmak’. ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "17:5:12:2",
+    "tur": {
+      "V": 1
+    },
+    "bab": {},
+    "zaman_kip": {
+      "PERF": 1
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "جَاسُ": 1
+    },
+    "bicimler": {
+      "جَاسُ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "جاسُ",
+      "hal": "fiil",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "فَجَاسُوا۟",
+          "zaman": "Mâzî",
+          "ilk": "17:5",
+          "adet": 1,
+          "tr": "dolaştı"
+        }
+      ],
+      "tr": "dolaştı",
+      "bab_no": "I",
+      "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "جَوْس", "caws", "dolaşma", "orta", ""],
+      ["fi'l", "semâî aday · ilal", "جِيس", "cīs", "dolaşma", "orta", ""],
+      ["fu'l", "semâî aday · ilal", "جُوس", "cūs", "dolaşma", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "جَاس", "cās", "dolaşma", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "جِيَس", "ciyas", "dolaşma", "orta", ""],
+      ["fu'ul", "semâî aday", "جُوُس", "cuwus", "dolaşma", "orta", ""],
+      ["fu'ūl", "semâî aday", "جُوُوس", "cuwūs", "dolaşma", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "جِيَاس", "ciyās", "dolaşma", "orta", ""],
+      ["fu'āl", "semâî aday", "جُوَاس", "cuwās", "dolaşma", "orta", ""],
+      ["fa'āl", "semâî aday", "جَوَاس", "cawās", "dolaşma", "orta", ""],
+      ["fa'āle", "semâî aday", "جَوَاسَة", "cawāsa", "dolaşma", "orta", ""],
+      ["fu'ūle", "semâî aday", "جُوُوسَة", "cuwūsa", "dolaşma", "orta", ""],
+      ["fi'āle", "semâî aday · ilal", "جِيَاسَة", "ciyāsa", "dolaşma", "orta", ""],
+      ["fa'īl", "semâî aday", "جَوِيس", "cawīs", "dolaşma", "orta", ""],
+      ["fa'ūl", "semâî aday", "جَوُوس", "cawūs", "dolaşma", "orta", ""],
+      ["fa'alān", "semâî aday", "جَوَسَان", "cawasān", "dolaşma", "orta", ""],
+      ["fu'lān", "semâî aday", "جُوْسَان", "cuwsān", "dolaşma", "orta", ""],
+      ["fi'lān", "semâî aday", "جِوْسَان", "ciwsān", "dolaşma", "orta", ""],
+      ["fa'lā", "semâî aday", "جَوْسَى", "cawsā", "dolaşma", "orta", ""],
+      ["fu'lā", "semâî aday", "جُوْسَى", "cuwsā", "dolaşma", "orta", ""],
+      ["fi'lā", "semâî aday", "جِوْسَى", "ciwsā", "dolaşma", "orta", ""],
+      ["fa'ale", "semâî aday", "جَوَسَة", "cawasa", "dolaşma", "orta", ""],
+      ["fi'ale", "semâî aday", "جِوَسَة", "ciwasa", "dolaşma", "orta", ""],
+      ["fa'lūla", "semâî aday", "جَوْسُوسَة", "cawsūsa", "dolaşma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُجْوُوس", "tucwūs", "dolaşma", "orta", ""],
+      ["taf'ila", "semâî aday", "تَجْوِسَة", "tacwisa", "dolaşma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَجْوَسَة", "tacwasa", "dolaşma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَجْوُسَة", "macwusa", "dolaşma", "orta", ""],
+      ["maf'ila", "semâî aday · ilal", "مَجِيسَة", "macīsa", "dolaşma", "orta", ""]
     ],
     "masdar · bâb II": [
-      [
-        29,
-        "تَجْوِيس",
-        "tacwīs",
-        "dolaştırma",
-        "orta",
-        ""
-      ],
-      [
-        30,
-        "تَجْوِسَة",
-        "tacwisa",
-        "dolaştırma",
-        "orta",
-        ""
-      ],
-      [
-        31,
-        "جِوِّاس",
-        "ciwwās",
-        "dolaştırma",
-        "orta",
-        ""
-      ]
+      ["taf'īl", "kıyâsî", "تَجْوِيس", "tacwīs", "dolaştırma", "orta", ""],
+      ["taf'ila", "kıyâsî", "تَجْوِسَة", "tacwisa", "dolaştırma", "orta", ""],
+      ["fi''āl", "kıyâsî", "جِوِّاس", "ciwwās", "dolaştırma", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [
-        32,
-        "تَجْوِيسَة",
-        "tacwīsa",
-        "bir kere dolaştırma",
-        "orta",
-        ""
-      ],
-      [
-        33,
-        "جِوِّاسَة",
-        "ciwwāsa",
-        "bir kere dolaştırma",
-        "orta",
-        ""
-      ]
+      ["taf'īl + tâ", "aday", "تَجْوِيسَة", "tacwīsa", "bir kere dolaştırma", "orta", ""],
+      ["fi''āl + tâ", "aday", "جِوِّاسَة", "ciwwāsa", "bir kere dolaştırma", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî", "مُجَوِّس", "mucawwis", "dolaştıran", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî", "مُجَوِّسَة", "mucawwisa", "dolaştıran, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُجَوِّسَان", "mucawwisān", "dolaştıran, iki", "orta", ""],
       [
-        34,
-        "مُجَوِّس",
-        "mucawwis",
-        "dolaştıran",
-        "orta",
-        ""
-      ],
-      [
-        35,
-        "مُجَوِّسَة",
-        "mucawwisa",
-        "dolaştıran, müennes",
-        "orta",
-        ""
-      ],
-      [
-        36,
-        "مُجَوِّسَان",
-        "mucawwisān",
-        "dolaştıran, iki",
-        "orta",
-        ""
-      ],
-      [
-        37,
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
         "مُجَوِّسَتَان",
         "mucawwisatān",
         "dolaştıran, iki, müennes",
         "orta",
         ""
       ],
+      ["mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "مُجَوِّسُون", "mucawwisūn", "dolaştıranlar", "orta", ""],
+      ["mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "مُجَوِّسِين", "mucawwisīn", "dolaştıranlar", "orta", ""],
       [
-        38,
-        "مُجَوِّسُون",
-        "mucawwisūn",
-        "dolaştıranlar",
-        "orta",
-        ""
-      ],
-      [
-        39,
-        "مُجَوِّسِين",
-        "mucawwisīn",
-        "dolaştıranlar",
-        "orta",
-        ""
-      ],
-      [
-        40,
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَوِّسَات",
         "mucawwisāt",
         "dolaştıranlar, müennes",
@@ -344,32 +321,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî", "مُجَوَّس", "mucawwas", "dolaştırılan", "orta", ""],
+      ["mufa''al + müennes", "kıyâsî", "مُجَوَّسَة", "mucawwasa", "dolaştırılan, müennes", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُجَوَّسَان", "mucawwasān", "dolaştırılan, iki", "orta", ""],
       [
-        41,
-        "مُجَوَّس",
-        "mucawwas",
-        "dolaştırılan",
-        "orta",
-        ""
-      ],
-      [
-        42,
-        "مُجَوَّسَة",
-        "mucawwasa",
-        "dolaştırılan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        43,
-        "مُجَوَّسَان",
-        "mucawwasān",
-        "dolaştırılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        44,
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
         "مُجَوَّسَتَان",
         "mucawwasatān",
         "dolaştırılan, iki, müennes",
@@ -377,7 +334,8 @@
         ""
       ],
       [
-        45,
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَوَّسُون",
         "mucawwasūn",
         "dolaştırılanlar",
@@ -385,7 +343,8 @@
         ""
       ],
       [
-        46,
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَوَّسِين",
         "mucawwasīn",
         "dolaştırılanlar",
@@ -393,7 +352,8 @@
         ""
       ],
       [
-        47,
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَوَّسَات",
         "mucawwasāt",
         "dolaştırılanlar, müennes",
@@ -402,70 +362,22 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [
-        48,
-        "مُجَوَّس",
-        "mucawwas",
-        "dolaştırma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["mufa''al", "kıyâsî", "مُجَوَّس", "mucawwas", "dolaştırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [
-        49,
-        "مُجَاوَسَة",
-        "mucāwasa",
-        "biriyle karşılıklı dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        552,
-        "جِيَاس",
-        "ciyās",
-        "biriyle karşılıklı dolaşma",
-        "orta",
-        ""
-      ]
+      ["mufā'ale", "kıyâsî", "مُجَاوَسَة", "mucāwasa", "biriyle karşılıklı dolaşma", "orta", ""],
+      ["fi'āl", "kıyâsî · ilal", "جِيَاس", "ciyās", "biriyle karşılıklı dolaşma", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [
-        553,
-        "جِيَاسَة",
-        "ciyāsa",
-        "bir kere biriyle karşılıklı dolaşma",
-        "orta",
-        ""
-      ]
+      ["fi'āl + tâ", "aday · ilal", "جِيَاسَة", "ciyāsa", "bir kere biriyle karşılıklı dolaşma", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî", "مُجَاوِس", "mucāwis", "biriyle karşılıklı dolaşan", "orta", ""],
+      ["mufā'il + müennes", "kıyâsî", "مُجَاوِسَة", "mucāwisa", "biriyle karşılıklı dolaşan, müennes", "orta", ""],
+      ["mufā'il + tesniye", "kıyâsî", "مُجَاوِسَان", "mucāwisān", "biriyle karşılıklı dolaşan, iki", "orta", ""],
       [
-        52,
-        "مُجَاوِس",
-        "mucāwis",
-        "biriyle karşılıklı dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        53,
-        "مُجَاوِسَة",
-        "mucāwisa",
-        "biriyle karşılıklı dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        54,
-        "مُجَاوِسَان",
-        "mucāwisān",
-        "biriyle karşılıklı dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        55,
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
         "مُجَاوِسَتَان",
         "mucāwisatān",
         "biriyle karşılıklı dolaşan, iki, müennes",
@@ -473,7 +385,8 @@
         ""
       ],
       [
-        56,
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَاوِسُون",
         "mucāwisūn",
         "biriyle karşılıklı dolaşanlar",
@@ -481,7 +394,8 @@
         ""
       ],
       [
-        57,
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَاوِسِين",
         "mucāwisīn",
         "biriyle karşılıklı dolaşanlar",
@@ -489,7 +403,8 @@
         ""
       ],
       [
-        58,
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَاوِسَات",
         "mucāwisāt",
         "biriyle karşılıklı dolaşanlar, müennes",
@@ -498,32 +413,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî", "مُجَاوَس", "mucāwas", "biriyle karşılıklı dolaşılan", "orta", ""],
+      ["mufā'al + müennes", "kıyâsî", "مُجَاوَسَة", "mucāwasa", "biriyle karşılıklı dolaşılan, müennes", "orta", ""],
+      ["mufā'al + tesniye", "kıyâsî", "مُجَاوَسَان", "mucāwasān", "biriyle karşılıklı dolaşılan, iki", "orta", ""],
       [
-        59,
-        "مُجَاوَس",
-        "mucāwas",
-        "biriyle karşılıklı dolaşılan",
-        "orta",
-        ""
-      ],
-      [
-        60,
-        "مُجَاوَسَة",
-        "mucāwasa",
-        "biriyle karşılıklı dolaşılan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        61,
-        "مُجَاوَسَان",
-        "mucāwasān",
-        "biriyle karşılıklı dolaşılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        62,
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
         "مُجَاوَسَتَان",
         "mucāwasatān",
         "biriyle karşılıklı dolaşılan, iki, müennes",
@@ -531,7 +426,8 @@
         ""
       ],
       [
-        63,
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجَاوَسُون",
         "mucāwasūn",
         "biriyle karşılıklı dolaşılanlar",
@@ -539,7 +435,8 @@
         ""
       ],
       [
-        64,
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجَاوَسِين",
         "mucāwasīn",
         "biriyle karşılıklı dolaşılanlar",
@@ -547,7 +444,8 @@
         ""
       ],
       [
-        65,
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجَاوَسَات",
         "mucāwasāt",
         "biriyle karşılıklı dolaşılanlar, müennes",
@@ -556,76 +454,29 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [
-        66,
-        "مُجَاوَس",
-        "mucāwas",
-        "biriyle karşılıklı dolaşma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["mufā'al", "kıyâsî", "مُجَاوَس", "mucāwas", "biriyle karşılıklı dolaşma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [
-        567,
-        "إِجَاسَة",
-        "ʾicāsa",
-        "dolaştırma",
-        "orta",
-        ""
-      ]
+      ["if'āl", "kıyâsî · ilal", "إِجَاسَة", "ʾicāsa", "dolaştırma", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî · ilal", "مُجِيس", "mucīs", "dolaştıran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُجِيسَة", "mucīsa", "dolaştıran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُجِيسَان", "mucīsān", "dolaştıran, iki", "orta", ""],
       [
-        569,
-        "مُجِيس",
-        "mucīs",
-        "dolaştıran",
-        "orta",
-        ""
-      ],
-      [
-        570,
-        "مُجِيسَة",
-        "mucīsa",
-        "dolaştıran, müennes",
-        "orta",
-        ""
-      ],
-      [
-        571,
-        "مُجِيسَان",
-        "mucīsān",
-        "dolaştıran, iki",
-        "orta",
-        ""
-      ],
-      [
-        572,
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
         "مُجِيسَتَان",
         "mucīsatān",
         "dolaştıran, iki, müennes",
         "orta",
         ""
       ],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مُجِيسُون", "mucīsūn", "dolaştıranlar", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مُجِيسِين", "mucīsīn", "dolaştıranlar", "orta", ""],
       [
-        573,
-        "مُجِيسُون",
-        "mucīsūn",
-        "dolaştıranlar",
-        "orta",
-        ""
-      ],
-      [
-        574,
-        "مُجِيسِين",
-        "mucīsīn",
-        "dolaştıranlar",
-        "orta",
-        ""
-      ],
-      [
-        575,
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُجِيسَات",
         "mucīsāt",
         "dolaştıranlar, müennes",
@@ -634,32 +485,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُجَاس", "mucās", "dolaştırılan", "orta", ""],
+      ["muf'al + müennes", "kıyâsî · ilal", "مُجَاسَة", "mucāsa", "dolaştırılan, müennes", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُجَاسَان", "mucāsān", "dolaştırılan, iki", "orta", ""],
       [
-        576,
-        "مُجَاس",
-        "mucās",
-        "dolaştırılan",
-        "orta",
-        ""
-      ],
-      [
-        890,
-        "مُجَاسَة",
-        "mucāsa",
-        "dolaştırılan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        577,
-        "مُجَاسَان",
-        "mucāsān",
-        "dolaştırılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        891,
+        "muf'al + müennes tesniye",
+        "kıyâsî · ilal",
         "مُجَاسَتَان",
         "mucāsatān",
         "dolaştırılan, iki, müennes",
@@ -667,7 +498,8 @@
         ""
       ],
       [
-        578,
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُجَاسُون",
         "mucāsūn",
         "dolaştırılanlar",
@@ -675,7 +507,8 @@
         ""
       ],
       [
-        579,
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُجَاسِين",
         "mucāsīn",
         "dolaştırılanlar",
@@ -683,7 +516,8 @@
         ""
       ],
       [
-        580,
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُجَاسَات",
         "mucāsāt",
         "dolaştırılanlar, müennes",
@@ -692,46 +526,19 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [
-        581,
-        "مُجَاس",
-        "mucās",
-        "dolaştırma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["muf'al", "kıyâsî · ilal", "مُجَاس", "mucās", "dolaştırma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [
-        84,
-        "تَجَوُّس",
-        "tacawwus",
-        "kendini zorlayarak dolaşma",
-        "orta",
-        ""
-      ]
+      ["tafa''ul", "kıyâsî", "تَجَوُّس", "tacawwus", "kendini zorlayarak dolaşma", "orta", ""]
     ],
     "ism-i merre · bâb V": [
-      [
-        85,
-        "تَجَوُّسَة",
-        "tacawwusa",
-        "bir kere kendini zorlayarak dolaşma",
-        "orta",
-        ""
-      ]
+      ["tafa''ul + tâ", "aday", "تَجَوُّسَة", "tacawwusa", "bir kere kendini zorlayarak dolaşma", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî", "مُتَجَوِّس", "mutacawwis", "kendini zorlayarak dolaşan", "orta", ""],
       [
-        86,
-        "مُتَجَوِّس",
-        "mutacawwis",
-        "kendini zorlayarak dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        87,
+        "mutafa''il + müennes",
+        "kıyâsî",
         "مُتَجَوِّسَة",
         "mutacawwisa",
         "kendini zorlayarak dolaşan, müennes",
@@ -739,7 +546,8 @@
         ""
       ],
       [
-        88,
+        "mutafa''il + tesniye",
+        "kıyâsî",
         "مُتَجَوِّسَان",
         "mutacawwisān",
         "kendini zorlayarak dolaşan, iki",
@@ -747,7 +555,8 @@
         ""
       ],
       [
-        89,
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
         "مُتَجَوِّسَتَان",
         "mutacawwisatān",
         "kendini zorlayarak dolaşan, iki, müennes",
@@ -755,7 +564,8 @@
         ""
       ],
       [
-        90,
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَوِّسُون",
         "mutacawwisūn",
         "kendini zorlayarak dolaşanlar",
@@ -763,7 +573,8 @@
         ""
       ],
       [
-        91,
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَوِّسِين",
         "mutacawwisīn",
         "kendini zorlayarak dolaşanlar",
@@ -771,7 +582,8 @@
         ""
       ],
       [
-        92,
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَوِّسَات",
         "mutacawwisāt",
         "kendini zorlayarak dolaşanlar, müennes",
@@ -780,16 +592,10 @@
       ]
     ],
     "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî", "مُتَجَوَّس", "mutacawwas", "kendini zorlayarak dolaşılan", "orta", ""],
       [
-        93,
-        "مُتَجَوَّس",
-        "mutacawwas",
-        "kendini zorlayarak dolaşılan",
-        "orta",
-        ""
-      ],
-      [
-        94,
+        "mutafa''al + müennes",
+        "kıyâsî",
         "مُتَجَوَّسَة",
         "mutacawwasa",
         "kendini zorlayarak dolaşılan, müennes",
@@ -797,7 +603,8 @@
         ""
       ],
       [
-        95,
+        "mutafa''al + tesniye",
+        "kıyâsî",
         "مُتَجَوَّسَان",
         "mutacawwasān",
         "kendini zorlayarak dolaşılan, iki",
@@ -805,7 +612,8 @@
         ""
       ],
       [
-        96,
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
         "مُتَجَوَّسَتَان",
         "mutacawwasatān",
         "kendini zorlayarak dolaşılan, iki, müennes",
@@ -813,7 +621,8 @@
         ""
       ],
       [
-        97,
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَوَّسُون",
         "mutacawwasūn",
         "kendini zorlayarak dolaşılanlar",
@@ -821,7 +630,8 @@
         ""
       ],
       [
-        98,
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَوَّسِين",
         "mutacawwasīn",
         "kendini zorlayarak dolaşılanlar",
@@ -829,7 +639,8 @@
         ""
       ],
       [
-        99,
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَوَّسَات",
         "mutacawwasāt",
         "kendini zorlayarak dolaşılanlar, müennes",
@@ -838,62 +649,21 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [
-        100,
-        "مُتَجَوَّس",
-        "mutacawwas",
-        "kendini zorlayarak dolaşma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["mutafa''al", "kıyâsî", "مُتَجَوَّس", "mutacawwas", "kendini zorlayarak dolaşma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VI": [
-      [
-        101,
-        "تَجَاوُس",
-        "tacāwus",
-        "hep birlikte dolaşma",
-        "orta",
-        ""
-      ]
+      ["tafā'ul", "kıyâsî", "تَجَاوُس", "tacāwus", "hep birlikte dolaşma", "orta", ""]
     ],
     "ism-i merre · bâb VI": [
-      [
-        102,
-        "تَجَاوُسَة",
-        "tacāwusa",
-        "bir kere hep birlikte dolaşma",
-        "orta",
-        ""
-      ]
+      ["tafā'ul + tâ", "aday", "تَجَاوُسَة", "tacāwusa", "bir kere hep birlikte dolaşma", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî", "مُتَجَاوِس", "mutacāwis", "hep birlikte dolaşan", "orta", ""],
+      ["mutafā'il + müennes", "kıyâsî", "مُتَجَاوِسَة", "mutacāwisa", "hep birlikte dolaşan, müennes", "orta", ""],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَجَاوِسَان", "mutacāwisān", "hep birlikte dolaşan, iki", "orta", ""],
       [
-        103,
-        "مُتَجَاوِس",
-        "mutacāwis",
-        "hep birlikte dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        104,
-        "مُتَجَاوِسَة",
-        "mutacāwisa",
-        "hep birlikte dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        105,
-        "مُتَجَاوِسَان",
-        "mutacāwisān",
-        "hep birlikte dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        106,
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
         "مُتَجَاوِسَتَان",
         "mutacāwisatān",
         "hep birlikte dolaşan, iki, müennes",
@@ -901,7 +671,8 @@
         ""
       ],
       [
-        107,
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَاوِسُون",
         "mutacāwisūn",
         "hep birlikte dolaşanlar",
@@ -909,7 +680,8 @@
         ""
       ],
       [
-        108,
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَاوِسِين",
         "mutacāwisīn",
         "hep birlikte dolaşanlar",
@@ -917,7 +689,8 @@
         ""
       ],
       [
-        109,
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَاوِسَات",
         "mutacāwisāt",
         "hep birlikte dolaşanlar, müennes",
@@ -926,32 +699,12 @@
       ]
     ],
     "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî", "مُتَجَاوَس", "mutacāwas", "hep birlikte dolaşılan", "orta", ""],
+      ["mutafā'al + müennes", "kıyâsî", "مُتَجَاوَسَة", "mutacāwasa", "hep birlikte dolaşılan, müennes", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî", "مُتَجَاوَسَان", "mutacāwasān", "hep birlikte dolaşılan, iki", "orta", ""],
       [
-        110,
-        "مُتَجَاوَس",
-        "mutacāwas",
-        "hep birlikte dolaşılan",
-        "orta",
-        ""
-      ],
-      [
-        111,
-        "مُتَجَاوَسَة",
-        "mutacāwasa",
-        "hep birlikte dolaşılan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        112,
-        "مُتَجَاوَسَان",
-        "mutacāwasān",
-        "hep birlikte dolaşılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        113,
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
         "مُتَجَاوَسَتَان",
         "mutacāwasatān",
         "hep birlikte dolaşılan, iki, müennes",
@@ -959,7 +712,8 @@
         ""
       ],
       [
-        114,
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُتَجَاوَسُون",
         "mutacāwasūn",
         "hep birlikte dolaşılanlar",
@@ -967,7 +721,8 @@
         ""
       ],
       [
-        115,
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُتَجَاوَسِين",
         "mutacāwasīn",
         "hep birlikte dolaşılanlar",
@@ -975,7 +730,8 @@
         ""
       ],
       [
-        116,
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُتَجَاوَسَات",
         "mutacāwasāt",
         "hep birlikte dolaşılanlar, müennes",
@@ -984,62 +740,21 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [
-        117,
-        "مُتَجَاوَس",
-        "mutacāwas",
-        "hep birlikte dolaşma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["mutafā'al", "kıyâsî", "مُتَجَاوَس", "mutacāwas", "hep birlikte dolaşma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [
-        610,
-        "اِنْجِيَاس",
-        "inciyās",
-        "kendiliğinden dolaşma",
-        "orta",
-        ""
-      ]
+      ["infi'āl", "kıyâsî · ilal", "اِنْجِيَاس", "inciyās", "kendiliğinden dolaşma", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [
-        611,
-        "اِنْجِيَاسَة",
-        "inciyāsa",
-        "bir kere kendiliğinden dolaşma",
-        "orta",
-        ""
-      ]
+      ["infi'āl + tâ", "aday · ilal", "اِنْجِيَاسَة", "inciyāsa", "bir kere kendiliğinden dolaşma", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî · ilal", "مُنْجَاس", "muncās", "kendiliğinden dolaşan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْجَاسَة", "muncāsa", "kendiliğinden dolaşan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْجَاسَان", "muncāsān", "kendiliğinden dolaşan, iki", "orta", ""],
       [
-        612,
-        "مُنْجَاس",
-        "muncās",
-        "kendiliğinden dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        613,
-        "مُنْجَاسَة",
-        "muncāsa",
-        "kendiliğinden dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        614,
-        "مُنْجَاسَان",
-        "muncāsān",
-        "kendiliğinden dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        615,
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
         "مُنْجَاسَتَان",
         "muncāsatān",
         "kendiliğinden dolaşan, iki, müennes",
@@ -1047,7 +762,8 @@
         ""
       ],
       [
-        616,
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُنْجَاسُون",
         "muncāsūn",
         "kendiliğinden dolaşanlar",
@@ -1055,7 +771,8 @@
         ""
       ],
       [
-        617,
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُنْجَاسِين",
         "muncāsīn",
         "kendiliğinden dolaşanlar",
@@ -1063,7 +780,8 @@
         ""
       ],
       [
-        618,
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُنْجَاسَات",
         "muncāsāt",
         "kendiliğinden dolaşanlar, müennes",
@@ -1073,7 +791,8 @@
     ],
     "ism-i mef‘ûl · bâb VII": [
       [
-        619,
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاس",
         "muncās",
         "kendiliğinden dolaşılan",
@@ -1081,7 +800,8 @@
         ""
       ],
       [
-        892,
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسَة",
         "muncāsa",
         "kendiliğinden dolaşılan, müennes",
@@ -1089,7 +809,8 @@
         ""
       ],
       [
-        620,
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسَان",
         "muncāsān",
         "kendiliğinden dolaşılan, iki",
@@ -1097,7 +818,8 @@
         ""
       ],
       [
-        893,
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسَتَان",
         "muncāsatān",
         "kendiliğinden dolaşılan, iki, müennes",
@@ -1105,7 +827,8 @@
         ""
       ],
       [
-        621,
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسُون",
         "muncāsūn",
         "kendiliğinden dolaşılanlar",
@@ -1113,7 +836,8 @@
         ""
       ],
       [
-        622,
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسِين",
         "muncāsīn",
         "kendiliğinden dolaşılanlar",
@@ -1121,7 +845,8 @@
         ""
       ],
       [
-        623,
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاسَات",
         "muncāsāt",
         "kendiliğinden dolaşılanlar, müennes",
@@ -1131,7 +856,8 @@
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
       [
-        624,
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
         "مُنْجَاس",
         "muncās",
         "kendiliğinden dolaşma yeri, vakti",
@@ -1140,52 +866,18 @@
       ]
     ],
     "masdar · bâb VIII": [
-      [
-        625,
-        "اِجْتِيَاس",
-        "ictiyās",
-        "kendisi için dolaşma",
-        "orta",
-        ""
-      ]
+      ["ifti'āl", "kıyâsî · ilal", "اِجْتِيَاس", "ictiyās", "kendisi için dolaşma", "orta", ""]
     ],
     "ism-i merre · bâb VIII": [
-      [
-        627,
-        "اِجْتِيَاسَة",
-        "ictiyāsa",
-        "bir kere kendisi için dolaşma",
-        "orta",
-        ""
-      ]
+      ["ifti'āl + tâ", "aday · ilal", "اِجْتِيَاسَة", "ictiyāsa", "bir kere kendisi için dolaşma", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî · ilal", "مُجْتَاس", "muctās", "kendisi için dolaşan", "orta", ""],
+      ["muftaʿil + müennes", "kıyâsî · ilal", "مُجْتَاسَة", "muctāsa", "kendisi için dolaşan, müennes", "orta", ""],
+      ["muftaʿil + tesniye", "kıyâsî · ilal", "مُجْتَاسَان", "muctāsān", "kendisi için dolaşan, iki", "orta", ""],
       [
-        628,
-        "مُجْتَاس",
-        "muctās",
-        "kendisi için dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        629,
-        "مُجْتَاسَة",
-        "muctāsa",
-        "kendisi için dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        630,
-        "مُجْتَاسَان",
-        "muctāsān",
-        "kendisi için dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        631,
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
         "مُجْتَاسَتَان",
         "muctāsatān",
         "kendisi için dolaşan, iki, müennes",
@@ -1193,7 +885,8 @@
         ""
       ],
       [
-        632,
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُجْتَاسُون",
         "muctāsūn",
         "kendisi için dolaşanlar",
@@ -1201,7 +894,8 @@
         ""
       ],
       [
-        633,
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُجْتَاسِين",
         "muctāsīn",
         "kendisi için dolaşanlar",
@@ -1209,7 +903,8 @@
         ""
       ],
       [
-        634,
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُجْتَاسَات",
         "muctāsāt",
         "kendisi için dolaşanlar, müennes",
@@ -1218,32 +913,20 @@
       ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُجْتَاس", "muctās", "kendisi için dolaşılan", "orta", ""],
       [
-        635,
-        "مُجْتَاس",
-        "muctās",
-        "kendisi için dolaşılan",
-        "orta",
-        ""
-      ],
-      [
-        894,
+        "muftaʿal + müennes",
+        "kıyâsî · ilal",
         "مُجْتَاسَة",
         "muctāsa",
         "kendisi için dolaşılan, müennes",
         "orta",
         ""
       ],
+      ["muftaʿal + tesniye", "kıyâsî · ilal", "مُجْتَاسَان", "muctāsān", "kendisi için dolaşılan, iki", "orta", ""],
       [
-        636,
-        "مُجْتَاسَان",
-        "muctāsān",
-        "kendisi için dolaşılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        895,
+        "muftaʿal + müennes tesniye",
+        "kıyâsî · ilal",
         "مُجْتَاسَتَان",
         "muctāsatān",
         "kendisi için dolaşılan, iki, müennes",
@@ -1251,7 +934,8 @@
         ""
       ],
       [
-        637,
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُجْتَاسُون",
         "muctāsūn",
         "kendisi için dolaşılanlar",
@@ -1259,7 +943,8 @@
         ""
       ],
       [
-        638,
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُجْتَاسِين",
         "muctāsīn",
         "kendisi için dolaşılanlar",
@@ -1267,7 +952,8 @@
         ""
       ],
       [
-        639,
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُجْتَاسَات",
         "muctāsāt",
         "kendisi için dolaşılanlar, müennes",
@@ -1276,52 +962,18 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [
-        640,
-        "مُجْتَاس",
-        "muctās",
-        "kendisi için dolaşma yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["muftaʿal", "kıyâsî · ilal", "مُجْتَاس", "muctās", "kendisi için dolaşma yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [
-        168,
-        "اِجْوِسَاس",
-        "icwisās",
-        "iyiden iyiye dolaşma",
-        "kontrol",
-        ""
-      ]
+      ["if'ilāl", "semâî aday", "اِجْوِسَاس", "icwisās", "iyiden iyiye dolaşma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî", "مُجْوَسّ", "mucwass", "iyiden iyiye dolaşan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُجْوَسَّة", "mucwassa", "iyiden iyiye dolaşan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُجْوَسَّان", "mucwassān", "iyiden iyiye dolaşan, iki", "kontrol", ""],
       [
-        169,
-        "مُجْوَسّ",
-        "mucwass",
-        "iyiden iyiye dolaşan",
-        "kontrol",
-        ""
-      ],
-      [
-        170,
-        "مُجْوَسَّة",
-        "mucwassa",
-        "iyiden iyiye dolaşan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        171,
-        "مُجْوَسَّان",
-        "mucwassān",
-        "iyiden iyiye dolaşan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        172,
+        "muf'all + müennes tesniye",
+        "kıyâsî",
         "مُجْوَسَّتَان",
         "mucwassatān",
         "iyiden iyiye dolaşan, iki, müennes",
@@ -1329,7 +981,8 @@
         ""
       ],
       [
-        173,
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْوَسُّون",
         "mucwassūn",
         "iyiden iyiye dolaşanlar",
@@ -1337,7 +990,8 @@
         ""
       ],
       [
-        174,
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْوَسِّين",
         "mucwassīn",
         "iyiden iyiye dolaşanlar",
@@ -1345,7 +999,8 @@
         ""
       ],
       [
-        175,
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْوَسَّات",
         "mucwassāt",
         "iyiden iyiye dolaşanlar, müennes",
@@ -1354,42 +1009,23 @@
       ]
     ],
     "masdar · bâb X": [
-      [
-        662,
-        "اِسْتِجَاسَة",
-        "isticāsa",
-        "dolaşmayı isteme",
-        "orta",
-        ""
-      ]
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِجَاسَة", "isticāsa", "dolaşmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَجِيس", "mustacīs", "dolaşmayı isteyen", "orta", ""],
       [
-        664,
-        "مُسْتَجِيس",
-        "mustacīs",
-        "dolaşmayı isteyen",
-        "orta",
-        ""
-      ],
-      [
-        665,
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
         "مُسْتَجِيسَة",
         "mustacīsa",
         "dolaşmayı isteyen, müennes",
         "orta",
         ""
       ],
+      ["mustaf'il + tesniye", "kıyâsî · ilal", "مُسْتَجِيسَان", "mustacīsān", "dolaşmayı isteyen, iki", "orta", ""],
       [
-        666,
-        "مُسْتَجِيسَان",
-        "mustacīsān",
-        "dolaşmayı isteyen, iki",
-        "orta",
-        ""
-      ],
-      [
-        667,
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
         "مُسْتَجِيسَتَان",
         "mustacīsatān",
         "dolaşmayı isteyen, iki, müennes",
@@ -1397,7 +1033,8 @@
         ""
       ],
       [
-        668,
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُسْتَجِيسُون",
         "mustacīsūn",
         "dolaşmayı isteyenler",
@@ -1405,7 +1042,8 @@
         ""
       ],
       [
-        669,
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُسْتَجِيسِين",
         "mustacīsīn",
         "dolaşmayı isteyenler",
@@ -1413,7 +1051,8 @@
         ""
       ],
       [
-        670,
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُسْتَجِيسَات",
         "mustacīsāt",
         "dolaşmayı isteyenler, müennes",
@@ -1422,32 +1061,20 @@
       ]
     ],
     "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَجَاس", "mustacās", "dolaşması istenen", "orta", ""],
       [
-        671,
-        "مُسْتَجَاس",
-        "mustacās",
-        "dolaşması istenen",
-        "orta",
-        ""
-      ],
-      [
-        898,
+        "mustaf'al + müennes",
+        "kıyâsî · ilal",
         "مُسْتَجَاسَة",
         "mustacāsa",
         "dolaşması istenen, müennes",
         "orta",
         ""
       ],
+      ["mustaf'al + tesniye", "kıyâsî · ilal", "مُسْتَجَاسَان", "mustacāsān", "dolaşması istenen, iki", "orta", ""],
       [
-        672,
-        "مُسْتَجَاسَان",
-        "mustacāsān",
-        "dolaşması istenen, iki",
-        "orta",
-        ""
-      ],
-      [
-        899,
+        "mustaf'al + müennes tesniye",
+        "kıyâsî · ilal",
         "مُسْتَجَاسَتَان",
         "mustacāsatān",
         "dolaşması istenen, iki, müennes",
@@ -1455,7 +1082,8 @@
         ""
       ],
       [
-        673,
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
         "مُسْتَجَاسُون",
         "mustacāsūn",
         "dolaşması istenenler",
@@ -1463,7 +1091,8 @@
         ""
       ],
       [
-        674,
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
         "مُسْتَجَاسِين",
         "mustacāsīn",
         "dolaşması istenenler",
@@ -1471,7 +1100,8 @@
         ""
       ],
       [
-        675,
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مُسْتَجَاسَات",
         "mustacāsāt",
         "dolaşması istenenler, müennes",
@@ -1480,82 +1110,27 @@
       ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [
-        676,
-        "مُسْتَجَاس",
-        "mustacās",
-        "dolaşmayı isteme yeri, vakti",
-        "orta",
-        ""
-      ]
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَجَاس", "mustacās", "dolaşmayı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [
-        900,
-        "اِسْتِجْوَاس",
-        "isticwās",
-        "dolaşmayı isteme",
-        "orta",
-        ""
-      ]
+      ["istif'āl", "semâî aday", "اِسْتِجْوَاس", "isticwās", "dolaşmayı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [
-        901,
-        "مُسْتَجْوِس",
-        "mustacwis",
-        "dolaşmayı isteyen",
-        "orta",
-        ""
-      ]
+      ["mustaf'il", "semâî aday", "مُسْتَجْوِس", "mustacwis", "dolaşmayı isteyen", "orta", ""]
     ],
     "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)": [
-      [
-        902,
-        "مُسْتَجْوَس",
-        "mustacwas",
-        "dolaşması istenen",
-        "orta",
-        ""
-      ]
+      ["mustaf'al", "semâî aday", "مُسْتَجْوَس", "mustacwas", "dolaşması istenen", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [
-        193,
-        "اِجْوِيسَاس",
-        "icwīsās",
-        "büsbütün dolaşma",
-        "kontrol",
-        ""
-      ]
+      ["if'īlāl", "semâî aday", "اِجْوِيسَاس", "icwīsās", "büsbütün dolaşma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî", "مُجْوَاسّ", "mucwāss", "büsbütün dolaşan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُجْوَاسَّة", "mucwāssa", "büsbütün dolaşan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُجْوَاسَّان", "mucwāssān", "büsbütün dolaşan, iki", "kontrol", ""],
       [
-        194,
-        "مُجْوَاسّ",
-        "mucwāss",
-        "büsbütün dolaşan",
-        "kontrol",
-        ""
-      ],
-      [
-        195,
-        "مُجْوَاسَّة",
-        "mucwāssa",
-        "büsbütün dolaşan, müennes",
-        "kontrol",
-        ""
-      ],
-      [
-        196,
-        "مُجْوَاسَّان",
-        "mucwāssān",
-        "büsbütün dolaşan, iki",
-        "kontrol",
-        ""
-      ],
-      [
-        197,
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
         "مُجْوَاسَّتَان",
         "mucwāssatān",
         "büsbütün dolaşan, iki, müennes",
@@ -1563,7 +1138,8 @@
         ""
       ],
       [
-        198,
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
         "مُجْوَاسُّون",
         "mucwāssūn",
         "büsbütün dolaşanlar",
@@ -1571,7 +1147,8 @@
         ""
       ],
       [
-        199,
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
         "مُجْوَاسِّين",
         "mucwāssīn",
         "büsbütün dolaşanlar",
@@ -1579,7 +1156,8 @@
         ""
       ],
       [
-        200,
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
         "مُجْوَاسَّات",
         "mucwāssāt",
         "büsbütün dolaşanlar, müennes",
@@ -1588,76 +1166,21 @@
       ]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
-      [
-        201,
-        "اِجْوِوْوَاس",
-        "icwiwwās",
-        "aşırı dolaşma",
-        "orta",
-        ""
-      ]
+      ["if'iv'āl", "semâî aday", "اِجْوِوْوَاس", "icwiwwās", "aşırı dolaşma", "orta", ""]
     ],
     "masdar · bâb XIII (illet harfi izhar)": [
-      [
-        202,
-        "اِجْوِوَّاس",
-        "icwiwwās",
-        "aşırı dolaşma",
-        "orta",
-        ""
-      ]
+      ["if'ivvāl", "semâî aday", "اِجْوِوَّاس", "icwiwwās", "aşırı dolaşma", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî · ilal", "جَائِس", "cāʾis", "dolaşan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "جَائِسَة", "cāʾisa", "dolaşan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "جَائِسَان", "cāʾisān", "dolaşan, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî · ilal", "جَائِسَتَان", "cāʾisatān", "dolaşan, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "جَائِسُون", "cāʾisūn", "dolaşanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "جَائِسِين", "cāʾisīn", "dolaşanlar", "orta", ""],
       [
-        687,
-        "جَائِس",
-        "cāʾis",
-        "dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        688,
-        "جَائِسَة",
-        "cāʾisa",
-        "dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        689,
-        "جَائِسَان",
-        "cāʾisān",
-        "dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        690,
-        "جَائِسَتَان",
-        "cāʾisatān",
-        "dolaşan, iki, müennes",
-        "orta",
-        ""
-      ],
-      [
-        691,
-        "جَائِسُون",
-        "cāʾisūn",
-        "dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        692,
-        "جَائِسِين",
-        "cāʾisīn",
-        "dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        693,
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "جَائِسَات",
         "cāʾisāt",
         "dolaşanlar, müennes",
@@ -1666,56 +1189,23 @@
       ]
     ],
     "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî · ilal", "مَجُوس", "macūs", "dolaşılan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَجُوسَة", "macūsa", "dolaşılan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَجُوسَان", "macūsān", "dolaşılan, iki", "orta", ""],
       [
-        694,
-        "مَجُوس",
-        "macūs",
-        "dolaşılan",
-        "orta",
-        ""
-      ],
-      [
-        695,
-        "مَجُوسَة",
-        "macūsa",
-        "dolaşılan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        696,
-        "مَجُوسَان",
-        "macūsān",
-        "dolaşılan, iki",
-        "orta",
-        ""
-      ],
-      [
-        697,
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
         "مَجُوسَتَان",
         "macūsatān",
         "dolaşılan, iki, müennes",
         "orta",
         ""
       ],
+      ["maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مَجُوسُون", "macūsūn", "dolaşılanlar", "orta", ""],
+      ["maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مَجُوسِين", "macūsīn", "dolaşılanlar", "orta", ""],
       [
-        698,
-        "مَجُوسُون",
-        "macūsūn",
-        "dolaşılanlar",
-        "orta",
-        ""
-      ],
-      [
-        699,
-        "مَجُوسِين",
-        "macūsīn",
-        "dolaşılanlar",
-        "orta",
-        ""
-      ],
-      [
-        700,
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
         "مَجُوسَات",
         "macūsāt",
         "dolaşılanlar, müennes",
@@ -1724,304 +1214,76 @@
       ]
     ],
     "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَجَاس", "macās", "dolaşma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَجَاسَان", "macāsān", "dolaşma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî · ilal", "مَجِيس", "macīs", "dolaşma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَجِيسَان", "macīsān", "dolaşma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَجَاسَة", "macāsa", "dolaşmanın bol olduğu yer", "orta", ""],
       [
-        701,
-        "مَجَاس",
-        "macās",
-        "dolaşma yeri, vakti",
-        "orta",
-        ""
-      ],
-      [
-        702,
-        "مَجَاسَان",
-        "macāsān",
-        "dolaşma yeri, vakti, iki",
-        "orta",
-        ""
-      ],
-      [
-        703,
-        "مَجِيس",
-        "macīs",
-        "dolaşma yeri, vakti",
-        "orta",
-        ""
-      ],
-      [
-        704,
-        "مَجِيسَان",
-        "macīsān",
-        "dolaşma yeri, vakti, iki",
-        "orta",
-        ""
-      ],
-      [
-        705,
-        "مَجَاسَة",
-        "macāsa",
-        "dolaşmanın bol olduğu yer",
-        "orta",
-        ""
-      ],
-      [
-        706,
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
         "مَجَاسَتَان",
         "macāsatān",
         "dolaşmanın bol olduğu yer, iki",
         "orta",
         ""
       ],
+      ["maf'ile", "kıyâsî · ilal", "مَجِيسَة", "macīsa", "dolaşmanın bol olduğu yer", "orta", ""],
       [
-        707,
-        "مَجِيسَة",
-        "macīsa",
-        "dolaşmanın bol olduğu yer",
-        "orta",
-        ""
-      ],
-      [
-        708,
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
         "مَجِيسَتَان",
         "macīsatān",
         "dolaşmanın bol olduğu yer, iki",
         "orta",
         ""
       ],
-      [
-        247,
-        "مَجْوُسَة",
-        "macwusa",
-        "dolaşma yeri, vakti",
-        "orta",
-        ""
-      ],
-      [
-        248,
-        "مَجْوُسَتَان",
-        "macwusatān",
-        "dolaşma yeri, vakti, iki",
-        "orta",
-        ""
-      ]
+      ["maf'ula", "kıyâsî", "مَجْوُسَة", "macwusa", "dolaşma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَجْوُسَتَان", "macwusatān", "dolaşma yeri, vakti, iki", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [
-        235,
-        "مِجْوَس",
-        "micwas",
-        "dolaşma âleti",
-        "orta",
-        ""
-      ],
-      [
-        236,
-        "مِجْوَسَان",
-        "micwasān",
-        "dolaşma âleti, iki",
-        "orta",
-        ""
-      ],
-      [
-        237,
-        "مِجْوَاس",
-        "micwās",
-        "dolaşma âleti",
-        "orta",
-        ""
-      ],
-      [
-        238,
-        "مِجْوَاسَان",
-        "micwāsān",
-        "dolaşma âleti, iki",
-        "orta",
-        ""
-      ],
-      [
-        239,
-        "مِجْوَسَة",
-        "micwasa",
-        "dolaşma âleti",
-        "orta",
-        ""
-      ],
-      [
-        240,
-        "مِجْوَسَتَان",
-        "micwasatān",
-        "dolaşma âleti, iki",
-        "orta",
-        ""
-      ]
+      ["mif'al", "kıyâsî", "مِجْوَس", "micwas", "dolaşma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِجْوَسَان", "micwasān", "dolaşma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî", "مِجْوَاس", "micwās", "dolaşma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِجْوَاسَان", "micwāsān", "dolaşma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî", "مِجْوَسَة", "micwasa", "dolaşma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِجْوَسَتَان", "micwasatān", "dolaşma âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [
-        241,
-        "أَجْوَس",
-        "ʾacwas",
-        "daha çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        242,
-        "أَجْوَسَان",
-        "ʾacwasān",
-        "daha çok dolaşan, iki",
-        "orta",
-        ""
-      ]
+      ["af'al", "kıyâsî", "أَجْوَس", "ʾacwas", "daha çok dolaşan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî", "أَجْوَسَان", "ʾacwasān", "daha çok dolaşan, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [
-        243,
-        "جُوْسَى",
-        "cuwsā",
-        "daha çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        244,
-        "جُوْسَيَان",
-        "cuwsayān",
-        "daha çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        245,
-        "جَوْسَاء",
-        "cawsāʾ",
-        "daha çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        246,
-        "جَوْسَاآن",
-        "cawsāʾān",
-        "daha çok dolaşan, iki",
-        "orta",
-        ""
-      ]
+      ["fu'lâ", "kıyâsî", "جُوْسَى", "cuwsā", "daha çok dolaşan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "جُوْسَيَان", "cuwsayān", "daha çok dolaşan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "جَوْسَاء", "cawsāʾ", "daha çok dolaşan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "جَوْسَاآن", "cawsāʾān", "daha çok dolaşan, iki", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [
-        249,
-        "جُوَيْس",
-        "cuways",
-        "azıcık dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        250,
-        "جُوَيْسَان",
-        "cuwaysān",
-        "azıcık dolaşma, iki",
-        "orta",
-        ""
-      ],
-      [
-        251,
-        "جُوَيْسَة",
-        "cuwaysa",
-        "azıcık dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        252,
-        "جُوَيْسَتَان",
-        "cuwaysatān",
-        "azıcık dolaşma, iki",
-        "orta",
-        ""
-      ]
+      ["fu'ayl", "kıyâsî", "جُوَيْس", "cuways", "azıcık dolaşma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "جُوَيْسَان", "cuwaysān", "azıcık dolaşma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî", "جُوَيْسَة", "cuwaysa", "azıcık dolaşma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "جُوَيْسَتَان", "cuwaysatān", "azıcık dolaşma, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [
-        723,
-        "مَجَاس",
-        "macās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        724,
-        "مَجَاسَان",
-        "macāsān",
-        "dolaşma, iki",
-        "orta",
-        ""
-      ]
+      ["maf'al", "kıyâsî · ilal", "مَجَاس", "macās", "dolaşma", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَجَاسَان", "macāsān", "dolaşma, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
-      [
-        255,
-        "جَوْسَة",
-        "cawsa",
-        "bir kere dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        256,
-        "جَوْسَتَان",
-        "cawsatān",
-        "bir kere dolaşma, iki",
-        "orta",
-        ""
-      ]
+      ["fa'le", "aday", "جَوْسَة", "cawsa", "bir kere dolaşma", "orta", ""],
+      ["fa'le + tesniye", "aday", "جَوْسَتَان", "cawsatān", "bir kere dolaşma, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [
-        903,
-        "جِيسَة",
-        "cīsa",
-        "dolaşma tarzı",
-        "orta",
-        ""
-      ],
-      [
-        904,
-        "جِيسَتَان",
-        "cīsatān",
-        "dolaşma tarzı, iki",
-        "orta",
-        ""
-      ]
+      ["fi'le", "aday · ilal", "جِيسَة", "cīsa", "dolaşma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday · ilal", "جِيسَتَان", "cīsatān", "dolaşma tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday", "جَوِيس", "cawīs", "her daim dolaşan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "جَوِيسَة", "cawīsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "جَوِيسَان", "cawīsān", "her daim dolaşan, iki", "orta", ""],
       [
-        259,
-        "جَوِيس",
-        "cawīs",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        260,
-        "جَوِيسَة",
-        "cawīsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        261,
-        "جَوِيسَان",
-        "cawīsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        262,
+        "fa'īl + müennes tesniye",
+        "semâî aday",
         "جَوِيسَتَان",
         "cawīsatān",
         "her daim dolaşan, iki, müennes",
@@ -2029,7 +1291,8 @@
         ""
       ],
       [
-        263,
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوِيسُون",
         "cawīsūn",
         "her daim dolaşanlar",
@@ -2037,7 +1300,8 @@
         ""
       ],
       [
-        264,
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوِيسِين",
         "cawīsīn",
         "her daim dolaşanlar",
@@ -2045,39 +1309,20 @@
         ""
       ],
       [
-        265,
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوِيسَات",
         "cawīsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'ūl", "semâî aday", "جَوُوس", "cawūs", "her daim dolaşan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "جَوُوسَة", "cawūsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "جَوُوسَان", "cawūsān", "her daim dolaşan, iki", "orta", ""],
       [
-        266,
-        "جَوُوس",
-        "cawūs",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        267,
-        "جَوُوسَة",
-        "cawūsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        268,
-        "جَوُوسَان",
-        "cawūsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        269,
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
         "جَوُوسَتَان",
         "cawūsatān",
         "her daim dolaşan, iki, müennes",
@@ -2085,7 +1330,8 @@
         ""
       ],
       [
-        270,
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوُوسُون",
         "cawūsūn",
         "her daim dolaşanlar",
@@ -2093,7 +1339,8 @@
         ""
       ],
       [
-        271,
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوُوسِين",
         "cawūsīn",
         "her daim dolaşanlar",
@@ -2101,39 +1348,20 @@
         ""
       ],
       [
-        272,
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوُوسَات",
         "cawūsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'il", "semâî aday", "جَوِس", "cawis", "her daim dolaşan", "orta", ""],
+      ["fa'il + müennes", "semâî aday", "جَوِسَة", "cawisa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday", "جَوِسَان", "cawisān", "her daim dolaşan, iki", "orta", ""],
       [
-        273,
-        "جَوِس",
-        "cawis",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        274,
-        "جَوِسَة",
-        "cawisa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        275,
-        "جَوِسَان",
-        "cawisān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        276,
+        "fa'il + müennes tesniye",
+        "semâî aday",
         "جَوِسَتَان",
         "cawisatān",
         "her daim dolaşan, iki, müennes",
@@ -2141,7 +1369,8 @@
         ""
       ],
       [
-        277,
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوِسُون",
         "cawisūn",
         "her daim dolaşanlar",
@@ -2149,7 +1378,8 @@
         ""
       ],
       [
-        278,
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوِسِين",
         "cawisīn",
         "her daim dolaşanlar",
@@ -2157,39 +1387,20 @@
         ""
       ],
       [
-        279,
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوِسَات",
         "cawisāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'ul", "semâî aday", "جَوُس", "cawus", "her daim dolaşan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday", "جَوُسَة", "cawusa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday", "جَوُسَان", "cawusān", "her daim dolaşan, iki", "orta", ""],
       [
-        280,
-        "جَوُس",
-        "cawus",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        281,
-        "جَوُسَة",
-        "cawusa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        282,
-        "جَوُسَان",
-        "cawusān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        283,
+        "fa'ul + müennes tesniye",
+        "semâî aday",
         "جَوُسَتَان",
         "cawusatān",
         "her daim dolaşan, iki, müennes",
@@ -2197,7 +1408,8 @@
         ""
       ],
       [
-        284,
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوُسُون",
         "cawusūn",
         "her daim dolaşanlar",
@@ -2205,7 +1417,8 @@
         ""
       ],
       [
-        285,
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوُسِين",
         "cawusīn",
         "her daim dolaşanlar",
@@ -2213,39 +1426,20 @@
         ""
       ],
       [
-        286,
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوُسَات",
         "cawusāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'al", "semâî aday · ilal", "جَاس", "cās", "her daim dolaşan", "orta", ""],
+      ["fa'al + müennes", "semâî aday · ilal", "جَاسَة", "cāsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "جَاسَان", "cāsān", "her daim dolaşan, iki", "orta", ""],
       [
-        753,
-        "جَاس",
-        "cās",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        905,
-        "جَاسَة",
-        "cāsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        754,
-        "جَاسَان",
-        "cāsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        906,
+        "fa'al + müennes tesniye",
+        "semâî aday · ilal",
         "جَاسَتَان",
         "cāsatān",
         "her daim dolaşan, iki, müennes",
@@ -2253,7 +1447,8 @@
         ""
       ],
       [
-        884,
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
         "جَاسُون",
         "cāsūn",
         "her daim dolaşanlar",
@@ -2261,7 +1456,8 @@
         ""
       ],
       [
-        885,
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
         "جَاسِين",
         "cāsīn",
         "her daim dolaşanlar",
@@ -2269,95 +1465,43 @@
         ""
       ],
       [
-        755,
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
         "جَاسَات",
         "cāsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'l", "semâî aday", "جَوْس", "caws", "her daim dolaşan", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "جَوْسَة", "cawsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "جَوْسَان", "cawsān", "her daim dolaşan, iki", "orta", ""],
       [
-        294,
-        "جَوْس",
-        "caws",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        295,
-        "جَوْسَة",
-        "cawsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        296,
-        "جَوْسَان",
-        "cawsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        297,
+        "fa'l + müennes tesniye",
+        "semâî aday",
         "جَوْسَتَان",
         "cawsatān",
         "her daim dolaşan, iki, müennes",
         "orta",
         ""
       ],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "جَوْسُون", "cawsūn", "her daim dolaşanlar", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "جَوْسِين", "cawsīn", "her daim dolaşanlar", "orta", ""],
       [
-        298,
-        "جَوْسُون",
-        "cawsūn",
-        "her daim dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        299,
-        "جَوْسِين",
-        "cawsīn",
-        "her daim dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        300,
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوْسَات",
         "cawsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fu'ul", "semâî aday", "جُوُس", "cuwus", "her daim dolaşan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday", "جُوُسَة", "cuwusa", "her daim dolaşan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday", "جُوُسَان", "cuwusān", "her daim dolaşan, iki", "orta", ""],
       [
-        301,
-        "جُوُس",
-        "cuwus",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        302,
-        "جُوُسَة",
-        "cuwusa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        303,
-        "جُوُسَان",
-        "cuwusān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        304,
+        "fu'ul + müennes tesniye",
+        "semâî aday",
         "جُوُسَتَان",
         "cuwusatān",
         "her daim dolaşan, iki, müennes",
@@ -2365,7 +1509,8 @@
         ""
       ],
       [
-        305,
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُوُسُون",
         "cuwusūn",
         "her daim dolaşanlar",
@@ -2373,7 +1518,8 @@
         ""
       ],
       [
-        306,
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُوُسِين",
         "cuwusīn",
         "her daim dolaşanlar",
@@ -2381,39 +1527,20 @@
         ""
       ],
       [
-        307,
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُوُسَات",
         "cuwusāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'lān", "semâî aday", "جَوْسَان", "cawsān", "her daim dolaşan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "جَوْسَانَة", "cawsāna", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "جَوْسَانَان", "cawsānān", "her daim dolaşan, iki", "orta", ""],
       [
-        308,
-        "جَوْسَان",
-        "cawsān",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        309,
-        "جَوْسَانَة",
-        "cawsāna",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        310,
-        "جَوْسَانَان",
-        "cawsānān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        311,
+        "fa'lān + müennes tesniye",
+        "semâî aday",
         "جَوْسَانَتَان",
         "cawsānatān",
         "her daim dolaşan, iki, müennes",
@@ -2421,7 +1548,8 @@
         ""
       ],
       [
-        312,
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوْسَانُون",
         "cawsānūn",
         "her daim dolaşanlar",
@@ -2429,7 +1557,8 @@
         ""
       ],
       [
-        313,
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوْسَانِين",
         "cawsānīn",
         "her daim dolaşanlar",
@@ -2437,39 +1566,20 @@
         ""
       ],
       [
-        314,
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوْسَانَات",
         "cawsānāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fu'āl", "semâî aday", "جُوَاس", "cuwās", "her daim dolaşan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday", "جُوَاسَة", "cuwāsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday", "جُوَاسَان", "cuwāsān", "her daim dolaşan, iki", "orta", ""],
       [
-        315,
-        "جُوَاس",
-        "cuwās",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        316,
-        "جُوَاسَة",
-        "cuwāsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        317,
-        "جُوَاسَان",
-        "cuwāsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        318,
+        "fu'āl + müennes tesniye",
+        "semâî aday",
         "جُوَاسَتَان",
         "cuwāsatān",
         "her daim dolaşan, iki, müennes",
@@ -2477,7 +1587,8 @@
         ""
       ],
       [
-        319,
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُوَاسُون",
         "cuwāsūn",
         "her daim dolaşanlar",
@@ -2485,7 +1596,8 @@
         ""
       ],
       [
-        320,
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُوَاسِين",
         "cuwāsīn",
         "her daim dolaşanlar",
@@ -2493,39 +1605,20 @@
         ""
       ],
       [
-        321,
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُوَاسَات",
         "cuwāsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'āl", "semâî aday", "جَوَاس", "cawās", "her daim dolaşan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday", "جَوَاسَة", "cawāsa", "her daim dolaşan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday", "جَوَاسَان", "cawāsān", "her daim dolaşan, iki", "orta", ""],
       [
-        322,
-        "جَوَاس",
-        "cawās",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        323,
-        "جَوَاسَة",
-        "cawāsa",
-        "her daim dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        324,
-        "جَوَاسَان",
-        "cawāsān",
-        "her daim dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        325,
+        "fa'āl + müennes tesniye",
+        "semâî aday",
         "جَوَاسَتَان",
         "cawāsatān",
         "her daim dolaşan, iki, müennes",
@@ -2533,7 +1626,8 @@
         ""
       ],
       [
-        326,
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوَاسُون",
         "cawāsūn",
         "her daim dolaşanlar",
@@ -2541,7 +1635,8 @@
         ""
       ],
       [
-        327,
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوَاسِين",
         "cawāsīn",
         "her daim dolaşanlar",
@@ -2549,23 +1644,18 @@
         ""
       ],
       [
-        328,
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوَاسَات",
         "cawāsāt",
         "her daim dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fay'il (ecvef: seyyid, meyyit, tayyib)", "ecvef kıyâsı", "جَيِّس", "cayyis", "her daim dolaşan", "orta", ""],
       [
-        907,
-        "جَيِّس",
-        "cayyis",
-        "her daim dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        908,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes",
+        "ecvef kıyâsı",
         "جَيِّسَة",
         "cayyisa",
         "her daim dolaşan, müennes",
@@ -2573,7 +1663,8 @@
         ""
       ],
       [
-        909,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye",
+        "ecvef kıyâsı",
         "جَيِّسَان",
         "cayyisān",
         "her daim dolaşan, iki",
@@ -2581,7 +1672,8 @@
         ""
       ],
       [
-        910,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye",
+        "ecvef kıyâsı",
         "جَيِّسَتَان",
         "cayyisatān",
         "her daim dolaşan, iki, müennes",
@@ -2589,7 +1681,8 @@
         ""
       ],
       [
-        911,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
+        "ecvef kıyâsı",
         "جَيِّسُون",
         "cayyisūn",
         "her daim dolaşanlar",
@@ -2597,7 +1690,8 @@
         ""
       ],
       [
-        912,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
+        "ecvef kıyâsı",
         "جَيِّسِين",
         "cayyisīn",
         "her daim dolaşanlar",
@@ -2605,7 +1699,8 @@
         ""
       ],
       [
-        913,
+        "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
+        "ecvef kıyâsı",
         "جَيِّسَات",
         "cayyisāt",
         "her daim dolaşanlar, müennes",
@@ -2614,32 +1709,12 @@
       ]
     ],
     "mübalağa": [
+      ["fa''āl", "semâî aday", "جَوَّاس", "cawwās", "işi dolaşma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday", "جَوَّاسَة", "cawwāsa", "işi dolaşma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday", "جَوَّاسَان", "cawwāsān", "işi dolaşma olan, iki", "orta", ""],
       [
-        329,
-        "جَوَّاس",
-        "cawwās",
-        "işi dolaşma olan",
-        "orta",
-        ""
-      ],
-      [
-        330,
-        "جَوَّاسَة",
-        "cawwāsa",
-        "işi dolaşma olan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        331,
-        "جَوَّاسَان",
-        "cawwāsān",
-        "işi dolaşma olan, iki",
-        "orta",
-        ""
-      ],
-      [
-        332,
+        "fa''āl + müennes tesniye",
+        "semâî aday",
         "جَوَّاسَتَان",
         "cawwāsatān",
         "işi dolaşma olan, iki, müennes",
@@ -2647,7 +1722,8 @@
         ""
       ],
       [
-        333,
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوَّاسُون",
         "cawwāsūn",
         "işi dolaşma olanlar",
@@ -2655,7 +1731,8 @@
         ""
       ],
       [
-        334,
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوَّاسِين",
         "cawwāsīn",
         "işi dolaşma olanlar",
@@ -2663,119 +1740,46 @@
         ""
       ],
       [
-        335,
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوَّاسَات",
         "cawwāsāt",
         "işi dolaşma olanlar, müennes",
         "orta",
         ""
       ],
+      ["fa''āle", "semâî aday", "جَوَّاسَة", "cawwāsa", "pek çok dolaşan", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday", "جَوَّاسَتَان", "cawwāsatān", "pek çok dolaşan, iki", "orta", ""],
       [
-        336,
-        "جَوَّاسَة",
-        "cawwāsa",
-        "pek çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        337,
-        "جَوَّاسَتَان",
-        "cawwāsatān",
-        "pek çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        338,
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوَّاسَات",
         "cawwāsāt",
         "pek çok dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa'ūl", "semâî aday", "جَوُوس", "cawūs", "çok dolaşan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday", "جَوُوسَة", "cawūsa", "çok dolaşan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday", "جَوُوسَان", "cawūsān", "çok dolaşan, iki", "orta", ""],
+      ["fa'ūl + müennes tesniye", "semâî aday", "جَوُوسَتَان", "cawūsatān", "çok dolaşan, iki, müennes", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "جَوُوسُون", "cawūsūn", "çok dolaşanlar", "orta", ""],
+      ["fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", "جَوُوسِين", "cawūsīn", "çok dolaşanlar", "orta", ""],
       [
-        339,
-        "جَوُوس",
-        "cawūs",
-        "çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        340,
-        "جَوُوسَة",
-        "cawūsa",
-        "çok dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        341,
-        "جَوُوسَان",
-        "cawūsān",
-        "çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        342,
-        "جَوُوسَتَان",
-        "cawūsatān",
-        "çok dolaşan, iki, müennes",
-        "orta",
-        ""
-      ],
-      [
-        343,
-        "جَوُوسُون",
-        "cawūsūn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        344,
-        "جَوُوسِين",
-        "cawūsīn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        345,
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوُوسَات",
         "cawūsāt",
         "çok dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa''ūl", "semâî aday", "جَوُّوس", "cawwūs", "pek çok dolaşan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "جَوُّوسَة", "cawwūsa", "pek çok dolaşan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "جَوُّوسَان", "cawwūsān", "pek çok dolaşan, iki", "orta", ""],
       [
-        346,
-        "جَوُّوس",
-        "cawwūs",
-        "pek çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        347,
-        "جَوُّوسَة",
-        "cawwūsa",
-        "pek çok dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        348,
-        "جَوُّوسَان",
-        "cawwūsān",
-        "pek çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        349,
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
         "جَوُّوسَتَان",
         "cawwūsatān",
         "pek çok dolaşan, iki, müennes",
@@ -2783,7 +1787,8 @@
         ""
       ],
       [
-        350,
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جَوُّوسُون",
         "cawwūsūn",
         "pek çok dolaşanlar",
@@ -2791,7 +1796,8 @@
         ""
       ],
       [
-        351,
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جَوُّوسِين",
         "cawwūsīn",
         "pek çok dolaşanlar",
@@ -2799,39 +1805,20 @@
         ""
       ],
       [
-        352,
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوُّوسَات",
         "cawwūsāt",
         "pek çok dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fi''īl", "semâî aday", "جِوِّيس", "ciwwīs", "dolaşmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "جِوِّيسَة", "ciwwīsa", "dolaşmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "جِوِّيسَان", "ciwwīsān", "dolaşmada aşırı giden, iki", "orta", ""],
       [
-        353,
-        "جِوِّيس",
-        "ciwwīs",
-        "dolaşmada aşırı giden",
-        "orta",
-        ""
-      ],
-      [
-        354,
-        "جِوِّيسَة",
-        "ciwwīsa",
-        "dolaşmada aşırı giden, müennes",
-        "orta",
-        ""
-      ],
-      [
-        355,
-        "جِوِّيسَان",
-        "ciwwīsān",
-        "dolaşmada aşırı giden, iki",
-        "orta",
-        ""
-      ],
-      [
-        356,
+        "fi''īl + müennes tesniye",
+        "semâî aday",
         "جِوِّيسَتَان",
         "ciwwīsatān",
         "dolaşmada aşırı giden, iki, müennes",
@@ -2839,7 +1826,8 @@
         ""
       ],
       [
-        357,
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جِوِّيسُون",
         "ciwwīsūn",
         "dolaşmada aşırı gidenler",
@@ -2847,7 +1835,8 @@
         ""
       ],
       [
-        358,
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جِوِّيسِين",
         "ciwwīsīn",
         "dolaşmada aşırı gidenler",
@@ -2855,39 +1844,20 @@
         ""
       ],
       [
-        359,
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جِوِّيسَات",
         "ciwwīsāt",
         "dolaşmada aşırı gidenler, müennes",
         "orta",
         ""
       ],
+      ["fu''āl", "semâî aday", "جُوَّاس", "cuwwās", "son derece dolaşan", "orta", ""],
+      ["fu''āl + müennes", "semâî aday", "جُوَّاسَة", "cuwwāsa", "son derece dolaşan, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday", "جُوَّاسَان", "cuwwāsān", "son derece dolaşan, iki", "orta", ""],
       [
-        360,
-        "جُوَّاس",
-        "cuwwās",
-        "son derece dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        361,
-        "جُوَّاسَة",
-        "cuwwāsa",
-        "son derece dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        362,
-        "جُوَّاسَان",
-        "cuwwāsān",
-        "son derece dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        363,
+        "fu''āl + müennes tesniye",
+        "semâî aday",
         "جُوَّاسَتَان",
         "cuwwāsatān",
         "son derece dolaşan, iki, müennes",
@@ -2895,7 +1865,8 @@
         ""
       ],
       [
-        364,
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "جُوَّاسُون",
         "cuwwāsūn",
         "son derece dolaşanlar",
@@ -2903,7 +1874,8 @@
         ""
       ],
       [
-        365,
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "جُوَّاسِين",
         "cuwwāsīn",
         "son derece dolaşanlar",
@@ -2911,39 +1883,20 @@
         ""
       ],
       [
-        366,
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جُوَّاسَات",
         "cuwwāsāt",
         "son derece dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["mif'āl", "semâî aday", "مِجْوَاس", "micwās", "dolaşmayı âdet edinmiş", "orta", ""],
+      ["mif'āl + müennes", "semâî aday", "مِجْوَاسَة", "micwāsa", "dolaşmayı âdet edinmiş, müennes", "orta", ""],
+      ["mif'āl + tesniye", "semâî aday", "مِجْوَاسَان", "micwāsān", "dolaşmayı âdet edinmiş, iki", "orta", ""],
       [
-        367,
-        "مِجْوَاس",
-        "micwās",
-        "dolaşmayı âdet edinmiş",
-        "orta",
-        ""
-      ],
-      [
-        368,
-        "مِجْوَاسَة",
-        "micwāsa",
-        "dolaşmayı âdet edinmiş, müennes",
-        "orta",
-        ""
-      ],
-      [
-        369,
-        "مِجْوَاسَان",
-        "micwāsān",
-        "dolaşmayı âdet edinmiş, iki",
-        "orta",
-        ""
-      ],
-      [
-        370,
+        "mif'āl + müennes tesniye",
+        "semâî aday",
         "مِجْوَاسَتَان",
         "micwāsatān",
         "dolaşmayı âdet edinmiş, iki, müennes",
@@ -2951,7 +1904,8 @@
         ""
       ],
       [
-        371,
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "مِجْوَاسُون",
         "micwāsūn",
         "dolaşmayı âdet edinmişler",
@@ -2959,7 +1913,8 @@
         ""
       ],
       [
-        372,
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "مِجْوَاسِين",
         "micwāsīn",
         "dolaşmayı âdet edinmişler",
@@ -2967,39 +1922,20 @@
         ""
       ],
       [
-        373,
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "مِجْوَاسَات",
         "micwāsāt",
         "dolaşmayı âdet edinmişler, müennes",
         "orta",
         ""
       ],
+      ["mif'īl", "semâî aday", "مِجْوِيس", "micwīs", "dolaşmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِجْوِيسَة", "micwīsa", "dolaşmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِجْوِيسَان", "micwīsān", "dolaşmaya düşkün, iki", "orta", ""],
       [
-        374,
-        "مِجْوِيس",
-        "micwīs",
-        "dolaşmaya düşkün",
-        "orta",
-        ""
-      ],
-      [
-        375,
-        "مِجْوِيسَة",
-        "micwīsa",
-        "dolaşmaya düşkün, müennes",
-        "orta",
-        ""
-      ],
-      [
-        376,
-        "مِجْوِيسَان",
-        "micwīsān",
-        "dolaşmaya düşkün, iki",
-        "orta",
-        ""
-      ],
-      [
-        377,
+        "mif'īl + müennes tesniye",
+        "semâî aday",
         "مِجْوِيسَتَان",
         "micwīsatān",
         "dolaşmaya düşkün, iki, müennes",
@@ -3007,7 +1943,8 @@
         ""
       ],
       [
-        378,
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
         "مِجْوِيسُون",
         "micwīsūn",
         "dolaşmaya düşkünler",
@@ -3015,7 +1952,8 @@
         ""
       ],
       [
-        379,
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
         "مِجْوِيسِين",
         "micwīsīn",
         "dolaşmaya düşkünler",
@@ -3023,119 +1961,46 @@
         ""
       ],
       [
-        380,
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "مِجْوِيسَات",
         "micwīsāt",
         "dolaşmaya düşkünler, müennes",
         "orta",
         ""
       ],
+      ["fa'īl", "semâî aday", "جَوِيس", "cawīs", "çok dolaşan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday", "جَوِيسَة", "cawīsa", "çok dolaşan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday", "جَوِيسَان", "cawīsān", "çok dolaşan, iki", "orta", ""],
+      ["fa'īl + müennes tesniye", "semâî aday", "جَوِيسَتَان", "cawīsatān", "çok dolaşan, iki, müennes", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "جَوِيسُون", "cawīsūn", "çok dolaşanlar", "orta", ""],
+      ["fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", "جَوِيسِين", "cawīsīn", "çok dolaşanlar", "orta", ""],
       [
-        381,
-        "جَوِيس",
-        "cawīs",
-        "çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        382,
-        "جَوِيسَة",
-        "cawīsa",
-        "çok dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        383,
-        "جَوِيسَان",
-        "cawīsān",
-        "çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        384,
-        "جَوِيسَتَان",
-        "cawīsatān",
-        "çok dolaşan, iki, müennes",
-        "orta",
-        ""
-      ],
-      [
-        385,
-        "جَوِيسُون",
-        "cawīsūn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        386,
-        "جَوِيسِين",
-        "cawīsīn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        387,
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوِيسَات",
         "cawīsāt",
         "çok dolaşanlar, müennes",
         "orta",
         ""
       ],
+      ["fa''al", "semâî aday", "جَوَّس", "cawwas", "çok dolaşan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "جَوَّسَة", "cawwasa", "çok dolaşan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "جَوَّسَان", "cawwasān", "çok dolaşan, iki", "orta", ""],
       [
-        388,
-        "جَوَّس",
-        "cawwas",
-        "çok dolaşan",
-        "orta",
-        ""
-      ],
-      [
-        389,
-        "جَوَّسَة",
-        "cawwasa",
-        "çok dolaşan, müennes",
-        "orta",
-        ""
-      ],
-      [
-        390,
-        "جَوَّسَان",
-        "cawwasān",
-        "çok dolaşan, iki",
-        "orta",
-        ""
-      ],
-      [
-        391,
+        "fa''al + müennes tesniye",
+        "semâî aday",
         "جَوَّسَتَان",
         "cawwasatān",
         "çok dolaşan, iki, müennes",
         "orta",
         ""
       ],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "جَوَّسُون", "cawwasūn", "çok dolaşanlar", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "جَوَّسِين", "cawwasīn", "çok dolaşanlar", "orta", ""],
       [
-        392,
-        "جَوَّسُون",
-        "cawwasūn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        393,
-        "جَوَّسِين",
-        "cawwasīn",
-        "çok dolaşanlar",
-        "orta",
-        ""
-      ],
-      [
-        394,
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
         "جَوَّسَات",
         "cawwasāt",
         "çok dolaşanlar, müennes",
@@ -3144,1277 +2009,148 @@
       ]
     ],
     "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "جَوْسِيّ", "cawsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["fa'al + iyy", "kıyâsî · ilal", "جَاسِيّ", "cāsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî · ilal", "جِيسِيّ", "cīsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî · ilal", "جُوسِيّ", "cūsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "جِيَاسِيّ", "ciyāsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "جَائِسِيّ", "cāʾisiyy", "dolaşma ile ilgili", "orta", ""],
       [
-        395,
-        "جَوْسِيّ",
-        "cawsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        886,
-        "جَاسِيّ",
-        "cāsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        914,
-        "جِيسِيّ",
-        "cīsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        916,
-        "جُوسِيّ",
-        "cūsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        815,
-        "جِيَاسِيّ",
-        "ciyāsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        817,
-        "جَائِسِيّ",
-        "cāʾisiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        819,
+        "maf'ûl + iyy",
+        "kıyâsî · ilal",
         "مَجُوسِيّ",
         "macūsiyy",
         "Kezâlik Mecûsiyye tâifesine mensûb olan",
         "lugat",
         "Vankulu"
       ],
-      [
-        409,
-        "جَوِيسِيّ",
-        "cawīsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        823,
-        "مَجَاسِيّ",
-        "macāsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        413,
-        "تَجْوِيسِيّ",
-        "tacwīsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        415,
-        "تَجَاوُسِيّ",
-        "tacāwusiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        829,
-        "إِجَاسِيّ",
-        "ʾicāsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ],
-      [
-        831,
-        "اِجْتِيَاسِيّ",
-        "ictiyāsiyy",
-        "dolaşma ile ilgili",
-        "orta",
-        ""
-      ]
+      ["fa'īl + iyy", "kıyâsî", "جَوِيسِيّ", "cawīsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَجَاسِيّ", "macāsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَجْوِيسِيّ", "tacwīsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَجَاوُسِيّ", "tacāwusiyy", "dolaşma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِجَاسِيّ", "ʾicāsiyy", "dolaşma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِجْتِيَاسِيّ", "ictiyāsiyy", "dolaşma ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
-      [
-        396,
-        "جَوْسِيَّة",
-        "cawsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        887,
-        "جَاسِيَّة",
-        "cāsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        915,
-        "جِيسِيَّة",
-        "cīsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        917,
-        "جُوسِيَّة",
-        "cūsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        816,
-        "جِيَاسِيَّة",
-        "ciyāsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        818,
-        "جَائِسِيَّة",
-        "cāʾisiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        820,
-        "مَجُوسِيَّة",
-        "macūsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        410,
-        "جَوِيسِيَّة",
-        "cawīsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        824,
-        "مَجَاسِيَّة",
-        "macāsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        414,
-        "تَجْوِيسِيَّة",
-        "tacwīsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        416,
-        "تَجَاوُسِيَّة",
-        "tacāwusiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        830,
-        "إِجَاسِيَّة",
-        "ʾicāsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ],
-      [
-        832,
-        "اِجْتِيَاسِيَّة",
-        "ictiyāsiyya",
-        "dolaşanlık",
-        "orta",
-        ""
-      ]
+      ["fa'l + iyye", "kıyâsî", "جَوْسِيَّة", "cawsiyya", "dolaşanlık", "orta", ""],
+      ["fa'al + iyye", "kıyâsî · ilal", "جَاسِيَّة", "cāsiyya", "dolaşanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî · ilal", "جِيسِيَّة", "cīsiyya", "dolaşanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî · ilal", "جُوسِيَّة", "cūsiyya", "dolaşanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "جِيَاسِيَّة", "ciyāsiyya", "dolaşanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "جَائِسِيَّة", "cāʾisiyya", "dolaşanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَجُوسِيَّة", "macūsiyya", "dolaşanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî", "جَوِيسِيَّة", "cawīsiyya", "dolaşanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَجَاسِيَّة", "macāsiyya", "dolaşanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَجْوِيسِيَّة", "tacwīsiyya", "dolaşanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَجَاوُسِيَّة", "tacāwusiyya", "dolaşanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِجَاسِيَّة", "ʾicāsiyya", "dolaşanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِجْتِيَاسِيَّة", "ictiyāsiyya", "dolaşanlık", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [
-        421,
-        "جَوَاس",
-        "cawās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        422,
-        "جُوُوس",
-        "cuwūs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        835,
-        "جِيَاس",
-        "ciyās",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        918,
-        "جُوس",
-        "cūs",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        425,
-        "جَوَاسَة",
-        "cawāsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        837,
-        "جِيَاسَة",
-        "ciyāsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        427,
-        "جُوُوسَة",
-        "cuwūsa",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        428,
-        "جَوْس",
-        "caws",
-        "dolaşma",
-        "orta",
-        ""
-      ],
-      [
-        919,
-        "جِيس",
-        "cīs",
-        "dolaşma",
-        "orta",
-        ""
-      ]
+      ["fa'âl (kelâm, selâm)", "semâî aday", "جَوَاس", "cawās", "dolaşma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday", "جُوُوس", "cuwūs", "dolaşma", "orta", ""],
+      ["fi'âl", "semâî aday · ilal", "جِيَاس", "ciyās", "dolaşma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday · ilal", "جُوس", "cūs", "dolaşma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday", "جَوَاسَة", "cawāsa", "dolaşma", "orta", ""],
+      ["fi'âle", "semâî aday · ilal", "جِيَاسَة", "ciyāsa", "dolaşma", "orta", ""],
+      ["fu'ûle", "semâî aday", "جُوُوسَة", "cuwūsa", "dolaşma", "orta", ""],
+      ["fa'l", "semâî aday", "جَوْس", "caws", "dolaşma", "orta", ""],
+      ["fi'l", "semâî aday · ilal", "جِيس", "cīs", "dolaşma", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [
-        430,
-        "جَاوُوس",
-        "cāwūs",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        432,
-        "جَوَسَة",
-        "cawasa",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        433,
-        "جُوَسَة",
-        "cuwasa",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        434,
-        "أُجْوُوسَة",
-        "ʾucwūsa",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        435,
-        "جَوْوَس",
-        "cawwas",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        437,
-        "جَيْوَس",
-        "caywas",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        439,
-        "جَوْس",
-        "caws",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        840,
-        "جَاس",
-        "cās",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        921,
-        "جِيس",
-        "cīs",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        923,
-        "جُوس",
-        "cūs",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        447,
-        "جَوِيس",
-        "cawīs",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        843,
-        "جِيَس",
-        "ciyas",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        451,
-        "جُوُس",
-        "cuwus",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ],
-      [
-        453,
-        "جَوَاس",
-        "cawās",
-        "dolaşma türünden şey",
-        "orta",
-        ""
-      ]
+      ["fâ'ûl", "semâî aday", "جَاوُوس", "cāwūs", "dolaşma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday", "جَوَسَة", "cawasa", "dolaşma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "جُوَسَة", "cuwasa", "dolaşma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُجْوُوسَة", "ʾucwūsa", "dolaşma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "جَوْوَس", "cawwas", "dolaşma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "جَيْوَس", "caywas", "dolaşma türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "جَوْس", "caws", "dolaşma türünden şey", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "جَاس", "cās", "dolaşma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday · ilal", "جِيس", "cīs", "dolaşma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday · ilal", "جُوس", "cūs", "dolaşma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday", "جَوِيس", "cawīs", "dolaşma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "جِيَس", "ciyas", "dolaşma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday", "جُوُس", "cuwus", "dolaşma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday", "جَوَاس", "cawās", "dolaşma türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [
-        431,
-        "جَاوُوسَة",
-        "cāwūsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        436,
-        "جَوْوَسَة",
-        "cawwasa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        438,
-        "جَيْوَسَة",
-        "caywasa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        440,
-        "جَوْسَة",
-        "cawsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        920,
-        "جَاسَة",
-        "cāsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        922,
-        "جِيسَة",
-        "cīsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        924,
-        "جُوسَة",
-        "cūsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        448,
-        "جَوِيسَة",
-        "cawīsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        925,
-        "جِيَسَة",
-        "ciyasa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        452,
-        "جُوُسَة",
-        "cuwusa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ],
-      [
-        454,
-        "جَوَاسَة",
-        "cawāsa",
-        "dolaşma türünden bir tane",
-        "orta",
-        ""
-      ]
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "جَاوُوسَة", "cāwūsa", "dolaşma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "جَوْوَسَة", "cawwasa", "dolaşma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "جَيْوَسَة", "caywasa", "dolaşma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "جَوْسَة", "cawsa", "dolaşma türünden bir tane", "orta", ""],
+      ["fa'al + tâ (tekili)", "semâî aday · ilal", "جَاسَة", "cāsa", "dolaşma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday · ilal", "جِيسَة", "cīsa", "dolaşma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday · ilal", "جُوسَة", "cūsa", "dolaşma türünden bir tane", "orta", ""],
+      ["fa'îl + tâ (tekili)", "semâî aday", "جَوِيسَة", "cawīsa", "dolaşma türünden bir tane", "orta", ""],
+      ["fi'al + tâ (tekili)", "semâî aday · ilal", "جِيَسَة", "ciyasa", "dolaşma türünden bir tane", "orta", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "جُوُسَة", "cuwusa", "dolaşma türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "جَوَاسَة", "cawāsa", "dolaşma türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [
-        455,
-        "أَجْوَاس",
-        "ʾacwās",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        456,
-        "أَجْوِسَة",
-        "ʾacwisa",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        457,
-        "أَجَاوِس",
-        "ʾacāwis",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        458,
-        "أَجَاوِيس",
-        "ʾacāwīs",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        459,
-        "جُوُوس",
-        "cuwūs",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        460,
-        "جُوُس",
-        "cuwus",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        854,
-        "جِيَاس",
-        "ciyās",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        855,
-        "جِيَس",
-        "ciyas",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        463,
-        "جِوَسَة",
-        "ciwasa",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        464,
-        "جُوَس",
-        "cuwas",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        465,
-        "جُوَساء",
-        "cuwasāʾ",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        466,
-        "جَوَسَة",
-        "cawasa",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        467,
-        "جُوَّاس",
-        "cuwwās",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        468,
-        "جَوَاس",
-        "cawās",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        861,
-        "جَاس",
-        "cās",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        470,
-        "مَجَاوِس",
-        "macāwis",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        471,
-        "مَجَاوِيس",
-        "macāwīs",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        472,
-        "جَوَاوِس",
-        "cawāwis",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        473,
-        "أَجْوُس",
-        "ʾacwus",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        474,
-        "جُوَّس",
-        "cuwwas",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        475,
-        "جَوَائِس",
-        "cawāʾis",
-        "dolaşmalar",
-        "orta",
-        ""
-      ],
-      [
-        476,
-        "جُوَيْس",
-        "cuways",
-        "dolaşmalar",
-        "orta",
-        ""
-      ]
+      ["ef'āl", "semâî aday", "أَجْوَاس", "ʾacwās", "dolaşmalar", "orta", ""],
+      ["ef'ile", "semâî aday", "أَجْوِسَة", "ʾacwisa", "dolaşmalar", "orta", ""],
+      ["efâ'il", "semâî aday", "أَجَاوِس", "ʾacāwis", "dolaşmalar", "orta", ""],
+      ["efâ'îl", "semâî aday", "أَجَاوِيس", "ʾacāwīs", "dolaşmalar", "orta", ""],
+      ["fu'ūl", "semâî aday", "جُوُوس", "cuwūs", "dolaşmalar", "orta", ""],
+      ["fu'ul", "semâî aday", "جُوُس", "cuwus", "dolaşmalar", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "جِيَاس", "ciyās", "dolaşmalar", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "جِيَس", "ciyas", "dolaşmalar", "orta", ""],
+      ["fi'ale", "semâî aday", "جِوَسَة", "ciwasa", "dolaşmalar", "orta", ""],
+      ["fu'al", "semâî aday", "جُوَس", "cuwas", "dolaşmalar", "orta", ""],
+      ["fu'alā'", "semâî aday", "جُوَساء", "cuwasāʾ", "dolaşmalar", "orta", ""],
+      ["fa'ale", "semâî aday", "جَوَسَة", "cawasa", "dolaşmalar", "orta", ""],
+      ["fu''āl", "semâî aday", "جُوَّاس", "cuwwās", "dolaşmalar", "orta", ""],
+      ["fa'āl", "semâî aday", "جَوَاس", "cawās", "dolaşmalar", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "جَاس", "cās", "dolaşmalar", "orta", ""],
+      ["mefâ'il", "semâî aday", "مَجَاوِس", "macāwis", "dolaşmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday", "مَجَاوِيس", "macāwīs", "dolaşmalar", "orta", ""],
+      ["fevâ'il", "semâî aday", "جَوَاوِس", "cawāwis", "dolaşmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَجْوُس", "ʾacwus", "dolaşmalar", "orta", ""],
+      ["fu''al", "semâî aday", "جُوَّس", "cuwwas", "dolaşmalar", "orta", ""],
+      ["fe'âil", "semâî aday", "جَوَائِس", "cawāʾis", "dolaşmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday", "جُوَيْس", "cuways", "dolaşmalar", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [
-        477,
-        "أَجْوَاسَات",
-        "ʾacwāsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        478,
-        "أَجْوِسَات",
-        "ʾacwisāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        479,
-        "أَجَاوِسَات",
-        "ʾacāwisāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        480,
-        "أَجَاوِيسَات",
-        "ʾacāwīsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        481,
-        "جُوُوسَات",
-        "cuwūsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        482,
-        "جُوُسَات",
-        "cuwusāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        872,
-        "جِيَاسَات",
-        "ciyāsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        873,
-        "جِيَسَات",
-        "ciyasāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        485,
-        "جِوَسَات",
-        "ciwasāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        486,
-        "جُوَسَات",
-        "cuwasāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        487,
-        "جُوَساآت",
-        "cuwasāʾāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        488,
-        "جَوَسَات",
-        "cawasāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        489,
-        "جُوَّاسَات",
-        "cuwwāsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        490,
-        "جَوَاسَات",
-        "cawāsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        879,
-        "جَاسَات",
-        "cāsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        492,
-        "مَجَاوِسَات",
-        "macāwisāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        493,
-        "مَجَاوِيسَات",
-        "macāwīsāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        494,
-        "جَوَاوِسَات",
-        "cawāwisāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        495,
-        "أَجْوُسَات",
-        "ʾacwusāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        496,
-        "جُوَّسَات",
-        "cuwwasāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        497,
-        "جَوَائِسَات",
-        "cawāʾisāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ],
-      [
-        498,
-        "جُوَيْسَات",
-        "cuwaysāt",
-        "dolaşmalar topluluğu",
-        "orta",
-        ""
-      ]
+      ["ef'āl + ât", "semâî aday", "أَجْوَاسَات", "ʾacwāsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday", "أَجْوِسَات", "ʾacwisāt", "dolaşmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday", "أَجَاوِسَات", "ʾacāwisāt", "dolaşmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday", "أَجَاوِيسَات", "ʾacāwīsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday", "جُوُوسَات", "cuwūsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday", "جُوُسَات", "cuwusāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "جِيَاسَات", "ciyāsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday · ilal", "جِيَسَات", "ciyasāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday", "جِوَسَات", "ciwasāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday", "جُوَسَات", "cuwasāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu'alā' + ât", "semâî aday", "جُوَساآت", "cuwasāʾāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday", "جَوَسَات", "cawasāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday", "جُوَّاسَات", "cuwwāsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday", "جَوَاسَات", "cawāsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday · ilal", "جَاسَات", "cāsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday", "مَجَاوِسَات", "macāwisāt", "dolaşmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَجَاوِيسَات", "macāwīsāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday", "جَوَاوِسَات", "cawāwisāt", "dolaşmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَجْوُسَات", "ʾacwusāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "جُوَّسَات", "cuwwasāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fe'âil + ât", "semâî aday", "جَوَائِسَات", "cawāʾisāt", "dolaşmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "جُوَيْسَات", "cuwaysāt", "dolaşmalar topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [
-    [
-      "ism-i merre · bâb IV",
-      "if'āl + tâ",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i merre · bâb X",
-      "istif'āl + tâ",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "rubâ‘î",
-      "dört harfli bâblar",
-      "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
+    ["ism-i merre · bâb IV", "if'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i merre · bâb X", "istif'āl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "جوس",
-      "turkce": "Cevs: dolaşmak, gezmek"
-    },
-    "osmanlica_lugatler": {
-      "جاسُ": {
-        "sorgular": [
-          "casu"
-        ],
-        "maddeler": [
-          {
-            "eser": "Kubbe Altı",
-            "madde": "CÂSUS",
-            "arapca": [
-              "جاسوس"
-            ],
-            "mana": "( ﺟﺎﺳﻮﺱ ) i. (Ar. cess “gizli bir şeyi görüp anlamak istemek”ten cāsūs ) 1. Bir devletin askerî, siyâsî ve ekonomik sırlarını başka bir devlet hesâbına gizlice öğrenmekle görevli kimse, ajan: Bu minval üzere emir getiren kimseyi mel’unlar zindana koyup câsustur diye muhkem bağladılar (Kâtip Çelebi’den Seç.). Câsus kullanmayı milletimizin şânına yakıştıramadım ki… (Nâmık Kemal). 2. Başkalarına âit sırları belli bir maksatla ve başkası hesâbına araştırıp öğrenen ve haber veren kimse: Deminden beri câsus gibi pencerenin altından sözlerini dinledim (Nâmık Kemal).",
-            "id": 74964,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          }
-        ]
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "جَوَسَ",
-        "metin": "(جَوَسَ) الْجِيمُ وَالْوَاوُ وَالسِّينُ أَصْلٌ وَاحِدٌ، وَهُوَ تَخَلُّلُ الشَّيْءِ. يُقَالُ: جَاسُوا خِلَالَ الدِّيَارِ يَجُوسُونَ. قَالَ اللَّهُ تَعَالَى: {فَجَاسُوا خِلَالَ الدِّيَارِ} [الإسراء: 5] . وَأَمَّا الْجُوسُ فَلَيْسَ أَصْلًا ; لِأَنَّهُ إِتْبَاعٌ لِلْجُوعِ ; يُقَالُ: جُوعًا لَهُ وَجُوسًا لَهُ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الجيم والسين",
-      "baslik": "جوس",
-      "mihveri": "تخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق).",
-      "sesler": "",
-      "tam_metin": "{فَجَاسُوا خِلَالَ الدِّيَارِ} [الإسراء: 5].\n\"الجُوْسُ - بالضم: الجوع. وجاء يجوس الناسَ أي يتخطاهم \".\n° المعنى المحوري\nتخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (جس): الاختراق بحدّة كما يتمثل في جسّ الشخص بالعين - في (جسس)، والجوسِ خلال الديار - في (جوس)، ووصولِ الحسّ إلى النفس شعورًا خفيًّا - في (وجس)، وصلابة باطن الشيء وجفافه متماسكًا - في (جسد)، وتماسك الشيء شاخصًا ذا أبعاد - في (جسم)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "17:5:12:2",
-      "tur": {
-        "V": 1
-      },
-      "bab": {},
-      "zaman_kip": {
-        "PERF": 1
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "جَاسُ": 1
-      },
-      "bicimler": {
-        "جَاسُ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ǦWS",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ǦWS جوس BP – • HDAL • © SG | 6Mar2023 √ǦWS “root” ▪ ǦWS_1 ‘...’ ↗ ... ▪ ǦWS_2 ‘...’ ↗ ... ▪ ǦWS_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to rummage, peer about, play havoc, overrun; to investigate, spy’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "مجوس",
-        "u": "مجوس",
-        "p": "noun",
-        "t": "From Aramaic 𐡌𐡂𐡅𐡔 (mgwš), from Old Persian 𐎶𐎦𐏁 (m-gu-š /⁠maguš⁠/).\nWas used by the Iraqi Baathist regime to refer to Iran during the Iran-Iraq War in the 1980s, and later developed into a broadly anti-Shi'a slur.",
-        "s": [
-          [
-            "bor",
-            "Aramaic 𐡌𐡂𐡅𐡔 (mgwš)"
-          ],
-          [
-            "der",
-            "Old Persian 𐎶𐎦𐏁 (m-gu-š /⁠maguš⁠/)"
-          ]
-        ],
-        "g": [
-          "Magians, (collective, historical) Zoroastrians",
-          "Iranians",
-          "Shi'as"
-        ],
-        "tag": [
-          "collective",
-          "ethnic",
-          "slur"
-        ],
-        "r": [
-          "majūs"
-        ],
-        "ipa": [
-          "/ma.d͡ʒuːs/"
-        ],
-        "ds": [
-          [
-            "fa",
-            "مَجوس",
-            "majus"
-          ]
-        ],
-        "dr": [
-          "مَجَّسَ",
-          "مَجُوسِيّ"
-        ],
-        "el": [
-          [
-            "𐡌𐡂𐡅𐡔",
-            "𐡌𐡂𐡅𐡔#Aramaic"
-          ],
-          [
-            "𐎶𐎦𐏁",
-            "𐎶𐎦𐏁#Old_Persian"
-          ]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "مجوسي",
-        "u": "مجوسي",
-        "p": "adj",
-        "h": "ar-adj",
-        "e": "مَجُوسِيّ • (majūsiyy)",
-        "t": "Etymology tree\nArabic مَجُوس (majūs)\nProto-Afroasiatic\nProto-Semitic\nArabic ـِيّ (-iyy)\nArabic مجوسي\nFrom مَجُوس (majūs) + ـِيّ (-iyy).",
-        "g": [
-          "a Zoroastrian, Magian"
-        ],
-        "r": [
-          "majūsiyy"
-        ],
-        "ipa": [
-          "/ma.d͡ʒuː.sijj/"
-        ],
-        "ds": [
-          [
-            "az",
-            "məcusi",
-            ""
-          ],
-          [
-            "ba",
-            "мәжүси",
-            "mäjüsiy"
-          ],
-          [
-            "fa",
-            "مجوسی",
-            "majusi"
-          ],
-          [
-            "ota",
-            "مجوسی",
-            "mecusi"
-          ],
-          [
-            "id",
-            "majusi",
-            ""
-          ],
-          [
-            "sw",
-            "majusi",
-            ""
-          ]
-        ],
-        "el": [
-          [
-            "مَجُوس",
-            "مجوس#Arabic"
-          ],
-          [
-            "ـِيّ",
-            "ي#Arabic:_nisba"
-          ],
-          [
-            "مَجُوس",
-            "مجوس#Arabic"
-          ],
-          [
-            "ـِيّ",
-            "ي#Arabic:_nisba"
-          ]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "جيسي",
-        "u": "جيسي",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "جِيسِي • (jīsī) f",
-        "g": [
-          "a female given name, Jessie, from English"
-        ],
-        "r": [
-          "jīsī"
-        ],
-        "ipa": [
-          "/d͡ʒiː.siː/"
-        ],
-        "yol": "müştak"
-      }
-    ],
-    "arabic_ontology": [
-      {
-        "id": "46462",
-        "arapca": [
-          "تَرَحَّلَ",
-          "تَرَحَّلَ عن",
-          "اِرْتَحَلَ",
-          "اِرْتَحَلَ إلى",
-          "اِرْتَحَلَ عن",
-          "طَافَ2",
-          "طَافَ ب2",
-          "طَافَ على2",
-          "طَافَ في2",
-          "طَوَّفَ",
-          "طَوَّفَ ب",
-          "طَوَّفَ في",
-          "جَاسَ",
-          "جالَ",
-          "جالَ ب",
-          "جالَ في",
-          "جَوَّلَ",
-          "جَوَّلَ في",
-          "سَافَرَ",
-          "سَافَرَ إِلَى",
-          "ساحَ2",
-          "ساحَ في",
-          "تَنَقَّلَ",
-          "تَنَقَّلَ من",
-          "تَجَوَّلَ في",
-          "جَابَ1",
-          "جَابَ في"
-        ],
-        "ingilizce": [],
-        "tanim": "الانتقال من مكانٍ إلى آخر",
-        "misal": "_ ابن بطوطة في الكثير من الدول للتعرُّف عليها",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "52528",
-        "arapca": [
-          "طَافَ2",
-          "طَافَ ب2",
-          "طَافَ على2",
-          "طَافَ في2",
-          "جَاسَ",
-          "جالَ",
-          "جالَ ب",
-          "جالَ في",
-          "ساحَ2",
-          "ساحَ في",
-          "تَنَقَّلَ",
-          "تَنَقَّلَ من",
-          "تَحَرَّكَ",
-          "تَجَوَّلَ في",
-          "جَابَ1",
-          "جَابَ في"
-        ],
-        "ingilizce": [],
-        "tanim": "تَحَوَّلَ مِنْ مَكانٍ إلى آخَرَ",
-        "misal": "_ البدو الرحّل في الماضي من مكان إلى آخر طلباً للأكل والماء",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "مَجُوسِيّ": [
-        {
-          "eser": "Vankulu",
-          "madde": "mecusiyy",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Kezâlik Mecûsiyye tâifesine mensûb olan.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْمَجُوسِيُّ",
-          "okunus": "el-mecûsiyy",
-          "koken": "mîmin fethiyle"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Cevese (جَوَسَ)",
-          "metin": "(Cevese) Cim, vav ve sin harfleri tek bir asıldır; o da bir şeyin aralarına girip dolaşmaktır. Nitekim 'câsû hilâle'd-diyâri yecûsûn' (diyarın/evlerin aralarına girip dolaştılar) denir. Allah Teâlâ şöyle buyurmuştur: {Evlerin aralarına girip dolaştılar (fe-câsû hilâle'd-diyâr)} [İsrâ: 5]. 'El-cûs' kelimesine gelince, bu bir asıl değildir; zira 'el-cû' (açlık) kelimesine itbâ'dır (uyum olsun diye peşinden getirilen sözdür). Nitekim 'cû'an lehû ve cûsan lehû' (ona açlık ve perişanlık olsun) denir."
-        }
-      ],
-      "cebel_mihveri": "Bir şeyin arasına şiddetle girip nüfuz etmek ve delip geçmektir. Açlığın şiddetiyle birlikte için boşalması gibi; aradan geçip atlamak açıklık ve aralık yerlerde olur, şiddeti ise eziyet verir. Geceleyin dolaşmak manasındaki 'el-cevesân' bundandır. 'Cevsetü'n-nâziri'llezî lâ yehâr' (fetha ile): dönmeyen, gözünü ayırmayan bakıcının bakışının şiddeti ve kesintisizliği (şiddetle nüfuz etmesi). Fetha ile 'el-cevs': bir şeyi aralarında teftiş ve istiksa ile aramaktır. {Evlerin aralarına girip dolaştılar (fe-câsû hilâle'd-diyâr)} ayeti de bundandır: yani evlerin aralarına girip içindekileri aradılar —tıpkı adamın haberleri araştırması (yecûsü'l-ahbâr) gibi— yahut evlerinin arasında onları öldürdüler. 'El-cevs' ayrıca çiğnemek (ed-devs) demektir (ayağı kuvvetle basmak ki nüfuz eder).",
-      "arabic_ontology": [
-        {
-          "tanim": "Bir mekândan diğer bir mekâna intikal etmek",
-          "misal": "İbn Battuta pek çok memleketi tanımak için oralarda _"
-        },
-        {
-          "tanim": "Bir mekândan bir başka mekâna geçip dolaşmak",
-          "misal": "Göçebe bedeviler geçmişte yiyecek ve su talebiyle bir yerden bir yere _"
-        }
-      ],
-      "etymarab": "Kütüphaneye dön EtymArab ǦWS جوس BP – • HDAL • © SG | 6Mar2023 √ǦWS “kök” ▪ ǦWS_1 ‘...’ ↗ ... ▪ ǦWS_2 ‘...’ ↗ ... ▪ ǦWS_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008’e göre): ‘araştırıp kurcalamak, etrafa göz gezdirmek, tahribat yapmak, istila etmek; tahkik etmek, casusluk yapmak’. ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kaikki_vikisozluk": [
-        {
-          "g": [
-            "Mecusiler, (cemiyet halinde, tarihi) Zerdüştîler",
-            "İranlılar",
-            "Şiiler"
-          ]
-        },
-        {
-          "g": [
-            "bir Zerdüştî, Mecusi"
-          ]
-        },
-        {
-          "g": [
-            "kadın şahıs adı, Jessie, İngilizceden"
-          ]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": [
-      "kalip",
-      "arapca",
-      "latin",
-      "turkce",
-      "guven",
-      "tanik"
-    ]
-  },
-  "tasnif": {
-    "fasil": "جس",
-    "harf": "ج",
-    "mahrec": "şeceriyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "yontem": "Vikisözlük/Arabic Ontology İngilizce karşılığı → Princeton WordNet ilk anlam (makine eşlemesi, AWN kaydı yok)",
+  "mana": {
     "ince": "zoroastrian.a.01",
     "orta": "adj.pert",
     "ust": "hâl ve vasıf",
@@ -4422,34 +2158,8 @@
     "dayanak_tanim": "of or pertaining to Zoroaster or the religion he founded",
     "dayanak_karsilik": "a zoroastrian"
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الجيم والسين",
-    "mihveri": "تخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق).",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (جس): الاختراق بحدّة كما يتمثل في جسّ الشخص بالعين - في (جسس)، والجوسِ خلال الديار - في (جوس)، ووصولِ الحسّ إلى النفس شعورًا خفيًّا - في (وجس)، وصلابة باطن الشيء وجفافه متماسكًا - في (جسد)، وتماسك الشيء شاخصًا ذا أبعاد - في (جسم).",
-    "tam_metin": "{فَجَاسُوا خِلَالَ الدِّيَارِ} [الإسراء: 5].\n\"الجُوْسُ - بالضم: الجوع. وجاء يجوس الناسَ أي يتخطاهم \".\n° المعنى المحوري\nتخلل واختراق بحدة لشيء. كفراغ الجوف مع حدة الجوع، والتخطي يكون من مظان الفُرَج وحِدّته الأذى. ومنه \"الجَوَسان: الطَوَفان بالليل. وجَوْسة الناظر الذي لا يحار - بالفتح: شدة نظره وتتابعه (اختراق بحدة). والجَوْس - بالفتح: طلب الشيء باستقصاء (خلال الأثناء) ومنه {فَجَاسُوا خِلَالَ الدِّيَارِ}: تخللوها فطلبوا ما فيها كما يجوس الرجل الأخبار أي يطلبها، أو قتلوهم بين بيوتهم. والجَوْس أيضًا: الدَوس (دَسُّ الرِجْل بقوة فتخترق)."
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "جاسوا خلال الديار: داروا فيها بالعيث والفساد. وجاء فلان يجوس الناس أي يتخطاهم.",
-    "mecaz": "",
-    "kinaye": "",
-    "mecaz_var": false
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "المقصور والممدود",
-    "bab": "ما يمد فيكون له معنى وإذا مد وقصر كان له معنى آخر",
-    "kok_gecis": 14.0,
-    "kitapta_gecis": 10.0,
-    "zenginlesme": 4.8
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m2",
+  "gomme": {
     "ust": {
       "kume": 6,
       "merkez_kok": "كفت",
@@ -4469,2941 +2179,14 @@
       "boy": 26
     }
   },
-  "kaliplar": {
-    "0": [
-      "masdar · sülâsî mücerred",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "5": [
-      "masdar · sülâsî mücerred",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "6": [
-      "masdar · sülâsî mücerred",
-      "fu'ūl",
-      "semâî aday",
-      ""
-    ],
-    "8": [
-      "masdar · sülâsî mücerred",
-      "fu'āl",
-      "semâî aday",
-      ""
-    ],
-    "9": [
-      "masdar · sülâsî mücerred",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "10": [
-      "masdar · sülâsî mücerred",
-      "fa'āle",
-      "semâî aday",
-      ""
-    ],
-    "11": [
-      "masdar · sülâsî mücerred",
-      "fu'ūle",
-      "semâî aday",
-      ""
-    ],
-    "13": [
-      "masdar · sülâsî mücerred",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "14": [
-      "masdar · sülâsî mücerred",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "15": [
-      "masdar · sülâsî mücerred",
-      "fa'alān",
-      "semâî aday",
-      ""
-    ],
-    "16": [
-      "masdar · sülâsî mücerred",
-      "fu'lān",
-      "semâî aday",
-      ""
-    ],
-    "17": [
-      "masdar · sülâsî mücerred",
-      "fi'lān",
-      "semâî aday",
-      ""
-    ],
-    "18": [
-      "masdar · sülâsî mücerred",
-      "fa'lā",
-      "semâî aday",
-      ""
-    ],
-    "19": [
-      "masdar · sülâsî mücerred",
-      "fu'lā",
-      "semâî aday",
-      ""
-    ],
-    "20": [
-      "masdar · sülâsî mücerred",
-      "fi'lā",
-      "semâî aday",
-      ""
-    ],
-    "21": [
-      "masdar · sülâsî mücerred",
-      "fa'ale",
-      "semâî aday",
-      ""
-    ],
-    "22": [
-      "masdar · sülâsî mücerred",
-      "fi'ale",
-      "semâî aday",
-      ""
-    ],
-    "23": [
-      "masdar · sülâsî mücerred",
-      "fa'lūla",
-      "semâî aday",
-      ""
-    ],
-    "24": [
-      "masdar · sülâsî mücerred",
-      "tuf'ūl",
-      "semâî aday",
-      ""
-    ],
-    "25": [
-      "masdar · sülâsî mücerred",
-      "taf'ila",
-      "semâî aday",
-      ""
-    ],
-    "26": [
-      "masdar · sülâsî mücerred",
-      "taf'ala",
-      "semâî aday",
-      ""
-    ],
-    "27": [
-      "masdar · sülâsî mücerred",
-      "maf'ula",
-      "semâî aday",
-      ""
-    ],
-    "29": [
-      "masdar · bâb II",
-      "taf'īl",
-      "kıyâsî",
-      "II"
-    ],
-    "30": [
-      "masdar · bâb II",
-      "taf'ila",
-      "kıyâsî",
-      "II"
-    ],
-    "31": [
-      "masdar · bâb II",
-      "fi''āl",
-      "kıyâsî",
-      "II"
-    ],
-    "32": [
-      "ism-i merre · bâb II",
-      "taf'īl + tâ",
-      "aday",
-      "II"
-    ],
-    "33": [
-      "ism-i merre · bâb II",
-      "fi''āl + tâ",
-      "aday",
-      "II"
-    ],
-    "34": [
-      "ism-i fâil · bâb II",
-      "mufa''il",
-      "kıyâsî",
-      "II"
-    ],
-    "35": [
-      "ism-i fâil · bâb II",
-      "mufa''il + müennes",
-      "kıyâsî",
-      "II"
-    ],
-    "36": [
-      "ism-i fâil · bâb II",
-      "mufa''il + tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "37": [
-      "ism-i fâil · bâb II",
-      "mufa''il + müennes tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "38": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "II"
-    ],
-    "39": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "II"
-    ],
-    "40": [
-      "ism-i fâil · bâb II",
-      "mufa''il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "II"
-    ],
-    "41": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al",
-      "kıyâsî",
-      "II"
-    ],
-    "42": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "kıyâsî",
-      "II"
-    ],
-    "43": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "44": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes tesniye",
-      "kıyâsî",
-      "II"
-    ],
-    "45": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "II"
-    ],
-    "46": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "II"
-    ],
-    "47": [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "II"
-    ],
-    "48": [
-      "mekân/zaman/masdar-ı mîmî · bâb II",
-      "mufa''al",
-      "kıyâsî",
-      "II"
-    ],
-    "49": [
-      "masdar · bâb III",
-      "mufā'ale",
-      "kıyâsî",
-      "III"
-    ],
-    "52": [
-      "ism-i fâil · bâb III",
-      "mufā'il",
-      "kıyâsî",
-      "III"
-    ],
-    "53": [
-      "ism-i fâil · bâb III",
-      "mufā'il + müennes",
-      "kıyâsî",
-      "III"
-    ],
-    "54": [
-      "ism-i fâil · bâb III",
-      "mufā'il + tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "55": [
-      "ism-i fâil · bâb III",
-      "mufā'il + müennes tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "56": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "III"
-    ],
-    "57": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "III"
-    ],
-    "58": [
-      "ism-i fâil · bâb III",
-      "mufā'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "III"
-    ],
-    "59": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al",
-      "kıyâsî",
-      "III"
-    ],
-    "60": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "kıyâsî",
-      "III"
-    ],
-    "61": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "62": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes tesniye",
-      "kıyâsî",
-      "III"
-    ],
-    "63": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "III"
-    ],
-    "64": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "III"
-    ],
-    "65": [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "III"
-    ],
-    "66": [
-      "mekân/zaman/masdar-ı mîmî · bâb III",
-      "mufā'al",
-      "kıyâsî",
-      "III"
-    ],
-    "84": [
-      "masdar · bâb V",
-      "tafa''ul",
-      "kıyâsî",
-      "V"
-    ],
-    "85": [
-      "ism-i merre · bâb V",
-      "tafa''ul + tâ",
-      "aday",
-      "V"
-    ],
-    "86": [
-      "ism-i fâil · bâb V",
-      "mutafa''il",
-      "kıyâsî",
-      "V"
-    ],
-    "87": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + müennes",
-      "kıyâsî",
-      "V"
-    ],
-    "88": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "89": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + müennes tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "90": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "V"
-    ],
-    "91": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "V"
-    ],
-    "92": [
-      "ism-i fâil · bâb V",
-      "mutafa''il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "V"
-    ],
-    "93": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al",
-      "kıyâsî",
-      "V"
-    ],
-    "94": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "kıyâsî",
-      "V"
-    ],
-    "95": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "96": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes tesniye",
-      "kıyâsî",
-      "V"
-    ],
-    "97": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "V"
-    ],
-    "98": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "V"
-    ],
-    "99": [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "V"
-    ],
-    "100": [
-      "mekân/zaman/masdar-ı mîmî · bâb V",
-      "mutafa''al",
-      "kıyâsî",
-      "V"
-    ],
-    "101": [
-      "masdar · bâb VI",
-      "tafā'ul",
-      "kıyâsî",
-      "VI"
-    ],
-    "102": [
-      "ism-i merre · bâb VI",
-      "tafā'ul + tâ",
-      "aday",
-      "VI"
-    ],
-    "103": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il",
-      "kıyâsî",
-      "VI"
-    ],
-    "104": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + müennes",
-      "kıyâsî",
-      "VI"
-    ],
-    "105": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "106": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + müennes tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "107": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VI"
-    ],
-    "108": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VI"
-    ],
-    "109": [
-      "ism-i fâil · bâb VI",
-      "mutafā'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VI"
-    ],
-    "110": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al",
-      "kıyâsî",
-      "VI"
-    ],
-    "111": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "kıyâsî",
-      "VI"
-    ],
-    "112": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "113": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes tesniye",
-      "kıyâsî",
-      "VI"
-    ],
-    "114": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "VI"
-    ],
-    "115": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "VI"
-    ],
-    "116": [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "VI"
-    ],
-    "117": [
-      "mekân/zaman/masdar-ı mîmî · bâb VI",
-      "mutafā'al",
-      "kıyâsî",
-      "VI"
-    ],
-    "168": [
-      "masdar · bâb IX (illet harfi izhar)",
-      "if'ilāl",
-      "semâî aday",
-      "IX"
-    ],
-    "169": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all",
-      "kıyâsî",
-      "IX"
-    ],
-    "170": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + müennes",
-      "kıyâsî",
-      "IX"
-    ],
-    "171": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + tesniye",
-      "kıyâsî",
-      "IX"
-    ],
-    "172": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + müennes tesniye",
-      "kıyâsî",
-      "IX"
-    ],
-    "173": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "IX"
-    ],
-    "174": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "IX"
-    ],
-    "175": [
-      "ism-i fâil · bâb IX (illet harfi izhar)",
-      "muf'all + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "IX"
-    ],
-    "193": [
-      "masdar · bâb XI (illet harfi izhar)",
-      "if'īlāl",
-      "semâî aday",
-      "XI"
-    ],
-    "194": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll",
-      "kıyâsî",
-      "XI"
-    ],
-    "195": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + müennes",
-      "kıyâsî",
-      "XI"
-    ],
-    "196": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + tesniye",
-      "kıyâsî",
-      "XI"
-    ],
-    "197": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + müennes tesniye",
-      "kıyâsî",
-      "XI"
-    ],
-    "198": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî",
-      "XI"
-    ],
-    "199": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî",
-      "XI"
-    ],
-    "200": [
-      "ism-i fâil · bâb XI (illet harfi izhar)",
-      "muf'āll + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî",
-      "XI"
-    ],
-    "201": [
-      "masdar · bâb XII (illet harfi izhar)",
-      "if'iv'āl",
-      "semâî aday",
-      "XII"
-    ],
-    "202": [
-      "masdar · bâb XIII (illet harfi izhar)",
-      "if'ivvāl",
-      "semâî aday",
-      "XIII"
-    ],
-    "235": [
-      "âlet · sülâsî",
-      "mif'al",
-      "kıyâsî",
-      ""
-    ],
-    "236": [
-      "âlet · sülâsî",
-      "mif'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "237": [
-      "âlet · sülâsî",
-      "mif'âl",
-      "kıyâsî",
-      ""
-    ],
-    "238": [
-      "âlet · sülâsî",
-      "mif'âl + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "239": [
-      "âlet · sülâsî",
-      "mif'ale",
-      "kıyâsî",
-      ""
-    ],
-    "240": [
-      "âlet · sülâsî",
-      "mif'ale + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "241": [
-      "tafdîl · sülâsî",
-      "af'al",
-      "kıyâsî",
-      ""
-    ],
-    "242": [
-      "tafdîl · sülâsî",
-      "af'al + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "243": [
-      "tafdîl (müennes) · sülâsî",
-      "fu'lâ",
-      "kıyâsî",
-      ""
-    ],
-    "244": [
-      "tafdîl (müennes) · sülâsî",
-      "fu'lâ + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "245": [
-      "tafdîl (müennes) · sülâsî",
-      "fa'lâ'",
-      "kıyâsî",
-      ""
-    ],
-    "246": [
-      "tafdîl (müennes) · sülâsî",
-      "fa'lâ' + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "247": [
-      "mekân/zaman · sülâsî",
-      "maf'ula",
-      "kıyâsî",
-      ""
-    ],
-    "248": [
-      "mekân/zaman · sülâsî",
-      "maf'ula + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "249": [
-      "tasğîr · sülâsî",
-      "fu'ayl",
-      "kıyâsî",
-      ""
-    ],
-    "250": [
-      "tasğîr · sülâsî",
-      "fu'ayl + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "251": [
-      "tasğîr · sülâsî",
-      "fu'ayle",
-      "kıyâsî",
-      ""
-    ],
-    "252": [
-      "tasğîr · sülâsî",
-      "fu'ayle + tesniye",
-      "kıyâsî",
-      ""
-    ],
-    "255": [
-      "ism-i merre · sülâsî",
-      "fa'le",
-      "aday",
-      ""
-    ],
-    "256": [
-      "ism-i merre · sülâsî",
-      "fa'le + tesniye",
-      "aday",
-      ""
-    ],
-    "259": [
-      "sıfat-ı müşebbehe",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "260": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "261": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "262": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "263": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "264": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "265": [
-      "sıfat-ı müşebbehe",
-      "fa'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "266": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "267": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "268": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "269": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "270": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "271": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "272": [
-      "sıfat-ı müşebbehe",
-      "fa'ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "273": [
-      "sıfat-ı müşebbehe",
-      "fa'il",
-      "semâî aday",
-      ""
-    ],
-    "274": [
-      "sıfat-ı müşebbehe",
-      "fa'il + müennes",
-      "semâî aday",
-      ""
-    ],
-    "275": [
-      "sıfat-ı müşebbehe",
-      "fa'il + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "276": [
-      "sıfat-ı müşebbehe",
-      "fa'il + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "277": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "278": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "279": [
-      "sıfat-ı müşebbehe",
-      "fa'il + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "280": [
-      "sıfat-ı müşebbehe",
-      "fa'ul",
-      "semâî aday",
-      ""
-    ],
-    "281": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + müennes",
-      "semâî aday",
-      ""
-    ],
-    "282": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "283": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "284": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "285": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "286": [
-      "sıfat-ı müşebbehe",
-      "fa'ul + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "294": [
-      "sıfat-ı müşebbehe",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "295": [
-      "sıfat-ı müşebbehe",
-      "fa'l + müennes",
-      "semâî aday",
-      ""
-    ],
-    "296": [
-      "sıfat-ı müşebbehe",
-      "fa'l + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "297": [
-      "sıfat-ı müşebbehe",
-      "fa'l + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "298": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "299": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "300": [
-      "sıfat-ı müşebbehe",
-      "fa'l + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "301": [
-      "sıfat-ı müşebbehe",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "302": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + müennes",
-      "semâî aday",
-      ""
-    ],
-    "303": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "304": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "305": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "306": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "307": [
-      "sıfat-ı müşebbehe",
-      "fu'ul + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "308": [
-      "sıfat-ı müşebbehe",
-      "fa'lān",
-      "semâî aday",
-      ""
-    ],
-    "309": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + müennes",
-      "semâî aday",
-      ""
-    ],
-    "310": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "311": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "312": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "313": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "314": [
-      "sıfat-ı müşebbehe",
-      "fa'lān + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "315": [
-      "sıfat-ı müşebbehe",
-      "fu'āl",
-      "semâî aday",
-      ""
-    ],
-    "316": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "317": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "318": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "319": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "320": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "321": [
-      "sıfat-ı müşebbehe",
-      "fu'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "322": [
-      "sıfat-ı müşebbehe",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "323": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "324": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "325": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "326": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "327": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "328": [
-      "sıfat-ı müşebbehe",
-      "fa'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "329": [
-      "mübalağa",
-      "fa''āl",
-      "semâî aday",
-      ""
-    ],
-    "330": [
-      "mübalağa",
-      "fa''āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "331": [
-      "mübalağa",
-      "fa''āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "332": [
-      "mübalağa",
-      "fa''āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "333": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "334": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "335": [
-      "mübalağa",
-      "fa''āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "336": [
-      "mübalağa",
-      "fa''āle",
-      "semâî aday",
-      ""
-    ],
-    "337": [
-      "mübalağa",
-      "fa''āle + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "338": [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "339": [
-      "mübalağa",
-      "fa'ūl",
-      "semâî aday",
-      ""
-    ],
-    "340": [
-      "mübalağa",
-      "fa'ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "341": [
-      "mübalağa",
-      "fa'ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "342": [
-      "mübalağa",
-      "fa'ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "343": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "344": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "345": [
-      "mübalağa",
-      "fa'ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "346": [
-      "mübalağa",
-      "fa''ūl",
-      "semâî aday",
-      ""
-    ],
-    "347": [
-      "mübalağa",
-      "fa''ūl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "348": [
-      "mübalağa",
-      "fa''ūl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "349": [
-      "mübalağa",
-      "fa''ūl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "350": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "351": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "352": [
-      "mübalağa",
-      "fa''ūl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "353": [
-      "mübalağa",
-      "fi''īl",
-      "semâî aday",
-      ""
-    ],
-    "354": [
-      "mübalağa",
-      "fi''īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "355": [
-      "mübalağa",
-      "fi''īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "356": [
-      "mübalağa",
-      "fi''īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "357": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "358": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "359": [
-      "mübalağa",
-      "fi''īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "360": [
-      "mübalağa",
-      "fu''āl",
-      "semâî aday",
-      ""
-    ],
-    "361": [
-      "mübalağa",
-      "fu''āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "362": [
-      "mübalağa",
-      "fu''āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "363": [
-      "mübalağa",
-      "fu''āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "364": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "365": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "366": [
-      "mübalağa",
-      "fu''āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "367": [
-      "mübalağa",
-      "mif'āl",
-      "semâî aday",
-      ""
-    ],
-    "368": [
-      "mübalağa",
-      "mif'āl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "369": [
-      "mübalağa",
-      "mif'āl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "370": [
-      "mübalağa",
-      "mif'āl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "371": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "372": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "373": [
-      "mübalağa",
-      "mif'āl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "374": [
-      "mübalağa",
-      "mif'īl",
-      "semâî aday",
-      ""
-    ],
-    "375": [
-      "mübalağa",
-      "mif'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "376": [
-      "mübalağa",
-      "mif'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "377": [
-      "mübalağa",
-      "mif'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "378": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "379": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "380": [
-      "mübalağa",
-      "mif'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "381": [
-      "mübalağa",
-      "fa'īl",
-      "semâî aday",
-      ""
-    ],
-    "382": [
-      "mübalağa",
-      "fa'īl + müennes",
-      "semâî aday",
-      ""
-    ],
-    "383": [
-      "mübalağa",
-      "fa'īl + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "384": [
-      "mübalağa",
-      "fa'īl + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "385": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "386": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "387": [
-      "mübalağa",
-      "fa'īl + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "388": [
-      "mübalağa",
-      "fa''al",
-      "semâî aday",
-      ""
-    ],
-    "389": [
-      "mübalağa",
-      "fa''al + müennes",
-      "semâî aday",
-      ""
-    ],
-    "390": [
-      "mübalağa",
-      "fa''al + tesniye",
-      "semâî aday",
-      ""
-    ],
-    "391": [
-      "mübalağa",
-      "fa''al + müennes tesniye",
-      "semâî aday",
-      ""
-    ],
-    "392": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday",
-      ""
-    ],
-    "393": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müzekker (-în)",
-      "semâî aday",
-      ""
-    ],
-    "394": [
-      "mübalağa",
-      "fa''al + cem‘-i sâlim müennes (-ât)",
-      "semâî aday",
-      ""
-    ],
-    "395": [
-      "mensûb",
-      "fa'l + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "396": [
-      "masdar-ı sınâî",
-      "fa'l + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "409": [
-      "mensûb",
-      "fa'īl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "410": [
-      "masdar-ı sınâî",
-      "fa'īl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "413": [
-      "mensûb",
-      "taf'īl + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "414": [
-      "masdar-ı sınâî",
-      "taf'īl + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "415": [
-      "mensûb",
-      "tafā'ul + iyy",
-      "kıyâsî",
-      ""
-    ],
-    "416": [
-      "masdar-ı sınâî",
-      "tafā'ul + iyye",
-      "kıyâsî",
-      ""
-    ],
-    "421": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday",
-      ""
-    ],
-    "422": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'ûl (vudû')",
-      "semâî aday",
-      ""
-    ],
-    "425": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âle (belâğa)",
-      "semâî aday",
-      ""
-    ],
-    "427": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'ûle",
-      "semâî aday",
-      ""
-    ],
-    "428": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "430": [
-      "ism-i cins · ifrâdî (aday)",
-      "fâ'ûl",
-      "semâî aday",
-      ""
-    ],
-    "431": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fâ'ûl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "432": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'ala",
-      "semâî aday",
-      ""
-    ],
-    "433": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'ala",
-      "semâî aday",
-      ""
-    ],
-    "434": [
-      "ism-i cins · ifrâdî (aday)",
-      "uf'ûla",
-      "semâî aday",
-      ""
-    ],
-    "435": [
-      "ism-i cins · ifrâdî (aday)",
-      "faw'al",
-      "semâî aday",
-      ""
-    ],
-    "436": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "faw'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "437": [
-      "ism-i cins · ifrâdî (aday)",
-      "fay'al",
-      "semâî aday",
-      ""
-    ],
-    "438": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fay'al + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "439": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'l",
-      "semâî aday",
-      ""
-    ],
-    "440": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'l + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "447": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'îl",
-      "semâî aday",
-      ""
-    ],
-    "448": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'îl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "451": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "452": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ul + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "453": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'âl",
-      "semâî aday",
-      ""
-    ],
-    "454": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'âl + tâ (tekili)",
-      "semâî aday",
-      ""
-    ],
-    "455": [
-      "cem‘-i mükesser (aday)",
-      "ef'āl",
-      "semâî aday",
-      ""
-    ],
-    "456": [
-      "cem‘-i mükesser (aday)",
-      "ef'ile",
-      "semâî aday",
-      ""
-    ],
-    "457": [
-      "cem‘-i mükesser (aday)",
-      "efâ'il",
-      "semâî aday",
-      ""
-    ],
-    "458": [
-      "cem‘-i mükesser (aday)",
-      "efâ'îl",
-      "semâî aday",
-      ""
-    ],
-    "459": [
-      "cem‘-i mükesser (aday)",
-      "fu'ūl",
-      "semâî aday",
-      ""
-    ],
-    "460": [
-      "cem‘-i mükesser (aday)",
-      "fu'ul",
-      "semâî aday",
-      ""
-    ],
-    "463": [
-      "cem‘-i mükesser (aday)",
-      "fi'ale",
-      "semâî aday",
-      ""
-    ],
-    "464": [
-      "cem‘-i mükesser (aday)",
-      "fu'al",
-      "semâî aday",
-      ""
-    ],
-    "465": [
-      "cem‘-i mükesser (aday)",
-      "fu'alā'",
-      "semâî aday",
-      ""
-    ],
-    "466": [
-      "cem‘-i mükesser (aday)",
-      "fa'ale",
-      "semâî aday",
-      ""
-    ],
-    "467": [
-      "cem‘-i mükesser (aday)",
-      "fu''āl",
-      "semâî aday",
-      ""
-    ],
-    "468": [
-      "cem‘-i mükesser (aday)",
-      "fa'āl",
-      "semâî aday",
-      ""
-    ],
-    "470": [
-      "cem‘-i mükesser (aday)",
-      "mefâ'il",
-      "semâî aday",
-      ""
-    ],
-    "471": [
-      "cem‘-i mükesser (aday)",
-      "mefâ'îl",
-      "semâî aday",
-      ""
-    ],
-    "472": [
-      "cem‘-i mükesser (aday)",
-      "fevâ'il",
-      "semâî aday",
-      ""
-    ],
-    "473": [
-      "cem‘-i mükesser (aday)",
-      "af'ul",
-      "semâî aday",
-      ""
-    ],
-    "474": [
-      "cem‘-i mükesser (aday)",
-      "fu''al",
-      "semâî aday",
-      ""
-    ],
-    "475": [
-      "cem‘-i mükesser (aday)",
-      "fe'âil",
-      "semâî aday",
-      ""
-    ],
-    "476": [
-      "cem‘-i mükesser (aday)",
-      "fu'ayl(cem')",
-      "semâî aday",
-      ""
-    ],
-    "477": [
-      "cem‘u’l-cem‘ (aday)",
-      "ef'āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "478": [
-      "cem‘u’l-cem‘ (aday)",
-      "ef'ile + ât",
-      "semâî aday",
-      ""
-    ],
-    "479": [
-      "cem‘u’l-cem‘ (aday)",
-      "efâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "480": [
-      "cem‘u’l-cem‘ (aday)",
-      "efâ'îl + ât",
-      "semâî aday",
-      ""
-    ],
-    "481": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ūl + ât",
-      "semâî aday",
-      ""
-    ],
-    "482": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ul + ât",
-      "semâî aday",
-      ""
-    ],
-    "485": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'ale + ât",
-      "semâî aday",
-      ""
-    ],
-    "486": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'al + ât",
-      "semâî aday",
-      ""
-    ],
-    "487": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'alā' + ât",
-      "semâî aday",
-      ""
-    ],
-    "488": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'ale + ât",
-      "semâî aday",
-      ""
-    ],
-    "489": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu''āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "490": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'āl + ât",
-      "semâî aday",
-      ""
-    ],
-    "492": [
-      "cem‘u’l-cem‘ (aday)",
-      "mefâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "493": [
-      "cem‘u’l-cem‘ (aday)",
-      "mefâ'îl + ât",
-      "semâî aday",
-      ""
-    ],
-    "494": [
-      "cem‘u’l-cem‘ (aday)",
-      "fevâ'il + ât",
-      "semâî aday",
-      ""
-    ],
-    "495": [
-      "cem‘u’l-cem‘ (aday)",
-      "af'ul + ât",
-      "semâî aday",
-      ""
-    ],
-    "496": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu''al + ât",
-      "semâî aday",
-      ""
-    ],
-    "497": [
-      "cem‘u’l-cem‘ (aday)",
-      "fe'âil + ât",
-      "semâî aday",
-      ""
-    ],
-    "498": [
-      "cem‘u’l-cem‘ (aday)",
-      "fu'ayl(cem') + ât",
-      "semâî aday",
-      ""
-    ],
-    "517": [
-      "masdar · sülâsî mücerred",
-      "fa'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "518": [
-      "masdar · sülâsî mücerred",
-      "fi'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "521": [
-      "masdar · sülâsî mücerred",
-      "fi'āl",
-      "semâî aday · ilal",
-      ""
-    ],
-    "526": [
-      "masdar · sülâsî mücerred",
-      "fi'āle",
-      "semâî aday · ilal",
-      ""
-    ],
-    "533": [
-      "masdar · sülâsî mücerred",
-      "maf'ila",
-      "semâî aday · ilal",
-      ""
-    ],
-    "552": [
-      "masdar · bâb III",
-      "fi'āl",
-      "kıyâsî · ilal",
-      "III"
-    ],
-    "553": [
-      "ism-i merre · bâb III",
-      "fi'āl + tâ",
-      "aday · ilal",
-      "III"
-    ],
-    "567": [
-      "masdar · bâb IV",
-      "if'āl",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "569": [
-      "ism-i fâil · bâb IV",
-      "muf'il",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "570": [
-      "ism-i fâil · bâb IV",
-      "muf'il + müennes",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "571": [
-      "ism-i fâil · bâb IV",
-      "muf'il + tesniye",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "572": [
-      "ism-i fâil · bâb IV",
-      "muf'il + müennes tesniye",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "573": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "574": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "575": [
-      "ism-i fâil · bâb IV",
-      "muf'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "576": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "577": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + tesniye",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "578": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "579": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "580": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "581": [
-      "mekân/zaman/masdar-ı mîmî · bâb IV",
-      "muf'al",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "610": [
-      "masdar · bâb VII",
-      "infi'āl",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "611": [
-      "ism-i merre · bâb VII",
-      "infi'āl + tâ",
-      "aday · ilal",
-      "VII"
-    ],
-    "612": [
-      "ism-i fâil · bâb VII",
-      "munfa'il",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "613": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + müennes",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "614": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + tesniye",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "615": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + müennes tesniye",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "616": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "617": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "618": [
-      "ism-i fâil · bâb VII",
-      "munfa'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "VII"
-    ],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": [
-      "masdar · bâb VIII",
-      "ifti'āl",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "627": [
-      "ism-i merre · bâb VIII",
-      "ifti'āl + tâ",
-      "aday · ilal",
-      "VIII"
-    ],
-    "628": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "629": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + müennes",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "630": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + tesniye",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "631": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + müennes tesniye",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "632": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "633": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "634": [
-      "ism-i fâil · bâb VIII",
-      "muftaʿil + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "635": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "636": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + tesniye",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "637": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "638": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "639": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "640": [
-      "mekân/zaman/masdar-ı mîmî · bâb VIII",
-      "muftaʿal",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "662": [
-      "masdar · bâb X",
-      "istif'āl",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "664": [
-      "ism-i fâil · bâb X",
-      "mustaf'il",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "665": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + müennes",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "666": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + tesniye",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "667": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + müennes tesniye",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "668": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "669": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "670": [
-      "ism-i fâil · bâb X",
-      "mustaf'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "671": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "672": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + tesniye",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "673": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "674": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "675": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "676": [
-      "mekân/zaman/masdar-ı mîmî · bâb X",
-      "mustaf'al",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "687": [
-      "ism-i fâil · sülâsî",
-      "fâ'il",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "688": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + müennes",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "689": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "690": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + müennes tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "691": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "692": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "693": [
-      "ism-i fâil · sülâsî",
-      "fâ'il + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "694": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "695": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + müennes",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "696": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "697": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + müennes tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "698": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "699": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müzekker (-în)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "700": [
-      "ism-i mef‘ûl · sülâsî",
-      "maf'ûl + cem‘-i sâlim müennes (-ât)",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "701": [
-      "mekân/zaman · sülâsî",
-      "maf'al",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "702": [
-      "mekân/zaman · sülâsî",
-      "maf'al + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "703": [
-      "mekân/zaman · sülâsî",
-      "maf'il",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "704": [
-      "mekân/zaman · sülâsî",
-      "maf'il + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "705": [
-      "mekân/zaman · sülâsî",
-      "maf'ale",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "706": [
-      "mekân/zaman · sülâsî",
-      "maf'ale + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "707": [
-      "mekân/zaman · sülâsî",
-      "maf'ile",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "708": [
-      "mekân/zaman · sülâsî",
-      "maf'ile + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "723": [
-      "masdar-ı mîmî · sülâsî",
-      "maf'al",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "724": [
-      "masdar-ı mîmî · sülâsî",
-      "maf'al + tesniye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "753": [
-      "sıfat-ı müşebbehe",
-      "fa'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "754": [
-      "sıfat-ı müşebbehe",
-      "fa'al + tesniye",
-      "semâî aday · ilal",
-      ""
-    ],
-    "755": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müennes (-ât)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "815": [
-      "mensûb",
-      "fi'āl + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "816": [
-      "masdar-ı sınâî",
-      "fi'āl + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "817": [
-      "mensûb",
-      "fâ'il + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "818": [
-      "masdar-ı sınâî",
-      "fâ'il + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "819": [
-      "mensûb",
-      "maf'ûl + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "820": [
-      "masdar-ı sınâî",
-      "maf'ûl + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "823": [
-      "mensûb",
-      "maf'al + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "824": [
-      "masdar-ı sınâî",
-      "maf'al + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "829": [
-      "mensûb",
-      "if'āl + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "830": [
-      "masdar-ı sınâî",
-      "if'āl + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "831": [
-      "mensûb",
-      "ifti'āl + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "832": [
-      "masdar-ı sınâî",
-      "ifti'āl + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "835": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'âl",
-      "semâî aday · ilal",
-      ""
-    ],
-    "837": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'âle",
-      "semâî aday · ilal",
-      ""
-    ],
-    "840": [
-      "ism-i cins · ifrâdî (aday)",
-      "fa'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "843": [
-      "ism-i cins · ifrâdî (aday)",
-      "fi'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "854": [
-      "cem‘-i mükesser (aday)",
-      "fi'āl",
-      "semâî aday · ilal",
-      ""
-    ],
-    "855": [
-      "cem‘-i mükesser (aday)",
-      "fi'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "861": [
-      "cem‘-i mükesser (aday)",
-      "fa'al",
-      "semâî aday · ilal",
-      ""
-    ],
-    "872": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'āl + ât",
-      "semâî aday · ilal",
-      ""
-    ],
-    "873": [
-      "cem‘u’l-cem‘ (aday)",
-      "fi'al + ât",
-      "semâî aday · ilal",
-      ""
-    ],
-    "879": [
-      "cem‘u’l-cem‘ (aday)",
-      "fa'al + ât",
-      "semâî aday · ilal",
-      ""
-    ],
-    "884": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-ûn)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "885": [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-în)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "886": [
-      "mensûb",
-      "fa'al + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "887": [
-      "masdar-ı sınâî",
-      "fa'al + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "888": [
-      "masdar · sülâsî mücerred",
-      "fi'l",
-      "semâî aday · ilal",
-      ""
-    ],
-    "889": [
-      "masdar · sülâsî mücerred",
-      "fu'l",
-      "semâî aday · ilal",
-      ""
-    ],
-    "890": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + müennes",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "891": [
-      "ism-i mef‘ûl · bâb IV",
-      "muf'al + müennes tesniye",
-      "kıyâsî · ilal",
-      "IV"
-    ],
-    "892": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "893": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "894": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "895": [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes tesniye",
-      "kıyâsî · ilal",
-      "VIII"
-    ],
-    "898": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "899": [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes tesniye",
-      "kıyâsî · ilal",
-      "X"
-    ],
-    "900": [
-      "masdar · bâb X (vâvı muhafaza: semâî istisnâ)",
-      "istif'āl",
-      "semâî aday",
-      "X"
-    ],
-    "901": [
-      "ism-i fâil · bâb X (vâvı muhafaza: semâî istisnâ)",
-      "mustaf'il",
-      "semâî aday",
-      "X"
-    ],
-    "902": [
-      "ism-i mef‘ûl · bâb X (vâvı muhafaza: semâî istisnâ)",
-      "mustaf'al",
-      "semâî aday",
-      "X"
-    ],
-    "903": [
-      "ism-i hey'et · sülâsî",
-      "fi'le",
-      "aday · ilal",
-      ""
-    ],
-    "904": [
-      "ism-i hey'et · sülâsî",
-      "fi'le + tesniye",
-      "aday · ilal",
-      ""
-    ],
-    "905": [
-      "sıfat-ı müşebbehe",
-      "fa'al + müennes",
-      "semâî aday · ilal",
-      ""
-    ],
-    "906": [
-      "sıfat-ı müşebbehe",
-      "fa'al + müennes tesniye",
-      "semâî aday · ilal",
-      ""
-    ],
-    "907": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "908": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "909": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + tesniye",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "910": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + müennes tesniye",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "911": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-ûn)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "912": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müzekker (-în)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "913": [
-      "sıfat-ı müşebbehe",
-      "fay'il (ecvef: seyyid, meyyit, tayyib) + cem‘-i sâlim müennes (-ât)",
-      "ecvef kıyâsı",
-      ""
-    ],
-    "914": [
-      "mensûb",
-      "fi'l + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "915": [
-      "masdar-ı sınâî",
-      "fi'l + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "916": [
-      "mensûb",
-      "fu'l + iyy",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "917": [
-      "masdar-ı sınâî",
-      "fu'l + iyye",
-      "kıyâsî · ilal",
-      ""
-    ],
-    "918": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fu'l (şükr)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "919": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fi'l",
-      "semâî aday · ilal",
-      ""
-    ],
-    "920": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "921": [
-      "ism-i cins · ifrâdî (aday)",
-      "fi'l",
-      "semâî aday · ilal",
-      ""
-    ],
-    "922": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'l + tâ (tekili)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "923": [
-      "ism-i cins · ifrâdî (aday)",
-      "fu'l",
-      "semâî aday · ilal",
-      ""
-    ],
-    "924": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'l + tâ (tekili)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "925": [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "semâî aday · ilal",
-      ""
-    ]
+  "muhassas": {
+    "kitap": "المقصور والممدود",
+    "bab": "ما يمد فيكون له معنى وإذا مد وقصر كان له معنى آخر",
+    "kok_gecis": 14.0,
+    "kitapta_gecis": 10.0,
+    "zenginlesme": 4.8
   },
-  "kelimeler": [
-    {
-      "kelime": "فَجَاسُوا۟",
-      "kok": "جوس",
-      "lemma": "جاسُ",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "17:5",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "dolaştı",
-        "lemma": "dolaştı",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 1,
-      "isim": 0
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": {
-    "ad": "Aktarım",
-    "ayrim": "dolaş",
-    "acilim": "جوس := Aktarım(ayrım: dolaş)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Aktarım",
-    "kelimeler": [
-      {
-        "lemma": "جاسُ",
-        "hal": "fiil",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": ["Mâzî"],
-        "adet": 1,
-        "nasil": "bâb I (fe'ale): sülâsî mücerred: baz fiilin kendisi"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

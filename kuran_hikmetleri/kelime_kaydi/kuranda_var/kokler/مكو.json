@@ -1,857 +1,2155 @@
 {
   "kok": "مكو",
+  "tur": "isim",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["fiil-yok"],
+  "lugat_fiil": false,
+  "tur_kuran": {
+    "fiil": 0,
+    "isim": 1
+  },
+  "fiil": "ıslık çal",
+  "fiil_kaynak": "fiil",
+  "fiil_guven": "orta",
   "sinif": "nâkıs",
-  "turkce_fiil": {
-    "sap": "ıslık çal",
-    "kaynak": "fiil",
-    "guven": "orta"
-  },
-  "mustaklar": {
-    "masdar · sülâsî mücerred": [
-      [0, "مَكْو", "makw", "ıslık çalma", "orta", ""],
-      [1, "مِكْو", "mikw", "ıslık çalma", "orta", ""],
-      [2, "مُكْو", "mukw", "ıslık çalma", "orta", ""],
-      [517, "مَكَا", "makā", "ıslık çalma", "orta", ""],
-      [518, "مِكَى", "mikā", "ıslık çalma", "orta", ""],
-      [519, "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
-      [520, "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
-      [521, "مِكَاء", "mikāʾ", "ıslık çalma", "orta", ""],
-      [522, "مُكَاء", "mukāʾ", "ıslık çalma", "orta", ""],
-      [523, "مَكَاء", "makāʾ", "ıslık çalma", "orta", ""],
-      [524, "مَكَاة", "makā", "ıslık çalma", "orta", ""],
-      [525, "مُكُوَّة", "mukuwwa", "ıslık çalma", "orta", ""],
-      [526, "مِكَايَة", "mikāya", "ıslık çalma", "orta", ""],
-      [527, "مَكِيّ", "makiyy", "ıslık çalma", "orta", ""],
-      [528, "مَكُوّ", "makuww", "ıslık çalma", "orta", ""],
-      [15, "مَكَوَان", "makawān", "ıslık çalma", "orta", ""],
-      [16, "مُكْوَان", "mukwān", "ıslık çalma", "orta", ""],
-      [17, "مِكْوَان", "mikwān", "ıslık çalma", "orta", ""],
-      [18, "مَكْوَى", "makwā", "ıslık çalma", "orta", ""],
-      [529, "مُكْيَى", "mukyā", "ıslık çalma", "orta", ""],
-      [20, "مِكْوَى", "mikwā", "ıslık çalma", "orta", ""],
-      [530, "مَكَاة", "makā", "ıslık çalma", "orta", ""],
-      [531, "مِكَيَة", "mikaya", "ıslık çalma", "orta", ""],
-      [23, "مَكْوُووَة", "makwūwa", "ıslık çalma", "orta", ""],
-      [24, "تُمْكُوو", "tumkūw", "ıslık çalma", "orta", ""],
-      [532, "تَمْكِيَة", "tamkiya", "ıslık çalma", "orta", ""],
-      [26, "تَمْكَوَة", "tamkawa", "ıslık çalma", "orta", ""],
-      [27, "مَمْكُوَة", "mamkuwa", "ıslık çalma", "orta", ""],
-      [533, "مَمْكِيَة", "mamkiya", "ıslık çalma", "orta", ""]
-    ],
-    "masdar · bâb II": [
-      [534, "تَمْكِيَة", "tamkiya", "çokça ıslık çalma", "orta", ""],
-      [535, "تَمْكِيَة", "tamkiya", "çokça ıslık çalma", "orta", ""],
-      [536, "مِكِّاء", "mikkāʾ", "çokça ıslık çalma", "orta", ""]
-    ],
-    "ism-i merre · bâb II": [
-      [537, "مِكِّاءَة", "mikkāʾa", "bir kere çokça ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · bâb II": [
-      [538, "مُمَكِّي", "mumakkī", "çokça ıslık çalan", "orta", ""],
-      [539, "مُمَكِّيَة", "mumakkiya", "çokça ıslık çalan, müennes", "orta", ""],
-      [540, "مُمَكِّيَان", "mumakkiyān", "çokça ıslık çalan, iki", "orta", ""],
-      [541, "مُمَكِّيَتَان", "mumakkiyatān", "çokça ıslık çalan, iki, müennes", "orta", ""],
-      [542, "مُمَكُّون", "mumakkūn", "çokça ıslık çalanlar", "orta", ""],
-      [543, "مُمَكِّين", "mumakkīn", "çokça ıslık çalanlar", "orta", ""],
-      [544, "مُمَكِّيَات", "mumakkiyāt", "çokça ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb II": [
-      [545, "مُمَكَّى", "mumakkā", "çokça ıslık çalınan", "orta", ""],
-      [546, "مُمَكَّيَان", "mumakkayān", "çokça ıslık çalınan, iki", "orta", ""],
-      [547, "مُمَكَّوْن", "mumakkawn", "çokça ıslık çalınanlar", "orta", ""],
-      [548, "مُمَكَّيْن", "mumakkayn", "çokça ıslık çalınanlar", "orta", ""],
-      [549, "مُمَكَّيَات", "mumakkayāt", "çokça ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [550, "مُمَكَّى", "mumakkā", "çokça ıslık çalma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb III": [
-      [551, "مُمَاكَاة", "mumākā", "biriyle karşılıklı ıslık çalma", "orta", ""],
-      [552, "مِكَاء", "mikāʾ", "biriyle karşılıklı ıslık çalma", "orta", ""]
-    ],
-    "ism-i merre · bâb III": [
-      [553, "مِكَاءَة", "mikāʾa", "bir kere biriyle karşılıklı ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · bâb III": [
-      [554, "مُمَاكِي", "mumākī", "biriyle karşılıklı ıslık çalan", "orta", ""],
-      [555, "مُمَاكِيَة", "mumākiya", "biriyle karşılıklı ıslık çalan, müennes", "orta", ""],
-      [556, "مُمَاكِيَان", "mumākiyān", "biriyle karşılıklı ıslık çalan, iki", "orta", ""],
-      [557, "مُمَاكِيَتَان", "mumākiyatān", "biriyle karşılıklı ıslık çalan, iki, müennes", "orta", ""],
-      [558, "مُمَاكُون", "mumākūn", "biriyle karşılıklı ıslık çalanlar", "orta", ""],
-      [559, "مُمَاكِين", "mumākīn", "biriyle karşılıklı ıslık çalanlar", "orta", ""],
-      [560, "مُمَاكِيَات", "mumākiyāt", "biriyle karşılıklı ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb III": [
-      [561, "مُمَاكَى", "mumākā", "biriyle karşılıklı ıslık çalınan", "orta", ""],
-      [562, "مُمَاكَيَان", "mumākayān", "biriyle karşılıklı ıslık çalınan, iki", "orta", ""],
-      [563, "مُمَاكَوْن", "mumākawn", "biriyle karşılıklı ıslık çalınanlar", "orta", ""],
-      [564, "مُمَاكَيْن", "mumākayn", "biriyle karşılıklı ıslık çalınanlar", "orta", ""],
-      [565, "مُمَاكَيَات", "mumākayāt", "biriyle karşılıklı ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [566, "مُمَاكَى", "mumākā", "biriyle karşılıklı ıslık çalma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IV": [
-      [567, "إِمْكَاء", "ʾimkāʾ", "ıslık çaldırma", "orta", ""]
-    ],
-    "ism-i merre · bâb IV": [
-      [568, "إِمْكَاءَة", "ʾimkāʾa", "bir kere ıslık çaldırma", "orta", ""]
-    ],
-    "ism-i fâil · bâb IV": [
-      [569, "مُمْكِي", "mumkī", "ıslık çaldıran", "orta", ""],
-      [570, "مُمْكِيَة", "mumkiya", "ıslık çaldıran, müennes", "orta", ""],
-      [571, "مُمْكِيَان", "mumkiyān", "ıslık çaldıran, iki", "orta", ""],
-      [572, "مُمْكِيَتَان", "mumkiyatān", "ıslık çaldıran, iki, müennes", "orta", ""],
-      [573, "مُمْكُون", "mumkūn", "ıslık çaldıranlar", "orta", ""],
-      [574, "مُمْكِين", "mumkīn", "ıslık çaldıranlar", "orta", ""],
-      [575, "مُمْكِيَات", "mumkiyāt", "ıslık çaldıranlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb IV": [
-      [576, "مُمْكَى", "mumkā", "ıslık çaldırılan", "orta", ""],
-      [577, "مُمْكَيَان", "mumkayān", "ıslık çaldırılan, iki", "orta", ""],
-      [578, "مُمْكَوْن", "mumkawn", "ıslık çaldırılanlar", "orta", ""],
-      [579, "مُمْكَيْن", "mumkayn", "ıslık çaldırılanlar", "orta", ""],
-      [580, "مُمْكَيَات", "mumkayāt", "ıslık çaldırılanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُمْكَى", "mumkā", "ıslık çaldırma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb V": [
-      [582, "تَمَكِّي", "tamakkī", "kendini zorlayarak ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · bâb V": [
-      [583, "مُتَمَكِّي", "mutamakkī", "kendini zorlayarak ıslık çalan", "orta", ""],
-      [584, "مُتَمَكِّيَة", "mutamakkiya", "kendini zorlayarak ıslık çalan, müennes", "orta", ""],
-      [585, "مُتَمَكِّيَان", "mutamakkiyān", "kendini zorlayarak ıslık çalan, iki", "orta", ""],
-      [586, "مُتَمَكِّيَتَان", "mutamakkiyatān", "kendini zorlayarak ıslık çalan, iki, müennes", "orta", ""],
-      [587, "مُتَمَكُّون", "mutamakkūn", "kendini zorlayarak ıslık çalanlar", "orta", ""],
-      [588, "مُتَمَكِّين", "mutamakkīn", "kendini zorlayarak ıslık çalanlar", "orta", ""],
-      [589, "مُتَمَكِّيَات", "mutamakkiyāt", "kendini zorlayarak ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb V": [
-      [590, "مُتَمَكَّى", "mutamakkā", "kendini zorlayarak ıslık çalınan", "orta", ""],
-      [591, "مُتَمَكَّيَان", "mutamakkayān", "kendini zorlayarak ıslık çalınan, iki", "orta", ""],
-      [592, "مُتَمَكَّوْن", "mutamakkawn", "kendini zorlayarak ıslık çalınanlar", "orta", ""],
-      [593, "مُتَمَكَّيْن", "mutamakkayn", "kendini zorlayarak ıslık çalınanlar", "orta", ""],
-      [594, "مُتَمَكَّيَات", "mutamakkayāt", "kendini zorlayarak ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [595, "مُتَمَكَّى", "mutamakkā", "kendini zorlayarak ıslık çalma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VI": [
-      [596, "تَمَاكِي", "tamākī", "birbirine ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VI": [
-      [597, "مُتَمَاكِي", "mutamākī", "birbirine ıslık çalan", "orta", ""],
-      [598, "مُتَمَاكِيَة", "mutamākiya", "birbirine ıslık çalan, müennes", "orta", ""],
-      [599, "مُتَمَاكِيَان", "mutamākiyān", "birbirine ıslık çalan, iki", "orta", ""],
-      [600, "مُتَمَاكِيَتَان", "mutamākiyatān", "birbirine ıslık çalan, iki, müennes", "orta", ""],
-      [601, "مُتَمَاكُون", "mutamākūn", "birbirine ıslık çalanlar", "orta", ""],
-      [602, "مُتَمَاكِين", "mutamākīn", "birbirine ıslık çalanlar", "orta", ""],
-      [603, "مُتَمَاكِيَات", "mutamākiyāt", "birbirine ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VI": [
-      [604, "مُتَمَاكَى", "mutamākā", "birbirine ıslık çalınan", "orta", ""],
-      [605, "مُتَمَاكَيَان", "mutamākayān", "birbirine ıslık çalınan, iki", "orta", ""],
-      [606, "مُتَمَاكَوْن", "mutamākawn", "birbirine ıslık çalınanlar", "orta", ""],
-      [607, "مُتَمَاكَيْن", "mutamākayn", "birbirine ıslık çalınanlar", "orta", ""],
-      [608, "مُتَمَاكَيَات", "mutamākayāt", "birbirine ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [609, "مُتَمَاكَى", "mutamākā", "birbirine ıslık çalma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VII": [
-      [610, "اِنْمِكَاء", "inmikāʾ", "ıslık çalınma", "orta", ""]
-    ],
-    "ism-i merre · bâb VII": [
-      [611, "اِنْمِكَاءَة", "inmikāʾa", "bir kere ıslık çalınma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VII": [
-      [612, "مُنْمَكِي", "munmakī", "ıslık çalınan", "orta", ""],
-      [613, "مُنْمَكِيَة", "munmakiya", "ıslık çalınan, müennes", "orta", ""],
-      [614, "مُنْمَكِيَان", "munmakiyān", "ıslık çalınan, iki", "orta", ""],
-      [615, "مُنْمَكِيَتَان", "munmakiyatān", "ıslık çalınan, iki, müennes", "orta", ""],
-      [616, "مُنْمَكُون", "munmakūn", "ıslık çalınanlar", "orta", ""],
-      [617, "مُنْمَكِين", "munmakīn", "ıslık çalınanlar", "orta", ""],
-      [618, "مُنْمَكِيَات", "munmakiyāt", "ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْمَكَى", "munmakā", "ıslık çalınan", "orta", ""],
-      [620, "مُنْمَكَيَان", "munmakayān", "ıslık çalınan, iki", "orta", ""],
-      [621, "مُنْمَكَوْن", "munmakawn", "ıslık çalınanlar", "orta", ""],
-      [622, "مُنْمَكَيْن", "munmakayn", "ıslık çalınanlar", "orta", ""],
-      [623, "مُنْمَكَيَات", "munmakayāt", "ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْمَكَى", "munmakā", "ıslık çalınma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb VIII": [
-      [625, "اِمْتِكَاء", "imtikāʾ", "kendisi için ıslık çalma", "orta", ""]
-    ],
-    "ism-i merre · bâb VIII": [
-      [627, "اِمْتِكَاءَة", "imtikāʾa", "bir kere kendisi için ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · bâb VIII": [
-      [628, "مُمْتَكِي", "mumtakī", "kendisi için ıslık çalan", "orta", ""],
-      [629, "مُمْتَكِيَة", "mumtakiya", "kendisi için ıslık çalan, müennes", "orta", ""],
-      [630, "مُمْتَكِيَان", "mumtakiyān", "kendisi için ıslık çalan, iki", "orta", ""],
-      [631, "مُمْتَكِيَتَان", "mumtakiyatān", "kendisi için ıslık çalan, iki, müennes", "orta", ""],
-      [632, "مُمْتَكُون", "mumtakūn", "kendisi için ıslık çalanlar", "orta", ""],
-      [633, "مُمْتَكِين", "mumtakīn", "kendisi için ıslık çalanlar", "orta", ""],
-      [634, "مُمْتَكِيَات", "mumtakiyāt", "kendisi için ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُمْتَكَى", "mumtakā", "kendisi için ıslık çalınan", "orta", ""],
-      [636, "مُمْتَكَيَان", "mumtakayān", "kendisi için ıslık çalınan, iki", "orta", ""],
-      [637, "مُمْتَكَوْن", "mumtakawn", "kendisi için ıslık çalınanlar", "orta", ""],
-      [638, "مُمْتَكَيْن", "mumtakayn", "kendisi için ıslık çalınanlar", "orta", ""],
-      [639, "مُمْتَكَيَات", "mumtakayāt", "kendisi için ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُمْتَكَى", "mumtakā", "kendisi için ıslık çalma yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb IX (illet harfi izhar)": [
-      [654, "اِمْكِوَاء", "imkiwāʾ", "iyiden iyiye ıslık çalma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [655, "مُمْكَوِي", "mumkawī", "iyiden iyiye ıslık çalan", "kontrol", ""],
-      [656, "مُمْكَوِيَة", "mumkawiya", "iyiden iyiye ıslık çalan, müennes", "kontrol", ""],
-      [657, "مُمْكَوِيَان", "mumkawiyān", "iyiden iyiye ıslık çalan, iki", "kontrol", ""],
-      [658, "مُمْكَوِيَتَان", "mumkawiyatān", "iyiden iyiye ıslık çalan, iki, müennes", "kontrol", ""],
-      [659, "مُمْكَوُون", "mumkawūn", "iyiden iyiye ıslık çalanlar", "kontrol", ""],
-      [660, "مُمْكَوِين", "mumkawīn", "iyiden iyiye ıslık çalanlar", "kontrol", ""],
-      [661, "مُمْكَوِيَات", "mumkawiyāt", "iyiden iyiye ıslık çalanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb X": [
-      [662, "اِسْتِمْكَاء", "istimkāʾ", "ıslık çalmayı isteme", "orta", ""]
-    ],
-    "ism-i merre · bâb X": [
-      [663, "اِسْتِمْكَاءَة", "istimkāʾa", "bir kere ıslık çalmayı isteme", "orta", ""]
-    ],
-    "ism-i fâil · bâb X": [
-      [664, "مُسْتَمْكِي", "mustamkī", "ıslık çalmayı isteyen", "orta", ""],
-      [665, "مُسْتَمْكِيَة", "mustamkiya", "ıslık çalmayı isteyen, müennes", "orta", ""],
-      [666, "مُسْتَمْكِيَان", "mustamkiyān", "ıslık çalmayı isteyen, iki", "orta", ""],
-      [667, "مُسْتَمْكِيَتَان", "mustamkiyatān", "ıslık çalmayı isteyen, iki, müennes", "orta", ""],
-      [668, "مُسْتَمْكُون", "mustamkūn", "ıslık çalmayı isteyenler", "orta", ""],
-      [669, "مُسْتَمْكِين", "mustamkīn", "ıslık çalmayı isteyenler", "orta", ""],
-      [670, "مُسْتَمْكِيَات", "mustamkiyāt", "ıslık çalmayı isteyenler, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَمْكَى", "mustamkā", "ıslık çalması istenen", "orta", ""],
-      [672, "مُسْتَمْكَيَان", "mustamkayān", "ıslık çalması istenen, iki", "orta", ""],
-      [673, "مُسْتَمْكَوْن", "mustamkawn", "ıslık çalması istenenler", "orta", ""],
-      [674, "مُسْتَمْكَيْن", "mustamkayn", "ıslık çalması istenenler", "orta", ""],
-      [675, "مُسْتَمْكَيَات", "mustamkayāt", "ıslık çalması istenenler, müennes", "orta", ""]
-    ],
-    "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَمْكَى", "mustamkā", "ıslık çalmayı isteme yeri, vakti", "orta", ""]
-    ],
-    "masdar · bâb XI (illet harfi izhar)": [
-      [677, "اِمْكِيوَاء", "imkīwāʾ", "büsbütün ıslık çalma", "kontrol", ""]
-    ],
-    "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [678, "مُمْكَاوِي", "mumkāwī", "büsbütün ıslık çalan", "kontrol", ""],
-      [679, "مُمْكَاوِيَة", "mumkāwiya", "büsbütün ıslık çalan, müennes", "kontrol", ""],
-      [680, "مُمْكَاوِيَان", "mumkāwiyān", "büsbütün ıslık çalan, iki", "kontrol", ""],
-      [681, "مُمْكَاوِيَتَان", "mumkāwiyatān", "büsbütün ıslık çalan, iki, müennes", "kontrol", ""],
-      [682, "مُمْكَاوُون", "mumkāwūn", "büsbütün ıslık çalanlar", "kontrol", ""],
-      [683, "مُمْكَاوِين", "mumkāwīn", "büsbütün ıslık çalanlar", "kontrol", ""],
-      [684, "مُمْكَاوِيَات", "mumkāwiyāt", "büsbütün ıslık çalanlar, müennes", "kontrol", ""]
-    ],
-    "masdar · bâb XII (illet harfi izhar)": [
-      [685, "اِمْكِوْكَاء", "imkiwkāʾ", "aşırı ıslık çalma", "orta", ""]
-    ],
-    "masdar · bâb XIII (illet harfi izhar)": [
-      [686, "اِمْكِوَّاء", "imkiwwāʾ", "aşırı ıslık çalma", "orta", ""]
-    ],
-    "ism-i fâil · sülâsî": [
-      [687, "مَاكِي", "mākī", "ıslık çalan", "orta", ""],
-      [688, "مَاكِيَة", "mākiya", "ıslık çalan, müennes", "orta", ""],
-      [689, "مَاكِيَان", "mākiyān", "ıslık çalan, iki", "orta", ""],
-      [690, "مَاكِيَتَان", "mākiyatān", "ıslık çalan, iki, müennes", "orta", ""],
-      [691, "مَاكُون", "mākūn", "ıslık çalanlar", "orta", ""],
-      [692, "مَاكِين", "mākīn", "ıslık çalanlar", "orta", ""],
-      [693, "مَاكِيَات", "mākiyāt", "ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "ism-i mef‘ûl · sülâsî": [
-      [694, "مَمْكُوّ", "mamkuww", "ıslık çalınan", "orta", ""],
-      [695, "مَمْكُوَّة", "mamkuwwa", "ıslık çalınan, müennes", "orta", ""],
-      [696, "مَمْكُوَّان", "mamkuwwān", "ıslık çalınan, iki", "orta", ""],
-      [697, "مَمْكُوَّتَان", "mamkuwwatān", "ıslık çalınan, iki, müennes", "orta", ""],
-      [698, "مَمْكُوُّون", "mamkuwwūn", "ıslık çalınanlar", "orta", ""],
-      [699, "مَمْكُوِّين", "mamkuwwīn", "ıslık çalınanlar", "orta", ""],
-      [700, "مَمْكُوَّات", "mamkuwwāt", "ıslık çalınanlar, müennes", "orta", ""]
-    ],
-    "mekân/zaman · sülâsî": [
-      [701, "مَمْكَى", "mamkā", "ıslık çalma yeri, vakti", "orta", ""],
-      [702, "مَمْكَيَان", "mamkayān", "ıslık çalma yeri, vakti, iki", "orta", ""],
-      [703, "مَمْكِي", "mamkī", "ıslık çalma yeri, vakti", "orta", ""],
-      [704, "مَمْكِيَان", "mamkiyān", "ıslık çalma yeri, vakti, iki", "orta", ""],
-      [705, "مَمْكَاة", "mamkā", "ıslık çalmanın bol olduğu yer", "orta", ""],
-      [706, "مَمْكَاتَان", "mamkātān", "ıslık çalmanın bol olduğu yer, iki", "orta", ""],
-      [707, "مَمْكِيَة", "mamkiya", "ıslık çalmanın bol olduğu yer", "orta", ""],
-      [708, "مَمْكِيَتَان", "mamkiyatān", "ıslık çalmanın bol olduğu yer, iki", "orta", ""],
-      [247, "مَمْكُوَة", "mamkuwa", "ıslık çalma yeri, vakti", "orta", ""],
-      [248, "مَمْكُوَتَان", "mamkuwatān", "ıslık çalma yeri, vakti, iki", "orta", ""]
-    ],
-    "âlet · sülâsî": [
-      [709, "مِمْكَى", "mimkā", "ıslık çalma âleti", "orta", ""],
-      [710, "مِمْكَيَان", "mimkayān", "ıslık çalma âleti, iki", "orta", ""],
-      [711, "مِمْكَاء", "mimkāʾ", "ıslık çalma âleti", "orta", ""],
-      [712, "مِمْكَاآن", "mimkāʾān", "ıslık çalma âleti, iki", "orta", ""],
-      [713, "مِمْكَاة", "mimkā", "ıslık çalma âleti", "orta", ""],
-      [714, "مِمْكَاتَان", "mimkātān", "ıslık çalma âleti, iki", "orta", ""]
-    ],
-    "tafdîl · sülâsî": [
-      [715, "أَمْكَى", "ʾamkā", "daha çok ıslık çalan", "orta", ""],
-      [716, "أَمْكَيَان", "ʾamkayān", "daha çok ıslık çalan, iki", "orta", ""]
-    ],
-    "tafdîl (müennes) · sülâsî": [
-      [717, "مُكْيَى", "mukyā", "daha çok ıslık çalan", "orta", ""],
-      [718, "مُكْيَيَان", "mukyayān", "daha çok ıslık çalan, iki", "orta", ""],
-      [245, "مَكْوَاء", "makwāʾ", "daha çok ıslık çalan", "orta", ""],
-      [246, "مَكْوَاآن", "makwāʾān", "daha çok ıslık çalan, iki", "orta", ""]
-    ],
-    "tasğîr · sülâsî": [
-      [719, "مُكَيّ", "mukayy", "azıcık ıslık çalma", "orta", ""],
-      [720, "مُكَيَّان", "mukayyān", "azıcık ıslık çalma, iki", "orta", ""],
-      [721, "مُكَيَّة", "mukayya", "azıcık ıslık çalma", "orta", ""],
-      [722, "مُكَيَّتَان", "mukayyatān", "azıcık ıslık çalma, iki", "orta", ""]
-    ],
-    "masdar-ı mîmî · sülâsî": [
-      [723, "مَمْكَى", "mamkā", "ıslık çalma", "orta", ""],
-      [724, "مَمْكَيَان", "mamkayān", "ıslık çalma, iki", "orta", ""]
-    ],
-    "ism-i merre · sülâsî": [
-      [255, "مَكْوَة", "makwa", "bir kere ıslık çalma", "orta", ""],
-      [256, "مَكْوَتَان", "makwatān", "bir kere ıslık çalma, iki", "orta", ""]
-    ],
-    "ism-i hey'et · sülâsî": [
-      [257, "مِكْوَة", "mikwa", "ıslık çalma tarzı", "orta", ""],
-      [258, "مِكْوَتَان", "mikwatān", "ıslık çalma tarzı, iki", "orta", ""]
-    ],
-    "sıfat-ı müşebbehe": [
-      [725, "مَكِيّ", "makiyy", "her daim ıslık çalan", "orta", ""],
-      [726, "مَكِيَّة", "makiyya", "her daim ıslık çalan, müennes", "orta", ""],
-      [727, "مَكِيَّان", "makiyyān", "her daim ıslık çalan, iki", "orta", ""],
-      [728, "مَكِيَّتَان", "makiyyatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [729, "مَكِيُّون", "makiyyūn", "her daim ıslık çalanlar", "orta", ""],
-      [730, "مَكِيِّين", "makiyyīn", "her daim ıslık çalanlar", "orta", ""],
-      [731, "مَكِيَّات", "makiyyāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [732, "مَكُوّ", "makuww", "her daim ıslık çalan", "orta", ""],
-      [733, "مَكُوَّة", "makuwwa", "her daim ıslık çalan, müennes", "orta", ""],
-      [734, "مَكُوَّان", "makuwwān", "her daim ıslık çalan, iki", "orta", ""],
-      [735, "مَكُوَّتَان", "makuwwatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [736, "مَكُوُّون", "makuwwūn", "her daim ıslık çalanlar", "orta", ""],
-      [737, "مَكُوِّين", "makuwwīn", "her daim ıslık çalanlar", "orta", ""],
-      [738, "مَكُوَّات", "makuwwāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [739, "مَكِي", "makī", "her daim ıslık çalan", "orta", ""],
-      [740, "مَكِيَة", "makiya", "her daim ıslık çalan, müennes", "orta", ""],
-      [741, "مَكِيَان", "makiyān", "her daim ıslık çalan, iki", "orta", ""],
-      [742, "مَكِيَتَان", "makiyatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [743, "مَكُون", "makūn", "her daim ıslık çalanlar", "orta", ""],
-      [744, "مَكِين", "makīn", "her daim ıslık çalanlar", "orta", ""],
-      [745, "مَكِيَات", "makiyāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [746, "مَكُوّ", "makuww", "her daim ıslık çalan", "orta", ""],
-      [747, "مَكُوَّة", "makuwwa", "her daim ıslık çalan, müennes", "orta", ""],
-      [748, "مَكُوَّان", "makuwwān", "her daim ıslık çalan, iki", "orta", ""],
-      [749, "مَكُوَّتَان", "makuwwatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [750, "مَكُوُّون", "makuwwūn", "her daim ıslık çalanlar", "orta", ""],
-      [751, "مَكُوِّين", "makuwwīn", "her daim ıslık çalanlar", "orta", ""],
-      [752, "مَكُوَّات", "makuwwāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [753, "مَكَا", "makā", "her daim ıslık çalan", "orta", ""],
-      [754, "مَكَوَان", "makawān", "her daim ıslık çalan, iki", "orta", ""],
-      [755, "مَكَوَات", "makawāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [294, "مَكْو", "makw", "her daim ıslık çalan", "orta", ""],
-      [295, "مَكْوَة", "makwa", "her daim ıslık çalan, müennes", "orta", ""],
-      [296, "مَكْوَان", "makwān", "her daim ıslık çalan, iki", "orta", ""],
-      [297, "مَكْوَتَان", "makwatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [298, "مَكْوُون", "makwūn", "her daim ıslık çalanlar", "orta", ""],
-      [299, "مَكْوِين", "makwīn", "her daim ıslık çalanlar", "orta", ""],
-      [300, "مَكْوَات", "makwāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [756, "مُكُوّ", "mukuww", "her daim ıslık çalan", "orta", ""],
-      [757, "مُكُوَّة", "mukuwwa", "her daim ıslık çalan, müennes", "orta", ""],
-      [758, "مُكُوَّان", "mukuwwān", "her daim ıslık çalan, iki", "orta", ""],
-      [759, "مُكُوَّتَان", "mukuwwatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [760, "مُكُوُّون", "mukuwwūn", "her daim ıslık çalanlar", "orta", ""],
-      [761, "مُكُوِّين", "mukuwwīn", "her daim ıslık çalanlar", "orta", ""],
-      [762, "مُكُوَّات", "mukuwwāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [308, "مَكْوَان", "makwān", "her daim ıslık çalan", "orta", ""],
-      [309, "مَكْوَانَة", "makwāna", "her daim ıslık çalan, müennes", "orta", ""],
-      [310, "مَكْوَانَان", "makwānān", "her daim ıslık çalan, iki", "orta", ""],
-      [311, "مَكْوَانَتَان", "makwānatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [312, "مَكْوَانُون", "makwānūn", "her daim ıslık çalanlar", "orta", ""],
-      [313, "مَكْوَانِين", "makwānīn", "her daim ıslık çalanlar", "orta", ""],
-      [314, "مَكْوَانَات", "makwānāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [763, "مُكَاء", "mukāʾ", "her daim ıslık çalan", "orta", ""],
-      [764, "مُكَاءَة", "mukāʾa", "her daim ıslık çalan, müennes", "orta", ""],
-      [765, "مُكَاآن", "mukāʾān", "her daim ıslık çalan, iki", "orta", ""],
-      [766, "مُكَاءَتَان", "mukāʾatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [767, "مُكَاؤُون", "mukāʾūn", "her daim ıslık çalanlar", "orta", ""],
-      [768, "مُكَائِين", "mukāʾīn", "her daim ıslık çalanlar", "orta", ""],
-      [769, "مُكَاآت", "mukāʾāt", "her daim ıslık çalanlar, müennes", "orta", ""],
-      [770, "مَكَاء", "makāʾ", "her daim ıslık çalan", "orta", ""],
-      [771, "مَكَاءَة", "makāʾa", "her daim ıslık çalan, müennes", "orta", ""],
-      [772, "مَكَاآن", "makāʾān", "her daim ıslık çalan, iki", "orta", ""],
-      [773, "مَكَاءَتَان", "makāʾatān", "her daim ıslık çalan, iki, müennes", "orta", ""],
-      [774, "مَكَاؤُون", "makāʾūn", "her daim ıslık çalanlar", "orta", ""],
-      [775, "مَكَائِين", "makāʾīn", "her daim ıslık çalanlar", "orta", ""],
-      [776, "مَكَاآت", "makāʾāt", "her daim ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "mübalağa": [
-      [777, "مَكَّاء", "makkāʾ", "işi ıslık çalma olan", "orta", ""],
-      [778, "مَكَّاءَة", "makkāʾa", "işi ıslık çalma olan, müennes", "orta", ""],
-      [779, "مَكَّاآن", "makkāʾān", "işi ıslık çalma olan, iki", "orta", ""],
-      [780, "مَكَّاءَتَان", "makkāʾatān", "işi ıslık çalma olan, iki, müennes", "orta", ""],
-      [781, "مَكَّاؤُون", "makkāʾūn", "işi ıslık çalma olanlar", "orta", ""],
-      [782, "مَكَّائِين", "makkāʾīn", "işi ıslık çalma olanlar", "orta", ""],
-      [783, "مَكَّاآت", "makkāʾāt", "işi ıslık çalma olanlar, müennes", "orta", ""],
-      [784, "مَكَّايَة", "makkāya", "pek çok ıslık çalan", "orta", ""],
-      [785, "مَكَّايَتَان", "makkāyatān", "pek çok ıslık çalan, iki", "orta", ""],
-      [786, "مَكَّايَات", "makkāyāt", "pek çok ıslık çalanlar, müennes", "orta", ""],
-      [787, "مَكُوّ", "makuww", "çok ıslık çalan", "orta", ""],
-      [788, "مَكُوَّة", "makuwwa", "çok ıslık çalan, müennes", "orta", ""],
-      [789, "مَكُوَّان", "makuwwān", "çok ıslık çalan, iki", "orta", ""],
-      [790, "مَكُوَّتَان", "makuwwatān", "çok ıslık çalan, iki, müennes", "orta", ""],
-      [791, "مَكُوُّون", "makuwwūn", "çok ıslık çalanlar", "orta", ""],
-      [792, "مَكُوِّين", "makuwwīn", "çok ıslık çalanlar", "orta", ""],
-      [793, "مَكُوَّات", "makuwwāt", "çok ıslık çalanlar, müennes", "orta", ""],
-      [346, "مَكُّوو", "makkūw", "pek çok ıslık çalan", "orta", ""],
-      [347, "مَكُّووَة", "makkūwa", "pek çok ıslık çalan, müennes", "orta", ""],
-      [348, "مَكُّووَان", "makkūwān", "pek çok ıslık çalan, iki", "orta", ""],
-      [349, "مَكُّووَتَان", "makkūwatān", "pek çok ıslık çalan, iki, müennes", "orta", ""],
-      [350, "مَكُّووُون", "makkūwūn", "pek çok ıslık çalanlar", "orta", ""],
-      [351, "مَكُّووِين", "makkūwīn", "pek çok ıslık çalanlar", "orta", ""],
-      [352, "مَكُّووَات", "makkūwāt", "pek çok ıslık çalanlar, müennes", "orta", ""],
-      [353, "مِكِّيو", "mikkīw", "ıslık çalmada aşırı giden", "orta", ""],
-      [354, "مِكِّيوَة", "mikkīwa", "ıslık çalmada aşırı giden, müennes", "orta", ""],
-      [355, "مِكِّيوَان", "mikkīwān", "ıslık çalmada aşırı giden, iki", "orta", ""],
-      [356, "مِكِّيوَتَان", "mikkīwatān", "ıslık çalmada aşırı giden, iki, müennes", "orta", ""],
-      [357, "مِكِّيوُون", "mikkīwūn", "ıslık çalmada aşırı gidenler", "orta", ""],
-      [358, "مِكِّيوِين", "mikkīwīn", "ıslık çalmada aşırı gidenler", "orta", ""],
-      [359, "مِكِّيوَات", "mikkīwāt", "ıslık çalmada aşırı gidenler, müennes", "orta", ""],
-      [794, "مُكَّاء", "mukkāʾ", "son derece ıslık çalan", "orta", ""],
-      [795, "مُكَّاءَة", "mukkāʾa", "son derece ıslık çalan, müennes", "orta", ""],
-      [796, "مُكَّاآن", "mukkāʾān", "son derece ıslık çalan, iki", "orta", ""],
-      [797, "مُكَّاءَتَان", "mukkāʾatān", "son derece ıslık çalan, iki, müennes", "orta", ""],
-      [798, "مُكَّاؤُون", "mukkāʾūn", "son derece ıslık çalanlar", "orta", ""],
-      [799, "مُكَّائِين", "mukkāʾīn", "son derece ıslık çalanlar", "orta", ""],
-      [800, "مُكَّاآت", "mukkāʾāt", "son derece ıslık çalanlar, müennes", "orta", ""],
-      [801, "مِمْكَاء", "mimkāʾ", "ıslık çalmayı âdet edinmiş", "orta", ""],
-      [802, "مِمْكَاءَة", "mimkāʾa", "ıslık çalmayı âdet edinmiş, müennes", "orta", ""],
-      [803, "مِمْكَاآن", "mimkāʾān", "ıslık çalmayı âdet edinmiş, iki", "orta", ""],
-      [804, "مِمْكَاءَتَان", "mimkāʾatān", "ıslık çalmayı âdet edinmiş, iki, müennes", "orta", ""],
-      [805, "مِمْكَاؤُون", "mimkāʾūn", "ıslık çalmayı âdet edinmişler", "orta", ""],
-      [806, "مِمْكَائِين", "mimkāʾīn", "ıslık çalmayı âdet edinmişler", "orta", ""],
-      [807, "مِمْكَاآت", "mimkāʾāt", "ıslık çalmayı âdet edinmişler, müennes", "orta", ""],
-      [374, "مِمْكِيو", "mimkīw", "ıslık çalmaya düşkün", "orta", ""],
-      [375, "مِمْكِيوَة", "mimkīwa", "ıslık çalmaya düşkün, müennes", "orta", ""],
-      [376, "مِمْكِيوَان", "mimkīwān", "ıslık çalmaya düşkün, iki", "orta", ""],
-      [377, "مِمْكِيوَتَان", "mimkīwatān", "ıslık çalmaya düşkün, iki, müennes", "orta", ""],
-      [378, "مِمْكِيوُون", "mimkīwūn", "ıslık çalmaya düşkünler", "orta", ""],
-      [379, "مِمْكِيوِين", "mimkīwīn", "ıslık çalmaya düşkünler", "orta", ""],
-      [380, "مِمْكِيوَات", "mimkīwāt", "ıslık çalmaya düşkünler, müennes", "orta", ""],
-      [808, "مَكِيّ", "makiyy", "çok ıslık çalan", "orta", ""],
-      [809, "مَكِيَّة", "makiyya", "çok ıslık çalan, müennes", "orta", ""],
-      [810, "مَكِيَّان", "makiyyān", "çok ıslık çalan, iki", "orta", ""],
-      [811, "مَكِيَّتَان", "makiyyatān", "çok ıslık çalan, iki, müennes", "orta", ""],
-      [812, "مَكِيُّون", "makiyyūn", "çok ıslık çalanlar", "orta", ""],
-      [813, "مَكِيِّين", "makiyyīn", "çok ıslık çalanlar", "orta", ""],
-      [814, "مَكِيَّات", "makiyyāt", "çok ıslık çalanlar, müennes", "orta", ""],
-      [388, "مَكَّو", "makkaw", "çok ıslık çalan", "orta", ""],
-      [389, "مَكَّوَة", "makkawa", "çok ıslık çalan, müennes", "orta", ""],
-      [390, "مَكَّوَان", "makkawān", "çok ıslık çalan, iki", "orta", ""],
-      [391, "مَكَّوَتَان", "makkawatān", "çok ıslık çalan, iki, müennes", "orta", ""],
-      [392, "مَكَّوُون", "makkawūn", "çok ıslık çalanlar", "orta", ""],
-      [393, "مَكَّوِين", "makkawīn", "çok ıslık çalanlar", "orta", ""],
-      [394, "مَكَّوَات", "makkawāt", "çok ıslık çalanlar, müennes", "orta", ""]
-    ],
-    "mensûb": [
-      [395, "مَكْوِيّ", "makwiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [399, "مِكْوِيّ", "mikwiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [401, "مُكْوِيّ", "mukwiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [815, "مِكَائِيّ", "mikāʾiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [817, "مَاكِيّ", "mākiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [819, "مَمْكُوِّيّ", "mamkuwwiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [821, "مَكِيِّيّ", "makiyyiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [823, "مَمْكَوِيّ", "mamkawiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [825, "تَمْكِيِيّ", "tamkiyiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [827, "تَمَاكِيّ", "tamākiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [829, "إِمْكَائِيّ", "ʾimkāʾiyy", "ıslık çalma ile ilgili", "orta", ""],
-      [831, "اِمْتِكَائِيّ", "imtikāʾiyy", "ıslık çalma ile ilgili", "orta", ""]
-    ],
-    "masdar-ı sınâî": [
-      [396, "مَكْوِيَّة", "makwiyya", "ıslık çalanlık", "orta", ""],
-      [400, "مِكْوِيَّة", "mikwiyya", "ıslık çalanlık", "orta", ""],
-      [402, "مُكْوِيَّة", "mukwiyya", "ıslık çalanlık", "orta", ""],
-      [816, "مِكَائِيَّة", "mikāʾiyya", "ıslık çalanlık", "orta", ""],
-      [818, "مَاكِيَّة", "mākiyya", "ıslık çalanlık", "orta", ""],
-      [820, "مَمْكُوِّيَّة", "mamkuwwiyya", "ıslık çalanlık", "orta", ""],
-      [822, "مَكِيِّيَّة", "makiyyiyya", "ıslık çalanlık", "orta", ""],
-      [824, "مَمْكَوِيَّة", "mamkawiyya", "ıslık çalanlık", "orta", ""],
-      [826, "تَمْكِيِيَّة", "tamkiyiyya", "ıslık çalanlık", "orta", ""],
-      [828, "تَمَاكِيَّة", "tamākiyya", "ıslık çalanlık", "orta", ""],
-      [830, "إِمْكَائِيَّة", "ʾimkāʾiyya", "ıslık çalanlık", "orta", ""],
-      [832, "اِمْتِكَائِيَّة", "imtikāʾiyya", "ıslık çalanlık", "orta", ""]
-    ],
-    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [833, "مَكَاء", "makāʾ", "ıslık çalma", "orta", ""],
-      [834, "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
-      [835, "مِكَاء", "mikāʾ", "ıslık çalma", "orta", ""],
-      [424, "مُكْو", "mukw", "ıslık çalma", "orta", ""],
-      [836, "مَكَاة", "makā", "ıslık çalma", "orta", ""],
-      [837, "مِكَايَة", "mikāya", "ıslık çalma", "orta", ""],
-      [838, "مُكُوَّة", "mukuwwa", "ıslık çalma", "orta", ""],
-      [428, "مَكْو", "makw", "ıslık çalma", "orta", ""],
-      [429, "مِكْو", "mikw", "ıslık çalma", "orta", ""]
-    ],
-    "ism-i cins · ifrâdî (aday)": [
-      [430, "مَاكُوو", "mākūw", "ıslık çalma türünden şey", "orta", ""],
-      [839, "مَكَاة", "makā", "ıslık çalma türünden şey", "orta", ""],
-      [433, "مُكَوَة", "mukawa", "ıslık çalma türünden şey", "orta", ""],
-      [434, "أُمْكُووَة", "ʾumkūwa", "ıslık çalma türünden şey", "orta", ""],
-      [435, "مَوْكَو", "mawkaw", "ıslık çalma türünden şey", "orta", ""],
-      [437, "مَيْكَو", "maykaw", "ıslık çalma türünden şey", "orta", ""],
-      [439, "مَكْو", "makw", "ıslık çalma türünden şey", "orta", ""],
-      [840, "مَكَا", "makā", "ıslık çalma türünden şey", "orta", ""],
-      [443, "مِكْو", "mikw", "ıslık çalma türünden şey", "orta", ""],
-      [445, "مُكْو", "mukw", "ıslık çalma türünden şey", "orta", ""],
-      [841, "مَكِيّ", "makiyy", "ıslık çalma türünden şey", "orta", ""],
-      [843, "مِكَى", "mikā", "ıslık çalma türünden şey", "orta", ""],
-      [844, "مُكُوّ", "mukuww", "ıslık çalma türünden şey", "orta", ""],
-      [846, "مَكَاء", "makāʾ", "ıslık çalma türünden şey", "orta", ""]
-    ],
-    "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "مَاكُووَة", "mākūwa", "ıslık çalma türünden bir tane", "orta", ""],
-      [436, "مَوْكَوَة", "mawkawa", "ıslık çalma türünden bir tane", "orta", ""],
-      [438, "مَيْكَوَة", "maykawa", "ıslık çalma türünden bir tane", "orta", ""],
-      [440, "مَكْوَة", "makwa", "ıslık çalma türünden bir tane", "orta", ""],
-      [444, "مِكْوَة", "mikwa", "ıslık çalma türünden bir tane", "orta", ""],
-      [446, "مُكْوَة", "mukwa", "ıslık çalma türünden bir tane", "orta", ""],
-      [842, "مَكِيَّة", "makiyya", "ıslık çalma türünden bir tane", "orta", ""],
-      [845, "مُكُوَّة", "mukuwwa", "ıslık çalma türünden bir tane", "orta", ""],
-      [847, "مَكَاءَة", "makāʾa", "ıslık çalma türünden bir tane", "orta", ""]
-    ],
-    "cem‘-i mükesser (aday)": [
-      [848, "أَمْكَاء", "ʾamkāʾ", "ıslık çalmalar", "orta", ""],
-      [849, "أَمْكِيَة", "ʾamkiya", "ıslık çalmalar", "orta", ""],
-      [850, "أَمَاكِي", "ʾamākī", "ıslık çalmalar", "orta", ""],
-      [851, "أَمَاكِيّ", "ʾamākiyy", "ıslık çalmalar", "orta", ""],
-      [852, "مُكُوّ", "mukuww", "ıslık çalmalar", "orta", ""],
-      [853, "مُكُوّ", "mukuww", "ıslık çalmalar", "orta", ""],
-      [854, "مِكَاء", "mikāʾ", "ıslık çalmalar", "orta", ""],
-      [855, "مِكَى", "mikā", "ıslık çalmalar", "orta", ""],
-      [856, "مِكَيَة", "mikaya", "ıslık çalmalar", "orta", ""],
-      [857, "مُكَى", "mukā", "ıslık çalmalar", "orta", ""],
-      [858, "مَكَاة", "makā", "ıslık çalmalar", "orta", ""],
-      [859, "مُكَّاء", "mukkāʾ", "ıslık çalmalar", "orta", ""],
-      [860, "مَكَاء", "makāʾ", "ıslık çalmalar", "orta", ""],
-      [861, "مَكَا", "makā", "ıslık çalmalar", "orta", ""],
-      [862, "مَمَاكِي", "mamākī", "ıslık çalmalar", "orta", ""],
-      [863, "مَمَاكِيّ", "mamākiyy", "ıslık çalmalar", "orta", ""],
-      [864, "مَوَاكِي", "mawākī", "ıslık çalmalar", "orta", ""],
-      [473, "أَمْكُو", "ʾamkuw", "ıslık çalmalar", "orta", ""],
-      [474, "مُكَّو", "mukkaw", "ıslık çalmalar", "orta", ""],
-      [865, "مُكَيّ", "mukayy", "ıslık çalmalar", "orta", ""]
-    ],
-    "cem‘u’l-cem‘ (aday)": [
-      [866, "أَمْكَاآت", "ʾamkāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [867, "أَمْكِيَات", "ʾamkiyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [868, "أَمَاكِيَات", "ʾamākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [869, "أَمَاكِيَّات", "ʾamākiyyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [870, "مُكُوَّات", "mukuwwāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [871, "مُكُوَّات", "mukuwwāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [872, "مِكَاآت", "mikāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [873, "مِكَيَات", "mikayāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [874, "مِكَيَات", "mikayāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [875, "مُكَيَات", "mukayāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [876, "مَكَاات", "makāāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [877, "مُكَّاآت", "mukkāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [878, "مَكَاآت", "makāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [879, "مَكَوَات", "makawāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [880, "مَمَاكِيَات", "mamākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [881, "مَمَاكِيَّات", "mamākiyyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [882, "مَوَاكِيَات", "mawākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [495, "أَمْكُوَات", "ʾamkuwāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [496, "مُكَّوَات", "mukkawāt", "ıslık çalmalar topluluğu", "orta", ""],
-      [883, "مُكَيَّات", "mukayyāt", "ıslık çalmalar topluluğu", "orta", ""]
-    ]
-  },
-  "reddedilen": [
-    ["ism-i merre · bâb II", "taf'īl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["ism-i merre · bâb V", "tafa''ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i merre · bâb VI", "tafā'ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["sıfat-ı müşebbehe", "fa'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mensûb", "fa'al + iyy", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["masdar-ı sınâî", "fa'al + iyye", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["cem‘-i mükesser (aday)", "fu'alā'", "bu kök sınıfında bu kalıp yok"],
-    ["cem‘-i mükesser (aday)", "fe'âil", "bu kök sınıfında bu kalıp yok"]
-  ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "مكو",
-      "turkce": "mekv: yalan, hile / mekâ: ıslık çalmak (?)",
-      "ihtimaller": ["mekv: yalan, hile", "mekâ: ıslık çalmak (?)"],
-      "varlik": "varlığı meçhul"
-    },
-    "osmanlica_lugatler": {
-      "مُكاء": {
-        "sorgular": ["muka"],
-        "maddeler": [
-          {
-            "eser": "Kamus",
-            "madde": "muka",
-            "arapca": [],
-            "mana": "اَلْمَكْوُ [el-mekv] (mîmin fethi ve kâfın sükûnuyla) ve اَلْمُكَاءُ [el-mukâ] (غُرَابٌ [gurâb] vezninde) Dudakla ıslık çalmak manâsınadır, alâ-kavlin parmakları halka gibi müşebbek eylemekle boru tarzında edip üfürmekle öttürmek manâsınadır ki ekserî çoban ve kuşçu makûlesi ederler; ona dahi ıslık ve sıslık tabîr olunur; yukâlu: مَكَا الرَّجُلُ مَكْوًا وَمُكَاءً إِذَا صَفَرَ بِفِيهِ أَوْ شَبَّكَ بِأَصَابِعِهِ وَنَفَخَ فِيهَا Ve zartalamak manâsına müstameldir. Ve bu mekşûf ve meftûh olan makadın yâhûd dâbbe kısmının zartasına mahsûstur; yukâlu: مَكَتْ اِسْتُهُ إِذَا نَفَخَتْ وَلَا يَكُونُ إِلَّا وَهِيَ مَكْشُوفَةٌ مَفْتُوحَةٌ أَوْ خَاصَّةٌ بِالدَّابَّةِ Ve مَكْوٌ [mekv] Tilki ve tavşan makûlesi vuhûşun inine denir.",
-            "id": 888010,
-            "eslesme": "başlık tam (Arapça kaynaklı sözlük)"
-          },
-          {
-            "eser": "Kubbe Altı",
-            "madde": "MUKĀVEMET",
-            "arapca": ["مقاومت", "مقاومت سوز", "مقاومت شكن"],
-            "mana": "( ﻣﻘﺎﻭﻣﺖ ) i. (Ar. ḳiyām “ayağa kalkmak, dikilmek”ten muḳāvemet ) 1. Karşı koyma, boyun eğmeme, dayanma, direnme, direniş: Düşmen-i din için adem-i mukāvemet mukarrer ve bu tarikle ân-ı vâhidde kalenin fethi müyesser oldu deyü takrir eyledi (Râşid Târihi’nden). Vücut zindeleştikçe hâricî tesîrâta da mukāvemeti artmış (Ahmet Hâşim). Artık merhamete lâyık olduğumu anlamaktan utanmayacak kadar mukāvemetimi ve gurûrumu kaybetmiştim, teslîmiyetin zevki içinde başımı tekrar yastığa koydum (Peyâmi Safâ). 2. fizik. Direnç: “ Mukāvemet-i mahsûsa: Özgül direnç.” ѻ Mukāvemet etmek (göstermek): Karşı koymak, boyun eğmemek, dayanmak, direnmek: Pek uzun müddet mukāvemet gösteremez (Hüseyin R. Gürpınar). Kadıncağız, Leylâ ile Neclâ’nın göz yaşlarına ve hırçınlıklarına epeyce zaman mukāvemet etmişti (Reşat N. Güntekin). Bak dedi, kalbim fırtınanın şiddetini tâkip ediyor. Her zaman böyledir. Kat’iyen mukāvemet edemem (Peyâmi Safâ). Lisânımız bütün menfî tesirlere nasıl mukāvemet ediyorsa mûsikîmiz de edecektir (Ergun Göze). Mukāvemet koşusu: spor. Atletizmde 3 ve 3 kilometreden daha uzun mesâfelerde yapılan koşu. Mukāvemet yarışı: spor. Koşu, yüzme, kayak gibi dallarda, otomobil, motor vb. taşıtlar arası müsâbakalarda yapılan uzun mesâfe yarışı. Mukāvemeti kırılmak: Karşı koyma, dayanma, direnme gücü azalmak. ● Mukāvemet-suz ( ﻣﻘﺎﻭﻣﺖ ﺳﻮﺯ ) birl. sıf. (Fars. sūz “yakan” ile) Mukāvemeti yok eden, dayanma, direnme gücünü ortadan kaldıran, dayanılmaz. ● Mukāvemet-şiken ( ﻣﻘﺎﻭﻣﺖ ﺷﻜﻦ ) birl. sıf. (Fars. şiken “kıran” ile) Mukāvemet kıran, dayanma gücünü azaltan.",
-            "id": 181664,
-            "eslesme": "arapça yazılış kökle uyuştu"
-          }
-        ]
-      }
-    },
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الميم والكاف",
-      "baslik": "مكو",
-      "mihveri": "تجوف دقيق ممتدٌ في أثناءٍ يَحُوز أو يُمَرُّ منه بلطف. كالجُحْر وهو فراغ ممتدٌ في الأرض يَسْكُنُه الثعلبُ، وكالمَجْل (وهو انتفاخ في جلد اليد من تمزق ما بين الجلدة الظاهرة وما تحتها يمتلئ ماء بعدُ، وكالصفير وهو من نفخ الهواء في ممرِّ فموي دقيق يصنعه الصافر فيخرج. والمُكَاء في آية التركيب: الصفير ... ومن ذلك الأصل \"تَمكَّى الفرسُ: ابتل بالعرق / ضَمُرَ بما سَال من عَرَقه \" [التهذيب] (فهو إفراغ الرطوبة المحتواه في أثناء الفرس من مسامّ جلده).",
-      "sesler": "تعبر الميم عن تضامّ ظاهري، والكاف عن ضغط غثوري دقيق في الأثناء، والفصل منهما يعبر عن جذب إلى جوف وضم في أثنائه، أو منه -أي أخذ ما انضم- بقوة كالمكوك حيث يتمكن فيه ما يضمه. وفي (مكو) تعبر الواو عن اشتمال، ويعبر التركيب عن اشتمال على فراغ يمتد يشتمل على شيء في أثنائه كالمكو جُحر الثعلب والأرنب بدقته. وفي (مكث) تعبر الثاء عن دقاق كثيرة منتشرة، ويعبر التركيب معها عن اللبث في مكان كأنما الأثقال تثقله أو انتقلت الكثرة إلى امتداد زمنيّ. وفي (مكر) تعبر الراء عن استرسال، ويعبر التركيب معها عن اختزان رقيق مسترسل في الأثناء كتمكير الحبوب: احتكارها. وفي (مكن) تعبر النون عن امتداد باطني. ويعبر التركيب معها عن رسوخ الشيء متجمعًا في باطن يلتئم عليه كمكن الضِباب: بيضِها في بطونها.",
-      "tam_metin": "{وَمَا كَانَ صَلَاتُهُمْ عِنْدَ الْبَيتِ إلا مُكَاءً} [الأنفال: 35]\n\"المَكوُ- بالفتح، وكفَتَى: جُحرُ الثَعلب والأَزنب ونحوهما، وقد يكون للطائر والحية. ومَكا الإنسانُ يمكو مُكَاء- كصداع: صَفَر بفيه / يجمع بين\n__________\n(1) (صوتيًّا): تعبر الميم عن تضامّ ظاهري، والكاف عن ضغط غثوري دقيق في الأثناء، والفصل منهما يعبر عن جذب إلى جوف وضم في أثنائه، أو منه -أي أخذ ما انضم- بقوة كالمكوك حيث يتمكن فيه ما يضمه. وفي \n(مكو)\n تعبر الواو عن اشتمال، ويعبر التركيب عن اشتمال على فراغ يمتد يشتمل على شيء في أثنائه كالمكو جُحر الثعلب والأرنب بدقته. وفي (مكث) تعبر الثاء عن دقاق كثيرة منتشرة، ويعبر التركيب معها عن اللبث في مكان كأنما الأثقال تثقله أو انتقلت الكثرة إلى امتداد زمنيّ. وفي (مكر) تعبر الراء عن استرسال، ويعبر التركيب معها عن اختزان رقيق مسترسل في الأثناء كتمكير الحبوب: احتكارها. وفي (مكن) تعبر النون عن امتداد باطني. ويعبر التركيب معها عن رسوخ الشيء متجمعًا في باطن يلتئم عليه كمكن الضِباب: بيضِها في بطونها.\n(4/2100)\nأصابع يديه ثم يدخلها في فيه ثم يصفر فيها. ومَكِيَت يَدُه (كتعب): مَجِلَت من العمل. ومَكَتْ استُ الدَابة: نَفَخَت ولا يكون ذلك إلا وهي مكشوفة مفتوحة. وبقال للطعنة إذا فَهَقَتْ فاها: مَكَتْ تَمكُو \".\n° المعنى المحوري\nتجوف دقيق ممتدٌ في أثناءٍ يَحُوز أو يُمَرُّ منه بلطف. كالجُحْر وهو فراغ ممتدٌ في الأرض يَسْكُنُه الثعلبُ، وكالمَجْل (وهو انتفاخ في جلد اليد من تمزق ما بين الجلدة الظاهرة وما تحتها يمتلئ ماء بعدُ، وكالصفير وهو من نفخ الهواء في ممرِّ فموي دقيق يصنعه الصافر فيخرج. والمُكَاء في آية التركيب: الصفير ... ومن ذلك الأصل \"تَمكَّى الفرسُ: ابتل بالعرق / ضَمُرَ بما سَال من عَرَقه \" [التهذيب] (فهو إفراغ الرطوبة المحتواه في أثناء الفرس من مسامّ جلده).",
-      "fasil_ozeti": "° معنى الفصل المعجمي (مك): جذبُ المائع أو ما يشبهه أو أخذُه إلى الجوف بقوة وتمكن كما يتمثل في المكوك -وهيأته تحفظ ما فيه متمكنًا، وكذلك مكّ الصبي ما في ثدي أمه- في (مكك)، وكما يضم جحر الثعلب والأرنب وإياهما فيه -في (مكو)، وكالبقاء في المكان (وهو ظرف) مدة طويلة في (مكث)، وكاحتكار الحبوب في البيوت واختزان الساق الممكورة الشحم- في (مكر)، وكرسوخ بيض الضبة والجرادة في بطنيهما- في (مكن)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "8:35:7:1",
-      "tur": {
-        "N": 1
-      },
-      "bab": {},
-      "zaman_kip": {},
-      "fiil_ismi_ozellikleri": {
-        "VN": 1
-      },
-      "lemmalar": {
-        "مُكَآء": 1
-      },
-      "bicimler": {
-        "مُكَآءً": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "MKW",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab MKW مكو BP – • HDAL • © SG | 13May2023 √MKW “root” ▪ MKW_1 ‘...’ ↗ ... ▪ MKW_2 ‘...’ ↗ ... ▪ MKW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to whistle, a certain bird with a long whistling sound; buttocks; animal furrows, to wash, (of a horse) to sweat’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "مكيون",
-        "u": "مكيون",
-        "p": "adj",
-        "h": "ar-head",
-        "e": "مَكِّيُّون • (makkiyyūn)",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["masculine plural of مَكِّيّ (makkiyy)"],
-        "tag": ["form-of", "masculine", "plural"],
-        "fo": ["مَكِّيّ"],
-        "r": ["makkiyyūn"],
-        "yol": "müştak"
-      }
-    ],
-    "renk_sozluk": {
-      "مكاء": "ıslık"
-    },
-    "arabic_ontology": [
-      {
-        "id": "293114",
-        "arapca": ["مَكْوٌ"],
-        "ingilizce": [],
-        "tanim": "جُحْرُ الثَّعْلَبِ والأَرْنَبِ ونَحْوِهِمَا",
-        "misal": "طارد الثعلب الفريسه إلى __ ه",
-        "veri_kaynagi": "200",
-        "ust": [
-          ["alt_tur_of", "48236", "Burrow"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "tercume": {
-      "cebel_mihveri": {
-        "mihveri": "Araları içinde uzanan, ince bir oyuk; ona hafifçe girilir yahut ondan geçilir. Yerde uzanan boşluk olan, tilkinin sakin olduğu cuhr (in) gibi; el derisinde, dış deri ile altındaki arası yırtılınca sonra su ile dolan şişlik olan «mecl» gibi; ıslığı çalanın ağızda yaptığı ince bir geçitte havayı üfleyip çıkarmasından olan ıslık gibi. Terkîb âyetindeki «mükâ'»: ıslıktır. Bu asıldan: «temekkâ'l-feres»: at terle ıslandı / aktığı ter sebebiyle zayıfladı [Tehzîb] (yânî atın içinde bulunan rutûbetin deri gözeneklerinden boşaltılmasıdır).",
-        "sesler": "Mîm, zâhirî bitişikliği (tutunmayı) ifade eder; kāf, araya ince ve gevşek bir basıncı; ikisinin faslı bir boşluğa çekmeyi ve onun içinde toplamayı yahut ondan almayı — yânî toplananı kuvvetle almayı — ifade eder; «mekûk» gibi ki içine toplananı onda sağlam kılar. «Mekv»de vâv iştimâli ifade eder; terkîb, uzayan bir boşluğun içine bir şeyi alması mânâsını verir; tilki ve tavşan cuhrunun inceliğiyle «mekv» gibi. «Mekese»de sâ, yayılmış çok ince parçaları ifade eder; terkîb onunla beraber, sanki ağırlıklar onu ağırlaştırmış yahut kesret zamansal uzanışa geçmiş gibi bir yerde oyalanmayı ifade eder. «Mekr»de râ devamlı akışı ifade eder; terkîb onunla araya ince ve devamlı bir biriktirmeyi ifade eder; «temkîru'l-hubûb»: hububatı stoklamak (ihtikâr) gibi. «Mekn»de nûn bâtınî uzanışı ifade eder; terkîb onunla, toplanmış şeyin kendi üzerine kapanan bâtında yerleşmesini ifade eder; «mekne'd-dıbâb»: kertenkele yumurtalarının karınlarında olması gibi."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Tilkinin, tavşanın ve benzerlerinin in deliği",
-          "misal": "Tilki avını _ ına kadar kovaladı."
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön | EtymArab MKW مكو | BP – • HDAL • © SG | 13 Mayıs 2023 | √MKW «kök» ▪ MKW_1 «…» ↗ … ▪ MKW_2 «…» ↗ … ▪ MKW_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «ıslık çalmak, uzun ıslık çalan belli bir kuş; kalçalar; hayvan oluğu, yıkamak, (at için) terlemek» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["مَكِّيّ (mekkî) kelimesinin müzekker cem'i"]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "مك",
+  "ses": {
     "harf": "م",
+    "fasil": "مك",
     "mahrec": "şefeviyye",
     "bolge": "dudak ve cevf"
   },
-  "mana_tasnif": {
-    "durum": "Arabic WordNet v2 kaydı yok"
+  "anlam": "mekv: yalan, hile / mekâ: ıslık çalmak (?)",
+  "anlam_ihtimal": ["mekv: yalan, hile", "mekâ: ıslık çalmak (?)"],
+  "anlam_varlik": "varlığı meçhul",
+  "esas_manalar": "ıslık çalmak",
+  "lugat": {
+    "Kamus": [
+      {
+        "madde": "muka",
+        "metin": "اَلْمَكْوُ [el-mekv] (mîmin fethi ve kâfın sükûnuyla) ve اَلْمُكَاءُ [el-mukâ] (غُرَابٌ [gurâb] vezninde) Dudakla ıslık çalmak manâsınadır, alâ-kavlin parmakları halka gibi müşebbek eylemekle boru tarzında edip üfürmekle öttürmek manâsınadır ki ekserî çoban ve kuşçu makûlesi ederler; ona dahi ıslık ve sıslık tabîr olunur; yukâlu: مَكَا الرَّجُلُ مَكْوًا وَمُكَاءً إِذَا صَفَرَ بِفِيهِ أَوْ شَبَّكَ بِأَصَابِعِهِ وَنَفَخَ فِيهَا Ve zartalamak manâsına müstameldir. Ve bu mekşûf ve meftûh olan makadın yâhûd dâbbe kısmının zartasına mahsûstur; yukâlu: مَكَتْ اِسْتُهُ إِذَا نَفَخَتْ وَلَا يَكُونُ إِلَّا وَهِيَ مَكْشُوفَةٌ مَفْتُوحَةٌ أَوْ خَاصَّةٌ بِالدَّابَّةِ Ve مَكْوٌ [mekv] Tilki ve tavşan makûlesi vuhûşun inine denir.",
+        "eslesme": "başlık tam (Arapça kaynaklı sözlük)",
+        "kelime": ["مُكاء"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "MUKĀVEMET",
+        "metin": "( ﻣﻘﺎﻭﻣﺖ ) i. (Ar. ḳiyām “ayağa kalkmak, dikilmek”ten muḳāvemet ) 1. Karşı koyma, boyun eğmeme, dayanma, direnme, direniş: Düşmen-i din için adem-i mukāvemet mukarrer ve bu tarikle ân-ı vâhidde kalenin fethi müyesser oldu deyü takrir eyledi (Râşid Târihi’nden). Vücut zindeleştikçe hâricî tesîrâta da mukāvemeti artmış (Ahmet Hâşim). Artık merhamete lâyık olduğumu anlamaktan utanmayacak kadar mukāvemetimi ve gurûrumu kaybetmiştim, teslîmiyetin zevki içinde başımı tekrar yastığa koydum (Peyâmi Safâ). 2. fizik. Direnç: “ Mukāvemet-i mahsûsa: Özgül direnç.” ѻ Mukāvemet etmek (göstermek): Karşı koymak, boyun eğmemek, dayanmak, direnmek: Pek uzun müddet mukāvemet gösteremez (Hüseyin R. Gürpınar). Kadıncağız, Leylâ ile Neclâ’nın göz yaşlarına ve hırçınlıklarına epeyce zaman mukāvemet etmişti (Reşat N. Güntekin). Bak dedi, kalbim fırtınanın şiddetini tâkip ediyor. Her zaman böyledir. Kat’iyen mukāvemet edemem (Peyâmi Safâ). Lisânımız bütün menfî tesirlere nasıl mukāvemet ediyorsa mûsikîmiz de edecektir (Ergun Göze). Mukāvemet koşusu: spor. Atletizmde 3 ve 3 kilometreden daha uzun mesâfelerde yapılan koşu. Mukāvemet yarışı: spor. Koşu, yüzme, kayak gibi dallarda, otomobil, motor vb. taşıtlar arası müsâbakalarda yapılan uzun mesâfe yarışı. Mukāvemeti kırılmak: Karşı koyma, dayanma, direnme gücü azalmak. ● Mukāvemet-suz ( ﻣﻘﺎﻭﻣﺖ ﺳﻮﺯ ) birl. sıf. (Fars. sūz “yakan” ile) Mukāvemeti yok eden, dayanma, direnme gücünü ortadan kaldıran, dayanılmaz. ● Mukāvemet-şiken ( ﻣﻘﺎﻭﻣﺖ ﺷﻜﻦ ) birl. sıf. (Fars. şiken “kıran” ile) Mukāvemet kıran, dayanma gücünü azaltan.",
+        "arapca": ["مقاومت", "مقاومت سوز", "مقاومت شكن"],
+        "eslesme": "arapça yazılış kökle uyuştu",
+        "kelime": ["مُكاء"]
+      }
+    ]
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
+  "cebel": {
     "fasil": "الميم والكاف",
+    "baslik": "مكو",
     "mihveri": "تجوف دقيق ممتدٌ في أثناءٍ يَحُوز أو يُمَرُّ منه بلطف. كالجُحْر وهو فراغ ممتدٌ في الأرض يَسْكُنُه الثعلبُ، وكالمَجْل (وهو انتفاخ في جلد اليد من تمزق ما بين الجلدة الظاهرة وما تحتها يمتلئ ماء بعدُ، وكالصفير وهو من نفخ الهواء في ممرِّ فموي دقيق يصنعه الصافر فيخرج. والمُكَاء في آية التركيب: الصفير ... ومن ذلك الأصل \"تَمكَّى الفرسُ: ابتل بالعرق / ضَمُرَ بما سَال من عَرَقه \" [التهذيب] (فهو إفراغ الرطوبة المحتواه في أثناء الفرس من مسامّ جلده).",
     "sesler": "تعبر الميم عن تضامّ ظاهري، والكاف عن ضغط غثوري دقيق في الأثناء، والفصل منهما يعبر عن جذب إلى جوف وضم في أثنائه، أو منه -أي أخذ ما انضم- بقوة كالمكوك حيث يتمكن فيه ما يضمه. وفي (مكو) تعبر الواو عن اشتمال، ويعبر التركيب عن اشتمال على فراغ يمتد يشتمل على شيء في أثنائه كالمكو جُحر الثعلب والأرنب بدقته. وفي (مكث) تعبر الثاء عن دقاق كثيرة منتشرة، ويعبر التركيب معها عن اللبث في مكان كأنما الأثقال تثقله أو انتقلت الكثرة إلى امتداد زمنيّ. وفي (مكر) تعبر الراء عن استرسال، ويعبر التركيب معها عن اختزان رقيق مسترسل في الأثناء كتمكير الحبوب: احتكارها. وفي (مكن) تعبر النون عن امتداد باطني. ويعبر التركيب معها عن رسوخ الشيء متجمعًا في باطن يلتئم عليه كمكن الضِباب: بيضِها في بطونها.",
+    "tam_metin": "{وَمَا كَانَ صَلَاتُهُمْ عِنْدَ الْبَيتِ إلا مُكَاءً} [الأنفال: 35]\n\"المَكوُ- بالفتح، وكفَتَى: جُحرُ الثَعلب والأَزنب ونحوهما، وقد يكون للطائر والحية. ومَكا الإنسانُ يمكو مُكَاء- كصداع: صَفَر بفيه / يجمع بين\n__________\n(1) (صوتيًّا): تعبر الميم عن تضامّ ظاهري، والكاف عن ضغط غثوري دقيق في الأثناء، والفصل منهما يعبر عن جذب إلى جوف وضم في أثنائه، أو منه -أي أخذ ما انضم- بقوة كالمكوك حيث يتمكن فيه ما يضمه. وفي \n(مكو)\n تعبر الواو عن اشتمال، ويعبر التركيب عن اشتمال على فراغ يمتد يشتمل على شيء في أثنائه كالمكو جُحر الثعلب والأرنب بدقته. وفي (مكث) تعبر الثاء عن دقاق كثيرة منتشرة، ويعبر التركيب معها عن اللبث في مكان كأنما الأثقال تثقله أو انتقلت الكثرة إلى امتداد زمنيّ. وفي (مكر) تعبر الراء عن استرسال، ويعبر التركيب معها عن اختزان رقيق مسترسل في الأثناء كتمكير الحبوب: احتكارها. وفي (مكن) تعبر النون عن امتداد باطني. ويعبر التركيب معها عن رسوخ الشيء متجمعًا في باطن يلتئم عليه كمكن الضِباب: بيضِها في بطونها.\n(4/2100)\nأصابع يديه ثم يدخلها في فيه ثم يصفر فيها. ومَكِيَت يَدُه (كتعب): مَجِلَت من العمل. ومَكَتْ استُ الدَابة: نَفَخَت ولا يكون ذلك إلا وهي مكشوفة مفتوحة. وبقال للطعنة إذا فَهَقَتْ فاها: مَكَتْ تَمكُو \".\n° المعنى المحوري\nتجوف دقيق ممتدٌ في أثناءٍ يَحُوز أو يُمَرُّ منه بلطف. كالجُحْر وهو فراغ ممتدٌ في الأرض يَسْكُنُه الثعلبُ، وكالمَجْل (وهو انتفاخ في جلد اليد من تمزق ما بين الجلدة الظاهرة وما تحتها يمتلئ ماء بعدُ، وكالصفير وهو من نفخ الهواء في ممرِّ فموي دقيق يصنعه الصافر فيخرج. والمُكَاء في آية التركيب: الصفير ... ومن ذلك الأصل \"تَمكَّى الفرسُ: ابتل بالعرق / ضَمُرَ بما سَال من عَرَقه \" [التهذيب] (فهو إفراغ الرطوبة المحتواه في أثناء الفرس من مسامّ جلده).",
     "fasil_ozeti": "° معنى الفصل المعجمي (مك): جذبُ المائع أو ما يشبهه أو أخذُه إلى الجوف بقوة وتمكن كما يتمثل في المكوك -وهيأته تحفظ ما فيه متمكنًا، وكذلك مكّ الصبي ما في ثدي أمه- في (مكك)، وكما يضم جحر الثعلب والأرنب وإياهما فيه -في (مكو)، وكالبقاء في المكان (وهو ظرف) مدة طويلة في (مكث)، وكاحتكار الحبوب في البيوت واختزان الساق الممكورة الشحم- في (مكر)، وكرسوخ بيض الضبة والجرادة في بطنيهما- في (مكن).",
-    "tam_metin": "{وَمَا كَانَ صَلَاتُهُمْ عِنْدَ الْبَيتِ إلا مُكَاءً} [الأنفال: 35]\n\"المَكوُ- بالفتح، وكفَتَى: جُحرُ الثَعلب والأَزنب ونحوهما، وقد يكون للطائر والحية. ومَكا الإنسانُ يمكو مُكَاء- كصداع: صَفَر بفيه / يجمع بين\n__________\n(1) (صوتيًّا): تعبر الميم عن تضامّ ظاهري، والكاف عن ضغط غثوري دقيق في الأثناء، والفصل منهما يعبر عن جذب إلى جوف وضم في أثنائه، أو منه -أي أخذ ما انضم- بقوة كالمكوك حيث يتمكن فيه ما يضمه. وفي \n(مكو)\n تعبر الواو عن اشتمال، ويعبر التركيب عن اشتمال على فراغ يمتد يشتمل على شيء في أثنائه كالمكو جُحر الثعلب والأرنب بدقته. وفي (مكث) تعبر الثاء عن دقاق كثيرة منتشرة، ويعبر التركيب معها عن اللبث في مكان كأنما الأثقال تثقله أو انتقلت الكثرة إلى امتداد زمنيّ. وفي (مكر) تعبر الراء عن استرسال، ويعبر التركيب معها عن اختزان رقيق مسترسل في الأثناء كتمكير الحبوب: احتكارها. وفي (مكن) تعبر النون عن امتداد باطني. ويعبر التركيب معها عن رسوخ الشيء متجمعًا في باطن يلتئم عليه كمكن الضِباب: بيضِها في بطونها.\n(4/2100)\nأصابع يديه ثم يدخلها في فيه ثم يصفر فيها. ومَكِيَت يَدُه (كتعب): مَجِلَت من العمل. ومَكَتْ استُ الدَابة: نَفَخَت ولا يكون ذلك إلا وهي مكشوفة مفتوحة. وبقال للطعنة إذا فَهَقَتْ فاها: مَكَتْ تَمكُو \".\n° المعنى المحوري\nتجوف دقيق ممتدٌ في أثناءٍ يَحُوز أو يُمَرُّ منه بلطف. كالجُحْر وهو فراغ ممتدٌ في الأرض يَسْكُنُه الثعلبُ، وكالمَجْل (وهو انتفاخ في جلد اليد من تمزق ما بين الجلدة الظاهرة وما تحتها يمتلئ ماء بعدُ، وكالصفير وهو من نفخ الهواء في ممرِّ فموي دقيق يصنعه الصافر فيخرج. والمُكَاء في آية التركيب: الصفير ... ومن ذلك الأصل \"تَمكَّى الفرسُ: ابتل بالعرق / ضَمُرَ بما سَال من عَرَقه \" [التهذيب] (فهو إفراغ الرطوبة المحتواه في أثناء الفرس من مسامّ جلده)."
+    "mihveri_tr": "Araları içinde uzanan, ince bir oyuk; ona hafifçe girilir yahut ondan geçilir. Yerde uzanan boşluk olan, tilkinin sakin olduğu cuhr (in) gibi; el derisinde, dış deri ile altındaki arası yırtılınca sonra su ile dolan şişlik olan «mecl» gibi; ıslığı çalanın ağızda yaptığı ince bir geçitte havayı üfleyip çıkarmasından olan ıslık gibi. Terkîb âyetindeki «mükâ'»: ıslıktır. Bu asıldan: «temekkâ'l-feres»: at terle ıslandı / aktığı ter sebebiyle zayıfladı [Tehzîb] (yânî atın içinde bulunan rutûbetin deri gözeneklerinden boşaltılmasıdır).",
+    "sesler_tr": "Mîm, zâhirî bitişikliği (tutunmayı) ifade eder; kāf, araya ince ve gevşek bir basıncı; ikisinin faslı bir boşluğa çekmeyi ve onun içinde toplamayı yahut ondan almayı — yânî toplananı kuvvetle almayı — ifade eder; «mekûk» gibi ki içine toplananı onda sağlam kılar. «Mekv»de vâv iştimâli ifade eder; terkîb, uzayan bir boşluğun içine bir şeyi alması mânâsını verir; tilki ve tavşan cuhrunun inceliğiyle «mekv» gibi. «Mekese»de sâ, yayılmış çok ince parçaları ifade eder; terkîb onunla beraber, sanki ağırlıklar onu ağırlaştırmış yahut kesret zamansal uzanışa geçmiş gibi bir yerde oyalanmayı ifade eder. «Mekr»de râ devamlı akışı ifade eder; terkîb onunla araya ince ve devamlı bir biriktirmeyi ifade eder; «temkîru'l-hubûb»: hububatı stoklamak (ihtikâr) gibi. «Mekn»de nûn bâtınî uzanışı ifade eder; terkîb onunla, toplanmış şeyin kendi üzerine kapanan bâtında yerleşmesini ifade eder; «mekne'd-dıbâb»: kertenkele yumurtalarının karınlarında olması gibi."
   },
-  "hakikat_mecaz_tasnif": {
+  "zemahseri": {
     "durum": "Esâsü'l-Belâğa'da madde yok"
   },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
+  "ontoloji": [
+    {
+      "id": "293114",
+      "arapca": ["مَكْوٌ"],
+      "ingilizce": [],
+      "tanim": "جُحْرُ الثَّعْلَبِ والأَرْنَبِ ونَحْوِهِمَا",
+      "misal": "طارد الثعلب الفريسه إلى __ ه",
+      "veri_kaynagi": "200",
+      "ust": [
+        ["alt_tur_of", "48236", "Burrow"]
+      ],
+      "tanim_tr": "Tilkinin, tavşanın ve benzerlerinin in deliği",
+      "misal_tr": "Tilki avını _ ına kadar kovaladı."
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "مكيون",
+      "tur": "adj",
+      "baslik": "مَكِّيُّون • (makkiyyūn)",
+      "anlam": ["masculine plural of مَكِّيّ (makkiyy)"],
+      "etiket": ["form-of", "masculine", "plural"],
+      "form_of": ["مَكِّيّ"],
+      "okunus": ["makkiyyūn"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["مَكِّيّ (mekkî) kelimesinin müzekker cem'i"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "MKW",
+    "kok_maddesi": "Back to library EtymArab MKW مكو BP – • HDAL • © SG | 13May2023 √MKW “root” ▪ MKW_1 ‘...’ ↗ ... ▪ MKW_2 ‘...’ ↗ ... ▪ MKW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to whistle, a certain bird with a long whistling sound; buttocks; animal furrows, to wash, (of a horse) to sweat’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön | EtymArab MKW مكو | BP – • HDAL • © SG | 13 Mayıs 2023 | √MKW «kök» ▪ MKW_1 «…» ↗ … ▪ MKW_2 «…» ↗ … ▪ MKW_3 «…» ↗ … ♦ ClassAr'da mana kıymeti tayfı (BAH2008'e göre): «ıslık çalmak, uzun ıslık çalan belli bir kuş; kalçalar; hayvan oluğu, yıkamak, (at için) terlemek» ▪ … – . . – – Kaynaklar ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;"
   },
-  "kolekzifikasyon_kavramlari": [],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "السباع",
-    "bab": "الذئاب إرادة إناث الذئاب",
-    "kok_gecis": 30.7,
-    "kitapta_gecis": 3.8,
-    "zenginlesme": 14.17
+  "kuran": {
+    "gecis": 1,
+    "ilk": "8:35:7:1",
+    "tur": {
+      "N": 1
+    },
+    "bab": {},
+    "zaman_kip": {},
+    "fiil_ismi_ozellikleri": {
+      "VN": 1
+    },
+    "lemmalar": {
+      "مُكَآء": 1
+    },
+    "bicimler": {
+      "مُكَآءً": 1
+    },
+    "morfoloji_gecis": 1
   },
-  "mana_tasnif_gomme": {
+  "kelimeler": [
+    {
+      "lemma": "مُكاء",
+      "hal": "isim",
+      "bab": "fe'ale",
+      "bicimler": [
+        {
+          "kelime": "مُكَآءً",
+          "ilk": "8:35",
+          "adet": 1,
+          "tr": "ıslık"
+        }
+      ],
+      "tr": "ıslık",
+      "bab_no": "I",
+      "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fa'āl ; cem‘-i mükesser (aday) · fi'āl (yalnız aday eşleşme)",
+      "adet": 1
+    }
+  ],
+  "mustak": {
+    "masdar · sülâsî mücerred": [
+      ["fa'l", "semâî aday", "مَكْو", "makw", "ıslık çalma", "orta", ""],
+      ["fi'l", "semâî aday", "مِكْو", "mikw", "ıslık çalma", "orta", ""],
+      ["fu'l", "semâî aday", "مُكْو", "mukw", "ıslık çalma", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "مَكَا", "makā", "ıslık çalma", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "مِكَى", "mikā", "ıslık çalma", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
+      ["fu'ūl", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "مِكَاء", "mikāʾ", "ıslık çalma", "orta", ""],
+      ["fu'āl", "semâî aday · ilal", "مُكَاء", "mukāʾ", "ıslık çalma", "orta", ""],
+      ["fa'āl", "semâî aday · ilal", "مَكَاء", "makāʾ", "ıslık çalma", "orta", ""],
+      ["fa'āle", "semâî aday · ilal", "مَكَاة", "makā", "ıslık çalma", "orta", ""],
+      ["fu'ūle", "semâî aday · ilal", "مُكُوَّة", "mukuwwa", "ıslık çalma", "orta", ""],
+      ["fi'āle", "semâî aday · ilal", "مِكَايَة", "mikāya", "ıslık çalma", "orta", ""],
+      ["fa'īl", "semâî aday · ilal", "مَكِيّ", "makiyy", "ıslık çalma", "orta", ""],
+      ["fa'ūl", "semâî aday · ilal", "مَكُوّ", "makuww", "ıslık çalma", "orta", ""],
+      ["fa'alān", "semâî aday", "مَكَوَان", "makawān", "ıslık çalma", "orta", ""],
+      ["fu'lān", "semâî aday", "مُكْوَان", "mukwān", "ıslık çalma", "orta", ""],
+      ["fi'lān", "semâî aday", "مِكْوَان", "mikwān", "ıslık çalma", "orta", ""],
+      ["fa'lā", "semâî aday", "مَكْوَى", "makwā", "ıslık çalma", "orta", ""],
+      ["fu'lā", "semâî aday · ilal", "مُكْيَى", "mukyā", "ıslık çalma", "orta", ""],
+      ["fi'lā", "semâî aday", "مِكْوَى", "mikwā", "ıslık çalma", "orta", ""],
+      ["fa'ale", "semâî aday · ilal", "مَكَاة", "makā", "ıslık çalma", "orta", ""],
+      ["fi'ale", "semâî aday · ilal", "مِكَيَة", "mikaya", "ıslık çalma", "orta", ""],
+      ["fa'lūla", "semâî aday", "مَكْوُووَة", "makwūwa", "ıslık çalma", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُمْكُوو", "tumkūw", "ıslık çalma", "orta", ""],
+      ["taf'ila", "semâî aday · ilal", "تَمْكِيَة", "tamkiya", "ıslık çalma", "orta", ""],
+      ["taf'ala", "semâî aday", "تَمْكَوَة", "tamkawa", "ıslık çalma", "orta", ""],
+      ["maf'ula", "semâî aday", "مَمْكُوَة", "mamkuwa", "ıslık çalma", "orta", ""],
+      ["maf'ila", "semâî aday · ilal", "مَمْكِيَة", "mamkiya", "ıslık çalma", "orta", ""]
+    ],
+    "masdar · bâb II": [
+      ["taf'īl", "kıyâsî · ilal", "تَمْكِيَة", "tamkiya", "çokça ıslık çalma", "orta", ""],
+      ["taf'ila", "kıyâsî · ilal", "تَمْكِيَة", "tamkiya", "çokça ıslık çalma", "orta", ""],
+      ["fi''āl", "kıyâsî · ilal", "مِكِّاء", "mikkāʾ", "çokça ıslık çalma", "orta", ""]
+    ],
+    "ism-i merre · bâb II": [
+      ["fi''āl + tâ", "aday · ilal", "مِكِّاءَة", "mikkāʾa", "bir kere çokça ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · bâb II": [
+      ["mufa''il", "kıyâsî · ilal", "مُمَكِّي", "mumakkī", "çokça ıslık çalan", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî · ilal", "مُمَكِّيَة", "mumakkiya", "çokça ıslık çalan, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî · ilal", "مُمَكِّيَان", "mumakkiyān", "çokça ıslık çalan, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمَكِّيَتَان",
+        "mumakkiyatān",
+        "çokça ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمَكُّون",
+        "mumakkūn",
+        "çokça ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمَكِّين",
+        "mumakkīn",
+        "çokça ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمَكِّيَات",
+        "mumakkiyāt",
+        "çokça ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb II": [
+      ["mufa''al", "kıyâsî · ilal", "مُمَكَّى", "mumakkā", "çokça ıslık çalınan", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî · ilal", "مُمَكَّيَان", "mumakkayān", "çokça ıslık çalınan, iki", "orta", ""],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمَكَّوْن",
+        "mumakkawn",
+        "çokça ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمَكَّيْن",
+        "mumakkayn",
+        "çokça ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمَكَّيَات",
+        "mumakkayāt",
+        "çokça ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb II": [
+      ["mufa''al", "kıyâsî · ilal", "مُمَكَّى", "mumakkā", "çokça ıslık çalma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb III": [
+      ["mufā'ale", "kıyâsî · ilal", "مُمَاكَاة", "mumākā", "biriyle karşılıklı ıslık çalma", "orta", ""],
+      ["fi'āl", "kıyâsî · ilal", "مِكَاء", "mikāʾ", "biriyle karşılıklı ıslık çalma", "orta", ""]
+    ],
+    "ism-i merre · bâb III": [
+      ["fi'āl + tâ", "aday · ilal", "مِكَاءَة", "mikāʾa", "bir kere biriyle karşılıklı ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · bâb III": [
+      ["mufā'il", "kıyâsî · ilal", "مُمَاكِي", "mumākī", "biriyle karşılıklı ıslık çalan", "orta", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî · ilal",
+        "مُمَاكِيَة",
+        "mumākiya",
+        "biriyle karşılıklı ıslık çalan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُمَاكِيَان",
+        "mumākiyān",
+        "biriyle karşılıklı ıslık çalan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمَاكِيَتَان",
+        "mumākiyatān",
+        "biriyle karşılıklı ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمَاكُون",
+        "mumākūn",
+        "biriyle karşılıklı ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمَاكِين",
+        "mumākīn",
+        "biriyle karşılıklı ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمَاكِيَات",
+        "mumākiyāt",
+        "biriyle karşılıklı ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb III": [
+      ["mufā'al", "kıyâsî · ilal", "مُمَاكَى", "mumākā", "biriyle karşılıklı ıslık çalınan", "orta", ""],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُمَاكَيَان",
+        "mumākayān",
+        "biriyle karşılıklı ıslık çalınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمَاكَوْن",
+        "mumākawn",
+        "biriyle karşılıklı ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمَاكَيْن",
+        "mumākayn",
+        "biriyle karşılıklı ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمَاكَيَات",
+        "mumākayāt",
+        "biriyle karşılıklı ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb III": [
+      ["mufā'al", "kıyâsî · ilal", "مُمَاكَى", "mumākā", "biriyle karşılıklı ıslık çalma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IV": [
+      ["if'āl", "kıyâsî · ilal", "إِمْكَاء", "ʾimkāʾ", "ıslık çaldırma", "orta", ""]
+    ],
+    "ism-i merre · bâb IV": [
+      ["if'āl + tâ", "aday · ilal", "إِمْكَاءَة", "ʾimkāʾa", "bir kere ıslık çaldırma", "orta", ""]
+    ],
+    "ism-i fâil · bâb IV": [
+      ["muf'il", "kıyâsî · ilal", "مُمْكِي", "mumkī", "ıslık çaldıran", "orta", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُمْكِيَة", "mumkiya", "ıslık çaldıran, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُمْكِيَان", "mumkiyān", "ıslık çaldıran, iki", "orta", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمْكِيَتَان",
+        "mumkiyatān",
+        "ıslık çaldıran, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْكُون",
+        "mumkūn",
+        "ıslık çaldıranlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْكِين",
+        "mumkīn",
+        "ıslık çaldıranlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْكِيَات",
+        "mumkiyāt",
+        "ıslık çaldıranlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُمْكَى", "mumkā", "ıslık çaldırılan", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُمْكَيَان", "mumkayān", "ıslık çaldırılan, iki", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْكَوْن",
+        "mumkawn",
+        "ıslık çaldırılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْكَيْن",
+        "mumkayn",
+        "ıslık çaldırılanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْكَيَات",
+        "mumkayāt",
+        "ıslık çaldırılanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb IV": [
+      ["muf'al", "kıyâsî · ilal", "مُمْكَى", "mumkā", "ıslık çaldırma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb V": [
+      ["tafa''ul", "kıyâsî · ilal", "تَمَكِّي", "tamakkī", "kendini zorlayarak ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · bâb V": [
+      ["mutafa''il", "kıyâsî · ilal", "مُتَمَكِّي", "mutamakkī", "kendini zorlayarak ıslık çalan", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî · ilal",
+        "مُتَمَكِّيَة",
+        "mutamakkiya",
+        "kendini zorlayarak ıslık çalan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَكِّيَان",
+        "mutamakkiyān",
+        "kendini zorlayarak ıslık çalan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَكِّيَتَان",
+        "mutamakkiyatān",
+        "kendini zorlayarak ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَمَكُّون",
+        "mutamakkūn",
+        "kendini zorlayarak ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَمَكِّين",
+        "mutamakkīn",
+        "kendini zorlayarak ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَمَكِّيَات",
+        "mutamakkiyāt",
+        "kendini zorlayarak ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb V": [
+      ["mutafa''al", "kıyâsî · ilal", "مُتَمَكَّى", "mutamakkā", "kendini zorlayarak ıslık çalınan", "orta", ""],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَكَّيَان",
+        "mutamakkayān",
+        "kendini zorlayarak ıslık çalınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَمَكَّوْن",
+        "mutamakkawn",
+        "kendini zorlayarak ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَمَكَّيْن",
+        "mutamakkayn",
+        "kendini zorlayarak ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَمَكَّيَات",
+        "mutamakkayāt",
+        "kendini zorlayarak ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb V": [
+      [
+        "mutafa''al",
+        "kıyâsî · ilal",
+        "مُتَمَكَّى",
+        "mutamakkā",
+        "kendini zorlayarak ıslık çalma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VI": [
+      ["tafā'ul", "kıyâsî · ilal", "تَمَاكِي", "tamākī", "birbirine ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VI": [
+      ["mutafā'il", "kıyâsî · ilal", "مُتَمَاكِي", "mutamākī", "birbirine ıslık çalan", "orta", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî · ilal",
+        "مُتَمَاكِيَة",
+        "mutamākiya",
+        "birbirine ıslık çalan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَاكِيَان",
+        "mutamākiyān",
+        "birbirine ıslık çalan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَاكِيَتَان",
+        "mutamākiyatān",
+        "birbirine ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَمَاكُون",
+        "mutamākūn",
+        "birbirine ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَمَاكِين",
+        "mutamākīn",
+        "birbirine ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَمَاكِيَات",
+        "mutamākiyāt",
+        "birbirine ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VI": [
+      ["mutafā'al", "kıyâsî · ilal", "مُتَمَاكَى", "mutamākā", "birbirine ıslık çalınan", "orta", ""],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَمَاكَيَان",
+        "mutamākayān",
+        "birbirine ıslık çalınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَمَاكَوْن",
+        "mutamākawn",
+        "birbirine ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَمَاكَيْن",
+        "mutamākayn",
+        "birbirine ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَمَاكَيَات",
+        "mutamākayāt",
+        "birbirine ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VI": [
+      ["mutafā'al", "kıyâsî · ilal", "مُتَمَاكَى", "mutamākā", "birbirine ıslık çalma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb VII": [
+      ["infi'āl", "kıyâsî · ilal", "اِنْمِكَاء", "inmikāʾ", "ıslık çalınma", "orta", ""]
+    ],
+    "ism-i merre · bâb VII": [
+      ["infi'āl + tâ", "aday · ilal", "اِنْمِكَاءَة", "inmikāʾa", "bir kere ıslık çalınma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VII": [
+      ["munfa'il", "kıyâsî · ilal", "مُنْمَكِي", "munmakī", "ıslık çalınan", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْمَكِيَة", "munmakiya", "ıslık çalınan, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْمَكِيَان", "munmakiyān", "ıslık çalınan, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْمَكِيَتَان",
+        "munmakiyatān",
+        "ıslık çalınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْمَكُون",
+        "munmakūn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْمَكِين",
+        "munmakīn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْمَكِيَات",
+        "munmakiyāt",
+        "ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَى",
+        "munmakā",
+        "ıslık çalınan",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَيَان",
+        "munmakayān",
+        "ıslık çalınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَوْن",
+        "munmakawn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَيْن",
+        "munmakayn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَيَات",
+        "munmakayāt",
+        "ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VII": [
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْمَكَى",
+        "munmakā",
+        "ıslık çalınma yeri, vakti",
+        "orta",
+        ""
+      ]
+    ],
+    "masdar · bâb VIII": [
+      ["ifti'āl", "kıyâsî · ilal", "اِمْتِكَاء", "imtikāʾ", "kendisi için ıslık çalma", "orta", ""]
+    ],
+    "ism-i merre · bâb VIII": [
+      ["ifti'āl + tâ", "aday · ilal", "اِمْتِكَاءَة", "imtikāʾa", "bir kere kendisi için ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · bâb VIII": [
+      ["muftaʿil", "kıyâsî · ilal", "مُمْتَكِي", "mumtakī", "kendisi için ıslık çalan", "orta", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî · ilal",
+        "مُمْتَكِيَة",
+        "mumtakiya",
+        "kendisi için ıslık çalan, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + tesniye",
+        "kıyâsî · ilal",
+        "مُمْتَكِيَان",
+        "mumtakiyān",
+        "kendisi için ıslık çalan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمْتَكِيَتَان",
+        "mumtakiyatān",
+        "kendisi için ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْتَكُون",
+        "mumtakūn",
+        "kendisi için ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْتَكِين",
+        "mumtakīn",
+        "kendisi için ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْتَكِيَات",
+        "mumtakiyāt",
+        "kendisi için ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُمْتَكَى", "mumtakā", "kendisi için ıslık çalınan", "orta", ""],
+      [
+        "muftaʿal + tesniye",
+        "kıyâsî · ilal",
+        "مُمْتَكَيَان",
+        "mumtakayān",
+        "kendisi için ıslık çalınan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْتَكَوْن",
+        "mumtakawn",
+        "kendisi için ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْتَكَيْن",
+        "mumtakayn",
+        "kendisi için ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْتَكَيَات",
+        "mumtakayāt",
+        "kendisi için ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb VIII": [
+      ["muftaʿal", "kıyâsî · ilal", "مُمْتَكَى", "mumtakā", "kendisi için ıslık çalma yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb IX (illet harfi izhar)": [
+      ["if'ilāl", "semâî aday · ilal", "اِمْكِوَاء", "imkiwāʾ", "iyiden iyiye ıslık çalma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb IX (illet harfi izhar)": [
+      ["muf'all", "kıyâsî · ilal", "مُمْكَوِي", "mumkawī", "iyiden iyiye ıslık çalan", "kontrol", ""],
+      [
+        "muf'all + müennes",
+        "kıyâsî · ilal",
+        "مُمْكَوِيَة",
+        "mumkawiya",
+        "iyiden iyiye ıslık çalan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + tesniye",
+        "kıyâsî · ilal",
+        "مُمْكَوِيَان",
+        "mumkawiyān",
+        "iyiden iyiye ıslık çalan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمْكَوِيَتَان",
+        "mumkawiyatān",
+        "iyiden iyiye ıslık çalan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْكَوُون",
+        "mumkawūn",
+        "iyiden iyiye ıslık çalanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْكَوِين",
+        "mumkawīn",
+        "iyiden iyiye ıslık çalanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْكَوِيَات",
+        "mumkawiyāt",
+        "iyiden iyiye ıslık çalanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb X": [
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِمْكَاء", "istimkāʾ", "ıslık çalmayı isteme", "orta", ""]
+    ],
+    "ism-i merre · bâb X": [
+      ["istif'āl + tâ", "aday · ilal", "اِسْتِمْكَاءَة", "istimkāʾa", "bir kere ıslık çalmayı isteme", "orta", ""]
+    ],
+    "ism-i fâil · bâb X": [
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَمْكِي", "mustamkī", "ıslık çalmayı isteyen", "orta", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَمْكِيَة",
+        "mustamkiya",
+        "ıslık çalmayı isteyen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَمْكِيَان",
+        "mustamkiyān",
+        "ıslık çalmayı isteyen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَمْكِيَتَان",
+        "mustamkiyatān",
+        "ıslık çalmayı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكُون",
+        "mustamkūn",
+        "ıslık çalmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكِين",
+        "mustamkīn",
+        "ıslık çalmayı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكِيَات",
+        "mustamkiyāt",
+        "ıslık çalmayı isteyenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَمْكَى", "mustamkā", "ıslık çalması istenen", "orta", ""],
+      [
+        "mustaf'al + tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَمْكَيَان",
+        "mustamkayān",
+        "ıslık çalması istenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكَوْن",
+        "mustamkawn",
+        "ıslık çalması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكَيْن",
+        "mustamkayn",
+        "ıslık çalması istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَمْكَيَات",
+        "mustamkayāt",
+        "ıslık çalması istenenler, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman/masdar-ı mîmî · bâb X": [
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَمْكَى", "mustamkā", "ıslık çalmayı isteme yeri, vakti", "orta", ""]
+    ],
+    "masdar · bâb XI (illet harfi izhar)": [
+      ["if'īlāl", "semâî aday · ilal", "اِمْكِيوَاء", "imkīwāʾ", "büsbütün ıslık çalma", "kontrol", ""]
+    ],
+    "ism-i fâil · bâb XI (illet harfi izhar)": [
+      ["muf'āll", "kıyâsî · ilal", "مُمْكَاوِي", "mumkāwī", "büsbütün ıslık çalan", "kontrol", ""],
+      [
+        "muf'āll + müennes",
+        "kıyâsî · ilal",
+        "مُمْكَاوِيَة",
+        "mumkāwiya",
+        "büsbütün ıslık çalan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + tesniye",
+        "kıyâsî · ilal",
+        "مُمْكَاوِيَان",
+        "mumkāwiyān",
+        "büsbütün ıslık çalan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُمْكَاوِيَتَان",
+        "mumkāwiyatān",
+        "büsbütün ıslık çalan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُمْكَاوُون",
+        "mumkāwūn",
+        "büsbütün ıslık çalanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُمْكَاوِين",
+        "mumkāwīn",
+        "büsbütün ıslık çalanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُمْكَاوِيَات",
+        "mumkāwiyāt",
+        "büsbütün ıslık çalanlar, müennes",
+        "kontrol",
+        ""
+      ]
+    ],
+    "masdar · bâb XII (illet harfi izhar)": [
+      ["if'iv'āl", "semâî aday · ilal", "اِمْكِوْكَاء", "imkiwkāʾ", "aşırı ıslık çalma", "orta", ""]
+    ],
+    "masdar · bâb XIII (illet harfi izhar)": [
+      ["if'ivvāl", "semâî aday · ilal", "اِمْكِوَّاء", "imkiwwāʾ", "aşırı ıslık çalma", "orta", ""]
+    ],
+    "ism-i fâil · sülâsî": [
+      ["fâ'il", "kıyâsî · ilal", "مَاكِي", "mākī", "ıslık çalan", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "مَاكِيَة", "mākiya", "ıslık çalan, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "مَاكِيَان", "mākiyān", "ıslık çalan, iki", "orta", ""],
+      [
+        "fâ'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَاكِيَتَان",
+        "mākiyatān",
+        "ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مَاكُون", "mākūn", "ıslık çalanlar", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مَاكِين", "mākīn", "ıslık çalanlar", "orta", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَاكِيَات",
+        "mākiyāt",
+        "ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "ism-i mef‘ûl · sülâsî": [
+      ["maf'ûl", "kıyâsî · ilal", "مَمْكُوّ", "mamkuww", "ıslık çalınan", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَمْكُوَّة", "mamkuwwa", "ıslık çalınan, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَمْكُوَّان", "mamkuwwān", "ıslık çalınan, iki", "orta", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَمْكُوَّتَان",
+        "mamkuwwatān",
+        "ıslık çalınan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مَمْكُوُّون",
+        "mamkuwwūn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مَمْكُوِّين",
+        "mamkuwwīn",
+        "ıslık çalınanlar",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَمْكُوَّات",
+        "mamkuwwāt",
+        "ıslık çalınanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mekân/zaman · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَمْكَى", "mamkā", "ıslık çalma yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَمْكَيَان", "mamkayān", "ıslık çalma yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî · ilal", "مَمْكِي", "mamkī", "ıslık çalma yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَمْكِيَان", "mamkiyān", "ıslık çalma yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَمْكَاة", "mamkā", "ıslık çalmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî · ilal",
+        "مَمْكَاتَان",
+        "mamkātān",
+        "ıslık çalmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ile", "kıyâsî · ilal", "مَمْكِيَة", "mamkiya", "ıslık çalmanın bol olduğu yer", "orta", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَمْكِيَتَان",
+        "mamkiyatān",
+        "ıslık çalmanın bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَمْكُوَة", "mamkuwa", "ıslık çalma yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَمْكُوَتَان", "mamkuwatān", "ıslık çalma yeri, vakti, iki", "orta", ""]
+    ],
+    "âlet · sülâsî": [
+      ["mif'al", "kıyâsî · ilal", "مِمْكَى", "mimkā", "ıslık çalma âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî · ilal", "مِمْكَيَان", "mimkayān", "ıslık çalma âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî · ilal", "مِمْكَاء", "mimkāʾ", "ıslık çalma âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî · ilal", "مِمْكَاآن", "mimkāʾān", "ıslık çalma âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî · ilal", "مِمْكَاة", "mimkā", "ıslık çalma âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî · ilal", "مِمْكَاتَان", "mimkātān", "ıslık çalma âleti, iki", "orta", ""]
+    ],
+    "tafdîl · sülâsî": [
+      ["af'al", "kıyâsî · ilal", "أَمْكَى", "ʾamkā", "daha çok ıslık çalan", "orta", ""],
+      ["af'al + tesniye", "kıyâsî · ilal", "أَمْكَيَان", "ʾamkayān", "daha çok ıslık çalan, iki", "orta", ""]
+    ],
+    "tafdîl (müennes) · sülâsî": [
+      ["fu'lâ", "kıyâsî · ilal", "مُكْيَى", "mukyā", "daha çok ıslık çalan", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî · ilal", "مُكْيَيَان", "mukyayān", "daha çok ıslık çalan, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "مَكْوَاء", "makwāʾ", "daha çok ıslık çalan", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "مَكْوَاآن", "makwāʾān", "daha çok ıslık çalan, iki", "orta", ""]
+    ],
+    "tasğîr · sülâsî": [
+      ["fu'ayl", "kıyâsî · ilal", "مُكَيّ", "mukayy", "azıcık ıslık çalma", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî · ilal", "مُكَيَّان", "mukayyān", "azıcık ıslık çalma, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî · ilal", "مُكَيَّة", "mukayya", "azıcık ıslık çalma", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî · ilal", "مُكَيَّتَان", "mukayyatān", "azıcık ıslık çalma, iki", "orta", ""]
+    ],
+    "masdar-ı mîmî · sülâsî": [
+      ["maf'al", "kıyâsî · ilal", "مَمْكَى", "mamkā", "ıslık çalma", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَمْكَيَان", "mamkayān", "ıslık çalma, iki", "orta", ""]
+    ],
+    "ism-i merre · sülâsî": [
+      ["fa'le", "aday", "مَكْوَة", "makwa", "bir kere ıslık çalma", "orta", ""],
+      ["fa'le + tesniye", "aday", "مَكْوَتَان", "makwatān", "bir kere ıslık çalma, iki", "orta", ""]
+    ],
+    "ism-i hey'et · sülâsî": [
+      ["fi'le", "aday", "مِكْوَة", "mikwa", "ıslık çalma tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "مِكْوَتَان", "mikwatān", "ıslık çalma tarzı, iki", "orta", ""]
+    ],
+    "sıfat-ı müşebbehe": [
+      ["fa'īl", "semâî aday · ilal", "مَكِيّ", "makiyy", "her daim ıslık çalan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "مَكِيَّة", "makiyya", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "مَكِيَّان", "makiyyān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكِيَّتَان",
+        "makiyyatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكِيُّون",
+        "makiyyūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكِيِّين",
+        "makiyyīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكِيَّات",
+        "makiyyāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "مَكُوّ", "makuww", "her daim ıslık çalan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "مَكُوَّة", "makuwwa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "مَكُوَّان", "makuwwān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكُوَّتَان",
+        "makuwwatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكُوُّون",
+        "makuwwūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكُوِّين",
+        "makuwwīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكُوَّات",
+        "makuwwāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday · ilal", "مَكِي", "makī", "her daim ıslık çalan", "orta", ""],
+      ["fa'il + müennes", "semâî aday · ilal", "مَكِيَة", "makiya", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday · ilal", "مَكِيَان", "makiyān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكِيَتَان",
+        "makiyatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكُون",
+        "makūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكِين",
+        "makīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكِيَات",
+        "makiyāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday · ilal", "مَكُوّ", "makuww", "her daim ıslık çalan", "orta", ""],
+      ["fa'ul + müennes", "semâî aday · ilal", "مَكُوَّة", "makuwwa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday · ilal", "مَكُوَّان", "makuwwān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكُوَّتَان",
+        "makuwwatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكُوُّون",
+        "makuwwūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكُوِّين",
+        "makuwwīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكُوَّات",
+        "makuwwāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "مَكَا", "makā", "her daim ıslık çalan", "orta", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "مَكَوَان", "makawān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكَوَات",
+        "makawāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l", "semâî aday", "مَكْو", "makw", "her daim ıslık çalan", "orta", ""],
+      ["fa'l + müennes", "semâî aday", "مَكْوَة", "makwa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'l + tesniye", "semâî aday", "مَكْوَان", "makwān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "مَكْوَتَان",
+        "makwatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مَكْوُون",
+        "makwūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مَكْوِين",
+        "makwīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مَكْوَات",
+        "makwāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday · ilal", "مُكُوّ", "mukuww", "her daim ıslık çalan", "orta", ""],
+      ["fu'ul + müennes", "semâî aday · ilal", "مُكُوَّة", "mukuwwa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday · ilal", "مُكُوَّان", "mukuwwān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "مُكُوَّتَان",
+        "mukuwwatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مُكُوُّون",
+        "mukuwwūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مُكُوِّين",
+        "mukuwwīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مُكُوَّات",
+        "mukuwwāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "مَكْوَان", "makwān", "her daim ıslık çalan", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "مَكْوَانَة", "makwāna", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "مَكْوَانَان", "makwānān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "مَكْوَانَتَان",
+        "makwānatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مَكْوَانُون",
+        "makwānūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مَكْوَانِين",
+        "makwānīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مَكْوَانَات",
+        "makwānāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday · ilal", "مُكَاء", "mukāʾ", "her daim ıslık çalan", "orta", ""],
+      ["fu'āl + müennes", "semâî aday · ilal", "مُكَاءَة", "mukāʾa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday · ilal", "مُكَاآن", "mukāʾān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مُكَاءَتَان",
+        "mukāʾatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مُكَاؤُون",
+        "mukāʾūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مُكَائِين",
+        "mukāʾīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مُكَاآت",
+        "mukāʾāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday · ilal", "مَكَاء", "makāʾ", "her daim ıslık çalan", "orta", ""],
+      ["fa'āl + müennes", "semâî aday · ilal", "مَكَاءَة", "makāʾa", "her daim ıslık çalan, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday · ilal", "مَكَاآن", "makāʾān", "her daim ıslık çalan, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكَاءَتَان",
+        "makāʾatān",
+        "her daim ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكَاؤُون",
+        "makāʾūn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكَائِين",
+        "makāʾīn",
+        "her daim ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكَاآت",
+        "makāʾāt",
+        "her daim ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mübalağa": [
+      ["fa''āl", "semâî aday · ilal", "مَكَّاء", "makkāʾ", "işi ıslık çalma olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday · ilal", "مَكَّاءَة", "makkāʾa", "işi ıslık çalma olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday · ilal", "مَكَّاآن", "makkāʾān", "işi ıslık çalma olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكَّاءَتَان",
+        "makkāʾatān",
+        "işi ıslık çalma olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكَّاؤُون",
+        "makkāʾūn",
+        "işi ıslık çalma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكَّائِين",
+        "makkāʾīn",
+        "işi ıslık çalma olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكَّاآت",
+        "makkāʾāt",
+        "işi ıslık çalma olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday · ilal", "مَكَّايَة", "makkāya", "pek çok ıslık çalan", "orta", ""],
+      [
+        "fa''āle + tesniye",
+        "semâî aday · ilal",
+        "مَكَّايَتَان",
+        "makkāyatān",
+        "pek çok ıslık çalan, iki",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكَّايَات",
+        "makkāyāt",
+        "pek çok ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "مَكُوّ", "makuww", "çok ıslık çalan", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "مَكُوَّة", "makuwwa", "çok ıslık çalan, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "مَكُوَّان", "makuwwān", "çok ıslık çalan, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكُوَّتَان",
+        "makuwwatān",
+        "çok ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكُوُّون",
+        "makuwwūn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكُوِّين",
+        "makuwwīn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكُوَّات",
+        "makuwwāt",
+        "çok ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "مَكُّوو", "makkūw", "pek çok ıslık çalan", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "مَكُّووَة", "makkūwa", "pek çok ıslık çalan, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "مَكُّووَان", "makkūwān", "pek çok ıslık çalan, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "مَكُّووَتَان",
+        "makkūwatān",
+        "pek çok ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مَكُّووُون",
+        "makkūwūn",
+        "pek çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مَكُّووِين",
+        "makkūwīn",
+        "pek çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مَكُّووَات",
+        "makkūwāt",
+        "pek çok ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "مِكِّيو", "mikkīw", "ıslık çalmada aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "مِكِّيوَة", "mikkīwa", "ıslık çalmada aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "مِكِّيوَان", "mikkīwān", "ıslık çalmada aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "مِكِّيوَتَان",
+        "mikkīwatān",
+        "ıslık çalmada aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِكِّيوُون",
+        "mikkīwūn",
+        "ıslık çalmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِكِّيوِين",
+        "mikkīwīn",
+        "ıslık çalmada aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِكِّيوَات",
+        "mikkīwāt",
+        "ıslık çalmada aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday · ilal", "مُكَّاء", "mukkāʾ", "son derece ıslık çalan", "orta", ""],
+      [
+        "fu''āl + müennes",
+        "semâî aday · ilal",
+        "مُكَّاءَة",
+        "mukkāʾa",
+        "son derece ıslık çalan, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl + tesniye", "semâî aday · ilal", "مُكَّاآن", "mukkāʾān", "son derece ıslık çalan, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مُكَّاءَتَان",
+        "mukkāʾatān",
+        "son derece ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مُكَّاؤُون",
+        "mukkāʾūn",
+        "son derece ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مُكَّائِين",
+        "mukkāʾīn",
+        "son derece ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مُكَّاآت",
+        "mukkāʾāt",
+        "son derece ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday · ilal", "مِمْكَاء", "mimkāʾ", "ıslık çalmayı âdet edinmiş", "orta", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday · ilal",
+        "مِمْكَاءَة",
+        "mimkāʾa",
+        "ıslık çalmayı âdet edinmiş, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + tesniye",
+        "semâî aday · ilal",
+        "مِمْكَاآن",
+        "mimkāʾān",
+        "ıslık çalmayı âdet edinmiş, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مِمْكَاءَتَان",
+        "mimkāʾatān",
+        "ıslık çalmayı âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مِمْكَاؤُون",
+        "mimkāʾūn",
+        "ıslık çalmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مِمْكَائِين",
+        "mimkāʾīn",
+        "ıslık çalmayı âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مِمْكَاآت",
+        "mimkāʾāt",
+        "ıslık çalmayı âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِمْكِيو", "mimkīw", "ıslık çalmaya düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِمْكِيوَة", "mimkīwa", "ıslık çalmaya düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِمْكِيوَان", "mimkīwān", "ıslık çalmaya düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِمْكِيوَتَان",
+        "mimkīwatān",
+        "ıslık çalmaya düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِمْكِيوُون",
+        "mimkīwūn",
+        "ıslık çalmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِمْكِيوِين",
+        "mimkīwīn",
+        "ıslık çalmaya düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِمْكِيوَات",
+        "mimkīwāt",
+        "ıslık çalmaya düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday · ilal", "مَكِيّ", "makiyy", "çok ıslık çalan", "orta", ""],
+      ["fa'īl + müennes", "semâî aday · ilal", "مَكِيَّة", "makiyya", "çok ıslık çalan, müennes", "orta", ""],
+      ["fa'īl + tesniye", "semâî aday · ilal", "مَكِيَّان", "makiyyān", "çok ıslık çalan, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "مَكِيَّتَان",
+        "makiyyatān",
+        "çok ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مَكِيُّون",
+        "makiyyūn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مَكِيِّين",
+        "makiyyīn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مَكِيَّات",
+        "makiyyāt",
+        "çok ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "مَكَّو", "makkaw", "çok ıslık çalan", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "مَكَّوَة", "makkawa", "çok ıslık çalan, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "مَكَّوَان", "makkawān", "çok ıslık çalan, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "مَكَّوَتَان",
+        "makkawatān",
+        "çok ıslık çalan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مَكَّوُون",
+        "makkawūn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مَكَّوِين",
+        "makkawīn",
+        "çok ıslık çalanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مَكَّوَات",
+        "makkawāt",
+        "çok ıslık çalanlar, müennes",
+        "orta",
+        ""
+      ]
+    ],
+    "mensûb": [
+      ["fa'l + iyy", "kıyâsî", "مَكْوِيّ", "makwiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "مِكْوِيّ", "mikwiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "مُكْوِيّ", "mukwiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "مِكَائِيّ", "mikāʾiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "مَاكِيّ", "mākiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَمْكُوِّيّ", "mamkuwwiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî · ilal", "مَكِيِّيّ", "makiyyiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَمْكَوِيّ", "mamkawiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî · ilal", "تَمْكِيِيّ", "tamkiyiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî · ilal", "تَمَاكِيّ", "tamākiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِمْكَائِيّ", "ʾimkāʾiyy", "ıslık çalma ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِمْتِكَائِيّ", "imtikāʾiyy", "ıslık çalma ile ilgili", "orta", ""]
+    ],
+    "masdar-ı sınâî": [
+      ["fa'l + iyye", "kıyâsî", "مَكْوِيَّة", "makwiyya", "ıslık çalanlık", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "مِكْوِيَّة", "mikwiyya", "ıslık çalanlık", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "مُكْوِيَّة", "mukwiyya", "ıslık çalanlık", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "مِكَائِيَّة", "mikāʾiyya", "ıslık çalanlık", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "مَاكِيَّة", "mākiyya", "ıslık çalanlık", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَمْكُوِّيَّة", "mamkuwwiyya", "ıslık çalanlık", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî · ilal", "مَكِيِّيَّة", "makiyyiyya", "ıslık çalanlık", "orta", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَمْكَوِيَّة", "mamkawiyya", "ıslık çalanlık", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî · ilal", "تَمْكِيِيَّة", "tamkiyiyya", "ıslık çalanlık", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî · ilal", "تَمَاكِيَّة", "tamākiyya", "ıslık çalanlık", "orta", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِمْكَائِيَّة", "ʾimkāʾiyya", "ıslık çalanlık", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِمْتِكَائِيَّة", "imtikāʾiyya", "ıslık çalanlık", "orta", ""]
+    ],
+    "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
+      ["fa'âl (kelâm, selâm)", "semâî aday · ilal", "مَكَاء", "makāʾ", "ıslık çalma", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalma", "orta", ""],
+      ["fi'âl", "semâî aday · ilal", "مِكَاء", "mikāʾ", "ıslık çalma", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "مُكْو", "mukw", "ıslık çalma", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday · ilal", "مَكَاة", "makā", "ıslık çalma", "orta", ""],
+      ["fi'âle", "semâî aday · ilal", "مِكَايَة", "mikāya", "ıslık çalma", "orta", ""],
+      ["fu'ûle", "semâî aday · ilal", "مُكُوَّة", "mukuwwa", "ıslık çalma", "orta", ""],
+      ["fa'l", "semâî aday", "مَكْو", "makw", "ıslık çalma", "orta", ""],
+      ["fi'l", "semâî aday", "مِكْو", "mikw", "ıslık çalma", "orta", ""]
+    ],
+    "ism-i cins · ifrâdî (aday)": [
+      ["fâ'ûl", "semâî aday", "مَاكُوو", "mākūw", "ıslık çalma türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday · ilal", "مَكَاة", "makā", "ıslık çalma türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "مُكَوَة", "mukawa", "ıslık çalma türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُمْكُووَة", "ʾumkūwa", "ıslık çalma türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "مَوْكَو", "mawkaw", "ıslık çalma türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "مَيْكَو", "maykaw", "ıslık çalma türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "مَكْو", "makw", "ıslık çalma türünden şey", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "مَكَا", "makā", "ıslık çalma türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "مِكْو", "mikw", "ıslık çalma türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "مُكْو", "mukw", "ıslık çalma türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday · ilal", "مَكِيّ", "makiyy", "ıslık çalma türünden şey", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "مِكَى", "mikā", "ıslık çalma türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalma türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday · ilal", "مَكَاء", "makāʾ", "ıslık çalma türünden şey", "orta", ""]
+    ],
+    "ism-i cins · cem‘î ve tekili (+tâ)": [
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "مَاكُووَة", "mākūwa", "ıslık çalma türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "مَوْكَوَة", "mawkawa", "ıslık çalma türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "مَيْكَوَة", "maykawa", "ıslık çalma türünden bir tane", "orta", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "مَكْوَة", "makwa", "ıslık çalma türünden bir tane", "orta", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "مِكْوَة", "mikwa", "ıslık çalma türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "مُكْوَة", "mukwa", "ıslık çalma türünden bir tane", "orta", ""],
+      [
+        "fa'îl + tâ (tekili)",
+        "semâî aday · ilal",
+        "مَكِيَّة",
+        "makiyya",
+        "ıslık çalma türünden bir tane",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + tâ (tekili)",
+        "semâî aday · ilal",
+        "مُكُوَّة",
+        "mukuwwa",
+        "ıslık çalma türünden bir tane",
+        "orta",
+        ""
+      ],
+      [
+        "fa'âl + tâ (tekili)",
+        "semâî aday · ilal",
+        "مَكَاءَة",
+        "makāʾa",
+        "ıslık çalma türünden bir tane",
+        "orta",
+        ""
+      ]
+    ],
+    "cem‘-i mükesser (aday)": [
+      ["ef'āl", "semâî aday · ilal", "أَمْكَاء", "ʾamkāʾ", "ıslık çalmalar", "orta", ""],
+      ["ef'ile", "semâî aday · ilal", "أَمْكِيَة", "ʾamkiya", "ıslık çalmalar", "orta", ""],
+      ["efâ'il", "semâî aday · ilal", "أَمَاكِي", "ʾamākī", "ıslık çalmalar", "orta", ""],
+      ["efâ'îl", "semâî aday · ilal", "أَمَاكِيّ", "ʾamākiyy", "ıslık çalmalar", "orta", ""],
+      ["fu'ūl", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalmalar", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "مُكُوّ", "mukuww", "ıslık çalmalar", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "مِكَاء", "mikāʾ", "ıslık çalmalar", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "مِكَى", "mikā", "ıslık çalmalar", "orta", ""],
+      ["fi'ale", "semâî aday · ilal", "مِكَيَة", "mikaya", "ıslık çalmalar", "orta", ""],
+      ["fu'al", "semâî aday · ilal", "مُكَى", "mukā", "ıslık çalmalar", "orta", ""],
+      ["fa'ale", "semâî aday · ilal", "مَكَاة", "makā", "ıslık çalmalar", "orta", ""],
+      ["fu''āl", "semâî aday · ilal", "مُكَّاء", "mukkāʾ", "ıslık çalmalar", "orta", ""],
+      ["fa'āl", "semâî aday · ilal", "مَكَاء", "makāʾ", "ıslık çalmalar", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "مَكَا", "makā", "ıslık çalmalar", "orta", ""],
+      ["mefâ'il", "semâî aday · ilal", "مَمَاكِي", "mamākī", "ıslık çalmalar", "orta", ""],
+      ["mefâ'îl", "semâî aday · ilal", "مَمَاكِيّ", "mamākiyy", "ıslık çalmalar", "orta", ""],
+      ["fevâ'il", "semâî aday · ilal", "مَوَاكِي", "mawākī", "ıslık çalmalar", "orta", ""],
+      ["af'ul", "semâî aday", "أَمْكُو", "ʾamkuw", "ıslık çalmalar", "orta", ""],
+      ["fu''al", "semâî aday", "مُكَّو", "mukkaw", "ıslık çalmalar", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday · ilal", "مُكَيّ", "mukayy", "ıslık çalmalar", "orta", ""]
+    ],
+    "cem‘u’l-cem‘ (aday)": [
+      ["ef'āl + ât", "semâî aday · ilal", "أَمْكَاآت", "ʾamkāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday · ilal", "أَمْكِيَات", "ʾamkiyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday · ilal", "أَمَاكِيَات", "ʾamākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday · ilal", "أَمَاكِيَّات", "ʾamākiyyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday · ilal", "مُكُوَّات", "mukuwwāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday · ilal", "مُكُوَّات", "mukuwwāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "مِكَاآت", "mikāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday · ilal", "مِكَيَات", "mikayāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday · ilal", "مِكَيَات", "mikayāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday · ilal", "مُكَيَات", "mukayāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday · ilal", "مَكَاات", "makāāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday · ilal", "مُكَّاآت", "mukkāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday · ilal", "مَكَاآت", "makāʾāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday · ilal", "مَكَوَات", "makawāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["mefâ'il + ât", "semâî aday · ilal", "مَمَاكِيَات", "mamākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday · ilal", "مَمَاكِيَّات", "mamākiyyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday · ilal", "مَوَاكِيَات", "mawākiyāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَمْكُوَات", "ʾamkuwāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "مُكَّوَات", "mukkawāt", "ıslık çalmalar topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday · ilal", "مُكَيَّات", "mukayyāt", "ıslık çalmalar topluluğu", "orta", ""]
+    ]
+  },
+  "reddedilen": [
+    ["ism-i merre · bâb II", "taf'īl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "r3"],
+    ["ism-i merre · bâb V", "tafa''ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "r3"],
+    ["ism-i merre · bâb VI", "tafā'ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VII", "munfa'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["sıfat-ı müşebbehe", "fa'al + müennes", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mensûb", "fa'al + iyy", "r3"],
+    ["masdar-ı sınâî", "fa'al + iyye", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "r3"],
+    ["cem‘-i mükesser (aday)", "fu'alā'", "r5"],
+    ["cem‘-i mükesser (aday)", "fe'âil", "r5"]
+  ],
+  "mana": {
+    "durum": "Arabic WordNet v2 kaydı yok"
+  },
+  "gomme": {
     "ust": {
       "kume": 9,
       "merkez_kok": "سفك",
@@ -871,526 +2169,14 @@
       "boy": 38
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "519": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday · ilal", ""],
-    "520": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "522": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday · ilal", ""],
-    "523": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday · ilal", ""],
-    "524": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday · ilal", ""],
-    "525": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "527": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday · ilal", ""],
-    "528": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday · ilal", ""],
-    "529": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday · ilal", ""],
-    "530": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday · ilal", ""],
-    "531": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday · ilal", ""],
-    "532": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "534": ["masdar · bâb II", "taf'īl", "kıyâsî · ilal", "II"],
-    "535": ["masdar · bâb II", "taf'ila", "kıyâsî · ilal", "II"],
-    "536": ["masdar · bâb II", "fi''āl", "kıyâsî · ilal", "II"],
-    "537": ["ism-i merre · bâb II", "fi''āl + tâ", "aday · ilal", "II"],
-    "538": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî · ilal", "II"],
-    "539": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî · ilal", "II"],
-    "540": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî · ilal", "II"],
-    "541": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî · ilal", "II"],
-    "542": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "543": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "544": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "545": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "546": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî · ilal", "II"],
-    "547": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "548": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "549": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "550": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "551": ["masdar · bâb III", "mufā'ale", "kıyâsî · ilal", "III"],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "554": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî · ilal", "III"],
-    "555": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî · ilal", "III"],
-    "556": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî · ilal", "III"],
-    "557": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî · ilal", "III"],
-    "558": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "559": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "560": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "561": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "562": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî · ilal", "III"],
-    "563": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "564": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "565": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "566": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "568": ["ism-i merre · bâb IV", "if'āl + tâ", "aday · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "582": ["masdar · bâb V", "tafa''ul", "kıyâsî · ilal", "V"],
-    "583": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî · ilal", "V"],
-    "584": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî · ilal", "V"],
-    "585": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî · ilal", "V"],
-    "586": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî · ilal", "V"],
-    "587": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "588": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "589": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "590": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "591": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî · ilal", "V"],
-    "592": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "593": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "594": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "595": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "596": ["masdar · bâb VI", "tafā'ul", "kıyâsî · ilal", "VI"],
-    "597": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî · ilal", "VI"],
-    "598": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî · ilal", "VI"],
-    "599": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî · ilal", "VI"],
-    "600": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî · ilal", "VI"],
-    "601": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "602": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "603": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "604": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "605": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî · ilal", "VI"],
-    "606": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "607": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "608": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "609": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "654": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday · ilal", "IX"],
-    "655": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî · ilal", "IX"],
-    "656": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî · ilal", "IX"],
-    "657": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî · ilal", "IX"],
-    "658": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî · ilal", "IX"],
-    "659": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IX"],
-    "660": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IX"],
-    "661": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IX"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "663": ["ism-i merre · bâb X", "istif'āl + tâ", "aday · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "677": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday · ilal", "XI"],
-    "678": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî · ilal", "XI"],
-    "679": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî · ilal", "XI"],
-    "680": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî · ilal", "XI"],
-    "681": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî · ilal", "XI"],
-    "682": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "XI"],
-    "683": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "XI"],
-    "684": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "XI"],
-    "685": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday · ilal", "XII"],
-    "686": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday · ilal", "XIII"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "709": ["âlet · sülâsî", "mif'al", "kıyâsî · ilal", ""],
-    "710": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî · ilal", ""],
-    "711": ["âlet · sülâsî", "mif'âl", "kıyâsî · ilal", ""],
-    "712": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî · ilal", ""],
-    "713": ["âlet · sülâsî", "mif'ale", "kıyâsî · ilal", ""],
-    "714": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî · ilal", ""],
-    "715": ["tafdîl · sülâsî", "af'al", "kıyâsî · ilal", ""],
-    "716": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî · ilal", ""],
-    "717": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî · ilal", ""],
-    "718": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî · ilal", ""],
-    "719": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî · ilal", ""],
-    "720": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî · ilal", ""],
-    "721": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî · ilal", ""],
-    "722": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "725": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday · ilal", ""],
-    "726": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "727": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "728": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "729": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "730": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "731": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "732": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday · ilal", ""],
-    "733": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "734": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "735": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "736": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "737": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "738": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "739": ["sıfat-ı müşebbehe", "fa'il", "semâî aday · ilal", ""],
-    "740": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday · ilal", ""],
-    "741": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday · ilal", ""],
-    "742": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday · ilal", ""],
-    "743": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "744": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "745": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "746": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday · ilal", ""],
-    "747": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday · ilal", ""],
-    "748": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday · ilal", ""],
-    "749": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "750": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "751": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "752": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "756": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday · ilal", ""],
-    "757": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday · ilal", ""],
-    "758": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday · ilal", ""],
-    "759": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "760": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "761": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "762": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "763": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday · ilal", ""],
-    "764": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday · ilal", ""],
-    "765": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday · ilal", ""],
-    "766": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "767": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "768": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "769": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "770": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday · ilal", ""],
-    "771": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday · ilal", ""],
-    "772": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday · ilal", ""],
-    "773": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "774": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "775": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "776": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "777": ["mübalağa", "fa''āl", "semâî aday · ilal", ""],
-    "778": ["mübalağa", "fa''āl + müennes", "semâî aday · ilal", ""],
-    "779": ["mübalağa", "fa''āl + tesniye", "semâî aday · ilal", ""],
-    "780": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "781": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "782": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "783": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "784": ["mübalağa", "fa''āle", "semâî aday · ilal", ""],
-    "785": ["mübalağa", "fa''āle + tesniye", "semâî aday · ilal", ""],
-    "786": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "787": ["mübalağa", "fa'ūl", "semâî aday · ilal", ""],
-    "788": ["mübalağa", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "789": ["mübalağa", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "790": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "791": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "792": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "793": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "794": ["mübalağa", "fu''āl", "semâî aday · ilal", ""],
-    "795": ["mübalağa", "fu''āl + müennes", "semâî aday · ilal", ""],
-    "796": ["mübalağa", "fu''āl + tesniye", "semâî aday · ilal", ""],
-    "797": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "798": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "799": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "800": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "801": ["mübalağa", "mif'āl", "semâî aday · ilal", ""],
-    "802": ["mübalağa", "mif'āl + müennes", "semâî aday · ilal", ""],
-    "803": ["mübalağa", "mif'āl + tesniye", "semâî aday · ilal", ""],
-    "804": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "805": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "806": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "807": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "808": ["mübalağa", "fa'īl", "semâî aday · ilal", ""],
-    "809": ["mübalağa", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "810": ["mübalağa", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "811": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "812": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "813": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "814": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "821": ["mensûb", "fa'īl + iyy", "kıyâsî · ilal", ""],
-    "822": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "825": ["mensûb", "taf'īl + iyy", "kıyâsî · ilal", ""],
-    "826": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî · ilal", ""],
-    "827": ["mensûb", "tafā'ul + iyy", "kıyâsî · ilal", ""],
-    "828": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "833": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "834": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "836": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "838": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday · ilal", ""],
-    "839": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "841": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday · ilal", ""],
-    "842": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "844": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "845": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday · ilal", ""],
-    "846": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday · ilal", ""],
-    "847": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday · ilal", ""],
-    "848": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday · ilal", ""],
-    "849": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday · ilal", ""],
-    "850": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday · ilal", ""],
-    "851": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday · ilal", ""],
-    "852": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday · ilal", ""],
-    "853": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "856": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday · ilal", ""],
-    "857": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday · ilal", ""],
-    "858": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday · ilal", ""],
-    "859": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday · ilal", ""],
-    "860": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "862": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday · ilal", ""],
-    "863": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday · ilal", ""],
-    "864": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday · ilal", ""],
-    "865": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday · ilal", ""],
-    "866": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday · ilal", ""],
-    "867": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday · ilal", ""],
-    "868": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday · ilal", ""],
-    "869": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday · ilal", ""],
-    "870": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday · ilal", ""],
-    "871": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "874": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday · ilal", ""],
-    "875": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday · ilal", ""],
-    "876": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday · ilal", ""],
-    "877": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday · ilal", ""],
-    "878": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "880": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday · ilal", ""],
-    "881": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday · ilal", ""],
-    "882": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday · ilal", ""],
-    "883": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday · ilal", ""]
+  "muhassas": {
+    "kitap": "السباع",
+    "bab": "الذئاب إرادة إناث الذئاب",
+    "kok_gecis": 30.7,
+    "kitapta_gecis": 3.8,
+    "zenginlesme": 14.17
   },
-  "kelimeler": [
-    {
-      "kelime": "مُكَآءً",
-      "kok": "مكو",
-      "lemma": "مُكاء",
-      "tur": "İsim",
-      "bab": "fe'ale",
-      "zaman": "",
-      "ilk_gecis": "8:35",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "ıslık",
-        "lemma": "ıslık",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "isim",
-    "guven": "kesin",
-    "dayanak": ["fiil-yok"],
-    "kuran": {
-      "fiil": 0,
-      "isim": 1
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": null,
-  "turetim": {
-    "asil": "isim kökü: mekv: yalan, hile / mekâ: ıslık çalmak (?)",
-    "kelimeler": [
-      {
-        "lemma": "مُكاء",
-        "hal": "isim",
-        "bab": "fe'ale",
-        "bab_no": "I",
-        "zaman": [],
-        "adet": 1,
-        "nasil": "cem‘-i mükesser (aday) · fa'al ; cem‘-i mükesser (aday) · fa'āl ; cem‘-i mükesser (aday) · fi'āl (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

@@ -20,25 +20,25 @@ def ar_kelimeler(metin):
 
 
 def bilgi(d):
-    k = d['kok']; soz = d.get('sozlukler') or {}
+    k = d['kok']
     mesmu, bablar, harekeler = set(), set(), set()
-    for e in soz.get('kaikki_vikisozluk') or []:
-        for w in ar_kelimeler(e.get('e', '')):
+    for e in d.get('vikisozluk') or []:
+        for w in ar_kelimeler(e.get('baslik', '')):
             mesmu.add(w)
-        if e.get('p') == 'verb':
-            m = re.match(r'(\S+) • \([^)]*\) ([IVX]+) (\((.*)\))?', e.get('e', ''))
+        if e.get('tur') == 'verb':
+            m = re.match(r'(\S+) • \([^)]*\) ([IVX]+) (\((.*)\))?', e.get('baslik', ''))
             if m and m.group(2) in ROMA:
                 bablar.add(ROMA[m.group(2)])
                 if m.group(2) == 'I':
                     mz = re.search(r'non-past (\S+)', m.group(4) or '')
                     harekeler.add((ayn(m.group(1), k), ayn(mz.group(1), k) if mz else '?'))
-    for e in d.get('kelimeler', []):
-        for w in (e.get('lemma'), e.get('kelime')):
+    for g in d.get('kelimeler', []):
+        for w in [g.get('lemma')] + [b.get('kelime') for b in g.get('bicimler', [])]:
             if w: mesmu.add(w); mesmu.add(re.sub('^ٱل', '', w))
-        if e.get('bab') in KURAN_BAB: bablar.add(KURAN_BAB[e['bab']])
-    for L in (d.get('mustaklar') or {}).values():
+        if g.get('bab') in KURAN_BAB: bablar.add(KURAN_BAB[g['bab']])
+    for L in (d.get('mustak') or {}).values():
         for x in L:
-            if (x[5] and x[5].startswith('Vikisözlük')) or x[4] in ('lugat', 'kuran'): mesmu.add(x[1])
+            if (x[6] and x[6].startswith('Vikisözlük')) or x[5] in ('lugat', 'kuran'): mesmu.add(x[2])
     return mesmu, bablar, harekeler
 
 
@@ -67,14 +67,13 @@ def siniflar(d):
     gecisli = bool(bil) and bil.get('tr') in ('tr', 'aux')
     galib = galib_masdar(harekeler, gecisli)
     muzari = {z for _, z in harekeler}
-    K = d.get('kaliplar') or {}
     out = {}
-    for g, L in (d.get('mustaklar') or {}).items():
+    for g, L in (d.get('mustak') or {}).items():
         for j, x in enumerate(L):
-            kal = K.get(str(x[0]), [g, '', '', ''])
-            grup, ad, etiket, bab = kal[0], kal[1], kal[2], kal[3]
+            bm = re.search(r'bâb ([IVX]+)', g)
+            grup, ad, etiket, bab = g, x[0], x[1], bm.group(1) if bm else ''
             vez = ad.split(' + ')[0].strip()
-            if x[1] in mesmu:
+            if x[2] in mesmu:
                 out[(g, j)] = 'mesmu'; continue
             if bab and bab not in bablar:
                 out[(g, j)] = 'aykiri'; continue

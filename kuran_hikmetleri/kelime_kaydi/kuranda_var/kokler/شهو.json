@@ -1,193 +1,1253 @@
 {
   "kok": "شهو",
-  "sinif": "nâkıs",
-  "turkce_fiil": {
-    "sap": "iste",
-    "kaynak": "kuran-fiil",
-    "guven": "orta"
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil"],
+  "lugat_fiil": true,
+  "baz_fiil": "Yönelim",
+  "baz_ayrim": "iste",
+  "tur_kuran": {
+    "fiil": 8,
+    "isim": 5
   },
-  "mustaklar": {
+  "fiil": "iste",
+  "fiil_kaynak": "kuran-fiil",
+  "fiil_guven": "orta",
+  "sinif": "nâkıs",
+  "ses": {
+    "harf": "ش",
+    "fasil": "شه",
+    "mahrec": "şeceriyye",
+    "bolge": "dil"
+  },
+  "anlam": "Şehvet: arzu, istek",
+  "esas_manalar": "arzu etmek, şehvet{istek}",
+  "lugat": {
+    "Kubbealtı Lügati": [
+      {
+        "madde": "İŞTİHÂ",
+        "tur": "i.",
+        "koken": "Ar. şehve t “istemek, arzu etmek”ten iştihā’",
+        "yazilis": "ﺍﺷﺘﻬﺎﺀ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Arzu, istek",
+            "misaller": [
+              ["Azmış bir temizleme iştihâsı içinde rast geldiğini tepeler", "Ahmet H. Tanpınar"],
+              ["Küçük balıklara büyükleri yutmak iştihâsı verdi", "Refik H. Karay"]
+            ]
+          },
+          {
+            "no": 2,
+            "tanim": "Cinsî arzu"
+          },
+          {
+            "no": 3,
+            "tanim": "Yeme isteği, iştah",
+            "misaller": [
+              ["İlâçla iştihâsını açar, ilâçla hazmeder, ilâçla dışarıya çıkar", "Ahmet H. Tanpınar"],
+              ["● İştihâ-âver", "ﺍﺷﺘﻬﺎﺁﻭﺭ"],
+              ["birl. sıf", "Fars. āver “getiren” ile"],
+              ["İştihâ getiren. ● İştihâ-engiz", "ﺍﺷﺘﻬﺎ ﺍﻧﮕﻴﺰ"],
+              ["birl. sıf", "Fars. engіz “harekete getiren” ile"]
+            ]
+          }
+        ],
+        "kelime": ["اِشْتِهَاء"]
+      },
+      {
+        "madde": "MÜŞTEHEYAT",
+        "tur": "i.",
+        "koken": "Ar. muştehā ’nın çoğul eki -āt almış şekli muşteheyāt",
+        "yazilis": "ﻣﺸﺘﻬﻴﺎﺕ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "İstenilen, arzu edilen, iştah kabartan şeyler",
+            "misaller": [
+              ["Müşteheyat ve temâyülâtına alelıtlak hâkimdir", "Rızâ Tevfik"]
+            ]
+          }
+        ],
+        "kelime": ["مُشْتَهَيَات"]
+      },
+      {
+        "madde": "ŞEHVET",
+        "tur": "i.",
+        "koken": "Ar. şehvet",
+        "yazilis": "ﺷﻬﻮﺕ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Karşı cinse duyulan şiddetli arzu, cinsel istek",
+            "misaller": [
+              [
+                "Bahçelerinde kâh gümüş bedenli nedîmeler şehvetle uzanır, kâh yaralarında zehir köpükler fıkırdayan askerler hasretle serilir",
+                "Refik H. Karay"
+              ],
+              ["İnsanları sevkeden yegâne kānûnun açlık ve şehvet olduğunu öğrenmedi", "Yâkup K. Karaosmanoğlu"]
+            ]
+          },
+          {
+            "no": 2,
+            "etiket": "teşmil.",
+            "tanim": "Ölçüyü aşan şiddetli arzu, şiddetli istek",
+            "misaller": [
+              [
+                "Nefs-i emmârenin huyları olan şu çirkin huylardan da kurtulurlar: Hevâ, gazab, şehvet, hırs, ucub, kibir, riyâ",
+                "Eşrefoğlu Rûmî"
+              ],
+              [
+                "Fakat bir kere inanmanın şehveti başladıktan sonra hakîkat olduğuna îman edilen şeyi bütün iştiyaklarıyle kucaklayan insanlar gibi sevinçten çıldırıyordum",
+                "Peyâmi Safâ"
+              ],
+              ["Kürekleri tutmanın şehveti avuçlarında", "Orhan V. Kanık"]
+            ]
+          },
+          {
+            "no": 3,
+            "etiket": "teşmil.",
+            "tanim": "Nefsin hoşuna giden bedenî ve süflî arzulara meyletme. ● Şehvet-engiz ( ﺷﻬﻮﺕ ﺍﻧﮕﻴﺰ ) birl. sıf. (Fars. engiz “harekete getiren” ile) Şehveti tahrik eden, şehvet uyandıran",
+            "misaller": [
+              ["Hiss-i şehvet-engiz.", ""]
+            ]
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      },
+      {
+        "madde": "ŞEHEVAT",
+        "tur": "i.",
+        "koken": "Ar. şehve t “şiddetli istek”in çoğul eki -āt almış şekli şehevāt",
+        "yazilis": "ﺷﻬﻮﺍﺕ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Şehvetler, nefsin aşırı istekleri"
+          }
+        ],
+        "kelime": ["شَهَوَات"]
+      }
+    ],
+    "Kamus": [
+      {
+        "madde": "iştiha",
+        "koken": "إِفْتِعَالٌ [iftiâl] vezninde",
+        "yazilis": "اَلْإِشْتِهَاءُ",
+        "okunus": "el-iştihâ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve اَلتَّشَهِّي [et-teşehhî] (تَفَعُّلٌ [tefaul] vezninde) Bunlar da شَهْوَةٌ [şehvet] manâsınadır; yukâlu: إِشْتَهَاهُ وَتَشَهَّاهُ بِمَعْنَى شَهِيَهُ Ve تَشَهِّي [teşehhî] Bir kimseden bir nesneyi peyderpey ârzû ve taleb eylemek manâsınadır; yukâlu: تَشَهَّى عَلَى فُلَانٍ كَذَا إِذَا اقْتَرَحَ شَهْوَةً بَعْدَ شَهْوَةٍ",
+            "misaller": [
+              ["إِشْتَهَاهُ وَتَشَهَّاهُ بِمَعْنَى شَهِيَهُ", ""],
+              ["تَشَهَّى عَلَى فُلَانٍ كَذَا إِذَا اقْتَرَحَ شَهْوَةً بَعْدَ شَهْوَةٍ", ""]
+            ]
+          }
+        ],
+        "kelime": ["اِشْتِهَاء"]
+      },
+      {
+        "madde": "eş-şehvet",
+        "koken": "şînin fethiyle",
+        "yazilis": "اَلشَّهْوَةُ",
+        "okunus": "eş-şehvet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Bir nesneyi sevip ona meyl ve ragbet eylemek manâsınadır; yukâlu: شَهِيَهُ وَشَهَاهُ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ وَالْأَوَّلِ إِذَا أَحَبَّهُ وَرَغِبَ فِيهِ",
+            "misaller": [
+              ["شَهِيَهُ وَشَهَاهُ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ وَالْأَوَّلِ إِذَا أَحَبَّهُ وَرَغِبَ فِيهِ", ""]
+            ]
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      }
+    ],
+    "Vankulu": [
+      {
+        "madde": "eş-şehvet",
+        "koken": "şînin fethi ve hânın sükûnuyla",
+        "yazilis": "اَلشَّهْوَةُ",
+        "okunus": "eş-şehvet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Gönül ârzû etmek, iştihâ manâsına; yukâlu: شَهِيتُ الشَّيْءَ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ إِذَا اشْتَهَيْتَهُ",
+            "misaller": [
+              ["شَهِيتُ الشَّيْءَ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ إِذَا اشْتَهَيْتَهُ", ""]
+            ]
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      }
+    ],
+    "Luggat": [
+      {
+        "madde": "şehvet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Aşırı cinsel istek. Aşırı istek"
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      },
+      {
+        "madde": "şehvetengîz",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Şehvet verici"
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      },
+      {
+        "madde": "şehvetperest",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Şehvet düşkünü"
+          }
+        ],
+        "kelime": ["شَهْوَة"]
+      },
+      {
+        "madde": "şehevât",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Şehvetler"
+          }
+        ],
+        "kelime": ["شَهَوَات"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "شَهَوَ",
+      "metin": "(شَهَوَ) الشِّينُ وَالْهَاءُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّهْوَةُ. يُقَالُ: رَجُلٌ شَهْوَانُ، وَشَيْءٌ شَهِيٌّ.",
+      "baslik_tr": "Şeheve (شَهَوَ)",
+      "metin_tr": "(Şeheve [شَهَوَ]) Şîn, hâ ve illetli harf tek bir kelimedir; o da şehvettir. 'Reculün şehvân' (pek arzulu/iştahlı adam) ve 'şey'ün şehiyy' (iştah uyandıran, arzu edilen şey) denilir."
+    }
+  ],
+  "cebel": {
+    "fasil": "الشين والهاء",
+    "baslik": "شهو - شهى",
+    "mihveri": "رغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب.",
+    "tam_metin": "{زُيِّنَ لِلنَّاسِ حُبُّ الشَّهَوَاتِ مِنَ النِّسَاءِ وَالْبَنِينَ} [آل عمران: 14]\n\"شَهِى الشيءَ (كالنوم والنساء والطعام) بكسر الهاء، وشَهَاه يَشهاه شَهْوةً واشتهاه وتشَهّاه: رَغِبَ فيه وأحبه \".\n° المعنى المحوري\nرغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب.",
+    "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق).",
+    "mihveri_tr": "Bedenî bir matluba karşı (ondan yoksunluk hissinden doğan) şiddetli rağbet (1) {Muhakkak siz kadınları bırakıp da şehvetle erkeklere yaklaşıyorsunuz} [A'râf: 81]; cennet ehlinin şehveti ise nefislerinin kabul ve arzusudur: {Orada nefislerin arzuladığı her şey vardır} [Zuhruf: 71]. Sonra mana umumileştirilir: {Artık kendileriyle arzu ettikleri şey arasına set çekilmiştir} [Sebe': 54]; ki bu, azap indikten sonra dünyaya dönmek yahut imanlarının kabul olunmasıdır."
+  },
+  "zemahseri": {
+    "durum": "Esâsü'l-Belâğa'da madde yok"
+  },
+  "ontoloji": [
+    {
+      "id": "41972",
+      "arapca": ["شَهْوَةٌ"],
+      "ingilizce": [],
+      "tanim": "حركة للنفس طلباً للملائم",
+      "misal": "",
+      "veri_kaynagi": "38",
+      "ust": [
+        ["alt_tur_of", "293215", "process"]
+      ]
+    },
+    {
+      "id": "46085",
+      "arapca": ["هَوَىً", "تَوْقٌ", "رَغْبَةٌ", "مَيْلٌ", "نَزْعةٌ", "شَهْوَةٌ"],
+      "ingilizce": [],
+      "tanim": "قوة نفسانية تُنتج حاجة تدفع المرء إلى القيام بفعل معين تلبيةً لتلك الحاجة",
+      "misal": "من دفعه ال_ لارتكاب المعاصي،  فليدفعه ضميره الى الإسراع في التوبة",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46184",
+      "arapca": [
+        "نَهْمَةٌ",
+        "مَحَبَّةٌ",
+        "اِشْتِهاءٌ",
+        "نَهَمٌ",
+        "غَرِيزَةٌ",
+        "هَوَىً",
+        "تَوْقٌ",
+        "لَذَّةٌ",
+        "غَرَضٌ",
+        "رَغْبَةٌ",
+        "مَيْلٌ",
+        "مَوَدَّةٌ",
+        "نَزْعةٌ",
+        "نُزوعٌ",
+        "شَوْقٌ",
+        "شَهِيَّةٌ",
+        "شَهْوَةٌ"
+      ],
+      "ingilizce": [],
+      "tanim": "تمني الحصول على شيء والرغبة الشديدة فيه",
+      "misal": "لدى المناضلين _ دائمة للقتال والموت في سبيل الله",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46496",
+      "arapca": ["مُسْتَطَابٌ", "لَذيذٌ", "مُسْتَحَبٌّ", "طَيِّبٌ", "شَهِيٌّ"],
+      "ingilizce": [],
+      "tanim": "صفة ما كان طعمه ومذاقه على اللسان والنفس جميلا مستحباً يجعل النفس ترغبه",
+      "misal": "كان المذاق الايطالي في الطعام _",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "46908",
+      "arapca": [
+        "مُسْتَطْرَفٌ",
+        "مُسْتَطَابٌ",
+        "مُسْتَسَاغٌ",
+        "نَاجِعٌ",
+        "مَرِيءٌ1",
+        "لَذيذٌ",
+        "عَذْبٌ",
+        "سَائِغٌ2",
+        "مُسْتَحَبٌّ",
+        "هَنيءٌ",
+        "طَيِّبٌ",
+        "صَالِحٌ1",
+        "حُلْوٌ",
+        "شَهِيٌّ"
+      ],
+      "ingilizce": [],
+      "tanim": "صفة للطعام والشراب إذا استحسن طعمه ومذاقه",
+      "misal": "طبخت لنا أمي اليوم طعاماً _اً",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "48554",
+      "arapca": [
+        "مُسْتَطَابٌ",
+        "مُسْتَسَاغٌ",
+        "نَاجِعٌ",
+        "سَلْسَبِيلٌ",
+        "سَيِّغٌ",
+        "مَرِيءٌ1",
+        "لَذيذٌ",
+        "سَائِغٌ2",
+        "مُسْتَحَبٌّ",
+        "هَنيءٌ",
+        "زُلَالٌ",
+        "طَيِّبٌ",
+        "سَلِسٌ",
+        "حُلْوٌ",
+        "شَهِيٌّ"
+      ],
+      "ingilizce": [],
+      "tanim": "شراب أو طعام هنيء سهل في الحلق ويكون شهِيَّاً وطيِّباً",
+      "misal": "وَجَدَ الطَّعامَ _اً فأكثَرَ مِنْ الأكلِ",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "52703",
+      "arapca": ["شَهْوَةٌ"],
+      "ingilizce": [],
+      "tanim": "رَغْبَةُ شديدة في النَّفْسِ في ما تُحِبُّهُ وَتُميل اليه ُ",
+      "misal": "انفطر الإنسان على حب ال_ .",
+      "veri_kaynagi": "43",
+      "ust": []
+    },
+    {
+      "id": "303030119",
+      "arapca": ["شَهَا"],
+      "ingilizce": [],
+      "tanim": "شهَا الشّيءَ:- أحبَّه ورغب فيه رجلٌ شهوانُ - ما أشهى هذا الطعام \".\"",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000315", "libido"]
+      ]
+    },
+    {
+      "id": "303030131",
+      "arapca": ["شَهْوَةٌ"],
+      "ingilizce": [],
+      "tanim": "(علوم النفس) قُوّة نفسانيّة راغبة فيما يُشتهى",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000315", "libido"]
+      ]
+    },
+    {
+      "id": "303030133",
+      "arapca": ["شَهْوَةٌ"],
+      "ingilizce": [],
+      "tanim": "شَهْوة جنسيَّة:- (علوم النفس) إحساس عضويّ كالجوع والعطش يدلّ على حاجة الفرد، ذكرًا كان أو أنثى إلى عمليّة الجماع، بهدف الاستمتاع والإبقاء على النوع",
+      "misal": "",
+      "veri_kaynagi": "303",
+      "ust": [
+        ["alt_tur_of", "455000315", "libido"]
+      ]
+    }
+  ],
+  "ontoloji_tr": [
+    {
+      "tanim": "Nefsin, kendisine muvafık ve uygun olanı talep etmek üzere harekete geçmesi"
+    },
+    {
+      "tanim": "Bir ihtiyaç hâsıl ederek kişiyi o ihtiyacı gidermek üzere muayyen bir fiili işlemeye sevk eden nefsânî kuvvet",
+      "misal": "Kimi _ günahlar işlemeye sevk ederse, vicdanı da onu tövbeye koşmaya sevk etsin."
+    },
+    {
+      "tanim": "Bir şeyi elde etmeyi temenni etmek ve ona karşı şiddetli arzu duymak",
+      "misal": "Mücahitlerde Allah yolunda çarpışmak ve ölmek için daimî bir _ vardır."
+    },
+    {
+      "tanim": "Nefsin, sevdiği ve meylettiği şeye karşı duyduğu şiddetli arzu",
+      "misal": "İnsan, _ sevgisi üzerine yaratılmıştır."
+    },
+    {
+      "tanim": "(Psikoloji) Arzu ve iştiha duyulan şeye meyleden nefsânî kuvvet"
+    },
+    {
+      "tanim": "Cinsî şehvet:- (Psikoloji) Erkek veya dişi olsun ferdin, lezzet almak ve nesli devam ettirmek gayesiyle cinsî münasebete duyduğu ihtiyacı gösteren, açlık ve susuzluk gibi uzvî bir his"
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "مشتهى",
+      "tur": "adj",
+      "etim_no": "1",
+      "baslik": "مُشْتَهًى • (muštahan) (informal مُشْتَهَى (muštahā), feminine مُشْتَهَاة (muštahāh), masculine plural مُشْتَهَوْن (muštahawn), feminine plural مُشْتَهَيَات (muštahayāt))",
+      "etim_sablon": [
+        ["ar-passive participle", "Derived from the passive participle"]
+      ],
+      "anlam": ["wished, desired, craved for"],
+      "okunus": ["muštahan"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["arzu edilmiş, istenmiş, canı çekilmiş"]
+    },
+    {
+      "madde": "مشتهى",
+      "tur": "noun",
+      "etim_no": "1",
+      "baslik": "مُشْتَهًى • (muštahan) m (construct state مُشْتَهَى (muštahā), plural مُشْتَهَيَات (muštahayāt))",
+      "etim_sablon": [
+        ["ar-passive participle", "Derived from the passive participle"]
+      ],
+      "anlam": ["wish, desire"],
+      "okunus": ["muštahan"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["arzu, istek, dilek"]
+    },
+    {
+      "madde": "مشتهى",
+      "tur": "noun",
+      "etim_no": "2",
+      "baslik": "مُشْتَهَى • (muštahā) f",
+      "etim_sablon": [
+        ["bor", "Romance"],
+        ["cog", "Portuguese mostajeiro"],
+        ["cog", "Asturian mostayo"],
+        ["cog", "Leonese mostellar, mostayal, mostayo"],
+        ["cog", "Spanish mostajo, mostellar"],
+        ["cog", "Aragonese mostayo, mostajo, mostachera, moixera"],
+        ["cog", "Catalan mogera, moixera, moxera"],
+        ["taxfmt", "Sorbus aria"],
+        ["der", "Vulgar Latin"],
+        ["der", "Latin mustum (“must”)"],
+        ["doublet", "Doublet of مُصْطَار / مُسْطَار (muṣṭār / musṭār, “must”)"]
+      ],
+      "anlam": ["common whitebeam (Aria edulis, syn. Sorbus aria)"],
+      "okunus": ["muštahā"],
+      "bag": "müştak",
+      "etimoloji": 1,
+      "anlam_tr": ["ak üvez (Aria edulis, eşanlamlısı Sorbus aria)"]
+    },
+    {
+      "madde": "شهوة",
+      "tur": "noun",
+      "baslik": "شَهْوَة • (šahwa) f (plural شَهَوَات (šahawāt))",
+      "etim_sablon": [
+        ["etymon", ""]
+      ],
+      "anlam": ["lust; craving; greed; yearning; passion"],
+      "okunus": ["šahwa"],
+      "ipa": ["/ʃah.wa/"],
+      "torunlar": [
+        ["mt", "xehwa", ""],
+        ["az", "şəhvət", ""],
+        ["ku", "", ""],
+        ["fa", "شهوت", "šahvat"],
+        ["ms", "syahwat", ""],
+        ["sw", "shahawa", ""],
+        ["ug", "شەھۋەت", "shehwet"],
+        ["uz", "shahvat", ""]
+      ],
+      "anlam_tr": ["şehvet; şiddetli arzu; tamah; iştiyak; tutku"]
+    },
+    {
+      "madde": "اشتهى",
+      "tur": "verb",
+      "baslik": "اِشْتَهَى • (ištahā) VIII (non-past يَشْتَهِي (yaštahī), verbal noun اِشْتِهَاء (ištihāʔ))",
+      "anlam": ["to crave, to desire, to wish"],
+      "etiket": ["transitive"],
+      "okunus": ["ištahā"],
+      "ipa": ["/iʃ.ta.haː/"],
+      "anlam_tr": ["canı çekmek, arzu etmek, istemek"]
+    },
+    {
+      "madde": "شهية",
+      "tur": "noun",
+      "baslik": "شَهِيَّة • (šahiyya) f (plural شَهِيَّات (šahiyyāt))",
+      "anlam": ["appetite"],
+      "etiket": ["uncountable", "usually"],
+      "okunus": ["šahiyya"],
+      "ipa": ["/ʃa.hij.ja/"],
+      "anlam_tr": ["iştah"]
+    },
+    {
+      "madde": "اشتهاء",
+      "tur": "noun",
+      "baslik": "اِشْتِهَاء • (ištihāʔ) m (plural اِشْتِهَاءَات (ištihāʔāt))",
+      "etim_sablon": [
+        ["etymon", ""]
+      ],
+      "anlam": ["verbal noun of اِشْتَهَى (ištahā) (form VIII)", "appetite, craving"],
+      "etiket": ["form-of", "noun-from-verb", "uncountable"],
+      "form_of": ["اِشْتَهَى"],
+      "okunus": ["ištihāʔ"],
+      "ipa": ["/iʃ.ti.haːʔ/"],
+      "torunlar": [
+        ["fa", "اشتها", "eštehâ"],
+        ["ug", "ئىشتىھا", "ishtiha"]
+      ],
+      "anlam_tr": ["اِشْتَهَى (iştehâ) fiilinin (VIII. bab) masdarı", "iştah, şiddetli arzu"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Derived from the passive participle of اِشْتَهَى (ištahā).",
+      "kognatlar": [
+        ["اِشْتَهَى", "اشتهى#Arabic"]
+      ]
+    },
+    {
+      "metin": "A plant not spread in the Arab world except scatteredly in Northwest Africa – a Romance borrowing, akin to Portuguese mostajeiro, Asturian mostayo, Leonese mostellar, mostayal, mostayo, Spanish mostajo, mostellar (the form mostellar from Leonese), Aragonese mostayo, mostajo, mostachera, moixera, Catalan mogera, moixera, moxera, meaning Sorbus aria, deriving from Vulgar Latin extensions of Latin mustum (“must”), because of the berries being stored in must or tasting of wine. Doublet of مُصْطَار / مُسْطَار (muṣṭār / musṭār, “must”), an earlier borrowing of a unit of measure for must.",
+      "kognatlar": [
+        ["mostajeiro", "mostajeiro#Portuguese"],
+        ["mostayo", "mostayo#Asturian"],
+        ["mostellar", "mostellar#Leonese"],
+        ["mostayal", "mostayal#Leonese"],
+        ["mostayo", "mostayo#Leonese"],
+        ["mostajo", "mostajo#Spanish"],
+        ["mostellar", "mostellar#Spanish"],
+        ["mostellar", "mostellar#Spanish"],
+        ["mostayo", "mostayo#Aragonese"],
+        ["mostajo", "mostajo#Aragonese"],
+        ["mostachera", "mostachera#Aragonese"],
+        ["moixera", "moixera#Aragonese"],
+        ["mogera", "mogera#Catalan"],
+        ["moixera", "moixera#Catalan"],
+        ["moxera", "moxera#Catalan"],
+        ["Sorbus aria", "Sorbus aria#Translingual"],
+        ["mustum", "mustum#Latin"],
+        ["مُصْطَار", "مصطار#Arabic"],
+        ["مُسْطَار", "مسطار#Arabic"]
+      ]
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    }
+  ],
+  "etymarab": {
+    "latin": "ŠHW",
+    "kok_maddesi": "Back to library EtymArab ŠHW شهو BP – • HDAL • © SG | 3Apr2023 √ŠHW “root” ▪ ŠHW_1 ‘...’ ↗ ... ▪ ŠHW_2 ‘...’ ↗ ... ▪ ŠHW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to desire, long for, lust after; to resemble’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dön EtymArab ŠHW شهو BP – • HDAL • © SG | 3 Nisan 2023 √ŠHW “kök” ▪ ŠHW_1 ‘...’ ↗ ... ▪ ŠHW_2 ‘...’ ↗ ... ▪ ŠHW_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘arzu etmek, özlemek, şehvet duymak; benzemek’ ▪ … – . . – – Kaynaklar ; meta ; dilbilgisi ; İngilizce ; kavram ; tarihçe ; kökteşler ; tartışma ; batı ; türevler ;"
+  },
+  "kuran": {
+    "gecis": 13,
+    "ilk": "3:14:4:2",
+    "tur": {
+      "V": 8,
+      "N": 5
+    },
+    "bab": {
+      "VIII": 8
+    },
+    "zaman_kip": {
+      "IMPF": 7,
+      "PERF": 1
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "ٱشْتَهَتْ": 8,
+      "شَّهَوَٰت": 3,
+      "شَهْوَة": 2
+    },
+    "bicimler": {
+      "يَشْتَهُ": 5,
+      "شَّهَوَٰتِ": 3,
+      "شَهْوَةً": 2,
+      "ٱشْتَهَتْ": 1,
+      "تَشْتَهِىٓ": 1,
+      "تَشْتَهِي": 1
+    },
+    "morfoloji_gecis": 13
+  },
+  "kelimeler": [
+    {
+      "lemma": "اشْتَهَتْ",
+      "hal": "fiil",
+      "bab": "ifte'ale",
+      "bicimler": [
+        {
+          "kelime": "يَشْتَهُونَ",
+          "zaman": "Muzâri",
+          "ilk": "16:57",
+          "adet": 5,
+          "tr": "istedi"
+        },
+        {
+          "kelime": "ٱشْتَهَتْ",
+          "zaman": "Mâzî",
+          "ilk": "21:102",
+          "adet": 1,
+          "tr": "istedi"
+        },
+        {
+          "kelime": "تَشْتَهِىٓ",
+          "zaman": "Muzâri",
+          "ilk": "41:31",
+          "adet": 1,
+          "tr": "istedi"
+        },
+        {
+          "kelime": "تَشْتَهِيهِ",
+          "zaman": "Muzâri",
+          "ilk": "43:71",
+          "adet": 1,
+          "tr": "istedi"
+        }
+      ],
+      "tr": "istedi",
+      "bab_no": "VIII",
+      "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme",
+      "adet": 8
+    },
+    {
+      "lemma": "شَهَوَة",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "ٱلشَّهَوَٰتِ",
+          "ilk": "3:14",
+          "adet": 3,
+          "tr": "şehvet"
+        }
+      ],
+      "tr": "şehvet",
+      "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)",
+      "adet": 3
+    },
+    {
+      "lemma": "شَهْوَة",
+      "hal": "isim",
+      "bicimler": [
+        {
+          "kelime": "شَهْوَةً",
+          "ilk": "7:81",
+          "adet": 2,
+          "tr": "şehvet"
+        }
+      ],
+      "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)",
+      "adet": 2
+    }
+  ],
+  "mustak": {
     "masdar · sülâsî mücerred": [
-      [0, "شَهْو", "şahw", "isteme", "orta", ""],
-      [1, "شِهْو", "şihw", "isteme", "orta", ""],
-      [2, "شُهْو", "şuhw", "isteme", "orta", ""],
-      [517, "شَهَا", "şahā", "isteme", "orta", ""],
-      [518, "شِهَى", "şihā", "isteme", "orta", ""],
-      [519, "شُهُوّ", "şuhuww", "isteme", "orta", ""],
-      [520, "شُهُوّ", "şuhuww", "isteme", "orta", ""],
-      [521, "شِهَاء", "şihāʾ", "isteme", "orta", ""],
-      [522, "شُهَاء", "şuhāʾ", "isteme", "orta", ""],
-      [523, "شَهَاء", "şahāʾ", "isteme", "orta", ""],
-      [524, "شَهَاة", "şahā", "isteme", "orta", ""],
-      [525, "شُهُوَّة", "şuhuwwa", "isteme", "orta", ""],
-      [526, "شِهَايَة", "şihāya", "isteme", "orta", ""],
-      [527, "شَهِيّ", "şahiyy", "isteme", "orta", ""],
-      [528, "شَهُوّ", "şahuww", "isteme", "orta", ""],
-      [15, "شَهَوَان", "şahawān", "isteme", "orta", ""],
-      [16, "شُهْوَان", "şuhwān", "isteme", "orta", ""],
-      [17, "شِهْوَان", "şihwān", "isteme", "orta", ""],
-      [18, "شَهْوَى", "şahwā", "isteme", "orta", ""],
-      [529, "شُهْيَى", "şuhyā", "isteme", "orta", ""],
-      [20, "شِهْوَى", "şihwā", "isteme", "orta", ""],
-      [530, "شَهَاة", "şahā", "isteme", "orta", ""],
-      [531, "شِهَيَة", "şihaya", "isteme", "orta", ""],
-      [23, "شَهْوُووَة", "şahwūwa", "isteme", "orta", ""],
-      [24, "تُشْهُوو", "tuşhūw", "isteme", "orta", ""],
-      [532, "تَشْهِيَة", "taşhiya", "isteme", "orta", ""],
-      [26, "تَشْهَوَة", "taşhawa", "isteme", "orta", ""],
-      [27, "مَشْهُوَة", "maşhuwa", "isteme", "orta", ""],
-      [533, "مَشْهِيَة", "maşhiya", "isteme", "orta", ""]
+      ["fa'l", "semâî aday", "شَهْو", "şahw", "isteme", "orta", ""],
+      ["fi'l", "semâî aday", "شِهْو", "şihw", "isteme", "orta", ""],
+      ["fu'l", "semâî aday", "شُهْو", "şuhw", "isteme", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "شَهَا", "şahā", "isteme", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "شِهَى", "şihā", "isteme", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "شُهُوّ", "şuhuww", "isteme", "orta", ""],
+      ["fu'ūl", "semâî aday · ilal", "شُهُوّ", "şuhuww", "isteme", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "شِهَاء", "şihāʾ", "isteme", "orta", ""],
+      ["fu'āl", "semâî aday · ilal", "شُهَاء", "şuhāʾ", "isteme", "orta", ""],
+      ["fa'āl", "semâî aday · ilal", "شَهَاء", "şahāʾ", "isteme", "orta", ""],
+      ["fa'āle", "semâî aday · ilal", "شَهَاة", "şahā", "isteme", "orta", ""],
+      ["fu'ūle", "semâî aday · ilal", "شُهُوَّة", "şuhuwwa", "isteme", "orta", ""],
+      ["fi'āle", "semâî aday · ilal", "شِهَايَة", "şihāya", "isteme", "orta", ""],
+      ["fa'īl", "semâî aday · ilal", "شَهِيّ", "şahiyy", "isteme", "orta", ""],
+      ["fa'ūl", "semâî aday · ilal", "شَهُوّ", "şahuww", "isteme", "orta", ""],
+      ["fa'alān", "semâî aday", "شَهَوَان", "şahawān", "isteme", "orta", ""],
+      ["fu'lān", "semâî aday", "شُهْوَان", "şuhwān", "isteme", "orta", ""],
+      ["fi'lān", "semâî aday", "شِهْوَان", "şihwān", "isteme", "orta", ""],
+      ["fa'lā", "semâî aday", "شَهْوَى", "şahwā", "isteme", "orta", ""],
+      ["fu'lā", "semâî aday · ilal", "شُهْيَى", "şuhyā", "isteme", "orta", ""],
+      ["fi'lā", "semâî aday", "شِهْوَى", "şihwā", "isteme", "orta", ""],
+      ["fa'ale", "semâî aday · ilal", "شَهَاة", "şahā", "isteme", "orta", ""],
+      ["fi'ale", "semâî aday · ilal", "شِهَيَة", "şihaya", "isteme", "orta", ""],
+      ["fa'lūla", "semâî aday", "شَهْوُووَة", "şahwūwa", "isteme", "orta", ""],
+      ["tuf'ūl", "semâî aday", "تُشْهُوو", "tuşhūw", "isteme", "orta", ""],
+      ["taf'ila", "semâî aday · ilal", "تَشْهِيَة", "taşhiya", "isteme", "orta", ""],
+      ["taf'ala", "semâî aday", "تَشْهَوَة", "taşhawa", "isteme", "orta", ""],
+      ["maf'ula", "semâî aday", "مَشْهُوَة", "maşhuwa", "isteme", "orta", ""],
+      ["maf'ila", "semâî aday · ilal", "مَشْهِيَة", "maşhiya", "isteme", "orta", ""]
     ],
     "masdar · bâb II": [
-      [534, "تَشْهِيَة", "taşhiya", "çokça isteme", "orta", ""],
-      [535, "تَشْهِيَة", "taşhiya", "çokça isteme", "orta", ""],
-      [536, "شِهِّاء", "şihhāʾ", "çokça isteme", "orta", ""]
+      ["taf'īl", "kıyâsî · ilal", "تَشْهِيَة", "taşhiya", "çokça isteme", "orta", ""],
+      ["taf'ila", "kıyâsî · ilal", "تَشْهِيَة", "taşhiya", "çokça isteme", "orta", ""],
+      ["fi''āl", "kıyâsî · ilal", "شِهِّاء", "şihhāʾ", "çokça isteme", "orta", ""]
     ],
     "ism-i merre · bâb II": [
-      [537, "شِهِّاءَة", "şihhāʾa", "bir kere çokça isteme", "orta", ""]
+      ["fi''āl + tâ", "aday · ilal", "شِهِّاءَة", "şihhāʾa", "bir kere çokça isteme", "orta", ""]
     ],
     "ism-i fâil · bâb II": [
-      [538, "مُشَهِّي", "muşahhī", "çokça isteyen", "orta", ""],
-      [539, "مُشَهِّيَة", "muşahhiya", "çokça isteyen, müennes", "orta", ""],
-      [540, "مُشَهِّيَان", "muşahhiyān", "çokça isteyen, iki", "orta", ""],
-      [541, "مُشَهِّيَتَان", "muşahhiyatān", "çokça isteyen, iki, müennes", "orta", ""],
-      [542, "مُشَهُّون", "muşahhūn", "çokça isteyenler", "orta", ""],
-      [543, "مُشَهِّين", "muşahhīn", "çokça isteyenler", "orta", ""],
-      [544, "مُشَهِّيَات", "muşahhiyāt", "çokça isteyenler, müennes", "orta", ""]
+      ["mufa''il", "kıyâsî · ilal", "مُشَهِّي", "muşahhī", "çokça isteyen", "orta", ""],
+      ["mufa''il + müennes", "kıyâsî · ilal", "مُشَهِّيَة", "muşahhiya", "çokça isteyen, müennes", "orta", ""],
+      ["mufa''il + tesniye", "kıyâsî · ilal", "مُشَهِّيَان", "muşahhiyān", "çokça isteyen, iki", "orta", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشَهِّيَتَان",
+        "muşahhiyatān",
+        "çokça isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشَهُّون",
+        "muşahhūn",
+        "çokça isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشَهِّين",
+        "muşahhīn",
+        "çokça isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشَهِّيَات",
+        "muşahhiyāt",
+        "çokça isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb II": [
-      [545, "مُشَهَّى", "muşahhā", "çokça istenen", "orta", ""],
-      [546, "مُشَهَّيَان", "muşahhayān", "çokça istenen, iki", "orta", ""],
-      [547, "مُشَهَّوْن", "muşahhawn", "çokça istenenler", "orta", ""],
-      [548, "مُشَهَّيْن", "muşahhayn", "çokça istenenler", "orta", ""],
-      [549, "مُشَهَّيَات", "muşahhayāt", "çokça istenenler, müennes", "orta", ""]
+      ["mufa''al", "kıyâsî · ilal", "مُشَهَّى", "muşahhā", "çokça istenen", "orta", ""],
+      ["mufa''al + tesniye", "kıyâsî · ilal", "مُشَهَّيَان", "muşahhayān", "çokça istenen, iki", "orta", ""],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشَهَّوْن",
+        "muşahhawn",
+        "çokça istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشَهَّيْن",
+        "muşahhayn",
+        "çokça istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشَهَّيَات",
+        "muşahhayāt",
+        "çokça istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
-      [550, "مُشَهَّى", "muşahhā", "çokça isteme yeri, vakti", "orta", ""]
+      ["mufa''al", "kıyâsî · ilal", "مُشَهَّى", "muşahhā", "çokça isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb III": [
-      [551, "مُشَاهَاة", "muşāhā", "biriyle karşılıklı isteme", "orta", ""],
-      [552, "شِهَاء", "şihāʾ", "biriyle karşılıklı isteme", "orta", ""]
+      ["mufā'ale", "kıyâsî · ilal", "مُشَاهَاة", "muşāhā", "biriyle karşılıklı isteme", "orta", ""],
+      ["fi'āl", "kıyâsî · ilal", "شِهَاء", "şihāʾ", "biriyle karşılıklı isteme", "orta", ""]
     ],
     "ism-i merre · bâb III": [
-      [553, "شِهَاءَة", "şihāʾa", "bir kere biriyle karşılıklı isteme", "orta", ""]
+      ["fi'āl + tâ", "aday · ilal", "شِهَاءَة", "şihāʾa", "bir kere biriyle karşılıklı isteme", "orta", ""]
     ],
     "ism-i fâil · bâb III": [
-      [554, "مُشَاهِي", "muşāhī", "biriyle karşılıklı isteyen", "orta", ""],
-      [555, "مُشَاهِيَة", "muşāhiya", "biriyle karşılıklı isteyen, müennes", "orta", ""],
-      [556, "مُشَاهِيَان", "muşāhiyān", "biriyle karşılıklı isteyen, iki", "orta", ""],
-      [557, "مُشَاهِيَتَان", "muşāhiyatān", "biriyle karşılıklı isteyen, iki, müennes", "orta", ""],
-      [558, "مُشَاهُون", "muşāhūn", "biriyle karşılıklı isteyenler", "orta", ""],
-      [559, "مُشَاهِين", "muşāhīn", "biriyle karşılıklı isteyenler", "orta", ""],
-      [560, "مُشَاهِيَات", "muşāhiyāt", "biriyle karşılıklı isteyenler, müennes", "orta", ""]
+      ["mufā'il", "kıyâsî · ilal", "مُشَاهِي", "muşāhī", "biriyle karşılıklı isteyen", "orta", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî · ilal",
+        "مُشَاهِيَة",
+        "muşāhiya",
+        "biriyle karşılıklı isteyen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî · ilal",
+        "مُشَاهِيَان",
+        "muşāhiyān",
+        "biriyle karşılıklı isteyen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشَاهِيَتَان",
+        "muşāhiyatān",
+        "biriyle karşılıklı isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشَاهُون",
+        "muşāhūn",
+        "biriyle karşılıklı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشَاهِين",
+        "muşāhīn",
+        "biriyle karşılıklı isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشَاهِيَات",
+        "muşāhiyāt",
+        "biriyle karşılıklı isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [561, "مُشَاهَى", "muşāhā", "biriyle karşılıklı istenen", "orta", ""],
-      [562, "مُشَاهَيَان", "muşāhayān", "biriyle karşılıklı istenen, iki", "orta", ""],
-      [563, "مُشَاهَوْن", "muşāhawn", "biriyle karşılıklı istenenler", "orta", ""],
-      [564, "مُشَاهَيْن", "muşāhayn", "biriyle karşılıklı istenenler", "orta", ""],
-      [565, "مُشَاهَيَات", "muşāhayāt", "biriyle karşılıklı istenenler, müennes", "orta", ""]
+      ["mufā'al", "kıyâsî · ilal", "مُشَاهَى", "muşāhā", "biriyle karşılıklı istenen", "orta", ""],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî · ilal",
+        "مُشَاهَيَان",
+        "muşāhayān",
+        "biriyle karşılıklı istenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشَاهَوْن",
+        "muşāhawn",
+        "biriyle karşılıklı istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشَاهَيْن",
+        "muşāhayn",
+        "biriyle karşılıklı istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشَاهَيَات",
+        "muşāhayāt",
+        "biriyle karşılıklı istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [566, "مُشَاهَى", "muşāhā", "biriyle karşılıklı isteme yeri, vakti", "orta", ""]
+      ["mufā'al", "kıyâsî · ilal", "مُشَاهَى", "muşāhā", "biriyle karşılıklı isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IV": [
-      [567, "إِشْهَاء", "ʾişhāʾ", "istetme", "orta", ""]
+      ["if'āl", "kıyâsî · ilal", "إِشْهَاء", "ʾişhāʾ", "istetme", "orta", ""]
     ],
     "ism-i merre · bâb IV": [
-      [568, "إِشْهَاءَة", "ʾişhāʾa", "bir kere istetme", "orta", ""]
+      ["if'āl + tâ", "aday · ilal", "إِشْهَاءَة", "ʾişhāʾa", "bir kere istetme", "orta", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [569, "مُشْهِي", "muşhī", "isteden", "orta", ""],
-      [570, "مُشْهِيَة", "muşhiya", "isteden, müennes", "orta", ""],
-      [571, "مُشْهِيَان", "muşhiyān", "isteden, iki", "orta", ""],
-      [572, "مُشْهِيَتَان", "muşhiyatān", "isteden, iki, müennes", "orta", ""],
-      [573, "مُشْهُون", "muşhūn", "istedenler", "orta", ""],
-      [574, "مُشْهِين", "muşhīn", "istedenler", "orta", ""],
-      [575, "مُشْهِيَات", "muşhiyāt", "istedenler, müennes", "orta", ""]
+      ["muf'il", "kıyâsî · ilal", "مُشْهِي", "muşhī", "isteden", "orta", ""],
+      ["muf'il + müennes", "kıyâsî · ilal", "مُشْهِيَة", "muşhiya", "isteden, müennes", "orta", ""],
+      ["muf'il + tesniye", "kıyâsî · ilal", "مُشْهِيَان", "muşhiyān", "isteden, iki", "orta", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشْهِيَتَان",
+        "muşhiyatān",
+        "isteden, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مُشْهُون", "muşhūn", "istedenler", "orta", ""],
+      ["muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مُشْهِين", "muşhīn", "istedenler", "orta", ""],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْهِيَات",
+        "muşhiyāt",
+        "istedenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [576, "مُشْهَى", "muşhā", "istedilen", "orta", ""],
-      [577, "مُشْهَيَان", "muşhayān", "istedilen, iki", "orta", ""],
-      [578, "مُشْهَوْن", "muşhawn", "istedilenler", "orta", ""],
-      [579, "مُشْهَيْن", "muşhayn", "istedilenler", "orta", ""],
-      [580, "مُشْهَيَات", "muşhayāt", "istedilenler, müennes", "orta", ""]
+      ["muf'al", "kıyâsî · ilal", "مُشْهَى", "muşhā", "istedilen", "orta", ""],
+      ["muf'al + tesniye", "kıyâsî · ilal", "مُشْهَيَان", "muşhayān", "istedilen, iki", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "مُشْهَوْن", "muşhawn", "istedilenler", "orta", ""],
+      ["muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "مُشْهَيْن", "muşhayn", "istedilenler", "orta", ""],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْهَيَات",
+        "muşhayāt",
+        "istedilenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [581, "مُشْهَى", "muşhā", "istetme yeri, vakti", "orta", ""]
+      ["muf'al", "kıyâsî · ilal", "مُشْهَى", "muşhā", "istetme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb V": [
-      [582, "تَشَهِّي", "taşahhī", "kendini zorlayarak isteme", "orta", ""]
+      ["tafa''ul", "kıyâsî · ilal", "تَشَهِّي", "taşahhī", "kendini zorlayarak isteme", "orta", ""]
     ],
     "ism-i fâil · bâb V": [
-      [583, "مُتَشَهِّي", "mutaşahhī", "kendini zorlayarak isteyen", "orta", ""],
-      [584, "مُتَشَهِّيَة", "mutaşahhiya", "kendini zorlayarak isteyen, müennes", "orta", ""],
-      [585, "مُتَشَهِّيَان", "mutaşahhiyān", "kendini zorlayarak isteyen, iki", "orta", ""],
-      [586, "مُتَشَهِّيَتَان", "mutaşahhiyatān", "kendini zorlayarak isteyen, iki, müennes", "orta", ""],
-      [587, "مُتَشَهُّون", "mutaşahhūn", "kendini zorlayarak isteyenler", "orta", ""],
-      [588, "مُتَشَهِّين", "mutaşahhīn", "kendini zorlayarak isteyenler", "orta", ""],
-      [589, "مُتَشَهِّيَات", "mutaşahhiyāt", "kendini zorlayarak isteyenler, müennes", "orta", ""]
+      ["mutafa''il", "kıyâsî · ilal", "مُتَشَهِّي", "mutaşahhī", "kendini zorlayarak isteyen", "orta", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî · ilal",
+        "مُتَشَهِّيَة",
+        "mutaşahhiya",
+        "kendini zorlayarak isteyen, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî · ilal",
+        "مُتَشَهِّيَان",
+        "mutaşahhiyān",
+        "kendini zorlayarak isteyen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَشَهِّيَتَان",
+        "mutaşahhiyatān",
+        "kendini zorlayarak isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَشَهُّون",
+        "mutaşahhūn",
+        "kendini zorlayarak isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَشَهِّين",
+        "mutaşahhīn",
+        "kendini zorlayarak isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَشَهِّيَات",
+        "mutaşahhiyāt",
+        "kendini zorlayarak isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [590, "مُتَشَهَّى", "mutaşahhā", "kendini zorlayarak istenen", "orta", ""],
-      [591, "مُتَشَهَّيَان", "mutaşahhayān", "kendini zorlayarak istenen, iki", "orta", ""],
-      [592, "مُتَشَهَّوْن", "mutaşahhawn", "kendini zorlayarak istenenler", "orta", ""],
-      [593, "مُتَشَهَّيْن", "mutaşahhayn", "kendini zorlayarak istenenler", "orta", ""],
-      [594, "مُتَشَهَّيَات", "mutaşahhayāt", "kendini zorlayarak istenenler, müennes", "orta", ""]
+      ["mutafa''al", "kıyâsî · ilal", "مُتَشَهَّى", "mutaşahhā", "kendini zorlayarak istenen", "orta", ""],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî · ilal",
+        "مُتَشَهَّيَان",
+        "mutaşahhayān",
+        "kendini zorlayarak istenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَشَهَّوْن",
+        "mutaşahhawn",
+        "kendini zorlayarak istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَشَهَّيْن",
+        "mutaşahhayn",
+        "kendini zorlayarak istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَشَهَّيَات",
+        "mutaşahhayāt",
+        "kendini zorlayarak istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [595, "مُتَشَهَّى", "mutaşahhā", "kendini zorlayarak isteme yeri, vakti", "orta", ""]
+      [
+        "mutafa''al",
+        "kıyâsî · ilal",
+        "مُتَشَهَّى",
+        "mutaşahhā",
+        "kendini zorlayarak isteme yeri, vakti",
+        "orta",
+        ""
+      ]
     ],
     "masdar · bâb VI": [
-      [596, "تَشَاهِي", "taşāhī", "birbirine isteme", "orta", ""]
+      ["tafā'ul", "kıyâsî · ilal", "تَشَاهِي", "taşāhī", "birbirine isteme", "orta", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [597, "مُتَشَاهِي", "mutaşāhī", "birbirine isteyen", "orta", ""],
-      [598, "مُتَشَاهِيَة", "mutaşāhiya", "birbirine isteyen, müennes", "orta", ""],
-      [599, "مُتَشَاهِيَان", "mutaşāhiyān", "birbirine isteyen, iki", "orta", ""],
-      [600, "مُتَشَاهِيَتَان", "mutaşāhiyatān", "birbirine isteyen, iki, müennes", "orta", ""],
-      [601, "مُتَشَاهُون", "mutaşāhūn", "birbirine isteyenler", "orta", ""],
-      [602, "مُتَشَاهِين", "mutaşāhīn", "birbirine isteyenler", "orta", ""],
-      [603, "مُتَشَاهِيَات", "mutaşāhiyāt", "birbirine isteyenler, müennes", "orta", ""]
+      ["mutafā'il", "kıyâsî · ilal", "مُتَشَاهِي", "mutaşāhī", "birbirine isteyen", "orta", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî · ilal",
+        "مُتَشَاهِيَة",
+        "mutaşāhiya",
+        "birbirine isteyen, müennes",
+        "orta",
+        ""
+      ],
+      ["mutafā'il + tesniye", "kıyâsî · ilal", "مُتَشَاهِيَان", "mutaşāhiyān", "birbirine isteyen, iki", "orta", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُتَشَاهِيَتَان",
+        "mutaşāhiyatān",
+        "birbirine isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَشَاهُون",
+        "mutaşāhūn",
+        "birbirine isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَشَاهِين",
+        "mutaşāhīn",
+        "birbirine isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَشَاهِيَات",
+        "mutaşāhiyāt",
+        "birbirine isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [604, "مُتَشَاهَى", "mutaşāhā", "birbirine istenen", "orta", ""],
-      [605, "مُتَشَاهَيَان", "mutaşāhayān", "birbirine istenen, iki", "orta", ""],
-      [606, "مُتَشَاهَوْن", "mutaşāhawn", "birbirine istenenler", "orta", ""],
-      [607, "مُتَشَاهَيْن", "mutaşāhayn", "birbirine istenenler", "orta", ""],
-      [608, "مُتَشَاهَيَات", "mutaşāhayāt", "birbirine istenenler, müennes", "orta", ""]
+      ["mutafā'al", "kıyâsî · ilal", "مُتَشَاهَى", "mutaşāhā", "birbirine istenen", "orta", ""],
+      ["mutafā'al + tesniye", "kıyâsî · ilal", "مُتَشَاهَيَان", "mutaşāhayān", "birbirine istenen, iki", "orta", ""],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُتَشَاهَوْن",
+        "mutaşāhawn",
+        "birbirine istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُتَشَاهَيْن",
+        "mutaşāhayn",
+        "birbirine istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُتَشَاهَيَات",
+        "mutaşāhayāt",
+        "birbirine istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [609, "مُتَشَاهَى", "mutaşāhā", "birbirine isteme yeri, vakti", "orta", ""]
+      ["mutafā'al", "kıyâsî · ilal", "مُتَشَاهَى", "mutaşāhā", "birbirine isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb VII": [
-      [610, "اِنْشِهَاء", "inşihāʾ", "istenme", "orta", ""]
+      ["infi'āl", "kıyâsî · ilal", "اِنْشِهَاء", "inşihāʾ", "istenme", "orta", ""]
     ],
     "ism-i merre · bâb VII": [
-      [611, "اِنْشِهَاءَة", "inşihāʾa", "bir kere istenme", "orta", ""]
+      ["infi'āl + tâ", "aday · ilal", "اِنْشِهَاءَة", "inşihāʾa", "bir kere istenme", "orta", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [612, "مُنْشَهِي", "munşahī", "istenen", "orta", ""],
-      [613, "مُنْشَهِيَة", "munşahiya", "istenen, müennes", "orta", ""],
-      [614, "مُنْشَهِيَان", "munşahiyān", "istenen, iki", "orta", ""],
-      [615, "مُنْشَهِيَتَان", "munşahiyatān", "istenen, iki, müennes", "orta", ""],
-      [616, "مُنْشَهُون", "munşahūn", "istenenler", "orta", ""],
-      [617, "مُنْشَهِين", "munşahīn", "istenenler", "orta", ""],
-      [618, "مُنْشَهِيَات", "munşahiyāt", "istenenler, müennes", "orta", ""]
+      ["munfa'il", "kıyâsî · ilal", "مُنْشَهِي", "munşahī", "istenen", "orta", ""],
+      ["munfa'il + müennes", "kıyâsî · ilal", "مُنْشَهِيَة", "munşahiya", "istenen, müennes", "orta", ""],
+      ["munfa'il + tesniye", "kıyâsî · ilal", "مُنْشَهِيَان", "munşahiyān", "istenen, iki", "orta", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُنْشَهِيَتَان",
+        "munşahiyatān",
+        "istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُنْشَهُون",
+        "munşahūn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُنْشَهِين",
+        "munşahīn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُنْشَهِيَات",
+        "munşahiyāt",
+        "istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [619, "مُنْشَهَى", "munşahā", "istenen", "orta", ""],
-      [620, "مُنْشَهَيَان", "munşahayān", "istenen, iki", "orta", ""],
-      [621, "مُنْشَهَوْن", "munşahawn", "istenenler", "orta", ""],
-      [622, "مُنْشَهَيْن", "munşahayn", "istenenler", "orta", ""],
-      [623, "مُنْشَهَيَات", "munşahayāt", "istenenler, müennes", "orta", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَى",
+        "munşahā",
+        "istenen",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَيَان",
+        "munşahayān",
+        "istenen, iki",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَوْن",
+        "munşahawn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَيْن",
+        "munşahayn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَيَات",
+        "munşahayāt",
+        "istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [624, "مُنْشَهَى", "munşahā", "istenme yeri, vakti", "orta", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
+        "مُنْشَهَى",
+        "munşahā",
+        "istenme yeri, vakti",
+        "orta",
+        ""
+      ]
     ],
     "masdar · bâb VIII": [
       [
-        625,
+        "ifti'āl",
+        "kıyâsî · ilal",
         "اِشْتِهَاء",
         "iştihāʾ",
         "Arzu, istek",
@@ -196,1234 +1256,1309 @@
       ]
     ],
     "ism-i merre · bâb VIII": [
-      [627, "اِشْتِهَاءَة", "iştihāʾa", "bir kere kendisi için isteme", "orta", ""]
+      ["ifti'āl + tâ", "aday · ilal", "اِشْتِهَاءَة", "iştihāʾa", "bir kere kendisi için isteme", "orta", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [628, "مُشْتَهِي", "muştahī", "kendisi için isteyen", "orta", ""],
-      [629, "مُشْتَهِيَة", "muştahiya", "kendisi için isteyen, müennes", "orta", ""],
-      [630, "مُشْتَهِيَان", "muştahiyān", "kendisi için isteyen, iki", "orta", ""],
-      [631, "مُشْتَهِيَتَان", "muştahiyatān", "kendisi için isteyen, iki, müennes", "orta", ""],
-      [632, "مُشْتَهُون", "muştahūn", "kendisi için isteyenler", "orta", ""],
-      [633, "مُشْتَهِين", "muştahīn", "kendisi için isteyenler", "orta", ""],
-      [634, "مُشْتَهِيَات", "muştahiyāt", "kendisi için isteyenler, müennes", "orta", ""]
+      ["muftaʿil", "kıyâsî · ilal", "مُشْتَهِي", "muştahī", "kendisi için isteyen", "orta", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî · ilal",
+        "مُشْتَهِيَة",
+        "muştahiya",
+        "kendisi için isteyen, müennes",
+        "orta",
+        ""
+      ],
+      ["muftaʿil + tesniye", "kıyâsî · ilal", "مُشْتَهِيَان", "muştahiyān", "kendisi için isteyen, iki", "orta", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشْتَهِيَتَان",
+        "muştahiyatān",
+        "kendisi için isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشْتَهُون",
+        "muştahūn",
+        "kendisi için isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشْتَهِين",
+        "muştahīn",
+        "kendisi için isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْتَهِيَات",
+        "muştahiyāt",
+        "kendisi için isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [635, "مُشْتَهَى", "muştahā", "kendisi için istenen", "orta", ""],
-      [636, "مُشْتَهَيَان", "muştahayān", "kendisi için istenen, iki", "orta", ""],
-      [637, "مُشْتَهَوْن", "muştahawn", "kendisi için istenenler", "orta", ""],
-      [638, "مُشْتَهَيْن", "muştahayn", "kendisi için istenenler", "orta", ""],
-      [639, "مُشْتَهَيَات", "muştahayāt", "İstenilen, arzu edilen, iştah kabartan şeyler", "lugat", "Kubbealtı"]
+      ["muftaʿal", "kıyâsî · ilal", "مُشْتَهَى", "muştahā", "kendisi için istenen", "orta", ""],
+      ["muftaʿal + tesniye", "kıyâsî · ilal", "مُشْتَهَيَان", "muştahayān", "kendisi için istenen, iki", "orta", ""],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشْتَهَوْن",
+        "muştahawn",
+        "kendisi için istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشْتَهَيْن",
+        "muştahayn",
+        "kendisi için istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْتَهَيَات",
+        "muştahayāt",
+        "İstenilen, arzu edilen, iştah kabartan şeyler",
+        "lugat",
+        "Kubbealtı"
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [640, "مُشْتَهَى", "muştahā", "kendisi için isteme yeri, vakti", "orta", ""]
+      ["muftaʿal", "kıyâsî · ilal", "مُشْتَهَى", "muştahā", "kendisi için isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb IX (illet harfi izhar)": [
-      [654, "اِشْهِوَاء", "işhiwāʾ", "iyiden iyiye isteme", "kontrol", ""]
+      ["if'ilāl", "semâî aday · ilal", "اِشْهِوَاء", "işhiwāʾ", "iyiden iyiye isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX (illet harfi izhar)": [
-      [655, "مُشْهَوِي", "muşhawī", "iyiden iyiye isteyen", "kontrol", ""],
-      [656, "مُشْهَوِيَة", "muşhawiya", "iyiden iyiye isteyen, müennes", "kontrol", ""],
-      [657, "مُشْهَوِيَان", "muşhawiyān", "iyiden iyiye isteyen, iki", "kontrol", ""],
-      [658, "مُشْهَوِيَتَان", "muşhawiyatān", "iyiden iyiye isteyen, iki, müennes", "kontrol", ""],
-      [659, "مُشْهَوُون", "muşhawūn", "iyiden iyiye isteyenler", "kontrol", ""],
-      [660, "مُشْهَوِين", "muşhawīn", "iyiden iyiye isteyenler", "kontrol", ""],
-      [661, "مُشْهَوِيَات", "muşhawiyāt", "iyiden iyiye isteyenler, müennes", "kontrol", ""]
+      ["muf'all", "kıyâsî · ilal", "مُشْهَوِي", "muşhawī", "iyiden iyiye isteyen", "kontrol", ""],
+      [
+        "muf'all + müennes",
+        "kıyâsî · ilal",
+        "مُشْهَوِيَة",
+        "muşhawiya",
+        "iyiden iyiye isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + tesniye",
+        "kıyâsî · ilal",
+        "مُشْهَوِيَان",
+        "muşhawiyān",
+        "iyiden iyiye isteyen, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشْهَوِيَتَان",
+        "muşhawiyatān",
+        "iyiden iyiye isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشْهَوُون",
+        "muşhawūn",
+        "iyiden iyiye isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشْهَوِين",
+        "muşhawīn",
+        "iyiden iyiye isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْهَوِيَات",
+        "muşhawiyāt",
+        "iyiden iyiye isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb X": [
-      [662, "اِسْتِشْهَاء", "istişhāʾ", "istemeyi isteme", "orta", ""]
+      ["istif'āl", "kıyâsî · ilal", "اِسْتِشْهَاء", "istişhāʾ", "istemeyi isteme", "orta", ""]
     ],
     "ism-i merre · bâb X": [
-      [663, "اِسْتِشْهَاءَة", "istişhāʾa", "bir kere istemeyi isteme", "orta", ""]
+      ["istif'āl + tâ", "aday · ilal", "اِسْتِشْهَاءَة", "istişhāʾa", "bir kere istemeyi isteme", "orta", ""]
     ],
     "ism-i fâil · bâb X": [
-      [664, "مُسْتَشْهِي", "mustaşhī", "istemeyi isteyen", "orta", ""],
-      [665, "مُسْتَشْهِيَة", "mustaşhiya", "istemeyi isteyen, müennes", "orta", ""],
-      [666, "مُسْتَشْهِيَان", "mustaşhiyān", "istemeyi isteyen, iki", "orta", ""],
-      [667, "مُسْتَشْهِيَتَان", "mustaşhiyatān", "istemeyi isteyen, iki, müennes", "orta", ""],
-      [668, "مُسْتَشْهُون", "mustaşhūn", "istemeyi isteyenler", "orta", ""],
-      [669, "مُسْتَشْهِين", "mustaşhīn", "istemeyi isteyenler", "orta", ""],
-      [670, "مُسْتَشْهِيَات", "mustaşhiyāt", "istemeyi isteyenler, müennes", "orta", ""]
+      ["mustaf'il", "kıyâsî · ilal", "مُسْتَشْهِي", "mustaşhī", "istemeyi isteyen", "orta", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî · ilal",
+        "مُسْتَشْهِيَة",
+        "mustaşhiya",
+        "istemeyi isteyen, müennes",
+        "orta",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî · ilal", "مُسْتَشْهِيَان", "mustaşhiyān", "istemeyi isteyen, iki", "orta", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُسْتَشْهِيَتَان",
+        "mustaşhiyatān",
+        "istemeyi isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهُون",
+        "mustaşhūn",
+        "istemeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهِين",
+        "mustaşhīn",
+        "istemeyi isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهِيَات",
+        "mustaşhiyāt",
+        "istemeyi isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [671, "مُسْتَشْهَى", "mustaşhā", "istemesi istenen", "orta", ""],
-      [672, "مُسْتَشْهَيَان", "mustaşhayān", "istemesi istenen, iki", "orta", ""],
-      [673, "مُسْتَشْهَوْن", "mustaşhawn", "istemesi istenenler", "orta", ""],
-      [674, "مُسْتَشْهَيْن", "mustaşhayn", "istemesi istenenler", "orta", ""],
-      [675, "مُسْتَشْهَيَات", "mustaşhayāt", "istemesi istenenler, müennes", "orta", ""]
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَشْهَى", "mustaşhā", "istemesi istenen", "orta", ""],
+      ["mustaf'al + tesniye", "kıyâsî · ilal", "مُسْتَشْهَيَان", "mustaşhayān", "istemesi istenen, iki", "orta", ""],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهَوْن",
+        "mustaşhawn",
+        "istemesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهَيْن",
+        "mustaşhayn",
+        "istemesi istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُسْتَشْهَيَات",
+        "mustaşhayāt",
+        "istemesi istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [676, "مُسْتَشْهَى", "mustaşhā", "istemeyi isteme yeri, vakti", "orta", ""]
+      ["mustaf'al", "kıyâsî · ilal", "مُسْتَشْهَى", "mustaşhā", "istemeyi isteme yeri, vakti", "orta", ""]
     ],
     "masdar · bâb XI (illet harfi izhar)": [
-      [677, "اِشْهِيوَاء", "işhīwāʾ", "büsbütün isteme", "kontrol", ""]
+      ["if'īlāl", "semâî aday · ilal", "اِشْهِيوَاء", "işhīwāʾ", "büsbütün isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI (illet harfi izhar)": [
-      [678, "مُشْهَاوِي", "muşhāwī", "büsbütün isteyen", "kontrol", ""],
-      [679, "مُشْهَاوِيَة", "muşhāwiya", "büsbütün isteyen, müennes", "kontrol", ""],
-      [680, "مُشْهَاوِيَان", "muşhāwiyān", "büsbütün isteyen, iki", "kontrol", ""],
-      [681, "مُشْهَاوِيَتَان", "muşhāwiyatān", "büsbütün isteyen, iki, müennes", "kontrol", ""],
-      [682, "مُشْهَاوُون", "muşhāwūn", "büsbütün isteyenler", "kontrol", ""],
-      [683, "مُشْهَاوِين", "muşhāwīn", "büsbütün isteyenler", "kontrol", ""],
-      [684, "مُشْهَاوِيَات", "muşhāwiyāt", "büsbütün isteyenler, müennes", "kontrol", ""]
+      ["muf'āll", "kıyâsî · ilal", "مُشْهَاوِي", "muşhāwī", "büsbütün isteyen", "kontrol", ""],
+      [
+        "muf'āll + müennes",
+        "kıyâsî · ilal",
+        "مُشْهَاوِيَة",
+        "muşhāwiya",
+        "büsbütün isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muf'āll + tesniye", "kıyâsî · ilal", "مُشْهَاوِيَان", "muşhāwiyān", "büsbütün isteyen, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî · ilal",
+        "مُشْهَاوِيَتَان",
+        "muşhāwiyatān",
+        "büsbütün isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مُشْهَاوُون",
+        "muşhāwūn",
+        "büsbütün isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مُشْهَاوِين",
+        "muşhāwīn",
+        "büsbütün isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مُشْهَاوِيَات",
+        "muşhāwiyāt",
+        "büsbütün isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb XII (illet harfi izhar)": [
-      [685, "اِشْهِوْهَاء", "işhiwhāʾ", "aşırı isteme", "orta", ""]
+      ["if'iv'āl", "semâî aday · ilal", "اِشْهِوْهَاء", "işhiwhāʾ", "aşırı isteme", "orta", ""]
     ],
     "masdar · bâb XIII (illet harfi izhar)": [
-      [686, "اِشْهِوَّاء", "işhiwwāʾ", "aşırı isteme", "orta", ""]
+      ["if'ivvāl", "semâî aday · ilal", "اِشْهِوَّاء", "işhiwwāʾ", "aşırı isteme", "orta", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [687, "شَاهِي", "şāhī", "isteyen", "orta", ""],
-      [688, "شَاهِيَة", "şāhiya", "isteyen, müennes", "orta", ""],
-      [689, "شَاهِيَان", "şāhiyān", "isteyen, iki", "orta", ""],
-      [690, "شَاهِيَتَان", "şāhiyatān", "isteyen, iki, müennes", "orta", ""],
-      [691, "شَاهُون", "şāhūn", "isteyenler", "orta", ""],
-      [692, "شَاهِين", "şāhīn", "isteyenler", "orta", ""],
-      [693, "شَاهِيَات", "şāhiyāt", "isteyenler, müennes", "orta", ""]
+      ["fâ'il", "kıyâsî · ilal", "شَاهِي", "şāhī", "isteyen", "orta", ""],
+      ["fâ'il + müennes", "kıyâsî · ilal", "شَاهِيَة", "şāhiya", "isteyen, müennes", "orta", ""],
+      ["fâ'il + tesniye", "kıyâsî · ilal", "شَاهِيَان", "şāhiyān", "isteyen, iki", "orta", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî · ilal", "شَاهِيَتَان", "şāhiyatān", "isteyen, iki, müennes", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "شَاهُون", "şāhūn", "isteyenler", "orta", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "شَاهِين", "şāhīn", "isteyenler", "orta", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "شَاهِيَات",
+        "şāhiyāt",
+        "isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [694, "مَشْهُوّ", "maşhuww", "istenen", "orta", ""],
-      [695, "مَشْهُوَّة", "maşhuwwa", "istenen, müennes", "orta", ""],
-      [696, "مَشْهُوَّان", "maşhuwwān", "istenen, iki", "orta", ""],
-      [697, "مَشْهُوَّتَان", "maşhuwwatān", "istenen, iki, müennes", "orta", ""],
-      [698, "مَشْهُوُّون", "maşhuwwūn", "istenenler", "orta", ""],
-      [699, "مَشْهُوِّين", "maşhuwwīn", "istenenler", "orta", ""],
-      [700, "مَشْهُوَّات", "maşhuwwāt", "istenenler, müennes", "orta", ""]
+      ["maf'ûl", "kıyâsî · ilal", "مَشْهُوّ", "maşhuww", "istenen", "orta", ""],
+      ["maf'ûl + müennes", "kıyâsî · ilal", "مَشْهُوَّة", "maşhuwwa", "istenen, müennes", "orta", ""],
+      ["maf'ûl + tesniye", "kıyâsî · ilal", "مَشْهُوَّان", "maşhuwwān", "istenen, iki", "orta", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî · ilal",
+        "مَشْهُوَّتَان",
+        "maşhuwwatān",
+        "istenen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî · ilal",
+        "مَشْهُوُّون",
+        "maşhuwwūn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî · ilal",
+        "مَشْهُوِّين",
+        "maşhuwwīn",
+        "istenenler",
+        "orta",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî · ilal",
+        "مَشْهُوَّات",
+        "maşhuwwāt",
+        "istenenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mekân/zaman · sülâsî": [
-      [701, "مَشْهَى", "maşhā", "isteme yeri, vakti", "orta", ""],
-      [702, "مَشْهَيَان", "maşhayān", "isteme yeri, vakti, iki", "orta", ""],
-      [703, "مَشْهِي", "maşhī", "isteme yeri, vakti", "orta", ""],
-      [704, "مَشْهِيَان", "maşhiyān", "isteme yeri, vakti, iki", "orta", ""],
-      [705, "مَشْهَاة", "maşhā", "istemenin bol olduğu yer", "orta", ""],
-      [706, "مَشْهَاتَان", "maşhātān", "istemenin bol olduğu yer, iki", "orta", ""],
-      [707, "مَشْهِيَة", "maşhiya", "istemenin bol olduğu yer", "orta", ""],
-      [708, "مَشْهِيَتَان", "maşhiyatān", "istemenin bol olduğu yer, iki", "orta", ""],
-      [247, "مَشْهُوَة", "maşhuwa", "isteme yeri, vakti", "orta", ""],
-      [248, "مَشْهُوَتَان", "maşhuwatān", "isteme yeri, vakti, iki", "orta", ""]
+      ["maf'al", "kıyâsî · ilal", "مَشْهَى", "maşhā", "isteme yeri, vakti", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَشْهَيَان", "maşhayān", "isteme yeri, vakti, iki", "orta", ""],
+      ["maf'il", "kıyâsî · ilal", "مَشْهِي", "maşhī", "isteme yeri, vakti", "orta", ""],
+      ["maf'il + tesniye", "kıyâsî · ilal", "مَشْهِيَان", "maşhiyān", "isteme yeri, vakti, iki", "orta", ""],
+      ["maf'ale", "kıyâsî · ilal", "مَشْهَاة", "maşhā", "istemenin bol olduğu yer", "orta", ""],
+      ["maf'ale + tesniye", "kıyâsî · ilal", "مَشْهَاتَان", "maşhātān", "istemenin bol olduğu yer, iki", "orta", ""],
+      ["maf'ile", "kıyâsî · ilal", "مَشْهِيَة", "maşhiya", "istemenin bol olduğu yer", "orta", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî · ilal",
+        "مَشْهِيَتَان",
+        "maşhiyatān",
+        "istemenin bol olduğu yer, iki",
+        "orta",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَشْهُوَة", "maşhuwa", "isteme yeri, vakti", "orta", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَشْهُوَتَان", "maşhuwatān", "isteme yeri, vakti, iki", "orta", ""]
     ],
     "âlet · sülâsî": [
-      [709, "مِشْهَى", "mişhā", "isteme âleti", "orta", ""],
-      [710, "مِشْهَيَان", "mişhayān", "isteme âleti, iki", "orta", ""],
-      [711, "مِشْهَاء", "mişhāʾ", "isteme âleti", "orta", ""],
-      [712, "مِشْهَاآن", "mişhāʾān", "isteme âleti, iki", "orta", ""],
-      [713, "مِشْهَاة", "mişhā", "isteme âleti", "orta", ""],
-      [714, "مِشْهَاتَان", "mişhātān", "isteme âleti, iki", "orta", ""]
+      ["mif'al", "kıyâsî · ilal", "مِشْهَى", "mişhā", "isteme âleti", "orta", ""],
+      ["mif'al + tesniye", "kıyâsî · ilal", "مِشْهَيَان", "mişhayān", "isteme âleti, iki", "orta", ""],
+      ["mif'âl", "kıyâsî · ilal", "مِشْهَاء", "mişhāʾ", "isteme âleti", "orta", ""],
+      ["mif'âl + tesniye", "kıyâsî · ilal", "مِشْهَاآن", "mişhāʾān", "isteme âleti, iki", "orta", ""],
+      ["mif'ale", "kıyâsî · ilal", "مِشْهَاة", "mişhā", "isteme âleti", "orta", ""],
+      ["mif'ale + tesniye", "kıyâsî · ilal", "مِشْهَاتَان", "mişhātān", "isteme âleti, iki", "orta", ""]
     ],
     "tafdîl · sülâsî": [
-      [715, "أَشْهَى", "ʾaşhā", "daha çok isteyen", "orta", ""],
-      [716, "أَشْهَيَان", "ʾaşhayān", "daha çok isteyen, iki", "orta", ""]
+      ["af'al", "kıyâsî · ilal", "أَشْهَى", "ʾaşhā", "daha çok isteyen", "orta", ""],
+      ["af'al + tesniye", "kıyâsî · ilal", "أَشْهَيَان", "ʾaşhayān", "daha çok isteyen, iki", "orta", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [717, "شُهْيَى", "şuhyā", "daha çok isteyen", "orta", ""],
-      [718, "شُهْيَيَان", "şuhyayān", "daha çok isteyen, iki", "orta", ""],
-      [245, "شَهْوَاء", "şahwāʾ", "daha çok isteyen", "orta", ""],
-      [246, "شَهْوَاآن", "şahwāʾān", "daha çok isteyen, iki", "orta", ""]
+      ["fu'lâ", "kıyâsî · ilal", "شُهْيَى", "şuhyā", "daha çok isteyen", "orta", ""],
+      ["fu'lâ + tesniye", "kıyâsî · ilal", "شُهْيَيَان", "şuhyayān", "daha çok isteyen, iki", "orta", ""],
+      ["fa'lâ'", "kıyâsî", "شَهْوَاء", "şahwāʾ", "daha çok isteyen", "orta", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "شَهْوَاآن", "şahwāʾān", "daha çok isteyen, iki", "orta", ""]
     ],
     "tasğîr · sülâsî": [
-      [719, "شُهَيّ", "şuhayy", "azıcık isteme", "orta", ""],
-      [720, "شُهَيَّان", "şuhayyān", "azıcık isteme, iki", "orta", ""],
-      [721, "شُهَيَّة", "şuhayya", "azıcık isteme", "orta", ""],
-      [722, "شُهَيَّتَان", "şuhayyatān", "azıcık isteme, iki", "orta", ""]
+      ["fu'ayl", "kıyâsî · ilal", "شُهَيّ", "şuhayy", "azıcık isteme", "orta", ""],
+      ["fu'ayl + tesniye", "kıyâsî · ilal", "شُهَيَّان", "şuhayyān", "azıcık isteme, iki", "orta", ""],
+      ["fu'ayle", "kıyâsî · ilal", "شُهَيَّة", "şuhayya", "azıcık isteme", "orta", ""],
+      ["fu'ayle + tesniye", "kıyâsî · ilal", "شُهَيَّتَان", "şuhayyatān", "azıcık isteme, iki", "orta", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [723, "مَشْهَى", "maşhā", "isteme", "orta", ""],
-      [724, "مَشْهَيَان", "maşhayān", "isteme, iki", "orta", ""]
+      ["maf'al", "kıyâsî · ilal", "مَشْهَى", "maşhā", "isteme", "orta", ""],
+      ["maf'al + tesniye", "kıyâsî · ilal", "مَشْهَيَان", "maşhayān", "isteme, iki", "orta", ""]
     ],
     "ism-i merre · sülâsî": [
       [
-        255,
+        "fa'le",
+        "aday",
         "شَهْوَة",
         "şahwa",
         "Aşırı cinsel istek",
         "lugat",
         "Vikisözlük: lust; craving; greed; yearning; passion · Luggat"
       ],
-      [256, "شَهْوَتَان", "şahwatān", "bir kere isteme, iki", "orta", ""]
+      ["fa'le + tesniye", "aday", "شَهْوَتَان", "şahwatān", "bir kere isteme, iki", "orta", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "شِهْوَة", "şihwa", "isteme tarzı", "orta", ""],
-      [258, "شِهْوَتَان", "şihwatān", "isteme tarzı, iki", "orta", ""]
+      ["fi'le", "aday", "شِهْوَة", "şihwa", "isteme tarzı", "orta", ""],
+      ["fi'le + tesniye", "aday", "شِهْوَتَان", "şihwatān", "isteme tarzı, iki", "orta", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [725, "شَهِيّ", "şahiyy", "her daim isteyen", "orta", ""],
-      [726, "شَهِيَّة", "şahiyya", "her daim isteyen, müennes", "orta", "Vikisözlük: appetite"],
-      [727, "شَهِيَّان", "şahiyyān", "her daim isteyen, iki", "orta", ""],
-      [728, "شَهِيَّتَان", "şahiyyatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [729, "شَهِيُّون", "şahiyyūn", "her daim isteyenler", "orta", ""],
-      [730, "شَهِيِّين", "şahiyyīn", "her daim isteyenler", "orta", ""],
-      [731, "شَهِيَّات", "şahiyyāt", "her daim isteyenler, müennes", "orta", ""],
-      [732, "شَهُوّ", "şahuww", "her daim isteyen", "orta", ""],
-      [733, "شَهُوَّة", "şahuwwa", "her daim isteyen, müennes", "orta", ""],
-      [734, "شَهُوَّان", "şahuwwān", "her daim isteyen, iki", "orta", ""],
-      [735, "شَهُوَّتَان", "şahuwwatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [736, "شَهُوُّون", "şahuwwūn", "her daim isteyenler", "orta", ""],
-      [737, "شَهُوِّين", "şahuwwīn", "her daim isteyenler", "orta", ""],
-      [738, "شَهُوَّات", "şahuwwāt", "her daim isteyenler, müennes", "orta", ""],
-      [739, "شَهِي", "şahī", "her daim isteyen", "orta", ""],
-      [740, "شَهِيَة", "şahiya", "her daim isteyen, müennes", "orta", ""],
-      [741, "شَهِيَان", "şahiyān", "her daim isteyen, iki", "orta", ""],
-      [742, "شَهِيَتَان", "şahiyatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [743, "شَهُون", "şahūn", "her daim isteyenler", "orta", ""],
-      [744, "شَهِين", "şahīn", "her daim isteyenler", "orta", ""],
-      [745, "شَهِيَات", "şahiyāt", "her daim isteyenler, müennes", "orta", ""],
-      [746, "شَهُوّ", "şahuww", "her daim isteyen", "orta", ""],
-      [747, "شَهُوَّة", "şahuwwa", "her daim isteyen, müennes", "orta", ""],
-      [748, "شَهُوَّان", "şahuwwān", "her daim isteyen, iki", "orta", ""],
-      [749, "شَهُوَّتَان", "şahuwwatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [750, "شَهُوُّون", "şahuwwūn", "her daim isteyenler", "orta", ""],
-      [751, "شَهُوِّين", "şahuwwīn", "her daim isteyenler", "orta", ""],
-      [752, "شَهُوَّات", "şahuwwāt", "her daim isteyenler, müennes", "orta", ""],
-      [753, "شَهَا", "şahā", "her daim isteyen", "orta", ""],
-      [754, "شَهَوَان", "şahawān", "her daim isteyen, iki", "orta", ""],
-      [755, "شَهَوَات", "şahawāt", "Şehvetler", "lugat", "Luggat"],
-      [294, "شَهْو", "şahw", "her daim isteyen", "orta", ""],
+      ["fa'īl", "semâî aday · ilal", "شَهِيّ", "şahiyy", "her daim isteyen", "orta", ""],
       [
-        295,
+        "fa'īl + müennes",
+        "semâî aday · ilal",
+        "شَهِيَّة",
+        "şahiyya",
+        "her daim isteyen, müennes",
+        "orta",
+        "Vikisözlük: appetite"
+      ],
+      ["fa'īl + tesniye", "semâî aday · ilal", "شَهِيَّان", "şahiyyān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهِيَّتَان",
+        "şahiyyatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهِيُّون",
+        "şahiyyūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهِيِّين",
+        "şahiyyīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهِيَّات",
+        "şahiyyāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "شَهُوّ", "şahuww", "her daim isteyen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "شَهُوَّة", "şahuwwa", "her daim isteyen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "شَهُوَّان", "şahuwwān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهُوَّتَان",
+        "şahuwwatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهُوُّون",
+        "şahuwwūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهُوِّين",
+        "şahuwwīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهُوَّات",
+        "şahuwwāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'il", "semâî aday · ilal", "شَهِي", "şahī", "her daim isteyen", "orta", ""],
+      ["fa'il + müennes", "semâî aday · ilal", "شَهِيَة", "şahiya", "her daim isteyen, müennes", "orta", ""],
+      ["fa'il + tesniye", "semâî aday · ilal", "شَهِيَان", "şahiyān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهِيَتَان",
+        "şahiyatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهُون",
+        "şahūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهِين",
+        "şahīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهِيَات",
+        "şahiyāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ul", "semâî aday · ilal", "شَهُوّ", "şahuww", "her daim isteyen", "orta", ""],
+      ["fa'ul + müennes", "semâî aday · ilal", "شَهُوَّة", "şahuwwa", "her daim isteyen, müennes", "orta", ""],
+      ["fa'ul + tesniye", "semâî aday · ilal", "شَهُوَّان", "şahuwwān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهُوَّتَان",
+        "şahuwwatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهُوُّون",
+        "şahuwwūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهُوِّين",
+        "şahuwwīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهُوَّات",
+        "şahuwwāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'al", "semâî aday · ilal", "شَهَا", "şahā", "her daim isteyen", "orta", ""],
+      ["fa'al + tesniye", "semâî aday · ilal", "شَهَوَان", "şahawān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهَوَات",
+        "şahawāt",
+        "Şehvetler",
+        "lugat",
+        "Luggat"
+      ],
+      ["fa'l", "semâî aday", "شَهْو", "şahw", "her daim isteyen", "orta", ""],
+      [
+        "fa'l + müennes",
+        "semâî aday",
         "شَهْوَة",
         "şahwa",
         "Aşırı cinsel istek",
         "lugat",
         "Vikisözlük: lust; craving; greed; yearning; passion · Luggat"
       ],
-      [296, "شَهْوَان", "şahwān", "her daim isteyen, iki", "orta", ""],
-      [297, "شَهْوَتَان", "şahwatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [298, "شَهْوُون", "şahwūn", "her daim isteyenler", "orta", ""],
-      [299, "شَهْوِين", "şahwīn", "her daim isteyenler", "orta", ""],
-      [300, "شَهْوَات", "şahwāt", "her daim isteyenler, müennes", "orta", ""],
-      [756, "شُهُوّ", "şuhuww", "her daim isteyen", "orta", ""],
-      [757, "شُهُوَّة", "şuhuwwa", "her daim isteyen, müennes", "orta", ""],
-      [758, "شُهُوَّان", "şuhuwwān", "her daim isteyen, iki", "orta", ""],
-      [759, "شُهُوَّتَان", "şuhuwwatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [760, "شُهُوُّون", "şuhuwwūn", "her daim isteyenler", "orta", ""],
-      [761, "شُهُوِّين", "şuhuwwīn", "her daim isteyenler", "orta", ""],
-      [762, "شُهُوَّات", "şuhuwwāt", "her daim isteyenler, müennes", "orta", ""],
-      [308, "شَهْوَان", "şahwān", "her daim isteyen", "orta", ""],
-      [309, "شَهْوَانَة", "şahwāna", "her daim isteyen, müennes", "orta", ""],
-      [310, "شَهْوَانَان", "şahwānān", "her daim isteyen, iki", "orta", ""],
-      [311, "شَهْوَانَتَان", "şahwānatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [312, "شَهْوَانُون", "şahwānūn", "her daim isteyenler", "orta", ""],
-      [313, "شَهْوَانِين", "şahwānīn", "her daim isteyenler", "orta", ""],
-      [314, "شَهْوَانَات", "şahwānāt", "her daim isteyenler, müennes", "orta", ""],
-      [763, "شُهَاء", "şuhāʾ", "her daim isteyen", "orta", ""],
-      [764, "شُهَاءَة", "şuhāʾa", "her daim isteyen, müennes", "orta", ""],
-      [765, "شُهَاآن", "şuhāʾān", "her daim isteyen, iki", "orta", ""],
-      [766, "شُهَاءَتَان", "şuhāʾatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [767, "شُهَاؤُون", "şuhāʾūn", "her daim isteyenler", "orta", ""],
-      [768, "شُهَائِين", "şuhāʾīn", "her daim isteyenler", "orta", ""],
-      [769, "شُهَاآت", "şuhāʾāt", "her daim isteyenler, müennes", "orta", ""],
-      [770, "شَهَاء", "şahāʾ", "her daim isteyen", "orta", ""],
-      [771, "شَهَاءَة", "şahāʾa", "her daim isteyen, müennes", "orta", ""],
-      [772, "شَهَاآن", "şahāʾān", "her daim isteyen, iki", "orta", ""],
-      [773, "شَهَاءَتَان", "şahāʾatān", "her daim isteyen, iki, müennes", "orta", ""],
-      [774, "شَهَاؤُون", "şahāʾūn", "her daim isteyenler", "orta", ""],
-      [775, "شَهَائِين", "şahāʾīn", "her daim isteyenler", "orta", ""],
-      [776, "شَهَاآت", "şahāʾāt", "her daim isteyenler, müennes", "orta", ""]
+      ["fa'l + tesniye", "semâî aday", "شَهْوَان", "şahwān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "شَهْوَتَان",
+        "şahwatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "شَهْوُون", "şahwūn", "her daim isteyenler", "orta", ""],
+      ["fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", "شَهْوِين", "şahwīn", "her daim isteyenler", "orta", ""],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "شَهْوَات",
+        "şahwāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'ul", "semâî aday · ilal", "شُهُوّ", "şuhuww", "her daim isteyen", "orta", ""],
+      ["fu'ul + müennes", "semâî aday · ilal", "شُهُوَّة", "şuhuwwa", "her daim isteyen, müennes", "orta", ""],
+      ["fu'ul + tesniye", "semâî aday · ilal", "شُهُوَّان", "şuhuwwān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday · ilal",
+        "شُهُوَّتَان",
+        "şuhuwwatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شُهُوُّون",
+        "şuhuwwūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شُهُوِّين",
+        "şuhuwwīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شُهُوَّات",
+        "şuhuwwāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "شَهْوَان", "şahwān", "her daim isteyen", "orta", ""],
+      ["fa'lān + müennes", "semâî aday", "شَهْوَانَة", "şahwāna", "her daim isteyen, müennes", "orta", ""],
+      ["fa'lān + tesniye", "semâî aday", "شَهْوَانَان", "şahwānān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "شَهْوَانَتَان",
+        "şahwānatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "شَهْوَانُون",
+        "şahwānūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "شَهْوَانِين",
+        "şahwānīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "شَهْوَانَات",
+        "şahwānāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu'āl", "semâî aday · ilal", "شُهَاء", "şuhāʾ", "her daim isteyen", "orta", ""],
+      ["fu'āl + müennes", "semâî aday · ilal", "شُهَاءَة", "şuhāʾa", "her daim isteyen, müennes", "orta", ""],
+      ["fu'āl + tesniye", "semâî aday · ilal", "شُهَاآن", "şuhāʾān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "شُهَاءَتَان",
+        "şuhāʾatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شُهَاؤُون",
+        "şuhāʾūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شُهَائِين",
+        "şuhāʾīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شُهَاآت",
+        "şuhāʾāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'āl", "semâî aday · ilal", "شَهَاء", "şahāʾ", "her daim isteyen", "orta", ""],
+      ["fa'āl + müennes", "semâî aday · ilal", "شَهَاءَة", "şahāʾa", "her daim isteyen, müennes", "orta", ""],
+      ["fa'āl + tesniye", "semâî aday · ilal", "شَهَاآن", "şahāʾān", "her daim isteyen, iki", "orta", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهَاءَتَان",
+        "şahāʾatān",
+        "her daim isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهَاؤُون",
+        "şahāʾūn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهَائِين",
+        "şahāʾīn",
+        "her daim isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهَاآت",
+        "şahāʾāt",
+        "her daim isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mübalağa": [
-      [777, "شَهَّاء", "şahhāʾ", "işi isteme olan", "orta", ""],
-      [778, "شَهَّاءَة", "şahhāʾa", "işi isteme olan, müennes", "orta", ""],
-      [779, "شَهَّاآن", "şahhāʾān", "işi isteme olan, iki", "orta", ""],
-      [780, "شَهَّاءَتَان", "şahhāʾatān", "işi isteme olan, iki, müennes", "orta", ""],
-      [781, "شَهَّاؤُون", "şahhāʾūn", "işi isteme olanlar", "orta", ""],
-      [782, "شَهَّائِين", "şahhāʾīn", "işi isteme olanlar", "orta", ""],
-      [783, "شَهَّاآت", "şahhāʾāt", "işi isteme olanlar, müennes", "orta", ""],
-      [784, "شَهَّايَة", "şahhāya", "pek çok isteyen", "orta", ""],
-      [785, "شَهَّايَتَان", "şahhāyatān", "pek çok isteyen, iki", "orta", ""],
-      [786, "شَهَّايَات", "şahhāyāt", "pek çok isteyenler, müennes", "orta", ""],
-      [787, "شَهُوّ", "şahuww", "çok isteyen", "orta", ""],
-      [788, "شَهُوَّة", "şahuwwa", "çok isteyen, müennes", "orta", ""],
-      [789, "شَهُوَّان", "şahuwwān", "çok isteyen, iki", "orta", ""],
-      [790, "شَهُوَّتَان", "şahuwwatān", "çok isteyen, iki, müennes", "orta", ""],
-      [791, "شَهُوُّون", "şahuwwūn", "çok isteyenler", "orta", ""],
-      [792, "شَهُوِّين", "şahuwwīn", "çok isteyenler", "orta", ""],
-      [793, "شَهُوَّات", "şahuwwāt", "çok isteyenler, müennes", "orta", ""],
-      [346, "شَهُّوو", "şahhūw", "pek çok isteyen", "orta", ""],
-      [347, "شَهُّووَة", "şahhūwa", "pek çok isteyen, müennes", "orta", ""],
-      [348, "شَهُّووَان", "şahhūwān", "pek çok isteyen, iki", "orta", ""],
-      [349, "شَهُّووَتَان", "şahhūwatān", "pek çok isteyen, iki, müennes", "orta", ""],
-      [350, "شَهُّووُون", "şahhūwūn", "pek çok isteyenler", "orta", ""],
-      [351, "شَهُّووِين", "şahhūwīn", "pek çok isteyenler", "orta", ""],
-      [352, "شَهُّووَات", "şahhūwāt", "pek çok isteyenler, müennes", "orta", ""],
-      [353, "شِهِّيو", "şihhīw", "istemede aşırı giden", "orta", ""],
-      [354, "شِهِّيوَة", "şihhīwa", "istemede aşırı giden, müennes", "orta", ""],
-      [355, "شِهِّيوَان", "şihhīwān", "istemede aşırı giden, iki", "orta", ""],
-      [356, "شِهِّيوَتَان", "şihhīwatān", "istemede aşırı giden, iki, müennes", "orta", ""],
-      [357, "شِهِّيوُون", "şihhīwūn", "istemede aşırı gidenler", "orta", ""],
-      [358, "شِهِّيوِين", "şihhīwīn", "istemede aşırı gidenler", "orta", ""],
-      [359, "شِهِّيوَات", "şihhīwāt", "istemede aşırı gidenler, müennes", "orta", ""],
-      [794, "شُهَّاء", "şuhhāʾ", "son derece isteyen", "orta", ""],
-      [795, "شُهَّاءَة", "şuhhāʾa", "son derece isteyen, müennes", "orta", ""],
-      [796, "شُهَّاآن", "şuhhāʾān", "son derece isteyen, iki", "orta", ""],
-      [797, "شُهَّاءَتَان", "şuhhāʾatān", "son derece isteyen, iki, müennes", "orta", ""],
-      [798, "شُهَّاؤُون", "şuhhāʾūn", "son derece isteyenler", "orta", ""],
-      [799, "شُهَّائِين", "şuhhāʾīn", "son derece isteyenler", "orta", ""],
-      [800, "شُهَّاآت", "şuhhāʾāt", "son derece isteyenler, müennes", "orta", ""],
-      [801, "مِشْهَاء", "mişhāʾ", "istemeyi âdet edinmiş", "orta", ""],
-      [802, "مِشْهَاءَة", "mişhāʾa", "istemeyi âdet edinmiş, müennes", "orta", ""],
-      [803, "مِشْهَاآن", "mişhāʾān", "istemeyi âdet edinmiş, iki", "orta", ""],
-      [804, "مِشْهَاءَتَان", "mişhāʾatān", "istemeyi âdet edinmiş, iki, müennes", "orta", ""],
-      [805, "مِشْهَاؤُون", "mişhāʾūn", "istemeyi âdet edinmişler", "orta", ""],
-      [806, "مِشْهَائِين", "mişhāʾīn", "istemeyi âdet edinmişler", "orta", ""],
-      [807, "مِشْهَاآت", "mişhāʾāt", "istemeyi âdet edinmişler, müennes", "orta", ""],
-      [374, "مِشْهِيو", "mişhīw", "istemeye düşkün", "orta", ""],
-      [375, "مِشْهِيوَة", "mişhīwa", "istemeye düşkün, müennes", "orta", ""],
-      [376, "مِشْهِيوَان", "mişhīwān", "istemeye düşkün, iki", "orta", ""],
-      [377, "مِشْهِيوَتَان", "mişhīwatān", "istemeye düşkün, iki, müennes", "orta", ""],
-      [378, "مِشْهِيوُون", "mişhīwūn", "istemeye düşkünler", "orta", ""],
-      [379, "مِشْهِيوِين", "mişhīwīn", "istemeye düşkünler", "orta", ""],
-      [380, "مِشْهِيوَات", "mişhīwāt", "istemeye düşkünler, müennes", "orta", ""],
-      [808, "شَهِيّ", "şahiyy", "çok isteyen", "orta", ""],
-      [809, "شَهِيَّة", "şahiyya", "çok isteyen, müennes", "orta", "Vikisözlük: appetite"],
-      [810, "شَهِيَّان", "şahiyyān", "çok isteyen, iki", "orta", ""],
-      [811, "شَهِيَّتَان", "şahiyyatān", "çok isteyen, iki, müennes", "orta", ""],
-      [812, "شَهِيُّون", "şahiyyūn", "çok isteyenler", "orta", ""],
-      [813, "شَهِيِّين", "şahiyyīn", "çok isteyenler", "orta", ""],
-      [814, "شَهِيَّات", "şahiyyāt", "çok isteyenler, müennes", "orta", ""],
-      [388, "شَهَّو", "şahhaw", "çok isteyen", "orta", ""],
-      [389, "شَهَّوَة", "şahhawa", "çok isteyen, müennes", "orta", ""],
-      [390, "شَهَّوَان", "şahhawān", "çok isteyen, iki", "orta", ""],
-      [391, "شَهَّوَتَان", "şahhawatān", "çok isteyen, iki, müennes", "orta", ""],
-      [392, "شَهَّوُون", "şahhawūn", "çok isteyenler", "orta", ""],
-      [393, "شَهَّوِين", "şahhawīn", "çok isteyenler", "orta", ""],
-      [394, "شَهَّوَات", "şahhawāt", "çok isteyenler, müennes", "orta", ""]
+      ["fa''āl", "semâî aday · ilal", "شَهَّاء", "şahhāʾ", "işi isteme olan", "orta", ""],
+      ["fa''āl + müennes", "semâî aday · ilal", "شَهَّاءَة", "şahhāʾa", "işi isteme olan, müennes", "orta", ""],
+      ["fa''āl + tesniye", "semâî aday · ilal", "شَهَّاآن", "şahhāʾān", "işi isteme olan, iki", "orta", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهَّاءَتَان",
+        "şahhāʾatān",
+        "işi isteme olan, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهَّاؤُون",
+        "şahhāʾūn",
+        "işi isteme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهَّائِين",
+        "şahhāʾīn",
+        "işi isteme olanlar",
+        "orta",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهَّاآت",
+        "şahhāʾāt",
+        "işi isteme olanlar, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''āle", "semâî aday · ilal", "شَهَّايَة", "şahhāya", "pek çok isteyen", "orta", ""],
+      ["fa''āle + tesniye", "semâî aday · ilal", "شَهَّايَتَان", "şahhāyatān", "pek çok isteyen, iki", "orta", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهَّايَات",
+        "şahhāyāt",
+        "pek çok isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'ūl", "semâî aday · ilal", "شَهُوّ", "şahuww", "çok isteyen", "orta", ""],
+      ["fa'ūl + müennes", "semâî aday · ilal", "شَهُوَّة", "şahuwwa", "çok isteyen, müennes", "orta", ""],
+      ["fa'ūl + tesniye", "semâî aday · ilal", "شَهُوَّان", "şahuwwān", "çok isteyen, iki", "orta", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهُوَّتَان",
+        "şahuwwatān",
+        "çok isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهُوُّون",
+        "şahuwwūn",
+        "çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهُوِّين",
+        "şahuwwīn",
+        "çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهُوَّات",
+        "şahuwwāt",
+        "çok isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "شَهُّوو", "şahhūw", "pek çok isteyen", "orta", ""],
+      ["fa''ūl + müennes", "semâî aday", "شَهُّووَة", "şahhūwa", "pek çok isteyen, müennes", "orta", ""],
+      ["fa''ūl + tesniye", "semâî aday", "شَهُّووَان", "şahhūwān", "pek çok isteyen, iki", "orta", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "شَهُّووَتَان",
+        "şahhūwatān",
+        "pek çok isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "شَهُّووُون",
+        "şahhūwūn",
+        "pek çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "شَهُّووِين",
+        "şahhūwīn",
+        "pek çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "شَهُّووَات",
+        "şahhūwāt",
+        "pek çok isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "شِهِّيو", "şihhīw", "istemede aşırı giden", "orta", ""],
+      ["fi''īl + müennes", "semâî aday", "شِهِّيوَة", "şihhīwa", "istemede aşırı giden, müennes", "orta", ""],
+      ["fi''īl + tesniye", "semâî aday", "شِهِّيوَان", "şihhīwān", "istemede aşırı giden, iki", "orta", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "شِهِّيوَتَان",
+        "şihhīwatān",
+        "istemede aşırı giden, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "شِهِّيوُون",
+        "şihhīwūn",
+        "istemede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "شِهِّيوِين",
+        "şihhīwīn",
+        "istemede aşırı gidenler",
+        "orta",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "شِهِّيوَات",
+        "şihhīwāt",
+        "istemede aşırı gidenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fu''āl", "semâî aday · ilal", "شُهَّاء", "şuhhāʾ", "son derece isteyen", "orta", ""],
+      ["fu''āl + müennes", "semâî aday · ilal", "شُهَّاءَة", "şuhhāʾa", "son derece isteyen, müennes", "orta", ""],
+      ["fu''āl + tesniye", "semâî aday · ilal", "شُهَّاآن", "şuhhāʾān", "son derece isteyen, iki", "orta", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday · ilal",
+        "شُهَّاءَتَان",
+        "şuhhāʾatān",
+        "son derece isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شُهَّاؤُون",
+        "şuhhāʾūn",
+        "son derece isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شُهَّائِين",
+        "şuhhāʾīn",
+        "son derece isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شُهَّاآت",
+        "şuhhāʾāt",
+        "son derece isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl", "semâî aday · ilal", "مِشْهَاء", "mişhāʾ", "istemeyi âdet edinmiş", "orta", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday · ilal",
+        "مِشْهَاءَة",
+        "mişhāʾa",
+        "istemeyi âdet edinmiş, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'āl + tesniye", "semâî aday · ilal", "مِشْهَاآن", "mişhāʾān", "istemeyi âdet edinmiş, iki", "orta", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday · ilal",
+        "مِشْهَاءَتَان",
+        "mişhāʾatān",
+        "istemeyi âdet edinmiş, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "مِشْهَاؤُون",
+        "mişhāʾūn",
+        "istemeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "مِشْهَائِين",
+        "mişhāʾīn",
+        "istemeyi âdet edinmişler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "مِشْهَاآت",
+        "mişhāʾāt",
+        "istemeyi âdet edinmişler, müennes",
+        "orta",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِشْهِيو", "mişhīw", "istemeye düşkün", "orta", ""],
+      ["mif'īl + müennes", "semâî aday", "مِشْهِيوَة", "mişhīwa", "istemeye düşkün, müennes", "orta", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِشْهِيوَان", "mişhīwān", "istemeye düşkün, iki", "orta", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِشْهِيوَتَان",
+        "mişhīwatān",
+        "istemeye düşkün, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِشْهِيوُون",
+        "mişhīwūn",
+        "istemeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِشْهِيوِين",
+        "mişhīwīn",
+        "istemeye düşkünler",
+        "orta",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِشْهِيوَات",
+        "mişhīwāt",
+        "istemeye düşkünler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa'īl", "semâî aday · ilal", "شَهِيّ", "şahiyy", "çok isteyen", "orta", ""],
+      [
+        "fa'īl + müennes",
+        "semâî aday · ilal",
+        "شَهِيَّة",
+        "şahiyya",
+        "çok isteyen, müennes",
+        "orta",
+        "Vikisözlük: appetite"
+      ],
+      ["fa'īl + tesniye", "semâî aday · ilal", "شَهِيَّان", "şahiyyān", "çok isteyen, iki", "orta", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday · ilal",
+        "شَهِيَّتَان",
+        "şahiyyatān",
+        "çok isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday · ilal",
+        "شَهِيُّون",
+        "şahiyyūn",
+        "çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday · ilal",
+        "شَهِيِّين",
+        "şahiyyīn",
+        "çok isteyenler",
+        "orta",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday · ilal",
+        "شَهِيَّات",
+        "şahiyyāt",
+        "çok isteyenler, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al", "semâî aday", "شَهَّو", "şahhaw", "çok isteyen", "orta", ""],
+      ["fa''al + müennes", "semâî aday", "شَهَّوَة", "şahhawa", "çok isteyen, müennes", "orta", ""],
+      ["fa''al + tesniye", "semâî aday", "شَهَّوَان", "şahhawān", "çok isteyen, iki", "orta", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "شَهَّوَتَان",
+        "şahhawatān",
+        "çok isteyen, iki, müennes",
+        "orta",
+        ""
+      ],
+      ["fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", "شَهَّوُون", "şahhawūn", "çok isteyenler", "orta", ""],
+      ["fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", "شَهَّوِين", "şahhawīn", "çok isteyenler", "orta", ""],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "شَهَّوَات",
+        "şahhawāt",
+        "çok isteyenler, müennes",
+        "orta",
+        ""
+      ]
     ],
     "mensûb": [
-      [395, "شَهْوِيّ", "şahwiyy", "isteme ile ilgili", "orta", ""],
-      [399, "شِهْوِيّ", "şihwiyy", "isteme ile ilgili", "orta", ""],
-      [401, "شُهْوِيّ", "şuhwiyy", "isteme ile ilgili", "orta", ""],
-      [815, "شِهَائِيّ", "şihāʾiyy", "isteme ile ilgili", "orta", ""],
-      [817, "شَاهِيّ", "şāhiyy", "isteme ile ilgili", "orta", ""],
-      [819, "مَشْهُوِّيّ", "maşhuwwiyy", "isteme ile ilgili", "orta", ""],
-      [821, "شَهِيِّيّ", "şahiyyiyy", "isteme ile ilgili", "orta", ""],
-      [823, "مَشْهَوِيّ", "maşhawiyy", "isteme ile ilgili", "orta", ""],
-      [825, "تَشْهِيِيّ", "taşhiyiyy", "isteme ile ilgili", "orta", ""],
-      [827, "تَشَاهِيّ", "taşāhiyy", "isteme ile ilgili", "orta", ""],
-      [829, "إِشْهَائِيّ", "ʾişhāʾiyy", "isteme ile ilgili", "orta", ""],
-      [831, "اِشْتِهَائِيّ", "iştihāʾiyy", "isteme ile ilgili", "orta", ""]
+      ["fa'l + iyy", "kıyâsî", "شَهْوِيّ", "şahwiyy", "isteme ile ilgili", "orta", ""],
+      ["fi'l + iyy", "kıyâsî", "شِهْوِيّ", "şihwiyy", "isteme ile ilgili", "orta", ""],
+      ["fu'l + iyy", "kıyâsî", "شُهْوِيّ", "şuhwiyy", "isteme ile ilgili", "orta", ""],
+      ["fi'āl + iyy", "kıyâsî · ilal", "شِهَائِيّ", "şihāʾiyy", "isteme ile ilgili", "orta", ""],
+      ["fâ'il + iyy", "kıyâsî · ilal", "شَاهِيّ", "şāhiyy", "isteme ile ilgili", "orta", ""],
+      ["maf'ûl + iyy", "kıyâsî · ilal", "مَشْهُوِّيّ", "maşhuwwiyy", "isteme ile ilgili", "orta", ""],
+      ["fa'īl + iyy", "kıyâsî · ilal", "شَهِيِّيّ", "şahiyyiyy", "isteme ile ilgili", "orta", ""],
+      ["maf'al + iyy", "kıyâsî · ilal", "مَشْهَوِيّ", "maşhawiyy", "isteme ile ilgili", "orta", ""],
+      ["taf'īl + iyy", "kıyâsî · ilal", "تَشْهِيِيّ", "taşhiyiyy", "isteme ile ilgili", "orta", ""],
+      ["tafā'ul + iyy", "kıyâsî · ilal", "تَشَاهِيّ", "taşāhiyy", "isteme ile ilgili", "orta", ""],
+      ["if'āl + iyy", "kıyâsî · ilal", "إِشْهَائِيّ", "ʾişhāʾiyy", "isteme ile ilgili", "orta", ""],
+      ["ifti'āl + iyy", "kıyâsî · ilal", "اِشْتِهَائِيّ", "iştihāʾiyy", "isteme ile ilgili", "orta", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "شَهْوِيَّة", "şahwiyya", "isteyenlik", "orta", ""],
-      [400, "شِهْوِيَّة", "şihwiyya", "isteyenlik", "orta", ""],
-      [402, "شُهْوِيَّة", "şuhwiyya", "isteyenlik", "orta", ""],
-      [816, "شِهَائِيَّة", "şihāʾiyya", "isteyenlik", "orta", ""],
-      [818, "شَاهِيَّة", "şāhiyya", "isteyenlik", "orta", ""],
-      [820, "مَشْهُوِّيَّة", "maşhuwwiyya", "isteyenlik", "orta", ""],
-      [822, "شَهِيِّيَّة", "şahiyyiyya", "isteyenlik", "orta", ""],
-      [824, "مَشْهَوِيَّة", "maşhawiyya", "isteyenlik", "orta", ""],
-      [826, "تَشْهِيِيَّة", "taşhiyiyya", "isteyenlik", "orta", ""],
-      [828, "تَشَاهِيَّة", "taşāhiyya", "isteyenlik", "orta", ""],
-      [830, "إِشْهَائِيَّة", "ʾişhāʾiyya", "isteyenlik", "orta", ""],
-      [832, "اِشْتِهَائِيَّة", "iştihāʾiyya", "isteyenlik", "orta", ""]
+      ["fa'l + iyye", "kıyâsî", "شَهْوِيَّة", "şahwiyya", "isteyenlik", "orta", ""],
+      ["fi'l + iyye", "kıyâsî", "شِهْوِيَّة", "şihwiyya", "isteyenlik", "orta", ""],
+      ["fu'l + iyye", "kıyâsî", "شُهْوِيَّة", "şuhwiyya", "isteyenlik", "orta", ""],
+      ["fi'āl + iyye", "kıyâsî · ilal", "شِهَائِيَّة", "şihāʾiyya", "isteyenlik", "orta", ""],
+      ["fâ'il + iyye", "kıyâsî · ilal", "شَاهِيَّة", "şāhiyya", "isteyenlik", "orta", ""],
+      ["maf'ûl + iyye", "kıyâsî · ilal", "مَشْهُوِّيَّة", "maşhuwwiyya", "isteyenlik", "orta", ""],
+      ["fa'īl + iyye", "kıyâsî · ilal", "شَهِيِّيَّة", "şahiyyiyya", "isteyenlik", "orta", ""],
+      ["maf'al + iyye", "kıyâsî · ilal", "مَشْهَوِيَّة", "maşhawiyya", "isteyenlik", "orta", ""],
+      ["taf'īl + iyye", "kıyâsî · ilal", "تَشْهِيِيَّة", "taşhiyiyya", "isteyenlik", "orta", ""],
+      ["tafā'ul + iyye", "kıyâsî · ilal", "تَشَاهِيَّة", "taşāhiyya", "isteyenlik", "orta", ""],
+      ["if'āl + iyye", "kıyâsî · ilal", "إِشْهَائِيَّة", "ʾişhāʾiyya", "isteyenlik", "orta", ""],
+      ["ifti'āl + iyye", "kıyâsî · ilal", "اِشْتِهَائِيَّة", "iştihāʾiyya", "isteyenlik", "orta", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [833, "شَهَاء", "şahāʾ", "isteme", "orta", ""],
-      [834, "شُهُوّ", "şuhuww", "isteme", "orta", ""],
-      [835, "شِهَاء", "şihāʾ", "isteme", "orta", ""],
-      [424, "شُهْو", "şuhw", "isteme", "orta", ""],
-      [836, "شَهَاة", "şahā", "isteme", "orta", ""],
-      [837, "شِهَايَة", "şihāya", "isteme", "orta", ""],
-      [838, "شُهُوَّة", "şuhuwwa", "isteme", "orta", ""],
-      [428, "شَهْو", "şahw", "isteme", "orta", ""],
-      [429, "شِهْو", "şihw", "isteme", "orta", ""]
+      ["fa'âl (kelâm, selâm)", "semâî aday · ilal", "شَهَاء", "şahāʾ", "isteme", "orta", ""],
+      ["fu'ûl (vudû')", "semâî aday · ilal", "شُهُوّ", "şuhuww", "isteme", "orta", ""],
+      ["fi'âl", "semâî aday · ilal", "شِهَاء", "şihāʾ", "isteme", "orta", ""],
+      ["fu'l (şükr)", "semâî aday", "شُهْو", "şuhw", "isteme", "orta", ""],
+      ["fa'âle (belâğa)", "semâî aday · ilal", "شَهَاة", "şahā", "isteme", "orta", ""],
+      ["fi'âle", "semâî aday · ilal", "شِهَايَة", "şihāya", "isteme", "orta", ""],
+      ["fu'ûle", "semâî aday · ilal", "شُهُوَّة", "şuhuwwa", "isteme", "orta", ""],
+      ["fa'l", "semâî aday", "شَهْو", "şahw", "isteme", "orta", ""],
+      ["fi'l", "semâî aday", "شِهْو", "şihw", "isteme", "orta", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "شَاهُوو", "şāhūw", "isteme türünden şey", "orta", ""],
-      [839, "شَهَاة", "şahā", "isteme türünden şey", "orta", ""],
-      [433, "شُهَوَة", "şuhawa", "isteme türünden şey", "orta", ""],
-      [434, "أُشْهُووَة", "ʾuşhūwa", "isteme türünden şey", "orta", ""],
-      [435, "شَوْهَو", "şawhaw", "isteme türünden şey", "orta", ""],
-      [437, "شَيْهَو", "şayhaw", "isteme türünden şey", "orta", ""],
-      [439, "شَهْو", "şahw", "isteme türünden şey", "orta", ""],
-      [840, "شَهَا", "şahā", "isteme türünden şey", "orta", ""],
-      [443, "شِهْو", "şihw", "isteme türünden şey", "orta", ""],
-      [445, "شُهْو", "şuhw", "isteme türünden şey", "orta", ""],
-      [841, "شَهِيّ", "şahiyy", "isteme türünden şey", "orta", ""],
-      [843, "شِهَى", "şihā", "isteme türünden şey", "orta", ""],
-      [844, "شُهُوّ", "şuhuww", "isteme türünden şey", "orta", ""],
-      [846, "شَهَاء", "şahāʾ", "isteme türünden şey", "orta", ""]
+      ["fâ'ûl", "semâî aday", "شَاهُوو", "şāhūw", "isteme türünden şey", "orta", ""],
+      ["fa'ala", "semâî aday · ilal", "شَهَاة", "şahā", "isteme türünden şey", "orta", ""],
+      ["fu'ala", "semâî aday", "شُهَوَة", "şuhawa", "isteme türünden şey", "orta", ""],
+      ["uf'ûla", "semâî aday", "أُشْهُووَة", "ʾuşhūwa", "isteme türünden şey", "orta", ""],
+      ["faw'al", "semâî aday", "شَوْهَو", "şawhaw", "isteme türünden şey", "orta", ""],
+      ["fay'al", "semâî aday", "شَيْهَو", "şayhaw", "isteme türünden şey", "orta", ""],
+      ["fa'l", "semâî aday", "شَهْو", "şahw", "isteme türünden şey", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "شَهَا", "şahā", "isteme türünden şey", "orta", ""],
+      ["fi'l", "semâî aday", "شِهْو", "şihw", "isteme türünden şey", "orta", ""],
+      ["fu'l", "semâî aday", "شُهْو", "şuhw", "isteme türünden şey", "orta", ""],
+      ["fa'îl", "semâî aday · ilal", "شَهِيّ", "şahiyy", "isteme türünden şey", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "شِهَى", "şihā", "isteme türünden şey", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "شُهُوّ", "şuhuww", "isteme türünden şey", "orta", ""],
+      ["fa'âl", "semâî aday · ilal", "شَهَاء", "şahāʾ", "isteme türünden şey", "orta", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "شَاهُووَة", "şāhūwa", "isteme türünden bir tane", "orta", ""],
-      [436, "شَوْهَوَة", "şawhawa", "isteme türünden bir tane", "orta", ""],
-      [438, "شَيْهَوَة", "şayhawa", "isteme türünden bir tane", "orta", ""],
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "شَاهُووَة", "şāhūwa", "isteme türünden bir tane", "orta", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "شَوْهَوَة", "şawhawa", "isteme türünden bir tane", "orta", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "شَيْهَوَة", "şayhawa", "isteme türünden bir tane", "orta", ""],
       [
-        440,
+        "fa'l + tâ (tekili)",
+        "semâî aday",
         "شَهْوَة",
         "şahwa",
         "Aşırı cinsel istek",
         "lugat",
         "Vikisözlük: lust; craving; greed; yearning; passion · Luggat"
       ],
-      [444, "شِهْوَة", "şihwa", "isteme türünden bir tane", "orta", ""],
-      [446, "شُهْوَة", "şuhwa", "isteme türünden bir tane", "orta", ""],
-      [842, "شَهِيَّة", "şahiyya", "isteme türünden bir tane", "orta", "Vikisözlük: appetite"],
-      [845, "شُهُوَّة", "şuhuwwa", "isteme türünden bir tane", "orta", ""],
-      [847, "شَهَاءَة", "şahāʾa", "isteme türünden bir tane", "orta", ""]
+      ["fi'l + tâ (tekili)", "semâî aday", "شِهْوَة", "şihwa", "isteme türünden bir tane", "orta", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "شُهْوَة", "şuhwa", "isteme türünden bir tane", "orta", ""],
+      [
+        "fa'îl + tâ (tekili)",
+        "semâî aday · ilal",
+        "شَهِيَّة",
+        "şahiyya",
+        "isteme türünden bir tane",
+        "orta",
+        "Vikisözlük: appetite"
+      ],
+      ["fu'ul + tâ (tekili)", "semâî aday · ilal", "شُهُوَّة", "şuhuwwa", "isteme türünden bir tane", "orta", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday · ilal", "شَهَاءَة", "şahāʾa", "isteme türünden bir tane", "orta", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [848, "أَشْهَاء", "ʾaşhāʾ", "istemeler", "orta", ""],
-      [849, "أَشْهِيَة", "ʾaşhiya", "istemeler", "orta", ""],
-      [850, "أَشَاهِي", "ʾaşāhī", "istemeler", "orta", ""],
-      [851, "أَشَاهِيّ", "ʾaşāhiyy", "istemeler", "orta", ""],
-      [852, "شُهُوّ", "şuhuww", "istemeler", "orta", ""],
-      [853, "شُهُوّ", "şuhuww", "istemeler", "orta", ""],
-      [854, "شِهَاء", "şihāʾ", "istemeler", "orta", ""],
-      [855, "شِهَى", "şihā", "istemeler", "orta", ""],
-      [856, "شِهَيَة", "şihaya", "istemeler", "orta", ""],
-      [857, "شُهَى", "şuhā", "istemeler", "orta", ""],
-      [858, "شَهَاة", "şahā", "istemeler", "orta", ""],
-      [859, "شُهَّاء", "şuhhāʾ", "istemeler", "orta", ""],
-      [860, "شَهَاء", "şahāʾ", "istemeler", "orta", ""],
-      [861, "شَهَا", "şahā", "istemeler", "orta", ""],
-      [862, "مَشَاهِي", "maşāhī", "istemeler", "orta", ""],
-      [863, "مَشَاهِيّ", "maşāhiyy", "istemeler", "orta", ""],
-      [864, "شَوَاهِي", "şawāhī", "istemeler", "orta", ""],
-      [473, "أَشْهُو", "ʾaşhuw", "istemeler", "orta", ""],
-      [474, "شُهَّو", "şuhhaw", "istemeler", "orta", ""],
-      [865, "شُهَيّ", "şuhayy", "istemeler", "orta", ""]
+      ["ef'āl", "semâî aday · ilal", "أَشْهَاء", "ʾaşhāʾ", "istemeler", "orta", ""],
+      ["ef'ile", "semâî aday · ilal", "أَشْهِيَة", "ʾaşhiya", "istemeler", "orta", ""],
+      ["efâ'il", "semâî aday · ilal", "أَشَاهِي", "ʾaşāhī", "istemeler", "orta", ""],
+      ["efâ'îl", "semâî aday · ilal", "أَشَاهِيّ", "ʾaşāhiyy", "istemeler", "orta", ""],
+      ["fu'ūl", "semâî aday · ilal", "شُهُوّ", "şuhuww", "istemeler", "orta", ""],
+      ["fu'ul", "semâî aday · ilal", "شُهُوّ", "şuhuww", "istemeler", "orta", ""],
+      ["fi'āl", "semâî aday · ilal", "شِهَاء", "şihāʾ", "istemeler", "orta", ""],
+      ["fi'al", "semâî aday · ilal", "شِهَى", "şihā", "istemeler", "orta", ""],
+      ["fi'ale", "semâî aday · ilal", "شِهَيَة", "şihaya", "istemeler", "orta", ""],
+      ["fu'al", "semâî aday · ilal", "شُهَى", "şuhā", "istemeler", "orta", ""],
+      ["fa'ale", "semâî aday · ilal", "شَهَاة", "şahā", "istemeler", "orta", ""],
+      ["fu''āl", "semâî aday · ilal", "شُهَّاء", "şuhhāʾ", "istemeler", "orta", ""],
+      ["fa'āl", "semâî aday · ilal", "شَهَاء", "şahāʾ", "istemeler", "orta", ""],
+      ["fa'al", "semâî aday · ilal", "شَهَا", "şahā", "istemeler", "orta", ""],
+      ["mefâ'il", "semâî aday · ilal", "مَشَاهِي", "maşāhī", "istemeler", "orta", ""],
+      ["mefâ'îl", "semâî aday · ilal", "مَشَاهِيّ", "maşāhiyy", "istemeler", "orta", ""],
+      ["fevâ'il", "semâî aday · ilal", "شَوَاهِي", "şawāhī", "istemeler", "orta", ""],
+      ["af'ul", "semâî aday", "أَشْهُو", "ʾaşhuw", "istemeler", "orta", ""],
+      ["fu''al", "semâî aday", "شُهَّو", "şuhhaw", "istemeler", "orta", ""],
+      ["fu'ayl(cem')", "semâî aday · ilal", "شُهَيّ", "şuhayy", "istemeler", "orta", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [866, "أَشْهَاآت", "ʾaşhāʾāt", "istemeler topluluğu", "orta", ""],
-      [867, "أَشْهِيَات", "ʾaşhiyāt", "istemeler topluluğu", "orta", ""],
-      [868, "أَشَاهِيَات", "ʾaşāhiyāt", "istemeler topluluğu", "orta", ""],
-      [869, "أَشَاهِيَّات", "ʾaşāhiyyāt", "istemeler topluluğu", "orta", ""],
-      [870, "شُهُوَّات", "şuhuwwāt", "istemeler topluluğu", "orta", ""],
-      [871, "شُهُوَّات", "şuhuwwāt", "istemeler topluluğu", "orta", ""],
-      [872, "شِهَاآت", "şihāʾāt", "istemeler topluluğu", "orta", ""],
-      [873, "شِهَيَات", "şihayāt", "istemeler topluluğu", "orta", ""],
-      [874, "شِهَيَات", "şihayāt", "istemeler topluluğu", "orta", ""],
-      [875, "شُهَيَات", "şuhayāt", "istemeler topluluğu", "orta", ""],
-      [876, "شَهَاات", "şahāāt", "istemeler topluluğu", "orta", ""],
-      [877, "شُهَّاآت", "şuhhāʾāt", "istemeler topluluğu", "orta", ""],
-      [878, "شَهَاآت", "şahāʾāt", "istemeler topluluğu", "orta", ""],
-      [879, "شَهَوَات", "şahawāt", "Şehvetler", "lugat", "Luggat"],
-      [880, "مَشَاهِيَات", "maşāhiyāt", "istemeler topluluğu", "orta", ""],
-      [881, "مَشَاهِيَّات", "maşāhiyyāt", "istemeler topluluğu", "orta", ""],
-      [882, "شَوَاهِيَات", "şawāhiyāt", "istemeler topluluğu", "orta", ""],
-      [495, "أَشْهُوَات", "ʾaşhuwāt", "istemeler topluluğu", "orta", ""],
-      [496, "شُهَّوَات", "şuhhawāt", "istemeler topluluğu", "orta", ""],
-      [883, "شُهَيَّات", "şuhayyāt", "istemeler topluluğu", "orta", ""]
+      ["ef'āl + ât", "semâî aday · ilal", "أَشْهَاآت", "ʾaşhāʾāt", "istemeler topluluğu", "orta", ""],
+      ["ef'ile + ât", "semâî aday · ilal", "أَشْهِيَات", "ʾaşhiyāt", "istemeler topluluğu", "orta", ""],
+      ["efâ'il + ât", "semâî aday · ilal", "أَشَاهِيَات", "ʾaşāhiyāt", "istemeler topluluğu", "orta", ""],
+      ["efâ'îl + ât", "semâî aday · ilal", "أَشَاهِيَّات", "ʾaşāhiyyāt", "istemeler topluluğu", "orta", ""],
+      ["fu'ūl + ât", "semâî aday · ilal", "شُهُوَّات", "şuhuwwāt", "istemeler topluluğu", "orta", ""],
+      ["fu'ul + ât", "semâî aday · ilal", "شُهُوَّات", "şuhuwwāt", "istemeler topluluğu", "orta", ""],
+      ["fi'āl + ât", "semâî aday · ilal", "شِهَاآت", "şihāʾāt", "istemeler topluluğu", "orta", ""],
+      ["fi'al + ât", "semâî aday · ilal", "شِهَيَات", "şihayāt", "istemeler topluluğu", "orta", ""],
+      ["fi'ale + ât", "semâî aday · ilal", "شِهَيَات", "şihayāt", "istemeler topluluğu", "orta", ""],
+      ["fu'al + ât", "semâî aday · ilal", "شُهَيَات", "şuhayāt", "istemeler topluluğu", "orta", ""],
+      ["fa'ale + ât", "semâî aday · ilal", "شَهَاات", "şahāāt", "istemeler topluluğu", "orta", ""],
+      ["fu''āl + ât", "semâî aday · ilal", "شُهَّاآت", "şuhhāʾāt", "istemeler topluluğu", "orta", ""],
+      ["fa'āl + ât", "semâî aday · ilal", "شَهَاآت", "şahāʾāt", "istemeler topluluğu", "orta", ""],
+      ["fa'al + ât", "semâî aday · ilal", "شَهَوَات", "şahawāt", "Şehvetler", "lugat", "Luggat"],
+      ["mefâ'il + ât", "semâî aday · ilal", "مَشَاهِيَات", "maşāhiyāt", "istemeler topluluğu", "orta", ""],
+      ["mefâ'îl + ât", "semâî aday · ilal", "مَشَاهِيَّات", "maşāhiyyāt", "istemeler topluluğu", "orta", ""],
+      ["fevâ'il + ât", "semâî aday · ilal", "شَوَاهِيَات", "şawāhiyāt", "istemeler topluluğu", "orta", ""],
+      ["af'ul + ât", "semâî aday", "أَشْهُوَات", "ʾaşhuwāt", "istemeler topluluğu", "orta", ""],
+      ["fu''al + ât", "semâî aday", "شُهَّوَات", "şuhhawāt", "istemeler topluluğu", "orta", ""],
+      ["fu'ayl(cem') + ât", "semâî aday · ilal", "شُهَيَّات", "şuhayyāt", "istemeler topluluğu", "orta", ""]
     ]
   },
   "reddedilen": [
-    ["ism-i merre · bâb II", "taf'īl + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb II",
-      "mufa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb III",
-      "mufā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["ism-i merre · bâb V", "tafa''ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb V",
-      "mutafa''al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["ism-i merre · bâb VI", "tafā'ul + tâ", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i mef‘ûl · bâb VI",
-      "mutafā'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb VIII",
-      "muftaʿal + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb X",
-      "mustaf'al + müennes",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["sıfat-ı müşebbehe", "fa'al + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "sıfat-ı müşebbehe",
-      "fa'al + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["mensûb", "fa'al + iyy", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    ["masdar-ı sınâî", "fa'al + iyye", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fi'al + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    ["cem‘-i mükesser (aday)", "fu'alā'", "bu kök sınıfında bu kalıp yok"],
-    ["cem‘-i mükesser (aday)", "fe'âil", "bu kök sınıfında bu kalıp yok"]
+    ["ism-i merre · bâb II", "taf'īl + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "r3"],
+    ["ism-i merre · bâb V", "tafa''ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "r3"],
+    ["ism-i merre · bâb VI", "tafā'ul + tâ", "r3"],
+    ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VII", "munfa'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "r3"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["sıfat-ı müşebbehe", "fa'al + müennes", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["mensûb", "fa'al + iyy", "r3"],
+    ["masdar-ı sınâî", "fa'al + iyye", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "r3"],
+    ["cem‘-i mükesser (aday)", "fu'alā'", "r5"],
+    ["cem‘-i mükesser (aday)", "fe'âil", "r5"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "شهو",
-      "turkce": "Şehvet: arzu, istek"
-    },
-    "osmanlica_lugatler": {
-      "اشْتَهَتْ": {
-        "sorgular": ["aştahat"],
-        "maddeler": []
-      },
-      "شَهَوَة": {
-        "sorgular": ["şahavae"],
-        "maddeler": []
-      },
-      "شَهْوَة": {
-        "sorgular": ["şahvae"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "شَهَوَ",
-        "metin": "(شَهَوَ) الشِّينُ وَالْهَاءُ وَالْحَرْفُ الْمُعْتَلُّ كَلِمَةٌ وَاحِدَةٌ، وَهِيَ الشَّهْوَةُ. يُقَالُ: رَجُلٌ شَهْوَانُ، وَشَيْءٌ شَهِيٌّ."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "الشين والهاء",
-      "baslik": "شهو - شهى",
-      "mihveri": "رغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب.",
-      "sesler": "",
-      "tam_metin": "{زُيِّنَ لِلنَّاسِ حُبُّ الشَّهَوَاتِ مِنَ النِّسَاءِ وَالْبَنِينَ} [آل عمران: 14]\n\"شَهِى الشيءَ (كالنوم والنساء والطعام) بكسر الهاء، وشَهَاه يَشهاه شَهْوةً واشتهاه وتشَهّاه: رَغِبَ فيه وأحبه \".\n° المعنى المحوري\nرغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب.",
-      "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 13,
-      "ilk_yer": "3:14:4:2",
-      "tur": {
-        "V": 8,
-        "N": 5
-      },
-      "bab": {
-        "VIII": 8
-      },
-      "zaman_kip": {
-        "IMPF": 7,
-        "PERF": 1
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "ٱشْتَهَتْ": 8,
-        "شَّهَوَٰت": 3,
-        "شَهْوَة": 2
-      },
-      "bicimler": {
-        "يَشْتَهُ": 5,
-        "شَّهَوَٰتِ": 3,
-        "شَهْوَةً": 2,
-        "ٱشْتَهَتْ": 1,
-        "تَشْتَهِىٓ": 1,
-        "تَشْتَهِي": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "ŠHW",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab ŠHW شهو BP – • HDAL • © SG | 3Apr2023 √ŠHW “root” ▪ ŠHW_1 ‘...’ ↗ ... ▪ ŠHW_2 ‘...’ ↗ ... ▪ ŠHW_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to desire, long for, lust after; to resemble’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "مشتهى",
-        "u": "مشتهى",
-        "p": "adj",
-        "n": "1",
-        "h": "ar-adj+",
-        "e": "مُشْتَهًى • (muštahan) (informal مُشْتَهَى (muštahā), feminine مُشْتَهَاة (muštahāh), masculine plural مُشْتَهَوْن (muštahawn), feminine plural مُشْتَهَيَات (muštahayāt))",
-        "t": "Derived from the passive participle of اِشْتَهَى (ištahā).",
-        "s": [
-          ["ar-passive participle", "Derived from the passive participle"]
-        ],
-        "g": ["wished, desired, craved for"],
-        "r": ["muštahan"],
-        "el": [
-          ["اِشْتَهَى", "اشتهى#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "مشتهى",
-        "u": "مشتهى",
-        "p": "noun",
-        "n": "1",
-        "h": "ar-noun",
-        "e": "مُشْتَهًى • (muštahan) m (construct state مُشْتَهَى (muštahā), plural مُشْتَهَيَات (muštahayāt))",
-        "t": "Derived from the passive participle of اِشْتَهَى (ištahā).",
-        "s": [
-          ["ar-passive participle", "Derived from the passive participle"]
-        ],
-        "g": ["wish, desire"],
-        "r": ["muštahan"],
-        "el": [
-          ["اِشْتَهَى", "اشتهى#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "مشتهى",
-        "u": "مشتهى",
-        "p": "noun",
-        "n": "2",
-        "h": "ar-noun",
-        "e": "مُشْتَهَى • (muštahā) f",
-        "t": "A plant not spread in the Arab world except scatteredly in Northwest Africa – a Romance borrowing, akin to Portuguese mostajeiro, Asturian mostayo, Leonese mostellar, mostayal, mostayo, Spanish mostajo, mostellar (the form mostellar from Leonese), Aragonese mostayo, mostajo, mostachera, moixera, Catalan mogera, moixera, moxera, meaning Sorbus aria, deriving from Vulgar Latin extensions of Latin mustum (“must”), because of the berries being stored in must or tasting of wine. Doublet of مُصْطَار / مُسْطَار (muṣṭār / musṭār, “must”), an earlier borrowing of a unit of measure for must.",
-        "s": [
-          ["bor", "Romance"],
-          ["cog", "Portuguese mostajeiro"],
-          ["cog", "Asturian mostayo"],
-          ["cog", "Leonese mostellar, mostayal, mostayo"],
-          ["cog", "Spanish mostajo, mostellar"],
-          ["cog", "Aragonese mostayo, mostajo, mostachera, moixera"],
-          ["cog", "Catalan mogera, moixera, moxera"],
-          ["taxfmt", "Sorbus aria"],
-          ["der", "Vulgar Latin"],
-          ["der", "Latin mustum (“must”)"],
-          ["doublet", "Doublet of مُصْطَار / مُسْطَار (muṣṭār / musṭār, “must”)"]
-        ],
-        "g": ["common whitebeam (Aria edulis, syn. Sorbus aria)"],
-        "r": ["muštahā"],
-        "el": [
-          ["mostajeiro", "mostajeiro#Portuguese"],
-          ["mostayo", "mostayo#Asturian"],
-          ["mostellar", "mostellar#Leonese"],
-          ["mostayal", "mostayal#Leonese"],
-          ["mostayo", "mostayo#Leonese"],
-          ["mostajo", "mostajo#Spanish"],
-          ["mostellar", "mostellar#Spanish"],
-          ["mostellar", "mostellar#Spanish"],
-          ["mostayo", "mostayo#Aragonese"],
-          ["mostajo", "mostajo#Aragonese"],
-          ["mostachera", "mostachera#Aragonese"],
-          ["moixera", "moixera#Aragonese"],
-          ["mogera", "mogera#Catalan"],
-          ["moixera", "moixera#Catalan"],
-          ["moxera", "moxera#Catalan"],
-          ["Sorbus aria", "Sorbus aria#Translingual"],
-          ["mustum", "mustum#Latin"],
-          ["مُصْطَار", "مصطار#Arabic"],
-          ["مُسْطَار", "مسطار#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "شهوة",
-        "u": "شهوة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "شَهْوَة • (šahwa) f (plural شَهَوَات (šahawāt))",
-        "s": [
-          ["etymon", ""]
-        ],
-        "g": ["lust; craving; greed; yearning; passion"],
-        "r": ["šahwa"],
-        "ipa": ["/ʃah.wa/"],
-        "ds": [
-          ["mt", "xehwa", ""],
-          ["az", "şəhvət", ""],
-          ["ku", "", ""],
-          ["fa", "شهوت", "šahvat"],
-          ["ms", "syahwat", ""],
-          ["sw", "shahawa", ""],
-          ["ug", "شەھۋەت", "shehwet"],
-          ["uz", "shahvat", ""]
-        ],
-        "k": "شهو",
-        "yol": "kök"
-      },
-      {
-        "w": "اشتهى",
-        "u": "اشتهى",
-        "p": "verb",
-        "h": "ar-verb",
-        "e": "اِشْتَهَى • (ištahā) VIII (non-past يَشْتَهِي (yaštahī), verbal noun اِشْتِهَاء (ištihāʔ))",
-        "g": ["to crave, to desire, to wish"],
-        "tag": ["transitive"],
-        "r": ["ištahā"],
-        "ipa": ["/iʃ.ta.haː/"],
-        "k": "شهو",
-        "yol": "kök"
-      },
-      {
-        "w": "شهية",
-        "u": "شهية",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "شَهِيَّة • (šahiyya) f (plural شَهِيَّات (šahiyyāt))",
-        "g": ["appetite"],
-        "tag": ["uncountable", "usually"],
-        "r": ["šahiyya"],
-        "ipa": ["/ʃa.hij.ja/"],
-        "k": "شهو",
-        "yol": "kök"
-      },
-      {
-        "w": "اشتهاء",
-        "u": "اشتهاء",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِشْتِهَاء • (ištihāʔ) m (plural اِشْتِهَاءَات (ištihāʔāt))",
-        "s": [
-          ["etymon", ""]
-        ],
-        "g": ["verbal noun of اِشْتَهَى (ištahā) (form VIII)", "appetite, craving"],
-        "tag": ["form-of", "noun-from-verb", "uncountable"],
-        "fo": ["اِشْتَهَى"],
-        "r": ["ištihāʔ"],
-        "ipa": ["/iʃ.ti.haːʔ/"],
-        "ds": [
-          ["fa", "اشتها", "eštehâ"],
-          ["ug", "ئىشتىھا", "ishtiha"]
-        ],
-        "k": "شهو",
-        "yol": "kök"
-      }
-    ],
-    "renk_sozluk": {
-      "شهوة": "şehvet",
-      "يشتهون": "istedi",
-      "اشتهت": "istedi",
-      "تشتهيه": "istedi"
-    },
-    "arabic_ontology": [
-      {
-        "id": "41972",
-        "arapca": ["شَهْوَةٌ"],
-        "ingilizce": [],
-        "tanim": "حركة للنفس طلباً للملائم",
-        "misal": "",
-        "veri_kaynagi": "38",
-        "ust": [
-          ["alt_tur_of", "293215", "process"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46085",
-        "arapca": ["هَوَىً", "تَوْقٌ", "رَغْبَةٌ", "مَيْلٌ", "نَزْعةٌ", "شَهْوَةٌ"],
-        "ingilizce": [],
-        "tanim": "قوة نفسانية تُنتج حاجة تدفع المرء إلى القيام بفعل معين تلبيةً لتلك الحاجة",
-        "misal": "من دفعه ال_ لارتكاب المعاصي،  فليدفعه ضميره الى الإسراع في التوبة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46184",
-        "arapca": [
-          "نَهْمَةٌ",
-          "مَحَبَّةٌ",
-          "اِشْتِهاءٌ",
-          "نَهَمٌ",
-          "غَرِيزَةٌ",
-          "هَوَىً",
-          "تَوْقٌ",
-          "لَذَّةٌ",
-          "غَرَضٌ",
-          "رَغْبَةٌ",
-          "مَيْلٌ",
-          "مَوَدَّةٌ",
-          "نَزْعةٌ",
-          "نُزوعٌ",
-          "شَوْقٌ",
-          "شَهِيَّةٌ",
-          "شَهْوَةٌ"
-        ],
-        "ingilizce": [],
-        "tanim": "تمني الحصول على شيء والرغبة الشديدة فيه",
-        "misal": "لدى المناضلين _ دائمة للقتال والموت في سبيل الله",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46496",
-        "arapca": ["مُسْتَطَابٌ", "لَذيذٌ", "مُسْتَحَبٌّ", "طَيِّبٌ", "شَهِيٌّ"],
-        "ingilizce": [],
-        "tanim": "صفة ما كان طعمه ومذاقه على اللسان والنفس جميلا مستحباً يجعل النفس ترغبه",
-        "misal": "كان المذاق الايطالي في الطعام _",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46908",
-        "arapca": [
-          "مُسْتَطْرَفٌ",
-          "مُسْتَطَابٌ",
-          "مُسْتَسَاغٌ",
-          "نَاجِعٌ",
-          "مَرِيءٌ1",
-          "لَذيذٌ",
-          "عَذْبٌ",
-          "سَائِغٌ2",
-          "مُسْتَحَبٌّ",
-          "هَنيءٌ",
-          "طَيِّبٌ",
-          "صَالِحٌ1",
-          "حُلْوٌ",
-          "شَهِيٌّ"
-        ],
-        "ingilizce": [],
-        "tanim": "صفة للطعام والشراب إذا استحسن طعمه ومذاقه",
-        "misal": "طبخت لنا أمي اليوم طعاماً _اً",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "48554",
-        "arapca": [
-          "مُسْتَطَابٌ",
-          "مُسْتَسَاغٌ",
-          "نَاجِعٌ",
-          "سَلْسَبِيلٌ",
-          "سَيِّغٌ",
-          "مَرِيءٌ1",
-          "لَذيذٌ",
-          "سَائِغٌ2",
-          "مُسْتَحَبٌّ",
-          "هَنيءٌ",
-          "زُلَالٌ",
-          "طَيِّبٌ",
-          "سَلِسٌ",
-          "حُلْوٌ",
-          "شَهِيٌّ"
-        ],
-        "ingilizce": [],
-        "tanim": "شراب أو طعام هنيء سهل في الحلق ويكون شهِيَّاً وطيِّباً",
-        "misal": "وَجَدَ الطَّعامَ _اً فأكثَرَ مِنْ الأكلِ",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "52703",
-        "arapca": ["شَهْوَةٌ"],
-        "ingilizce": [],
-        "tanim": "رَغْبَةُ شديدة في النَّفْسِ في ما تُحِبُّهُ وَتُميل اليه ُ",
-        "misal": "انفطر الإنسان على حب ال_ .",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "303030119",
-        "arapca": ["شَهَا"],
-        "ingilizce": [],
-        "tanim": "شهَا الشّيءَ:- أحبَّه ورغب فيه رجلٌ شهوانُ - ما أشهى هذا الطعام \".\"",
-        "misal": "",
-        "veri_kaynagi": "303",
-        "ust": [
-          ["alt_tur_of", "455000315", "libido"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "303030131",
-        "arapca": ["شَهْوَةٌ"],
-        "ingilizce": [],
-        "tanim": "(علوم النفس) قُوّة نفسانيّة راغبة فيما يُشتهى",
-        "misal": "",
-        "veri_kaynagi": "303",
-        "ust": [
-          ["alt_tur_of", "455000315", "libido"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "303030133",
-        "arapca": ["شَهْوَةٌ"],
-        "ingilizce": [],
-        "tanim": "شَهْوة جنسيَّة:- (علوم النفس) إحساس عضويّ كالجوع والعطش يدلّ على حاجة الفرد، ذكرًا كان أو أنثى إلى عمليّة الجماع، بهدف الاستمتاع والإبقاء على النوع",
-        "misal": "",
-        "veri_kaynagi": "303",
-        "ust": [
-          ["alt_tur_of", "455000315", "libido"]
-        ],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "اِشْتِهَاء": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "İŞTİHÂ",
-          "yazilis": "ﺍﺷﺘﻬﺎﺀ",
-          "tur": "i.",
-          "koken": "Ar. şehve t “istemek, arzu etmek”ten iştihā’",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Arzu, istek",
-              "misaller": [
-                ["Azmış bir temizleme iştihâsı içinde rast geldiğini tepeler", "Ahmet H. Tanpınar"],
-                ["Küçük balıklara büyükleri yutmak iştihâsı verdi", "Refik H. Karay"]
-              ],
-              "no": 1
-            },
-            {
-              "etiket": "",
-              "tanim": "Cinsî arzu",
-              "misaller": [],
-              "no": 2
-            },
-            {
-              "etiket": "",
-              "tanim": "Yeme isteği, iştah",
-              "misaller": [
-                ["İlâçla iştihâsını açar, ilâçla hazmeder, ilâçla dışarıya çıkar", "Ahmet H. Tanpınar"],
-                ["● İştihâ-âver", "ﺍﺷﺘﻬﺎﺁﻭﺭ"],
-                ["birl. sıf", "Fars. āver “getiren” ile"],
-                ["İştihâ getiren. ● İştihâ-engiz", "ﺍﺷﺘﻬﺎ ﺍﻧﮕﻴﺰ"],
-                ["birl. sıf", "Fars. engіz “harekete getiren” ile"]
-              ],
-              "no": 3
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "iştiha",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "ve اَلتَّشَهِّي [et-teşehhî] (تَفَعُّلٌ [tefaul] vezninde) Bunlar da شَهْوَةٌ [şehvet] manâsınadır; yukâlu: إِشْتَهَاهُ وَتَشَهَّاهُ بِمَعْنَى شَهِيَهُ Ve تَشَهِّي [teşehhî] Bir kimseden bir nesneyi peyderpey ârzû ve taleb eylemek manâsınadır; yukâlu: تَشَهَّى عَلَى فُلَانٍ كَذَا إِذَا اقْتَرَحَ شَهْوَةً بَعْدَ شَهْوَةٍ",
-              "misaller": [
-                ["إِشْتَهَاهُ وَتَشَهَّاهُ بِمَعْنَى شَهِيَهُ", ""],
-                ["تَشَهَّى عَلَى فُلَانٍ كَذَا إِذَا اقْتَرَحَ شَهْوَةً بَعْدَ شَهْوَةٍ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلْإِشْتِهَاءُ",
-          "okunus": "el-iştihâ",
-          "koken": "إِفْتِعَالٌ [iftiâl] vezninde"
-        }
-      ],
-      "مُشْتَهَيَات": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "MÜŞTEHEYAT",
-          "yazilis": "ﻣﺸﺘﻬﻴﺎﺕ",
-          "tur": "i.",
-          "koken": "Ar. muştehā ’nın çoğul eki -āt almış şekli muşteheyāt",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "İstenilen, arzu edilen, iştah kabartan şeyler",
-              "misaller": [
-                ["Müşteheyat ve temâyülâtına alelıtlak hâkimdir", "Rızâ Tevfik"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "شَهْوَة": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "ŞEHVET",
-          "yazilis": "ﺷﻬﻮﺕ",
-          "tur": "i.",
-          "koken": "Ar. şehvet",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Karşı cinse duyulan şiddetli arzu, cinsel istek",
-              "misaller": [
-                [
-                  "Bahçelerinde kâh gümüş bedenli nedîmeler şehvetle uzanır, kâh yaralarında zehir köpükler fıkırdayan askerler hasretle serilir",
-                  "Refik H. Karay"
-                ],
-                ["İnsanları sevkeden yegâne kānûnun açlık ve şehvet olduğunu öğrenmedi", "Yâkup K. Karaosmanoğlu"]
-              ],
-              "no": 1
-            },
-            {
-              "etiket": "teşmil.",
-              "tanim": "Ölçüyü aşan şiddetli arzu, şiddetli istek",
-              "misaller": [
-                [
-                  "Nefs-i emmârenin huyları olan şu çirkin huylardan da kurtulurlar: Hevâ, gazab, şehvet, hırs, ucub, kibir, riyâ",
-                  "Eşrefoğlu Rûmî"
-                ],
-                [
-                  "Fakat bir kere inanmanın şehveti başladıktan sonra hakîkat olduğuna îman edilen şeyi bütün iştiyaklarıyle kucaklayan insanlar gibi sevinçten çıldırıyordum",
-                  "Peyâmi Safâ"
-                ],
-                ["Kürekleri tutmanın şehveti avuçlarında", "Orhan V. Kanık"]
-              ],
-              "no": 2
-            },
-            {
-              "etiket": "teşmil.",
-              "tanim": "Nefsin hoşuna giden bedenî ve süflî arzulara meyletme. ● Şehvet-engiz ( ﺷﻬﻮﺕ ﺍﻧﮕﻴﺰ ) birl. sıf. (Fars. engiz “harekete getiren” ile) Şehveti tahrik eden, şehvet uyandıran",
-              "misaller": [
-                ["Hiss-i şehvet-engiz.", ""]
-              ],
-              "no": 3
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "eş-şehvet",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Bir nesneyi sevip ona meyl ve ragbet eylemek manâsınadır; yukâlu: شَهِيَهُ وَشَهَاهُ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ وَالْأَوَّلِ إِذَا أَحَبَّهُ وَرَغِبَ فِيهِ",
-              "misaller": [
-                ["شَهِيَهُ وَشَهَاهُ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ وَالْأَوَّلِ إِذَا أَحَبَّهُ وَرَغِبَ فِيهِ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلشَّهْوَةُ",
-          "okunus": "eş-şehvet",
-          "koken": "şînin fethiyle"
-        },
-        {
-          "eser": "Vankulu",
-          "madde": "eş-şehvet",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Gönül ârzû etmek, iştihâ manâsına; yukâlu: شَهِيتُ الشَّيْءَ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ إِذَا اشْتَهَيْتَهُ",
-              "misaller": [
-                ["شَهِيتُ الشَّيْءَ شَهْوَةً مِنَ الْبَابِ الرَّابِعِ إِذَا اشْتَهَيْتَهُ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَلشَّهْوَةُ",
-          "okunus": "eş-şehvet",
-          "koken": "şînin fethi ve hânın sükûnuyla"
-        },
-        {
-          "eser": "Luggat",
-          "madde": "şehvet",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Aşırı cinsel istek. Aşırı istek",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Luggat",
-          "madde": "şehvetengîz",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Şehvet verici",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Luggat",
-          "madde": "şehvetperest",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Şehvet düşkünü",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "شَهَوَات": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "ŞEHEVAT",
-          "yazilis": "ﺷﻬﻮﺍﺕ",
-          "tur": "i.",
-          "koken": "Ar. şehve t “şiddetli istek”in çoğul eki -āt almış şekli şehevāt",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Şehvetler, nefsin aşırı istekleri",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Luggat",
-          "madde": "şehevât",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Şehvetler",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Şeheve (شَهَوَ)",
-          "metin": "(Şeheve [شَهَوَ]) Şîn, hâ ve illetli harf tek bir kelimedir; o da şehvettir. 'Reculün şehvân' (pek arzulu/iştahlı adam) ve 'şey'ün şehiyy' (iştah uyandıran, arzu edilen şey) denilir."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Bedenî bir matluba karşı (ondan yoksunluk hissinden doğan) şiddetli rağbet (1) {Muhakkak siz kadınları bırakıp da şehvetle erkeklere yaklaşıyorsunuz} [A'râf: 81]; cennet ehlinin şehveti ise nefislerinin kabul ve arzusudur: {Orada nefislerin arzuladığı her şey vardır} [Zuhruf: 71]. Sonra mana umumileştirilir: {Artık kendileriyle arzu ettikleri şey arasına set çekilmiştir} [Sebe': 54]; ki bu, azap indikten sonra dünyaya dönmek yahut imanlarının kabul olunmasıdır."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Nefsin, kendisine muvafık ve uygun olanı talep etmek üzere harekete geçmesi"
-        },
-        {
-          "tanim": "Bir ihtiyaç hâsıl ederek kişiyi o ihtiyacı gidermek üzere muayyen bir fiili işlemeye sevk eden nefsânî kuvvet",
-          "misal": "Kimi _ günahlar işlemeye sevk ederse, vicdanı da onu tövbeye koşmaya sevk etsin."
-        },
-        {
-          "tanim": "Bir şeyi elde etmeyi temenni etmek ve ona karşı şiddetli arzu duymak",
-          "misal": "Mücahitlerde Allah yolunda çarpışmak ve ölmek için daimî bir _ vardır."
-        },
-        {
-          "tanim": "Nefsin, sevdiği ve meylettiği şeye karşı duyduğu şiddetli arzu",
-          "misal": "İnsan, _ sevgisi üzerine yaratılmıştır."
-        },
-        {
-          "tanim": "(Psikoloji) Arzu ve iştiha duyulan şeye meyleden nefsânî kuvvet"
-        },
-        {
-          "tanim": "Cinsî şehvet:- (Psikoloji) Erkek veya dişi olsun ferdin, lezzet almak ve nesli devam ettirmek gayesiyle cinsî münasebete duyduğu ihtiyacı gösteren, açlık ve susuzluk gibi uzvî bir his"
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dön EtymArab ŠHW شهو BP – • HDAL • © SG | 3 Nisan 2023 √ŠHW “kök” ▪ ŠHW_1 ‘...’ ↗ ... ▪ ŠHW_2 ‘...’ ↗ ... ▪ ŠHW_3 ‘...’ ↗ ... ♦ Klasik Arapçada semantik değer yelpazesi (BAH2008'e göre): ‘arzu etmek, özlemek, şehvet duymak; benzemek’ ▪ … – . . – – Kaynaklar ; meta ; dilbilgisi ; İngilizce ; kavram ; tarihçe ; kökteşler ; tartışma ; batı ; türevler ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["arzu edilmiş, istenmiş, canı çekilmiş"]
-        },
-        {
-          "g": ["arzu, istek, dilek"]
-        },
-        {
-          "g": ["ak üvez (Aria edulis, eşanlamlısı Sorbus aria)"]
-        },
-        {
-          "g": ["şehvet; şiddetli arzu; tamah; iştiyak; tutku"]
-        },
-        {
-          "g": ["canı çekmek, arzu etmek, istemek"]
-        },
-        {
-          "g": ["iştah"]
-        },
-        {
-          "g": ["اِشْتَهَى (iştehâ) fiilinin (VIII. bab) masdarı", "iştah, şiddetli arzu"]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 13,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "شه",
-    "harf": "ش",
-    "mahrec": "şeceriyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mana": {
     "ince": "ache.v.02",
     "orta": "verb.emotion",
     "ust": "his ve nefis",
@@ -1431,30 +2566,8 @@
     "dayanak_tanim": "have a desire for something or someone who is not present",
     "synset_sayisi": 6
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "الشين والهاء",
-    "mihveri": "رغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب.",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (شه) : هو وجود فراغ ما -كالذي في نفْس ذي الشهوة من فقد ما يشتهيه -في (شهو شهى)، وخفة لهب الشهاب وكذا البياض -فالسواد كثافة -في (شهب)، والفراغ الدي يشغله العسل في قرصه، وكذلك وجود شاهد في حيز الواقعة -في (شهد)، وظهور الهلال في الأفق الخالى وكذلك الإعلان عن مجهول -في (شهر)، واختراق رأس الجبل الأقق، وسحب الهواء إلى المصدر الخالي بقوة -في (شهق).",
-    "tam_metin": "{زُيِّنَ لِلنَّاسِ حُبُّ الشَّهَوَاتِ مِنَ النِّسَاءِ وَالْبَنِينَ} [آل عمران: 14]\n\"شَهِى الشيءَ (كالنوم والنساء والطعام) بكسر الهاء، وشَهَاه يَشهاه شَهْوةً واشتهاه وتشَهّاه: رَغِبَ فيه وأحبه \".\n° المعنى المحوري\nرغبة حادّة في مرغوب بَدَنيٍّ (من احساس بالخلوّ منه) (1) {إِنَّكُمْ لَتَأْتُونَ الرِّجَالَ شَهْوَةً مِنْ دُونِ النِّسَاءِ} [الأعراف: 81] وشهوة أهل الجنة قبول نفوسهم {وَفِيهَا مَا تَشْتَهِيهِ الْأَنْفُسُ} [الزخرف: 71]. ثم يُعَمَّم {وَحِيلَ بَيْنَهُمْ وَبَيْنَ مَا يَشْتَهُونَ} [سبأ: 54] الرجوع إلى الدنيا أو قبول الإيمان بعد نزول العذاب."
-  },
-  "hakikat_mecaz_tasnif": {
-    "durum": "Esâsü'l-Belâğa'da madde yok"
-  },
-  "prototip_yayilim_tasnif": {
-    "durum": "prototip veya mecaz kolu yok"
-  },
-  "kolekzifikasyon_kavramlari": ["ache.v.02", "crave.v.01", "desire.v.01", "wish.v.01", "wish.v.02", "wish.v.04"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الطير",
-    "bab": "",
-    "kok_gecis": 30.7,
-    "kitapta_gecis": 4.0,
-    "zenginlesme": 7.19
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 4,
       "merkez_kok": "درك",
@@ -1474,630 +2587,14 @@
       "boy": 14
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "517": ["masdar · sülâsî mücerred", "fa'al", "semâî aday · ilal", ""],
-    "518": ["masdar · sülâsî mücerred", "fi'al", "semâî aday · ilal", ""],
-    "519": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday · ilal", ""],
-    "520": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday · ilal", ""],
-    "521": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday · ilal", ""],
-    "522": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday · ilal", ""],
-    "523": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday · ilal", ""],
-    "524": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday · ilal", ""],
-    "525": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday · ilal", ""],
-    "526": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday · ilal", ""],
-    "527": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday · ilal", ""],
-    "528": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday · ilal", ""],
-    "529": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday · ilal", ""],
-    "530": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday · ilal", ""],
-    "531": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday · ilal", ""],
-    "532": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday · ilal", ""],
-    "533": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday · ilal", ""],
-    "534": ["masdar · bâb II", "taf'īl", "kıyâsî · ilal", "II"],
-    "535": ["masdar · bâb II", "taf'ila", "kıyâsî · ilal", "II"],
-    "536": ["masdar · bâb II", "fi''āl", "kıyâsî · ilal", "II"],
-    "537": ["ism-i merre · bâb II", "fi''āl + tâ", "aday · ilal", "II"],
-    "538": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî · ilal", "II"],
-    "539": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî · ilal", "II"],
-    "540": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî · ilal", "II"],
-    "541": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî · ilal", "II"],
-    "542": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "543": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "544": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "545": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "546": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî · ilal", "II"],
-    "547": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "II"],
-    "548": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "II"],
-    "549": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "II"],
-    "550": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî · ilal", "II"],
-    "551": ["masdar · bâb III", "mufā'ale", "kıyâsî · ilal", "III"],
-    "552": ["masdar · bâb III", "fi'āl", "kıyâsî · ilal", "III"],
-    "553": ["ism-i merre · bâb III", "fi'āl + tâ", "aday · ilal", "III"],
-    "554": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî · ilal", "III"],
-    "555": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî · ilal", "III"],
-    "556": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî · ilal", "III"],
-    "557": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî · ilal", "III"],
-    "558": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "559": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "560": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "561": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "562": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî · ilal", "III"],
-    "563": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "III"],
-    "564": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "III"],
-    "565": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "III"],
-    "566": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî · ilal", "III"],
-    "567": ["masdar · bâb IV", "if'āl", "kıyâsî · ilal", "IV"],
-    "568": ["ism-i merre · bâb IV", "if'āl + tâ", "aday · ilal", "IV"],
-    "569": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî · ilal", "IV"],
-    "570": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî · ilal", "IV"],
-    "571": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî · ilal", "IV"],
-    "572": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî · ilal", "IV"],
-    "573": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "574": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "575": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "576": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "577": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî · ilal", "IV"],
-    "578": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IV"],
-    "579": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IV"],
-    "580": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IV"],
-    "581": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî · ilal", "IV"],
-    "582": ["masdar · bâb V", "tafa''ul", "kıyâsî · ilal", "V"],
-    "583": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî · ilal", "V"],
-    "584": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî · ilal", "V"],
-    "585": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî · ilal", "V"],
-    "586": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî · ilal", "V"],
-    "587": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "588": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "589": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "590": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "591": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî · ilal", "V"],
-    "592": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "V"],
-    "593": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "V"],
-    "594": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "V"],
-    "595": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî · ilal", "V"],
-    "596": ["masdar · bâb VI", "tafā'ul", "kıyâsî · ilal", "VI"],
-    "597": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî · ilal", "VI"],
-    "598": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî · ilal", "VI"],
-    "599": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî · ilal", "VI"],
-    "600": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî · ilal", "VI"],
-    "601": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "602": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "603": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "604": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "605": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî · ilal", "VI"],
-    "606": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VI"],
-    "607": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VI"],
-    "608": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VI"],
-    "609": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî · ilal", "VI"],
-    "610": ["masdar · bâb VII", "infi'āl", "kıyâsî · ilal", "VII"],
-    "611": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday · ilal", "VII"],
-    "612": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî · ilal", "VII"],
-    "613": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî · ilal", "VII"],
-    "614": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî · ilal", "VII"],
-    "615": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî · ilal", "VII"],
-    "616": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VII"],
-    "617": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VII"],
-    "618": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VII"],
-    "619": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "620": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "621": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "622": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "623": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "624": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu) · ilal",
-      "VII"
-    ],
-    "625": ["masdar · bâb VIII", "ifti'āl", "kıyâsî · ilal", "VIII"],
-    "627": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday · ilal", "VIII"],
-    "628": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî · ilal", "VIII"],
-    "629": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî · ilal", "VIII"],
-    "630": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî · ilal", "VIII"],
-    "631": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî · ilal", "VIII"],
-    "632": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "633": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "634": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "635": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "636": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî · ilal", "VIII"],
-    "637": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "VIII"],
-    "638": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "VIII"],
-    "639": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "VIII"],
-    "640": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî · ilal", "VIII"],
-    "654": ["masdar · bâb IX (illet harfi izhar)", "if'ilāl", "semâî aday · ilal", "IX"],
-    "655": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all", "kıyâsî · ilal", "IX"],
-    "656": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes", "kıyâsî · ilal", "IX"],
-    "657": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + tesniye", "kıyâsî · ilal", "IX"],
-    "658": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + müennes tesniye", "kıyâsî · ilal", "IX"],
-    "659": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "IX"],
-    "660": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "IX"],
-    "661": ["ism-i fâil · bâb IX (illet harfi izhar)", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "IX"],
-    "662": ["masdar · bâb X", "istif'āl", "kıyâsî · ilal", "X"],
-    "663": ["ism-i merre · bâb X", "istif'āl + tâ", "aday · ilal", "X"],
-    "664": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî · ilal", "X"],
-    "665": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî · ilal", "X"],
-    "666": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî · ilal", "X"],
-    "667": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî · ilal", "X"],
-    "668": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "669": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "670": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "671": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "672": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî · ilal", "X"],
-    "673": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "X"],
-    "674": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "X"],
-    "675": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "X"],
-    "676": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî · ilal", "X"],
-    "677": ["masdar · bâb XI (illet harfi izhar)", "if'īlāl", "semâî aday · ilal", "XI"],
-    "678": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll", "kıyâsî · ilal", "XI"],
-    "679": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes", "kıyâsî · ilal", "XI"],
-    "680": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + tesniye", "kıyâsî · ilal", "XI"],
-    "681": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + müennes tesniye", "kıyâsî · ilal", "XI"],
-    "682": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", "XI"],
-    "683": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", "XI"],
-    "684": ["ism-i fâil · bâb XI (illet harfi izhar)", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", "XI"],
-    "685": ["masdar · bâb XII (illet harfi izhar)", "if'iv'āl", "semâî aday · ilal", "XII"],
-    "686": ["masdar · bâb XIII (illet harfi izhar)", "if'ivvāl", "semâî aday · ilal", "XIII"],
-    "687": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî · ilal", ""],
-    "688": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî · ilal", ""],
-    "689": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî · ilal", ""],
-    "690": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî · ilal", ""],
-    "691": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "692": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "693": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "694": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî · ilal", ""],
-    "695": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî · ilal", ""],
-    "696": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî · ilal", ""],
-    "697": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî · ilal", ""],
-    "698": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî · ilal", ""],
-    "699": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî · ilal", ""],
-    "700": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî · ilal", ""],
-    "701": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "702": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "703": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî · ilal", ""],
-    "704": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî · ilal", ""],
-    "705": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî · ilal", ""],
-    "706": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî · ilal", ""],
-    "707": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî · ilal", ""],
-    "708": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî · ilal", ""],
-    "709": ["âlet · sülâsî", "mif'al", "kıyâsî · ilal", ""],
-    "710": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî · ilal", ""],
-    "711": ["âlet · sülâsî", "mif'âl", "kıyâsî · ilal", ""],
-    "712": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî · ilal", ""],
-    "713": ["âlet · sülâsî", "mif'ale", "kıyâsî · ilal", ""],
-    "714": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî · ilal", ""],
-    "715": ["tafdîl · sülâsî", "af'al", "kıyâsî · ilal", ""],
-    "716": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî · ilal", ""],
-    "717": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî · ilal", ""],
-    "718": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî · ilal", ""],
-    "719": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî · ilal", ""],
-    "720": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî · ilal", ""],
-    "721": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî · ilal", ""],
-    "722": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî · ilal", ""],
-    "723": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî · ilal", ""],
-    "724": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî · ilal", ""],
-    "725": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday · ilal", ""],
-    "726": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "727": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "728": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "729": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "730": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "731": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "732": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday · ilal", ""],
-    "733": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "734": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "735": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "736": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "737": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "738": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "739": ["sıfat-ı müşebbehe", "fa'il", "semâî aday · ilal", ""],
-    "740": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday · ilal", ""],
-    "741": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday · ilal", ""],
-    "742": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday · ilal", ""],
-    "743": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "744": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "745": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "746": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday · ilal", ""],
-    "747": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday · ilal", ""],
-    "748": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday · ilal", ""],
-    "749": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "750": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "751": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "752": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "753": ["sıfat-ı müşebbehe", "fa'al", "semâî aday · ilal", ""],
-    "754": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday · ilal", ""],
-    "755": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "756": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday · ilal", ""],
-    "757": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday · ilal", ""],
-    "758": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday · ilal", ""],
-    "759": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday · ilal", ""],
-    "760": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "761": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "762": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "763": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday · ilal", ""],
-    "764": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday · ilal", ""],
-    "765": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday · ilal", ""],
-    "766": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "767": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "768": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "769": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "770": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday · ilal", ""],
-    "771": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday · ilal", ""],
-    "772": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday · ilal", ""],
-    "773": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "774": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "775": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "776": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "777": ["mübalağa", "fa''āl", "semâî aday · ilal", ""],
-    "778": ["mübalağa", "fa''āl + müennes", "semâî aday · ilal", ""],
-    "779": ["mübalağa", "fa''āl + tesniye", "semâî aday · ilal", ""],
-    "780": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "781": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "782": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "783": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "784": ["mübalağa", "fa''āle", "semâî aday · ilal", ""],
-    "785": ["mübalağa", "fa''āle + tesniye", "semâî aday · ilal", ""],
-    "786": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "787": ["mübalağa", "fa'ūl", "semâî aday · ilal", ""],
-    "788": ["mübalağa", "fa'ūl + müennes", "semâî aday · ilal", ""],
-    "789": ["mübalağa", "fa'ūl + tesniye", "semâî aday · ilal", ""],
-    "790": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday · ilal", ""],
-    "791": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "792": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "793": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "794": ["mübalağa", "fu''āl", "semâî aday · ilal", ""],
-    "795": ["mübalağa", "fu''āl + müennes", "semâî aday · ilal", ""],
-    "796": ["mübalağa", "fu''āl + tesniye", "semâî aday · ilal", ""],
-    "797": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday · ilal", ""],
-    "798": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "799": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "800": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "801": ["mübalağa", "mif'āl", "semâî aday · ilal", ""],
-    "802": ["mübalağa", "mif'āl + müennes", "semâî aday · ilal", ""],
-    "803": ["mübalağa", "mif'āl + tesniye", "semâî aday · ilal", ""],
-    "804": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday · ilal", ""],
-    "805": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "806": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "807": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "808": ["mübalağa", "fa'īl", "semâî aday · ilal", ""],
-    "809": ["mübalağa", "fa'īl + müennes", "semâî aday · ilal", ""],
-    "810": ["mübalağa", "fa'īl + tesniye", "semâî aday · ilal", ""],
-    "811": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday · ilal", ""],
-    "812": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday · ilal", ""],
-    "813": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday · ilal", ""],
-    "814": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday · ilal", ""],
-    "815": ["mensûb", "fi'āl + iyy", "kıyâsî · ilal", ""],
-    "816": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî · ilal", ""],
-    "817": ["mensûb", "fâ'il + iyy", "kıyâsî · ilal", ""],
-    "818": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî · ilal", ""],
-    "819": ["mensûb", "maf'ûl + iyy", "kıyâsî · ilal", ""],
-    "820": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî · ilal", ""],
-    "821": ["mensûb", "fa'īl + iyy", "kıyâsî · ilal", ""],
-    "822": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî · ilal", ""],
-    "823": ["mensûb", "maf'al + iyy", "kıyâsî · ilal", ""],
-    "824": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî · ilal", ""],
-    "825": ["mensûb", "taf'īl + iyy", "kıyâsî · ilal", ""],
-    "826": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî · ilal", ""],
-    "827": ["mensûb", "tafā'ul + iyy", "kıyâsî · ilal", ""],
-    "828": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî · ilal", ""],
-    "829": ["mensûb", "if'āl + iyy", "kıyâsî · ilal", ""],
-    "830": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî · ilal", ""],
-    "831": ["mensûb", "ifti'āl + iyy", "kıyâsî · ilal", ""],
-    "832": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî · ilal", ""],
-    "833": [
-      "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)",
-      "fa'âl (kelâm, selâm)",
-      "semâî aday · ilal",
-      ""
-    ],
-    "834": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday · ilal", ""],
-    "835": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday · ilal", ""],
-    "836": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday · ilal", ""],
-    "837": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday · ilal", ""],
-    "838": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday · ilal", ""],
-    "839": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday · ilal", ""],
-    "840": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday · ilal", ""],
-    "841": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday · ilal", ""],
-    "842": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday · ilal", ""],
-    "843": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday · ilal", ""],
-    "844": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "845": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday · ilal", ""],
-    "846": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday · ilal", ""],
-    "847": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday · ilal", ""],
-    "848": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday · ilal", ""],
-    "849": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday · ilal", ""],
-    "850": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday · ilal", ""],
-    "851": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday · ilal", ""],
-    "852": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday · ilal", ""],
-    "853": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday · ilal", ""],
-    "854": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday · ilal", ""],
-    "855": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday · ilal", ""],
-    "856": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday · ilal", ""],
-    "857": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday · ilal", ""],
-    "858": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday · ilal", ""],
-    "859": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday · ilal", ""],
-    "860": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday · ilal", ""],
-    "861": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday · ilal", ""],
-    "862": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday · ilal", ""],
-    "863": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday · ilal", ""],
-    "864": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday · ilal", ""],
-    "865": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday · ilal", ""],
-    "866": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday · ilal", ""],
-    "867": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday · ilal", ""],
-    "868": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday · ilal", ""],
-    "869": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday · ilal", ""],
-    "870": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday · ilal", ""],
-    "871": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday · ilal", ""],
-    "872": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday · ilal", ""],
-    "873": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday · ilal", ""],
-    "874": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday · ilal", ""],
-    "875": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday · ilal", ""],
-    "876": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday · ilal", ""],
-    "877": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday · ilal", ""],
-    "878": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday · ilal", ""],
-    "879": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday · ilal", ""],
-    "880": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday · ilal", ""],
-    "881": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday · ilal", ""],
-    "882": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday · ilal", ""],
-    "883": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday · ilal", ""]
+  "wordnet": ["ache.v.02", "crave.v.01", "desire.v.01", "wish.v.01", "wish.v.02", "wish.v.04"],
+  "muhassas": {
+    "kitap": "الطير",
+    "kok_gecis": 30.7,
+    "kitapta_gecis": 4.0,
+    "zenginlesme": 7.19
   },
-  "kelimeler": [
-    {
-      "kelime": "ٱلشَّهَوَٰتِ",
-      "kok": "شهو",
-      "lemma": "شَهَوَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "3:14",
-      "adet": 3,
-      "turkce": {
-        "yuzey": "şehvet",
-        "lemma": "şehvet",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "شَهْوَةً",
-      "kok": "شهو",
-      "lemma": "شَهْوَة",
-      "tur": "İsim",
-      "bab": "",
-      "zaman": "",
-      "ilk_gecis": "7:81",
-      "adet": 2,
-      "turkce": {
-        "yuzey": "şehvet",
-        "lemma": "",
-        "lemma_durum": "",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "يَشْتَهُونَ",
-      "kok": "شهو",
-      "lemma": "اشْتَهَتْ",
-      "tur": "İsim",
-      "bab": "ifte'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "16:57",
-      "adet": 5,
-      "turkce": {
-        "yuzey": "istedi",
-        "lemma": "istedi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "ٱشْتَهَتْ",
-      "kok": "شهو",
-      "lemma": "اشْتَهَتْ",
-      "tur": "Fiil",
-      "bab": "ifte'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "21:102",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "istedi",
-        "lemma": "istedi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَشْتَهِىٓ",
-      "kok": "شهو",
-      "lemma": "اشْتَهَتْ",
-      "tur": "Fiil",
-      "bab": "ifte'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "41:31",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "istedi",
-        "lemma": "istedi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    },
-    {
-      "kelime": "تَشْتَهِيهِ",
-      "kok": "شهو",
-      "lemma": "اشْتَهَتْ",
-      "tur": "İsim",
-      "bab": "ifte'ale",
-      "zaman": "Muzâri",
-      "ilk_gecis": "43:71",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "istedi",
-        "lemma": "istedi",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil"],
-    "kuran": {
-      "fiil": 8,
-      "isim": 5
-    },
-    "lugat_fiil": true
-  },
-  "baz_fiil": {
-    "ad": "Yönelim",
-    "ayrim": "iste",
-    "acilim": "شهو := Yönelim(ayrım: iste)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Yönelim",
-    "kelimeler": [
-      {
-        "lemma": "اشْتَهَتْ",
-        "hal": "fiil",
-        "bab": "ifte'ale",
-        "bab_no": "VIII",
-        "zaman": ["Muzâri", "Mâzî"],
-        "adet": 8,
-        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
-      },
-      {
-        "lemma": "شَهَوَة",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 3,
-        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
-      },
-      {
-        "lemma": "شَهْوَة",
-        "hal": "isim",
-        "bab": "",
-        "bab_no": "",
-        "zaman": [],
-        "adet": 2,
-        "nasil": "ism-i cins · cem‘î ve tekili (+tâ) · fa'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fi'l + tâ (tekili) ; ism-i cins · cem‘î ve tekili (+tâ) · fu'l + tâ (tekili) (yalnız aday eşleşme)"
-      }
-    ]
+  "prototip": {
+    "durum": "prototip veya mecaz kolu yok"
   }
 }

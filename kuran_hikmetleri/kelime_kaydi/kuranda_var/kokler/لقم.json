@@ -1,94 +1,563 @@
 {
   "kok": "لقم",
-  "sinif": "sâlim",
-  "turkce_fiil": {
-    "sap": "lokma ol",
-    "kaynak": "ad",
-    "guven": "kontrol"
+  "tur": "fiil",
+  "tur_guven": "kesin",
+  "tur_dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
+  "lugat_fiil": false,
+  "baz_fiil": "Beden",
+  "baz_ayrim": "lokma ol",
+  "tur_kuran": {
+    "fiil": 1,
+    "isim": 0
   },
-  "mustaklar": {
+  "fiil": "lokma ol",
+  "fiil_kaynak": "ad",
+  "fiil_guven": "kontrol",
+  "sinif": "sâlim",
+  "ses": {
+    "harf": "ل",
+    "fasil": "لق",
+    "mahrec": "zelakiyye",
+    "bolge": "dil"
+  },
+  "anlam": "Lukm: lokma, yudum",
+  "esas_manalar": "yemeği elle ağza götürmek, lokma{yutmak}",
+  "lugat": {
+    "Vankulu": [
+      {
+        "madde": "Lukman",
+        "koken": "lâmın zammı ve kâfın sükûnuyla",
+        "yazilis": "لُقْمَانُ",
+        "okunus": "Lukmân",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Kerkesler sâhibi olan kimsenin ismidir ki şuarâ onu Âda nisbet kılıp Lokmân b. Âddır derler."
+          }
+        ],
+        "kelime": ["لُقْمَان"]
+      }
+    ],
+    "Kubbealtı Lügati": [
+      {
+        "madde": "İLTİKAM",
+        "tur": "i.",
+        "koken": "Ar. laḳm “yutmak, yemek”ten iltiḳām",
+        "yazilis": "ﺍﻟﺘﻘﺎﻡ",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Yutma, yutulma, yeme, yenilme",
+            "misaller": [
+              ["Birbirin mahv eylemektir iktizâ-yı kâinât / İltikām-ı yekdiğerdendir gıdâ-yı kâinât", "Yenişehirli Avnî"],
+              ["Bu sofracık efendiler ki iltikāma muntazır / Huzûrunuzda titriyor şu milletin hayâtıdır", "Tevfik Fikret"]
+            ]
+          }
+        ],
+        "kelime": ["اِلْتِقَام"]
+      }
+    ],
+    "Luggat": [
+      {
+        "madde": "lukme",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Lokma"
+          }
+        ],
+        "kelime": ["لُقْمَة"]
+      }
+    ],
+    "Kamus": [
+      {
+        "madde": "el-lukmet",
+        "koken": "lâmın zammıyla ve fethiyle",
+        "yazilis": "اَللُّقْمَةُ",
+        "okunus": "el-lukmet",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "Yutmak için tehyie olunan tumeye denir."
+          }
+        ],
+        "kelime": ["لُقْمَة"]
+      },
+      {
+        "madde": "lukam",
+        "koken": "lâmın ve kâfın fethiyle",
+        "yazilis": "اَللَّقَمُ",
+        "okunus": "el-lekam",
+        "manalar": [
+          {
+            "no": 1,
+            "tanim": "ve اَللُّقَمُ [el-lukam] (صُرَدٌ [surad] vezninde) Yolun göm ve muzam yerine yâhûd vasatına denir; yukâlu: أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ",
+            "misaller": [
+              ["أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ", ""]
+            ]
+          }
+        ],
+        "kelime": ["لُقَم"]
+      }
+    ]
+  },
+  "mekayis": [
+    {
+      "baslik": "لَقَمَ",
+      "metin": "(لَقَمَ) اللَّامُ وَالْقَافُ وَالْمِيمُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى تَنَاوُلِ طَعَامٍ بِالْيَدِ لِلْفَمِ، ثُمَّ يُقَاسُ عَلَيْهِ. وَلَقِمْتُ الطَّعَامَ أَلْقَمُهُ، وَتَلَقَّمْتُهُ وَالْتَقَمْتُهُ. وَرَجُلٌ تِلْقَامَةٌ: كَثِيرُ اللَّقْمِ. وَمِنَ الْبَابِ اللَّقَمُ: مَنْهَجُ الطَّرِيقِ، عَلَى التَّشْبِيهِ، كَأَنَّهُ لَقِمَ مَنْ مَرَّ فِيهِ، كَمَا ذَكَرْنَاهُ فِي السِّرَاطِ، وَقَدْ مَضَى.",
+      "baslik_tr": "Lekame (لَقَمَ)",
+      "metin_tr": "Lâm, kāf ve mîm: sahîh bir asıldır; taamın el ile ağza alınmasına delâlet eder, sonra ona kıyas olunur. «Lakimtü't-taâme elkamühü»: taamı lokma lokma yedim; «ve telekkamtühü ve'l-tekamtühü» dahi denir. Ve «racülün tilkâmetün»: lokması çok adam. Ve bu bâbdandır: «el-lekam»: yolun menheci, teşbîh tarîkiyle; sanki oradan geçeni yutmuş gibidir, nitekim «Sırât» bahsinde zikretmiştik, geçti."
+    }
+  ],
+  "cebel": {
+    "fasil": "اللام والقاف",
+    "baslik": "لقم",
+    "mihveri": "ضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].",
+    "tam_metin": "{فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142]\n\"اللُقمة -بالضم: اسم لما تُهيِّئه للالتقام. لَقِمْت اللُقمة (كشرب) لَقْمًا- بالفتح: أخذتَها بفيك، واللَقْمة -بالفتح: أَكلُها بمَرَّة ولقّمت البعيرَ- ض: إذا لم يأكل حتى ناولتَه بيدك \".\n° المعنى المحوري\nضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].\n° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم).\n(4/1994)",
+    "fasil_ozeti": "° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم).",
+    "mihveri_tr": "Ağzı, kendisine atılanı bir defada yutacak sûrette kapamak: lokmanın iltikâmı gibi. {Feltegamehü'l-hûtü ve hüve mülîm} [Sâffât: 142] (fülkten kaydırılıp atıldığında balık onu ağzına alıp yuttu). Ve bundan: «el-lekam» (muharreke): yolun ekserisi, açıklığı, metni ve ortası. (Orada yürüyen kimse onu yutup sindirir, nitekim «sırât» dediler.) {Ve lekad âteynâ Lukmâne'l-hikme} [Lokmân: 12]: bu, Allah'ın kullarından bir kulun alemidir; âlim yahut kâdî yahut kul idi; zemânı Îsâ ile Muhammed (aleyhimâ's-salâtü ve's-selâm) arasıdır [Bahr 8/181'e bak]."
+  },
+  "zemahseri": {
+    "hakikat": "لقم الطعام والتقمه وتلقمه، وألقمته\nلقّمته. ورجل تلقامة. وخذ هذا اللقم وهو المنهج. قال زهير:\nله لقم لباغي الخير سهل ... وكيد حين تبلوه متين",
+    "mecaz": "ألقم فم البكرة عوداً ليضيق. والتقم أذنه: سارّه. وألقمته أذني فصبّ فيها كلاماً. وألقم إصبعه مرارة. ورجل لهمٌ لقمٌ: يعلو الخصوم. وركيّة متلقّمةٌ: كثيرة الماء.",
+    "mecaz_var": true
+  },
+  "ontoloji": [
+    {
+      "id": "46055",
+      "arapca": [
+        "اِسْتَرَطَ",
+        "خَضَمَ",
+        "زَرِدَ",
+        "اِزْدَرَدَ",
+        "لَقِمَ",
+        "لَهِمَ",
+        "بَلَعَ",
+        "اِبْتَلَعَ",
+        "مَضَغَ",
+        "أَكَلَ1"
+      ],
+      "ingilizce": [],
+      "tanim": "عملية أدخل الطعام في الفم وصولاً إلى الجوف",
+      "misal": "_ أحمد طعامه بسرعة وانطلق إلى المدرسة",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Yiyeceği ağza sokup cevfe vardırma ameliyesi",
+      "misal_tr": "_ Ahmed taamını çabuk yedi ve mektebe gitti"
+    },
+    {
+      "id": "46679",
+      "arapca": [
+        "نَهَشَ",
+        "اِسْتَرَطَ",
+        "خَضَمَ",
+        "ذَاقَ",
+        "زَرِدَ",
+        "اِزْدَرَدَ",
+        "طَعِمَ",
+        "لَقِمَ",
+        "لَهِمَ",
+        "تَغَذَّى",
+        "اِغْتَذى",
+        "بَلَعَ",
+        "اِبْتَلَعَ",
+        "قَضَمَ",
+        "اِقْتاتَ",
+        "اِقْتاتَ ب",
+        "مَضَغَ",
+        "أَكَلَ1"
+      ],
+      "ingilizce": [],
+      "tanim": "وضع الطَعَام في فمه ثم مضغه حتى ينزل في جوفه",
+      "misal": "_ محمدٌ طعامه سريعاً",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Taamı ağzına koyup cevfine ininceye kadar çiğnemek",
+      "misal_tr": "_ Muhammed taamını süratle yedi"
+    },
+    {
+      "id": "46710",
+      "arapca": ["ألْقَمَ", "وَسَقَ", "حَشَا1", "مَلأٌ", "عَبَّأَ", "سَدَّ1", "حَشْوٌ", "بَطَّنَ"],
+      "ingilizce": [],
+      "tanim": "وضع شيئاً في مكان أو موضع فارغ",
+      "misal": "_ خالد كيس القمح وأرسله إلى بيت جده",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Bir şeyi bir yere yahut boş bir mahalle vazetmek",
+      "misal_tr": "_ Hâlid buğday torbasını doldurup dedesinin evine gönderdi"
+    },
+    {
+      "id": "47385",
+      "arapca": ["لَعِقَ", "لَقِمَ", "لاكَ", "لاكَ في", "مَضَغَ", "عَلَكَ"],
+      "ingilizce": [],
+      "tanim": "عملية تقطيع الطعام الصلب وتحويله إلى جزيئات صغيرة ثم طحنها معا باستخدام الأسنان ليسهل بلعها ودخولها إلى الجهاز الهضمي",
+      "misal": "_ يزيد قطعة اللحم جيداً قبل بلعها",
+      "veri_kaynagi": "43",
+      "ust": [],
+      "tanim_tr": "Sert taamı kesip küçük parçalara çevirmek, sonra dişlerle birlikte öğütüp yutulmasını ve hazım cihazına girmesini kolaylaştırmak ameliyesi",
+      "misal_tr": "_ Yezîd et parçasını yutmadan evvel güzelce çiğnedi"
+    }
+  ],
+  "vikisozluk": [
+    {
+      "madde": "لقيمة",
+      "tur": "noun",
+      "baslik": "لُقَيْمَة • (luqayma) f (plural لُقَيْمَات (luqaymāt))",
+      "etim_sablon": [
+        ["ar-diminutive", "Diminutive"]
+      ],
+      "anlam": ["snack, bit, morsel (the minimum amount of food in one’s diet that must be eaten in order to keep fit)"],
+      "okunus": ["luqayma"],
+      "ipa": ["/lu.qaj.ma/"],
+      "bag": "müştak",
+      "etimoloji": 0,
+      "anlam_tr": ["Çerez, azık, lokma (bedenin sıhhatini muhafaza için yenmesi icap eden asgarî taam miktarı)"]
+    },
+    {
+      "madde": "لقيمات",
+      "tur": "noun",
+      "baslik": "لُقَيْمَات • (luqaymāt) f pl",
+      "anlam": ["plural of لُقَيْمَة (luqayma)"],
+      "etiket": ["form-of", "plural"],
+      "form_of": ["لُقَيْمَة"],
+      "okunus": ["luqaymāt"],
+      "bag": "müştak",
+      "etimoloji": 1,
+      "anlam_tr": ["لُقَيْمَة (lukayme)nin cem'i"]
+    },
+    {
+      "madde": "لقمة",
+      "tur": "noun",
+      "baslik": "لُقْمَة • (luqma) f (plural لُقَم (luqam))",
+      "anlam": ["bite", "bit, mouthful", "little piece, morsel"],
+      "okunus": ["luqma"],
+      "ipa": ["/luq.ma/"],
+      "torunlar": [
+        ["afb", "لقمة", "ligma, lugma"],
+        ["acw", "لقمة", "lugma"],
+        ["mt", "loqma", ""],
+        ["az", "lüqmə", ""],
+        ["az", "loğma", ""],
+        ["az", "loxma", ""],
+        ["ota", "لقمه", "lokma"],
+        ["fa", "لقمه", "loqme"]
+      ],
+      "anlam_tr": ["Isırık, lokma", "Azıcık, ağız dolusu", "Küçük parça, lokma"]
+    },
+    {
+      "madde": "علقم",
+      "tur": "noun",
+      "etim_sablon": [
+        ["ar-rootbox", ""],
+        ["ar-elative", "elative"]
+      ],
+      "esanlamli": ["حَنْظَل", "حَدَج", "قِثَّاء الْحِمَار", "فَقُّوس الْحِمَار", "صَاب"],
+      "anlam": ["colocynth", "squirting cucumber"],
+      "etiket": ["al-Andalus", "collective"],
+      "okunus": ["ʕalqam"],
+      "ipa": ["/ʕal.qam/"],
+      "wp": ["ar:"],
+      "etimoloji": 3,
+      "anlam_tr": ["Hanzal (ebûcehil karpuzu)", "Cırtatan (eşek hıyarı)"]
+    },
+    {
+      "madde": "ملقم",
+      "tur": "adj",
+      "baslik": "مُلَقِّم • (mulaqqim) (feminine مُلَقِّمَة (mulaqqima), masculine plural مُلَقِّمُون (mulaqqimūn), feminine plural مُلَقِّمَات (mulaqqimāt))",
+      "anlam": ["active participle of لَقَّمَ (laqqama)"],
+      "etiket": ["active", "form-of", "participle"],
+      "form_of": ["لَقَّمَ"],
+      "okunus": ["mulaqqim"],
+      "anlam_tr": ["لَقَّمَ (lekkame) fiilinin ism-i fâili"]
+    },
+    {
+      "madde": "ملقم",
+      "tur": "noun",
+      "baslik": "مُلَقِّم • (mulaqqim) m (plural مُلَقِّمَات (mulaqqimāt))",
+      "anlam": ["server"],
+      "etiket": ["dated"],
+      "okunus": ["mulaqqim"],
+      "bag": "müştak",
+      "anlam_tr": ["Lokma sunan kimse"]
+    },
+    {
+      "madde": "ملقم",
+      "tur": "adj",
+      "baslik": "مُلَقَّم • (mulaqqam) (feminine مُلَقَّمَة (mulaqqama), masculine plural مُلَقَّمُون (mulaqqamūn), feminine plural مُلَقَّمَات (mulaqqamāt))",
+      "anlam": ["passive participle of لَقَّمَ (laqqama)"],
+      "etiket": ["form-of", "participle", "passive"],
+      "form_of": ["لَقَّمَ"],
+      "okunus": ["mulaqqam"],
+      "anlam_tr": ["لَقَّمَ (lekkame) fiilinin ism-i mef'ûlü"]
+    },
+    {
+      "madde": "لقمان",
+      "tur": "name",
+      "baslik": "لُقْمَان • (luqmān) m",
+      "anlam": ["Luqman (a wise man mentioned in the Qur'an)", "a male given name, Luqman"],
+      "okunus": ["luqmān"],
+      "ipa": ["/luq.maːn/"],
+      "torunlar": [
+        ["mt", "Loqman", ""],
+        ["az", "Loğman", ""],
+        ["chg", "لقمان", "lqmʾn"],
+        ["ota", "لقمان", "Lokman"],
+        ["fa", "لقمان", "loqmân"],
+        ["pa", "لُقمان", "luqmān"],
+        ["tk", "lukman", ""],
+        ["ur", "لُقمان", ""]
+      ],
+      "bag": "müştak",
+      "anlam_tr": ["Lokmân (Kur'ân'da zikredilen hakîm zât)", "Erkek adı: Lokmân"]
+    },
+    {
+      "madde": "التقام",
+      "tur": "noun",
+      "baslik": "اِلْتِقَام • (iltiqām) m",
+      "etim_sablon": [
+        ["ar-verbal noun", "Verbal noun"]
+      ],
+      "anlam": ["verbal noun of اِلْتَقَمَ (iltaqama) (form VIII)"],
+      "etiket": ["form-of", "noun-from-verb"],
+      "form_of": ["اِلْتَقَمَ"],
+      "okunus": ["iltiqām"],
+      "ipa": ["/il.ti.qaːm/"],
+      "torunlar": [
+        ["ota", "التقام", "iltikâm"]
+      ],
+      "bag": "müştak",
+      "etimoloji": 4,
+      "anlam_tr": ["اِلْتَقَمَ (iltekame) fiilinin masdarı (sekizinci bâb)"]
+    }
+  ],
+  "vikisozluk_etimolojiler": [
+    {
+      "metin": "Diminutive of لُقْمَة (luqma).",
+      "kognatlar": [
+        ["لُقْمَة", "لقمة#Arabic"]
+      ]
+    },
+    {
+      "metin": "See the etymology of the corresponding lemma form.",
+      "kognatlar": []
+    },
+    {
+      "metin": "",
+      "kognatlar": []
+    },
+    {
+      "metin": "Augmented from لَقَمَ (laqama, “to block”) or لَقِمَ (laqima, “to gobble up”), or elative from it, like عَسْجَد (ʕasjad, “gold”).",
+      "kognatlar": [
+        ["لَقَمَ", "لقم#Arabic"],
+        ["لَقِمَ", "لقم#Arabic"],
+        ["عَسْجَد", "عسجد#Arabic"]
+      ]
+    },
+    {
+      "metin": "Verbal noun of اِلْتَقَمَ (iltaqama).",
+      "kognatlar": [
+        ["اِلْتَقَمَ", "التقم#Arabic"]
+      ]
+    }
+  ],
+  "etymarab": {
+    "latin": "LQM",
+    "kok_maddesi": "Back to library EtymArab LQM لقم BP – • HDAL • © SG | 9May2023 √LQM “root” ▪ LQM_1 ‘morsel, mouthful’ ↗ luqmaẗ ▪ LQM_2 ‘...’ ↗ ... ▪ LQM_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to swallow, gobble up; morsel, mouthful of food, to hand-feed; to obstruct’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
+    "kelime_maddeleri": [],
+    "kok_maddesi_tr": "Kütüphaneye dönüş EtymArab LQM لقم BP – • HDAL • © SG | 9 Mayıs 2023 √LQM «kök» ▪ LQM_1 «lokma, ağız dolusu» ↗ luqmaẗ ▪ LQM_2 «...» ↗ ... ▪ LQM_3 «...» ↗ ... ♦ Klasik Arapçada mana tayfı (BAH2008'e göre): «yutmak, silip süpürmek; lokma, ağız dolusu taam, el ile yedirmek; tıkamak» ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; mülâhaza ; tarih ; soydaş ; söylem ; batı ; türev ;"
+  },
+  "kuran": {
+    "gecis": 1,
+    "ilk": "37:142:1:2",
+    "tur": {
+      "V": 1
+    },
+    "bab": {
+      "VIII": 1
+    },
+    "zaman_kip": {
+      "PERF": 1
+    },
+    "fiil_ismi_ozellikleri": {},
+    "lemmalar": {
+      "ٱلْتَقَمَ": 1
+    },
+    "bicimler": {
+      "ٱلْتَقَمَ": 1
+    },
+    "morfoloji_gecis": 1
+  },
+  "kelimeler": [
+    {
+      "lemma": "الْتَقَمَ",
+      "hal": "fiil",
+      "bab": "ifte'ale",
+      "bicimler": [
+        {
+          "kelime": "فَٱلْتَقَمَهُ",
+          "zaman": "Mâzî",
+          "ilk": "37:142",
+          "adet": 1,
+          "tr": "yuttu"
+        }
+      ],
+      "tr": "yuttu",
+      "bab_no": "VIII",
+      "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme",
+      "adet": 1
+    }
+  ],
+  "mustak": {
     "masdar · sülâsî mücerred": [
-      [0, "لَقْم", "laqm", "lokma", "kontrol", ""],
-      [1, "لِقْم", "liqm", "lokma", "kontrol", ""],
-      [2, "لُقْم", "luqm", "lokma", "kontrol", ""],
-      [3, "لَقَم", "laqam", "lokma", "kontrol", ""],
-      [4, "لِقَم", "liqam", "lokma", "kontrol", ""],
-      [5, "لُقُم", "luqum", "lokma", "kontrol", ""],
-      [6, "لُقُوم", "luqūm", "lokma", "kontrol", ""],
-      [7, "لِقَام", "liqām", "lokma", "kontrol", ""],
-      [8, "لُقَام", "luqām", "lokma", "kontrol", ""],
-      [9, "لَقَام", "laqām", "lokma", "kontrol", ""],
-      [10, "لَقَامَة", "laqāma", "lokma", "kontrol", ""],
-      [11, "لُقُومَة", "luqūma", "lokma", "kontrol", ""],
-      [12, "لِقَامَة", "liqāma", "lokma", "kontrol", ""],
-      [13, "لَقِيم", "laqīm", "lokma", "kontrol", ""],
-      [14, "لَقُوم", "laqūm", "lokma", "kontrol", ""],
-      [15, "لَقَمَان", "laqamān", "lokma", "kontrol", ""],
+      ["fa'l", "semâî aday", "لَقْم", "laqm", "lokma", "kontrol", ""],
+      ["fi'l", "semâî aday", "لِقْم", "liqm", "lokma", "kontrol", ""],
+      ["fu'l", "semâî aday", "لُقْم", "luqm", "lokma", "kontrol", ""],
+      ["fa'al", "semâî aday", "لَقَم", "laqam", "lokma", "kontrol", ""],
+      ["fi'al", "semâî aday", "لِقَم", "liqam", "lokma", "kontrol", ""],
+      ["fu'ul", "semâî aday", "لُقُم", "luqum", "lokma", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "لُقُوم", "luqūm", "lokma", "kontrol", ""],
+      ["fi'āl", "semâî aday", "لِقَام", "liqām", "lokma", "kontrol", ""],
+      ["fu'āl", "semâî aday", "لُقَام", "luqām", "lokma", "kontrol", ""],
+      ["fa'āl", "semâî aday", "لَقَام", "laqām", "lokma", "kontrol", ""],
+      ["fa'āle", "semâî aday", "لَقَامَة", "laqāma", "lokma", "kontrol", ""],
+      ["fu'ūle", "semâî aday", "لُقُومَة", "luqūma", "lokma", "kontrol", ""],
+      ["fi'āle", "semâî aday", "لِقَامَة", "liqāma", "lokma", "kontrol", ""],
+      ["fa'īl", "semâî aday", "لَقِيم", "laqīm", "lokma", "kontrol", ""],
+      ["fa'ūl", "semâî aday", "لَقُوم", "laqūm", "lokma", "kontrol", ""],
+      ["fa'alān", "semâî aday", "لَقَمَان", "laqamān", "lokma", "kontrol", ""],
       [
-        16,
+        "fu'lān",
+        "semâî aday",
         "لُقْمَان",
         "luqmān",
         "Kerkesler sâhibi olan kimsenin ismidir ki şuarâ onu Âda nisbet kılıp Lokmân b",
         "lugat",
         "Vankulu"
       ],
-      [17, "لِقْمَان", "liqmān", "lokma", "kontrol", ""],
-      [18, "لَقْمَى", "laqmā", "lokma", "kontrol", ""],
-      [19, "لُقْمَى", "luqmā", "lokma", "kontrol", ""],
-      [20, "لِقْمَى", "liqmā", "lokma", "kontrol", ""],
-      [21, "لَقَمَة", "laqama", "lokma", "kontrol", ""],
-      [22, "لِقَمَة", "liqama", "lokma", "kontrol", ""],
-      [23, "لَقْمُومَة", "laqmūma", "lokma", "kontrol", ""],
-      [24, "تُلْقُوم", "tulqūm", "lokma", "kontrol", ""],
-      [25, "تَلْقِمَة", "talqima", "lokma", "kontrol", ""],
-      [26, "تَلْقَمَة", "talqama", "lokma", "kontrol", ""],
-      [27, "مَلْقُمَة", "malquma", "lokma", "kontrol", ""],
-      [28, "مَلْقِمَة", "malqima", "lokma", "kontrol", ""]
+      ["fi'lān", "semâî aday", "لِقْمَان", "liqmān", "lokma", "kontrol", ""],
+      ["fa'lā", "semâî aday", "لَقْمَى", "laqmā", "lokma", "kontrol", ""],
+      ["fu'lā", "semâî aday", "لُقْمَى", "luqmā", "lokma", "kontrol", ""],
+      ["fi'lā", "semâî aday", "لِقْمَى", "liqmā", "lokma", "kontrol", ""],
+      ["fa'ale", "semâî aday", "لَقَمَة", "laqama", "lokma", "kontrol", ""],
+      ["fi'ale", "semâî aday", "لِقَمَة", "liqama", "lokma", "kontrol", ""],
+      ["fa'lūla", "semâî aday", "لَقْمُومَة", "laqmūma", "lokma", "kontrol", ""],
+      ["tuf'ūl", "semâî aday", "تُلْقُوم", "tulqūm", "lokma", "kontrol", ""],
+      ["taf'ila", "semâî aday", "تَلْقِمَة", "talqima", "lokma", "kontrol", ""],
+      ["taf'ala", "semâî aday", "تَلْقَمَة", "talqama", "lokma", "kontrol", ""],
+      ["maf'ula", "semâî aday", "مَلْقُمَة", "malquma", "lokma", "kontrol", ""],
+      ["maf'ila", "semâî aday", "مَلْقِمَة", "malqima", "lokma", "kontrol", ""]
     ],
     "masdar · bâb II": [
-      [29, "تَلْقِيم", "talqīm", "çokça lokma olma", "kontrol", ""],
-      [30, "تَلْقِمَة", "talqima", "çokça lokma olma", "kontrol", ""],
-      [31, "لِقِّام", "liqqām", "çokça lokma olma", "kontrol", ""]
+      ["taf'īl", "kıyâsî", "تَلْقِيم", "talqīm", "çokça lokma olma", "kontrol", ""],
+      ["taf'ila", "kıyâsî", "تَلْقِمَة", "talqima", "çokça lokma olma", "kontrol", ""],
+      ["fi''āl", "kıyâsî", "لِقِّام", "liqqām", "çokça lokma olma", "kontrol", ""]
     ],
     "ism-i merre · bâb II": [
-      [32, "تَلْقِيمَة", "talqīma", "bir kere çokça lokma olma", "kontrol", ""],
-      [33, "لِقِّامَة", "liqqāma", "bir kere çokça lokma olma", "kontrol", ""]
+      ["taf'īl + tâ", "aday", "تَلْقِيمَة", "talqīma", "bir kere çokça lokma olma", "kontrol", ""],
+      ["fi''āl + tâ", "aday", "لِقِّامَة", "liqqāma", "bir kere çokça lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb II": [
       [
-        34,
+        "mufa''il",
+        "kıyâsî",
         "مُلَقِّم",
         "mulaqqim",
         "çokça lokma olan",
         "kontrol",
         "Vikisözlük: active participle of لَقَّمَ (laqqama)"
       ],
-      [35, "مُلَقِّمَة", "mulaqqima", "çokça lokma olan, müennes", "kontrol", ""],
-      [36, "مُلَقِّمَان", "mulaqqimān", "çokça lokma olan, iki", "kontrol", ""],
-      [37, "مُلَقِّمَتَان", "mulaqqimatān", "çokça lokma olan, iki, müennes", "kontrol", ""],
-      [38, "مُلَقِّمُون", "mulaqqimūn", "çokça lokma olanlar", "kontrol", ""],
-      [39, "مُلَقِّمِين", "mulaqqimīn", "çokça lokma olanlar", "kontrol", ""],
-      [40, "مُلَقِّمَات", "mulaqqimāt", "çokça lokma olanlar, müennes", "kontrol", ""]
+      ["mufa''il + müennes", "kıyâsî", "مُلَقِّمَة", "mulaqqima", "çokça lokma olan, müennes", "kontrol", ""],
+      ["mufa''il + tesniye", "kıyâsî", "مُلَقِّمَان", "mulaqqimān", "çokça lokma olan, iki", "kontrol", ""],
+      [
+        "mufa''il + müennes tesniye",
+        "kıyâsî",
+        "مُلَقِّمَتَان",
+        "mulaqqimatān",
+        "çokça lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَقِّمُون",
+        "mulaqqimūn",
+        "çokça lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَقِّمِين",
+        "mulaqqimīn",
+        "çokça lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَقِّمَات",
+        "mulaqqimāt",
+        "çokça lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb II": [
       [
-        41,
+        "mufa''al",
+        "kıyâsî",
         "مُلَقَّم",
         "mulaqqam",
         "çokça lokma olunan",
         "kontrol",
         "Vikisözlük: passive participle of لَقَّمَ (laqqama)"
       ],
-      [42, "مُلَقَّمَة", "mulaqqama", "çokça lokma olunan, müennes", "kontrol", ""],
-      [43, "مُلَقَّمَان", "mulaqqamān", "çokça lokma olunan, iki", "kontrol", ""],
-      [44, "مُلَقَّمَتَان", "mulaqqamatān", "çokça lokma olunan, iki, müennes", "kontrol", ""],
-      [45, "مُلَقَّمُون", "mulaqqamūn", "çokça lokma olunanlar", "kontrol", ""],
-      [46, "مُلَقَّمِين", "mulaqqamīn", "çokça lokma olunanlar", "kontrol", ""],
-      [47, "مُلَقَّمَات", "mulaqqamāt", "çokça lokma olunanlar, müennes", "kontrol", ""]
+      ["mufa''al + müennes", "kıyâsî", "مُلَقَّمَة", "mulaqqama", "çokça lokma olunan, müennes", "kontrol", ""],
+      ["mufa''al + tesniye", "kıyâsî", "مُلَقَّمَان", "mulaqqamān", "çokça lokma olunan, iki", "kontrol", ""],
+      [
+        "mufa''al + müennes tesniye",
+        "kıyâsî",
+        "مُلَقَّمَتَان",
+        "mulaqqamatān",
+        "çokça lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَقَّمُون",
+        "mulaqqamūn",
+        "çokça lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَقَّمِين",
+        "mulaqqamīn",
+        "çokça lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَقَّمَات",
+        "mulaqqamāt",
+        "çokça lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb II": [
       [
-        48,
+        "mufa''al",
+        "kıyâsî",
         "مُلَقَّم",
         "mulaqqam",
         "çokça lokma olma yeri, vakti",
@@ -97,1056 +566,1924 @@
       ]
     ],
     "masdar · bâb III": [
-      [49, "مُلَاقَمَة", "mulāqama", "biriyle karşılıklı lokma olma", "kontrol", ""],
-      [50, "لِقَام", "liqām", "biriyle karşılıklı lokma olma", "kontrol", ""]
+      ["mufā'ale", "kıyâsî", "مُلَاقَمَة", "mulāqama", "biriyle karşılıklı lokma olma", "kontrol", ""],
+      ["fi'āl", "kıyâsî", "لِقَام", "liqām", "biriyle karşılıklı lokma olma", "kontrol", ""]
     ],
     "ism-i merre · bâb III": [
-      [51, "لِقَامَة", "liqāma", "bir kere biriyle karşılıklı lokma olma", "kontrol", ""]
+      ["fi'āl + tâ", "aday", "لِقَامَة", "liqāma", "bir kere biriyle karşılıklı lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb III": [
-      [52, "مُلَاقِم", "mulāqim", "biriyle karşılıklı lokma olan", "kontrol", ""],
-      [53, "مُلَاقِمَة", "mulāqima", "biriyle karşılıklı lokma olan, müennes", "kontrol", ""],
-      [54, "مُلَاقِمَان", "mulāqimān", "biriyle karşılıklı lokma olan, iki", "kontrol", ""],
-      [55, "مُلَاقِمَتَان", "mulāqimatān", "biriyle karşılıklı lokma olan, iki, müennes", "kontrol", ""],
-      [56, "مُلَاقِمُون", "mulāqimūn", "biriyle karşılıklı lokma olanlar", "kontrol", ""],
-      [57, "مُلَاقِمِين", "mulāqimīn", "biriyle karşılıklı lokma olanlar", "kontrol", ""],
-      [58, "مُلَاقِمَات", "mulāqimāt", "biriyle karşılıklı lokma olanlar, müennes", "kontrol", ""]
+      ["mufā'il", "kıyâsî", "مُلَاقِم", "mulāqim", "biriyle karşılıklı lokma olan", "kontrol", ""],
+      [
+        "mufā'il + müennes",
+        "kıyâsî",
+        "مُلَاقِمَة",
+        "mulāqima",
+        "biriyle karşılıklı lokma olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + tesniye",
+        "kıyâsî",
+        "مُلَاقِمَان",
+        "mulāqimān",
+        "biriyle karşılıklı lokma olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + müennes tesniye",
+        "kıyâsî",
+        "مُلَاقِمَتَان",
+        "mulāqimatān",
+        "biriyle karşılıklı lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَاقِمُون",
+        "mulāqimūn",
+        "biriyle karşılıklı lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَاقِمِين",
+        "mulāqimīn",
+        "biriyle karşılıklı lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَاقِمَات",
+        "mulāqimāt",
+        "biriyle karşılıklı lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb III": [
-      [59, "مُلَاقَم", "mulāqam", "biriyle karşılıklı lokma olunan", "kontrol", ""],
-      [60, "مُلَاقَمَة", "mulāqama", "biriyle karşılıklı lokma olunan, müennes", "kontrol", ""],
-      [61, "مُلَاقَمَان", "mulāqamān", "biriyle karşılıklı lokma olunan, iki", "kontrol", ""],
-      [62, "مُلَاقَمَتَان", "mulāqamatān", "biriyle karşılıklı lokma olunan, iki, müennes", "kontrol", ""],
-      [63, "مُلَاقَمُون", "mulāqamūn", "biriyle karşılıklı lokma olunanlar", "kontrol", ""],
-      [64, "مُلَاقَمِين", "mulāqamīn", "biriyle karşılıklı lokma olunanlar", "kontrol", ""],
-      [65, "مُلَاقَمَات", "mulāqamāt", "biriyle karşılıklı lokma olunanlar, müennes", "kontrol", ""]
+      ["mufā'al", "kıyâsî", "مُلَاقَم", "mulāqam", "biriyle karşılıklı lokma olunan", "kontrol", ""],
+      [
+        "mufā'al + müennes",
+        "kıyâsî",
+        "مُلَاقَمَة",
+        "mulāqama",
+        "biriyle karşılıklı lokma olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + tesniye",
+        "kıyâsî",
+        "مُلَاقَمَان",
+        "mulāqamān",
+        "biriyle karşılıklı lokma olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + müennes tesniye",
+        "kıyâsî",
+        "مُلَاقَمَتَان",
+        "mulāqamatān",
+        "biriyle karşılıklı lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلَاقَمُون",
+        "mulāqamūn",
+        "biriyle karşılıklı lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلَاقَمِين",
+        "mulāqamīn",
+        "biriyle karşılıklı lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mufā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلَاقَمَات",
+        "mulāqamāt",
+        "biriyle karşılıklı lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb III": [
-      [66, "مُلَاقَم", "mulāqam", "biriyle karşılıklı lokma olma yeri, vakti", "kontrol", ""]
+      ["mufā'al", "kıyâsî", "مُلَاقَم", "mulāqam", "biriyle karşılıklı lokma olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IV": [
-      [67, "إِلْقَام", "ʾilqām", "lokmalaştırma", "kontrol", ""]
+      ["if'āl", "kıyâsî", "إِلْقَام", "ʾilqām", "lokmalaştırma", "kontrol", ""]
     ],
     "ism-i merre · bâb IV": [
-      [68, "إِلْقَامَة", "ʾilqāma", "bir kere lokmalaştırma", "kontrol", ""]
+      ["if'āl + tâ", "aday", "إِلْقَامَة", "ʾilqāma", "bir kere lokmalaştırma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IV": [
-      [69, "مُلْقِم", "mulqim", "lokmalaştıran", "kontrol", ""],
-      [70, "مُلْقِمَة", "mulqima", "lokmalaştıran, müennes", "kontrol", ""],
-      [71, "مُلْقِمَان", "mulqimān", "lokmalaştıran, iki", "kontrol", ""],
-      [72, "مُلْقِمَتَان", "mulqimatān", "lokmalaştıran, iki, müennes", "kontrol", ""],
-      [73, "مُلْقِمُون", "mulqimūn", "lokmalaştıranlar", "kontrol", ""],
-      [74, "مُلْقِمِين", "mulqimīn", "lokmalaştıranlar", "kontrol", ""],
-      [75, "مُلْقِمَات", "mulqimāt", "lokmalaştıranlar, müennes", "kontrol", ""]
+      ["muf'il", "kıyâsî", "مُلْقِم", "mulqim", "lokmalaştıran", "kontrol", ""],
+      ["muf'il + müennes", "kıyâsî", "مُلْقِمَة", "mulqima", "lokmalaştıran, müennes", "kontrol", ""],
+      ["muf'il + tesniye", "kıyâsî", "مُلْقِمَان", "mulqimān", "lokmalaştıran, iki", "kontrol", ""],
+      [
+        "muf'il + müennes tesniye",
+        "kıyâsî",
+        "مُلْقِمَتَان",
+        "mulqimatān",
+        "lokmalaştıran, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْقِمُون",
+        "mulqimūn",
+        "lokmalaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْقِمِين",
+        "mulqimīn",
+        "lokmalaştıranlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْقِمَات",
+        "mulqimāt",
+        "lokmalaştıranlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb IV": [
-      [76, "مُلْقَم", "mulqam", "lokmalaştırılan", "kontrol", ""],
-      [77, "مُلْقَمَة", "mulqama", "lokmalaştırılan, müennes", "kontrol", ""],
-      [78, "مُلْقَمَان", "mulqamān", "lokmalaştırılan, iki", "kontrol", ""],
-      [79, "مُلْقَمَتَان", "mulqamatān", "lokmalaştırılan, iki, müennes", "kontrol", ""],
-      [80, "مُلْقَمُون", "mulqamūn", "lokmalaştırılanlar", "kontrol", ""],
-      [81, "مُلْقَمِين", "mulqamīn", "lokmalaştırılanlar", "kontrol", ""],
-      [82, "مُلْقَمَات", "mulqamāt", "lokmalaştırılanlar, müennes", "kontrol", ""]
+      ["muf'al", "kıyâsî", "مُلْقَم", "mulqam", "lokmalaştırılan", "kontrol", ""],
+      ["muf'al + müennes", "kıyâsî", "مُلْقَمَة", "mulqama", "lokmalaştırılan, müennes", "kontrol", ""],
+      ["muf'al + tesniye", "kıyâsî", "مُلْقَمَان", "mulqamān", "lokmalaştırılan, iki", "kontrol", ""],
+      [
+        "muf'al + müennes tesniye",
+        "kıyâsî",
+        "مُلْقَمَتَان",
+        "mulqamatān",
+        "lokmalaştırılan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْقَمُون",
+        "mulqamūn",
+        "lokmalaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْقَمِين",
+        "mulqamīn",
+        "lokmalaştırılanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْقَمَات",
+        "mulqamāt",
+        "lokmalaştırılanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb IV": [
-      [83, "مُلْقَم", "mulqam", "lokmalaştırma yeri, vakti", "kontrol", ""]
+      ["muf'al", "kıyâsî", "مُلْقَم", "mulqam", "lokmalaştırma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb V": [
-      [84, "تَلَقُّم", "talaqqum", "kendini zorlayarak lokma olma", "kontrol", ""]
+      ["tafa''ul", "kıyâsî", "تَلَقُّم", "talaqqum", "kendini zorlayarak lokma olma", "kontrol", ""]
     ],
     "ism-i merre · bâb V": [
-      [85, "تَلَقُّمَة", "talaqquma", "bir kere kendini zorlayarak lokma olma", "kontrol", ""]
+      ["tafa''ul + tâ", "aday", "تَلَقُّمَة", "talaqquma", "bir kere kendini zorlayarak lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb V": [
-      [86, "مُتَلَقِّم", "mutalaqqim", "kendini zorlayarak lokma olan", "kontrol", ""],
-      [87, "مُتَلَقِّمَة", "mutalaqqima", "kendini zorlayarak lokma olan, müennes", "kontrol", ""],
-      [88, "مُتَلَقِّمَان", "mutalaqqimān", "kendini zorlayarak lokma olan, iki", "kontrol", ""],
-      [89, "مُتَلَقِّمَتَان", "mutalaqqimatān", "kendini zorlayarak lokma olan, iki, müennes", "kontrol", ""],
-      [90, "مُتَلَقِّمُون", "mutalaqqimūn", "kendini zorlayarak lokma olanlar", "kontrol", ""],
-      [91, "مُتَلَقِّمِين", "mutalaqqimīn", "kendini zorlayarak lokma olanlar", "kontrol", ""],
-      [92, "مُتَلَقِّمَات", "mutalaqqimāt", "kendini zorlayarak lokma olanlar, müennes", "kontrol", ""]
+      ["mutafa''il", "kıyâsî", "مُتَلَقِّم", "mutalaqqim", "kendini zorlayarak lokma olan", "kontrol", ""],
+      [
+        "mutafa''il + müennes",
+        "kıyâsî",
+        "مُتَلَقِّمَة",
+        "mutalaqqima",
+        "kendini zorlayarak lokma olan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + tesniye",
+        "kıyâsî",
+        "مُتَلَقِّمَان",
+        "mutalaqqimān",
+        "kendini zorlayarak lokma olan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَقِّمَتَان",
+        "mutalaqqimatān",
+        "kendini zorlayarak lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَقِّمُون",
+        "mutalaqqimūn",
+        "kendini zorlayarak lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَقِّمِين",
+        "mutalaqqimīn",
+        "kendini zorlayarak lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَقِّمَات",
+        "mutalaqqimāt",
+        "kendini zorlayarak lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb V": [
-      [93, "مُتَلَقَّم", "mutalaqqam", "kendini zorlayarak lokma olunan", "kontrol", ""],
-      [94, "مُتَلَقَّمَة", "mutalaqqama", "kendini zorlayarak lokma olunan, müennes", "kontrol", ""],
-      [95, "مُتَلَقَّمَان", "mutalaqqamān", "kendini zorlayarak lokma olunan, iki", "kontrol", ""],
-      [96, "مُتَلَقَّمَتَان", "mutalaqqamatān", "kendini zorlayarak lokma olunan, iki, müennes", "kontrol", ""],
-      [97, "مُتَلَقَّمُون", "mutalaqqamūn", "kendini zorlayarak lokma olunanlar", "kontrol", ""],
-      [98, "مُتَلَقَّمِين", "mutalaqqamīn", "kendini zorlayarak lokma olunanlar", "kontrol", ""],
-      [99, "مُتَلَقَّمَات", "mutalaqqamāt", "kendini zorlayarak lokma olunanlar, müennes", "kontrol", ""]
+      ["mutafa''al", "kıyâsî", "مُتَلَقَّم", "mutalaqqam", "kendini zorlayarak lokma olunan", "kontrol", ""],
+      [
+        "mutafa''al + müennes",
+        "kıyâsî",
+        "مُتَلَقَّمَة",
+        "mutalaqqama",
+        "kendini zorlayarak lokma olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + tesniye",
+        "kıyâsî",
+        "مُتَلَقَّمَان",
+        "mutalaqqamān",
+        "kendini zorlayarak lokma olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَقَّمَتَان",
+        "mutalaqqamatān",
+        "kendini zorlayarak lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَقَّمُون",
+        "mutalaqqamūn",
+        "kendini zorlayarak lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَقَّمِين",
+        "mutalaqqamīn",
+        "kendini zorlayarak lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafa''al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَقَّمَات",
+        "mutalaqqamāt",
+        "kendini zorlayarak lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb V": [
-      [100, "مُتَلَقَّم", "mutalaqqam", "kendini zorlayarak lokma olma yeri, vakti", "kontrol", ""]
+      [
+        "mutafa''al",
+        "kıyâsî",
+        "مُتَلَقَّم",
+        "mutalaqqam",
+        "kendini zorlayarak lokma olma yeri, vakti",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb VI": [
-      [101, "تَلَاقُم", "talāqum", "birbirine lokma olma", "kontrol", ""]
+      ["tafā'ul", "kıyâsî", "تَلَاقُم", "talāqum", "birbirine lokma olma", "kontrol", ""]
     ],
     "ism-i merre · bâb VI": [
-      [102, "تَلَاقُمَة", "talāquma", "bir kere birbirine lokma olma", "kontrol", ""]
+      ["tafā'ul + tâ", "aday", "تَلَاقُمَة", "talāquma", "bir kere birbirine lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VI": [
-      [103, "مُتَلَاقِم", "mutalāqim", "birbirine lokma olan", "kontrol", ""],
-      [104, "مُتَلَاقِمَة", "mutalāqima", "birbirine lokma olan, müennes", "kontrol", ""],
-      [105, "مُتَلَاقِمَان", "mutalāqimān", "birbirine lokma olan, iki", "kontrol", ""],
-      [106, "مُتَلَاقِمَتَان", "mutalāqimatān", "birbirine lokma olan, iki, müennes", "kontrol", ""],
-      [107, "مُتَلَاقِمُون", "mutalāqimūn", "birbirine lokma olanlar", "kontrol", ""],
-      [108, "مُتَلَاقِمِين", "mutalāqimīn", "birbirine lokma olanlar", "kontrol", ""],
-      [109, "مُتَلَاقِمَات", "mutalāqimāt", "birbirine lokma olanlar, müennes", "kontrol", ""]
+      ["mutafā'il", "kıyâsî", "مُتَلَاقِم", "mutalāqim", "birbirine lokma olan", "kontrol", ""],
+      [
+        "mutafā'il + müennes",
+        "kıyâsî",
+        "مُتَلَاقِمَة",
+        "mutalāqima",
+        "birbirine lokma olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mutafā'il + tesniye", "kıyâsî", "مُتَلَاقِمَان", "mutalāqimān", "birbirine lokma olan, iki", "kontrol", ""],
+      [
+        "mutafā'il + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَاقِمَتَان",
+        "mutalāqimatān",
+        "birbirine lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَاقِمُون",
+        "mutalāqimūn",
+        "birbirine lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَاقِمِين",
+        "mutalāqimīn",
+        "birbirine lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَاقِمَات",
+        "mutalāqimāt",
+        "birbirine lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VI": [
-      [110, "مُتَلَاقَم", "mutalāqam", "birbirine lokma olunan", "kontrol", ""],
-      [111, "مُتَلَاقَمَة", "mutalāqama", "birbirine lokma olunan, müennes", "kontrol", ""],
-      [112, "مُتَلَاقَمَان", "mutalāqamān", "birbirine lokma olunan, iki", "kontrol", ""],
-      [113, "مُتَلَاقَمَتَان", "mutalāqamatān", "birbirine lokma olunan, iki, müennes", "kontrol", ""],
-      [114, "مُتَلَاقَمُون", "mutalāqamūn", "birbirine lokma olunanlar", "kontrol", ""],
-      [115, "مُتَلَاقَمِين", "mutalāqamīn", "birbirine lokma olunanlar", "kontrol", ""],
-      [116, "مُتَلَاقَمَات", "mutalāqamāt", "birbirine lokma olunanlar, müennes", "kontrol", ""]
+      ["mutafā'al", "kıyâsî", "مُتَلَاقَم", "mutalāqam", "birbirine lokma olunan", "kontrol", ""],
+      [
+        "mutafā'al + müennes",
+        "kıyâsî",
+        "مُتَلَاقَمَة",
+        "mutalāqama",
+        "birbirine lokma olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + tesniye",
+        "kıyâsî",
+        "مُتَلَاقَمَان",
+        "mutalāqamān",
+        "birbirine lokma olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + müennes tesniye",
+        "kıyâsî",
+        "مُتَلَاقَمَتَان",
+        "mutalāqamatān",
+        "birbirine lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُتَلَاقَمُون",
+        "mutalāqamūn",
+        "birbirine lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُتَلَاقَمِين",
+        "mutalāqamīn",
+        "birbirine lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "mutafā'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُتَلَاقَمَات",
+        "mutalāqamāt",
+        "birbirine lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VI": [
-      [117, "مُتَلَاقَم", "mutalāqam", "birbirine lokma olma yeri, vakti", "kontrol", ""]
+      ["mutafā'al", "kıyâsî", "مُتَلَاقَم", "mutalāqam", "birbirine lokma olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb VII": [
-      [118, "اِنْلِقَام", "inliqām", "lokma olunma", "kontrol", ""]
+      ["infi'āl", "kıyâsî", "اِنْلِقَام", "inliqām", "lokma olunma", "kontrol", ""]
     ],
     "ism-i merre · bâb VII": [
-      [119, "اِنْلِقَامَة", "inliqāma", "bir kere lokma olunma", "kontrol", ""]
+      ["infi'āl + tâ", "aday", "اِنْلِقَامَة", "inliqāma", "bir kere lokma olunma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VII": [
-      [120, "مُنْلَقِم", "munlaqim", "lokma olunan", "kontrol", ""],
-      [121, "مُنْلَقِمَة", "munlaqima", "lokma olunan, müennes", "kontrol", ""],
-      [122, "مُنْلَقِمَان", "munlaqimān", "lokma olunan, iki", "kontrol", ""],
-      [123, "مُنْلَقِمَتَان", "munlaqimatān", "lokma olunan, iki, müennes", "kontrol", ""],
-      [124, "مُنْلَقِمُون", "munlaqimūn", "lokma olunanlar", "kontrol", ""],
-      [125, "مُنْلَقِمِين", "munlaqimīn", "lokma olunanlar", "kontrol", ""],
-      [126, "مُنْلَقِمَات", "munlaqimāt", "lokma olunanlar, müennes", "kontrol", ""]
+      ["munfa'il", "kıyâsî", "مُنْلَقِم", "munlaqim", "lokma olunan", "kontrol", ""],
+      ["munfa'il + müennes", "kıyâsî", "مُنْلَقِمَة", "munlaqima", "lokma olunan, müennes", "kontrol", ""],
+      ["munfa'il + tesniye", "kıyâsî", "مُنْلَقِمَان", "munlaqimān", "lokma olunan, iki", "kontrol", ""],
+      [
+        "munfa'il + müennes tesniye",
+        "kıyâsî",
+        "مُنْلَقِمَتَان",
+        "munlaqimatān",
+        "lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُنْلَقِمُون",
+        "munlaqimūn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُنْلَقِمِين",
+        "munlaqimīn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُنْلَقِمَات",
+        "munlaqimāt",
+        "lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VII": [
-      [127, "مُنْلَقَم", "munlaqam", "lokma olunan", "kontrol", ""],
-      [128, "مُنْلَقَمَة", "munlaqama", "lokma olunan, müennes", "kontrol", ""],
-      [129, "مُنْلَقَمَان", "munlaqamān", "lokma olunan, iki", "kontrol", ""],
-      [130, "مُنْلَقَمَتَان", "munlaqamatān", "lokma olunan, iki, müennes", "kontrol", ""],
-      [131, "مُنْلَقَمُون", "munlaqamūn", "lokma olunanlar", "kontrol", ""],
-      [132, "مُنْلَقَمِين", "munlaqamīn", "lokma olunanlar", "kontrol", ""],
-      [133, "مُنْلَقَمَات", "munlaqamāt", "lokma olunanlar, müennes", "kontrol", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَم",
+        "munlaqam",
+        "lokma olunan",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمَة",
+        "munlaqama",
+        "lokma olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمَان",
+        "munlaqamān",
+        "lokma olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + müennes tesniye",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمَتَان",
+        "munlaqamatān",
+        "lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-ûn)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمُون",
+        "munlaqamūn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müzekker (-în)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمِين",
+        "munlaqamīn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "munfa'al + cem‘-i sâlim müennes (-ât)",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَمَات",
+        "munlaqamāt",
+        "lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VII": [
-      [134, "مُنْلَقَم", "munlaqam", "lokma olunma yeri, vakti", "kontrol", ""]
+      [
+        "munfa'al",
+        "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
+        "مُنْلَقَم",
+        "munlaqam",
+        "lokma olunma yeri, vakti",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb VIII": [
-      [135, "اِلْتِقَام", "iltiqām", "Yutma, yutulma, yeme, yenilme", "lugat", "Kubbealtı"]
+      ["ifti'āl", "kıyâsî", "اِلْتِقَام", "iltiqām", "Yutma, yutulma, yeme, yenilme", "lugat", "Kubbealtı"]
     ],
     "ism-i merre · bâb VIII": [
-      [137, "اِلْتِقَامَة", "iltiqāma", "bir kere kendisi için lokma olma", "kontrol", ""]
+      ["ifti'āl + tâ", "aday", "اِلْتِقَامَة", "iltiqāma", "bir kere kendisi için lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb VIII": [
-      [138, "مُلْتَقِم", "multaqim", "kendisi için lokma olan", "kontrol", ""],
-      [139, "مُلْتَقِمَة", "multaqima", "kendisi için lokma olan, müennes", "kontrol", ""],
-      [140, "مُلْتَقِمَان", "multaqimān", "kendisi için lokma olan, iki", "kontrol", ""],
-      [141, "مُلْتَقِمَتَان", "multaqimatān", "kendisi için lokma olan, iki, müennes", "kontrol", ""],
-      [142, "مُلْتَقِمُون", "multaqimūn", "kendisi için lokma olanlar", "kontrol", ""],
-      [143, "مُلْتَقِمِين", "multaqimīn", "kendisi için lokma olanlar", "kontrol", ""],
-      [144, "مُلْتَقِمَات", "multaqimāt", "kendisi için lokma olanlar, müennes", "kontrol", ""]
+      ["muftaʿil", "kıyâsî", "مُلْتَقِم", "multaqim", "kendisi için lokma olan", "kontrol", ""],
+      [
+        "muftaʿil + müennes",
+        "kıyâsî",
+        "مُلْتَقِمَة",
+        "multaqima",
+        "kendisi için lokma olan, müennes",
+        "kontrol",
+        ""
+      ],
+      ["muftaʿil + tesniye", "kıyâsî", "مُلْتَقِمَان", "multaqimān", "kendisi için lokma olan, iki", "kontrol", ""],
+      [
+        "muftaʿil + müennes tesniye",
+        "kıyâsî",
+        "مُلْتَقِمَتَان",
+        "multaqimatān",
+        "kendisi için lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْتَقِمُون",
+        "multaqimūn",
+        "kendisi için lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْتَقِمِين",
+        "multaqimīn",
+        "kendisi için lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿil + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْتَقِمَات",
+        "multaqimāt",
+        "kendisi için lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb VIII": [
-      [145, "مُلْتَقَم", "multaqam", "kendisi için lokma olunan", "kontrol", ""],
-      [146, "مُلْتَقَمَة", "multaqama", "kendisi için lokma olunan, müennes", "kontrol", ""],
-      [147, "مُلْتَقَمَان", "multaqamān", "kendisi için lokma olunan, iki", "kontrol", ""],
-      [148, "مُلْتَقَمَتَان", "multaqamatān", "kendisi için lokma olunan, iki, müennes", "kontrol", ""],
-      [149, "مُلْتَقَمُون", "multaqamūn", "kendisi için lokma olunanlar", "kontrol", ""],
-      [150, "مُلْتَقَمِين", "multaqamīn", "kendisi için lokma olunanlar", "kontrol", ""],
-      [151, "مُلْتَقَمَات", "multaqamāt", "kendisi için lokma olunanlar, müennes", "kontrol", ""]
+      ["muftaʿal", "kıyâsî", "مُلْتَقَم", "multaqam", "kendisi için lokma olunan", "kontrol", ""],
+      [
+        "muftaʿal + müennes",
+        "kıyâsî",
+        "مُلْتَقَمَة",
+        "multaqama",
+        "kendisi için lokma olunan, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + tesniye",
+        "kıyâsî",
+        "مُلْتَقَمَان",
+        "multaqamān",
+        "kendisi için lokma olunan, iki",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + müennes tesniye",
+        "kıyâsî",
+        "مُلْتَقَمَتَان",
+        "multaqamatān",
+        "kendisi için lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْتَقَمُون",
+        "multaqamūn",
+        "kendisi için lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْتَقَمِين",
+        "multaqamīn",
+        "kendisi için lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muftaʿal + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْتَقَمَات",
+        "multaqamāt",
+        "kendisi için lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb VIII": [
-      [152, "مُلْتَقَم", "multaqam", "kendisi için lokma olma yeri, vakti", "kontrol", ""]
+      ["muftaʿal", "kıyâsî", "مُلْتَقَم", "multaqam", "kendisi için lokma olma yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb IX": [
-      [499, "اِلْقِمَام", "ilqimām", "iyiden iyiye lokma olma", "kontrol", ""]
+      ["if'ilāl", "kıyâsî", "اِلْقِمَام", "ilqimām", "iyiden iyiye lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb IX": [
-      [500, "مُلْقَمّ", "mulqamm", "iyiden iyiye lokma olan", "kontrol", ""],
-      [501, "مُلْقَمَّة", "mulqamma", "iyiden iyiye lokma olan, müennes", "kontrol", ""],
-      [502, "مُلْقَمَّان", "mulqammān", "iyiden iyiye lokma olan, iki", "kontrol", ""],
-      [503, "مُلْقَمَّتَان", "mulqammatān", "iyiden iyiye lokma olan, iki, müennes", "kontrol", ""],
-      [504, "مُلْقَمُّون", "mulqammūn", "iyiden iyiye lokma olanlar", "kontrol", ""],
-      [505, "مُلْقَمِّين", "mulqammīn", "iyiden iyiye lokma olanlar", "kontrol", ""],
-      [506, "مُلْقَمَّات", "mulqammāt", "iyiden iyiye lokma olanlar, müennes", "kontrol", ""]
+      ["muf'all", "kıyâsî", "مُلْقَمّ", "mulqamm", "iyiden iyiye lokma olan", "kontrol", ""],
+      ["muf'all + müennes", "kıyâsî", "مُلْقَمَّة", "mulqamma", "iyiden iyiye lokma olan, müennes", "kontrol", ""],
+      ["muf'all + tesniye", "kıyâsî", "مُلْقَمَّان", "mulqammān", "iyiden iyiye lokma olan, iki", "kontrol", ""],
+      [
+        "muf'all + müennes tesniye",
+        "kıyâsî",
+        "مُلْقَمَّتَان",
+        "mulqammatān",
+        "iyiden iyiye lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْقَمُّون",
+        "mulqammūn",
+        "iyiden iyiye lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْقَمِّين",
+        "mulqammīn",
+        "iyiden iyiye lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'all + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْقَمَّات",
+        "mulqammāt",
+        "iyiden iyiye lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb X": [
-      [176, "اِسْتِلْقَام", "istilqām", "lokma olmayı isteme", "kontrol", ""]
+      ["istif'āl", "kıyâsî", "اِسْتِلْقَام", "istilqām", "lokma olmayı isteme", "kontrol", ""]
     ],
     "ism-i merre · bâb X": [
-      [177, "اِسْتِلْقَامَة", "istilqāma", "bir kere lokma olmayı isteme", "kontrol", ""]
+      ["istif'āl + tâ", "aday", "اِسْتِلْقَامَة", "istilqāma", "bir kere lokma olmayı isteme", "kontrol", ""]
     ],
     "ism-i fâil · bâb X": [
-      [178, "مُسْتَلْقِم", "mustalqim", "lokma olmayı isteyen", "kontrol", ""],
-      [179, "مُسْتَلْقِمَة", "mustalqima", "lokma olmayı isteyen, müennes", "kontrol", ""],
-      [180, "مُسْتَلْقِمَان", "mustalqimān", "lokma olmayı isteyen, iki", "kontrol", ""],
-      [181, "مُسْتَلْقِمَتَان", "mustalqimatān", "lokma olmayı isteyen, iki, müennes", "kontrol", ""],
-      [182, "مُسْتَلْقِمُون", "mustalqimūn", "lokma olmayı isteyenler", "kontrol", ""],
-      [183, "مُسْتَلْقِمِين", "mustalqimīn", "lokma olmayı isteyenler", "kontrol", ""],
-      [184, "مُسْتَلْقِمَات", "mustalqimāt", "lokma olmayı isteyenler, müennes", "kontrol", ""]
+      ["mustaf'il", "kıyâsî", "مُسْتَلْقِم", "mustalqim", "lokma olmayı isteyen", "kontrol", ""],
+      [
+        "mustaf'il + müennes",
+        "kıyâsî",
+        "مُسْتَلْقِمَة",
+        "mustalqima",
+        "lokma olmayı isteyen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'il + tesniye", "kıyâsî", "مُسْتَلْقِمَان", "mustalqimān", "lokma olmayı isteyen, iki", "kontrol", ""],
+      [
+        "mustaf'il + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَلْقِمَتَان",
+        "mustalqimatān",
+        "lokma olmayı isteyen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَلْقِمُون",
+        "mustalqimūn",
+        "lokma olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَلْقِمِين",
+        "mustalqimīn",
+        "lokma olmayı isteyenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَلْقِمَات",
+        "mustalqimāt",
+        "lokma olmayı isteyenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · bâb X": [
-      [185, "مُسْتَلْقَم", "mustalqam", "lokma olması istenen", "kontrol", ""],
-      [186, "مُسْتَلْقَمَة", "mustalqama", "lokma olması istenen, müennes", "kontrol", ""],
-      [187, "مُسْتَلْقَمَان", "mustalqamān", "lokma olması istenen, iki", "kontrol", ""],
-      [188, "مُسْتَلْقَمَتَان", "mustalqamatān", "lokma olması istenen, iki, müennes", "kontrol", ""],
-      [189, "مُسْتَلْقَمُون", "mustalqamūn", "lokma olması istenenler", "kontrol", ""],
-      [190, "مُسْتَلْقَمِين", "mustalqamīn", "lokma olması istenenler", "kontrol", ""],
-      [191, "مُسْتَلْقَمَات", "mustalqamāt", "lokma olması istenenler, müennes", "kontrol", ""]
+      ["mustaf'al", "kıyâsî", "مُسْتَلْقَم", "mustalqam", "lokma olması istenen", "kontrol", ""],
+      [
+        "mustaf'al + müennes",
+        "kıyâsî",
+        "مُسْتَلْقَمَة",
+        "mustalqama",
+        "lokma olması istenen, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mustaf'al + tesniye", "kıyâsî", "مُسْتَلْقَمَان", "mustalqamān", "lokma olması istenen, iki", "kontrol", ""],
+      [
+        "mustaf'al + müennes tesniye",
+        "kıyâsî",
+        "مُسْتَلْقَمَتَان",
+        "mustalqamatān",
+        "lokma olması istenen, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُسْتَلْقَمُون",
+        "mustalqamūn",
+        "lokma olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُسْتَلْقَمِين",
+        "mustalqamīn",
+        "lokma olması istenenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mustaf'al + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُسْتَلْقَمَات",
+        "mustalqamāt",
+        "lokma olması istenenler, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman/masdar-ı mîmî · bâb X": [
-      [192, "مُسْتَلْقَم", "mustalqam", "lokma olmayı isteme yeri, vakti", "kontrol", ""]
+      ["mustaf'al", "kıyâsî", "مُسْتَلْقَم", "mustalqam", "lokma olmayı isteme yeri, vakti", "kontrol", ""]
     ],
     "masdar · bâb XI": [
-      [507, "اِلْقِيمَام", "ilqīmām", "büsbütün lokma olma", "kontrol", ""]
+      ["if'īlāl", "kıyâsî", "اِلْقِيمَام", "ilqīmām", "büsbütün lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · bâb XI": [
-      [508, "مُلْقَامّ", "mulqāmm", "büsbütün lokma olan", "kontrol", ""],
-      [509, "مُلْقَامَّة", "mulqāmma", "büsbütün lokma olan, müennes", "kontrol", ""],
-      [510, "مُلْقَامَّان", "mulqāmmān", "büsbütün lokma olan, iki", "kontrol", ""],
-      [511, "مُلْقَامَّتَان", "mulqāmmatān", "büsbütün lokma olan, iki, müennes", "kontrol", ""],
-      [512, "مُلْقَامُّون", "mulqāmmūn", "büsbütün lokma olanlar", "kontrol", ""],
-      [513, "مُلْقَامِّين", "mulqāmmīn", "büsbütün lokma olanlar", "kontrol", ""],
-      [514, "مُلْقَامَّات", "mulqāmmāt", "büsbütün lokma olanlar, müennes", "kontrol", ""]
+      ["muf'āll", "kıyâsî", "مُلْقَامّ", "mulqāmm", "büsbütün lokma olan", "kontrol", ""],
+      ["muf'āll + müennes", "kıyâsî", "مُلْقَامَّة", "mulqāmma", "büsbütün lokma olan, müennes", "kontrol", ""],
+      ["muf'āll + tesniye", "kıyâsî", "مُلْقَامَّان", "mulqāmmān", "büsbütün lokma olan, iki", "kontrol", ""],
+      [
+        "muf'āll + müennes tesniye",
+        "kıyâsî",
+        "مُلْقَامَّتَان",
+        "mulqāmmatān",
+        "büsbütün lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مُلْقَامُّون",
+        "mulqāmmūn",
+        "büsbütün lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مُلْقَامِّين",
+        "mulqāmmīn",
+        "büsbütün lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "muf'āll + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مُلْقَامَّات",
+        "mulqāmmāt",
+        "büsbütün lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "masdar · bâb XII": [
-      [515, "اِلْقِوْقَام", "ilqiwqām", "aşırı lokma olma", "kontrol", ""]
+      ["if'iv'āl", "kıyâsî", "اِلْقِوْقَام", "ilqiwqām", "aşırı lokma olma", "kontrol", ""]
     ],
     "masdar · bâb XIII": [
-      [516, "اِلْقِوَّام", "ilqiwwām", "aşırı lokma olma", "kontrol", ""]
+      ["if'ivvāl", "kıyâsî", "اِلْقِوَّام", "ilqiwwām", "aşırı lokma olma", "kontrol", ""]
     ],
     "ism-i fâil · sülâsî": [
-      [213, "لَاقِم", "lāqim", "lokma olan", "kontrol", ""],
-      [214, "لَاقِمَة", "lāqima", "lokma olan, müennes", "kontrol", ""],
-      [215, "لَاقِمَان", "lāqimān", "lokma olan, iki", "kontrol", ""],
-      [216, "لَاقِمَتَان", "lāqimatān", "lokma olan, iki, müennes", "kontrol", ""],
-      [217, "لَاقِمُون", "lāqimūn", "lokma olanlar", "kontrol", ""],
-      [218, "لَاقِمِين", "lāqimīn", "lokma olanlar", "kontrol", ""],
-      [219, "لَاقِمَات", "lāqimāt", "lokma olanlar, müennes", "kontrol", ""]
+      ["fâ'il", "kıyâsî", "لَاقِم", "lāqim", "lokma olan", "kontrol", ""],
+      ["fâ'il + müennes", "kıyâsî", "لَاقِمَة", "lāqima", "lokma olan, müennes", "kontrol", ""],
+      ["fâ'il + tesniye", "kıyâsî", "لَاقِمَان", "lāqimān", "lokma olan, iki", "kontrol", ""],
+      ["fâ'il + müennes tesniye", "kıyâsî", "لَاقِمَتَان", "lāqimatān", "lokma olan, iki, müennes", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "لَاقِمُون", "lāqimūn", "lokma olanlar", "kontrol", ""],
+      ["fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "لَاقِمِين", "lāqimīn", "lokma olanlar", "kontrol", ""],
+      [
+        "fâ'il + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "لَاقِمَات",
+        "lāqimāt",
+        "lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "ism-i mef‘ûl · sülâsî": [
-      [220, "مَلْقُوم", "malqūm", "lokma olunan", "kontrol", ""],
-      [221, "مَلْقُومَة", "malqūma", "lokma olunan, müennes", "kontrol", ""],
-      [222, "مَلْقُومَان", "malqūmān", "lokma olunan, iki", "kontrol", ""],
-      [223, "مَلْقُومَتَان", "malqūmatān", "lokma olunan, iki, müennes", "kontrol", ""],
-      [224, "مَلْقُومُون", "malqūmūn", "lokma olunanlar", "kontrol", ""],
-      [225, "مَلْقُومِين", "malqūmīn", "lokma olunanlar", "kontrol", ""],
-      [226, "مَلْقُومَات", "malqūmāt", "lokma olunanlar, müennes", "kontrol", ""]
+      ["maf'ûl", "kıyâsî", "مَلْقُوم", "malqūm", "lokma olunan", "kontrol", ""],
+      ["maf'ûl + müennes", "kıyâsî", "مَلْقُومَة", "malqūma", "lokma olunan, müennes", "kontrol", ""],
+      ["maf'ûl + tesniye", "kıyâsî", "مَلْقُومَان", "malqūmān", "lokma olunan, iki", "kontrol", ""],
+      [
+        "maf'ûl + müennes tesniye",
+        "kıyâsî",
+        "مَلْقُومَتَان",
+        "malqūmatān",
+        "lokma olunan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-ûn)",
+        "kıyâsî",
+        "مَلْقُومُون",
+        "malqūmūn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müzekker (-în)",
+        "kıyâsî",
+        "مَلْقُومِين",
+        "malqūmīn",
+        "lokma olunanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "maf'ûl + cem‘-i sâlim müennes (-ât)",
+        "kıyâsî",
+        "مَلْقُومَات",
+        "malqūmāt",
+        "lokma olunanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mekân/zaman · sülâsî": [
-      [227, "مَلْقَم", "malqam", "lokma olma yeri, vakti", "kontrol", ""],
-      [228, "مَلْقَمَان", "malqamān", "lokma olma yeri, vakti, iki", "kontrol", ""],
-      [229, "مَلْقِم", "malqim", "lokma olma yeri, vakti", "kontrol", ""],
-      [230, "مَلْقِمَان", "malqimān", "lokma olma yeri, vakti, iki", "kontrol", ""],
-      [231, "مَلْقَمَة", "malqama", "lokma olmanın bol olduğu yer", "kontrol", ""],
-      [232, "مَلْقَمَتَان", "malqamatān", "lokma olmanın bol olduğu yer, iki", "kontrol", ""],
-      [233, "مَلْقِمَة", "malqima", "lokma olmanın bol olduğu yer", "kontrol", ""],
-      [234, "مَلْقِمَتَان", "malqimatān", "lokma olmanın bol olduğu yer, iki", "kontrol", ""],
-      [247, "مَلْقُمَة", "malquma", "lokma olma yeri, vakti", "kontrol", ""],
-      [248, "مَلْقُمَتَان", "malqumatān", "lokma olma yeri, vakti, iki", "kontrol", ""]
+      ["maf'al", "kıyâsî", "مَلْقَم", "malqam", "lokma olma yeri, vakti", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَلْقَمَان", "malqamān", "lokma olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'il", "kıyâsî", "مَلْقِم", "malqim", "lokma olma yeri, vakti", "kontrol", ""],
+      ["maf'il + tesniye", "kıyâsî", "مَلْقِمَان", "malqimān", "lokma olma yeri, vakti, iki", "kontrol", ""],
+      ["maf'ale", "kıyâsî", "مَلْقَمَة", "malqama", "lokma olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ale + tesniye",
+        "kıyâsî",
+        "مَلْقَمَتَان",
+        "malqamatān",
+        "lokma olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ile", "kıyâsî", "مَلْقِمَة", "malqima", "lokma olmanın bol olduğu yer", "kontrol", ""],
+      [
+        "maf'ile + tesniye",
+        "kıyâsî",
+        "مَلْقِمَتَان",
+        "malqimatān",
+        "lokma olmanın bol olduğu yer, iki",
+        "kontrol",
+        ""
+      ],
+      ["maf'ula", "kıyâsî", "مَلْقُمَة", "malquma", "lokma olma yeri, vakti", "kontrol", ""],
+      ["maf'ula + tesniye", "kıyâsî", "مَلْقُمَتَان", "malqumatān", "lokma olma yeri, vakti, iki", "kontrol", ""]
     ],
     "âlet · sülâsî": [
-      [235, "مِلْقَم", "milqam", "lokma olma âleti", "kontrol", ""],
-      [236, "مِلْقَمَان", "milqamān", "lokma olma âleti, iki", "kontrol", ""],
-      [237, "مِلْقَام", "milqām", "lokma olma âleti", "kontrol", ""],
-      [238, "مِلْقَامَان", "milqāmān", "lokma olma âleti, iki", "kontrol", ""],
-      [239, "مِلْقَمَة", "milqama", "lokma olma âleti", "kontrol", ""],
-      [240, "مِلْقَمَتَان", "milqamatān", "lokma olma âleti, iki", "kontrol", ""]
+      ["mif'al", "kıyâsî", "مِلْقَم", "milqam", "lokma olma âleti", "kontrol", ""],
+      ["mif'al + tesniye", "kıyâsî", "مِلْقَمَان", "milqamān", "lokma olma âleti, iki", "kontrol", ""],
+      ["mif'âl", "kıyâsî", "مِلْقَام", "milqām", "lokma olma âleti", "kontrol", ""],
+      ["mif'âl + tesniye", "kıyâsî", "مِلْقَامَان", "milqāmān", "lokma olma âleti, iki", "kontrol", ""],
+      ["mif'ale", "kıyâsî", "مِلْقَمَة", "milqama", "lokma olma âleti", "kontrol", ""],
+      ["mif'ale + tesniye", "kıyâsî", "مِلْقَمَتَان", "milqamatān", "lokma olma âleti, iki", "kontrol", ""]
     ],
     "tafdîl · sülâsî": [
-      [241, "أَلْقَم", "ʾalqam", "daha çok lokma olan", "kontrol", ""],
-      [242, "أَلْقَمَان", "ʾalqamān", "daha çok lokma olan, iki", "kontrol", ""]
+      ["af'al", "kıyâsî", "أَلْقَم", "ʾalqam", "daha çok lokma olan", "kontrol", ""],
+      ["af'al + tesniye", "kıyâsî", "أَلْقَمَان", "ʾalqamān", "daha çok lokma olan, iki", "kontrol", ""]
     ],
     "tafdîl (müennes) · sülâsî": [
-      [243, "لُقْمَى", "luqmā", "daha çok lokma olan", "kontrol", ""],
-      [244, "لُقْمَيَان", "luqmayān", "daha çok lokma olan, iki", "kontrol", ""],
-      [245, "لَقْمَاء", "laqmāʾ", "daha çok lokma olan", "kontrol", ""],
-      [246, "لَقْمَاآن", "laqmāʾān", "daha çok lokma olan, iki", "kontrol", ""]
+      ["fu'lâ", "kıyâsî", "لُقْمَى", "luqmā", "daha çok lokma olan", "kontrol", ""],
+      ["fu'lâ + tesniye", "kıyâsî", "لُقْمَيَان", "luqmayān", "daha çok lokma olan, iki", "kontrol", ""],
+      ["fa'lâ'", "kıyâsî", "لَقْمَاء", "laqmāʾ", "daha çok lokma olan", "kontrol", ""],
+      ["fa'lâ' + tesniye", "kıyâsî", "لَقْمَاآن", "laqmāʾān", "daha çok lokma olan, iki", "kontrol", ""]
     ],
     "tasğîr · sülâsî": [
-      [249, "لُقَيْم", "luqaym", "azıcık lokma olma", "kontrol", ""],
-      [250, "لُقَيْمَان", "luqaymān", "azıcık lokma olma, iki", "kontrol", ""],
-      [251, "لُقَيْمَة", "luqayma", "azıcık lokma olma", "kontrol", ""],
-      [252, "لُقَيْمَتَان", "luqaymatān", "azıcık lokma olma, iki", "kontrol", ""]
+      ["fu'ayl", "kıyâsî", "لُقَيْم", "luqaym", "azıcık lokma olma", "kontrol", ""],
+      ["fu'ayl + tesniye", "kıyâsî", "لُقَيْمَان", "luqaymān", "azıcık lokma olma, iki", "kontrol", ""],
+      ["fu'ayle", "kıyâsî", "لُقَيْمَة", "luqayma", "azıcık lokma olma", "kontrol", ""],
+      ["fu'ayle + tesniye", "kıyâsî", "لُقَيْمَتَان", "luqaymatān", "azıcık lokma olma, iki", "kontrol", ""]
     ],
     "masdar-ı mîmî · sülâsî": [
-      [253, "مَلْقَم", "malqam", "lokma olma", "kontrol", ""],
-      [254, "مَلْقَمَان", "malqamān", "lokma olma, iki", "kontrol", ""]
+      ["maf'al", "kıyâsî", "مَلْقَم", "malqam", "lokma olma", "kontrol", ""],
+      ["maf'al + tesniye", "kıyâsî", "مَلْقَمَان", "malqamān", "lokma olma, iki", "kontrol", ""]
     ],
     "ism-i merre · sülâsî": [
-      [255, "لَقْمَة", "laqma", "bir kere lokma olma", "kontrol", ""],
-      [256, "لَقْمَتَان", "laqmatān", "bir kere lokma olma, iki", "kontrol", ""]
+      ["fa'le", "aday", "لَقْمَة", "laqma", "bir kere lokma olma", "kontrol", ""],
+      ["fa'le + tesniye", "aday", "لَقْمَتَان", "laqmatān", "bir kere lokma olma, iki", "kontrol", ""]
     ],
     "ism-i hey'et · sülâsî": [
-      [257, "لِقْمَة", "liqma", "lokma olma tarzı", "kontrol", ""],
-      [258, "لِقْمَتَان", "liqmatān", "lokma olma tarzı, iki", "kontrol", ""]
+      ["fi'le", "aday", "لِقْمَة", "liqma", "lokma olma tarzı", "kontrol", ""],
+      ["fi'le + tesniye", "aday", "لِقْمَتَان", "liqmatān", "lokma olma tarzı, iki", "kontrol", ""]
     ],
     "sıfat-ı müşebbehe": [
-      [259, "لَقِيم", "laqīm", "her daim lokma olan", "kontrol", ""],
-      [260, "لَقِيمَة", "laqīma", "her daim lokma olan, müennes", "kontrol", ""],
-      [261, "لَقِيمَان", "laqīmān", "her daim lokma olan, iki", "kontrol", ""],
-      [262, "لَقِيمَتَان", "laqīmatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [263, "لَقِيمُون", "laqīmūn", "her daim lokma olanlar", "kontrol", ""],
-      [264, "لَقِيمِين", "laqīmīn", "her daim lokma olanlar", "kontrol", ""],
-      [265, "لَقِيمَات", "laqīmāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [266, "لَقُوم", "laqūm", "her daim lokma olan", "kontrol", ""],
-      [267, "لَقُومَة", "laqūma", "her daim lokma olan, müennes", "kontrol", ""],
-      [268, "لَقُومَان", "laqūmān", "her daim lokma olan, iki", "kontrol", ""],
-      [269, "لَقُومَتَان", "laqūmatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [270, "لَقُومُون", "laqūmūn", "her daim lokma olanlar", "kontrol", ""],
-      [271, "لَقُومِين", "laqūmīn", "her daim lokma olanlar", "kontrol", ""],
-      [272, "لَقُومَات", "laqūmāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [273, "لَقِم", "laqim", "her daim lokma olan", "kontrol", ""],
-      [274, "لَقِمَة", "laqima", "her daim lokma olan, müennes", "kontrol", ""],
-      [275, "لَقِمَان", "laqimān", "her daim lokma olan, iki", "kontrol", ""],
-      [276, "لَقِمَتَان", "laqimatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [277, "لَقِمُون", "laqimūn", "her daim lokma olanlar", "kontrol", ""],
-      [278, "لَقِمِين", "laqimīn", "her daim lokma olanlar", "kontrol", ""],
-      [279, "لَقِمَات", "laqimāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [280, "لَقُم", "laqum", "her daim lokma olan", "kontrol", ""],
-      [281, "لَقُمَة", "laquma", "her daim lokma olan, müennes", "kontrol", ""],
-      [282, "لَقُمَان", "laqumān", "her daim lokma olan, iki", "kontrol", ""],
-      [283, "لَقُمَتَان", "laqumatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [284, "لَقُمُون", "laqumūn", "her daim lokma olanlar", "kontrol", ""],
-      [285, "لَقُمِين", "laqumīn", "her daim lokma olanlar", "kontrol", ""],
-      [286, "لَقُمَات", "laqumāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [287, "لَقَم", "laqam", "her daim lokma olan", "kontrol", ""],
-      [288, "لَقَمَة", "laqama", "her daim lokma olan, müennes", "kontrol", ""],
-      [289, "لَقَمَان", "laqamān", "her daim lokma olan, iki", "kontrol", ""],
-      [290, "لَقَمَتَان", "laqamatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [291, "لَقَمُون", "laqamūn", "her daim lokma olanlar", "kontrol", ""],
-      [292, "لَقَمِين", "laqamīn", "her daim lokma olanlar", "kontrol", ""],
-      [293, "لَقَمَات", "laqamāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [294, "لَقْم", "laqm", "her daim lokma olan", "kontrol", ""],
-      [295, "لَقْمَة", "laqma", "her daim lokma olan, müennes", "kontrol", ""],
-      [296, "لَقْمَان", "laqmān", "her daim lokma olan, iki", "kontrol", ""],
-      [297, "لَقْمَتَان", "laqmatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [298, "لَقْمُون", "laqmūn", "her daim lokma olanlar", "kontrol", ""],
-      [299, "لَقْمِين", "laqmīn", "her daim lokma olanlar", "kontrol", ""],
-      [300, "لَقْمَات", "laqmāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [301, "لُقُم", "luqum", "her daim lokma olan", "kontrol", ""],
-      [302, "لُقُمَة", "luquma", "her daim lokma olan, müennes", "kontrol", ""],
-      [303, "لُقُمَان", "luqumān", "her daim lokma olan, iki", "kontrol", ""],
-      [304, "لُقُمَتَان", "luqumatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [305, "لُقُمُون", "luqumūn", "her daim lokma olanlar", "kontrol", ""],
-      [306, "لُقُمِين", "luqumīn", "her daim lokma olanlar", "kontrol", ""],
-      [307, "لُقُمَات", "luqumāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [308, "لَقْمَان", "laqmān", "her daim lokma olan", "kontrol", ""],
-      [309, "لَقْمَانَة", "laqmāna", "her daim lokma olan, müennes", "kontrol", ""],
-      [310, "لَقْمَانَان", "laqmānān", "her daim lokma olan, iki", "kontrol", ""],
-      [311, "لَقْمَانَتَان", "laqmānatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [312, "لَقْمَانُون", "laqmānūn", "her daim lokma olanlar", "kontrol", ""],
-      [313, "لَقْمَانِين", "laqmānīn", "her daim lokma olanlar", "kontrol", ""],
-      [314, "لَقْمَانَات", "laqmānāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [315, "لُقَام", "luqām", "her daim lokma olan", "kontrol", ""],
-      [316, "لُقَامَة", "luqāma", "her daim lokma olan, müennes", "kontrol", ""],
-      [317, "لُقَامَان", "luqāmān", "her daim lokma olan, iki", "kontrol", ""],
-      [318, "لُقَامَتَان", "luqāmatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [319, "لُقَامُون", "luqāmūn", "her daim lokma olanlar", "kontrol", ""],
-      [320, "لُقَامِين", "luqāmīn", "her daim lokma olanlar", "kontrol", ""],
-      [321, "لُقَامَات", "luqāmāt", "her daim lokma olanlar, müennes", "kontrol", ""],
-      [322, "لَقَام", "laqām", "her daim lokma olan", "kontrol", ""],
-      [323, "لَقَامَة", "laqāma", "her daim lokma olan, müennes", "kontrol", ""],
-      [324, "لَقَامَان", "laqāmān", "her daim lokma olan, iki", "kontrol", ""],
-      [325, "لَقَامَتَان", "laqāmatān", "her daim lokma olan, iki, müennes", "kontrol", ""],
-      [326, "لَقَامُون", "laqāmūn", "her daim lokma olanlar", "kontrol", ""],
-      [327, "لَقَامِين", "laqāmīn", "her daim lokma olanlar", "kontrol", ""],
-      [328, "لَقَامَات", "laqāmāt", "her daim lokma olanlar, müennes", "kontrol", ""]
+      ["fa'īl", "semâî aday", "لَقِيم", "laqīm", "her daim lokma olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "لَقِيمَة", "laqīma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَقِيمَان", "laqīmān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "لَقِيمَتَان",
+        "laqīmatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقِيمُون",
+        "laqīmūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقِيمِين",
+        "laqīmīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقِيمَات",
+        "laqīmāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَقُوم", "laqūm", "her daim lokma olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَقُومَة", "laqūma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَقُومَان", "laqūmān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "لَقُومَتَان",
+        "laqūmatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقُومُون",
+        "laqūmūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقُومِين",
+        "laqūmīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقُومَات",
+        "laqūmāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'il", "semâî aday", "لَقِم", "laqim", "her daim lokma olan", "kontrol", ""],
+      ["fa'il + müennes", "semâî aday", "لَقِمَة", "laqima", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'il + tesniye", "semâî aday", "لَقِمَان", "laqimān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'il + müennes tesniye",
+        "semâî aday",
+        "لَقِمَتَان",
+        "laqimatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقِمُون",
+        "laqimūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقِمِين",
+        "laqimīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'il + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقِمَات",
+        "laqimāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ul", "semâî aday", "لَقُم", "laqum", "her daim lokma olan", "kontrol", ""],
+      ["fa'ul + müennes", "semâî aday", "لَقُمَة", "laquma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'ul + tesniye", "semâî aday", "لَقُمَان", "laqumān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'ul + müennes tesniye",
+        "semâî aday",
+        "لَقُمَتَان",
+        "laqumatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقُمُون",
+        "laqumūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقُمِين",
+        "laqumīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقُمَات",
+        "laqumāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'al", "semâî aday", "لَقَم", "laqam", "her daim lokma olan", "kontrol", ""],
+      ["fa'al + müennes", "semâî aday", "لَقَمَة", "laqama", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'al + tesniye", "semâî aday", "لَقَمَان", "laqamān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'al + müennes tesniye",
+        "semâî aday",
+        "لَقَمَتَان",
+        "laqamatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقَمُون",
+        "laqamūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقَمِين",
+        "laqamīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقَمَات",
+        "laqamāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'l", "semâî aday", "لَقْم", "laqm", "her daim lokma olan", "kontrol", ""],
+      ["fa'l + müennes", "semâî aday", "لَقْمَة", "laqma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'l + tesniye", "semâî aday", "لَقْمَان", "laqmān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'l + müennes tesniye",
+        "semâî aday",
+        "لَقْمَتَان",
+        "laqmatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقْمُون",
+        "laqmūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقْمِين",
+        "laqmīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'l + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقْمَات",
+        "laqmāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'ul", "semâî aday", "لُقُم", "luqum", "her daim lokma olan", "kontrol", ""],
+      ["fu'ul + müennes", "semâî aday", "لُقُمَة", "luquma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fu'ul + tesniye", "semâî aday", "لُقُمَان", "luqumān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fu'ul + müennes tesniye",
+        "semâî aday",
+        "لُقُمَتَان",
+        "luqumatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُقُمُون",
+        "luqumūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُقُمِين",
+        "luqumīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'ul + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُقُمَات",
+        "luqumāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'lān", "semâî aday", "لَقْمَان", "laqmān", "her daim lokma olan", "kontrol", ""],
+      ["fa'lān + müennes", "semâî aday", "لَقْمَانَة", "laqmāna", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'lān + tesniye", "semâî aday", "لَقْمَانَان", "laqmānān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'lān + müennes tesniye",
+        "semâî aday",
+        "لَقْمَانَتَان",
+        "laqmānatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقْمَانُون",
+        "laqmānūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقْمَانِين",
+        "laqmānīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'lān + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقْمَانَات",
+        "laqmānāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu'āl", "semâî aday", "لُقَام", "luqām", "her daim lokma olan", "kontrol", ""],
+      ["fu'āl + müennes", "semâî aday", "لُقَامَة", "luqāma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fu'āl + tesniye", "semâî aday", "لُقَامَان", "luqāmān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fu'āl + müennes tesniye",
+        "semâî aday",
+        "لُقَامَتَان",
+        "luqāmatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُقَامُون",
+        "luqāmūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُقَامِين",
+        "luqāmīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُقَامَات",
+        "luqāmāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'āl", "semâî aday", "لَقَام", "laqām", "her daim lokma olan", "kontrol", ""],
+      ["fa'āl + müennes", "semâî aday", "لَقَامَة", "laqāma", "her daim lokma olan, müennes", "kontrol", ""],
+      ["fa'āl + tesniye", "semâî aday", "لَقَامَان", "laqāmān", "her daim lokma olan, iki", "kontrol", ""],
+      [
+        "fa'āl + müennes tesniye",
+        "semâî aday",
+        "لَقَامَتَان",
+        "laqāmatān",
+        "her daim lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقَامُون",
+        "laqāmūn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقَامِين",
+        "laqāmīn",
+        "her daim lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقَامَات",
+        "laqāmāt",
+        "her daim lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mübalağa": [
-      [329, "لَقَّام", "laqqām", "işi lokma olma olan", "kontrol", ""],
-      [330, "لَقَّامَة", "laqqāma", "işi lokma olma olan, müennes", "kontrol", ""],
-      [331, "لَقَّامَان", "laqqāmān", "işi lokma olma olan, iki", "kontrol", ""],
-      [332, "لَقَّامَتَان", "laqqāmatān", "işi lokma olma olan, iki, müennes", "kontrol", ""],
-      [333, "لَقَّامُون", "laqqāmūn", "işi lokma olma olanlar", "kontrol", ""],
-      [334, "لَقَّامِين", "laqqāmīn", "işi lokma olma olanlar", "kontrol", ""],
-      [335, "لَقَّامَات", "laqqāmāt", "işi lokma olma olanlar, müennes", "kontrol", ""],
-      [336, "لَقَّامَة", "laqqāma", "pek çok lokma olan", "kontrol", ""],
-      [337, "لَقَّامَتَان", "laqqāmatān", "pek çok lokma olan, iki", "kontrol", ""],
-      [338, "لَقَّامَات", "laqqāmāt", "pek çok lokma olanlar, müennes", "kontrol", ""],
-      [339, "لَقُوم", "laqūm", "çok lokma olan", "kontrol", ""],
-      [340, "لَقُومَة", "laqūma", "çok lokma olan, müennes", "kontrol", ""],
-      [341, "لَقُومَان", "laqūmān", "çok lokma olan, iki", "kontrol", ""],
-      [342, "لَقُومَتَان", "laqūmatān", "çok lokma olan, iki, müennes", "kontrol", ""],
-      [343, "لَقُومُون", "laqūmūn", "çok lokma olanlar", "kontrol", ""],
-      [344, "لَقُومِين", "laqūmīn", "çok lokma olanlar", "kontrol", ""],
-      [345, "لَقُومَات", "laqūmāt", "çok lokma olanlar, müennes", "kontrol", ""],
-      [346, "لَقُّوم", "laqqūm", "pek çok lokma olan", "kontrol", ""],
-      [347, "لَقُّومَة", "laqqūma", "pek çok lokma olan, müennes", "kontrol", ""],
-      [348, "لَقُّومَان", "laqqūmān", "pek çok lokma olan, iki", "kontrol", ""],
-      [349, "لَقُّومَتَان", "laqqūmatān", "pek çok lokma olan, iki, müennes", "kontrol", ""],
-      [350, "لَقُّومُون", "laqqūmūn", "pek çok lokma olanlar", "kontrol", ""],
-      [351, "لَقُّومِين", "laqqūmīn", "pek çok lokma olanlar", "kontrol", ""],
-      [352, "لَقُّومَات", "laqqūmāt", "pek çok lokma olanlar, müennes", "kontrol", ""],
-      [353, "لِقِّيم", "liqqīm", "lokma olmada aşırı giden", "kontrol", ""],
-      [354, "لِقِّيمَة", "liqqīma", "lokma olmada aşırı giden, müennes", "kontrol", ""],
-      [355, "لِقِّيمَان", "liqqīmān", "lokma olmada aşırı giden, iki", "kontrol", ""],
-      [356, "لِقِّيمَتَان", "liqqīmatān", "lokma olmada aşırı giden, iki, müennes", "kontrol", ""],
-      [357, "لِقِّيمُون", "liqqīmūn", "lokma olmada aşırı gidenler", "kontrol", ""],
-      [358, "لِقِّيمِين", "liqqīmīn", "lokma olmada aşırı gidenler", "kontrol", ""],
-      [359, "لِقِّيمَات", "liqqīmāt", "lokma olmada aşırı gidenler, müennes", "kontrol", ""],
-      [360, "لُقَّام", "luqqām", "son derece lokma olan", "kontrol", ""],
-      [361, "لُقَّامَة", "luqqāma", "son derece lokma olan, müennes", "kontrol", ""],
-      [362, "لُقَّامَان", "luqqāmān", "son derece lokma olan, iki", "kontrol", ""],
-      [363, "لُقَّامَتَان", "luqqāmatān", "son derece lokma olan, iki, müennes", "kontrol", ""],
-      [364, "لُقَّامُون", "luqqāmūn", "son derece lokma olanlar", "kontrol", ""],
-      [365, "لُقَّامِين", "luqqāmīn", "son derece lokma olanlar", "kontrol", ""],
-      [366, "لُقَّامَات", "luqqāmāt", "son derece lokma olanlar, müennes", "kontrol", ""],
-      [367, "مِلْقَام", "milqām", "lokma olmayı âdet edinmiş", "kontrol", ""],
-      [368, "مِلْقَامَة", "milqāma", "lokma olmayı âdet edinmiş, müennes", "kontrol", ""],
-      [369, "مِلْقَامَان", "milqāmān", "lokma olmayı âdet edinmiş, iki", "kontrol", ""],
-      [370, "مِلْقَامَتَان", "milqāmatān", "lokma olmayı âdet edinmiş, iki, müennes", "kontrol", ""],
-      [371, "مِلْقَامُون", "milqāmūn", "lokma olmayı âdet edinmişler", "kontrol", ""],
-      [372, "مِلْقَامِين", "milqāmīn", "lokma olmayı âdet edinmişler", "kontrol", ""],
-      [373, "مِلْقَامَات", "milqāmāt", "lokma olmayı âdet edinmişler, müennes", "kontrol", ""],
-      [374, "مِلْقِيم", "milqīm", "lokma olmaya düşkün", "kontrol", ""],
-      [375, "مِلْقِيمَة", "milqīma", "lokma olmaya düşkün, müennes", "kontrol", ""],
-      [376, "مِلْقِيمَان", "milqīmān", "lokma olmaya düşkün, iki", "kontrol", ""],
-      [377, "مِلْقِيمَتَان", "milqīmatān", "lokma olmaya düşkün, iki, müennes", "kontrol", ""],
-      [378, "مِلْقِيمُون", "milqīmūn", "lokma olmaya düşkünler", "kontrol", ""],
-      [379, "مِلْقِيمِين", "milqīmīn", "lokma olmaya düşkünler", "kontrol", ""],
-      [380, "مِلْقِيمَات", "milqīmāt", "lokma olmaya düşkünler, müennes", "kontrol", ""],
-      [381, "لَقِيم", "laqīm", "çok lokma olan", "kontrol", ""],
-      [382, "لَقِيمَة", "laqīma", "çok lokma olan, müennes", "kontrol", ""],
-      [383, "لَقِيمَان", "laqīmān", "çok lokma olan, iki", "kontrol", ""],
-      [384, "لَقِيمَتَان", "laqīmatān", "çok lokma olan, iki, müennes", "kontrol", ""],
-      [385, "لَقِيمُون", "laqīmūn", "çok lokma olanlar", "kontrol", ""],
-      [386, "لَقِيمِين", "laqīmīn", "çok lokma olanlar", "kontrol", ""],
-      [387, "لَقِيمَات", "laqīmāt", "çok lokma olanlar, müennes", "kontrol", ""],
-      [388, "لَقَّم", "laqqam", "çok lokma olan", "kontrol", ""],
-      [389, "لَقَّمَة", "laqqama", "çok lokma olan, müennes", "kontrol", ""],
-      [390, "لَقَّمَان", "laqqamān", "çok lokma olan, iki", "kontrol", ""],
-      [391, "لَقَّمَتَان", "laqqamatān", "çok lokma olan, iki, müennes", "kontrol", ""],
-      [392, "لَقَّمُون", "laqqamūn", "çok lokma olanlar", "kontrol", ""],
-      [393, "لَقَّمِين", "laqqamīn", "çok lokma olanlar", "kontrol", ""],
-      [394, "لَقَّمَات", "laqqamāt", "çok lokma olanlar, müennes", "kontrol", ""]
+      ["fa''āl", "semâî aday", "لَقَّام", "laqqām", "işi lokma olma olan", "kontrol", ""],
+      ["fa''āl + müennes", "semâî aday", "لَقَّامَة", "laqqāma", "işi lokma olma olan, müennes", "kontrol", ""],
+      ["fa''āl + tesniye", "semâî aday", "لَقَّامَان", "laqqāmān", "işi lokma olma olan, iki", "kontrol", ""],
+      [
+        "fa''āl + müennes tesniye",
+        "semâî aday",
+        "لَقَّامَتَان",
+        "laqqāmatān",
+        "işi lokma olma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقَّامُون",
+        "laqqāmūn",
+        "işi lokma olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقَّامِين",
+        "laqqāmīn",
+        "işi lokma olma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقَّامَات",
+        "laqqāmāt",
+        "işi lokma olma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''āle", "semâî aday", "لَقَّامَة", "laqqāma", "pek çok lokma olan", "kontrol", ""],
+      ["fa''āle + tesniye", "semâî aday", "لَقَّامَتَان", "laqqāmatān", "pek çok lokma olan, iki", "kontrol", ""],
+      [
+        "fa''āle + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقَّامَات",
+        "laqqāmāt",
+        "pek çok lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'ūl", "semâî aday", "لَقُوم", "laqūm", "çok lokma olan", "kontrol", ""],
+      ["fa'ūl + müennes", "semâî aday", "لَقُومَة", "laqūma", "çok lokma olan, müennes", "kontrol", ""],
+      ["fa'ūl + tesniye", "semâî aday", "لَقُومَان", "laqūmān", "çok lokma olan, iki", "kontrol", ""],
+      [
+        "fa'ūl + müennes tesniye",
+        "semâî aday",
+        "لَقُومَتَان",
+        "laqūmatān",
+        "çok lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقُومُون",
+        "laqūmūn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقُومِين",
+        "laqūmīn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقُومَات",
+        "laqūmāt",
+        "çok lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''ūl", "semâî aday", "لَقُّوم", "laqqūm", "pek çok lokma olan", "kontrol", ""],
+      ["fa''ūl + müennes", "semâî aday", "لَقُّومَة", "laqqūma", "pek çok lokma olan, müennes", "kontrol", ""],
+      ["fa''ūl + tesniye", "semâî aday", "لَقُّومَان", "laqqūmān", "pek çok lokma olan, iki", "kontrol", ""],
+      [
+        "fa''ūl + müennes tesniye",
+        "semâî aday",
+        "لَقُّومَتَان",
+        "laqqūmatān",
+        "pek çok lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقُّومُون",
+        "laqqūmūn",
+        "pek çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقُّومِين",
+        "laqqūmīn",
+        "pek çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''ūl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقُّومَات",
+        "laqqūmāt",
+        "pek çok lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fi''īl", "semâî aday", "لِقِّيم", "liqqīm", "lokma olmada aşırı giden", "kontrol", ""],
+      ["fi''īl + müennes", "semâî aday", "لِقِّيمَة", "liqqīma", "lokma olmada aşırı giden, müennes", "kontrol", ""],
+      ["fi''īl + tesniye", "semâî aday", "لِقِّيمَان", "liqqīmān", "lokma olmada aşırı giden, iki", "kontrol", ""],
+      [
+        "fi''īl + müennes tesniye",
+        "semâî aday",
+        "لِقِّيمَتَان",
+        "liqqīmatān",
+        "lokma olmada aşırı giden, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لِقِّيمُون",
+        "liqqīmūn",
+        "lokma olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لِقِّيمِين",
+        "liqqīmīn",
+        "lokma olmada aşırı gidenler",
+        "kontrol",
+        ""
+      ],
+      [
+        "fi''īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لِقِّيمَات",
+        "liqqīmāt",
+        "lokma olmada aşırı gidenler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fu''āl", "semâî aday", "لُقَّام", "luqqām", "son derece lokma olan", "kontrol", ""],
+      ["fu''āl + müennes", "semâî aday", "لُقَّامَة", "luqqāma", "son derece lokma olan, müennes", "kontrol", ""],
+      ["fu''āl + tesniye", "semâî aday", "لُقَّامَان", "luqqāmān", "son derece lokma olan, iki", "kontrol", ""],
+      [
+        "fu''āl + müennes tesniye",
+        "semâî aday",
+        "لُقَّامَتَان",
+        "luqqāmatān",
+        "son derece lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لُقَّامُون",
+        "luqqāmūn",
+        "son derece lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لُقَّامِين",
+        "luqqāmīn",
+        "son derece lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fu''āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لُقَّامَات",
+        "luqqāmāt",
+        "son derece lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl", "semâî aday", "مِلْقَام", "milqām", "lokma olmayı âdet edinmiş", "kontrol", ""],
+      [
+        "mif'āl + müennes",
+        "semâî aday",
+        "مِلْقَامَة",
+        "milqāma",
+        "lokma olmayı âdet edinmiş, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'āl + tesniye", "semâî aday", "مِلْقَامَان", "milqāmān", "lokma olmayı âdet edinmiş, iki", "kontrol", ""],
+      [
+        "mif'āl + müennes tesniye",
+        "semâî aday",
+        "مِلْقَامَتَان",
+        "milqāmatān",
+        "lokma olmayı âdet edinmiş, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْقَامُون",
+        "milqāmūn",
+        "lokma olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْقَامِين",
+        "milqāmīn",
+        "lokma olmayı âdet edinmişler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'āl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْقَامَات",
+        "milqāmāt",
+        "lokma olmayı âdet edinmişler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["mif'īl", "semâî aday", "مِلْقِيم", "milqīm", "lokma olmaya düşkün", "kontrol", ""],
+      ["mif'īl + müennes", "semâî aday", "مِلْقِيمَة", "milqīma", "lokma olmaya düşkün, müennes", "kontrol", ""],
+      ["mif'īl + tesniye", "semâî aday", "مِلْقِيمَان", "milqīmān", "lokma olmaya düşkün, iki", "kontrol", ""],
+      [
+        "mif'īl + müennes tesniye",
+        "semâî aday",
+        "مِلْقِيمَتَان",
+        "milqīmatān",
+        "lokma olmaya düşkün, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "مِلْقِيمُون",
+        "milqīmūn",
+        "lokma olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "مِلْقِيمِين",
+        "milqīmīn",
+        "lokma olmaya düşkünler",
+        "kontrol",
+        ""
+      ],
+      [
+        "mif'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "مِلْقِيمَات",
+        "milqīmāt",
+        "lokma olmaya düşkünler, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa'īl", "semâî aday", "لَقِيم", "laqīm", "çok lokma olan", "kontrol", ""],
+      ["fa'īl + müennes", "semâî aday", "لَقِيمَة", "laqīma", "çok lokma olan, müennes", "kontrol", ""],
+      ["fa'īl + tesniye", "semâî aday", "لَقِيمَان", "laqīmān", "çok lokma olan, iki", "kontrol", ""],
+      [
+        "fa'īl + müennes tesniye",
+        "semâî aday",
+        "لَقِيمَتَان",
+        "laqīmatān",
+        "çok lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقِيمُون",
+        "laqīmūn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقِيمِين",
+        "laqīmīn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa'īl + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقِيمَات",
+        "laqīmāt",
+        "çok lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ],
+      ["fa''al", "semâî aday", "لَقَّم", "laqqam", "çok lokma olan", "kontrol", ""],
+      ["fa''al + müennes", "semâî aday", "لَقَّمَة", "laqqama", "çok lokma olan, müennes", "kontrol", ""],
+      ["fa''al + tesniye", "semâî aday", "لَقَّمَان", "laqqamān", "çok lokma olan, iki", "kontrol", ""],
+      [
+        "fa''al + müennes tesniye",
+        "semâî aday",
+        "لَقَّمَتَان",
+        "laqqamatān",
+        "çok lokma olan, iki, müennes",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-ûn)",
+        "semâî aday",
+        "لَقَّمُون",
+        "laqqamūn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müzekker (-în)",
+        "semâî aday",
+        "لَقَّمِين",
+        "laqqamīn",
+        "çok lokma olanlar",
+        "kontrol",
+        ""
+      ],
+      [
+        "fa''al + cem‘-i sâlim müennes (-ât)",
+        "semâî aday",
+        "لَقَّمَات",
+        "laqqamāt",
+        "çok lokma olanlar, müennes",
+        "kontrol",
+        ""
+      ]
     ],
     "mensûb": [
-      [395, "لَقْمِيّ", "laqmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [397, "لَقَمِيّ", "laqamiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [399, "لِقْمِيّ", "liqmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [401, "لُقْمِيّ", "luqmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [403, "لِقَامِيّ", "liqāmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [405, "لَاقِمِيّ", "lāqimiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [407, "مَلْقُومِيّ", "malqūmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [409, "لَقِيمِيّ", "laqīmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [411, "مَلْقَمِيّ", "malqamiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [413, "تَلْقِيمِيّ", "talqīmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [415, "تَلَاقُمِيّ", "talāqumiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [417, "إِلْقَامِيّ", "ʾilqāmiyy", "lokma olma ile ilgili", "kontrol", ""],
-      [419, "اِلْتِقَامِيّ", "iltiqāmiyy", "lokma olma ile ilgili", "kontrol", ""]
+      ["fa'l + iyy", "kıyâsî", "لَقْمِيّ", "laqmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fa'al + iyy", "kıyâsî", "لَقَمِيّ", "laqamiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fi'l + iyy", "kıyâsî", "لِقْمِيّ", "liqmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fu'l + iyy", "kıyâsî", "لُقْمِيّ", "luqmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fi'āl + iyy", "kıyâsî", "لِقَامِيّ", "liqāmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fâ'il + iyy", "kıyâsî", "لَاقِمِيّ", "lāqimiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["maf'ûl + iyy", "kıyâsî", "مَلْقُومِيّ", "malqūmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["fa'īl + iyy", "kıyâsî", "لَقِيمِيّ", "laqīmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["maf'al + iyy", "kıyâsî", "مَلْقَمِيّ", "malqamiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["taf'īl + iyy", "kıyâsî", "تَلْقِيمِيّ", "talqīmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["tafā'ul + iyy", "kıyâsî", "تَلَاقُمِيّ", "talāqumiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["if'āl + iyy", "kıyâsî", "إِلْقَامِيّ", "ʾilqāmiyy", "lokma olma ile ilgili", "kontrol", ""],
+      ["ifti'āl + iyy", "kıyâsî", "اِلْتِقَامِيّ", "iltiqāmiyy", "lokma olma ile ilgili", "kontrol", ""]
     ],
     "masdar-ı sınâî": [
-      [396, "لَقْمِيَّة", "laqmiyya", "lokma olanlık", "kontrol", ""],
-      [398, "لَقَمِيَّة", "laqamiyya", "lokma olanlık", "kontrol", ""],
-      [400, "لِقْمِيَّة", "liqmiyya", "lokma olanlık", "kontrol", ""],
-      [402, "لُقْمِيَّة", "luqmiyya", "lokma olanlık", "kontrol", ""],
-      [404, "لِقَامِيَّة", "liqāmiyya", "lokma olanlık", "kontrol", ""],
-      [406, "لَاقِمِيَّة", "lāqimiyya", "lokma olanlık", "kontrol", ""],
-      [408, "مَلْقُومِيَّة", "malqūmiyya", "lokma olanlık", "kontrol", ""],
-      [410, "لَقِيمِيَّة", "laqīmiyya", "lokma olanlık", "kontrol", ""],
-      [412, "مَلْقَمِيَّة", "malqamiyya", "lokma olanlık", "kontrol", ""],
-      [414, "تَلْقِيمِيَّة", "talqīmiyya", "lokma olanlık", "kontrol", ""],
-      [416, "تَلَاقُمِيَّة", "talāqumiyya", "lokma olanlık", "kontrol", ""],
-      [418, "إِلْقَامِيَّة", "ʾilqāmiyya", "lokma olanlık", "kontrol", ""],
-      [420, "اِلْتِقَامِيَّة", "iltiqāmiyya", "lokma olanlık", "kontrol", ""]
+      ["fa'l + iyye", "kıyâsî", "لَقْمِيَّة", "laqmiyya", "lokma olanlık", "kontrol", ""],
+      ["fa'al + iyye", "kıyâsî", "لَقَمِيَّة", "laqamiyya", "lokma olanlık", "kontrol", ""],
+      ["fi'l + iyye", "kıyâsî", "لِقْمِيَّة", "liqmiyya", "lokma olanlık", "kontrol", ""],
+      ["fu'l + iyye", "kıyâsî", "لُقْمِيَّة", "luqmiyya", "lokma olanlık", "kontrol", ""],
+      ["fi'āl + iyye", "kıyâsî", "لِقَامِيَّة", "liqāmiyya", "lokma olanlık", "kontrol", ""],
+      ["fâ'il + iyye", "kıyâsî", "لَاقِمِيَّة", "lāqimiyya", "lokma olanlık", "kontrol", ""],
+      ["maf'ûl + iyye", "kıyâsî", "مَلْقُومِيَّة", "malqūmiyya", "lokma olanlık", "kontrol", ""],
+      ["fa'īl + iyye", "kıyâsî", "لَقِيمِيَّة", "laqīmiyya", "lokma olanlık", "kontrol", ""],
+      ["maf'al + iyye", "kıyâsî", "مَلْقَمِيَّة", "malqamiyya", "lokma olanlık", "kontrol", ""],
+      ["taf'īl + iyye", "kıyâsî", "تَلْقِيمِيَّة", "talqīmiyya", "lokma olanlık", "kontrol", ""],
+      ["tafā'ul + iyye", "kıyâsî", "تَلَاقُمِيَّة", "talāqumiyya", "lokma olanlık", "kontrol", ""],
+      ["if'āl + iyye", "kıyâsî", "إِلْقَامِيَّة", "ʾilqāmiyya", "lokma olanlık", "kontrol", ""],
+      ["ifti'āl + iyye", "kıyâsî", "اِلْتِقَامِيَّة", "iltiqāmiyya", "lokma olanlık", "kontrol", ""]
     ],
     "ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)": [
-      [421, "لَقَام", "laqām", "lokma olma", "kontrol", ""],
-      [422, "لُقُوم", "luqūm", "lokma olma", "kontrol", ""],
-      [423, "لِقَام", "liqām", "lokma olma", "kontrol", ""],
-      [424, "لُقْم", "luqm", "lokma olma", "kontrol", ""],
-      [425, "لَقَامَة", "laqāma", "lokma olma", "kontrol", ""],
-      [426, "لِقَامَة", "liqāma", "lokma olma", "kontrol", ""],
-      [427, "لُقُومَة", "luqūma", "lokma olma", "kontrol", ""],
-      [428, "لَقْم", "laqm", "lokma olma", "kontrol", ""],
-      [429, "لِقْم", "liqm", "lokma olma", "kontrol", ""]
+      ["fa'âl (kelâm, selâm)", "semâî aday", "لَقَام", "laqām", "lokma olma", "kontrol", ""],
+      ["fu'ûl (vudû')", "semâî aday", "لُقُوم", "luqūm", "lokma olma", "kontrol", ""],
+      ["fi'âl", "semâî aday", "لِقَام", "liqām", "lokma olma", "kontrol", ""],
+      ["fu'l (şükr)", "semâî aday", "لُقْم", "luqm", "lokma olma", "kontrol", ""],
+      ["fa'âle (belâğa)", "semâî aday", "لَقَامَة", "laqāma", "lokma olma", "kontrol", ""],
+      ["fi'âle", "semâî aday", "لِقَامَة", "liqāma", "lokma olma", "kontrol", ""],
+      ["fu'ûle", "semâî aday", "لُقُومَة", "luqūma", "lokma olma", "kontrol", ""],
+      ["fa'l", "semâî aday", "لَقْم", "laqm", "lokma olma", "kontrol", ""],
+      ["fi'l", "semâî aday", "لِقْم", "liqm", "lokma olma", "kontrol", ""]
     ],
     "ism-i cins · ifrâdî (aday)": [
-      [430, "لَاقُوم", "lāqūm", "lokma olma türünden şey", "kontrol", ""],
-      [432, "لَقَمَة", "laqama", "lokma olma türünden şey", "kontrol", ""],
-      [433, "لُقَمَة", "luqama", "lokma olma türünden şey", "kontrol", ""],
-      [434, "أُلْقُومَة", "ʾulqūma", "lokma olma türünden şey", "kontrol", ""],
-      [435, "لَوْقَم", "lawqam", "lokma olma türünden şey", "kontrol", ""],
-      [437, "لَيْقَم", "layqam", "lokma olma türünden şey", "kontrol", ""],
-      [439, "لَقْم", "laqm", "lokma olma türünden şey", "kontrol", ""],
-      [441, "لَقَم", "laqam", "lokma olma türünden şey", "kontrol", ""],
-      [443, "لِقْم", "liqm", "lokma olma türünden şey", "kontrol", ""],
-      [445, "لُقْم", "luqm", "lokma olma türünden şey", "kontrol", ""],
-      [447, "لَقِيم", "laqīm", "lokma olma türünden şey", "kontrol", ""],
-      [449, "لِقَم", "liqam", "lokma olma türünden şey", "kontrol", ""],
-      [451, "لُقُم", "luqum", "lokma olma türünden şey", "kontrol", ""],
-      [453, "لَقَام", "laqām", "lokma olma türünden şey", "kontrol", ""]
+      ["fâ'ûl", "semâî aday", "لَاقُوم", "lāqūm", "lokma olma türünden şey", "kontrol", ""],
+      ["fa'ala", "semâî aday", "لَقَمَة", "laqama", "lokma olma türünden şey", "kontrol", ""],
+      ["fu'ala", "semâî aday", "لُقَمَة", "luqama", "lokma olma türünden şey", "kontrol", ""],
+      ["uf'ûla", "semâî aday", "أُلْقُومَة", "ʾulqūma", "lokma olma türünden şey", "kontrol", ""],
+      ["faw'al", "semâî aday", "لَوْقَم", "lawqam", "lokma olma türünden şey", "kontrol", ""],
+      ["fay'al", "semâî aday", "لَيْقَم", "layqam", "lokma olma türünden şey", "kontrol", ""],
+      ["fa'l", "semâî aday", "لَقْم", "laqm", "lokma olma türünden şey", "kontrol", ""],
+      ["fa'al", "semâî aday", "لَقَم", "laqam", "lokma olma türünden şey", "kontrol", ""],
+      ["fi'l", "semâî aday", "لِقْم", "liqm", "lokma olma türünden şey", "kontrol", ""],
+      ["fu'l", "semâî aday", "لُقْم", "luqm", "lokma olma türünden şey", "kontrol", ""],
+      ["fa'îl", "semâî aday", "لَقِيم", "laqīm", "lokma olma türünden şey", "kontrol", ""],
+      ["fi'al", "semâî aday", "لِقَم", "liqam", "lokma olma türünden şey", "kontrol", ""],
+      ["fu'ul", "semâî aday", "لُقُم", "luqum", "lokma olma türünden şey", "kontrol", ""],
+      ["fa'âl", "semâî aday", "لَقَام", "laqām", "lokma olma türünden şey", "kontrol", ""]
     ],
     "ism-i cins · cem‘î ve tekili (+tâ)": [
-      [431, "لَاقُومَة", "lāqūma", "lokma olma türünden bir tane", "kontrol", ""],
-      [436, "لَوْقَمَة", "lawqama", "lokma olma türünden bir tane", "kontrol", ""],
-      [438, "لَيْقَمَة", "layqama", "lokma olma türünden bir tane", "kontrol", ""],
-      [440, "لَقْمَة", "laqma", "lokma olma türünden bir tane", "kontrol", ""],
-      [442, "لَقَمَة", "laqama", "lokma olma türünden bir tane", "kontrol", ""],
-      [444, "لِقْمَة", "liqma", "lokma olma türünden bir tane", "kontrol", ""],
-      [446, "لُقْمَة", "luqma", "Lokma", "lugat", "Vikisözlük: bite · Luggat"],
-      [448, "لَقِيمَة", "laqīma", "lokma olma türünden bir tane", "kontrol", ""],
-      [450, "لِقَمَة", "liqama", "lokma olma türünden bir tane", "kontrol", ""],
-      [452, "لُقُمَة", "luquma", "lokma olma türünden bir tane", "kontrol", ""],
-      [454, "لَقَامَة", "laqāma", "lokma olma türünden bir tane", "kontrol", ""]
+      ["fâ'ûl + tâ (tekili)", "semâî aday", "لَاقُومَة", "lāqūma", "lokma olma türünden bir tane", "kontrol", ""],
+      ["faw'al + tâ (tekili)", "semâî aday", "لَوْقَمَة", "lawqama", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fay'al + tâ (tekili)", "semâî aday", "لَيْقَمَة", "layqama", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fa'l + tâ (tekili)", "semâî aday", "لَقْمَة", "laqma", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fa'al + tâ (tekili)", "semâî aday", "لَقَمَة", "laqama", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fi'l + tâ (tekili)", "semâî aday", "لِقْمَة", "liqma", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fu'l + tâ (tekili)", "semâî aday", "لُقْمَة", "luqma", "Lokma", "lugat", "Vikisözlük: bite · Luggat"],
+      ["fa'îl + tâ (tekili)", "semâî aday", "لَقِيمَة", "laqīma", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fi'al + tâ (tekili)", "semâî aday", "لِقَمَة", "liqama", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fu'ul + tâ (tekili)", "semâî aday", "لُقُمَة", "luquma", "lokma olma türünden bir tane", "kontrol", ""],
+      ["fa'âl + tâ (tekili)", "semâî aday", "لَقَامَة", "laqāma", "lokma olma türünden bir tane", "kontrol", ""]
     ],
     "cem‘-i mükesser (aday)": [
-      [455, "أَلْقَام", "ʾalqām", "lokma olmalar", "kontrol", ""],
-      [456, "أَلْقِمَة", "ʾalqima", "lokma olmalar", "kontrol", ""],
-      [457, "أَلَاقِم", "ʾalāqim", "lokma olmalar", "kontrol", ""],
-      [458, "أَلَاقِيم", "ʾalāqīm", "lokma olmalar", "kontrol", ""],
-      [459, "لُقُوم", "luqūm", "lokma olmalar", "kontrol", ""],
-      [460, "لُقُم", "luqum", "lokma olmalar", "kontrol", ""],
-      [461, "لِقَام", "liqām", "lokma olmalar", "kontrol", ""],
-      [462, "لِقَم", "liqam", "lokma olmalar", "kontrol", ""],
-      [463, "لِقَمَة", "liqama", "lokma olmalar", "kontrol", ""],
-      [464, "لُقَم", "luqam", "Yolun göm ve muzam yerine yâhûd vasatına denir", "lugat", "Kamus"],
-      [465, "لُقَماء", "luqamāʾ", "lokma olmalar", "kontrol", ""],
-      [466, "لَقَمَة", "laqama", "lokma olmalar", "kontrol", ""],
-      [467, "لُقَّام", "luqqām", "lokma olmalar", "kontrol", ""],
-      [468, "لَقَام", "laqām", "lokma olmalar", "kontrol", ""],
-      [469, "لَقَم", "laqam", "lokma olmalar", "kontrol", ""],
-      [470, "مَلَاقِم", "malāqim", "lokma olmalar", "kontrol", ""],
-      [471, "مَلَاقِيم", "malāqīm", "lokma olmalar", "kontrol", ""],
-      [472, "لَوَاقِم", "lawāqim", "lokma olmalar", "kontrol", ""],
-      [473, "أَلْقُم", "ʾalqum", "lokma olmalar", "kontrol", ""],
-      [474, "لُقَّم", "luqqam", "lokma olmalar", "kontrol", ""],
-      [475, "لَقَائِم", "laqāʾim", "lokma olmalar", "kontrol", ""],
-      [476, "لُقَيْم", "luqaym", "lokma olmalar", "kontrol", ""]
+      ["ef'āl", "semâî aday", "أَلْقَام", "ʾalqām", "lokma olmalar", "kontrol", ""],
+      ["ef'ile", "semâî aday", "أَلْقِمَة", "ʾalqima", "lokma olmalar", "kontrol", ""],
+      ["efâ'il", "semâî aday", "أَلَاقِم", "ʾalāqim", "lokma olmalar", "kontrol", ""],
+      ["efâ'îl", "semâî aday", "أَلَاقِيم", "ʾalāqīm", "lokma olmalar", "kontrol", ""],
+      ["fu'ūl", "semâî aday", "لُقُوم", "luqūm", "lokma olmalar", "kontrol", ""],
+      ["fu'ul", "semâî aday", "لُقُم", "luqum", "lokma olmalar", "kontrol", ""],
+      ["fi'āl", "semâî aday", "لِقَام", "liqām", "lokma olmalar", "kontrol", ""],
+      ["fi'al", "semâî aday", "لِقَم", "liqam", "lokma olmalar", "kontrol", ""],
+      ["fi'ale", "semâî aday", "لِقَمَة", "liqama", "lokma olmalar", "kontrol", ""],
+      ["fu'al", "semâî aday", "لُقَم", "luqam", "Yolun göm ve muzam yerine yâhûd vasatına denir", "lugat", "Kamus"],
+      ["fu'alā'", "semâî aday", "لُقَماء", "luqamāʾ", "lokma olmalar", "kontrol", ""],
+      ["fa'ale", "semâî aday", "لَقَمَة", "laqama", "lokma olmalar", "kontrol", ""],
+      ["fu''āl", "semâî aday", "لُقَّام", "luqqām", "lokma olmalar", "kontrol", ""],
+      ["fa'āl", "semâî aday", "لَقَام", "laqām", "lokma olmalar", "kontrol", ""],
+      ["fa'al", "semâî aday", "لَقَم", "laqam", "lokma olmalar", "kontrol", ""],
+      ["mefâ'il", "semâî aday", "مَلَاقِم", "malāqim", "lokma olmalar", "kontrol", ""],
+      ["mefâ'îl", "semâî aday", "مَلَاقِيم", "malāqīm", "lokma olmalar", "kontrol", ""],
+      ["fevâ'il", "semâî aday", "لَوَاقِم", "lawāqim", "lokma olmalar", "kontrol", ""],
+      ["af'ul", "semâî aday", "أَلْقُم", "ʾalqum", "lokma olmalar", "kontrol", ""],
+      ["fu''al", "semâî aday", "لُقَّم", "luqqam", "lokma olmalar", "kontrol", ""],
+      ["fe'âil", "semâî aday", "لَقَائِم", "laqāʾim", "lokma olmalar", "kontrol", ""],
+      ["fu'ayl(cem')", "semâî aday", "لُقَيْم", "luqaym", "lokma olmalar", "kontrol", ""]
     ],
     "cem‘u’l-cem‘ (aday)": [
-      [477, "أَلْقَامَات", "ʾalqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [478, "أَلْقِمَات", "ʾalqimāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [479, "أَلَاقِمَات", "ʾalāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [480, "أَلَاقِيمَات", "ʾalāqīmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [481, "لُقُومَات", "luqūmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [482, "لُقُمَات", "luqumāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [483, "لِقَامَات", "liqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [484, "لِقَمَات", "liqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [485, "لِقَمَات", "liqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [486, "لُقَمَات", "luqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [487, "لُقَماآت", "luqamāʾāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [488, "لَقَمَات", "laqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [489, "لُقَّامَات", "luqqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [490, "لَقَامَات", "laqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [491, "لَقَمَات", "laqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [492, "مَلَاقِمَات", "malāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [493, "مَلَاقِيمَات", "malāqīmāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [494, "لَوَاقِمَات", "lawāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [495, "أَلْقُمَات", "ʾalqumāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [496, "لُقَّمَات", "luqqamāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [497, "لَقَائِمَات", "laqāʾimāt", "lokma olmalar topluluğu", "kontrol", ""],
-      [498, "لُقَيْمَات", "luqaymāt", "lokma olmalar topluluğu", "kontrol", ""]
+      ["ef'āl + ât", "semâî aday", "أَلْقَامَات", "ʾalqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["ef'ile + ât", "semâî aday", "أَلْقِمَات", "ʾalqimāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["efâ'il + ât", "semâî aday", "أَلَاقِمَات", "ʾalāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["efâ'îl + ât", "semâî aday", "أَلَاقِيمَات", "ʾalāqīmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu'ūl + ât", "semâî aday", "لُقُومَات", "luqūmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu'ul + ât", "semâî aday", "لُقُمَات", "luqumāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fi'āl + ât", "semâî aday", "لِقَامَات", "liqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fi'al + ât", "semâî aday", "لِقَمَات", "liqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fi'ale + ât", "semâî aday", "لِقَمَات", "liqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu'al + ât", "semâî aday", "لُقَمَات", "luqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu'alā' + ât", "semâî aday", "لُقَماآت", "luqamāʾāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fa'ale + ât", "semâî aday", "لَقَمَات", "laqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu''āl + ât", "semâî aday", "لُقَّامَات", "luqqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fa'āl + ât", "semâî aday", "لَقَامَات", "laqāmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fa'al + ât", "semâî aday", "لَقَمَات", "laqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["mefâ'il + ât", "semâî aday", "مَلَاقِمَات", "malāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["mefâ'îl + ât", "semâî aday", "مَلَاقِيمَات", "malāqīmāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fevâ'il + ât", "semâî aday", "لَوَاقِمَات", "lawāqimāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["af'ul + ât", "semâî aday", "أَلْقُمَات", "ʾalqumāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu''al + ât", "semâî aday", "لُقَّمَات", "luqqamāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fe'âil + ât", "semâî aday", "لَقَائِمَات", "laqāʾimāt", "lokma olmalar topluluğu", "kontrol", ""],
+      ["fu'ayl(cem') + ât", "semâî aday", "لُقَيْمَات", "luqaymāt", "lokma olmalar topluluğu", "kontrol", ""]
     ]
   },
   "reddedilen": [
-    [
-      "ism-i mef‘ûl · bâb IX",
-      "if'ilâl (renk/ayıp, lâzım)",
-      "YOK (kitap tablosunda işaretli, F 360; Wiktionary ek tablosunda IX için N/A; harf-i cerli mef‘ûl için tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XI",
-      "if'îlâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XII",
-      "if'iv'âl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    [
-      "ism-i mef‘ûl · bâb XIII",
-      "if'ivvâl (lâzım)",
-      "YOK (lâzım fiil, kıyâsen; tablo 9 vezindir, bu bâb tabloda yok; tanık bulunamadı)"
-    ],
-    ["rubâ‘î", "dört harfli bâblar", "muzâ‘af olmayan üç harfli kökte kök ikilenmez; rubâ‘î kök ayrı bir köktür"],
-    ["mübalağa", "fa''āle + müennes", "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-ûn)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "mübalağa",
-      "fa''āle + cem‘-i sâlim müzekker (-în)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fa'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "fu'ala + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ],
-    [
-      "ism-i cins · cem‘î ve tekili (+tâ)",
-      "uf'ûla + tâ (tekili)",
-      "bu kök sınıfında bu kalıp yok veya sondaki harf bu eki almaz"
-    ]
+    ["ism-i mef‘ûl · bâb IX", "if'ilâl (renk/ayıp, lâzım)", "r1"],
+    ["ism-i mef‘ûl · bâb XI", "if'îlâl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XII", "if'iv'âl (lâzım)", "r2"],
+    ["ism-i mef‘ûl · bâb XIII", "if'ivvâl (lâzım)", "r2"],
+    ["rubâ‘î", "dört harfli bâblar", "r4"],
+    ["mübalağa", "fa''āle + müennes", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-ûn)", "r3"],
+    ["mübalağa", "fa''āle + cem‘-i sâlim müzekker (-în)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ala + tâ (tekili)", "r3"],
+    ["ism-i cins · cem‘î ve tekili (+tâ)", "uf'ûla + tâ (tekili)", "r3"]
   ],
-  "sozlukler": {
-    "kok_anlamlari": {
-      "kok": "لقم",
-      "turkce": "Lukm: lokma, yudum"
-    },
-    "osmanlica_lugatler": {
-      "الْتَقَمَ": {
-        "sorgular": ["altakama"],
-        "maddeler": []
-      }
-    },
-    "mekayis": [
-      {
-        "baslik": "لَقَمَ",
-        "metin": "(لَقَمَ) اللَّامُ وَالْقَافُ وَالْمِيمُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى تَنَاوُلِ طَعَامٍ بِالْيَدِ لِلْفَمِ، ثُمَّ يُقَاسُ عَلَيْهِ. وَلَقِمْتُ الطَّعَامَ أَلْقَمُهُ، وَتَلَقَّمْتُهُ وَالْتَقَمْتُهُ. وَرَجُلٌ تِلْقَامَةٌ: كَثِيرُ اللَّقْمِ. وَمِنَ الْبَابِ اللَّقَمُ: مَنْهَجُ الطَّرِيقِ، عَلَى التَّشْبِيهِ، كَأَنَّهُ لَقِمَ مَنْ مَرَّ فِيهِ، كَمَا ذَكَرْنَاهُ فِي السِّرَاطِ، وَقَدْ مَضَى."
-      }
-    ],
-    "cebel_mihveri": {
-      "kaynak": "Muhammed Hasan Hasan Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal li-Elfâzi'l-Kur'âni'l-Kerîm (Şâmile, yazıya geçirilmiş metin)",
-      "fasil": "اللام والقاف",
-      "baslik": "لقم",
-      "mihveri": "ضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].",
-      "sesler": "",
-      "tam_metin": "{فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142]\n\"اللُقمة -بالضم: اسم لما تُهيِّئه للالتقام. لَقِمْت اللُقمة (كشرب) لَقْمًا- بالفتح: أخذتَها بفيك، واللَقْمة -بالفتح: أَكلُها بمَرَّة ولقّمت البعيرَ- ض: إذا لم يأكل حتى ناولتَه بيدك \".\n° المعنى المحوري\nضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].\n° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم).\n(4/1994)",
-      "fasil_ozeti": "° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم)."
-    },
-    "kuran_korpusu": {
-      "kaynak": "Quranic Arabic Corpus 0.4 (Kais Dukes, Leeds Üniversitesi; GNU GPL; http://corpus.quran.com)",
-      "gecis": 1,
-      "ilk_yer": "37:142:1:2",
-      "tur": {
-        "V": 1
-      },
-      "bab": {
-        "VIII": 1
-      },
-      "zaman_kip": {
-        "PERF": 1
-      },
-      "fiil_ismi_ozellikleri": {},
-      "lemmalar": {
-        "ٱلْتَقَمَ": 1
-      },
-      "bicimler": {
-        "ٱلْتَقَمَ": 1
-      }
-    },
-    "etymarab": {
-      "kaynak": "EtymArab, Oslo Üniversitesi (Bibliotheca Polyglotta)",
-      "latin": "LQM",
-      "dolu": true,
-      "kok_maddesi": "Back to library EtymArab LQM لقم BP – • HDAL • © SG | 9May2023 √LQM “root” ▪ LQM_1 ‘morsel, mouthful’ ↗ luqmaẗ ▪ LQM_2 ‘...’ ↗ ... ▪ LQM_3 ‘...’ ↗ ... ♦ Semantic value spectrum in ClassAr (acc. to BAH2008): ‘to swallow, gobble up; morsel, mouthful of food, to hand-feed; to obstruct’ ▪ … – . . – – Sources ; meta ; gram ; engl ; conc ; hist ; cogn ; disc ; west ; deriv ;",
-      "kelime_maddeleri": []
-    },
-    "kaikki_vikisozluk": [
-      {
-        "w": "لقيمة",
-        "u": "لقيمة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لُقَيْمَة • (luqayma) f (plural لُقَيْمَات (luqaymāt))",
-        "t": "Diminutive of لُقْمَة (luqma).",
-        "s": [
-          ["ar-diminutive", "Diminutive"]
-        ],
-        "g": ["snack, bit, morsel (the minimum amount of food in one’s diet that must be eaten in order to keep fit)"],
-        "r": ["luqayma"],
-        "ipa": ["/lu.qaj.ma/"],
-        "el": [
-          ["لُقْمَة", "لقمة#Arabic"]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "لقيمات",
-        "u": "لقيمات",
-        "p": "noun",
-        "h": "ar-head",
-        "e": "لُقَيْمَات • (luqaymāt) f pl",
-        "t": "See the etymology of the corresponding lemma form.",
-        "g": ["plural of لُقَيْمَة (luqayma)"],
-        "tag": ["form-of", "plural"],
-        "fo": ["لُقَيْمَة"],
-        "r": ["luqaymāt"],
-        "yol": "müştak"
-      },
-      {
-        "w": "لقمة",
-        "u": "لقمة",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "لُقْمَة • (luqma) f (plural لُقَم (luqam))",
-        "g": ["bite", "bit, mouthful", "little piece, morsel"],
-        "r": ["luqma"],
-        "ipa": ["/luq.ma/"],
-        "ds": [
-          ["afb", "لقمة", "ligma, lugma"],
-          ["acw", "لقمة", "lugma"],
-          ["mt", "loqma", ""],
-          ["az", "lüqmə", ""],
-          ["az", "loğma", ""],
-          ["az", "loxma", ""],
-          ["ota", "لقمه", "lokma"],
-          ["fa", "لقمه", "loqme"]
-        ],
-        "k": "لقم",
-        "yol": "kök"
-      },
-      {
-        "w": "علقم",
-        "u": "علقم",
-        "p": "noun",
-        "t": "Augmented from لَقَمَ (laqama, “to block”) or لَقِمَ (laqima, “to gobble up”), or elative from it, like عَسْجَد (ʕasjad, “gold”).",
-        "s": [
-          ["ar-rootbox", ""],
-          ["ar-elative", "elative"]
-        ],
-        "synonyms": ["حَنْظَل", "حَدَج", "قِثَّاء الْحِمَار", "فَقُّوس الْحِمَار", "صَاب"],
-        "g": ["colocynth", "squirting cucumber"],
-        "tag": ["al-Andalus", "collective"],
-        "r": ["ʕalqam"],
-        "ipa": ["/ʕal.qam/"],
-        "el": [
-          ["لَقَمَ", "لقم#Arabic"],
-          ["لَقِمَ", "لقم#Arabic"],
-          ["عَسْجَد", "عسجد#Arabic"]
-        ],
-        "wp": ["ar:"],
-        "k": "لقم",
-        "yol": "kök"
-      },
-      {
-        "w": "ملقم",
-        "u": "ملقم",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "مُلَقِّم • (mulaqqim) (feminine مُلَقِّمَة (mulaqqima), masculine plural مُلَقِّمُون (mulaqqimūn), feminine plural مُلَقِّمَات (mulaqqimāt))",
-        "g": ["active participle of لَقَّمَ (laqqama)"],
-        "tag": ["active", "form-of", "participle"],
-        "fo": ["لَقَّمَ"],
-        "r": ["mulaqqim"],
-        "k": "لقم",
-        "yol": "kök"
-      },
-      {
-        "w": "ملقم",
-        "u": "ملقم",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "مُلَقِّم • (mulaqqim) m (plural مُلَقِّمَات (mulaqqimāt))",
-        "g": ["server"],
-        "tag": ["dated"],
-        "r": ["mulaqqim"],
-        "yol": "müştak"
-      },
-      {
-        "w": "ملقم",
-        "u": "ملقم",
-        "p": "adj",
-        "h": "ar-adj+",
-        "e": "مُلَقَّم • (mulaqqam) (feminine مُلَقَّمَة (mulaqqama), masculine plural مُلَقَّمُون (mulaqqamūn), feminine plural مُلَقَّمَات (mulaqqamāt))",
-        "g": ["passive participle of لَقَّمَ (laqqama)"],
-        "tag": ["form-of", "participle", "passive"],
-        "fo": ["لَقَّمَ"],
-        "r": ["mulaqqam"],
-        "k": "لقم",
-        "yol": "kök"
-      },
-      {
-        "w": "لقمان",
-        "u": "لقمان",
-        "p": "name",
-        "h": "ar-proper noun",
-        "e": "لُقْمَان • (luqmān) m",
-        "g": ["Luqman (a wise man mentioned in the Qur'an)", "a male given name, Luqman"],
-        "r": ["luqmān"],
-        "ipa": ["/luq.maːn/"],
-        "ds": [
-          ["mt", "Loqman", ""],
-          ["az", "Loğman", ""],
-          ["chg", "لقمان", "lqmʾn"],
-          ["ota", "لقمان", "Lokman"],
-          ["fa", "لقمان", "loqmân"],
-          ["pa", "لُقمان", "luqmān"],
-          ["tk", "lukman", ""],
-          ["ur", "لُقمان", ""]
-        ],
-        "yol": "müştak"
-      },
-      {
-        "w": "التقام",
-        "u": "التقام",
-        "p": "noun",
-        "h": "ar-noun",
-        "e": "اِلْتِقَام • (iltiqām) m",
-        "t": "Verbal noun of اِلْتَقَمَ (iltaqama).",
-        "s": [
-          ["ar-verbal noun", "Verbal noun"]
-        ],
-        "g": ["verbal noun of اِلْتَقَمَ (iltaqama) (form VIII)"],
-        "tag": ["form-of", "noun-from-verb"],
-        "fo": ["اِلْتَقَمَ"],
-        "r": ["iltiqām"],
-        "ipa": ["/il.ti.qaːm/"],
-        "ds": [
-          ["ota", "التقام", "iltikâm"]
-        ],
-        "el": [
-          ["اِلْتَقَمَ", "التقم#Arabic"]
-        ],
-        "yol": "müştak"
-      }
-    ],
-    "arabic_ontology": [
-      {
-        "id": "46055",
-        "arapca": [
-          "اِسْتَرَطَ",
-          "خَضَمَ",
-          "زَرِدَ",
-          "اِزْدَرَدَ",
-          "لَقِمَ",
-          "لَهِمَ",
-          "بَلَعَ",
-          "اِبْتَلَعَ",
-          "مَضَغَ",
-          "أَكَلَ1"
-        ],
-        "ingilizce": [],
-        "tanim": "عملية أدخل الطعام في الفم وصولاً إلى الجوف",
-        "misal": "_ أحمد طعامه بسرعة وانطلق إلى المدرسة",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46679",
-        "arapca": [
-          "نَهَشَ",
-          "اِسْتَرَطَ",
-          "خَضَمَ",
-          "ذَاقَ",
-          "زَرِدَ",
-          "اِزْدَرَدَ",
-          "طَعِمَ",
-          "لَقِمَ",
-          "لَهِمَ",
-          "تَغَذَّى",
-          "اِغْتَذى",
-          "بَلَعَ",
-          "اِبْتَلَعَ",
-          "قَضَمَ",
-          "اِقْتاتَ",
-          "اِقْتاتَ ب",
-          "مَضَغَ",
-          "أَكَلَ1"
-        ],
-        "ingilizce": [],
-        "tanim": "وضع الطَعَام في فمه ثم مضغه حتى ينزل في جوفه",
-        "misal": "_ محمدٌ طعامه سريعاً",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "46710",
-        "arapca": ["ألْقَمَ", "وَسَقَ", "حَشَا1", "مَلأٌ", "عَبَّأَ", "سَدَّ1", "حَشْوٌ", "بَطَّنَ"],
-        "ingilizce": [],
-        "tanim": "وضع شيئاً في مكان أو موضع فارغ",
-        "misal": "_ خالد كيس القمح وأرسله إلى بيت جده",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      },
-      {
-        "id": "47385",
-        "arapca": ["لَعِقَ", "لَقِمَ", "لاكَ", "لاكَ في", "مَضَغَ", "عَلَكَ"],
-        "ingilizce": [],
-        "tanim": "عملية تقطيع الطعام الصلب وتحويله إلى جزيئات صغيرة ثم طحنها معا باستخدام الأسنان ليسهل بلعها ودخولها إلى الجهاز الهضمي",
-        "misal": "_ يزيد قطعة اللحم جيداً قبل بلعها",
-        "veri_kaynagi": "43",
-        "ust": [],
-        "kunye": "Arabic Ontology, Birzeit University (SinaLab, Mustafa Jarrar), ücretsiz sürüm, çıkarım 09-06-2024; atıf: Jarrar 2021 Applied Ontology 16:1; Jarrar ve Amayreh 2019 NLDB"
-      }
-    ],
-    "mustak_lugat": {
-      "لُقْمَان": [
-        {
-          "eser": "Vankulu",
-          "madde": "Lukman",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Kerkesler sâhibi olan kimsenin ismidir ki şuarâ onu Âda nisbet kılıp Lokmân b. Âddır derler.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "لُقْمَانُ",
-          "okunus": "Lukmân",
-          "koken": "lâmın zammı ve kâfın sükûnuyla"
-        }
-      ],
-      "اِلْتِقَام": [
-        {
-          "eser": "Kubbealtı",
-          "madde": "İLTİKAM",
-          "yazilis": "ﺍﻟﺘﻘﺎﻡ",
-          "tur": "i.",
-          "koken": "Ar. laḳm “yutmak, yemek”ten iltiḳām",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Yutma, yutulma, yeme, yenilme",
-              "misaller": [
-                ["Birbirin mahv eylemektir iktizâ-yı kâinât / İltikām-ı yekdiğerdendir gıdâ-yı kâinât", "Yenişehirli Avnî"],
-                ["Bu sofracık efendiler ki iltikāma muntazır / Huzûrunuzda titriyor şu milletin hayâtıdır", "Tevfik Fikret"]
-              ],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        }
-      ],
-      "لُقْمَة": [
-        {
-          "eser": "Luggat",
-          "madde": "lukme",
-          "manalar": [
-            {
-              "etiket": "",
-              "tanim": "Lokma",
-              "misaller": [],
-              "no": 1
-            }
-          ],
-          "deyimler": []
-        },
-        {
-          "eser": "Kamus",
-          "madde": "el-lukmet",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "Yutmak için tehyie olunan tumeye denir.",
-              "misaller": []
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللُّقْمَةُ",
-          "okunus": "el-lukmet",
-          "koken": "lâmın zammıyla ve fethiyle"
-        }
-      ],
-      "لُقَم": [
-        {
-          "eser": "Kamus",
-          "madde": "lukam",
-          "manalar": [
-            {
-              "no": 1,
-              "etiket": "",
-              "tanim": "ve اَللُّقَمُ [el-lukam] (صُرَدٌ [surad] vezninde) Yolun göm ve muzam yerine yâhûd vasatına denir; yukâlu: أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ",
-              "misaller": [
-                ["أَخَذُوا لَقَمَ الطَّرِيقِ وَلُقَمَهُ أَيْ مُعْظَمَهُ أَوْ وَسَطَهُ", ""]
-              ]
-            }
-          ],
-          "deyimler": [],
-          "yazilis": "اَللَّقَمُ",
-          "okunus": "el-lekam",
-          "koken": "lâmın ve kâfın fethiyle"
-        }
-      ]
-    },
-    "tercume": {
-      "mekayis": [
-        {
-          "baslik": "Lekame (لَقَمَ)",
-          "metin": "Lâm, kāf ve mîm: sahîh bir asıldır; taamın el ile ağza alınmasına delâlet eder, sonra ona kıyas olunur. «Lakimtü't-taâme elkamühü»: taamı lokma lokma yedim; «ve telekkamtühü ve'l-tekamtühü» dahi denir. Ve «racülün tilkâmetün»: lokması çok adam. Ve bu bâbdandır: «el-lekam»: yolun menheci, teşbîh tarîkiyle; sanki oradan geçeni yutmuş gibidir, nitekim «Sırât» bahsinde zikretmiştik, geçti."
-        }
-      ],
-      "cebel_mihveri": {
-        "mihveri": "Ağzı, kendisine atılanı bir defada yutacak sûrette kapamak: lokmanın iltikâmı gibi. {Feltegamehü'l-hûtü ve hüve mülîm} [Sâffât: 142] (fülkten kaydırılıp atıldığında balık onu ağzına alıp yuttu). Ve bundan: «el-lekam» (muharreke): yolun ekserisi, açıklığı, metni ve ortası. (Orada yürüyen kimse onu yutup sindirir, nitekim «sırât» dediler.) {Ve lekad âteynâ Lukmâne'l-hikme} [Lokmân: 12]: bu, Allah'ın kullarından bir kulun alemidir; âlim yahut kâdî yahut kul idi; zemânı Îsâ ile Muhammed (aleyhimâ's-salâtü ve's-selâm) arasıdır [Bahr 8/181'e bak]."
-      },
-      "arabic_ontology": [
-        {
-          "tanim": "Yiyeceği ağza sokup cevfe vardırma ameliyesi",
-          "misal": "_ Ahmed taamını çabuk yedi ve mektebe gitti"
-        },
-        {
-          "tanim": "Taamı ağzına koyup cevfine ininceye kadar çiğnemek",
-          "misal": "_ Muhammed taamını süratle yedi"
-        },
-        {
-          "tanim": "Bir şeyi bir yere yahut boş bir mahalle vazetmek",
-          "misal": "_ Hâlid buğday torbasını doldurup dedesinin evine gönderdi"
-        },
-        {
-          "tanim": "Sert taamı kesip küçük parçalara çevirmek, sonra dişlerle birlikte öğütüp yutulmasını ve hazım cihazına girmesini kolaylaştırmak ameliyesi",
-          "misal": "_ Yezîd et parçasını yutmadan evvel güzelce çiğnedi"
-        }
-      ],
-      "etymarab": {
-        "kok_maddesi": "Kütüphaneye dönüş EtymArab LQM لقم BP – • HDAL • © SG | 9 Mayıs 2023 √LQM «kök» ▪ LQM_1 «lokma, ağız dolusu» ↗ luqmaẗ ▪ LQM_2 «...» ↗ ... ▪ LQM_3 «...» ↗ ... ♦ Klasik Arapçada mana tayfı (BAH2008'e göre): «yutmak, silip süpürmek; lokma, ağız dolusu taam, el ile yedirmek; tıkamak» ▪ … – . . – – Kaynaklar ; üstveri ; sarf ; İngilizce ; mülâhaza ; tarih ; soydaş ; söylem ; batı ; türev ;"
-      },
-      "kaikki_vikisozluk": [
-        {
-          "g": ["Çerez, azık, lokma (bedenin sıhhatini muhafaza için yenmesi icap eden asgarî taam miktarı)"]
-        },
-        {
-          "g": ["لُقَيْمَة (lukayme)nin cem'i"]
-        },
-        {
-          "g": ["Isırık, lokma", "Azıcık, ağız dolusu", "Küçük parça, lokma"]
-        },
-        {
-          "g": ["Hanzal (ebûcehil karpuzu)", "Cırtatan (eşek hıyarı)"]
-        },
-        {
-          "g": ["لَقَّمَ (lekkame) fiilinin ism-i fâili"]
-        },
-        {
-          "g": ["Lokma sunan kimse"]
-        },
-        {
-          "g": ["لَقَّمَ (lekkame) fiilinin ism-i mef'ûlü"]
-        },
-        {
-          "g": ["Lokmân (Kur'ân'da zikredilen hakîm zât)", "Erkek adı: Lokmân"]
-        },
-        {
-          "g": ["اِلْتَقَمَ (iltekame) fiilinin masdarı (sekizinci bâb)"]
-        }
-      ]
-    }
-  },
-  "kuran_gecisleri": 1,
-  "kuranda_var": true,
-  "sema": {
-    "sema": "graf-ic-graf",
-    "kok_dosyasi": "kokler/<kök>.json: kök grafı bir kez; kelimeler = bu kökten bütün kelimeler",
-    "kok_alt_grafi": "kokler[kok].mustaklar = gruplar; her grup bir alt graf; satır = [kalıp numarası, Arapça, Latin, Türkçe, güven, tanık]; kalıp numarası kaliplar listesine işaret eder",
-    "sozluk_dali": "kokler[kok].sozlukler = kaynak adı → o kaynaktaki maddeler",
-    "kelime_dali": "kelimeler[i].morfoloji = Kur'ân içindeki ilk geçiş ve kelime çevirileri",
-    "satir_alanlari": ["kalip", "arapca", "latin", "turkce", "guven", "tanik"]
-  },
-  "tasnif": {
-    "fasil": "لق",
-    "harf": "ل",
-    "mahrec": "zelakiyye",
-    "bolge": "dil"
-  },
-  "mana_tasnif": {
-    "yontem": "Arabic WordNet v2 (el yapımı, kök etiketli) → Princeton WordNet",
+  "mana": {
     "ince": "loaded.a.02",
     "orta": "adj.all",
     "ust": "hâl ve vasıf",
@@ -1154,59 +2491,8 @@
     "dayanak_tanim": "(of weapons) charged with ammunition",
     "synset_sayisi": 3
   },
-  "ses_mana_tasnif": {
-    "kaynak": "Cebel, el-Mu'cemü'l-İştikâkıyyü'l-Mü'asssal",
-    "fasil": "اللام والقاف",
-    "mihveri": "ضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].",
-    "sesler": "",
-    "fasil_ozeti": "° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم).",
-    "tam_metin": "{فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142]\n\"اللُقمة -بالضم: اسم لما تُهيِّئه للالتقام. لَقِمْت اللُقمة (كشرب) لَقْمًا- بالفتح: أخذتَها بفيك، واللَقْمة -بالفتح: أَكلُها بمَرَّة ولقّمت البعيرَ- ض: إذا لم يأكل حتى ناولتَه بيدك \".\n° المعنى المحوري\nضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181].\n° معنى الفصل المعجمي (لق): الصدم أو الالتقاء بالشيء في الحيّز بقوة كما يتمثل في صدم اللسان جوانب جوف الفم، وتردد سواد العين إلى جانبيها مرة بعد أخرى بخفة - في (لقق)، وفي مصادفة الشيء على الأرض لَقًى - في (لقى)، وفي إلقاء النبز حيث يلصق بمن نُبِزَ به - في (لقب)، وفي إلقاء مادة اللقاح نطفة أو ما يشبه الدقيق في مقرها بجث تستقر فيه - في (لقح)، وفي وجود الشيء متاحًا دون قصد بحيث يُلتقَط - في (لقط)، وفي كونه متاحًا في الهواء بحيث يُلقَف - في (لقف)، وفي كونه متاحًا لتنطبق عليه فتحة الفم - في (لفم).\n(4/1994)"
-  },
-  "hakikat_mecaz_tasnif": {
-    "kaynak": "Zemahşerî, Esâsü'l-Belâğa (tahkik: Muhammed Bâsil Uyûnü's-Sûd, Dâru'l-Kütübi'l-İlmiyye 1998; Şâmile, yazıya geçirilmiş metin)",
-    "hakikat": "لقم الطعام والتقمه وتلقمه، وألقمته\nلقّمته. ورجل تلقامة. وخذ هذا اللقم وهو المنهج. قال زهير:\nله لقم لباغي الخير سهل ... وكيد حين تبلوه متين",
-    "mecaz": "ألقم فم البكرة عوداً ليضيق. والتقم أذنه: سارّه. وألقمته أذني فصبّ فيها كلاماً. وألقم إصبعه مرارة. ورجل لهمٌ لقمٌ: يعلو الخصوم. وركيّة متلقّمةٌ: كثيرة الماء.",
-    "kinaye": "",
-    "mecaz_var": true
-  },
-  "prototip_yayilim_tasnif": {
-    "kaynak": "prototip ve yayılım (radyal kategori usulü); bütün prototip kaynakları ve bütün mecaz/kinâye satırları",
-    "prototipler": [
-      {
-        "kaynak": "Cebel mihverî mana",
-        "metin": "ضمُّ الفم ما يُلقَي إليه لَقْفًا بمَرَّة: كالتقام اللقمة: {فَالْتَقَمَهُ الْحُوتُ وَهُوَ مُلِيمٌ} [الصافات: 142] (تلقاه في فمه حين أُدْحِض من الفُلْك). ومنه: اللَقَم محركة: معظم الطريق مُنفَرَجه متنه ووسطه. (يلتقم السائر فيه ويبلعه كما قالوا (سراط). {وَلَقَدْ آتَينَا لُقْمَانَ الْحِكْمَةَ} [لقمان: 12] هذا عَلَمٌ لعبد من عباد الله كان عالمًا، أو قاضيًا، أو عبدًا، وزمانه ما بين عيسى ومحمد عليهما الصلاة والسلام [ينظر بحر 8/ 181]."
-      },
-      {
-        "kaynak": "Zemahşerî hakîkat kolu",
-        "metin": "لقم الطعام والتقمه وتلقمه، وألقمته\nلقّمته. ورجل تلقامة. وخذ هذا اللقم وهو المنهج. قال زهير:\nله لقم لباغي الخير سهل ... وكيد حين تبلوه متين"
-      },
-      {
-        "kaynak": "Mekâyîs: لَقَمَ",
-        "metin": "(لَقَمَ) اللَّامُ وَالْقَافُ وَالْمِيمُ أَصْلٌ صَحِيحٌ، يَدُلُّ عَلَى تَنَاوُلِ طَعَامٍ بِالْيَدِ لِلْفَمِ، ثُمَّ يُقَاسُ عَلَيْهِ. وَلَقِمْتُ الطَّعَامَ أَلْقَمُهُ، وَتَلَقَّمْتُهُ وَالْتَقَمْتُهُ. وَرَجُلٌ تِلْقَامَةٌ: كَثِيرُ اللَّقْمِ. وَمِنَ الْبَابِ اللَّقَمُ: مَنْهَجُ الطَّرِيقِ، عَلَى التَّشْبِيهِ، كَأَنَّهُ لَقِمَ مَنْ مَرَّ فِيهِ، كَمَا ذَكَرْنَاهُ فِي السِّرَاطِ، وَقَدْ مَضَى."
-      }
-    ],
-    "karsilastirma_prototipi": "Cebel mihverî mana",
-    "yayilim": [
-      {
-        "kaynak": "Zemahşerî mecaz kolu",
-        "metin": "ألقم فم البكرة عوداً ليضيق. والتقم أذنه: سارّه. وألقمته أذني فصبّ فيها كلاماً. وألقم إصبعه مرارة. ورجل لهمٌ لقمٌ: يعلو الخصوم. وركيّة متلقّمةٌ: كثيرة الماء.",
-        "prototipe_benzerlik": 0.517,
-        "halka": "orta"
-      }
-    ],
-    "ortalama_benzerlik": 0.517,
-    "halka_esikleri": "veriden: üçte bir dilimler 0.362 / 0.532; uzun metinler 350 karakterlik parçalara bölünüp vektörleri ortalandı, metin kesilmedi"
-  },
-  "kolekzifikasyon_kavramlari": ["load.v.02", "loaded.a.02", "unloaded.a.01"],
-  "muhassas_tasnif": {
-    "kaynak": "İbn Sîde, el-Muhassas (konu sıralı lügat; Şâmile)",
-    "kitap": "الطعام",
-    "bab": "السكر",
-    "kok_gecis": 59.0,
-    "kitapta_gecis": 24.0,
-    "zenginlesme": 7.84
-  },
-  "mana_tasnif_gomme": {
+  "mana_yontem": "m1",
+  "gomme": {
     "ust": {
       "kume": 7,
       "merkez_kok": "حدق",
@@ -1226,563 +2512,24 @@
       "boy": 17
     }
   },
-  "kaliplar": {
-    "0": ["masdar · sülâsî mücerred", "fa'l", "semâî aday", ""],
-    "1": ["masdar · sülâsî mücerred", "fi'l", "semâî aday", ""],
-    "2": ["masdar · sülâsî mücerred", "fu'l", "semâî aday", ""],
-    "3": ["masdar · sülâsî mücerred", "fa'al", "semâî aday", ""],
-    "4": ["masdar · sülâsî mücerred", "fi'al", "semâî aday", ""],
-    "5": ["masdar · sülâsî mücerred", "fu'ul", "semâî aday", ""],
-    "6": ["masdar · sülâsî mücerred", "fu'ūl", "semâî aday", ""],
-    "7": ["masdar · sülâsî mücerred", "fi'āl", "semâî aday", ""],
-    "8": ["masdar · sülâsî mücerred", "fu'āl", "semâî aday", ""],
-    "9": ["masdar · sülâsî mücerred", "fa'āl", "semâî aday", ""],
-    "10": ["masdar · sülâsî mücerred", "fa'āle", "semâî aday", ""],
-    "11": ["masdar · sülâsî mücerred", "fu'ūle", "semâî aday", ""],
-    "12": ["masdar · sülâsî mücerred", "fi'āle", "semâî aday", ""],
-    "13": ["masdar · sülâsî mücerred", "fa'īl", "semâî aday", ""],
-    "14": ["masdar · sülâsî mücerred", "fa'ūl", "semâî aday", ""],
-    "15": ["masdar · sülâsî mücerred", "fa'alān", "semâî aday", ""],
-    "16": ["masdar · sülâsî mücerred", "fu'lān", "semâî aday", ""],
-    "17": ["masdar · sülâsî mücerred", "fi'lān", "semâî aday", ""],
-    "18": ["masdar · sülâsî mücerred", "fa'lā", "semâî aday", ""],
-    "19": ["masdar · sülâsî mücerred", "fu'lā", "semâî aday", ""],
-    "20": ["masdar · sülâsî mücerred", "fi'lā", "semâî aday", ""],
-    "21": ["masdar · sülâsî mücerred", "fa'ale", "semâî aday", ""],
-    "22": ["masdar · sülâsî mücerred", "fi'ale", "semâî aday", ""],
-    "23": ["masdar · sülâsî mücerred", "fa'lūla", "semâî aday", ""],
-    "24": ["masdar · sülâsî mücerred", "tuf'ūl", "semâî aday", ""],
-    "25": ["masdar · sülâsî mücerred", "taf'ila", "semâî aday", ""],
-    "26": ["masdar · sülâsî mücerred", "taf'ala", "semâî aday", ""],
-    "27": ["masdar · sülâsî mücerred", "maf'ula", "semâî aday", ""],
-    "28": ["masdar · sülâsî mücerred", "maf'ila", "semâî aday", ""],
-    "29": ["masdar · bâb II", "taf'īl", "kıyâsî", "II"],
-    "30": ["masdar · bâb II", "taf'ila", "kıyâsî", "II"],
-    "31": ["masdar · bâb II", "fi''āl", "kıyâsî", "II"],
-    "32": ["ism-i merre · bâb II", "taf'īl + tâ", "aday", "II"],
-    "33": ["ism-i merre · bâb II", "fi''āl + tâ", "aday", "II"],
-    "34": ["ism-i fâil · bâb II", "mufa''il", "kıyâsî", "II"],
-    "35": ["ism-i fâil · bâb II", "mufa''il + müennes", "kıyâsî", "II"],
-    "36": ["ism-i fâil · bâb II", "mufa''il + tesniye", "kıyâsî", "II"],
-    "37": ["ism-i fâil · bâb II", "mufa''il + müennes tesniye", "kıyâsî", "II"],
-    "38": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "39": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "40": ["ism-i fâil · bâb II", "mufa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "41": ["ism-i mef‘ûl · bâb II", "mufa''al", "kıyâsî", "II"],
-    "42": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes", "kıyâsî", "II"],
-    "43": ["ism-i mef‘ûl · bâb II", "mufa''al + tesniye", "kıyâsî", "II"],
-    "44": ["ism-i mef‘ûl · bâb II", "mufa''al + müennes tesniye", "kıyâsî", "II"],
-    "45": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "II"],
-    "46": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "II"],
-    "47": ["ism-i mef‘ûl · bâb II", "mufa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "II"],
-    "48": ["mekân/zaman/masdar-ı mîmî · bâb II", "mufa''al", "kıyâsî", "II"],
-    "49": ["masdar · bâb III", "mufā'ale", "kıyâsî", "III"],
-    "50": ["masdar · bâb III", "fi'āl", "kıyâsî", "III"],
-    "51": ["ism-i merre · bâb III", "fi'āl + tâ", "aday", "III"],
-    "52": ["ism-i fâil · bâb III", "mufā'il", "kıyâsî", "III"],
-    "53": ["ism-i fâil · bâb III", "mufā'il + müennes", "kıyâsî", "III"],
-    "54": ["ism-i fâil · bâb III", "mufā'il + tesniye", "kıyâsî", "III"],
-    "55": ["ism-i fâil · bâb III", "mufā'il + müennes tesniye", "kıyâsî", "III"],
-    "56": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "57": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "58": ["ism-i fâil · bâb III", "mufā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "59": ["ism-i mef‘ûl · bâb III", "mufā'al", "kıyâsî", "III"],
-    "60": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes", "kıyâsî", "III"],
-    "61": ["ism-i mef‘ûl · bâb III", "mufā'al + tesniye", "kıyâsî", "III"],
-    "62": ["ism-i mef‘ûl · bâb III", "mufā'al + müennes tesniye", "kıyâsî", "III"],
-    "63": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "III"],
-    "64": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "III"],
-    "65": ["ism-i mef‘ûl · bâb III", "mufā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "III"],
-    "66": ["mekân/zaman/masdar-ı mîmî · bâb III", "mufā'al", "kıyâsî", "III"],
-    "67": ["masdar · bâb IV", "if'āl", "kıyâsî", "IV"],
-    "68": ["ism-i merre · bâb IV", "if'āl + tâ", "aday", "IV"],
-    "69": ["ism-i fâil · bâb IV", "muf'il", "kıyâsî", "IV"],
-    "70": ["ism-i fâil · bâb IV", "muf'il + müennes", "kıyâsî", "IV"],
-    "71": ["ism-i fâil · bâb IV", "muf'il + tesniye", "kıyâsî", "IV"],
-    "72": ["ism-i fâil · bâb IV", "muf'il + müennes tesniye", "kıyâsî", "IV"],
-    "73": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "74": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "75": ["ism-i fâil · bâb IV", "muf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "76": ["ism-i mef‘ûl · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "77": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes", "kıyâsî", "IV"],
-    "78": ["ism-i mef‘ûl · bâb IV", "muf'al + tesniye", "kıyâsî", "IV"],
-    "79": ["ism-i mef‘ûl · bâb IV", "muf'al + müennes tesniye", "kıyâsî", "IV"],
-    "80": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IV"],
-    "81": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IV"],
-    "82": ["ism-i mef‘ûl · bâb IV", "muf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IV"],
-    "83": ["mekân/zaman/masdar-ı mîmî · bâb IV", "muf'al", "kıyâsî", "IV"],
-    "84": ["masdar · bâb V", "tafa''ul", "kıyâsî", "V"],
-    "85": ["ism-i merre · bâb V", "tafa''ul + tâ", "aday", "V"],
-    "86": ["ism-i fâil · bâb V", "mutafa''il", "kıyâsî", "V"],
-    "87": ["ism-i fâil · bâb V", "mutafa''il + müennes", "kıyâsî", "V"],
-    "88": ["ism-i fâil · bâb V", "mutafa''il + tesniye", "kıyâsî", "V"],
-    "89": ["ism-i fâil · bâb V", "mutafa''il + müennes tesniye", "kıyâsî", "V"],
-    "90": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "91": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "92": ["ism-i fâil · bâb V", "mutafa''il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "93": ["ism-i mef‘ûl · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "94": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes", "kıyâsî", "V"],
-    "95": ["ism-i mef‘ûl · bâb V", "mutafa''al + tesniye", "kıyâsî", "V"],
-    "96": ["ism-i mef‘ûl · bâb V", "mutafa''al + müennes tesniye", "kıyâsî", "V"],
-    "97": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "V"],
-    "98": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "V"],
-    "99": ["ism-i mef‘ûl · bâb V", "mutafa''al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "V"],
-    "100": ["mekân/zaman/masdar-ı mîmî · bâb V", "mutafa''al", "kıyâsî", "V"],
-    "101": ["masdar · bâb VI", "tafā'ul", "kıyâsî", "VI"],
-    "102": ["ism-i merre · bâb VI", "tafā'ul + tâ", "aday", "VI"],
-    "103": ["ism-i fâil · bâb VI", "mutafā'il", "kıyâsî", "VI"],
-    "104": ["ism-i fâil · bâb VI", "mutafā'il + müennes", "kıyâsî", "VI"],
-    "105": ["ism-i fâil · bâb VI", "mutafā'il + tesniye", "kıyâsî", "VI"],
-    "106": ["ism-i fâil · bâb VI", "mutafā'il + müennes tesniye", "kıyâsî", "VI"],
-    "107": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "108": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "109": ["ism-i fâil · bâb VI", "mutafā'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "110": ["ism-i mef‘ûl · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "111": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes", "kıyâsî", "VI"],
-    "112": ["ism-i mef‘ûl · bâb VI", "mutafā'al + tesniye", "kıyâsî", "VI"],
-    "113": ["ism-i mef‘ûl · bâb VI", "mutafā'al + müennes tesniye", "kıyâsî", "VI"],
-    "114": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VI"],
-    "115": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VI"],
-    "116": ["ism-i mef‘ûl · bâb VI", "mutafā'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VI"],
-    "117": ["mekân/zaman/masdar-ı mîmî · bâb VI", "mutafā'al", "kıyâsî", "VI"],
-    "118": ["masdar · bâb VII", "infi'āl", "kıyâsî", "VII"],
-    "119": ["ism-i merre · bâb VII", "infi'āl + tâ", "aday", "VII"],
-    "120": ["ism-i fâil · bâb VII", "munfa'il", "kıyâsî", "VII"],
-    "121": ["ism-i fâil · bâb VII", "munfa'il + müennes", "kıyâsî", "VII"],
-    "122": ["ism-i fâil · bâb VII", "munfa'il + tesniye", "kıyâsî", "VII"],
-    "123": ["ism-i fâil · bâb VII", "munfa'il + müennes tesniye", "kıyâsî", "VII"],
-    "124": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VII"],
-    "125": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VII"],
-    "126": ["ism-i fâil · bâb VII", "munfa'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VII"],
-    "127": ["ism-i mef‘ûl · bâb VII", "munfa'al", "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)", "VII"],
-    "128": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "129": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "130": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + müennes tesniye",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "131": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-ûn)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "132": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müzekker (-în)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "133": [
-      "ism-i mef‘ûl · bâb VII",
-      "munfa'al + cem‘-i sâlim müennes (-ât)",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "134": [
-      "mekân/zaman/masdar-ı mîmî · bâb VII",
-      "munfa'al",
-      "aday (lâzım bâb; yalnız harf-i cerle: munṣarafun ʿanhu)",
-      "VII"
-    ],
-    "135": ["masdar · bâb VIII", "ifti'āl", "kıyâsî", "VIII"],
-    "137": ["ism-i merre · bâb VIII", "ifti'āl + tâ", "aday", "VIII"],
-    "138": ["ism-i fâil · bâb VIII", "muftaʿil", "kıyâsî", "VIII"],
-    "139": ["ism-i fâil · bâb VIII", "muftaʿil + müennes", "kıyâsî", "VIII"],
-    "140": ["ism-i fâil · bâb VIII", "muftaʿil + tesniye", "kıyâsî", "VIII"],
-    "141": ["ism-i fâil · bâb VIII", "muftaʿil + müennes tesniye", "kıyâsî", "VIII"],
-    "142": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "143": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "144": ["ism-i fâil · bâb VIII", "muftaʿil + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "145": ["ism-i mef‘ûl · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "146": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes", "kıyâsî", "VIII"],
-    "147": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + tesniye", "kıyâsî", "VIII"],
-    "148": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + müennes tesniye", "kıyâsî", "VIII"],
-    "149": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "VIII"],
-    "150": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müzekker (-în)", "kıyâsî", "VIII"],
-    "151": ["ism-i mef‘ûl · bâb VIII", "muftaʿal + cem‘-i sâlim müennes (-ât)", "kıyâsî", "VIII"],
-    "152": ["mekân/zaman/masdar-ı mîmî · bâb VIII", "muftaʿal", "kıyâsî", "VIII"],
-    "176": ["masdar · bâb X", "istif'āl", "kıyâsî", "X"],
-    "177": ["ism-i merre · bâb X", "istif'āl + tâ", "aday", "X"],
-    "178": ["ism-i fâil · bâb X", "mustaf'il", "kıyâsî", "X"],
-    "179": ["ism-i fâil · bâb X", "mustaf'il + müennes", "kıyâsî", "X"],
-    "180": ["ism-i fâil · bâb X", "mustaf'il + tesniye", "kıyâsî", "X"],
-    "181": ["ism-i fâil · bâb X", "mustaf'il + müennes tesniye", "kıyâsî", "X"],
-    "182": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "183": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "184": ["ism-i fâil · bâb X", "mustaf'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "185": ["ism-i mef‘ûl · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "186": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes", "kıyâsî", "X"],
-    "187": ["ism-i mef‘ûl · bâb X", "mustaf'al + tesniye", "kıyâsî", "X"],
-    "188": ["ism-i mef‘ûl · bâb X", "mustaf'al + müennes tesniye", "kıyâsî", "X"],
-    "189": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "X"],
-    "190": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müzekker (-în)", "kıyâsî", "X"],
-    "191": ["ism-i mef‘ûl · bâb X", "mustaf'al + cem‘-i sâlim müennes (-ât)", "kıyâsî", "X"],
-    "192": ["mekân/zaman/masdar-ı mîmî · bâb X", "mustaf'al", "kıyâsî", "X"],
-    "213": ["ism-i fâil · sülâsî", "fâ'il", "kıyâsî", ""],
-    "214": ["ism-i fâil · sülâsî", "fâ'il + müennes", "kıyâsî", ""],
-    "215": ["ism-i fâil · sülâsî", "fâ'il + tesniye", "kıyâsî", ""],
-    "216": ["ism-i fâil · sülâsî", "fâ'il + müennes tesniye", "kıyâsî", ""],
-    "217": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "218": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "219": ["ism-i fâil · sülâsî", "fâ'il + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "220": ["ism-i mef‘ûl · sülâsî", "maf'ûl", "kıyâsî", ""],
-    "221": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes", "kıyâsî", ""],
-    "222": ["ism-i mef‘ûl · sülâsî", "maf'ûl + tesniye", "kıyâsî", ""],
-    "223": ["ism-i mef‘ûl · sülâsî", "maf'ûl + müennes tesniye", "kıyâsî", ""],
-    "224": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", ""],
-    "225": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müzekker (-în)", "kıyâsî", ""],
-    "226": ["ism-i mef‘ûl · sülâsî", "maf'ûl + cem‘-i sâlim müennes (-ât)", "kıyâsî", ""],
-    "227": ["mekân/zaman · sülâsî", "maf'al", "kıyâsî", ""],
-    "228": ["mekân/zaman · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "229": ["mekân/zaman · sülâsî", "maf'il", "kıyâsî", ""],
-    "230": ["mekân/zaman · sülâsî", "maf'il + tesniye", "kıyâsî", ""],
-    "231": ["mekân/zaman · sülâsî", "maf'ale", "kıyâsî", ""],
-    "232": ["mekân/zaman · sülâsî", "maf'ale + tesniye", "kıyâsî", ""],
-    "233": ["mekân/zaman · sülâsî", "maf'ile", "kıyâsî", ""],
-    "234": ["mekân/zaman · sülâsî", "maf'ile + tesniye", "kıyâsî", ""],
-    "235": ["âlet · sülâsî", "mif'al", "kıyâsî", ""],
-    "236": ["âlet · sülâsî", "mif'al + tesniye", "kıyâsî", ""],
-    "237": ["âlet · sülâsî", "mif'âl", "kıyâsî", ""],
-    "238": ["âlet · sülâsî", "mif'âl + tesniye", "kıyâsî", ""],
-    "239": ["âlet · sülâsî", "mif'ale", "kıyâsî", ""],
-    "240": ["âlet · sülâsî", "mif'ale + tesniye", "kıyâsî", ""],
-    "241": ["tafdîl · sülâsî", "af'al", "kıyâsî", ""],
-    "242": ["tafdîl · sülâsî", "af'al + tesniye", "kıyâsî", ""],
-    "243": ["tafdîl (müennes) · sülâsî", "fu'lâ", "kıyâsî", ""],
-    "244": ["tafdîl (müennes) · sülâsî", "fu'lâ + tesniye", "kıyâsî", ""],
-    "245": ["tafdîl (müennes) · sülâsî", "fa'lâ'", "kıyâsî", ""],
-    "246": ["tafdîl (müennes) · sülâsî", "fa'lâ' + tesniye", "kıyâsî", ""],
-    "247": ["mekân/zaman · sülâsî", "maf'ula", "kıyâsî", ""],
-    "248": ["mekân/zaman · sülâsî", "maf'ula + tesniye", "kıyâsî", ""],
-    "249": ["tasğîr · sülâsî", "fu'ayl", "kıyâsî", ""],
-    "250": ["tasğîr · sülâsî", "fu'ayl + tesniye", "kıyâsî", ""],
-    "251": ["tasğîr · sülâsî", "fu'ayle", "kıyâsî", ""],
-    "252": ["tasğîr · sülâsî", "fu'ayle + tesniye", "kıyâsî", ""],
-    "253": ["masdar-ı mîmî · sülâsî", "maf'al", "kıyâsî", ""],
-    "254": ["masdar-ı mîmî · sülâsî", "maf'al + tesniye", "kıyâsî", ""],
-    "255": ["ism-i merre · sülâsî", "fa'le", "aday", ""],
-    "256": ["ism-i merre · sülâsî", "fa'le + tesniye", "aday", ""],
-    "257": ["ism-i hey'et · sülâsî", "fi'le", "aday", ""],
-    "258": ["ism-i hey'et · sülâsî", "fi'le + tesniye", "aday", ""],
-    "259": ["sıfat-ı müşebbehe", "fa'īl", "semâî aday", ""],
-    "260": ["sıfat-ı müşebbehe", "fa'īl + müennes", "semâî aday", ""],
-    "261": ["sıfat-ı müşebbehe", "fa'īl + tesniye", "semâî aday", ""],
-    "262": ["sıfat-ı müşebbehe", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "263": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "264": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "265": ["sıfat-ı müşebbehe", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "266": ["sıfat-ı müşebbehe", "fa'ūl", "semâî aday", ""],
-    "267": ["sıfat-ı müşebbehe", "fa'ūl + müennes", "semâî aday", ""],
-    "268": ["sıfat-ı müşebbehe", "fa'ūl + tesniye", "semâî aday", ""],
-    "269": ["sıfat-ı müşebbehe", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "270": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "271": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "272": ["sıfat-ı müşebbehe", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "273": ["sıfat-ı müşebbehe", "fa'il", "semâî aday", ""],
-    "274": ["sıfat-ı müşebbehe", "fa'il + müennes", "semâî aday", ""],
-    "275": ["sıfat-ı müşebbehe", "fa'il + tesniye", "semâî aday", ""],
-    "276": ["sıfat-ı müşebbehe", "fa'il + müennes tesniye", "semâî aday", ""],
-    "277": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "278": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "279": ["sıfat-ı müşebbehe", "fa'il + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "280": ["sıfat-ı müşebbehe", "fa'ul", "semâî aday", ""],
-    "281": ["sıfat-ı müşebbehe", "fa'ul + müennes", "semâî aday", ""],
-    "282": ["sıfat-ı müşebbehe", "fa'ul + tesniye", "semâî aday", ""],
-    "283": ["sıfat-ı müşebbehe", "fa'ul + müennes tesniye", "semâî aday", ""],
-    "284": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "285": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "286": ["sıfat-ı müşebbehe", "fa'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "287": ["sıfat-ı müşebbehe", "fa'al", "semâî aday", ""],
-    "288": ["sıfat-ı müşebbehe", "fa'al + müennes", "semâî aday", ""],
-    "289": ["sıfat-ı müşebbehe", "fa'al + tesniye", "semâî aday", ""],
-    "290": ["sıfat-ı müşebbehe", "fa'al + müennes tesniye", "semâî aday", ""],
-    "291": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "292": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "293": ["sıfat-ı müşebbehe", "fa'al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "294": ["sıfat-ı müşebbehe", "fa'l", "semâî aday", ""],
-    "295": ["sıfat-ı müşebbehe", "fa'l + müennes", "semâî aday", ""],
-    "296": ["sıfat-ı müşebbehe", "fa'l + tesniye", "semâî aday", ""],
-    "297": ["sıfat-ı müşebbehe", "fa'l + müennes tesniye", "semâî aday", ""],
-    "298": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "299": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "300": ["sıfat-ı müşebbehe", "fa'l + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "301": ["sıfat-ı müşebbehe", "fu'ul", "semâî aday", ""],
-    "302": ["sıfat-ı müşebbehe", "fu'ul + müennes", "semâî aday", ""],
-    "303": ["sıfat-ı müşebbehe", "fu'ul + tesniye", "semâî aday", ""],
-    "304": ["sıfat-ı müşebbehe", "fu'ul + müennes tesniye", "semâî aday", ""],
-    "305": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "306": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "307": ["sıfat-ı müşebbehe", "fu'ul + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "308": ["sıfat-ı müşebbehe", "fa'lān", "semâî aday", ""],
-    "309": ["sıfat-ı müşebbehe", "fa'lān + müennes", "semâî aday", ""],
-    "310": ["sıfat-ı müşebbehe", "fa'lān + tesniye", "semâî aday", ""],
-    "311": ["sıfat-ı müşebbehe", "fa'lān + müennes tesniye", "semâî aday", ""],
-    "312": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "313": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "314": ["sıfat-ı müşebbehe", "fa'lān + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "315": ["sıfat-ı müşebbehe", "fu'āl", "semâî aday", ""],
-    "316": ["sıfat-ı müşebbehe", "fu'āl + müennes", "semâî aday", ""],
-    "317": ["sıfat-ı müşebbehe", "fu'āl + tesniye", "semâî aday", ""],
-    "318": ["sıfat-ı müşebbehe", "fu'āl + müennes tesniye", "semâî aday", ""],
-    "319": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "320": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "321": ["sıfat-ı müşebbehe", "fu'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "322": ["sıfat-ı müşebbehe", "fa'āl", "semâî aday", ""],
-    "323": ["sıfat-ı müşebbehe", "fa'āl + müennes", "semâî aday", ""],
-    "324": ["sıfat-ı müşebbehe", "fa'āl + tesniye", "semâî aday", ""],
-    "325": ["sıfat-ı müşebbehe", "fa'āl + müennes tesniye", "semâî aday", ""],
-    "326": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "327": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "328": ["sıfat-ı müşebbehe", "fa'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "329": ["mübalağa", "fa''āl", "semâî aday", ""],
-    "330": ["mübalağa", "fa''āl + müennes", "semâî aday", ""],
-    "331": ["mübalağa", "fa''āl + tesniye", "semâî aday", ""],
-    "332": ["mübalağa", "fa''āl + müennes tesniye", "semâî aday", ""],
-    "333": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "334": ["mübalağa", "fa''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "335": ["mübalağa", "fa''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "336": ["mübalağa", "fa''āle", "semâî aday", ""],
-    "337": ["mübalağa", "fa''āle + tesniye", "semâî aday", ""],
-    "338": ["mübalağa", "fa''āle + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "339": ["mübalağa", "fa'ūl", "semâî aday", ""],
-    "340": ["mübalağa", "fa'ūl + müennes", "semâî aday", ""],
-    "341": ["mübalağa", "fa'ūl + tesniye", "semâî aday", ""],
-    "342": ["mübalağa", "fa'ūl + müennes tesniye", "semâî aday", ""],
-    "343": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "344": ["mübalağa", "fa'ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "345": ["mübalağa", "fa'ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "346": ["mübalağa", "fa''ūl", "semâî aday", ""],
-    "347": ["mübalağa", "fa''ūl + müennes", "semâî aday", ""],
-    "348": ["mübalağa", "fa''ūl + tesniye", "semâî aday", ""],
-    "349": ["mübalağa", "fa''ūl + müennes tesniye", "semâî aday", ""],
-    "350": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "351": ["mübalağa", "fa''ūl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "352": ["mübalağa", "fa''ūl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "353": ["mübalağa", "fi''īl", "semâî aday", ""],
-    "354": ["mübalağa", "fi''īl + müennes", "semâî aday", ""],
-    "355": ["mübalağa", "fi''īl + tesniye", "semâî aday", ""],
-    "356": ["mübalağa", "fi''īl + müennes tesniye", "semâî aday", ""],
-    "357": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "358": ["mübalağa", "fi''īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "359": ["mübalağa", "fi''īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "360": ["mübalağa", "fu''āl", "semâî aday", ""],
-    "361": ["mübalağa", "fu''āl + müennes", "semâî aday", ""],
-    "362": ["mübalağa", "fu''āl + tesniye", "semâî aday", ""],
-    "363": ["mübalağa", "fu''āl + müennes tesniye", "semâî aday", ""],
-    "364": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "365": ["mübalağa", "fu''āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "366": ["mübalağa", "fu''āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "367": ["mübalağa", "mif'āl", "semâî aday", ""],
-    "368": ["mübalağa", "mif'āl + müennes", "semâî aday", ""],
-    "369": ["mübalağa", "mif'āl + tesniye", "semâî aday", ""],
-    "370": ["mübalağa", "mif'āl + müennes tesniye", "semâî aday", ""],
-    "371": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "372": ["mübalağa", "mif'āl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "373": ["mübalağa", "mif'āl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "374": ["mübalağa", "mif'īl", "semâî aday", ""],
-    "375": ["mübalağa", "mif'īl + müennes", "semâî aday", ""],
-    "376": ["mübalağa", "mif'īl + tesniye", "semâî aday", ""],
-    "377": ["mübalağa", "mif'īl + müennes tesniye", "semâî aday", ""],
-    "378": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "379": ["mübalağa", "mif'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "380": ["mübalağa", "mif'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "381": ["mübalağa", "fa'īl", "semâî aday", ""],
-    "382": ["mübalağa", "fa'īl + müennes", "semâî aday", ""],
-    "383": ["mübalağa", "fa'īl + tesniye", "semâî aday", ""],
-    "384": ["mübalağa", "fa'īl + müennes tesniye", "semâî aday", ""],
-    "385": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "386": ["mübalağa", "fa'īl + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "387": ["mübalağa", "fa'īl + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "388": ["mübalağa", "fa''al", "semâî aday", ""],
-    "389": ["mübalağa", "fa''al + müennes", "semâî aday", ""],
-    "390": ["mübalağa", "fa''al + tesniye", "semâî aday", ""],
-    "391": ["mübalağa", "fa''al + müennes tesniye", "semâî aday", ""],
-    "392": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-ûn)", "semâî aday", ""],
-    "393": ["mübalağa", "fa''al + cem‘-i sâlim müzekker (-în)", "semâî aday", ""],
-    "394": ["mübalağa", "fa''al + cem‘-i sâlim müennes (-ât)", "semâî aday", ""],
-    "395": ["mensûb", "fa'l + iyy", "kıyâsî", ""],
-    "396": ["masdar-ı sınâî", "fa'l + iyye", "kıyâsî", ""],
-    "397": ["mensûb", "fa'al + iyy", "kıyâsî", ""],
-    "398": ["masdar-ı sınâî", "fa'al + iyye", "kıyâsî", ""],
-    "399": ["mensûb", "fi'l + iyy", "kıyâsî", ""],
-    "400": ["masdar-ı sınâî", "fi'l + iyye", "kıyâsî", ""],
-    "401": ["mensûb", "fu'l + iyy", "kıyâsî", ""],
-    "402": ["masdar-ı sınâî", "fu'l + iyye", "kıyâsî", ""],
-    "403": ["mensûb", "fi'āl + iyy", "kıyâsî", ""],
-    "404": ["masdar-ı sınâî", "fi'āl + iyye", "kıyâsî", ""],
-    "405": ["mensûb", "fâ'il + iyy", "kıyâsî", ""],
-    "406": ["masdar-ı sınâî", "fâ'il + iyye", "kıyâsî", ""],
-    "407": ["mensûb", "maf'ûl + iyy", "kıyâsî", ""],
-    "408": ["masdar-ı sınâî", "maf'ûl + iyye", "kıyâsî", ""],
-    "409": ["mensûb", "fa'īl + iyy", "kıyâsî", ""],
-    "410": ["masdar-ı sınâî", "fa'īl + iyye", "kıyâsî", ""],
-    "411": ["mensûb", "maf'al + iyy", "kıyâsî", ""],
-    "412": ["masdar-ı sınâî", "maf'al + iyye", "kıyâsî", ""],
-    "413": ["mensûb", "taf'īl + iyy", "kıyâsî", ""],
-    "414": ["masdar-ı sınâî", "taf'īl + iyye", "kıyâsî", ""],
-    "415": ["mensûb", "tafā'ul + iyy", "kıyâsî", ""],
-    "416": ["masdar-ı sınâî", "tafā'ul + iyye", "kıyâsî", ""],
-    "417": ["mensûb", "if'āl + iyy", "kıyâsî", ""],
-    "418": ["masdar-ı sınâî", "if'āl + iyye", "kıyâsî", ""],
-    "419": ["mensûb", "ifti'āl + iyy", "kıyâsî", ""],
-    "420": ["masdar-ı sınâî", "ifti'āl + iyye", "kıyâsî", ""],
-    "421": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âl (kelâm, selâm)", "semâî aday", ""],
-    "422": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûl (vudû')", "semâî aday", ""],
-    "423": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âl", "semâî aday", ""],
-    "424": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'l (şükr)", "semâî aday", ""],
-    "425": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'âle (belâğa)", "semâî aday", ""],
-    "426": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'âle", "semâî aday", ""],
-    "427": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fu'ûle", "semâî aday", ""],
-    "428": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fa'l", "semâî aday", ""],
-    "429": ["ism-i masdar (aday: fiilin harflerinden eksik, masdar manalı)", "fi'l", "semâî aday", ""],
-    "430": ["ism-i cins · ifrâdî (aday)", "fâ'ûl", "semâî aday", ""],
-    "431": ["ism-i cins · cem‘î ve tekili (+tâ)", "fâ'ûl + tâ (tekili)", "semâî aday", ""],
-    "432": ["ism-i cins · ifrâdî (aday)", "fa'ala", "semâî aday", ""],
-    "433": ["ism-i cins · ifrâdî (aday)", "fu'ala", "semâî aday", ""],
-    "434": ["ism-i cins · ifrâdî (aday)", "uf'ûla", "semâî aday", ""],
-    "435": ["ism-i cins · ifrâdî (aday)", "faw'al", "semâî aday", ""],
-    "436": ["ism-i cins · cem‘î ve tekili (+tâ)", "faw'al + tâ (tekili)", "semâî aday", ""],
-    "437": ["ism-i cins · ifrâdî (aday)", "fay'al", "semâî aday", ""],
-    "438": ["ism-i cins · cem‘î ve tekili (+tâ)", "fay'al + tâ (tekili)", "semâî aday", ""],
-    "439": ["ism-i cins · ifrâdî (aday)", "fa'l", "semâî aday", ""],
-    "440": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'l + tâ (tekili)", "semâî aday", ""],
-    "441": ["ism-i cins · ifrâdî (aday)", "fa'al", "semâî aday", ""],
-    "442": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'al + tâ (tekili)", "semâî aday", ""],
-    "443": ["ism-i cins · ifrâdî (aday)", "fi'l", "semâî aday", ""],
-    "444": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'l + tâ (tekili)", "semâî aday", ""],
-    "445": ["ism-i cins · ifrâdî (aday)", "fu'l", "semâî aday", ""],
-    "446": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'l + tâ (tekili)", "semâî aday", ""],
-    "447": ["ism-i cins · ifrâdî (aday)", "fa'îl", "semâî aday", ""],
-    "448": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'îl + tâ (tekili)", "semâî aday", ""],
-    "449": ["ism-i cins · ifrâdî (aday)", "fi'al", "semâî aday", ""],
-    "450": ["ism-i cins · cem‘î ve tekili (+tâ)", "fi'al + tâ (tekili)", "semâî aday", ""],
-    "451": ["ism-i cins · ifrâdî (aday)", "fu'ul", "semâî aday", ""],
-    "452": ["ism-i cins · cem‘î ve tekili (+tâ)", "fu'ul + tâ (tekili)", "semâî aday", ""],
-    "453": ["ism-i cins · ifrâdî (aday)", "fa'âl", "semâî aday", ""],
-    "454": ["ism-i cins · cem‘î ve tekili (+tâ)", "fa'âl + tâ (tekili)", "semâî aday", ""],
-    "455": ["cem‘-i mükesser (aday)", "ef'āl", "semâî aday", ""],
-    "456": ["cem‘-i mükesser (aday)", "ef'ile", "semâî aday", ""],
-    "457": ["cem‘-i mükesser (aday)", "efâ'il", "semâî aday", ""],
-    "458": ["cem‘-i mükesser (aday)", "efâ'îl", "semâî aday", ""],
-    "459": ["cem‘-i mükesser (aday)", "fu'ūl", "semâî aday", ""],
-    "460": ["cem‘-i mükesser (aday)", "fu'ul", "semâî aday", ""],
-    "461": ["cem‘-i mükesser (aday)", "fi'āl", "semâî aday", ""],
-    "462": ["cem‘-i mükesser (aday)", "fi'al", "semâî aday", ""],
-    "463": ["cem‘-i mükesser (aday)", "fi'ale", "semâî aday", ""],
-    "464": ["cem‘-i mükesser (aday)", "fu'al", "semâî aday", ""],
-    "465": ["cem‘-i mükesser (aday)", "fu'alā'", "semâî aday", ""],
-    "466": ["cem‘-i mükesser (aday)", "fa'ale", "semâî aday", ""],
-    "467": ["cem‘-i mükesser (aday)", "fu''āl", "semâî aday", ""],
-    "468": ["cem‘-i mükesser (aday)", "fa'āl", "semâî aday", ""],
-    "469": ["cem‘-i mükesser (aday)", "fa'al", "semâî aday", ""],
-    "470": ["cem‘-i mükesser (aday)", "mefâ'il", "semâî aday", ""],
-    "471": ["cem‘-i mükesser (aday)", "mefâ'îl", "semâî aday", ""],
-    "472": ["cem‘-i mükesser (aday)", "fevâ'il", "semâî aday", ""],
-    "473": ["cem‘-i mükesser (aday)", "af'ul", "semâî aday", ""],
-    "474": ["cem‘-i mükesser (aday)", "fu''al", "semâî aday", ""],
-    "475": ["cem‘-i mükesser (aday)", "fe'âil", "semâî aday", ""],
-    "476": ["cem‘-i mükesser (aday)", "fu'ayl(cem')", "semâî aday", ""],
-    "477": ["cem‘u’l-cem‘ (aday)", "ef'āl + ât", "semâî aday", ""],
-    "478": ["cem‘u’l-cem‘ (aday)", "ef'ile + ât", "semâî aday", ""],
-    "479": ["cem‘u’l-cem‘ (aday)", "efâ'il + ât", "semâî aday", ""],
-    "480": ["cem‘u’l-cem‘ (aday)", "efâ'îl + ât", "semâî aday", ""],
-    "481": ["cem‘u’l-cem‘ (aday)", "fu'ūl + ât", "semâî aday", ""],
-    "482": ["cem‘u’l-cem‘ (aday)", "fu'ul + ât", "semâî aday", ""],
-    "483": ["cem‘u’l-cem‘ (aday)", "fi'āl + ât", "semâî aday", ""],
-    "484": ["cem‘u’l-cem‘ (aday)", "fi'al + ât", "semâî aday", ""],
-    "485": ["cem‘u’l-cem‘ (aday)", "fi'ale + ât", "semâî aday", ""],
-    "486": ["cem‘u’l-cem‘ (aday)", "fu'al + ât", "semâî aday", ""],
-    "487": ["cem‘u’l-cem‘ (aday)", "fu'alā' + ât", "semâî aday", ""],
-    "488": ["cem‘u’l-cem‘ (aday)", "fa'ale + ât", "semâî aday", ""],
-    "489": ["cem‘u’l-cem‘ (aday)", "fu''āl + ât", "semâî aday", ""],
-    "490": ["cem‘u’l-cem‘ (aday)", "fa'āl + ât", "semâî aday", ""],
-    "491": ["cem‘u’l-cem‘ (aday)", "fa'al + ât", "semâî aday", ""],
-    "492": ["cem‘u’l-cem‘ (aday)", "mefâ'il + ât", "semâî aday", ""],
-    "493": ["cem‘u’l-cem‘ (aday)", "mefâ'îl + ât", "semâî aday", ""],
-    "494": ["cem‘u’l-cem‘ (aday)", "fevâ'il + ât", "semâî aday", ""],
-    "495": ["cem‘u’l-cem‘ (aday)", "af'ul + ât", "semâî aday", ""],
-    "496": ["cem‘u’l-cem‘ (aday)", "fu''al + ât", "semâî aday", ""],
-    "497": ["cem‘u’l-cem‘ (aday)", "fe'âil + ât", "semâî aday", ""],
-    "498": ["cem‘u’l-cem‘ (aday)", "fu'ayl(cem') + ât", "semâî aday", ""],
-    "499": ["masdar · bâb IX", "if'ilāl", "kıyâsî", "IX"],
-    "500": ["ism-i fâil · bâb IX", "muf'all", "kıyâsî", "IX"],
-    "501": ["ism-i fâil · bâb IX", "muf'all + müennes", "kıyâsî", "IX"],
-    "502": ["ism-i fâil · bâb IX", "muf'all + tesniye", "kıyâsî", "IX"],
-    "503": ["ism-i fâil · bâb IX", "muf'all + müennes tesniye", "kıyâsî", "IX"],
-    "504": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "IX"],
-    "505": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müzekker (-în)", "kıyâsî", "IX"],
-    "506": ["ism-i fâil · bâb IX", "muf'all + cem‘-i sâlim müennes (-ât)", "kıyâsî", "IX"],
-    "507": ["masdar · bâb XI", "if'īlāl", "kıyâsî", "XI"],
-    "508": ["ism-i fâil · bâb XI", "muf'āll", "kıyâsî", "XI"],
-    "509": ["ism-i fâil · bâb XI", "muf'āll + müennes", "kıyâsî", "XI"],
-    "510": ["ism-i fâil · bâb XI", "muf'āll + tesniye", "kıyâsî", "XI"],
-    "511": ["ism-i fâil · bâb XI", "muf'āll + müennes tesniye", "kıyâsî", "XI"],
-    "512": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-ûn)", "kıyâsî", "XI"],
-    "513": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müzekker (-în)", "kıyâsî", "XI"],
-    "514": ["ism-i fâil · bâb XI", "muf'āll + cem‘-i sâlim müennes (-ât)", "kıyâsî", "XI"],
-    "515": ["masdar · bâb XII", "if'iv'āl", "kıyâsî", "XII"],
-    "516": ["masdar · bâb XIII", "if'ivvāl", "kıyâsî", "XIII"]
+  "wordnet": ["load.v.02", "loaded.a.02", "unloaded.a.01"],
+  "muhassas": {
+    "kitap": "الطعام",
+    "bab": "السكر",
+    "kok_gecis": 59.0,
+    "kitapta_gecis": 24.0,
+    "zenginlesme": 7.84
   },
-  "kelimeler": [
-    {
-      "kelime": "فَٱلْتَقَمَهُ",
-      "kok": "لقم",
-      "lemma": "الْتَقَمَ",
-      "tur": "İsim",
-      "bab": "ifte'ale",
-      "zaman": "Mâzî",
-      "ilk_gecis": "37:142",
-      "adet": 1,
-      "turkce": {
-        "yuzey": "yuttu",
-        "lemma": "yuttu",
-        "lemma_durum": "model-üretimi, doğrulanmadı",
-        "eyupipler": ""
-      }
-    }
-  ],
-  "kok_turu": {
-    "tur": "fiil",
-    "guven": "kesin",
-    "dayanak": ["kuran-fiil", "turkce-fiil-isimden"],
-    "kuran": {
-      "fiil": 1,
-      "isim": 0
-    },
-    "lugat_fiil": false
-  },
-  "baz_fiil": {
-    "ad": "Beden",
-    "ayrim": "lokma ol",
-    "acilim": "لقم := Beden(ayrım: lokma ol)",
-    "guven": "orta",
-    "dayanak": "Türkçe fiil sapı ve kök manası okunarak Claude hükmü"
-  },
-  "turetim": {
-    "asil": "baz fiil: Beden",
-    "kelimeler": [
+  "prototip": {
+    "karsilastirma_prototipi": "Cebel mihverî mana",
+    "yayilim": [
       {
-        "lemma": "الْتَقَمَ",
-        "hal": "fiil",
-        "bab": "ifte'ale",
-        "bab_no": "VIII",
-        "zaman": ["Mâzî"],
-        "adet": 1,
-        "nasil": "bâb VIII (ifte'ale): iftiâl: dönüşlülük, edinme"
+        "kaynak": "Zemahşerî mecaz kolu",
+        "metin": "ألقم فم البكرة عوداً ليضيق. والتقم أذنه: سارّه. وألقمته أذني فصبّ فيها كلاماً. وألقم إصبعه مرارة. ورجل لهمٌ لقمٌ: يعلو الخصوم. وركيّة متلقّمةٌ: كثيرة الماء.",
+        "prototipe_benzerlik": 0.517,
+        "halka": "orta"
       }
-    ]
+    ],
+    "ortalama_benzerlik": 0.517
   }
 }

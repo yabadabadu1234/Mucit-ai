@@ -7,7 +7,7 @@ for k,v in d.items():
     m=re.sub(r'^(\S+ ){2,3}\S+\s*:?\s*','',m) if m else ''
     en=[x for x in v['ingilizce_etymarab'] if not re.search(r'[éèêàâçûôî]|^\.\.\.$',x) and x.isascii()]
     gor=' / '.join(en)[:170]
-    t=json.load(open(KOK/f'{k}.json',encoding='utf-8'))['sozlukler'].get('etymarab') or {}
+    t=json.load(open(KOK/f'{k}.json',encoding='utf-8')).get('etymarab') or {}
     s=re.search(r'Semantic value spectrum[^‘]*‘([^’]+)’',t.get('kok_maddesi',''))
     sp=[x.strip() for x in re.split(r';',s.group(1))] if s else []
     ek=[x for x in sp if x and x not in gor]
